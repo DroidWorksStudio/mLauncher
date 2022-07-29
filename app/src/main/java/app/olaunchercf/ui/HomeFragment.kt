@@ -297,7 +297,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     }
 
     private fun openClickDateApp() {
-        if (prefs.appPackageClickClock.isNotEmpty())
+        if (prefs.appPackageClickDate.isNotEmpty())
             launchApp(
                 prefs.appNameClickDate,
                 prefs.appPackageClickDate,
