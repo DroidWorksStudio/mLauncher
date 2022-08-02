@@ -1,5 +1,6 @@
 package app.olaunchercf.data
 
+import android.util.Log
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.ComposeCompilerApi
 import androidx.compose.ui.res.stringResource
@@ -75,7 +76,7 @@ object Constants {
 
     fun Language.value(): String {
         return when(this) {
-            Language.System -> Locale(Locale.getDefault().language).toString()
+            Language.System -> Locale.getDefault().language
             Language.English -> "en"
             Language.German -> "de"
             Language.Spanish -> "es"
