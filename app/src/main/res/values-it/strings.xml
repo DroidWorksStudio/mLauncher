@@ -1,6 +1,6 @@
 <resources>
 
-    <string name="app_name">Olauncher</string>
+    <string name="app_name">Olauncher Clutter Free</string>
     <string name="app">App</string>
     <string name="set_as_default_launcher">Usa come launcher predefinito</string>
     <string name="app_text_color">Colore del testo</string>
@@ -20,10 +20,12 @@
     <string name="right">Destra</string>
     <string name="center">Centro</string>
     <string name="home_alignment">Allineamento App</string>
+    <string name="clock_alignment">Clock alignment</string>
     <string name="swipe_left_app">Scorri verso sinistra</string>
     <string name="swipe_right_app">Scorri verso destra</string>
     <string name="clock_click_app">Tocco app Ora</string>
     <string name="date_click_app">Tocco app Data</string>
+    <string name="commit">Commit</string>
     <string name="app_drawer_tips">Tip: Striscia verso il basso per chiudere. Scorri per nascondere la tastiera.</string>
     <string name="okay">Va bene</string>
     <string name="double_tap_lock_is_enabled_message">Se il doppio tocco disabilita l\'impronta digitale o lo sblocco facciale, apri le impostazioni di  Olauncher, tocca \'sperimentale\' e segui le istruzioni. Grazie.</string>
@@ -35,7 +37,8 @@
     <string name="hide">Nascondi</string>
     <string name="status_bar">Mostra la barra di stato</string>
     <string name="rename">Rinomina</string>
-    <string name="show_date_time">Mostra Data e ora</string>
+    <string name="show_time">Show time</string>
+    <string name="show_date">Show date</string>
     <string name="appearance">Aspetto</string>
     <string name="gestures">Gesti</string>
     <string name="theme_mode">Tema</string>
@@ -55,5 +58,10 @@
     <string name="app_text_size">Dimensione Testo</string>
 
     <string name="hidden_apps">App nascoste</string>
+    
+    <string name="show">Show</string>
+    <string name="reset">Reset</string>
+    <string name="cancel">Cancel</string>
 
+    
 </resources>

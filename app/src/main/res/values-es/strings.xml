@@ -37,7 +37,8 @@
     <string name="hide">Ocultar</string>
     <string name="status_bar">Barra de estado</string>
     <string name="rename">Renombrar</string>
-    <string name="show_date_time">Fecha y hora</string>
+    <string name="show_time">Show time</string>
+    <string name="show_date">Show date</string>
     <string name="appearance">Apariencia</string>
     <string name="gestures">Gestos</string>
     <string name="theme_mode">Tema</string>
@@ -57,6 +58,10 @@
     <string name="app_text_size">Texto en pantalla</string>
 
     <string name="hidden_apps">Aplicaciones ocultas</string>
+    
+    <string name="show">Show</string>
+    <string name="reset">Reset</string>
+    <string name="cancel">Cancel</string>
 
 
 </resources>

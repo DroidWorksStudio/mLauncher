@@ -19,10 +19,13 @@
     <string name="right">راست</string>
     <string name="center">وسط</string>
     <string name="home_layout_alignment">موقعیت برنامه ها</string>
+    <string name="clock_alignment">Clock alignment</string>
+    <string name="drawer_alignment">App drawer alignment</string>
     <string name="swipe_left_app">برنامه ای  که باکشیدن به چپ باز می شود</string>
     <string name="swipe_right_app">برنامه ای که با کشیدن به راست باز می شود</string>
     <string name="clock_click_app">برنامه ای که با ضربه روی ساعت باز می شود</string>
     <string name="date_click_app">برنامه ای که با ضربه روی تاریخ باز می شود</string>
+    <string name="commit">Commit</string>
     <string name="app_drawer_tips">نکته: برای ردکردن، انگشت خود را به پایین بکشید. برای مخفی کردن صفحه کلید، پیمایش کنید</string>
     <string name="okay">باشه</string>
     <string name="double_tap_lock_is_enabled_message">اگر دوبار ضربه برای قفل صفحه، اثر انگشت یا قفل با چهره را غیرفعال می‌کند، تنظیمات Olauncher را باز کنید، روی «آزمایشی» ضربه بزنید و دستورالعمل‌ها را دنبال کنید. متشکرم.</string>
@@ -34,7 +37,8 @@
     <string name="hide">مخفی کردن</string>
     <string name="status_bar">نمابش نواروضعیت</string>
     <string name="rename">تغییرنام</string>
-    <string name="show_date_time">نمابش تاریخ و ساعت</string>
+    <string name="show_time">Show time</string>
+    <string name="show_date">Show date</string>
     <string name="appearance">ظاهر</string>
     <string name="gestures">اشاره های حرکتی</string>
     <string name="theme_mode">حالت نمایه</string>
@@ -55,5 +59,9 @@
 
     <string name="hidden_apps">برنامه های مخفی</string>
 
+    <string name="show">Show</string>
+    <string name="reset">Reset</string>
+    <string name="cancel">Cancel</string>
+    
 
 </resources>

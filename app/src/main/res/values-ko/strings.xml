@@ -58,5 +58,10 @@
     <string name="app_text_size">텍스트 크기</string>
 
     <string name="hidden_apps">숨겨진 앱</string>
+    
+    <string name="show">Show</string>
+    <string name="reset">Reset</string>
+    <string name="cancel">Cancel</string>
 
+    
 </resources>

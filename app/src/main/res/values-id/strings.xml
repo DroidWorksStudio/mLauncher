@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Olauncher</string>
+    <string name="app_name">Olauncher Clutter Free</string>
     <string name="app">Aplikasi</string>
     <string name="set_as_default_launcher">Atur sebagai launcher default</string>
     <string name="app_text_color">Warna teks</string>
@@ -37,7 +37,8 @@
     <string name="hide">Sembunyikan</string>
     <string name="status_bar">Tampilkan status bar</string>
     <string name="rename">Ganti nama</string>
-    <string name="show_date_time">Tampilkan tanggal dan waktu</string>
+    <string name="show_time">Show time</string>
+    <string name="show_date">Show date</string>
     <string name="appearance">Tampilan</string>
     <string name="gestures">Gestur</string>
     <string name="theme_mode">Mode tema</string>
@@ -57,5 +58,10 @@
     <string name="app_text_size">Ukuran teks</string>
 
     <string name="hidden_apps">Aplikasi tersembunyi</string>
+    
+    <string name="show">Show</string>
+    <string name="reset">Reset</string>
+    <string name="cancel">Cancel</string>
+    
 
 </resources>

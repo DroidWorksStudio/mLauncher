@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Olauncher</string>
+    <string name="app_name">Olauncher Clutter Free</string>
     <string name="app">App</string>
     <string name="set_as_default_launcher">Als Standard-Launcher wählen</string>
     <string name="app_text_color">Textfarbe</string>
@@ -19,10 +19,13 @@
     <string name="right">Rechts</string>
     <string name="center">Zentriert</string>
     <string name="home_alignment">Apps ausrichten</string>
+    <string name="clock_alignment">Clock alignment</string>
+    <string name="drawer_alignment">App drawer alignment</string>
     <string name="swipe_left_app">App öffnen (links wischen)</string>
     <string name="swipe_right_app">App öffen (rechts wischen)</string>
     <string name="clock_click_app">App öffnen (Tippen auf Uhr)</string>
     <string name="date_click_app">App öffnen (Tippen auf Datum)</string>
+    <string name="commit">Commit</string>
     <string name="app_drawer_tips">Tipp! Zurück: nach unten wischen. Tastatur ausblenden: scrollen.</string>
     <string name="okay">OK</string>
     <string name="double_tap_lock_is_enabled_message">Wenn Doppeltippen das Entsperren mittels Fingerabdruck oder Gesicht deaktiviert: Olauncher-Einstellungen öffnen, auf \‘experimentell\' tippen und Anweisungen befolgen. Danke!</string>
@@ -34,7 +37,8 @@
     <string name="hide">Ausblenden</string>
     <string name="status_bar">Statusleiste zeigen</string>
     <string name="rename">Umbenennen</string>
-    <string name="show_date_time">Datum anzeigen</string>
+    <string name="show_time">Show time</string>
+    <string name="show_date">Show date</string>
     <string name="appearance">Erscheinungsbild</string>
     <string name="gestures">Gesten</string>
     <string name="theme_mode">Modus</string>
@@ -47,9 +51,15 @@
     <string name="open">Link öffnen</string>
     <string name="copy">Kopieren</string>
     <string name="close">Schließen</string>
+    <string name="lang_system">System</string>
+    
     <string name="hidden_apps">Versteckte Apps</string>
+    
     <string name="app_language">Sprache</string>
+    
+    <string name="show">Show</string>
+    <string name="reset">Reset</string>
+    <string name="cancel">Cancel</string>
 
 
 </resources>
-

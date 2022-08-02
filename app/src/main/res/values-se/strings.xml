@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Olauncher</string>
+    <string name="app_name">Olauncher Clutter Free</string>
     <string name="app">App</string>
     <string name="set_as_default_launcher">Använd som startsida</string>
     <string name="app_text_color">Textfärg</string>
@@ -19,10 +19,13 @@
     <string name="right">Höger</string>
     <string name="center">Centrerat</string>
     <string name="home_alignment">Justera appar</string>
+    <string name="clock_alignment">Clock alignment</string>
+    <string name="drawer_alignment">App drawer alignment</string>
     <string name="swipe_left_app">App svepning åt vänster</string>
     <string name="swipe_right_app">App svepning åt höger</string>
     <string name="clock_click_app">App vid pekning på klockan</string>
     <string name="date_click_app">App vid pekning på datumet</string>
+    <string name="commit">Commit</string>
     <string name="app_drawer_tips">Tip: Svep nedåt för att avvisa. Rulla för att dölja tangentbordet.</string>
     <string name="okay">OK</string>
     <string name="double_tap_lock_is_enabled_message">Om dubbeltryckning avaktiverar upplåsning med fingeravtryck eller ansikte: öppna Olauncher inställningar, tryck på \'experimental\' och följ anvisningarna. Tack!</string>
@@ -31,7 +34,8 @@
     <string name="hide">Dölj</string>
     <string name="status_bar">Visa statusfält</string>
     <string name="rename">Byt namn</string>
-    <string name="show_date_time">Visa datum och tid</string>
+    <string name="show_time">Show time</string>
+    <string name="show_date">Show date</string>
     <string name="appearance">Utseende</string>
     <string name="gestures">Gester</string>
     <string name="theme_mode">Tema</string>
@@ -44,6 +48,16 @@
     <string name="open">Öppna länk</string>
     <string name="copy">Kopiera</string>
     <string name="close">Stäng</string>
+    <string name="app_language">Interface Language</string>
+    <string name="lang_system">System</string>
+
+    <string name="app_text_size">Text Size</string>
+
+    <string name="hidden_apps">Hidden apps</string>
+
+    <string name="show">Show</string>
+    <string name="reset">Reset</string>
+    <string name="cancel">Cancel</string>
 
 
 </resources>

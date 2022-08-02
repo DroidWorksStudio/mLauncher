@@ -19,10 +19,12 @@
     <string name="right">Δεξιά</string>
     <string name="center">Κέντρο</string>
     <string name="home_alignment">Ευθυγράμμιση εφαρμογών</string>
+    <string name="clock_alignment">Clock alignment</string>
     <string name="swipe_left_app">Σύρσιμο αριστερά για άνοιγμα</string>
     <string name="swipe_right_app">Σύρσιμο δεξιά για άνοιγμα</string>
     <string name="clock_click_app">Εφαρμογή ρολογιού</string>
     <string name="date_click_app">Εφαρμογή ημερολογίου</string>
+    <string name="commit">Commit</string>
     <string name="app_drawer_tips">Συμβουλή: Σύρετε κάτω για απόρριψη. Απόκρυψη πληκτρολογίου: κύλιση προς τα κάτω.</string>
     <string name="okay">Εντάξει</string>
     <string name="double_tap_lock_is_enabled_message">Εάν το διπλό πάτημα απενεργοποιεί το δακτυλικό αποτύπωμα ή το ξεκλείδωμα με αναγνώριση προσώπου, ανοίξτε τις ρυθμίσεις του Olauncher, πατήστε στην επιλογή \'πειραματικό\' και ακολουθήστε τις οδηγίες. Ευχαριστούμε.</string>
@@ -34,7 +36,8 @@
     <string name="hide">Απόκρυψη</string>
     <string name="status_bar">Εμφάνιση μπάρας κατάστασης</string>
     <string name="rename">Μετονομασία</string>
-    <string name="show_date_time">Εμφάνιση ημερομηνίας ώρας</string>
+    <string name="show_time">Show time</string>
+    <string name="show_date">Show date</string>
     <string name="appearance">Εμφάνιση</string>
     <string name="gestures">Χεριρονομίες</string>
     <string name="theme_mode">Θέμα</string>
@@ -55,5 +58,9 @@
 
     <string name="hidden_apps">Κρυφές εφαρμογές</string>
 
+    <string name="show">Show</string>
+    <string name="reset">Reset</string>
+    <string name="cancel">Cancel</string>
 
+    
 </resources>
