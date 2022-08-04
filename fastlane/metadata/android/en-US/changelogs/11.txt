@@ -1,0 +1,5 @@
+- Reorder Settings
+- Fix some visual bugs
+- Change app icon (Thanks @Illithy
+- Update and add languages
+- Fix ClickDate App (Thanks @oacar)
