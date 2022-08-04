@@ -2,8 +2,14 @@ package app.olaunchercf.data
 
 import android.content.Context
 import android.content.SharedPreferences
+import android.os.UserHandle
+import android.os.UserManager
+import android.util.Log
+import androidx.core.content.getSystemService
+import app.olaunchercf.helper.getUserHandleFromString
+import java.lang.RuntimeException
 
-class Prefs(context: Context) {
+class Prefs(val context: Context) {
 
     private val APP_LANGUAGE = "app_language"
 
@@ -32,7 +38,8 @@ class Prefs(context: Context) {
 
     private val APP_NAME = "APP_NAME"
     private val APP_PACKAGE = "APP_PACKAGE"
-    private val APP_ALIAS = "APP_USER"
+    private val APP_USER = "APP_USER"
+    private val APP_ALIAS = "APP_ALIAS"
     private val APP_ACTIVITY = "APP_ACTIVITY"
 
     private val APP_NAME_SWIPE_LEFT = "APP_NAME_SWIPE_LEFT"
@@ -175,29 +182,46 @@ class Prefs(context: Context) {
         get() = prefs.getInt(SHOW_HINT_COUNTER, 1)
         set(value) = prefs.edit().putInt(SHOW_HINT_COUNTER, value).apply()
 
-    fun getHomeAppValues(i: Int): Array<String> {
+    fun getHomeAppModel(i:Int): AppModel {
         val nameId = "${APP_NAME}_$i"
-        val propId = "${APP_PACKAGE}_$i"
         val aliasId = "${APP_ALIAS}_$i"
+        val packId = "${APP_PACKAGE}_$i"
         val activityId = "${APP_ACTIVITY}_$i"
+        val userId = "${APP_USER}_$i"
 
         val name = prefs.getString(nameId, "").toString()
-        val prop = prefs.getString(propId, "").toString()
+        val pack = prefs.getString(packId, "").toString()
         val alias = prefs.getString(aliasId, "").toString()
         val activity = prefs.getString(activityId, "").toString()
 
-        return arrayOf(name, prop, alias, activity)
+        val userHandleString = try { prefs.getString(userId, "").toString() } catch (_: Exception) { "" }
+        val userHandle: UserHandle = getUserHandleFromString(context, userHandleString)
+
+        return AppModel(
+            appLabel = name,
+            appPackage = pack,
+            appAlias = alias,
+            appActivityName = activity,
+            user = userHandle,
+            key = null,
+        )
     }
 
-    fun setHomeAppValues(i: Int, name: String, prop: String, alias: String, activity: String) {
+    fun setHomeAppModel(i: Int, appModel: AppModel) {
         val nameId = "${APP_NAME}_$i"
-        val propId = "${APP_PACKAGE}_$i"
         val aliasId = "${APP_ALIAS}_$i"
+        val packId = "${APP_PACKAGE}_$i"
+        val activity = "${APP_ACTIVITY}_$i"
+        val userId = "${APP_USER}_$i"
 
-        prefs.edit().putString(nameId, name).apply()
-        prefs.edit().putString(propId, prop).apply()
-        prefs.edit().putString(aliasId, alias).apply()
-        prefs.edit().putString(aliasId, activity).apply()
+        val edit = prefs.edit()
+
+        edit.putString(nameId, appModel.appLabel)
+        edit.putString(packId, appModel.appPackage)
+        edit.putString(aliasId, activity)
+        edit.putString(userId, appModel.user.toString())
+
+        edit.apply()
     }
 
     fun setHomeAppName(i: Int, name: String) {
@@ -288,9 +312,10 @@ class Prefs(context: Context) {
         }
         set(value) = prefs.edit().putInt(TEXT_SIZE, value).apply()
 
+
+    // return app label
     fun getAppName(location: Int): String {
-        val (name, _, _, _) = this.getHomeAppValues(location)
-        return name
+        return getHomeAppModel(location).appLabel
     }
 
     fun getAppAlias(appName: String): String {
@@ -301,17 +326,14 @@ class Prefs(context: Context) {
     }
 
     fun getAppPackage(location: Int): String {
-        val (_, pack, _, _) = this.getHomeAppValues(location)
-        return pack
+        return getHomeAppModel(location).appPackage
     }
 
-    fun getAppUser(location: Int): String {
-        val (_, _, alias, _) = this.getHomeAppValues(location)
-        return alias
+    fun getAppUser(location: Int): UserHandle {
+        return getHomeAppModel(location).user
     }
 
     fun getAppActivity(location: Int): String {
-        val (_, _, _, activity) = this.getHomeAppValues(location)
-        return activity
+        return getHomeAppModel(location).appActivityName
     }
 }

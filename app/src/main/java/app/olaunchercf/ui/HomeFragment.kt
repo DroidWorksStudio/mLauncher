@@ -6,6 +6,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.os.UserHandle
 import android.os.Vibrator
 import android.provider.Settings
 import android.util.Log
@@ -59,6 +60,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         initObservers()
         initHomeApps() // must be before alignments
 
+        populateHomeApps(false)
+
         setHomeAlignment(prefs.homeAlignment)
         Log.d("time", "1")
         setTimeAlignment(prefs.timeAlignment)
@@ -70,7 +73,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
     override fun onResume() {
         super.onResume()
-        populateHomeApps(false)
+        // populateHomeApps(false)
         viewModel.isOlauncherDefault()
         if (prefs.showStatusBar) showStatusBar()
         else hideStatusBar()
@@ -97,7 +100,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         if (prefs.homeLocked) return true
 
         val n = view.id
-        val (name, _, _, _) = prefs.getHomeAppValues(n)
+        //val (name, _, _, _) = prefs.getHomeAppValues(n)
+        val name = prefs.getHomeAppModel(n).appLabel
         showAppList(Constants.FLAG_SET_HOME_APP, name.isNotEmpty(), true, n)
         return true
     }
@@ -205,13 +209,18 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         if (homeAppsNum == 0) return // TODO: place clock in center when no apps are shown
 
         binding.homeAppsLayout.children.forEachIndexed { i, app ->
-            val (name, pack, alias) = prefs.getHomeAppValues(i)
+            //val (name, pack, alias) = prefs.getHomeAppValues(i)
+            val appModel = prefs.getHomeAppModel(i)
+            val name = appModel.appLabel
+            val pack = appModel.appPackage
+            val alias = appModel.appAlias
             if (!setHomeAppText(app as TextView, name, pack, alias)) {
                 prefs.resetHomeAppValues(i)
             }
         }
     }
 
+    // returns true if package is installed (?)
     private fun setHomeAppText(textView: TextView, appName: String, packageName: String, userString: String): Boolean {
         if (isPackageInstalled(requireContext(), packageName, userString)) {
             textView.text = appName
@@ -232,14 +241,14 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     }
 
     private fun launchApp(appName: String, packageName: String, appActivity: String,
-                          userString: String) {
+                          user: UserHandle) {
         viewModel.selectedApp(
             AppModel(
                 appName,
                 null,
                 packageName,
                 appActivity,
-                getUserHandleFromString(requireContext(), userString),
+                user,
                 Prefs(requireContext()).getAppAlias(appName)
             ),
             Constants.FLAG_LAUNCH_APP
@@ -282,7 +291,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 prefs.appNameSwipeRight,
                 prefs.appPackageSwipeRight,
                 prefs.appActivitySwipeRight,
-                android.os.Process.myUserHandle().toString()
+                android.os.Process.myUserHandle()
             )
         else openDialerApp(requireContext())
     }
@@ -293,7 +302,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 prefs.appNameClickClock,
                 prefs.appPackageClickClock,
                 prefs.appActivityClickClock,
-                android.os.Process.myUserHandle().toString()
+                android.os.Process.myUserHandle()
             )
         else openAlarmApp(requireContext())
     }
@@ -304,7 +313,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 prefs.appNameClickDate,
                 prefs.appPackageClickDate,
                 prefs.appActivityClickDate,
-                android.os.Process.myUserHandle().toString()
+                android.os.Process.myUserHandle()
             )
         else openCalendar(requireContext())
     }
@@ -316,7 +325,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 prefs.appNameSwipeLeft,
                 prefs.appPackageSwipeLeft,
                 prefs.appActivitySwipeLeft,
-                android.os.Process.myUserHandle().toString()
+                android.os.Process.myUserHandle()
             )
         else openCameraApp(requireContext())
     }

@@ -42,10 +42,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 launchApp(appModel)
             }
             Constants.FLAG_SET_HOME_APP -> {
-                Log.d("homeapps", "$n")
-                appModel.let {
-                    prefs.setHomeAppValues(n, it.appLabel, it.appPackage, it.user.toString(), it.appActivityName)
-                }
+                prefs.setHomeAppModel(n, appModel)
                 refreshHome(false)
             }
             Constants.FLAG_SET_SWIPE_LEFT_APP -> {
