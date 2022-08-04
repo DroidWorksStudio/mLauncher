@@ -17,6 +17,7 @@ We try to balance customizability and clutter :)</h3>
 - Change font size
 - A lot of people have translated the app to the following languages. Many thanks to you ❤️
   - Chinese
+  - Croatian
   - English
   - French
   - German
