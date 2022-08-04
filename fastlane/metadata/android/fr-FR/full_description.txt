@@ -12,6 +12,7 @@ Version modifié de <a href="https://f-droid.org/packages/app.olauncher/">Olaunc
   - Anglais
   - Chinois
   - Coréen
+  - Croate
   - Espagnol
   - Français
   - Grec
