@@ -92,22 +92,12 @@ class SettingsFragment : Fragment(), View.OnClickListener {
 
     @Composable
     private fun Settings() {
-        // observer
+        val selected = remember { mutableStateOf("") }
         Column {
             SettingsArea(
                 title = stringResource(R.string.appearance),
+                selected = selected,
                 arrayOf(
-                    { open, onChange ->
-                        SettingsNumberItem(
-                            title = stringResource(R.string.apps_on_home_screen),
-                            open = open,
-                            onChange = onChange,
-                            currentSelection = remember { mutableStateOf(prefs.homeAppsNum) },
-                            min = 0,
-                            max = Constants.MAX_HOME_APPS,
-                            onSelect = { j -> updateHomeAppsNum(j) }
-                        )
-                    },
                     { _, onChange ->
                         SettingsToggle(
                             title = stringResource(R.string.auto_show_keyboard),
@@ -121,50 +111,6 @@ class SettingsFragment : Fragment(), View.OnClickListener {
                             onChange = onChange,
                             state = remember { mutableStateOf(prefs.showStatusBar) },
                         ) { toggleStatusBar() }
-                    },
-                    { _, onChange ->
-                        SettingsToggle(
-                            title = stringResource(R.string.show_time),
-                            onChange = onChange,
-                            state = remember { mutableStateOf(prefs.showTime) }
-                        ) { toggleShowTime() }
-                    },
-                    { _, onChange ->
-                        SettingsToggle(
-                            title = stringResource(R.string.show_date),
-                            onChange = onChange,
-                            state = remember { mutableStateOf(prefs.showDate) }
-                        ) { toggleShowDate() }
-                    },
-                    { open, onChange ->
-                        SettingsItem(
-                            title = stringResource(R.string.home_alignment),
-                            open = open,
-                            onChange = onChange,
-                            currentSelection = remember { mutableStateOf(prefs.homeAlignment) },
-                            values = arrayOf(Constants.Gravity.Left, Constants.Gravity.Center, Constants.Gravity.Right),
-                            onSelect = { j -> viewModel.updateHomeAlignment(j) }
-                        )
-                    },
-                    { open, onChange ->
-                        SettingsItem(
-                            title = stringResource(R.string.clock_alignment),
-                            open = open,
-                            onChange = onChange,
-                            currentSelection = remember { mutableStateOf(prefs.timeAlignment) },
-                            values = arrayOf(Constants.Gravity.Left, Constants.Gravity.Center, Constants.Gravity.Right),
-                            onSelect = { j -> viewModel.updateTimeAlignment(j) }
-                        )
-                    },
-                    { open, onChange ->
-                        SettingsItem(
-                            title = stringResource(R.string.drawer_alignment),
-                            open = open,
-                            onChange = onChange,
-                            currentSelection = remember { mutableStateOf(prefs.drawerAlignment) },
-                            values = arrayOf(Constants.Gravity.Left, Constants.Gravity.Center, Constants.Gravity.Right),
-                            onSelect = { j -> viewModel.updateDrawerAlignment(j) }
-                        )
                     },
                     { open, onChange ->
                         SettingsItem(
@@ -199,7 +145,80 @@ class SettingsFragment : Fragment(), View.OnClickListener {
                     }
                 )
             )
+            SettingsArea(title = stringResource(R.string.homescreen),
+                selected = selected,
+                arrayOf(
+                    { open, onChange ->
+                        SettingsNumberItem(
+                            title = stringResource(R.string.apps_on_home_screen),
+                            open = open,
+                            onChange = onChange,
+                            currentSelection = remember { mutableStateOf(prefs.homeAppsNum) },
+                            min = 0,
+                            max = Constants.MAX_HOME_APPS,
+                            onSelect = { j -> updateHomeAppsNum(j) }
+                        )
+                    },
+                    { _, onChange ->
+                        SettingsToggle(
+                            title = stringResource(R.string.show_time),
+                            onChange = onChange,
+                            state = remember { mutableStateOf(prefs.showTime) }
+                        ) { toggleShowTime() }
+                    },
+                    { _, onChange ->
+                        SettingsToggle(
+                            title = stringResource(R.string.show_date),
+                            onChange = onChange,
+                            state = remember { mutableStateOf(prefs.showDate) }
+                        ) { toggleShowDate() }
+                    },
+                    { _, onChange ->
+                        SettingsToggle(
+                            title = stringResource(R.string.lock_home_apps),
+                            onChange = onChange,
+                            state = remember { mutableStateOf(prefs.homeLocked) }
+                        ) { prefs.homeLocked = !prefs.homeLocked }
+                    },
+                )
+            )
+            SettingsArea(title = stringResource(R.string.alignment),
+                selected = selected,
+                arrayOf(
+                    { open, onChange ->
+                        SettingsItem(
+                            title = stringResource(R.string.home_alignment),
+                            open = open,
+                            onChange = onChange,
+                            currentSelection = remember { mutableStateOf(prefs.homeAlignment) },
+                            values = arrayOf(Constants.Gravity.Left, Constants.Gravity.Center, Constants.Gravity.Right),
+                            onSelect = { j -> viewModel.updateHomeAlignment(j) }
+                        )
+                    },
+                    { open, onChange ->
+                        SettingsItem(
+                            title = stringResource(R.string.clock_alignment),
+                            open = open,
+                            onChange = onChange,
+                            currentSelection = remember { mutableStateOf(prefs.timeAlignment) },
+                            values = arrayOf(Constants.Gravity.Left, Constants.Gravity.Center, Constants.Gravity.Right),
+                            onSelect = { j -> viewModel.updateTimeAlignment(j) }
+                        )
+                    },
+                    { open, onChange ->
+                        SettingsItem(
+                            title = stringResource(R.string.drawer_alignment),
+                            open = open,
+                            onChange = onChange,
+                            currentSelection = remember { mutableStateOf(prefs.drawerAlignment) },
+                            values = arrayOf(Constants.Gravity.Left, Constants.Gravity.Center, Constants.Gravity.Right),
+                            onSelect = { j -> viewModel.updateDrawerAlignment(j) }
+                        )
+                    },
+                )
+            )
             SettingsArea(title = stringResource(R.string.gestures),
+                selected = selected,
                 arrayOf(
                     { _, _ ->
                         SettingsAppSelector(

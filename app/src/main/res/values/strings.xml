@@ -14,13 +14,13 @@
     <string name="change_default_launcher">Change default launcher</string>
     <string name="long_press_for_settings">Long press anywhere for settings</string>
     <string name="swipe_up_for_apps">Swipe up for all apps</string>
-    <string name="apps_on_home_screen">Apps on home screen</string>
+    <string name="apps_on_home_screen">Number of shortcuts</string>
     <string name="left">Left</string>
     <string name="right">Right</string>
     <string name="center">Center</string>
-    <string name="home_alignment">App alignment</string>
-    <string name="clock_alignment">Clock alignment</string>
-    <string name="drawer_alignment">App drawer alignment</string>
+    <string name="home_alignment">Apps home screen</string>
+    <string name="clock_alignment">Clock and date</string>
+    <string name="drawer_alignment">Apps in app drawer</string>
     <string name="swipe_left_app">Swipe left app</string>
     <string name="swipe_right_app">Swipe right app</string>
     <string name="clock_click_app">Clock click app</string>
@@ -34,7 +34,7 @@
     <string name="_6" translatable="false">6</string>
     <string name="_7" translatable="false">7</string>
     <string name="_8" translatable="false">8</string>
-    <string name="commit">Commit</string>
+    <string name="save">Save</string>
     <string name="app_drawer_tips">Tip: Swipe down to dismiss. Scroll to hide keyboard.</string>
     <string name="okay">Okay</string>
     <string name="double_tap_lock_is_enabled_message">If double tap lock disables fingerprint or face unlock, open Olauncher settings, tap on \'experimental\' and follow the instructions. Thank you.</string>
@@ -48,8 +48,11 @@
     <string name="rename">Rename</string>
     <string name="show_time">Show time</string>
     <string name="show_date">Show date</string>
+    <string name="lock_home_apps">Lock Apps</string>
     <string name="appearance">Appearance</string>
     <string name="gestures">Gestures</string>
+    <string name="homescreen">Homescreen</string>
+    <string name="alignment">Alignment</string>
     <string name="theme_mode">Theme mode</string>
     <string name="system_default">System</string>
     <string name="dark">Dark</string>

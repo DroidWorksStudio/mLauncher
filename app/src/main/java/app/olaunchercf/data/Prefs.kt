@@ -20,6 +20,7 @@ class Prefs(context: Context) {
     private val TIME_ALIGNMENT = "TIME_ALIGNMENT"
     private val STATUS_BAR = "STATUS_BAR"
     private val SHOW_DATE = "SHOW_DATE"
+    private val HOME_LOCKED = "HOME_LOCKED"
     private val SHOW_TIME = "SHOW_TIME"
     private val SWIPE_LEFT_ENABLED = "SWIPE_LEFT_ENABLED"
     private val SWIPE_RIGHT_ENABLED = "SWIPE_RIGHT_ENABLED"
@@ -129,6 +130,10 @@ class Prefs(context: Context) {
     var showDate: Boolean
         get() = prefs.getBoolean(SHOW_DATE, true)
         set(value) = prefs.edit().putBoolean(SHOW_DATE, value).apply()
+
+    var homeLocked: Boolean
+        get() = prefs.getBoolean(HOME_LOCKED, false)
+        set(value) = prefs.edit().putBoolean(HOME_LOCKED, value).apply()
 
     var swipeLeftEnabled: Boolean
         get() = prefs.getBoolean(SWIPE_LEFT_ENABLED, true)

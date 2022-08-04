@@ -34,9 +34,10 @@ object SettingsComposable {
     @Composable
     fun SettingsArea (
         title: String,
+        selected: MutableState<String>,
         items: Array<@Composable (MutableState<Boolean>, (Boolean) -> Unit ) -> Unit>
     ) {
-        val selected = remember { mutableStateOf(-1) }
+        //val selected = remember { mutableStateOf(-1) }
         Column(
             modifier = Modifier
                 .padding(12.dp, 12.dp, 12.dp, 0.dp)
@@ -51,7 +52,10 @@ object SettingsComposable {
         ) {
             SettingsTitle(text = title)
             items.forEachIndexed { i, item ->
-                item(mutableStateOf(i == selected.value)) { b -> selected.value = if (b) i else -1 }
+                item(mutableStateOf("$title-$i" == selected.value)) { b ->
+                    val number = if (b) i else -1;
+                    selected.value = "$title-$number"
+                }
             }
         }
     }
@@ -293,7 +297,7 @@ object SettingsComposable {
                     end.linkTo(parent.end)
                 },
             ) {
-                Text(stringResource(R.string.commit), style = SettingsTheme.typography.button)
+                Text(stringResource(R.string.save), style = SettingsTheme.typography.button)
             }
         }
     }

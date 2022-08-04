@@ -94,6 +94,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     }
 
     override fun onLongClick(view: View): Boolean {
+        if (prefs.homeLocked) return true
+
         val n = view.id
         val (name, _, _, _) = prefs.getHomeAppValues(n)
         showAppList(Constants.FLAG_SET_HOME_APP, name.isNotEmpty(), true, n)
