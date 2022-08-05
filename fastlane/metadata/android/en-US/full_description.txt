@@ -11,6 +11,7 @@ Forked from <a href="https://f-droid.org/packages/app.olauncher/">Olauncher</a> 
   - Chinese
   - Croatian
   - English
+  - Estonian
   - French
   - German
   - Greek

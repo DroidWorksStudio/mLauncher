@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">Olauncher Clutter Free</string>
+    <string name="app">Rakendus</string>
+    <string name="set_as_default_launcher">Määra peamiseks avakuvarakenduseks</string>
+    <string name="app_text_color">Teksti värvr</string>
+    <string name="double_tap_to_lock_screen">Topeltvajutus ekraani lukustamiseks</string>
+    <string name="experimental_">(eksperimentaalne)</string>
+    <string name="admin_permission_message">Olauncher lubab, et kasutab ekraani lukustamise luba vastutustundlikult.</string>
+    <string name="about">Teave</string>
+    <string name="off">Sisse</string>
+    <string name="on">Välja</string>
+    <string name="black">Must</string>
+    <string name="white">Valge</string>
+    <string name="change_default_launcher">Muuda peamist avakuvarakendust</string>
+    <string name="long_press_for_settings">Sätete nägemiseks vajuta pikalt</string>
+    <string name="swipe_up_for_apps">Tõmba näpuga üles kõigi rakenduste kuvamiseks</string>
+    <string name="apps_on_home_screen">Rakendus avakuval</string>
+    <string name="left">Vasakul</string>
+    <string name="right">Paremal</string>
+    <string name="center">Keskel</string>
+    <string name="home_alignment">Rakenduse asukoht</string>
+    <string name="clock_alignment">Kella asukoht</string>
+    <string name="drawer_alignment">Rakenduste menüü asukoht</string>
+    <string name="swipe_left_app">Vasakult tõmmates avaneb rakendus</string>
+    <string name="swipe_right_app">Paremalt tõmmates avaneb rakendus</string>
+    <string name="clock_click_app">Kellale vajutades avaneb rakendus</string>
+    <string name="date_click_app">Kuupäevale vajutades avaneb arakendus</string>
+    <string name="commit">Soorita</string>
+    <string name="app_drawer_tips">Nipp: Tühistamiseks tõmba näpuga alla. Tõmba näpuga klaviatuuri peitmiseks.</string>
+    <string name="okay">Ok</string>
+    <string name="double_tap_lock_is_enabled_message">Kui topeltvajutus lülitab sõrmejäljega või näoga telefoni avamise, ava Olauncher\'i sätted, vajuta  \'experimental\' ning järgi juhiseid. Aitäh.
+    </string>
+    <string name="triple_tap_lock_message">Selgitus:
+        \nPeale topeltvajutuse tegemist läheb ekraan tumedaks ning telefon lukustub 5 sekundi pärast.
+        \n\nSaad teha topeltvajutuse, et <b>avada</b> või kolmikvajutuse igal hetkel telefoni koheselt lukustamiseks.
+        \n\nTeade: Esmalt lülita see VÄLJA, kui plaanid Olauncher\'i maha tõmmata. Aitäh.</string>
+    <string name="auto_show_keyboard">Näita klaviatuuri automaatselt</string>
+    <string name="hide">Peida</string>
+    <string name="status_bar">Näita olekuriba</string>
+    <string name="rename">Ümbernimeta</string>
+    <string name="show_time">Näita aega</string>
+    <string name="show_date">Näita kuupäeva</string>
+    <string name="appearance">Välimus</string>
+    <string name="gestures">Žestid</string>
+    <string name="theme_mode">Teema</string>
+    <string name="system_default">Süsteem</string>
+    <string name="dark">Tume</string>
+    <string name="light">Hele</string>
+    <string name="double_tap_lock_uninstall_message">Topeltvajutuse lukk on lubatud.
+        \n\nTeade: Esmalt lülita see VÄLJA, kui plaanid Olauncher\'i maha tõmmata.</string>
+    <string name="accessibility_service_description">Ligipääsu luba on nõutud topeltvajutuse luku kasutamiseks. Rakenduse poolt kogutud andmed ei välju Teie süsteemist.</string>
+    <string name="lock_layout_description">luku paigutuse selgitus, mida kasutatakse lukustusekraanil unikaalse nimetusena</string>
+    <string name="open">Ava viide</string>
+    <string name="copy">Kopeeri</string>
+    <string name="close">Sulge</string>
+    <string name="app_language">Kasutajaliidese keel</string>
+    <string name="lang_system">Süsteem</string>
+
+    <string name="app_text_size">Teksti suurus</string>
+
+    <string name="hidden_apps">Peidetud rakendused</string>
+
+    <string name="show">Näita</string>
+    <string name="reset">Lähtesta</string>
+    <string name="cancel">Tühista</string>
+
+
+</resources>

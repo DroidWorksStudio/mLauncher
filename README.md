@@ -19,6 +19,7 @@ We try to balance customizability and clutter :)</h3>
   - Chinese
   - Croatian
   - English
+  - Estonian
   - French
   - German
   - Greek

@@ -40,6 +40,7 @@ object Constants {
         Chinese,
         Croatian,
         English,
+        Estonian,
         French,
         German,
         Greek,
@@ -60,6 +61,7 @@ object Constants {
                 Chinese -> "中国人"
                 Croatian -> "Hrvatski"
                 English -> "English"
+                Estonian -> "Eesti keel"
                 French -> "Français"
                 German -> "Deutsch"
                 Greek -> "Ελληνική"
@@ -94,6 +96,7 @@ object Constants {
             Language.Indonesian -> "id"
             Language.Russian -> "ru"
             Language.Croatian -> "hr"
+            Language.Estonian -> "et"
         }
     }
 
