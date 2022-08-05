@@ -14,18 +14,27 @@
     <string name="change_default_launcher">更改默认启动器</string>
     <string name="long_press_for_settings">在屏幕上任意一处长按进入设置</string>
     <string name="swipe_up_for_apps">上滑查看所有应用</string>
-    <string name="apps_on_home_screen">主屏应用</string>
+    <string name="apps_on_home_screen">快捷方式数量</string>
     <string name="left">左</string>
     <string name="right">右</string>
     <string name="center">中</string>
-    <string name="home_alignment">应用对齐</string>
-    <string name="clock_alignment">时钟对齐</string>
-    <string name="drawer_alignment">抽屉对齐</string>
+    <string name="home_alignment">主屏应用</string>
+    <string name="clock_alignment">时钟和日期</string>
+    <string name="drawer_alignment">抽屉内的应用</string>
     <string name="swipe_left_app">左滑应用</string>
     <string name="swipe_right_app">右滑应用</string>
     <string name="clock_click_app">单击时钟启动的应用</string>
     <string name="date_click_app">单击日期启动的应用</string>
-    <string name="commit">Commit</string>
+    <string name="_0" translatable="false">0</string>
+    <string name="_1" translatable="false">1</string>
+    <string name="_2" translatable="false">2</string>
+    <string name="_3" translatable="false">3</string>
+    <string name="_4" translatable="false">4</string>
+    <string name="_5" translatable="false">5</string>
+    <string name="_6" translatable="false">6</string>
+    <string name="_7" translatable="false">7</string>
+    <string name="_8" translatable="false">8</string>
+    <string name="save">保存</string>
     <string name="app_drawer_tips">提示：下滑不予理会。滚动隐藏键盘。</string>
     <string name="okay">好的</string>
     <string name="double_tap_lock_is_enabled_message">如“轻按两次锁定”禁用指纹或面部解锁，打开 Olauncher 设置，轻按 \'实验性\' 并遵照指示去做。谢谢你。</string>
@@ -39,8 +48,11 @@
     <string name="rename">重命名</string>
     <string name="show_time">显示时间</string>
     <string name="show_date">显示日期</string>
+    <string name="lock_home_apps">锁定应用</string>
     <string name="appearance">外观</string>
     <string name="gestures">手势</string>
+    <string name="homescreen">主屏幕</string>
+    <string name="alignment">对齐</string>
     <string name="theme_mode">主题模式</string>
     <string name="system_default">系统</string>
     <string name="dark">深色</string>
@@ -56,7 +68,7 @@
     <string name="lang_system">系统</string>
 
     <string name="app_text_size">文本尺寸</string>
-
+    
     <string name="hidden_apps">隐藏的应用</string>
     
     <string name="show">显示</string>
