@@ -193,7 +193,6 @@ class AppDrawerFragment : Fragment() {
     private fun renameListener(flag: Int, i: Int) {
         val name = binding.search.query.toString().trim()
         if (name.isEmpty()) return
-        Log.d("homeapps", "$i")
         if (flag == Constants.FLAG_SET_HOME_APP) {
             Prefs(requireContext()).setHomeAppName(i, name)
         }

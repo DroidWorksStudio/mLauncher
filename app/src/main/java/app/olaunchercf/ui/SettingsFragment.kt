@@ -223,28 +223,28 @@ class SettingsFragment : Fragment(), View.OnClickListener {
                     { _, _ ->
                         SettingsAppSelector(
                             title = stringResource(R.string.swipe_left_app),
-                            currentSelection = remember { mutableStateOf(prefs.appNameSwipeLeft) },
+                            currentSelection = remember { mutableStateOf(prefs.appSwipeLeft.appLabel) },
                             onClick = { showAppListIfEnabled(Constants.FLAG_SET_SWIPE_LEFT_APP) }
                         )
                     },
                     { _, _ ->
                         SettingsAppSelector(
                             title = stringResource(R.string.swipe_right_app),
-                            currentSelection = remember { mutableStateOf(prefs.appNameSwipeRight) },
+                            currentSelection = remember { mutableStateOf(prefs.appSwipeRight.appLabel) },
                             onClick = { showAppListIfEnabled(Constants.FLAG_SET_SWIPE_RIGHT_APP) }
                         )
                     },
                     { _, _ ->
                         SettingsAppSelector(
                             title = stringResource(R.string.clock_click_app),
-                            currentSelection = remember { mutableStateOf(prefs.appNameClickClock) },
+                            currentSelection = remember { mutableStateOf(prefs.appClickClock.appLabel) },
                             onClick = { showAppListIfEnabled(Constants.FLAG_SET_CLICK_CLOCK_APP) }
                         )
                     },
                     { _, _ ->
                         SettingsAppSelector(
                             title = stringResource(R.string.date_click_app),
-                            currentSelection = remember { mutableStateOf(prefs.appNameClickDate) },
+                            currentSelection = remember { mutableStateOf(prefs.appClickDate.appLabel) },
                             onClick = { showAppListIfEnabled(Constants.FLAG_SET_CLICK_DATE_APP) }
                         )
                     },

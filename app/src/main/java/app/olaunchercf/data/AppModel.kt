@@ -15,4 +15,6 @@ data class AppModel(
         key != null && other.key != null -> key.compareTo(other.key)
         else -> appLabel.compareTo(other.appLabel, true)
     }
+
+    var name: String = appAlias.ifEmpty { appLabel }
 }

@@ -46,31 +46,19 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 refreshHome(false)
             }
             Constants.FLAG_SET_SWIPE_LEFT_APP -> {
-                prefs.appNameSwipeLeft = appModel.appLabel
-                prefs.appPackageSwipeLeft = appModel.appPackage
-                prefs.appUserSwipeLeft = appModel.user.toString()
-                prefs.appActivitySwipeLeft = appModel.appActivityName
+                prefs.appSwipeLeft = appModel
                 updateSwipeApps()
             }
             Constants.FLAG_SET_SWIPE_RIGHT_APP -> {
-                prefs.appNameSwipeRight = appModel.appLabel
-                prefs.appPackageSwipeRight = appModel.appPackage
-                prefs.appUserSwipeRight = appModel.user.toString()
-                prefs.appActivitySwipeRight = appModel.appActivityName
+                prefs.appSwipeRight = appModel
                 updateSwipeApps()
             }
             Constants.FLAG_SET_CLICK_CLOCK_APP -> {
-                prefs.appNameClickClock = appModel.appLabel
-                prefs.appPackageClickClock = appModel.appPackage
-                prefs.appUserClickClock = appModel.user.toString()
-                prefs.appActivityClickClock = appModel.appActivityName
+                prefs.appClickClock = appModel
                 updateClickApps()
             }
             Constants.FLAG_SET_CLICK_DATE_APP -> {
-                prefs.appNameClickDate = appModel.appLabel
-                prefs.appPackageClickDate = appModel.appPackage
-                prefs.appUserClickDate = appModel.user.toString()
-                prefs.appActivityClickDate = appModel.appActivityName
+                prefs.appClickDate = appModel
                 updateClickApps()
             }
         }
