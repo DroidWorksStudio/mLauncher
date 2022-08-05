@@ -25,7 +25,7 @@
     <string name="swipe_right_app">Balayage vers la droite</string>
     <string name="clock_click_app">Appui sur l\'horloge</string>
     <string name="date_click_app">Appui sur la date</string>
-    <string name="commit">Appliquer</string>
+    <string name="save">Appliquer</string>
     <string name="app_drawer_tips">Conseil: balayez vers le bas pour ignorer. Faites défiler pour masquer le clavier.</string>
     <string name="okay">Okay</string>
     <string name="double_tap_lock_is_enabled_message">Si le verrouillage par double tapotement désactive le déverrouillage biométrique (par empreinte ou par visage), ouvrez les paramètres d\'Olauncher, toucher \'expérimental\' et suivez les instructions. Merci.</string>
