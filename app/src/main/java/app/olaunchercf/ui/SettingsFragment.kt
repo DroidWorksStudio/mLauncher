@@ -223,28 +223,34 @@ class SettingsFragment : Fragment(), View.OnClickListener {
                     { _, _ ->
                         SettingsAppSelector(
                             title = stringResource(R.string.swipe_left_app),
-                            currentSelection = remember { mutableStateOf(prefs.appSwipeLeft.appLabel) },
+                            currentSelection = remember {
+                                mutableStateOf(prefs.appSwipeLeft.appLabel.ifEmpty { "Camera" })
+                            },
                             onClick = { showAppListIfEnabled(Constants.FLAG_SET_SWIPE_LEFT_APP) }
                         )
                     },
                     { _, _ ->
                         SettingsAppSelector(
                             title = stringResource(R.string.swipe_right_app),
-                            currentSelection = remember { mutableStateOf(prefs.appSwipeRight.appLabel) },
+                            currentSelection = remember {
+                                mutableStateOf(prefs.appSwipeRight.appLabel.ifEmpty { "Phone" })
+                            },
                             onClick = { showAppListIfEnabled(Constants.FLAG_SET_SWIPE_RIGHT_APP) }
                         )
                     },
                     { _, _ ->
                         SettingsAppSelector(
                             title = stringResource(R.string.clock_click_app),
-                            currentSelection = remember { mutableStateOf(prefs.appClickClock.appLabel) },
+                            currentSelection =
+                                remember { mutableStateOf(prefs.appClickClock.appLabel.ifEmpty { "Clock" }) },
                             onClick = { showAppListIfEnabled(Constants.FLAG_SET_CLICK_CLOCK_APP) }
                         )
                     },
                     { _, _ ->
                         SettingsAppSelector(
                             title = stringResource(R.string.date_click_app),
-                            currentSelection = remember { mutableStateOf(prefs.appClickDate.appLabel) },
+                            currentSelection =
+                                remember { mutableStateOf(prefs.appClickDate.appLabel.ifEmpty { "Calendar" }) },
                             onClick = { showAppListIfEnabled(Constants.FLAG_SET_CLICK_DATE_APP) }
                         )
                     },
