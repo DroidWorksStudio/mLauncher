@@ -1,0 +1,27 @@
+Forkirano iz <a href="https://f-droid.org/packages/app.olauncher/">Olaunchera</a> jer je izvorna verzija pretrpana.
+    
+- Uklonjene nepotrebne funkcije, kao što su oglasi i poveznice
+- Preimenuj aplikacije u ladici s aplikacijama _(Preimenovanje aplikacija na početnom zaslonu već je podržano. Samo dugo pritisni aplikaciju na početnom zaslonu i počni pisati)_
+- Promijeni aplikaciju koja se otvara pritiskom na sat
+- Promijeni aplikaciju koja se otvara pritiskom na datum
+- Poravnaj sat neovisno o poravnanju aplikacija na početnom zaslonu
+- Promijeni poravnanje aplikacija u ladici s aplikacijama 
+- Promijeni veličinu fonta
+- Mnoštvo ljudi prevelo je aplikaciju u sljedeće jezike. Puno vam hvala ❤️
+  - Engleski
+  - Estonski
+  - Francuski
+  - Grčki
+  - Hrvatski
+  - Indonezijski
+  - Kineski
+  - Korejski
+  - Njemački
+  - Perzijski
+  - Portugalski (europski)
+  - Ruski
+  - Španjolski
+  - Švedski
+  - Talijanski
+  - Turski
+- Uklonjeno dopuštenje za pristup internetu
