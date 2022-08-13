@@ -37,10 +37,13 @@
     <string name="hide">Ocultar</string>
     <string name="status_bar">Barra de estado</string>
     <string name="rename">Renombrar</string>
-    <string name="show_time">Show time</string>
-    <string name="show_date">Show date</string>
+    <string name="show_time">Hora</string>
+    <string name="show_date">Fecha</string>
+    <string name="lock_home_apps">Bloquear aplicaciones</string>
     <string name="appearance">Apariencia</string>
     <string name="gestures">Gestos</string>
+    <string name="homescreen">Inicio</string>
+    <string name="alignment">Disposición</string>
     <string name="theme_mode">Tema</string>
     <string name="system_default">Por defecto</string>
     <string name="dark">Oscuro</string>
