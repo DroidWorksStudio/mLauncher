@@ -19,13 +19,22 @@
     <string name="right">راست</string>
     <string name="center">وسط</string>
     <string name="home_layout_alignment">موقعیت برنامه ها</string>
-    <string name="clock_alignment">Clock alignment</string>
-    <string name="drawer_alignment">App drawer alignment</string>
+    <string name="clock_alignment">جای نمایی ساعت</string>
+    <string name="drawer_alignment">کشوی برنامه</string>
     <string name="swipe_left_app">برنامه ای  که باکشیدن به چپ باز می شود</string>
     <string name="swipe_right_app">برنامه ای که با کشیدن به راست باز می شود</string>
     <string name="clock_click_app">برنامه ای که با ضربه روی ساعت باز می شود</string>
     <string name="date_click_app">برنامه ای که با ضربه روی تاریخ باز می شود</string>
-    <string name="commit">Commit</string>
+	<string name="_0" translatable="false">0</string>
+    <string name="_1" translatable="false">1</string>
+    <string name="_2" translatable="false">2</string>
+    <string name="_3" translatable="false">3</string>
+    <string name="_4" translatable="false">4</string>
+    <string name="_5" translatable="false">5</string>
+    <string name="_6" translatable="false">6</string>
+    <string name="_7" translatable="false">7</string>
+    <string name="_8" translatable="false">8</string>
+    <string name="save">ذخیره</string>
     <string name="app_drawer_tips">نکته: برای ردکردن، انگشت خود را به پایین بکشید. برای مخفی کردن صفحه کلید، پیمایش کنید</string>
     <string name="okay">باشه</string>
     <string name="double_tap_lock_is_enabled_message">اگر دوبار ضربه برای قفل صفحه، اثر انگشت یا قفل با چهره را غیرفعال می‌کند، تنظیمات Olauncher را باز کنید، روی «آزمایشی» ضربه بزنید و دستورالعمل‌ها را دنبال کنید. متشکرم.</string>
@@ -37,10 +46,13 @@
     <string name="hide">مخفی کردن</string>
     <string name="status_bar">نمابش نواروضعیت</string>
     <string name="rename">تغییرنام</string>
-    <string name="show_time">Show time</string>
-    <string name="show_date">Show date</string>
+    <string name="show_time">نمایش ساعت</string>
+    <string name="show_date">نمایش تاریخ</string>
+	<string name="lock_home_apps">قفل برنامه ها</string>
     <string name="appearance">ظاهر</string>
     <string name="gestures">اشاره های حرکتی</string>
+	<string name="homescreen">صفحه اصلی</string>
+    <string name="alignment">جای نمایی</string>
     <string name="theme_mode">حالت نمایه</string>
     <string name="system_default">سیستم</string>
     <string name="dark">تاریک</string>
@@ -59,9 +71,9 @@
 
     <string name="hidden_apps">برنامه های مخفی</string>
 
-    <string name="show">Show</string>
-    <string name="reset">Reset</string>
-    <string name="cancel">Cancel</string>
+    <string name="show">نمایش</string>
+    <string name="reset">بازگردانی</string>
+    <string name="cancel">لغو</string>
     
 
 </resources>
