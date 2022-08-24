@@ -180,6 +180,13 @@ class SettingsFragment : Fragment(), View.OnClickListener {
                             state = remember { mutableStateOf(prefs.homeLocked) }
                         ) { prefs.homeLocked = !prefs.homeLocked }
                     },
+                    { _, onChange ->
+                        SettingsToggle(
+                            title = stringResource(R.string.extend_home_apps_area),
+                            onChange = onChange,
+                            state = remember { mutableStateOf(prefs.extendHomeAppsArea) }
+                        ) { prefs.extendHomeAppsArea = !prefs.extendHomeAppsArea }
+                    },
                 )
             )
             SettingsArea(title = stringResource(R.string.alignment),

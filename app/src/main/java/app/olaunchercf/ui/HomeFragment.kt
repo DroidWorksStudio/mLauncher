@@ -12,6 +12,7 @@ import android.provider.Settings
 import android.util.Log
 import android.view.*
 import android.widget.TextView
+import androidx.compose.ui.layout.Layout
 import androidx.core.os.bundleOf
 import androidx.core.view.children
 import androidx.fragment.app.Fragment
@@ -146,6 +147,12 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 textSize = prefs.textSize.toFloat()
                 id = i
                 setOnTouchListener(getViewSwipeTouchListener(context, this))
+                if (!prefs.extendHomeAppsArea) {
+                    layoutParams = ViewGroup.LayoutParams(
+                        ViewGroup.LayoutParams.WRAP_CONTENT,
+                        ViewGroup.LayoutParams.WRAP_CONTENT
+                    )
+                }
             }
             // swipe
 
@@ -174,21 +181,22 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         binding.dateTimeLayout.gravity = gravity
     }
 
+    @SuppressLint("RtlHardcoded")
     private fun setHomeAlignment(gravity_const: Constants.Gravity, bottom: Boolean) {
         val gravity = when(gravity_const) {
             Constants.Gravity.Left -> Gravity.LEFT
             Constants.Gravity.Center -> Gravity.CENTER
             Constants.Gravity.Right -> Gravity.RIGHT
         }
-        binding.homeAppsLayout.gravity = gravity
         if (bottom) {
-            binding.homeAppsLayout.gravity = Gravity.BOTTOM
+            binding.homeAppsLayout.gravity = gravity or Gravity.BOTTOM
         } else {
-            binding.homeAppsLayout.gravity = Gravity.CENTER_VERTICAL
+            binding.homeAppsLayout.gravity = gravity or Gravity.CENTER_VERTICAL
         }
-        binding.homeAppsLayout.children.forEach {
-            (it as TextView).gravity = gravity
-        }
+        /*binding.homeAppsLayout.children.forEach {
+            //(it as TextView).gravity = gravity
+            (it as TextView).gravity = Gravity.RIGHT
+        }*/
     }
 
     private fun populateHomeApps(appCountUpdated: Boolean) {
