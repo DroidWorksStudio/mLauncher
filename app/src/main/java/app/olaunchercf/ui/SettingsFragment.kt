@@ -195,6 +195,13 @@ class SettingsFragment : Fragment(), View.OnClickListener {
                             onSelect = { j -> viewModel.updateHomeAlignment(j) }
                         )
                     },
+                    { _, onChange ->
+                        SettingsToggle(
+                            title = stringResource(R.string.home_alignment_bottom),
+                            onChange = onChange,
+                            state = remember { mutableStateOf(prefs.homeAlignmentBottom) }
+                        ) { viewModel.toggleHomeAppsBottom() }
+                    },
                     { open, onChange ->
                         SettingsItem(
                             title = stringResource(R.string.clock_alignment),

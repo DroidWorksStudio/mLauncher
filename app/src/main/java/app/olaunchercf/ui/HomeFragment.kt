@@ -62,7 +62,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
         populateHomeApps(false)
 
-        setHomeAlignment(prefs.homeAlignment)
+        setHomeAlignment(prefs.homeAlignment, prefs.homeAlignmentBottom)
         setTimeAlignment(prefs.timeAlignment)
         initSwipeTouchListener()
         initClickListeners()
@@ -117,9 +117,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 if (it) binding.setDefaultLauncher.visibility = View.GONE
                 else binding.setDefaultLauncher.visibility = View.VISIBLE
             })
-            homeAppAlignment.observe(viewLifecycleOwner) {
-                setHomeAlignment(it)
-            }
             timeAlignment.observe(viewLifecycleOwner) {
                 setTimeAlignment(it)
             }
@@ -177,13 +174,18 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         binding.dateTimeLayout.gravity = gravity
     }
 
-    private fun setHomeAlignment(gravity_const: Constants.Gravity) {
+    private fun setHomeAlignment(gravity_const: Constants.Gravity, bottom: Boolean) {
         val gravity = when(gravity_const) {
             Constants.Gravity.Left -> Gravity.LEFT
             Constants.Gravity.Center -> Gravity.CENTER
             Constants.Gravity.Right -> Gravity.RIGHT
         }
         binding.homeAppsLayout.gravity = gravity
+        if (bottom) {
+            binding.homeAppsLayout.gravity = Gravity.BOTTOM
+        } else {
+            binding.homeAppsLayout.gravity = Gravity.CENTER_VERTICAL
+        }
         binding.homeAppsLayout.children.forEach {
             (it as TextView).gravity = gravity
         }

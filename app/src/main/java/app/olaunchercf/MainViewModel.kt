@@ -28,7 +28,6 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     val hiddenApps = MutableLiveData<List<AppModel>?>()
     val isOlauncherDefault = MutableLiveData<Boolean>()
     val launcherResetFailed = MutableLiveData<Boolean>()
-    val homeAppAlignment = MutableLiveData<Constants.Gravity>()
     val timeAlignment = MutableLiveData<Constants.Gravity>()
     val showMessageDialog = MutableLiveData<String>()
     val showSupportDialog = MutableLiveData<Boolean>()
@@ -147,12 +146,15 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     fun updateHomeAlignment(gravity: Constants.Gravity) {
         prefs.homeAlignment = gravity
-        homeAppAlignment.value = gravity
+        //homeAppAlignment.value = gravity
+    }
+
+    fun toggleHomeAppsBottom() {
+        prefs.homeAlignmentBottom = !prefs.homeAlignmentBottom
     }
 
     fun updateDrawerAlignment(gravity: Constants.Gravity) {
         prefs.drawerAlignment = gravity
-        // drawerAppAlignment.value = gravity
     }
 
     fun updateTimeAlignment(gravity: Constants.Gravity) {

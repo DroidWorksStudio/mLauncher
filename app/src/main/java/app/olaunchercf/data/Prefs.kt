@@ -19,6 +19,7 @@ private const val LOCK_MODE = "LOCK_MODE"
 private const val HOME_APPS_NUM = "HOME_APPS_NUM"
 private const val AUTO_SHOW_KEYBOARD = "AUTO_SHOW_KEYBOARD"
 private const val HOME_ALIGNMENT = "HOME_ALIGNMENT"
+private const val HOME_ALIGNMENT_BOTTOM = "HOME_ALIGNMENT_BOTTOM"
 private const val DRAWER_ALIGNMENT = "DRAWER_ALIGNMENT"
 private const val TIME_ALIGNMENT = "TIME_ALIGNMENT"
 private const val STATUS_BAR = "STATUS_BAR"
@@ -89,6 +90,10 @@ class Prefs(val context: Context) {
             }
         }
         set(value) = prefs.edit().putString(HOME_ALIGNMENT, value.toString()).apply()
+
+    var homeAlignmentBottom: Boolean
+        get() = prefs.getBoolean(HOME_ALIGNMENT_BOTTOM, false)
+        set(value) = prefs.edit().putBoolean(HOME_ALIGNMENT_BOTTOM, value).apply()
 
     var timeAlignment: Constants.Gravity
         get() {

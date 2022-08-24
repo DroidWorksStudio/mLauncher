@@ -19,6 +19,7 @@
     <string name="right">Right</string>
     <string name="center">Center</string>
     <string name="home_alignment">Apps home screen</string>
+    <string name="home_alignment_bottom">Apps home screen bottom</string>
     <string name="clock_alignment">Clock and date</string>
     <string name="drawer_alignment">Apps in app drawer</string>
     <string name="swipe_left_app">Swipe left app</string>
