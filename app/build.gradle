@@ -18,8 +18,8 @@ android {
         applicationId "app.olaunchercf"
         minSdkVersion 23
         targetSdkVersion 32
-        versionCode 12
-        versionName "v1.2.0"
+        versionCode 13
+        versionName "v1.2.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
