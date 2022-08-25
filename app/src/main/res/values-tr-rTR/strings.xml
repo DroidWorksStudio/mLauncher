@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Olauncher Clutter Free</string>
-    <string name="app">App</string>
+    <string name="app">Uygulama</string>
     <string name="set_as_default_launcher">Varsayılan başlatıcı olarak ayarla</string>
     <string name="app_text_color">Metin rengi</string>
     <string name="double_tap_to_lock_screen">Kilitlemek için iki kez dokunun</string>
@@ -19,13 +19,13 @@
     <string name="right">Sağ</string>
     <string name="center">Orta</string>
     <string name="home_alignment">Uygulama hizalaması</string>
-    <string name="clock_alignment">Clock alignment</string>
-    <string name="drawer_alignment">App drawer alignment</string>
+    <string name="clock_alignment">Saat hizalaması</string>
+    <string name="drawer_alignment">Uygulama çekmecesi hizalaması</string>
     <string name="swipe_left_app">Uygulamayı sola kaydırın</string>
     <string name="swipe_right_app">Uygulamayı sağa kaydırın</string>
     <string name="clock_click_app">Saat tıklama uygulaması</string>
     <string name="date_click_app">Tarih tıklama uygulaması</string>
-    <string name="commit">Commit</string>
+    <string name="commit">Uygula</string>
     <string name="app_drawer_tips">İpucu: Kapatmak için aşağı kaydırın. Klavyeyi gizlemek için kaydırın.</string>
     <string name="okay">Tamam</string>
     <string name="double_tap_lock_is_enabled_message">Çift dokunma kilidi parmak izini veya yüzle kilit açmayı devre dışı bırakırsa, Olauncher ayarlarını açın, \'deneysel\' üzerine dokunun ve talimatları izleyin. Teşekkürler.</string>
@@ -37,8 +37,8 @@
     <string name="hide">Gizle</string>
     <string name="status_bar">Durum çubuğunu göster</string>
     <string name="rename">Yeniden adlandır</string>
-    <string name="show_time">Show time</string>
-    <string name="show_date">Show date</string>
+    <string name="show_time">Saati göster</string>
+    <string name="show_date">Tarihi göster</string>
     <string name="appearance">Görünüm</string>
     <string name="gestures">Kaydırma</string>
     <string name="theme_mode">Tema modu</string>
@@ -52,16 +52,16 @@
     <string name="open">Linki aç</string>
     <string name="copy">Kopyala</string>
     <string name="close">Kapat</string>
-    <string name="app_language">Interface Language</string>
-    <string name="lang_system">System</string>
+    <string name="app_language">Arayüz dili</string>
+    <string name="lang_system">Sistem</string>
 
-    <string name="app_text_size">Text Size</string>
+    <string name="app_text_size">Yazı tipi boyutu</string>
 
-    <string name="hidden_apps">Hidden apps</string>
+    <string name="hidden_apps">Gizli uygulamalar</string>
 
-    <string name="show">Show</string>
-    <string name="reset">Reset</string>
-    <string name="cancel">Cancel</string>
+    <string name="show">Göster</string>
+    <string name="reset">Sıfırla</string>
+    <string name="cancel">İptal</string>
     
     
 </resources>
