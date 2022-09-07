@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Olauncher Clutter Free</string>
     <string name="app">App</string>
-    <string name="set_as_default_launcher">Als Standard-Launcher wÃ¤hlen</string>
+    <string name="set_as_default_launcher">Als Standard-Launcher wählen</string>
     <string name="app_text_color">Textfarbe</string>
     <string name="double_tap_to_lock_screen">Zum Sperren doppelt tippen</string>
     <string name="experimental_">(experimentell)</string>
@@ -10,25 +10,25 @@
     <string name="off">Aus</string>
     <string name="on">Ein</string>
     <string name="black">Schwarz</string>
-    <string name="white">WeiÃŸ</string>
-    <string name="change_default_launcher">Anderen Standard-Launcher wÃ¤hlen</string>
+    <string name="white">Weiß</string>
+    <string name="change_default_launcher">Anderen Standard-Launcher wählen</string>
     <string name="long_press_for_settings">An beliebiger Stelle lange tippen</string>
-    <string name="swipe_up_for_apps">AufwÃ¤rts wischen: alle Apps anzeigen</string>
+    <string name="swipe_up_for_apps">Aufwärts wischen: alle Apps anzeigen</string>
     <string name="apps_on_home_screen">Apps auf Home-Bildschirm</string>
     <string name="left">Links</string>
     <string name="right">Rechts</string>
     <string name="center">Zentriert</string>
     <string name="home_alignment">Apps ausrichten</string>
-    <string name="clock_alignment">Clock alignment</string>
-    <string name="drawer_alignment">App drawer alignment</string>
-    <string name="swipe_left_app">App Ã¶ffnen (links wischen)</string>
-    <string name="swipe_right_app">App Ã¶ffen (rechts wischen)</string>
-    <string name="clock_click_app">App Ã¶ffnen (Tippen auf Uhr)</string>
-    <string name="date_click_app">App Ã¶ffnen (Tippen auf Datum)</string>
-    <string name="commit">Commit</string>
-    <string name="app_drawer_tips">Tipp! ZurÃ¼ck: nach unten wischen. Tastatur ausblenden: scrollen.</string>
+    <string name="clock_alignment">Uhr ausrichten</string>
+    <string name="drawer_alignment">App-Übersicht ausrichten</string>
+    <string name="swipe_left_app">App öffnen (links wischen)</string>
+    <string name="swipe_right_app">App öffen (rechts wischen)</string>
+    <string name="clock_click_app">App öffnen (Tippen auf Uhr)</string>
+    <string name="date_click_app">App öffnen (Tippen auf Datum)</string>
+    <string name="commit">Bestätigen</string>
+    <string name="app_drawer_tips">Tipp! Zurück: nach unten wischen. Tastatur ausblenden: scrollen.</string>
     <string name="okay">OK</string>
-    <string name="double_tap_lock_is_enabled_message">Wenn Doppeltippen das Entsperren mittels Fingerabdruck oder Gesicht deaktiviert: Olauncher-Einstellungen Ã¶ffnen, auf \â€˜experimentell\' tippen und Anweisungen befolgen. Danke!</string>
+    <string name="double_tap_lock_is_enabled_message">Wenn Doppeltippen das Entsperren mittels Fingerabdruck oder Gesicht deaktiviert: Olauncher-Einstellungen öffnen, auf \‘experimentell\' tippen und Anweisungen befolgen. Danke!</string>
     <string name="triple_tap_lock_message">So geht es:
         \nNach dem Doppeltippen wird der Bildschirm schwarz und nach 5 Sekunden wird das Telefon gesperrt.
         \n\nIn dieser Zeit kann das Telefon durch <b>Doppeltippen entsperrt</b> oder durch Dreifachtippen sofort verriegelt werden.
@@ -37,8 +37,8 @@
     <string name="hide">Ausblenden</string>
     <string name="status_bar">Statusleiste zeigen</string>
     <string name="rename">Umbenennen</string>
-    <string name="show_time">Show time</string>
-    <string name="show_date">Show date</string>
+    <string name="show_time">Uhr anzeigen</string>
+    <string name="show_date">Datum anzeigen</string>
     <string name="appearance">Erscheinungsbild</string>
     <string name="gestures">Gesten</string>
     <string name="theme_mode">Modus</string>
@@ -46,20 +46,21 @@
     <string name="dark">Dunkel</string>
     <string name="light">Hell</string>
     <string name="double_tap_lock_uninstall_message">Sperren durch Doppeltippen aktiviert. \n\nHinweis: Wenn Olauncher deinstalliert werden soll, diese Funktion zuerst AUSSCHALTEN.</string>
-    <string name="accessibility_service_description">Die Zugriffserlaubnis ist erforderlich fÃ¼r das Sperren des Bildschirms durch Doppeltippen. Die hierzu benÃ¶tigten Daten werden nirgends auÃŸerhalb Ihres GerÃ¤ts gespeichert.</string>
+    <string name="accessibility_service_description">Die Zugriffserlaubnis ist erforderlich für das Sperren des Bildschirms durch Doppeltippen. Die hierzu benötigten Daten werden nirgends außerhalb Ihres Geräts gespeichert.</string>
     <string name="lock_layout_description">Beschreibung des Sperrlayouts, die verwendet werden soll, um eine eindeutige ID zum Sperren des Bildschirms zu verwenden.</string>
-    <string name="open">Link Ã¶ffnen</string>
+    <string name="open">Link öffnen</string>
     <string name="copy">Kopieren</string>
-    <string name="close">SchlieÃŸen</string>
+    <string name="close">Schließen</string>
     <string name="lang_system">System</string>
     
     <string name="hidden_apps">Versteckte Apps</string>
     
     <string name="app_language">Sprache</string>
     
-    <string name="show">Show</string>
-    <string name="reset">Reset</string>
-    <string name="cancel">Cancel</string>
+    <string name="show">Anzeigen</string>
+    <string name="reset">Zurücksetzen</string>
+    <string name="cancel">Abbrechen</string>
 
 
 </resources>
+
