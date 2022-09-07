@@ -193,10 +193,10 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         } else {
             binding.homeAppsLayout.gravity = gravity or Gravity.CENTER_VERTICAL
         }
-        /*binding.homeAppsLayout.children.forEach {
-            //(it as TextView).gravity = gravity
-            (it as TextView).gravity = Gravity.RIGHT
-        }*/
+        binding.homeAppsLayout.children.forEach {
+            (it as TextView).gravity = gravity
+            //(it as TextView).gravity = Gravity.RIGHT
+        }
     }
 
     private fun populateHomeApps(appCountUpdated: Boolean) {
