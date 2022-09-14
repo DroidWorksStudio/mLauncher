@@ -58,7 +58,7 @@ object Constants {
         override fun string(): String {
             return when(this) {
                 System -> stringResource(R.string.lang_system)
-                Chinese -> "中国人"
+                Chinese -> "中文"
                 Croatian -> "Hrvatski"
                 English -> "English"
                 Estonian -> "Eesti keel"
@@ -67,7 +67,7 @@ object Constants {
                 Greek -> "Ελληνική"
                 Indonesian -> "Bahasa Indonesia"
                 Italian -> "Italiano"
-                Korean -> "조선말"
+                Korean -> "한국어"
                 Persian -> "فارسی"
                 Portuguese -> "Português"
                 Russian -> "Русский"
