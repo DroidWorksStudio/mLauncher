@@ -19,6 +19,7 @@
     <string name="right">Derecha</string>
     <string name="center">Centro</string>
     <string name="home_alignment">Alineación</string>
+    <string name="home_alignment_bottom">Aplicaciones abajo en la pantalla</string>
     <string name="clock_alignment">Alineación del reloj</string>
     <string name="drawer_alignment">Alineación de aplicaciones</string>
     <string name="swipe_left_app">Deslizar a izquierda</string>
@@ -40,6 +41,7 @@
     <string name="show_time">Hora</string>
     <string name="show_date">Fecha</string>
     <string name="lock_home_apps">Bloquear aplicaciones</string>
+    <string name="extend_home_apps_area">Ampliar área de las aplicaciones de inicio</string>
     <string name="appearance">Apariencia</string>
     <string name="gestures">Gestos</string>
     <string name="homescreen">Inicio</string>
