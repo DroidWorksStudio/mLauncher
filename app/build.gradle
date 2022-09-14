@@ -18,8 +18,8 @@ android {
         applicationId "app.olaunchercf"
         minSdkVersion 23
         targetSdkVersion 32
-        versionCode 15
-        versionName "v1.2.5"
+        versionCode 16
+        versionName "v1.2.6"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -88,8 +88,8 @@ dependencies {
     // Tooling support (Previews, etc.)
     implementation 'androidx.compose.ui:ui-tooling:1.1.1'
     // Integration with ViewModels
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-compose:2.4.1'
-    implementation 'com.google.ar.sceneform:rendering:1.17.1'
+    //implementation 'androidx.lifecycle:lifecycle-viewmodel-compose:2.4.1'
+    // implementation 'com.google.ar.sceneform:rendering:1.17.1' -- non-free take care if uncommenting
 
     implementation "androidx.constraintlayout:constraintlayout-compose:1.0.1"
 }
