@@ -55,7 +55,7 @@ class MainActivity : AppCompatActivity() {
         setLanguage()
 
         navController = Navigation.findNavController(this, R.id.nav_host_fragment)
-        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+        viewModel = ViewModelProvider(this)[MainViewModel::class.java]
         if (prefs.firstOpen) {
             viewModel.firstOpen(true)
             prefs.firstOpen = false
@@ -102,9 +102,6 @@ class MainActivity : AppCompatActivity() {
             binding.messageLayout.visibility = View.GONE
             viewModel.showMessageDialog("")
         }
-        binding.closeOneLink.setOnClickListener {
-            viewModel.showSupportDialog(false)
-        }
     }
 
     private fun initObservers(viewModel: MainViewModel) {
@@ -113,9 +110,6 @@ class MainActivity : AppCompatActivity() {
         }
         viewModel.showMessageDialog.observe(this) {
             showMessage(it)
-        }
-        viewModel.showSupportDialog.observe(this) {
-            binding.supportOlauncherLayout.isVisible = it
         }
     }
 

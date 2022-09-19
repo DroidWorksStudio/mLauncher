@@ -6,17 +6,14 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import android.os.UserHandle
 import android.os.Vibrator
 import android.provider.Settings
-import android.util.Log
 import android.view.*
 import android.widget.TextView
-import androidx.compose.ui.layout.Layout
 import androidx.core.os.bundleOf
 import androidx.core.view.children
+import androidx.core.view.size
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import app.olaunchercf.MainViewModel
@@ -48,33 +45,40 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         return view
     }
 
-    @Deprecated("Deprecated in Java")
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+
         viewModel = activity?.run {
-            ViewModelProvider(this).get(MainViewModel::class.java)
+            ViewModelProvider(this)[MainViewModel::class.java]
         } ?: throw Exception("Invalid Activity")
 
         deviceManager = context?.getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
         vibrator = context?.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
 
         initObservers()
-        initHomeApps() // must be before alignments
 
-        populateHomeApps(false)
-
-        setHomeAlignment(prefs.homeAlignment, prefs.homeAlignmentBottom)
-        setTimeAlignment(prefs.timeAlignment)
         initSwipeTouchListener()
         initClickListeners()
     }
 
+    override fun onStart() {
+        super.onStart()
+        if (prefs.showStatusBar) showStatusBar(requireActivity()) else hideStatusBar(requireActivity())
+    }
+
     override fun onResume() {
         super.onResume()
-        // populateHomeApps(false)
-        viewModel.isOlauncherDefault()
-        if (prefs.showStatusBar) showStatusBar()
-        else hideStatusBar()
+
+
+        // updates app names
+        setupHomeScreen()
+
+        // only show "set as default"-button if tips are GONE
+        if (binding.firstRunTips.visibility == View.GONE) {
+            binding.setDefaultLauncher.visibility =
+                if (isOlauncherDefault(requireContext())) View.GONE else View.VISIBLE
+        }
     }
 
     override fun onClick(view: View) {
@@ -103,63 +107,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         return true
     }
 
-    private fun initObservers() {
-        if (prefs.firstSettingsOpen) {
-            binding.firstRunTips.visibility = View.VISIBLE
-            binding.setDefaultLauncher.visibility = View.GONE
-        } else binding.firstRunTips.visibility = View.GONE
-
-        viewModel.refreshHome.observe(viewLifecycleOwner) {
-            populateHomeApps(it)
-        }
-        with(viewModel) {
-            isOlauncherDefault.observe(viewLifecycleOwner, Observer {
-                if (binding.firstRunTips.visibility == View.VISIBLE) return@Observer
-                if (it) binding.setDefaultLauncher.visibility = View.GONE
-                else binding.setDefaultLauncher.visibility = View.VISIBLE
-            })
-            timeAlignment.observe(viewLifecycleOwner) {
-                setTimeAlignment(it)
-            }
-            timeVisible.observe(viewLifecycleOwner) {
-                if (it) {
-                    binding.clock.visibility = View.VISIBLE
-                } else {
-                    binding.clock.visibility = View.GONE
-                }
-            }
-            dateVisible.observe(viewLifecycleOwner) {
-                if (it) {
-                    binding.date.visibility = View.VISIBLE
-                } else {
-                    binding.date.visibility = View.GONE
-                }
-            }
-        }
-    }
-
-    private fun initHomeApps() {
-        binding.homeAppsLayout.removeAllViews()
-
-        for (i in 0 until prefs.homeAppsNum) {
-            val view = layoutInflater.inflate(R.layout.home_app_button, null) as TextView
-            view.apply {
-                textSize = prefs.textSize.toFloat()
-                id = i
-                setOnTouchListener(getViewSwipeTouchListener(context, this))
-                if (!prefs.extendHomeAppsArea) {
-                    layoutParams = ViewGroup.LayoutParams(
-                        ViewGroup.LayoutParams.WRAP_CONTENT,
-                        ViewGroup.LayoutParams.WRAP_CONTENT
-                    )
-                }
-            }
-            // swipe
-
-            binding.homeAppsLayout.addView(view)
-        }
-    }
-
     private fun initSwipeTouchListener() {
         val context = requireContext()
         binding.mainLayout.setOnTouchListener(getSwipeGestureListener(context))
@@ -171,45 +118,39 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         binding.date.setOnClickListener(this)
         binding.setDefaultLauncher.setOnClickListener(this)
     }
-    @SuppressLint("RtlHardcoded")
-    private fun setTimeAlignment(gravity_const: Constants.Gravity) {
-        val gravity = when(gravity_const) {
-            Constants.Gravity.Left -> Gravity.LEFT
-            Constants.Gravity.Center -> Gravity.CENTER
-            Constants.Gravity.Right -> Gravity.RIGHT
+
+    private fun initObservers() {
+        if (prefs.firstSettingsOpen) {
+            binding.firstRunTips.visibility = View.VISIBLE
+            binding.setDefaultLauncher.visibility = View.GONE
+        } else binding.firstRunTips.visibility = View.GONE
+
+        with(viewModel) {
+            clockAlignment.observe(viewLifecycleOwner) { gravity ->
+                binding.dateTimeLayout.gravity = gravity.value()
+            }
+            homeAppsAlignment.observe(viewLifecycleOwner) { (gravity, onBottom) ->
+                val horizontalAlignment = if (onBottom) Gravity.BOTTOM else Gravity.CENTER_VERTICAL
+                binding.homeAppsLayout.gravity = gravity.value() or horizontalAlignment
+
+                binding.homeAppsLayout.children.forEach { view ->
+                    (view as TextView).gravity = gravity.value()
+                }
+            }
+            homeAppsCount.observe(viewLifecycleOwner) {
+                updateAppCount(it)
+            }
+            showTime.observe(viewLifecycleOwner) {
+                binding.clock.visibility = if (it) View.VISIBLE else View.GONE
+            }
+            showDate.observe(viewLifecycleOwner) {
+                binding.date.visibility = if (it) View.VISIBLE else View.GONE
+            }
         }
-        binding.dateTimeLayout.gravity = gravity
     }
 
-    @SuppressLint("RtlHardcoded")
-    private fun setHomeAlignment(gravity_const: Constants.Gravity, bottom: Boolean) {
-        val gravity = when(gravity_const) {
-            Constants.Gravity.Left -> Gravity.LEFT
-            Constants.Gravity.Center -> Gravity.CENTER
-            Constants.Gravity.Right -> Gravity.RIGHT
-        }
-        if (bottom) {
-            binding.homeAppsLayout.gravity = gravity or Gravity.BOTTOM
-        } else {
-            binding.homeAppsLayout.gravity = gravity or Gravity.CENTER_VERTICAL
-        }
-        binding.homeAppsLayout.children.forEach {
-            (it as TextView).gravity = gravity
-            //(it as TextView).gravity = Gravity.RIGHT
-        }
-    }
-
-    private fun populateHomeApps(appCountUpdated: Boolean) {
-        if (appCountUpdated) initHomeApps()
-
-        if (prefs.showTime) binding.clock.visibility = View.VISIBLE
-        else binding.clock.visibility = View.GONE
-        if (prefs.showDate) binding.date.visibility = View.VISIBLE
-        else binding.date.visibility = View.GONE
-
-        val homeAppsNum = prefs.homeAppsNum
-        if (homeAppsNum == 0) return // TODO: place clock in center when no apps are shown
-
+    private fun setupHomeScreen() {
+        // TODO: IDEA: place clock in center when no apps are shown
         binding.homeAppsLayout.children.forEachIndexed { i, app ->
             val appModel = prefs.getHomeAppModel(i)
             val name = appModel.appLabel
@@ -309,27 +250,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         }
     }
 
-    private fun showStatusBar() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R)
-            requireActivity().window.insetsController?.show(WindowInsets.Type.statusBars())
-        else
-            @Suppress("DEPRECATION", "InlinedApi")
-            requireActivity().window.decorView.apply {
-                systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-            }
-    }
-
-    private fun hideStatusBar() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R)
-            requireActivity().window.insetsController?.hide(WindowInsets.Type.statusBars())
-        else {
-            @Suppress("DEPRECATION")
-            requireActivity().window.decorView.apply {
-                systemUiVisibility = View.SYSTEM_UI_FLAG_IMMERSIVE or View.SYSTEM_UI_FLAG_FULLSCREEN
-            }
-        }
-    }
-
     private fun showLongPressToast() = showToastShort(requireContext(), "Long press to select app")
 
     private fun textOnClick(view: View) = onClick(view)
@@ -421,6 +341,37 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             override fun onClick(view: View) {
                 super.onClick(view)
                 textOnClick(view)
+            }
+        }
+    }
+
+    // updates number of apps visible on home screen
+    // does nothing if number has not changed
+    private fun updateAppCount(newAppsNum: Int) {
+        val oldAppsNum = binding.homeAppsLayout.size // current number
+        val diff = oldAppsNum - newAppsNum
+
+        if (diff in 1 until oldAppsNum) { // 1 <= diff <= oldNumApps
+            binding.homeAppsLayout.children.drop(diff)
+        } else if (diff < 0) {
+            val alignment = prefs.homeAlignment.value() // make only one call to prefs and store here
+
+            // add all missing apps to list
+            for (i in oldAppsNum until newAppsNum) {
+                val view = layoutInflater.inflate(R.layout.home_app_button, null) as TextView
+                view.apply {
+                    textSize = prefs.textSize.toFloat()
+                    id = i
+                    setOnTouchListener(getViewSwipeTouchListener(context, this))
+                    if (!prefs.extendHomeAppsArea) {
+                        layoutParams = ViewGroup.LayoutParams(
+                            ViewGroup.LayoutParams.WRAP_CONTENT,
+                            ViewGroup.LayoutParams.WRAP_CONTENT
+                        )
+                    }
+                    gravity = alignment
+                }
+                binding.homeAppsLayout.addView(view)
             }
         }
     }

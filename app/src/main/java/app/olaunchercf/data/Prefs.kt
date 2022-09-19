@@ -14,7 +14,6 @@ private const val PREFS_FILENAME = "app.olauncher"
 
 private const val FIRST_OPEN = "FIRST_OPEN"
 private const val FIRST_SETTINGS_OPEN = "FIRST_SETTINGS_OPEN"
-private const val FIRST_HIDE = "FIRST_HIDE"
 private const val LOCK_MODE = "LOCK_MODE"
 private const val HOME_APPS_NUM = "HOME_APPS_NUM"
 private const val AUTO_SHOW_KEYBOARD = "AUTO_SHOW_KEYBOARD"
@@ -60,6 +59,7 @@ class Prefs(val context: Context) {
         get() = prefs.getBoolean(FIRST_SETTINGS_OPEN, true)
         set(value) = prefs.edit().putBoolean(FIRST_SETTINGS_OPEN, value).apply()
 
+
     var lockModeOn: Boolean
         get() = prefs.getBoolean(LOCK_MODE, false)
         set(value) = prefs.edit().putBoolean(LOCK_MODE, value).apply()
@@ -100,7 +100,7 @@ class Prefs(val context: Context) {
         get() = prefs.getBoolean(HOME_CLICK_AREA, false)
         set(value) = prefs.edit().putBoolean(HOME_CLICK_AREA, value).apply()
 
-    var timeAlignment: Constants.Gravity
+    var clockAlignment: Constants.Gravity
         get() {
             val string = prefs.getString(
                 TIME_ALIGNMENT,

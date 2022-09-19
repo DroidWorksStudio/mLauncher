@@ -1,11 +1,13 @@
 package app.olaunchercf.helper
 
+import android.app.Activity
 import android.content.*
 import android.content.pm.LauncherApps
 import android.content.pm.PackageManager
 import android.content.res.Configuration
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import android.net.Uri
+import android.os.Build
 import android.os.UserHandle
 import android.os.UserManager
 import android.provider.AlarmClock
@@ -16,10 +18,13 @@ import android.util.DisplayMetrics
 import android.util.Log
 import android.util.TypedValue
 import android.view.Gravity
+import android.view.View
+import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.Toast
 import androidx.annotation.AttrRes
 import androidx.annotation.ColorInt
+import androidx.fragment.app.FragmentActivity
 import app.olaunchercf.BuildConfig
 import app.olaunchercf.R
 import app.olaunchercf.data.AppModel
@@ -285,6 +290,27 @@ fun isTablet(context: Context): Boolean {
     val diagonalInches = sqrt(widthInches.toDouble().pow(2.0) + heightInches.toDouble().pow(2.0))
     if (diagonalInches >= 7.0) return true
     return false
+}
+
+fun showStatusBar(activity: Activity) {
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R)
+        activity.window.insetsController?.show(WindowInsets.Type.statusBars())
+    else
+        @Suppress("DEPRECATION", "InlinedApi")
+        activity.window.decorView.apply {
+            systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+        }
+}
+
+fun hideStatusBar(activity: Activity) {
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R)
+        activity.window.insetsController?.hide(WindowInsets.Type.statusBars())
+    else {
+        @Suppress("DEPRECATION")
+        activity.window.decorView.apply {
+            systemUiVisibility = View.SYSTEM_UI_FLAG_IMMERSIVE or View.SYSTEM_UI_FLAG_FULLSCREEN
+        }
+    }
 }
 
 fun Context.isDarkThemeOn(): Boolean {

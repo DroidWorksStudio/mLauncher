@@ -4,7 +4,6 @@ import android.app.Application
 import android.content.ComponentName
 import android.content.Context
 import android.content.pm.LauncherApps
-import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
@@ -18,19 +17,22 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     private val appContext by lazy { application.applicationContext }
     private val prefs = Prefs(appContext)
 
+    // setup variables with initial values
     val firstOpen = MutableLiveData<Boolean>()
-    val refreshHome = MutableLiveData<Boolean>()
-    val timeVisible = MutableLiveData<Boolean>()
-    val dateVisible = MutableLiveData<Boolean>()
+    val showMessageDialog = MutableLiveData<String>()
+
     val updateSwipeApps = MutableLiveData<Any>()
     val updateClickApps = MutableLiveData<Any>()
     val appList = MutableLiveData<List<AppModel>?>()
     val hiddenApps = MutableLiveData<List<AppModel>?>()
     val isOlauncherDefault = MutableLiveData<Boolean>()
     val launcherResetFailed = MutableLiveData<Boolean>()
-    val timeAlignment = MutableLiveData<Constants.Gravity>()
-    val showMessageDialog = MutableLiveData<String>()
-    val showSupportDialog = MutableLiveData<Boolean>()
+
+    val showTime = MutableLiveData(prefs.showTime)
+    val showDate = MutableLiveData(prefs.showDate)
+    val clockAlignment = MutableLiveData(prefs.clockAlignment)
+    val homeAppsAlignment = MutableLiveData(Pair(prefs.homeAlignment, prefs.homeAlignmentBottom))
+    val homeAppsCount = MutableLiveData(prefs.homeAppsNum)
 
     fun selectedApp(appModel: AppModel, flag: Int, n: Int = 0) {
         when (flag) {
@@ -42,7 +44,6 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             }
             Constants.FLAG_SET_HOME_APP -> {
                 prefs.setHomeAppModel(n, appModel)
-                refreshHome(false)
             }
             Constants.FLAG_SET_SWIPE_LEFT_APP -> {
                 prefs.appSwipeLeft = appModel
@@ -67,16 +68,12 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         firstOpen.postValue(value)
     }
 
-    fun refreshHome(appCountUpdated: Boolean) {
-        refreshHome.value = appCountUpdated
-    }
-
     fun setShowDate(visibility: Boolean) {
-        dateVisible.value = visibility
+        showDate.value = visibility
     }
 
     fun setShowTime(visibility: Boolean) {
-        timeVisible.value = visibility
+        showTime.value = visibility
     }
 
     private fun updateSwipeApps() {
@@ -144,29 +141,19 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         ).contains(".")
     }
 
-    fun updateHomeAlignment(gravity: Constants.Gravity) {
-        prefs.homeAlignment = gravity
-        //homeAppAlignment.value = gravity
-    }
-
-    fun toggleHomeAppsBottom() {
-        prefs.homeAlignmentBottom = !prefs.homeAlignmentBottom
-    }
-
     fun updateDrawerAlignment(gravity: Constants.Gravity) {
         prefs.drawerAlignment = gravity
     }
 
-    fun updateTimeAlignment(gravity: Constants.Gravity) {
-        prefs.timeAlignment = gravity
-        timeAlignment.value = gravity
+    fun updateClockAlignment(gravity: Constants.Gravity) {
+        clockAlignment.value = gravity
+    }
+
+    fun updateHomeAppsAlignment(gravity: Constants.Gravity, onBottom: Boolean) {
+        homeAppsAlignment.value = Pair(gravity, onBottom)
     }
 
     fun showMessageDialog(message: String) {
         showMessageDialog.postValue(message)
-    }
-
-    fun showSupportDialog(value: Boolean) {
-        showSupportDialog.postValue(value)
     }
 }

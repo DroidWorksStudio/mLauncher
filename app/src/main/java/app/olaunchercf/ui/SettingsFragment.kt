@@ -11,14 +11,10 @@ import android.provider.Settings
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.WindowInsets
 import androidx.compose.foundation.isSystemInDarkTheme
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Text
-import androidx.compose.material.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -26,10 +22,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.constraintlayout.compose.ConstraintLayout
-import androidx.constraintlayout.compose.Dimension
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -42,12 +35,8 @@ import app.olaunchercf.data.Constants
 import app.olaunchercf.data.Constants.Theme.*
 import app.olaunchercf.data.Prefs
 import app.olaunchercf.databinding.FragmentSettingsBinding
-import app.olaunchercf.helper.isAccessServiceEnabled
-import app.olaunchercf.helper.openAppInfo
-import app.olaunchercf.helper.showToastLong
-import app.olaunchercf.helper.showToastShort
+import app.olaunchercf.helper.*
 import app.olaunchercf.listener.DeviceAdmin
-import app.olaunchercf.ui.compose.SettingsComposable
 import app.olaunchercf.ui.compose.SettingsComposable.SettingsAppSelector
 import app.olaunchercf.ui.compose.SettingsComposable.SettingsArea
 import app.olaunchercf.ui.compose.SettingsComposable.SettingsItem
@@ -56,7 +45,7 @@ import app.olaunchercf.ui.compose.SettingsComposable.SettingsToggle
 
 class SettingsFragment : Fragment(), View.OnClickListener {
 
-    private lateinit var prefs: Prefs
+    private lateinit var prefs: Prefs //= Prefs(requireContext())
     private lateinit var viewModel: MainViewModel
     private lateinit var deviceManager: DevicePolicyManager
     private lateinit var componentName: ComponentName
@@ -70,11 +59,20 @@ class SettingsFragment : Fragment(), View.OnClickListener {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
+        prefs = Prefs(requireContext())
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        if (isOlauncherDefault(requireContext())) {
+            binding.setLauncher.text = getString(R.string.change_default_launcher)
+        }
+
+        if (prefs.firstSettingsOpen) {
+            prefs.firstSettingsOpen = false
+        }
 
         binding.testView.setContent {
 
@@ -199,7 +197,7 @@ class SettingsFragment : Fragment(), View.OnClickListener {
                             onChange = onChange,
                             currentSelection = remember { mutableStateOf(prefs.homeAlignment) },
                             values = arrayOf(Constants.Gravity.Left, Constants.Gravity.Center, Constants.Gravity.Right),
-                            onSelect = { j -> viewModel.updateHomeAlignment(j) }
+                            onSelect = { gravity -> setHomeAlignment(gravity) }
                         )
                     },
                     { _, onChange ->
@@ -207,16 +205,16 @@ class SettingsFragment : Fragment(), View.OnClickListener {
                             title = stringResource(R.string.home_alignment_bottom),
                             onChange = onChange,
                             state = remember { mutableStateOf(prefs.homeAlignmentBottom) }
-                        ) { viewModel.toggleHomeAppsBottom() }
+                        ) { toggleHomeAppsBottom() }
                     },
                     { open, onChange ->
                         SettingsItem(
                             title = stringResource(R.string.clock_alignment),
                             open = open,
                             onChange = onChange,
-                            currentSelection = remember { mutableStateOf(prefs.timeAlignment) },
+                            currentSelection = remember { mutableStateOf(prefs.clockAlignment) },
                             values = arrayOf(Constants.Gravity.Left, Constants.Gravity.Center, Constants.Gravity.Right),
-                            onSelect = { j -> viewModel.updateTimeAlignment(j) }
+                            onSelect = { gravity -> setClockAlignment(gravity) }
                         )
                     },
                     { open, onChange ->
@@ -293,15 +291,14 @@ class SettingsFragment : Fragment(), View.OnClickListener {
         viewModel = activity?.run {
             ViewModelProvider(this).get(MainViewModel::class.java)
         } ?: throw Exception("Invalid Activity")
+
         viewModel.isOlauncherDefault()
 
         deviceManager = context?.getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
         componentName = ComponentName(requireContext(), DeviceAdmin::class.java)
         checkAdminPermission()
 
-        populateStatusBar()
         initClickListeners()
-        initObservers()
     }
 
     override fun onDestroyView() {
@@ -324,16 +321,21 @@ class SettingsFragment : Fragment(), View.OnClickListener {
         binding.setLauncher.setOnClickListener(this)
     }
 
-    private fun initObservers() {
-        if (prefs.firstSettingsOpen) {
-            prefs.firstSettingsOpen = false
-        }
-        viewModel.isOlauncherDefault.observe(viewLifecycleOwner) {
-            if (it) {
-                binding.setLauncher.text = getString(R.string.change_default_launcher)
-                prefs.toShowHintCounter = prefs.toShowHintCounter + 1
-            }
-        }
+    private fun setHomeAlignment(gravity: Constants.Gravity) {
+        prefs.homeAlignment = gravity
+        viewModel.updateHomeAppsAlignment(gravity, prefs.homeAlignmentBottom)
+    }
+
+    private fun toggleHomeAppsBottom() {
+        val onBottom  = !prefs.homeAlignmentBottom
+
+        prefs.homeAlignmentBottom = onBottom
+        viewModel.updateHomeAppsAlignment(prefs.homeAlignment, onBottom)
+    }
+
+    private fun setClockAlignment(gravity: Constants.Gravity) {
+        prefs.clockAlignment = gravity
+        viewModel.updateClockAlignment(gravity)
     }
 
     private fun toggleSwipeLeft() {
@@ -359,16 +361,9 @@ class SettingsFragment : Fragment(), View.OnClickListener {
     }
 
     private fun toggleStatusBar() {
-        prefs.showStatusBar = !prefs.showStatusBar
-        populateStatusBar()
-    }
-
-    private fun populateStatusBar() {
-        if (prefs.showStatusBar) {
-            showStatusBar()
-        } else {
-            hideStatusBar()
-        }
+        val showStatusbar = !prefs.showStatusBar
+        prefs.showStatusBar = showStatusbar
+        if (showStatusbar) showStatusBar(requireActivity()) else hideStatusBar(requireActivity())
     }
 
     private fun toggleShowDate() {
@@ -379,27 +374,6 @@ class SettingsFragment : Fragment(), View.OnClickListener {
     private fun toggleShowTime() {
         prefs.showTime = !prefs.showTime
         viewModel.setShowTime(prefs.showTime)
-    }
-
-    private fun showStatusBar() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R)
-            requireActivity().window.insetsController?.show(WindowInsets.Type.statusBars())
-        else
-            @Suppress("DEPRECATION", "InlinedApi")
-            requireActivity().window.decorView.apply {
-                systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-            }
-    }
-
-    private fun hideStatusBar() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R)
-            requireActivity().window.insetsController?.hide(WindowInsets.Type.statusBars())
-        else {
-            @Suppress("DEPRECATION")
-            requireActivity().window.decorView.apply {
-                systemUiVisibility = View.SYSTEM_UI_FLAG_IMMERSIVE or View.SYSTEM_UI_FLAG_FULLSCREEN
-            }
-        }
     }
 
     private fun showHiddenApps() {
@@ -452,9 +426,9 @@ class SettingsFragment : Fragment(), View.OnClickListener {
         //populateLockSettings()
     }
 
-    private fun updateHomeAppsNum(num: Int) {
-        prefs.homeAppsNum = num
-        viewModel.refreshHome(true)
+    private fun updateHomeAppsNum(homeAppsNum: Int) {
+        prefs.homeAppsNum = homeAppsNum
+        viewModel.homeAppsCount.value = homeAppsNum
     }
 
     private fun toggleKeyboardText() {
