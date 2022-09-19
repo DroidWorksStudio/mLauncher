@@ -31,7 +31,7 @@ Describe the bug in a short but concise way.
 - Install Source: <!-- e.g. F-Droid/GitHub? -->
 - Device: <!-- e.g. OnePlus 8T -->
 - Android: <!-- e.g. 11, Stock, ROM -->
-- EMUI?: <!-- do you have EMUI? -->
+- EMUI: <!-- do you have EMUI-Android? https://en.wikipedia.org/wiki/EMUI -->
 - Other: <!-- e.g. battery optimization enabled -->
 
 #### Additional elements
