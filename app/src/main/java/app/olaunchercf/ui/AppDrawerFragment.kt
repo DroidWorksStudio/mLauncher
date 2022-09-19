@@ -97,21 +97,19 @@ class AppDrawerFragment : Fragment() {
     private fun initViewModel(flag: Int, viewModel: MainViewModel, appAdapter: AppDrawerAdapter) {
         viewModel.hiddenApps.observe(viewLifecycleOwner, Observer {
             if (flag != Constants.FLAG_HIDDEN_APPS) return@Observer
-            if (it.isNullOrEmpty()) {
-                findNavController().popBackStack()
-                return@Observer
+            it?.let { appList ->
+                binding.listEmptyHint.visibility = if (appList.isEmpty()) View.VISIBLE else View.GONE
+                populateAppList(appList, appAdapter)
             }
-            populateAppList(it, appAdapter)
         })
 
         viewModel.appList.observe(viewLifecycleOwner, Observer {
             if (flag == Constants.FLAG_HIDDEN_APPS) return@Observer
-            if (it.isNullOrEmpty()) {
-                findNavController().popBackStack()
-                return@Observer
-            }
             if (it == appAdapter.appsList) return@Observer
-            populateAppList(it, appAdapter)
+            it?.let { appList ->
+                binding.listEmptyHint.visibility = if (appList.isEmpty()) View.VISIBLE else View.GONE
+                populateAppList(appList, appAdapter)
+            }
         })
 
         viewModel.firstOpen.observe(viewLifecycleOwner) {

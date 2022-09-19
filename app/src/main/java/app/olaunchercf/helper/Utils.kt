@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.*
 import android.content.pm.LauncherApps
 import android.content.pm.PackageManager
+import android.content.pm.PackageManager.NameNotFoundException
 import android.content.res.Configuration
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import android.net.Uri
@@ -24,7 +25,6 @@ import android.view.WindowManager
 import android.widget.Toast
 import androidx.annotation.AttrRes
 import androidx.annotation.ColorInt
-import androidx.fragment.app.FragmentActivity
 import app.olaunchercf.BuildConfig
 import app.olaunchercf.R
 import app.olaunchercf.data.AppModel
@@ -125,21 +125,20 @@ suspend fun getHiddenAppsList(context: Context): MutableList<AppModel> {
         val userManager = context.getSystemService(Context.USER_SERVICE) as UserManager
         val collator = Collator.getInstance()
         for (hiddenPackage in hiddenAppsSet) {
+            val appPackage = hiddenPackage.split("|")[0]
+            val userString = hiddenPackage.split("|")[1]
+            var userHandle = android.os.Process.myUserHandle()
+            for (user in userManager.userProfiles) {
+                if (user.toString() == userString) userHandle = user
+            }
             try {
-                val appPackage = hiddenPackage.split("|")[0]
-                val userString = hiddenPackage.split("|")[1]
-                var userHandle = android.os.Process.myUserHandle()
-                for (user in userManager.userProfiles) {
-                    if (user.toString() == userString) userHandle = user
-                }
-
                 val appInfo = pm.getApplicationInfo(appPackage, 0)
                 val appName = pm.getApplicationLabel(appInfo).toString()
                 val appKey = collator.getCollationKey(appName)
                 // TODO: hidden apps settings ignore activity name for backward compatibility. Fix it.
                 appList.add(AppModel(appName, appKey, appPackage, "", userHandle, Prefs(context).getAppAlias(appName)))
-            } catch (e: Exception) {
-                e.printStackTrace()
+            } catch (e: NameNotFoundException) {
+
             }
         }
         appList.sort()
@@ -158,13 +157,6 @@ private fun upgradeHiddenApps(prefs: Prefs) {
     }
     prefs.hiddenApps = newHiddenAppsSet
     prefs.hiddenAppsUpdated = true
-}
-
-fun isPackageInstalled(context: Context, packageName: String, userString: String): Boolean {
-    val launcher = context.getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps
-    val activityInfo = launcher.getActivityList(packageName, getUserHandleFromString(context, userString))
-    if (activityInfo.size > 0) return true
-    return false
 }
 
 fun getUserHandleFromString(context: Context, userHandleString: String): UserHandle {

@@ -154,22 +154,12 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         binding.homeAppsLayout.children.forEachIndexed { i, app ->
             val appModel = prefs.getHomeAppModel(i)
             val name = appModel.appLabel
-            val pack = appModel.appPackage
-            val alias = appModel.appAlias
-            if (!setHomeAppText(app as TextView, name, pack, alias)) {
-                prefs.resetHomeAppValues(i)
-            }
+            setHomeAppText(app as TextView, name)
         }
     }
 
-    // returns true if package is installed (?)
-    private fun setHomeAppText(textView: TextView, appName: String, packageName: String, userString: String): Boolean {
-        if (isPackageInstalled(requireContext(), packageName, userString)) {
-            textView.text = appName
-            return true
-        }
-        textView.text = ""
-        return false
+    private fun setHomeAppText(textView: TextView, appName: String) {
+        textView.text = appName
     }
 
     private fun homeAppClicked(location: Int) {

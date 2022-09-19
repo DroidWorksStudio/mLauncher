@@ -189,15 +189,6 @@ class Prefs(val context: Context) {
         prefs.edit().putString(nameId, name).apply()
     }
 
-    // this only resets name and alias because of how this was done before in HomeFragment
-    fun resetHomeAppValues(i: Int) {
-        val nameId = "${APP_NAME}_$i"
-        val aliasId = "${APP_ALIAS}_$i"
-
-        prefs.edit().putString(nameId, "").apply()
-        prefs.edit().putString(aliasId, "").apply()
-    }
-
     var appSwipeRight: AppModel
         get() = loadApp(SWIPE_RIGHT)
         set(appModel) = storeApp(SWIPE_RIGHT, appModel)

@@ -70,6 +70,7 @@
     <string name="lang_system">System</string>
 
     <string name="app_text_size">Text Size</string>
+    <string name="drawer_list_empty_hint">No apps found</string>
 
     <string name="hidden_apps">Hidden apps</string>
 

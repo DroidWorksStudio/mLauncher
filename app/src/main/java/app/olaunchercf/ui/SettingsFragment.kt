@@ -45,7 +45,7 @@ import app.olaunchercf.ui.compose.SettingsComposable.SettingsToggle
 
 class SettingsFragment : Fragment(), View.OnClickListener {
 
-    private lateinit var prefs: Prefs //= Prefs(requireContext())
+    private lateinit var prefs: Prefs
     private lateinit var viewModel: MainViewModel
     private lateinit var deviceManager: DevicePolicyManager
     private lateinit var componentName: ComponentName
@@ -377,10 +377,6 @@ class SettingsFragment : Fragment(), View.OnClickListener {
     }
 
     private fun showHiddenApps() {
-        if (prefs.hiddenApps.isEmpty()) {
-            showToastShort(requireContext(), "No hidden apps")
-            return
-        }
         viewModel.getHiddenApps()
         findNavController().navigate(
             R.id.action_settingsFragment_to_appListFragment,
