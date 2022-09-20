@@ -70,6 +70,7 @@
     <string name="lang_system">系统</string>
 
     <string name="app_text_size">文本尺寸</string>
+    <string name="drawer_list_empty_hint">未找到应用</string>
     
     <string name="hidden_apps">隐藏的应用</string>
     
