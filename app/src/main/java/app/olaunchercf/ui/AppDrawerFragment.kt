@@ -154,7 +154,10 @@ class AppDrawerFragment : Fragment() {
     private fun appClickListener(viewModel: MainViewModel, flag: Int, n: Int = 0): (appModel: AppModel) -> Unit =
         { appModel ->
             viewModel.selectedApp(appModel, flag, n)
-            findNavController().popBackStack(R.id.mainFragment, false)
+            if (flag == Constants.FLAG_LAUNCH_APP || flag == Constants.FLAG_HIDDEN_APPS)
+                findNavController().popBackStack(R.id.mainFragment, false)
+            else
+                findNavController().popBackStack()
         }
 
     private fun appInfoListener(): (appModel: AppModel) -> Unit =
