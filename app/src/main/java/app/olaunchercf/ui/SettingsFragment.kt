@@ -249,7 +249,7 @@ class SettingsFragment : Fragment(), View.OnClickListener {
                             currentSelection = remember {
                                 mutableStateOf(prefs.appSwipeRight.appLabel.ifEmpty { "Phone" })
                             },
-                            onClick = { updateGesture(AppDrawerFlag.SetSwipeLeft) },
+                            onClick = { updateGesture(AppDrawerFlag.SetSwipeRight) },
                             active = prefs.swipeRightEnabled,
                         )
                     },
