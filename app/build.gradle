@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 32
+    compileSdkVersion 33
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -17,7 +17,7 @@ android {
     defaultConfig {
         applicationId "app.olaunchercf"
         minSdkVersion 23
-        targetSdkVersion 32
+        targetSdkVersion 33
         versionCode 18
         versionName "v1.2.8"
 
@@ -30,7 +30,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion '1.1.1'
+        kotlinCompilerExtensionVersion '1.3.1'
     }
 
     buildTypes {
@@ -61,32 +61,32 @@ android {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation "androidx.recyclerview:recyclerview:1.2.1"
 
     // Android lifecycle
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
 
     // Navigation
-    implementation "androidx.navigation:navigation-fragment-ktx:2.4.2"
+    implementation "androidx.navigation:navigation-fragment-ktx:2.5.2"
 
     // Work Manager
     implementation "androidx.work:work-runtime-ktx:2.7.1"
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
     // JETPACK
     // Integration with activities
-    implementation 'androidx.activity:activity-compose:1.4.0'
+    implementation 'androidx.activity:activity-compose:1.6.0'
     // Compose Material Design
-    implementation 'androidx.compose.material:material:1.1.1'
+    implementation 'androidx.compose.material:material:1.2.1'
     // Animations
-    implementation 'androidx.compose.animation:animation:1.1.1'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.4.2'
+    implementation 'androidx.compose.animation:animation:1.2.1'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.2'
 
     // Tooling support (Previews, etc.)
-    implementation 'androidx.compose.ui:ui-tooling:1.1.1'
+    // implementation 'androidx.compose.ui:ui-tooling:1.2.1'
     // Integration with ViewModels
     //implementation 'androidx.lifecycle:lifecycle-viewmodel-compose:2.4.1'
     // implementation 'com.google.ar.sceneform:rendering:1.17.1' -- non-free take care if uncommenting
