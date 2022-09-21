@@ -28,6 +28,8 @@ private const val HOME_LOCKED = "HOME_LOCKED"
 private const val SHOW_TIME = "SHOW_TIME"
 private const val SWIPE_LEFT_ENABLED = "SWIPE_LEFT_ENABLED"
 private const val SWIPE_RIGHT_ENABLED = "SWIPE_RIGHT_ENABLED"
+private const val CLICK_CLOCK_ENABLED = "CLICK_CLOCK_ENABLED"
+private const val CLICK_DATE_ENABLED = "CLICK_DATE_ENABLED"
 private const val SCREEN_TIMEOUT = "SCREEN_TIMEOUT"
 private const val HIDDEN_APPS = "HIDDEN_APPS"
 private const val HIDDEN_APPS_UPDATED = "HIDDEN_APPS_UPDATED"
@@ -143,6 +145,14 @@ class Prefs(val context: Context) {
     var swipeRightEnabled: Boolean
         get() = prefs.getBoolean(SWIPE_RIGHT_ENABLED, true)
         set(value) = prefs.edit().putBoolean(SWIPE_RIGHT_ENABLED, value).apply()
+
+    var clickClockEnabled: Boolean
+        get() = prefs.getBoolean(CLICK_CLOCK_ENABLED, true)
+        set(value) = prefs.edit().putBoolean(CLICK_CLOCK_ENABLED, value).apply()
+
+    var clickDateEnabled: Boolean
+        get() = prefs.getBoolean(CLICK_DATE_ENABLED, true)
+        set(value) = prefs.edit().putBoolean(CLICK_DATE_ENABLED, value).apply()
 
     var appTheme: Constants.Theme
         get() {

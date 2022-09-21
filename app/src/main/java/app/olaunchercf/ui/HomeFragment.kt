@@ -19,7 +19,7 @@ import androidx.navigation.fragment.findNavController
 import app.olaunchercf.MainViewModel
 import app.olaunchercf.R
 import app.olaunchercf.data.AppModel
-import app.olaunchercf.data.Constants
+import app.olaunchercf.data.Constants.AppDrawerFlag
 import app.olaunchercf.data.Prefs
 import app.olaunchercf.databinding.FragmentHomeBinding
 import app.olaunchercf.helper.*
@@ -103,7 +103,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
         val n = view.id
         val name = prefs.getHomeAppModel(n).appLabel
-        showAppList(Constants.FLAG_SET_HOME_APP, name.isNotEmpty(), true, n)
+        showAppList(AppDrawerFlag.SetHomeApp, name.isNotEmpty(), n)
         return true
     }
 
@@ -168,20 +168,20 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     }
 
     private fun launchApp(appModel: AppModel) {
-        viewModel.selectedApp(appModel, Constants.FLAG_LAUNCH_APP)
+        viewModel.selectedApp(appModel, AppDrawerFlag.LaunchApp)
     }
 
-    private fun showAppList(flag: Int, rename: Boolean = false, showHiddenApps: Boolean = false, n: Int = 0) {
+    private fun showAppList(flag: AppDrawerFlag, showHiddenApps: Boolean = false, n: Int = 0) {
         viewModel.getAppList(showHiddenApps)
         try {
             findNavController().navigate(
                 R.id.action_mainFragment_to_appListFragment,
-                bundleOf("flag" to flag, "rename" to rename, "n" to n)
+                bundleOf("flag" to flag.toString(), "n" to n)
             )
         } catch (e: Exception) {
             findNavController().navigate(
                 R.id.appListFragment,
-                bundleOf("flag" to flag, "rename" to rename)
+                bundleOf("flag" to flag.toString())
             )
             e.printStackTrace()
         }
@@ -208,12 +208,14 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     }
 
     private fun openClickClockApp() {
+        if (!prefs.clickClockEnabled) return
         if (prefs.appClickClock.appPackage.isNotEmpty())
             launchApp(prefs.appClickClock)
         else openAlarmApp(requireContext())
     }
 
     private fun openClickDateApp() {
+        if (!prefs.clickDateEnabled) return
         if (prefs.appClickDate.appPackage.isNotEmpty())
             launchApp(prefs.appClickDate)
         else openCalendar(requireContext())
@@ -260,7 +262,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
             override fun onSwipeUp() {
                 super.onSwipeUp()
-                showAppList(Constants.FLAG_LAUNCH_APP)
+                showAppList(AppDrawerFlag.LaunchApp)
             }
 
             override fun onSwipeDown() {
@@ -315,7 +317,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
             override fun onSwipeUp() {
                 super.onSwipeUp()
-                showAppList(Constants.FLAG_LAUNCH_APP)
+                showAppList(AppDrawerFlag.LaunchApp)
             }
 
             override fun onSwipeDown() {

@@ -12,17 +12,18 @@ import androidx.recyclerview.widget.RecyclerView
 import app.olaunchercf.R
 import app.olaunchercf.data.AppModel
 import app.olaunchercf.data.Constants
+import app.olaunchercf.data.Constants.AppDrawerFlag
 import app.olaunchercf.data.Prefs
 import app.olaunchercf.databinding.AdapterAppDrawerBinding
 import kotlinx.coroutines.NonCancellable.cancel
 import java.text.Normalizer
 
 class AppDrawerAdapter(
-    private var flag: Int,
+    private var flag: AppDrawerFlag,
     private val gravity: Int,
     private val clickListener: (AppModel) -> Unit,
     private val appInfoListener: (AppModel) -> Unit,
-    private val appHideListener: (Int, AppModel) -> Unit,
+    private val appHideListener: (AppDrawerFlag, AppModel) -> Unit,
     private val appRenameListener: (String, String) -> Unit
 ) : RecyclerView.Adapter<AppDrawerAdapter.ViewHolder>(), Filterable {
 
@@ -63,7 +64,7 @@ class AppDrawerAdapter(
         }
 
         try { // Automatically open the app when there's only one search result
-            if ((itemCount == 1) and (flag == Constants.FLAG_LAUNCH_APP))
+            if ((itemCount == 1) and (flag == AppDrawerFlag.LaunchApp))
                 clickListener(appFilteredList[position])
         } catch (e: Exception) {
 
@@ -124,7 +125,7 @@ class AppDrawerAdapter(
 
     class ViewHolder(itemView: AdapterAppDrawerBinding) : RecyclerView.ViewHolder(itemView.root) {
         val appHideButton: TextView = itemView.appHide
-        val appRenameButton: TextView = itemView.appRename
+        val appRenameButton: TextView = itemView.drawerButton
         val appRenameEdit: EditText = itemView.appRenameEdit
         private val appHideLayout: ConstraintLayout = itemView.appHideLayout
         private val appTitle: TextView = itemView.appTitle
@@ -132,7 +133,7 @@ class AppDrawerAdapter(
         private val appInfo: ImageView = itemView.appInfo
 
         fun bind(
-            flag: Int,
+            flag: AppDrawerFlag,
             appLabelGravity: Int,
             appModel: AppModel,
             listener: (AppModel) -> Unit,
@@ -140,7 +141,7 @@ class AppDrawerAdapter(
         ) =
             with(itemView) {
                 appHideLayout.visibility = View.GONE
-                appHideButton.text = if (flag == Constants.FLAG_HIDDEN_APPS) {
+                appHideButton.text = if (flag == AppDrawerFlag.HiddenApps) {
                     context.getString(R.string.show)
                 } else {
                     context.getString(R.string.hide)

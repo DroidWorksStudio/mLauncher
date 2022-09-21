@@ -10,6 +10,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import app.olaunchercf.data.AppModel
 import app.olaunchercf.data.Constants
+import app.olaunchercf.data.Constants.AppDrawerFlag
 import app.olaunchercf.data.Prefs
 import app.olaunchercf.helper.*
 import kotlinx.coroutines.launch
@@ -35,30 +36,27 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     val homeAppsAlignment = MutableLiveData(Pair(prefs.homeAlignment, prefs.homeAlignmentBottom))
     val homeAppsCount = MutableLiveData(prefs.homeAppsNum)
 
-    fun selectedApp(appModel: AppModel, flag: Int, n: Int = 0) {
+    fun selectedApp(appModel: AppModel, flag: AppDrawerFlag, n: Int = 0) {
         when (flag) {
-            Constants.FLAG_LAUNCH_APP -> {
+            AppDrawerFlag.LaunchApp, AppDrawerFlag.HiddenApps -> {
                 launchApp(appModel)
             }
-            Constants.FLAG_HIDDEN_APPS -> {
-                launchApp(appModel)
-            }
-            Constants.FLAG_SET_HOME_APP -> {
+            AppDrawerFlag.SetHomeApp -> {
                 prefs.setHomeAppModel(n, appModel)
             }
-            Constants.FLAG_SET_SWIPE_LEFT_APP -> {
+            AppDrawerFlag.SetSwipeLeft -> {
                 prefs.appSwipeLeft = appModel
                 updateSwipeApps()
             }
-            Constants.FLAG_SET_SWIPE_RIGHT_APP -> {
+            AppDrawerFlag.SetSwipeRight -> {
                 prefs.appSwipeRight = appModel
                 updateSwipeApps()
             }
-            Constants.FLAG_SET_CLICK_CLOCK_APP -> {
+            AppDrawerFlag.SetClickClock -> {
                 prefs.appClickClock = appModel
                 updateClickApps()
             }
-            Constants.FLAG_SET_CLICK_DATE_APP -> {
+            AppDrawerFlag.SetClickDate -> {
                 prefs.appClickDate = appModel
                 updateClickApps()
             }

@@ -17,7 +17,7 @@ interface EnumOption {
 
 object Constants {
 
-    const val FLAG_LAUNCH_APP = 100
+    /*const val FLAG_LAUNCH_APP = 100
     const val FLAG_HIDDEN_APPS = 101
 
     const val FLAG_SET_HOME_APP = 1
@@ -26,7 +26,7 @@ object Constants {
     const val FLAG_SET_SWIPE_RIGHT_APP = 12
 
     const val FLAG_SET_CLICK_CLOCK_APP = 13
-    const val FLAG_SET_CLICK_DATE_APP = 14
+    const val FLAG_SET_CLICK_DATE_APP = 14*/
 
     const val REQUEST_CODE_ENABLE_ADMIN = 666
 
@@ -36,6 +36,16 @@ object Constants {
     const val MAX_HOME_APPS = 15
     const val TEXT_SIZE_MIN = 16
     const val TEXT_SIZE_MAX = 30
+
+    enum class AppDrawerFlag {
+        LaunchApp,
+        HiddenApps,
+        SetHomeApp,
+        SetSwipeLeft,
+        SetSwipeRight,
+        SetClickClock,
+        SetClickDate,
+    }
 
     enum class Language: EnumOption {
         System,

@@ -78,5 +78,10 @@
     <string name="reset">Reset</string>
     <string name="cancel">Cancel</string>
 
+    <string name="enable">Enable</string>
+    <string name="disable">Disable</string>
+    <string name="enabled">Enabled</string>
+    <string name="disabled">Disabled</string>
+
 
 </resources>

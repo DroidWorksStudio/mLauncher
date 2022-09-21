@@ -43,11 +43,11 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/appRename"
+            app:layout_constraintEnd_toStartOf="@id/drawerButton"
             android:padding="@dimen/app_padding_vertical"/>
 
         <TextView
-            android:id="@+id/appRename"
+            android:id="@+id/drawerButton"
             style="@style/TextSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

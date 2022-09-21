@@ -158,12 +158,15 @@ object SettingsComposable {
     fun SettingsAppSelector(
         title: String,
         currentSelection: MutableState<String>,
+        active: Boolean,
         onClick: () -> Unit,
     ) {
         SettingsRow(
             title = title,
             onClick = onClick,
-            buttonText = currentSelection.value
+            buttonText = currentSelection.value,
+            active = active,
+            disabledText = stringResource(R.string.disabled)
         )
     }
 
@@ -172,6 +175,8 @@ object SettingsComposable {
         title: String,
         onClick: () -> Unit,
         buttonText: String,
+        active: Boolean = true,
+        disabledText: String = buttonText,
     ) {
         ConstraintLayout(modifier = Modifier.fillMaxWidth()) {
 
@@ -190,7 +195,7 @@ object SettingsComposable {
                 Text(
                     title,
                     style = SettingsTheme.typography.item,
-                modifier = Modifier.align(Alignment.CenterStart)
+                    modifier = Modifier.align(Alignment.CenterStart)
                 )
             }
 
@@ -203,8 +208,8 @@ object SettingsComposable {
                 },
             ) {
                 Text(
-                    text = buttonText,
-                    style = SettingsTheme.typography.button
+                    text = if (active) buttonText else disabledText,
+                    style = if (active) SettingsTheme.typography.button else SettingsTheme.typography.buttonDisabled,
                 )
             }
         }

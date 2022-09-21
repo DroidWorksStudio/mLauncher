@@ -15,6 +15,7 @@ import androidx.compose.ui.unit.sp
 import app.olaunchercf.R
 import app.olaunchercf.style.CORNER_RADIUS
 import app.olaunchercf.style.textDark
+import app.olaunchercf.style.textGray
 import app.olaunchercf.style.textLight
 
 @Immutable
@@ -23,6 +24,7 @@ data class ReplacementTypography(
     val title: TextStyle,
     val item: TextStyle,
     val button: TextStyle,
+    val buttonDisabled: TextStyle,
 )
 
 @Immutable
@@ -42,6 +44,7 @@ val LocalReplacementTypography = staticCompositionLocalOf {
         title = TextStyle.Default,
         item = TextStyle.Default,
         button = TextStyle.Default,
+        buttonDisabled = TextStyle.Default,
     )
 }
 val LocalReplacementShapes = staticCompositionLocalOf {
@@ -78,6 +81,12 @@ fun SettingsTheme(
             fontWeight = FontWeight.Bold,
             fontSize = 16.sp,
             color = if (isDark) textLight else textDark,
+        ),
+        buttonDisabled = TextStyle(
+            fontFamily = FontFamily.SansSerif,
+            fontWeight = FontWeight.Bold,
+            fontSize = 16.sp,
+            color = textGray,
         ),
     )
     val replacementShapes = ReplacementShapes(
