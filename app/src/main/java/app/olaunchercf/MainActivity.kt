@@ -77,12 +77,8 @@ class MainActivity : AppCompatActivity() {
         resources.updateConfiguration(config, resources.displayMetrics)
     }
 
-    override fun onResume() {
-        super.onResume()
+    override fun onStop() {
         backToHomeScreen()
-    }
-
-    /*override fun onStop() {
         super.onStop()
     }
 
@@ -94,7 +90,7 @@ class MainActivity : AppCompatActivity() {
     override fun onNewIntent(intent: Intent?) {
         backToHomeScreen()
         super.onNewIntent(intent)
-    }*/
+    }
 
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
