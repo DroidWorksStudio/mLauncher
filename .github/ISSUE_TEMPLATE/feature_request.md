@@ -6,6 +6,8 @@ labels: feature
 
 ---
 
+- [ ] I have searched existing issues for this feature.
+
 **Is your feature request related to a problem? Please describe.** <!-- to be filled in -->
 
 - A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
