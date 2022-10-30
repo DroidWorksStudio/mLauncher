@@ -7,16 +7,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import app.olaunchercf.R
 import app.olaunchercf.data.AppModel
-import app.olaunchercf.data.Constants
 import app.olaunchercf.data.Constants.AppDrawerFlag
 import app.olaunchercf.data.Prefs
 import app.olaunchercf.databinding.AdapterAppDrawerBinding
-import kotlinx.coroutines.NonCancellable.cancel
 import java.text.Normalizer
+
 
 class AppDrawerAdapter(
     private var flag: AppDrawerFlag,
@@ -129,7 +129,7 @@ class AppDrawerAdapter(
         val appRenameEdit: EditText = itemView.appRenameEdit
         private val appHideLayout: ConstraintLayout = itemView.appHideLayout
         private val appTitle: TextView = itemView.appTitle
-        private val otherProfileIndicator: ImageView = itemView.otherProfileIndicator
+        private val appTitleFrame: FrameLayout = itemView.appTitleFrame
         private val appInfo: ImageView = itemView.appInfo
 
         fun bind(
@@ -152,12 +152,16 @@ class AppDrawerAdapter(
 
                     override fun afterTextChanged(s: Editable) {}
 
-                    override fun beforeTextChanged(s: CharSequence, start: Int,
-                                                   count: Int, after: Int) {
+                    override fun beforeTextChanged(
+                        s: CharSequence, start: Int,
+                        count: Int, after: Int
+                    ) {
                     }
 
-                    override fun onTextChanged(s: CharSequence, start: Int,
-                                               before: Int, count: Int) {
+                    override fun onTextChanged(
+                        s: CharSequence, start: Int,
+                        before: Int, count: Int
+                    ) {
                         if (appRenameEdit.text.isEmpty()) {
                             appRenameButton.text = context.getString(R.string.reset)
                         } else if (appRenameEdit.text.toString() == appModel.appAlias || appRenameEdit.text.toString() == appModel.appLabel) {
@@ -168,24 +172,27 @@ class AppDrawerAdapter(
                     }
                 })
 
-                // set current name as default text in EditText
-                appRenameEdit.text = if (appModel.appAlias.isEmpty()) {
-                    Editable.Factory.getInstance().newEditable(appModel.appLabel);
-                } else {
-                    Editable.Factory.getInstance().newEditable(appModel.appAlias);
-                }
-
-                appTitle.text = if (appModel.appAlias.isEmpty()) {
+                val appName = appModel.appAlias.ifEmpty {
                     appModel.appLabel
-                } else {
-                    appModel.appAlias
                 }
 
-                appTitle.gravity = appLabelGravity
+                appTitle.text = appName
 
-                if (appModel.user == android.os.Process.myUserHandle())
-                    otherProfileIndicator.visibility = View.GONE
-                else otherProfileIndicator.visibility = View.VISIBLE
+                // set current name as default text in EditText
+                appRenameEdit.text = Editable.Factory.getInstance().newEditable(appName);
+
+                // set text gravity
+                val params = appTitle.layoutParams as FrameLayout.LayoutParams
+                params.gravity = appLabelGravity
+                appTitle.layoutParams = params
+
+                // add icon next to app name to indicate that this app is installed on another profile
+                if (appModel.user != android.os.Process.myUserHandle()) {
+                    val drawable = AppCompatResources.getDrawable(context, R.drawable.work_profile)
+                    drawable?.setBounds(0, 0, 30, 30);
+                    appTitle.setCompoundDrawables(drawable, null, null, null);
+                    appTitle.compoundDrawablePadding = 10
+                }
 
                 appTitle.setOnClickListener { listener(appModel) }
                 appTitle.setOnLongClickListener {
