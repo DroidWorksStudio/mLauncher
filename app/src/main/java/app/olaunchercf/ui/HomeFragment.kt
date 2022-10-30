@@ -72,7 +72,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
 
         // updates app names
-        setupHomeScreen()
 
         // only show "set as default"-button if tips are GONE
         if (binding.firstRunTips.visibility == View.GONE) {
@@ -147,19 +146,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 binding.date.visibility = if (it) View.VISIBLE else View.GONE
             }
         }
-    }
-
-    private fun setupHomeScreen() {
-        // TODO: IDEA: place clock in center when no apps are shown
-        binding.homeAppsLayout.children.forEachIndexed { i, app ->
-            val appModel = prefs.getHomeAppModel(i)
-            val name = appModel.appLabel
-            setHomeAppText(app as TextView, name)
-        }
-    }
-
-    private fun setHomeAppText(textView: TextView, appName: String) {
-        textView.text = appName
     }
 
     private fun homeAppClicked(location: Int) {
@@ -354,6 +340,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 view.apply {
                     textSize = prefs.textSize.toFloat()
                     id = i
+                    text = prefs.getHomeAppModel(i).appLabel
                     setOnTouchListener(getViewSwipeTouchListener(context, this))
                     if (!prefs.extendHomeAppsArea) {
                         layoutParams = ViewGroup.LayoutParams(
