@@ -1,4 +1,4 @@
-<h1 align="center">Olauncher Fork. Minimal and clutter free</h1>  
+<h1 align="center">Based on OlauncherAF. Minimal and clutter free</h1>  
 </p><h3 align="center">Olauncher is a minimal app launcher for Android.
 
 We try to balance customizability and clutter :)</h3>  
