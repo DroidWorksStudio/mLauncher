@@ -9,12 +9,14 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import app.olaunchercf.R
 import app.olaunchercf.data.AppModel
 import app.olaunchercf.data.Constants.AppDrawerFlag
 import app.olaunchercf.data.Prefs
 import app.olaunchercf.databinding.AdapterAppDrawerBinding
+import app.olaunchercf.helper.uninstallApp
 import java.text.Normalizer
 
 
@@ -124,8 +126,8 @@ class AppDrawerAdapter(
     }
 
     class ViewHolder(itemView: AdapterAppDrawerBinding) : RecyclerView.ViewHolder(itemView.root) {
-        val appHideButton: TextView = itemView.appHide
-        val appRenameButton: TextView = itemView.drawerButton
+        val appHideButton: ImageView = itemView.appHide
+        val appRenameButton: TextView = itemView.appRename
         val appRenameEdit: EditText = itemView.appRenameEdit
         private val appHideLayout: ConstraintLayout = itemView.appHideLayout
         private val appTitle: TextView = itemView.appTitle
@@ -141,12 +143,10 @@ class AppDrawerAdapter(
         ) =
             with(itemView) {
                 appHideLayout.visibility = View.GONE
-                appHideButton.text = if (flag == AppDrawerFlag.HiddenApps) {
-                    context.getString(R.string.show)
-                } else {
-                    context.getString(R.string.hide)
-                }
 
+                // set show/hide icon
+                val drawable = if (flag == AppDrawerFlag.HiddenApps) { R.drawable.visibility } else { R.drawable.visibility_off }
+                appHideButton.setImageDrawable(AppCompatResources.getDrawable(context, drawable))
 
                 appRenameEdit.addTextChangedListener(object : TextWatcher {
 
@@ -200,7 +200,13 @@ class AppDrawerAdapter(
                     true
                 }
 
-                appInfo.setOnClickListener { appInfoListener(appModel) }
+                appInfo.apply {
+                    setOnClickListener { appInfoListener(appModel) }
+                    setOnLongClickListener {
+                        uninstallApp(context, appModel.appPackage)
+                        true
+                    }
+                }
                 appHideLayout.setOnClickListener { appHideLayout.visibility = View.GONE }
             }
     }
