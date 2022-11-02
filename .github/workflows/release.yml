@@ -4,6 +4,8 @@ on:
   push:
     tags:
       - '*'
+  workflow_dispatch:
+  
 
 jobs:
   Gradle:
@@ -20,7 +22,7 @@ jobs:
     - name: Build Release APK
       run: ./gradlew assembleRelease
     - name: Releasing using Hub
-      uses: jooooscha/action-release-releaseapk@master
+      uses: kyze8439690/action-release-releaseapk@master
       env:
        GITHUB_TOKEN: ${{ secrets.RELEASETOKEN }}
        VERSION_VARIABLE: versionName
