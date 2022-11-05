@@ -1,8 +1,11 @@
 package app.olaunchercf.ui
 
+import android.content.res.Resources
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
+import android.util.TypedValue
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,6 +19,7 @@ import app.olaunchercf.data.AppModel
 import app.olaunchercf.data.Constants.AppDrawerFlag
 import app.olaunchercf.data.Prefs
 import app.olaunchercf.databinding.AdapterAppDrawerBinding
+import app.olaunchercf.helper.dp2px
 import app.olaunchercf.helper.uninstallApp
 import java.text.Normalizer
 
@@ -186,12 +190,21 @@ class AppDrawerAdapter(
                 params.gravity = appLabelGravity
                 appTitle.layoutParams = params
 
+
                 // add icon next to app name to indicate that this app is installed on another profile
                 if (appModel.user != android.os.Process.myUserHandle()) {
-                    val drawable = AppCompatResources.getDrawable(context, R.drawable.work_profile)
-                    drawable?.setBounds(0, 0, 30, 30);
-                    appTitle.setCompoundDrawables(drawable, null, null, null);
-                    appTitle.compoundDrawablePadding = 10
+                    val icon = AppCompatResources.getDrawable(context, R.drawable.work_profile)
+                    val prefs = Prefs(context)
+                    val px = dp2px(resources, prefs.textSize)
+                    icon?.setBounds(0, 0, px, px);
+                    if (appLabelGravity == Gravity.LEFT) {
+                        appTitle.setCompoundDrawables(null, null, icon, null);
+                    } else {
+                        appTitle.setCompoundDrawables(icon, null, null, null);
+                    }
+                    appTitle.compoundDrawablePadding = 20
+                } else {
+                    appTitle.setCompoundDrawables(null, null, null, null);
                 }
 
                 appTitle.setOnClickListener { listener(appModel) }
