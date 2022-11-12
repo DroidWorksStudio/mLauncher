@@ -10,8 +10,8 @@
     android:clipChildren="false"
     android:clipToPadding="false"
     android:overScrollMode="never"
-    android:paddingTop="64dp"
-    android:paddingBottom="56dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
     android:scrollbars="none">
 
     <LinearLayout
@@ -21,59 +21,6 @@
         android:clipChildren="false"
         android:clipToPadding="false"
         android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_marginEnd="12dp"
-            android:background="@drawable/rounded_rect_shade_color"
-            android:orientation="vertical"
-            android:padding="12dp">
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/settingsTitle"
-                    style="@style/TextLarge"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:text="@string/app_name" />
-
-                <ImageView
-                    android:id="@+id/appInfo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end|center_vertical"
-                    android:padding="4dp"
-                    android:src="@drawable/ic_outline_info_24"
-                    app:tint="?attr/primaryColor" />
-            </FrameLayout>
-
-            <TextView
-                android:id="@+id/olauncherHiddenApps"
-                style="@style/TextSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="8dp"
-                android:text="@string/hidden_apps" />
-
-            <TextView
-                android:id="@+id/setLauncher"
-                style="@style/TextSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="8dp"
-                android:text="@string/set_as_default_launcher" />
-
-        </LinearLayout>
 
         <androidx.compose.ui.platform.ComposeView
             android:id="@+id/testView"

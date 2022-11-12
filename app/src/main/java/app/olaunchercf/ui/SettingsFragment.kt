@@ -8,6 +8,7 @@ import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,13 +17,17 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.isSpecified
+import androidx.compose.ui.unit.sp
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -43,8 +48,10 @@ import app.olaunchercf.ui.compose.SettingsComposable.SettingsArea
 import app.olaunchercf.ui.compose.SettingsComposable.SettingsItem
 import app.olaunchercf.ui.compose.SettingsComposable.SettingsNumberItem
 import app.olaunchercf.ui.compose.SettingsComposable.SettingsToggle
+import app.olaunchercf.ui.compose.SettingsComposable.SettingsTopView
+import app.olaunchercf.ui.compose.SettingsComposable.SimpleTextButton
 
-class SettingsFragment : Fragment(), View.OnClickListener {
+class SettingsFragment : Fragment() {
 
     private lateinit var prefs: Prefs
     private lateinit var viewModel: MainViewModel
@@ -67,9 +74,6 @@ class SettingsFragment : Fragment(), View.OnClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        if (isOlauncherDefault(requireContext())) {
-            binding.setLauncher.text = getString(R.string.change_default_launcher)
-        }
 
         if (prefs.firstSettingsOpen) {
             prefs.firstSettingsOpen = false
@@ -84,23 +88,54 @@ class SettingsFragment : Fragment(), View.OnClickListener {
             }
 
             SettingsTheme(isDark) {
-                Settings()
+                Settings(prefs.textSize.sp)
             }
         }
     }
 
     @Composable
-    private fun Settings() {
+    private fun Settings(fontSize: TextUnit = TextUnit.Unspecified) {
         val selected = remember { mutableStateOf("") }
+        val fs = remember { mutableStateOf(fontSize) }
+
+        val titleFs = if (fs.value.isSpecified) {
+            (fs.value.value * 2).sp
+        } else fs.value
+
+        val iconFs = if (fs.value.isSpecified) {
+            (fs.value.value * 1.5).sp
+        } else fs.value
+
+        val changeLauncherText = if (isOlauncherDefault(requireContext())) {
+            R.string.change_default_launcher
+        } else {
+           R.string.set_as_default_launcher
+        }
+
         Column {
+            SettingsTopView(
+                stringResource(R.string.app_name),
+                onClick = { openAppInfo(requireContext(), android.os.Process.myUserHandle(), BuildConfig.APPLICATION_ID) },
+                fontSize = titleFs,
+                iconSize = iconFs.value.dp,
+            ) {
+                SimpleTextButton(stringResource(R.string.hidden_apps), fontSize = fs.value) {
+                    showHiddenApps()
+                }
+                SimpleTextButton(stringResource(changeLauncherText), fontSize = fs.value) {
+                    resetDefaultLauncher(requireContext())
+                }
+            }
             SettingsArea(
                 title = stringResource(R.string.appearance),
                 selected = selected,
-                arrayOf(
+                fontSize = titleFs,
+                items = arrayOf(
                     { _, onChange ->
                         SettingsToggle(
                             title = stringResource(R.string.auto_show_keyboard),
                             onChange = onChange,
+                            fontSize = fs.value,
                             state = remember { mutableStateOf(prefs.autoShowKeyboard) },
                         ) { toggleKeyboardText() }
                     },
@@ -108,6 +143,7 @@ class SettingsFragment : Fragment(), View.OnClickListener {
                         SettingsToggle(
                             title = stringResource(R.string.status_bar),
                             onChange = onChange,
+                            fontSize = fs.value,
                             state = remember { mutableStateOf(prefs.showStatusBar) },
                         ) { toggleStatusBar() }
                     },
@@ -116,6 +152,7 @@ class SettingsFragment : Fragment(), View.OnClickListener {
                             title = stringResource(R.string.theme_mode),
                             open = open,
                             onChange = onChange,
+                            fontSize = fs.value,
                             currentSelection = remember { mutableStateOf(prefs.appTheme) },
                             values = arrayOf(System, Light, Dark),
                             onSelect = { j -> setTheme(j) }
@@ -125,6 +162,7 @@ class SettingsFragment : Fragment(), View.OnClickListener {
                         SettingsItem(
                             open = open,
                             onChange = onChange,
+                            fontSize = fs.value,
                             title = stringResource(R.string.app_language),
                             currentSelection = remember { mutableStateOf(prefs.language) },
                             values = Constants.Language.values(),
@@ -135,10 +173,12 @@ class SettingsFragment : Fragment(), View.OnClickListener {
                         SettingsNumberItem(
                             title = stringResource(R.string.app_text_size),
                             open = open,
+                            fontSize = fs.value,
                             onChange = onChange,
                             currentSelection = remember { mutableStateOf(prefs.textSize) },
                             min = Constants.TEXT_SIZE_MIN,
                             max = Constants.TEXT_SIZE_MAX,
+                            onValueChange = { newSize -> fs.value = newSize.sp },
                             onSelect = { f -> setTextSize(f) }
                         )
                     }
@@ -146,11 +186,12 @@ class SettingsFragment : Fragment(), View.OnClickListener {
             )
             SettingsArea(title = stringResource(R.string.homescreen),
                 selected = selected,
-                arrayOf(
+                items = arrayOf(
                     { open, onChange ->
                         SettingsNumberItem(
                             title = stringResource(R.string.apps_on_home_screen),
                             open = open,
+                            fontSize = fs.value,
                             onChange = onChange,
                             currentSelection = remember { mutableStateOf(prefs.homeAppsNum) },
                             min = 0,
@@ -162,6 +203,7 @@ class SettingsFragment : Fragment(), View.OnClickListener {
                         SettingsToggle(
                             title = stringResource(R.string.show_time),
                             onChange = onChange,
+                            fontSize = fs.value,
                             state = remember { mutableStateOf(prefs.showTime) }
                         ) { toggleShowTime() }
                     },
@@ -169,6 +211,7 @@ class SettingsFragment : Fragment(), View.OnClickListener {
                         SettingsToggle(
                             title = stringResource(R.string.show_date),
                             onChange = onChange,
+                            fontSize = fs.value,
                             state = remember { mutableStateOf(prefs.showDate) }
                         ) { toggleShowDate() }
                     },
@@ -176,6 +219,7 @@ class SettingsFragment : Fragment(), View.OnClickListener {
                         SettingsToggle(
                             title = stringResource(R.string.lock_home_apps),
                             onChange = onChange,
+                            fontSize = fs.value,
                             state = remember { mutableStateOf(prefs.homeLocked) }
                         ) { prefs.homeLocked = !prefs.homeLocked }
                     },
@@ -183,6 +227,7 @@ class SettingsFragment : Fragment(), View.OnClickListener {
                         SettingsToggle(
                             title = stringResource(R.string.extend_home_apps_area),
                             onChange = onChange,
+                            fontSize = fs.value,
                             state = remember { mutableStateOf(prefs.extendHomeAppsArea) }
                         ) { prefs.extendHomeAppsArea = !prefs.extendHomeAppsArea }
                     },
@@ -190,12 +235,13 @@ class SettingsFragment : Fragment(), View.OnClickListener {
             )
             SettingsArea(title = stringResource(R.string.alignment),
                 selected = selected,
-                arrayOf(
+                items = arrayOf(
                     { open, onChange ->
                         SettingsItem(
                             title = stringResource(R.string.home_alignment),
                             open = open,
                             onChange = onChange,
+                            fontSize = fs.value,
                             currentSelection = remember { mutableStateOf(prefs.homeAlignment) },
                             values = arrayOf(Constants.Gravity.Left, Constants.Gravity.Center, Constants.Gravity.Right),
                             onSelect = { gravity -> setHomeAlignment(gravity) }
@@ -205,6 +251,7 @@ class SettingsFragment : Fragment(), View.OnClickListener {
                         SettingsToggle(
                             title = stringResource(R.string.home_alignment_bottom),
                             onChange = onChange,
+                            fontSize = fs.value,
                             state = remember { mutableStateOf(prefs.homeAlignmentBottom) }
                         ) { toggleHomeAppsBottom() }
                     },
@@ -213,6 +260,7 @@ class SettingsFragment : Fragment(), View.OnClickListener {
                             title = stringResource(R.string.clock_alignment),
                             open = open,
                             onChange = onChange,
+                            fontSize = fs.value,
                             currentSelection = remember { mutableStateOf(prefs.clockAlignment) },
                             values = arrayOf(Constants.Gravity.Left, Constants.Gravity.Center, Constants.Gravity.Right),
                             onSelect = { gravity -> setClockAlignment(gravity) }
@@ -223,6 +271,7 @@ class SettingsFragment : Fragment(), View.OnClickListener {
                             title = stringResource(R.string.drawer_alignment),
                             open = open,
                             onChange = onChange,
+                            fontSize = fs.value,
                             currentSelection = remember { mutableStateOf(prefs.drawerAlignment) },
                             values = arrayOf(Constants.Gravity.Left, Constants.Gravity.Center, Constants.Gravity.Right),
                             onSelect = { j -> viewModel.updateDrawerAlignment(j) }
@@ -232,13 +281,14 @@ class SettingsFragment : Fragment(), View.OnClickListener {
             )
             SettingsArea(title = stringResource(R.string.gestures),
                 selected = selected,
-                arrayOf(
+                items = arrayOf(
                     { _, _ ->
                         SettingsAppSelector(
                             title = stringResource(R.string.swipe_left_app),
                             currentSelection = remember {
                                 mutableStateOf(prefs.appSwipeLeft.appLabel.ifEmpty { "Camera" })
                             },
+                            fontSize = fs.value,
                             onClick = { updateGesture(AppDrawerFlag.SetSwipeLeft) },
                             active = prefs.swipeLeftEnabled,
                         )
@@ -249,6 +299,7 @@ class SettingsFragment : Fragment(), View.OnClickListener {
                             currentSelection = remember {
                                 mutableStateOf(prefs.appSwipeRight.appLabel.ifEmpty { "Phone" })
                             },
+                            fontSize = fs.value,
                             onClick = { updateGesture(AppDrawerFlag.SetSwipeRight) },
                             active = prefs.swipeRightEnabled,
                         )
@@ -259,6 +310,7 @@ class SettingsFragment : Fragment(), View.OnClickListener {
                             currentSelection =
                                 remember { mutableStateOf(prefs.appClickClock.appLabel.ifEmpty { "Clock" }) },
                             onClick = { updateGesture(AppDrawerFlag.SetClickClock) },
+                            fontSize = fs.value,
                             active = prefs.clickClockEnabled,
                         )
                     },
@@ -268,6 +320,7 @@ class SettingsFragment : Fragment(), View.OnClickListener {
                             currentSelection =
                                 remember { mutableStateOf(prefs.appClickDate.appLabel.ifEmpty { "Calendar" }) },
                             onClick = { updateGesture(AppDrawerFlag.SetClickDate) },
+                            fontSize = fs.value,
                             active = prefs.clickDateEnabled,
                         )
                     },
@@ -275,6 +328,7 @@ class SettingsFragment : Fragment(), View.OnClickListener {
                         SettingsToggle(
                             title = stringResource(R.string.double_tap_to_lock_screen),
                             onChange = onChange,
+                            fontSize = fs.value,
                             state = remember { mutableStateOf(prefs.lockModeOn) }
                         ) { toggleLockMode() }
                     }
@@ -285,6 +339,7 @@ class SettingsFragment : Fragment(), View.OnClickListener {
                     .align(Alignment.End)
                     .padding(10.dp, 5.dp),
                 text = "Version: ${requireContext().packageManager.getPackageInfo(requireContext().packageName, 0).versionName}",
+                fontSize = fs.value,
                 color = Color.DarkGray
             )
         }
@@ -302,28 +357,11 @@ class SettingsFragment : Fragment(), View.OnClickListener {
         deviceManager = context?.getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
         componentName = ComponentName(requireContext(), DeviceAdmin::class.java)
         checkAdminPermission()
-
-        initClickListeners()
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-    }
-
-    override fun onClick(view: View) {
-        when (view.id) {
-            R.id.olauncherHiddenApps -> showHiddenApps()
-            R.id.appInfo -> openAppInfo(requireContext(), android.os.Process.myUserHandle(), BuildConfig.APPLICATION_ID)
-            R.id.setLauncher -> viewModel.resetDefaultLauncherApp(requireContext())
-        }
-    }
-
-    private fun initClickListeners() {
-        binding.olauncherHiddenApps.setOnClickListener(this)
-        binding.scrollLayout.setOnClickListener(this)
-        binding.appInfo.setOnClickListener(this)
-        binding.setLauncher.setOnClickListener(this)
     }
 
     private fun setHomeAlignment(gravity: Constants.Gravity) {
@@ -451,12 +489,12 @@ class SettingsFragment : Fragment(), View.OnClickListener {
         prefs.textSize = size
 
         // restart activity
-        activity?.let {
+        /* activity?.let {
             val intent = Intent(context, MainActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
             it.startActivity(intent)
             it.finish()
-        }
+        } */
     }
 
     /*private fun setAppTheme(theme: Constants.Theme) {

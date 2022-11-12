@@ -65,13 +65,14 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     override fun onStart() {
         super.onStart()
         if (prefs.showStatusBar) showStatusBar(requireActivity()) else hideStatusBar(requireActivity())
+
+        binding.clock.textSize = prefs.textSize * 2.5f
+        binding.date.textSize = prefs.textSize.toFloat()
+
     }
 
     override fun onResume() {
         super.onResume()
-
-
-        // updates app names
 
         // only show "set as default"-button if tips are GONE
         if (binding.firstRunTips.visibility == View.GONE) {
