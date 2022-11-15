@@ -21,6 +21,9 @@ jobs:
       run: chmod +x ./gradlew
     - name: Build Release APK
       run: ./gradlew assembleRelease
+    - id: get-current-tag
+      uses: zingimmick/github-action-get-current-tag@v1
     - name: Release to GitHub
       run: |
-        gh release create -d --generate-notes --latest --target main -t test-release-do-not-use ./app/build/outputs/apk/release/app-release-unsigned.apk
+        TAG=${{ steps.get-current-tag.outputs.tag }}
+        gh release create $TAG -d --generate-notes --latest --target main -t test-release-do-not-use ./app/build/outputs/apk/release/app-release-unsigned.apk
