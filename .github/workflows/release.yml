@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
     - name: setup jdk
       uses: actions/setup-java@v1
       with:
@@ -21,12 +21,6 @@ jobs:
       run: chmod +x ./gradlew
     - name: Build Release APK
       run: ./gradlew assembleRelease
-    - name: Releasing using Hub
-      uses: jooooscha/action-release-releaseapk@master
-      env:
-       GITHUB_TOKEN: ${{ secrets.RELEASETOKEN }}
-       VERSION_VARIABLE: versionName
-       APP_FILE: buildSrc/Android.kt
-       APP_FOLDER: app
-       RELEASE_TITLE: New Build
-       NAME_VARIABLE: app-release.apk
+    - name: Release to GitHub
+      run: |
+        gh release create -d --generate-notes --latest --target main -t test-release-do-not-usel ./app/build/outputs/apk/release/app-release-unsigned.apk
