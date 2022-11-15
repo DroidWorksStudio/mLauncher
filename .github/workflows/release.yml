@@ -24,3 +24,5 @@ jobs:
     - name: Release to GitHub
       run: |
         gh release create v0.0.0 -d --generate-notes --target main -t test-release-do-not-use ./app/build/outputs/apk/release/app-release-unsigned.apk
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
