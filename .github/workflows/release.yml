@@ -23,4 +23,4 @@ jobs:
       run: ./gradlew assembleRelease
     - name: Release to GitHub
       run: |
-        gh release create -d --generate-notes --latest --target main -t test-release-do-not-usel ./app/build/outputs/apk/release/app-release-unsigned.apk
+        gh release create -d --generate-notes --latest --target main -t test-release-do-not-use ./app/build/outputs/apk/release/app-release-unsigned.apk
