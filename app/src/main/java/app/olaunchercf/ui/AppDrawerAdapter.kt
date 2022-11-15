@@ -207,8 +207,8 @@ class AppDrawerAdapter(
                     appTitle.setCompoundDrawables(null, null, null, null);
                 }
 
-                appTitle.setOnClickListener { listener(appModel) }
-                appTitle.setOnLongClickListener {
+                appTitleFrame.setOnClickListener { listener(appModel) }
+                appTitleFrame.setOnLongClickListener {
                     appHideLayout.visibility = View.VISIBLE
                     true
                 }
