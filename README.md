@@ -54,7 +54,7 @@ We try to balance customizability and clutter :)</h3>
 - Any help in translating Olauncher CF into other languages is greatly appreciated. If you don't know how to perform a pull request, feel free to check out our dedicated [**Wiki**](https://github.com/OlauncherCF/OlauncherCF/wiki).
 <!-- - Translate using Crowdin: https://crowdin.com/project/olaunchercf -->
 
-## Licence
+## License
 
 **Olauncher CF is under open source GPL3 license, meaning you can use, study, change and share it at will.**
 Copyleft ensures it stays that way. From the full source, anyone can build, fork and use as you wish
