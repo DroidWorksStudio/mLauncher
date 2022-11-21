@@ -6,7 +6,7 @@ labels: bug
 assignees: ''
 ---
 
-- [ ] I have searched existing issues for this feature.
+- [ ] I have searched existing issues for this bug.
 
 #### Bug description
 
