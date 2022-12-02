@@ -1,0 +1,87 @@
+<resources>
+    <string name="app_name">Olauncher Clutter Gratis</string>
+    <string name="app">App</string>
+    <string name="set_as_default_launcher">Stel in als standaard launcher</string>
+    <string name="app_text_color">Tekst kleur</string>
+    <string name="double_tap_to_lock_screen">Dubbel tik om te vergrendelen</string>
+    <string name="experimental_">(experimenteel)</string>
+    <string name="admin_permission_message">Olauncher belooft de toestemming voor het vergrendelingsscherm verantwoord te gebruiken.</string>
+    <string name="about">Over</string>
+    <string name="off">Uit</string>
+    <string name="on">Aan</string>
+    <string name="black">Zwart</string>
+    <string name="white">Wit</string>
+    <string name="change_default_launcher">Verander de standaard launcher</string>
+    <string name="long_press_for_settings">Lang indrukken voor instellingen</string>
+    <string name="swipe_up_for_apps">Sleep omhoog voor alle apps</string>
+    <string name="apps_on_home_screen">Aantal snelkkoppelingen</string>
+    <string name="left">Links</string>
+    <string name="right">Rechts</string>
+    <string name="center">Midden</string>
+    <string name="home_alignment">Apps thuis scherm</string>
+    <string name="home_alignment_bottom">Apps thuis scherm onder</string>
+    <string name="clock_alignment">Tijd en datum</string>
+    <string name="drawer_alignment">Apps in app lade</string>
+    <string name="swipe_left_app">Swipe links app</string>
+    <string name="swipe_right_app">Swipe rechts app</string>
+    <string name="clock_click_app">Klok klik app</string>
+    <string name="date_click_app">Datum klik app</string>
+    <string name="_0" translatable="false">0</string>
+    <string name="_1" translatable="false">1</string>
+    <string name="_2" translatable="false">2</string>
+    <string name="_3" translatable="false">3</string>
+    <string name="_4" translatable="false">4</string>
+    <string name="_5" translatable="false">5</string>
+    <string name="_6" translatable="false">6</string>
+    <string name="_7" translatable="false">7</string>
+    <string name="_8" translatable="false">8</string>
+    <string name="save">Opslaan</string>
+    <string name="app_drawer_tips">Tip: Veeg naar beneden om te verwerpen. Veeg naar beneden om het toetsenbord te verbergen.</string>
+    <string name="okay">Ok</string>
+    <string name="double_tap_lock_is_enabled_message">Als dubbeltikvergrendeling de vingerafdruk of gezichtsontgrendeling uitschakelt, open dan de instellingen van Olauncher, tik op \'experimenteel\' en volg de instructies. Bedankt.</string>
+    <string name="triple_tap_lock_message">Hoe het werkt:
+        \nZodra je dubbel tikt, zal het scherm donker worden en de telefoon zal zichzel vergrendelen binnen 5 seconden.
+        \n\nTijdens deze tijd kun je dubbel tikken om te  <b>ontgrendelen</b> of drie maal tikken om de telefoon onmiddelijk te vergrendelen.
+        \n\nLet op: Schakel dit eerst uit als je besluit om Olauncher te verwijderen. Bedankt.</string>
+    <string name="auto_show_keyboard">Toon toetsenbord automatisch</string>
+    <string name="hide">Verberg</string>
+    <string name="status_bar">toon statusbalk</string>
+    <string name="rename">Hernoem</string>
+    <string name="show_time">Toon tijd</string>
+    <string name="show_date">Toon datum</string>
+    <string name="lock_home_apps">Vergrendel Apps</string>
+    <string name="extend_home_apps_area">Breid aanklikbaar gebied op thuis apps uit</string>
+    <string name="appearance">Uiterlijk</string>
+    <string name="gestures">Gebaren</string>
+    <string name="homescreen">Thuisscherm</string>
+    <string name="alignment">Uitlijning</string>
+    <string name="theme_mode">Thema mode</string>
+    <string name="system_default">Systeem</string>
+    <string name="dark">Donker</string>
+    <string name="light">Licht</string>
+    <string name="double_tap_lock_uninstall_message">Dubbeltik om te vergrendelen ingeschakeld.
+        \n\nNote: Schakel dit eerst uit als u besluit Olauncher te verwijderen.</string>
+    <string name="accessibility_service_description">De toegankelijkheidstoestemming is vereist om dubbeltikken om te vergrendelen in te schakelen. Alle gegevens die door de dienst worden verkregen, zullen uw apparaat niet verlaten.</string>
+    <string name="lock_layout_description">lock lay-out beschrijving te gebruiken een unieke id om het scherm te vergrendelen</string>
+    <string name="open">Open link</string>
+    <string name="copy">Kopieer</string>
+    <string name="close">Afsluiten</string>
+    <string name="app_language">Interfacetaal</string>
+    <string name="lang_system">Systeem</string>
+
+    <string name="app_text_size">Tekst Grootte</string>
+    <string name="drawer_list_empty_hint">Geen apps gevonden</string>
+
+    <string name="hidden_apps">Verborgen apps</string>
+
+    <string name="show">Toon</string>
+    <string name="reset">Resetten</string>
+    <string name="cancel">Annuleer</string>
+
+    <string name="enable">Zet aan</string>
+    <string name="disable">Zet uit</string>
+    <string name="enabled">Staat aan</string>
+    <string name="disabled">Staat uit</string>
+
+
+</resources>

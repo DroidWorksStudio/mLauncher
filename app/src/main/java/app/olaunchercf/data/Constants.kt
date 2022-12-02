@@ -51,6 +51,7 @@ object Constants {
         System,
         Chinese,
         Croatian,
+        Dutch,
         English,
         Estonian,
         French,
@@ -72,6 +73,7 @@ object Constants {
                 System -> stringResource(R.string.lang_system)
                 Chinese -> "中文"
                 Croatian -> "Hrvatski"
+                Dutch -> "Nederlands"
                 English -> "English"
                 Estonian -> "Eesti keel"
                 French -> "Français"
@@ -109,6 +111,7 @@ object Constants {
             Language.Russian -> "ru"
             Language.Croatian -> "hr"
             Language.Estonian -> "et"
+            Language.Dutch -> "nl"
         }
     }
 

@@ -1,0 +1,28 @@
+Gesplitst van <a href="https://f-droid.org/packages/app.olauncher/">Olauncher</a> omdat de originele versie onoverzichtelijk is.
+    
+- Rommel verwijderd, zoals advertenties en links
+- Je kunt apps hernoemen in de app-drawer _(Het hernoemen van apps op het startscherm wordt al ondersteund. Klik gewoon lang op een app op het beginscherm en begin te typen)_
+- Mogelijkheid om de app te veranderen wanneer u op de klok klikt
+- Mogelijkheid om de app te veranderen wanneer u op de datum klikt
+- Klok onafhankelijk van home apps uitlijnen
+- Uitlijning van apps in app-drawer veranderen
+- Lettergrootte wijzigen
+- Veel mensen hebben de app vertaald naar de volgende talen. Hartelijk dank ❤️
+  - Chinees
+  - Kroatisch
+  - Engels
+  - Ests
+  - Frans
+  - Duits
+  - Grieks
+  - Indonesisch
+  - Italiaans
+  - Koreaans
+  - Nederlands
+  - Perzisch
+  - Portugees (Europees)
+  - Russisch
+  - Spaans
+  - Zweeds
+  - Turks
+- Internet toestemming verwijdert
