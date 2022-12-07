@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Olauncher Clutter Free</string>
+    <string name="app_name">Olauncher</string>
     <string name="app">Rakendus</string>
     <string name="set_as_default_launcher">Määra peamiseks avakuvarakenduseks</string>
     <string name="app_text_color">Teksti värvr</string>

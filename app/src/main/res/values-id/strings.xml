@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Olauncher Clutter Free</string>
+    <string name="app_name">Olauncher</string>
     <string name="app">Aplikasi</string>
     <string name="set_as_default_launcher">Atur sebagai launcher default</string>
     <string name="app_text_color">Warna teks</string>
@@ -58,10 +58,10 @@
     <string name="app_text_size">Ukuran teks</string>
 
     <string name="hidden_apps">Aplikasi tersembunyi</string>
-    
+
     <string name="show">Show</string>
     <string name="reset">Reset</string>
     <string name="cancel">Cancel</string>
-    
+
 
 </resources>

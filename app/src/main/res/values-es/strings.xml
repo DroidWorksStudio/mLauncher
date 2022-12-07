@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Olauncher Clutter Free</string>
+    <string name="app_name">Olauncher</string>
     <string name="app">App</string>
     <string name="set_as_default_launcher">Establecer como lanzador predeterminado</string>
     <string name="app_text_color">Color de texto</string>
@@ -59,11 +59,11 @@
     <string name="close">Cerrar</string>
     <string name="app_language">Idioma</string>
     <string name="lang_system">Sistema</string>
-    
+
     <string name="app_text_size">Texto en pantalla</string>
 
     <string name="hidden_apps">Aplicaciones ocultas</string>
-    
+
     <string name="show">Show</string>
     <string name="reset">Reset</string>
     <string name="cancel">Cancel</string>

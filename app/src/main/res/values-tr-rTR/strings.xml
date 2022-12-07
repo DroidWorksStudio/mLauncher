@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Olauncher Clutter Free</string>
+    <string name="app_name">Olauncher</string>
     <string name="app">Uygulama</string>
     <string name="set_as_default_launcher">Varsayılan başlatıcı olarak ayarla</string>
     <string name="app_text_color">Metin rengi</string>
@@ -67,6 +67,6 @@
     <string name="show">Göster</string>
     <string name="reset">Sıfırla</string>
     <string name="cancel">İptal</string>
-    
-    
+
+
 </resources>

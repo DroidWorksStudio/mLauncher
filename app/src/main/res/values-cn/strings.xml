@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Olauncher Clutter Free</string>
+    <string name="app_name">Olauncher</string>
     <string name="app">应用</string>
     <string name="set_as_default_launcher">设为默认启动器</string>
     <string name="app_text_color">文本颜色</string>
@@ -71,17 +71,17 @@
 
     <string name="app_text_size">文本尺寸</string>
     <string name="drawer_list_empty_hint">未找到应用</string>
-    
+
     <string name="hidden_apps">隐藏的应用</string>
-    
+
     <string name="show">显示</string>
     <string name="reset">重置</string>
     <string name="cancel">取消</string>
-    
+
     <string name="enable">启用</string>
     <string name="disable">禁用</string>
     <string name="enabled">已开启</string>
     <string name="disabled">已禁用</string>
-    
-    
+
+
 </resources>

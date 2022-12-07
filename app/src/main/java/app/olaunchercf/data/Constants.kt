@@ -49,6 +49,7 @@ object Constants {
 
     enum class Language: EnumOption {
         System,
+        Arabic,
         Chinese,
         Croatian,
         Dutch,
@@ -71,6 +72,7 @@ object Constants {
         override fun string(): String {
             return when(this) {
                 System -> stringResource(R.string.lang_system)
+                Arabic -> "العربية"
                 Chinese -> "中文"
                 Croatian -> "Hrvatski"
                 Dutch -> "Nederlands"
@@ -95,6 +97,7 @@ object Constants {
     fun Language.value(): String {
         return when(this) {
             Language.System -> Locale.getDefault().language
+            Language.Arabic -> "ar"
             Language.English -> "en"
             Language.German -> "de"
             Language.Spanish -> "es"

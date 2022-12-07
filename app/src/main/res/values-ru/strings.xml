@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Olauncher Clutter Free</string>
+    <string name="app_name">Olauncher</string>
     <string name="app">Приложение</string>
     <string name="set_as_default_launcher">Назначить главным лаунчером</string>
     <string name="app_text_color">Цвет текста</string>

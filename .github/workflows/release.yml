@@ -22,7 +22,7 @@ jobs:
     - name: Build Release APK
       run: ./gradlew assembleRelease
     - name: Release to GitHub
-      run: |
-        gh release create v0.0.0 -d --generate-notes --target main -t test-release-do-not-use ./app/build/outputs/apk/release/app-release-unsigned.apk
-      env:
-        GH_TOKEN: ${{ secrets.REPO_ACCESS }}
+      uses: actions/upload-artifact@v2.2.0
+      with:
+        name: Olauncher
+        path: ./app/build/outputs/apk/release/app-release-unsigned.apk

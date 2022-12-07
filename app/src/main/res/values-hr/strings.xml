@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Olauncher Clutter Free</string>
+    <string name="app_name">Olauncher</string>
     <string name="app">Aplikacija</string>
     <string name="set_as_default_launcher">Postavi kao zadani pokretač</string>
     <string name="app_text_color">Boja teksta</string>
@@ -54,14 +54,14 @@
     <string name="close">Zatvori</string>
     <string name="app_language">Jezik sučelja</string>
     <string name="lang_system">Sustav</string>
-    
+
     <string name="app_text_size">Veličina teksta</string>
-    
+
     <string name="hidden_apps">Skrivene aplikacije</string>
-    
+
     <string name="show">Prikaži</string>
     <string name="reset">Ponovno postavi</string>
     <string name="cancel">Odustani</string>
-    
-    
+
+
 </resources>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Olauncher Clutter Free</string>
+    <string name="app_name">Olauncher</string>
     <string name="app">برنامه</string>
     <string name="set_as_default_launcher">تنظیم به عنوان لانچر اصلی</string>
     <string name="app_text_color">رنگ متن</string>
@@ -74,6 +74,6 @@
     <string name="show">نمایش</string>
     <string name="reset">بازگردانی</string>
     <string name="cancel">لغو</string>
-    
+
 
 </resources>

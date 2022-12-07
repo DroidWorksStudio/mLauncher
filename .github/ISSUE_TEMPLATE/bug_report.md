@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Create a report to help Olauncher CF improve
+about: Create a report to help Olauncher improve
 title: ''
 labels: bug
 assignees: ''
@@ -21,7 +21,7 @@ assignees: ''
 
 #### Environment information
 
-- Olauncher CF version:
+- Olauncher version:
 - Device name:
 - Android version:
 - Other information:

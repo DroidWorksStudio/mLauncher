@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Olauncher Clutter Free</string>
+    <string name="app_name">Olauncher</string>
     <string name="app">Εφαρμογή</string>
     <string name="set_as_default_launcher">Ορισμός ως προεπιλεγμένου εκκινητή</string>
     <string name="app_text_color">Χρώμα γραμματοσειράς</string>
@@ -62,5 +62,5 @@
     <string name="reset">Reset</string>
     <string name="cancel">Cancel</string>
 
-    
+
 </resources>
