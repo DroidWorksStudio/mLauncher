@@ -108,7 +108,7 @@ class SettingsFragment : Fragment() {
             (fs.value.value * 1.5).sp
         } else fs.value */
 
-        val changeLauncherText = if (isOlauncherDefault(requireContext())) {
+        val changeLauncherText = if (ismlauncherDefault(requireContext())) {
             R.string.change_default_launcher
         } else {
            R.string.set_as_default_launcher
@@ -362,7 +362,7 @@ class SettingsFragment : Fragment() {
             ViewModelProvider(this).get(MainViewModel::class.java)
         } ?: throw Exception("Invalid Activity")
 
-        viewModel.isOlauncherDefault()
+        viewModel.ismlauncherDefault()
 
         deviceManager = context?.getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
         componentName = ComponentName(requireContext(), DeviceAdmin::class.java)
@@ -452,7 +452,7 @@ class SettingsFragment : Fragment() {
                 }
                 isAccessServiceEnabled(requireContext()) -> prefs.lockModeOn = true
                 else -> {
-                    showToastLong(requireContext(), "Please turn on accessibility service for Olauncher")
+                    showToastLong(requireContext(), "Please turn on accessibility service for mlauncher")
                     startActivity(Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS))
                 }
             }

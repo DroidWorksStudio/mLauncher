@@ -171,7 +171,7 @@ fun getUserHandleFromString(context: Context, userHandleString: String): UserHan
     return android.os.Process.myUserHandle()
 }
 
-fun isOlauncherDefault(context: Context): Boolean {
+fun ismlauncherDefault(context: Context): Boolean {
     val launcherPackageName = getDefaultLauncherPackage(context)
     return BuildConfig.APPLICATION_ID == launcherPackageName
 }

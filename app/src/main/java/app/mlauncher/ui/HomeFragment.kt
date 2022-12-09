@@ -77,7 +77,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         // only show "set as default"-button if tips are GONE
         if (binding.firstRunTips.visibility == View.GONE) {
             binding.setDefaultLauncher.visibility =
-                if (isOlauncherDefault(requireContext())) View.GONE else View.VISIBLE
+                if (ismlauncherDefault(requireContext())) View.GONE else View.VISIBLE
         }
     }
 
@@ -230,7 +230,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 showToastLong(requireContext(), "Please turn on double tap to lock")
                 findNavController().navigate(R.id.action_mainFragment_to_settingsFragment)
             } catch (e: Exception) {
-                showToastLong(requireContext(), "Olauncher failed to lock device.\nPlease check your app settings.")
+                showToastLong(requireContext(), "mlauncher failed to lock device.\nPlease check your app settings.")
                 prefs.lockModeOn = false
             }
         }
@@ -285,7 +285,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                                 // prefs.lockModeOn = false
                                 showToastLong(
                                     requireContext(),
-                                    "Please turn on accessibility service for Olauncher"
+                                    "Please turn on accessibility service for mlauncher"
                                 )
                                 startActivity(Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS))
                             }

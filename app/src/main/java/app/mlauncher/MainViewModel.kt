@@ -27,7 +27,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     val updateClickApps = MutableLiveData<Any>()
     val appList = MutableLiveData<List<AppModel>?>()
     val hiddenApps = MutableLiveData<List<AppModel>?>()
-    val isOlauncherDefault = MutableLiveData<Boolean>()
+    val ismlauncherDefault = MutableLiveData<Boolean>()
     val launcherResetFailed = MutableLiveData<Boolean>()
 
     val showTime = MutableLiveData(prefs.showTime)
@@ -133,8 +133,8 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
-    fun isOlauncherDefault() {
-        isOlauncherDefault.value = isOlauncherDefault(appContext)
+    fun ismlauncherDefault() {
+        ismlauncherDefault.value = ismlauncherDefault(appContext)
     }
 
     fun resetDefaultLauncherApp(context: Context) {

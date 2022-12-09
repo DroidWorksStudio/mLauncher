@@ -10,7 +10,7 @@ import app.mlauncher.helper.getUserHandleFromString
 import java.lang.RuntimeException
 
 private const val APP_LANGUAGE = "app_language"
-private const val PREFS_FILENAME = "app.olauncher"
+private const val PREFS_FILENAME = "app.mLauncher"
 
 private const val FIRST_OPEN = "FIRST_OPEN"
 private const val FIRST_SETTINGS_OPEN = "FIRST_SETTINGS_OPEN"
