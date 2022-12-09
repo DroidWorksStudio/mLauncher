@@ -22,11 +22,7 @@ jobs:
     - name: Build Release APK
       run: ./gradlew assembleRelease
     - name: Release to GitHub
-      uses: svenstaro/upload-release-action@v2
-      with:
-        repo_token: ${{ secrets.GITHUB_TOKEN }}
-        file: ./app/build/outputs/apk/release/app-release-unsigned.apk
-        asset_name: Olauncher.apk
-        tag: ${{ github.ref }}
-        overwrite: true
-        body: "Olauncher.apk Release"
+      uses: HeCodes2Much/action-release-releaseapk@main
+      env:
+       GITHUB_TOKEN: ${{ secrets.TOKEN }}
+       APP_FOLDER: app
