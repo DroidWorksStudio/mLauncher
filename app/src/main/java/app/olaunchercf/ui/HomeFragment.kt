@@ -194,6 +194,13 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         else openDialerApp(requireContext())
     }
 
+    private fun openSwipeDownApp() {
+        if (!prefs.swipeDownEnabled) return
+        if (prefs.appSwipeDown.appPackage.isNotEmpty())
+            launchApp(prefs.appSwipeDown)
+        else openDialerApp(requireContext())
+    }
+
     private fun openClickClockApp() {
         if (!prefs.clickClockEnabled) return
         if (prefs.appClickClock.appPackage.isNotEmpty())
@@ -254,7 +261,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
             override fun onSwipeDown() {
                 super.onSwipeDown()
-                expandNotificationDrawer(context)
+                openSwipeDownApp()
+                // expandNotificationDrawer(context)
             }
 
             override fun onLongClick() {
@@ -309,7 +317,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
             override fun onSwipeDown() {
                 super.onSwipeDown()
-                expandNotificationDrawer(context)
+                openSwipeDownApp()
+                // expandNotificationDrawer(context)
             }
 
             override fun onLongClick(view: View) {

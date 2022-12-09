@@ -28,6 +28,7 @@ private const val HOME_LOCKED = "HOME_LOCKED"
 private const val SHOW_TIME = "SHOW_TIME"
 private const val SWIPE_LEFT_ENABLED = "SWIPE_LEFT_ENABLED"
 private const val SWIPE_RIGHT_ENABLED = "SWIPE_RIGHT_ENABLED"
+private const val SWIPE_DOWN_ENABLED = "SWIPE_DOWN_ENABLED"
 private const val CLICK_CLOCK_ENABLED = "CLICK_CLOCK_ENABLED"
 private const val CLICK_DATE_ENABLED = "CLICK_DATE_ENABLED"
 private const val SCREEN_TIMEOUT = "SCREEN_TIMEOUT"
@@ -44,6 +45,7 @@ private const val APP_ACTIVITY = "APP_ACTIVITY"
 
 private const val SWIPE_RIGHT = "SWIPE_RIGHT"
 private const val SWIPE_LEFT = "SWIPE_LEFT"
+private const val SWIPE_DOWN = "SWIPE_DOWN"
 private const val CLICK_CLOCK = "CLICK_CLOCK"
 private const val CLICK_DATE = "CLICK_DATE"
 
@@ -146,6 +148,10 @@ class Prefs(val context: Context) {
         get() = prefs.getBoolean(SWIPE_RIGHT_ENABLED, true)
         set(value) = prefs.edit().putBoolean(SWIPE_RIGHT_ENABLED, value).apply()
 
+    var swipeDownEnabled: Boolean
+        get() = prefs.getBoolean(SWIPE_DOWN_ENABLED, true)
+        set(value) = prefs.edit().putBoolean(SWIPE_DOWN_ENABLED, value).apply()
+
     var clickClockEnabled: Boolean
         get() = prefs.getBoolean(CLICK_CLOCK_ENABLED, true)
         set(value) = prefs.edit().putBoolean(CLICK_CLOCK_ENABLED, value).apply()
@@ -206,6 +212,10 @@ class Prefs(val context: Context) {
     var appSwipeLeft: AppModel
         get() = loadApp(SWIPE_LEFT)
         set(appModel) = storeApp(SWIPE_LEFT, appModel)
+
+    var appSwipeDown: AppModel
+        get() = loadApp(SWIPE_DOWN)
+        set(appModel) = storeApp(SWIPE_DOWN, appModel)
 
     var appClickClock: AppModel
         get() = loadApp(CLICK_CLOCK)

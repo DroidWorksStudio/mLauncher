@@ -305,6 +305,17 @@ class SettingsFragment : Fragment() {
                     },
                     { _, _ ->
                         SettingsAppSelector(
+                            title = stringResource(R.string.swipe_down_app),
+                            currentSelection = remember {
+                                mutableStateOf(prefs.appSwipeDown.appLabel.ifEmpty { "Phone" })
+                            },
+
+                            onClick = { updateGesture(AppDrawerFlag.SetSwipeDown) },
+                            active = prefs.swipeDownEnabled,
+                        )
+                    },
+                    { _, _ ->
+                        SettingsAppSelector(
                             title = stringResource(R.string.clock_click_app),
                             currentSelection =
                                 remember { mutableStateOf(prefs.appClickClock.appLabel.ifEmpty { "Clock" }) },

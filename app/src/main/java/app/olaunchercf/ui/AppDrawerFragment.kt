@@ -55,15 +55,16 @@ class AppDrawerFragment : Fragment() {
                 binding.drawerButton.setOnClickListener { renameListener(flag, n) }
             }
             AppDrawerFlag.SetSwipeRight,
-                AppDrawerFlag.SetSwipeLeft,
-                AppDrawerFlag.SetClickClock,
-                AppDrawerFlag.SetClickDate -> {
-                    binding.drawerButton.text = getString(R.string.disable)
-                    binding.drawerButton.isVisible = true // && it.trim().isNotEmpty()
-                    binding.drawerButton.setOnClickListener {
-                        disableGesture(flag)
-                        findNavController().popBackStack()
-                    }
+            AppDrawerFlag.SetSwipeLeft,
+            AppDrawerFlag.SetSwipeDown,
+            AppDrawerFlag.SetClickClock,
+            AppDrawerFlag.SetClickDate -> {
+                binding.drawerButton.text = getString(R.string.disable)
+                binding.drawerButton.isVisible = true // && it.trim().isNotEmpty()
+                binding.drawerButton.setOnClickListener {
+                    disableGesture(flag)
+                    findNavController().popBackStack()
+                }
             }
             else -> {}
         }
@@ -217,6 +218,9 @@ class AppDrawerFragment : Fragment() {
             }
             AppDrawerFlag.SetSwipeRight -> {
                 prefs.swipeRightEnabled = false
+            }
+            AppDrawerFlag.SetSwipeDown -> {
+                prefs.swipeDownEnabled = false
             }
             AppDrawerFlag.SetClickClock -> {
                 prefs.clickClockEnabled = false

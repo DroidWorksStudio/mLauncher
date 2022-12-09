@@ -43,6 +43,7 @@ object Constants {
         SetHomeApp,
         SetSwipeLeft,
         SetSwipeRight,
+        SetSwipeDown,
         SetClickClock,
         SetClickDate,
     }
