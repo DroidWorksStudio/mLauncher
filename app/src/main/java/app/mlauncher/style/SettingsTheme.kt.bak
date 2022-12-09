@@ -12,8 +12,8 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
-import app.olaunchercf.R
-import app.olaunchercf.style.textColorLight
+import app.mlauncher.R
+import app.mlauncher.style.textColorLight
 
 @Immutable
 data class SettingsTypography(

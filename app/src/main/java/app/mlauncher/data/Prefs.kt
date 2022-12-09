@@ -1,4 +1,4 @@
-package app.olaunchercf.data
+package app.mlauncher.data
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -6,7 +6,7 @@ import android.os.UserHandle
 import android.os.UserManager
 import android.util.Log
 import androidx.core.content.getSystemService
-import app.olaunchercf.helper.getUserHandleFromString
+import app.mlauncher.helper.getUserHandleFromString
 import java.lang.RuntimeException
 
 private const val APP_LANGUAGE = "app_language"

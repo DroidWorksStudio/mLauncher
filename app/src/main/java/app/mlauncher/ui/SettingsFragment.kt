@@ -1,4 +1,4 @@
-package app.olaunchercf.ui
+package app.mlauncher.ui
 
 import SettingsTheme
 import android.app.admin.DevicePolicyManager
@@ -32,24 +32,24 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import app.olaunchercf.BuildConfig
-import app.olaunchercf.MainActivity
-import app.olaunchercf.MainViewModel
-import app.olaunchercf.R
-import app.olaunchercf.data.Constants
-import app.olaunchercf.data.Constants.AppDrawerFlag
-import app.olaunchercf.data.Constants.Theme.*
-import app.olaunchercf.data.Prefs
-import app.olaunchercf.databinding.FragmentSettingsBinding
-import app.olaunchercf.helper.*
-import app.olaunchercf.listener.DeviceAdmin
-import app.olaunchercf.ui.compose.SettingsComposable.SettingsAppSelector
-import app.olaunchercf.ui.compose.SettingsComposable.SettingsArea
-import app.olaunchercf.ui.compose.SettingsComposable.SettingsItem
-import app.olaunchercf.ui.compose.SettingsComposable.SettingsNumberItem
-import app.olaunchercf.ui.compose.SettingsComposable.SettingsToggle
-import app.olaunchercf.ui.compose.SettingsComposable.SettingsTopView
-import app.olaunchercf.ui.compose.SettingsComposable.SimpleTextButton
+import app.mlauncher.BuildConfig
+import app.mlauncher.MainActivity
+import app.mlauncher.MainViewModel
+import app.mlauncher.R
+import app.mlauncher.data.Constants
+import app.mlauncher.data.Constants.AppDrawerFlag
+import app.mlauncher.data.Constants.Theme.*
+import app.mlauncher.data.Prefs
+import app.mlauncher.databinding.FragmentSettingsBinding
+import app.mlauncher.helper.*
+import app.mlauncher.listener.DeviceAdmin
+import app.mlauncher.ui.compose.SettingsComposable.SettingsAppSelector
+import app.mlauncher.ui.compose.SettingsComposable.SettingsArea
+import app.mlauncher.ui.compose.SettingsComposable.SettingsItem
+import app.mlauncher.ui.compose.SettingsComposable.SettingsNumberItem
+import app.mlauncher.ui.compose.SettingsComposable.SettingsToggle
+import app.mlauncher.ui.compose.SettingsComposable.SettingsTopView
+import app.mlauncher.ui.compose.SettingsComposable.SimpleTextButton
 
 class SettingsFragment : Fragment() {
 

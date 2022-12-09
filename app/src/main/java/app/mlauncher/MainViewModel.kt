@@ -1,4 +1,4 @@
-package app.olaunchercf
+package app.mlauncher
 
 import android.app.Application
 import android.content.ComponentName
@@ -8,11 +8,11 @@ import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import app.olaunchercf.data.AppModel
-import app.olaunchercf.data.Constants
-import app.olaunchercf.data.Constants.AppDrawerFlag
-import app.olaunchercf.data.Prefs
-import app.olaunchercf.helper.*
+import app.mlauncher.data.AppModel
+import app.mlauncher.data.Constants
+import app.mlauncher.data.Constants.AppDrawerFlag
+import app.mlauncher.data.Prefs
+import app.mlauncher.helper.*
 import kotlinx.coroutines.launch
 
 class MainViewModel(application: Application) : AndroidViewModel(application) {

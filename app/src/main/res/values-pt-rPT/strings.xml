@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Olauncher Livre de Desordem</string>
+    <string name="app_name">mLauncher Livre de Desordem</string>
     <string name="app">App</string>
     <string name="set_as_default_launcher">Definir como launcher predefinido</string>
     <string name="app_text_color">Cor do texto</string>
@@ -58,10 +58,10 @@
     <string name="app_text_size">Tamanho de texto</string>
 
     <string name="hidden_apps">Aplicações escondidas</string>
-    
+
     <string name="show">Show</string>
     <string name="reset">Reset</string>
     <string name="cancel">Cancel</string>
 
-    
+
 </resources>

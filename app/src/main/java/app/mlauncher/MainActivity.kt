@@ -1,4 +1,4 @@
-package app.olaunchercf
+package app.mlauncher
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -16,12 +16,12 @@ import androidx.core.view.isVisible
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import app.olaunchercf.data.Constants
-import app.olaunchercf.data.Constants.value
-import app.olaunchercf.data.Prefs
-import app.olaunchercf.databinding.ActivityMainBinding
-import app.olaunchercf.helper.isTablet
-import app.olaunchercf.helper.showToastLong
+import app.mlauncher.data.Constants
+import app.mlauncher.data.Constants.value
+import app.mlauncher.data.Prefs
+import app.mlauncher.databinding.ActivityMainBinding
+import app.mlauncher.helper.isTablet
+import app.mlauncher.helper.showToastLong
 import java.util.*
 
 class MainActivity : AppCompatActivity() {

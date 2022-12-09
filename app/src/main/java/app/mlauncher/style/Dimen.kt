@@ -1,4 +1,4 @@
-package app.olaunchercf.style
+package app.mlauncher.style
 
 import androidx.compose.ui.unit.dp
 

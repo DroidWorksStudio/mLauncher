@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Olauncher</string>
+    <string name="app_name">mLauncher</string>
     <string name="app">应用</string>
     <string name="set_as_default_launcher">设为默认启动器</string>
     <string name="app_text_color">文本颜色</string>

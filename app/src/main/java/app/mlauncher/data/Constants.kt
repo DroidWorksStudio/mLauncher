@@ -1,4 +1,4 @@
-package app.olaunchercf.data
+package app.mlauncher.data
 
 import android.annotation.SuppressLint
 import android.util.Log
@@ -6,8 +6,8 @@ import android.view.Gravity
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.ComposeCompilerApi
 import androidx.compose.ui.res.stringResource
-import app.olaunchercf.R
-import app.olaunchercf.data.Constants.toString
+import app.mlauncher.R
+import app.mlauncher.data.Constants.toString
 import java.util.*
 
 interface EnumOption {

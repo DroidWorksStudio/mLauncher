@@ -1,4 +1,4 @@
-package app.olaunchercf.ui
+package app.mlauncher.ui
 
 import android.annotation.SuppressLint
 import android.app.admin.DevicePolicyManager
@@ -16,15 +16,15 @@ import androidx.core.view.size
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import app.olaunchercf.MainViewModel
-import app.olaunchercf.R
-import app.olaunchercf.data.AppModel
-import app.olaunchercf.data.Constants.AppDrawerFlag
-import app.olaunchercf.data.Prefs
-import app.olaunchercf.databinding.FragmentHomeBinding
-import app.olaunchercf.helper.*
-import app.olaunchercf.listener.OnSwipeTouchListener
-import app.olaunchercf.listener.ViewSwipeTouchListener
+import app.mlauncher.MainViewModel
+import app.mlauncher.R
+import app.mlauncher.data.AppModel
+import app.mlauncher.data.Constants.AppDrawerFlag
+import app.mlauncher.data.Prefs
+import app.mlauncher.databinding.FragmentHomeBinding
+import app.mlauncher.helper.*
+import app.mlauncher.listener.OnSwipeTouchListener
+import app.mlauncher.listener.ViewSwipeTouchListener
 
 class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener {
 

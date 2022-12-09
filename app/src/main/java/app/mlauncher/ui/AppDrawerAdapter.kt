@@ -1,4 +1,4 @@
-package app.olaunchercf.ui
+package app.mlauncher.ui
 
 import android.content.res.Resources
 import android.text.Editable
@@ -14,13 +14,13 @@ import androidx.appcompat.content.res.AppCompatResources
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
-import app.olaunchercf.R
-import app.olaunchercf.data.AppModel
-import app.olaunchercf.data.Constants.AppDrawerFlag
-import app.olaunchercf.data.Prefs
-import app.olaunchercf.databinding.AdapterAppDrawerBinding
-import app.olaunchercf.helper.dp2px
-import app.olaunchercf.helper.uninstallApp
+import app.mlauncher.R
+import app.mlauncher.data.AppModel
+import app.mlauncher.data.Constants.AppDrawerFlag
+import app.mlauncher.data.Prefs
+import app.mlauncher.databinding.AdapterAppDrawerBinding
+import app.mlauncher.helper.dp2px
+import app.mlauncher.helper.uninstallApp
 import java.text.Normalizer
 
 

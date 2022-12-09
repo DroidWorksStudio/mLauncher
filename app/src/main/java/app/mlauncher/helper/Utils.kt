@@ -1,4 +1,4 @@
-package app.olaunchercf.helper
+package app.mlauncher.helper
 
 import android.app.Activity
 import android.content.*
@@ -27,10 +27,10 @@ import android.widget.Toast
 import androidx.annotation.AttrRes
 import androidx.annotation.ColorInt
 import androidx.core.content.ContextCompat
-import app.olaunchercf.BuildConfig
-import app.olaunchercf.R
-import app.olaunchercf.data.AppModel
-import app.olaunchercf.data.Prefs
+import app.mlauncher.BuildConfig
+import app.mlauncher.R
+import app.mlauncher.data.AppModel
+import app.mlauncher.data.Prefs
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.text.Collator

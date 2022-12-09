@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Olauncher</string>
+    <string name="app_name">mLauncher</string>
     <string name="app">تطبيق</string>
     <string name="set_as_default_launcher">تعيين كمشغل تطبيقات افتراضي</string>
     <string name="app_text_color">لون نص التطبيق</string>

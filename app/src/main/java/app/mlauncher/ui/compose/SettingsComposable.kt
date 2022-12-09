@@ -1,4 +1,4 @@
-package app.olaunchercf.ui.compose
+package app.mlauncher.ui.compose
 
 import SettingsTheme
 import android.content.Context
@@ -37,9 +37,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
-import app.olaunchercf.R
-import app.olaunchercf.data.EnumOption
-import app.olaunchercf.style.CORNER_RADIUS
+import app.mlauncher.R
+import app.mlauncher.data.EnumOption
+import app.mlauncher.style.CORNER_RADIUS
 
 object SettingsComposable {
 

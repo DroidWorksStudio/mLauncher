@@ -1,4 +1,4 @@
-package app.olaunchercf.ui
+package app.mlauncher.ui
 
 import android.content.Context
 import android.os.Bundle
@@ -17,14 +17,14 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import app.olaunchercf.MainViewModel
-import app.olaunchercf.R
-import app.olaunchercf.data.AppModel
-import app.olaunchercf.data.Constants
-import app.olaunchercf.data.Constants.AppDrawerFlag
-import app.olaunchercf.data.Prefs
-import app.olaunchercf.databinding.FragmentAppDrawerBinding
-import app.olaunchercf.helper.openAppInfo
+import app.mlauncher.MainViewModel
+import app.mlauncher.R
+import app.mlauncher.data.AppModel
+import app.mlauncher.data.Constants
+import app.mlauncher.data.Constants.AppDrawerFlag
+import app.mlauncher.data.Prefs
+import app.mlauncher.databinding.FragmentAppDrawerBinding
+import app.mlauncher.helper.openAppInfo
 
 class AppDrawerFragment : Fragment() {
 

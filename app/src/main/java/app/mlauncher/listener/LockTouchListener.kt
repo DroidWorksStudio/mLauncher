@@ -1,4 +1,4 @@
-package app.olaunchercf.listener
+package app.mlauncher.listener
 
 import android.content.Context
 import android.view.GestureDetector
@@ -6,7 +6,7 @@ import android.view.GestureDetector.SimpleOnGestureListener
 import android.view.MotionEvent
 import android.view.View
 import android.view.View.OnTouchListener
-import app.olaunchercf.data.Constants
+import app.mlauncher.data.Constants
 import java.util.*
 import kotlin.concurrent.schedule
 
