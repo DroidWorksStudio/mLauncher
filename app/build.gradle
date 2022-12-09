@@ -19,7 +19,7 @@ android {
         minSdkVersion 23
         targetSdkVersion 33
         versionCode 25
-        versionName "v1.3.4"
+        versionName "v1.0.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -70,7 +70,7 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
 
     // Navigation
-    implementation "androidx.navigation:navigation-fragment-ktx:2.5.2"
+    implementation "androidx.navigation:navigation-fragment-ktx:2.5.3"
 
     // Work Manager
     implementation "androidx.work:work-runtime-ktx:2.7.1"
@@ -78,12 +78,13 @@ dependencies {
 
     // JETPACK
     // Integration with activities
+    //noinspection GradleDependency
     implementation 'androidx.activity:activity-compose:1.6.0'
     // Compose Material Design
-    implementation 'androidx.compose.material:material:1.2.1'
+    implementation 'androidx.compose.material:material:1.3.1'
     // Animations
-    implementation 'androidx.compose.animation:animation:1.2.1'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.5.2'
+    implementation 'androidx.compose.animation:animation:1.3.2'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
 
     // Tooling support (Previews, etc.)
     // implementation 'androidx.compose.ui:ui-tooling:1.2.1'
