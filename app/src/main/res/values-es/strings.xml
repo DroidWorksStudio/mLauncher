@@ -24,6 +24,7 @@
     <string name="drawer_alignment">Alineación de aplicaciones</string>
     <string name="swipe_left_app">Deslizar a izquierda</string>
     <string name="swipe_right_app">Deslizar a derecha</string>
+    <string name="swipe_down_app">Deslizar a abajo</string>
     <string name="clock_click_app">Pulsar reloj</string>
     <string name="date_click_app">Pulsar fecha</string>
     <string name="commit">Guardar</string>

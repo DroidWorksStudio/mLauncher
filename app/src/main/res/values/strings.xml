@@ -24,6 +24,7 @@
     <string name="drawer_alignment">Apps in app drawer</string>
     <string name="swipe_left_app">Swipe left app</string>
     <string name="swipe_right_app">Swipe right app</string>
+    <string name="swipe_down_app">Swipe down app</string>
     <string name="clock_click_app">Clock click app</string>
     <string name="date_click_app">Date click app</string>
     <string name="_0" translatable="false">0</string>

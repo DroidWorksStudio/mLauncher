@@ -23,6 +23,7 @@
     <string name="drawer_alignment">App-Übersicht ausrichten</string>
     <string name="swipe_left_app">App öffnen (links wischen)</string>
     <string name="swipe_right_app">App öffen (rechts wischen)</string>
+    <string name="swipe_down_app">App öfnen (unten wischen)</string>
     <string name="clock_click_app">App öffnen (Tippen auf Uhr)</string>
     <string name="date_click_app">App öffnen (Tippen auf Datum)</string>
     <string name="commit">Bestätigen</string>
