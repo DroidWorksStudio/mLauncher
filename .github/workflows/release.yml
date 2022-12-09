@@ -22,7 +22,11 @@ jobs:
     - name: Build Release APK
       run: ./gradlew assembleRelease
     - name: Release to GitHub
-      uses: actions/upload-artifact@v2.2.0
+      uses: svenstaro/upload-release-action@v2
       with:
-        name: Olauncher
-        path: ./app/build/outputs/apk/release/app-release-unsigned.apk
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: ./app/build/outputs/apk/release/app-release-unsigned.apk
+        asset_name: Olauncher.apk
+        tag: ${{ github.ref }}
+        overwrite: true
+        body: "Olauncher.apk Release"
