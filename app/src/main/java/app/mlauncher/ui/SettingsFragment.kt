@@ -43,6 +43,7 @@ import app.mlauncher.data.Prefs
 import app.mlauncher.databinding.FragmentSettingsBinding
 import app.mlauncher.helper.*
 import app.mlauncher.listener.DeviceAdmin
+import app.mlauncher.ui.compose.SettingsComposable
 import app.mlauncher.ui.compose.SettingsComposable.SettingsAppSelector
 import app.mlauncher.ui.compose.SettingsComposable.SettingsArea
 import app.mlauncher.ui.compose.SettingsComposable.SettingsItem
@@ -307,7 +308,7 @@ class SettingsFragment : Fragment() {
                         SettingsAppSelector(
                             title = stringResource(R.string.swipe_down_app),
                             currentSelection = remember {
-                                mutableStateOf(prefs.appSwipeDown.appLabel.ifEmpty { "mLanucher" })
+                                mutableStateOf(prefs.appSwipeDown.appLabel.ifEmpty { "Contacts" })
                             },
 
                             onClick = { updateGesture(AppDrawerFlag.SetSwipeDown) },

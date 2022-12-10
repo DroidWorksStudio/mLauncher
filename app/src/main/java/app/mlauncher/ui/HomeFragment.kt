@@ -261,8 +261,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
             override fun onSwipeDown() {
                 super.onSwipeDown()
+                if (!prefs.swipeDownEnabled) expandNotificationDrawer(context)
                 openSwipeDownApp()
-                // expandNotificationDrawer(context)
             }
 
             override fun onLongClick() {
@@ -317,8 +317,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
             override fun onSwipeDown() {
                 super.onSwipeDown()
+                if (!prefs.swipeDownEnabled) expandNotificationDrawer(context)
                 openSwipeDownApp()
-                // expandNotificationDrawer(context)
             }
 
             override fun onLongClick(view: View) {
