@@ -1,6 +1,6 @@
 ---
 name: Crash report
-about: Create a report with a generated crash log attached (if possible) to help Olauncher improve
+about: Create a report with a generated crash log attached (if possible) to help mLauncher improve
 title: ''
 labels: bug
 assignees: ''
@@ -8,7 +8,7 @@ assignees: ''
 ---
 
 <!--
-Thank you for your help in making Olauncher more stable and reliable!
+Thank you for your help in making mLauncher more stable and reliable!
 
 Guide to a good crash-report:
 • Please search existing bug/crash reports to avoid creating duplicates.
