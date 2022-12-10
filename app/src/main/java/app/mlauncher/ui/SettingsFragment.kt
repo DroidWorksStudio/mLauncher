@@ -395,10 +395,8 @@ class SettingsFragment : Fragment() {
     private fun toggleSwipeLeft() {
         prefs.swipeLeftEnabled = !prefs.swipeLeftEnabled
         if (prefs.swipeLeftEnabled) {
-            //binding.swipeLeftApp.setTextColor(requireContext().getColorFromAttr(R.attr.primaryColor))
             showToastShort(requireContext(), "Swipe left app enabled")
         } else {
-            //binding.swipeLeftApp.setTextColor(requireContext().getColorFromAttr(R.attr.primaryColorTrans50))
             showToastShort(requireContext(), "Swipe left app disabled")
         }
     }
@@ -406,10 +404,8 @@ class SettingsFragment : Fragment() {
     private fun toggleSwipeRight() {
         prefs.swipeRightEnabled = !prefs.swipeRightEnabled
         if (prefs.swipeRightEnabled) {
-            //binding.swipeRightApp.setTextColor(requireContext().getColorFromAttr(R.attr.primaryColor))
             showToastShort(requireContext(), "Swipe right app enabled")
         } else {
-            //binding.swipeRightApp.setTextColor(requireContext().getColorFromAttr(R.attr.primaryColorTrans50))
             showToastShort(requireContext(), "Swipe right app disabled")
         }
     }
@@ -417,10 +413,8 @@ class SettingsFragment : Fragment() {
     private fun toggleSwipeDown() {
         prefs.swipeDownEnabled = !prefs.swipeDownEnabled
         if (prefs.swipeDownEnabled) {
-            //binding.swipeDownApp.setTextColor(requireContext().getColorFromAttr(R.attr.primaryColor))
-            showToastShort(requireContext(), "Swipe down app enabled")
+             showToastShort(requireContext(), "Swipe down app enabled")
         } else {
-            //binding.swipeDownApp.setTextColor(requireContext().getColorFromAttr(R.attr.primaryColorTrans50))
             showToastShort(requireContext(), "Swipe down app disabled")
         }
     }
@@ -484,7 +478,6 @@ class SettingsFragment : Fragment() {
                 activity?.startActivityForResult(intent, Constants.REQUEST_CODE_ENABLE_ADMIN)
             }
         }
-        //populateLockSettings()
     }
 
     private fun updateHomeAppsNum(homeAppsNum: Int) {
@@ -497,33 +490,18 @@ class SettingsFragment : Fragment() {
     }
 
     private fun setTheme(appTheme: Constants.Theme) {
-        // if (AppCompatDelegate.getDefaultNightMode() == appTheme) return // TODO find out what this did
         prefs.appTheme = appTheme
         requireActivity().recreate()
     }
 
     private fun setLang(lang_int: Constants.Language) {
-
         prefs.language = lang_int
         requireActivity().recreate()
     }
     private fun setTextSize(size: Int) {
         prefs.textSize = size
-
-        // restart activity
-        /* activity?.let {
-            val intent = Intent(context, MainActivity::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-            it.startActivity(intent)
-            it.finish()
-        } */
-    }
-
-    /*private fun setAppTheme(theme: Constants.Theme) {
-        // if (AppCompatDelegate.getDefaultNightMode() == theme) return // TODO: find out what this did
-
         requireActivity().recreate()
-    }*/
+    }
 
     private fun updateGesture(flag: AppDrawerFlag) {
         if ((flag == AppDrawerFlag.SetSwipeLeft) and !prefs.swipeLeftEnabled) {
