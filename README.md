@@ -1,4 +1,4 @@
-<h1 align="center">Based on OlauncherAF. Minimal and clutter free</h1>
+<h1 align="center">Based on <a href="https://github.com/tanujnotes/Olauncher">OlauncherAF</a>. Minimal and clutter free</h1>
 </p><h3 align="center">mLauncher is a minimal app launcher for Android.
 
 We try to balance customizability and clutter :)</h3>
@@ -33,7 +33,7 @@ We try to balance customizability and clutter :)</h3>
   - Spanish
   - Swedish
   - Turkish
-- Removed internet permission
+- Internet permission (for weather widget)
 
 ## Installation
 
