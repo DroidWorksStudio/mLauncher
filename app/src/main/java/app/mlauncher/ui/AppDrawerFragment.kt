@@ -59,17 +59,9 @@ class AppDrawerFragment : Fragment() {
             AppDrawerFlag.SetSwipeRight,
             AppDrawerFlag.SetSwipeLeft,
             AppDrawerFlag.SetClickClock,
+            AppDrawerFlag.SetSwipeDown,
             AppDrawerFlag.SetClickDate -> {
-                binding.drawerButton.text = getString(R.string.disable)
-                binding.drawerButton.isVisible = true
                 binding.drawerButton.setOnClickListener {
-                    disableGesture(flag)
-                    findNavController().popBackStack()
-                }
-            }
-            AppDrawerFlag.SetSwipeDown -> {
-                binding.drawerButton.setOnClickListener {
-                    disableGesture(flag)
                     findNavController().popBackStack()
                 }
             }
@@ -216,25 +208,6 @@ class AppDrawerFragment : Fragment() {
             val prefs = Prefs(requireContext())
             prefs.setAppAlias(appPackage, appAlias)
         }
-
-    private fun disableGesture(flag: AppDrawerFlag) {
-        val prefs = Prefs(requireContext())
-        when (flag) {
-            AppDrawerFlag.SetSwipeLeft -> {
-                prefs.swipeLeftEnabled = false
-            }
-            AppDrawerFlag.SetSwipeRight -> {
-                prefs.swipeRightEnabled = false
-            }
-            AppDrawerFlag.SetClickClock -> {
-                prefs.clickClockEnabled = false
-            }
-            AppDrawerFlag.SetClickDate -> {
-                prefs.clickDateEnabled = false
-            }
-            else -> {}
-        }
-    }
 
     private fun renameListener(flag: AppDrawerFlag, i: Int) {
         val name = binding.search.query.toString().trim()

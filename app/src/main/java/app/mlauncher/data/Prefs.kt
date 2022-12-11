@@ -22,11 +22,11 @@ private const val STATUS_BAR = "STATUS_BAR"
 private const val SHOW_DATE = "SHOW_DATE"
 private const val HOME_LOCKED = "HOME_LOCKED"
 private const val SHOW_TIME = "SHOW_TIME"
-private const val SWIPE_LEFT_ENABLED = "SWIPE_LEFT_ENABLED"
-private const val SWIPE_RIGHT_ENABLED = "SWIPE_RIGHT_ENABLED"
-private const val CLICK_CLOCK_ENABLED = "CLICK_CLOCK_ENABLED"
-private const val CLICK_DATE_ENABLED = "CLICK_DATE_ENABLED"
 private const val SWIPE_DOWN_ACTION = "SWIPE_DOWN_ACTION"
+private const val SWIPE_RIGHT_ACTION = "SWIPE_RIGHT_ACTION"
+private const val SWIPE_LEFT_ACTION = "SWIPE_LEFT_ACTION"
+private const val CLICK_CLOCK_ACTION = "CLICK_CLOCK_ACTION"
+private const val CLICK_DATE_ACTION = "CLICK_DATE_ACTION"
 private const val HIDDEN_APPS = "HIDDEN_APPS"
 private const val HIDDEN_APPS_UPDATED = "HIDDEN_APPS_UPDATED"
 private const val SHOW_HINT_COUNTER = "SHOW_HINT_COUNTER"
@@ -135,31 +135,37 @@ class Prefs(val context: Context) {
         get() = prefs.getBoolean(HOME_LOCKED, false)
         set(value) = prefs.edit().putBoolean(HOME_LOCKED, value).apply()
 
-    var swipeLeftEnabled: Boolean
-        get() = prefs.getBoolean(SWIPE_LEFT_ENABLED, true)
-        set(value) = prefs.edit().putBoolean(SWIPE_LEFT_ENABLED, value).apply()
+    var swipeLeftAction: Constants.Action
+        get() = loadAction(SWIPE_LEFT_ACTION, Constants.Action.OpenApp)
+        set(value) = storeAction(SWIPE_LEFT_ACTION, value)
 
-    var swipeRightEnabled: Boolean
-        get() = prefs.getBoolean(SWIPE_RIGHT_ENABLED, true)
-        set(value) = prefs.edit().putBoolean(SWIPE_RIGHT_ENABLED, value).apply()
-
-    var clickClockEnabled: Boolean
-        get() = prefs.getBoolean(CLICK_CLOCK_ENABLED, true)
-        set(value) = prefs.edit().putBoolean(CLICK_CLOCK_ENABLED, value).apply()
-
-    var clickDateEnabled: Boolean
-        get() = prefs.getBoolean(CLICK_DATE_ENABLED, true)
-        set(value) = prefs.edit().putBoolean(CLICK_DATE_ENABLED, value).apply()
+    var swipeRightAction: Constants.Action
+        get() = loadAction(SWIPE_RIGHT_ACTION, Constants.Action.OpenApp)
+        set(value) = storeAction(SWIPE_RIGHT_ACTION, value)
 
     var swipeDownAction: Constants.Action
-        get() {
-            val string = prefs.getString(
-                SWIPE_DOWN_ACTION,
-                Constants.Action.ShowNotification.toString()
-            ).toString()
-            return Constants.Action.valueOf(string)
-        }
-        set(value) = prefs.edit().putString(SWIPE_DOWN_ACTION, value.name).apply()
+        get() = loadAction(SWIPE_DOWN_ACTION, Constants.Action.ShowNotification)
+        set(value) = storeAction(SWIPE_DOWN_ACTION, value)
+
+    var clickClockAction: Constants.Action
+        get() = loadAction(CLICK_CLOCK_ACTION, Constants.Action.OpenApp)
+        set(value) = storeAction(CLICK_CLOCK_ACTION, value)
+
+    var clickDateAction: Constants.Action
+        get() = loadAction(CLICK_DATE_ACTION, Constants.Action.OpenApp)
+        set(value) = storeAction(CLICK_DATE_ACTION, value)
+
+    private fun loadAction(prefString: String, default: Constants.Action): Constants.Action {
+        val string = prefs.getString(
+            prefString,
+            default.toString()
+        ).toString()
+        return Constants.Action.valueOf(string)
+    }
+
+    private fun storeAction(prefString: String, value: Constants.Action) {
+        prefs.edit().putString(prefString, value.name).apply()
+    }
 
     var appTheme: Constants.Theme
         get() {

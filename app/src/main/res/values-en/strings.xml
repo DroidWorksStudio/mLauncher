@@ -22,11 +22,11 @@
 	<string name="home_alignment_bottom">Apps home screen bottom</string>
 	<string name="clock_alignment">Clock and date</string>
 	<string name="drawer_alignment">Apps in app drawer</string>
-	<string name="swipe_left_app">Swipe left app</string>
-	<string name="swipe_right_app">Swipe right app</string>
-	<string name="swipe_down_app">Swipe down app</string>
-	<string name="clock_click_app">Clock click app</string>
-	<string name="date_click_app">Date click app</string>
+	<string name="swipe_left_app">Swipe left</string>
+	<string name="swipe_right_app">Swipe right</string>
+	<string name="swipe_down_app">Swipe down</string>
+	<string name="clock_click_app">Clock click</string>
+	<string name="date_click_app">Date click</string>
 	<string name="_0" translatable="false">0</string>
 	<string name="_1" translatable="false">1</string>
 	<string name="_2" translatable="false">2</string>

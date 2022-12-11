@@ -190,7 +190,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     }
 
     private fun openSwipeRightApp() {
-        if (!prefs.swipeRightEnabled) return
         if (prefs.appSwipeRight.appPackage.isNotEmpty())
             launchApp(prefs.appSwipeRight)
         else openDialerApp(requireContext())
@@ -203,22 +202,19 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     }
 
     private fun openClickClockApp() {
-        if (!prefs.clickClockEnabled) return
         if (prefs.appClickClock.appPackage.isNotEmpty())
             launchApp(prefs.appClickClock)
         else openAlarmApp(requireContext())
     }
 
     private fun openClickDateApp() {
-        if (!prefs.clickDateEnabled) return
         if (prefs.appClickDate.appPackage.isNotEmpty())
             launchApp(prefs.appClickDate)
         else openCalendar(requireContext())
     }
 
     private fun openSwipeLeftApp() {
-        if (!prefs.swipeLeftEnabled) return
-        if (prefs.appSwipeLeft.appPackage.isNotEmpty())
+         if (prefs.appSwipeLeft.appPackage.isNotEmpty())
             launchApp(prefs.appSwipeLeft)
         else openCameraApp(requireContext())
     }
