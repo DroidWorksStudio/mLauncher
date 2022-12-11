@@ -19,6 +19,8 @@ import androidx.navigation.fragment.findNavController
 import app.mlauncher.MainViewModel
 import app.mlauncher.R
 import app.mlauncher.data.AppModel
+import app.mlauncher.data.Constants
+import app.mlauncher.data.Constants.Action
 import app.mlauncher.data.Constants.AppDrawerFlag
 import app.mlauncher.data.Prefs
 import app.mlauncher.databinding.FragmentHomeBinding
@@ -195,7 +197,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     }
 
     private fun openSwipeDownApp() {
-        if (!prefs.swipeDownEnabled) return
         if (prefs.appSwipeDown.appPackage.isNotEmpty())
             launchApp(prefs.appSwipeDown)
         else openDialerApp(requireContext())
@@ -223,24 +224,34 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     }
 
     private fun lockPhone() {
-        requireActivity().runOnUiThread {
-            try {
-                deviceManager.lockNow()
-            } catch (e: SecurityException) {
-                showToastLong(requireContext(), "Please turn on double tap to lock")
-                findNavController().navigate(R.id.action_mainFragment_to_settingsFragment)
-            } catch (e: Exception) {
-                showToastLong(requireContext(), "mlauncher failed to lock device.\nPlease check your app settings.")
-                prefs.lockModeOn = false
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+            requireActivity().runOnUiThread {
+                if (isAccessServiceEnabled(requireContext())) {
+                    binding.lock.performClick()
+                } else {
+                    // prefs.lockModeOn = false
+                    showToastLong(
+                        requireContext(),
+                        "Please turn on accessibility service for mLauncher"
+                    )
+                    startActivity(Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS))
+                }
+            }
+        } else {
+            requireActivity().runOnUiThread {
+                try {
+                    deviceManager.lockNow()
+                } catch (e: SecurityException) {
+                    showToastLong(requireContext(), "App does not have the permission to lock the device")
+                } catch (e: Exception) {
+                    showToastLong(requireContext(), "mLauncher failed to lock device.\nPlease check your app settings.")
+                    prefs.lockModeOn = false
+                }
             }
         }
     }
 
     private fun showLongPressToast() = showToastShort(requireContext(), "Long press to select app")
-
-    private fun textOnClick(view: View) = onClick(view)
-
-    private fun textOnLongClick(view: View) = onLongClick(view)
 
     private fun getSwipeGestureListener(context: Context): View.OnTouchListener {
         return object : OnSwipeTouchListener(context) {
@@ -261,8 +272,12 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
             override fun onSwipeDown() {
                 super.onSwipeDown()
-                if (!prefs.swipeDownEnabled) expandNotificationDrawer(context)
-                openSwipeDownApp()
+                when(prefs.swipeDownAction) {
+                    Action.OpenApp -> openSwipeDownApp()
+                    Action.ShowNotification -> expandNotificationDrawer(context)
+                    Action.LockScreen -> lockPhone()
+                    else -> { /* TODO: */}
+                }
             }
 
             override fun onLongClick() {
@@ -277,57 +292,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             override fun onDoubleClick() {
                 super.onDoubleClick()
                 if (prefs.lockModeOn) {
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
-                        requireActivity().runOnUiThread {
-                            if (isAccessServiceEnabled(requireContext())) {
-                                binding.lock.performClick()
-                            } else {
-                                showToastLong(
-                                    requireContext(),
-                                    "Please turn on accessibility service for mlauncher"
-                                )
-                                startActivity(Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS))
-                            }
-                        }
-                    } else {
-                        lockPhone()
-                    }
+                    lockPhone()
                 }
-            }
-        }
-    }
-
-    private fun getViewSwipeTouchListener(context: Context, view: View): View.OnTouchListener {
-        return object : ViewSwipeTouchListener(context, view) {
-            override fun onSwipeLeft() {
-                super.onSwipeLeft()
-                openSwipeLeftApp()
-            }
-
-            override fun onSwipeRight() {
-                super.onSwipeRight()
-                openSwipeRightApp()
-            }
-
-            override fun onSwipeUp() {
-                super.onSwipeUp()
-                showAppList(AppDrawerFlag.LaunchApp)
-            }
-
-            override fun onSwipeDown() {
-                super.onSwipeDown()
-                if (!prefs.swipeDownEnabled) expandNotificationDrawer(context)
-                openSwipeDownApp()
-            }
-
-            override fun onLongClick(view: View) {
-                super.onLongClick(view)
-                textOnLongClick(view)
-            }
-
-            override fun onClick(view: View) {
-                super.onClick(view)
-                textOnClick(view)
             }
         }
     }
@@ -350,7 +316,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     textSize = prefs.textSize.toFloat()
                     id = i
                     text = prefs.getHomeAppModel(i).appLabel
-                    setOnTouchListener(getViewSwipeTouchListener(context, this))
                     if (!prefs.extendHomeAppsArea) {
                         layoutParams = ViewGroup.LayoutParams(
                             ViewGroup.LayoutParams.WRAP_CONTENT,

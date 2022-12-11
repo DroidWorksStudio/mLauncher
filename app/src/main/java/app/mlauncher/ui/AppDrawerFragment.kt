@@ -1,5 +1,6 @@
 package app.mlauncher.ui
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
 import android.view.Gravity
@@ -41,6 +42,7 @@ class AppDrawerFragment : Fragment() {
         return binding.root
     }
 
+    @SuppressLint("RtlHardcoded")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -51,16 +53,21 @@ class AppDrawerFragment : Fragment() {
         when (flag) {
             AppDrawerFlag.SetHomeApp -> {
                 binding.drawerButton.text = getString(R.string.rename)
-                binding.drawerButton.isVisible = true // && it.trim().isNotEmpty()
+                binding.drawerButton.isVisible = true
                 binding.drawerButton.setOnClickListener { renameListener(flag, n) }
             }
             AppDrawerFlag.SetSwipeRight,
             AppDrawerFlag.SetSwipeLeft,
-            AppDrawerFlag.SetSwipeDown,
             AppDrawerFlag.SetClickClock,
             AppDrawerFlag.SetClickDate -> {
                 binding.drawerButton.text = getString(R.string.disable)
-                binding.drawerButton.isVisible = true // && it.trim().isNotEmpty()
+                binding.drawerButton.isVisible = true
+                binding.drawerButton.setOnClickListener {
+                    disableGesture(flag)
+                    findNavController().popBackStack()
+                }
+            }
+            AppDrawerFlag.SetSwipeDown -> {
                 binding.drawerButton.setOnClickListener {
                     disableGesture(flag)
                     findNavController().popBackStack()
@@ -218,9 +225,6 @@ class AppDrawerFragment : Fragment() {
             }
             AppDrawerFlag.SetSwipeRight -> {
                 prefs.swipeRightEnabled = false
-            }
-            AppDrawerFlag.SetSwipeDown -> {
-                prefs.swipeDownEnabled = false
             }
             AppDrawerFlag.SetClickClock -> {
                 prefs.clickClockEnabled = false

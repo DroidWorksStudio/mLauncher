@@ -136,8 +136,10 @@ object SettingsComposable {
     fun <T: EnumOption> SettingsItem(
         title: String,
         currentSelection: MutableState<T>,
+        currentSelectionName: String? = null,
         values: Array<T>,
         open: MutableState<Boolean>,
+        active: Boolean = true,
         onChange: (Boolean) -> Unit,
         fontSize: TextUnit = TextUnit.Unspecified,
         onSelect: (T) -> Unit,
@@ -167,7 +169,8 @@ object SettingsComposable {
                 title = title,
                 onClick = { onChange(true) },
                 fontSize = fontSize,
-                buttonText = currentSelection.value.string()
+                active = active,
+                buttonText = currentSelectionName ?: currentSelection.value.string()
             )
         }
     }
