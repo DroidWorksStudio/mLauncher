@@ -44,8 +44,6 @@ class MainActivity : AppCompatActivity() {
             Constants.Theme.System -> AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM
         }
         AppCompatDelegate.setDefaultNightMode(themeMode)
-        //super.onCreate(savedInstanceState)
-        //setContentView(R.layout.activity_main)
 
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)

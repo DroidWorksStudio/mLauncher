@@ -17,17 +17,6 @@ interface EnumOption {
 
 object Constants {
 
-    /*const val FLAG_LAUNCH_APP = 100
-    const val FLAG_HIDDEN_APPS = 101
-
-    const val FLAG_SET_HOME_APP = 1
-
-    const val FLAG_SET_SWIPE_LEFT_APP = 11
-    const val FLAG_SET_SWIPE_RIGHT_APP = 12
-
-    const val FLAG_SET_CLICK_CLOCK_APP = 13
-    const val FLAG_SET_CLICK_DATE_APP = 14*/
-
     const val REQUEST_CODE_ENABLE_ADMIN = 666
 
     const val TRIPLE_TAP_DELAY_MS = 300
@@ -99,23 +88,23 @@ object Constants {
         return when(this) {
             Language.System -> Locale.getDefault().language
             Language.Arabic -> "ar"
-            Language.English -> "en"
-            Language.German -> "de"
-            Language.Spanish -> "es"
-            Language.French -> "fr"
-            Language.Italian -> "it"
-            Language.Swedish -> "se"
-            Language.Turkish -> "tr"
-            Language.Greek -> "gr"
             Language.Chinese -> "cn"
+            Language.Croatian -> "hr"
+            Language.Dutch -> "nl"
+            Language.English -> "en"
+            Language.Estonian -> "et"
+            Language.French -> "fr"
+            Language.German -> "de"
+            Language.Greek -> "gr"
+            Language.Indonesian -> "id"
+            Language.Italian -> "it"
+            Language.Korean -> "ko"
             Language.Persian -> "fa"
             Language.Portuguese -> "pt"
-            Language.Korean -> "ko"
-            Language.Indonesian -> "id"
             Language.Russian -> "ru"
-            Language.Croatian -> "hr"
-            Language.Estonian -> "et"
-            Language.Dutch -> "nl"
+            Language.Spanish -> "es"
+            Language.Swedish -> "se"
+            Language.Turkish -> "tr"
         }
     }
 

@@ -39,11 +39,7 @@ class AppDrawerAdapter(
     private lateinit var binding: AdapterAppDrawerBinding
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        //val view = LayoutInflater.from(parent.context)
-        //    .inflate(R.layout.adapter_app_drawer, parent, false)
-
         binding = AdapterAppDrawerBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        //val view = binding.root
         binding.appTitle.textSize = Prefs(parent.context).textSize.toFloat()
 
         return ViewHolder(binding)

@@ -282,7 +282,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                             if (isAccessServiceEnabled(requireContext())) {
                                 binding.lock.performClick()
                             } else {
-                                // prefs.lockModeOn = false
                                 showToastLong(
                                     requireContext(),
                                     "Please turn on accessibility service for mlauncher"
