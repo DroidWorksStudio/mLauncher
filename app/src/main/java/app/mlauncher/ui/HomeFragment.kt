@@ -249,6 +249,10 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
     private fun showLongPressToast() = showToastShort(requireContext(), "Long press to select app")
 
+    private fun textOnClick(view: View) = onClick(view)
+
+    private fun textOnLongClick(view: View) = onLongClick(view)
+
     private fun getSwipeGestureListener(context: Context): View.OnTouchListener {
         return object : OnSwipeTouchListener(context) {
             override fun onSwipeLeft() {
@@ -294,6 +298,20 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         }
     }
 
+    private fun getViewSwipeTouchListener(context: Context, view: View): View.OnTouchListener {
+        return object : ViewSwipeTouchListener(context, view) {
+            override fun onLongClick(view: View) {
+                super.onLongClick(view)
+                textOnLongClick(view)
+            }
+
+            override fun onClick(view: View) {
+                super.onClick(view)
+                textOnClick(view)
+            }
+        }
+    }
+
     // updates number of apps visible on home screen
     // does nothing if number has not changed
     private fun updateAppCount(newAppsNum: Int) {
@@ -312,6 +330,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     textSize = prefs.textSize.toFloat()
                     id = i
                     text = prefs.getHomeAppModel(i).appLabel
+                    setOnTouchListener(getViewSwipeTouchListener(context, this))
                     if (!prefs.extendHomeAppsArea) {
                         layoutParams = ViewGroup.LayoutParams(
                             ViewGroup.LayoutParams.WRAP_CONTENT,
