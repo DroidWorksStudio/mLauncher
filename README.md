@@ -33,7 +33,6 @@ We try to balance customizability and clutter :)</h3>
   - Spanish
   - Swedish
   - Turkish
-- Internet permission (for weather widget)
 
 ## Installation
 
