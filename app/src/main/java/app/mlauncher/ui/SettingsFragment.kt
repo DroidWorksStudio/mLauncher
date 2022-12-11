@@ -480,7 +480,23 @@ class SettingsFragment : Fragment() {
     }
 
     private fun updateGesture(flag: AppDrawerFlag, action: Action) {
-        prefs.swipeDownAction = action
+        if ((flag == AppDrawerFlag.SetSwipeLeft)) {
+            prefs.swipeLeftAction = action
+        }
+        if ((flag == AppDrawerFlag.SetSwipeRight)) {
+            prefs.swipeRightAction = action
+        }
+        if ((flag == AppDrawerFlag.SetSwipeDown)) {
+            prefs.swipeDownAction = action
+        }
+
+        if ((flag == AppDrawerFlag.SetClickClock)) {
+            prefs.clickClockAction = action
+        }
+
+        if ((flag == AppDrawerFlag.SetClickDate)) {
+            prefs.clickClockAction = action
+        }
 
         when(action) {
             Action.OpenApp -> {
