@@ -257,12 +257,22 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         return object : OnSwipeTouchListener(context) {
             override fun onSwipeLeft() {
                 super.onSwipeLeft()
-                openSwipeLeftApp()
+                when(prefs.swipeLeftAction) {
+                    Action.OpenApp -> openSwipeLeftApp()
+                    Action.ShowNotification -> expandNotificationDrawer(context)
+                    Action.LockScreen -> lockPhone()
+                    else -> { /* TODO: */}
+                }
             }
 
             override fun onSwipeRight() {
                 super.onSwipeRight()
-                openSwipeRightApp()
+                when(prefs.swipeRightAction) {
+                    Action.OpenApp -> openSwipeRightApp()
+                    Action.ShowNotification -> expandNotificationDrawer(context)
+                    Action.LockScreen -> lockPhone()
+                    else -> { /* TODO: */}
+                }
             }
 
             override fun onSwipeUp() {

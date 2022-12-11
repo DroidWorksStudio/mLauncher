@@ -136,11 +136,11 @@ class Prefs(val context: Context) {
         set(value) = prefs.edit().putBoolean(HOME_LOCKED, value).apply()
 
     var swipeLeftAction: Constants.Action
-        get() = loadAction(SWIPE_LEFT_ACTION, Constants.Action.OpenApp)
+        get() = loadAction(SWIPE_LEFT_ACTION, Constants.Action.Disabled)
         set(value) = storeAction(SWIPE_LEFT_ACTION, value)
 
     var swipeRightAction: Constants.Action
-        get() = loadAction(SWIPE_RIGHT_ACTION, Constants.Action.OpenApp)
+        get() = loadAction(SWIPE_RIGHT_ACTION, Constants.Action.Disabled)
         set(value) = storeAction(SWIPE_RIGHT_ACTION, value)
 
     var swipeDownAction: Constants.Action
@@ -148,11 +148,11 @@ class Prefs(val context: Context) {
         set(value) = storeAction(SWIPE_DOWN_ACTION, value)
 
     var clickClockAction: Constants.Action
-        get() = loadAction(CLICK_CLOCK_ACTION, Constants.Action.OpenApp)
+        get() = loadAction(CLICK_CLOCK_ACTION, Constants.Action.Disabled)
         set(value) = storeAction(CLICK_CLOCK_ACTION, value)
 
     var clickDateAction: Constants.Action
-        get() = loadAction(CLICK_DATE_ACTION, Constants.Action.OpenApp)
+        get() = loadAction(CLICK_DATE_ACTION, Constants.Action.Disabled)
         set(value) = storeAction(CLICK_DATE_ACTION, value)
 
     private fun loadAction(prefString: String, default: Constants.Action): Constants.Action {
