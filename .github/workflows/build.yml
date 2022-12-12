@@ -1,4 +1,4 @@
-name: Build Project
+name: Build Android Project
 
 on:
   push:
@@ -23,5 +23,11 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
-      run: ./gradlew build
-
+      run: ./gradlew app:packageDebug
+    - name: Copy debug apk for the artifacts
+      run:  cp ./app/build/outputs/apk/debug/app-debug.apk app-debug-${{ steps.date.outputs.date }}.apk
+    - name: Upload Artifact
+      uses: actions/upload-artifact@master
+      with:
+        name: app-debug.apk
+        path: app-debug-${{ steps.date.outputs.date }}.apk
