@@ -5,7 +5,7 @@
     <string name="app_text_color">Text color</string>
     <string name="double_tap_to_lock_screen">Double tap to lock</string>
     <string name="experimental_">(experimental)</string>
-    <string name="admin_permission_message">Olauncher promises to use lock screen permission responsibly.</string>
+    <string name="admin_permission_message">mLauncher promises to use lock screen permission responsibly.</string>
     <string name="about">About</string>
     <string name="off">Off</string>
     <string name="on">On</string>
@@ -42,11 +42,11 @@
     <string name="save">Save</string>
     <string name="app_drawer_tips">Tip: Swipe down to dismiss. Scroll to hide keyboard.</string>
     <string name="okay">Okay</string>
-    <string name="double_tap_lock_is_enabled_message">If double tap lock disables fingerprint or face unlock, open Olauncher settings, tap on \'experimental\' and follow the instructions. Thank you.</string>
+    <string name="double_tap_lock_is_enabled_message">If double tap lock disables fingerprint or face unlock, open mLauncher settings, tap on \'experimental\' and follow the instructions. Thank you.</string>
     <string name="triple_tap_lock_message">How it works:
         \nOnce you double-tap, screen will go dark and the phone will lock itself in 5 seconds.
         \n\nDuring this time, you can double-tap to <b>unlock</b> or triple-tap anytime to fully lock the phone immediately.
-        \n\nNote: Turn this OFF first if you decide to delete Olauncher. Thank you.</string>
+        \n\nNote: Turn this OFF first if you decide to delete mLauncher. Thank you.</string>
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="hide">Hide</string>
     <string name="status_bar">Show status bar</string>
@@ -64,7 +64,7 @@
     <string name="dark">Dark</string>
     <string name="light">Light</string>
     <string name="double_tap_lock_uninstall_message">Double tap to lock enabled.
-        \n\nNote: Turn this OFF first if you decide to delete Olauncher.</string>
+        \n\nNote: Turn this OFF first if you decide to delete mLauncher.</string>
     <string name="accessibility_service_description">The accessibility permission is required to enable double tap to lock. Any data acquired by the service will not leave your device.</string>
     <string name="lock_layout_description">lock layout description to be used a unique id to lock screen</string>
     <string name="open">Open link</string>

@@ -1,4 +1,4 @@
-Forked from <a href="https://f-droid.org/packages/app.olauncher/">Olauncher</a> because original version is cluttered
+Forked from <a href="https://f-droid.org/packages/app.mlauncher/">mLauncher</a> because original version is cluttered
     
 - Removed clutter, like ads and links
 - You can rename apps in the app-drawer _(Renaming apps on the home screen is already supported. Just long-click on an app on the home screen and start typing)_

@@ -1,4 +1,4 @@
-    <a href="https://f-droid.org/packages/app.olauncher/">Olauncher</a> 의 파생 버전입니다
+    <a href="https://f-droid.org/packages/app.mlauncher/">mLauncher</a> 의 파생 버전입니다
     왜냐하면 원본 버전이 난잡해졌기 때문입니다
 
     또한 여러 기능을 추가하였습니다.

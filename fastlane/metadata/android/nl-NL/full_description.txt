@@ -1,4 +1,4 @@
-Gesplitst van <a href="https://f-droid.org/packages/app.olauncher/">Olauncher</a> omdat de originele versie onoverzichtelijk is.
+Gesplitst van <a href="https://f-droid.org/packages/app.mlauncher/">mLauncher</a> omdat de originele versie onoverzichtelijk is.
     
 - Rommel verwijderd, zoals advertenties en links
 - Je kunt apps hernoemen in de app-drawer _(Het hernoemen van apps op het startscherm wordt al ondersteund. Klik gewoon lang op een app op het beginscherm en begin te typen)_

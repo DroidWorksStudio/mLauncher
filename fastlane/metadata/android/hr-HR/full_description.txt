@@ -1,4 +1,4 @@
-Forkirano iz <a href="https://f-droid.org/packages/app.olauncher/">Olaunchera</a> jer je izvorna verzija pretrpana.
+Forkirano iz <a href="https://f-droid.org/packages/app.mlauncher/">mLauncher</a> jer je izvorna verzija pretrpana.
     
 - Uklonjene nepotrebne funkcije, kao što su oglasi i poveznice
 - Preimenuj aplikacije u ladici s aplikacijama _(Preimenovanje aplikacija na početnom zaslonu već je podržano. Samo dugo pritisni aplikaciju na početnom zaslonu i počni pisati)_

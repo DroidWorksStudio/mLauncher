@@ -1,4 +1,4 @@
-    Bifurcado de <a href="https://f-droid.org/packages/app.olauncher/">Olauncher</a>
+    Bifurcado de <a href="https://f-droid.org/packages/app.mlauncher/">mLauncher</a>
     porque a versão original é desordenada
 
     Também adicionar alguns recursos

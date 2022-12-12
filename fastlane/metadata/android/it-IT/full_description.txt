@@ -1,4 +1,4 @@
-    Derivato da <a href="https://f-droid.org/packages/app.olauncher/">Olauncher</a>
+    Derivato da <a href="https://f-droid.org/packages/app.mlauncher/">mLauncher</a>
     il codice originale è stato aggiornato
 
     Con alcune nuove funzioni
