@@ -40,7 +40,7 @@
 	<string name="save">Kaydetmek</string>
 	<string name="app_drawer_tips">İpucu: Kapatmak için aşağı kaydırın. Klavyeyi gizlemek için kaydırın.</string>
 	<string name="okay">Peki</string>
-	<string name="double_tap_lock_is_enabled_message">Çift dokunma kilidi, parmak izi veya yüz tanıma kilidini devre dışı bırakırsa, başlatıcı ayarlarını açın, \\'deneysel\\'e dokunun ve talimatları izleyin. Teşekkürler.</string>
+	<string name="double_tap_lock_is_enabled_message">Çift dokunma kilidi, parmak izi veya yüz tanıma kilidini devre dışı bırakırsa, başlatıcı ayarlarını açın, \'deneysel\'e dokunun ve talimatları izleyin. Teşekkürler.</string>
 	<string name="triple_tap_lock_message">Nasıl çalışır:\nÇift dokunduğunuzda ekran kararır ve telefon 5 saniye içinde kendini kilitler.\n\nBu süre zarfında, çift dokunarak<b>Kilidini aç</b>veya telefonu hemen tamamen kilitlemek için istediğiniz zaman üç kez hafifçe vurun.\n\nNot: Mlauncher\'ı silmeye karar verirseniz önce bunu KAPALI konuma getirin. Teşekkürler.</string>
 	<string name="auto_show_keyboard">Klavyeyi otomatik göster</string>
 	<string name="hide">Saklamak</string>

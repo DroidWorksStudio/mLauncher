@@ -40,7 +40,7 @@
 	<string name="save">Spara</string>
 	<string name="app_drawer_tips">Tips: Svep nedåt för att stänga. Rulla för att dölja tangentbordet.</string>
 	<string name="okay">Okej</string>
-	<string name="double_tap_lock_is_enabled_message">Om dubbeltryckningslås inaktiverar fingeravtryck eller ansiktslåsning, öppna mlauncher-inställningarna, tryck på \\'experimentell\\' och följ instruktionerna. Tack.</string>
+	<string name="double_tap_lock_is_enabled_message">Om dubbeltryckningslås inaktiverar fingeravtryck eller ansiktslåsning, öppna mlauncher-inställningarna, tryck på \'experimentell\' och följ instruktionerna. Tack.</string>
 	<string name="triple_tap_lock_message">Så här fungerar det:\nNär du dubbeltrycker blir skärmen mörk och telefonen låser sig inom 5 sekunder.\n\nUnder denna tid kan du dubbeltrycka för att<b>låsa upp</b>eller tryck tre gånger när som helst för att låsa telefonen helt omedelbart.\n\nObs! Stäng AV först om du bestämmer dig för att ta bort mlauncher. Tack.</string>
 	<string name="auto_show_keyboard">Auto visa tangentbord</string>
 	<string name="hide">Dölj</string>

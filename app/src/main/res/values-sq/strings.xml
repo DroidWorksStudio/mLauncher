@@ -40,7 +40,7 @@
 	<string name="save">Ruaj</string>
 	<string name="app_drawer_tips">Këshillë: Rrëshqitni poshtë për ta hequr. Lëvizni për të fshehur tastierën.</string>
 	<string name="okay">Mirë</string>
-	<string name="double_tap_lock_is_enabled_message">Nëse kyçja me prekje të dyfishtë çaktivizon gjurmën e gishtit ose shkyçjen me fytyrë, hapni cilësimet e lëshuesit, trokitni te \\'eksperimentale\\' dhe ndiqni udhëzimet. Faleminderit.</string>
+	<string name="double_tap_lock_is_enabled_message">Nëse kyçja me prekje të dyfishtë çaktivizon gjurmën e gishtit ose shkyçjen me fytyrë, hapni cilësimet e lëshuesit, trokitni te \'eksperimentale\' dhe ndiqni udhëzimet. Faleminderit.</string>
 	<string name="triple_tap_lock_message">Si funksionon:\nPasi të prekni dy herë, ekrani do të errësohet dhe telefoni do të kyçet vetë brenda 5 sekondash.\n\nGjatë kësaj kohe, mund të prekni dy herë për të<b>hap</b>ose trokitni tre herë në çdo kohë për ta kyçur plotësisht telefonin menjëherë.\n\nShënim: FIKUR këtë fillimisht nëse vendosni të fshini programin e përdorimit. Faleminderit.</string>
 	<string name="auto_show_keyboard">Tastiera e shfaqjes automatike</string>
 	<string name="hide">Fshih</string>

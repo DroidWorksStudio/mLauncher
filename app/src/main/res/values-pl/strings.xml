@@ -40,7 +40,7 @@
 	<string name="save">Ratować</string>
 	<string name="app_drawer_tips">Wskazówka: przesuń w dół, aby zamknąć. Przewiń, aby ukryć klawiaturę.</string>
 	<string name="okay">Dobra</string>
-	<string name="double_tap_lock_is_enabled_message">Jeśli blokada podwójnego dotknięcia wyłącza odcisk palca lub rozpoznawanie twarzy, otwórz ustawienia mlaunchera, dotknij \\'eksperymentalne\\' i postępuj zgodnie z instrukcjami. Dziękuję Ci.</string>
+	<string name="double_tap_lock_is_enabled_message">Jeśli blokada podwójnego dotknięcia wyłącza odcisk palca lub rozpoznawanie twarzy, otwórz ustawienia mlaunchera, dotknij \'eksperymentalne\' i postępuj zgodnie z instrukcjami. Dziękuję Ci.</string>
 	<string name="triple_tap_lock_message">Jak to działa:\nGdy klikniesz dwukrotnie, ekran zgaśnie, a telefon zablokuje się po 5 sekundach.\n\nW tym czasie możesz stuknąć dwukrotnie, aby<b>odblokować</b>lub dotknij trzykrotnie w dowolnym momencie, aby natychmiast całkowicie zablokować telefon.\n\nUwaga: najpierw wyłącz tę opcję, jeśli zdecydujesz się usunąć program mlauncher. Dziękuję Ci.</string>
 	<string name="auto_show_keyboard">Automatyczne wyświetlanie klawiatury</string>
 	<string name="hide">Ukrywać</string>

@@ -40,7 +40,7 @@
 	<string name="save">Sábháil</string>
 	<string name="app_drawer_tips">Leid: Swipe síos chun é a dhíbhe. Scrollaigh chun an méarchlár a cheilt.</string>
 	<string name="okay">ceart go leor</string>
-	<string name="double_tap_lock_is_enabled_message">Má dhíchumasaíonn glas sconna dúbailte méarloirg nó díghlasáil aghaidheanna, oscail socruithe mlauncher, tapáil ar \\'turgnamhach\\' agus lean na treoracha. Go raibh maith agat.</string>
+	<string name="double_tap_lock_is_enabled_message">Má dhíchumasaíonn glas sconna dúbailte méarloirg nó díghlasáil aghaidheanna, oscail socruithe mlauncher, tapáil ar \'turgnamhach\' agus lean na treoracha. Go raibh maith agat.</string>
 	<string name="triple_tap_lock_message">Conas a oibríonn sé:\nA luaithe a dhéanann tú tapáil faoi dhó, tiocfaidh an scáileán dorcha agus glasálfaidh an fón é féin i gceann 5 soicind.\n\nLe linn an ama seo, is féidir leat tapáil faoi dhó ar<b>dhíghlasáil</b>nó tapáil triarach am ar bith chun an guthán a ghlasáil go hiomlán láithreach.\n\nNóta: Múch é seo ar dtús má shocraíonn tú an guthán a scriosadh. Go raibh maith agat.</string>
 	<string name="auto_show_keyboard">Méarchlár taispeána uathoibríoch</string>
 	<string name="hide">Folaigh</string>
