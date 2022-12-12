@@ -56,6 +56,10 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 prefs.appSwipeDown = appModel
                 updateSwipeApps()
             }
+            AppDrawerFlag.SetSwipeUp -> {
+                prefs.appSwipeUp = appModel
+                updateSwipeApps()
+            }
             AppDrawerFlag.SetClickClock -> {
                 prefs.appClickClock = appModel
                 updateClickApps()
@@ -63,6 +67,9 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             AppDrawerFlag.SetClickDate -> {
                 prefs.appClickDate = appModel
                 updateClickApps()
+            }
+            AppDrawerFlag.SetDoubleTap -> {
+                prefs.appDoubleTap = appModel
             }
         }
     }

@@ -76,7 +76,6 @@
 	<string name="disable">Desativar</string>
 	<string name="enabled">Habilitado</string>
 	<string name="disabled">Desabilitado</string>
-	<string name="home_layout_alignment">Alinhamento do layout inicial</string>
     <string name="open_app">Abra o aplicativo</string>
 	<string name="lock_screen">Tela de bloqueio</string>
 	<string name="show_notifications">Mostrar notificação</string>

@@ -76,7 +76,6 @@
 	<string name="disable">Uitzetten</string>
 	<string name="enabled">Ingeschakeld</string>
 	<string name="disabled">Gehandicapt</string>
-	<string name="home_layout_alignment">Uitlijning van de huisindeling</string>
     <string name="open_app">Open app</string>
 	<string name="lock_screen">Vergrendel scherm</string>
 	<string name="show_notifications">Bekijk notificatie</string>

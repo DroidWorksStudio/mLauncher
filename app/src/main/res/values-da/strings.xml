@@ -76,7 +76,6 @@
 	<string name="disable">Deaktiver</string>
 	<string name="enabled">Aktiveret</string>
 	<string name="disabled">handicappet</string>
-	<string name="home_layout_alignment">Indretning af boligindretning</string>
     <string name="open_app">Åbn App</string>
 	<string name="lock_screen">Låse skærm</string>
 	<string name="show_notifications">Vis meddelelse</string>

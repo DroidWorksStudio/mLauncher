@@ -86,11 +86,5 @@ dependencies {
     implementation 'androidx.compose.animation:animation:1.3.2'
     implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
 
-    // Tooling support (Previews, etc.)
-    // implementation 'androidx.compose.ui:ui-tooling:1.2.1'
-    // Integration with ViewModels
-    //implementation 'androidx.lifecycle:lifecycle-viewmodel-compose:2.4.1'
-    // implementation 'com.google.ar.sceneform:rendering:1.17.1' -- non-free take care if uncommenting
-
     implementation "androidx.constraintlayout:constraintlayout-compose:1.0.1"
 }

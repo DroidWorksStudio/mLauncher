@@ -18,8 +18,7 @@
 	<string name="left">چپ</string>
 	<string name="right">راست</string>
 	<string name="center">وسط</string>
-	<string name="home_layout_alignment">موقعیت برنامه ها</string>
-	<string name="clock_alignment">جای نمایی ساعت</string>
+    <string name="clock_alignment">جای نمایی ساعت</string>
 	<string name="drawer_alignment">کشوی برنامه</string>
 	<string name="swipe_left_app">برنامه ای  که باکشیدن به چپ باز می شود</string>
 	<string name="swipe_right_app">برنامه ای که با کشیدن به راست باز می شود</string>

@@ -76,7 +76,6 @@
 	<string name="disable">השבת</string>
 	<string name="enabled">מופעל</string>
 	<string name="disabled">נָכֶה</string>
-	<string name="home_layout_alignment">יישור פריסת הבית</string>
     <string name="open_app">אפליקציה פתוחה</string>
 	<string name="lock_screen">מסך נעילה</string>
 	<string name="show_notifications">הצג התראות</string>

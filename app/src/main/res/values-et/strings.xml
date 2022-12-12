@@ -59,8 +59,7 @@
 	<string name="home_alignment_bottom">Rakenduste avakuva alumine osa</string>
 	<string name="save">Salvesta</string>
 	<string name="lock_home_apps">Rakenduste lukustamine</string>
-	<string name="home_layout_alignment">Kodu paigutuse joondamine</string>
-	<string name="disabled">Keelatud</string>
+    <string name="disabled">Keelatud</string>
 	<string name="enabled">Lubatud</string>
 	<string name="disable">Keela</string>
 	<string name="enable">Luba</string>

@@ -76,7 +76,6 @@
 	<string name="disable">പ്രവർത്തനരഹിതമാക്കുക</string>
 	<string name="enabled">പ്രവർത്തനക്ഷമമാക്കി</string>
 	<string name="disabled">അപ്രാപ്തമാക്കി</string>
-	<string name="home_layout_alignment">ഹോം ലേഔട്ട് വിന്യാസം</string>
     <string name="open_app">ആപ്പ് തുറക്കുക</string>
 	<string name="lock_screen">ലോക്ക് സ്ക്രീൻ</string>
 	<string name="show_notifications">അറിയിപ്പ് കാണിക്കുക</string>

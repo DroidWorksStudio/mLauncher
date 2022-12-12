@@ -67,5 +67,4 @@
 	<string name="disable">장애를 입히다</string>
 	<string name="enabled">가능</string>
 	<string name="disabled">장애가 있는</string>
-	<string name="home_layout_alignment">홈 레이아웃 정렬</string>
 </resources>

@@ -67,5 +67,5 @@
 	<string name="enabled">已开启</string>
 	<string name="disabled">已禁用</string>
 	<string name="commit">犯罪</string>
-	<string name="home_layout_alignment">首页布局对齐</string>
+	<string name="swipe_up_app">向上滑动</string>
 </resources>
