@@ -1,0 +1,83 @@
+<resources>
+	<string name="app_name">mLauncher</string>
+	<string name="app">Aplikacja</string>
+	<string name="set_as_default_launcher">Ustaw jako domyślny program uruchamiający</string>
+	<string name="app_text_color">Kolor tekstu</string>
+	<string name="double_tap_to_lock_screen">Kliknij dwukrotnie, aby zablokować</string>
+	<string name="experimental_">(eksperymentalny)</string>
+	<string name="admin_permission_message">mlauncher obiecuje odpowiedzialne korzystanie z uprawnień blokady ekranu.</string>
+	<string name="about">O</string>
+	<string name="off">Wyłączony</string>
+	<string name="on">Na </string>
+	<string name="black">Czarny</string>
+	<string name="white">Biały</string>
+	<string name="change_default_launcher">Zmień domyślny program uruchamiający</string>
+	<string name="long_press_for_settings">Długie naciśnięcie w dowolnym miejscu, aby przejść do ustawień</string>
+	<string name="swipe_up_for_apps">Przesuń w górę, aby wyświetlić wszystkie aplikacje</string>
+	<string name="apps_on_home_screen">Liczba skrótów</string>
+	<string name="left">Lewy</string>
+	<string name="right">Prawidłowy</string>
+	<string name="center">Środek</string>
+	<string name="home_alignment">Ekran główny aplikacji</string>
+	<string name="home_alignment_bottom">Dolny ekran główny aplikacji</string>
+	<string name="clock_alignment">Zegar i data</string>
+	<string name="drawer_alignment">Aplikacje w szufladzie aplikacji</string>
+	<string name="swipe_left_app">Przesuń w lewo</string>
+	<string name="swipe_right_app">Przesuń w prawo</string>
+	<string name="swipe_down_app">Przesuń w dół</string>
+	<string name="clock_click_app">Kliknięcie zegara</string>
+	<string name="date_click_app">Kliknij datę</string>
+	<string name="_0" translatable="false">0</string>
+	<string name="_1" translatable="false">1</string>
+	<string name="_2" translatable="false">2</string>
+	<string name="_3" translatable="false">3</string>
+	<string name="_4" translatable="false">4</string>
+	<string name="_5" translatable="false">5</string>
+	<string name="_6" translatable="false">6</string>
+	<string name="_7" translatable="false">7</string>
+	<string name="_8" translatable="false">8</string>
+	<string name="commit">Popełniać</string>
+	<string name="save">Ratować</string>
+	<string name="app_drawer_tips">Wskazówka: przesuń w dół, aby zamknąć. Przewiń, aby ukryć klawiaturę.</string>
+	<string name="okay">Dobra</string>
+	<string name="double_tap_lock_is_enabled_message">Jeśli blokada podwójnego dotknięcia wyłącza odcisk palca lub rozpoznawanie twarzy, otwórz ustawienia mlaunchera, dotknij \\'eksperymentalne\\' i postępuj zgodnie z instrukcjami. Dziękuję Ci.</string>
+	<string name="triple_tap_lock_message">Jak to działa:\nGdy klikniesz dwukrotnie, ekran zgaśnie, a telefon zablokuje się po 5 sekundach.\n\nW tym czasie możesz stuknąć dwukrotnie, aby<b>odblokować</b>lub dotknij trzykrotnie w dowolnym momencie, aby natychmiast całkowicie zablokować telefon.\n\nUwaga: najpierw wyłącz tę opcję, jeśli zdecydujesz się usunąć program mlauncher. Dziękuję Ci.</string>
+	<string name="auto_show_keyboard">Automatyczne wyświetlanie klawiatury</string>
+	<string name="hide">Ukrywać</string>
+	<string name="status_bar">Pokaż pasek stanu</string>
+	<string name="rename">Przemianować</string>
+	<string name="show_time">Czas na przedstawienie</string>
+	<string name="show_date">Pokaż datę</string>
+	<string name="lock_home_apps">Zablokuj aplikacje</string>
+	<string name="extend_home_apps_area">Rozszerz obszar klikalny w aplikacjach domowych</string>
+	<string name="appearance">Wygląd zewnętrzny</string>
+	<string name="gestures">Gesty</string>
+	<string name="homescreen">Pulpit</string>
+	<string name="alignment">Wyrównanie</string>
+	<string name="theme_mode">Tryb tematyczny</string>
+	<string name="system_default">System</string>
+	<string name="dark">Ciemny</string>
+	<string name="light">Światło</string>
+	<string name="double_tap_lock_uninstall_message">Kliknij dwukrotnie, aby włączyć blokadę.\n\nUwaga: najpierw wyłącz tę funkcję, jeśli zdecydujesz się usunąć program mlauncher.</string>
+	<string name="accessibility_service_description">Uprawnienia dostępu są wymagane, aby włączyć podwójne dotknięcie, aby zablokować. Żadne dane pozyskane przez usługę nie opuszczą Twojego urządzenia.</string>
+	<string name="lock_layout_description">opis układu blokady, który ma być używany, unikalny identyfikator do zablokowania ekranu</string>
+	<string name="open">Otwórz link</string>
+	<string name="copy">Kopiuj</string>
+	<string name="close">Blisko</string>
+	<string name="app_language">Język interfejsu</string>
+	<string name="lang_system">System</string>
+	<string name="app_text_size">Rozmiar czcionki</string>
+	<string name="drawer_list_empty_hint">Nie znaleziono aplikacji</string>
+	<string name="hidden_apps">Ukryte aplikacje</string>
+	<string name="show">Pokazać</string>
+	<string name="reset">Resetowanie</string>
+	<string name="cancel">Anulować</string>
+	<string name="enable">Włączać</string>
+	<string name="disable">Wyłączyć</string>
+	<string name="enabled">Włączony</string>
+	<string name="disabled">Wyłączone</string>
+	<string name="home_layout_alignment">Wyrównanie układu domu</string>
+    <string name="open_app">Otworzyć aplikację</string>
+	<string name="lock_screen">Ekran blokady</string>
+	<string name="show_notifications">Pokaż powiadomienie</string>
+</resources>
