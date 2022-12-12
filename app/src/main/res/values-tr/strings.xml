@@ -76,7 +76,6 @@
 	<string name="disable">Devre dışı bırakmak</string>
 	<string name="enabled">Etkinleştirilmiş</string>
 	<string name="disabled">Engelli</string>
-	<string name="home_layout_alignment">Ev düzeni hizalaması</string>
     <string name="open_app">Uygulamayı aç</string>
 	<string name="lock_screen">Kilit Ekranı</string>
 	<string name="show_notifications">Bildirimleri göster</string>

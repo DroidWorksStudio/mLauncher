@@ -1,11 +1,6 @@
 package app.mlauncher.ui.compose
 
 import SettingsTheme
-import android.content.Context
-import android.graphics.Paint.Align
-import android.widget.FrameLayout
-import android.widget.ImageButton
-import android.widget.LinearLayout
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -14,19 +9,17 @@ import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.Icon
 import androidx.compose.material.Text
 import androidx.compose.material.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
-import androidx.compose.ui.Alignment.Companion.CenterEnd
 import androidx.compose.ui.Alignment.Companion.CenterStart
 import androidx.compose.ui.Alignment.Companion.TopEnd
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.onFocusEvent
-import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
@@ -34,10 +27,10 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
 import app.mlauncher.R
+import app.mlauncher.data.Constants
 import app.mlauncher.data.EnumOption
 import app.mlauncher.style.CORNER_RADIUS
 
@@ -173,6 +166,27 @@ object SettingsComposable {
                 buttonText = currentSelectionName ?: currentSelection.value.string()
             )
         }
+    }
+
+    @Composable
+    fun SettingsGestureItem(
+        title: String,
+        open: MutableState<Boolean>,
+        onChange: (Boolean) -> Unit,
+        currentAction: Constants.Action,
+        onSelect: (Constants.Action) -> Unit,
+        appLabel: String,
+    ) {
+        SettingsItem(
+            open = open,
+            onChange = onChange,
+            title = title,
+            currentSelection = remember { mutableStateOf(currentAction) },
+            currentSelectionName = if (currentAction == Constants.Action.OpenApp) "Open $appLabel" else currentAction.string(),
+            values = Constants.Action.values(),
+            active = currentAction != Constants.Action.Disabled,
+            onSelect = onSelect,
+        )
     }
 
     @Composable

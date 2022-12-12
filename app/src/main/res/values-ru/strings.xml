@@ -67,5 +67,4 @@
 	<string name="disable">запрещать</string>
 	<string name="enabled">включено</string>
 	<string name="disabled">инвалид</string>
-	<string name="home_layout_alignment">Выравнивание макета дома</string>
 </resources>

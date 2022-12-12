@@ -76,7 +76,6 @@
 	<string name="disable">Wyłączyć</string>
 	<string name="enabled">Włączony</string>
 	<string name="disabled">Wyłączone</string>
-	<string name="home_layout_alignment">Wyrównanie układu domu</string>
     <string name="open_app">Otworzyć aplikację</string>
 	<string name="lock_screen">Ekran blokady</string>
 	<string name="show_notifications">Pokaż powiadomienie</string>

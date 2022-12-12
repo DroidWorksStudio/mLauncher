@@ -40,9 +40,9 @@ import app.mlauncher.data.Prefs
 import app.mlauncher.databinding.FragmentSettingsBinding
 import app.mlauncher.helper.*
 import app.mlauncher.listener.DeviceAdmin
-import app.mlauncher.ui.compose.SettingsComposable.SettingsAppSelector
 import app.mlauncher.ui.compose.SettingsComposable.SettingsArea
 import app.mlauncher.ui.compose.SettingsComposable.SettingsItem
+import app.mlauncher.ui.compose.SettingsComposable.SettingsGestureItem
 import app.mlauncher.ui.compose.SettingsComposable.SettingsNumberItem
 import app.mlauncher.ui.compose.SettingsComposable.SettingsToggle
 import app.mlauncher.ui.compose.SettingsComposable.SettingsTopView
@@ -279,72 +279,74 @@ class SettingsFragment : Fragment() {
                 selected = selected,
                 items = arrayOf(
                     { open, onChange ->
-                        SettingsItem(
-                            open = open,
-                            onChange = onChange,
+                        SettingsGestureItem(
                             title = stringResource(R.string.swipe_left_app),
-                            currentSelection = remember { mutableStateOf(prefs.swipeLeftAction) },
-                            currentSelectionName = if (prefs.swipeLeftAction == Action.OpenApp) "Open ${prefs.appSwipeLeft.appLabel}" else prefs.swipeLeftAction.string(),
-                            values = Action.values(),
-                            active = prefs.swipeLeftAction != Action.Disabled,
-                            onSelect = { j -> updateGesture(AppDrawerFlag.SetSwipeLeft, j) }
+                            open = open,
+                            onChange = onChange,
+                            currentAction = prefs.swipeLeftAction,
+                            onSelect = { j -> updateGesture(AppDrawerFlag.SetSwipeLeft, j) },
+                            appLabel = prefs.appSwipeLeft.appLabel.ifEmpty { "Camera" },
                         )
                     },
                     { open, onChange ->
-                        SettingsItem(
-                            open = open,
-                            onChange = onChange,
+                        SettingsGestureItem(
                             title = stringResource(R.string.swipe_right_app),
-                            currentSelection = remember { mutableStateOf(prefs.swipeRightAction) },
-                            currentSelectionName = if (prefs.swipeRightAction == Action.OpenApp) "Open ${prefs.appSwipeRight.appLabel}" else prefs.swipeRightAction.string(),
-                            values = Action.values(),
-                            active = prefs.swipeRightAction != Action.Disabled,
-                            onSelect = { j -> updateGesture(AppDrawerFlag.SetSwipeRight, j) }
+                            open = open,
+                            onChange = onChange,
+                            currentAction = prefs.swipeRightAction,
+                            onSelect = { j -> updateGesture(AppDrawerFlag.SetSwipeRight, j) },
+                            appLabel = prefs.appSwipeRight.appLabel.ifEmpty { "Phone" },
                         )
                     },
                     { open, onChange ->
-                        SettingsItem(
-                            open = open,
-                            onChange = onChange,
+                        SettingsGestureItem(
                             title = stringResource(R.string.swipe_down_app),
-                            currentSelection = remember { mutableStateOf(prefs.swipeDownAction) },
-                            currentSelectionName = if (prefs.swipeDownAction == Action.OpenApp) "Open ${prefs.appSwipeDown.appLabel}" else prefs.swipeDownAction.string(),
-                            values = Action.values(),
-                            active = prefs.swipeDownAction != Action.Disabled,
-                            onSelect = { j -> updateGesture(AppDrawerFlag.SetSwipeDown, j) }
+                            open = open,
+                            onChange = onChange,
+                            currentAction = prefs.swipeDownAction,
+                            onSelect = { j -> updateGesture(AppDrawerFlag.SetSwipeDown, j) },
+                            appLabel = prefs.appSwipeDown.appLabel,
                         )
                     },
                     { open, onChange ->
-                        SettingsItem(
+                        SettingsGestureItem(
+                            title = stringResource(R.string.swipe_up_app),
                             open = open,
                             onChange = onChange,
+                            currentAction = prefs.swipeUpAction,
+                            onSelect = { j -> updateGesture(AppDrawerFlag.SetSwipeUp, j) },
+                            appLabel = prefs.appSwipeUp.appLabel,
+                        )
+                    },
+                    { open, onChange ->
+                        SettingsGestureItem(
                             title = stringResource(R.string.clock_click_app),
-                            currentSelection = remember { mutableStateOf(prefs.clickClockAction) },
-                            currentSelectionName = if (prefs.clickClockAction == Action.OpenApp) "Open ${prefs.appClickClock.appLabel}" else prefs.clickClockAction.string(),
-                            values = Action.values(),
-                            active = prefs.clickClockAction != Action.Disabled,
+                            open = open,
+                            onChange = onChange,
+                            currentAction = prefs.clickClockAction,
                             onSelect = { j -> updateGesture(AppDrawerFlag.SetClickClock, j) },
+                            appLabel = prefs.appClickClock.appLabel.ifEmpty { "Clock" },
                         )
                     },
                     { open, onChange ->
-                        SettingsItem(
+                        SettingsGestureItem(
+                            title = stringResource(R.string.date_click_app),
                             open = open,
                             onChange = onChange,
-                            title = stringResource(R.string.date_click_app),
-                            currentSelection = remember { mutableStateOf(prefs.clickDateAction) },
-                            currentSelectionName = if (prefs.clickDateAction == Action.OpenApp) "Open ${prefs.appClickDate.appLabel}" else prefs.clickDateAction.string(),
-                            values = Action.values(),
-                            active = prefs.clickDateAction != Action.Disabled,
+                            currentAction = prefs.clickDateAction,
                             onSelect = { j -> updateGesture(AppDrawerFlag.SetClickDate, j) },
+                            appLabel = prefs.appClickDate.appLabel.ifEmpty { "Calendar" },
                         )
                     },
-                    { _, onChange ->
-                        SettingsToggle(
-                            title = stringResource(R.string.double_tap_to_lock_screen),
+                    { open, onChange ->
+                        SettingsGestureItem(
+                            title = stringResource(R.string.double_tap),
+                            open = open,
                             onChange = onChange,
-
-                            state = remember { mutableStateOf(prefs.lockModeOn) }
-                        ) { toggleLockMode() }
+                            currentAction = prefs.doubleTapAction,
+                            onSelect = { j -> updateGesture(AppDrawerFlag.SetDoubleTap, j) },
+                            appLabel = prefs.appClickDate.appLabel
+                        )
                     }
                 )
             )
@@ -480,22 +482,17 @@ class SettingsFragment : Fragment() {
     }
 
     private fun updateGesture(flag: AppDrawerFlag, action: Action) {
-        if ((flag == AppDrawerFlag.SetSwipeLeft)) {
-            prefs.swipeLeftAction = action
-        }
-        if ((flag == AppDrawerFlag.SetSwipeRight)) {
-            prefs.swipeRightAction = action
-        }
-        if ((flag == AppDrawerFlag.SetSwipeDown)) {
-            prefs.swipeDownAction = action
-        }
-
-        if ((flag == AppDrawerFlag.SetClickClock)) {
-            prefs.clickClockAction = action
-        }
-
-        if ((flag == AppDrawerFlag.SetClickDate)) {
-            prefs.clickClockAction = action
+        when (flag){
+            AppDrawerFlag.SetSwipeLeft -> prefs.swipeLeftAction = action
+            AppDrawerFlag.SetSwipeRight -> prefs.swipeRightAction = action
+            AppDrawerFlag.SetSwipeDown -> prefs.swipeDownAction = action
+            AppDrawerFlag.SetSwipeUp -> prefs.swipeUpAction = action
+            AppDrawerFlag.SetClickClock -> prefs.clickClockAction = action
+            AppDrawerFlag.SetClickDate -> prefs.clickDateAction = action
+            AppDrawerFlag.SetDoubleTap -> prefs.doubleTapAction = action
+            AppDrawerFlag.SetHomeApp,
+            AppDrawerFlag.HiddenApps,
+            AppDrawerFlag.LaunchApp -> {}
         }
 
         when(action) {

@@ -76,7 +76,6 @@
 	<string name="disable">Καθιστώ ανίκανο</string>
 	<string name="enabled">Ενεργοποιημένο</string>
 	<string name="disabled">άτομα με ειδικές ανάγκες</string>
-	<string name="home_layout_alignment">Ευθυγράμμιση διάταξης σπιτιού</string>
     <string name="open_app">Ανοίξτε την εφαρμογή</string>
 	<string name="lock_screen">Κλείδωμα οθόνης</string>
 	<string name="show_notifications">Εμφάνιση ειδοποίησης</string>

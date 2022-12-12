@@ -76,7 +76,6 @@
 	<string name="disable">ปิดการใช้งาน</string>
 	<string name="enabled">เปิดใช้งาน</string>
 	<string name="disabled">พิการ</string>
-	<string name="home_layout_alignment">การจัดตำแหน่งบ้าน</string>
     <string name="open_app">เปิดแอพ</string>
 	<string name="lock_screen">ล็อกหน้าจอ</string>
 	<string name="show_notifications">แสดงการแจ้งเตือน</string>

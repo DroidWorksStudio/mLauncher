@@ -76,7 +76,6 @@
 	<string name="disable">Inaktivera</string>
 	<string name="enabled">Aktiverad</string>
 	<string name="disabled">Inaktiverad</string>
-	<string name="home_layout_alignment">Hem layout anpassning</string>
     <string name="open_app">Öppna App</string>
 	<string name="lock_screen">Låsskärm</string>
 	<string name="show_notifications">Visa notifikation</string>

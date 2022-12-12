@@ -76,7 +76,6 @@
 	<string name="disable">disattivare</string>
 	<string name="enabled">Abilitato</string>
 	<string name="disabled">Disabilitato</string>
-	<string name="home_layout_alignment">Allineamento del layout domestico</string>
     <string name="open_app">Apri l\'app</string>
 	<string name="lock_screen">Blocca schermo</string>
 	<string name="show_notifications">Mostra notifica</string>

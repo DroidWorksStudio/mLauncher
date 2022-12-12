@@ -76,7 +76,6 @@
 	<string name="disable">Slökkva</string>
 	<string name="enabled">Virkt</string>
 	<string name="disabled">Öryrkjar</string>
-	<string name="home_layout_alignment">Skipulag heimilis</string>
     <string name="open_app">Opnaðu App</string>
 	<string name="lock_screen">Læsa skjá</string>
 	<string name="show_notifications">Sýna tilkynningu</string>

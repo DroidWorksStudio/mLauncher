@@ -76,7 +76,6 @@
 	<string name="disable">Deaktiver</string>
 	<string name="enabled">Aktivert</string>
 	<string name="disabled">Funksjonshemmet</string>
-	<string name="home_layout_alignment">Innretting av hjemmet</string>
     <string name="open_app">Åpne appen</string>
 	<string name="lock_screen">Låseskjerm</string>
 	<string name="show_notifications">Vis varsling</string>

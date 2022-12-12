@@ -58,8 +58,7 @@
 	<string name="home_alignment_bottom">Donji početni zaslon aplikacija</string>
 	<string name="save">Uštedjeti</string>
 	<string name="lock_home_apps">Zaključaj aplikacije</string>
-	<string name="home_layout_alignment">Usklađivanje rasporeda kuće</string>
-	<string name="swipe_down_app">Aplikacija za povlačenje prema dolje</string>
+    <string name="swipe_down_app">Aplikacija za povlačenje prema dolje</string>
 	<string name="disabled">Onemogućeno</string>
 	<string name="enabled">Omogućeno</string>
 	<string name="disable">Onemogući</string>
