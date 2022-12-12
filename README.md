@@ -58,13 +58,11 @@ We try to balance customizability and minimalization well still being simple :)<
 ## Contribute
 
 - If you are unhappy with any part of the app or feel like missing something, you can open a pull request or an [**issue**](https://github.com/HeCodes2Much/mLauncher/issues/new/choose) as you like.
+  - Please go through the issues marked as `Bug report`, `Crash report` or `Feature request`.
+  - Please can we discuss before sending pull requests.
+  - Make pull requests to `main` branch.
 - Any help in translating mLauncher into other languages is greatly appreciated. If you don't know how to perform a pull request, feel free to check out our dedicated [**Wiki**](https://github.com/HeCodes2Much/mLauncher/wiki).
 
-## Pull Requests
-
-- Please go through the issues marked as `Bug report`, `Crash report` or `Feature request`
-- Please let's discuss before sending pull requests
-- Make pull requests to `main` branch
 
 
 ## License
