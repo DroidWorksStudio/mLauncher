@@ -1,9 +1,10 @@
 ---
 name: Bug report
 about: Create a report to help mLauncher improve
-title: ''
-labels: bug
+title: "[Bug Report]"
+labels: Bug report
 assignees: ''
+
 ---
 
 - [ ] I have searched existing issues for this bug.
