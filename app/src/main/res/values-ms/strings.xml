@@ -40,7 +40,7 @@
 	<string name="save">Jimat</string>
 	<string name="app_drawer_tips">Petua: Leret ke bawah untuk mengetepikan. Tatal untuk menyembunyikan papan kekunci.</string>
 	<string name="okay">baik</string>
-	<string name="double_tap_lock_is_enabled_message">Jika kunci ketik dua kali melumpuhkan cap jari atau buka kunci muka, buka tetapan pelancar, ketik pada \\'percubaan\\' dan ikut arahan. Terima kasih.</string>
+	<string name="double_tap_lock_is_enabled_message">Jika kunci ketik dua kali melumpuhkan cap jari atau buka kunci muka, buka tetapan pelancar, ketik pada \'percubaan\' dan ikut arahan. Terima kasih.</string>
 	<string name="triple_tap_lock_message">Cara ia berfungsi:\nSetelah anda ketik dua kali, skrin akan menjadi gelap dan telefon akan terkunci sendiri dalam masa 5 saat.\n\nSepanjang masa ini, anda boleh ketik dua kali untuk<b>buka kunci</b>atau ketik tiga kali pada bila-bila masa untuk mengunci telefon sepenuhnya dengan segera.\n\nNota: MATI ini dahulu jika anda memutuskan untuk memadamkan mlauncher. Terima kasih.</string>
 	<string name="auto_show_keyboard">Papan kekunci paparan automatik</string>
 	<string name="hide">Sembunyi</string>

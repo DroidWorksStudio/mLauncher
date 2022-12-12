@@ -40,7 +40,7 @@
 	<string name="save">Gemme</string>
 	<string name="app_drawer_tips">Tip: Stryg ned for at afvise. Rul for at skjule tastaturet.</string>
 	<string name="okay">okay</string>
-	<string name="double_tap_lock_is_enabled_message">Hvis dobbelttryklås deaktiverer fingeraftryk eller ansigtslås, skal du åbne mlauncher-indstillinger, trykke på \\'eksperimentel\\' og følge instruktionerne. Tak skal du have.</string>
+	<string name="double_tap_lock_is_enabled_message">Hvis dobbelttryklås deaktiverer fingeraftryk eller ansigtslås, skal du åbne mlauncher-indstillinger, trykke på \'eksperimentel\' og følge instruktionerne. Tak skal du have.</string>
 	<string name="triple_tap_lock_message">Sådan fungerer det:\nNår du trykker to gange, bliver skærmen mørk, og telefonen låser sig selv om 5 sekunder.\n\nI dette tidsrum kan du dobbelttrykke for at<b>låse op</b>eller tryk tre gange når som helst for at låse telefonen helt med det samme.\n\nBemærk: Slå denne FRA først, hvis du beslutter dig for at slette mlauncher. Tak skal du have.</string>
 	<string name="auto_show_keyboard">Auto show tastatur</string>
 	<string name="hide">Skjule</string>

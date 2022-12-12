@@ -40,7 +40,7 @@
 	<string name="save">Salva</string>
 	<string name="app_drawer_tips">Suggerimento: scorri verso il basso per ignorare. Scorri per nascondere la tastiera.</string>
 	<string name="okay">Bene</string>
-	<string name="double_tap_lock_is_enabled_message">Se il doppio tocco di blocco disabilita l\'impronta digitale o lo sblocco facciale, apri le impostazioni di mlauncher, tocca \\'sperimentale\\' e segui le istruzioni. Grazie.</string>
+	<string name="double_tap_lock_is_enabled_message">Se il doppio tocco di blocco disabilita l\'impronta digitale o lo sblocco facciale, apri le impostazioni di mlauncher, tocca \'sperimentale\' e segui le istruzioni. Grazie.</string>
 	<string name="triple_tap_lock_message">Come funziona:\nDopo aver toccato due volte, lo schermo si oscurerà e il telefono si bloccherà in 5 secondi.\n\nDurante questo periodo, puoi toccare due volte per<b>sbloccare</b>oppure tocca tre volte in qualsiasi momento per bloccare completamente il telefono immediatamente.\n\nNota: disattiva prima questa opzione se decidi di eliminare mlauncher. Grazie.</string>
 	<string name="auto_show_keyboard">Tastiera di visualizzazione automatica</string>
 	<string name="hide">Nascondere</string>

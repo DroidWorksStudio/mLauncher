@@ -40,7 +40,7 @@
 	<string name="save">Ahorrar</string>
 	<string name="app_drawer_tips">Sugerencia: deslice hacia abajo para descartar. Desplácese para ocultar el teclado.</string>
 	<string name="okay">De acuerdo</string>
-	<string name="double_tap_lock_is_enabled_message">Si el bloqueo de doble toque desactiva la huella digital o el desbloqueo facial, abra la configuración de mlauncher, toque \\'experimental\\' y siga las instrucciones. Gracias.</string>
+	<string name="double_tap_lock_is_enabled_message">Si el bloqueo de doble toque desactiva la huella digital o el desbloqueo facial, abra la configuración de mlauncher, toque \'experimental\' y siga las instrucciones. Gracias.</string>
 	<string name="triple_tap_lock_message">Cómo funciona:\nUna vez que toque dos veces, la pantalla se oscurecerá y el teléfono se bloqueará automáticamente en 5 segundos.\n\nDurante este tiempo, puede tocar dos veces para<b>desbloquear</b>o toque tres veces en cualquier momento para bloquear completamente el teléfono de inmediato.\n\nNota: primero desactívelo si decide eliminar mlauncher. Gracias.</string>
 	<string name="auto_show_keyboard">Teclado de exhibición automática</string>
 	<string name="hide">Ocultar</string>

@@ -40,7 +40,7 @@
 	<string name="save">להציל</string>
 	<string name="app_drawer_tips">טיפ: החלק מטה כדי לסגור. גלול כדי להסתיר את המקלדת.</string>
 	<string name="okay">בסדר</string>
-	<string name="double_tap_lock_is_enabled_message">אם נעילת הקשה כפולה משביתה טביעת אצבע או ביטול נעילת פנים, פתח את הגדרות מלאנצ\'ר, הקש על \\'ניסיוני\\' ופעל לפי ההוראות. תודה.</string>
+	<string name="double_tap_lock_is_enabled_message">אם נעילת הקשה כפולה משביתה טביעת אצבע או ביטול נעילת פנים, פתח את הגדרות מלאנצ\'ר, הקש על \'ניסיוני\' ופעל לפי ההוראות. תודה.</string>
 	<string name="triple_tap_lock_message">איך זה עובד:\nברגע שתקישו פעמיים, המסך יחשיך והטלפון יינעל תוך 5 שניות.\n\nבמהלך הזמן הזה, תוכלו להקיש פעמיים כדי<b>לבטל נעילה</b>או הקש שלוש פעמים בכל עת כדי לנעול את הטלפון באופן מלא.\n\nהערה: כבה תחילה את זה אם תחליט למחוק את ה-Mlauncher. תודה.</string>
 	<string name="auto_show_keyboard">מקלדת להצגה אוטומטית</string>
 	<string name="hide">להתחבא</string>

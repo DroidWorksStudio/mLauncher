@@ -40,7 +40,7 @@
 	<string name="save">Opslaan</string>
 	<string name="app_drawer_tips">Tip: veeg omlaag om te sluiten. Scroll om het toetsenbord te verbergen.</string>
 	<string name="okay">Oké</string>
-	<string name="double_tap_lock_is_enabled_message">Als dubbele tikvergrendeling vingerafdruk- of gezichtsontgrendeling uitschakelt, open dan de mlauncher-instellingen, tik op \\'experimenteel\\' en volg de instructies. Dank je.</string>
+	<string name="double_tap_lock_is_enabled_message">Als dubbele tikvergrendeling vingerafdruk- of gezichtsontgrendeling uitschakelt, open dan de mlauncher-instellingen, tik op \'experimenteel\' en volg de instructies. Dank je.</string>
 	<string name="triple_tap_lock_message">Hoe het werkt:\nZodra je dubbeltik, wordt het scherm donker en wordt de telefoon binnen 5 seconden vergrendeld.\n\nTijdens deze tijd kun je dubbeltikken om<b>ontgrendelen</b>of tik driemaal om de telefoon onmiddellijk volledig te vergrendelen.\n\nOpmerking: schakel dit eerst UIT als u besluit mlauncher te verwijderen. Dank je.</string>
 	<string name="auto_show_keyboard">Autoshow-toetsenbord</string>
 	<string name="hide">Verbergen</string>
