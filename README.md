@@ -1,13 +1,13 @@
-<h1 align="center">Based on <a href="https://github.com/tanujnotes/Olauncher">OlauncherAF</a>. Minimal and clutter free</h1>
+<h1 align="center">Based on <a href="https://github.com/tanujnotes/Olauncher">OlauncherAF</a>. Minimal and clean of back links</h1>
 </p><h3 align="center">mLauncher is a minimal app launcher for Android.
 
-We try to balance customizability and clutter :)</h3>
+We try to balance customizability and minimalization well still being simple :)</h3>
 
 <img src="art/Header.png" width="1000">
 
 # Forked with extra features
 
-- Removed clutter, like ads and links
+- Removed bloat, like ads and links
 - You can rename apps in the app-drawer _(Renaming apps on the home screen is already supported. Just long-click on an app on the home screen and start typing)_
 - Ability to change the app or action when clicking on the clock
 - Ability to change the app or action when clicking on the date
@@ -59,6 +59,13 @@ We try to balance customizability and clutter :)</h3>
 
 - If you are unhappy with any part of the app or feel like missing something, you can open a pull request or an [**issue**](https://github.com/HeCodes2Much/mLauncher/issues/new/choose) as you like.
 - Any help in translating mLauncher into other languages is greatly appreciated. If you don't know how to perform a pull request, feel free to check out our dedicated [**Wiki**](https://github.com/HeCodes2Much/mLauncher/wiki).
+
+## Pull Requests
+
+- Please go through the issues marked as `Bug report`, `Crash report` or `Feature request`
+- Please let's discuss before sending pull requests
+- Make pull requests to `main` branch
+
 
 ## License
 
