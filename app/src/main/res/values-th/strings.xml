@@ -1,0 +1,83 @@
+<resources>
+	<string name="app_name">mLauncher</string>
+	<string name="app">แอป</string>
+	<string name="set_as_default_launcher">ตั้งเป็นตัวเรียกใช้งานเริ่มต้น</string>
+	<string name="app_text_color">สีข้อความ</string>
+	<string name="double_tap_to_lock_screen">แตะสองครั้งเพื่อล็อค</string>
+	<string name="experimental_">(ทดลอง)</string>
+	<string name="admin_permission_message">Mlauncher สัญญาว่าจะใช้การอนุญาตล็อคหน้าจออย่างมีความรับผิดชอบ</string>
+	<string name="about">เกี่ยวกับ</string>
+	<string name="off">ปิด</string>
+	<string name="on">บน</string>
+	<string name="black">สีดำ</string>
+	<string name="white">สีขาว</string>
+	<string name="change_default_launcher">เปลี่ยนตัวเรียกใช้งานเริ่มต้น</string>
+	<string name="long_press_for_settings">กดที่ใดก็ได้ค้างไว้เพื่อตั้งค่า</string>
+	<string name="swipe_up_for_apps">ปัดขึ้นสำหรับแอปทั้งหมด</string>
+	<string name="apps_on_home_screen">จำนวนทางลัด</string>
+	<string name="left">ซ้าย</string>
+	<string name="right">ถูกต้อง</string>
+	<string name="center">ศูนย์กลาง</string>
+	<string name="home_alignment">หน้าจอหลักของแอพ</string>
+	<string name="home_alignment_bottom">ด้านล่างหน้าจอหลักของแอพ</string>
+	<string name="clock_alignment">นาฬิกาและวันที่</string>
+	<string name="drawer_alignment">แอปในลิ้นชักแอป</string>
+	<string name="swipe_left_app">ปัดไปทางซ้าย</string>
+	<string name="swipe_right_app">ปัดไปทางขวา</string>
+	<string name="swipe_down_app">เลื่อนลง</string>
+	<string name="clock_click_app">คลิกนาฬิกา</string>
+	<string name="date_click_app">วันที่คลิก</string>
+	<string name="_0" translatable="false">0</string>
+	<string name="_1" translatable="false">1</string>
+	<string name="_2" translatable="false">2</string>
+	<string name="_3" translatable="false">3</string>
+	<string name="_4" translatable="false">4</string>
+	<string name="_5" translatable="false">5</string>
+	<string name="_6" translatable="false">6</string>
+	<string name="_7" translatable="false">7</string>
+	<string name="_8" translatable="false">8</string>
+	<string name="commit">ให้สัญญา</string>
+	<string name="save">บันทึก</string>
+	<string name="app_drawer_tips">เคล็ดลับ: ปัดลงเพื่อปิด เลื่อนเพื่อซ่อนแป้นพิมพ์</string>
+	<string name="okay">ตกลง</string>
+	<string name="double_tap_lock_is_enabled_message">หากการล็อกการแตะสองครั้งปิดใช้งานการปลดล็อกด้วยลายนิ้วมือหรือใบหน้า ให้เปิดการตั้งค่าตัวเรียกใช้ แตะ \\'ทดลอง\\' แล้วทำตามคำแนะนำ ขอขอบคุณ.</string>
+	<string name="triple_tap_lock_message">วิธีการทำงาน:\nเมื่อคุณแตะสองครั้ง หน้าจอจะมืดและโทรศัพท์จะล็อกเองใน 5 วินาที\n\nในระหว่างนี้ คุณสามารถแตะสองครั้งเพื่อ<b>ปลดล็อค</b>หรือแตะสามครั้งได้ทุกเมื่อเพื่อล็อกโทรศัพท์โดยสมบูรณ์ทันที\n\nหมายเหตุ: ให้ปิดตัวเลือกนี้ก่อนหากคุณตัดสินใจจะลบ mlauncher ขอขอบคุณ.</string>
+	<string name="auto_show_keyboard">แป้นพิมพ์แสดงอัตโนมัติ</string>
+	<string name="hide">ซ่อน</string>
+	<string name="status_bar">แสดงแถบสถานะ</string>
+	<string name="rename">เปลี่ยนชื่อ</string>
+	<string name="show_time">เวลาแสดง</string>
+	<string name="show_date">แสดงวันที่</string>
+	<string name="lock_home_apps">ล็อคแอพ</string>
+	<string name="extend_home_apps_area">ขยายพื้นที่ที่คลิกได้บนโฮมแอพ</string>
+	<string name="appearance">รูปร่าง</string>
+	<string name="gestures">ท่าทาง</string>
+	<string name="homescreen">หน้าจอหลัก</string>
+	<string name="alignment">การจัดตำแหน่ง</string>
+	<string name="theme_mode">โหมดธีม</string>
+	<string name="system_default">ระบบ</string>
+	<string name="dark">มืด</string>
+	<string name="light">แสงสว่าง</string>
+	<string name="double_tap_lock_uninstall_message">แตะสองครั้งเพื่อเปิดใช้การล็อก\n\nหมายเหตุ: ปิดตัวเลือกนี้ก่อนหากคุณตัดสินใจจะลบ mlauncher</string>
+	<string name="accessibility_service_description">ต้องได้รับอนุญาตการเข้าถึงเพื่อเปิดใช้งานการแตะสองครั้งเพื่อล็อค ข้อมูลใด ๆ ที่ได้รับจากบริการจะไม่ออกจากอุปกรณ์ของคุณ</string>
+	<string name="lock_layout_description">ล็อคคำอธิบายเค้าโครงเพื่อใช้รหัสเฉพาะเพื่อล็อคหน้าจอ</string>
+	<string name="open">เปิดลิ้งค์</string>
+	<string name="copy">สำเนา</string>
+	<string name="close">ปิด I</string>
+	<string name="app_language">ภาษาอินเทอร์เฟซ</string>
+	<string name="lang_system">ระบบ</string>
+	<string name="app_text_size">ขนาดตัวอักษร</string>
+	<string name="drawer_list_empty_hint">ไม่พบแอป</string>
+	<string name="hidden_apps">แอพที่ซ่อนอยู่</string>
+	<string name="show">แสดง</string>
+	<string name="reset">รีเซ็ต</string>
+	<string name="cancel">ยกเลิก</string>
+	<string name="enable">เปิดใช้งาน</string>
+	<string name="disable">ปิดการใช้งาน</string>
+	<string name="enabled">เปิดใช้งาน</string>
+	<string name="disabled">พิการ</string>
+	<string name="home_layout_alignment">การจัดตำแหน่งบ้าน</string>
+    <string name="open_app">เปิดแอพ</string>
+	<string name="lock_screen">ล็อกหน้าจอ</string>
+	<string name="show_notifications">แสดงการแจ้งเตือน</string>
+</resources>

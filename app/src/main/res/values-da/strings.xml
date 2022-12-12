@@ -1,0 +1,83 @@
+<resources>
+	<string name="app_name">mLauncher</string>
+	<string name="app">App</string>
+	<string name="set_as_default_launcher">Indstil som standard launcher</string>
+	<string name="app_text_color">Tekstfarve</string>
+	<string name="double_tap_to_lock_screen">Tryk to gange for at låse</string>
+	<string name="experimental_">(eksperimentel)</string>
+	<string name="admin_permission_message">mlauncher lover at bruge låseskærmens tilladelse ansvarligt.</string>
+	<string name="about">Om</string>
+	<string name="off">Af</string>
+	<string name="on">På</string>
+	<string name="black">Sort</string>
+	<string name="white">hvid</string>
+	<string name="change_default_launcher">Skift standard launcher</string>
+	<string name="long_press_for_settings">Langt tryk hvor som helst for indstillinger</string>
+	<string name="swipe_up_for_apps">Stryg op for alle apps</string>
+	<string name="apps_on_home_screen">Antal genveje</string>
+	<string name="left">Venstre</string>
+	<string name="right">Ret</string>
+	<string name="center">Centrum</string>
+	<string name="home_alignment">Apps startskærm</string>
+	<string name="home_alignment_bottom">Apps startskærm nederst</string>
+	<string name="clock_alignment">Ur og dato</string>
+	<string name="drawer_alignment">Apps i app-skuffen</string>
+	<string name="swipe_left_app">Stryg til venstre</string>
+	<string name="swipe_right_app">Stryg til højre</string>
+	<string name="swipe_down_app">Stryg ned</string>
+	<string name="clock_click_app">Klik på uret</string>
+	<string name="date_click_app">Dato klik</string>
+	<string name="_0" translatable="false">0</string>
+	<string name="_1" translatable="false">1</string>
+	<string name="_2" translatable="false">2</string>
+	<string name="_3" translatable="false">3</string>
+	<string name="_4" translatable="false">4</string>
+	<string name="_5" translatable="false">5</string>
+	<string name="_6" translatable="false">6</string>
+	<string name="_7" translatable="false">7</string>
+	<string name="_8" translatable="false">8</string>
+	<string name="commit">Begå</string>
+	<string name="save">Gemme</string>
+	<string name="app_drawer_tips">Tip: Stryg ned for at afvise. Rul for at skjule tastaturet.</string>
+	<string name="okay">okay</string>
+	<string name="double_tap_lock_is_enabled_message">Hvis dobbelttryklås deaktiverer fingeraftryk eller ansigtslås, skal du åbne mlauncher-indstillinger, trykke på \\'eksperimentel\\' og følge instruktionerne. Tak skal du have.</string>
+	<string name="triple_tap_lock_message">Sådan fungerer det:\nNår du trykker to gange, bliver skærmen mørk, og telefonen låser sig selv om 5 sekunder.\n\nI dette tidsrum kan du dobbelttrykke for at<b>låse op</b>eller tryk tre gange når som helst for at låse telefonen helt med det samme.\n\nBemærk: Slå denne FRA først, hvis du beslutter dig for at slette mlauncher. Tak skal du have.</string>
+	<string name="auto_show_keyboard">Auto show tastatur</string>
+	<string name="hide">Skjule</string>
+	<string name="status_bar">Vis statuslinje</string>
+	<string name="rename">Omdøb</string>
+	<string name="show_time">Vis tid</string>
+	<string name="show_date">Vis dato</string>
+	<string name="lock_home_apps">Lås apps</string>
+	<string name="extend_home_apps_area">Udvid det klikbare område på hjemmeapps</string>
+	<string name="appearance">Udseende</string>
+	<string name="gestures">Gestik</string>
+	<string name="homescreen">Startskærmen</string>
+	<string name="alignment">Justering</string>
+	<string name="theme_mode">Tematilstand</string>
+	<string name="system_default">System</string>
+	<string name="dark">Mørk</string>
+	<string name="light">Lys</string>
+	<string name="double_tap_lock_uninstall_message">Tryk to gange for at låse aktiveret.\n\nBemærk: Slå denne FRA først, hvis du beslutter dig for at slette mlauncher.</string>
+	<string name="accessibility_service_description">Tilgængelighedstilladelsen er påkrævet for at aktivere dobbelttryk for at låse. Data erhvervet af tjenesten forlader ikke din enhed.</string>
+	<string name="lock_layout_description">lås layout beskrivelse, der skal bruges et unikt id til at låse skærmen</string>
+	<string name="open">Åben link</string>
+	<string name="copy">Kopi</string>
+	<string name="close">Tæt</string>
+	<string name="app_language">Interface sprog</string>
+	<string name="lang_system">System</string>
+	<string name="app_text_size">Tekststørrelse</string>
+	<string name="drawer_list_empty_hint">Ingen apps fundet</string>
+	<string name="hidden_apps">Skjulte apps</string>
+	<string name="show">At vise</string>
+	<string name="reset">Nulstil</string>
+	<string name="cancel">Afbestille</string>
+	<string name="enable">Aktiver</string>
+	<string name="disable">Deaktiver</string>
+	<string name="enabled">Aktiveret</string>
+	<string name="disabled">handicappet</string>
+	<string name="home_layout_alignment">Indretning af boligindretning</string>
+    <string name="open_app">Åbn App</string>
+	<string name="lock_screen">Låse skærm</string>
+	<string name="show_notifications">Vis meddelelse</string>
+</resources>

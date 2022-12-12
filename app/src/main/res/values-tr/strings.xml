@@ -1,12 +1,12 @@
 <resources>
-	<string name="app_name">mLauncher</string>
+	<string name="app_name">mL başlatıcı</string>
 	<string name="app">Uygulama</string>
 	<string name="set_as_default_launcher">Varsayılan başlatıcı olarak ayarla</string>
-	<string name="app_text_color">Metin rengi</string>
+	<string name="app_text_color">metin rengi</string>
 	<string name="double_tap_to_lock_screen">Kilitlemek için iki kez dokunun</string>
 	<string name="experimental_">(deneysel)</string>
 	<string name="admin_permission_message">mlauncher, kilit ekranı iznini sorumlu bir şekilde kullanmayı vaat ediyor.</string>
-	<string name="about">Hakkımızda</string>
+	<string name="about">Hakkında</string>
 	<string name="off">Kapalı</string>
 	<string name="on">Açık</string>
 	<string name="black">Siyah</string>
@@ -14,58 +14,70 @@
 	<string name="change_default_launcher">Varsayılan başlatıcıyı değiştir</string>
 	<string name="long_press_for_settings">Ayarlar için herhangi bir yere uzun basın</string>
 	<string name="swipe_up_for_apps">Tüm uygulamalar için yukarı kaydırın</string>
-	<string name="apps_on_home_screen">Ana ekrandaki uygulama sayısı</string>
-	<string name="left">Sol</string>
-	<string name="right">Sağ</string>
-	<string name="center">Orta</string>
-	<string name="home_alignment">Uygulama hizalaması</string>
-	<string name="home_alignment_bottom">Ana ekran uygulamalarını alta yerleştir</string>
-	<string name="clock_alignment">Saat hizalaması</string>
-	<string name="drawer_alignment">Uygulama çekmecesi hizalaması</string>
-	<string name="swipe_left_app">Uygulamayı sola kaydırın</string>
-	<string name="swipe_right_app">Uygulamayı sağa kaydırın</string>
-	<string name="clock_click_app">Saat tıklama uygulaması</string>
-	<string name="date_click_app">Tarih tıklama uygulaması</string>
-	<string name="save">Kaydet</string>
+	<string name="apps_on_home_screen">kısayol sayısı</string>
+	<string name="left">Ayrıldı</string>
+	<string name="right">Doğru</string>
+	<string name="center">merkez</string>
+	<string name="home_alignment">Uygulama ana ekranı</string>
+	<string name="home_alignment_bottom">Uygulamalar ana ekranının alt kısmı</string>
+	<string name="clock_alignment">Saat ve tarih</string>
+	<string name="drawer_alignment">Uygulama çekmecesindeki uygulamalar</string>
+	<string name="swipe_left_app">Sola sürükle</string>
+	<string name="swipe_right_app">Sağa kaydır</string>
+	<string name="swipe_down_app">Aşagı kaydır</string>
+	<string name="clock_click_app">Saat tıklaması</string>
+	<string name="date_click_app">Tarih tıklaması</string>
+	<string name="_0" translatable="false">0</string>
+	<string name="_1" translatable="false">1</string>
+	<string name="_2" translatable="false">2</string>
+	<string name="_3" translatable="false">3</string>
+	<string name="_4" translatable="false">4</string>
+	<string name="_5" translatable="false">5</string>
+	<string name="_6" translatable="false">6</string>
+	<string name="_7" translatable="false">7</string>
+	<string name="_8" translatable="false">8</string>
+	<string name="commit">İşlemek</string>
+	<string name="save">Kaydetmek</string>
 	<string name="app_drawer_tips">İpucu: Kapatmak için aşağı kaydırın. Klavyeyi gizlemek için kaydırın.</string>
-	<string name="okay">Tamam</string>
-	<string name="double_tap_lock_is_enabled_message">Çift dokunma kilidi parmak izini veya yüzle kilit açmayı devre dışı bırakırsa, mlauncher ayarlarını açın, \'deneysel\' üzerine dokunun ve talimatları izleyin. Teşekkürler.</string>
-	<string name="triple_tap_lock_message">Nasıl çalışır:\nÇift dokunduğunuzda ekran kararır ve telefon 5 saniye içinde kendini kilitler.\n\nBu süre boyunca, telefonu hemen tamamen kilitlemek için<b>	kilidini açmak</b>için iki kez veya istediğiniz zaman üç kez dokunabilirsiniz.\n\nNot: mlauncher ı silmeye karar verirseniz, önce bunu KAPATIN. Teşekkürler.</string>
+	<string name="okay">Peki</string>
+	<string name="double_tap_lock_is_enabled_message">Çift dokunma kilidi, parmak izi veya yüz tanıma kilidini devre dışı bırakırsa, başlatıcı ayarlarını açın, \\'deneysel\\'e dokunun ve talimatları izleyin. Teşekkürler.</string>
+	<string name="triple_tap_lock_message">Nasıl çalışır:\nÇift dokunduğunuzda ekran kararır ve telefon 5 saniye içinde kendini kilitler.\n\nBu süre zarfında, çift dokunarak<b>Kilidini aç</b>veya telefonu hemen tamamen kilitlemek için istediğiniz zaman üç kez hafifçe vurun.\n\nNot: Mlauncher\'ı silmeye karar verirseniz önce bunu KAPALI konuma getirin. Teşekkürler.</string>
 	<string name="auto_show_keyboard">Klavyeyi otomatik göster</string>
-	<string name="hide">Gizle</string>
+	<string name="hide">Saklamak</string>
 	<string name="status_bar">Durum çubuğunu göster</string>
-	<string name="rename">Yeniden adlandır</string>
-	<string name="show_time">Saati göster</string>
+	<string name="rename">Yeniden isimlendirmek</string>
+	<string name="show_time">Gösteri zamanı</string>
 	<string name="show_date">Tarihi göster</string>
-	<string name="lock_home_apps">Uygulamaları kilitle</string>
-	<string name="extend_home_apps_area">Genişletilmiş tıklanılabilir alan</string>
-	<string name="appearance">Görünüm</string>
-	<string name="gestures">Kaydırma</string>
-	<string name="homescreen">Ana Ekran</string>
+	<string name="lock_home_apps">Uygulamaları Kilitle</string>
+	<string name="extend_home_apps_area">Ev uygulamalarında tıklanabilir alanı genişletin</string>
+	<string name="appearance">Dış görünüş</string>
+	<string name="gestures">Mimik</string>
+	<string name="homescreen">Ana ekran</string>
 	<string name="alignment">Hizalama</string>
 	<string name="theme_mode">Tema modu</string>
 	<string name="system_default">Sistem</string>
-	<string name="dark">Koyu</string>
-	<string name="light">Açık</string>
-	<string name="double_tap_lock_uninstall_message">Kilitlemek için iki kez etkindir.\n\nNot: mlauncher ı silmeye karar verirseniz, önce bunu KAPATIN.</string>
-	<string name="accessibility_service_description">Kilitlemek için çift dokunmayı etkinleştirmek için erişilebilirlik izni gereklidir. Servis tarafından alınan hiçbir veri cihazınızdan çıkmayacak.</string>
-	<string name="lock_layout_description">ekranı kilitlemek için benzersiz bir kimlik kullanılacak kilit düzeni açıklaması</string>
+	<string name="dark">Karanlık</string>
+	<string name="light">Işık</string>
+	<string name="double_tap_lock_uninstall_message">Kilitlemek için çift dokunma etkinleştirildi.\n\nNot: Mlauncher\'ı silmeye karar verirseniz önce bunu KAPALI konuma getirin.</string>
+	<string name="accessibility_service_description">Kilitlemek için çift dokunmayı etkinleştirmek için erişilebilirlik izni gereklidir. Hizmet tarafından alınan hiçbir veri cihazınızdan ayrılmaz.</string>
+	<string name="lock_layout_description">kilit düzeni açıklaması, ekranı kilitlemek için benzersiz bir kimlik olarak kullanılacak</string>
 	<string name="open">Linki aç</string>
 	<string name="copy">Kopyala</string>
 	<string name="close">Kapat</string>
-	<string name="app_language">Arayüz dili</string>
+	<string name="app_language">Arayüz Dili</string>
 	<string name="lang_system">Sistem</string>
-	<string name="app_text_size">Yazı tipi boyutu</string>
+	<string name="app_text_size">Yazı Boyutu</string>
+	<string name="drawer_list_empty_hint">Uygulama bulunamadı</string>
 	<string name="hidden_apps">Gizli uygulamalar</string>
-	<string name="show">Göster</string>
+	<string name="show">Göstermek</string>
 	<string name="reset">Sıfırla</string>
 	<string name="cancel">İptal</string>
-	<string name="drawer_list_empty_hint">Uygulama bulunamadı</string>
 	<string name="enable">Olanak vermek</string>
-	<string name="swipe_down_app">Uygulamayı aşağı kaydırın</string>
-	<string name="commit">İşlemek</string>
-	<string name="disable">devre dışı bırakmak</string>
-	<string name="enabled">etkinleştirilmiş</string>
-	<string name="disabled">engelli</string>
+	<string name="disable">Devre dışı bırakmak</string>
+	<string name="enabled">Etkinleştirilmiş</string>
+	<string name="disabled">Engelli</string>
 	<string name="home_layout_alignment">Ev düzeni hizalaması</string>
+    <string name="open_app">Uygulamayı aç</string>
+	<string name="lock_screen">Kilit Ekranı</string>
+	<string name="show_notifications">Bildirimleri göster</string>
 </resources>

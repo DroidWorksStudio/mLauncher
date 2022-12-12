@@ -35,46 +35,70 @@ object Constants {
 
     enum class Language: EnumOption {
         System,
+        Albanian,
         Arabic,
         Chinese,
         Croatian,
+        Danish,
         Dutch,
         English,
         Estonian,
         French,
         German,
         Greek,
+        Hawaiian,
+        Hebrew,
+        Icelandic,
         Indonesian,
+        Irish,
         Italian,
         Korean,
+        Malay,
+        Malayalam,
+        Norwegian,
         Persian,
         Portuguese,
+        Polish,
+        Romanian,
         Russian,
         Spanish,
         Swedish,
+        Thai,
         Turkish;
 
         @Composable
         override fun string(): String {
             return when(this) {
                 System -> stringResource(R.string.lang_system)
+                Albanian -> "shqiptare"
                 Arabic -> "العربية"
                 Chinese -> "中文"
                 Croatian -> "Hrvatski"
                 Dutch -> "Nederlands"
+                Danish -> "dansk"
                 English -> "English"
                 Estonian -> "Eesti keel"
                 French -> "Français"
                 German -> "Deutsch"
                 Greek -> "Ελληνική"
+                Hawaiian -> "ʻŌlelo Hawaiʻi"
+                Hebrew -> "עִברִית"
+                Icelandic -> "íslenskur"
                 Indonesian -> "Bahasa Indonesia"
+                Irish -> "Gaeilge"
                 Italian -> "Italiano"
                 Korean -> "한국어"
+                Norwegian -> "norsk"
+                Malay -> "Melayu"
+                Malayalam -> "മലയാളം"
                 Persian -> "فارسی"
                 Portuguese -> "Português"
+                Polish -> "Polski"
+                Romanian -> "Română"
                 Russian -> "Русский"
                 Spanish -> "Español"
                 Swedish -> "Svenska"
+                Thai -> "ไทย"
                 Turkish -> "Türkçe"
             }
         }
@@ -83,23 +107,35 @@ object Constants {
     fun Language.value(): String {
         return when(this) {
             Language.System -> Locale.getDefault().language
+            Language.Albanian -> "sq"
             Language.Arabic -> "ar"
             Language.Chinese -> "cn"
             Language.Croatian -> "hr"
             Language.Dutch -> "nl"
+            Language.Danish -> "da"
             Language.English -> "en"
             Language.Estonian -> "et"
             Language.French -> "fr"
             Language.German -> "de"
             Language.Greek -> "gr"
+            Language.Hawaiian -> "haw"
+            Language.Hebrew -> "iw"
+            Language.Icelandic -> "is"
+            Language.Irish -> "ga"
             Language.Indonesian -> "id"
             Language.Italian -> "it"
             Language.Korean -> "ko"
+            Language.Norwegian -> "no"
+            Language.Malay -> "ms"
+            Language.Malayalam -> "ml"
             Language.Persian -> "fa"
             Language.Portuguese -> "pt"
+            Language.Polish -> "pl"
+            Language.Romanian -> "ro"
             Language.Russian -> "ru"
             Language.Spanish -> "es"
-            Language.Swedish -> "se"
+            Language.Swedish -> "sv"
+            Language.Thai -> "th"
             Language.Turkish -> "tr"
         }
     }
