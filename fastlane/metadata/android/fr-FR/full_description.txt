@@ -1,4 +1,4 @@
-Version modifié de <a href="https://f-droid.org/packages/app.olauncher/">Olauncher</a> parce que la version originale est encombrée, et buggé
+Version modifié de <a href="https://f-droid.org/packages/app.mlauncher/">mLauncher</a> parce que la version originale est encombrée, et buggé
     
 - Suppression de l'encombrement, comme les publicités et les liens
 - Vous pouvez renommer les applications dans le tiroir d'application _(Renommer les applications sur l'écran d'accueil est déjà pris en charge. Il suffit de faire un clic long sur une application sur l'écran d'accueil et de commencer à taper)

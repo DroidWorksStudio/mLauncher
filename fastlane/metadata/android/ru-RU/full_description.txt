@@ -1,4 +1,4 @@
-Форк <a href="https://f-droid.org/packages/app.olauncher/">Olauncher</a>
+Форк <a href="https://f-droid.org/packages/app.mlauncher/">mLauncher</a>
     
 - Больше настроек
 - Доработано переименование и скрытие приложений

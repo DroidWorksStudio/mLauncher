@@ -1,4 +1,4 @@
-    Cabang dari <a href="https://f-droid.org/packages/app.olauncher/">Olauncher</a>
+    Cabang dari <a href="https://f-droid.org/packages/app.mlauncher/">mLauncher</a>
     karena versi original yang berantakan
 
     Juga menambahkan beberapa fitur:
