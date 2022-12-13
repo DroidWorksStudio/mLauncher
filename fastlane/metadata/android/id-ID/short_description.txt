@@ -1,1 +1,1 @@
-Cabang dari Olauncher, -berantakan, +fitur
+Forked dari Olauncher, +minimalisasi, +kemampuan penyesuaian

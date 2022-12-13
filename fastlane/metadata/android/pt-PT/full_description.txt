@@ -1,19 +1,40 @@
-    Bifurcado de <a href="https://f-droid.org/packages/app.mlauncher/">mLauncher</a>
-    porque a versão original é desordenada
+Bifurcado do <a href="https://f-droid.org/packages/app.olauncher/">Olauncher</a> porque a versão original está confusa
 
-    Também adicionar alguns recursos
-    * Removido desordem
-    * Renomear aplicaçõesna lista normal de aplicações
-    * Alterar aplicação de relógio
-    * Alterar aplicação de calendário
-    * Suporte multilíngue:
-      * Chinese
-      * English
-      * French
-      * German
-      * Greek
-      * Italian
-      * Portuguese (Portugal)	
-      * Spanish
-      * Swedish
-      * Turkish
+- Inchaço removido, como anúncios e links
+- Você pode renomear aplicativos na gaveta de aplicativos _(Renomear aplicativos na tela inicial já é suportado. Basta clicar longamente em um aplicativo na tela inicial e começar a digitar)_
+- Capacidade de alterar o aplicativo ou ação ao clicar no relógio
+- Capacidade de alterar o aplicativo ou ação ao clicar na data
+- Capacidade de alterar o aplicativo ou a ação ao deslizar para cima, para baixo, para a esquerda ou para a direita
+- Alinhar relógio e data independentemente dos aplicativos domésticos
+- Altere o alinhamento de aplicativos na gaveta de aplicativos
+- Mudar TAMANHO DA FONTE
+- Muitas pessoas traduziram o aplicativo para os seguintes idiomas. Muito obrigado a vocês ❤️
+  - albanês
+  - árabe
+  - chinês
+  - croata
+  - dinamarquês
+  - Inglês
+  - estoniano
+  - Francês
+  - Alemão
+  - grego
+  - havaiano
+  - Hebraico
+  - Islandês
+  - indonésio
+  - irlandês
+  - italiano
+  - japonês
+  - Coreano
+  - Malaio
+  - malaiala
+  - Norueguês
+  - persa
+  - Português (europeu)
+  - polonês
+  - russo
+  - Espanhol
+  - sueco
+  - Tailandês
+  - Turco

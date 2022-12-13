@@ -1,19 +1,40 @@
-    Cabang dari <a href="https://f-droid.org/packages/app.mlauncher/">mLauncher</a>
-    karena versi original yang berantakan
+Bercabang dari <a href="https://f-droid.org/packages/app.olauncher/">Olauncher</a> karena versi aslinya berantakan
 
-    Juga menambahkan beberapa fitur:
-    * Kekacauan yang dihapus
-    * Ubah nama aplikasi di daftar aplikasi normal
-    * Ubah aplikasi jam
-    * Ubah aplikasi kalender
-    * Dukungan multibahasa:
-      * Bahasa Inggris
-      * Bahasa Italia
-      * Bahasa Jerman
-      * Bahasa Mandarin
-      * Bahasa Spanyol
-      * Bahasa Swedia
-      * Bahasa Turki
-      * Bahasa Perancis
-      * Bahasa Persia
-      * Bahasa Yunani
+- Penggembungan yang dihapus, seperti iklan dan tautan
+- Anda dapat mengganti nama aplikasi di laci aplikasi _(Mengganti nama aplikasi di layar beranda sudah didukung. Cukup klik lama aplikasi di layar beranda dan mulai mengetik)_
+- Kemampuan untuk mengubah aplikasi atau tindakan saat mengklik jam
+- Kemampuan untuk mengubah aplikasi atau tindakan saat mengklik tanggal
+- Kemampuan untuk mengubah aplikasi atau tindakan saat menggesek ke atas, bawah, kiri atau kanan
+- Sejajarkan jam dan tanggal secara terpisah dari aplikasi rumah
+- Ubah perataan aplikasi di laci aplikasi
+- Ubah ukuran font
+- Banyak orang telah menerjemahkan aplikasi ke bahasa berikut. Terima kasih banyak untukmu ❤️
+  - Albania
+  - Arab
+  - Cina
+  - Kroasia
+  - Orang Denmark
+  - Bahasa inggris
+  - Estonia
+  - Prancis
+  - Jerman
+  - Orang yunani
+  - Hawaii
+  - Ibrani
+  - Islandia
+  - Bahasa Indonesia
+  - Orang Irlandia
+  - Italia
+  - Jepang
+  - Korea
+  - Melayu
+  - Malayalam
+  - Norwegia
+  - Orang Persia
+  - Portugis (Eropa)
+  - Polandia
+  - Rusia
+  - Orang Spanyol
+  - Orang Swedia
+  - Thailand
+  - Turki

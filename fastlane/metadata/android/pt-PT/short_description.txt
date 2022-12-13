@@ -1,1 +1,1 @@
-Bifurcado de Olauncher, -desordem, +recursos
+Bifurcado do Olauncher, +minimalização, +personalização
