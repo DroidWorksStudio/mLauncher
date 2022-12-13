@@ -32,6 +32,7 @@ We try to balance customizability and minimalization well still being simple :)<
   - Indonesian
   - Irish
   - Italian
+  - Japanese
   - Korean
   - Malay
   - Malayalam
