@@ -1,7 +1,0 @@
-- Reorder Settings
-- Fix some visual bugs
-- Change app icon (Thanks @Illithy
-- Update and add languages
-- Fix ClickDate App (Thanks @oacar)
-
-This update changes and adds some strings and string values. If you are one of the translators and have the freetime, please update your language files :)
