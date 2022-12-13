@@ -1,0 +1,90 @@
+<resources>
+    <string name="app_name">mLauncher</string>
+    <string name="app">アプリ</string>
+    <string name="set_as_default_launcher">デフォルトのランチャーとして設定</string>
+    <string name="app_text_color">テキストの色</string>
+    <string name="double_tap_to_lock_screen">ダブルタップしてロック</string>
+    <string name="experimental_">(実験的)</string>
+    <string name="admin_permission_message">mLauncher は、責任を持ってロック画面のアクセス許可を使用することを約束します。</string>
+    <string name="about">約</string>
+    <string name="off">オフ</string>
+    <string name="on">の上</string>
+    <string name="black">黒</string>
+    <string name="white">白</string>
+    <string name="change_default_launcher">デフォルトのランチャーを変更する</string>
+    <string name="long_press_for_settings">任意の場所を長押しして設定します</string>
+    <string name="swipe_up_for_apps">すべてのアプリを上にスワイプ</string>
+    <string name="apps_on_home_screen">ショートカットの数</string>
+    <string name="left">左</string>
+    <string name="right">右</string>
+    <string name="center">中心</string>
+    <string name="home_alignment">アプリのホーム画面</string>
+    <string name="home_alignment_bottom">アプリのホーム画面下</string>
+    <string name="clock_alignment">時計と日付</string>
+    <string name="drawer_alignment">アプリ ドロワー内のアプリ</string>
+    <string name="swipe_left_app">左スワイプ</string>
+    <string name="swipe_right_app">右にスワイプ</string>
+    <string name="swipe_down_app">スワイプダウン</string>
+    <string name="swipe_up_app">上にスワイプする</string>
+    <string name="clock_click_app">時計をクリック</string>
+    <string name="date_click_app">日付をクリック</string>
+    <string name="double_tap">ダブルタップ</string>
+    <string name="_0" translatable="false">0</string>
+    <string name="_1" translatable="false">1</string>
+    <string name="_2" translatable="false">2</string>
+    <string name="_3" translatable="false">3</string>
+    <string name="_4" translatable="false">4</string>
+    <string name="_5" translatable="false">5</string>
+    <string name="_6" translatable="false">6</string>
+    <string name="_7" translatable="false">7</string>
+    <string name="_8" translatable="false">8</string>
+    <string name="commit">専念</string>
+    <string name="save">保存</string>
+    <string name="app_drawer_tips">ヒント: 下にスワイプして閉じます。スクロールしてキーボードを非表示にします。</string>
+    <string name="okay">わかった</string>
+    <string name="double_tap_lock_is_enabled_message">ダブルタップ ロックで指紋またはフェイス アンロックが無効になっている場合は、mLauncher 設定を開き、[実験的] をタップして、指示に従います。ありがとうございました。</string>
+    <string name="triple_tap_lock_message">使い方：
+        \nダブルタップすると、画面が暗くなり、5 秒後に電話がロックされます。
+        \n\nこの間、ダブルタップして<b>ロックを解除</b> またはいつでもトリプルタップして、電話をすぐに完全にロックします。
+        \n\n注: mLauncher を削除する場合は、まずこれをオフにしてください。ありがとうございました。</string>
+    <string name="auto_show_keyboard">キーボードを自動表示</string>
+    <string name="hide">隠れる</string>
+    <string name="status_bar">ステータスバーを表示</string>
+    <string name="rename">名前を変更</string>
+    <string name="show_time">ショータイム</string>
+    <string name="show_date">表示日</string>
+    <string name="lock_home_apps">アプリをロックする</string>
+    <string name="extend_home_apps_area">ホームアプリのクリック可能領域を拡張</string>
+    <string name="appearance">外観</string>
+    <string name="gestures">ジェスチャー</string>
+    <string name="homescreen">ホーム画面</string>
+    <string name="alignment">アライメント</string>
+    <string name="theme_mode">テーマモード</string>
+    <string name="system_default">システム</string>
+    <string name="dark">暗い</string>
+    <string name="light">光</string>
+    <string name="double_tap_lock_uninstall_message">ダブルタップするとロックが有効になります。
+        \n\n注: mLauncher を削除する場合は、まずこれをオフにしてください。</string>
+    <string name="accessibility_service_description">ダブルタップしてロックするには、アクセシビリティ権限が必要です。サービスによって取得されたデータは、デバイスから離れることはありません。</string>
+    <string name="lock_layout_description">画面をロックするための一意の ID を使用するロック レイアウトの説明</string>
+    <string name="open">リンクを開く</string>
+    <string name="copy">コピー</string>
+    <string name="close">近い</string>
+    <string name="app_language">インターフェイス言語</string>
+    <string name="lang_system">システム</string>
+    <string name="app_text_size">文字サイズ</string>
+    <string name="drawer_list_empty_hint">アプリが見つかりません</string>
+    <string name="hidden_apps">非表示のアプリ</string>
+    <string name="show">見せる</string>
+    <string name="reset">リセット</string>
+    <string name="cancel">キャンセル</string>
+    <string name="enable">有効</string>
+    <string name="disable">無効にする</string>
+    <string name="enabled">有効</string>
+    <string name="disabled">無効</string>
+    <string name="show_notifications">通知を表示</string>
+    <string name="show_app_list">アプリ一覧を表示</string>
+    <string name="open_app">アプリを開く</string>
+    <string name="lock_screen">ロック画面</string>
+
+</resources>
