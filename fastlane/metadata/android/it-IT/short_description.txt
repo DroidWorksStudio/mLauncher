@@ -1,2 +1,1 @@
-Derivato da Olauncher, +ordine, +funzioni
-
+Biforcato da Olauncher, +minimalizzazione, +personalizzazione
