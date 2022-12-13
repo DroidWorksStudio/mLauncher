@@ -54,6 +54,7 @@ object Constants {
         Indonesian,
         Irish,
         Italian,
+        Japanese,
         Korean,
         Malay,
         Malayalam,
@@ -89,6 +90,7 @@ object Constants {
                 Indonesian -> "Bahasa Indonesia"
                 Irish -> "Gaeilge"
                 Italian -> "Italiano"
+                Japanese -> "日本"
                 Korean -> "한국어"
                 Norwegian -> "norsk"
                 Malay -> "Melayu"
@@ -126,6 +128,7 @@ object Constants {
             Language.Irish -> "ga"
             Language.Indonesian -> "id"
             Language.Italian -> "it"
+            Language.Japanese -> "ja"
             Language.Korean -> "ko"
             Language.Norwegian -> "no"
             Language.Malay -> "ms"
