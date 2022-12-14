@@ -34,6 +34,7 @@ We try to balance customizability and minimalization well still being simple :)<
   - Italian
   - Japanese
   - Korean
+  - Lithuanian
   - Malay
   - Malayalam
   - Norwegian
