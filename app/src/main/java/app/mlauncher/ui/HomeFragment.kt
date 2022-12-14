@@ -120,7 +120,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
     private fun initSwipeTouchListener() {
         val context = requireContext()
-        binding.mainLayout.setOnTouchListener(getSwipeGestureListener(context))
+        binding.touchArea.setOnTouchListener(getSwipeGestureListener(context))
     }
 
     private fun initClickListeners() {
@@ -198,6 +198,12 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         }
     }
 
+    private fun openSwipeLeftApp() {
+        if (prefs.appSwipeLeft.appPackage.isNotEmpty())
+            launchApp(prefs.appSwipeLeft)
+        else openCameraApp(requireContext())
+    }
+
     private fun openSwipeRightApp() {
         if (prefs.appSwipeRight.appPackage.isNotEmpty())
             launchApp(prefs.appSwipeRight)
@@ -207,6 +213,12 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     private fun openSwipeDownApp() {
         if (prefs.appSwipeDown.appPackage.isNotEmpty())
             launchApp(prefs.appSwipeDown)
+        else openDialerApp(requireContext())
+    }
+
+    private fun openSwipeUpApp() {
+        if (prefs.appSwipeUp.appPackage.isNotEmpty())
+            launchApp(prefs.appSwipeUp)
         else openDialerApp(requireContext())
     }
 
@@ -220,12 +232,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         if (prefs.appClickDate.appPackage.isNotEmpty())
             launchApp(prefs.appClickDate)
         else openCalendar(requireContext())
-    }
-
-    private fun openSwipeLeftApp() {
-         if (prefs.appSwipeLeft.appPackage.isNotEmpty())
-            launchApp(prefs.appSwipeLeft)
-        else openCameraApp(requireContext())
     }
 
     private fun openDoubleTapApp() {
@@ -339,6 +345,38 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             override fun onClick(view: View) {
                 super.onClick(view)
                 textOnClick(view)
+            }
+
+            override fun onSwipeLeft() {
+                super.onSwipeLeft()
+                when(val action = prefs.swipeLeftAction) {
+                    Action.OpenApp -> openSwipeLeftApp()
+                    else -> handleOtherAction(action)
+                }
+            }
+
+            override fun onSwipeRight() {
+                super.onSwipeRight()
+                when(val action = prefs.swipeRightAction) {
+                    Action.OpenApp -> openSwipeRightApp()
+                    else -> handleOtherAction(action)
+                }
+            }
+
+            override fun onSwipeUp() {
+                super.onSwipeUp()
+                when(val action = prefs.swipeUpAction) {
+                    Action.OpenApp -> openSwipeUpApp()
+                    else -> handleOtherAction(action)
+                }
+            }
+
+            override fun onSwipeDown() {
+                super.onSwipeDown()
+                when(val action = prefs.swipeDownAction) {
+                    Action.OpenApp -> openSwipeDownApp()
+                    else -> handleOtherAction(action)
+                }
             }
         }
     }
