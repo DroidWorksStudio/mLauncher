@@ -25,9 +25,9 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew app:packageDebug
     - name: Copy debug apk for the artifacts
-      run:  cp ./app/build/outputs/apk/debug/app-debug.apk app-debug-${{ steps.date.outputs.date }}.apk
+      run:  cp ./app/build/outputs/apk/release/app-release-unsigned.apk app-release-${{ steps.date.outputs.date }}.apk
     - name: Upload Artifact
       uses: actions/upload-artifact@master
       with:
-        name: app-debug.apk
-        path: app-debug-${{ steps.date.outputs.date }}.apk
+        name: app-release-${{ steps.date.outputs.date }}.apk
+        path: app-release-${{ steps.date.outputs.date }}.apk
