@@ -11,7 +11,7 @@ We try to balance customizability and minimalization well still being simple :)<
 - You can rename apps in the app-drawer _(Renaming apps on the home screen is already supported. Just long-click on an app on the home screen and start typing)_
 - Ability to change the app or action when clicking on the clock
 - Ability to change the app or action when clicking on the date
-- Ability to change the app or action when swiping up, down, left or right
+- Ability for more customizability on home screen gestures
 - Align clock and date independently of home apps
 - Change alignment of apps in app-drawer
 - Change font size
