@@ -1,4 +1,4 @@
-<h1 align="center">Based on <a href="https://github.com/tanujnotes/Olauncher">OlauncherAF</a>. Minimal and clean of back links</h1>
+<h1 align="center">Based on <a href="https://github.com/OlauncherCF/OlauncherCF">OlauncherCF</a>. Minimal and clean of back links</h1>
 </p><h3 align="center">mLauncher is a minimal app launcher for Android.
 
 We try to balance customizability and minimalization well still being simple :)</h3>
