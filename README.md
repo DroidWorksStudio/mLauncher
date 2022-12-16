@@ -7,45 +7,23 @@ We try to balance customizability and minimalization well still being simple :)<
 
 # Forked with extra features
 
-- Removed bloat, like ads and links
-- You can rename apps in the app-drawer _(Renaming apps on the home screen is already supported. Just long-click on an app on the home screen and start typing)_
-- Ability to change the app or action when clicking on the clock
-- Ability to change the app or action when clicking on the date
 - Ability for more customizability on home screen gestures
-- Align clock and date independently of home apps
-- Change alignment of apps in app-drawer
-- Change font size
 - A lot of people have translated the app to the following languages. Many thanks to you ❤️
   - Albanian
-  - Arabic
-  - Chinese
-  - Croatian
   - Danish
-  - English
   - Estonian
-  - French
-  - German
   - Greek
   - Hawaiian
   - Hebrew
   - Icelandic
-  - Indonesian
   - Irish
-  - Italian
   - Japanese
-  - Korean
   - Lithuanian
   - Malay
   - Malayalam
   - Norwegian
-  - Persian
-  - Portuguese (European)
   - Polish
-  - Russian
-  - Spanish
-  - Swedish
   - Thai
-  - Turkish
 
 ## Installation
 
