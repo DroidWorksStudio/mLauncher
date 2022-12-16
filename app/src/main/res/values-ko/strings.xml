@@ -44,7 +44,6 @@
 	<string name="light">밝음</string>
 	<string name="double_tap_lock_uninstall_message">두 번 탭 하여 잠금이 활성화되어 있습니다.\n\n노트: 만약 mlauncher를 제거하시기로 결정하셨다면, 이 기능을 먼저 비활성화 후 제거해 주세요.</string>
 	<string name="accessibility_service_description">두 번 탭하여 잠금 기능은 접근성 권한을 필요로 합니다. 획득한 어떠한 데이터도 당신의 단말기에서 외부로 나가지 않습니다.</string>
-	<string name="lock_layout_description">잠금 레이아웃 설명은 잠금화면의 고유 아이디로 사용됩니다.</string>
 	<string name="open">링크 열기</string>
 	<string name="copy">복사</string>
 	<string name="close">닫기</string>

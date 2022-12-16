@@ -60,7 +60,6 @@
 	<string name="light">Φως</string>
 	<string name="double_tap_lock_uninstall_message">Διπλό πάτημα για κλείδωμα ενεργοποιημένο.\n\nΣημείωση: Απενεργοποιήστε πρώτα αυτό το στοιχείο εάν αποφασίσετε να διαγράψετε το mlauncher.</string>
 	<string name="accessibility_service_description">Απαιτείται η άδεια προσβασιμότητας για να ενεργοποιηθεί το διπλό πάτημα για κλείδωμα. Οποιαδήποτε δεδομένα αποκτηθούν από την υπηρεσία δεν θα εγκαταλείψουν τη συσκευή σας.</string>
-	<string name="lock_layout_description">περιγραφή διάταξης κλειδώματος για να χρησιμοποιηθεί ένα μοναδικό αναγνωριστικό για το κλείδωμα της οθόνης</string>
 	<string name="open">Ανοίξτε σύνδεσμο</string>
 	<string name="copy">αντίγραφο</string>
 	<string name="close">Κλείσε</string>

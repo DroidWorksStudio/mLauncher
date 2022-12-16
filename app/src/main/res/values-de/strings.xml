@@ -45,7 +45,6 @@
 	<string name="light">Hell</string>
 	<string name="double_tap_lock_uninstall_message">Sperren durch Doppeltippen aktiviert. \n\nHinweis: Wenn mlauncher deinstalliert werden soll, diese Funktion zuerst AUSSCHALTEN.</string>
 	<string name="accessibility_service_description">Die Zugriffserlaubnis ist erforderlich für das Sperren des Bildschirms durch Doppeltippen. Die hierzu benötigten Daten werden nirgends außerhalb Ihres Geräts gespeichert.</string>
-	<string name="lock_layout_description">Beschreibung des Sperrlayouts, die verwendet werden soll, um eine eindeutige ID zum Sperren des Bildschirms zu verwenden.</string>
 	<string name="open">Link öffnen</string>
 	<string name="copy">Kopieren</string>
 	<string name="close">Schließen</string>

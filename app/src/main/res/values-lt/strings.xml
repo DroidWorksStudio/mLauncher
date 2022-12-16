@@ -66,7 +66,6 @@
     <string name="double_tap_lock_uninstall_message" translatable="false">Double tap to lock enabled.
         \n\nNote: Turn this OFF first if you decide to delete mLauncher.</string>
     <string name="accessibility_service_description">Pritaikymo neįgaliesiems leidimas reikalingas norint įgalinti dukart bakstelėjimą užrakinti. Jokie duomenys, kurie bus surinkti, nepaliks jūsų įrenginio.</string>
-    <string name="lock_layout_description">užrakto išdėstymo aprašymas, kuris turi būti naudojamas kaip unikalus ID užrakinant ekraną</string>
     <string name="open">Atidaryti nuorodą</string>
     <string name="copy">Kopijuoti</string>
     <string name="close">Uždaryti</string>

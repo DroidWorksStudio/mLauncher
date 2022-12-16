@@ -60,7 +60,6 @@
 	<string name="light">Ușoară</string>
 	<string name="double_tap_lock_uninstall_message">Atingeți de două ori pentru a bloca activat.\n\nNotă: mai întâi dezactivați această opțiune dacă decideți să ștergeți mlauncher.</string>
 	<string name="accessibility_service_description">Permisiunea de accesibilitate este necesară pentru a activa atingerea de două ori pentru a bloca. Orice date achiziționate de serviciu nu vor părăsi dispozitivul dvs.</string>
-	<string name="lock_layout_description">descrierea aspectului de blocare pentru a fi folosit un ID unic pentru a bloca ecranul</string>
 	<string name="open">Deschide link-ul</string>
 	<string name="copy">Copie</string>
 	<string name="close">Închide</string>

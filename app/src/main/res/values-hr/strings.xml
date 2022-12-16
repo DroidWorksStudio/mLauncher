@@ -44,7 +44,6 @@
 	<string name="light">Svijetla</string>
 	<string name="double_tap_lock_uninstall_message">Zaključavanje dvostrukim dodirom je uključeno.\n\nPazi: Prije brisanja mlaunchera, prvo ISKLJUČI ovo.</string>
 	<string name="accessibility_service_description">Dozvola za pristupačnost potrebna je za omogućavanje zaključavanja dvostrukim dodirom. Bilo koji podatci prikupljeni ovim servisom neće napustiti tvoj uređaj.</string>
-	<string name="lock_layout_description">lock layout description to be used a unique id to lock screen</string>
 	<string name="open">Otvori poveznicu</string>
 	<string name="copy">Kopiraj</string>
 	<string name="close">Zatvori</string>

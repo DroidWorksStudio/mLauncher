@@ -60,7 +60,6 @@
 	<string name="light">Luce</string>
 	<string name="double_tap_lock_uninstall_message">Tocca due volte per bloccare abilitato.\n\nNota: prima disattivalo se decidi di eliminare mlauncher.</string>
 	<string name="accessibility_service_description">L\'autorizzazione di accessibilità è necessaria per abilitare il doppio tocco per bloccare. Eventuali dati acquisiti dal servizio non lasceranno il tuo dispositivo.</string>
-	<string name="lock_layout_description">descrizione del layout di blocco da utilizzare un ID univoco per bloccare lo schermo</string>
 	<string name="open">Link aperto</string>
 	<string name="copy">copia</string>
 	<string name="close">Chiudere</string>

@@ -44,7 +44,6 @@
 	<string name="light">Светлая</string>
 	<string name="double_tap_lock_uninstall_message">Блокировка двойным тапом включена.\n\nПримечание: Выключите это, если решите удалить mlauncher.</string>
 	<string name="accessibility_service_description">Разрешение на специальные возможности требуется, чтобы включить двойное касание для блокировки. Любые данные, полученные службой, не покинут ваше устройство.</string>
-	<string name="lock_layout_description">описание макета блокировки для использования уникального идентификатора для блокировки экрана</string>
 	<string name="open">Открыть ссылку</string>
 	<string name="copy">Копировать</string>
 	<string name="close">Закрыть</string>

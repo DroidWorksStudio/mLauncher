@@ -60,7 +60,6 @@
 	<string name="light">Ljós</string>
 	<string name="double_tap_lock_uninstall_message">Ýttu tvisvar til að læsa virkt.\n\nAthugið: Slökktu á þessu fyrst ef þú ákveður að eyða mlauncher.</string>
 	<string name="accessibility_service_description">Aðgengisheimild er nauðsynleg til að hægt sé að tvísmella til að læsa. Öll gögn sem þjónustan aflar fara ekki úr tækinu þínu.</string>
-	<string name="lock_layout_description">læsa skipulagslýsingu til að nota einstakt auðkenni til að læsa skjánum</string>
 	<string name="open">Opna tengil</string>
 	<string name="copy">Afrita</string>
 	<string name="close">Loka</string>

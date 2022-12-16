@@ -60,7 +60,6 @@
 	<string name="light">Cahaya</string>
 	<string name="double_tap_lock_uninstall_message">Ketik dua kali untuk mengunci didayakan.\n\nNota: MATI ini dahulu jika anda memutuskan untuk memadamkan mlauncher.</string>
 	<string name="accessibility_service_description">Kebenaran kebolehaksesan diperlukan untuk mendayakan ketik dua kali untuk mengunci. Sebarang data yang diperoleh oleh perkhidmatan tidak akan meninggalkan peranti anda.</string>
-	<string name="lock_layout_description">perihalan susun atur kunci untuk digunakan id unik untuk mengunci skrin</string>
 	<string name="open">Buka pautan</string>
 	<string name="copy">Salinan</string>
 	<string name="close">tutup</string>

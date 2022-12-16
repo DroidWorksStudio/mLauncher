@@ -3,12 +3,13 @@ package app.mlauncher.ui
 import android.annotation.SuppressLint
 import android.app.admin.DevicePolicyManager
 import android.content.Context
-import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.os.Vibrator
-import android.provider.Settings
-import android.view.*
+import android.view.Gravity
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.TextView
 import androidx.core.os.bundleOf
 import androidx.core.view.children
@@ -84,7 +85,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
     override fun onClick(view: View) {
         when (view.id) {
-            R.id.lock -> { }
             R.id.clock -> {
                 when (val action = prefs.clickClockAction) {
                     Action.OpenApp -> openClickClockApp()
@@ -120,11 +120,10 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
     private fun initSwipeTouchListener() {
         val context = requireContext()
-        binding.touchArea.setOnTouchListener(getSwipeGestureListener(context))
+        binding.touchArea.setOnTouchListener(getHomeScreenGestureListener(context))
     }
 
     private fun initClickListeners() {
-        binding.lock.setOnClickListener(this)
         binding.clock.setOnClickListener(this)
         binding.date.setOnClickListener(this)
         binding.setDefaultLauncher.setOnClickListener(this)
@@ -241,29 +240,26 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     }
 
     // This function handles all swipe actions that a independent of the actual swipe direction
+    @SuppressLint("NewApi")
     private fun handleOtherAction(action: Action) {
         when(action) {
-            Action.ShowNotification -> expandNotificationDrawer(requireContext())
+            Action.ShowNotification -> initActionService(requireContext())?.openNotifications()
             Action.LockScreen -> lockPhone()
             Action.ShowAppList -> showAppList(AppDrawerFlag.LaunchApp)
             Action.OpenApp -> {} // this should be handled in the respective onSwipe[Down,Right,Left] functions
+            Action.OpenQuickSettings -> initActionService(requireContext())?.openQuickSettings()
+            Action.ShowRecents -> initActionService(requireContext())?.showRecents()
             Action.Disabled -> {}
         }
     }
 
     private fun lockPhone() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
-            requireActivity().runOnUiThread {
-                if (isAccessServiceEnabled(requireContext())) {
-                    binding.lock.performClick()
-                } else {
-                    // prefs.lockModeOn = false
-                    showToastLong(
-                        requireContext(),
-                        "Please turn on accessibility service for mLauncher"
-                    )
-                    startActivity(Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS))
-                }
+            val actionService = ActionService.instance()
+            if (actionService != null) {
+                actionService.lockScreen()
+            } else {
+                openAccessibilitySettings(requireContext())
             }
         } else {
             requireActivity().runOnUiThread {
@@ -272,7 +268,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 } catch (e: SecurityException) {
                     showToastLong(requireContext(), "App does not have the permission to lock the device")
                 } catch (e: Exception) {
-                    showToastLong(requireContext(), "mLauncher failed to lock device.\nPlease check your app settings.")
+                    showToastLong(requireContext(), "Olauncher failed to lock device.\nPlease check your app settings.")
                     prefs.lockModeOn = false
                 }
             }
@@ -285,7 +281,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
     private fun textOnLongClick(view: View) = onLongClick(view)
 
-    private fun getSwipeGestureListener(context: Context): View.OnTouchListener {
+    private fun getHomeScreenGestureListener(context: Context): View.OnTouchListener {
         return object : OnSwipeTouchListener(context) {
             override fun onSwipeLeft() {
                 super.onSwipeLeft()
@@ -335,7 +331,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         }
     }
 
-    private fun getViewSwipeTouchListener(context: Context, view: View): View.OnTouchListener {
+    private fun getHomeAppsGestureListener(context: Context, view: View): View.OnTouchListener {
         return object : ViewSwipeTouchListener(context, view) {
             override fun onLongClick(view: View) {
                 super.onLongClick(view)
@@ -399,7 +395,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     textSize = prefs.textSize.toFloat()
                     id = i
                     text = prefs.getHomeAppModel(i).appLabel
-                    setOnTouchListener(getViewSwipeTouchListener(context, this))
+                    setOnTouchListener(getHomeAppsGestureListener(context, this))
                     if (!prefs.extendHomeAppsArea) {
                         layoutParams = ViewGroup.LayoutParams(
                             ViewGroup.LayoutParams.WRAP_CONTENT,
