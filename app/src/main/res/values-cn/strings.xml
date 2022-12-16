@@ -50,7 +50,6 @@
 	<string name="light">浅色</string>
 	<string name="double_tap_lock_uninstall_message">已启用“轻按两次解锁”\n\n注意：若你决定删除mlauncher, 请先关闭此选项。</string>
 	<string name="accessibility_service_description">需要授予无障碍权限方可启用“轻按两次解锁”。 该服务获取的任何数据都不会离开你的设备。</string>
-	<string name="lock_layout_description">锁定将被用作锁屏唯一 id 的布局描述</string>
 	<string name="open">打开链接</string>
 	<string name="copy">复制</string>
 	<string name="close">关闭</string>

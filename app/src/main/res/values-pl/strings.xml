@@ -60,7 +60,6 @@
 	<string name="light">Światło</string>
 	<string name="double_tap_lock_uninstall_message">Kliknij dwukrotnie, aby włączyć blokadę.\n\nUwaga: najpierw wyłącz tę funkcję, jeśli zdecydujesz się usunąć program mlauncher.</string>
 	<string name="accessibility_service_description">Uprawnienia dostępu są wymagane, aby włączyć podwójne dotknięcie, aby zablokować. Żadne dane pozyskane przez usługę nie opuszczą Twojego urządzenia.</string>
-	<string name="lock_layout_description">opis układu blokady, który ma być używany, unikalny identyfikator do zablokowania ekranu</string>
 	<string name="open">Otwórz link</string>
 	<string name="copy">Kopiuj</string>
 	<string name="close">Blisko</string>

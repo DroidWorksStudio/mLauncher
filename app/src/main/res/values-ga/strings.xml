@@ -60,7 +60,6 @@
 	<string name="light">Solas</string>
 	<string name="double_tap_lock_uninstall_message">Tapáil faoi dhó chun glasáil a chumasú.\n\nTabhair faoi deara: Múch é seo ar dtús má shocraíonn tú mlauncher a scriosadh.</string>
 	<string name="accessibility_service_description">Tá an cead inrochtaineachta ag teastáil chun sconna dúbailte a ghlasáil. Ní fhágfaidh aon sonraí a gheobhaidh an tseirbhís do ghléas.</string>
-	<string name="lock_layout_description">cur síos ar leagan amach an ghlais le húsáid mar aitheantas uathúil chun an scáileán a ghlasáil</string>
 	<string name="open">Oscail nasc</string>
 	<string name="copy">Cóip</string>
 	<string name="close">Dún</string>

@@ -60,7 +60,6 @@
 	<string name="light">വെളിച്ചം</string>
 	<string name="double_tap_lock_uninstall_message">ലോക്ക് പ്രവർത്തനക്ഷമമാക്കാൻ രണ്ടുതവണ ടാപ്പ് ചെയ്യുക.\n\nശ്രദ്ധിക്കുക: നിങ്ങൾ മ്ലാഞ്ചർ ഇല്ലാതാക്കാൻ തീരുമാനിക്കുകയാണെങ്കിൽ ആദ്യം ഇത് ഓഫാക്കുക.</string>
 	<string name="accessibility_service_description">ലോക്ക് ചെയ്യാൻ ഡബിൾ ടാപ്പ് പ്രവർത്തനക്ഷമമാക്കാൻ പ്രവേശനക്ഷമത അനുമതി ആവശ്യമാണ്. സേവനം ഏറ്റെടുക്കുന്ന ഒരു ഡാറ്റയും നിങ്ങളുടെ ഉപകരണത്തിൽ നിന്ന് പുറത്തുപോകില്ല.</string>
-	<string name="lock_layout_description">ലോക്ക് ലേഔട്ട് വിവരണം സ്‌ക്രീൻ ലോക്കുചെയ്യുന്നതിന് ഒരു അദ്വിതീയ ഐഡി ഉപയോഗിക്കും</string>
 	<string name="open">ലിങ്ക് തുറക്കുക</string>
 	<string name="copy">പകർത്തുക</string>
 	<string name="close">അടയ്ക്കുക</string>

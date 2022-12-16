@@ -45,7 +45,6 @@
 	<string name="light">Hele</string>
 	<string name="double_tap_lock_uninstall_message">Topeltvajutuse lukk on lubatud.\n\nTeade: Esmalt lülita see VÄLJA, kui plaanid mlauncher\'i maha tõmmata.</string>
 	<string name="accessibility_service_description">Ligipääsu luba on nõutud topeltvajutuse luku kasutamiseks. Rakenduse poolt kogutud andmed ei välju Teie süsteemist.</string>
-	<string name="lock_layout_description">luku paigutuse selgitus, mida kasutatakse lukustusekraanil unikaalse nimetusena</string>
 	<string name="open">Ava viide</string>
 	<string name="copy">Kopeeri</string>
 	<string name="close">Sulge</string>

@@ -60,7 +60,6 @@
 	<string name="light">Ljus</string>
 	<string name="double_tap_lock_uninstall_message">Dubbeltryck för att låsa aktiverat.\n\nObs! Stäng AV först om du bestämmer dig för att ta bort mlauncher.</string>
 	<string name="accessibility_service_description">Tillgänglighetsbehörighet krävs för att aktivera dubbeltryck för att låsa. All data som förvärvas av tjänsten kommer inte att lämna din enhet.</string>
-	<string name="lock_layout_description">lås layout beskrivning som ska användas ett unikt ID för att låsa skärmen</string>
 	<string name="open">Öppen länk</string>
 	<string name="copy">Kopiera</string>
 	<string name="close">Stänga</string>

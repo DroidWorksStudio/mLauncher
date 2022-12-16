@@ -14,13 +14,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
-    <!-- Placeholder layout for locking screen-->
-    <FrameLayout
-        android:id="@+id/lock"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:contentDescription="@string/lock_layout_description" />
-
     <!-- Clock and calendar-->
     <LinearLayout
         android:id="@+id/dateTimeLayout"

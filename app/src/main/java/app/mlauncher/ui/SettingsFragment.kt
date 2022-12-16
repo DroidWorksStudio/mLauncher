@@ -427,37 +427,6 @@ class SettingsFragment : Fragment() {
             prefs.lockModeOn = isAdmin
     }
 
-    private fun toggleLockMode() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
-            when {
-                prefs.lockModeOn -> {
-                    prefs.lockModeOn = false
-                    deviceManager.removeActiveAdmin(componentName) // for backward compatibility
-                }
-                isAccessServiceEnabled(requireContext()) -> prefs.lockModeOn = true
-                else -> {
-                    showToastLong(requireContext(), "Please turn on accessibility service for mlauncher")
-                    startActivity(Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS))
-                }
-            }
-        } else {
-            val isAdmin: Boolean = deviceManager.isAdminActive(componentName)
-            if (isAdmin) {
-                deviceManager.removeActiveAdmin(componentName)
-                prefs.lockModeOn = false
-                showToastShort(requireContext(), "Admin permission removed.")
-            } else {
-                val intent = Intent(DevicePolicyManager.ACTION_ADD_DEVICE_ADMIN)
-                intent.putExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN, componentName)
-                intent.putExtra(
-                    DevicePolicyManager.EXTRA_ADD_EXPLANATION,
-                    getString(R.string.admin_permission_message)
-                )
-                activity?.startActivityForResult(intent, Constants.REQUEST_CODE_ENABLE_ADMIN)
-            }
-        }
-    }
-
     private fun updateHomeAppsNum(homeAppsNum: Int) {
         prefs.homeAppsNum = homeAppsNum
         viewModel.homeAppsCount.value = homeAppsNum

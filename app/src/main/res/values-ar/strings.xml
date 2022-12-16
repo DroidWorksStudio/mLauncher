@@ -49,7 +49,6 @@
 	<string name="light">مضيء</string>
 	<string name="double_tap_lock_uninstall_message">"ملاحظة: ألغي هذا الخيار أولاً اذا اردت حذف mlauncher"</string>
 	<string name="accessibility_service_description">إذن إمكانية الوصول مطلوب لتفعيل قفل الشاشة بالنقر المزدوج. لن تغادر جهازك أي بيانات تجمعها هذه الخدمة.</string>
-	<string name="lock_layout_description">lock layout description to be used a unique id to lock screen</string>
 	<string name="open">فتح الرابط</string>
 	<string name="copy">نسخ</string>
 	<string name="close">أغلق</string>

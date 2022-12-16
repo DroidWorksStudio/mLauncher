@@ -65,8 +65,8 @@
     <string name="light">Light</string>
     <string name="double_tap_lock_uninstall_message">Double tap to lock enabled.
         \n\nNote: Turn this OFF first if you decide to delete mLauncher.</string>
-    <string name="accessibility_service_description">The accessibility permission is required to enable double tap to lock. Any data acquired by the service will not leave your device.</string>
-    <string name="lock_layout_description">lock layout description to be used a unique id to lock screen</string>
+    <string name="accessibility_service_name">mLauncher Actions Service</string>
+    <string name="accessibility_service_description">This accessibility service allows mLauncher to do certain actions such as locking the screen or opening the quick settings.</string>
     <string name="open">Open link</string>
     <string name="copy">Copy</string>
     <string name="close">Close</string>
@@ -86,5 +86,7 @@
     <string name="show_app_list">Show App List</string>
     <string name="open_app">Open App</string>
     <string name="lock_screen">Lock Screen</string>
+    <string name="open_quick_settings">Quick Settings</string>
+    <string name="show_recents">Show Recents</string>
 
 </resources>

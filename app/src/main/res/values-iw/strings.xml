@@ -60,7 +60,6 @@
 	<string name="light">אוֹר</string>
 	<string name="double_tap_lock_uninstall_message">הקש פעמיים כדי לנעול מופעל.\n\nהערה: כבה תחילה את זה אם תחליט למחוק את ה-Mlauncher.</string>
 	<string name="accessibility_service_description">הרשאת הנגישות נדרשת כדי לאפשר הקשה כפולה כדי לנעול. כל מידע שנרכש על ידי השירות לא ייצא מהמכשיר שלך.</string>
-	<string name="lock_layout_description">תיאור פריסת הנעילה לשימוש במזהה ייחודי לנעילת מסך</string>
 	<string name="open">פתח קישור</string>
 	<string name="copy">עותק</string>
 	<string name="close">סגור</string>

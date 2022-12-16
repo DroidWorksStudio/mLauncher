@@ -66,7 +66,6 @@
     <string name="double_tap_lock_uninstall_message">ダブルタップするとロックが有効になります。
         \n\n注: mLauncher を削除する場合は、まずこれをオフにしてください。</string>
     <string name="accessibility_service_description">ダブルタップしてロックするには、アクセシビリティ権限が必要です。サービスによって取得されたデータは、デバイスから離れることはありません。</string>
-    <string name="lock_layout_description">画面をロックするための一意の ID を使用するロック レイアウトの説明</string>
     <string name="open">リンクを開く</string>
     <string name="copy">コピー</string>
     <string name="close">近い</string>

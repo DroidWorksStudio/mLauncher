@@ -60,7 +60,6 @@
 	<string name="light">Işık</string>
 	<string name="double_tap_lock_uninstall_message">Kilitlemek için çift dokunma etkinleştirildi.\n\nNot: Mlauncher\'ı silmeye karar verirseniz önce bunu KAPALI konuma getirin.</string>
 	<string name="accessibility_service_description">Kilitlemek için çift dokunmayı etkinleştirmek için erişilebilirlik izni gereklidir. Hizmet tarafından alınan hiçbir veri cihazınızdan ayrılmaz.</string>
-	<string name="lock_layout_description">kilit düzeni açıklaması, ekranı kilitlemek için benzersiz bir kimlik olarak kullanılacak</string>
 	<string name="open">Linki aç</string>
 	<string name="copy">Kopyala</string>
 	<string name="close">Kapat</string>

@@ -60,7 +60,6 @@
 	<string name="light">Drita</string>
 	<string name="double_tap_lock_uninstall_message">Trokit dy herë për të kyçur aktivizuar.\n\nShënim: Fike këtë fillimisht nëse vendos të fshish mlauncher.</string>
 	<string name="accessibility_service_description">Leja e aksesueshmërisë kërkohet për të aktivizuar prekjen e dyfishtë për t\'u kyçur. Të dhënat e marra nga shërbimi nuk do të largohen nga pajisja juaj.</string>
-	<string name="lock_layout_description">përshkrimi i paraqitjes së bllokimit për t\'u përdorur një ID unike për të kyçur ekranin</string>
 	<string name="open">Link i hapur</string>
 	<string name="copy">Kopjo</string>
 	<string name="close">Mbylle</string>

@@ -60,7 +60,6 @@
 	<string name="light">Lys</string>
 	<string name="double_tap_lock_uninstall_message">Dobbelttrykk for å låse aktivert.\n\nMerk: Slå denne AV først hvis du bestemmer deg for å slette mlauncher.</string>
 	<string name="accessibility_service_description">Tilgjengelighetstillatelsen kreves for å aktivere dobbelttrykk for å låse. Eventuelle data innhentet av tjenesten vil ikke forlate enheten din.</string>
-	<string name="lock_layout_description">lås layout beskrivelse som skal brukes en unik id for å låse skjermen</string>
 	<string name="open">Åpen lenke</string>
 	<string name="copy">Kopiere</string>
 	<string name="close">Lukk</string>

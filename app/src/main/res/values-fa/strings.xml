@@ -46,7 +46,6 @@
 	<string name="light">روشن</string>
 	<string name="double_tap_lock_uninstall_message">دو ضربه زدن برای قفل فعال است.\n\nتوجه: اگر تصمیم به حذف mlauncher دارید، ابتدا آن را خاموش کنید.</string>
 	<string name="accessibility_service_description">برای فعال کردن دوبار ضربه زدن برای قفل، مجوز دسترس‌پذیری لازم است. هر گونه داده ای که توسط سرویس به دست می آید از دستگاه شما خارج نمی شود.</string>
-	<string name="lock_layout_description">شرح چیدمان قفل برای استفاده از یک شناسه منحصر به فرد برای قفل کردن صفحه</string>
 	<string name="open">بازکردن پیوند</string>
 	<string name="copy">رونوشت</string>
 	<string name="close">بستن</string>
