@@ -81,7 +81,8 @@ object Constants {
         Spanish,
         Swedish,
         Thai,
-        Turkish;
+        Turkish,
+        Ukrainian;
 
         @Composable
         override fun string(): String {
@@ -132,6 +133,7 @@ object Constants {
                 Swedish -> "Svenska"
                 Thai -> "ไทย"
                 Turkish -> "Türkçe"
+                Ukrainian -> "українська"
             }
         }
     }
@@ -184,6 +186,7 @@ object Constants {
             Language.Swedish -> "sv"
             Language.Thai -> "th"
             Language.Turkish -> "tr"
+            Language.Ukrainian -> "uk"
         }
     }
 
