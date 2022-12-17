@@ -77,6 +77,7 @@ object Constants {
         Romanian,
         Russian,
         Serbian,
+        Sindhi,
         Spanish,
         Swedish,
         Thai,
@@ -126,6 +127,7 @@ object Constants {
                 Romanian -> "Română"
                 Russian -> "Русский"
                 Serbian -> "Српски"
+                Sindhi -> "سنڌي"
                 Spanish -> "Español"
                 Swedish -> "Svenska"
                 Thai -> "ไทย"
@@ -177,6 +179,7 @@ object Constants {
             Language.Romanian -> "ro"
             Language.Russian -> "ru"
             Language.Serbian -> "sr"
+            Language.Sindhi -> "sd"
             Language.Spanish -> "es"
             Language.Swedish -> "sv"
             Language.Thai -> "th"

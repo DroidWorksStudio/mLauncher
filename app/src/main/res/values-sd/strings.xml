@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">ايم لانچر</string>
+    <string name="app">ايپ</string>
+    <string name="set_as_default_launcher">ڊفالٽ لانچر طور سيٽ ڪريو</string>
+    <string name="app_text_color">متن جو رنگ</string>
+    <string name="double_tap_to_lock_screen">لاڪ ڪرڻ لاءِ ڊبل ٽيپ ڪريو</string>
+    <string name="experimental_">(تجرباتي)</string>
+    <string name="admin_permission_message">mLauncher لاڪ اسڪرين جي اجازت کي ذميواري سان استعمال ڪرڻ جو واعدو ڪري ٿو.</string>
+    <string name="about">بابت</string>
+    <string name="off">بند</string>
+    <string name="on">تي</string>
+    <string name="black">ڪارو</string>
+    <string name="white">اڇو</string>
+    <string name="change_default_launcher">ڊفالٽ لانچر کي تبديل ڪريو</string>
+    <string name="long_press_for_settings">سيٽنگون لاءِ ڪٿي به ڊگھو دٻايو</string>
+    <string name="swipe_up_for_apps">سڀني ائپس لاءِ مٿي سوائپ ڪريو</string>
+    <string name="apps_on_home_screen">شارٽ ڪٽ جو تعداد</string>
+    <string name="left">کاٻو</string>
+    <string name="right">ساڄو</string>
+    <string name="center">مرڪز</string>
+    <string name="home_alignment">ائپس گھر اسڪرين</string>
+    <string name="home_alignment_bottom">ائپس گھر اسڪرين جي ھيٺان</string>
+    <string name="clock_alignment">گھڙي ۽ تاريخ</string>
+    <string name="drawer_alignment">ايپ دراج ۾ ائپس</string>
+    <string name="swipe_left_app">کاٻي پاسي سوائپ ڪريو</string>
+    <string name="swipe_right_app">ساڄي طرف سوائپ ڪريو</string>
+    <string name="swipe_down_app">هيٺ سوائپ ڪريو</string>
+    <string name="swipe_up_app">مٿي سوائپ ڪريو</string>
+    <string name="clock_click_app">گھڙي تي ڪلڪ ڪريو</string>
+    <string name="date_click_app">تي ڪلڪ ڪريو تاريخ</string>
+    <string name="double_tap">ڊبل ٽيپ ڪريو</string>
+    <string name="_0" translatable="false">0</string>
+    <string name="_1" translatable="false">1</string>
+    <string name="_2" translatable="false">2</string>
+    <string name="_3" translatable="false">3</string>
+    <string name="_4" translatable="false">4</string>
+    <string name="_5" translatable="false">5</string>
+    <string name="_6" translatable="false">6</string>
+    <string name="_7" translatable="false">7</string>
+    <string name="_8" translatable="false">8</string>
+    <string name="commit">انجام</string>
+    <string name="save">بچايو</string>
+    <string name="app_drawer_tips">ھدايت: برطرف ڪرڻ لاءِ ھيٺ سوائپ ڪريو. ڪيبورڊ لڪائڻ لاءِ اسڪرول ڪريو.</string>
+    <string name="okay">ٺيڪ</string>
+    <string name="double_tap_lock_is_enabled_message">جيڪڏهن ڊبل ٽيپ لاڪ فنگر پرنٽ يا فيس ان لاڪ کي غير فعال ڪري ٿو، mLauncher سيٽنگون کوليو، \'تجرباتي\' تي ٽيپ ڪريو ۽ هدايتن تي عمل ڪريو. توهان جي مهرباني.</string>
+    <string name="triple_tap_lock_message">اهو ڪيئن ڪم ڪري ٿو:
+        \nهڪ دفعو توهان ٻه ڀيرا ٽيپ ڪندا، اسڪرين اونداهي ٿي ويندي ۽ فون 5 سيڪنڊن ۾ پاڻ کي لاڪ ڪندو.
+        \n\nهن وقت دوران، توهان ٻه ڀيرا ٽيپ ڪري سگهو ٿا<b>کولڻ</b> يا فون کي فوري طور تي مڪمل طور تي لاڪ ڪرڻ لاءِ ڪنهن به وقت ٽيپ ڪريو.
+        \n\nنوٽ: جيڪڏهن توهان mLauncher کي حذف ڪرڻ جو فيصلو ڪيو ته پهريان هن کي بند ڪريو. توهان جي مهرباني.</string>
+    <string name="auto_show_keyboard">خودڪار ڏيکاريو ڪيبورڊ</string>
+    <string name="hide">لڪائڻ</string>
+    <string name="status_bar">اسٽيٽس بار ڏيکاريو</string>
+    <string name="rename">نالو مٽايو</string>
+    <string name="show_time">وقت ڏيکاريو</string>
+    <string name="show_date">تاريخ ڏيکاريو</string>
+    <string name="lock_home_apps">ائپس کي بند ڪريو</string>
+    <string name="extend_home_apps_area">گھر جي ائپس تي ڪلڪ ڪرڻ جي قابل علائقو وڌايو</string>
+    <string name="appearance">ظاهر</string>
+    <string name="gestures">اشارا</string>
+    <string name="toggles">ٽوگلز</string>
+    <string name="homescreen">هوم اسڪرين</string>
+    <string name="alignment">ترتيب ڏيڻ</string>
+    <string name="theme_mode">موضوع موڊ</string>
+    <string name="system_default">سسٽم</string>
+    <string name="dark">اونداهو</string>
+    <string name="light">روشني</string>
+    <string name="double_tap_lock_uninstall_message">بند ڪرڻ لاءِ ڊبل ٽيپ ڪريو فعال.
+        \n\nنوٽ: جيڪڏهن توهان mLauncher کي حذف ڪرڻ جو فيصلو ڪيو ته پهريان هن کي بند ڪريو.</string>
+    <string name="accessibility_service_name">ايم لانچر ايڪشن سروس</string>
+    <string name="accessibility_service_description">هي رسائي سروس mLauncher کي ڪجهه ڪم ڪرڻ جي اجازت ڏئي ٿي جهڙوڪ اسڪرين کي لاڪ ڪرڻ يا جلدي سيٽنگون کولڻ.</string>
+    <string name="open">لنڪ کوليو</string>
+    <string name="copy">ڪاپي</string>
+    <string name="close">بند</string>
+    <string name="app_language">انٽرفيس ٻولي</string>
+    <string name="lang_system">سسٽم</string>
+    <string name="app_text_size">متن جي ماپ</string>
+    <string name="drawer_list_empty_hint">ڪابه ايپس نه ملي</string>
+    <string name="hidden_apps">لڪيل ائپس</string>
+    <string name="auto_open_apps">خودڪار کوليو ايپس</string>
+    <string name="show_apps">سڀ ائپس</string>
+    <string name="show">ڏيکاريو</string>
+    <string name="reset">ري سيٽ ڪريو</string>
+    <string name="cancel">منسوخ ڪريو</string>
+    <string name="enable">فعال ڪريو</string>
+    <string name="disable">نااهل</string>
+    <string name="enabled">چالو ڪيو</string>
+    <string name="disabled">معذور</string>
+    <string name="show_notifications">نوٽيفڪيشن ڏيکاريو</string>
+    <string name="show_app_list">ڏيکاريو ايپ لسٽ</string>
+    <string name="open_app">اوپن ايپ</string>
+    <string name="lock_screen">اسڪرين کي لاڪ ڪيو</string>
+    <string name="open_quick_settings">تڪڙو سيٽنگون</string>
+    <string name="show_recents">تازو شوز</string>
+
+</resources>
