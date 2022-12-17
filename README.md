@@ -38,6 +38,7 @@ We try to balance customizability and minimalization well still being simple :)<
   - Serbian
   - Sindhi
   - Thai
+  - Ukrainian
 
 ## Installation
 
