@@ -73,6 +73,7 @@ object Constants {
         Persian,
         Portuguese,
         Polish,
+        Punjabi,
         Romanian,
         Russian,
         Serbian,
@@ -121,6 +122,7 @@ object Constants {
                 Persian -> "فارسی"
                 Portuguese -> "Português"
                 Polish -> "Polski"
+                Punjabi -> "ਪੰਜਾਬੀ"
                 Romanian -> "Română"
                 Russian -> "Русский"
                 Serbian -> "Српски"
@@ -171,6 +173,7 @@ object Constants {
             Language.Persian -> "fa"
             Language.Portuguese -> "pt"
             Language.Polish -> "pl"
+            Language.Punjabi -> "pa"
             Language.Romanian -> "ro"
             Language.Russian -> "ru"
             Language.Serbian -> "sr"
