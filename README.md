@@ -36,6 +36,7 @@ We try to balance customizability and minimalization well still being simple :)<
   - Polish
   - Punjabi
   - Serbian
+  - Sindhi
   - Thai
 
 ## Installation
