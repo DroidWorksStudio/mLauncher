@@ -39,6 +39,7 @@ object Constants {
         System,
         Albanian,
         Arabic,
+        Bulgarian,
         Chinese,
         Croatian,
         Czech,
@@ -79,6 +80,7 @@ object Constants {
                 System -> stringResource(R.string.lang_system)
                 Albanian -> "shqiptare"
                 Arabic -> "العربية"
+                Bulgarian -> "български"
                 Chinese -> "中文"
                 Croatian -> "Hrvatski"
                 Czech -> "čeština"
@@ -121,6 +123,7 @@ object Constants {
             Language.System -> Locale.getDefault().language
             Language.Albanian -> "sq"
             Language.Arabic -> "ar"
+            Language.Bulgarian -> "bg"
             Language.Chinese -> "cn"
             Language.Croatian -> "hr"
             Language.Czech -> "cs"
