@@ -57,6 +57,7 @@
     <string name="extend_home_apps_area">ホームアプリのクリック可能領域を拡張</string>
     <string name="appearance">外観</string>
     <string name="gestures">ジェスチャー</string>
+    <string name="toggles">トグル</string>
     <string name="homescreen">ホーム画面</string>
     <string name="alignment">アライメント</string>
     <string name="theme_mode">テーマモード</string>
@@ -65,7 +66,8 @@
     <string name="light">光</string>
     <string name="double_tap_lock_uninstall_message">ダブルタップするとロックが有効になります。
         \n\n注: mLauncher を削除する場合は、まずこれをオフにしてください。</string>
-    <string name="accessibility_service_description">ダブルタップしてロックするには、アクセシビリティ権限が必要です。サービスによって取得されたデータは、デバイスから離れることはありません。</string>
+    <string name="accessibility_service_name">mLauncher アクション サービス</string>
+    <string name="accessibility_service_description">このアクセシビリティ サービスにより、mLauncher は画面のロックやクイック設定を開くなどの特定のアクションを実行できます。</string>
     <string name="open">リンクを開く</string>
     <string name="copy">コピー</string>
     <string name="close">近い</string>
@@ -74,6 +76,8 @@
     <string name="app_text_size">文字サイズ</string>
     <string name="drawer_list_empty_hint">アプリが見つかりません</string>
     <string name="hidden_apps">非表示のアプリ</string>
+    <string name="auto_open_apps">アプリを自動で開く</string>
+    <string name="show_apps">すべてのアプリ</string>
     <string name="show">見せる</string>
     <string name="reset">リセット</string>
     <string name="cancel">キャンセル</string>
@@ -85,5 +89,7 @@
     <string name="show_app_list">アプリ一覧を表示</string>
     <string name="open_app">アプリを開く</string>
     <string name="lock_screen">ロック画面</string>
+    <string name="open_quick_settings">クイック設定</string>
+    <string name="show_recents">最近のショー</string>
 
 </resources>
