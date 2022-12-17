@@ -34,6 +34,7 @@ We try to balance customizability and minimalization well still being simple :)<
   - Norwegian
   - Nepali
   - Polish
+  - Punjabi
   - Serbian
   - Thai
 
