@@ -64,6 +64,7 @@ object Constants {
         Japanese,
         Korean,
         Lithuanian,
+        Luxembourgish,
         Malay,
         Malayalam,
         Norwegian,
@@ -109,6 +110,7 @@ object Constants {
                 Japanese -> "日本"
                 Korean -> "한국어"
                 Lithuanian -> "Lietuvių"
+                Luxembourgish -> "lëtzebuergesch"
                 Malay -> "Melayu"
                 Malayalam -> "മലയാളം"
                 Norwegian -> "norsk"
@@ -151,11 +153,12 @@ object Constants {
             Language.Hungarian -> "hu"
             Language.Icelandic -> "is"
             Language.Irish -> "ga"
-            Language.Indonesian -> "id"
+            Language.Indonesian -> "lb"
             Language.Italian -> "it"
             Language.Japanese -> "ja"
             Language.Korean -> "ko"
             Language.Lithuanian -> "lt"
+            Language.Luxembourgish -> ""
             Language.Malay -> "ms"
             Language.Malayalam -> "ml"
             Language.Norwegian -> "no"

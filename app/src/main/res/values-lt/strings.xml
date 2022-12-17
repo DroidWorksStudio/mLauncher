@@ -42,7 +42,7 @@
     <string name="save">Sutaupyti</string>
     <string name="app_drawer_tips">Patarimas: perbraukite žemyn, kad atsisakytumėte. Slinkite, kad paslėptumėte klaviatūrą.</string>
     <string name="okay">Gerai</string>
-    <string name="double_tap_lock_is_enabled_message">Jei užraktas du kartus išjungia piršto atspaudą arba atrakinimą pagal veidą, atidarykite „mLauncher“ nustatymus, bakstelėkite \\'eksperimentinis\\' ir vadovaukitės instrukcijomis. Ačiū.</string>
+    <string name="double_tap_lock_is_enabled_message">Jei užraktas du kartus išjungia piršto atspaudą arba atrakinimą pagal veidą, atidarykite „mLauncher“ nustatymus, bakstelėkite \'eksperimentinis\' ir vadovaukitės instrukcijomis. Ačiū.</string>
     <string name="triple_tap_lock_message">Kaip tai veikia:
         \nKai dukart paliesite, ekranas užtems, o telefonas užsirakins po 5 sekundžių.
         \n\nPer šį laiką galite dukart paliesti<b>atrakinti</b> arba tris kartus bakstelėkite bet kuriuo metu, kad iš karto visiškai užrakintumėte telefoną.
