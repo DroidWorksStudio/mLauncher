@@ -1,1 +1,1 @@
-Forked iz Olaunchera, +minimalizacija, +prilagodljivost
+Forked iz OlauncherCF, +minimalizacija, +prilagodljivost

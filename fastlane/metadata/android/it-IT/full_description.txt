@@ -1,40 +1,20 @@
-Biforcato da <a href="https://f-droid.org/packages/app.olauncher/">Olauncher</a> perché la versione originale è confusa
+Biforcato da <a href="https://github.com/OlauncherCF/OlauncherCF">OlauncherCF</a>. Minimo e pulito di collegamenti a ritroso
 
-- Rimosso il gonfiore, come annunci e link
-- Puoi rinominare le app nel cassetto delle app _(La ridenominazione delle app nella schermata iniziale è già supportata. Basta fare clic a lungo su un'app nella schermata principale e iniziare a digitare)_
-- Possibilità di modificare l'app o l'azione quando si fa clic sull'orologio
-- Possibilità di modificare l'app o l'azione quando si fa clic sulla data
-- Possibilità di modificare l'app o l'azione scorrendo verso l'alto, il basso, a sinistra oa destra
-- Allinea l'ora e la data indipendentemente dalle app domestiche
-- Cambia l'allineamento delle app nel cassetto delle app
-- Cambiare la dimensione del font
-- Molte persone hanno tradotto l'app nelle seguenti lingue. Molte grazie a te ❤️
+- Possibilità di maggiore personalizzazione sui gesti della schermata iniziale.
+- Possibilità di attivare o disattivare l'automazione dell'apertura dell'app se l'ultima nell'elenco.
+- Molte persone hanno tradotto l'app nelle seguenti lingue. Molte grazie a tutti voi.
   - Albanese
-  - Arabo
-  - Cinese
-  - Croato
   - Danese
-  - Inglese
   - estone
-  - Francese
-  - Tedesco
   - Greco
   - Hawaiano
   - Ebraico
   - islandese
-  - Indonesiano
   - Irlandesi
-  - Italiano
   - Giapponese
-  - Coreano
-  - Malese
+  - Lituano
+  - Malesi
   - malayalam
   - Norvegese
-  - Persiano
-  - portoghese (europeo)
   - Polacco
-  - Russo
-  - Spagnolo
-  - Svedese
   - Tailandese
-  - Turco

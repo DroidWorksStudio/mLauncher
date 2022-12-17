@@ -7,8 +7,9 @@ We try to balance customizability and minimalization well still being simple :)<
 
 # Forked with extra features
 
-- Ability for more customizability on home screen gestures
-- A lot of people have translated the app to the following languages. Many thanks to you ❤️
+- Ability for more customizability on home screen gestures.
+- Ability to toggle the automation of opening app if last in list.
+- A lot of people have translated the app to the following languages. Many thanks to you all.
   - Albanian
   - Danish
   - Estonian

@@ -1,40 +1,20 @@
-Račvano iz <a href="https://f-droid.org/packages/app.olauncher/">Olauncher</a> jer je izvorna verzija pretrpana
+Račvano iz <a href="https://github.com/OlauncherCF/OlauncherCF">OlauncherCF</a>. Minimalno i bez povratnih poveznica
     
-- Uklonjena napuhanost, poput oglasa i poveznica
-- Možete preimenovati aplikacije u ladici s aplikacijama _(Preimenovanje aplikacija na početnom zaslonu već je podržano. Samo dugo kliknite na aplikaciju na početnom zaslonu i počnite tipkati)_
-- Mogućnost promjene aplikacije ili radnje kada kliknete na sat
-- Mogućnost promjene aplikacije ili radnje kada kliknete na datum
-- Mogućnost promjene aplikacije ili radnje kada povučete gore, dolje, lijevo ili desno
-- Poravnajte sat i datum neovisno o kućnim aplikacijama
-- Promjena poravnanja aplikacija u ladici aplikacija
-- Promjena veličine fonta
-- Mnogo je ljudi prevelo aplikaciju na sljedeće jezike. Puno vam hvala ❤️
+- Mogućnost veće prilagodljivosti pokreta na početnom zaslonu.
+- Mogućnost prebacivanja automatizacije otvaranja aplikacije ako je zadnja na popisu.
+- Mnogo je ljudi prevelo aplikaciju na sljedeće jezike. Puno vam hvala svima.
   - Albanac
-  - arapski
-  - Kineski
-  - Hrvatski
   - danski
-  - Engleski
   - estonski
-  - francuski
-  - njemački
   - grčki
   - Havajski
   - hebrejski
   - islandski
-  - indonezijski
   - Irski
-  - talijanski
   - japanski
-  - Korejski
+  - litvanski
   - malajski
   - malajalamski
   - norveški
-  - perzijski
-  - portugalski (europski)
   - poljski
-  - ruski
-  - španjolski
-  - švedski
   - Tajlandski
-  - Turski
