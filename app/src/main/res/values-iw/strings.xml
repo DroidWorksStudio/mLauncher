@@ -1,81 +1,95 @@
 <resources>
-	<string name="app_name">mLauncher</string>
-	<string name="app">אפליקציה</string>
-	<string name="set_as_default_launcher">הגדר כמפעיל ברירת מחדל</string>
-	<string name="app_text_color">צבע טקסט</string>
-	<string name="double_tap_to_lock_screen">הקש פעמיים כדי לנעול</string>
-	<string name="experimental_">(נִסיוֹנִי)</string>
-	<string name="admin_permission_message">mlauncher מבטיח להשתמש בהרשאת מסך הנעילה באחריות.</string>
-	<string name="about">על אודות</string>
-	<string name="off">כבוי</string>
-	<string name="on">עַל</string>
-	<string name="black">שָׁחוֹר</string>
-	<string name="white">לבן</string>
-	<string name="change_default_launcher">שנה את מפעיל ברירת המחדל</string>
-	<string name="long_press_for_settings">לחץ לחיצה ארוכה בכל מקום להגדרות</string>
-	<string name="swipe_up_for_apps">החלק למעלה עבור כל האפליקציות</string>
-	<string name="apps_on_home_screen">מספר קיצורי דרך</string>
-	<string name="left">שמאלה</string>
-	<string name="right">ימין</string>
-	<string name="center">מֶרְכָּז</string>
-	<string name="home_alignment">מסך הבית של אפליקציות</string>
-	<string name="home_alignment_bottom">מסך הבית של אפליקציות למטה</string>
-	<string name="clock_alignment">שעון ותאריך</string>
-	<string name="drawer_alignment">אפליקציות במגירת האפליקציות</string>
-	<string name="swipe_left_app">החלק שמאלה</string>
-	<string name="swipe_right_app">החלק ימינה</string>
-	<string name="swipe_down_app">החלק למטה</string>
-	<string name="clock_click_app">לחיצת שעון</string>
-	<string name="date_click_app">לחץ על תאריך</string>
-	<string name="_0" translatable="false">0</string>
-	<string name="_1" translatable="false">1</string>
-	<string name="_2" translatable="false">2</string>
-	<string name="_3" translatable="false">3</string>
-	<string name="_4" translatable="false">4</string>
-	<string name="_5" translatable="false">5</string>
-	<string name="_6" translatable="false">6</string>
-	<string name="_7" translatable="false">7</string>
-	<string name="_8" translatable="false">8</string>
-	<string name="commit">לְבַצֵעַ</string>
-	<string name="save">להציל</string>
-	<string name="app_drawer_tips">טיפ: החלק מטה כדי לסגור. גלול כדי להסתיר את המקלדת.</string>
-	<string name="okay">בסדר</string>
-	<string name="double_tap_lock_is_enabled_message">אם נעילת הקשה כפולה משביתה טביעת אצבע או ביטול נעילת פנים, פתח את הגדרות מלאנצ\'ר, הקש על \'ניסיוני\' ופעל לפי ההוראות. תודה.</string>
-	<string name="triple_tap_lock_message">איך זה עובד:\nברגע שתקישו פעמיים, המסך יחשיך והטלפון יינעל תוך 5 שניות.\n\nבמהלך הזמן הזה, תוכלו להקיש פעמיים כדי<b>לבטל נעילה</b>או הקש שלוש פעמים בכל עת כדי לנעול את הטלפון באופן מלא.\n\nהערה: כבה תחילה את זה אם תחליט למחוק את ה-Mlauncher. תודה.</string>
-	<string name="auto_show_keyboard">מקלדת להצגה אוטומטית</string>
-	<string name="hide">להתחבא</string>
-	<string name="status_bar">הצג שורת מצב</string>
-	<string name="rename">שנה שם</string>
-	<string name="show_time">הצג זמן</string>
-	<string name="show_date">הצג תאריך</string>
-	<string name="lock_home_apps">נעל אפליקציות</string>
-	<string name="extend_home_apps_area">הרחב את האזור הניתן ללחיצה באפליקציות ביתיות</string>
-	<string name="appearance">מראה חיצוני</string>
-	<string name="gestures">מחוות</string>
-	<string name="homescreen">מסך הבית</string>
-	<string name="alignment">יישור</string>
-	<string name="theme_mode">מצב ערכת נושא</string>
-	<string name="system_default">מערכת</string>
-	<string name="dark">אפל</string>
-	<string name="light">אוֹר</string>
-	<string name="double_tap_lock_uninstall_message">הקש פעמיים כדי לנעול מופעל.\n\nהערה: כבה תחילה את זה אם תחליט למחוק את ה-Mlauncher.</string>
-	<string name="accessibility_service_description">הרשאת הנגישות נדרשת כדי לאפשר הקשה כפולה כדי לנעול. כל מידע שנרכש על ידי השירות לא ייצא מהמכשיר שלך.</string>
-	<string name="open">פתח קישור</string>
-	<string name="copy">עותק</string>
-	<string name="close">סגור</string>
-	<string name="app_language">שפת ממשק</string>
-	<string name="lang_system">מערכת</string>
-	<string name="app_text_size">גודל טקסט</string>
-	<string name="drawer_list_empty_hint">לא נמצאו אפליקציות</string>
-	<string name="hidden_apps">אפליקציות נסתרות</string>
-	<string name="show">הופעה</string>
-	<string name="reset">אִתחוּל</string>
-	<string name="cancel">לְבַטֵל</string>
-	<string name="enable">לְאַפשֵׁר</string>
-	<string name="disable">השבת</string>
-	<string name="enabled">מופעל</string>
-	<string name="disabled">נָכֶה</string>
+    <string name="app_name">mLauncher</string>
+    <string name="app">אפליקציה</string>
+    <string name="set_as_default_launcher">הגדר כמפעיל ברירת מחדל</string>
+    <string name="app_text_color">צבע טקסט</string>
+    <string name="double_tap_to_lock_screen">הקש פעמיים כדי לנעול</string>
+    <string name="experimental_">(נִסיוֹנִי)</string>
+    <string name="admin_permission_message">mLauncher מבטיח להשתמש בהרשאת מסך הנעילה באחריות.</string>
+    <string name="about">על אודות</string>
+    <string name="off">כבוי</string>
+    <string name="on">עַל</string>
+    <string name="black">שָׁחוֹר</string>
+    <string name="white">לבן</string>
+    <string name="change_default_launcher">שנה את מפעיל ברירת המחדל</string>
+    <string name="long_press_for_settings">לחץ לחיצה ארוכה בכל מקום להגדרות</string>
+    <string name="swipe_up_for_apps">החלק למעלה עבור כל האפליקציות</string>
+    <string name="apps_on_home_screen">מספר קיצורי דרך</string>
+    <string name="left">שמאלה</string>
+    <string name="right">ימין</string>
+    <string name="center">מֶרְכָּז</string>
+    <string name="home_alignment">מסך הבית של אפליקציות</string>
+    <string name="home_alignment_bottom">מסך הבית של אפליקציות למטה</string>
+    <string name="clock_alignment">שעון ותאריך</string>
+    <string name="drawer_alignment">אפליקציות במגירת האפליקציות</string>
+    <string name="swipe_left_app">החלק שמאלה</string>
+    <string name="swipe_right_app">החלק ימינה</string>
+    <string name="swipe_down_app">החלק למטה</string>
+    <string name="swipe_up_app">החלק למעלה</string>
+    <string name="clock_click_app">לחץ על שעון</string>
+    <string name="date_click_app">לחץ על תאריך</string>
+    <string name="double_tap">הקשה כפולה</string>
+    <string name="_0" translatable="false">0</string>
+    <string name="_1" translatable="false">1</string>
+    <string name="_2" translatable="false">2</string>
+    <string name="_3" translatable="false">3</string>
+    <string name="_4" translatable="false">4</string>
+    <string name="_5" translatable="false">5</string>
+    <string name="_6" translatable="false">6</string>
+    <string name="_7" translatable="false">7</string>
+    <string name="_8" translatable="false">8</string>
+    <string name="commit">לְבַצֵעַ</string>
+    <string name="save">להציל</string>
+    <string name="app_drawer_tips">טיפ: החלק מטה כדי לסגור. גלול כדי להסתיר את המקלדת.</string>
+    <string name="okay">בסדר</string>
+    <string name="double_tap_lock_is_enabled_message">אם נעילת הקשה כפולה משביתה טביעת אצבע או ביטול נעילת פנים, פתח את הגדרות mLauncher, הקש על \'ניסיוני\' ופעל לפי ההוראות. תודה.</string>
+    <string name="triple_tap_lock_message">איך זה עובד:
+        \nלאחר הקשה כפולה, המסך יחשיך והטלפון יינעל תוך 5 שניות.
+        \n\nבמהלך הזמן הזה, תוכל להקיש פעמיים כדי<b>לבטל נעילה</b> או הקש שלוש פעמים בכל עת כדי לנעול את הטלפון באופן מיידי.
+        \n\nהערה: כבה תחילה את זה אם תחליט למחוק את mLauncher. תודה.</string>
+    <string name="auto_show_keyboard">מקלדת להצגה אוטומטית</string>
+    <string name="hide">להתחבא</string>
+    <string name="status_bar">הצג שורת מצב</string>
+    <string name="rename">שנה שם</string>
+    <string name="show_time">הצג זמן</string>
+    <string name="show_date">הצג תאריך</string>
+    <string name="lock_home_apps">נעל אפליקציות</string>
+    <string name="extend_home_apps_area">הרחב את האזור הניתן ללחיצה באפליקציות ביתיות</string>
+    <string name="appearance">מראה חיצוני</string>
+    <string name="gestures">מחוות</string>
+    <string name="toggles">משתנה</string>
+    <string name="homescreen">מסך הבית</string>
+    <string name="alignment">יישור</string>
+    <string name="theme_mode">מצב ערכת נושא</string>
+    <string name="system_default">מערכת</string>
+    <string name="dark">אפל</string>
+    <string name="light">אוֹר</string>
+    <string name="double_tap_lock_uninstall_message">הקש פעמיים כדי לנעול מופעל.
+        \n\nהערה: כבה תחילה את זה אם תחליט למחוק את mLauncher.</string>
+    <string name="accessibility_service_name">שירות פעולות mLauncher</string>
+    <string name="accessibility_service_description">שירות נגישות זה מאפשר ל-mLauncher לבצע פעולות מסוימות כמו נעילת המסך או פתיחת ההגדרות המהירות.</string>
+    <string name="open">פתח קישור</string>
+    <string name="copy">עותק</string>
+    <string name="close">סגור</string>
+    <string name="app_language">שפת ממשק</string>
+    <string name="lang_system">מערכת</string>
+    <string name="app_text_size">גודל טקסט</string>
+    <string name="drawer_list_empty_hint">לא נמצאו אפליקציות</string>
+    <string name="hidden_apps">אפליקציות נסתרות</string>
+    <string name="auto_open_apps">פתיחה אוטומטית של אפליקציות</string>
+    <string name="show_apps">כל האפליקציות</string>
+    <string name="show">הופעה</string>
+    <string name="reset">אִתחוּל</string>
+    <string name="cancel">לְבַטֵל</string>
+    <string name="enable">לְאַפשֵׁר</string>
+    <string name="disable">השבת</string>
+    <string name="enabled">מופעל</string>
+    <string name="disabled">נָכֶה</string>
+    <string name="show_notifications">הצג התראות</string>
+    <string name="show_app_list">הצג רשימת אפליקציות</string>
     <string name="open_app">אפליקציה פתוחה</string>
-	<string name="lock_screen">מסך נעילה</string>
-	<string name="show_notifications">הצג התראות</string>
+    <string name="lock_screen">מסך נעילה</string>
+    <string name="open_quick_settings">הגדרות מהירות</string>
+    <string name="show_recents">הופעות אחרונות</string>
+
 </resources>
