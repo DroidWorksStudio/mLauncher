@@ -56,6 +56,7 @@ object Constants {
         Hawaiian,
         Hebrew,
         Hindi,
+        Hungarian,
         Icelandic,
         Indonesian,
         Irish,
@@ -100,6 +101,7 @@ object Constants {
                 Hawaiian -> "ʻŌlelo Hawaiʻi"
                 Hebrew -> "עִברִית"
                 Hindi -> "हिंदी"
+                Hungarian -> "Magyar"
                 Icelandic -> "íslenskur"
                 Indonesian -> "Bahasa Indonesia"
                 Irish -> "Gaeilge"
@@ -146,6 +148,7 @@ object Constants {
             Language.Hawaiian -> "haw"
             Language.Hebrew -> "iw"
             Language.Hindi -> "hi"
+            Language.Hungarian -> "hu"
             Language.Icelandic -> "is"
             Language.Irish -> "ga"
             Language.Indonesian -> "id"
