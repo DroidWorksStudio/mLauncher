@@ -42,7 +42,7 @@
     <string name="save">Vista</string>
     <string name="app_drawer_tips">Ábending: Strjúktu niður til að hafna. Skrunaðu til að fela lyklaborðið.</string>
     <string name="okay">allt í lagi</string>
-    <string name="double_tap_lock_is_enabled_message">Ef tvísmellalás gerir fingrafara- eða andlitsopnun óvirka, opnaðu mLauncher stillingar, pikkaðu á \\'tilrauna\\' og fylgdu leiðbeiningunum. Þakka þér fyrir.</string>
+    <string name="double_tap_lock_is_enabled_message">Ef tvísmellalás gerir fingrafara- eða andlitsopnun óvirka, opnaðu mLauncher stillingar, pikkaðu á \'tilrauna\' og fylgdu leiðbeiningunum. Þakka þér fyrir.</string>
     <string name="triple_tap_lock_message">Hvernig það virkar:
         \nÞegar þú tvísmellir mun skjárinn dimma og síminn læsist eftir 5 sekúndur.
         \n\nÁ þessum tíma geturðu tvisvar pikkað til<b>opna</b> eða þrisvar sinnum hvenær sem er til að læsa símanum strax.

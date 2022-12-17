@@ -1,69 +1,95 @@
 <resources>
-	<string name="app_name">mLauncher</string>
-	<string name="app">Aplikasi</string>
-	<string name="set_as_default_launcher">Atur sebagai launcher default</string>
-	<string name="app_text_color">Warna teks</string>
-	<string name="double_tap_to_lock_screen">Ketuk dua kali untuk mengunci layar</string>
-	<string name="experimental_">(eksperimental)</string>
-	<string name="admin_permission_message">mlauncher akan menggunakan izin layar dengan penuh tanggung jawab</string>
-	<string name="about">Tentang</string>
-	<string name="off">Off</string>
-	<string name="on">On</string>
-	<string name="black">Hitam</string>
-	<string name="white">Putih</string>
-	<string name="change_default_launcher">Ubah launcher default</string>
-	<string name="long_press_for_settings">Tahan dimana saja untuk membuka pengaturan</string>
-	<string name="swipe_up_for_apps">Geser ke atas untuk buka semua aplikasi</string>
-	<string name="apps_on_home_screen">Aplikasi dalam tampilan depan</string>
-	<string name="left">Kiri</string>
-	<string name="right">Kanan</string>
-	<string name="center">Tengah</string>
-	<string name="home_alignment">Posisi aplikasi</string>
-	<string name="clock_alignment">Posisi jam</string>
-	<string name="drawer_alignment">Posisi drawer aplikasi</string>
-	<string name="swipe_left_app">Geser ke kiri</string>
-	<string name="swipe_right_app">Geser ke kanan</string>
-	<string name="clock_click_app">Aplikasi ketika menekan jam</string>
-	<string name="date_click_app">Aplikasi ketika menekan tanggal</string>
-	<string name="commit">Lakukan</string>
-	<string name="app_drawer_tips">Tip: Geser ke bawah untuk menutup. Scroll untuk menyembunyikan papan ketik.</string>
-	<string name="okay">OK</string>
-	<string name="double_tap_lock_is_enabled_message">Jika mengunci layar dengan mengetuk dua kali akan menonaktifkan fingerprint atau face unlock, buka pengaturan mlauncher, tekan \'eksperimental\' dan ikuti instruksinya. Terima kasih.</string>
-	<string name="triple_tap_lock_message">Cara kerja:\nSaat Anda mengetuk dua kali, layar akan menjadi gelap dan perangkat Anda akan terkunci dalam 5 detik.\n\nDi saat itu, Anda dapat mengetuk dua kali untuk<b>	membuka</b>atau ketuk tiga kali untuk mengunci perangkat dengan langsung.\n\nCatatan: MATIKAN opsi ini apabila Anda akan menghapus mlauncher. Terima kasih.</string>
-	<string name="auto_show_keyboard">Otomatis tampilkan papan ketik</string>
-	<string name="hide">Sembunyikan</string>
-	<string name="status_bar">Tampilkan status bar</string>
-	<string name="rename">Ganti nama</string>
-	<string name="show_time">Show time</string>
-	<string name="show_date">Show date</string>
-	<string name="appearance">Tampilan</string>
-	<string name="gestures">Gestur</string>
-	<string name="theme_mode">Mode tema</string>
-	<string name="system_default">Sistem</string>
-	<string name="dark">Gelap</string>
-	<string name="light">Terang</string>
-	<string name="double_tap_lock_uninstall_message">\'Ketuk dua kali untuk mengunci\' telah diaktifkan.\n\nCatatan: MATIKAN opsi ini apabila Anda akan menghapus mlauncher.</string>
-	<string name="accessibility_service_description">Izin aksesibilitas diperlukan untuk mengaktifkan fitur \'Kunci layar menggunakan 2 kali ketukan\'. Data apapun yang diperoleh layanan kami tidak akan meninggalkan perangkat Anda.</string>
-	<string name="open">Buka tautan</string>
-	<string name="copy">Salin</string>
-	<string name="close">Tutup</string>
-	<string name="app_language">Bahasa antarmuka</string>
-	<string name="lang_system">Sistem</string>
-	<string name="app_text_size">Ukuran teks</string>
-	<string name="hidden_apps">Aplikasi tersembunyi</string>
-	<string name="show">Show</string>
-	<string name="reset">Reset</string>
-	<string name="cancel">Cancel</string>
-	<string name="home_alignment_bottom">Bagian bawah layar utama aplikasi</string>
-	<string name="save">Menyimpan</string>
-	<string name="lock_home_apps">Kunci Aplikasi</string>
-	<string name="drawer_list_empty_hint">Tidak ada aplikasi yang ditemukan</string>
-	<string name="homescreen">Tampilan depan</string>
-	<string name="alignment">Penyelarasan</string>
-	<string name="enable">Memungkinkan</string>
-	<string name="swipe_down_app">Geser aplikasi ke bawah</string>
-	<string name="extend_home_apps_area">Perluas area yang dapat diklik di aplikasi rumah</string>
-	<string name="disable">cacat</string>
-	<string name="enabled">diaktifkan</string>
-	<string name="disabled">dengan disabilitas</string>
+    <string name="app_name">peluncur</string>
+    <string name="app">Aplikasi</string>
+    <string name="set_as_default_launcher">Tetapkan sebagai peluncur default</string>
+    <string name="app_text_color">Warna teks</string>
+    <string name="double_tap_to_lock_screen">Ketuk dua kali untuk mengunci</string>
+    <string name="experimental_">(eksperimental)</string>
+    <string name="admin_permission_message">mLauncher berjanji untuk menggunakan izin layar kunci secara bertanggung jawab.</string>
+    <string name="about">Tentang</string>
+    <string name="off">Mati</string>
+    <string name="on">Pada</string>
+    <string name="black">Hitam</string>
+    <string name="white">Putih</string>
+    <string name="change_default_launcher">Ubah peluncur default</string>
+    <string name="long_press_for_settings">Tekan lama di mana saja untuk pengaturan</string>
+    <string name="swipe_up_for_apps">Geser ke atas untuk semua aplikasi</string>
+    <string name="apps_on_home_screen">Jumlah pintasan</string>
+    <string name="left">Kiri</string>
+    <string name="right">Benar</string>
+    <string name="center">Tengah</string>
+    <string name="home_alignment">Layar utama aplikasi</string>
+    <string name="home_alignment_bottom">Bagian bawah layar utama aplikasi</string>
+    <string name="clock_alignment">Jam dan tanggal</string>
+    <string name="drawer_alignment">Aplikasi di laci aplikasi</string>
+    <string name="swipe_left_app">Geser ke kiri</string>
+    <string name="swipe_right_app">Geser kanan</string>
+    <string name="swipe_down_app">Geser ke bawah</string>
+    <string name="swipe_up_app">Geser ke atas</string>
+    <string name="clock_click_app">Klik Jam</string>
+    <string name="date_click_app">Klik Tanggal</string>
+    <string name="double_tap">Ketuk Dua Kali</string>
+    <string name="_0" translatable="false">0</string>
+    <string name="_1" translatable="false">1</string>
+    <string name="_2" translatable="false">2</string>
+    <string name="_3" translatable="false">3</string>
+    <string name="_4" translatable="false">4</string>
+    <string name="_5" translatable="false">5</string>
+    <string name="_6" translatable="false">6</string>
+    <string name="_7" translatable="false">7</string>
+    <string name="_8" translatable="false">8</string>
+    <string name="commit">Melakukan</string>
+    <string name="save">Menyimpan</string>
+    <string name="app_drawer_tips">Kiat: Gesek ke bawah untuk menutup. Gulir untuk menyembunyikan keyboard.</string>
+    <string name="okay">Oke</string>
+    <string name="double_tap_lock_is_enabled_message">Jika kunci ketuk ganda menonaktifkan sidik jari atau buka kunci wajah, buka pengaturan mLauncher, ketuk \'eksperimental\' dan ikuti petunjuknya. Terima kasih.</string>
+    <string name="triple_tap_lock_message">Bagaimana itu bekerja:
+        \nSetelah Anda mengetuk dua kali, layar akan menjadi gelap dan ponsel akan mengunci sendiri dalam 5 detik.
+        \n\nSelama waktu ini, Anda dapat mengetuk dua kali untuk<b>membuka kunci</b> atau ketuk tiga kali kapan saja untuk segera mengunci ponsel sepenuhnya.
+        \n\nCatatan: MATIKAN ini terlebih dahulu jika Anda memutuskan untuk menghapus mLauncher. Terima kasih.</string>
+    <string name="auto_show_keyboard">Tampilkan keyboard secara otomatis</string>
+    <string name="hide">Bersembunyi</string>
+    <string name="status_bar">Tampilkan bilah status</string>
+    <string name="rename">Ganti nama</string>
+    <string name="show_time">Waktu pertunjukan</string>
+    <string name="show_date">Tampilkan tanggal</string>
+    <string name="lock_home_apps">Kunci Aplikasi</string>
+    <string name="extend_home_apps_area">Perluas area yang dapat diklik di aplikasi rumah</string>
+    <string name="appearance">Penampilan</string>
+    <string name="gestures">Gerakan</string>
+    <string name="toggles">Matikan</string>
+    <string name="homescreen">Tampilan depan</string>
+    <string name="alignment">Penyelarasan</string>
+    <string name="theme_mode">Modus tema</string>
+    <string name="system_default">Sistem</string>
+    <string name="dark">Gelap</string>
+    <string name="light">Lampu</string>
+    <string name="double_tap_lock_uninstall_message">Ketuk dua kali untuk mengunci diaktifkan.
+        \n\nCatatan: MATIKAN ini terlebih dahulu jika Anda memutuskan untuk menghapus mLauncher.</string>
+    <string name="accessibility_service_name">Layanan Tindakan Mlauncher</string>
+    <string name="accessibility_service_description">Layanan aksesibilitas ini memungkinkan mLauncher melakukan tindakan tertentu seperti mengunci layar atau membuka pengaturan cepat.</string>
+    <string name="open">Buka tautan</string>
+    <string name="copy">Salinan</string>
+    <string name="close">Menutup</string>
+    <string name="app_language">Bahasa antarmuka</string>
+    <string name="lang_system">Sistem</string>
+    <string name="app_text_size">Ukuran teks</string>
+    <string name="drawer_list_empty_hint">Tidak ada aplikasi yang ditemukan</string>
+    <string name="hidden_apps">Aplikasi tersembunyi</string>
+    <string name="auto_open_apps">Aplikasi terbuka otomatis</string>
+    <string name="show_apps">Semua aplikasi</string>
+    <string name="show">Menunjukkan</string>
+    <string name="reset">Mengatur ulang</string>
+    <string name="cancel">Membatalkan</string>
+    <string name="enable">Memungkinkan</string>
+    <string name="disable">Cacat</string>
+    <string name="enabled">Diaktifkan</string>
+    <string name="disabled">Dengan disabilitas</string>
+    <string name="show_notifications">Tunjukkan notifikasi</string>
+    <string name="show_app_list">Tampilkan Daftar Aplikasi</string>
+    <string name="open_app">Buka Aplikasi</string>
+    <string name="lock_screen">Layar kunci</string>
+    <string name="open_quick_settings">Pengaturan Cepat</string>
+    <string name="show_recents">Pertunjukan Terbaru</string>
+
 </resources>
