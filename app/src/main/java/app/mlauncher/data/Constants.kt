@@ -46,6 +46,7 @@ object Constants {
         Dutch,
         English,
         Estonian,
+        Finnish,
         French,
         German,
         Greek,
@@ -84,6 +85,7 @@ object Constants {
                 Danish -> "dansk"
                 English -> "English"
                 Estonian -> "Eesti keel"
+                Finnish -> "Suomalainen"
                 French -> "Français"
                 German -> "Deutsch"
                 Greek -> "Ελληνική"
@@ -124,6 +126,7 @@ object Constants {
             Language.Danish -> "da"
             Language.English -> "en"
             Language.Estonian -> "et"
+            Language.Finnish -> "fi"
             Language.French -> "fr"
             Language.German -> "de"
             Language.Greek -> "gr"
