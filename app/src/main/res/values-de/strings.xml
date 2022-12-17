@@ -42,7 +42,7 @@
     <string name="save">Speichern</string>
     <string name="app_drawer_tips">Tipp: Zum Schließen nach unten wischen. Scrollen Sie, um die Tastatur auszublenden.</string>
     <string name="okay">Okay</string>
-    <string name="double_tap_lock_is_enabled_message">Wenn die Doppeltipp-Sperre die Entsperrung per Fingerabdruck oder Gesichtserkennung deaktiviert, öffnen Sie die mLauncher-Einstellungen, tippen Sie auf \\"experimentell\\" und folgen Sie den Anweisungen. Vielen Dank.</string>
+    <string name="double_tap_lock_is_enabled_message">Wenn die Doppeltipp-Sperre die Entsperrung per Fingerabdruck oder Gesichtserkennung deaktiviert, öffnen Sie die mLauncher-Einstellungen, tippen Sie auf \"experimentell\" und folgen Sie den Anweisungen. Vielen Dank.</string>
     <string name="triple_tap_lock_message">Wie es funktioniert:
         \nSobald Sie doppeltippen, wird der Bildschirm dunkel und das Telefon wird in 5 Sekunden gesperrt.
         \n\nWährend dieser Zeit können Sie zweimal auf tippen<b>Freischalten</b> oder tippen Sie jederzeit dreimal, um das Telefon sofort vollständig zu sperren.
