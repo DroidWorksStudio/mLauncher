@@ -11,20 +11,35 @@ We try to balance customizability and minimalization well still being simple :)<
 - Ability to toggle the automation of opening app if last in list.
 - A lot of people have translated the app to the following languages. Many thanks to you all.
   - Albanian
+  - Bulgarian
+  - Czech
   - Danish
   - Estonian
+  - Filipino
+  - Finnish
+  - Georgian
   - Greek
   - Hawaiian
   - Hebrew
+  - Hindi
+  - Hungarian
   - Icelandic
   - Irish
   - Japanese
   - Lithuanian
+  - Luxembourgish
   - Malay
+  - Malagasy
   - Malayalam
   - Norwegian
+  - Nepali
   - Polish
+  - Punjabi
+  - Serbian
+  - Sindhi
   - Thai
+  - Ukrainian
+  - Vietnamese
 
 ## Installation
 
