@@ -66,6 +66,7 @@ object Constants {
         Lithuanian,
         Luxembourgish,
         Malay,
+        Malagasy,
         Malayalam,
         Norwegian,
         Persian,
@@ -112,6 +113,7 @@ object Constants {
                 Lithuanian -> "Lietuvių"
                 Luxembourgish -> "lëtzebuergesch"
                 Malay -> "Melayu"
+                Malagasy -> "Malagasy"
                 Malayalam -> "മലയാളം"
                 Norwegian -> "norsk"
                 Persian -> "فارسی"
@@ -160,6 +162,7 @@ object Constants {
             Language.Lithuanian -> "lt"
             Language.Luxembourgish -> ""
             Language.Malay -> "ms"
+            Language.Malagasy -> "mg"
             Language.Malayalam -> "ml"
             Language.Norwegian -> "no"
             Language.Persian -> "fa"
