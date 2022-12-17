@@ -140,7 +140,7 @@ object Constants {
             Language.French -> "fr"
             Language.Georgian -> "ka"
             Language.German -> "de"
-            Language.Greek -> "gr"
+            Language.Greek -> "el"
             Language.Hawaiian -> "haw"
             Language.Hebrew -> "iw"
             Language.Icelandic -> "is"
