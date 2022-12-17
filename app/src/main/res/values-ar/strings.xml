@@ -1,69 +1,95 @@
 <resources>
-	<string name="app_name">mLauncher</string>
-	<string name="app">تطبيق</string>
-	<string name="set_as_default_launcher">تعيين كمشغل تطبيقات افتراضي</string>
-	<string name="app_text_color">لون نص التطبيق</string>
-	<string name="double_tap_to_lock_screen">انقر نقرًا مزدوجًا للقفل</string>
-	<string name="experimental_">(تجريبي)</string>
-	<string name="admin_permission_message">يتعهد mlauncher باستخدام إذن قفل الشاشة بشكل مسؤول.</string>
-	<string name="about">حول</string>
-	<string name="off">متوقف</string>
-	<string name="on">مشغل</string>
-	<string name="black">أسود</string>
-	<string name="white">أبيض</string>
-	<string name="change_default_launcher">تغيير مشغل التطبيقات الافتراضي</string>
-	<string name="long_press_for_settings">اضغط مطولاً في أي مكان للإعدادات</string>
-	<string name="swipe_up_for_apps">مرر لأعلى لعرض جميع التطبيقات</string>
-	<string name="apps_on_home_screen">عدد اختصارات التطبيقات على الشاشة الرئيسية</string>
-	<string name="left">يسار</string>
-	<string name="right">يمين</string>
-	<string name="center">وسط</string>
-	<string name="home_alignment">تطبيقات الشاشة الرئيسية</string>
-	<string name="home_alignment_bottom">محاذاة تطبيقات الشاشة الرئيسية للأسفل</string>
-	<string name="clock_alignment">الوقت والتاريخ</string>
-	<string name="drawer_alignment">قائمة التطبيقات</string>
-	<string name="swipe_left_app">عند السحب لليسار</string>
-	<string name="swipe_right_app">عند السحب لليمين</string>
-	<string name="clock_click_app">عند الضغط على الساعة</string>
-	<string name="date_click_app">عند الضغط على التاريخ</string>
-	<string name="save">حفظ</string>
-	<string name="app_drawer_tips">تلميح:اسحب لأسفل للأغلاق. قم بتمرير القائمة لإخفاء لوحة المفاتيح.</string>
-	<string name="okay">حسنًا</string>
-	<string name="double_tap_lock_is_enabled_message">" اذا تسبب خيار القفل بالنقر المزدوج بتعطيل قفل البصمة او قفلالوجه, قم بفتح اعدادات Olanucher, اضغط على 'تجريبي' ثم اتبع التعليمات, شكراً لك."</string>
-	<string name="triple_tap_lock_message">كيف يعمل:\n \nبمجرد الضغط مرتين, الشاشة ستصبح سوداء و سوف يقفل الهاتف نفسهخلال 5 ثواني.\n \n\nخلال هذا الوقت, يمكنك الضغط مرتين لفك القفل او الضغط ثلاث مرات بأي وقت لقفل الهاتف مباشرة.\n\n\nملاحظة: ألغي هذا الخيار أولاً اذا قررت حذف mlauncher. شكراً لك.</string>
-	<string name="auto_show_keyboard">عرض تلقائي للوحة المفاتيح</string>
-	<string name="hide">إخفاء</string>
-	<string name="status_bar">أظهر شريط الحاله</string>
-	<string name="rename">إعادة تسمية</string>
-	<string name="show_time">عرض الوقت</string>
-	<string name="show_date">عرض التاريخ</string>
-	<string name="lock_home_apps">قفل التطبيقات</string>
-	<string name="extend_home_apps_area">توسيع المنطقة القابلة للنقر على تطبيقات الشاشة الرئيسية</string>
-	<string name="appearance">المظهر</string>
-	<string name="gestures">إيماءات</string>
-	<string name="homescreen">الشاشة الرئيسية</string>
-	<string name="alignment">محاذاة</string>
-	<string name="theme_mode">وضع السمة</string>
-	<string name="system_default">النظام</string>
-	<string name="dark">مظلم</string>
-	<string name="light">مضيء</string>
-	<string name="double_tap_lock_uninstall_message">"ملاحظة: ألغي هذا الخيار أولاً اذا اردت حذف mlauncher"</string>
-	<string name="accessibility_service_description">إذن إمكانية الوصول مطلوب لتفعيل قفل الشاشة بالنقر المزدوج. لن تغادر جهازك أي بيانات تجمعها هذه الخدمة.</string>
-	<string name="open">فتح الرابط</string>
-	<string name="copy">نسخ</string>
-	<string name="close">أغلق</string>
-	<string name="app_language">لغة الواجهة</string>
-	<string name="lang_system">النظام</string>
-	<string name="app_text_size">حجم النص</string>
-	<string name="drawer_list_empty_hint">لم يتم العثور على تطبيقات</string>
-	<string name="hidden_apps">التطبيقات المخفية</string>
-	<string name="show">إظهار</string>
-	<string name="reset">إعادة الضبط</string>
-	<string name="cancel">إلغاء</string>
-	<string name="enable">تفعيل</string>
-	<string name="disable">تعطيل</string>
-	<string name="enabled">مُفعل</string>
-	<string name="disabled">مُعطل</string>
-	<string name="swipe_down_app">مرر لأسفل التطبيق</string>
-	<string name="commit">ارتكب</string>
+    <string name="app_name">mLauncher</string>
+    <string name="app">تطبيق</string>
+    <string name="set_as_default_launcher">تعيين كمشغل افتراضي</string>
+    <string name="app_text_color">لون الخط</string>
+    <string name="double_tap_to_lock_screen">انقر نقرًا مزدوجًا للقفل</string>
+    <string name="experimental_">(تجريبي)</string>
+    <string name="admin_permission_message">يعد mLauncher باستخدام إذن قفل الشاشة بشكل مسؤول.</string>
+    <string name="about">حول</string>
+    <string name="off">عن</string>
+    <string name="on">على</string>
+    <string name="black">أسود</string>
+    <string name="white">أبيض</string>
+    <string name="change_default_launcher">تغيير المشغل الافتراضي</string>
+    <string name="long_press_for_settings">اضغط لفترة طويلة في أي مكان للإعدادات</string>
+    <string name="swipe_up_for_apps">مرر لأعلى لجميع التطبيقات</string>
+    <string name="apps_on_home_screen">عدد الاختصارات</string>
+    <string name="left">اليسار</string>
+    <string name="right">الصحيح</string>
+    <string name="center">مركز</string>
+    <string name="home_alignment">الشاشة الرئيسية للتطبيقات</string>
+    <string name="home_alignment_bottom">أسفل الشاشة الرئيسية للتطبيقات</string>
+    <string name="clock_alignment">الساعة والتاريخ</string>
+    <string name="drawer_alignment">التطبيقات في درج التطبيق</string>
+    <string name="swipe_left_app">اسحب لليسار</string>
+    <string name="swipe_right_app">اسحب لليمين</string>
+    <string name="swipe_down_app">انتقد أسفل</string>
+    <string name="swipe_up_app">اسحب للاعلى</string>
+    <string name="clock_click_app">اضغط على الساعة</string>
+    <string name="date_click_app">انقر فوق التاريخ</string>
+    <string name="double_tap">انقر نقرًا مزدوجًا</string>
+    <string name="_0" translatable="false">0</string>
+    <string name="_1" translatable="false">1</string>
+    <string name="_2" translatable="false">2</string>
+    <string name="_3" translatable="false">3</string>
+    <string name="_4" translatable="false">4</string>
+    <string name="_5" translatable="false">5</string>
+    <string name="_6" translatable="false">6</string>
+    <string name="_7" translatable="false">7</string>
+    <string name="_8" translatable="false">8</string>
+    <string name="commit">ارتكب</string>
+    <string name="save">يحفظ</string>
+    <string name="app_drawer_tips">نصيحة: مرر لأسفل للرفض. قم بالتمرير لإخفاء لوحة المفاتيح.</string>
+    <string name="okay">تمام</string>
+    <string name="double_tap_lock_is_enabled_message">إذا أدى قفل النقر المزدوج إلى تعطيل بصمة الإصبع أو إلغاء تأمين الوجه ، فافتح إعدادات mLauncher ، وانقر على \"تجريبي \" واتبع التعليمات. شكرًا لك.</string>
+    <string name="triple_tap_lock_message">كيف تعمل:
+        \ n بمجرد النقر المزدوج ، تصبح الشاشة مظلمة وسيغلق الهاتف نفسه في غضون 5 ثوانٍ.
+        \ n \ n خلال هذا الوقت ، يمكنك النقر نقرًا مزدوجًا لـ<b>الغاء القفل</b> أو انقر ثلاث مرات في أي وقت لقفل الهاتف بالكامل على الفور.
+        \ n \ n ملاحظة: أوقف تشغيل هذا أولاً إذا قررت حذف mLauncher. شكرًا لك.</string>
+    <string name="auto_show_keyboard">لوحة مفاتيح العرض التلقائي</string>
+    <string name="hide">يخفي</string>
+    <string name="status_bar">أظهر شريط الحاله</string>
+    <string name="rename">إعادة تسمية</string>
+    <string name="show_time">موعد العرض</string>
+    <string name="show_date">عرض التاريخ</string>
+    <string name="lock_home_apps">قفل التطبيقات</string>
+    <string name="extend_home_apps_area">توسيع المنطقة القابلة للنقر على تطبيقات المنزل</string>
+    <string name="appearance">مظهر</string>
+    <string name="gestures">إيماءات</string>
+    <string name="toggles">يبدل</string>
+    <string name="homescreen">الشاشة الرئيسية</string>
+    <string name="alignment">محاذاة</string>
+    <string name="theme_mode">وضع الموضوع</string>
+    <string name="system_default">نظام</string>
+    <string name="dark">مظلم</string>
+    <string name="light">خفيفة</string>
+    <string name="double_tap_lock_uninstall_message">انقر نقرًا مزدوجًا لقفل التمكين.
+        \ n \ n ملاحظة: أوقف تشغيل هذا أولاً إذا قررت حذف mLauncher.</string>
+    <string name="accessibility_service_name">خدمة إجراءات mLauncher</string>
+    <string name="accessibility_service_description">تتيح خدمة إمكانية الوصول هذه لـ mLauncher القيام بإجراءات معينة مثل قفل الشاشة أو فتح الإعدادات السريعة.</string>
+    <string name="open">افتح الرابط</string>
+    <string name="copy">ينسخ</string>
+    <string name="close">قريب</string>
+    <string name="app_language">لغة الواجهة</string>
+    <string name="lang_system">نظام</string>
+    <string name="app_text_size">حجم الخط</string>
+    <string name="drawer_list_empty_hint">لم يتم العثور على تطبيقات</string>
+    <string name="hidden_apps">تطبيقات مخفية</string>
+    <string name="auto_open_apps">فتح التطبيقات تلقائيًا</string>
+    <string name="show_apps">كل التطبيقات</string>
+    <string name="show">يعرض</string>
+    <string name="reset">إعادة ضبط</string>
+    <string name="cancel">يلغي</string>
+    <string name="enable">يُمكَِن</string>
+    <string name="disable">تعطيل</string>
+    <string name="enabled">ممكن</string>
+    <string name="disabled">عاجز</string>
+    <string name="show_notifications">إظهار الإخطار</string>
+    <string name="show_app_list">إظهار قائمة التطبيقات</string>
+    <string name="open_app">افتح التطبيق</string>
+    <string name="lock_screen">اقفل الشاشة</string>
+    <string name="open_quick_settings">إعدادات سريعة</string>
+    <string name="show_recents">العروض الأخيرة</string>
+
 </resources>

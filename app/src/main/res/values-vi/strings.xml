@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">mLauncher</string>
+    <string name="app">Ứng dụng</string>
+    <string name="set_as_default_launcher">Đặt làm trình khởi chạy mặc định</string>
+    <string name="app_text_color">Văn bản màu</string>
+    <string name="double_tap_to_lock_screen">Nhấn đúp để khóa</string>
+    <string name="experimental_">(thực nghiệm)</string>
+    <string name="admin_permission_message">mLauncher hứa sẽ sử dụng quyền trên màn hình khóa một cách có trách nhiệm.</string>
+    <string name="about">Về</string>
+    <string name="off">Tắt</string>
+    <string name="on">Trên</string>
+    <string name="black">Màu đen</string>
+    <string name="white">Trắng</string>
+    <string name="change_default_launcher">Thay đổi trình khởi chạy mặc định</string>
+    <string name="long_press_for_settings">Nhấn và giữ ở bất cứ đâu để cài đặt</string>
+    <string name="swipe_up_for_apps">Vuốt lên cho tất cả các ứng dụng</string>
+    <string name="apps_on_home_screen">Số phím tắt</string>
+    <string name="left">Bên trái</string>
+    <string name="right">Đúng</string>
+    <string name="center">Trung tâm</string>
+    <string name="home_alignment">Ứng dụng màn hình chính</string>
+    <string name="home_alignment_bottom">Ứng dụng phía dưới màn hình chính</string>
+    <string name="clock_alignment">Đồng hồ và ngày tháng</string>
+    <string name="drawer_alignment">Ứng dụng trong ngăn kéo ứng dụng</string>
+    <string name="swipe_left_app">vuốt sang trái</string>
+    <string name="swipe_right_app">Vuốt sang phải</string>
+    <string name="swipe_down_app">Vuốt xuống</string>
+    <string name="swipe_up_app">Kéo mạnh lên</string>
+    <string name="clock_click_app">Bấm vào Đồng hồ</string>
+    <string name="date_click_app">Bấm vào Ngày</string>
+    <string name="double_tap">Nhấn đúp</string>
+    <string name="_0" translatable="false">0</string>
+    <string name="_1" translatable="false">1</string>
+    <string name="_2" translatable="false">2</string>
+    <string name="_3" translatable="false">3</string>
+    <string name="_4" translatable="false">4</string>
+    <string name="_5" translatable="false">5</string>
+    <string name="_6" translatable="false">6</string>
+    <string name="_7" translatable="false">7</string>
+    <string name="_8" translatable="false">8</string>
+    <string name="commit">Làm</string>
+    <string name="save">Tiết kiệm</string>
+    <string name="app_drawer_tips">Mẹo: Vuốt xuống để loại bỏ. Cuộn để ẩn bàn phím.</string>
+    <string name="okay">Được chứ</string>
+    <string name="double_tap_lock_is_enabled_message">Nếu tính năng khóa chạm hai lần tắt tính năng mở khóa bằng vân tay hoặc khuôn mặt, hãy mở cài đặt mLauncher, nhấn vào \'thử nghiệm\' và làm theo hướng dẫn. Cảm ơn bạn.</string>
+    <string name="triple_tap_lock_message">Làm thế nào nó hoạt động:
+        \nSau khi bạn nhấn đúp, màn hình sẽ tối và điện thoại sẽ tự khóa sau 5 giây.
+        \n\nTrong thời gian này, bạn có thể nhấn đúp để<b>mở khóa</b> hoặc nhấn ba lần bất cứ lúc nào để khóa hoàn toàn điện thoại ngay lập tức.
+        \n\nLưu ý: TẮT tính năng này trước nếu bạn quyết định xóa mLauncher. Cảm ơn bạn.</string>
+    <string name="auto_show_keyboard">Tự động hiển thị bàn phím</string>
+    <string name="hide">Ẩn giấu</string>
+    <string name="status_bar">Thanh trạng thái chương trình</string>
+    <string name="rename">Đổi tên</string>
+    <string name="show_time">Hiển thị thời gian</string>
+    <string name="show_date">Hiển thị ngày</string>
+    <string name="lock_home_apps">Khóa ứng dụng</string>
+    <string name="extend_home_apps_area">Mở rộng khu vực có thể nhấp trên các ứng dụng gia đình</string>
+    <string name="appearance">Vẻ bề ngoài</string>
+    <string name="gestures">cử chỉ</string>
+    <string name="toggles">chuyển đổi</string>
+    <string name="homescreen">Màn hình chính</string>
+    <string name="alignment">căn chỉnh</string>
+    <string name="theme_mode">chế độ chủ đề</string>
+    <string name="system_default">Hệ thống</string>
+    <string name="dark">Tối</string>
+    <string name="light">Nhẹ</string>
+    <string name="double_tap_lock_uninstall_message">Nhấn đúp để bật khóa.
+        \n\nLưu ý: TẮT tính năng này trước nếu bạn quyết định xóa mLauncher.</string>
+    <string name="accessibility_service_name">Dịch vụ hành động mLauncher</string>
+    <string name="accessibility_service_description">Dịch vụ trợ năng này cho phép mLauncher thực hiện một số hành động nhất định như khóa màn hình hoặc mở cài đặt nhanh.</string>
+    <string name="open">Mở liên kết</string>
+    <string name="copy">Sao chép</string>
+    <string name="close">Đóng</string>
+    <string name="app_language">Ngôn ngữ giao diện</string>
+    <string name="lang_system">Hệ thống</string>
+    <string name="app_text_size">Cỡ chữ</string>
+    <string name="drawer_list_empty_hint">Không tìm thấy ứng dụng nào</string>
+    <string name="hidden_apps">Ứng Dụng Ẩn</string>
+    <string name="auto_open_apps">Tự động mở ứng dụng</string>
+    <string name="show_apps">Tất cả ứng dụng</string>
+    <string name="show">Trình diễn</string>
+    <string name="reset">Cài lại</string>
+    <string name="cancel">Hủy bỏ</string>
+    <string name="enable">Cho phép</string>
+    <string name="disable">Vô hiệu hóa</string>
+    <string name="enabled">Đã bật</string>
+    <string name="disabled">Vô hiệu hóa</string>
+    <string name="show_notifications">Hiện thông báo</string>
+    <string name="show_app_list">Hiển thị danh sách ứng dụng</string>
+    <string name="open_app">Mở chương trình</string>
+    <string name="lock_screen">Màn hình khóa</string>
+    <string name="open_quick_settings">Cài đặt nhanh</string>
+    <string name="show_recents">Chương trình gần đây</string>
+
+</resources>

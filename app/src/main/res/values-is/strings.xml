@@ -1,81 +1,95 @@
 <resources>
-	<string name="app_name">mLauncher</string>
-	<string name="app">App</string>
-	<string name="set_as_default_launcher">Stilla sem sjálfgefið ræsiforrit</string>
-	<string name="app_text_color">Litur texta</string>
-	<string name="double_tap_to_lock_screen">Ýttu tvisvar til að læsa</string>
-	<string name="experimental_">(tilraunaverkefni)</string>
-	<string name="admin_permission_message">mlauncher lofar að nota leyfi til læsingarskjás á ábyrgan hátt.</string>
-	<string name="about">Um</string>
-	<string name="off">Af</string>
-	<string name="on">Á</string>
-	<string name="black">Svartur</string>
-	<string name="white">Hvítur</string>
-	<string name="change_default_launcher">Breyta sjálfgefnum ræsiforriti</string>
-	<string name="long_press_for_settings">Ýttu lengi hvar sem er fyrir stillingar</string>
-	<string name="swipe_up_for_apps">Strjúktu upp fyrir öll forrit</string>
-	<string name="apps_on_home_screen">Fjöldi flýtileiða</string>
-	<string name="left">Vinstri</string>
-	<string name="right">Rétt</string>
-	<string name="center">Miðja</string>
-	<string name="home_alignment">Heimaskjár forrita</string>
-	<string name="home_alignment_bottom">Forrit heimaskjár neðst</string>
-	<string name="clock_alignment">Klukka og dagsetning</string>
-	<string name="drawer_alignment">Forrit í appskúffu</string>
-	<string name="swipe_left_app">Strjúktu til vinstri</string>
-	<string name="swipe_right_app">Strjúktu til hægri</string>
-	<string name="swipe_down_app">Strjúktu niður</string>
-	<string name="clock_click_app">Klukku smellur</string>
-	<string name="date_click_app">Dagsetning smellur</string>
-	<string name="_0" translatable="false">0</string>
-	<string name="_1" translatable="false">1</string>
-	<string name="_2" translatable="false">2</string>
-	<string name="_3" translatable="false">3</string>
-	<string name="_4" translatable="false">4</string>
-	<string name="_5" translatable="false">5</string>
-	<string name="_6" translatable="false">6</string>
-	<string name="_7" translatable="false">7</string>
-	<string name="_8" translatable="false">8</string>
-	<string name="commit">Skuldbinda sig</string>
-	<string name="save">Vista</string>
-	<string name="app_drawer_tips">Ábending: Strjúktu niður til að hafna. Skrunaðu til að fela lyklaborðið.</string>
-	<string name="okay">allt í lagi</string>
-	<string name="double_tap_lock_is_enabled_message">Ef tvísmellalás gerir fingrafara- eða andlitsopnun óvirka, opnaðu mlauncher-stillingar, pikkaðu á \'experimental\' og fylgdu leiðbeiningunum. Þakka þér fyrir.</string>
-	<string name="triple_tap_lock_message">Hvernig það virkar:\nÞegar þú tvísmellir mun skjárinn dimmast og síminn læsist eftir 5 sekúndur.\n\nÁ þessum tíma geturðu tvísmellt til að<b>opna</b>eða ýttu þrisvar sinnum hvenær sem er til að læsa símanum strax.\n\nAthugið: Slökktu á þessu fyrst ef þú ákveður að eyða mlauncher. Þakka þér fyrir.</string>
-	<string name="auto_show_keyboard">Sjálfvirk lyklaborð</string>
-	<string name="hide">Fela</string>
-	<string name="status_bar">Sýna stöðustiku</string>
-	<string name="rename">Endurnefna</string>
-	<string name="show_time">Sýningartími</string>
-	<string name="show_date">Sýningardagsetning</string>
-	<string name="lock_home_apps">Læsa forritum</string>
-	<string name="extend_home_apps_area">Stækkaðu smellanlegt svæði á heimilisöppum</string>
-	<string name="appearance">Útlit</string>
-	<string name="gestures">Bendingar</string>
-	<string name="homescreen">Heimaskjár</string>
-	<string name="alignment">Jöfnun</string>
-	<string name="theme_mode">Þemahamur</string>
-	<string name="system_default">Kerfi</string>
-	<string name="dark">Myrkur</string>
-	<string name="light">Ljós</string>
-	<string name="double_tap_lock_uninstall_message">Ýttu tvisvar til að læsa virkt.\n\nAthugið: Slökktu á þessu fyrst ef þú ákveður að eyða mlauncher.</string>
-	<string name="accessibility_service_description">Aðgengisheimild er nauðsynleg til að hægt sé að tvísmella til að læsa. Öll gögn sem þjónustan aflar fara ekki úr tækinu þínu.</string>
-	<string name="open">Opna tengil</string>
-	<string name="copy">Afrita</string>
-	<string name="close">Loka</string>
-	<string name="app_language">Viðmótstungumál</string>
-	<string name="lang_system">Kerfi</string>
-	<string name="app_text_size">Textastærð</string>
-	<string name="drawer_list_empty_hint">Engin forrit fundust</string>
-	<string name="hidden_apps">Falin forrit</string>
-	<string name="show">Sýna</string>
-	<string name="reset">Endurstilla</string>
-	<string name="cancel">Hætta við</string>
-	<string name="enable">Virkja</string>
-	<string name="disable">Slökkva</string>
-	<string name="enabled">Virkt</string>
-	<string name="disabled">Öryrkjar</string>
+    <string name="app_name">mLauncher</string>
+    <string name="app">App</string>
+    <string name="set_as_default_launcher">Stilla sem sjálfgefið ræsiforrit</string>
+    <string name="app_text_color">Litur texta</string>
+    <string name="double_tap_to_lock_screen">Ýttu tvisvar til að læsa</string>
+    <string name="experimental_">(tilraunaverkefni)</string>
+    <string name="admin_permission_message">mLauncher lofar að nota leyfi til læsingarskjás á ábyrgan hátt.</string>
+    <string name="about">Um</string>
+    <string name="off">Af</string>
+    <string name="on">Á</string>
+    <string name="black">Svartur</string>
+    <string name="white">Hvítur</string>
+    <string name="change_default_launcher">Breyta sjálfgefnum ræsiforriti</string>
+    <string name="long_press_for_settings">Ýttu lengi hvar sem er fyrir stillingar</string>
+    <string name="swipe_up_for_apps">Strjúktu upp fyrir öll forrit</string>
+    <string name="apps_on_home_screen">Fjöldi flýtileiða</string>
+    <string name="left">Vinstri</string>
+    <string name="right">Rétt</string>
+    <string name="center">Miðja</string>
+    <string name="home_alignment">Heimaskjár forrita</string>
+    <string name="home_alignment_bottom">Forrit heimaskjár neðst</string>
+    <string name="clock_alignment">Klukka og dagsetning</string>
+    <string name="drawer_alignment">Forrit í appskúffu</string>
+    <string name="swipe_left_app">Strjúktu til vinstri</string>
+    <string name="swipe_right_app">Strjúktu til hægri</string>
+    <string name="swipe_down_app">Strjúktu niður</string>
+    <string name="swipe_up_app">Strjúktu upp</string>
+    <string name="clock_click_app">Smelltu á Klukka</string>
+    <string name="date_click_app">Smelltu á Dagsetning</string>
+    <string name="double_tap">Tvíklikka</string>
+    <string name="_0" translatable="false">0</string>
+    <string name="_1" translatable="false">1</string>
+    <string name="_2" translatable="false">2</string>
+    <string name="_3" translatable="false">3</string>
+    <string name="_4" translatable="false">4</string>
+    <string name="_5" translatable="false">5</string>
+    <string name="_6" translatable="false">6</string>
+    <string name="_7" translatable="false">7</string>
+    <string name="_8" translatable="false">8</string>
+    <string name="commit">Skuldbinda sig</string>
+    <string name="save">Vista</string>
+    <string name="app_drawer_tips">Ábending: Strjúktu niður til að hafna. Skrunaðu til að fela lyklaborðið.</string>
+    <string name="okay">allt í lagi</string>
+    <string name="double_tap_lock_is_enabled_message">Ef tvísmellalás gerir fingrafara- eða andlitsopnun óvirka, opnaðu mLauncher stillingar, pikkaðu á \'tilrauna\' og fylgdu leiðbeiningunum. Þakka þér fyrir.</string>
+    <string name="triple_tap_lock_message">Hvernig það virkar:
+        \nÞegar þú tvísmellir mun skjárinn dimma og síminn læsist eftir 5 sekúndur.
+        \n\nÁ þessum tíma geturðu tvisvar pikkað til<b>opna</b> eða þrisvar sinnum hvenær sem er til að læsa símanum strax.
+        \n\nAthugið: Slökktu á þessu fyrst ef þú ákveður að eyða mLauncher. Þakka þér fyrir.</string>
+    <string name="auto_show_keyboard">Sjálfvirk lyklaborð</string>
+    <string name="hide">Fela</string>
+    <string name="status_bar">Sýna stöðustiku</string>
+    <string name="rename">Endurnefna</string>
+    <string name="show_time">Sýningartími</string>
+    <string name="show_date">Sýningardagsetning</string>
+    <string name="lock_home_apps">Læsa forritum</string>
+    <string name="extend_home_apps_area">Stækkaðu smellanlegt svæði á heimilisöppum</string>
+    <string name="appearance">Útlit</string>
+    <string name="gestures">Bendingar</string>
+    <string name="toggles">Skiptir</string>
+    <string name="homescreen">Heimaskjár</string>
+    <string name="alignment">Jöfnun</string>
+    <string name="theme_mode">Þemahamur</string>
+    <string name="system_default">Kerfi</string>
+    <string name="dark">Myrkur</string>
+    <string name="light">Ljós</string>
+    <string name="double_tap_lock_uninstall_message">Ýttu tvisvar til að læsa virkt.
+        \n\nAthugið: Slökktu á þessu fyrst ef þú ákveður að eyða mLauncher.</string>
+    <string name="accessibility_service_name">mLauncher Actions Service</string>
+    <string name="accessibility_service_description">Þessi aðgengisþjónusta gerir mLauncher kleift að gera ákveðnar aðgerðir eins og að læsa skjánum eða opna flýtistillingarnar.</string>
+    <string name="open">Opna tengil</string>
+    <string name="copy">Afrita</string>
+    <string name="close">Loka</string>
+    <string name="app_language">Viðmótstungumál</string>
+    <string name="lang_system">Kerfi</string>
+    <string name="app_text_size">Textastærð</string>
+    <string name="drawer_list_empty_hint">Engin forrit fundust</string>
+    <string name="hidden_apps">Falin forrit</string>
+    <string name="auto_open_apps">Opna forrit sjálfkrafa</string>
+    <string name="show_apps">Öll forrit</string>
+    <string name="show">Sýna</string>
+    <string name="reset">Endurstilla</string>
+    <string name="cancel">Hætta við</string>
+    <string name="enable">Virkja</string>
+    <string name="disable">Slökkva</string>
+    <string name="enabled">Virkt</string>
+    <string name="disabled">Öryrkjar</string>
+    <string name="show_notifications">Sýna tilkynningu</string>
+    <string name="show_app_list">Sýna forritalista</string>
     <string name="open_app">Opnaðu App</string>
-	<string name="lock_screen">Læsa skjá</string>
-	<string name="show_notifications">Sýna tilkynningu</string>
+    <string name="lock_screen">Læsa skjá</string>
+    <string name="open_quick_settings">Flýtistillingar</string>
+    <string name="show_recents">Nýlegar sýningar</string>
+
 </resources>

@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">mLauncher</string>
+    <string name="app">Sovellus</string>
+    <string name="set_as_default_launcher">Aseta oletuskäynnistysohjelmaksi</string>
+    <string name="app_text_color">Tekstin väri</string>
+    <string name="double_tap_to_lock_screen">Lukitse kaksoisnapauttamalla</string>
+    <string name="experimental_">(kokeellinen)</string>
+    <string name="admin_permission_message">mLauncher lupaa käyttää lukitusnäytön lupaa vastuullisesti.</string>
+    <string name="about">Noin</string>
+    <string name="off">Vinossa</string>
+    <string name="on">Päällä</string>
+    <string name="black">Musta</string>
+    <string name="white">Valkoinen</string>
+    <string name="change_default_launcher">Vaihda oletuskäynnistin</string>
+    <string name="long_press_for_settings">Paina pitkään missä tahansa asetuksista</string>
+    <string name="swipe_up_for_apps">Pyyhkäise ylöspäin nähdäksesi kaikki sovellukset</string>
+    <string name="apps_on_home_screen">Pikanäppäinten määrä</string>
+    <string name="left">Vasen</string>
+    <string name="right">Oikein</string>
+    <string name="center">Keskusta</string>
+    <string name="home_alignment">Sovellusten aloitusnäyttö</string>
+    <string name="home_alignment_bottom">Sovellusten aloitusnäytön alaosa</string>
+    <string name="clock_alignment">Kello ja päivämäärä</string>
+    <string name="drawer_alignment">Sovellukset sovelluslaatikossa</string>
+    <string name="swipe_left_app">Pyyhkäise vasemmalle</string>
+    <string name="swipe_right_app">Pyyhkäise oikealle</string>
+    <string name="swipe_down_app">Pyyhkäise alas</string>
+    <string name="swipe_up_app">Pyyhkäise ylös</string>
+    <string name="clock_click_app">Napsauta Kello</string>
+    <string name="date_click_app">Napsauta Päivämäärä</string>
+    <string name="double_tap">Kaksoisnapautus</string>
+    <string name="_0" translatable="false">0</string>
+    <string name="_1" translatable="false">1</string>
+    <string name="_2" translatable="false">2</string>
+    <string name="_3" translatable="false">3</string>
+    <string name="_4" translatable="false">4</string>
+    <string name="_5" translatable="false">5</string>
+    <string name="_6" translatable="false">6</string>
+    <string name="_7" translatable="false">7</string>
+    <string name="_8" translatable="false">8</string>
+    <string name="commit">Tehdä</string>
+    <string name="save">Tallentaa</string>
+    <string name="app_drawer_tips">Vinkki: hylkää pyyhkäisemällä alas. Vieritä piilottaaksesi näppäimistön.</string>
+    <string name="okay">Okei</string>
+    <string name="double_tap_lock_is_enabled_message">Jos kaksoisnapautuslukko poistaa sormenjälki- tai kasvojentunnistuksen käytöstä, avaa mLauncher-asetukset, napauta \'kokeellinen\' ja seuraa ohjeita. Kiitos.</string>
+    <string name="triple_tap_lock_message">Kuinka se toimii:
+        \nKun kaksoisnapautat, näyttö pimenee ja puhelin lukittuu 5 sekunnissa.
+        \n\nTänä aikana voit kaksoisnapauttaa<b>avata</b> tai kolmoisnapauta milloin tahansa lukitaksesi puhelimen heti kokonaan.
+        \n\nHuomaa: Kytke tämä ensin pois päältä, jos päätät poistaa mLauncherin. Kiitos.</string>
+    <string name="auto_show_keyboard">Näppäimistön automaattinen näyttö</string>
+    <string name="hide">Piilottaa</string>
+    <string name="status_bar">Näytä tilapalkki</string>
+    <string name="rename">Nimeä uudelleen</string>
+    <string name="show_time">Esitysaika</string>
+    <string name="show_date">Näytä päivämäärä</string>
+    <string name="lock_home_apps">Lukitse sovellukset</string>
+    <string name="extend_home_apps_area">Laajenna napsautettavaa aluetta kotisovelluksissa</string>
+    <string name="appearance">Ulkomuoto</string>
+    <string name="gestures">Eleet</string>
+    <string name="toggles">Vaihtaa</string>
+    <string name="homescreen">Aloitusnäyttö</string>
+    <string name="alignment">Tasaus</string>
+    <string name="theme_mode">Teematila</string>
+    <string name="system_default">Järjestelmä</string>
+    <string name="dark">Tumma</string>
+    <string name="light">Kevyt</string>
+    <string name="double_tap_lock_uninstall_message">Lukitus on käytössä kaksoisnapauttamalla.
+        \n\nHuomaa: Kytke tämä ensin pois päältä, jos päätät poistaa mLauncherin.</string>
+    <string name="accessibility_service_name">mLauncher Actions Service</string>
+    <string name="accessibility_service_description">Tämän esteettömyyspalvelun avulla mLauncher voi tehdä tiettyjä toimintoja, kuten lukita näytön tai avata pika-asetukset.</string>
+    <string name="open">Avaa linkki</string>
+    <string name="copy">Kopio</string>
+    <string name="close">kiinni</string>
+    <string name="app_language">Käyttöliittymän kieli</string>
+    <string name="lang_system">Järjestelmä</string>
+    <string name="app_text_size">Tekstin koko</string>
+    <string name="drawer_list_empty_hint">Sovelluksia ei löytynyt</string>
+    <string name="hidden_apps">Piilotetut sovellukset</string>
+    <string name="auto_open_apps">Automaattisesti avattavat sovellukset</string>
+    <string name="show_apps">Kaikki sovellukset</string>
+    <string name="show">Näytä</string>
+    <string name="reset">Nollaa</string>
+    <string name="cancel">Peruuttaa</string>
+    <string name="enable">ota käyttöön</string>
+    <string name="disable">Poista käytöstä</string>
+    <string name="enabled">Käytössä</string>
+    <string name="disabled">Liikuntarajoitteinen</string>
+    <string name="show_notifications">Näytä ilmoitus</string>
+    <string name="show_app_list">Näytä sovellusluettelo</string>
+    <string name="open_app">Avaa App</string>
+    <string name="lock_screen">Lukitusnäyttö</string>
+    <string name="open_quick_settings">Pika-asetukset</string>
+    <string name="show_recents">Viimeaikaiset esitykset</string>
+
+</resources>

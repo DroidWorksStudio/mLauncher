@@ -1,69 +1,95 @@
 <resources>
-	<string name="app_name">mLauncher</string>
-	<string name="app">App</string>
-	<string name="set_as_default_launcher">Als Standard-Launcher wählen</string>
-	<string name="app_text_color">Textfarbe</string>
-	<string name="double_tap_to_lock_screen">Zum Sperren doppelt tippen</string>
-	<string name="experimental_">(experimentell)</string>
-	<string name="admin_permission_message">mlauncher wird die Erlaubnis, den Bildschirm zu sperren, verantwortungsvoll nutzen.</string>
-	<string name="about">FAQ</string>
-	<string name="off">Aus</string>
-	<string name="on">Ein</string>
-	<string name="black">Schwarz</string>
-	<string name="white">Weiß</string>
-	<string name="change_default_launcher">Anderen Standard-Launcher wählen</string>
-	<string name="long_press_for_settings">An beliebiger Stelle lange tippen</string>
-	<string name="swipe_up_for_apps">Aufwärts wischen: alle Apps anzeigen</string>
-	<string name="apps_on_home_screen">Apps auf Home-Bildschirm</string>
-	<string name="left">Links</string>
-	<string name="right">Rechts</string>
-	<string name="center">Zentriert</string>
-	<string name="home_alignment">Apps ausrichten</string>
-	<string name="clock_alignment">Uhr ausrichten</string>
-	<string name="drawer_alignment">App-Übersicht ausrichten</string>
-	<string name="swipe_left_app">App öffnen (links wischen)</string>
-	<string name="swipe_right_app">App öffen (rechts wischen)</string>
-	<string name="swipe_down_app">App öfnen (unten wischen)</string>
-	<string name="clock_click_app">App öffnen (Tippen auf Uhr)</string>
-	<string name="date_click_app">App öffnen (Tippen auf Datum)</string>
-	<string name="commit">Bestätigen</string>
-	<string name="app_drawer_tips">Tipp! Zurück: nach unten wischen. Tastatur ausblenden: scrollen.</string>
-	<string name="okay">OK</string>
-	<string name="double_tap_lock_is_enabled_message">Wenn Doppeltippen das Entsperren mittels Fingerabdruck oder Gesicht deaktiviert: mlauncher-Einstellungen öffnen, auf \'experimentell\' tippen und Anweisungen befolgen. Danke!</string>
-	<string name="triple_tap_lock_message">So geht es:\nNach dem Doppeltippen wird der Bildschirm schwarz und nach 5 Sekunden wird das Telefon gesperrt.\n\nIn dieser Zeit kann das Telefon durch<b>	Doppeltippen entsperrt</b>oder durch Dreifachtippen sofort verriegelt werden.\n\nHinweis: Wenn mlauncher deinstalliert werden soll, diese Funktion zuerst AUSSCHALTEN. Danke.</string>
-	<string name="auto_show_keyboard">Tastatur automatisch einblenden</string>
-	<string name="hide">Ausblenden</string>
-	<string name="status_bar">Statusleiste zeigen</string>
-	<string name="rename">Umbenennen</string>
-	<string name="show_time">Uhr anzeigen</string>
-	<string name="show_date">Datum anzeigen</string>
-	<string name="appearance">Erscheinungsbild</string>
-	<string name="gestures">Gesten</string>
-	<string name="theme_mode">Modus</string>
-	<string name="system_default">Design</string>
-	<string name="dark">Dunkel</string>
-	<string name="light">Hell</string>
-	<string name="double_tap_lock_uninstall_message">Sperren durch Doppeltippen aktiviert. \n\nHinweis: Wenn mlauncher deinstalliert werden soll, diese Funktion zuerst AUSSCHALTEN.</string>
-	<string name="accessibility_service_description">Die Zugriffserlaubnis ist erforderlich für das Sperren des Bildschirms durch Doppeltippen. Die hierzu benötigten Daten werden nirgends außerhalb Ihres Geräts gespeichert.</string>
-	<string name="open">Link öffnen</string>
-	<string name="copy">Kopieren</string>
-	<string name="close">Schließen</string>
-	<string name="lang_system">System</string>
-	<string name="hidden_apps">Versteckte Apps</string>
-	<string name="app_language">Sprache</string>
-	<string name="show">Anzeigen</string>
-	<string name="reset">Zurücksetzen</string>
-	<string name="cancel">Abbrechen</string>
-	<string name="home_alignment_bottom">Apps-Startbildschirm unten</string>
-	<string name="save">Speichern</string>
-	<string name="lock_home_apps">Apps sperren</string>
-	<string name="homescreen">Startbildschirm</string>
-	<string name="alignment">Alignment</string>
-	<string name="app_text_size">Textgröße</string>
-	<string name="drawer_list_empty_hint">Keine Anwendungen gefunden</string>
-	<string name="enable">Ermöglichen</string>
-	<string name="extend_home_apps_area">Erweitern Sie den anklickbaren Bereich in Home-Apps</string>
-	<string name="disable">Deaktivieren</string>
-	<string name="enabled">Ermöglicht</string>
-	<string name="disabled">Deaktiviert</string>
+    <string name="app_name">mlauncher</string>
+    <string name="app">App</string>
+    <string name="set_as_default_launcher">Als Standard-Launcher festlegen</string>
+    <string name="app_text_color">Textfarbe</string>
+    <string name="double_tap_to_lock_screen">Zum Sperren doppeltippen</string>
+    <string name="experimental_">(Experimental)</string>
+    <string name="admin_permission_message">mLauncher verspricht einen verantwortungsvollen Umgang mit Sperrbildschirmberechtigungen.</string>
+    <string name="about">Um</string>
+    <string name="off">Aus</string>
+    <string name="on">An</string>
+    <string name="black">Schwarz</string>
+    <string name="white">Weiß</string>
+    <string name="change_default_launcher">Ändern Sie den Standardstarter</string>
+    <string name="long_press_for_settings">Für Einstellungen irgendwo lang drücken</string>
+    <string name="swipe_up_for_apps">Für alle Apps nach oben wischen</string>
+    <string name="apps_on_home_screen">Anzahl der Verknüpfungen</string>
+    <string name="left">Links</string>
+    <string name="right">Recht</string>
+    <string name="center">Center</string>
+    <string name="home_alignment">Apps-Startbildschirm</string>
+    <string name="home_alignment_bottom">Apps-Startbildschirm unten</string>
+    <string name="clock_alignment">Uhr und Datum</string>
+    <string name="drawer_alignment">Apps im App-Drawer</string>
+    <string name="swipe_left_app">Nach links wischen</string>
+    <string name="swipe_right_app">Wische nach rechts</string>
+    <string name="swipe_down_app">Nach unten wischen</string>
+    <string name="swipe_up_app">Nach oben wischen</string>
+    <string name="clock_click_app">Klicken Sie auf Uhr</string>
+    <string name="date_click_app">Klicken Sie auf Datum</string>
+    <string name="double_tap">Doppeltippen</string>
+    <string name="_0" translatable="false">0</string>
+    <string name="_1" translatable="false">1</string>
+    <string name="_2" translatable="false">2</string>
+    <string name="_3" translatable="false">3</string>
+    <string name="_4" translatable="false">4</string>
+    <string name="_5" translatable="false">5</string>
+    <string name="_6" translatable="false">6</string>
+    <string name="_7" translatable="false">7</string>
+    <string name="_8" translatable="false">8</string>
+    <string name="commit">Verpflichten</string>
+    <string name="save">Speichern</string>
+    <string name="app_drawer_tips">Tipp: Zum Schließen nach unten wischen. Scrollen Sie, um die Tastatur auszublenden.</string>
+    <string name="okay">Okay</string>
+    <string name="double_tap_lock_is_enabled_message">Wenn die Doppeltipp-Sperre die Entsperrung per Fingerabdruck oder Gesichtserkennung deaktiviert, öffnen Sie die mLauncher-Einstellungen, tippen Sie auf \"experimentell\" und folgen Sie den Anweisungen. Vielen Dank.</string>
+    <string name="triple_tap_lock_message">Wie es funktioniert:
+        \nSobald Sie doppeltippen, wird der Bildschirm dunkel und das Telefon wird in 5 Sekunden gesperrt.
+        \n\nWährend dieser Zeit können Sie zweimal auf tippen<b>Freischalten</b> oder tippen Sie jederzeit dreimal, um das Telefon sofort vollständig zu sperren.
+        \n\nHinweis: Deaktivieren Sie dies zuerst, wenn Sie sich entscheiden, mLauncher zu löschen. Vielen Dank.</string>
+    <string name="auto_show_keyboard">Tastatur automatisch anzeigen</string>
+    <string name="hide">Ausblenden</string>
+    <string name="status_bar">Zeige Statusleiste</string>
+    <string name="rename">Umbenennen</string>
+    <string name="show_time">Show Time</string>
+    <string name="show_date">Datum anzeigen</string>
+    <string name="lock_home_apps">Apps sperren</string>
+    <string name="extend_home_apps_area">Erweitern Sie den anklickbaren Bereich in Home-Apps</string>
+    <string name="appearance">Aussehen</string>
+    <string name="gestures">Gesten</string>
+    <string name="toggles">Schaltet um</string>
+    <string name="homescreen">Startbildschirm</string>
+    <string name="alignment">Ausrichtung</string>
+    <string name="theme_mode">Themenmodus</string>
+    <string name="system_default">System</string>
+    <string name="dark">Dunkel</string>
+    <string name="light">Licht</string>
+    <string name="double_tap_lock_uninstall_message">Doppeltippen, um aktiviert zu sperren.
+        \n\nHinweis: Deaktivieren Sie dies zuerst, wenn Sie sich entscheiden, mLauncher zu löschen.</string>
+    <string name="accessibility_service_name">mLauncher-Aktionsdienst</string>
+    <string name="accessibility_service_description">Dieser Barrierefreiheitsdienst ermöglicht es mLauncher, bestimmte Aktionen auszuführen, wie z. B. das Sperren des Bildschirms oder das Öffnen der Schnelleinstellungen.</string>
+    <string name="open">Verbindung öffnen</string>
+    <string name="copy">Kopieren</string>
+    <string name="close">Nah dran</string>
+    <string name="app_language">Schnittstellensprache</string>
+    <string name="lang_system">System</string>
+    <string name="app_text_size">Textgröße</string>
+    <string name="drawer_list_empty_hint">Keine Anwendungen gefunden</string>
+    <string name="hidden_apps">Versteckte Apps</string>
+    <string name="auto_open_apps">Apps automatisch öffnen</string>
+    <string name="show_apps">Alle Apps</string>
+    <string name="show">Zeigen</string>
+    <string name="reset">Zurücksetzen</string>
+    <string name="cancel">Absagen</string>
+    <string name="enable">Ermöglichen</string>
+    <string name="disable">Deaktivieren</string>
+    <string name="enabled">Ermöglicht</string>
+    <string name="disabled">Deaktiviert</string>
+    <string name="show_notifications">Benachrichtigung anzeigen</string>
+    <string name="show_app_list">App-Liste anzeigen</string>
+    <string name="open_app">Öffne App</string>
+    <string name="lock_screen">Bildschirm sperren</string>
+    <string name="open_quick_settings">Schnelleinstellungen</string>
+    <string name="show_recents">Aktuelle Shows</string>
+
 </resources>

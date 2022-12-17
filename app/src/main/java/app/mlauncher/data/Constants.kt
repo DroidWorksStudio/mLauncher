@@ -39,17 +39,24 @@ object Constants {
         System,
         Albanian,
         Arabic,
+        Bulgarian,
         Chinese,
         Croatian,
+        Czech,
         Danish,
         Dutch,
         English,
         Estonian,
+        Filipino,
+        Finnish,
         French,
+        Georgian,
         German,
         Greek,
         Hawaiian,
         Hebrew,
+        Hindi,
+        Hungarian,
         Icelandic,
         Indonesian,
         Irish,
@@ -57,18 +64,26 @@ object Constants {
         Japanese,
         Korean,
         Lithuanian,
+        Luxembourgish,
         Malay,
+        Malagasy,
         Malayalam,
+        Nepali,
         Norwegian,
         Persian,
         Portuguese,
         Polish,
+        Punjabi,
         Romanian,
         Russian,
+        Serbian,
+        Sindhi,
         Spanish,
         Swedish,
         Thai,
-        Turkish;
+        Turkish,
+        Ukrainian,
+        Vietnamese;
 
         @Composable
         override fun string(): String {
@@ -76,17 +91,24 @@ object Constants {
                 System -> stringResource(R.string.lang_system)
                 Albanian -> "shqiptare"
                 Arabic -> "العربية"
+                Bulgarian -> "български"
                 Chinese -> "中文"
                 Croatian -> "Hrvatski"
+                Czech -> "čeština"
                 Dutch -> "Nederlands"
                 Danish -> "dansk"
                 English -> "English"
                 Estonian -> "Eesti keel"
+                Filipino -> "Filipino"
+                Finnish -> "Suomalainen"
                 French -> "Français"
+                Georgian -> "ქართული"
                 German -> "Deutsch"
                 Greek -> "Ελληνική"
                 Hawaiian -> "ʻŌlelo Hawaiʻi"
                 Hebrew -> "עִברִית"
+                Hindi -> "हिंदी"
+                Hungarian -> "Magyar"
                 Icelandic -> "íslenskur"
                 Indonesian -> "Bahasa Indonesia"
                 Irish -> "Gaeilge"
@@ -94,18 +116,26 @@ object Constants {
                 Japanese -> "日本"
                 Korean -> "한국어"
                 Lithuanian -> "Lietuvių"
+                Luxembourgish -> "lëtzebuergesch"
                 Malay -> "Melayu"
+                Malagasy -> "Malagasy"
                 Malayalam -> "മലയാളം"
+                Nepali -> "नेपाली"
                 Norwegian -> "norsk"
                 Persian -> "فارسی"
                 Portuguese -> "Português"
                 Polish -> "Polski"
+                Punjabi -> "ਪੰਜਾਬੀ"
                 Romanian -> "Română"
                 Russian -> "Русский"
+                Serbian -> "Српски"
+                Sindhi -> "سنڌي"
                 Spanish -> "Español"
                 Swedish -> "Svenska"
                 Thai -> "ไทย"
                 Turkish -> "Türkçe"
+                Ukrainian -> "українська"
+                Vietnamese -> "Tiếng Việt"
             }
         }
     }
@@ -115,36 +145,51 @@ object Constants {
             Language.System -> Locale.getDefault().language
             Language.Albanian -> "sq"
             Language.Arabic -> "ar"
+            Language.Bulgarian -> "bg"
             Language.Chinese -> "cn"
             Language.Croatian -> "hr"
+            Language.Czech -> "cs"
             Language.Dutch -> "nl"
             Language.Danish -> "da"
             Language.English -> "en"
             Language.Estonian -> "et"
+            Language.Filipino -> "fil"
+            Language.Finnish -> "fi"
             Language.French -> "fr"
+            Language.Georgian -> "ka"
             Language.German -> "de"
-            Language.Greek -> "gr"
+            Language.Greek -> "el"
             Language.Hawaiian -> "haw"
             Language.Hebrew -> "iw"
+            Language.Hindi -> "hi"
+            Language.Hungarian -> "hu"
             Language.Icelandic -> "is"
             Language.Irish -> "ga"
-            Language.Indonesian -> "id"
+            Language.Indonesian -> "lb"
             Language.Italian -> "it"
             Language.Japanese -> "ja"
             Language.Korean -> "ko"
             Language.Lithuanian -> "lt"
+            Language.Luxembourgish -> ""
             Language.Malay -> "ms"
+            Language.Malagasy -> "mg"
             Language.Malayalam -> "ml"
+            Language.Nepali -> "ne"
             Language.Norwegian -> "no"
             Language.Persian -> "fa"
             Language.Portuguese -> "pt"
             Language.Polish -> "pl"
+            Language.Punjabi -> "pa"
             Language.Romanian -> "ro"
             Language.Russian -> "ru"
+            Language.Serbian -> "sr"
+            Language.Sindhi -> "sd"
             Language.Spanish -> "es"
             Language.Swedish -> "sv"
             Language.Thai -> "th"
             Language.Turkish -> "tr"
+            Language.Ukrainian -> "uk"
+            Language.Vietnamese -> "vi"
         }
     }
 

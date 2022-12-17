@@ -1,81 +1,95 @@
 <resources>
-	<string name="app_name">mLauncher</string>
-	<string name="app">App</string>
-	<string name="set_as_default_launcher">Angi som standard launcher</string>
-	<string name="app_text_color">Tekstfarge</string>
-	<string name="double_tap_to_lock_screen">Dobbelttrykk for å låse</string>
-	<string name="experimental_">(eksperimentell)</string>
-	<string name="admin_permission_message">mlauncher lover å bruke tillatelsen til låseskjermen på en ansvarlig måte.</string>
-	<string name="about">Om</string>
-	<string name="off">Av</string>
-	<string name="on">På</string>
-	<string name="black">Svart</string>
-	<string name="white">Hvit</string>
-	<string name="change_default_launcher">Endre standard launcher</string>
-	<string name="long_press_for_settings">Langt trykk hvor som helst for innstillinger</string>
-	<string name="swipe_up_for_apps">Sveip opp for alle apper</string>
-	<string name="apps_on_home_screen">Antall snarveier</string>
-	<string name="left">Venstre</string>
-	<string name="right">Ikke sant</string>
-	<string name="center">Senter</string>
-	<string name="home_alignment">Startskjerm for apper</string>
-	<string name="home_alignment_bottom">Appens startskjerm nederst</string>
-	<string name="clock_alignment">Klokke og dato</string>
-	<string name="drawer_alignment">Apper i appskuffen</string>
-	<string name="swipe_left_app">Sveip til venstre</string>
-	<string name="swipe_right_app">Sveip til høyre</string>
-	<string name="swipe_down_app">Sveip ned</string>
-	<string name="clock_click_app">Klokkeklikk</string>
-	<string name="date_click_app">Dato klikk</string>
-	<string name="_0" translatable="false">0</string>
-	<string name="_1" translatable="false">1</string>
-	<string name="_2" translatable="false">2</string>
-	<string name="_3" translatable="false">3</string>
-	<string name="_4" translatable="false">4</string>
-	<string name="_5" translatable="false">5</string>
-	<string name="_6" translatable="false">6</string>
-	<string name="_7" translatable="false">7</string>
-	<string name="_8" translatable="false">8</string>
-	<string name="commit">Begå</string>
-	<string name="save">Lagre</string>
-	<string name="app_drawer_tips">Tips: Sveip ned for å avvise. Rull for å skjule tastaturet.</string>
-	<string name="okay">Greit</string>
-	<string name="double_tap_lock_is_enabled_message">Hvis dobbelttrykklås deaktiverer fingeravtrykk eller ansiktslås, åpne mlauncher-innstillinger, trykk på \'eksperimentell\' og følg instruksjonene. Takk skal du ha.</string>
-	<string name="triple_tap_lock_message">Slik fungerer det:\nNår du dobbelttrykker, blir skjermen mørk og telefonen låser seg i løpet av 5 sekunder.\n\nI løpet av denne tiden kan du dobbelttrykke for å<b>låse opp</b>eller trippeltrykk når som helst for å låse telefonen helt umiddelbart.\n\nMerk: Slå denne AV først hvis du bestemmer deg for å slette mlauncher. Takk skal du ha.</string>
-	<string name="auto_show_keyboard">Auto show tastatur</string>
-	<string name="hide">Gjemme seg</string>
-	<string name="status_bar">Vis statuslinje</string>
-	<string name="rename">Gi nytt navn</string>
-	<string name="show_time">Vis tid</string>
-	<string name="show_date">Vis dato</string>
-	<string name="lock_home_apps">Lås apper</string>
-	<string name="extend_home_apps_area">Utvid det klikkbare området på hjemmeapper</string>
-	<string name="appearance">Utseende</string>
-	<string name="gestures">Gester</string>
-	<string name="homescreen">Startskjermen</string>
-	<string name="alignment">Justering</string>
-	<string name="theme_mode">Temamodus</string>
-	<string name="system_default">System</string>
-	<string name="dark">Mørk</string>
-	<string name="light">Lys</string>
-	<string name="double_tap_lock_uninstall_message">Dobbelttrykk for å låse aktivert.\n\nMerk: Slå denne AV først hvis du bestemmer deg for å slette mlauncher.</string>
-	<string name="accessibility_service_description">Tilgjengelighetstillatelsen kreves for å aktivere dobbelttrykk for å låse. Eventuelle data innhentet av tjenesten vil ikke forlate enheten din.</string>
-	<string name="open">Åpen lenke</string>
-	<string name="copy">Kopiere</string>
-	<string name="close">Lukk</string>
-	<string name="app_language">Grensesnittspråk</string>
-	<string name="lang_system">System</string>
-	<string name="app_text_size">Tekststørrelse</string>
-	<string name="drawer_list_empty_hint">Ingen apper funnet</string>
-	<string name="hidden_apps">Skjulte apper</string>
-	<string name="show">Forestilling</string>
-	<string name="reset">Nullstille</string>
-	<string name="cancel">Avbryt</string>
-	<string name="enable">Muliggjøre</string>
-	<string name="disable">Deaktiver</string>
-	<string name="enabled">Aktivert</string>
-	<string name="disabled">Funksjonshemmet</string>
+    <string name="app_name">mLauncher</string>
+    <string name="app">App</string>
+    <string name="set_as_default_launcher">Angi som standard launcher</string>
+    <string name="app_text_color">Tekstfarge</string>
+    <string name="double_tap_to_lock_screen">Dobbelttrykk for å låse</string>
+    <string name="experimental_">(eksperimentell)</string>
+    <string name="admin_permission_message">mLauncher lover å bruke tillatelse til låseskjermen på en ansvarlig måte.</string>
+    <string name="about">Om</string>
+    <string name="off">Av</string>
+    <string name="on">På</string>
+    <string name="black">Svart</string>
+    <string name="white">Hvit</string>
+    <string name="change_default_launcher">Endre standard launcher</string>
+    <string name="long_press_for_settings">Langt trykk hvor som helst for innstillinger</string>
+    <string name="swipe_up_for_apps">Sveip opp for alle apper</string>
+    <string name="apps_on_home_screen">Antall snarveier</string>
+    <string name="left">Venstre</string>
+    <string name="right">Ikke sant</string>
+    <string name="center">Senter</string>
+    <string name="home_alignment">Startskjerm for apper</string>
+    <string name="home_alignment_bottom">Appens startskjerm nederst</string>
+    <string name="clock_alignment">Klokke og dato</string>
+    <string name="drawer_alignment">Apper i appskuffen</string>
+    <string name="swipe_left_app">Sveip til venstre</string>
+    <string name="swipe_right_app">Sveip til høyre</string>
+    <string name="swipe_down_app">Sveip ned</string>
+    <string name="swipe_up_app">Sveip opp</string>
+    <string name="clock_click_app">Klikk på Klokke</string>
+    <string name="date_click_app">Klikk på Dato</string>
+    <string name="double_tap">Dobbelttrykk</string>
+    <string name="_0" translatable="false">0</string>
+    <string name="_1" translatable="false">1</string>
+    <string name="_2" translatable="false">2</string>
+    <string name="_3" translatable="false">3</string>
+    <string name="_4" translatable="false">4</string>
+    <string name="_5" translatable="false">5</string>
+    <string name="_6" translatable="false">6</string>
+    <string name="_7" translatable="false">7</string>
+    <string name="_8" translatable="false">8</string>
+    <string name="commit">Begå</string>
+    <string name="save">Lagre</string>
+    <string name="app_drawer_tips">Tips: Sveip ned for å avvise. Rull for å skjule tastaturet.</string>
+    <string name="okay">Greit</string>
+    <string name="double_tap_lock_is_enabled_message">Hvis dobbelttrykklås deaktiverer fingeravtrykk eller ansiktslås, åpne mLauncher-innstillinger, trykk på \'eksperimentell\' og følg instruksjonene. Takk skal du ha.</string>
+    <string name="triple_tap_lock_message">Hvordan det fungerer:
+        \nNår du dobbelttrykker, blir skjermen mørk og telefonen låser seg om 5 sekunder.
+        \n\nI løpet av denne tiden kan du dobbelttrykke for å<b>låse opp</b> eller trippeltrykk når som helst for å låse telefonen helt umiddelbart.
+        \n\nMerk: Slå denne AV først hvis du bestemmer deg for å slette mLauncher. Takk skal du ha.</string>
+    <string name="auto_show_keyboard">Auto show tastatur</string>
+    <string name="hide">Gjemme seg</string>
+    <string name="status_bar">Vis statuslinje</string>
+    <string name="rename">Gi nytt navn</string>
+    <string name="show_time">Vis tid</string>
+    <string name="show_date">Vis dato</string>
+    <string name="lock_home_apps">Lås apper</string>
+    <string name="extend_home_apps_area">Utvid det klikkbare området på hjemmeapper</string>
+    <string name="appearance">Utseende</string>
+    <string name="gestures">Gester</string>
+    <string name="toggles">Slår av</string>
+    <string name="homescreen">Startskjermen</string>
+    <string name="alignment">Justering</string>
+    <string name="theme_mode">Temamodus</string>
+    <string name="system_default">System</string>
+    <string name="dark">Mørk</string>
+    <string name="light">Lys</string>
+    <string name="double_tap_lock_uninstall_message">Dobbelttrykk for å låse aktivert.
+        \n\nMerk: Slå denne AV først hvis du bestemmer deg for å slette mLauncher.</string>
+    <string name="accessibility_service_name">mLauncher Actions Service</string>
+    <string name="accessibility_service_description">Denne tilgjengelighetstjenesten lar mLauncher utføre visse handlinger som å låse skjermen eller åpne hurtiginnstillingene.</string>
+    <string name="open">Åpen lenke</string>
+    <string name="copy">Kopiere</string>
+    <string name="close">Lukk</string>
+    <string name="app_language">Grensesnittspråk</string>
+    <string name="lang_system">System</string>
+    <string name="app_text_size">Tekststørrelse</string>
+    <string name="drawer_list_empty_hint">Ingen apper funnet</string>
+    <string name="hidden_apps">Skjulte apper</string>
+    <string name="auto_open_apps">Åpne apper automatisk</string>
+    <string name="show_apps">Alle apper</string>
+    <string name="show">Forestilling</string>
+    <string name="reset">Nullstille</string>
+    <string name="cancel">Avbryt</string>
+    <string name="enable">Muliggjøre</string>
+    <string name="disable">Deaktiver</string>
+    <string name="enabled">Aktivert</string>
+    <string name="disabled">Funksjonshemmet</string>
+    <string name="show_notifications">Vis varsling</string>
+    <string name="show_app_list">Vis appliste</string>
     <string name="open_app">Åpne appen</string>
-	<string name="lock_screen">Låseskjerm</string>
-	<string name="show_notifications">Vis varsling</string>
+    <string name="lock_screen">Låseskjerm</string>
+    <string name="open_quick_settings">Hurtiginnstillinger</string>
+    <string name="show_recents">Nylige show</string>
+
 </resources>

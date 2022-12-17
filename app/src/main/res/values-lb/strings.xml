@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">mLauncher</string>
+    <string name="app">App</string>
+    <string name="set_as_default_launcher">Setzt als Standardstarter</string>
+    <string name="app_text_color">Text Faarf</string>
+    <string name="double_tap_to_lock_screen">Duebeltapp fir ze spären</string>
+    <string name="experimental_">(experimentell)</string>
+    <string name="admin_permission_message">mLauncher versprécht de Sperrbildschirm Erlaabnis verantwortlech ze benotzen.</string>
+    <string name="about">Iwwer</string>
+    <string name="off">Off</string>
+    <string name="on">Op</string>
+    <string name="black">Schwaarz</string>
+    <string name="white">Wäiss</string>
+    <string name="change_default_launcher">Default Launcher änneren</string>
+    <string name="long_press_for_settings">Laang Press iwwerall fir Astellungen</string>
+    <string name="swipe_up_for_apps">Swipe up fir all Apps</string>
+    <string name="apps_on_home_screen">Zuel vun Ofkiirzungen</string>
+    <string name="left">Lénks</string>
+    <string name="right">Riets</string>
+    <string name="center">Zentrum</string>
+    <string name="home_alignment">Apps Heembildschierm</string>
+    <string name="home_alignment_bottom">Apps Haaptsäit ënnen</string>
+    <string name="clock_alignment">Auer an Datum</string>
+    <string name="drawer_alignment">Apps am App Tirang</string>
+    <string name="swipe_left_app">Swipe lénks</string>
+    <string name="swipe_right_app">Swipe riets</string>
+    <string name="swipe_down_app">Swipe erof</string>
+    <string name="swipe_up_app">Swipe op</string>
+    <string name="clock_click_app">Klickt op Auer</string>
+    <string name="date_click_app">Klickt op Datum</string>
+    <string name="double_tap">Duebel Tap</string>
+    <string name="_0" translatable="false">0</string>
+    <string name="_1" translatable="false">1</string>
+    <string name="_2" translatable="false">2</string>
+    <string name="_3" translatable="false">3</string>
+    <string name="_4" translatable="false">4</string>
+    <string name="_5" translatable="false">5</string>
+    <string name="_6" translatable="false">6</string>
+    <string name="_7" translatable="false">7</string>
+    <string name="_8" translatable="false">8</string>
+    <string name="commit">Engagéieren</string>
+    <string name="save">Spueren</string>
+    <string name="app_drawer_tips">Tipp: Swipt erof fir ze entloossen. Scrollen fir d\'Tastatur ze verstoppen.</string>
+    <string name="okay">Okay</string>
+    <string name="double_tap_lock_is_enabled_message">Wann d\'Double Tap Spär de Fangerofdrock oder d\'Gesiichtsspär deaktivéiert, oppen mLauncher Astellungen, tippt op \'experimentell\' a befollegt d\'Instruktioune. Merci.</string>
+    <string name="triple_tap_lock_message">Wéi et funktionnéiert:
+        \nWann Dir duebel klickt, gëtt den Écran däischter an den Telefon gespaart sech a 5 Sekonnen.
+        \n\nWährend dëser Zäit, kënnt Dir duebel-klickt op<b>opzemaachen</b> oder Triple-Tap zu all Moment fir den Telefon direkt ze spären.
+        \n\nNotiz: Maacht dëst als éischt OFF wann Dir décidéiert mLauncher ze läschen. Merci.</string>
+    <string name="auto_show_keyboard">Auto Show Keyboard</string>
+    <string name="hide">Verstoppen</string>
+    <string name="status_bar">Statusbar weisen</string>
+    <string name="rename">ëmbenennen</string>
+    <string name="show_time">Elo geet et lass</string>
+    <string name="show_date">Datum weisen</string>
+    <string name="lock_home_apps">Spär Apps</string>
+    <string name="extend_home_apps_area">Verlängeren klickbar Beräich op Heem Apps</string>
+    <string name="appearance">Ausgesinn</string>
+    <string name="gestures">Gesten</string>
+    <string name="toggles">Wiesselt</string>
+    <string name="homescreen">Homescreen</string>
+    <string name="alignment">Ausriichtung</string>
+    <string name="theme_mode">Thema Modus</string>
+    <string name="system_default">System</string>
+    <string name="dark">Däischter</string>
+    <string name="light">Liicht</string>
+    <string name="double_tap_lock_uninstall_message">Duebeltapp fir ze spären aktivéiert.
+        \n\nNotiz: Maacht dëst als éischt OFF wann Dir décidéiert mLauncher ze läschen.</string>
+    <string name="accessibility_service_name">mLauncher Actions Service</string>
+    <string name="accessibility_service_description">Dësen Accessibilitéitsservice erlaabt mLauncher verschidde Aktiounen ze maachen wéi den Ecran ze spären oder d\'schnell Astellungen opzemaachen.</string>
+    <string name="open">Open Link</string>
+    <string name="copy">Kopie</string>
+    <string name="close">Zoumaachen</string>
+    <string name="app_language">Interface Sprooch</string>
+    <string name="lang_system">System</string>
+    <string name="app_text_size">Text Gréisst</string>
+    <string name="drawer_list_empty_hint">Keng Apps fonnt</string>
+    <string name="hidden_apps">Verstoppt Apps</string>
+    <string name="auto_open_apps">Automatesch opmaachen Apps</string>
+    <string name="show_apps">All Apps</string>
+    <string name="show">Show</string>
+    <string name="reset">Zerécksetzen</string>
+    <string name="cancel">Ofbriechen</string>
+    <string name="enable">Aktivéieren</string>
+    <string name="disable">Desaktivéieren</string>
+    <string name="enabled">Aktivéiert</string>
+    <string name="disabled">Behënnert</string>
+    <string name="show_notifications">Show Notifikatioun</string>
+    <string name="show_app_list">Show App Lëscht</string>
+    <string name="open_app">Open App</string>
+    <string name="lock_screen">Sperrbildschirm</string>
+    <string name="open_quick_settings">Quick Astellunge</string>
+    <string name="show_recents">Rezent weist</string>
+
+</resources>
