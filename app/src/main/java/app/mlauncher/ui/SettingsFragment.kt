@@ -118,6 +118,22 @@ class SettingsFragment : Fragment() {
                 title = stringResource(R.string.appearance),
                 selected = selected,
                 items = arrayOf(
+                    { _, onChange ->
+                        SettingsToggle(
+                            title = stringResource(R.string.auto_show_keyboard),
+                            onChange = onChange,
+
+                            state = remember { mutableStateOf(prefs.autoShowKeyboard) },
+                        ) { toggleKeyboardText() }
+                    },
+                    { _, onChange ->
+                        SettingsToggle(
+                            title = stringResource(R.string.status_bar),
+                            onChange = onChange,
+
+                            state = remember { mutableStateOf(prefs.showStatusBar) },
+                        ) { toggleStatusBar() }
+                    },
                     { open, onChange ->
                         SettingsItem(
                             title = stringResource(R.string.theme_mode),
@@ -153,35 +169,6 @@ class SettingsFragment : Fragment() {
                             onSelect = { f -> setTextSize(f) }
                         )
                     }
-                )
-            )
-            SettingsArea(title = stringResource(R.string.toggles),
-                selected = selected,
-                items = arrayOf(
-                    { _, onChange ->
-                        SettingsToggle(
-                            title = stringResource(R.string.auto_show_keyboard),
-                            onChange = onChange,
-
-                            state = remember { mutableStateOf(prefs.autoShowKeyboard) },
-                        ) { toggleKeyboardText() }
-                    },
-                    { _, onChange ->
-                        SettingsToggle(
-                            title = stringResource(R.string.auto_open_apps),
-                            onChange = onChange,
-
-                            state = remember { mutableStateOf(prefs.autoOpenApp) },
-                        ) { toggleAutoOpenApp() }
-                    },
-                    { _, onChange ->
-                        SettingsToggle(
-                            title = stringResource(R.string.status_bar),
-                            onChange = onChange,
-
-                            state = remember { mutableStateOf(prefs.showStatusBar) },
-                        ) { toggleStatusBar() }
-                    },
                 )
             )
             SettingsArea(title = stringResource(R.string.homescreen),
@@ -222,15 +209,7 @@ class SettingsFragment : Fragment() {
 
                             state = remember { mutableStateOf(prefs.homeLocked) }
                         ) { prefs.homeLocked = !prefs.homeLocked }
-                    },
-                    { _, onChange ->
-                        SettingsToggle(
-                            title = stringResource(R.string.extend_home_apps_area),
-                            onChange = onChange,
-
-                            state = remember { mutableStateOf(prefs.extendHomeAppsArea) }
-                        ) { prefs.extendHomeAppsArea = !prefs.extendHomeAppsArea }
-                    },
+                    }
                 )
             )
             SettingsArea(title = stringResource(R.string.alignment),
@@ -246,14 +225,6 @@ class SettingsFragment : Fragment() {
                             values = arrayOf(Constants.Gravity.Left, Constants.Gravity.Center, Constants.Gravity.Right),
                             onSelect = { gravity -> setHomeAlignment(gravity) }
                         )
-                    },
-                    { _, onChange ->
-                        SettingsToggle(
-                            title = stringResource(R.string.home_alignment_bottom),
-                            onChange = onChange,
-
-                            state = remember { mutableStateOf(prefs.homeAlignmentBottom) }
-                        ) { toggleHomeAppsBottom() }
                     },
                     { open, onChange ->
                         SettingsItem(
@@ -341,6 +312,35 @@ class SettingsFragment : Fragment() {
                             onSelect = { j -> updateGesture(AppDrawerFlag.SetClickDate, j) },
                             appLabel = prefs.appClickDate.appLabel.ifEmpty { "Calendar" },
                         )
+                    }
+                )
+            )
+            SettingsArea(title = stringResource(R.string.extras),
+                selected = selected,
+                items = arrayOf(
+                    { _, onChange ->
+                        SettingsToggle(
+                            title = stringResource(R.string.auto_open_apps),
+                            onChange = onChange,
+
+                            state = remember { mutableStateOf(prefs.autoOpenApp) },
+                        ) { toggleAutoOpenApp() }
+                    },
+                    { _, onChange ->
+                        SettingsToggle(
+                            title = stringResource(R.string.home_alignment_bottom),
+                            onChange = onChange,
+
+                            state = remember { mutableStateOf(prefs.homeAlignmentBottom) }
+                        ) { toggleHomeAppsBottom() }
+                    },
+                    { _, onChange ->
+                        SettingsToggle(
+                            title = stringResource(R.string.extend_home_apps_area),
+                            onChange = onChange,
+
+                            state = remember { mutableStateOf(prefs.extendHomeAppsArea) }
+                        ) { prefs.extendHomeAppsArea = !prefs.extendHomeAppsArea }
                     },
                     { open, onChange ->
                         SettingsGestureItem(

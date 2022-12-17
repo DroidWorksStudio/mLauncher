@@ -57,7 +57,7 @@
     <string name="extend_home_apps_area">Laajenna napsautettavaa aluetta kotisovelluksissa</string>
     <string name="appearance">Ulkomuoto</string>
     <string name="gestures">Eleet</string>
-    <string name="toggles">Vaihtaa</string>
+    <string name="extras">ylimääräistä</string>
     <string name="homescreen">Aloitusnäyttö</string>
     <string name="alignment">Tasaus</string>
     <string name="theme_mode">Teematila</string>

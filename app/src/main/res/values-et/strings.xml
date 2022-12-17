@@ -66,4 +66,5 @@
 	<string name="alignment">Joondamine</string>
 	<string name="homescreen">Avakuva</string>
 	<string name="extend_home_apps_area">Laiendage kodurakenduste klõpsatavat ala</string>
+    <string name="extras">Lisa</string>
 </resources>
