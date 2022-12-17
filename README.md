@@ -39,6 +39,7 @@ We try to balance customizability and minimalization well still being simple :)<
   - Sindhi
   - Thai
   - Ukrainian
+  - Vietnamese
 
 ## Installation
 
