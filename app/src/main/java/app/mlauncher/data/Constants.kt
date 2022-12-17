@@ -41,6 +41,7 @@ object Constants {
         Arabic,
         Chinese,
         Croatian,
+        Czech,
         Danish,
         Dutch,
         English,
@@ -78,6 +79,7 @@ object Constants {
                 Arabic -> "العربية"
                 Chinese -> "中文"
                 Croatian -> "Hrvatski"
+                Czech -> "čeština"
                 Dutch -> "Nederlands"
                 Danish -> "dansk"
                 English -> "English"
@@ -117,6 +119,7 @@ object Constants {
             Language.Arabic -> "ar"
             Language.Chinese -> "cn"
             Language.Croatian -> "hr"
+            Language.Czech -> "cs"
             Language.Dutch -> "nl"
             Language.Danish -> "da"
             Language.English -> "en"

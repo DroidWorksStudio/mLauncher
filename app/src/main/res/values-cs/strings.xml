@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">mlauncher</string>
+    <string name="app">Aplikace</string>
+    <string name="set_as_default_launcher">Nastavit jako výchozí spouštěč</string>
+    <string name="app_text_color">Barva textu</string>
+    <string name="double_tap_to_lock_screen">Dvojitým klepnutím uzamknete</string>
+    <string name="experimental_">(experimentální)</string>
+    <string name="admin_permission_message">mLauncher slibuje, že bude zodpovědně používat oprávnění k uzamčení obrazovky.</string>
+    <string name="about">O</string>
+    <string name="off">Vypnuto</string>
+    <string name="on">Na</string>
+    <string name="black">Černá</string>
+    <string name="white">Bílý</string>
+    <string name="change_default_launcher">Změnit výchozí spouštěč</string>
+    <string name="long_press_for_settings">Dlouhým stisknutím kdekoli pro nastavení</string>
+    <string name="swipe_up_for_apps">Přejetím nahoru zobrazíte všechny aplikace</string>
+    <string name="apps_on_home_screen">Počet zkratek</string>
+    <string name="left">Vlevo, odjet</string>
+    <string name="right">Že jo</string>
+    <string name="center">Centrum</string>
+    <string name="home_alignment">Domovská obrazovka aplikací</string>
+    <string name="home_alignment_bottom">Spodní strana domovské obrazovky aplikací</string>
+    <string name="clock_alignment">Hodiny a datum</string>
+    <string name="drawer_alignment">Aplikace v zásuvce aplikací</string>
+    <string name="swipe_left_app">Přejeďte doleva</string>
+    <string name="swipe_right_app">Přejeďte prstem doprava</string>
+    <string name="swipe_down_app">Přejeďte prstem dolů</string>
+    <string name="swipe_up_app">Přejeďte prstem nahoru</string>
+    <string name="clock_click_app">Klikněte na Hodiny</string>
+    <string name="date_click_app">Klepněte na Datum</string>
+    <string name="double_tap">Dvojí poklepání</string>
+    <string name="_0" translatable="false">0</string>
+    <string name="_1" translatable="false">1</string>
+    <string name="_2" translatable="false">2</string>
+    <string name="_3" translatable="false">3</string>
+    <string name="_4" translatable="false">4</string>
+    <string name="_5" translatable="false">5</string>
+    <string name="_6" translatable="false">6</string>
+    <string name="_7" translatable="false">7</string>
+    <string name="_8" translatable="false">8</string>
+    <string name="commit">Spáchat</string>
+    <string name="save">Uložit</string>
+    <string name="app_drawer_tips">Tip: Přejetím dolů zavřete. Posunutím skryjete klávesnici.</string>
+    <string name="okay">dobře</string>
+    <string name="double_tap_lock_is_enabled_message">Pokud zámek dvojitým klepnutím deaktivuje odemknutí otiskem prstu nebo obličejem, otevřete nastavení mlauncheru, klepněte na \'experimentální\' a postupujte podle pokynů. Děkuji.</string>
+    <string name="triple_tap_lock_message">Jak to funguje:
+        \nJakmile dvakrát klepnete, obrazovka ztmavne a telefon se zamkne do 5 sekund.
+        \n\nBěhem této doby můžete dvakrát klepnout na<b>odemknout</b> nebo kdykoli trojitým klepnutím telefon okamžitě plně uzamknete.
+        \n\nPoznámka: Pokud se rozhodnete mlauncher smazat, nejprve toto VYPNĚTE. Děkuji.</string>
+    <string name="auto_show_keyboard">Automatické zobrazení klávesnice</string>
+    <string name="hide">Skrýt</string>
+    <string name="status_bar">Zobrazit stavový řádek</string>
+    <string name="rename">Přejmenovat</string>
+    <string name="show_time">Zobrazit čas</string>
+    <string name="show_date">Zobrazit datum</string>
+    <string name="lock_home_apps">Uzamknout aplikace</string>
+    <string name="extend_home_apps_area">Rozšiřte oblast, na kterou lze kliknout, u domácích aplikací</string>
+    <string name="appearance">Vzhled</string>
+    <string name="gestures">Gesta</string>
+    <string name="toggles">Přepíná</string>
+    <string name="homescreen">Domovská obrazovka</string>
+    <string name="alignment">Zarovnání</string>
+    <string name="theme_mode">Tématický režim</string>
+    <string name="system_default">Systém</string>
+    <string name="dark">Temný</string>
+    <string name="light">Světlo</string>
+    <string name="double_tap_lock_uninstall_message">Dvojitým klepnutím zámek aktivujete.
+        \n\nPoznámka: Pokud se rozhodnete mlauncher smazat, nejprve toto VYPNĚTE.</string>
+    <string name="accessibility_service_name">Služba mlauncher Actions Service</string>
+    <string name="accessibility_service_description">Tato služba usnadnění umožňuje mLauncheru provádět určité akce, jako je zamykání obrazovky nebo otevření rychlých nastavení.</string>
+    <string name="open">Otevřít odkaz</string>
+    <string name="copy">kopírovat</string>
+    <string name="close">Zavřít</string>
+    <string name="app_language">Jazyk rozhraní</string>
+    <string name="lang_system">Systém</string>
+    <string name="app_text_size">Velikost textu</string>
+    <string name="drawer_list_empty_hint">Nebyly nalezeny žádné aplikace</string>
+    <string name="hidden_apps">Skryté aplikace</string>
+    <string name="auto_open_apps">Automatické otevírání aplikací</string>
+    <string name="show_apps">Všechny aplikace</string>
+    <string name="show">Ukázat</string>
+    <string name="reset">Resetovat</string>
+    <string name="cancel">zrušení</string>
+    <string name="enable">Umožnit</string>
+    <string name="disable">Zakázat</string>
+    <string name="enabled">Povoleno</string>
+    <string name="disabled">Zakázáno</string>
+    <string name="show_notifications">Zobrazit upozornění</string>
+    <string name="show_app_list">Zobrazit seznam aplikací</string>
+    <string name="open_app">Otevřete aplikaci</string>
+    <string name="lock_screen">Uzamknout obrazovku</string>
+    <string name="open_quick_settings">Rychlé nastavení</string>
+    <string name="show_recents">Nedávné pořady</string>
+
+</resources>
