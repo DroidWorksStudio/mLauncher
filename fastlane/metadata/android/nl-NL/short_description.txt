@@ -1,1 +1,1 @@
-Gevorkt van Olauncher, +minimalisatie, +aanpasbaarheid
+Gevorkt van OlauncherCF, +minimalisatie, +aanpasbaarheid

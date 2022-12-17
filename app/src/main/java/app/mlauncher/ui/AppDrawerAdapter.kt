@@ -1,10 +1,8 @@
 package app.mlauncher.ui
 
-import android.content.res.Resources
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
-import android.util.TypedValue
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -12,7 +10,6 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import app.mlauncher.R
 import app.mlauncher.data.AppModel
@@ -33,6 +30,7 @@ class AppDrawerAdapter(
     private val appRenameListener: (String, String) -> Unit
 ) : RecyclerView.Adapter<AppDrawerAdapter.ViewHolder>(), Filterable {
 
+    private lateinit var prefs: Prefs
     private var appFilter = createAppFilter()
     var appsList: MutableList<AppModel> = mutableListOf()
     var appFilteredList: MutableList<AppModel> = mutableListOf()
@@ -41,6 +39,7 @@ class AppDrawerAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         binding = AdapterAppDrawerBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         binding.appTitle.textSize = Prefs(parent.context).textSize.toFloat()
+        prefs = Prefs(parent.context)
 
         return ViewHolder(binding)
     }
@@ -65,12 +64,7 @@ class AppDrawerAdapter(
             appRenameListener(appModel.appPackage, appModel.appAlias)
         }
 
-        try { // Automatically open the app when there's only one search result
-            if ((itemCount == 1) and (flag == AppDrawerFlag.LaunchApp))
-                clickListener(appFilteredList[position])
-        } catch (e: Exception) {
-
-        }
+        autoLaunch(position)
     }
 
     override fun getItemCount(): Int = appFilteredList.size
@@ -103,6 +97,15 @@ class AppDrawerAdapter(
                 appFilteredList = results?.values as MutableList<AppModel>
                 notifyDataSetChanged()
             }
+        }
+    }
+
+    private fun autoLaunch(position: Int) {
+        try { // Automatically open the app when there's only one search result
+            if ((itemCount == 1) and (flag == AppDrawerFlag.LaunchApp) and (prefs.autoOpenApp))
+                clickListener(appFilteredList[position])
+        } catch (e: Exception) {
+            e.printStackTrace()
         }
     }
 

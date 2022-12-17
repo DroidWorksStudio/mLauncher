@@ -1,40 +1,20 @@
-Gevorkt van <a href="https://f-droid.org/packages/app.olauncher/">Olauncher</a> omdat de originele versie onoverzichtelijk is
+Gevorkt van <a href="https://github.com/OlauncherCF/OlauncherCF">OlauncherCF</a>. Minimale en schone backlinks
     
-- Opgeblazen gevoel, zoals advertenties en links verwijderd
-- U kunt apps hernoemen in de app-drawer _(Het hernoemen van apps op het startscherm wordt al ondersteund. Klik lang op een app op het startscherm en begin met typen)_
-- Mogelijkheid om de app of actie te wijzigen door op de klok te klikken
-- Mogelijkheid om de app of actie te wijzigen door op de datum te klikken
-- Mogelijkheid om de app of actie te wijzigen door omhoog, omlaag, naar links of naar rechts te vegen
-- Lijn klok en datum onafhankelijk van thuis-apps uit
-- Wijzig de uitlijning van apps in de app-drawer
-- Verander lettergrootte
-- Veel mensen hebben de app vertaald naar de volgende talen. Heel erg bedankt ❤️
+- Mogelijkheid voor meer aanpasbaarheid van gebaren op het startscherm.
+- Mogelijkheid om de automatisering van het openen van de app te schakelen als deze als laatste in de lijst staat.
+- Veel mensen hebben de app vertaald naar de volgende talen. Hartelijk dank aan jullie allemaal.
   - Albanees
-  - Arabisch
-  - Chinees
-  - Kroatisch
   - Deens
-  - Engels
   - Ests
-  - Frans
-  - Duits
   - Grieks
   - Hawaïaans
   - Hebreeuws
   - IJslands
-  - Indonesisch
   - Iers
-  - Italiaans
   - Japans
-  - Koreaans
+  - Litouws
   - Maleis
   - Malayalam
   - Noors
-  - Perzisch
-  - Portugees (Europees)
   - Pools
-  - Russisch
-  - Spaans
-  - Zweeds
   - Thais
-  - Turks

@@ -1,40 +1,20 @@
-Bifurqué de <a href="https://f-droid.org/packages/app.olauncher/">Olauncher</a> car la version originale est encombrée
+Bifurqué de <a href="https://github.com/OlauncherCF/OlauncherCF">OlauncherCF</a>. Minimal et propre de liens de retour
     
-- Suppression des ballonnements, comme les publicités et les liens
-- Vous pouvez renommer les applications dans le tiroir d'applications _ (Renommer les applications sur l'écran d'accueil est déjà pris en charge. Il suffit de cliquer longuement sur une application sur l'écran d'accueil et de commencer à taper) _
-- Possibilité de changer l'application ou l'action en cliquant sur l'horloge
-- Possibilité de changer l'application ou l'action en cliquant sur la date
-- Possibilité de changer l'application ou l'action en glissant vers le haut, le bas, la gauche ou la droite
-- Alignez l'horloge et la date indépendamment des applications domestiques
-- Modifier l'alignement des applications dans le tiroir d'applications
-- Changer la taille de la police
-- De nombreuses personnes ont traduit l'application dans les langues suivantes. Un grand merci à vous ❤️
+- Possibilité de plus de personnalisation sur les gestes de l'écran d'accueil.
+- Possibilité de basculer l'automatisation de l'ouverture de l'application si elle est la dernière de la liste.
+- De nombreuses personnes ont traduit l'application dans les langues suivantes. Un grand merci à vous tous.
   - albanais
-  - Arabe
-  - Chinois
-  - Croate
   - Danois
-  - Anglais
   - estonien
-  - Français
-  - Allemand
   - Grec
   - Hawaïen
   - hébreu
   - islandais
-  - Indonésien
   - Irlandais
-  - Italien
   - Japonais
-  - Coréen
+  - lituanien
   - Malais
   - Malayalam
   - Norvégien
-  - persan
-  - portugais (européen)
   - Polonais
-  - russe
-  - Espagnol
-  - Suédois
   - Thaï
-  - Turc

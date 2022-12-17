@@ -57,6 +57,7 @@
     <string name="extend_home_apps_area">Extend clickable area on home apps</string>
     <string name="appearance">Appearance</string>
     <string name="gestures">Gestures</string>
+    <string name="toggles">Toggles</string>
     <string name="homescreen">Homescreen</string>
     <string name="alignment">Alignment</string>
     <string name="theme_mode">Theme mode</string>
@@ -75,6 +76,7 @@
     <string name="app_text_size">Text Size</string>
     <string name="drawer_list_empty_hint">No apps found</string>
     <string name="hidden_apps">Hidden apps</string>
+    <string name="auto_open_apps">Auto open apps</string>
     <string name="show_apps">All apps</string>
     <string name="show">Show</string>
     <string name="reset">Reset</string>
