@@ -1,69 +1,95 @@
 <resources>
-	<string name="app_name">mLauncher</string>
-	<string name="app">Приложение</string>
-	<string name="set_as_default_launcher">Назначить главным лаунчером</string>
-	<string name="app_text_color">Цвет текста</string>
-	<string name="double_tap_to_lock_screen">Блокировка двойным тапом</string>
-	<string name="experimental_">(экспериментальный)</string>
-	<string name="admin_permission_message">mlauncher обещает ответственно использовать разрешение экрана блокировки.</string>
-	<string name="about">О приложении</string>
-	<string name="off">Выкл</string>
-	<string name="on">Вкл</string>
-	<string name="black">Черный</string>
-	<string name="white">Белый</string>
-	<string name="change_default_launcher">Выбрать лаунчер</string>
-	<string name="long_press_for_settings">Длительное нажатие для настройки</string>
-	<string name="swipe_up_for_apps">Свайп вверх для всех приложений</string>
-	<string name="apps_on_home_screen">Приложения на главном экране</string>
-	<string name="left">Слева</string>
-	<string name="right">Справа</string>
-	<string name="center">По центру</string>
-	<string name="home_alignment">Выравнивание приложений</string>
-	<string name="clock_alignment">Выравнивание часов</string>
-	<string name="drawer_alignment">Выравнивание ящика приложений</string>
-	<string name="swipe_left_app">Свайпом влево открыть</string>
-	<string name="swipe_right_app">Свайпом вправо открыть</string>
-	<string name="clock_click_app">Тапом часов открыть</string>
-	<string name="date_click_app">Тапом даты открыть</string>
-	<string name="commit">Применить</string>
-	<string name="app_drawer_tips">Совет: Свайпните вниз, чтобы закрыть. Прокрутите, чтобы скрыть клавиатуру.</string>
-	<string name="okay">Хорошо</string>
-	<string name="double_tap_lock_is_enabled_message">Если блокировка двойным тапом отключает разблокировку по отпечатку пальца или лицу, откройте настройки mlauncher, нажмите «Экспериментальный» и следуйте инструкциям. Спасибо.</string>
-	<string name="triple_tap_lock_message">Как это работает:\nПосле двойного тапа экран погаснет, а телефон заблокируется через 5 секунд.\n\nВ это время вы можете дважды тапнуть, чтобы<b>	разблокировать</b>, или трижды тапнуть, чтобы немедленно полностью заблокировать телефон.\n\nПримечание. Сначала выключите этот параметр, если вы решите удалить mlauncher. Спасибо.</string>
-	<string name="auto_show_keyboard">Автопоказ клавиатуры</string>
-	<string name="hide">Скрыть</string>
-	<string name="status_bar">Показывать строку состояния</string>
-	<string name="rename">Переименовать</string>
-	<string name="show_time">Показывать время</string>
-	<string name="show_date">Показывать дату</string>
-	<string name="appearance">Внешний вид</string>
-	<string name="gestures">Действия</string>
-	<string name="theme_mode">Тема</string>
-	<string name="system_default">Системная</string>
-	<string name="dark">Темная</string>
-	<string name="light">Светлая</string>
-	<string name="double_tap_lock_uninstall_message">Блокировка двойным тапом включена.\n\nПримечание: Выключите это, если решите удалить mlauncher.</string>
-	<string name="accessibility_service_description">Разрешение на специальные возможности требуется, чтобы включить двойное касание для блокировки. Любые данные, полученные службой, не покинут ваше устройство.</string>
-	<string name="open">Открыть ссылку</string>
-	<string name="copy">Копировать</string>
-	<string name="close">Закрыть</string>
-	<string name="app_language">Язык интерфейса</string>
-	<string name="lang_system">Системный</string>
-	<string name="app_text_size">Размер текста</string>
-	<string name="hidden_apps">Скрытые приложения</string>
-	<string name="show">Показывать</string>
-	<string name="reset">Сбросить</string>
-	<string name="cancel">Отмена</string>
-	<string name="home_alignment_bottom">Главный экран приложений внизу</string>
-	<string name="save">Сохранять</string>
-	<string name="lock_home_apps">Блокировка приложений</string>
-	<string name="homescreen">Домашний экран</string>
-	<string name="alignment">Выравнивание</string>
-	<string name="drawer_list_empty_hint">Приложения не найдены</string>
-	<string name="enable">включить</string>
-	<string name="swipe_down_app">Проведите вниз по приложению</string>
-	<string name="extend_home_apps_area">Расширить интерактивную область в домашних приложениях</string>
-	<string name="disable">запрещать</string>
-	<string name="enabled">включено</string>
-	<string name="disabled">инвалид</string>
+    <string name="app_name">mLauncher</string>
+    <string name="app">Приложение</string>
+    <string name="set_as_default_launcher">Сделать лаунчером по умолчанию</string>
+    <string name="app_text_color">Цвет текста</string>
+    <string name="double_tap_to_lock_screen">Нажмите дважды, чтобы заблокировать</string>
+    <string name="experimental_">(экспериментальный)</string>
+    <string name="admin_permission_message">mLauncher обещает ответственно использовать разрешение экрана блокировки.</string>
+    <string name="about">О</string>
+    <string name="off">Выключенный</string>
+    <string name="on">На</string>
+    <string name="black">Черный</string>
+    <string name="white">Белый</string>
+    <string name="change_default_launcher">Изменить лаунчер по умолчанию</string>
+    <string name="long_press_for_settings">Длительное нажатие в любом месте для настроек</string>
+    <string name="swipe_up_for_apps">Проведите вверх для всех приложений</string>
+    <string name="apps_on_home_screen">Количество ярлыков</string>
+    <string name="left">Оставил</string>
+    <string name="right">Верно</string>
+    <string name="center">Центр</string>
+    <string name="home_alignment">Главный экран приложений</string>
+    <string name="home_alignment_bottom">Главный экран приложений внизу</string>
+    <string name="clock_alignment">Часы и дата</string>
+    <string name="drawer_alignment">Приложения в панели приложений</string>
+    <string name="swipe_left_app">Проведите пальцем влево</string>
+    <string name="swipe_right_app">Проведите вправо</string>
+    <string name="swipe_down_app">Проведите вниз</string>
+    <string name="swipe_up_app">Проведите вверх</string>
+    <string name="clock_click_app">Нажмите на часы</string>
+    <string name="date_click_app">Нажмите на дату</string>
+    <string name="double_tap">Двойное нажатие</string>
+    <string name="_0" translatable="false">0</string>
+    <string name="_1" translatable="false">1</string>
+    <string name="_2" translatable="false">2</string>
+    <string name="_3" translatable="false">3</string>
+    <string name="_4" translatable="false">4</string>
+    <string name="_5" translatable="false">5</string>
+    <string name="_6" translatable="false">6</string>
+    <string name="_7" translatable="false">7</string>
+    <string name="_8" translatable="false">8</string>
+    <string name="commit">Совершить</string>
+    <string name="save">Сохранять</string>
+    <string name="app_drawer_tips">Совет: проведите вниз, чтобы закрыть. Прокрутите, чтобы скрыть клавиатуру.</string>
+    <string name="okay">Хорошо</string>
+    <string name="double_tap_lock_is_enabled_message">Если блокировка двойным нажатием отключает разблокировку по отпечатку пальца или лицу, откройте настройки mLauncher, нажмите «Экспериментальный» и следуйте инструкциям. Спасибо.</string>
+    <string name="triple_tap_lock_message">Как это работает:
+        \nПосле двойного нажатия экран погаснет, а телефон заблокируется через 5 секунд.
+        \n\nВ это время вы можете дважды нажать, чтобы<b>разблокировать</b> или трижды нажмите в любое время, чтобы немедленно полностью заблокировать телефон.
+        \n\nПримечание: сначала выключите этот параметр, если вы решите удалить mlauncher. Спасибо.</string>
+    <string name="auto_show_keyboard">Автопоказ клавиатуры</string>
+    <string name="hide">Скрывать</string>
+    <string name="status_bar">Показать строку состояния</string>
+    <string name="rename">Переименовать</string>
+    <string name="show_time">Время для шоу</string>
+    <string name="show_date">Показать дату</string>
+    <string name="lock_home_apps">Блокировка приложений</string>
+    <string name="extend_home_apps_area">Расширить интерактивную область в домашних приложениях</string>
+    <string name="appearance">вид</string>
+    <string name="gestures">Жесты</string>
+    <string name="toggles">Переключает</string>
+    <string name="homescreen">Домашний экран</string>
+    <string name="alignment">Выравнивание</string>
+    <string name="theme_mode">Тематический режим</string>
+    <string name="system_default">Система</string>
+    <string name="dark">Темный</string>
+    <string name="light">Легкий</string>
+    <string name="double_tap_lock_uninstall_message">Нажмите дважды, чтобы включить блокировку.
+        \n\nПримечание: сначала выключите этот параметр, если вы решите удалить mlauncher.</string>
+    <string name="accessibility_service_name">Служба действий mlauncher</string>
+    <string name="accessibility_service_description">Эта служба специальных возможностей позволяет mLauncher выполнять определенные действия, такие как блокировка экрана или открытие быстрых настроек.</string>
+    <string name="open">Открыть ссылку</string>
+    <string name="copy">Копировать</string>
+    <string name="close">Закрывать</string>
+    <string name="app_language">Язык интерфейса</string>
+    <string name="lang_system">Система</string>
+    <string name="app_text_size">Размер текста</string>
+    <string name="drawer_list_empty_hint">Приложения не найдены</string>
+    <string name="hidden_apps">Скрытые приложения</string>
+    <string name="auto_open_apps">Автоматически открывать приложения</string>
+    <string name="show_apps">Все приложения</string>
+    <string name="show">Показывать</string>
+    <string name="reset">Перезагрузить</string>
+    <string name="cancel">Отмена</string>
+    <string name="enable">включить</string>
+    <string name="disable">Запрещать</string>
+    <string name="enabled">Включено</string>
+    <string name="disabled">Неполноценный</string>
+    <string name="show_notifications">Показать уведомление</string>
+    <string name="show_app_list">Показать список приложений</string>
+    <string name="open_app">Открыть приложение</string>
+    <string name="lock_screen">Экран блокировки</string>
+    <string name="open_quick_settings">Быстрые настройки</string>
+    <string name="show_recents">Недавние шоу</string>
+
 </resources>
