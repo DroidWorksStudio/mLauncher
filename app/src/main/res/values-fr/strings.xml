@@ -1,69 +1,95 @@
 <resources>
-	<string name="app_name">mLauncher</string>
-	<string name="app">App</string>
-	<string name="set_as_default_launcher">Définir comme lanceur par défaut</string>
-	<string name="app_text_color">Couleur du texte</string>
-	<string name="double_tap_to_lock_screen">Tapoter deux fois pour verrouiller</string>
-	<string name="experimental_">(expérimental)</string>
-	<string name="admin_permission_message">mlauncher promet d\'utiliser l\'autorisation d\'accès au verrouillage de l\'écran de manière responsable.</string>
-	<string name="about">À Propos</string>
-	<string name="off">Non</string>
-	<string name="on">Oui</string>
-	<string name="black">Noir</string>
-	<string name="white">Blanc</string>
-	<string name="change_default_launcher">Modifier le lanceur par défaut</string>
-	<string name="long_press_for_settings">Appuyez longuement n\'importe où pour accéder aux paramètres</string>
-	<string name="swipe_up_for_apps">Balayez vers le haut pour accéder aux applications</string>
-	<string name="apps_on_home_screen">Nombre de raccourcis sur l\'écran d\'accueil</string>
-	<string name="left">Gauche</string>
-	<string name="right">Droite</string>
-	<string name="center">Centre</string>
-	<string name="home_alignment">Raccourcis de l\'écran d\'accueil</string>
-	<string name="clock_alignment">Horloge et date</string>
-	<string name="drawer_alignment">Applications du tiroirs d\'application</string>
-	<string name="swipe_left_app">Balayage vers la gauche</string>
-	<string name="swipe_right_app">Balayage vers la droite</string>
-	<string name="clock_click_app">Appui sur l\'horloge</string>
-	<string name="date_click_app">Appui sur la date</string>
-	<string name="save">Appliquer</string>
-	<string name="app_drawer_tips">Conseil: balayez vers le bas pour ignorer. Faites défiler pour masquer le clavier.</string>
-	<string name="okay">Okay</string>
-	<string name="double_tap_lock_is_enabled_message">Si le verrouillage par double tapotement désactive le déverrouillage biométrique (par empreinte ou par visage), ouvrez les paramètres d\'mlauncher, toucher \'expérimental\' et suivez les instructions. Merci.</string>
-	<string name="triple_tap_lock_message">Comment cela fonctionne t-il:\nLorsque vous appuyez deux fois, l\'écran s\'éteint et le téléphone se verrouille dans les 5 secondes.\n\nPendant ce temps, vous pouvez double-taper pour<b>	déverrouiller</b>ou triple-taper à tout moment pour verrouiller immédiatement et complètement le téléphone.\n\nNote: Désactivez d\'abord cette fonction si vous décidez la suppression d\'mlauncher. Merci.</string>
-	<string name="auto_show_keyboard">Affichage automatique du clavier</string>
-	<string name="hide">Masquer</string>
-	<string name="status_bar">Afficher la barre d\'état</string>
-	<string name="rename">Renommer</string>
-	<string name="show_time">Afficher l\'heure</string>
-	<string name="show_date">Afficher la date</string>
-	<string name="lock_home_apps">Verrouillage des applications sur l\écran d\'accueil</string>
-	<string name="appearance">Apparence</string>
-	<string name="gestures">Gestuels</string>
-	<string name="homescreen">Écran d\'accueil</string>
-	<string name="alignment">Alignement</string>
-	<string name="theme_mode">Thème</string>
-	<string name="system_default">Identique au Système</string>
-	<string name="dark">Obscur</string>
-	<string name="light">Clair</string>
-	<string name="double_tap_lock_uninstall_message">Tapoter deux fois pour verrouiller est activé\n\nRemarque: Désactivez-le d\'abord si vous décidez de supprimer mlauncher.</string>
-	<string name="accessibility_service_description">L\'autorisation d\'accès au service d\'accessibilité est nécessaire pour activer le double tap pour verrouiller. Aucunes données acquises par le service ne quitteront pas votre appareil.</string>
-	<string name="open">Ouvrir le lien</string>
-	<string name="copy">Copier</string>
-	<string name="close">Fermer</string>
-	<string name="app_language">Langue de l\'Interface</string>
-	<string name="lang_system">Identique au Système</string>
-	<string name="app_text_size">Taille de la police</string>
-	<string name="hidden_apps">Applications masquées</string>
-	<string name="show">Afficher</string>
-	<string name="reset">Réinitialiser</string>
-	<string name="cancel">Annuler</string>
-	<string name="home_alignment_bottom">Bas de l\'écran d\'accueil des applications</string>
-	<string name="drawer_list_empty_hint">Aucune application trouvée</string>
-	<string name="enable">Activer</string>
-	<string name="swipe_down_app">Faites glisser l\'application vers le bas</string>
-	<string name="commit">Commettre</string>
-	<string name="extend_home_apps_area">Étendre la zone cliquable sur les applications domestiques</string>
-	<string name="disable">Désactiver</string>
-	<string name="enabled">Activé</string>
-	<string name="disabled">Handicapée</string>
+    <string name="app_name">mLauncher</string>
+    <string name="app">Application</string>
+    <string name="set_as_default_launcher">Définir comme lanceur par défaut</string>
+    <string name="app_text_color">Couleur du texte</string>
+    <string name="double_tap_to_lock_screen">Appuyez deux fois pour verrouiller</string>
+    <string name="experimental_">(expérimental)</string>
+    <string name="admin_permission_message">mLauncher promet d\'utiliser l\'autorisation d\'écran de verrouillage de manière responsable.</string>
+    <string name="about">À propos de</string>
+    <string name="off">À l\'arrêt</string>
+    <string name="on">Sur</string>
+    <string name="black">Le noir</string>
+    <string name="white">Blanc</string>
+    <string name="change_default_launcher">Changer le lanceur par défaut</string>
+    <string name="long_press_for_settings">Appuyez longuement n\'importe où pour les paramètres</string>
+    <string name="swipe_up_for_apps">Balayez vers le haut pour toutes les applications</string>
+    <string name="apps_on_home_screen">Nombre de raccourcis</string>
+    <string name="left">La gauche</string>
+    <string name="right">Droit</string>
+    <string name="center">Centre</string>
+    <string name="home_alignment">Écran d\'accueil des applications</string>
+    <string name="home_alignment_bottom">Bas de l\'écran d\'accueil des applications</string>
+    <string name="clock_alignment">Horloge et date</string>
+    <string name="drawer_alignment">Applications dans le tiroir d\'applications</string>
+    <string name="swipe_left_app">Balayez vers la gauche</string>
+    <string name="swipe_right_app">Balayez vers la droite</string>
+    <string name="swipe_down_app">Balayez vers le bas</string>
+    <string name="swipe_up_app">Balayez vers le haut</string>
+    <string name="clock_click_app">Cliquez sur Horloge</string>
+    <string name="date_click_app">Cliquez sur Date</string>
+    <string name="double_tap">Tapez deux fois</string>
+    <string name="_0" translatable="false">0</string>
+    <string name="_1" translatable="false">1</string>
+    <string name="_2" translatable="false">2</string>
+    <string name="_3" translatable="false">3</string>
+    <string name="_4" translatable="false">4</string>
+    <string name="_5" translatable="false">5</string>
+    <string name="_6" translatable="false">6</string>
+    <string name="_7" translatable="false">7</string>
+    <string name="_8" translatable="false">8</string>
+    <string name="commit">Commettre</string>
+    <string name="save">sauvegarder</string>
+    <string name="app_drawer_tips"><![CDATA[Conseil : balayez vers le bas pour ignorer. Faites défiler pour masquer le clavier.]]></string>
+    <string name="okay">D\'accord</string>
+    <string name="double_tap_lock_is_enabled_message">Si le verrouillage par double pression désactive le déverrouillage des empreintes digitales ou du visage, ouvrez les paramètres de mLauncher, appuyez sur \\'expérimental\\' et suivez les instructions. Merci.</string>
+    <string name="triple_tap_lock_message">Comment ça fonctionne:
+        \nUne fois que vous appuyez deux fois, l\'écran s\'assombrit et le téléphone se verrouille en 5 secondes.
+        \n\nPendant ce temps, vous pouvez appuyer deux fois pour<b>ouvrir</b><![CDATA[ ou appuyez trois fois à tout moment pour verrouiller complètement le téléphone immédiatement.
+        \n\nRemarque : désactivez cette option si vous décidez de supprimer mLauncher. Merci.]]></string>
+    <string name="auto_show_keyboard">Clavier d\'affichage automatique</string>
+    <string name="hide">Cacher</string>
+    <string name="status_bar">Afficher la barre d\'état</string>
+    <string name="rename">Renommer</string>
+    <string name="show_time">Afficher l\'heure</string>
+    <string name="show_date">Afficher la date</string>
+    <string name="lock_home_apps">Verrouiller les applications</string>
+    <string name="extend_home_apps_area">Étendre la zone cliquable sur les applications domestiques</string>
+    <string name="appearance">Apparence</string>
+    <string name="gestures">Gestes</string>
+    <string name="toggles">Bascule</string>
+    <string name="homescreen">Écran d\'accueil</string>
+    <string name="alignment">Alignement</string>
+    <string name="theme_mode">Mode thème</string>
+    <string name="system_default">Système</string>
+    <string name="dark">Sombre</string>
+    <string name="light">Lumière</string>
+    <string name="double_tap_lock_uninstall_message"><![CDATA[Appuyez deux fois pour verrouiller activé.
+        \n\nRemarque : désactivez cette option si vous décidez de supprimer mLauncher.]]></string>
+    <string name="accessibility_service_name">Service d\'actions mLauncher</string>
+    <string name="accessibility_service_description">Ce service d\'accessibilité permet à mLauncher d\'effectuer certaines actions telles que verrouiller l\'écran ou ouvrir les paramètres rapides.</string>
+    <string name="open">Ouvrir le lien</string>
+    <string name="copy">Copie</string>
+    <string name="close">proche</string>
+    <string name="app_language">Langue de l\'interface</string>
+    <string name="lang_system">Système</string>
+    <string name="app_text_size">Taille du texte</string>
+    <string name="drawer_list_empty_hint">Aucune application trouvée</string>
+    <string name="hidden_apps">Applications cachées</string>
+    <string name="auto_open_apps">Ouvrir automatiquement les applications</string>
+    <string name="show_apps">Toutes les applications</string>
+    <string name="show">Spectacle</string>
+    <string name="reset">Réinitialiser</string>
+    <string name="cancel">Annuler</string>
+    <string name="enable">Activer</string>
+    <string name="disable">Désactiver</string>
+    <string name="enabled">Activé</string>
+    <string name="disabled">Handicapé</string>
+    <string name="show_notifications">Montrer les notifications</string>
+    <string name="show_app_list">Afficher la liste des applications</string>
+    <string name="open_app">Ouvrir application</string>
+    <string name="lock_screen">Écran verrouillé</string>
+    <string name="open_quick_settings">Réglages rapides</string>
+    <string name="show_recents">Spectacles récents</string>
+
 </resources>
