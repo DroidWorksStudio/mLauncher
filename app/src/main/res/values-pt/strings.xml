@@ -1,81 +1,95 @@
 <resources>
-	<string name="app_name">mLlauncher</string>
-	<string name="app">Aplicativo</string>
-	<string name="set_as_default_launcher">Definir como iniciador padrão</string>
-	<string name="app_text_color">Cor do texto</string>
-	<string name="double_tap_to_lock_screen">Toque duas vezes para bloquear</string>
-	<string name="experimental_">(experimental)</string>
-	<string name="admin_permission_message">O mlauncher promete usar a permissão da tela de bloqueio com responsabilidade.</string>
-	<string name="about">Sobre</string>
-	<string name="off">Desligado</string>
-	<string name="on">Sobre</string>
-	<string name="black">Preto</string>
-	<string name="white">Branco</string>
-	<string name="change_default_launcher">Alterar iniciador padrão</string>
-	<string name="long_press_for_settings">Pressione e segure em qualquer lugar para configurações</string>
-	<string name="swipe_up_for_apps">Deslize para cima para todos os aplicativos</string>
-	<string name="apps_on_home_screen">Número de atalhos</string>
-	<string name="left">Deixei</string>
-	<string name="right">Certo</string>
-	<string name="center">Centro</string>
-	<string name="home_alignment">Tela inicial de aplicativos</string>
-	<string name="home_alignment_bottom">Parte inferior da tela inicial de aplicativos</string>
-	<string name="clock_alignment">Relógio e data</string>
-	<string name="drawer_alignment">Aplicativos na gaveta de aplicativos</string>
-	<string name="swipe_left_app">Deslize para a esquerda</string>
-	<string name="swipe_right_app">Desliza para a direita</string>
-	<string name="swipe_down_app">Deslize para baixo</string>
-	<string name="clock_click_app">clique do relógio</string>
-	<string name="date_click_app">Data do clique</string>
-	<string name="_0" translatable="false">0</string>
-	<string name="_1" translatable="false">1</string>
-	<string name="_2" translatable="false">2</string>
-	<string name="_3" translatable="false">3</string>
-	<string name="_4" translatable="false">4</string>
-	<string name="_5" translatable="false">5</string>
-	<string name="_6" translatable="false">6</string>
-	<string name="_7" translatable="false">7</string>
-	<string name="_8" translatable="false">8</string>
-	<string name="commit">Comprometer-se</string>
-	<string name="save">Salvar</string>
-	<string name="app_drawer_tips">Dica: deslize para baixo para descartar. Role para ocultar o teclado.</string>
-	<string name="okay">Ok</string>
-	<string name="double_tap_lock_is_enabled_message">Se o bloqueio de toque duplo desativar a impressão digital ou o desbloqueio facial, abra as configurações do mlauncher, toque em \'experimental\' e siga as instruções. Obrigada.</string>
-	<string name="triple_tap_lock_message">Como funciona:\nDepois de tocar duas vezes, a tela escurece e o telefone se bloqueia em 5 segundos.\n\nDurante esse tempo, você pode tocar duas vezes para<b>desbloquear</b>ou toque três vezes a qualquer momento para bloquear totalmente o telefone imediatamente.\n\nObservação: desative isso primeiro se decidir excluir mlauncher. Obrigada.</string>
-	<string name="auto_show_keyboard">teclado de exibição automática</string>
-	<string name="hide">Esconder</string>
-	<string name="status_bar">Mostrar barra de status</string>
-	<string name="rename">Renomear</string>
-	<string name="show_time">Altura de começar</string>
-	<string name="show_date">Mostrar data</string>
-	<string name="lock_home_apps">Bloquear aplicativos</string>
-	<string name="extend_home_apps_area">Estenda a área clicável em aplicativos domésticos</string>
-	<string name="appearance">Aparência</string>
-	<string name="gestures">gestos</string>
-	<string name="homescreen">Tela inicial</string>
-	<string name="alignment">Alinhamento</string>
-	<string name="theme_mode">Modo de tema</string>
-	<string name="system_default">Sistema</string>
-	<string name="dark">Escuro</string>
-	<string name="light">Leve</string>
-	<string name="double_tap_lock_uninstall_message">Toque duas vezes para bloquear ativado.\n\nObservação: desative isso primeiro se decidir excluir mlauncher.</string>
-	<string name="accessibility_service_description">A permissão de acessibilidade é necessária para ativar o toque duplo para bloquear. Quaisquer dados adquiridos pelo serviço não sairão do seu dispositivo.</string>
-	<string name="open">Link aberto</string>
-	<string name="copy">cópia de</string>
-	<string name="close">Perto</string>
-	<string name="app_language">Idioma da interface</string>
-	<string name="lang_system">Sistema</string>
-	<string name="app_text_size">Tamanho do texto</string>
-	<string name="drawer_list_empty_hint">Nenhum aplicativo encontrado</string>
-	<string name="hidden_apps">Aplicativos ocultos</string>
-	<string name="show">mostrar</string>
-	<string name="reset">Redefinir</string>
-	<string name="cancel">Cancelar</string>
-	<string name="enable">Permitir</string>
-	<string name="disable">Desativar</string>
-	<string name="enabled">Habilitado</string>
-	<string name="disabled">Desabilitado</string>
+    <string name="app_name">mLlauncher</string>
+    <string name="app">Aplicativo</string>
+    <string name="set_as_default_launcher">Definir como iniciador padrão</string>
+    <string name="app_text_color">Cor do texto</string>
+    <string name="double_tap_to_lock_screen">Toque duas vezes para bloquear</string>
+    <string name="experimental_">(experimental)</string>
+    <string name="admin_permission_message">O mLauncher promete usar a permissão da tela de bloqueio com responsabilidade.</string>
+    <string name="about">Sobre</string>
+    <string name="off">Desligado</string>
+    <string name="on">Sobre</string>
+    <string name="black">Preto</string>
+    <string name="white">Branco</string>
+    <string name="change_default_launcher">Alterar iniciador padrão</string>
+    <string name="long_press_for_settings">Pressione e segure em qualquer lugar para configurações</string>
+    <string name="swipe_up_for_apps">Deslize para cima para todos os aplicativos</string>
+    <string name="apps_on_home_screen">Número de atalhos</string>
+    <string name="left">Deixei</string>
+    <string name="right">Certo</string>
+    <string name="center">Centro</string>
+    <string name="home_alignment">Tela inicial de aplicativos</string>
+    <string name="home_alignment_bottom">Parte inferior da tela inicial de aplicativos</string>
+    <string name="clock_alignment">Relógio e data</string>
+    <string name="drawer_alignment">Aplicativos na gaveta de aplicativos</string>
+    <string name="swipe_left_app">Deslize para a esquerda</string>
+    <string name="swipe_right_app">Desliza para a direita</string>
+    <string name="swipe_down_app">Deslize para baixo</string>
+    <string name="swipe_up_app">Deslize para cima</string>
+    <string name="clock_click_app">Clique em Relógio</string>
+    <string name="date_click_app">Clique em Data</string>
+    <string name="double_tap">Toque duplo</string>
+    <string name="_0" translatable="false">0</string>
+    <string name="_1" translatable="false">1</string>
+    <string name="_2" translatable="false">2</string>
+    <string name="_3" translatable="false">3</string>
+    <string name="_4" translatable="false">4</string>
+    <string name="_5" translatable="false">5</string>
+    <string name="_6" translatable="false">6</string>
+    <string name="_7" translatable="false">7</string>
+    <string name="_8" translatable="false">8</string>
+    <string name="commit">Comprometer-se</string>
+    <string name="save">Salvar</string>
+    <string name="app_drawer_tips">Dica: deslize para baixo para descartar. Role para ocultar o teclado.</string>
+    <string name="okay">Ok</string>
+    <string name="double_tap_lock_is_enabled_message">Se o bloqueio de toque duplo desativar a impressão digital ou o desbloqueio facial, abra as configurações do mLauncher, toque em \'experimental\' e siga as instruções. Obrigada.</string>
+    <string name="triple_tap_lock_message">Como funciona:
+        \nDepois de tocar duas vezes, a tela ficará escura e o telefone será bloqueado em 5 segundos.
+        \n\nDurante esse tempo, você pode tocar duas vezes para<b>desbloquear</b> ou toque três vezes a qualquer momento para bloquear totalmente o telefone imediatamente.
+        \n\nNota: Desligue primeiro se decidir excluir o mLauncher. Obrigada.</string>
+    <string name="auto_show_keyboard">teclado de exibição automática</string>
+    <string name="hide">Esconder</string>
+    <string name="status_bar">Mostrar barra de status</string>
+    <string name="rename">Renomear</string>
+    <string name="show_time">Altura de começar</string>
+    <string name="show_date">Mostrar data</string>
+    <string name="lock_home_apps">Bloquear aplicativos</string>
+    <string name="extend_home_apps_area">Estenda a área clicável em aplicativos domésticos</string>
+    <string name="appearance">Aparência</string>
+    <string name="gestures">gestos</string>
+    <string name="toggles">Alterna</string>
+    <string name="homescreen">Tela inicial</string>
+    <string name="alignment">Alinhamento</string>
+    <string name="theme_mode">Modo de tema</string>
+    <string name="system_default">Sistema</string>
+    <string name="dark">Escuro</string>
+    <string name="light">Leve</string>
+    <string name="double_tap_lock_uninstall_message">Toque duas vezes para bloquear ativado.
+        \n\nNota: Desligue primeiro se decidir excluir o mLauncher.</string>
+    <string name="accessibility_service_name">Serviço de Ações do mLauncher</string>
+    <string name="accessibility_service_description">Este serviço de acessibilidade permite que o mLauncher execute determinadas ações, como bloquear a tela ou abrir as configurações rápidas.</string>
+    <string name="open">Link aberto</string>
+    <string name="copy">cópia de</string>
+    <string name="close">Perto</string>
+    <string name="app_language">Idioma da interface</string>
+    <string name="lang_system">Sistema</string>
+    <string name="app_text_size">Tamanho do texto</string>
+    <string name="drawer_list_empty_hint">Nenhum aplicativo encontrado</string>
+    <string name="hidden_apps">Aplicativos ocultos</string>
+    <string name="auto_open_apps">Aplicativos abertos automaticamente</string>
+    <string name="show_apps">Todos os aplicativos</string>
+    <string name="show">mostrar</string>
+    <string name="reset">Redefinir</string>
+    <string name="cancel">Cancelar</string>
+    <string name="enable">Permitir</string>
+    <string name="disable">Desativar</string>
+    <string name="enabled">Habilitado</string>
+    <string name="disabled">Desabilitado</string>
+    <string name="show_notifications">Mostrar notificação</string>
+    <string name="show_app_list">Mostrar lista de aplicativos</string>
     <string name="open_app">Abra o aplicativo</string>
-	<string name="lock_screen">Tela de bloqueio</string>
-	<string name="show_notifications">Mostrar notificação</string>
+    <string name="lock_screen">Tela de bloqueio</string>
+    <string name="open_quick_settings">Configurações rápidas</string>
+    <string name="show_recents">Programas Recentes</string>
+
 </resources>
