@@ -68,6 +68,7 @@ object Constants {
         Malay,
         Malagasy,
         Malayalam,
+        Nepali,
         Norwegian,
         Persian,
         Portuguese,
@@ -115,6 +116,7 @@ object Constants {
                 Malay -> "Melayu"
                 Malagasy -> "Malagasy"
                 Malayalam -> "മലയാളം"
+                Nepali -> "नेपाली"
                 Norwegian -> "norsk"
                 Persian -> "فارسی"
                 Portuguese -> "Português"
@@ -164,6 +166,7 @@ object Constants {
             Language.Malay -> "ms"
             Language.Malagasy -> "mg"
             Language.Malayalam -> "ml"
+            Language.Nepali -> "ne"
             Language.Norwegian -> "no"
             Language.Persian -> "fa"
             Language.Portuguese -> "pt"
