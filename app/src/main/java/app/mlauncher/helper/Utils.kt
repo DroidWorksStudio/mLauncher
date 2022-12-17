@@ -137,7 +137,6 @@ suspend fun getHiddenAppsList(context: Context): MutableList<AppModel> {
                 val appInfo = pm.getApplicationInfo(appPackage, 0)
                 val appName = pm.getApplicationLabel(appInfo).toString()
                 val appKey = collator.getCollationKey(appName)
-                // TODO: hidden apps settings ignore activity name for backward compatibility. Fix it.
                 appList.add(AppModel(appName, appKey, appPackage, "", userHandle, Prefs(context).getAppAlias(appName)))
             } catch (e: NameNotFoundException) {
 

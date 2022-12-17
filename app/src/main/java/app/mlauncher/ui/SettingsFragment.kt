@@ -95,15 +95,6 @@ class SettingsFragment : Fragment() {
     @Composable
     private fun Settings(fontSize: TextUnit = TextUnit.Unspecified) {
         val selected = remember { mutableStateOf("") }
-        /*val fs = remember { mutableStateOf(fontSize) }
-
-        val titleFs = if (fs.value.isSpecified) {
-            (fs.value.value * 2).sp
-        } else fs.value
-
-        val iconFs = if (fs.value.isSpecified) {
-            (fs.value.value * 1.5).sp
-        } else fs.value */
 
         val changeLauncherText = if (ismlauncherDefault(requireContext())) {
             R.string.change_default_launcher
@@ -127,22 +118,6 @@ class SettingsFragment : Fragment() {
                 title = stringResource(R.string.appearance),
                 selected = selected,
                 items = arrayOf(
-                    { _, onChange ->
-                        SettingsToggle(
-                            title = stringResource(R.string.auto_show_keyboard),
-                            onChange = onChange,
-
-                            state = remember { mutableStateOf(prefs.autoShowKeyboard) },
-                        ) { toggleKeyboardText() }
-                    },
-                    { _, onChange ->
-                        SettingsToggle(
-                            title = stringResource(R.string.status_bar),
-                            onChange = onChange,
-
-                            state = remember { mutableStateOf(prefs.showStatusBar) },
-                        ) { toggleStatusBar() }
-                    },
                     { open, onChange ->
                         SettingsItem(
                             title = stringResource(R.string.theme_mode),
@@ -178,6 +153,35 @@ class SettingsFragment : Fragment() {
                             onSelect = { f -> setTextSize(f) }
                         )
                     }
+                )
+            )
+            SettingsArea(title = stringResource(R.string.toggles),
+                selected = selected,
+                items = arrayOf(
+                    { _, onChange ->
+                        SettingsToggle(
+                            title = stringResource(R.string.auto_show_keyboard),
+                            onChange = onChange,
+
+                            state = remember { mutableStateOf(prefs.autoShowKeyboard) },
+                        ) { toggleKeyboardText() }
+                    },
+                    { _, onChange ->
+                        SettingsToggle(
+                            title = stringResource(R.string.auto_open_apps),
+                            onChange = onChange,
+
+                            state = remember { mutableStateOf(prefs.autoOpenApp) },
+                        ) { toggleAutoOpenApp() }
+                    },
+                    { _, onChange ->
+                        SettingsToggle(
+                            title = stringResource(R.string.status_bar),
+                            onChange = onChange,
+
+                            state = remember { mutableStateOf(prefs.showStatusBar) },
+                        ) { toggleStatusBar() }
+                    },
                 )
             )
             SettingsArea(title = stringResource(R.string.homescreen),
@@ -434,6 +438,10 @@ class SettingsFragment : Fragment() {
 
     private fun toggleKeyboardText() {
         prefs.autoShowKeyboard = !prefs.autoShowKeyboard
+    }
+
+    private fun toggleAutoOpenApp() {
+        prefs.autoOpenApp = !prefs.autoOpenApp
     }
 
     private fun setTheme(appTheme: Constants.Theme) {
