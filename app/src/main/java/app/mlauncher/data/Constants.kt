@@ -50,6 +50,7 @@ object Constants {
         Filipino,
         Finnish,
         French,
+        Georgian,
         German,
         Greek,
         Hawaiian,
@@ -92,6 +93,7 @@ object Constants {
                 Filipino -> "Filipino"
                 Finnish -> "Suomalainen"
                 French -> "Français"
+                Georgian -> "ქართული"
                 German -> "Deutsch"
                 Greek -> "Ελληνική"
                 Hawaiian -> "ʻŌlelo Hawaiʻi"
@@ -136,6 +138,7 @@ object Constants {
             Language.Filipino -> "fil"
             Language.Finnish -> "fi"
             Language.French -> "fr"
+            Language.Georgian -> "ka"
             Language.German -> "de"
             Language.Greek -> "gr"
             Language.Hawaiian -> "haw"
