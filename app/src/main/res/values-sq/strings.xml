@@ -79,4 +79,12 @@
 	<string name="lock_screen">Blloko ekranin</string>
 	<string name="show_notifications">Shfaq njoftimin</string>
     <string name="extras">Shtesë</string>
+    <string name="swipe_up_app">Rrëshqitni lart</string>
+    <string name="double_tap">Trokit dy herë</string>
+    <string name="accessibility_service_name">Shërbimi i Veprimeve të mLauncher</string>
+	<string name="auto_open_apps">Hapja automatike e aplikacioneve</string>
+	<string name="show_apps">Të gjitha aplikacionet</string>
+    <string name="show_app_list">Shfaq listën e aplikacioneve</string>
+    <string name="open_quick_settings">Cilësimet e shpejta</string>
+	<string name="show_recents">Shfaq të fundit</string>
 </resources>
