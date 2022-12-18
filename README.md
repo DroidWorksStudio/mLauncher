@@ -7,6 +7,7 @@ We try to balance customizability and minimalization well still being simple :)<
 
 # Forked with extra features
 
+- Ability to backup and restore the launcher settings.
 - Ability for more customizability on home screen gestures.
 - Ability to toggle the automation of opening app if last in list.
 - A lot of people have translated the app to the following languages. Many thanks to you all.
