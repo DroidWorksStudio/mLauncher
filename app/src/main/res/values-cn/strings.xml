@@ -68,4 +68,14 @@
 	<string name="commit">犯罪</string>
 	<string name="swipe_up_app">向上滑动</string>
     <string name="extras">额外的</string>
+    <string name="double_tap">双击</string>
+	<string name="accessibility_service_name">mLauncher 操作服务</string>
+    <string name="auto_open_apps">自动打开应用</string>
+	<string name="show_apps">所有应用</string>
+	<string name="show_notifications">显示通知</string>
+	<string name="show_app_list">显示应用列表</string>
+    <string name="open_app">打开应用程序</string>
+	<string name="lock_screen">锁屏</string>
+	<string name="open_quick_settings">快速设置</string>
+	<string name="show_recents">显示最近</string>
 </resources>

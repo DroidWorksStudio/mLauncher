@@ -67,4 +67,15 @@
 	<string name="homescreen">Avakuva</string>
 	<string name="extend_home_apps_area">Laiendage kodurakenduste klõpsatavat ala</string>
     <string name="extras">Lisa</string>
+    <string name="swipe_up_app">Pühkige üles</string>
+    <string name="double_tap">Dvostruki dodir</string>
+	<string name="accessibility_service_name">mLauncheri toimingute teenus</string>
+	<string name="auto_open_apps">Rakenduste automaatne avamine</string>
+    <string name="show_apps">Kõik rakendused</string>
+	<string name="show_notifications">Kuva teatis</string>
+    <string name="show_app_list">Kuva rakenduste loend</string>
+	<string name="open_app">Avage rakendus</string>
+	<string name="lock_screen">Lukustusekraan</string>
+	<string name="open_quick_settings">Kiirseaded</string>
+	<string name="show_recents">Näita hiljutisi</string>
 </resources>

@@ -67,4 +67,15 @@
 	<string name="homescreen">Početni zaslon</string>
 	<string name="extend_home_apps_area">Proširite područje koje se može kliknuti na kućnim aplikacijama</string>
     <string name="extras">Ekstra</string>
+    <string name="swipe_up_app">Prijeđite prstom prema gore</string>
+    <string name="double_tap">Dvostruki dodir</string>
+    <string name="accessibility_service_name">Usluga mLauncher Actions</string>
+	<string name="auto_open_apps">Automatsko otvaranje aplikacija</string>
+	<string name="show_apps">Sve aplikacije</string>
+	<string name="show_notifications">Prikaži obavijest</string>
+    <string name="show_app_list">Prikaži popis aplikacija</string>
+	<string name="open_app">Otvori aplikaciju</string>
+	<string name="lock_screen">Zaključavanje zaslona</string>
+	<string name="open_quick_settings">Brze postavke</string>
+	<string name="show_recents">Prikaži nedavne</string>
 </resources>
