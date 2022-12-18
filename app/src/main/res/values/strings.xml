@@ -85,6 +85,7 @@
     <string name="disable">Disable</string>
     <string name="enabled">Enabled</string>
     <string name="disabled">Disabled</string>
+    <string name="backup">Backup</string>
     <string name="show_notifications">Show Notification</string>
     <string name="show_app_list">Show App List</string>
     <string name="open_app">Open App</string>

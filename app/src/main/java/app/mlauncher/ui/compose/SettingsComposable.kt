@@ -224,21 +224,31 @@ object SettingsComposable {
     }
 
     @Composable
-    fun SettingsAppSelector(
-        title: String,
-        currentSelection: MutableState<String>,
-        active: Boolean,
-        fontSize: TextUnit = TextUnit.Unspecified,
-        onClick: () -> Unit,
+    fun SettingsTwoButtonRow(
+        firstButtonText: String,
+        secondButtonText: String,
+        firstButtonAction: () -> Unit,
+        secondButtonAction: () -> Unit,
     ) {
-        SettingsRow(
-            title = title,
-            onClick = onClick,
-            buttonText = currentSelection.value,
-            active = active,
-            fontSize = fontSize,
-            disabledText = stringResource(R.string.disabled)
-        )
+        Row {
+            TextButton(
+                onClick = firstButtonAction
+            ) {
+                Text(
+                    firstButtonText,
+                    style = SettingsTheme.typography.item,
+                )
+            }
+
+            TextButton(
+                onClick = secondButtonAction
+            ) {
+                Text(
+                    secondButtonText,
+                    style = SettingsTheme.typography.item,
+                )
+            }
+        }
     }
 
     @Composable

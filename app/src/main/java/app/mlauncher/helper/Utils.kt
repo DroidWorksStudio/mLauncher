@@ -27,12 +27,16 @@ import android.view.WindowManager
 import android.widget.Toast
 import androidx.annotation.AttrRes
 import androidx.annotation.ColorInt
+import androidx.core.app.ActivityCompat
 import app.mlauncher.BuildConfig
 import app.mlauncher.R
 import app.mlauncher.data.AppModel
+import app.mlauncher.data.Constants.BACKUP_READ
+import app.mlauncher.data.Constants.BACKUP_WRITE
 import app.mlauncher.data.Prefs
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import java.io.*
 import java.text.Collator
 import java.util.*
 import kotlin.math.pow
@@ -350,6 +354,22 @@ fun Context.getColorFromAttr(
 ): Int {
     theme.resolveAttribute(attrColor, typedValue, resolveRefs)
     return typedValue.data
+}
+
+fun storeFile(activity: Activity) {
+    val intent = Intent(Intent.ACTION_CREATE_DOCUMENT).apply {
+        addCategory(Intent.CATEGORY_OPENABLE)
+        type = "application/json"
+    }
+    ActivityCompat.startActivityForResult(activity, intent, BACKUP_WRITE, null)
+}
+
+fun loadFile(activity: Activity) {
+    val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
+        addCategory(Intent.CATEGORY_OPENABLE)
+        type = "application/json"
+    }
+    ActivityCompat.startActivityForResult(activity, intent, BACKUP_READ, null)
 }
 
 fun uninstallApp(context: Context, appPackage: String) {

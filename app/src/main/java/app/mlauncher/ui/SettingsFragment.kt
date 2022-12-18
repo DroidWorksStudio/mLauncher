@@ -4,10 +4,8 @@ import SettingsTheme
 import android.app.admin.DevicePolicyManager
 import android.content.ComponentName
 import android.content.Context
-import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import android.provider.Settings
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -47,6 +45,7 @@ import app.mlauncher.ui.compose.SettingsComposable.SettingsNumberItem
 import app.mlauncher.ui.compose.SettingsComposable.SettingsToggle
 import app.mlauncher.ui.compose.SettingsComposable.SettingsTopView
 import app.mlauncher.ui.compose.SettingsComposable.SimpleTextButton
+import app.mlauncher.ui.compose.SettingsComposable.SettingsTwoButtonRow
 
 class SettingsFragment : Fragment() {
 
@@ -78,7 +77,7 @@ class SettingsFragment : Fragment() {
             prefs.firstSettingsOpen = false
         }
 
-        binding.testView.setContent {
+        binding.settingsView.setContent {
 
             val isDark = when (prefs.appTheme) {
                 Light -> false
@@ -351,6 +350,19 @@ class SettingsFragment : Fragment() {
                             onSelect = { j -> updateGesture(AppDrawerFlag.SetDoubleTap, j) },
                             appLabel = prefs.appClickDate.appLabel
                         )
+                    },
+                )
+            )
+            SettingsArea(title = stringResource(R.string.backup),
+                selected = selected,
+                items = arrayOf(
+                    { _, _ ->
+                        SettingsTwoButtonRow(
+                            firstButtonText = "Load",
+                            secondButtonText = "Store",
+                            firstButtonAction = { loadFile(requireActivity()) },
+                            secondButtonAction = { storeFile(requireActivity()) },
+                        )
                     }
                 )
             )
@@ -360,7 +372,7 @@ class SettingsFragment : Fragment() {
                     .padding(10.dp, 5.dp),
                 text = "Version: ${requireContext().packageManager.getPackageInfo(requireContext().packageName, 0).versionName}",
 
-                color = Color.DarkGray
+                color = Color.LightGray
             )
         }
     }
