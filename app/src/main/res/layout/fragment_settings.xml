@@ -23,9 +23,10 @@
         android:orientation="vertical">
 
         <androidx.compose.ui.platform.ComposeView
-            android:id="@+id/testView"
+            android:id="@+id/settingsView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:layout_marginVertical="22dp"/>
 
     </LinearLayout>
 
