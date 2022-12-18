@@ -32,7 +32,6 @@ private const val CLICK_DATE_ACTION = "CLICK_DATE_ACTION"
 private const val DOUBLE_TAP_ACTION = "DOUBLE_TAP_ACTION"
 private const val HIDDEN_APPS = "HIDDEN_APPS"
 private const val HIDDEN_APPS_UPDATED = "HIDDEN_APPS_UPDATED"
-private const val SHOW_HINT_COUNTER = "SHOW_HINT_COUNTER"
 private const val APP_THEME = "APP_THEME"
 
 private const val APP_NAME = "APP_NAME"
@@ -211,10 +210,6 @@ class Prefs(val context: Context) {
     var hiddenAppsUpdated: Boolean
         get() = prefs.getBoolean(HIDDEN_APPS_UPDATED, false)
         set(value) = prefs.edit().putBoolean(HIDDEN_APPS_UPDATED, value).apply()
-
-    var toShowHintCounter: Int
-        get() = prefs.getInt(SHOW_HINT_COUNTER, 1)
-        set(value) = prefs.edit().putInt(SHOW_HINT_COUNTER, value).apply()
 
     fun getHomeAppModel(i:Int): AppModel {
         return loadApp("$i")

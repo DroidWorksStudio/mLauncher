@@ -71,19 +71,19 @@ fun SettingsTheme(
             color = if (isDark) textLight else textDark,
         ),
         item = TextStyle(
-            fontFamily = FontFamily.SansSerif,
+            fontFamily = FontFamily.Monospace,
             fontWeight = FontWeight.Light,
             fontSize = 16.sp,
             color = if (isDark) textLight else textDark,
         ),
         button = TextStyle(
-            fontFamily = FontFamily.SansSerif,
+            fontFamily = FontFamily.Monospace,
             fontWeight = FontWeight.Bold,
             fontSize = 16.sp,
             color = if (isDark) textLight else textDark,
         ),
         buttonDisabled = TextStyle(
-            fontFamily = FontFamily.SansSerif,
+            fontFamily = FontFamily.Monospace,
             fontWeight = FontWeight.Bold,
             fontSize = 16.sp,
             color = textGray,

@@ -18,9 +18,9 @@ object Constants {
     const val TRIPLE_TAP_DELAY_MS = 300
     const val LONG_PRESS_DELAY_MS = 500
 
-    const val MAX_HOME_APPS = 15
+    const val MAX_HOME_APPS = 20
     const val TEXT_SIZE_MIN = 10
-    const val TEXT_SIZE_MAX = 60
+    const val TEXT_SIZE_MAX = 50
 
     enum class AppDrawerFlag {
         LaunchApp,

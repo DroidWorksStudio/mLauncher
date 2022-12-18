@@ -4,10 +4,8 @@ import SettingsTheme
 import android.app.admin.DevicePolicyManager
 import android.content.ComponentName
 import android.content.Context
-import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import android.provider.Settings
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -78,7 +76,7 @@ class SettingsFragment : Fragment() {
             prefs.firstSettingsOpen = false
         }
 
-        binding.testView.setContent {
+        binding.settingsView.setContent {
 
             val isDark = when (prefs.appTheme) {
                 Light -> false

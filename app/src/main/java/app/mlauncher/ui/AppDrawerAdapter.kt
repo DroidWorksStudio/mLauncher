@@ -20,7 +20,6 @@ import app.mlauncher.helper.dp2px
 import app.mlauncher.helper.uninstallApp
 import java.text.Normalizer
 
-
 class AppDrawerAdapter(
     private var flag: AppDrawerFlag,
     private val gravity: Int,

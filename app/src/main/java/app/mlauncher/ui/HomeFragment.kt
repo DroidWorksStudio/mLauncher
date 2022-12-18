@@ -268,7 +268,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 } catch (e: SecurityException) {
                     showToastLong(requireContext(), "App does not have the permission to lock the device")
                 } catch (e: Exception) {
-                    showToastLong(requireContext(), "Olauncher failed to lock device.\nPlease check your app settings.")
+                    showToastLong(requireContext(), "mLauncher failed to lock device.\nPlease check your app settings.")
                     prefs.lockModeOn = false
                 }
             }
