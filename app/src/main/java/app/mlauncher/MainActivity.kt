@@ -152,7 +152,7 @@ class MainActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (resultCode != Activity.RESULT_OK) {
-            showToastLong(applicationContext, "Intent Error")
+            showToastLong(this, "Intent Error. Please try again.")
             return
         }
         when (requestCode) {
