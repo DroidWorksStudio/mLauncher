@@ -358,10 +358,10 @@ class SettingsFragment : Fragment() {
                 items = arrayOf(
                     { _, _ ->
                         SettingsTwoButtonRow(
-                            firstButtonText = "Load",
-                            secondButtonText = "Store",
-                            firstButtonAction = { loadFile(requireActivity()) },
-                            secondButtonAction = { storeFile(requireActivity()) },
+                            firstButtonText = stringResource(R.string.backup_backup),
+                            secondButtonText = stringResource(R.string.backup_restore),
+                            firstButtonAction = { storeFile(requireActivity()) },
+                            secondButtonAction = { loadFile(requireActivity()) },
                         )
                     }
                 )
