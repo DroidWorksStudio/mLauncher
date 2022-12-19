@@ -43,7 +43,7 @@ jobs:
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         file: ${{steps.sign_app.outputs.signedReleaseFile}}
-        asset_name: mLauncher-${{ github.ref }}.apk
+        asset_name: mLauncher-${{ env.RELEASE_VERSION }}.apk
         tag: ${{ github.ref }}
         overwrite: true
         body: "mLauncher.apk Release"
