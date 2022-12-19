@@ -110,8 +110,8 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
-    fun ismLauncherDefault() {
-        ismLauncherDefault.value = ismLauncherDefault(appContext)
+    fun ismlauncherDefault() {
+        ismlauncherDefault.value = ismlauncherDefault(appContext)
     }
 
     fun resetDefaultLauncherApp(context: Context) {
