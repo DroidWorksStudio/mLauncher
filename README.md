@@ -1,5 +1,5 @@
-<h1 align="center">Based on <a href="https://github.com/OlauncherCF/OlauncherCF">OlauncherCF</a>. Minimal and clean.</h1>
-<h3 align="center">mLauncher is a minimal app launcher for Android.
+<h1 align="center">Based on <a href="https://github.com/OlauncherCF/OlauncherCF">OlauncherCF</a>. Minimal and clean of back links</h1>
+</p><h3 align="center">mLauncher is a minimal app launcher for Android.
 
 We try to balance customizability and minimalization well still being simple :)</h3>
 
@@ -7,44 +7,25 @@ We try to balance customizability and minimalization well still being simple :)<
 
 # Forked with extra features
 
-- Removed clutter, like ads and links
-- You can rename apps in the app-drawer (Renaming apps on the home screen is already supported. Just long-click on an app on the home screen and start typing)
-- Ability to change the app that opens when clicking on the clock
-- Ability to change the app that opens when clicking on the date
+- Ability for more customizability on home screen gestures.
 - Ability to toggle the automation of opening app if last in list.
-- Much more customizability on home screen gestures
-- Align clock independently of home apps
-- Change alignment of apps in app-drawer
-- Change font size
-- Removed internet permission
-- Ability to toggle the automation of opening app if last in list.
-
 - A lot of people have translated the app to the following languages. Many thanks to you all.
-  - Arabic
   - Albanian
   - Bulgarian
-  - Chinese
-  - Croatian
   - Czech
   - Danish
-  - English
   - Estonian
   - Filipino
   - Finnish
-  - French
   - Georgian
-  - German
   - Greek
   - Hawaiian
   - Hebrew
   - Hindi
   - Hungarian
   - Icelandic
-  - Indonesian
   - Irish
-  - Italian
   - Japanese
-  - Korean
   - Lithuanian
   - Luxembourgish
   - Malay
@@ -52,17 +33,11 @@ We try to balance customizability and minimalization well still being simple :)<
   - Malayalam
   - Norwegian
   - Nepali
-  - Persian
   - Polish
-  - Portuguese (European)
   - Punjabi
-  - Russian
   - Serbian
   - Sindhi
-  - Spanish
-  - Swedish
   - Thai
-  - Turkish
   - Ukrainian
   - Vietnamese
 
@@ -83,6 +58,8 @@ We try to balance customizability and minimalization well still being simple :)<
   - Please can we discuss before sending pull requests.
   - Make pull requests to `main` branch.
 - Any help in translating mLauncher into other languages is greatly appreciated. If you don't know how to perform a pull request, feel free to check out our dedicated [**Wiki**](https://github.com/HeCodes2Much/mLauncher/wiki).
+
+
 
 ## License
 
