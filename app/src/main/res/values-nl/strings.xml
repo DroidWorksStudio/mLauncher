@@ -57,7 +57,7 @@
     <string name="extend_home_apps_area">Breid het klikbare gebied uit op thuis-apps</string>
     <string name="appearance">Uiterlijk</string>
     <string name="gestures">Gebaren</string>
-    <string name="extras">Extra</string>
+    <string name="behavior">Gedrag</string>
     <string name="homescreen">Thuis scherm</string>
     <string name="alignment">Uitlijning</string>
     <string name="theme_mode">Thema-modus</string>

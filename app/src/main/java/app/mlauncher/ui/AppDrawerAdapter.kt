@@ -37,9 +37,8 @@ class AppDrawerAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         binding = AdapterAppDrawerBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        binding.appTitle.textSize = Prefs(parent.context).textSize.toFloat()
         prefs = Prefs(parent.context)
-
+        binding.appTitle.textSize = prefs.textSize.toFloat()
         return ViewHolder(binding)
     }
 
@@ -100,11 +99,15 @@ class AppDrawerAdapter(
     }
 
     private fun autoLaunch(position: Int) {
-        try { // Automatically open the app when there's only one search result
-            if ((itemCount == 1) and (flag == AppDrawerFlag.LaunchApp) and (prefs.autoOpenApp))
+        val lastMatch = itemCount == 1
+        val openApp = flag == AppDrawerFlag.LaunchApp
+        val autoOpenApp = prefs.autoOpenApp
+        if (lastMatch && openApp && autoOpenApp) {
+            try { // Automatically open the app when there's only one search result
                 clickListener(appFilteredList[position])
-        } catch (e: Exception) {
-            e.printStackTrace()
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
         }
     }
 

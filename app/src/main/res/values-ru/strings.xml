@@ -57,7 +57,7 @@
     <string name="extend_home_apps_area">Расширить интерактивную область в домашних приложениях</string>
     <string name="appearance">вид</string>
     <string name="gestures">Жесты</string>
-    <string name="extras">Дополнительный</string>
+    <string name="behavior">Поведение</string>
     <string name="homescreen">Домашний экран</string>
     <string name="alignment">Выравнивание</string>
     <string name="theme_mode">Тематический режим</string>

@@ -57,7 +57,7 @@
     <string name="extend_home_apps_area">ഹോം ആപ്പുകളിൽ ക്ലിക്ക് ചെയ്യാവുന്ന ഏരിയ വിപുലീകരിക്കുക</string>
     <string name="appearance">രൂപഭാവം</string>
     <string name="gestures">ആംഗ്യങ്ങൾ</string>
-    <string name="extras">അധിക</string>
+    <string name="behavior">പെരുമാറ്റം</string>
     <string name="homescreen">ഹോംസ്ക്രീൻ</string>
     <string name="alignment">വിന്യാസം</string>
     <string name="theme_mode">തീം മോഡ്</string>

@@ -57,7 +57,7 @@
     <string name="extend_home_apps_area">ホームアプリのクリック可能領域を拡張</string>
     <string name="appearance">外観</string>
     <string name="gestures">ジェスチャー</string>
-    <string name="extras">追加</string>
+    <string name="behavior">行動</string>
     <string name="homescreen">ホーム画面</string>
     <string name="alignment">アライメント</string>
     <string name="theme_mode">テーマモード</string>

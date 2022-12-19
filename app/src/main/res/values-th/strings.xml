@@ -57,7 +57,7 @@
     <string name="extend_home_apps_area">ขยายพื้นที่ที่คลิกได้บนโฮมแอพ</string>
     <string name="appearance">รูปร่าง</string>
     <string name="gestures">ท่าทาง</string>
-    <string name="extras">พิเศษ</string>
+    <string name="behavior">พิเศษ</string>
     <string name="homescreen">หน้าจอหลัก</string>
     <string name="alignment">การจัดตำแหน่ง</string>
     <string name="theme_mode">โหมดธีม</string>
