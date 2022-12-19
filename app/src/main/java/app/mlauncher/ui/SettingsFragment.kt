@@ -1,11 +1,13 @@
 package app.mlauncher.ui
 
 import SettingsTheme
+import android.app.Activity
 import android.app.admin.DevicePolicyManager
 import android.content.ComponentName
 import android.content.Context
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -33,6 +35,8 @@ import app.mlauncher.R
 import app.mlauncher.data.Constants
 import app.mlauncher.data.Constants.Action
 import app.mlauncher.data.Constants.AppDrawerFlag
+import app.mlauncher.data.Constants.BACKUP_READ
+import app.mlauncher.data.Constants.BACKUP_WRITE
 import app.mlauncher.data.Constants.Theme.*
 import app.mlauncher.data.Prefs
 import app.mlauncher.databinding.FragmentSettingsBinding
@@ -45,6 +49,11 @@ import app.mlauncher.ui.compose.SettingsComposable.SettingsNumberItem
 import app.mlauncher.ui.compose.SettingsComposable.SettingsToggle
 import app.mlauncher.ui.compose.SettingsComposable.SettingsTopView
 import app.mlauncher.ui.compose.SettingsComposable.SimpleTextButton
+import app.mlauncher.ui.compose.SettingsComposable.SettingsTwoButtonRow
+import org.json.JSONObject
+import java.io.BufferedReader
+import java.io.FileOutputStream
+import java.io.InputStreamReader
 
 class SettingsFragment : Fragment() {
 
@@ -348,6 +357,19 @@ class SettingsFragment : Fragment() {
                             currentAction = prefs.doubleTapAction,
                             onSelect = { j -> updateGesture(AppDrawerFlag.SetDoubleTap, j) },
                             appLabel = prefs.appClickDate.appLabel
+                        )
+                    }
+                )
+            )
+            SettingsArea(title = "Backup",
+                selected = selected,
+                items = arrayOf(
+                    { _, _ ->
+                        SettingsTwoButtonRow(
+                            firstButtonText = "Backup",
+                            secondButtonText = "Restore",
+                            firstButtonAction = { storeFile(requireActivity()) },
+                            secondButtonAction = { loadFile(requireActivity()) },
                         )
                     }
                 )

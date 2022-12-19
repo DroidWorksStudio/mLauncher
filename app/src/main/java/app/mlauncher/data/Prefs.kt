@@ -1,9 +1,16 @@
 package app.mlauncher.data
 
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
+import android.net.Uri
 import android.os.UserHandle
+import android.util.Log
+import androidx.core.app.ActivityCompat.startActivityForResult
 import app.mlauncher.helper.getUserHandleFromString
+import org.json.JSONArray
+import org.json.JSONObject
+import java.io.*
 
 private const val APP_LANGUAGE = "app_language"
 private const val PREFS_FILENAME = "app.mLauncher"
@@ -53,6 +60,49 @@ private const val TEXT_SIZE = "text_size"
 class Prefs(val context: Context) {
 
     private val prefs: SharedPreferences = context.getSharedPreferences(PREFS_FILENAME, 0)
+
+    fun toJson(): JSONObject {
+        val json = JSONObject()
+
+        for ((key, value) in prefs.all) {
+            Log.d("backup_backup", "$key, $value")
+            json.put(key, value)
+        }
+
+        return json
+    }
+
+    fun fromJson(json: JSONObject) {
+        val editor = prefs.edit()
+        for (key in json.keys()) {
+            val value = json[key] // as JSON
+            Log.d("backup_restore1", "$key, $value")
+
+            when (value) {
+                is JSONArray -> {
+                    val set = mutableSetOf<String>()
+                    for (i in 0..value.length()) {
+                        set.add(value[i] as String)
+                        Log.d("backup_restore2", "$value")
+                    }
+                }
+                is String -> {
+                    editor.putString(key, value)
+                    Log.d("backup_restore_String", "$key, $value")
+                }
+                is Int -> {
+                    editor.putInt(key, value)
+                    Log.d("backup_restore_Int", "$key, $value")
+                }
+                is Boolean -> {
+                    editor.putBoolean(key, value)
+                    Log.d("backup_restore_Boolean", "$key, $value")
+                }
+                else ->  { Log.d("backup_restore3", "$key, $value") }
+            }
+        }
+        // editor.apply()
+    }
 
     var firstOpen: Boolean
         get() = prefs.getBoolean(FIRST_OPEN, true)
