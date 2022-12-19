@@ -301,7 +301,10 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
             override fun onSwipeUp() {
                 super.onSwipeUp()
-                showAppList(AppDrawerFlag.LaunchApp)
+                when(val action = prefs.swipeUpAction) {
+                    Action.OpenApp -> openSwipeUpApp()
+                    else -> handleOtherAction(action)
+                }
             }
 
             override fun onSwipeDown() {

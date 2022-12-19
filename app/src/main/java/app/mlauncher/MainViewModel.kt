@@ -4,6 +4,7 @@ import android.app.Application
 import android.content.ComponentName
 import android.content.Context
 import android.content.pm.LauncherApps
+import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
@@ -22,8 +23,6 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     val firstOpen = MutableLiveData<Boolean>()
     val showMessageDialog = MutableLiveData<String>()
 
-    val updateSwipeApps = MutableLiveData<Any>()
-    val updateClickApps = MutableLiveData<Any>()
     val appList = MutableLiveData<List<AppModel>?>()
     val hiddenApps = MutableLiveData<List<AppModel>?>()
     val ismlauncherDefault = MutableLiveData<Boolean>()
@@ -43,33 +42,13 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             AppDrawerFlag.SetHomeApp -> {
                 prefs.setHomeAppModel(n, appModel)
             }
-            AppDrawerFlag.SetSwipeLeft -> {
-                prefs.appSwipeLeft = appModel
-                updateSwipeApps()
-            }
-            AppDrawerFlag.SetSwipeRight -> {
-                prefs.appSwipeRight = appModel
-                updateSwipeApps()
-            }
-            AppDrawerFlag.SetSwipeDown -> {
-                prefs.appSwipeDown = appModel
-                updateSwipeApps()
-            }
-            AppDrawerFlag.SetSwipeUp -> {
-                prefs.appSwipeUp = appModel
-                updateSwipeApps()
-            }
-            AppDrawerFlag.SetClickClock -> {
-                prefs.appClickClock = appModel
-                updateClickApps()
-            }
-            AppDrawerFlag.SetClickDate -> {
-                prefs.appClickDate = appModel
-                updateClickApps()
-            }
-            AppDrawerFlag.SetDoubleTap -> {
-                prefs.appDoubleTap = appModel
-            }
+            AppDrawerFlag.SetSwipeLeft -> prefs.appSwipeLeft = appModel
+            AppDrawerFlag.SetSwipeRight -> prefs.appSwipeRight = appModel
+            AppDrawerFlag.SetSwipeUp -> prefs.appSwipeUp = appModel
+            AppDrawerFlag.SetSwipeDown -> prefs.appSwipeDown = appModel
+            AppDrawerFlag.SetClickClock -> prefs.appClickClock = appModel
+            AppDrawerFlag.SetClickDate -> prefs.appClickDate = appModel
+            AppDrawerFlag.SetDoubleTap -> prefs.appDoubleTap = appModel
         }
     }
 
@@ -83,14 +62,6 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     fun setShowTime(visibility: Boolean) {
         showTime.value = visibility
-    }
-
-    private fun updateSwipeApps() {
-        updateSwipeApps.postValue(Unit)
-    }
-
-    private fun updateClickApps() {
-        updateClickApps.postValue(Unit)
     }
 
     private fun launchApp(appModel: AppModel) {
@@ -139,8 +110,8 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
-    fun ismlauncherDefault() {
-        ismlauncherDefault.value = ismlauncherDefault(appContext)
+    fun ismLauncherDefault() {
+        ismLauncherDefault.value = ismLauncherDefault(appContext)
     }
 
     fun resetDefaultLauncherApp(context: Context) {
