@@ -78,7 +78,7 @@
     <string name="open_app">Hap aplikacionin</string>
 	<string name="lock_screen">Blloko ekranin</string>
 	<string name="show_notifications">Shfaq njoftimin</string>
-    <string name="extras">Shtesë</string>
+    <string name="behavior">Sjellje</string>
     <string name="swipe_up_app">Rrëshqitni lart</string>
     <string name="double_tap">Trokit dy herë</string>
     <string name="accessibility_service_name">Shërbimi i Veprimeve të mLauncher</string>

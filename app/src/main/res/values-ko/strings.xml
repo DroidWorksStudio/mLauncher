@@ -57,7 +57,7 @@
     <string name="extend_home_apps_area">홈 앱에서 클릭 가능한 영역 확장</string>
     <string name="appearance">모습</string>
     <string name="gestures">제스처</string>
-    <string name="extras">추가의</string>
+    <string name="behavior">행동</string>
     <string name="homescreen">홈 화면</string>
     <string name="alignment">조정</string>
     <string name="theme_mode">테마 모드</string>

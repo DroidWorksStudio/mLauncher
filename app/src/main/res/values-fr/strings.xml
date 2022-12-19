@@ -57,7 +57,7 @@
     <string name="extend_home_apps_area">Étendre la zone cliquable sur les applications domestiques</string>
     <string name="appearance">Apparence</string>
     <string name="gestures">Gestes</string>
-    <string name="extras">Supplémentaire</string>
+    <string name="behavior">Comportement</string>
     <string name="homescreen">Écran d\'accueil</string>
     <string name="alignment">Alignement</string>
     <string name="theme_mode">Mode thème</string>

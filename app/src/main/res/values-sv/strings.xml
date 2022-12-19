@@ -57,7 +57,7 @@
     <string name="extend_home_apps_area">Utöka det klickbara området på hemappar</string>
     <string name="appearance">Utseende</string>
     <string name="gestures">Gester</string>
-    <string name="extras">Extra</string>
+    <string name="behavior">Beteende</string>
     <string name="homescreen">Hemskärm</string>
     <string name="alignment">Inriktning</string>
     <string name="theme_mode">Temaläge</string>

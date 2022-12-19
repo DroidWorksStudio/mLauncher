@@ -118,14 +118,6 @@ class SettingsFragment : Fragment() {
                 items = arrayOf(
                     { _, onChange ->
                         SettingsToggle(
-                            title = stringResource(R.string.auto_show_keyboard),
-                            onChange = onChange,
-
-                            state = remember { mutableStateOf(prefs.autoShowKeyboard) },
-                        ) { toggleKeyboardText() }
-                    },
-                    { _, onChange ->
-                        SettingsToggle(
                             title = stringResource(R.string.status_bar),
                             onChange = onChange,
 
@@ -313,9 +305,17 @@ class SettingsFragment : Fragment() {
                     }
                 )
             )
-            SettingsArea(title = stringResource(R.string.extras),
+            SettingsArea(title = stringResource(R.string.behavior),
                 selected = selected,
                 items = arrayOf(
+                    { _, onChange ->
+                        SettingsToggle(
+                            title = stringResource(R.string.auto_show_keyboard),
+                            onChange = onChange,
+
+                            state = remember { mutableStateOf(prefs.autoShowKeyboard) },
+                        ) { toggleKeyboardText() }
+                    },
                     { _, onChange ->
                         SettingsToggle(
                             title = stringResource(R.string.auto_open_apps),

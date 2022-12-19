@@ -66,7 +66,7 @@
 	<string name="alignment">Poravnanje</string>
 	<string name="homescreen">Početni zaslon</string>
 	<string name="extend_home_apps_area">Proširite područje koje se može kliknuti na kućnim aplikacijama</string>
-    <string name="extras">Ekstra</string>
+    <string name="behavior">Ponašanje</string>
     <string name="swipe_up_app">Prijeđite prstom prema gore</string>
     <string name="double_tap">Dvostruki dodir</string>
     <string name="accessibility_service_name">Usluga mLauncher Actions</string>

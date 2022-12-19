@@ -30,7 +30,6 @@
             style="@style/TextDefault"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-light"
             android:format12Hour="hh:mm"
             android:textSize="@dimen/time_size"
             tools:text="02:34" />

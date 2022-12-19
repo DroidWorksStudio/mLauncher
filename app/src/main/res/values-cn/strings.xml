@@ -67,7 +67,7 @@
 	<string name="disabled">已禁用</string>
 	<string name="commit">犯罪</string>
 	<string name="swipe_up_app">向上滑动</string>
-    <string name="extras">额外的</string>
+    <string name="behavior">行为</string>
     <string name="double_tap">双击</string>
 	<string name="accessibility_service_name">mLauncher 操作服务</string>
     <string name="auto_open_apps">自动打开应用</string>

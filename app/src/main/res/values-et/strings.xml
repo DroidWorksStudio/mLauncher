@@ -66,7 +66,7 @@
 	<string name="alignment">Joondamine</string>
 	<string name="homescreen">Avakuva</string>
 	<string name="extend_home_apps_area">Laiendage kodurakenduste klõpsatavat ala</string>
-    <string name="extras">Lisa</string>
+    <string name="behavior">Käitumine</string>
     <string name="swipe_up_app">Pühkige üles</string>
     <string name="double_tap">Dvostruki dodir</string>
 	<string name="accessibility_service_name">mLauncheri toimingute teenus</string>

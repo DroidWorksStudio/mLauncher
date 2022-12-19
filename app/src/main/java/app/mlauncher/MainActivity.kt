@@ -22,6 +22,7 @@ import app.mlauncher.helper.isTablet
 import app.mlauncher.helper.showToastLong
 import java.util.*
 
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var prefs: Prefs
