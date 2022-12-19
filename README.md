@@ -59,8 +59,6 @@ We try to balance customizability and minimalization well still being simple :)<
   - Make pull requests to `main` branch.
 - Any help in translating mLauncher into other languages is greatly appreciated. If you don't know how to perform a pull request, feel free to check out our dedicated [**Wiki**](https://github.com/HeCodes2Much/mLauncher/wiki).
 
-
-
 ## License
 
 **mLauncher is under open source GPL3 license, meaning you can use, study, change and share it at will.**
