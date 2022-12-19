@@ -24,10 +24,21 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew app:packageDebug
-    - name: Copy debug apk for the artifacts
-      run:  cp ./app/build/outputs/apk/debug/app-debug.apk app-debug-${{ steps.date.outputs.date }}.apk
-    - name: Upload Artifact
-      uses: actions/upload-artifact@master
+    - name: Sign app APK
+      uses: r0adkll/sign-android-release@v1
+      # ID used to access action output
+      id: sign_app
       with:
-        name: app-debug.apk
-        path: app-debug-${{ steps.date.outputs.date }}.apk
+        releaseDirectory: app/build/outputs/apk/release
+        signingKeyBase64: ${{ secrets.SIGNING_KEY }}
+        alias: ${{ secrets.ALIAS }}
+        keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
+        keyPassword: ${{ secrets.KEY_PASSWORD }}
+      env:
+        # override default build-tools version (29.0.3) -- optional
+        BUILD_TOOLS_VERSION: "30.0.2"
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: Signed app bundle
+        path: ${{steps.sign_app.outputs.signedReleaseFile}}
