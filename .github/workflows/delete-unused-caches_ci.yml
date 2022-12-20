@@ -3,6 +3,7 @@ name: Delete Unused Caches
 on:
   schedule:
     - cron: '*/30 * * * *'
+  workflow_dispatch:
 
 jobs:
   delete:
