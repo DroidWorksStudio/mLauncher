@@ -1,5 +1,8 @@
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
+plugins {
+    id("com.android.application") apply true
+    id("kotlin-android") apply true
+}
+
 
 android {
     compileSdkVersion 33
