@@ -40,13 +40,10 @@
     <string name="_8" translatable="false">8</string>
     <string name="commit">Commettre</string>
     <string name="save">sauvegarder</string>
-    <string name="app_drawer_tips"><![CDATA[Conseil : balayez vers le bas pour ignorer. Faites défiler pour masquer le clavier.]]></string>
+    <string name="app_drawer_tips">Conseil : balayez vers le bas pour ignorer. Faites défiler pour masquer le clavier.</string>
     <string name="okay">D\'accord</string>
     <string name="double_tap_lock_is_enabled_message">Si le verrouillage par double pression désactive le déverrouillage des empreintes digitales ou du visage, ouvrez les paramètres de mLauncher, appuyez sur \'expérimental\' et suivez les instructions. Merci.</string>
-    <string name="triple_tap_lock_message">Comment ça fonctionne:
-        \nUne fois que vous appuyez deux fois, l\'écran s\'assombrit et le téléphone se verrouille en 5 secondes.
-        \n\nPendant ce temps, vous pouvez appuyer deux fois pour<b>ouvrir</b><![CDATA[ ou appuyez trois fois à tout moment pour verrouiller complètement le téléphone immédiatement.
-        \n\nRemarque : désactivez cette option si vous décidez de supprimer mLauncher. Merci.]]></string>
+    <string name="triple_tap_lock_message">Comment ça fonctionne:\nUne fois que vous appuyez deux fois, l\'écran s\'assombrit et le téléphone se verrouille en 5 secondes.\n\nPendant ce temps, vous pouvez appuyer deux fois pour<b>ouvrir</b>ou appuyez trois fois à tout moment pour verrouiller complètement le téléphone immédiatement.\n\nRemarque : désactivez cette option si vous décidez de supprimer mLauncher. Merci.</string>
     <string name="auto_show_keyboard">Clavier d\'affichage automatique</string>
     <string name="hide">Cacher</string>
     <string name="status_bar">Afficher la barre d\'état</string>
@@ -64,8 +61,7 @@
     <string name="system_default">Système</string>
     <string name="dark">Sombre</string>
     <string name="light">Lumière</string>
-    <string name="double_tap_lock_uninstall_message"><![CDATA[Appuyez deux fois pour verrouiller activé.
-        \n\nRemarque : désactivez cette option si vous décidez de supprimer mLauncher.]]></string>
+    <string name="double_tap_lock_uninstall_message">Appuyez deux fois pour verrouiller activé.\n\nRemarque : désactivez cette option si vous décidez de supprimer mLauncher.</string>
     <string name="accessibility_service_name">Service d\'actions mLauncher</string>
     <string name="accessibility_service_description">Ce service d\'accessibilité permet à mLauncher d\'effectuer certaines actions telles que verrouiller l\'écran ou ouvrir les paramètres rapides.</string>
     <string name="open">Ouvrir le lien</string>
