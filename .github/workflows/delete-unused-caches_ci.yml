@@ -9,6 +9,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: snnaplab/delete-branch-cache-action@v1
+        name: Delete Unused Caches
         with:
           # Specify explicitly because the ref at the time of merging will be a branch name such as 'main', 'develop'
           ref: refs/pull/${{ github.event.number }}/merge
+          
+      - uses: snnaplab/delete-branch-cache-action@v1
+        name: Delete Unused Caches
+        with:
+          # Specify explicitly because the ref at the time of merging will be a branch name such as 'main', 'develop'
+          ref: refs/heads/${{ github.ref }}
