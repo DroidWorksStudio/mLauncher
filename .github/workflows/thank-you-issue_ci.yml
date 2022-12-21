@@ -5,6 +5,7 @@ on:
     types:
       - reopened
       - opened
+
 jobs:
   comment:
     runs-on: ubuntu-latest

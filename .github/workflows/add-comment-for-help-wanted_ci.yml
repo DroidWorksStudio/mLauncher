@@ -8,10 +8,12 @@
 # You can also reference a tag or branch, but the action may change without warning.
 
 name: Create Comment When Help wanted
+
 on:
   issues:
     types:
       - labeled
+
 jobs:
   add-comment:
     if: github.event.label.name == 'Help wanted'
