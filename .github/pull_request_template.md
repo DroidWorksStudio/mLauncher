@@ -1,4 +1,4 @@
-# Description <!-- to be filled in -->
+# Description of changes <!-- to be filled in -->
 
 <!-- Please include a summary of the changes and the related issue. Please also include relevant motivation and context. List any dependencies that are required for this change. -->
 
@@ -11,16 +11,25 @@ Please delete options that are not relevant.
 - [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
 - [ ] This change requires a documentation update
 
-**All Submissions**: <!-- to be checked -->
+## All Submissions <!-- to be checked -->
 
 - [ ] Have you checked to ensure there aren't other open [Pull Requests](../../../pulls) for the same update/change?
+- [ ] Have you made a descriptive commit message with a short title (first line).
 - [ ] Have you performed a self-review of your code
 - [ ] Have you commented your code, particularly in hard-to-understand areas
 - [ ] Have you made corresponding changes to the documentation
 - [ ] Have you added tests that prove your fix is effective or that your feature works
 - [ ] My changes generate no new warnings or errors of any kind
+- [ ] You have done your changes in a separate branch. 
+- [ ] Branch has descriptive name that start with either the `bug/` or `feature/` prefixes. <!-- Good examples are: 'bug/signin-issue' or 'feature/issue-templates'. -->
 
-### New Feature Submissions: <!-- to be filled in if relevant or remove -->
+**After** these steps, you're ready to open a pull request.
+
+- [ ] Give a descriptive title to your PR.
+- [ ] Describe your changes.
+- [ ] Put `closes #XXXX` in your comment to auto-close the issue that your PR fixes (if such).
+
+### New Feature Submissions <!-- to be filled in if relevant or remove -->
 
 1. [ ] Does your submission pass tests?
 2. [ ] Have you lint your code locally before submission?
