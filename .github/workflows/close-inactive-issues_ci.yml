@@ -1,4 +1,5 @@
 name: Close Inactive Issues & Pull Requests
+
 on:
   schedule:
     - cron: "30 1 * * *"
