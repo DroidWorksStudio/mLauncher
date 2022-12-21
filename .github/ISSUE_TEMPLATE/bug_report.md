@@ -1,9 +1,9 @@
 ---
 name: Bug report
-about: Create a report to help mLauncher improve
-title: "[Bug Report]"
+about: 'Create a report to help us improve '
+title: "[Bug Report] add text here"
 labels: Bug report
-assignees: ''
+assignees: The-Repo-Club
 
 ---
 

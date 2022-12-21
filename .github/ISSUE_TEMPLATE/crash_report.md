@@ -2,9 +2,9 @@
 name: Crash report
 about: Create a report with a generated crash log attached (if possible) to help mLauncher
   improve
-title: "[Crash Report ]"
+title: "[Crash Report ] add text here"
 labels: Crash report
-assignees: ''
+assignees: The-Repo-Club
 
 ---
 

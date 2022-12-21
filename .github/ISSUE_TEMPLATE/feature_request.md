@@ -1,9 +1,9 @@
 ---
 name: Feature request
 about: Suggest an idea or new feature for this project
-title: "[Feature Request]"
+title: "[Feature Request] add text here"
 labels: Feature request
-assignees: ''
+assignees: The-Repo-Club
 
 ---
 
