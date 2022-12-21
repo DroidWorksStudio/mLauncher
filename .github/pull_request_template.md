@@ -27,7 +27,9 @@ Please delete options that are not relevant.
 
 # How Has This Been Tested? <!-- to be filled in -->
 
-Please describe the tests that you ran to verify your changes. Provide instructions so we can reproduce. Please also list any relevant details for your test configuration
+1. Please describe the tests that you ran to verify your changes. 
+2. Provide instructions so we can reproduce. 
+3. Please list any relevant details for your test configuration
 
 - [ ] Test A
 - [ ] Test B
