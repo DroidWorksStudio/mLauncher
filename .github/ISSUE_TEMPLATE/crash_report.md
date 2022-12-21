@@ -2,11 +2,13 @@
 name: Crash report
 about: Create a report with a generated crash log attached (if possible) to help mLauncher
   improve
-title: "[Crash Report ]"
+title: "[Crash Report ] add text here"
 labels: Crash report
-assignees: ''
+assignees: The-Repo-Club
 
 ---
+
+- [ ] I have updated the title to best match the issue.
 
 <!--
 Thank you for your help in making mLauncher more stable and reliable!
