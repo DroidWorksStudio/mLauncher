@@ -7,20 +7,21 @@ assignees: The-Repo-Club
 
 ---
 
+- [ ] I have updated the title to best match the issue.
 - [ ] I have searched existing issues for this feature.
 
-#### Motivation behind feature
+#### Motivation behind feature <!-- to be filled in -->
 
 ...
 
-#### Proposed Feature
+#### Proposed Feature <!-- to be filled in -->
 
 ...
 
-#### Possible alternatives (if applicable)
+#### Possible alternatives (if applicable) <!-- to be filled in or removed -->
 
 ...
 
-#### Additional context
+#### Additional context <!-- to be filled in or removed -->
 
 - Screenshots or other context
