@@ -15,7 +15,6 @@ Please delete options that are not relevant.
 
 **All Submissions**:
 
-- [ ] Have you followed the guidelines in our Contributing document?
 - [ ] Have you checked to ensure there aren't other open [Pull Requests](../../../pulls) for the same update/change?
 - [ ] Have you performed a self-review of your code
 - [ ] Have you commented your code, particularly in hard-to-understand areas
