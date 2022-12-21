@@ -302,6 +302,16 @@ class SettingsFragment : Fragment() {
                             onSelect = { j -> updateGesture(AppDrawerFlag.SetClickDate, j) },
                             appLabel = prefs.appClickDate.appLabel.ifEmpty { "Calendar" },
                         )
+                    },
+                    { open, onChange ->
+                        SettingsGestureItem(
+                            title = stringResource(R.string.double_tap),
+                            open = open,
+                            onChange = onChange,
+                            currentAction = prefs.doubleTapAction,
+                            onSelect = { j -> updateGesture(AppDrawerFlag.SetDoubleTap, j) },
+                            appLabel = prefs.appClickDate.appLabel
+                        )
                     }
                 )
             )
@@ -339,16 +349,6 @@ class SettingsFragment : Fragment() {
 
                             state = remember { mutableStateOf(prefs.extendHomeAppsArea) }
                         ) { prefs.extendHomeAppsArea = !prefs.extendHomeAppsArea }
-                    },
-                    { open, onChange ->
-                        SettingsGestureItem(
-                            title = stringResource(R.string.double_tap),
-                            open = open,
-                            onChange = onChange,
-                            currentAction = prefs.doubleTapAction,
-                            onSelect = { j -> updateGesture(AppDrawerFlag.SetDoubleTap, j) },
-                            appLabel = prefs.appClickDate.appLabel
-                        )
                     }
                 )
             )
