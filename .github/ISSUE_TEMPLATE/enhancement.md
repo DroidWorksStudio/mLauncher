@@ -23,4 +23,9 @@ assignees: 'The-Repo-Club'
 
 #### Additional context <!-- to be filled in or removed -->
 
-- Screenshots or other context
+<details>
+  <summary>Context</summary>
+
+Add your long texts or screenshots here
+
+</details>
