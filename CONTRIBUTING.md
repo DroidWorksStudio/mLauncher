@@ -84,7 +84,7 @@ People *love* thorough bug reports. I'm not even kidding.
 
 **Use a Consistent Coding Style**
 
-* 2 spaces for indentation rather than tabs
+* 4 spaces for indentation rather than tabs
 
 ## License
 
