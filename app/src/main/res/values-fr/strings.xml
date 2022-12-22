@@ -81,8 +81,8 @@
     <string name="disable">Désactiver</string>
     <string name="enabled">Activé</string>
     <string name="disabled">Désactivé</string>
-    <string name="show_notifications">Montrer les notifications</string>
-    <string name="show_app_list">Afficher la liste des applications</string>
+    <string name="show_notifications">Montrer notifications</string>
+    <string name="show_app_list">Montrer application liste</string>
     <string name="open_app">Ouvrir application</string>
     <string name="lock_screen">Verrouiller l\'écran</string>
     <string name="open_quick_settings">Réglages rapides</string>
