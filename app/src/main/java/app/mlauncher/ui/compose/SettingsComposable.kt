@@ -182,7 +182,7 @@ object SettingsComposable {
             onChange = onChange,
             title = title,
             currentSelection = remember { mutableStateOf(currentAction) },
-            currentSelectionName = if (currentAction == Constants.Action.OpenApp) "Open $appLabel" else currentAction.string(),
+            currentSelectionName = if (currentAction == Constants.Action.OpenApp) stringResource(R.string.open) + " $appLabel" else currentAction.string(),
             values = Constants.Action.values(),
             active = currentAction != Constants.Action.Disabled,
             onSelect = onSelect,
