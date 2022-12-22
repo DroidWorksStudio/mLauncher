@@ -27,12 +27,12 @@ Please delete options that are not relevant.
 
 - [ ] Give a descriptive title to your PR.
 - [ ] Describe your changes.
-- [ ] Put `closes #XXXX` in your comment to auto-close the issue that your PR fixes (if such).
+- [ ] Put `closes #XXXX` in your comment to auto-close the issue that your PR fixes (if relevant). <!--- Please delete if not relevant. -->
 
 ### New Feature Submissions <!-- to be filled in if relevant or remove -->
 
 1. [ ] Does your submission pass tests?
-2. [ ] Have you lint your code locally before submission?
+2. [ ] Does your submission build within android studio?
 
 # How Has This Been Tested? <!-- to be filled in -->
 
