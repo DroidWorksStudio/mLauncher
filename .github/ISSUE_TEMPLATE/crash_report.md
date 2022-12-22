@@ -1,11 +1,10 @@
 ---
-name: Crash report
-about: Create a report with a generated crash log attached (if possible) to help mLauncher
-  improve
-title: "[Crash Report ] add text here"
-labels: Crash report
-assignees: The-Repo-Club
-
+name: 'Crash report'
+about: 'Create a report with a generated crash log attached (if possible) to help mLauncher
+  improve'
+title: '[Crash Report ] add text here'
+labels: 'Type: Crash report'
+assignees: 'The-Repo-Club'
 ---
 
 - [ ] I have updated the title to best match the issue.

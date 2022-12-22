@@ -1,10 +1,9 @@
 ---
-name: Bug report
+name: 'Bug report'
 about: 'Create a report to help us improve '
-title: "[Bug Report] add text here"
-labels: Bug report
-assignees: The-Repo-Club
-
+title: '[Bug Report] add text here'
+labels: 'Type: Bug report'
+assignees: 'The-Repo-Club'
 ---
 
 - [ ] I have updated the title to best match the issue.
