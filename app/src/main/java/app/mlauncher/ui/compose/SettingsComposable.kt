@@ -1,6 +1,6 @@
 package app.mlauncher.ui.compose
 
-import SettingsTheme
+import app.mlauncher.style.SettingsTheme
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -21,7 +21,6 @@ import androidx.compose.ui.Alignment.Companion.TopEnd
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.onFocusEvent
 import androidx.compose.ui.input.pointer.pointerInput
-import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.Dp
@@ -41,11 +40,11 @@ object SettingsComposable {
     fun SettingsTile(content: @Composable () -> Unit) {
         Column(
             modifier = Modifier
-                .padding(12.dp, 12.dp, 12.dp, 0.dp)
+                .padding(6.dp, 6.dp, 6.dp, 0.dp)
                 .background(SettingsTheme.color.settings, SettingsTheme.shapes.settings)
                 .border(
                     0.5.dp,
-                    colorResource(R.color.blackInverseTrans50),
+                    SettingsTheme.color.border,
                     RoundedCornerShape(CORNER_RADIUS),
                 )
                 .padding(20.dp)
@@ -107,17 +106,17 @@ object SettingsComposable {
     @Composable
     fun SettingsToggle(
         title: String,
-        state: MutableState<Boolean>,
+        state: MutableState<Boolean?>,
         onChange: (Boolean) -> Unit,
         fontSize: TextUnit = TextUnit.Unspecified,
         onToggle: () -> Unit
     ) {
-        val buttonText = if (state.value) stringResource(R.string.on) else stringResource(R.string.off)
+        val buttonText = if (state.value == true) stringResource(R.string.on) else stringResource(R.string.off)
         SettingsRow(
             title = title,
             onClick = {
                 onChange(false)
-                state.value = !state.value
+                state.value = !state.value!!
                 onToggle()
             },
             fontSize = fontSize,
@@ -223,7 +222,8 @@ object SettingsComposable {
         }
     }
 
-    @Composable
+    // this has been removed and is no longer used
+    /*@Composable
     fun SettingsAppSelector(
         title: String,
         currentSelection: MutableState<String>,
@@ -239,7 +239,7 @@ object SettingsComposable {
             fontSize = fontSize,
             disabledText = stringResource(R.string.disabled)
         )
-    }
+    }*/
 
     @Composable
     private fun SettingsRow(

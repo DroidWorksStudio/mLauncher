@@ -3,6 +3,7 @@ package app.mlauncher.data
 import android.content.Context
 import android.content.SharedPreferences
 import android.os.UserHandle
+import app.mlauncher.data.Constants.Gravity
 import app.mlauncher.helper.getUserHandleFromString
 
 private const val APP_LANGUAGE = "app_language"
@@ -85,16 +86,16 @@ class Prefs(val context: Context) {
         }
         set(value) = prefs.edit().putInt(HOME_APPS_NUM, value).apply()
 
-    var homeAlignment: Constants.Gravity
+    var homeAlignment: Gravity
         get() {
             return try {
                 val string = prefs.getString(
                     HOME_ALIGNMENT,
-                    Constants.Gravity.Left.name
+                    Gravity.Left.name
                 ).toString()
-                Constants.Gravity.valueOf(string)
+                Gravity.valueOf(string)
             } catch (_: Exception) {
-                Constants.Gravity.Left
+                Gravity.Left
             }
         }
         set(value) = prefs.edit().putString(HOME_ALIGNMENT, value.toString()).apply()
@@ -107,23 +108,23 @@ class Prefs(val context: Context) {
         get() = prefs.getBoolean(HOME_CLICK_AREA, false)
         set(value) = prefs.edit().putBoolean(HOME_CLICK_AREA, value).apply()
 
-    var clockAlignment: Constants.Gravity
+    var clockAlignment: Gravity
         get() {
             val string = prefs.getString(
                 TIME_ALIGNMENT,
-                Constants.Gravity.Left.name
+                Gravity.Left.name
             ).toString()
-            return Constants.Gravity.valueOf(string)
+            return Gravity.valueOf(string)
         }
         set(value) = prefs.edit().putString(TIME_ALIGNMENT, value.toString()).apply()
 
-    var drawerAlignment: Constants.Gravity
+    var drawerAlignment: Gravity
         get() {
             val string = prefs.getString(
                 DRAWER_ALIGNMENT,
-                Constants.Gravity.Right.name
+                Gravity.Right.name
             ).toString()
-            return Constants.Gravity.valueOf(string)
+            return Gravity.valueOf(string)
         }
         set(value) = prefs.edit().putString(DRAWER_ALIGNMENT, value.name).apply()
 

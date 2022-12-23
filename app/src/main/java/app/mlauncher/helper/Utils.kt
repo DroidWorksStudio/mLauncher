@@ -18,7 +18,7 @@ import android.provider.CalendarContract
 import android.provider.MediaStore
 import android.provider.Settings
 import android.util.DisplayMetrics
-import android.util.Log
+import android.util.Log.*
 import android.util.TypedValue
 import android.view.Gravity
 import android.view.View
@@ -102,14 +102,11 @@ suspend fun getAppsList(context: Context, showHiddenApps: Boolean = false): Muta
             }
 
             appList.sortBy {
-                if (it.appAlias.isEmpty()) {
-                    it.appLabel.lowercase()
-                } else {
-                    it.appAlias.lowercase()
-                }
+                if (it.appAlias.isEmpty()) it.appLabel.lowercase() else it.appAlias.lowercase()
             }
 
         } catch (e: java.lang.Exception) {
+            d("appList", e.toString())
         }
         appList
     }
@@ -121,8 +118,10 @@ suspend fun getHiddenAppsList(context: Context): MutableList<AppModel> {
         if (!Prefs(context).hiddenAppsUpdated) upgradeHiddenApps(Prefs(context))
 
         val hiddenAppsSet = Prefs(context).hiddenApps
-        val appList: MutableList<AppModel> = mutableListOf()
-        if (hiddenAppsSet.isEmpty()) return@withContext appList
+        val appList = mutableListOf<AppModel>()
+        if (hiddenAppsSet.isEmpty()) {
+            return@withContext appList
+        }
 
         val userManager = context.getSystemService(Context.USER_SERVICE) as UserManager
         val collator = Collator.getInstance()
@@ -134,12 +133,13 @@ suspend fun getHiddenAppsList(context: Context): MutableList<AppModel> {
                 if (user.toString() == userString) userHandle = user
             }
             try {
+                @Suppress("DEPRECATION")
                 val appInfo = pm.getApplicationInfo(appPackage, 0)
                 val appName = pm.getApplicationLabel(appInfo).toString()
                 val appKey = collator.getCollationKey(appName)
                 appList.add(AppModel(appName, appKey, appPackage, "", userHandle, Prefs(context).getAppAlias(appName)))
             } catch (e: NameNotFoundException) {
-
+                d("getHiddenAppsList", e.toString())
             }
         }
         appList.sort()
@@ -180,6 +180,7 @@ fun getDefaultLauncherPackage(context: Context): String {
     intent.action = Intent.ACTION_MAIN
     intent.addCategory(Intent.CATEGORY_HOME)
     val packageManager = context.packageManager
+    @Suppress("DEPRECATION")
     val result = packageManager.resolveActivity(intent, 0)
     return if (result?.activityInfo != null) {
         result.activityInfo.packageName
@@ -222,7 +223,7 @@ fun openDialerApp(context: Context) {
         val sendIntent = Intent(Intent.ACTION_DIAL)
         context.startActivity(sendIntent)
     } catch (e: java.lang.Exception) {
-
+        d("openDialerApp", e.toString())
     }
 }
 
@@ -231,7 +232,7 @@ fun openCameraApp(context: Context) {
         val sendIntent = Intent(MediaStore.INTENT_ACTION_STILL_IMAGE_CAMERA)
         context.startActivity(sendIntent)
     } catch (e: java.lang.Exception) {
-
+        d("openCameraApp", e.toString())
     }
 }
 
@@ -240,7 +241,7 @@ fun openAlarmApp(context: Context) {
         val intent = Intent(AlarmClock.ACTION_SHOW_ALARMS)
         context.startActivity(intent)
     } catch (e: java.lang.Exception) {
-        Log.d("TAG", e.toString())
+        d("openAlarmApp", e.toString())
     }
 }
 
@@ -259,6 +260,7 @@ fun openCalendar(context: Context) {
             intent.addCategory(Intent.CATEGORY_APP_CALENDAR)
             context.startActivity(intent)
         } catch (e: Exception) {
+            d("openCalendar", e.toString())
         }
     }
 }
@@ -266,6 +268,7 @@ fun openCalendar(context: Context) {
 fun isTablet(context: Context): Boolean {
     val windowManager = context.getSystemService(Context.WINDOW_SERVICE) as WindowManager
     val metrics = DisplayMetrics()
+    @Suppress("DEPRECATION")
     windowManager.defaultDisplay.getMetrics(metrics)
     val widthInches = metrics.widthPixels / metrics.xdpi
     val heightInches = metrics.heightPixels / metrics.ydpi
