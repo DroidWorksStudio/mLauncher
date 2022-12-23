@@ -1,6 +1,6 @@
 package app.mlauncher.ui
 
-import SettingsTheme
+import app.mlauncher.style.SettingsTheme
 import android.app.admin.DevicePolicyManager
 import android.content.ComponentName
 import android.content.Context
@@ -20,9 +20,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -49,14 +47,12 @@ import app.mlauncher.ui.compose.SettingsComposable.SimpleTextButton
 class SettingsFragment : Fragment() {
 
     private lateinit var prefs: Prefs
-    private lateinit var viewModel: MainViewModel
+    private var viewModel: MainViewModel? = null
     private lateinit var deviceManager: DevicePolicyManager
     private lateinit var componentName: ComponentName
 
     private var _binding: FragmentSettingsBinding? = null
     private val binding get() = _binding!!
-
-    private val offset = 5
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -71,7 +67,6 @@ class SettingsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
         if (prefs.firstSettingsOpen) {
             prefs.firstSettingsOpen = false
         }
@@ -85,13 +80,13 @@ class SettingsFragment : Fragment() {
             }
 
             SettingsTheme(isDark) {
-                Settings((prefs.textSize - offset).sp)
+                Settings()
             }
         }
     }
 
     @Composable
-    private fun Settings(fontSize: TextUnit = TextUnit.Unspecified) {
+    private fun Settings() {
         val selected = remember { mutableStateOf("") }
 
         val changeLauncherText = if (ismlauncherDefault(requireContext())) {
@@ -155,7 +150,7 @@ class SettingsFragment : Fragment() {
                             currentSelection = remember { mutableStateOf(prefs.textSize) },
                             min = Constants.TEXT_SIZE_MIN,
                             max = Constants.TEXT_SIZE_MAX,
-                            onValueChange = { }, // newSize -> fs.value = (newSize - offset).sp },
+                            onValueChange = { },
                             onSelect = { f -> setTextSize(f) }
                         )
                     }
@@ -235,7 +230,7 @@ class SettingsFragment : Fragment() {
 
                             currentSelection = remember { mutableStateOf(prefs.drawerAlignment) },
                             values = arrayOf(Constants.Gravity.Left, Constants.Gravity.Center, Constants.Gravity.Right),
-                            onSelect = { j -> viewModel.updateDrawerAlignment(j) }
+                            onSelect = { j -> viewModel?.updateDrawerAlignment(j) }
                         )
                     },
                 )
@@ -352,6 +347,7 @@ class SettingsFragment : Fragment() {
                     }
                 )
             )
+            @Suppress("DEPRECATION")
             Text(
                 modifier = Modifier
                     .align(Alignment.End)
@@ -363,14 +359,16 @@ class SettingsFragment : Fragment() {
         }
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onActivityCreated(savedInstanceState: Bundle?) {
+        @Suppress("DEPRECATION")
         super.onActivityCreated(savedInstanceState)
         prefs = Prefs(requireContext())
         viewModel = activity?.run {
-            ViewModelProvider(this).get(MainViewModel::class.java)
+            ViewModelProvider(this)[MainViewModel::class.java]
         } ?: throw Exception("Invalid Activity")
 
-        viewModel.ismlauncherDefault()
+        viewModel!!.ismlauncherDefault()
 
         deviceManager = context?.getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
         componentName = ComponentName(requireContext(), DeviceAdmin::class.java)
@@ -384,19 +382,19 @@ class SettingsFragment : Fragment() {
 
     private fun setHomeAlignment(gravity: Constants.Gravity) {
         prefs.homeAlignment = gravity
-        viewModel.updateHomeAppsAlignment(gravity, prefs.homeAlignmentBottom)
+        viewModel?.updateHomeAppsAlignment(gravity, prefs.homeAlignmentBottom)
     }
 
     private fun toggleHomeAppsBottom() {
         val onBottom  = !prefs.homeAlignmentBottom
 
         prefs.homeAlignmentBottom = onBottom
-        viewModel.updateHomeAppsAlignment(prefs.homeAlignment, onBottom)
+        viewModel?.updateHomeAppsAlignment(prefs.homeAlignment, onBottom)
     }
 
     private fun setClockAlignment(gravity: Constants.Gravity) {
         prefs.clockAlignment = gravity
-        viewModel.updateClockAlignment(gravity)
+        viewModel?.updateClockAlignment(gravity)
     }
 
     private fun toggleStatusBar() {
@@ -407,16 +405,16 @@ class SettingsFragment : Fragment() {
 
     private fun toggleShowDate() {
         prefs.showDate = !prefs.showDate
-        viewModel.setShowDate(prefs.showDate)
+        viewModel?.setShowDate(prefs.showDate)
     }
 
     private fun toggleShowTime() {
         prefs.showTime = !prefs.showTime
-        viewModel.setShowTime(prefs.showTime)
+        viewModel?.setShowTime(prefs.showTime)
     }
 
     private fun showHiddenApps() {
-        viewModel.getHiddenApps()
+        viewModel?.getHiddenApps()
         findNavController().navigate(
             R.id.action_settingsFragment_to_appListFragment,
             bundleOf("flag" to AppDrawerFlag.HiddenApps.toString())
@@ -431,7 +429,7 @@ class SettingsFragment : Fragment() {
 
     private fun updateHomeAppsNum(homeAppsNum: Int) {
         prefs.homeAppsNum = homeAppsNum
-        viewModel.homeAppsCount.value = homeAppsNum
+        viewModel?.homeAppsCount?.value = homeAppsNum
     }
 
     private fun toggleKeyboardText() {
@@ -472,7 +470,7 @@ class SettingsFragment : Fragment() {
 
         when(action) {
             Action.OpenApp -> {
-                viewModel.getAppList()
+                viewModel?.getAppList()
                 findNavController().navigate(
                     R.id.action_settingsFragment_to_appListFragment,
                     bundleOf("flag" to flag.toString())

@@ -3,9 +3,11 @@ package app.mlauncher.ui
 import android.annotation.SuppressLint
 import android.app.admin.DevicePolicyManager
 import android.content.Context
+import android.content.Context.VIBRATOR_SERVICE
 import android.os.Build
 import android.os.Bundle
 import android.os.Vibrator
+import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -58,7 +60,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         } ?: throw Exception("Invalid Activity")
 
         deviceManager = context?.getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
-        vibrator = context?.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+        @Suppress("DEPRECATION")
+        vibrator = context?.getSystemService(VIBRATOR_SERVICE) as Vibrator
 
         initObservers()
 
@@ -120,6 +123,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         return true
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     private fun initSwipeTouchListener() {
         val context = requireContext()
         binding.touchArea.setOnTouchListener(getHomeScreenGestureListener(context))
@@ -185,19 +189,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 )
                 e.printStackTrace()
             }
-        }
-    }
-
-    @SuppressLint("WrongConstant", "PrivateApi")
-    private fun expandNotificationDrawer(context: Context) {
-        // Source: https://stackoverflow.com/a/51132142
-        try {
-            val statusBarService = context.getSystemService("statusbar")
-            val statusBarManager = Class.forName("android.app.StatusBarManager")
-            val method = statusBarManager.getMethod("expandNotificationsPanel")
-            method.invoke(statusBarService)
-        } catch (e: Exception) {
-            e.printStackTrace()
         }
     }
 
@@ -325,6 +316,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     findNavController().navigate(R.id.action_mainFragment_to_settingsFragment)
                     viewModel.firstOpen(false)
                 } catch (e: java.lang.Exception) {
+                    Log.d("onLongClick", e.toString())
                 }
             }
 
@@ -386,6 +378,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
     // updates number of apps visible on home screen
     // does nothing if number has not changed
+    @SuppressLint("InflateParams")
     private fun updateAppCount(newAppsNum: Int) {
         val oldAppsNum = binding.homeAppsLayout.size // current number
         val diff = oldAppsNum - newAppsNum
