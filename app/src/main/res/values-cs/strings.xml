@@ -2,15 +2,11 @@
     <string name="app_name">mlauncher</string>
     <string name="app">Aplikace</string>
     <string name="set_as_default_launcher">Nastavit jako výchozí spouštěč</string>
-    <string name="app_text_color">Barva textu</string>
     <string name="double_tap_to_lock_screen">Dvojitým klepnutím uzamknete</string>
     <string name="experimental_">(experimentální)</string>
     <string name="admin_permission_message">mLauncher slibuje, že bude zodpovědně používat oprávnění k uzamčení obrazovky.</string>
-    <string name="about">O</string>
     <string name="off">Vypnuto</string>
     <string name="on">Na</string>
-    <string name="black">Černá</string>
-    <string name="white">Bílý</string>
     <string name="change_default_launcher">Změnit výchozí spouštěč</string>
     <string name="long_press_for_settings">Dlouhým stisknutím kdekoli pro nastavení</string>
     <string name="swipe_up_for_apps">Přejetím nahoru zobrazíte všechny aplikace</string>
@@ -29,16 +25,6 @@
     <string name="clock_click_app">Klikněte na Hodiny</string>
     <string name="date_click_app">Klepněte na Datum</string>
     <string name="double_tap">Dvojí poklepání</string>
-    <string name="_0" translatable="false">0</string>
-    <string name="_1" translatable="false">1</string>
-    <string name="_2" translatable="false">2</string>
-    <string name="_3" translatable="false">3</string>
-    <string name="_4" translatable="false">4</string>
-    <string name="_5" translatable="false">5</string>
-    <string name="_6" translatable="false">6</string>
-    <string name="_7" translatable="false">7</string>
-    <string name="_8" translatable="false">8</string>
-    <string name="commit">Spáchat</string>
     <string name="save">Uložit</string>
     <string name="app_drawer_tips">Tip: Přejetím dolů zavřete. Posunutím skryjete klávesnici.</string>
     <string name="okay">dobře</string>

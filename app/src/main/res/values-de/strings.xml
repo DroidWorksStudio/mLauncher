@@ -2,15 +2,11 @@
     <string name="app_name">mlauncher</string>
     <string name="app">App</string>
     <string name="set_as_default_launcher">Als Standard-Launcher festlegen</string>
-    <string name="app_text_color">Textfarbe</string>
     <string name="double_tap_to_lock_screen">Zum Sperren doppeltippen</string>
     <string name="experimental_">(Experimental)</string>
     <string name="admin_permission_message">mLauncher verspricht einen verantwortungsvollen Umgang mit Sperrbildschirmberechtigungen.</string>
-    <string name="about">Um</string>
     <string name="off">Aus</string>
     <string name="on">An</string>
-    <string name="black">Schwarz</string>
-    <string name="white">Weiß</string>
     <string name="change_default_launcher">Ändern Sie den Standardstarter</string>
     <string name="long_press_for_settings">Für Einstellungen irgendwo lang drücken</string>
     <string name="swipe_up_for_apps">Für alle Apps nach oben wischen</string>
@@ -29,16 +25,6 @@
     <string name="clock_click_app">Klicken Sie auf Uhr</string>
     <string name="date_click_app">Klicken Sie auf Datum</string>
     <string name="double_tap">Doppeltippen</string>
-    <string name="_0" translatable="false">0</string>
-    <string name="_1" translatable="false">1</string>
-    <string name="_2" translatable="false">2</string>
-    <string name="_3" translatable="false">3</string>
-    <string name="_4" translatable="false">4</string>
-    <string name="_5" translatable="false">5</string>
-    <string name="_6" translatable="false">6</string>
-    <string name="_7" translatable="false">7</string>
-    <string name="_8" translatable="false">8</string>
-    <string name="commit">Verpflichten</string>
     <string name="save">Speichern</string>
     <string name="app_drawer_tips">Tipp: Zum Schließen nach unten wischen. Scrollen Sie, um die Tastatur auszublenden.</string>
     <string name="okay">Okay</string>

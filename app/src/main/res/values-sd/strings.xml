@@ -2,15 +2,11 @@
     <string name="app_name">ايم لانچر</string>
     <string name="app">ايپ</string>
     <string name="set_as_default_launcher">ڊفالٽ لانچر طور سيٽ ڪريو</string>
-    <string name="app_text_color">متن جو رنگ</string>
     <string name="double_tap_to_lock_screen">لاڪ ڪرڻ لاءِ ڊبل ٽيپ ڪريو</string>
     <string name="experimental_">(تجرباتي)</string>
     <string name="admin_permission_message">mLauncher لاڪ اسڪرين جي اجازت کي ذميواري سان استعمال ڪرڻ جو واعدو ڪري ٿو.</string>
-    <string name="about">بابت</string>
     <string name="off">بند</string>
     <string name="on">تي</string>
-    <string name="black">ڪارو</string>
-    <string name="white">اڇو</string>
     <string name="change_default_launcher">ڊفالٽ لانچر کي تبديل ڪريو</string>
     <string name="long_press_for_settings">سيٽنگون لاءِ ڪٿي به ڊگھو دٻايو</string>
     <string name="swipe_up_for_apps">سڀني ائپس لاءِ مٿي سوائپ ڪريو</string>
@@ -29,16 +25,6 @@
     <string name="clock_click_app">گھڙي تي ڪلڪ ڪريو</string>
     <string name="date_click_app">تي ڪلڪ ڪريو تاريخ</string>
     <string name="double_tap">ڊبل ٽيپ ڪريو</string>
-    <string name="_0" translatable="false">0</string>
-    <string name="_1" translatable="false">1</string>
-    <string name="_2" translatable="false">2</string>
-    <string name="_3" translatable="false">3</string>
-    <string name="_4" translatable="false">4</string>
-    <string name="_5" translatable="false">5</string>
-    <string name="_6" translatable="false">6</string>
-    <string name="_7" translatable="false">7</string>
-    <string name="_8" translatable="false">8</string>
-    <string name="commit">انجام</string>
     <string name="save">بچايو</string>
     <string name="app_drawer_tips">ھدايت: برطرف ڪرڻ لاءِ ھيٺ سوائپ ڪريو. ڪيبورڊ لڪائڻ لاءِ اسڪرول ڪريو.</string>
     <string name="okay">ٺيڪ</string>

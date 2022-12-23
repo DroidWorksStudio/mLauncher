@@ -184,21 +184,7 @@ class SettingsFragment : Fragment() {
                             onChange = onChange,
                             state = remember { mutableStateOf(prefs.autoOpenApp) },
                         ) { toggleAutoOpenApp() }
-                    },
-                    { _, onChange ->
-                        SettingsToggle(
-                            title = stringResource(R.string.extend_home_apps_area),
-                            onChange = onChange,
-                            state = remember { mutableStateOf(prefs.extendHomeAppsArea) }
-                        ) { prefs.extendHomeAppsArea = !prefs.extendHomeAppsArea }
-                    },
-                    { _, onChange ->
-                        SettingsToggle(
-                            title = stringResource(R.string.home_alignment_bottom),
-                            onChange = onChange,
-                            state = remember { mutableStateOf(prefs.homeAlignmentBottom) }
-                        ) { toggleHomeAppsBottom() }
-                    },
+                    }
                 )
             )
             SettingsArea(title = stringResource(R.string.homescreen),
@@ -235,6 +221,20 @@ class SettingsFragment : Fragment() {
                             onChange = onChange,
                             state = remember { mutableStateOf(prefs.homeLocked) }
                         ) { prefs.homeLocked = !prefs.homeLocked }
+                    },
+                    { _, onChange ->
+                        SettingsToggle(
+                            title = stringResource(R.string.extend_home_apps_area),
+                            onChange = onChange,
+                            state = remember { mutableStateOf(prefs.extendHomeAppsArea) }
+                        ) { prefs.extendHomeAppsArea = !prefs.extendHomeAppsArea }
+                    },
+                    { _, onChange ->
+                        SettingsToggle(
+                            title = stringResource(R.string.home_alignment_bottom),
+                            onChange = onChange,
+                            state = remember { mutableStateOf(prefs.homeAlignmentBottom) }
+                        ) { toggleHomeAppsBottom() }
                     }
                 )
             )

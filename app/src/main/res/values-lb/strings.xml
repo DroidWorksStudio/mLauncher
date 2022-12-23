@@ -2,15 +2,11 @@
     <string name="app_name">mLauncher</string>
     <string name="app">App</string>
     <string name="set_as_default_launcher">Setzt als Standardstarter</string>
-    <string name="app_text_color">Text Faarf</string>
     <string name="double_tap_to_lock_screen">Duebeltapp fir ze spären</string>
     <string name="experimental_">(experimentell)</string>
     <string name="admin_permission_message">mLauncher versprécht de Sperrbildschirm Erlaabnis verantwortlech ze benotzen.</string>
-    <string name="about">Iwwer</string>
     <string name="off">Off</string>
     <string name="on">Op</string>
-    <string name="black">Schwaarz</string>
-    <string name="white">Wäiss</string>
     <string name="change_default_launcher">Default Launcher änneren</string>
     <string name="long_press_for_settings">Laang Press iwwerall fir Astellungen</string>
     <string name="swipe_up_for_apps">Swipe up fir all Apps</string>
@@ -29,16 +25,6 @@
     <string name="clock_click_app">Klickt op Auer</string>
     <string name="date_click_app">Klickt op Datum</string>
     <string name="double_tap">Duebel Tap</string>
-    <string name="_0" translatable="false">0</string>
-    <string name="_1" translatable="false">1</string>
-    <string name="_2" translatable="false">2</string>
-    <string name="_3" translatable="false">3</string>
-    <string name="_4" translatable="false">4</string>
-    <string name="_5" translatable="false">5</string>
-    <string name="_6" translatable="false">6</string>
-    <string name="_7" translatable="false">7</string>
-    <string name="_8" translatable="false">8</string>
-    <string name="commit">Engagéieren</string>
     <string name="save">Spueren</string>
     <string name="app_drawer_tips">Tipp: Swipt erof fir ze entloossen. Scrollen fir d\'Tastatur ze verstoppen.</string>
     <string name="okay">Okay</string>

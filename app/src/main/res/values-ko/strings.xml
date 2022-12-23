@@ -2,15 +2,11 @@
     <string name="app_name">m런처</string>
     <string name="app">앱</string>
     <string name="set_as_default_launcher">기본 런처로 설정</string>
-    <string name="app_text_color">텍스트 색상</string>
     <string name="double_tap_to_lock_screen">잠그려면 두 번 탭하세요.</string>
     <string name="experimental_">(실험적)</string>
     <string name="admin_permission_message">mLauncher는 잠금 화면 권한을 책임감 있게 사용할 것을 약속합니다.</string>
-    <string name="about">에 대한</string>
     <string name="off">끄다</string>
     <string name="on">에</string>
-    <string name="black">검은색</string>
-    <string name="white">하얀색</string>
     <string name="change_default_launcher">기본 런처 변경</string>
     <string name="long_press_for_settings">설정을 위해 아무 곳이나 길게 누르세요.</string>
     <string name="swipe_up_for_apps">모든 앱을 보려면 위로 스와이프하세요.</string>
@@ -29,16 +25,6 @@
     <string name="clock_click_app">시계를 클릭하십시오</string>
     <string name="date_click_app">날짜를 클릭하십시오</string>
     <string name="double_tap">더블 탭</string>
-    <string name="_0" translatable="false">0</string>
-    <string name="_1" translatable="false">1</string>
-    <string name="_2" translatable="false">2</string>
-    <string name="_3" translatable="false">3</string>
-    <string name="_4" translatable="false">4</string>
-    <string name="_5" translatable="false">5</string>
-    <string name="_6" translatable="false">6</string>
-    <string name="_7" translatable="false">7</string>
-    <string name="_8" translatable="false">8</string>
-    <string name="commit">저지르다</string>
     <string name="save">구하다</string>
     <string name="app_drawer_tips">팁: 닫으려면 아래로 스와이프하세요. 스크롤하여 키보드를 숨깁니다.</string>
     <string name="okay">괜찮아</string>

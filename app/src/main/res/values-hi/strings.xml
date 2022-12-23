@@ -2,15 +2,11 @@
     <string name="app_name">mlauncher</string>
     <string name="app">अनुप्रयोग</string>
     <string name="set_as_default_launcher">डिफ़ॉल्ट लॉन्चर के रूप में सेट करें</string>
-    <string name="app_text_color">लिखावट का रंग</string>
     <string name="double_tap_to_lock_screen">लॉक करने के लिए डबल टैप करें</string>
     <string name="experimental_">(प्रायोगिक)</string>
     <string name="admin_permission_message">एमएल लॉन्चर जिम्मेदारी से लॉक स्क्रीन अनुमति का उपयोग करने का वादा करता है।</string>
-    <string name="about">के बारे में</string>
     <string name="off">बंद</string>
     <string name="on">पर</string>
-    <string name="black">काला</string>
-    <string name="white">सफेद</string>
     <string name="change_default_launcher">डिफ़ॉल्ट लॉन्चर बदलें</string>
     <string name="long_press_for_settings">सेटिंग्स के लिए कहीं भी देर तक दबाएं</string>
     <string name="swipe_up_for_apps">सभी ऐप्स के लिए ऊपर की ओर स्वाइप करें</string>
@@ -29,16 +25,6 @@
     <string name="clock_click_app">घड़ी पर क्लिक करें</string>
     <string name="date_click_app">दिनांक पर क्लिक करें</string>
     <string name="double_tap">दो बार टैप</string>
-    <string name="_0" translatable="false">0</string>
-    <string name="_1" translatable="false">1</string>
-    <string name="_2" translatable="false">2</string>
-    <string name="_3" translatable="false">3</string>
-    <string name="_4" translatable="false">4</string>
-    <string name="_5" translatable="false">5</string>
-    <string name="_6" translatable="false">6</string>
-    <string name="_7" translatable="false">7</string>
-    <string name="_8" translatable="false">8</string>
-    <string name="commit">वादा करना</string>
     <string name="save">बचाना</string>
     <string name="app_drawer_tips">युक्ति: खारिज करने के लिए नीचे स्वाइप करें। कीबोर्ड छुपाने के लिए स्क्रॉल करें।</string>
     <string name="okay">ठीक</string>

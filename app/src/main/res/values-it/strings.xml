@@ -2,15 +2,11 @@
     <string name="app_name">mLauncher</string>
     <string name="app">App</string>
     <string name="set_as_default_launcher">Imposta come launcher predefinito</string>
-    <string name="app_text_color">Colore del testo</string>
     <string name="double_tap_to_lock_screen">Tocca due volte per bloccare</string>
     <string name="experimental_">(sperimentale)</string>
     <string name="admin_permission_message">mLauncher promette di utilizzare l\'autorizzazione della schermata di blocco in modo responsabile.</string>
-    <string name="about">Di</string>
     <string name="off">Spento</string>
     <string name="on">Acceso</string>
-    <string name="black">Nero</string>
-    <string name="white">Bianco</string>
     <string name="change_default_launcher">Cambia il programma di avvio predefinito</string>
     <string name="long_press_for_settings">Premi a lungo ovunque per le impostazioni</string>
     <string name="swipe_up_for_apps">Scorri verso l\'alto per tutte le app</string>
@@ -29,16 +25,6 @@
     <string name="clock_click_app">Fare clic su Orologio</string>
     <string name="date_click_app">Clicca su Data</string>
     <string name="double_tap">Doppio tocco</string>
-    <string name="_0" translatable="false">0</string>
-    <string name="_1" translatable="false">1</string>
-    <string name="_2" translatable="false">2</string>
-    <string name="_3" translatable="false">3</string>
-    <string name="_4" translatable="false">4</string>
-    <string name="_5" translatable="false">5</string>
-    <string name="_6" translatable="false">6</string>
-    <string name="_7" translatable="false">7</string>
-    <string name="_8" translatable="false">8</string>
-    <string name="commit">Commettere</string>
     <string name="save">Salva</string>
     <string name="app_drawer_tips">Suggerimento: scorri verso il basso per ignorare. Scorri per nascondere la tastiera.</string>
     <string name="okay">Bene</string>
