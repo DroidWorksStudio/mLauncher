@@ -22,7 +22,7 @@ Please delete options that are not relevant.
 - [ ] Have you added tests that prove your fix is effective or that your feature works
 - [ ] My changes generate no new warnings or errors of any kind
 - [ ] You have done your changes in a separate branch. 
-- [ ] Branch has descriptive name that start with either the `bug/` or `feature/` prefixes. <!-- Good examples are: 'bug/signin-issue' or 'feature/issue-templates'. -->
+- [ ] Branch has descriptive name that start with either the `bug/`, `fix/` or `feature/` prefixes. <!-- Good examples are: 'bug/language-string-wrong', 'fix/signin-issue' or 'feature/issue-templates'. -->
 
 **After** these steps, you're ready to open a pull request.
 

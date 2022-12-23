@@ -1,24 +1,43 @@
-Forked from <a href="https://github.com/OlauncherCF/OlauncherCF">OlauncherCF</a>. Minimal and clean of back links
+Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal and clean.
     
-- Ability for more customizability on home screen gestures.
+- Removed clutter, like ads and links
+- You can rename apps in the app-drawer (Renaming apps on the home screen is already supported. Just long-click on an app on the home screen and start typing)
+- Ability to change the app that opens when clicking on the clock
+- Ability to change the app that opens when clicking on the date
 - Ability to toggle the automation of opening app if last in list.
+- Much more customizability on home screen gestures
+- Align clock independently of home apps
+- Change alignment of apps in app-drawer
+- Change font size
+- Removed internet permission
+- Ability to toggle the automation of opening app if last in list.
+
 - A lot of people have translated the app to the following languages. Many thanks to you all.
+  - Arabic
   - Albanian
   - Bulgarian
+  - Chinese
+  - Croatian
   - Czech
   - Danish
+  - English
   - Estonian
   - Filipino
   - Finnish
+  - French
   - Georgian
+  - German
   - Greek
   - Hawaiian
   - Hebrew
   - Hindi
   - Hungarian
   - Icelandic
+  - Indonesian
   - Irish
+  - Italian
   - Japanese
+  - Korean
   - Lithuanian
   - Luxembourgish
   - Malay
@@ -26,10 +45,16 @@ Forked from <a href="https://github.com/OlauncherCF/OlauncherCF">OlauncherCF</a>
   - Malayalam
   - Norwegian
   - Nepali
+  - Persian
   - Polish
+  - Portuguese (European)
   - Punjabi
+  - Russian
   - Serbian
   - Sindhi
+  - Spanish
+  - Swedish
   - Thai
+  - Turkish
   - Ukrainian
   - Vietnamese
