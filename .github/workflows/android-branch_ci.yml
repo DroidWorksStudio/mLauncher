@@ -4,7 +4,9 @@ name: Android Feature Branch CI
 on:
   push:
     branches:
-      - '*'
+      - 'fix/**'
+      - 'bug/**'
+      - 'feature/**'
       - '!main'
   workflow_dispatch:
 
