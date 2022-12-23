@@ -4,8 +4,10 @@ import app.mlauncher.style.SettingsTheme
 import android.app.admin.DevicePolicyManager
 import android.content.ComponentName
 import android.content.Context
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.provider.Settings
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -20,7 +22,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -37,8 +41,8 @@ import app.mlauncher.databinding.FragmentSettingsBinding
 import app.mlauncher.helper.*
 import app.mlauncher.listener.DeviceAdmin
 import app.mlauncher.ui.compose.SettingsComposable.SettingsArea
-import app.mlauncher.ui.compose.SettingsComposable.SettingsItem
 import app.mlauncher.ui.compose.SettingsComposable.SettingsGestureItem
+import app.mlauncher.ui.compose.SettingsComposable.SettingsItem
 import app.mlauncher.ui.compose.SettingsComposable.SettingsNumberItem
 import app.mlauncher.ui.compose.SettingsComposable.SettingsToggle
 import app.mlauncher.ui.compose.SettingsComposable.SettingsTopView
@@ -47,12 +51,14 @@ import app.mlauncher.ui.compose.SettingsComposable.SettingsTextButton
 class SettingsFragment : Fragment() {
 
     private lateinit var prefs: Prefs
-    private var viewModel: MainViewModel? = null
+    private lateinit var viewModel: MainViewModel
     private lateinit var deviceManager: DevicePolicyManager
     private lateinit var componentName: ComponentName
 
     private var _binding: FragmentSettingsBinding? = null
     private val binding get() = _binding!!
+
+    private val offset = 5
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -67,6 +73,7 @@ class SettingsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
         if (prefs.firstSettingsOpen) {
             prefs.firstSettingsOpen = false
         }
@@ -80,19 +87,28 @@ class SettingsFragment : Fragment() {
             }
 
             SettingsTheme(isDark) {
-                Settings()
+                Settings((prefs.textSize - offset).sp)
             }
         }
     }
 
     @Composable
-    private fun Settings() {
+    private fun Settings(fontSize: TextUnit = TextUnit.Unspecified) {
         val selected = remember { mutableStateOf("") }
+        /*val fs = remember { mutableStateOf(fontSize) }
+
+        val titleFs = if (fs.value.isSpecified) {
+            (fs.value.value * 2).sp
+        } else fs.value
+
+        val iconFs = if (fs.value.isSpecified) {
+            (fs.value.value * 1.5).sp
+        } else fs.value */
 
         val changeLauncherText = if (ismlauncherDefault(requireContext())) {
             R.string.change_default_launcher
         } else {
-           R.string.set_as_default_launcher
+            R.string.set_as_default_launcher
         }
 
         Column {
@@ -115,7 +131,6 @@ class SettingsFragment : Fragment() {
                         SettingsToggle(
                             title = stringResource(R.string.status_bar),
                             onChange = onChange,
-
                             state = remember { mutableStateOf(prefs.showStatusBar) },
                         ) { toggleStatusBar() }
                     },
@@ -124,7 +139,6 @@ class SettingsFragment : Fragment() {
                             title = stringResource(R.string.theme_mode),
                             open = open,
                             onChange = onChange,
-
                             currentSelection = remember { mutableStateOf(prefs.appTheme) },
                             values = arrayOf(System, Light, Dark),
                             onSelect = { j -> setTheme(j) }
@@ -134,7 +148,6 @@ class SettingsFragment : Fragment() {
                         SettingsItem(
                             open = open,
                             onChange = onChange,
-
                             title = stringResource(R.string.app_language),
                             currentSelection = remember { mutableStateOf(prefs.language) },
                             values = Constants.Language.values(),
@@ -145,7 +158,6 @@ class SettingsFragment : Fragment() {
                         SettingsNumberItem(
                             title = stringResource(R.string.app_text_size),
                             open = open,
-
                             onChange = onChange,
                             currentSelection = remember { mutableStateOf(prefs.textSize) },
                             min = Constants.TEXT_SIZE_MIN,
@@ -156,6 +168,39 @@ class SettingsFragment : Fragment() {
                     }
                 )
             )
+            SettingsArea(title = stringResource(R.string.behavior),
+                selected = selected,
+                items = arrayOf(
+                    { _, onChange ->
+                        SettingsToggle(
+                            title = stringResource(R.string.auto_show_keyboard),
+                            onChange = onChange,
+                            state = remember { mutableStateOf(prefs.autoShowKeyboard) },
+                        ) { toggleKeyboardText() }
+                    },
+                    { _, onChange ->
+                        SettingsToggle(
+                            title = stringResource(R.string.auto_open_apps),
+                            onChange = onChange,
+                            state = remember { mutableStateOf(prefs.autoOpenApp) },
+                        ) { toggleAutoOpenApp() }
+                    },
+                    { _, onChange ->
+                        SettingsToggle(
+                            title = stringResource(R.string.extend_home_apps_area),
+                            onChange = onChange,
+                            state = remember { mutableStateOf(prefs.extendHomeAppsArea) }
+                        ) { prefs.extendHomeAppsArea = !prefs.extendHomeAppsArea }
+                    },
+                    { _, onChange ->
+                        SettingsToggle(
+                            title = stringResource(R.string.home_alignment_bottom),
+                            onChange = onChange,
+                            state = remember { mutableStateOf(prefs.homeAlignmentBottom) }
+                        ) { toggleHomeAppsBottom() }
+                    },
+                )
+            )
             SettingsArea(title = stringResource(R.string.homescreen),
                 selected = selected,
                 items = arrayOf(
@@ -163,7 +208,6 @@ class SettingsFragment : Fragment() {
                         SettingsNumberItem(
                             title = stringResource(R.string.apps_on_home_screen),
                             open = open,
-
                             onChange = onChange,
                             currentSelection = remember { mutableStateOf(prefs.homeAppsNum) },
                             min = 0,
@@ -175,7 +219,6 @@ class SettingsFragment : Fragment() {
                         SettingsToggle(
                             title = stringResource(R.string.show_time),
                             onChange = onChange,
-
                             state = remember { mutableStateOf(prefs.showTime) }
                         ) { toggleShowTime() }
                     },
@@ -183,7 +226,6 @@ class SettingsFragment : Fragment() {
                         SettingsToggle(
                             title = stringResource(R.string.show_date),
                             onChange = onChange,
-
                             state = remember { mutableStateOf(prefs.showDate) }
                         ) { toggleShowDate() }
                     },
@@ -191,7 +233,6 @@ class SettingsFragment : Fragment() {
                         SettingsToggle(
                             title = stringResource(R.string.lock_home_apps),
                             onChange = onChange,
-
                             state = remember { mutableStateOf(prefs.homeLocked) }
                         ) { prefs.homeLocked = !prefs.homeLocked }
                     }
@@ -205,7 +246,6 @@ class SettingsFragment : Fragment() {
                             title = stringResource(R.string.home_alignment),
                             open = open,
                             onChange = onChange,
-
                             currentSelection = remember { mutableStateOf(prefs.homeAlignment) },
                             values = arrayOf(Constants.Gravity.Left, Constants.Gravity.Center, Constants.Gravity.Right),
                             onSelect = { gravity -> setHomeAlignment(gravity) }
@@ -216,7 +256,6 @@ class SettingsFragment : Fragment() {
                             title = stringResource(R.string.clock_alignment),
                             open = open,
                             onChange = onChange,
-
                             currentSelection = remember { mutableStateOf(prefs.clockAlignment) },
                             values = arrayOf(Constants.Gravity.Left, Constants.Gravity.Center, Constants.Gravity.Right),
                             onSelect = { gravity -> setClockAlignment(gravity) }
@@ -227,10 +266,9 @@ class SettingsFragment : Fragment() {
                             title = stringResource(R.string.drawer_alignment),
                             open = open,
                             onChange = onChange,
-
                             currentSelection = remember { mutableStateOf(prefs.drawerAlignment) },
                             values = arrayOf(Constants.Gravity.Left, Constants.Gravity.Center, Constants.Gravity.Right),
-                            onSelect = { j -> viewModel?.updateDrawerAlignment(j) }
+                            onSelect = { j -> viewModel.updateDrawerAlignment(j) }
                         )
                     },
                 )
@@ -238,6 +276,26 @@ class SettingsFragment : Fragment() {
             SettingsArea(title = stringResource(R.string.gestures),
                 selected = selected,
                 items = arrayOf(
+                    { open, onChange ->
+                        SettingsGestureItem(
+                            title = stringResource(R.string.swipe_up_app),
+                            open = open,
+                            onChange = onChange,
+                            currentAction = prefs.swipeUpAction,
+                            onSelect = { j -> updateGesture(AppDrawerFlag.SetSwipeUp, j) },
+                            appLabel = prefs.appSwipeUp.appLabel,
+                        )
+                    },
+                    { open, onChange ->
+                        SettingsGestureItem(
+                            title = stringResource(R.string.swipe_down_app),
+                            open = open,
+                            onChange = onChange,
+                            currentAction = prefs.swipeDownAction,
+                            onSelect = { j -> updateGesture(AppDrawerFlag.SetSwipeDown, j) },
+                            appLabel = prefs.appSwipeDown.appLabel,
+                        )
+                    },
                     { open, onChange ->
                         SettingsGestureItem(
                             title = stringResource(R.string.swipe_left_app),
@@ -256,26 +314,6 @@ class SettingsFragment : Fragment() {
                             currentAction = prefs.swipeRightAction,
                             onSelect = { j -> updateGesture(AppDrawerFlag.SetSwipeRight, j) },
                             appLabel = prefs.appSwipeRight.appLabel.ifEmpty { "Phone" },
-                        )
-                    },
-                    { open, onChange ->
-                        SettingsGestureItem(
-                            title = stringResource(R.string.swipe_down_app),
-                            open = open,
-                            onChange = onChange,
-                            currentAction = prefs.swipeDownAction,
-                            onSelect = { j -> updateGesture(AppDrawerFlag.SetSwipeDown, j) },
-                            appLabel = prefs.appSwipeDown.appLabel,
-                        )
-                    },
-                    { open, onChange ->
-                        SettingsGestureItem(
-                            title = stringResource(R.string.swipe_up_app),
-                            open = open,
-                            onChange = onChange,
-                            currentAction = prefs.swipeUpAction,
-                            onSelect = { j -> updateGesture(AppDrawerFlag.SetSwipeUp, j) },
-                            appLabel = prefs.appSwipeUp.appLabel,
                         )
                     },
                     { open, onChange ->
@@ -310,44 +348,6 @@ class SettingsFragment : Fragment() {
                     }
                 )
             )
-            SettingsArea(title = stringResource(R.string.behavior),
-                selected = selected,
-                items = arrayOf(
-                    { _, onChange ->
-                        SettingsToggle(
-                            title = stringResource(R.string.auto_show_keyboard),
-                            onChange = onChange,
-
-                            state = remember { mutableStateOf(prefs.autoShowKeyboard) },
-                        ) { toggleKeyboardText() }
-                    },
-                    { _, onChange ->
-                        SettingsToggle(
-                            title = stringResource(R.string.auto_open_apps),
-                            onChange = onChange,
-
-                            state = remember { mutableStateOf(prefs.autoOpenApp) },
-                        ) { toggleAutoOpenApp() }
-                    },
-                    { _, onChange ->
-                        SettingsToggle(
-                            title = stringResource(R.string.home_alignment_bottom),
-                            onChange = onChange,
-
-                            state = remember { mutableStateOf(prefs.homeAlignmentBottom) }
-                        ) { toggleHomeAppsBottom() }
-                    },
-                    { _, onChange ->
-                        SettingsToggle(
-                            title = stringResource(R.string.extend_home_apps_area),
-                            onChange = onChange,
-
-                            state = remember { mutableStateOf(prefs.extendHomeAppsArea) }
-                        ) { prefs.extendHomeAppsArea = !prefs.extendHomeAppsArea }
-                    }
-                )
-            )
-            @Suppress("DEPRECATION")
             Text(
                 modifier = Modifier
                     .align(Alignment.End)
@@ -359,16 +359,14 @@ class SettingsFragment : Fragment() {
         }
     }
 
-    @Deprecated("Deprecated in Java")
     override fun onActivityCreated(savedInstanceState: Bundle?) {
-        @Suppress("DEPRECATION")
         super.onActivityCreated(savedInstanceState)
         prefs = Prefs(requireContext())
         viewModel = activity?.run {
-            ViewModelProvider(this)[MainViewModel::class.java]
+            ViewModelProvider(this).get(MainViewModel::class.java)
         } ?: throw Exception("Invalid Activity")
 
-        viewModel!!.ismlauncherDefault()
+        viewModel.ismlauncherDefault()
 
         deviceManager = context?.getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
         componentName = ComponentName(requireContext(), DeviceAdmin::class.java)
@@ -382,19 +380,19 @@ class SettingsFragment : Fragment() {
 
     private fun setHomeAlignment(gravity: Constants.Gravity) {
         prefs.homeAlignment = gravity
-        viewModel?.updateHomeAppsAlignment(gravity, prefs.homeAlignmentBottom)
+        viewModel.updateHomeAppsAlignment(gravity, prefs.homeAlignmentBottom)
     }
 
     private fun toggleHomeAppsBottom() {
         val onBottom  = !prefs.homeAlignmentBottom
 
         prefs.homeAlignmentBottom = onBottom
-        viewModel?.updateHomeAppsAlignment(prefs.homeAlignment, onBottom)
+        viewModel.updateHomeAppsAlignment(prefs.homeAlignment, onBottom)
     }
 
     private fun setClockAlignment(gravity: Constants.Gravity) {
         prefs.clockAlignment = gravity
-        viewModel?.updateClockAlignment(gravity)
+        viewModel.updateClockAlignment(gravity)
     }
 
     private fun toggleStatusBar() {
@@ -405,16 +403,16 @@ class SettingsFragment : Fragment() {
 
     private fun toggleShowDate() {
         prefs.showDate = !prefs.showDate
-        viewModel?.setShowDate(prefs.showDate)
+        viewModel.setShowDate(prefs.showDate)
     }
 
     private fun toggleShowTime() {
         prefs.showTime = !prefs.showTime
-        viewModel?.setShowTime(prefs.showTime)
+        viewModel.setShowTime(prefs.showTime)
     }
 
     private fun showHiddenApps() {
-        viewModel?.getHiddenApps()
+        viewModel.getHiddenApps()
         findNavController().navigate(
             R.id.action_settingsFragment_to_appListFragment,
             bundleOf("flag" to AppDrawerFlag.HiddenApps.toString())
@@ -429,7 +427,7 @@ class SettingsFragment : Fragment() {
 
     private fun updateHomeAppsNum(homeAppsNum: Int) {
         prefs.homeAppsNum = homeAppsNum
-        viewModel?.homeAppsCount?.value = homeAppsNum
+        viewModel.homeAppsCount.value = homeAppsNum
     }
 
     private fun toggleKeyboardText() {
@@ -441,25 +439,26 @@ class SettingsFragment : Fragment() {
     }
 
     private fun setTheme(appTheme: Constants.Theme) {
+        // if (AppCompatDelegate.getDefaultNightMode() == appTheme) return // TODO find out what this did
         prefs.appTheme = appTheme
         requireActivity().recreate()
     }
 
     private fun setLang(lang_int: Constants.Language) {
+
         prefs.language = lang_int
         requireActivity().recreate()
     }
     private fun setTextSize(size: Int) {
         prefs.textSize = size
-        requireActivity().recreate()
     }
 
     private fun updateGesture(flag: AppDrawerFlag, action: Action) {
-        when (flag){
+        when (flag) {
             AppDrawerFlag.SetSwipeLeft -> prefs.swipeLeftAction = action
             AppDrawerFlag.SetSwipeRight -> prefs.swipeRightAction = action
-            AppDrawerFlag.SetSwipeDown -> prefs.swipeDownAction = action
             AppDrawerFlag.SetSwipeUp -> prefs.swipeUpAction = action
+            AppDrawerFlag.SetSwipeDown -> prefs.swipeDownAction = action
             AppDrawerFlag.SetClickClock -> prefs.clickClockAction = action
             AppDrawerFlag.SetClickDate -> prefs.clickDateAction = action
             AppDrawerFlag.SetDoubleTap -> prefs.doubleTapAction = action
@@ -470,7 +469,7 @@ class SettingsFragment : Fragment() {
 
         when(action) {
             Action.OpenApp -> {
-                viewModel?.getAppList()
+                viewModel.getAppList()
                 findNavController().navigate(
                     R.id.action_settingsFragment_to_appListFragment,
                     bundleOf("flag" to flag.toString())

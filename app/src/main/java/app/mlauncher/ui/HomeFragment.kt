@@ -2,8 +2,10 @@ package app.mlauncher.ui
 
 import android.annotation.SuppressLint
 import android.app.admin.DevicePolicyManager
+import android.content.ComponentName
 import android.content.Context
 import android.content.Context.VIBRATOR_SERVICE
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.os.Vibrator
@@ -31,6 +33,7 @@ import app.mlauncher.helper.*
 import app.mlauncher.listener.OnSwipeTouchListener
 import app.mlauncher.listener.ViewSwipeTouchListener
 import kotlinx.coroutines.launch
+
 
 class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener {
 
@@ -192,6 +195,31 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         }
     }
 
+    @SuppressLint("WrongConstant", "PrivateApi")
+    private fun expandNotificationDrawer(context: Context) {
+        // Source: https://stackoverflow.com/a/51132142
+        try {
+            val statusBarService = context.getSystemService("statusbar")
+            val statusBarManager = Class.forName("android.app.StatusBarManager")
+            val method = statusBarManager.getMethod("expandNotificationsPanel")
+            method.invoke(statusBarService)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
+    @SuppressLint("WrongConstant", "PrivateApi")
+    private fun expandQuickSettings(context: Context) {
+        try {
+            val statusBarService = context.getSystemService("statusbar")
+            val statusBarManager = Class.forName("android.app.StatusBarManager")
+            val method = statusBarManager.getMethod("expandSettingsPanel")
+            method.invoke(statusBarService)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
     private fun openSwipeLeftApp() {
         if (prefs.appSwipeLeft.appPackage.isNotEmpty())
             launchApp(prefs.appSwipeLeft)
@@ -238,11 +266,11 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     @SuppressLint("NewApi")
     private fun handleOtherAction(action: Action) {
         when(action) {
-            Action.ShowNotification -> initActionService(requireContext())?.openNotifications()
+            Action.ShowNotification -> expandNotificationDrawer(requireContext())
             Action.LockScreen -> lockPhone()
             Action.ShowAppList -> showAppList(AppDrawerFlag.LaunchApp)
             Action.OpenApp -> {} // this should be handled in the respective onSwipe[Down,Right,Left] functions
-            Action.OpenQuickSettings -> initActionService(requireContext())?.openQuickSettings()
+            Action.OpenQuickSettings -> expandQuickSettings(requireContext())
             Action.ShowRecents -> initActionService(requireContext())?.showRecents()
             Action.Disabled -> {}
         }
