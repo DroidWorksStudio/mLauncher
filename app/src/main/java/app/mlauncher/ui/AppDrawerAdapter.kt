@@ -47,20 +47,20 @@ class AppDrawerAdapter(
     @Suppress("DEPRECATION")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         if (appFilteredList.size == 0) return
-        val appModel = appFilteredList[holder.adapterPosition]
+        val appModel = appFilteredList[holder.absoluteAdapterPosition]
         holder.bind(flag, gravity, appModel, clickListener, appInfoListener)
 
         holder.appHideButton.setOnClickListener {
-            appFilteredList.removeAt(holder.adapterPosition)
+            appFilteredList.removeAt(holder.absoluteAdapterPosition)
             appsList.remove(appModel)
-            notifyItemRemoved(holder.adapterPosition)
+            notifyItemRemoved(holder.absoluteAdapterPosition)
             appHideListener(flag, appModel)
         }
 
         holder.appRenameButton.setOnClickListener {
             val name = holder.appRenameEdit.text.toString().trim()
             appModel.appAlias = name
-            notifyItemChanged(holder.adapterPosition)
+            notifyItemChanged(holder.absoluteAdapterPosition)
             Log.d("rename", "$appModel")
             appRenameListener(appModel.appPackage, appModel.appAlias)
         }
