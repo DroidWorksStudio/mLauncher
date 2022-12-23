@@ -2,15 +2,11 @@
 	<string name="app_name">mLauncher</string>
 	<string name="app">Aplikacioni</string>
 	<string name="set_as_default_launcher">Cakto si lëshues të paracaktuar</string>
-	<string name="app_text_color">Ngjyra e tekstit</string>
-	<string name="double_tap_to_lock_screen">Trokit dy herë për ta kyçur</string>
+    <string name="double_tap_to_lock_screen">Trokit dy herë për ta kyçur</string>
 	<string name="experimental_">(eksperimentale)</string>
 	<string name="admin_permission_message">mlauncher premton të përdorë me përgjegjësi lejen e ekranit të kyçjes.</string>
-	<string name="about">Rreth</string>
-	<string name="off">Joaktiv</string>
+    <string name="off">Joaktiv</string>
 	<string name="on">Aktiv</string>
-	<string name="black">E zezë</string>
-	<string name="white">E bardha</string>
 	<string name="change_default_launcher">Ndrysho lëshuesin e paracaktuar</string>
 	<string name="long_press_for_settings">Shtypni gjatë kudo për cilësimet</string>
 	<string name="swipe_up_for_apps">Rrëshqitni lart për të gjitha aplikacionet</string>
@@ -27,16 +23,6 @@
 	<string name="swipe_down_app">Rrëshqitni poshtë</string>
 	<string name="clock_click_app">Klikimi i orës</string>
 	<string name="date_click_app">Klikoni në datë</string>
-	<string name="_0" translatable="false">0</string>
-	<string name="_1" translatable="false">1</string>
-	<string name="_2" translatable="false">2</string>
-	<string name="_3" translatable="false">3</string>
-	<string name="_4" translatable="false">4</string>
-	<string name="_5" translatable="false">5</string>
-	<string name="_6" translatable="false">6</string>
-	<string name="_7" translatable="false">7</string>
-	<string name="_8" translatable="false">8</string>
-	<string name="commit">Angazhohen</string>
 	<string name="save">Ruaj</string>
 	<string name="app_drawer_tips">Këshillë: Rrëshqitni poshtë për ta hequr. Lëvizni për të fshehur tastierën.</string>
 	<string name="okay">Mirë</string>

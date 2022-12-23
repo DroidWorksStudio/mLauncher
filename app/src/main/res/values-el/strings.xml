@@ -2,15 +2,11 @@
     <string name="app_name">mLauncher</string>
     <string name="app">App</string>
     <string name="set_as_default_launcher">Ορισμός ως προεπιλεγμένη εκκίνηση</string>
-    <string name="app_text_color">Χρώμα κειμένου</string>
     <string name="double_tap_to_lock_screen">Πατήστε δύο φορές για κλείδωμα</string>
     <string name="experimental_">(πειραματικός)</string>
     <string name="admin_permission_message">Το mLauncher υπόσχεται να χρησιμοποιεί υπεύθυνα την άδεια κλειδώματος οθόνης.</string>
-    <string name="about">Σχετικά με</string>
     <string name="off">Μακριά από</string>
     <string name="on">Επί</string>
-    <string name="black">Μαύρος</string>
-    <string name="white">άσπρο</string>
     <string name="change_default_launcher">Αλλαγή προεπιλεγμένης εκκίνησης</string>
     <string name="long_press_for_settings">Πατήστε παρατεταμένα οπουδήποτε για ρυθμίσεις</string>
     <string name="swipe_up_for_apps">Σύρετε προς τα πάνω για όλες τις εφαρμογές</string>
@@ -29,16 +25,6 @@
     <string name="clock_click_app">Κάντε κλικ στο Ρολόι</string>
     <string name="date_click_app">Κάντε κλικ στην Ημερομηνία</string>
     <string name="double_tap">Διπλό χτύπημα</string>
-    <string name="_0" translatable="false">0</string>
-    <string name="_1" translatable="false">1</string>
-    <string name="_2" translatable="false">2</string>
-    <string name="_3" translatable="false">3</string>
-    <string name="_4" translatable="false">4</string>
-    <string name="_5" translatable="false">5</string>
-    <string name="_6" translatable="false">6</string>
-    <string name="_7" translatable="false">7</string>
-    <string name="_8" translatable="false">8</string>
-    <string name="commit">Διαπράττω</string>
     <string name="save">Αποθηκεύσετε</string>
     <string name="app_drawer_tips">Συμβουλή: Σύρετε προς τα κάτω για παράβλεψη. Κάντε κύλιση για απόκρυψη πληκτρολογίου.</string>
     <string name="okay">εντάξει</string>

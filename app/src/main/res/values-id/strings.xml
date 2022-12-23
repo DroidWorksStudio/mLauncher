@@ -2,15 +2,11 @@
     <string name="app_name">peluncur</string>
     <string name="app">Aplikasi</string>
     <string name="set_as_default_launcher">Tetapkan sebagai peluncur default</string>
-    <string name="app_text_color">Warna teks</string>
     <string name="double_tap_to_lock_screen">Ketuk dua kali untuk mengunci</string>
     <string name="experimental_">(eksperimental)</string>
     <string name="admin_permission_message">mLauncher berjanji untuk menggunakan izin layar kunci secara bertanggung jawab.</string>
-    <string name="about">Tentang</string>
     <string name="off">Mati</string>
     <string name="on">Pada</string>
-    <string name="black">Hitam</string>
-    <string name="white">Putih</string>
     <string name="change_default_launcher">Ubah peluncur default</string>
     <string name="long_press_for_settings">Tekan lama di mana saja untuk pengaturan</string>
     <string name="swipe_up_for_apps">Geser ke atas untuk semua aplikasi</string>
@@ -29,16 +25,6 @@
     <string name="clock_click_app">Klik Jam</string>
     <string name="date_click_app">Klik Tanggal</string>
     <string name="double_tap">Ketuk Dua Kali</string>
-    <string name="_0" translatable="false">0</string>
-    <string name="_1" translatable="false">1</string>
-    <string name="_2" translatable="false">2</string>
-    <string name="_3" translatable="false">3</string>
-    <string name="_4" translatable="false">4</string>
-    <string name="_5" translatable="false">5</string>
-    <string name="_6" translatable="false">6</string>
-    <string name="_7" translatable="false">7</string>
-    <string name="_8" translatable="false">8</string>
-    <string name="commit">Melakukan</string>
     <string name="save">Menyimpan</string>
     <string name="app_drawer_tips">Kiat: Gesek ke bawah untuk menutup. Gulir untuk menyembunyikan keyboard.</string>
     <string name="okay">Oke</string>

@@ -2,15 +2,11 @@
     <string name="app_name">mLauncher</string>
     <string name="app">אפליקציה</string>
     <string name="set_as_default_launcher">הגדר כמפעיל ברירת מחדל</string>
-    <string name="app_text_color">צבע טקסט</string>
     <string name="double_tap_to_lock_screen">הקש פעמיים כדי לנעול</string>
     <string name="experimental_">(נִסיוֹנִי)</string>
     <string name="admin_permission_message">mLauncher מבטיח להשתמש בהרשאת מסך הנעילה באחריות.</string>
-    <string name="about">על אודות</string>
     <string name="off">כבוי</string>
     <string name="on">עַל</string>
-    <string name="black">שָׁחוֹר</string>
-    <string name="white">לבן</string>
     <string name="change_default_launcher">שנה את מפעיל ברירת המחדל</string>
     <string name="long_press_for_settings">לחץ לחיצה ארוכה בכל מקום להגדרות</string>
     <string name="swipe_up_for_apps">החלק למעלה עבור כל האפליקציות</string>
@@ -29,16 +25,6 @@
     <string name="clock_click_app">לחץ על שעון</string>
     <string name="date_click_app">לחץ על תאריך</string>
     <string name="double_tap">הקשה כפולה</string>
-    <string name="_0" translatable="false">0</string>
-    <string name="_1" translatable="false">1</string>
-    <string name="_2" translatable="false">2</string>
-    <string name="_3" translatable="false">3</string>
-    <string name="_4" translatable="false">4</string>
-    <string name="_5" translatable="false">5</string>
-    <string name="_6" translatable="false">6</string>
-    <string name="_7" translatable="false">7</string>
-    <string name="_8" translatable="false">8</string>
-    <string name="commit">לְבַצֵעַ</string>
     <string name="save">להציל</string>
     <string name="app_drawer_tips">טיפ: החלק מטה כדי לסגור. גלול כדי להסתיר את המקלדת.</string>
     <string name="okay">בסדר</string>

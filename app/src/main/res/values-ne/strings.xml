@@ -2,15 +2,11 @@
     <string name="app_name">mLauncher</string>
     <string name="app">एप</string>
     <string name="set_as_default_launcher">पूर्वनिर्धारित लन्चरको रूपमा सेट गर्नुहोस्</string>
-    <string name="app_text_color">पाठ रङ</string>
     <string name="double_tap_to_lock_screen">लक गर्न डबल ट्याप गर्नुहोस्</string>
     <string name="experimental_">(प्रयोगात्मक)</string>
     <string name="admin_permission_message">mLauncher ले लक स्क्रिन अनुमति जिम्मेवारीपूर्वक प्रयोग गर्ने वाचा गर्दछ।</string>
-    <string name="about">बारे</string>
     <string name="off">बन्द</string>
     <string name="on">अन</string>
-    <string name="black">कालो</string>
-    <string name="white">सेतो</string>
     <string name="change_default_launcher">पूर्वनिर्धारित लन्चर परिवर्तन गर्नुहोस्</string>
     <string name="long_press_for_settings">सेटिङहरूका लागि कहिँ पनि लामो प्रेस गर्नुहोस्</string>
     <string name="swipe_up_for_apps">सबै एपहरूको लागि माथि स्वाइप गर्नुहोस्</string>
@@ -29,16 +25,6 @@
     <string name="clock_click_app">घडी मा क्लिक गर्नुहोस्</string>
     <string name="date_click_app">मिति मा क्लिक गर्नुहोस्</string>
     <string name="double_tap">डबल ट्याप गर्नुहोस्</string>
-    <string name="_0" translatable="false">0</string>
-    <string name="_1" translatable="false">1</string>
-    <string name="_2" translatable="false">2</string>
-    <string name="_3" translatable="false">3</string>
-    <string name="_4" translatable="false">4</string>
-    <string name="_5" translatable="false">5</string>
-    <string name="_6" translatable="false">6</string>
-    <string name="_7" translatable="false">7</string>
-    <string name="_8" translatable="false">8</string>
-    <string name="commit">प्रतिबद्ध</string>
     <string name="save">बचत गर्नुहोस्</string>
     <string name="app_drawer_tips">सुझाव: खारेज गर्न तल स्वाइप गर्नुहोस्। किबोर्ड लुकाउन स्क्रोल गर्नुहोस्।</string>
     <string name="okay">ल</string>

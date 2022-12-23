@@ -2,15 +2,11 @@
     <string name="app_name">mLauncher</string>
     <string name="app">برنامه</string>
     <string name="set_as_default_launcher">به عنوان راه‌انداز پیش‌فرض تنظیم کنید</string>
-    <string name="app_text_color">رنگ متن</string>
     <string name="double_tap_to_lock_screen">برای قفل کردن، دو ضربه سریع بزنید</string>
     <string name="experimental_">(تجربی)</string>
     <string name="admin_permission_message">mLauncher قول می دهد از مجوز قفل صفحه به طور مسئولانه استفاده کند.</string>
-    <string name="about">در باره</string>
     <string name="off">خاموش</string>
     <string name="on">بر</string>
-    <string name="black">مشکی</string>
-    <string name="white">سفید</string>
     <string name="change_default_launcher">لانچر پیش فرض را تغییر دهید</string>
     <string name="long_press_for_settings">برای تنظیمات، هر جایی را به مدت طولانی فشار دهید</string>
     <string name="swipe_up_for_apps">برای همه برنامه ها انگشت خود را به سمت بالا بکشید</string>
@@ -29,16 +25,6 @@
     <string name="clock_click_app">روی ساعت کلیک کنید</string>
     <string name="date_click_app">روی تاریخ کلیک کنید</string>
     <string name="double_tap">دو تا ضربه ی آهسته بزن</string>
-    <string name="_0" translatable="false">0</string>
-    <string name="_1" translatable="false">1</string>
-    <string name="_2" translatable="false">2</string>
-    <string name="_3" translatable="false">3</string>
-    <string name="_4" translatable="false">4</string>
-    <string name="_5" translatable="false">5</string>
-    <string name="_6" translatable="false">6</string>
-    <string name="_7" translatable="false">7</string>
-    <string name="_8" translatable="false">8</string>
-    <string name="commit">مرتکب شدن</string>
     <string name="save">صرفه جویی</string>
     <string name="app_drawer_tips">نکته: برای رد کردن، انگشت خود را به پایین بکشید. برای مخفی کردن صفحه کلید، پیمایش کنید.</string>
     <string name="okay">باشه</string>

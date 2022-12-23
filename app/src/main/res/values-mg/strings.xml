@@ -2,15 +2,11 @@
     <string name="app_name">mLauncher</string>
     <string name="app">App</string>
     <string name="set_as_default_launcher">Apetraho ho mpandefa default</string>
-    <string name="app_text_color">Loko soratra</string>
     <string name="double_tap_to_lock_screen">Tsindrio indroa hanidy</string>
     <string name="experimental_">(fanandramana)</string>
     <string name="admin_permission_message">Mampanantena ny mLauncher fa hampiasa ny fahazoan-dàlana hidin-trano amin\'ny andraikitra.</string>
-    <string name="about">About</string>
     <string name="off">eny</string>
     <string name="on">On</string>
-    <string name="black">Mainty</string>
-    <string name="white">fotsy</string>
     <string name="change_default_launcher">Ovay ny fandefasana default</string>
     <string name="long_press_for_settings">Tsindrio lava na aiza na aiza ho an\'ny fanovana</string>
     <string name="swipe_up_for_apps">Swipe miakatra ho an\'ny fampiharana rehetra</string>
@@ -29,16 +25,6 @@
     <string name="clock_click_app">Tsindrio ny Clock</string>
     <string name="date_click_app">Tsindrio ny Date</string>
     <string name="double_tap">Peho indroa</string>
-    <string name="_0" translatable="false">0</string>
-    <string name="_1" translatable="false">1</string>
-    <string name="_2" translatable="false">2</string>
-    <string name="_3" translatable="false">3</string>
-    <string name="_4" translatable="false">4</string>
-    <string name="_5" translatable="false">5</string>
-    <string name="_6" translatable="false">6</string>
-    <string name="_7" translatable="false">7</string>
-    <string name="_8" translatable="false">8</string>
-    <string name="commit">Ankino</string>
     <string name="save">afa-tsy</string>
     <string name="app_drawer_tips">Soso-kevitra: Swipe midina hanilika. Horona hanafina kitendry.</string>
     <string name="okay">Okay</string>
