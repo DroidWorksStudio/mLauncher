@@ -42,7 +42,7 @@ import app.mlauncher.ui.compose.SettingsComposable.SettingsGestureItem
 import app.mlauncher.ui.compose.SettingsComposable.SettingsNumberItem
 import app.mlauncher.ui.compose.SettingsComposable.SettingsToggle
 import app.mlauncher.ui.compose.SettingsComposable.SettingsTopView
-import app.mlauncher.ui.compose.SettingsComposable.SimpleTextButton
+import app.mlauncher.ui.compose.SettingsComposable.SettingsTextButton
 
 class SettingsFragment : Fragment() {
 
@@ -100,10 +100,10 @@ class SettingsFragment : Fragment() {
                 stringResource(R.string.app_name),
                 onClick = { openAppInfo(requireContext(), android.os.Process.myUserHandle(), BuildConfig.APPLICATION_ID) },
             ) {
-                SimpleTextButton(stringResource(R.string.hidden_apps) ) {
+                SettingsTextButton(stringResource(R.string.hidden_apps) ) {
                     showHiddenApps()
                 }
-                SimpleTextButton(stringResource(changeLauncherText) ) {
+                SettingsTextButton(stringResource(changeLauncherText) ) {
                     resetDefaultLauncher(requireContext())
                 }
             }
