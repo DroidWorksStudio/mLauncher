@@ -31,27 +31,25 @@ import androidx.constraintlayout.compose.Dimension
 import app.mlauncher.R
 import app.mlauncher.data.Constants
 import app.mlauncher.data.EnumOption
-import app.mlauncher.style.CORNER_RADIUS
+import app.mlauncher.style.*
 
 object SettingsComposable {
 
     // Most basic settings background tile
     @Composable
-    fun SettingsTile(content: @Composable () -> Unit) {
-        Column(
-            modifier = Modifier
-                .padding(6.dp, 6.dp, 6.dp, 0.dp)
-                .background(SettingsTheme.color.settings, SettingsTheme.shapes.settings)
-                .border(
-                    0.5.dp,
-                    SettingsTheme.color.border,
-                    RoundedCornerShape(CORNER_RADIUS),
-                )
-                .padding(20.dp)
-                .fillMaxWidth()
-        ) {
-            content()
-        }
+    fun SettingsTile(content: @Composable () -> Unit) = Column(
+        modifier = Modifier
+            .padding(6.dp, 6.dp, 6.dp, 0.dp)
+            .background(SettingsTheme.color.settings, SettingsTheme.shapes.settings)
+            .border(
+                BORDER_SIZE,
+                SettingsTheme.color.border,
+                RoundedCornerShape(CORNER_RADIUS),
+            )
+            .padding(SETTINGS_PADDING)
+            .fillMaxWidth()
+    ) {
+        content()
     }
 
     @Composable
@@ -394,7 +392,7 @@ object SettingsComposable {
     }
 
     @Composable
-    fun SimpleTextButton(title: String, fontSize: TextUnit = TextUnit.Unspecified, onClick: () -> Unit) {
+    fun SettingsTextButton(title: String, fontSize: TextUnit = TextUnit.Unspecified, onClick: () -> Unit) {
         TextButton(
             onClick = onClick,
         ){
