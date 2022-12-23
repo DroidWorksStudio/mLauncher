@@ -1,3 +1,5 @@
+package app.mlauncher.style
+
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.shape.ZeroCornerSize
 import androidx.compose.material.MaterialTheme
@@ -13,10 +15,6 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import app.mlauncher.R
-import app.mlauncher.style.CORNER_RADIUS
-import app.mlauncher.style.textDark
-import app.mlauncher.style.textGray
-import app.mlauncher.style.textLight
 
 @Immutable
 data class ReplacementTypography(
@@ -36,6 +34,7 @@ data class ReplacementShapes(
 data class ReplacementColor(
     val settings: Color,
     val selector: Color,
+    val border: Color,
 )
 
 val LocalReplacementTypography = staticCompositionLocalOf {
@@ -56,6 +55,7 @@ val LocalReplacementColor = staticCompositionLocalOf {
     ReplacementColor(
         settings = Color.Unspecified,
         selector = Color.Unspecified,
+        border = Color.Unspecified,
     )
 }
 
@@ -95,6 +95,7 @@ fun SettingsTheme(
     val replacementColor = ReplacementColor(
         settings = colorResource( if (isDark) R.color.blackTrans50 else R.color.blackInverseTrans50 ),
         selector = colorResource( if (isDark) R.color.blackTrans80 else R.color.blackInverseTrans80 ),
+        border = colorResource( if (isDark) R.color.blackInverseTrans50 else R.color.blackTrans50 ),
     )
     CompositionLocalProvider(
         LocalReplacementTypography provides replacementTypography,

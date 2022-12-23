@@ -85,7 +85,7 @@ class AppDrawerFragment : Fragment() {
             appClickListener(viewModel, flag, n),
             appInfoListener(),
             appShowHideListener(),
-            appRenameListener()
+            this.appRenameListener()
         )
 
         val searchTextView = binding.search.findViewById<TextView>(R.id.search_src_text)
@@ -159,8 +159,9 @@ class AppDrawerFragment : Fragment() {
         val searchTextView = binding.search.findViewById<TextView>(R.id.search_src_text)
         searchTextView.requestFocus()
         val imm = context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-        searchTextView.postDelayed(Runnable {
+        searchTextView.postDelayed({
             searchTextView.requestFocus()
+            @Suppress("DEPRECATION")
             imm.showSoftInput(searchTextView, InputMethodManager.SHOW_FORCED)
         }, 100)
     }

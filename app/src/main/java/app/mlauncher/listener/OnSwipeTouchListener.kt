@@ -1,5 +1,6 @@
 package app.mlauncher.listener
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.view.GestureDetector
 import android.view.GestureDetector.SimpleOnGestureListener
@@ -21,6 +22,7 @@ internal open class OnSwipeTouchListener(c: Context?) : OnTouchListener {
     private var doubleTapOn = false
     private val gestureDetector: GestureDetector
 
+    @SuppressLint("ClickableViewAccessibility")
     override fun onTouch(view: View, motionEvent: MotionEvent): Boolean {
         if (motionEvent.action == MotionEvent.ACTION_UP)
             longPressOn = false

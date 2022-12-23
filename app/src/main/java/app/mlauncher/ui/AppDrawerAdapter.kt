@@ -1,9 +1,11 @@
 package app.mlauncher.ui
 
+import android.annotation.SuppressLint
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
 import android.view.Gravity
+import android.view.Gravity.LEFT
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -42,6 +44,7 @@ class AppDrawerAdapter(
         return ViewHolder(binding)
     }
 
+    @Suppress("DEPRECATION")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         if (appFilteredList.size == 0) return
         val appModel = appFilteredList[holder.adapterPosition]
@@ -90,6 +93,7 @@ class AppDrawerAdapter(
                 return filterResults
             }
 
+            @SuppressLint("NotifyDataSetChanged")
             @Suppress("UNCHECKED_CAST")
             override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
                 appFilteredList = results?.values as MutableList<AppModel>
@@ -119,6 +123,7 @@ class AppDrawerAdapter(
                     .contains(searchChars, true))
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     fun setAppList(appsList: MutableList<AppModel>) {
         this.appsList = appsList
         this.appFilteredList = appsList
@@ -139,6 +144,7 @@ class AppDrawerAdapter(
         private val appTitleFrame: FrameLayout = itemView.appTitleFrame
         private val appInfo: ImageView = itemView.appInfo
 
+        @SuppressLint("RtlHardcoded")
         fun bind(
             flag: AppDrawerFlag,
             appLabelGravity: Int,
@@ -184,7 +190,7 @@ class AppDrawerAdapter(
                 appTitle.text = appName
 
                 // set current name as default text in EditText
-                appRenameEdit.text = Editable.Factory.getInstance().newEditable(appName);
+                appRenameEdit.text = Editable.Factory.getInstance().newEditable(appName)
 
                 // set text gravity
                 val params = appTitle.layoutParams as FrameLayout.LayoutParams
@@ -197,15 +203,15 @@ class AppDrawerAdapter(
                     val icon = AppCompatResources.getDrawable(context, R.drawable.work_profile)
                     val prefs = Prefs(context)
                     val px = dp2px(resources, prefs.textSize)
-                    icon?.setBounds(0, 0, px, px);
-                    if (appLabelGravity == Gravity.LEFT) {
-                        appTitle.setCompoundDrawables(null, null, icon, null);
+                    icon?.setBounds(0, 0, px, px)
+                    if (appLabelGravity == LEFT) {
+                        appTitle.setCompoundDrawables(null, null, icon, null)
                     } else {
-                        appTitle.setCompoundDrawables(icon, null, null, null);
+                        appTitle.setCompoundDrawables(icon, null, null, null)
                     }
                     appTitle.compoundDrawablePadding = 20
                 } else {
-                    appTitle.setCompoundDrawables(null, null, null, null);
+                    appTitle.setCompoundDrawables(null, null, null, null)
                 }
 
                 appTitleFrame.setOnClickListener { listener(appModel) }

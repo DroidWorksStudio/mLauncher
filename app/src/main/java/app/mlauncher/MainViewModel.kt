@@ -4,7 +4,6 @@ import android.app.Application
 import android.content.ComponentName
 import android.content.Context
 import android.content.pm.LauncherApps
-import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
@@ -25,7 +24,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     val appList = MutableLiveData<List<AppModel>?>()
     val hiddenApps = MutableLiveData<List<AppModel>?>()
-    val ismlauncherDefault = MutableLiveData<Boolean>()
+    private val launcherDefault = MutableLiveData<Boolean>()
     val launcherResetFailed = MutableLiveData<Boolean>()
 
     val showTime = MutableLiveData(prefs.showTime)
@@ -71,8 +70,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         val launcher = appContext.getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps
         val activityInfo = launcher.getActivityList(packageName, userHandle)
 
-        // TODO: Handle multiple launch activities in an app. This is NOT the way.
-        val component = when (activityInfo.size) {
+         val component = when (activityInfo.size) {
             0 -> {
                 showToastShort(appContext, "App not found")
                 return
@@ -111,7 +109,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     fun ismlauncherDefault() {
-        ismlauncherDefault.value = ismlauncherDefault(appContext)
+        launcherDefault.value = ismlauncherDefault(appContext)
     }
 
     fun resetDefaultLauncherApp(context: Context) {
