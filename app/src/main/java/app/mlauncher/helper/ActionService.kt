@@ -42,13 +42,10 @@ class ActionService : AccessibilityService() {
     override fun onInterrupt() { }
 
     companion object {
-        private var instance: WeakReference<ActionService>
-            get() = WeakReference(null)
-            set(value) = TODO()
+        private var instance: WeakReference<ActionService> = WeakReference(null)
 
         fun instance(): ActionService? {
             return instance.get()
         }
-
     }
 }

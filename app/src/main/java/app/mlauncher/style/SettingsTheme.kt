@@ -93,9 +93,9 @@ fun SettingsTheme(
         settings = RoundedCornerShape(CORNER_RADIUS),
     )
     val replacementColor = ReplacementColor(
-        settings = colorResource( if (isDark) R.color.blackTrans50 else R.color.blackInverseTrans50 ),
+        settings = colorResource( if (isDark) R.color.blackTrans80 else R.color.blackInverseTrans80 ),
         selector = colorResource( if (isDark) R.color.blackTrans80 else R.color.blackInverseTrans80 ),
-        border = colorResource( if (isDark) R.color.blackInverseTrans50 else R.color.blackTrans50 ),
+        border = colorResource( if (isDark) R.color.blackInverseTrans25 else R.color.whiteInverseTrans25 ),
     )
     CompositionLocalProvider(
         LocalReplacementTypography provides replacementTypography,
