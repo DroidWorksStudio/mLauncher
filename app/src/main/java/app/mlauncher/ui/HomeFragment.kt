@@ -2,10 +2,8 @@ package app.mlauncher.ui
 
 import android.annotation.SuppressLint
 import android.app.admin.DevicePolicyManager
-import android.content.ComponentName
 import android.content.Context
 import android.content.Context.VIBRATOR_SERVICE
-import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.os.Vibrator
@@ -88,13 +86,11 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         val locale = prefs.language.locale()
         val best12 = getBestDateTimePattern(locale, "hhmma")
         val best24 = getBestDateTimePattern(locale, "HHmm")
-        Log.d("locale", "$locale, $best12, $best24")
         binding.clock.format12Hour = best12
         binding.clock.format24Hour = best24
 
         val best12Date = getBestDateTimePattern(locale, "eeeddMMM")
         val best24Date = getBestDateTimePattern(locale,"eeeddMMM")
-        Log.d("locale", "$locale, $best12Date, $best24Date")
         binding.date.format12Hour = best12Date
         binding.date.format24Hour = best24Date
 
