@@ -90,6 +90,7 @@
 
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>
+    <string name="road_map">Roadmap</string>
     <string name="drawer_list_empty_hint">No apps found</string>
     <string name="long_press_for_settings">Long press anywhere for settings</string>
     <string name="swipe_up_for_apps">Swipe up for all apps</string>
