@@ -34,7 +34,9 @@ import androidx.constraintlayout.compose.Dimension
 import app.mlauncher.R
 import app.mlauncher.data.Constants
 import app.mlauncher.data.EnumOption
+import app.mlauncher.style.BORDER_SIZE
 import app.mlauncher.style.CORNER_RADIUS
+import app.mlauncher.style.SETTINGS_PADDING
 
 object SettingsComposable {
 
@@ -43,14 +45,14 @@ object SettingsComposable {
     fun SettingsTile(content: @Composable () -> Unit) {
         Column(
             modifier = Modifier
-                .padding(12.dp, 12.dp, 12.dp, 0.dp)
+                .padding(6.dp, 6.dp, 6.dp, 0.dp)
                 .background(SettingsTheme.color.settings, SettingsTheme.shapes.settings)
                 .border(
-                    0.5.dp,
-                    colorResource(R.color.blackInverseTrans50),
+                    BORDER_SIZE,
+                    SettingsTheme.color.border,
                     RoundedCornerShape(CORNER_RADIUS),
                 )
-                .padding(20.dp)
+                .padding(SETTINGS_PADDING)
                 .fillMaxWidth()
         ) {
             content()
