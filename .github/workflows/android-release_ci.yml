@@ -8,22 +8,26 @@ on:
 
 jobs:
   build:
-    name: Build the project
+    name: Build, Sign & Release
     runs-on: ubuntu-latest
     steps:
       - name: Checkout project
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+
       - name: set up JDK 11
         uses: actions/setup-java@v3
         with:
           java-version: '11'
           distribution: 'temurin'
           cache: gradle
+
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
-      - name: Build with Gradle
-        run: ./gradlew build
-      - name: Build Signed APK
+
+      - name: Build
+        run: ./gradlew clean && ./gradlew assembleRelease
+
+      - name: Sign APK
         uses: r0adkll/sign-android-release@v1
         # ID used to access action output
         id: sign_app
@@ -36,6 +40,7 @@ jobs:
         env:
           # override default build-tools version (29.0.3) -- optional
           BUILD_TOOLS_VERSION: "30.0.2"
+
       - name: Release to GitHub
         uses: svenstaro/upload-release-action@v2
         with:
