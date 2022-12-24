@@ -168,6 +168,7 @@ object SettingsComposable {
     @Composable
     fun SettingsGestureItem(
         title: String,
+        fontSize: TextUnit = TextUnit.Unspecified,
         open: MutableState<Boolean>,
         onChange: (Boolean) -> Unit,
         currentAction: Constants.Action,
@@ -178,6 +179,7 @@ object SettingsComposable {
             open = open,
             onChange = onChange,
             title = title,
+            fontSize = fontSize,
             currentSelection = remember { mutableStateOf(currentAction) },
             currentSelectionName = if (currentAction == Constants.Action.OpenApp) stringResource(R.string.open) + " $appLabel" else currentAction.string(),
             values = Constants.Action.values(),
