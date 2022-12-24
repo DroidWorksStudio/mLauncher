@@ -17,10 +17,13 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Alignment.Companion.CenterStart
+import androidx.compose.ui.Alignment.Companion.End
+import androidx.compose.ui.Alignment.Companion.Start
 import androidx.compose.ui.Alignment.Companion.TopEnd
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.onFocusEvent
 import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.Dp
@@ -31,25 +34,27 @@ import androidx.constraintlayout.compose.Dimension
 import app.mlauncher.R
 import app.mlauncher.data.Constants
 import app.mlauncher.data.EnumOption
-import app.mlauncher.style.*
+import app.mlauncher.style.CORNER_RADIUS
 
 object SettingsComposable {
 
     // Most basic settings background tile
     @Composable
-    fun SettingsTile(content: @Composable () -> Unit) = Column(
-        modifier = Modifier
-            .padding(6.dp, 6.dp, 6.dp, 0.dp)
-            .background(SettingsTheme.color.settings, SettingsTheme.shapes.settings)
-            .border(
-                BORDER_SIZE,
-                SettingsTheme.color.border,
-                RoundedCornerShape(CORNER_RADIUS),
-            )
-            .padding(SETTINGS_PADDING)
-            .fillMaxWidth()
-    ) {
-        content()
+    fun SettingsTile(content: @Composable () -> Unit) {
+        Column(
+            modifier = Modifier
+                .padding(12.dp, 12.dp, 12.dp, 0.dp)
+                .background(SettingsTheme.color.settings, SettingsTheme.shapes.settings)
+                .border(
+                    0.5.dp,
+                    colorResource(R.color.blackInverseTrans50),
+                    RoundedCornerShape(CORNER_RADIUS),
+                )
+                .padding(20.dp)
+                .fillMaxWidth()
+        ) {
+            content()
+        }
     }
 
     @Composable
@@ -104,17 +109,17 @@ object SettingsComposable {
     @Composable
     fun SettingsToggle(
         title: String,
-        state: MutableState<Boolean?>,
+        state: MutableState<Boolean>,
         onChange: (Boolean) -> Unit,
         fontSize: TextUnit = TextUnit.Unspecified,
         onToggle: () -> Unit
     ) {
-        val buttonText = if (state.value == true) stringResource(R.string.on) else stringResource(R.string.off)
-        SettingsRow(
+        val buttonText = if (state.value) stringResource(R.string.on) else stringResource(R.string.off)
+        SettingsItem(
             title = title,
             onClick = {
                 onChange(false)
-                state.value = !state.value!!
+                state.value = !state.value
                 onToggle()
             },
             fontSize = fontSize,
@@ -134,35 +139,50 @@ object SettingsComposable {
         fontSize: TextUnit = TextUnit.Unspecified,
         onSelect: (T) -> Unit,
     ) {
-        if (open.value) {
-            Box(
-                modifier = Modifier
-                    .pointerInput(Unit) {
-                        detectTapGestures {
-                            onChange(false)
+
+        Column {
+            Text(
+                title,
+                style = SettingsTheme.typography.item,
+                fontSize = fontSize,
+                modifier = Modifier.align(Start)
+            )
+
+            if (open.value) {
+                Box(
+                    modifier = Modifier
+                        .pointerInput(Unit) {
+                            detectTapGestures {
+                                onChange(false)
+                            }
                         }
-                    }
-                    .onFocusEvent {
-                        if (it.isFocused) {
-                            onChange(false)
+                        .onFocusEvent {
+                            if (it.isFocused) {
+                                onChange(false)
+                            }
                         }
+                ) {
+                    SettingsSelector(values, fontSize = fontSize) { i ->
+                        onChange(false)
+                        currentSelection.value = i
+                        onSelect(i)
                     }
-            ) {
-                SettingsSelector(values, fontSize = fontSize) { i ->
-                    onChange(false)
-                    currentSelection.value = i
-                    onSelect(i)
+                }
+            } else {
+                Box (
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    SettingsButton(
+                        // title = title,
+                        onClick = { onChange(true) },
+                        active = active,
+                        modifier = Modifier.align(Alignment.CenterEnd),
+                        buttonText = currentSelectionName ?: currentSelection.value.string()
+                    )
                 }
             }
-        } else {
-            SettingsRow(
-                title = title,
-                onClick = { onChange(true) },
-                fontSize = fontSize,
-                active = active,
-                buttonText = currentSelectionName ?: currentSelection.value.string()
-            )
         }
+
     }
 
     @Composable
@@ -179,7 +199,7 @@ object SettingsComposable {
             onChange = onChange,
             title = title,
             currentSelection = remember { mutableStateOf(currentAction) },
-            currentSelectionName = if (currentAction == Constants.Action.OpenApp) stringResource(R.string.open) + " $appLabel" else currentAction.string(),
+            currentSelectionName = if (currentAction == Constants.Action.OpenApp) "Open $appLabel" else currentAction.string(),
             values = Constants.Action.values(),
             active = currentAction != Constants.Action.Disabled,
             onSelect = onSelect,
@@ -198,49 +218,42 @@ object SettingsComposable {
         fontSize: TextUnit = TextUnit.Unspecified,
         onSelect: (Int) -> Unit
     ) {
-        if (open.value) {
-            SettingsNumberSelector(
-                number = currentSelection,
-                min = min,
-                max = max,
+        Column {
+            Text(
+                title,
+                style = SettingsTheme.typography.item,
                 fontSize = fontSize,
-                onValueChange = onValueChange,
-            ) { i ->
-                onChange(false)
-                currentSelection.value = i
-                onSelect(i)
-            }
-        } else {
-            SettingsRow(
-                title = title,
-                onClick = { onChange(true) },
-                fontSize = fontSize,
-                buttonText = currentSelection.value.toString()
+                modifier = Modifier.align(Start)
             )
+
+            if (open.value) {
+                SettingsNumberSelector(
+                    number = currentSelection,
+                    min = min,
+                    max = max,
+                    fontSize = fontSize,
+                    onValueChange = onValueChange,
+                ) { i ->
+                    onChange(false)
+                    currentSelection.value = i
+                    onSelect(i)
+                }
+            } else {
+                Box (
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    SettingsButton(
+                        onClick = { onChange(true) },
+                        modifier = Modifier.align(Alignment.CenterEnd),
+                        buttonText = currentSelection.value.toString()
+                    )
+                }
+            }
         }
     }
 
-    // this has been removed and is no longer used
-    /*@Composable
-    fun SettingsAppSelector(
-        title: String,
-        currentSelection: MutableState<String>,
-        active: Boolean,
-        fontSize: TextUnit = TextUnit.Unspecified,
-        onClick: () -> Unit,
-    ) {
-        SettingsRow(
-            title = title,
-            onClick = onClick,
-            buttonText = currentSelection.value,
-            active = active,
-            fontSize = fontSize,
-            disabledText = stringResource(R.string.disabled)
-        )
-    }*/
-
     @Composable
-    private fun SettingsRow(
+    private fun SettingsItem(
         title: String,
         onClick: () -> Unit,
         buttonText: String,
@@ -248,42 +261,42 @@ object SettingsComposable {
         disabledText: String = buttonText,
         fontSize: TextUnit = TextUnit.Unspecified,
     ) {
-        ConstraintLayout(modifier = Modifier.fillMaxWidth()) {
+        Column(
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text(
+                title,
+                style = SettingsTheme.typography.item,
+                fontSize = fontSize,
+                modifier = Modifier.align(Start)
+            )
 
-            val (text, button) = createRefs()
-
-            Box(
-                modifier = Modifier
-                    .constrainAs(text) {
-                        start.linkTo(parent.start)
-                        end.linkTo(button.start)
-                        top.linkTo(parent.top)
-                        bottom.linkTo(parent.bottom)
-                        width = Dimension.fillToConstraints
-                    },
-            ) {
-                Text(
-                    title,
-                    style = SettingsTheme.typography.item,
-                    fontSize = fontSize,
-                    modifier = Modifier.align(CenterStart)
-                )
-            }
-
-            TextButton(
+            SettingsButton(
+                buttonText = buttonText,
+                disabledText = disabledText,
+                active = active,
                 onClick = onClick,
-                modifier = Modifier.constrainAs(button) {
-                    end.linkTo(parent.end)
-                    top.linkTo(parent.top)
-                    bottom.linkTo(parent.bottom)
-                },
-            ) {
-                Text(
-                    text = if (active) buttonText else disabledText,
-                    style = if (active) SettingsTheme.typography.button else SettingsTheme.typography.buttonDisabled,
-                    fontSize = fontSize,
-                )
-            }
+                modifier = Modifier.align(End)
+            )
+        }
+    }
+
+    @Composable
+    fun SettingsButton(
+        buttonText: String,
+        disabledText: String = buttonText,
+        active: Boolean = true,
+        onClick: () -> Unit = { },
+        modifier: Modifier = Modifier,
+    ){
+        TextButton(
+            onClick = onClick,
+            modifier = modifier,
+        ) {
+            Text(
+                text = if (active) buttonText else disabledText,
+                style = if (active) SettingsTheme.typography.button else SettingsTheme.typography.buttonDisabled,
+            )
         }
     }
 
