@@ -15,7 +15,6 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import app.mlauncher.data.Constants
-import app.mlauncher.data.Constants.value
 import app.mlauncher.data.Prefs
 import app.mlauncher.databinding.ActivityMainBinding
 import app.mlauncher.helper.isTablet
@@ -70,7 +69,7 @@ class MainActivity : AppCompatActivity() {
 
     @Suppress("DEPRECATION")
     fun setLanguage() {
-        val locale = Locale(prefs.language.value())
+        val locale = prefs.language.locale()
         val config = resources.configuration
         config.locale = locale
         resources.updateConfiguration(config, resources.displayMetrics)
