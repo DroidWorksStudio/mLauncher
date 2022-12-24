@@ -254,4 +254,6 @@ object Constants {
             }
         }
     }
+
+    const val URL_PUBLIC_ROADMAP = "https://tanujnotes.notion.site/Olauncher-Roadmap-1522aa8182424415b5b89bed923b0ccd"
 }
