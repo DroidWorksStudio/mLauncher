@@ -7,6 +7,7 @@ import android.content.Context.VIBRATOR_SERVICE
 import android.os.Build
 import android.os.Bundle
 import android.os.Vibrator
+import android.text.format.DateFormat.getBestDateTimePattern
 import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
@@ -31,6 +32,7 @@ import app.mlauncher.helper.*
 import app.mlauncher.listener.OnSwipeTouchListener
 import app.mlauncher.listener.ViewSwipeTouchListener
 import kotlinx.coroutines.launch
+
 
 class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener {
 
@@ -80,6 +82,17 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
     override fun onResume() {
         super.onResume()
+
+        val locale = prefs.language.locale()
+        val best12 = getBestDateTimePattern(locale, "hhmma")
+        val best24 = getBestDateTimePattern(locale, "HHmm")
+        binding.clock.format12Hour = best12
+        binding.clock.format24Hour = best24
+
+        val best12Date = getBestDateTimePattern(locale, "eeeddMMM")
+        val best24Date = getBestDateTimePattern(locale,"eeeddMMM")
+        binding.date.format12Hour = best12Date
+        binding.date.format24Hour = best24Date
 
         // only show "set as default"-button if tips are GONE
         if (binding.firstRunTips.visibility == View.GONE) {
@@ -192,6 +205,31 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         }
     }
 
+    @SuppressLint("WrongConstant", "PrivateApi")
+    private fun expandNotificationDrawer(context: Context) {
+        // Source: https://stackoverflow.com/a/51132142
+        try {
+            val statusBarService = context.getSystemService("statusbar")
+            val statusBarManager = Class.forName("android.app.StatusBarManager")
+            val method = statusBarManager.getMethod("expandNotificationsPanel")
+            method.invoke(statusBarService)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
+    @SuppressLint("WrongConstant", "PrivateApi")
+    private fun expandQuickSettings(context: Context) {
+        try {
+            val statusBarService = context.getSystemService("statusbar")
+            val statusBarManager = Class.forName("android.app.StatusBarManager")
+            val method = statusBarManager.getMethod("expandSettingsPanel")
+            method.invoke(statusBarService)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
     private fun openSwipeLeftApp() {
         if (prefs.appSwipeLeft.appPackage.isNotEmpty())
             launchApp(prefs.appSwipeLeft)
@@ -238,11 +276,11 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     @SuppressLint("NewApi")
     private fun handleOtherAction(action: Action) {
         when(action) {
-            Action.ShowNotification -> initActionService(requireContext())?.openNotifications()
+            Action.ShowNotification -> expandNotificationDrawer(requireContext())
             Action.LockScreen -> lockPhone()
             Action.ShowAppList -> showAppList(AppDrawerFlag.LaunchApp)
             Action.OpenApp -> {} // this should be handled in the respective onSwipe[Down,Right,Left] functions
-            Action.OpenQuickSettings -> initActionService(requireContext())?.openQuickSettings()
+            Action.OpenQuickSettings -> expandQuickSettings(requireContext())
             Action.ShowRecents -> initActionService(requireContext())?.showRecents()
             Action.Disabled -> {}
         }

@@ -2,15 +2,11 @@
     <string name="app_name">mLauncher</string>
     <string name="app">Programėlė</string>
     <string name="set_as_default_launcher">Nustatyti kaip numatomajį darbalaukį</string>
-    <string name="app_text_color">Teksto spalva</string>
     <string name="double_tap_to_lock_screen">Dukart palieskite, kad užrakintumėte</string>
     <string name="experimental_">(eksperimentinis)</string>
     <string name="admin_permission_message">mLauncher prižada atsakingai naudoti ekrano užrakinimo leidimą.</string>
-    <string name="about">Apie</string>
     <string name="off">Išjungtas</string>
     <string name="on">Įjungtas</string>
-    <string name="black">Juoda</string>
-    <string name="white">Balta</string>
     <string name="change_default_launcher">Keisti numatomajį darbalaukį</string>
     <string name="long_press_for_settings">Norėdami keisti nustatymus, ilgai paspauskite bet kur</string>
     <string name="swipe_up_for_apps">Braukite aukštyn, kad pamatytumėte visas programėlės</string>
@@ -29,16 +25,6 @@
     <string name="clock_click_app">Spustelėkite ant laikrodžio</string>
     <string name="date_click_app">Spustelėkite ant datos</string>
     <string name="double_tap">Dukart paspauskite</string>
-    <string name="_0" translatable="false">0</string>
-    <string name="_1" translatable="false">1</string>
-    <string name="_2" translatable="false">2</string>
-    <string name="_3" translatable="false">3</string>
-    <string name="_4" translatable="false">4</string>
-    <string name="_5" translatable="false">5</string>
-    <string name="_6" translatable="false">6</string>
-    <string name="_7" translatable="false">7</string>
-    <string name="_8" translatable="false">8</string>
-    <string name="commit">Atlikti</string>
     <string name="save">Įsaugoti</string>
     <string name="app_drawer_tips">Patarimas: perbraukite žemyn, kad atsisakytumėte. Slinkite, kad paslėptumėte klaviatūrą.</string>
     <string name="okay">Gerai</string>
@@ -57,7 +43,7 @@
     <string name="extend_home_apps_area">Išplėsti spustelėjamą sritį darbalaukio programėlėse</string>
     <string name="appearance">Išvaizda</string>
     <string name="gestures">Gestai</string>
-    <string name="behavior">Elgesys</string>
+    <string name="behavior">Funkcionavimas</string>
     <string name="homescreen">Pradinis ekranas</string>
     <string name="alignment">Lygiavimas</string>
     <string name="theme_mode">Temavimo režimas</string>

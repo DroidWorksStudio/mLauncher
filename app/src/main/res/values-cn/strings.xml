@@ -2,15 +2,11 @@
 	<string name="app_name">mLauncher</string>
 	<string name="app">应用</string>
 	<string name="set_as_default_launcher">设为默认启动器</string>
-	<string name="app_text_color">文本颜色</string>
-	<string name="double_tap_to_lock_screen">轻按两次锁定</string>
+    <string name="double_tap_to_lock_screen">轻按两次锁定</string>
 	<string name="experimental_">(实验性)</string>
 	<string name="admin_permission_message">mlauncher 承诺负责任地使用锁屏权限。</string>
-	<string name="about">关于</string>
-	<string name="off">关</string>
+    <string name="off">关</string>
 	<string name="on">开</string>
-	<string name="black">黑</string>
-	<string name="white">白</string>
 	<string name="change_default_launcher">更改默认启动器</string>
 	<string name="long_press_for_settings">在屏幕上任意一处长按进入设置</string>
 	<string name="swipe_up_for_apps">上滑查看所有应用</string>
@@ -65,7 +61,6 @@
 	<string name="disable">禁用</string>
 	<string name="enabled">已开启</string>
 	<string name="disabled">已禁用</string>
-	<string name="commit">犯罪</string>
 	<string name="swipe_up_app">向上滑动</string>
     <string name="behavior">行为</string>
     <string name="double_tap">双击</string>

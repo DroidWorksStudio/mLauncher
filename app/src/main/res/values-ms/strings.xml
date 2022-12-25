@@ -2,15 +2,11 @@
     <string name="app_name">mLauncher</string>
     <string name="app">Aplikasi</string>
     <string name="set_as_default_launcher">Tetapkan sebagai pelancar lalai</string>
-    <string name="app_text_color">Warna teks</string>
     <string name="double_tap_to_lock_screen">Ketik dua kali untuk mengunci</string>
     <string name="experimental_">(percubaan)</string>
     <string name="admin_permission_message">mLauncher berjanji untuk menggunakan kebenaran skrin kunci secara bertanggungjawab.</string>
-    <string name="about">Tentang</string>
     <string name="off">Mati</string>
     <string name="on">hidup</string>
-    <string name="black">Hitam</string>
-    <string name="white">putih</string>
     <string name="change_default_launcher">Tukar pelancar lalai</string>
     <string name="long_press_for_settings">Tekan lama di mana-mana untuk tetapan</string>
     <string name="swipe_up_for_apps">Leret ke atas untuk semua apl</string>
@@ -29,16 +25,6 @@
     <string name="clock_click_app">Klik pada Jam</string>
     <string name="date_click_app">Klik pada Tarikh</string>
     <string name="double_tap">Tekan dua kali</string>
-    <string name="_0" translatable="false">0</string>
-    <string name="_1" translatable="false">1</string>
-    <string name="_2" translatable="false">2</string>
-    <string name="_3" translatable="false">3</string>
-    <string name="_4" translatable="false">4</string>
-    <string name="_5" translatable="false">5</string>
-    <string name="_6" translatable="false">6</string>
-    <string name="_7" translatable="false">7</string>
-    <string name="_8" translatable="false">8</string>
-    <string name="commit">komited</string>
     <string name="save">Jimat</string>
     <string name="app_drawer_tips">Petua: Leret ke bawah untuk mengetepikan. Tatal untuk menyembunyikan papan kekunci.</string>
     <string name="okay">baik</string>

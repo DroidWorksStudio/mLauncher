@@ -87,7 +87,7 @@ object Constants {
 
         @Composable
         override fun string(): String {
-            return when(this) {
+            return when (this) {
                 System -> stringResource(R.string.lang_system)
                 Albanian -> "shqiptare"
                 Arabic -> "العربية"
@@ -138,58 +138,63 @@ object Constants {
                 Vietnamese -> "Tiếng Việt"
             }
         }
-    }
 
-    fun Language.value(): String {
-        return when(this) {
-            Language.System -> Locale.getDefault().language
-            Language.Albanian -> "sq"
-            Language.Arabic -> "ar"
-            Language.Bulgarian -> "bg"
-            Language.Chinese -> "cn"
-            Language.Croatian -> "hr"
-            Language.Czech -> "cs"
-            Language.Dutch -> "nl"
-            Language.Danish -> "da"
-            Language.English -> "en"
-            Language.Estonian -> "et"
-            Language.Filipino -> "fil"
-            Language.Finnish -> "fi"
-            Language.French -> "fr"
-            Language.Georgian -> "ka"
-            Language.German -> "de"
-            Language.Greek -> "el"
-            Language.Hawaiian -> "haw"
-            Language.Hebrew -> "iw"
-            Language.Hindi -> "hi"
-            Language.Hungarian -> "hu"
-            Language.Icelandic -> "is"
-            Language.Irish -> "ga"
-            Language.Indonesian -> "lb"
-            Language.Italian -> "it"
-            Language.Japanese -> "ja"
-            Language.Korean -> "ko"
-            Language.Lithuanian -> "lt"
-            Language.Luxembourgish -> ""
-            Language.Malay -> "ms"
-            Language.Malagasy -> "mg"
-            Language.Malayalam -> "ml"
-            Language.Nepali -> "ne"
-            Language.Norwegian -> "no"
-            Language.Persian -> "fa"
-            Language.Portuguese -> "pt"
-            Language.Polish -> "pl"
-            Language.Punjabi -> "pa"
-            Language.Romanian -> "ro"
-            Language.Russian -> "ru"
-            Language.Serbian -> "sr"
-            Language.Sindhi -> "sd"
-            Language.Spanish -> "es"
-            Language.Swedish -> "sv"
-            Language.Thai -> "th"
-            Language.Turkish -> "tr"
-            Language.Ukrainian -> "uk"
-            Language.Vietnamese -> "vi"
+
+        fun locale(): Locale {
+            return Locale(value())
+        }
+
+        private fun value(): String {
+            return when(this) {
+                System -> Locale.getDefault().language
+                Albanian -> "sq"
+                Arabic -> "ar"
+                Bulgarian -> "bg"
+                Chinese -> "cn"
+                Croatian -> "hr"
+                Czech -> "cs"
+                Dutch -> "nl"
+                Danish -> "da"
+                English -> "en"
+                Estonian -> "et"
+                Filipino -> "fil"
+                Finnish -> "fi"
+                French -> "fr"
+                Georgian -> "ka"
+                German -> "de"
+                Greek -> "el"
+                Hawaiian -> "haw"
+                Hebrew -> "iw"
+                Hindi -> "hi"
+                Hungarian -> "hu"
+                Icelandic -> "is"
+                Irish -> "ga"
+                Indonesian -> "lb"
+                Italian -> "it"
+                Japanese -> "ja"
+                Korean -> "ko"
+                Lithuanian -> "lt"
+                Luxembourgish -> "lb"
+                Malay -> "ms"
+                Malagasy -> "mg"
+                Malayalam -> "ml"
+                Nepali -> "ne"
+                Norwegian -> "no"
+                Persian -> "fa"
+                Portuguese -> "pt"
+                Polish -> "pl"
+                Punjabi -> "pa"
+                Romanian -> "ro"
+                Russian -> "ru"
+                Serbian -> "sr"
+                Sindhi -> "sd"
+                Spanish -> "es"
+                Swedish -> "sv"
+                Thai -> "th"
+                Turkish -> "tr"
+                Ukrainian -> "uk"
+                Vietnamese -> "vi"
+            }
         }
     }
 
@@ -254,4 +259,6 @@ object Constants {
             }
         }
     }
+
+    const val URL_PUBLIC_ROADMAP = "https://tanujnotes.notion.site/Olauncher-Roadmap-1522aa8182424415b5b89bed923b0ccd"
 }

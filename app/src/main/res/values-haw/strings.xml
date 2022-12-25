@@ -2,15 +2,11 @@
     <string name="app_name">mLauncher</string>
     <string name="app">App</string>
     <string name="set_as_default_launcher">E hoʻonoho i mea hoʻolaha paʻamau</string>
-    <string name="app_text_color">kala kikokiko</string>
     <string name="double_tap_to_lock_screen">Koʻu pālua e laka</string>
     <string name="experimental_">(hoʻokolohua)</string>
     <string name="admin_permission_message">Ua hoʻohiki ʻo mLauncher e hoʻohana i ka ʻae ʻana i ka pale laka me ke kuleana.</string>
-    <string name="about">E pili ana</string>
     <string name="off">Paʻa</string>
     <string name="on">Ma ka</string>
-    <string name="black">ʻeleʻele</string>
-    <string name="white">Keʻokeʻo</string>
     <string name="change_default_launcher">Hoʻololi i ka mea hoʻolaha paʻamau</string>
     <string name="long_press_for_settings">E kaomi lōʻihi ma nā wahi a pau no nā hoʻonohonoho</string>
     <string name="swipe_up_for_apps">Swipe i luna no nā polokalamu āpau</string>
@@ -29,16 +25,6 @@
     <string name="clock_click_app">Kaomi ma ka uaki</string>
     <string name="date_click_app">Kaomi ma ka lā</string>
     <string name="double_tap">Koʻu pālua</string>
-    <string name="_0" translatable="false">0</string>
-    <string name="_1" translatable="false">1</string>
-    <string name="_2" translatable="false">2</string>
-    <string name="_3" translatable="false">3</string>
-    <string name="_4" translatable="false">4</string>
-    <string name="_5" translatable="false">5</string>
-    <string name="_6" translatable="false">6</string>
-    <string name="_7" translatable="false">7</string>
-    <string name="_8" translatable="false">8</string>
-    <string name="commit">Hāʻawi</string>
     <string name="save">Mālama</string>
     <string name="app_drawer_tips">Manaʻo kōkua: Swipe i lalo e kāpae. Oka e huna i ka papa keyboard.</string>
     <string name="okay">ʻAe</string>

@@ -2,15 +2,11 @@
 	<string name="app_name">mLauncher</string>
 	<string name="app">Rakendus</string>
 	<string name="set_as_default_launcher">Määra peamiseks avakuvarakenduseks</string>
-	<string name="app_text_color">Teksti värvr</string>
-	<string name="double_tap_to_lock_screen">Topeltvajutus ekraani lukustamiseks</string>
+    <string name="double_tap_to_lock_screen">Topeltvajutus ekraani lukustamiseks</string>
 	<string name="experimental_">(eksperimentaalne)</string>
 	<string name="admin_permission_message">mlauncher lubab, et kasutab ekraani lukustamise luba vastutustundlikult.</string>
-	<string name="about">Teave</string>
-	<string name="off">Sisse</string>
+    <string name="off">Sisse</string>
 	<string name="on">Välja</string>
-	<string name="black">Must</string>
-	<string name="white">Valge</string>
 	<string name="change_default_launcher">Muuda peamist avakuvarakendust</string>
 	<string name="long_press_for_settings">Sätete nägemiseks vajuta pikalt</string>
 	<string name="swipe_up_for_apps">Tõmba näpuga üles kõigi rakenduste kuvamiseks</string>
@@ -26,7 +22,6 @@
 	<string name="swipe_down_app">Altpoolt tõmmates avaneb rakendus</string>
 	<string name="clock_click_app">Kellale vajutades avaneb rakendus</string>
 	<string name="date_click_app">Kuupäevale vajutades avaneb arakendus</string>
-	<string name="commit">Soorita</string>
 	<string name="app_drawer_tips">Nipp: Tühistamiseks tõmba näpuga alla. Tõmba näpuga klaviatuuri peitmiseks.</string>
 	<string name="okay">Ok</string>
 	<string name="double_tap_lock_is_enabled_message">Kui topeltvajutus lülitab sõrmejäljega või näoga telefoni avamise, ava mlauncher\'i sätted, vajuta  \'experimental\' ning järgi juhiseid. Aitäh.</string>

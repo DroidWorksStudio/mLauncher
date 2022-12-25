@@ -7,6 +7,6 @@
     android:layout_height="wrap_content"
     android:hint="@string/app"
     android:paddingVertical="@dimen/home_app_padding_vertical"
-    android:tag="@string/_1">
+    android:tag="1">
 
 </TextView>

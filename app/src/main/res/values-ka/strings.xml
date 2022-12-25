@@ -2,15 +2,11 @@
     <string name="app_name">mLauncher</string>
     <string name="app">Აპლიკაცია</string>
     <string name="set_as_default_launcher">დააყენეთ ნაგულისხმევ გამშვებად</string>
-    <string name="app_text_color">ტექსტის ფერი</string>
     <string name="double_tap_to_lock_screen">ორმაგად შეეხეთ ჩასაკეტად</string>
     <string name="experimental_">(ექსპერიმენტული)</string>
     <string name="admin_permission_message">mLauncher გვპირდება, რომ პასუხისმგებლობით გამოიყენებს ეკრანის დაბლოკვის ნებართვას.</string>
-    <string name="about">შესახებ</string>
     <string name="off">გამორთულია</string>
     <string name="on">ჩართულია</string>
-    <string name="black">შავი</string>
-    <string name="white">თეთრი</string>
     <string name="change_default_launcher">ნაგულისხმევი გამშვების შეცვლა</string>
     <string name="long_press_for_settings">დიდხანს დააჭირეთ სადმე პარამეტრებისთვის</string>
     <string name="swipe_up_for_apps">გადაფურცლეთ ზემოთ ყველა აპისთვის</string>
@@ -29,16 +25,6 @@
     <string name="clock_click_app">დააწკაპუნეთ საათზე</string>
     <string name="date_click_app">დააჭირეთ თარიღს</string>
     <string name="double_tap">ორჯერ შეეხეთ</string>
-    <string name="_0" translatable="false">0</string>
-    <string name="_1" translatable="false">1</string>
-    <string name="_2" translatable="false">2</string>
-    <string name="_3" translatable="false">3</string>
-    <string name="_4" translatable="false">4</string>
-    <string name="_5" translatable="false">5</string>
-    <string name="_6" translatable="false">6</string>
-    <string name="_7" translatable="false">7</string>
-    <string name="_8" translatable="false">8</string>
-    <string name="commit">ვალდებულება</string>
     <string name="save">Გადარჩენა</string>
     <string name="app_drawer_tips">რჩევა: გადაფურცლეთ ქვემოთ გასაუქმებლად. გადაახვიეთ კლავიატურის დასამალად.</string>
     <string name="okay">კარგი</string>

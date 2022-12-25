@@ -2,15 +2,11 @@
     <string name="app_name">mLauncher</string>
     <string name="app">App</string>
     <string name="set_as_default_launcher">Angi som standard launcher</string>
-    <string name="app_text_color">Tekstfarge</string>
     <string name="double_tap_to_lock_screen">Dobbelttrykk for å låse</string>
     <string name="experimental_">(eksperimentell)</string>
     <string name="admin_permission_message">mLauncher lover å bruke tillatelse til låseskjermen på en ansvarlig måte.</string>
-    <string name="about">Om</string>
     <string name="off">Av</string>
     <string name="on">På</string>
-    <string name="black">Svart</string>
-    <string name="white">Hvit</string>
     <string name="change_default_launcher">Endre standard launcher</string>
     <string name="long_press_for_settings">Langt trykk hvor som helst for innstillinger</string>
     <string name="swipe_up_for_apps">Sveip opp for alle apper</string>
@@ -29,16 +25,6 @@
     <string name="clock_click_app">Klikk på Klokke</string>
     <string name="date_click_app">Klikk på Dato</string>
     <string name="double_tap">Dobbelttrykk</string>
-    <string name="_0" translatable="false">0</string>
-    <string name="_1" translatable="false">1</string>
-    <string name="_2" translatable="false">2</string>
-    <string name="_3" translatable="false">3</string>
-    <string name="_4" translatable="false">4</string>
-    <string name="_5" translatable="false">5</string>
-    <string name="_6" translatable="false">6</string>
-    <string name="_7" translatable="false">7</string>
-    <string name="_8" translatable="false">8</string>
-    <string name="commit">Begå</string>
     <string name="save">Lagre</string>
     <string name="app_drawer_tips">Tips: Sveip ned for å avvise. Rull for å skjule tastaturet.</string>
     <string name="okay">Greit</string>
