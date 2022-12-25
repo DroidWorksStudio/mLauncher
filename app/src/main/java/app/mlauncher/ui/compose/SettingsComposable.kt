@@ -15,7 +15,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment.Companion.CenterEnd
 import androidx.compose.ui.Alignment.Companion.CenterStart
+import androidx.compose.ui.Alignment.Companion.End
 import androidx.compose.ui.Alignment.Companion.Start
 import androidx.compose.ui.Alignment.Companion.TopEnd
 import androidx.compose.ui.Modifier
@@ -184,7 +186,7 @@ object SettingsComposable {
                         onClick = { onChange(true) },
                         active = active,
                         modifier = Modifier
-                            .align(CenterStart),
+                            .align(CenterEnd),
                         buttonText = currentSelectionName ?: currentSelection.value.string()
                     )
                 }
@@ -233,7 +235,8 @@ object SettingsComposable {
                 title,
                 style = SettingsTheme.typography.item,
                 fontSize = fontSize,
-                modifier = Modifier.align(Start)
+                modifier = Modifier
+                    .align(Start)
             )
 
             if (open.value) {
@@ -255,7 +258,7 @@ object SettingsComposable {
                     SettingsButton(
                         onClick = { onChange(true) },
                         modifier = Modifier
-                            .align(CenterStart),
+                            .align(CenterEnd),
                         buttonText = currentSelection.value.toString()
                     )
                 }
@@ -279,7 +282,8 @@ object SettingsComposable {
                 title,
                 style = SettingsTheme.typography.item,
                 fontSize = fontSize,
-                modifier = Modifier.align(Start)
+                modifier = Modifier
+                    .align(Start)
             )
 
             SettingsButton(
@@ -288,7 +292,7 @@ object SettingsComposable {
                 active = active,
                 onClick = onClick,
                 modifier = Modifier
-                    .align(Start)
+                    .align(End)
             )
         }
     }
@@ -321,7 +325,7 @@ object SettingsComposable {
         ) {
             LazyRow(
                 modifier = Modifier
-                    .align(CenterStart),
+                    .align(CenterEnd),
                 horizontalArrangement = Arrangement.SpaceEvenly
             )
             {
