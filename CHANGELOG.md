@@ -1,5 +1,13 @@
 # Changelog
 
+## [Coming Soon](https://github.com/HeCodes2Much/mLauncher/tree/HEAD)
+
+[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.3.8...HEAD)
+
+**Implemented enhancements:**
+
+- feat: put settings items on two rows [\#104](https://github.com/HeCodes2Much/mLauncher/pull/104) ([The-Repo-Club](https://github.com/The-Repo-Club))
+
 ## [0.3.8](https://github.com/HeCodes2Much/mLauncher/tree/0.3.8) (25, December 2022)
 
 [Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.3.7...0.3.8)

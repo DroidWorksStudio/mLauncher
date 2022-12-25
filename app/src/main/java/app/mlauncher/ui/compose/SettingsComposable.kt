@@ -15,6 +15,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Alignment.Companion.CenterEnd
 import androidx.compose.ui.Alignment.Companion.CenterStart
 import androidx.compose.ui.Alignment.Companion.End
@@ -23,12 +24,14 @@ import androidx.compose.ui.Alignment.Companion.TopEnd
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.onFocusEvent
 import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
+import androidx.constraintlayout.compose.Dimension
 import app.mlauncher.R
 import app.mlauncher.data.Constants
 import app.mlauncher.data.EnumOption
@@ -91,9 +94,7 @@ object SettingsComposable {
                     painterResource(R.drawable.ic_outline_info_24),
                     contentDescription = "",
                     modifier = Modifier
-                        .size(iconSize)
-                        .align(TopEnd)
-                        .clickable { onClick() },
+                        .size(iconSize).align(TopEnd).clickable { onClick() },
                 )
             }
             content()
@@ -167,7 +168,6 @@ object SettingsComposable {
                                 onChange(false)
                             }
                         }
-                        .align(Start)
                 ) {
                     SettingsSelector(values, fontSize = fontSize) { i ->
                         onChange(false)
@@ -179,7 +179,6 @@ object SettingsComposable {
                 Box (
                     modifier = Modifier
                         .fillMaxWidth()
-                        .align(Start)
                 ) {
                     SettingsButton(
                         // title = title,
@@ -198,21 +197,21 @@ object SettingsComposable {
     @Composable
     fun SettingsGestureItem(
         title: String,
-        fontSize: TextUnit = TextUnit.Unspecified,
         open: MutableState<Boolean>,
         onChange: (Boolean) -> Unit,
         currentAction: Constants.Action,
         onSelect: (Constants.Action) -> Unit,
+        fontSize: TextUnit = TextUnit.Unspecified,
         appLabel: String,
     ) {
         SettingsItem(
             open = open,
             onChange = onChange,
             title = title,
-            fontSize = fontSize,
             currentSelection = remember { mutableStateOf(currentAction) },
             currentSelectionName = if (currentAction == Constants.Action.OpenApp) "Open $appLabel" else currentAction.string(),
             values = Constants.Action.values(),
+            fontSize = fontSize,
             active = currentAction != Constants.Action.Disabled,
             onSelect = onSelect,
         )
@@ -253,7 +252,8 @@ object SettingsComposable {
                 }
             } else {
                 Box (
-                    modifier = Modifier.fillMaxWidth()
+                    modifier = Modifier
+                        .fillMaxWidth()
                 ) {
                     SettingsButton(
                         onClick = { onChange(true) },
@@ -276,7 +276,8 @@ object SettingsComposable {
         fontSize: TextUnit = TextUnit.Unspecified,
     ) {
         Column(
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier
+                .fillMaxWidth()
         ) {
             Text(
                 title,
@@ -368,7 +369,8 @@ object SettingsComposable {
                         onValueChange(number.value)
                     }
                 },
-                modifier = Modifier.constrainAs(minus) {
+                modifier = Modifier
+                    .constrainAs(minus) {
                     top.linkTo(parent.top)
                     bottom.linkTo(parent.bottom)
                     start.linkTo(text.end)
@@ -397,7 +399,8 @@ object SettingsComposable {
                         onValueChange(number.value)
                     }
                 },
-                modifier = Modifier.constrainAs(plus) {
+                modifier = Modifier
+                    .constrainAs(plus) {
                     top.linkTo(parent.top)
                     bottom.linkTo(parent.bottom)
                     start.linkTo(parent.start)
@@ -408,7 +411,8 @@ object SettingsComposable {
             }
             TextButton(
                 onClick = { onCommit(number.value) },
-                modifier = Modifier.constrainAs(button) {
+                modifier = Modifier
+                    .constrainAs(button) {
                     top.linkTo(parent.top)
                     bottom.linkTo(parent.bottom)
                     start.linkTo(minus.end)
