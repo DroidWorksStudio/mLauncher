@@ -1,13 +1,5 @@
 # Changelog
 
-## [Coming Soon](https://github.com/HeCodes2Much/mLauncher/tree/HEAD)
-
-[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.3.8...HEAD)
-
-**Fixed bugs:**
-
-- \[Bug Report\] wrong version is showed in the settings [\#109](https://github.com/HeCodes2Much/mLauncher/issues/109)
-
 ## [0.3.8](https://github.com/HeCodes2Much/mLauncher/tree/0.3.8) (25, December 2022)
 
 [Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.3.7...0.3.8)
@@ -19,7 +11,9 @@
 
 **Fixed bugs:**
 
+- \[Bug Report\] wrong version is showed in the settings [\#109](https://github.com/HeCodes2Much/mLauncher/issues/109)
 - \[Bug Report\] French Settings Menu [\#66](https://github.com/HeCodes2Much/mLauncher/issues/66)
+- fix: Fixed the link to the roadmap [\#110](https://github.com/HeCodes2Much/mLauncher/pull/110) ([The-Repo-Club](https://github.com/The-Repo-Club))
 
 **Merged pull requests:**
 
@@ -29,17 +23,23 @@
 
 [Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.3.6...0.3.7)
 
+**Implemented enhancements:**
+
+- Cleanup the Settings panel. [\#97](https://github.com/HeCodes2Much/mLauncher/pull/97) ([The-Repo-Club](https://github.com/The-Repo-Club))
+
+**Fixed bugs:**
+
+- translations: imrprove Lithuanian translation for 'behaviour' [\#101](https://github.com/HeCodes2Much/mLauncher/pull/101) ([TruncatedDinosour](https://github.com/TruncatedDinosour))
+- Fix the french language string.xml [\#94](https://github.com/HeCodes2Much/mLauncher/pull/94) ([The-Repo-Club](https://github.com/The-Repo-Club))
+
 **Merged pull requests:**
 
 - Update and fix the Notification Draw [\#102](https://github.com/HeCodes2Much/mLauncher/pull/102) ([The-Repo-Club](https://github.com/The-Repo-Club))
-- translations: imrprove Lithuanian translation for 'behaviour' [\#101](https://github.com/HeCodes2Much/mLauncher/pull/101) ([TruncatedDinosour](https://github.com/TruncatedDinosour))
 - replace deprecated function calls [\#100](https://github.com/HeCodes2Much/mLauncher/pull/100) ([The-Repo-Club](https://github.com/The-Repo-Club))
 - Fixing an error with the intent swipes [\#99](https://github.com/HeCodes2Much/mLauncher/pull/99) ([The-Repo-Club](https://github.com/The-Repo-Club))
 - App version bumped to 75 \(v0.3.7\) [\#98](https://github.com/HeCodes2Much/mLauncher/pull/98) ([The-Repo-Club](https://github.com/The-Repo-Club))
-- Cleanup the Settings panel. [\#97](https://github.com/HeCodes2Much/mLauncher/pull/97) ([The-Repo-Club](https://github.com/The-Repo-Club))
 - Update android-branch\_ci.yml [\#96](https://github.com/HeCodes2Much/mLauncher/pull/96) ([The-Repo-Club](https://github.com/The-Repo-Club))
 - just a bit of code cleanup [\#95](https://github.com/HeCodes2Much/mLauncher/pull/95) ([The-Repo-Club](https://github.com/The-Repo-Club))
-- Fix the french language string.xml [\#94](https://github.com/HeCodes2Much/mLauncher/pull/94) ([The-Repo-Club](https://github.com/The-Repo-Club))
 - crash on double tap gesture [\#93](https://github.com/HeCodes2Much/mLauncher/pull/93) ([The-Repo-Club](https://github.com/The-Repo-Club))
 - issue templates [\#92](https://github.com/HeCodes2Much/mLauncher/pull/92) ([The-Repo-Club](https://github.com/The-Repo-Club))
 - Fix the OPEN to follow the language [\#91](https://github.com/HeCodes2Much/mLauncher/pull/91) ([The-Repo-Club](https://github.com/The-Repo-Club))
@@ -51,6 +51,7 @@
 **Implemented enhancements:**
 
 - \[Feature Request\] Better CI System [\#72](https://github.com/HeCodes2Much/mLauncher/issues/72)
+- Create CODE\_OF\_CONDUCT.md [\#85](https://github.com/HeCodes2Much/mLauncher/pull/85) ([The-Repo-Club](https://github.com/The-Repo-Club))
 
 **Fixed bugs:**
 
@@ -62,7 +63,6 @@
 - fix Contributing [\#88](https://github.com/HeCodes2Much/mLauncher/pull/88) ([The-Repo-Club](https://github.com/The-Repo-Club))
 - Update .github files [\#87](https://github.com/HeCodes2Much/mLauncher/pull/87) ([The-Repo-Club](https://github.com/The-Repo-Club))
 - fix file [\#86](https://github.com/HeCodes2Much/mLauncher/pull/86) ([The-Repo-Club](https://github.com/The-Repo-Club))
-- Create CODE\_OF\_CONDUCT.md [\#85](https://github.com/HeCodes2Much/mLauncher/pull/85) ([The-Repo-Club](https://github.com/The-Repo-Club))
 - Updated the French language [\#83](https://github.com/HeCodes2Much/mLauncher/pull/83) ([The-Repo-Club](https://github.com/The-Repo-Club))
 - Update pull\_request\_template.md [\#82](https://github.com/HeCodes2Much/mLauncher/pull/82) ([The-Repo-Club](https://github.com/The-Repo-Club))
 - Update pull\_request\_template.md [\#81](https://github.com/HeCodes2Much/mLauncher/pull/81) ([The-Repo-Club](https://github.com/The-Repo-Club))
