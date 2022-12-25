@@ -395,6 +395,7 @@ class SettingsFragment : Fragment() {
                     }
                 )
             )
+            @Suppress("DEPRECATION")
             Text(
                 modifier = Modifier
                     .align(Alignment.End)
@@ -406,7 +407,9 @@ class SettingsFragment : Fragment() {
         }
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onActivityCreated(savedInstanceState: Bundle?) {
+        @Suppress("DEPRECATION")
         super.onActivityCreated(savedInstanceState)
         prefs = Prefs(requireContext())
         viewModel = activity?.run {
@@ -486,7 +489,6 @@ class SettingsFragment : Fragment() {
     }
 
     private fun setTheme(appTheme: Constants.Theme) {
-        // if (AppCompatDelegate.getDefaultNightMode() == appTheme) return // TODO find out what this did
         prefs.appTheme = appTheme
         requireActivity().recreate()
     }

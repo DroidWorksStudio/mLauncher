@@ -1,6 +1,7 @@
 *.iml
 *.jks
 .gradle
+.github_changelog_generator
 /local.properties
 /.idea/*
 /.idea/caches
