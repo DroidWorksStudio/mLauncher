@@ -15,22 +15,18 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Alignment.Companion.CenterStart
-import androidx.compose.ui.Alignment.Companion.End
 import androidx.compose.ui.Alignment.Companion.Start
 import androidx.compose.ui.Alignment.Companion.TopEnd
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.onFocusEvent
 import androidx.compose.ui.input.pointer.pointerInput
-import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
-import androidx.constraintlayout.compose.Dimension
 import app.mlauncher.R
 import app.mlauncher.data.Constants
 import app.mlauncher.data.EnumOption
@@ -81,16 +77,21 @@ object SettingsComposable {
     @Composable
     fun SettingsTopView(title: String, onClick: () -> Unit = {}, fontSize: TextUnit = TextUnit.Unspecified, iconSize: Dp = 16.dp, content: @Composable () -> Unit) {
         SettingsTile {
-            Box(modifier = Modifier.fillMaxWidth()) {
+            Box(modifier = Modifier
+                .fillMaxWidth()) {
                 SettingsTitle(
                     text = title,
                     fontSize = fontSize,
-                    modifier = Modifier.align(CenterStart)
+                    modifier = Modifier
+                        .align(CenterStart)
                 )
                 Image(
                     painterResource(R.drawable.ic_outline_info_24),
                     contentDescription = "",
-                    modifier = Modifier.size(iconSize).align(TopEnd).clickable { onClick() },
+                    modifier = Modifier
+                        .size(iconSize)
+                        .align(TopEnd)
+                        .clickable { onClick() },
                 )
             }
             content()
@@ -147,7 +148,8 @@ object SettingsComposable {
                 title,
                 style = SettingsTheme.typography.item,
                 fontSize = fontSize,
-                modifier = Modifier.align(Start)
+                modifier = Modifier
+                    .align(Start)
             )
 
             if (open.value) {
@@ -163,6 +165,7 @@ object SettingsComposable {
                                 onChange(false)
                             }
                         }
+                        .align(Start)
                 ) {
                     SettingsSelector(values, fontSize = fontSize) { i ->
                         onChange(false)
@@ -172,13 +175,16 @@ object SettingsComposable {
                 }
             } else {
                 Box (
-                    modifier = Modifier.fillMaxWidth()
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .align(Start)
                 ) {
                     SettingsButton(
                         // title = title,
                         onClick = { onChange(true) },
                         active = active,
-                        modifier = Modifier.align(Alignment.CenterEnd),
+                        modifier = Modifier
+                            .align(CenterStart),
                         buttonText = currentSelectionName ?: currentSelection.value.string()
                     )
                 }
@@ -248,7 +254,8 @@ object SettingsComposable {
                 ) {
                     SettingsButton(
                         onClick = { onChange(true) },
-                        modifier = Modifier.align(Alignment.CenterEnd),
+                        modifier = Modifier
+                            .align(CenterStart),
                         buttonText = currentSelection.value.toString()
                     )
                 }
@@ -280,7 +287,8 @@ object SettingsComposable {
                 disabledText = disabledText,
                 active = active,
                 onClick = onClick,
-                modifier = Modifier.align(End)
+                modifier = Modifier
+                    .align(Start)
             )
         }
     }
@@ -313,7 +321,7 @@ object SettingsComposable {
         ) {
             LazyRow(
                 modifier = Modifier
-                    .align(Alignment.CenterEnd),
+                    .align(CenterStart),
                 horizontalArrangement = Arrangement.SpaceEvenly
             )
             {
