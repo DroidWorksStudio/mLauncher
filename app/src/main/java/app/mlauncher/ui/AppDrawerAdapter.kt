@@ -1,6 +1,5 @@
 package app.mlauncher.ui
 
-import android.annotation.SuppressLint
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
@@ -93,7 +92,6 @@ class AppDrawerAdapter(
                 return filterResults
             }
 
-            @SuppressLint("NotifyDataSetChanged")
             @Suppress("UNCHECKED_CAST")
             override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
                 appFilteredList = results?.values as MutableList<AppModel>
@@ -123,8 +121,7 @@ class AppDrawerAdapter(
                     .contains(searchChars, true))
     }
 
-    @SuppressLint("NotifyDataSetChanged")
-    fun setAppList(appsList: MutableList<AppModel>) {
+     fun setAppList(appsList: MutableList<AppModel>) {
         this.appsList = appsList
         this.appFilteredList = appsList
         notifyDataSetChanged()
@@ -144,7 +141,6 @@ class AppDrawerAdapter(
         private val appTitleFrame: FrameLayout = itemView.appTitleFrame
         private val appInfo: ImageView = itemView.appInfo
 
-        @SuppressLint("RtlHardcoded")
         fun bind(
             flag: AppDrawerFlag,
             appLabelGravity: Int,

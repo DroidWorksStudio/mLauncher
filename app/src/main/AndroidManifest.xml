@@ -51,18 +51,6 @@
             </intent-filter>
         </activity>
 
-        <receiver
-            android:name="app.mlauncher.listener.DeviceAdmin"
-            android:permission="android.permission.BIND_DEVICE_ADMIN"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.device_admin"
-                android:resource="@xml/policies" />
-            <intent-filter>
-                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
-            </intent-filter>
-        </receiver>
-
         <service
             android:name="app.mlauncher.helper.ActionService"
             android:label="@string/accessibility_service_name"

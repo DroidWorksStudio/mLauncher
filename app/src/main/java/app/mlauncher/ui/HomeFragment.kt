@@ -205,31 +205,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         }
     }
 
-    @SuppressLint("WrongConstant", "PrivateApi")
-    private fun expandNotificationDrawer(context: Context) {
-        // Source: https://stackoverflow.com/a/51132142
-        try {
-            val statusBarService = context.getSystemService("statusbar")
-            val statusBarManager = Class.forName("android.app.StatusBarManager")
-            val method = statusBarManager.getMethod("expandNotificationsPanel")
-            method.invoke(statusBarService)
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-    }
-
-    @SuppressLint("WrongConstant", "PrivateApi")
-    private fun expandQuickSettings(context: Context) {
-        try {
-            val statusBarService = context.getSystemService("statusbar")
-            val statusBarManager = Class.forName("android.app.StatusBarManager")
-            val method = statusBarManager.getMethod("expandSettingsPanel")
-            method.invoke(statusBarService)
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-    }
-
     private fun openSwipeLeftApp() {
         if (prefs.appSwipeLeft.appPackage.isNotEmpty())
             launchApp(prefs.appSwipeLeft)
@@ -276,13 +251,38 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     @SuppressLint("NewApi")
     private fun handleOtherAction(action: Action) {
         when(action) {
-            Action.ShowNotification -> expandNotificationDrawer(requireContext())
-            Action.LockScreen -> lockPhone()
+            Action.ShowNotification -> initActionService(requireContext())?.openNotifications()
+            Action.LockScreen -> initActionService(requireContext())?.lockScreen()
             Action.ShowAppList -> showAppList(AppDrawerFlag.LaunchApp)
             Action.OpenApp -> {} // this should be handled in the respective onSwipe[Down,Right,Left] functions
-            Action.OpenQuickSettings -> expandQuickSettings(requireContext())
+            Action.OpenQuickSettings -> initActionService(requireContext())?.openQuickSettings()
             Action.ShowRecents -> initActionService(requireContext())?.showRecents()
             Action.Disabled -> {}
+        }
+    }
+
+    @SuppressLint("WrongConstant", "PrivateApi")
+    private fun expandNotificationDrawer(context: Context) {
+        // Source: https://stackoverflow.com/a/51132142
+        try {
+            val statusBarService = context.getSystemService("statusbar")
+            val statusBarManager = Class.forName("android.app.StatusBarManager")
+            val method = statusBarManager.getMethod("expandNotificationsPanel")
+            method.invoke(statusBarService)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
+    @SuppressLint("WrongConstant", "PrivateApi")
+    private fun expandQuickSettings(context: Context) {
+        try {
+            val statusBarService = context.getSystemService("statusbar")
+            val statusBarManager = Class.forName("android.app.StatusBarManager")
+            val method = statusBarManager.getMethod("expandSettingsPanel")
+            method.invoke(statusBarService)
+        } catch (e: Exception) {
+            e.printStackTrace()
         }
     }
 

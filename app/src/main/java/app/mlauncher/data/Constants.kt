@@ -1,6 +1,5 @@
 package app.mlauncher.data
 
-import android.annotation.SuppressLint
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
 import app.mlauncher.R
@@ -212,12 +211,11 @@ object Constants {
             }
         }
 
-        @SuppressLint("RtlHardcoded")
         fun value(): Int {
             return when(this) {
-                Left -> android.view.Gravity.LEFT
+                Left -> android.view.Gravity.START
                 Center -> android.view.Gravity.CENTER
-                Right -> android.view.Gravity.RIGHT
+                Right -> android.view.Gravity.END
             }
         }
     }

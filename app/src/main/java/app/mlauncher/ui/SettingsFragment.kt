@@ -40,7 +40,6 @@ import app.mlauncher.data.Constants.Theme.*
 import app.mlauncher.data.Prefs
 import app.mlauncher.databinding.FragmentSettingsBinding
 import app.mlauncher.helper.*
-import app.mlauncher.listener.DeviceAdmin
 import app.mlauncher.ui.compose.SettingsComposable.SettingsArea
 import app.mlauncher.ui.compose.SettingsComposable.SettingsGestureItem
 import app.mlauncher.ui.compose.SettingsComposable.SettingsItem
@@ -405,22 +404,6 @@ class SettingsFragment : Fragment() {
                 color = Color.LightGray
             )
         }
-    }
-
-    @Deprecated("Deprecated in Java")
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        @Suppress("DEPRECATION")
-        super.onActivityCreated(savedInstanceState)
-        prefs = Prefs(requireContext())
-        viewModel = activity?.run {
-            ViewModelProvider(this).get(MainViewModel::class.java)
-        } ?: throw Exception("Invalid Activity")
-
-        viewModel.ismlauncherDefault()
-
-        deviceManager = context?.getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
-        componentName = ComponentName(requireContext(), DeviceAdmin::class.java)
-        checkAdminPermission()
     }
 
     override fun onDestroyView() {
