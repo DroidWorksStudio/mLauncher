@@ -88,6 +88,11 @@
     <string name="show_recents">Show Recents</string>
     <string name="double_tap_to_lock_screen">Double tap to lock</string>
 
+    <!-- Backup Strings -->
+    <string name="backup">Backup</string>
+    <string name="load_backup">Load Backup</string>
+    <string name="store_backup">Store Backup</string>
+
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>
     <string name="road_map">Roadmap</string>

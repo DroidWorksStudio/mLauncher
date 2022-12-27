@@ -47,6 +47,7 @@ import app.mlauncher.ui.compose.SettingsComposable.SettingsNumberItem
 import app.mlauncher.ui.compose.SettingsComposable.SettingsToggle
 import app.mlauncher.ui.compose.SettingsComposable.SettingsTopView
 import app.mlauncher.ui.compose.SettingsComposable.SettingsTextButton
+import app.mlauncher.ui.compose.SettingsComposable.SettingsTwoButtonRow
 
 class SettingsFragment : Fragment() {
 
@@ -390,6 +391,19 @@ class SettingsFragment : Fragment() {
                             currentAction = prefs.doubleTapAction,
                             onSelect = { j -> updateGesture(AppDrawerFlag.SetDoubleTap, j) },
                             appLabel = prefs.appClickDate.appLabel
+                        )
+                    }
+                )
+            )
+            SettingsArea(title = getString(R.string.backup),
+                selected = selected,
+                items = arrayOf(
+                    { _, _ ->
+                        SettingsTwoButtonRow(
+                            firstButtonText = getString(R.string.load_backup),
+                            secondButtonText = getString(R.string.store_backup),
+                            firstButtonAction = { loadFile(requireActivity()) },
+                            secondButtonAction = { storeFile(requireActivity()) },
                         )
                     }
                 )
