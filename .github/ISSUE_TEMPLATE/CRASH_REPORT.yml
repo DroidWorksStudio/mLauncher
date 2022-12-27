@@ -1,12 +1,12 @@
 name: Crash Report
-description: Create a report with a generated crash log attached (if possible) to help Open Launcher improve
+description: Create a report with a generated crash log attached (if possible) to help mLauncher improve
 labels: ['Type: Crash report']
 assignees: ['The-Repo-Club']
 body:
   - type: markdown
     attributes:
       value: |
-        Thank you for helping me to make Open Launcher better by reporting a crash. :hugs:
+        Thank you for helping me to make mLauncher better by reporting a crash. :hugs:
         Please fill in as much information as possible about your crash so that I can fix it immediately.
 
   - type: checkboxes
