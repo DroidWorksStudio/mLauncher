@@ -27,9 +27,12 @@ import android.view.WindowManager
 import android.widget.Toast
 import androidx.annotation.AttrRes
 import androidx.annotation.ColorInt
+import androidx.core.app.ActivityCompat
 import app.mlauncher.BuildConfig
 import app.mlauncher.R
 import app.mlauncher.data.AppModel
+import app.mlauncher.data.Constants.BACKUP_READ
+import app.mlauncher.data.Constants.BACKUP_WRITE
 import app.mlauncher.data.Prefs
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -367,4 +370,21 @@ fun dp2px(resources: Resources, dp: Int): Int {
         dp.toFloat(),
         resources.displayMetrics
     ).toInt()
+}
+
+fun storeFile(activity: Activity) {
+    val intent = Intent(Intent.ACTION_CREATE_DOCUMENT).apply {
+        addCategory(Intent.CATEGORY_OPENABLE)
+        type = "text/plain"
+        putExtra(Intent.EXTRA_TITLE, "backup.txt")
+    }
+    ActivityCompat.startActivityForResult(activity, intent, BACKUP_WRITE, null)
+}
+
+fun loadFile(activity: Activity) {
+    val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
+        addCategory(Intent.CATEGORY_OPENABLE)
+        type = "text/plain"
+    }
+    ActivityCompat.startActivityForResult(activity, intent, BACKUP_READ, null)
 }
