@@ -21,8 +21,8 @@ android {
         applicationId "app.mlauncher"
         minSdkVersion 23
         targetSdkVersion 33
-        versionCode 38
-        versionName "0.3.8"
+        versionCode 39
+        versionName "0.3.9"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
