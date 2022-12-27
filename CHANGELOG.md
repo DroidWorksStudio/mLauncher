@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.9](https://github.com/HeCodes2Much/mLauncher/tree/0.3.9) (27, December 2022)
+
+[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.3.8...0.3.9)
+
+**Implemented enhancements:**
+
+- Added Backup/Restore [\#84](https://github.com/HeCodes2Much/mLauncher/pull/84) ([The-Repo-Club](https://github.com/The-Repo-Club))
+
 ## [0.3.8](https://github.com/HeCodes2Much/mLauncher/tree/0.3.8) (25, December 2022)
 
 [Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.3.7...0.3.8)
