@@ -1,38 +1,84 @@
----
-name: 'Crash report'
-about: 'Create a report with a generated crash log attached (if possible) to help mLauncher
-  improve'
-title: '[Crash Report ] add text here'
-labels: 'Type: Crash report'
-assignees: 'The-Repo-Club'
----
+name: Crash Report
+description: Create a report with a generated crash log attached (if possible) to help Open Launcher improve
+labels: ['Type: Crash report']
+assignees: ['The-Repo-Club']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping me to make Open Launcher better by reporting a crash. :hugs:
+        Please fill in as much information as possible about your crash so that I can fix it immediately.
 
-- [ ] I have updated the title to best match the issue.
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: "Checklist"
+      options:
+        - label: "I have updated the title to best match the issue."
+          required: true
 
-<!--
-Thank you for your help in making mLauncher more stable and reliable!
+  - type: input
+    id: app-version
+    attributes:
+     label: App version
+     description: "In which version did you encounter the crash?"
+     placeholder: "xx.xx - Can be seen in the app from the 'Settings' section"
+    validations:
+      required: true
 
-Guide to a good crash-report:
-• Please search existing bug/crash reports to avoid creating duplicates.
-• Give your crash report a good name (no generics like "Error" or "Crash"), so others can easily identify the topic of your issue.
-• Describe what you were doing what could've led to the crash and whether the crash is random or reproducible.
--->
+  - type: input
+    id: device-os-info
+    attributes:
+     label: Android version
+     description: |
+      With what operating system (+ version) did you encounter the crash?
+     placeholder: "Example: Android 10"
 
-#### Short description <!-- to be filled in -->
-Describe what you were doing that could've led to the crash.
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to reproduce the crash
+      description: |
+        What did you do for the crash to show up?
+        If you can't cause the crash to show up again reliably (and hence don't have a proper set of steps to give us), please still try to give as many details as possible on how you think you encountered the crash.
+      placeholder: |
+        1. Go to '...'
+        2. Press on '....'
+    validations:
+      required: true
 
-#### Steps to reproduce <!-- to be filled in -->
-1. Go to '…'
-2. Click on '…'
-3. Scroll down to '…'
-4. See crash
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected behavior
+      description: |
+        Tell us what you expect to happen.
 
-#### Additional elements
+  - type: textarea
+    id: screen-media
+    attributes:
+      label: Screenshots/Screen recordings
+      description: |
+        A picture or video is worth a thousand words.
+        If applicable, share screenshots or a screen recording to help explain your problem.
+      placeholder: |
+        <details>
+          <summary>Context</summary>
 
-<details>
-  <summary>Context</summary>
+          screenshots go in here
 
-<!-- Paste the generated crash log below where applicable or screenshot, screen recording etc... -->
-Add your long texts or screenshots here
+        </details>
 
-</details>
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: |
+        If you could catch the log of the crash, don't forget to share it. This is the best way to point out any crash.
+
+  - type: textarea
+    id: additional-information
+    attributes:
+      label: Additional information
+      description: |
+        Any other information you'd like to include.
