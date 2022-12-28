@@ -75,8 +75,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         super.onStart()
         if (prefs.showStatusBar) showStatusBar(requireActivity()) else hideStatusBar(requireActivity())
 
-        binding.clock.textSize = prefs.textSize * 2.5f
-        binding.date.textSize = prefs.textSize.toFloat()
+        binding.clock.textSize = prefs.textSizeLauncher * 2.5f
+        binding.date.textSize = prefs.textSizeLauncher.toFloat()
 
     }
 
@@ -430,7 +430,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             for (i in oldAppsNum until newAppsNum) {
                 val view = layoutInflater.inflate(R.layout.home_app_button, null) as TextView
                 view.apply {
-                    textSize = prefs.textSize.toFloat()
+                    textSize = prefs.textSizeLauncher.toFloat()
                     id = i
                     text = prefs.getHomeAppModel(i).appLabel
                     setOnTouchListener(getHomeAppsGestureListener(context, this))

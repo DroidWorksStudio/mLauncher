@@ -18,16 +18,20 @@ android {
     }
 
     buildTypes {
-        named("release") {
-            isDebuggable = false
-            isMinifyEnabled = true
-            setProguardFiles(listOf(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"))
-        }
-        named("debug") {
-            isDebuggable = true
+        getByName("debug") {
             isMinifyEnabled = false
+            isShrinkResources = false
+            isDebuggable = true
             applicationIdSuffix = ".debug"
-            setProguardFiles(listOf(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"))
+            versionNameSuffix = "-debug"
+            resValue ("string", "app_name", "mLauncher Debug")
+        }
+
+        getByName("release") {
+            isMinifyEnabled = true
+            isShrinkResources = true
+            proguardFiles (getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            resValue ("string", "app_name", "mLauncher")
         }
     }
 
@@ -79,7 +83,7 @@ dependencies {
     // Work Manager
     implementation("androidx.work:work-runtime-ktx:2.7.1")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    implementation("com.google.code.gson:gson:2.8.9")
+    implementation("com.google.code.gson:gson:2.10")
 
     // JETPACK
     // Integration with activities
