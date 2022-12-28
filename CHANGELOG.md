@@ -1,5 +1,13 @@
 # Changelog
 
+## [Coming Soon](https://github.com/HeCodes2Much/mLauncher/tree/HEAD)
+
+[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.3.9...HEAD)
+
+**Merged pull requests:**
+
+- clean: Cleanup some of the language strings [\#114](https://github.com/HeCodes2Much/mLauncher/pull/114) ([The-Repo-Club](https://github.com/The-Repo-Club))
+
 ## [0.3.9](https://github.com/HeCodes2Much/mLauncher/tree/0.3.9) (27, December 2022)
 
 [Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.3.8...0.3.9)
