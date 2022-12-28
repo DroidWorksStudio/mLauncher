@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">mLauncher</string>
-    <string name="app">אפליקציה</string>
+	<string name="app">אפליקציה</string>
     <string name="set_as_default_launcher">הגדר כמפעיל ברירת מחדל</string>
     <string name="double_tap_to_lock_screen">הקש פעמיים כדי לנעול</string>
     <string name="experimental_">(נִסיוֹנִי)</string>

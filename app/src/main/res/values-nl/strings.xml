@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">mLauncher</string>
-    <string name="app">app</string>
+	<string name="app">app</string>
     <string name="set_as_default_launcher">Instellen als standaard launcher</string>
     <string name="double_tap_to_lock_screen">Dubbeltik om te vergrendelen</string>
     <string name="experimental_">(experimenteel)</string>

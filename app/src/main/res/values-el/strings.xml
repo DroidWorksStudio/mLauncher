@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">mLauncher</string>
-    <string name="app">App</string>
+	<string name="app">App</string>
     <string name="set_as_default_launcher">Ορισμός ως προεπιλεγμένη εκκίνηση</string>
     <string name="double_tap_to_lock_screen">Πατήστε δύο φορές για κλείδωμα</string>
     <string name="experimental_">(πειραματικός)</string>

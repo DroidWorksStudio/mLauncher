@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">mLauncher</string>
-    <string name="app">تطبيق</string>
+	<string name="app">تطبيق</string>
     <string name="set_as_default_launcher">تعيين كمشغل افتراضي</string>
     <string name="double_tap_to_lock_screen">انقر نقرًا مزدوجًا للقفل</string>
     <string name="experimental_">(تجريبي)</string>

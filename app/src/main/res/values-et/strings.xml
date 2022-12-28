@@ -1,5 +1,4 @@
 <resources>
-	<string name="app_name">mLauncher</string>
 	<string name="app">Rakendus</string>
 	<string name="set_as_default_launcher">Määra peamiseks avakuvarakenduseks</string>
     <string name="double_tap_to_lock_screen">Topeltvajutus ekraani lukustamiseks</string>

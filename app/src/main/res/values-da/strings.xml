@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">mLauncher</string>
-    <string name="app">App</string>
+	<string name="app">App</string>
     <string name="set_as_default_launcher">Indstil som standard launcher</string>
     <string name="double_tap_to_lock_screen">Tryk to gange for at låse</string>
     <string name="experimental_">(eksperimentel)</string>

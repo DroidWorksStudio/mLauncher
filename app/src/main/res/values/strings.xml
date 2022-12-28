@@ -1,6 +1,5 @@
 <resources>
     <!-- Base Settings -->
-    <string name="app_name">mLauncher</string>
     <string name="app">App</string>
 
     <!-- Admin Settings -->
@@ -59,6 +58,7 @@
     <string name="center">Center</string>
     <string name="dark">Dark</string>
     <string name="light">Light</string>
+    <string name="settings">Settings</string>
     <string name="lang_system">System</string>
     <string name="system_default">System</string>
 
@@ -109,6 +109,4 @@
         \n\nNote: Turn this OFF first if you decide to delete mLauncher.</string>
     <string name="accessibility_service_name">mLauncher Actions Service</string>
     <string name="accessibility_service_description">This accessibility service allows mLauncher to do certain actions such as locking the screen or opening the quick settings.</string>
-
-
 </resources>

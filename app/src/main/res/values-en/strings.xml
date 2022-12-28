@@ -1,6 +1,5 @@
 <resources>
     <!-- Base Settings -->
-    <string name="app_name">mLauncher</string>
     <string name="app">App</string>
 
     <!-- Admin Settings -->
@@ -59,6 +58,7 @@
     <string name="center">Center</string>
     <string name="dark">Dark</string>
     <string name="light">Light</string>
+    <string name="settings">Settings</string>
     <string name="lang_system">System</string>
     <string name="system_default">System</string>
 
@@ -88,8 +88,14 @@
     <string name="show_recents">Show Recents</string>
     <string name="double_tap_to_lock_screen">Double tap to lock</string>
 
+    <!-- Backup Strings -->
+    <string name="backup">Backup</string>
+    <string name="load_backup">Load Backup</string>
+    <string name="store_backup">Store Backup</string>
+
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>
+    <string name="road_map">Roadmap</string>
     <string name="drawer_list_empty_hint">No apps found</string>
     <string name="long_press_for_settings">Long press anywhere for settings</string>
     <string name="swipe_up_for_apps">Swipe up for all apps</string>
@@ -103,6 +109,4 @@
         \n\nNote: Turn this OFF first if you decide to delete mLauncher.</string>
     <string name="accessibility_service_name">mLauncher Actions Service</string>
     <string name="accessibility_service_description">This accessibility service allows mLauncher to do certain actions such as locking the screen or opening the quick settings.</string>
-
-
 </resources>

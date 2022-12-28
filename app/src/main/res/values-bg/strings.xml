@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">mLauncher</string>
-    <string name="app">Приложение</string>
+	<string name="app">Приложение</string>
     <string name="set_as_default_launcher">Задайте като стартер по подразбиране</string>
     <string name="double_tap_to_lock_screen">Докоснете двукратно за заключване</string>
     <string name="experimental_">(експериментален)</string>
