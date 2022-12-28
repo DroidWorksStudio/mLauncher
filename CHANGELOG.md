@@ -4,6 +4,11 @@
 
 [Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.3.9...HEAD)
 
+**Implemented enhancements:**
+
+- Feat: Added custom font size for settings [\#116](https://github.com/HeCodes2Much/mLauncher/pull/116) ([The-Repo-Club](https://github.com/The-Repo-Club))
+- clean: clean up the template files. [\#115](https://github.com/HeCodes2Much/mLauncher/pull/115) ([The-Repo-Club](https://github.com/The-Repo-Club))
+
 **Merged pull requests:**
 
 - clean: Cleanup some of the language strings [\#114](https://github.com/HeCodes2Much/mLauncher/pull/114) ([The-Repo-Club](https://github.com/The-Repo-Club))
