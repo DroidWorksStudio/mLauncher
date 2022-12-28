@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">мЛаунцхер</string>
     <string name="app">Апликација</string>
     <string name="set_as_default_launcher">Постави као подразумевани покретач</string>
     <string name="double_tap_to_lock_screen">Двапут додирните да бисте закључали</string>

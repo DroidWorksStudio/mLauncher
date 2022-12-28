@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">ايم لانچر</string>
     <string name="app">ايپ</string>
     <string name="set_as_default_launcher">ڊفالٽ لانچر طور سيٽ ڪريو</string>
     <string name="double_tap_to_lock_screen">لاڪ ڪرڻ لاءِ ڊبل ٽيپ ڪريو</string>

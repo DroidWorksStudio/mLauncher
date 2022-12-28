@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">mL başlatıcı</string>
     <string name="app">Uygulama</string>
     <string name="set_as_default_launcher">Varsayılan başlatıcı olarak ayarla</string>
     <string name="double_tap_to_lock_screen">Kilitlemek için iki kez dokunun</string>

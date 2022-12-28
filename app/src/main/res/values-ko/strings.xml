@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">m런처</string>
     <string name="app">앱</string>
     <string name="set_as_default_launcher">기본 런처로 설정</string>
     <string name="double_tap_to_lock_screen">잠그려면 두 번 탭하세요.</string>

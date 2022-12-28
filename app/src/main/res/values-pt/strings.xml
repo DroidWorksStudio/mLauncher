@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">mLlauncher</string>
     <string name="app">Aplicativo</string>
     <string name="set_as_default_launcher">Definir como iniciador padrão</string>
     <string name="double_tap_to_lock_screen">Toque duas vezes para bloquear</string>
