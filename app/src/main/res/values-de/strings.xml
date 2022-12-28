@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">mlauncher</string>
-    <string name="app">App</string>
+	<string name="app">App</string>
     <string name="set_as_default_launcher">Als Standard-Launcher festlegen</string>
     <string name="double_tap_to_lock_screen">Zum Sperren doppeltippen</string>
     <string name="experimental_">(Experimental)</string>

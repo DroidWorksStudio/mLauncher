@@ -1,5 +1,4 @@
 <resources>
-	<string name="app_name">mLauncher</string>
 	<string name="app">应用</string>
 	<string name="set_as_default_launcher">设为默认启动器</string>
     <string name="double_tap_to_lock_screen">轻按两次锁定</string>

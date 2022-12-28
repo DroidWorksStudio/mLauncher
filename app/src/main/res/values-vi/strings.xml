@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">mLauncher</string>
-    <string name="app">Ứng dụng</string>
+	<string name="app">Ứng dụng</string>
     <string name="set_as_default_launcher">Đặt làm trình khởi chạy mặc định</string>
     <string name="double_tap_to_lock_screen">Nhấn đúp để khóa</string>
     <string name="experimental_">(thực nghiệm)</string>

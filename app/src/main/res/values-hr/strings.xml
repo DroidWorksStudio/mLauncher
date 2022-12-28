@@ -1,5 +1,4 @@
 <resources>
-	<string name="app_name">mLauncher</string>
 	<string name="app">Aplikacija</string>
 	<string name="set_as_default_launcher">Postavi kao zadani pokretač</string>
     <string name="double_tap_to_lock_screen">Dvostruki dodir za zaključavanje</string>

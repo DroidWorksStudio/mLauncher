@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">mLauncher</string>
-    <string name="app">ਐਪ</string>
+	<string name="app">ਐਪ</string>
     <string name="set_as_default_launcher">ਡਿਫੌਲਟ ਲਾਂਚਰ ਵਜੋਂ ਸੈੱਟ ਕਰੋ</string>
     <string name="double_tap_to_lock_screen">ਲਾਕ ਕਰਨ ਲਈ ਡਬਲ ਟੈਪ ਕਰੋ</string>
     <string name="experimental_">(ਪ੍ਰਯੋਗਾਤਮਕ)</string>

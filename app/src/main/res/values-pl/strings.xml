@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">mLauncher</string>
-    <string name="app">Aplikacja</string>
+	<string name="app">Aplikacja</string>
     <string name="set_as_default_launcher">Ustaw jako domyślny program uruchamiający</string>
     <string name="double_tap_to_lock_screen">Kliknij dwukrotnie, aby zablokować</string>
     <string name="experimental_">(eksperymentalny)</string>

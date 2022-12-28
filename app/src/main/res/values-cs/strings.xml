@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">mlauncher</string>
-    <string name="app">Aplikace</string>
+	<string name="app">Aplikace</string>
     <string name="set_as_default_launcher">Nastavit jako výchozí spouštěč</string>
     <string name="double_tap_to_lock_screen">Dvojitým klepnutím uzamknete</string>
     <string name="experimental_">(experimentální)</string>

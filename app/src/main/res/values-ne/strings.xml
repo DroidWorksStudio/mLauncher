@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">mLauncher</string>
-    <string name="app">एप</string>
+	<string name="app">एप</string>
     <string name="set_as_default_launcher">पूर्वनिर्धारित लन्चरको रूपमा सेट गर्नुहोस्</string>
     <string name="double_tap_to_lock_screen">लक गर्न डबल ट्याप गर्नुहोस्</string>
     <string name="experimental_">(प्रयोगात्मक)</string>
