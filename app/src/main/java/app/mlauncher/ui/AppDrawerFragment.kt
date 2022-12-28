@@ -1,7 +1,9 @@
 package app.mlauncher.ui
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -40,6 +42,7 @@ class AppDrawerFragment : Fragment() {
         return binding.root
     }
 
+    @SuppressLint("RtlHardcoded")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -71,9 +74,9 @@ class AppDrawerFragment : Fragment() {
         } ?: throw Exception("Invalid Activity")
 
         val gravity = when(Prefs(requireContext()).drawerAlignment) {
-            Constants.Gravity.Left -> android.view.Gravity.START
-            Constants.Gravity.Center -> android.view.Gravity.CENTER
-            Constants.Gravity.Right -> android.view.Gravity.END
+            Constants.Gravity.Left -> Gravity.LEFT
+            Constants.Gravity.Center -> Gravity.CENTER
+            Constants.Gravity.Right -> Gravity.RIGHT
         }
 
         val appAdapter = AppDrawerAdapter(
