@@ -52,7 +52,8 @@ private const val CLICK_CLOCK = "CLICK_CLOCK"
 private const val CLICK_DATE = "CLICK_DATE"
 private const val DOUBLE_TAP = "DOUBLE_TAP"
 
-private const val TEXT_SIZE = "text_size"
+private const val TEXT_SIZE_LAUNCHER = "TEXT_SIZE_LAUNCHER"
+private const val TEXT_SIZE_SETTINGS = "TEXT_SIZE_SETTINGS"
 
 class Prefs(val context: Context) {
 
@@ -311,15 +312,25 @@ class Prefs(val context: Context) {
         edit.apply()
     }
 
-    var textSize: Int
+    var textSizeLauncher: Int
         get() {
             return try {
-                prefs.getInt(TEXT_SIZE, 18)
+                prefs.getInt(TEXT_SIZE_LAUNCHER, 18)
             } catch (_: Exception) {
                 18
             }
         }
-        set(value) = prefs.edit().putInt(TEXT_SIZE, value).apply()
+        set(value) = prefs.edit().putInt(TEXT_SIZE_LAUNCHER, value).apply()
+
+    var textSizeSettings: Int
+        get() {
+            return try {
+                prefs.getInt(TEXT_SIZE_SETTINGS, 18)
+            } catch (_: Exception) {
+                18
+            }
+        }
+        set(value) = prefs.edit().putInt(TEXT_SIZE_SETTINGS, value).apply()
 
 
     // return app label

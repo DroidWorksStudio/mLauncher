@@ -40,7 +40,7 @@ class AppDrawerAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         binding = AdapterAppDrawerBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         prefs = Prefs(parent.context)
-        binding.appTitle.textSize = prefs.textSize.toFloat()
+        binding.appTitle.textSize = prefs.textSizeLauncher.toFloat()
         return ViewHolder(binding)
     }
 
@@ -202,7 +202,7 @@ class AppDrawerAdapter(
                 if (appModel.user != android.os.Process.myUserHandle()) {
                     val icon = AppCompatResources.getDrawable(context, R.drawable.work_profile)
                     val prefs = Prefs(context)
-                    val px = dp2px(resources, prefs.textSize)
+                    val px = dp2px(resources, prefs.textSizeLauncher)
                     icon?.setBounds(0, 0, px, px)
                     if (appLabelGravity == LEFT) {
                         appTitle.setCompoundDrawables(null, null, icon, null)
