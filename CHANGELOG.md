@@ -1,16 +1,13 @@
 # Changelog
 
-## [Coming Soon](https://github.com/HeCodes2Much/mLauncher/tree/HEAD)
+## [0.4.0](https://github.com/HeCodes2Much/mLauncher/tree/0.4.0) (28, December 2022)
 
-[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.3.9...HEAD)
+[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.3.9...0.4.0)
 
 **Implemented enhancements:**
 
 - Feat: Added custom font size for settings [\#116](https://github.com/HeCodes2Much/mLauncher/pull/116) ([The-Repo-Club](https://github.com/The-Repo-Club))
 - clean: clean up the template files. [\#115](https://github.com/HeCodes2Much/mLauncher/pull/115) ([The-Repo-Club](https://github.com/The-Repo-Club))
-
-**Merged pull requests:**
-
 - clean: Cleanup some of the language strings [\#114](https://github.com/HeCodes2Much/mLauncher/pull/114) ([The-Repo-Club](https://github.com/The-Repo-Club))
 
 ## [0.3.9](https://github.com/HeCodes2Much/mLauncher/tree/0.3.9) (27, December 2022)
