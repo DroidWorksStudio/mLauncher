@@ -5,20 +5,9 @@ plugins {
     id("kotlin-android") apply true
 }
 
-
 android {
     namespace = "app.mlauncher"
     compileSdk = 33
-
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-
-
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_1_8.toString()
-    }
 
     defaultConfig {
         applicationId = "app.mlauncher"
@@ -26,17 +15,6 @@ android {
         targetSdk = 33
         versionCode = 40
         versionName = "0.4.0"
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-    }
-
-    buildFeatures {
-        compose = true
-        viewBinding = true
-    }
-
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.3.2"
     }
 
     buildTypes {
@@ -65,9 +43,17 @@ android {
     }
 
     buildFeatures {
+        compose = true
         viewBinding = true
     }
 
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.3.2"
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
 
     lint {
         abortOnError = false
@@ -75,8 +61,10 @@ android {
 }
 
 dependencies {
+    val kotlinVersion: String? by extra
+
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
-    implementation(kotlin("stdlib", KotlinCompilerVersion.VERSION))
+    implementation (kotlin("stdlib", version = kotlinVersion))
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.5.1")
     implementation("androidx.recyclerview:recyclerview:1.2.1")
