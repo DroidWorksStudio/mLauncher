@@ -89,7 +89,7 @@ class SettingsFragment : Fragment() {
             }
 
             SettingsTheme(isDark) {
-                Settings((prefs.textSize - offset).sp)
+                Settings((prefs.textSizeSettings - offset).sp)
             }
         }
     }
@@ -174,18 +174,17 @@ class SettingsFragment : Fragment() {
                             values = Constants.Language.values(),
                             onSelect = { j -> setLang(j) }
                         )
-                    },
-                    { open, onChange ->
+                    },{ open, onChange ->
                         SettingsNumberItem(
                             title = stringResource(R.string.app_text_size),
                             fontSize = iconFs,
                             open = open,
                             onChange = onChange,
-                            currentSelection = remember { mutableStateOf(prefs.textSize) },
+                            currentSelection = remember { mutableStateOf(prefs.textSizeLauncher) },
                             min = Constants.TEXT_SIZE_MIN,
                             max = Constants.TEXT_SIZE_MAX,
                             onValueChange = { },
-                            onSelect = { f -> setTextSize(f) }
+                            onSelect = { f -> setTextSizeLauncher(f) }
                         )
                     }
                 )
@@ -396,6 +395,24 @@ class SettingsFragment : Fragment() {
                     }
                 )
             )
+            SettingsArea(title = getString(R.string.settings),
+                selected = selected,
+                items = arrayOf(
+                    { open, onChange ->
+                        SettingsNumberItem(
+                            title = stringResource(R.string.app_text_size),
+                            fontSize = iconFs,
+                            open = open,
+                            onChange = onChange,
+                            currentSelection = remember { mutableStateOf(prefs.textSizeSettings) },
+                            min = Constants.TEXT_SIZE_MIN,
+                            max = Constants.TEXT_SIZE_MAX,
+                            onValueChange = { },
+                            onSelect = { f -> setTextSizeSettings(f) }
+                        )
+                    }
+                )
+            )
             SettingsArea(title = getString(R.string.backup),
                 selected = selected,
                 items = arrayOf(
@@ -512,8 +529,13 @@ class SettingsFragment : Fragment() {
         prefs.language = lang_int
         requireActivity().recreate()
     }
-    private fun setTextSize(size: Int) {
-        prefs.textSize = size
+
+    private fun setTextSizeLauncher(size: Int) {
+        prefs.textSizeLauncher = size
+    }
+
+    private fun setTextSizeSettings(size: Int) {
+        prefs.textSizeSettings = size
     }
 
     private fun updateGesture(flag: AppDrawerFlag, action: Action) {
