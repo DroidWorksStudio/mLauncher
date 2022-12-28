@@ -39,18 +39,6 @@ body:
       With what operating system (+ version) did you encounter the bug?
      placeholder: "Example: Android 10"
 
-  - type: dropdown
-    id: download
-    attributes:
-      label: How did you download the software?
-      options:
-        - F-Droid
-        - Github (Release)
-        - Github (Action)
-        - Built from Source
-    validations:
-      required: true
-
   - type: textarea
     id: steps-to-reproduce
     attributes:

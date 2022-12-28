@@ -1,7 +1,6 @@
 name: Crash Report
 description: Create a report with a generated crash log attached (if possible) to help mLauncher improve
-labels: ['Type: Crash Report']
-title: '[Crash Report] add text here'
+labels: ['Type: Crash report']
 assignees: ['The-Repo-Club']
 body:
   - type: markdown
@@ -34,18 +33,6 @@ body:
      description: |
       With what operating system (+ version) did you encounter the crash?
      placeholder: "Example: Android 10"
-
-  - type: dropdown
-    id: download
-    attributes:
-      label: How did you download the software?
-      options:
-        - F-Droid
-        - Github (Release)
-        - Github (Action)
-        - Built from Source
-    validations:
-      required: true
 
   - type: textarea
     id: steps-to-reproduce
