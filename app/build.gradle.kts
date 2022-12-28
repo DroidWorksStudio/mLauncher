@@ -40,7 +40,15 @@ android {
             outputs.all {
                 val output = this as? com.android.build.gradle.internal.api.BaseVariantOutputImpl
                 if (output?.outputFileName?.endsWith(".apk") == true) {
-                    output.outputFileName = "${defaultConfig.applicationId}_v${defaultConfig.versionName}.apk"
+                    output.outputFileName = "${defaultConfig.applicationId}_v${defaultConfig.versionName}-Signed.apk"
+                }
+            }
+        }
+        if (buildType.name == "debug") {
+            outputs.all {
+                val output = this as? com.android.build.gradle.internal.api.BaseVariantOutputImpl
+                if (output?.outputFileName?.endsWith(".apk") == true) {
+                    output.outputFileName = "${defaultConfig.applicationId}_v${defaultConfig.versionName}-Debug.apk"
                 }
             }
         }
@@ -96,4 +104,6 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:2.5.3")
 
     implementation("androidx.constraintlayout:constraintlayout-compose:1.0.1")
+    implementation("com.google.android.material:material:1.7.0")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.5.1")
 }

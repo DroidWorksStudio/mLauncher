@@ -5,8 +5,6 @@ import android.content.*
 import android.content.pm.LauncherApps
 import android.content.pm.PackageManager
 import android.content.pm.PackageManager.NameNotFoundException
-import android.content.res.Configuration
-import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import android.content.res.Resources
 import android.net.Uri
 import android.os.Build
@@ -25,11 +23,8 @@ import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.Toast
-import androidx.annotation.AttrRes
-import androidx.annotation.ColorInt
 import androidx.core.app.ActivityCompat
 import app.mlauncher.BuildConfig
-import app.mlauncher.R
 import app.mlauncher.data.AppModel
 import app.mlauncher.data.Constants.BACKUP_READ
 import app.mlauncher.data.Constants.BACKUP_WRITE
@@ -329,7 +324,7 @@ fun hideStatusBar(activity: Activity) {
     }
 }
 
-fun Context.isDarkThemeOn(): Boolean {
+/*fun Context.isDarkThemeOn(): Boolean {
     return resources.configuration.uiMode and
             Configuration.UI_MODE_NIGHT_MASK == UI_MODE_NIGHT_YES
 }
@@ -339,7 +334,7 @@ fun Context.copyToClipboard(text: String) {
     val clipData = ClipData.newPlainText(getString(R.string.app_name), text)
     clipboardManager.setPrimaryClip(clipData)
     showToastShort(this, "Copied")
-}
+}*/
 
 fun Context.openUrl(url: String) {
     if (url.isEmpty()) return
@@ -348,7 +343,7 @@ fun Context.openUrl(url: String) {
     startActivity(intent)
 }
 
-@ColorInt
+/*@ColorInt
 fun Context.getColorFromAttr(
     @AttrRes attrColor: Int,
     typedValue: TypedValue = TypedValue(),
@@ -356,7 +351,7 @@ fun Context.getColorFromAttr(
 ): Int {
     theme.resolveAttribute(attrColor, typedValue, resolveRefs)
     return typedValue.data
-}
+}*/
 
 fun uninstallApp(context: Context, appPackage: String) {
     val intent = Intent(Intent.ACTION_DELETE)
@@ -375,8 +370,8 @@ fun dp2px(resources: Resources, dp: Int): Int {
 fun storeFile(activity: Activity) {
     val intent = Intent(Intent.ACTION_CREATE_DOCUMENT).apply {
         addCategory(Intent.CATEGORY_OPENABLE)
-        type = "text/plain"
-        putExtra(Intent.EXTRA_TITLE, "backup.txt")
+        type = "application/json"
+        putExtra(Intent.EXTRA_TITLE, "backup.json")
     }
     ActivityCompat.startActivityForResult(activity, intent, BACKUP_WRITE, null)
 }
@@ -384,7 +379,7 @@ fun storeFile(activity: Activity) {
 fun loadFile(activity: Activity) {
     val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
         addCategory(Intent.CATEGORY_OPENABLE)
-        type = "text/plain"
+        type = "application/json"
     }
     ActivityCompat.startActivityForResult(activity, intent, BACKUP_READ, null)
 }
