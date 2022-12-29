@@ -1,22 +1,22 @@
-Šaknis iš <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimalus ir švarus.
+Projektas remiantis <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a> projektu. Minimalus ir tvarkingas.
     
-# Šakutė su papildomomis funkcijomis
+# Su papildomomis funkcijomis
 
-- Pašalinta netvarka, pavyzdžiui, skelbimai ir nuorodos
-- Programėlių stalčiuje galite pervadinti programėles (Programėlių pervadinimas pagrindiniame ekrane jau palaikomas. Tiesiog ilgai spustelėkite programą pagrindiniame ekrane ir pradėkite rašyti)
+– Pašalinta netvarka, pvz., skelbimai ir nuorodos
+- Programėles galite pervardyti programų stalčiuje (programėlių pervadinimas pagrindiniame ekrane jau palaikomas. Tiesiog ilgai spustelėkite programėlę pagrindiniame ekrane ir pradėkite rašyti)
 - Pradiniame ekrane pridėjome daug daugiau gestų parinkčių:
-    - Gestai dabar yra:
-        - Braukite aukštyn, žemyn, kairėn, dešinėn
-        - Paspaudus ant laikrodžio
-        - Paspaudus ant datos
-    – Dabar galimi veiksmai:
-        - Atidarykite nurodytą programą
-        - Ekrano užrakinimas
-        - Atidaryti pranešimų stalčių
-        - Greitųjų nustatymų atidarymas
-- Taip pat galite nustatyti laikrodį nepriklausomai nuo namų programų
-- Programėlių derinimo programėlių stalčiuje keitimas
-- Šrifto dydžio keitimas
+     - Gestai dabar yra:
+         - Braukite aukštyn, žemyn, kairėn, dešinėn
+         - Paspaudus ant laikrodžio/laiko
+         - Paspaudus ant datos
+     – Dabar galimi veiksmai:
+         - Atidarykite nurodytą programą
+         - Ekrano užrakinimas
+         - Atidaryti pranešimus
+         - Greitųjų nustatymų atidarymas
+- Taip pat galite nustatyti laikrodžio poziciją nepriklausomai nuo pagrindinio ekrano programų
+- Pakeiskite programų išdėstymą programų stalčiuje
+- Keisti šrifto dydį
 - Pašalintas interneto leidimas. Niekada nežinote, ką programos kūrėjas nori sužinoti apie jus.
 
 ## Vertimai:
@@ -27,7 +27,7 @@
   - Bulgarų kalba
   - Kinų kalba
   - Kroatų kalba
-  - Čekijos
+  - Čekij@ kalba
   - Danų kalba
   - Anglų kalba
   - Estų kalba
@@ -43,7 +43,7 @@
   - Vengrų kalba
   - Islandų kalba
   - Indoneziečių kalba
-  - Airijos
+  - Airių kalba
   - Italų kalba
   - Japonų kalba
   - Korėjiečių kalba
@@ -56,14 +56,14 @@
   - Nepalų kalba
   - Persų kalba
   - Lenkų kalba
-  - Portugalų (Europos)
+  - Portugalų (Europos) kalba
   - Pandžabų kalba
   - Rusų kalba
   - Serbų kalba
   - Sindų kalba
   - Ispanų kalba
   - Švedų kalba
-  - Tailando
-  - Turkijos
+  - Taijų kalba
+  - Turkų kalba
   - Ukrainiečių kalba
   - Vietnamiečių kalba
