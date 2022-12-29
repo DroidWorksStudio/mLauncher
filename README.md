@@ -20,8 +20,6 @@
 
 We try to balance customizability and minimalization well still being simple :)</h3>
 
-<img src="art/Header.png" width="1000">
-
 # Forked with extra features
 
 - Removed clutter, like ads and links
