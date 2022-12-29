@@ -174,7 +174,8 @@ class SettingsFragment : Fragment() {
                             values = Constants.Language.values(),
                             onSelect = { j -> setLang(j) }
                         )
-                    },{ open, onChange ->
+                    },
+                    { open, onChange ->
                         SettingsNumberItem(
                             title = stringResource(R.string.app_text_size),
                             fontSize = iconFs,
@@ -186,7 +187,19 @@ class SettingsFragment : Fragment() {
                             onValueChange = { },
                             onSelect = { f -> setTextSizeLauncher(f) }
                         )
-                    }
+                    },
+                    { open, onChange ->
+                        SettingsNumberItem(
+                            title = stringResource(R.string.opacity),
+                            fontSize = iconFs,
+                            open = open,
+                            onChange = onChange,
+                            currentSelection = remember { mutableStateOf(prefs.opacityNum) },
+                            min = 0,
+                            max = 100,
+                            onSelect = { j -> updateOpacityNum(j) }
+                        )
+                    },
                 )
             )
             SettingsArea(
@@ -509,6 +522,11 @@ class SettingsFragment : Fragment() {
     private fun updateHomeAppsNum(homeAppsNum: Int) {
         prefs.homeAppsNum = homeAppsNum
         viewModel.homeAppsCount.value = homeAppsNum
+    }
+
+    private fun updateOpacityNum(opacityNum: Int) {
+        prefs.opacityNum = opacityNum
+        viewModel.opacityNum.value = opacityNum
     }
 
     private fun toggleKeyboardText() {

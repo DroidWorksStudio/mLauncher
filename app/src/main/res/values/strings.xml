@@ -77,7 +77,8 @@
 
     <string name="open">Open</string>
     <string name="close">Close</string>
-    <string name="copy">Copy</string>
+    <string name="copy">copy</string>
+	<string name="opacity">Opacity</string>
 
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Show Notification</string>

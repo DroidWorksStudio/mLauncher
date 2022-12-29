@@ -82,6 +82,11 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
     override fun onResume() {
         super.onResume()
+        var context = requireContext()
+
+        var setColor = prefs.opacityNum
+        val allColors = context.resources.getIntArray(R.array.colors)
+        binding.mainLayout.setBackgroundColor(allColors[setColor])
 
         val locale = prefs.language.locale()
         val best12 = getBestDateTimePattern(locale, "hhmma")

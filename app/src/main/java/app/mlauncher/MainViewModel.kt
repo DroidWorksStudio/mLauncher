@@ -32,6 +32,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     val clockAlignment = MutableLiveData(prefs.clockAlignment)
     val homeAppsAlignment = MutableLiveData(Pair(prefs.homeAlignment, prefs.homeAlignmentBottom))
     val homeAppsCount = MutableLiveData(prefs.homeAppsNum)
+    val opacityNum = MutableLiveData(prefs.opacityNum)
 
     fun selectedApp(appModel: AppModel, flag: AppDrawerFlag, n: Int = 0) {
         when (flag) {
