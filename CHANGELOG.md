@@ -1,5 +1,17 @@
 # Changelog
 
+## [Coming Soon](https://github.com/HeCodes2Much/mLauncher/tree/HEAD)
+
+[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.4.0...HEAD)
+
+**Implemented enhancements:**
+
+- translations: fix fastlane descriptions for lt\_LT [\#122](https://github.com/HeCodes2Much/mLauncher/pull/122) ([TruncatedDinosour](https://github.com/TruncatedDinosour))
+
+**Fixed bugs:**
+
+- cleanup: just some basic cleanup to the code base [\#120](https://github.com/HeCodes2Much/mLauncher/pull/120) ([The-Repo-Club](https://github.com/The-Repo-Club))
+
 ## [0.4.0](https://github.com/HeCodes2Much/mLauncher/tree/0.4.0) (28, December 2022)
 
 [Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.3.9...0.4.0)
@@ -102,13 +114,50 @@
 
 ## [0.3.5](https://github.com/HeCodes2Much/mLauncher/tree/0.3.5) (19, December 2022)
 
-[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/1.2.0...0.3.5)
+[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/19f48b1aad5ddb5c53f7241233ad8c930f686537...0.3.5)
+
+**Implemented enhancements:**
+
+- \[Feature Request\] Empty space below app list [\#26](https://github.com/HeCodes2Much/mLauncher/issues/26)
+- \[Feature Request\] Remove the \_ in the app drawer [\#18](https://github.com/HeCodes2Much/mLauncher/issues/18)
+- App draw header [\#32](https://github.com/HeCodes2Much/mLauncher/pull/32) ([The-Repo-Club](https://github.com/The-Repo-Club))
 
 **Merged pull requests:**
 
 - ismlauncherDefault [\#55](https://github.com/HeCodes2Much/mLauncher/pull/55) ([The-Repo-Club](https://github.com/The-Repo-Club))
 - Fix a few actions [\#54](https://github.com/HeCodes2Much/mLauncher/pull/54) ([The-Repo-Club](https://github.com/The-Repo-Club))
 - feat: add toggle for "open apps automatically" [\#53](https://github.com/HeCodes2Much/mLauncher/pull/53) ([The-Repo-Club](https://github.com/The-Repo-Club))
+- Renamed to settingsView and added marginVertical [\#48](https://github.com/HeCodes2Much/mLauncher/pull/48) ([The-Repo-Club](https://github.com/The-Repo-Club))
+- Fix Translations [\#47](https://github.com/HeCodes2Much/mLauncher/pull/47) ([The-Repo-Club](https://github.com/The-Repo-Club))
+- translations: Fix the Lithuanian language translations [\#46](https://github.com/HeCodes2Much/mLauncher/pull/46) ([TruncatedDinosour](https://github.com/TruncatedDinosour))
+- Update README.md [\#44](https://github.com/HeCodes2Much/mLauncher/pull/44) ([The-Repo-Club](https://github.com/The-Repo-Club))
+- Updated value-lang xml files [\#43](https://github.com/HeCodes2Much/mLauncher/pull/43) ([The-Repo-Club](https://github.com/The-Repo-Club))
+- Added Automatically Open Apps Toggle [\#42](https://github.com/HeCodes2Much/mLauncher/pull/42) ([The-Repo-Club](https://github.com/The-Repo-Club))
+- two new actions:show recents and open settings [\#39](https://github.com/HeCodes2Much/mLauncher/pull/39) ([The-Repo-Club](https://github.com/The-Repo-Club))
+- The repo club patch 1 [\#38](https://github.com/HeCodes2Much/mLauncher/pull/38) ([The-Repo-Club](https://github.com/The-Repo-Club))
+- Update README.md [\#37](https://github.com/HeCodes2Much/mLauncher/pull/37) ([The-Repo-Club](https://github.com/The-Repo-Club))
+- Update README.md [\#33](https://github.com/HeCodes2Much/mLauncher/pull/33) ([The-Repo-Club](https://github.com/The-Repo-Club))
+- Update README.md [\#31](https://github.com/HeCodes2Much/mLauncher/pull/31) ([The-Repo-Club](https://github.com/The-Repo-Club))
+- translations: Add translations for Lithuanian [\#29](https://github.com/HeCodes2Much/mLauncher/pull/29) ([TruncatedDinosour](https://github.com/TruncatedDinosour))
+- Delete no-response.yml [\#27](https://github.com/HeCodes2Much/mLauncher/pull/27) ([The-Repo-Club](https://github.com/The-Repo-Club))
+- fix: Not reundant [\#21](https://github.com/HeCodes2Much/mLauncher/pull/21) ([The-Repo-Club](https://github.com/The-Repo-Club))
+- metadata [\#17](https://github.com/HeCodes2Much/mLauncher/pull/17) ([The-Repo-Club](https://github.com/The-Repo-Club))
+- Update Screenshots [\#16](https://github.com/HeCodes2Much/mLauncher/pull/16) ([The-Repo-Club](https://github.com/The-Repo-Club))
+- Japanese [\#15](https://github.com/HeCodes2Much/mLauncher/pull/15) ([The-Repo-Club](https://github.com/The-Repo-Club))
+- fastlane [\#14](https://github.com/HeCodes2Much/mLauncher/pull/14) ([The-Repo-Club](https://github.com/The-Repo-Club))
+- Update Icon [\#13](https://github.com/HeCodes2Much/mLauncher/pull/13) ([The-Repo-Club](https://github.com/The-Repo-Club))
+- Update README.md [\#12](https://github.com/HeCodes2Much/mLauncher/pull/12) ([The-Repo-Club](https://github.com/The-Repo-Club))
+- Update [\#11](https://github.com/HeCodes2Much/mLauncher/pull/11) ([The-Repo-Club](https://github.com/The-Repo-Club))
+- Update build.yml [\#10](https://github.com/HeCodes2Much/mLauncher/pull/10) ([The-Repo-Club](https://github.com/The-Repo-Club))
+- Update README [\#9](https://github.com/HeCodes2Much/mLauncher/pull/9) ([The-Repo-Club](https://github.com/The-Repo-Club))
+- Update issue templates [\#8](https://github.com/HeCodes2Much/mLauncher/pull/8) ([The-Repo-Club](https://github.com/The-Repo-Club))
+- Swipe feature [\#7](https://github.com/HeCodes2Much/mLauncher/pull/7) ([The-Repo-Club](https://github.com/The-Repo-Club))
+- Update Language Files [\#6](https://github.com/HeCodes2Much/mLauncher/pull/6) ([The-Repo-Club](https://github.com/The-Repo-Club))
+- Updated Languages [\#5](https://github.com/HeCodes2Much/mLauncher/pull/5) ([The-Repo-Club](https://github.com/The-Repo-Club))
+- Disabled By Default [\#4](https://github.com/HeCodes2Much/mLauncher/pull/4) ([The-Repo-Club](https://github.com/The-Repo-Club))
+- Fix the bug from swiping apps [\#3](https://github.com/HeCodes2Much/mLauncher/pull/3) ([The-Repo-Club](https://github.com/The-Repo-Club))
+- Fix the Swiping [\#2](https://github.com/HeCodes2Much/mLauncher/pull/2) ([The-Repo-Club](https://github.com/The-Repo-Club))
+- Update the README [\#1](https://github.com/HeCodes2Much/mLauncher/pull/1) ([The-Repo-Club](https://github.com/The-Repo-Club))
 
 
 
