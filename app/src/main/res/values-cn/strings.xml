@@ -2,7 +2,7 @@
 	<string name="app">应用</string>
 	<string name="set_as_default_launcher">设为默认启动器</string>
     <string name="double_tap_to_lock_screen">轻按两次锁定</string>
-	<string name="experimental_">(实验性)</string>
+	<string name="experimental">(实验性)</string>
 	<string name="admin_permission_message">mlauncher 承诺负责任地使用锁屏权限。</string>
     <string name="off">关</string>
 	<string name="on">开</string>

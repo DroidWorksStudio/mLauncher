@@ -4,7 +4,7 @@
 
     <!-- Admin Settings -->
     <string name="admin_permission_message">mLauncher promises to use lock screen permission responsibly.</string>
-    <string name="experimental_">(experimental)</string>
+    <string name="experimental">(experimental)</string>
 
     <!-- Settings Headers -->
     <string name="appearance">Appearance</string>

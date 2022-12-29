@@ -2,7 +2,7 @@
 	<string name="app">App</string>
     <string name="set_as_default_launcher">Stilla sem sjálfgefið ræsiforrit</string>
     <string name="double_tap_to_lock_screen">Ýttu tvisvar til að læsa</string>
-    <string name="experimental_">(tilraunaverkefni)</string>
+    <string name="experimental">(tilraunaverkefni)</string>
     <string name="admin_permission_message">mLauncher lofar að nota leyfi til læsingarskjás á ábyrgan hátt.</string>
     <string name="off">Af</string>
     <string name="on">Á</string>

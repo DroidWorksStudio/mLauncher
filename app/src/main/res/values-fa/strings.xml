@@ -2,7 +2,7 @@
 	<string name="app">برنامه</string>
     <string name="set_as_default_launcher">به عنوان راه‌انداز پیش‌فرض تنظیم کنید</string>
     <string name="double_tap_to_lock_screen">برای قفل کردن، دو ضربه سریع بزنید</string>
-    <string name="experimental_">(تجربی)</string>
+    <string name="experimental">(تجربی)</string>
     <string name="admin_permission_message">mLauncher قول می دهد از مجوز قفل صفحه به طور مسئولانه استفاده کند.</string>
     <string name="off">خاموش</string>
     <string name="on">بر</string>

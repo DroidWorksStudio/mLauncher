@@ -2,7 +2,7 @@
 	<string name="app">App</string>
     <string name="set_as_default_launcher">Itakda bilang default na launcher</string>
     <string name="double_tap_to_lock_screen">I-double tap para i-lock</string>
-    <string name="experimental_">(pang-eksperimento)</string>
+    <string name="experimental">(pang-eksperimento)</string>
     <string name="admin_permission_message">Nangangako ang mLauncher na gamitin ang pahintulot sa lock screen nang responsable.</string>
     <string name="off">Naka-off</string>
     <string name="on">Naka-on</string>

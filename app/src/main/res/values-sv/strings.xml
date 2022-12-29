@@ -2,7 +2,7 @@
 	<string name="app">App</string>
     <string name="set_as_default_launcher">Ställ in som standardstartare</string>
     <string name="double_tap_to_lock_screen">Dubbeltryck för att låsa</string>
-    <string name="experimental_">(experimentell)</string>
+    <string name="experimental">(experimentell)</string>
     <string name="admin_permission_message">mLauncher lovar att använda tillstånd för låsskärm på ett ansvarsfullt sätt.</string>
     <string name="off">Av</string>
     <string name="on">På</string>

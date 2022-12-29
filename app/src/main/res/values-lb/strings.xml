@@ -2,7 +2,7 @@
 	<string name="app">App</string>
     <string name="set_as_default_launcher">Setzt als Standardstarter</string>
     <string name="double_tap_to_lock_screen">Duebeltapp fir ze spären</string>
-    <string name="experimental_">(experimentell)</string>
+    <string name="experimental">(experimentell)</string>
     <string name="admin_permission_message">mLauncher versprécht de Sperrbildschirm Erlaabnis verantwortlech ze benotzen.</string>
     <string name="off">Off</string>
     <string name="on">Op</string>

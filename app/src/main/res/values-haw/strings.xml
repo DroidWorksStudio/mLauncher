@@ -2,7 +2,7 @@
 	<string name="app">App</string>
     <string name="set_as_default_launcher">E hoʻonoho i mea hoʻolaha paʻamau</string>
     <string name="double_tap_to_lock_screen">Koʻu pālua e laka</string>
-    <string name="experimental_">(hoʻokolohua)</string>
+    <string name="experimental">(hoʻokolohua)</string>
     <string name="admin_permission_message">Ua hoʻohiki ʻo mLauncher e hoʻohana i ka ʻae ʻana i ka pale laka me ke kuleana.</string>
     <string name="off">Paʻa</string>
     <string name="on">Ma ka</string>

@@ -2,7 +2,7 @@
     <string name="app">Uygulama</string>
     <string name="set_as_default_launcher">Varsayılan başlatıcı olarak ayarla</string>
     <string name="double_tap_to_lock_screen">Kilitlemek için iki kez dokunun</string>
-    <string name="experimental_">(deneysel)</string>
+    <string name="experimental">(deneysel)</string>
     <string name="admin_permission_message">mLauncher, kilit ekranı iznini sorumlu bir şekilde kullanmayı vaat ediyor.</string>
     <string name="off">Kapalı</string>
     <string name="on">Açık</string>

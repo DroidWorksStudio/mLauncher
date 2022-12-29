@@ -2,7 +2,7 @@
     <string name="app">App</string>
     <string name="set_as_default_launcher">Socraigh mar tosaitheoir réamhshocraithe</string>
     <string name="double_tap_to_lock_screen">Tapáil faoi dhó chun glasáil</string>
-    <string name="experimental_">(turgnamhach)</string>
+    <string name="experimental">(turgnamhach)</string>
     <string name="admin_permission_message">Geallann mLauncher cead scáileáin ghlais a úsáid go freagrach.</string>
     <string name="off">as</string>
     <string name="on">Ar</string>

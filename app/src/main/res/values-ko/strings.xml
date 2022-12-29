@@ -2,7 +2,7 @@
     <string name="app">앱</string>
     <string name="set_as_default_launcher">기본 런처로 설정</string>
     <string name="double_tap_to_lock_screen">잠그려면 두 번 탭하세요.</string>
-    <string name="experimental_">(실험적)</string>
+    <string name="experimental">(실험적)</string>
     <string name="admin_permission_message">mLauncher는 잠금 화면 권한을 책임감 있게 사용할 것을 약속합니다.</string>
     <string name="off">끄다</string>
     <string name="on">에</string>

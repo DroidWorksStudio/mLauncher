@@ -2,7 +2,7 @@
 	<string name="app">додаток</string>
     <string name="set_as_default_launcher">Встановити як програму запуску за умовчанням</string>
     <string name="double_tap_to_lock_screen">Двічі торкніться, щоб заблокувати</string>
-    <string name="experimental_">(експериментальний)</string>
+    <string name="experimental">(експериментальний)</string>
     <string name="admin_permission_message">mLauncher обіцяє відповідально використовувати дозвіл блокування екрана.</string>
     <string name="off">Вимкнено</string>
     <string name="on">Увімкнено</string>

@@ -2,7 +2,7 @@
 	<string name="app">aplicación</string>
     <string name="set_as_default_launcher">Establecer como iniciador predeterminado</string>
     <string name="double_tap_to_lock_screen">Toca dos veces para bloquear</string>
-    <string name="experimental_">(experimental)</string>
+    <string name="experimental">(experimental)</string>
     <string name="admin_permission_message">mLauncher promete usar el permiso de la pantalla de bloqueo de manera responsable.</string>
     <string name="off">Apagado</string>
     <string name="on">En</string>

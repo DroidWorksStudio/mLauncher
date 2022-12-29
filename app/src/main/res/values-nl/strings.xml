@@ -2,7 +2,7 @@
 	<string name="app">app</string>
     <string name="set_as_default_launcher">Instellen als standaard launcher</string>
     <string name="double_tap_to_lock_screen">Dubbeltik om te vergrendelen</string>
-    <string name="experimental_">(experimenteel)</string>
+    <string name="experimental">(experimenteel)</string>
     <string name="admin_permission_message">mLauncher belooft de toestemming voor het vergrendelscherm op een verantwoorde manier te gebruiken.</string>
     <string name="off">Uit</string>
     <string name="on">Op</string>

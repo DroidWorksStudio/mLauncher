@@ -2,7 +2,7 @@
 	<string name="app">Programėlė</string>
     <string name="set_as_default_launcher">Nustatyti kaip numatomajį darbalaukį</string>
     <string name="double_tap_to_lock_screen">Dukart palieskite, kad užrakintumėte</string>
-    <string name="experimental_">(eksperimentinis)</string>
+    <string name="experimental">(eksperimentinis)</string>
     <string name="admin_permission_message">mLauncher prižada atsakingai naudoti ekrano užrakinimo leidimą.</string>
     <string name="off">Išjungtas</string>
     <string name="on">Įjungtas</string>

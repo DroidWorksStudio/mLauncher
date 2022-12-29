@@ -2,7 +2,7 @@
     <string name="app">Апликација</string>
     <string name="set_as_default_launcher">Постави као подразумевани покретач</string>
     <string name="double_tap_to_lock_screen">Двапут додирните да бисте закључали</string>
-    <string name="experimental_">(експериментално)</string>
+    <string name="experimental">(експериментално)</string>
     <string name="admin_permission_message">мЛаунцхер обећава да ће користити дозволу за закључавање екрана одговорно.</string>
     <string name="off">Ван</string>
     <string name="on">на</string>

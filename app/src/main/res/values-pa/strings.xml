@@ -2,7 +2,7 @@
 	<string name="app">ਐਪ</string>
     <string name="set_as_default_launcher">ਡਿਫੌਲਟ ਲਾਂਚਰ ਵਜੋਂ ਸੈੱਟ ਕਰੋ</string>
     <string name="double_tap_to_lock_screen">ਲਾਕ ਕਰਨ ਲਈ ਡਬਲ ਟੈਪ ਕਰੋ</string>
-    <string name="experimental_">(ਪ੍ਰਯੋਗਾਤਮਕ)</string>
+    <string name="experimental">(ਪ੍ਰਯੋਗਾਤਮਕ)</string>
     <string name="admin_permission_message">mLauncher ਲਾਕ ਸਕ੍ਰੀਨ ਅਨੁਮਤੀ ਨੂੰ ਜ਼ਿੰਮੇਵਾਰੀ ਨਾਲ ਵਰਤਣ ਦਾ ਵਾਅਦਾ ਕਰਦਾ ਹੈ।</string>
     <string name="off">ਬੰਦ</string>
     <string name="on">\'ਤੇ</string>

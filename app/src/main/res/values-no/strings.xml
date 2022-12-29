@@ -2,7 +2,7 @@
 	<string name="app">App</string>
     <string name="set_as_default_launcher">Angi som standard launcher</string>
     <string name="double_tap_to_lock_screen">Dobbelttrykk for å låse</string>
-    <string name="experimental_">(eksperimentell)</string>
+    <string name="experimental">(eksperimentell)</string>
     <string name="admin_permission_message">mLauncher lover å bruke tillatelse til låseskjermen på en ansvarlig måte.</string>
     <string name="off">Av</string>
     <string name="on">På</string>

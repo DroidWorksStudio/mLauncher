@@ -2,7 +2,7 @@
 	<string name="app">تطبيق</string>
     <string name="set_as_default_launcher">تعيين كمشغل افتراضي</string>
     <string name="double_tap_to_lock_screen">انقر نقرًا مزدوجًا للقفل</string>
-    <string name="experimental_">(تجريبي)</string>
+    <string name="experimental">(تجريبي)</string>
     <string name="admin_permission_message">يعد mLauncher باستخدام إذن قفل الشاشة بشكل مسؤول.</string>
     <string name="off">عن</string>
     <string name="on">على</string>

@@ -2,7 +2,7 @@
 	<string name="app">Აპლიკაცია</string>
     <string name="set_as_default_launcher">დააყენეთ ნაგულისხმევ გამშვებად</string>
     <string name="double_tap_to_lock_screen">ორმაგად შეეხეთ ჩასაკეტად</string>
-    <string name="experimental_">(ექსპერიმენტული)</string>
+    <string name="experimental">(ექსპერიმენტული)</string>
     <string name="admin_permission_message">mLauncher გვპირდება, რომ პასუხისმგებლობით გამოიყენებს ეკრანის დაბლოკვის ნებართვას.</string>
     <string name="off">გამორთულია</string>
     <string name="on">ჩართულია</string>

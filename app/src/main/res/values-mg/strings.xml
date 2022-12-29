@@ -2,7 +2,7 @@
 	<string name="app">App</string>
     <string name="set_as_default_launcher">Apetraho ho mpandefa default</string>
     <string name="double_tap_to_lock_screen">Tsindrio indroa hanidy</string>
-    <string name="experimental_">(fanandramana)</string>
+    <string name="experimental">(fanandramana)</string>
     <string name="admin_permission_message">Mampanantena ny mLauncher fa hampiasa ny fahazoan-dàlana hidin-trano amin\'ny andraikitra.</string>
     <string name="off">eny</string>
     <string name="on">On</string>

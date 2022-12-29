@@ -2,7 +2,7 @@
 	<string name="app">Aplikacioni</string>
 	<string name="set_as_default_launcher">Cakto si lëshues të paracaktuar</string>
     <string name="double_tap_to_lock_screen">Trokit dy herë për ta kyçur</string>
-	<string name="experimental_">(eksperimentale)</string>
+	<string name="experimental">(eksperimentale)</string>
 	<string name="admin_permission_message">mlauncher premton të përdorë me përgjegjësi lejen e ekranit të kyçjes.</string>
     <string name="off">Joaktiv</string>
 	<string name="on">Aktiv</string>

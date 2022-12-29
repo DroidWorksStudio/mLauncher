@@ -2,7 +2,7 @@
 	<string name="app">Приложение</string>
     <string name="set_as_default_launcher">Сделать лаунчером по умолчанию</string>
     <string name="double_tap_to_lock_screen">Нажмите дважды, чтобы заблокировать</string>
-    <string name="experimental_">(экспериментальный)</string>
+    <string name="experimental">(экспериментальный)</string>
     <string name="admin_permission_message">mLauncher обещает ответственно использовать разрешение экрана блокировки.</string>
     <string name="off">Выключенный</string>
     <string name="on">На</string>

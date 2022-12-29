@@ -2,7 +2,7 @@
 	<string name="app">แอป</string>
     <string name="set_as_default_launcher">ตั้งเป็นตัวเรียกใช้งานเริ่มต้น</string>
     <string name="double_tap_to_lock_screen">แตะสองครั้งเพื่อล็อค</string>
-    <string name="experimental_">(ทดลอง)</string>
+    <string name="experimental">(ทดลอง)</string>
     <string name="admin_permission_message">mLauncher สัญญาว่าจะใช้การอนุญาตล็อคหน้าจออย่างมีความรับผิดชอบ</string>
     <string name="off">ปิด</string>
     <string name="on">บน</string>

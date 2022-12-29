@@ -2,7 +2,7 @@
 	<string name="app">Application</string>
     <string name="set_as_default_launcher">Définir comme lanceur par défaut</string>
     <string name="double_tap_to_lock_screen">Appuyez deux fois pour verrouiller</string>
-    <string name="experimental_">(expérimental)</string>
+    <string name="experimental">(expérimental)</string>
     <string name="admin_permission_message">mLauncher promet d\'utiliser l\'autorisation d\'écran de verrouillage de manière responsable.</string>
     <string name="off">Non</string>
     <string name="on">Oui</string>

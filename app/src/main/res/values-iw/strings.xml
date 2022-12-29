@@ -2,7 +2,7 @@
 	<string name="app">אפליקציה</string>
     <string name="set_as_default_launcher">הגדר כמפעיל ברירת מחדל</string>
     <string name="double_tap_to_lock_screen">הקש פעמיים כדי לנעול</string>
-    <string name="experimental_">(נִסיוֹנִי)</string>
+    <string name="experimental">(נִסיוֹנִי)</string>
     <string name="admin_permission_message">mLauncher מבטיח להשתמש בהרשאת מסך הנעילה באחריות.</string>
     <string name="off">כבוי</string>
     <string name="on">עַל</string>

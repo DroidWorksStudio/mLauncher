@@ -2,7 +2,7 @@
 	<string name="app">Приложение</string>
     <string name="set_as_default_launcher">Задайте като стартер по подразбиране</string>
     <string name="double_tap_to_lock_screen">Докоснете двукратно за заключване</string>
-    <string name="experimental_">(експериментален)</string>
+    <string name="experimental">(експериментален)</string>
     <string name="admin_permission_message">mLauncher обещава да използва отговорно разрешението за заключен екран.</string>
     <string name="off">Изкл</string>
     <string name="on">На</string>

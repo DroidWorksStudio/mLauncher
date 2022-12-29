@@ -2,7 +2,7 @@
 	<string name="app">Ứng dụng</string>
     <string name="set_as_default_launcher">Đặt làm trình khởi chạy mặc định</string>
     <string name="double_tap_to_lock_screen">Nhấn đúp để khóa</string>
-    <string name="experimental_">(thực nghiệm)</string>
+    <string name="experimental">(thực nghiệm)</string>
     <string name="admin_permission_message">mLauncher hứa sẽ sử dụng quyền trên màn hình khóa một cách có trách nhiệm.</string>
     <string name="off">Tắt</string>
     <string name="on">Trên</string>

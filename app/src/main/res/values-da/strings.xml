@@ -2,7 +2,7 @@
 	<string name="app">App</string>
     <string name="set_as_default_launcher">Indstil som standard launcher</string>
     <string name="double_tap_to_lock_screen">Tryk to gange for at låse</string>
-    <string name="experimental_">(eksperimentel)</string>
+    <string name="experimental">(eksperimentel)</string>
     <string name="admin_permission_message">mLauncher lover at bruge låseskærmens tilladelse ansvarligt.</string>
     <string name="off">Af</string>
     <string name="on">På</string>

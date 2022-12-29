@@ -2,7 +2,7 @@
     <string name="app">ആപ്പ്</string>
     <string name="set_as_default_launcher">ഡിഫോൾട്ട് ലോഞ്ചറായി സജ്ജീകരിക്കുക</string>
     <string name="double_tap_to_lock_screen">ലോക്ക് ചെയ്യാൻ രണ്ടുതവണ ടാപ്പ് ചെയ്യുക</string>
-    <string name="experimental_">(പരീക്ഷണാത്മകം)</string>
+    <string name="experimental">(പരീക്ഷണാത്മകം)</string>
     <string name="admin_permission_message">ലോക്ക് സ്‌ക്രീൻ അനുമതി ഉത്തരവാദിത്തത്തോടെ ഉപയോഗിക്കുമെന്ന് mLauncher വാഗ്ദാനം ചെയ്യുന്നു.</string>
     <string name="off">ഓഫ്</string>
     <string name="on">ഓൺ</string>

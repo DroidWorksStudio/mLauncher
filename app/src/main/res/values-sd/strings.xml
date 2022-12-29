@@ -2,7 +2,7 @@
     <string name="app">ايپ</string>
     <string name="set_as_default_launcher">ڊفالٽ لانچر طور سيٽ ڪريو</string>
     <string name="double_tap_to_lock_screen">لاڪ ڪرڻ لاءِ ڊبل ٽيپ ڪريو</string>
-    <string name="experimental_">(تجرباتي)</string>
+    <string name="experimental">(تجرباتي)</string>
     <string name="admin_permission_message">mLauncher لاڪ اسڪرين جي اجازت کي ذميواري سان استعمال ڪرڻ جو واعدو ڪري ٿو.</string>
     <string name="off">بند</string>
     <string name="on">تي</string>

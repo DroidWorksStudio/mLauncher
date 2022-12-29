@@ -2,7 +2,7 @@
 	<string name="app">App</string>
     <string name="set_as_default_launcher">Ορισμός ως προεπιλεγμένη εκκίνηση</string>
     <string name="double_tap_to_lock_screen">Πατήστε δύο φορές για κλείδωμα</string>
-    <string name="experimental_">(πειραματικός)</string>
+    <string name="experimental">(πειραματικός)</string>
     <string name="admin_permission_message">Το mLauncher υπόσχεται να χρησιμοποιεί υπεύθυνα την άδεια κλειδώματος οθόνης.</string>
     <string name="off">Μακριά από</string>
     <string name="on">Επί</string>

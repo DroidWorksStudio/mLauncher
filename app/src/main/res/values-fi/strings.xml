@@ -2,7 +2,7 @@
 	<string name="app">Sovellus</string>
     <string name="set_as_default_launcher">Aseta oletuskäynnistysohjelmaksi</string>
     <string name="double_tap_to_lock_screen">Lukitse kaksoisnapauttamalla</string>
-    <string name="experimental_">(kokeellinen)</string>
+    <string name="experimental">(kokeellinen)</string>
     <string name="admin_permission_message">mLauncher lupaa käyttää lukitusnäytön lupaa vastuullisesti.</string>
     <string name="off">Vinossa</string>
     <string name="on">Päällä</string>

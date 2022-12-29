@@ -2,7 +2,7 @@
 	<string name="app">App</string>
     <string name="set_as_default_launcher">Beállítás alapértelmezett indítóként</string>
     <string name="double_tap_to_lock_screen">Koppintson duplán a zároláshoz</string>
-    <string name="experimental_">(kísérleti)</string>
+    <string name="experimental">(kísérleti)</string>
     <string name="admin_permission_message">Az mLauncher azt ígéri, hogy felelősségteljesen használja a lezárási képernyő engedélyeit.</string>
     <string name="off">Ki</string>
     <string name="on">Tovább</string>

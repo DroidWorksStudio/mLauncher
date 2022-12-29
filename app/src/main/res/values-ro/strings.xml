@@ -2,7 +2,7 @@
 	<string name="app">App</string>
     <string name="set_as_default_launcher">Setați ca lansator implicit</string>
     <string name="double_tap_to_lock_screen">Atingeți de două ori pentru a bloca</string>
-    <string name="experimental_">(experimental)</string>
+    <string name="experimental">(experimental)</string>
     <string name="admin_permission_message">mLauncher promite să folosească permisiunea ecranului de blocare în mod responsabil.</string>
     <string name="off">Oprit</string>
     <string name="on">Pe</string>

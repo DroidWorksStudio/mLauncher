@@ -2,7 +2,7 @@
 	<string name="app">Aplikacija</string>
 	<string name="set_as_default_launcher">Postavi kao zadani pokretač</string>
     <string name="double_tap_to_lock_screen">Dvostruki dodir za zaključavanje</string>
-	<string name="experimental_">(eksperimentalno)</string>
+	<string name="experimental">(eksperimentalno)</string>
 	<string name="admin_permission_message">mlauncher obećava da će odgovorno koristiti dozvolu za zaključavanje zaslona.</string>
     <string name="off">Isklj.</string>
 	<string name="on">Uklj.</string>

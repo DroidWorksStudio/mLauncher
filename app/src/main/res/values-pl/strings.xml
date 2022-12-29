@@ -2,7 +2,7 @@
 	<string name="app">Aplikacja</string>
     <string name="set_as_default_launcher">Ustaw jako domyślny program uruchamiający</string>
     <string name="double_tap_to_lock_screen">Kliknij dwukrotnie, aby zablokować</string>
-    <string name="experimental_">(eksperymentalny)</string>
+    <string name="experimental">(eksperymentalny)</string>
     <string name="admin_permission_message">mLauncher obiecuje odpowiedzialne korzystanie z uprawnień na ekranie blokady.</string>
     <string name="off">Wyłączony</string>
     <string name="on">Na </string>

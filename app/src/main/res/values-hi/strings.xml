@@ -2,7 +2,7 @@
 	<string name="app">अनुप्रयोग</string>
     <string name="set_as_default_launcher">डिफ़ॉल्ट लॉन्चर के रूप में सेट करें</string>
     <string name="double_tap_to_lock_screen">लॉक करने के लिए डबल टैप करें</string>
-    <string name="experimental_">(प्रायोगिक)</string>
+    <string name="experimental">(प्रायोगिक)</string>
     <string name="admin_permission_message">एमएल लॉन्चर जिम्मेदारी से लॉक स्क्रीन अनुमति का उपयोग करने का वादा करता है।</string>
     <string name="off">बंद</string>
     <string name="on">पर</string>

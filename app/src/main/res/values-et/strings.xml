@@ -2,7 +2,7 @@
 	<string name="app">Rakendus</string>
 	<string name="set_as_default_launcher">Määra peamiseks avakuvarakenduseks</string>
     <string name="double_tap_to_lock_screen">Topeltvajutus ekraani lukustamiseks</string>
-	<string name="experimental_">(eksperimentaalne)</string>
+	<string name="experimental">(eksperimentaalne)</string>
 	<string name="admin_permission_message">mlauncher lubab, et kasutab ekraani lukustamise luba vastutustundlikult.</string>
     <string name="off">Sisse</string>
 	<string name="on">Välja</string>

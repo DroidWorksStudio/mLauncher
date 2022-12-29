@@ -2,7 +2,7 @@
 	<string name="app">アプリ</string>
     <string name="set_as_default_launcher">デフォルトのランチャーとして設定</string>
     <string name="double_tap_to_lock_screen">ダブルタップしてロック</string>
-    <string name="experimental_">(実験的)</string>
+    <string name="experimental">(実験的)</string>
     <string name="admin_permission_message">mLauncher は、責任を持ってロック画面のアクセス許可を使用することを約束します。</string>
     <string name="off">オフ</string>
     <string name="on">の上</string>
