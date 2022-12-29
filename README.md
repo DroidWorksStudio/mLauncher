@@ -24,7 +24,7 @@ We try to balance customizability and minimalization well still being simple :)<
 - Change font size
 - Removed internet permission. You never know what an app developer wants to know about you.
 
-## Translations:
+## Translations: [![Crowdin](https://badges.crowdin.net/mlauncher/localized.svg)](https://crowdin.com/project/mlauncher)
 
 - A lot of people have translated the app to the following languages. Many thanks to you all.
   - Arabic
