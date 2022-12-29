@@ -6,7 +6,7 @@
 		<item name="android:windowTranslucentNavigation">true</item>
 		<item name="android:fitsSystemWindows">false</item>
 		<item name="android:windowShowWallpaper">true</item>
-		<item name="android:windowBackground">@color/whiteInverseTrans50</item>
+		<item name="android:windowBackground">@android:color/transparent</item>
 		<item name="android:windowFullscreen">false</item>
 		<item name="android:windowLightStatusBar">false</item>
 		<item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">false</item>

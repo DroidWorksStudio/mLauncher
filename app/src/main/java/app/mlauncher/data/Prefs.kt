@@ -43,6 +43,7 @@ private const val APP_PACKAGE = "APP_PACKAGE"
 private const val APP_USER = "APP_USER"
 private const val APP_ALIAS = "APP_ALIAS"
 private const val APP_ACTIVITY = "APP_ACTIVITY"
+private const val APP_OPACITY = "APP_OPACITY"
 
 private const val SWIPE_RIGHT = "SWIPE_RIGHT"
 private const val SWIPE_LEFT = "SWIPE_LEFT"
@@ -114,6 +115,16 @@ class Prefs(val context: Context) {
             }
         }
         set(value) = prefs.edit().putInt(HOME_APPS_NUM, value).apply()
+
+    var opacityNum: Int
+        get() {
+            return try {
+                prefs.getInt(APP_OPACITY, 50)
+            } catch (_: Exception) {
+                50
+            }
+        }
+        set(value) = prefs.edit().putInt(APP_OPACITY, value).apply()
 
     var homeAlignment: Gravity
         get() {
