@@ -67,6 +67,7 @@
     <string name="open">Abrir</string>
     <string name="close">Cerrar</string>
     <string name="copy">Copiar</string>
+    <string name="opacity">Opacidad</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Mostrar notificación</string>
     <string name="show_app_list">Mostrar lista de aplicaciones</string>

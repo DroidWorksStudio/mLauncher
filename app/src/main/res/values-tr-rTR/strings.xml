@@ -67,6 +67,7 @@
     <string name="open">Açık</string>
     <string name="close">Kapat</string>
     <string name="copy">Anlaşıldı</string>
+    <string name="opacity">opaklık</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Bildirimi Göster</string>
     <string name="show_app_list">Uygulama Listesini Göster</string>

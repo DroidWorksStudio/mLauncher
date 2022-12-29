@@ -67,6 +67,7 @@
     <string name="open">തുറക്കുക</string>
     <string name="close">അടയ്ക്കുക</string>
     <string name="copy">പകർത്തുക</string>
+    <string name="opacity">അതാര്യത</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">അറിയിപ്പ് കാണിക്കുക</string>
     <string name="show_app_list">ആപ്പ് ലിസ്റ്റ് കാണിക്കുക</string>

@@ -67,6 +67,7 @@
     <string name="open">Opið</string>
     <string name="close">Loka</string>
     <string name="copy">Afrita</string>
+    <string name="opacity">Ógegnsæi</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Sýna tilkynningu</string>
     <string name="show_app_list">Sýna forritalista</string>

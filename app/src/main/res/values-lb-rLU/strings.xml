@@ -67,6 +67,7 @@
     <string name="open">Oppen</string>
     <string name="close">Zoumaachen</string>
     <string name="copy">Kopie</string>
+    <string name="opacity">Opazitéit</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Show Notifikatioun</string>
     <string name="show_app_list">Show App Lëscht</string>

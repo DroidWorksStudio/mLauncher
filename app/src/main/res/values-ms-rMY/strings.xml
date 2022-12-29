@@ -67,6 +67,7 @@
     <string name="open">Buka</string>
     <string name="close">tutup</string>
     <string name="copy">Salinan</string>
+    <string name="opacity">Kelegapan</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Tunjukkan Pemberitahuan</string>
     <string name="show_app_list">Tunjukkan Senarai Apl</string>

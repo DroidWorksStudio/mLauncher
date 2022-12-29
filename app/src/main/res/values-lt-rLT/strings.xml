@@ -1,33 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Base Settings -->
     <string name="app">Programėlė</string>
-
     <!-- Admin Settings -->
     <string name="admin_permission_message">mLauncher prižada naudoti ekrano užrakinimo leidimą atsakingai.</string>
     <string name="experimental">(eksperimentinis)</string>
-
     <!-- Settings Headers -->
     <string name="appearance">Išvaizda</string>
     <string name="behavior">Funkcionavimas</string>
     <string name="homescreen">Pagrindinis ekranas</string>
     <string name="alignment">Lygiavimas</string>
     <string name="gestures">Gestai</string>
-
     <!-- Home Strings -->
     <string name="hidden_apps">Paslėptos programėlės</string>
     <string name="set_as_default_launcher">Nustatyti kaip numatytąją paleidimo priemonę</string>
     <string name="change_default_launcher">Keisti numatytąją paleidimo priemonę</string>
-
     <!-- Appearance Strings -->
     <string name="status_bar">Rodyti būsenos juostą</string>
     <string name="theme_mode">Temavimo režimas</string>
     <string name="app_language">Sąsajos kalba</string>
     <string name="app_text_size">Tesksto dydis</string>
-
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Automatinis klaviatūros rodymas</string>
     <string name="auto_open_apps">Automatiškai atidaryti programėlės</string>
-
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">Nuorodų skaičius</string>
     <string name="show_time">Rodyti laiką</string>
@@ -35,12 +30,10 @@
     <string name="lock_home_apps">Užrakinti programas</string>
     <string name="extend_home_apps_area">Išplėskite spustelėjamą sritį</string>
     <string name="home_alignment_bottom">Pradinio ekrano lygiavimas apačioje</string>
-
     <!-- Alignment Strings -->
     <string name="home_alignment">Pagrindinis programų ekranas</string>
     <string name="clock_alignment">Laikas ir data</string>
     <string name="drawer_alignment">Programos programų stalčiuje</string>
-
     <!-- Gestures Strings -->
     <string name="swipe_up_app">Braukti į viršų</string>
     <string name="swipe_down_app">Braukite žemyn</string>
@@ -49,7 +42,6 @@
     <string name="clock_click_app">Spustelėkite ant laikrodžio</string>
     <string name="date_click_app">Spustelėkite ant datos</string>
     <string name="double_tap">Dukart paspauskite</string>
-
     <!-- Settings Strings -->
     <string name="off">Išjungti</string>
     <string name="on">Įjungti</string>
@@ -61,12 +53,10 @@
     <string name="settings">Nustatymai</string>
     <string name="lang_system">Sistema</string>
     <string name="system_default">Sistema</string>
-
     <string name="hide">Slėpti</string>
     <string name="rename">Pervadyti</string>
     <string name="okay">Gerai</string>
     <string name="save">Išsaugoti</string>
-
     <string name="show">Rodyti</string>
     <string name="reset">Atstatyti</string>
     <string name="cancel">Atšaukti</string>
@@ -74,11 +64,10 @@
     <string name="disable">Išjungti</string>
     <string name="enabled">Įgalintas</string>
     <string name="disabled">Išjungtas</string>
-
     <string name="open">Atidaryti</string>
     <string name="close">Uždaryti</string>
     <string name="copy">Kopijuoti</string>
-
+    <string name="opacity">Neskaidrumas</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Rodyti pranešimą</string>
     <string name="show_app_list">Rodyti programėlių sąrašą</string>
@@ -87,12 +76,10 @@
     <string name="open_quick_settings">Greitieji nustatymai</string>
     <string name="show_recents">Rodyti naujausius</string>
     <string name="double_tap_to_lock_screen">Dukart palieskite, kad užrakintumėte</string>
-
     <!-- Backup Strings -->
     <string name="backup">Daryti atsarginę kopiją</string>
     <string name="load_backup">Atkurti atsarginę kopiją</string>
     <string name="store_backup">Išsaugoti atsarginę kopiją</string>
-
     <!-- Unsorted Strings -->
     <string name="show_apps">Visos programėlės</string>
     <string name="road_map">Planas</string>

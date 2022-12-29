@@ -67,6 +67,7 @@
     <string name="open">فتح</string>
     <string name="close">أغلق</string>
     <string name="copy">نسخ</string>
+    <string name="opacity">التعتيم</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">إظهار الإشعارات</string>
     <string name="show_app_list">إظهار قائمة التطبيقات</string>

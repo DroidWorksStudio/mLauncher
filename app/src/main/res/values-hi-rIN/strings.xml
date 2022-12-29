@@ -67,6 +67,7 @@
     <string name="open">खुला</string>
     <string name="close">बंद करना</string>
     <string name="copy">प्रतिलिपि</string>
+    <string name="opacity">अस्पष्टता</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">अधिसूचना दिखाएं</string>
     <string name="show_app_list">ऐप सूची दिखाएं</string>

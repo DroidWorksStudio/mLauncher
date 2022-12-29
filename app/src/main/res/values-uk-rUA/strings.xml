@@ -67,6 +67,7 @@
     <string name="open">Відкриті</string>
     <string name="close">Закрити</string>
     <string name="copy">Копія</string>
+    <string name="opacity">Непрозорість</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Показувати сповіщення</string>
     <string name="show_app_list">Показати список додатків</string>

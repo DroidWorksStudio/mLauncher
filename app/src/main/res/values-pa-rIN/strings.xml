@@ -67,6 +67,7 @@
     <string name="open">ਖੋਲ੍ਹੋ</string>
     <string name="close">ਬੰਦ ਕਰੋ</string>
     <string name="copy">ਕਾਪੀ ਕਰੋ</string>
+    <string name="opacity">ਧੁੰਦਲਾਪਨ</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">ਸੂਚਨਾ ਦਿਖਾਓ</string>
     <string name="show_app_list">ਐਪ ਸੂਚੀ ਦਿਖਾਓ</string>

@@ -6,6 +6,7 @@
 
 **Implemented enhancements:**
 
+- feat: Add the ability to change opacity of overlay [\#125](https://github.com/HeCodes2Much/mLauncher/pull/125) ([The-Repo-Club](https://github.com/The-Repo-Club))
 - translations: fix fastlane descriptions for lt\_LT [\#122](https://github.com/HeCodes2Much/mLauncher/pull/122) ([TruncatedDinosour](https://github.com/TruncatedDinosour))
 
 **Fixed bugs:**
