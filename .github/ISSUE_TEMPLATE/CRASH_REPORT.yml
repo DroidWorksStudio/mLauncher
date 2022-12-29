@@ -46,6 +46,17 @@ body:
         - Built from Source
     validations:
       required: true
+      
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Crash description
+      description: |
+        Please give us a description of what the crash is about.
+      placeholder: |
+        When I try to set the language to english, the app crashes.
+    validations:
+      required: true
 
   - type: textarea
     id: steps-to-reproduce
