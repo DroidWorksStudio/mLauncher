@@ -48,7 +48,7 @@ body:
       required: true
       
   - type: textarea
-    id: bug-description
+    id: crash-description
     attributes:
       label: Crash description
       description: |
