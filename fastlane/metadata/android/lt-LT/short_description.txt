@@ -1,1 +1,1 @@
-Atvirkščiai - iš OlauncherCF, +minimalizavimas, +pritaikomumas
+Paremta OlauncherCF projektu, +minimalizmas, +pritaikymas
