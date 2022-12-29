@@ -7,8 +7,8 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thank you for helping me to make mLauncher better by reporting a bug. :hugs:
-        Please fill in as much information as possible about your bug so that I can fix it immediately.
+        Thank you for helping we to make mLauncher better by reporting a bug. :hugs:
+        Please fill in as much information as possible about your bug so that we can fix it faster.
 
   - type: checkboxes
     id: checklist
@@ -48,6 +48,17 @@ body:
         - Github (Release)
         - Github (Action)
         - Built from Source
+    validations:
+      required: true
+
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Bug description
+      description: |
+        Please give us a description of what the bug is about.
+      placeholder: |
+        When I try to set the language to english, the app crashes.
     validations:
       required: true
 
