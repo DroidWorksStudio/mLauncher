@@ -1,0 +1,69 @@
+Tvungen fra <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal og ren.
+    
+# Merket med ekstra funksjoner
+
+- Fjernet clutter, som reklamer og lenker
+- Du kan endre navn på app-skuffen (Gi nytt navn til apper på startskjermen støttes. Bare lang-klikk på en app på startskjermen og begynn å skrive den)
+- Vi har lagt til mye flere alternativer for bevegelser på startsiden:
+    - Gester er nå:
+        - Sveip opp, ned, venstre, høyre
+        - Klikk på klokken
+        - Klikk på dato
+    - Mulige tiltak som nå omfatter:
+        - Åpne spesifisert app
+        - Låser skjermen
+        - Åpner varselskuff
+        - Åpner hurtiginnstillingene
+- Du kan også posisjonere klokken uavhengig av hjem-appene
+- Endre justering av apper i app-skuff
+- Endre skriftstørrelse
+- Fjernet internettilgang. Du vet aldri hva en apputvikler vil vite om deg.
+
+## Oversettelser:
+
+- Mange har oversatt appen til følgende språk. Mange takk til dere alle.
+  - Arabisk
+  - Albansk
+  - Bulgarsk
+  - Kinesisk
+  - Kroatisk
+  – Tsjekkisk
+  - Dansk
+  - Engelsk
+  - Estisk
+  - Filippinsk
+  - Finsk
+  - Fransk
+  - Georgisk
+  - Tysk
+  – gresk
+  - Hawaiisk
+  - Hebraisk
+  - Hindi
+  – Ungarsk
+  - Icelandic
+  - Indonesisk
+  - Irsk
+  - Italiensk
+  - Japansk
+  - Koreansk
+  - Litauisk
+  - Luxembourgsk
+  - Malayisk
+  - Malagasy
+  - Malayalam
+  - Norsk
+  - Nepali
+  - persisk
+  - Polsk
+  – Portugisisk (Europa)
+  - Punjabi
+  - Russisk
+  - Serbisk
+  - Sindhi
+  - spansk
+  - Svensk
+  - Thai
+  - Tyrkisk
+  - Ukrainsk
+  - Vietnamese

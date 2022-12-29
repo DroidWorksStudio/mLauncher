@@ -1,0 +1,69 @@
+Forked fra <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimalt og rent.
+    
+# Forked med ekstra funktioner
+
+- Fjernede rod, som f.eks. annoncer og links
+- Du kan omdøbe apps i app-skuffen (omdøbning af apps på startskærmen understøttes allerede. Du skal bare langklikke på en app på startskærmen og begynde at skrive)
+- Vi har tilføjet en masse flere muligheder for fagter på hjemmeskærmen:
+    - Bevægelser er nu:
+        - Stryg opad, ned, venstre, højre
+        - Klik på uret
+        - Klik på dato
+    - Mulige foranstaltninger nu omfatter:
+        - Åbn den angivne app
+        - Låser skærmen
+        - Åbning af notifikationsskuffen
+        - Åbning af hurtig-indstillinger
+- Du kan også placere uret uafhængigt af hjemmet apps
+- Ændre justeringen af apps i app-skuffen
+- Ændre skriftstørrelse
+- Fjernet internettilladelse. Du ved aldrig, hvad en app udvikler ønsker at vide om dig.
+
+## Oversættelser:
+
+- Mange mennesker har oversat appen til følgende sprog. Mange tak til jer alle.
+  - Arabisk
+  - Albansk
+  - bulgarsk
+  - Kinesisk
+  - Kroatisk
+  - Tjekkisk
+  - dansk
+  - Engelsk
+  - Estisk
+  - Filippinsk
+  - Finsk
+  - Fransk
+  - georgisk
+  - Tysk
+  - Græsk
+  - Hawaiiansk
+  - Hebraisk
+  - Hindi
+  - Ungarsk
+  - Islandsk
+  - Indonesisk
+  - Irsk
+  - Italiensk
+  - Japansk
+  - Koreansk
+  - Litauisk
+  - Luxembourgsk
+  - Malayisk
+  - Malagasy
+  - Malayalam
+  - Norsk
+  - Nepali
+  - Persisk
+  - Polsk
+  - Portugisisk (europæisk)
+  - Punjabi
+  - Russisk
+  - Serbisk
+  - Sindhi
+  - Spansk
+  - Svensk
+  - Thai
+  - Tyrkisk
+  - Ukrainsk
+  - Vietnamesisk

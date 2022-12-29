@@ -1,0 +1,69 @@
+Forked mula sa <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal at malinis.
+    
+# Forked na may mga karagdagang tampok
+
+- Inalis ang kalat, tulad ng mga ad at link
+- Maaari mong palitan ang pangalan ng mga app sa app-drawer (Ang pagpapalit ng pangalan ng mga app sa home screen ay suportado na. Mag-click lang nang matagal sa isang app sa home screen at magsimulang mag-type)
+- Nagdagdag kami ng higit pang mga opsyon para sa mga galaw sa home screen:
+    - Ang mga galaw ay ngayon:
+        - Pag-swipe pataas, pababa, pakaliwa, pakanan
+        - Pag-click sa orasan
+        - Pag-click sa Petsa
+    - Kasama na ngayon sa mga posibleng aksyon ang:
+        - Buksan ang tinukoy na app
+        - Ni-lock ang screen
+        - Pagbubukas ng notification drawer
+        - Pagbubukas ng mabilis na mga setting
+- Maaari mo ring iposisyon ang orasan nang hiwalay sa mga home app
+- Baguhin ang pagkakahanay ng mga app sa app-drawer
+- Baguhin ang laki ng font
+- Inalis ang pahintulot sa internet. Hindi mo alam kung ano ang gustong malaman ng isang developer ng app tungkol sa iyo.
+
+## Mga Pagsasalin:
+
+- Maraming tao ang nagsalin ng app sa mga sumusunod na wika. Maraming salamat sa inyong lahat.
+  - Arabe
+  - Albaniano
+  - Bulgarian
+  - Intsik
+  - Croatian
+  - Czech
+  - Danish
+  - Ingles
+  - Estonian
+  - Filipino
+  - Finnish
+  - Pranses
+  - Georgian
+  - Aleman
+  - Griyego
+  - Hawaiian
+  - Hebreo
+  - Hindi
+  - Hungarian
+  - Icelandic
+  - Indonesian
+  - Irish
+  - Italyano
+  - Hapon
+  - Koreano
+  - Lithuanian
+  - Luxembourgish
+  - Malay
+  - Malagasy
+  - Malayalam
+  - Norwegian
+  - Nepali
+  - Persian
+  - Polish
+  - Portuges (European)
+  - Punjabi
+  - Ruso
+  - Serbiano
+  - Sindhi
+  - Espanyol
+  - Suweko
+  - Thai
+  - Turko
+  - Ukrainian
+  - Vietnamese

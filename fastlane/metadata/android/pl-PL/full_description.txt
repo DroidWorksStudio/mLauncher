@@ -1,0 +1,69 @@
+Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimalne i czyste.
+    
+# rozwidlenie z dodatkowymi funkcjami
+
+- Usunięto bałagan, taki jak reklamy i linki
+- Można zmieniać nazwy aplikacji w szufladzie aplikacji (Zmiana nazw aplikacji na ekranie głównym jest już obsługiwana. Wystarczy długo kliknąć na aplikację na ekranie głównym i zacząć pisać)
+- Znacznie większe możliwości dostosowywania gestów na ekranie głównym
+    - Gesty są teraz:
+        - Przesuwanie w górę, dół, lewo, prawo
+        - Możliwość zmiany aplikacji, która otwiera się po kliknięciu na zegar
+        - Kliknięcie daty
+    - Możliwe działania to:
+        - Otwórz określoną aplikację
+        - Zablokowanie ekranu
+        - Otwieranie listy powiadomień
+        - Otwieranie szybkich ustawień
+- Wyrównaj zegar niezależnie od aplikacji domowych
+- Zmiana wyrównania aplikacji w szufladzie aplikacji
+- Zmiana rozmiaru czcionki
+- Usunięte pozwolenie na korzystanie z Internetu Nigdy nie wiesz, co deweloper aplikacji chce o tobie wiedzieć.
+
+## Tłumaczenia:
+
+- Wiele osób przetłumaczyło aplikację na następujące języki. Bardzo dziękuję wszystkim.
+  - arabski
+  - Albańczyk
+  - język bułgarski
+  - Chińczyk
+  - Chorwat
+  - Czech
+  - Duńczyk
+  - Anglik
+  - estoński
+  - Filipińczyk
+  - Język fiński
+  - Francuzi
+  - Gruzin
+  - Niemiec
+  - Grek
+  - Hawajczyk
+  - Hebrajski
+  - hindi
+  - Węgier
+  - islandzki
+  - indonezyjski
+  - Irlandczycy
+  - Włoch
+  - Japończyk
+  - Koreańczyk
+  - Litwin
+  - luksemburski
+  - Malaj
+  - Malgasze
+  - Malajalam
+  - Norweg
+  - Nepalski
+  - Perski
+  - polski
+  - Język portugalski (europejski)
+  - pendżabski
+  - Rosjanin
+  - Serbski
+  - Sindhi
+  - Hiszpan
+  - Szwed
+  - Tajlandia
+  - Turek
+  - Ukrainiec
+  - wietnamski

@@ -1,0 +1,69 @@
+Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal et propre.
+    
+# Forké avec des fonctionnalités supplémentaires
+
+- Suppression des encombrements, comme les publicités et les liens
+- Vous pouvez renommer les applications dans le tiroir d'applications (le renommage des applications sur l'écran d'accueil est déjà pris en charge. Il suffit de cliquer longuement sur une application de l'écran d'accueil et de commencer à taper).
+- Beaucoup plus de possibilités de personnalisation des gestes de l'écran d'accueil
+    - Les gestes sont maintenant :
+        - Glissement vers le haut, vers le bas, vers la gauche, vers la droite
+        - Possibilité de changer l'application qui s'ouvre en cliquant sur l'horloge
+        - Possibilité de changer l'application qui s'ouvre en cliquant sur la date
+    - Les actions possibles incluent maintenant :
+        - Ouvrir l'application spécifiée
+        - Verrouillage de l'écran
+        - Ouverture du panneau de notification
+        - Ouverture des paramètres rapides
+- Aligner l'horloge indépendamment des applications domestiques
+- Modifier l'alignement des applications dans le tiroir d'applications
+- Modifier la taille de la police
+- Suppression de l'autorisation d'accès à Internet - Suppression de l'autorisation d'accès à Internet Vous ne savez jamais ce qu'un développeur d'applications veut savoir de vous.
+
+## Traductions :
+
+- De nombreuses personnes ont traduit l'application dans les langues suivantes. Un grand merci à vous tous.
+  - Arabe
+  - Albanais
+  - Bulgare
+  - chinois
+  - Croate
+  - Tchèque
+  - danois
+  - anglais
+  - Estonien
+  - Philippin
+  - finlandais
+  - français
+  - Géorgien
+  - Allemand
+  - Grec
+  - Hawaïen
+  - Hébreu
+  - Hindi
+  - Hongrois
+  - islandais
+  - Indonésien
+  - Irlandais
+  - Italien
+  - Japonais
+  - Coréen
+  - Lituanien
+  - luxembourgeois
+  - Malais
+  - Malgache
+  - Malayalam
+  - Norvégien
+  - Népalais
+  - Perse
+  - polonais
+  - Portugais (européen)
+  - Punjabi
+  - Russe
+  - Serbe
+  - Sindhi
+  - espagnol
+  - Suédois
+  - thaïlandais
+  - turc
+  - Ukrainien
+  - vietnamien

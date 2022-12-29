@@ -1,0 +1,69 @@
+Nofoanana avy amin'ny <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minitra sy madio.
+    
+# Forked miaraka amin'ny endri-javatra fanampiny
+
+- Esorina ny fikorontanana, toy ny doka sy rohy
+- Azonao atao ny manova anarana fampiharana ao amin'ny app-drawer (Efa tohanana ny fanovana anarana apps amin'ny efijery an-trano. Tsindrio lava fotsiny amin'ny fampiharana iray eo amin'ny efijery ary manomboka manoratra)
+- Nanampy safidy maro kokoa izahay ho an'ny fihetsika eo amin'ny efijery:
+    - Ny fihetsika dia izao:
+        - Mikisaka ambony, midina, miankavia, miankavanana
+        - Tsindrio ny famantaranandro
+        - Tsindrio eo amin'ny Daty
+    - Ny hetsika azo atao izao dia:
+        - Sokafy ny fampiharana voafaritra
+        - Manidy ny efijery
+        - Sokafy ny vata fampandrenesana
+        - Sokafy ny fanovana haingana
+- Azonao atao ihany koa ny mametraka ny famantaranandro tsy miankina amin'ny fampiharana an-trano
+- Hanova ny fampifanarahana ny fampiharana ao amin'ny app-drawer
+- Hanova ny haben'ny endritsoratra
+- Nesorina ny fahazoan-dàlana amin'ny Internet. Tsy fantatrao mihitsy izay tian'ny mpamorona fampiharana ho fantatra momba anao.
+
+## Dikanteny:
+
+- Betsaka ny olona nandika ny fampiharana amin'ireto fiteny manaraka ireto. Misaotra betsaka anareo rehetra.
+  - Arabo
+  - Albaney
+  - Bolgara
+  - Sinoa
+  - Kroaty
+  - Czech
+  - Danoà
+  - Anglisy
+  - Estonianina
+  - Filipino
+  - Finnish
+  - Frantsay
+  - Zeorziana
+  - Alemana
+  - Grika
+  - Hawaiiana
+  - Hebreo
+  - Hindi
+  - Hongroà
+  - Islandey
+  - Indoneziana
+  - Irlandey
+  - Italiana
+  - Japoney
+  - Koreana
+  - Litoanianina
+  - Luxembourgish
+  - Malay
+  - Malagasy
+  - Malayalam
+  - Norveziana
+  - Nepali
+  - Persiana
+  - Poloney
+  - Portiogey (Eoropeana)
+  - Punjabi
+  - Rosiana
+  - Serba
+  - Sindhi
+  - Espaniola
+  - Soedoà
+  - Thai
+  - Tiorka
+  - Okrainiana
+  - Vietnamiana

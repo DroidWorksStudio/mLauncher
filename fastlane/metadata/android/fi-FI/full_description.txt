@@ -1,0 +1,69 @@
+Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimaalinen ja siisti.
+    
+# Taottu ylimääräisillä ominaisuuksilla
+
+- Poistettu epäselvyyksiä, kuten mainoksia ja linkkejä
+- Voit nimetä sovelluksia uudelleen sovelluslaatikossa (sovellusten uudelleennimeäminen aloitusnäytössä on jo tuettu. Napsauta sovellusta pitkään aloitusnäytössä ja aloita kirjoittaminen.)
+- Olemme lisänneet paljon enemmän vaihtoehtoja eleitä koti-näytöllä:
+    - Eleet ovat nyt:
+        - Pyyhkäisemällä ylös, alas, vasen, oikea
+        - Kellon klikkaaminen
+        - Päivämäärän klikkaaminen
+    - Mahdollisia toimia ovat:
+        - Avaa määritelty sovellus
+        - Ruudun lukitseminen
+        - Ilmoitusvalikon avaaminen
+        - Pika-asetusten avaaminen
+- Voit myös sijoittaa kellon riippumatta kodin sovelluksista
+- Sovellusten kohdistuksen muuttaminen sovelluslaatikossa
+- Muuta fonttikokoa
+- Poistettu internet-käyttöoikeus. Et koskaan tiedä mitä sovelluksen kehittäjä haluaa tietää sinusta.
+
+## Käännökset:
+
+- Monet ihmiset ovat kääntäneet sovelluksen seuraaville kielille. Suuret kiitokset teille kaikille.
+  - Arabia
+  - albanialainen
+  - Bulgarian
+  - Kiinalainen
+  - Kroatian
+  - Tšekki
+  - Tanskalainen
+  - Englanti
+  - Viron kieli
+  - Filippiiniläinen
+  - suomalainen
+  - Ranskalainen
+  - Georgian
+  - Saksan kieli
+  - Kreikkalainen
+  - Havaijilainen
+  - heprea
+  - Hindi
+  - Unkarilainen
+  - Islanti
+  - indonesialainen
+  - Irlantilainen
+  - italialainen
+  - Japanilainen
+  - Korealainen
+  - Liettuan
+  - Luxemburgin kieli
+  - Malaiji
+  - Malagasy
+  - Malayalam
+  - Norjalainen
+  - Nepali
+  - Persialainen
+  - Puolan
+  - portugali (eurooppalainen)
+  - Punjabi
+  - Venäjä
+  - Serbian
+  - Sindhi
+  - espanjaksi
+  - Ruotsinkielinen
+  - Thaimaalainen
+  - Turkkilainen
+  - ukrainalainen
+  - Vietnamilainen

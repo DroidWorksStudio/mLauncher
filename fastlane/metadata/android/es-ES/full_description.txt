@@ -1,0 +1,69 @@
+Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mínimo y limpio.
+    
+# Bifurcado con características extra
+
+- Eliminación de elementos innecesarios, como anuncios y enlaces.
+- Puedes renombrar aplicaciones en el cajón de aplicaciones (ya es posible renombrar aplicaciones en la pantalla de inicio). Sólo tienes que hacer una pulsación larga en una aplicación de la pantalla de inicio y empezar a escribir)
+- Mucha más personalización de los gestos de la pantalla de inicio
+    - Los gestos son ahora:
+        - Deslizar hacia arriba, abajo, izquierda, derecha
+        - Haga clic en el reloj
+        - Posibilidad de cambiar la aplicación que se abre al hacer clic en la fecha
+    - Las posibles acciones ahora incluyen:
+        - Abrir aplicación especificada
+        - Bloquear la pantalla
+        - Abriendo el cajón de notificaciones
+        - Abriendo los ajustes rápidos
+- Alinear el reloj independientemente de las aplicaciones de inicio
+- Cambiar la alineación de las aplicaciones en el cajón de aplicaciones
+- Cambiar el tamaño de letra
+- Permiso de Internet eliminado - Permiso de Internet eliminado - Permiso de Internet eliminado - Permiso de Internet eliminado Nunca sabes lo que un desarrollador de aplicaciones quiere saber sobre ti.
+
+## Traducciones:
+
+- Mucha gente ha traducido la aplicación a los siguientes idiomas. Muchas gracias a todos.
+  - Árabe
+  - albanés
+  - Búlgaro
+  - Chino
+  - Croata
+  - Checa
+  - Danés
+  - Inglés
+  - Estonio
+  - Filipino
+  - Finlandés
+  - Francés
+  - Georgia
+  - Alemán
+  - Griego
+  - Hawaiano
+  - Hebreo
+  - Hindi
+  - Húngaro
+  - Islandés
+  - Indonesio
+  - Irlanda
+  - Italiano
+  - Japonés
+  - Coreano
+  - Lituano
+  - Luxemburgués
+  - Malayo
+  - Malgache
+  - Malayalam
+  - Noruega
+  - Nepalí
+  - Persa
+  - Polaco
+  - Portugués (europeo)
+  - Punjabí
+  - Ruso
+  - Serbio
+  - Sindhi
+  - Español
+  - Sueco
+  - Tailandia
+  - Turco
+  - Ucrania
+  - Vietnamita

@@ -1,0 +1,69 @@
+Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal dan bersih.
+    
+# Forked dengan fitur tambahan
+
+- Menghapus kekacauan, seperti iklan dan tautan
+- Anda dapat mengganti nama aplikasi di app-drawer (Mengganti nama aplikasi di layar beranda sudah didukung. Cukup klik lama pada aplikasi di layar beranda dan mulai mengetik)
+- Kami telah menambahkan lebih banyak opsi untuk gerakan di layar beranda:
+    - Gerakan sekarang:
+        - Menggesek ke atas, bawah, kiri, kanan
+        - Mengklik pada jam
+        - Mengklik Tanggal
+    - Kemungkinan tindakan sekarang meliputi:
+        - Buka aplikasi tertentu
+        - Mengunci layar
+        - Membuka laci notifikasi
+        - Membuka pengaturan cepat
+- Anda juga dapat memposisikan jam secara terpisah dari aplikasi rumah
+- Mengubah perataan aplikasi di app-drawer
+- Mengubah ukuran huruf
+- Izin internet dihapus. Anda tidak pernah tahu apa yang ingin diketahui oleh pengembang aplikasi tentang Anda.
+
+## Terjemahan:
+
+- Banyak orang telah menerjemahkan aplikasi ini ke bahasa-bahasa berikut. Terima kasih banyak kepada Anda semua.
+  - Bahasa Arab
+  - Bahasa Albania
+  - Bahasa Bulgaria
+  - Bahasa Tionghoa
+  - Kroasia
+  - Ceko
+  - Denmark
+  - Bahasa Inggris
+  - Bahasa Estonia
+  - Filipina
+  - Finlandia
+  - Prancis
+  - Georgia
+  - Jerman
+  - Bahasa Yunani
+  - Hawaii
+  - Ibrani
+  - Hindi
+  - Hongaria
+  - Islandia
+  - Bahasa Indonesia
+  - Irlandia
+  - Italia
+  - Bahasa Jepang
+  - Bahasa Korea
+  - Bahasa Lituania
+  - Luksemburg
+  - Bahasa Melayu
+  - Malagasi
+  - Bahasa Melayu
+  - Norwegia
+  - Nepal
+  - Persia
+  - Polandia
+  - Bahasa Portugis (Eropa)
+  - Punjabi
+  - Rusia
+  - Bahasa Serbia
+  - Sindhi
+  - Bahasa Spanyol
+  - Swedia
+  - Thailand
+  - Turki
+  - Ukraina
+  - Bahasa Vietnam

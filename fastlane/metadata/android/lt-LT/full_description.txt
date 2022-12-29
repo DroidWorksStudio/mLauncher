@@ -1,0 +1,69 @@
+Šaknis iš <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimalus ir švarus.
+    
+# Šakutė su papildomomis funkcijomis
+
+- Pašalinta netvarka, pavyzdžiui, skelbimai ir nuorodos
+- Programėlių stalčiuje galite pervadinti programėles (Programėlių pervadinimas pagrindiniame ekrane jau palaikomas. Tiesiog ilgai spustelėkite programą pagrindiniame ekrane ir pradėkite rašyti)
+- Pradiniame ekrane pridėjome daug daugiau gestų parinkčių:
+    - Gestai dabar yra:
+        - Braukite aukštyn, žemyn, kairėn, dešinėn
+        - Paspaudus ant laikrodžio
+        - Paspaudus ant datos
+    – Dabar galimi veiksmai:
+        - Atidarykite nurodytą programą
+        - Ekrano užrakinimas
+        - Atidaryti pranešimų stalčių
+        - Greitųjų nustatymų atidarymas
+- Taip pat galite nustatyti laikrodį nepriklausomai nuo namų programų
+- Programėlių derinimo programėlių stalčiuje keitimas
+- Šrifto dydžio keitimas
+- Pašalintas interneto leidimas. Niekada nežinote, ką programos kūrėjas nori sužinoti apie jus.
+
+## Vertimai:
+
+- Daug žmonių išvertė programėlę į šias kalbas. Dėkojame jums visiems.
+  - Arabų kalba
+  - Albanų kalba
+  - Bulgarų kalba
+  - Kinų kalba
+  - Kroatų kalba
+  - Čekijos
+  - Danų kalba
+  - Anglų kalba
+  - Estų kalba
+  - Filipiniečių kalba
+  - Suomių kalba
+  - Prancūzų kalba
+  - Gruzinų kalba
+  - Vokiečių kalba
+  - Graikų kalba
+  - Havajietiškas
+  - Hebrajų kalba
+  - Hindi kalba
+  - Vengrų kalba
+  - Islandų kalba
+  - Indoneziečių kalba
+  - Airijos
+  - Italų kalba
+  - Japonų kalba
+  - Korėjiečių kalba
+  - Lietuvių kalba
+  - Liuksemburgo kalba
+  - Malajų kalba
+  - Malagasių kalba
+  - Malajalamų kalba
+  - Norvegų kalba
+  - Nepalų kalba
+  - Persų kalba
+  - Lenkų kalba
+  - Portugalų (Europos)
+  - Pandžabų kalba
+  - Rusų kalba
+  - Serbų kalba
+  - Sindų kalba
+  - Ispanų kalba
+  - Švedų kalba
+  - Tailando
+  - Turkijos
+  - Ukrainiečių kalba
+  - Vietnamiečių kalba

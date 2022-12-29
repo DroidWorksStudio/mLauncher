@@ -1,0 +1,69 @@
+Đã rẽ nhánh từ <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Tối thiểu và sạch sẽ.
+    
+# Chia đôi với các tính năng bổ sung
+
+- Loại bỏ sự lộn xộn, như quảng cáo và liên kết
+- Bạn có thể đổi tên ứng dụng trong ngăn kéo ứng dụng (Đổi tên ứng dụng trên màn hình chính đã được hỗ trợ. Chỉ cần nhấp và giữ vào một ứng dụng trên màn hình chính và bắt đầu nhập)
+- Chúng tôi đã thêm nhiều tùy chọn hơn cho các cử chỉ trên màn hình chính:
+    - Cử chỉ bây giờ là:
+        - Vuốt lên, xuống, trái, phải
+        - Bấm vào đồng hồ
+        - Bấm vào Ngày
+    - Các hành động có thể thực hiện bây giờ bao gồm:
+        - Mở ứng dụng được chỉ định
+        - Khóa màn hình
+        - Mở ngăn thông báo
+        - Mở cài đặt nhanh
+- Bạn cũng có thể định vị đồng hồ độc lập với các ứng dụng gia đình
+- Thay đổi căn chỉnh của ứng dụng trong ngăn kéo ứng dụng
+- Thay đổi cỡ chữ
+- Đã xóa quyền truy cập internet. Bạn không bao giờ biết nhà phát triển ứng dụng muốn biết gì về bạn.
+
+## Bản dịch:
+
+- Rất nhiều người đã dịch ứng dụng sang các ngôn ngữ sau. Rất cám ơn đến tất cả các bạn.
+  - Tiếng Ả Rập
+  - Tiếng Albania
+  - tiếng Bungari
+  - Người Trung Quốc
+  - tiếng Croatia
+  - tiếng Séc
+  - Người Đan Mạch
+  - Tiếng Anh
+  - Tiếng Estonia
+  - người Philippines
+  - Phần Lan
+  - Người Pháp
+  - Gruzia
+  - Tiếng Đức
+  - Người Hy Lạp
+  - Hawaiian
+  - tiếng Do Thái
+  - tiếng Hin-ddi
+  - Người Hungary
+  - Tiếng Iceland
+  - Indonesia
+  - Ailen
+  - Người Ý
+  - Tiếng Nhật
+  - Hàn Quốc
+  - Tiếng Litva
+  - tiếng Luxembourg
+  - Mã lai
+  - Malagasy
+  - tiếng Mã Lai
+  - tiếng Na Uy
+  - tiếng Nepal
+  - Ba Tư
+  - Đánh bóng
+  - Tiếng Bồ Đào Nha (Châu Âu)
+  - Tiếng Ba Tư
+  - Tiếng Nga
+  - Tiếng Serbia
+  - Sindhi
+  - Người Tây Ban Nha
+  - Thụy Điển
+  - tiếng Thái
+  - Thổ Nhĩ Kỳ
+  - tiếng Ukraina
+  - Tiếng Việt

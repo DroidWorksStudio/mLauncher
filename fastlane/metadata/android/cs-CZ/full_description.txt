@@ -1,0 +1,69 @@
+Rozšířeno z <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimální a čisté.
+    
+# Rozštěpeno s dalšími funkcemi
+
+- Odstranění nepořádku, jako jsou reklamy a odkazy
+- Aplikace můžete přejmenovat v zásuvce aplikací (Přejmenování aplikací na domovské obrazovce je již podporováno. Stačí dlouze kliknout na aplikaci na domovské obrazovce a začít psát.)
+- Přidali jsme mnohem více možností pro gesta na domovské obrazovce:
+    - Gesta jsou nyní:
+        - Přejetím nahoru, dolů, doleva, doprava
+        - Kliknutí na hodiny
+        - Kliknutí na datum
+    - Možné akce nyní zahrnují:
+        - Otevřít zadanou aplikaci
+        - zamykání obrazovky
+        - Otevírání oznamovací oblasti
+        - Otevření rychlého nastavení
+- Můžete také umístit hodiny nezávisle na domovských aplikacích
+- Změna zarovnání aplikací v zásuvce aplikací
+- Změna velikosti písma
+- Oprávnění k Internetu odebráno. Nikdy nevíte, co o vás chce vývojář vědět.
+
+## Překlady:
+
+- Mnoho lidí přeložilo aplikaci do následujících jazyků. Moc vám všem děkujeme.
+  - Arabština
+  - Albánština
+  - Bulharština
+  - Čínština
+  - Chorvatština
+  - Čeština
+  - Dánština
+  - Angličtina
+  - Estonština
+  - Filipínci
+  - Finština
+  - Francouzština
+  - Gruzínština
+  - Němčina
+  - Řečtina
+  - Havajský
+  - Hebrejština
+  - Hindština
+  - Maďarština
+  - Islandština
+  - Indonéština
+  - Irský
+  - Italština
+  - Japonština
+  - Korejština
+  - Litevština
+  - Lucemburština
+  - Malajština
+  - Malgaština
+  - Malajálamština
+  - Norština
+  - Nepálština
+  - Perský jazyk
+  - Polský jazyk
+  - Portugalština (evropská)
+  - Paňdžábština
+  - Ruský jazyk
+  - srbština
+  - Sindhi
+  - Španělština
+  - Švédština
+  - Thajský
+  - Turečtina
+  - Ukrajinština
+  - Vietnamština

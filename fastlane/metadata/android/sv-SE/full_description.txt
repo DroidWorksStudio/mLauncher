@@ -1,0 +1,69 @@
+Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimalt och rent.
+    
+# Glitsade med extra funktioner
+
+- Borttagen skräp, som annonser och länkar
+- Du kan byta namn på appar i applådan (det finns redan stöd för att byta namn på appar på hemskärmen. Klicka bara länge på en app på startskärmen och börja skriva.)
+- Vi har lagt till många fler alternativ för gester på startskärmen:
+    - Gester är nu:
+        - Svep upp, ner, vänster, höger
+        - Klicka på klockan
+        - Klicka på datumet
+    - Möjliga åtgärder nu inkluderar:
+        - Öppna specificerad app
+        - Låsa skärmen
+        - Öppna aviseringslådan
+        - Öppna snabbinställningar
+- Du kan också placera klockan oberoende av hem-apparna
+- Ändra inriktningen på appar i app-utdragslådan
+- Ändra teckenstorlek
+- Tog bort Internet-tillstånd. Du vet aldrig vad en apputvecklare vill veta om dig.
+
+## Översättningar:
+
+- Många har översatt appen till följande språk. Stort tack till er alla.
+  - Arabiska
+  - Albanska
+  - Bulgariska
+  - Kinesiska
+  - Kroatiska
+  - Tjeckiska
+  - Danska
+  - Engelska
+  - Estniska
+  - Filippinska
+  - Finländska
+  - Franska
+  - Georgiska
+  - Tyska
+  - Grekiska
+  - Hawaiianska
+  - Hebreiska
+  - Hindi
+  - Ungerska
+  - Isländska
+  - Indonesiska
+  - Irländska
+  - Italienska
+  - Japanska
+  - Koreanska
+  - Litauiska
+  - Luxemburgiska
+  - Malajiska
+  - Madagaskiska
+  - Malayalam
+  - Norska
+  - Nepali
+  - Persiska
+  - Polska
+  - Portugisiska (europeisk)
+  - Punjabi
+  - Ryska
+  - Serbiska
+  - Sindhi
+  - Spanska
+  - Svenska
+  - Thailändska
+  - Turkiska
+  - Ukrainska
+  - Vietnamesiska

@@ -1,0 +1,1 @@
+Odvozeno od OlauncherCF, +minimalizace, +přizpůsobitelnost

@@ -1,0 +1,69 @@
+Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Lágmarks og hreint.
+    
+# Forked með auka eiginleikum
+
+- Fjarlægði ringulreið, eins og auglýsingar og tengla
+- Þú getur endurnefna forrit í app-skúffunni (Endurnefna forrit á heimaskjánum er nú þegar stutt. Smelltu bara lengi á app á heimaskjánum og byrjaðu að slá)
+- Við höfum bætt við miklu fleiri valkostum fyrir bendingar á heimaskjánum:
+    - Bendingar eru núna:
+        - Strjúktu upp, niður, vinstri, hægri
+        - Að smella á klukkuna
+        - Með því að smella á dagsetninguna
+    - Mögulegar aðgerðir eru núna:
+        - Opnaðu tilgreint forrit
+        - Að læsa skjánum
+        - Að opna tilkynningaskúffuna
+        - Að opna flýtistillingar
+- Þú getur líka staðsett klukkuna óháð heimilisöppunum
+- Breyttu röðun forrita í app-skúffu
+- Breyttu leturstærð
+- Fjarlægði internetheimild. Þú veist aldrei hvað forritari vill vita um þig.
+
+## Þýðingar:
+
+- Margir hafa þýtt appið á eftirfarandi tungumál. Kærar þakkir til ykkar allra.
+  - arabíska
+  - Albanska
+  - búlgarska
+  - Kínverska
+  - Króatíska
+  - tékkneska
+  - danska
+  - Enska
+  - Eistneska, eisti, eistneskur
+  - filippseyska
+  - finnska
+  - franska
+  - Georgíu
+  - Þýska, Þjóðverji, þýskur
+  - gríska
+  - Hawaiian
+  - Hebreska
+  - Hindí
+  - Ungverska, Ungverji, ungverskt
+  - íslenskur
+  - Indónesískur
+  - Írska
+  - Ítalska
+  - Japanska
+  - Kóreska
+  - Litháískur
+  - Lúxemborg
+  - Malasíska
+  - Malagasíu
+  - Malajalam
+  - norskur
+  - nepalska
+  - persneska
+  - Pólska
+  - Portúgalska (evrópskt)
+  - Púndjabí
+  - Rússneskt
+  - Serbneska
+  - Sindhi
+  - Spænska, spænskt
+  - Sænska
+  - Tælenska
+  - Tyrkneska
+  - úkraínska
+  - Víetnamska

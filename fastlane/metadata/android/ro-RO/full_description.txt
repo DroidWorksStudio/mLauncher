@@ -1,0 +1,69 @@
+Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal și curat.
+    
+# Am încercat cu caracteristici suplimentare
+
+- A eliminat dezordinea, cum ar fi anunțurile și linkurile
+- Puteți redenumi aplicațiile din App-drawer (redenumirea aplicațiilor de pe ecranul principal este deja acceptată. Trebuie doar să faceți clic lung pe o aplicație de pe ecranul de pornire și să începeți să scrieți)
+- Am adăugat mult mai multe opțiuni pentru gesturi pe ecranul principal:
+    - Gesturile sunt acum:
+        - Glisând în sus, jos, stânga, dreapta
+        - Făcând clic pe ceas
+        - Făcând clic pe data
+    - Acţiunile posibile includ:
+        - Deschide aplicația specificată
+        - Blocarea ecranului
+        - Deschiderea sertarului de notificări
+        - Deschiderea setărilor rapide
+- De asemenea, puteți poziționa ceasul independent de aplicațiile de pornire
+- Schimbarea alinierii aplicațiilor în App-drawer
+- Modificarea dimensiunii fontului
+- Permisiunea la internet eliminată. Nu știi niciodată ce vrea să știe un dezvoltator de aplicații despre tine.
+
+## Traduceri:
+
+- O mulțime de oameni au tradus aplicația în următoarele limbi. Vă mulțumim tuturor.
+  - arabă
+  - Albaneză
+  - Bulgară
+  - Chineză
+  - Croată
+  - Cehă
+  - daneză
+  - Engleză
+  - Estoniană
+  - Filipineză
+  - finlandeză
+  - Franceză
+  - Georgian
+  - Germană
+  - Greacă
+  - Hawaiian
+  - Ebraică
+  - Hindi
+  - Maghiară
+  - Islandeză
+  - Indoneziană
+  - irlandez
+  - Italiană
+  - japoneză
+  - Coreeană
+  - lituaniană
+  - luxemburgheză
+  - Malay
+  - Malgaș
+  - Malayalam
+  - Norvegiană
+  - Nepali
+  - Persană
+  - Poloneză
+  - Portugheză (europeană)
+  - Punjabi
+  - Rusă
+  - Sârbă
+  - Sindhi
+  - Spaniolă
+  - Suedeză
+  - Thai
+  - Turcă
+  - Ucraineană
+  - Vietnameză

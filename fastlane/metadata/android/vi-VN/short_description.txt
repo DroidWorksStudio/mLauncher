@@ -1,0 +1,1 @@
+Được rẽ nhánh từ OlauncherCF, +tối giản hóa, +khả năng tùy biến

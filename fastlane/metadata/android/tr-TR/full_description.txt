@@ -1,0 +1,69 @@
+Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal ve temiz.
+    
+# Ekstra özelliklerle çatallandı
+
+- Reklamlar ve bağlantılar gibi karmaşayı ortadan kaldırdı
+- Uygulama çekmecesindeki uygulamaları yeniden adlandırabilirsiniz (Ana ekrandaki uygulamaları yeniden adlandırmak zaten desteklenmektedir. Ana ekranda bir uygulamaya uzun tıklayın ve yazmaya başlayın)
+- Ana ekran hareketlerinde çok daha fazla özelleştirilebilirlik
+    - Hareketler şimdi:
+        - Yukarı, aşağı, sola, sağa kaydırma
+        - Saate tıklamak
+        - Tarihe Tıklama
+    - Olası eylemler artık şunları içeriyor:
+        - Belirtilen uygulamayı aç
+        - Ekranı kilitleme
+        - Bildirim çekmecesini açma
+        - Hızlı ayarların açılması
+- Saati ev uygulamalarından bağımsız olarak hizalayın
+- Uygulama çekmecesindeki uygulamaların hizalamasını değiştirme
+- Yazı tipi boyutunu değiştirme
+- İnternet izni kaldırıldı Bir uygulama geliştiricinin sizin hakkınızda ne bilmek istediğini asla bilemezsiniz.
+
+## Çeviriler:
+
+- Birçok kişi uygulamayı aşağıdaki dillere çevirmiştir. Hepinize çok teşekkürler.
+  - Arapça
+  - Arnavutça
+  - Bulgarca
+  - Çince
+  - Hırvatça
+  - Çek Cumhuriyeti
+  - Danimarka
+  - İngilizce
+  - Estonca
+  - Filipinli
+  - Fince
+  - Fransızca
+  - Gürcüce
+  - Alman
+  - Yunan
+  - Hawaiili
+  - İbranice
+  - Hintçe
+  - Endonezce
+  - İzlandaca
+  - Macarca
+  - İrlandalı
+  - İtalyan
+  - Japonca
+  - Korece
+  - Litvanyalı
+  - Lüksemburgca
+  - Malay
+  - Malgaşça
+  - Malayalam
+  - Norveççe
+  - Nepalce
+  - Farsça
+  - Lehçe
+  - Portekizce (Avrupa)
+  - Punjabi
+  - Rusça
+  - Sırpça
+  - Sindhi
+  - İspanyolca
+  - İsveç
+  - Tayland
+  - Türkçe
+  - Ukrayna
+  - Vietnamca

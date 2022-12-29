@@ -1,0 +1,69 @@
+Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimalistisch und sauber.
+    
+# Geforkt mit zusätzlichen Funktionen
+
+- Unübersichtliches, wie Werbung und Links, wurde entfernt.
+- Sie können Apps im App-Drawer umbenennen (Das Umbenennen von Apps auf dem Startbildschirm wird bereits unterstützt. Klicken Sie einfach lange auf eine App auf dem Startbildschirm und beginnen Sie zu tippen)
+- Viel mehr Anpassungsmöglichkeiten bei den Gesten auf dem Startbildschirm
+    - Gesten sind jetzt:
+        - Wischen nach oben, unten, links, rechts
+        - Klicken Sie auf die Uhr
+        - Möglichkeit, die Anwendung zu ändern, die beim Klicken auf das Datum geöffnet wird
+    - Mögliche Aktionen jetzt inklusive:
+        - Angegebene App öffnen
+        - Sperrung des Bildschirms
+        - Öffne die Benachrichtigungsleiste
+        - Öffnen der Schnelleinstellungen
+- Uhr unabhängig von Home-Apps ausrichten
+- Ausrichtung von Anwendungen im App-Drawer ändern
+- Schriftgröße ändern
+- Entfernte Interneterlaubnis - Entfernte Interneterlaubnis Du weißt nie, was ein App-Entwickler über dich wissen möchte.
+
+## Übersetzungen:
+
+- Viele Leute haben die App in die folgenden Sprachen übersetzt. Vielen Dank an Sie alle.
+  - Arabisch
+  - Albanisch
+  - bulgarisch
+  - Chinesisch
+  - kroatisch
+  - Tschechisch
+  - Dänisch
+  - Englisch
+  - Estnisch
+  - Filipino
+  - Finnisch
+  - Französisch
+  - georgisch
+  - Deutsch
+  - Griechisch
+  - Hawaiianisch
+  - Hebräisch
+  - Hindi
+  - Ungarisch
+  - Isländisch
+  - Indonesisch
+  - Irisch
+  - Italienisch
+  - Japanisch
+  - Koreanisch
+  - Litauisch
+  - Luxemburgisch
+  - Malaiisch
+  - Madagassisch
+  - Malayalam
+  - norwegisch
+  - nepalesisch
+  - Persisch
+  - Polnisch
+  - Portugiesisch (europäisch)
+  - Pandschabi
+  - Russisch
+  - serbisch
+  - Sindhi
+  - Spanisch
+  - Schwedisch
+  - Thailändisch
+  - Türkisch
+  - ukrainisch
+  - Vietnamesisch

@@ -1,0 +1,69 @@
+Forked nga <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimale dhe e pastër.
+    
+# I dendur me veçori shtesë
+
+- Hiqni rrëmujën, si reklamat dhe lidhjet
+- Mund t'i riemërtoni aplikacionet në sirtarin e aplikacioneve (Riemërtimi i aplikacioneve në ekranin bazë tashmë mbështetet. Thjesht klikoni gjatë në një aplikacion në ekranin bazë dhe filloni të shkruani)
+- Ne kemi shtuar shumë më tepër opsione për gjeste në ekranin bazë:
+    - Gjestet janë tani:
+        - Duke rrëshqitur lart, poshtë, majtas, djathtas
+        - Duke klikuar mbi orën
+        - Duke klikuar mbi datën
+    - Veprimet e mundshme tani përfshijnë:
+        - Hapni aplikacionin e specifikuar
+        - Mbyllja e ekranit
+        - Hapja e sirtarit të njoftimeve
+        - Hapja e cilësimeve të shpejta
+- Mund ta poziciononi orën edhe në mënyrë të pavarur nga aplikacionet e shtëpisë
+- Ndrysho shtrirjen e aplikacioneve në sirtarin e aplikacioneve
+- Ndrysho madhësinë e shkronjave
+- U hoq leja e internetit. Asnjëherë nuk e dini se çfarë dëshiron të dijë një zhvillues aplikacioni për ju.
+
+## Përkthime:
+
+- Shumë njerëz e kanë përkthyer aplikacionin në gjuhët e mëposhtme. Shumë faleminderit për të gjithë ju.
+  - Arabisht
+  - Shqip
+  - bullgar
+  - Kinez
+  - Kroatisht
+  - Çeke
+  - daneze
+  - Anglisht
+  - Estonisht
+  - Filipino
+  - Finlandisht
+  - Frëngjisht
+  - Gjeorgjiane
+  - gjermanisht
+  - greke
+  - Havajane
+  - Hebraisht
+  - Hindi
+  - Hungarisht
+  - Islandeze
+  - Indonezisht
+  - Irlandez
+  - Italian
+  - Japoneze
+  - Koreane
+  - Lituanisht
+  - Luksemburgase
+  - Malajzia
+  - Malagazi
+  - Malajalame
+  - norvegjeze
+  - Nepalisht
+  - Persian
+  - polonisht
+  - Portugeze (evropiane)
+  - Punjabi
+  - Rusisht
+  - Serbe
+  - Sindhi
+  - Spanjisht
+  - Suedisht
+  - Thai
+  - Turk
+  - ukrainas
+  - Vietnamese

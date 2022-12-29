@@ -1,0 +1,69 @@
+Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimaalne ja puhas.
+    
+# Forked koos lisafunktsioonidega
+
+- Eemaldatud segadus, nagu reklaamid ja lingid
+- Rakenduste ümbernimetamine on võimalik rakenduste riiulifailis (rakenduste ümbernimetamine avakuval on juba toetatud. Lihtsalt klõpsa pikalt rakenduse avakuval ja hakka kirjutama)
+- Oleme lisanud palju rohkem võimalusi žestide kasutamiseks avakuval:
+    - Žestid on nüüd:
+        - Liigutamine üles, alla, vasakule, paremale
+        - Kella klõpsamine
+        - Kuupäeva klõpsamine
+    - Võimalikud meetmed on nüüd järgmised:
+        - Avage määratud rakendus
+        - Ekraani lukustamine
+        - Teavitussahtli avamine
+        - Kiirseadete avamine
+- Samuti saab kella paigutada kodurakendustest sõltumatult
+- Rakenduste joondamise muutmine rakenduste riiulidesse
+- Kirjasuuruse muutmine
+- Eemaldatud internetiluba. Sa ei tea kunagi, mida rakenduse arendaja sinu kohta teada tahab.
+
+## Tõlked:
+
+- Paljud inimesed on tõlkinud rakenduse järgmistesse keeltesse. Suur tänu teile kõigile.
+  - Araabia keel
+  - Albaania
+  - Bulgaaria
+  - Hiina
+  - Horvaatia
+  - Tšehhi
+  - Taani
+  - inglise keel
+  - Eesti keel
+  - Filipiinlased
+  - Soome
+  - Prantsuse
+  - Gruusia
+  - Saksa keel
+  - Kreeka
+  - Hawaii
+  - Heebrea keel
+  - Hindi keel
+  - Ungari keel
+  - Islandi
+  - Indoneesia
+  - Iiri
+  - Itaalia keel
+  - Jaapani keel
+  - Korea keel
+  - Leedu
+  - Luksemburgi
+  - Malai keel
+  - Madagaskar
+  - Malayalam
+  - Norra
+  - Nepali
+  - Pärsia
+  - Poola
+  - Portugali keel (Euroopa)
+  - Pandžabi
+  - Vene keel
+  - Serbia
+  - Sindhi
+  - Hispaania keel
+  - Rootsi
+  - Tai
+  - Türgi
+  - Ukraina
+  - Vietnami

@@ -1,0 +1,69 @@
+Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Ka liʻiliʻi a maʻemaʻe.
+    
+# Forked me nā hiʻohiʻona ʻē aʻe
+
+- Wehe ʻia ka clutter, e like me nā hoʻolaha a me nā loulou
+- Hiki iā ʻoe ke inoa hou i nā polokalamu ma ka app-drawer (Ua kākoʻo ʻia ka inoa hou ʻana i nā polokalamu ma ka ʻaoʻao home. E kaomi lōʻihi ma kahi polokalamu ma ka ʻaoʻao home a hoʻomaka e paʻi)
+- Ua hoʻohui mākou i nā koho hou aʻe no nā hana ma ka ʻaoʻao home:
+    - ʻO nā hana i kēia manawa:
+        - Ke hili ʻana i luna, lalo, hema, ʻākau
+        - Ke kaomi ʻana i ka uaki
+        - Ke kaomi ʻana i ka lā
+    - Aia nā hana i kēia manawa:
+        - Wehe i ka polokalamu i kuhikuhi ʻia
+        - Laka i ka pale
+        - Ke wehe nei i ka pahu hoʻolaha
+        - Ke wehe nei i nā hoʻonohonoho wikiwiki
+- Hiki iā ʻoe ke hoʻonohonoho i ka uaki ma kahi kūʻokoʻa o nā polokalamu home
+- Hoʻololi i ka alignment o nā polokalamu ma ka app-drawer
+- Hoʻololi i ka nui font
+- Wehe ʻia ka ʻae pūnaewele. ʻAʻole ʻoe i ʻike i ka mea a ka mea hoʻomohala polokalamu e makemake ai e ʻike e pili ana iā ʻoe.
+
+## Nā unuhi:
+
+- He nui ka poʻe i unuhi i ka polokalamu i nā ʻōlelo aʻe. Mahalo nui iā ʻoukou a pau.
+  - Apapika
+  - Alapania
+  - Pukalia
+  - Pākē
+  - Koalia
+  - Keka
+  - Kenemaka
+  - Pelekania
+  - Ekekonia
+  - Pilipine
+  - Pinilana
+  - Palani
+  - Keokia
+  - Alemania
+  - Helene
+  - ʻŌlelo Hawaiʻi
+  - Hepela
+  - Hiniki
+  - Hunakalia
+  - ʻĀinahau
+  - ʻInikonia
+  - Ipelana
+  - Ikalia
+  - Kepanī
+  - Kolea
+  - ʻŌlelo Lituania
+  - ʻŌlelo Lukemapuka
+  - Mālei
+  - Malagasy
+  - Mālealama
+  - Nolewai
+  - Nepali
+  - Pelekia
+  - Pōlani
+  - Pukiki (ʻEulopa)
+  - ʻŌlelo Punajabi
+  - Lukia
+  - ʻŌlelo Serbia
+  - Kiniki
+  - Kepania
+  - Kuekene
+  - Kailani
+  - Tureke
+  - Ukrainian
+  - Vietnamese

@@ -1,0 +1,69 @@
+Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimális és tiszta.
+    
+# Villás extra funkciókkal
+
+- Eltávolítottuk a zavaró elemeket, például hirdetéseket és linkeket
+- Az alkalmazásokat átnevezheti az alkalmazás-tálcán (Az alkalmazások átnevezése a kezdőképernyőn már támogatott. Csak kattintson hosszan egy alkalmazásra a kezdőképernyőn, és kezdjen el gépelni.)
+- Sokkal több lehetőséget adtunk a gesztusokhoz a kezdőképernyőn:
+    - A gesztusok most:
+        - Csúsztatás fel, le, balra, jobbra
+        - Kattints az órára
+        - Kattintson a dátumra
+    - A lehetséges műveletek most a következők:
+        - Nyissa meg a megadott alkalmazást
+        - A képernyő lezárása
+        - Az értesítési fiók kinyitása
+        - A gyorsbeállítások megnyitása
+- Az órát az otthoni alkalmazásoktól függetlenül is elhelyezheti
+- Az alkalmazások igazításának módosítása az alkalmazás-tálcában
+- Betűméret módosítása
+- Eltávolították az internetes engedélyt. Soha nem tudhatod, hogy egy alkalmazásfejlesztő mit akar tudni rólad.
+
+## Fordítások:
+
+- Sokan lefordították az alkalmazást a következő nyelvekre. Köszönöm mindannyiuknak.
+  - Arab
+  - albán
+  - bolgár
+  - Kínai
+  - horvát
+  - Csehország
+  - Dán
+  - Angol
+  - észt
+  - Fülöp-szigeteki
+  - Finn
+  - Francia
+  - grúz
+  - Német
+  - Görög
+  - Hawaii
+  - Héber
+  - Hindi
+  - Magyar
+  - Izlandi
+  - Indonéz
+  - Ír
+  - Olasz
+  - Japán
+  - Koreai
+  - litván
+  - Luxemburgi
+  - maláj
+  - Malagasy
+  - malajálam
+  - Norvég
+  - Nepáli
+  - perzsa
+  - Lengyel
+  - Portugál (európai)
+  - Pandzsábi
+  - Orosz
+  - szerb
+  - Sindhi
+  - Spanyol
+  - Svéd
+  - Thai
+  - Török
+  - ukrán
+  - vietnámi

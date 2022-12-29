@@ -1,0 +1,69 @@
+Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimaal en schoon.
+    
+# Geforked met extra functies
+
+- Verwijderde rommel, zoals advertenties en links
+- U kunt apps hernoemen in de app-drawer (Het hernoemen van apps op het startscherm wordt al ondersteund. Gewoon langklikken op een app op het beginscherm en beginnen te typen)
+- We hebben veel meer opties toegevoegd voor gebaren op het beginscherm:
+    - Gebaren zijn nu:
+        - Veeg omhoog, omlaag, links, rechts
+        - Klikken op de klok
+        - Klikken op de datum
+    - Mogelijke acties omvatten:
+        - Open de opgegeven app
+        - Scherm vergrendelen
+        - Open het meldingenpaneel
+        - Snelle instellingen openen
+- Klok onafhankelijk van home apps uitlijnen
+- Uitlijning van apps in app-drawer veranderen
+- Lettergrootte wijzigen
+- Internet toestemming verwijderd Je weet nooit wat een app-ontwikkelaar over je wil weten.
+
+## Vertalingen:
+
+- Veel mensen hebben de app vertaald naar de volgende talen. Veel dank aan u allen.
+  - Arabisch
+  - Albanees
+  - Bulgaars
+  - Chinees
+  - Kroatisch
+  - Tsjechisch
+  - Deens
+  - Engels
+  - Ests
+  - Filipijns
+  - Fins
+  - Frans
+  - Georgisch
+  - Duitser
+  - Grieks
+  - Hawaïaans
+  - Hebreeuws
+  - Hindi
+  - Hongaars
+  - IJslands
+  - Indonesisch
+  - Ieren
+  - Italiaans
+  - Japanse
+  - Koreaans
+  - Litouws
+  - Luxemburgs
+  - Maleis
+  - Malagasy
+  - Malayalam
+  - Noors
+  - Nepalees
+  - Perzisch
+  - Pools
+  - Portugees (Europees)
+  - Punjabi
+  - Russisch
+  - Servisch
+  - Sindhi
+  - Spaans
+  - Zweeds
+  - Thaise
+  - Turks
+  - Oekraïens
+  - Vietnamezen

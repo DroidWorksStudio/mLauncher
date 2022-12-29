@@ -1,0 +1,69 @@
+Forquilhado a partir de <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mínimo e limpo.
+    
+# Forked com recursos extras
+
+- Removida a confusão, como anúncios e links
+- É possível renomear aplicações na gaveta da aplicação (a renomeação de aplicações no ecrã inicial já é suportada. Basta um clique longo numa aplicação no ecrã inicial e começar a digitar)
+- Muito mais personalizabilidade nos gestos do ecrã inicial
+    - Os gestos estão agora:
+        - Deslizando para cima, para baixo, esquerda, direita
+        - Clicando no relógio
+        - Clicando na Data
+    - Possíveis ações agora incluem:
+        - Abrir o aplicativo especificado
+        - Bloqueando a tela
+        - Abrindo a gaveta de notificação
+        - Abrir as configurações rápidas
+- Alinhar o relógio independentemente das aplicações domésticas
+- Alterar o alinhamento das aplicações no app-drawer
+- Alterar o tamanho da letra
+- Removida a permissão da Internet - Removida a permissão da Internet - Removida a permissão da Internet Você nunca sabe o que um desenvolvedor do app quer saber sobre você.
+
+## Traduções:
+
+- Muitas pessoas traduziram a aplicação para as seguintes línguas. Muito obrigado a todos vós.
+  - árabe
+  - Albanês
+  - Búlgaro
+  - Chinês
+  - Croata
+  - Checo
+  - Dinamarquês
+  - Inglês
+  - Estónio
+  - Filipino
+  - Finlandês
+  - Francês
+  - Georgiano
+  - Alemão
+  - Grego
+  - havaiano
+  - Hebraico
+  - Hindi
+  - Húngaro
+  - Islandês
+  - Indonésio
+  - Irlandês
+  - Italiano
+  - Japonês
+  - Coreano
+  - Lituano
+  - Luxemburguês
+  - Malaio
+  - Malgaxe
+  - Malayalam
+  - Norueguês
+  - Nepalês
+  - Persa
+  - Polaco
+  - Português (Europeu)
+  - Punjabi
+  - Russo
+  - Sérvio
+  - Sindhi
+  - Espanhol
+  - Sueco
+  - Thai
+  - Turco
+  - Ucraniano
+  - Vietnamita

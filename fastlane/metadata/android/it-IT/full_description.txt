@@ -1,0 +1,69 @@
+Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimale e pulito.
+    
+# Forchetto con funzionalità extra
+
+- Rimosso il disordine, come annunci e link
+- È possibile rinominare le app nell'app-drawer (la rinominazione delle app nella schermata iniziale è già supportata. È sufficiente fare clic a lungo su un'applicazione nella schermata iniziale e iniziare a digitare).
+- Maggiore personalizzazione dei gesti della schermata iniziale
+    - I gesti sono ora:
+        - Scorri verso l'alto, verso il basso, a sinistra, a destra
+        - Possibilità di cambiare l'app che si apre cliccando sull'orologio
+        - Cliccando sulla data
+    - Le azioni possibili ora includono:
+        - Apri app specificata
+        - Blocco dello schermo
+        - Apertura del pannello notifiche
+        - Apertura delle impostazioni rapide
+- Allineare l'orologio indipendentemente dalle app di casa
+- Modifica dell'allineamento delle app nel cassetto delle applicazioni
+- Modifica della dimensione dei caratteri
+- Rimozione dell'autorizzazione a Internet - Rimozione dell'autorizzazione a Internet Non sai mai cosa uno sviluppatore di app vuole sapere su di te.
+
+## Traduzioni:
+
+- Molte persone hanno tradotto l'applicazione nelle seguenti lingue. Grazie a tutti voi.
+  - Arabo
+  - Albanese
+  - Bulgaro
+  - Cinese
+  - Croato
+  - Ceca
+  - Danese
+  - Inglese
+  - Estone
+  - Filippino
+  - Finlandese
+  - Francese
+  - Georgiano
+  - Tedesco
+  - Greco
+  - Hawaiano
+  - Ebraico
+  - Hindi
+  - Ungherese
+  - Islandese
+  - Indonesiano
+  - Irlandese
+  - Italiano
+  - Giapponese
+  - Coreano
+  - Lituano
+  - Lussemburghese
+  - Malese
+  - Malgascio
+  - Malayalam
+  - Norvegese
+  - Nepali
+  - Persiano
+  - Polacco
+  - Portoghese (europeo)
+  - Punjabi
+  - Russo
+  - Serbo
+  - Sindhi
+  - Spagnolo
+  - Svedese
+  - Thailandese
+  - Turco
+  - Ucraino
+  - Vietnamita
