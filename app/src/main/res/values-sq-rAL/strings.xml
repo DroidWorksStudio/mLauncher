@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Settings -->
+    <string name="app">Aplikacioni</string>
+    <!-- Admin Settings -->
+    <string name="admin_permission_message">mLauncher premton të përdorë me përgjegjësi lejen e ekranit të kyçjes.</string>
+    <string name="experimental">(eksperimentale)</string>
+    <!-- Settings Headers -->
+    <string name="appearance">Pamja e jashtme</string>
+    <string name="behavior">Sjellje</string>
+    <string name="homescreen">Ekran në shtëpi</string>
+    <string name="alignment">Radhitje</string>
+    <string name="gestures">Gjestet</string>
+    <!-- Home Strings -->
+    <string name="hidden_apps">Aplikacionet e fshehura</string>
+    <string name="set_as_default_launcher">Cakto si lëshues të paracaktuar</string>
+    <string name="change_default_launcher">Ndrysho lëshuesin e paracaktuar</string>
+    <!-- Appearance Strings -->
+    <string name="status_bar">Shfaq shiritin e statusit</string>
+    <string name="theme_mode">Modaliteti i temës</string>
+    <string name="app_language">Gjuha e ndërfaqes</string>
+    <string name="app_text_size">Madhësia e tekstit</string>
+    <!-- Behavior Strings -->
+    <string name="auto_show_keyboard">Tastiera e shfaqjes automatike</string>
+    <string name="auto_open_apps">Hapja automatike e aplikacioneve</string>
+    <!-- Homescreen Strings -->
+    <string name="apps_on_home_screen">Numri i shkurtoreve</string>
+    <string name="show_time">Koha e shfaqjes</string>
+    <string name="show_date">Shfaq datën</string>
+    <string name="lock_home_apps">Blloko aplikacionet</string>
+    <string name="extend_home_apps_area">Zgjero zonën e klikueshme</string>
+    <string name="home_alignment_bottom">Përafrimi i ekranit bazë në fund</string>
+    <!-- Alignment Strings -->
+    <string name="home_alignment">Ekrani bazë i aplikacioneve</string>
+    <string name="clock_alignment">Ora dhe data</string>
+    <string name="drawer_alignment">Aplikacionet në sirtarin e aplikacioneve</string>
+    <!-- Gestures Strings -->
+    <string name="swipe_up_app">Rrëshqitni lart</string>
+    <string name="swipe_down_app">Rrëshqitni poshtë</string>
+    <string name="swipe_left_app">Rrëshqitni majtas</string>
+    <string name="swipe_right_app">Rrëshqitni djathtas</string>
+    <string name="clock_click_app">Klikoni mbi Orën</string>
+    <string name="date_click_app">Klikoni mbi Data</string>
+    <string name="double_tap">Trokit dy herë</string>
+    <!-- Settings Strings -->
+    <string name="off">Joaktiv</string>
+    <string name="on">Aktiv</string>
+    <string name="left">Majtas</string>
+    <string name="right">E drejta</string>
+    <string name="center">Qendra</string>
+    <string name="dark">E errët</string>
+    <string name="light">Drita</string>
+    <string name="settings">Cilësimet</string>
+    <string name="lang_system">Sistemi</string>
+    <string name="system_default">Sistemi</string>
+    <string name="hide">Fshih</string>
+    <string name="rename">Riemërto</string>
+    <string name="okay">Mirë</string>
+    <string name="save">Ruaj</string>
+    <string name="show">Shfaqje</string>
+    <string name="reset">Rivendos</string>
+    <string name="cancel">Anulo</string>
+    <string name="enable">Aktivizo</string>
+    <string name="disable">Çaktivizo</string>
+    <string name="enabled">Aktivizuar</string>
+    <string name="disabled">I paaftë</string>
+    <string name="open">Hapur</string>
+    <string name="close">Mbylle</string>
+    <string name="copy">Kopjo</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">Shfaq njoftimin</string>
+    <string name="show_app_list">Shfaq listën e aplikacioneve</string>
+    <string name="open_app">Hap aplikacionin</string>
+    <string name="lock_screen">Blloko ekranin</string>
+    <string name="open_quick_settings">Cilësimet e shpejta</string>
+    <string name="show_recents">Shfaq të fundit</string>
+    <string name="double_tap_to_lock_screen">Trokit dy herë për ta kyçur</string>
+    <!-- Backup Strings -->
+    <string name="backup">Rezervimi</string>
+    <string name="load_backup">Ngarko kopje rezervë</string>
+    <string name="store_backup">Rezervimi i dyqanit</string>
+    <!-- Unsorted Strings -->
+    <string name="show_apps">Të gjitha aplikacionet</string>
+    <string name="road_map">Udhërrëfyes</string>
+    <string name="drawer_list_empty_hint">Nuk u gjet asnjë aplikacion</string>
+    <string name="long_press_for_settings">Shtypni gjatë kudo për cilësimet</string>
+    <string name="swipe_up_for_apps">Rrëshqitni lart për të gjitha aplikacionet</string>
+    <string name="app_drawer_tips">Këshillë: Rrëshqitni poshtë për ta hequr. Lëvizni për të fshehur tastierën.</string>
+    <string name="double_tap_lock_is_enabled_message">Nëse kyçja me prekje të dyfishtë çaktivizon gjurmën e gishtit ose shkyçjen me fytyrë, hapni cilësimet e mLauncher, prekni \"eksperimentale\" dhe ndiqni udhëzimet. Faleminderit.</string>
+    <string name="double_tap_lock_uninstall_message">Trokit dy herë për të kyçur aktivizuar.
+        \n\nShënim: Fikeni këtë fillimisht nëse vendosni të fshini mLauncher.</string>
+    <string name="accessibility_service_name">Shërbimi i Veprimeve të mLauncher</string>
+    <string name="accessibility_service_description">Ky shërbim aksesueshmërie lejon mLauncher të kryejë veprime të caktuara, të tilla si kyçja e ekranit ose hapja e cilësimeve të shpejta.</string>
+</resources>

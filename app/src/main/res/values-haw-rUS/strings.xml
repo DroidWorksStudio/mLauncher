@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Settings -->
+    <string name="app">App</string>
+    <!-- Admin Settings -->
+    <string name="admin_permission_message">Ua hoʻohiki ʻo mLauncher e hoʻohana i ka ʻae ʻana i ka pale laka me ke kuleana.</string>
+    <string name="experimental">(hoʻokolohua)</string>
+    <!-- Settings Headers -->
+    <string name="appearance">Ka nana aku</string>
+    <string name="behavior">ʻAno</string>
+    <string name="homescreen">pale home</string>
+    <string name="alignment">Hoʻopololei</string>
+    <string name="gestures">Nā ʻōniʻoniʻo</string>
+    <!-- Home Strings -->
+    <string name="hidden_apps">Nā polokalamu huna</string>
+    <string name="set_as_default_launcher">E hoʻonoho i mea hoʻolaha paʻamau</string>
+    <string name="change_default_launcher">E hoʻololi i ka mea hoʻolaha paʻamau</string>
+    <!-- Appearance Strings -->
+    <string name="status_bar">Hōʻike i ka pae kūlana</string>
+    <string name="theme_mode">ʻano kumuhana</string>
+    <string name="app_language">ʻŌlelo Interface</string>
+    <string name="app_text_size">Nui kikokikona</string>
+    <!-- Behavior Strings -->
+    <string name="auto_show_keyboard">Hōʻike ʻokoʻa kīwī</string>
+    <string name="auto_open_apps">Hāmama nā polokalamu</string>
+    <!-- Homescreen Strings -->
+    <string name="apps_on_home_screen">Ka helu o nā pōkole</string>
+    <string name="show_time">Hōʻike manawa</string>
+    <string name="show_date">Hōʻike lā</string>
+    <string name="lock_home_apps">Laka Apps</string>
+    <string name="extend_home_apps_area">E hoʻonui i kahi hiki ke kaomi</string>
+    <string name="home_alignment_bottom">ʻO ka pale home e align i lalo</string>
+    <!-- Alignment Strings -->
+    <string name="home_alignment">Pākuʻi home Apps</string>
+    <string name="clock_alignment">Uaki a me ka lā</string>
+    <string name="drawer_alignment">Nā polokalamu i loko o ka app drawer</string>
+    <!-- Gestures Strings -->
+    <string name="swipe_up_app">Swipe i luna</string>
+    <string name="swipe_down_app">Swipe i lalo</string>
+    <string name="swipe_left_app">Swipe hema</string>
+    <string name="swipe_right_app">Swipe ʻākau</string>
+    <string name="clock_click_app">Kaomi ma ka uaki</string>
+    <string name="date_click_app">Kaomi ma ka lā</string>
+    <string name="double_tap">Koʻu pālua</string>
+    <!-- Settings Strings -->
+    <string name="off">Paʻa</string>
+    <string name="on">Ma ka</string>
+    <string name="left">Hema</string>
+    <string name="right">Akau</string>
+    <string name="center">Ke kikowaena</string>
+    <string name="dark">Poʻeleʻele</string>
+    <string name="light">Māmā</string>
+    <string name="settings">Nā hoʻonohonoho</string>
+    <string name="lang_system">Pūnaehana</string>
+    <string name="system_default">Pūnaehana</string>
+    <string name="hide">Huna</string>
+    <string name="rename">inoa hou</string>
+    <string name="okay">ʻAe</string>
+    <string name="save">Mālama</string>
+    <string name="show">Hōʻike</string>
+    <string name="reset">Hoʻoponopono hou</string>
+    <string name="cancel">Hoʻopau</string>
+    <string name="enable">Hiki</string>
+    <string name="disable">Hoʻopau</string>
+    <string name="enabled">Hoʻohana ʻia</string>
+    <string name="disabled">Kinohi</string>
+    <string name="open">Wehe</string>
+    <string name="close">Pani</string>
+    <string name="copy">kope</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">Hōʻike Hoʻolaha</string>
+    <string name="show_app_list">Hōʻike i ka papa inoa polokalamu</string>
+    <string name="open_app">Wehe App</string>
+    <string name="lock_screen">Laka pale</string>
+    <string name="open_quick_settings">Nā hoʻonohonoho wikiwiki</string>
+    <string name="show_recents">Hōʻike i nā mea hou</string>
+    <string name="double_tap_to_lock_screen">Koʻu pālua e laka</string>
+    <!-- Backup Strings -->
+    <string name="backup">Kākoʻo</string>
+    <string name="load_backup">Hoʻouka i ka waihona</string>
+    <string name="store_backup">Waihona Waihona</string>
+    <!-- Unsorted Strings -->
+    <string name="show_apps">Nā polokalamu a pau</string>
+    <string name="road_map">Palapala alanui</string>
+    <string name="drawer_list_empty_hint">ʻAʻohe polokalamu i loaʻa</string>
+    <string name="long_press_for_settings">E kaomi lōʻihi ma nā wahi a pau no nā hoʻonohonoho</string>
+    <string name="swipe_up_for_apps">Swipe i luna no nā polokalamu āpau</string>
+    <string name="app_drawer_tips">Manaʻo kōkua: Swipe i lalo e kāpae. Oka e huna i ka papa keyboard.</string>
+    <string name="double_tap_lock_is_enabled_message">Inā hoʻopau ka laka paʻi pālua i ka manamana lima a i ʻole ka wehe ʻana i ke alo, e wehe i nā hoʻonohonoho mLauncher, e kaomi i ka \'hoʻokolohua\' a hahai i nā kuhikuhi. Mahalo.</string>
+    <string name="double_tap_lock_uninstall_message">Koʻu pālua no ka laka.
+        \n\nNānā: E hoʻopau mua i kēia inā hoʻoholo ʻoe e holoi i ka mLauncher.</string>
+    <string name="accessibility_service_name">lawelawe hana mLauncher</string>
+    <string name="accessibility_service_description">Hāʻawi kēia lawelawe hiki iā mLauncher e hana i kekahi mau hana e like me ka laka ʻana i ka pale a i ʻole ka wehe ʻana i nā hoʻonohonoho wikiwiki.</string>
+</resources>

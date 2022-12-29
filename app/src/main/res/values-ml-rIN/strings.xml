@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Settings -->
+    <string name="app">ആപ്പ്</string>
+    <!-- Admin Settings -->
+    <string name="admin_permission_message">ലോക്ക് സ്‌ക്രീൻ അനുമതി ഉത്തരവാദിത്തത്തോടെ ഉപയോഗിക്കുമെന്ന് mLauncher വാഗ്ദാനം ചെയ്യുന്നു.</string>
+    <string name="experimental">(പരീക്ഷണാത്മകം)</string>
+    <!-- Settings Headers -->
+    <string name="appearance">രൂപഭാവം</string>
+    <string name="behavior">പെരുമാറ്റം</string>
+    <string name="homescreen">ഹോംസ്ക്രീൻ</string>
+    <string name="alignment">വിന്യാസം</string>
+    <string name="gestures">ആംഗ്യങ്ങൾ</string>
+    <!-- Home Strings -->
+    <string name="hidden_apps">മറച്ച ആപ്പുകൾ</string>
+    <string name="set_as_default_launcher">ഡിഫോൾട്ട് ലോഞ്ചറായി സജ്ജീകരിക്കുക</string>
+    <string name="change_default_launcher">ഡിഫോൾട്ട് ലോഞ്ചർ മാറ്റുക</string>
+    <!-- Appearance Strings -->
+    <string name="status_bar">സ്റ്റാറ്റസ് ബാർ കാണിക്കുക</string>
+    <string name="theme_mode">തീം മോഡ്</string>
+    <string name="app_language">ഇന്റർഫേസ് ഭാഷ</string>
+    <string name="app_text_size">വാചക വലുപ്പം</string>
+    <!-- Behavior Strings -->
+    <string name="auto_show_keyboard">ഓട്ടോ ഷോ കീബോർഡ്</string>
+    <string name="auto_open_apps">ആപ്പുകൾ സ്വയമേവ തുറക്കുക</string>
+    <!-- Homescreen Strings -->
+    <string name="apps_on_home_screen">കുറുക്കുവഴികളുടെ എണ്ണം</string>
+    <string name="show_time">പ്രദർശന സമയം</string>
+    <string name="show_date">തീയതി കാണിക്കുക</string>
+    <string name="lock_home_apps">ആപ്പുകൾ ലോക്ക് ചെയ്യുക</string>
+    <string name="extend_home_apps_area">ക്ലിക്ക് ചെയ്യാവുന്ന ഏരിയ വിപുലീകരിക്കുക</string>
+    <string name="home_alignment_bottom">ഹോം സ്‌ക്രീൻ താഴെ വിന്യസിക്കുക</string>
+    <!-- Alignment Strings -->
+    <string name="home_alignment">അപ്ലിക്കേഷനുകളുടെ ഹോം സ്‌ക്രീൻ</string>
+    <string name="clock_alignment">ക്ലോക്കും തീയതിയും</string>
+    <string name="drawer_alignment">ആപ്പ് ഡ്രോയറിലെ ആപ്പുകൾ</string>
+    <!-- Gestures Strings -->
+    <string name="swipe_up_app">മുകളിലേക്ക് നീക്കുക</string>
+    <string name="swipe_down_app">താഴേക്ക് സ്വൈപ്പ് ചെയ്യുക</string>
+    <string name="swipe_left_app">ഇടത്തേക്ക് സ്വൈപ്പ് ചെയ്യുക</string>
+    <string name="swipe_right_app">വലത്തേക്ക് സ്വൈപ്പ് ചെയ്യുക</string>
+    <string name="clock_click_app">ക്ലോക്കിൽ ക്ലിക്ക് ചെയ്യുക</string>
+    <string name="date_click_app">തീയതിയിൽ ക്ലിക്ക് ചെയ്യുക</string>
+    <string name="double_tap">രണ്ടുതവണ ടാപ്പ് ചെയ്യുക</string>
+    <!-- Settings Strings -->
+    <string name="off">ഓഫ്</string>
+    <string name="on">ഓൺ</string>
+    <string name="left">ഇടത്തെ</string>
+    <string name="right">ശരിയാണ്</string>
+    <string name="center">കേന്ദ്രം</string>
+    <string name="dark">ഇരുട്ട്</string>
+    <string name="light">വെളിച്ചം</string>
+    <string name="settings">ക്രമീകരണങ്ങൾ</string>
+    <string name="lang_system">സിസ്റ്റം</string>
+    <string name="system_default">സിസ്റ്റം</string>
+    <string name="hide">മറയ്ക്കുക</string>
+    <string name="rename">പേരുമാറ്റുക</string>
+    <string name="okay">ശരി</string>
+    <string name="save">രക്ഷിക്കും</string>
+    <string name="show">കാണിക്കുക</string>
+    <string name="reset">പുനഃസജ്ജമാക്കുക</string>
+    <string name="cancel">റദ്ദാക്കുക</string>
+    <string name="enable">പ്രവർത്തനക്ഷമമാക്കുക</string>
+    <string name="disable">പ്രവർത്തനരഹിതമാക്കുക</string>
+    <string name="enabled">പ്രവർത്തനക്ഷമമാക്കി</string>
+    <string name="disabled">അപ്രാപ്തമാക്കി</string>
+    <string name="open">തുറക്കുക</string>
+    <string name="close">അടയ്ക്കുക</string>
+    <string name="copy">പകർത്തുക</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">അറിയിപ്പ് കാണിക്കുക</string>
+    <string name="show_app_list">ആപ്പ് ലിസ്റ്റ് കാണിക്കുക</string>
+    <string name="open_app">ആപ്പ് തുറക്കുക</string>
+    <string name="lock_screen">ലോക്ക് സ്ക്രീൻ</string>
+    <string name="open_quick_settings">ദ്രുത ക്രമീകരണങ്ങൾ</string>
+    <string name="show_recents">സമീപകാലങ്ങൾ കാണിക്കുക</string>
+    <string name="double_tap_to_lock_screen">ലോക്ക് ചെയ്യാൻ രണ്ടുതവണ ടാപ്പ് ചെയ്യുക</string>
+    <!-- Backup Strings -->
+    <string name="backup">ബാക്കപ്പ്</string>
+    <string name="load_backup">ബാക്കപ്പ് ലോഡ് ചെയ്യുക</string>
+    <string name="store_backup">സ്റ്റോർ ബാക്കപ്പ്</string>
+    <!-- Unsorted Strings -->
+    <string name="show_apps">എല്ലാ ആപ്പുകളും</string>
+    <string name="road_map">റോഡ്മാപ്പ്</string>
+    <string name="drawer_list_empty_hint">ആപ്പുകളൊന്നും കണ്ടെത്തിയില്ല</string>
+    <string name="long_press_for_settings">ക്രമീകരണങ്ങൾക്കായി എവിടെയും ദീർഘനേരം അമർത്തുക</string>
+    <string name="swipe_up_for_apps">എല്ലാ ആപ്പുകൾക്കും മുകളിലേക്ക് സ്വൈപ്പ് ചെയ്യുക</string>
+    <string name="app_drawer_tips">നുറുങ്ങ്: ഡിസ്മിസ് ചെയ്യാൻ താഴേക്ക് സ്വൈപ്പ് ചെയ്യുക. കീബോർഡ് മറയ്ക്കാൻ സ്ക്രോൾ ചെയ്യുക.</string>
+    <string name="double_tap_lock_is_enabled_message">ഡബിൾ ടാപ്പ് ലോക്ക് ഫിംഗർപ്രിന്റ് അല്ലെങ്കിൽ ഫേസ് അൺലോക്ക് പ്രവർത്തനരഹിതമാക്കുകയാണെങ്കിൽ, mLouncher ക്രമീകരണം തുറന്ന് \'പരീക്ഷണാത്മക\'ത്തിൽ ടാപ്പ് ചെയ്‌ത് നിർദ്ദേശങ്ങൾ പാലിക്കുക. നന്ദി.</string>
+    <string name="double_tap_lock_uninstall_message">ലോക്ക് പ്രവർത്തനക്ഷമമാക്കാൻ രണ്ടുതവണ ടാപ്പ് ചെയ്യുക.
+        \n\nശ്രദ്ധിക്കുക: mLauncher ഇല്ലാതാക്കാൻ നിങ്ങൾ തീരുമാനിക്കുകയാണെങ്കിൽ ആദ്യം ഇത് ഓഫാക്കുക.</string>
+    <string name="accessibility_service_name">mLouncher പ്രവർത്തന സേവനം</string>
+    <string name="accessibility_service_description">സ്‌ക്രീൻ ലോക്കുചെയ്യുകയോ ദ്രുത ക്രമീകരണങ്ങൾ തുറക്കുകയോ പോലുള്ള ചില പ്രവർത്തനങ്ങൾ ചെയ്യാൻ mLauncher-നെ ഈ പ്രവേശനക്ഷമത സേവനം അനുവദിക്കുന്നു.</string>
+</resources>

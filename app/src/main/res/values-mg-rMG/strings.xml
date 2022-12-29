@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Settings -->
+    <string name="app">App</string>
+    <!-- Admin Settings -->
+    <string name="admin_permission_message">Mampanantena ny mLauncher fa hampiasa ny fahazoan-dàlana hidin-trano amin\'ny andraikitra.</string>
+    <string name="experimental">(fanandramana)</string>
+    <!-- Settings Headers -->
+    <string name="appearance">Bika Aman \'endrika</string>
+    <string name="behavior">FITONDRANTENA</string>
+    <string name="homescreen">Homescreen</string>
+    <string name="alignment">Fanitsiana</string>
+    <string name="gestures">fihetsehana</string>
+    <!-- Home Strings -->
+    <string name="hidden_apps">Apps miafina</string>
+    <string name="set_as_default_launcher">Apetraho ho mpandefa default</string>
+    <string name="change_default_launcher">Ovay ny fandefasana default</string>
+    <!-- Appearance Strings -->
+    <string name="status_bar">Asehoy ny toeran\'ny sata</string>
+    <string name="theme_mode">Fomba lohahevitra</string>
+    <string name="app_language">Fiteny Interface</string>
+    <string name="app_text_size">Haben\'ny soratra</string>
+    <!-- Behavior Strings -->
+    <string name="auto_show_keyboard">Kitendry fampisehoana mandeha ho azy</string>
+    <string name="auto_open_apps">Auto misokatra fampiharana</string>
+    <!-- Homescreen Strings -->
+    <string name="apps_on_home_screen">Isan\'ny hitsin-dàlana</string>
+    <string name="show_time">Fotoana fampisehoana</string>
+    <string name="show_date">Asehoy ny daty</string>
+    <string name="lock_home_apps">Lock Apps</string>
+    <string name="extend_home_apps_area">Hanitatra ny faritra azo kitihina</string>
+    <string name="home_alignment_bottom">Ampifanaraho ny ambany ny efijery</string>
+    <!-- Alignment Strings -->
+    <string name="home_alignment">Efijerin\'ny fampiharana</string>
+    <string name="clock_alignment">Ora sy daty</string>
+    <string name="drawer_alignment">Apps ao amin\'ny app drawer</string>
+    <!-- Gestures Strings -->
+    <string name="swipe_up_app">Swipe miakatra</string>
+    <string name="swipe_down_app">Swipe midina</string>
+    <string name="swipe_left_app">Swipe miankavia</string>
+    <string name="swipe_right_app">Swipe miankavanana</string>
+    <string name="clock_click_app">Tsindrio ny Clock</string>
+    <string name="date_click_app">Tsindrio ny Date</string>
+    <string name="double_tap">Peho indroa</string>
+    <!-- Settings Strings -->
+    <string name="off">eny</string>
+    <string name="on">On</string>
+    <string name="left">ANKA</string>
+    <string name="right">TSARA</string>
+    <string name="center">Centre</string>
+    <string name="dark">Maizina</string>
+    <string name="light">fahazavana</string>
+    <string name="settings">Fikirana</string>
+    <string name="lang_system">RAFITRA</string>
+    <string name="system_default">RAFITRA</string>
+    <string name="hide">afeno ny</string>
+    <string name="rename">Hanova anarana</string>
+    <string name="okay">Okay</string>
+    <string name="save">afa-tsy</string>
+    <string name="show">FAMPISEHOANA</string>
+    <string name="reset">Mamerina</string>
+    <string name="cancel">hanafoana</string>
+    <string name="enable">Tadiavo</string>
+    <string name="disable">Atsaharo</string>
+    <string name="enabled">afaka</string>
+    <string name="disabled">sembana</string>
+    <string name="open">Misokatra</string>
+    <string name="close">AKAIKY</string>
+    <string name="copy">dika mitovy</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">Asehoy ny fampahafantarana</string>
+    <string name="show_app_list">Asehoy ny lisitry ny fampiharana</string>
+    <string name="open_app">Sokafy ny App</string>
+    <string name="lock_screen">Lock Screen</string>
+    <string name="open_quick_settings">Fikirana haingana</string>
+    <string name="show_recents">Asehoy vao haingana</string>
+    <string name="double_tap_to_lock_screen">Tsindrio indroa hanidy</string>
+    <!-- Backup Strings -->
+    <string name="backup">nomaniny ho solon\'izay</string>
+    <string name="load_backup">Load Backup</string>
+    <string name="store_backup">Store Backup</string>
+    <!-- Unsorted Strings -->
+    <string name="show_apps">Apps rehetra</string>
+    <string name="road_map">Tondrozotra</string>
+    <string name="drawer_list_empty_hint">Tsy misy fampiharana hita</string>
+    <string name="long_press_for_settings">Tsindrio lava na aiza na aiza ho an\'ny fanovana</string>
+    <string name="swipe_up_for_apps">Swipe miakatra ho an\'ny fampiharana rehetra</string>
+    <string name="app_drawer_tips">Soso-kevitra: Swipe midina hanilika. Horona hanafina kitendry.</string>
+    <string name="double_tap_lock_is_enabled_message">Raha manakana ny fanondro na ny fanokafana tarehy ny hidin\'ny paompy indroa, sokafy ny firafitry ny mLauncher, tsindrio ny \'fanandramana\' ary araho ny toromarika. Misaotra anao.</string>
+    <string name="double_tap_lock_uninstall_message">Tsindrio indroa raha hihidy.
+        \n\nFanamarihana: Atsaharo aloha ity raha manapa-kevitra ny hamafa mLauncher ianao.</string>
+    <string name="accessibility_service_name">MLauncher Actions Service</string>
+    <string name="accessibility_service_description">Ity serivisy fidirana ity dia ahafahan\'ny mLauncher manao hetsika sasany toy ny fanidiana ny efijery na fanokafana ny fanovana haingana.</string>
+</resources>

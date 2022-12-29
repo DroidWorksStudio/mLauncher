@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Settings -->
+    <string name="app">App</string>
+    <!-- Admin Settings -->
+    <string name="admin_permission_message">mLauncher lover at bruge låseskærmen tilladelse ansvarligt.</string>
+    <string name="experimental">(eksperimentel)</string>
+    <!-- Settings Headers -->
+    <string name="appearance">Udseende</string>
+    <string name="behavior">Opførsel</string>
+    <string name="homescreen">Hjemmeskærm</string>
+    <string name="alignment">Justering</string>
+    <string name="gestures">Bevægelser</string>
+    <!-- Home Strings -->
+    <string name="hidden_apps">Skjulte apps</string>
+    <string name="set_as_default_launcher">Sæt som standard launcher</string>
+    <string name="change_default_launcher">Skift standard launcher</string>
+    <!-- Appearance Strings -->
+    <string name="status_bar">Vis statuslinje</string>
+    <string name="theme_mode">Tema tilstand</string>
+    <string name="app_language">Grænsefladesprog</string>
+    <string name="app_text_size">Tekst Størrelse</string>
+    <!-- Behavior Strings -->
+    <string name="auto_show_keyboard">Auto show keyboard</string>
+    <string name="auto_open_apps">Åbn apps automatisk</string>
+    <!-- Homescreen Strings -->
+    <string name="apps_on_home_screen">Antal genveje</string>
+    <string name="show_time">Vis tid</string>
+    <string name="show_date">Vis dato</string>
+    <string name="lock_home_apps">Lås Apps</string>
+    <string name="extend_home_apps_area">Udvid klikbart område</string>
+    <string name="home_alignment_bottom">Startskærm justeret nederst</string>
+    <!-- Alignment Strings -->
+    <string name="home_alignment">Apps startskærm</string>
+    <string name="clock_alignment">Ur og dato</string>
+    <string name="drawer_alignment">Apps i app-oversigten</string>
+    <!-- Gestures Strings -->
+    <string name="swipe_up_app">Stryg opad</string>
+    <string name="swipe_down_app">Stryg nedad</string>
+    <string name="swipe_left_app">Stryg til venstre</string>
+    <string name="swipe_right_app">Stryg til højre</string>
+    <string name="clock_click_app">Klik på ur</string>
+    <string name="date_click_app">Klik på dato</string>
+    <string name="double_tap">Dobbelttryk</string>
+    <!-- Settings Strings -->
+    <string name="off">Fra</string>
+    <string name="on">Til</string>
+    <string name="left">Venstre</string>
+    <string name="right">Højre</string>
+    <string name="center">Centreret</string>
+    <string name="dark">Mørk</string>
+    <string name="light">Lys</string>
+    <string name="settings">Indstillinger</string>
+    <string name="lang_system">System</string>
+    <string name="system_default">System</string>
+    <string name="hide">Skjul</string>
+    <string name="rename">Omdøb</string>
+    <string name="okay">Okay</string>
+    <string name="save">Gem</string>
+    <string name="show">Vis</string>
+    <string name="reset">Reset</string>
+    <string name="cancel">Annuller</string>
+    <string name="enable">Aktiver</string>
+    <string name="disable">Deaktivér</string>
+    <string name="enabled">Aktiveret</string>
+    <string name="disabled">Deaktiveret</string>
+    <string name="open">Åbn</string>
+    <string name="close">Luk</string>
+    <string name="copy">Kopiér</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">Vis Notifikation</string>
+    <string name="show_app_list">Vis Appliste</string>
+    <string name="open_app">Åbn App</string>
+    <string name="lock_screen">Lås Skærm</string>
+    <string name="open_quick_settings">Hurtige Indstillinger</string>
+    <string name="show_recents">Show Recents</string>
+    <string name="double_tap_to_lock_screen">Dobbelttryk for at låse</string>
+    <!-- Backup Strings -->
+    <string name="backup">Sikkerhedskopi</string>
+    <string name="load_backup">Indlæs Backup</string>
+    <string name="store_backup">Gem Sikkerhedskopi</string>
+    <!-- Unsorted Strings -->
+    <string name="show_apps">Alle apps</string>
+    <string name="road_map">Køreplan</string>
+    <string name="drawer_list_empty_hint">Ingen apps fundet</string>
+    <string name="long_press_for_settings">Langt tryk hvor som helst for indstillinger</string>
+    <string name="swipe_up_for_apps">Stryg opad for alle apps</string>
+    <string name="app_drawer_tips">Tip: Stryg nedad for at afvise det. Rul for at skjule tastaturet.</string>
+    <string name="double_tap_lock_is_enabled_message">Hvis dobbelttryk på låsen deaktiverer fingeraftryk eller oplåsning af ansigtet, åbn mLauncher-indstillingerne, tryk på \'eksperimentel\' og følg instruktionerne. Tak.</string>
+    <string name="double_tap_lock_uninstall_message">Dobbelttryk for at låse aktiveret.
+        \n\nBemærk: Slå dette fra først, hvis du beslutter dig for at slette mLauncher.</string>
+    <string name="accessibility_service_name">mLauncher Handlingstjeneste</string>
+    <string name="accessibility_service_description">Denne tilgængelighedstjeneste tillader mLauncher at gøre visse handlinger, såsom at låse skærmen eller åbne hurtig-indstillinger.</string>
+</resources>

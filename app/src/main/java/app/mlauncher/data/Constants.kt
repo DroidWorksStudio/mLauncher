@@ -68,14 +68,14 @@ object Constants {
         Korean,
         Lithuanian,
         Luxembourgish,
-        Malay,
         Malagasy,
+        Malay,
         Malayalam,
         Nepali,
         Norwegian,
         Persian,
-        Portuguese,
         Polish,
+        Portuguese,
         Punjabi,
         Romanian,
         Russian,
@@ -98,8 +98,8 @@ object Constants {
                 Chinese -> "中文"
                 Croatian -> "Hrvatski"
                 Czech -> "čeština"
-                Dutch -> "Nederlands"
                 Danish -> "dansk"
+                Dutch -> "Nederlands"
                 English -> "English"
                 Estonian -> "Eesti keel"
                 Filipino -> "Filipino"
@@ -120,14 +120,14 @@ object Constants {
                 Korean -> "한국어"
                 Lithuanian -> "Lietuvių"
                 Luxembourgish -> "lëtzebuergesch"
-                Malay -> "Melayu"
                 Malagasy -> "Malagasy"
+                Malay -> "Melayu"
                 Malayalam -> "മലയാളം"
                 Nepali -> "नेपाली"
                 Norwegian -> "norsk"
                 Persian -> "فارسی"
-                Portuguese -> "Português"
                 Polish -> "Polski"
+                Portuguese -> "Português"
                 Punjabi -> "ਪੰਜਾਬੀ"
                 Romanian -> "Română"
                 Russian -> "Русский"
@@ -153,11 +153,11 @@ object Constants {
                 Albanian -> "sq"
                 Arabic -> "ar"
                 Bulgarian -> "bg"
-                Chinese -> "cn"
+                Chinese -> "zh"
                 Croatian -> "hr"
                 Czech -> "cs"
-                Dutch -> "nl"
                 Danish -> "da"
+                Dutch -> "nl"
                 English -> "en"
                 Estonian -> "et"
                 Filipino -> "fil"
@@ -171,21 +171,21 @@ object Constants {
                 Hindi -> "hi"
                 Hungarian -> "hu"
                 Icelandic -> "is"
+                Indonesian -> "in"
                 Irish -> "ga"
-                Indonesian -> "lb"
                 Italian -> "it"
                 Japanese -> "ja"
                 Korean -> "ko"
                 Lithuanian -> "lt"
                 Luxembourgish -> "lb"
-                Malay -> "ms"
                 Malagasy -> "mg"
+                Malay -> "ms"
                 Malayalam -> "ml"
                 Nepali -> "ne"
                 Norwegian -> "no"
                 Persian -> "fa"
-                Portuguese -> "pt"
                 Polish -> "pl"
+                Portuguese -> "pt"
                 Punjabi -> "pa"
                 Romanian -> "ro"
                 Russian -> "ru"

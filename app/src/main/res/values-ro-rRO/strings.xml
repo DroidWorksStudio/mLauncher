@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Settings -->
+    <string name="app">Aplicație</string>
+    <!-- Admin Settings -->
+    <string name="admin_permission_message">mLauncher promite să utilizeze permisiunea de blocare ecran în mod responsabil.</string>
+    <string name="experimental">(experimental)</string>
+    <!-- Settings Headers -->
+    <string name="appearance">Aspectul</string>
+    <string name="behavior">Comportament</string>
+    <string name="homescreen">Ecran principal</string>
+    <string name="alignment">Aliniere</string>
+    <string name="gestures">Gesturi</string>
+    <!-- Home Strings -->
+    <string name="hidden_apps">Aplicații ascunse</string>
+    <string name="set_as_default_launcher">Setează ca lansator implicit</string>
+    <string name="change_default_launcher">Schimbă lansatorul implicit</string>
+    <!-- Appearance Strings -->
+    <string name="status_bar">Arată bara de stare</string>
+    <string name="theme_mode">Mod temă</string>
+    <string name="app_language">Limba interfeței</string>
+    <string name="app_text_size">Dimensiune text</string>
+    <!-- Behavior Strings -->
+    <string name="auto_show_keyboard">Auto show keyboard</string>
+    <string name="auto_open_apps">Deschideți automat aplicațiile</string>
+    <!-- Homescreen Strings -->
+    <string name="apps_on_home_screen">Număr de comenzi rapide</string>
+    <string name="show_time">Arată timpul</string>
+    <string name="show_date">Arată data</string>
+    <string name="lock_home_apps">Blocare aplicații</string>
+    <string name="extend_home_apps_area">Extinde zona clickable</string>
+    <string name="home_alignment_bottom">Aliniere ecran de pornire jos</string>
+    <!-- Alignment Strings -->
+    <string name="home_alignment">Ecran de start pentru aplicații</string>
+    <string name="clock_alignment">Ora și data</string>
+    <string name="drawer_alignment">Aplicații în sertarul de aplicații</string>
+    <!-- Gestures Strings -->
+    <string name="swipe_up_app">Glisați în sus</string>
+    <string name="swipe_down_app">Glisați în jos</string>
+    <string name="swipe_left_app">Glisați spre stânga</string>
+    <string name="swipe_right_app">Glisați spre dreapta</string>
+    <string name="clock_click_app">Faceți clic pe ceas</string>
+    <string name="date_click_app">Clic pe data</string>
+    <string name="double_tap">Atingere dublă</string>
+    <!-- Settings Strings -->
+    <string name="off">Dezactivat</string>
+    <string name="on">Activat</string>
+    <string name="left">Stânga</string>
+    <string name="right">Dreapta</string>
+    <string name="center">Centru</string>
+    <string name="dark">Întunecat</string>
+    <string name="light">Lumină</string>
+    <string name="settings">Setări</string>
+    <string name="lang_system">Sistem</string>
+    <string name="system_default">Sistem</string>
+    <string name="hide">Ascunde</string>
+    <string name="rename">Redenumire</string>
+    <string name="okay">Bine</string>
+    <string name="save">Salvează</string>
+    <string name="show">Afișare</string>
+    <string name="reset">Reset</string>
+    <string name="cancel">Anulează</string>
+    <string name="enable">Activare</string>
+    <string name="disable">Dezactivează</string>
+    <string name="enabled">Activat</string>
+    <string name="disabled">Dezactivat</string>
+    <string name="open">Deschideți</string>
+    <string name="close">Inchide</string>
+    <string name="copy">Copiază</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">Arată notificarea</string>
+    <string name="show_app_list">Arată lista de aplicații</string>
+    <string name="open_app">Deschide aplicația</string>
+    <string name="lock_screen">Ecran de blocare</string>
+    <string name="open_quick_settings">Setări rapide</string>
+    <string name="show_recents">Show Recents</string>
+    <string name="double_tap_to_lock_screen">Dublă atingere pentru a bloca</string>
+    <!-- Backup Strings -->
+    <string name="backup">Backup</string>
+    <string name="load_backup">Încărcare copie de rezervă</string>
+    <string name="store_backup">Salvare magazin</string>
+    <!-- Unsorted Strings -->
+    <string name="show_apps">Toate aplicațiile</string>
+    <string name="road_map">Foaie</string>
+    <string name="drawer_list_empty_hint">Nicio aplicație găsită</string>
+    <string name="long_press_for_settings">Apăsați lung oriunde pentru setări</string>
+    <string name="swipe_up_for_apps">Glisați în sus pentru toate aplicațiile</string>
+    <string name="app_drawer_tips">Sfat: Glisați în jos pentru a anula. Derulați pentru a ascunde tastatura.</string>
+    <string name="double_tap_lock_is_enabled_message">Dacă blocarea prin apăsare dublă dezactivează deblocarea amprentelor sau a feței, deschide setările mLauncher, apasă pe \"experimental\" și urmează instrucțiunile. Mulțumesc.</string>
+    <string name="double_tap_lock_uninstall_message">Apăsarea dublă pentru a bloca activată.
+        \n\nNotă: Opriți dezactivarea mai întâi dacă decideți să ștergeți mLauncher.</string>
+    <string name="accessibility_service_name">Serviciul de acțiuni mLauncher</string>
+    <string name="accessibility_service_description">Acest serviciu de accesibilitate permite mLauncherului să facă anumite acțiuni, cum ar fi blocarea ecranului sau deschiderea setărilor rapide.</string>
+</resources>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Settings -->
+    <string name="app">Приложение</string>
+    <!-- Admin Settings -->
+    <string name="admin_permission_message">mLauncher обещает ответственно использовать блокировочные разрешения экрана.</string>
+    <string name="experimental">(экспериментальный)</string>
+    <!-- Settings Headers -->
+    <string name="appearance">Внешний вид</string>
+    <string name="behavior">Поведение</string>
+    <string name="homescreen">Домашний экран</string>
+    <string name="alignment">Выравнивание</string>
+    <string name="gestures">Жесты</string>
+    <!-- Home Strings -->
+    <string name="hidden_apps">Скрытые приложения</string>
+    <string name="set_as_default_launcher">Установить как лаунчер по умолчанию</string>
+    <string name="change_default_launcher">Изменить лаунчер по умолчанию</string>
+    <!-- Appearance Strings -->
+    <string name="status_bar">Показать строку состояния</string>
+    <string name="theme_mode">Режим темы</string>
+    <string name="app_language">Язык интерфейса</string>
+    <string name="app_text_size">Размер текста</string>
+    <!-- Behavior Strings -->
+    <string name="auto_show_keyboard">Auto show keyboard</string>
+    <string name="auto_open_apps">Автооткрытие приложений</string>
+    <!-- Homescreen Strings -->
+    <string name="apps_on_home_screen">Количество ярлыков</string>
+    <string name="show_time">Показать время</string>
+    <string name="show_date">Показать дату</string>
+    <string name="lock_home_apps">Заблокировать приложения</string>
+    <string name="extend_home_apps_area">Продлить область клика</string>
+    <string name="home_alignment_bottom">Выровнять на главном экране снизу</string>
+    <!-- Alignment Strings -->
+    <string name="home_alignment">Домашний экран приложений</string>
+    <string name="clock_alignment">Часы и дата</string>
+    <string name="drawer_alignment">Приложения в меню приложений</string>
+    <!-- Gestures Strings -->
+    <string name="swipe_up_app">Свайп вверх</string>
+    <string name="swipe_down_app">Свайп вниз</string>
+    <string name="swipe_left_app">Свайп влево</string>
+    <string name="swipe_right_app">Свайп вправо</string>
+    <string name="clock_click_app">Нажмите на часы</string>
+    <string name="date_click_app">Нажмите на дату</string>
+    <string name="double_tap">Двойное нажатие</string>
+    <!-- Settings Strings -->
+    <string name="off">Выкл</string>
+    <string name="on">На</string>
+    <string name="left">Слева</string>
+    <string name="right">Справа</string>
+    <string name="center">По центру</string>
+    <string name="dark">Тёмная</string>
+    <string name="light">Светлая</string>
+    <string name="settings">Настройки</string>
+    <string name="lang_system">Система</string>
+    <string name="system_default">Система</string>
+    <string name="hide">Скрыть</string>
+    <string name="rename">Переименовать</string>
+    <string name="okay">Окей</string>
+    <string name="save">Сохранить</string>
+    <string name="show">Показать</string>
+    <string name="reset">Reset</string>
+    <string name="cancel">Отмена</string>
+    <string name="enable">Включить</string>
+    <string name="disable">Отключено</string>
+    <string name="enabled">Включено</string>
+    <string name="disabled">Отключено</string>
+    <string name="open">Открыть</string>
+    <string name="close">Закрыть</string>
+    <string name="copy">Копировать</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">Показать уведомление</string>
+    <string name="show_app_list">Показать список приложений</string>
+    <string name="open_app">Открыть приложение</string>
+    <string name="lock_screen">Экран блокировки</string>
+    <string name="open_quick_settings">Быстрые настройки</string>
+    <string name="show_recents">Show Recents</string>
+    <string name="double_tap_to_lock_screen">Двойное нажатие для блокировки</string>
+    <!-- Backup Strings -->
+    <string name="backup">Резервное копирование</string>
+    <string name="load_backup">Загрузить резервную копию</string>
+    <string name="store_backup">Резервная копия магазина</string>
+    <!-- Unsorted Strings -->
+    <string name="show_apps">Все приложения</string>
+    <string name="road_map">Дорожная карта</string>
+    <string name="drawer_list_empty_hint">Не найдено приложений</string>
+    <string name="long_press_for_settings">Долгое нажатие в любом месте для настроек</string>
+    <string name="swipe_up_for_apps">Свайп вверх для всех приложений</string>
+    <string name="app_drawer_tips">Совет: проведите пальцем вниз, чтобы уволить. Прокрутите для скрытия клавиатуры.</string>
+    <string name="double_tap_lock_is_enabled_message">Если двойное нажатие отключает отпечаток пальца или разблокировку, откройте настройки mLauncher, нажмите «экспериментальные» и следуйте инструкциям. Спасибо.</string>
+    <string name="double_tap_lock_uninstall_message">Блокировка включена двойным нажатием для двойного нажатия.
+        \n\nПримечание: сначала включите эту опцию, если вы решите удалить mLauncher.</string>
+    <string name="accessibility_service_name">mLauncher Служба действий</string>
+    <string name="accessibility_service_description">Эта служба специальных возможностей позволяет mLauncher выполнять определенные действия, такие как блокировка экрана или открытие быстрых настроек.</string>
+</resources>

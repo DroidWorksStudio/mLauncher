@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Settings -->
+    <string name="app">Uygulama</string>
+    <!-- Admin Settings -->
+    <string name="admin_permission_message">mLauncher kilit ekranı iznini sorumlu bir şekilde kullanmayı vaat ediyor.</string>
+    <string name="experimental">(deneysel)</string>
+    <!-- Settings Headers -->
+    <string name="appearance">Görünüş</string>
+    <string name="behavior">Davranış</string>
+    <string name="homescreen">Ana Ekran</string>
+    <string name="alignment">Hizalama</string>
+    <string name="gestures">Jestler</string>
+    <!-- Home Strings -->
+    <string name="hidden_apps">Gizli uygulamalar</string>
+    <string name="set_as_default_launcher">Varsayılan başlatıcı olarak ayarla</string>
+    <string name="change_default_launcher">Varsayılan başlatıcıyı değiştirme</string>
+    <!-- Appearance Strings -->
+    <string name="status_bar">Durum çubuğunu göster</string>
+    <string name="theme_mode">Tema modu</string>
+    <string name="app_language">Arayüz Dili</string>
+    <string name="app_text_size">Metin Boyutu</string>
+    <!-- Behavior Strings -->
+    <string name="auto_show_keyboard">Oto şov klavyesi</string>
+    <string name="auto_open_apps">Uygulamaları otomatik aç</string>
+    <!-- Homescreen Strings -->
+    <string name="apps_on_home_screen">Kısayol sayısı</string>
+    <string name="show_time">Gösteri zamanı</string>
+    <string name="show_date">Gösteri tarihi</string>
+    <string name="lock_home_apps">Kilit Uygulamaları</string>
+    <string name="extend_home_apps_area">Tıklanabilir alanı genişletme</string>
+    <string name="home_alignment_bottom">Ana ekran alt hizalama</string>
+    <!-- Alignment Strings -->
+    <string name="home_alignment">Uygulamalar ana ekranı</string>
+    <string name="clock_alignment">Saat ve tarih</string>
+    <string name="drawer_alignment">Uygulama çekmecesindeki uygulamalar</string>
+    <!-- Gestures Strings -->
+    <string name="swipe_up_app">Yukarı kaydırın</string>
+    <string name="swipe_down_app">Aşağı kaydırın</string>
+    <string name="swipe_left_app">Sola kaydırın</string>
+    <string name="swipe_right_app">Sağa kaydırın</string>
+    <string name="clock_click_app">Saat üzerine tıklayın</string>
+    <string name="date_click_app">Tarih üzerine tıklayın</string>
+    <string name="double_tap">Çift Dokunuş</string>
+    <!-- Settings Strings -->
+    <string name="off">Kapalı</string>
+    <string name="on">Açık</string>
+    <string name="left">Sol</string>
+    <string name="right">Doğru.</string>
+    <string name="center">Merkez</string>
+    <string name="dark">Karanlık</string>
+    <string name="light">Işık</string>
+    <string name="settings">Ayarlar</string>
+    <string name="lang_system">Sistem</string>
+    <string name="system_default">Sistem</string>
+    <string name="hide">Gizle</string>
+    <string name="rename">Yeniden Adlandır</string>
+    <string name="okay">Tamam.</string>
+    <string name="save">Kaydet</string>
+    <string name="show">Göster</string>
+    <string name="reset">Sıfırla</string>
+    <string name="cancel">İptal</string>
+    <string name="enable">Etkinleştir</string>
+    <string name="disable">Devre dışı bırak</string>
+    <string name="enabled">Etkin</string>
+    <string name="disabled">Engelli</string>
+    <string name="open">Açık</string>
+    <string name="close">Kapat</string>
+    <string name="copy">Anlaşıldı</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">Bildirimi Göster</string>
+    <string name="show_app_list">Uygulama Listesini Göster</string>
+    <string name="open_app">Açık Uygulama</string>
+    <string name="lock_screen">Kilit Ekranı</string>
+    <string name="open_quick_settings">Hızlı Ayarlar</string>
+    <string name="show_recents">Son Kullanılanları Göster</string>
+    <string name="double_tap_to_lock_screen">Kilitlemek için çift dokunun</string>
+    <!-- Backup Strings -->
+    <string name="backup">Yedekleme</string>
+    <string name="load_backup">Yük Yedekleme</string>
+    <string name="store_backup">Mağaza Yedekleme</string>
+    <!-- Unsorted Strings -->
+    <string name="show_apps">Tüm uygulamalar</string>
+    <string name="road_map">Yol Haritası</string>
+    <string name="drawer_list_empty_hint">Uygulama bulunamadı</string>
+    <string name="long_press_for_settings">Ayarlar için herhangi bir yere uzun basın</string>
+    <string name="swipe_up_for_apps">Tüm uygulamalar için yukarı kaydırın</string>
+    <string name="app_drawer_tips">İpucu: Kapatmak için aşağı kaydırın. Klavyeyi gizlemek için kaydırın.</string>
+    <string name="double_tap_lock_is_enabled_message">Çift dokunma kilidi parmak izi veya yüz kilidini devre dışı bırakırsa, mLauncher ayarlarını açın, \'deneysel\'e dokunun ve talimatları izleyin. Teşekkür ederim.</string>
+    <string name="double_tap_lock_uninstall_message">Etkin kilitlemek için çift dokunun.
+        \n\nNot: mLauncher\'ı silmeye karar verirseniz önce bunu KAPATIN.</string>
+    <string name="accessibility_service_name">mLauncher Eylemler Hizmeti</string>
+    <string name="accessibility_service_description">Bu erişilebilirlik hizmeti, mLauncher\'ın ekranı kilitleme veya hızlı ayarları açma gibi belirli eylemleri gerçekleştirmesini sağlar.</string>
+</resources>
