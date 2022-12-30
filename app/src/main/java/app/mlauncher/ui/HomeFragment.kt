@@ -4,6 +4,8 @@ import android.annotation.SuppressLint
 import android.app.admin.DevicePolicyManager
 import android.content.Context
 import android.content.Context.VIBRATOR_SERVICE
+import android.content.Intent
+import android.content.IntentFilter
 import android.os.Build
 import android.os.Bundle
 import android.os.Vibrator
@@ -13,6 +15,7 @@ import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.os.bundleOf
 import androidx.core.view.children
@@ -39,6 +42,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     private lateinit var prefs: Prefs
     private lateinit var viewModel: MainViewModel
     private lateinit var deviceManager: DevicePolicyManager
+    private lateinit var batteryReceiver: BatteryReceiver
     private lateinit var vibrator: Vibrator
 
     private var _binding: FragmentHomeBinding? = null
@@ -49,6 +53,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
         val view = binding.root
         prefs = Prefs(requireContext())
+        batteryReceiver = BatteryReceiver(binding.batteryProgress)
 
         return view
     }
@@ -83,6 +88,9 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     override fun onResume() {
         super.onResume()
         var context = requireContext()
+
+        context.registerReceiver(batteryReceiver, IntentFilter(Intent.ACTION_BATTERY_CHANGED))
+        if (prefs.displayBatteryArea) binding.batteryProgress.visibility = View.VISIBLE else binding.batteryProgress.visibility = View.GONE
 
         var setColor = prefs.opacityNum
         val allColors = context.resources.getIntArray(R.array.colors)
@@ -444,7 +452,16 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     }
                     gravity = alignment
                 }
-                binding.homeAppsLayout.addView(view)
+
+                // CODE FOR ADD MARGINS
+                val linearParams = LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams(
+                        LinearLayout.LayoutParams.MATCH_PARENT,
+                        LinearLayout.LayoutParams.WRAP_CONTENT
+                    )
+                )
+                linearParams.setMargins(0,-25,0,-25)
+                binding.homeAppsLayout.addView(view, linearParams)
             }
         }
     }

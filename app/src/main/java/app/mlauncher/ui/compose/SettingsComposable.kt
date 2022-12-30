@@ -275,7 +275,6 @@ object SettingsComposable {
         max: Int = Int.MAX_VALUE,
         open: MutableState<Boolean>,
         onChange: (Boolean) -> Unit,
-        onValueChange: (Int) -> Unit = {},
         fontSize: TextUnit = TextUnit.Unspecified,
         onSelect: (Int) -> Unit
     ) {
@@ -294,7 +293,7 @@ object SettingsComposable {
                     min = min,
                     max = max,
                     fontSize = fontSize,
-                    onValueChange = onValueChange,
+
                 ) { i ->
                     onChange(false)
                     currentSelection.value = i
@@ -509,7 +508,6 @@ object SettingsComposable {
         min: Int,
         max: Int,
         fontSize: TextUnit = TextUnit.Unspecified,
-        onValueChange: (Int) -> Unit = {},
         onCommit: (Int) -> Unit
     ) {
         ConstraintLayout(

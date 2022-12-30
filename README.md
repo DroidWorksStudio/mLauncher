@@ -3,7 +3,7 @@
     <h2>mLauncher</h2>
     <p>
         <img src='https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=android&logoColor=white'>
-        <img src='https://img.shields.io/badge/SDK-28-vibrant?style=flat-square'>
+        <img src='https://img.shields.io/badge/SDK-33-vibrant?style=flat-square'>
         <a href='https://github.com/HeCodes2Much/mLauncher/blob/main/LICENSE'><img src='https://img.shields.io/github/license/HeCodes2Much/mLauncher?style=flat-square'></a>
         <br>
 		<img src='https://img.shields.io/badge/Maintained-yes-blue?style=flat-square'>

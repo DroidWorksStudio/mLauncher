@@ -20,6 +20,7 @@
 
     <!-- Appearance Strings -->
     <string name="status_bar">Show status bar</string>
+    <string name="show_battery">Show battery bar</string>
     <string name="theme_mode">Theme mode</string>
     <string name="app_language">Interface Language</string>
     <string name="app_text_size">Text Size</string>

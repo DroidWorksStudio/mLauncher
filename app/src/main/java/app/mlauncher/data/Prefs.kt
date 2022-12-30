@@ -28,6 +28,7 @@ private const val SHOW_DATE = "SHOW_DATE"
 private const val HOME_LOCKED = "HOME_LOCKED"
 private const val SHOW_TIME = "SHOW_TIME"
 private const val HIDE_ROADMAP = "HIDE_ROADMAP"
+private const val HIDE_BATTERY_AREA = "HIDE_BATTERY_AREA"
 private const val SWIPE_UP_ACTION = "SWIPE_UP_ACTION"
 private const val SWIPE_DOWN_ACTION = "SWIPE_DOWN_ACTION"
 private const val SWIPE_RIGHT_ACTION = "SWIPE_RIGHT_ACTION"
@@ -148,6 +149,10 @@ class Prefs(val context: Context) {
     var extendHomeAppsArea: Boolean
         get() = prefs.getBoolean(HOME_CLICK_AREA, false)
         set(value) = prefs.edit().putBoolean(HOME_CLICK_AREA, value).apply()
+
+    var displayBatteryArea: Boolean
+        get() = prefs.getBoolean(HIDE_BATTERY_AREA, true)
+        set(value) = prefs.edit().putBoolean(HIDE_BATTERY_AREA, value).apply()
 
     var clockAlignment: Gravity
         get() {
