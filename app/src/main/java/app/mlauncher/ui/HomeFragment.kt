@@ -84,7 +84,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
     override fun onResume() {
         super.onResume()
-        var hex = getHexForOpacity()
+        var hex = getHexForOpacity(requireContext())
         binding.mainLayout.setBackgroundColor(hex)
 
         val locale = prefs.language.locale()
@@ -448,7 +448,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         }
     }
 
-    private fun getHexForOpacity(): Int {
+    private fun getHexForOpacity(context: Context): Int {
         var setColor = prefs.opacityNum
         var isDarkMode = prefs.appTheme.toString()
 
@@ -457,16 +457,10 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             hex = "$hex$hex"
 
         if (isDarkMode.toString() == "System") {
-            when (requireContext().resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
-                Configuration.UI_MODE_NIGHT_YES -> {
-                    return Color.parseColor("#${hex}000000")
-                }
-                Configuration.UI_MODE_NIGHT_NO -> {
-                    return Color.parseColor("#${hex}FFFFFF")
-                }
-                Configuration.UI_MODE_NIGHT_UNDEFINED -> {
-                    return Color.parseColor("#${hex}FF00FF")
-                }
+            return if (isDarkMode(context)) {
+                Color.parseColor("#${hex}000000")
+            } else {
+                Color.parseColor("#${hex}FFFFFF")
             }
         }
         return if (isDarkMode.toString() == "Light") {
@@ -474,5 +468,10 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         } else {
             Color.parseColor("#${hex}000000")
         }
+    }
+
+    fun isDarkMode(context: Context): Boolean {
+        val darkModeFlag = context.resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
+        return darkModeFlag == Configuration.UI_MODE_NIGHT_YES
     }
 }

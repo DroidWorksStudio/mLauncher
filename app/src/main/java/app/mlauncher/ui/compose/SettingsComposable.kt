@@ -277,7 +277,6 @@ object SettingsComposable {
         max: Int = Int.MAX_VALUE,
         open: MutableState<Boolean>,
         onChange: (Boolean) -> Unit,
-        onValueChange: (Int) -> Unit = {},
         fontSize: TextUnit = TextUnit.Unspecified,
         onSelect: (Int) -> Unit
     ) {
@@ -569,7 +568,6 @@ object SettingsComposable {
                 .background(SettingsTheme.color.selector, SettingsTheme.shapes.settings)
                 .fillMaxWidth()
         ) {
-            val (text, button) = createRefs()
             var alpha by remember { mutableStateOf(number.value.toFloat()) }
             SliderWithLabel(
                 value = alpha,
