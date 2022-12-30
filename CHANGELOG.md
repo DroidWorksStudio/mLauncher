@@ -1,11 +1,17 @@
 # Changelog
 
-## [Coming Soon](https://github.com/HeCodes2Much/mLauncher/tree/HEAD)
+## [0.4.1](https://github.com/HeCodes2Much/mLauncher/tree/0.4.1) (30, December 2022)
 
-[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.4.0...HEAD)
+[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.4.0...0.4.1)
+
+**Release Summary**
+
+Just a version Bump?
 
 **Implemented enhancements:**
 
+- \[Enhancement\] change darkness of wallpaper [\#112](https://github.com/HeCodes2Much/mLauncher/issues/112)
+- clean: cleanup for some minor changes. [\#126](https://github.com/HeCodes2Much/mLauncher/pull/126) ([The-Repo-Club](https://github.com/The-Repo-Club))
 - feat: Add the ability to change opacity of overlay [\#125](https://github.com/HeCodes2Much/mLauncher/pull/125) ([The-Repo-Club](https://github.com/The-Repo-Club))
 - translations: fix fastlane descriptions for lt\_LT [\#122](https://github.com/HeCodes2Much/mLauncher/pull/122) ([TruncatedDinosour](https://github.com/TruncatedDinosour))
 
