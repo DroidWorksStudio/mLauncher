@@ -66,8 +66,9 @@
     <string name="disabled">Mozgáskorlátozottak</string>
     <string name="open">Nyissa meg a  címet.</string>
     <string name="close">Zárja be a</string>
-    <string name="copy">Másolás</string>
+    <string name="copy">másolat</string>
     <string name="opacity">Átlátszatlanság</string>
+    <string name="hide_roadmap">Az ütemterv elrejtése</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Értesítés megjelenítése</string>
     <string name="show_app_list">Alkalmazások listájának megjelenítése</string>

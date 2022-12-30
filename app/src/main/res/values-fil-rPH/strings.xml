@@ -66,8 +66,9 @@
     <string name="disabled">Hindi pinagana</string>
     <string name="open">Bukas</string>
     <string name="close">Isara</string>
-    <string name="copy">Kopya</string>
+    <string name="copy">kopya</string>
     <string name="opacity">Opacity</string>
+    <string name="hide_roadmap">Itago ang Roadmap</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Ipakita ang Notification</string>
     <string name="show_app_list">Ipakita ang Listahan ng App</string>

@@ -66,8 +66,9 @@
     <string name="disabled">Deficientes</string>
     <string name="open">Aberto</string>
     <string name="close">Fechar</string>
-    <string name="copy">Cópia</string>
+    <string name="copy">cópia de</string>
     <string name="opacity">Opacidade</string>
+    <string name="hide_roadmap">Ocultar o Roteiro</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Mostrar Notificação</string>
     <string name="show_app_list">Mostrar lista de aplicações</string>

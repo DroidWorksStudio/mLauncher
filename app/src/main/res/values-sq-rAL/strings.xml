@@ -66,8 +66,9 @@
     <string name="disabled">I paaftë</string>
     <string name="open">Hapur</string>
     <string name="close">Mbylle</string>
-    <string name="copy">Kopjo</string>
+    <string name="copy">kopje</string>
     <string name="opacity">Opaciteti</string>
+    <string name="hide_roadmap">Fshih udhërrëfyesin</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Shfaq njoftimin</string>
     <string name="show_app_list">Shfaq listën e aplikacioneve</string>

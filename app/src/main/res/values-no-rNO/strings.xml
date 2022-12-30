@@ -66,8 +66,9 @@
     <string name="disabled">Deaktivert</string>
     <string name="open">Åpne</string>
     <string name="close">Lukk</string>
-    <string name="copy">Kopier</string>
+    <string name="copy">kopiere</string>
     <string name="opacity">Opasitet</string>
+    <string name="hide_roadmap">Skjul veikartet</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Vis varsling</string>
     <string name="show_app_list">Vis appliste</string>

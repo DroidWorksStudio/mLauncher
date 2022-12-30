@@ -68,6 +68,7 @@
     <string name="close">Schließen</string>
     <string name="copy">Kopieren</string>
     <string name="opacity">Opazität</string>
+    <string name="hide_roadmap">Fahrplan ausblenden</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Benachrichtigung anzeigen</string>
     <string name="show_app_list">App-Liste anzeigen</string>

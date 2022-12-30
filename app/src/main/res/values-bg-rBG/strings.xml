@@ -66,8 +66,9 @@
     <string name="disabled">Инвалиди</string>
     <string name="open">Отворете</string>
     <string name="close">Затвори</string>
-    <string name="copy">Копие</string>
+    <string name="copy">копие</string>
     <string name="opacity">Непрозрачност</string>
+    <string name="hide_roadmap">Скрийте пътната карта</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Показване на известие</string>
     <string name="show_app_list">Показване на списъка с приложения</string>

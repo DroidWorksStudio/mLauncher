@@ -66,8 +66,9 @@
     <string name="disabled">Disabilitato</string>
     <string name="open">Apri</string>
     <string name="close">Chiudi</string>
-    <string name="copy">Copia</string>
+    <string name="copy">copia</string>
     <string name="opacity">Opacità</string>
+    <string name="hide_roadmap">Nascondi la tabella di marcia</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Mostra Notifiche</string>
     <string name="show_app_list">Mostra Elenco App</string>

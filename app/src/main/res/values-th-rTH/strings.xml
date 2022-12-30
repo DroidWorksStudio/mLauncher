@@ -68,6 +68,7 @@
     <string name="close">ปิด</string>
     <string name="copy">สำเนา</string>
     <string name="opacity">ความทึบ</string>
+    <string name="hide_roadmap">ซ่อนแผนที่ถนน</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">แสดงการแจ้งเตือน</string>
     <string name="show_app_list">แสดงรายการแอพ</string>

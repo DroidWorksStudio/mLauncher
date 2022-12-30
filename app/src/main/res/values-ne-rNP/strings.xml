@@ -68,6 +68,7 @@
     <string name="close">बन्द गर्नुहोस्</string>
     <string name="copy">कापी</string>
     <string name="opacity">अस्पष्टता</string>
+    <string name="hide_roadmap">रोडम्याप लुकाउनुहोस्</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">सूचना देखाउनुहोस्</string>
     <string name="show_app_list">एप सूची देखाउनुहोस्</string>

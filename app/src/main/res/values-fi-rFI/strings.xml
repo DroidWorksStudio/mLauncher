@@ -66,8 +66,9 @@
     <string name="disabled">Pois Käytöstä</string>
     <string name="open">Avaa</string>
     <string name="close">Sulje</string>
-    <string name="copy">Kopioi</string>
+    <string name="copy">kopio</string>
     <string name="opacity">Peittävyys</string>
+    <string name="hide_roadmap">Piilota etenemissuunnitelma</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Näytä Ilmoitus</string>
     <string name="show_app_list">Näytä Sovelluslista</string>

@@ -68,6 +68,7 @@
     <string name="close">Cerrar</string>
     <string name="copy">Copiar</string>
     <string name="opacity">Opacidad</string>
+    <string name="hide_roadmap">Ocultar la hoja de ruta</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Mostrar notificación</string>
     <string name="show_app_list">Mostrar lista de aplicaciones</string>

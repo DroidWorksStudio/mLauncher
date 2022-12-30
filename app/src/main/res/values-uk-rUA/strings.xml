@@ -66,8 +66,9 @@
     <string name="disabled">Вимкнено</string>
     <string name="open">Відкриті</string>
     <string name="close">Закрити</string>
-    <string name="copy">Копія</string>
+    <string name="copy">копія</string>
     <string name="opacity">Непрозорість</string>
+    <string name="hide_roadmap">Приховати дорожню карту</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Показувати сповіщення</string>
     <string name="show_app_list">Показати список додатків</string>

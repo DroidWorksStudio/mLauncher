@@ -68,6 +68,7 @@
     <string name="close">閉じる</string>
     <string name="copy">コピー</string>
     <string name="opacity">不透明度</string>
+    <string name="hide_roadmap">ロードマップを隠す</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">通知を表示</string>
     <string name="show_app_list">アプリ一覧を表示</string>

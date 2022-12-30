@@ -66,8 +66,9 @@
     <string name="disabled">Désactivé</string>
     <string name="open">Ouvert</string>
     <string name="close">Fermer</string>
-    <string name="copy">Copie</string>
+    <string name="copy">copie</string>
     <string name="opacity">Opacité</string>
+    <string name="hide_roadmap">Masquer la feuille de route</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Afficher la notification</string>
     <string name="show_app_list">Afficher la liste des applications</string>

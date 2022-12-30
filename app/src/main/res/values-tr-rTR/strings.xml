@@ -66,8 +66,9 @@
     <string name="disabled">Engelli</string>
     <string name="open">Açık</string>
     <string name="close">Kapat</string>
-    <string name="copy">Anlaşıldı</string>
+    <string name="copy">kopyalamak</string>
     <string name="opacity">opaklık</string>
+    <string name="hide_roadmap">Yol Haritasını Gizle</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Bildirimi Göster</string>
     <string name="show_app_list">Uygulama Listesini Göster</string>

@@ -68,6 +68,7 @@
     <string name="close">അടയ്ക്കുക</string>
     <string name="copy">പകർത്തുക</string>
     <string name="opacity">അതാര്യത</string>
+    <string name="hide_roadmap">റോഡ്മാപ്പ് മറയ്ക്കുക</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">അറിയിപ്പ് കാണിക്കുക</string>
     <string name="show_app_list">ആപ്പ് ലിസ്റ്റ് കാണിക്കുക</string>

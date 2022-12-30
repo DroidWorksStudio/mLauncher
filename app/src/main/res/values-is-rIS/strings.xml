@@ -66,8 +66,9 @@
     <string name="disabled">Öryrkjar</string>
     <string name="open">Opið</string>
     <string name="close">Loka</string>
-    <string name="copy">Afrita</string>
+    <string name="copy">afrit</string>
     <string name="opacity">Ógegnsæi</string>
+    <string name="hide_roadmap">Fela vegvísirinn</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Sýna tilkynningu</string>
     <string name="show_app_list">Sýna forritalista</string>

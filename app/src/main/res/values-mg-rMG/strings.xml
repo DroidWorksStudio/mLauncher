@@ -68,6 +68,7 @@
     <string name="close">AKAIKY</string>
     <string name="copy">dika mitovy</string>
     <string name="opacity">hatevin\'ny</string>
+    <string name="hide_roadmap">Afeno ny tondrozotra</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Asehoy ny fampahafantarana</string>
     <string name="show_app_list">Asehoy ny lisitry ny fampiharana</string>

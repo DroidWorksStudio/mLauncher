@@ -66,8 +66,9 @@
     <string name="disabled">Puudega inimesed</string>
     <string name="open">Avatud</string>
     <string name="close">Sulge</string>
-    <string name="copy">Koopia</string>
+    <string name="copy">kopeerida</string>
     <string name="opacity">Läbipaistmatus</string>
+    <string name="hide_roadmap">Peida teekaart</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Näita teatist</string>
     <string name="show_app_list">Näita rakenduste nimekirja</string>

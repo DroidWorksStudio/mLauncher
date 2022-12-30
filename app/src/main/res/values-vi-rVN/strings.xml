@@ -66,8 +66,9 @@
     <string name="disabled">Disabled</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
-    <string name="copy">Copy</string>
+    <string name="copy">sao chép</string>
     <string name="opacity">độ mờ</string>
+    <string name="hide_roadmap">Ẩn lộ trình</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Show Notification</string>
     <string name="show_app_list">Show App List</string>
