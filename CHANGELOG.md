@@ -1,5 +1,17 @@
 # Changelog
 
+## [Coming Soon](https://github.com/HeCodes2Much/mLauncher/tree/HEAD)
+
+[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.4.1...HEAD)
+
+**Fixed bugs:**
+
+- cleanup: fix some code for opacity [\#130](https://github.com/HeCodes2Much/mLauncher/pull/130) ([The-Repo-Club](https://github.com/The-Repo-Club))
+
+**Merged pull requests:**
+
+- Update turkish translations + fix link on question.yml [\#131](https://github.com/HeCodes2Much/mLauncher/pull/131) ([YakisikliBaran](https://github.com/YakisikliBaran))
+
 ## [0.4.1](https://github.com/HeCodes2Much/mLauncher/tree/0.4.1) (30, December 2022)
 
 [Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.4.0...0.4.1)
