@@ -1,23 +1,23 @@
-Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal ve temiz.
+<a href="https://github.com/tanujnotes/Olauncher">Olauncher</a> 'dan alındı. Minimal ve temiz.
     
-# Ekstra özelliklerle çatallandı
-
-- Reklamlar ve bağlantılar gibi karmaşayı ortadan kaldırdı
-- Uygulama çekmecesindeki uygulamaları yeniden adlandırabilirsiniz (Ana ekrandaki uygulamaları yeniden adlandırmak zaten desteklenmektedir. Ana ekranda bir uygulamaya uzun tıklayın ve yazmaya başlayın)
-- Ana ekran hareketlerinde çok daha fazla özelleştirilebilirlik
-    - Hareketler şimdi:
-        - Yukarı, aşağı, sola, sağa kaydırma
-        - Saate tıklamak
-        - Tarihe Tıklama
+#Daha fazla özelliklli bir alıntı.
+ 
+- Reklamlar ve bağlantılar gibi gereksiz şeyler kaldırdı
+- Uygulama-çekmecesindeki uygulamaları yeniden adlandırabilirsiniz (Ana ekrandaki uygulamaları yeniden adlandırmak zaten desteklenmektedir. Ana ekranda bir uygulamaya uzun tıkla ve yazmaya başla)
+- Ana ekran'daki jestler için  çok daha fazla seçenek var:
+    - Jestler Günümüz:
+        - Yukarı, aşağı, sola, sağa Kaydırma
+        - Saat'e Tıklama
+        - Tarih'e Tıklama
     - Olası eylemler artık şunları içeriyor:
         - Belirtilen uygulamayı aç
-        - Ekranı kilitleme
+        - Ekranı Kilitle
         - Bildirim çekmecesini açma
-        - Hızlı ayarların açılması
-- Saati ev uygulamalarından bağımsız olarak hizalayın
-- Uygulama çekmecesindeki uygulamaların hizalamasını değiştirme
-- Yazı tipi boyutunu değiştirme
-- İnternet izni kaldırıldı Bir uygulama geliştiricinin sizin hakkınızda ne bilmek istediğini asla bilemezsiniz.
+        - Hızlı ayarları açma
+- Saati Ev uygulamalarından ayrı olarak hizalayabilirsinizde.
+- Uygulama-çekmecesindeki uygulamaların hizalamasını değiştir
+- Yazı tipi boyutunu değiştir
+- İnternet izni kaldırıldı. Bir uygulama geliştiricisinin sizin hakkınızda ne bilmek istediğini asla bilemezsin.
 
 ## Çeviriler:
 
@@ -27,29 +27,29 @@ Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Min
   - Bulgarca
   - Çince
   - Hırvatça
-  - Çek Cumhuriyeti
-  - Danimarka
+  - Çekçe
+  - Danca
   - İngilizce
   - Estonca
-  - Filipinli
+  - Filipince
   - Fince
   - Fransızca
   - Gürcüce
-  - Alman
-  - Yunan
-  - Hawaiili
+  - Almanca
+  - Yunanca
+  - Hawaii dili
   - İbranice
   - Hintçe
-  - Endonezce
+  - Endonezyaca
   - İzlandaca
   - Macarca
-  - İrlandalı
-  - İtalyan
+  - İrlandaca
+  - İtalyanca
   - Japonca
   - Korece
-  - Litvanyalı
+  - Litvanyaca
   - Lüksemburgca
-  - Malay
+  - Malayca
   - Malgaşça
   - Malayalam
   - Norveççe
@@ -62,8 +62,8 @@ Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Min
   - Sırpça
   - Sindhi
   - İspanyolca
-  - İsveç
-  - Tayland
+  - İsveçce
+  - Tayca
   - Türkçe
   - Ukrayna
   - Vietnamca

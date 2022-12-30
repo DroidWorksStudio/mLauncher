@@ -1,1 +1,1 @@
-Forked from OlauncherCF, +minimalization, +customizability
+OlauncherCF'dan alındı, +minimal, +özelleştirilebilir
