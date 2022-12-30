@@ -31,7 +31,7 @@
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">Kısayol sayısı</string>
     <string name="show_time">Zamanı göster</string>
-    <string name="show_date">Tarih'i göster</string>
+    <string name="show_date">Tarih\'i göster</string>
     <string name="lock_home_apps">Kilit Uygulamaları</string>
     <string name="extend_home_apps_area">Tıklanabilir alanı genişlet</string>
     <string name="home_alignment_bottom">Ana ekran alt hizalama</string>
