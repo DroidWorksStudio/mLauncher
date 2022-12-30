@@ -1,24 +1,18 @@
 # Changelog
 
-## [Coming Soon](https://github.com/HeCodes2Much/mLauncher/tree/HEAD)
+## [0.4.2](https://github.com/HeCodes2Much/mLauncher/tree/0.4.2) (30, December 2022)
 
-[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.4.1...HEAD)
+[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.4.1...0.4.2)
 
 **Fixed bugs:**
 
-- cleanup: fix some code for opacity [\#130](https://github.com/HeCodes2Much/mLauncher/pull/130) ([The-Repo-Club](https://github.com/The-Repo-Club))
-
-**Merged pull requests:**
-
+- fix: fixes the other fragments opacity [\#132](https://github.com/HeCodes2Much/mLauncher/pull/132) ([The-Repo-Club](https://github.com/The-Repo-Club))
 - Update turkish translations + fix link on question.yml [\#131](https://github.com/HeCodes2Much/mLauncher/pull/131) ([YakisikliBaran](https://github.com/YakisikliBaran))
+- cleanup: fix some code for opacity [\#130](https://github.com/HeCodes2Much/mLauncher/pull/130) ([The-Repo-Club](https://github.com/The-Repo-Club))
 
 ## [0.4.1](https://github.com/HeCodes2Much/mLauncher/tree/0.4.1) (30, December 2022)
 
 [Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.4.0...0.4.1)
-
-**Release Summary**
-
-Just a version Bump?
 
 **Implemented enhancements:**
 
@@ -30,6 +24,10 @@ Just a version Bump?
 **Fixed bugs:**
 
 - cleanup: just some basic cleanup to the code base [\#120](https://github.com/HeCodes2Much/mLauncher/pull/120) ([The-Repo-Club](https://github.com/The-Repo-Club))
+
+**Merged pull requests:**
+
+- App version bumped to 41 \(v0.4.1\) [\#124](https://github.com/HeCodes2Much/mLauncher/pull/124) ([The-Repo-Club](https://github.com/The-Repo-Club))
 
 ## [0.4.0](https://github.com/HeCodes2Much/mLauncher/tree/0.4.0) (28, December 2022)
 
