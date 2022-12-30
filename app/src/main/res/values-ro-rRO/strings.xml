@@ -67,6 +67,7 @@
     <string name="open">Deschideți</string>
     <string name="close">Inchide</string>
     <string name="copy">Copiază</string>
+    <string name="opacity">Opacitate</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Arată notificarea</string>
     <string name="show_app_list">Arată lista de aplicații</string>

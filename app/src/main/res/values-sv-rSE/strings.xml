@@ -67,6 +67,7 @@
     <string name="open">Öppna</string>
     <string name="close">Stäng</string>
     <string name="copy">Kopiera</string>
+    <string name="opacity">Opacitet</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Visa avisering</string>
     <string name="show_app_list">Visa applista</string>

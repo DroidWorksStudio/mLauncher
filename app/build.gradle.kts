@@ -106,4 +106,6 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout-compose:1.0.1")
     implementation("com.google.android.material:material:1.7.0")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.5.1")
+
+    implementation ("com.github.SmartToolFactory:Compose-Colorful-Sliders:1.1.0")
 }

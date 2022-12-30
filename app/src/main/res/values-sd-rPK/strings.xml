@@ -67,6 +67,7 @@
     <string name="open">کليل</string>
     <string name="close">بند</string>
     <string name="copy">ڪاپي</string>
+    <string name="opacity">اوپيسيٽي</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">نوٽيفڪيشن ڏيکاريو</string>
     <string name="show_app_list">ڏيکاريو ايپ لسٽ</string>

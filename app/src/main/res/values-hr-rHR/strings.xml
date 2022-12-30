@@ -67,6 +67,7 @@
     <string name="open">Otvoren</string>
     <string name="close">Zatvoriti</string>
     <string name="copy">Kopirati</string>
+    <string name="opacity">Neprozirnost</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Prikaži obavijest</string>
     <string name="show_app_list">Prikaži popis aplikacija</string>

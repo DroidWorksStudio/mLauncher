@@ -67,6 +67,7 @@
     <string name="open">Άνοιγμα</string>
     <string name="close">Κλείσιμο</string>
     <string name="copy">Αντιγραφή</string>
+    <string name="opacity">Αδιαφάνεια</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Εμφάνιση Ειδοποίησης</string>
     <string name="show_app_list">Εμφάνιση Λίστας Εφαρμογών</string>

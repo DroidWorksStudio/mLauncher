@@ -67,6 +67,7 @@
     <string name="open">Otevřít</string>
     <string name="close">Zavřít</string>
     <string name="copy">Kopírovat</string>
+    <string name="opacity">Neprůhlednost</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Zobrazit oznámení</string>
     <string name="show_app_list">Zobrazit seznam aplikací</string>

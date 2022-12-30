@@ -67,6 +67,7 @@
     <string name="open">باز کن</string>
     <string name="close">نزدیک</string>
     <string name="copy">کپی 🀄</string>
+    <string name="opacity">کدورت</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">نمایش اعلان</string>
     <string name="show_app_list">نمایش لیست برنامه ها</string>

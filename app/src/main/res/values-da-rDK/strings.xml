@@ -67,6 +67,7 @@
     <string name="open">Åbn</string>
     <string name="close">Luk</string>
     <string name="copy">Kopiér</string>
+    <string name="opacity">Gennemsigtighed</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Vis Notifikation</string>
     <string name="show_app_list">Vis Appliste</string>

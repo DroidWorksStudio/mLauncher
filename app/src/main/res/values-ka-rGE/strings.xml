@@ -67,6 +67,7 @@
     <string name="open">გახსენით</string>
     <string name="close">დახურვა</string>
     <string name="copy">კოპირება</string>
+    <string name="opacity">გამჭვირვალობა</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">შეტყობინების ჩვენება</string>
     <string name="show_app_list">აპლიკაციების სიის ჩვენება</string>

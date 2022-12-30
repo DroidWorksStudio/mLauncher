@@ -67,6 +67,7 @@
     <string name="open">Open</string>
     <string name="close">Afsluiten</string>
     <string name="copy">Kopiëren</string>
+    <string name="opacity">ondoorzichtigheid</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Toon melding</string>
     <string name="show_app_list">Toon App Lijst</string>

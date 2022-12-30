@@ -67,6 +67,7 @@
     <string name="open">Открыть</string>
     <string name="close">Закрыть</string>
     <string name="copy">Копировать</string>
+    <string name="opacity">Непрозрачность</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Показать уведомление</string>
     <string name="show_app_list">Показать список приложений</string>

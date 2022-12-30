@@ -8,20 +8,20 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
 import androidx.compose.material.TextButton
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.MutableState
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment.Companion.CenterEnd
 import androidx.compose.ui.Alignment.Companion.CenterStart
 import androidx.compose.ui.Alignment.Companion.End
 import androidx.compose.ui.Alignment.Companion.Start
 import androidx.compose.ui.Alignment.Companion.TopEnd
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.focus.onFocusEvent
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -35,6 +35,10 @@ import app.mlauncher.data.EnumOption
 import app.mlauncher.style.BORDER_SIZE
 import app.mlauncher.style.CORNER_RADIUS
 import app.mlauncher.style.SETTINGS_PADDING
+import com.smarttoolfactory.slider.LabelPosition
+import com.smarttoolfactory.slider.MaterialSliderDefaults
+import com.smarttoolfactory.slider.SliderWithLabel
+import kotlin.math.roundToInt
 
 object SettingsComposable {
 
@@ -264,6 +268,55 @@ object SettingsComposable {
     }
 
     @Composable
+    fun SettingsSliderItem(
+        title: String,
+        currentSelection: MutableState<Int>,
+        min: Int = Int.MIN_VALUE,
+        max: Int = Int.MAX_VALUE,
+        open: MutableState<Boolean>,
+        onChange: (Boolean) -> Unit,
+        onValueChange: (Int) -> Unit = {},
+        fontSize: TextUnit = TextUnit.Unspecified,
+        onSelect: (Int) -> Unit
+    ) {
+        Column {
+            Text(
+                title,
+                style = SettingsTheme.typography.item,
+                fontSize = fontSize,
+                modifier = Modifier
+                    .align(Start)
+            )
+
+            if (open.value) {
+                SettingsSliderSelector(
+                    number = currentSelection,
+                    min = min,
+                    max = max,
+                    fontSize = fontSize,
+                    onValueChange = onValueChange,
+                ) { i ->
+                    onChange(false)
+                    currentSelection.value = i
+                    onSelect(i)
+                }
+            } else {
+                Box (
+                    modifier = Modifier
+                        .fillMaxWidth()
+                ) {
+                    SettingsButton(
+                        onClick = { onChange(true) },
+                        modifier = Modifier
+                            .align(CenterEnd),
+                        buttonText = currentSelection.value.toString()
+                    )
+                }
+            }
+        }
+    }
+
+    @Composable
     private fun SettingsItem(
         title: String,
         onClick: () -> Unit,
@@ -397,11 +450,11 @@ object SettingsComposable {
                 },
                 modifier = Modifier
                     .constrainAs(minus) {
-                    top.linkTo(parent.top)
-                    bottom.linkTo(parent.bottom)
-                    start.linkTo(text.end)
-                    end.linkTo(button.start)
-                },
+                        top.linkTo(parent.top)
+                        bottom.linkTo(parent.bottom)
+                        start.linkTo(text.end)
+                        end.linkTo(button.start)
+                    },
             ) {
                 Text("-", style = SettingsTheme.typography.button, fontSize = fontSize)
             }
@@ -427,11 +480,11 @@ object SettingsComposable {
                 },
                 modifier = Modifier
                     .constrainAs(plus) {
-                    top.linkTo(parent.top)
-                    bottom.linkTo(parent.bottom)
-                    start.linkTo(parent.start)
-                    end.linkTo(text.start)
-                },
+                        top.linkTo(parent.top)
+                        bottom.linkTo(parent.bottom)
+                        start.linkTo(parent.start)
+                        end.linkTo(text.start)
+                    },
             ) {
                 Text("+", style = SettingsTheme.typography.button, fontSize = fontSize)
             }
@@ -439,11 +492,64 @@ object SettingsComposable {
                 onClick = { onCommit(number.value) },
                 modifier = Modifier
                     .constrainAs(button) {
-                    top.linkTo(parent.top)
-                    bottom.linkTo(parent.bottom)
-                    start.linkTo(minus.end)
-                    end.linkTo(parent.end)
+                        top.linkTo(parent.top)
+                        bottom.linkTo(parent.bottom)
+                        start.linkTo(minus.end)
+                        end.linkTo(parent.end)
+                    },
+            ) {
+                Text(stringResource(R.string.save), style = SettingsTheme.typography.button, fontSize = fontSize)
+            }
+        }
+    }
+
+    @Composable
+    private fun SettingsSliderSelector(
+        number: MutableState<Int>,
+        min: Int,
+        max: Int,
+        fontSize: TextUnit = TextUnit.Unspecified,
+        onValueChange: (Int) -> Unit = {},
+        onCommit: (Int) -> Unit
+    ) {
+        ConstraintLayout(
+            modifier = Modifier
+                .background(SettingsTheme.color.selector, SettingsTheme.shapes.settings)
+                .fillMaxWidth()
+        ) {
+            val (text, button) = createRefs()
+            var labelProgress by remember { mutableStateOf(number.value.toFloat()) }
+            SliderWithLabel(
+                value = labelProgress,
+                onValueChange = {
+                    labelProgress = it
                 },
+                thumbRadius = 5.dp,
+                trackHeight = 5.dp,
+                valueRange = min.toFloat()..max.toFloat(),
+                colors = MaterialSliderDefaults.materialColors(),
+                labelPosition = LabelPosition.Top,
+                label = {
+                    Text(
+                        text = "${labelProgress.roundToInt()}",
+                        fontSize = fontSize,
+                        modifier = Modifier
+                            .shadow(1.dp, shape = CircleShape),
+                        color = Color.White
+                    )
+                },
+                modifier = Modifier
+                    .padding(end = 62.dp),
+            )
+            TextButton(
+                onClick = { onCommit(labelProgress.toInt()) },
+                modifier = Modifier
+                    .constrainAs(button) {
+                        top.linkTo(parent.top)
+                        bottom.linkTo(parent.bottom)
+                        start.linkTo(text.end)
+                        end.linkTo(parent.end)
+                    },
             ) {
                 Text(stringResource(R.string.save), style = SettingsTheme.typography.button, fontSize = fontSize)
             }

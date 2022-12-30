@@ -1,8 +1,8 @@
-Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. 极简而干净。
+从 <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>分叉。 极简而干净。
     
 # 使用额外功能
 
-- 删除了杂乱的内容，如广告和链接
+- 移除俱乐部，例如广告和链接
 - 你可以在应用抽屉里重新命名应用（已经支持在主屏幕上重新命名应用。 只需在主屏幕上长击一个应用程序，然后开始打字) 只需在主屏幕上长击一个应用程序，然后开始打字) 只需在主屏幕上长击一个应用程序，然后开始打字)
 - 我们在主屏幕上添加了更多的手势选项：
     - 手势现在：
