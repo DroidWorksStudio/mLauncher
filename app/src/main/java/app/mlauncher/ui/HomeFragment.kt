@@ -4,8 +4,6 @@ import android.annotation.SuppressLint
 import android.app.admin.DevicePolicyManager
 import android.content.Context
 import android.content.Context.VIBRATOR_SERVICE
-import android.content.res.Configuration
-import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.os.Vibrator
@@ -57,6 +55,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val hex = getHexForOpacity(requireContext(), prefs)
+        binding.mainLayout.setBackgroundColor(hex)
 
 
         viewModel = activity?.run {
@@ -84,7 +84,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
     override fun onResume() {
         super.onResume()
-        var hex = getHexForOpacity(requireContext())
+        val hex = getHexForOpacity(requireContext(), prefs)
         binding.mainLayout.setBackgroundColor(hex)
 
         val locale = prefs.language.locale()
@@ -446,32 +446,5 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 binding.homeAppsLayout.addView(view)
             }
         }
-    }
-
-    private fun getHexForOpacity(context: Context): Int {
-        var setColor = prefs.opacityNum
-        var isDarkMode = prefs.appTheme.toString()
-
-        var hex = Integer.toHexString(setColor).toString()
-        if (hex.length < 2)
-            hex = "$hex$hex"
-
-        if (isDarkMode.toString() == "System") {
-            return if (isDarkMode(context)) {
-                Color.parseColor("#${hex}000000")
-            } else {
-                Color.parseColor("#${hex}FFFFFF")
-            }
-        }
-        return if (isDarkMode.toString() == "Light") {
-            Color.parseColor("#${hex}FFFFFF")
-        } else {
-            Color.parseColor("#${hex}000000")
-        }
-    }
-
-    fun isDarkMode(context: Context): Boolean {
-        val darkModeFlag = context.resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
-        return darkModeFlag == Configuration.UI_MODE_NIGHT_YES
     }
 }

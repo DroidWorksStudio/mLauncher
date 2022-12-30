@@ -25,10 +25,12 @@ import app.mlauncher.data.Constants
 import app.mlauncher.data.Constants.AppDrawerFlag
 import app.mlauncher.data.Prefs
 import app.mlauncher.databinding.FragmentAppDrawerBinding
+import app.mlauncher.helper.getHexForOpacity
 import app.mlauncher.helper.openAppInfo
 
 class AppDrawerFragment : Fragment() {
 
+    private lateinit var prefs: Prefs
     private var _binding: FragmentAppDrawerBinding? = null
     private val binding get() = _binding!!
 
@@ -37,14 +39,16 @@ class AppDrawerFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // return inflater.inflate(R.layout.fragment_app_drawer, container, false)
         _binding = FragmentAppDrawerBinding.inflate(inflater, container, false)
+        prefs = Prefs(requireContext())
         return binding.root
     }
 
     @SuppressLint("RtlHardcoded")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val hex = getHexForOpacity(requireContext(), prefs)
+        binding.mainLayout.setBackgroundColor(hex)
 
         val flagString = arguments?.getString("flag", AppDrawerFlag.LaunchApp.toString()) ?: AppDrawerFlag.LaunchApp.toString()
         val flag = AppDrawerFlag.valueOf(flagString)
@@ -112,6 +116,12 @@ class AppDrawerFragment : Fragment() {
                 return false
             }
         })
+    }
+
+    override fun onResume() {
+        super.onResume()
+        val hex = getHexForOpacity(requireContext(), prefs)
+        binding.mainLayout!!.setBackgroundColor(hex)
     }
 
     private fun initViewModel(flag: AppDrawerFlag, viewModel: MainViewModel, appAdapter: AppDrawerAdapter) {

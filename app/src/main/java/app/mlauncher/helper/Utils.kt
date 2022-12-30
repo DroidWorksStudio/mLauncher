@@ -5,6 +5,7 @@ import android.content.*
 import android.content.pm.LauncherApps
 import android.content.pm.PackageManager
 import android.content.pm.PackageManager.NameNotFoundException
+import android.content.res.Configuration
 import android.content.res.Resources
 import android.net.Uri
 import android.os.Build
@@ -382,4 +383,31 @@ fun loadFile(activity: Activity) {
         type = "application/json"
     }
     ActivityCompat.startActivityForResult(activity, intent, BACKUP_READ, null)
+}
+
+fun getHexForOpacity(context: Context, prefs: Prefs): Int {
+    var setColor = prefs.opacityNum
+    var isDarkMode = prefs.appTheme.toString()
+
+    var hex = Integer.toHexString(setColor).toString()
+    if (hex.length < 2)
+        hex = "$hex$hex"
+
+    if (isDarkMode.toString() == "System") {
+        return if (isDarkMode(context)) {
+            android.graphics.Color.parseColor("#${hex}000000")
+        } else {
+            android.graphics.Color.parseColor("#${hex}FFFFFF")
+        }
+    }
+    return if (isDarkMode.toString() == "Light") {
+        android.graphics.Color.parseColor("#${hex}FFFFFF")
+    } else {
+        android.graphics.Color.parseColor("#${hex}000000")
+    }
+}
+
+private fun isDarkMode(context: Context): Boolean {
+    val darkModeFlag = context.resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
+    return darkModeFlag == Configuration.UI_MODE_NIGHT_YES
 }
