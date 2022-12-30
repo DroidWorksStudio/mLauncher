@@ -25,7 +25,7 @@
     <string name="app_text_size">Metin Boyutu</string>
     
     <!-- Behavior Strings -->
-    <string name="auto_show_keyboard">Klavye'yi otomatik göster</string>
+    <string name="auto_show_keyboard">Klavye\'yi otomatik göster</string>
     <string name="auto_open_apps">Uygulamaları otomatik aç</string>
     
     <!-- Homescreen Strings -->
