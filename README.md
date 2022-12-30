@@ -10,7 +10,11 @@
         <a href='https://github.com/HeCodes2Much/mLauncher/actions'><img src='https://img.shields.io/github/actions/workflow/status/HeCodes2Much/mLauncher/android-main_ci.yml?branch=main&style=flat-square'></a>
 		<a href='https://github.com/HeCodes2Much/mLauncher/releases/latest'><img src='https://img.shields.io/github/downloads/HeCodes2Much/mLauncher/total?style=flat-square'></a>
     </p>
-	<a href="https://www.buymeacoffee.com/HeCodes2Much"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=HeCodes2Much&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>
+	<p>
+    <a href="https://www.buymeacoffee.com/HeCodes2Much"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=HeCodes2Much&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>
+    </p>
+    <a href='https://github.com/HeCodes2Much/mLauncher/releases/latest'><img src='https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white'></a>
+    <a href='https://f-droid.org/packages/app.mlauncher'><img src='https://img.shields.io/badge/F_Droid-1976d2?style=for-the-badge&logo=f-droid&logoColor=white'></a>
 </div>
 
 
@@ -21,6 +25,8 @@
 We try to balance customizability and minimalization well still being simple :)</h3>
 
 # Forked with extra features
+
+<details><summary><h4>List of features</h4> (click to expand)</summary>
 
 - Removed clutter, like ads and links
 - You can rename apps in the app-drawer (Renaming apps on the home screen is already supported. Just long-click on an app on the home screen and start typing)
@@ -39,9 +45,12 @@ We try to balance customizability and minimalization well still being simple :)<
 - Change font size
 - Removed internet permission. You never know what an app developer wants to know about you.
 
+</details>
+
 ## Translations: [![Crowdin](https://badges.crowdin.net/mlauncher/localized.svg)](https://crowdin.com/project/mlauncher)
 
-- A lot of people have translated the app to the following languages. Many thanks to you all.
+<details><summary>A lot of people have translated the app to the following languages. Many thanks to you all.  (click to expand)</summary>
+
   - Arabic
   - Albanian
   - Bulgarian
@@ -88,6 +97,8 @@ We try to balance customizability and minimalization well still being simple :)<
   - Ukrainian
   - Vietnamese
 
+</details>
+
 ## Screenshots
 As per version 0.4.0. Click on any image to enlarge it. To know more, explore and see for yourself.
 
@@ -103,8 +114,12 @@ As per version 0.4.0. Click on any image to enlarge it. To know more, explore an
 
 ## Installation
 
-[<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" alt="Get it on F-Droid" height="80">](https://f-droid.org/packages/app.mlauncher/)
-[<img src="art/get-it-on-github.png" alt="Get it on Github" height="80">](https://github.com/HeCodes2Much/mLauncher/releases)
+<div align='center'>
+
+<a href='https://github.com/HeCodes2Much/mLauncher/releases/latest'><img src='https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white'></a>
+<a href='https://f-droid.org/packages/app.mlauncher'><img src='https://img.shields.io/badge/F_Droid-1976d2?style=for-the-badge&logo=f-droid&logoColor=white'></a>
+
+</div>
 
 - This app is available on [F-Droid](https://f-droid.org/packages/app.mlauncher/) & [Github](https://github.com/HeCodes2Much/mLauncher/releases/)
 - The latest stable version is on the [`main`](https://github.com/HeCodes2Much/mLauncher/tree/main) branch. You can clone it and build the app yourself.
