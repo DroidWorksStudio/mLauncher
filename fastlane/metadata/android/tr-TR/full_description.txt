@@ -1,3 +1,5 @@
+<a href="https://github.com/tanujnotes/Olauncher">Olauncher</a> 'dan alındı. Minimal ve temiz.
+    
 #Daha fazla özelliklli bir alıntı.
  
 - Reklamlar ve bağlantılar gibi gereksiz şeyler kaldırdı
@@ -15,7 +17,7 @@
 - Saati Ev uygulamalarından ayrı olarak hizalayabilirsinizde.
 - Uygulama-çekmecesindeki uygulamaların hizalamasını değiştir
 - Yazı tipi boyutunu değiştir
-- İnternet izni kaldırıldı. Bir uygulama geliştiricinin sizin hakkınızda ne bilmek istediğini asla bilemezsin.
+- İnternet izni kaldırıldı. Bir uygulama geliştiricisinin sizin hakkınızda ne bilmek istediğini asla bilemezsin.
 
 ## Çeviriler:
 
