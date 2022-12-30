@@ -27,6 +27,7 @@ private const val STATUS_BAR = "STATUS_BAR"
 private const val SHOW_DATE = "SHOW_DATE"
 private const val HOME_LOCKED = "HOME_LOCKED"
 private const val SHOW_TIME = "SHOW_TIME"
+private const val HIDE_ROADMAP = "HIDE_ROADMAP"
 private const val SWIPE_UP_ACTION = "SWIPE_UP_ACTION"
 private const val SWIPE_DOWN_ACTION = "SWIPE_DOWN_ACTION"
 private const val SWIPE_RIGHT_ACTION = "SWIPE_RIGHT_ACTION"
@@ -183,6 +184,10 @@ class Prefs(val context: Context) {
     var homeLocked: Boolean
         get() = prefs.getBoolean(HOME_LOCKED, false)
         set(value) = prefs.edit().putBoolean(HOME_LOCKED, value).apply()
+
+    var roadmapHidden: Boolean
+        get() = prefs.getBoolean(HIDE_ROADMAP, false)
+        set(value) = prefs.edit().putBoolean(HIDE_ROADMAP, value).apply()
 
     var swipeLeftAction: Constants.Action
         get() = loadAction(SWIPE_LEFT_ACTION, Constants.Action.OpenApp)

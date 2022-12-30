@@ -130,7 +130,7 @@ class SettingsFragment : Fragment() {
                 ) {
                     resetDefaultLauncher(requireContext())
                 }
-                if (ismlauncherDefault(requireContext())) {
+                if (ismlauncherDefault(requireContext()) && !prefs.roadmapHidden) {
                     SettingsTextButton(
                         stringResource(R.string.road_map),
                         fontSize = iconFs
@@ -421,6 +421,14 @@ class SettingsFragment : Fragment() {
                             onValueChange = { },
                             onSelect = { f -> setTextSizeSettings(f) }
                         )
+                    },
+                    { _, onChange ->
+                        SettingsToggle(
+                            title = stringResource(R.string.hide_roadmap),
+                            fontSize = iconFs,
+                            onChange = onChange,
+                            state = remember { mutableStateOf(prefs.roadmapHidden) }
+                        ) { prefs.roadmapHidden = !prefs.roadmapHidden }
                     }
                 )
             )
