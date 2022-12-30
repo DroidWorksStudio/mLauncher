@@ -4,10 +4,8 @@ import app.mlauncher.style.SettingsTheme
 import android.app.admin.DevicePolicyManager
 import android.content.ComponentName
 import android.content.Context
-import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import android.provider.Settings
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -45,6 +43,7 @@ import app.mlauncher.ui.compose.SettingsComposable.SettingsArea
 import app.mlauncher.ui.compose.SettingsComposable.SettingsGestureItem
 import app.mlauncher.ui.compose.SettingsComposable.SettingsItem
 import app.mlauncher.ui.compose.SettingsComposable.SettingsNumberItem
+import app.mlauncher.ui.compose.SettingsComposable.SettingsSliderItem
 import app.mlauncher.ui.compose.SettingsComposable.SettingsToggle
 import app.mlauncher.ui.compose.SettingsComposable.SettingsTopView
 import app.mlauncher.ui.compose.SettingsComposable.SettingsTextButton
@@ -176,7 +175,7 @@ class SettingsFragment : Fragment() {
                         )
                     },
                     { open, onChange ->
-                        SettingsNumberItem(
+                        SettingsSliderItem(
                             title = stringResource(R.string.app_text_size),
                             fontSize = iconFs,
                             open = open,
@@ -184,12 +183,11 @@ class SettingsFragment : Fragment() {
                             currentSelection = remember { mutableStateOf(prefs.textSizeLauncher) },
                             min = Constants.TEXT_SIZE_MIN,
                             max = Constants.TEXT_SIZE_MAX,
-                            onValueChange = { },
                             onSelect = { f -> setTextSizeLauncher(f) }
                         )
                     },
                     { open, onChange ->
-                        SettingsNumberItem(
+                        SettingsSliderItem(
                             title = stringResource(R.string.opacity),
                             fontSize = iconFs,
                             open = open,
@@ -231,7 +229,7 @@ class SettingsFragment : Fragment() {
                 selected = selected,
                 items = arrayOf(
                     { open, onChange ->
-                        SettingsNumberItem(
+                        SettingsSliderItem(
                             title = stringResource(R.string.apps_on_home_screen),
                             fontSize = iconFs,
                             open = open,
@@ -412,7 +410,7 @@ class SettingsFragment : Fragment() {
                 selected = selected,
                 items = arrayOf(
                     { open, onChange ->
-                        SettingsNumberItem(
+                        SettingsSliderItem(
                             title = stringResource(R.string.app_text_size),
                             fontSize = iconFs,
                             open = open,

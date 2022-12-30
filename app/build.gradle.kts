@@ -13,8 +13,8 @@ android {
         applicationId = "app.mlauncher"
         minSdk = 26
         targetSdk = 33
-        versionCode = 40
-        versionName = "0.4.0"
+        versionCode = 41
+        versionName = "0.4.1"
     }
 
     buildTypes {
@@ -106,4 +106,6 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout-compose:1.0.1")
     implementation("com.google.android.material:material:1.7.0")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.5.1")
+
+    implementation ("com.github.SmartToolFactory:Compose-Colorful-Sliders:1.1.0")
 }
