@@ -84,7 +84,7 @@
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Bildirimi Göster</string>
     <string name="show_app_list">Uygulama Listesini Göster</string>
-    <string name="open_app">Uygulama'yı Aç</string>
+    <string name="open_app">Uygulama\'yı Aç</string>
     <string name="lock_screen">Kilit Ekranı</string>
     <string name="open_quick_settings">Hızlı Ayarlar</string>
     <string name="show_recents">Son Kullanılanları Göster</string>
@@ -104,7 +104,7 @@
     <string name="app_drawer_tips">İpucu: Kapatmak için aşağı kaydırın. Klavyeyi gizlemek için kaydırın.</string>
     <string name="double_tap_lock_is_enabled_message">Çift dokunma kilidi parmak izi veya yüz kilidini devre dışı bırakırsa, mLauncher ayarlarını açın, \'deneysel\'e dokunun ve talimatları izleyin. Teşekkürler.</string>
     <string name="double_tap_lock_uninstall_message">Etkin kilitlemek için çift dokunun.
-        \n\nNot: mLauncher'ı silmeye karar verirseniz önce bunu KAPATIN.</string>
+        \n\nNot: mLauncher\'ı silmeye karar verirseniz önce bunu KAPATIN.</string>
     <string name="accessibility_service_name">mLauncher Eylemler Hizmeti</string>
-    <string name="accessibility_service_description">Bu erişilebilirlik hizmeti, mLauncher'ın ekranı kilitleme veya hızlı ayarları açma gibi belirli eylemleri gerçekleştirmesini sağlar.</string>
+    <string name="accessibility_service_description">Bu erişilebilirlik hizmeti, mLauncher\'ın ekranı kilitleme veya hızlı ayarları açma gibi belirli eylemleri gerçekleştirmesini sağlar.</string>
 </resources>
