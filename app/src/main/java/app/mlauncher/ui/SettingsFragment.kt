@@ -42,7 +42,6 @@ import app.mlauncher.listener.DeviceAdmin
 import app.mlauncher.ui.compose.SettingsComposable.SettingsArea
 import app.mlauncher.ui.compose.SettingsComposable.SettingsGestureItem
 import app.mlauncher.ui.compose.SettingsComposable.SettingsItem
-import app.mlauncher.ui.compose.SettingsComposable.SettingsNumberItem
 import app.mlauncher.ui.compose.SettingsComposable.SettingsSliderItem
 import app.mlauncher.ui.compose.SettingsComposable.SettingsToggle
 import app.mlauncher.ui.compose.SettingsComposable.SettingsTopView
@@ -194,7 +193,7 @@ class SettingsFragment : Fragment() {
                             onChange = onChange,
                             currentSelection = remember { mutableStateOf(prefs.opacityNum) },
                             min = 0,
-                            max = 100,
+                            max = 255,
                             onSelect = { j -> updateOpacityNum(j) }
                         )
                     },
@@ -418,7 +417,6 @@ class SettingsFragment : Fragment() {
                             currentSelection = remember { mutableStateOf(prefs.textSizeSettings) },
                             min = Constants.TEXT_SIZE_MIN,
                             max = Constants.TEXT_SIZE_MAX,
-                            onValueChange = { },
                             onSelect = { f -> setTextSizeSettings(f) }
                         )
                     },

@@ -95,7 +95,9 @@ object SettingsComposable {
                     painterResource(R.drawable.ic_outline_info_24),
                     contentDescription = "",
                     modifier = Modifier
-                        .size(iconSize).align(TopEnd).clickable { onClick() },
+                        .size(iconSize)
+                        .align(TopEnd)
+                        .clickable { onClick() },
                 )
             }
             content()
@@ -289,12 +291,11 @@ object SettingsComposable {
             )
 
             if (open.value) {
-                SettingsSliderSelector(
+                SettingsSliderRGBSelector(
                     number = currentSelection,
                     min = min,
                     max = max,
                     fontSize = fontSize,
-                    onValueChange = onValueChange,
                 ) { i ->
                     onChange(false)
                     currentSelection.value = i
@@ -509,7 +510,6 @@ object SettingsComposable {
         min: Int,
         max: Int,
         fontSize: TextUnit = TextUnit.Unspecified,
-        onValueChange: (Int) -> Unit = {},
         onCommit: (Int) -> Unit
     ) {
         ConstraintLayout(
@@ -553,6 +553,46 @@ object SettingsComposable {
             ) {
                 Text(stringResource(R.string.save), style = SettingsTheme.typography.button, fontSize = fontSize)
             }
+        }
+    }
+
+    @Composable
+    private fun SettingsSliderRGBSelector(
+        number: MutableState<Int>,
+        min: Int,
+        max: Int,
+        fontSize: TextUnit = TextUnit.Unspecified,
+        onCommit: (Int) -> Unit
+    ) {
+        ConstraintLayout(
+            modifier = Modifier
+                .background(SettingsTheme.color.selector, SettingsTheme.shapes.settings)
+                .fillMaxWidth()
+        ) {
+            val (text, button) = createRefs()
+            var alpha by remember { mutableStateOf(number.value.toFloat()) }
+            SliderWithLabel(
+                value = alpha,
+                onValueChange = {
+                    alpha = it
+                },
+                thumbRadius = 5.dp,
+                trackHeight = 5.dp,
+                valueRange = min.toFloat()..max.toFloat(),
+                colors = MaterialSliderDefaults.materialColors(),
+                labelPosition = LabelPosition.Top,
+                label = {
+                    Text(
+                        text = "${alpha.roundToInt()}",
+                        fontSize = fontSize,
+                        modifier = Modifier
+                            .shadow(1.dp, shape = CircleShape),
+                        color = Color.White
+                    )
+                },
+                steps = max,
+                onValueChangeFinished = { onCommit(alpha.toInt()) }
+            )
         }
     }
 

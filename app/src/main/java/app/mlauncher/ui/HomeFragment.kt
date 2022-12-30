@@ -4,6 +4,8 @@ import android.annotation.SuppressLint
 import android.app.admin.DevicePolicyManager
 import android.content.Context
 import android.content.Context.VIBRATOR_SERVICE
+import android.content.res.Configuration
+import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.os.Vibrator
@@ -82,11 +84,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
     override fun onResume() {
         super.onResume()
-        var context = requireContext()
-
-        var setColor = prefs.opacityNum
-        val allColors = context.resources.getIntArray(R.array.colors)
-        binding.mainLayout.setBackgroundColor(allColors[setColor])
+        var hex = getHexForOpacity()
+        binding.mainLayout.setBackgroundColor(hex)
 
         val locale = prefs.language.locale()
         val best12 = getBestDateTimePattern(locale, "hhmma")
@@ -446,6 +445,34 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 }
                 binding.homeAppsLayout.addView(view)
             }
+        }
+    }
+
+    private fun getHexForOpacity(): Int {
+        var setColor = prefs.opacityNum
+        var isDarkMode = prefs.appTheme.toString()
+
+        var hex = Integer.toHexString(setColor).toString()
+        if (hex.length < 2)
+            hex = "$hex$hex"
+
+        if (isDarkMode.toString() == "System") {
+            when (requireContext().resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
+                Configuration.UI_MODE_NIGHT_YES -> {
+                    return Color.parseColor("#${hex}000000")
+                }
+                Configuration.UI_MODE_NIGHT_NO -> {
+                    return Color.parseColor("#${hex}FFFFFF")
+                }
+                Configuration.UI_MODE_NIGHT_UNDEFINED -> {
+                    return Color.parseColor("#${hex}FF00FF")
+                }
+            }
+        }
+        return if (isDarkMode.toString() == "Light") {
+            Color.parseColor("#${hex}FFFFFF")
+        } else {
+            Color.parseColor("#${hex}000000")
         }
     }
 }
