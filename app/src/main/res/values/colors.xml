@@ -8,6 +8,8 @@
     <color name="whiteTrans90">#E6FFFFFF</color>
     <color name="whiteTrans80">#CCFFFFFF</color>
     <color name="whiteTrans50">#80FFFFFF</color>
+    <color name="whiteTrans25">#40FFFFFF</color>
+    <color name="whiteTrans10">#1AFFFFFF</color>
     <color name="whiteInverse">#000000</color>
     <color name="whiteInverseTrans10">#1A000000</color>
     <color name="whiteInverseTrans25">#40000000</color>
@@ -19,6 +21,8 @@
     <color name="blackTrans90">#E6000000</color>
     <color name="blackTrans80">#CC000000</color>
     <color name="blackTrans50">#80000000</color>
+    <color name="blackTrans25">#40000000</color>
+    <color name="blackTrans10">#1A000000</color>
     <color name="blackInverse">#FFFFFF</color>
     <color name="blackInverseTrans10">#1AFFFFFF</color>
     <color name="blackInverseTrans25">#40FFFFFF</color>

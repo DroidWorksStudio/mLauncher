@@ -4,6 +4,7 @@ import app.mlauncher.style.SettingsTheme
 import android.app.admin.DevicePolicyManager
 import android.content.ComponentName
 import android.content.Context
+import android.content.res.Configuration
 import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -72,6 +73,8 @@ class SettingsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val hex = getHexForOpacity(requireContext(), prefs)
+        binding.scrollView.setBackgroundColor(hex)
 
 
         if (prefs.firstSettingsOpen) {
@@ -90,6 +93,12 @@ class SettingsFragment : Fragment() {
                 Settings((prefs.textSizeSettings - offset).sp)
             }
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        val hex = getHexForOpacity(requireContext(), prefs)
+        binding.scrollView.setBackgroundColor(hex)
     }
 
     @Composable
@@ -461,7 +470,7 @@ class SettingsFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         prefs = Prefs(requireContext())
         viewModel = activity?.run {
-            ViewModelProvider(this).get(MainViewModel::class.java)
+            ViewModelProvider(this)[MainViewModel::class.java]
         } ?: throw Exception("Invalid Activity")
 
         viewModel.ismlauncherDefault()
@@ -586,3 +595,5 @@ class SettingsFragment : Fragment() {
         }
     }
 }
+
+
