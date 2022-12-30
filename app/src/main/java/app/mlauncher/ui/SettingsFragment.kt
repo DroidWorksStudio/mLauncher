@@ -42,7 +42,6 @@ import app.mlauncher.listener.DeviceAdmin
 import app.mlauncher.ui.compose.SettingsComposable.SettingsArea
 import app.mlauncher.ui.compose.SettingsComposable.SettingsGestureItem
 import app.mlauncher.ui.compose.SettingsComposable.SettingsItem
-import app.mlauncher.ui.compose.SettingsComposable.SettingsNumberItem
 import app.mlauncher.ui.compose.SettingsComposable.SettingsSliderItem
 import app.mlauncher.ui.compose.SettingsComposable.SettingsToggle
 import app.mlauncher.ui.compose.SettingsComposable.SettingsTopView
@@ -151,6 +150,14 @@ class SettingsFragment : Fragment() {
                             onChange = onChange,
                             state = remember { mutableStateOf(prefs.showStatusBar) },
                         ) { toggleStatusBar() }
+                    },
+                    { _, onChange ->
+                        SettingsToggle(
+                            title = stringResource(R.string.show_battery),
+                            fontSize = iconFs,
+                            onChange = onChange,
+                            state = remember { mutableStateOf(prefs.displayBatteryArea) },
+                        ) { toggleBatteryArea() }
                     },
                     { open, onChange ->
                         SettingsItem(
@@ -418,7 +425,6 @@ class SettingsFragment : Fragment() {
                             currentSelection = remember { mutableStateOf(prefs.textSizeSettings) },
                             min = Constants.TEXT_SIZE_MIN,
                             max = Constants.TEXT_SIZE_MAX,
-                            onValueChange = { },
                             onSelect = { f -> setTextSizeSettings(f) }
                         )
                     },
@@ -463,7 +469,7 @@ class SettingsFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         prefs = Prefs(requireContext())
         viewModel = activity?.run {
-            ViewModelProvider(this).get(MainViewModel::class.java)
+            ViewModelProvider(this)[MainViewModel::class.java]
         } ?: throw Exception("Invalid Activity")
 
         viewModel.ismlauncherDefault()
@@ -499,6 +505,10 @@ class SettingsFragment : Fragment() {
         val showStatusbar = !prefs.showStatusBar
         prefs.showStatusBar = showStatusbar
         if (showStatusbar) showStatusBar(requireActivity()) else hideStatusBar(requireActivity())
+    }
+
+    private fun toggleBatteryArea() {
+        prefs.displayBatteryArea = !prefs.displayBatteryArea
     }
 
     private fun toggleShowDate() {

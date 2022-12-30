@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
     <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/mainLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -14,34 +15,52 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
-    <!-- Clock and calendar-->
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/dateTimeLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="24dp"
         android:orientation="vertical"
         tools:visibility="visible">
 
-        <TextClock
-            android:id="@+id/clock"
-            style="@style/TextDefault"
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/battery_progress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/time_size"
-            tools:text="02:34" />
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="56dp"
+            android:layout_marginEnd="24dp"
+            android:indeterminate="false"
+            android:max="100"
+            android:layout_centerInParent="true"
+            app:indicatorColor="?android:attr/textColorPrimary"
+            app:indicatorSize="288dp"
+            app:trackThickness="4dp"/>
 
-        <TextClock
-            android:id="@+id/date"
-            style="@style/TextDefault"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingHorizontal="2dp"
-            android:textSize="@dimen/date_size"
-            tools:text="Thu, 30 Dec" />
-    </LinearLayout>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="288dp"
+            android:layout_height="288dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextClock
+                android:id="@+id/clock"
+                style="@style/TextDefault"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/time_size"
+                tools:text="02:34" />
+
+            <TextClock
+                android:id="@+id/date"
+                style="@style/TextDefault"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="2dp"
+                android:textSize="@dimen/date_size"
+                tools:text="Thu, 30 Dec" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </RelativeLayout>
 
     <!-- Home apps-->
     <LinearLayout

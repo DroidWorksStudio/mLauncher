@@ -1,28 +1,34 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Base Settings -->
     <string name="app">App</string>
+
     <!-- Admin Settings -->
-    <string name="admin_permission_message">mlauncher promises to use lock screen permission responsibly.</string>
+    <string name="admin_permission_message">mLauncher promises to use lock screen permission responsibly.</string>
     <string name="experimental">(experimental)</string>
+
     <!-- Settings Headers -->
     <string name="appearance">Appearance</string>
     <string name="behavior">Behavior</string>
     <string name="homescreen">Homescreen</string>
     <string name="alignment">Alignment</string>
     <string name="gestures">Gestures</string>
+
     <!-- Home Strings -->
     <string name="hidden_apps">Hidden apps</string>
     <string name="set_as_default_launcher">Set as default launcher</string>
     <string name="change_default_launcher">Change default launcher</string>
+
     <!-- Appearance Strings -->
     <string name="status_bar">Show status bar</string>
+    <string name="show_battery">Show battery bar</string>
     <string name="theme_mode">Theme mode</string>
     <string name="app_language">Interface Language</string>
     <string name="app_text_size">Text Size</string>
+
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Auto open apps</string>
+
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">Number of shortcuts</string>
     <string name="show_time">Show time</string>
@@ -30,10 +36,12 @@
     <string name="lock_home_apps">Lock Apps</string>
     <string name="extend_home_apps_area">Extend clickable area</string>
     <string name="home_alignment_bottom">Home screen align bottom</string>
+
     <!-- Alignment Strings -->
     <string name="home_alignment">Apps home screen</string>
     <string name="clock_alignment">Clock and date</string>
     <string name="drawer_alignment">Apps in app drawer</string>
+
     <!-- Gestures Strings -->
     <string name="swipe_up_app">Swipe up</string>
     <string name="swipe_down_app">Swipe down</string>
@@ -42,21 +50,24 @@
     <string name="clock_click_app">Click on Clock</string>
     <string name="date_click_app">Click on Date</string>
     <string name="double_tap">Double Tap</string>
+
     <!-- Settings Strings -->
     <string name="off">Off</string>
     <string name="on">On</string>
     <string name="left">Left</string>
     <string name="right">Right</string>
-    <string name="center">Centre</string>
+    <string name="center">Center</string>
     <string name="dark">Dark</string>
     <string name="light">Light</string>
     <string name="settings">Settings</string>
     <string name="lang_system">System</string>
     <string name="system_default">System</string>
+
     <string name="hide">Hide</string>
     <string name="rename">Rename</string>
     <string name="okay">Okay</string>
     <string name="save">Save</string>
+
     <string name="show">Show</string>
     <string name="reset">Reset</string>
     <string name="cancel">Cancel</string>
@@ -64,10 +75,13 @@
     <string name="disable">Disable</string>
     <string name="enabled">Enabled</string>
     <string name="disabled">Disabled</string>
+
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string name="copy">copy</string>
 	<string name="opacity">Opacity</string>
+    <string name="hide_roadmap">Hide the Roadmap</string>
+
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Show Notification</string>
     <string name="show_app_list">Show App List</string>
@@ -76,10 +90,12 @@
     <string name="open_quick_settings">Quick Settings</string>
     <string name="show_recents">Show Recents</string>
     <string name="double_tap_to_lock_screen">Double tap to lock</string>
+
     <!-- Backup Strings -->
     <string name="backup">Backup</string>
     <string name="load_backup">Load Backup</string>
     <string name="store_backup">Store Backup</string>
+
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>
     <string name="road_map">Roadmap</string>
