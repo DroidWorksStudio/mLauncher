@@ -20,7 +20,6 @@ import com.github.hecodes2much.mlauncher.data.Prefs
 import com.github.hecodes2much.mlauncher.databinding.ActivityMainBinding
 import com.github.hecodes2much.mlauncher.helper.isTablet
 import com.github.hecodes2much.mlauncher.helper.showToastLong
-import com.github.hecodes2much.mlauncher.R
 import java.io.BufferedReader
 import java.io.FileOutputStream
 import java.io.InputStreamReader

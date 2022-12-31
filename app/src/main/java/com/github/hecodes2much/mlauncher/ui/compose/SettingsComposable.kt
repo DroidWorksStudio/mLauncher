@@ -354,11 +354,11 @@ object SettingsComposable {
 
     @Composable
     fun SettingsButton(
+        modifier: Modifier = Modifier,
         buttonText: String,
         disabledText: String = buttonText,
         active: Boolean = true,
         onClick: () -> Unit = { },
-        modifier: Modifier = Modifier,
         fontSize: TextUnit = TextUnit.Unspecified,
     ){
         TextButton(
