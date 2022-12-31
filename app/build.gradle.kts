@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.config.KotlinCompilerVersion
-
 plugins {
     id("com.android.application") apply true
     id("kotlin-android") apply true
@@ -76,7 +74,7 @@ dependencies {
     val kotlinVersion: String? by extra
 
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
-    implementation (kotlin("stdlib", version = kotlinVersion))
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion")
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.5.1")
     implementation("androidx.recyclerview:recyclerview:1.2.1")
@@ -91,7 +89,7 @@ dependencies {
     // Work Manager
     implementation("androidx.work:work-runtime-ktx:2.7.1")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    implementation("com.google.code.gson:gson:2.10")
+    implementation("androidx.constraintlayout:constraintlayout-compose:1.0.1")
 
     // JETPACK
     // Integration with activities
@@ -103,9 +101,23 @@ dependencies {
     implementation("androidx.compose.animation:animation:1.3.2")
     implementation("androidx.navigation:navigation-ui-ktx:2.5.3")
 
-    implementation("androidx.constraintlayout:constraintlayout-compose:1.0.1")
-    implementation("com.google.android.material:material:1.7.0")
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.5.1")
-
     implementation ("com.github.SmartToolFactory:Compose-Colorful-Sliders:1.1.0")
+    implementation("com.google.code.gson:gson:2.10")
+
+    val androidxTestEspresso = "3.5.0"
+    androidTestImplementation("androidx.test.espresso:espresso-core:$androidxTestEspresso")
+    androidTestImplementation("androidx.test.espresso:espresso-contrib:$androidxTestEspresso")
+    implementation("androidx.test.espresso:espresso-idling-resource:$androidxTestEspresso")
+    implementation("androidx.test.espresso:espresso-idling-resource:3.5.0")
+
+    // Test rules and transitive dependencies:
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.3.2")
+    // Needed for createComposeRule, but not createAndroidComposeRule:
+    debugImplementation("androidx.compose.ui:ui-test-manifest:1.3.2")
+    androidTestImplementation("androidx.navigation:navigation-testing:2.5.3")
+    debugImplementation("androidx.fragment:fragment-testing:1.5.5")
+    implementation("androidx.test:core-ktx:1.5.0")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.0")
+    androidTestImplementation("androidx.test:runner:1.5.1")
+    androidTestImplementation("androidx.test:rules:1.5.0")
 }
