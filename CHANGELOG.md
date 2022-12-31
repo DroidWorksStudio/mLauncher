@@ -1,5 +1,13 @@
 # Changelog
 
+## [Coming Soon](https://github.com/HeCodes2Much/mLauncher/tree/HEAD)
+
+[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.4.2...HEAD)
+
+**Fixed bugs:**
+
+- fix: fixed slider and font size. [\#136](https://github.com/HeCodes2Much/mLauncher/pull/136) ([The-Repo-Club](https://github.com/The-Repo-Club))
+
 ## [0.4.2](https://github.com/HeCodes2Much/mLauncher/tree/0.4.2) (30, December 2022)
 
 [Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.4.1...0.4.2)
