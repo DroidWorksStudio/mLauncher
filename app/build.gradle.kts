@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "app.mlauncher"
+    namespace = "com.github.hecodes2much.mlauncher"
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "app.mlauncher"
+        applicationId = "com.github.hecodes2much.mlauncher"
         minSdk = 23
         targetSdk = 33
         versionCode = 42
@@ -101,7 +101,6 @@ dependencies {
     implementation("androidx.compose.animation:animation:1.3.2")
     implementation("androidx.navigation:navigation-ui-ktx:2.5.3")
 
-    implementation ("com.github.SmartToolFactory:Compose-Colorful-Sliders:1.1.0")
     implementation("com.google.code.gson:gson:2.10")
 
     val androidxTestEspresso = "3.5.0"
