@@ -189,6 +189,7 @@ object SettingsComposable {
                         active = active,
                         modifier = Modifier
                             .align(CenterEnd),
+                        fontSize = fontSize,
                         buttonText = currentSelectionName ?: currentSelection.value.string()
                     )
                 }
@@ -262,6 +263,7 @@ object SettingsComposable {
                         onClick = { onChange(true) },
                         modifier = Modifier
                             .align(CenterEnd),
+                        fontSize = fontSize,
                         buttonText = currentSelection.value.toString()
                     )
                 }
@@ -290,7 +292,7 @@ object SettingsComposable {
             )
 
             if (open.value) {
-                SettingsSliderRGBSelector(
+                SettingsSliderSelector(
                     number = currentSelection,
                     min = min,
                     max = max,
@@ -309,6 +311,7 @@ object SettingsComposable {
                         onClick = { onChange(true) },
                         modifier = Modifier
                             .align(CenterEnd),
+                        fontSize = fontSize,
                         buttonText = currentSelection.value.toString()
                     )
                 }
@@ -342,6 +345,7 @@ object SettingsComposable {
                 disabledText = disabledText,
                 active = active,
                 onClick = onClick,
+                fontSize = fontSize,
                 modifier = Modifier
                     .align(End)
             )
@@ -355,6 +359,7 @@ object SettingsComposable {
         active: Boolean = true,
         onClick: () -> Unit = { },
         modifier: Modifier = Modifier,
+        fontSize: TextUnit = TextUnit.Unspecified,
     ){
         TextButton(
             onClick = onClick,
@@ -362,6 +367,7 @@ object SettingsComposable {
         ) {
             Text(
                 text = if (active) buttonText else disabledText,
+                fontSize = fontSize,
                 style = if (active) SettingsTheme.typography.button else SettingsTheme.typography.buttonDisabled,
             )
         }
@@ -373,6 +379,7 @@ object SettingsComposable {
         secondButtonText: String,
         firstButtonAction: () -> Unit,
         secondButtonAction: () -> Unit,
+        fontSize: TextUnit = TextUnit.Unspecified,
     ) {
         Row {
             Spacer(Modifier.weight(1f))
@@ -381,6 +388,7 @@ object SettingsComposable {
             ) {
                 Text(
                     firstButtonText,
+                    fontSize = fontSize,
                     style = SettingsTheme.typography.button,
                 )
             }
@@ -390,6 +398,7 @@ object SettingsComposable {
             ) {
                 Text(
                     secondButtonText,
+                    fontSize = fontSize,
                     style = SettingsTheme.typography.button,
                 )
             }
@@ -456,7 +465,11 @@ object SettingsComposable {
                         end.linkTo(button.start)
                     },
             ) {
-                Text("-", style = SettingsTheme.typography.button, fontSize = fontSize)
+                Text(
+                    "-",
+                    style = SettingsTheme.typography.button,
+                    fontSize = fontSize
+                )
             }
             Text(
                 text = number.value.toString(),
@@ -486,7 +499,11 @@ object SettingsComposable {
                         end.linkTo(text.start)
                     },
             ) {
-                Text("+", style = SettingsTheme.typography.button, fontSize = fontSize)
+                Text(
+                    "+",
+                    style = SettingsTheme.typography.button,
+                    fontSize = fontSize
+                )
             }
             TextButton(
                 onClick = { onCommit(number.value) },
@@ -498,7 +515,11 @@ object SettingsComposable {
                         end.linkTo(parent.end)
                     },
             ) {
-                Text(stringResource(R.string.save), style = SettingsTheme.typography.button, fontSize = fontSize)
+                Text(
+                    stringResource(R.string.save),
+                    style = SettingsTheme.typography.button,
+                    fontSize = fontSize
+                )
             }
         }
     }
@@ -513,7 +534,6 @@ object SettingsComposable {
     ) {
         ConstraintLayout(
             modifier = Modifier
-                .background(SettingsTheme.color.selector, SettingsTheme.shapes.settings)
                 .fillMaxWidth()
         ) {
             val (text, button) = createRefs()
@@ -538,7 +558,7 @@ object SettingsComposable {
                     )
                 },
                 modifier = Modifier
-                    .padding(end = 62.dp),
+                    .padding(end = 62.dp)
             )
             TextButton(
                 onClick = { onCommit(labelProgress.toInt()) },
@@ -550,47 +570,12 @@ object SettingsComposable {
                         end.linkTo(parent.end)
                     },
             ) {
-                Text(stringResource(R.string.save), style = SettingsTheme.typography.button, fontSize = fontSize)
+                Text(
+                    stringResource(R.string.save),
+                    style = SettingsTheme.typography.button,
+                    fontSize = fontSize
+                )
             }
-        }
-    }
-
-    @Composable
-    private fun SettingsSliderRGBSelector(
-        number: MutableState<Int>,
-        min: Int,
-        max: Int,
-        fontSize: TextUnit = TextUnit.Unspecified,
-        onCommit: (Int) -> Unit
-    ) {
-        ConstraintLayout(
-            modifier = Modifier
-                .background(SettingsTheme.color.selector, SettingsTheme.shapes.settings)
-                .fillMaxWidth()
-        ) {
-            var alpha by remember { mutableStateOf(number.value.toFloat()) }
-            SliderWithLabel(
-                value = alpha,
-                onValueChange = {
-                    alpha = it
-                },
-                thumbRadius = 5.dp,
-                trackHeight = 5.dp,
-                valueRange = min.toFloat()..max.toFloat(),
-                colors = MaterialSliderDefaults.materialColors(),
-                labelPosition = LabelPosition.Top,
-                label = {
-                    Text(
-                        text = "${alpha.roundToInt()}",
-                        fontSize = fontSize,
-                        modifier = Modifier
-                            .shadow(1.dp, shape = CircleShape),
-                        color = Color.White
-                    )
-                },
-                steps = max,
-                onValueChangeFinished = { onCommit(alpha.toInt()) }
-            )
         }
     }
 

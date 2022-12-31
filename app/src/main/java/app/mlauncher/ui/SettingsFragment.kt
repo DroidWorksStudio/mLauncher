@@ -416,6 +416,7 @@ class SettingsFragment : Fragment() {
             )
             SettingsArea(title = getString(R.string.settings),
                 selected = selected,
+                fontSize = titleFs,
                 items = arrayOf(
                     { open, onChange ->
                         SettingsSliderItem(
@@ -441,9 +442,11 @@ class SettingsFragment : Fragment() {
             )
             SettingsArea(title = getString(R.string.backup),
                 selected = selected,
+                fontSize = titleFs,
                 items = arrayOf(
                     { _, _ ->
                         SettingsTwoButtonRow(
+                            fontSize = iconFs,
                             firstButtonText = getString(R.string.load_backup),
                             secondButtonText = getString(R.string.store_backup),
                             firstButtonAction = { loadFile(requireActivity()) },
