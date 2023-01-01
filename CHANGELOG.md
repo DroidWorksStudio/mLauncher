@@ -1,15 +1,18 @@
 # Changelog
 
-## [0.4.3](https://github.com/HeCodes2Much/mLauncher/tree/0.4.3) ( 1, January 2023)
+## [Coming Soon](https://github.com/HeCodes2Much/mLauncher/tree/HEAD)
 
-[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.4.2...0.4.3)
+[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.4.2...HEAD)
 
 **Implemented enhancements:**
 
+- \[Enhancement\] Custom Fonts [\#45](https://github.com/HeCodes2Much/mLauncher/issues/45)
+- Added feathericons support [\#147](https://github.com/HeCodes2Much/mLauncher/pull/147) ([The-Repo-Club](https://github.com/The-Repo-Club))
 - feat: Added more swipe actions. [\#144](https://github.com/HeCodes2Much/mLauncher/pull/144) ([The-Repo-Club](https://github.com/The-Repo-Club))
 
 **Fixed bugs:**
 
+- \[Bug Report\] Double Tap gesture shows the app name of the Click on Date gesture [\#148](https://github.com/HeCodes2Much/mLauncher/issues/148)
 - fix: file structure renaming and added sliders [\#137](https://github.com/HeCodes2Much/mLauncher/pull/137) ([The-Repo-Club](https://github.com/The-Repo-Club))
 - fix: fixed slider and font size. [\#136](https://github.com/HeCodes2Much/mLauncher/pull/136) ([The-Repo-Club](https://github.com/The-Repo-Club))
 
@@ -19,6 +22,7 @@
 
 **Fixed bugs:**
 
+- \[Bug Report\] Why Support for 23-25 SDK Removed? [\#128](https://github.com/HeCodes2Much/mLauncher/issues/128)
 - fix: fixes the other fragments opacity [\#132](https://github.com/HeCodes2Much/mLauncher/pull/132) ([The-Repo-Club](https://github.com/The-Repo-Club))
 - Update turkish translations + fix link on question.yml [\#131](https://github.com/HeCodes2Much/mLauncher/pull/131) ([YakisikliBaran](https://github.com/YakisikliBaran))
 - cleanup: fix some code for opacity [\#130](https://github.com/HeCodes2Much/mLauncher/pull/130) ([The-Repo-Club](https://github.com/The-Repo-Club))
