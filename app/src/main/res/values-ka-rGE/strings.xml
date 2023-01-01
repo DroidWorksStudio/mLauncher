@@ -76,6 +76,8 @@
     <string name="lock_screen">Ეკრანის დაბლოკვა</string>
     <string name="open_quick_settings">სწრაფი პარამეტრები</string>
     <string name="show_recents">ბოლო დროის ჩვენება</string>
+    <string name="open_power_dialog">დენის დიალოგი</string>
+    <string name="take_a_screenshot">გადაიღეთ სკრინშოტი</string>
     <string name="double_tap_to_lock_screen">ორმაგად შეეხეთ ჩასაკეტად</string>
     <!-- Backup Strings -->
     <string name="backup">სარეზერვო</string>

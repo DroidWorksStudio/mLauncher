@@ -76,6 +76,8 @@
     <string name="lock_screen">Scáileán glas</string>
     <string name="open_quick_settings">Socruithe Tapa</string>
     <string name="show_recents">Taispeáin Le Déanaí</string>
+    <string name="open_power_dialog">Dialóg Cumhachta</string>
+    <string name="take_a_screenshot">Glac Seat</string>
     <string name="double_tap_to_lock_screen">Tapáil faoi dhó chun glasáil</string>
     <!-- Backup Strings -->
     <string name="backup">Cúltaca</string>

@@ -76,6 +76,8 @@
     <string name="lock_screen">Bloquear pantalla</string>
     <string name="open_quick_settings">Ajustes rápidos</string>
     <string name="show_recents">Show Recents</string>
+    <string name="open_power_dialog">Diálogo de energía</string>
+    <string name="take_a_screenshot">Tomar una captura de pantalla</string>
     <string name="double_tap_to_lock_screen">Doble toque para bloquear</string>
     <!-- Backup Strings -->
     <string name="backup">Respaldo</string>

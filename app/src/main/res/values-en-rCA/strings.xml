@@ -78,7 +78,7 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string name="copy">copy</string>
-	<string name="opacity">Opacity</string>
+    <string name="opacity">Opacity</string>
     <string name="hide_roadmap">Hide the Roadmap</string>
 
     <!-- Gestures Do Strings -->
@@ -88,6 +88,8 @@
     <string name="lock_screen">Lock Screen</string>
     <string name="open_quick_settings">Quick Settings</string>
     <string name="show_recents">Show Recents</string>
+    <string name="open_power_dialog">Power Dialog</string>
+    <string name="take_a_screenshot">Take a Screenshot</string>
     <string name="double_tap_to_lock_screen">Double tap to lock</string>
 
     <!-- Backup Strings -->

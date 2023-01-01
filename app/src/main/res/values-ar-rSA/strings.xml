@@ -76,6 +76,8 @@
     <string name="lock_screen">قفل الشاشة</string>
     <string name="open_quick_settings">الإعدادات السريعة</string>
     <string name="show_recents">Show Recents</string>
+    <string name="open_power_dialog">حوار القوة</string>
+    <string name="take_a_screenshot">خذ لقطة شاشة</string>
     <string name="double_tap_to_lock_screen">النقر المزدوج للقفل</string>
     <!-- Backup Strings -->
     <string name="backup">النسخ الاحتياطي</string>

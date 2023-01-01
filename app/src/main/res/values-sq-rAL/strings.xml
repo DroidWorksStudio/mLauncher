@@ -76,6 +76,8 @@
     <string name="lock_screen">Blloko ekranin</string>
     <string name="open_quick_settings">Cilësimet e shpejta</string>
     <string name="show_recents">Shfaq të fundit</string>
+    <string name="open_power_dialog">Dialogu i energjisë</string>
+    <string name="take_a_screenshot">Merrni një pamje nga ekrani</string>
     <string name="double_tap_to_lock_screen">Trokit dy herë për ta kyçur</string>
     <!-- Backup Strings -->
     <string name="backup">Rezervimi</string>

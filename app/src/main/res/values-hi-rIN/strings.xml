@@ -76,6 +76,8 @@
     <string name="lock_screen">लॉक स्क्रीन</string>
     <string name="open_quick_settings">शीग्र सेटिंग्स</string>
     <string name="show_recents">हाल ही दिखाएँ</string>
+    <string name="open_power_dialog">पावर संवाद</string>
+    <string name="take_a_screenshot">कोई स्क्रीनशॉट लें</string>
     <string name="double_tap_to_lock_screen">लॉक करने के लिए डबल टैप करें</string>
     <!-- Backup Strings -->
     <string name="backup">बैकअप</string>

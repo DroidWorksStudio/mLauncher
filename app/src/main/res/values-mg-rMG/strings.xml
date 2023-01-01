@@ -76,6 +76,8 @@
     <string name="lock_screen">Lock Screen</string>
     <string name="open_quick_settings">Fikirana haingana</string>
     <string name="show_recents">Asehoy vao haingana</string>
+    <string name="open_power_dialog">Power Dialogue</string>
+    <string name="take_a_screenshot">Makà pikantsary</string>
     <string name="double_tap_to_lock_screen">Tsindrio indroa hanidy</string>
     <!-- Backup Strings -->
     <string name="backup">nomaniny ho solon\'izay</string>

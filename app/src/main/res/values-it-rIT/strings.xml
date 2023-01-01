@@ -76,6 +76,8 @@
     <string name="lock_screen">Schermata Di Blocco</string>
     <string name="open_quick_settings">Impostazioni Rapide</string>
     <string name="show_recents">Show Recents</string>
+    <string name="open_power_dialog">Dialogo di potere</string>
+    <string name="take_a_screenshot">Fai uno screenshot</string>
     <string name="double_tap_to_lock_screen">Doppio tocco per bloccare</string>
     <!-- Backup Strings -->
     <string name="backup">Backup</string>

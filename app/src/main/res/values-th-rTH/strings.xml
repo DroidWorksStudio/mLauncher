@@ -76,6 +76,8 @@
     <string name="lock_screen">ล็อกหน้าจอ</string>
     <string name="open_quick_settings">การตั้งค่าด่วน</string>
     <string name="show_recents">แสดงล่าสุด</string>
+    <string name="open_power_dialog">กล่องโต้ตอบพลังงาน</string>
+    <string name="take_a_screenshot">ถ่ายภาพหน้าจอ</string>
     <string name="double_tap_to_lock_screen">แตะสองครั้งเพื่อล็อค</string>
     <!-- Backup Strings -->
     <string name="backup">การสำรองข้อมูล</string>

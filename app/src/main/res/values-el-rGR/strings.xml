@@ -76,6 +76,8 @@
     <string name="lock_screen">Οθόνη Κλειδώματος</string>
     <string name="open_quick_settings">Γρήγορες Ρυθμίσεις</string>
     <string name="show_recents">Show Recents</string>
+    <string name="open_power_dialog">Power Dialog</string>
+    <string name="take_a_screenshot">Τραβήξτε ένα στιγμιότυπο οθόνης</string>
     <string name="double_tap_to_lock_screen">Διπλό πάτημα για κλείδωμα</string>
     <!-- Backup Strings -->
     <string name="backup">Αντίγραφα Ασφαλείας</string>

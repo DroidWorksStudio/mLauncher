@@ -76,6 +76,8 @@
     <string name="lock_screen">ലോക്ക് സ്ക്രീൻ</string>
     <string name="open_quick_settings">ദ്രുത ക്രമീകരണങ്ങൾ</string>
     <string name="show_recents">സമീപകാലങ്ങൾ കാണിക്കുക</string>
+    <string name="open_power_dialog">പവർ ഡയലോഗ്</string>
+    <string name="take_a_screenshot">ഒരു സ്ക്രീൻഷോട്ട് എടുക്കുക</string>
     <string name="double_tap_to_lock_screen">ലോക്ക് ചെയ്യാൻ രണ്ടുതവണ ടാപ്പ് ചെയ്യുക</string>
     <!-- Backup Strings -->
     <string name="backup">ബാക്കപ്പ്</string>

@@ -76,6 +76,8 @@
     <string name="lock_screen">Laka pale</string>
     <string name="open_quick_settings">Nā hoʻonohonoho wikiwiki</string>
     <string name="show_recents">Hōʻike i nā mea hou</string>
+    <string name="open_power_dialog">Kūkākūkā Mana</string>
+    <string name="take_a_screenshot">E kiʻi i kahi kiʻi kiʻi</string>
     <string name="double_tap_to_lock_screen">Koʻu pālua e laka</string>
     <!-- Backup Strings -->
     <string name="backup">Kākoʻo</string>

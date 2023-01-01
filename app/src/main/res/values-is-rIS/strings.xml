@@ -76,6 +76,8 @@
     <string name="lock_screen">Læsa skjá</string>
     <string name="open_quick_settings">Flýtistillingar</string>
     <string name="show_recents">Sýna nýlegar</string>
+    <string name="open_power_dialog">Power Dialog</string>
+    <string name="take_a_screenshot">Taktu skjáskot</string>
     <string name="double_tap_to_lock_screen">Ýttu tvisvar til að læsa</string>
     <!-- Backup Strings -->
     <string name="backup">Afritun</string>

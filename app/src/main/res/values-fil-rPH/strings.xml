@@ -76,6 +76,8 @@
     <string name="lock_screen">Lock ng screen</string>
     <string name="open_quick_settings">Mga Mabilisang Setting</string>
     <string name="show_recents">Ipakita ang Mga Kamakailan</string>
+    <string name="open_power_dialog">Power Dialog</string>
+    <string name="take_a_screenshot">Kumuha ng Screenshot</string>
     <string name="double_tap_to_lock_screen">I-double tap para i-lock</string>
     <!-- Backup Strings -->
     <string name="backup">Backup</string>

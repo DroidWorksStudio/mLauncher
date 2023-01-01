@@ -76,6 +76,8 @@
     <string name="lock_screen">Sperrbildschirm</string>
     <string name="open_quick_settings">Quick Astellunge</string>
     <string name="show_recents">Show Rezent</string>
+    <string name="open_power_dialog">Power Dialog</string>
+    <string name="take_a_screenshot">Maacht e Screenshot</string>
     <string name="double_tap_to_lock_screen">Duebeltapp fir ze spären</string>
     <!-- Backup Strings -->
     <string name="backup">Backupsatellit</string>

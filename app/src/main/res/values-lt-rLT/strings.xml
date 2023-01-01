@@ -76,6 +76,8 @@
     <string name="lock_screen">Užrakinti ekraną</string>
     <string name="open_quick_settings">Greitieji nustatymai</string>
     <string name="show_recents">Rodyti naujausius</string>
+    <string name="open_power_dialog">Maitinimo dialogas</string>
+    <string name="take_a_screenshot">Padarykite ekrano kopiją</string>
     <string name="double_tap_to_lock_screen">Dukart palieskite, kad užrakintumėte</string>
     <!-- Backup Strings -->
     <string name="backup">Daryti atsarginę kopiją</string>
