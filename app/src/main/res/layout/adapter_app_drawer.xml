@@ -65,8 +65,7 @@
             app:layout_constraintEnd_toStartOf="@id/appInfo"
             android:contentDescription="@string/hide"
             android:padding="@dimen/app_padding_vertical"
-            android:src="@drawable/visibility_off"
-            app:tint="?attr/primaryColor" />
+            android:src="@drawable/visibility_off" />
 
         <ImageView
             android:id="@+id/appInfo"
@@ -77,8 +76,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:contentDescription="@string/app"
             android:padding="@dimen/app_padding_vertical"
-            android:src="@drawable/ic_outline_info_24"
-            app:tint="?attr/primaryColor" />
+            android:src="@drawable/ic_info" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

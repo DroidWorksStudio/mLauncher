@@ -92,7 +92,7 @@ object SettingsComposable {
                         .align(CenterStart)
                 )
                 Image(
-                    painterResource(R.drawable.ic_outline_info_24),
+                    painterResource(R.drawable.ic_info),
                     contentDescription = "",
                     modifier = Modifier
                         .size(iconSize)
