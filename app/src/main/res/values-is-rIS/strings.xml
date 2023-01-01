@@ -3,7 +3,7 @@
     <!-- Base Settings -->
     <string name="app">App</string>
     <!-- Admin Settings -->
-    <string name="admin_permission_message">mLauncher lofar að nota leyfi til læsingarskjás á ábyrgan hátt.</string>
+    <string name="admin_permission_message">mLauncher lofar að nota leyfi til læsingarskjás á ábyrgan hátt. mLauncher safnar ekki eða deilir neinum gögnum.</string>
     <string name="experimental">(tilraunaverkefni)</string>
     <!-- Settings Headers -->
     <string name="appearance">Útlit</string>
@@ -94,5 +94,5 @@
     <string name="double_tap_lock_uninstall_message">Ýttu tvisvar til að læsa virkt.
         \n\nAthugið: Slökktu á þessu fyrst ef þú ákveður að eyða mLauncher.</string>
     <string name="accessibility_service_name">mLauncher Actions Service</string>
-    <string name="accessibility_service_description">Þessi aðgengisþjónusta gerir mLauncher kleift að gera ákveðnar aðgerðir eins og að læsa skjánum eða opna flýtistillingarnar.</string>
+    <string name="accessibility_service_description">Þessi aðgengisþjónusta gerir mLauncher kleift að gera ákveðnar aðgerðir eins og að læsa skjánum eða opna flýtistillingarnar. Aðgengisþjónusta okkar safnar ekki né deilir neinum gögnum.</string>
 </resources>

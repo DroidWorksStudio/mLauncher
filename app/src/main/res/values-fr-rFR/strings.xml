@@ -3,7 +3,7 @@
     <!-- Base Settings -->
     <string name="app">App</string>
     <!-- Admin Settings -->
-    <string name="admin_permission_message">mLauncher promet d\'utiliser l\'autorisation de l\'écran de verrouillage de manière responsable.</string>
+    <string name="admin_permission_message">mLauncher promet d\'utiliser l\'autorisation d\'écran de verrouillage de manière responsable. mLauncher ne collecte ni ne partage aucune donnée.</string>
     <string name="experimental">(expérimental)</string>
     <!-- Settings Headers -->
     <string name="appearance">Apparence</string>
@@ -94,5 +94,5 @@
     <string name="double_tap_lock_uninstall_message">Double appui pour verrouiller activé.
         \n\nNote : Désactiver d\'abord si vous décidez de supprimer mLauncher.</string>
     <string name="accessibility_service_name">Service d\'actions mLauncher</string>
-    <string name="accessibility_service_description">Ce service d\'accessibilité permet à mLauncher d\'effectuer certaines actions telles que le verrouillage de l\'écran ou l\'ouverture des paramètres rapides.</string>
+    <string name="accessibility_service_description">Ce service d\'accessibilité permet à mLauncher d\'effectuer certaines actions telles que verrouiller l\'écran ou ouvrir les paramètres rapides. Notre service d\'accessibilité ne collecte ni ne partage aucune donnée.</string>
 </resources>

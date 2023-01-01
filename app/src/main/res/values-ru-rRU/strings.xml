@@ -3,7 +3,7 @@
     <!-- Base Settings -->
     <string name="app">Приложение</string>
     <!-- Admin Settings -->
-    <string name="admin_permission_message">mLauncher обещает ответственно использовать блокировочные разрешения экрана.</string>
+    <string name="admin_permission_message">mLauncher обещает ответственно использовать разрешение экрана блокировки. mLauncher не собирает и не передает какие-либо данные.</string>
     <string name="experimental">(экспериментальный)</string>
     <!-- Settings Headers -->
     <string name="appearance">Внешний вид</string>
@@ -94,5 +94,5 @@
     <string name="double_tap_lock_uninstall_message">Блокировка включена двойным нажатием для двойного нажатия.
         \n\nПримечание: сначала включите эту опцию, если вы решите удалить mLauncher.</string>
     <string name="accessibility_service_name">mLauncher Служба действий</string>
-    <string name="accessibility_service_description">Эта служба специальных возможностей позволяет mLauncher выполнять определенные действия, такие как блокировка экрана или открытие быстрых настроек.</string>
+    <string name="accessibility_service_description">Эта служба специальных возможностей позволяет mLauncher выполнять определенные действия, такие как блокировка экрана или открытие быстрых настроек. Наша служба доступности не собирает и не передает какие-либо данные.</string>
 </resources>

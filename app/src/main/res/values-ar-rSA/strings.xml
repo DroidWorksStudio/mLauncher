@@ -3,7 +3,7 @@
     <!-- Base Settings -->
     <string name="app">التطبيق</string>
     <!-- Admin Settings -->
-    <string name="admin_permission_message">mLauncher يعد باستخدام إذن قفل الشاشة بشكل مسؤول.</string>
+    <string name="admin_permission_message">يعد mLauncher باستخدام إذن قفل الشاشة بشكل مسؤول. لا يقوم mLauncher بجمع أو مشاركة أي بيانات.</string>
     <string name="experimental">(تجريبي)</string>
     <!-- Settings Headers -->
     <string name="appearance">المظهر</string>
@@ -94,5 +94,5 @@
     <string name="double_tap_lock_uninstall_message">انقر نقراً مزدوجاً للقفل مفعل.
         \n\nملاحظة: قم بتشغيل هذا الخيار أولاً إذا قررت حذف mLauncher.</string>
     <string name="accessibility_service_name">خدمة إجراءات mLauncher</string>
-    <string name="accessibility_service_description">خدمة الوصول هذه تسمح لـ mLauncher بالقيام ببعض الإجراءات مثل قفل الشاشة أو فتح الإعدادات السريعة.</string>
+    <string name="accessibility_service_description">تتيح خدمة إمكانية الوصول هذه لـ mLauncher القيام بإجراءات معينة مثل قفل الشاشة أو فتح الإعدادات السريعة. خدمة الوصول لدينا لا تجمع أو تشارك أي بيانات.</string>
 </resources>

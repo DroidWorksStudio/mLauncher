@@ -3,7 +3,7 @@
     <!-- Base Settings -->
     <string name="app">Aplicație</string>
     <!-- Admin Settings -->
-    <string name="admin_permission_message">mLauncher promite să utilizeze permisiunea de blocare ecran în mod responsabil.</string>
+    <string name="admin_permission_message">mLauncher promite să folosească permisiunea ecranului de blocare în mod responsabil. mLauncher nu colectează și nu partajează date.</string>
     <string name="experimental">(experimental)</string>
     <!-- Settings Headers -->
     <string name="appearance">Aspectul</string>
@@ -94,5 +94,5 @@
     <string name="double_tap_lock_uninstall_message">Apăsarea dublă pentru a bloca activată.
         \n\nNotă: Opriți dezactivarea mai întâi dacă decideți să ștergeți mLauncher.</string>
     <string name="accessibility_service_name">Serviciul de acțiuni mLauncher</string>
-    <string name="accessibility_service_description">Acest serviciu de accesibilitate permite mLauncherului să facă anumite acțiuni, cum ar fi blocarea ecranului sau deschiderea setărilor rapide.</string>
+    <string name="accessibility_service_description">Acest serviciu de accesibilitate permite mLauncher să facă anumite acțiuni, cum ar fi blocarea ecranului sau deschiderea setărilor rapide. Serviciul nostru de accesibilitate nu colectează și nu partajează date.</string>
 </resources>

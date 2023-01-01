@@ -3,7 +3,7 @@
     <!-- Base Settings -->
     <string name="app">Sovellus</string>
     <!-- Admin Settings -->
-    <string name="admin_permission_message">mLauncher lupaa käyttää lukitusnäytön lupaa vastuullisesti.</string>
+    <string name="admin_permission_message">mLauncher lupaa käyttää lukitusnäytön lupaa vastuullisesti. mLauncher ei kerää tai jaa tietoja.</string>
     <string name="experimental">(kokeellinen)</string>
     <!-- Settings Headers -->
     <string name="appearance">Ulkoasu</string>
@@ -94,5 +94,5 @@
     <string name="double_tap_lock_uninstall_message">Napauta kahdesti ottaaksesi lukituksen käyttöön.
         \n\nHuomautus: Laita tämä pois päältä, jos päätät poistaa mLauncherin.</string>
     <string name="accessibility_service_name">mLauncher Actions Service</string>
-    <string name="accessibility_service_description">Tämä esteettömyyspalvelu sallii mLauncherin tehdä tiettyjä toimintoja, kuten näytön lukitusta tai pika-asetusten avaamista.</string>
+    <string name="accessibility_service_description">Tämän esteettömyyspalvelun avulla mLauncher voi tehdä tiettyjä toimintoja, kuten lukita näytön tai avata pika-asetukset. Esteettömyyspalvelumme ei kerää tai jaa tietoja.</string>
 </resources>

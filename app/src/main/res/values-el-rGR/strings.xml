@@ -3,7 +3,7 @@
     <!-- Base Settings -->
     <string name="app">Εφαρμογή</string>
     <!-- Admin Settings -->
-    <string name="admin_permission_message">Το mLauncher υπόσχεται να χρησιμοποιήσει υπεύθυνα τα δικαιώματα οθόνης κλειδώματος.</string>
+    <string name="admin_permission_message">Το mLauncher υπόσχεται να χρησιμοποιεί υπεύθυνα την άδεια κλειδώματος οθόνης. Το mLauncher δεν συλλέγει ούτε μοιράζεται δεδομένα.</string>
     <string name="experimental">(πειραματικό)</string>
     <!-- Settings Headers -->
     <string name="appearance">Εμφάνιση</string>
@@ -94,5 +94,5 @@
     <string name="double_tap_lock_uninstall_message">Διπλό πάτημα για κλείδωμα ενεργό.
         \n\nΣημείωση: Ενεργοποιήστε αυτό το OFF αν αποφασίσετε να διαγράψετε το mLauncher.</string>
     <string name="accessibility_service_name">Υπηρεσία ενεργειών mLauncher</string>
-    <string name="accessibility_service_description">Αυτή η υπηρεσία προσβασιμότητας επιτρέπει στο mLauncher να κάνει ορισμένες ενέργειες, όπως το κλείδωμα της οθόνης ή το άνοιγμα των γρήγορων ρυθμίσεων.</string>
+    <string name="accessibility_service_description">Αυτή η υπηρεσία προσβασιμότητας επιτρέπει στο mLauncher να κάνει ορισμένες ενέργειες, όπως το κλείδωμα της οθόνης ή το άνοιγμα των γρήγορων ρυθμίσεων. Η υπηρεσία προσβασιμότητας μας δεν συλλέγει ούτε κοινοποιεί δεδομένα.</string>
 </resources>

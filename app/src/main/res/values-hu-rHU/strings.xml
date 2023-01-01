@@ -3,7 +3,7 @@
     <!-- Base Settings -->
     <string name="app">App</string>
     <!-- Admin Settings -->
-    <string name="admin_permission_message">Az mLauncher azt ígéri, hogy felelősségteljesen használja a képernyőzárolási engedélyt.</string>
+    <string name="admin_permission_message">Az mLauncher megígéri, hogy felelősségteljesen használja a lezárási képernyő engedélyeit. Az mLauncher nem gyűjt és nem oszt meg adatokat.</string>
     <string name="experimental">(kísérleti)</string>
     <!-- Settings Headers -->
     <string name="appearance">Megjelenés</string>
@@ -94,5 +94,5 @@
     <string name="double_tap_lock_uninstall_message">Dupla koppintás a zároláshoz engedélyezve.
         \n\nMegjegyzés: Először kapcsolja ki, ha úgy dönt, hogy törli az mLauncher-t.</string>
     <string name="accessibility_service_name">mLauncher Műveletek szolgáltatás</string>
-    <string name="accessibility_service_description">Ez az elérhetőségi szolgáltatás lehetővé teszi az mLauncher számára bizonyos műveletek elvégzését, például a képernyő lezárását vagy a gyorsbeállítások megnyitását.</string>
+    <string name="accessibility_service_description">Ez a kisegítő szolgáltatás lehetővé teszi az mLauncher számára bizonyos műveletek elvégzését, például a képernyő lezárását vagy a gyorsbeállítások megnyitását. Kisegítő lehetőségek szolgáltatásunk nem gyűjt és nem oszt meg adatokat.</string>
 </resources>

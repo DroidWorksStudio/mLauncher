@@ -3,7 +3,7 @@
     <!-- Base Settings -->
     <string name="app">アプリ</string>
     <!-- Admin Settings -->
-    <string name="admin_permission_message">mLauncherはロック画面の権限を責任を持って使用することを約束します。</string>
+    <string name="admin_permission_message">mLauncher は、責任を持ってロック画面のアクセス許可を使用することを約束します。 mLauncher は、いかなるデータも収集または共有しません。</string>
     <string name="experimental">(実験的)</string>
     <!-- Settings Headers -->
     <string name="appearance">外観</string>
@@ -94,5 +94,5 @@
     <string name="double_tap_lock_uninstall_message">ダブルタップしてロックを有効にします。
         \n\n注意: mLauncherを削除することにした場合は、最初にオフにします。</string>
     <string name="accessibility_service_name">mLauncher アクションサービス</string>
-    <string name="accessibility_service_description">このアクセシビリティサービスにより、mLauncherは画面のロックやクイック設定を開くなどの特定の操作を行うことができます。</string>
+    <string name="accessibility_service_description">このアクセシビリティ サービスにより、mLauncher は画面のロックやクイック設定を開くなどの特定のアクションを実行できます。当社のアクセシビリティ サービスは、いかなるデータも収集または共有しません。</string>
 </resources>

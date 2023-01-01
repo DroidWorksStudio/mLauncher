@@ -3,7 +3,7 @@
     <!-- Base Settings -->
     <string name="app">Aplikacja</string>
     <!-- Admin Settings -->
-    <string name="admin_permission_message">mLauncher obiecuje odpowiedzialne korzystanie z uprawnień ekranu blokady.</string>
+    <string name="admin_permission_message">mLauncher obiecuje odpowiedzialne korzystanie z uprawnień blokady ekranu. mLauncher nie gromadzi ani nie udostępnia żadnych danych.</string>
     <string name="experimental">(eksperymentalne)</string>
     <!-- Settings Headers -->
     <string name="appearance">Wygląd</string>
@@ -94,5 +94,5 @@
     <string name="double_tap_lock_uninstall_message">Dwukrotnie stuknij, aby zablokować.
         \n\nUwaga: najpierw włącz to wyłączenie, jeśli zdecydujesz się usunąć mLauncher.</string>
     <string name="accessibility_service_name">Usługa działań mLauncher</string>
-    <string name="accessibility_service_description">Ta usługa ułatwień dostępu pozwala mLauncher wykonywać określone czynności, takie jak blokowanie ekranu lub otwieranie szybkich ustawień.</string>
+    <string name="accessibility_service_description">Ta usługa ułatwień dostępu umożliwia mLauncherowi wykonywanie określonych czynności, takich jak blokowanie ekranu lub otwieranie szybkich ustawień. Nasza usługa ułatwień dostępu nie gromadzi ani nie udostępnia żadnych danych.</string>
 </resources>

@@ -3,7 +3,7 @@
     <!-- Base Settings -->
     <string name="app">App</string>
     <!-- Admin Settings -->
-    <string name="admin_permission_message">Geallann mLauncher cead scáileáin ghlais a úsáid go freagrach.</string>
+    <string name="admin_permission_message">Geallann mLauncher cead scáileáin ghlais a úsáid go freagrach. Ní bhailíonn nó ní roinneann mLauncher aon sonraí.</string>
     <string name="experimental">(turgnamhach)</string>
     <!-- Settings Headers -->
     <string name="appearance">Dealramh</string>
@@ -94,5 +94,5 @@
     <string name="double_tap_lock_uninstall_message">Tapáil faoi dhó chun glasáil a chumasú.
         \n\nNóta: Múch é seo ar dtús má shocraíonn tú mLauncher a scriosadh.</string>
     <string name="accessibility_service_name">mLauncher Actions Service</string>
-    <string name="accessibility_service_description">Ligeann an tseirbhís inrochtaineachta seo do mLauncher gníomhartha áirithe a dhéanamh ar nós an scáileán a ghlasáil nó na socruithe tapa a oscailt.</string>
+    <string name="accessibility_service_description">Ligeann an tseirbhís inrochtaineachta seo do mLauncher gníomhartha áirithe a dhéanamh ar nós an scáileán a ghlasáil nó na socruithe tapa a oscailt. Ní bhailíonn ná ní roinneann ár seirbhís inrochtaineachta aon sonraí.</string>
 </resources>

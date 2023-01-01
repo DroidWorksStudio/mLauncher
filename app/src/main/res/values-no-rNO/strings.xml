@@ -3,7 +3,7 @@
     <!-- Base Settings -->
     <string name="app">App</string>
     <!-- Admin Settings -->
-    <string name="admin_permission_message">mLauncher lover å bruke skjermlås på en ansvarlig.</string>
+    <string name="admin_permission_message">mLauncher lover å bruke tillatelsen til låseskjermen på en ansvarlig måte. mLauncher samler eller deler ingen data.</string>
     <string name="experimental">(eksperimentell)</string>
     <!-- Settings Headers -->
     <string name="appearance">Utseende</string>
@@ -94,5 +94,5 @@
     <string name="double_tap_lock_uninstall_message">Dobbelttrykk for å låse aktivert.
         \n\nMerk: Skru dette AV hvis du bestemmer deg for å slette mLauncher.</string>
     <string name="accessibility_service_name">mLauncher handlinger Tjeneste</string>
-    <string name="accessibility_service_description">Denne tilgjengelighetstjenesten tillater mLauncher å utføre visse handlinger som å låse opp skjermen eller åpne hurtiginnstillingene.</string>
+    <string name="accessibility_service_description">Denne tilgjengelighetstjenesten lar mLauncher utføre visse handlinger som å låse skjermen eller åpne hurtiginnstillingene. Vår tilgjengelighetstjeneste samler eller deler ingen data.</string>
 </resources>

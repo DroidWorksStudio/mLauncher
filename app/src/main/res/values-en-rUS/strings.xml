@@ -3,7 +3,7 @@
     <string name="app">App</string>
 
     <!-- Admin Settings -->
-    <string name="admin_permission_message">mLauncher promises to use lock screen permission responsibly.</string>
+    <string name="admin_permission_message">mLauncher promises to use lock screen permission responsibly. mLauncher does not collect or share any data.</string>
     <string name="experimental">(experimental)</string>
 
     <!-- Settings Headers -->
@@ -108,5 +108,5 @@
     <string name="double_tap_lock_uninstall_message">Double tap to lock enabled.
         \n\nNote: Turn this OFF first if you decide to delete mLauncher.</string>
     <string name="accessibility_service_name">mLauncher Actions Service</string>
-    <string name="accessibility_service_description">This accessibility service allows mLauncher to do certain actions such as locking the screen or opening the quick settings.</string>
+    <string name="accessibility_service_description">This accessibility service allows mLauncher to do certain actions such as locking the screen or opening the quick settings. Our accessibility service does not collect or share any data.</string>
 </resources>

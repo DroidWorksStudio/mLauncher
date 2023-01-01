@@ -3,7 +3,7 @@
     <!-- Base Settings -->
     <string name="app">App</string>
     <!-- Admin Settings -->
-    <string name="admin_permission_message">mLauncher versprécht de Sperrbildschirm Erlaabnis verantwortlech ze benotzen.</string>
+    <string name="admin_permission_message">mLauncher versprécht de Sperrbildschirm Erlaabnis verantwortlech ze benotzen. mLauncher sammelt oder deelt keng Daten.</string>
     <string name="experimental">(experimentell)</string>
     <!-- Settings Headers -->
     <string name="appearance">Ausgesinn</string>
@@ -94,5 +94,5 @@
     <string name="double_tap_lock_uninstall_message">Duebeltapp fir ze spären aktivéiert.
         \n\nNotiz: Maacht dëst als éischt OFF wann Dir décidéiert mLauncher ze läschen.</string>
     <string name="accessibility_service_name">mLauncher Actions Service</string>
-    <string name="accessibility_service_description">Dësen Accessibilitéitsservice erlaabt mLauncher verschidde Aktiounen ze maachen wéi den Ecran ze spären oder d\'schnell Astellungen opzemaachen.</string>
+    <string name="accessibility_service_description">Dësen Accessibilitéitsservice erlaabt mLauncher verschidde Aktiounen ze maachen wéi den Ecran ze spären oder d\'schnell Astellungen opzemaachen. Eis Accessibilitéitsservice sammelt oder deelt keng Daten.</string>
 </resources>

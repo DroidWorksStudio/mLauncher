@@ -3,7 +3,7 @@
     <!-- Base Settings -->
     <string name="app">برنامه</string>
     <!-- Admin Settings -->
-    <string name="admin_permission_message">mLauncher قول می دهد از مجوز قفل صفحه به طور مسئولانه استفاده کند.</string>
+    <string name="admin_permission_message">mLauncher قول می دهد از مجوز قفل صفحه به طور مسئولانه استفاده کند. mLauncher هیچ داده ای را جمع آوری یا به اشتراک نمی گذارد.</string>
     <string name="experimental">(تجربی)</string>
     <!-- Settings Headers -->
     <string name="appearance">ظاهر</string>
@@ -94,5 +94,5 @@
     <string name="double_tap_lock_uninstall_message">دو ضربه سریع برای قفل فعال است.
         \n\nتوجه: اگر تصمیم به حذف mLauncher دارید، ابتدا آن را خاموش کنید.</string>
     <string name="accessibility_service_name">سرویس اقدامات mLauncher</string>
-    <string name="accessibility_service_description">این سرویس دسترسی به mLauncher اجازه می دهد تا اقدامات خاصی مانند قفل کردن صفحه یا باز کردن تنظیمات سریع را انجام دهد.</string>
+    <string name="accessibility_service_description">این سرویس دسترسی به mLauncher اجازه می دهد تا اقدامات خاصی مانند قفل کردن صفحه یا باز کردن تنظیمات سریع را انجام دهد. سرویس دسترسی ما هیچ داده ای را جمع آوری یا به اشتراک نمی گذارد.</string>
 </resources>

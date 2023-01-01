@@ -3,7 +3,7 @@
     <!-- Base Settings -->
     <string name="app">App</string>
     <!-- Admin Settings -->
-    <string name="admin_permission_message">Nangangako ang mLauncher na gamitin ang pahintulot sa lock screen nang responsable.</string>
+    <string name="admin_permission_message">Nangangako ang mLauncher na gamitin ang pahintulot sa lock screen nang responsable. Ang mLauncher ay hindi nangongolekta o nagbabahagi ng anumang data.</string>
     <string name="experimental">(pang-eksperimento)</string>
     <!-- Settings Headers -->
     <string name="appearance">Hitsura</string>
@@ -94,5 +94,5 @@
     <string name="double_tap_lock_uninstall_message">I-double tap para naka-enable ang lock.
         \n\nTandaan: I-OFF muna ito kung magpasya kang tanggalin ang mLauncher.</string>
     <string name="accessibility_service_name">Serbisyo ng mLauncher Actions</string>
-    <string name="accessibility_service_description">Binibigyang-daan ng serbisyo ng accessibility na ito ang mLauncher na gumawa ng ilang partikular na pagkilos gaya ng pag-lock ng screen o pagbubukas ng mga mabilisang setting.</string>
+    <string name="accessibility_service_description">Binibigyang-daan ng serbisyo ng accessibility na ito ang mLauncher na gumawa ng ilang partikular na pagkilos gaya ng pag-lock ng screen o pagbubukas ng mga mabilisang setting. Ang aming serbisyo sa pagiging naa-access ay hindi nangongolekta o nagbabahagi ng anumang data.</string>
 </resources>

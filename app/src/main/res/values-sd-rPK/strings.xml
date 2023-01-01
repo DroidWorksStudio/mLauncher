@@ -3,7 +3,7 @@
     <!-- Base Settings -->
     <string name="app">ايپ</string>
     <!-- Admin Settings -->
-    <string name="admin_permission_message">mLauncher لاڪ اسڪرين جي اجازت کي ذميواري سان استعمال ڪرڻ جو واعدو ڪري ٿو.</string>
+    <string name="admin_permission_message">mLauncher لاڪ اسڪرين جي اجازت کي ذميواري سان استعمال ڪرڻ جو واعدو ڪري ٿو. mLauncher ڪنهن به ڊيٽا کي گڏ يا حصيداري نٿو ڪري.</string>
     <string name="experimental">(تجرباتي)</string>
     <!-- Settings Headers -->
     <string name="appearance">ظاهر</string>
@@ -94,5 +94,5 @@
     <string name="double_tap_lock_uninstall_message">بند ڪرڻ لاءِ ڊبل ٽيپ ڪريو فعال.
         \n\nنوٽ: پهرين هن کي بند ڪريو جيڪڏهن توهان ايم لانچر کي حذف ڪرڻ جو فيصلو ڪيو.</string>
     <string name="accessibility_service_name">ايم لانچر ايڪشن سروس</string>
-    <string name="accessibility_service_description">هي رسائي سروس mLauncher کي ڪجهه ڪم ڪرڻ جي اجازت ڏئي ٿي جهڙوڪ اسڪرين کي لاڪ ڪرڻ يا جلدي سيٽنگون کولڻ.</string>
+    <string name="accessibility_service_description">هي رسائي سروس mLauncher کي ڪجهه ڪم ڪرڻ جي اجازت ڏئي ٿي جهڙوڪ اسڪرين کي لاڪ ڪرڻ يا جلدي سيٽنگون کولڻ. اسان جي رسائي جي خدمت ڪنهن به ڊيٽا کي گڏ يا حصيداري نٿو ڪري.</string>
 </resources>

@@ -3,7 +3,7 @@
     <!-- Base Settings -->
     <string name="app">Aplikace</string>
     <!-- Admin Settings -->
-    <string name="admin_permission_message">mLauncher slibuje, že bude zodpovědně používat oprávnění zámku obrazovky.</string>
+    <string name="admin_permission_message">mLauncher slibuje, že bude zodpovědně používat oprávnění k uzamčení obrazovky. mLauncher neshromažďuje ani nesdílí žádná data.</string>
     <string name="experimental">(experimentální)</string>
     <!-- Settings Headers -->
     <string name="appearance">Vzhled</string>
@@ -94,5 +94,5 @@
     <string name="double_tap_lock_uninstall_message">Dvojitým poklepáním uzamknout povolenou funkci.
         \n\nPoznámka: Pokud se rozhodnete smazat mLauncher, vypněte nejprve tuto funkci.</string>
     <string name="accessibility_service_name">mLauncher akční služba</string>
-    <string name="accessibility_service_description">Tato služba přístupnosti umožňuje mLauncheru provádět určité akce, jako je zamykání obrazovky nebo otevření rychlého nastavení.</string>
+    <string name="accessibility_service_description">Tato služba usnadnění umožňuje mLauncheru provádět určité akce, jako je zamykání obrazovky nebo otevření rychlých nastavení. Naše služba přístupnosti neshromažďuje ani nesdílí žádná data.</string>
 </resources>

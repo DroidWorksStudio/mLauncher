@@ -3,7 +3,7 @@
     <!-- Base Settings -->
     <string name="app">App</string>
     <!-- Admin Settings -->
-    <string name="admin_permission_message">mLauncher verspricht, die Sperrbildschirm-Berechtigung verantwortungsbewusst zu nutzen.</string>
+    <string name="admin_permission_message">mLauncher verspricht einen verantwortungsvollen Umgang mit Sperrbildschirmberechtigungen. mLauncher sammelt oder teilt keine Daten.</string>
     <string name="experimental">(experimentell)</string>
     <!-- Settings Headers -->
     <string name="appearance">Erscheinung</string>
@@ -94,5 +94,5 @@
     <string name="double_tap_lock_uninstall_message">Doppeltippen zum Sperren aktiviert.
         \n\nHinweis: Schalten Sie diesen AUS zuerst wenn Sie mLauncher löschen möchten.</string>
     <string name="accessibility_service_name">mLauncher Actions Service</string>
-    <string name="accessibility_service_description">Dieser Barrierefreiheitsdienst erlaubt mLauncher bestimmte Aktionen wie das Sperren des Bildschirms oder das Öffnen der Schnelleinstellungen durchzuführen.</string>
+    <string name="accessibility_service_description">Dieser Barrierefreiheitsdienst ermöglicht es mLauncher, bestimmte Aktionen auszuführen, wie z. B. das Sperren des Bildschirms oder das Öffnen der Schnelleinstellungen. Unser Barrierefreiheitsdienst sammelt oder teilt keine Daten.</string>
 </resources>

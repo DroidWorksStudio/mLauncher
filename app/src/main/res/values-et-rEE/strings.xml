@@ -3,7 +3,7 @@
     <!-- Base Settings -->
     <string name="app">App</string>
     <!-- Admin Settings -->
-    <string name="admin_permission_message">mLauncher lubab kasutada lukustusekraani luba vastutustundlikult.</string>
+    <string name="admin_permission_message">mLauncher lubab kasutada lukustuskuva luba vastutustundlikult. mLauncher ei kogu ega jaga andmeid.</string>
     <string name="experimental">(eksperimentaalne)</string>
     <!-- Settings Headers -->
     <string name="appearance">Välimus</string>
@@ -94,5 +94,5 @@
     <string name="double_tap_lock_uninstall_message">Topeltpuudutus lukustamiseks lubatud.
         \n\nMärkus: Kui otsustate mLauncheri kustutada, lülitage see esmalt välja.</string>
     <string name="accessibility_service_name">mLauncher Actions Service</string>
-    <string name="accessibility_service_description">See juurdepääsetavuse teenus võimaldab mLauncheril teha teatud toiminguid, näiteks lukustada ekraani või avada kiirseaded.</string>
+    <string name="accessibility_service_description">See juurdepääsetavuse teenus võimaldab mLauncheril teha teatud toiminguid, nagu ekraani lukustamine või kiirseadete avamine. Meie juurdepääsetavuse teenus ei kogu ega jaga andmeid.</string>
 </resources>

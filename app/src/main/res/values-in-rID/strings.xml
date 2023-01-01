@@ -3,7 +3,7 @@
     <!-- Base Settings -->
     <string name="app">Aplikasi</string>
     <!-- Admin Settings -->
-    <string name="admin_permission_message">mLauncher berjanji untuk menggunakan izin layar kunci secara bertanggung jawab.</string>
+    <string name="admin_permission_message">mLauncher berjanji untuk menggunakan izin layar kunci secara bertanggung jawab. mLauncher tidak mengumpulkan atau membagikan data apa pun.</string>
     <string name="experimental">(eksperimental)</string>
     <!-- Settings Headers -->
     <string name="appearance">Penampilan</string>
@@ -94,5 +94,5 @@
     <string name="double_tap_lock_uninstall_message">Ketuk dua kali untuk mengunci diaktifkan.
         \n\nCatatan: Matikan ini terlebih dahulu jika Anda memutuskan untuk menghapus mLauncher.</string>
     <string name="accessibility_service_name">Layanan Tindakan mLauncher</string>
-    <string name="accessibility_service_description">Layanan aksesibilitas ini memungkinkan mLauncher untuk melakukan tindakan tertentu seperti mengunci layar atau membuka pengaturan cepat.</string>
+    <string name="accessibility_service_description">Layanan aksesibilitas ini memungkinkan mLauncher melakukan tindakan tertentu seperti mengunci layar atau membuka pengaturan cepat. Layanan aksesibilitas kami tidak mengumpulkan atau membagikan data apa pun.</string>
 </resources>

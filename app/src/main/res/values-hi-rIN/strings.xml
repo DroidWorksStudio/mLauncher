@@ -3,7 +3,7 @@
     <!-- Base Settings -->
     <string name="app">अनुप्रयोग</string>
     <!-- Admin Settings -->
-    <string name="admin_permission_message">एमएल लॉन्चर जिम्मेदारी से लॉक स्क्रीन अनुमति का उपयोग करने का वादा करता है।</string>
+    <string name="admin_permission_message">एमएल लॉन्चर जिम्मेदारी से लॉक स्क्रीन अनुमति का उपयोग करने का वादा करता है। एमएल लॉन्चर कोई डेटा एकत्र या साझा नहीं करता है।</string>
     <string name="experimental">(प्रायोगिक)</string>
     <!-- Settings Headers -->
     <string name="appearance">उपस्थिति</string>
@@ -94,5 +94,5 @@
     <string name="double_tap_lock_uninstall_message">लॉक करने के लिए डबल टैप सक्षम है।
         \n\nनोट: यदि आप एमएल लॉन्चर को हटाने का निर्णय लेते हैं तो पहले इसे बंद कर दें।</string>
     <string name="accessibility_service_name">एमएल लॉन्चर एक्शन सर्विस</string>
-    <string name="accessibility_service_description">यह एक्सेसिबिलिटी सेवा एमएल लॉन्चर को स्क्रीन लॉक करने या त्वरित सेटिंग खोलने जैसी कुछ कार्रवाइयां करने की अनुमति देती है।</string>
+    <string name="accessibility_service_description">यह एक्सेसिबिलिटी सेवा एमएल लॉन्चर को स्क्रीन लॉक करने या त्वरित सेटिंग खोलने जैसी कुछ कार्रवाइयां करने की अनुमति देती है। हमारी एक्सेसिबिलिटी सेवा कोई डेटा एकत्र या साझा नहीं करती है।</string>
 </resources>

@@ -3,7 +3,7 @@
     <!-- Base Settings -->
     <string name="app">Приложение</string>
     <!-- Admin Settings -->
-    <string name="admin_permission_message">mLauncher обещава да използва разрешението за заключване на екрана отговорно.</string>
+    <string name="admin_permission_message">mLauncher обещава да използва отговорно разрешението за заключен екран. mLauncher не събира и не споделя никакви данни.</string>
     <string name="experimental">(експериментално)</string>
     <!-- Settings Headers -->
     <string name="appearance">Външен вид</string>
@@ -94,5 +94,5 @@
     <string name="double_tap_lock_uninstall_message">Двойно докосване, за да заключите функцията.
         \n\nЗабележка: Първо изключете тази функция, ако решите да изтриете mLauncher.</string>
     <string name="accessibility_service_name">Услуга за действия на mLauncher</string>
-    <string name="accessibility_service_description">Тази услуга за достъпност позволява на mLauncher да извършва определени действия, като например заключване на екрана или отваряне на бързите настройки.</string>
+    <string name="accessibility_service_description">Тази услуга за достъпност позволява на mLauncher да извършва определени действия като заключване на екрана или отваряне на бързите настройки. Нашата услуга за достъпност не събира и не споделя никакви данни.</string>
 </resources>

@@ -3,7 +3,7 @@
     <!-- Base Settings -->
     <string name="app">App</string>
     <!-- Admin Settings -->
-    <string name="admin_permission_message">mLauncher lovar att använda behörigheten för låsskärm på ett ansvarsfullt sätt.</string>
+    <string name="admin_permission_message">mLauncher lovar att använda tillstånd för låsskärm på ett ansvarsfullt sätt. mLauncher samlar inte in eller delar några data.</string>
     <string name="experimental">(experimentell)</string>
     <!-- Settings Headers -->
     <string name="appearance">Utseende</string>
@@ -94,5 +94,5 @@
     <string name="double_tap_lock_uninstall_message">Dubbeltryck för att låsa aktiverat.
         \n\nObs: Slå av detta först om du väljer att ta bort mLauncher.</string>
     <string name="accessibility_service_name">mLauncher åtgärdstjänst</string>
-    <string name="accessibility_service_description">Denna tillgänglighetstjänst gör det möjligt för mLauncher att göra vissa åtgärder som att låsa skärmen eller öppna snabbinställningarna.</string>
+    <string name="accessibility_service_description">Denna tillgänglighetstjänst låter mLauncher utföra vissa åtgärder som att låsa skärmen eller öppna snabbinställningarna. Vår tillgänglighetstjänst samlar inte in eller delar någon data.</string>
 </resources>

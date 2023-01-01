@@ -3,7 +3,7 @@
     <!-- Base Settings -->
     <string name="app">App</string>
     <!-- Admin Settings -->
-    <string name="admin_permission_message">Ua hoʻohiki ʻo mLauncher e hoʻohana i ka ʻae ʻana i ka pale laka me ke kuleana.</string>
+    <string name="admin_permission_message">Ua hoʻohiki ʻo mLauncher e hoʻohana i ka ʻae ʻana i ka pale laka me ke kuleana. ʻAʻole ʻohi a kaʻana like ʻo mLauncher i kekahi ʻikepili.</string>
     <string name="experimental">(hoʻokolohua)</string>
     <!-- Settings Headers -->
     <string name="appearance">Ka nana aku</string>
@@ -94,5 +94,5 @@
     <string name="double_tap_lock_uninstall_message">Koʻu pālua no ka laka.
         \n\nNānā: E hoʻopau mua i kēia inā hoʻoholo ʻoe e holoi i ka mLauncher.</string>
     <string name="accessibility_service_name">lawelawe hana mLauncher</string>
-    <string name="accessibility_service_description">Hāʻawi kēia lawelawe hiki iā mLauncher e hana i kekahi mau hana e like me ka laka ʻana i ka pale a i ʻole ka wehe ʻana i nā hoʻonohonoho wikiwiki.</string>
+    <string name="accessibility_service_description">Hāʻawi kēia lawelawe hiki iā mLauncher e hana i kekahi mau hana e like me ka laka ʻana i ka pale a i ʻole ka wehe ʻana i nā hoʻonohonoho wikiwiki. ʻAʻole ʻohi a kaʻana like paha kā mākou lawelawe ʻike i kekahi ʻikepili.</string>
 </resources>

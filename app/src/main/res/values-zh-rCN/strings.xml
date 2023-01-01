@@ -3,7 +3,7 @@
     <!-- Base Settings -->
     <string name="app">应用</string>
     <!-- Admin Settings -->
-    <string name="admin_permission_message">Olauncher 承诺负责任地使用锁屏权限。</string>
+    <string name="admin_permission_message">mLauncher 承诺负责任地使用锁屏权限。 mLauncher 不收集或共享任何数据。</string>
     <string name="experimental">(实验性)</string>
     <!-- Settings Headers -->
     <string name="appearance">外观</string>
@@ -94,5 +94,5 @@
     <string name="double_tap_lock_uninstall_message">已启用“轻按两次解锁”
         \n\n注意：若你决定删除Olauncher, 请先关闭此选项。</string>
     <string name="accessibility_service_name">OlauncherCF 操作服务</string>
-    <string name="accessibility_service_description">此无障碍服务允许 OlauncherCF 执行特定操作，如锁定屏幕或打开快速设置。</string>
+    <string name="accessibility_service_description">此辅助功能服务允许 mLauncher 执行某些操作，例如锁定屏幕或打开快速设置。我们的无障碍服务不收集或共享任何数据。</string>
 </resources>

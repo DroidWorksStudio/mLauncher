@@ -3,7 +3,7 @@
     <!-- Base Settings -->
     <string name="app">Застосунок</string>
     <!-- Admin Settings -->
-    <string name="admin_permission_message">mLauncher обіцяє використання дозволу на екран блокування відповідально.</string>
+    <string name="admin_permission_message">mLauncher обіцяє відповідально використовувати дозвіл блокування екрана. mLauncher не збирає та не передає жодних даних.</string>
     <string name="experimental">(експериментально)</string>
     <!-- Settings Headers -->
     <string name="appearance">Зовнішній вигляд</string>
@@ -94,5 +94,5 @@
     <string name="double_tap_lock_uninstall_message">Подвійне натискання вмикає блокування.
         \n\nПримітка: Увімкніть цю ВИМК спочатку, якщо ви вирішили видалити mLauncher.</string>
     <string name="accessibility_service_name">функції mLauncher Service</string>
-    <string name="accessibility_service_description">Ця служба доступності дозволяє mLauncher виконувати певні дії, такі як блокування екрана або відкриття швидких налаштувань.</string>
+    <string name="accessibility_service_description">Ця служба доступності дозволяє mLauncher виконувати певні дії, наприклад блокувати екран або відкривати швидкі налаштування. Наша служба доступності не збирає та не надає жодних даних.</string>
 </resources>

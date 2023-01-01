@@ -3,7 +3,7 @@
     <!-- Base Settings -->
     <string name="app">แอป</string>
     <!-- Admin Settings -->
-    <string name="admin_permission_message">mLauncher สัญญาว่าจะใช้การอนุญาตล็อคหน้าจออย่างมีความรับผิดชอบ</string>
+    <string name="admin_permission_message">mLauncher สัญญาว่าจะใช้การอนุญาตล็อคหน้าจออย่างมีความรับผิดชอบ mLauncher ไม่รวบรวมหรือแบ่งปันข้อมูลใด ๆ</string>
     <string name="experimental">(ทดลอง)</string>
     <!-- Settings Headers -->
     <string name="appearance">รูปร่าง</string>
@@ -94,5 +94,5 @@
     <string name="double_tap_lock_uninstall_message">แตะสองครั้งเพื่อล็อคเปิดใช้งาน
         \n\nหมายเหตุ: ปิดการทำงานนี้ก่อนหากคุณตัดสินใจที่จะลบ mLauncher</string>
     <string name="accessibility_service_name">บริการดำเนินการ mLauncher</string>
-    <string name="accessibility_service_description">บริการการเข้าถึงนี้ช่วยให้ mLauncher ดำเนินการบางอย่างได้ เช่น ล็อคหน้าจอหรือเปิดการตั้งค่าด่วน</string>
+    <string name="accessibility_service_description">บริการการเข้าถึงนี้ช่วยให้ mLauncher ดำเนินการบางอย่างได้ เช่น ล็อคหน้าจอหรือเปิดการตั้งค่าด่วน บริการการเข้าถึงของเราจะไม่รวบรวมหรือแบ่งปันข้อมูลใดๆ</string>
 </resources>

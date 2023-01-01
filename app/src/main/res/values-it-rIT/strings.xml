@@ -3,7 +3,7 @@
     <!-- Base Settings -->
     <string name="app">App</string>
     <!-- Admin Settings -->
-    <string name="admin_permission_message">mLauncher promette di utilizzare i permessi di blocco schermo in modo responsabile.</string>
+    <string name="admin_permission_message">mLauncher promette di utilizzare l\'autorizzazione della schermata di blocco in modo responsabile. mLauncher non raccoglie né condivide alcun dato.</string>
     <string name="experimental">(sperimentale)</string>
     <!-- Settings Headers -->
     <string name="appearance">Aspetto</string>
@@ -94,5 +94,5 @@
     <string name="double_tap_lock_uninstall_message">Doppio tocco per bloccare abilitato.
         \n\nNota: Disattiva prima se decidi di eliminare mLauncher.</string>
     <string name="accessibility_service_name">servizio azioni mLauncher</string>
-    <string name="accessibility_service_description">Questo servizio di accessibilità consente a mLauncher di eseguire alcune azioni, come bloccare lo schermo o aprire le impostazioni rapide.</string>
+    <string name="accessibility_service_description">Questo servizio di accessibilità consente a mLauncher di eseguire determinate azioni come bloccare lo schermo o aprire le impostazioni rapide. Il nostro servizio di accessibilità non raccoglie né condivide alcun dato.</string>
 </resources>

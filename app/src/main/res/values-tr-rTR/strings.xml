@@ -3,7 +3,7 @@
     <!-- Base Settings -->
     <string name="app">Uygulama</string>
     <!-- Admin Settings -->
-    <string name="admin_permission_message">mLauncher kilit ekranı iznini sorumlu bir şekilde kullanmayı vaat ediyor.</string>
+    <string name="admin_permission_message">mLauncher, kilit ekranı iznini sorumlu bir şekilde kullanmayı vaat ediyor. mLauncher herhangi bir veri toplamaz veya paylaşmaz.</string>
     <string name="experimental">(deneysel)</string>
     <!-- Settings Headers -->
     <string name="appearance">Görünüş</string>
@@ -94,5 +94,5 @@
     <string name="double_tap_lock_uninstall_message">Etkin kilitlemek için çift dokunun.
         \n\nNot: mLauncher\'ı silmeye karar verirseniz önce bunu KAPATIN.</string>
     <string name="accessibility_service_name">mLauncher Eylemler Hizmeti</string>
-    <string name="accessibility_service_description">Bu erişilebilirlik hizmeti, mLauncher\'ın ekranı kilitleme veya hızlı ayarları açma gibi belirli eylemleri gerçekleştirmesini sağlar.</string>
+    <string name="accessibility_service_description">Bu erişilebilirlik hizmeti, mLauncher\'ın ekranı kilitleme veya hızlı ayarları açma gibi belirli işlemleri yapmasına olanak tanır. Erişilebilirlik hizmetimiz herhangi bir veri toplamaz veya paylaşmaz.</string>
 </resources>

@@ -3,7 +3,7 @@
     <!-- Base Settings -->
     <string name="app">App</string>
     <!-- Admin Settings -->
-    <string name="admin_permission_message">mLauncher promete utilizar de forma responsável a permissão de ecrãs de bloqueio.</string>
+    <string name="admin_permission_message">O mLauncher promete usar a permissão da tela de bloqueio com responsabilidade. O mLauncher não coleta ou compartilha nenhum dado.</string>
     <string name="experimental">(experimental)</string>
     <!-- Settings Headers -->
     <string name="appearance">Aparência</string>
@@ -94,5 +94,5 @@
     <string name="double_tap_lock_uninstall_message">Dupla torneira para bloquear activada.
         \n\nNota: Desligue isto primeiro se decidir apagar o mLauncher.</string>
     <string name="accessibility_service_name">Serviço de Acções mLauncher</string>
-    <string name="accessibility_service_description">Este serviço de acessibilidade permite ao mLauncher realizar certas acções, tais como bloquear o ecrã ou abrir as definições rápidas.</string>
+    <string name="accessibility_service_description">Este serviço de acessibilidade permite que o mLauncher execute determinadas ações, como bloquear a tela ou abrir as configurações rápidas. Nosso serviço de acessibilidade não coleta nem compartilha nenhum dado.</string>
 </resources>

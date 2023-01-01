@@ -3,7 +3,7 @@
     <!-- Base Settings -->
     <string name="app">Aplikasi</string>
     <!-- Admin Settings -->
-    <string name="admin_permission_message">mLauncher berjanji untuk menggunakan kebenaran skrin kunci secara bertanggungjawab.</string>
+    <string name="admin_permission_message">mLauncher berjanji untuk menggunakan kebenaran skrin kunci secara bertanggungjawab. mLauncher tidak mengumpul atau berkongsi sebarang data.</string>
     <string name="experimental">(percubaan)</string>
     <!-- Settings Headers -->
     <string name="appearance">Penampilan</string>
@@ -94,5 +94,5 @@
     <string name="double_tap_lock_uninstall_message">Ketik dua kali untuk mengunci didayakan.
         \n\nNota: MATI ini dahulu jika anda memutuskan untuk memadam mLauncher.</string>
     <string name="accessibility_service_name">Perkhidmatan Tindakan mLauncher</string>
-    <string name="accessibility_service_description">Perkhidmatan kebolehaksesan ini membolehkan mLauncher melakukan tindakan tertentu seperti mengunci skrin atau membuka tetapan pantas.</string>
+    <string name="accessibility_service_description">Perkhidmatan kebolehaksesan ini membolehkan mLauncher melakukan tindakan tertentu seperti mengunci skrin atau membuka tetapan pantas. Perkhidmatan kebolehaksesan kami tidak mengumpul atau berkongsi sebarang data.</string>
 </resources>

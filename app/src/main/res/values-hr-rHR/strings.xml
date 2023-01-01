@@ -3,7 +3,7 @@
     <!-- Base Settings -->
     <string name="app">aplikacija</string>
     <!-- Admin Settings -->
-    <string name="admin_permission_message">mLauncher obećava da će odgovorno koristiti dopuštenje za zaključavanje zaslona.</string>
+    <string name="admin_permission_message">mLauncher obećava da će odgovorno koristiti dopuštenje za zaključavanje zaslona. mLauncher ne prikuplja niti dijeli nikakve podatke.</string>
     <string name="experimental">(eksperimentalno)</string>
     <!-- Settings Headers -->
     <string name="appearance">Izgled</string>
@@ -94,5 +94,5 @@
     <string name="double_tap_lock_uninstall_message">Dvaput dodirnite za zaključavanje omogućeno.
         \n\nNapomena: ovo prvo ISKLJUČITE ako odlučite izbrisati mLauncher.</string>
     <string name="accessibility_service_name">Usluga mLauncher Actions</string>
-    <string name="accessibility_service_description">Ova usluga pristupačnosti omogućuje mLauncheru određene radnje kao što je zaključavanje zaslona ili otvaranje brzih postavki.</string>
+    <string name="accessibility_service_description">Ova usluga pristupačnosti omogućuje mLauncheru određene radnje kao što je zaključavanje zaslona ili otvaranje brzih postavki. Naša usluga pristupačnosti ne prikuplja niti dijeli nikakve podatke.</string>
 </resources>

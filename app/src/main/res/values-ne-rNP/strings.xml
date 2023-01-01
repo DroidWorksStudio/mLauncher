@@ -3,7 +3,7 @@
     <!-- Base Settings -->
     <string name="app">एप</string>
     <!-- Admin Settings -->
-    <string name="admin_permission_message">mLauncher ले लक स्क्रिन अनुमति जिम्मेवारीपूर्वक प्रयोग गर्ने वाचा गर्दछ।</string>
+    <string name="admin_permission_message">mLauncher ले लक स्क्रिन अनुमति जिम्मेवारीपूर्वक प्रयोग गर्ने वाचा गर्दछ। mLauncher ले कुनै पनि डाटा सङ्कलन वा साझेदारी गर्दैन।</string>
     <string name="experimental">(प्रयोगात्मक)</string>
     <!-- Settings Headers -->
     <string name="appearance">उपस्थिति</string>
@@ -94,5 +94,5 @@
     <string name="double_tap_lock_uninstall_message">लक सक्षम गर्न डबल ट्याप गर्नुहोस्।
         \n\nनोट: यदि तपाइँ mLauncher मेटाउने निर्णय गर्नुहुन्छ भने पहिले यसलाई बन्द गर्नुहोस्।</string>
     <string name="accessibility_service_name">mLauncher कार्य सेवा</string>
-    <string name="accessibility_service_description">यो पहुँच सेवाले mLauncher लाई स्क्रिन लक गर्ने वा द्रुत सेटिङहरू खोल्ने जस्ता निश्चित कार्यहरू गर्न अनुमति दिन्छ।</string>
+    <string name="accessibility_service_description">यो पहुँच सेवाले mLauncher लाई स्क्रिन लक गर्ने वा द्रुत सेटिङहरू खोल्ने जस्ता निश्चित कार्यहरू गर्न अनुमति दिन्छ। हाम्रो पहुँच सेवाले कुनै पनि डाटा सङ्कलन वा साझेदारी गर्दैन।</string>
 </resources>

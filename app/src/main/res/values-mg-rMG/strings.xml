@@ -3,7 +3,7 @@
     <!-- Base Settings -->
     <string name="app">App</string>
     <!-- Admin Settings -->
-    <string name="admin_permission_message">Mampanantena ny mLauncher fa hampiasa ny fahazoan-dàlana hidin-trano amin\'ny andraikitra.</string>
+    <string name="admin_permission_message">Mampanantena ny mLauncher fa hampiasa ny fahazoan-dàlana hidin-trano amin\'ny andraikitra. mLauncher dia tsy manangona na mizara angona.</string>
     <string name="experimental">(fanandramana)</string>
     <!-- Settings Headers -->
     <string name="appearance">Bika Aman \'endrika</string>
@@ -94,5 +94,5 @@
     <string name="double_tap_lock_uninstall_message">Tsindrio indroa raha hihidy.
         \n\nFanamarihana: Atsaharo aloha ity raha manapa-kevitra ny hamafa mLauncher ianao.</string>
     <string name="accessibility_service_name">MLauncher Actions Service</string>
-    <string name="accessibility_service_description">Ity serivisy fidirana ity dia ahafahan\'ny mLauncher manao hetsika sasany toy ny fanidiana ny efijery na fanokafana ny fanovana haingana.</string>
+    <string name="accessibility_service_description">Ity serivisy fidirana ity dia ahafahan\'ny mLauncher manao hetsika sasany toy ny fanidiana ny efijery na fanokafana ny fanovana haingana. Ny serivisy fidiranay dia tsy manangona na mizara angona.</string>
 </resources>
