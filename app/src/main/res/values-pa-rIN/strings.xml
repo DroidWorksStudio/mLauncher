@@ -76,6 +76,8 @@
     <string name="lock_screen">ਬੰਦ ਸਕ੍ਰੀਨ</string>
     <string name="open_quick_settings">ਤਤਕਾਲ ਸੈਟਿੰਗਾਂ</string>
     <string name="show_recents">ਹਾਲੀਆ ਦਿਖਾਓ</string>
+    <string name="open_power_dialog">ਪਾਵਰ ਡਾਇਲਾਗ</string>
+    <string name="take_a_screenshot">ਇੱਕ ਸਕ੍ਰੀਨਸ਼ੌਟ ਲਓ</string>
     <string name="double_tap_to_lock_screen">ਲਾਕ ਕਰਨ ਲਈ ਡਬਲ ਟੈਪ ਕਰੋ</string>
     <!-- Backup Strings -->
     <string name="backup">ਬੈਕਅੱਪ</string>

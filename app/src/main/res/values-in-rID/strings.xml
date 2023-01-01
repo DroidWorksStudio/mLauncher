@@ -76,6 +76,8 @@
     <string name="lock_screen">Layar Kunci</string>
     <string name="open_quick_settings">Pengaturan Cepat</string>
     <string name="show_recents">Tampilkan Terkini</string>
+    <string name="open_power_dialog">Dialog Daya</string>
+    <string name="take_a_screenshot">Ambil Tangkapan Layar</string>
     <string name="double_tap_to_lock_screen">Ketuk dua kali untuk mengunci</string>
     <!-- Backup Strings -->
     <string name="backup">Cadangan</string>

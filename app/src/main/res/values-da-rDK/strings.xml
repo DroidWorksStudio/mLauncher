@@ -76,6 +76,8 @@
     <string name="lock_screen">Lås Skærm</string>
     <string name="open_quick_settings">Hurtige Indstillinger</string>
     <string name="show_recents">Show Recents</string>
+    <string name="open_power_dialog">Power Dialog</string>
+    <string name="take_a_screenshot">Tag et skærmbillede</string>
     <string name="double_tap_to_lock_screen">Dobbelttryk for at låse</string>
     <!-- Backup Strings -->
     <string name="backup">Sikkerhedskopi</string>

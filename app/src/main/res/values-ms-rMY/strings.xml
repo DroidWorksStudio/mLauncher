@@ -76,6 +76,8 @@
     <string name="lock_screen">Skrin kunci</string>
     <string name="open_quick_settings">Tetapan Pantas</string>
     <string name="show_recents">Tunjukkan Terbaru</string>
+    <string name="open_power_dialog">Dialog Kuasa</string>
+    <string name="take_a_screenshot">Ambil Tangkapan Skrin</string>
     <string name="double_tap_to_lock_screen">Ketik dua kali untuk mengunci</string>
     <!-- Backup Strings -->
     <string name="backup">Sandaran</string>

@@ -76,6 +76,8 @@
     <string name="lock_screen">اسڪرين کي لاڪ ڪيو</string>
     <string name="open_quick_settings">تڪڙو سيٽنگون</string>
     <string name="show_recents">تازو ڏيکاريو</string>
+    <string name="open_power_dialog">پاور ڊائلاگ</string>
+    <string name="take_a_screenshot">هڪ اسڪرين شاٽ وٺو</string>
     <string name="double_tap_to_lock_screen">لاڪ ڪرڻ لاءِ ڊبل ٽيپ ڪريو</string>
     <!-- Backup Strings -->
     <string name="backup">بيڪ اپ</string>

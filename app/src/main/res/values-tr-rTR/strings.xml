@@ -2,33 +2,27 @@
 <resources>
     <!-- Base Settings -->
     <string name="app">Uygulama</string>
-    
     <!-- Admin Settings -->
     <string name="admin_permission_message">mLauncher kilit ekranı iznini sorumlu bir şekilde kullanmayı vaat ediyor.</string>
     <string name="experimental">(deneysel)</string>
-    
     <!-- Settings Headers -->
     <string name="appearance">Görünüş</string>
     <string name="behavior">Davranış</string>
     <string name="homescreen">Ana Ekran</string>
     <string name="alignment">Hizalama</string>
     <string name="gestures">Jestler</string>
-    
     <!-- Home Strings -->
     <string name="hidden_apps">Gizli uygulamalar</string>
     <string name="set_as_default_launcher">Varsayılan başlatıcı olarak ayarla</string>
     <string name="change_default_launcher">Varsayılan başlatıcıyı değiştir</string>
-    
     <!-- Appearance Strings -->
     <string name="status_bar">Durum çubuğunu göster</string>
     <string name="theme_mode">Tema modu</string>
     <string name="app_language">Arayüz Dili</string>
     <string name="app_text_size">Metin Boyutu</string>
-    
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Klavye\'yi otomatik göster</string>
     <string name="auto_open_apps">Uygulamaları otomatik aç</string>
-    
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">Kısayol sayısı</string>
     <string name="show_time">Zamanı göster</string>
@@ -36,12 +30,10 @@
     <string name="lock_home_apps">Kilit Uygulamaları</string>
     <string name="extend_home_apps_area">Tıklanabilir alanı genişlet</string>
     <string name="home_alignment_bottom">Ana ekran alt hizalama</string>
-    
     <!-- Alignment Strings -->
     <string name="home_alignment">Uygulamalar ana ekranı</string>
     <string name="clock_alignment">Saat ve tarih</string>
     <string name="drawer_alignment">Uygulama çekmecesindeki uygulamalar</string>
-    
     <!-- Gestures Strings -->
     <string name="swipe_up_app">Yukarı kaydır</string>
     <string name="swipe_down_app">Aşağı kaydır</string>
@@ -50,7 +42,6 @@
     <string name="clock_click_app">Saat üzerine Tıklayın</string>
     <string name="date_click_app">Tarih üzerine Tıklayın</string>
     <string name="double_tap">Çift Dokunuş</string>
-    
     <!-- Settings Strings -->
     <string name="off">Kapalı</string>
     <string name="on">Açık</string>
@@ -62,12 +53,10 @@
     <string name="settings">Ayarlar</string>
     <string name="lang_system">Sistem</string>
     <string name="system_default">Sistem</string>
-    
     <string name="hide">Gizle</string>
     <string name="rename">Yeniden Adlandır</string>
     <string name="okay">Tamam</string>
     <string name="save">Kaydet</string>
-    
     <string name="show">Göster</string>
     <string name="reset">Sıfırla</string>
     <string name="cancel">İptal Et</string>
@@ -75,13 +64,11 @@
     <string name="disable">Devre Dışı Bırak</string>
     <string name="enabled">Etkin</string>
     <string name="disabled">Devre Dışı</string>
-    
     <string name="open">Aç</string>
     <string name="close">Kapat</string>
     <string name="copy">Kopyala</string>
     <string name="opacity">Opaklık</string>
     <string name="hide_roadmap">Yol Haritasını Gizle</string>
-    
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Bildirimi Göster</string>
     <string name="show_app_list">Uygulama Listesini Göster</string>
@@ -89,13 +76,13 @@
     <string name="lock_screen">Kilit Ekranı</string>
     <string name="open_quick_settings">Hızlı Ayarlar</string>
     <string name="show_recents">Son Kullanılanları Göster</string>
+    <string name="open_power_dialog">Güç İletişim Kutusu</string>
+    <string name="take_a_screenshot">Ekran görüntüsü al</string>
     <string name="double_tap_to_lock_screen">Kilitlemek için çift dokun</string>
-    
     <!-- Backup Strings -->
     <string name="backup">Yedekleme</string>
     <string name="load_backup">Yedeği Yükle</string>
     <string name="store_backup">Yedeği Depola</string>
-    
     <!-- Unsorted Strings -->
     <string name="show_apps">Tüm uygulamalar</string>
     <string name="road_map">Yol Haritası</string>

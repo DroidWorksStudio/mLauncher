@@ -76,6 +76,8 @@
     <string name="lock_screen">Екран за заключване</string>
     <string name="open_quick_settings">Бързи настройки</string>
     <string name="show_recents">Показване на последните</string>
+    <string name="open_power_dialog">Диалог за захранване</string>
+    <string name="take_a_screenshot">Направете екранна снимка</string>
     <string name="double_tap_to_lock_screen">Двойно докосване за заключване</string>
     <!-- Backup Strings -->
     <string name="backup">Резервно копие</string>

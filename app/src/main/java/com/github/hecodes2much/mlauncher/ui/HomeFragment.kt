@@ -122,7 +122,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             R.id.setDefaultLauncher -> viewModel.resetDefaultLauncherApp(requireContext())
             else -> {
                 try { // Launch app
-                    val appLocation = view.id.toString().toInt()
+                    val appLocation = view.id
                     homeAppClicked(appLocation)
                 } catch (e: Exception) {
                     e.printStackTrace()
@@ -283,6 +283,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             Action.OpenApp -> {} // this should be handled in the respective onSwipe[Up,Down,Right,Left] functions
             Action.OpenQuickSettings -> expandQuickSettings(requireContext())
             Action.ShowRecents -> initActionService(requireContext())?.showRecents()
+            Action.openPowerDialog -> initActionService(requireContext())?.openPowerDialog()
+            Action.takeScreenShot -> initActionService(requireContext())?.takeScreenShot()
             Action.Disabled -> {}
         }
     }
@@ -316,7 +318,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     private fun textOnLongClick(view: View) = onLongClick(view)
 
     private fun getHomeScreenGestureListener(context: Context): View.OnTouchListener {
-        return object : OnSwipeTouchListener(context) {
+         return object : OnSwipeTouchListener(context) {
             override fun onSwipeLeft() {
                 super.onSwipeLeft()
                 when(val action = prefs.swipeLeftAction) {

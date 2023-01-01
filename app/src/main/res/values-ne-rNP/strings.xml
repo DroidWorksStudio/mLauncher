@@ -76,6 +76,8 @@
     <string name="lock_screen">लक स्क्रिन</string>
     <string name="open_quick_settings">द्रुत सेटिङहरू</string>
     <string name="show_recents">हाल देखाउनुहोस्</string>
+    <string name="open_power_dialog">पावर संवाद</string>
+    <string name="take_a_screenshot">स्क्रिनसट लिनुहोस्</string>
     <string name="double_tap_to_lock_screen">लक गर्न डबल ट्याप गर्नुहोस्</string>
     <!-- Backup Strings -->
     <string name="backup">ब्याकअप</string>

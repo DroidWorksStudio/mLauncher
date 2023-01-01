@@ -76,6 +76,8 @@
     <string name="lock_screen">صفحه قفل</string>
     <string name="open_quick_settings">تنظیمات سریع</string>
     <string name="show_recents">نمایش موارد اخیر</string>
+    <string name="open_power_dialog">گفتگوی برق</string>
+    <string name="take_a_screenshot">یک اسکرین شات بگیرید</string>
     <string name="double_tap_to_lock_screen">برای قفل کردن، دو ضربه سریع بزنید</string>
     <!-- Backup Strings -->
     <string name="backup">پشتیبان گیری</string>

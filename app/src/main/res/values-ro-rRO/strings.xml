@@ -76,6 +76,8 @@
     <string name="lock_screen">Ecran de blocare</string>
     <string name="open_quick_settings">Setări rapide</string>
     <string name="show_recents">Show Recents</string>
+    <string name="open_power_dialog">Dialog Power</string>
+    <string name="take_a_screenshot">Faceți o captură de ecran</string>
     <string name="double_tap_to_lock_screen">Dublă atingere pentru a bloca</string>
     <!-- Backup Strings -->
     <string name="backup">Backup</string>

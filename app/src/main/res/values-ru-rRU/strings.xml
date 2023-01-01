@@ -76,6 +76,8 @@
     <string name="lock_screen">Экран блокировки</string>
     <string name="open_quick_settings">Быстрые настройки</string>
     <string name="show_recents">Show Recents</string>
+    <string name="open_power_dialog">Диалог питания</string>
+    <string name="take_a_screenshot">Сделать снимок экрана</string>
     <string name="double_tap_to_lock_screen">Двойное нажатие для блокировки</string>
     <!-- Backup Strings -->
     <string name="backup">Резервное копирование</string>

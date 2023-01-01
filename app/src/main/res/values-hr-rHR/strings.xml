@@ -76,6 +76,8 @@
     <string name="lock_screen">Zaključavanje zaslona</string>
     <string name="open_quick_settings">Brze postavke</string>
     <string name="show_recents">Prikaži nedavne</string>
+    <string name="open_power_dialog">Dijalog napajanja</string>
+    <string name="take_a_screenshot">Napravite snimku zaslona</string>
     <string name="double_tap_to_lock_screen">Dodirnite dvaput za zaključavanje</string>
     <!-- Backup Strings -->
     <string name="backup">Sigurnosna kopija</string>

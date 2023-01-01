@@ -76,6 +76,8 @@
     <string name="lock_screen">Vergrendel scherm</string>
     <string name="open_quick_settings">Snelle Instellingen</string>
     <string name="show_recents">Show Recents</string>
+    <string name="open_power_dialog">Vermogen Dialoog</string>
+    <string name="take_a_screenshot">Maak een screenshot</string>
     <string name="double_tap_to_lock_screen">Dubbeltik om te vergrendelen</string>
     <!-- Backup Strings -->
     <string name="backup">Back-up</string>

@@ -76,6 +76,8 @@
     <string name="lock_screen">Zamykací obrazovka</string>
     <string name="open_quick_settings">Rychlé nastavení</string>
     <string name="show_recents">Show Recents</string>
+    <string name="open_power_dialog">Dialog napájení</string>
+    <string name="take_a_screenshot">Udělejte snímek obrazovky</string>
     <string name="double_tap_to_lock_screen">Zamknout dvojím poklepáním</string>
     <!-- Backup Strings -->
     <string name="backup">Záloha</string>

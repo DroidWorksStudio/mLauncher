@@ -33,6 +33,16 @@ class ActionService : AccessibilityService() {
         return performGlobalAction(GLOBAL_ACTION_NOTIFICATIONS)
     }
 
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
+    fun openPowerDialog(): Boolean {
+        return performGlobalAction(GLOBAL_ACTION_POWER_DIALOG)
+    }
+
+    @RequiresApi(Build.VERSION_CODES.P)
+    fun takeScreenShot(): Boolean {
+        return performGlobalAction(GLOBAL_ACTION_TAKE_SCREENSHOT)
+    }
+
     @RequiresApi(Build.VERSION_CODES.P)
     fun openQuickSettings(): Boolean {
         return performGlobalAction(GLOBAL_ACTION_QUICK_SETTINGS)

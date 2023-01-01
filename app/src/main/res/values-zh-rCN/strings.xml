@@ -76,6 +76,8 @@
     <string name="lock_screen">锁定屏幕</string>
     <string name="open_quick_settings">快速设置</string>
     <string name="show_recents">显示最近用过的应用</string>
+    <string name="open_power_dialog">电源对话框</string>
+    <string name="take_a_screenshot">截图</string>
     <string name="double_tap_to_lock_screen">轻按两次锁定</string>
     <!-- Backup Strings -->
     <string name="backup">备份</string>

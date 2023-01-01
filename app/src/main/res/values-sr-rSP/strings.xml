@@ -76,6 +76,8 @@
     <string name="lock_screen">Lock Screen</string>
     <string name="open_quick_settings">Quick Settings</string>
     <string name="show_recents">Show Recents</string>
+    <string name="open_power_dialog">Повер Диалог</string>
+    <string name="take_a_screenshot">Направите снимак екрана</string>
     <string name="double_tap_to_lock_screen">Double tap to lock</string>
     <!-- Backup Strings -->
     <string name="backup">Backup</string>

@@ -76,6 +76,8 @@
     <string name="lock_screen">Képernyő zárolása</string>
     <string name="open_quick_settings">Gyors beállítások</string>
     <string name="show_recents">Visszatérők megjelenítése</string>
+    <string name="open_power_dialog">Teljesítmény párbeszédpanel</string>
+    <string name="take_a_screenshot">Készítsen képernyőképet</string>
     <string name="double_tap_to_lock_screen">Dupla koppintás a lezáráshoz</string>
     <!-- Backup Strings -->
     <string name="backup">Biztonsági mentés</string>

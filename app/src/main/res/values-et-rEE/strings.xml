@@ -76,6 +76,8 @@
     <string name="lock_screen">Lukustusekraan</string>
     <string name="open_quick_settings">Kiirseaded</string>
     <string name="show_recents">Kuva Recents</string>
+    <string name="open_power_dialog">Toitedialoog</string>
+    <string name="take_a_screenshot">Tehke ekraanipilt</string>
     <string name="double_tap_to_lock_screen">Topeltkoputus lukustamiseks</string>
     <!-- Backup Strings -->
     <string name="backup">Varukoopia</string>
