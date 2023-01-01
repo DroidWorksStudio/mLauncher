@@ -1,0 +1,24 @@
+name: Update CHANGELOG.md
+
+on:
+  push:
+    tags:
+      - '*'
+  workflow_dispatch:
+  
+jobs:
+  changelog:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+      - name: Generate CHANGELOG
+        uses: tj-actions/github-changelog-generator@v1.15
+      
+      - name: Commit and push changes
+        run: |
+          git config --global user.name ${{ secrets.GIT_NAME }}
+          git config --global user.email ${{ secrets.GIT_EMAIL }}
+      
+          git add -A
+          git commit -m "Update CHANGELOG.md" --allow-empty
+          git push origin HEAD:main
