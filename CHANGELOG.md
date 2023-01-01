@@ -1,8 +1,12 @@
 # Changelog
 
-## [0.4.3](https://github.com/HeCodes2Much/mLauncher/tree/0.4.3) (31, December 2022)
+## [0.4.3](https://github.com/HeCodes2Much/mLauncher/tree/0.4.3) ( 1, January 2023)
 
 [Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.4.2...0.4.3)
+
+**Implemented enhancements:**
+
+- feat: Added more swipe actions. [\#144](https://github.com/HeCodes2Much/mLauncher/pull/144) ([The-Repo-Club](https://github.com/The-Repo-Club))
 
 **Fixed bugs:**
 
