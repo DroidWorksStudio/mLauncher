@@ -4,7 +4,6 @@ import com.github.hecodes2much.mlauncher.style.SettingsTheme
 import android.app.admin.DevicePolicyManager
 import android.content.ComponentName
 import android.content.Context
-import android.content.res.Configuration
 import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -409,7 +408,7 @@ class SettingsFragment : Fragment() {
                             onChange = onChange,
                             currentAction = prefs.doubleTapAction,
                             onSelect = { j -> updateGesture(AppDrawerFlag.SetDoubleTap, j) },
-                            appLabel = prefs.appClickDate.appLabel
+                            appLabel = prefs.appDoubleTap.appLabel
                         )
                     }
                 )
