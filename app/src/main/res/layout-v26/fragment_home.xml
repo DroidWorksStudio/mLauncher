@@ -54,7 +54,7 @@
         android:paddingHorizontal="20dp"
         android:paddingBottom="80dp"
         android:paddingTop="112dp"
-        android:fontFamily="@font/feather_icons" />
+        android:fontFamily="sans-serif-light" />
 
     <!-- First run tips -->
     <LinearLayout

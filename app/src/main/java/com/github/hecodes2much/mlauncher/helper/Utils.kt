@@ -393,14 +393,14 @@ fun getHexForOpacity(context: Context, prefs: Prefs): Int {
     if (hex.length < 2)
         hex = "$hex$hex"
 
-    if (isDarkMode.toString() == "System") {
+    if (isDarkMode == "System") {
         return if (isDarkMode(context)) {
             android.graphics.Color.parseColor("#${hex}000000")
         } else {
             android.graphics.Color.parseColor("#${hex}FFFFFF")
         }
     }
-    return if (isDarkMode.toString() == "Light") {
+    return if (isDarkMode == "Light") {
         android.graphics.Color.parseColor("#${hex}FFFFFF")
     } else {
         android.graphics.Color.parseColor("#${hex}000000")
