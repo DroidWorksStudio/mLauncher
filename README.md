@@ -14,7 +14,7 @@
     <a href="https://www.buymeacoffee.com/HeCodes2Much"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=HeCodes2Much&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>
     </p>
     <a href='https://github.com/HeCodes2Much/mLauncher/releases/latest'><img src='https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white'></a>
-    <a href='https://f-droid.org/packages/com.github.hecodes2much.mlauncher'><img src='https://img.shields.io/badge/F_Droid-1976d2?style=for-the-badge&logo=f-droid&logoColor=white'></a>
+    <a href='https://f-droid.org/packages/app.mlauncher'><img src='https://img.shields.io/badge/F_Droid-1976d2?style=for-the-badge&logo=f-droid&logoColor=white'></a>
 </div>
 
 
