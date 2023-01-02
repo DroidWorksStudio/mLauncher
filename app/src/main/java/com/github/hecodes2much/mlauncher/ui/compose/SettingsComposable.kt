@@ -540,9 +540,7 @@ object SettingsComposable {
             var labelProgress by remember { mutableStateOf(number.value.toFloat()) }
             SliderWithLabel(
                 value = labelProgress,
-                onValueChange = {
-                    labelProgress = it
-                },
+                onValueChange = { it-> labelProgress = it },
                 thumbRadius = 5.dp,
                 trackHeight = 5.dp,
                 valueRange = min.toFloat()..max.toFloat(),
@@ -550,7 +548,7 @@ object SettingsComposable {
                 labelPosition = LabelPosition.Top,
                 label = {
                     Text(
-                        text = "${labelProgress.roundToInt()}",
+                        text = "${labelProgress.toInt()}",
                         fontSize = fontSize,
                         modifier = Modifier
                             .shadow(1.dp, shape = CircleShape),
