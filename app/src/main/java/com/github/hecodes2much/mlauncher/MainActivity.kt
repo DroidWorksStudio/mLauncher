@@ -192,8 +192,8 @@ class MainActivity : AppCompatActivity() {
                     applicationContext.contentResolver.openFileDescriptor(uri, "w")?.use { file ->
                         FileOutputStream(file.fileDescriptor).use { stream ->
                             val text = Prefs(applicationContext).saveToString()
+                            stream.channel.truncate(0)
                             stream.write(text.toByteArray())
-                            stream.channel.truncate(text.length.toLong())
                         }
                     }
                 }

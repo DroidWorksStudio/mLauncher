@@ -13,6 +13,7 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.unit.sp
 import com.github.hecodes2much.mlauncher.R
 
@@ -59,31 +60,40 @@ val LocalReplacementColor = staticCompositionLocalOf {
     )
 }
 
+val fontFamily = FontFamily(
+    Font(resId = R.font.my_font_regular),
+)
+
 @Composable
 fun SettingsTheme(
     isDark: Boolean,
     content: @Composable () -> Unit
 ) {
     val replacementTypography = ReplacementTypography(
-        body = TextStyle(fontSize = 16.sp),
+        body = TextStyle(
+            fontFamily = fontFamily,
+            fontSize = 16.sp
+        ),
         title = TextStyle(
+            fontFamily = fontFamily,
+            fontWeight = FontWeight.Light,
             fontSize = 32.sp,
             color = if (isDark) textLight else textDark,
         ),
         item = TextStyle(
-            fontFamily = FontFamily.Monospace,
+            fontFamily = fontFamily,
             fontWeight = FontWeight.Light,
             fontSize = 16.sp,
             color = if (isDark) textLight else textDark,
         ),
         button = TextStyle(
-            fontFamily = FontFamily.Monospace,
+            fontFamily = fontFamily,
             fontWeight = FontWeight.Bold,
             fontSize = 16.sp,
             color = if (isDark) textLight else textDark,
         ),
         buttonDisabled = TextStyle(
-            fontFamily = FontFamily.Monospace,
+            fontFamily = fontFamily,
             fontWeight = FontWeight.Bold,
             fontSize = 16.sp,
             color = textGray,
