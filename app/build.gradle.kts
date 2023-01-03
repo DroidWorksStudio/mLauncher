@@ -8,11 +8,11 @@ android {
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "com.github.hecodes2much.mlauncher"
+        applicationId = "app.mlauncher"
         minSdk = 23
         targetSdk = 33
-        versionCode = 44
-        versionName = "0.4.4"
+        versionCode = 43
+        versionName = "0.4.3"
     }
 
     buildTypes {
