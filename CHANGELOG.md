@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.4.3](https://github.com/HeCodes2Much/mLauncher/tree/0.4.3) ( 1, January 2023)
+## [0.4.3](https://github.com/HeCodes2Much/mLauncher/tree/0.4.3) ( 3, January 2023)
 
 [Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.4.2...0.4.3)
 
