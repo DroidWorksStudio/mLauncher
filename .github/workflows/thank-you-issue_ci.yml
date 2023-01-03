@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/github-script@v6
         with:
-          token: ${{ secrets.GIT_BOT_TOKEN }}
+          github-token: ${{ secrets.GIT_BOT_TOKEN }}
           script: |
             github.rest.issues.createComment({
               issue_number: context.issue.number,
