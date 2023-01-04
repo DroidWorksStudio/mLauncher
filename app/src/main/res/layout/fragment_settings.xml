@@ -1,33 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/scrollView"
+    android:id="@+id/mainActivityLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:animateLayoutChanges="true"
-    android:background="?attr/primaryShadeDarkColor"
-    android:clipChildren="false"
-    android:clipToPadding="false"
-    android:overScrollMode="never"
-    android:paddingTop="20dp"
-    android:paddingBottom="20dp"
-    android:scrollbars="none">
+    android:animateLayoutChanges="true">
 
-    <LinearLayout
-        android:id="@+id/scrollLayout"
+    <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="?attr/primaryShadeDarkColor"
         android:clipChildren="false"
         android:clipToPadding="false"
-        android:orientation="vertical">
+        android:overScrollMode="never"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:scrollbars="none">
 
-        <androidx.compose.ui.platform.ComposeView
-            android:id="@+id/settingsView"
+        <LinearLayout
+            android:id="@+id/scrollLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginVertical="22dp"/>
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="vertical">
 
-    </LinearLayout>
+                <androidx.compose.ui.platform.ComposeView
+                    android:id="@+id/settingsView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginVertical="22dp"/>
 
-</ScrollView>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
