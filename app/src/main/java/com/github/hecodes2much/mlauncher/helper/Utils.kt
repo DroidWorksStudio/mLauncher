@@ -1,5 +1,6 @@
 package com.github.hecodes2much.mlauncher.helper
 
+import android.R
 import android.app.Activity
 import android.content.*
 import android.content.pm.LauncherApps
@@ -17,13 +18,12 @@ import android.provider.CalendarContract
 import android.provider.MediaStore
 import android.provider.Settings
 import android.util.DisplayMetrics
+import android.util.Log
 import android.util.Log.*
 import android.util.TypedValue
-import android.view.Gravity
-import android.view.View
-import android.view.WindowInsets
-import android.view.WindowManager
+import android.view.*
 import android.widget.Toast
+import androidx.appcompat.view.ContextThemeWrapper
 import androidx.core.app.ActivityCompat
 import com.github.hecodes2much.mlauncher.BuildConfig
 import com.github.hecodes2much.mlauncher.data.AppModel
@@ -50,7 +50,7 @@ fun showToastShort(context: Context, message: String) {
 }
 
 suspend fun getAppsList(context: Context, showHiddenApps: Boolean = false): MutableList<AppModel> {
-    return withContext(Dispatchers.IO) {
+    return withContext(Dispatchers.Main) {
         val appList: MutableList<AppModel> = mutableListOf()
 
         try {
@@ -112,7 +112,7 @@ suspend fun getAppsList(context: Context, showHiddenApps: Boolean = false): Muta
 }
 
 suspend fun getHiddenAppsList(context: Context): MutableList<AppModel> {
-    return withContext(Dispatchers.IO) {
+    return withContext(Dispatchers.Main) {
         val pm = context.packageManager
         if (!Prefs(context).hiddenAppsUpdated) upgradeHiddenApps(Prefs(context))
 
@@ -344,16 +344,6 @@ fun Context.openUrl(url: String) {
     startActivity(intent)
 }
 
-/*@ColorInt
-fun Context.getColorFromAttr(
-    @AttrRes attrColor: Int,
-    typedValue: TypedValue = TypedValue(),
-    resolveRefs: Boolean = true
-): Int {
-    theme.resolveAttribute(attrColor, typedValue, resolveRefs)
-    return typedValue.data
-}*/
-
 fun uninstallApp(context: Context, appPackage: String) {
     val intent = Intent(Intent.ACTION_DELETE)
     intent.data = Uri.parse("package:$appPackage")
@@ -389,22 +379,38 @@ fun getHexForOpacity(context: Context, prefs: Prefs): Int {
     var setColor = prefs.opacityNum
     var isDarkMode = prefs.appTheme.toString()
 
+    val accentColor = getAccentColor(context)
+    val hexAccentColor = java.lang.String.format("%06X", 0xFFFFFF and accentColor)
+
     var hex = Integer.toHexString(setColor).toString()
     if (hex.length < 2)
         hex = "$hex$hex"
 
     if (isDarkMode == "System") {
         return if (isDarkMode(context)) {
-            android.graphics.Color.parseColor("#${hex}000000")
+            android.graphics.Color.parseColor("#${hex}$hexAccentColor")
         } else {
-            android.graphics.Color.parseColor("#${hex}FFFFFF")
+            android.graphics.Color.parseColor("#${hex}$hexAccentColor")
         }
     }
     return if (isDarkMode == "Light") {
-        android.graphics.Color.parseColor("#${hex}FFFFFF")
+        android.graphics.Color.parseColor("#${hex}$hexAccentColor")
     } else {
-        android.graphics.Color.parseColor("#${hex}000000")
+        android.graphics.Color.parseColor("#${hex}$hexAccentColor")
     }
+}
+
+private fun getAccentColor(context: Context): Int {
+    val typedValue = TypedValue()
+    val contextThemeWrapper = ContextThemeWrapper(
+        context,
+        R.style.Theme_DeviceDefault_DayNight
+    )
+    contextThemeWrapper.theme.resolveAttribute(
+        R.attr.windowBackground,
+        typedValue, true
+    )
+    return typedValue.data
 }
 
 private fun isDarkMode(context: Context): Boolean {

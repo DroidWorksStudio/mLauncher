@@ -31,6 +31,7 @@ import com.github.hecodes2much.mlauncher.databinding.FragmentHomeBinding
 import com.github.hecodes2much.mlauncher.helper.*
 import com.github.hecodes2much.mlauncher.listener.OnSwipeTouchListener
 import com.github.hecodes2much.mlauncher.listener.ViewSwipeTouchListener
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 
@@ -194,7 +195,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
     private fun showAppList(flag: AppDrawerFlag, showHiddenApps: Boolean = false, n: Int = 0) {
         viewModel.getAppList(showHiddenApps)
-        lifecycleScope.launch {
+        lifecycleScope.launch(Dispatchers.Main) {
             try {
                 findNavController().navigate(
                     R.id.action_mainFragment_to_appListFragment,
@@ -354,11 +355,13 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
             override fun onLongClick() {
                 super.onLongClick()
-                try {
-                    findNavController().navigate(R.id.action_mainFragment_to_settingsFragment)
-                    viewModel.firstOpen(false)
-                } catch (e: java.lang.Exception) {
-                    Log.d("onLongClick", e.toString())
+                lifecycleScope.launch(Dispatchers.Main) {
+                    try {
+                        findNavController().navigate(R.id.action_mainFragment_to_settingsFragment)
+                        viewModel.firstOpen(false)
+                    } catch (e: java.lang.Exception) {
+                        Log.d("onLongClick", e.toString())
+                    }
                 }
             }
 
