@@ -10,6 +10,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
 import androidx.compose.material.TextButton
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Alignment.Companion.CenterEnd
 import androidx.compose.ui.Alignment.Companion.CenterStart
 import androidx.compose.ui.Alignment.Companion.End
@@ -576,7 +577,7 @@ object SettingsComposable {
             Text(
                 title,
                 style = SettingsTheme.typography.item,
-                fontSize = fontSize,
+                fontSize = fontSize
             )
         }
     }
