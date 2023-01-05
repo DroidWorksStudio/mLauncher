@@ -1,5 +1,17 @@
 # Changelog
 
+## [Coming Soon](https://github.com/HeCodes2Much/mLauncher/tree/HEAD)
+
+[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.4.3...HEAD)
+
+**Fixed bugs:**
+
+- fix: work on the icons to make them look better. [\#155](https://github.com/HeCodes2Much/mLauncher/pull/155) ([The-Repo-Club](https://github.com/The-Repo-Club))
+
+**Merged pull requests:**
+
+- Added better themeing [\#156](https://github.com/HeCodes2Much/mLauncher/pull/156) ([The-Repo-Club](https://github.com/The-Repo-Club))
+
 ## [0.4.3](https://github.com/HeCodes2Much/mLauncher/tree/0.4.3) ( 3, January 2023)
 
 [Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.4.2...0.4.3)
