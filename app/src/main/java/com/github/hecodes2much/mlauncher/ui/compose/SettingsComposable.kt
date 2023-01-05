@@ -1,10 +1,7 @@
 package com.github.hecodes2much.mlauncher.ui.compose
 
+import androidx.compose.foundation.*
 import com.github.hecodes2much.mlauncher.style.SettingsTheme
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
-import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
@@ -35,10 +32,7 @@ import com.github.hecodes2much.mlauncher.data.EnumOption
 import com.github.hecodes2much.mlauncher.style.BORDER_SIZE
 import com.github.hecodes2much.mlauncher.style.CORNER_RADIUS
 import com.github.hecodes2much.mlauncher.style.SETTINGS_PADDING
-import com.github.therepoclub.slider.LabelPosition
-import com.github.therepoclub.slider.MaterialSliderDefaults
-import com.github.therepoclub.slider.SliderWithLabel
-import kotlin.math.roundToInt
+import com.smarttoolfactory.slider.*
 
 object SettingsComposable {
 
@@ -538,23 +532,20 @@ object SettingsComposable {
         ) {
             val (text, button) = createRefs()
             var labelProgress by remember { mutableStateOf(number.value.toFloat()) }
-            SliderWithLabel(
+            Text(
+                labelProgress.toInt().toString(),
+                style = SettingsTheme.typography.button,
+                fontSize = fontSize
+            )
+            ColorfulSlider(
                 value = labelProgress,
-                onValueChange = { it-> labelProgress = it },
                 thumbRadius = 5.dp,
                 trackHeight = 5.dp,
+                onValueChange = { it -> labelProgress = it },
                 valueRange = min.toFloat()..max.toFloat(),
-                colors = MaterialSliderDefaults.materialColors(),
-                labelPosition = LabelPosition.Top,
-                label = {
-                    Text(
-                        text = "${labelProgress.toInt()}",
-                        fontSize = fontSize,
-                        modifier = Modifier
-                            .shadow(1.dp, shape = CircleShape),
-                        color = Color.White
-                    )
-                },
+                colors = MaterialSliderDefaults.materialColors(
+                    inactiveTrackColor = SliderBrushColor(color = Color.Transparent),
+                ),
                 modifier = Modifier
                     .padding(end = 62.dp)
             )
