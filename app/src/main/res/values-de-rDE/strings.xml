@@ -20,6 +20,8 @@
     <string name="theme_mode">Theme-Modus</string>
     <string name="app_language">Schnittstellensprache</string>
     <string name="app_text_size">Textgröße</string>
+    <string name="follow_accent_colors"></string>
+    <string name="background_opacity">Deckkraft des Hintergrunds</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Apps automatisch öffnen</string>
@@ -67,7 +69,6 @@
     <string name="open">Öffnen</string>
     <string name="close">Schließen</string>
     <string name="copy">Kopieren</string>
-    <string name="opacity">Opazität</string>
     <string name="hide_roadmap">Fahrplan ausblenden</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Benachrichtigung anzeigen</string>

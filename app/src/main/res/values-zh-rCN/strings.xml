@@ -20,6 +20,8 @@
     <string name="theme_mode">主题模式</string>
     <string name="app_language">应用界面语言</string>
     <string name="app_text_size">文本尺寸</string>
+    <string name="follow_accent_colors"></string>
+    <string name="background_opacity">背景不透明度</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">自动显示键盘</string>
     <string name="auto_open_apps">自动打开应用</string>
@@ -67,7 +69,6 @@
     <string name="open">打开链接</string>
     <string name="close">关闭</string>
     <string name="copy">复制</string>
-    <string name="opacity">不透明度</string>
     <string name="hide_roadmap">隐藏路线图</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">显示通知</string>

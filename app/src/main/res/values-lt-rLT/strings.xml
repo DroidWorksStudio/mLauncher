@@ -20,6 +20,8 @@
     <string name="theme_mode">Temavimo režimas</string>
     <string name="app_language">Sąsajos kalba</string>
     <string name="app_text_size">Tesksto dydis</string>
+    <string name="follow_accent_colors"></string>
+    <string name="background_opacity">Fono neskaidrumas</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Automatinis klaviatūros rodymas</string>
     <string name="auto_open_apps">Automatiškai atidaryti programėlės</string>
@@ -67,7 +69,6 @@
     <string name="open">Atidaryti</string>
     <string name="close">Uždaryti</string>
     <string name="copy">kopija</string>
-    <string name="opacity">Neskaidrumas</string>
     <string name="hide_roadmap">Slėpti planą</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Rodyti pranešimą</string>

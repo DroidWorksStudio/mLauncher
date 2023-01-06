@@ -81,12 +81,18 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         binding.clock.textSize = prefs.textSizeLauncher * 2.5f
         binding.date.textSize = prefs.textSizeLauncher.toFloat()
 
+        val backgroundColor = getHexForOpacity(requireContext(), prefs)
+        binding.mainLayout.setBackgroundColor(backgroundColor)
+        if (prefs.followAccentColors) {
+            val fontColor = getHexFontColor(requireContext())
+            binding.clock.setTextColor(fontColor)
+            binding.date.setTextColor(fontColor)
+            binding.setDefaultLauncher.setTextColor(fontColor)
+        }
     }
 
     override fun onResume() {
         super.onResume()
-        val hex = getHexForOpacity(requireContext(), prefs)
-        binding.mainLayout.setBackgroundColor(hex)
 
         val locale = prefs.language.locale()
         val best12 = getBestDateTimePattern(locale, "hhmma")
@@ -448,6 +454,10 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                         )
                     }
                     gravity = alignment
+                }
+                if (prefs.followAccentColors) {
+                    val fontColor = getHexFontColor(requireContext())
+                    view.setTextColor(fontColor)
                 }
                 binding.homeAppsLayout.addView(view)
             }

@@ -23,6 +23,8 @@
     <string name="theme_mode">Theme mode</string>
     <string name="app_language">Interface Language</string>
     <string name="app_text_size">Text Size</string>
+    <string name="follow_accent_colors"></string>
+    <string name="background_opacity">Background Opacity</string>
 
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
@@ -78,7 +80,6 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string name="copy">copy</string>
-	<string name="opacity">Opacity</string>
     <string name="hide_roadmap">Hide the Roadmap</string>
 
     <!-- Gestures Do Strings -->

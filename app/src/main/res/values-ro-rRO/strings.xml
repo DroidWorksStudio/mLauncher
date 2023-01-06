@@ -20,6 +20,8 @@
     <string name="theme_mode">Mod temă</string>
     <string name="app_language">Limba interfeței</string>
     <string name="app_text_size">Dimensiune text</string>
+    <string name="follow_accent_colors"></string>
+    <string name="background_opacity">Opacitatea fundalului</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Deschideți automat aplicațiile</string>
@@ -67,7 +69,6 @@
     <string name="open">Deschideți</string>
     <string name="close">Inchide</string>
     <string name="copy">copie</string>
-    <string name="opacity">Opacitate</string>
     <string name="hide_roadmap">Ascundeți foaia de parcurs</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Arată notificarea</string>

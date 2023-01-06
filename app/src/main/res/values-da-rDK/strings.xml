@@ -20,6 +20,8 @@
     <string name="theme_mode">Tema tilstand</string>
     <string name="app_language">Grænsefladesprog</string>
     <string name="app_text_size">Tekst Størrelse</string>
+    <string name="follow_accent_colors"></string>
+    <string name="background_opacity">Baggrundsopacitet</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Åbn apps automatisk</string>
@@ -67,7 +69,6 @@
     <string name="open">Åbn</string>
     <string name="close">Luk</string>
     <string name="copy">kopi</string>
-    <string name="opacity">Gennemsigtighed</string>
     <string name="hide_roadmap">Skjul køreplanen</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Vis Notifikation</string>

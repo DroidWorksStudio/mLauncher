@@ -193,9 +193,17 @@ class SettingsFragment : Fragment() {
                             onSelect = { f -> setTextSizeLauncher(f) }
                         )
                     },
+                    { _, onChange ->
+                        SettingsToggle(
+                            title = stringResource(R.string.follow_accent_colors),
+                            fontSize = iconFs,
+                            onChange = onChange,
+                            state = remember { mutableStateOf(prefs.followAccentColors) },
+                        ) { toggleFollowAcent() }
+                    },
                     { open, onChange ->
                         SettingsSliderItem(
-                            title = stringResource(R.string.opacity),
+                            title = stringResource(R.string.background_opacity),
                             fontSize = iconFs,
                             open = open,
                             onChange = onChange,
@@ -550,6 +558,10 @@ class SettingsFragment : Fragment() {
 
     private fun toggleAutoOpenApp() {
         prefs.autoOpenApp = !prefs.autoOpenApp
+    }
+
+    private fun toggleFollowAcent() {
+        prefs.followAccentColors = !prefs.followAccentColors
     }
 
     private fun setTheme(appTheme: Constants.Theme) {
