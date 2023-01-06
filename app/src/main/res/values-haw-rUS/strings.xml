@@ -20,6 +20,8 @@
     <string name="theme_mode">ʻano kumuhana</string>
     <string name="app_language">ʻŌlelo Interface</string>
     <string name="app_text_size">Nui kikokikona</string>
+    <string name="follow_accent_colors">Nā waihoʻoluʻu</string>
+    <string name="background_opacity">Opacity o ka hope</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Hōʻike ʻokoʻa kīwī</string>
     <string name="auto_open_apps">Hāmama nā polokalamu</string>
@@ -67,7 +69,6 @@
     <string name="open">Wehe</string>
     <string name="close">Pani</string>
     <string name="copy">kope</string>
-    <string name="opacity">Opacity</string>
     <string name="hide_roadmap">Hūnā i ka palapala alanui</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Hōʻike Hoʻolaha</string>

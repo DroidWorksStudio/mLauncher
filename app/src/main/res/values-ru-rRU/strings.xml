@@ -20,7 +20,7 @@
     <string name="theme_mode">Режим темы</string>
     <string name="app_language">Язык интерфейса</string>
     <string name="app_text_size">Размер текста</string>
-    <string name="follow_accent_colors"></string>
+    <string name="follow_accent_colors">Акцентные цвета</string>
     <string name="background_opacity">Непрозрачность фона</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>

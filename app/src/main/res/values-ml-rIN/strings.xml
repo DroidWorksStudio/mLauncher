@@ -20,6 +20,8 @@
     <string name="theme_mode">തീം മോഡ്</string>
     <string name="app_language">ഇന്റർഫേസ് ഭാഷ</string>
     <string name="app_text_size">വാചക വലുപ്പം</string>
+    <string name="follow_accent_colors">ആക്സന്റ് നിറങ്ങൾ</string>
+    <string name="background_opacity">പശ്ചാത്തല അതാര്യത</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">ഓട്ടോ ഷോ കീബോർഡ്</string>
     <string name="auto_open_apps">ആപ്പുകൾ സ്വയമേവ തുറക്കുക</string>
@@ -67,7 +69,6 @@
     <string name="open">തുറക്കുക</string>
     <string name="close">അടയ്ക്കുക</string>
     <string name="copy">പകർത്തുക</string>
-    <string name="opacity">അതാര്യത</string>
     <string name="hide_roadmap">റോഡ്മാപ്പ് മറയ്ക്കുക</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">അറിയിപ്പ് കാണിക്കുക</string>

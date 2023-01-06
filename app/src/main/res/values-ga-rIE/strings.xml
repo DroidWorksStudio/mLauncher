@@ -20,6 +20,8 @@
     <string name="theme_mode">Modh téama</string>
     <string name="app_language">Teanga Chomhéadain</string>
     <string name="app_text_size">Méid an Téacs</string>
+    <string name="follow_accent_colors">Dathanna Accent</string>
+    <string name="background_opacity">Teimhneacht Cúlra</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Méarchlár taispeána uathoibríoch</string>
     <string name="auto_open_apps">Aipeanna a oscailt go huathoibríoch</string>
@@ -67,7 +69,6 @@
     <string name="open">Oscail</string>
     <string name="close">Dún</string>
     <string name="copy">cóip</string>
-    <string name="opacity">Teimhneacht</string>
     <string name="hide_roadmap">Folaigh an Treochlár</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Taispeáin Fógra</string>

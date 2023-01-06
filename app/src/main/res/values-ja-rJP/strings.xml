@@ -20,7 +20,7 @@
     <string name="theme_mode">テーマモード</string>
     <string name="app_language">インターフェース言語</string>
     <string name="app_text_size">文字サイズ</string>
-    <string name="follow_accent_colors"></string>
+    <string name="follow_accent_colors">アクセントカラー</string>
     <string name="background_opacity">背景の不透明度</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>

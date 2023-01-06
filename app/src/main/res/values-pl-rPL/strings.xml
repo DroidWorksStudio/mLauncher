@@ -20,7 +20,7 @@
     <string name="theme_mode">Tryb motywu</string>
     <string name="app_language">Język interfejsu</string>
     <string name="app_text_size">Rozmiar tekstu</string>
-    <string name="follow_accent_colors"></string>
+    <string name="follow_accent_colors">Kolory akcentujące</string>
     <string name="background_opacity">Krycie tła</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>

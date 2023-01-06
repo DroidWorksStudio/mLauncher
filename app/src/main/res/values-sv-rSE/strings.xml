@@ -20,7 +20,7 @@
     <string name="theme_mode">Tema läge</string>
     <string name="app_language">Gränssnittets språk</string>
     <string name="app_text_size">Textstorlek</string>
-    <string name="follow_accent_colors"></string>
+    <string name="follow_accent_colors">Accentfärger</string>
     <string name="background_opacity">Bakgrundsopacitet</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>

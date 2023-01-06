@@ -20,7 +20,7 @@
     <string name="theme_mode">Režim motivu</string>
     <string name="app_language">Jazyk rozhraní</string>
     <string name="app_text_size">Velikost textu</string>
-    <string name="follow_accent_colors"></string>
+    <string name="follow_accent_colors">Akcentní barvy</string>
     <string name="background_opacity">Neprůhlednost pozadí</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>

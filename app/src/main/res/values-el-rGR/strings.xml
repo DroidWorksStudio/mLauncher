@@ -20,7 +20,7 @@
     <string name="theme_mode">Λειτουργία θέματος</string>
     <string name="app_language">Γλώσσα Διεπαφής</string>
     <string name="app_text_size">Μέγεθος Κειμένου</string>
-    <string name="follow_accent_colors"></string>
+    <string name="follow_accent_colors">Χρώματα έμφασης</string>
     <string name="background_opacity">Αδιαφάνεια φόντου</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>

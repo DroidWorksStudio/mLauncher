@@ -20,6 +20,8 @@
     <string name="theme_mode">थीम मोड</string>
     <string name="app_language">अंतरफलक भाषा</string>
     <string name="app_text_size">शब्दों का आकर</string>
+    <string name="follow_accent_colors">एक्सेंट रंग</string>
+    <string name="background_opacity">पृष्ठभूमि अस्पष्टता</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">ऑटो शो कीबोर्ड</string>
     <string name="auto_open_apps">स्वतः खुले ऐप्स</string>
@@ -67,7 +69,6 @@
     <string name="open">खुला</string>
     <string name="close">बंद करना</string>
     <string name="copy">प्रतिलिपि</string>
-    <string name="opacity">अस्पष्टता</string>
     <string name="hide_roadmap">रोडमैप छुपाएं</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">अधिसूचना दिखाएं</string>

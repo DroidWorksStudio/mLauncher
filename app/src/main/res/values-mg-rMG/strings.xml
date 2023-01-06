@@ -20,6 +20,8 @@
     <string name="theme_mode">Fomba lohahevitra</string>
     <string name="app_language">Fiteny Interface</string>
     <string name="app_text_size">Haben\'ny soratra</string>
+    <string name="follow_accent_colors">Loko Accent</string>
+    <string name="background_opacity">Opacity ambadika</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Kitendry fampisehoana mandeha ho azy</string>
     <string name="auto_open_apps">Auto misokatra fampiharana</string>
@@ -67,7 +69,6 @@
     <string name="open">Misokatra</string>
     <string name="close">AKAIKY</string>
     <string name="copy">dika mitovy</string>
-    <string name="opacity">hatevin\'ny</string>
     <string name="hide_roadmap">Afeno ny tondrozotra</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Asehoy ny fampahafantarana</string>

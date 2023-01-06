@@ -20,6 +20,8 @@
     <string name="theme_mode">โหมดธีม</string>
     <string name="app_language">ภาษาอินเทอร์เฟซ</string>
     <string name="app_text_size">ขนาดตัวอักษร</string>
+    <string name="follow_accent_colors">เน้นสี</string>
+    <string name="background_opacity">ความทึบของพื้นหลัง</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">แป้นพิมพ์แสดงอัตโนมัติ</string>
     <string name="auto_open_apps">เปิดแอปอัตโนมัติ</string>
@@ -67,7 +69,6 @@
     <string name="open">เปิด</string>
     <string name="close">ปิด</string>
     <string name="copy">สำเนา</string>
-    <string name="opacity">ความทึบ</string>
     <string name="hide_roadmap">ซ่อนแผนที่ถนน</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">แสดงการแจ้งเตือน</string>

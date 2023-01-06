@@ -20,6 +20,8 @@
     <string name="theme_mode">थिम मोड</string>
     <string name="app_language">इन्टरफेस भाषा</string>
     <string name="app_text_size">पाठ आकार</string>
+    <string name="follow_accent_colors">एक्सेन्ट रङहरू</string>
+    <string name="background_opacity">पृष्ठभूमि अस्पष्टता</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">किबोर्ड स्वतः देखाउनुहोस्</string>
     <string name="auto_open_apps">स्वतः खोल्ने एपहरू</string>
@@ -67,7 +69,6 @@
     <string name="open">खोल्नुहोस्</string>
     <string name="close">बन्द गर्नुहोस्</string>
     <string name="copy">कापी</string>
-    <string name="opacity">अस्पष्टता</string>
     <string name="hide_roadmap">रोडम्याप लुकाउनुहोस्</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">सूचना देखाउनुहोस्</string>

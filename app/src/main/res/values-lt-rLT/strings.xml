@@ -20,7 +20,7 @@
     <string name="theme_mode">Temavimo režimas</string>
     <string name="app_language">Sąsajos kalba</string>
     <string name="app_text_size">Tesksto dydis</string>
-    <string name="follow_accent_colors"></string>
+    <string name="follow_accent_colors">Akcentinės spalvos</string>
     <string name="background_opacity">Fono neskaidrumas</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Automatinis klaviatūros rodymas</string>

@@ -20,7 +20,7 @@
     <string name="theme_mode">Téma mód</string>
     <string name="app_language">Interfész nyelv</string>
     <string name="app_text_size">Szöveg mérete</string>
-    <string name="follow_accent_colors"></string>
+    <string name="follow_accent_colors">Kiemelt színek</string>
     <string name="background_opacity">Háttér átlátszatlanság</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Autókiállítás billentyűzet</string>
