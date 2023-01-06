@@ -20,6 +20,8 @@
     <string name="theme_mode">Modaliteti i temës</string>
     <string name="app_language">Gjuha e ndërfaqes</string>
     <string name="app_text_size">Madhësia e tekstit</string>
+    <string name="follow_accent_colors">Ngjyrat e theksit</string>
+    <string name="background_opacity">Opaciteti i sfondit</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Tastiera e shfaqjes automatike</string>
     <string name="auto_open_apps">Hapja automatike e aplikacioneve</string>
@@ -67,7 +69,6 @@
     <string name="open">Hapur</string>
     <string name="close">Mbylle</string>
     <string name="copy">kopje</string>
-    <string name="opacity">Opaciteti</string>
     <string name="hide_roadmap">Fshih udhërrëfyesin</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Shfaq njoftimin</string>

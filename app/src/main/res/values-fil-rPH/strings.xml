@@ -20,6 +20,8 @@
     <string name="theme_mode">Mode ng tema</string>
     <string name="app_language">Wika ng Interface</string>
     <string name="app_text_size">Laki ng Teksto</string>
+    <string name="follow_accent_colors">Mga Kulay ng Accent</string>
+    <string name="background_opacity">Opacity ng Background</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show na keyboard</string>
     <string name="auto_open_apps">Awtomatikong buksan ang mga app</string>
@@ -67,7 +69,6 @@
     <string name="open">Bukas</string>
     <string name="close">Isara</string>
     <string name="copy">kopya</string>
-    <string name="opacity">Opacity</string>
     <string name="hide_roadmap">Itago ang Roadmap</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Ipakita ang Notification</string>

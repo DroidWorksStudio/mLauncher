@@ -20,6 +20,8 @@
     <string name="theme_mode">Теми</string>
     <string name="app_language">Мова інтерфейсу</string>
     <string name="app_text_size">Розмір тексту</string>
+    <string name="follow_accent_colors">Акцентні кольори</string>
+    <string name="background_opacity">Непрозорість фону</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Автоматично відкривати додатки</string>
@@ -67,7 +69,6 @@
     <string name="open">Відкриті</string>
     <string name="close">Закрити</string>
     <string name="copy">копія</string>
-    <string name="opacity">Непрозорість</string>
     <string name="hide_roadmap">Приховати дорожню карту</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Показувати сповіщення</string>

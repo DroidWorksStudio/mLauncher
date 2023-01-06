@@ -20,6 +20,8 @@
     <string name="theme_mode">Téma mód</string>
     <string name="app_language">Interfész nyelv</string>
     <string name="app_text_size">Szöveg mérete</string>
+    <string name="follow_accent_colors">Kiemelt színek</string>
+    <string name="background_opacity">Háttér átlátszatlanság</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Autókiállítás billentyűzet</string>
     <string name="auto_open_apps">Automatikusan megnyíló alkalmazások</string>
@@ -67,7 +69,6 @@
     <string name="open">Nyissa meg a  címet.</string>
     <string name="close">Zárja be a</string>
     <string name="copy">másolat</string>
-    <string name="opacity">Átlátszatlanság</string>
     <string name="hide_roadmap">Az ütemterv elrejtése</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Értesítés megjelenítése</string>

@@ -11,8 +11,8 @@ android {
         applicationId = "app.mlauncher"
         minSdk = 23
         targetSdk = 33
-        versionCode = 44
-        versionName = "0.4.4"
+        versionCode = 45
+        versionName = "0.4.5"
     }
 
     buildTypes {
@@ -61,8 +61,13 @@ android {
         kotlinCompilerExtensionVersion = "1.3.2"
     }
 
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
 
     lint {

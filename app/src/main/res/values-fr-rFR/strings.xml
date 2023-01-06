@@ -20,6 +20,8 @@
     <string name="theme_mode">Mode thème</string>
     <string name="app_language">Langue de l\'interface</string>
     <string name="app_text_size">Taille du texte</string>
+    <string name="follow_accent_colors">Couleurs d\'accentuation</string>
+    <string name="background_opacity">Opacité du fond</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Ouvrir automatiquement les applications</string>
@@ -50,7 +52,7 @@
     <string name="center">Centrer</string>
     <string name="dark">Sombre</string>
     <string name="light">Lumière</string>
-    <string name="settings">Réglages</string>
+    <string name="settings">Paramètres</string>
     <string name="lang_system">Système</string>
     <string name="system_default">Système</string>
     <string name="hide">Cacher</string>
@@ -67,7 +69,6 @@
     <string name="open">Ouvert</string>
     <string name="close">Fermer</string>
     <string name="copy">copie</string>
-    <string name="opacity">Opacité</string>
     <string name="hide_roadmap">Masquer la feuille de route</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Afficher la notification</string>

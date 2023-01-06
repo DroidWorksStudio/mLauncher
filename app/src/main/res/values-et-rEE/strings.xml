@@ -20,6 +20,8 @@
     <string name="theme_mode">Teemarežiim</string>
     <string name="app_language">Kasutajaliidese keel</string>
     <string name="app_text_size">Teksti suurus</string>
+    <string name="follow_accent_colors">Aktsentvärvid</string>
+    <string name="background_opacity">Tausta läbipaistmatus</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Autoesituse klaviatuur</string>
     <string name="auto_open_apps">Automaatselt avatud rakendused</string>
@@ -67,7 +69,6 @@
     <string name="open">Avatud</string>
     <string name="close">Sulge</string>
     <string name="copy">kopeerida</string>
-    <string name="opacity">Läbipaistmatus</string>
     <string name="hide_roadmap">Peida teekaart</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Näita teatist</string>

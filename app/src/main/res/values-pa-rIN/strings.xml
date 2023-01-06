@@ -20,6 +20,8 @@
     <string name="theme_mode">ਥੀਮ ਮੋਡ</string>
     <string name="app_language">ਇੰਟਰਫੇਸ ਭਾਸ਼ਾ</string>
     <string name="app_text_size">ਟੈਕਸਟ ਦਾ ਆਕਾਰ</string>
+    <string name="follow_accent_colors">ਐਕਸੈਂਟ ਰੰਗ</string>
+    <string name="background_opacity">ਬੈਕਗ੍ਰਾਊਂਡ ਓਪੇਸਿਟੀ</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">ਆਟੋ ਸ਼ੋਅ ਕੀਬੋਰਡ</string>
     <string name="auto_open_apps">ਆਟੋ ਓਪਨ ਐਪਸ</string>
@@ -67,7 +69,6 @@
     <string name="open">ਖੋਲ੍ਹੋ</string>
     <string name="close">ਬੰਦ ਕਰੋ</string>
     <string name="copy">ਕਾਪੀ</string>
-    <string name="opacity">ਧੁੰਦਲਾਪਨ</string>
     <string name="hide_roadmap">ਰੋਡਮੈਪ ਨੂੰ ਲੁਕਾਓ</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">ਸੂਚਨਾ ਦਿਖਾਓ</string>

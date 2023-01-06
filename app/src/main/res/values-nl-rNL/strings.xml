@@ -20,6 +20,8 @@
     <string name="theme_mode">Thema modus</string>
     <string name="app_language">Interface taal</string>
     <string name="app_text_size">Tekstgrootte</string>
+    <string name="follow_accent_colors">Accentkleuren</string>
+    <string name="background_opacity">Opaciteit van de achtergrond</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Apps automatisch openen</string>
@@ -67,7 +69,6 @@
     <string name="open">Open</string>
     <string name="close">Afsluiten</string>
     <string name="copy">kopiëren</string>
-    <string name="opacity">ondoorzichtigheid</string>
     <string name="hide_roadmap">Verberg de routekaart</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Toon melding</string>

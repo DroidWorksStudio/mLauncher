@@ -20,6 +20,8 @@
     <string name="theme_mode">موضوع موڊ</string>
     <string name="app_language">انٽرفيس ٻولي</string>
     <string name="app_text_size">متن جي ماپ</string>
+    <string name="follow_accent_colors">تلفظ رنگ</string>
+    <string name="background_opacity">پس منظر جي شفافيت</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">خودڪار ڏيکاريو ڪيبورڊ</string>
     <string name="auto_open_apps">خودڪار کوليو ايپس</string>
@@ -67,7 +69,6 @@
     <string name="open">کليل</string>
     <string name="close">بند</string>
     <string name="copy">ڪاپي</string>
-    <string name="opacity">اوپيسيٽي</string>
     <string name="hide_roadmap">روڊ ميپ لڪايو</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">نوٽيفڪيشن ڏيکاريو</string>

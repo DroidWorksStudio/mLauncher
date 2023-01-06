@@ -20,6 +20,8 @@
     <string name="theme_mode">Režim motivu</string>
     <string name="app_language">Jazyk rozhraní</string>
     <string name="app_text_size">Velikost textu</string>
+    <string name="follow_accent_colors">Akcentní barvy</string>
+    <string name="background_opacity">Neprůhlednost pozadí</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Automatické otevření aplikací</string>
@@ -67,7 +69,6 @@
     <string name="open">Otevřít</string>
     <string name="close">Zavřít</string>
     <string name="copy">kopírovat</string>
-    <string name="opacity">Neprůhlednost</string>
     <string name="hide_roadmap">Skryjte plán</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Zobrazit oznámení</string>

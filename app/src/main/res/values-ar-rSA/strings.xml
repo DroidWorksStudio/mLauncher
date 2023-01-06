@@ -20,6 +20,8 @@
     <string name="theme_mode">وضع السمة</string>
     <string name="app_language">لغة الواجهة</string>
     <string name="app_text_size">حجم النص</string>
+    <string name="follow_accent_colors">ألوان مميزة</string>
+    <string name="background_opacity">شفافية الخلفية</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">فتح التطبيقات تلقائياً</string>
@@ -67,7 +69,6 @@
     <string name="open">فتح</string>
     <string name="close">أغلق</string>
     <string name="copy">ينسخ</string>
-    <string name="opacity">التعتيم</string>
     <string name="hide_roadmap">إخفاء خارطة الطريق</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">إظهار الإشعارات</string>

@@ -20,6 +20,8 @@
     <string name="theme_mode">テーマモード</string>
     <string name="app_language">インターフェース言語</string>
     <string name="app_text_size">文字サイズ</string>
+    <string name="follow_accent_colors">アクセントカラー</string>
+    <string name="background_opacity">背景の不透明度</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">アプリを自動的に開く</string>
@@ -67,7 +69,6 @@
     <string name="open">開く</string>
     <string name="close">閉じる</string>
     <string name="copy">コピー</string>
-    <string name="opacity">不透明度</string>
     <string name="hide_roadmap">ロードマップを隠す</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">通知を表示</string>

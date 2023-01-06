@@ -377,30 +377,25 @@ fun loadFile(activity: Activity) {
 
 fun getHexForOpacity(context: Context, prefs: Prefs): Int {
     var setColor = prefs.opacityNum
-    var isDarkMode = prefs.appTheme.toString()
 
-    val accentColor = getAccentColor(context)
+    val accentColor = getBackgroundColor(context)
     val hexAccentColor = java.lang.String.format("%06X", 0xFFFFFF and accentColor)
 
     var hex = Integer.toHexString(setColor).toString()
     if (hex.length < 2)
         hex = "$hex$hex"
 
-    if (isDarkMode == "System") {
-        return if (isDarkMode(context)) {
-            android.graphics.Color.parseColor("#${hex}$hexAccentColor")
-        } else {
-            android.graphics.Color.parseColor("#${hex}$hexAccentColor")
-        }
-    }
-    return if (isDarkMode == "Light") {
-        android.graphics.Color.parseColor("#${hex}$hexAccentColor")
-    } else {
-        android.graphics.Color.parseColor("#${hex}$hexAccentColor")
-    }
+    return android.graphics.Color.parseColor("#${hex}$hexAccentColor")
 }
 
-private fun getAccentColor(context: Context): Int {
+fun getHexFontColor(context: Context): Int {
+    val accentColor = getAccentColor(context)
+    val hexAccentColor = java.lang.String.format("#%06X", 0xFFFFFF and accentColor)
+
+    return android.graphics.Color.parseColor(hexAccentColor)
+}
+
+private fun getBackgroundColor(context: Context): Int {
     val typedValue = TypedValue()
     val contextThemeWrapper = ContextThemeWrapper(
         context,
@@ -413,7 +408,15 @@ private fun getAccentColor(context: Context): Int {
     return typedValue.data
 }
 
-private fun isDarkMode(context: Context): Boolean {
-    val darkModeFlag = context.resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
-    return darkModeFlag == Configuration.UI_MODE_NIGHT_YES
+private fun getAccentColor(context: Context): Int {
+    val typedValue = TypedValue()
+    val contextThemeWrapper = ContextThemeWrapper(
+        context,
+        R.style.Theme_DeviceDefault_DayNight
+    )
+    contextThemeWrapper.theme.resolveAttribute(
+        R.attr.colorAccent,
+        typedValue, true
+    )
+    return typedValue.data
 }

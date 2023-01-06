@@ -20,6 +20,8 @@
     <string name="theme_mode">Modalità tema</string>
     <string name="app_language">Lingua Dell\'Interfaccia</string>
     <string name="app_text_size">Dimensione Testo</string>
+    <string name="follow_accent_colors">Colori accentati</string>
+    <string name="background_opacity">Opacità dello sfondo</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Apri automaticamente le app</string>
@@ -67,7 +69,6 @@
     <string name="open">Apri</string>
     <string name="close">Chiudi</string>
     <string name="copy">copia</string>
-    <string name="opacity">Opacità</string>
     <string name="hide_roadmap">Nascondi la tabella di marcia</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Mostra Notifiche</string>

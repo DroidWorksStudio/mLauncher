@@ -20,6 +20,8 @@
     <string name="theme_mode">Mode tema</string>
     <string name="app_language">Bahasa Antarmuka</string>
     <string name="app_text_size">Ukuran Teks</string>
+    <string name="follow_accent_colors">Warna Aksen</string>
+    <string name="background_opacity">Opasitas Latar Belakang</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Keyboard pertunjukan otomatis</string>
     <string name="auto_open_apps">Aplikasi terbuka otomatis</string>
@@ -67,7 +69,6 @@
     <string name="open">Terbuka</string>
     <string name="close">Tutup</string>
     <string name="copy">salinan</string>
-    <string name="opacity">Kegelapan</string>
     <string name="hide_roadmap">Sembunyikan Peta Jalan</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Tampilkan Pemberitahuan</string>

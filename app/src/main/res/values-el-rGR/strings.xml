@@ -20,6 +20,8 @@
     <string name="theme_mode">Λειτουργία θέματος</string>
     <string name="app_language">Γλώσσα Διεπαφής</string>
     <string name="app_text_size">Μέγεθος Κειμένου</string>
+    <string name="follow_accent_colors">Χρώματα έμφασης</string>
+    <string name="background_opacity">Αδιαφάνεια φόντου</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Αυτόματο άνοιγμα εφαρμογών</string>
@@ -67,7 +69,6 @@
     <string name="open">Άνοιγμα</string>
     <string name="close">Κλείσιμο</string>
     <string name="copy">αντίγραφο</string>
-    <string name="opacity">Αδιαφάνεια</string>
     <string name="hide_roadmap">Απόκρυψη του Οδικού Χάρτη</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Εμφάνιση Ειδοποίησης</string>

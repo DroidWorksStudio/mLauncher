@@ -20,6 +20,8 @@
     <string name="theme_mode">حالت تم</string>
     <string name="app_language">زبان رابط</string>
     <string name="app_text_size">اندازه متن</string>
+    <string name="follow_accent_colors">رنگ های تاکیدی</string>
+    <string name="background_opacity">کدورت پس زمینه</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">صفحه کلید نمایش خودکار</string>
     <string name="auto_open_apps">باز کردن خودکار برنامه ها</string>
@@ -67,7 +69,6 @@
     <string name="open">باز کن</string>
     <string name="close">نزدیک</string>
     <string name="copy">کپی 🀄</string>
-    <string name="opacity">کدورت</string>
     <string name="hide_roadmap">پنهان کردن نقشه راه</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">نمایش اعلان</string>

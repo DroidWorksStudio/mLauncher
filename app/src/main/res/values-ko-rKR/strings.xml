@@ -20,6 +20,8 @@
     <string name="theme_mode">Theme mode</string>
     <string name="app_language">Interface Language</string>
     <string name="app_text_size">Text Size</string>
+    <string name="follow_accent_colors">악센트 색상</string>
+    <string name="background_opacity">배경 불투명도</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Auto open apps</string>
@@ -50,7 +52,7 @@
     <string name="center">Center</string>
     <string name="dark">Dark</string>
     <string name="light">Light</string>
-    <string name="settings">Settings</string>
+    <string name="settings">설정</string>
     <string name="lang_system">System</string>
     <string name="system_default">System</string>
     <string name="hide">Hide</string>
@@ -67,7 +69,6 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string name="copy">복사</string>
-    <string name="opacity">불투명</string>
     <string name="hide_roadmap">로드맵 숨기기</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Show Notification</string>

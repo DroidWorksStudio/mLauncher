@@ -20,6 +20,8 @@
     <string name="theme_mode">Tema modu</string>
     <string name="app_language">Arayüz Dili</string>
     <string name="app_text_size">Metin Boyutu</string>
+    <string name="follow_accent_colors">Vurgu Renkleri</string>
+    <string name="background_opacity">Arka Plan Opaklığı</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Klavye\'yi otomatik göster</string>
     <string name="auto_open_apps">Uygulamaları otomatik aç</string>
@@ -67,7 +69,6 @@
     <string name="open">Aç</string>
     <string name="close">Kapat</string>
     <string name="copy">Kopyala</string>
-    <string name="opacity">Opaklık</string>
     <string name="hide_roadmap">Yol Haritasını Gizle</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Bildirimi Göster</string>

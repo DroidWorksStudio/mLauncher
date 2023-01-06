@@ -20,6 +20,8 @@
     <string name="theme_mode">Thema Modus</string>
     <string name="app_language">Interface Sprooch</string>
     <string name="app_text_size">Text Gréisst</string>
+    <string name="follow_accent_colors">Akzent Faarwen</string>
+    <string name="background_opacity">Hannergrond Opazitéit</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto Show Keyboard</string>
     <string name="auto_open_apps">Automatesch opmaachen Apps</string>
@@ -67,7 +69,6 @@
     <string name="open">Oppen</string>
     <string name="close">Zoumaachen</string>
     <string name="copy">kopéieren</string>
-    <string name="opacity">Opazitéit</string>
     <string name="hide_roadmap">Verstoppt de Fahrplang</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Show Notifikatioun</string>
