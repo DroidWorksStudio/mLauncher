@@ -61,7 +61,7 @@ val LocalReplacementColor = staticCompositionLocalOf {
 }
 
 val fontFamily = FontFamily(
-    Font(resId = R.font.my_font_regular),
+    Font(resId = R.font.roboto),
 )
 
 @Composable

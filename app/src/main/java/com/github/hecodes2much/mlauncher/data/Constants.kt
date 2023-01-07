@@ -232,8 +232,8 @@ object Constants {
         ShowAppList,
         OpenQuickSettings,
         ShowRecents,
-        openPowerDialog,
-        takeScreenShot,
+        OpenPowerDialog,
+        TakeScreenShot,
         ShowNotification;
 
         @Composable
@@ -245,8 +245,8 @@ object Constants {
                 ShowAppList -> stringResource(R.string.show_app_list)
                 OpenQuickSettings -> stringResource(R.string.open_quick_settings)
                 ShowRecents -> stringResource(R.string.show_recents)
-                openPowerDialog -> stringResource(R.string.open_power_dialog)
-                takeScreenShot -> stringResource(R.string.take_a_screenshot)
+                OpenPowerDialog -> stringResource(R.string.open_power_dialog)
+                TakeScreenShot -> stringResource(R.string.take_a_screenshot)
                 Disabled -> stringResource(R.string.disabled)
             }
         }

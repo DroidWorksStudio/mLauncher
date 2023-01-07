@@ -14,6 +14,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.content.res.ResourcesCompat
 import androidx.core.os.bundleOf
 import androidx.core.view.children
 import androidx.core.view.size
@@ -59,7 +60,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         val hex = getHexForOpacity(requireContext(), prefs)
         binding.mainLayout.setBackgroundColor(hex)
 
-
         viewModel = activity?.run {
             ViewModelProvider(this)[MainViewModel::class.java]
         } ?: throw Exception("Invalid Activity")
@@ -80,6 +80,11 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
         binding.clock.textSize = prefs.textSizeLauncher * 2.5f
         binding.date.textSize = prefs.textSizeLauncher.toFloat()
+
+        val typeface = ResourcesCompat.getFont(requireActivity(), R.font.roboto)
+        binding.clock.typeface = typeface
+        binding.date.typeface = typeface
+        binding.setDefaultLauncher.typeface = typeface
 
         val backgroundColor = getHexForOpacity(requireContext(), prefs)
         binding.mainLayout.setBackgroundColor(backgroundColor)
@@ -126,7 +131,10 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     else -> handleOtherAction(action)
                 }
             }
-            R.id.setDefaultLauncher -> viewModel.resetDefaultLauncherApp(requireContext())
+            R.id.setDefaultLauncher ->
+            {
+                viewModel.resetDefaultLauncherApp(requireContext())
+            }
             else -> {
                 try { // Launch app
                     val appLocation = view.id
@@ -291,8 +299,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             Action.OpenApp -> {} // this should be handled in the respective onSwipe[Up,Down,Right,Left] functions
             Action.OpenQuickSettings -> expandQuickSettings(requireContext())
             Action.ShowRecents -> initActionService(requireContext())?.showRecents()
-            Action.openPowerDialog -> initActionService(requireContext())?.openPowerDialog()
-            Action.takeScreenShot -> initActionService(requireContext())?.takeScreenShot()
+            Action.OpenPowerDialog -> initActionService(requireContext())?.openPowerDialog()
+            Action.TakeScreenShot -> initActionService(requireContext())?.takeScreenShot()
             Action.Disabled -> {}
         }
     }
@@ -455,6 +463,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     }
                     gravity = alignment
                 }
+                val typeface = ResourcesCompat.getFont(requireActivity(), R.font.roboto)
+                typeface.also { view.typeface = it }
                 if (prefs.followAccentColors) {
                     val fontColor = getHexFontColor(requireContext())
                     view.setTextColor(fontColor)

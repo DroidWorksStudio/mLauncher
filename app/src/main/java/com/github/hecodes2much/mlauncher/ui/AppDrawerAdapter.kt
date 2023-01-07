@@ -12,6 +12,7 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.github.hecodes2much.mlauncher.R
 import com.github.hecodes2much.mlauncher.data.AppModel
@@ -40,6 +41,8 @@ class AppDrawerAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         binding = AdapterAppDrawerBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         prefs = Prefs(parent.context)
+        val typeface = ResourcesCompat.getFont(parent.context, R.font.roboto)
+        binding.appTitle.typeface = typeface
         binding.appTitle.textSize = prefs.textSizeLauncher.toFloat()
         return ViewHolder(binding)
     }
