@@ -117,11 +117,11 @@ As per version 0.4.0. Click on any image to enlarge it. To know more, explore an
 <div align='center'>
 
 <a href='https://github.com/HeCodes2Much/mLauncher/releases/latest'><img src='https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white'></a>
-<a href='https://f-droid.org/packages/com.github.hecodes2much.mlauncher'><img src='https://img.shields.io/badge/F_Droid-1976d2?style=for-the-badge&logo=f-droid&logoColor=white'></a>
+<a href='https://f-droid.org/packages/app.mlauncher'><img src='https://img.shields.io/badge/F_Droid-1976d2?style=for-the-badge&logo=f-droid&logoColor=white'></a>
 
 </div>
 
-- This app is available on [F-Droid](https://f-droid.org/packages/com.github.hecodes2much.mlauncher/) & [Github](https://github.com/HeCodes2Much/mLauncher/releases/)
+- This app is available on [F-Droid](https://f-droid.org/packages/app.mlauncher/) & [Github](https://github.com/HeCodes2Much/mLauncher/releases/)
 - The latest stable version is on the [`main`](https://github.com/HeCodes2Much/mLauncher/tree/main) branch. You can clone it and build the app yourself.
 - A github action should build an apk for every [release](https://github.com/HeCodes2Much/mLauncher/releases).
 - The **original app** is also available on [Play Store](https://play.google.com/store/apps/details?id=app.olauncher), [F-Droid](https://f-droid.org/fr/packages/app.olauncher/) & [Github](https://github.com/tanujnotes/Olauncher).

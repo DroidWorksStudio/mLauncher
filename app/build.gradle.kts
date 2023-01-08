@@ -107,13 +107,13 @@ dependencies {
     implementation("androidx.compose.animation:animation:1.3.2")
     implementation("androidx.navigation:navigation-ui-ktx:2.5.3")
 
-    implementation("com.google.code.gson:gson:2.10")
+    implementation("com.google.code.gson:gson:2.10.1")
 
-    val androidxTestEspresso = "3.5.0"
+    val androidxTestEspresso = "3.5.1"
     androidTestImplementation("androidx.test.espresso:espresso-core:$androidxTestEspresso")
     androidTestImplementation("androidx.test.espresso:espresso-contrib:$androidxTestEspresso")
     implementation("androidx.test.espresso:espresso-idling-resource:$androidxTestEspresso")
-    implementation("androidx.test.espresso:espresso-idling-resource:3.5.0")
+    implementation("androidx.test.espresso:espresso-idling-resource:$androidxTestEspresso")
 
     // Test rules and transitive dependencies:
     androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.3.2")
@@ -122,7 +122,7 @@ dependencies {
     androidTestImplementation("androidx.navigation:navigation-testing:2.5.3")
     debugImplementation("androidx.fragment:fragment-testing:1.5.5")
     implementation("androidx.test:core-ktx:1.5.0")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.0")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     androidTestImplementation("androidx.test:runner:1.5.2")
     androidTestImplementation("androidx.test:rules:1.5.0")
 }
