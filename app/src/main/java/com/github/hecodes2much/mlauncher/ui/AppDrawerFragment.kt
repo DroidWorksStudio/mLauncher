@@ -96,7 +96,9 @@ class AppDrawerFragment : Fragment() {
         val searchTextView = binding.search.findViewById<TextView>(R.id.search_src_text)
         if (searchTextView != null) searchTextView.gravity = gravity
         val typeface = ResourcesCompat.getFont(requireActivity(), R.font.roboto)
+        val textSize = prefs.textSizeLauncher.toFloat()
         searchTextView.typeface = typeface
+        searchTextView.textSize = textSize
 
 
         initViewModel(flag, viewModel, appAdapter)

@@ -4,7 +4,7 @@
 
 [Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.4.4...HEAD)
 
-**Merged pull requests:**
+**Implemented enhancements:**
 
 - Feature/more friendly colors [\#159](https://github.com/HeCodes2Much/mLauncher/pull/159) ([The-Repo-Club](https://github.com/The-Repo-Club))
 
