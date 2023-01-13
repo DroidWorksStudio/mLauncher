@@ -69,7 +69,6 @@
     <string name="open">Bukas</string>
     <string name="close">Isara</string>
     <string name="copy">kopya</string>
-    <string name="hide_roadmap">Itago ang Roadmap</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Ipakita ang Notification</string>
     <string name="show_app_list">Ipakita ang Listahan ng App</string>
@@ -86,7 +85,6 @@
     <string name="store_backup">Store Backup</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Lahat ng app</string>
-    <string name="road_map">Roadmap</string>
     <string name="drawer_list_empty_hint">Walang nakitang app</string>
     <string name="long_press_for_settings">Pindutin nang matagal kahit saan para sa mga setting</string>
     <string name="swipe_up_for_apps">Mag-swipe pataas para sa lahat ng app</string>

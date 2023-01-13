@@ -69,7 +69,6 @@
     <string name="open">Atidaryti</string>
     <string name="close">Uždaryti</string>
     <string name="copy">kopija</string>
-    <string name="hide_roadmap">Slėpti planą</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Rodyti pranešimą</string>
     <string name="show_app_list">Rodyti programėlių sąrašą</string>
@@ -86,7 +85,6 @@
     <string name="store_backup">Išsaugoti atsarginę kopiją</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Visos programėlės</string>
-    <string name="road_map">Planas</string>
     <string name="drawer_list_empty_hint">Nerasta jokių programėlių</string>
     <string name="long_press_for_settings">Ilgai paspauskite bet kur, kad pamatytumėte nustatymus</string>
     <string name="swipe_up_for_apps">Braukite aukštyn, kad pamatytumėte visas programėlės</string>

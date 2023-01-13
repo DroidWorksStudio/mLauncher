@@ -69,7 +69,6 @@
     <string name="open">Hapur</string>
     <string name="close">Mbylle</string>
     <string name="copy">kopje</string>
-    <string name="hide_roadmap">Fshih udhërrëfyesin</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Shfaq njoftimin</string>
     <string name="show_app_list">Shfaq listën e aplikacioneve</string>
@@ -86,7 +85,6 @@
     <string name="store_backup">Rezervimi i dyqanit</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Të gjitha aplikacionet</string>
-    <string name="road_map">Udhërrëfyes</string>
     <string name="drawer_list_empty_hint">Nuk u gjet asnjë aplikacion</string>
     <string name="long_press_for_settings">Shtypni gjatë kudo për cilësimet</string>
     <string name="swipe_up_for_apps">Rrëshqitni lart për të gjitha aplikacionet</string>

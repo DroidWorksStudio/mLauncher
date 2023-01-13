@@ -69,7 +69,6 @@
     <string name="open">เปิด</string>
     <string name="close">ปิด</string>
     <string name="copy">สำเนา</string>
-    <string name="hide_roadmap">ซ่อนแผนที่ถนน</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">แสดงการแจ้งเตือน</string>
     <string name="show_app_list">แสดงรายการแอพ</string>
@@ -86,7 +85,6 @@
     <string name="store_backup">เก็บข้อมูลสำรอง</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">แอพทั้งหมด</string>
-    <string name="road_map">แผนงาน</string>
     <string name="drawer_list_empty_hint">ไม่พบแอป</string>
     <string name="long_press_for_settings">กดที่ใดก็ได้ค้างไว้เพื่อตั้งค่า</string>
     <string name="swipe_up_for_apps">ปัดขึ้นสำหรับแอปทั้งหมด</string>

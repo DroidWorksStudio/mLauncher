@@ -69,7 +69,6 @@
     <string name="open">Oppen</string>
     <string name="close">Zoumaachen</string>
     <string name="copy">kopéieren</string>
-    <string name="hide_roadmap">Verstoppt de Fahrplang</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Show Notifikatioun</string>
     <string name="show_app_list">Show App Lëscht</string>
@@ -86,7 +85,6 @@
     <string name="store_backup">Store Backupsatellit</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">All Apps</string>
-    <string name="road_map">Roadmap</string>
     <string name="drawer_list_empty_hint">Keng Apps fonnt</string>
     <string name="long_press_for_settings">Laang Press iwwerall fir Astellungen</string>
     <string name="swipe_up_for_apps">Swipe up fir all Apps</string>

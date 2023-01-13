@@ -69,7 +69,6 @@
     <string name="open">Otvoren</string>
     <string name="close">Zatvoriti</string>
     <string name="copy">kopirati</string>
-    <string name="hide_roadmap">Sakrij plan puta</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Prikaži obavijest</string>
     <string name="show_app_list">Prikaži popis aplikacija</string>
@@ -86,7 +85,6 @@
     <string name="store_backup">Spremi sigurnosnu kopiju</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Sve aplikacije</string>
-    <string name="road_map">Putokaz</string>
     <string name="drawer_list_empty_hint">Nema pronađenih aplikacija</string>
     <string name="long_press_for_settings">Dugo pritisnite bilo gdje za postavke</string>
     <string name="swipe_up_for_apps">Prijeđite prstom prema gore za sve aplikacije</string>

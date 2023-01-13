@@ -69,7 +69,6 @@
     <string name="open">開く</string>
     <string name="close">閉じる</string>
     <string name="copy">コピー</string>
-    <string name="hide_roadmap">ロードマップを隠す</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">通知を表示</string>
     <string name="show_app_list">アプリ一覧を表示</string>
@@ -86,7 +85,6 @@
     <string name="store_backup">ストアバックアップ</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">すべてのアプリ</string>
-    <string name="road_map">ロードマップ</string>
     <string name="drawer_list_empty_hint">アプリが見つかりません</string>
     <string name="long_press_for_settings">設定用に長押ししてください</string>
     <string name="swipe_up_for_apps">すべてのアプリで上にスワイプ</string>

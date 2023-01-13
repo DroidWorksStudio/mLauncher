@@ -69,7 +69,6 @@
     <string name="open">Відкриті</string>
     <string name="close">Закрити</string>
     <string name="copy">копія</string>
-    <string name="hide_roadmap">Приховати дорожню карту</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Показувати сповіщення</string>
     <string name="show_app_list">Показати список додатків</string>
@@ -86,7 +85,6 @@
     <string name="store_backup">Резервне копіювання магазину</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Всі програми</string>
-    <string name="road_map">План-графік</string>
     <string name="drawer_list_empty_hint">Додатки не знайдені</string>
     <string name="long_press_for_settings">Натисніть і утримуйте будь-де для налаштувань</string>
     <string name="swipe_up_for_apps">Проведіть пальцем угору для всіх програм</string>

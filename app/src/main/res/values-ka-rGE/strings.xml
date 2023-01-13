@@ -69,7 +69,6 @@
     <string name="open">გახსენით</string>
     <string name="close">დახურვა</string>
     <string name="copy">კოპირება</string>
-    <string name="hide_roadmap">დამალეთ საგზაო რუკა</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">შეტყობინების ჩვენება</string>
     <string name="show_app_list">აპლიკაციების სიის ჩვენება</string>
@@ -86,7 +85,6 @@
     <string name="store_backup">შენახვის სარეზერვო</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">ყველა აპლიკაცია</string>
-    <string name="road_map">საგზაო რუკა</string>
     <string name="drawer_list_empty_hint">აპები ვერ მოიძებნა</string>
     <string name="long_press_for_settings">დიდხანს დააჭირეთ სადმე პარამეტრებისთვის</string>
     <string name="swipe_up_for_apps">გადაფურცლეთ ზემოთ ყველა აპისთვის</string>

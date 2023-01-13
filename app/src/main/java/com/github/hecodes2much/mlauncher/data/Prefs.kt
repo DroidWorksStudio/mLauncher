@@ -186,10 +186,6 @@ class Prefs(val context: Context) {
         get() = prefs.getBoolean(HOME_LOCKED, false)
         set(value) = prefs.edit().putBoolean(HOME_LOCKED, value).apply()
 
-    var roadmapHidden: Boolean
-        get() = prefs.getBoolean(HIDE_ROADMAP, false)
-        set(value) = prefs.edit().putBoolean(HIDE_ROADMAP, value).apply()
-
     var followAccentColors: Boolean
         get() = prefs.getBoolean(HOME_FOLLOW_ACCENT, false)
         set(value) = prefs.edit().putBoolean(HOME_FOLLOW_ACCENT, value).apply()

@@ -69,7 +69,6 @@
     <string name="open">Oscail</string>
     <string name="close">Dún</string>
     <string name="copy">cóip</string>
-    <string name="hide_roadmap">Folaigh an Treochlár</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Taispeáin Fógra</string>
     <string name="show_app_list">Taispeáin Liosta App</string>
@@ -86,7 +85,6 @@
     <string name="store_backup">Cúltaca Store</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Gach apps</string>
-    <string name="road_map">Treochlár</string>
     <string name="drawer_list_empty_hint">Níor aimsíodh aon aipeanna</string>
     <string name="long_press_for_settings">Brúigh fada áit ar bith le haghaidh socruithe</string>
     <string name="swipe_up_for_apps">Svaidhpeáil suas do gach feidhmchlár</string>

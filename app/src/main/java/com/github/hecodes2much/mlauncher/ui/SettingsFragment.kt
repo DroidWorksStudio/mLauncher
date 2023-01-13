@@ -137,14 +137,6 @@ class SettingsFragment : Fragment() {
                 ) {
                     resetDefaultLauncher(requireContext())
                 }
-                if (ismlauncherDefault(requireContext()) && !prefs.roadmapHidden) {
-                    SettingsTextButton(
-                        stringResource(R.string.road_map),
-                        fontSize = iconFs
-                    ) {
-                        requireContext().openUrl(Constants.URL_PUBLIC_ROADMAP)
-                    }
-                }
             }
             SettingsArea(
                 title = stringResource(R.string.appearance),
@@ -436,14 +428,6 @@ class SettingsFragment : Fragment() {
                             max = Constants.TEXT_SIZE_MAX,
                             onSelect = { f -> setTextSizeSettings(f) }
                         )
-                    },
-                    { _, onChange ->
-                        SettingsToggle(
-                            title = stringResource(R.string.hide_roadmap),
-                            fontSize = iconFs,
-                            onChange = onChange,
-                            state = remember { mutableStateOf(prefs.roadmapHidden) }
-                        ) { prefs.roadmapHidden = !prefs.roadmapHidden }
                     }
                 )
             )

@@ -69,7 +69,6 @@
     <string name="open">Открыть</string>
     <string name="close">Закрыть</string>
     <string name="copy">копировать</string>
-    <string name="hide_roadmap">Скрыть дорожную карту</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Показать уведомление</string>
     <string name="show_app_list">Показать список приложений</string>
@@ -86,7 +85,6 @@
     <string name="store_backup">Резервная копия магазина</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Все приложения</string>
-    <string name="road_map">Дорожная карта</string>
     <string name="drawer_list_empty_hint">Не найдено приложений</string>
     <string name="long_press_for_settings">Долгое нажатие в любом месте для настроек</string>
     <string name="swipe_up_for_apps">Свайп вверх для всех приложений</string>

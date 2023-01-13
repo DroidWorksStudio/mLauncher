@@ -69,7 +69,6 @@
     <string name="open">Terbuka</string>
     <string name="close">Tutup</string>
     <string name="copy">salinan</string>
-    <string name="hide_roadmap">Sembunyikan Peta Jalan</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Tampilkan Pemberitahuan</string>
     <string name="show_app_list">Tampilkan Daftar Aplikasi</string>
@@ -86,7 +85,6 @@
     <string name="store_backup">Simpan Cadangan</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Semua aplikasi</string>
-    <string name="road_map">Peta jalan</string>
     <string name="drawer_list_empty_hint">Tidak ada aplikasi yang ditemukan</string>
     <string name="long_press_for_settings">Tekan lama di mana saja untuk pengaturan</string>
     <string name="swipe_up_for_apps">Geser ke atas untuk semua aplikasi</string>

@@ -80,7 +80,6 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string name="copy">copy</string>
-    <string name="hide_roadmap">Hide the Roadmap</string>
 
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Show Notification</string>
@@ -100,7 +99,6 @@
 
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>
-    <string name="road_map">Roadmap</string>
     <string name="drawer_list_empty_hint">No apps found</string>
     <string name="long_press_for_settings">Long press anywhere for settings</string>
     <string name="swipe_up_for_apps">Swipe up for all apps</string>

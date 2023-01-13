@@ -69,7 +69,6 @@
     <string name="open">باز کن</string>
     <string name="close">نزدیک</string>
     <string name="copy">کپی 🀄</string>
-    <string name="hide_roadmap">پنهان کردن نقشه راه</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">نمایش اعلان</string>
     <string name="show_app_list">نمایش لیست برنامه ها</string>
@@ -86,7 +85,6 @@
     <string name="store_backup">پشتیبان گیری فروشگاه</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">همه برنامه ها</string>
-    <string name="road_map">نقشه راه</string>
     <string name="drawer_list_empty_hint">هیچ برنامه ای پیدا نشد</string>
     <string name="long_press_for_settings">برای تنظیمات، هر جایی را به مدت طولانی فشار دهید</string>
     <string name="swipe_up_for_apps">برای همه برنامه ها انگشت خود را به سمت بالا بکشید</string>

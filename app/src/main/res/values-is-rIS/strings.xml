@@ -69,7 +69,6 @@
     <string name="open">Opið</string>
     <string name="close">Loka</string>
     <string name="copy">afrit</string>
-    <string name="hide_roadmap">Fela vegvísirinn</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Sýna tilkynningu</string>
     <string name="show_app_list">Sýna forritalista</string>
@@ -86,7 +85,6 @@
     <string name="store_backup">Afritun verslunar</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Öll forrit</string>
-    <string name="road_map">Vegvísir</string>
     <string name="drawer_list_empty_hint">Engin forrit fundust</string>
     <string name="long_press_for_settings">Ýttu lengi hvar sem er fyrir stillingar</string>
     <string name="swipe_up_for_apps">Strjúktu upp fyrir öll forrit</string>

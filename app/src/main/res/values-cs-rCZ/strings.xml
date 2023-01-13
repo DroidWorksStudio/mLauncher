@@ -69,7 +69,6 @@
     <string name="open">Otevřít</string>
     <string name="close">Zavřít</string>
     <string name="copy">kopírovat</string>
-    <string name="hide_roadmap">Skryjte plán</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Zobrazit oznámení</string>
     <string name="show_app_list">Zobrazit seznam aplikací</string>
@@ -86,7 +85,6 @@
     <string name="store_backup">Záloha obchodu</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Všechny aplikace</string>
-    <string name="road_map">Plán cesty</string>
     <string name="drawer_list_empty_hint">Nebyly nalezeny žádné aplikace</string>
     <string name="long_press_for_settings">Dlouze podržte kdekoli pro nastavení</string>
     <string name="swipe_up_for_apps">Přejeďte prstem nahoru pro všechny aplikace</string>
