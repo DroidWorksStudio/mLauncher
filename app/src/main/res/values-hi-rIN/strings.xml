@@ -69,7 +69,6 @@
     <string name="open">खुला</string>
     <string name="close">बंद करना</string>
     <string name="copy">प्रतिलिपि</string>
-    <string name="hide_roadmap">रोडमैप छुपाएं</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">अधिसूचना दिखाएं</string>
     <string name="show_app_list">ऐप सूची दिखाएं</string>
@@ -86,7 +85,6 @@
     <string name="store_backup">स्टोर बैकअप</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">सभी एप्लीकेशन</string>
-    <string name="road_map">रोडमैप</string>
     <string name="drawer_list_empty_hint">कोई ऐप्लिकेशन नहीं मिला</string>
     <string name="long_press_for_settings">सेटिंग्स के लिए कहीं भी देर तक दबाएं</string>
     <string name="swipe_up_for_apps">सभी ऐप्स के लिए ऊपर की ओर स्वाइप करें</string>

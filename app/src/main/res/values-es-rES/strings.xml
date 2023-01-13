@@ -69,7 +69,6 @@
     <string name="open">Abrir</string>
     <string name="close">Cerrar</string>
     <string name="copy">Copiar</string>
-    <string name="hide_roadmap">Ocultar la hoja de ruta</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Mostrar notificación</string>
     <string name="show_app_list">Mostrar lista de aplicaciones</string>
@@ -86,7 +85,6 @@
     <string name="store_backup">Guardar copia de seguridad</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Todas las apps</string>
-    <string name="road_map">Hoja de ruta</string>
     <string name="drawer_list_empty_hint">No hay aplicaciones</string>
     <string name="long_press_for_settings">Pulsación larga en cualquier lugar para ajustes</string>
     <string name="swipe_up_for_apps">Deslizar hacia arriba para todas las aplicaciones</string>

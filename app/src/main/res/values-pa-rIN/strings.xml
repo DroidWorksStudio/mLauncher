@@ -69,7 +69,6 @@
     <string name="open">ਖੋਲ੍ਹੋ</string>
     <string name="close">ਬੰਦ ਕਰੋ</string>
     <string name="copy">ਕਾਪੀ</string>
-    <string name="hide_roadmap">ਰੋਡਮੈਪ ਨੂੰ ਲੁਕਾਓ</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">ਸੂਚਨਾ ਦਿਖਾਓ</string>
     <string name="show_app_list">ਐਪ ਸੂਚੀ ਦਿਖਾਓ</string>
@@ -86,7 +85,6 @@
     <string name="store_backup">ਸਟੋਰ ਬੈਕਅੱਪ</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">ਸਾਰੀਆਂ ਐਪਾਂ</string>
-    <string name="road_map">ਰੋਡਮੈਪ</string>
     <string name="drawer_list_empty_hint">ਕੋਈ ਐਪਸ ਨਹੀਂ ਮਿਲੇ</string>
     <string name="long_press_for_settings">ਸੈਟਿੰਗਾਂ ਲਈ ਕਿਤੇ ਵੀ ਦੇਰ ਤੱਕ ਦਬਾਓ</string>
     <string name="swipe_up_for_apps">ਸਾਰੀਆਂ ਐਪਾਂ ਲਈ ਉੱਪਰ ਵੱਲ ਸਵਾਈਪ ਕਰੋ</string>

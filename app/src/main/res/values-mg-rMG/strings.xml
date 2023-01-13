@@ -69,7 +69,6 @@
     <string name="open">Misokatra</string>
     <string name="close">AKAIKY</string>
     <string name="copy">dika mitovy</string>
-    <string name="hide_roadmap">Afeno ny tondrozotra</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Asehoy ny fampahafantarana</string>
     <string name="show_app_list">Asehoy ny lisitry ny fampiharana</string>
@@ -86,7 +85,6 @@
     <string name="store_backup">Store Backup</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Apps rehetra</string>
-    <string name="road_map">Tondrozotra</string>
     <string name="drawer_list_empty_hint">Tsy misy fampiharana hita</string>
     <string name="long_press_for_settings">Tsindrio lava na aiza na aiza ho an\'ny fanovana</string>
     <string name="swipe_up_for_apps">Swipe miakatra ho an\'ny fampiharana rehetra</string>

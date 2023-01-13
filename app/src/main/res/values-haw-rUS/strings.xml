@@ -69,7 +69,6 @@
     <string name="open">Wehe</string>
     <string name="close">Pani</string>
     <string name="copy">kope</string>
-    <string name="hide_roadmap">Hūnā i ka palapala alanui</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Hōʻike Hoʻolaha</string>
     <string name="show_app_list">Hōʻike i ka papa inoa polokalamu</string>
@@ -86,7 +85,6 @@
     <string name="store_backup">Waihona Waihona</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Nā polokalamu a pau</string>
-    <string name="road_map">Palapala alanui</string>
     <string name="drawer_list_empty_hint">ʻAʻohe polokalamu i loaʻa</string>
     <string name="long_press_for_settings">E kaomi lōʻihi ma nā wahi a pau no nā hoʻonohonoho</string>
     <string name="swipe_up_for_apps">Swipe i luna no nā polokalamu āpau</string>

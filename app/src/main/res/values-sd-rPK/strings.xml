@@ -69,7 +69,6 @@
     <string name="open">کليل</string>
     <string name="close">بند</string>
     <string name="copy">ڪاپي</string>
-    <string name="hide_roadmap">روڊ ميپ لڪايو</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">نوٽيفڪيشن ڏيکاريو</string>
     <string name="show_app_list">ڏيکاريو ايپ لسٽ</string>
@@ -86,7 +85,6 @@
     <string name="store_backup">اسٽور بيڪ اپ</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">سڀ ائپس</string>
-    <string name="road_map">روڊ ميپ</string>
     <string name="drawer_list_empty_hint">ڪابه ايپس نه ملي</string>
     <string name="long_press_for_settings">سيٽنگون لاءِ ڪٿي به ڊگھو دٻايو</string>
     <string name="swipe_up_for_apps">سڀني ائپس لاءِ مٿي سوائپ ڪريو</string>

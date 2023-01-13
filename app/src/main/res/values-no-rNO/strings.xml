@@ -69,7 +69,6 @@
     <string name="open">Åpne</string>
     <string name="close">Lukk</string>
     <string name="copy">kopiere</string>
-    <string name="hide_roadmap">Skjul veikartet</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Vis varsling</string>
     <string name="show_app_list">Vis appliste</string>
@@ -86,7 +85,6 @@
     <string name="store_backup">Lagre sikkerhetskopiering</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Alle apper</string>
-    <string name="road_map">Veikart</string>
     <string name="drawer_list_empty_hint">Ingen apper funnet</string>
     <string name="long_press_for_settings">Langt trykk hvor som helst for innstillinger</string>
     <string name="swipe_up_for_apps">Sveip opp for alle apper</string>

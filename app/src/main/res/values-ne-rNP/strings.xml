@@ -69,7 +69,6 @@
     <string name="open">खोल्नुहोस्</string>
     <string name="close">बन्द गर्नुहोस्</string>
     <string name="copy">कापी</string>
-    <string name="hide_roadmap">रोडम्याप लुकाउनुहोस्</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">सूचना देखाउनुहोस्</string>
     <string name="show_app_list">एप सूची देखाउनुहोस्</string>
@@ -86,7 +85,6 @@
     <string name="store_backup">स्टोर ब्याकअप</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">सबै एपहरू</string>
-    <string name="road_map">रोडम्याप</string>
     <string name="drawer_list_empty_hint">कुनै एपहरू फेला परेनन्</string>
     <string name="long_press_for_settings">सेटिङहरूको लागि जहाँसुकै लामो प्रेस गर्नुहोस्</string>
     <string name="swipe_up_for_apps">सबै एपहरूको लागि माथि स्वाइप गर्नुहोस्</string>

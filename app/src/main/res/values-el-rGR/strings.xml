@@ -69,7 +69,6 @@
     <string name="open">Άνοιγμα</string>
     <string name="close">Κλείσιμο</string>
     <string name="copy">αντίγραφο</string>
-    <string name="hide_roadmap">Απόκρυψη του Οδικού Χάρτη</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Εμφάνιση Ειδοποίησης</string>
     <string name="show_app_list">Εμφάνιση Λίστας Εφαρμογών</string>
@@ -86,7 +85,6 @@
     <string name="store_backup">Αποθήκευση Αντιγράφου Ασφαλείας</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Όλες οι εφαρμογές</string>
-    <string name="road_map">Χάρτης</string>
     <string name="drawer_list_empty_hint">Δεν βρέθηκαν εφαρμογές</string>
     <string name="long_press_for_settings">Πατήστε παρατεταμένα οπουδήποτε για ρυθμίσεις</string>
     <string name="swipe_up_for_apps">Σύρσιμο προς τα επάνω για όλες τις εφαρμογές</string>

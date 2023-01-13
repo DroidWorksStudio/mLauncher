@@ -69,7 +69,6 @@
     <string name="open">Öppna</string>
     <string name="close">Stäng</string>
     <string name="copy">kopiera</string>
-    <string name="hide_roadmap">Göm färdplanen</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Visa avisering</string>
     <string name="show_app_list">Visa applista</string>
@@ -86,7 +85,6 @@
     <string name="store_backup">Säkerhetskopiering till butik</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Alla appar</string>
-    <string name="road_map">Färdplan</string>
     <string name="drawer_list_empty_hint">Inga appar hittades</string>
     <string name="long_press_for_settings">Långtryck var som helst för inställningar</string>
     <string name="swipe_up_for_apps">Svep uppåt för alla appar</string>

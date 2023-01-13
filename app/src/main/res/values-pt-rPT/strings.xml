@@ -69,7 +69,6 @@
     <string name="open">Aberto</string>
     <string name="close">Fechar</string>
     <string name="copy">cópia de</string>
-    <string name="hide_roadmap">Ocultar o Roteiro</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Mostrar Notificação</string>
     <string name="show_app_list">Mostrar lista de aplicações</string>
@@ -86,7 +85,6 @@
     <string name="store_backup">Cópias de segurança da loja</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Todas as aplicações</string>
-    <string name="road_map">Roteiro</string>
     <string name="drawer_list_empty_hint">Nenhuma aplicação encontrada</string>
     <string name="long_press_for_settings">Prensa longa em qualquer lugar para configurações</string>
     <string name="swipe_up_for_apps">Descarregar para todas as aplicações</string>

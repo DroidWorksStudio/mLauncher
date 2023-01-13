@@ -69,7 +69,6 @@
     <string name="open">打开链接</string>
     <string name="close">关闭</string>
     <string name="copy">复制</string>
-    <string name="hide_roadmap">隐藏路线图</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">显示通知</string>
     <string name="show_app_list">显示应用列表</string>
@@ -86,7 +85,6 @@
     <string name="store_backup">存储备份</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">所有应用程序</string>
-    <string name="road_map">路线图</string>
     <string name="drawer_list_empty_hint">未找到应用</string>
     <string name="long_press_for_settings">在屏幕上任意一处长按进入设置</string>
     <string name="swipe_up_for_apps">上滑查看所有应用</string>

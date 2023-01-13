@@ -69,7 +69,6 @@
     <string name="open">Open</string>
     <string name="close">Afsluiten</string>
     <string name="copy">kopiëren</string>
-    <string name="hide_roadmap">Verberg de routekaart</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Toon melding</string>
     <string name="show_app_list">Toon App Lijst</string>
@@ -86,7 +85,6 @@
     <string name="store_backup">Winkel back-up</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Alle apps</string>
-    <string name="road_map">Routekaart</string>
     <string name="drawer_list_empty_hint">Geen apps gevonden</string>
     <string name="long_press_for_settings">Lang drukken voor instellingen</string>
     <string name="swipe_up_for_apps">Veeg omhoog voor alle apps</string>

@@ -69,7 +69,6 @@
     <string name="open">Öffnen</string>
     <string name="close">Schließen</string>
     <string name="copy">Kopieren</string>
-    <string name="hide_roadmap">Fahrplan ausblenden</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Benachrichtigung anzeigen</string>
     <string name="show_app_list">App-Liste anzeigen</string>
@@ -86,7 +85,6 @@
     <string name="store_backup">Store-Sicherung</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Alle Apps</string>
-    <string name="road_map">Fahrplan</string>
     <string name="drawer_list_empty_hint">Keine Apps gefunden</string>
     <string name="long_press_for_settings">Lange drücken für Einstellungen</string>
     <string name="swipe_up_for_apps">Für alle Apps nach oben wischen</string>
