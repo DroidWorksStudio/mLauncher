@@ -25,6 +25,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Клавиатура за автошоу</string>
     <string name="auto_open_apps">Автоматично отваряне на приложения</string>
+    <string name="search_from_start">Търсене на приложения от началото.</string>
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">Брой преки пътища</string>
     <string name="show_time">Време за показване</string>

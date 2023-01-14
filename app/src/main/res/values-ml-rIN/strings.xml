@@ -25,6 +25,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">ഓട്ടോ ഷോ കീബോർഡ്</string>
     <string name="auto_open_apps">ആപ്പുകൾ സ്വയമേവ തുറക്കുക</string>
+    <string name="search_from_start">തുടക്കം മുതൽ അപ്ലിക്കേഷൻ തിരയൽ.</string>
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">കുറുക്കുവഴികളുടെ എണ്ണം</string>
     <string name="show_time">പ്രദർശന സമയം</string>

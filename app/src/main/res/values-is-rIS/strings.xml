@@ -25,6 +25,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Sjálfvirk lyklaborð</string>
     <string name="auto_open_apps">Opna forrit sjálfkrafa</string>
+    <string name="search_from_start">App leit frá upphafi.</string>
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">Fjöldi flýtileiða</string>
     <string name="show_time">Sýningartími</string>

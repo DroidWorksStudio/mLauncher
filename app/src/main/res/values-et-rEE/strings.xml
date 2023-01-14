@@ -25,6 +25,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Autoesituse klaviatuur</string>
     <string name="auto_open_apps">Automaatselt avatud rakendused</string>
+    <string name="search_from_start">Rakenduse otsing algusest peale.</string>
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">Otseteede arv</string>
     <string name="show_time">Näita aega</string>

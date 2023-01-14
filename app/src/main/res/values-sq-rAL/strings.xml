@@ -25,6 +25,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Tastiera e shfaqjes automatike</string>
     <string name="auto_open_apps">Hapja automatike e aplikacioneve</string>
+    <string name="search_from_start">Kërkimi i aplikacionit që nga fillimi.</string>
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">Numri i shkurtoreve</string>
     <string name="show_time">Koha e shfaqjes</string>

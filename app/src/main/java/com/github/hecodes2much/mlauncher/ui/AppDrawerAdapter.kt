@@ -79,9 +79,7 @@ class AppDrawerAdapter(
         return object : Filter() {
             override fun performFiltering(constraint: CharSequence?): FilterResults {
                 val searchChars = constraint.toString()
-/*                 val appFilteredList = (if (searchChars.isEmpty()) appsList
- *                 else appsList.filter { app -> appLabelMatches(app.appLabel, searchChars) } as MutableList<AppModel>)
- *  */
+
                 val appFilteredList = (if (searchChars.isEmpty()) appsList
                 else appsList.filter { app ->
                     if (app.appAlias.isEmpty()) {
@@ -119,11 +117,17 @@ class AppDrawerAdapter(
     }
 
     private fun appLabelMatches(appLabel: String, searchChars: String): Boolean {
-        return (appLabel.contains(searchChars, true) or
-                Normalizer.normalize(appLabel, Normalizer.Form.NFD)
-                    .replace(Regex("\\p{InCombiningDiacriticalMarks}+"), "")
-                    .replace(Regex("[-_+,. ]"), "")
-                    .contains(searchChars, true))
+        return if (prefs.searchFromStart) {
+            (Normalizer.normalize(appLabel, Normalizer.Form.NFD)
+                .replace(Regex("\\p{InCombiningDiacriticalMarks}+"), "")
+                .replace(Regex("[-_+,. ]"), "")
+                .startsWith(searchChars, true))
+        } else {
+            (Normalizer.normalize(appLabel, Normalizer.Form.NFD)
+                .replace(Regex("\\p{InCombiningDiacriticalMarks}+"), "")
+                .replace(Regex("[-_+,. ]"), "")
+                .contains(searchChars, true))
+        }
     }
 
     @SuppressLint("NotifyDataSetChanged")

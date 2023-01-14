@@ -25,6 +25,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">صفحه کلید نمایش خودکار</string>
     <string name="auto_open_apps">باز کردن خودکار برنامه ها</string>
+    <string name="search_from_start">جستجوی برنامه از ابتدا</string>
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">تعداد میانبرها</string>
     <string name="show_time">نمایش زمان</string>

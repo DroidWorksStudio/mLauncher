@@ -25,6 +25,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">自动显示键盘</string>
     <string name="auto_open_apps">自动打开应用</string>
+    <string name="search_from_start">应用程序搜索从头开始。</string>
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">快捷方式数量</string>
     <string name="show_time">显示时间</string>

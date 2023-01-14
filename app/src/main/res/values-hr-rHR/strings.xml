@@ -25,6 +25,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Automatski prikaz tipkovnice</string>
     <string name="auto_open_apps">Automatsko otvaranje aplikacija</string>
+    <string name="search_from_start">Pretraživanje aplikacije od početka.</string>
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">Broj prečaca</string>
     <string name="show_time">Pokaži vrijeme</string>

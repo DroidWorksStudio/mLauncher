@@ -25,6 +25,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Автоматично відкривати додатки</string>
+    <string name="search_from_start">Пошук програми з початку.</string>
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">Кількість ярликів</string>
     <string name="show_time">Відображати час</string>
