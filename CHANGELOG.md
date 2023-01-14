@@ -6,6 +6,8 @@
 
 **Implemented enhancements:**
 
+- \[Enhancement\] Filter application results by name and non-text  [\#165](https://github.com/HeCodes2Much/mLauncher/issues/165)
+- Feat: Filter application results start [\#166](https://github.com/HeCodes2Much/mLauncher/pull/166) ([The-Repo-Club](https://github.com/The-Repo-Club))
 - feat: removed the roadmap link [\#162](https://github.com/HeCodes2Much/mLauncher/pull/162) ([The-Repo-Club](https://github.com/The-Repo-Club))
 
 ## [0.4.5](https://github.com/HeCodes2Much/mLauncher/tree/0.4.5) ( 8, January 2023)
