@@ -25,6 +25,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Apri automaticamente le app</string>
+    <string name="search_from_start">Ricerca app dall\'inizio.</string>
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">Numero di scorciatoie</string>
     <string name="show_time">Mostra ora</string>

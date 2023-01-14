@@ -25,6 +25,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Kitendry fampisehoana mandeha ho azy</string>
     <string name="auto_open_apps">Auto misokatra fampiharana</string>
+    <string name="search_from_start">Fikarohana fampiharana hatramin\'ny voalohany.</string>
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">Isan\'ny hitsin-dàlana</string>
     <string name="show_time">Fotoana fampisehoana</string>

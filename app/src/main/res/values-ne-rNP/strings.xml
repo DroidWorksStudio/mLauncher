@@ -25,6 +25,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">किबोर्ड स्वतः देखाउनुहोस्</string>
     <string name="auto_open_apps">स्वतः खोल्ने एपहरू</string>
+    <string name="search_from_start">सुरु देखि अनुप्रयोग खोज।</string>
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">सर्टकटहरूको संख्या</string>
     <string name="show_time">समय देखाउनुहोस्</string>

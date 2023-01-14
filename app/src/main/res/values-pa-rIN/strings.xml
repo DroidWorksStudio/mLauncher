@@ -25,6 +25,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">ਆਟੋ ਸ਼ੋਅ ਕੀਬੋਰਡ</string>
     <string name="auto_open_apps">ਆਟੋ ਓਪਨ ਐਪਸ</string>
+    <string name="search_from_start">ਐਪ ਖੋਜ ਸ਼ੁਰੂ ਤੋਂ।</string>
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">ਸ਼ਾਰਟਕੱਟਾਂ ਦੀ ਸੰਖਿਆ</string>
     <string name="show_time">ਸ਼ੋਅ ਸਮਾ</string>

@@ -25,6 +25,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">アプリを自動的に開く</string>
+    <string name="search_from_start">最初からアプリ検索。</string>
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">ショートカットの数</string>
     <string name="show_time">時間を表示</string>

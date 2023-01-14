@@ -25,6 +25,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Keyboard pertunjukan otomatis</string>
     <string name="auto_open_apps">Aplikasi terbuka otomatis</string>
+    <string name="search_from_start">Pencarian aplikasi dari awal.</string>
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">Jumlah pintasan</string>
     <string name="show_time">Waktu pertunjukan</string>

@@ -191,7 +191,7 @@ class SettingsFragment : Fragment() {
                             fontSize = iconFs,
                             onChange = onChange,
                             state = remember { mutableStateOf(prefs.followAccentColors) },
-                        ) { toggleFollowAcent() }
+                        ) { toggleFollowAccent() }
                     },
                     { open, onChange ->
                         SettingsSliderItem(
@@ -227,6 +227,14 @@ class SettingsFragment : Fragment() {
                             onChange = onChange,
                             state = remember { mutableStateOf(prefs.autoOpenApp) },
                         ) { toggleAutoOpenApp() }
+                    },
+                    { _, onChange ->
+                        SettingsToggle(
+                            title = stringResource(R.string.search_from_start),
+                            fontSize = iconFs,
+                            onChange = onChange,
+                            state = remember { mutableStateOf(prefs.searchFromStart) },
+                        ) { toggleSearchFromStart() }
                     }
                 )
             )
@@ -544,7 +552,11 @@ class SettingsFragment : Fragment() {
         prefs.autoOpenApp = !prefs.autoOpenApp
     }
 
-    private fun toggleFollowAcent() {
+    private fun toggleSearchFromStart() {
+        prefs.searchFromStart = !prefs.searchFromStart
+    }
+
+    private fun toggleFollowAccent() {
         prefs.followAccentColors = !prefs.followAccentColors
     }
 
