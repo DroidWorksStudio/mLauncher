@@ -1,3 +1,5 @@
+Villás <a href="https://github.com/tanujnotes/Olauncher">-tól Olauncher</a>. Minimális és tiszta.
+
 # Villás extra funkciókkal
 
 - Eltávolítottuk a zavaró elemeket, például hirdetéseket és linkeket
