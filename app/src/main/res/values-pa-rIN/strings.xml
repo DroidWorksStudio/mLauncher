@@ -20,6 +20,7 @@
     <string name="theme_mode">ਥੀਮ ਮੋਡ</string>
     <string name="app_language">ਇੰਟਰਫੇਸ ਭਾਸ਼ਾ</string>
     <string name="app_text_size">ਟੈਕਸਟ ਦਾ ਆਕਾਰ</string>
+    <string name="app_padding_size">ਪੈਡਿੰਗ ਆਕਾਰ</string>
     <string name="follow_accent_colors">ਐਕਸੈਂਟ ਰੰਗ</string>
     <string name="background_opacity">ਬੈਕਗ੍ਰਾਊਂਡ ਓਪੇਸਿਟੀ</string>
     <!-- Behavior Strings -->
