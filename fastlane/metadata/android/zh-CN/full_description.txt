@@ -1,3 +1,5 @@
+从 <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>分叉。 最小和干净。
+
 # 使用额外功能
 
 - 移除俱乐部，例如广告和链接
