@@ -1,3 +1,5 @@
+Kahvliga alates <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimaalne ja puhas.
+
 # Forked koos lisafunktsioonidega
 
 - Eemaldatud segadus, nagu reklaamid ja lingid
