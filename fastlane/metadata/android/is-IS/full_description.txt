@@ -1,3 +1,5 @@
+Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Lágmarks og hreint.
+
 # Forked með auka eiginleikum
 
 - Fjarlægði ringulreið, eins og auglýsingar og tengla
