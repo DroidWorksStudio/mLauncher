@@ -7,6 +7,7 @@
 **Implemented enhancements:**
 
 - \[Enhancement\] Select custom font [\#168](https://github.com/HeCodes2Much/mLauncher/issues/168)
+- Feat: Padding for apps on homescreen [\#169](https://github.com/HeCodes2Much/mLauncher/pull/169) ([The-Repo-Club](https://github.com/The-Repo-Club))
 
 ## [0.4.6](https://github.com/HeCodes2Much/mLauncher/tree/0.4.6) (14, January 2023)
 
