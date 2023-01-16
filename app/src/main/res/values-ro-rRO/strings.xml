@@ -20,6 +20,7 @@
     <string name="theme_mode">Mod temă</string>
     <string name="app_language">Limba interfeței</string>
     <string name="app_text_size">Dimensiune text</string>
+    <string name="app_padding_size">Dimensiunea căptușelii</string>
     <string name="follow_accent_colors">Culori de accent</string>
     <string name="background_opacity">Opacitatea fundalului</string>
     <!-- Behavior Strings -->
