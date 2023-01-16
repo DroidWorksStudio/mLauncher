@@ -1,3 +1,5 @@
+แยกจาก <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a> น้อยที่สุดและสะอาด
+
 #แยกด้วยคุณสมบัติพิเศษ
 
 - ลบความยุ่งเหยิง เช่น โฆษณาและลิงก์
