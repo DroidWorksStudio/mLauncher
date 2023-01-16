@@ -1,5 +1,3 @@
-Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimaalinen ja siisti.
-    
 # Taottu ylimääräisillä ominaisuuksilla
 
 - Poistettu epäselvyyksiä, kuten mainoksia ja linkkejä
