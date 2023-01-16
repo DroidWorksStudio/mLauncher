@@ -20,6 +20,7 @@
     <string name="theme_mode">Mod tema</string>
     <string name="app_language">Bahasa Antaramuka</string>
     <string name="app_text_size">Saiz Teks</string>
+    <string name="app_padding_size">Saiz Padding</string>
     <string name="follow_accent_colors">Warna Aksen</string>
     <string name="background_opacity">Kelegapan Latar Belakang</string>
     <!-- Behavior Strings -->
