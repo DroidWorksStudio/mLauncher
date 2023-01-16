@@ -1,5 +1,3 @@
-Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimális és tiszta.
-    
 # Villás extra funkciókkal
 
 - Eltávolítottuk a zavaró elemeket, például hirdetéseket és linkeket
