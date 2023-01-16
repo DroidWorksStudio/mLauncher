@@ -1,5 +1,3 @@
-<a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>에서 분기되었습니다. 최소한의 깨끗합니다.
-    
 # 추가 기능으로 포크됨
 
 - 광고 및 링크와 같은 혼란 제거
