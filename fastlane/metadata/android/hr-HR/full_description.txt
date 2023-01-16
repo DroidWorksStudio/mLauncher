@@ -1,3 +1,5 @@
+Račvan od <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimalno i čisto.
+
 # Forked s dodatnim značajkama
 
 - Uklonjen nered, poput oglasa i poveznica
