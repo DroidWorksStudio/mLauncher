@@ -1,5 +1,5 @@
-Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal și curat.
-    
+Bifurcat de la <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal si curat.
+
 # Am încercat cu caracteristici suplimentare
 
 - A eliminat dezordinea, cum ar fi anunțurile și linkurile

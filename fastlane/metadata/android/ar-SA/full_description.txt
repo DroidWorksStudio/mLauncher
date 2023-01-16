@@ -1,5 +1,5 @@
-تم التجميع من <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. الحد الأدنى والنظاف.
-    
+متشعب من <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. بسيطة ونظيفة.
+
 # تم اختياره مع ميزات إضافية
 
 - حذف الكتمان، مثل الإعلانات والروابط

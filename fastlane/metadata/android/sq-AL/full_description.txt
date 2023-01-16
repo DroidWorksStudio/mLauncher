@@ -1,5 +1,5 @@
 Forked nga <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimale dhe e pastër.
-    
+
 # I dendur me veçori shtesë
 
 - Hiqni rrëmujën, si reklamat dhe lidhjet

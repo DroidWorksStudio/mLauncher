@@ -20,6 +20,7 @@
     <string name="theme_mode">Način rada teme</string>
     <string name="app_language">Jezik sučelja</string>
     <string name="app_text_size">Veličina teksta</string>
+    <string name="app_padding_size">Veličina podloge</string>
     <string name="follow_accent_colors">Naglašene boje</string>
     <string name="background_opacity">Neprozirnost pozadine</string>
     <!-- Behavior Strings -->

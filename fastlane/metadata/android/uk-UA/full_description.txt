@@ -1,5 +1,5 @@
-Отримано з <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Мінімалістично і чисто.
-    
+Розгалужено з <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Мінімальний і чистий.
+
 # Формування з додатковими можливостями
 
 - Прибрано безлад, наприклад, рекламу та посилання

@@ -20,6 +20,7 @@
     <string name="theme_mode">თემის რეჟიმი</string>
     <string name="app_language">ინტერფეისის ენა</string>
     <string name="app_text_size">Ტექსტის ზომა</string>
+    <string name="app_padding_size">ბალიშის ზომა</string>
     <string name="follow_accent_colors">აქცენტის ფერები</string>
     <string name="background_opacity">ფონის გამჭვირვალობა</string>
     <!-- Behavior Strings -->

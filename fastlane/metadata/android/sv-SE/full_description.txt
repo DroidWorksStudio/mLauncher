@@ -1,5 +1,5 @@
-Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimalt och rent.
-    
+Forked från <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal och ren.
+
 # Glitsade med extra funktioner
 
 - Borttagen skräp, som annonser och länkar

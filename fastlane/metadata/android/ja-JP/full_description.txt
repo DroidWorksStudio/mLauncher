@@ -1,5 +1,5 @@
-Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. ミニマムでクリーン。
-    
+<a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>から分岐。 ミニマルでクリーン。
+
 # 余分な機能をフォークしました
 
 - 広告やリンクなどの煩雑さを解消

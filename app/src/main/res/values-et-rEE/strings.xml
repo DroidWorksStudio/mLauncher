@@ -20,6 +20,7 @@
     <string name="theme_mode">Teemarežiim</string>
     <string name="app_language">Kasutajaliidese keel</string>
     <string name="app_text_size">Teksti suurus</string>
+    <string name="app_padding_size">Polsterduse suurus</string>
     <string name="follow_accent_colors">Aktsentvärvid</string>
     <string name="background_opacity">Tausta läbipaistmatus</string>
     <!-- Behavior Strings -->

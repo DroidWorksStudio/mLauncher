@@ -1,5 +1,5 @@
-Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Минимализм и чистота.
-    
+Разветвлен от <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Минимальный и чистый.
+
 # Форкнуто с дополнительными возможностями
 
 - Устранение беспорядка, например, рекламы и ссылок

@@ -20,6 +20,7 @@
     <string name="theme_mode">थिम मोड</string>
     <string name="app_language">इन्टरफेस भाषा</string>
     <string name="app_text_size">पाठ आकार</string>
+    <string name="app_padding_size">प्याडिङ साइज</string>
     <string name="follow_accent_colors">एक्सेन्ट रङहरू</string>
     <string name="background_opacity">पृष्ठभूमि अस्पष्टता</string>
     <!-- Behavior Strings -->

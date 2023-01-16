@@ -20,6 +20,7 @@
     <string name="theme_mode">Режим на темата</string>
     <string name="app_language">Език на интерфейса</string>
     <string name="app_text_size">Размер на текста</string>
+    <string name="app_padding_size">Размер на подложката</string>
     <string name="follow_accent_colors">Акцентни цветове</string>
     <string name="background_opacity">Непрозрачност на фона</string>
     <!-- Behavior Strings -->

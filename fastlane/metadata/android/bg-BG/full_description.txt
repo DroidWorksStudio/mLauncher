@@ -1,5 +1,5 @@
-Разклонение от <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Минимални и изчистени.
-    
+Разклонен от <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Минимално и чисто.
+
 # Разклонен с допълнителни функции
 
 - Премахнати са претрупани елементи, като реклами и връзки

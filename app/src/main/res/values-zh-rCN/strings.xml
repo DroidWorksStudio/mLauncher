@@ -20,6 +20,7 @@
     <string name="theme_mode">主题模式</string>
     <string name="app_language">应用界面语言</string>
     <string name="app_text_size">文本尺寸</string>
+    <string name="app_padding_size">填充尺寸</string>
     <string name="follow_accent_colors">强调色</string>
     <string name="background_opacity">背景不透明度</string>
     <!-- Behavior Strings -->

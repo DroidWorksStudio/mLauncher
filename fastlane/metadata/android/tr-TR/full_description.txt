@@ -1,7 +1,7 @@
-<a href="https://github.com/tanujnotes/Olauncher">Olauncher</a> 'dan alındı. Minimal ve temiz.
-    
+<a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>çatallandı. Minimum ve temiz.
+
 #Daha fazla özelliklli bir alıntı.
- 
+
 - Reklamlar ve bağlantılar gibi gereksiz şeyler kaldırdı
 - Uygulama-çekmecesindeki uygulamaları yeniden adlandırabilirsiniz (Ana ekrandaki uygulamaları yeniden adlandırmak zaten desteklenmektedir. Ana ekranda bir uygulamaya uzun tıkla ve yazmaya başla)
 - Ana ekran'daki jestler için  çok daha fazla seçenek var:
@@ -40,9 +40,9 @@
   - Hawaii dili
   - İbranice
   - Hintçe
-  - Endonezyaca
-  - İzlandaca
   - Macarca
+  - İzlandaca
+  - Endonezyaca
   - İrlandaca
   - İtalyanca
   - Japonca

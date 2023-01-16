@@ -1,5 +1,5 @@
-Šaknis iš <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimalus ir švarus.
-    
+Šakė nuo <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimalus ir švarus.
+
 # Šakutė su papildomomis funkcijomis
 
 - Pašalinta netvarka, pavyzdžiui, skelbimai ir nuorodos

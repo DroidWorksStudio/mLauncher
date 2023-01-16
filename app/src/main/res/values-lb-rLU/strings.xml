@@ -20,6 +20,7 @@
     <string name="theme_mode">Thema Modus</string>
     <string name="app_language">Interface Sprooch</string>
     <string name="app_text_size">Text Gréisst</string>
+    <string name="app_padding_size">Padding Gréisst</string>
     <string name="follow_accent_colors">Akzent Faarwen</string>
     <string name="background_opacity">Hannergrond Opazitéit</string>
     <!-- Behavior Strings -->

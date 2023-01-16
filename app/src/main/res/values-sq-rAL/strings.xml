@@ -20,6 +20,7 @@
     <string name="theme_mode">Modaliteti i temës</string>
     <string name="app_language">Gjuha e ndërfaqes</string>
     <string name="app_text_size">Madhësia e tekstit</string>
+    <string name="app_padding_size">Madhësia e mbushjes</string>
     <string name="follow_accent_colors">Ngjyrat e theksit</string>
     <string name="background_opacity">Opaciteti i sfondit</string>
     <!-- Behavior Strings -->

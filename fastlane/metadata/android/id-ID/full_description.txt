@@ -1,5 +1,5 @@
-Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal dan bersih.
-    
+Bercabang dari <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal dan bersih.
+
 # Forked dengan fitur tambahan
 
 - Menghapus kekacauan, seperti iklan dan tautan

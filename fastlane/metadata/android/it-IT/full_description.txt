@@ -1,5 +1,5 @@
-Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimale e pulito.
-    
+Biforcato da <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimale e pulito.
+
 # Forchetto con funzionalità extra
 
 - Rimosso il disordine, come annunci e link

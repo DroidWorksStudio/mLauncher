@@ -1,5 +1,5 @@
-Tvungen fra <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal og ren.
-    
+Gaffel fra <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal og ren.
+
 # Merket med ekstra funksjoner
 
 - Fjernet clutter, som reklamer og lenker

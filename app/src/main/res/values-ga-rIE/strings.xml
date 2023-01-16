@@ -20,6 +20,7 @@
     <string name="theme_mode">Modh téama</string>
     <string name="app_language">Teanga Chomhéadain</string>
     <string name="app_text_size">Méid an Téacs</string>
+    <string name="app_padding_size">Méid Stuála</string>
     <string name="follow_accent_colors">Dathanna Accent</string>
     <string name="background_opacity">Teimhneacht Cúlra</string>
     <!-- Behavior Strings -->

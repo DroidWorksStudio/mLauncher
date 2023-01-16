@@ -20,6 +20,7 @@
     <string name="theme_mode">Tema modu</string>
     <string name="app_language">Arayüz Dili</string>
     <string name="app_text_size">Metin Boyutu</string>
+    <string name="app_padding_size">Dolgu Boyutu</string>
     <string name="follow_accent_colors">Vurgu Renkleri</string>
     <string name="background_opacity">Arka Plan Opaklığı</string>
     <!-- Behavior Strings -->

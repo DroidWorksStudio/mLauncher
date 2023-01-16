@@ -1,5 +1,5 @@
 Đã rẽ nhánh từ <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Tối thiểu và sạch sẽ.
-    
+
 # Chia đôi với các tính năng bổ sung
 
 - Loại bỏ sự lộn xộn, như quảng cáo và liên kết

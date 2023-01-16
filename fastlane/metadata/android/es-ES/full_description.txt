@@ -1,5 +1,5 @@
-Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mínimo y limpio.
-    
+Bifurcado desde <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mínimo y limpio.
+
 # Bifurcado con características extra
 
 - Eliminación de elementos innecesarios, como anuncios y enlaces.

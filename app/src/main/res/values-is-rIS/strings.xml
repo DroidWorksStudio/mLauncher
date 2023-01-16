@@ -20,6 +20,7 @@
     <string name="theme_mode">Þemahamur</string>
     <string name="app_language">Viðmótstungumál</string>
     <string name="app_text_size">Textastærð</string>
+    <string name="app_padding_size">Bólstrun Stærð</string>
     <string name="follow_accent_colors">Hreim litir</string>
     <string name="background_opacity">Ógagnsæi í bakgrunni</string>
     <!-- Behavior Strings -->

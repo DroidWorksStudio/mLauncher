@@ -1,5 +1,5 @@
-Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Μίνιμαλ και καθαρό.
-    
+Διαχωρίστηκε από <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal και καθαρό.
+
 # Διασχισμένο με έξτρα χαρακτηριστικά
 
 - Αφαίρεση ακαταστασίας, όπως διαφημίσεις και σύνδεσμοι
