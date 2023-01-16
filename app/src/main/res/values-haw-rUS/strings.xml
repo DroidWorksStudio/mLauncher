@@ -20,6 +20,7 @@
     <string name="theme_mode">ʻano kumuhana</string>
     <string name="app_language">ʻŌlelo Interface</string>
     <string name="app_text_size">Nui kikokikona</string>
+    <string name="app_padding_size">Lahi Padding</string>
     <string name="follow_accent_colors">Nā waihoʻoluʻu</string>
     <string name="background_opacity">Opacity o ka hope</string>
     <!-- Behavior Strings -->
