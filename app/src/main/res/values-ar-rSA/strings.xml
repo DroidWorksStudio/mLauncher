@@ -20,6 +20,7 @@
     <string name="theme_mode">وضع السمة</string>
     <string name="app_language">لغة الواجهة</string>
     <string name="app_text_size">حجم النص</string>
+    <string name="app_padding_size">حجم الحشوة</string>
     <string name="follow_accent_colors">ألوان مميزة</string>
     <string name="background_opacity">شفافية الخلفية</string>
     <!-- Behavior Strings -->
