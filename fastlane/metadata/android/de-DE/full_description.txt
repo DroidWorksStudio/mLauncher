@@ -1,5 +1,3 @@
-Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimalistisch und sauber.
-    
 # Geforkt mit zusätzlichen Funktionen
 
 - Unübersichtliches, wie Werbung und Links, wurde entfernt.
