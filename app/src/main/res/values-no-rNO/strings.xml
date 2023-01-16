@@ -20,6 +20,7 @@
     <string name="theme_mode">Tema modus</string>
     <string name="app_language">Grensesnitt språk</string>
     <string name="app_text_size">Tekst størrelse</string>
+    <string name="app_padding_size">Polstring Størrelse</string>
     <string name="follow_accent_colors">Aksentfarger</string>
     <string name="background_opacity">Bakgrunns gjennomsiktighet</string>
     <!-- Behavior Strings -->
