@@ -1,3 +1,5 @@
+Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal og ren.
+
 # Forked med ekstra funktioner
 
 - Fjernede rod, som f.eks. annoncer og links
