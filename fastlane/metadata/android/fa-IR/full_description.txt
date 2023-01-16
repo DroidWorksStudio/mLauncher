@@ -1,3 +1,5 @@
+فورک شده از <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. حداقل و تمیز.
+
 # دوشاخه شده با ویژگی های اضافی
 
 - حذف درهم و برهمی، مانند تبلیغات و لینک ها
