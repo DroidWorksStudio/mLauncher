@@ -1,5 +1,3 @@
-Nofoanana avy amin'ny <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minitra sy madio.
-    
 # Forked miaraka amin'ny endri-javatra fanampiny
 
 - Esorina ny fikorontanana, toy ny doka sy rohy
