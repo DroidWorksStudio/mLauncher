@@ -1,3 +1,5 @@
+Forked mula sa <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal at malinis.
+
 # Forked na may mga karagdagang tampok
 
 - Inalis ang kalat, tulad ng mga ad at link
