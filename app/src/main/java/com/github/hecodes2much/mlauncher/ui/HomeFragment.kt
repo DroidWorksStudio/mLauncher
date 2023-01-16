@@ -17,6 +17,7 @@ import android.widget.TextView
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.os.bundleOf
 import androidx.core.view.children
+import androidx.core.view.marginBottom
 import androidx.core.view.size
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -463,6 +464,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     }
                     gravity = alignment
                 }
+                val padding: Int = prefs.textMarginSize
+                view.setPadding(0, padding, 0, padding)
                 val typeface = ResourcesCompat.getFont(requireActivity(), R.font.roboto)
                 typeface.also { view.typeface = it }
                 if (prefs.followAccentColors) {

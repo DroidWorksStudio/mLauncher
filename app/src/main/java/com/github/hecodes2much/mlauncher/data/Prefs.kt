@@ -38,7 +38,7 @@ private const val CLICK_DATE_ACTION = "CLICK_DATE_ACTION"
 private const val DOUBLE_TAP_ACTION = "DOUBLE_TAP_ACTION"
 private const val HIDDEN_APPS = "HIDDEN_APPS"
 private const val HIDDEN_APPS_UPDATED = "HIDDEN_APPS_UPDATED"
-private const val APP_THEME = "APP_THEME"
+
 
 private const val APP_NAME = "APP_NAME"
 private const val APP_PACKAGE = "APP_PACKAGE"
@@ -46,6 +46,7 @@ private const val APP_USER = "APP_USER"
 private const val APP_ALIAS = "APP_ALIAS"
 private const val APP_ACTIVITY = "APP_ACTIVITY"
 private const val APP_OPACITY = "APP_OPACITY"
+private const val APP_THEME = "APP_THEME"
 
 private const val SWIPE_RIGHT = "SWIPE_RIGHT"
 private const val SWIPE_LEFT = "SWIPE_LEFT"
@@ -57,6 +58,7 @@ private const val DOUBLE_TAP = "DOUBLE_TAP"
 
 private const val TEXT_SIZE_LAUNCHER = "TEXT_SIZE_LAUNCHER"
 private const val TEXT_SIZE_SETTINGS = "TEXT_SIZE_SETTINGS"
+private const val TEXT_MARGIN_SIZE = "TEXT_MARGIN_SIZE"
 
 class Prefs(val context: Context) {
 
@@ -352,6 +354,16 @@ class Prefs(val context: Context) {
             }
         }
         set(value) = prefs.edit().putInt(TEXT_SIZE_SETTINGS, value).apply()
+
+    var textMarginSize: Int
+        get() {
+            return try {
+                prefs.getInt(TEXT_MARGIN_SIZE, 10)
+            } catch (_: Exception) {
+                10
+            }
+        }
+        set(value) = prefs.edit().putInt(TEXT_MARGIN_SIZE, value).apply()
 
 
     // return app label

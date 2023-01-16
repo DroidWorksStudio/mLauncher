@@ -185,6 +185,18 @@ class SettingsFragment : Fragment() {
                             onSelect = { f -> setTextSizeLauncher(f) }
                         )
                     },
+                    { open, onChange ->
+                        SettingsSliderItem(
+                            title = stringResource(R.string.app_padding_size),
+                            fontSize = iconFs,
+                            open = open,
+                            onChange = onChange,
+                            currentSelection = remember { mutableStateOf(prefs.textMarginSize) },
+                            min = Constants.TEXT_MARGIN_MIN,
+                            max = Constants.TEXT_MARGIN_MAX,
+                            onSelect = { f -> setTextMarginSize(f) }
+                        )
+                    },
                     { _, onChange ->
                         SettingsToggle(
                             title = stringResource(R.string.follow_accent_colors),
@@ -577,6 +589,10 @@ class SettingsFragment : Fragment() {
 
     private fun setTextSizeSettings(size: Int) {
         prefs.textSizeSettings = size
+    }
+
+    private fun setTextMarginSize(size: Int) {
+        prefs.textMarginSize = size
     }
 
     private fun updateGesture(flag: AppDrawerFlag, action: Action) {
