@@ -1,0 +1,5 @@
+files:
+  - source: /values/strings.xml
+    translation: /values-%android_code%/%original_file_name%
+  - source: /fastlane/en-US/*.txt
+    translation: /fastlane/%locale%/%original_file_name%
