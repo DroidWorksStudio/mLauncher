@@ -1,3 +1,5 @@
+Bifurcado de <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mínimo e limpo.
+
 # Forked com recursos extras
 
 - Removida a confusão, como anúncios e links
