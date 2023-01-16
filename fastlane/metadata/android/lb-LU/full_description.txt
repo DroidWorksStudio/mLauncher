@@ -1,3 +1,5 @@
+Forked aus <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal a propper.
+
 # Forked mat extra Features
 
 - Geläscht Clutter, wéi Annoncen a Linken
