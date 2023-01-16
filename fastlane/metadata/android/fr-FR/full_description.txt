@@ -1,3 +1,5 @@
+Bifurqué à partir de <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal et propre.
+
 # Forké avec des fonctionnalités supplémentaires
 
 - Suppression des encombrements, comme les publicités et les liens
