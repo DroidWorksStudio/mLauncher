@@ -1,3 +1,5 @@
+מזלג מ <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. מינימלית ונקייה.
+
 # מזולג עם תכונות נוספות
 
 - הוסר העומס, כמו מודעות וקישורים
