@@ -20,6 +20,7 @@
     <string name="theme_mode">Fomba lohahevitra</string>
     <string name="app_language">Fiteny Interface</string>
     <string name="app_text_size">Haben\'ny soratra</string>
+    <string name="app_padding_size">Haben\'ny padding</string>
     <string name="follow_accent_colors">Loko Accent</string>
     <string name="background_opacity">Opacity ambadika</string>
     <!-- Behavior Strings -->
