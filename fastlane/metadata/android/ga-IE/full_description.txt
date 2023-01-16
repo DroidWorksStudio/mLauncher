@@ -1,3 +1,5 @@
+Forked ó <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Íosráta agus glan.
+
 # Forked le gnéithe breise
 
 - Baineadh tranglam, cosúil le fógraí agus naisc
