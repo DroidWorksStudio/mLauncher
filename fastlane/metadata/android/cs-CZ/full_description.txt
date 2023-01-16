@@ -1,3 +1,5 @@
+Forked od <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimální a čisté.
+
 # Rozštěpeno s dalšími funkcemi
 
 - Odstranění nepořádku, jako jsou reklamy a odkazy
