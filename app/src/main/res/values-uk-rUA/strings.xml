@@ -20,6 +20,7 @@
     <string name="theme_mode">Теми</string>
     <string name="app_language">Мова інтерфейсу</string>
     <string name="app_text_size">Розмір тексту</string>
+    <string name="app_padding_size">Розмір прокладки</string>
     <string name="follow_accent_colors">Акцентні кольори</string>
     <string name="background_opacity">Непрозорість фону</string>
     <!-- Behavior Strings -->
