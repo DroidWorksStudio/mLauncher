@@ -1,3 +1,5 @@
+Bercabang daripada <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimum dan bersih.
+
 # Bercabang dengan ciri tambahan
 
 - Mengalih keluar kekusutan, seperti iklan dan pautan
