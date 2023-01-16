@@ -20,6 +20,7 @@
     <string name="theme_mode">حالت تم</string>
     <string name="app_language">زبان رابط</string>
     <string name="app_text_size">اندازه متن</string>
+    <string name="app_padding_size">اندازه بالشتک</string>
     <string name="follow_accent_colors">رنگ های تاکیدی</string>
     <string name="background_opacity">کدورت پس زمینه</string>
     <!-- Behavior Strings -->
