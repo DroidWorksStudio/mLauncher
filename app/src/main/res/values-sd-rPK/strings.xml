@@ -20,6 +20,7 @@
     <string name="theme_mode">موضوع موڊ</string>
     <string name="app_language">انٽرفيس ٻولي</string>
     <string name="app_text_size">متن جي ماپ</string>
+    <string name="app_padding_size">پيڊنگ جي ماپ</string>
     <string name="follow_accent_colors">تلفظ رنگ</string>
     <string name="background_opacity">پس منظر جي شفافيت</string>
     <!-- Behavior Strings -->
