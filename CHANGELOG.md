@@ -1,5 +1,13 @@
 # Changelog
 
+## [Coming Soon](https://github.com/HeCodes2Much/mLauncher/tree/HEAD)
+
+[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.4.7...HEAD)
+
+**Implemented enhancements:**
+
+- Feat: Make padding home apps apply to app draw too [\#173](https://github.com/HeCodes2Much/mLauncher/pull/173) ([The-Repo-Club](https://github.com/The-Repo-Club))
+
 ## [0.4.7](https://github.com/HeCodes2Much/mLauncher/tree/0.4.7) (16, January 2023)
 
 [Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.4.6...0.4.7)
