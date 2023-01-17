@@ -43,7 +43,7 @@ class AppDrawerAdapter(
         prefs = Prefs(parent.context)
         val typeface = ResourcesCompat.getFont(parent.context, R.font.roboto)
         binding.appTitle.typeface = typeface
-        //binding.appTitle.textSize = prefs.textSizeLauncher.toFloat()
+        binding.appTitle.textSize = prefs.textSizeLauncher.toFloat()
         return ViewHolder(binding)
     }
 
