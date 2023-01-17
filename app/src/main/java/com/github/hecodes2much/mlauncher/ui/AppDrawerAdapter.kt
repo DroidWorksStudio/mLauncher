@@ -4,8 +4,7 @@ import android.annotation.SuppressLint
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
-import android.view.Gravity
-import android.view.Gravity.LEFT
+import android.view.Gravity.*
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -44,6 +43,8 @@ class AppDrawerAdapter(
         val typeface = ResourcesCompat.getFont(parent.context, R.font.roboto)
         binding.appTitle.typeface = typeface
         binding.appTitle.textSize = prefs.textSizeLauncher.toFloat()
+        val padding: Int = prefs.textMarginSize
+        binding.appTitle.setPadding(0, padding, 0, padding)
         return ViewHolder(binding)
     }
 
