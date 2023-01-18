@@ -3,7 +3,7 @@
     <!-- Base Settings -->
     <string name="app">Uygulama</string>
     <!-- Admin Settings -->
-    <string name="admin_permission_message">mLauncher, kilit ekranı iznini sorumlu bir şekilde kullanmayı vaat ediyor. mLauncher herhangi bir veri toplamaz veya paylaşmaz.</string>
+    <string name="admin_permission_message">mLauncher kilit ekranı iznini sorumlu bir şekilde kullanmaya söz veriyor. mLauncher herhangi bir veri toplamaz veya paylaşmaz.</string>
     <string name="experimental">(deneysel)</string>
     <!-- Settings Headers -->
     <string name="appearance">Görünüş</string>
@@ -20,13 +20,13 @@
     <string name="theme_mode">Tema modu</string>
     <string name="app_language">Arayüz Dili</string>
     <string name="app_text_size">Metin Boyutu</string>
-    <string name="app_padding_size">Dolgu Boyutu</string>
+    <string name="app_padding_size">Boşluk Boyutu</string>
     <string name="follow_accent_colors">Vurgu Renkleri</string>
     <string name="background_opacity">Arka Plan Opaklığı</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Klavye\'yi otomatik göster</string>
     <string name="auto_open_apps">Uygulamaları otomatik aç</string>
-    <string name="search_from_start">Baştan uygulama araması.</string>
+    <string name="search_from_start">Uygulama isminin başından aramaya başla.</string>
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">Kısayol sayısı</string>
     <string name="show_time">Zamanı göster</string>
@@ -78,7 +78,7 @@
     <string name="lock_screen">Kilit Ekranı</string>
     <string name="open_quick_settings">Hızlı Ayarlar</string>
     <string name="show_recents">Son Kullanılanları Göster</string>
-    <string name="open_power_dialog">Güç İletişim Kutusu</string>
+    <string name="open_power_dialog">Güç Menüsü</string>
     <string name="take_a_screenshot">Ekran görüntüsü al</string>
     <string name="double_tap_to_lock_screen">Kilitlemek için çift dokun</string>
     <!-- Backup Strings -->
@@ -95,5 +95,5 @@
     <string name="double_tap_lock_uninstall_message">Etkin kilitlemek için çift dokunun.
         \n\nNot: mLauncher\'ı silmeye karar verirseniz önce bunu KAPATIN.</string>
     <string name="accessibility_service_name">mLauncher Eylemler Hizmeti</string>
-    <string name="accessibility_service_description">Bu erişilebilirlik hizmeti, mLauncher\'ın ekranı kilitleme veya hızlı ayarları açma gibi belirli işlemleri yapmasına olanak tanır. Erişilebilirlik hizmetimiz herhangi bir veri toplamaz veya paylaşmaz.</string>
+    <string name="accessibility_service_description">Bu erişilebilirlik hizmeti, mLauncher\'ın ekranı kilitleme veya hızlı ayarları açma gibi belirli işlemleri yapmasını sağlar. Erişilebilirlik hizmetimiz herhangi bir veri toplamaz veya paylaşmaz.</string>
 </resources>
