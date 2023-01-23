@@ -31,6 +31,7 @@
     <string name="apps_on_home_screen">Número de atalhos</string>
     <string name="show_time">Hora do espectáculo</string>
     <string name="show_date">Mostrar data</string>
+    <string name="show_battery">Mostrar bateria</string>
     <string name="lock_home_apps">Aplicações de bloqueio</string>
     <string name="extend_home_apps_area">Ampliar área clicável</string>
     <string name="home_alignment_bottom">Ecrã inicial alinhar fundo</string>
