@@ -31,6 +31,7 @@
     <string name="apps_on_home_screen">Antal genveje</string>
     <string name="show_time">Vis tid</string>
     <string name="show_date">Vis dato</string>
+    <string name="show_battery">Vis batteri</string>
     <string name="lock_home_apps">Lås Apps</string>
     <string name="extend_home_apps_area">Udvid klikbart område</string>
     <string name="home_alignment_bottom">Startskærm justeret nederst</string>
