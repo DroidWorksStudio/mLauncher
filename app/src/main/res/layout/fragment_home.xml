@@ -42,6 +42,15 @@
             android:paddingHorizontal="2dp"
             android:textSize="@dimen/date_size"
             tools:text="Thu, 30 Dec" />
+
+        <TextView
+            android:id="@+id/battery"
+            style="@style/TextDefault"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="2dp"
+            android:textSize="@dimen/date_size"
+            tools:text="55%" />
     </LinearLayout>
 
     <!-- Home apps-->

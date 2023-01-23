@@ -4,6 +4,9 @@ import android.annotation.SuppressLint
 import android.app.admin.DevicePolicyManager
 import android.content.Context
 import android.content.Context.VIBRATOR_SERVICE
+import android.content.Intent
+import android.content.IntentFilter
+import android.os.BatteryManager
 import android.os.Build
 import android.os.Bundle
 import android.os.Vibrator
@@ -81,10 +84,12 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
         binding.clock.textSize = prefs.textSizeLauncher * 2.5f
         binding.date.textSize = prefs.textSizeLauncher.toFloat()
+        binding.battery.textSize = prefs.textSizeLauncher.toFloat() / 1.5f
 
         val typeface = ResourcesCompat.getFont(requireActivity(), R.font.roboto)
         binding.clock.typeface = typeface
         binding.date.typeface = typeface
+        binding.battery.typeface = typeface
         binding.setDefaultLauncher.typeface = typeface
 
         val backgroundColor = getHexForOpacity(requireContext(), prefs)
@@ -93,6 +98,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             val fontColor = getHexFontColor(requireContext())
             binding.clock.setTextColor(fontColor)
             binding.date.setTextColor(fontColor)
+            binding.battery.setTextColor(fontColor)
             binding.setDefaultLauncher.setTextColor(fontColor)
         }
     }
@@ -110,6 +116,33 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         val best24Date = getBestDateTimePattern(locale,"eeeddMMM")
         binding.date.format12Hour = best12Date
         binding.date.format24Hour = best24Date
+
+        val batteryStatus: Intent? = IntentFilter(Intent.ACTION_BATTERY_CHANGED).let { ifilter ->
+            context?.registerReceiver(null, ifilter)
+        }
+
+        val status: Int = batteryStatus?.getIntExtra(BatteryManager.EXTRA_STATUS, -1) ?: -1
+        val isCharging: Boolean = status == BatteryManager.BATTERY_STATUS_CHARGING
+                || status == BatteryManager.BATTERY_STATUS_FULL
+
+        // How are we charging?
+        val chargePlug: Int = batteryStatus?.getIntExtra(BatteryManager.EXTRA_PLUGGED, -1) ?: -1
+        val usbCharge: Boolean = chargePlug == BatteryManager.BATTERY_PLUGGED_USB
+        val acCharge: Boolean = chargePlug == BatteryManager.BATTERY_PLUGGED_AC
+
+        val batteryPct: Int? = batteryStatus?.let { intent ->
+            val level: Int = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, -1)
+            val scale: Int = intent.getIntExtra(BatteryManager.EXTRA_SCALE, -1)
+            level * 100 / scale.toInt()
+        }
+
+        if (!prefs.showBattery) return
+        if (isCharging) {
+            if (usbCharge) binding.battery.text = "USB Charging: $batteryPct%"
+            if (acCharge) binding.battery.text = "AC Charging: $batteryPct%"
+        } else {
+            binding.battery.text = "$batteryPct% left."
+        }
 
         // only show "set as default"-button if tips are GONE
         if (binding.firstRunTips.visibility == View.GONE) {
