@@ -32,7 +32,7 @@
     <string name="show_time">Zamanı göster</string>
     <string name="show_date">Tarih\'i göster</string>
     <string name="show_battery">Pil\'i göster</string>
-    <string name="lock_home_apps">Kilit Uygulamaları</string>
+    <string name="lock_home_apps">Uygulamaları Kilitle</string>
     <string name="extend_home_apps_area">Tıklanabilir alanı genişlet</string>
     <string name="home_alignment_bottom">Ana ekran alt hizalama</string>
     <!-- Alignment Strings -->
@@ -76,7 +76,7 @@
     <string name="show_notifications">Bildirimi Göster</string>
     <string name="show_app_list">Uygulama Listesini Göster</string>
     <string name="open_app">Uygulama\'yı Aç</string>
-    <string name="lock_screen">Kilit Ekranı</string>
+    <string name="lock_screen">Ekranı Kilitle</string>
     <string name="open_quick_settings">Hızlı Ayarlar</string>
     <string name="show_recents">Son Kullanılanları Göster</string>
     <string name="open_power_dialog">Güç Menüsü</string>
