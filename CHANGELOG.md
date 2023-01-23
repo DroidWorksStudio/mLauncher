@@ -4,10 +4,13 @@
 
 [Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.4.8...HEAD)
 
+**Implemented enhancements:**
+
+- Feat: Add battery level to home screen [\#178](https://github.com/HeCodes2Much/mLauncher/pull/178) ([The-Repo-Club](https://github.com/The-Repo-Club))
+
 **Merged pull requests:**
 
 - New Crowdin updates [\#179](https://github.com/HeCodes2Much/mLauncher/pull/179) ([The-Repo-Club](https://github.com/The-Repo-Club))
-- Feat: Add battery level to home screen [\#178](https://github.com/HeCodes2Much/mLauncher/pull/178) ([The-Repo-Club](https://github.com/The-Repo-Club))
 
 ## [0.4.8](https://github.com/HeCodes2Much/mLauncher/tree/0.4.8) (20, January 2023)
 
