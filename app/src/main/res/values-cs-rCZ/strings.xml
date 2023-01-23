@@ -31,6 +31,7 @@
     <string name="apps_on_home_screen">Počet zástupců</string>
     <string name="show_time">Zobrazit čas</string>
     <string name="show_date">Zobrazit datum</string>
+    <string name="show_battery">Zobrazit baterii</string>
     <string name="lock_home_apps">Zamknout aplikace</string>
     <string name="extend_home_apps_area">Rozšířit kliknutelnou oblast</string>
     <string name="home_alignment_bottom">Zarovnání spodní plochy</string>
