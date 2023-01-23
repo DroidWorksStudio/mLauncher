@@ -31,6 +31,7 @@
     <string name="apps_on_home_screen">Pikakuvakkeiden määrä</string>
     <string name="show_time">Näytä aika</string>
     <string name="show_date">Näytä päivämäärä</string>
+    <string name="show_battery">Näytä akku</string>
     <string name="lock_home_apps">Lukitse Sovellukset</string>
     <string name="extend_home_apps_area">Laajenna klikattava alue</string>
     <string name="home_alignment_bottom">Aloitusnäytön tasaus alareunaan</string>
