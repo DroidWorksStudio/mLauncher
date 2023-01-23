@@ -31,6 +31,7 @@
     <string name="apps_on_home_screen">Nombre de raccourcis</string>
     <string name="show_time">Afficher l\'heure</string>
     <string name="show_date">Afficher la date</string>
+    <string name="show_battery">Afficher la batterie</string>
     <string name="lock_home_apps">Verrouiller les applications</string>
     <string name="extend_home_apps_area">Étendre la zone cliquable</string>
     <string name="home_alignment_bottom">Alignement de l\'écran d\'accueil en bas</string>
