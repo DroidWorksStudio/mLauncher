@@ -31,6 +31,7 @@
     <string name="apps_on_home_screen">Broj prečaca</string>
     <string name="show_time">Pokaži vrijeme</string>
     <string name="show_date">Prikaži datum</string>
+    <string name="show_battery">Prikaži bateriju</string>
     <string name="lock_home_apps">Zaključaj aplikacije</string>
     <string name="extend_home_apps_area">Proširite područje koje se može kliknuti</string>
     <string name="home_alignment_bottom">Početni zaslon poravnajte s dnom</string>
