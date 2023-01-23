@@ -3,6 +3,7 @@ package com.github.hecodes2much.mlauncher.ui
 import android.annotation.SuppressLint
 import android.app.admin.DevicePolicyManager
 import android.content.Context
+import android.content.Context.BATTERY_SERVICE
 import android.content.Context.VIBRATOR_SERVICE
 import android.content.Intent
 import android.content.IntentFilter
@@ -20,7 +21,6 @@ import android.widget.TextView
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.os.bundleOf
 import androidx.core.view.children
-import androidx.core.view.marginBottom
 import androidx.core.view.size
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -73,9 +73,9 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         vibrator = context?.getSystemService(VIBRATOR_SERVICE) as Vibrator
 
         initObservers()
-
         initSwipeTouchListener()
         initClickListeners()
+        updateBatteryStatus()
     }
 
     override fun onStart() {
@@ -101,6 +101,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             binding.battery.setTextColor(fontColor)
             binding.setDefaultLauncher.setTextColor(fontColor)
         }
+        updateBatteryStatus()
     }
 
     override fun onResume() {
@@ -117,6 +118,30 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         binding.date.format12Hour = best12Date
         binding.date.format24Hour = best24Date
 
+        // only show "set as default"-button if tips are GONE
+        if (binding.firstRunTips.visibility == View.GONE) {
+            binding.setDefaultLauncher.visibility =
+                if (ismlauncherDefault(requireContext())) View.GONE else View.VISIBLE
+        }
+        updateBatteryStatus()
+    }
+
+    private fun getBatteryPercentage(context: Context): Int {
+        return if (Build.VERSION.SDK_INT >= 21) {
+            val bm = context.getSystemService(BATTERY_SERVICE) as BatteryManager
+            bm.getIntProperty(BatteryManager.BATTERY_PROPERTY_CAPACITY)
+
+        } else {
+            val iFilter = IntentFilter(Intent.ACTION_BATTERY_CHANGED)
+            val batteryStatus: Intent? = context.registerReceiver(null, iFilter)
+            val level = batteryStatus?.getIntExtra(BatteryManager.EXTRA_LEVEL, -1)
+            val scale = batteryStatus?.getIntExtra(BatteryManager.EXTRA_SCALE, -1)
+            val batteryPct = level!! * 100 / scale!!
+            (batteryPct * 100).toInt()
+        }
+    }
+
+    private fun updateBatteryStatus() {
         val batteryStatus: Intent? = IntentFilter(Intent.ACTION_BATTERY_CHANGED).let { ifilter ->
             context?.registerReceiver(null, ifilter)
         }
@@ -130,24 +155,35 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         val usbCharge: Boolean = chargePlug == BatteryManager.BATTERY_PLUGGED_USB
         val acCharge: Boolean = chargePlug == BatteryManager.BATTERY_PLUGGED_AC
 
-        val batteryPct: Int? = batteryStatus?.let { intent ->
-            val level: Int = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, -1)
-            val scale: Int = intent.getIntExtra(BatteryManager.EXTRA_SCALE, -1)
-            level * 100 / scale.toInt()
-        }
+        val batteryPct = getBatteryPercentage(requireContext())
 
         if (!prefs.showBattery) return
         if (isCharging) {
-            if (usbCharge) binding.battery.text = "USB Charging: $batteryPct%"
-            if (acCharge) binding.battery.text = "AC Charging: $batteryPct%"
+            if (usbCharge) {
+                val icon = "\uF583"
+                binding.battery.format12Hour = "$icon $batteryPct%"
+                binding.battery.format24Hour = "$icon $batteryPct%"
+            }
+            if (acCharge) {
+                val icon = "\uF582"
+                binding.battery.format12Hour = "$icon $batteryPct%"
+                binding.battery.format24Hour = "$icon $batteryPct%"
+            }
         } else {
-            binding.battery.text = "$batteryPct% left."
-        }
-
-        // only show "set as default"-button if tips are GONE
-        if (binding.firstRunTips.visibility == View.GONE) {
-            binding.setDefaultLauncher.visibility =
-                if (ismlauncherDefault(requireContext())) View.GONE else View.VISIBLE
+            val icon = when (batteryPct) {
+                10 -> "\uF579"
+                20 -> "\uF57A"
+                30 -> "\uF57B"
+                40 -> "\uF57C"
+                50 -> "\uF57D"
+                60 -> "\uF57E"
+                70 -> "\uF57F"
+                80 -> "\uF580"
+                90 -> "\uF581"
+                else -> "\uF578"
+            }
+            binding.battery.format12Hour = "$icon $batteryPct%"
+            binding.battery.format24Hour = "$icon $batteryPct%"
         }
     }
 
@@ -191,8 +227,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
     @SuppressLint("ClickableViewAccessibility")
     private fun initSwipeTouchListener() {
-        val context = requireContext()
-        binding.touchArea.setOnTouchListener(getHomeScreenGestureListener(context))
+        binding.touchArea.setOnTouchListener(getHomeScreenGestureListener(requireContext()))
     }
 
     private fun initClickListeners() {
@@ -206,6 +241,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             binding.firstRunTips.visibility = View.VISIBLE
             binding.setDefaultLauncher.visibility = View.GONE
         } else binding.firstRunTips.visibility = View.GONE
+
+        updateBatteryStatus()
 
         with(viewModel) {
 
