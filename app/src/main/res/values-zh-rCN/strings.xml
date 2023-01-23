@@ -31,6 +31,7 @@
     <string name="apps_on_home_screen">快捷方式数量</string>
     <string name="show_time">显示时间</string>
     <string name="show_date">显示日期</string>
+    <string name="show_battery">显示电池</string>
     <string name="lock_home_apps">锁定应用</string>
     <string name="extend_home_apps_area">扩展主屏应用可点击空间</string>
     <string name="home_alignment_bottom">应用主屏底部</string>
