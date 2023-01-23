@@ -31,6 +31,7 @@
     <string name="apps_on_home_screen">Jumlah pintasan</string>
     <string name="show_time">Waktu pertunjukan</string>
     <string name="show_date">Tanggal pertunjukan</string>
+    <string name="show_battery">Tampilkan baterai</string>
     <string name="lock_home_apps">Kunci Aplikasi</string>
     <string name="extend_home_apps_area">Memperluas area yang dapat diklik</string>
     <string name="home_alignment_bottom">Layar beranda sejajar bagian bawah</string>
