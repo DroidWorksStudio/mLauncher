@@ -31,6 +31,7 @@
     <string name="apps_on_home_screen">Număr de comenzi rapide</string>
     <string name="show_time">Arată timpul</string>
     <string name="show_date">Arată data</string>
+    <string name="show_battery">Arată bateria</string>
     <string name="lock_home_apps">Blocare aplicații</string>
     <string name="extend_home_apps_area">Extinde zona clickable</string>
     <string name="home_alignment_bottom">Aliniere ecran de pornire jos</string>
