@@ -31,6 +31,7 @@
     <string name="apps_on_home_screen">عدد الاختصارات</string>
     <string name="show_time">إظهار الوقت</string>
     <string name="show_date">إظهار التاريخ</string>
+    <string name="show_battery">عرض البطارية</string>
     <string name="lock_home_apps">قفل التطبيقات</string>
     <string name="extend_home_apps_area">توسيع المنطقة القابلة للنقر</string>
     <string name="home_alignment_bottom">أسفل الشاشة الرئيسية محاذاة</string>
