@@ -285,6 +285,14 @@ class SettingsFragment : Fragment() {
                     },
                     { _, onChange ->
                         SettingsToggle(
+                            title = stringResource(R.string.show_battery),
+                            fontSize = iconFs,
+                            onChange = onChange,
+                            state = remember { mutableStateOf(prefs.showBattery) }
+                        ) { toggleShowBattery() }
+                    },
+                    { _, onChange ->
+                        SettingsToggle(
                             title = stringResource(R.string.lock_home_apps),
                             fontSize = iconFs,
                             onChange = onChange,
@@ -520,6 +528,10 @@ class SettingsFragment : Fragment() {
         val showStatusbar = !prefs.showStatusBar
         prefs.showStatusBar = showStatusbar
         if (showStatusbar) showStatusBar(requireActivity()) else hideStatusBar(requireActivity())
+    }
+
+    private fun toggleShowBattery() {
+        prefs.showBattery = !prefs.showBattery
     }
 
     private fun toggleShowDate() {
