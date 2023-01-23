@@ -31,6 +31,7 @@
     <string name="apps_on_home_screen">Количество ярлыков</string>
     <string name="show_time">Показать время</string>
     <string name="show_date">Показать дату</string>
+    <string name="show_battery">Показать батарею</string>
     <string name="lock_home_apps">Заблокировать приложения</string>
     <string name="extend_home_apps_area">Продлить область клика</string>
     <string name="home_alignment_bottom">Выровнять на главном экране снизу</string>

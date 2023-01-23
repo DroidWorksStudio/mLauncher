@@ -31,6 +31,7 @@
     <string name="apps_on_home_screen">Numero di scorciatoie</string>
     <string name="show_time">Mostra ora</string>
     <string name="show_date">Mostra data</string>
+    <string name="show_battery">Mostra batteria</string>
     <string name="lock_home_apps">Blocca App</string>
     <string name="extend_home_apps_area">Estendi area cliccabile</string>
     <string name="home_alignment_bottom">Allineamento della schermata Home in basso</string>

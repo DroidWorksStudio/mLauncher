@@ -31,6 +31,7 @@
     <string name="apps_on_home_screen">Líon na n-aicearraí</string>
     <string name="show_time">Am seó</string>
     <string name="show_date">Taispeáin dáta</string>
+    <string name="show_battery">Taispeáin ceallraí</string>
     <string name="lock_home_apps">Glasáil Apps</string>
     <string name="extend_home_apps_area">Leathnaigh an limistéar inchliceáilte</string>
     <string name="home_alignment_bottom">Ailínigh bun an scáileáin baile</string>

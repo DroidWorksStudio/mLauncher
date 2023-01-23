@@ -31,6 +31,7 @@
     <string name="apps_on_home_screen">Fjöldi flýtileiða</string>
     <string name="show_time">Sýningartími</string>
     <string name="show_date">Sýningardagsetning</string>
+    <string name="show_battery">Sýna rafhlöðu</string>
     <string name="lock_home_apps">Læstu forritum</string>
     <string name="extend_home_apps_area">Stækkaðu smellanlegt svæði</string>
     <string name="home_alignment_bottom">Heimaskjár stilla neðst</string>

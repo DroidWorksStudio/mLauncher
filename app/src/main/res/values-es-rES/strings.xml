@@ -31,6 +31,7 @@
     <string name="apps_on_home_screen">Número de accesos directos</string>
     <string name="show_time">Mostrar hora</string>
     <string name="show_date">Mostrar fecha</string>
+    <string name="show_battery">Mostrar batería</string>
     <string name="lock_home_apps">Bloquear aplicaciones</string>
     <string name="extend_home_apps_area">Extender área clicable</string>
     <string name="home_alignment_bottom">Pantalla de inicio alinear abajo</string>

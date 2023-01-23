@@ -31,6 +31,7 @@
     <string name="apps_on_home_screen">ショートカットの数</string>
     <string name="show_time">時間を表示</string>
     <string name="show_date">日付を表示</string>
+    <string name="show_battery">バッテリーを表示</string>
     <string name="lock_home_apps">アプリをロック</string>
     <string name="extend_home_apps_area">クリック可能な領域を拡張</string>
     <string name="home_alignment_bottom">ホーム画面下部を揃え</string>

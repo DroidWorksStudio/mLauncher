@@ -31,6 +31,7 @@
     <string name="apps_on_home_screen">A parancsikonok száma</string>
     <string name="show_time">Show time</string>
     <string name="show_date">Megjelenés dátuma</string>
+    <string name="show_battery">Mutasd az akkumulátort</string>
     <string name="lock_home_apps">Alkalmazások zárolása</string>
     <string name="extend_home_apps_area">Kattintható terület bővítése</string>
     <string name="home_alignment_bottom">Kezdőképernyő alulra igazítása</string>

@@ -31,6 +31,7 @@
     <string name="apps_on_home_screen">Bilang ng mga shortcut</string>
     <string name="show_time">Oras ng palabas</string>
     <string name="show_date">Ipakita ang petsa</string>
+    <string name="show_battery">Ipakita ang baterya</string>
     <string name="lock_home_apps">I-lock ang Apps</string>
     <string name="extend_home_apps_area">Palawakin ang naki-click na lugar</string>
     <string name="home_alignment_bottom">I-align sa ibaba ang home screen</string>

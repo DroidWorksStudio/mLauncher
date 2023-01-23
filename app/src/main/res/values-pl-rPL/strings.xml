@@ -31,6 +31,7 @@
     <string name="apps_on_home_screen">Liczba skrótów</string>
     <string name="show_time">Pokaż czas</string>
     <string name="show_date">Pokaż datę</string>
+    <string name="show_battery">Pokaż baterię</string>
     <string name="lock_home_apps">Zablokuj aplikacje</string>
     <string name="extend_home_apps_area">Rozszerz obszar klikalny</string>
     <string name="home_alignment_bottom">Ekran główny wyrównany do dołu</string>

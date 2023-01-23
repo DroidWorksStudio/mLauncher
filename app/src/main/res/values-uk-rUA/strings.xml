@@ -31,6 +31,7 @@
     <string name="apps_on_home_screen">Кількість ярликів</string>
     <string name="show_time">Відображати час</string>
     <string name="show_date">Показати дату</string>
+    <string name="show_battery">Показати акумулятор</string>
     <string name="lock_home_apps">Блокування програм</string>
     <string name="extend_home_apps_area">Розширити активну область</string>
     <string name="home_alignment_bottom">На домашньому екрані по нижній частині</string>

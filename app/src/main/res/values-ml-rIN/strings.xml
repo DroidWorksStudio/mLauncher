@@ -31,6 +31,7 @@
     <string name="apps_on_home_screen">കുറുക്കുവഴികളുടെ എണ്ണം</string>
     <string name="show_time">പ്രദർശന സമയം</string>
     <string name="show_date">തീയതി കാണിക്കുക</string>
+    <string name="show_battery">ബാറ്ററി കാണിക്കുക</string>
     <string name="lock_home_apps">ആപ്പുകൾ ലോക്ക് ചെയ്യുക</string>
     <string name="extend_home_apps_area">ക്ലിക്ക് ചെയ്യാവുന്ന ഏരിയ വിപുലീകരിക്കുക</string>
     <string name="home_alignment_bottom">ഹോം സ്‌ക്രീൻ താഴെ വിന്യസിക്കുക</string>

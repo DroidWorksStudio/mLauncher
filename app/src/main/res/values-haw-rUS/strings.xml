@@ -31,6 +31,7 @@
     <string name="apps_on_home_screen">Ka helu o nā pōkole</string>
     <string name="show_time">Hōʻike manawa</string>
     <string name="show_date">Hōʻike lā</string>
+    <string name="show_battery">Hōʻike pākaukau</string>
     <string name="lock_home_apps">Laka Apps</string>
     <string name="extend_home_apps_area">E hoʻonui i kahi hiki ke kaomi</string>
     <string name="home_alignment_bottom">ʻO ka pale home e align i lalo</string>

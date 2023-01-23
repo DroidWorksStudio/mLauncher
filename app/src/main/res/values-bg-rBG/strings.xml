@@ -31,6 +31,7 @@
     <string name="apps_on_home_screen">Брой преки пътища</string>
     <string name="show_time">Време за показване</string>
     <string name="show_date">Дата на показване</string>
+    <string name="show_battery">Показване на батерията</string>
     <string name="lock_home_apps">Приложения за заключване</string>
     <string name="extend_home_apps_area">Разширяване на зоната за кликване</string>
     <string name="home_alignment_bottom">Изравняване на долната част на началния екран</string>

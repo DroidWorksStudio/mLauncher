@@ -31,6 +31,7 @@
     <string name="apps_on_home_screen">شارٽ ڪٽ جو تعداد</string>
     <string name="show_time">وقت ڏيکاريو</string>
     <string name="show_date">تاريخ ڏيکاريو</string>
+    <string name="show_battery">بيٽري ڏيکاريو</string>
     <string name="lock_home_apps">ائپس کي بند ڪريو</string>
     <string name="extend_home_apps_area">ڪلڪ قابل علائقو وڌايو</string>
     <string name="home_alignment_bottom">گھر جي اسڪرين ھيٺان ترتيب ڏيو</string>

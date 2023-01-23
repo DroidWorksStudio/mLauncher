@@ -31,6 +31,7 @@
     <string name="apps_on_home_screen">ਸ਼ਾਰਟਕੱਟਾਂ ਦੀ ਸੰਖਿਆ</string>
     <string name="show_time">ਸ਼ੋਅ ਸਮਾ</string>
     <string name="show_date">ਮਿਤੀ ਦਿਖਾਓ</string>
+    <string name="show_battery">ਬੈਟਰੀ ਦਿਖਾਓ</string>
     <string name="lock_home_apps">ਐਪਾਂ ਨੂੰ ਲਾਕ ਕਰੋ</string>
     <string name="extend_home_apps_area">ਕਲਿਕ ਕਰਨ ਯੋਗ ਖੇਤਰ ਵਧਾਓ</string>
     <string name="home_alignment_bottom">ਹੋਮ ਸਕ੍ਰੀਨ ਹੇਠਾਂ ਇਕਸਾਰ ਕਰੋ</string>

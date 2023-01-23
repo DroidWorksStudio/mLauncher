@@ -31,6 +31,7 @@
     <string name="apps_on_home_screen">Otseteede arv</string>
     <string name="show_time">Näita aega</string>
     <string name="show_date">Näita kuupäeva</string>
+    <string name="show_battery">Näita akut</string>
     <string name="lock_home_apps">Lukustage rakendused</string>
     <string name="extend_home_apps_area">Laiendada klikitav ala</string>
     <string name="home_alignment_bottom">Esialguse ekraani joondamine allapoole</string>

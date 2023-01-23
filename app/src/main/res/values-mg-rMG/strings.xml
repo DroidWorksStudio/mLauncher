@@ -31,6 +31,7 @@
     <string name="apps_on_home_screen">Isan\'ny hitsin-dàlana</string>
     <string name="show_time">Fotoana fampisehoana</string>
     <string name="show_date">Asehoy ny daty</string>
+    <string name="show_battery">Asehoy ny bateria</string>
     <string name="lock_home_apps">Lock Apps</string>
     <string name="extend_home_apps_area">Hanitatra ny faritra azo kitihina</string>
     <string name="home_alignment_bottom">Ampifanaraho ny ambany ny efijery</string>

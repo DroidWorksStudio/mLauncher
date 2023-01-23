@@ -31,6 +31,7 @@
     <string name="apps_on_home_screen">მალსახმობების რაოდენობა</string>
     <string name="show_time">Შოუს დრო</string>
     <string name="show_date">თარიღის ჩვენება</string>
+    <string name="show_battery">ბატარეის ჩვენება</string>
     <string name="lock_home_apps">აპების ჩაკეტვა</string>
     <string name="extend_home_apps_area">გააფართოვეთ დაწკაპუნებადი ტერიტორია</string>
     <string name="home_alignment_bottom">საწყისი ეკრანის გასწორება ბოლოში</string>

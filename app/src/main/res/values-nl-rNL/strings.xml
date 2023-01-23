@@ -31,6 +31,7 @@
     <string name="apps_on_home_screen">Aantal snelkoppelingen</string>
     <string name="show_time">Tijd weergeven</string>
     <string name="show_date">Datum weergeven</string>
+    <string name="show_battery">Toon batterij</string>
     <string name="lock_home_apps">Apps vergrendelen</string>
     <string name="extend_home_apps_area">Klikbaar gebied uitbreiden</string>
     <string name="home_alignment_bottom">Startscherm uitlijning onderaan</string>
