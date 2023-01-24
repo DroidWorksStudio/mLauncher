@@ -6,6 +6,8 @@
 
 **Fixed bugs:**
 
+- \[Question\] Time displayed on homescreen [\#182](https://github.com/HeCodes2Much/mLauncher/issues/182)
+- Feat: fix the display for the battery usage [\#184](https://github.com/HeCodes2Much/mLauncher/pull/184) ([The-Repo-Club](https://github.com/The-Repo-Club))
 - New Crowdin updates [\#181](https://github.com/HeCodes2Much/mLauncher/pull/181) ([The-Repo-Club](https://github.com/The-Repo-Club))
 
 ## [0.4.9](https://github.com/HeCodes2Much/mLauncher/tree/0.4.9) (23, January 2023)
