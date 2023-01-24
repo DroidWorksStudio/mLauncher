@@ -161,13 +161,11 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         if (isCharging) {
             if (usbCharge) {
                 val icon = "\uF583"
-                binding.battery.format12Hour = "$icon $batteryPct%"
-                binding.battery.format24Hour = "$icon $batteryPct%"
+                binding.battery.text = "$icon $batteryPct%"
             }
             if (acCharge) {
                 val icon = "\uF582"
-                binding.battery.format12Hour = "$icon $batteryPct%"
-                binding.battery.format24Hour = "$icon $batteryPct%"
+                binding.battery.text = "$icon $batteryPct%"
             }
         } else {
             val icon = when (batteryPct) {
@@ -182,8 +180,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 90 -> "\uF581"
                 else -> "\uF578"
             }
-            binding.battery.format12Hour = "$icon $batteryPct%"
-            binding.battery.format24Hour = "$icon $batteryPct%"
+            binding.battery.text = "$icon $batteryPct%"
         }
     }
 
