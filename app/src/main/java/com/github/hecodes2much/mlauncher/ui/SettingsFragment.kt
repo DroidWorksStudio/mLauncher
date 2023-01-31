@@ -217,6 +217,14 @@ class SettingsFragment : Fragment() {
                             onSelect = { j -> updateOpacityNum(j) }
                         )
                     },
+                    { _, onChange ->
+                        SettingsToggle(
+                            title = stringResource(R.string.custom_font),
+                            fontSize = iconFs,
+                            onChange = onChange,
+                            state = remember { mutableStateOf(prefs.useCustomIconFont) },
+                        ) { toggleCustomIconFont() }
+                    },
                 )
             )
             SettingsArea(
@@ -531,9 +539,12 @@ class SettingsFragment : Fragment() {
     }
 
     private fun toggleShowBattery() {
-        prefs.showBattery = !prefs.showBattery
+        prefs.showBattery = !prefs.useCustomIconFont
     }
 
+    private fun toggleCustomIconFont() {
+        prefs.useCustomIconFont = !prefs.useCustomIconFont
+    }
     private fun toggleShowDate() {
         prefs.showDate = !prefs.showDate
         viewModel.setShowDate(prefs.showDate)

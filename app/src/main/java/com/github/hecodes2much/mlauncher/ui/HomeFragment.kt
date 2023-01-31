@@ -38,6 +38,7 @@ import com.github.hecodes2much.mlauncher.listener.OnSwipeTouchListener
 import com.github.hecodes2much.mlauncher.listener.ViewSwipeTouchListener
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import java.util.*
 
 
 class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener {
@@ -86,11 +87,14 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         binding.date.textSize = prefs.textSizeLauncher.toFloat()
         binding.battery.textSize = prefs.textSizeLauncher.toFloat() / 1.5f
 
-        val typeface = ResourcesCompat.getFont(requireActivity(), R.font.roboto)
-        binding.clock.typeface = typeface
-        binding.date.typeface = typeface
-        binding.battery.typeface = typeface
-        binding.setDefaultLauncher.typeface = typeface
+        if (prefs.useCustomIconFont) {
+            val typeface = ResourcesCompat.getFont(requireActivity(), R.font.roboto)
+
+            binding.clock.typeface = typeface
+            binding.date.typeface = typeface
+            binding.battery.typeface = typeface
+            binding.setDefaultLauncher.typeface = typeface
+        }
 
         val backgroundColor = getHexForOpacity(requireContext(), prefs)
         binding.mainLayout.setBackgroundColor(backgroundColor)
@@ -127,18 +131,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     }
 
     private fun getBatteryPercentage(context: Context): Int {
-        return if (Build.VERSION.SDK_INT >= 21) {
-            val bm = context.getSystemService(BATTERY_SERVICE) as BatteryManager
-            bm.getIntProperty(BatteryManager.BATTERY_PROPERTY_CAPACITY)
-
-        } else {
-            val iFilter = IntentFilter(Intent.ACTION_BATTERY_CHANGED)
-            val batteryStatus: Intent? = context.registerReceiver(null, iFilter)
-            val level = batteryStatus?.getIntExtra(BatteryManager.EXTRA_LEVEL, -1)
-            val scale = batteryStatus?.getIntExtra(BatteryManager.EXTRA_SCALE, -1)
-            val batteryPct = level!! * 100 / scale!!
-            (batteryPct * 100).toInt()
-        }
+        val bm = context.getSystemService(BATTERY_SERVICE) as BatteryManager
+        return bm.getIntProperty(BatteryManager.BATTERY_PROPERTY_CAPACITY)
     }
 
     private fun updateBatteryStatus() {
@@ -161,11 +155,13 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         if (isCharging) {
             if (usbCharge) {
                 val icon = "\uF583"
-                binding.battery.text = "$icon $batteryPct%"
+                val text = "$icon $batteryPct%"
+                binding.battery.text = text
             }
             if (acCharge) {
                 val icon = "\uF582"
-                binding.battery.text = "$icon $batteryPct%"
+                val text = "$icon $batteryPct%"
+                binding.battery.text = text
             }
         } else {
             val icon = when (batteryPct) {
@@ -180,7 +176,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 90 -> "\uF581"
                 else -> "\uF578"
             }
-            binding.battery.text = "$icon $batteryPct%"
+            val text = "$icon $batteryPct%"
+            binding.battery.text = text
         }
     }
 
@@ -533,8 +530,10 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 }
                 val padding: Int = prefs.textMarginSize
                 view.setPadding(0, padding, 0, padding)
-                val typeface = ResourcesCompat.getFont(requireActivity(), R.font.roboto)
-                typeface.also { view.typeface = it }
+                if (prefs.useCustomIconFont) {
+                    val typeface = ResourcesCompat.getFont(requireActivity(), R.font.roboto)
+                    typeface.also { view.typeface = it }
+                }
                 if (prefs.followAccentColors) {
                     val fontColor = getHexFontColor(requireContext())
                     view.setTextColor(fontColor)
