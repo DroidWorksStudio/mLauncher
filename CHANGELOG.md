@@ -1,5 +1,13 @@
 # Changelog
 
+## [Coming Soon](https://github.com/HeCodes2Much/mLauncher/tree/HEAD)
+
+[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.5.0...HEAD)
+
+**Merged pull requests:**
+
+- Feat: Added a toggle to use the custom icon font [\#186](https://github.com/HeCodes2Much/mLauncher/pull/186) ([The-Repo-Club](https://github.com/The-Repo-Club))
+
 ## [0.5.0](https://github.com/HeCodes2Much/mLauncher/tree/0.5.0) (24, January 2023)
 
 [Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.4.9...0.5.0)
