@@ -23,6 +23,7 @@
     <string name="app_padding_size">Padding Gréisst</string>
     <string name="follow_accent_colors">Akzent Faarwen</string>
     <string name="background_opacity">Hannergrond Opazitéit</string>
+    <string name="custom_font">Benotzt Benotzerdefinéiert Schrëft</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto Show Keyboard</string>
     <string name="auto_open_apps">Automatesch opmaachen Apps</string>
