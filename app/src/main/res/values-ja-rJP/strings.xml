@@ -23,6 +23,7 @@
     <string name="app_padding_size">パディングサイズ</string>
     <string name="follow_accent_colors">アクセントカラー</string>
     <string name="background_opacity">背景の不透明度</string>
+    <string name="custom_font">カスタムフォントを使用</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">アプリを自動的に開く</string>
