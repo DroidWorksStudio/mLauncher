@@ -23,6 +23,7 @@
     <string name="app_padding_size">Laki ng Padding</string>
     <string name="follow_accent_colors">Mga Kulay ng Accent</string>
     <string name="background_opacity">Opacity ng Background</string>
+    <string name="custom_font">Gumamit ng Custom na Font</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show na keyboard</string>
     <string name="auto_open_apps">Awtomatikong buksan ang mga app</string>
