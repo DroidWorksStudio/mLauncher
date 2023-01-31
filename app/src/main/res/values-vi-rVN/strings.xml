@@ -23,6 +23,7 @@
     <string name="app_padding_size">Kích thước đệm</string>
     <string name="follow_accent_colors">Màu nhấn</string>
     <string name="background_opacity">Độ mờ nền</string>
+    <string name="custom_font">Sử dụng phông chữ tùy chỉnh</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Auto open apps</string>
