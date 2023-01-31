@@ -23,6 +23,7 @@
     <string name="app_padding_size">Madhësia e mbushjes</string>
     <string name="follow_accent_colors">Ngjyrat e theksit</string>
     <string name="background_opacity">Opaciteti i sfondit</string>
+    <string name="custom_font">Përdorni fontin e personalizuar</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Tastiera e shfaqjes automatike</string>
     <string name="auto_open_apps">Hapja automatike e aplikacioneve</string>
