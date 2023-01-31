@@ -23,6 +23,7 @@
     <string name="app_padding_size">Ukuran Bantalan</string>
     <string name="follow_accent_colors">Warna Aksen</string>
     <string name="background_opacity">Opasitas Latar Belakang</string>
+    <string name="custom_font">Gunakan Font Kustom</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Keyboard pertunjukan otomatis</string>
     <string name="auto_open_apps">Aplikasi terbuka otomatis</string>
