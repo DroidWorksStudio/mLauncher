@@ -23,6 +23,7 @@
     <string name="app_padding_size">حجم الحشوة</string>
     <string name="follow_accent_colors">ألوان مميزة</string>
     <string name="background_opacity">شفافية الخلفية</string>
+    <string name="custom_font">استخدم خط مخصص</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">فتح التطبيقات تلقائياً</string>
