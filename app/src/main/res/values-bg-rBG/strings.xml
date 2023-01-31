@@ -23,6 +23,7 @@
     <string name="app_padding_size">Размер на подложката</string>
     <string name="follow_accent_colors">Акцентни цветове</string>
     <string name="background_opacity">Непрозрачност на фона</string>
+    <string name="custom_font">Използвайте персонализиран шрифт</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Клавиатура за автошоу</string>
     <string name="auto_open_apps">Автоматично отваряне на приложения</string>
