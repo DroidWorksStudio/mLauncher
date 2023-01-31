@@ -23,6 +23,7 @@
     <string name="app_padding_size">പാഡിംഗ് വലുപ്പം</string>
     <string name="follow_accent_colors">ആക്സന്റ് നിറങ്ങൾ</string>
     <string name="background_opacity">പശ്ചാത്തല അതാര്യത</string>
+    <string name="custom_font">കസ്റ്റം ഫോണ്ട് ഉപയോഗിക്കുക</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">ഓട്ടോ ഷോ കീബോർഡ്</string>
     <string name="auto_open_apps">ആപ്പുകൾ സ്വയമേവ തുറക്കുക</string>
