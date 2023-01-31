@@ -23,6 +23,7 @@
     <string name="app_padding_size">Méid Stuála</string>
     <string name="follow_accent_colors">Dathanna Accent</string>
     <string name="background_opacity">Teimhneacht Cúlra</string>
+    <string name="custom_font">Úsáid Cló Chustaim</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Méarchlár taispeána uathoibríoch</string>
     <string name="auto_open_apps">Aipeanna a oscailt go huathoibríoch</string>
