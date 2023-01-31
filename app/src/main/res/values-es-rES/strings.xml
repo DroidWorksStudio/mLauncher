@@ -23,6 +23,7 @@
     <string name="app_padding_size">Tamaño del relleno</string>
     <string name="follow_accent_colors">Colores de acento</string>
     <string name="background_opacity">Opacidad de fondo</string>
+    <string name="custom_font">Usar fuente personalizada</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Auto abrir apps</string>

@@ -23,6 +23,7 @@
     <string name="app_padding_size">Pamušalo dydis</string>
     <string name="follow_accent_colors">Akcentinės spalvos</string>
     <string name="background_opacity">Fono neskaidrumas</string>
+    <string name="custom_font">Naudokite pasirinktinį šriftą</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Automatinis klaviatūros rodymas</string>
     <string name="auto_open_apps">Automatiškai atidaryti programėlės</string>

@@ -23,6 +23,7 @@
     <string name="app_padding_size">Haben\'ny padding</string>
     <string name="follow_accent_colors">Loko Accent</string>
     <string name="background_opacity">Opacity ambadika</string>
+    <string name="custom_font">Ampiasao ny endritsoratra manokana</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Kitendry fampisehoana mandeha ho azy</string>
     <string name="auto_open_apps">Auto misokatra fampiharana</string>

@@ -23,6 +23,7 @@
     <string name="app_padding_size">Размер заполнения</string>
     <string name="follow_accent_colors">Акцентные цвета</string>
     <string name="background_opacity">Непрозрачность фона</string>
+    <string name="custom_font">Использовать пользовательский шрифт</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Автооткрытие приложений</string>

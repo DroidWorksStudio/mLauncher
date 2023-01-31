@@ -23,6 +23,7 @@
     <string name="app_padding_size">پيڊنگ جي ماپ</string>
     <string name="follow_accent_colors">تلفظ رنگ</string>
     <string name="background_opacity">پس منظر جي شفافيت</string>
+    <string name="custom_font">ڪسٽم فونٽ استعمال ڪريو</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">خودڪار ڏيکاريو ڪيبورڊ</string>
     <string name="auto_open_apps">خودڪار کوليو ايپس</string>

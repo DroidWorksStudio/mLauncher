@@ -23,6 +23,7 @@
     <string name="app_padding_size">Velikost vycpávky</string>
     <string name="follow_accent_colors">Akcentní barvy</string>
     <string name="background_opacity">Neprůhlednost pozadí</string>
+    <string name="custom_font">Použít vlastní písmo</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Automatické otevření aplikací</string>

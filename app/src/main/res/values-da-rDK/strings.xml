@@ -23,6 +23,7 @@
     <string name="app_padding_size">Polstring størrelse</string>
     <string name="follow_accent_colors">Accent farver</string>
     <string name="background_opacity">Baggrundsopacitet</string>
+    <string name="custom_font">Brug brugerdefineret skrifttype</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Åbn apps automatisk</string>

@@ -23,6 +23,7 @@
     <string name="app_padding_size">Vulling maat</string>
     <string name="follow_accent_colors">Accentkleuren</string>
     <string name="background_opacity">Opaciteit van de achtergrond</string>
+    <string name="custom_font">Gebruik aangepast lettertype</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Apps automatisch openen</string>

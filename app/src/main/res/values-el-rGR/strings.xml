@@ -23,6 +23,7 @@
     <string name="app_padding_size">Μέγεθος padding</string>
     <string name="follow_accent_colors">Χρώματα έμφασης</string>
     <string name="background_opacity">Αδιαφάνεια φόντου</string>
+    <string name="custom_font">Χρησιμοποιήστε προσαρμοσμένη γραμματοσειρά</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Αυτόματο άνοιγμα εφαρμογών</string>

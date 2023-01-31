@@ -23,6 +23,7 @@
     <string name="app_padding_size">Boşluk Boyutu</string>
     <string name="follow_accent_colors">Vurgu Renkleri</string>
     <string name="background_opacity">Arka Plan Opaklığı</string>
+    <string name="custom_font">Özel Yazı Tipi Kullan</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Klavye\'yi otomatik göster</string>
     <string name="auto_open_apps">Uygulamaları otomatik aç</string>
