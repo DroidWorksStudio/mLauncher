@@ -23,6 +23,7 @@
     <string name="app_padding_size">패딩 크기</string>
     <string name="follow_accent_colors">악센트 색상</string>
     <string name="background_opacity">배경 불투명도</string>
+    <string name="custom_font">사용자 지정 글꼴 사용</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Auto open apps</string>
