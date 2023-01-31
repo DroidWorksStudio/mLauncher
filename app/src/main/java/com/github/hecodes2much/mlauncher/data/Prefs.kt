@@ -56,6 +56,7 @@ private const val SWIPE_UP = "SWIPE_UP"
 private const val CLICK_CLOCK = "CLICK_CLOCK"
 private const val CLICK_DATE = "CLICK_DATE"
 private const val DOUBLE_TAP = "DOUBLE_TAP"
+private const val CUSTOM_FONT = "CUSTOM_FONT"
 
 private const val TEXT_SIZE_LAUNCHER = "TEXT_SIZE_LAUNCHER"
 private const val TEXT_SIZE_SETTINGS = "TEXT_SIZE_SETTINGS"
@@ -196,6 +197,10 @@ class Prefs(val context: Context) {
     var homeLocked: Boolean
         get() = prefs.getBoolean(HOME_LOCKED, false)
         set(value) = prefs.edit().putBoolean(HOME_LOCKED, value).apply()
+
+    var useCustomIconFont: Boolean
+        get() = prefs.getBoolean(CUSTOM_FONT, false)
+        set(value) = prefs.edit().putBoolean(CUSTOM_FONT, value).apply()
 
     var followAccentColors: Boolean
         get() = prefs.getBoolean(HOME_FOLLOW_ACCENT, false)

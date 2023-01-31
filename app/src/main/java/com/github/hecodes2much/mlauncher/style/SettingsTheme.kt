@@ -60,10 +60,6 @@ val LocalReplacementColor = staticCompositionLocalOf {
     )
 }
 
-val fontFamily = FontFamily(
-    Font(resId = R.font.roboto),
-)
-
 @Composable
 fun SettingsTheme(
     isDark: Boolean,
@@ -71,29 +67,24 @@ fun SettingsTheme(
 ) {
     val replacementTypography = ReplacementTypography(
         body = TextStyle(
-            fontFamily = fontFamily,
             fontSize = 16.sp
         ),
         title = TextStyle(
-            fontFamily = fontFamily,
             fontWeight = FontWeight.Light,
             fontSize = 32.sp,
             color = if (isDark) textLight else textDark,
         ),
         item = TextStyle(
-            fontFamily = fontFamily,
             fontWeight = FontWeight.Light,
             fontSize = 16.sp,
             color = if (isDark) textLight else textDark,
         ),
         button = TextStyle(
-            fontFamily = fontFamily,
             fontWeight = FontWeight.Bold,
             fontSize = 16.sp,
             color = if (isDark) textLight else textDark,
         ),
         buttonDisabled = TextStyle(
-            fontFamily = fontFamily,
             fontWeight = FontWeight.Bold,
             fontSize = 16.sp,
             color = textGray,
