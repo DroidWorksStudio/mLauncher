@@ -23,6 +23,7 @@
     <string name="app_padding_size">प्याडिङ साइज</string>
     <string name="follow_accent_colors">एक्सेन्ट रङहरू</string>
     <string name="background_opacity">पृष्ठभूमि अस्पष्टता</string>
+    <string name="custom_font">अनुकूलन फन्ट प्रयोग गर्नुहोस्</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">किबोर्ड स्वतः देखाउनुहोस्</string>
     <string name="auto_open_apps">स्वतः खोल्ने एपहरू</string>
