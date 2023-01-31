@@ -23,6 +23,7 @@
     <string name="app_padding_size">Vadderingsstorlek</string>
     <string name="follow_accent_colors">Accentfärger</string>
     <string name="background_opacity">Bakgrundsopacitet</string>
+    <string name="custom_font">Använd anpassat teckensnitt</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Öppna appar automatiskt</string>
