@@ -23,6 +23,7 @@
     <string name="app_padding_size">ขนาดช่องว่างภายใน</string>
     <string name="follow_accent_colors">เน้นสี</string>
     <string name="background_opacity">ความทึบของพื้นหลัง</string>
+    <string name="custom_font">ใช้แบบอักษรที่กำหนดเอง</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">แป้นพิมพ์แสดงอัตโนมัติ</string>
     <string name="auto_open_apps">เปิดแอปอัตโนมัติ</string>
