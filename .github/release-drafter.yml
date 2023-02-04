@@ -1,17 +1,21 @@
 name-template: '$RESOLVED_VERSION-mLauncher'
 tag-template: '$RESOLVED_VERSION'
-exclude-labels:
-  - 'Type: Wont Fix'
 categories:
-  - title: '🚀 Features'
+  - title: '🚀 Enhancement'
     labels:
-      - 'Type: Feature'
       - 'Type: Enhancement'
   - title: '🐛 Bug Fixes'
     labels:
       - 'Type: Bug Report'
   - title: '🧰 Crash Report'
-    label: 'Type: Crash Report'
+    label: 
+      - 'Type: Crash Report'
+  - title: '🔨 Wont Fix'
+    label: 
+      - 'Type: Wont Fix'
+  - title: '✅ Release'
+    label: 
+      - 'Type: Release'
 change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
 change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
 version-resolver:
