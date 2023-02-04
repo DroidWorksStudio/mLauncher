@@ -1,8 +1,8 @@
 # Changelog
 
-## [0.5.1](https://github.com/HeCodes2Much/mLauncher/tree/0.5.1) ( 4, February 2023)
+## [Coming Soon](https://github.com/HeCodes2Much/mLauncher/tree/HEAD)
 
-[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.5.0...0.5.1)
+[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.5.0...HEAD)
 
 **Release Summary**
 
@@ -16,6 +16,10 @@
 
 - New Crowdin updates [\#187](https://github.com/HeCodes2Much/mLauncher/pull/187) ([The-Repo-Club](https://github.com/The-Repo-Club))
 - Feat: Added a toggle to use the custom icon font [\#186](https://github.com/HeCodes2Much/mLauncher/pull/186) ([The-Repo-Club](https://github.com/The-Repo-Club))
+
+**Merged pull requests:**
+
+- Fix Settings for Icon Font [\#192](https://github.com/HeCodes2Much/mLauncher/pull/192) ([The-Repo-Club](https://github.com/The-Repo-Club))
 
 ## [0.5.0](https://github.com/HeCodes2Much/mLauncher/tree/0.5.0) (24, January 2023)
 
