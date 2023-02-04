@@ -4,6 +4,14 @@
 
 [Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.5.0...HEAD)
 
+**Release Summary**
+
+### Type of change <!-- required to be filled in -->
+
+<!-- Please delete options that are not relevant. -->
+
+- [x] New Release
+
 **Merged pull requests:**
 
 - New Crowdin updates [\#187](https://github.com/HeCodes2Much/mLauncher/pull/187) ([The-Repo-Club](https://github.com/The-Repo-Club))
