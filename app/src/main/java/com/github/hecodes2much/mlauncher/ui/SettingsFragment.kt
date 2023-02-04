@@ -217,14 +217,6 @@ class SettingsFragment : Fragment() {
                             onSelect = { j -> updateOpacityNum(j) }
                         )
                     },
-                    { _, onChange ->
-                        SettingsToggle(
-                            title = stringResource(R.string.custom_font),
-                            fontSize = iconFs,
-                            onChange = onChange,
-                            state = remember { mutableStateOf(prefs.useCustomIconFont) },
-                        ) { toggleCustomIconFont() }
-                    },
                 )
             )
             SettingsArea(
@@ -255,7 +247,15 @@ class SettingsFragment : Fragment() {
                             onChange = onChange,
                             state = remember { mutableStateOf(prefs.searchFromStart) },
                         ) { toggleSearchFromStart() }
-                    }
+                    },
+                    { _, onChange ->
+                        SettingsToggle(
+                            title = stringResource(R.string.icon_font),
+                            fontSize = iconFs,
+                            onChange = onChange,
+                            state = remember { mutableStateOf(prefs.useCustomIconFont) },
+                        ) { toggleCustomIconFont() }
+                    },
                 )
             )
             SettingsArea(
