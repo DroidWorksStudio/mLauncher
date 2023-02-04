@@ -12,7 +12,7 @@
 
 - [x] New Release
 
-**Merged pull requests:**
+**Implemented enhancements:**
 
 - New Crowdin updates [\#187](https://github.com/HeCodes2Much/mLauncher/pull/187) ([The-Repo-Club](https://github.com/The-Repo-Club))
 - Feat: Added a toggle to use the custom icon font [\#186](https://github.com/HeCodes2Much/mLauncher/pull/186) ([The-Repo-Club](https://github.com/The-Repo-Club))
