@@ -82,19 +82,20 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     override fun onStart() {
         super.onStart()
         if (prefs.showStatusBar) showStatusBar(requireActivity()) else hideStatusBar(requireActivity())
+        val typeface = ResourcesCompat.getFont(requireActivity(), R.font.roboto)
 
         binding.clock.textSize = prefs.textSizeLauncher * 2.5f
         binding.date.textSize = prefs.textSizeLauncher.toFloat()
-        binding.battery.textSize = prefs.textSizeLauncher.toFloat() / 1.5f
+        binding.batteryIcon.textSize = prefs.textSizeLauncher.toFloat() / 1.5f
+        binding.batteryText.textSize = prefs.textSizeLauncher.toFloat() / 1.5f
 
         if (prefs.useCustomIconFont) {
-            val typeface = ResourcesCompat.getFont(requireActivity(), R.font.roboto)
-
             binding.clock.typeface = typeface
             binding.date.typeface = typeface
-            binding.battery.typeface = typeface
+            binding.batteryText.typeface = typeface
             binding.setDefaultLauncher.typeface = typeface
         }
+        binding.batteryIcon.typeface = typeface
 
         val backgroundColor = getHexForOpacity(requireContext(), prefs)
         binding.mainLayout.setBackgroundColor(backgroundColor)
@@ -102,7 +103,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             val fontColor = getHexFontColor(requireContext())
             binding.clock.setTextColor(fontColor)
             binding.date.setTextColor(fontColor)
-            binding.battery.setTextColor(fontColor)
+            binding.batteryIcon.setTextColor(fontColor)
+            binding.batteryText.setTextColor(fontColor)
             binding.setDefaultLauncher.setTextColor(fontColor)
         }
         updateBatteryStatus()
@@ -155,13 +157,15 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         if (isCharging) {
             if (usbCharge) {
                 val icon = "\uF583"
-                val text = "$icon $batteryPct%"
-                binding.battery.text = text
+                val batText = "$batteryPct%"
+                binding.batteryIcon.text = icon
+                binding.batteryText.text = batText
             }
             if (acCharge) {
                 val icon = "\uF582"
-                val text = "$icon $batteryPct%"
-                binding.battery.text = text
+                val batText = "$batteryPct%"
+                binding.batteryIcon.text = icon
+                binding.batteryText.text = batText
             }
         } else {
             val icon = when (batteryPct) {
@@ -176,8 +180,9 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 90 -> "\uF581"
                 else -> "\uF578"
             }
-            val text = "$icon $batteryPct%"
-            binding.battery.text = text
+            val batText = "$batteryPct%"
+            binding.batteryIcon.text = icon
+            binding.batteryText.text = batText
         }
     }
 

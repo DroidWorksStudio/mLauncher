@@ -26,12 +26,12 @@
     <string name="app_padding_size">Padding Size</string>
     <string name="follow_accent_colors">Accent Colors</string>
     <string name="background_opacity">Background Opacity</string>
-    <string name="custom_font">Use Custom Font</string>
 
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Auto open apps</string>
     <string name="search_from_start">App search from start.</string>
+    <string name="icon_font">Use Icon Font</string>
 
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">Number of shortcuts</string>
