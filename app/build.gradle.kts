@@ -1,3 +1,5 @@
+@file:Suppress("UnstableApiUsage")
+
 plugins {
     id("com.android.application") apply true
     id("kotlin-android") apply true
@@ -11,8 +13,8 @@ android {
         applicationId = "app.mlauncher"
         minSdk = 23
         targetSdk = 33
-        versionCode = 50
-        versionName = "0.5.0"
+        versionCode = 51
+        versionName = "0.5.1"
     }
 
     buildTypes {
@@ -81,7 +83,7 @@ dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
     implementation("org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion")
     implementation("androidx.core:core-ktx:1.9.0")
-    implementation("androidx.appcompat:appcompat:1.5.1")
+    implementation("androidx.appcompat:appcompat:1.6.0")
     implementation("androidx.recyclerview:recyclerview:1.2.1")
 
     // Android lifecycle
@@ -104,7 +106,7 @@ dependencies {
     implementation("androidx.compose.material:material:1.3.1")
     implementation("com.github.SmartToolFactory:Compose-Colorful-Sliders:1.1.0")
     // Animations
-    implementation("androidx.compose.animation:animation:1.3.2")
+    implementation("androidx.compose.animation:animation:1.3.3")
     implementation("androidx.navigation:navigation-ui-ktx:2.5.3")
 
     implementation("com.google.code.gson:gson:2.10.1")
@@ -116,9 +118,9 @@ dependencies {
     implementation("androidx.test.espresso:espresso-idling-resource:$androidxTestEspresso")
 
     // Test rules and transitive dependencies:
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.3.2")
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.3.3")
     // Needed for createComposeRule, but not createAndroidComposeRule:
-    debugImplementation("androidx.compose.ui:ui-test-manifest:1.3.2")
+    debugImplementation("androidx.compose.ui:ui-test-manifest:1.3.3")
     androidTestImplementation("androidx.navigation:navigation-testing:2.5.3")
     debugImplementation("androidx.fragment:fragment-testing:1.5.5")
     implementation("androidx.test:core-ktx:1.5.0")
