@@ -23,11 +23,11 @@
     <string name="app_padding_size">Розмір прокладки</string>
     <string name="follow_accent_colors">Акцентні кольори</string>
     <string name="background_opacity">Непрозорість фону</string>
-    <string name="custom_font">Використовуйте спеціальний шрифт</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Автоматично відкривати додатки</string>
     <string name="search_from_start">Пошук програми з початку.</string>
+    <string name="icon_font">Використовуйте шрифт значків</string>
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">Кількість ярликів</string>
     <string name="show_time">Відображати час</string>
