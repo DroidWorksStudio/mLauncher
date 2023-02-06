@@ -23,11 +23,11 @@
     <string name="app_padding_size">Bólstrun Stærð</string>
     <string name="follow_accent_colors">Hreim litir</string>
     <string name="background_opacity">Ógagnsæi í bakgrunni</string>
-    <string name="custom_font">Notaðu sérsniðið leturgerð</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Sjálfvirk lyklaborð</string>
     <string name="auto_open_apps">Opna forrit sjálfkrafa</string>
     <string name="search_from_start">App leit frá upphafi.</string>
+    <string name="icon_font">Notaðu táknleturgerð</string>
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">Fjöldi flýtileiða</string>
     <string name="show_time">Sýningartími</string>
