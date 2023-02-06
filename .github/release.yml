@@ -11,15 +11,18 @@ changelog:
     - title: '🐛 Bug Fixes'
       labels:
         - 'Type: Bug Report'
-    - title: '🧰 Crash Report'
+    - title: '⚠️ Crash Report'
       label:
         - 'Type: Crash Report'
-    - title: '🔨 Wont Fix'
+    - title: '🈯️ Language Support'
       label:
-        - 'Type: Wont Fix'
+        - 'Type: Language Support'
     - title: '✅ Release'
       label:
         - 'Type: Release'
-    - title: Other Changes
+    - title: '🔨 Wont Fix'
+      label:
+        - 'Type: Wont Fix'
+    - title: '⚡ Other Changes'
       labels:
         - "*"
