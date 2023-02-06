@@ -23,11 +23,11 @@
     <string name="app_padding_size">Pamušalo dydis</string>
     <string name="follow_accent_colors">Akcentinės spalvos</string>
     <string name="background_opacity">Fono neskaidrumas</string>
-    <string name="custom_font">Naudokite pasirinktinį šriftą</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Automatinis klaviatūros rodymas</string>
     <string name="auto_open_apps">Automatiškai atidaryti programėlės</string>
     <string name="search_from_start">Programų paieška nuo pat pradžių.</string>
+    <string name="icon_font">Naudokite piktogramos šriftą</string>
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">Nuorodų skaičius</string>
     <string name="show_time">Rodyti laiką</string>

@@ -23,11 +23,11 @@
     <string name="app_padding_size">Vulling maat</string>
     <string name="follow_accent_colors">Accentkleuren</string>
     <string name="background_opacity">Opaciteit van de achtergrond</string>
-    <string name="custom_font">Gebruik aangepast lettertype</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Apps automatisch openen</string>
     <string name="search_from_start">App zoeken vanaf het begin.</string>
+    <string name="icon_font">Gebruik pictogramlettertype</string>
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">Aantal snelkoppelingen</string>
     <string name="show_time">Tijd weergeven</string>

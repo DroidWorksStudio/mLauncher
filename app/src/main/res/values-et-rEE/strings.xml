@@ -23,11 +23,11 @@
     <string name="app_padding_size">Polsterduse suurus</string>
     <string name="follow_accent_colors">Aktsentvärvid</string>
     <string name="background_opacity">Tausta läbipaistmatus</string>
-    <string name="custom_font">Kasutage kohandatud fonti</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Autoesituse klaviatuur</string>
     <string name="auto_open_apps">Automaatselt avatud rakendused</string>
     <string name="search_from_start">Rakenduse otsing algusest peale.</string>
+    <string name="icon_font">Kasutage ikooni fonti</string>
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">Otseteede arv</string>
     <string name="show_time">Näita aega</string>

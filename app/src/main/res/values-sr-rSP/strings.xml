@@ -23,11 +23,11 @@
     <string name="app_padding_size">Паддинг Сизе</string>
     <string name="follow_accent_colors">Аццент Цолорс</string>
     <string name="background_opacity">Прозирност позадине</string>
-    <string name="custom_font">Користите прилагођени фонт</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Auto open apps</string>
     <string name="search_from_start">Претрага апликација од почетка.</string>
+    <string name="icon_font">Користите фонт иконе</string>
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">Number of shortcuts</string>
     <string name="show_time">Show time</string>

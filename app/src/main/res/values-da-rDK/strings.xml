@@ -23,11 +23,11 @@
     <string name="app_padding_size">Polstring størrelse</string>
     <string name="follow_accent_colors">Accent farver</string>
     <string name="background_opacity">Baggrundsopacitet</string>
-    <string name="custom_font">Brug brugerdefineret skrifttype</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Åbn apps automatisk</string>
     <string name="search_from_start">App-søgning fra start.</string>
+    <string name="icon_font">Brug Icon Font</string>
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">Antal genveje</string>
     <string name="show_time">Vis tid</string>

@@ -23,11 +23,11 @@
     <string name="app_padding_size">Méid Stuála</string>
     <string name="follow_accent_colors">Dathanna Accent</string>
     <string name="background_opacity">Teimhneacht Cúlra</string>
-    <string name="custom_font">Úsáid Cló Chustaim</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Méarchlár taispeána uathoibríoch</string>
     <string name="auto_open_apps">Aipeanna a oscailt go huathoibríoch</string>
     <string name="search_from_start">Cuardach aip ón tús.</string>
+    <string name="icon_font">Úsáid Cló Deilbhín</string>
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">Líon na n-aicearraí</string>
     <string name="show_time">Am seó</string>

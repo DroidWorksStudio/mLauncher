@@ -23,11 +23,11 @@
     <string name="app_padding_size">ბალიშის ზომა</string>
     <string name="follow_accent_colors">აქცენტის ფერები</string>
     <string name="background_opacity">ფონის გამჭვირვალობა</string>
-    <string name="custom_font">გამოიყენეთ მორგებული შრიფტი</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">ავტომატური ჩვენების კლავიატურა</string>
     <string name="auto_open_apps">აპების ავტომატური გახსნა</string>
     <string name="search_from_start">აპის ძებნა თავიდანვე.</string>
+    <string name="icon_font">გამოიყენეთ ხატულა შრიფტი</string>
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">მალსახმობების რაოდენობა</string>
     <string name="show_time">Შოუს დრო</string>

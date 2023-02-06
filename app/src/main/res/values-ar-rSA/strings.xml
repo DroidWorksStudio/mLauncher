@@ -23,11 +23,11 @@
     <string name="app_padding_size">حجم الحشوة</string>
     <string name="follow_accent_colors">ألوان مميزة</string>
     <string name="background_opacity">شفافية الخلفية</string>
-    <string name="custom_font">استخدم خط مخصص</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">فتح التطبيقات تلقائياً</string>
     <string name="search_from_start">البحث عن التطبيق من البداية.</string>
+    <string name="icon_font">استخدم خط الأيقونة</string>
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">عدد الاختصارات</string>
     <string name="show_time">إظهار الوقت</string>

@@ -23,11 +23,11 @@
     <string name="app_padding_size">Lahi Padding</string>
     <string name="follow_accent_colors">Nā waihoʻoluʻu</string>
     <string name="background_opacity">Opacity o ka hope</string>
-    <string name="custom_font">E hoʻohana i ka Font Custom</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Hōʻike ʻokoʻa kīwī</string>
     <string name="auto_open_apps">Hāmama nā polokalamu</string>
     <string name="search_from_start">Huli polokalamu mai ka hoʻomaka.</string>
+    <string name="icon_font">E hoʻohana i ka Font Icon</string>
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">Ka helu o nā pōkole</string>
     <string name="show_time">Hōʻike manawa</string>

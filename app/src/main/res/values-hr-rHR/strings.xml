@@ -23,11 +23,11 @@
     <string name="app_padding_size">Veličina podloge</string>
     <string name="follow_accent_colors">Naglašene boje</string>
     <string name="background_opacity">Neprozirnost pozadine</string>
-    <string name="custom_font">Koristite prilagođeni font</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Automatski prikaz tipkovnice</string>
     <string name="auto_open_apps">Automatsko otvaranje aplikacija</string>
     <string name="search_from_start">Pretraživanje aplikacije od početka.</string>
+    <string name="icon_font">Koristite font ikone</string>
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">Broj prečaca</string>
     <string name="show_time">Pokaži vrijeme</string>

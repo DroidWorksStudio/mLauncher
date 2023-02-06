@@ -23,11 +23,11 @@
     <string name="app_padding_size">Polstergröße</string>
     <string name="follow_accent_colors">Akzentfarben</string>
     <string name="background_opacity">Deckkraft des Hintergrunds</string>
-    <string name="custom_font">Benutzerdefinierte Schriftart verwenden</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Apps automatisch öffnen</string>
     <string name="search_from_start">App-Suche von Anfang an.</string>
+    <string name="icon_font">Verwenden Sie die Symbolschrift</string>
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">Anzahl der Verknüpfungen</string>
     <string name="show_time">Zeit anzeigen</string>

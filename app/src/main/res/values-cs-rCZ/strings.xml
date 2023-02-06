@@ -23,11 +23,11 @@
     <string name="app_padding_size">Velikost vycpávky</string>
     <string name="follow_accent_colors">Akcentní barvy</string>
     <string name="background_opacity">Neprůhlednost pozadí</string>
-    <string name="custom_font">Použít vlastní písmo</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Automatické otevření aplikací</string>
     <string name="search_from_start">Hledání aplikací od začátku.</string>
+    <string name="icon_font">Použijte písmo ikony</string>
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">Počet zástupců</string>
     <string name="show_time">Zobrazit čas</string>
