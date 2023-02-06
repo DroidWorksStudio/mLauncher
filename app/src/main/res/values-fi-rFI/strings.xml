@@ -23,11 +23,11 @@
     <string name="app_padding_size">Pehmusteen koko</string>
     <string name="follow_accent_colors">Korostusvärit</string>
     <string name="background_opacity">Taustan läpinäkymättömyys</string>
-    <string name="custom_font">Käytä mukautettua kirjasinta</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Automaattiset sovellukset</string>
     <string name="search_from_start">Sovellushaku alusta alkaen.</string>
+    <string name="icon_font">Käytä kuvakkeen fonttia</string>
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">Pikakuvakkeiden määrä</string>
     <string name="show_time">Näytä aika</string>
