@@ -23,11 +23,11 @@
     <string name="app_padding_size">Padding Méret</string>
     <string name="follow_accent_colors">Kiemelt színek</string>
     <string name="background_opacity">Háttér átlátszatlanság</string>
-    <string name="custom_font">Egyéni betűtípus használata</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Autókiállítás billentyűzet</string>
     <string name="auto_open_apps">Automatikusan megnyíló alkalmazások</string>
     <string name="search_from_start">Alkalmazáskeresés a kezdetektől.</string>
+    <string name="icon_font">Ikon betűtípus használata</string>
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">A parancsikonok száma</string>
     <string name="show_time">Show time</string>
