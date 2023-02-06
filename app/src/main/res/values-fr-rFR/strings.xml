@@ -23,11 +23,11 @@
     <string name="app_padding_size">Taille de rembourrage</string>
     <string name="follow_accent_colors">Couleurs d\'accentuation</string>
     <string name="background_opacity">Opacité du fond</string>
-    <string name="custom_font">Utiliser une police personnalisée</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Ouvrir automatiquement les applications</string>
     <string name="search_from_start">Recherche d\'applications depuis le début.</string>
+    <string name="icon_font">Utiliser la police de l\'icône</string>
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">Nombre de raccourcis</string>
     <string name="show_time">Afficher l\'heure</string>
