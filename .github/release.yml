@@ -1,0 +1,25 @@
+changelog:
+  exclude:
+    labels:
+      - ignore-for-release
+    authors:
+      - octocat
+  categories:
+    - title: '🚀 Enhancement'
+      labels:
+        - 'Type: Enhancement'
+    - title: '🐛 Bug Fixes'
+      labels:
+        - 'Type: Bug Report'
+    - title: '🧰 Crash Report'
+      label:
+        - 'Type: Crash Report'
+    - title: '🔨 Wont Fix'
+      label:
+        - 'Type: Wont Fix'
+    - title: '✅ Release'
+      label:
+        - 'Type: Release'
+    - title: Other Changes
+      labels:
+        - "*"
