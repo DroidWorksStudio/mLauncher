@@ -23,11 +23,11 @@
     <string name="app_padding_size">Laki ng Padding</string>
     <string name="follow_accent_colors">Mga Kulay ng Accent</string>
     <string name="background_opacity">Opacity ng Background</string>
-    <string name="custom_font">Gumamit ng Custom na Font</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show na keyboard</string>
     <string name="auto_open_apps">Awtomatikong buksan ang mga app</string>
     <string name="search_from_start">Paghahanap ng app mula sa simula.</string>
+    <string name="icon_font">Gumamit ng Icon Font</string>
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">Bilang ng mga shortcut</string>
     <string name="show_time">Oras ng palabas</string>
