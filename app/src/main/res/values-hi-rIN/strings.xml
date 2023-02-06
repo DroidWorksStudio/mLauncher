@@ -23,11 +23,11 @@
     <string name="app_padding_size">पैडिंग आकार</string>
     <string name="follow_accent_colors">एक्सेंट रंग</string>
     <string name="background_opacity">पृष्ठभूमि अस्पष्टता</string>
-    <string name="custom_font">कस्टम फ़ॉन्ट का प्रयोग करें</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">ऑटो शो कीबोर्ड</string>
     <string name="auto_open_apps">स्वतः खुले ऐप्स</string>
     <string name="search_from_start">ऐप खोज शुरू से।</string>
+    <string name="icon_font">आइकन फ़ॉन्ट का प्रयोग करें</string>
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">शॉर्टकट की संख्या</string>
     <string name="show_time">शो टाइम</string>
