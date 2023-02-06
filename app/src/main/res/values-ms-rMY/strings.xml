@@ -23,11 +23,11 @@
     <string name="app_padding_size">Saiz Padding</string>
     <string name="follow_accent_colors">Warna Aksen</string>
     <string name="background_opacity">Kelegapan Latar Belakang</string>
-    <string name="custom_font">Gunakan Fon Tersuai</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Papan kekunci paparan automatik</string>
     <string name="auto_open_apps">Auto buka apl</string>
     <string name="search_from_start">Carian apl dari mula.</string>
+    <string name="icon_font">Gunakan Font Ikon</string>
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">Bilangan pintasan</string>
     <string name="show_time">Masa pertunjukan</string>
