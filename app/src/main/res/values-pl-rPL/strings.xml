@@ -23,11 +23,11 @@
     <string name="app_padding_size">Rozmiar wypełnienia</string>
     <string name="follow_accent_colors">Kolory akcentujące</string>
     <string name="background_opacity">Krycie tła</string>
-    <string name="custom_font">Użyj niestandardowej czcionki</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Automatyczne otwieranie aplikacji</string>
     <string name="search_from_start">Wyszukiwanie aplikacji od początku.</string>
+    <string name="icon_font">Użyj czcionki ikony</string>
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">Liczba skrótów</string>
     <string name="show_time">Pokaż czas</string>
