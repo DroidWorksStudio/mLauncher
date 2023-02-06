@@ -12,16 +12,16 @@ changelog:
       labels:
         - 'Type: Bug Report'
     - title: '⚠️ Crash Report'
-      label:
+      labels:
         - 'Type: Crash Report'
     - title: '🈯️ Language Support'
-      label:
+      labels:
         - 'Type: Language Support'
     - title: '✅ Release'
-      label:
+      labels:
         - 'Type: Release'
     - title: '🔨 Wont Fix'
-      label:
+      labels:
         - 'Type: Wont Fix'
     - title: '⚡ Other Changes'
       labels:
