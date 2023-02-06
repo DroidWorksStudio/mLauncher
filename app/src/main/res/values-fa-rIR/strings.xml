@@ -23,11 +23,11 @@
     <string name="app_padding_size">اندازه بالشتک</string>
     <string name="follow_accent_colors">رنگ های تاکیدی</string>
     <string name="background_opacity">کدورت پس زمینه</string>
-    <string name="custom_font">از فونت سفارشی استفاده کنید</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">صفحه کلید نمایش خودکار</string>
     <string name="auto_open_apps">باز کردن خودکار برنامه ها</string>
     <string name="search_from_start">جستجوی برنامه از ابتدا</string>
+    <string name="icon_font">از فونت آیکون استفاده کنید</string>
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">تعداد میانبرها</string>
     <string name="show_time">نمایش زمان</string>
