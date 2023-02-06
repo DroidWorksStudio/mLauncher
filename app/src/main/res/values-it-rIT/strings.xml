@@ -23,11 +23,11 @@
     <string name="app_padding_size">Dimensione imbottitura</string>
     <string name="follow_accent_colors">Colori accentati</string>
     <string name="background_opacity">Opacità dello sfondo</string>
-    <string name="custom_font">Usa carattere personalizzato</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Apri automaticamente le app</string>
     <string name="search_from_start">Ricerca app dall\'inizio.</string>
+    <string name="icon_font">Usa carattere icona</string>
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">Numero di scorciatoie</string>
     <string name="show_time">Mostra ora</string>
