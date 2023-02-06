@@ -22,12 +22,15 @@
 
 **Implemented enhancements:**
 
-- New Crowdin updates [\#187](https://github.com/HeCodes2Much/mLauncher/pull/187) ([The-Repo-Club](https://github.com/The-Repo-Club))
 - Feat: Added a toggle to use the custom icon font [\#186](https://github.com/HeCodes2Much/mLauncher/pull/186) ([The-Repo-Club](https://github.com/The-Repo-Club))
 
 **Fixed bugs:**
 
 - Fix Settings for Icon Font [\#192](https://github.com/HeCodes2Much/mLauncher/pull/192) ([The-Repo-Club](https://github.com/The-Repo-Club))
+
+**Merged pull requests:**
+
+- New Crowdin updates [\#187](https://github.com/HeCodes2Much/mLauncher/pull/187) ([The-Repo-Club](https://github.com/The-Repo-Club))
 
 ## [0.5.0](https://github.com/HeCodes2Much/mLauncher/tree/0.5.0) (24, January 2023)
 
@@ -37,6 +40,9 @@
 
 - \[Question\] Time displayed on homescreen [\#182](https://github.com/HeCodes2Much/mLauncher/issues/182)
 - Feat: fix the display for the battery usage [\#184](https://github.com/HeCodes2Much/mLauncher/pull/184) ([The-Repo-Club](https://github.com/The-Repo-Club))
+
+**Merged pull requests:**
+
 - New Crowdin updates [\#181](https://github.com/HeCodes2Much/mLauncher/pull/181) ([The-Repo-Club](https://github.com/The-Repo-Club))
 
 ## [0.4.9](https://github.com/HeCodes2Much/mLauncher/tree/0.4.9) (23, January 2023)
