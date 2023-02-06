@@ -1,5 +1,13 @@
 # Changelog
 
+## [Coming Soon](https://github.com/HeCodes2Much/mLauncher/tree/HEAD)
+
+[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.5.1...HEAD)
+
+**Merged pull requests:**
+
+- New Crowdin updates [\#194](https://github.com/HeCodes2Much/mLauncher/pull/194) ([The-Repo-Club](https://github.com/The-Repo-Club))
+
 ## [0.5.1](https://github.com/HeCodes2Much/mLauncher/tree/0.5.1) ( 4, February 2023)
 
 [Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.5.0...0.5.1)
