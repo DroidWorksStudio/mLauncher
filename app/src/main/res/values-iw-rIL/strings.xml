@@ -23,11 +23,11 @@
     <string name="app_padding_size">גודל ריפוד</string>
     <string name="follow_accent_colors">צבעי מבטא</string>
     <string name="background_opacity">אטימות רקע</string>
-    <string name="custom_font">השתמש בגופן מותאם אישית</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Auto open apps</string>
     <string name="search_from_start">חיפוש אפליקציה מההתחלה.</string>
+    <string name="icon_font">השתמש בגופן אייקון</string>
     <!-- Homescreen Strings -->
     <string name="apps_on_home_screen">Number of shortcuts</string>
     <string name="show_time">Show time</string>
