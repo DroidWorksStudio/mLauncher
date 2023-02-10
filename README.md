@@ -7,7 +7,7 @@
         <a href='https://github.com/HeCodes2Much/mLauncher/blob/main/LICENSE'><img src='https://img.shields.io/github/license/HeCodes2Much/mLauncher?style=flat-square'></a>
         <br>
 		<img src='https://img.shields.io/badge/Maintained-yes-blue?style=flat-square'>
-        <a href='https://github.com/HeCodes2Much/mLauncher/actions'><img src='https://github.com/HeCodes2Much/mLauncher/actions/workflows/android-release_ci.yml/badge.svg?style=flat-square'></a>
+        <a href='https://github.com/HeCodes2Much/mLauncher/actions'><img src='https://img.shields.io/github/actions/workflow/status/HeCodes2Much/mLauncher/android-release_ci.yml?style=flat-square'></a>
 		<a href='https://github.com/HeCodes2Much/mLauncher/releases/latest'><img src='https://img.shields.io/github/downloads/HeCodes2Much/mLauncher/total?style=flat-square'></a>
     </p>
 	<p>
