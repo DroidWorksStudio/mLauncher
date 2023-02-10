@@ -4,11 +4,11 @@
 
 [Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.5.1...HEAD)
 
-**Merged pull requests:**
+**Implemented enhancements:**
 
-- New Crowdin updates [\#194](https://github.com/HeCodes2Much/mLauncher/pull/194) ([The-Repo-Club](https://github.com/The-Repo-Club))
+- \[Enhancement\] Sort by recently used [\#19](https://github.com/HeCodes2Much/mLauncher/issues/19)
 
-## [0.5.1](https://github.com/HeCodes2Much/mLauncher/tree/0.5.1) ( 4, February 2023)
+## [0.5.1](https://github.com/HeCodes2Much/mLauncher/tree/0.5.1) ( 6, February 2023)
 
 [Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.5.0...0.5.1)
 
@@ -30,6 +30,7 @@
 
 **Merged pull requests:**
 
+- New Crowdin updates [\#194](https://github.com/HeCodes2Much/mLauncher/pull/194) ([The-Repo-Club](https://github.com/The-Repo-Club))
 - New Crowdin updates [\#187](https://github.com/HeCodes2Much/mLauncher/pull/187) ([The-Repo-Club](https://github.com/The-Repo-Club))
 
 ## [0.5.0](https://github.com/HeCodes2Much/mLauncher/tree/0.5.0) (24, January 2023)
