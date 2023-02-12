@@ -73,6 +73,8 @@
     <string name="open">Открыть</string>
     <string name="close">Закрыть</string>
     <string name="copy">копировать</string>
+    <string name="settings_text_size">Настройки Размер текста</string>
+    <string name="settings_lock_time">Тайм-аут блокировки настроек</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Показать уведомление</string>
     <string name="show_app_list">Показать список приложений</string>
@@ -87,6 +89,13 @@
     <string name="backup">Резервное копирование</string>
     <string name="load_backup">Загрузить резервную копию</string>
     <string name="store_backup">Резервная копия магазина</string>
+    <!-- PinCode Strings -->
+    <string name="reset_pin">Сбросить PIN-код</string>
+    <string name="pin_number">Пин код</string>
+    <string name="confirm_pin_number">Подтвердите пин-код</string>
+    <string name="unlock_settings">Разблокировать настройки</string>
+    <string name="pin_number_match">Номера контактов совпадают!</string>
+    <string name="pin_number_do_not_match">Номера пинов не совпадают!</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Все приложения</string>
     <string name="drawer_list_empty_hint">Не найдено приложений</string>
