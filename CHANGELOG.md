@@ -1,5 +1,14 @@
 # Changelog
 
+## [Coming Soon](https://github.com/HeCodes2Much/mLauncher/tree/HEAD)
+
+[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.5.1...HEAD)
+
+**Implemented enhancements:**
+
+- \[Enhancement\] PIN or password [\#196](https://github.com/HeCodes2Much/mLauncher/issues/196)
+- Feat: Added a pin code setting to the settings area. [\#197](https://github.com/HeCodes2Much/mLauncher/pull/197) ([The-Repo-Club](https://github.com/The-Repo-Club))
+
 ## [0.5.1](https://github.com/HeCodes2Much/mLauncher/tree/0.5.1) ( 6, February 2023)
 
 [Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.5.0...0.5.1)
