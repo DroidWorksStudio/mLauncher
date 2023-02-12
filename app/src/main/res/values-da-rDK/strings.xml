@@ -73,6 +73,8 @@
     <string name="open">Åbn</string>
     <string name="close">Luk</string>
     <string name="copy">kopi</string>
+    <string name="settings_text_size">Indstillinger Tekststørrelse</string>
+    <string name="settings_lock_time">Indstillinger Lås Timeout</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Vis Notifikation</string>
     <string name="show_app_list">Vis Appliste</string>
@@ -87,6 +89,13 @@
     <string name="backup">Sikkerhedskopi</string>
     <string name="load_backup">Indlæs Backup</string>
     <string name="store_backup">Gem Sikkerhedskopi</string>
+    <!-- PinCode Strings -->
+    <string name="reset_pin">Nulstil PIN-koden</string>
+    <string name="pin_number">Pinkode</string>
+    <string name="confirm_pin_number">Bekræft pinkode</string>
+    <string name="unlock_settings">Lås indstillinger op</string>
+    <string name="pin_number_match">Pin-numre matcher!</string>
+    <string name="pin_number_do_not_match">Pin-numre stemmer ikke overens!</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Alle apps</string>
     <string name="drawer_list_empty_hint">Ingen apps fundet</string>
