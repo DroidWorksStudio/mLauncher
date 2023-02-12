@@ -16,6 +16,7 @@ Forked mula sa <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. 
         - Pagbubukas ng mabilis na mga setting
 - Maaari mo ring iposisyon ang orasan nang hiwalay sa mga home app
 - Baguhin ang pagkakahanay ng mga app sa app-drawer
+- Ang kakayahang magkaroon ng pass code na itinakda para sa pahina ng mga setting
 - Baguhin ang laki ng font
 - Inalis ang pahintulot sa internet. Hindi mo alam kung ano ang gustong malaman ng isang developer ng app tungkol sa iyo.
 
