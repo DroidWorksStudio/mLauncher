@@ -16,6 +16,7 @@ Haarukka alkaen <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>.
         - Pika-asetusten avaaminen
 - Voit myös sijoittaa kellon riippumatta kodin sovelluksista
 - Sovellusten kohdistuksen muuttaminen sovelluslaatikossa
+- Mahdollisuus asettaa pääsykoodi asetussivulle
 - Muuta fonttikokoa
 - Poistettu internet-käyttöoikeus. Et koskaan tiedä mitä sovelluksen kehittäjä haluaa tietää sinusta.
 
