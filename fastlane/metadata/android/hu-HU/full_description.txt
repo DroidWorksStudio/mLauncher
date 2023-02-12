@@ -16,6 +16,7 @@ Villás <a href="https://github.com/tanujnotes/Olauncher">-tól Olauncher</a>. M
         - A gyorsbeállítások megnyitása
 - Az órát az otthoni alkalmazásoktól függetlenül is elhelyezheti
 - Az alkalmazások igazításának módosítása az alkalmazás-tálcában
+- Lehetőség van egy jelkód beállítására a beállítások oldalon
 - Betűméret módosítása
 - Eltávolították az internetes engedélyt. Soha nem tudhatod, hogy egy alkalmazásfejlesztő mit akar tudni rólad.
 
