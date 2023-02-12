@@ -73,6 +73,8 @@
     <string name="open">Nyissa meg a  címet.</string>
     <string name="close">Zárja be a</string>
     <string name="copy">másolat</string>
+    <string name="settings_text_size">Beállítások Szövegméret</string>
+    <string name="settings_lock_time">Beállítások Zárolás időtúllépése</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Értesítés megjelenítése</string>
     <string name="show_app_list">Alkalmazások listájának megjelenítése</string>
@@ -87,6 +89,13 @@
     <string name="backup">Biztonsági mentés</string>
     <string name="load_backup">Töltés biztonsági mentés</string>
     <string name="store_backup">Tároló biztonsági mentés</string>
+    <!-- PinCode Strings -->
+    <string name="reset_pin">Állítsa vissza a PIN-kódot</string>
+    <string name="pin_number">Pinkód</string>
+    <string name="confirm_pin_number">Erősítse meg a PIN-kódot</string>
+    <string name="unlock_settings">Beállítások feloldása</string>
+    <string name="pin_number_match">Egyező PIN-számok!</string>
+    <string name="pin_number_do_not_match">A PIN-számok nem egyeznek!</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Minden alkalmazás</string>
     <string name="drawer_list_empty_hint">Nem találtunk alkalmazásokat</string>
