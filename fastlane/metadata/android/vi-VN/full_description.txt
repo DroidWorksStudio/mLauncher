@@ -16,6 +16,7 @@
         - Mở cài đặt nhanh
 - Bạn cũng có thể định vị đồng hồ độc lập với các ứng dụng gia đình
 - Thay đổi căn chỉnh của ứng dụng trong ngăn kéo ứng dụng
+- Khả năng đặt mật mã cho trang cài đặt
 - Thay đổi cỡ chữ
 - Đã xóa quyền truy cập internet. Bạn không bao giờ biết nhà phát triển ứng dụng muốn biết gì về bạn.
 
