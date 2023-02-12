@@ -73,6 +73,8 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string name="copy">복사</string>
+    <string name="settings_text_size">설정 텍스트 크기</string>
+    <string name="settings_lock_time">설정 잠금 시간 초과</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Show Notification</string>
     <string name="show_app_list">Show App List</string>
@@ -87,6 +89,13 @@
     <string name="backup">Backup</string>
     <string name="load_backup">Load Backup</string>
     <string name="store_backup">Store Backup</string>
+    <!-- PinCode Strings -->
+    <string name="reset_pin">PIN 재설정</string>
+    <string name="pin_number">핀 번호</string>
+    <string name="confirm_pin_number">핀 번호 확인</string>
+    <string name="unlock_settings">잠금 해제 설정</string>
+    <string name="pin_number_match">핀 번호 일치!</string>
+    <string name="pin_number_do_not_match">핀 번호가 일치하지 않습니다!</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>
     <string name="drawer_list_empty_hint">No apps found</string>
