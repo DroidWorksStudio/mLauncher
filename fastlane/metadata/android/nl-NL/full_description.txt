@@ -16,6 +16,7 @@ Gevorkt vanaf <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. M
         - Snelle instellingen openen
 - Klok onafhankelijk van home apps uitlijnen
 - Uitlijning van apps in app-drawer veranderen
+- De mogelijkheid om een toegangscode in te stellen voor de instellingenpagina
 - Lettergrootte wijzigen
 - Internet toestemming verwijderd Je weet nooit wat een app-ontwikkelaar over je wil weten.
 
