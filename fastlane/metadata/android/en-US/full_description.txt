@@ -16,6 +16,7 @@ Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Min
         - Opening the quick settings
 - You can also position the clock independently of the home apps
 - Change alignment of apps in app-drawer
+- The ability to have a pass code set for the settings page
 - Change font size
 - Removed internet permission. You never know what an app developer wants to know about you.
 

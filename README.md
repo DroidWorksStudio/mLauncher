@@ -41,6 +41,7 @@ We try to balance customizability and minimalization well still being simple :)<
         - Opening the notification drawer
         - Opening the quick settings
 - You can also position the clock independently of the home apps
+- The ability to have a pass code set for the settings page
 - Change alignment of apps in app-drawer
 - Change font size
 - Removed internet permission. You never know what an app developer wants to know about you.

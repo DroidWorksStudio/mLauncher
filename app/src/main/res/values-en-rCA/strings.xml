@@ -85,6 +85,9 @@
     <string name="close">Close</string>
     <string name="copy">copy</string>
 
+    <string name="settings_text_size">Settings Text Size</string>
+    <string name="settings_lock_time">Settings Lock Timeout</string>
+
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Show Notification</string>
     <string name="show_app_list">Show App List</string>
@@ -100,6 +103,14 @@
     <string name="backup">Backup</string>
     <string name="load_backup">Load Backup</string>
     <string name="store_backup">Store Backup</string>
+
+    <!-- PinCode Strings -->
+    <string name="reset_pin">Reset PIN</string>
+    <string name="pin_number">Pin Number</string>
+    <string name="confirm_pin_number">Confirm Pin Number</string>
+    <string name="unlock_settings">Unlock Settings</string>
+    <string name="pin_number_match">Pin Numbers Match!</string>
+    <string name="pin_number_do_not_match">Pin Numbers do not Match!</string>
 
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>

@@ -40,6 +40,9 @@ private const val DOUBLE_TAP_ACTION = "DOUBLE_TAP_ACTION"
 private const val HIDDEN_APPS = "HIDDEN_APPS"
 private const val HIDDEN_APPS_UPDATED = "HIDDEN_APPS_UPDATED"
 
+private const val LAST_OPEN_SETTINGS = "LAST_OPEN_SETTINGS"
+private const val LOCK_SETTING_TIME = "LOCK_SETTING_TIME"
+private const val SETTING_PIN_NUMBER = "SETTING_PIN_NUMBER"
 
 private const val APP_NAME = "APP_NAME"
 private const val APP_PACKAGE = "APP_PACKAGE"
@@ -95,10 +98,23 @@ class Prefs(val context: Context) {
         get() = prefs.getBoolean(FIRST_OPEN, true)
         set(value) = prefs.edit().putBoolean(FIRST_OPEN, value).apply()
 
+    var lastOpenSettings: String?
+        get() = prefs.getString(LAST_OPEN_SETTINGS, null)
+        set(value) = prefs.edit().putString(LAST_OPEN_SETTINGS, value).apply()
+
+    var settingPinNumber: Int
+        get() {
+            return try {
+                prefs.getInt(SETTING_PIN_NUMBER, 123456)
+            } catch (_: Exception) {
+                123456
+            }
+        }
+        set(value) = prefs.edit().putInt(SETTING_PIN_NUMBER, value).apply()
+
     var firstSettingsOpen: Boolean
         get() = prefs.getBoolean(FIRST_SETTINGS_OPEN, true)
         set(value) = prefs.edit().putBoolean(FIRST_SETTINGS_OPEN, value).apply()
-
 
     var lockModeOn: Boolean
         get() = prefs.getBoolean(LOCK_MODE, false)
@@ -125,6 +141,16 @@ class Prefs(val context: Context) {
             }
         }
         set(value) = prefs.edit().putInt(HOME_APPS_NUM, value).apply()
+
+    var lockSettingsTime: Int
+        get() {
+            return try {
+                prefs.getInt(LOCK_SETTING_TIME, 0)
+            } catch (_: Exception) {
+                0
+            }
+        }
+        set(value) = prefs.edit().putInt(LOCK_SETTING_TIME, value).apply()
 
     var opacityNum: Int
         get() {
