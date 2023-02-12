@@ -73,6 +73,8 @@
     <string name="open">Buka</string>
     <string name="close">tutup</string>
     <string name="copy">salinan</string>
+    <string name="settings_text_size">Tetapan Saiz Teks</string>
+    <string name="settings_lock_time">Tamat Masa Kunci Tetapan</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Tunjukkan Pemberitahuan</string>
     <string name="show_app_list">Tunjukkan Senarai Apl</string>
@@ -87,6 +89,13 @@
     <string name="backup">Sandaran</string>
     <string name="load_backup">Muatkan Sandaran</string>
     <string name="store_backup">Simpan Sandaran</string>
+    <!-- PinCode Strings -->
+    <string name="reset_pin">Tetapkan semula PIN</string>
+    <string name="pin_number">Nombor PIN</string>
+    <string name="confirm_pin_number">Sahkan Nombor Pin</string>
+    <string name="unlock_settings">Buka kunci Tetapan</string>
+    <string name="pin_number_match">Nombor Pin Padanan!</string>
+    <string name="pin_number_do_not_match">Nombor Pin tidak Padan!</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Semua apl</string>
     <string name="drawer_list_empty_hint">Tiada apl ditemui</string>
