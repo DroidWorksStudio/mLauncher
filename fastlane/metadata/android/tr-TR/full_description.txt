@@ -16,6 +16,7 @@
         - Hızlı ayarları açma
 - Saati Ev uygulamalarından ayrı olarak hizalayabilirsinizde.
 - Uygulama-çekmecesindeki uygulamaların hizalamasını değiştir
+- Ayarlar sayfası için ayarlanmış bir geçiş koduna sahip olma yeteneği
 - Yazı tipi boyutunu değiştir
 - İnternet izni kaldırıldı. Bir uygulama geliştiricisinin sizin hakkınızda ne bilmek istediğini asla bilemezsin.
 
