@@ -73,6 +73,8 @@
     <string name="open">Відкриті</string>
     <string name="close">Закрити</string>
     <string name="copy">копія</string>
+    <string name="settings_text_size">Параметри Розмір тексту</string>
+    <string name="settings_lock_time">Час очікування блокування налаштувань</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Показувати сповіщення</string>
     <string name="show_app_list">Показати список додатків</string>
@@ -87,6 +89,13 @@
     <string name="backup">Резервне копіювання</string>
     <string name="load_backup">Завантажити резервну копію</string>
     <string name="store_backup">Резервне копіювання магазину</string>
+    <!-- PinCode Strings -->
+    <string name="reset_pin">Скинути PIN-код</string>
+    <string name="pin_number">PIN-код</string>
+    <string name="confirm_pin_number">Підтвердьте PIN-код</string>
+    <string name="unlock_settings">Розблокувати налаштування</string>
+    <string name="pin_number_match">Пін-номера збігаються!</string>
+    <string name="pin_number_do_not_match">PIN-коди не збігаються!</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Всі програми</string>
     <string name="drawer_list_empty_hint">Додатки не знайдені</string>
