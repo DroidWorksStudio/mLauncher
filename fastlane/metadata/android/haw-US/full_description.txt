@@ -16,6 +16,7 @@ Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Ka 
         - Ke wehe nei i nā hoʻonohonoho wikiwiki
 - Hiki iā ʻoe ke hoʻonohonoho i ka uaki ma kahi kūʻokoʻa o nā polokalamu home
 - Hoʻololi i ka alignment o nā polokalamu ma ka app-drawer
+- ʻO ka hiki ke loaʻa kahi code pass no ka ʻaoʻao hoʻonohonoho
 - Hoʻololi i ka nui font
 - Wehe ʻia ka ʻae pūnaewele. ʻAʻole ʻoe i ʻike i ka mea a ka mea hoʻomohala polokalamu e makemake ai e ʻike e pili ana iā ʻoe.
 
