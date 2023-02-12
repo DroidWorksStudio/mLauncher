@@ -73,6 +73,8 @@
     <string name="open">Hapur</string>
     <string name="close">Mbylle</string>
     <string name="copy">kopje</string>
+    <string name="settings_text_size">Cilësimet e madhësisë së tekstit</string>
+    <string name="settings_lock_time">Koha e mbylljes së cilësimeve</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Shfaq njoftimin</string>
     <string name="show_app_list">Shfaq listën e aplikacioneve</string>
@@ -87,6 +89,13 @@
     <string name="backup">Rezervimi</string>
     <string name="load_backup">Ngarko kopje rezervë</string>
     <string name="store_backup">Rezervimi i dyqanit</string>
+    <!-- PinCode Strings -->
+    <string name="reset_pin">Rivendos PIN-in</string>
+    <string name="pin_number">Numri i pinit</string>
+    <string name="confirm_pin_number">Konfirmo numrin e pinit</string>
+    <string name="unlock_settings">Zhbllokoni cilësimet</string>
+    <string name="pin_number_match">Numrat e kunjit përputhen!</string>
+    <string name="pin_number_do_not_match">Numrat e pin nuk përputhen!</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Të gjitha aplikacionet</string>
     <string name="drawer_list_empty_hint">Nuk u gjet asnjë aplikacion</string>
