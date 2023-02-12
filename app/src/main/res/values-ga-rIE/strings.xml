@@ -73,6 +73,8 @@
     <string name="open">Oscail</string>
     <string name="close">Dún</string>
     <string name="copy">cóip</string>
+    <string name="settings_text_size">Méid Téacs Socruithe</string>
+    <string name="settings_lock_time">Socruithe Glasála Teorainn</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Taispeáin Fógra</string>
     <string name="show_app_list">Taispeáin Liosta App</string>
@@ -87,6 +89,13 @@
     <string name="backup">Cúltaca</string>
     <string name="load_backup">Luchtaigh Cúltaca</string>
     <string name="store_backup">Cúltaca Store</string>
+    <!-- PinCode Strings -->
+    <string name="reset_pin">Athshocraigh UAP</string>
+    <string name="pin_number">Uimhir PIN</string>
+    <string name="confirm_pin_number">Deimhnigh Uimhir UAP</string>
+    <string name="unlock_settings">Díghlasáil Socruithe</string>
+    <string name="pin_number_match">Cluiche Uimhreacha Bioráin!</string>
+    <string name="pin_number_do_not_match">Ní mheaitseálann na hUimhreacha Bioráin!</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Gach apps</string>
     <string name="drawer_list_empty_hint">Níor aimsíodh aon aipeanna</string>
