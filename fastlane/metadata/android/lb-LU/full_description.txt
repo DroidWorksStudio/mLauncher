@@ -16,6 +16,7 @@ Forked aus <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mini
         - Schnell Astellungen opmaachen
 - Dir kënnt d'Auer och onofhängeg vun den Heemapps positionéieren
 - Änneren Ausrichtung vun Apps am App-Tirang
+- D'Fäegkeet fir e Passcode fir d'Astellungssäit ze setzen
 - Schrëftgréisst änneren
 - Internet Erlaabnis geläscht. Dir wësst ni wat en App-Entwéckler iwwer Iech wësse wëllt.
 
