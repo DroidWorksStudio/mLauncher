@@ -73,6 +73,8 @@
     <string name="open">Aç</string>
     <string name="close">Kapat</string>
     <string name="copy">Kopyala</string>
+    <string name="settings_text_size">Ayarlar Metin Boyutu</string>
+    <string name="settings_lock_time">Ayarlar Kilidi Zaman Aşımı</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Bildirimi Göster</string>
     <string name="show_app_list">Uygulama Listesini Göster</string>
@@ -87,6 +89,13 @@
     <string name="backup">Yedekleme</string>
     <string name="load_backup">Yedeği Yükle</string>
     <string name="store_backup">Yedeği Depola</string>
+    <!-- PinCode Strings -->
+    <string name="reset_pin">PIN\'i sıfırla</string>
+    <string name="pin_number">PIN numarası</string>
+    <string name="confirm_pin_number">Pin Numarasını Onaylayın</string>
+    <string name="unlock_settings">Ayarların Kilidini Aç</string>
+    <string name="pin_number_match">Pin Numaraları Eşleşiyor!</string>
+    <string name="pin_number_do_not_match">Pin Numaraları Eşleşmiyor!</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Tüm uygulamalar</string>
     <string name="drawer_list_empty_hint">Herhangi bir uygulama bulunamadı</string>
