@@ -73,6 +73,8 @@
     <string name="open">Wehe</string>
     <string name="close">Pani</string>
     <string name="copy">kope</string>
+    <string name="settings_text_size">Hoʻonohonoho i ka nui kikokikona</string>
+    <string name="settings_lock_time">Hoʻopau i ka wā hoʻopaʻa</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Hōʻike Hoʻolaha</string>
     <string name="show_app_list">Hōʻike i ka papa inoa polokalamu</string>
@@ -87,6 +89,13 @@
     <string name="backup">Kākoʻo</string>
     <string name="load_backup">Hoʻouka i ka waihona</string>
     <string name="store_backup">Waihona Waihona</string>
+    <!-- PinCode Strings -->
+    <string name="reset_pin">Hoʻihoʻi hou i ka PIN</string>
+    <string name="pin_number">Helu Pin</string>
+    <string name="confirm_pin_number">E hōʻoia i ka helu Pin</string>
+    <string name="unlock_settings">Wehe i nā ʻōkuhi</string>
+    <string name="pin_number_match">Paʻi helu Pin!</string>
+    <string name="pin_number_do_not_match">ʻAʻole kūlike nā helu pine!</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Nā polokalamu a pau</string>
     <string name="drawer_list_empty_hint">ʻAʻohe polokalamu i loaʻa</string>
