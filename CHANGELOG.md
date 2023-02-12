@@ -1,8 +1,33 @@
 # Changelog
 
-## [Coming Soon](https://github.com/HeCodes2Much/mLauncher/tree/HEAD)
+## [0.5.2](https://github.com/HeCodes2Much/mLauncher/tree/0.5.2) (12, February 2023)
 
-[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.5.1...HEAD)
+[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.5.1...0.5.2)
+
+**Release Summary**
+
+### Type of change <!-- required to be filled in -->
+
+<!-- Please delete options that are not relevant. -->
+
+- [x] Codebase Improvement (dev facing) <!-- non-breaking change which refines the code base -->
+
+### All Submissions <!-- to be checked but remove any that are not required -->
+
+- [x] Have you checked to ensure there aren't other open [Pull Requests](../../../pulls) for the same update/change? <!-- required -->
+- [x] Have you made a descriptive commit message with a short title (first line). <!-- required -->
+- [x] Have you performed a self-review of your code <!-- required -->
+- [x] Have you commented your code, particularly in hard-to-understand areas <!-- required -->
+- [x] My changes generate no new warnings or errors of any kind <!-- required -->
+- [x] You have done your changes in a separate branch. <!-- required -->
+- [x] Branch has descriptive name that start with either the `bug/` `feat/` or `clean/`  prefixes. <!-- required --> 
+<!-- Good examples are: 'bug/signin-issue' 'feat/issue-templates' or 'clean/code-change-to-app-draw'. -->
+
+**After** these steps, you're ready to open a pull request.
+
+- [x] Give a descriptive title to your PR. <!-- required -->
+- [x] Describe your changes in the area below. <!-- required -->
+
 
 **Implemented enhancements:**
 
