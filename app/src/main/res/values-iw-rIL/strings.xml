@@ -73,6 +73,8 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string name="copy">עותק</string>
+    <string name="settings_text_size">הגדרות גודל טקסט</string>
+    <string name="settings_lock_time">זמן קצוב נעילת הגדרות</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Show Notification</string>
     <string name="show_app_list">Show App List</string>
@@ -87,6 +89,13 @@
     <string name="backup">Backup</string>
     <string name="load_backup">Load Backup</string>
     <string name="store_backup">Store Backup</string>
+    <!-- PinCode Strings -->
+    <string name="reset_pin">אפס את ה-PIN</string>
+    <string name="pin_number">מספר PIN</string>
+    <string name="confirm_pin_number">אשר את מספר ה-PIN</string>
+    <string name="unlock_settings">ביטול הנעילה של הגדרות</string>
+    <string name="pin_number_match">התאמת מספרי סיכה!</string>
+    <string name="pin_number_do_not_match">מספרי סיכות אינם תואמים!</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>
     <string name="drawer_list_empty_hint">No apps found</string>
