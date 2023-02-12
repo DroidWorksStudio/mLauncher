@@ -73,6 +73,8 @@
     <string name="open">ਖੋਲ੍ਹੋ</string>
     <string name="close">ਬੰਦ ਕਰੋ</string>
     <string name="copy">ਕਾਪੀ</string>
+    <string name="settings_text_size">ਸੈਟਿੰਗਾਂ ਟੈਕਸਟ ਆਕਾਰ</string>
+    <string name="settings_lock_time">ਸੈਟਿੰਗਾਂ ਲੌਕ ਟਾਈਮਆਉਟ</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">ਸੂਚਨਾ ਦਿਖਾਓ</string>
     <string name="show_app_list">ਐਪ ਸੂਚੀ ਦਿਖਾਓ</string>
@@ -87,6 +89,13 @@
     <string name="backup">ਬੈਕਅੱਪ</string>
     <string name="load_backup">ਬੈਕਅੱਪ ਲੋਡ ਕਰੋ</string>
     <string name="store_backup">ਸਟੋਰ ਬੈਕਅੱਪ</string>
+    <!-- PinCode Strings -->
+    <string name="reset_pin">ਪਿੰਨ ਰੀਸੈਟ ਕਰੋ</string>
+    <string name="pin_number">ਪਿੰਨ ਨੰਬਰ</string>
+    <string name="confirm_pin_number">ਪਿੰਨ ਨੰਬਰ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ</string>
+    <string name="unlock_settings">ਅਨਲੌਕ ਸੈਟਿੰਗਾਂ</string>
+    <string name="pin_number_match">ਪਿੰਨ ਨੰਬਰ ਮੈਚ!</string>
+    <string name="pin_number_do_not_match">ਪਿੰਨ ਨੰਬਰ ਮੇਲ ਨਹੀਂ ਖਾਂਦੇ!</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">ਸਾਰੀਆਂ ਐਪਾਂ</string>
     <string name="drawer_list_empty_hint">ਕੋਈ ਐਪਸ ਨਹੀਂ ਮਿਲੇ</string>
