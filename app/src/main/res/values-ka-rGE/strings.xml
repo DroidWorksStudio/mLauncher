@@ -73,6 +73,8 @@
     <string name="open">გახსენით</string>
     <string name="close">დახურვა</string>
     <string name="copy">კოპირება</string>
+    <string name="settings_text_size">ტექსტის ზომის პარამეტრები</string>
+    <string name="settings_lock_time">პარამეტრების დაბლოკვის დრო</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">შეტყობინების ჩვენება</string>
     <string name="show_app_list">აპლიკაციების სიის ჩვენება</string>
@@ -87,6 +89,13 @@
     <string name="backup">სარეზერვო</string>
     <string name="load_backup">სარეზერვო ასლის ჩატვირთვა</string>
     <string name="store_backup">შენახვის სარეზერვო</string>
+    <!-- PinCode Strings -->
+    <string name="reset_pin">PIN-ის გადაყენება</string>
+    <string name="pin_number">Პინ კოდი</string>
+    <string name="confirm_pin_number">დაადასტურეთ პინის ნომერი</string>
+    <string name="unlock_settings">განბლოკეთ პარამეტრები</string>
+    <string name="pin_number_match">Pin Numbers Match!</string>
+    <string name="pin_number_do_not_match">პინის ნომრები არ ემთხვევა!</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">ყველა აპლიკაცია</string>
     <string name="drawer_list_empty_hint">აპები ვერ მოიძებნა</string>
