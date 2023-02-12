@@ -73,6 +73,8 @@
     <string name="open">Atidaryti</string>
     <string name="close">Uždaryti</string>
     <string name="copy">kopija</string>
+    <string name="settings_text_size">Nustatymai Teksto dydis</string>
+    <string name="settings_lock_time">Nustatymai Užrakinimo skirtasis laikas</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Rodyti pranešimą</string>
     <string name="show_app_list">Rodyti programėlių sąrašą</string>
@@ -87,6 +89,13 @@
     <string name="backup">Daryti atsarginę kopiją</string>
     <string name="load_backup">Atkurti atsarginę kopiją</string>
     <string name="store_backup">Išsaugoti atsarginę kopiją</string>
+    <!-- PinCode Strings -->
+    <string name="reset_pin">Iš naujo nustatyti PIN kodą</string>
+    <string name="pin_number">PIN kodas</string>
+    <string name="confirm_pin_number">Patvirtinkite PIN kodą</string>
+    <string name="unlock_settings">Atrakinti nustatymus</string>
+    <string name="pin_number_match">Sutampa PIN numeriai!</string>
+    <string name="pin_number_do_not_match">Pin numeriai nesutampa!</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Visos programėlės</string>
     <string name="drawer_list_empty_hint">Nerasta jokių programėlių</string>
