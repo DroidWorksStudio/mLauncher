@@ -73,6 +73,8 @@
     <string name="open">Abrir</string>
     <string name="close">Cerrar</string>
     <string name="copy">Copiar</string>
+    <string name="settings_text_size">Ajustes Tamaño del texto</string>
+    <string name="settings_lock_time">Tiempo de espera de bloqueo de configuración</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Mostrar notificación</string>
     <string name="show_app_list">Mostrar lista de aplicaciones</string>
@@ -87,6 +89,13 @@
     <string name="backup">Respaldo</string>
     <string name="load_backup">Cargar copia de seguridad</string>
     <string name="store_backup">Guardar copia de seguridad</string>
+    <!-- PinCode Strings -->
+    <string name="reset_pin">Restablecer PIN</string>
+    <string name="pin_number">Número de PIN</string>
+    <string name="confirm_pin_number">Confirmar número PIN</string>
+    <string name="unlock_settings">Configuración de desbloqueo</string>
+    <string name="pin_number_match">¡Coincidencia de números de pin!</string>
+    <string name="pin_number_do_not_match">¡Los números de pin no coinciden!</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Todas las apps</string>
     <string name="drawer_list_empty_hint">No hay aplicaciones</string>
