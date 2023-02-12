@@ -16,6 +16,7 @@ Forked od <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minim
         - Otevření rychlého nastavení
 - Můžete také umístit hodiny nezávisle na domovských aplikacích
 - Změna zarovnání aplikací v zásuvce aplikací
+- Možnost nastavit přístupový kód pro stránku nastavení
 - Změna velikosti písma
 - Oprávnění k Internetu odebráno. Nikdy nevíte, co o vás chce vývojář vědět.
 

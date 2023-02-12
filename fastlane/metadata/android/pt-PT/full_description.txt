@@ -16,6 +16,7 @@ Bifurcado de <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. M�
         - Abrir as configurações rápidas
 - Alinhar o relógio independentemente das aplicações domésticas
 - Alterar o alinhamento das aplicações no app-drawer
+- A capacidade de definir uma senha para a página de configurações
 - Alterar o tamanho da letra
 - Removida a permissão da Internet - Removida a permissão da Internet - Removida a permissão da Internet Você nunca sabe o que um desenvolvedor do app quer saber sobre você.
 

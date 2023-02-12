@@ -73,6 +73,8 @@
     <string name="open">فتح</string>
     <string name="close">أغلق</string>
     <string name="copy">ينسخ</string>
+    <string name="settings_text_size">إعدادات حجم النص</string>
+    <string name="settings_lock_time">مهلة قفل الإعدادات</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">إظهار الإشعارات</string>
     <string name="show_app_list">إظهار قائمة التطبيقات</string>
@@ -87,6 +89,13 @@
     <string name="backup">النسخ الاحتياطي</string>
     <string name="load_backup">تحميل النسخ الاحتياطي</string>
     <string name="store_backup">النسخ الاحتياطي للمتجر</string>
+    <!-- PinCode Strings -->
+    <string name="reset_pin">إعادة تعيين PIN</string>
+    <string name="pin_number">الرقم السري</string>
+    <string name="confirm_pin_number">تأكيد الرقم السري</string>
+    <string name="unlock_settings">افتح الإعدادات</string>
+    <string name="pin_number_match">تطابق أرقام الدبوس!</string>
+    <string name="pin_number_do_not_match">أرقام التعريف الشخصي غير متطابقة!</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">جميع التطبيقات</string>
     <string name="drawer_list_empty_hint">لم يتم العثور على تطبيقات</string>

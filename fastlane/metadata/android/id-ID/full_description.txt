@@ -16,6 +16,7 @@ Bercabang dari <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. 
         - Membuka pengaturan cepat
 - Anda juga dapat memposisikan jam secara terpisah dari aplikasi rumah
 - Mengubah perataan aplikasi di app-drawer
+- Kemampuan untuk mengatur kode sandi untuk halaman pengaturan
 - Mengubah ukuran huruf
 - Izin internet dihapus. Anda tidak pernah tahu apa yang ingin diketahui oleh pengembang aplikasi tentang Anda.
 

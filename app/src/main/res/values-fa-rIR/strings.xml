@@ -73,6 +73,8 @@
     <string name="open">باز کن</string>
     <string name="close">نزدیک</string>
     <string name="copy">کپی 🀄</string>
+    <string name="settings_text_size">تنظیمات اندازه متن</string>
+    <string name="settings_lock_time">مهلت زمانی قفل تنظیمات</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">نمایش اعلان</string>
     <string name="show_app_list">نمایش لیست برنامه ها</string>
@@ -87,6 +89,13 @@
     <string name="backup">پشتیبان گیری</string>
     <string name="load_backup">بارگیری نسخه پشتیبان</string>
     <string name="store_backup">پشتیبان گیری فروشگاه</string>
+    <!-- PinCode Strings -->
+    <string name="reset_pin">پین را بازنشانی کنید</string>
+    <string name="pin_number">شماره پین</string>
+    <string name="confirm_pin_number">شماره پین را تأیید کنید</string>
+    <string name="unlock_settings">باز کردن قفل تنظیمات</string>
+    <string name="pin_number_match">پین اعداد مطابقت دارند!</string>
+    <string name="pin_number_do_not_match">شماره پین مطابقت ندارد!</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">همه برنامه ها</string>
     <string name="drawer_list_empty_hint">هیچ برنامه ای پیدا نشد</string>

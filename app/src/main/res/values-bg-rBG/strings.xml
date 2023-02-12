@@ -73,6 +73,8 @@
     <string name="open">Отворете</string>
     <string name="close">Затвори</string>
     <string name="copy">копие</string>
+    <string name="settings_text_size">Настройки Размер на текста</string>
+    <string name="settings_lock_time">Изчакване за заключване на настройките</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Показване на известие</string>
     <string name="show_app_list">Показване на списъка с приложения</string>
@@ -87,6 +89,13 @@
     <string name="backup">Резервно копие</string>
     <string name="load_backup">Архивиране на зареждането</string>
     <string name="store_backup">Магазин за резервно копие</string>
+    <!-- PinCode Strings -->
+    <string name="reset_pin">Нулиране на PIN</string>
+    <string name="pin_number">ПИН номер</string>
+    <string name="confirm_pin_number">Потвърдете ПИН номера</string>
+    <string name="unlock_settings">Настройки за отключване</string>
+    <string name="pin_number_match">Pin номера съвпадат!</string>
+    <string name="pin_number_do_not_match">ПИН номерата не съвпадат!</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Всички приложения</string>
     <string name="drawer_list_empty_hint">Не са намерени приложения</string>

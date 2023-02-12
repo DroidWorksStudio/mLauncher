@@ -73,6 +73,8 @@
     <string name="open">Apri</string>
     <string name="close">Chiudi</string>
     <string name="copy">copia</string>
+    <string name="settings_text_size">Impostazioni Dimensione testo</string>
+    <string name="settings_lock_time">Timeout blocco impostazioni</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Mostra Notifiche</string>
     <string name="show_app_list">Mostra Elenco App</string>
@@ -87,6 +89,13 @@
     <string name="backup">Backup</string>
     <string name="load_backup">Carica Backup</string>
     <string name="store_backup">Backup Negozio</string>
+    <!-- PinCode Strings -->
+    <string name="reset_pin">Reimposta PIN</string>
+    <string name="pin_number">Codice PIN</string>
+    <string name="confirm_pin_number">Conferma il numero di PIN</string>
+    <string name="unlock_settings">Sblocca impostazioni</string>
+    <string name="pin_number_match">I numeri dei pin corrispondono!</string>
+    <string name="pin_number_do_not_match">I numeri dei pin non corrispondono!</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Tutte le app</string>
     <string name="drawer_list_empty_hint">Nessuna app trovata</string>

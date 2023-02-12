@@ -16,6 +16,7 @@
         - Greitųjų nustatymų atidarymas
 - Taip pat galite nustatyti laikrodį nepriklausomai nuo namų programų
 - Programėlių derinimo programėlių stalčiuje keitimas
+- Galimybė nustatyti nustatymų puslapio prieigos kodą
 - Šrifto dydžio keitimas
 - Pašalintas interneto leidimas. Niekada nežinote, ką programos kūrėjas nori sužinoti apie jus.
 

@@ -16,6 +16,7 @@ Kahvliga alates <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>.
         - Kiirseadete avamine
 - Samuti saab kella paigutada kodurakendustest sõltumatult
 - Rakenduste joondamise muutmine rakenduste riiulidesse
+- Võimalus seada seadete lehele pääsukood
 - Kirjasuuruse muutmine
 - Eemaldatud internetiluba. Sa ei tea kunagi, mida rakenduse arendaja sinu kohta teada tahab.
 

@@ -73,6 +73,8 @@
     <string name="open">Aberto</string>
     <string name="close">Fechar</string>
     <string name="copy">cópia de</string>
+    <string name="settings_text_size">Tamanho do texto das configurações</string>
+    <string name="settings_lock_time">Tempo Limite de Bloqueio de Configurações</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Mostrar Notificação</string>
     <string name="show_app_list">Mostrar lista de aplicações</string>
@@ -87,6 +89,13 @@
     <string name="backup">Cópia de segurança</string>
     <string name="load_backup">Cópia de segurança de carga</string>
     <string name="store_backup">Cópias de segurança da loja</string>
+    <!-- PinCode Strings -->
+    <string name="reset_pin">Redefinir PIN</string>
+    <string name="pin_number">Número do PIN</string>
+    <string name="confirm_pin_number">Confirme o número do PIN</string>
+    <string name="unlock_settings">Configurações de desbloqueio</string>
+    <string name="pin_number_match">Correspondência de números de pinos!</string>
+    <string name="pin_number_do_not_match">Os números dos pinos não correspondem!</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Todas as aplicações</string>
     <string name="drawer_list_empty_hint">Nenhuma aplicação encontrada</string>

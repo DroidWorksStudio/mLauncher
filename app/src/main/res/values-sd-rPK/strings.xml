@@ -73,6 +73,8 @@
     <string name="open">کليل</string>
     <string name="close">بند</string>
     <string name="copy">ڪاپي</string>
+    <string name="settings_text_size">سيٽنگون ٽيڪسٽ سائيز</string>
+    <string name="settings_lock_time">سيٽنگون لاڪ ٽائم آئوٽ</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">نوٽيفڪيشن ڏيکاريو</string>
     <string name="show_app_list">ڏيکاريو ايپ لسٽ</string>
@@ -87,6 +89,13 @@
     <string name="backup">بيڪ اپ</string>
     <string name="load_backup">لوڊ بيڪ اپ</string>
     <string name="store_backup">اسٽور بيڪ اپ</string>
+    <!-- PinCode Strings -->
+    <string name="reset_pin">پن ري سيٽ ڪريو</string>
+    <string name="pin_number">پن نمبر</string>
+    <string name="confirm_pin_number">پن نمبر جي تصديق ڪريو</string>
+    <string name="unlock_settings">سيٽنگون کوليو</string>
+    <string name="pin_number_match">پن نمبر ملائي!</string>
+    <string name="pin_number_do_not_match">پن نمبر نه ملندا آهن!</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">سڀ ائپس</string>
     <string name="drawer_list_empty_hint">ڪابه ايپس نه ملي</string>

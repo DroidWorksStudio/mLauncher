@@ -73,6 +73,8 @@
     <string name="open">Bukas</string>
     <string name="close">Isara</string>
     <string name="copy">kopya</string>
+    <string name="settings_text_size">Mga Setting ng Laki ng Teksto</string>
+    <string name="settings_lock_time">Timeout ng Lock ng Mga Setting</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Ipakita ang Notification</string>
     <string name="show_app_list">Ipakita ang Listahan ng App</string>
@@ -87,6 +89,13 @@
     <string name="backup">Backup</string>
     <string name="load_backup">I-load ang Backup</string>
     <string name="store_backup">Store Backup</string>
+    <!-- PinCode Strings -->
+    <string name="reset_pin">I-reset ang PIN</string>
+    <string name="pin_number">Numero ng Pin</string>
+    <string name="confirm_pin_number">Kumpirmahin ang Pin Number</string>
+    <string name="unlock_settings">I-unlock ang Mga Setting</string>
+    <string name="pin_number_match">Tugma ang Mga Numero ng Pin!</string>
+    <string name="pin_number_do_not_match">Hindi Magtutugma ang Mga Pin Number!</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Lahat ng app</string>
     <string name="drawer_list_empty_hint">Walang nakitang app</string>

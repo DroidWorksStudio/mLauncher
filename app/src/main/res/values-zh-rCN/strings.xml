@@ -73,6 +73,8 @@
     <string name="open">打开链接</string>
     <string name="close">关闭</string>
     <string name="copy">复制</string>
+    <string name="settings_text_size">设置文字大小</string>
+    <string name="settings_lock_time">设置锁定超时</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">显示通知</string>
     <string name="show_app_list">显示应用列表</string>
@@ -87,6 +89,13 @@
     <string name="backup">备份</string>
     <string name="load_backup">负载备份</string>
     <string name="store_backup">存储备份</string>
+    <!-- PinCode Strings -->
+    <string name="reset_pin">重置密码</string>
+    <string name="pin_number">密码</string>
+    <string name="confirm_pin_number">确认密码</string>
+    <string name="unlock_settings">解锁设置</string>
+    <string name="pin_number_match">密码匹配！</string>
+    <string name="pin_number_do_not_match">密码不匹配！</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">所有应用程序</string>
     <string name="drawer_list_empty_hint">未找到应用</string>

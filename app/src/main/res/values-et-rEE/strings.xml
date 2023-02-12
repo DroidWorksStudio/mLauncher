@@ -73,6 +73,8 @@
     <string name="open">Avatud</string>
     <string name="close">Sulge</string>
     <string name="copy">kopeerida</string>
+    <string name="settings_text_size">Seaded Teksti suurus</string>
+    <string name="settings_lock_time">Seaded Luku ajalõpp</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Näita teatist</string>
     <string name="show_app_list">Näita rakenduste nimekirja</string>
@@ -87,6 +89,13 @@
     <string name="backup">Varukoopia</string>
     <string name="load_backup">Laadige varukoopia</string>
     <string name="store_backup">Salvesta varukoopia</string>
+    <!-- PinCode Strings -->
+    <string name="reset_pin">Lähtestage PIN-kood</string>
+    <string name="pin_number">PIN-kood</string>
+    <string name="confirm_pin_number">Kinnitage PIN-kood</string>
+    <string name="unlock_settings">Ava seaded</string>
+    <string name="pin_number_match">Pin numbrid sobivad!</string>
+    <string name="pin_number_do_not_match">Pin numbrid ei ühti!</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Kõik rakendused</string>
     <string name="drawer_list_empty_hint">Rakendusi ei leitud</string>

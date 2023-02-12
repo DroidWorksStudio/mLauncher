@@ -73,6 +73,8 @@
     <string name="open">Άνοιγμα</string>
     <string name="close">Κλείσιμο</string>
     <string name="copy">αντίγραφο</string>
+    <string name="settings_text_size">Ρυθμίσεις Μέγεθος κειμένου</string>
+    <string name="settings_lock_time">Χρόνος λήξης κλειδώματος ρυθμίσεων</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Εμφάνιση Ειδοποίησης</string>
     <string name="show_app_list">Εμφάνιση Λίστας Εφαρμογών</string>
@@ -87,6 +89,13 @@
     <string name="backup">Αντίγραφα Ασφαλείας</string>
     <string name="load_backup">Φόρτωση Αντιγράφου Ασφαλείας</string>
     <string name="store_backup">Αποθήκευση Αντιγράφου Ασφαλείας</string>
+    <!-- PinCode Strings -->
+    <string name="reset_pin">Επαναφορά PIN</string>
+    <string name="pin_number">Αριθμός καρφίτσας</string>
+    <string name="confirm_pin_number">Επιβεβαιώστε τον αριθμό pin</string>
+    <string name="unlock_settings">Ξεκλείδωμα ρυθμίσεων</string>
+    <string name="pin_number_match">Ταιριάζουν αριθμοί καρφίτσας!</string>
+    <string name="pin_number_do_not_match">Οι αριθμοί καρφίτσας δεν ταιριάζουν!</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Όλες οι εφαρμογές</string>
     <string name="drawer_list_empty_hint">Δεν βρέθηκαν εφαρμογές</string>

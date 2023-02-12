@@ -73,6 +73,8 @@
     <string name="open">Deschideți</string>
     <string name="close">Inchide</string>
     <string name="copy">copie</string>
+    <string name="settings_text_size">Setări Dimensiunea textului</string>
+    <string name="settings_lock_time">Timeout pentru blocare setări</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Arată notificarea</string>
     <string name="show_app_list">Arată lista de aplicații</string>
@@ -87,6 +89,13 @@
     <string name="backup">Backup</string>
     <string name="load_backup">Încărcare copie de rezervă</string>
     <string name="store_backup">Salvare magazin</string>
+    <!-- PinCode Strings -->
+    <string name="reset_pin">Resetați codul PIN</string>
+    <string name="pin_number">Numarul pin</string>
+    <string name="confirm_pin_number">Confirmați numărul PIN</string>
+    <string name="unlock_settings">Deblocați Setări</string>
+    <string name="pin_number_match">Numerele PIN se potrivesc!</string>
+    <string name="pin_number_do_not_match">Numerele PIN nu se potrivesc!</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Toate aplicațiile</string>
     <string name="drawer_list_empty_hint">Nicio aplicație găsită</string>

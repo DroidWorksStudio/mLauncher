@@ -73,6 +73,8 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string name="copy">sao chép</string>
+    <string name="settings_text_size">Cài đặt Kích thước văn bản</string>
+    <string name="settings_lock_time">Thời gian chờ khóa cài đặt</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Show Notification</string>
     <string name="show_app_list">Show App List</string>
@@ -87,6 +89,13 @@
     <string name="backup">Backup</string>
     <string name="load_backup">Load Backup</string>
     <string name="store_backup">Store Backup</string>
+    <!-- PinCode Strings -->
+    <string name="reset_pin">Đặt lại mã PIN</string>
+    <string name="pin_number">Số PIN</string>
+    <string name="confirm_pin_number">Xác nhận số Pin</string>
+    <string name="unlock_settings">Mở khóa cài đặt</string>
+    <string name="pin_number_match">Số Pin trùng khớp!</string>
+    <string name="pin_number_do_not_match">Số Pin không khớp!</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>
     <string name="drawer_list_empty_hint">No apps found</string>

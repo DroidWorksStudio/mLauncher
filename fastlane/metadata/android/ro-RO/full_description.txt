@@ -16,6 +16,7 @@ Bifurcat de la <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. 
         - Deschiderea setărilor rapide
 - De asemenea, puteți poziționa ceasul independent de aplicațiile de pornire
 - Schimbarea alinierii aplicațiilor în App-drawer
+- Posibilitatea de a avea un cod de acces setat pentru pagina de setări
 - Modificarea dimensiunii fontului
 - Permisiunea la internet eliminată. Nu știi niciodată ce vrea să știe un dezvoltator de aplicații despre tine.
 

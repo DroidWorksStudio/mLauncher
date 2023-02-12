@@ -16,6 +16,7 @@ Rozwidlony od <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. M
         - Otwieranie szybkich ustawień
 - Wyrównaj zegar niezależnie od aplikacji domowych
 - Zmiana wyrównania aplikacji w szufladzie aplikacji
+- Możliwość ustawienia kodu dostępu do strony ustawień
 - Zmiana rozmiaru czcionki
 - Usunięte pozwolenie na korzystanie z Internetu Nigdy nie wiesz, co deweloper aplikacji chce o tobie wiedzieć.
 

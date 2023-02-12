@@ -73,6 +73,8 @@
     <string name="open">เปิด</string>
     <string name="close">ปิด</string>
     <string name="copy">สำเนา</string>
+    <string name="settings_text_size">ขนาดตัวอักษรการตั้งค่า</string>
+    <string name="settings_lock_time">หมดเวลาล็อคการตั้งค่า</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">แสดงการแจ้งเตือน</string>
     <string name="show_app_list">แสดงรายการแอพ</string>
@@ -87,6 +89,13 @@
     <string name="backup">การสำรองข้อมูล</string>
     <string name="load_backup">โหลดข้อมูลสำรอง</string>
     <string name="store_backup">เก็บข้อมูลสำรอง</string>
+    <!-- PinCode Strings -->
+    <string name="reset_pin">รีเซ็ต PIN</string>
+    <string name="pin_number">หมายเลขพิน</string>
+    <string name="confirm_pin_number">ยืนยันหมายเลขพิน</string>
+    <string name="unlock_settings">ปลดล็อกการตั้งค่า</string>
+    <string name="pin_number_match">พินเลขตรงกัน!</string>
+    <string name="pin_number_do_not_match">เลขพินไม่ตรงกัน!</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">แอพทั้งหมด</string>
     <string name="drawer_list_empty_hint">ไม่พบแอป</string>

@@ -73,6 +73,8 @@
     <string name="open">Otevřít</string>
     <string name="close">Zavřít</string>
     <string name="copy">kopírovat</string>
+    <string name="settings_text_size">Nastavení Velikost textu</string>
+    <string name="settings_lock_time">Časový limit zámku nastavení</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Zobrazit oznámení</string>
     <string name="show_app_list">Zobrazit seznam aplikací</string>
@@ -87,6 +89,13 @@
     <string name="backup">Záloha</string>
     <string name="load_backup">Načíst zálohu</string>
     <string name="store_backup">Záloha obchodu</string>
+    <!-- PinCode Strings -->
+    <string name="reset_pin">Resetovat PIN</string>
+    <string name="pin_number">Číslo PIN</string>
+    <string name="confirm_pin_number">Potvrďte číslo PIN</string>
+    <string name="unlock_settings">Odemknout Nastavení</string>
+    <string name="pin_number_match">Shoda čísel pinů!</string>
+    <string name="pin_number_do_not_match">Čísla pinů se neshodují!</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Všechny aplikace</string>
     <string name="drawer_list_empty_hint">Nebyly nalezeny žádné aplikace</string>

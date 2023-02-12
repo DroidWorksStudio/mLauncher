@@ -16,6 +16,7 @@ Forked från <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mi
         - Öppna snabbinställningar
 - Du kan också placera klockan oberoende av hem-apparna
 - Ändra inriktningen på appar i app-utdragslådan
+- Möjligheten att ha en lösenordskod inställd för inställningssidan
 - Ändra teckenstorlek
 - Tog bort Internet-tillstånd. Du vet aldrig vad en apputvecklare vill veta om dig.
 

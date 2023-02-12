@@ -16,6 +16,7 @@ Račvan od <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mini
         - Otvaranje brzih postavki
 - Također možete postaviti sat neovisno o kućnim aplikacijama
 - Promjena poravnanja aplikacija u ladici aplikacija
+- Mogućnost postavljanja lozinke za stranicu postavki
 - Promjena veličine fonta
 - Uklonjeno internetsko dopuštenje. Nikad ne znate što programer aplikacije želi znati o vama.
 

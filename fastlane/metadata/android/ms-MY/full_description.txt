@@ -16,6 +16,7 @@ Bercabang daripada <a href="https://github.com/tanujnotes/Olauncher">Olauncher</
         - Membuka tetapan pantas
 - Anda juga boleh meletakkan jam secara bebas daripada apl rumah
 - Tukar penjajaran apl dalam laci apl
+- Keupayaan untuk menetapkan kod laluan untuk halaman tetapan
 - Tukar saiz fon
 - Dialih keluar kebenaran internet. Anda tidak pernah tahu perkara yang ingin diketahui oleh pembangun apl tentang anda.
 

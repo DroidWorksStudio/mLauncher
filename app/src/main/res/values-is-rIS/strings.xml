@@ -73,6 +73,8 @@
     <string name="open">Opið</string>
     <string name="close">Loka</string>
     <string name="copy">afrit</string>
+    <string name="settings_text_size">Stillingar Textastærð</string>
+    <string name="settings_lock_time">Stillingar Læsa Tímamörk</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Sýna tilkynningu</string>
     <string name="show_app_list">Sýna forritalista</string>
@@ -87,6 +89,13 @@
     <string name="backup">Afritun</string>
     <string name="load_backup">Hlaða öryggisafrit</string>
     <string name="store_backup">Afritun verslunar</string>
+    <!-- PinCode Strings -->
+    <string name="reset_pin">Endurstilla PIN</string>
+    <string name="pin_number">PIN númer</string>
+    <string name="confirm_pin_number">Staðfestu PIN-númer</string>
+    <string name="unlock_settings">Opnaðu stillingar</string>
+    <string name="pin_number_match">Pin númer passa!</string>
+    <string name="pin_number_do_not_match">Pinnanúmer passa ekki saman!</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Öll forrit</string>
     <string name="drawer_list_empty_hint">Engin forrit fundust</string>

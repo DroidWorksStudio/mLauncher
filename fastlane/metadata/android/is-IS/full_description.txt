@@ -16,6 +16,7 @@ Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Lá
         - Að opna flýtistillingar
 - Þú getur líka staðsett klukkuna óháð heimilisöppunum
 - Breyttu röðun forrita í app-skúffu
+- Möguleikinn á að setja aðgangskóða fyrir stillingasíðuna
 - Breyttu leturstærð
 - Fjarlægði internetheimild. Þú veist aldrei hvað forritari vill vita um þig.
 

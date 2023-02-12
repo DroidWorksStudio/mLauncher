@@ -73,6 +73,8 @@
     <string name="open">Öppna</string>
     <string name="close">Stäng</string>
     <string name="copy">kopiera</string>
+    <string name="settings_text_size">Inställningar Textstorlek</string>
+    <string name="settings_lock_time">Inställningar Lås Timeout</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Visa avisering</string>
     <string name="show_app_list">Visa applista</string>
@@ -87,6 +89,13 @@
     <string name="backup">Säkerhetskopiera</string>
     <string name="load_backup">Ladda säkerhetskopia</string>
     <string name="store_backup">Säkerhetskopiering till butik</string>
+    <!-- PinCode Strings -->
+    <string name="reset_pin">Återställ PIN-koden</string>
+    <string name="pin_number">Pinkod</string>
+    <string name="confirm_pin_number">Bekräfta PIN-nummer</string>
+    <string name="unlock_settings">Lås upp inställningar</string>
+    <string name="pin_number_match">Pinnummer matchar!</string>
+    <string name="pin_number_do_not_match">Pinnummer matchar inte!</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Alla appar</string>
     <string name="drawer_list_empty_hint">Inga appar hittades</string>

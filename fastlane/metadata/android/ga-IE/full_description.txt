@@ -16,6 +16,7 @@ Forked ó <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Íosr
         - Na socruithe tapa a oscailt
 - Is féidir leat freisin seasamh an clog neamhspleách ar na apps baile
 - Athraigh ailíniú apps in app-drawer
+- An cumas cód pas a bheith socraithe don leathanach socruithe
 - Athraigh clómhéid
 - Baineadh cead idirlín. Níl a fhios agat riamh cad ba mhaith le forbróir aipeanna a bheith ar an eolas fút.
 

@@ -16,6 +16,7 @@ Nofoanana avy amin'ny <a href="https://github.com/tanujnotes/Olauncher">Olaunche
         - Sokafy ny fanovana haingana
 - Azonao atao ihany koa ny mametraka ny famantaranandro tsy miankina amin'ny fampiharana an-trano
 - Hanova ny fampifanarahana ny fampiharana ao amin'ny app-drawer
+- Ny fahafahana manana code passe napetraka ho an'ny pejy fandrindrana
 - Hanova ny haben'ny endritsoratra
 - Nesorina ny fahazoan-dàlana amin'ny Internet. Tsy fantatrao mihitsy izay tian'ny mpamorona fampiharana ho fantatra momba anao.
 

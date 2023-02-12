@@ -73,6 +73,8 @@
     <string name="open">開く</string>
     <string name="close">閉じる</string>
     <string name="copy">コピー</string>
+    <string name="settings_text_size">設定文字サイズ</string>
+    <string name="settings_lock_time">設定ロックのタイムアウト</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">通知を表示</string>
     <string name="show_app_list">アプリ一覧を表示</string>
@@ -87,6 +89,13 @@
     <string name="backup">バックアップ</string>
     <string name="load_backup">バックアップを読み込む</string>
     <string name="store_backup">ストアバックアップ</string>
+    <!-- PinCode Strings -->
+    <string name="reset_pin">PIN のリセット</string>
+    <string name="pin_number">ピン番号</string>
+    <string name="confirm_pin_number">ピン番号を確認する</string>
+    <string name="unlock_settings">ロック解除設定</string>
+    <string name="pin_number_match">ピン番号一致！</string>
+    <string name="pin_number_do_not_match">ピン番号が一致しません!</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">すべてのアプリ</string>
     <string name="drawer_list_empty_hint">アプリが見つかりません</string>

@@ -16,6 +16,7 @@ Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Min
         - Åbning af hurtig-indstillinger
 - Du kan også placere uret uafhængigt af hjemmet apps
 - Ændre justeringen af apps i app-skuffen
+- Muligheden for at have en adgangskode indstillet til indstillingssiden
 - Ændre skriftstørrelse
 - Fjernet internettilladelse. Du ved aldrig, hvad en app udvikler ønsker at vide om dig.
 

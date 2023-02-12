@@ -73,6 +73,8 @@
     <string name="open">Open</string>
     <string name="close">Afsluiten</string>
     <string name="copy">kopiëren</string>
+    <string name="settings_text_size">Instellingen Tekstgrootte</string>
+    <string name="settings_lock_time">Instellingen Lock time-out</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Toon melding</string>
     <string name="show_app_list">Toon App Lijst</string>
@@ -87,6 +89,13 @@
     <string name="backup">Back-up</string>
     <string name="load_backup">Back-up laden</string>
     <string name="store_backup">Winkel back-up</string>
+    <!-- PinCode Strings -->
+    <string name="reset_pin">Pincode resetten</string>
+    <string name="pin_number">Pincode</string>
+    <string name="confirm_pin_number">Bevestig pincode</string>
+    <string name="unlock_settings">Ontgrendel Instellingen</string>
+    <string name="pin_number_match">Pinnummers komen overeen!</string>
+    <string name="pin_number_do_not_match">Pinnummers komen niet overeen!</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Alle apps</string>
     <string name="drawer_list_empty_hint">Geen apps gevonden</string>

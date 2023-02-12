@@ -16,6 +16,7 @@ Biforcato da <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mi
         - Apertura delle impostazioni rapide
 - Allineare l'orologio indipendentemente dalle app di casa
 - Modifica dell'allineamento delle app nel cassetto delle applicazioni
+- La possibilità di impostare un codice di accesso per la pagina delle impostazioni
 - Modifica della dimensione dei caratteri
 - Rimozione dell'autorizzazione a Internet - Rimozione dell'autorizzazione a Internet Non sai mai cosa uno sviluppatore di app vuole sapere su di te.
 

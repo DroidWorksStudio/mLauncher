@@ -73,6 +73,8 @@
     <string name="open">Terbuka</string>
     <string name="close">Tutup</string>
     <string name="copy">salinan</string>
+    <string name="settings_text_size">Ukuran Teks Pengaturan</string>
+    <string name="settings_lock_time">Timeout Penguncian Setelan</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Tampilkan Pemberitahuan</string>
     <string name="show_app_list">Tampilkan Daftar Aplikasi</string>
@@ -87,6 +89,13 @@
     <string name="backup">Cadangan</string>
     <string name="load_backup">Memuat Cadangan</string>
     <string name="store_backup">Simpan Cadangan</string>
+    <!-- PinCode Strings -->
+    <string name="reset_pin">Setel ulang PIN</string>
+    <string name="pin_number">Nomor PIN</string>
+    <string name="confirm_pin_number">Konfirmasi Nomor Pin</string>
+    <string name="unlock_settings">Buka Kunci Pengaturan</string>
+    <string name="pin_number_match">Cocokkan Nomor Pin!</string>
+    <string name="pin_number_do_not_match">Nomor Pin tidak Cocok!</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Semua aplikasi</string>
     <string name="drawer_list_empty_hint">Tidak ada aplikasi yang ditemukan</string>

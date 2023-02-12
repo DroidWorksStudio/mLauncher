@@ -73,6 +73,8 @@
     <string name="open">Oppen</string>
     <string name="close">Zoumaachen</string>
     <string name="copy">kopéieren</string>
+    <string name="settings_text_size">Astellungen Text Gréisst</string>
+    <string name="settings_lock_time">Astellunge Spär Timeout</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Show Notifikatioun</string>
     <string name="show_app_list">Show App Lëscht</string>
@@ -87,6 +89,13 @@
     <string name="backup">Backupsatellit</string>
     <string name="load_backup">Lueden Backupsatellit</string>
     <string name="store_backup">Store Backupsatellit</string>
+    <!-- PinCode Strings -->
+    <string name="reset_pin">PIN zrécksetzen</string>
+    <string name="pin_number">Pin Zuel</string>
+    <string name="confirm_pin_number">Confirméieren Pin Zuel</string>
+    <string name="unlock_settings">Spär Astellungen</string>
+    <string name="pin_number_match">Pin Nummeren Match!</string>
+    <string name="pin_number_do_not_match">Pin Zuelen passen net!</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">All Apps</string>
     <string name="drawer_list_empty_hint">Keng Apps fonnt</string>
