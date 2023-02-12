@@ -73,6 +73,8 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string name="copy">копија</string>
+    <string name="settings_text_size">Подешавања Величина текста</string>
+    <string name="settings_lock_time">Временско ограничење закључавања подешавања</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Show Notification</string>
     <string name="show_app_list">Show App List</string>
@@ -87,6 +89,13 @@
     <string name="backup">Backup</string>
     <string name="load_backup">Load Backup</string>
     <string name="store_backup">Store Backup</string>
+    <!-- PinCode Strings -->
+    <string name="reset_pin">Ресетујте ПИН</string>
+    <string name="pin_number">Пин број</string>
+    <string name="confirm_pin_number">Потврдите ПИН број</string>
+    <string name="unlock_settings">Откључај подешавања</string>
+    <string name="pin_number_match">Пин Нумберс Матцх!</string>
+    <string name="pin_number_do_not_match">Пин бројеви се не поклапају!</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>
     <string name="drawer_list_empty_hint">No apps found</string>
