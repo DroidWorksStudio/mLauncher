@@ -73,6 +73,8 @@
     <string name="open">Misokatra</string>
     <string name="close">AKAIKY</string>
     <string name="copy">dika mitovy</string>
+    <string name="settings_text_size">Haben\'ny lahatsoratra Settings</string>
+    <string name="settings_lock_time">Fotoana hidin\'ny Settings</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Asehoy ny fampahafantarana</string>
     <string name="show_app_list">Asehoy ny lisitry ny fampiharana</string>
@@ -87,6 +89,13 @@
     <string name="backup">nomaniny ho solon\'izay</string>
     <string name="load_backup">Load Backup</string>
     <string name="store_backup">Store Backup</string>
+    <!-- PinCode Strings -->
+    <string name="reset_pin">Avereno ny PIN</string>
+    <string name="pin_number">Pin Number</string>
+    <string name="confirm_pin_number">Hamafiso ny laharan\'ny Pin</string>
+    <string name="unlock_settings">Sokafy ny Settings</string>
+    <string name="pin_number_match">Match Numbers Pin!</string>
+    <string name="pin_number_do_not_match">Tsy mifanentana ny isa Pin!</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Apps rehetra</string>
     <string name="drawer_list_empty_hint">Tsy misy fampiharana hita</string>
