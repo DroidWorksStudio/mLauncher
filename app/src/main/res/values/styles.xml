@@ -72,4 +72,10 @@
 	<style name="TextSmallLight" parent="TextSmall">
 		<item name="android:textColor">@drawable/text_colors_light</item>
 	</style>
+	<style name="ButtonStyle" parent="TextDefault">
+		<item name="android:textSize">16sp</item>
+		<item name="android:textColor">@color/black</item>
+		<item name="android:background">@color/colorAccent</item>
+		<item name="android:padding">16dp</item>
+	</style>
 </resources>
