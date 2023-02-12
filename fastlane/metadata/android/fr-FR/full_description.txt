@@ -16,6 +16,7 @@ Bifurqué à partir de <a href="https://github.com/tanujnotes/Olauncher">Olaunch
         - Ouverture des paramètres rapides
 - Aligner l'horloge indépendamment des applications domestiques
 - Modifier l'alignement des applications dans le tiroir d'applications
+- La possibilité d'avoir un mot de passe défini pour la page des paramètres
 - Modifier la taille de la police
 - Suppression de l'autorisation d'accès à Internet - Suppression de l'autorisation d'accès à Internet Vous ne savez jamais ce qu'un développeur d'applications veut savoir de vous.
 
