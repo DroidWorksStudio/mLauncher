@@ -73,6 +73,8 @@
     <string name="open">खोल्नुहोस्</string>
     <string name="close">बन्द गर्नुहोस्</string>
     <string name="copy">कापी</string>
+    <string name="settings_text_size">सेटिङ पाठ आकार</string>
+    <string name="settings_lock_time">सेटिङहरू लक टाइमआउट</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">सूचना देखाउनुहोस्</string>
     <string name="show_app_list">एप सूची देखाउनुहोस्</string>
@@ -87,6 +89,13 @@
     <string name="backup">ब्याकअप</string>
     <string name="load_backup">ब्याकअप लोड गर्नुहोस्</string>
     <string name="store_backup">स्टोर ब्याकअप</string>
+    <!-- PinCode Strings -->
+    <string name="reset_pin">PIN रिसेट गर्नुहोस्</string>
+    <string name="pin_number">पिन नम्बर</string>
+    <string name="confirm_pin_number">पिन नम्बर पुष्टि गर्नुहोस्</string>
+    <string name="unlock_settings">अनलक सेटिङहरू</string>
+    <string name="pin_number_match">पिन नम्बरहरू मिलान!</string>
+    <string name="pin_number_do_not_match">पिन नम्बरहरू मिल्दैनन्!</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">सबै एपहरू</string>
     <string name="drawer_list_empty_hint">कुनै एपहरू फेला परेनन्</string>
