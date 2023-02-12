@@ -16,6 +16,7 @@ Bifurcado desde <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>.
         - Abriendo los ajustes rápidos
 - Alinear el reloj independientemente de las aplicaciones de inicio
 - Cambiar la alineación de las aplicaciones en el cajón de aplicaciones
+- La capacidad de tener un código de acceso establecido para la página de configuración
 - Cambiar el tamaño de letra
 - Permiso de Internet eliminado - Permiso de Internet eliminado - Permiso de Internet eliminado - Permiso de Internet eliminado Nunca sabes lo que un desarrollador de aplicaciones quiere saber sobre ti.
 
