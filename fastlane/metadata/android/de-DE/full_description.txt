@@ -16,6 +16,7 @@ Gegabelt von <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mi
         - Öffnen der Schnelleinstellungen
 - Uhr unabhängig von Home-Apps ausrichten
 - Ausrichtung von Anwendungen im App-Drawer ändern
+- Die Möglichkeit, einen Passcode für die Einstellungsseite festzulegen
 - Schriftgröße ändern
 - Entfernte Interneterlaubnis - Entfernte Interneterlaubnis Du weißt nie, was ein App-Entwickler über dich wissen möchte.
 
