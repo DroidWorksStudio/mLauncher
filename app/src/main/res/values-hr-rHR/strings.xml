@@ -73,6 +73,8 @@
     <string name="open">Otvoren</string>
     <string name="close">Zatvoriti</string>
     <string name="copy">kopirati</string>
+    <string name="settings_text_size">Postavke Veličina teksta</string>
+    <string name="settings_lock_time">Istek vremena zaključavanja postavki</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Prikaži obavijest</string>
     <string name="show_app_list">Prikaži popis aplikacija</string>
@@ -87,6 +89,13 @@
     <string name="backup">Sigurnosna kopija</string>
     <string name="load_backup">Učitaj sigurnosnu kopiju</string>
     <string name="store_backup">Spremi sigurnosnu kopiju</string>
+    <!-- PinCode Strings -->
+    <string name="reset_pin">Poništi PIN</string>
+    <string name="pin_number">Pin broj</string>
+    <string name="confirm_pin_number">Potvrdite PIN broj</string>
+    <string name="unlock_settings">Otključaj postavke</string>
+    <string name="pin_number_match">PIN brojevi se podudaraju!</string>
+    <string name="pin_number_do_not_match">Pin brojevi se ne podudaraju!</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Sve aplikacije</string>
     <string name="drawer_list_empty_hint">Nema pronađenih aplikacija</string>
