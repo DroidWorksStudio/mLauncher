@@ -28,6 +28,9 @@ object Constants {
     const val BACKUP_WRITE = 1
     const val BACKUP_READ = 2
 
+    const val LOCK_TIME_MIN = 0
+    const val LOCK_TIME_MAX = 120
+
     enum class AppDrawerFlag {
         LaunchApp,
         HiddenApps,

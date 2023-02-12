@@ -22,6 +22,7 @@ import android.util.Log
 import android.util.Log.*
 import android.util.TypedValue
 import android.view.*
+import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.view.ContextThemeWrapper
 import androidx.core.app.ActivityCompat
@@ -47,6 +48,20 @@ fun showToastShort(context: Context, message: String) {
     val toast = Toast.makeText(context.applicationContext, message, Toast.LENGTH_SHORT)
     toast.setGravity(Gravity.CENTER, 0, 0)
     toast.show()
+}
+
+fun handlePasswordInput(index: Int, passwordBoxes: List<EditText>) {
+    if (index < passwordBoxes.lastIndex) {
+        passwordBoxes[index + 1].apply {
+            requestFocus()
+            setText("")
+        }
+        for (i in index + 1 until passwordBoxes.size) {
+            if (passwordBoxes[i - 1].text.toString().isEmpty()) {
+                passwordBoxes[i].setText("")
+            }
+        }
+    }
 }
 
 suspend fun getAppsList(context: Context, showHiddenApps: Boolean = false): MutableList<AppModel> {
