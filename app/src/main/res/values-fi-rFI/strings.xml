@@ -73,6 +73,8 @@
     <string name="open">Avaa</string>
     <string name="close">Sulje</string>
     <string name="copy">kopio</string>
+    <string name="settings_text_size">Asetukset Tekstin koko</string>
+    <string name="settings_lock_time">Asetukset Lukituksen aikakatkaisu</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Näytä Ilmoitus</string>
     <string name="show_app_list">Näytä Sovelluslista</string>
@@ -87,6 +89,13 @@
     <string name="backup">Varmuuskopio</string>
     <string name="load_backup">Lataa Varmuuskopio</string>
     <string name="store_backup">Kaupan Varmuuskopiointi</string>
+    <!-- PinCode Strings -->
+    <string name="reset_pin">Palauta PIN</string>
+    <string name="pin_number">Pin koodi</string>
+    <string name="confirm_pin_number">Vahvista PIN-numero</string>
+    <string name="unlock_settings">Avaa asetukset</string>
+    <string name="pin_number_match">Pin-numerot täsmäävät!</string>
+    <string name="pin_number_do_not_match">Pin-numerot eivät täsmää!</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Kaikki sovellukset</string>
     <string name="drawer_list_empty_hint">Sovelluksia ei löytynyt</string>
