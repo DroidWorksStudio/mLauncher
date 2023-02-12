@@ -109,6 +109,10 @@ dependencies {
     implementation("androidx.compose.animation:animation:1.3.3")
     implementation("androidx.navigation:navigation-ui-ktx:2.5.3")
 
+    // AndroidX
+    implementation("androidx.compose.ui:ui:1.3.1")
+    implementation("androidx.compose.foundation:foundation:1.3.1")
+
     implementation("com.google.code.gson:gson:2.10.1")
 
     val androidxTestEspresso = "3.5.1"
