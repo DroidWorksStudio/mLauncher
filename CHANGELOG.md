@@ -1,5 +1,13 @@
 # Changelog
 
+## [Coming Soon](https://github.com/HeCodes2Much/mLauncher/tree/HEAD)
+
+[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.5.2...HEAD)
+
+**Fixed bugs:**
+
+- Bug/fix the battery percent from not updating [\#203](https://github.com/HeCodes2Much/mLauncher/pull/203) ([The-Repo-Club](https://github.com/The-Repo-Club))
+
 ## [0.5.2](https://github.com/HeCodes2Much/mLauncher/tree/0.5.2) (12, February 2023)
 
 [Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.5.1...0.5.2)
