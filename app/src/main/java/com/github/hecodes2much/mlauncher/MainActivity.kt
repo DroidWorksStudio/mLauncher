@@ -3,6 +3,7 @@ package com.github.hecodes2much.mlauncher
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
+import android.content.IntentFilter
 import android.content.pm.ActivityInfo
 import android.content.res.Configuration
 import android.os.Build
@@ -18,6 +19,7 @@ import androidx.navigation.Navigation
 import com.github.hecodes2much.mlauncher.data.Constants
 import com.github.hecodes2much.mlauncher.data.Prefs
 import com.github.hecodes2much.mlauncher.databinding.ActivityMainBinding
+import com.github.hecodes2much.mlauncher.helper.BatteryReceiver
 import com.github.hecodes2much.mlauncher.helper.isTablet
 import com.github.hecodes2much.mlauncher.helper.showToastLong
 import java.io.BufferedReader
@@ -31,6 +33,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var prefs: Prefs
     private lateinit var navController: NavController
     private lateinit var viewModel: MainViewModel
+    private lateinit var batteryReceiver: BatteryReceiver
     private lateinit var binding: ActivityMainBinding
 
     @Deprecated("Deprecated in Java")
@@ -54,6 +57,11 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        batteryReceiver = BatteryReceiver()
+        /* register battery changes */
+        val filter = IntentFilter(Intent.ACTION_BATTERY_CHANGED)
+        registerReceiver(batteryReceiver, filter)
+
         setLanguage()
 
         navController = Navigation.findNavController(this, R.id.nav_host_fragment)
@@ -69,6 +77,20 @@ class MainActivity : AppCompatActivity() {
         setupOrientation()
 
         window.addFlags(FLAG_LAYOUT_NO_LIMITS)
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        batteryReceiver = BatteryReceiver()
+        /* unregister battery changes */
+        unregisterReceiver(batteryReceiver)
+    }
+
+    override fun onPause() {
+        super.onPause()
+        batteryReceiver = BatteryReceiver()
+        /* unregister battery changes */
+        unregisterReceiver(batteryReceiver)
     }
 
     @Suppress("DEPRECATION")

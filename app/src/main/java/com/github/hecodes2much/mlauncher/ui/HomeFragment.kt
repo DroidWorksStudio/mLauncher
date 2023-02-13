@@ -43,7 +43,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     private lateinit var prefs: Prefs
     private lateinit var viewModel: MainViewModel
     private lateinit var deviceManager: DevicePolicyManager
-    private lateinit var batteryReceiver: BatteryReceiver
     private lateinit var vibrator: Vibrator
 
     private var _binding: FragmentHomeBinding? = null
@@ -74,27 +73,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         initObservers()
         initSwipeTouchListener()
         initClickListeners()
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        batteryReceiver = BatteryReceiver()
-        val filter = IntentFilter(Intent.ACTION_BATTERY_CHANGED)
-        requireContext().registerReceiver(batteryReceiver, filter)
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        batteryReceiver = BatteryReceiver()
-        /* unregister battery changes */
-        requireContext().unregisterReceiver(batteryReceiver)
-    }
-
-    override fun onPause() {
-        super.onPause()
-        batteryReceiver = BatteryReceiver()
-        /* unregister battery changes */
-        requireContext().unregisterReceiver(batteryReceiver)
     }
 
     override fun onStart() {
@@ -146,11 +124,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             binding.setDefaultLauncher.visibility =
                 if (ismlauncherDefault(requireContext())) View.GONE else View.VISIBLE
         }
-
-        batteryReceiver = BatteryReceiver()
-        /* register battery changes */
-        val filter = IntentFilter(Intent.ACTION_BATTERY_CHANGED)
-        requireContext().registerReceiver(batteryReceiver, filter)
     }
 
     override fun onClick(view: View) {
