@@ -79,20 +79,6 @@ class MainActivity : AppCompatActivity() {
         window.addFlags(FLAG_LAYOUT_NO_LIMITS)
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        batteryReceiver = BatteryReceiver()
-        /* unregister battery changes */
-        unregisterReceiver(batteryReceiver)
-    }
-
-    override fun onPause() {
-        super.onPause()
-        batteryReceiver = BatteryReceiver()
-        /* unregister battery changes */
-        unregisterReceiver(batteryReceiver)
-    }
-
     @Suppress("DEPRECATION")
     fun setLanguage() {
         val locale = prefs.language.locale()
