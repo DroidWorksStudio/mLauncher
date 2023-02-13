@@ -37,9 +37,10 @@ List any dependencies that are required for this change.
 
 1.
 2.
+3.
 
 ### Test Device: <!-- required -->
-- Open Launcher version:
+- mLauncher version:
 - Device name:
 - Android version:
 - Other information:
