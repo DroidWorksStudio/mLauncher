@@ -15,6 +15,7 @@ import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Column
@@ -98,6 +99,7 @@ class SettingsFragment : Fragment() {
                 binding.settingsView.visibility = View.GONE
 
                 val view = inflater.inflate(R.layout.fragment_password, container, false)
+                showKeyboard(view)
 
                 password1 = view.findViewById(R.id.password_1)
                 password2 = view.findViewById(R.id.password_2)
@@ -110,6 +112,9 @@ class SettingsFragment : Fragment() {
 
                 submitButton.setOnClickListener {
                     val context = requireContext()
+                    val inputMethodManager = activity?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+                    inputMethodManager.hideSoftInputFromWindow(view?.windowToken, 0)
+
                     if (getPassword() == prefs.settingPinNumber.toString()) {
                         showToastLong(context, resources.getString(R.string.pin_number_match))
                         prefs.lastOpenSettings = LocalDateTime.now().toString()
@@ -119,18 +124,26 @@ class SettingsFragment : Fragment() {
                     }
                 }
 
-                activity?.let {
-                    val inputMethodManager = it.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-                    @Suppress("DEPRECATION")
-                    inputMethodManager.showSoftInput(password1, InputMethodManager.SHOW_FORCED)
-                }
-
                 return view
             }
         } else {
             prefs.lastOpenSettings = LocalDateTime.now().toString()
         }
         return binding.root
+    }
+
+    private fun showKeyboard(view: View) {
+        val context = requireContext()
+        if (!Prefs(requireContext()).autoShowKeyboard) return
+
+        val password1 = view.findViewById<TextView>(R.id.password_1)
+        password1.requestFocus()
+        val imm = context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        password1.postDelayed({
+            password1.requestFocus()
+            @Suppress("DEPRECATION")
+            imm.showSoftInput(password1, InputMethodManager.SHOW_FORCED)
+        }, 100)
     }
 
     private fun initPasswordClickListeners() {
