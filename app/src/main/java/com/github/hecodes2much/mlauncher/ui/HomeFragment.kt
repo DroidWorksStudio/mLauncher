@@ -3,11 +3,9 @@ package com.github.hecodes2much.mlauncher.ui
 import android.annotation.SuppressLint
 import android.app.admin.DevicePolicyManager
 import android.content.Context
-import android.content.Context.BATTERY_SERVICE
 import android.content.Context.VIBRATOR_SERVICE
 import android.content.Intent
 import android.content.IntentFilter
-import android.os.BatteryManager
 import android.os.Build
 import android.os.Bundle
 import android.os.Vibrator
@@ -40,12 +38,12 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.util.*
 
-
 class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener {
 
     private lateinit var prefs: Prefs
     private lateinit var viewModel: MainViewModel
     private lateinit var deviceManager: DevicePolicyManager
+    private lateinit var batteryReceiver: BatteryReceiver
     private lateinit var vibrator: Vibrator
 
     private var _binding: FragmentHomeBinding? = null
@@ -76,7 +74,27 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         initObservers()
         initSwipeTouchListener()
         initClickListeners()
-        updateBatteryStatus()
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        batteryReceiver = BatteryReceiver()
+        val filter = IntentFilter(Intent.ACTION_BATTERY_CHANGED)
+        requireContext().registerReceiver(batteryReceiver, filter)
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        batteryReceiver = BatteryReceiver()
+        /* unregister battery changes */
+        requireContext().unregisterReceiver(batteryReceiver)
+    }
+
+    override fun onPause() {
+        super.onPause()
+        batteryReceiver = BatteryReceiver()
+        /* unregister battery changes */
+        requireContext().unregisterReceiver(batteryReceiver)
     }
 
     override fun onStart() {
@@ -107,7 +125,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             binding.batteryText.setTextColor(fontColor)
             binding.setDefaultLauncher.setTextColor(fontColor)
         }
-        updateBatteryStatus()
     }
 
     override fun onResume() {
@@ -129,61 +146,10 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             binding.setDefaultLauncher.visibility =
                 if (ismlauncherDefault(requireContext())) View.GONE else View.VISIBLE
         }
-        updateBatteryStatus()
-    }
 
-    private fun getBatteryPercentage(context: Context): Int {
-        val bm = context.getSystemService(BATTERY_SERVICE) as BatteryManager
-        return bm.getIntProperty(BatteryManager.BATTERY_PROPERTY_CAPACITY)
-    }
-
-    private fun updateBatteryStatus() {
-        val batteryStatus: Intent? = IntentFilter(Intent.ACTION_BATTERY_CHANGED).let { ifilter ->
-            context?.registerReceiver(null, ifilter)
-        }
-
-        val status: Int = batteryStatus?.getIntExtra(BatteryManager.EXTRA_STATUS, -1) ?: -1
-        val isCharging: Boolean = status == BatteryManager.BATTERY_STATUS_CHARGING
-                || status == BatteryManager.BATTERY_STATUS_FULL
-
-        // How are we charging?
-        val chargePlug: Int = batteryStatus?.getIntExtra(BatteryManager.EXTRA_PLUGGED, -1) ?: -1
-        val usbCharge: Boolean = chargePlug == BatteryManager.BATTERY_PLUGGED_USB
-        val acCharge: Boolean = chargePlug == BatteryManager.BATTERY_PLUGGED_AC
-
-        val batteryPct = getBatteryPercentage(requireContext())
-
-        if (!prefs.showBattery) return
-        if (isCharging) {
-            if (usbCharge) {
-                val icon = "\uF583"
-                val batText = "$batteryPct%"
-                binding.batteryIcon.text = icon
-                binding.batteryText.text = batText
-            }
-            if (acCharge) {
-                val icon = "\uF582"
-                val batText = "$batteryPct%"
-                binding.batteryIcon.text = icon
-                binding.batteryText.text = batText
-            }
-        } else {
-            val icon = when (batteryPct) {
-                10 -> "\uF579"
-                20 -> "\uF57A"
-                30 -> "\uF57B"
-                40 -> "\uF57C"
-                50 -> "\uF57D"
-                60 -> "\uF57E"
-                70 -> "\uF57F"
-                80 -> "\uF580"
-                90 -> "\uF581"
-                else -> "\uF578"
-            }
-            val batText = "$batteryPct%"
-            binding.batteryIcon.text = icon
-            binding.batteryText.text = batText
-        }
+        batteryReceiver = BatteryReceiver()
+        /* register battery changes */
+        requireContext().registerReceiver(batteryReceiver, IntentFilter(Intent.ACTION_BATTERY_CHANGED))
     }
 
     override fun onClick(view: View) {
@@ -240,8 +206,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             binding.firstRunTips.visibility = View.VISIBLE
             binding.setDefaultLauncher.visibility = View.GONE
         } else binding.firstRunTips.visibility = View.GONE
-
-        updateBatteryStatus()
 
         with(viewModel) {
 
