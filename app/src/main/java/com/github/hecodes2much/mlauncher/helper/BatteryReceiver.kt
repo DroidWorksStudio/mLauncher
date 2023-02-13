@@ -34,30 +34,38 @@ class BatteryReceiver : BroadcastReceiver() {
         val batteryLevel = batteryPercentage(intent)
 
         /* progress bar animation */
-        if (chargingStatus(intent) == BatteryManager.BATTERY_STATUS_CHARGING ||
-            chargingStatus(intent) == BatteryManager.BATTERY_STATUS_FULL ||
+        if (
             chargingStatus(intent) == BatteryManager.BATTERY_STATUS_DISCHARGING ||
-            chargingStatus(intent) == BatteryManager.BATTERY_STATUS_NOT_CHARGING)
-        {
-            updateBatteryStatus(context, batteryLevel)
+            chargingStatus(intent) == BatteryManager.BATTERY_STATUS_NOT_CHARGING
+        ) {
+            updateBatteryStatus(context, batteryLevel, isCharging = false)
+        } else if (
+            chargingStatus(intent) == BatteryManager.BATTERY_STATUS_CHARGING ||
+            chargingStatus(intent) == BatteryManager.BATTERY_STATUS_FULL
+        ) {
+            updateBatteryStatus(context, batteryLevel, isCharging = true)
         }
     }
 
-    private fun updateBatteryStatus(context: Context, batteryLevel: Int) {
+    private fun updateBatteryStatus(context: Context, batteryLevel: Int, isCharging: Boolean) {
         if (!prefs.showBattery) return
         var icon: String
         @Suppress("UNUSED_EXPRESSION")
-        icon = when (batteryLevel) {
-            in 0..10 -> "\uF579"
-            in 11..20 -> "\uF57A"
-            in 21..30 -> "\uF57B"
-            in 31..40 -> "\uF57C"
-            in 41..50 -> "\uF57D"
-            in 51..60 -> "\uF57E"
-            in 61..70 -> "\uF57F"
-            in 71..80 -> "\uF580"
-            in 81..90 -> "\uF581"
-            else -> "\uF578"
+        if (isCharging) {
+            icon = "\uF583"
+        } else {
+            icon = when (batteryLevel) {
+                in 0..10 -> "\uF579"
+                in 11..20 -> "\uF57A"
+                in 21..30 -> "\uF57B"
+                in 31..40 -> "\uF57C"
+                in 41..50 -> "\uF57D"
+                in 51..60 -> "\uF57E"
+                in 61..70 -> "\uF57F"
+                in 71..80 -> "\uF580"
+                in 81..90 -> "\uF581"
+                else -> "\uF578"
+            }
         }
 
         val context = context as Activity

@@ -149,7 +149,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
         batteryReceiver = BatteryReceiver()
         /* register battery changes */
-        requireContext().registerReceiver(batteryReceiver, IntentFilter(Intent.ACTION_BATTERY_CHANGED))
+        val filter = IntentFilter(Intent.ACTION_BATTERY_CHANGED)
+        requireContext().registerReceiver(batteryReceiver, filter)
     }
 
     override fun onClick(view: View) {
