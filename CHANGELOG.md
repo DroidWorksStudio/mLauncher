@@ -6,6 +6,7 @@
 
 **Fixed bugs:**
 
+- Bug/fix colors and layout for pin screen [\#204](https://github.com/HeCodes2Much/mLauncher/pull/204) ([The-Repo-Club](https://github.com/The-Repo-Club))
 - Bug/fix the battery percent from not updating [\#203](https://github.com/HeCodes2Much/mLauncher/pull/203) ([The-Repo-Club](https://github.com/The-Repo-Club))
 
 ## [0.5.2](https://github.com/HeCodes2Much/mLauncher/tree/0.5.2) (12, February 2023)
