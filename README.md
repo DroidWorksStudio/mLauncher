@@ -53,7 +53,9 @@ We try to balance customizability and minimalization well still being simple :)<
 
 ## Translations: [![Crowdin](https://badges.crowdin.net/mlauncher/localized.svg)](https://crowdin.com/project/mlauncher)
 
-<details><summary>A lot of people have translated the app to the following languages. Many thanks to you all.  (click to expand)</summary>
+We would like to extend our sincere gratitude to the numerous individuals who have contributed to the translation of our application into various languages. Your efforts have made it possible for users around the world to access and benefit from our product, and we are immensely appreciative of your hard work and dedication. Thank you all for your invaluable contributions!  
+
+<details><summary><h4>List of translations</h4> (click to expand)</summary>
 
   - Arabic
   - Albanian
@@ -125,10 +127,10 @@ As per version 0.4.0. Click on any image to enlarge it. To know more, explore an
 
 </div>
 
-- This app is available on [F-Droid](https://f-droid.org/packages/app.mlauncher/) & [Github](https://github.com/HeCodes2Much/mLauncher/releases/)
-- The latest stable version is on the [`main`](https://github.com/HeCodes2Much/mLauncher/tree/main) branch. You can clone it and build the app yourself.
-- A github action should build an apk for every [release](https://github.com/HeCodes2Much/mLauncher/releases).
-- The **original app** is also available on [Play Store](https://play.google.com/store/apps/details?id=app.olauncher), [F-Droid](https://f-droid.org/fr/packages/app.olauncher/) & [Github](https://github.com/tanujnotes/Olauncher).
+- This application can be found on [F-Droid](https://f-droid.org/packages/app.mlauncher/) and [Github](https://github.com/HeCodes2Much/mLauncher/releases/).
+- The latest stable version is available on the [`main`](https://github.com/HeCodes2Much/mLauncher/tree/main) branch, which can be cloned to build the application independently.
+- Additionally, a Github action has been set up to automatically generate an APK for every [release](https://github.com/HeCodes2Much/mLauncher/releases).
+- The **original** version of the application is also accessible on the [Play Store](https://play.google.com/store/apps/details?id=app.olauncher), [F-Droid](https://f-droid.org/fr/packages/app.olauncher/) & [Github](https://github.com/tanujnotes/Olauncher).
 
 ## Contribute
 
@@ -140,8 +142,9 @@ As per version 0.4.0. Click on any image to enlarge it. To know more, explore an
 
 ## License
 
-**mLauncher is under open source GPL3 license, meaning you can use, study, change and share it at will.**
-Copyleft ensures it stays that way. From the full source, anyone can build, fork and use as you wish
+**mLauncher is proudly licensed under the open source GPL3 license, granting users the freedom to use, study, modify and distribute it at will.**
+
+The Copyleft provision guarantees that these freedoms remain intact, ensuring that mLauncher will remain a fully open-source project. With access to the full source code, anyone can build, fork, and customize the application to their heart's content, unleashing its full potential.
 
 - mLauncher does not have network access.
 - mLauncher does not collect or transmit any data in any way whatsoever.
@@ -164,7 +167,7 @@ mLauncher uses the following permissions:
 - [https://github.com/OlauncherCF/OlauncherCF](https://github.com/OlauncherCF/OlauncherCF)
 
 ## Donation
-Please support the development by donating. As mLauncher is a free application, it needs support to keep it free and alive. Purchasing is not a requirement, donation is. 😊
+We kindly request that you consider supporting the ongoing development of mLauncher by making a donation if you find it to be a useful application. As a free and open-source product, mLauncher depends entirely on the support and generosity of its users to maintain its continued growth and accessibility to all. Please note that while purchasing is not obligatory, even a small donation would go a long way in helping us to keep mLauncher alive and thriving. We appreciate your continued support, and thank you for your contribution towards the betterment of our product. 😊
 
 <div align='center'>
 
