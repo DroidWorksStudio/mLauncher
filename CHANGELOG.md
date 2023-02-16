@@ -1,5 +1,17 @@
 # Changelog
 
+## [Coming Soon](https://github.com/HeCodes2Much/mLauncher/tree/HEAD)
+
+[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.5.3...HEAD)
+
+**Fixed bugs:**
+
+- Bug: fixed a bug that crashes on battery monitor [\#211](https://github.com/HeCodes2Much/mLauncher/pull/211) ([The-Repo-Club](https://github.com/The-Repo-Club))
+
+**Closed issues:**
+
+- \[Crash Report\] mLauncher loses Standard Launcher flag [\#210](https://github.com/HeCodes2Much/mLauncher/issues/210)
+
 ## [0.5.3](https://github.com/HeCodes2Much/mLauncher/tree/0.5.3) (13, February 2023)
 
 [Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.5.2...0.5.3)
