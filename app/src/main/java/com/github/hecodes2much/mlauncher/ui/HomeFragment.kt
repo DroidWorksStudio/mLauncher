@@ -21,6 +21,7 @@ import androidx.core.os.bundleOf
 import androidx.core.view.children
 import androidx.core.view.size
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
@@ -43,6 +44,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     private lateinit var prefs: Prefs
     private lateinit var viewModel: MainViewModel
     private lateinit var deviceManager: DevicePolicyManager
+    private lateinit var fragManager: FragmentManager
+    private lateinit var batteryReceiver: BatteryReceiver
     private lateinit var vibrator: Vibrator
 
     private var _binding: FragmentHomeBinding? = null
@@ -53,6 +56,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
         val view = binding.root
         prefs = Prefs(requireContext())
+        batteryReceiver = BatteryReceiver()
 
         return view
     }
@@ -108,6 +112,11 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     override fun onResume() {
         super.onResume()
 
+        batteryReceiver = BatteryReceiver()
+        /* register battery changes */
+        val filter = IntentFilter(Intent.ACTION_BATTERY_CHANGED)
+        requireContext().registerReceiver(batteryReceiver, filter)
+
         val locale = prefs.language.locale()
         val best12 = getBestDateTimePattern(locale, "hhmma")
         val best24 = getBestDateTimePattern(locale, "HHmm")
@@ -124,6 +133,13 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             binding.setDefaultLauncher.visibility =
                 if (ismlauncherDefault(requireContext())) View.GONE else View.VISIBLE
         }
+
+    }
+
+    override fun onPause() {
+        super.onPause()
+        /* unregister battery changes */
+        requireContext().unregisterReceiver(batteryReceiver)
     }
 
     override fun onClick(view: View) {
