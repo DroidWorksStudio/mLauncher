@@ -12,6 +12,10 @@
 
 - \[Crash Report\] mLauncher loses Standard Launcher flag [\#210](https://github.com/HeCodes2Much/mLauncher/issues/210)
 
+**Merged pull requests:**
+
+- Release: App version bumped to 54 \(v0.5.4\) [\#212](https://github.com/HeCodes2Much/mLauncher/pull/212) ([The-Repo-Club](https://github.com/The-Repo-Club))
+
 ## [0.5.3](https://github.com/HeCodes2Much/mLauncher/tree/0.5.3) (13, February 2023)
 
 [Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.5.2...0.5.3)
