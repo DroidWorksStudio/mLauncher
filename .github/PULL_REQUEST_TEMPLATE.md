@@ -6,6 +6,7 @@
 - [ ] Feature Request (user facing) <!-- non-breaking change which adds functionality -->
 - [ ] Codebase Improvement (dev facing) <!-- non-breaking change which refines the code base -->
 - [ ] Breaking Change (dev/user facing) <!--fix or feature that would cause existing functionality to not work as expected -->
+- [ ] Release (user facing) <!-- new release for mLauncher -->
 - [ ] This change requires a documentation update
 
 ### All Submissions <!-- to be checked but remove any that are not required -->
