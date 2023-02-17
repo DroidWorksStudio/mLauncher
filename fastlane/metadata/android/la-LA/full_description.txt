@@ -1,0 +1,70 @@
+Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minima ac nitida.
+
+# Furked cum extra features
+
+- clutter remota, sicut praeconia et nexus
+- Applicare potes in app-drawer (Renaming apps in screen domus iam sustentata est. Iustus diu click in app in domum screen et satus typing)
+- Multa plura bene addimus pro gestibus in screen domus:
+    — gestus nunc sunt;
+        - sursum, deorsum, sinistrorsum, dextrorsum
+        - Clicking in horologium
+        - Clicking in Date
+    - Actiones possibiles nunc includunt:
+        - Open certa app
+        - Obfirmo screen
+        - Aperiens notitia drawer
+        - aperire vivos occasus
+- Etiam horologium extra domum apps situm
+- Mutare alignment apps in app-drawer
+- Facultas transeundi habere codicem ad paginas uncinis positas
+- Mutare font magnitudine
+- Penitus remota licentia. Numquam scis quid velit app elit de te scire.
+
+## Translationes:
+
+- Multi homines app ad linguas sequentes interpretati sunt. Tibi omnes gratias agimus.
+  - Arabic
+  — Albanian
+  - Bulgarorum
+  - Sinica
+  - Croatian
+  - Czech
+  - Danicum
+  - English
+  - Estonian
+  - Philippinica
+  - Finnicus
+  - Gallica
+  - Georgian
+  - German
+  - Graeca
+  - Hawaiian
+  - Hebrew
+  - Hindi
+  - Hungarian
+  - Islandic
+  - Indonesiaca
+  - Hibernica
+  - Italian
+  - Japanese
+  - Coreanica
+  - Lithuanian
+  - Luxemburgum
+  - Malay
+  - Malagasy
+  - Malayalam
+  - Norvegica
+  - Nepalica
+  - Persae
+  - Polonica
+  - Portuguese (European)
+  - Punjabi
+  - Russian
+  - Serbian
+  - Sindhi
+  - Spanish
+  - Swedish
+  - Thai
+  - Turcica
+  - Ucraina
+  - Vietnamica

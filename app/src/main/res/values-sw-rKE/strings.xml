@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Settings -->
+    <string name="app">Programu</string>
+    <!-- Admin Settings -->
+    <string name="admin_permission_message">mLauncher inaahidi kutumia ruhusa ya kufunga skrini kwa kuwajibika. mLauncher haikusanyi wala kushiriki data yoyote.</string>
+    <string name="experimental">(majaribio)</string>
+    <!-- Settings Headers -->
+    <string name="appearance">Mwonekano</string>
+    <string name="behavior">Tabia</string>
+    <string name="homescreen">Skrini ya nyumbani</string>
+    <string name="alignment">Mpangilio</string>
+    <string name="gestures">Ishara</string>
+    <!-- Home Strings -->
+    <string name="hidden_apps">Programu zilizofichwa</string>
+    <string name="set_as_default_launcher">Weka kama kizindua chaguo-msingi</string>
+    <string name="change_default_launcher">Badilisha kizindua chaguo-msingi</string>
+    <!-- Appearance Strings -->
+    <string name="status_bar">Onyesha upau wa hali</string>
+    <string name="theme_mode">Hali ya mandhari</string>
+    <string name="app_language">Lugha ya Kiolesura</string>
+    <string name="app_text_size">Ukubwa wa Maandishi</string>
+    <string name="app_padding_size">Ukubwa wa Padding</string>
+    <string name="follow_accent_colors">Rangi Lafudhi</string>
+    <string name="background_opacity">Uwazi wa Mandharinyuma</string>
+    <!-- Behavior Strings -->
+    <string name="auto_show_keyboard">Onyesha kibodi kiotomatiki</string>
+    <string name="auto_open_apps">Fungua programu kiotomatiki</string>
+    <string name="search_from_start">Utafutaji wa programu kutoka mwanzo.</string>
+    <string name="icon_font">Tumia Fonti ya ikoni</string>
+    <!-- Homescreen Strings -->
+    <string name="apps_on_home_screen">Idadi ya njia za mkato</string>
+    <string name="show_time">Onyesha wakati</string>
+    <string name="show_date">Onyesha tarehe</string>
+    <string name="show_battery">Onyesha betri</string>
+    <string name="lock_home_apps">Funga Programu</string>
+    <string name="extend_home_apps_area">Panua eneo linaloweza kubofya</string>
+    <string name="home_alignment_bottom">Pangilia skrini ya nyumbani chini</string>
+    <!-- Alignment Strings -->
+    <string name="home_alignment">Skrini ya kwanza ya programu</string>
+    <string name="clock_alignment">Saa na tarehe</string>
+    <string name="drawer_alignment">Programu kwenye droo ya programu</string>
+    <!-- Gestures Strings -->
+    <string name="swipe_up_app">Telezesha kidole juu</string>
+    <string name="swipe_down_app">Telezesha kidole chini</string>
+    <string name="swipe_left_app">Telezesha kidole kushoto</string>
+    <string name="swipe_right_app">Telezesha kidole kulia</string>
+    <string name="clock_click_app">Bonyeza Saa</string>
+    <string name="date_click_app">Bonyeza Tarehe</string>
+    <string name="double_tap">Gonga Mara Mbili</string>
+    <!-- Settings Strings -->
+    <string name="off">Imezimwa</string>
+    <string name="on">Washa</string>
+    <string name="left">Kushoto</string>
+    <string name="right">Haki</string>
+    <string name="center">Kituo</string>
+    <string name="dark">Giza</string>
+    <string name="light">Mwanga</string>
+    <string name="settings">Mipangilio</string>
+    <string name="lang_system">Mfumo</string>
+    <string name="system_default">Mfumo</string>
+    <string name="hide">Ficha</string>
+    <string name="rename">Badilisha jina</string>
+    <string name="okay">Sawa</string>
+    <string name="save">Hifadhi</string>
+    <string name="show">Onyesha</string>
+    <string name="reset">Weka upya</string>
+    <string name="cancel">Ghairi</string>
+    <string name="enable">Wezesha</string>
+    <string name="disable">Zima</string>
+    <string name="enabled">Imewashwa</string>
+    <string name="disabled">Imezimwa</string>
+    <string name="open">Fungua</string>
+    <string name="close">Funga</string>
+    <string name="copy">nakala</string>
+    <string name="settings_text_size">Ukubwa wa Maandishi ya Mipangilio</string>
+    <string name="settings_lock_time">Muda wa Kufunga Mipangilio</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">Onyesha Arifa</string>
+    <string name="show_app_list">Onyesha Orodha ya Programu</string>
+    <string name="open_app">Fungua Programu</string>
+    <string name="lock_screen">Funga Skrini</string>
+    <string name="open_quick_settings">Mipangilio ya Haraka</string>
+    <string name="show_recents">Onyesha Hivi Karibuni</string>
+    <string name="open_power_dialog">Kidirisha cha Nguvu</string>
+    <string name="take_a_screenshot">Piga Picha ya skrini</string>
+    <string name="double_tap_to_lock_screen">Gusa mara mbili ili kufunga</string>
+    <!-- Backup Strings -->
+    <string name="backup">Hifadhi nakala</string>
+    <string name="load_backup">Pakia Hifadhi Nakala</string>
+    <string name="store_backup">Hifadhi Nakala</string>
+    <!-- PinCode Strings -->
+    <string name="reset_pin">Weka upya PIN</string>
+    <string name="pin_number">Nambari ya siri</string>
+    <string name="confirm_pin_number">Thibitisha Nambari ya Pini</string>
+    <string name="unlock_settings">Fungua Mipangilio</string>
+    <string name="pin_number_match">Bandika Nambari Zinazolingana!</string>
+    <string name="pin_number_do_not_match">Nambari za siri hazilingani!</string>
+    <!-- Unsorted Strings -->
+    <string name="show_apps">Programu zote</string>
+    <string name="drawer_list_empty_hint">Hakuna programu zilizopatikana</string>
+    <string name="long_press_for_settings">Bonyeza kwa muda mrefu mahali popote kwa mipangilio</string>
+    <string name="swipe_up_for_apps">Telezesha kidole juu kwa programu zote</string>
+    <string name="app_drawer_tips">Kidokezo: Telezesha kidole chini ili uondoe. Sogeza ili kuficha kibodi.</string>
+    <string name="double_tap_lock_is_enabled_message">Ikiwa kufuli kwa kugusa mara mbili itazima alama za vidole au kufungua kwa uso, fungua mipangilio ya mLauncher, gusa \'majaribio\' na ufuate maagizo. Asante.</string>
+    <string name="double_tap_lock_uninstall_message">Gonga mara mbili ili kufunga kumewashwa.
+        \n\nKumbuka: ZIMA hii kwanza ukiamua kufuta mLauncher.</string>
+    <string name="accessibility_service_name">Huduma ya Vitendo vya mLauncher</string>
+    <string name="accessibility_service_description">Huduma hii ya ufikivu huruhusu mLauncher kufanya vitendo fulani kama vile kufunga skrini au kufungua mipangilio ya haraka. Huduma yetu ya ufikivu haikusanyi wala kushiriki data yoyote.</string>
+</resources>

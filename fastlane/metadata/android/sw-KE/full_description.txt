@@ -1,0 +1,70 @@
+Imegawanywa kutoka kwa <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Ndogo na safi.
+
+# Imegawanywa na sifa za ziada
+
+- Machafuko yaliyoondolewa, kama vile matangazo na viungo
+- Unaweza kubadilisha jina la programu kwenye droo ya programu (Kubadilisha jina la programu kwenye skrini ya nyumbani tayari kunatumika. Bofya kwa muda mrefu tu kwenye programu kwenye skrini ya kwanza na uanze kuandika)
+- Tumeongeza chaguzi nyingi zaidi za ishara kwenye skrini ya nyumbani:
+    - Ishara ni sasa:
+        - Kutelezesha kidole juu, chini, kushoto, kulia
+        - Kubonyeza saa
+        - Kubonyeza Tarehe
+    - Hatua zinazowezekana sasa ni pamoja na:
+        - Fungua programu maalum
+        - Kufunga skrini
+        - Kufungua droo ya arifa
+        - Kufungua mipangilio ya haraka
+- Unaweza pia kuweka saa bila kutegemea programu za nyumbani
+- Badilisha mpangilio wa programu kwenye droo ya programu
+- Uwezo wa kuweka nambari ya kupita kwa ukurasa wa mipangilio
+- Badilisha ukubwa wa fonti
+- Imeondoa ruhusa ya mtandao. Huwezi kujua ni nini msanidi programu anataka kujua kukuhusu.
+
+## Tafsiri:
+
+- Watu wengi wametafsiri programu kwa lugha zifuatazo. Shukrani nyingi kwenu nyote.
+  - Kiarabu
+  - Kialbeni
+  - Kibulgaria
+  - Kichina
+  - Kikroeshia
+  - Kicheki
+  - Kideni
+  - Kiingereza
+  - Kiestonia
+  - Kifilipino
+  - Kifini
+  - Kifaransa
+  - Kijojiajia
+  - Kijerumani
+  - Kigiriki
+  - Kihawai
+  - Kiebrania
+  - Kihindi
+  - Hungarian
+  - Kiaislandi
+  - Kiindonesia
+  - Kiayalandi
+  - Kiitaliano
+  - Kijapani
+  - Kikorea
+  - Kilithuania
+  - Kilasembagi
+  - Kimalei
+  - Kimalagasi
+  - Kimalayalam
+  - Kinorwe
+  - Kinepali
+  - Kiajemi
+  - Kipolandi
+  - Kireno (Ulaya)
+  - Kipunjabi
+  - Kirusi
+  - Kiserbia
+  - Kisindhi
+  - Kihispania
+  - Kiswidi
+  - Thai
+  - Kituruki
+  - Kiukreni
+  - Kivietinamu

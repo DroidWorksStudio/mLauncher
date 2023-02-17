@@ -46,6 +46,7 @@ object Constants {
 
     enum class Language: EnumOption {
         System,
+        Afrikaans,
         Albanian,
         Arabic,
         Bulgarian,
@@ -72,11 +73,13 @@ object Constants {
         Italian,
         Japanese,
         Korean,
+        Latin,
         Lithuanian,
         Luxembourgish,
         Malagasy,
         Malay,
         Malayalam,
+        Maltese,
         Nepali,
         Norwegian,
         Persian,
@@ -88,6 +91,7 @@ object Constants {
         Serbian,
         Sindhi,
         Spanish,
+        Swahili,
         Swedish,
         Thai,
         Turkish,
@@ -98,6 +102,7 @@ object Constants {
         override fun string(): String {
             return when (this) {
                 System -> stringResource(R.string.lang_system)
+                Afrikaans -> "afrikaans"
                 Albanian -> "shqiptare"
                 Arabic -> "العربية"
                 Bulgarian -> "български"
@@ -124,11 +129,13 @@ object Constants {
                 Italian -> "Italiano"
                 Japanese -> "日本"
                 Korean -> "한국어"
+                Latin -> "latin"
                 Lithuanian -> "Lietuvių"
                 Luxembourgish -> "lëtzebuergesch"
                 Malagasy -> "Malagasy"
                 Malay -> "Melayu"
                 Malayalam -> "മലയാളം"
+                Maltese -> "malti"
                 Nepali -> "नेपाली"
                 Norwegian -> "norsk"
                 Persian -> "فارسی"
@@ -140,6 +147,7 @@ object Constants {
                 Serbian -> "Српски"
                 Sindhi -> "سنڌي"
                 Spanish -> "Español"
+                Swahili -> "kiswahili"
                 Swedish -> "Svenska"
                 Thai -> "ไทย"
                 Turkish -> "Türkçe"
@@ -156,6 +164,7 @@ object Constants {
         private fun value(): String {
             return when(this) {
                 System -> Locale.getDefault().language
+                Afrikaans -> "af"
                 Albanian -> "sq"
                 Arabic -> "ar"
                 Bulgarian -> "bg"
@@ -182,11 +191,13 @@ object Constants {
                 Italian -> "it"
                 Japanese -> "ja"
                 Korean -> "ko"
+                Latin -> "la"
                 Lithuanian -> "lt"
                 Luxembourgish -> "lb"
                 Malagasy -> "mg"
                 Malay -> "ms"
                 Malayalam -> "ml"
+                Maltese -> "mt"
                 Nepali -> "ne"
                 Norwegian -> "no"
                 Persian -> "fa"
@@ -198,6 +209,7 @@ object Constants {
                 Serbian -> "sr"
                 Sindhi -> "sd"
                 Spanish -> "es"
+                Swahili -> "sw"
                 Swedish -> "sv"
                 Thai -> "th"
                 Turkish -> "tr"
@@ -272,6 +284,4 @@ object Constants {
             }
         }
     }
-
-    const val URL_PUBLIC_ROADMAP = "https://github.com/orgs/HeCodes2Much/projects/2"
 }

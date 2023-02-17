@@ -1,0 +1,70 @@
+Forked minn <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimi u nadif.
+
+# Forked b'karatteristiċi żejda
+
+- Tneħħa l-imbarazz, bħal reklami u links
+- Tista' tibdel l-isem tal-apps fil-kexxun tal-app (It-tismija mill-ġdid tal-apps fuq l-iskrin tad-dar hija diġà appoġġjata. Ikklikkja fit-tul fuq app fuq l-iskrin tad-dar u ibda ttajpja)
+- Żidna ħafna aktar għażliet għall-ġesti fuq l-iskrin tad-dar:
+    - Il-ġesti issa huma:
+        - Swiping 'l fuq, 'l isfel, xellug, lemin
+        - Tikklikkja fuq l-arloġġ
+        - tikklikkja fuq id-Data
+    - Azzjonijiet possibbli issa jinkludu:
+        - Iftaħ app speċifikata
+        - Qfil tal-iskrin
+        - Il-ftuħ tal-kexxun tan-notifika
+        - Ftuħ is-settings ta 'malajr
+- Tista 'wkoll tpoġġi l-arloġġ indipendentement mill-apps tad-dar
+- Ibdel l-allinjament tal-apps fl-app-drawer
+- Il-ħila li jkun hemm pass code stabbilit għall-paġna tas-settings
+- Ibdel id-daqs tat-tipa
+- Tneħħa l-permess tal-internet. Qatt ma tkun taf x'jixtieq ikun jaf dwarek żviluppatur ta' app.
+
+## Traduzzjonijiet:
+
+- Ħafna nies ittraduċu l-app għal-lingwi li ġejjin. Grazzi ħafna lilkom ilkoll.
+  - Għarbi
+  - Albaniż
+  - Bulgaru
+  - Ċiniż
+  - Kroat
+  - Ċek
+  - Daniż
+  - Ingliż
+  - Estonjan
+  - Filippin
+  - Finlandiż
+  - Franċiż
+  - Ġorġjan
+  - Ġermaniż
+  - Grieg
+  - Ħawajjan
+  - Ebrajk
+  - Ħindi
+  - Ungeriż
+  - Iżlandiż
+  - Indoneżjan
+  - Irlandiż
+  - Taljan
+  - Ġappuniż
+  - Korean
+  - Litwan
+  - Lussemburgiż
+  - Malajan
+  - Il-Madagaskar
+  - Malajalam
+  - Norveġiż
+  - Nepaliż
+  - Persjan
+  - Pollakk
+  - Portugiż (Ewropew)
+  - Punġabi
+  - Russu
+  - Serb
+  - Sindhi
+  - Spanjol
+  - Svediż
+  - Tajlandiż
+  - Tork
+  - Ukrain
+  - Vjetnamiż
