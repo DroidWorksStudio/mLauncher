@@ -6,6 +6,7 @@
 
 **Merged pull requests:**
 
+- Correction to AppDrawer RecyclerView paddings [\#216](https://github.com/HeCodes2Much/mLauncher/pull/216) ([flightmansam](https://github.com/flightmansam))
 - Fixed incorrect battery preference assignment [\#215](https://github.com/HeCodes2Much/mLauncher/pull/215) ([flightmansam](https://github.com/flightmansam))
 - New Crowdin updates [\#214](https://github.com/HeCodes2Much/mLauncher/pull/214) ([The-Repo-Club](https://github.com/The-Repo-Club))
 
