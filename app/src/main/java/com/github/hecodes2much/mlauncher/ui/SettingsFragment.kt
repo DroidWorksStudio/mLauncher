@@ -681,7 +681,7 @@ class SettingsFragment : Fragment() {
     }
 
     private fun toggleShowBattery() {
-        prefs.showBattery = !prefs.useCustomIconFont
+        prefs.showBattery = !prefs.showBattery
     }
 
     private fun toggleCustomIconFont() {
