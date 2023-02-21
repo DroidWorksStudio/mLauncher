@@ -6,6 +6,7 @@
 
 **Merged pull requests:**
 
+- Fixed incorrect battery preference assignment [\#215](https://github.com/HeCodes2Much/mLauncher/pull/215) ([flightmansam](https://github.com/flightmansam))
 - New Crowdin updates [\#214](https://github.com/HeCodes2Much/mLauncher/pull/214) ([The-Repo-Club](https://github.com/The-Repo-Club))
 
 ## [0.5.4](https://github.com/HeCodes2Much/mLauncher/tree/0.5.4) (16, February 2023)
