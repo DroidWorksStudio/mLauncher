@@ -12,6 +12,10 @@
 
 - \[Crash Report\] Unable to open mLauncher settings in EMUI 5.1 [\#220](https://github.com/HeCodes2Much/mLauncher/issues/220)
 
+**Merged pull requests:**
+
+- Release: Update version to 56 \(v0.5.6\) [\#222](https://github.com/HeCodes2Much/mLauncher/pull/222) ([The-Repo-Club](https://github.com/The-Repo-Club))
+
 ## [0.5.5](https://github.com/HeCodes2Much/mLauncher/tree/0.5.5) (21, February 2023)
 
 [Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.5.4...0.5.5)
