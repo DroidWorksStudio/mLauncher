@@ -1,6 +1,5 @@
 package com.github.hecodes2much.mlauncher.ui
 
-import com.github.hecodes2much.mlauncher.style.SettingsTheme
 import android.app.admin.DevicePolicyManager
 import android.content.ComponentName
 import android.content.Context
@@ -47,16 +46,18 @@ import com.github.hecodes2much.mlauncher.data.Prefs
 import com.github.hecodes2much.mlauncher.databinding.FragmentSettingsBinding
 import com.github.hecodes2much.mlauncher.helper.*
 import com.github.hecodes2much.mlauncher.listener.DeviceAdmin
+import com.github.hecodes2much.mlauncher.style.SettingsTheme
 import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsArea
 import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsGestureItem
 import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsItem
 import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsSliderItem
+import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsTextButton
 import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsToggle
 import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsTopView
-import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsTextButton
 import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsTwoButtonRow
-import java.time.LocalDateTime
-import java.time.temporal.ChronoUnit
+import java.lang.System.currentTimeMillis
+import java.util.*
+import java.util.concurrent.TimeUnit
 
 class SettingsFragment : Fragment() {
 
@@ -77,7 +78,6 @@ class SettingsFragment : Fragment() {
 
     private lateinit var submitButton: Button
 
-    @RequiresApi(Build.VERSION_CODES.S)
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -86,11 +86,10 @@ class SettingsFragment : Fragment() {
         prefs = Prefs(requireContext())
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
 
-        if (prefs.lastOpenSettings !== null) {
-            val minutesBetween = ChronoUnit.MINUTES.between(
-                LocalDateTime.parse(prefs.lastOpenSettings),
-                LocalDateTime.now()
-            )
+        val currentTime = currentTimeMillis()
+        if (prefs.lastOpenSettings !== null && isNumeric(prefs.lastOpenSettings!!)) {
+            val dateTime = prefs.lastOpenSettings!!.toLong()
+            val minutesBetween = convertToMinutes(currentTime, dateTime)
             val timer = prefs.lockSettingsTime
             val hasPassedMinutes = isLongerThanMinutes(minutesBetween, timer.toLong())
 
@@ -117,7 +116,7 @@ class SettingsFragment : Fragment() {
 
                     if (getPassword() == prefs.settingPinNumber.toString()) {
                         showToastLong(context, resources.getString(R.string.pin_number_match))
-                        prefs.lastOpenSettings = LocalDateTime.now().toString()
+                        prefs.lastOpenSettings = currentTime.toString()
                         requireActivity().recreate()
                     } else {
                         showToastLong(context, resources.getString(R.string.pin_number_do_not_match))
@@ -127,9 +126,14 @@ class SettingsFragment : Fragment() {
                 return view
             }
         } else {
-            prefs.lastOpenSettings = LocalDateTime.now().toString()
+            prefs.lastOpenSettings = currentTime.toString()
         }
         return binding.root
+    }
+
+    private fun isNumeric(toCheck: String): Boolean {
+        val regex = "-?[0-9]+(\\.[0-9]+)?".toRegex()
+        return toCheck.matches(regex)
     }
 
     private fun showKeyboard(view: View) {
@@ -186,6 +190,11 @@ class SettingsFragment : Fragment() {
 
     private fun isLongerThanMinutes(duration: Long?, minutes: Long): Boolean {
         return duration != null && duration >= minutes
+    }
+
+    private fun convertToMinutes(currentTime: Long, dateTime: Long): Long {
+        val convertTime: Long = (currentTime) - (dateTime)
+        return TimeUnit.MILLISECONDS.toMinutes(convertTime)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
