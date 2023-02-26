@@ -56,6 +56,7 @@ import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsT
 import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsTopView
 import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsTwoButtonRow
 import java.lang.System.currentTimeMillis
+import java.time.LocalDateTime
 import java.util.*
 import java.util.concurrent.TimeUnit
 
@@ -77,7 +78,6 @@ class SettingsFragment : Fragment() {
     private lateinit var password4: EditText
 
     private lateinit var submitButton: Button
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -116,7 +116,12 @@ class SettingsFragment : Fragment() {
 
                     if (getPassword() == prefs.settingPinNumber.toString()) {
                         showToastLong(context, resources.getString(R.string.pin_number_match))
-                        prefs.lastOpenSettings = currentTime.toString()
+                        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
+                            @RequiresApi(Build.VERSION_CODES.O)
+                            prefs.lastOpenSettings = LocalDateTime.now().toString()
+                        } else {
+                            prefs.lastOpenSettings = currentTime.toString()
+                        }
                         requireActivity().recreate()
                     } else {
                         showToastLong(context, resources.getString(R.string.pin_number_do_not_match))
@@ -126,7 +131,12 @@ class SettingsFragment : Fragment() {
                 return view
             }
         } else {
-            prefs.lastOpenSettings = currentTime.toString()
+            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
+                @RequiresApi(Build.VERSION_CODES.O)
+                prefs.lastOpenSettings = LocalDateTime.now().toString()
+            } else {
+                prefs.lastOpenSettings = currentTime.toString()
+            }
         }
         return binding.root
     }
