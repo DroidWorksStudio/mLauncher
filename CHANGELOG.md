@@ -1,5 +1,17 @@
 # Changelog
 
+## [Coming Soon](https://github.com/HeCodes2Much/mLauncher/tree/HEAD)
+
+[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.5.5...HEAD)
+
+**Fixed bugs:**
+
+- Bug: Fixed the Settings [\#221](https://github.com/HeCodes2Much/mLauncher/pull/221) ([The-Repo-Club](https://github.com/The-Repo-Club))
+
+**Closed issues:**
+
+- \[Crash Report\] Unable to open mLauncher settings in EMUI 5.1 [\#220](https://github.com/HeCodes2Much/mLauncher/issues/220)
+
 ## [0.5.5](https://github.com/HeCodes2Much/mLauncher/tree/0.5.5) (21, February 2023)
 
 [Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.5.4...0.5.5)
