@@ -56,7 +56,6 @@ import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsT
 import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsTopView
 import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsTwoButtonRow
 import java.lang.System.currentTimeMillis
-import java.time.LocalDateTime
 import java.util.*
 import java.util.concurrent.TimeUnit
 
@@ -116,9 +115,9 @@ class SettingsFragment : Fragment() {
 
                     if (getPassword() == prefs.settingPinNumber.toString()) {
                         showToastLong(context, resources.getString(R.string.pin_number_match))
-                        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
+                        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
                             @RequiresApi(Build.VERSION_CODES.O)
-                            prefs.lastOpenSettings = LocalDateTime.now().toString()
+                            prefs.lastOpenSettings = java.time.LocalDateTime.now().toString()
                         } else {
                             prefs.lastOpenSettings = currentTime.toString()
                         }
@@ -131,9 +130,9 @@ class SettingsFragment : Fragment() {
                 return view
             }
         } else {
-            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
+            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
                 @RequiresApi(Build.VERSION_CODES.O)
-                prefs.lastOpenSettings = LocalDateTime.now().toString()
+                prefs.lastOpenSettings = java.time.LocalDateTime.now().toString()
             } else {
                 prefs.lastOpenSettings = currentTime.toString()
             }
