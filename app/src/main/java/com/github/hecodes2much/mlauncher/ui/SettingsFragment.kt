@@ -15,7 +15,6 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
-import androidx.annotation.RequiresApi
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
@@ -115,12 +114,7 @@ class SettingsFragment : Fragment() {
 
                     if (getPassword() == prefs.settingPinNumber.toString()) {
                         showToastLong(context, resources.getString(R.string.pin_number_match))
-                        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
-                            @RequiresApi(Build.VERSION_CODES.O)
-                            prefs.lastOpenSettings = java.time.LocalDateTime.now().toString()
-                        } else {
-                            prefs.lastOpenSettings = currentTime.toString()
-                        }
+                        prefs.lastOpenSettings = currentTime.toString()
                         requireActivity().recreate()
                     } else {
                         showToastLong(context, resources.getString(R.string.pin_number_do_not_match))
@@ -130,18 +124,13 @@ class SettingsFragment : Fragment() {
                 return view
             }
         } else {
-            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
-                @RequiresApi(Build.VERSION_CODES.O)
-                prefs.lastOpenSettings = java.time.LocalDateTime.now().toString()
-            } else {
-                prefs.lastOpenSettings = currentTime.toString()
-            }
+            prefs.lastOpenSettings = currentTime.toString()
         }
         return binding.root
     }
 
     private fun isNumeric(toCheck: String): Boolean {
-        val regex = "-?[0-9]+(\\.[0-9]+)?".toRegex()
+        val regex = "-?\\d+(\\.\\d+)?".toRegex()
         return toCheck.matches(regex)
     }
 
