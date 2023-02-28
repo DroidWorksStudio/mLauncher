@@ -3,7 +3,6 @@ package com.github.hecodes2much.mlauncher.ui
 import android.annotation.SuppressLint
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
 import android.view.Gravity.*
 import android.view.LayoutInflater
 import android.view.View
@@ -65,7 +64,6 @@ class AppDrawerAdapter(
             val name = holder.appRenameEdit.text.toString().trim()
             appModel.appAlias = name
             notifyItemChanged(holder.absoluteAdapterPosition)
-            Log.d("rename", "$appModel")
             appRenameListener(appModel.appPackage, appModel.appAlias)
         }
 
