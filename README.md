@@ -10,8 +10,8 @@
         <a href='https://github.com/HeCodes2Much/mLauncher/actions'><img src='https://img.shields.io/github/actions/workflow/status/HeCodes2Much/mLauncher/android-release_ci.yml?style=flat-square'></a>
 	<a href='https://github.com/HeCodes2Much/mLauncher/releases/latest'><img src='https://img.shields.io/github/downloads/HeCodes2Much/mLauncher/total?color=44cc11&style=flat-square'></a>
 	<br>
-	<img alt="F-Droid (including pre-releases)" src="https://img.shields.io/f-droid/v/app.mlauncher?include_prereleases&style=flat-square">
-	<img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/HeCodes2Much/mLauncher?style=flat-square">
+	<a href='https://f-droid.org/packages/app.mlauncher'><img alt="F-Droid (including pre-releases)" src="https://img.shields.io/f-droid/v/app.mlauncher?include_prereleases&style=flat-square"></a>
+	<a href='https://github.com/HeCodes2Much/mLauncher/releases/latest'><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/HeCodes2Much/mLauncher?style=flat-square"></a>
     </p>
 	<p>
     <a href="https://www.buymeacoffee.com/HeCodes2Much"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=HeCodes2Much&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>
