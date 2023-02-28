@@ -15,7 +15,7 @@ body:
     attributes:
       label: "Checklist"
       options:
-        - label: "I will make sure to have the issue written in english with an english title."
+        - label: "I will make sure to have the issue written in English with an English title."
           required: true
         - label: "I made sure that there are **no existing issues** - [open](https://github.com/HeCodes2Much/mLauncher/issues) or [closed](https://github.com/HeCodes2Much/mLauncher/issues?q=is%3Aissue+is%3Aclosed) - which I could contribute my information to."
           required: true

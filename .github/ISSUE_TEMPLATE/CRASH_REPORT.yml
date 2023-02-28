@@ -15,7 +15,7 @@ body:
     attributes:
       label: "Checklist"
       options:
-        - label: "I will make sure to have the issue written in english with an english title."
+        - label: "I will make sure to have the issue written in English with an English title."
           required: true
         - label: "I have created the title to best match the issue."
           required: true
