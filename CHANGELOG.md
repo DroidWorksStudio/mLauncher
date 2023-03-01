@@ -4,6 +4,10 @@
 
 [Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.5.6...HEAD)
 
+**Implemented enhancements:**
+
+- Feat: Update the lock screen. [\#228](https://github.com/HeCodes2Much/mLauncher/pull/228) ([The-Repo-Club](https://github.com/The-Repo-Club))
+
 **Fixed bugs:**
 
 - Bug: fixed app alignment [\#226](https://github.com/HeCodes2Much/mLauncher/pull/226) ([The-Repo-Club](https://github.com/The-Repo-Club))
