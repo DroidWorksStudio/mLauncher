@@ -8,6 +8,10 @@
 
 - Bug: fixed app alignment [\#226](https://github.com/HeCodes2Much/mLauncher/pull/226) ([The-Repo-Club](https://github.com/The-Repo-Club))
 
+**Merged pull requests:**
+
+- Release: Update version to 57 \(v0.5.7\) [\#227](https://github.com/HeCodes2Much/mLauncher/pull/227) ([The-Repo-Club](https://github.com/The-Repo-Club))
+
 ## [0.5.6](https://github.com/HeCodes2Much/mLauncher/tree/0.5.6) (26, February 2023)
 
 [Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.5.5...0.5.6)
