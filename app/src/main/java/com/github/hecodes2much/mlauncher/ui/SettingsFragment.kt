@@ -5,16 +5,9 @@ import android.content.ComponentName
 import android.content.Context
 import android.os.Build
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
-import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.inputmethod.InputMethodManager
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
@@ -54,9 +47,7 @@ import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsT
 import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsToggle
 import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsTopView
 import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsTwoButtonRow
-import java.lang.System.currentTimeMillis
 import java.util.*
-import java.util.concurrent.TimeUnit
 
 class SettingsFragment : Fragment() {
 
@@ -70,129 +61,16 @@ class SettingsFragment : Fragment() {
 
     private val offset = 5
 
-    private lateinit var password1: EditText
-    private lateinit var password2: EditText
-    private lateinit var password3: EditText
-    private lateinit var password4: EditText
-
-    private lateinit var submitButton: Button
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        prefs = Prefs(requireContext())
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
-
-        val currentTime = currentTimeMillis()
-        if (prefs.lastOpenSettings !== null && isNumeric(prefs.lastOpenSettings!!)) {
-            val dateTime = prefs.lastOpenSettings!!.toLong()
-            val minutesBetween = convertToMinutes(currentTime, dateTime)
-            val timer = prefs.lockSettingsTime
-            val hasPassedMinutes = isLongerThanMinutes(minutesBetween, timer.toLong())
-
-            if (timer == 0) return binding.root
-            if (hasPassedMinutes && prefs.settingPinNumber != 123456) {
-                binding.settingsView.visibility = View.GONE
-
-                val view = inflater.inflate(R.layout.fragment_password, container, false)
-                showKeyboard(view)
-
-                password1 = view.findViewById(R.id.password_1)
-                password2 = view.findViewById(R.id.password_2)
-                password3 = view.findViewById(R.id.password_3)
-                password4 = view.findViewById(R.id.password_4)
-
-                initPasswordClickListeners()
-
-                submitButton = view.findViewById(R.id.submit_button)
-
-                submitButton.setOnClickListener {
-                    val context = requireContext()
-                    val inputMethodManager = activity?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-                    inputMethodManager.hideSoftInputFromWindow(view?.windowToken, 0)
-
-                    if (getPassword() == prefs.settingPinNumber.toString()) {
-                        showToastLong(context, resources.getString(R.string.pin_number_match))
-                        prefs.lastOpenSettings = currentTime.toString()
-                        requireActivity().recreate()
-                    } else {
-                        showToastLong(context, resources.getString(R.string.pin_number_do_not_match))
-                    }
-                }
-
-                return view
-            }
-        } else {
-            prefs.lastOpenSettings = currentTime.toString()
-        }
+        prefs = Prefs(requireContext())
+        val hex = getHexForOpacity(requireContext(), prefs)
+        binding.scrollView.setBackgroundColor(hex)
         return binding.root
-    }
-
-    private fun isNumeric(toCheck: String): Boolean {
-        val regex = "-?\\d+(\\.\\d+)?".toRegex()
-        return toCheck.matches(regex)
-    }
-
-    private fun showKeyboard(view: View) {
-        val context = requireContext()
-        if (!Prefs(requireContext()).autoShowKeyboard) return
-
-        val password1 = view.findViewById<TextView>(R.id.password_1)
-        password1.requestFocus()
-        val imm = context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-        password1.postDelayed({
-            password1.requestFocus()
-            @Suppress("DEPRECATION")
-            imm.showSoftInput(password1, InputMethodManager.SHOW_FORCED)
-        }, 100)
-    }
-
-    private fun initPasswordClickListeners() {
-        val passwordBoxes = listOf(password1, password2, password3, password4)
-
-        passwordBoxes.forEachIndexed { index, passwordBox ->
-            passwordBox.addTextChangedListener(object : TextWatcher {
-                override fun afterTextChanged(s: Editable?) {
-                    if (s != null && s.length == 1) {
-                        handlePasswordInput(index, passwordBoxes)
-                    }
-                }
-
-                override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
-                override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
-            })
-
-            passwordBox.setOnKeyListener { _, keyCode, _ ->
-                if (keyCode == KeyEvent.KEYCODE_DEL && passwordBox.text.toString().isEmpty() && index > 0) {
-                    passwordBoxes[index - 1].apply {
-                        requestFocus()
-                        setText("")
-                    }
-                }
-                false
-            }
-        }
-    }
-
-    private fun getPassword(): String {
-        return listOf(
-            password1,
-            password2,
-            password3,
-            password4
-        ).joinToString("") {
-            it.text.toString()
-        }
-    }
-
-    private fun isLongerThanMinutes(duration: Long?, minutes: Long): Boolean {
-        return duration != null && duration >= minutes
-    }
-
-    private fun convertToMinutes(currentTime: Long, dateTime: Long): Long {
-        val convertTime: Long = (currentTime) - (dateTime)
-        return TimeUnit.MILLISECONDS.toMinutes(convertTime)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

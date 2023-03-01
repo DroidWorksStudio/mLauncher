@@ -72,10 +72,10 @@
 	<style name="TextSmallLight" parent="TextSmall">
 		<item name="android:textColor">@drawable/text_colors_light</item>
 	</style>
-	<style name="ButtonStyle" parent="TextDefault">
-		<item name="android:textSize">16sp</item>
-		<item name="android:textColor">@color/black</item>
-		<item name="android:background">@color/colorAccent</item>
-		<item name="android:padding">16dp</item>
+	<style name="EditTextStyle" parent="TextDefault">
+		<item name="android:textSize">22sp</item>
+		<item name="android:background">@drawable/edittext_box</item>
+		<item name="android:layout_margin">18sp</item>
+		<item name="android:padding">10sp</item>
 	</style>
 </resources>

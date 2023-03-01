@@ -21,7 +21,6 @@ import androidx.core.os.bundleOf
 import androidx.core.view.children
 import androidx.core.view.size
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
@@ -44,7 +43,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     private lateinit var prefs: Prefs
     private lateinit var viewModel: MainViewModel
     private lateinit var deviceManager: DevicePolicyManager
-    private lateinit var fragManager: FragmentManager
     private lateinit var batteryReceiver: BatteryReceiver
     private lateinit var vibrator: Vibrator
 
@@ -395,7 +393,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 super.onLongClick()
                 lifecycleScope.launch(Dispatchers.Main) {
                     try {
-                        findNavController().navigate(R.id.action_mainFragment_to_settingsFragment)
+                        findNavController().navigate(R.id.action_mainFragment_to_passwordFragment)
                         viewModel.firstOpen(false)
                     } catch (e: java.lang.Exception) {
                         Log.d("onLongClick", e.toString())
