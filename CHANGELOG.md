@@ -6,7 +6,12 @@
 
 **Implemented enhancements:**
 
+- \[Enhancement\]  System accent color and system font for app drawer  [\#231](https://github.com/HeCodes2Much/mLauncher/issues/231)
 - Feat: Doubled the number of apps on the homescreen [\#232](https://github.com/HeCodes2Much/mLauncher/pull/232) ([The-Repo-Club](https://github.com/The-Repo-Club))
+
+**Merged pull requests:**
+
+- Feat: System accent color & font for app drawer [\#233](https://github.com/HeCodes2Much/mLauncher/pull/233) ([The-Repo-Club](https://github.com/The-Repo-Club))
 
 ## [0.5.7](https://github.com/HeCodes2Much/mLauncher/tree/0.5.7) ( 1, March 2023)
 
