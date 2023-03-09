@@ -26,6 +26,7 @@ import com.github.hecodes2much.mlauncher.data.Constants
 import com.github.hecodes2much.mlauncher.data.Constants.AppDrawerFlag
 import com.github.hecodes2much.mlauncher.data.Prefs
 import com.github.hecodes2much.mlauncher.databinding.FragmentAppDrawerBinding
+import com.github.hecodes2much.mlauncher.helper.getHexFontColor
 import com.github.hecodes2much.mlauncher.helper.getHexForOpacity
 import com.github.hecodes2much.mlauncher.helper.openAppInfo
 
@@ -99,7 +100,6 @@ class AppDrawerFragment : Fragment() {
         val textSize = prefs.textSizeLauncher.toFloat()
         searchTextView.typeface = typeface
         searchTextView.textSize = textSize
-
 
         initViewModel(flag, viewModel, appAdapter)
 
