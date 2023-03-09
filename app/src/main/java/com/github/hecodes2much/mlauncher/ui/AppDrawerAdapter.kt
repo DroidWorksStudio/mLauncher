@@ -18,6 +18,7 @@ import com.github.hecodes2much.mlauncher.data.Constants.AppDrawerFlag
 import com.github.hecodes2much.mlauncher.data.Prefs
 import com.github.hecodes2much.mlauncher.databinding.AdapterAppDrawerBinding
 import com.github.hecodes2much.mlauncher.helper.dp2px
+import com.github.hecodes2much.mlauncher.helper.getHexFontColor
 import com.github.hecodes2much.mlauncher.helper.uninstallApp
 import java.text.Normalizer
 
@@ -40,8 +41,12 @@ class AppDrawerAdapter(
         binding = AdapterAppDrawerBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         prefs = Prefs(parent.context)
         val typeface = ResourcesCompat.getFont(parent.context, R.font.roboto)
-        binding.appTitle.typeface = typeface
+        if (prefs.useCustomIconFont) {
+            binding.appTitle.typeface = typeface
+        }
         binding.appTitle.textSize = prefs.textSizeLauncher.toFloat()
+        val fontColor = getHexFontColor(parent.context)
+        binding.appTitle.setTextColor(fontColor)
         val padding: Int = prefs.textMarginSize
         binding.appTitle.setPadding(0, padding, 0, padding)
         return ViewHolder(binding)
