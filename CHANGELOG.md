@@ -1,5 +1,14 @@
 # Changelog
 
+## [Coming Soon](https://github.com/HeCodes2Much/mLauncher/tree/HEAD)
+
+[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.5.8...HEAD)
+
+**Fixed bugs:**
+
+- \[Bug Report\] settings locked [\#237](https://github.com/HeCodes2Much/mLauncher/issues/237)
+- Bug: fix the locked screen when no pass set [\#238](https://github.com/HeCodes2Much/mLauncher/pull/238) ([The-Repo-Club](https://github.com/The-Repo-Club))
+
 ## [0.5.8](https://github.com/HeCodes2Much/mLauncher/tree/0.5.8) ( 9, March 2023)
 
 [Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.5.7...0.5.8)
