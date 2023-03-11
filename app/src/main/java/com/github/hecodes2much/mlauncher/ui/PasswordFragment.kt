@@ -1,7 +1,6 @@
 package com.github.hecodes2much.mlauncher.ui
 
 import android.content.Context
-import android.graphics.Color
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -49,7 +48,10 @@ class PasswordFragment : Fragment() {
             val timer = prefs.lockSettingsTime
             val hasPassedMinutes = isLongerThanMinutes(minutesBetween, timer.toLong())
 
-            if (timer == 0) return view
+            if (timer == 0) {
+                findNavController().navigate(R.id.action_passwordFragment_to_settingsFragment)
+                return view
+            }
             if (hasPassedMinutes && prefs.settingPinNumber != 123456) {
 
                 password1 = view.findViewById(R.id.password_1)
