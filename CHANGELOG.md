@@ -1,5 +1,13 @@
 # Changelog
 
+## [Coming Soon](https://github.com/HeCodes2Much/mLauncher/tree/HEAD)
+
+[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.5.9...HEAD)
+
+**Merged pull requests:**
+
+- Fixed the accent colors toggle for app draw [\#243](https://github.com/HeCodes2Much/mLauncher/pull/243) ([The-Repo-Club](https://github.com/The-Repo-Club))
+
 ## [0.5.9](https://github.com/HeCodes2Much/mLauncher/tree/0.5.9) (11, March 2023)
 
 [Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.5.8...0.5.9)
