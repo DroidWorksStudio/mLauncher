@@ -40,13 +40,15 @@ class AppDrawerAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         binding = AdapterAppDrawerBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         prefs = Prefs(parent.context)
-        val typeface = ResourcesCompat.getFont(parent.context, R.font.roboto)
         if (prefs.useCustomIconFont) {
+            val typeface = ResourcesCompat.getFont(parent.context, R.font.roboto)
             binding.appTitle.typeface = typeface
         }
+        if (prefs.followAccentColors) {
+            val fontColor = getHexFontColor(parent.context)
+            binding.appTitle.setTextColor(fontColor)
+        }
         binding.appTitle.textSize = prefs.textSizeLauncher.toFloat()
-        val fontColor = getHexFontColor(parent.context)
-        binding.appTitle.setTextColor(fontColor)
         val padding: Int = prefs.textMarginSize
         binding.appTitle.setPadding(0, padding, 0, padding)
         return ViewHolder(binding)
