@@ -1,15 +1,14 @@
 package com.github.hecodes2much.mlauncher.helper
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import android.graphics.drawable.Icon
 import android.os.BatteryManager
 import android.widget.TextView
 import com.github.hecodes2much.mlauncher.R
 import com.github.hecodes2much.mlauncher.data.Prefs
-import com.github.hecodes2much.mlauncher.databinding.FragmentHomeBinding
 
 class BatteryReceiver : BroadcastReceiver() {
 
@@ -47,9 +46,10 @@ class BatteryReceiver : BroadcastReceiver() {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun updateBatteryStatus(context: Context, batteryLevel: Int, isCharging: Boolean) {
         if (!prefs.showBattery) return
-        var icon: String
+        val icon: String
         @Suppress("UNUSED_EXPRESSION")
         if (isCharging) {
             icon = "\uF583"
@@ -68,6 +68,7 @@ class BatteryReceiver : BroadcastReceiver() {
             }
         }
 
+        @Suppress("NAME_SHADOWING")
         val context = context as Activity
         val iconView = (context).findViewById<TextView>(R.id.batteryIcon)
         iconView.text = icon
