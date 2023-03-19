@@ -126,12 +126,12 @@ class AppDrawerAdapter(
         return if (prefs.searchFromStart) {
             (Normalizer.normalize(appLabel, Normalizer.Form.NFD)
                 .replace(Regex("\\p{InCombiningDiacriticalMarks}+"), "")
-                .replace(Regex("[-_+,. ]"), "")
+                .replace(Regex("[-_+,.]"), "")
                 .startsWith(searchChars, true))
         } else {
             (Normalizer.normalize(appLabel, Normalizer.Form.NFD)
                 .replace(Regex("\\p{InCombiningDiacriticalMarks}+"), "")
-                .replace(Regex("[-_+,. ]"), "")
+                .replace(Regex("[-_+,.]"), "")
                 .contains(searchChars, true))
         }
     }
