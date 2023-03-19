@@ -1,5 +1,14 @@
 # Changelog
 
+## [Coming Soon](https://github.com/HeCodes2Much/mLauncher/tree/HEAD)
+
+[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/1.0.0...HEAD)
+
+**Fixed bugs:**
+
+- \[Bug Report\] Auto open apps with spaces in name [\#249](https://github.com/HeCodes2Much/mLauncher/issues/249)
+- Feat: Auto open apps with spaces in name [\#251](https://github.com/HeCodes2Much/mLauncher/pull/251) ([The-Repo-Club](https://github.com/The-Repo-Club))
+
 ## [1.0.0](https://github.com/HeCodes2Much/mLauncher/tree/1.0.0) (14, March 2023)
 
 [Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/0.5.9...1.0.0)
