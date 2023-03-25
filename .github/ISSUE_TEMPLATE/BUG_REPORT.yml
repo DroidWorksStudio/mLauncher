@@ -40,6 +40,8 @@ body:
      description: |
       With what operating system (+ version) did you encounter the bug?
      placeholder: "Example: Android 10"
+    validations:
+      required: true
 
   - type: dropdown
     id: download
@@ -112,3 +114,17 @@ body:
       label: Additional information
       description: |
         Any other information you'd like to include.
+        
+  - type: checkboxes
+    id: checklist-confirm
+    attributes:
+      label: "Checklist Confirm"
+      options:
+        - label: "I will make sure to have the issue written in English with an English title."
+          required: true
+        - label: "I made sure that there are **no existing issues** - [open](https://github.com/HeCodes2Much/mLauncher/issues) or [closed](https://github.com/HeCodes2Much/mLauncher/issues?q=is%3Aissue+is%3Aclosed) - which I could contribute my information to."
+          required: true
+        - label: "I have taken the time to fill in all the required details. I understand that the bug report will be dismissed otherwise."
+          required: true
+        - label: "This issue contains only one bug."
+          required: true
