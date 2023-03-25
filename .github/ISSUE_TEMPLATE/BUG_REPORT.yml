@@ -116,15 +116,11 @@ body:
         Any other information you'd like to include.
         
   - type: checkboxes
-    id: checklist-confirm
+    id: checklist-accept
     attributes:
-      label: "Checklist Confirm"
+      label: "Terms and Conditions"
       options:
-        - label: "I will make sure to have the issue written in English with an English title."
+        - label: "I have read all the rules above and filled in the requiered fields to the best of my ability."
           required: true
-        - label: "I made sure that there are **no existing issues** - [open](https://github.com/HeCodes2Much/mLauncher/issues) or [closed](https://github.com/HeCodes2Much/mLauncher/issues?q=is%3Aissue+is%3Aclosed) - which I could contribute my information to."
-          required: true
-        - label: "I have taken the time to fill in all the required details. I understand that the bug report will be dismissed otherwise."
-          required: true
-        - label: "This issue contains only one bug."
+        - label: "I accept that if I fail to follow the rules stated above that i will recieve a 30 day block."
           required: true
