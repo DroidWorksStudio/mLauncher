@@ -11,6 +11,7 @@
 
 **Merged pull requests:**
 
+- The repo club confirm [\#257](https://github.com/HeCodes2Much/mLauncher/pull/257) ([The-Repo-Club](https://github.com/The-Repo-Club))
 - Update Spanish translate [\#254](https://github.com/HeCodes2Much/mLauncher/pull/254) ([ferlanero](https://github.com/ferlanero))
 
 ## [1.0.0](https://github.com/HeCodes2Much/mLauncher/tree/1.0.0) (14, March 2023)
