@@ -40,3 +40,13 @@ body:
     attributes:
       label: Additional information
       description: Any other information you'd like to include.
+      
+  - type: checkboxes
+    id: checklist-accept
+    attributes:
+      label: "Terms and Conditions"
+      options:
+        - label: "I have read all the rules above and filled in the requiered fields to the best of my ability."
+          required: true
+        - label: "I accept that if I fail to follow the rules stated above that I will recieve a 30 day block."
+          required: true
