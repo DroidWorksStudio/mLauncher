@@ -82,7 +82,7 @@
     <string name="lock_screen">Sperrbildschirm</string>
     <string name="open_quick_settings">Schnelleinstellungen</string>
     <string name="show_recents">Letze Apps anzeigen</string>
-    <string name="open_power_dialog">Power Menü</string>
+    <string name="open_power_dialog">Power-Dialog</string>
     <string name="take_a_screenshot">Mache ein Bildschirmfoto</string>
     <string name="double_tap_to_lock_screen">Doppeltippen zum Sperren</string>
     <!-- Backup Strings -->
