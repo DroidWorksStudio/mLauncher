@@ -11,6 +11,7 @@
 
 **Merged pull requests:**
 
+- Update README.md [\#263](https://github.com/HeCodes2Much/mLauncher/pull/263) ([The-Repo-Club](https://github.com/The-Repo-Club))
 - German translation [\#261](https://github.com/HeCodes2Much/mLauncher/pull/261) ([Ftamino](https://github.com/Ftamino))
 - The repo club confirm [\#257](https://github.com/HeCodes2Much/mLauncher/pull/257) ([The-Repo-Club](https://github.com/The-Repo-Club))
 - Update Spanish translate [\#254](https://github.com/HeCodes2Much/mLauncher/pull/254) ([ferlanero](https://github.com/ferlanero))
