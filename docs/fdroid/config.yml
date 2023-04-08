@@ -52,8 +52,8 @@ sdk_path: /opt/android-sdk
 
 # Canonical URL of the repositoy, needs to end in /repo. Is is used to identity
 # the repo in the client, as well.
-# repo_url: https://MyFirstFDroidRepo.org/fdroid/repo
-# repo_name: My First F-Droid Repo Demo
+repo_url: https://hecodes2much.github.io/mLauncher//fdroid/repo
+repo_name: mLauncher F-Droid Repo
 # repo_description: >-
 #   This is a repository of apps to be used with F-Droid. Applications
 #   in this repository are either official binaries built by the
