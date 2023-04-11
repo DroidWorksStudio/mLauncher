@@ -1,5 +1,13 @@
 # Changelog
 
+## [Coming Soon](https://github.com/HeCodes2Much/mLauncher/tree/HEAD)
+
+[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/1.0.1...HEAD)
+
+**Merged pull requests:**
+
+- Release: Update version to 61 \(v1.0.1\) [\#265](https://github.com/HeCodes2Much/mLauncher/pull/265) ([The-Repo-Club](https://github.com/The-Repo-Club))
+
 ## [1.0.1](https://github.com/HeCodes2Much/mLauncher/tree/1.0.1) (10, April 2023)
 
 [Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/1.0.0...1.0.1)
