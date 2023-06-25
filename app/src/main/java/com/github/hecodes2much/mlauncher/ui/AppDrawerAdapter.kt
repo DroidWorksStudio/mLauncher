@@ -110,8 +110,9 @@ class AppDrawerAdapter(
                 val scoredApps = mutableMapOf<AppModel, Float>()
                 for (app in appsList){ scoredApps[app] = scoreApp(app, searchChars) }
 
+                val currentFilterStrength = prefs.filterStrength.toFloat() / 100.0
                 val appFilteredList = (if (searchChars.isEmpty()) appsList
-                else scoredApps.filter { it.value > prefs.filterStrength.toFloat() / 100.0 }
+                else scoredApps.filter { it.value > currentFilterStrength}
                     .toSortedMap()
                     .map { it.key } as MutableList<AppModel>)
 
