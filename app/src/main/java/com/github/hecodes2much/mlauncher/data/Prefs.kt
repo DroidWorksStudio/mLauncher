@@ -126,7 +126,7 @@ class Prefs(val context: Context) {
         set(value) = prefs.edit().putBoolean(AUTO_OPEN_APP, value).apply()
 
     var filterStrength: Int
-        get() = prefs.getInt(FILTER_STRENGTH, 66)
+        get() = prefs.getInt(FILTER_STRENGTH, 50)
         set(value) = prefs.edit().putInt(FILTER_STRENGTH, value).apply()
 
     var searchFromStart: Boolean

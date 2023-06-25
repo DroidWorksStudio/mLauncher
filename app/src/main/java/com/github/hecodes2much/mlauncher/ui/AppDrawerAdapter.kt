@@ -20,7 +20,9 @@ import com.github.hecodes2much.mlauncher.databinding.AdapterAppDrawerBinding
 import com.github.hecodes2much.mlauncher.helper.dp2px
 import com.github.hecodes2much.mlauncher.helper.getHexFontColor
 import com.github.hecodes2much.mlauncher.helper.uninstallApp
-import org.apache.commons.text.similarity.JaroWinklerSimilarity
+import org.apache.commons.text.similarity.FuzzyScore
+import java.util.Locale
+import kotlin.math.max
 
 class AppDrawerAdapter(
     private var flag: AppDrawerFlag,
@@ -81,7 +83,7 @@ class AppDrawerAdapter(
 
     override fun getFilter(): Filter = this.appFilter
 
-    private val search = JaroWinklerSimilarity()
+    private val search = FuzzyScore(Locale.getDefault())
     private fun scoreApp(app: AppModel, searchChars: String): Float {
         val appChars = if (app.appAlias.isEmpty()) {
             app.appLabel
@@ -89,16 +91,15 @@ class AppDrawerAdapter(
             app.appAlias
         }
 
-        val score = search.apply(
+        val score = search.fuzzyScore(
             appChars.uppercase()
                 .replace(Regex("\\p{InCombiningDiacriticalMarks}+"), "")
                 .replace(Regex("[-_+,.]"), ""),
             searchChars.uppercase()
                 .replace(Regex("\\p{InCombiningDiacriticalMarks}+"), "")
-                .replace(Regex("[-_+,.]"), ""))
-        println("$appChars, $searchChars, $score, ${prefs.filterStrength}")
+                .replace(Regex("[-_+,.]"), "")).toFloat()
 
-        return score.toFloat()
+        return score
     }
 
 
@@ -109,10 +110,12 @@ class AppDrawerAdapter(
 
                 val scoredApps = mutableMapOf<AppModel, Float>()
                 for (app in appsList){ scoredApps[app] = scoreApp(app, searchChars) }
+                val maxScore = scoredApps.values.max()
+                for (app in scoredApps) { scoredApps[app.key] = app.value/maxScore}
 
                 val currentFilterStrength = prefs.filterStrength.toFloat() / 100.0
                 val appFilteredList = (if (searchChars.isEmpty()) appsList
-                else scoredApps.filter { it.value > currentFilterStrength}
+                else scoredApps.filter { it.value >= currentFilterStrength}
                     .toSortedMap()
                     .map { it.key } as MutableList<AppModel>)
 
