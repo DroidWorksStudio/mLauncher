@@ -20,7 +20,7 @@ import com.github.hecodes2much.mlauncher.databinding.AdapterAppDrawerBinding
 import com.github.hecodes2much.mlauncher.helper.dp2px
 import com.github.hecodes2much.mlauncher.helper.getHexFontColor
 import com.github.hecodes2much.mlauncher.helper.uninstallApp
-import java.text.Normalizer
+import org.apache.commons.text.similarity.JaroWinklerSimilarity
 
 class AppDrawerAdapter(
     private var flag: AppDrawerFlag,
@@ -81,19 +81,39 @@ class AppDrawerAdapter(
 
     override fun getFilter(): Filter = this.appFilter
 
+    private val search = JaroWinklerSimilarity()
+    private fun scoreApp(app: AppModel, searchChars: String): Float {
+        val appChars = if (app.appAlias.isEmpty()) {
+            app.appLabel
+        } else {
+            app.appAlias
+        }
+
+        val score = search.apply(
+            appChars.uppercase()
+                .replace(Regex("\\p{InCombiningDiacriticalMarks}+"), "")
+                .replace(Regex("[-_+,.]"), ""),
+            searchChars.uppercase()
+                .replace(Regex("\\p{InCombiningDiacriticalMarks}+"), "")
+                .replace(Regex("[-_+,.]"), ""))
+        println("$appChars, $searchChars, $score, ${prefs.filterStrength}")
+
+        return score.toFloat()
+    }
+
+
     private fun createAppFilter(): Filter {
         return object : Filter() {
             override fun performFiltering(constraint: CharSequence?): FilterResults {
                 val searchChars = constraint.toString()
 
+                val scoredApps = mutableMapOf<AppModel, Float>()
+                for (app in appsList){ scoredApps[app] = scoreApp(app, searchChars) }
+
                 val appFilteredList = (if (searchChars.isEmpty()) appsList
-                else appsList.filter { app ->
-                    if (app.appAlias.isEmpty()) {
-                        appLabelMatches(app.appLabel, searchChars)
-                    } else {
-                        appLabelMatches(app.appAlias, searchChars)
-                    }
-                } as MutableList<AppModel>)
+                else scoredApps.filter { it.value > prefs.filterStrength.toFloat() / 100.0 }
+                    .toSortedMap()
+                    .map { it.key } as MutableList<AppModel>)
 
                 val filterResults = FilterResults()
                 filterResults.values = appFilteredList
@@ -119,20 +139,6 @@ class AppDrawerAdapter(
             } catch (e: Exception) {
                 e.printStackTrace()
             }
-        }
-    }
-
-    private fun appLabelMatches(appLabel: String, searchChars: String): Boolean {
-        return if (prefs.searchFromStart) {
-            (Normalizer.normalize(appLabel, Normalizer.Form.NFD)
-                .replace(Regex("\\p{InCombiningDiacriticalMarks}+"), "")
-                .replace(Regex("[-_+,.]"), "")
-                .startsWith(searchChars, true))
-        } else {
-            (Normalizer.normalize(appLabel, Normalizer.Form.NFD)
-                .replace(Regex("\\p{InCombiningDiacriticalMarks}+"), "")
-                .replace(Regex("[-_+,.]"), "")
-                .contains(searchChars, true))
         }
     }
 
