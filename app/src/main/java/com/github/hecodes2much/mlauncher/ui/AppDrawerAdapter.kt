@@ -22,7 +22,6 @@ import com.github.hecodes2much.mlauncher.helper.getHexFontColor
 import com.github.hecodes2much.mlauncher.helper.uninstallApp
 import org.apache.commons.text.similarity.FuzzyScore
 import java.util.Locale
-import kotlin.math.max
 
 class AppDrawerAdapter(
     private var flag: AppDrawerFlag,
