@@ -26,6 +26,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Tastiera juru awtomatika</string>
     <string name="auto_open_apps">Apps miftuħa awtomatikament</string>
+    <string name="filter_strength">Qawwa tal-Filtru</string>
     <string name="search_from_start">Tfittxija tal-app mill-bidu.</string>
     <string name="icon_font">Uża Icon Font</string>
     <!-- Homescreen Strings -->
