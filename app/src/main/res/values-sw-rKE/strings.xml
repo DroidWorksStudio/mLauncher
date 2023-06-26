@@ -26,6 +26,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Onyesha kibodi kiotomatiki</string>
     <string name="auto_open_apps">Fungua programu kiotomatiki</string>
+    <string name="filter_strength">Nguvu ya Kichujio</string>
     <string name="search_from_start">Utafutaji wa programu kutoka mwanzo.</string>
     <string name="icon_font">Tumia Fonti ya ikoni</string>
     <!-- Homescreen Strings -->
