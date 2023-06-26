@@ -26,6 +26,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto ostendit tincidunt</string>
     <string name="auto_open_apps">Auto aperta apps</string>
+    <string name="filter_strength">Filtrum fortitudo</string>
     <string name="search_from_start">App quaerere ab initio.</string>
     <string name="icon_font">Usus Icone Font</string>
     <!-- Homescreen Strings -->
