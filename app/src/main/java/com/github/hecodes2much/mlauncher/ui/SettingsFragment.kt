@@ -229,7 +229,7 @@ class SettingsFragment : Fragment() {
                             currentSelection = remember { mutableStateOf(prefs.opacityNum) },
                             min = 0,
                             max = 255,
-                            onSelect = { j -> updateOpacityNum(j) }
+                            onSelect = { j -> setOpacityNum(j) }
                         )
                     },
                 )
@@ -259,12 +259,13 @@ class SettingsFragment : Fragment() {
                      open, onChange ->
                         SettingsSliderItem(
                             title = stringResource(R.string.filter_strength),
-                            currentSelection = remember { mutableStateOf(prefs.filterStrength) },
+                            fontSize = iconFs,
                             open = open,
                             onChange = onChange,
-                            onSelect = {j -> prefs.filterStrength = j},
-                            min = 1,
-                            max = 99
+                            currentSelection = remember { mutableStateOf(prefs.filterStrength) },
+                            min = Constants.FILTER_STRENGTH_MIN,
+                            max = Constants.FILTER_STRENGTH_MAX,
+                            onSelect = { j -> setFilterStrength(j) }
                         )
                     },
                     { _, onChange ->
@@ -299,7 +300,7 @@ class SettingsFragment : Fragment() {
                             currentSelection = remember { mutableStateOf(prefs.homeAppsNum) },
                             min = 0,
                             max = Constants.MAX_HOME_APPS,
-                            onSelect = { j -> updateHomeAppsNum(j) }
+                            onSelect = { j -> setHomeAppsNum(j) }
                         )
                     },
                     { _, onChange ->
@@ -332,7 +333,7 @@ class SettingsFragment : Fragment() {
                             fontSize = iconFs,
                             onChange = onChange,
                             state = remember { mutableStateOf(prefs.homeLocked) }
-                        ) { prefs.homeLocked = !prefs.homeLocked }
+                        ) { toggleHomeLocked() }
                     },
                     { _, onChange ->
                         SettingsToggle(
@@ -340,7 +341,7 @@ class SettingsFragment : Fragment() {
                             fontSize = iconFs,
                             onChange = onChange,
                             state = remember { mutableStateOf(prefs.extendHomeAppsArea) }
-                        ) { prefs.extendHomeAppsArea = !prefs.extendHomeAppsArea }
+                        ) { toggleExtendHomeAppsArea() }
                     },
                     { _, onChange ->
                         SettingsToggle(
@@ -404,7 +405,7 @@ class SettingsFragment : Fragment() {
                             open = open,
                             onChange = onChange,
                             currentAction = prefs.swipeUpAction,
-                            onSelect = { j -> updateGesture(AppDrawerFlag.SetSwipeUp, j) },
+                            onSelect = { j -> setGesture(AppDrawerFlag.SetSwipeUp, j) },
                             appLabel = prefs.appSwipeUp.appLabel,
                         )
                     },
@@ -415,7 +416,7 @@ class SettingsFragment : Fragment() {
                             open = open,
                             onChange = onChange,
                             currentAction = prefs.swipeDownAction,
-                            onSelect = { j -> updateGesture(AppDrawerFlag.SetSwipeDown, j) },
+                            onSelect = { j -> setGesture(AppDrawerFlag.SetSwipeDown, j) },
                             appLabel = prefs.appSwipeDown.appLabel,
                         )
                     },
@@ -426,7 +427,7 @@ class SettingsFragment : Fragment() {
                             open = open,
                             onChange = onChange,
                             currentAction = prefs.swipeLeftAction,
-                            onSelect = { j -> updateGesture(AppDrawerFlag.SetSwipeLeft, j) },
+                            onSelect = { j -> setGesture(AppDrawerFlag.SetSwipeLeft, j) },
                             appLabel = prefs.appSwipeLeft.appLabel.ifEmpty { "Camera" },
                         )
                     },
@@ -437,7 +438,7 @@ class SettingsFragment : Fragment() {
                             open = open,
                             onChange = onChange,
                             currentAction = prefs.swipeRightAction,
-                            onSelect = { j -> updateGesture(AppDrawerFlag.SetSwipeRight, j) },
+                            onSelect = { j -> setGesture(AppDrawerFlag.SetSwipeRight, j) },
                             appLabel = prefs.appSwipeRight.appLabel.ifEmpty { "Phone" },
                         )
                     },
@@ -448,7 +449,7 @@ class SettingsFragment : Fragment() {
                             open = open,
                             onChange = onChange,
                             currentAction = prefs.clickClockAction,
-                            onSelect = { j -> updateGesture(AppDrawerFlag.SetClickClock, j) },
+                            onSelect = { j -> setGesture(AppDrawerFlag.SetClickClock, j) },
                             appLabel = prefs.appClickClock.appLabel.ifEmpty { "Clock" },
                         )
                     },
@@ -459,7 +460,7 @@ class SettingsFragment : Fragment() {
                             open = open,
                             onChange = onChange,
                             currentAction = prefs.clickDateAction,
-                            onSelect = { j -> updateGesture(AppDrawerFlag.SetClickDate, j) },
+                            onSelect = { j -> setGesture(AppDrawerFlag.SetClickDate, j) },
                             appLabel = prefs.appClickDate.appLabel.ifEmpty { "Calendar" },
                         )
                     },
@@ -470,7 +471,7 @@ class SettingsFragment : Fragment() {
                             open = open,
                             onChange = onChange,
                             currentAction = prefs.doubleTapAction,
-                            onSelect = { j -> updateGesture(AppDrawerFlag.SetDoubleTap, j) },
+                            onSelect = { j -> setGesture(AppDrawerFlag.SetDoubleTap, j) },
                             appLabel = prefs.appDoubleTap.appLabel
                         )
                     }
@@ -581,6 +582,14 @@ class SettingsFragment : Fragment() {
         prefs.showBattery = !prefs.showBattery
     }
 
+    private fun toggleHomeLocked() {
+        prefs.homeLocked = !prefs.homeLocked
+    }
+
+    private fun toggleExtendHomeAppsArea() {
+        prefs.extendHomeAppsArea = !prefs.extendHomeAppsArea
+    }
+
     private fun toggleCustomIconFont() {
         prefs.useCustomIconFont = !prefs.useCustomIconFont
     }
@@ -608,14 +617,19 @@ class SettingsFragment : Fragment() {
             prefs.lockModeOn = isAdmin
     }
 
-    private fun updateHomeAppsNum(homeAppsNum: Int) {
+    private fun setHomeAppsNum(homeAppsNum: Int) {
         prefs.homeAppsNum = homeAppsNum
         viewModel.homeAppsCount.value = homeAppsNum
     }
 
-    private fun updateOpacityNum(opacityNum: Int) {
+    private fun setOpacityNum(opacityNum: Int) {
         prefs.opacityNum = opacityNum
         viewModel.opacityNum.value = opacityNum
+    }
+
+    private fun setFilterStrength(filterStrength: Int) {
+        prefs.filterStrength = filterStrength
+        viewModel.filterStrength.value = filterStrength
     }
 
     private fun toggleKeyboardText() {
@@ -661,7 +675,7 @@ class SettingsFragment : Fragment() {
         prefs.textMarginSize = size
     }
 
-    private fun updateGesture(flag: AppDrawerFlag, action: Action) {
+    private fun setGesture(flag: AppDrawerFlag, action: Action) {
         when (flag) {
             AppDrawerFlag.SetSwipeLeft -> prefs.swipeLeftAction = action
             AppDrawerFlag.SetSwipeRight -> prefs.swipeRightAction = action
