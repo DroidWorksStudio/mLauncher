@@ -26,6 +26,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">صفحه کلید نمایش خودکار</string>
     <string name="auto_open_apps">باز کردن خودکار برنامه ها</string>
+    <string name="filter_strength">قدرت فیلتر</string>
     <string name="search_from_start">جستجوی برنامه از ابتدا</string>
     <string name="icon_font">از فونت آیکون استفاده کنید</string>
     <!-- Homescreen Strings -->
