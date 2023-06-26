@@ -12,6 +12,7 @@ import androidx.appcompat.content.res.AppCompatResources
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.github.hecodes2much.fuzzywuzzy.scoreApp
 import com.github.hecodes2much.mlauncher.R
 import com.github.hecodes2much.mlauncher.data.AppModel
 import com.github.hecodes2much.mlauncher.data.Constants.AppDrawerFlag
@@ -20,8 +21,6 @@ import com.github.hecodes2much.mlauncher.databinding.AdapterAppDrawerBinding
 import com.github.hecodes2much.mlauncher.helper.dp2px
 import com.github.hecodes2much.mlauncher.helper.getHexFontColor
 import com.github.hecodes2much.mlauncher.helper.uninstallApp
-import org.apache.commons.text.similarity.FuzzyScore
-import java.util.Locale
 
 class AppDrawerAdapter(
     private var flag: AppDrawerFlag,
@@ -82,46 +81,33 @@ class AppDrawerAdapter(
 
     override fun getFilter(): Filter = this.appFilter
 
-    private val search = FuzzyScore(Locale.getDefault())
-    private fun scoreApp(app: AppModel, searchChars: String): Float {
-        val appChars = if (app.appAlias.isEmpty()) {
-            app.appLabel
-        } else {
-            app.appAlias
-        }
-
-        val score = search.fuzzyScore(
-            appChars.uppercase()
-                .replace(Regex("\\p{InCombiningDiacriticalMarks}+"), "")
-                .replace(Regex("[-_+,.]"), ""),
-            searchChars.uppercase()
-                .replace(Regex("\\p{InCombiningDiacriticalMarks}+"), "")
-                .replace(Regex("[-_+,.]"), "")).toFloat()
-
-        return score
-    }
-
-
     private fun createAppFilter(): Filter {
         return object : Filter() {
             override fun performFiltering(constraint: CharSequence?): FilterResults {
                 val searchChars = constraint.toString()
 
                 val scoredApps = mutableMapOf<AppModel, Float>()
-                for (app in appsList){ scoredApps[app] = scoreApp(app, searchChars) }
-                val maxScore = scoredApps.values.max()
-                for (app in scoredApps) { scoredApps[app.key] = app.value/maxScore}
+                for (app in appsList) {
+                    scoredApps[app] = scoreApp(app, searchChars)
+                }
 
-                val currentFilterStrength = prefs.filterStrength.toFloat() / 100.0
-                val appFilteredList = (if (searchChars.isEmpty()) appsList
-                else scoredApps.filter { it.value >= currentFilterStrength}
-                    .toSortedMap()
-                    .map { it.key } as MutableList<AppModel>)
+                val maxScore = scoredApps.values.maxOrNull() ?: 0.0f
+
+                val filteredApps = if (prefs.searchFromStart) {
+                    scoredApps.filter { (app, _) -> app.name.startsWith(searchChars, ignoreCase = true) }
+                        .map { it.key }
+                        .toMutableList()
+                } else {
+                    scoredApps.filterValues { it >= maxScore * (prefs.filterStrength.toFloat() / 100.0) }
+                        .keys
+                        .toMutableList()
+                }
 
                 val filterResults = FilterResults()
-                filterResults.values = appFilteredList
+                filterResults.values = filteredApps
                 return filterResults
             }
+
 
             @SuppressLint("NotifyDataSetChanged")
             @Suppress("UNCHECKED_CAST")
