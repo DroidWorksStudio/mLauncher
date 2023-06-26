@@ -31,6 +31,9 @@ object Constants {
     const val LOCK_TIME_MIN = 0
     const val LOCK_TIME_MAX = 120
 
+    const val FILTER_STRENGTH_MIN = 1
+    const val FILTER_STRENGTH_MAX = 99
+
     enum class AppDrawerFlag {
         LaunchApp,
         HiddenApps,
