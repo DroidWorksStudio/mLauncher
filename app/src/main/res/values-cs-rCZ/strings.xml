@@ -26,6 +26,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Automatické otevření aplikací</string>
+    <string name="filter_strength">Síla filtru</string>
     <string name="search_from_start">Hledání aplikací od začátku.</string>
     <string name="icon_font">Použijte písmo ikony</string>
     <!-- Homescreen Strings -->
