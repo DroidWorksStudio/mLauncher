@@ -26,6 +26,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto Show Keyboard</string>
     <string name="auto_open_apps">Automatesch opmaachen Apps</string>
+    <string name="filter_strength">Filter Kraaft</string>
     <string name="search_from_start">App Sich vun Ufank un.</string>
     <string name="icon_font">Benotzt Ikon Schrëft</string>
     <!-- Homescreen Strings -->

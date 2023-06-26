@@ -26,6 +26,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Auto open apps</string>
+    <string name="filter_strength">חוזק מסנן</string>
     <string name="search_from_start">חיפוש אפליקציה מההתחלה.</string>
     <string name="icon_font">השתמש בגופן אייקון</string>
     <!-- Homescreen Strings -->

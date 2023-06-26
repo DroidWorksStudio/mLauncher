@@ -26,6 +26,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Keyboard pertunjukan otomatis</string>
     <string name="auto_open_apps">Aplikasi terbuka otomatis</string>
+    <string name="filter_strength">Kekuatan Filter</string>
     <string name="search_from_start">Pencarian aplikasi dari awal.</string>
     <string name="icon_font">Gunakan Font Ikon</string>
     <!-- Homescreen Strings -->

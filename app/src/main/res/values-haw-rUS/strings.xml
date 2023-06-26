@@ -26,6 +26,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Hōʻike ʻokoʻa kīwī</string>
     <string name="auto_open_apps">Hāmama nā polokalamu</string>
+    <string name="filter_strength">Ka ikaika kānana</string>
     <string name="search_from_start">Huli polokalamu mai ka hoʻomaka.</string>
     <string name="icon_font">E hoʻohana i ka Font Icon</string>
     <!-- Homescreen Strings -->

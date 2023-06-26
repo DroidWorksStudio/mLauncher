@@ -26,6 +26,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Méarchlár taispeána uathoibríoch</string>
     <string name="auto_open_apps">Aipeanna a oscailt go huathoibríoch</string>
+    <string name="filter_strength">Neart Scagaire</string>
     <string name="search_from_start">Cuardach aip ón tús.</string>
     <string name="icon_font">Úsáid Cló Deilbhín</string>
     <!-- Homescreen Strings -->

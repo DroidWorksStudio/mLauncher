@@ -26,6 +26,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Klavye\'yi otomatik göster</string>
     <string name="auto_open_apps">Uygulamaları otomatik aç</string>
+    <string name="filter_strength">Filtre Gücü</string>
     <string name="search_from_start">Uygulama isminin başından aramaya başla.</string>
     <string name="icon_font">Simge Yazı Tipi Kullan</string>
     <!-- Homescreen Strings -->

@@ -26,6 +26,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Клавиатура за автошоу</string>
     <string name="auto_open_apps">Автоматично отваряне на приложения</string>
+    <string name="filter_strength">Сила на филтъра</string>
     <string name="search_from_start">Търсене на приложения от началото.</string>
     <string name="icon_font">Използвайте шрифта на иконата</string>
     <!-- Homescreen Strings -->

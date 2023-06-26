@@ -26,6 +26,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Auto open apps</string>
+    <string name="filter_strength">Снага филтера</string>
     <string name="search_from_start">Претрага апликација од почетка.</string>
     <string name="icon_font">Користите фонт иконе</string>
     <!-- Homescreen Strings -->

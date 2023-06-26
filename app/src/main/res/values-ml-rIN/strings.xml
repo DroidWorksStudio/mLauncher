@@ -26,6 +26,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">ഓട്ടോ ഷോ കീബോർഡ്</string>
     <string name="auto_open_apps">ആപ്പുകൾ സ്വയമേവ തുറക്കുക</string>
+    <string name="filter_strength">ഫിൽട്ടർ ശക്തി</string>
     <string name="search_from_start">തുടക്കം മുതൽ അപ്ലിക്കേഷൻ തിരയൽ.</string>
     <string name="icon_font">ഐക്കൺ ഫോണ്ട് ഉപയോഗിക്കുക</string>
     <!-- Homescreen Strings -->

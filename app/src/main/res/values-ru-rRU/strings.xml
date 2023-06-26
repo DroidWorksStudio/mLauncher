@@ -26,6 +26,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Автооткрытие приложений</string>
+    <string name="filter_strength">Сила фильтра</string>
     <string name="search_from_start">Поиск приложений с самого начала.</string>
     <string name="icon_font">Использовать иконочный шрифт</string>
     <!-- Homescreen Strings -->

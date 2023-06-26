@@ -26,6 +26,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">アプリを自動的に開く</string>
+    <string name="filter_strength">フィルター強度</string>
     <string name="search_from_start">最初からアプリ検索。</string>
     <string name="icon_font">アイコンフォントを使用</string>
     <!-- Homescreen Strings -->
