@@ -10,6 +10,7 @@
 
 **Merged pull requests:**
 
+- Feat: Updated the logic for the app search. [\#273](https://github.com/HeCodes2Much/mLauncher/pull/273) ([The-Repo-Club](https://github.com/The-Repo-Club))
 - Release: Update version to 62 \(v1.1.0\) [\#272](https://github.com/HeCodes2Much/mLauncher/pull/272) ([The-Repo-Club](https://github.com/The-Repo-Club))
 
 ## [1.0.1](https://github.com/HeCodes2Much/mLauncher/tree/1.0.1) (11, April 2023)
