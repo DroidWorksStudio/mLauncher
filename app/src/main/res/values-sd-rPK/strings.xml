@@ -26,6 +26,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">خودڪار ڏيکاريو ڪيبورڊ</string>
     <string name="auto_open_apps">خودڪار کوليو ايپس</string>
+    <string name="filter_strength">فلٽر جي طاقت</string>
     <string name="search_from_start">ايپ ڳولا شروع کان.</string>
     <string name="icon_font">Icon فونٽ استعمال ڪريو</string>
     <!-- Homescreen Strings -->
