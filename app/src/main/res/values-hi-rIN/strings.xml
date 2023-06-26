@@ -26,6 +26,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">ऑटो शो कीबोर्ड</string>
     <string name="auto_open_apps">स्वतः खुले ऐप्स</string>
+    <string name="filter_strength">फ़िल्टर शक्ति</string>
     <string name="search_from_start">ऐप खोज शुरू से।</string>
     <string name="icon_font">आइकन फ़ॉन्ट का प्रयोग करें</string>
     <!-- Homescreen Strings -->
