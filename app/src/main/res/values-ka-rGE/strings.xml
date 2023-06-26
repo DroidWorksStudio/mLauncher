@@ -26,6 +26,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">ავტომატური ჩვენების კლავიატურა</string>
     <string name="auto_open_apps">აპების ავტომატური გახსნა</string>
+    <string name="filter_strength">ფილტრის სიძლიერე</string>
     <string name="search_from_start">აპის ძებნა თავიდანვე.</string>
     <string name="icon_font">გამოიყენეთ ხატულა შრიფტი</string>
     <!-- Homescreen Strings -->
