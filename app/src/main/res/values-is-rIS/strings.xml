@@ -26,6 +26,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Sjálfvirk lyklaborð</string>
     <string name="auto_open_apps">Opna forrit sjálfkrafa</string>
+    <string name="filter_strength">Síustyrkur</string>
     <string name="search_from_start">App leit frá upphafi.</string>
     <string name="icon_font">Notaðu táknleturgerð</string>
     <!-- Homescreen Strings -->
