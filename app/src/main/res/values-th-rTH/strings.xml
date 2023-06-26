@@ -26,6 +26,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">แป้นพิมพ์แสดงอัตโนมัติ</string>
     <string name="auto_open_apps">เปิดแอปอัตโนมัติ</string>
+    <string name="filter_strength">ความแรงของตัวกรอง</string>
     <string name="search_from_start">ค้นหาแอปตั้งแต่เริ่มต้น</string>
     <string name="icon_font">ใช้แบบอักษรไอคอน</string>
     <!-- Homescreen Strings -->
