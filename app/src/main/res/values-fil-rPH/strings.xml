@@ -26,6 +26,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show na keyboard</string>
     <string name="auto_open_apps">Awtomatikong buksan ang mga app</string>
+    <string name="filter_strength">Lakas ng Filter</string>
     <string name="search_from_start">Paghahanap ng app mula sa simula.</string>
     <string name="icon_font">Gumamit ng Icon Font</string>
     <!-- Homescreen Strings -->
