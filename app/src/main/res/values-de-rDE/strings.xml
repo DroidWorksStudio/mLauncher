@@ -24,8 +24,9 @@
     <string name="follow_accent_colors">Akzentfarben</string>
     <string name="background_opacity">Deckkraft des Hintergrunds</string>
     <!-- Behavior Strings -->
-    <string name="auto_show_keyboard">Tastatur automatisch anzeigen</string>
+    <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Apps automatisch öffnen</string>
+    <string name="filter_strength">Filterstärke</string>
     <string name="search_from_start">App-Suche von Anfang an.</string>
     <string name="icon_font">Verwenden Sie die Symbolschrift</string>
     <!-- Homescreen Strings -->
@@ -81,7 +82,7 @@
     <string name="open_app">App öffnen</string>
     <string name="lock_screen">Sperrbildschirm</string>
     <string name="open_quick_settings">Schnelleinstellungen</string>
-    <string name="show_recents">Letze Apps anzeigen</string>
+    <string name="show_recents">Show Recents</string>
     <string name="open_power_dialog">Power-Dialog</string>
     <string name="take_a_screenshot">Mache ein Bildschirmfoto</string>
     <string name="double_tap_to_lock_screen">Doppeltippen zum Sperren</string>
