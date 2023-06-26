@@ -26,6 +26,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Autókiállítás billentyűzet</string>
     <string name="auto_open_apps">Automatikusan megnyíló alkalmazások</string>
+    <string name="filter_strength">Szűrő erőssége</string>
     <string name="search_from_start">Alkalmazáskeresés a kezdetektől.</string>
     <string name="icon_font">Ikon betűtípus használata</string>
     <!-- Homescreen Strings -->
