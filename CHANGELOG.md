@@ -2,7 +2,15 @@
 
 ## [Coming Soon](https://github.com/HeCodes2Much/mLauncher/tree/HEAD)
 
-[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/1.0.0...HEAD)
+[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/1.0.1...HEAD)
+
+**Merged pull requests:**
+
+- \[FEAT\] Use text similarity to sort and filter app list when searching [\#271](https://github.com/HeCodes2Much/mLauncher/pull/271) ([flightmansam](https://github.com/flightmansam))
+
+## [1.0.1](https://github.com/HeCodes2Much/mLauncher/tree/1.0.1) (11, April 2023)
+
+[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/1.0.0...1.0.1)
 
 **Fixed bugs:**
 
@@ -266,7 +274,7 @@
 
 - \[Bug Report\] Why Support for 23-25 SDK Removed? [\#128](https://github.com/HeCodes2Much/mLauncher/issues/128)
 - fix: fixes the other fragments opacity [\#132](https://github.com/HeCodes2Much/mLauncher/pull/132) ([The-Repo-Club](https://github.com/The-Repo-Club))
-- Update turkish translations + fix link on question.yml [\#131](https://github.com/HeCodes2Much/mLauncher/pull/131) ([YakisikliBaran](https://github.com/YakisikliBaran))
+- Update turkish translations + fix link on question.yml [\#131](https://github.com/HeCodes2Much/mLauncher/pull/131) ([ghost](https://github.com/ghost))
 - cleanup: fix some code for opacity [\#130](https://github.com/HeCodes2Much/mLauncher/pull/130) ([The-Repo-Club](https://github.com/The-Repo-Club))
 
 ## [0.4.1](https://github.com/HeCodes2Much/mLauncher/tree/0.4.1) (30, December 2022)
