@@ -26,6 +26,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Automatski prikaz tipkovnice</string>
     <string name="auto_open_apps">Automatsko otvaranje aplikacija</string>
+    <string name="filter_strength">Snaga filtra</string>
     <string name="search_from_start">Pretraživanje aplikacije od početka.</string>
     <string name="icon_font">Koristite font ikone</string>
     <!-- Homescreen Strings -->
