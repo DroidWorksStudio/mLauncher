@@ -4,9 +4,13 @@
 
 [Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/1.0.1...HEAD)
 
-**Merged pull requests:**
+**Implemented enhancements:**
 
 - \[FEAT\] Use text similarity to sort and filter app list when searching [\#271](https://github.com/HeCodes2Much/mLauncher/pull/271) ([flightmansam](https://github.com/flightmansam))
+
+**Merged pull requests:**
+
+- Release: Update version to 62 \(v1.1.0\) [\#272](https://github.com/HeCodes2Much/mLauncher/pull/272) ([The-Repo-Club](https://github.com/The-Repo-Club))
 
 ## [1.0.1](https://github.com/HeCodes2Much/mLauncher/tree/1.0.1) (11, April 2023)
 
