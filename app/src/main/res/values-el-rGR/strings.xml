@@ -26,6 +26,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Αυτόματο άνοιγμα εφαρμογών</string>
+    <string name="filter_strength">Αντοχή φίλτρου</string>
     <string name="search_from_start">Αναζήτηση εφαρμογών από την αρχή.</string>
     <string name="icon_font">Χρησιμοποιήστε το Icon Font</string>
     <!-- Homescreen Strings -->
