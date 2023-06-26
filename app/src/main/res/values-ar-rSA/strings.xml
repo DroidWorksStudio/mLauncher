@@ -26,6 +26,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">فتح التطبيقات تلقائياً</string>
+    <string name="filter_strength">قوة التصفية</string>
     <string name="search_from_start">البحث عن التطبيق من البداية.</string>
     <string name="icon_font">استخدم خط الأيقونة</string>
     <!-- Homescreen Strings -->
