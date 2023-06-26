@@ -26,6 +26,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Deschideți automat aplicațiile</string>
+    <string name="filter_strength">Puterea filtrului</string>
     <string name="search_from_start">Căutare aplicație de la început.</string>
     <string name="icon_font">Utilizați fontul pentru pictograme</string>
     <!-- Homescreen Strings -->
