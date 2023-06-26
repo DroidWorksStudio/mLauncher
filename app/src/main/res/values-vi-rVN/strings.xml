@@ -26,6 +26,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Auto open apps</string>
+    <string name="filter_strength">Độ bền của bộ lọc</string>
     <string name="search_from_start">Tìm kiếm ứng dụng từ đầu.</string>
     <string name="icon_font">Sử dụng phông chữ biểu tượng</string>
     <!-- Homescreen Strings -->
