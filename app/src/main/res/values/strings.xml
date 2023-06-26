@@ -30,6 +30,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Auto open apps</string>
+    <string name="filter_strength">Filter Strength</string>
     <string name="search_from_start">App search from start.</string>
     <string name="icon_font">Use Icon Font</string>
 

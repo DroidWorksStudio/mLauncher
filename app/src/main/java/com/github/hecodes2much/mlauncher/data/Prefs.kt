@@ -18,6 +18,7 @@ private const val LOCK_MODE = "LOCK_MODE"
 private const val HOME_APPS_NUM = "HOME_APPS_NUM"
 private const val AUTO_SHOW_KEYBOARD = "AUTO_SHOW_KEYBOARD"
 private const val AUTO_OPEN_APP = "AUTO_OPEN_APP"
+private const val FILTER_STRENGTH = "FILTER_STRENGTH"
 private const val HOME_ALIGNMENT = "HOME_ALIGNMENT"
 private const val HOME_ALIGNMENT_BOTTOM = "HOME_ALIGNMENT_BOTTOM"
 private const val HOME_CLICK_AREA = "HOME_CLICK_AREA"
@@ -123,6 +124,10 @@ class Prefs(val context: Context) {
     var autoOpenApp: Boolean
         get() = prefs.getBoolean(AUTO_OPEN_APP, true)
         set(value) = prefs.edit().putBoolean(AUTO_OPEN_APP, value).apply()
+
+    var filterStrength: Int
+        get() = prefs.getInt(FILTER_STRENGTH, 50)
+        set(value) = prefs.edit().putInt(FILTER_STRENGTH, value).apply()
 
     var searchFromStart: Boolean
         get() = prefs.getBoolean(SEARCH_START, false)

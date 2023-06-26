@@ -255,6 +255,18 @@ class SettingsFragment : Fragment() {
                             state = remember { mutableStateOf(prefs.autoOpenApp) },
                         ) { toggleAutoOpenApp() }
                     },
+                    {
+                     open, onChange ->
+                        SettingsSliderItem(
+                            title = stringResource(R.string.filter_strength),
+                            currentSelection = remember { mutableStateOf(prefs.filterStrength) },
+                            open = open,
+                            onChange = onChange,
+                            onSelect = {j -> prefs.filterStrength = j},
+                            min = 1,
+                            max = 99
+                        )
+                    },
                     { _, onChange ->
                         SettingsToggle(
                             title = stringResource(R.string.search_from_start),
