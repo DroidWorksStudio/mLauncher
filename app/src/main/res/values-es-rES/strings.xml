@@ -26,6 +26,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Teclado automático</string>
     <string name="auto_open_apps">Abrir aplicaciones</string>
+    <string name="filter_strength">Fuerza del filtro</string>
     <string name="search_from_start">Buscar aplicaciones desde el principio.</string>
     <string name="icon_font">Tipografía de sistema</string>
     <!-- Homescreen Strings -->
