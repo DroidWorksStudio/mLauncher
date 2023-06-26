@@ -26,6 +26,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Tastiera e shfaqjes automatike</string>
     <string name="auto_open_apps">Hapja automatike e aplikacioneve</string>
+    <string name="filter_strength">Forca e filtrit</string>
     <string name="search_from_start">Kërkimi i aplikacionit që nga fillimi.</string>
     <string name="icon_font">Përdorni fontin e ikonës</string>
     <!-- Homescreen Strings -->
