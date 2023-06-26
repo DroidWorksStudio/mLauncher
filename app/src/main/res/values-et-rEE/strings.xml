@@ -26,6 +26,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Autoesituse klaviatuur</string>
     <string name="auto_open_apps">Automaatselt avatud rakendused</string>
+    <string name="filter_strength">Filtri tugevus</string>
     <string name="search_from_start">Rakenduse otsing algusest peale.</string>
     <string name="icon_font">Kasutage ikooni fonti</string>
     <!-- Homescreen Strings -->
