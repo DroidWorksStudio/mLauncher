@@ -26,6 +26,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">自动显示键盘</string>
     <string name="auto_open_apps">自动打开应用</string>
+    <string name="filter_strength">过滤强度</string>
     <string name="search_from_start">应用程序搜索从头开始。</string>
     <string name="icon_font">使用图标字体</string>
     <!-- Homescreen Strings -->
