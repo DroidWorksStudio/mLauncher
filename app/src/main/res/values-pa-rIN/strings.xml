@@ -26,6 +26,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">ਆਟੋ ਸ਼ੋਅ ਕੀਬੋਰਡ</string>
     <string name="auto_open_apps">ਆਟੋ ਓਪਨ ਐਪਸ</string>
+    <string name="filter_strength">ਫਿਲਟਰ ਦੀ ਤਾਕਤ</string>
     <string name="search_from_start">ਐਪ ਖੋਜ ਸ਼ੁਰੂ ਤੋਂ।</string>
     <string name="icon_font">ਆਈਕਨ ਫੌਂਟ ਦੀ ਵਰਤੋਂ ਕਰੋ</string>
     <!-- Homescreen Strings -->
