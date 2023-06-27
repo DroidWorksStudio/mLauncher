@@ -2,15 +2,28 @@
 
 ## [Coming Soon](https://github.com/HeCodes2Much/mLauncher/tree/HEAD)
 
-[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/1.0.1...HEAD)
+[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/1.1.0...HEAD)
+
+**Fixed bugs:**
+
+- Bug: Fixed the Logic for FuzzyWuzzy [\#277](https://github.com/HeCodes2Much/mLauncher/pull/277) ([The-Repo-Club](https://github.com/The-Repo-Club))
+
+**Merged pull requests:**
+
+- Release/v63 [\#278](https://github.com/HeCodes2Much/mLauncher/pull/278) ([The-Repo-Club](https://github.com/The-Repo-Club))
+
+## [1.1.0](https://github.com/HeCodes2Much/mLauncher/tree/1.1.0) (26, June 2023)
+
+[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/1.0.1...1.1.0)
 
 **Implemented enhancements:**
 
+- Feat: Updated the logic for the app search. [\#273](https://github.com/HeCodes2Much/mLauncher/pull/273) ([The-Repo-Club](https://github.com/The-Repo-Club))
 - \[FEAT\] Use text similarity to sort and filter app list when searching [\#271](https://github.com/HeCodes2Much/mLauncher/pull/271) ([flightmansam](https://github.com/flightmansam))
 
 **Merged pull requests:**
 
-- Feat: Updated the logic for the app search. [\#273](https://github.com/HeCodes2Much/mLauncher/pull/273) ([The-Repo-Club](https://github.com/The-Repo-Club))
+- New Crowdin updates [\#274](https://github.com/HeCodes2Much/mLauncher/pull/274) ([The-Repo-Club](https://github.com/The-Repo-Club))
 - Release: Update version to 62 \(v1.1.0\) [\#272](https://github.com/HeCodes2Much/mLauncher/pull/272) ([The-Repo-Club](https://github.com/The-Repo-Club))
 
 ## [1.0.1](https://github.com/HeCodes2Much/mLauncher/tree/1.0.1) (11, April 2023)
