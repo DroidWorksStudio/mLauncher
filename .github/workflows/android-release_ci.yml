@@ -58,4 +58,3 @@ jobs:
           asset_name: mLauncher-${{ github.ref_name }}-Signed.apk
           tag: ${{ github.ref }}
           overwrite: true
-          body: "mLauncher.apk Release"
