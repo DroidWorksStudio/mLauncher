@@ -10,7 +10,7 @@
 
 **Merged pull requests:**
 
-- Release/v63 [\#278](https://github.com/HeCodes2Much/mLauncher/pull/278) ([The-Repo-Club](https://github.com/The-Repo-Club))
+-  Release: Update version to 63 \(v1.1.1\)  [\#278](https://github.com/HeCodes2Much/mLauncher/pull/278) ([The-Repo-Club](https://github.com/The-Repo-Club))
 
 ## [1.1.0](https://github.com/HeCodes2Much/mLauncher/tree/1.1.0) (26, June 2023)
 
