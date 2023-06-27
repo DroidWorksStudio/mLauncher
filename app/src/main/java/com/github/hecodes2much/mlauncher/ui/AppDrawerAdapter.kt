@@ -93,14 +93,19 @@ class AppDrawerAdapter(
 
                 val maxScore = scoredApps.values.maxOrNull() ?: 0.0f
 
-                val filteredApps = if (prefs.searchFromStart) {
-                    scoredApps.filter { (app, _) -> app.name.startsWith(searchChars, ignoreCase = true) }
-                        .map { it.key }
-                        .toMutableList()
+                val filteredApps = if (searchChars.isNotEmpty()) {
+                    if (prefs.searchFromStart) {
+                        scoredApps.filter { (app, _) -> app.name.startsWith(searchChars, ignoreCase = true) }
+                            .map { it.key }
+                            .filter { scoredApps[it] != 0.0f }
+                            .toMutableList()
+                    } else {
+                        scoredApps.filterValues { it != 0.0f }
+                            .keys
+                            .toMutableList()
+                    }
                 } else {
-                    scoredApps.filterValues { it >= maxScore * (prefs.filterStrength.toFloat() / 100.0) }
-                        .keys
-                        .toMutableList()
+                    appsList.toMutableList()
                 }
 
                 val filterResults = FilterResults()
