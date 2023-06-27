@@ -13,8 +13,8 @@ android {
         applicationId = "app.mlauncher"
         minSdk = 23
         targetSdk = 33
-        versionCode = 62
-        versionName = "1.1.0"
+        versionCode = 63
+        versionName = "1.1.1"
     }
 
     buildTypes {
