@@ -20,7 +20,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/mlauncher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:excludeFromRecents="true"
+        android:clearTaskOnLaunch="true"
+        android:theme="@style/AppTheme"
+        tools:targetApi="tiramisu">
 
         <activity
             android:name="com.github.hecodes2much.mlauncher.MainActivity"
