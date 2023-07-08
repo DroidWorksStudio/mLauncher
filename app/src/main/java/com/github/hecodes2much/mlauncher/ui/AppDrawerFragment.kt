@@ -115,7 +115,8 @@ class AppDrawerFragment : Fragment() {
         binding.recyclerView.addOnScrollListener(getRecyclerViewOnScrollListener())
 
         if (flag == AppDrawerFlag.HiddenApps) binding.search.queryHint = getString(R.string.hidden_apps)
-        if (flag == AppDrawerFlag.LaunchApp) binding.search.queryHint = getString(R.string.show_apps)
+        if (flag == AppDrawerFlag.LaunchApp && prefs.useAllAppsText) binding.search.queryHint = getString(R.string.show_apps)
+
         binding.search.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
                 appAdapter.launchFirstInList()
