@@ -4,10 +4,13 @@
 
 [Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/1.1.1...HEAD)
 
+**Implemented enhancements:**
+
+- FEAT: Added a toggle for the all apps text. [\#284](https://github.com/HeCodes2Much/mLauncher/pull/284) ([The-Repo-Club](https://github.com/The-Repo-Club))
+
 **Merged pull requests:**
 
 - Release: Update version to 64 \(v1.1.2\) [\#285](https://github.com/HeCodes2Much/mLauncher/pull/285) ([The-Repo-Club](https://github.com/The-Repo-Club))
-- FEAT: Added a toggle for the all apps text. [\#284](https://github.com/HeCodes2Much/mLauncher/pull/284) ([The-Repo-Club](https://github.com/The-Repo-Club))
 
 ## [1.1.1](https://github.com/HeCodes2Much/mLauncher/tree/1.1.1) (27, June 2023)
 
