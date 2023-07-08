@@ -1,8 +1,8 @@
 # Changelog
 
-## [Coming Soon](https://github.com/HeCodes2Much/mLauncher/tree/HEAD)
+## [1.1.2](https://github.com/HeCodes2Much/mLauncher/tree/1.1.2) ( 8, July 2023)
 
-[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/1.1.1...HEAD)
+[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/1.1.1...1.1.2)
 
 **Implemented enhancements:**
 
