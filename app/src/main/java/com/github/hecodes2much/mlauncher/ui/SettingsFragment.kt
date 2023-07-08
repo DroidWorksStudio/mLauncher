@@ -232,6 +232,14 @@ class SettingsFragment : Fragment() {
                             onSelect = { j -> setOpacityNum(j) }
                         )
                     },
+                    { _, onChange ->
+                        SettingsToggle(
+                            title = stringResource(R.string.all_apps_text),
+                            fontSize = iconFs,
+                            onChange = onChange,
+                            state = remember { mutableStateOf(prefs.useAllAppsText) },
+                        ) { toggleAllAppsText() }
+                    },
                 )
             )
             SettingsArea(
@@ -592,6 +600,9 @@ class SettingsFragment : Fragment() {
 
     private fun toggleCustomIconFont() {
         prefs.useCustomIconFont = !prefs.useCustomIconFont
+    }
+    private fun toggleAllAppsText() {
+        prefs.useAllAppsText = !prefs.useAllAppsText
     }
     private fun toggleShowDate() {
         prefs.showDate = !prefs.showDate
