@@ -1,5 +1,13 @@
 # Changelog
 
+## [Coming Soon](https://github.com/HeCodes2Much/mLauncher/tree/HEAD)
+
+[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/1.1.1...HEAD)
+
+**Merged pull requests:**
+
+- FEAT: Added a toggle for the all apps text. [\#284](https://github.com/HeCodes2Much/mLauncher/pull/284) ([The-Repo-Club](https://github.com/The-Repo-Club))
+
 ## [1.1.1](https://github.com/HeCodes2Much/mLauncher/tree/1.1.1) (27, June 2023)
 
 [Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/1.1.0...1.1.1)
@@ -20,6 +28,10 @@
 
 - Feat: Updated the logic for the app search. [\#273](https://github.com/HeCodes2Much/mLauncher/pull/273) ([The-Repo-Club](https://github.com/The-Repo-Club))
 - \[FEAT\] Use text similarity to sort and filter app list when searching [\#271](https://github.com/HeCodes2Much/mLauncher/pull/271) ([flightmansam](https://github.com/flightmansam))
+
+**Fixed bugs:**
+
+- \[Bug Report\] mLauncher fails to auto start apps if they have accent mark [\#253](https://github.com/HeCodes2Much/mLauncher/issues/253)
 
 **Merged pull requests:**
 
@@ -164,6 +176,7 @@
 **Implemented enhancements:**
 
 - \[Enhancement\] PIN or password [\#196](https://github.com/HeCodes2Much/mLauncher/issues/196)
+- \[Enhancement\] Sort by recently used [\#19](https://github.com/HeCodes2Much/mLauncher/issues/19)
 - Feat: Added a pin code setting to the settings area. [\#197](https://github.com/HeCodes2Much/mLauncher/pull/197) ([The-Repo-Club](https://github.com/The-Repo-Club))
 
 **Merged pull requests:**
