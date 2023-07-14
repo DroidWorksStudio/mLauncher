@@ -23,6 +23,7 @@
     <string name="app_padding_size">Velikost vycpávky</string>
     <string name="follow_accent_colors">Akcentní barvy</string>
     <string name="background_opacity">Neprůhlednost pozadí</string>
+    <string name="all_apps_text">Zobrazit text všech aplikací</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Automatické otevření aplikací</string>
@@ -34,6 +35,7 @@
     <string name="show_time">Zobrazit čas</string>
     <string name="show_date">Zobrazit datum</string>
     <string name="show_battery">Zobrazit baterii</string>
+    <string name="show_calendar_event">Zobrazit událost v kalendáři</string>
     <string name="lock_home_apps">Zamknout aplikace</string>
     <string name="extend_home_apps_area">Rozšířit kliknutelnou oblast</string>
     <string name="home_alignment_bottom">Zarovnání spodní plochy</string>
@@ -98,6 +100,7 @@
     <string name="pin_number_match">Shoda čísel pinů!</string>
     <string name="pin_number_do_not_match">Čísla pinů se neshodují!</string>
     <!-- Unsorted Strings -->
+    <string name="denied_calender_permission">Vyžaduje povolení kalendáře.</string>
     <string name="show_apps">Všechny aplikace</string>
     <string name="drawer_list_empty_hint">Nebyly nalezeny žádné aplikace</string>
     <string name="long_press_for_settings">Dlouze podržte kdekoli pro nastavení</string>
