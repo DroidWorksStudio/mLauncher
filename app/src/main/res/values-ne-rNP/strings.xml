@@ -23,6 +23,7 @@
     <string name="app_padding_size">प्याडिङ साइज</string>
     <string name="follow_accent_colors">एक्सेन्ट रङहरू</string>
     <string name="background_opacity">पृष्ठभूमि अस्पष्टता</string>
+    <string name="all_apps_text">सबै एप पाठ प्रदर्शन गर्नुहोस्</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">किबोर्ड स्वतः देखाउनुहोस्</string>
     <string name="auto_open_apps">स्वतः खोल्ने एपहरू</string>
@@ -34,6 +35,7 @@
     <string name="show_time">समय देखाउनुहोस्</string>
     <string name="show_date">मिति देखाउनुहोस्</string>
     <string name="show_battery">ब्याट्री देखाउनुहोस्</string>
+    <string name="show_calendar_event">क्यालेन्डर घटना देखाउनुहोस्</string>
     <string name="lock_home_apps">एपहरू लक गर्नुहोस्</string>
     <string name="extend_home_apps_area">क्लिक योग्य क्षेत्र विस्तार गर्नुहोस्</string>
     <string name="home_alignment_bottom">गृह स्क्रिन तल पङ्क्तिबद्ध गर्नुहोस्</string>
@@ -98,6 +100,7 @@
     <string name="pin_number_match">पिन नम्बरहरू मिलान!</string>
     <string name="pin_number_do_not_match">पिन नम्बरहरू मिल्दैनन्!</string>
     <!-- Unsorted Strings -->
+    <string name="denied_calender_permission">क्यालेन्डर अनुमति चाहिन्छ।</string>
     <string name="show_apps">सबै एपहरू</string>
     <string name="drawer_list_empty_hint">कुनै एपहरू फेला परेनन्</string>
     <string name="long_press_for_settings">सेटिङहरूको लागि जहाँसुकै लामो प्रेस गर्नुहोस्</string>
