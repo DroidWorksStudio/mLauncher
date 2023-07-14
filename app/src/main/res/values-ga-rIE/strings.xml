@@ -23,6 +23,7 @@
     <string name="app_padding_size">Méid Stuála</string>
     <string name="follow_accent_colors">Dathanna Accent</string>
     <string name="background_opacity">Teimhneacht Cúlra</string>
+    <string name="all_apps_text">Taispeáin Téacs Gach Apps</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Méarchlár taispeána uathoibríoch</string>
     <string name="auto_open_apps">Aipeanna a oscailt go huathoibríoch</string>
@@ -34,6 +35,7 @@
     <string name="show_time">Am seó</string>
     <string name="show_date">Taispeáin dáta</string>
     <string name="show_battery">Taispeáin ceallraí</string>
+    <string name="show_calendar_event">Taispeáin imeacht féilire</string>
     <string name="lock_home_apps">Glasáil Apps</string>
     <string name="extend_home_apps_area">Leathnaigh an limistéar inchliceáilte</string>
     <string name="home_alignment_bottom">Ailínigh bun an scáileáin baile</string>
@@ -98,6 +100,7 @@
     <string name="pin_number_match">Cluiche Uimhreacha Bioráin!</string>
     <string name="pin_number_do_not_match">Ní mheaitseálann na hUimhreacha Bioráin!</string>
     <!-- Unsorted Strings -->
+    <string name="denied_calender_permission">Teastaíonn cead féilire.</string>
     <string name="show_apps">Gach apps</string>
     <string name="drawer_list_empty_hint">Níor aimsíodh aon aipeanna</string>
     <string name="long_press_for_settings">Brúigh fada áit ar bith le haghaidh socruithe</string>
