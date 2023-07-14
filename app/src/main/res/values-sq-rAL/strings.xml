@@ -23,6 +23,7 @@
     <string name="app_padding_size">Madhësia e mbushjes</string>
     <string name="follow_accent_colors">Ngjyrat e theksit</string>
     <string name="background_opacity">Opaciteti i sfondit</string>
+    <string name="all_apps_text">Shfaq tekstin e të gjitha aplikacioneve</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Tastiera e shfaqjes automatike</string>
     <string name="auto_open_apps">Hapja automatike e aplikacioneve</string>
@@ -34,6 +35,7 @@
     <string name="show_time">Koha e shfaqjes</string>
     <string name="show_date">Shfaq datën</string>
     <string name="show_battery">Shfaq baterinë</string>
+    <string name="show_calendar_event">Shfaq ngjarjen e kalendarit</string>
     <string name="lock_home_apps">Blloko aplikacionet</string>
     <string name="extend_home_apps_area">Zgjero zonën e klikueshme</string>
     <string name="home_alignment_bottom">Përafrimi i ekranit bazë në fund</string>
@@ -98,6 +100,7 @@
     <string name="pin_number_match">Numrat e kunjit përputhen!</string>
     <string name="pin_number_do_not_match">Numrat e pin nuk përputhen!</string>
     <!-- Unsorted Strings -->
+    <string name="denied_calender_permission">Kërkon lejen e kalendarit.</string>
     <string name="show_apps">Të gjitha aplikacionet</string>
     <string name="drawer_list_empty_hint">Nuk u gjet asnjë aplikacion</string>
     <string name="long_press_for_settings">Shtypni gjatë kudo për cilësimet</string>
