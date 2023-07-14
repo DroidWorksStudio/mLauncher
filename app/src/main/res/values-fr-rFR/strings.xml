@@ -23,6 +23,7 @@
     <string name="app_padding_size">Taille de rembourrage</string>
     <string name="follow_accent_colors">Couleurs d\'accentuation</string>
     <string name="background_opacity">Opacité du fond</string>
+    <string name="all_apps_text">Afficher le texte de toutes les applications</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Ouvrir automatiquement les applications</string>
@@ -34,6 +35,7 @@
     <string name="show_time">Afficher l\'heure</string>
     <string name="show_date">Afficher la date</string>
     <string name="show_battery">Afficher la batterie</string>
+    <string name="show_calendar_event">Afficher l\'événement du calendrier</string>
     <string name="lock_home_apps">Verrouiller les applications</string>
     <string name="extend_home_apps_area">Étendre la zone cliquable</string>
     <string name="home_alignment_bottom">Alignement de l\'écran d\'accueil en bas</string>
@@ -98,6 +100,7 @@
     <string name="pin_number_match">Les numéros de broches correspondent !</string>
     <string name="pin_number_do_not_match">Les numéros de broches ne correspondent pas !</string>
     <!-- Unsorted Strings -->
+    <string name="denied_calender_permission">Nécessite une autorisation de calendrier.</string>
     <string name="show_apps">Toutes les applications</string>
     <string name="drawer_list_empty_hint">Aucune application trouvée</string>
     <string name="long_press_for_settings">Appui long n\'importe où pour les paramètres</string>
