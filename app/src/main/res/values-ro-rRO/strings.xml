@@ -23,6 +23,7 @@
     <string name="app_padding_size">Dimensiunea căptușelii</string>
     <string name="follow_accent_colors">Culori de accent</string>
     <string name="background_opacity">Opacitatea fundalului</string>
+    <string name="all_apps_text">Afișează textul tuturor aplicațiilor</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Deschideți automat aplicațiile</string>
@@ -34,6 +35,7 @@
     <string name="show_time">Arată timpul</string>
     <string name="show_date">Arată data</string>
     <string name="show_battery">Arată bateria</string>
+    <string name="show_calendar_event">Afișează evenimentul din calendar</string>
     <string name="lock_home_apps">Blocare aplicații</string>
     <string name="extend_home_apps_area">Extinde zona clickable</string>
     <string name="home_alignment_bottom">Aliniere ecran de pornire jos</string>
@@ -98,6 +100,7 @@
     <string name="pin_number_match">Numerele PIN se potrivesc!</string>
     <string name="pin_number_do_not_match">Numerele PIN nu se potrivesc!</string>
     <!-- Unsorted Strings -->
+    <string name="denied_calender_permission">Are nevoie de permisiunea calendarului.</string>
     <string name="show_apps">Toate aplicațiile</string>
     <string name="drawer_list_empty_hint">Nicio aplicație găsită</string>
     <string name="long_press_for_settings">Apăsați lung oriunde pentru setări</string>
