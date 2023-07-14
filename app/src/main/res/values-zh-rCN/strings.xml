@@ -23,6 +23,7 @@
     <string name="app_padding_size">填充尺寸</string>
     <string name="follow_accent_colors">强调色</string>
     <string name="background_opacity">背景不透明度</string>
+    <string name="all_apps_text">显示所有应用程序文本</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">自动显示键盘</string>
     <string name="auto_open_apps">自动打开应用</string>
@@ -34,6 +35,7 @@
     <string name="show_time">显示时间</string>
     <string name="show_date">显示日期</string>
     <string name="show_battery">显示电池</string>
+    <string name="show_calendar_event">显示日历事件</string>
     <string name="lock_home_apps">锁定应用</string>
     <string name="extend_home_apps_area">扩展主屏应用可点击空间</string>
     <string name="home_alignment_bottom">应用主屏底部</string>
@@ -98,6 +100,7 @@
     <string name="pin_number_match">密码匹配！</string>
     <string name="pin_number_do_not_match">密码不匹配！</string>
     <!-- Unsorted Strings -->
+    <string name="denied_calender_permission">需要日历许可。</string>
     <string name="show_apps">所有应用程序</string>
     <string name="drawer_list_empty_hint">未找到应用</string>
     <string name="long_press_for_settings">在屏幕上任意一处长按进入设置</string>
