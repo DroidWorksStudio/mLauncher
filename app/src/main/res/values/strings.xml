@@ -40,6 +40,7 @@
     <string name="show_time">Show time</string>
     <string name="show_date">Show date</string>
     <string name="show_battery">Show battery</string>
+    <string name="show_calendar_event">Show calendar event</string>
     <string name="lock_home_apps">Lock Apps</string>
     <string name="extend_home_apps_area">Extend clickable area</string>
     <string name="home_alignment_bottom">Home screen align bottom</string>
@@ -115,6 +116,7 @@
     <string name="pin_number_do_not_match">Pin Numbers do not Match!</string>
 
     <!-- Unsorted Strings -->
+    <string name="denied_calender_permission">Needs calender permission.</string>
     <string name="show_apps">All apps</string>
     <string name="drawer_list_empty_hint">No apps found</string>
     <string name="long_press_for_settings">Long press anywhere for settings</string>
