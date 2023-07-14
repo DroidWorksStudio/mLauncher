@@ -1,14 +1,18 @@
 package com.github.hecodes2much.mlauncher.ui
 
+import android.Manifest
 import android.annotation.SuppressLint
 import android.app.admin.DevicePolicyManager
 import android.content.Context
 import android.content.Context.VIBRATOR_SERVICE
 import android.content.Intent
 import android.content.IntentFilter
+import android.content.pm.PackageManager
+import android.database.Cursor
 import android.os.Build
 import android.os.Bundle
 import android.os.Vibrator
+import android.provider.CalendarContract
 import android.text.format.DateFormat.getBestDateTimePattern
 import android.util.Log
 import android.view.Gravity
@@ -16,6 +20,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.os.bundleOf
 import androidx.core.view.children
@@ -36,6 +42,7 @@ import com.github.hecodes2much.mlauncher.listener.OnSwipeTouchListener
 import com.github.hecodes2much.mlauncher.listener.ViewSwipeTouchListener
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import java.text.SimpleDateFormat
 import java.util.*
 
 class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener {
@@ -49,6 +56,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
+    private val calendarPermission = Manifest.permission.READ_CALENDAR
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
 
@@ -61,6 +70,20 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        // Check for calendar permission
+        if (prefs.showCalendarEvent) {
+            if (isCalendarPermissionGranted()) {
+                // Permission already granted, retrieve calendar events
+                retrieveCalendarEvents()
+            } else {
+                // Permission not granted, request it
+                requestCalendarPermission()
+            }
+        } else {
+            binding.latestEventText.visibility = View.GONE
+        }
+
         val hex = getHexForOpacity(requireContext(), prefs)
         binding.mainLayout.setBackgroundColor(hex)
 
@@ -105,6 +128,9 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             binding.batteryText.setTextColor(fontColor)
             binding.setDefaultLauncher.setTextColor(fontColor)
         }
+
+        // After retrieving the latest calendar event
+        binding.latestEventText.textSize = prefs.textSizeLauncher.toFloat() / 1.2f
     }
 
     override fun onResume() {
@@ -176,6 +202,79 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         val name = prefs.getHomeAppModel(n).appLabel
         showAppList(AppDrawerFlag.SetHomeApp, name.isNotEmpty(), n)
         return true
+    }
+
+    private fun isCalendarPermissionGranted(): Boolean {
+        return ContextCompat.checkSelfPermission(
+            requireContext(),
+            calendarPermission
+        ) == PackageManager.PERMISSION_GRANTED
+    }
+
+    private val requestCalendarPermissionLauncher =
+        registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted: Boolean ->
+            if (isGranted) {
+                // Permission granted, retrieve calendar events
+                retrieveCalendarEvents()
+            } else {
+                // Permission denied, handle accordingly
+                Log.d("Calendar Event", getString(R.string.denied_calender_permission))
+                binding.latestEventText.text = getString(R.string.denied_calender_permission)
+            }
+        }
+
+    private fun requestCalendarPermission() {
+        requestCalendarPermissionLauncher.launch(calendarPermission)
+    }
+
+    private fun retrieveCalendarEvents() {
+        val calendarUri = CalendarContract.Events.CONTENT_URI
+        val projection = arrayOf(
+            CalendarContract.Events._ID,
+            CalendarContract.Events.TITLE,
+            CalendarContract.Events.DTSTART
+        )
+        val selection = CalendarContract.Events.DTSTART + ">= ?"
+        val selectionArgs = arrayOf(System.currentTimeMillis().toString())
+        val sortOrder = CalendarContract.Events.DTSTART + " ASC"
+
+        val cursor: Cursor? = requireContext().contentResolver.query(
+            calendarUri,
+            projection,
+            selection,
+            selectionArgs,
+            sortOrder
+        )
+
+        cursor?.use {
+            if (it.moveToFirst()) {
+                val titleIndex = it.getColumnIndex(CalendarContract.Events.TITLE)
+                val title = it.getString(titleIndex)
+
+                val startDateIndex = it.getColumnIndex(CalendarContract.Events.DTSTART)
+                val startDateMillis = it.getLong(startDateIndex)
+
+                val calendar = Calendar.getInstance()
+                calendar.timeInMillis = startDateMillis
+
+                val localTimeZone = TimeZone.getDefault()
+                calendar.timeZone = localTimeZone
+
+                val localTime = SimpleDateFormat("hh:mm a EEE, MMM d", Locale.getDefault())
+                val localTimeFormatted = localTime.format(calendar.time)
+
+                val titleTimeFormatted = "$title @ $localTimeFormatted"
+
+
+                // Use the title and start date as needed
+                binding.latestEventText.text = titleTimeFormatted
+                binding.latestEventText.visibility = View.VISIBLE
+                Log.d("Calendar Event", "Title: $title, Start Date: $localTimeFormatted")
+            } else {
+                // No calendar events found
+                binding.latestEventText.visibility = View.GONE
+            }
+        }
     }
 
     @SuppressLint("ClickableViewAccessibility")

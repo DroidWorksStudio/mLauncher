@@ -10,6 +10,7 @@
         tools:ignore="QueryAllPackagesPermission" />
     <!--For opening alarm app-->
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
 
     <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
 
