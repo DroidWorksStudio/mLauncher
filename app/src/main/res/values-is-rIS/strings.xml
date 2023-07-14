@@ -23,6 +23,7 @@
     <string name="app_padding_size">Bólstrun Stærð</string>
     <string name="follow_accent_colors">Hreim litir</string>
     <string name="background_opacity">Ógagnsæi í bakgrunni</string>
+    <string name="all_apps_text">Birta texta allra forrita</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Sjálfvirk lyklaborð</string>
     <string name="auto_open_apps">Opna forrit sjálfkrafa</string>
@@ -34,6 +35,7 @@
     <string name="show_time">Sýningartími</string>
     <string name="show_date">Sýningardagsetning</string>
     <string name="show_battery">Sýna rafhlöðu</string>
+    <string name="show_calendar_event">Sýna dagatalsviðburð</string>
     <string name="lock_home_apps">Læstu forritum</string>
     <string name="extend_home_apps_area">Stækkaðu smellanlegt svæði</string>
     <string name="home_alignment_bottom">Heimaskjár stilla neðst</string>
@@ -98,6 +100,7 @@
     <string name="pin_number_match">Pin númer passa!</string>
     <string name="pin_number_do_not_match">Pinnanúmer passa ekki saman!</string>
     <!-- Unsorted Strings -->
+    <string name="denied_calender_permission">Þarf dagbókarleyfi.</string>
     <string name="show_apps">Öll forrit</string>
     <string name="drawer_list_empty_hint">Engin forrit fundust</string>
     <string name="long_press_for_settings">Ýttu lengi hvar sem er fyrir stillingar</string>

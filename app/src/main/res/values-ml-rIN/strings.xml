@@ -23,6 +23,7 @@
     <string name="app_padding_size">പാഡിംഗ് വലുപ്പം</string>
     <string name="follow_accent_colors">ആക്സന്റ് നിറങ്ങൾ</string>
     <string name="background_opacity">പശ്ചാത്തല അതാര്യത</string>
+    <string name="all_apps_text">എല്ലാ ആപ്പ് ടെക്‌സ്‌റ്റും പ്രദർശിപ്പിക്കുക</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">ഓട്ടോ ഷോ കീബോർഡ്</string>
     <string name="auto_open_apps">ആപ്പുകൾ സ്വയമേവ തുറക്കുക</string>
@@ -34,6 +35,7 @@
     <string name="show_time">പ്രദർശന സമയം</string>
     <string name="show_date">തീയതി കാണിക്കുക</string>
     <string name="show_battery">ബാറ്ററി കാണിക്കുക</string>
+    <string name="show_calendar_event">കലണ്ടർ ഇവന്റ് കാണിക്കുക</string>
     <string name="lock_home_apps">ആപ്പുകൾ ലോക്ക് ചെയ്യുക</string>
     <string name="extend_home_apps_area">ക്ലിക്ക് ചെയ്യാവുന്ന ഏരിയ വിപുലീകരിക്കുക</string>
     <string name="home_alignment_bottom">ഹോം സ്‌ക്രീൻ താഴെ വിന്യസിക്കുക</string>
@@ -98,6 +100,7 @@
     <string name="pin_number_match">പിൻ നമ്പറുകളുടെ പൊരുത്തം!</string>
     <string name="pin_number_do_not_match">പിൻ നമ്പറുകൾ പൊരുത്തപ്പെടുന്നില്ല!</string>
     <!-- Unsorted Strings -->
+    <string name="denied_calender_permission">കലണ്ടറിന്റെ അനുമതി ആവശ്യമാണ്.</string>
     <string name="show_apps">എല്ലാ ആപ്പുകളും</string>
     <string name="drawer_list_empty_hint">ആപ്പുകളൊന്നും കണ്ടെത്തിയില്ല</string>
     <string name="long_press_for_settings">ക്രമീകരണങ്ങൾക്കായി എവിടെയും ദീർഘനേരം അമർത്തുക</string>

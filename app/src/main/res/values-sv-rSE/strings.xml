@@ -23,6 +23,7 @@
     <string name="app_padding_size">Vadderingsstorlek</string>
     <string name="follow_accent_colors">Accentfärger</string>
     <string name="background_opacity">Bakgrundsopacitet</string>
+    <string name="all_apps_text">Visa alla appar text</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Öppna appar automatiskt</string>
@@ -34,6 +35,7 @@
     <string name="show_time">Visa tid</string>
     <string name="show_date">Visa datum</string>
     <string name="show_battery">Visa batteri</string>
+    <string name="show_calendar_event">Visa kalenderhändelse</string>
     <string name="lock_home_apps">Lås appar</string>
     <string name="extend_home_apps_area">Utöka klickbart område</string>
     <string name="home_alignment_bottom">Startskärmen anpassa botten</string>
@@ -98,6 +100,7 @@
     <string name="pin_number_match">Pinnummer matchar!</string>
     <string name="pin_number_do_not_match">Pinnummer matchar inte!</string>
     <!-- Unsorted Strings -->
+    <string name="denied_calender_permission">Behöver kalendertillstånd.</string>
     <string name="show_apps">Alla appar</string>
     <string name="drawer_list_empty_hint">Inga appar hittades</string>
     <string name="long_press_for_settings">Långtryck var som helst för inställningar</string>

@@ -23,6 +23,7 @@
     <string name="app_padding_size">Saiz Padding</string>
     <string name="follow_accent_colors">Warna Aksen</string>
     <string name="background_opacity">Kelegapan Latar Belakang</string>
+    <string name="all_apps_text">Paparkan Semua Teks Apl</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Papan kekunci paparan automatik</string>
     <string name="auto_open_apps">Auto buka apl</string>
@@ -34,6 +35,7 @@
     <string name="show_time">Masa pertunjukan</string>
     <string name="show_date">Tunjukkan tarikh</string>
     <string name="show_battery">Tunjukkan bateri</string>
+    <string name="show_calendar_event">Tunjukkan acara kalendar</string>
     <string name="lock_home_apps">Kunci Apl</string>
     <string name="extend_home_apps_area">Panjangkan kawasan boleh klik</string>
     <string name="home_alignment_bottom">Skrin utama menjajarkan bahagian bawah</string>
@@ -98,6 +100,7 @@
     <string name="pin_number_match">Nombor Pin Padanan!</string>
     <string name="pin_number_do_not_match">Nombor Pin tidak Padan!</string>
     <!-- Unsorted Strings -->
+    <string name="denied_calender_permission">Memerlukan kebenaran kalendar.</string>
     <string name="show_apps">Semua apl</string>
     <string name="drawer_list_empty_hint">Tiada apl ditemui</string>
     <string name="long_press_for_settings">Tekan lama di mana-mana untuk tetapan</string>

@@ -23,6 +23,7 @@
     <string name="app_padding_size">Daqs tal-ikkuttunar</string>
     <string name="follow_accent_colors">Kuluri Aċċent</string>
     <string name="background_opacity">Opaċità fl-isfond</string>
+    <string name="all_apps_text">Uri t-Test tal-Apps Kollha</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Tastiera juru awtomatika</string>
     <string name="auto_open_apps">Apps miftuħa awtomatikament</string>
@@ -34,6 +35,7 @@
     <string name="show_time">Uri l-ħin</string>
     <string name="show_date">Uri d-data</string>
     <string name="show_battery">Uri batterija</string>
+    <string name="show_calendar_event">Uri l-avveniment tal-kalendarju</string>
     <string name="lock_home_apps">Lock Apps</string>
     <string name="extend_home_apps_area">Estendi l-erja li tista\' tikklikkja</string>
     <string name="home_alignment_bottom">L-iskrin tad-dar tallinja qiegħ</string>
@@ -98,6 +100,7 @@
     <string name="pin_number_match">In-Numri tal-Pin Match!</string>
     <string name="pin_number_do_not_match">In-Numri tal-Pin ma jaqblux!</string>
     <!-- Unsorted Strings -->
+    <string name="denied_calender_permission">Jeħtieġ permess tal-kalendarju.</string>
     <string name="show_apps">L-apps kollha</string>
     <string name="drawer_list_empty_hint">Ma nstabet l-ebda app</string>
     <string name="long_press_for_settings">Agħfas fit-tul kullimkien għas-settings</string>

@@ -23,6 +23,7 @@
     <string name="app_padding_size">Μέγεθος padding</string>
     <string name="follow_accent_colors">Χρώματα έμφασης</string>
     <string name="background_opacity">Αδιαφάνεια φόντου</string>
+    <string name="all_apps_text">Εμφάνιση κειμένου όλων των εφαρμογών</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Αυτόματο άνοιγμα εφαρμογών</string>
@@ -34,6 +35,7 @@
     <string name="show_time">Εμφάνιση ώρας</string>
     <string name="show_date">Εμφάνιση ημερομηνίας</string>
     <string name="show_battery">Εμφάνιση μπαταρίας</string>
+    <string name="show_calendar_event">Εμφάνιση συμβάντος ημερολογίου</string>
     <string name="lock_home_apps">Κλείδωμα Εφαρμογών</string>
     <string name="extend_home_apps_area">Επέκταση ενεργής περιοχής</string>
     <string name="home_alignment_bottom">Στοίχιση κάτω της αρχικής οθόνης</string>
@@ -98,6 +100,7 @@
     <string name="pin_number_match">Ταιριάζουν αριθμοί καρφίτσας!</string>
     <string name="pin_number_do_not_match">Οι αριθμοί καρφίτσας δεν ταιριάζουν!</string>
     <!-- Unsorted Strings -->
+    <string name="denied_calender_permission">Χρειάζεται άδεια ημερολογίου.</string>
     <string name="show_apps">Όλες οι εφαρμογές</string>
     <string name="drawer_list_empty_hint">Δεν βρέθηκαν εφαρμογές</string>
     <string name="long_press_for_settings">Πατήστε παρατεταμένα οπουδήποτε για ρυθμίσεις</string>

@@ -23,6 +23,7 @@
     <string name="app_padding_size">Nullam Location</string>
     <string name="follow_accent_colors">Accent Colores</string>
     <string name="background_opacity">Background Opacity</string>
+    <string name="all_apps_text">Propono All Apps Text</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto ostendit tincidunt</string>
     <string name="auto_open_apps">Auto aperta apps</string>
@@ -34,6 +35,7 @@
     <string name="show_time">Ostende tempus</string>
     <string name="show_date">Ostende date</string>
     <string name="show_battery">Ostende altilium</string>
+    <string name="show_calendar_event">Ostende fastis res</string>
     <string name="lock_home_apps">cincinno Apps</string>
     <string name="extend_home_apps_area">Praetende clickable area</string>
     <string name="home_alignment_bottom">Domus screen color fundo</string>
@@ -98,6 +100,7 @@
     <string name="pin_number_match">Pin Numeri Match!</string>
     <string name="pin_number_do_not_match">Numeri pin non aequant!</string>
     <!-- Unsorted Strings -->
+    <string name="denied_calender_permission">Eget calendarium licentia.</string>
     <string name="show_apps">Omnes apps</string>
     <string name="drawer_list_empty_hint">Non apps invenerunt</string>
     <string name="long_press_for_settings">Long torcular huc ad occasus</string>

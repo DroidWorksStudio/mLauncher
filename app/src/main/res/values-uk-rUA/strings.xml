@@ -23,6 +23,7 @@
     <string name="app_padding_size">Розмір прокладки</string>
     <string name="follow_accent_colors">Акцентні кольори</string>
     <string name="background_opacity">Непрозорість фону</string>
+    <string name="all_apps_text">Показати текст усіх програм</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Автоматично відкривати додатки</string>
@@ -34,6 +35,7 @@
     <string name="show_time">Відображати час</string>
     <string name="show_date">Показати дату</string>
     <string name="show_battery">Показати акумулятор</string>
+    <string name="show_calendar_event">Показати подію календаря</string>
     <string name="lock_home_apps">Блокування програм</string>
     <string name="extend_home_apps_area">Розширити активну область</string>
     <string name="home_alignment_bottom">На домашньому екрані по нижній частині</string>
@@ -98,6 +100,7 @@
     <string name="pin_number_match">Пін-номера збігаються!</string>
     <string name="pin_number_do_not_match">PIN-коди не збігаються!</string>
     <!-- Unsorted Strings -->
+    <string name="denied_calender_permission">Потрібен дозвіл календаря.</string>
     <string name="show_apps">Всі програми</string>
     <string name="drawer_list_empty_hint">Додатки не знайдені</string>
     <string name="long_press_for_settings">Натисніть і утримуйте будь-де для налаштувань</string>

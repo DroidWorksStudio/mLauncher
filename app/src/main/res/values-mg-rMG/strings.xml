@@ -23,6 +23,7 @@
     <string name="app_padding_size">Haben\'ny padding</string>
     <string name="follow_accent_colors">Loko Accent</string>
     <string name="background_opacity">Opacity ambadika</string>
+    <string name="all_apps_text">Asehoy ny Lahatsoratra Apps rehetra</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Kitendry fampisehoana mandeha ho azy</string>
     <string name="auto_open_apps">Auto misokatra fampiharana</string>
@@ -34,6 +35,7 @@
     <string name="show_time">Fotoana fampisehoana</string>
     <string name="show_date">Asehoy ny daty</string>
     <string name="show_battery">Asehoy ny bateria</string>
+    <string name="show_calendar_event">Asehoy ny hetsika kalandrie</string>
     <string name="lock_home_apps">Lock Apps</string>
     <string name="extend_home_apps_area">Hanitatra ny faritra azo kitihina</string>
     <string name="home_alignment_bottom">Ampifanaraho ny ambany ny efijery</string>
@@ -98,6 +100,7 @@
     <string name="pin_number_match">Match Numbers Pin!</string>
     <string name="pin_number_do_not_match">Tsy mifanentana ny isa Pin!</string>
     <!-- Unsorted Strings -->
+    <string name="denied_calender_permission">Mila alalana kalandrie.</string>
     <string name="show_apps">Apps rehetra</string>
     <string name="drawer_list_empty_hint">Tsy misy fampiharana hita</string>
     <string name="long_press_for_settings">Tsindrio lava na aiza na aiza ho an\'ny fanovana</string>

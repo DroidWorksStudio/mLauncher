@@ -23,6 +23,7 @@
     <string name="app_padding_size">Boşluk Boyutu</string>
     <string name="follow_accent_colors">Vurgu Renkleri</string>
     <string name="background_opacity">Arka Plan Opaklığı</string>
+    <string name="all_apps_text">Tüm Uygulama Metinlerini Görüntüle</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Klavye\'yi otomatik göster</string>
     <string name="auto_open_apps">Uygulamaları otomatik aç</string>
@@ -34,6 +35,7 @@
     <string name="show_time">Zamanı göster</string>
     <string name="show_date">Tarih\'i göster</string>
     <string name="show_battery">Pil\'i göster</string>
+    <string name="show_calendar_event">Takvim etkinliğini göster</string>
     <string name="lock_home_apps">Uygulamaları Kilitle</string>
     <string name="extend_home_apps_area">Tıklanabilir alanı genişlet</string>
     <string name="home_alignment_bottom">Ana ekran alt hizalama</string>
@@ -98,6 +100,7 @@
     <string name="pin_number_match">Pin Numaraları Eşleşiyor!</string>
     <string name="pin_number_do_not_match">Pin Numaraları Eşleşmiyor!</string>
     <!-- Unsorted Strings -->
+    <string name="denied_calender_permission">Takvim izni gerekiyor.</string>
     <string name="show_apps">Tüm uygulamalar</string>
     <string name="drawer_list_empty_hint">Herhangi bir uygulama bulunamadı</string>
     <string name="long_press_for_settings">Ayarlar için herhangi bir yere uzun bas</string>

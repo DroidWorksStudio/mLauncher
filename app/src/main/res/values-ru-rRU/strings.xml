@@ -23,6 +23,7 @@
     <string name="app_padding_size">Размер заполнения</string>
     <string name="follow_accent_colors">Акцентные цвета</string>
     <string name="background_opacity">Непрозрачность фона</string>
+    <string name="all_apps_text">Отобразить текст всех приложений</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Автооткрытие приложений</string>
@@ -34,6 +35,7 @@
     <string name="show_time">Показать время</string>
     <string name="show_date">Показать дату</string>
     <string name="show_battery">Показать батарею</string>
+    <string name="show_calendar_event">Показать событие календаря</string>
     <string name="lock_home_apps">Заблокировать приложения</string>
     <string name="extend_home_apps_area">Продлить область клика</string>
     <string name="home_alignment_bottom">Выровнять на главном экране снизу</string>
@@ -98,6 +100,7 @@
     <string name="pin_number_match">Номера контактов совпадают!</string>
     <string name="pin_number_do_not_match">Номера пинов не совпадают!</string>
     <!-- Unsorted Strings -->
+    <string name="denied_calender_permission">Требуется разрешение календаря.</string>
     <string name="show_apps">Все приложения</string>
     <string name="drawer_list_empty_hint">Не найдено приложений</string>
     <string name="long_press_for_settings">Долгое нажатие в любом месте для настроек</string>

@@ -23,6 +23,7 @@
     <string name="app_padding_size">パディングサイズ</string>
     <string name="follow_accent_colors">アクセントカラー</string>
     <string name="background_opacity">背景の不透明度</string>
+    <string name="all_apps_text">すべてのアプリのテキストを表示</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">アプリを自動的に開く</string>
@@ -34,6 +35,7 @@
     <string name="show_time">時間を表示</string>
     <string name="show_date">日付を表示</string>
     <string name="show_battery">バッテリーを表示</string>
+    <string name="show_calendar_event">カレンダーイベントを表示</string>
     <string name="lock_home_apps">アプリをロック</string>
     <string name="extend_home_apps_area">クリック可能な領域を拡張</string>
     <string name="home_alignment_bottom">ホーム画面下部を揃え</string>
@@ -98,6 +100,7 @@
     <string name="pin_number_match">ピン番号一致！</string>
     <string name="pin_number_do_not_match">ピン番号が一致しません!</string>
     <!-- Unsorted Strings -->
+    <string name="denied_calender_permission">カレンダーの許可が必要です。</string>
     <string name="show_apps">すべてのアプリ</string>
     <string name="drawer_list_empty_hint">アプリが見つかりません</string>
     <string name="long_press_for_settings">設定用に長押ししてください</string>

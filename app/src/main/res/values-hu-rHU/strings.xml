@@ -23,6 +23,7 @@
     <string name="app_padding_size">Padding Méret</string>
     <string name="follow_accent_colors">Kiemelt színek</string>
     <string name="background_opacity">Háttér átlátszatlanság</string>
+    <string name="all_apps_text">Az összes alkalmazás szövegének megjelenítése</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Autókiállítás billentyűzet</string>
     <string name="auto_open_apps">Automatikusan megnyíló alkalmazások</string>
@@ -34,6 +35,7 @@
     <string name="show_time">Show time</string>
     <string name="show_date">Megjelenés dátuma</string>
     <string name="show_battery">Mutasd az akkumulátort</string>
+    <string name="show_calendar_event">Naptáresemény megjelenítése</string>
     <string name="lock_home_apps">Alkalmazások zárolása</string>
     <string name="extend_home_apps_area">Kattintható terület bővítése</string>
     <string name="home_alignment_bottom">Kezdőképernyő alulra igazítása</string>
@@ -98,6 +100,7 @@
     <string name="pin_number_match">Egyező PIN-számok!</string>
     <string name="pin_number_do_not_match">A PIN-számok nem egyeznek!</string>
     <!-- Unsorted Strings -->
+    <string name="denied_calender_permission">Naptári engedély szükséges.</string>
     <string name="show_apps">Minden alkalmazás</string>
     <string name="drawer_list_empty_hint">Nem találtunk alkalmazásokat</string>
     <string name="long_press_for_settings">Hosszan nyomja meg bárhol a beállításokhoz</string>

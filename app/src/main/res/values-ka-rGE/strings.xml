@@ -23,6 +23,7 @@
     <string name="app_padding_size">ბალიშის ზომა</string>
     <string name="follow_accent_colors">აქცენტის ფერები</string>
     <string name="background_opacity">ფონის გამჭვირვალობა</string>
+    <string name="all_apps_text">ყველა აპის ტექსტის ჩვენება</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">ავტომატური ჩვენების კლავიატურა</string>
     <string name="auto_open_apps">აპების ავტომატური გახსნა</string>
@@ -34,6 +35,7 @@
     <string name="show_time">Შოუს დრო</string>
     <string name="show_date">თარიღის ჩვენება</string>
     <string name="show_battery">ბატარეის ჩვენება</string>
+    <string name="show_calendar_event">კალენდარული მოვლენის ჩვენება</string>
     <string name="lock_home_apps">აპების ჩაკეტვა</string>
     <string name="extend_home_apps_area">გააფართოვეთ დაწკაპუნებადი ტერიტორია</string>
     <string name="home_alignment_bottom">საწყისი ეკრანის გასწორება ბოლოში</string>
@@ -98,6 +100,7 @@
     <string name="pin_number_match">Pin Numbers Match!</string>
     <string name="pin_number_do_not_match">პინის ნომრები არ ემთხვევა!</string>
     <!-- Unsorted Strings -->
+    <string name="denied_calender_permission">საჭიროებს კალენდრის ნებართვას.</string>
     <string name="show_apps">ყველა აპლიკაცია</string>
     <string name="drawer_list_empty_hint">აპები ვერ მოიძებნა</string>
     <string name="long_press_for_settings">დიდხანს დააჭირეთ სადმე პარამეტრებისთვის</string>

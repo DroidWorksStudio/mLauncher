@@ -23,6 +23,7 @@
     <string name="app_padding_size">ขนาดช่องว่างภายใน</string>
     <string name="follow_accent_colors">เน้นสี</string>
     <string name="background_opacity">ความทึบของพื้นหลัง</string>
+    <string name="all_apps_text">แสดงข้อความแอพทั้งหมด</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">แป้นพิมพ์แสดงอัตโนมัติ</string>
     <string name="auto_open_apps">เปิดแอปอัตโนมัติ</string>
@@ -34,6 +35,7 @@
     <string name="show_time">เวลาแสดง</string>
     <string name="show_date">แสดงวันที่</string>
     <string name="show_battery">แสดงแบตเตอรี่</string>
+    <string name="show_calendar_event">แสดงกิจกรรมในปฏิทิน</string>
     <string name="lock_home_apps">ล็อคแอพ</string>
     <string name="extend_home_apps_area">ขยายพื้นที่ที่คลิกได้</string>
     <string name="home_alignment_bottom">หน้าจอหลักจัดตำแหน่งด้านล่าง</string>
@@ -98,6 +100,7 @@
     <string name="pin_number_match">พินเลขตรงกัน!</string>
     <string name="pin_number_do_not_match">เลขพินไม่ตรงกัน!</string>
     <!-- Unsorted Strings -->
+    <string name="denied_calender_permission">ต้องได้รับอนุญาตจากปฏิทิน</string>
     <string name="show_apps">แอพทั้งหมด</string>
     <string name="drawer_list_empty_hint">ไม่พบแอป</string>
     <string name="long_press_for_settings">กดที่ใดก็ได้ค้างไว้เพื่อตั้งค่า</string>

@@ -23,6 +23,7 @@
     <string name="app_padding_size">Laki ng Padding</string>
     <string name="follow_accent_colors">Mga Kulay ng Accent</string>
     <string name="background_opacity">Opacity ng Background</string>
+    <string name="all_apps_text">Ipakita ang Lahat ng Teksto ng Apps</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show na keyboard</string>
     <string name="auto_open_apps">Awtomatikong buksan ang mga app</string>
@@ -34,6 +35,7 @@
     <string name="show_time">Oras ng palabas</string>
     <string name="show_date">Ipakita ang petsa</string>
     <string name="show_battery">Ipakita ang baterya</string>
+    <string name="show_calendar_event">Ipakita ang kaganapan sa kalendaryo</string>
     <string name="lock_home_apps">I-lock ang Apps</string>
     <string name="extend_home_apps_area">Palawakin ang naki-click na lugar</string>
     <string name="home_alignment_bottom">I-align sa ibaba ang home screen</string>
@@ -98,6 +100,7 @@
     <string name="pin_number_match">Tugma ang Mga Numero ng Pin!</string>
     <string name="pin_number_do_not_match">Hindi Magtutugma ang Mga Pin Number!</string>
     <!-- Unsorted Strings -->
+    <string name="denied_calender_permission">Kailangan ng pahintulot sa kalendaryo.</string>
     <string name="show_apps">Lahat ng app</string>
     <string name="drawer_list_empty_hint">Walang nakitang app</string>
     <string name="long_press_for_settings">Pindutin nang matagal kahit saan para sa mga setting</string>

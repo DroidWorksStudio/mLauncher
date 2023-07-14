@@ -23,6 +23,7 @@
     <string name="app_padding_size">حجم الحشوة</string>
     <string name="follow_accent_colors">ألوان مميزة</string>
     <string name="background_opacity">شفافية الخلفية</string>
+    <string name="all_apps_text">عرض نص كل التطبيقات</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">فتح التطبيقات تلقائياً</string>
@@ -34,6 +35,7 @@
     <string name="show_time">إظهار الوقت</string>
     <string name="show_date">إظهار التاريخ</string>
     <string name="show_battery">عرض البطارية</string>
+    <string name="show_calendar_event">إظهار حدث التقويم</string>
     <string name="lock_home_apps">قفل التطبيقات</string>
     <string name="extend_home_apps_area">توسيع المنطقة القابلة للنقر</string>
     <string name="home_alignment_bottom">أسفل الشاشة الرئيسية محاذاة</string>
@@ -98,6 +100,7 @@
     <string name="pin_number_match">تطابق أرقام الدبوس!</string>
     <string name="pin_number_do_not_match">أرقام التعريف الشخصي غير متطابقة!</string>
     <!-- Unsorted Strings -->
+    <string name="denied_calender_permission">يحتاج إلى إذن التقويم.</string>
     <string name="show_apps">جميع التطبيقات</string>
     <string name="drawer_list_empty_hint">لم يتم العثور على تطبيقات</string>
     <string name="long_press_for_settings">اضغط مطولاً في أي مكان للإعدادات</string>

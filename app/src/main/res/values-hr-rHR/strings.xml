@@ -23,6 +23,7 @@
     <string name="app_padding_size">Veličina podloge</string>
     <string name="follow_accent_colors">Naglašene boje</string>
     <string name="background_opacity">Neprozirnost pozadine</string>
+    <string name="all_apps_text">Prikaz teksta svih aplikacija</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Automatski prikaz tipkovnice</string>
     <string name="auto_open_apps">Automatsko otvaranje aplikacija</string>
@@ -34,6 +35,7 @@
     <string name="show_time">Pokaži vrijeme</string>
     <string name="show_date">Prikaži datum</string>
     <string name="show_battery">Prikaži bateriju</string>
+    <string name="show_calendar_event">Prikaži događaj u kalendaru</string>
     <string name="lock_home_apps">Zaključaj aplikacije</string>
     <string name="extend_home_apps_area">Proširite područje koje se može kliknuti</string>
     <string name="home_alignment_bottom">Početni zaslon poravnajte s dnom</string>
@@ -98,6 +100,7 @@
     <string name="pin_number_match">PIN brojevi se podudaraju!</string>
     <string name="pin_number_do_not_match">Pin brojevi se ne podudaraju!</string>
     <!-- Unsorted Strings -->
+    <string name="denied_calender_permission">Potrebno je dopuštenje kalendara.</string>
     <string name="show_apps">Sve aplikacije</string>
     <string name="drawer_list_empty_hint">Nema pronađenih aplikacija</string>
     <string name="long_press_for_settings">Dugo pritisnite bilo gdje za postavke</string>
