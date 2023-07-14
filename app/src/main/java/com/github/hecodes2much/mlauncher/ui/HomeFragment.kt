@@ -14,7 +14,6 @@ import android.os.Bundle
 import android.os.Vibrator
 import android.provider.CalendarContract
 import android.text.format.DateFormat
-import android.text.format.DateFormat.getBestDateTimePattern
 import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
@@ -149,13 +148,13 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         requireContext().registerReceiver(batteryReceiver, filter)
 
         val locale = prefs.language.locale()
-        val best12 = getBestDateTimePattern(locale, "hhmma")
-        val best24 = getBestDateTimePattern(locale, "HHmm")
+        val best12 = DateFormat.getBestDateTimePattern(locale, "hhmma")
+        val best24 = DateFormat.getBestDateTimePattern(locale, "HHmm")
         binding.clock.format12Hour = best12
         binding.clock.format24Hour = best24
 
-        val best12Date = getBestDateTimePattern(locale, "edMMMy")
-        val best24Date = getBestDateTimePattern(locale,"edMMMy")
+        val best12Date = DateFormat.getBestDateTimePattern(locale, "edMMMy")
+        val best24Date = DateFormat.getBestDateTimePattern(locale,"edMMMy")
         binding.date.format12Hour = best12Date
         binding.date.format24Hour = best24Date
 
@@ -289,11 +288,11 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
                 val locale = prefs.language.locale()
                 val localTime = if(is24HourFormat()) {
-                    getBestDateTimePattern(locale, "HHmm")
+                    DateFormat.getBestDateTimePattern(locale, "HHmm")
                 } else {
-                    getBestDateTimePattern(locale, "hhmma")
+                    DateFormat.getBestDateTimePattern(locale, "hhmma")
                 }
-                val localDate = getBestDateTimePattern(locale,"edMMMy")
+                val localDate = DateFormat.getBestDateTimePattern(locale,"edMMMy")
 
                 val localTimeDate = SimpleDateFormat("$localTime $localDate", Locale.getDefault())
                 val localTimeFormatted = localTimeDate.format(calendar.time)
