@@ -1,5 +1,14 @@
 # Changelog
 
+## [Coming Soon](https://github.com/HeCodes2Much/mLauncher/tree/HEAD)
+
+[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/1.1.2...HEAD)
+
+**Implemented enhancements:**
+
+- \[Enhancement\] Simple schedule next to the clocb [\#288](https://github.com/HeCodes2Much/mLauncher/issues/288)
+- FEAT: Added Calender events to the home screen. [\#289](https://github.com/HeCodes2Much/mLauncher/pull/289) ([The-Repo-Club](https://github.com/The-Repo-Club))
+
 ## [1.1.2](https://github.com/HeCodes2Much/mLauncher/tree/1.1.2) ( 8, July 2023)
 
 [Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/1.1.1...1.1.2)
