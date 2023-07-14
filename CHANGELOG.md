@@ -1,5 +1,13 @@
 # Changelog
 
+## [Coming Soon](https://github.com/HeCodes2Much/mLauncher/tree/HEAD)
+
+[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/1.2.0...HEAD)
+
+**Fixed bugs:**
+
+- BUG: Fix the time and date formatting on home page [\#295](https://github.com/HeCodes2Much/mLauncher/pull/295) ([The-Repo-Club](https://github.com/The-Repo-Club))
+
 ## [1.2.0](https://github.com/HeCodes2Much/mLauncher/tree/1.2.0) (14, July 2023)
 
 [Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/1.1.2...1.2.0)
