@@ -13,6 +13,7 @@ import android.os.Build
 import android.os.Bundle
 import android.os.Vibrator
 import android.provider.CalendarContract
+import android.text.format.DateFormat
 import android.text.format.DateFormat.getBestDateTimePattern
 import android.util.Log
 import android.view.Gravity
@@ -153,8 +154,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         binding.clock.format12Hour = best12
         binding.clock.format24Hour = best24
 
-        val best12Date = getBestDateTimePattern(locale, "eeeddMMM")
-        val best24Date = getBestDateTimePattern(locale,"eeeddMMM")
+        val best12Date = getBestDateTimePattern(locale, "edMMMy")
+        val best24Date = getBestDateTimePattern(locale,"edMMMy")
         binding.date.format12Hour = best12Date
         binding.date.format24Hour = best24Date
 
@@ -208,6 +209,25 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         val name = prefs.getHomeAppModel(n).appLabel
         showAppList(AppDrawerFlag.SetHomeApp, name.isNotEmpty(), n)
         return true
+    }
+
+    // Function to check if the device is set to a 24-hour format
+    private fun is24HourFormat(): Boolean {
+        val calendar = Calendar.getInstance()
+        val is24Hour = DateFormat.is24HourFormat(context) // Replace 'context' with your app's context
+
+        // Get the time format based on the device's settings
+        return if (is24Hour) {
+            // Device is set to 24-hour format
+            true
+        } else {
+            // Device is set to 12-hour format
+            val hour = calendar.get(Calendar.HOUR)
+            val amPm = DateFormat.format("a", calendar).toString()
+
+            // Check if the time format is actually 12-hour or 24-hour
+            hour in 1..11 && amPm.equals("am", ignoreCase = true) || hour == 12 && amPm.equals("pm", ignoreCase = true)
+        }
     }
 
     private fun isCalendarPermissionGranted(): Boolean {
@@ -267,8 +287,16 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 val localTimeZone = TimeZone.getDefault()
                 calendar.timeZone = localTimeZone
 
-                val localTime = SimpleDateFormat("hh:mm a EEE, MMM d", Locale.getDefault())
-                val localTimeFormatted = localTime.format(calendar.time)
+                val locale = prefs.language.locale()
+                val localTime = if(is24HourFormat()) {
+                    getBestDateTimePattern(locale, "HHmm")
+                } else {
+                    getBestDateTimePattern(locale, "hhmma")
+                }
+                val localDate = getBestDateTimePattern(locale,"edMMMy")
+
+                val localTimeDate = SimpleDateFormat("$localTime $localDate", Locale.getDefault())
+                val localTimeFormatted = localTimeDate.format(calendar.time)
 
                 val titleFormatted = "$title @"
 
