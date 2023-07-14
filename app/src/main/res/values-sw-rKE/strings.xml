@@ -23,6 +23,7 @@
     <string name="app_padding_size">Ukubwa wa Padding</string>
     <string name="follow_accent_colors">Rangi Lafudhi</string>
     <string name="background_opacity">Uwazi wa Mandharinyuma</string>
+    <string name="all_apps_text">Onyesha Maandishi ya Programu Zote</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Onyesha kibodi kiotomatiki</string>
     <string name="auto_open_apps">Fungua programu kiotomatiki</string>
@@ -34,6 +35,7 @@
     <string name="show_time">Onyesha wakati</string>
     <string name="show_date">Onyesha tarehe</string>
     <string name="show_battery">Onyesha betri</string>
+    <string name="show_calendar_event">Onyesha tukio la kalenda</string>
     <string name="lock_home_apps">Funga Programu</string>
     <string name="extend_home_apps_area">Panua eneo linaloweza kubofya</string>
     <string name="home_alignment_bottom">Pangilia skrini ya nyumbani chini</string>
@@ -98,6 +100,7 @@
     <string name="pin_number_match">Bandika Nambari Zinazolingana!</string>
     <string name="pin_number_do_not_match">Nambari za siri hazilingani!</string>
     <!-- Unsorted Strings -->
+    <string name="denied_calender_permission">Inahitaji ruhusa ya kalenda.</string>
     <string name="show_apps">Programu zote</string>
     <string name="drawer_list_empty_hint">Hakuna programu zilizopatikana</string>
     <string name="long_press_for_settings">Bonyeza kwa muda mrefu mahali popote kwa mipangilio</string>
