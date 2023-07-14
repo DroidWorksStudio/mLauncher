@@ -23,6 +23,7 @@
     <string name="app_padding_size">اندازه بالشتک</string>
     <string name="follow_accent_colors">رنگ های تاکیدی</string>
     <string name="background_opacity">کدورت پس زمینه</string>
+    <string name="all_apps_text">نمایش متن همه برنامه ها</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">صفحه کلید نمایش خودکار</string>
     <string name="auto_open_apps">باز کردن خودکار برنامه ها</string>
@@ -34,6 +35,7 @@
     <string name="show_time">نمایش زمان</string>
     <string name="show_date">نمایش تاریخ</string>
     <string name="show_battery">نمایش باتری</string>
+    <string name="show_calendar_event">نمایش رویداد تقویم</string>
     <string name="lock_home_apps">قفل کردن برنامه ها</string>
     <string name="extend_home_apps_area">منطقه قابل کلیک را گسترش دهید</string>
     <string name="home_alignment_bottom">تراز کردن صفحه اصلی پایین</string>
@@ -98,6 +100,7 @@
     <string name="pin_number_match">پین اعداد مطابقت دارند!</string>
     <string name="pin_number_do_not_match">شماره پین مطابقت ندارد!</string>
     <!-- Unsorted Strings -->
+    <string name="denied_calender_permission">به مجوز تقویم نیاز دارد.</string>
     <string name="show_apps">همه برنامه ها</string>
     <string name="drawer_list_empty_hint">هیچ برنامه ای پیدا نشد</string>
     <string name="long_press_for_settings">برای تنظیمات، هر جایی را به مدت طولانی فشار دهید</string>
