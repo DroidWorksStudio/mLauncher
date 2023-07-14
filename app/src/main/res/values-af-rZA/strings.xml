@@ -23,6 +23,7 @@
     <string name="app_padding_size">Opvulling Grootte</string>
     <string name="follow_accent_colors">Aksentkleure</string>
     <string name="background_opacity">Agtergrond ondeursigtigheid</string>
+    <string name="all_apps_text">Wys alle toepassings se teks</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Auto open apps</string>
@@ -34,6 +35,7 @@
     <string name="show_time">Show time</string>
     <string name="show_date">Show date</string>
     <string name="show_battery">Wys battery</string>
+    <string name="show_calendar_event">Wys kalendergeleentheid</string>
     <string name="lock_home_apps">Lock Apps</string>
     <string name="extend_home_apps_area">Extend clickable area</string>
     <string name="home_alignment_bottom">Home screen align bottom</string>
@@ -98,6 +100,7 @@
     <string name="pin_number_match">Speldnommers pas by!</string>
     <string name="pin_number_do_not_match">Pennommers stem nie ooreen nie!</string>
     <!-- Unsorted Strings -->
+    <string name="denied_calender_permission">Benodig kalender toestemming.</string>
     <string name="show_apps">All apps</string>
     <string name="drawer_list_empty_hint">No apps found</string>
     <string name="long_press_for_settings">Long press anywhere for settings</string>
