@@ -23,6 +23,7 @@
     <string name="app_padding_size">Polstring størrelse</string>
     <string name="follow_accent_colors">Accent farver</string>
     <string name="background_opacity">Baggrundsopacitet</string>
+    <string name="all_apps_text">Vis alle apps tekst</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Åbn apps automatisk</string>
@@ -34,6 +35,7 @@
     <string name="show_time">Vis tid</string>
     <string name="show_date">Vis dato</string>
     <string name="show_battery">Vis batteri</string>
+    <string name="show_calendar_event">Vis kalenderbegivenhed</string>
     <string name="lock_home_apps">Lås Apps</string>
     <string name="extend_home_apps_area">Udvid klikbart område</string>
     <string name="home_alignment_bottom">Startskærm justeret nederst</string>
@@ -98,6 +100,7 @@
     <string name="pin_number_match">Pin-numre matcher!</string>
     <string name="pin_number_do_not_match">Pin-numre stemmer ikke overens!</string>
     <!-- Unsorted Strings -->
+    <string name="denied_calender_permission">Kræver kalendertilladelse.</string>
     <string name="show_apps">Alle apps</string>
     <string name="drawer_list_empty_hint">Ingen apps fundet</string>
     <string name="long_press_for_settings">Langt tryk hvor som helst for indstillinger</string>
