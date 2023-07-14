@@ -228,7 +228,7 @@ class Prefs(val context: Context) {
         set(value) = prefs.edit().putBoolean(SHOW_BATTERY, value).apply()
 
     var showCalendarEvent: Boolean
-        get() = prefs.getBoolean(SHOW_CALENDER_EVENT, true)
+        get() = prefs.getBoolean(SHOW_CALENDER_EVENT, false)
         set(value) = prefs.edit().putBoolean(SHOW_CALENDER_EVENT, value).apply()
 
     var homeLocked: Boolean
