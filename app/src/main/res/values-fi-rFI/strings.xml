@@ -23,6 +23,7 @@
     <string name="app_padding_size">Pehmusteen koko</string>
     <string name="follow_accent_colors">Korostusvärit</string>
     <string name="background_opacity">Taustan läpinäkymättömyys</string>
+    <string name="all_apps_text">Näytä Kaikki sovellukset -teksti</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Automaattiset sovellukset</string>
@@ -34,6 +35,7 @@
     <string name="show_time">Näytä aika</string>
     <string name="show_date">Näytä päivämäärä</string>
     <string name="show_battery">Näytä akku</string>
+    <string name="show_calendar_event">Näytä kalenteritapahtuma</string>
     <string name="lock_home_apps">Lukitse Sovellukset</string>
     <string name="extend_home_apps_area">Laajenna klikattava alue</string>
     <string name="home_alignment_bottom">Aloitusnäytön tasaus alareunaan</string>
@@ -98,6 +100,7 @@
     <string name="pin_number_match">Pin-numerot täsmäävät!</string>
     <string name="pin_number_do_not_match">Pin-numerot eivät täsmää!</string>
     <!-- Unsorted Strings -->
+    <string name="denied_calender_permission">Vaatii kalenterin luvan.</string>
     <string name="show_apps">Kaikki sovellukset</string>
     <string name="drawer_list_empty_hint">Sovelluksia ei löytynyt</string>
     <string name="long_press_for_settings">Paina pitkään saadaksesi asetuksia</string>
