@@ -23,6 +23,7 @@
     <string name="app_padding_size">پيڊنگ جي ماپ</string>
     <string name="follow_accent_colors">تلفظ رنگ</string>
     <string name="background_opacity">پس منظر جي شفافيت</string>
+    <string name="all_apps_text">سڀ ائپس ٽيڪسٽ ڏيکاريو</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">خودڪار ڏيکاريو ڪيبورڊ</string>
     <string name="auto_open_apps">خودڪار کوليو ايپس</string>
@@ -34,6 +35,7 @@
     <string name="show_time">وقت ڏيکاريو</string>
     <string name="show_date">تاريخ ڏيکاريو</string>
     <string name="show_battery">بيٽري ڏيکاريو</string>
+    <string name="show_calendar_event">ڪئلينڊر وارو واقعو ڏيکاريو</string>
     <string name="lock_home_apps">ائپس کي بند ڪريو</string>
     <string name="extend_home_apps_area">ڪلڪ قابل علائقو وڌايو</string>
     <string name="home_alignment_bottom">گھر جي اسڪرين ھيٺان ترتيب ڏيو</string>
@@ -98,6 +100,7 @@
     <string name="pin_number_match">پن نمبر ملائي!</string>
     <string name="pin_number_do_not_match">پن نمبر نه ملندا آهن!</string>
     <!-- Unsorted Strings -->
+    <string name="denied_calender_permission">ڪئلينڊر جي اجازت جي ضرورت آهي.</string>
     <string name="show_apps">سڀ ائپس</string>
     <string name="drawer_list_empty_hint">ڪابه ايپس نه ملي</string>
     <string name="long_press_for_settings">سيٽنگون لاءِ ڪٿي به ڊگھو دٻايو</string>
