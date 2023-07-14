@@ -1,8 +1,8 @@
 # Changelog
 
-## [1.2.0](https://github.com/HeCodes2Much/mLauncher/tree/1.2.0) (14, July 2023)
+## [Coming Soon](https://github.com/HeCodes2Much/mLauncher/tree/HEAD)
 
-[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/1.1.2...1.2.0)
+[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/1.1.2...HEAD)
 
 **Implemented enhancements:**
 
@@ -11,6 +11,7 @@
 
 **Merged pull requests:**
 
+- New Crowdin updates [\#292](https://github.com/HeCodes2Much/mLauncher/pull/292) ([The-Repo-Club](https://github.com/The-Repo-Club))
 - Release: Update version to 65 \(v1.2.0\) [\#290](https://github.com/HeCodes2Much/mLauncher/pull/290) ([The-Repo-Club](https://github.com/The-Repo-Club))
 
 ## [1.1.2](https://github.com/HeCodes2Much/mLauncher/tree/1.1.2) ( 8, July 2023)
