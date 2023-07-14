@@ -23,6 +23,7 @@
     <string name="app_padding_size">Pamušalo dydis</string>
     <string name="follow_accent_colors">Akcentinės spalvos</string>
     <string name="background_opacity">Fono neskaidrumas</string>
+    <string name="all_apps_text">Rodyti visų programų tekstą</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Automatinis klaviatūros rodymas</string>
     <string name="auto_open_apps">Automatiškai atidaryti programėlės</string>
@@ -34,6 +35,7 @@
     <string name="show_time">Rodyti laiką</string>
     <string name="show_date">Rodyti datą</string>
     <string name="show_battery">Rodyti akumuliatorių</string>
+    <string name="show_calendar_event">Rodyti kalendoriaus įvykį</string>
     <string name="lock_home_apps">Užrakinti programas</string>
     <string name="extend_home_apps_area">Išplėskite spustelėjamą sritį</string>
     <string name="home_alignment_bottom">Pradinio ekrano lygiavimas apačioje</string>
@@ -98,6 +100,7 @@
     <string name="pin_number_match">Sutampa PIN numeriai!</string>
     <string name="pin_number_do_not_match">Pin numeriai nesutampa!</string>
     <!-- Unsorted Strings -->
+    <string name="denied_calender_permission">Reikia kalendoriaus leidimo.</string>
     <string name="show_apps">Visos programėlės</string>
     <string name="drawer_list_empty_hint">Nerasta jokių programėlių</string>
     <string name="long_press_for_settings">Ilgai paspauskite bet kur, kad pamatytumėte nustatymus</string>
