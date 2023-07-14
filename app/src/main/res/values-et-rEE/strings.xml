@@ -23,6 +23,7 @@
     <string name="app_padding_size">Polsterduse suurus</string>
     <string name="follow_accent_colors">Aktsentvärvid</string>
     <string name="background_opacity">Tausta läbipaistmatus</string>
+    <string name="all_apps_text">Kuva kõigi rakenduste tekst</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Autoesituse klaviatuur</string>
     <string name="auto_open_apps">Automaatselt avatud rakendused</string>
@@ -34,6 +35,7 @@
     <string name="show_time">Näita aega</string>
     <string name="show_date">Näita kuupäeva</string>
     <string name="show_battery">Näita akut</string>
+    <string name="show_calendar_event">Kuva kalendrisündmus</string>
     <string name="lock_home_apps">Lukustage rakendused</string>
     <string name="extend_home_apps_area">Laiendada klikitav ala</string>
     <string name="home_alignment_bottom">Esialguse ekraani joondamine allapoole</string>
@@ -98,6 +100,7 @@
     <string name="pin_number_match">Pin numbrid sobivad!</string>
     <string name="pin_number_do_not_match">Pin numbrid ei ühti!</string>
     <!-- Unsorted Strings -->
+    <string name="denied_calender_permission">Vajab kalendri luba.</string>
     <string name="show_apps">Kõik rakendused</string>
     <string name="drawer_list_empty_hint">Rakendusi ei leitud</string>
     <string name="long_press_for_settings">Vajutage pikalt kuskil seadete jaoks</string>
