@@ -23,6 +23,7 @@
     <string name="app_padding_size">Размер на подложката</string>
     <string name="follow_accent_colors">Акцентни цветове</string>
     <string name="background_opacity">Непрозрачност на фона</string>
+    <string name="all_apps_text">Показване на текст на всички приложения</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Клавиатура за автошоу</string>
     <string name="auto_open_apps">Автоматично отваряне на приложения</string>
@@ -34,6 +35,7 @@
     <string name="show_time">Време за показване</string>
     <string name="show_date">Дата на показване</string>
     <string name="show_battery">Показване на батерията</string>
+    <string name="show_calendar_event">Показване на събитие в календара</string>
     <string name="lock_home_apps">Приложения за заключване</string>
     <string name="extend_home_apps_area">Разширяване на зоната за кликване</string>
     <string name="home_alignment_bottom">Изравняване на долната част на началния екран</string>
@@ -98,6 +100,7 @@
     <string name="pin_number_match">Pin номера съвпадат!</string>
     <string name="pin_number_do_not_match">ПИН номерата не съвпадат!</string>
     <!-- Unsorted Strings -->
+    <string name="denied_calender_permission">Нуждае се от разрешение за календар.</string>
     <string name="show_apps">Всички приложения</string>
     <string name="drawer_list_empty_hint">Не са намерени приложения</string>
     <string name="long_press_for_settings">Дълго натискане навсякъде за настройки</string>
