@@ -23,6 +23,7 @@
     <string name="app_padding_size">Polstring Størrelse</string>
     <string name="follow_accent_colors">Aksentfarger</string>
     <string name="background_opacity">Bakgrunns gjennomsiktighet</string>
+    <string name="all_apps_text">Vis all apptekst</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Åpne apper automatisk</string>
@@ -34,6 +35,7 @@
     <string name="show_time">Vis tid</string>
     <string name="show_date">Vis dato</string>
     <string name="show_battery">Vis batteri</string>
+    <string name="show_calendar_event">Vis kalenderhendelse</string>
     <string name="lock_home_apps">Lås apper</string>
     <string name="extend_home_apps_area">Utvid klikkbart område</string>
     <string name="home_alignment_bottom">Juster bunnen på startskjermen</string>
@@ -98,6 +100,7 @@
     <string name="pin_number_match">Pin Numbers Match!</string>
     <string name="pin_number_do_not_match">Pin-nummer stemmer ikke!</string>
     <!-- Unsorted Strings -->
+    <string name="denied_calender_permission">Trenger kalendertillatelse.</string>
     <string name="show_apps">Alle apper</string>
     <string name="drawer_list_empty_hint">Ingen apper funnet</string>
     <string name="long_press_for_settings">Langt trykk hvor som helst for innstillinger</string>
