@@ -82,6 +82,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             }
         } else {
             binding.latestEventText.visibility = View.GONE
+            binding.latestEventDate.visibility = View.GONE
         }
 
         val hex = getHexForOpacity(requireContext(), prefs)
@@ -115,6 +116,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             binding.date.typeface = typeface
             binding.batteryText.typeface = typeface
             binding.setDefaultLauncher.typeface = typeface
+            binding.latestEventText.typeface = typeface
+            binding.latestEventDate.typeface = typeface
         }
         binding.batteryIcon.typeface = typeface
 
@@ -127,10 +130,13 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             binding.batteryIcon.setTextColor(fontColor)
             binding.batteryText.setTextColor(fontColor)
             binding.setDefaultLauncher.setTextColor(fontColor)
+            binding.latestEventText.setTextColor(fontColor)
+            binding.latestEventDate.setTextColor(fontColor)
         }
 
         // After retrieving the latest calendar event
         binding.latestEventText.textSize = prefs.textSizeLauncher.toFloat() / 1.2f
+        binding.latestEventDate.textSize = prefs.textSizeLauncher.toFloat() / 1.2f
     }
 
     override fun onResume() {
@@ -220,6 +226,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 // Permission denied, handle accordingly
                 Log.d("Calendar Event", getString(R.string.denied_calender_permission))
                 binding.latestEventText.text = getString(R.string.denied_calender_permission)
+                binding.latestEventDate.visibility = View.GONE
             }
         }
 
@@ -263,16 +270,18 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 val localTime = SimpleDateFormat("hh:mm a EEE, MMM d", Locale.getDefault())
                 val localTimeFormatted = localTime.format(calendar.time)
 
-                val titleTimeFormatted = "$title @ $localTimeFormatted"
-
+                val titleFormatted = "$title @"
 
                 // Use the title and start date as needed
-                binding.latestEventText.text = titleTimeFormatted
+                binding.latestEventText.text = titleFormatted
+                binding.latestEventDate.text = localTimeFormatted
                 binding.latestEventText.visibility = View.VISIBLE
+                binding.latestEventDate.visibility = View.VISIBLE
                 Log.d("Calendar Event", "Title: $title, Start Date: $localTimeFormatted")
             } else {
                 // No calendar events found
                 binding.latestEventText.visibility = View.GONE
+                binding.latestEventDate.visibility = View.GONE
             }
         }
     }
