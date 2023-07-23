@@ -52,19 +52,19 @@ class BatteryReceiver : BroadcastReceiver() {
         val icon: String
         @Suppress("UNUSED_EXPRESSION")
         if (isCharging) {
-            icon = "\uF583"
+            icon = "\uDB80\uDC84"
         } else {
             icon = when (batteryLevel) {
-                in 0..10 -> "\uF579"
-                in 11..20 -> "\uF57A"
-                in 21..30 -> "\uF57B"
-                in 31..40 -> "\uF57C"
-                in 41..50 -> "\uF57D"
-                in 51..60 -> "\uF57E"
-                in 61..70 -> "\uF57F"
-                in 71..80 -> "\uF580"
-                in 81..90 -> "\uF581"
-                else -> "\uF578"
+                in 0..10 -> "\uDB80\uDC7A"
+                in 11..20 -> "\uDB80\uDC7B"
+                in 21..30 -> "\uDB80\uDC7C"
+                in 31..40 -> "\uDB80\uDC7D"
+                in 41..50 -> "\uDB80\uDC7E"
+                in 51..60 -> "\uDB80\uDC7F"
+                in 61..70 -> "\uDB80\uDC80"
+                in 71..80 -> "\uDB80\uDC81"
+                in 81..90 -> "\uDB80\uDC82"
+                else -> "\uDB80\uDC79"
             }
         }
 
