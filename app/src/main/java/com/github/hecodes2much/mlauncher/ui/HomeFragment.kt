@@ -153,8 +153,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         binding.clock.format12Hour = best12
         binding.clock.format24Hour = best24
 
-        val best12Date = DateFormat.getBestDateTimePattern(locale, "edMMMy")
-        val best24Date = DateFormat.getBestDateTimePattern(locale,"edMMMy")
+        val best12Date = DateFormat.getBestDateTimePattern(locale, "eeeddMMM")
+        val best24Date = DateFormat.getBestDateTimePattern(locale,"eeeddMMM")
         binding.date.format12Hour = best12Date
         binding.date.format24Hour = best24Date
 
@@ -292,7 +292,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 } else {
                     DateFormat.getBestDateTimePattern(locale, "hhmma")
                 }
-                val localDate = DateFormat.getBestDateTimePattern(locale,"edMMMy")
+                val localDate = DateFormat.getBestDateTimePattern(locale,"eeeddMMM")
 
                 val localTimeDate = SimpleDateFormat("$localTime $localDate", Locale.getDefault())
                 val localTimeFormatted = localTimeDate.format(calendar.time)
