@@ -91,8 +91,6 @@ class AppDrawerAdapter(
                     scoredApps[app] = scoreApp(app, searchChars)
                 }
 
-                val maxScore = scoredApps.values.maxOrNull() ?: 0.0f
-
                 val filteredApps = if (searchChars.isNotEmpty()) {
                     if (prefs.searchFromStart) {
                         scoredApps.filter { (app, _) -> app.name.startsWith(searchChars, ignoreCase = true) }
