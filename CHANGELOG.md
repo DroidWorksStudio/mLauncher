@@ -1,5 +1,13 @@
 # Changelog
 
+## [Coming Soon](https://github.com/HeCodes2Much/mLauncher/tree/HEAD)
+
+[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/1.2.1...HEAD)
+
+**Fixed bugs:**
+
+- \[Bug Report\] MIUI Gestures not working [\#300](https://github.com/HeCodes2Much/mLauncher/issues/300)
+
 ## [1.2.1](https://github.com/HeCodes2Much/mLauncher/tree/1.2.1) (23, July 2023)
 
 [Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/1.2.0...1.2.1)
