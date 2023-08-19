@@ -213,7 +213,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     // Function to check if the device is set to a 24-hour format
     private fun is24HourFormat(): Boolean {
         val calendar = Calendar.getInstance()
-        val is24Hour = DateFormat.is24HourFormat(context) // Replace 'context' with your app's context
+        val is24Hour = DateFormat.is24HourFormat(context)
 
         // Get the time format based on the device's settings
         return if (is24Hour) {
@@ -221,7 +221,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             true
         } else {
             // Device is set to 12-hour format
-            val hour = calendar.get(Calendar.HOUR)
+            val hour = calendar.get(Calendar.HOUR_OF_DAY) // Use HOUR_OF_DAY for 24-hour time
             val amPm = DateFormat.format("a", calendar).toString()
 
             // Check if the time format is actually 12-hour or 24-hour
