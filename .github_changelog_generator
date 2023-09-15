@@ -5,6 +5,6 @@ project=mLauncher
 date_format=%e, %B %Y
 summary_labels=Release summary,release-summary,Summary,summary,Type: Summary
 summary_prefix=**Release Summary**
-exclude_labels=Stale,Wont Fix,wontfix,Wontfix,Duplicate,duplicate,invalid,Type: Question,question,Invalid,Meta: Exclude From Changelog,Type: Wont Fix
+exclude_labels=Status: Stale,Type: Wont Fix,Type: Question,Status: Invalid,Ignore Release
 breaking_labels=backwards-incompatible,Backwards incompatible,breaking,Type: Breaking Change
 bug_labels=bug,Bug,Type: Bug Report
