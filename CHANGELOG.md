@@ -4,6 +4,10 @@
 
 [Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/1.2.1...HEAD)
 
+**Implemented enhancements:**
+
+- \[Enhancement\] make renamed apps appear everywhere [\#309](https://github.com/HeCodes2Much/mLauncher/issues/309)
+
 **Fixed bugs:**
 
 - \[Bug Report\] MIUI Gestures not working [\#300](https://github.com/HeCodes2Much/mLauncher/issues/300)
