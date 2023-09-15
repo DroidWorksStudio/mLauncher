@@ -7,12 +7,12 @@ plugins {
 
 android {
     namespace = "com.github.hecodes2much.mlauncher"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "app.mlauncher"
         minSdk = 23
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 66
         versionName = "1.2.1"
     }
@@ -79,9 +79,9 @@ android {
 
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
-    implementation("androidx.core:core-ktx:1.10.1")
+    implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("androidx.recyclerview:recyclerview:1.3.0")
+    implementation("androidx.recyclerview:recyclerview:1.3.1")
 
     // Android lifecycle
     implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
@@ -127,7 +127,7 @@ dependencies {
     // Needed for createComposeRule, but not createAndroidComposeRule:
     debugImplementation("androidx.compose.ui:ui-test-manifest:1.4.3")
     androidTestImplementation("androidx.navigation:navigation-testing:2.6.0")
-    debugImplementation("androidx.fragment:fragment-testing:1.6.0")
+    debugImplementation("androidx.fragment:fragment-testing:1.6.1")
     implementation("androidx.test:core-ktx:1.5.0")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     androidTestImplementation("androidx.test:runner:1.5.2")
