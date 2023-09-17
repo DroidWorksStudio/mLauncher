@@ -1,5 +1,13 @@
 # Changelog
 
+## [Coming Soon](https://github.com/HeCodes2Much/mLauncher/tree/HEAD)
+
+[Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/1.2.1...HEAD)
+
+**Merged pull requests:**
+
+- Update strings.xml for Russian language [\#315](https://github.com/HeCodes2Much/mLauncher/pull/315) ([ArmanHayots](https://github.com/ArmanHayots))
+
 ## [1.2.1](https://github.com/HeCodes2Much/mLauncher/tree/1.2.1) (23, July 2023)
 
 [Full Changelog](https://github.com/HeCodes2Much/mLauncher/compare/1.2.0...1.2.1)
