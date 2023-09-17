@@ -25,9 +25,9 @@
     <string name="background_opacity">Непрозрачность фона</string>
     <string name="all_apps_text">Отобразить текст всех приложений</string>
     <!-- Behavior Strings -->
-    <string name="auto_show_keyboard">Auto show keyboard</string>
+    <string name="auto_show_keyboard">Автоматически отображать клавиатуру</string>
     <string name="auto_open_apps">Автооткрытие приложений</string>
-    <string name="filter_strength">Сила фильтра</string>
+    <string name="filter_strength">Строгость фильтра</string>
     <string name="search_from_start">Поиск приложений с самого начала.</string>
     <string name="icon_font">Использовать иконочный шрифт</string>
     <!-- Homescreen Strings -->
@@ -38,22 +38,22 @@
     <string name="show_calendar_event">Показать событие календаря</string>
     <string name="lock_home_apps">Заблокировать приложения</string>
     <string name="extend_home_apps_area">Продлить область клика</string>
-    <string name="home_alignment_bottom">Выровнять на главном экране снизу</string>
+    <string name="home_alignment_bottom">Закрепить внизу экрана</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">Домашний экран приложений</string>
     <string name="clock_alignment">Часы и дата</string>
     <string name="drawer_alignment">Приложения в меню приложений</string>
     <!-- Gestures Strings -->
-    <string name="swipe_up_app">Свайп вверх</string>
-    <string name="swipe_down_app">Свайп вниз</string>
-    <string name="swipe_left_app">Свайп влево</string>
-    <string name="swipe_right_app">Свайп вправо</string>
+    <string name="swipe_up_app">Протянуть вверх</string>
+    <string name="swipe_down_app">Протянуть вниз</string>
+    <string name="swipe_left_app">Протянуть влево</string>
+    <string name="swipe_right_app">Протянуть вправо</string>
     <string name="clock_click_app">Нажмите на часы</string>
     <string name="date_click_app">Нажмите на дату</string>
     <string name="double_tap">Двойное нажатие</string>
     <!-- Settings Strings -->
     <string name="off">Выкл</string>
-    <string name="on">На</string>
+    <string name="on">Вкл</string>
     <string name="left">Слева</string>
     <string name="right">Справа</string>
     <string name="center">По центру</string>
@@ -64,27 +64,27 @@
     <string name="system_default">Система</string>
     <string name="hide">Скрыть</string>
     <string name="rename">Переименовать</string>
-    <string name="okay">Окей</string>
+    <string name="okay">OK</string>
     <string name="save">Сохранить</string>
     <string name="show">Показать</string>
-    <string name="reset">Reset</string>
+    <string name="reset">Сброс</string>
     <string name="cancel">Отмена</string>
     <string name="enable">Включить</string>
-    <string name="disable">Отключено</string>
+    <string name="disable">Выключить</string>
     <string name="enabled">Включено</string>
     <string name="disabled">Отключено</string>
     <string name="open">Открыть</string>
     <string name="close">Закрыть</string>
-    <string name="copy">копировать</string>
-    <string name="settings_text_size">Настройки Размер текста</string>
-    <string name="settings_lock_time">Тайм-аут блокировки настроек</string>
+    <string name="copy">Копировать</string>
+    <string name="settings_text_size">Размер текста в настройках</string>
+    <string name="settings_lock_time">Задержка блокировки настроек</string>
     <!-- Gestures Do Strings -->
-    <string name="show_notifications">Показать уведомление</string>
+    <string name="show_notifications">Показать уведомления</string>
     <string name="show_app_list">Показать список приложений</string>
     <string name="open_app">Открыть приложение</string>
     <string name="lock_screen">Экран блокировки</string>
     <string name="open_quick_settings">Быстрые настройки</string>
-    <string name="show_recents">Show Recents</string>
+    <string name="show_recents">Отобразить недавние</string>
     <string name="open_power_dialog">Диалог питания</string>
     <string name="take_a_screenshot">Сделать снимок экрана</string>
     <string name="double_tap_to_lock_screen">Двойное нажатие для блокировки</string>
@@ -93,7 +93,7 @@
     <string name="load_backup">Загрузить резервную копию</string>
     <string name="store_backup">Резервная копия магазина</string>
     <!-- PinCode Strings -->
-    <string name="reset_pin">Сбросить PIN-код</string>
+    <string name="reset_pin">Сбросить пин-код</string>
     <string name="pin_number">Пин код</string>
     <string name="confirm_pin_number">Подтвердите пин-код</string>
     <string name="unlock_settings">Разблокировать настройки</string>
@@ -105,10 +105,10 @@
     <string name="drawer_list_empty_hint">Не найдено приложений</string>
     <string name="long_press_for_settings">Долгое нажатие в любом месте для настроек</string>
     <string name="swipe_up_for_apps">Свайп вверх для всех приложений</string>
-    <string name="app_drawer_tips">Совет: проведите пальцем вниз, чтобы уволить. Прокрутите для скрытия клавиатуры.</string>
+    <string name="app_drawer_tips">Совет: проведите пальцем вниз, чтобы убрать. Прокрутите для скрытия клавиатуры.</string>
     <string name="double_tap_lock_is_enabled_message">Если двойное нажатие отключает отпечаток пальца или разблокировку, откройте настройки mLauncher, нажмите «экспериментальные» и следуйте инструкциям. Спасибо.</string>
     <string name="double_tap_lock_uninstall_message">Блокировка включена двойным нажатием для двойного нажатия.
-        \n\nПримечание: сначала включите эту опцию, если вы решите удалить mLauncher.</string>
-    <string name="accessibility_service_name">mLauncher Служба действий</string>
+        \n\nПримечание: сначала выключите эту опцию, если вы решите удалить mLauncher.</string>
+    <string name="accessibility_service_name">Служба действий mLauncher</string>
     <string name="accessibility_service_description">Эта служба специальных возможностей позволяет mLauncher выполнять определенные действия, такие как блокировка экрана или открытие быстрых настроек. Наша служба доступности не собирает и не передает какие-либо данные.</string>
 </resources>
