@@ -1,29 +1,15 @@
 <div align='center'>
 	<img src='fastlane/metadata/android/en-US/images/icon.png' alt='mLauncher' width='100' height='100'>
     <h2>mLauncher</h2>
-    <p>
-        <img src='https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=android&logoColor=white'>
-        <img src='https://img.shields.io/badge/SDK-33-3DDC84?style=flat-square'>
-        <a href='https://github.com/HeCodes2Much/mLauncher/blob/main/LICENSE'><img src='https://img.shields.io/github/license/HeCodes2Much/mLauncher?color=3DDC84&style=flat-square'></a>
-        <br>
-	<img src='https://img.shields.io/badge/Maintained-yes-44cc11?style=flat-square'>
-        <a href='https://github.com/HeCodes2Much/mLauncher/actions'><img src='https://img.shields.io/github/actions/workflow/status/HeCodes2Much/mLauncher/android-release_ci.yml?style=flat-square'></a>
-	<a href='https://github.com/HeCodes2Much/mLauncher/releases/latest'><img src='https://img.shields.io/github/downloads/HeCodes2Much/mLauncher/total?color=44cc11&style=flat-square'></a>
-	<br>
-	<a href='https://f-droid.org/packages/app.mlauncher'><img alt="F-Droid (including pre-releases)" src="https://img.shields.io/f-droid/v/app.mlauncher?include_prereleases&style=flat-square"></a>
-	<a href='https://github.com/HeCodes2Much/mLauncher/releases/latest'><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/HeCodes2Much/mLauncher?style=flat-square"></a>
-    </p>
-	<p>
-    <a href="https://www.buymeacoffee.com/HeCodes2Much"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=HeCodes2Much&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>
-    </p>
     <a href='https://github.com/HeCodes2Much/mLauncher/releases/latest'><img src='https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white'></a>
     <a href='https://f-droid.org/packages/app.mlauncher'><img src='https://img.shields.io/badge/F_Droid-1976d2?style=for-the-badge&logo=f-droid&logoColor=white'></a>
 </div>
 
-
-<h1 align="center">Based on <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal and clean.</h1>
-<h2 align="center">Forked from <a href="https://github.com/OlauncherCF/OlauncherCF">OlauncherCF</a>. Clutter free.</h2>
-<h3 align="center">mLauncher is a minimal app launcher for Android.
+- This application can be found on [F-Droid](https://f-droid.org/packages/app.mlauncher/) and [Github](https://github.com/HeCodes2Much/mLauncher/releases/).
+- You can also add this repo to [Obtanium](https://github.com/ImranR98/Obtainium) to get auto updates that are faster then F-Droid.
+- The latest stable version is available on the [`main`](https://github.com/HeCodes2Much/mLauncher/tree/main) branch, which can be cloned to build the application independently.
+- Additionally, a Github action has been set up to automatically generate an APK for every [release](https://github.com/HeCodes2Much/mLauncher/releases).
+- The **original** version of the application is also accessible on the [Play Store](https://play.google.com/store/apps/details?id=app.olauncher), [F-Droid](https://f-droid.org/fr/packages/app.olauncher/) & [Github](https://github.com/tanujnotes/Olauncher).
 
 We try to balance customizability and minimalization well still being simple :)</h3>
 
@@ -118,20 +104,6 @@ As per version 0.4.0. Click on any image to enlarge it. To know more, explore an
 	</tr>
 </table>
 
-## Installation
-
-<div align='center'>
-<a href='https://github.com/HeCodes2Much/mLauncher/releases/latest'><img src='https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white'></a>
-<a href='https://f-droid.org/packages/app.mlauncher'><img src='https://img.shields.io/badge/F_Droid-1976d2?style=for-the-badge&logo=f-droid&logoColor=white'></a>
-
-</div>
-
-- This application can be found on [F-Droid](https://f-droid.org/packages/app.mlauncher/) and [Github](https://github.com/HeCodes2Much/mLauncher/releases/).
-- You can also add this repo to [Obtanium](https://github.com/ImranR98/Obtainium) to get auto updates that are faster then F-Droid.
-- The latest stable version is available on the [`main`](https://github.com/HeCodes2Much/mLauncher/tree/main) branch, which can be cloned to build the application independently.
-- Additionally, a Github action has been set up to automatically generate an APK for every [release](https://github.com/HeCodes2Much/mLauncher/releases).
-- The **original** version of the application is also accessible on the [Play Store](https://play.google.com/store/apps/details?id=app.olauncher), [F-Droid](https://f-droid.org/fr/packages/app.olauncher/) & [Github](https://github.com/tanujnotes/Olauncher).
-
 ## Contribute
 
 - If you are unhappy with any part of the app or feel like missing something, you can open a pull request or an [**issue**](https://github.com/HeCodes2Much/mLauncher/issues/new/choose) as you like.
@@ -173,4 +145,21 @@ We kindly request that you consider supporting the ongoing development of mLaunc
 
 <a href="https://www.buymeacoffee.com/HeCodes2Much"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=HeCodes2Much&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>
 
+</div>
+
+## Build Information
+
+<div align='center'>
+    <p>
+        <img src='https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=android&logoColor=white'>
+        <img src='https://img.shields.io/badge/SDK-33-3DDC84?style=flat-square'>
+        <a href='https://github.com/HeCodes2Much/mLauncher/blob/main/LICENSE'><img src='https://img.shields.io/github/license/HeCodes2Much/mLauncher?color=3DDC84&style=flat-square'></a>
+        <br>
+	<img src='https://img.shields.io/badge/Maintained-yes-44cc11?style=flat-square'>
+        <a href='https://github.com/HeCodes2Much/mLauncher/actions'><img src='https://img.shields.io/github/actions/workflow/status/HeCodes2Much/mLauncher/android-release_ci.yml?style=flat-square'></a>
+	<a href='https://github.com/HeCodes2Much/mLauncher/releases/latest'><img src='https://img.shields.io/github/downloads/HeCodes2Much/mLauncher/total?color=44cc11&style=flat-square'></a>
+	<br>
+	<a href='https://f-droid.org/packages/app.mlauncher'><img alt="F-Droid (including pre-releases)" src="https://img.shields.io/f-droid/v/app.mlauncher?include_prereleases&style=flat-square"></a>
+	<a href='https://github.com/HeCodes2Much/mLauncher/releases/latest'><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/HeCodes2Much/mLauncher?style=flat-square"></a>
+    </p>
 </div>
