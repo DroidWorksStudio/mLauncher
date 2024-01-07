@@ -3,6 +3,9 @@ package com.github.hecodes2much.mlauncher.ui
 import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.style.ForegroundColorSpan
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -97,10 +100,6 @@ class AppDrawerFragment : Fragment() {
         val searchTextView = binding.search.findViewById<TextView>(R.id.search_src_text)
         if (searchTextView != null) searchTextView.gravity = gravity
 
-        if (prefs.followAccentColors) {
-            val fontColor = getHexFontColor(requireActivity())
-            searchTextView.setTextColor(fontColor)
-        }
         if (prefs.useCustomIconFont) {
             val typeface = ResourcesCompat.getFont(requireActivity(), R.font.roboto)
             searchTextView.typeface = typeface
@@ -114,8 +113,36 @@ class AppDrawerFragment : Fragment() {
         binding.recyclerView.adapter = appAdapter
         binding.recyclerView.addOnScrollListener(getRecyclerViewOnScrollListener())
 
-        if (flag == AppDrawerFlag.HiddenApps) binding.search.queryHint = getString(R.string.hidden_apps)
-        if (flag == AppDrawerFlag.LaunchApp && prefs.useAllAppsText) binding.search.queryHint = getString(R.string.show_apps)
+        if (flag == AppDrawerFlag.HiddenApps) {
+            val fontColor = getHexFontColor(requireActivity())
+            if (prefs.followAccentColors) {
+                val hiddenAppsHint = getString(R.string.hidden_apps)
+                val coloredHint = SpannableString(hiddenAppsHint)
+                coloredHint.setSpan(
+                    ForegroundColorSpan(fontColor),
+                    0,
+                    hiddenAppsHint.length,
+                    Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+                )
+
+                binding.search.queryHint = coloredHint
+            }
+        }
+        if (flag == AppDrawerFlag.LaunchApp && prefs.useAllAppsText) {
+            val fontColor = getHexFontColor(requireActivity())
+            if (prefs.followAccentColors) {
+                val hiddenAppsHint = getString(R.string.show_apps)
+                val coloredHint = SpannableString(hiddenAppsHint)
+                coloredHint.setSpan(
+                    ForegroundColorSpan(fontColor),
+                    0,
+                    hiddenAppsHint.length,
+                    Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+                )
+
+                binding.search.queryHint = coloredHint
+            }
+        }
 
         binding.search.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {

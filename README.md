@@ -1,8 +1,7 @@
 <div align='center'>
 	<img src='fastlane/metadata/android/en-US/images/icon.png' alt='mLauncher' width='100' height='100'>
     <h2>mLauncher</h2>
-    <a href='https://github.com/HeCodes2Much/mLauncher/releases/latest'><img src='https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white'></a>
-    <a href='https://f-droid.org/packages/app.mlauncher'><img src='https://img.shields.io/badge/F_Droid-1976d2?style=for-the-badge&logo=f-droid&logoColor=white'></a>
+    <a href='https://f-droid.org/packages/app.mlauncher'><img src='https://camo.githubusercontent.com/f422f6f830e814ec7e766de8fef4db949c6add75a9d58548ab2f5d29855c0616/68747470733a2f2f6664726f69642e6769746c61622e696f2f617274776f726b2f62616467652f6765742d69742d6f6e2e706e67'></a>
 </div>
 
 - This application can be found on [F-Droid](https://f-droid.org/packages/app.mlauncher/) and [Github](https://github.com/HeCodes2Much/mLauncher/releases/).
