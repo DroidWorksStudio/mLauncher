@@ -1,5 +1,13 @@
 # Changelog
 
+## [Coming Soon](https://github.com/HeAndroids2Much/mLauncher/tree/HEAD)
+
+[Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/1.3.0...HEAD)
+
+**Merged pull requests:**
+
+- \[Release\] Release 1.3.0 [\#335](https://github.com/HeAndroids2Much/mLauncher/pull/335) ([HeCodes2Much](https://github.com/HeCodes2Much))
+
 ## [1.3.0](https://github.com/HeAndroids2Much/mLauncher/tree/1.3.0) ( 2, March 2024)
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/1.2.1...1.3.0)
