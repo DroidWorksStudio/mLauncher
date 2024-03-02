@@ -1,8 +1,8 @@
 # Changelog
 
-## [Coming Soon](https://github.com/HeAndroids2Much/mLauncher/tree/HEAD)
+## [1.3.0](https://github.com/HeAndroids2Much/mLauncher/tree/1.3.0) ( 2, March 2024)
 
-[Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/1.2.1...HEAD)
+[Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/1.2.1...1.3.0)
 
 **Implemented enhancements:**
 
@@ -14,10 +14,10 @@
 - long press for selecting  home  screen is not working [\#329](https://github.com/HeAndroids2Much/mLauncher/issues/329)
 - \[Bug Report\] Accent color does not get apply to search text placeholder [\#323](https://github.com/HeAndroids2Much/mLauncher/issues/323)
 - \[Bug Report\] calendar events don't show [\#307](https://github.com/HeAndroids2Much/mLauncher/issues/307)
+- \[Bug Fix\] Fixed Accent Color for "All apps" in app drawer [\#333](https://github.com/HeAndroids2Much/mLauncher/pull/333) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
 **Merged pull requests:**
 
-- \[Bug Fix\] Fixed Accent Color for "All apps" in app drawer [\#333](https://github.com/HeAndroids2Much/mLauncher/pull/333) ([HeCodes2Much](https://github.com/HeCodes2Much))
 - Update strings.xml for Russian language [\#315](https://github.com/HeAndroids2Much/mLauncher/pull/315) ([ArmanHayots](https://github.com/ArmanHayots))
 
 ## [1.2.1](https://github.com/HeAndroids2Much/mLauncher/tree/1.2.1) (23, July 2023)
