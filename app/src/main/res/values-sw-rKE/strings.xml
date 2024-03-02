@@ -12,6 +12,7 @@
     <string name="alignment">Mpangilio</string>
     <string name="gestures">Ishara</string>
     <!-- Home Strings -->
+    <string name="miscellaneous">Miscellaneous</string>
     <string name="hidden_apps">Programu zilizofichwa</string>
     <string name="set_as_default_launcher">Weka kama kizindua chaguo-msingi</string>
     <string name="change_default_launcher">Badilisha kizindua chaguo-msingi</string>

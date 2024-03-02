@@ -529,7 +529,7 @@ object SettingsComposable {
                 .fillMaxWidth()
         ) {
             val (text, button) = createRefs()
-            var labelProgress by remember { mutableStateOf(number.value.toFloat()) }
+            var labelProgress by remember { mutableFloatStateOf(number.value.toFloat()) }
             Text(
                 labelProgress.toInt().toString(),
                 style = SettingsTheme.typography.button,

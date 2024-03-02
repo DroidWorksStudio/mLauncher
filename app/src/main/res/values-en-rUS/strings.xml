@@ -12,6 +12,7 @@
     <string name="homescreen">Homescreen</string>
     <string name="alignment">Alignment</string>
     <string name="gestures">Gestures</string>
+    <string name="miscellaneous">Miscellaneous</string>
 
     <!-- Home Strings -->
     <string name="hidden_apps">Hidden apps</string>

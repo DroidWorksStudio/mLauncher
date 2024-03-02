@@ -12,6 +12,7 @@
     <string name="alignment">Hizalama</string>
     <string name="gestures">Jestler</string>
     <!-- Home Strings -->
+    <string name="miscellaneous">Miscellaneous</string>
     <string name="hidden_apps">Gizli uygulamalar</string>
     <string name="set_as_default_launcher">Varsayılan başlatıcı olarak ayarla</string>
     <string name="change_default_launcher">Varsayılan başlatıcıyı değiştir</string>

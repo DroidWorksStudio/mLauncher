@@ -12,6 +12,7 @@
     <string name="alignment">Tasaus</string>
     <string name="gestures">Eleet</string>
     <!-- Home Strings -->
+    <string name="miscellaneous">Miscellaneous</string>
     <string name="hidden_apps">Piilotetut sovellukset</string>
     <string name="set_as_default_launcher">Aseta oletuksena käynnistysohjelmaksi</string>
     <string name="change_default_launcher">Vaihda oletus käynnistysohjelma</string>

@@ -12,6 +12,7 @@
     <string name="alignment">Gratia diei et noctis</string>
     <string name="gestures">gestus</string>
     <!-- Home Strings -->
+    <string name="miscellaneous">Miscellaneous</string>
     <string name="hidden_apps">Occulta apps</string>
     <string name="set_as_default_launcher">Set quod default launcher</string>
     <string name="change_default_launcher">Mutare default Launcher</string>

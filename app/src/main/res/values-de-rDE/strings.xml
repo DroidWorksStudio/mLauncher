@@ -12,6 +12,7 @@
     <string name="alignment">Ausrichtung</string>
     <string name="gestures">Gesten</string>
     <!-- Home Strings -->
+    <string name="miscellaneous">Miscellaneous</string>
     <string name="hidden_apps">Versteckte Apps</string>
     <string name="set_as_default_launcher">Als Standard-Launcher festlegen</string>
     <string name="change_default_launcher">Standard-Launcher ändern</string>

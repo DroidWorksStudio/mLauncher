@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
@@ -42,12 +43,12 @@ import com.github.hecodes2much.mlauncher.style.SettingsTheme
 import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsArea
 import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsGestureItem
 import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsItem
+import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsNumberItem
 import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsSliderItem
 import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsTextButton
 import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsToggle
 import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsTopView
 import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsTwoButtonRow
-import java.util.*
 
 class SettingsFragment : Fragment() {
 
@@ -194,7 +195,7 @@ class SettingsFragment : Fragment() {
                             fontSize = iconFs,
                             open = open,
                             onChange = onChange,
-                            currentSelection = remember { mutableStateOf(prefs.textSizeLauncher) },
+                            currentSelection = remember { mutableIntStateOf(prefs.textSizeLauncher) },
                             min = Constants.TEXT_SIZE_MIN,
                             max = Constants.TEXT_SIZE_MAX,
                             onSelect = { f -> setTextSizeLauncher(f) }
@@ -206,7 +207,7 @@ class SettingsFragment : Fragment() {
                             fontSize = iconFs,
                             open = open,
                             onChange = onChange,
-                            currentSelection = remember { mutableStateOf(prefs.textMarginSize) },
+                            currentSelection = remember { mutableIntStateOf(prefs.textMarginSize) },
                             min = Constants.TEXT_MARGIN_MIN,
                             max = Constants.TEXT_MARGIN_MAX,
                             onSelect = { f -> setTextMarginSize(f) }
@@ -226,7 +227,7 @@ class SettingsFragment : Fragment() {
                             fontSize = iconFs,
                             open = open,
                             onChange = onChange,
-                            currentSelection = remember { mutableStateOf(prefs.opacityNum) },
+                            currentSelection = remember { mutableIntStateOf(prefs.opacityNum) },
                             min = 0,
                             max = 255,
                             onSelect = { j -> setOpacityNum(j) }
@@ -265,12 +266,12 @@ class SettingsFragment : Fragment() {
                     },
                     {
                      open, onChange ->
-                        SettingsSliderItem(
+                        SettingsNumberItem(
                             title = stringResource(R.string.filter_strength),
                             fontSize = iconFs,
                             open = open,
                             onChange = onChange,
-                            currentSelection = remember { mutableStateOf(prefs.filterStrength) },
+                            currentSelection = remember { mutableIntStateOf(prefs.filterStrength) },
                             min = Constants.FILTER_STRENGTH_MIN,
                             max = Constants.FILTER_STRENGTH_MAX,
                             onSelect = { j -> setFilterStrength(j) }
@@ -305,7 +306,7 @@ class SettingsFragment : Fragment() {
                             fontSize = iconFs,
                             open = open,
                             onChange = onChange,
-                            currentSelection = remember { mutableStateOf(prefs.homeAppsNum) },
+                            currentSelection = remember { mutableIntStateOf(prefs.homeAppsNum) },
                             min = 0,
                             max = Constants.MAX_HOME_APPS,
                             onSelect = { j -> setHomeAppsNum(j) }
@@ -493,7 +494,8 @@ class SettingsFragment : Fragment() {
                     }
                 )
             )
-            SettingsArea(title = getString(R.string.settings),
+            SettingsArea(
+                title = getString(R.string.miscellaneous),
                 selected = selected,
                 fontSize = titleFs,
                 items = arrayOf(
@@ -503,7 +505,7 @@ class SettingsFragment : Fragment() {
                             fontSize = iconFs,
                             open = open,
                             onChange = onChange,
-                            currentSelection = remember { mutableStateOf(prefs.textSizeSettings) },
+                            currentSelection = remember { mutableIntStateOf(prefs.textSizeSettings) },
                             min = Constants.TEXT_SIZE_MIN,
                             max = Constants.TEXT_SIZE_MAX,
                             onSelect = { f -> setTextSizeSettings(f) }
@@ -515,7 +517,7 @@ class SettingsFragment : Fragment() {
                             fontSize = iconFs,
                             open = open,
                             onChange = onChange,
-                            currentSelection = remember { mutableStateOf(prefs.lockSettingsTime) },
+                            currentSelection = remember { mutableIntStateOf(prefs.lockSettingsTime) },
                             min = Constants.LOCK_TIME_MIN,
                             max = Constants.LOCK_TIME_MAX,
                             onSelect = { f -> setLockSettingsTime(f) }
@@ -538,7 +540,6 @@ class SettingsFragment : Fragment() {
                     }
                 )
             )
-            @Suppress("DEPRECATION")
             Text(
                 modifier = Modifier
                     .align(Alignment.End)
@@ -676,9 +677,9 @@ class SettingsFragment : Fragment() {
         requireActivity().recreate()
     }
 
-    private fun setLang(lang_int: Constants.Language) {
+    private fun setLang(langInt: Constants.Language) {
 
-        prefs.language = lang_int
+        prefs.language = langInt
         requireActivity().recreate()
     }
 
