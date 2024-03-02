@@ -85,13 +85,13 @@ dependencies {
 
     // Android lifecycle
     implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
 
     // Navigation
-    implementation("androidx.navigation:navigation-fragment-ktx:2.7.5")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
 
     // Work Manager
-    implementation("androidx.work:work-runtime-ktx:2.8.1")
+    implementation("androidx.work:work-runtime-ktx:2.9.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.constraintlayout:constraintlayout-compose:1.0.1")
 
@@ -101,18 +101,18 @@ dependencies {
     // JETPACK
     // Integration with activities
     //noinspection GradleDependency
-    implementation("androidx.activity:activity-compose:1.8.1")
+    implementation("androidx.activity:activity-compose:1.8.2")
     // Compose Material Design
-    implementation("androidx.compose.material:material:1.5.4")
+    implementation("androidx.compose.material:material:1.6.2")
     implementation("com.github.SmartToolFactory:Compose-Colorful-Sliders:1.2.0")
     // Animations
-    implementation("androidx.compose.animation:animation:1.5.4")
-    implementation("androidx.navigation:navigation-ui-ktx:2.7.5")
+    implementation("androidx.compose.animation:animation:1.6.2")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
 
     // AndroidX
-    implementation("androidx.compose.ui:ui:1.5.4")
-    implementation("androidx.compose.ui:ui-tooling:1.5.4")
-    implementation("androidx.compose.foundation:foundation:1.5.4")
+    implementation("androidx.compose.ui:ui:1.6.2")
+    implementation("androidx.compose.ui:ui-tooling:1.6.2")
+    implementation("androidx.compose.foundation:foundation:1.6.2")
 
     implementation("com.google.code.gson:gson:2.10.1")
 
@@ -123,10 +123,10 @@ dependencies {
     implementation("androidx.test.espresso:espresso-idling-resource:$androidxTestEspresso")
 
     // Test rules and transitive dependencies:
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.5.4")
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.6.2")
     // Needed for createComposeRule, but not createAndroidComposeRule:
-    debugImplementation("androidx.compose.ui:ui-test-manifest:1.5.4")
-    androidTestImplementation("androidx.navigation:navigation-testing:2.7.5")
+    debugImplementation("androidx.compose.ui:ui-test-manifest:1.6.2")
+    androidTestImplementation("androidx.navigation:navigation-testing:2.7.7")
     debugImplementation("androidx.fragment:fragment-testing:1.6.2")
     implementation("androidx.test:core-ktx:1.5.0")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
