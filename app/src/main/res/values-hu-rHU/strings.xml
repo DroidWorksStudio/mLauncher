@@ -11,6 +11,7 @@
     <string name="homescreen">Kezdőképernyő</string>
     <string name="alignment">Kiegyenlítés</string>
     <string name="gestures">Gesztusok</string>
+    <string name="miscellaneous">Vegyes</string>
     <!-- Home Strings -->
     <string name="hidden_apps">Rejtett alkalmazások</string>
     <string name="set_as_default_launcher">Beállítás alapértelmezett indítóprogramként</string>
