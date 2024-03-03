@@ -11,6 +11,7 @@
     <string name="homescreen">Начален екран</string>
     <string name="alignment">Изравняване</string>
     <string name="gestures">Жестове</string>
+    <string name="miscellaneous">Разни</string>
     <!-- Home Strings -->
     <string name="hidden_apps">Скрити приложения</string>
     <string name="set_as_default_launcher">Задайте като стартиране по подразбиране</string>

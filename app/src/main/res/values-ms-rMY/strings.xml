@@ -11,6 +11,7 @@
     <string name="homescreen">Skrin utama</string>
     <string name="alignment">Penjajaran</string>
     <string name="gestures">Gerak isyarat</string>
+    <string name="miscellaneous">Macam-macam</string>
     <!-- Home Strings -->
     <string name="hidden_apps">Apl tersembunyi</string>
     <string name="set_as_default_launcher">Tetapkan sebagai pelancar lalai</string>

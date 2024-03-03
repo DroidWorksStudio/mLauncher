@@ -11,6 +11,7 @@
     <string name="homescreen">Skrini ya nyumbani</string>
     <string name="alignment">Mpangilio</string>
     <string name="gestures">Ishara</string>
+    <string name="miscellaneous">Mbalimbali</string>
     <!-- Home Strings -->
     <string name="hidden_apps">Programu zilizofichwa</string>
     <string name="set_as_default_launcher">Weka kama kizindua chaguo-msingi</string>

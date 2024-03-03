@@ -11,6 +11,7 @@
     <string name="homescreen">Homescreen</string>
     <string name="alignment">Ausriichtung</string>
     <string name="gestures">Gesten</string>
+    <string name="miscellaneous">Verschiddenes</string>
     <!-- Home Strings -->
     <string name="hidden_apps">Verstoppt Apps</string>
     <string name="set_as_default_launcher">Setzt als Standardstarter</string>

@@ -11,6 +11,7 @@
     <string name="homescreen">Ekran në shtëpi</string>
     <string name="alignment">Radhitje</string>
     <string name="gestures">Gjestet</string>
+    <string name="miscellaneous">Të ndryshme</string>
     <!-- Home Strings -->
     <string name="hidden_apps">Aplikacionet e fshehura</string>
     <string name="set_as_default_launcher">Cakto si lëshues të paracaktuar</string>

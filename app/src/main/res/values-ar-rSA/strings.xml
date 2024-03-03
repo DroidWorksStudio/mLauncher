@@ -11,6 +11,7 @@
     <string name="homescreen">الشاشة الرئيسية</string>
     <string name="alignment">محاذاة</string>
     <string name="gestures">إيماءات</string>
+    <string name="miscellaneous">متنوع</string>
     <!-- Home Strings -->
     <string name="hidden_apps">التطبيقات المخفية</string>
     <string name="set_as_default_launcher">تعيين كمشغل افتراضي</string>

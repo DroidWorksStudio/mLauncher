@@ -11,6 +11,7 @@
     <string name="homescreen">ഹോംസ്ക്രീൻ</string>
     <string name="alignment">വിന്യാസം</string>
     <string name="gestures">ആംഗ്യങ്ങൾ</string>
+    <string name="miscellaneous">വിവിധ</string>
     <!-- Home Strings -->
     <string name="hidden_apps">മറച്ച ആപ്പുകൾ</string>
     <string name="set_as_default_launcher">ഡിഫോൾട്ട് ലോഞ്ചറായി സജ്ജീകരിക്കുക</string>

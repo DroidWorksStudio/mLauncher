@@ -11,6 +11,7 @@
     <string name="homescreen">Domovská obrazovka</string>
     <string name="alignment">Zarovnání</string>
     <string name="gestures">Gesta</string>
+    <string name="miscellaneous">Smíšený</string>
     <!-- Home Strings -->
     <string name="hidden_apps">Skryté aplikace</string>
     <string name="set_as_default_launcher">Nastavit jako výchozí spouštěč</string>
