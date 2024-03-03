@@ -11,6 +11,7 @@
     <string name="homescreen">Heimaskjár</string>
     <string name="alignment">Jöfnun</string>
     <string name="gestures">Bendingar</string>
+    <string name="miscellaneous">Ýmislegt</string>
     <!-- Home Strings -->
     <string name="hidden_apps">Falin forrit</string>
     <string name="set_as_default_launcher">Stilla sem sjálfgefið ræsiforrit</string>
