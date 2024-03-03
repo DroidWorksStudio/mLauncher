@@ -11,6 +11,7 @@
     <string name="homescreen">Startskjerm</string>
     <string name="alignment">Justering</string>
     <string name="gestures">Bevegelser</string>
+    <string name="miscellaneous">Diverse</string>
     <!-- Home Strings -->
     <string name="hidden_apps">Skjulte apper</string>
     <string name="set_as_default_launcher">Sett som standard startskjerm</string>
