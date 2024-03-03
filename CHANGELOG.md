@@ -10,6 +10,7 @@
 
 **Merged pull requests:**
 
+- New Crowdin updates [\#339](https://github.com/HeAndroids2Much/mLauncher/pull/339) ([HeCodes2Much](https://github.com/HeCodes2Much))
 - Fixed the Accent color all apps header [\#338](https://github.com/HeAndroids2Much/mLauncher/pull/338) ([HeCodes2Much](https://github.com/HeCodes2Much))
 - Fixed the title of app apps when accent color is disabled. [\#337](https://github.com/HeAndroids2Much/mLauncher/pull/337) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
