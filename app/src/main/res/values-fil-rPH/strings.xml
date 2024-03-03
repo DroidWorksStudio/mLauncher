@@ -11,6 +11,7 @@
     <string name="homescreen">Home screen</string>
     <string name="alignment">Pag-align</string>
     <string name="gestures">Mga galaw</string>
+    <string name="miscellaneous">Miscellaneous</string>
     <!-- Home Strings -->
     <string name="hidden_apps">Mga nakatagong app</string>
     <string name="set_as_default_launcher">Itakda bilang default na launcher</string>
