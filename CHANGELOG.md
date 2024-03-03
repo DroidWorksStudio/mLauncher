@@ -1,12 +1,16 @@
 # Changelog
 
-## [1.3.0](https://github.com/HeAndroids2Much/mLauncher/tree/1.3.0) ( 2, March 2024)
-
+## [Coming Soon](https://github.com/HeAndroids2Much/mLauncher/tree/HEAD)
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/1.3.0...HEAD)
 
+**Fixed bugs:**
+
+- \[Bug Report\] Blank Homescreen [\#319](https://github.com/HeAndroids2Much/mLauncher/issues/319)
+
 **Merged pull requests:**
 
+- Fixed the Accent color all apps header [\#338](https://github.com/HeAndroids2Much/mLauncher/pull/338) ([HeCodes2Much](https://github.com/HeCodes2Much))
 - Fixed the title of app apps when accent color is disabled. [\#337](https://github.com/HeAndroids2Much/mLauncher/pull/337) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
 ## [1.3.0](https://github.com/HeAndroids2Much/mLauncher/tree/1.3.0) ( 2, March 2024)
