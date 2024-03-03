@@ -11,6 +11,7 @@
     <string name="homescreen">Thuisscherm</string>
     <string name="alignment">Uitlijning</string>
     <string name="gestures">Vingerbewegingen</string>
+    <string name="miscellaneous">Gemengd</string>
     <!-- Home Strings -->
     <string name="hidden_apps">Verborgen apps</string>
     <string name="set_as_default_launcher">Instellen als standaard launcher</string>
