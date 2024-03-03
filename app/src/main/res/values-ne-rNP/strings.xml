@@ -11,6 +11,7 @@
     <string name="homescreen">होमस्क्रिन</string>
     <string name="alignment">पङ्क्तिबद्धता</string>
     <string name="gestures">इशाराहरू</string>
+    <string name="miscellaneous">विविध</string>
     <!-- Home Strings -->
     <string name="hidden_apps">लुकेका एपहरू</string>
     <string name="set_as_default_launcher">पूर्वनिर्धारित लन्चरको रूपमा सेट गर्नुहोस्</string>
