@@ -11,6 +11,7 @@
     <string name="homescreen">Ana Ekran</string>
     <string name="alignment">Hizalama</string>
     <string name="gestures">Jestler</string>
+    <string name="miscellaneous">Çeşitli</string>
     <!-- Home Strings -->
     <string name="hidden_apps">Gizli uygulamalar</string>
     <string name="set_as_default_launcher">Varsayılan başlatıcı olarak ayarla</string>
