@@ -11,6 +11,7 @@
     <string name="homescreen">ਹੋਮਸਕਰੀਨ</string>
     <string name="alignment">ਅਲਾਈਨਮੈਂਟ</string>
     <string name="gestures">ਇਸ਼ਾਰੇ</string>
+    <string name="miscellaneous">ਫੁਟਕਲ</string>
     <!-- Home Strings -->
     <string name="hidden_apps">ਲੁਕੀਆਂ ਹੋਈਆਂ ਐਪਾਂ</string>
     <string name="set_as_default_launcher">ਡਿਫੌਲਟ ਲਾਂਚਰ ਵਜੋਂ ਸੈੱਟ ਕਰੋ</string>
