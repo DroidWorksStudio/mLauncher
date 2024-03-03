@@ -12,6 +12,7 @@
     <string name="alignment">Alignment</string>
     <string name="gestures">Gestures</string>
     <!-- Home Strings -->
+    <string name="miscellaneous">Miscellaneous</string>
     <string name="hidden_apps">Hidden apps</string>
     <string name="set_as_default_launcher">Set as default launcher</string>
     <string name="change_default_launcher">Change default launcher</string>

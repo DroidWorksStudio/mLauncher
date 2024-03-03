@@ -12,6 +12,7 @@
     <string name="alignment">Allinjament</string>
     <string name="gestures">Ġesti</string>
     <!-- Home Strings -->
+    <string name="miscellaneous">Miscellaneous</string>
     <string name="hidden_apps">Apps moħbija</string>
     <string name="set_as_default_launcher">Issettja bħala launcher default</string>
     <string name="change_default_launcher">Ibdel il-lanċjar default</string>

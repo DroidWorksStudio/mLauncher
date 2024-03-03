@@ -12,6 +12,7 @@
     <string name="alignment">ترتيب ڏيڻ</string>
     <string name="gestures">اشارا</string>
     <!-- Home Strings -->
+    <string name="miscellaneous">Miscellaneous</string>
     <string name="hidden_apps">لڪيل ائپس</string>
     <string name="set_as_default_launcher">ڊفالٽ لانچر طور سيٽ ڪريو</string>
     <string name="change_default_launcher">ڊفالٽ لانچر کي تبديل ڪريو</string>

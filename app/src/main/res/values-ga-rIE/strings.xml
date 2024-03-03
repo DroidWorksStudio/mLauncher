@@ -12,6 +12,7 @@
     <string name="alignment">Ailíniú</string>
     <string name="gestures">Gothaí</string>
     <!-- Home Strings -->
+    <string name="miscellaneous">Miscellaneous</string>
     <string name="hidden_apps">Aipeanna i bhfolach</string>
     <string name="set_as_default_launcher">Socraigh mar tosaitheoir réamhshocraithe</string>
     <string name="change_default_launcher">Athraigh an tosaitheoir réamhshocraithe</string>

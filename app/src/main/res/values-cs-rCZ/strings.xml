@@ -12,6 +12,7 @@
     <string name="alignment">Zarovnání</string>
     <string name="gestures">Gesta</string>
     <!-- Home Strings -->
+    <string name="miscellaneous">Miscellaneous</string>
     <string name="hidden_apps">Skryté aplikace</string>
     <string name="set_as_default_launcher">Nastavit jako výchozí spouštěč</string>
     <string name="change_default_launcher">Změnit výchozí spouštěč</string>

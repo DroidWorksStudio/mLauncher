@@ -12,6 +12,7 @@
     <string name="alignment">Justering</string>
     <string name="gestures">Gester</string>
     <!-- Home Strings -->
+    <string name="miscellaneous">Miscellaneous</string>
     <string name="hidden_apps">Dolda appar</string>
     <string name="set_as_default_launcher">Ange som standard launcher</string>
     <string name="change_default_launcher">Ändra standard-launcher</string>

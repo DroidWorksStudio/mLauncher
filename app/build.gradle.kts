@@ -115,6 +115,7 @@ dependencies {
     implementation("androidx.compose.foundation:foundation:1.6.2")
 
     implementation("com.google.code.gson:gson:2.10.1")
+    implementation("androidx.preference:preference:1.2.1")
 
     val androidxTestEspresso = "3.5.1"
     androidTestImplementation("androidx.test.espresso:espresso-core:$androidxTestEspresso")

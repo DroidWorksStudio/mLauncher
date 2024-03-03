@@ -12,6 +12,7 @@
     <string name="alignment">Pag-align</string>
     <string name="gestures">Mga galaw</string>
     <!-- Home Strings -->
+    <string name="miscellaneous">Miscellaneous</string>
     <string name="hidden_apps">Mga nakatagong app</string>
     <string name="set_as_default_launcher">Itakda bilang default na launcher</string>
     <string name="change_default_launcher">Baguhin ang default na launcher</string>

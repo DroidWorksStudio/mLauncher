@@ -12,6 +12,7 @@
     <string name="alignment">Изравняване</string>
     <string name="gestures">Жестове</string>
     <!-- Home Strings -->
+    <string name="miscellaneous">Miscellaneous</string>
     <string name="hidden_apps">Скрити приложения</string>
     <string name="set_as_default_launcher">Задайте като стартиране по подразбиране</string>
     <string name="change_default_launcher">Промяна на стартовия модул по подразбиране</string>

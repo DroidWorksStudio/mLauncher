@@ -12,6 +12,7 @@
     <string name="alignment">Keselarasan</string>
     <string name="gestures">Gerakan</string>
     <!-- Home Strings -->
+    <string name="miscellaneous">Miscellaneous</string>
     <string name="hidden_apps">Aplikasi tersembunyi</string>
     <string name="set_as_default_launcher">Ditetapkan sebagai peluncur default</string>
     <string name="change_default_launcher">Ubah peluncur default</string>

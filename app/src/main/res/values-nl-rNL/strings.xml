@@ -12,6 +12,7 @@
     <string name="alignment">Uitlijning</string>
     <string name="gestures">Vingerbewegingen</string>
     <!-- Home Strings -->
+    <string name="miscellaneous">Miscellaneous</string>
     <string name="hidden_apps">Verborgen apps</string>
     <string name="set_as_default_launcher">Instellen als standaard launcher</string>
     <string name="change_default_launcher">Standaard launcher wijzigen</string>

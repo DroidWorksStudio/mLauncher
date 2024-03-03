@@ -12,6 +12,7 @@
     <string name="alignment">გასწორება</string>
     <string name="gestures">ჟესტები</string>
     <!-- Home Strings -->
+    <string name="miscellaneous">Miscellaneous</string>
     <string name="hidden_apps">დამალული აპლიკაციები</string>
     <string name="set_as_default_launcher">დააყენეთ ნაგულისხმევ გამშვებად</string>
     <string name="change_default_launcher">ნაგულისხმევი გამშვების შეცვლა</string>

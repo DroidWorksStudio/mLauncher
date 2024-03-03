@@ -12,6 +12,7 @@
     <string name="alignment">Выравнивание</string>
     <string name="gestures">Жесты</string>
     <!-- Home Strings -->
+    <string name="miscellaneous">Miscellaneous</string>
     <string name="hidden_apps">Скрытые приложения</string>
     <string name="set_as_default_launcher">Установить как лаунчер по умолчанию</string>
     <string name="change_default_launcher">Изменить лаунчер по умолчанию</string>

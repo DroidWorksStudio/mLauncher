@@ -12,6 +12,7 @@
     <string name="alignment">محاذاة</string>
     <string name="gestures">إيماءات</string>
     <!-- Home Strings -->
+    <string name="miscellaneous">Miscellaneous</string>
     <string name="hidden_apps">التطبيقات المخفية</string>
     <string name="set_as_default_launcher">تعيين كمشغل افتراضي</string>
     <string name="change_default_launcher">تغيير المشغل الافتراضي</string>
