@@ -12,7 +12,6 @@
     <string name="alignment">Wyrównanie</string>
     <string name="gestures">Gesty</string>
     <!-- Home Strings -->
-    <string name="miscellaneous">Miscellaneous</string>
     <string name="hidden_apps">Ukryte aplikacje</string>
     <string name="set_as_default_launcher">Ustaw jako domyślny launcher</string>
     <string name="change_default_launcher">Zmień domyślny launcher</string>

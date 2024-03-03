@@ -12,7 +12,6 @@
     <string name="alignment">对齐</string>
     <string name="gestures">手势</string>
     <!-- Home Strings -->
-    <string name="miscellaneous">Miscellaneous</string>
     <string name="hidden_apps">隐藏的应用</string>
     <string name="set_as_default_launcher">设为默认启动器</string>
     <string name="change_default_launcher">更改默认启动器</string>

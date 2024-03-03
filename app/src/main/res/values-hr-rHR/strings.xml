@@ -12,7 +12,6 @@
     <string name="alignment">Poravnanje</string>
     <string name="gestures">Geste</string>
     <!-- Home Strings -->
-    <string name="miscellaneous">Miscellaneous</string>
     <string name="hidden_apps">Skrivene aplikacije</string>
     <string name="set_as_default_launcher">Postavi kao zadani pokretač</string>
     <string name="change_default_launcher">Promjena zadanog pokretača</string>

@@ -12,7 +12,6 @@
     <string name="alignment">Kiegyenlítés</string>
     <string name="gestures">Gesztusok</string>
     <!-- Home Strings -->
-    <string name="miscellaneous">Miscellaneous</string>
     <string name="hidden_apps">Rejtett alkalmazások</string>
     <string name="set_as_default_launcher">Beállítás alapértelmezett indítóprogramként</string>
     <string name="change_default_launcher">Alapértelmezett indítóprogram módosítása</string>

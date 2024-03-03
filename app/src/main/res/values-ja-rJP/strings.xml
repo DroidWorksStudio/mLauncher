@@ -12,7 +12,6 @@
     <string name="alignment">配置</string>
     <string name="gestures">ジェスチャー</string>
     <!-- Home Strings -->
-    <string name="miscellaneous">Miscellaneous</string>
     <string name="hidden_apps">非表示のアプリ</string>
     <string name="set_as_default_launcher">デフォルトのランチャーに設定</string>
     <string name="change_default_launcher">デフォルトのランチャーを変更する</string>

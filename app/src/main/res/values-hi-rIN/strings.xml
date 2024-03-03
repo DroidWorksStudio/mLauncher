@@ -12,7 +12,6 @@
     <string name="alignment">संरेखण</string>
     <string name="gestures">इशारों</string>
     <!-- Home Strings -->
-    <string name="miscellaneous">Miscellaneous</string>
     <string name="hidden_apps">छिपे हुए ऐप्स</string>
     <string name="set_as_default_launcher">डिफ़ॉल्ट लॉन्चर के रूप में सेट करें</string>
     <string name="change_default_launcher">डिफ़ॉल्ट लॉन्चर बदलें</string>

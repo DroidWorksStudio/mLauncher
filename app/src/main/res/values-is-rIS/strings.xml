@@ -12,7 +12,6 @@
     <string name="alignment">Jöfnun</string>
     <string name="gestures">Bendingar</string>
     <!-- Home Strings -->
-    <string name="miscellaneous">Miscellaneous</string>
     <string name="hidden_apps">Falin forrit</string>
     <string name="set_as_default_launcher">Stilla sem sjálfgefið ræsiforrit</string>
     <string name="change_default_launcher">Breyta sjálfgefnum ræsiforriti</string>

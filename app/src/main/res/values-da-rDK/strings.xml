@@ -12,7 +12,6 @@
     <string name="alignment">Justering</string>
     <string name="gestures">Bevægelser</string>
     <!-- Home Strings -->
-    <string name="miscellaneous">Miscellaneous</string>
     <string name="hidden_apps">Skjulte apps</string>
     <string name="set_as_default_launcher">Sæt som standard launcher</string>
     <string name="change_default_launcher">Skift standard launcher</string>

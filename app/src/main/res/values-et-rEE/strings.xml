@@ -12,7 +12,6 @@
     <string name="alignment">Kohandamine</string>
     <string name="gestures">Žestid</string>
     <!-- Home Strings -->
-    <string name="miscellaneous">Miscellaneous</string>
     <string name="hidden_apps">Varjatud rakendused</string>
     <string name="set_as_default_launcher">Määra vaikimisi käivitaja</string>
     <string name="change_default_launcher">Muuda vaikimisi käivitaja</string>

@@ -12,7 +12,6 @@
     <string name="alignment">Aliniere</string>
     <string name="gestures">Gesturi</string>
     <!-- Home Strings -->
-    <string name="miscellaneous">Miscellaneous</string>
     <string name="hidden_apps">Aplicații ascunse</string>
     <string name="set_as_default_launcher">Setează ca lansator implicit</string>
     <string name="change_default_launcher">Schimbă lansatorul implicit</string>

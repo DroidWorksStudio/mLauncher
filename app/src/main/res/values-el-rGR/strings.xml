@@ -12,7 +12,6 @@
     <string name="alignment">Ευθυγράμμιση</string>
     <string name="gestures">Χειρονομίες</string>
     <!-- Home Strings -->
-    <string name="miscellaneous">Miscellaneous</string>
     <string name="hidden_apps">Κρυφές εφαρμογές</string>
     <string name="set_as_default_launcher">Ορισμός ως προεπιλεγμένος εκκινητής</string>
     <string name="change_default_launcher">Αλλαγή προεπιλεγμένου εκκινητή</string>
