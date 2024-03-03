@@ -11,6 +11,7 @@
     <string name="homescreen">Homescreen</string>
     <string name="alignment">Alinhamento</string>
     <string name="gestures">Gestos</string>
+    <string name="miscellaneous">Diversos</string>
     <!-- Home Strings -->
     <string name="hidden_apps">Aplicações ocultas</string>
     <string name="set_as_default_launcher">Definido como lançador padrão</string>
