@@ -116,7 +116,6 @@ class AppDrawerFragment : Fragment() {
         if (flag == AppDrawerFlag.HiddenApps) {
             val fontColor = getHexFontColor(requireActivity())
             val hiddenAppsHint = getString(R.string.hidden_apps)
-            binding.search.queryHint = hiddenAppsHint
             if (prefs.followAccentColors) {
                 val coloredHint = SpannableString(hiddenAppsHint)
                 coloredHint.setSpan(
@@ -127,12 +126,12 @@ class AppDrawerFragment : Fragment() {
                 )
 
                 binding.search.queryHint = coloredHint
-            }
+            } else
+                binding.search.queryHint = hiddenAppsHint
         }
         if (flag == AppDrawerFlag.LaunchApp && prefs.useAllAppsText) {
             val fontColor = getHexFontColor(requireActivity())
             val allAppsHint = getString(R.string.show_apps)
-            binding.search.queryHint = allAppsHint
             if (prefs.followAccentColors) {
                 val coloredHint = SpannableString(allAppsHint)
                 coloredHint.setSpan(
@@ -143,7 +142,8 @@ class AppDrawerFragment : Fragment() {
                 )
 
                 binding.search.queryHint = coloredHint
-            }
+            } else
+                binding.search.queryHint = allAppsHint
         }
 
         binding.search.setOnQueryTextListener(object : SearchView.OnQueryTextListener {

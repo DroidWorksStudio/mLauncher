@@ -2,6 +2,15 @@
 
 ## [1.3.0](https://github.com/HeAndroids2Much/mLauncher/tree/1.3.0) ( 2, March 2024)
 
+
+[Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/1.3.0...HEAD)
+
+**Merged pull requests:**
+
+- Fixed the title of app apps when accent color is disabled. [\#337](https://github.com/HeAndroids2Much/mLauncher/pull/337) ([HeCodes2Much](https://github.com/HeCodes2Much))
+
+## [1.3.0](https://github.com/HeAndroids2Much/mLauncher/tree/1.3.0) ( 2, March 2024)
+
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/1.2.1...1.3.0)
 
 **Implemented enhancements:**
