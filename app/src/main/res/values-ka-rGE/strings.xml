@@ -11,6 +11,7 @@
     <string name="homescreen">საწყისი ეკრანი</string>
     <string name="alignment">გასწორება</string>
     <string name="gestures">ჟესტები</string>
+    <string name="miscellaneous">სხვადასხვა</string>
     <!-- Home Strings -->
     <string name="hidden_apps">დამალული აპლიკაციები</string>
     <string name="set_as_default_launcher">დააყენეთ ნაგულისხმევ გამშვებად</string>
