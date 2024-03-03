@@ -11,6 +11,7 @@
     <string name="homescreen">Avakuva</string>
     <string name="alignment">Kohandamine</string>
     <string name="gestures">Žestid</string>
+    <string name="miscellaneous">Mitmesugust</string>
     <!-- Home Strings -->
     <string name="hidden_apps">Varjatud rakendused</string>
     <string name="set_as_default_launcher">Määra vaikimisi käivitaja</string>
