@@ -95,7 +95,7 @@
     <string name="store_backup">Záloha obchodu</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_failed">Ověření se nezdařilo.</string>
-    <string name="text_authentication_error">Chyba ověření:%s(kód %d)</string>
+    <string name="text_authentication_error">Chyba ověření:%1$s(kód %2$d)</string>
     <string name="text_authentication_cancel">Zrušení ověřování.</string>
     <string name="text_biometric_login">Biometrické přihlášení pro mLauncher</string>
     <string name="text_biometric_login_sub">Přihlaste se pomocí svých biometrických údajů</string>

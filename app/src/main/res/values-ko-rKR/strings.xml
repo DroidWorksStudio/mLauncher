@@ -95,7 +95,7 @@
     <string name="store_backup">Store Backup</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_failed">인증 실패.</string>
-    <string name="text_authentication_error">인증 오류:%s(코드 %d)</string>
+    <string name="text_authentication_error">인증 오류:%1$s(코드 %2$d)</string>
     <string name="text_authentication_cancel">인증 취소.</string>
     <string name="text_biometric_login">mLauncher의 생체인식 로그인</string>
     <string name="text_biometric_login_sub">생체 인식 자격 증명을 사용하여 로그인</string>

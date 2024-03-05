@@ -95,7 +95,7 @@
     <string name="store_backup">存储备份</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_failed">认证失败。</string>
-    <string name="text_authentication_error">身份验证错误：%s（代码 %d）</string>
+    <string name="text_authentication_error">身份验证错误：%1$s（代码 %2$d）</string>
     <string name="text_authentication_cancel">认证取消。</string>
     <string name="text_biometric_login">mLauncher 的生物识别登录</string>
     <string name="text_biometric_login_sub">使用您的生物识别凭据登录</string>

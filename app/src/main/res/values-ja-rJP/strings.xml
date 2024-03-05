@@ -95,7 +95,7 @@
     <string name="store_backup">ストアバックアップ</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_failed">認証に失敗しました。</string>
-    <string name="text_authentication_error">認証エラー:%s(コード %d)</string>
+    <string name="text_authentication_error">認証エラー:%1$s(コード %2$d)</string>
     <string name="text_authentication_cancel">認証をキャンセルします。</string>
     <string name="text_biometric_login">mLauncher の生体認証ログイン</string>
     <string name="text_biometric_login_sub">生体認証資格情報を使用してログインします</string>

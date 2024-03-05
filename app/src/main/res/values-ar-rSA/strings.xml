@@ -95,7 +95,7 @@
     <string name="store_backup">النسخ الاحتياطي للمتجر</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_failed">المصادقة فشلت.</string>
-    <string name="text_authentication_error">خطأ في المصادقة:%s(الكود %d)</string>
+    <string name="text_authentication_error">خطأ في المصادقة:%1$s(الكود %2$d)</string>
     <string name="text_authentication_cancel">إلغاء المصادقة.</string>
     <string name="text_biometric_login">تسجيل الدخول البيومتري لـ mLauncher</string>
     <string name="text_biometric_login_sub">قم بتسجيل الدخول باستخدام بيانات الاعتماد البيومترية الخاصة بك</string>

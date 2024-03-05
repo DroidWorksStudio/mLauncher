@@ -95,7 +95,7 @@
     <string name="store_backup">स्टोर ब्याकअप</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_failed">प्रमाणीकरण असफल भयो।</string>
-    <string name="text_authentication_error">प्रमाणीकरण त्रुटि:%s(कोड %d)</string>
+    <string name="text_authentication_error">प्रमाणीकरण त्रुटि:%1$s(कोड %2$d)</string>
     <string name="text_authentication_cancel">प्रमाणीकरण रद्द।</string>
     <string name="text_biometric_login">mLauncher को लागि बायोमेट्रिक लगइन</string>
     <string name="text_biometric_login_sub">आफ्नो बायोमेट्रिक प्रमाण प्रयोग गरेर लग इन गर्नुहोस्</string>

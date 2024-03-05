@@ -95,7 +95,7 @@
     <string name="store_backup">اسٽور بيڪ اپ</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_failed">تصديق ناڪام ٿي.</string>
-    <string name="text_authentication_error">تصديق جي غلطي:%s(ڪوڊ %d)</string>
+    <string name="text_authentication_error">تصديق جي غلطي:%1$s(ڪوڊ %2$d)</string>
     <string name="text_authentication_cancel">تصديق منسوخ ڪريو.</string>
     <string name="text_biometric_login">mLauncher لاءِ بايوميٽرڪ لاگ ان</string>
     <string name="text_biometric_login_sub">لاگ ان ڪريو پنھنجي بايوميٽرڪ سند استعمال ڪندي</string>

@@ -95,7 +95,7 @@
     <string name="store_backup">Afritun verslunar</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_failed">Auðkenning mistókst.</string>
-    <string name="text_authentication_error">Auðkenningarvilla:%s(kóði %d)</string>
+    <string name="text_authentication_error">Auðkenningarvilla:%1$s(kóði %2$d)</string>
     <string name="text_authentication_cancel">Hætta við auðkenningu.</string>
     <string name="text_biometric_login">Líffræðileg tölfræði innskráning fyrir mLauncher</string>
     <string name="text_biometric_login_sub">Skráðu þig inn með líffræðilegum tölfræðiskilríkjum þínum</string>

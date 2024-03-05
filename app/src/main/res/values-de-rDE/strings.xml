@@ -95,7 +95,7 @@
     <string name="store_backup">Store-Sicherung</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_failed">Authentifizierung fehlgeschlagen.</string>
-    <string name="text_authentication_error">Authentifizierungsfehler:%s(Code %d)</string>
+    <string name="text_authentication_error">Authentifizierungsfehler:%1$s(Code %2$d)</string>
     <string name="text_authentication_cancel">Authentifizierung abbrechen.</string>
     <string name="text_biometric_login">Biometrische Anmeldung für mLauncher</string>
     <string name="text_biometric_login_sub">Melden Sie sich mit Ihren biometrischen Zugangsdaten an</string>

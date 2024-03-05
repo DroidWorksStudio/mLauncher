@@ -95,7 +95,7 @@
     <string name="store_backup">Rezervimi i dyqanit</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_failed">Autentifikimi dështoi.</string>
-    <string name="text_authentication_error">Gabim vërtetimi:%s(kodi %d)</string>
+    <string name="text_authentication_error">Gabim vërtetimi:%1$s(kodi %2$d)</string>
     <string name="text_authentication_cancel">Anulo vërtetimin.</string>
     <string name="text_biometric_login">Identifikimi biometrik për mLauncher</string>
     <string name="text_biometric_login_sub">Hyni duke përdorur kredencialet tuaja biometrike</string>

@@ -95,7 +95,7 @@
     <string name="store_backup">Резервне копіювання магазину</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_failed">Помилка автентифікації.</string>
-    <string name="text_authentication_error">Помилка автентифікації:%s(код %d)</string>
+    <string name="text_authentication_error">Помилка автентифікації:%1$s(код %2$d)</string>
     <string name="text_authentication_cancel">Автентифікація Скасувати.</string>
     <string name="text_biometric_login">Біометричний логін для mLauncher</string>
     <string name="text_biometric_login_sub">Увійдіть, використовуючи свої біометричні облікові дані</string>

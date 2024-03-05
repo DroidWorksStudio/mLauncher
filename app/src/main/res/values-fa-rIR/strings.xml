@@ -95,7 +95,7 @@
     <string name="store_backup">پشتیبان گیری فروشگاه</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_failed">احراز هویت ناموفق بود.</string>
-    <string name="text_authentication_error">خطای احراز هویت:%s(کد %d)</string>
+    <string name="text_authentication_error">خطای احراز هویت:%1$s(کد %2$d)</string>
     <string name="text_authentication_cancel">لغو احراز هویت</string>
     <string name="text_biometric_login">ورود بیومتریک برای mLauncher</string>
     <string name="text_biometric_login_sub">با استفاده از اعتبار بیومتریک خود وارد شوید</string>

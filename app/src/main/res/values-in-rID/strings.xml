@@ -95,7 +95,7 @@
     <string name="store_backup">Simpan Cadangan</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_failed">Otentikasi gagal.</string>
-    <string name="text_authentication_error">Kesalahan autentikasi:%s(kode %d)</string>
+    <string name="text_authentication_error">Kesalahan autentikasi:%1$s(kode %2$d)</string>
     <string name="text_authentication_cancel">Pembatalan Otentikasi.</string>
     <string name="text_biometric_login">Login biometrik untuk mLauncher</string>
     <string name="text_biometric_login_sub">Masuk menggunakan kredensial biometrik Anda</string>

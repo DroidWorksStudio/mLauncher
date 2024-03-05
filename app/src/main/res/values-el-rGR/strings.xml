@@ -95,7 +95,7 @@
     <string name="store_backup">Αποθήκευση Αντιγράφου Ασφαλείας</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_failed">Η ταυτοποίηση απέτυχε.</string>
-    <string name="text_authentication_error">Σφάλμα ελέγχου ταυτότητας:%s(κωδικός %d)</string>
+    <string name="text_authentication_error">Σφάλμα ελέγχου ταυτότητας:%1$s(κωδικός %2$d)</string>
     <string name="text_authentication_cancel">Ακύρωση ελέγχου ταυτότητας.</string>
     <string name="text_biometric_login">Βιομετρική σύνδεση για mLauncher</string>
     <string name="text_biometric_login_sub">Συνδεθείτε χρησιμοποιώντας τα βιομετρικά διαπιστευτήριά σας</string>

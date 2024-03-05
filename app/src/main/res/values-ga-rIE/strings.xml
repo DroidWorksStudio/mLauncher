@@ -95,7 +95,7 @@
     <string name="store_backup">Cúltaca Store</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_failed">Theip ar fíordheimhniú.</string>
-    <string name="text_authentication_error">Earráid fhíordheimhnithe:%s(cód %d)</string>
+    <string name="text_authentication_error">Earráid fhíordheimhnithe:%1$s(cód %2$d)</string>
     <string name="text_authentication_cancel">Fíordheimhniú Cealaigh.</string>
     <string name="text_biometric_login">Logáil isteach bithmhéadrach do mLauncher</string>
     <string name="text_biometric_login_sub">Logáil isteach ag baint úsáide as do shonraí bithmhéadracha</string>
