@@ -94,12 +94,15 @@
     <string name="load_backup">Load Backup</string>
     <string name="store_backup">Store Backup</string>
     <!-- PinCode Strings -->
-    <string name="reset_pin">Avereno ny PIN</string>
-    <string name="pin_number">Pin Number</string>
-    <string name="confirm_pin_number">Hamafiso ny laharan\'ny Pin</string>
-    <string name="unlock_settings">Sokafy ny Settings</string>
-    <string name="pin_number_match">Match Numbers Pin!</string>
-    <string name="pin_number_do_not_match">Tsy mifanentana ny isa Pin!</string>
+    <string name="text_authentication_failed">Tsy nahomby ny fanamarinana.</string>
+    <string name="text_authentication_error">Hadisoana fanamarinana:%s(kaody %d)</string>
+    <string name="text_authentication_cancel">Fanafoanana ny fanamarinana.</string>
+    <string name="text_biometric_login">Fidirana biometrika ho an\'ny mLauncher</string>
+    <string name="text_biometric_login_sub">Midira amin\'ny alàlan\'ny fahazoan-dàlana biometrika anao</string>
+    <string name="text_biometric_no_hardware">Tsy misy endri-javatra biometrika hita amin\'ity fitaovana ity.</string>
+    <string name="text_biometric_hw_unavailable">Ny endri-javatra biometrika dia tsy misy amin\'izao fotoana izao.</string>
+    <string name="text_biometric_error">Biometrika endri-javatra Error.</string>
+    <string name="text_biometric_none_enrolled">Mila mamorona fahazoan-dàlana ianao.</string>
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Mila alalana kalandrie.</string>
     <string name="show_apps">Apps rehetra</string>
