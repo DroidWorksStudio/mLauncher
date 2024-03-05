@@ -31,7 +31,7 @@
     <string name="filter_strength">חוזק מסנן</string>
     <string name="search_from_start">חיפוש אפליקציה מההתחלה.</string>
     <string name="icon_font">השתמש בגופן אייקון</string>
-    <!-- Homescreen Strings -->
+    <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Number of shortcuts</string>
     <string name="show_time">Show time</string>
     <string name="show_date">Show date</string>
@@ -102,6 +102,7 @@
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">צריך אישור לוח שנה.</string>
     <string name="show_apps">All apps</string>
+    <string name="display_hidden_apps">הצג אפליקציות נסתרות</string>
     <string name="drawer_list_empty_hint">No apps found</string>
     <string name="long_press_for_settings">Long press anywhere for settings</string>
     <string name="swipe_up_for_apps">Swipe up for all apps</string>
