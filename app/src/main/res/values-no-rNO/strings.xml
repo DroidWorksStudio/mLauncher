@@ -95,7 +95,7 @@
     <string name="store_backup">Lagre sikkerhetskopiering</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_failed">Autentisering mislyktes.</string>
-    <string name="text_authentication_error">Autentiseringsfeil:%s(kode %d)</string>
+    <string name="text_authentication_error">Autentiseringsfeil:%1$s(kode %2$d)</string>
     <string name="text_authentication_cancel">Avbryt autentisering.</string>
     <string name="text_biometric_login">Biometrisk pålogging for mLauncher</string>
     <string name="text_biometric_login_sub">Logg på med biometrisk legitimasjon</string>
