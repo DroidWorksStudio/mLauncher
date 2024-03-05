@@ -94,15 +94,11 @@
     <string name="load_backup">Back-up laden</string>
     <string name="store_backup">Winkel back-up</string>
     <!-- PinCode Strings -->
-    <string name="text_authentication_failed">Authenticatie mislukt.</string>
-    <string name="text_authentication_error">Authenticatiefout:%1$s(code %2$d)</string>
     <string name="text_authentication_cancel">Authenticatie Annuleren.</string>
+    <string name="text_authentication_error">Authenticatiefout:%1$s(code %2$d)</string>
+    <string name="text_authentication_failed">Authenticatie mislukt.</string>
     <string name="text_biometric_login">Biometrische login voor mLauncher</string>
     <string name="text_biometric_login_sub">Log in met uw biometrische gegevens</string>
-    <string name="text_biometric_no_hardware">Er zijn geen biometrische functies beschikbaar op dit apparaat.</string>
-    <string name="text_biometric_hw_unavailable">Biometrische kenmerken zijn momenteel niet beschikbaar.</string>
-    <string name="text_biometric_error">Biometrische kenmerken Fout.</string>
-    <string name="text_biometric_none_enrolled">U moet inloggegevens aanmaken.</string>
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Heeft kalendertoestemming nodig.</string>
     <string name="show_apps">Alle apps</string>
