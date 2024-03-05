@@ -94,15 +94,11 @@
     <string name="load_backup">Load Backup</string>
     <string name="store_backup">Store Backup</string>
     <!-- PinCode Strings -->
-    <string name="text_authentication_failed">Quá trình xác thực đã thất bại.</string>
-    <string name="text_authentication_error">Lỗi xác thực:%1$s(mã %2$d)</string>
     <string name="text_authentication_cancel">Xác thực Hủy bỏ.</string>
+    <string name="text_authentication_error">Lỗi xác thực:%1$s(mã %2$d)</string>
+    <string name="text_authentication_failed">Quá trình xác thực đã thất bại.</string>
     <string name="text_biometric_login">Đăng nhập sinh trắc học cho mLauncher</string>
     <string name="text_biometric_login_sub">Đăng nhập bằng thông tin sinh trắc học của bạn</string>
-    <string name="text_biometric_no_hardware">Không có tính năng sinh trắc học nào có sẵn trên thiết bị này.</string>
-    <string name="text_biometric_hw_unavailable">Tính năng sinh trắc học hiện không khả dụng.</string>
-    <string name="text_biometric_error">Lỗi tính năng sinh trắc học.</string>
-    <string name="text_biometric_none_enrolled">Bạn cần tạo thông tin xác thực.</string>
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Cần sự cho phép lịch.</string>
     <string name="show_apps">All apps</string>
