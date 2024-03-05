@@ -95,7 +95,7 @@
     <string name="store_backup">ਸਟੋਰ ਬੈਕਅੱਪ</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_failed">ਪ੍ਰਮਾਣੀਕਰਨ ਅਸਫਲ ਰਿਹਾ।</string>
-    <string name="text_authentication_error">ਪ੍ਰਮਾਣਿਕਤਾ ਗਲਤੀ:%s(ਕੋਡ %d)</string>
+    <string name="text_authentication_error">ਪ੍ਰਮਾਣਿਕਤਾ ਗਲਤੀ:%1$s(ਕੋਡ %2$d)</string>
     <string name="text_authentication_cancel">ਪ੍ਰਮਾਣੀਕਰਨ ਰੱਦ ਕਰੋ।</string>
     <string name="text_biometric_login">mLauncher ਲਈ ਬਾਇਓਮੈਟ੍ਰਿਕ ਲੌਗਇਨ</string>
     <string name="text_biometric_login_sub">ਆਪਣੇ ਬਾਇਓਮੈਟ੍ਰਿਕ ਪ੍ਰਮਾਣ ਪੱਤਰ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਲੌਗ ਇਨ ਕਰੋ</string>
