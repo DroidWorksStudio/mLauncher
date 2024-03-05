@@ -94,12 +94,15 @@
     <string name="load_backup">Hlaða öryggisafrit</string>
     <string name="store_backup">Afritun verslunar</string>
     <!-- PinCode Strings -->
-    <string name="reset_pin">Endurstilla PIN</string>
-    <string name="pin_number">PIN númer</string>
-    <string name="confirm_pin_number">Staðfestu PIN-númer</string>
-    <string name="unlock_settings">Opnaðu stillingar</string>
-    <string name="pin_number_match">Pin númer passa!</string>
-    <string name="pin_number_do_not_match">Pinnanúmer passa ekki saman!</string>
+    <string name="text_authentication_failed">Auðkenning mistókst.</string>
+    <string name="text_authentication_error">Auðkenningarvilla:%s(kóði %d)</string>
+    <string name="text_authentication_cancel">Hætta við auðkenningu.</string>
+    <string name="text_biometric_login">Líffræðileg tölfræði innskráning fyrir mLauncher</string>
+    <string name="text_biometric_login_sub">Skráðu þig inn með líffræðilegum tölfræðiskilríkjum þínum</string>
+    <string name="text_biometric_no_hardware">Engir líffræðilegir tölfræðilegir eiginleikar tiltækir á þessu tæki.</string>
+    <string name="text_biometric_hw_unavailable">Líffræðileg tölfræðieiginleikar eru ekki tiltækir eins og er.</string>
+    <string name="text_biometric_error">Villa í líffræðilegum tölfræði.</string>
+    <string name="text_biometric_none_enrolled">Þú þarft að búa til skilríki.</string>
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Þarf dagbókarleyfi.</string>
     <string name="show_apps">Öll forrit</string>
