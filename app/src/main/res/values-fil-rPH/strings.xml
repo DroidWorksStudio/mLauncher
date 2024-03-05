@@ -94,15 +94,11 @@
     <string name="load_backup">I-load ang Backup</string>
     <string name="store_backup">Store Backup</string>
     <!-- PinCode Strings -->
-    <string name="text_authentication_failed">Nabigo ang pagpapatotoo.</string>
-    <string name="text_authentication_error">Error sa pagpapatunay:%1$s(code %2$d)</string>
     <string name="text_authentication_cancel">Kanselahin ang Pagpapatotoo.</string>
+    <string name="text_authentication_error">Error sa pagpapatunay:%1$s(code %2$d)</string>
+    <string name="text_authentication_failed">Nabigo ang pagpapatotoo.</string>
     <string name="text_biometric_login">Biometric login para sa mLauncher</string>
     <string name="text_biometric_login_sub">Mag-log in gamit ang iyong biometric na kredensyal</string>
-    <string name="text_biometric_no_hardware">Walang available na biometric na feature sa device na ito.</string>
-    <string name="text_biometric_hw_unavailable">Kasalukuyang hindi available ang mga biometric na feature.</string>
-    <string name="text_biometric_error">Mga tampok na biometric Error.</string>
-    <string name="text_biometric_none_enrolled">Kailangan mong lumikha ng mga kredensyal.</string>
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Kailangan ng pahintulot sa kalendaryo.</string>
     <string name="show_apps">Lahat ng app</string>
