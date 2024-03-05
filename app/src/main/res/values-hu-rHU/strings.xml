@@ -94,15 +94,11 @@
     <string name="load_backup">Töltés biztonsági mentés</string>
     <string name="store_backup">Tároló biztonsági mentés</string>
     <!-- PinCode Strings -->
-    <string name="text_authentication_failed">Hitelesítés nem sikerült.</string>
-    <string name="text_authentication_error">Hitelesítési hiba:%1$s(kód %2$d)</string>
     <string name="text_authentication_cancel">Hitelesítés megszakítása.</string>
+    <string name="text_authentication_error">Hitelesítési hiba:%1$s(kód %2$d)</string>
+    <string name="text_authentication_failed">Hitelesítés nem sikerült.</string>
     <string name="text_biometric_login">Biometrikus bejelentkezés az mLauncherhez</string>
     <string name="text_biometric_login_sub">Jelentkezzen be biometrikus hitelesítő adataival</string>
-    <string name="text_biometric_no_hardware">Nem állnak rendelkezésre biometrikus funkciók ezen az eszközön.</string>
-    <string name="text_biometric_hw_unavailable">A biometrikus funkciók jelenleg nem érhetők el.</string>
-    <string name="text_biometric_error">Biometrikus jellemzők Hiba.</string>
-    <string name="text_biometric_none_enrolled">Hitelesítési adatokat kell létrehoznia.</string>
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Naptári engedély szükséges.</string>
     <string name="show_apps">Minden alkalmazás</string>
