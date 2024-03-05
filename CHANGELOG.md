@@ -8,6 +8,10 @@
 
 - \[Enhancement\] launch shortcut [\#305](https://github.com/HeAndroids2Much/mLauncher/issues/305)
 
+**Merged pull requests:**
+
+- New Crowdin updates [\#347](https://github.com/HeAndroids2Much/mLauncher/pull/347) ([HeCodes2Much](https://github.com/HeCodes2Much))
+
 ## [1.3.1](https://github.com/HeAndroids2Much/mLauncher/tree/1.3.1) ( 5, March 2024)
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/1.3.0...1.3.1)
