@@ -24,14 +24,17 @@ android {
             isDebuggable = true
             applicationIdSuffix = ".debug"
             versionNameSuffix = "-debug"
-            resValue ("string", "app_name", "mLauncher Debug")
+            resValue("string", "app_name", "mLauncher Debug")
         }
 
         getByName("release") {
             isMinifyEnabled = true
             isShrinkResources = true
-            proguardFiles (getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
-            resValue ("string", "app_name", "mLauncher")
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+            resValue("string", "app_name", "mLauncher")
         }
     }
 
@@ -40,7 +43,8 @@ android {
             outputs.all {
                 val output = this as? com.android.build.gradle.internal.api.BaseVariantOutputImpl
                 if (output?.outputFileName?.endsWith(".apk") == true) {
-                    output.outputFileName = "${defaultConfig.applicationId}_v${defaultConfig.versionName}-Signed.apk"
+                    output.outputFileName =
+                        "${defaultConfig.applicationId}_v${defaultConfig.versionName}-Signed.apk"
                 }
             }
         }
@@ -48,7 +52,8 @@ android {
             outputs.all {
                 val output = this as? com.android.build.gradle.internal.api.BaseVariantOutputImpl
                 if (output?.outputFileName?.endsWith(".apk") == true) {
-                    output.outputFileName = "${defaultConfig.applicationId}_v${defaultConfig.versionName}-Debug.apk"
+                    output.outputFileName =
+                        "${defaultConfig.applicationId}_v${defaultConfig.versionName}-Debug.apk"
                 }
             }
         }
@@ -57,6 +62,7 @@ android {
     buildFeatures {
         compose = true
         viewBinding = true
+        buildConfig = true
     }
 
     composeOptions {
@@ -115,7 +121,8 @@ dependencies {
     implementation("androidx.compose.foundation:foundation:1.6.2")
 
     implementation("com.google.code.gson:gson:2.10.1")
-    implementation("androidx.preference:preference:1.2.1")
+    implementation("androidx.preference:preference-ktx:1.2.1")
+    implementation("androidx.biometric:biometric-ktx:1.2.0-alpha05")
 
     val androidxTestEspresso = "3.5.1"
     androidTestImplementation("androidx.test.espresso:espresso-core:$androidxTestEspresso")
