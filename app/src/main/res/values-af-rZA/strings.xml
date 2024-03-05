@@ -95,7 +95,7 @@
     <string name="store_backup">Store Backup</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_failed">Verifikasie misluk.</string>
-    <string name="text_authentication_error">Stawingsfout:%s(kode %d)</string>
+    <string name="text_authentication_error">Stawingsfout:%1$s(kode %2$d)</string>
     <string name="text_authentication_cancel">Stawing Kanselleer.</string>
     <string name="text_biometric_login">Biometriese aanmelding vir mLauncher</string>
     <string name="text_biometric_login_sub">Meld aan met jou biometriese geloofsbriewe</string>
