@@ -94,12 +94,15 @@
     <string name="load_backup">โหลดข้อมูลสำรอง</string>
     <string name="store_backup">เก็บข้อมูลสำรอง</string>
     <!-- PinCode Strings -->
-    <string name="reset_pin">รีเซ็ต PIN</string>
-    <string name="pin_number">หมายเลขพิน</string>
-    <string name="confirm_pin_number">ยืนยันหมายเลขพิน</string>
-    <string name="unlock_settings">ปลดล็อกการตั้งค่า</string>
-    <string name="pin_number_match">พินเลขตรงกัน!</string>
-    <string name="pin_number_do_not_match">เลขพินไม่ตรงกัน!</string>
+    <string name="text_authentication_failed">รับรองความถูกต้องล้มเหลว.</string>
+    <string name="text_authentication_error">ข้อผิดพลาดในการตรวจสอบสิทธิ์:%s(รหัส %d)</string>
+    <string name="text_authentication_cancel">ยกเลิกการรับรองความถูกต้อง</string>
+    <string name="text_biometric_login">การเข้าสู่ระบบไบโอเมตริกซ์สำหรับ mLauncher</string>
+    <string name="text_biometric_login_sub">เข้าสู่ระบบโดยใช้ข้อมูลประจำตัวไบโอเมตริกซ์ของคุณ</string>
+    <string name="text_biometric_no_hardware">ไม่มีคุณสมบัติไบโอเมตริกซ์ในอุปกรณ์นี้</string>
+    <string name="text_biometric_hw_unavailable">คุณสมบัติไบโอเมตริกซ์ยังไม่พร้อมใช้งานในขณะนี้</string>
+    <string name="text_biometric_error">ข้อผิดพลาดคุณสมบัติไบโอเมตริกซ์</string>
+    <string name="text_biometric_none_enrolled">คุณต้องสร้างข้อมูลรับรอง</string>
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">ต้องได้รับอนุญาตจากปฏิทิน</string>
     <string name="show_apps">แอพทั้งหมด</string>
