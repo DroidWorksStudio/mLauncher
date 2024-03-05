@@ -31,7 +31,7 @@
     <string name="filter_strength">ความแรงของตัวกรอง</string>
     <string name="search_from_start">ค้นหาแอปตั้งแต่เริ่มต้น</string>
     <string name="icon_font">ใช้แบบอักษรไอคอน</string>
-    <!-- Homescreen Strings -->
+    <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">จำนวนทางลัด</string>
     <string name="show_time">เวลาแสดง</string>
     <string name="show_date">แสดงวันที่</string>
@@ -102,6 +102,7 @@
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">ต้องได้รับอนุญาตจากปฏิทิน</string>
     <string name="show_apps">แอพทั้งหมด</string>
+    <string name="display_hidden_apps">แสดงแอปที่ซ่อนอยู่</string>
     <string name="drawer_list_empty_hint">ไม่พบแอป</string>
     <string name="long_press_for_settings">กดที่ใดก็ได้ค้างไว้เพื่อตั้งค่า</string>
     <string name="swipe_up_for_apps">ปัดขึ้นสำหรับแอปทั้งหมด</string>
