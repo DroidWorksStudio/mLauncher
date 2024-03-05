@@ -95,7 +95,7 @@
     <string name="store_backup">Store Backup</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_failed">Аутентификација није успела.</string>
-    <string name="text_authentication_error">Грешка при аутентификацији:%s(код %d)</string>
+    <string name="text_authentication_error">Грешка при аутентификацији:%1$s(код %2$d)</string>
     <string name="text_authentication_cancel">Откажи аутентификацију.</string>
     <string name="text_biometric_login">Биометријска пријава за мЛаунцхер</string>
     <string name="text_biometric_login_sub">Пријавите се користећи свој биометријски акредитив</string>
