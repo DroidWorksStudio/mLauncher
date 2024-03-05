@@ -11,6 +11,7 @@
     <string name="homescreen">Ecran d\'accueil</string>
     <string name="alignment">Alignement</string>
     <string name="gestures">Gestes</string>
+    <string name="miscellaneous">Divers</string>
     <!-- Home Strings -->
     <string name="hidden_apps">Applications masquées</string>
     <string name="set_as_default_launcher">Définir comme lanceur par défaut</string>

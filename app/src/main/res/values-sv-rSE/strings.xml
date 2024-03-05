@@ -11,6 +11,7 @@
     <string name="homescreen">Hemskärm</string>
     <string name="alignment">Justering</string>
     <string name="gestures">Gester</string>
+    <string name="miscellaneous">Diverse</string>
     <!-- Home Strings -->
     <string name="hidden_apps">Dolda appar</string>
     <string name="set_as_default_launcher">Ange som standard launcher</string>

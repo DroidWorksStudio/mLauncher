@@ -11,6 +11,7 @@
     <string name="homescreen">صفحه اصلی</string>
     <string name="alignment">هم ترازی</string>
     <string name="gestures">حرکات</string>
+    <string name="miscellaneous">متفرقه</string>
     <!-- Home Strings -->
     <string name="hidden_apps">برنامه های مخفی</string>
     <string name="set_as_default_launcher">به عنوان راه‌انداز پیش‌فرض تنظیم کنید</string>

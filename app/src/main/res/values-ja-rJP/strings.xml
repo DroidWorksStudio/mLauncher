@@ -11,6 +11,7 @@
     <string name="homescreen">ホーム画面</string>
     <string name="alignment">配置</string>
     <string name="gestures">ジェスチャー</string>
+    <string name="miscellaneous">その他</string>
     <!-- Home Strings -->
     <string name="hidden_apps">非表示のアプリ</string>
     <string name="set_as_default_launcher">デフォルトのランチャーに設定</string>

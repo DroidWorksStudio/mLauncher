@@ -11,6 +11,7 @@
     <string name="homescreen">หน้าจอหลัก</string>
     <string name="alignment">การจัดตำแหน่ง</string>
     <string name="gestures">ท่าทาง</string>
+    <string name="miscellaneous">เบ็ดเตล็ด</string>
     <!-- Home Strings -->
     <string name="hidden_apps">แอพที่ซ่อนอยู่</string>
     <string name="set_as_default_launcher">ตั้งเป็นตัวเรียกใช้งานเริ่มต้น</string>

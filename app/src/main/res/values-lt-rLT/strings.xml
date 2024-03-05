@@ -11,6 +11,7 @@
     <string name="homescreen">Pagrindinis ekranas</string>
     <string name="alignment">Lygiavimas</string>
     <string name="gestures">Gestai</string>
+    <string name="miscellaneous">Įvairūs</string>
     <!-- Home Strings -->
     <string name="hidden_apps">Paslėptos programėlės</string>
     <string name="set_as_default_launcher">Nustatyti kaip numatytąją paleidimo priemonę</string>

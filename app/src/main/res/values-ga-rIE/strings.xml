@@ -11,6 +11,7 @@
     <string name="homescreen">Scáileán baile</string>
     <string name="alignment">Ailíniú</string>
     <string name="gestures">Gothaí</string>
+    <string name="miscellaneous">Ilghnéitheach</string>
     <!-- Home Strings -->
     <string name="hidden_apps">Aipeanna i bhfolach</string>
     <string name="set_as_default_launcher">Socraigh mar tosaitheoir réamhshocraithe</string>
