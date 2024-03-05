@@ -94,12 +94,15 @@
     <string name="load_backup">Carica Backup</string>
     <string name="store_backup">Backup Negozio</string>
     <!-- PinCode Strings -->
-    <string name="reset_pin">Reimposta PIN</string>
-    <string name="pin_number">Codice PIN</string>
-    <string name="confirm_pin_number">Conferma il numero di PIN</string>
-    <string name="unlock_settings">Sblocca impostazioni</string>
-    <string name="pin_number_match">I numeri dei pin corrispondono!</string>
-    <string name="pin_number_do_not_match">I numeri dei pin non corrispondono!</string>
+    <string name="text_authentication_failed">Autenticazione fallita.</string>
+    <string name="text_authentication_error">Errore di autenticazione:%s(codice %d)</string>
+    <string name="text_authentication_cancel">Autenticazione Annulla.</string>
+    <string name="text_biometric_login">Accesso biometrico per mLauncher</string>
+    <string name="text_biometric_login_sub">Accedi utilizzando le tue credenziali biometriche</string>
+    <string name="text_biometric_no_hardware">Nessuna funzionalità biometrica disponibile su questo dispositivo.</string>
+    <string name="text_biometric_hw_unavailable">Le funzionalità biometriche non sono attualmente disponibili.</string>
+    <string name="text_biometric_error">Caratteristiche biometriche Errore.</string>
+    <string name="text_biometric_none_enrolled">È necessario creare le credenziali.</string>
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Necessita dell\'autorizzazione del calendario.</string>
     <string name="show_apps">Tutte le app</string>
