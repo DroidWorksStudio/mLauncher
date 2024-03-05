@@ -94,12 +94,15 @@
     <string name="load_backup">لوڊ بيڪ اپ</string>
     <string name="store_backup">اسٽور بيڪ اپ</string>
     <!-- PinCode Strings -->
-    <string name="reset_pin">پن ري سيٽ ڪريو</string>
-    <string name="pin_number">پن نمبر</string>
-    <string name="confirm_pin_number">پن نمبر جي تصديق ڪريو</string>
-    <string name="unlock_settings">سيٽنگون کوليو</string>
-    <string name="pin_number_match">پن نمبر ملائي!</string>
-    <string name="pin_number_do_not_match">پن نمبر نه ملندا آهن!</string>
+    <string name="text_authentication_failed">تصديق ناڪام ٿي.</string>
+    <string name="text_authentication_error">تصديق جي غلطي:%s(ڪوڊ %d)</string>
+    <string name="text_authentication_cancel">تصديق منسوخ ڪريو.</string>
+    <string name="text_biometric_login">mLauncher لاءِ بايوميٽرڪ لاگ ان</string>
+    <string name="text_biometric_login_sub">لاگ ان ڪريو پنھنجي بايوميٽرڪ سند استعمال ڪندي</string>
+    <string name="text_biometric_no_hardware">هن ڊوائيس تي بايوميٽرڪ خاصيتون موجود نه آهن.</string>
+    <string name="text_biometric_hw_unavailable">بايوميٽرڪ خاصيتون في الحال دستياب ناهن.</string>
+    <string name="text_biometric_error">بايوميٽرڪ خاصيتون غلطي.</string>
+    <string name="text_biometric_none_enrolled">توهان کي سندون ٺاهڻ جي ضرورت آهي.</string>
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">ڪئلينڊر جي اجازت جي ضرورت آهي.</string>
     <string name="show_apps">سڀ ائپس</string>
