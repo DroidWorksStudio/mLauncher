@@ -95,7 +95,7 @@
     <string name="store_backup">Hifadhi Nakala</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_failed">Uthibitishaji umeshindwa.</string>
-    <string name="text_authentication_error">Hitilafu ya uthibitishaji:%s(msimbo %d)</string>
+    <string name="text_authentication_error">Hitilafu ya uthibitishaji:%1$s(msimbo %2$d)</string>
     <string name="text_authentication_cancel">Uthibitishaji Ghairi.</string>
     <string name="text_biometric_login">Kuingia kwa kibayometriki kwa mLauncher</string>
     <string name="text_biometric_login_sub">Ingia kwa kutumia kitambulisho chako cha kibayometriki</string>
