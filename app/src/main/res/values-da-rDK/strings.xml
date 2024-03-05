@@ -95,7 +95,7 @@
     <string name="store_backup">Gem Sikkerhedskopi</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_failed">Godkendelse mislykkedes.</string>
-    <string name="text_authentication_error">Godkendelsesfejl:%s(kode %d)</string>
+    <string name="text_authentication_error">Godkendelsesfejl:%1$s(kode %2$d)</string>
     <string name="text_authentication_cancel">Godkendelse Annuller.</string>
     <string name="text_biometric_login">Biometrisk login til mLauncher</string>
     <string name="text_biometric_login_sub">Log ind med dit biometriske legitimationsoplysninger</string>
