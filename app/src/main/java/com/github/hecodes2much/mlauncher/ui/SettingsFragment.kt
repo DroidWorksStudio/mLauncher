@@ -34,10 +34,19 @@ import com.github.hecodes2much.mlauncher.R
 import com.github.hecodes2much.mlauncher.data.Constants
 import com.github.hecodes2much.mlauncher.data.Constants.Action
 import com.github.hecodes2much.mlauncher.data.Constants.AppDrawerFlag
-import com.github.hecodes2much.mlauncher.data.Constants.Theme.*
+import com.github.hecodes2much.mlauncher.data.Constants.Theme.Dark
+import com.github.hecodes2much.mlauncher.data.Constants.Theme.Light
+import com.github.hecodes2much.mlauncher.data.Constants.Theme.System
 import com.github.hecodes2much.mlauncher.data.Prefs
 import com.github.hecodes2much.mlauncher.databinding.FragmentSettingsBinding
-import com.github.hecodes2much.mlauncher.helper.*
+import com.github.hecodes2much.mlauncher.helper.getHexForOpacity
+import com.github.hecodes2much.mlauncher.helper.hideStatusBar
+import com.github.hecodes2much.mlauncher.helper.ismlauncherDefault
+import com.github.hecodes2much.mlauncher.helper.loadFile
+import com.github.hecodes2much.mlauncher.helper.openAppInfo
+import com.github.hecodes2much.mlauncher.helper.resetDefaultLauncher
+import com.github.hecodes2much.mlauncher.helper.showStatusBar
+import com.github.hecodes2much.mlauncher.helper.storeFile
 import com.github.hecodes2much.mlauncher.listener.DeviceAdmin
 import com.github.hecodes2much.mlauncher.style.SettingsTheme
 import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsArea
@@ -127,7 +136,13 @@ class SettingsFragment : Fragment() {
             SettingsTopView(
                 stringResource(R.string.app_name),
                 fontSize = titleFs,
-                onClick = { openAppInfo(requireContext(), android.os.Process.myUserHandle(), BuildConfig.APPLICATION_ID) },
+                onClick = {
+                    openAppInfo(
+                        requireContext(),
+                        android.os.Process.myUserHandle(),
+                        BuildConfig.APPLICATION_ID
+                    )
+                },
             ) {
                 SettingsTextButton(
                     stringResource(R.string.hidden_apps),
@@ -141,18 +156,6 @@ class SettingsFragment : Fragment() {
                 ) {
                     resetDefaultLauncher(requireContext())
                 }
-                if (prefs.lockSettingsTime != 0) {
-                    SettingsTextButton(
-                        stringResource(R.string.reset_pin),
-                        fontSize = iconFs
-                    ) {
-                        val popup = PopupFragment()
-                        val transaction = childFragmentManager.beginTransaction()
-                        transaction.add(popup, "popup")
-                        transaction.commit()
-                    }
-                }
-
             }
             SettingsArea(
                 title = stringResource(R.string.appearance),
@@ -264,8 +267,7 @@ class SettingsFragment : Fragment() {
                             state = remember { mutableStateOf(prefs.autoOpenApp) },
                         ) { toggleAutoOpenApp() }
                     },
-                    {
-                     open, onChange ->
+                    { open, onChange ->
                         SettingsNumberItem(
                             title = stringResource(R.string.filter_strength),
                             fontSize = iconFs,
@@ -382,7 +384,11 @@ class SettingsFragment : Fragment() {
                             open = open,
                             onChange = onChange,
                             currentSelection = remember { mutableStateOf(prefs.homeAlignment) },
-                            values = arrayOf(Constants.Gravity.Left, Constants.Gravity.Center, Constants.Gravity.Right),
+                            values = arrayOf(
+                                Constants.Gravity.Left,
+                                Constants.Gravity.Center,
+                                Constants.Gravity.Right
+                            ),
                             onSelect = { gravity -> setHomeAlignment(gravity) }
                         )
                     },
@@ -393,7 +399,11 @@ class SettingsFragment : Fragment() {
                             open = open,
                             onChange = onChange,
                             currentSelection = remember { mutableStateOf(prefs.clockAlignment) },
-                            values = arrayOf(Constants.Gravity.Left, Constants.Gravity.Center, Constants.Gravity.Right),
+                            values = arrayOf(
+                                Constants.Gravity.Left,
+                                Constants.Gravity.Center,
+                                Constants.Gravity.Right
+                            ),
                             onSelect = { gravity -> setClockAlignment(gravity) }
                         )
                     },
@@ -404,7 +414,11 @@ class SettingsFragment : Fragment() {
                             open = open,
                             onChange = onChange,
                             currentSelection = remember { mutableStateOf(prefs.drawerAlignment) },
-                            values = arrayOf(Constants.Gravity.Left, Constants.Gravity.Center, Constants.Gravity.Right),
+                            values = arrayOf(
+                                Constants.Gravity.Left,
+                                Constants.Gravity.Center,
+                                Constants.Gravity.Right
+                            ),
                             onSelect = { j -> viewModel.updateDrawerAlignment(j) }
                         )
                     },
@@ -510,18 +524,6 @@ class SettingsFragment : Fragment() {
                             max = Constants.TEXT_SIZE_MAX,
                             onSelect = { f -> setTextSizeSettings(f) }
                         )
-                    },
-                    { open, onChange ->
-                        SettingsSliderItem(
-                            title = stringResource(R.string.settings_lock_time),
-                            fontSize = iconFs,
-                            open = open,
-                            onChange = onChange,
-                            currentSelection = remember { mutableIntStateOf(prefs.lockSettingsTime) },
-                            min = Constants.LOCK_TIME_MIN,
-                            max = Constants.LOCK_TIME_MAX,
-                            onSelect = { f -> setLockSettingsTime(f) }
-                        )
                     }
                 )
             )
@@ -544,7 +546,12 @@ class SettingsFragment : Fragment() {
                 modifier = Modifier
                     .align(Alignment.End)
                     .padding(10.dp, 5.dp),
-                text = "Version: ${requireContext().packageManager.getPackageInfo(requireContext().packageName, 0).versionName}",
+                text = "Version: ${
+                    requireContext().packageManager.getPackageInfo(
+                        requireContext().packageName,
+                        0
+                    ).versionName
+                }",
                 fontSize = iconFs,
                 color = Color.LightGray
             )
@@ -562,7 +569,8 @@ class SettingsFragment : Fragment() {
 
         viewModel.ismlauncherDefault()
 
-        deviceManager = context?.getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
+        deviceManager =
+            context?.getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
         componentName = ComponentName(requireContext(), DeviceAdmin::class.java)
         checkAdminPermission()
     }
@@ -578,7 +586,7 @@ class SettingsFragment : Fragment() {
     }
 
     private fun toggleHomeAppsBottom() {
-        val onBottom  = !prefs.homeAlignmentBottom
+        val onBottom = !prefs.homeAlignmentBottom
 
         prefs.homeAlignmentBottom = onBottom
         viewModel.updateHomeAppsAlignment(prefs.homeAlignment, onBottom)
@@ -614,9 +622,11 @@ class SettingsFragment : Fragment() {
     private fun toggleCustomIconFont() {
         prefs.useCustomIconFont = !prefs.useCustomIconFont
     }
+
     private fun toggleAllAppsText() {
         prefs.useAllAppsText = !prefs.useAllAppsText
     }
+
     private fun toggleShowDate() {
         prefs.showDate = !prefs.showDate
         viewModel.setShowDate(prefs.showDate)
@@ -691,10 +701,6 @@ class SettingsFragment : Fragment() {
         prefs.textSizeSettings = size
     }
 
-    private fun setLockSettingsTime(size: Int) {
-        prefs.lockSettingsTime = size
-    }
-
     private fun setTextMarginSize(size: Int) {
         prefs.textMarginSize = size
     }
@@ -710,10 +716,11 @@ class SettingsFragment : Fragment() {
             AppDrawerFlag.SetDoubleTap -> prefs.doubleTapAction = action
             AppDrawerFlag.SetHomeApp,
             AppDrawerFlag.HiddenApps,
-            AppDrawerFlag.LaunchApp -> {}
+            AppDrawerFlag.LaunchApp -> {
+            }
         }
 
-        when(action) {
+        when (action) {
             Action.OpenApp -> {
                 viewModel.getAppList()
                 findNavController().navigate(
@@ -721,6 +728,7 @@ class SettingsFragment : Fragment() {
                     bundleOf("flag" to flag.toString())
                 )
             }
+
             else -> {}
         }
     }

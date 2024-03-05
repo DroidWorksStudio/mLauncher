@@ -4,7 +4,7 @@ import android.annotation.SuppressLint
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
 import com.github.hecodes2much.mlauncher.R
-import java.util.*
+import java.util.Locale
 
 interface EnumOption {
     @Composable
@@ -28,9 +28,6 @@ object Constants {
     const val BACKUP_WRITE = 1
     const val BACKUP_READ = 2
 
-    const val LOCK_TIME_MIN = 0
-    const val LOCK_TIME_MAX = 120
-
     const val FILTER_STRENGTH_MIN = 1
     const val FILTER_STRENGTH_MAX = 99
 
@@ -47,7 +44,7 @@ object Constants {
         SetDoubleTap,
     }
 
-    enum class Language: EnumOption {
+    enum class Language : EnumOption {
         System,
         Afrikaans,
         Albanian,
@@ -165,7 +162,7 @@ object Constants {
         }
 
         private fun value(): String {
-            return when(this) {
+            return when (this) {
                 System -> Locale.getDefault().language
                 Afrikaans -> "af"
                 Albanian -> "sq"
@@ -222,14 +219,14 @@ object Constants {
         }
     }
 
-    enum class Gravity: EnumOption {
+    enum class Gravity : EnumOption {
         Left,
         Center,
         Right;
 
         @Composable
         override fun string(): String {
-            return when(this) {
+            return when (this) {
                 Left -> stringResource(R.string.left)
                 Center -> stringResource(R.string.center)
                 Right -> stringResource(R.string.right)
@@ -238,7 +235,7 @@ object Constants {
 
         @SuppressLint("RtlHardcoded")
         fun value(): Int {
-            return when(this) {
+            return when (this) {
                 Left -> android.view.Gravity.LEFT
                 Center -> android.view.Gravity.CENTER
                 Right -> android.view.Gravity.RIGHT
@@ -246,7 +243,7 @@ object Constants {
         }
     }
 
-    enum class Action: EnumOption {
+    enum class Action : EnumOption {
         Disabled,
         OpenApp,
         LockScreen,
@@ -259,7 +256,7 @@ object Constants {
 
         @Composable
         override fun string(): String {
-            return when(this) {
+            return when (this) {
                 OpenApp -> stringResource(R.string.open_app)
                 LockScreen -> stringResource(R.string.lock_screen)
                 ShowNotification -> stringResource(R.string.show_notifications)
@@ -273,14 +270,14 @@ object Constants {
         }
     }
 
-    enum class Theme: EnumOption {
+    enum class Theme : EnumOption {
         System,
         Dark,
         Light;
 
         @Composable
         override fun string(): String {
-            return when(this) {
+            return when (this) {
                 System -> stringResource(R.string.lang_system)
                 Dark -> stringResource(R.string.dark)
                 Light -> stringResource(R.string.light)

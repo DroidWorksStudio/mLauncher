@@ -21,6 +21,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.biometric.BiometricManager
+import androidx.biometric.BiometricManager.Authenticators.BIOMETRIC_WEAK
+import androidx.biometric.BiometricManager.Authenticators.DEVICE_CREDENTIAL
+import androidx.biometric.BiometricPrompt
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.os.bundleOf
@@ -37,13 +41,29 @@ import com.github.hecodes2much.mlauncher.data.Constants.Action
 import com.github.hecodes2much.mlauncher.data.Constants.AppDrawerFlag
 import com.github.hecodes2much.mlauncher.data.Prefs
 import com.github.hecodes2much.mlauncher.databinding.FragmentHomeBinding
-import com.github.hecodes2much.mlauncher.helper.*
+import com.github.hecodes2much.mlauncher.helper.ActionService
+import com.github.hecodes2much.mlauncher.helper.BatteryReceiver
+import com.github.hecodes2much.mlauncher.helper.getHexFontColor
+import com.github.hecodes2much.mlauncher.helper.getHexForOpacity
+import com.github.hecodes2much.mlauncher.helper.hideStatusBar
+import com.github.hecodes2much.mlauncher.helper.initActionService
+import com.github.hecodes2much.mlauncher.helper.ismlauncherDefault
+import com.github.hecodes2much.mlauncher.helper.openAccessibilitySettings
+import com.github.hecodes2much.mlauncher.helper.openAlarmApp
+import com.github.hecodes2much.mlauncher.helper.openCalendar
+import com.github.hecodes2much.mlauncher.helper.openCameraApp
+import com.github.hecodes2much.mlauncher.helper.openDialerApp
+import com.github.hecodes2much.mlauncher.helper.showStatusBar
+import com.github.hecodes2much.mlauncher.helper.showToastLong
+import com.github.hecodes2much.mlauncher.helper.showToastShort
 import com.github.hecodes2much.mlauncher.listener.OnSwipeTouchListener
 import com.github.hecodes2much.mlauncher.listener.ViewSwipeTouchListener
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
-import java.util.*
+import java.util.Calendar
+import java.util.Locale
+import java.util.TimeZone
 
 class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener {
 
@@ -58,7 +78,14 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
     private val calendarPermission = Manifest.permission.READ_CALENDAR
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+    private lateinit var biometricPrompt: BiometricPrompt
+    private lateinit var promptInfo: BiometricPrompt.PromptInfo
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
 
         val view = binding.root
@@ -92,7 +119,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             ViewModelProvider(this)[MainViewModel::class.java]
         } ?: throw Exception("Invalid Activity")
 
-        deviceManager = context?.getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
+        deviceManager =
+            context?.getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
         @Suppress("DEPRECATION")
         vibrator = context?.getSystemService(VIBRATOR_SERVICE) as Vibrator
 
@@ -154,7 +182,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         binding.clock.format24Hour = best24
 
         val best12Date = DateFormat.getBestDateTimePattern(locale, "eeeddMMM")
-        val best24Date = DateFormat.getBestDateTimePattern(locale,"eeeddMMM")
+        val best24Date = DateFormat.getBestDateTimePattern(locale, "eeeddMMM")
         binding.date.format12Hour = best12Date
         binding.date.format24Hour = best24Date
 
@@ -180,16 +208,18 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     else -> handleOtherAction(action)
                 }
             }
+
             R.id.date -> {
                 when (val action = prefs.clickDateAction) {
                     Action.OpenApp -> openClickDateApp()
                     else -> handleOtherAction(action)
                 }
             }
-            R.id.setDefaultLauncher ->
-            {
+
+            R.id.setDefaultLauncher -> {
                 viewModel.resetDefaultLauncherApp(requireContext())
             }
+
             else -> {
                 try { // Launch app
                     val appLocation = view.id
@@ -225,7 +255,10 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             val amPm = DateFormat.format("a", calendar).toString()
 
             // Check if the time format is actually 12-hour or 24-hour
-            hour in 1..11 && amPm.equals("am", ignoreCase = true) || hour == 12 && amPm.equals("pm", ignoreCase = true)
+            hour in 1..11 && amPm.equals("am", ignoreCase = true) || hour == 12 && amPm.equals(
+                "pm",
+                ignoreCase = true
+            )
         }
     }
 
@@ -287,12 +320,12 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 calendar.timeZone = localTimeZone
 
                 val locale = prefs.language.locale()
-                val localTime = if(is24HourFormat()) {
+                val localTime = if (is24HourFormat()) {
                     DateFormat.getBestDateTimePattern(locale, "HHmm")
                 } else {
                     DateFormat.getBestDateTimePattern(locale, "hhmma")
                 }
-                val localDate = DateFormat.getBestDateTimePattern(locale,"eeeddMMM")
+                val localDate = DateFormat.getBestDateTimePattern(locale, "eeeddMMM")
 
                 val localTimeDate = SimpleDateFormat("$localTime $localDate", Locale.getDefault())
                 val localTimeFormatted = localTimeDate.format(calendar.time)
@@ -449,7 +482,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     // This function handles all swipe actions that a independent of the actual swipe direction
     @SuppressLint("NewApi")
     private fun handleOtherAction(action: Action) {
-        when(action) {
+        when (action) {
             Action.ShowNotification -> expandNotificationDrawer(requireContext())
             Action.LockScreen -> lockPhone()
             Action.ShowAppList -> showAppList(AppDrawerFlag.LaunchApp)
@@ -475,9 +508,15 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 try {
                     deviceManager.lockNow()
                 } catch (e: SecurityException) {
-                    showToastLong(requireContext(), "App does not have the permission to lock the device")
+                    showToastLong(
+                        requireContext(),
+                        "App does not have the permission to lock the device"
+                    )
                 } catch (e: Exception) {
-                    showToastLong(requireContext(), "mLauncher failed to lock device.\nPlease check your app settings.")
+                    showToastLong(
+                        requireContext(),
+                        "mLauncher failed to lock device.\nPlease check your app settings."
+                    )
                     prefs.lockModeOn = false
                 }
             }
@@ -491,10 +530,10 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     private fun textOnLongClick(view: View) = onLongClick(view)
 
     private fun getHomeScreenGestureListener(context: Context): View.OnTouchListener {
-         return object : OnSwipeTouchListener(context) {
+        return object : OnSwipeTouchListener(context) {
             override fun onSwipeLeft() {
                 super.onSwipeLeft()
-                when(val action = prefs.swipeLeftAction) {
+                when (val action = prefs.swipeLeftAction) {
                     Action.OpenApp -> openSwipeLeftApp()
                     else -> handleOtherAction(action)
                 }
@@ -502,7 +541,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
             override fun onSwipeRight() {
                 super.onSwipeRight()
-                when(val action = prefs.swipeRightAction) {
+                when (val action = prefs.swipeRightAction) {
                     Action.OpenApp -> openSwipeRightApp()
                     else -> handleOtherAction(action)
                 }
@@ -510,7 +549,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
             override fun onSwipeUp() {
                 super.onSwipeUp()
-                when(val action = prefs.swipeUpAction) {
+                when (val action = prefs.swipeUpAction) {
                     Action.OpenApp -> openSwipeUpApp()
                     else -> handleOtherAction(action)
                 }
@@ -518,7 +557,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
             override fun onSwipeDown() {
                 super.onSwipeDown()
-                when(val action = prefs.swipeDownAction) {
+                when (val action = prefs.swipeDownAction) {
                     Action.OpenApp -> openSwipeDownApp()
                     else -> handleOtherAction(action)
                 }
@@ -527,22 +566,88 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             override fun onLongClick() {
                 super.onLongClick()
                 lifecycleScope.launch(Dispatchers.Main) {
-                    try {
-                        findNavController().navigate(R.id.action_mainFragment_to_passwordFragment)
-                        viewModel.firstOpen(false)
-                    } catch (e: java.lang.Exception) {
-                        Log.d("onLongClick", e.toString())
-                    }
+                    biometricPrompt = BiometricPrompt(this@HomeFragment,
+                        ContextCompat.getMainExecutor(requireContext()),
+                        object : BiometricPrompt.AuthenticationCallback() {
+                            override fun onAuthenticationError(
+                                errorCode: Int,
+                                errString: CharSequence
+                            ) {
+                                when (errorCode) {
+                                    BiometricPrompt.ERROR_USER_CANCELED -> showToastLong(
+                                        requireContext(),
+                                        getString(R.string.text_authentication_cancel)
+                                    )
+
+                                    else -> showToastLong(
+                                        requireContext(),
+                                        getString(R.string.text_authentication_error).format(
+                                            errString,
+                                            errorCode
+                                        )
+                                    )
+                                }
+                            }
+
+                            override fun onAuthenticationSucceeded(result: BiometricPrompt.AuthenticationResult) {
+                                try {
+                                    findNavController().navigate(R.id.action_mainFragment_to_settingsFragment)
+                                    viewModel.firstOpen(false)
+                                } catch (e: java.lang.Exception) {
+                                    Log.d("onLongClick", e.toString())
+                                }
+                            }
+
+                            override fun onAuthenticationFailed() {
+                                showToastLong(
+                                    requireContext(),
+                                    getString(R.string.text_authentication_failed)
+                                )
+                            }
+                        })
+
+                    promptInfo = BiometricPrompt.PromptInfo.Builder()
+                        .setTitle(getString(R.string.text_biometric_login))
+                        .setSubtitle(getString(R.string.text_biometric_login_sub))
+                        .setAllowedAuthenticators(BIOMETRIC_WEAK or DEVICE_CREDENTIAL)
+                        .setConfirmationRequired(false)
+                        .build()
+
+                    authenticate()
                 }
             }
 
             override fun onDoubleClick() {
                 super.onDoubleClick()
-                when(val action = prefs.doubleTapAction) {
+                when (val action = prefs.doubleTapAction) {
                     Action.OpenApp -> openDoubleTapApp()
                     else -> handleOtherAction(action)
                 }
             }
+        }
+    }
+
+    private fun authenticate() {
+        val code = BiometricManager.from(requireContext())
+            .canAuthenticate(BIOMETRIC_WEAK or DEVICE_CREDENTIAL)
+        when (code) {
+            BiometricManager.BIOMETRIC_SUCCESS -> biometricPrompt.authenticate(promptInfo)
+            BiometricManager.BIOMETRIC_ERROR_NO_HARDWARE -> showToastLong(
+                requireContext(),
+                getString(R.string.text_biometric_no_hardware)
+            )
+
+            BiometricManager.BIOMETRIC_ERROR_HW_UNAVAILABLE -> showToastLong(
+                requireContext(),
+                getString(R.string.text_biometric_hw_unavailable)
+            )
+
+            BiometricManager.BIOMETRIC_ERROR_NONE_ENROLLED -> showToastLong(
+                requireContext(),
+                getString(R.string.text_biometric_none_enrolled)
+            )
+
+            else -> showToastLong(requireContext(), getString(R.string.text_authentication_error))
         }
     }
 
@@ -560,7 +665,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
             override fun onSwipeLeft() {
                 super.onSwipeLeft()
-                when(val action = prefs.swipeLeftAction) {
+                when (val action = prefs.swipeLeftAction) {
                     Action.OpenApp -> openSwipeLeftApp()
                     else -> handleOtherAction(action)
                 }
@@ -568,7 +673,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
             override fun onSwipeRight() {
                 super.onSwipeRight()
-                when(val action = prefs.swipeRightAction) {
+                when (val action = prefs.swipeRightAction) {
                     Action.OpenApp -> openSwipeRightApp()
                     else -> handleOtherAction(action)
                 }
@@ -576,7 +681,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
             override fun onSwipeUp() {
                 super.onSwipeUp()
-                when(val action = prefs.swipeUpAction) {
+                when (val action = prefs.swipeUpAction) {
                     Action.OpenApp -> openSwipeUpApp()
                     else -> handleOtherAction(action)
                 }
@@ -584,7 +689,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
             override fun onSwipeDown() {
                 super.onSwipeDown()
-                when(val action = prefs.swipeDownAction) {
+                when (val action = prefs.swipeDownAction) {
                     Action.OpenApp -> openSwipeDownApp()
                     else -> handleOtherAction(action)
                 }
@@ -602,7 +707,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         if (diff in 1 until oldAppsNum) { // 1 <= diff <= oldNumApps
             binding.homeAppsLayout.children.drop(diff)
         } else if (diff < 0) {
-            val alignment = prefs.homeAlignment.value() // make only one call to prefs and store here
+            val alignment =
+                prefs.homeAlignment.value() // make only one call to prefs and store here
 
             // add all missing apps to list
             for (i in oldAppsNum until newAppsNum) {

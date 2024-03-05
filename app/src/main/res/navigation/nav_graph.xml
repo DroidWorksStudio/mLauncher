@@ -18,8 +18,8 @@
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
         <action
-            android:id="@+id/action_mainFragment_to_passwordFragment"
-            app:destination="@id/passwordFragment"
+            android:id="@+id/action_mainFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment"
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
@@ -32,7 +32,7 @@
         android:label="app_list_fragment"
         tools:layout="@layout/fragment_app_drawer">
         <action
-            android:id="@+id/action_appListFragment_to_settingsFragment2"
+            android:id="@+id/action_appListFragment_to_settingsFragment"
             app:destination="@id/settingsFragment"
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim"
@@ -49,20 +49,6 @@
         <action
             android:id="@+id/action_settingsFragment_to_appListFragment"
             app:destination="@id/appListFragment"
-            app:enterAnim="@anim/nav_default_enter_anim"
-            app:exitAnim="@anim/nav_default_exit_anim"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
-    </fragment>
-
-    <fragment
-        android:id="@+id/passwordFragment"
-        android:name="com.github.hecodes2much.mlauncher.ui.PasswordFragment"
-        android:label="PasswordFragment"
-        android:layout="@layout/fragment_password">
-        <action
-            android:id="@+id/action_passwordFragment_to_settingsFragment"
-            app:destination="@id/settingsFragment"
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
