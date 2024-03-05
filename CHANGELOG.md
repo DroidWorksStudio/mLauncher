@@ -4,10 +4,6 @@
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/1.3.1...HEAD)
 
-**Implemented enhancements:**
-
-- \[Enhancement\] launch shortcut [\#305](https://github.com/HeAndroids2Much/mLauncher/issues/305)
-
 **Merged pull requests:**
 
 - New Crowdin updates [\#347](https://github.com/HeAndroids2Much/mLauncher/pull/347) ([HeCodes2Much](https://github.com/HeCodes2Much))
@@ -41,7 +37,6 @@
 **Implemented enhancements:**
 
 - \[Enhancement\] Have homescreen 'time' shortcut open to full clock app [\#332](https://github.com/HeAndroids2Much/mLauncher/issues/332)
-- \[Enhancement\] Landscape mode? [\#316](https://github.com/HeAndroids2Much/mLauncher/issues/316)
 
 **Fixed bugs:**
 
