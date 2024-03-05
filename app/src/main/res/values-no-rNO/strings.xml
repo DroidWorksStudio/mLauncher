@@ -94,15 +94,11 @@
     <string name="load_backup">Last inn Sikkerhetskopi</string>
     <string name="store_backup">Lagre sikkerhetskopiering</string>
     <!-- PinCode Strings -->
-    <string name="text_authentication_failed">Autentisering mislyktes.</string>
-    <string name="text_authentication_error">Autentiseringsfeil:%1$s(kode %2$d)</string>
     <string name="text_authentication_cancel">Avbryt autentisering.</string>
+    <string name="text_authentication_error">Autentiseringsfeil:%1$s(kode %2$d)</string>
+    <string name="text_authentication_failed">Autentisering mislyktes.</string>
     <string name="text_biometric_login">Biometrisk pålogging for mLauncher</string>
     <string name="text_biometric_login_sub">Logg på med biometrisk legitimasjon</string>
-    <string name="text_biometric_no_hardware">Ingen biometriske funksjoner tilgjengelig på denne enheten.</string>
-    <string name="text_biometric_hw_unavailable">Biometriske funksjoner er for øyeblikket utilgjengelige.</string>
-    <string name="text_biometric_error">Biometriske funksjoner Feil.</string>
-    <string name="text_biometric_none_enrolled">Du må opprette legitimasjon.</string>
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Trenger kalendertillatelse.</string>
     <string name="show_apps">Alle apper</string>
