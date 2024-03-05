@@ -94,15 +94,11 @@
     <string name="load_backup">Luchtaigh Cúltaca</string>
     <string name="store_backup">Cúltaca Store</string>
     <!-- PinCode Strings -->
-    <string name="text_authentication_failed">Theip ar fíordheimhniú.</string>
-    <string name="text_authentication_error">Earráid fhíordheimhnithe:%1$s(cód %2$d)</string>
     <string name="text_authentication_cancel">Fíordheimhniú Cealaigh.</string>
+    <string name="text_authentication_error">Earráid fhíordheimhnithe:%1$s(cód %2$d)</string>
+    <string name="text_authentication_failed">Theip ar fíordheimhniú.</string>
     <string name="text_biometric_login">Logáil isteach bithmhéadrach do mLauncher</string>
     <string name="text_biometric_login_sub">Logáil isteach ag baint úsáide as do shonraí bithmhéadracha</string>
-    <string name="text_biometric_no_hardware">Níl aon ghnéithe bithmhéadracha ar fáil ar an ngléas seo.</string>
-    <string name="text_biometric_hw_unavailable">Níl gnéithe bithmhéadracha ar fáil faoi láthair.</string>
-    <string name="text_biometric_error">Gnéithe bithmhéadracha Earráid.</string>
-    <string name="text_biometric_none_enrolled">Ní mór duit dintiúir a chruthú.</string>
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Teastaíonn cead féilire.</string>
     <string name="show_apps">Gach apps</string>
