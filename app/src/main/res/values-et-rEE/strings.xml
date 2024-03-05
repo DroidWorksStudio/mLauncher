@@ -95,7 +95,7 @@
     <string name="store_backup">Salvesta varukoopia</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_failed">Tuvastamine ebaõnnestus.</string>
-    <string name="text_authentication_error">Autentimisviga:%s(kood %d)</string>
+    <string name="text_authentication_error">Autentimisviga:%1$s(kood %2$d)</string>
     <string name="text_authentication_cancel">Autentimise tühistamine.</string>
     <string name="text_biometric_login">mLauncheri biomeetriline sisselogimine</string>
     <string name="text_biometric_login_sub">Logige sisse oma biomeetrilise mandaadiga</string>
