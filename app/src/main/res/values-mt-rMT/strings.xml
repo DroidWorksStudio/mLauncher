@@ -95,7 +95,7 @@
     <string name="store_backup">Aħżen Backup</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_failed">L-awtentikazzjoni falliet.</string>
-    <string name="text_authentication_error">Żball fl-awtentikazzjoni:%s(kodiċi %d)</string>
+    <string name="text_authentication_error">Żball fl-awtentikazzjoni:%1$s(kodiċi %2$d)</string>
     <string name="text_authentication_cancel">Awtentikazzjoni Ikkanċella.</string>
     <string name="text_biometric_login">Login bijometriku għall-mLauncher</string>
     <string name="text_biometric_login_sub">Idħol billi tuża l-kredenzjali bijometrika tiegħek</string>
