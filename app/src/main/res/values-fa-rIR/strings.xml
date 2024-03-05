@@ -31,7 +31,7 @@
     <string name="filter_strength">قدرت فیلتر</string>
     <string name="search_from_start">جستجوی برنامه از ابتدا</string>
     <string name="icon_font">از فونت آیکون استفاده کنید</string>
-    <!-- Homescreen Strings -->
+    <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">تعداد میانبرها</string>
     <string name="show_time">نمایش زمان</string>
     <string name="show_date">نمایش تاریخ</string>
@@ -102,6 +102,7 @@
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">به مجوز تقویم نیاز دارد.</string>
     <string name="show_apps">همه برنامه ها</string>
+    <string name="display_hidden_apps">نمایش برنامه های مخفی</string>
     <string name="drawer_list_empty_hint">هیچ برنامه ای پیدا نشد</string>
     <string name="long_press_for_settings">برای تنظیمات، هر جایی را به مدت طولانی فشار دهید</string>
     <string name="swipe_up_for_apps">برای همه برنامه ها انگشت خود را به سمت بالا بکشید</string>
