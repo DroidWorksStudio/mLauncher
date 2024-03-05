@@ -94,12 +94,15 @@
     <string name="load_backup">Архивиране на зареждането</string>
     <string name="store_backup">Магазин за резервно копие</string>
     <!-- PinCode Strings -->
-    <string name="reset_pin">Нулиране на PIN</string>
-    <string name="pin_number">ПИН номер</string>
-    <string name="confirm_pin_number">Потвърдете ПИН номера</string>
-    <string name="unlock_settings">Настройки за отключване</string>
-    <string name="pin_number_match">Pin номера съвпадат!</string>
-    <string name="pin_number_do_not_match">ПИН номерата не съвпадат!</string>
+    <string name="text_authentication_failed">Неуспешна идентификация.</string>
+    <string name="text_authentication_error">Грешка при удостоверяване:%s(код %d)</string>
+    <string name="text_authentication_cancel">Удостоверяване Отказ.</string>
+    <string name="text_biometric_login">Биометрично влизане за mLauncher</string>
+    <string name="text_biometric_login_sub">Влезте с вашите биометрични идентификационни данни</string>
+    <string name="text_biometric_no_hardware">Няма налични биометрични функции на това устройство.</string>
+    <string name="text_biometric_hw_unavailable">Биометричните функции в момента не са налични.</string>
+    <string name="text_biometric_error">Биометрични характеристики Грешка.</string>
+    <string name="text_biometric_none_enrolled">Трябва да създадете идентификационни данни.</string>
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Нуждае се от разрешение за календар.</string>
     <string name="show_apps">Всички приложения</string>

@@ -94,12 +94,15 @@
     <string name="load_backup">Завантажити резервну копію</string>
     <string name="store_backup">Резервне копіювання магазину</string>
     <!-- PinCode Strings -->
-    <string name="reset_pin">Скинути PIN-код</string>
-    <string name="pin_number">PIN-код</string>
-    <string name="confirm_pin_number">Підтвердьте PIN-код</string>
-    <string name="unlock_settings">Розблокувати налаштування</string>
-    <string name="pin_number_match">Пін-номера збігаються!</string>
-    <string name="pin_number_do_not_match">PIN-коди не збігаються!</string>
+    <string name="text_authentication_failed">Помилка автентифікації.</string>
+    <string name="text_authentication_error">Помилка автентифікації:%s(код %d)</string>
+    <string name="text_authentication_cancel">Автентифікація Скасувати.</string>
+    <string name="text_biometric_login">Біометричний логін для mLauncher</string>
+    <string name="text_biometric_login_sub">Увійдіть, використовуючи свої біометричні облікові дані</string>
+    <string name="text_biometric_no_hardware">На цьому пристрої немає біометричних функцій.</string>
+    <string name="text_biometric_hw_unavailable">Біометричні функції наразі недоступні.</string>
+    <string name="text_biometric_error">Біометричні характеристики Помилка.</string>
+    <string name="text_biometric_none_enrolled">Вам потрібно створити облікові дані.</string>
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Потрібен дозвіл календаря.</string>
     <string name="show_apps">Всі програми</string>

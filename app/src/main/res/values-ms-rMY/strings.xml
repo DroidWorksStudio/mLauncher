@@ -94,12 +94,15 @@
     <string name="load_backup">Muatkan Sandaran</string>
     <string name="store_backup">Simpan Sandaran</string>
     <!-- PinCode Strings -->
-    <string name="reset_pin">Tetapkan semula PIN</string>
-    <string name="pin_number">Nombor PIN</string>
-    <string name="confirm_pin_number">Sahkan Nombor Pin</string>
-    <string name="unlock_settings">Buka kunci Tetapan</string>
-    <string name="pin_number_match">Nombor Pin Padanan!</string>
-    <string name="pin_number_do_not_match">Nombor Pin tidak Padan!</string>
+    <string name="text_authentication_failed">Pengesahan gagal.</string>
+    <string name="text_authentication_error">Ralat pengesahan:%s(kod %d)</string>
+    <string name="text_authentication_cancel">Pengesahan Batal.</string>
+    <string name="text_biometric_login">Log masuk biometrik untuk mLauncher</string>
+    <string name="text_biometric_login_sub">Log masuk menggunakan kelayakan biometrik anda</string>
+    <string name="text_biometric_no_hardware">Tiada ciri biometrik tersedia pada peranti ini.</string>
+    <string name="text_biometric_hw_unavailable">Ciri biometrik tidak tersedia pada masa ini.</string>
+    <string name="text_biometric_error">Ralat ciri biometrik.</string>
+    <string name="text_biometric_none_enrolled">Anda perlu membuat kelayakan.</string>
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Memerlukan kebenaran kalendar.</string>
     <string name="show_apps">Semua apl</string>

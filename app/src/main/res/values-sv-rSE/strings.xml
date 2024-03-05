@@ -94,12 +94,15 @@
     <string name="load_backup">Ladda säkerhetskopia</string>
     <string name="store_backup">Säkerhetskopiering till butik</string>
     <!-- PinCode Strings -->
-    <string name="reset_pin">Återställ PIN-koden</string>
-    <string name="pin_number">Pinkod</string>
-    <string name="confirm_pin_number">Bekräfta PIN-nummer</string>
-    <string name="unlock_settings">Lås upp inställningar</string>
-    <string name="pin_number_match">Pinnummer matchar!</string>
-    <string name="pin_number_do_not_match">Pinnummer matchar inte!</string>
+    <string name="text_authentication_failed">Autentisering misslyckades.</string>
+    <string name="text_authentication_error">Autentiseringsfel:%s(kod %d)</string>
+    <string name="text_authentication_cancel">Autentisering avbryt.</string>
+    <string name="text_biometric_login">Biometrisk inloggning för mLauncher</string>
+    <string name="text_biometric_login_sub">Logga in med dina biometriska uppgifter</string>
+    <string name="text_biometric_no_hardware">Inga biometriska funktioner tillgängliga på den här enheten.</string>
+    <string name="text_biometric_hw_unavailable">Biometriska funktioner är för närvarande inte tillgängliga.</string>
+    <string name="text_biometric_error">Biometriska egenskaper Fel.</string>
+    <string name="text_biometric_none_enrolled">Du måste skapa autentiseringsuppgifter.</string>
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Behöver kalendertillstånd.</string>
     <string name="show_apps">Alla appar</string>

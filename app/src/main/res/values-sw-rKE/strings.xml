@@ -94,12 +94,15 @@
     <string name="load_backup">Pakia Hifadhi Nakala</string>
     <string name="store_backup">Hifadhi Nakala</string>
     <!-- PinCode Strings -->
-    <string name="reset_pin">Weka upya PIN</string>
-    <string name="pin_number">Nambari ya siri</string>
-    <string name="confirm_pin_number">Thibitisha Nambari ya Pini</string>
-    <string name="unlock_settings">Fungua Mipangilio</string>
-    <string name="pin_number_match">Bandika Nambari Zinazolingana!</string>
-    <string name="pin_number_do_not_match">Nambari za siri hazilingani!</string>
+    <string name="text_authentication_failed">Uthibitishaji umeshindwa.</string>
+    <string name="text_authentication_error">Hitilafu ya uthibitishaji:%s(msimbo %d)</string>
+    <string name="text_authentication_cancel">Uthibitishaji Ghairi.</string>
+    <string name="text_biometric_login">Kuingia kwa kibayometriki kwa mLauncher</string>
+    <string name="text_biometric_login_sub">Ingia kwa kutumia kitambulisho chako cha kibayometriki</string>
+    <string name="text_biometric_no_hardware">Hakuna vipengele vya kibayometriki vinavyopatikana kwenye kifaa hiki.</string>
+    <string name="text_biometric_hw_unavailable">Vipengele vya kibayometriki havipatikani kwa sasa.</string>
+    <string name="text_biometric_error">Hitilafu ya vipengele vya kibayometriki.</string>
+    <string name="text_biometric_none_enrolled">Unahitaji kuunda kitambulisho.</string>
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Inahitaji ruhusa ya kalenda.</string>
     <string name="show_apps">Programu zote</string>

@@ -94,12 +94,15 @@
     <string name="load_backup">Načíst zálohu</string>
     <string name="store_backup">Záloha obchodu</string>
     <!-- PinCode Strings -->
-    <string name="reset_pin">Resetovat PIN</string>
-    <string name="pin_number">Číslo PIN</string>
-    <string name="confirm_pin_number">Potvrďte číslo PIN</string>
-    <string name="unlock_settings">Odemknout Nastavení</string>
-    <string name="pin_number_match">Shoda čísel pinů!</string>
-    <string name="pin_number_do_not_match">Čísla pinů se neshodují!</string>
+    <string name="text_authentication_failed">Ověření se nezdařilo.</string>
+    <string name="text_authentication_error">Chyba ověření:%s(kód %d)</string>
+    <string name="text_authentication_cancel">Zrušení ověřování.</string>
+    <string name="text_biometric_login">Biometrické přihlášení pro mLauncher</string>
+    <string name="text_biometric_login_sub">Přihlaste se pomocí svých biometrických údajů</string>
+    <string name="text_biometric_no_hardware">Na tomto zařízení nejsou k dispozici žádné biometrické funkce.</string>
+    <string name="text_biometric_hw_unavailable">Biometrické funkce jsou momentálně nedostupné.</string>
+    <string name="text_biometric_error">Biometrické prvky Chyba.</string>
+    <string name="text_biometric_none_enrolled">Musíte vytvořit přihlašovací údaje.</string>
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Vyžaduje povolení kalendáře.</string>
     <string name="show_apps">Všechny aplikace</string>

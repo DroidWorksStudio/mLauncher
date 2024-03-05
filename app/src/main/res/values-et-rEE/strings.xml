@@ -94,12 +94,15 @@
     <string name="load_backup">Laadige varukoopia</string>
     <string name="store_backup">Salvesta varukoopia</string>
     <!-- PinCode Strings -->
-    <string name="reset_pin">Lähtestage PIN-kood</string>
-    <string name="pin_number">PIN-kood</string>
-    <string name="confirm_pin_number">Kinnitage PIN-kood</string>
-    <string name="unlock_settings">Ava seaded</string>
-    <string name="pin_number_match">Pin numbrid sobivad!</string>
-    <string name="pin_number_do_not_match">Pin numbrid ei ühti!</string>
+    <string name="text_authentication_failed">Tuvastamine ebaõnnestus.</string>
+    <string name="text_authentication_error">Autentimisviga:%s(kood %d)</string>
+    <string name="text_authentication_cancel">Autentimise tühistamine.</string>
+    <string name="text_biometric_login">mLauncheri biomeetriline sisselogimine</string>
+    <string name="text_biometric_login_sub">Logige sisse oma biomeetrilise mandaadiga</string>
+    <string name="text_biometric_no_hardware">Selles seadmes pole biomeetrilisi funktsioone saadaval.</string>
+    <string name="text_biometric_hw_unavailable">Biomeetrilised funktsioonid pole praegu saadaval.</string>
+    <string name="text_biometric_error">Biomeetriliste tunnuste viga.</string>
+    <string name="text_biometric_none_enrolled">Peate looma volikirjad.</string>
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Vajab kalendri luba.</string>
     <string name="show_apps">Kõik rakendused</string>

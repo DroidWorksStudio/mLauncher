@@ -94,12 +94,15 @@
     <string name="load_backup">Tagħbija Backup</string>
     <string name="store_backup">Aħżen Backup</string>
     <!-- PinCode Strings -->
-    <string name="reset_pin">Irrisettja l-PIN</string>
-    <string name="pin_number">Numru tal-Pin</string>
-    <string name="confirm_pin_number">Ikkonferma Numru tal-Pin</string>
-    <string name="unlock_settings">Nisfruttaw Settings</string>
-    <string name="pin_number_match">In-Numri tal-Pin Match!</string>
-    <string name="pin_number_do_not_match">In-Numri tal-Pin ma jaqblux!</string>
+    <string name="text_authentication_failed">L-awtentikazzjoni falliet.</string>
+    <string name="text_authentication_error">Żball fl-awtentikazzjoni:%s(kodiċi %d)</string>
+    <string name="text_authentication_cancel">Awtentikazzjoni Ikkanċella.</string>
+    <string name="text_biometric_login">Login bijometriku għall-mLauncher</string>
+    <string name="text_biometric_login_sub">Idħol billi tuża l-kredenzjali bijometrika tiegħek</string>
+    <string name="text_biometric_no_hardware">L-ebda karatteristika bijometrika disponibbli fuq dan l-apparat.</string>
+    <string name="text_biometric_hw_unavailable">Il-karatteristiċi bijometriċi bħalissa mhumiex disponibbli.</string>
+    <string name="text_biometric_error">Karatteristiċi bijometriċi Żball.</string>
+    <string name="text_biometric_none_enrolled">Għandek bżonn toħloq kredenzjali.</string>
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Jeħtieġ permess tal-kalendarju.</string>
     <string name="show_apps">L-apps kollha</string>

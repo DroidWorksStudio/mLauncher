@@ -94,12 +94,15 @@
     <string name="load_backup">Загрузить резервную копию</string>
     <string name="store_backup">Резервная копия магазина</string>
     <!-- PinCode Strings -->
-    <string name="reset_pin">Сбросить пин-код</string>
-    <string name="pin_number">Пин код</string>
-    <string name="confirm_pin_number">Подтвердите пин-код</string>
-    <string name="unlock_settings">Разблокировать настройки</string>
-    <string name="pin_number_match">Номера контактов совпадают!</string>
-    <string name="pin_number_do_not_match">Номера пинов не совпадают!</string>
+    <string name="text_authentication_failed">Аутентификация не удалась.</string>
+    <string name="text_authentication_error">Ошибка аутентификации:%s(код %d)</string>
+    <string name="text_authentication_cancel">Отмена аутентификации.</string>
+    <string name="text_biometric_login">Биометрический вход в mLauncher</string>
+    <string name="text_biometric_login_sub">Войдите в систему, используя свои биометрические учетные данные</string>
+    <string name="text_biometric_no_hardware">На этом устройстве нет биометрических функций.</string>
+    <string name="text_biometric_hw_unavailable">Биометрические функции в настоящее время недоступны.</string>
+    <string name="text_biometric_error">Биометрические характеристики Ошибка.</string>
+    <string name="text_biometric_none_enrolled">Вам необходимо создать учетные данные.</string>
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Требуется разрешение календаря.</string>
     <string name="show_apps">Все приложения</string>
