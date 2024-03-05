@@ -94,15 +94,11 @@
     <string name="load_backup">Load Backup</string>
     <string name="store_backup">Store Backup</string>
     <!-- PinCode Strings -->
-    <string name="text_authentication_failed">인증 실패.</string>
-    <string name="text_authentication_error">인증 오류:%1$s(코드 %2$d)</string>
     <string name="text_authentication_cancel">인증 취소.</string>
+    <string name="text_authentication_error">인증 오류:%1$s(코드 %2$d)</string>
+    <string name="text_authentication_failed">인증 실패.</string>
     <string name="text_biometric_login">mLauncher의 생체인식 로그인</string>
     <string name="text_biometric_login_sub">생체 인식 자격 증명을 사용하여 로그인</string>
-    <string name="text_biometric_no_hardware">이 기기에서는 생체인식 기능을 사용할 수 없습니다.</string>
-    <string name="text_biometric_hw_unavailable">현재 생체 인식 기능을 사용할 수 없습니다.</string>
-    <string name="text_biometric_error">생체인식 기능 오류.</string>
-    <string name="text_biometric_none_enrolled">자격 증명을 만들어야 합니다.</string>
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">캘린더 권한이 필요합니다.</string>
     <string name="show_apps">All apps</string>
