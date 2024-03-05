@@ -10,6 +10,7 @@
 
 **Merged pull requests:**
 
+- New Crowdin updates [\#341](https://github.com/HeAndroids2Much/mLauncher/pull/341) ([HeCodes2Much](https://github.com/HeCodes2Much))
 - New Crowdin updates [\#340](https://github.com/HeAndroids2Much/mLauncher/pull/340) ([HeCodes2Much](https://github.com/HeCodes2Much))
 - New Crowdin updates [\#339](https://github.com/HeAndroids2Much/mLauncher/pull/339) ([HeCodes2Much](https://github.com/HeCodes2Much))
 - Fixed the Accent color all apps header [\#338](https://github.com/HeAndroids2Much/mLauncher/pull/338) ([HeCodes2Much](https://github.com/HeCodes2Much))
