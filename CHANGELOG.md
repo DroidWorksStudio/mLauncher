@@ -1,5 +1,13 @@
 # Changelog
 
+## [Coming Soon](https://github.com/HeAndroids2Much/mLauncher/tree/HEAD)
+
+[Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/1.3.1...HEAD)
+
+**Implemented enhancements:**
+
+- \[Enhancement\] launch shortcut [\#305](https://github.com/HeAndroids2Much/mLauncher/issues/305)
+
 ## [1.3.1](https://github.com/HeAndroids2Much/mLauncher/tree/1.3.1) ( 5, March 2024)
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/1.3.0...1.3.1)
