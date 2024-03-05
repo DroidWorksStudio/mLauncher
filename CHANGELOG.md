@@ -4,6 +4,10 @@
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/1.3.0...HEAD)
 
+**Implemented enhancements:**
+
+- Updated the PIN system to use the default pin from phone settings. [\#343](https://github.com/HeAndroids2Much/mLauncher/pull/343) ([HeCodes2Much](https://github.com/HeCodes2Much))
+
 **Fixed bugs:**
 
 - \[Bug Report\] Blank Homescreen [\#319](https://github.com/HeAndroids2Much/mLauncher/issues/319)
@@ -11,7 +15,6 @@
 **Merged pull requests:**
 
 - New Crowdin updates [\#344](https://github.com/HeAndroids2Much/mLauncher/pull/344) ([HeCodes2Much](https://github.com/HeCodes2Much))
-- Updated the PIN system to use the default pin from phone settings. [\#343](https://github.com/HeAndroids2Much/mLauncher/pull/343) ([HeCodes2Much](https://github.com/HeCodes2Much))
 - New Crowdin updates [\#342](https://github.com/HeAndroids2Much/mLauncher/pull/342) ([HeCodes2Much](https://github.com/HeCodes2Much))
 - New Crowdin updates [\#341](https://github.com/HeAndroids2Much/mLauncher/pull/341) ([HeCodes2Much](https://github.com/HeCodes2Much))
 - New Crowdin updates [\#340](https://github.com/HeAndroids2Much/mLauncher/pull/340) ([HeCodes2Much](https://github.com/HeCodes2Much))
