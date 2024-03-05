@@ -31,7 +31,7 @@
     <string name="filter_strength">Filtersterkte</string>
     <string name="search_from_start">App zoeken vanaf het begin.</string>
     <string name="icon_font">Gebruik pictogramlettertype</string>
-    <!-- Homescreen Strings -->
+    <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Aantal snelkoppelingen</string>
     <string name="show_time">Tijd weergeven</string>
     <string name="show_date">Datum weergeven</string>
@@ -102,6 +102,7 @@
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Heeft kalendertoestemming nodig.</string>
     <string name="show_apps">Alle apps</string>
+    <string name="display_hidden_apps">Geef verborgen apps weer</string>
     <string name="drawer_list_empty_hint">Geen apps gevonden</string>
     <string name="long_press_for_settings">Lang drukken voor instellingen</string>
     <string name="swipe_up_for_apps">Veeg omhoog voor alle apps</string>
