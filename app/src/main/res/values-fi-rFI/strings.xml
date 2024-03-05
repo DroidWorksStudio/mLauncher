@@ -31,7 +31,7 @@
     <string name="filter_strength">Suodattimen vahvuus</string>
     <string name="search_from_start">Sovellushaku alusta alkaen.</string>
     <string name="icon_font">Käytä kuvakkeen fonttia</string>
-    <!-- Homescreen Strings -->
+    <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Pikakuvakkeiden määrä</string>
     <string name="show_time">Näytä aika</string>
     <string name="show_date">Näytä päivämäärä</string>
@@ -102,6 +102,7 @@
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Vaatii kalenterin luvan.</string>
     <string name="show_apps">Kaikki sovellukset</string>
+    <string name="display_hidden_apps">Näytä piilotetut sovellukset</string>
     <string name="drawer_list_empty_hint">Sovelluksia ei löytynyt</string>
     <string name="long_press_for_settings">Paina pitkään saadaksesi asetuksia</string>
     <string name="swipe_up_for_apps">Pyyhkäise ylös kaikille sovelluksille</string>
