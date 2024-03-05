@@ -11,6 +11,7 @@
 
 **Merged pull requests:**
 
+- \[Language\] Updated Language Files. [\#350](https://github.com/HeAndroids2Much/mLauncher/pull/350) ([HeCodes2Much](https://github.com/HeCodes2Much))
 - \[Language\] Updated Language Files. [\#349](https://github.com/HeAndroids2Much/mLauncher/pull/349) ([HeCodes2Much](https://github.com/HeCodes2Much))
 - New Crowdin updates [\#348](https://github.com/HeAndroids2Much/mLauncher/pull/348) ([HeCodes2Much](https://github.com/HeCodes2Much))
 - New Crowdin updates [\#347](https://github.com/HeAndroids2Much/mLauncher/pull/347) ([HeCodes2Much](https://github.com/HeCodes2Much))
