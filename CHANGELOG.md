@@ -6,6 +6,7 @@
 
 **Merged pull requests:**
 
+- New Crowdin updates [\#348](https://github.com/HeAndroids2Much/mLauncher/pull/348) ([HeCodes2Much](https://github.com/HeCodes2Much))
 - New Crowdin updates [\#347](https://github.com/HeAndroids2Much/mLauncher/pull/347) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
 ## [1.3.1](https://github.com/HeAndroids2Much/mLauncher/tree/1.3.1) ( 5, March 2024)
