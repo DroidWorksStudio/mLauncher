@@ -95,7 +95,7 @@
     <string name="store_backup">เก็บข้อมูลสำรอง</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_failed">รับรองความถูกต้องล้มเหลว.</string>
-    <string name="text_authentication_error">ข้อผิดพลาดในการตรวจสอบสิทธิ์:%s(รหัส %d)</string>
+    <string name="text_authentication_error">ข้อผิดพลาดในการตรวจสอบสิทธิ์:%1$s(รหัส %2$d)</string>
     <string name="text_authentication_cancel">ยกเลิกการรับรองความถูกต้อง</string>
     <string name="text_biometric_login">การเข้าสู่ระบบไบโอเมตริกซ์สำหรับ mLauncher</string>
     <string name="text_biometric_login_sub">เข้าสู่ระบบโดยใช้ข้อมูลประจำตัวไบโอเมตริกซ์ของคุณ</string>
