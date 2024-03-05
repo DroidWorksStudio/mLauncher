@@ -95,7 +95,7 @@
     <string name="store_backup">Guardar respaldo</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_failed">La autenticación falló.</string>
-    <string name="text_authentication_error">Error de autenticación:%s(código %d)</string>
+    <string name="text_authentication_error">Error de autenticación:%1$s(código %2$d)</string>
     <string name="text_authentication_cancel">Cancelación de autenticación.</string>
     <string name="text_biometric_login">Inicio de sesión biométrico para mLauncher</string>
     <string name="text_biometric_login_sub">Inicie sesión con su credencial biométrica</string>
