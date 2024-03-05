@@ -94,15 +94,11 @@
     <string name="load_backup">बैकअप को लोड करना</string>
     <string name="store_backup">स्टोर बैकअप</string>
     <!-- PinCode Strings -->
-    <string name="text_authentication_failed">प्रमाणीकरण विफल होना।</string>
-    <string name="text_authentication_error">प्रमाणीकरण त्रुटि:%1$s(कोड %2$d)</string>
     <string name="text_authentication_cancel">प्रमाणीकरण रद्द.</string>
+    <string name="text_authentication_error">प्रमाणीकरण त्रुटि:%1$s(कोड %2$d)</string>
+    <string name="text_authentication_failed">प्रमाणीकरण विफल होना।</string>
     <string name="text_biometric_login">mLauncher के लिए बायोमेट्रिक लॉगिन</string>
     <string name="text_biometric_login_sub">अपने बायोमेट्रिक क्रेडेंशियल का उपयोग करके लॉग इन करें</string>
-    <string name="text_biometric_no_hardware">इस डिवाइस पर कोई बायोमेट्रिक सुविधा उपलब्ध नहीं है.</string>
-    <string name="text_biometric_hw_unavailable">बायोमेट्रिक सुविधाएँ वर्तमान में उपलब्ध नहीं हैं।</string>
-    <string name="text_biometric_error">बॉयोमीट्रिक सुविधाओं में त्रुटि।</string>
-    <string name="text_biometric_none_enrolled">आपको क्रेडेंशियल बनाने की आवश्यकता है.</string>
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">कैलेंडर अनुमति की आवश्यकता है.</string>
     <string name="show_apps">सभी एप्लीकेशन</string>

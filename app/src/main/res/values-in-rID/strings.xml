@@ -94,15 +94,11 @@
     <string name="load_backup">Memuat Cadangan</string>
     <string name="store_backup">Simpan Cadangan</string>
     <!-- PinCode Strings -->
-    <string name="text_authentication_failed">Otentikasi gagal.</string>
-    <string name="text_authentication_error">Kesalahan autentikasi:%1$s(kode %2$d)</string>
     <string name="text_authentication_cancel">Pembatalan Otentikasi.</string>
+    <string name="text_authentication_error">Kesalahan autentikasi:%1$s(kode %2$d)</string>
+    <string name="text_authentication_failed">Otentikasi gagal.</string>
     <string name="text_biometric_login">Login biometrik untuk mLauncher</string>
     <string name="text_biometric_login_sub">Masuk menggunakan kredensial biometrik Anda</string>
-    <string name="text_biometric_no_hardware">Tidak ada fitur biometrik yang tersedia di perangkat ini.</string>
-    <string name="text_biometric_hw_unavailable">Fitur biometrik saat ini tidak tersedia.</string>
-    <string name="text_biometric_error">Fitur biometrik Kesalahan.</string>
-    <string name="text_biometric_none_enrolled">Anda perlu membuat kredensial.</string>
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Perlu izin kalender.</string>
     <string name="show_apps">Semua aplikasi</string>

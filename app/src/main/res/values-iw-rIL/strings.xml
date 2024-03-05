@@ -94,15 +94,11 @@
     <string name="load_backup">Load Backup</string>
     <string name="store_backup">Store Backup</string>
     <!-- PinCode Strings -->
-    <string name="text_authentication_failed">אימות נכשל.</string>
-    <string name="text_authentication_error">שגיאת אימות:%1$s(קוד %2$d)</string>
     <string name="text_authentication_cancel">ביטול האימות.</string>
+    <string name="text_authentication_error">שגיאת אימות:%1$s(קוד %2$d)</string>
+    <string name="text_authentication_failed">אימות נכשל.</string>
     <string name="text_biometric_login">התחברות ביומטרית עבור mLauncher</string>
     <string name="text_biometric_login_sub">היכנס באמצעות האישור הביומטרי שלך</string>
-    <string name="text_biometric_no_hardware">אין תכונות ביומטריות זמינות במכשיר זה.</string>
-    <string name="text_biometric_hw_unavailable">תכונות ביומטריות אינן זמינות כעת.</string>
-    <string name="text_biometric_error">מאפיינים ביומטריים שגיאה.</string>
-    <string name="text_biometric_none_enrolled">אתה צריך ליצור אישורים.</string>
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">צריך אישור לוח שנה.</string>
     <string name="show_apps">All apps</string>

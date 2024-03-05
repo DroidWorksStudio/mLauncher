@@ -94,15 +94,11 @@
     <string name="load_backup">Lataa Varmuuskopio</string>
     <string name="store_backup">Kaupan Varmuuskopiointi</string>
     <!-- PinCode Strings -->
-    <string name="text_authentication_failed">Todennus epäonnistui.</string>
-    <string name="text_authentication_error">Todennusvirhe:%1$s(koodi %2$d)</string>
     <string name="text_authentication_cancel">Todennus Peruuta.</string>
+    <string name="text_authentication_error">Todennusvirhe:%1$s(koodi %2$d)</string>
+    <string name="text_authentication_failed">Todennus epäonnistui.</string>
     <string name="text_biometric_login">Biometrinen kirjautuminen mLauncheriin</string>
     <string name="text_biometric_login_sub">Kirjaudu sisään biometrisilla tunnistetiedoillasi</string>
-    <string name="text_biometric_no_hardware">Tällä laitteella ei ole biometrisiä ominaisuuksia.</string>
-    <string name="text_biometric_hw_unavailable">Biometriset ominaisuudet eivät ole tällä hetkellä käytettävissä.</string>
-    <string name="text_biometric_error">Biometriset ominaisuudet Virhe.</string>
-    <string name="text_biometric_none_enrolled">Sinun on luotava tunnistetiedot.</string>
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Vaatii kalenterin luvan.</string>
     <string name="show_apps">Kaikki sovellukset</string>

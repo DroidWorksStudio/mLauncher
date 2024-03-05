@@ -94,15 +94,11 @@
     <string name="load_backup">负载备份</string>
     <string name="store_backup">存储备份</string>
     <!-- PinCode Strings -->
-    <string name="text_authentication_failed">认证失败。</string>
-    <string name="text_authentication_error">身份验证错误：%1$s（代码 %2$d）</string>
     <string name="text_authentication_cancel">认证取消。</string>
+    <string name="text_authentication_error">身份验证错误：%1$s（代码 %2$d）</string>
+    <string name="text_authentication_failed">认证失败。</string>
     <string name="text_biometric_login">mLauncher 的生物识别登录</string>
     <string name="text_biometric_login_sub">使用您的生物识别凭据登录</string>
-    <string name="text_biometric_no_hardware">此设备上没有可用的生物识别功能。</string>
-    <string name="text_biometric_hw_unavailable">生物识别功能目前不可用。</string>
-    <string name="text_biometric_error">生物特征识别错误。</string>
-    <string name="text_biometric_none_enrolled">您需要创建凭据。</string>
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">需要日历许可。</string>
     <string name="show_apps">所有应用程序</string>

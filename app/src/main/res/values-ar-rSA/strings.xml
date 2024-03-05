@@ -94,15 +94,11 @@
     <string name="load_backup">تحميل النسخ الاحتياطي</string>
     <string name="store_backup">النسخ الاحتياطي للمتجر</string>
     <!-- PinCode Strings -->
-    <string name="text_authentication_failed">المصادقة فشلت.</string>
-    <string name="text_authentication_error">خطأ في المصادقة:%1$s(الكود %2$d)</string>
     <string name="text_authentication_cancel">إلغاء المصادقة.</string>
+    <string name="text_authentication_error">خطأ في المصادقة:%1$s(الكود %2$d)</string>
+    <string name="text_authentication_failed">المصادقة فشلت.</string>
     <string name="text_biometric_login">تسجيل الدخول البيومتري لـ mLauncher</string>
     <string name="text_biometric_login_sub">قم بتسجيل الدخول باستخدام بيانات الاعتماد البيومترية الخاصة بك</string>
-    <string name="text_biometric_no_hardware">لا تتوفر ميزات القياسات الحيوية على هذا الجهاز.</string>
-    <string name="text_biometric_hw_unavailable">الميزات البيومترية غير متوفرة حاليًا.</string>
-    <string name="text_biometric_error">خطأ في الميزات البيومترية.</string>
-    <string name="text_biometric_none_enrolled">تحتاج إلى إنشاء بيانات الاعتماد.</string>
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">يحتاج إلى إذن التقويم.</string>
     <string name="show_apps">جميع التطبيقات</string>

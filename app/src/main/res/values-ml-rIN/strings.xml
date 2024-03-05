@@ -94,15 +94,11 @@
     <string name="load_backup">ബാക്കപ്പ് ലോഡ് ചെയ്യുക</string>
     <string name="store_backup">സ്റ്റോർ ബാക്കപ്പ്</string>
     <!-- PinCode Strings -->
-    <string name="text_authentication_failed">പ്രാമാണീകരണം പരാജയപ്പെട്ടു.</string>
-    <string name="text_authentication_error">പ്രാമാണീകരണ പിശക്:%1$s(കോഡ് %2$d)</string>
     <string name="text_authentication_cancel">പ്രാമാണീകരണം റദ്ദാക്കുക.</string>
+    <string name="text_authentication_error">പ്രാമാണീകരണ പിശക്:%1$s(കോഡ് %2$d)</string>
+    <string name="text_authentication_failed">പ്രാമാണീകരണം പരാജയപ്പെട്ടു.</string>
     <string name="text_biometric_login">mLouncher-നുള്ള ബയോമെട്രിക് ലോഗിൻ</string>
     <string name="text_biometric_login_sub">നിങ്ങളുടെ ബയോമെട്രിക് ക്രെഡൻഷ്യൽ ഉപയോഗിച്ച് ലോഗിൻ ചെയ്യുക</string>
-    <string name="text_biometric_no_hardware">ഈ ഉപകരണത്തിൽ ബയോമെട്രിക് ഫീച്ചറുകളൊന്നും ലഭ്യമല്ല.</string>
-    <string name="text_biometric_hw_unavailable">ബയോമെട്രിക് ഫീച്ചറുകൾ നിലവിൽ ലഭ്യമല്ല.</string>
-    <string name="text_biometric_error">ബയോമെട്രിക് സവിശേഷതകൾ പിശക്.</string>
-    <string name="text_biometric_none_enrolled">നിങ്ങൾ ക്രെഡൻഷ്യലുകൾ സൃഷ്ടിക്കേണ്ടതുണ്ട്.</string>
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">കലണ്ടറിന്റെ അനുമതി ആവശ്യമാണ്.</string>
     <string name="show_apps">എല്ലാ ആപ്പുകളും</string>

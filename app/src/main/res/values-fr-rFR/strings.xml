@@ -94,15 +94,11 @@
     <string name="load_backup">Charger la sauvegarde</string>
     <string name="store_backup">Sauvegarder la sauvegarde</string>
     <!-- PinCode Strings -->
-    <string name="text_authentication_failed">Authentification échouée.</string>
-    <string name="text_authentication_error">Erreur d\'authentification :%1$s(code %2$d)</string>
     <string name="text_authentication_cancel">Authentification Annuler.</string>
+    <string name="text_authentication_error">Erreur d\'authentification :%1$s(code %2$d)</string>
+    <string name="text_authentication_failed">Authentification échouée.</string>
     <string name="text_biometric_login">Connexion biométrique pour mLauncher</string>
     <string name="text_biometric_login_sub">Connectez-vous en utilisant votre identifiant biométrique</string>
-    <string name="text_biometric_no_hardware">Aucune fonctionnalité biométrique disponible sur cet appareil.</string>
-    <string name="text_biometric_hw_unavailable">Les fonctionnalités biométriques ne sont actuellement pas disponibles.</string>
-    <string name="text_biometric_error">Erreur de fonctionnalités biométriques.</string>
-    <string name="text_biometric_none_enrolled">Vous devez créer des informations d\'identification.</string>
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Nécessite une autorisation de calendrier.</string>
     <string name="show_apps">Toutes les applications</string>

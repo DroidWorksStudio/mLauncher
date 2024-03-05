@@ -94,15 +94,11 @@
     <string name="load_backup">სარეზერვო ასლის ჩატვირთვა</string>
     <string name="store_backup">შენახვის სარეზერვო</string>
     <!-- PinCode Strings -->
-    <string name="text_authentication_failed">ავთენტიფიკაცია ვერ მოხერხდა.</string>
-    <string name="text_authentication_error">ავტორიზაციის შეცდომა:%1$s(კოდი %2$d)</string>
     <string name="text_authentication_cancel">ავთენტიფიკაციის გაუქმება.</string>
+    <string name="text_authentication_error">ავტორიზაციის შეცდომა:%1$s(კოდი %2$d)</string>
+    <string name="text_authentication_failed">ავთენტიფიკაცია ვერ მოხერხდა.</string>
     <string name="text_biometric_login">ბიომეტრიული შესვლა mLauncher-ისთვის</string>
     <string name="text_biometric_login_sub">შედით თქვენი ბიომეტრიული სერთიფიკატის გამოყენებით</string>
-    <string name="text_biometric_no_hardware">ამ მოწყობილობაზე ბიომეტრიული ფუნქციები არ არის ხელმისაწვდომი.</string>
-    <string name="text_biometric_hw_unavailable">ბიომეტრიული მახასიათებლები ამჟამად მიუწვდომელია.</string>
-    <string name="text_biometric_error">ბიომეტრიული მახასიათებლების შეცდომა.</string>
-    <string name="text_biometric_none_enrolled">თქვენ უნდა შექმნათ სერთიფიკატები.</string>
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">საჭიროებს კალენდრის ნებართვას.</string>
     <string name="show_apps">ყველა აპლიკაცია</string>

@@ -94,15 +94,11 @@
     <string name="load_backup">ਬੈਕਅੱਪ ਲੋਡ ਕਰੋ</string>
     <string name="store_backup">ਸਟੋਰ ਬੈਕਅੱਪ</string>
     <!-- PinCode Strings -->
-    <string name="text_authentication_failed">ਪ੍ਰਮਾਣੀਕਰਨ ਅਸਫਲ ਰਿਹਾ।</string>
-    <string name="text_authentication_error">ਪ੍ਰਮਾਣਿਕਤਾ ਗਲਤੀ:%1$s(ਕੋਡ %2$d)</string>
     <string name="text_authentication_cancel">ਪ੍ਰਮਾਣੀਕਰਨ ਰੱਦ ਕਰੋ।</string>
+    <string name="text_authentication_error">ਪ੍ਰਮਾਣਿਕਤਾ ਗਲਤੀ:%1$s(ਕੋਡ %2$d)</string>
+    <string name="text_authentication_failed">ਪ੍ਰਮਾਣੀਕਰਨ ਅਸਫਲ ਰਿਹਾ।</string>
     <string name="text_biometric_login">mLauncher ਲਈ ਬਾਇਓਮੈਟ੍ਰਿਕ ਲੌਗਇਨ</string>
     <string name="text_biometric_login_sub">ਆਪਣੇ ਬਾਇਓਮੈਟ੍ਰਿਕ ਪ੍ਰਮਾਣ ਪੱਤਰ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਲੌਗ ਇਨ ਕਰੋ</string>
-    <string name="text_biometric_no_hardware">ਇਸ ਡਿਵਾਈਸ \'ਤੇ ਕੋਈ ਬਾਇਓਮੈਟ੍ਰਿਕ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਉਪਲਬਧ ਨਹੀਂ ਹਨ।</string>
-    <string name="text_biometric_hw_unavailable">ਬਾਇਓਮੈਟ੍ਰਿਕ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਵਰਤਮਾਨ ਵਿੱਚ ਉਪਲਬਧ ਨਹੀਂ ਹਨ।</string>
-    <string name="text_biometric_error">ਬਾਇਓਮੈਟ੍ਰਿਕ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਗਲਤੀ।</string>
-    <string name="text_biometric_none_enrolled">ਤੁਹਾਨੂੰ ਪ੍ਰਮਾਣ ਪੱਤਰ ਬਣਾਉਣ ਦੀ ਲੋੜ ਹੈ।</string>
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">ਕੈਲੰਡਰ ਦੀ ਇਜਾਜ਼ਤ ਦੀ ਲੋੜ ਹੈ।</string>
     <string name="show_apps">ਸਾਰੀਆਂ ਐਪਾਂ</string>

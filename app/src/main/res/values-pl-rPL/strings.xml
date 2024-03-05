@@ -94,15 +94,11 @@
     <string name="load_backup">Załaduj kopię zapasową</string>
     <string name="store_backup">Zapisz kopię zapasową</string>
     <!-- PinCode Strings -->
-    <string name="text_authentication_failed">Uwierzytelnianie nie powiodło się.</string>
-    <string name="text_authentication_error">Błąd uwierzytelnienia:%1$s(kod %2$d)</string>
     <string name="text_authentication_cancel">Anuluj uwierzytelnianie.</string>
+    <string name="text_authentication_error">Błąd uwierzytelnienia:%1$s(kod %2$d)</string>
+    <string name="text_authentication_failed">Uwierzytelnianie nie powiodło się.</string>
     <string name="text_biometric_login">Logowanie biometryczne do mLaunchera</string>
     <string name="text_biometric_login_sub">Zaloguj się przy użyciu danych biometrycznych</string>
-    <string name="text_biometric_no_hardware">Na tym urządzeniu nie są dostępne żadne funkcje biometryczne.</string>
-    <string name="text_biometric_hw_unavailable">Funkcje biometryczne są obecnie niedostępne.</string>
-    <string name="text_biometric_error">Funkcje biometryczne Błąd.</string>
-    <string name="text_biometric_none_enrolled">Musisz utworzyć dane uwierzytelniające.</string>
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Potrzebuje uprawnień do kalendarza.</string>
     <string name="show_apps">Wszystkie aplikacje</string>

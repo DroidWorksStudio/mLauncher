@@ -94,15 +94,11 @@
     <string name="load_backup">Încărcare copie de rezervă</string>
     <string name="store_backup">Salvare magazin</string>
     <!-- PinCode Strings -->
-    <string name="text_authentication_failed">Autentificare esuata.</string>
-    <string name="text_authentication_error">Eroare de autentificare:%1$s(cod %2$d)</string>
     <string name="text_authentication_cancel">Anulare autentificare.</string>
+    <string name="text_authentication_error">Eroare de autentificare:%1$s(cod %2$d)</string>
+    <string name="text_authentication_failed">Autentificare esuata.</string>
     <string name="text_biometric_login">Conectare biometrică pentru mLauncher</string>
     <string name="text_biometric_login_sub">Conectați-vă utilizând acreditările dvs. biometrice</string>
-    <string name="text_biometric_no_hardware">Nu există funcții biometrice disponibile pe acest dispozitiv.</string>
-    <string name="text_biometric_hw_unavailable">Funcțiile biometrice nu sunt disponibile momentan.</string>
-    <string name="text_biometric_error">Caracteristici biometrice Eroare.</string>
-    <string name="text_biometric_none_enrolled">Trebuie să creați acreditări.</string>
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Are nevoie de permisiunea calendarului.</string>
     <string name="show_apps">Toate aplicațiile</string>

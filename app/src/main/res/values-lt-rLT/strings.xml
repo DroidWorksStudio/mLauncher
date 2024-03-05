@@ -94,15 +94,11 @@
     <string name="load_backup">Atkurti atsarginę kopiją</string>
     <string name="store_backup">Išsaugoti atsarginę kopiją</string>
     <!-- PinCode Strings -->
-    <string name="text_authentication_failed">Autentifikavimas nepavyko.</string>
-    <string name="text_authentication_error">Autentifikavimo klaida:%1$s(kodas %2$d)</string>
     <string name="text_authentication_cancel">Autentifikavimo atšaukimas.</string>
+    <string name="text_authentication_error">Autentifikavimo klaida:%1$s(kodas %2$d)</string>
+    <string name="text_authentication_failed">Autentifikavimas nepavyko.</string>
     <string name="text_biometric_login">Biometrinis prisijungimas prie mLauncher</string>
     <string name="text_biometric_login_sub">Prisijunkite naudodami biometrinius kredencialus</string>
-    <string name="text_biometric_no_hardware">Šiame įrenginyje nėra jokių biometrinių funkcijų.</string>
-    <string name="text_biometric_hw_unavailable">Biometrinės funkcijos šiuo metu nepasiekiamos.</string>
-    <string name="text_biometric_error">Biometrinių savybių klaida.</string>
-    <string name="text_biometric_none_enrolled">Turite sukurti kredencialus.</string>
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Reikia kalendoriaus leidimo.</string>
     <string name="show_apps">Visos programėlės</string>

@@ -94,15 +94,11 @@
     <string name="load_backup">Φόρτωση Αντιγράφου Ασφαλείας</string>
     <string name="store_backup">Αποθήκευση Αντιγράφου Ασφαλείας</string>
     <!-- PinCode Strings -->
-    <string name="text_authentication_failed">Η ταυτοποίηση απέτυχε.</string>
-    <string name="text_authentication_error">Σφάλμα ελέγχου ταυτότητας:%1$s(κωδικός %2$d)</string>
     <string name="text_authentication_cancel">Ακύρωση ελέγχου ταυτότητας.</string>
+    <string name="text_authentication_error">Σφάλμα ελέγχου ταυτότητας:%1$s(κωδικός %2$d)</string>
+    <string name="text_authentication_failed">Η ταυτοποίηση απέτυχε.</string>
     <string name="text_biometric_login">Βιομετρική σύνδεση για mLauncher</string>
     <string name="text_biometric_login_sub">Συνδεθείτε χρησιμοποιώντας τα βιομετρικά διαπιστευτήριά σας</string>
-    <string name="text_biometric_no_hardware">Δεν υπάρχουν διαθέσιμα βιομετρικά χαρακτηριστικά σε αυτήν τη συσκευή.</string>
-    <string name="text_biometric_hw_unavailable">Τα βιομετρικά χαρακτηριστικά δεν είναι διαθέσιμα αυτήν τη στιγμή.</string>
-    <string name="text_biometric_error">Βιομετρικά χαρακτηριστικά Σφάλμα.</string>
-    <string name="text_biometric_none_enrolled">Πρέπει να δημιουργήσετε διαπιστευτήρια.</string>
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Χρειάζεται άδεια ημερολογίου.</string>
     <string name="show_apps">Όλες οι εφαρμογές</string>

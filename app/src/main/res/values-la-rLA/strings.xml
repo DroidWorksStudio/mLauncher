@@ -94,15 +94,11 @@
     <string name="load_backup">Tergum onus</string>
     <string name="store_backup">Tergum copia</string>
     <!-- PinCode Strings -->
-    <string name="text_authentication_failed">Non authenticas.</string>
-    <string name="text_authentication_error">Authenticatio erroris:%1$s(code %2$d)</string>
     <string name="text_authentication_cancel">authenticitate Cancel.</string>
+    <string name="text_authentication_error">Authenticatio erroris:%1$s(code %2$d)</string>
+    <string name="text_authentication_failed">Non authenticas.</string>
     <string name="text_biometric_login">Biometric login pro mLauncher</string>
     <string name="text_biometric_login_sub">Log in usus tuos biometric credential</string>
-    <string name="text_biometric_no_hardware">Nullae biometricae notae in hac arte praesto sunt.</string>
-    <string name="text_biometric_hw_unavailable">Notae biometricae currently sunt unavailable.</string>
-    <string name="text_biometric_error">Error features biometric.</string>
-    <string name="text_biometric_none_enrolled">Documentorum creare debes.</string>
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Eget calendarium licentia.</string>
     <string name="show_apps">Omnes apps</string>

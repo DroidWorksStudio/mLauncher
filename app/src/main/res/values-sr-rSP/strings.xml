@@ -94,15 +94,11 @@
     <string name="load_backup">Load Backup</string>
     <string name="store_backup">Store Backup</string>
     <!-- PinCode Strings -->
-    <string name="text_authentication_failed">Аутентификација није успела.</string>
-    <string name="text_authentication_error">Грешка при аутентификацији:%1$s(код %2$d)</string>
     <string name="text_authentication_cancel">Откажи аутентификацију.</string>
+    <string name="text_authentication_error">Грешка при аутентификацији:%1$s(код %2$d)</string>
+    <string name="text_authentication_failed">Аутентификација није успела.</string>
     <string name="text_biometric_login">Биометријска пријава за мЛаунцхер</string>
     <string name="text_biometric_login_sub">Пријавите се користећи свој биометријски акредитив</string>
-    <string name="text_biometric_no_hardware">На овом уређају нису доступне биометријске функције.</string>
-    <string name="text_biometric_hw_unavailable">Биометријске функције тренутно нису доступне.</string>
-    <string name="text_biometric_error">Биометријске карактеристике Грешка.</string>
-    <string name="text_biometric_none_enrolled">Морате да креирате акредитиве.</string>
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Потребна је дозвола за календар.</string>
     <string name="show_apps">All apps</string>
