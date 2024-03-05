@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity() {
 
         initClickListeners()
         initObservers(viewModel)
-        viewModel.getAppList()
+        viewModel.getAppList(includeHiddenApps = prefs.hiddenAppsDisplayed)
         setupOrientation()
 
         window.addFlags(FLAG_LAYOUT_NO_LIMITS)

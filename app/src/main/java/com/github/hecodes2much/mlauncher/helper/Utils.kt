@@ -2,11 +2,11 @@ package com.github.hecodes2much.mlauncher.helper
 
 import android.R
 import android.app.Activity
-import android.content.*
+import android.content.ComponentName
+import android.content.Context
+import android.content.Intent
 import android.content.pm.LauncherApps
 import android.content.pm.PackageManager
-import android.content.pm.PackageManager.NameNotFoundException
-import android.content.res.Configuration
 import android.content.res.Resources
 import android.net.Uri
 import android.os.Build
@@ -18,12 +18,14 @@ import android.provider.CalendarContract
 import android.provider.MediaStore
 import android.provider.Settings
 import android.util.DisplayMetrics
-import android.util.Log
-import android.util.Log.*
+import android.util.Log.d
 import android.util.TypedValue
-import android.view.*
-import android.widget.EditText
+import android.view.Gravity
+import android.view.View
+import android.view.WindowInsets
+import android.view.WindowManager
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.appcompat.view.ContextThemeWrapper
 import androidx.core.app.ActivityCompat
 import com.github.hecodes2much.mlauncher.BuildConfig
@@ -34,7 +36,8 @@ import com.github.hecodes2much.mlauncher.data.Prefs
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.text.Collator
-import java.util.*
+import java.util.Calendar
+import java.util.Date
 import kotlin.math.pow
 import kotlin.math.sqrt
 
@@ -50,30 +53,21 @@ fun showToastShort(context: Context, message: String) {
     toast.show()
 }
 
-fun handlePasswordInput(index: Int, passwordBoxes: List<EditText>) {
-    if (index < passwordBoxes.lastIndex) {
-        passwordBoxes[index + 1].apply {
-            requestFocus()
-            setText("")
-        }
-        for (i in index + 1 until passwordBoxes.size) {
-            if (passwordBoxes[i - 1].text.toString().isEmpty()) {
-                passwordBoxes[i].setText("")
-            }
-        }
-    }
-}
 
-suspend fun getAppsList(context: Context, showHiddenApps: Boolean = false): MutableList<AppModel> {
+suspend fun getAppsList(
+    context: Context,
+    includeRegularApps: Boolean = true,
+    includeHiddenApps: Boolean = false
+): MutableList<AppModel> {
     return withContext(Dispatchers.Main) {
         val appList: MutableList<AppModel> = mutableListOf()
 
         try {
-            if (!Prefs(context).hiddenAppsUpdated) upgradeHiddenApps(Prefs(context))
             val hiddenApps = Prefs(context).hiddenApps
 
             val userManager = context.getSystemService(Context.USER_SERVICE) as UserManager
-            val launcherApps = context.getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps
+            val launcherApps =
+                context.getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps
             val collator = Collator.getInstance()
 
             val prefs = Prefs(context)
@@ -88,28 +82,28 @@ suspend fun getAppsList(context: Context, showHiddenApps: Boolean = false): Muta
                         prefs.getAppAlias(app.label.toString())
                     }
 
-                    if (showHiddenApps && app.applicationInfo.packageName != BuildConfig.APPLICATION_ID) {
-                        val appModel = AppModel(
-                            app.label.toString(),
-                            collator.getCollationKey(app.label.toString()),
-                            app.applicationInfo.packageName,
-                            app.componentName.className,
-                            profile,
-                            appAlias,
-                        )
-                        appList.add(appModel)
-                    } else if (!hiddenApps.contains(app.applicationInfo.packageName + "|" + profile.toString())
-                        && app.applicationInfo.packageName != BuildConfig.APPLICATION_ID
-                    ) {
-                        val appModel = AppModel(
-                            app.label.toString(),
-                            collator.getCollationKey(app.label.toString()),
-                            app.applicationInfo.packageName,
-                            app.componentName.className,
-                            profile,
-                            appAlias,
-                        )
-                        appList.add(appModel)
+                    val appModel = AppModel(
+                        app.label.toString(),
+                        collator.getCollationKey(app.label.toString()),
+                        app.applicationInfo.packageName,
+                        app.componentName.className,
+                        profile,
+                        appAlias,
+                    )
+
+                    // if the current app is not mLauncher
+                    if (app.applicationInfo.packageName != BuildConfig.APPLICATION_ID) {
+                        // is this a hidden app?
+                        if (hiddenApps.contains(app.applicationInfo.packageName + "|" + profile.toString())) {
+                            if (includeHiddenApps) {
+                                appList.add(appModel)
+                            }
+                        } else {
+                            // this is a regular app
+                            if (includeRegularApps) {
+                                appList.add(appModel)
+                            }
+                        }
                     }
 
                 }
@@ -124,54 +118,6 @@ suspend fun getAppsList(context: Context, showHiddenApps: Boolean = false): Muta
         }
         appList
     }
-}
-
-suspend fun getHiddenAppsList(context: Context): MutableList<AppModel> {
-    return withContext(Dispatchers.Main) {
-        val pm = context.packageManager
-        if (!Prefs(context).hiddenAppsUpdated) upgradeHiddenApps(Prefs(context))
-
-        val hiddenAppsSet = Prefs(context).hiddenApps
-        val appList = mutableListOf<AppModel>()
-        if (hiddenAppsSet.isEmpty()) {
-            return@withContext appList
-        }
-
-        val userManager = context.getSystemService(Context.USER_SERVICE) as UserManager
-        val collator = Collator.getInstance()
-        for (hiddenPackage in hiddenAppsSet) {
-            val appPackage = hiddenPackage.split("|")[0]
-            val userString = hiddenPackage.split("|")[1]
-            var userHandle = android.os.Process.myUserHandle()
-            for (user in userManager.userProfiles) {
-                if (user.toString() == userString) userHandle = user
-            }
-            try {
-                @Suppress("DEPRECATION")
-                val appInfo = pm.getApplicationInfo(appPackage, 0)
-                val appName = pm.getApplicationLabel(appInfo).toString()
-                val appKey = collator.getCollationKey(appName)
-                appList.add(AppModel(appName, appKey, appPackage, "", userHandle, Prefs(context).getAppAlias(appName)))
-            } catch (e: NameNotFoundException) {
-                d("getHiddenAppsList", e.toString())
-            }
-        }
-        appList.sort()
-        appList
-    }
-}
-
-// This is to ensure backward compatibility with older app versions
-// which did not support multiple user profiles
-private fun upgradeHiddenApps(prefs: Prefs) {
-    val hiddenAppsSet = prefs.hiddenApps
-    val newHiddenAppsSet = mutableSetOf<String>()
-    for (hiddenPackage in hiddenAppsSet) {
-        if (hiddenPackage.contains("|")) newHiddenAppsSet.add(hiddenPackage)
-        else newHiddenAppsSet.add(hiddenPackage + android.os.Process.myUserHandle().toString())
-    }
-    prefs.hiddenApps = newHiddenAppsSet
-    prefs.hiddenAppsUpdated = true
 }
 
 fun getUserHandleFromString(context: Context, userHandleString: String): UserHandle {
@@ -194,7 +140,7 @@ fun getDefaultLauncherPackage(context: Context): String {
     intent.action = Intent.ACTION_MAIN
     intent.addCategory(Intent.CATEGORY_HOME)
     val packageManager = context.packageManager
-    @Suppress("DEPRECATION")
+
     val result = packageManager.resolveActivity(intent, 0)
     return if (result?.activityInfo != null) {
         result.activityInfo.packageName
@@ -300,7 +246,7 @@ fun initActionService(context: Context): ActionService? {
             openAccessibilitySettings(context)
         }
     } else {
-        showToastLong(context, "This action requires Android P (9) or higher" )
+        showToastLong(context, "This action requires Android P (9) or higher")
     }
 
     return null
@@ -325,7 +271,8 @@ fun showStatusBar(activity: Activity) {
     else
         @Suppress("DEPRECATION", "InlinedApi")
         activity.window.decorView.apply {
-            systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+            systemUiVisibility =
+                View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
         }
 }
 
@@ -340,7 +287,8 @@ fun hideStatusBar(activity: Activity) {
     }
 }
 
-/*fun Context.isDarkThemeOn(): Boolean {
+/*
+fun Context.isDarkThemeOn(): Boolean {
     return resources.configuration.uiMode and
             Configuration.UI_MODE_NIGHT_MASK == UI_MODE_NIGHT_YES
 }
@@ -350,7 +298,7 @@ fun Context.copyToClipboard(text: String) {
     val clipData = ClipData.newPlainText(getString(R.string.app_name), text)
     clipboardManager.setPrimaryClip(clipData)
     showToastShort(this, "Copied")
-}*/
+}
 
 fun Context.openUrl(url: String) {
     if (url.isEmpty()) return
@@ -358,6 +306,7 @@ fun Context.openUrl(url: String) {
     intent.data = Uri.parse(url)
     startActivity(intent)
 }
+*/
 
 fun uninstallApp(context: Context, appPackage: String) {
     val intent = Intent(Intent.ACTION_DELETE)
@@ -390,8 +339,9 @@ fun loadFile(activity: Activity) {
     ActivityCompat.startActivityForResult(activity, intent, BACKUP_READ, null)
 }
 
+@RequiresApi(Build.VERSION_CODES.Q)
 fun getHexForOpacity(context: Context, prefs: Prefs): Int {
-    var setColor = prefs.opacityNum
+    val setColor = prefs.opacityNum
 
     val accentColor = getBackgroundColor(context)
     val hexAccentColor = java.lang.String.format("%06X", 0xFFFFFF and accentColor)
@@ -403,6 +353,7 @@ fun getHexForOpacity(context: Context, prefs: Prefs): Int {
     return android.graphics.Color.parseColor("#${hex}$hexAccentColor")
 }
 
+@RequiresApi(Build.VERSION_CODES.Q)
 fun getHexFontColor(context: Context): Int {
     val accentColor = getAccentColor(context)
     val hexAccentColor = java.lang.String.format("#%06X", 0xFFFFFF and accentColor)
@@ -410,6 +361,7 @@ fun getHexFontColor(context: Context): Int {
     return android.graphics.Color.parseColor(hexAccentColor)
 }
 
+@RequiresApi(Build.VERSION_CODES.Q)
 private fun getBackgroundColor(context: Context): Int {
     val typedValue = TypedValue()
     val contextThemeWrapper = ContextThemeWrapper(
@@ -423,6 +375,7 @@ private fun getBackgroundColor(context: Context): Int {
     return typedValue.data
 }
 
+@RequiresApi(Build.VERSION_CODES.Q)
 private fun getAccentColor(context: Context): Int {
     val typedValue = TypedValue()
     val contextThemeWrapper = ContextThemeWrapper(
