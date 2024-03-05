@@ -31,7 +31,7 @@
     <string name="filter_strength">Puterea filtrului</string>
     <string name="search_from_start">Căutare aplicație de la început.</string>
     <string name="icon_font">Utilizați fontul pentru pictograme</string>
-    <!-- Homescreen Strings -->
+    <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Număr de comenzi rapide</string>
     <string name="show_time">Arată timpul</string>
     <string name="show_date">Arată data</string>
@@ -102,6 +102,7 @@
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Are nevoie de permisiunea calendarului.</string>
     <string name="show_apps">Toate aplicațiile</string>
+    <string name="display_hidden_apps">Afișează aplicații ascunse</string>
     <string name="drawer_list_empty_hint">Nicio aplicație găsită</string>
     <string name="long_press_for_settings">Apăsați lung oriunde pentru setări</string>
     <string name="swipe_up_for_apps">Glisați în sus pentru toate aplicațiile</string>
