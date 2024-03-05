@@ -94,15 +94,11 @@
     <string name="load_backup">Load Backup</string>
     <string name="store_backup">Store Backup</string>
     <!-- PinCode Strings -->
-    <string name="text_authentication_failed">Verifikasie misluk.</string>
-    <string name="text_authentication_error">Stawingsfout:%1$s(kode %2$d)</string>
     <string name="text_authentication_cancel">Stawing Kanselleer.</string>
+    <string name="text_authentication_error">Stawingsfout:%1$s(kode %2$d)</string>
+    <string name="text_authentication_failed">Verifikasie misluk.</string>
     <string name="text_biometric_login">Biometriese aanmelding vir mLauncher</string>
     <string name="text_biometric_login_sub">Meld aan met jou biometriese geloofsbriewe</string>
-    <string name="text_biometric_no_hardware">Geen biometriese kenmerke op hierdie toestel beskikbaar nie.</string>
-    <string name="text_biometric_hw_unavailable">Biometriese kenmerke is tans nie beskikbaar nie.</string>
-    <string name="text_biometric_error">Biometriese kenmerke Fout.</string>
-    <string name="text_biometric_none_enrolled">Jy moet geloofsbriewe skep.</string>
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Benodig kalender toestemming.</string>
     <string name="show_apps">All apps</string>
