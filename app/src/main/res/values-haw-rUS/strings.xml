@@ -94,12 +94,15 @@
     <string name="load_backup">Hoʻouka i ka waihona</string>
     <string name="store_backup">Waihona Waihona</string>
     <!-- PinCode Strings -->
-    <string name="reset_pin">Hoʻihoʻi hou i ka PIN</string>
-    <string name="pin_number">Helu Pin</string>
-    <string name="confirm_pin_number">E hōʻoia i ka helu Pin</string>
-    <string name="unlock_settings">Wehe i nā ʻōkuhi</string>
-    <string name="pin_number_match">Paʻi helu Pin!</string>
-    <string name="pin_number_do_not_match">ʻAʻole kūlike nā helu pine!</string>
+    <string name="text_authentication_failed">Ua hāʻule ka hōʻoia.</string>
+    <string name="text_authentication_error">Hapa ka hōʻoia:%s(code %d)</string>
+    <string name="text_authentication_cancel">Hoʻopau i ka hōʻoia.</string>
+    <string name="text_biometric_login">ʻO ka inoa biometric no ka mLauncher</string>
+    <string name="text_biometric_login_sub">E ʻeʻe me ka hoʻohana ʻana i kāu hōʻoia biometric</string>
+    <string name="text_biometric_no_hardware">ʻAʻohe hiʻohiʻona biometric i loaʻa ma kēia hāmeʻa.</string>
+    <string name="text_biometric_hw_unavailable">ʻAʻole loaʻa nā hiʻohiʻona biometric i kēia manawa.</string>
+    <string name="text_biometric_error">Hapa nā hiʻohiʻona biometric.</string>
+    <string name="text_biometric_none_enrolled">Pono ʻoe e hana i nā hōʻoia.</string>
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Pono ka \'ae \'alemanaka.</string>
     <string name="show_apps">Nā polokalamu a pau</string>
