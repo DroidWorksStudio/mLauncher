@@ -95,7 +95,7 @@
     <string name="store_backup">Kaupan Varmuuskopiointi</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_failed">Todennus epäonnistui.</string>
-    <string name="text_authentication_error">Todennusvirhe:%s(koodi %d)</string>
+    <string name="text_authentication_error">Todennusvirhe:%1$s(koodi %2$d)</string>
     <string name="text_authentication_cancel">Todennus Peruuta.</string>
     <string name="text_biometric_login">Biometrinen kirjautuminen mLauncheriin</string>
     <string name="text_biometric_login_sub">Kirjaudu sisään biometrisilla tunnistetiedoillasi</string>
