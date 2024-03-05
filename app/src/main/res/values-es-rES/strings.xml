@@ -31,7 +31,7 @@
     <string name="filter_strength">Fuerza del filtro</string>
     <string name="search_from_start">Buscar aplicaciones desde el principio.</string>
     <string name="icon_font">Tipografía de sistema</string>
-    <!-- Homescreen Strings -->
+    <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Aplicaciones al inicio</string>
     <string name="show_time">Mostrar hora</string>
     <string name="show_date">Mostrar fecha</string>
@@ -102,6 +102,7 @@
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Necesita permiso de calendario.</string>
     <string name="show_apps">Todas las aplicaciones</string>
+    <string name="display_hidden_apps">Mostrar aplicaciones ocultas</string>
     <string name="drawer_list_empty_hint">No hay aplicaciones</string>
     <string name="long_press_for_settings">Manten pulsado en cualquier lugar para la configuración</string>
     <string name="swipe_up_for_apps">Deslize hacia arriba para ver las aplicaciones</string>
