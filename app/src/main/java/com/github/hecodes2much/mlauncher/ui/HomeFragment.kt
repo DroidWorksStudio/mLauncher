@@ -590,12 +590,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                             }
 
                             override fun onAuthenticationSucceeded(result: BiometricPrompt.AuthenticationResult) {
-                                try {
-                                    findNavController().navigate(R.id.action_mainFragment_to_settingsFragment)
-                                    viewModel.firstOpen(false)
-                                } catch (e: java.lang.Exception) {
-                                    Log.d("onLongClick", e.toString())
-                                }
+                                sendToSettingFragment()
                             }
 
                             override fun onAuthenticationFailed() {
@@ -632,22 +627,22 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             .canAuthenticate(BIOMETRIC_WEAK or DEVICE_CREDENTIAL)
         when (code) {
             BiometricManager.BIOMETRIC_SUCCESS -> biometricPrompt.authenticate(promptInfo)
-            BiometricManager.BIOMETRIC_ERROR_NO_HARDWARE -> showToastLong(
-                requireContext(),
-                getString(R.string.text_biometric_no_hardware)
-            )
+            BiometricManager.BIOMETRIC_ERROR_NO_HARDWARE -> sendToSettingFragment()
 
-            BiometricManager.BIOMETRIC_ERROR_HW_UNAVAILABLE -> showToastLong(
-                requireContext(),
-                getString(R.string.text_biometric_hw_unavailable)
-            )
+            BiometricManager.BIOMETRIC_ERROR_HW_UNAVAILABLE -> sendToSettingFragment()
 
-            BiometricManager.BIOMETRIC_ERROR_NONE_ENROLLED -> showToastLong(
-                requireContext(),
-                getString(R.string.text_biometric_none_enrolled)
-            )
+            BiometricManager.BIOMETRIC_ERROR_NONE_ENROLLED -> sendToSettingFragment()
 
             else -> showToastLong(requireContext(), getString(R.string.text_authentication_error))
+        }
+    }
+
+    private fun sendToSettingFragment() {
+        try {
+            findNavController().navigate(R.id.action_mainFragment_to_settingsFragment)
+            viewModel.firstOpen(false)
+        } catch (e: java.lang.Exception) {
+            Log.d("onLongClick", e.toString())
         }
     }
 

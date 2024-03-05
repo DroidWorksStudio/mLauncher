@@ -23,7 +23,6 @@ import com.github.hecodes2much.mlauncher.helper.showToastLong
 import java.io.BufferedReader
 import java.io.FileOutputStream
 import java.io.InputStreamReader
-import java.util.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -72,7 +71,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     @Suppress("DEPRECATION")
-    fun setLanguage() {
+    private fun setLanguage() {
         val locale = prefs.language.locale()
         val config = resources.configuration
         config.locale = locale
@@ -167,6 +166,7 @@ class MainActivity : AppCompatActivity() {
                 else
                     showMessage(getString(R.string.double_tap_lock_uninstall_message))
             }
+
             Constants.BACKUP_READ -> {
                 data?.data?.also { uri ->
                     applicationContext.contentResolver.openInputStream(uri).use { inputStream ->
@@ -187,6 +187,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 startActivity(Intent.makeRestartActivityTask(this.intent?.component))
             }
+
             Constants.BACKUP_WRITE -> {
                 data?.data?.also { uri ->
                     applicationContext.contentResolver.openFileDescriptor(uri, "w")?.use { file ->

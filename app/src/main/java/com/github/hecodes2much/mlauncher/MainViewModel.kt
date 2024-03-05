@@ -11,7 +11,12 @@ import com.github.hecodes2much.mlauncher.data.AppModel
 import com.github.hecodes2much.mlauncher.data.Constants
 import com.github.hecodes2much.mlauncher.data.Constants.AppDrawerFlag
 import com.github.hecodes2much.mlauncher.data.Prefs
-import com.github.hecodes2much.mlauncher.helper.*
+import com.github.hecodes2much.mlauncher.helper.getAppsList
+import com.github.hecodes2much.mlauncher.helper.getDefaultLauncherPackage
+import com.github.hecodes2much.mlauncher.helper.getHiddenAppsList
+import com.github.hecodes2much.mlauncher.helper.ismlauncherDefault
+import com.github.hecodes2much.mlauncher.helper.resetDefaultLauncher
+import com.github.hecodes2much.mlauncher.helper.showToastShort
 import kotlinx.coroutines.launch
 
 class MainViewModel(application: Application) : AndroidViewModel(application) {
@@ -40,9 +45,11 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             AppDrawerFlag.LaunchApp, AppDrawerFlag.HiddenApps -> {
                 launchApp(appModel)
             }
+
             AppDrawerFlag.SetHomeApp -> {
                 prefs.setHomeAppModel(n, appModel)
             }
+
             AppDrawerFlag.SetSwipeLeft -> prefs.appSwipeLeft = appModel
             AppDrawerFlag.SetSwipeRight -> prefs.appSwipeRight = appModel
             AppDrawerFlag.SetSwipeUp -> prefs.appSwipeUp = appModel
@@ -72,11 +79,12 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         val launcher = appContext.getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps
         val activityInfo = launcher.getActivityList(packageName, userHandle)
 
-         val component = when (activityInfo.size) {
+        val component = when (activityInfo.size) {
             0 -> {
                 showToastShort(appContext, "App not found")
                 return
             }
+
             1 -> ComponentName(packageName, activityInfo[0].name)
             else -> if (appActivityName.isNotEmpty()) {
                 ComponentName(packageName, appActivityName)
@@ -98,7 +106,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
-    fun getAppList(showHiddenApps: Boolean = false) {
+    fun getAppList(showHiddenApps: Boolean = true) {
         viewModelScope.launch {
             appList.value = getAppsList(appContext, showHiddenApps)
         }

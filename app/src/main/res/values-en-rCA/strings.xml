@@ -109,16 +109,12 @@
     <string name="store_backup">Store Backup</string>
 
     <!-- PinCode Strings -->
-    <string name="text_authentication_failed">Authentication failed.</string>
-    <string name="text_authentication_error">Authentication error:%1$s(code %2$d)</string>
     <string name="text_authentication_cancel">Authentication Cancel.</string>
-    <string name="text_biometric_login">Biometric login for mLauncher</string>
-    <string name="text_biometric_login_sub">Log in using your biometric credential</string>
+    <string name="text_authentication_error">Authentication error:%1$s(code %2$d)</string>
+    <string name="text_authentication_failed">Authentication failed.</string>
 
-    <string name="text_biometric_no_hardware">No biometric features available on this device.</string>
-    <string name="text_biometric_hw_unavailable">Biometric features are currently unavailable.</string>
-    <string name="text_biometric_error">Biometric features Error.</string>
-    <string name="text_biometric_none_enrolled">You need to create credentials.</string>
+    <string name="text_biometric_login">Biometric login for mLauncher</string>
+    <string name="text_biometric_login_sub">Log in using your biometric credentials.</string>
 
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Needs calender permission.</string>
