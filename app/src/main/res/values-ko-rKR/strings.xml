@@ -31,7 +31,7 @@
     <string name="filter_strength">필터 강도</string>
     <string name="search_from_start">처음부터 앱 검색.</string>
     <string name="icon_font">아이콘 글꼴 사용</string>
-    <!-- Homescreen Strings -->
+    <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Number of shortcuts</string>
     <string name="show_time">Show time</string>
     <string name="show_date">Show date</string>
@@ -102,6 +102,7 @@
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">캘린더 권한이 필요합니다.</string>
     <string name="show_apps">All apps</string>
+    <string name="display_hidden_apps">숨겨진 앱 표시</string>
     <string name="drawer_list_empty_hint">No apps found</string>
     <string name="long_press_for_settings">Long press anywhere for settings</string>
     <string name="swipe_up_for_apps">Swipe up for all apps</string>
