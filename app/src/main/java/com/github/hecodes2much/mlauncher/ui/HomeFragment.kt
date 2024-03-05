@@ -21,6 +21,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.annotation.RequiresApi
 import androidx.biometric.BiometricManager
 import androidx.biometric.BiometricManager.Authenticators.BIOMETRIC_WEAK
 import androidx.biometric.BiometricManager.Authenticators.DEVICE_CREDENTIAL
@@ -95,6 +96,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         return view
     }
 
+    @RequiresApi(Build.VERSION_CODES.Q)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -129,6 +131,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         initClickListeners()
     }
 
+    @RequiresApi(Build.VERSION_CODES.Q)
     override fun onStart() {
         super.onStart()
         if (prefs.showStatusBar) showStatusBar(requireActivity()) else hideStatusBar(requireActivity())
@@ -235,8 +238,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         if (prefs.homeLocked) return true
 
         val n = view.id
-        val name = prefs.getHomeAppModel(n).appLabel
-        showAppList(AppDrawerFlag.SetHomeApp, name.isNotEmpty(), n)
+        showAppList(AppDrawerFlag.SetHomeApp, includeHiddenApps = prefs.hiddenAppsDisplayed, n)
         return true
     }
 
@@ -357,6 +359,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         binding.setDefaultLauncher.setOnClickListener(this)
     }
 
+    @RequiresApi(Build.VERSION_CODES.Q)
     private fun initObservers() {
         if (prefs.firstSettingsOpen) {
             binding.firstRunTips.visibility = View.VISIBLE
@@ -397,8 +400,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         viewModel.selectedApp(appModel, AppDrawerFlag.LaunchApp)
     }
 
-    private fun showAppList(flag: AppDrawerFlag, showHiddenApps: Boolean = false, n: Int = 0) {
-        viewModel.getAppList(showHiddenApps)
+    private fun showAppList(flag: AppDrawerFlag, includeHiddenApps: Boolean = false, n: Int = 0) {
+        viewModel.getAppList(includeHiddenApps)
         lifecycleScope.launch(Dispatchers.Main) {
             try {
                 findNavController().navigate(
@@ -485,7 +488,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         when (action) {
             Action.ShowNotification -> expandNotificationDrawer(requireContext())
             Action.LockScreen -> lockPhone()
-            Action.ShowAppList -> showAppList(AppDrawerFlag.LaunchApp)
+            Action.ShowAppList -> showAppList(AppDrawerFlag.LaunchApp, includeHiddenApps = false)
             Action.OpenApp -> {} // this should be handled in the respective onSwipe[Up,Down,Right,Left] functions
             Action.OpenQuickSettings -> expandQuickSettings(requireContext())
             Action.ShowRecents -> initActionService(requireContext())?.showRecents()
@@ -694,6 +697,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
     // updates number of apps visible on home screen
     // does nothing if number has not changed
+    @RequiresApi(Build.VERSION_CODES.Q)
     @SuppressLint("InflateParams")
     private fun updateAppCount(newAppsNum: Int) {
         val oldAppsNum = binding.homeAppsLayout.size // current number

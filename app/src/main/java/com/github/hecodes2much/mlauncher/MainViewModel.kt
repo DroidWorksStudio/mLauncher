@@ -13,7 +13,6 @@ import com.github.hecodes2much.mlauncher.data.Constants.AppDrawerFlag
 import com.github.hecodes2much.mlauncher.data.Prefs
 import com.github.hecodes2much.mlauncher.helper.getAppsList
 import com.github.hecodes2much.mlauncher.helper.getDefaultLauncherPackage
-import com.github.hecodes2much.mlauncher.helper.getHiddenAppsList
 import com.github.hecodes2much.mlauncher.helper.ismlauncherDefault
 import com.github.hecodes2much.mlauncher.helper.resetDefaultLauncher
 import com.github.hecodes2much.mlauncher.helper.showToastShort
@@ -106,15 +105,16 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
-    fun getAppList(showHiddenApps: Boolean = true) {
+    fun getAppList(includeHiddenApps: Boolean = true) {
         viewModelScope.launch {
-            appList.value = getAppsList(appContext, showHiddenApps)
+            appList.value = getAppsList(appContext, includeRegularApps = true, includeHiddenApps)
         }
     }
 
     fun getHiddenApps() {
         viewModelScope.launch {
-            hiddenApps.value = getHiddenAppsList(appContext)
+            hiddenApps.value =
+                getAppsList(appContext, includeRegularApps = false, includeHiddenApps = true)
         }
     }
 

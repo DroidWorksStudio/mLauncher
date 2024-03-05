@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.RequiresApi
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
@@ -71,6 +72,7 @@ class SettingsFragment : Fragment() {
 
     private val offset = 5
 
+    @RequiresApi(Build.VERSION_CODES.Q)
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -83,6 +85,7 @@ class SettingsFragment : Fragment() {
         return binding.root
     }
 
+    @RequiresApi(Build.VERSION_CODES.Q)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val hex = getHexForOpacity(requireContext(), prefs)
@@ -107,6 +110,7 @@ class SettingsFragment : Fragment() {
         }
     }
 
+    @RequiresApi(Build.VERSION_CODES.Q)
     override fun onResume() {
         super.onResume()
         val hex = getHexForOpacity(requireContext(), prefs)
@@ -524,6 +528,14 @@ class SettingsFragment : Fragment() {
                             max = Constants.TEXT_SIZE_MAX,
                             onSelect = { f -> setTextSizeSettings(f) }
                         )
+                    },
+                    { _, onChange ->
+                        SettingsToggle(
+                            title = stringResource(R.string.display_hidden_apps),
+                            fontSize = iconFs,
+                            onChange = onChange,
+                            state = remember { mutableStateOf(prefs.hiddenAppsDisplayed) }
+                        ) { toggleHiddenAppsDisplayed() }
                     }
                 )
             )
@@ -590,6 +602,10 @@ class SettingsFragment : Fragment() {
 
         prefs.homeAlignmentBottom = onBottom
         viewModel.updateHomeAppsAlignment(prefs.homeAlignment, onBottom)
+    }
+
+    private fun toggleHiddenAppsDisplayed() {
+        prefs.hiddenAppsDisplayed = !prefs.hiddenAppsDisplayed
     }
 
     private fun setClockAlignment(gravity: Constants.Gravity) {
@@ -722,7 +738,7 @@ class SettingsFragment : Fragment() {
 
         when (action) {
             Action.OpenApp -> {
-                viewModel.getAppList()
+                viewModel.getAppList(true)
                 findNavController().navigate(
                     R.id.action_settingsFragment_to_appListFragment,
                     bundleOf("flag" to flag.toString())

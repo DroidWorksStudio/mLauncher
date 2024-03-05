@@ -40,7 +40,7 @@ private const val CLICK_CLOCK_ACTION = "CLICK_CLOCK_ACTION"
 private const val CLICK_DATE_ACTION = "CLICK_DATE_ACTION"
 private const val DOUBLE_TAP_ACTION = "DOUBLE_TAP_ACTION"
 private const val HIDDEN_APPS = "HIDDEN_APPS"
-private const val HIDDEN_APPS_UPDATED = "HIDDEN_APPS_UPDATED"
+private const val HIDDEN_APPS_DISPLAYED = "HIDDEN_APPS_DISPLAYED"
 
 private const val APP_NAME = "APP_NAME"
 private const val APP_PACKAGE = "APP_PACKAGE"
@@ -294,9 +294,9 @@ class Prefs(val context: Context) {
         get() = prefs.getStringSet(HIDDEN_APPS, mutableSetOf()) as MutableSet<String>
         set(value) = prefs.edit().putStringSet(HIDDEN_APPS, value).apply()
 
-    var hiddenAppsUpdated: Boolean
-        get() = prefs.getBoolean(HIDDEN_APPS_UPDATED, false)
-        set(value) = prefs.edit().putBoolean(HIDDEN_APPS_UPDATED, value).apply()
+    var hiddenAppsDisplayed: Boolean
+        get() = prefs.getBoolean(HIDDEN_APPS_DISPLAYED, false)
+        set(value) = prefs.edit().putBoolean(HIDDEN_APPS_DISPLAYED, value).apply()
 
     fun getHomeAppModel(i: Int): AppModel {
         return loadApp("$i")
