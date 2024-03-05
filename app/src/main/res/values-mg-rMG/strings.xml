@@ -95,7 +95,7 @@
     <string name="store_backup">Store Backup</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_failed">Tsy nahomby ny fanamarinana.</string>
-    <string name="text_authentication_error">Hadisoana fanamarinana:%s(kaody %d)</string>
+    <string name="text_authentication_error">Hadisoana fanamarinana:%1$s(kaody %2$d)</string>
     <string name="text_authentication_cancel">Fanafoanana ny fanamarinana.</string>
     <string name="text_biometric_login">Fidirana biometrika ho an\'ny mLauncher</string>
     <string name="text_biometric_login_sub">Midira amin\'ny alàlan\'ny fahazoan-dàlana biometrika anao</string>
