@@ -94,15 +94,11 @@
     <string name="load_backup">バックアップを読み込む</string>
     <string name="store_backup">ストアバックアップ</string>
     <!-- PinCode Strings -->
-    <string name="text_authentication_failed">認証に失敗しました。</string>
-    <string name="text_authentication_error">認証エラー:%1$s(コード %2$d)</string>
     <string name="text_authentication_cancel">認証をキャンセルします。</string>
+    <string name="text_authentication_error">認証エラー:%1$s(コード %2$d)</string>
+    <string name="text_authentication_failed">認証に失敗しました。</string>
     <string name="text_biometric_login">mLauncher の生体認証ログイン</string>
     <string name="text_biometric_login_sub">生体認証資格情報を使用してログインします</string>
-    <string name="text_biometric_no_hardware">このデバイスでは利用可能な生体認証機能はありません。</string>
-    <string name="text_biometric_hw_unavailable">生体認証機能は現在利用できません。</string>
-    <string name="text_biometric_error">生体認証機能エラー。</string>
-    <string name="text_biometric_none_enrolled">資格情報を作成する必要があります。</string>
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">カレンダーの許可が必要です。</string>
     <string name="show_apps">すべてのアプリ</string>
