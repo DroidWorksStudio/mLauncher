@@ -94,15 +94,11 @@
     <string name="load_backup">Lueden Backupsatellit</string>
     <string name="store_backup">Store Backupsatellit</string>
     <!-- PinCode Strings -->
-    <string name="text_authentication_failed">Authentifikatioun gescheitert.</string>
-    <string name="text_authentication_error">Authentifikatiounsfehler:%1$s(Code %2$d)</string>
     <string name="text_authentication_cancel">Authentifikatioun Ofbriechen.</string>
+    <string name="text_authentication_error">Authentifikatiounsfehler:%1$s(Code %2$d)</string>
+    <string name="text_authentication_failed">Authentifikatioun gescheitert.</string>
     <string name="text_biometric_login">Biometresche Login fir mLauncher</string>
     <string name="text_biometric_login_sub">Mellt Iech un mat Ärem biometresche Umeldungsinformatioun</string>
-    <string name="text_biometric_no_hardware">Keng biometresch Fonctiounen sinn op dësem Apparat.</string>
-    <string name="text_biometric_hw_unavailable">Biometresch Fonctiounen sinn am Moment net verfügbar.</string>
-    <string name="text_biometric_error">Biometrische Fonctiounen Feeler.</string>
-    <string name="text_biometric_none_enrolled">Dir musst Umeldungsinformatiounen erstellen.</string>
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Braucht Kalenner Erlaabnis.</string>
     <string name="show_apps">All Apps</string>
