@@ -31,7 +31,7 @@
     <string name="filter_strength">Intensidade do filtro</string>
     <string name="search_from_start">Pesquisa de aplicativos desde o início.</string>
     <string name="icon_font">Usar fonte do ícone</string>
-    <!-- Homescreen Strings -->
+    <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Número de atalhos</string>
     <string name="show_time">Hora do espectáculo</string>
     <string name="show_date">Mostrar data</string>
@@ -102,6 +102,7 @@
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Precisa de permissão de calendário.</string>
     <string name="show_apps">Todas as aplicações</string>
+    <string name="display_hidden_apps">Exibir aplicativos ocultos</string>
     <string name="drawer_list_empty_hint">Nenhuma aplicação encontrada</string>
     <string name="long_press_for_settings">Prensa longa em qualquer lugar para configurações</string>
     <string name="swipe_up_for_apps">Descarregar para todas as aplicações</string>
