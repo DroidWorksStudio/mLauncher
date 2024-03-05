@@ -95,7 +95,7 @@
     <string name="store_backup">Магазин за резервно копие</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_failed">Неуспешна идентификация.</string>
-    <string name="text_authentication_error">Грешка при удостоверяване:%s(код %d)</string>
+    <string name="text_authentication_error">Грешка при удостоверяване:%1$s(код %2$d)</string>
     <string name="text_authentication_cancel">Удостоверяване Отказ.</string>
     <string name="text_biometric_login">Биометрично влизане за mLauncher</string>
     <string name="text_biometric_login_sub">Влезте с вашите биометрични идентификационни данни</string>
