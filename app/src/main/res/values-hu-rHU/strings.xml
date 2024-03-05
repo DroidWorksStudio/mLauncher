@@ -95,7 +95,7 @@
     <string name="store_backup">Tároló biztonsági mentés</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_failed">Hitelesítés nem sikerült.</string>
-    <string name="text_authentication_error">Hitelesítési hiba:%s(kód %d)</string>
+    <string name="text_authentication_error">Hitelesítési hiba:%1$s(kód %2$d)</string>
     <string name="text_authentication_cancel">Hitelesítés megszakítása.</string>
     <string name="text_biometric_login">Biometrikus bejelentkezés az mLauncherhez</string>
     <string name="text_biometric_login_sub">Jelentkezzen be biometrikus hitelesítő adataival</string>
