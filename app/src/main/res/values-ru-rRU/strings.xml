@@ -31,7 +31,7 @@
     <string name="filter_strength">Строгость фильтра</string>
     <string name="search_from_start">Поиск приложений с самого начала.</string>
     <string name="icon_font">Использовать иконочный шрифт</string>
-    <!-- Homescreen Strings -->
+    <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Количество ярлыков</string>
     <string name="show_time">Показать время</string>
     <string name="show_date">Показать дату</string>
@@ -102,6 +102,7 @@
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Требуется разрешение календаря.</string>
     <string name="show_apps">Все приложения</string>
+    <string name="display_hidden_apps">Отображение скрытых приложений</string>
     <string name="drawer_list_empty_hint">Не найдено приложений</string>
     <string name="long_press_for_settings">Долгое нажатие в любом месте для настроек</string>
     <string name="swipe_up_for_apps">Свайп вверх для всех приложений</string>

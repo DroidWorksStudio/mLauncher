@@ -31,7 +31,7 @@
     <string name="filter_strength">Filterstärke</string>
     <string name="search_from_start">App-Suche von Anfang an.</string>
     <string name="icon_font">Verwenden Sie die Symbolschrift</string>
-    <!-- Homescreen Strings -->
+    <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Anzahl der Verknüpfungen</string>
     <string name="show_time">Zeit anzeigen</string>
     <string name="show_date">Datum anzeigen</string>
@@ -102,6 +102,7 @@
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Benötigt Kalenderberechtigung.</string>
     <string name="show_apps">Alle Apps</string>
+    <string name="display_hidden_apps">Versteckte Apps anzeigen</string>
     <string name="drawer_list_empty_hint">Keine Apps gefunden</string>
     <string name="long_press_for_settings">Lange drücken für Einstellungen</string>
     <string name="swipe_up_for_apps">Für alle Apps nach oben wischen</string>

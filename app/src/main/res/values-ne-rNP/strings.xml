@@ -31,7 +31,7 @@
     <string name="filter_strength">फिल्टर शक्ति</string>
     <string name="search_from_start">सुरु देखि अनुप्रयोग खोज।</string>
     <string name="icon_font">आइकन फन्ट प्रयोग गर्नुहोस्</string>
-    <!-- Homescreen Strings -->
+    <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">सर्टकटहरूको संख्या</string>
     <string name="show_time">समय देखाउनुहोस्</string>
     <string name="show_date">मिति देखाउनुहोस्</string>
@@ -102,6 +102,7 @@
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">क्यालेन्डर अनुमति चाहिन्छ।</string>
     <string name="show_apps">सबै एपहरू</string>
+    <string name="display_hidden_apps">लुकेका एपहरू प्रदर्शन गर्नुहोस्</string>
     <string name="drawer_list_empty_hint">कुनै एपहरू फेला परेनन्</string>
     <string name="long_press_for_settings">सेटिङहरूको लागि जहाँसुकै लामो प्रेस गर्नुहोस्</string>
     <string name="swipe_up_for_apps">सबै एपहरूको लागि माथि स्वाइप गर्नुहोस्</string>

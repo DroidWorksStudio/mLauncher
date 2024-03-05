@@ -31,7 +31,7 @@
     <string name="filter_strength">Kekuatan Penapis</string>
     <string name="search_from_start">Carian apl dari mula.</string>
     <string name="icon_font">Gunakan Font Ikon</string>
-    <!-- Homescreen Strings -->
+    <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Bilangan pintasan</string>
     <string name="show_time">Masa pertunjukan</string>
     <string name="show_date">Tunjukkan tarikh</string>
@@ -102,6 +102,7 @@
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Memerlukan kebenaran kalendar.</string>
     <string name="show_apps">Semua apl</string>
+    <string name="display_hidden_apps">Paparkan Apl Tersembunyi</string>
     <string name="drawer_list_empty_hint">Tiada apl ditemui</string>
     <string name="long_press_for_settings">Tekan lama di mana-mana untuk tetapan</string>
     <string name="swipe_up_for_apps">Leret ke atas untuk semua apl</string>

@@ -31,7 +31,7 @@
     <string name="filter_strength">Filterstyrke</string>
     <string name="search_from_start">Appsøk fra start.</string>
     <string name="icon_font">Bruk Icon Font</string>
-    <!-- Homescreen Strings -->
+    <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Antall snarveier</string>
     <string name="show_time">Vis tid</string>
     <string name="show_date">Vis dato</string>
@@ -102,6 +102,7 @@
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Trenger kalendertillatelse.</string>
     <string name="show_apps">Alle apper</string>
+    <string name="display_hidden_apps">Vis skjulte apper</string>
     <string name="drawer_list_empty_hint">Ingen apper funnet</string>
     <string name="long_press_for_settings">Langt trykk hvor som helst for innstillinger</string>
     <string name="swipe_up_for_apps">Sveip opp for alle apper</string>

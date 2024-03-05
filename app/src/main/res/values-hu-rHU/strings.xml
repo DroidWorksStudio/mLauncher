@@ -31,7 +31,7 @@
     <string name="filter_strength">Szűrő erőssége</string>
     <string name="search_from_start">Alkalmazáskeresés a kezdetektől.</string>
     <string name="icon_font">Ikon betűtípus használata</string>
-    <!-- Homescreen Strings -->
+    <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">A parancsikonok száma</string>
     <string name="show_time">Show time</string>
     <string name="show_date">Megjelenés dátuma</string>
@@ -102,6 +102,7 @@
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Naptári engedély szükséges.</string>
     <string name="show_apps">Minden alkalmazás</string>
+    <string name="display_hidden_apps">Rejtett alkalmazások megjelenítése</string>
     <string name="drawer_list_empty_hint">Nem találtunk alkalmazásokat</string>
     <string name="long_press_for_settings">Hosszan nyomja meg bárhol a beállításokhoz</string>
     <string name="swipe_up_for_apps">Húzza felfelé az összes alkalmazáshoz</string>

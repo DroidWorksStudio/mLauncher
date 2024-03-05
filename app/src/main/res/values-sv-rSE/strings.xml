@@ -31,7 +31,7 @@
     <string name="filter_strength">Filterstyrka</string>
     <string name="search_from_start">Appsökning från början.</string>
     <string name="icon_font">Använd Icon Font</string>
-    <!-- Homescreen Strings -->
+    <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Antal genvägar</string>
     <string name="show_time">Visa tid</string>
     <string name="show_date">Visa datum</string>
@@ -102,6 +102,7 @@
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Behöver kalendertillstånd.</string>
     <string name="show_apps">Alla appar</string>
+    <string name="display_hidden_apps">Visa dolda appar</string>
     <string name="drawer_list_empty_hint">Inga appar hittades</string>
     <string name="long_press_for_settings">Långtryck var som helst för inställningar</string>
     <string name="swipe_up_for_apps">Svep uppåt för alla appar</string>

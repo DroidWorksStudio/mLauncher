@@ -31,7 +31,7 @@
     <string name="filter_strength">Forca e filtrit</string>
     <string name="search_from_start">Kërkimi i aplikacionit që nga fillimi.</string>
     <string name="icon_font">Përdorni fontin e ikonës</string>
-    <!-- Homescreen Strings -->
+    <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Numri i shkurtoreve</string>
     <string name="show_time">Koha e shfaqjes</string>
     <string name="show_date">Shfaq datën</string>
@@ -102,6 +102,7 @@
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Kërkon lejen e kalendarit.</string>
     <string name="show_apps">Të gjitha aplikacionet</string>
+    <string name="display_hidden_apps">Shfaq aplikacionet e fshehura</string>
     <string name="drawer_list_empty_hint">Nuk u gjet asnjë aplikacion</string>
     <string name="long_press_for_settings">Shtypni gjatë kudo për cilësimet</string>
     <string name="swipe_up_for_apps">Rrëshqitni lart për të gjitha aplikacionet</string>

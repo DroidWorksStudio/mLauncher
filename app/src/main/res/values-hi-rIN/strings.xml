@@ -31,7 +31,7 @@
     <string name="filter_strength">फ़िल्टर शक्ति</string>
     <string name="search_from_start">ऐप खोज शुरू से।</string>
     <string name="icon_font">आइकन फ़ॉन्ट का प्रयोग करें</string>
-    <!-- Homescreen Strings -->
+    <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">शॉर्टकट की संख्या</string>
     <string name="show_time">शो टाइम</string>
     <string name="show_date">तिथि दिखाएं</string>
@@ -102,6 +102,7 @@
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">कैलेंडर अनुमति की आवश्यकता है.</string>
     <string name="show_apps">सभी एप्लीकेशन</string>
+    <string name="display_hidden_apps">छिपे हुए ऐप्स प्रदर्शित करें</string>
     <string name="drawer_list_empty_hint">कोई ऐप्लिकेशन नहीं मिला</string>
     <string name="long_press_for_settings">सेटिंग्स के लिए कहीं भी देर तक दबाएं</string>
     <string name="swipe_up_for_apps">सभी ऐप्स के लिए ऊपर की ओर स्वाइप करें</string>

@@ -31,7 +31,7 @@
     <string name="filter_strength">Ka ikaika kānana</string>
     <string name="search_from_start">Huli polokalamu mai ka hoʻomaka.</string>
     <string name="icon_font">E hoʻohana i ka Font Icon</string>
-    <!-- Homescreen Strings -->
+    <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Ka helu o nā pōkole</string>
     <string name="show_time">Hōʻike manawa</string>
     <string name="show_date">Hōʻike lā</string>
@@ -102,6 +102,7 @@
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Pono ka \'ae \'alemanaka.</string>
     <string name="show_apps">Nā polokalamu a pau</string>
+    <string name="display_hidden_apps">Hōʻike i nā polokalamu huna</string>
     <string name="drawer_list_empty_hint">ʻAʻohe polokalamu i loaʻa</string>
     <string name="long_press_for_settings">E kaomi lōʻihi ma nā wahi a pau no nā hoʻonohonoho</string>
     <string name="swipe_up_for_apps">Swipe i luna no nā polokalamu āpau</string>
