@@ -31,7 +31,7 @@
     <string name="filter_strength">Lakas ng Filter</string>
     <string name="search_from_start">Paghahanap ng app mula sa simula.</string>
     <string name="icon_font">Gumamit ng Icon Font</string>
-    <!-- Homescreen Strings -->
+    <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Bilang ng mga shortcut</string>
     <string name="show_time">Oras ng palabas</string>
     <string name="show_date">Ipakita ang petsa</string>
@@ -102,6 +102,7 @@
     <!-- Unsorted Strings -->
     <string name="denied_calender_permission">Kailangan ng pahintulot sa kalendaryo.</string>
     <string name="show_apps">Lahat ng app</string>
+    <string name="display_hidden_apps">Ipakita ang mga Nakatagong App</string>
     <string name="drawer_list_empty_hint">Walang nakitang app</string>
     <string name="long_press_for_settings">Pindutin nang matagal kahit saan para sa mga setting</string>
     <string name="swipe_up_for_apps">Mag-swipe pataas para sa lahat ng app</string>
