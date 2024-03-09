@@ -36,7 +36,6 @@
     <string name="show_time">เวลาแสดง</string>
     <string name="show_date">แสดงวันที่</string>
     <string name="show_battery">แสดงแบตเตอรี่</string>
-    <string name="show_calendar_event">แสดงกิจกรรมในปฏิทิน</string>
     <string name="lock_home_apps">ล็อคแอพ</string>
     <string name="extend_home_apps_area">ขยายพื้นที่ที่คลิกได้</string>
     <string name="home_alignment_bottom">หน้าจอหลักจัดตำแหน่งด้านล่าง</string>
@@ -100,7 +99,6 @@
     <string name="text_biometric_login">การเข้าสู่ระบบไบโอเมตริกซ์สำหรับ mLauncher</string>
     <string name="text_biometric_login_sub">เข้าสู่ระบบโดยใช้ข้อมูลประจำตัวไบโอเมตริกซ์ของคุณ</string>
     <!-- Unsorted Strings -->
-    <string name="denied_calender_permission">ต้องได้รับอนุญาตจากปฏิทิน</string>
     <string name="show_apps">แอพทั้งหมด</string>
     <string name="display_hidden_apps">แสดงแอปที่ซ่อนอยู่</string>
     <string name="drawer_list_empty_hint">ไม่พบแอป</string>
