@@ -36,7 +36,6 @@
     <string name="show_time">Zobrazit čas</string>
     <string name="show_date">Zobrazit datum</string>
     <string name="show_battery">Zobrazit baterii</string>
-    <string name="show_calendar_event">Zobrazit událost v kalendáři</string>
     <string name="lock_home_apps">Zamknout aplikace</string>
     <string name="extend_home_apps_area">Rozšířit kliknutelnou oblast</string>
     <string name="home_alignment_bottom">Zarovnání spodní plochy</string>
@@ -100,7 +99,6 @@
     <string name="text_biometric_login">Biometrické přihlášení pro mLauncher</string>
     <string name="text_biometric_login_sub">Přihlaste se pomocí svých biometrických údajů</string>
     <!-- Unsorted Strings -->
-    <string name="denied_calender_permission">Vyžaduje povolení kalendáře.</string>
     <string name="show_apps">Všechny aplikace</string>
     <string name="display_hidden_apps">Zobrazit skryté aplikace</string>
     <string name="drawer_list_empty_hint">Nebyly nalezeny žádné aplikace</string>
