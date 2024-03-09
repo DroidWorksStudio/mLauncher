@@ -36,7 +36,6 @@
     <string name="show_time">Arată timpul</string>
     <string name="show_date">Arată data</string>
     <string name="show_battery">Arată bateria</string>
-    <string name="show_calendar_event">Afișează evenimentul din calendar</string>
     <string name="lock_home_apps">Blocare aplicații</string>
     <string name="extend_home_apps_area">Extinde zona clickable</string>
     <string name="home_alignment_bottom">Aliniere ecran de pornire jos</string>
@@ -100,7 +99,6 @@
     <string name="text_biometric_login">Conectare biometrică pentru mLauncher</string>
     <string name="text_biometric_login_sub">Conectați-vă utilizând acreditările dvs. biometrice</string>
     <!-- Unsorted Strings -->
-    <string name="denied_calender_permission">Are nevoie de permisiunea calendarului.</string>
     <string name="show_apps">Toate aplicațiile</string>
     <string name="display_hidden_apps">Afișează aplicații ascunse</string>
     <string name="drawer_list_empty_hint">Nicio aplicație găsită</string>
