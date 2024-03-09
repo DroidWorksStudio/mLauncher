@@ -36,7 +36,6 @@
     <string name="show_time">Show time</string>
     <string name="show_date">Show date</string>
     <string name="show_battery">Hiển thị pin</string>
-    <string name="show_calendar_event">Hiển thị sự kiện lịch</string>
     <string name="lock_home_apps">Lock Apps</string>
     <string name="extend_home_apps_area">Extend clickable area</string>
     <string name="home_alignment_bottom">Home screen align bottom</string>
@@ -100,7 +99,6 @@
     <string name="text_biometric_login">Đăng nhập sinh trắc học cho mLauncher</string>
     <string name="text_biometric_login_sub">Đăng nhập bằng thông tin sinh trắc học của bạn</string>
     <!-- Unsorted Strings -->
-    <string name="denied_calender_permission">Cần sự cho phép lịch.</string>
     <string name="show_apps">All apps</string>
     <string name="display_hidden_apps">Hiển thị ứng dụng ẩn</string>
     <string name="drawer_list_empty_hint">No apps found</string>
