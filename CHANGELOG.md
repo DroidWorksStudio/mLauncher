@@ -6,6 +6,7 @@
 
 **Merged pull requests:**
 
+- Release/1.3.3 [\#356](https://github.com/HeAndroids2Much/mLauncher/pull/356) ([HeCodes2Much](https://github.com/HeCodes2Much))
 - \[Feature\] Removed features that are not minimal. [\#355](https://github.com/HeAndroids2Much/mLauncher/pull/355) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
 ## [1.3.2](https://github.com/HeAndroids2Much/mLauncher/tree/1.3.2) ( 5, March 2024)
