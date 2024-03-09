@@ -36,7 +36,6 @@
     <string name="show_time">نمایش زمان</string>
     <string name="show_date">نمایش تاریخ</string>
     <string name="show_battery">نمایش باتری</string>
-    <string name="show_calendar_event">نمایش رویداد تقویم</string>
     <string name="lock_home_apps">قفل کردن برنامه ها</string>
     <string name="extend_home_apps_area">منطقه قابل کلیک را گسترش دهید</string>
     <string name="home_alignment_bottom">تراز کردن صفحه اصلی پایین</string>
@@ -100,7 +99,6 @@
     <string name="text_biometric_login">ورود بیومتریک برای mLauncher</string>
     <string name="text_biometric_login_sub">با استفاده از اعتبار بیومتریک خود وارد شوید</string>
     <!-- Unsorted Strings -->
-    <string name="denied_calender_permission">به مجوز تقویم نیاز دارد.</string>
     <string name="show_apps">همه برنامه ها</string>
     <string name="display_hidden_apps">نمایش برنامه های مخفی</string>
     <string name="drawer_list_empty_hint">هیچ برنامه ای پیدا نشد</string>
