@@ -36,7 +36,6 @@
     <string name="show_time">Sýningartími</string>
     <string name="show_date">Sýningardagsetning</string>
     <string name="show_battery">Sýna rafhlöðu</string>
-    <string name="show_calendar_event">Sýna dagatalsviðburð</string>
     <string name="lock_home_apps">Læstu forritum</string>
     <string name="extend_home_apps_area">Stækkaðu smellanlegt svæði</string>
     <string name="home_alignment_bottom">Heimaskjár stilla neðst</string>
@@ -100,7 +99,6 @@
     <string name="text_biometric_login">Líffræðileg tölfræði innskráning fyrir mLauncher</string>
     <string name="text_biometric_login_sub">Skráðu þig inn með líffræðilegum tölfræðiskilríkjum þínum</string>
     <!-- Unsorted Strings -->
-    <string name="denied_calender_permission">Þarf dagbókarleyfi.</string>
     <string name="show_apps">Öll forrit</string>
     <string name="display_hidden_apps">Sýna falin forrit</string>
     <string name="drawer_list_empty_hint">Engin forrit fundust</string>
