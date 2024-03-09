@@ -36,7 +36,6 @@
     <string name="show_time">समय देखाउनुहोस्</string>
     <string name="show_date">मिति देखाउनुहोस्</string>
     <string name="show_battery">ब्याट्री देखाउनुहोस्</string>
-    <string name="show_calendar_event">क्यालेन्डर घटना देखाउनुहोस्</string>
     <string name="lock_home_apps">एपहरू लक गर्नुहोस्</string>
     <string name="extend_home_apps_area">क्लिक योग्य क्षेत्र विस्तार गर्नुहोस्</string>
     <string name="home_alignment_bottom">गृह स्क्रिन तल पङ्क्तिबद्ध गर्नुहोस्</string>
@@ -100,7 +99,6 @@
     <string name="text_biometric_login">mLauncher को लागि बायोमेट्रिक लगइन</string>
     <string name="text_biometric_login_sub">आफ्नो बायोमेट्रिक प्रमाण प्रयोग गरेर लग इन गर्नुहोस्</string>
     <!-- Unsorted Strings -->
-    <string name="denied_calender_permission">क्यालेन्डर अनुमति चाहिन्छ।</string>
     <string name="show_apps">सबै एपहरू</string>
     <string name="display_hidden_apps">लुकेका एपहरू प्रदर्शन गर्नुहोस्</string>
     <string name="drawer_list_empty_hint">कुनै एपहरू फेला परेनन्</string>
