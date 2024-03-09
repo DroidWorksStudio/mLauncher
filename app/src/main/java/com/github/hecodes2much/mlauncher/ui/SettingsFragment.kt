@@ -344,14 +344,6 @@ class SettingsFragment : Fragment() {
                     },
                     { _, onChange ->
                         SettingsToggle(
-                            title = stringResource(R.string.show_calendar_event),
-                            fontSize = iconFs,
-                            onChange = onChange,
-                            state = remember { mutableStateOf(prefs.showCalendarEvent) }
-                        ) { toggleShowCalendarEvent() }
-                    },
-                    { _, onChange ->
-                        SettingsToggle(
                             title = stringResource(R.string.lock_home_apps),
                             fontSize = iconFs,
                             onChange = onChange,
@@ -621,10 +613,6 @@ class SettingsFragment : Fragment() {
 
     private fun toggleShowBattery() {
         prefs.showBattery = !prefs.showBattery
-    }
-
-    private fun toggleShowCalendarEvent() {
-        prefs.showCalendarEvent = !prefs.showCalendarEvent
     }
 
     private fun toggleHomeLocked() {
