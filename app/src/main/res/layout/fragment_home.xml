@@ -43,23 +43,6 @@
             android:textSize="@dimen/date_size"
             tools:text="Thu, 30 Dec" />
 
-
-        <TextView
-            android:id="@+id/latestEventText"
-            style="@style/TextDefault"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingHorizontal="2dp"
-            android:textSize="@dimen/date_size" />
-
-        <TextView
-            android:id="@+id/latestEventDate"
-            style="@style/TextDefault"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingHorizontal="2dp"
-            android:textSize="@dimen/date_size" />
-
         <LinearLayout
             android:id="@+id/batteryLayout"
             android:layout_width="wrap_content"

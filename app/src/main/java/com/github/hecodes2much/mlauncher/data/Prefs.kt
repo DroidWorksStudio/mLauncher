@@ -27,7 +27,6 @@ private const val DRAWER_ALIGNMENT = "DRAWER_ALIGNMENT"
 private const val TIME_ALIGNMENT = "TIME_ALIGNMENT"
 private const val STATUS_BAR = "STATUS_BAR"
 private const val SHOW_BATTERY = "SHOW_BATTERY"
-private const val SHOW_CALENDER_EVENT = "SHOW_CALENDER_EVENT"
 private const val SHOW_DATE = "SHOW_DATE"
 private const val HOME_LOCKED = "HOME_LOCKED"
 private const val SHOW_TIME = "SHOW_TIME"
@@ -202,10 +201,6 @@ class Prefs(val context: Context) {
     var showBattery: Boolean
         get() = prefs.getBoolean(SHOW_BATTERY, true)
         set(value) = prefs.edit().putBoolean(SHOW_BATTERY, value).apply()
-
-    var showCalendarEvent: Boolean
-        get() = prefs.getBoolean(SHOW_CALENDER_EVENT, false)
-        set(value) = prefs.edit().putBoolean(SHOW_CALENDER_EVENT, value).apply()
 
     var homeLocked: Boolean
         get() = prefs.getBoolean(HOME_LOCKED, false)
