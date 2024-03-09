@@ -36,7 +36,6 @@
     <string name="show_time">Відображати час</string>
     <string name="show_date">Показати дату</string>
     <string name="show_battery">Показати акумулятор</string>
-    <string name="show_calendar_event">Показати подію календаря</string>
     <string name="lock_home_apps">Блокування програм</string>
     <string name="extend_home_apps_area">Розширити активну область</string>
     <string name="home_alignment_bottom">На домашньому екрані по нижній частині</string>
@@ -100,7 +99,6 @@
     <string name="text_biometric_login">Біометричний логін для mLauncher</string>
     <string name="text_biometric_login_sub">Увійдіть, використовуючи свої біометричні облікові дані</string>
     <!-- Unsorted Strings -->
-    <string name="denied_calender_permission">Потрібен дозвіл календаря.</string>
     <string name="show_apps">Всі програми</string>
     <string name="display_hidden_apps">Показати приховані програми</string>
     <string name="drawer_list_empty_hint">Додатки не знайдені</string>
