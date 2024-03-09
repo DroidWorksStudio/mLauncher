@@ -36,7 +36,6 @@
     <string name="show_time">Tijd weergeven</string>
     <string name="show_date">Datum weergeven</string>
     <string name="show_battery">Toon batterij</string>
-    <string name="show_calendar_event">Toon agendagebeurtenis</string>
     <string name="lock_home_apps">Apps vergrendelen</string>
     <string name="extend_home_apps_area">Klikbaar gebied uitbreiden</string>
     <string name="home_alignment_bottom">Startscherm uitlijning onderaan</string>
@@ -100,7 +99,6 @@
     <string name="text_biometric_login">Biometrische login voor mLauncher</string>
     <string name="text_biometric_login_sub">Log in met uw biometrische gegevens</string>
     <!-- Unsorted Strings -->
-    <string name="denied_calender_permission">Heeft kalendertoestemming nodig.</string>
     <string name="show_apps">Alle apps</string>
     <string name="display_hidden_apps">Geef verborgen apps weer</string>
     <string name="drawer_list_empty_hint">Geen apps gevonden</string>

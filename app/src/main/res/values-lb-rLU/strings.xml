@@ -36,7 +36,6 @@
     <string name="show_time">Elo geet et lass</string>
     <string name="show_date">Datum weisen</string>
     <string name="show_battery">Batterie weisen</string>
-    <string name="show_calendar_event">Show Kalenner Event</string>
     <string name="lock_home_apps">Spär Apps</string>
     <string name="extend_home_apps_area">Klickbar Beräich verlängeren</string>
     <string name="home_alignment_bottom">Heembildschierm alignéiert ënnen</string>
@@ -100,7 +99,6 @@
     <string name="text_biometric_login">Biometresche Login fir mLauncher</string>
     <string name="text_biometric_login_sub">Mellt Iech un mat Ärem biometresche Umeldungsinformatioun</string>
     <!-- Unsorted Strings -->
-    <string name="denied_calender_permission">Braucht Kalenner Erlaabnis.</string>
     <string name="show_apps">All Apps</string>
     <string name="display_hidden_apps">Display Hidden Apps</string>
     <string name="drawer_list_empty_hint">Keng Apps fonnt</string>

@@ -36,7 +36,6 @@
     <string name="show_time">Näytä aika</string>
     <string name="show_date">Näytä päivämäärä</string>
     <string name="show_battery">Näytä akku</string>
-    <string name="show_calendar_event">Näytä kalenteritapahtuma</string>
     <string name="lock_home_apps">Lukitse Sovellukset</string>
     <string name="extend_home_apps_area">Laajenna klikattava alue</string>
     <string name="home_alignment_bottom">Aloitusnäytön tasaus alareunaan</string>
@@ -100,7 +99,6 @@
     <string name="text_biometric_login">Biometrinen kirjautuminen mLauncheriin</string>
     <string name="text_biometric_login_sub">Kirjaudu sisään biometrisilla tunnistetiedoillasi</string>
     <!-- Unsorted Strings -->
-    <string name="denied_calender_permission">Vaatii kalenterin luvan.</string>
     <string name="show_apps">Kaikki sovellukset</string>
     <string name="display_hidden_apps">Näytä piilotetut sovellukset</string>
     <string name="drawer_list_empty_hint">Sovelluksia ei löytynyt</string>

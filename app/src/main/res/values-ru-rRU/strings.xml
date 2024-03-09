@@ -36,7 +36,6 @@
     <string name="show_time">Показать время</string>
     <string name="show_date">Показать дату</string>
     <string name="show_battery">Показать батарею</string>
-    <string name="show_calendar_event">Показать событие календаря</string>
     <string name="lock_home_apps">Заблокировать приложения</string>
     <string name="extend_home_apps_area">Продлить область клика</string>
     <string name="home_alignment_bottom">Выровнять на главном экране снизу</string>
@@ -100,7 +99,6 @@
     <string name="text_biometric_login">Биометрический вход в mLauncher</string>
     <string name="text_biometric_login_sub">Войдите в систему, используя свои биометрические учетные данные</string>
     <!-- Unsorted Strings -->
-    <string name="denied_calender_permission">Требуется разрешение календаря.</string>
     <string name="show_apps">Все приложения</string>
     <string name="display_hidden_apps">Отображение скрытых приложений</string>
     <string name="drawer_list_empty_hint">Не найдено приложений</string>

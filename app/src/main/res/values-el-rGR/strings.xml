@@ -36,7 +36,6 @@
     <string name="show_time">Εμφάνιση ώρας</string>
     <string name="show_date">Εμφάνιση ημερομηνίας</string>
     <string name="show_battery">Εμφάνιση μπαταρίας</string>
-    <string name="show_calendar_event">Εμφάνιση συμβάντος ημερολογίου</string>
     <string name="lock_home_apps">Κλείδωμα Εφαρμογών</string>
     <string name="extend_home_apps_area">Επέκταση ενεργής περιοχής</string>
     <string name="home_alignment_bottom">Στοίχιση κάτω της αρχικής οθόνης</string>
@@ -100,7 +99,6 @@
     <string name="text_biometric_login">Βιομετρική σύνδεση για mLauncher</string>
     <string name="text_biometric_login_sub">Συνδεθείτε χρησιμοποιώντας τα βιομετρικά διαπιστευτήριά σας</string>
     <!-- Unsorted Strings -->
-    <string name="denied_calender_permission">Χρειάζεται άδεια ημερολογίου.</string>
     <string name="show_apps">Όλες οι εφαρμογές</string>
     <string name="display_hidden_apps">Εμφάνιση κρυφών εφαρμογών</string>
     <string name="drawer_list_empty_hint">Δεν βρέθηκαν εφαρμογές</string>

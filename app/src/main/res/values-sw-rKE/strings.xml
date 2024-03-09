@@ -36,7 +36,6 @@
     <string name="show_time">Onyesha wakati</string>
     <string name="show_date">Onyesha tarehe</string>
     <string name="show_battery">Onyesha betri</string>
-    <string name="show_calendar_event">Onyesha tukio la kalenda</string>
     <string name="lock_home_apps">Funga Programu</string>
     <string name="extend_home_apps_area">Panua eneo linaloweza kubofya</string>
     <string name="home_alignment_bottom">Pangilia skrini ya nyumbani chini</string>
@@ -100,7 +99,6 @@
     <string name="text_biometric_login">Kuingia kwa kibayometriki kwa mLauncher</string>
     <string name="text_biometric_login_sub">Ingia kwa kutumia kitambulisho chako cha kibayometriki</string>
     <!-- Unsorted Strings -->
-    <string name="denied_calender_permission">Inahitaji ruhusa ya kalenda.</string>
     <string name="show_apps">Programu zote</string>
     <string name="display_hidden_apps">Onyesha Programu Zilizofichwa</string>
     <string name="drawer_list_empty_hint">Hakuna programu zilizopatikana</string>

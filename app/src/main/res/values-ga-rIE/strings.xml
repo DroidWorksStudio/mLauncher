@@ -36,7 +36,6 @@
     <string name="show_time">Am seó</string>
     <string name="show_date">Taispeáin dáta</string>
     <string name="show_battery">Taispeáin ceallraí</string>
-    <string name="show_calendar_event">Taispeáin imeacht féilire</string>
     <string name="lock_home_apps">Glasáil Apps</string>
     <string name="extend_home_apps_area">Leathnaigh an limistéar inchliceáilte</string>
     <string name="home_alignment_bottom">Ailínigh bun an scáileáin baile</string>
@@ -100,7 +99,6 @@
     <string name="text_biometric_login">Logáil isteach bithmhéadrach do mLauncher</string>
     <string name="text_biometric_login_sub">Logáil isteach ag baint úsáide as do shonraí bithmhéadracha</string>
     <!-- Unsorted Strings -->
-    <string name="denied_calender_permission">Teastaíonn cead féilire.</string>
     <string name="show_apps">Gach apps</string>
     <string name="display_hidden_apps">Taispeáin Apps Hidden</string>
     <string name="drawer_list_empty_hint">Níor aimsíodh aon aipeanna</string>

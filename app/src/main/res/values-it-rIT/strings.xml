@@ -36,7 +36,6 @@
     <string name="show_time">Mostra ora</string>
     <string name="show_date">Mostra data</string>
     <string name="show_battery">Mostra batteria</string>
-    <string name="show_calendar_event">Mostra evento del calendario</string>
     <string name="lock_home_apps">Blocca App</string>
     <string name="extend_home_apps_area">Estendi area cliccabile</string>
     <string name="home_alignment_bottom">Allineamento della schermata Home in basso</string>
@@ -100,7 +99,6 @@
     <string name="text_biometric_login">Accesso biometrico per mLauncher</string>
     <string name="text_biometric_login_sub">Accedi utilizzando le tue credenziali biometriche</string>
     <!-- Unsorted Strings -->
-    <string name="denied_calender_permission">Necessita dell\'autorizzazione del calendario.</string>
     <string name="show_apps">Tutte le app</string>
     <string name="display_hidden_apps">Visualizza le app nascoste</string>
     <string name="drawer_list_empty_hint">Nessuna app trovata</string>

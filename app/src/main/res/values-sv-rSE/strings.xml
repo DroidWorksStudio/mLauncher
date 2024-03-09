@@ -36,7 +36,6 @@
     <string name="show_time">Visa tid</string>
     <string name="show_date">Visa datum</string>
     <string name="show_battery">Visa batteri</string>
-    <string name="show_calendar_event">Visa kalenderhändelse</string>
     <string name="lock_home_apps">Lås appar</string>
     <string name="extend_home_apps_area">Utöka klickbart område</string>
     <string name="home_alignment_bottom">Startskärmen anpassa botten</string>
@@ -100,7 +99,6 @@
     <string name="text_biometric_login">Biometrisk inloggning för mLauncher</string>
     <string name="text_biometric_login_sub">Logga in med dina biometriska uppgifter</string>
     <!-- Unsorted Strings -->
-    <string name="denied_calender_permission">Behöver kalendertillstånd.</string>
     <string name="show_apps">Alla appar</string>
     <string name="display_hidden_apps">Visa dolda appar</string>
     <string name="drawer_list_empty_hint">Inga appar hittades</string>

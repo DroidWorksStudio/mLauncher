@@ -36,7 +36,6 @@
     <string name="show_time">Oras ng palabas</string>
     <string name="show_date">Ipakita ang petsa</string>
     <string name="show_battery">Ipakita ang baterya</string>
-    <string name="show_calendar_event">Ipakita ang kaganapan sa kalendaryo</string>
     <string name="lock_home_apps">I-lock ang Apps</string>
     <string name="extend_home_apps_area">Palawakin ang naki-click na lugar</string>
     <string name="home_alignment_bottom">I-align sa ibaba ang home screen</string>
@@ -100,7 +99,6 @@
     <string name="text_biometric_login">Biometric login para sa mLauncher</string>
     <string name="text_biometric_login_sub">Mag-log in gamit ang iyong biometric na kredensyal</string>
     <!-- Unsorted Strings -->
-    <string name="denied_calender_permission">Kailangan ng pahintulot sa kalendaryo.</string>
     <string name="show_apps">Lahat ng app</string>
     <string name="display_hidden_apps">Ipakita ang mga Nakatagong App</string>
     <string name="drawer_list_empty_hint">Walang nakitang app</string>

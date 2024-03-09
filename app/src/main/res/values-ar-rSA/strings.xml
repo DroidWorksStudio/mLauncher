@@ -36,7 +36,6 @@
     <string name="show_time">إظهار الوقت</string>
     <string name="show_date">إظهار التاريخ</string>
     <string name="show_battery">عرض البطارية</string>
-    <string name="show_calendar_event">إظهار حدث التقويم</string>
     <string name="lock_home_apps">قفل التطبيقات</string>
     <string name="extend_home_apps_area">توسيع المنطقة القابلة للنقر</string>
     <string name="home_alignment_bottom">أسفل الشاشة الرئيسية محاذاة</string>
@@ -100,7 +99,6 @@
     <string name="text_biometric_login">تسجيل الدخول البيومتري لـ mLauncher</string>
     <string name="text_biometric_login_sub">قم بتسجيل الدخول باستخدام بيانات الاعتماد البيومترية الخاصة بك</string>
     <!-- Unsorted Strings -->
-    <string name="denied_calender_permission">يحتاج إلى إذن التقويم.</string>
     <string name="show_apps">جميع التطبيقات</string>
     <string name="display_hidden_apps">عرض التطبيقات المخفية</string>
     <string name="drawer_list_empty_hint">لم يتم العثور على تطبيقات</string>

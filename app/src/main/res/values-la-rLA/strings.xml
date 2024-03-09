@@ -36,7 +36,6 @@
     <string name="show_time">Ostende tempus</string>
     <string name="show_date">Ostende date</string>
     <string name="show_battery">Ostende altilium</string>
-    <string name="show_calendar_event">Ostende fastis res</string>
     <string name="lock_home_apps">cincinno Apps</string>
     <string name="extend_home_apps_area">Praetende clickable area</string>
     <string name="home_alignment_bottom">Domus screen color fundo</string>
@@ -100,7 +99,6 @@
     <string name="text_biometric_login">Biometric login pro mLauncher</string>
     <string name="text_biometric_login_sub">Log in usus tuos biometric credential</string>
     <!-- Unsorted Strings -->
-    <string name="denied_calender_permission">Eget calendarium licentia.</string>
     <string name="show_apps">Omnes apps</string>
     <string name="display_hidden_apps">Propono occulta Apps</string>
     <string name="drawer_list_empty_hint">Non apps invenerunt</string>

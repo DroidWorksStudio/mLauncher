@@ -36,7 +36,6 @@
     <string name="show_time">Hōʻike manawa</string>
     <string name="show_date">Hōʻike lā</string>
     <string name="show_battery">Hōʻike pākaukau</string>
-    <string name="show_calendar_event">Hōʻike i ka hanana kalena</string>
     <string name="lock_home_apps">Laka Apps</string>
     <string name="extend_home_apps_area">E hoʻonui i kahi hiki ke kaomi</string>
     <string name="home_alignment_bottom">ʻO ka pale home e align i lalo</string>
@@ -100,7 +99,6 @@
     <string name="text_biometric_login">ʻO ka inoa biometric no ka mLauncher</string>
     <string name="text_biometric_login_sub">E ʻeʻe me ka hoʻohana ʻana i kāu hōʻoia biometric</string>
     <!-- Unsorted Strings -->
-    <string name="denied_calender_permission">Pono ka \'ae \'alemanaka.</string>
     <string name="show_apps">Nā polokalamu a pau</string>
     <string name="display_hidden_apps">Hōʻike i nā polokalamu huna</string>
     <string name="drawer_list_empty_hint">ʻAʻohe polokalamu i loaʻa</string>

@@ -36,7 +36,6 @@
     <string name="show_time">Show time</string>
     <string name="show_date">Show date</string>
     <string name="show_battery">Прикажи батерију</string>
-    <string name="show_calendar_event">Прикажи догађај из календара</string>
     <string name="lock_home_apps">Lock Apps</string>
     <string name="extend_home_apps_area">Extend clickable area</string>
     <string name="home_alignment_bottom">Home screen align bottom</string>
@@ -100,7 +99,6 @@
     <string name="text_biometric_login">Биометријска пријава за мЛаунцхер</string>
     <string name="text_biometric_login_sub">Пријавите се користећи свој биометријски акредитив</string>
     <!-- Unsorted Strings -->
-    <string name="denied_calender_permission">Потребна је дозвола за календар.</string>
     <string name="show_apps">All apps</string>
     <string name="display_hidden_apps">Прикажи скривене апликације</string>
     <string name="drawer_list_empty_hint">No apps found</string>

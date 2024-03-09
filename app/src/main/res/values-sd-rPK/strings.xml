@@ -36,7 +36,6 @@
     <string name="show_time">وقت ڏيکاريو</string>
     <string name="show_date">تاريخ ڏيکاريو</string>
     <string name="show_battery">بيٽري ڏيکاريو</string>
-    <string name="show_calendar_event">ڪئلينڊر وارو واقعو ڏيکاريو</string>
     <string name="lock_home_apps">ائپس کي بند ڪريو</string>
     <string name="extend_home_apps_area">ڪلڪ قابل علائقو وڌايو</string>
     <string name="home_alignment_bottom">گھر جي اسڪرين ھيٺان ترتيب ڏيو</string>
@@ -100,7 +99,6 @@
     <string name="text_biometric_login">mLauncher لاءِ بايوميٽرڪ لاگ ان</string>
     <string name="text_biometric_login_sub">لاگ ان ڪريو پنھنجي بايوميٽرڪ سند استعمال ڪندي</string>
     <!-- Unsorted Strings -->
-    <string name="denied_calender_permission">ڪئلينڊر جي اجازت جي ضرورت آهي.</string>
     <string name="show_apps">سڀ ائپس</string>
     <string name="display_hidden_apps">پوشیدہ ائپس ڏيکاريو</string>
     <string name="drawer_list_empty_hint">ڪابه ايپس نه ملي</string>

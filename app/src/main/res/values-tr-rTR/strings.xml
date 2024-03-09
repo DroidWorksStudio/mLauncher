@@ -36,7 +36,6 @@
     <string name="show_time">Zamanı göster</string>
     <string name="show_date">Tarih\'i göster</string>
     <string name="show_battery">Pil\'i göster</string>
-    <string name="show_calendar_event">Takvim etkinliğini göster</string>
     <string name="lock_home_apps">Uygulamaları Kilitle</string>
     <string name="extend_home_apps_area">Tıklanabilir alanı genişlet</string>
     <string name="home_alignment_bottom">Ana ekran alt hizalama</string>
@@ -100,7 +99,6 @@
     <string name="text_biometric_login">mLauncher için biyometrik giriş</string>
     <string name="text_biometric_login_sub">Biyometrik kimlik bilgilerinizi kullanarak giriş yapın</string>
     <!-- Unsorted Strings -->
-    <string name="denied_calender_permission">Takvim izni gerekiyor.</string>
     <string name="show_apps">Tüm uygulamalar</string>
     <string name="display_hidden_apps">Gizli Uygulamaları Görüntüle</string>
     <string name="drawer_list_empty_hint">Herhangi bir uygulama bulunamadı</string>

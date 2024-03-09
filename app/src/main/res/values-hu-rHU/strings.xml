@@ -36,7 +36,6 @@
     <string name="show_time">Show time</string>
     <string name="show_date">Megjelenés dátuma</string>
     <string name="show_battery">Mutasd az akkumulátort</string>
-    <string name="show_calendar_event">Naptáresemény megjelenítése</string>
     <string name="lock_home_apps">Alkalmazások zárolása</string>
     <string name="extend_home_apps_area">Kattintható terület bővítése</string>
     <string name="home_alignment_bottom">Kezdőképernyő alulra igazítása</string>
@@ -100,7 +99,6 @@
     <string name="text_biometric_login">Biometrikus bejelentkezés az mLauncherhez</string>
     <string name="text_biometric_login_sub">Jelentkezzen be biometrikus hitelesítő adataival</string>
     <!-- Unsorted Strings -->
-    <string name="denied_calender_permission">Naptári engedély szükséges.</string>
     <string name="show_apps">Minden alkalmazás</string>
     <string name="display_hidden_apps">Rejtett alkalmazások megjelenítése</string>
     <string name="drawer_list_empty_hint">Nem találtunk alkalmazásokat</string>

@@ -36,7 +36,6 @@
     <string name="show_time">Vis tid</string>
     <string name="show_date">Vis dato</string>
     <string name="show_battery">Vis batteri</string>
-    <string name="show_calendar_event">Vis kalenderbegivenhed</string>
     <string name="lock_home_apps">Lås Apps</string>
     <string name="extend_home_apps_area">Udvid klikbart område</string>
     <string name="home_alignment_bottom">Startskærm justeret nederst</string>
@@ -100,7 +99,6 @@
     <string name="text_biometric_login">Biometrisk login til mLauncher</string>
     <string name="text_biometric_login_sub">Log ind med dit biometriske legitimationsoplysninger</string>
     <!-- Unsorted Strings -->
-    <string name="denied_calender_permission">Kræver kalendertilladelse.</string>
     <string name="show_apps">Alle apps</string>
     <string name="display_hidden_apps">Vis skjulte apps</string>
     <string name="drawer_list_empty_hint">Ingen apps fundet</string>

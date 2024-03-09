@@ -36,7 +36,6 @@
     <string name="show_time">Време за показване</string>
     <string name="show_date">Дата на показване</string>
     <string name="show_battery">Показване на батерията</string>
-    <string name="show_calendar_event">Показване на събитие в календара</string>
     <string name="lock_home_apps">Приложения за заключване</string>
     <string name="extend_home_apps_area">Разширяване на зоната за кликване</string>
     <string name="home_alignment_bottom">Изравняване на долната част на началния екран</string>
@@ -100,7 +99,6 @@
     <string name="text_biometric_login">Биометрично влизане за mLauncher</string>
     <string name="text_biometric_login_sub">Влезте с вашите биометрични идентификационни данни</string>
     <!-- Unsorted Strings -->
-    <string name="denied_calender_permission">Нуждае се от разрешение за календар.</string>
     <string name="show_apps">Всички приложения</string>
     <string name="display_hidden_apps">Показване на скрити приложения</string>
     <string name="drawer_list_empty_hint">Не са намерени приложения</string>

@@ -36,7 +36,6 @@
     <string name="show_time">Uri l-ħin</string>
     <string name="show_date">Uri d-data</string>
     <string name="show_battery">Uri batterija</string>
-    <string name="show_calendar_event">Uri l-avveniment tal-kalendarju</string>
     <string name="lock_home_apps">Lock Apps</string>
     <string name="extend_home_apps_area">Estendi l-erja li tista\' tikklikkja</string>
     <string name="home_alignment_bottom">L-iskrin tad-dar tallinja qiegħ</string>
@@ -100,7 +99,6 @@
     <string name="text_biometric_login">Login bijometriku għall-mLauncher</string>
     <string name="text_biometric_login_sub">Idħol billi tuża l-kredenzjali bijometrika tiegħek</string>
     <!-- Unsorted Strings -->
-    <string name="denied_calender_permission">Jeħtieġ permess tal-kalendarju.</string>
     <string name="show_apps">L-apps kollha</string>
     <string name="display_hidden_apps">Uri Apps Moħbija</string>
     <string name="drawer_list_empty_hint">Ma nstabet l-ebda app</string>

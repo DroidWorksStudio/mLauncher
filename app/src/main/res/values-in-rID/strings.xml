@@ -36,7 +36,6 @@
     <string name="show_time">Waktu pertunjukan</string>
     <string name="show_date">Tanggal pertunjukan</string>
     <string name="show_battery">Tampilkan baterai</string>
-    <string name="show_calendar_event">Tampilkan acara kalender</string>
     <string name="lock_home_apps">Kunci Aplikasi</string>
     <string name="extend_home_apps_area">Memperluas area yang dapat diklik</string>
     <string name="home_alignment_bottom">Layar beranda sejajar bagian bawah</string>
@@ -100,7 +99,6 @@
     <string name="text_biometric_login">Login biometrik untuk mLauncher</string>
     <string name="text_biometric_login_sub">Masuk menggunakan kredensial biometrik Anda</string>
     <!-- Unsorted Strings -->
-    <string name="denied_calender_permission">Perlu izin kalender.</string>
     <string name="show_apps">Semua aplikasi</string>
     <string name="display_hidden_apps">Tampilkan Aplikasi Tersembunyi</string>
     <string name="drawer_list_empty_hint">Tidak ada aplikasi yang ditemukan</string>

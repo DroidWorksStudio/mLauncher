@@ -36,7 +36,6 @@
     <string name="show_time">Pokaži vrijeme</string>
     <string name="show_date">Prikaži datum</string>
     <string name="show_battery">Prikaži bateriju</string>
-    <string name="show_calendar_event">Prikaži događaj u kalendaru</string>
     <string name="lock_home_apps">Zaključaj aplikacije</string>
     <string name="extend_home_apps_area">Proširite područje koje se može kliknuti</string>
     <string name="home_alignment_bottom">Početni zaslon poravnajte s dnom</string>
@@ -100,7 +99,6 @@
     <string name="text_biometric_login">Biometrijska prijava za mLauncher</string>
     <string name="text_biometric_login_sub">Prijavite se pomoću svoje biometrijske vjerodajnice</string>
     <!-- Unsorted Strings -->
-    <string name="denied_calender_permission">Potrebno je dopuštenje kalendara.</string>
     <string name="show_apps">Sve aplikacije</string>
     <string name="display_hidden_apps">Prikaz skrivenih aplikacija</string>
     <string name="drawer_list_empty_hint">Nema pronađenih aplikacija</string>
