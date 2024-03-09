@@ -36,7 +36,6 @@
     <string name="show_time">ਸ਼ੋਅ ਸਮਾ</string>
     <string name="show_date">ਮਿਤੀ ਦਿਖਾਓ</string>
     <string name="show_battery">ਬੈਟਰੀ ਦਿਖਾਓ</string>
-    <string name="show_calendar_event">ਕੈਲੰਡਰ ਇਵੈਂਟ ਦਿਖਾਓ</string>
     <string name="lock_home_apps">ਐਪਾਂ ਨੂੰ ਲਾਕ ਕਰੋ</string>
     <string name="extend_home_apps_area">ਕਲਿਕ ਕਰਨ ਯੋਗ ਖੇਤਰ ਵਧਾਓ</string>
     <string name="home_alignment_bottom">ਹੋਮ ਸਕ੍ਰੀਨ ਹੇਠਾਂ ਇਕਸਾਰ ਕਰੋ</string>
@@ -100,7 +99,6 @@
     <string name="text_biometric_login">mLauncher ਲਈ ਬਾਇਓਮੈਟ੍ਰਿਕ ਲੌਗਇਨ</string>
     <string name="text_biometric_login_sub">ਆਪਣੇ ਬਾਇਓਮੈਟ੍ਰਿਕ ਪ੍ਰਮਾਣ ਪੱਤਰ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਲੌਗ ਇਨ ਕਰੋ</string>
     <!-- Unsorted Strings -->
-    <string name="denied_calender_permission">ਕੈਲੰਡਰ ਦੀ ਇਜਾਜ਼ਤ ਦੀ ਲੋੜ ਹੈ।</string>
     <string name="show_apps">ਸਾਰੀਆਂ ਐਪਾਂ</string>
     <string name="display_hidden_apps">ਲੁਕੇ ਹੋਏ ਐਪਸ ਡਿਸਪਲੇ ਕਰੋ</string>
     <string name="drawer_list_empty_hint">ਕੋਈ ਐਪਸ ਨਹੀਂ ਮਿਲੇ</string>
