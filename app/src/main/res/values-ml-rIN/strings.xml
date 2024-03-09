@@ -36,7 +36,6 @@
     <string name="show_time">പ്രദർശന സമയം</string>
     <string name="show_date">തീയതി കാണിക്കുക</string>
     <string name="show_battery">ബാറ്ററി കാണിക്കുക</string>
-    <string name="show_calendar_event">കലണ്ടർ ഇവന്റ് കാണിക്കുക</string>
     <string name="lock_home_apps">ആപ്പുകൾ ലോക്ക് ചെയ്യുക</string>
     <string name="extend_home_apps_area">ക്ലിക്ക് ചെയ്യാവുന്ന ഏരിയ വിപുലീകരിക്കുക</string>
     <string name="home_alignment_bottom">ഹോം സ്‌ക്രീൻ താഴെ വിന്യസിക്കുക</string>
@@ -100,7 +99,6 @@
     <string name="text_biometric_login">mLouncher-നുള്ള ബയോമെട്രിക് ലോഗിൻ</string>
     <string name="text_biometric_login_sub">നിങ്ങളുടെ ബയോമെട്രിക് ക്രെഡൻഷ്യൽ ഉപയോഗിച്ച് ലോഗിൻ ചെയ്യുക</string>
     <!-- Unsorted Strings -->
-    <string name="denied_calender_permission">കലണ്ടറിന്റെ അനുമതി ആവശ്യമാണ്.</string>
     <string name="show_apps">എല്ലാ ആപ്പുകളും</string>
     <string name="display_hidden_apps">മറഞ്ഞിരിക്കുന്ന ആപ്പുകൾ പ്രദർശിപ്പിക്കുക</string>
     <string name="drawer_list_empty_hint">ആപ്പുകളൊന്നും കണ്ടെത്തിയില്ല</string>
