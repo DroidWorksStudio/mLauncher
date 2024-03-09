@@ -36,7 +36,6 @@
     <string name="show_time">Შოუს დრო</string>
     <string name="show_date">თარიღის ჩვენება</string>
     <string name="show_battery">ბატარეის ჩვენება</string>
-    <string name="show_calendar_event">კალენდარული მოვლენის ჩვენება</string>
     <string name="lock_home_apps">აპების ჩაკეტვა</string>
     <string name="extend_home_apps_area">გააფართოვეთ დაწკაპუნებადი ტერიტორია</string>
     <string name="home_alignment_bottom">საწყისი ეკრანის გასწორება ბოლოში</string>
@@ -100,7 +99,6 @@
     <string name="text_biometric_login">ბიომეტრიული შესვლა mLauncher-ისთვის</string>
     <string name="text_biometric_login_sub">შედით თქვენი ბიომეტრიული სერთიფიკატის გამოყენებით</string>
     <!-- Unsorted Strings -->
-    <string name="denied_calender_permission">საჭიროებს კალენდრის ნებართვას.</string>
     <string name="show_apps">ყველა აპლიკაცია</string>
     <string name="display_hidden_apps">დამალული აპების ჩვენება</string>
     <string name="drawer_list_empty_hint">აპები ვერ მოიძებნა</string>
