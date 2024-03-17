@@ -111,4 +111,5 @@
     <string name="accessibility_service_name">mLauncher akční služba</string>
     <string name="accessibility_service_description">Tato služba usnadnění umožňuje mLauncheru provádět určité akce, jako je zamykání obrazovky nebo otevření rychlých nastavení. Naše služba přístupnosti neshromažďuje ani nesdílí žádná data.</string>
     <string name="version">Verze</string>
+    <string name="lock_settings">Nastavení zámku</string>
 </resources>
