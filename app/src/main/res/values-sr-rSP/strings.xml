@@ -110,4 +110,5 @@
         \n\nNote: Turn this OFF first if you decide to delete mLauncher.</string>
     <string name="accessibility_service_name">mLauncher Actions Service</string>
     <string name="accessibility_service_description">Ова услуга приступачности омогућава мЛаунцхер-у да изврши одређене радње као што је закључавање екрана или отварање брзих подешавања. Наша услуга приступачности не прикупља нити дели никакве податке.</string>
+    <string name="version">Верзија</string>
 </resources>
