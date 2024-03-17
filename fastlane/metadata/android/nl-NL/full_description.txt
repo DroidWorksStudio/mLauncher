@@ -11,12 +11,17 @@ Gevorkt vanaf <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. M
         - Klikken op de datum
     - Mogelijke acties omvatten:
         - Open de opgegeven app
+        - App-lijst weergeven
         - Scherm vergrendelen
+        - Toon recent geopende apps
         - Open het meldingenpaneel
         - Snelle instellingen openen
+        - Machtsdialoog
+        - Maak een screenshot
+        - Schakel gebaar uit
 - Klok onafhankelijk van home apps uitlijnen
 - Uitlijning van apps in app-drawer veranderen
-- De mogelijkheid om een toegangscode in te stellen voor de instellingenpagina
+- Instellingen achter biometrie vergrendelen (schakelaar)
 - Lettergrootte wijzigen
 - Internet toestemming verwijderd Je weet nooit wat een app-ontwikkelaar over je wil weten.
 
