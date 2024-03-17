@@ -1,1 +1,1 @@
-Rent fra OlauncherCF, +minimalisering, +tilpasningsdyktighet
+Forked fra Olauncher, +minimalisering, +tilpassbarhet
