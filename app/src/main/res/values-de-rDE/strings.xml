@@ -110,4 +110,5 @@
         \n\nHinweis: Schalten Sie diesen AUS zuerst wenn Sie mLauncher löschen möchten.</string>
     <string name="accessibility_service_name">mLauncher Actions Service</string>
     <string name="accessibility_service_description">Dieser Barrierefreiheitsdienst ermöglicht es mLauncher, bestimmte Aktionen auszuführen, wie z. B. das Sperren des Bildschirms oder das Öffnen der Schnelleinstellungen. Unser Barrierefreiheitsdienst sammelt oder teilt keine Daten.</string>
+    <string name="version">Ausführung</string>
 </resources>
