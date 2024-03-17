@@ -11,12 +11,17 @@
         - Bấm vào Ngày
     - Các hành động có thể thực hiện bây giờ bao gồm:
         - Mở ứng dụng được chỉ định
+        - Hiển thị danh sách ứng dụng
         - Khóa màn hình
+        - Hiển thị các ứng dụng đã mở gần đây
         - Mở ngăn thông báo
         - Mở cài đặt nhanh
+        - Hộp thoại nguồn
+        - Chụp màn hình
+        - Tắt cử chỉ
 - Bạn cũng có thể định vị đồng hồ độc lập với các ứng dụng gia đình
 - Thay đổi căn chỉnh của ứng dụng trong ngăn kéo ứng dụng
-- Khả năng đặt mật mã cho trang cài đặt
+- Khóa cài đặt phía sau sinh trắc học (chuyển đổi)
 - Thay đổi cỡ chữ
 - Đã xóa quyền truy cập internet. Bạn không bao giờ biết nhà phát triển ứng dụng muốn biết gì về bạn.
 
