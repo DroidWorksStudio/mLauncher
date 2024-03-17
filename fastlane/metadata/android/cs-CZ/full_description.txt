@@ -11,12 +11,17 @@ Forked od <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minim
         - Kliknutí na datum
     - Možné akce nyní zahrnují:
         - Otevřít zadanou aplikaci
+        - Zobrazit seznam aplikací
         - zamykání obrazovky
+        - Zobrazit naposledy otevřené aplikace
         - Otevírání oznamovací oblasti
         - Otevření rychlého nastavení
+        - Dialog napájení
+        - Udělejte snímek obrazovky
+        - Zakázat gesto
 - Můžete také umístit hodiny nezávisle na domovských aplikacích
 - Změna zarovnání aplikací v zásuvce aplikací
-- Možnost nastavit přístupový kód pro stránku nastavení
+- Uzamknout nastavení za biometrii (přepnout)
 - Změna velikosti písma
 - Oprávnění k Internetu odebráno. Nikdy nevíte, co o vás chce vývojář vědět.
 
