@@ -11,12 +11,17 @@ Imegawanywa kutoka kwa <a href="https://github.com/tanujnotes/Olauncher">Olaunch
         - Kubonyeza Tarehe
     - Hatua zinazowezekana sasa ni pamoja na:
         - Fungua programu maalum
+        - Onyesha orodha ya programu
         - Kufunga skrini
+        - Onyesha programu zilizofunguliwa hivi karibuni
         - Kufungua droo ya arifa
         - Kufungua mipangilio ya haraka
+        - Mazungumzo ya Nguvu
+        - Piga Picha ya skrini
+        - Zima Ishara
 - Unaweza pia kuweka saa bila kutegemea programu za nyumbani
 - Badilisha mpangilio wa programu kwenye droo ya programu
-- Uwezo wa kuweka nambari ya kupita kwa ukurasa wa mipangilio
+- Funga mipangilio nyuma ya bayometriki (geuza)
 - Badilisha ukubwa wa fonti
 - Imeondoa ruhusa ya mtandao. Huwezi kujua ni nini msanidi programu anataka kujua kukuhusu.
 
