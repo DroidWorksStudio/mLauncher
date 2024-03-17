@@ -11,12 +11,17 @@ Gaffel fra <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mini
         - Klikk på dato
     - Mulige tiltak som nå omfatter:
         - Åpne spesifisert app
+        - Vis appliste
         - Låser skjermen
+        - Vis nylig åpnede apper
         - Åpner varselskuff
         - Åpner hurtiginnstillingene
+        - Power Dialog
+        - Ta et skjermbilde
+        - Deaktiver gest
 - Du kan også posisjonere klokken uavhengig av hjem-appene
 - Endre justering av apper i app-skuff
-- Muligheten til å ha en passkode satt for innstillingssiden
+- Låseinnstillinger bak biometri (veksle)
 - Endre skriftstørrelse
 - Fjernet internettilgang. Du vet aldri hva en apputvikler vil vite om deg.
 
