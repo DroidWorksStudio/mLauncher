@@ -111,4 +111,5 @@
     <string name="accessibility_service_name">mLauncher Eylemler Hizmeti</string>
     <string name="accessibility_service_description">Bu erişilebilirlik hizmeti, mLauncher\'ın ekranı kilitleme veya hızlı ayarları açma gibi belirli işlemleri yapmasını sağlar. Erişilebilirlik hizmetimiz herhangi bir veri toplamaz veya paylaşmaz.</string>
     <string name="version">Sürüm</string>
+    <string name="lock_settings">Kilit Ayarları</string>
 </resources>
