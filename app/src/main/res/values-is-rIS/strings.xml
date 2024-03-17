@@ -110,4 +110,5 @@
         \n\nAthugið: Slökktu á þessu fyrst ef þú ákveður að eyða mLauncher.</string>
     <string name="accessibility_service_name">mLauncher Actions Service</string>
     <string name="accessibility_service_description">Þessi aðgengisþjónusta gerir mLauncher kleift að gera ákveðnar aðgerðir eins og að læsa skjánum eða opna flýtistillingarnar. Aðgengisþjónusta okkar safnar ekki né deilir neinum gögnum.</string>
+    <string name="version">Útgáfa</string>
 </resources>
