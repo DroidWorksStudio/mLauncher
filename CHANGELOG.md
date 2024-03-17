@@ -1,5 +1,13 @@
 # Changelog
 
+## [Coming Soon](https://github.com/HeAndroids2Much/mLauncher/tree/HEAD)
+
+[Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/1.3.3...HEAD)
+
+**Merged pull requests:**
+
+- \[Language\] Updated Language Files. [\#359](https://github.com/HeAndroids2Much/mLauncher/pull/359) ([HeCodes2Much](https://github.com/HeCodes2Much))
+
 ## [1.3.3](https://github.com/HeAndroids2Much/mLauncher/tree/1.3.3) ( 9, March 2024)
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/1.3.2...1.3.3)
@@ -312,27 +320,20 @@
 
 ## [0.4.9](https://github.com/HeAndroids2Much/mLauncher/tree/0.4.9) (23, January 2023)
 
-[Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/0.4.8...0.4.9)
+[Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/0.4.7...0.4.9)
 
 **Implemented enhancements:**
 
 - Feat: Add battery level to home screen [\#178](https://github.com/HeAndroids2Much/mLauncher/pull/178) ([HeCodes2Much](https://github.com/HeCodes2Much))
-
-**Merged pull requests:**
-
-- New Crowdin updates [\#179](https://github.com/HeAndroids2Much/mLauncher/pull/179) ([HeCodes2Much](https://github.com/HeCodes2Much))
-
-## [0.4.8](https://github.com/HeAndroids2Much/mLauncher/tree/0.4.8) (20, January 2023)
-
-[Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/0.4.7...0.4.8)
-
-**Implemented enhancements:**
-
 - Feat: Make padding home apps apply to app draw too [\#173](https://github.com/HeAndroids2Much/mLauncher/pull/173) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
 **Fixed bugs:**
 
 - \[Bug Report\] App drawer font size became huge after updating to 0.4.7 [\#175](https://github.com/HeAndroids2Much/mLauncher/issues/175)
+
+**Merged pull requests:**
+
+- New Crowdin updates [\#179](https://github.com/HeAndroids2Much/mLauncher/pull/179) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
 ## [0.4.7](https://github.com/HeAndroids2Much/mLauncher/tree/0.4.7) (16, January 2023)
 
