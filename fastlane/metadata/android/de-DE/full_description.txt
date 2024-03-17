@@ -11,12 +11,17 @@ Gegabelt von <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mi
         - Möglichkeit, die Anwendung zu ändern, die beim Klicken auf das Datum geöffnet wird
     - Mögliche Aktionen jetzt inklusive:
         - Angegebene App öffnen
+        - App-Liste anzeigen
         - Sperrung des Bildschirms
+        - Zuletzt geöffnete Apps anzeigen
         - Öffne die Benachrichtigungsleiste
         - Öffnen der Schnelleinstellungen
+        - Power-Dialog
+        - Mach ein Bildschirmfoto
+        - Geste deaktivieren
 - Uhr unabhängig von Home-Apps ausrichten
 - Ausrichtung von Anwendungen im App-Drawer ändern
-- Die Möglichkeit, einen Passcode für die Einstellungsseite festzulegen
+- Einstellungen hinter Biometrie sperren (umschalten)
 - Schriftgröße ändern
 - Entfernte Interneterlaubnis - Entfernte Interneterlaubnis Du weißt nie, was ein App-Entwickler über dich wissen möchte.
 
