@@ -11,12 +11,17 @@ Gevurk van <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mini
         - Klik op die datum
     - Moontlike aksies sluit nou in:
         - Maak die gespesifiseerde toepassing oop
+        - Vertoon toepassinglys
         - Sluit die skerm
+        - Wys onlangs oopgemaakte toepassings
         - Maak die kennisgewinglaai oop
         - Maak die vinnige instellings oop
+        - Krag dialoog
+        - Neem 'n skermskoot
+        - Deaktiveer gebaar
 - Jy kan ook die horlosie onafhanklik van die tuistoepassings posisioneer
 - Verander belyning van toepassings in toepassingslaai
-- Die vermoë om 'n paskode vir die instellingsbladsy te stel
+- Sluit instellings agter biometrie (wissel)
 - Verander lettergrootte
 - Verwyder internettoestemming. Jy weet nooit wat 'n app-ontwikkelaar van jou wil weet nie.
 
