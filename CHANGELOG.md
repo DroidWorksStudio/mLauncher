@@ -4,6 +4,10 @@
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/1.3.3...HEAD)
 
+**Implemented Enhancements:**
+
+- \[Feature\] Add Settings Lock Toggle [\#362](https://github.com/HeAndroids2Much/mLauncher/pull/362) ([HeCodes2Much](https://github.com/HeCodes2Much))
+
 **Language Support:**
 
 - \[Language\] Updated Language Files. [\#359](https://github.com/HeAndroids2Much/mLauncher/pull/359) ([HeCodes2Much](https://github.com/HeCodes2Much))
@@ -11,10 +15,6 @@
 **Release:**
 
 - \[Release\] Update version to 71 \(v1.3.4\) [\#361](https://github.com/HeAndroids2Much/mLauncher/pull/361) ([HeCodes2Much](https://github.com/HeCodes2Much))
-
-**Merged pull requests:**
-
-- \[Feature\] Add Settings Lock Toggle [\#362](https://github.com/HeAndroids2Much/mLauncher/pull/362) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
 ## [1.3.3](https://github.com/HeAndroids2Much/mLauncher/tree/1.3.3) ( 9, March 2024)
 
