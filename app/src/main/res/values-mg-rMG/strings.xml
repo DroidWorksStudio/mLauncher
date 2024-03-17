@@ -110,4 +110,5 @@
         \n\nFanamarihana: Atsaharo aloha ity raha manapa-kevitra ny hamafa mLauncher ianao.</string>
     <string name="accessibility_service_name">MLauncher Actions Service</string>
     <string name="accessibility_service_description">Ity serivisy fidirana ity dia ahafahan\'ny mLauncher manao hetsika sasany toy ny fanidiana ny efijery na fanokafana ny fanovana haingana. Ny serivisy fidiranay dia tsy manangona na mizara angona.</string>
+    <string name="version">Malagasy Bible</string>
 </resources>
