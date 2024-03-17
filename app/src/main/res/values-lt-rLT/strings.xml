@@ -111,4 +111,5 @@
     <string name="accessibility_service_name">mLauncher veiksmų tarnyba</string>
     <string name="accessibility_service_description">Ši pritaikymo neįgaliesiems paslauga leidžia „mLauncher“ atlikti tam tikrus veiksmus, pvz., užrakinti ekraną arba atidaryti sparčiuosius nustatymus. Mūsų pritaikymo neįgaliesiems paslauga nerenka ir nebendrina jokių duomenų.</string>
     <string name="version">Versija</string>
+    <string name="lock_settings">Užrakinimo nustatymai</string>
 </resources>
