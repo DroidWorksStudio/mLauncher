@@ -111,4 +111,5 @@
     <string name="accessibility_service_name">mLauncher Actions Service</string>
     <string name="accessibility_service_description">Ligeann an tseirbhís inrochtaineachta seo do mLauncher gníomhartha áirithe a dhéanamh ar nós an scáileán a ghlasáil nó na socruithe tapa a oscailt. Ní bhailíonn ná ní roinneann ár seirbhís inrochtaineachta aon sonraí.</string>
     <string name="version">Leagan</string>
+    <string name="lock_settings">Socruithe Glasála</string>
 </resources>
