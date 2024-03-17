@@ -11,12 +11,17 @@ Haarukka alkaen <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>.
         - Päivämäärän klikkaaminen
     - Mahdollisia toimia ovat:
         - Avaa määritelty sovellus
+        - Näytä sovellusluettelo
         - Ruudun lukitseminen
+        - Näytä viimeksi avatut sovellukset
         - Ilmoitusvalikon avaaminen
         - Pika-asetusten avaaminen
+        - Virta-valintaikkuna
+        - Ota kuvakaappaus
+        - Poista ele käytöstä
 - Voit myös sijoittaa kellon riippumatta kodin sovelluksista
 - Sovellusten kohdistuksen muuttaminen sovelluslaatikossa
-- Mahdollisuus asettaa pääsykoodi asetussivulle
+- Lukitse asetukset biometristen tietojen takana (vaihda)
 - Muuta fonttikokoa
 - Poistettu internet-käyttöoikeus. Et koskaan tiedä mitä sovelluksen kehittäjä haluaa tietää sinusta.
 
