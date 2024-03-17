@@ -528,7 +528,15 @@ class SettingsFragment : Fragment() {
                             onChange = onChange,
                             state = remember { mutableStateOf(prefs.hiddenAppsDisplayed) }
                         ) { toggleHiddenAppsDisplayed() }
-                    }
+                    },
+                    { _, onChange ->
+                        SettingsToggle(
+                            title = stringResource(R.string.lock_settings),
+                            fontSize = iconFs,
+                            onChange = onChange,
+                            state = remember { mutableStateOf(prefs.settingsLocked) }
+                        ) { toggleSettingsLocked() }
+                    },
                 )
             )
             SettingsArea(title = getString(R.string.backup),
@@ -617,6 +625,10 @@ class SettingsFragment : Fragment() {
 
     private fun toggleHomeLocked() {
         prefs.homeLocked = !prefs.homeLocked
+    }
+
+    private fun toggleSettingsLocked() {
+        prefs.settingsLocked = !prefs.settingsLocked
     }
 
     private fun toggleExtendHomeAppsArea() {
