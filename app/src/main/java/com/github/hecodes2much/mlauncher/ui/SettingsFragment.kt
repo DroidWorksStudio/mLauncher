@@ -550,7 +550,7 @@ class SettingsFragment : Fragment() {
                 modifier = Modifier
                     .align(Alignment.End)
                     .padding(10.dp, 5.dp),
-                text = "Version: ${
+                text = "${getString(R.string.version)}: ${
                     requireContext().packageManager.getPackageInfo(
                         requireContext().packageName,
                         0
