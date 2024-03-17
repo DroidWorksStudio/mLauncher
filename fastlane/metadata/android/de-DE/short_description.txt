@@ -1,1 +1,1 @@
-Geforkt von OlauncherCF, +Minimalisierung, +Anpassbarkeit
+Abgespalten von Olauncher, +Minimierung, +Anpassbarkeit
