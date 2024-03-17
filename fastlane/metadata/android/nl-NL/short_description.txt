@@ -1,1 +1,1 @@
-Forked van OlauncherCF, +minimalisatie, +aanpasbaarheid
+Gevorkt van Olauncher, +minimalisatie, +aanpasbaarheid
