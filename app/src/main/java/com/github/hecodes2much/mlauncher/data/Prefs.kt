@@ -110,11 +110,11 @@ class Prefs(val context: Context) {
         set(value) = prefs.edit().putBoolean(LOCK_MODE, value).apply()
 
     var autoOpenApp: Boolean
-        get() = prefs.getBoolean(AUTO_OPEN_APP, true)
+        get() = prefs.getBoolean(AUTO_OPEN_APP, false)
         set(value) = prefs.edit().putBoolean(AUTO_OPEN_APP, value).apply()
 
     var filterStrength: Int
-        get() = prefs.getInt(FILTER_STRENGTH, 50)
+        get() = prefs.getInt(FILTER_STRENGTH, 25)
         set(value) = prefs.edit().putInt(FILTER_STRENGTH, value).apply()
 
     var searchFromStart: Boolean
@@ -126,36 +126,20 @@ class Prefs(val context: Context) {
         set(value) = prefs.edit().putBoolean(AUTO_SHOW_KEYBOARD, value).apply()
 
     var homeAppsNum: Int
-        get() {
-            return try {
-                prefs.getInt(HOME_APPS_NUM, 4)
-            } catch (_: Exception) {
-                4
-            }
-        }
+        get() = prefs.getInt(HOME_APPS_NUM, 4)
         set(value) = prefs.edit().putInt(HOME_APPS_NUM, value).apply()
 
     var opacityNum: Int
-        get() {
-            return try {
-                prefs.getInt(APP_OPACITY, 50)
-            } catch (_: Exception) {
-                50
-            }
-        }
+        get() = prefs.getInt(APP_OPACITY, 128)
         set(value) = prefs.edit().putInt(APP_OPACITY, value).apply()
 
     var homeAlignment: Gravity
         get() {
-            return try {
-                val string = prefs.getString(
-                    HOME_ALIGNMENT,
-                    Gravity.Left.name
-                ).toString()
-                Gravity.valueOf(string)
-            } catch (_: Exception) {
-                Gravity.Left
-            }
+            val string = prefs.getString(
+                HOME_ALIGNMENT,
+                Gravity.Left.name
+            ).toString()
+            return Gravity.valueOf(string)
         }
         set(value) = prefs.edit().putString(HOME_ALIGNMENT, value.toString()).apply()
 

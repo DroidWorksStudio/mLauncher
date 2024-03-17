@@ -3,19 +3,22 @@ package com.github.hecodes2much.fuzzywuzzy
 import com.github.hecodes2much.mlauncher.data.AppModel
 import java.util.*
 
-fun scoreApp(app: AppModel, searchChars: String): Float {
-    val appChars = app.appAlias.ifEmpty {
-        app.appLabel
-    }
+fun scoreApp(app: AppModel, searchChars: String): Int {
+    val appChars = app.appAlias.ifEmpty { app.appLabel }
 
-    return calculateFuzzyScore(
-        appChars.uppercase(Locale.getDefault())
-            .replace(Regex("\\p{InCombiningDiacriticalMarks}+"), "")
-            .replace(Regex("[-_+,.]"), ""),
-        searchChars.uppercase()
-            .replace(Regex("\\p{InCombiningDiacriticalMarks}+"), "")
-            .replace(Regex("[-_+,.]"), "")
+    val fuzzyScore = calculateFuzzyScore(
+        normalizeString(appChars),
+        normalizeString(searchChars)
     )
+
+    return (fuzzyScore * 99).toInt()
+}
+
+fun normalizeString(input: String): String {
+    // Remove diacritical marks and special characters, and convert to uppercase
+    return input
+        .uppercase(Locale.getDefault())
+        .replace(Regex("[\\p{InCombiningDiacriticalMarks}-_+,.]"), "")
 }
 
 fun calculateFuzzyScore(s1: String, s2: String): Float {
@@ -25,14 +28,12 @@ fun calculateFuzzyScore(s1: String, s2: String): Float {
     var s1Index = 0
 
     // Iterate over each character in s2 and check if it exists in s1
-    for (i in 0 until n) {
-        val c2 = s2[i]
+    for (c2 in s2) {
         var found = false
 
         // Start searching for c2 from the current s1Index
         for (j in s1Index until m) {
-            val c1 = s1[j]
-            if (c1 == c2) {
+            if (s1[j] == c2) {
                 found = true
                 // Update s1Index to the next position for the next iteration
                 s1Index = j + 1
@@ -50,6 +51,5 @@ fun calculateFuzzyScore(s1: String, s2: String): Float {
     }
 
     // Calculate the score as the ratio of matched characters to the longer string length
-    val maxLength = maxOf(m, n)
-    return matchCount.toFloat() / maxLength
+    return matchCount.toFloat() / maxOf(m, n)
 }

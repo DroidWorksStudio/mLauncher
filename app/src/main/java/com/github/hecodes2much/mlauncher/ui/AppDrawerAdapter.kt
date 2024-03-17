@@ -1,6 +1,7 @@
 package com.github.hecodes2much.mlauncher.ui
 
 import android.annotation.SuppressLint
+import android.os.Build
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.Gravity.*
@@ -8,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.annotation.RequiresApi
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.res.ResourcesCompat
@@ -37,6 +39,7 @@ class AppDrawerAdapter(
     var appFilteredList: MutableList<AppModel> = mutableListOf()
     private lateinit var binding: AdapterAppDrawerBinding
 
+    @RequiresApi(Build.VERSION_CODES.Q)
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         binding = AdapterAppDrawerBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         prefs = Prefs(parent.context)
@@ -54,7 +57,6 @@ class AppDrawerAdapter(
         return ViewHolder(binding)
     }
 
-    @Suppress("DEPRECATION")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         if (appFilteredList.size == 0) return
         val appModel = appFilteredList[holder.absoluteAdapterPosition]
@@ -86,7 +88,7 @@ class AppDrawerAdapter(
             override fun performFiltering(constraint: CharSequence?): FilterResults {
                 val searchChars = constraint.toString()
 
-                val scoredApps = mutableMapOf<AppModel, Float>()
+                val scoredApps = mutableMapOf<AppModel, Int>()
                 for (app in appsList) {
                     scoredApps[app] = scoreApp(app, searchChars)
                 }
@@ -94,11 +96,11 @@ class AppDrawerAdapter(
                 val filteredApps = if (searchChars.isNotEmpty()) {
                     if (prefs.searchFromStart) {
                         scoredApps.filter { (app, _) -> app.name.startsWith(searchChars, ignoreCase = true) }
+                            .filter { (_, score) -> score > prefs.filterStrength }
                             .map { it.key }
-                            .filter { scoredApps[it] != 0.0f }
                             .toMutableList()
                     } else {
-                        scoredApps.filterValues { it != 0.0f }
+                        scoredApps.filterValues { it > prefs.filterStrength }
                             .keys
                             .toMutableList()
                     }
