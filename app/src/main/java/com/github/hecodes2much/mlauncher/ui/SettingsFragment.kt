@@ -53,7 +53,6 @@ import com.github.hecodes2much.mlauncher.style.SettingsTheme
 import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsArea
 import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsGestureItem
 import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsItem
-import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsNumberItem
 import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsSliderItem
 import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsTextButton
 import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsToggle
@@ -272,7 +271,7 @@ class SettingsFragment : Fragment() {
                         ) { toggleAutoOpenApp() }
                     },
                     { open, onChange ->
-                        SettingsNumberItem(
+                        SettingsSliderItem(
                             title = stringResource(R.string.filter_strength),
                             fontSize = iconFs,
                             open = open,
