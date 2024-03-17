@@ -11,12 +11,17 @@ Bifurqué à partir de <a href="https://github.com/tanujnotes/Olauncher">Olaunch
         - Possibilité de changer l'application qui s'ouvre en cliquant sur la date
     - Les actions possibles incluent maintenant :
         - Ouvrir l'application spécifiée
+        - Afficher la liste des applications
         - Verrouillage de l'écran
+        - Afficher les applications ouvertes récemment
         - Ouverture du panneau de notification
         - Ouverture des paramètres rapides
+        - Boîte de dialogue d'alimentation
+        - Prendre une capture d'écran
+        - Désactiver le geste
 - Aligner l'horloge indépendamment des applications domestiques
 - Modifier l'alignement des applications dans le tiroir d'applications
-- La possibilité d'avoir un mot de passe défini pour la page des paramètres
+- Verrouiller les paramètres derrière la biométrie (bascule)
 - Modifier la taille de la police
 - Suppression de l'autorisation d'accès à Internet - Suppression de l'autorisation d'accès à Internet Vous ne savez jamais ce qu'un développeur d'applications veut savoir de vous.
 
