@@ -11,12 +11,17 @@
         - Tarih'e Tıklama
     - Olası eylemler artık şunları içeriyor:
         - Belirtilen uygulamayı aç
+        - Uygulama listesini görüntüle
         - Ekranı Kilitle
+        - En son açılan uygulamaları göster
         - Bildirim çekmecesini açma
         - Hızlı ayarları açma
+        - Güç Diyaloğu
+        - Ekran görüntüsü al
+        - Hareketi Devre Dışı Bırak
 - Saati Ev uygulamalarından ayrı olarak hizalayabilirsinizde.
 - Uygulama-çekmecesindeki uygulamaların hizalamasını değiştir
-- Ayarlar sayfası için ayarlanmış bir geçiş koduna sahip olma yeteneği
+- Biyometrinin arkasındaki ayarları kilitleyin (geçiş)
 - Yazı tipi boyutunu değiştir
 - İnternet izni kaldırıldı. Bir uygulama geliştiricisinin sizin hakkınızda ne bilmek istediğini asla bilemezsin.
 
