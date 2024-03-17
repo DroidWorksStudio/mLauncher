@@ -110,4 +110,5 @@
         \n\nUwaga: najpierw włącz to wyłączenie, jeśli zdecydujesz się usunąć mLauncher.</string>
     <string name="accessibility_service_name">Usługa działań mLauncher</string>
     <string name="accessibility_service_description">Ta usługa ułatwień dostępu umożliwia mLauncherowi wykonywanie określonych czynności, takich jak blokowanie ekranu lub otwieranie szybkich ustawień. Nasza usługa ułatwień dostępu nie gromadzi ani nie udostępnia żadnych danych.</string>
+    <string name="version">Wersja</string>
 </resources>
