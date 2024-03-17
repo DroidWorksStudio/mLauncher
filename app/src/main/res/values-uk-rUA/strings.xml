@@ -111,4 +111,5 @@
     <string name="accessibility_service_name">функції mLauncher Service</string>
     <string name="accessibility_service_description">Ця служба доступності дозволяє mLauncher виконувати певні дії, наприклад блокувати екран або відкривати швидкі налаштування. Наша служба доступності не збирає та не надає жодних даних.</string>
     <string name="version">Версія</string>
+    <string name="lock_settings">Налаштування блокування</string>
 </resources>
