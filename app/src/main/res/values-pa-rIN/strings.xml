@@ -111,4 +111,5 @@
     <string name="accessibility_service_name">mLauncher ਐਕਸ਼ਨ ਸਰਵਿਸ</string>
     <string name="accessibility_service_description">ਇਹ ਪਹੁੰਚਯੋਗਤਾ ਸੇਵਾ mLauncher ਨੂੰ ਕੁਝ ਖਾਸ ਕਾਰਵਾਈਆਂ ਕਰਨ ਦੀ ਇਜਾਜ਼ਤ ਦਿੰਦੀ ਹੈ ਜਿਵੇਂ ਕਿ ਸਕ੍ਰੀਨ ਨੂੰ ਲੌਕ ਕਰਨਾ ਜਾਂ ਤੇਜ਼ ਸੈਟਿੰਗਾਂ ਨੂੰ ਖੋਲ੍ਹਣਾ। ਸਾਡੀ ਪਹੁੰਚਯੋਗਤਾ ਸੇਵਾ ਕੋਈ ਡਾਟਾ ਇਕੱਠਾ ਜਾਂ ਸਾਂਝਾ ਨਹੀਂ ਕਰਦੀ ਹੈ।</string>
     <string name="version">ਸੰਸਕਰਣ</string>
+    <string name="lock_settings">ਲਾਕ ਸੈਟਿੰਗਾਂ</string>
 </resources>
