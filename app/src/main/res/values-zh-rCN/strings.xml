@@ -36,7 +36,6 @@
     <string name="show_time">显示时间</string>
     <string name="show_date">显示日期</string>
     <string name="show_battery">显示电池</string>
-    <string name="show_calendar_event">显示日历事件</string>
     <string name="lock_home_apps">锁定应用</string>
     <string name="extend_home_apps_area">扩展主屏应用可点击空间</string>
     <string name="home_alignment_bottom">应用主屏底部</string>
@@ -100,7 +99,6 @@
     <string name="text_biometric_login">mLauncher 的生物识别登录</string>
     <string name="text_biometric_login_sub">使用您的生物识别凭据登录</string>
     <!-- Unsorted Strings -->
-    <string name="denied_calender_permission">需要日历许可。</string>
     <string name="show_apps">所有应用程序</string>
     <string name="display_hidden_apps">显示隐藏的应用程序</string>
     <string name="drawer_list_empty_hint">未找到应用</string>
@@ -112,4 +110,6 @@
         \n\n注意：若你决定删除Olauncher, 请先关闭此选项。</string>
     <string name="accessibility_service_name">OlauncherCF 操作服务</string>
     <string name="accessibility_service_description">此辅助功能服务允许 mLauncher 执行某些操作，例如锁定屏幕或打开快速设置。我们的无障碍服务不收集或共享任何数据。</string>
+    <string name="version">版本</string>
+    <string name="lock_settings">锁定设置</string>
 </resources>
