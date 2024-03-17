@@ -4,34 +4,36 @@
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/1.3.3...HEAD)
 
-**Merged pull requests:**
+**Language Support:**
 
-- \[Language\] Updated Language Files. [\#360](https://github.com/HeAndroids2Much/mLauncher/pull/360) ([HeCodes2Much](https://github.com/HeCodes2Much))
 - \[Language\] Updated Language Files. [\#359](https://github.com/HeAndroids2Much/mLauncher/pull/359) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
 ## [1.3.3](https://github.com/HeAndroids2Much/mLauncher/tree/1.3.3) ( 9, March 2024)
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/1.3.2...1.3.3)
 
-**Implemented enhancements:**
+**Implemented Enhancements:**
 
 - \[Feature\] Removed features that are not minimal. [\#355](https://github.com/HeAndroids2Much/mLauncher/pull/355) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
-**Merged pull requests:**
+**Language Support:**
 
 - \[Language\] Updated Language Files. [\#357](https://github.com/HeAndroids2Much/mLauncher/pull/357) ([HeCodes2Much](https://github.com/HeCodes2Much))
+
+**Release:**
+
 - Release/1.3.3 [\#356](https://github.com/HeAndroids2Much/mLauncher/pull/356) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
 ## [1.3.2](https://github.com/HeAndroids2Much/mLauncher/tree/1.3.2) ( 5, March 2024)
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/1.3.1...1.3.2)
 
-**Implemented enhancements:**
+**Implemented Enhancements:**
 
 - \[Enhancement\] show all apps when selecting for gestures [\#311](https://github.com/HeAndroids2Much/mLauncher/issues/311)
 - \[Feature\] Fixes \#311 so can display hidden apps in some areas [\#352](https://github.com/HeAndroids2Much/mLauncher/pull/352) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
-**Merged pull requests:**
+**Language Support:**
 
 - \[Language\] Updated Language Files. [\#350](https://github.com/HeAndroids2Much/mLauncher/pull/350) ([HeCodes2Much](https://github.com/HeCodes2Much))
 - \[Language\] Updated Language Files. [\#349](https://github.com/HeAndroids2Much/mLauncher/pull/349) ([HeCodes2Much](https://github.com/HeCodes2Much))
@@ -42,17 +44,17 @@
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/1.3.0...1.3.1)
 
-**Implemented enhancements:**
+**Implemented Enhancements:**
 
 - Updated the PIN system to use the default pin from phone settings. [\#343](https://github.com/HeAndroids2Much/mLauncher/pull/343) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
-**Fixed bugs:**
+**Fixed Bugs:**
 
 - \[Bug Report\] Blank Homescreen [\#319](https://github.com/HeAndroids2Much/mLauncher/issues/319)
 - Fixed the Accent color all apps header [\#338](https://github.com/HeAndroids2Much/mLauncher/pull/338) ([HeCodes2Much](https://github.com/HeCodes2Much))
 - Fixed the title of app apps when accent color is disabled. [\#337](https://github.com/HeAndroids2Much/mLauncher/pull/337) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
-**Merged pull requests:**
+**Language Support:**
 
 - New Crowdin updates [\#344](https://github.com/HeAndroids2Much/mLauncher/pull/344) ([HeCodes2Much](https://github.com/HeCodes2Much))
 - New Crowdin updates [\#342](https://github.com/HeAndroids2Much/mLauncher/pull/342) ([HeCodes2Much](https://github.com/HeCodes2Much))
@@ -64,31 +66,34 @@
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/1.2.1...1.3.0)
 
-**Implemented enhancements:**
+**Implemented Enhancements:**
 
 - \[Enhancement\] Have homescreen 'time' shortcut open to full clock app [\#332](https://github.com/HeAndroids2Much/mLauncher/issues/332)
 
-**Fixed bugs:**
+**Fixed Bugs:**
 
 - long press for selecting  home  screen is not working [\#329](https://github.com/HeAndroids2Much/mLauncher/issues/329)
 - \[Bug Report\] Accent color does not get apply to search text placeholder [\#323](https://github.com/HeAndroids2Much/mLauncher/issues/323)
 - \[Bug Report\] calendar events don't show [\#307](https://github.com/HeAndroids2Much/mLauncher/issues/307)
 - \[Bug Fix\] Fixed Accent Color for "All apps" in app drawer [\#333](https://github.com/HeAndroids2Much/mLauncher/pull/333) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
-**Merged pull requests:**
+**Language Support:**
+
+- Update strings.xml for Russian language [\#315](https://github.com/HeAndroids2Much/mLauncher/pull/315) ([ArmanHayots](https://github.com/ArmanHayots))
+
+**Release:**
 
 - \[Release\] Release 1.3.0 [\#335](https://github.com/HeAndroids2Much/mLauncher/pull/335) ([HeCodes2Much](https://github.com/HeCodes2Much))
-- Update strings.xml for Russian language [\#315](https://github.com/HeAndroids2Much/mLauncher/pull/315) ([ArmanHayots](https://github.com/ArmanHayots))
 
 ## [1.2.1](https://github.com/HeAndroids2Much/mLauncher/tree/1.2.1) (23, July 2023)
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/1.2.0...1.2.1)
 
-**Fixed bugs:**
+**Fixed Bugs:**
 
 - BUG: Fix the time and date formatting on home page [\#295](https://github.com/HeAndroids2Much/mLauncher/pull/295) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
-**Merged pull requests:**
+**Release:**
 
 - Release: Update version to 66 \(v1.2.1\) [\#296](https://github.com/HeAndroids2Much/mLauncher/pull/296) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
@@ -96,25 +101,28 @@
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/1.1.2...1.2.0)
 
-**Implemented enhancements:**
+**Implemented Enhancements:**
 
 - \[Enhancement\] Simple schedule next to the clock [\#288](https://github.com/HeAndroids2Much/mLauncher/issues/288)
 - FEAT: Added Calender events to the home screen. [\#289](https://github.com/HeAndroids2Much/mLauncher/pull/289) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
-**Merged pull requests:**
+**Language Support:**
 
 - New Crowdin updates [\#292](https://github.com/HeAndroids2Much/mLauncher/pull/292) ([HeCodes2Much](https://github.com/HeCodes2Much))
+
+**Release:**
+
 - Release: Update version to 65 \(v1.2.0\) [\#290](https://github.com/HeAndroids2Much/mLauncher/pull/290) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
 ## [1.1.2](https://github.com/HeAndroids2Much/mLauncher/tree/1.1.2) ( 8, July 2023)
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/1.1.1...1.1.2)
 
-**Implemented enhancements:**
+**Implemented Enhancements:**
 
 - FEAT: Added a toggle for the all apps text. [\#284](https://github.com/HeAndroids2Much/mLauncher/pull/284) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
-**Merged pull requests:**
+**Release:**
 
 - Release: Update version to 64 \(v1.1.2\) [\#285](https://github.com/HeAndroids2Much/mLauncher/pull/285) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
@@ -122,11 +130,11 @@
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/1.1.0...1.1.1)
 
-**Fixed bugs:**
+**Fixed Bugs:**
 
 - Bug: Fixed the Logic for FuzzyWuzzy [\#277](https://github.com/HeAndroids2Much/mLauncher/pull/277) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
-**Merged pull requests:**
+**Release:**
 
 -  Release: Update version to 63 \(v1.1.1\)  [\#278](https://github.com/HeAndroids2Much/mLauncher/pull/278) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
@@ -134,41 +142,50 @@
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/1.0.1...1.1.0)
 
-**Implemented enhancements:**
+**Implemented Enhancements:**
 
 - Feat: Updated the logic for the app search. [\#273](https://github.com/HeAndroids2Much/mLauncher/pull/273) ([HeCodes2Much](https://github.com/HeCodes2Much))
 - \[FEAT\] Use text similarity to sort and filter app list when searching [\#271](https://github.com/HeAndroids2Much/mLauncher/pull/271) ([flightmansam](https://github.com/flightmansam))
 
-**Merged pull requests:**
+**Language Support:**
 
 - New Crowdin updates [\#274](https://github.com/HeAndroids2Much/mLauncher/pull/274) ([HeCodes2Much](https://github.com/HeCodes2Much))
+
+**Release:**
+
 - Release: Update version to 62 \(v1.1.0\) [\#272](https://github.com/HeAndroids2Much/mLauncher/pull/272) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
 ## [1.0.1](https://github.com/HeAndroids2Much/mLauncher/tree/1.0.1) (11, April 2023)
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/1.0.0...1.0.1)
 
-**Fixed bugs:**
+**Fixed Bugs:**
 
 - \[Bug Report\] Auto open apps with spaces in name [\#249](https://github.com/HeAndroids2Much/mLauncher/issues/249)
 - Feat: Auto open apps with spaces in name [\#251](https://github.com/HeAndroids2Much/mLauncher/pull/251) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
-**Merged pull requests:**
+**Language Support:**
 
-- Release: Update version to 61 \(v1.0.1\) [\#265](https://github.com/HeAndroids2Much/mLauncher/pull/265) ([HeCodes2Much](https://github.com/HeCodes2Much))
-- Update README.md [\#263](https://github.com/HeAndroids2Much/mLauncher/pull/263) ([HeCodes2Much](https://github.com/HeCodes2Much))
 - German translation [\#261](https://github.com/HeAndroids2Much/mLauncher/pull/261) ([Ftamino](https://github.com/Ftamino))
 - Update Spanish translate [\#254](https://github.com/HeAndroids2Much/mLauncher/pull/254) ([ferlanero](https://github.com/ferlanero))
+
+**Release:**
+
+- Release: Update version to 61 \(v1.0.1\) [\#265](https://github.com/HeAndroids2Much/mLauncher/pull/265) ([HeCodes2Much](https://github.com/HeCodes2Much))
+
+**Merged pull requests:**
+
+- Update README.md [\#263](https://github.com/HeAndroids2Much/mLauncher/pull/263) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
 ## [1.0.0](https://github.com/HeAndroids2Much/mLauncher/tree/1.0.0) (14, March 2023)
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/0.5.9...1.0.0)
 
-**Fixed bugs:**
+**Fixed Bugs:**
 
 - Fixed the accent colors toggle for app draw [\#243](https://github.com/HeAndroids2Much/mLauncher/pull/243) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
-**Merged pull requests:**
+**Release:**
 
 - Release: Update version to 60 \(v1.0.0\) [\#244](https://github.com/HeAndroids2Much/mLauncher/pull/244) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
@@ -176,12 +193,12 @@
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/0.5.8...0.5.9)
 
-**Fixed bugs:**
+**Fixed Bugs:**
 
 - \[Bug Report\] settings locked [\#237](https://github.com/HeAndroids2Much/mLauncher/issues/237)
 - Bug: fix the locked screen when no pass set [\#238](https://github.com/HeAndroids2Much/mLauncher/pull/238) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
-**Merged pull requests:**
+**Release:**
 
 - Release: Update version to 59 \(v0.5.9\) [\#239](https://github.com/HeAndroids2Much/mLauncher/pull/239) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
@@ -189,13 +206,13 @@
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/0.5.7...0.5.8)
 
-**Implemented enhancements:**
+**Implemented Enhancements:**
 
 - \[Enhancement\]  System accent color and system font for app drawer  [\#231](https://github.com/HeAndroids2Much/mLauncher/issues/231)
 - Feat: System accent color & font for app drawer [\#233](https://github.com/HeAndroids2Much/mLauncher/pull/233) ([HeCodes2Much](https://github.com/HeCodes2Much))
 - Feat: Doubled the number of apps on the homescreen [\#232](https://github.com/HeAndroids2Much/mLauncher/pull/232) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
-**Merged pull requests:**
+**Release:**
 
 - Release: Update version to 58 \(v0.5.8\) [\#234](https://github.com/HeAndroids2Much/mLauncher/pull/234) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
@@ -203,15 +220,15 @@
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/0.5.6...0.5.7)
 
-**Implemented enhancements:**
+**Implemented Enhancements:**
 
 - Feat: Update the lock screen. [\#228](https://github.com/HeAndroids2Much/mLauncher/pull/228) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
-**Fixed bugs:**
+**Fixed Bugs:**
 
 - Bug: fixed app alignment [\#226](https://github.com/HeAndroids2Much/mLauncher/pull/226) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
-**Merged pull requests:**
+**Release:**
 
 - Release: Update version to 57 \(v0.5.7\) [\#227](https://github.com/HeAndroids2Much/mLauncher/pull/227) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
@@ -219,37 +236,40 @@
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/0.5.5...0.5.6)
 
-**Fixed bugs:**
+**Fixed Bugs:**
 
 - Bug: Fixed the Settings [\#221](https://github.com/HeAndroids2Much/mLauncher/pull/221) ([HeCodes2Much](https://github.com/HeCodes2Much))
+
+**Release:**
+
+- Release: Update version to 56 \(v0.5.6\) [\#222](https://github.com/HeAndroids2Much/mLauncher/pull/222) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
 **Closed issues:**
 
 - \[Crash Report\] Unable to open mLauncher settings in EMUI 5.1 [\#220](https://github.com/HeAndroids2Much/mLauncher/issues/220)
 
-**Merged pull requests:**
-
-- Release: Update version to 56 \(v0.5.6\) [\#222](https://github.com/HeAndroids2Much/mLauncher/pull/222) ([HeCodes2Much](https://github.com/HeCodes2Much))
-
 ## [0.5.5](https://github.com/HeAndroids2Much/mLauncher/tree/0.5.5) (21, February 2023)
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/0.5.4...0.5.5)
 
-**Fixed bugs:**
+**Fixed Bugs:**
 
 - Correction to AppDrawer RecyclerView paddings [\#216](https://github.com/HeAndroids2Much/mLauncher/pull/216) ([flightmansam](https://github.com/flightmansam))
 - Fixed incorrect battery preference assignment [\#215](https://github.com/HeAndroids2Much/mLauncher/pull/215) ([flightmansam](https://github.com/flightmansam))
 
+**Language Support:**
+
+- New Crowdin updates [\#214](https://github.com/HeAndroids2Much/mLauncher/pull/214) ([HeCodes2Much](https://github.com/HeCodes2Much))
+
 **Merged pull requests:**
 
 - Release: Update version to 5.5 \(v0.5.5\) [\#218](https://github.com/HeAndroids2Much/mLauncher/pull/218) ([HeCodes2Much](https://github.com/HeCodes2Much))
-- New Crowdin updates [\#214](https://github.com/HeAndroids2Much/mLauncher/pull/214) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
 ## [0.5.4](https://github.com/HeAndroids2Much/mLauncher/tree/0.5.4) (16, February 2023)
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/0.5.3...0.5.4)
 
-**Fixed bugs:**
+**Fixed Bugs:**
 
 - Bug: fixed a bug that crashes on battery monitor [\#211](https://github.com/HeAndroids2Much/mLauncher/pull/211) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
@@ -265,7 +285,7 @@
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/0.5.2...0.5.3)
 
-**Fixed bugs:**
+**Fixed Bugs:**
 
 - Bug/fix colors and layout for pin screen [\#204](https://github.com/HeAndroids2Much/mLauncher/pull/204) ([HeCodes2Much](https://github.com/HeCodes2Much))
 - Bug/fix the battery percent from not updating [\#203](https://github.com/HeAndroids2Much/mLauncher/pull/203) ([HeCodes2Much](https://github.com/HeCodes2Much))
@@ -278,44 +298,50 @@
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/0.5.1...0.5.2)
 
-**Implemented enhancements:**
+**Implemented Enhancements:**
 
 - \[Enhancement\] PIN or password [\#196](https://github.com/HeAndroids2Much/mLauncher/issues/196)
 - Feat: Added a pin code setting to the settings area. [\#197](https://github.com/HeAndroids2Much/mLauncher/pull/197) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
+**Language Support:**
+
+- New Crowdin updates [\#198](https://github.com/HeAndroids2Much/mLauncher/pull/198) ([HeCodes2Much](https://github.com/HeCodes2Much))
+
 **Merged pull requests:**
 
 - App version bumped to 52 \(v0.5.2\) \(next release\) [\#199](https://github.com/HeAndroids2Much/mLauncher/pull/199) ([HeCodes2Much](https://github.com/HeCodes2Much))
-- New Crowdin updates [\#198](https://github.com/HeAndroids2Much/mLauncher/pull/198) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
 ## [0.5.1](https://github.com/HeAndroids2Much/mLauncher/tree/0.5.1) ( 6, February 2023)
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/0.5.0...0.5.1)
 
-**Implemented enhancements:**
+**Implemented Enhancements:**
 
 - Feat: Added a toggle to use the custom icon font [\#186](https://github.com/HeAndroids2Much/mLauncher/pull/186) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
-**Fixed bugs:**
+**Fixed Bugs:**
 
 - Fix Settings for Icon Font [\#192](https://github.com/HeAndroids2Much/mLauncher/pull/192) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
-**Merged pull requests:**
+**Language Support:**
 
 - New Crowdin updates [\#194](https://github.com/HeAndroids2Much/mLauncher/pull/194) ([HeCodes2Much](https://github.com/HeCodes2Much))
-- App version bumped to 51 \(v0.5.1\) \(next release\) [\#188](https://github.com/HeAndroids2Much/mLauncher/pull/188) ([HeCodes2Much](https://github.com/HeCodes2Much))
 - New Crowdin updates [\#187](https://github.com/HeAndroids2Much/mLauncher/pull/187) ([HeCodes2Much](https://github.com/HeCodes2Much))
+
+**Merged pull requests:**
+
+- App version bumped to 51 \(v0.5.1\) \(next release\) [\#188](https://github.com/HeAndroids2Much/mLauncher/pull/188) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
 ## [0.5.0](https://github.com/HeAndroids2Much/mLauncher/tree/0.5.0) (24, January 2023)
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/0.4.9...0.5.0)
 
-**Fixed bugs:**
+**Fixed Bugs:**
 
 - \[Question\] Time displayed on homescreen [\#182](https://github.com/HeAndroids2Much/mLauncher/issues/182)
 - Feat: fix the display for the battery usage [\#184](https://github.com/HeAndroids2Much/mLauncher/pull/184) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
-**Merged pull requests:**
+**Language Support:**
 
 - New Crowdin updates [\#181](https://github.com/HeAndroids2Much/mLauncher/pull/181) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
@@ -323,12 +349,12 @@
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/0.4.7...0.4.9)
 
-**Implemented enhancements:**
+**Implemented Enhancements:**
 
 - Feat: Add battery level to home screen [\#178](https://github.com/HeAndroids2Much/mLauncher/pull/178) ([HeCodes2Much](https://github.com/HeCodes2Much))
 - Feat: Make padding home apps apply to app draw too [\#173](https://github.com/HeAndroids2Much/mLauncher/pull/173) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
-**Fixed bugs:**
+**Fixed Bugs:**
 
 - \[Bug Report\] App drawer font size became huge after updating to 0.4.7 [\#175](https://github.com/HeAndroids2Much/mLauncher/issues/175)
 
@@ -340,7 +366,7 @@
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/0.4.6...0.4.7)
 
-**Implemented enhancements:**
+**Implemented Enhancements:**
 
 - Feat: Padding for apps on homescreen [\#169](https://github.com/HeAndroids2Much/mLauncher/pull/169) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
@@ -352,7 +378,7 @@
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/0.4.5...0.4.6)
 
-**Implemented enhancements:**
+**Implemented Enhancements:**
 
 - \[Enhancement\] Filter application results by name and non-text  [\#165](https://github.com/HeAndroids2Much/mLauncher/issues/165)
 - Feat: Filter application results start [\#166](https://github.com/HeAndroids2Much/mLauncher/pull/166) ([HeCodes2Much](https://github.com/HeCodes2Much))
@@ -362,7 +388,7 @@
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/0.4.4...0.4.5)
 
-**Implemented enhancements:**
+**Implemented Enhancements:**
 
 - Feature/more friendly colors [\#159](https://github.com/HeAndroids2Much/mLauncher/pull/159) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
@@ -370,11 +396,11 @@
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/0.4.3...0.4.4)
 
-**Implemented enhancements:**
+**Implemented Enhancements:**
 
 - Added better themeing [\#156](https://github.com/HeAndroids2Much/mLauncher/pull/156) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
-**Fixed bugs:**
+**Fixed Bugs:**
 
 - fix: work on the icons to make them look better. [\#155](https://github.com/HeAndroids2Much/mLauncher/pull/155) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
@@ -382,13 +408,13 @@
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/0.4.2...0.4.3)
 
-**Implemented enhancements:**
+**Implemented Enhancements:**
 
 - \[Enhancement\] Custom Fonts [\#45](https://github.com/HeAndroids2Much/mLauncher/issues/45)
 - Added feathericons support [\#147](https://github.com/HeAndroids2Much/mLauncher/pull/147) ([HeCodes2Much](https://github.com/HeCodes2Much))
 - feat: Added more swipe actions. [\#144](https://github.com/HeAndroids2Much/mLauncher/pull/144) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
-**Fixed bugs:**
+**Fixed Bugs:**
 
 - \[Bug Report\] Double Tap gesture shows the app name of the Click on Date gesture [\#148](https://github.com/HeAndroids2Much/mLauncher/issues/148)
 - fix: file structure renaming and added sliders [\#137](https://github.com/HeAndroids2Much/mLauncher/pull/137) ([HeCodes2Much](https://github.com/HeCodes2Much))
@@ -398,7 +424,7 @@
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/0.4.1...0.4.2)
 
-**Fixed bugs:**
+**Fixed Bugs:**
 
 - \[Bug Report\] Why Support for 23-25 SDK Removed? [\#128](https://github.com/HeAndroids2Much/mLauncher/issues/128)
 - fix: fixes the other fragments opacity [\#132](https://github.com/HeAndroids2Much/mLauncher/pull/132) ([HeCodes2Much](https://github.com/HeCodes2Much))
@@ -409,14 +435,14 @@
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/0.4.0...0.4.1)
 
-**Implemented enhancements:**
+**Implemented Enhancements:**
 
 - \[Enhancement\] change darkness of wallpaper [\#112](https://github.com/HeAndroids2Much/mLauncher/issues/112)
 - clean: cleanup for some minor changes. [\#126](https://github.com/HeAndroids2Much/mLauncher/pull/126) ([HeCodes2Much](https://github.com/HeCodes2Much))
 - feat: Add the ability to change opacity of overlay [\#125](https://github.com/HeAndroids2Much/mLauncher/pull/125) ([HeCodes2Much](https://github.com/HeCodes2Much))
 - translations: fix fastlane descriptions for lt\_LT [\#122](https://github.com/HeAndroids2Much/mLauncher/pull/122) ([TruncatedDinoSour](https://github.com/TruncatedDinoSour))
 
-**Fixed bugs:**
+**Fixed Bugs:**
 
 - cleanup: just some basic cleanup to the code base [\#120](https://github.com/HeAndroids2Much/mLauncher/pull/120) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
@@ -428,7 +454,7 @@
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/0.3.9...0.4.0)
 
-**Implemented enhancements:**
+**Implemented Enhancements:**
 
 - Feat: Added custom font size for settings [\#116](https://github.com/HeAndroids2Much/mLauncher/pull/116) ([HeCodes2Much](https://github.com/HeCodes2Much))
 - clean: clean up the template files. [\#115](https://github.com/HeAndroids2Much/mLauncher/pull/115) ([HeCodes2Much](https://github.com/HeCodes2Much))
@@ -438,7 +464,7 @@
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/0.3.8...0.3.9)
 
-**Implemented enhancements:**
+**Implemented Enhancements:**
 
 - Added Backup/Restore [\#84](https://github.com/HeAndroids2Much/mLauncher/pull/84) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
@@ -446,13 +472,13 @@
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/0.3.7...0.3.8)
 
-**Implemented enhancements:**
+**Implemented Enhancements:**
 
 - feat: resize the font in the settings [\#107](https://github.com/HeAndroids2Much/mLauncher/pull/107) ([HeCodes2Much](https://github.com/HeCodes2Much))
 - Fixed the local to use from system settings [\#106](https://github.com/HeAndroids2Much/mLauncher/pull/106) ([HeCodes2Much](https://github.com/HeCodes2Much))
 - feat: put settings items on two rows [\#104](https://github.com/HeAndroids2Much/mLauncher/pull/104) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
-**Fixed bugs:**
+**Fixed Bugs:**
 
 - \[Bug Report\] wrong version is showed in the settings [\#109](https://github.com/HeAndroids2Much/mLauncher/issues/109)
 - \[Bug Report\] French Settings Menu [\#66](https://github.com/HeAndroids2Much/mLauncher/issues/66)
@@ -466,11 +492,11 @@
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/0.3.6...0.3.7)
 
-**Implemented enhancements:**
+**Implemented Enhancements:**
 
 - Cleanup the Settings panel. [\#97](https://github.com/HeAndroids2Much/mLauncher/pull/97) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
-**Fixed bugs:**
+**Fixed Bugs:**
 
 - translations: imrprove Lithuanian translation for 'behaviour' [\#101](https://github.com/HeAndroids2Much/mLauncher/pull/101) ([TruncatedDinoSour](https://github.com/TruncatedDinoSour))
 - Fix the french language string.xml [\#94](https://github.com/HeAndroids2Much/mLauncher/pull/94) ([HeCodes2Much](https://github.com/HeCodes2Much))
@@ -491,12 +517,12 @@
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/0.3.5...0.3.6)
 
-**Implemented enhancements:**
+**Implemented Enhancements:**
 
 - \[Feature Request\] Better CI System [\#72](https://github.com/HeAndroids2Much/mLauncher/issues/72)
 - Create CODE\_OF\_CONDUCT.md [\#85](https://github.com/HeAndroids2Much/mLauncher/pull/85) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
-**Fixed bugs:**
+**Fixed Bugs:**
 
 - \[Bug Report\] fix italian string [\#78](https://github.com/HeAndroids2Much/mLauncher/issues/78)
 
@@ -528,7 +554,7 @@
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/19f48b1aad5ddb5c53f7241233ad8c930f686537...0.3.5)
 
-**Implemented enhancements:**
+**Implemented Enhancements:**
 
 - \[Feature Request\] Empty space below app list [\#26](https://github.com/HeAndroids2Much/mLauncher/issues/26)
 - \[Feature Request\] Remove the \_ in the app drawer [\#18](https://github.com/HeAndroids2Much/mLauncher/issues/18)
