@@ -1,1 +1,1 @@
-Forked from OlauncherCF, +minimalizálás, +személyre szabhatóság
+Olauncher villás, +minimalizálás, +testreszabhatóság
