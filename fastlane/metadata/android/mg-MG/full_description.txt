@@ -11,12 +11,17 @@ Nofoanana avy amin'ny <a href="https://github.com/tanujnotes/Olauncher">Olaunche
         - Tsindrio eo amin'ny Daty
     - Ny hetsika azo atao izao dia:
         - Sokafy ny fampiharana voafaritra
+        - Asehoy ny lisitry ny fampiharana
         - Manidy ny efijery
+        - Asehoy ny fampiharana nosokafana vao haingana
         - Sokafy ny vata fampandrenesana
         - Sokafy ny fanovana haingana
+        - Power Dialogue
+        - Makà pikantsary
+        - Atsaharo ny fihetsika
 - Azonao atao ihany koa ny mametraka ny famantaranandro tsy miankina amin'ny fampiharana an-trano
 - Hanova ny fampifanarahana ny fampiharana ao amin'ny app-drawer
-- Ny fahafahana manana code passe napetraka ho an'ny pejy fandrindrana
+- hidin-trano ao ambadiky ny biometrika (toggle)
 - Hanova ny haben'ny endritsoratra
 - Nesorina ny fahazoan-dàlana amin'ny Internet. Tsy fantatrao mihitsy izay tian'ny mpamorona fampiharana ho fantatra momba anao.
 
