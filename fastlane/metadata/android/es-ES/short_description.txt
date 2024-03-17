@@ -1,1 +1,1 @@
-Forked from OlauncherCF, +minimalización, +personalización
+Bifurcado de Olauncher, +minimalización, +personalización

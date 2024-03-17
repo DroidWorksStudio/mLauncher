@@ -11,12 +11,17 @@ Račvan od <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mini
         - Klikom na Datum
     - Moguće radnje sada uključuju:
         - Otvorite određenu aplikaciju
+        - Prikaz popisa aplikacija
         - Zaključavanje zaslona
+        - Prikaži nedavno otvorene aplikacije
         - Otvaranje ladice s obavijestima
         - Otvaranje brzih postavki
+        - Dijalog napajanja
+        - Napravite snimku zaslona
+        - Onemogući gestu
 - Također možete postaviti sat neovisno o kućnim aplikacijama
 - Promjena poravnanja aplikacija u ladici aplikacija
-- Mogućnost postavljanja lozinke za stranicu postavki
+- Zaključavanje postavki iza biometrije (prebacivanje)
 - Promjena veličine fonta
 - Uklonjeno internetsko dopuštenje. Nikad ne znate što programer aplikacije želi znati o vama.
 

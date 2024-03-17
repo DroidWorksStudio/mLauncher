@@ -11,12 +11,17 @@ Bifurcado desde <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>.
         - Posibilidad de cambiar la aplicación que se abre al hacer clic en la fecha
     - Las posibles acciones ahora incluyen:
         - Abrir aplicación especificada
+        - Mostrar lista de aplicaciones
         - Bloquear la pantalla
+        - Mostrar aplicaciones abiertas recientes
         - Abriendo el cajón de notificaciones
         - Abriendo los ajustes rápidos
+        - Diálogo de energía
+        - Tomar una captura de pantalla
+        - Desactivar gesto
 - Alinear el reloj independientemente de las aplicaciones de inicio
 - Cambiar la alineación de las aplicaciones en el cajón de aplicaciones
-- La capacidad de tener un código de acceso establecido para la página de configuración
+- Bloquear la configuración detrás de la biometría (alternar)
 - Cambiar el tamaño de letra
 - Permiso de Internet eliminado - Permiso de Internet eliminado - Permiso de Internet eliminado - Permiso de Internet eliminado Nunca sabes lo que un desarrollador de aplicaciones quiere saber sobre ti.
 

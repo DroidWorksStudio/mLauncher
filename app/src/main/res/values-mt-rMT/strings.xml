@@ -111,4 +111,5 @@
     <string name="accessibility_service_name">Servizz ta\' Azzjonijiet mLauncher</string>
     <string name="accessibility_service_description">Dan is-servizz ta’ aċċessibbiltà jippermetti lil mLauncher jagħmel ċerti azzjonijiet bħall-illokkjar tal-iskrin jew il-ftuħ tas-settings ta’ malajr. Is-servizz ta’ aċċessibbiltà tagħna ma jiġbor jew jaqsam l-ebda data.</string>
     <string name="version">Verżjoni</string>
+    <string name="lock_settings">Lock Settings</string>
 </resources>

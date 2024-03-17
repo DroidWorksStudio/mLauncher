@@ -111,4 +111,5 @@
     <string name="accessibility_service_name">บริการดำเนินการ mLauncher</string>
     <string name="accessibility_service_description">บริการการเข้าถึงนี้ช่วยให้ mLauncher ดำเนินการบางอย่างได้ เช่น ล็อคหน้าจอหรือเปิดการตั้งค่าด่วน บริการการเข้าถึงของเราจะไม่รวบรวมหรือแบ่งปันข้อมูลใดๆ</string>
     <string name="version">เวอร์ชัน</string>
+    <string name="lock_settings">ล็อคการตั้งค่า</string>
 </resources>

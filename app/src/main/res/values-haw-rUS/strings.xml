@@ -111,4 +111,5 @@
     <string name="accessibility_service_name">lawelawe hana mLauncher</string>
     <string name="accessibility_service_description">Hāʻawi kēia lawelawe hiki iā mLauncher e hana i kekahi mau hana e like me ka laka ʻana i ka pale a i ʻole ka wehe ʻana i nā hoʻonohonoho wikiwiki. ʻAʻole ʻohi a kaʻana like paha kā mākou lawelawe ʻike i kekahi ʻikepili.</string>
     <string name="version">Manao</string>
+    <string name="lock_settings">Hoʻonohonoho laka</string>
 </resources>

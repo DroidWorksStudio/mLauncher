@@ -1,1 +1,1 @@
-Odvozeno od OlauncherCF, +minimalizace, +přizpůsobitelnost
+Forked od Olauncher, +minimalizace, +přizpůsobitelnost

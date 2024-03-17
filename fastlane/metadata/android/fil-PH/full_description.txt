@@ -11,12 +11,17 @@ Forked mula sa <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. 
         - Pag-click sa Petsa
     - Kasama na ngayon sa mga posibleng aksyon ang:
         - Buksan ang tinukoy na app
+        - Ipakita ang listahan ng app
         - Ni-lock ang screen
+        - Ipakita ang Kamakailang binuksang mga app
         - Pagbubukas ng notification drawer
         - Pagbubukas ng mabilis na mga setting
+        - Power Dialog
+        - Kumuha ng Screenshot
+        - I-disable ang Gesture
 - Maaari mo ring iposisyon ang orasan nang hiwalay sa mga home app
 - Baguhin ang pagkakahanay ng mga app sa app-drawer
-- Ang kakayahang magkaroon ng pass code na itinakda para sa pahina ng mga setting
+- I-lock ang mga setting sa likod ng biometrics (toggle)
 - Baguhin ang laki ng font
 - Inalis ang pahintulot sa internet. Hindi mo alam kung ano ang gustong malaman ng isang developer ng app tungkol sa iyo.
 

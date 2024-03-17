@@ -1,1 +1,1 @@
-Forked from OlauncherCF, +minimaliseerimine, +kohandatavus
+Olauncheri kahvliga, +minimeerimine, +kohandatavus

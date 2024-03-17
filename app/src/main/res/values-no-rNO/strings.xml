@@ -111,4 +111,5 @@
     <string name="accessibility_service_name">mLauncher handlinger Tjeneste</string>
     <string name="accessibility_service_description">Denne tilgjengelighetstjenesten lar mLauncher utføre visse handlinger som å låse skjermen eller åpne hurtiginnstillingene. Vår tilgjengelighetstjeneste samler eller deler ingen data.</string>
     <string name="version">Versjon</string>
+    <string name="lock_settings">Låseinnstillinger</string>
 </resources>

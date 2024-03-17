@@ -11,12 +11,17 @@ Biforcato da <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mi
         - Cliccando sulla data
     - Le azioni possibili ora includono:
         - Apri app specificata
+        - Visualizza l'elenco delle app
         - Blocco dello schermo
+        - Mostra le app aperte recenti
         - Apertura del pannello notifiche
         - Apertura delle impostazioni rapide
+        - Dialogo di potenza
+        - Fai uno screenshot
+        - Disabilita gesto
 - Allineare l'orologio indipendentemente dalle app di casa
 - Modifica dell'allineamento delle app nel cassetto delle applicazioni
-- La possibilità di impostare un codice di accesso per la pagina delle impostazioni
+- Blocca le impostazioni dietro la biometria (attiva/disattiva)
 - Modifica della dimensione dei caratteri
 - Rimozione dell'autorizzazione a Internet - Rimozione dell'autorizzazione a Internet Non sai mai cosa uno sviluppatore di app vuole sapere su di te.
 

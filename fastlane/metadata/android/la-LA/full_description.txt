@@ -11,12 +11,17 @@ Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Min
         - Clicking in Date
     - Actiones possibiles nunc includunt:
         - Open certa app
+        - Propono app album
         - Obfirmo screen
+        - Show apps recentes aperuit
         - Aperiens notitia drawer
         - aperire vivos occasus
+        - Potentia Dialog
+        - A screenshot
+        - inactivare gestu
 - Etiam horologium extra domum apps situm
 - Mutare alignment apps in app-drawer
-- Facultas transeundi habere codicem ad paginas uncinis positas
+- Obfirmo occasus post biometrics (toggle)
 - Mutare font magnitudine
 - Penitus remota licentia. Numquam scis quid velit app elit de te scire.
 

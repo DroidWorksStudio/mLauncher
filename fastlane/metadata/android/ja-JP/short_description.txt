@@ -1,1 +1,1 @@
-OlauncherCF、+minimalization、+customizabilityからフォークされました。
+Olauncher からフォーク、+最小化、+カスタマイズ性

@@ -1,1 +1,1 @@
-Vesalius ab OlauncherCF, +minimalization, +customizability .
+Vesalius ab Olauncher, +minimalization, +customizability .

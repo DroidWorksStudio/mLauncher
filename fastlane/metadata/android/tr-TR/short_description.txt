@@ -1,1 +1,1 @@
-OlauncherCF'dan alındı, +minimal, +özelleştirilebilir
+Olauncher'dan çatallanmış, +minimizasyon, +özelleştirilebilirlik

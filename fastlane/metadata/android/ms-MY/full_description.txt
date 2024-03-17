@@ -11,12 +11,17 @@ Bercabang daripada <a href="https://github.com/tanujnotes/Olauncher">Olauncher</
         - Mengklik pada Tarikh
     - Tindakan yang mungkin sekarang termasuk:
         - Buka apl yang ditentukan
+        - Paparkan senarai apl
         - Mengunci skrin
+        - Tunjukkan apl yang dibuka baru-baru ini
         - Membuka laci pemberitahuan
         - Membuka tetapan pantas
+        - Dialog Kuasa
+        - Ambil Tangkapan Skrin
+        - Lumpuhkan Gerak Isyarat
 - Anda juga boleh meletakkan jam secara bebas daripada apl rumah
 - Tukar penjajaran apl dalam laci apl
-- Keupayaan untuk menetapkan kod laluan untuk halaman tetapan
+- Kunci tetapan di belakang biometrik (togol)
 - Tukar saiz fon
 - Dialih keluar kebenaran internet. Anda tidak pernah tahu perkara yang ingin diketahui oleh pembangun apl tentang anda.
 

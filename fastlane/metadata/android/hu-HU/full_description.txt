@@ -11,12 +11,17 @@ Villás <a href="https://github.com/tanujnotes/Olauncher">-tól Olauncher</a>. M
         - Kattintson a dátumra
     - A lehetséges műveletek most a következők:
         - Nyissa meg a megadott alkalmazást
+        - Alkalmazáslista megjelenítése
         - A képernyő lezárása
+        - A legutóbb megnyitott alkalmazások megjelenítése
         - Az értesítési fiók kinyitása
         - A gyorsbeállítások megnyitása
+        - Power Dialog
+        - Készítsen képernyőképet
+        - Gesztus letiltása
 - Az órát az otthoni alkalmazásoktól függetlenül is elhelyezheti
 - Az alkalmazások igazításának módosítása az alkalmazás-tálcában
-- Lehetőség van egy jelkód beállítására a beállítások oldalon
+- Beállítások zárolása a biometrikus adatok mögött (váltás)
 - Betűméret módosítása
 - Eltávolították az internetes engedélyt. Soha nem tudhatod, hogy egy alkalmazásfejlesztő mit akar tudni rólad.
 

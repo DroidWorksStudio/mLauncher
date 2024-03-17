@@ -1,1 +1,1 @@
-Forked dari OlauncherCF, +minimalisasi, +kemampuan penyesuaian
+Bercabang dari Olauncher, +minimalisasi, +kemampuan penyesuaian

@@ -111,4 +111,5 @@
     <string name="accessibility_service_name">Service d\'actions mLauncher</string>
     <string name="accessibility_service_description">Ce service d\'accessibilité permet à mLauncher d\'effectuer certaines actions telles que verrouiller l\'écran ou ouvrir les paramètres rapides. Notre service d\'accessibilité ne collecte ni ne partage aucune donnée.</string>
     <string name="version">Version</string>
+    <string name="lock_settings">Paramètres de verrouillage</string>
 </resources>

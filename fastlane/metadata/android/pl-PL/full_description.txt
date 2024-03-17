@@ -11,12 +11,17 @@ Rozwidlony od <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. M
         - Kliknięcie daty
     - Możliwe działania to:
         - Otwórz określoną aplikację
+        - Wyświetl listę aplikacji
         - Zablokowanie ekranu
+        - Pokaż ostatnio otwarte aplikacje
         - Otwieranie listy powiadomień
         - Otwieranie szybkich ustawień
+        - Okno zasilania
+        - Zrób zrzut ekranu
+        - Wyłącz gest
 - Wyrównaj zegar niezależnie od aplikacji domowych
 - Zmiana wyrównania aplikacji w szufladzie aplikacji
-- Możliwość ustawienia kodu dostępu do strony ustawień
+- Zablokuj ustawienia biometrii (przełącznik)
 - Zmiana rozmiaru czcionki
 - Usunięte pozwolenie na korzystanie z Internetu Nigdy nie wiesz, co deweloper aplikacji chce o tobie wiedzieć.
 

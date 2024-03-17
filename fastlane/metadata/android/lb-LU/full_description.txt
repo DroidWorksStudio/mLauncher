@@ -11,12 +11,17 @@ Forked aus <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mini
         - Klickt op den Datum
     - Méiglech Aktiounen enthalen elo:
         - Open spezifizéierter App
+        - App Lëscht weisen
         - Écran gespaarten
+        - Show Rezent opgemaach Apps
         - Ouverture vun der Notifikatioun Tirang
         - Schnell Astellungen opmaachen
+        - Power Dialog
+        - Maacht e Screenshot
+        - Geste auszeschalten
 - Dir kënnt d'Auer och onofhängeg vun den Heemapps positionéieren
 - Änneren Ausrichtung vun Apps am App-Tirang
-- D'Fäegkeet fir e Passcode fir d'Astellungssäit ze setzen
+- Spär Astellunge hannert Biometrie (toggle)
 - Schrëftgréisst änneren
 - Internet Erlaabnis geläscht. Dir wësst ni wat en App-Entwéckler iwwer Iech wësse wëllt.
 

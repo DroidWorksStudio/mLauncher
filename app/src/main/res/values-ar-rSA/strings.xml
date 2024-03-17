@@ -111,4 +111,5 @@
     <string name="accessibility_service_name">خدمة إجراءات mLauncher</string>
     <string name="accessibility_service_description">تتيح خدمة إمكانية الوصول هذه لـ mLauncher القيام بإجراءات معينة مثل قفل الشاشة أو فتح الإعدادات السريعة. خدمة الوصول لدينا لا تجمع أو تشارك أي بيانات.</string>
     <string name="version">إصدار</string>
+    <string name="lock_settings">إعدادات القفل</string>
 </resources>

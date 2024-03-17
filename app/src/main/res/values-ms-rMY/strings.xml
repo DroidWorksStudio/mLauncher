@@ -111,4 +111,5 @@
     <string name="accessibility_service_name">Perkhidmatan Tindakan mLauncher</string>
     <string name="accessibility_service_description">Perkhidmatan kebolehaksesan ini membolehkan mLauncher melakukan tindakan tertentu seperti mengunci skrin atau membuka tetapan pantas. Perkhidmatan kebolehaksesan kami tidak mengumpul atau berkongsi sebarang data.</string>
     <string name="version">Versi</string>
+    <string name="lock_settings">Tetapan Kunci</string>
 </resources>

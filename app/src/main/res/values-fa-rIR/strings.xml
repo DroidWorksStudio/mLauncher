@@ -111,4 +111,5 @@
     <string name="accessibility_service_name">سرویس اقدامات mLauncher</string>
     <string name="accessibility_service_description">این سرویس دسترسی به mLauncher اجازه می دهد تا اقدامات خاصی مانند قفل کردن صفحه یا باز کردن تنظیمات سریع را انجام دهد. سرویس دسترسی ما هیچ داده ای را جمع آوری یا به اشتراک نمی گذارد.</string>
     <string name="version">نسخه</string>
+    <string name="lock_settings">تنظیمات قفل</string>
 </resources>

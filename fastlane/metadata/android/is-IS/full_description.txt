@@ -11,12 +11,17 @@ Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Lá
         - Með því að smella á dagsetninguna
     - Mögulegar aðgerðir eru núna:
         - Opnaðu tilgreint forrit
+        - Birta lista yfir forrit
         - Að læsa skjánum
+        - Sýna nýlega opnuð forrit
         - Að opna tilkynningaskúffuna
         - Að opna flýtistillingar
+        - Power Dialog
+        - Taktu skjáskot
+        - Slökktu á bendingum
 - Þú getur líka staðsett klukkuna óháð heimilisöppunum
 - Breyttu röðun forrita í app-skúffu
-- Möguleikinn á að setja aðgangskóða fyrir stillingasíðuna
+- Læsa stillingum á bak við líffræðileg tölfræði (sveifla)
 - Breyttu leturstærð
 - Fjarlægði internetheimild. Þú veist aldrei hvað forritari vill vita um þig.
 

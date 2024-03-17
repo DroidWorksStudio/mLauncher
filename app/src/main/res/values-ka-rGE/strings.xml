@@ -111,4 +111,5 @@
     <string name="accessibility_service_name">mLauncher მოქმედებების სერვისი</string>
     <string name="accessibility_service_description">ხელმისაწვდომობის ეს სერვისი mLauncher-ს საშუალებას აძლევს განახორციელოს გარკვეული მოქმედებები, როგორიცაა ეკრანის ჩაკეტვა ან სწრაფი პარამეტრების გახსნა. ჩვენი ხელმისაწვდომობის სერვისი არ აგროვებს და არ აზიარებს მონაცემებს.</string>
     <string name="version">ვერსია</string>
+    <string name="lock_settings">ჩაკეტვის პარამეტრები</string>
 </resources>

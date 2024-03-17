@@ -111,4 +111,5 @@
     <string name="accessibility_service_name">mLauncher Actions Service</string>
     <string name="accessibility_service_description">Dịch vụ trợ năng này cho phép mLauncher thực hiện một số hành động nhất định như khóa màn hình hoặc mở cài đặt nhanh. Dịch vụ trợ năng của chúng tôi không thu thập hoặc chia sẻ bất kỳ dữ liệu nào.</string>
     <string name="version">Phiên bản</string>
+    <string name="lock_settings">Cài đặt khóa</string>
 </resources>

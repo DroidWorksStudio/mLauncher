@@ -36,7 +36,6 @@
     <string name="show_time">時間を表示</string>
     <string name="show_date">日付を表示</string>
     <string name="show_battery">バッテリーを表示</string>
-    <string name="show_calendar_event">カレンダーイベントを表示</string>
     <string name="lock_home_apps">アプリをロック</string>
     <string name="extend_home_apps_area">クリック可能な領域を拡張</string>
     <string name="home_alignment_bottom">ホーム画面下部を揃え</string>
@@ -100,7 +99,6 @@
     <string name="text_biometric_login">mLauncher の生体認証ログイン</string>
     <string name="text_biometric_login_sub">生体認証資格情報を使用してログインします</string>
     <!-- Unsorted Strings -->
-    <string name="denied_calender_permission">カレンダーの許可が必要です。</string>
     <string name="show_apps">すべてのアプリ</string>
     <string name="display_hidden_apps">隠しアプリを表示する</string>
     <string name="drawer_list_empty_hint">アプリが見つかりません</string>
@@ -112,4 +110,6 @@
         \n\n注意: mLauncherを削除することにした場合は、最初にオフにします。</string>
     <string name="accessibility_service_name">mLauncher アクションサービス</string>
     <string name="accessibility_service_description">このアクセシビリティ サービスにより、mLauncher は画面のロックやクイック設定を開くなどの特定のアクションを実行できます。当社のアクセシビリティ サービスは、いかなるデータも収集または共有しません。</string>
+    <string name="version">バージョン</string>
+    <string name="lock_settings">ロック設定</string>
 </resources>

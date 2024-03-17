@@ -11,12 +11,17 @@ Bercabang dari <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. 
         - Mengklik Tanggal
     - Kemungkinan tindakan sekarang meliputi:
         - Buka aplikasi tertentu
+        - Menampilkan daftar aplikasi
         - Mengunci layar
+        - Tampilkan aplikasi yang baru dibuka
         - Membuka laci notifikasi
         - Membuka pengaturan cepat
+        - Dialog Kekuatan
+        - Ambil Tangkapan Layar
+        - Nonaktifkan Gerakan
 - Anda juga dapat memposisikan jam secara terpisah dari aplikasi rumah
 - Mengubah perataan aplikasi di app-drawer
-- Kemampuan untuk mengatur kode sandi untuk halaman pengaturan
+- Pengaturan kunci di belakang biometrik (alihkan)
 - Mengubah ukuran huruf
 - Izin internet dihapus. Anda tidak pernah tahu apa yang ingin diketahui oleh pengembang aplikasi tentang Anda.
 
