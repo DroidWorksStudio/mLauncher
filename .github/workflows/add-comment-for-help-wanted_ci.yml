@@ -16,13 +16,13 @@ on:
 
 jobs:
   add-comment:
-    if: github.event.label.name == 'Help wanted'
+    if: github.event.label.name == "Status: Help wanted"
     runs-on: ubuntu-latest
     permissions:
       issues: write
     steps:
       - name: Create comment
-        uses: peter-evans/create-or-update-comment@a35cf36e5301d70b76f316e867e7788a55a31dae
+        uses: peter-evans/create-or-update-comment@71345be0265236311c031f5c7866368bd1eff043
         with:
           token: ${{ secrets.GIT_BOT_TOKEN }}
           issue-number: ${{ github.event.issue.number }}
