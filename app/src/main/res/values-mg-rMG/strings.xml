@@ -111,4 +111,5 @@
     <string name="accessibility_service_name">MLauncher Actions Service</string>
     <string name="accessibility_service_description">Ity serivisy fidirana ity dia ahafahan\'ny mLauncher manao hetsika sasany toy ny fanidiana ny efijery na fanokafana ny fanovana haingana. Ny serivisy fidiranay dia tsy manangona na mizara angona.</string>
     <string name="version">Malagasy Bible</string>
+    <string name="lock_settings">Lock Settings</string>
 </resources>
