@@ -11,12 +11,17 @@ Forked minn <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Min
         - tikklikkja fuq id-Data
     - Azzjonijiet possibbli issa jinkludu:
         - Iftaħ app speċifikata
+        - Uri l-lista tal-app
         - Qfil tal-iskrin
+        - Uri apps miftuħa riċenti
         - Il-ftuħ tal-kexxun tan-notifika
         - Ftuħ is-settings ta 'malajr
+        - Djalogu dwar l-Enerġija
+        - Ħu Screenshot
+        - Iddiżattiva Ġest
 - Tista 'wkoll tpoġġi l-arloġġ indipendentement mill-apps tad-dar
 - Ibdel l-allinjament tal-apps fl-app-drawer
-- Il-ħila li jkun hemm pass code stabbilit għall-paġna tas-settings
+- Issakkar is-settings wara l-bijometrija (toggle)
 - Ibdel id-daqs tat-tipa
 - Tneħħa l-permess tal-internet. Qatt ma tkun taf x'jixtieq ikun jaf dwarek żviluppatur ta' app.
 
