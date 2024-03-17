@@ -11,12 +11,17 @@ Forked ó <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Íosr
         - Cliceáil ar an Dáta
     - Áirítear ar na gníomhaíochtaí a d’fhéadfaí a dhéanamh anois:
         - Oscail app sonraithe
+        - Taispeáin liosta app
         - Glasáil an scáileán
+        - Taispeáin aipeanna a osclaíodh le déanaí
         - Oscailt an tarraiceán fógra
         - Na socruithe tapa a oscailt
+        - Cumhacht dialóg
+        - Glac Seat
+        - Díchumasaigh Gothaí
 - Is féidir leat freisin seasamh an clog neamhspleách ar na apps baile
 - Athraigh ailíniú apps in app-drawer
-- An cumas cód pas a bheith socraithe don leathanach socruithe
+- Cuir glas ar na socruithe taobh thiar den bhithmhéadracht (scoránaigh)
 - Athraigh clómhéid
 - Baineadh cead idirlín. Níl a fhios agat riamh cad ba mhaith le forbróir aipeanna a bheith ar an eolas fút.
 
