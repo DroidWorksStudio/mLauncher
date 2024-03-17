@@ -110,4 +110,5 @@
         \n\nनोट: यदि आप एमएल लॉन्चर को हटाने का निर्णय लेते हैं तो पहले इसे बंद कर दें।</string>
     <string name="accessibility_service_name">एमएल लॉन्चर एक्शन सर्विस</string>
     <string name="accessibility_service_description">यह एक्सेसिबिलिटी सेवा एमएल लॉन्चर को स्क्रीन लॉक करने या त्वरित सेटिंग खोलने जैसी कुछ कार्रवाइयां करने की अनुमति देती है। हमारी एक्सेसिबिलिटी सेवा कोई डेटा एकत्र या साझा नहीं करती है।</string>
+    <string name="version">संस्करण</string>
 </resources>
