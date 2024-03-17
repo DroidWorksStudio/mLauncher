@@ -110,4 +110,5 @@
         \n\nMegjegyzés: Először kapcsolja ki, ha úgy dönt, hogy törli az mLauncher-t.</string>
     <string name="accessibility_service_name">mLauncher Műveletek szolgáltatás</string>
     <string name="accessibility_service_description">Ez a kisegítő szolgáltatás lehetővé teszi az mLauncher számára bizonyos műveletek elvégzését, például a képernyő lezárását vagy a gyorsbeállítások megnyitását. Kisegítő lehetőségek szolgáltatásunk nem gyűjt és nem oszt meg adatokat.</string>
+    <string name="version">Változat</string>
 </resources>
