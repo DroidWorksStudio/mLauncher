@@ -110,4 +110,5 @@
         \n\nCatatan: Matikan ini terlebih dahulu jika Anda memutuskan untuk menghapus mLauncher.</string>
     <string name="accessibility_service_name">Layanan Tindakan mLauncher</string>
     <string name="accessibility_service_description">Layanan aksesibilitas ini memungkinkan mLauncher melakukan tindakan tertentu seperti mengunci layar atau membuka pengaturan cepat. Layanan aksesibilitas kami tidak mengumpulkan atau membagikan data apa pun.</string>
+    <string name="version">Versi: kapan</string>
 </resources>
