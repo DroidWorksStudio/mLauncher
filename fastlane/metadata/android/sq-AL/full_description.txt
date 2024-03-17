@@ -11,12 +11,17 @@ Forked nga <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mini
         - Duke klikuar mbi datën
     - Veprimet e mundshme tani përfshijnë:
         - Hapni aplikacionin e specifikuar
+        - Shfaq listën e aplikacioneve
         - Mbyllja e ekranit
+        - Shfaq aplikacionet e hapura së fundi
         - Hapja e sirtarit të njoftimeve
         - Hapja e cilësimeve të shpejta
+        - Dialogu i energjisë
+        - Merrni një pamje nga ekrani
+        - Çaktivizo gjestet
 - Mund ta poziciononi orën edhe në mënyrë të pavarur nga aplikacionet e shtëpisë
 - Ndrysho shtrirjen e aplikacioneve në sirtarin e aplikacioneve
-- Mundësia për të vendosur një kod kalimi për faqen e cilësimeve
+- Bllokoni cilësimet pas biometrike (ndryshoni)
 - Ndrysho madhësinë e shkronjave
 - U hoq leja e internetit. Asnjëherë nuk e dini se çfarë dëshiron të dijë një zhvillues aplikacioni për ju.
 
