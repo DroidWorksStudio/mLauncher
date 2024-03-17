@@ -110,4 +110,5 @@
         \n\nObs: Slå av detta först om du väljer att ta bort mLauncher.</string>
     <string name="accessibility_service_name">mLauncher åtgärdstjänst</string>
     <string name="accessibility_service_description">Denna tillgänglighetstjänst låter mLauncher utföra vissa åtgärder som att låsa skärmen eller öppna snabbinställningarna. Vår tillgänglighetstjänst samlar inte in eller delar någon data.</string>
+    <string name="version">Version</string>
 </resources>
