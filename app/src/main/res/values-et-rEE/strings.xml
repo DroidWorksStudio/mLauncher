@@ -110,4 +110,5 @@
         \n\nMärkus: Kui otsustate mLauncheri kustutada, lülitage see esmalt välja.</string>
     <string name="accessibility_service_name">mLauncher Actions Service</string>
     <string name="accessibility_service_description">See juurdepääsetavuse teenus võimaldab mLauncheril teha teatud toiminguid, nagu ekraani lukustamine või kiirseadete avamine. Meie juurdepääsetavuse teenus ei kogu ega jaga andmeid.</string>
+    <string name="version">Versioon</string>
 </resources>
