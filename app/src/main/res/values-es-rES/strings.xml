@@ -111,4 +111,5 @@
     <string name="accessibility_service_name">Acciones de mLauncher</string>
     <string name="accessibility_service_description">Se requiere el permiso de accesibilidad para habilitar el bloqueo por doble toque o abrir la configuración rápida. Cualquier dato recopilado a través de este permiso no saldrá de su dispositivo.</string>
     <string name="version">Versión</string>
+    <string name="lock_settings">Configuración de bloqueo</string>
 </resources>
