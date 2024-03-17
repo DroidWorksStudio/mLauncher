@@ -1,5 +1,13 @@
 # Changelog
 
+## [Coming Soon](https://github.com/HeAndroids2Much/mLauncher/tree/HEAD)
+
+[Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/1.3.4...HEAD)
+
+**Merged pull requests:**
+
+- \[Bug\] - Fixed Strength for search filter. [\#366](https://github.com/HeAndroids2Much/mLauncher/pull/366) ([HeCodes2Much](https://github.com/HeCodes2Much))
+
 ## [1.3.4](https://github.com/HeAndroids2Much/mLauncher/tree/1.3.4) (17, March 2024)
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/1.3.3...1.3.4)
