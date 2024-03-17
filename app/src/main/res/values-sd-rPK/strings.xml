@@ -110,4 +110,5 @@
         \n\nنوٽ: پهرين هن کي بند ڪريو جيڪڏهن توهان ايم لانچر کي حذف ڪرڻ جو فيصلو ڪيو.</string>
     <string name="accessibility_service_name">ايم لانچر ايڪشن سروس</string>
     <string name="accessibility_service_description">هي رسائي سروس mLauncher کي ڪجهه ڪم ڪرڻ جي اجازت ڏئي ٿي جهڙوڪ اسڪرين کي لاڪ ڪرڻ يا جلدي سيٽنگون کولڻ. اسان جي رسائي جي خدمت ڪنهن به ڊيٽا کي گڏ يا حصيداري نٿو ڪري.</string>
+    <string name="version">نسخو</string>
 </resources>
