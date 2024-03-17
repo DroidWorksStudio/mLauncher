@@ -52,7 +52,7 @@ body:
         - Built from Source
     validations:
       required: true
-      
+
   - type: textarea
     id: crash-description
     attributes:
@@ -114,7 +114,7 @@ body:
       label: Additional information
       description: |
         Any other information you'd like to include.
-        
+
   - type: checkboxes
     id: checklist-accept
     attributes:
@@ -122,5 +122,5 @@ body:
       options:
         - label: "I have read all the rules above and filled in the requiered fields to the best of my ability."
           required: true
-        - label: "I accept that if I fail to follow the rules stated above that I will recieve a 30 day block."
+        - label: "I accept that if I fail to follow the rules listed above that i will be blocked from interactions with this project."
           required: true
