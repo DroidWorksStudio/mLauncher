@@ -111,4 +111,5 @@
     <string name="accessibility_service_name">mLauncher कार्य सेवा</string>
     <string name="accessibility_service_description">यो पहुँच सेवाले mLauncher लाई स्क्रिन लक गर्ने वा द्रुत सेटिङहरू खोल्ने जस्ता निश्चित कार्यहरू गर्न अनुमति दिन्छ। हाम्रो पहुँच सेवाले कुनै पनि डाटा सङ्कलन वा साझेदारी गर्दैन।</string>
     <string name="version">संस्करण</string>
+    <string name="lock_settings">लक सेटिङहरू</string>
 </resources>
