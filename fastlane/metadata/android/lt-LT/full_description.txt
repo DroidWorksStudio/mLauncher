@@ -11,12 +11,17 @@
         - Paspaudus ant datos
     – Dabar galimi veiksmai:
         - Atidarykite nurodytą programą
+        - Rodyti programų sąrašą
         - Ekrano užrakinimas
+        - Rodyti neseniai atidarytas programas
         - Atidaryti pranešimų stalčių
         - Greitųjų nustatymų atidarymas
+        - Maitinimo dialogas
+        - Padarykite ekrano kopiją
+        - Išjungti gestą
 - Taip pat galite nustatyti laikrodį nepriklausomai nuo namų programų
 - Programėlių derinimo programėlių stalčiuje keitimas
-- Galimybė nustatyti nustatymų puslapio prieigos kodą
+- Užrakinti nustatymus už biometrinių duomenų (perjungti)
 - Šrifto dydžio keitimas
 - Pašalintas interneto leidimas. Niekada nežinote, ką programos kūrėjas nori sužinoti apie jus.
 
