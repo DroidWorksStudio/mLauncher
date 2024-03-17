@@ -1,1 +1,1 @@
-تم التجميع من OlauncherCF, +minimalization, +customizability
+متشعب من Olauncher، +التصغير، +التخصيص
