@@ -1,1 +1,1 @@
-Forquilha da OlauncherCF, +minimalização, +customizabilidade
+Bifurcado do Olauncher, +minimalização, +personalização
