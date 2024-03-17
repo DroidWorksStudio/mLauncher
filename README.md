@@ -4,6 +4,7 @@
     <a href='https://f-droid.org/packages/app.mlauncher'><img src='https://camo.githubusercontent.com/f422f6f830e814ec7e766de8fef4db949c6add75a9d58548ab2f5d29855c0616/68747470733a2f2f6664726f69642e6769746c61622e696f2f617274776f726b2f62616467652f6765742d69742d6f6e2e706e67'></a>
 </div>
 
+- Chat with us at [mLauncher](https://t.me/mLauncherAndroid) on telegram.
 - This application can be found on [F-Droid](https://f-droid.org/packages/app.mlauncher/) and [Github](https://github.com/HeCodes2Much/mLauncher/releases/).
 - You can also add this repo to [Obtanium](https://github.com/ImranR98/Obtainium) to get auto updates that are faster then F-Droid.
 - The latest stable version is available on the [`main`](https://github.com/HeCodes2Much/mLauncher/tree/main) branch, which can be cloned to build the application independently.
