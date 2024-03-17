@@ -14,7 +14,7 @@
 
 **Merged pull requests:**
 
-- Add Settings Lock Toggle [\#362](https://github.com/HeAndroids2Much/mLauncher/pull/362) ([HeCodes2Much](https://github.com/HeCodes2Much))
+- \[Feature\] Add Settings Lock Toggle [\#362](https://github.com/HeAndroids2Much/mLauncher/pull/362) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
 ## [1.3.3](https://github.com/HeAndroids2Much/mLauncher/tree/1.3.3) ( 9, March 2024)
 
