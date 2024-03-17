@@ -111,4 +111,5 @@
     <string name="accessibility_service_name">Услуга за действия на mLauncher</string>
     <string name="accessibility_service_description">Тази услуга за достъпност позволява на mLauncher да извършва определени действия като заключване на екрана или отваряне на бързите настройки. Нашата услуга за достъпност не събира и не споделя никакви данни.</string>
     <string name="version">Версия</string>
+    <string name="lock_settings">Настройки за заключване</string>
 </resources>
