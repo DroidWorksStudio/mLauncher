@@ -111,4 +111,5 @@
     <string name="accessibility_service_name">Υπηρεσία ενεργειών mLauncher</string>
     <string name="accessibility_service_description">Αυτή η υπηρεσία προσβασιμότητας επιτρέπει στο mLauncher να κάνει ορισμένες ενέργειες, όπως το κλείδωμα της οθόνης ή το άνοιγμα των γρήγορων ρυθμίσεων. Η υπηρεσία προσβασιμότητας μας δεν συλλέγει ούτε κοινοποιεί δεδομένα.</string>
     <string name="version">Εκδοχή</string>
+    <string name="lock_settings">Ρυθμίσεις κλειδώματος</string>
 </resources>
