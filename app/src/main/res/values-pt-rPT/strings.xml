@@ -111,4 +111,5 @@
     <string name="accessibility_service_name">Serviço de Acções mLauncher</string>
     <string name="accessibility_service_description">Este serviço de acessibilidade permite que o mLauncher execute determinadas ações, como bloquear a tela ou abrir as configurações rápidas. Nosso serviço de acessibilidade não coleta nem compartilha nenhum dado.</string>
     <string name="version">Versão</string>
+    <string name="lock_settings">Configurações de bloqueio</string>
 </resources>
