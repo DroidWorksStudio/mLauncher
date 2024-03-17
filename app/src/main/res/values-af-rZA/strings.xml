@@ -110,4 +110,5 @@
         \n\nNote: Turn this OFF first if you decide to delete mLauncher.</string>
     <string name="accessibility_service_name">mLauncher Actions Service</string>
     <string name="accessibility_service_description">Hierdie toeganklikheiddiens laat mLauncher toe om sekere aksies uit te voer, soos om die skerm te sluit of die vinnige instellings oop te maak. Ons toeganklikheiddiens versamel of deel geen data nie.</string>
+    <string name="version">Weergawe</string>
 </resources>
