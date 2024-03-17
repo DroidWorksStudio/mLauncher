@@ -110,4 +110,5 @@
         \n\nOpmerking: schakel eerst deze UIT uit als u besluit om mLauncher te verwijderen.</string>
     <string name="accessibility_service_name">mLauncher Acties Service</string>
     <string name="accessibility_service_description">Met deze toegankelijkheidsservice kan mLauncher bepaalde acties uitvoeren, zoals het scherm vergrendelen of de snelle instellingen openen. Onze bereikbaarheidsdienst verzamelt of deelt geen gegevens.</string>
+    <string name="version">Versie</string>
 </resources>

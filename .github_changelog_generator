@@ -8,3 +8,7 @@ summary_prefix=**Release Summary**
 exclude_labels=Status: Stale,Status: Wont Fix,Type: Question,Status: Invalid,Ignore Release,Status: Duplicate,Status: Not Planned
 breaking_labels=backwards-incompatible,Backwards incompatible,breaking,Type: Breaking Change
 bug_labels=bug,Bug,Type: Bug Report
+bug_prefix=**Fixed Bugs**
+enhancements_labels=enhancement,Enhancement,Type: Enhancement
+enhancements_prefix=**Implemented Enhancements**
+add-sections= {"language":{"prefix":"**Language Support**","labels":["language support,Language Support,Type: Language Support"]}}

@@ -6,6 +6,7 @@
 
 **Merged pull requests:**
 
+- \[Language\] Updated Language Files. [\#360](https://github.com/HeAndroids2Much/mLauncher/pull/360) ([HeCodes2Much](https://github.com/HeCodes2Much))
 - \[Language\] Updated Language Files. [\#359](https://github.com/HeAndroids2Much/mLauncher/pull/359) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
 ## [1.3.3](https://github.com/HeAndroids2Much/mLauncher/tree/1.3.3) ( 9, March 2024)

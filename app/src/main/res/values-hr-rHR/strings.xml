@@ -110,4 +110,5 @@
         \n\nNapomena: ovo prvo ISKLJUČITE ako odlučite izbrisati mLauncher.</string>
     <string name="accessibility_service_name">Usluga mLauncher Actions</string>
     <string name="accessibility_service_description">Ova usluga pristupačnosti omogućuje mLauncheru određene radnje kao što je zaključavanje zaslona ili otvaranje brzih postavki. Naša usluga pristupačnosti ne prikuplja niti dijeli nikakve podatke.</string>
+    <string name="version">Verzija</string>
 </resources>

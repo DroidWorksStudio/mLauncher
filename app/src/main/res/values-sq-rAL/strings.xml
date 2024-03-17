@@ -110,4 +110,5 @@
         \n\nShënim: Fikeni këtë fillimisht nëse vendosni të fshini mLauncher.</string>
     <string name="accessibility_service_name">Shërbimi i Veprimeve të mLauncher</string>
     <string name="accessibility_service_description">Ky shërbim aksesueshmërie lejon mLauncher të kryejë veprime të caktuara, të tilla si kyçja e ekranit ose hapja e cilësimeve të shpejta. Shërbimi ynë i aksesueshmërisë nuk mbledh ose ndan asnjë të dhënë.</string>
+    <string name="version">Version</string>
 </resources>

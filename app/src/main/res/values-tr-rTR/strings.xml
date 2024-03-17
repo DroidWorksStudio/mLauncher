@@ -110,4 +110,5 @@
         \n\nNot: mLauncher\'ı silmeye karar verirseniz önce bunu KAPATIN.</string>
     <string name="accessibility_service_name">mLauncher Eylemler Hizmeti</string>
     <string name="accessibility_service_description">Bu erişilebilirlik hizmeti, mLauncher\'ın ekranı kilitleme veya hızlı ayarları açma gibi belirli işlemleri yapmasını sağlar. Erişilebilirlik hizmetimiz herhangi bir veri toplamaz veya paylaşmaz.</string>
+    <string name="version">Sürüm</string>
 </resources>

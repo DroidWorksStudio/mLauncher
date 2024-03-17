@@ -110,4 +110,5 @@
         \n\nTandaan: I-OFF muna ito kung magpasya kang tanggalin ang mLauncher.</string>
     <string name="accessibility_service_name">Serbisyo ng mLauncher Actions</string>
     <string name="accessibility_service_description">Binibigyang-daan ng serbisyo ng accessibility na ito ang mLauncher na gumawa ng ilang partikular na pagkilos gaya ng pag-lock ng screen o pagbubukas ng mga mabilisang setting. Ang aming serbisyo sa pagiging naa-access ay hindi nangongolekta o nagbabahagi ng anumang data.</string>
+    <string name="version">Bersyon</string>
 </resources>

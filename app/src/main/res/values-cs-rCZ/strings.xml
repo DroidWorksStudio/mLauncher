@@ -110,4 +110,5 @@
         \n\nPoznámka: Pokud se rozhodnete smazat mLauncher, vypněte nejprve tuto funkci.</string>
     <string name="accessibility_service_name">mLauncher akční služba</string>
     <string name="accessibility_service_description">Tato služba usnadnění umožňuje mLauncheru provádět určité akce, jako je zamykání obrazovky nebo otevření rychlých nastavení. Naše služba přístupnosti neshromažďuje ani nesdílí žádná data.</string>
+    <string name="version">Verze</string>
 </resources>

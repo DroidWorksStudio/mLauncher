@@ -110,4 +110,5 @@
         \n\nПримечание: сначала включите эту опцию, если вы решите удалить mLauncher.</string>
     <string name="accessibility_service_name">mLauncher Служба действий</string>
     <string name="accessibility_service_description">Эта служба специальных возможностей позволяет mLauncher выполнять определенные действия, такие как блокировка экрана или открытие быстрых настроек. Наша служба доступности не собирает и не передает какие-либо данные.</string>
+    <string name="version">Версия</string>
 </resources>

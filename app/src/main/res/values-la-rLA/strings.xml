@@ -110,4 +110,5 @@
         \n\nNota: hoc primum abi, si mLauncher delere volueris.</string>
     <string name="accessibility_service_name">mLauncher Actiones Service</string>
     <string name="accessibility_service_description">Accessibilitas haec servitii permittit mLauncher aliquas actiones facere, ut velum claudens vel occasus vivos aperiens. Nostri muneris accessibilitas nullas notitias colligit nec communicat.</string>
+    <string name="version">Version</string>
 </resources>
