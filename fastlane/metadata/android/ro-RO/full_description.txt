@@ -11,12 +11,17 @@ Bifurcat de la <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. 
         - Făcând clic pe data
     - Acţiunile posibile includ:
         - Deschide aplicația specificată
+        - Afișează lista de aplicații
         - Blocarea ecranului
+        - Afișați aplicațiile deschise recent
         - Deschiderea sertarului de notificări
         - Deschiderea setărilor rapide
+        - Dialog Power
+        - Faceți o captură de ecran
+        - Dezactivați gestul
 - De asemenea, puteți poziționa ceasul independent de aplicațiile de pornire
 - Schimbarea alinierii aplicațiilor în App-drawer
-- Posibilitatea de a avea un cod de acces setat pentru pagina de setări
+- Blocați setările în spatele biometriei (comutați)
 - Modificarea dimensiunii fontului
 - Permisiunea la internet eliminată. Nu știi niciodată ce vrea să știe un dezvoltator de aplicații despre tine.
 
