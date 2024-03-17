@@ -29,6 +29,7 @@ private const val STATUS_BAR = "STATUS_BAR"
 private const val SHOW_BATTERY = "SHOW_BATTERY"
 private const val SHOW_DATE = "SHOW_DATE"
 private const val HOME_LOCKED = "HOME_LOCKED"
+private const val SETTINGS_LOCKED = "SETTINGS_LOCKED"
 private const val SHOW_TIME = "SHOW_TIME"
 private const val SEARCH_START = "SEARCH_START"
 private const val SWIPE_UP_ACTION = "SWIPE_UP_ACTION"
@@ -205,6 +206,10 @@ class Prefs(val context: Context) {
     var homeLocked: Boolean
         get() = prefs.getBoolean(HOME_LOCKED, false)
         set(value) = prefs.edit().putBoolean(HOME_LOCKED, value).apply()
+
+    var settingsLocked: Boolean
+        get() = prefs.getBoolean(SETTINGS_LOCKED, false)
+        set(value) = prefs.edit().putBoolean(SETTINGS_LOCKED, value).apply()
 
     var useCustomIconFont: Boolean
         get() = prefs.getBoolean(CUSTOM_FONT, false)

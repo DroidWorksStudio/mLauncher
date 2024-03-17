@@ -472,7 +472,13 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                         .setConfirmationRequired(false)
                         .build()
 
-                    authenticate()
+
+                    if (prefs.settingsLocked) {
+                        authenticate()
+                    } else {
+                        sendToSettingFragment()
+                    }
+
                 }
             }
 

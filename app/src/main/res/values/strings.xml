@@ -128,4 +128,5 @@
     <string name="accessibility_service_name">mLauncher Actions Service</string>
     <string name="accessibility_service_description">This accessibility service allows mLauncher to do certain actions such as locking the screen or opening the quick settings. Our accessibility service does not collect or share any data.</string>
     <string name="version">Version</string>
+    <string name="lock_settings">Lock Settings</string>
 </resources>
