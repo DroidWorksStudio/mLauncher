@@ -16,7 +16,7 @@ on:
 
 jobs:
   add-comment:
-    if: github.event.label.name == "Status: Help wanted"
+    if: contains(github.event.label.name, 'Help Wanted')
     runs-on: ubuntu-latest
     permissions:
       issues: write
