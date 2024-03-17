@@ -110,4 +110,5 @@
         \n\nNotiz: Maacht dëst als éischt OFF wann Dir décidéiert mLauncher ze läschen.</string>
     <string name="accessibility_service_name">mLauncher Actions Service</string>
     <string name="accessibility_service_description">Dësen Accessibilitéitsservice erlaabt mLauncher verschidde Aktiounen ze maachen wéi den Ecran ze spären oder d\'schnell Astellungen opzemaachen. Eis Accessibilitéitsservice sammelt oder deelt keng Daten.</string>
+    <string name="version">Versioun</string>
 </resources>
