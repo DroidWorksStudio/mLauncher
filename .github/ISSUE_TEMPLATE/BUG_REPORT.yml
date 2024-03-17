@@ -87,6 +87,8 @@ body:
       label: Expected behavior
       description: |
         Tell us what you expect to happen.
+    validations:
+      required: true
 
   - type: textarea
     id: screen-media
