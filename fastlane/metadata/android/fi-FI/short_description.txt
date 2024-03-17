@@ -1,1 +1,1 @@
-Haarukoitu lähteestä OlauncherCF, +minimalisointi, +mukautettavuus
+Haarukka Olauncherista, +minimointi, +muokattavuus
