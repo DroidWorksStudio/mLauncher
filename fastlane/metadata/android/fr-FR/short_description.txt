@@ -1,1 +1,1 @@
-Forked from OlauncherCF, +minimalization, +customizability
+Forked d'Olauncher, +minimalisation, +personnalisation
