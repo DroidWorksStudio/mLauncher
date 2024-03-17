@@ -11,12 +11,17 @@ Bifurcado de <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. M�
         - Clicando na Data
     - Possíveis ações agora incluem:
         - Abrir o aplicativo especificado
+        - Exibir lista de aplicativos
         - Bloqueando a tela
+        - Mostrar aplicativos abertos recentemente
         - Abrindo a gaveta de notificação
         - Abrir as configurações rápidas
+        - Diálogo de energia
+        - Faça uma captura de tela
+        - Desativar gesto
 - Alinhar o relógio independentemente das aplicações domésticas
 - Alterar o alinhamento das aplicações no app-drawer
-- A capacidade de definir uma senha para a página de configurações
+- Bloquear configurações por trás da biometria (alternar)
 - Alterar o tamanho da letra
 - Removida a permissão da Internet - Removida a permissão da Internet - Removida a permissão da Internet Você nunca sabe o que um desenvolvedor do app quer saber sobre você.
 
