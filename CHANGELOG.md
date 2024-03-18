@@ -1,8 +1,8 @@
 # Changelog
 
-## [Coming Soon](https://github.com/HeAndroids2Much/mLauncher/tree/HEAD)
+## [1.3.5](https://github.com/HeAndroids2Much/mLauncher/tree/1.3.5) (18, March 2024)
 
-[Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/1.3.4...HEAD)
+[Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/1.3.4...1.3.5)
 
 **Fixed Bugs:**
 
