@@ -4,7 +4,7 @@
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/1.3.4...HEAD)
 
-**Merged pull requests:**
+**Fixed Bugs:**
 
 - \[Bug\] - Fixed Strength for search filter. [\#366](https://github.com/HeAndroids2Much/mLauncher/pull/366) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
