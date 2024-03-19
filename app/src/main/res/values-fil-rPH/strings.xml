@@ -28,6 +28,8 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show na keyboard</string>
     <string name="auto_open_apps">Awtomatikong buksan ang mga app</string>
+    <string name="display_recent_apps">Ipakita ang Mga Kamakailang App</string>
+    <string name="number_of_recents">Bilang ng Kamakailang Apps</string>
     <string name="filter_strength">Lakas ng Filter</string>
     <string name="search_from_start">Paghahanap ng app mula sa simula.</string>
     <string name="icon_font">Gumamit ng Icon Font</string>
@@ -76,8 +78,6 @@
     <string name="open">Bukas</string>
     <string name="close">Isara</string>
     <string name="copy">kopya</string>
-    <string name="settings_text_size">Mga Setting ng Laki ng Teksto</string>
-    <string name="settings_lock_time">Timeout ng Lock ng Mga Setting</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Ipakita ang Notification</string>
     <string name="show_app_list">Ipakita ang Listahan ng App</string>
@@ -88,6 +88,10 @@
     <string name="open_power_dialog">Power Dialog</string>
     <string name="take_a_screenshot">Kumuha ng Screenshot</string>
     <string name="double_tap_to_lock_screen">I-double tap para i-lock</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Mga Setting ng Laki ng Teksto</string>
+    <string name="display_hidden_apps">Ipakita ang mga Nakatagong App</string>
+    <string name="lock_settings">Mga Setting ng Lock</string>
     <!-- Backup Strings -->
     <string name="backup">Backup</string>
     <string name="load_backup">I-load ang Backup</string>
@@ -100,7 +104,6 @@
     <string name="text_biometric_login_sub">Mag-log in gamit ang iyong biometric na kredensyal</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Lahat ng app</string>
-    <string name="display_hidden_apps">Ipakita ang mga Nakatagong App</string>
     <string name="drawer_list_empty_hint">Walang nakitang app</string>
     <string name="long_press_for_settings">Pindutin nang matagal kahit saan para sa mga setting</string>
     <string name="swipe_up_for_apps">Mag-swipe pataas para sa lahat ng app</string>
@@ -111,5 +114,4 @@
     <string name="accessibility_service_name">Serbisyo ng mLauncher Actions</string>
     <string name="accessibility_service_description">Binibigyang-daan ng serbisyo ng accessibility na ito ang mLauncher na gumawa ng ilang partikular na pagkilos gaya ng pag-lock ng screen o pagbubukas ng mga mabilisang setting. Ang aming serbisyo sa pagiging naa-access ay hindi nangongolekta o nagbabahagi ng anumang data.</string>
     <string name="version">Bersyon</string>
-    <string name="lock_settings">Mga Setting ng Lock</string>
 </resources>
