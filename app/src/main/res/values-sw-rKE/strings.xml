@@ -28,6 +28,8 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Onyesha kibodi kiotomatiki</string>
     <string name="auto_open_apps">Fungua programu kiotomatiki</string>
+    <string name="display_recent_apps">Onyesha Programu za Hivi Karibuni</string>
+    <string name="number_of_recents">Idadi ya Programu za Hivi Punde</string>
     <string name="filter_strength">Nguvu ya Kichujio</string>
     <string name="search_from_start">Utafutaji wa programu kutoka mwanzo.</string>
     <string name="icon_font">Tumia Fonti ya ikoni</string>
@@ -76,8 +78,6 @@
     <string name="open">Fungua</string>
     <string name="close">Funga</string>
     <string name="copy">nakala</string>
-    <string name="settings_text_size">Ukubwa wa Maandishi ya Mipangilio</string>
-    <string name="settings_lock_time">Muda wa Kufunga Mipangilio</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Onyesha Arifa</string>
     <string name="show_app_list">Onyesha Orodha ya Programu</string>
@@ -88,6 +88,10 @@
     <string name="open_power_dialog">Kidirisha cha Nguvu</string>
     <string name="take_a_screenshot">Piga Picha ya skrini</string>
     <string name="double_tap_to_lock_screen">Gusa mara mbili ili kufunga</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Ukubwa wa Maandishi ya Mipangilio</string>
+    <string name="display_hidden_apps">Onyesha Programu Zilizofichwa</string>
+    <string name="lock_settings">Mipangilio ya Kufunga</string>
     <!-- Backup Strings -->
     <string name="backup">Hifadhi nakala</string>
     <string name="load_backup">Pakia Hifadhi Nakala</string>
@@ -100,7 +104,6 @@
     <string name="text_biometric_login_sub">Ingia kwa kutumia kitambulisho chako cha kibayometriki</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Programu zote</string>
-    <string name="display_hidden_apps">Onyesha Programu Zilizofichwa</string>
     <string name="drawer_list_empty_hint">Hakuna programu zilizopatikana</string>
     <string name="long_press_for_settings">Bonyeza kwa muda mrefu mahali popote kwa mipangilio</string>
     <string name="swipe_up_for_apps">Telezesha kidole juu kwa programu zote</string>
@@ -111,5 +114,4 @@
     <string name="accessibility_service_name">Huduma ya Vitendo vya mLauncher</string>
     <string name="accessibility_service_description">Huduma hii ya ufikivu huruhusu mLauncher kufanya vitendo fulani kama vile kufunga skrini au kufungua mipangilio ya haraka. Huduma yetu ya ufikivu haikusanyi wala kushiriki data yoyote.</string>
     <string name="version">Toleo</string>
-    <string name="lock_settings">Mipangilio ya Kufunga</string>
 </resources>
