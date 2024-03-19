@@ -28,6 +28,8 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Auto open apps</string>
+    <string name="display_recent_apps">최근 앱 표시</string>
+    <string name="number_of_recents">최근 앱 수</string>
     <string name="filter_strength">필터 강도</string>
     <string name="search_from_start">처음부터 앱 검색.</string>
     <string name="icon_font">아이콘 글꼴 사용</string>
@@ -76,8 +78,6 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string name="copy">복사</string>
-    <string name="settings_text_size">설정 텍스트 크기</string>
-    <string name="settings_lock_time">설정 잠금 시간 초과</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Show Notification</string>
     <string name="show_app_list">Show App List</string>
@@ -88,6 +88,10 @@
     <string name="open_power_dialog">전원 대화 상자</string>
     <string name="take_a_screenshot">스크린샷 찍기</string>
     <string name="double_tap_to_lock_screen">Double tap to lock</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">설정 텍스트 크기</string>
+    <string name="display_hidden_apps">숨겨진 앱 표시</string>
+    <string name="lock_settings">잠금 설정</string>
     <!-- Backup Strings -->
     <string name="backup">Backup</string>
     <string name="load_backup">Load Backup</string>
@@ -100,7 +104,6 @@
     <string name="text_biometric_login_sub">생체 인식 자격 증명을 사용하여 로그인</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>
-    <string name="display_hidden_apps">숨겨진 앱 표시</string>
     <string name="drawer_list_empty_hint">No apps found</string>
     <string name="long_press_for_settings">Long press anywhere for settings</string>
     <string name="swipe_up_for_apps">Swipe up for all apps</string>
@@ -111,5 +114,4 @@
     <string name="accessibility_service_name">mLauncher Actions Service</string>
     <string name="accessibility_service_description">이 접근성 서비스를 통해 mLauncher는 화면 잠금 또는 빠른 설정 열기와 같은 특정 작업을 수행할 수 있습니다. 당사의 접근성 서비스는 데이터를 수집하거나 공유하지 않습니다.</string>
     <string name="version">버전</string>
-    <string name="lock_settings">잠금 설정</string>
 </resources>
