@@ -28,6 +28,8 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">خودڪار ڏيکاريو ڪيبورڊ</string>
     <string name="auto_open_apps">خودڪار کوليو ايپس</string>
+    <string name="display_recent_apps">ڏيکاريو تازو ائپس</string>
+    <string name="number_of_recents">تازو ائپس جو تعداد</string>
     <string name="filter_strength">فلٽر جي طاقت</string>
     <string name="search_from_start">ايپ ڳولا شروع کان.</string>
     <string name="icon_font">Icon فونٽ استعمال ڪريو</string>
@@ -76,8 +78,6 @@
     <string name="open">کليل</string>
     <string name="close">بند</string>
     <string name="copy">ڪاپي</string>
-    <string name="settings_text_size">سيٽنگون ٽيڪسٽ سائيز</string>
-    <string name="settings_lock_time">سيٽنگون لاڪ ٽائم آئوٽ</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">نوٽيفڪيشن ڏيکاريو</string>
     <string name="show_app_list">ڏيکاريو ايپ لسٽ</string>
@@ -88,6 +88,10 @@
     <string name="open_power_dialog">پاور ڊائلاگ</string>
     <string name="take_a_screenshot">هڪ اسڪرين شاٽ وٺو</string>
     <string name="double_tap_to_lock_screen">لاڪ ڪرڻ لاءِ ڊبل ٽيپ ڪريو</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">سيٽنگون ٽيڪسٽ سائيز</string>
+    <string name="display_hidden_apps">پوشیدہ ائپس ڏيکاريو</string>
+    <string name="lock_settings">لاڪ سيٽنگون</string>
     <!-- Backup Strings -->
     <string name="backup">بيڪ اپ</string>
     <string name="load_backup">لوڊ بيڪ اپ</string>
@@ -100,7 +104,6 @@
     <string name="text_biometric_login_sub">لاگ ان ڪريو پنھنجي بايوميٽرڪ سند استعمال ڪندي</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">سڀ ائپس</string>
-    <string name="display_hidden_apps">پوشیدہ ائپس ڏيکاريو</string>
     <string name="drawer_list_empty_hint">ڪابه ايپس نه ملي</string>
     <string name="long_press_for_settings">سيٽنگون لاءِ ڪٿي به ڊگھو دٻايو</string>
     <string name="swipe_up_for_apps">سڀني ائپس لاءِ مٿي سوائپ ڪريو</string>
@@ -111,5 +114,4 @@
     <string name="accessibility_service_name">ايم لانچر ايڪشن سروس</string>
     <string name="accessibility_service_description">هي رسائي سروس mLauncher کي ڪجهه ڪم ڪرڻ جي اجازت ڏئي ٿي جهڙوڪ اسڪرين کي لاڪ ڪرڻ يا جلدي سيٽنگون کولڻ. اسان جي رسائي جي خدمت ڪنهن به ڊيٽا کي گڏ يا حصيداري نٿو ڪري.</string>
     <string name="version">نسخو</string>
-    <string name="lock_settings">لاڪ سيٽنگون</string>
 </resources>
