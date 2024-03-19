@@ -28,6 +28,9 @@ object Constants {
     const val BACKUP_WRITE = 1
     const val BACKUP_READ = 2
 
+    const val RECENT_COUNTER_MIN = 1
+    const val RECENT_COUNTER_MAX = 35
+
     const val FILTER_STRENGTH_MIN = 1
     const val FILTER_STRENGTH_MAX = 99
 
