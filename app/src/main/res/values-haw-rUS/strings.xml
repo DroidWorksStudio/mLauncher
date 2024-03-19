@@ -28,6 +28,8 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Hōʻike ʻokoʻa kīwī</string>
     <string name="auto_open_apps">Hāmama nā polokalamu</string>
+    <string name="display_recent_apps">Hōʻike i nā polokalamu hou</string>
+    <string name="number_of_recents">Ka helu o na polokalamu hou loa</string>
     <string name="filter_strength">Ka ikaika kānana</string>
     <string name="search_from_start">Huli polokalamu mai ka hoʻomaka.</string>
     <string name="icon_font">E hoʻohana i ka Font Icon</string>
@@ -76,8 +78,6 @@
     <string name="open">Wehe</string>
     <string name="close">Pani</string>
     <string name="copy">kope</string>
-    <string name="settings_text_size">Hoʻonohonoho i ka nui kikokikona</string>
-    <string name="settings_lock_time">Hoʻopau i ka wā hoʻopaʻa</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Hōʻike Hoʻolaha</string>
     <string name="show_app_list">Hōʻike i ka papa inoa polokalamu</string>
@@ -88,6 +88,10 @@
     <string name="open_power_dialog">Kūkākūkā Mana</string>
     <string name="take_a_screenshot">E kiʻi i kahi kiʻi kiʻi</string>
     <string name="double_tap_to_lock_screen">Koʻu pālua e laka</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Hoʻonohonoho i ka nui kikokikona</string>
+    <string name="display_hidden_apps">Hōʻike i nā polokalamu huna</string>
+    <string name="lock_settings">Hoʻonohonoho laka</string>
     <!-- Backup Strings -->
     <string name="backup">Kākoʻo</string>
     <string name="load_backup">Hoʻouka i ka waihona</string>
@@ -100,7 +104,6 @@
     <string name="text_biometric_login_sub">E ʻeʻe me ka hoʻohana ʻana i kāu hōʻoia biometric</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Nā polokalamu a pau</string>
-    <string name="display_hidden_apps">Hōʻike i nā polokalamu huna</string>
     <string name="drawer_list_empty_hint">ʻAʻohe polokalamu i loaʻa</string>
     <string name="long_press_for_settings">E kaomi lōʻihi ma nā wahi a pau no nā hoʻonohonoho</string>
     <string name="swipe_up_for_apps">Swipe i luna no nā polokalamu āpau</string>
@@ -111,5 +114,4 @@
     <string name="accessibility_service_name">lawelawe hana mLauncher</string>
     <string name="accessibility_service_description">Hāʻawi kēia lawelawe hiki iā mLauncher e hana i kekahi mau hana e like me ka laka ʻana i ka pale a i ʻole ka wehe ʻana i nā hoʻonohonoho wikiwiki. ʻAʻole ʻohi a kaʻana like paha kā mākou lawelawe ʻike i kekahi ʻikepili.</string>
     <string name="version">Manao</string>
-    <string name="lock_settings">Hoʻonohonoho laka</string>
 </resources>
