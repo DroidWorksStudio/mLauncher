@@ -28,6 +28,8 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Öppna appar automatiskt</string>
+    <string name="display_recent_apps">Visa de senaste apparna</string>
+    <string name="number_of_recents">Antal nya appar</string>
     <string name="filter_strength">Filterstyrka</string>
     <string name="search_from_start">Appsökning från början.</string>
     <string name="icon_font">Använd Icon Font</string>
@@ -76,8 +78,6 @@
     <string name="open">Öppna</string>
     <string name="close">Stäng</string>
     <string name="copy">kopiera</string>
-    <string name="settings_text_size">Inställningar Textstorlek</string>
-    <string name="settings_lock_time">Inställningar Lås Timeout</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Visa avisering</string>
     <string name="show_app_list">Visa applista</string>
@@ -88,6 +88,10 @@
     <string name="open_power_dialog">Power Dialog</string>
     <string name="take_a_screenshot">Ta en skärmdump</string>
     <string name="double_tap_to_lock_screen">Dubbeltryck för att låsa</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Inställningar Textstorlek</string>
+    <string name="display_hidden_apps">Visa dolda appar</string>
+    <string name="lock_settings">Låsinställningar</string>
     <!-- Backup Strings -->
     <string name="backup">Säkerhetskopiera</string>
     <string name="load_backup">Ladda säkerhetskopia</string>
@@ -100,7 +104,6 @@
     <string name="text_biometric_login_sub">Logga in med dina biometriska uppgifter</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Alla appar</string>
-    <string name="display_hidden_apps">Visa dolda appar</string>
     <string name="drawer_list_empty_hint">Inga appar hittades</string>
     <string name="long_press_for_settings">Långtryck var som helst för inställningar</string>
     <string name="swipe_up_for_apps">Svep uppåt för alla appar</string>
@@ -111,5 +114,4 @@
     <string name="accessibility_service_name">mLauncher åtgärdstjänst</string>
     <string name="accessibility_service_description">Denna tillgänglighetstjänst låter mLauncher utföra vissa åtgärder som att låsa skärmen eller öppna snabbinställningarna. Vår tillgänglighetstjänst samlar inte in eller delar någon data.</string>
     <string name="version">Version</string>
-    <string name="lock_settings">Låsinställningar</string>
 </resources>
