@@ -28,6 +28,8 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">แป้นพิมพ์แสดงอัตโนมัติ</string>
     <string name="auto_open_apps">เปิดแอปอัตโนมัติ</string>
+    <string name="display_recent_apps">แสดงแอปล่าสุด</string>
+    <string name="number_of_recents">จำนวนแอปล่าสุด</string>
     <string name="filter_strength">ความแรงของตัวกรอง</string>
     <string name="search_from_start">ค้นหาแอปตั้งแต่เริ่มต้น</string>
     <string name="icon_font">ใช้แบบอักษรไอคอน</string>
@@ -76,8 +78,6 @@
     <string name="open">เปิด</string>
     <string name="close">ปิด</string>
     <string name="copy">สำเนา</string>
-    <string name="settings_text_size">ขนาดตัวอักษรการตั้งค่า</string>
-    <string name="settings_lock_time">หมดเวลาล็อคการตั้งค่า</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">แสดงการแจ้งเตือน</string>
     <string name="show_app_list">แสดงรายการแอพ</string>
@@ -88,6 +88,10 @@
     <string name="open_power_dialog">กล่องโต้ตอบพลังงาน</string>
     <string name="take_a_screenshot">ถ่ายภาพหน้าจอ</string>
     <string name="double_tap_to_lock_screen">แตะสองครั้งเพื่อล็อค</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">ขนาดตัวอักษรการตั้งค่า</string>
+    <string name="display_hidden_apps">แสดงแอปที่ซ่อนอยู่</string>
+    <string name="lock_settings">ล็อคการตั้งค่า</string>
     <!-- Backup Strings -->
     <string name="backup">การสำรองข้อมูล</string>
     <string name="load_backup">โหลดข้อมูลสำรอง</string>
@@ -100,7 +104,6 @@
     <string name="text_biometric_login_sub">เข้าสู่ระบบโดยใช้ข้อมูลประจำตัวไบโอเมตริกซ์ของคุณ</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">แอพทั้งหมด</string>
-    <string name="display_hidden_apps">แสดงแอปที่ซ่อนอยู่</string>
     <string name="drawer_list_empty_hint">ไม่พบแอป</string>
     <string name="long_press_for_settings">กดที่ใดก็ได้ค้างไว้เพื่อตั้งค่า</string>
     <string name="swipe_up_for_apps">ปัดขึ้นสำหรับแอปทั้งหมด</string>
@@ -111,5 +114,4 @@
     <string name="accessibility_service_name">บริการดำเนินการ mLauncher</string>
     <string name="accessibility_service_description">บริการการเข้าถึงนี้ช่วยให้ mLauncher ดำเนินการบางอย่างได้ เช่น ล็อคหน้าจอหรือเปิดการตั้งค่าด่วน บริการการเข้าถึงของเราจะไม่รวบรวมหรือแบ่งปันข้อมูลใดๆ</string>
     <string name="version">เวอร์ชัน</string>
-    <string name="lock_settings">ล็อคการตั้งค่า</string>
 </resources>
