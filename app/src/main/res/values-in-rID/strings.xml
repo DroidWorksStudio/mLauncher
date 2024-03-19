@@ -28,6 +28,8 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Keyboard pertunjukan otomatis</string>
     <string name="auto_open_apps">Aplikasi terbuka otomatis</string>
+    <string name="display_recent_apps">Tampilkan Aplikasi Terbaru</string>
+    <string name="number_of_recents">Jumlah Aplikasi Terbaru</string>
     <string name="filter_strength">Kekuatan Filter</string>
     <string name="search_from_start">Pencarian aplikasi dari awal.</string>
     <string name="icon_font">Gunakan Font Ikon</string>
@@ -76,8 +78,6 @@
     <string name="open">Terbuka</string>
     <string name="close">Tutup</string>
     <string name="copy">salinan</string>
-    <string name="settings_text_size">Ukuran Teks Pengaturan</string>
-    <string name="settings_lock_time">Timeout Penguncian Setelan</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Tampilkan Pemberitahuan</string>
     <string name="show_app_list">Tampilkan Daftar Aplikasi</string>
@@ -88,6 +88,10 @@
     <string name="open_power_dialog">Dialog Daya</string>
     <string name="take_a_screenshot">Ambil Tangkapan Layar</string>
     <string name="double_tap_to_lock_screen">Ketuk dua kali untuk mengunci</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Ukuran Teks Pengaturan</string>
+    <string name="display_hidden_apps">Tampilkan Aplikasi Tersembunyi</string>
+    <string name="lock_settings">Pengaturan Kunci</string>
     <!-- Backup Strings -->
     <string name="backup">Cadangan</string>
     <string name="load_backup">Memuat Cadangan</string>
@@ -100,7 +104,6 @@
     <string name="text_biometric_login_sub">Masuk menggunakan kredensial biometrik Anda</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Semua aplikasi</string>
-    <string name="display_hidden_apps">Tampilkan Aplikasi Tersembunyi</string>
     <string name="drawer_list_empty_hint">Tidak ada aplikasi yang ditemukan</string>
     <string name="long_press_for_settings">Tekan lama di mana saja untuk pengaturan</string>
     <string name="swipe_up_for_apps">Geser ke atas untuk semua aplikasi</string>
@@ -111,5 +114,4 @@
     <string name="accessibility_service_name">Layanan Tindakan mLauncher</string>
     <string name="accessibility_service_description">Layanan aksesibilitas ini memungkinkan mLauncher melakukan tindakan tertentu seperti mengunci layar atau membuka pengaturan cepat. Layanan aksesibilitas kami tidak mengumpulkan atau membagikan data apa pun.</string>
     <string name="version">Versi: kapan</string>
-    <string name="lock_settings">Pengaturan Kunci</string>
 </resources>
