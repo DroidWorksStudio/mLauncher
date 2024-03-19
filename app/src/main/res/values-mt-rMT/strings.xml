@@ -28,6 +28,8 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Tastiera juru awtomatika</string>
     <string name="auto_open_apps">Apps miftuħa awtomatikament</string>
+    <string name="display_recent_apps">Uri Apps Riċenti</string>
+    <string name="number_of_recents">Numru Ta\' Apps Riċenti</string>
     <string name="filter_strength">Qawwa tal-Filtru</string>
     <string name="search_from_start">Tfittxija tal-app mill-bidu.</string>
     <string name="icon_font">Uża Icon Font</string>
@@ -76,8 +78,6 @@
     <string name="open">Miftuħa</string>
     <string name="close">Agħlaq</string>
     <string name="copy">kopja</string>
-    <string name="settings_text_size">Settings Test Size</string>
-    <string name="settings_lock_time">Settings Lock Timeout</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Uri Notifika</string>
     <string name="show_app_list">Uri Lista tal-Apps</string>
@@ -88,6 +88,10 @@
     <string name="open_power_dialog">Djalogu tal-Enerġija</string>
     <string name="take_a_screenshot">Ħu Screenshot</string>
     <string name="double_tap_to_lock_screen">Tektek darbtejn biex tissakkar</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Settings Test Size</string>
+    <string name="display_hidden_apps">Uri Apps Moħbija</string>
+    <string name="lock_settings">Lock Settings</string>
     <!-- Backup Strings -->
     <string name="backup">Backup</string>
     <string name="load_backup">Tagħbija Backup</string>
@@ -100,7 +104,6 @@
     <string name="text_biometric_login_sub">Idħol billi tuża l-kredenzjali bijometrika tiegħek</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">L-apps kollha</string>
-    <string name="display_hidden_apps">Uri Apps Moħbija</string>
     <string name="drawer_list_empty_hint">Ma nstabet l-ebda app</string>
     <string name="long_press_for_settings">Agħfas fit-tul kullimkien għas-settings</string>
     <string name="swipe_up_for_apps">Swipe \'l fuq għall-apps kollha</string>
@@ -111,5 +114,4 @@
     <string name="accessibility_service_name">Servizz ta\' Azzjonijiet mLauncher</string>
     <string name="accessibility_service_description">Dan is-servizz ta’ aċċessibbiltà jippermetti lil mLauncher jagħmel ċerti azzjonijiet bħall-illokkjar tal-iskrin jew il-ftuħ tas-settings ta’ malajr. Is-servizz ta’ aċċessibbiltà tagħna ma jiġbor jew jaqsam l-ebda data.</string>
     <string name="version">Verżjoni</string>
-    <string name="lock_settings">Lock Settings</string>
 </resources>
