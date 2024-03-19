@@ -28,6 +28,8 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Klavye\'yi otomatik göster</string>
     <string name="auto_open_apps">Uygulamaları otomatik aç</string>
+    <string name="display_recent_apps">Son Uygulamaları Görüntüle</string>
+    <string name="number_of_recents">Son Uygulama Sayısı</string>
     <string name="filter_strength">Filtre Gücü</string>
     <string name="search_from_start">Uygulama isminin başından aramaya başla.</string>
     <string name="icon_font">Simge Yazı Tipi Kullan</string>
@@ -76,8 +78,6 @@
     <string name="open">Aç</string>
     <string name="close">Kapat</string>
     <string name="copy">Kopyala</string>
-    <string name="settings_text_size">Ayarlar Metin Boyutu</string>
-    <string name="settings_lock_time">Ayarlar Kilidi Zaman Aşımı</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Bildirimi Göster</string>
     <string name="show_app_list">Uygulama Listesini Göster</string>
@@ -88,6 +88,10 @@
     <string name="open_power_dialog">Güç Menüsü</string>
     <string name="take_a_screenshot">Ekran görüntüsü al</string>
     <string name="double_tap_to_lock_screen">Kilitlemek için çift dokun</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Ayarlar Metin Boyutu</string>
+    <string name="display_hidden_apps">Gizli Uygulamaları Görüntüle</string>
+    <string name="lock_settings">Kilit Ayarları</string>
     <!-- Backup Strings -->
     <string name="backup">Yedekleme</string>
     <string name="load_backup">Yedeği Yükle</string>
@@ -100,7 +104,6 @@
     <string name="text_biometric_login_sub">Biyometrik kimlik bilgilerinizi kullanarak giriş yapın</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Tüm uygulamalar</string>
-    <string name="display_hidden_apps">Gizli Uygulamaları Görüntüle</string>
     <string name="drawer_list_empty_hint">Herhangi bir uygulama bulunamadı</string>
     <string name="long_press_for_settings">Ayarlar için herhangi bir yere uzun bas</string>
     <string name="swipe_up_for_apps">Tüm uygulamalar için yukarı kaydırın</string>
@@ -111,5 +114,4 @@
     <string name="accessibility_service_name">mLauncher Eylemler Hizmeti</string>
     <string name="accessibility_service_description">Bu erişilebilirlik hizmeti, mLauncher\'ın ekranı kilitleme veya hızlı ayarları açma gibi belirli işlemleri yapmasını sağlar. Erişilebilirlik hizmetimiz herhangi bir veri toplamaz veya paylaşmaz.</string>
     <string name="version">Sürüm</string>
-    <string name="lock_settings">Kilit Ayarları</string>
 </resources>
