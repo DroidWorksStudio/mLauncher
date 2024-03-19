@@ -28,6 +28,8 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">自动显示键盘</string>
     <string name="auto_open_apps">自动打开应用</string>
+    <string name="display_recent_apps">显示最近使用的应用程序</string>
+    <string name="number_of_recents">最近使用的应用程序数量</string>
     <string name="filter_strength">过滤强度</string>
     <string name="search_from_start">应用程序搜索从头开始。</string>
     <string name="icon_font">使用图标字体</string>
@@ -76,8 +78,6 @@
     <string name="open">打开链接</string>
     <string name="close">关闭</string>
     <string name="copy">复制</string>
-    <string name="settings_text_size">设置文字大小</string>
-    <string name="settings_lock_time">设置锁定超时</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">显示通知</string>
     <string name="show_app_list">显示应用列表</string>
@@ -88,6 +88,10 @@
     <string name="open_power_dialog">电源对话框</string>
     <string name="take_a_screenshot">截图</string>
     <string name="double_tap_to_lock_screen">轻按两次锁定</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">设置文字大小</string>
+    <string name="display_hidden_apps">显示隐藏的应用程序</string>
+    <string name="lock_settings">锁定设置</string>
     <!-- Backup Strings -->
     <string name="backup">备份</string>
     <string name="load_backup">负载备份</string>
@@ -100,7 +104,6 @@
     <string name="text_biometric_login_sub">使用您的生物识别凭据登录</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">所有应用程序</string>
-    <string name="display_hidden_apps">显示隐藏的应用程序</string>
     <string name="drawer_list_empty_hint">未找到应用</string>
     <string name="long_press_for_settings">在屏幕上任意一处长按进入设置</string>
     <string name="swipe_up_for_apps">上滑查看所有应用</string>
@@ -111,5 +114,4 @@
     <string name="accessibility_service_name">OlauncherCF 操作服务</string>
     <string name="accessibility_service_description">此辅助功能服务允许 mLauncher 执行某些操作，例如锁定屏幕或打开快速设置。我们的无障碍服务不收集或共享任何数据。</string>
     <string name="version">版本</string>
-    <string name="lock_settings">锁定设置</string>
 </resources>
