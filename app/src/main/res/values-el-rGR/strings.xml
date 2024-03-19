@@ -28,6 +28,8 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Αυτόματο άνοιγμα εφαρμογών</string>
+    <string name="display_recent_apps">Εμφάνιση πρόσφατων εφαρμογών</string>
+    <string name="number_of_recents">Αριθμός πρόσφατων εφαρμογών</string>
     <string name="filter_strength">Αντοχή φίλτρου</string>
     <string name="search_from_start">Αναζήτηση εφαρμογών από την αρχή.</string>
     <string name="icon_font">Χρησιμοποιήστε το Icon Font</string>
@@ -76,8 +78,6 @@
     <string name="open">Άνοιγμα</string>
     <string name="close">Κλείσιμο</string>
     <string name="copy">αντίγραφο</string>
-    <string name="settings_text_size">Ρυθμίσεις Μέγεθος κειμένου</string>
-    <string name="settings_lock_time">Χρόνος λήξης κλειδώματος ρυθμίσεων</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Εμφάνιση Ειδοποίησης</string>
     <string name="show_app_list">Εμφάνιση Λίστας Εφαρμογών</string>
@@ -88,6 +88,10 @@
     <string name="open_power_dialog">Power Dialog</string>
     <string name="take_a_screenshot">Τραβήξτε ένα στιγμιότυπο οθόνης</string>
     <string name="double_tap_to_lock_screen">Διπλό πάτημα για κλείδωμα</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Ρυθμίσεις Μέγεθος κειμένου</string>
+    <string name="display_hidden_apps">Εμφάνιση κρυφών εφαρμογών</string>
+    <string name="lock_settings">Ρυθμίσεις κλειδώματος</string>
     <!-- Backup Strings -->
     <string name="backup">Αντίγραφα Ασφαλείας</string>
     <string name="load_backup">Φόρτωση Αντιγράφου Ασφαλείας</string>
@@ -100,7 +104,6 @@
     <string name="text_biometric_login_sub">Συνδεθείτε χρησιμοποιώντας τα βιομετρικά διαπιστευτήριά σας</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Όλες οι εφαρμογές</string>
-    <string name="display_hidden_apps">Εμφάνιση κρυφών εφαρμογών</string>
     <string name="drawer_list_empty_hint">Δεν βρέθηκαν εφαρμογές</string>
     <string name="long_press_for_settings">Πατήστε παρατεταμένα οπουδήποτε για ρυθμίσεις</string>
     <string name="swipe_up_for_apps">Σύρσιμο προς τα επάνω για όλες τις εφαρμογές</string>
@@ -111,5 +114,4 @@
     <string name="accessibility_service_name">Υπηρεσία ενεργειών mLauncher</string>
     <string name="accessibility_service_description">Αυτή η υπηρεσία προσβασιμότητας επιτρέπει στο mLauncher να κάνει ορισμένες ενέργειες, όπως το κλείδωμα της οθόνης ή το άνοιγμα των γρήγορων ρυθμίσεων. Η υπηρεσία προσβασιμότητας μας δεν συλλέγει ούτε κοινοποιεί δεδομένα.</string>
     <string name="version">Εκδοχή</string>
-    <string name="lock_settings">Ρυθμίσεις κλειδώματος</string>
 </resources>
