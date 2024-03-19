@@ -7,10 +7,11 @@
 **Implemented Enhancements:**
 
 - \[Enhancement\] Sort by recently used [\#19](https://github.com/HeAndroids2Much/mLauncher/issues/19)
-
-**Merged pull requests:**
-
 - \[Feature\] - Sort by recently used [\#369](https://github.com/HeAndroids2Much/mLauncher/pull/369) ([HeCodes2Much](https://github.com/HeCodes2Much))
+
+**Language Support:**
+
+- \[Language\] Updated Language Files. [\#370](https://github.com/HeAndroids2Much/mLauncher/pull/370) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
 ## [1.3.5](https://github.com/HeAndroids2Much/mLauncher/tree/1.3.5) (18, March 2024)
 
@@ -98,10 +99,6 @@
 ## [1.3.0](https://github.com/HeAndroids2Much/mLauncher/tree/1.3.0) ( 2, March 2024)
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/1.2.1...1.3.0)
-
-**Implemented Enhancements:**
-
-- \[Enhancement\] Have homescreen 'time' shortcut open to full clock app [\#332](https://github.com/HeAndroids2Much/mLauncher/issues/332)
 
 **Fixed Bugs:**
 
