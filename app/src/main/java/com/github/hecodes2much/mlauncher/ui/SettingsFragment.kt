@@ -264,6 +264,26 @@ class SettingsFragment : Fragment() {
                     },
                     { _, onChange ->
                         SettingsToggle(
+                            title = stringResource(R.string.display_recent_apps),
+                            fontSize = iconFs,
+                            onChange = onChange,
+                            state = remember { mutableStateOf(prefs.recentAppsDisplayed) }
+                        ) { toggleRecentAppsDisplayed() }
+                    },
+                    { open, onChange ->
+                        SettingsSliderItem(
+                            title = stringResource(R.string.number_of_recents),
+                            fontSize = iconFs,
+                            open = open,
+                            onChange = onChange,
+                            currentSelection = remember { mutableIntStateOf(prefs.recentCounter) },
+                            min = Constants.RECENT_COUNTER_MIN,
+                            max = Constants.RECENT_COUNTER_MAX,
+                            onSelect = { j -> setRecentCounter(j) }
+                        )
+                    },
+                    { _, onChange ->
+                        SettingsToggle(
                             title = stringResource(R.string.auto_open_apps),
                             fontSize = iconFs,
                             onChange = onChange,
@@ -607,6 +627,10 @@ class SettingsFragment : Fragment() {
         prefs.hiddenAppsDisplayed = !prefs.hiddenAppsDisplayed
     }
 
+    private fun toggleRecentAppsDisplayed() {
+        prefs.recentAppsDisplayed = !prefs.recentAppsDisplayed
+    }
+
     private fun setClockAlignment(gravity: Constants.Gravity) {
         prefs.clockAlignment = gravity
         viewModel.updateClockAlignment(gravity)
@@ -679,6 +703,11 @@ class SettingsFragment : Fragment() {
     private fun setFilterStrength(filterStrength: Int) {
         prefs.filterStrength = filterStrength
         viewModel.filterStrength.value = filterStrength
+    }
+
+    private fun setRecentCounter(recentCount: Int) {
+        prefs.recentCounter = recentCount
+        viewModel.recentCounter.value = recentCount
     }
 
     private fun toggleKeyboardText() {

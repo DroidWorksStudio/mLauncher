@@ -1,5 +1,6 @@
 package com.github.hecodes2much.mlauncher.helper
 
+//noinspection SuspiciousImport
 import android.R
 import android.app.Activity
 import android.content.ComponentName
@@ -57,10 +58,13 @@ fun showToastShort(context: Context, message: String) {
 suspend fun getAppsList(
     context: Context,
     includeRegularApps: Boolean = true,
-    includeHiddenApps: Boolean = false
+    includeHiddenApps: Boolean = false,
+    includeRecentApps: Boolean = true,
 ): MutableList<AppModel> {
     return withContext(Dispatchers.Main) {
         val appList: MutableList<AppModel> = mutableListOf()
+        val appRecentList: MutableList<AppModel> = mutableListOf()
+        val combinedList: MutableList<AppModel> = mutableListOf()
 
         try {
             val hiddenApps = Prefs(context).hiddenApps
@@ -72,9 +76,42 @@ suspend fun getAppsList(
 
             val prefs = Prefs(context)
 
-            for (profile in userManager.userProfiles) {
-                for (app in launcherApps.getActivityList(null, profile)) {
+            val appUsageTracker = AppUsageTracker.createInstance(context)
+            val lastTenUsedApps = appUsageTracker.getLastTenAppsUsed(context)
 
+            for (profile in userManager.userProfiles) {
+                for ((packageName, appName, appActivityName) in lastTenUsedApps) {
+                    var appNameClean = appName
+                    var appAliasClean = prefs.getAppAlias(packageName).ifEmpty {
+                        appName
+                    }
+
+                    if (prefs.useCustomIconFont) {
+                        appNameClean = "\uF4C3 $appName"
+                        appAliasClean = "\uF4C3 $appAliasClean"
+                    }
+
+                    val appModel = AppModel(
+                        appNameClean,
+                        collator.getCollationKey(appName),
+                        packageName,
+                        appActivityName,
+                        profile,
+                        appAliasClean,
+                    )
+
+                    d(
+                        "getLastTenAppsUsed",
+                        "$appModel"
+                    )
+
+                    if (includeRecentApps) {
+                        if (packageName != BuildConfig.APPLICATION_ID) {
+                            appRecentList.add(appModel)
+                        }
+                    }
+                }
+                for (app in launcherApps.getActivityList(null, profile)) {
 
                     // we have changed the alias identifier from app.label to app.applicationInfo.packageName
                     // therefore, we check if the old one is set if the new one is empty
@@ -107,16 +144,24 @@ suspend fun getAppsList(
                     }
 
                 }
+                appList.sortBy {
+                    if (it.appAlias.isEmpty()) it.appLabel.lowercase() else it.appAlias.lowercase()
+                }
             }
 
-            appList.sortBy {
-                if (it.appAlias.isEmpty()) it.appLabel.lowercase() else it.appAlias.lowercase()
+            if (prefs.recentAppsDisplayed) {
+                // Add all elements from appRecentList
+                combinedList.addAll(appRecentList)
             }
+
+
+            // Add all elements from appList
+            combinedList.addAll(appList)
 
         } catch (e: java.lang.Exception) {
             d("appList", e.toString())
         }
-        appList
+        combinedList
     }
 }
 

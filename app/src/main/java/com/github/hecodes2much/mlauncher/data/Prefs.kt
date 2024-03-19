@@ -18,6 +18,8 @@ private const val LOCK_MODE = "LOCK_MODE"
 private const val HOME_APPS_NUM = "HOME_APPS_NUM"
 private const val AUTO_SHOW_KEYBOARD = "AUTO_SHOW_KEYBOARD"
 private const val AUTO_OPEN_APP = "AUTO_OPEN_APP"
+private const val RECENT_APPS_DISPLAYED = "RECENT_APPS_DISPLAYED"
+private const val RECENT_COUNTER = "RECENT_COUNTER"
 private const val FILTER_STRENGTH = "FILTER_STRENGTH"
 private const val HOME_ALIGNMENT = "HOME_ALIGNMENT"
 private const val HOME_ALIGNMENT_BOTTOM = "HOME_ALIGNMENT_BOTTOM"
@@ -112,6 +114,14 @@ class Prefs(val context: Context) {
     var autoOpenApp: Boolean
         get() = prefs.getBoolean(AUTO_OPEN_APP, false)
         set(value) = prefs.edit().putBoolean(AUTO_OPEN_APP, value).apply()
+
+    var recentAppsDisplayed: Boolean
+        get() = prefs.getBoolean(RECENT_APPS_DISPLAYED, false)
+        set(value) = prefs.edit().putBoolean(RECENT_APPS_DISPLAYED, value).apply()
+
+    var recentCounter: Int
+        get() = prefs.getInt(RECENT_COUNTER, 10)
+        set(value) = prefs.edit().putInt(RECENT_COUNTER, value).apply()
 
     var filterStrength: Int
         get() = prefs.getInt(FILTER_STRENGTH, 25)

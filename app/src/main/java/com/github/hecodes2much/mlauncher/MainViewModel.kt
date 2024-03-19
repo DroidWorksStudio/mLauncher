@@ -11,6 +11,7 @@ import com.github.hecodes2much.mlauncher.data.AppModel
 import com.github.hecodes2much.mlauncher.data.Constants
 import com.github.hecodes2much.mlauncher.data.Constants.AppDrawerFlag
 import com.github.hecodes2much.mlauncher.data.Prefs
+import com.github.hecodes2much.mlauncher.helper.AppUsageTracker
 import com.github.hecodes2much.mlauncher.helper.getAppsList
 import com.github.hecodes2much.mlauncher.helper.getDefaultLauncherPackage
 import com.github.hecodes2much.mlauncher.helper.ismlauncherDefault
@@ -38,6 +39,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     val homeAppsCount = MutableLiveData(prefs.homeAppsNum)
     val opacityNum = MutableLiveData(prefs.opacityNum)
     val filterStrength = MutableLiveData(prefs.filterStrength)
+    val recentCounter = MutableLiveData(prefs.recentCounter)
 
     fun selectedApp(appModel: AppModel, flag: AppDrawerFlag, n: Int = 0) {
         when (flag) {
@@ -93,9 +95,13 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         }
 
         try {
+            val appUsageTracker = AppUsageTracker.createInstance(appContext)
+            appUsageTracker.updateLastUsedTimestamp(packageName)
             launcher.startMainActivity(component, userHandle, null, null)
         } catch (e: SecurityException) {
             try {
+                val appUsageTracker = AppUsageTracker.createInstance(appContext)
+                appUsageTracker.updateLastUsedTimestamp(packageName)
                 launcher.startMainActivity(component, android.os.Process.myUserHandle(), null, null)
             } catch (e: Exception) {
                 showToastShort(appContext, "Unable to launch app")

@@ -88,9 +88,6 @@
     <string name="close">Close</string>
     <string name="copy">copy</string>
 
-    <string name="settings_text_size">Settings Text Size</string>
-    <string name="settings_lock_time">Settings Lock Timeout</string>
-
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Show Notification</string>
     <string name="show_app_list">Show App List</string>
@@ -101,6 +98,12 @@
     <string name="open_power_dialog">Power Dialog</string>
     <string name="take_a_screenshot">Take a Screenshot</string>
     <string name="double_tap_to_lock_screen">Double tap to lock</string>
+
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Settings Text Size</string>
+    <string name="display_hidden_apps">Display Hidden Apps</string>
+    <string name="display_recent_apps">Display Recent Apps</string>
+    <string name="lock_settings">Lock Settings</string>
 
     <!-- Backup Strings -->
     <string name="backup">Backup</string>
@@ -117,7 +120,6 @@
 
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>
-    <string name="display_hidden_apps">Display Hidden Apps</string>
     <string name="drawer_list_empty_hint">No apps found</string>
     <string name="long_press_for_settings">Long press anywhere for settings</string>
     <string name="swipe_up_for_apps">Swipe up for all apps</string>
@@ -128,5 +130,5 @@
     <string name="accessibility_service_name">mLauncher Actions Service</string>
     <string name="accessibility_service_description">This accessibility service allows mLauncher to do certain actions such as locking the screen or opening the quick settings. Our accessibility service does not collect or share any data.</string>
     <string name="version">Version</string>
-    <string name="lock_settings">Lock Settings</string>
+
 </resources>
