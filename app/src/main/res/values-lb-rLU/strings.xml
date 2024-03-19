@@ -28,6 +28,8 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto Show Keyboard</string>
     <string name="auto_open_apps">Automatesch opmaachen Apps</string>
+    <string name="display_recent_apps">Rezent Apps weisen</string>
+    <string name="number_of_recents">Zuel vun de rezenten Apps</string>
     <string name="filter_strength">Filter Kraaft</string>
     <string name="search_from_start">App Sich vun Ufank un.</string>
     <string name="icon_font">Benotzt Ikon Schrëft</string>
@@ -76,8 +78,6 @@
     <string name="open">Oppen</string>
     <string name="close">Zoumaachen</string>
     <string name="copy">kopéieren</string>
-    <string name="settings_text_size">Astellungen Text Gréisst</string>
-    <string name="settings_lock_time">Astellunge Spär Timeout</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Show Notifikatioun</string>
     <string name="show_app_list">Show App Lëscht</string>
@@ -88,6 +88,10 @@
     <string name="open_power_dialog">Power Dialog</string>
     <string name="take_a_screenshot">Maacht e Screenshot</string>
     <string name="double_tap_to_lock_screen">Duebeltapp fir ze spären</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Astellungen Text Gréisst</string>
+    <string name="display_hidden_apps">Display Hidden Apps</string>
+    <string name="lock_settings">Spär Astellunge</string>
     <!-- Backup Strings -->
     <string name="backup">Backupsatellit</string>
     <string name="load_backup">Lueden Backupsatellit</string>
@@ -100,7 +104,6 @@
     <string name="text_biometric_login_sub">Mellt Iech un mat Ärem biometresche Umeldungsinformatioun</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">All Apps</string>
-    <string name="display_hidden_apps">Display Hidden Apps</string>
     <string name="drawer_list_empty_hint">Keng Apps fonnt</string>
     <string name="long_press_for_settings">Laang Press iwwerall fir Astellungen</string>
     <string name="swipe_up_for_apps">Swipe up fir all Apps</string>
@@ -111,5 +114,4 @@
     <string name="accessibility_service_name">mLauncher Actions Service</string>
     <string name="accessibility_service_description">Dësen Accessibilitéitsservice erlaabt mLauncher verschidde Aktiounen ze maachen wéi den Ecran ze spären oder d\'schnell Astellungen opzemaachen. Eis Accessibilitéitsservice sammelt oder deelt keng Daten.</string>
     <string name="version">Versioun</string>
-    <string name="lock_settings">Spär Astellunge</string>
 </resources>
