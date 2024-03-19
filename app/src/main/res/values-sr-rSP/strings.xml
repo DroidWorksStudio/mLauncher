@@ -28,6 +28,8 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Auto open apps</string>
+    <string name="display_recent_apps">Прикажи недавне апликације</string>
+    <string name="number_of_recents">Број недавних апликација</string>
     <string name="filter_strength">Снага филтера</string>
     <string name="search_from_start">Претрага апликација од почетка.</string>
     <string name="icon_font">Користите фонт иконе</string>
@@ -76,8 +78,6 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string name="copy">копија</string>
-    <string name="settings_text_size">Подешавања Величина текста</string>
-    <string name="settings_lock_time">Временско ограничење закључавања подешавања</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Show Notification</string>
     <string name="show_app_list">Show App List</string>
@@ -88,6 +88,10 @@
     <string name="open_power_dialog">Повер Диалог</string>
     <string name="take_a_screenshot">Направите снимак екрана</string>
     <string name="double_tap_to_lock_screen">Double tap to lock</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Подешавања Величина текста</string>
+    <string name="display_hidden_apps">Прикажи скривене апликације</string>
+    <string name="lock_settings">Подешавања закључавања</string>
     <!-- Backup Strings -->
     <string name="backup">Backup</string>
     <string name="load_backup">Load Backup</string>
@@ -100,7 +104,6 @@
     <string name="text_biometric_login_sub">Пријавите се користећи свој биометријски акредитив</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>
-    <string name="display_hidden_apps">Прикажи скривене апликације</string>
     <string name="drawer_list_empty_hint">No apps found</string>
     <string name="long_press_for_settings">Long press anywhere for settings</string>
     <string name="swipe_up_for_apps">Swipe up for all apps</string>
@@ -111,5 +114,4 @@
     <string name="accessibility_service_name">mLauncher Actions Service</string>
     <string name="accessibility_service_description">Ова услуга приступачности омогућава мЛаунцхер-у да изврши одређене радње као што је закључавање екрана или отварање брзих подешавања. Наша услуга приступачности не прикупља нити дели никакве податке.</string>
     <string name="version">Верзија</string>
-    <string name="lock_settings">Подешавања закључавања</string>
 </resources>
