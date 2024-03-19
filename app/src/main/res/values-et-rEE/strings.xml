@@ -28,6 +28,8 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Autoesituse klaviatuur</string>
     <string name="auto_open_apps">Automaatselt avatud rakendused</string>
+    <string name="display_recent_apps">Kuva viimased rakendused</string>
+    <string name="number_of_recents">Viimaste rakenduste arv</string>
     <string name="filter_strength">Filtri tugevus</string>
     <string name="search_from_start">Rakenduse otsing algusest peale.</string>
     <string name="icon_font">Kasutage ikooni fonti</string>
@@ -76,8 +78,6 @@
     <string name="open">Avatud</string>
     <string name="close">Sulge</string>
     <string name="copy">kopeerida</string>
-    <string name="settings_text_size">Seaded Teksti suurus</string>
-    <string name="settings_lock_time">Seaded Luku ajalõpp</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Näita teatist</string>
     <string name="show_app_list">Näita rakenduste nimekirja</string>
@@ -88,6 +88,10 @@
     <string name="open_power_dialog">Toitedialoog</string>
     <string name="take_a_screenshot">Tehke ekraanipilt</string>
     <string name="double_tap_to_lock_screen">Topeltkoputus lukustamiseks</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Seaded Teksti suurus</string>
+    <string name="display_hidden_apps">Kuva peidetud rakendused</string>
+    <string name="lock_settings">Luku seaded</string>
     <!-- Backup Strings -->
     <string name="backup">Varukoopia</string>
     <string name="load_backup">Laadige varukoopia</string>
@@ -100,7 +104,6 @@
     <string name="text_biometric_login_sub">Logige sisse oma biomeetrilise mandaadiga</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Kõik rakendused</string>
-    <string name="display_hidden_apps">Kuva peidetud rakendused</string>
     <string name="drawer_list_empty_hint">Rakendusi ei leitud</string>
     <string name="long_press_for_settings">Vajutage pikalt kuskil seadete jaoks</string>
     <string name="swipe_up_for_apps">Kõigi rakenduste jaoks pühkige ülespoole</string>
@@ -111,5 +114,4 @@
     <string name="accessibility_service_name">mLauncher Actions Service</string>
     <string name="accessibility_service_description">See juurdepääsetavuse teenus võimaldab mLauncheril teha teatud toiminguid, nagu ekraani lukustamine või kiirseadete avamine. Meie juurdepääsetavuse teenus ei kogu ega jaga andmeid.</string>
     <string name="version">Versioon</string>
-    <string name="lock_settings">Luku seaded</string>
 </resources>
