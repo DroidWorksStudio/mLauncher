@@ -28,6 +28,8 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Auto open apps</string>
+    <string name="display_recent_apps">הצג אפליקציות אחרונות</string>
+    <string name="number_of_recents">מספר האפליקציות האחרונות</string>
     <string name="filter_strength">חוזק מסנן</string>
     <string name="search_from_start">חיפוש אפליקציה מההתחלה.</string>
     <string name="icon_font">השתמש בגופן אייקון</string>
@@ -76,8 +78,6 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string name="copy">עותק</string>
-    <string name="settings_text_size">הגדרות גודל טקסט</string>
-    <string name="settings_lock_time">זמן קצוב נעילת הגדרות</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Show Notification</string>
     <string name="show_app_list">Show App List</string>
@@ -88,6 +88,10 @@
     <string name="open_power_dialog">דיאלוג כוח</string>
     <string name="take_a_screenshot">צלם מסך</string>
     <string name="double_tap_to_lock_screen">Double tap to lock</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">הגדרות גודל טקסט</string>
+    <string name="display_hidden_apps">הצג אפליקציות נסתרות</string>
+    <string name="lock_settings">הגדרות נעילה</string>
     <!-- Backup Strings -->
     <string name="backup">Backup</string>
     <string name="load_backup">Load Backup</string>
@@ -100,7 +104,6 @@
     <string name="text_biometric_login_sub">היכנס באמצעות האישור הביומטרי שלך</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>
-    <string name="display_hidden_apps">הצג אפליקציות נסתרות</string>
     <string name="drawer_list_empty_hint">No apps found</string>
     <string name="long_press_for_settings">Long press anywhere for settings</string>
     <string name="swipe_up_for_apps">Swipe up for all apps</string>
@@ -111,5 +114,4 @@
     <string name="accessibility_service_name">mLauncher Actions Service</string>
     <string name="accessibility_service_description">שירות נגישות זה מאפשר ל-mLauncher לבצע פעולות מסוימות כמו נעילת המסך או פתיחת ההגדרות המהירות. שירות הנגישות שלנו אינו אוסף או משתף נתונים כלשהם.</string>
     <string name="version">גִרְסָה</string>
-    <string name="lock_settings">הגדרות נעילה</string>
 </resources>
