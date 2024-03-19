@@ -28,6 +28,8 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Papan kekunci paparan automatik</string>
     <string name="auto_open_apps">Auto buka apl</string>
+    <string name="display_recent_apps">Paparkan Apl Terbaharu</string>
+    <string name="number_of_recents">Bilangan Apl Terkini</string>
     <string name="filter_strength">Kekuatan Penapis</string>
     <string name="search_from_start">Carian apl dari mula.</string>
     <string name="icon_font">Gunakan Font Ikon</string>
@@ -76,8 +78,6 @@
     <string name="open">Buka</string>
     <string name="close">tutup</string>
     <string name="copy">salinan</string>
-    <string name="settings_text_size">Tetapan Saiz Teks</string>
-    <string name="settings_lock_time">Tamat Masa Kunci Tetapan</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Tunjukkan Pemberitahuan</string>
     <string name="show_app_list">Tunjukkan Senarai Apl</string>
@@ -88,6 +88,10 @@
     <string name="open_power_dialog">Dialog Kuasa</string>
     <string name="take_a_screenshot">Ambil Tangkapan Skrin</string>
     <string name="double_tap_to_lock_screen">Ketik dua kali untuk mengunci</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Tetapan Saiz Teks</string>
+    <string name="display_hidden_apps">Paparkan Apl Tersembunyi</string>
+    <string name="lock_settings">Tetapan Kunci</string>
     <!-- Backup Strings -->
     <string name="backup">Sandaran</string>
     <string name="load_backup">Muatkan Sandaran</string>
@@ -100,7 +104,6 @@
     <string name="text_biometric_login_sub">Log masuk menggunakan kelayakan biometrik anda</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Semua apl</string>
-    <string name="display_hidden_apps">Paparkan Apl Tersembunyi</string>
     <string name="drawer_list_empty_hint">Tiada apl ditemui</string>
     <string name="long_press_for_settings">Tekan lama di mana-mana untuk tetapan</string>
     <string name="swipe_up_for_apps">Leret ke atas untuk semua apl</string>
@@ -111,5 +114,4 @@
     <string name="accessibility_service_name">Perkhidmatan Tindakan mLauncher</string>
     <string name="accessibility_service_description">Perkhidmatan kebolehaksesan ini membolehkan mLauncher melakukan tindakan tertentu seperti mengunci skrin atau membuka tetapan pantas. Perkhidmatan kebolehaksesan kami tidak mengumpul atau berkongsi sebarang data.</string>
     <string name="version">Versi</string>
-    <string name="lock_settings">Tetapan Kunci</string>
 </resources>
