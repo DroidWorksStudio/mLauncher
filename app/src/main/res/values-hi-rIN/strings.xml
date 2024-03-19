@@ -28,6 +28,8 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">ऑटो शो कीबोर्ड</string>
     <string name="auto_open_apps">स्वतः खुले ऐप्स</string>
+    <string name="display_recent_apps">हाल के ऐप्स प्रदर्शित करें</string>
+    <string name="number_of_recents">हाल के ऐप्स की संख्या</string>
     <string name="filter_strength">फ़िल्टर शक्ति</string>
     <string name="search_from_start">ऐप खोज शुरू से।</string>
     <string name="icon_font">आइकन फ़ॉन्ट का प्रयोग करें</string>
@@ -76,8 +78,6 @@
     <string name="open">खुला</string>
     <string name="close">बंद करना</string>
     <string name="copy">प्रतिलिपि</string>
-    <string name="settings_text_size">सेटिंग्स पाठ का आकार</string>
-    <string name="settings_lock_time">सेटिंग्स लॉक टाइमआउट</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">अधिसूचना दिखाएं</string>
     <string name="show_app_list">ऐप सूची दिखाएं</string>
@@ -88,6 +88,10 @@
     <string name="open_power_dialog">पावर संवाद</string>
     <string name="take_a_screenshot">कोई स्क्रीनशॉट लें</string>
     <string name="double_tap_to_lock_screen">लॉक करने के लिए डबल टैप करें</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">सेटिंग्स पाठ का आकार</string>
+    <string name="display_hidden_apps">छिपे हुए ऐप्स प्रदर्शित करें</string>
+    <string name="lock_settings">सेटिंग्स लॉक करें</string>
     <!-- Backup Strings -->
     <string name="backup">बैकअप</string>
     <string name="load_backup">बैकअप को लोड करना</string>
@@ -100,7 +104,6 @@
     <string name="text_biometric_login_sub">अपने बायोमेट्रिक क्रेडेंशियल का उपयोग करके लॉग इन करें</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">सभी एप्लीकेशन</string>
-    <string name="display_hidden_apps">छिपे हुए ऐप्स प्रदर्शित करें</string>
     <string name="drawer_list_empty_hint">कोई ऐप्लिकेशन नहीं मिला</string>
     <string name="long_press_for_settings">सेटिंग्स के लिए कहीं भी देर तक दबाएं</string>
     <string name="swipe_up_for_apps">सभी ऐप्स के लिए ऊपर की ओर स्वाइप करें</string>
@@ -111,5 +114,4 @@
     <string name="accessibility_service_name">एमएल लॉन्चर एक्शन सर्विस</string>
     <string name="accessibility_service_description">यह एक्सेसिबिलिटी सेवा एमएल लॉन्चर को स्क्रीन लॉक करने या त्वरित सेटिंग खोलने जैसी कुछ कार्रवाइयां करने की अनुमति देती है। हमारी एक्सेसिबिलिटी सेवा कोई डेटा एकत्र या साझा नहीं करती है।</string>
     <string name="version">संस्करण</string>
-    <string name="lock_settings">सेटिंग्स लॉक करें</string>
 </resources>
