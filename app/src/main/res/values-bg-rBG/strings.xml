@@ -28,6 +28,8 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Клавиатура за автошоу</string>
     <string name="auto_open_apps">Автоматично отваряне на приложения</string>
+    <string name="display_recent_apps">Показване на последните приложения</string>
+    <string name="number_of_recents">Брой скорошни приложения</string>
     <string name="filter_strength">Сила на филтъра</string>
     <string name="search_from_start">Търсене на приложения от началото.</string>
     <string name="icon_font">Използвайте шрифта на иконата</string>
@@ -76,8 +78,6 @@
     <string name="open">Отворете</string>
     <string name="close">Затвори</string>
     <string name="copy">копие</string>
-    <string name="settings_text_size">Настройки Размер на текста</string>
-    <string name="settings_lock_time">Изчакване за заключване на настройките</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Показване на известие</string>
     <string name="show_app_list">Показване на списъка с приложения</string>
@@ -88,6 +88,10 @@
     <string name="open_power_dialog">Диалог за захранване</string>
     <string name="take_a_screenshot">Направете екранна снимка</string>
     <string name="double_tap_to_lock_screen">Двойно докосване за заключване</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Настройки Размер на текста</string>
+    <string name="display_hidden_apps">Показване на скрити приложения</string>
+    <string name="lock_settings">Настройки за заключване</string>
     <!-- Backup Strings -->
     <string name="backup">Резервно копие</string>
     <string name="load_backup">Архивиране на зареждането</string>
@@ -100,7 +104,6 @@
     <string name="text_biometric_login_sub">Влезте с вашите биометрични идентификационни данни</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Всички приложения</string>
-    <string name="display_hidden_apps">Показване на скрити приложения</string>
     <string name="drawer_list_empty_hint">Не са намерени приложения</string>
     <string name="long_press_for_settings">Дълго натискане навсякъде за настройки</string>
     <string name="swipe_up_for_apps">Плъзнете нагоре за всички приложения</string>
@@ -111,5 +114,4 @@
     <string name="accessibility_service_name">Услуга за действия на mLauncher</string>
     <string name="accessibility_service_description">Тази услуга за достъпност позволява на mLauncher да извършва определени действия като заключване на екрана или отваряне на бързите настройки. Нашата услуга за достъпност не събира и не споделя никакви данни.</string>
     <string name="version">Версия</string>
-    <string name="lock_settings">Настройки за заключване</string>
 </resources>
