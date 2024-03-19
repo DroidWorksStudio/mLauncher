@@ -28,6 +28,8 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Deschideți automat aplicațiile</string>
+    <string name="display_recent_apps">Afișează aplicații recente</string>
+    <string name="number_of_recents">Numărul de aplicații recente</string>
     <string name="filter_strength">Puterea filtrului</string>
     <string name="search_from_start">Căutare aplicație de la început.</string>
     <string name="icon_font">Utilizați fontul pentru pictograme</string>
@@ -76,8 +78,6 @@
     <string name="open">Deschideți</string>
     <string name="close">Inchide</string>
     <string name="copy">copie</string>
-    <string name="settings_text_size">Setări Dimensiunea textului</string>
-    <string name="settings_lock_time">Timeout pentru blocare setări</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Arată notificarea</string>
     <string name="show_app_list">Arată lista de aplicații</string>
@@ -88,6 +88,10 @@
     <string name="open_power_dialog">Dialog Power</string>
     <string name="take_a_screenshot">Faceți o captură de ecran</string>
     <string name="double_tap_to_lock_screen">Dublă atingere pentru a bloca</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Setări Dimensiunea textului</string>
+    <string name="display_hidden_apps">Afișează aplicații ascunse</string>
+    <string name="lock_settings">Setări de blocare</string>
     <!-- Backup Strings -->
     <string name="backup">Backup</string>
     <string name="load_backup">Încărcare copie de rezervă</string>
@@ -100,7 +104,6 @@
     <string name="text_biometric_login_sub">Conectați-vă utilizând acreditările dvs. biometrice</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Toate aplicațiile</string>
-    <string name="display_hidden_apps">Afișează aplicații ascunse</string>
     <string name="drawer_list_empty_hint">Nicio aplicație găsită</string>
     <string name="long_press_for_settings">Apăsați lung oriunde pentru setări</string>
     <string name="swipe_up_for_apps">Glisați în sus pentru toate aplicațiile</string>
@@ -111,5 +114,4 @@
     <string name="accessibility_service_name">Serviciul de acțiuni mLauncher</string>
     <string name="accessibility_service_description">Acest serviciu de accesibilitate permite mLauncher să facă anumite acțiuni, cum ar fi blocarea ecranului sau deschiderea setărilor rapide. Serviciul nostru de accesibilitate nu colectează și nu partajează date.</string>
     <string name="version">Versiune</string>
-    <string name="lock_settings">Setări de blocare</string>
 </resources>

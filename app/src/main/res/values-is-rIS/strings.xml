@@ -28,6 +28,8 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Sjálfvirk lyklaborð</string>
     <string name="auto_open_apps">Opna forrit sjálfkrafa</string>
+    <string name="display_recent_apps">Sýna nýleg forrit</string>
+    <string name="number_of_recents">Fjöldi nýlegra forrita</string>
     <string name="filter_strength">Síustyrkur</string>
     <string name="search_from_start">App leit frá upphafi.</string>
     <string name="icon_font">Notaðu táknleturgerð</string>
@@ -76,8 +78,6 @@
     <string name="open">Opið</string>
     <string name="close">Loka</string>
     <string name="copy">afrit</string>
-    <string name="settings_text_size">Stillingar Textastærð</string>
-    <string name="settings_lock_time">Stillingar Læsa Tímamörk</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Sýna tilkynningu</string>
     <string name="show_app_list">Sýna forritalista</string>
@@ -88,6 +88,10 @@
     <string name="open_power_dialog">Power Dialog</string>
     <string name="take_a_screenshot">Taktu skjáskot</string>
     <string name="double_tap_to_lock_screen">Ýttu tvisvar til að læsa</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Stillingar Textastærð</string>
+    <string name="display_hidden_apps">Sýna falin forrit</string>
+    <string name="lock_settings">Læsa stillingar</string>
     <!-- Backup Strings -->
     <string name="backup">Afritun</string>
     <string name="load_backup">Hlaða öryggisafrit</string>
@@ -100,7 +104,6 @@
     <string name="text_biometric_login_sub">Skráðu þig inn með líffræðilegum tölfræðiskilríkjum þínum</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Öll forrit</string>
-    <string name="display_hidden_apps">Sýna falin forrit</string>
     <string name="drawer_list_empty_hint">Engin forrit fundust</string>
     <string name="long_press_for_settings">Ýttu lengi hvar sem er fyrir stillingar</string>
     <string name="swipe_up_for_apps">Strjúktu upp fyrir öll forrit</string>
@@ -111,5 +114,4 @@
     <string name="accessibility_service_name">mLauncher Actions Service</string>
     <string name="accessibility_service_description">Þessi aðgengisþjónusta gerir mLauncher kleift að gera ákveðnar aðgerðir eins og að læsa skjánum eða opna flýtistillingarnar. Aðgengisþjónusta okkar safnar ekki né deilir neinum gögnum.</string>
     <string name="version">Útgáfa</string>
-    <string name="lock_settings">Læsa stillingar</string>
 </resources>

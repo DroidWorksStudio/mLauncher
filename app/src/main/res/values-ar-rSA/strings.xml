@@ -28,6 +28,8 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">فتح التطبيقات تلقائياً</string>
+    <string name="display_recent_apps">عرض التطبيقات الحديثة</string>
+    <string name="number_of_recents">عدد التطبيقات الحديثة</string>
     <string name="filter_strength">قوة التصفية</string>
     <string name="search_from_start">البحث عن التطبيق من البداية.</string>
     <string name="icon_font">استخدم خط الأيقونة</string>
@@ -76,8 +78,6 @@
     <string name="open">فتح</string>
     <string name="close">أغلق</string>
     <string name="copy">ينسخ</string>
-    <string name="settings_text_size">إعدادات حجم النص</string>
-    <string name="settings_lock_time">مهلة قفل الإعدادات</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">إظهار الإشعارات</string>
     <string name="show_app_list">إظهار قائمة التطبيقات</string>
@@ -88,6 +88,10 @@
     <string name="open_power_dialog">حوار القوة</string>
     <string name="take_a_screenshot">خذ لقطة شاشة</string>
     <string name="double_tap_to_lock_screen">النقر المزدوج للقفل</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">إعدادات حجم النص</string>
+    <string name="display_hidden_apps">عرض التطبيقات المخفية</string>
+    <string name="lock_settings">إعدادات القفل</string>
     <!-- Backup Strings -->
     <string name="backup">النسخ الاحتياطي</string>
     <string name="load_backup">تحميل النسخ الاحتياطي</string>
@@ -100,7 +104,6 @@
     <string name="text_biometric_login_sub">قم بتسجيل الدخول باستخدام بيانات الاعتماد البيومترية الخاصة بك</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">جميع التطبيقات</string>
-    <string name="display_hidden_apps">عرض التطبيقات المخفية</string>
     <string name="drawer_list_empty_hint">لم يتم العثور على تطبيقات</string>
     <string name="long_press_for_settings">اضغط مطولاً في أي مكان للإعدادات</string>
     <string name="swipe_up_for_apps">مرر لأعلى لجميع التطبيقات</string>
@@ -111,5 +114,4 @@
     <string name="accessibility_service_name">خدمة إجراءات mLauncher</string>
     <string name="accessibility_service_description">تتيح خدمة إمكانية الوصول هذه لـ mLauncher القيام بإجراءات معينة مثل قفل الشاشة أو فتح الإعدادات السريعة. خدمة الوصول لدينا لا تجمع أو تشارك أي بيانات.</string>
     <string name="version">إصدار</string>
-    <string name="lock_settings">إعدادات القفل</string>
 </resources>

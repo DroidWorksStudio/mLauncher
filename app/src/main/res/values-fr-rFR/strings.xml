@@ -28,6 +28,8 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Ouvrir automatiquement les applications</string>
+    <string name="display_recent_apps">Afficher les applications récentes</string>
+    <string name="number_of_recents">Nombre d\'applications récentes</string>
     <string name="filter_strength">Puissance du filtre</string>
     <string name="search_from_start">Recherche d\'applications depuis le début.</string>
     <string name="icon_font">Utiliser la police de l\'icône</string>
@@ -76,8 +78,6 @@
     <string name="open">Ouvert</string>
     <string name="close">Fermer</string>
     <string name="copy">copie</string>
-    <string name="settings_text_size">Taille du texte des paramètres</string>
-    <string name="settings_lock_time">Délai de verrouillage des paramètres</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Afficher la notification</string>
     <string name="show_app_list">Afficher la liste des applications</string>
@@ -88,6 +88,10 @@
     <string name="open_power_dialog">Boîte de dialogue d\'alimentation</string>
     <string name="take_a_screenshot">Prendre une capture d\'écran</string>
     <string name="double_tap_to_lock_screen">Double appui pour verrouiller</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Taille du texte des paramètres</string>
+    <string name="display_hidden_apps">Afficher les applications cachées</string>
+    <string name="lock_settings">Paramètres de verrouillage</string>
     <!-- Backup Strings -->
     <string name="backup">Sauvegarde</string>
     <string name="load_backup">Charger la sauvegarde</string>
@@ -100,7 +104,6 @@
     <string name="text_biometric_login_sub">Connectez-vous en utilisant votre identifiant biométrique</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Toutes les applications</string>
-    <string name="display_hidden_apps">Afficher les applications cachées</string>
     <string name="drawer_list_empty_hint">Aucune application trouvée</string>
     <string name="long_press_for_settings">Appui long n\'importe où pour les paramètres</string>
     <string name="swipe_up_for_apps">Glisser vers le haut pour toutes les applications</string>
@@ -111,5 +114,4 @@
     <string name="accessibility_service_name">Service d\'actions mLauncher</string>
     <string name="accessibility_service_description">Ce service d\'accessibilité permet à mLauncher d\'effectuer certaines actions telles que verrouiller l\'écran ou ouvrir les paramètres rapides. Notre service d\'accessibilité ne collecte ni ne partage aucune donnée.</string>
     <string name="version">Version</string>
-    <string name="lock_settings">Paramètres de verrouillage</string>
 </resources>

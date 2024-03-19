@@ -28,6 +28,8 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">ഓട്ടോ ഷോ കീബോർഡ്</string>
     <string name="auto_open_apps">ആപ്പുകൾ സ്വയമേവ തുറക്കുക</string>
+    <string name="display_recent_apps">സമീപകാല ആപ്പുകൾ പ്രദർശിപ്പിക്കുക</string>
+    <string name="number_of_recents">സമീപകാല ആപ്പുകളുടെ എണ്ണം</string>
     <string name="filter_strength">ഫിൽട്ടർ ശക്തി</string>
     <string name="search_from_start">തുടക്കം മുതൽ അപ്ലിക്കേഷൻ തിരയൽ.</string>
     <string name="icon_font">ഐക്കൺ ഫോണ്ട് ഉപയോഗിക്കുക</string>
@@ -76,8 +78,6 @@
     <string name="open">തുറക്കുക</string>
     <string name="close">അടയ്ക്കുക</string>
     <string name="copy">പകർത്തുക</string>
-    <string name="settings_text_size">ക്രമീകരണങ്ങൾ ടെക്സ്റ്റ് വലിപ്പം</string>
-    <string name="settings_lock_time">ക്രമീകരണങ്ങൾ ലോക്ക് ടൈംഔട്ട്</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">അറിയിപ്പ് കാണിക്കുക</string>
     <string name="show_app_list">ആപ്പ് ലിസ്റ്റ് കാണിക്കുക</string>
@@ -88,6 +88,10 @@
     <string name="open_power_dialog">പവർ ഡയലോഗ്</string>
     <string name="take_a_screenshot">ഒരു സ്ക്രീൻഷോട്ട് എടുക്കുക</string>
     <string name="double_tap_to_lock_screen">ലോക്ക് ചെയ്യാൻ രണ്ടുതവണ ടാപ്പ് ചെയ്യുക</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">ക്രമീകരണങ്ങൾ ടെക്സ്റ്റ് വലിപ്പം</string>
+    <string name="display_hidden_apps">മറഞ്ഞിരിക്കുന്ന ആപ്പുകൾ പ്രദർശിപ്പിക്കുക</string>
+    <string name="lock_settings">ലോക്ക് ക്രമീകരണങ്ങൾ</string>
     <!-- Backup Strings -->
     <string name="backup">ബാക്കപ്പ്</string>
     <string name="load_backup">ബാക്കപ്പ് ലോഡ് ചെയ്യുക</string>
@@ -100,7 +104,6 @@
     <string name="text_biometric_login_sub">നിങ്ങളുടെ ബയോമെട്രിക് ക്രെഡൻഷ്യൽ ഉപയോഗിച്ച് ലോഗിൻ ചെയ്യുക</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">എല്ലാ ആപ്പുകളും</string>
-    <string name="display_hidden_apps">മറഞ്ഞിരിക്കുന്ന ആപ്പുകൾ പ്രദർശിപ്പിക്കുക</string>
     <string name="drawer_list_empty_hint">ആപ്പുകളൊന്നും കണ്ടെത്തിയില്ല</string>
     <string name="long_press_for_settings">ക്രമീകരണങ്ങൾക്കായി എവിടെയും ദീർഘനേരം അമർത്തുക</string>
     <string name="swipe_up_for_apps">എല്ലാ ആപ്പുകൾക്കും മുകളിലേക്ക് സ്വൈപ്പ് ചെയ്യുക</string>
@@ -111,5 +114,4 @@
     <string name="accessibility_service_name">mLouncher പ്രവർത്തന സേവനം</string>
     <string name="accessibility_service_description">സ്‌ക്രീൻ ലോക്കുചെയ്യുകയോ ദ്രുത ക്രമീകരണങ്ങൾ തുറക്കുകയോ പോലുള്ള ചില പ്രവർത്തനങ്ങൾ ചെയ്യാൻ mLauncher-നെ ഈ പ്രവേശനക്ഷമത സേവനം അനുവദിക്കുന്നു. ഞങ്ങളുടെ പ്രവേശനക്ഷമത സേവനം ഒരു ഡാറ്റയും ശേഖരിക്കുകയോ പങ്കിടുകയോ ചെയ്യുന്നില്ല.</string>
     <string name="version">പതിപ്പ്</string>
-    <string name="lock_settings">ലോക്ക് ക്രമീകരണങ്ങൾ</string>
 </resources>

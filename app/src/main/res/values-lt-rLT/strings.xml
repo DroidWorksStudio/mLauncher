@@ -28,6 +28,8 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Automatinis klaviatūros rodymas</string>
     <string name="auto_open_apps">Automatiškai atidaryti programėlės</string>
+    <string name="display_recent_apps">Rodyti naujausias programas</string>
+    <string name="number_of_recents">Naujausių programų skaičius</string>
     <string name="filter_strength">Filtro stiprumas</string>
     <string name="search_from_start">Programų paieška nuo pat pradžių.</string>
     <string name="icon_font">Naudokite piktogramos šriftą</string>
@@ -76,8 +78,6 @@
     <string name="open">Atidaryti</string>
     <string name="close">Uždaryti</string>
     <string name="copy">kopija</string>
-    <string name="settings_text_size">Nustatymai Teksto dydis</string>
-    <string name="settings_lock_time">Nustatymai Užrakinimo skirtasis laikas</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Rodyti pranešimą</string>
     <string name="show_app_list">Rodyti programėlių sąrašą</string>
@@ -88,6 +88,10 @@
     <string name="open_power_dialog">Maitinimo dialogas</string>
     <string name="take_a_screenshot">Padarykite ekrano kopiją</string>
     <string name="double_tap_to_lock_screen">Dukart palieskite, kad užrakintumėte</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Nustatymai Teksto dydis</string>
+    <string name="display_hidden_apps">Rodyti paslėptas programas</string>
+    <string name="lock_settings">Užrakinimo nustatymai</string>
     <!-- Backup Strings -->
     <string name="backup">Daryti atsarginę kopiją</string>
     <string name="load_backup">Atkurti atsarginę kopiją</string>
@@ -100,7 +104,6 @@
     <string name="text_biometric_login_sub">Prisijunkite naudodami biometrinius kredencialus</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Visos programėlės</string>
-    <string name="display_hidden_apps">Rodyti paslėptas programas</string>
     <string name="drawer_list_empty_hint">Nerasta jokių programėlių</string>
     <string name="long_press_for_settings">Ilgai paspauskite bet kur, kad pamatytumėte nustatymus</string>
     <string name="swipe_up_for_apps">Braukite aukštyn, kad pamatytumėte visas programėlės</string>
@@ -111,5 +114,4 @@
     <string name="accessibility_service_name">mLauncher veiksmų tarnyba</string>
     <string name="accessibility_service_description">Ši pritaikymo neįgaliesiems paslauga leidžia „mLauncher“ atlikti tam tikrus veiksmus, pvz., užrakinti ekraną arba atidaryti sparčiuosius nustatymus. Mūsų pritaikymo neįgaliesiems paslauga nerenka ir nebendrina jokių duomenų.</string>
     <string name="version">Versija</string>
-    <string name="lock_settings">Užrakinimo nustatymai</string>
 </resources>

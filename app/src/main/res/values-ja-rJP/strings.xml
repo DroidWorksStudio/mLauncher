@@ -28,6 +28,8 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">アプリを自動的に開く</string>
+    <string name="display_recent_apps">最近のアプリを表示</string>
+    <string name="number_of_recents">最近使用したアプリの数</string>
     <string name="filter_strength">フィルター強度</string>
     <string name="search_from_start">最初からアプリ検索。</string>
     <string name="icon_font">アイコンフォントを使用</string>
@@ -76,8 +78,6 @@
     <string name="open">開く</string>
     <string name="close">閉じる</string>
     <string name="copy">コピー</string>
-    <string name="settings_text_size">設定文字サイズ</string>
-    <string name="settings_lock_time">設定ロックのタイムアウト</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">通知を表示</string>
     <string name="show_app_list">アプリ一覧を表示</string>
@@ -88,6 +88,10 @@
     <string name="open_power_dialog">電源ダイアログ</string>
     <string name="take_a_screenshot">スクリーンショットを撮る</string>
     <string name="double_tap_to_lock_screen">ダブルタップでロック</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">設定文字サイズ</string>
+    <string name="display_hidden_apps">隠しアプリを表示する</string>
+    <string name="lock_settings">ロック設定</string>
     <!-- Backup Strings -->
     <string name="backup">バックアップ</string>
     <string name="load_backup">バックアップを読み込む</string>
@@ -100,7 +104,6 @@
     <string name="text_biometric_login_sub">生体認証資格情報を使用してログインします</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">すべてのアプリ</string>
-    <string name="display_hidden_apps">隠しアプリを表示する</string>
     <string name="drawer_list_empty_hint">アプリが見つかりません</string>
     <string name="long_press_for_settings">設定用に長押ししてください</string>
     <string name="swipe_up_for_apps">すべてのアプリで上にスワイプ</string>
@@ -111,5 +114,4 @@
     <string name="accessibility_service_name">mLauncher アクションサービス</string>
     <string name="accessibility_service_description">このアクセシビリティ サービスにより、mLauncher は画面のロックやクイック設定を開くなどの特定のアクションを実行できます。当社のアクセシビリティ サービスは、いかなるデータも収集または共有しません。</string>
     <string name="version">バージョン</string>
-    <string name="lock_settings">ロック設定</string>
 </resources>

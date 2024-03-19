@@ -28,6 +28,8 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Méarchlár taispeána uathoibríoch</string>
     <string name="auto_open_apps">Aipeanna a oscailt go huathoibríoch</string>
+    <string name="display_recent_apps">Taispeáin Aipeanna Déanaí</string>
+    <string name="number_of_recents">Líon Aipeanna Déanaí</string>
     <string name="filter_strength">Neart Scagaire</string>
     <string name="search_from_start">Cuardach aip ón tús.</string>
     <string name="icon_font">Úsáid Cló Deilbhín</string>
@@ -76,8 +78,6 @@
     <string name="open">Oscail</string>
     <string name="close">Dún</string>
     <string name="copy">cóip</string>
-    <string name="settings_text_size">Méid Téacs Socruithe</string>
-    <string name="settings_lock_time">Socruithe Glasála Teorainn</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Taispeáin Fógra</string>
     <string name="show_app_list">Taispeáin Liosta App</string>
@@ -88,6 +88,10 @@
     <string name="open_power_dialog">Dialóg Cumhachta</string>
     <string name="take_a_screenshot">Glac Seat</string>
     <string name="double_tap_to_lock_screen">Tapáil faoi dhó chun glasáil</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Méid Téacs Socruithe</string>
+    <string name="display_hidden_apps">Taispeáin Apps Hidden</string>
+    <string name="lock_settings">Socruithe Glasála</string>
     <!-- Backup Strings -->
     <string name="backup">Cúltaca</string>
     <string name="load_backup">Luchtaigh Cúltaca</string>
@@ -100,7 +104,6 @@
     <string name="text_biometric_login_sub">Logáil isteach ag baint úsáide as do shonraí bithmhéadracha</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Gach apps</string>
-    <string name="display_hidden_apps">Taispeáin Apps Hidden</string>
     <string name="drawer_list_empty_hint">Níor aimsíodh aon aipeanna</string>
     <string name="long_press_for_settings">Brúigh fada áit ar bith le haghaidh socruithe</string>
     <string name="swipe_up_for_apps">Svaidhpeáil suas do gach feidhmchlár</string>
@@ -111,5 +114,4 @@
     <string name="accessibility_service_name">mLauncher Actions Service</string>
     <string name="accessibility_service_description">Ligeann an tseirbhís inrochtaineachta seo do mLauncher gníomhartha áirithe a dhéanamh ar nós an scáileán a ghlasáil nó na socruithe tapa a oscailt. Ní bhailíonn ná ní roinneann ár seirbhís inrochtaineachta aon sonraí.</string>
     <string name="version">Leagan</string>
-    <string name="lock_settings">Socruithe Glasála</string>
 </resources>

@@ -28,6 +28,8 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Kitendry fampisehoana mandeha ho azy</string>
     <string name="auto_open_apps">Auto misokatra fampiharana</string>
+    <string name="display_recent_apps">Asehoy ny Apps vao haingana</string>
+    <string name="number_of_recents">Isan\'ny fampiharana vao haingana</string>
     <string name="filter_strength">Herin\'ny sivana</string>
     <string name="search_from_start">Fikarohana fampiharana hatramin\'ny voalohany.</string>
     <string name="icon_font">Ampiasao ny endritsoratra Icon</string>
@@ -76,8 +78,6 @@
     <string name="open">Misokatra</string>
     <string name="close">AKAIKY</string>
     <string name="copy">dika mitovy</string>
-    <string name="settings_text_size">Haben\'ny lahatsoratra Settings</string>
-    <string name="settings_lock_time">Fotoana hidin\'ny Settings</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Asehoy ny fampahafantarana</string>
     <string name="show_app_list">Asehoy ny lisitry ny fampiharana</string>
@@ -88,6 +88,10 @@
     <string name="open_power_dialog">Power Dialogue</string>
     <string name="take_a_screenshot">Makà pikantsary</string>
     <string name="double_tap_to_lock_screen">Tsindrio indroa hanidy</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Haben\'ny lahatsoratra Settings</string>
+    <string name="display_hidden_apps">Asehoy ny Apps Hidden</string>
+    <string name="lock_settings">Lock Settings</string>
     <!-- Backup Strings -->
     <string name="backup">nomaniny ho solon\'izay</string>
     <string name="load_backup">Load Backup</string>
@@ -100,7 +104,6 @@
     <string name="text_biometric_login_sub">Midira amin\'ny alàlan\'ny fahazoan-dàlana biometrika anao</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Apps rehetra</string>
-    <string name="display_hidden_apps">Asehoy ny Apps Hidden</string>
     <string name="drawer_list_empty_hint">Tsy misy fampiharana hita</string>
     <string name="long_press_for_settings">Tsindrio lava na aiza na aiza ho an\'ny fanovana</string>
     <string name="swipe_up_for_apps">Swipe miakatra ho an\'ny fampiharana rehetra</string>
@@ -111,5 +114,4 @@
     <string name="accessibility_service_name">MLauncher Actions Service</string>
     <string name="accessibility_service_description">Ity serivisy fidirana ity dia ahafahan\'ny mLauncher manao hetsika sasany toy ny fanidiana ny efijery na fanokafana ny fanovana haingana. Ny serivisy fidiranay dia tsy manangona na mizara angona.</string>
     <string name="version">Malagasy Bible</string>
-    <string name="lock_settings">Lock Settings</string>
 </resources>

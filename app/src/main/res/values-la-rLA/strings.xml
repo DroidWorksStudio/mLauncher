@@ -28,6 +28,8 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto ostendit tincidunt</string>
     <string name="auto_open_apps">Auto aperta apps</string>
+    <string name="display_recent_apps">Display Recent Apps</string>
+    <string name="number_of_recents">Numerus recentium Apps</string>
     <string name="filter_strength">Filtrum fortitudo</string>
     <string name="search_from_start">App quaerere ab initio.</string>
     <string name="icon_font">Usus Icone Font</string>
@@ -76,8 +78,6 @@
     <string name="open">Apertum</string>
     <string name="close">Close</string>
     <string name="copy">effingo</string>
-    <string name="settings_text_size">Optiones Text Size</string>
-    <string name="settings_lock_time">Occasus sursum Timeout</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Ostende Notification</string>
     <string name="show_app_list">Ostende App List</string>
@@ -88,6 +88,10 @@
     <string name="open_power_dialog">Potestas Dialog</string>
     <string name="take_a_screenshot">Accipies Screenshot</string>
     <string name="double_tap_to_lock_screen">Duplex ICTUS ut cincinno</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Optiones Text Size</string>
+    <string name="display_hidden_apps">Propono occulta Apps</string>
+    <string name="lock_settings">Cincinno Optiones</string>
     <!-- Backup Strings -->
     <string name="backup">Tergum</string>
     <string name="load_backup">Tergum onus</string>
@@ -100,7 +104,6 @@
     <string name="text_biometric_login_sub">Log in usus tuos biometric credential</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Omnes apps</string>
-    <string name="display_hidden_apps">Propono occulta Apps</string>
     <string name="drawer_list_empty_hint">Non apps invenerunt</string>
     <string name="long_press_for_settings">Long torcular huc ad occasus</string>
     <string name="swipe_up_for_apps">Tollenone in omnibus apps</string>
@@ -111,5 +114,4 @@
     <string name="accessibility_service_name">mLauncher Actiones Service</string>
     <string name="accessibility_service_description">Accessibilitas haec servitii permittit mLauncher aliquas actiones facere, ut velum claudens vel occasus vivos aperiens. Nostri muneris accessibilitas nullas notitias colligit nec communicat.</string>
     <string name="version">Version</string>
-    <string name="lock_settings">Cincinno Optiones</string>
 </resources>

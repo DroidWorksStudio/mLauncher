@@ -28,6 +28,8 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Automatické otevření aplikací</string>
+    <string name="display_recent_apps">Zobrazit poslední aplikace</string>
+    <string name="number_of_recents">Počet posledních aplikací</string>
     <string name="filter_strength">Síla filtru</string>
     <string name="search_from_start">Hledání aplikací od začátku.</string>
     <string name="icon_font">Použijte písmo ikony</string>
@@ -76,8 +78,6 @@
     <string name="open">Otevřít</string>
     <string name="close">Zavřít</string>
     <string name="copy">kopírovat</string>
-    <string name="settings_text_size">Nastavení Velikost textu</string>
-    <string name="settings_lock_time">Časový limit zámku nastavení</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Zobrazit oznámení</string>
     <string name="show_app_list">Zobrazit seznam aplikací</string>
@@ -88,6 +88,10 @@
     <string name="open_power_dialog">Dialog napájení</string>
     <string name="take_a_screenshot">Udělejte snímek obrazovky</string>
     <string name="double_tap_to_lock_screen">Zamknout dvojím poklepáním</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Nastavení Velikost textu</string>
+    <string name="display_hidden_apps">Zobrazit skryté aplikace</string>
+    <string name="lock_settings">Nastavení zámku</string>
     <!-- Backup Strings -->
     <string name="backup">Záloha</string>
     <string name="load_backup">Načíst zálohu</string>
@@ -100,7 +104,6 @@
     <string name="text_biometric_login_sub">Přihlaste se pomocí svých biometrických údajů</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Všechny aplikace</string>
-    <string name="display_hidden_apps">Zobrazit skryté aplikace</string>
     <string name="drawer_list_empty_hint">Nebyly nalezeny žádné aplikace</string>
     <string name="long_press_for_settings">Dlouze podržte kdekoli pro nastavení</string>
     <string name="swipe_up_for_apps">Přejeďte prstem nahoru pro všechny aplikace</string>
@@ -111,5 +114,4 @@
     <string name="accessibility_service_name">mLauncher akční služba</string>
     <string name="accessibility_service_description">Tato služba usnadnění umožňuje mLauncheru provádět určité akce, jako je zamykání obrazovky nebo otevření rychlých nastavení. Naše služba přístupnosti neshromažďuje ani nesdílí žádná data.</string>
     <string name="version">Verze</string>
-    <string name="lock_settings">Nastavení zámku</string>
 </resources>

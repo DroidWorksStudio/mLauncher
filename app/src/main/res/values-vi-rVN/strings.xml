@@ -28,6 +28,8 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Auto open apps</string>
+    <string name="display_recent_apps">Hiển thị ứng dụng gần đây</string>
+    <string name="number_of_recents">Số lượng ứng dụng gần đây</string>
     <string name="filter_strength">Độ bền của bộ lọc</string>
     <string name="search_from_start">Tìm kiếm ứng dụng từ đầu.</string>
     <string name="icon_font">Sử dụng phông chữ biểu tượng</string>
@@ -76,8 +78,6 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string name="copy">sao chép</string>
-    <string name="settings_text_size">Cài đặt Kích thước văn bản</string>
-    <string name="settings_lock_time">Thời gian chờ khóa cài đặt</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Show Notification</string>
     <string name="show_app_list">Show App List</string>
@@ -88,6 +88,10 @@
     <string name="open_power_dialog">Hộp thoại nguồn</string>
     <string name="take_a_screenshot">Chụp màn hình</string>
     <string name="double_tap_to_lock_screen">Double tap to lock</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Cài đặt Kích thước văn bản</string>
+    <string name="display_hidden_apps">Hiển thị ứng dụng ẩn</string>
+    <string name="lock_settings">Cài đặt khóa</string>
     <!-- Backup Strings -->
     <string name="backup">Backup</string>
     <string name="load_backup">Load Backup</string>
@@ -100,7 +104,6 @@
     <string name="text_biometric_login_sub">Đăng nhập bằng thông tin sinh trắc học của bạn</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>
-    <string name="display_hidden_apps">Hiển thị ứng dụng ẩn</string>
     <string name="drawer_list_empty_hint">No apps found</string>
     <string name="long_press_for_settings">Long press anywhere for settings</string>
     <string name="swipe_up_for_apps">Swipe up for all apps</string>
@@ -111,5 +114,4 @@
     <string name="accessibility_service_name">mLauncher Actions Service</string>
     <string name="accessibility_service_description">Dịch vụ trợ năng này cho phép mLauncher thực hiện một số hành động nhất định như khóa màn hình hoặc mở cài đặt nhanh. Dịch vụ trợ năng của chúng tôi không thu thập hoặc chia sẻ bất kỳ dữ liệu nào.</string>
     <string name="version">Phiên bản</string>
-    <string name="lock_settings">Cài đặt khóa</string>
 </resources>

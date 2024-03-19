@@ -28,6 +28,8 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Apps automatisch openen</string>
+    <string name="display_recent_apps">Recente apps weergeven</string>
+    <string name="number_of_recents">Aantal recente apps</string>
     <string name="filter_strength">Filtersterkte</string>
     <string name="search_from_start">App zoeken vanaf het begin.</string>
     <string name="icon_font">Gebruik pictogramlettertype</string>
@@ -76,8 +78,6 @@
     <string name="open">Open</string>
     <string name="close">Afsluiten</string>
     <string name="copy">kopiëren</string>
-    <string name="settings_text_size">Instellingen Tekstgrootte</string>
-    <string name="settings_lock_time">Instellingen Lock time-out</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Toon melding</string>
     <string name="show_app_list">Toon App Lijst</string>
@@ -88,6 +88,10 @@
     <string name="open_power_dialog">Vermogen Dialoog</string>
     <string name="take_a_screenshot">Maak een screenshot</string>
     <string name="double_tap_to_lock_screen">Dubbeltik om te vergrendelen</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Instellingen Tekstgrootte</string>
+    <string name="display_hidden_apps">Geef verborgen apps weer</string>
+    <string name="lock_settings">Instellingen vergrendelen</string>
     <!-- Backup Strings -->
     <string name="backup">Back-up</string>
     <string name="load_backup">Back-up laden</string>
@@ -100,7 +104,6 @@
     <string name="text_biometric_login_sub">Log in met uw biometrische gegevens</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Alle apps</string>
-    <string name="display_hidden_apps">Geef verborgen apps weer</string>
     <string name="drawer_list_empty_hint">Geen apps gevonden</string>
     <string name="long_press_for_settings">Lang drukken voor instellingen</string>
     <string name="swipe_up_for_apps">Veeg omhoog voor alle apps</string>
@@ -111,5 +114,4 @@
     <string name="accessibility_service_name">mLauncher Acties Service</string>
     <string name="accessibility_service_description">Met deze toegankelijkheidsservice kan mLauncher bepaalde acties uitvoeren, zoals het scherm vergrendelen of de snelle instellingen openen. Onze bereikbaarheidsdienst verzamelt of deelt geen gegevens.</string>
     <string name="version">Versie</string>
-    <string name="lock_settings">Instellingen vergrendelen</string>
 </resources>

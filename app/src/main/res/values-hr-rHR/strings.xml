@@ -28,6 +28,8 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Automatski prikaz tipkovnice</string>
     <string name="auto_open_apps">Automatsko otvaranje aplikacija</string>
+    <string name="display_recent_apps">Prikaz nedavnih aplikacija</string>
+    <string name="number_of_recents">Broj nedavnih aplikacija</string>
     <string name="filter_strength">Snaga filtra</string>
     <string name="search_from_start">Pretraživanje aplikacije od početka.</string>
     <string name="icon_font">Koristite font ikone</string>
@@ -76,8 +78,6 @@
     <string name="open">Otvoren</string>
     <string name="close">Zatvoriti</string>
     <string name="copy">kopirati</string>
-    <string name="settings_text_size">Postavke Veličina teksta</string>
-    <string name="settings_lock_time">Istek vremena zaključavanja postavki</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Prikaži obavijest</string>
     <string name="show_app_list">Prikaži popis aplikacija</string>
@@ -88,6 +88,10 @@
     <string name="open_power_dialog">Dijalog napajanja</string>
     <string name="take_a_screenshot">Napravite snimku zaslona</string>
     <string name="double_tap_to_lock_screen">Dodirnite dvaput za zaključavanje</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Postavke Veličina teksta</string>
+    <string name="display_hidden_apps">Prikaz skrivenih aplikacija</string>
+    <string name="lock_settings">Postavke zaključavanja</string>
     <!-- Backup Strings -->
     <string name="backup">Sigurnosna kopija</string>
     <string name="load_backup">Učitaj sigurnosnu kopiju</string>
@@ -100,7 +104,6 @@
     <string name="text_biometric_login_sub">Prijavite se pomoću svoje biometrijske vjerodajnice</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Sve aplikacije</string>
-    <string name="display_hidden_apps">Prikaz skrivenih aplikacija</string>
     <string name="drawer_list_empty_hint">Nema pronađenih aplikacija</string>
     <string name="long_press_for_settings">Dugo pritisnite bilo gdje za postavke</string>
     <string name="swipe_up_for_apps">Prijeđite prstom prema gore za sve aplikacije</string>
@@ -111,5 +114,4 @@
     <string name="accessibility_service_name">Usluga mLauncher Actions</string>
     <string name="accessibility_service_description">Ova usluga pristupačnosti omogućuje mLauncheru određene radnje kao što je zaključavanje zaslona ili otvaranje brzih postavki. Naša usluga pristupačnosti ne prikuplja niti dijeli nikakve podatke.</string>
     <string name="version">Verzija</string>
-    <string name="lock_settings">Postavke zaključavanja</string>
 </resources>

@@ -28,6 +28,8 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">صفحه کلید نمایش خودکار</string>
     <string name="auto_open_apps">باز کردن خودکار برنامه ها</string>
+    <string name="display_recent_apps">نمایش برنامه های اخیر</string>
+    <string name="number_of_recents">تعداد برنامه های اخیر</string>
     <string name="filter_strength">قدرت فیلتر</string>
     <string name="search_from_start">جستجوی برنامه از ابتدا</string>
     <string name="icon_font">از فونت آیکون استفاده کنید</string>
@@ -76,8 +78,6 @@
     <string name="open">باز کن</string>
     <string name="close">نزدیک</string>
     <string name="copy">کپی 🀄</string>
-    <string name="settings_text_size">تنظیمات اندازه متن</string>
-    <string name="settings_lock_time">مهلت زمانی قفل تنظیمات</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">نمایش اعلان</string>
     <string name="show_app_list">نمایش لیست برنامه ها</string>
@@ -88,6 +88,10 @@
     <string name="open_power_dialog">گفتگوی برق</string>
     <string name="take_a_screenshot">یک اسکرین شات بگیرید</string>
     <string name="double_tap_to_lock_screen">برای قفل کردن، دو ضربه سریع بزنید</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">تنظیمات اندازه متن</string>
+    <string name="display_hidden_apps">نمایش برنامه های مخفی</string>
+    <string name="lock_settings">تنظیمات قفل</string>
     <!-- Backup Strings -->
     <string name="backup">پشتیبان گیری</string>
     <string name="load_backup">بارگیری نسخه پشتیبان</string>
@@ -100,7 +104,6 @@
     <string name="text_biometric_login_sub">با استفاده از اعتبار بیومتریک خود وارد شوید</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">همه برنامه ها</string>
-    <string name="display_hidden_apps">نمایش برنامه های مخفی</string>
     <string name="drawer_list_empty_hint">هیچ برنامه ای پیدا نشد</string>
     <string name="long_press_for_settings">برای تنظیمات، هر جایی را به مدت طولانی فشار دهید</string>
     <string name="swipe_up_for_apps">برای همه برنامه ها انگشت خود را به سمت بالا بکشید</string>
@@ -111,5 +114,4 @@
     <string name="accessibility_service_name">سرویس اقدامات mLauncher</string>
     <string name="accessibility_service_description">این سرویس دسترسی به mLauncher اجازه می دهد تا اقدامات خاصی مانند قفل کردن صفحه یا باز کردن تنظیمات سریع را انجام دهد. سرویس دسترسی ما هیچ داده ای را جمع آوری یا به اشتراک نمی گذارد.</string>
     <string name="version">نسخه</string>
-    <string name="lock_settings">تنظیمات قفل</string>
 </resources>

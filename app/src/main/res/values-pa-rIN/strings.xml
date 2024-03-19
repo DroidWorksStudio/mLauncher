@@ -28,6 +28,8 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">ਆਟੋ ਸ਼ੋਅ ਕੀਬੋਰਡ</string>
     <string name="auto_open_apps">ਆਟੋ ਓਪਨ ਐਪਸ</string>
+    <string name="display_recent_apps">ਹਾਲੀਆ ਐਪਸ ਡਿਸਪਲੇ ਕਰੋ</string>
+    <string name="number_of_recents">ਹਾਲੀਆ ਐਪਸ ਦੀ ਸੰਖਿਆ</string>
     <string name="filter_strength">ਫਿਲਟਰ ਦੀ ਤਾਕਤ</string>
     <string name="search_from_start">ਐਪ ਖੋਜ ਸ਼ੁਰੂ ਤੋਂ।</string>
     <string name="icon_font">ਆਈਕਨ ਫੌਂਟ ਦੀ ਵਰਤੋਂ ਕਰੋ</string>
@@ -76,8 +78,6 @@
     <string name="open">ਖੋਲ੍ਹੋ</string>
     <string name="close">ਬੰਦ ਕਰੋ</string>
     <string name="copy">ਕਾਪੀ</string>
-    <string name="settings_text_size">ਸੈਟਿੰਗਾਂ ਟੈਕਸਟ ਆਕਾਰ</string>
-    <string name="settings_lock_time">ਸੈਟਿੰਗਾਂ ਲੌਕ ਟਾਈਮਆਉਟ</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">ਸੂਚਨਾ ਦਿਖਾਓ</string>
     <string name="show_app_list">ਐਪ ਸੂਚੀ ਦਿਖਾਓ</string>
@@ -88,6 +88,10 @@
     <string name="open_power_dialog">ਪਾਵਰ ਡਾਇਲਾਗ</string>
     <string name="take_a_screenshot">ਇੱਕ ਸਕ੍ਰੀਨਸ਼ੌਟ ਲਓ</string>
     <string name="double_tap_to_lock_screen">ਲਾਕ ਕਰਨ ਲਈ ਡਬਲ ਟੈਪ ਕਰੋ</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">ਸੈਟਿੰਗਾਂ ਟੈਕਸਟ ਆਕਾਰ</string>
+    <string name="display_hidden_apps">ਲੁਕੇ ਹੋਏ ਐਪਸ ਡਿਸਪਲੇ ਕਰੋ</string>
+    <string name="lock_settings">ਲਾਕ ਸੈਟਿੰਗਾਂ</string>
     <!-- Backup Strings -->
     <string name="backup">ਬੈਕਅੱਪ</string>
     <string name="load_backup">ਬੈਕਅੱਪ ਲੋਡ ਕਰੋ</string>
@@ -100,7 +104,6 @@
     <string name="text_biometric_login_sub">ਆਪਣੇ ਬਾਇਓਮੈਟ੍ਰਿਕ ਪ੍ਰਮਾਣ ਪੱਤਰ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਲੌਗ ਇਨ ਕਰੋ</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">ਸਾਰੀਆਂ ਐਪਾਂ</string>
-    <string name="display_hidden_apps">ਲੁਕੇ ਹੋਏ ਐਪਸ ਡਿਸਪਲੇ ਕਰੋ</string>
     <string name="drawer_list_empty_hint">ਕੋਈ ਐਪਸ ਨਹੀਂ ਮਿਲੇ</string>
     <string name="long_press_for_settings">ਸੈਟਿੰਗਾਂ ਲਈ ਕਿਤੇ ਵੀ ਦੇਰ ਤੱਕ ਦਬਾਓ</string>
     <string name="swipe_up_for_apps">ਸਾਰੀਆਂ ਐਪਾਂ ਲਈ ਉੱਪਰ ਵੱਲ ਸਵਾਈਪ ਕਰੋ</string>
@@ -111,5 +114,4 @@
     <string name="accessibility_service_name">mLauncher ਐਕਸ਼ਨ ਸਰਵਿਸ</string>
     <string name="accessibility_service_description">ਇਹ ਪਹੁੰਚਯੋਗਤਾ ਸੇਵਾ mLauncher ਨੂੰ ਕੁਝ ਖਾਸ ਕਾਰਵਾਈਆਂ ਕਰਨ ਦੀ ਇਜਾਜ਼ਤ ਦਿੰਦੀ ਹੈ ਜਿਵੇਂ ਕਿ ਸਕ੍ਰੀਨ ਨੂੰ ਲੌਕ ਕਰਨਾ ਜਾਂ ਤੇਜ਼ ਸੈਟਿੰਗਾਂ ਨੂੰ ਖੋਲ੍ਹਣਾ। ਸਾਡੀ ਪਹੁੰਚਯੋਗਤਾ ਸੇਵਾ ਕੋਈ ਡਾਟਾ ਇਕੱਠਾ ਜਾਂ ਸਾਂਝਾ ਨਹੀਂ ਕਰਦੀ ਹੈ।</string>
     <string name="version">ਸੰਸਕਰਣ</string>
-    <string name="lock_settings">ਲਾਕ ਸੈਟਿੰਗਾਂ</string>
 </resources>

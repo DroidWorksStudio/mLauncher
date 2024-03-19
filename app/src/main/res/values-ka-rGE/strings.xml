@@ -28,6 +28,8 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">ავტომატური ჩვენების კლავიატურა</string>
     <string name="auto_open_apps">აპების ავტომატური გახსნა</string>
+    <string name="display_recent_apps">უახლესი აპების ჩვენება</string>
+    <string name="number_of_recents">ბოლო აპლიკაციების რაოდენობა</string>
     <string name="filter_strength">ფილტრის სიძლიერე</string>
     <string name="search_from_start">აპის ძებნა თავიდანვე.</string>
     <string name="icon_font">გამოიყენეთ ხატულა შრიფტი</string>
@@ -76,8 +78,6 @@
     <string name="open">გახსენით</string>
     <string name="close">დახურვა</string>
     <string name="copy">კოპირება</string>
-    <string name="settings_text_size">ტექსტის ზომის პარამეტრები</string>
-    <string name="settings_lock_time">პარამეტრების დაბლოკვის დრო</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">შეტყობინების ჩვენება</string>
     <string name="show_app_list">აპლიკაციების სიის ჩვენება</string>
@@ -88,6 +88,10 @@
     <string name="open_power_dialog">დენის დიალოგი</string>
     <string name="take_a_screenshot">გადაიღეთ სკრინშოტი</string>
     <string name="double_tap_to_lock_screen">ორმაგად შეეხეთ ჩასაკეტად</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">ტექსტის ზომის პარამეტრები</string>
+    <string name="display_hidden_apps">დამალული აპების ჩვენება</string>
+    <string name="lock_settings">ჩაკეტვის პარამეტრები</string>
     <!-- Backup Strings -->
     <string name="backup">სარეზერვო</string>
     <string name="load_backup">სარეზერვო ასლის ჩატვირთვა</string>
@@ -100,7 +104,6 @@
     <string name="text_biometric_login_sub">შედით თქვენი ბიომეტრიული სერთიფიკატის გამოყენებით</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">ყველა აპლიკაცია</string>
-    <string name="display_hidden_apps">დამალული აპების ჩვენება</string>
     <string name="drawer_list_empty_hint">აპები ვერ მოიძებნა</string>
     <string name="long_press_for_settings">დიდხანს დააჭირეთ სადმე პარამეტრებისთვის</string>
     <string name="swipe_up_for_apps">გადაფურცლეთ ზემოთ ყველა აპისთვის</string>
@@ -111,5 +114,4 @@
     <string name="accessibility_service_name">mLauncher მოქმედებების სერვისი</string>
     <string name="accessibility_service_description">ხელმისაწვდომობის ეს სერვისი mLauncher-ს საშუალებას აძლევს განახორციელოს გარკვეული მოქმედებები, როგორიცაა ეკრანის ჩაკეტვა ან სწრაფი პარამეტრების გახსნა. ჩვენი ხელმისაწვდომობის სერვისი არ აგროვებს და არ აზიარებს მონაცემებს.</string>
     <string name="version">ვერსია</string>
-    <string name="lock_settings">ჩაკეტვის პარამეტრები</string>
 </resources>

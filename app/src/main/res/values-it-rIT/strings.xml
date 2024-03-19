@@ -28,6 +28,8 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Apri automaticamente le app</string>
+    <string name="display_recent_apps">Visualizza le app recenti</string>
+    <string name="number_of_recents">Numero di app recenti</string>
     <string name="filter_strength">Forza filtro</string>
     <string name="search_from_start">Ricerca app dall\'inizio.</string>
     <string name="icon_font">Usa carattere icona</string>
@@ -76,8 +78,6 @@
     <string name="open">Apri</string>
     <string name="close">Chiudi</string>
     <string name="copy">copia</string>
-    <string name="settings_text_size">Impostazioni Dimensione testo</string>
-    <string name="settings_lock_time">Timeout blocco impostazioni</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Mostra Notifiche</string>
     <string name="show_app_list">Mostra Elenco App</string>
@@ -88,6 +88,10 @@
     <string name="open_power_dialog">Dialogo di potere</string>
     <string name="take_a_screenshot">Fai uno screenshot</string>
     <string name="double_tap_to_lock_screen">Doppio tocco per bloccare</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Impostazioni Dimensione testo</string>
+    <string name="display_hidden_apps">Visualizza le app nascoste</string>
+    <string name="lock_settings">Blocca impostazioni</string>
     <!-- Backup Strings -->
     <string name="backup">Backup</string>
     <string name="load_backup">Carica Backup</string>
@@ -100,7 +104,6 @@
     <string name="text_biometric_login_sub">Accedi utilizzando le tue credenziali biometriche</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Tutte le app</string>
-    <string name="display_hidden_apps">Visualizza le app nascoste</string>
     <string name="drawer_list_empty_hint">Nessuna app trovata</string>
     <string name="long_press_for_settings">Premi a lungo ovunque per le impostazioni</string>
     <string name="swipe_up_for_apps">Scorri verso l\'alto per tutte le app</string>
@@ -111,5 +114,4 @@
     <string name="accessibility_service_name">servizio azioni mLauncher</string>
     <string name="accessibility_service_description">Questo servizio di accessibilità consente a mLauncher di eseguire determinate azioni come bloccare lo schermo o aprire le impostazioni rapide. Il nostro servizio di accessibilità non raccoglie né condivide alcun dato.</string>
     <string name="version">Versione</string>
-    <string name="lock_settings">Blocca impostazioni</string>
 </resources>

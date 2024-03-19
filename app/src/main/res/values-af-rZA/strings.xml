@@ -28,6 +28,8 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Auto open apps</string>
+    <string name="display_recent_apps">Vertoon onlangse toepassings</string>
+    <string name="number_of_recents">Aantal onlangse toepassings</string>
     <string name="filter_strength">Filter sterkte</string>
     <string name="search_from_start">App soek van begin af.</string>
     <string name="icon_font">Gebruik ikoonlettertipe</string>
@@ -76,8 +78,6 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string name="copy">kopieer</string>
-    <string name="settings_text_size">Instellings teksgrootte</string>
-    <string name="settings_lock_time">Instellings-slot-time-out</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Show Notification</string>
     <string name="show_app_list">Show App List</string>
@@ -88,6 +88,10 @@
     <string name="open_power_dialog">Krag dialoog</string>
     <string name="take_a_screenshot">Neem \'n skermskoot</string>
     <string name="double_tap_to_lock_screen">Double tap to lock</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Instellings teksgrootte</string>
+    <string name="display_hidden_apps">Wys versteekte toepassings</string>
+    <string name="lock_settings">Sluit instellings</string>
     <!-- Backup Strings -->
     <string name="backup">Backup</string>
     <string name="load_backup">Load Backup</string>
@@ -100,7 +104,6 @@
     <string name="text_biometric_login_sub">Meld aan met jou biometriese geloofsbriewe</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>
-    <string name="display_hidden_apps">Wys versteekte toepassings</string>
     <string name="drawer_list_empty_hint">No apps found</string>
     <string name="long_press_for_settings">Long press anywhere for settings</string>
     <string name="swipe_up_for_apps">Swipe up for all apps</string>
@@ -111,5 +114,4 @@
     <string name="accessibility_service_name">mLauncher Actions Service</string>
     <string name="accessibility_service_description">Hierdie toeganklikheiddiens laat mLauncher toe om sekere aksies uit te voer, soos om die skerm te sluit of die vinnige instellings oop te maak. Ons toeganklikheiddiens versamel of deel geen data nie.</string>
     <string name="version">Weergawe</string>
-    <string name="lock_settings">Sluit instellings</string>
 </resources>
