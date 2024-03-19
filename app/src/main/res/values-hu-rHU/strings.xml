@@ -28,6 +28,8 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Autókiállítás billentyűzet</string>
     <string name="auto_open_apps">Automatikusan megnyíló alkalmazások</string>
+    <string name="display_recent_apps">Legutóbbi alkalmazások megjelenítése</string>
+    <string name="number_of_recents">Legutóbbi alkalmazások száma</string>
     <string name="filter_strength">Szűrő erőssége</string>
     <string name="search_from_start">Alkalmazáskeresés a kezdetektől.</string>
     <string name="icon_font">Ikon betűtípus használata</string>
@@ -76,8 +78,6 @@
     <string name="open">Nyissa meg a  címet.</string>
     <string name="close">Zárja be a</string>
     <string name="copy">másolat</string>
-    <string name="settings_text_size">Beállítások Szövegméret</string>
-    <string name="settings_lock_time">Beállítások Zárolás időtúllépése</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Értesítés megjelenítése</string>
     <string name="show_app_list">Alkalmazások listájának megjelenítése</string>
@@ -88,6 +88,10 @@
     <string name="open_power_dialog">Teljesítmény párbeszédpanel</string>
     <string name="take_a_screenshot">Készítsen képernyőképet</string>
     <string name="double_tap_to_lock_screen">Dupla koppintás a lezáráshoz</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Beállítások Szövegméret</string>
+    <string name="display_hidden_apps">Rejtett alkalmazások megjelenítése</string>
+    <string name="lock_settings">Zárolási beállítások</string>
     <!-- Backup Strings -->
     <string name="backup">Biztonsági mentés</string>
     <string name="load_backup">Töltés biztonsági mentés</string>
@@ -100,7 +104,6 @@
     <string name="text_biometric_login_sub">Jelentkezzen be biometrikus hitelesítő adataival</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Minden alkalmazás</string>
-    <string name="display_hidden_apps">Rejtett alkalmazások megjelenítése</string>
     <string name="drawer_list_empty_hint">Nem találtunk alkalmazásokat</string>
     <string name="long_press_for_settings">Hosszan nyomja meg bárhol a beállításokhoz</string>
     <string name="swipe_up_for_apps">Húzza felfelé az összes alkalmazáshoz</string>
@@ -111,5 +114,4 @@
     <string name="accessibility_service_name">mLauncher Műveletek szolgáltatás</string>
     <string name="accessibility_service_description">Ez a kisegítő szolgáltatás lehetővé teszi az mLauncher számára bizonyos műveletek elvégzését, például a képernyő lezárását vagy a gyorsbeállítások megnyitását. Kisegítő lehetőségek szolgáltatásunk nem gyűjt és nem oszt meg adatokat.</string>
     <string name="version">Változat</string>
-    <string name="lock_settings">Zárolási beállítások</string>
 </resources>
