@@ -13,6 +13,10 @@
 
 - \[Language\] Updated Language Files. [\#370](https://github.com/HeAndroids2Much/mLauncher/pull/370) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
+**Merged pull requests:**
+
+- \[Release\] - Update version to 73 \(v1.4.0\) [\#371](https://github.com/HeAndroids2Much/mLauncher/pull/371) ([HeCodes2Much](https://github.com/HeCodes2Much))
+
 ## [1.3.5](https://github.com/HeAndroids2Much/mLauncher/tree/1.3.5) (18, March 2024)
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/1.3.4...1.3.5)
