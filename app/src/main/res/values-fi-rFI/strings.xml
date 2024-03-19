@@ -28,6 +28,8 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Automaattiset sovellukset</string>
+    <string name="display_recent_apps">Näytä viimeisimmät sovellukset</string>
+    <string name="number_of_recents">Viimeaikaisten sovellusten määrä</string>
     <string name="filter_strength">Suodattimen vahvuus</string>
     <string name="search_from_start">Sovellushaku alusta alkaen.</string>
     <string name="icon_font">Käytä kuvakkeen fonttia</string>
@@ -76,8 +78,6 @@
     <string name="open">Avaa</string>
     <string name="close">Sulje</string>
     <string name="copy">kopio</string>
-    <string name="settings_text_size">Asetukset Tekstin koko</string>
-    <string name="settings_lock_time">Asetukset Lukituksen aikakatkaisu</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Näytä Ilmoitus</string>
     <string name="show_app_list">Näytä Sovelluslista</string>
@@ -88,6 +88,10 @@
     <string name="open_power_dialog">Virta-valintaikkuna</string>
     <string name="take_a_screenshot">Ota kuvakaappaus</string>
     <string name="double_tap_to_lock_screen">Napauta kahdesti lukitseaksesi</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Asetukset Tekstin koko</string>
+    <string name="display_hidden_apps">Näytä piilotetut sovellukset</string>
+    <string name="lock_settings">Lukitusasetukset</string>
     <!-- Backup Strings -->
     <string name="backup">Varmuuskopio</string>
     <string name="load_backup">Lataa Varmuuskopio</string>
@@ -100,7 +104,6 @@
     <string name="text_biometric_login_sub">Kirjaudu sisään biometrisilla tunnistetiedoillasi</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Kaikki sovellukset</string>
-    <string name="display_hidden_apps">Näytä piilotetut sovellukset</string>
     <string name="drawer_list_empty_hint">Sovelluksia ei löytynyt</string>
     <string name="long_press_for_settings">Paina pitkään saadaksesi asetuksia</string>
     <string name="swipe_up_for_apps">Pyyhkäise ylös kaikille sovelluksille</string>
@@ -111,5 +114,4 @@
     <string name="accessibility_service_name">mLauncher Actions Service</string>
     <string name="accessibility_service_description">Tämän esteettömyyspalvelun avulla mLauncher voi tehdä tiettyjä toimintoja, kuten lukita näytön tai avata pika-asetukset. Esteettömyyspalvelumme ei kerää tai jaa tietoja.</string>
     <string name="version">Versio</string>
-    <string name="lock_settings">Lukitusasetukset</string>
 </resources>
