@@ -28,6 +28,8 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Автоматично відкривати додатки</string>
+    <string name="display_recent_apps">Показати останні програми</string>
+    <string name="number_of_recents">Кількість останніх програм</string>
     <string name="filter_strength">Міцність фільтра</string>
     <string name="search_from_start">Пошук програми з початку.</string>
     <string name="icon_font">Використовуйте шрифт значків</string>
@@ -76,8 +78,6 @@
     <string name="open">Відкриті</string>
     <string name="close">Закрити</string>
     <string name="copy">копія</string>
-    <string name="settings_text_size">Параметри Розмір тексту</string>
-    <string name="settings_lock_time">Час очікування блокування налаштувань</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Показувати сповіщення</string>
     <string name="show_app_list">Показати список додатків</string>
@@ -88,6 +88,10 @@
     <string name="open_power_dialog">Діалог живлення</string>
     <string name="take_a_screenshot">Зробіть знімок екрана</string>
     <string name="double_tap_to_lock_screen">Подвійне натискання для блокування</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Параметри Розмір тексту</string>
+    <string name="display_hidden_apps">Показати приховані програми</string>
+    <string name="lock_settings">Налаштування блокування</string>
     <!-- Backup Strings -->
     <string name="backup">Резервне копіювання</string>
     <string name="load_backup">Завантажити резервну копію</string>
@@ -100,7 +104,6 @@
     <string name="text_biometric_login_sub">Увійдіть, використовуючи свої біометричні облікові дані</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Всі програми</string>
-    <string name="display_hidden_apps">Показати приховані програми</string>
     <string name="drawer_list_empty_hint">Додатки не знайдені</string>
     <string name="long_press_for_settings">Натисніть і утримуйте будь-де для налаштувань</string>
     <string name="swipe_up_for_apps">Проведіть пальцем угору для всіх програм</string>
@@ -111,5 +114,4 @@
     <string name="accessibility_service_name">функції mLauncher Service</string>
     <string name="accessibility_service_description">Ця служба доступності дозволяє mLauncher виконувати певні дії, наприклад блокувати екран або відкривати швидкі налаштування. Наша служба доступності не збирає та не надає жодних даних.</string>
     <string name="version">Версія</string>
-    <string name="lock_settings">Налаштування блокування</string>
 </resources>
