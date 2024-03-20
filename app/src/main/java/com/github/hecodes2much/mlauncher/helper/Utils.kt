@@ -86,11 +86,6 @@ suspend fun getAppsList(
                         appName
                     }
 
-                    if (prefs.useCustomIconFont) {
-                        appNameClean = "\uF4C3 $appName"
-                        appAliasClean = "\uF4C3 $appAliasClean"
-                    }
-
                     val appModel = AppModel(
                         appNameClean,
                         collator.getCollationKey(appName),
