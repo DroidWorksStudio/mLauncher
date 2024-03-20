@@ -81,18 +81,17 @@ suspend fun getAppsList(
 
             for (profile in userManager.userProfiles) {
                 for ((packageName, appName, appActivityName) in lastTenUsedApps) {
-                    var appNameClean = appName
-                    var appAliasClean = prefs.getAppAlias(packageName).ifEmpty {
+                    var appAlias = prefs.getAppAlias(packageName).ifEmpty {
                         appName
                     }
 
                     val appModel = AppModel(
-                        appNameClean,
+                        appName,
                         collator.getCollationKey(appName),
                         packageName,
                         appActivityName,
                         profile,
-                        appAliasClean,
+                        appAlias,
                     )
 
                     d(
