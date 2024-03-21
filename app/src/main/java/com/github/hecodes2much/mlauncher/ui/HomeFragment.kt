@@ -454,38 +454,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 return super.onTouch(view, motionEvent)
             }
 
-            private fun onLongPressSwipe(deltaX: Float, deltaY: Float) {
-                val direction: String = if (abs(deltaX) < abs(deltaY)) {
-                    if (deltaY < 0) "up" else "down"
-                } else {
-                    if (deltaX < 0) "left" else "right"
-                }
-
-                when (direction) {
-                    "up" -> when (val action = prefs.longPressSwipeUpAction) {
-                        Action.OpenApp -> openLongPressSwipeUpApp()
-                        else -> handleOtherAction(action)
-                    }
-                    "down" -> when (val action = prefs.longPressSwipeDownAction) {
-                        Action.OpenApp -> openLongPressSwipeDownApp()
-                        else -> handleOtherAction(action)
-                    }
-                    "left" -> when (val action = prefs.longPressSwipeLeftAction) {
-                        Action.OpenApp -> openLongPressSwipeLeftApp()
-                        else -> handleOtherAction(action)
-                    }
-                    "right" -> when (val action = prefs.longPressSwipeRightAction) {
-                        Action.OpenApp -> openLongPressSwipeRightApp()
-                        else -> handleOtherAction(action)
-                    }
-                    else -> showToastLong(
-                        requireContext(),
-                        getString(R.string.text_authentication_cancel)
-                    )
-                }
-                Log.d("deltaX", direction)
-            }
-
             override fun onSwipeLeft() {
                 super.onSwipeLeft()
                 when (val action = prefs.swipeLeftAction) {
@@ -609,6 +577,40 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
     private fun getHomeAppsGestureListener(context: Context, view: View): View.OnTouchListener {
         return object : ViewSwipeTouchListener(context, view) {
+            private var startX = 0f
+            private var startY = 0f
+            private var startTime: Long = 0
+
+            @SuppressLint("ClickableViewAccessibility")
+            override fun onTouch(view: View, motionEvent: MotionEvent): Boolean {
+                when (motionEvent.action) {
+                    MotionEvent.ACTION_DOWN -> {
+                        startX = motionEvent.x
+                        startY = motionEvent.y
+                        startTime = System.currentTimeMillis()
+                    }
+                    MotionEvent.ACTION_UP -> {
+                        val endX = motionEvent.x
+                        val endY = motionEvent.y
+                        val endTime = System.currentTimeMillis()
+                        val duration = endTime - startTime
+                        val deltaX = endX - startX
+                        val deltaY = endY - startY
+                        val distance = sqrt((deltaX * deltaX + deltaY * deltaY).toDouble()).toFloat()
+
+                        // Check if it's a hold swipe gesture
+                        val holdDurationThreshold = 1000L // Adjust as needed
+                        val swipeDistanceThreshold = 200f // Adjust as needed
+
+                        if (duration <= holdDurationThreshold && distance >= swipeDistanceThreshold) {
+                            Log.d("deltaX","deltaX: $deltaX, deltaY: $deltaY, distance: $distance, duration: $duration")
+                            onLongPressSwipe(deltaX, deltaY)
+                        }
+                    }
+                }
+                return super.onTouch(view, motionEvent)
+            }
+
             override fun onLongClick(view: View) {
                 super.onLongClick(view)
                 textOnLongClick(view)
@@ -650,6 +652,37 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     else -> handleOtherAction(action)
                 }
             }
+        }
+    }
+
+    private fun onLongPressSwipe(deltaX: Float, deltaY: Float) {
+        val direction: String = if (abs(deltaX) < abs(deltaY)) {
+            if (deltaY < 0) "up" else "down"
+        } else {
+            if (deltaX < 0) "left" else "right"
+        }
+
+        when (direction) {
+            "up" -> when (val action = prefs.longPressSwipeUpAction) {
+                Action.OpenApp -> openLongPressSwipeUpApp()
+                else -> handleOtherAction(action)
+            }
+            "down" -> when (val action = prefs.longPressSwipeDownAction) {
+                Action.OpenApp -> openLongPressSwipeDownApp()
+                else -> handleOtherAction(action)
+            }
+            "left" -> when (val action = prefs.longPressSwipeLeftAction) {
+                Action.OpenApp -> openLongPressSwipeLeftApp()
+                else -> handleOtherAction(action)
+            }
+            "right" -> when (val action = prefs.longPressSwipeRightAction) {
+                Action.OpenApp -> openLongPressSwipeRightApp()
+                else -> handleOtherAction(action)
+            }
+            else -> showToastLong(
+                requireContext(),
+                "$direction not detected."
+            )
         }
     }
 
