@@ -423,8 +423,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                         val holdDurationThreshold = 1000L // Adjust as needed
                         val swipeDistanceThreshold = 200f // Adjust as needed
 
-                        Log.d("deltaX","duration: $duration, holdDurationThreshold: $holdDurationThreshold")
-                        Log.d("deltaX","distance: $distance, swipeDistanceThreshold: $swipeDistanceThreshold")
                         if (duration <= holdDurationThreshold && distance >= swipeDistanceThreshold) {
                             Log.d("deltaX","deltaX: $deltaX, deltaY: $deltaY, distance: $distance, duration: $duration")
                             onLongPressSwipe(deltaX, deltaY)
@@ -435,10 +433,21 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             }
 
             private fun onLongPressSwipe(deltaX: Float, deltaY: Float) {
-                val direction: String = if (abs(deltaX) > abs(deltaY)) {
-                    if (deltaX > 0) "right" else "left"
+                val direction: String = if (abs(deltaX) < abs(deltaY)) {
+                    if (deltaY < 0) "up" else "down"
                 } else {
-                    if (deltaY > 0) "down" else "up"
+                    if (deltaX < 0) "left" else "right"
+                }
+
+                when (direction) {
+                    "up" -> println("x is 2")
+                    "down" -> println("x is 1")
+                    "left" -> when (val action = prefs.swipeLeftAction) {
+                        Action.OpenApp -> openSwipeLeftApp()
+                        else -> handleOtherAction(action)
+                    }
+                    "right" -> println("x is 1")
+                    else -> println("x is neither 1 nor 2")
                 }
                 Log.d("deltaX", direction)
             }
