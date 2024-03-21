@@ -1,0 +1,7 @@
+Versione: 1.4.1
+
+Miglioramenti:
+[Caratteristica] - Aggiunti gesti di scorrimento a pressione prolungata.
+
+Supporto linguistico:
+[Lingua] File di lingua aggiornati.
