@@ -53,6 +53,10 @@
     <string name="clock_click_app">Faceți clic pe ceas</string>
     <string name="date_click_app">Clic pe data</string>
     <string name="double_tap">Atingere dublă</string>
+    <string name="long_press_swipe_up_app">Apăsați lung Glisați în sus</string>
+    <string name="long_press_swipe_down_app">Apăsați lung Glisați în jos</string>
+    <string name="long_press_swipe_left_app">Apăsați lung Glisați spre stânga</string>
+    <string name="long_press_swipe_right_app">Apăsați lung Glisați spre dreapta</string>
     <!-- Settings Strings -->
     <string name="off">Dezactivat</string>
     <string name="on">Activat</string>
