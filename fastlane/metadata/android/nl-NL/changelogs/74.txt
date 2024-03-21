@@ -1,0 +1,7 @@
+Versie: 1.4.1
+
+Verbeteringen:
+[Feature] - Lange-druk-veeggebaren toegevoegd.
+
+Taalondersteuning:
+[Taal] Bijgewerkte taalbestanden.
