@@ -26,7 +26,6 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.os.bundleOf
 import androidx.core.view.children
-import androidx.core.view.size
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
@@ -380,6 +379,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             Action.ShowRecents -> initActionService(requireContext())?.showRecents()
             Action.OpenPowerDialog -> initActionService(requireContext())?.openPowerDialog()
             Action.TakeScreenShot -> initActionService(requireContext())?.takeScreenShot()
+            Action.LeftPage -> handleSwipeLeft(prefs.homePagesNum)
+            Action.RightPage -> handleSwipeRight()
             Action.Disabled -> {}
         }
     }
@@ -423,6 +424,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             private var startX = 0f
             private var startY = 0f
             private var startTime: Long = 0
+            private var longPressSwipeTriggered = false // Flag to indicate if onLongPressSwipe was triggered
 
             @SuppressLint("ClickableViewAccessibility")
             override fun onTouch(view: View, motionEvent: MotionEvent): Boolean {
@@ -431,6 +433,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                         startX = motionEvent.x
                         startY = motionEvent.y
                         startTime = System.currentTimeMillis()
+                        longPressSwipeTriggered = false // Reset the flag
                     }
                     MotionEvent.ACTION_UP -> {
                         val endX = motionEvent.x
@@ -442,16 +445,17 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                         val distance = sqrt((deltaX * deltaX + deltaY * deltaY).toDouble()).toFloat()
 
                         // Check if it's a hold swipe gesture
-                        val holdDurationThreshold = 1000L // Adjust as needed
+                        val holdDurationThreshold = 2000L // Adjust as needed
                         val swipeDistanceThreshold = 200f // Adjust as needed
 
                         if (duration <= holdDurationThreshold && distance >= swipeDistanceThreshold) {
-                            Log.d("deltaX","deltaX: $deltaX, deltaY: $deltaY, distance: $distance, duration: $duration")
                             onLongPressSwipe(deltaX, deltaY)
+                            longPressSwipeTriggered = true // Set the flag if onLongPressSwipe was triggered
                         }
                     }
                 }
-                return super.onTouch(view, motionEvent)
+                // Return false to continue to pass the event to onSwipeLeft if onLongPressSwipe was not triggered
+                return !longPressSwipeTriggered && super.onTouch(view, motionEvent)
             }
 
             override fun onSwipeLeft() {
@@ -580,6 +584,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             private var startX = 0f
             private var startY = 0f
             private var startTime: Long = 0
+            private var longPressSwipeTriggered = false // Flag to indicate if onLongPressSwipe was triggered
 
             @SuppressLint("ClickableViewAccessibility")
             override fun onTouch(view: View, motionEvent: MotionEvent): Boolean {
@@ -588,6 +593,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                         startX = motionEvent.x
                         startY = motionEvent.y
                         startTime = System.currentTimeMillis()
+                        longPressSwipeTriggered = false // Reset the flag
                     }
                     MotionEvent.ACTION_UP -> {
                         val endX = motionEvent.x
@@ -599,16 +605,17 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                         val distance = sqrt((deltaX * deltaX + deltaY * deltaY).toDouble()).toFloat()
 
                         // Check if it's a hold swipe gesture
-                        val holdDurationThreshold = 1000L // Adjust as needed
+                        val holdDurationThreshold = 2000L // Adjust as needed
                         val swipeDistanceThreshold = 200f // Adjust as needed
 
                         if (duration <= holdDurationThreshold && distance >= swipeDistanceThreshold) {
-                            Log.d("deltaX","deltaX: $deltaX, deltaY: $deltaY, distance: $distance, duration: $duration")
                             onLongPressSwipe(deltaX, deltaY)
+                            longPressSwipeTriggered = true // Set the flag if onLongPressSwipe was triggered
                         }
                     }
                 }
-                return super.onTouch(view, motionEvent)
+                // Return false to continue to pass the event to onSwipeLeft if onLongPressSwipe was not triggered
+                return !longPressSwipeTriggered && super.onTouch(view, motionEvent)
             }
 
             override fun onLongClick(view: View) {
@@ -688,19 +695,17 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
     // updates number of apps visible on home screen
     // does nothing if number has not changed
+    private var currentPage = 0
+    private var appsPerPage = 0
+
     @RequiresApi(Build.VERSION_CODES.Q)
     @SuppressLint("InflateParams")
     private fun updateAppCount(newAppsNum: Int) {
-        val oldAppsNum = binding.homeAppsLayout.size // current number
-        val diff = oldAppsNum - newAppsNum
+        val oldAppsNum = binding.homeAppsLayout.childCount // current number of apps
+        val diff = newAppsNum - oldAppsNum
 
-        if (diff in 1 until oldAppsNum) { // 1 <= diff <= oldNumApps
-            binding.homeAppsLayout.children.drop(diff)
-        } else if (diff < 0) {
-            val alignment =
-                prefs.homeAlignment.value() // make only one call to prefs and store here
-
-            // add all missing apps to list
+        if (diff > 0) {
+            // Add new apps
             for (i in oldAppsNum until newAppsNum) {
                 val view = layoutInflater.inflate(R.layout.home_app_button, null) as TextView
                 view.apply {
@@ -714,20 +719,67 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                             ViewGroup.LayoutParams.WRAP_CONTENT
                         )
                     }
-                    gravity = alignment
+                    gravity = prefs.homeAlignment.value()
+                    val padding: Int = prefs.textMarginSize
+                    setPadding(0, padding, 0, padding)
+                    if (prefs.useCustomIconFont) {
+                        val typeface = ResourcesCompat.getFont(requireActivity(), R.font.roboto)
+                        typeface?.let { setTypeface(it) }
+                    }
+                    if (prefs.followAccentColors) {
+                        val fontColor = getHexFontColor(requireContext())
+                        setTextColor(fontColor)
+                    }
                 }
-                val padding: Int = prefs.textMarginSize
-                view.setPadding(0, padding, 0, padding)
-                if (prefs.useCustomIconFont) {
-                    val typeface = ResourcesCompat.getFont(requireActivity(), R.font.roboto)
-                    typeface.also { view.typeface = it }
-                }
-                if (prefs.followAccentColors) {
-                    val fontColor = getHexFontColor(requireContext())
-                    view.setTextColor(fontColor)
-                }
+                // Add the view to the layout
                 binding.homeAppsLayout.addView(view)
             }
+        } else if (diff < 0) {
+            // Remove extra apps
+            binding.homeAppsLayout.removeViews(oldAppsNum + diff, -diff)
         }
+
+        // Update the total number of pages and calculate maximum apps per page
+        updatePagesAndAppsPerPage(prefs.homeAppsNum, prefs.homePagesNum)
+    }
+
+    private fun updatePagesAndAppsPerPage(totalApps: Int, totalPages: Int) {
+        // Calculate the maximum number of apps per page
+        appsPerPage = if (totalPages > 0) {
+            (totalApps + totalPages - 1) / totalPages // Round up to ensure all apps are displayed
+        } else {
+            0 // Return 0 if totalPages is 0 to avoid division by zero
+        }
+
+        // Update app visibility based on the current page and calculated apps per page
+        updateAppsVisibility()
+    }
+
+    private fun updateAppsVisibility() {
+        val startIdx = currentPage * appsPerPage
+        val endIdx = minOf((currentPage + 1) * appsPerPage, getTotalAppsCount())
+
+        for (i in 0 until getTotalAppsCount()) {
+            val view = binding.homeAppsLayout.getChildAt(i)
+            view.visibility = if (i in startIdx until endIdx) View.VISIBLE else View.GONE
+        }
+    }
+
+    private fun handleSwipeLeft(totalPages:Int) {
+        if (currentPage < totalPages - 1) {
+            currentPage++
+            updateAppsVisibility()
+        }
+    }
+
+    private fun handleSwipeRight() {
+        if (currentPage > 0) {
+            currentPage--
+            updateAppsVisibility()
+        }
+    }
+
+    private fun getTotalAppsCount(): Int {
+        return binding.homeAppsLayout.childCount
     }
 }

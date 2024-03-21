@@ -16,6 +16,7 @@ private const val FIRST_OPEN = "FIRST_OPEN"
 private const val FIRST_SETTINGS_OPEN = "FIRST_SETTINGS_OPEN"
 private const val LOCK_MODE = "LOCK_MODE"
 private const val HOME_APPS_NUM = "HOME_APPS_NUM"
+private const val HOME_PAGES_NUM = "HOME_PAGES_NUM"
 private const val AUTO_SHOW_KEYBOARD = "AUTO_SHOW_KEYBOARD"
 private const val AUTO_OPEN_APP = "AUTO_OPEN_APP"
 private const val RECENT_APPS_DISPLAYED = "RECENT_APPS_DISPLAYED"
@@ -146,6 +147,10 @@ class Prefs(val context: Context) {
     var homeAppsNum: Int
         get() = prefs.getInt(HOME_APPS_NUM, 4)
         set(value) = prefs.edit().putInt(HOME_APPS_NUM, value).apply()
+
+    var homePagesNum: Int
+        get() = prefs.getInt(HOME_PAGES_NUM, 1)
+        set(value) = prefs.edit().putInt(HOME_PAGES_NUM, value).apply()
 
     var opacityNum: Int
         get() = prefs.getInt(APP_OPACITY, 128)

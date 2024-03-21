@@ -40,6 +40,7 @@
 
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Number of shortcuts</string>
+    <string name="pages_on_home_screen">Number of pages</string>
     <string name="show_time">Show time</string>
     <string name="show_date">Show date</string>
     <string name="show_battery">Show battery</string>
@@ -103,6 +104,8 @@
     <string name="show_recents">Show Recents</string>
     <string name="open_power_dialog">Power Dialog</string>
     <string name="take_a_screenshot">Take a Screenshot</string>
+    <string name="left_page">Go to left page</string>
+    <string name="right_page">Go to right page</string>
     <string name="double_tap_to_lock_screen">Double tap to lock</string>
 
     <!-- Miscellaneous Strings -->
