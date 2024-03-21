@@ -12,7 +12,7 @@
 
 - \[Language\] Updated Language Files. [\#375](https://github.com/HeAndroids2Much/mLauncher/pull/375) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
-**Merged pull requests:**
+**Release:**
 
 - \[Release\] - Update version to 74 \(v1.4.1\) [\#376](https://github.com/HeAndroids2Much/mLauncher/pull/376) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
