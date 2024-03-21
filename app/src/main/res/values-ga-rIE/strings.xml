@@ -53,6 +53,10 @@
     <string name="clock_click_app">Cliceáil ar Clog</string>
     <string name="date_click_app">Cliceáil ar Dáta</string>
     <string name="double_tap">Beartaíonn Dúbailte</string>
+    <string name="long_press_swipe_up_app">Long Press Swipe suas</string>
+    <string name="long_press_swipe_down_app">Long Press Swipe síos</string>
+    <string name="long_press_swipe_left_app">Long Press Swipe ar chlé</string>
+    <string name="long_press_swipe_right_app">Long Press Swipe ar dheis</string>
     <!-- Settings Strings -->
     <string name="off">as</string>
     <string name="on">Ar</string>
