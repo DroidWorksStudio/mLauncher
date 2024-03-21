@@ -53,6 +53,10 @@
     <string name="clock_click_app">Saat üzerine Tıklayın</string>
     <string name="date_click_app">Tarih üzerine Tıklayın</string>
     <string name="double_tap">Çift Dokunuş</string>
+    <string name="long_press_swipe_up_app">Uzun Bas Yukarı Kaydır</string>
+    <string name="long_press_swipe_down_app">Uzun Basma Aşağı kaydırma</string>
+    <string name="long_press_swipe_left_app">Uzun Bas Sola kaydır</string>
+    <string name="long_press_swipe_right_app">Uzun Bas Sağa kaydır</string>
     <!-- Settings Strings -->
     <string name="off">Kapalı</string>
     <string name="on">Açık</string>
