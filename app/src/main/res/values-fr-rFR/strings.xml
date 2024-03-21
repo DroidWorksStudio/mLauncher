@@ -53,6 +53,10 @@
     <string name="clock_click_app">Cliquez sur l\'horloge</string>
     <string name="date_click_app">Cliquer sur Date</string>
     <string name="double_tap">Double appui</string>
+    <string name="long_press_swipe_up_app">Appui long, Balayage vers le haut</string>
+    <string name="long_press_swipe_down_app">Appui long Balayez vers le bas</string>
+    <string name="long_press_swipe_left_app">Appui long, Balayage vers la gauche</string>
+    <string name="long_press_swipe_right_app">Appui long, glisser vers la droite</string>
     <!-- Settings Strings -->
     <string name="off">Désactivé</string>
     <string name="on">Activé</string>
