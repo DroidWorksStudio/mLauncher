@@ -53,6 +53,10 @@
     <string name="clock_click_app">Klik op de klok</string>
     <string name="date_click_app">Klik op Datum</string>
     <string name="double_tap">Dubbel Tik</string>
+    <string name="long_press_swipe_up_app">Lang indrukken Veeg omhoog</string>
+    <string name="long_press_swipe_down_app">Lang indrukken Veeg omlaag</string>
+    <string name="long_press_swipe_left_app">Lang indrukken Veeg naar links</string>
+    <string name="long_press_swipe_right_app">Lang indrukken Veeg naar rechts</string>
     <!-- Settings Strings -->
     <string name="off">UIT</string>
     <string name="on">op</string>
