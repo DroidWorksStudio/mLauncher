@@ -427,16 +427,20 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                         Log.d("deltaX","distance: $distance, swipeDistanceThreshold: $swipeDistanceThreshold")
                         if (duration <= holdDurationThreshold && distance >= swipeDistanceThreshold) {
                             Log.d("deltaX","deltaX: $deltaX, deltaY: $deltaY, distance: $distance, duration: $duration")
-                            val direction: String = if (abs(deltaX) > abs(deltaY)) {
-                                if (deltaX > 0) "right" else "left"
-                            } else {
-                                if (deltaY > 0) "down" else "up"
-                            }
-                            Log.d("deltaX", direction)
+                            onLongPressSwipe(deltaX, deltaY)
                         }
                     }
                 }
                 return super.onTouch(view, motionEvent)
+            }
+
+            private fun onLongPressSwipe(deltaX: Float, deltaY: Float) {
+                val direction: String = if (abs(deltaX) > abs(deltaY)) {
+                    if (deltaX > 0) "right" else "left"
+                } else {
+                    if (deltaY > 0) "down" else "up"
+                }
+                Log.d("deltaX", direction)
             }
 
             override fun onSwipeLeft() {
