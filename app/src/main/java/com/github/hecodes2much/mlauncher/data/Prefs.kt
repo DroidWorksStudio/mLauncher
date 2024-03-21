@@ -38,6 +38,10 @@ private const val SWIPE_UP_ACTION = "SWIPE_UP_ACTION"
 private const val SWIPE_DOWN_ACTION = "SWIPE_DOWN_ACTION"
 private const val SWIPE_RIGHT_ACTION = "SWIPE_RIGHT_ACTION"
 private const val SWIPE_LEFT_ACTION = "SWIPE_LEFT_ACTION"
+private const val LONG_PRESS_SWIPE_UP_ACTION = "LONG_PRESS_SWIPE_UP_ACTION"
+private const val LONG_PRESS_SWIPE_DOWN_ACTION = "LONG_PRESS_SWIPE_DOWN_ACTION"
+private const val LONG_PRESS_SWIPE_RIGHT_ACTION = "LONG_PRESS_SWIPE_RIGHT_ACTION"
+private const val LONG_PRESS_SWIPE_LEFT_ACTION = "LONG_PRESS_SWIPE_LEFT_ACTION"
 private const val CLICK_CLOCK_ACTION = "CLICK_CLOCK_ACTION"
 private const val CLICK_DATE_ACTION = "CLICK_DATE_ACTION"
 private const val DOUBLE_TAP_ACTION = "DOUBLE_TAP_ACTION"
@@ -220,6 +224,13 @@ class Prefs(val context: Context) {
     var followAccentColors: Boolean
         get() = prefs.getBoolean(HOME_FOLLOW_ACCENT, false)
         set(value) = prefs.edit().putBoolean(HOME_FOLLOW_ACCENT, value).apply()
+    var swipeUpAction: Constants.Action
+        get() = loadAction(SWIPE_UP_ACTION, Constants.Action.ShowAppList)
+        set(value) = storeAction(SWIPE_UP_ACTION, value)
+
+    var swipeDownAction: Constants.Action
+        get() = loadAction(SWIPE_DOWN_ACTION, Constants.Action.ShowNotification)
+        set(value) = storeAction(SWIPE_DOWN_ACTION, value)
 
     var swipeLeftAction: Constants.Action
         get() = loadAction(SWIPE_LEFT_ACTION, Constants.Action.OpenApp)
@@ -229,13 +240,21 @@ class Prefs(val context: Context) {
         get() = loadAction(SWIPE_RIGHT_ACTION, Constants.Action.OpenApp)
         set(value) = storeAction(SWIPE_RIGHT_ACTION, value)
 
-    var swipeDownAction: Constants.Action
-        get() = loadAction(SWIPE_DOWN_ACTION, Constants.Action.ShowNotification)
-        set(value) = storeAction(SWIPE_DOWN_ACTION, value)
+    var longPressSwipeUpAction: Constants.Action
+        get() = loadAction(LONG_PRESS_SWIPE_UP_ACTION, Constants.Action.ShowAppList)
+        set(value) = storeAction(LONG_PRESS_SWIPE_UP_ACTION, value)
 
-    var swipeUpAction: Constants.Action
-        get() = loadAction(SWIPE_UP_ACTION, Constants.Action.ShowAppList)
-        set(value) = storeAction(SWIPE_UP_ACTION, value)
+    var longPressSwipeDownAction: Constants.Action
+        get() = loadAction(LONG_PRESS_SWIPE_DOWN_ACTION, Constants.Action.ShowNotification)
+        set(value) = storeAction(LONG_PRESS_SWIPE_DOWN_ACTION, value)
+
+    var longPressSwipeLeftAction: Constants.Action
+        get() = loadAction(LONG_PRESS_SWIPE_LEFT_ACTION, Constants.Action.Disabled)
+        set(value) = storeAction(LONG_PRESS_SWIPE_LEFT_ACTION, value)
+
+    var longPressSwipeRightAction: Constants.Action
+        get() = loadAction(LONG_PRESS_SWIPE_RIGHT_ACTION, Constants.Action.Disabled)
+        set(value) = storeAction(LONG_PRESS_SWIPE_RIGHT_ACTION, value)
 
     var clickClockAction: Constants.Action
         get() = loadAction(CLICK_CLOCK_ACTION, Constants.Action.OpenApp)

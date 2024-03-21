@@ -51,10 +51,14 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 prefs.setHomeAppModel(n, appModel)
             }
 
-            AppDrawerFlag.SetSwipeLeft -> prefs.appSwipeLeft = appModel
-            AppDrawerFlag.SetSwipeRight -> prefs.appSwipeRight = appModel
             AppDrawerFlag.SetSwipeUp -> prefs.appSwipeUp = appModel
             AppDrawerFlag.SetSwipeDown -> prefs.appSwipeDown = appModel
+            AppDrawerFlag.SetSwipeLeft -> prefs.appSwipeLeft = appModel
+            AppDrawerFlag.SetSwipeRight -> prefs.appSwipeRight = appModel
+            AppDrawerFlag.SetLongPressSwipeUp -> prefs.appLongPressSwipeUp = appModel
+            AppDrawerFlag.SetLongPressSwipeDown -> prefs.appLongPressSwipeDown = appModel
+            AppDrawerFlag.SetLongPressSwipeLeft -> prefs.appLongPressSwipeLeft = appModel
+            AppDrawerFlag.SetLongPressSwipeRight -> prefs.appLongPressSwipeRight = appModel
             AppDrawerFlag.SetClickClock -> prefs.appClickClock = appModel
             AppDrawerFlag.SetClickDate -> prefs.appClickDate = appModel
             AppDrawerFlag.SetDoubleTap -> prefs.appDoubleTap = appModel

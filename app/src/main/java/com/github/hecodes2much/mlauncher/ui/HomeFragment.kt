@@ -462,14 +462,26 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 }
 
                 when (direction) {
-                    "up" -> println("x is 2")
-                    "down" -> println("x is 1")
-                    "left" -> when (val action = prefs.swipeLeftAction) {
-                        Action.OpenApp -> openSwipeLeftApp()
+                    "up" -> when (val action = prefs.longPressSwipeUpAction) {
+                        Action.OpenApp -> openLongPressSwipeUpApp()
                         else -> handleOtherAction(action)
                     }
-                    "right" -> println("x is 1")
-                    else -> println("x is neither 1 nor 2")
+                    "down" -> when (val action = prefs.longPressSwipeDownAction) {
+                        Action.OpenApp -> openLongPressSwipeDownApp()
+                        else -> handleOtherAction(action)
+                    }
+                    "left" -> when (val action = prefs.longPressSwipeLeftAction) {
+                        Action.OpenApp -> openLongPressSwipeLeftApp()
+                        else -> handleOtherAction(action)
+                    }
+                    "right" -> when (val action = prefs.longPressSwipeRightAction) {
+                        Action.OpenApp -> openLongPressSwipeRightApp()
+                        else -> handleOtherAction(action)
+                    }
+                    else -> showToastLong(
+                        requireContext(),
+                        getString(R.string.text_authentication_cancel)
+                    )
                 }
                 Log.d("deltaX", direction)
             }

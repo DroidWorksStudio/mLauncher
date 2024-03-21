@@ -520,6 +520,50 @@ class SettingsFragment : Fragment() {
                             onSelect = { j -> setGesture(AppDrawerFlag.SetDoubleTap, j) },
                             appLabel = prefs.appDoubleTap.appLabel
                         )
+                    },
+                    { open, onChange ->
+                        SettingsGestureItem(
+                            title = stringResource(R.string.long_press_swipe_up_app),
+                            fontSize = iconFs,
+                            open = open,
+                            onChange = onChange,
+                            currentAction = prefs.longPressSwipeUpAction,
+                            onSelect = { j -> setGesture(AppDrawerFlag.SetLongPressSwipeUp, j) },
+                            appLabel = prefs.appLongPressSwipeUp.appLabel,
+                        )
+                    },
+                    { open, onChange ->
+                        SettingsGestureItem(
+                            title = stringResource(R.string.long_press_swipe_down_app),
+                            fontSize = iconFs,
+                            open = open,
+                            onChange = onChange,
+                            currentAction = prefs.longPressSwipeDownAction,
+                            onSelect = { j -> setGesture(AppDrawerFlag.SetLongPressSwipeDown, j) },
+                            appLabel = prefs.appLongPressSwipeDown.appLabel,
+                        )
+                    },
+                    { open, onChange ->
+                        SettingsGestureItem(
+                            title = stringResource(R.string.long_press_swipe_left_app),
+                            fontSize = iconFs,
+                            open = open,
+                            onChange = onChange,
+                            currentAction = prefs.longPressSwipeLeftAction,
+                            onSelect = { j -> setGesture(AppDrawerFlag.SetLongPressSwipeLeft, j) },
+                            appLabel = prefs.appLongPressSwipeLeft.appLabel,
+                        )
+                    },
+                    { open, onChange ->
+                        SettingsGestureItem(
+                            title = stringResource(R.string.long_press_swipe_right_app),
+                            fontSize = iconFs,
+                            open = open,
+                            onChange = onChange,
+                            currentAction = prefs.longPressSwipeRightAction,
+                            onSelect = { j -> setGesture(AppDrawerFlag.SetLongPressSwipeRight, j) },
+                            appLabel = prefs.appLongPressSwipeRight.appLabel,
+                        )
                     }
                 )
             )
@@ -751,13 +795,17 @@ class SettingsFragment : Fragment() {
 
     private fun setGesture(flag: AppDrawerFlag, action: Action) {
         when (flag) {
-            AppDrawerFlag.SetSwipeLeft -> prefs.swipeLeftAction = action
-            AppDrawerFlag.SetSwipeRight -> prefs.swipeRightAction = action
             AppDrawerFlag.SetSwipeUp -> prefs.swipeUpAction = action
             AppDrawerFlag.SetSwipeDown -> prefs.swipeDownAction = action
+            AppDrawerFlag.SetSwipeLeft -> prefs.swipeLeftAction = action
+            AppDrawerFlag.SetSwipeRight -> prefs.swipeRightAction = action
             AppDrawerFlag.SetClickClock -> prefs.clickClockAction = action
             AppDrawerFlag.SetClickDate -> prefs.clickDateAction = action
             AppDrawerFlag.SetDoubleTap -> prefs.doubleTapAction = action
+            AppDrawerFlag.SetLongPressSwipeUp -> prefs.longPressSwipeUpAction = action
+            AppDrawerFlag.SetLongPressSwipeDown -> prefs.longPressSwipeDownAction = action
+            AppDrawerFlag.SetLongPressSwipeLeft -> prefs.longPressSwipeLeftAction = action
+            AppDrawerFlag.SetLongPressSwipeRight -> prefs.longPressSwipeRightAction = action
             AppDrawerFlag.SetHomeApp,
             AppDrawerFlag.HiddenApps,
             AppDrawerFlag.LaunchApp -> {
