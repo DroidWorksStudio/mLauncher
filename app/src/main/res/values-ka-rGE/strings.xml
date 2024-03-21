@@ -53,6 +53,10 @@
     <string name="clock_click_app">დააწკაპუნეთ საათზე</string>
     <string name="date_click_app">დააჭირეთ თარიღს</string>
     <string name="double_tap">ორჯერ შეეხეთ</string>
+    <string name="long_press_swipe_up_app">დიდხანს დააჭირეთ Swipe up-ს</string>
+    <string name="long_press_swipe_down_app">დიდხანს დააჭირეთ Swipe down</string>
+    <string name="long_press_swipe_left_app">დიდხანს დააჭირეთ გადაფურცვლა მარცხნივ</string>
+    <string name="long_press_swipe_right_app">დიდხანს დააჭირეთ გადაფურცვლა მარჯვნივ</string>
     <!-- Settings Strings -->
     <string name="off">გამორთულია</string>
     <string name="on">ჩართულია</string>
