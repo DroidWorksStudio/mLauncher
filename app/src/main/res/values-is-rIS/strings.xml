@@ -53,6 +53,10 @@
     <string name="clock_click_app">Smelltu á Klukka</string>
     <string name="date_click_app">Smelltu á Dagsetning</string>
     <string name="double_tap">Tvíklikka</string>
+    <string name="long_press_swipe_up_app">Ýttu lengi á Strjúktu upp</string>
+    <string name="long_press_swipe_down_app">Ýttu lengi á Strjúktu niður</string>
+    <string name="long_press_swipe_left_app">Ýttu lengi á Strjúktu til vinstri</string>
+    <string name="long_press_swipe_right_app">Ýttu lengi á Strjúktu til hægri</string>
     <!-- Settings Strings -->
     <string name="off">Af</string>
     <string name="on">Á</string>
