@@ -53,6 +53,10 @@
     <string name="clock_click_app">Klikněte na hodiny</string>
     <string name="date_click_app">Klikněte na datum</string>
     <string name="double_tap">Dvojité klepnutí</string>
+    <string name="long_press_swipe_up_app">Dlouhé stisknutí Přejetí nahoru</string>
+    <string name="long_press_swipe_down_app">Dlouhé stisknutí Přejetím dolů</string>
+    <string name="long_press_swipe_left_app">Dlouhé stisknutí Přejetí doleva</string>
+    <string name="long_press_swipe_right_app">Dlouhé stisknutí Přejetím doprava</string>
     <!-- Settings Strings -->
     <string name="off">Vypnuto</string>
     <string name="on">Zapnuto</string>
