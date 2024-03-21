@@ -53,6 +53,10 @@
     <string name="clock_click_app">Mag-click sa Orasan</string>
     <string name="date_click_app">Mag-click sa Petsa</string>
     <string name="double_tap">I-double Tap</string>
+    <string name="long_press_swipe_up_app">Pindutin nang matagal ang Mag-swipe pataas</string>
+    <string name="long_press_swipe_down_app">Pindutin nang matagal ang Mag-swipe pababa</string>
+    <string name="long_press_swipe_left_app">Pindutin nang matagal ang Mag-swipe pakaliwa</string>
+    <string name="long_press_swipe_right_app">Pindutin nang matagal ang Mag-swipe pakanan</string>
     <!-- Settings Strings -->
     <string name="off">Naka-off</string>
     <string name="on">Naka-on</string>

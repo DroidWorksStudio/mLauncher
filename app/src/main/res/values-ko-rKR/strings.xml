@@ -53,6 +53,10 @@
     <string name="clock_click_app">Click on Clock</string>
     <string name="date_click_app">Click on Date</string>
     <string name="double_tap">Double Tap</string>
+    <string name="long_press_swipe_up_app">길게 누르기 위로 스와이프</string>
+    <string name="long_press_swipe_down_app">길게 누르기 아래로 스와이프</string>
+    <string name="long_press_swipe_left_app">길게 누르기 왼쪽으로 스와이프</string>
+    <string name="long_press_swipe_right_app">길게 누르기 오른쪽으로 스와이프</string>
     <!-- Settings Strings -->
     <string name="off">Off</string>
     <string name="on">On</string>

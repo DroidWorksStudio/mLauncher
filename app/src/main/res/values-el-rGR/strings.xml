@@ -53,6 +53,10 @@
     <string name="clock_click_app">Κάντε κλικ στο ρολόι</string>
     <string name="date_click_app">Κάντε κλικ στην ημερομηνία</string>
     <string name="double_tap">Διπλό Πάτημα</string>
+    <string name="long_press_swipe_up_app">Πατήστε παρατεταμένα Σάρωση προς τα επάνω</string>
+    <string name="long_press_swipe_down_app">Πατήστε παρατεταμένα Σύρετε προς τα κάτω</string>
+    <string name="long_press_swipe_left_app">Πατήστε παρατεταμένα Σύρετε προς τα αριστερά</string>
+    <string name="long_press_swipe_right_app">Πατήστε παρατεταμένα Σύρετε προς τα δεξιά</string>
     <!-- Settings Strings -->
     <string name="off">Ανενεργό</string>
     <string name="on">Ενεργό</string>

@@ -53,6 +53,10 @@
     <string name="clock_click_app">Bonyeza Saa</string>
     <string name="date_click_app">Bonyeza Tarehe</string>
     <string name="double_tap">Gonga Mara Mbili</string>
+    <string name="long_press_swipe_up_app">Bonyeza kwa Muda mrefu Telezesha kidole juu</string>
+    <string name="long_press_swipe_down_app">Bonyeza kwa Muda Telezesha chini</string>
+    <string name="long_press_swipe_left_app">Bonyeza kwa Muda Telezesha kushoto</string>
+    <string name="long_press_swipe_right_app">Bonyeza kwa Muda Telezesha kulia</string>
     <!-- Settings Strings -->
     <string name="off">Imezimwa</string>
     <string name="on">Washa</string>

@@ -53,6 +53,10 @@
     <string name="clock_click_app">Кликнете върху Часовник</string>
     <string name="date_click_app">Кликнете върху Дата</string>
     <string name="double_tap">Двойно докосване</string>
+    <string name="long_press_swipe_up_app">Продължително натискане Плъзнете нагоре</string>
+    <string name="long_press_swipe_down_app">Продължително натискане Плъзнете надолу</string>
+    <string name="long_press_swipe_left_app">Продължително натискане Плъзнете наляво</string>
+    <string name="long_press_swipe_right_app">Продължително натискане Плъзнете надясно</string>
     <!-- Settings Strings -->
     <string name="off">Изключено</string>
     <string name="on">На</string>

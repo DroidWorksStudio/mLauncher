@@ -53,6 +53,10 @@
     <string name="clock_click_app">Klikkaa kello</string>
     <string name="date_click_app">Klikkaa päivämäärää</string>
     <string name="double_tap">Kaksoisnapautus</string>
+    <string name="long_press_swipe_up_app">Pitkä painallus Pyyhkäise ylös</string>
+    <string name="long_press_swipe_down_app">Pitkä painallus Pyyhkäise alas</string>
+    <string name="long_press_swipe_left_app">Pitkä painallus Pyyhkäise vasemmalle</string>
+    <string name="long_press_swipe_right_app">Pitkä painallus Pyyhkäise oikealle</string>
     <!-- Settings Strings -->
     <string name="off">Pois</string>
     <string name="on">Päällä</string>

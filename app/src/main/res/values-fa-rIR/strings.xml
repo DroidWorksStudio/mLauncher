@@ -53,6 +53,10 @@
     <string name="clock_click_app">روی ساعت کلیک کنید</string>
     <string name="date_click_app">روی تاریخ کلیک کنید</string>
     <string name="double_tap">دو تا ضربه ی آهسته بزن</string>
+    <string name="long_press_swipe_up_app">Swipe up را طولانی فشار دهید</string>
+    <string name="long_press_swipe_down_app">Swipe down را طولانی فشار دهید</string>
+    <string name="long_press_swipe_left_app">با فشار طولانی، انگشت خود را به چپ بکشید</string>
+    <string name="long_press_swipe_right_app">انگشت خود را به سمت راست فشار دهید</string>
     <!-- Settings Strings -->
     <string name="off">خاموش</string>
     <string name="on">بر</string>

@@ -53,6 +53,10 @@
     <string name="clock_click_app">Kaomi ma ka uaki</string>
     <string name="date_click_app">Kaomi ma ka lā</string>
     <string name="double_tap">Koʻu pālua</string>
+    <string name="long_press_swipe_up_app">Paʻi lōʻihi Swipe i luna</string>
+    <string name="long_press_swipe_down_app">Paʻi lōʻihi Swipe i lalo</string>
+    <string name="long_press_swipe_left_app">Paʻi lōʻihi Swipe hema</string>
+    <string name="long_press_swipe_right_app">Paʻi lōʻihi Swipe ʻākau</string>
     <!-- Settings Strings -->
     <string name="off">Paʻa</string>
     <string name="on">Ma ka</string>

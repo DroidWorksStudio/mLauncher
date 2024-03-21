@@ -53,6 +53,10 @@
     <string name="clock_click_app">Clique em Relógio</string>
     <string name="date_click_app">Clique em Data</string>
     <string name="double_tap">Torneira dupla</string>
+    <string name="long_press_swipe_up_app">Pressione longamente e deslize para cima</string>
+    <string name="long_press_swipe_down_app">Pressione longamente e deslize para baixo</string>
+    <string name="long_press_swipe_left_app">Pressione e deslize para a esquerda</string>
+    <string name="long_press_swipe_right_app">Pressione longamente e deslize para a direita</string>
     <!-- Settings Strings -->
     <string name="off">Desligado</string>
     <string name="on">Em</string>

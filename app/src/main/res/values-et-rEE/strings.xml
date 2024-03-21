@@ -53,6 +53,10 @@
     <string name="clock_click_app">Klõpsake kella</string>
     <string name="date_click_app">Klõpsake kuupäeval</string>
     <string name="double_tap">Double Tap</string>
+    <string name="long_press_swipe_up_app">Pikk vajutus Pühkige üles</string>
+    <string name="long_press_swipe_down_app">Pikk vajutus Pühkige alla</string>
+    <string name="long_press_swipe_left_app">Pikk vajutus Pühkige vasakule</string>
+    <string name="long_press_swipe_right_app">Pikk vajutus Pühkige paremale</string>
     <!-- Settings Strings -->
     <string name="off">Väljaspool</string>
     <string name="on">Veebilehel</string>

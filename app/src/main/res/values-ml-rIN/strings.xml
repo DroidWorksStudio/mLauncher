@@ -53,6 +53,10 @@
     <string name="clock_click_app">ക്ലോക്കിൽ ക്ലിക്ക് ചെയ്യുക</string>
     <string name="date_click_app">തീയതിയിൽ ക്ലിക്ക് ചെയ്യുക</string>
     <string name="double_tap">രണ്ടുതവണ ടാപ്പ് ചെയ്യുക</string>
+    <string name="long_press_swipe_up_app">ദീർഘനേരം അമർത്തി മുകളിലേക്ക് സ്വൈപ്പ് ചെയ്യുക</string>
+    <string name="long_press_swipe_down_app">ദീർഘനേരം അമർത്തി താഴേക്ക് സ്വൈപ്പ് ചെയ്യുക</string>
+    <string name="long_press_swipe_left_app">ദീർഘനേരം അമർത്തി ഇടത്തേക്ക് സ്വൈപ്പ് ചെയ്യുക</string>
+    <string name="long_press_swipe_right_app">ദീർഘനേരം അമർത്തി വലത്തേക്ക് സ്വൈപ്പ് ചെയ്യുക</string>
     <!-- Settings Strings -->
     <string name="off">ഓഫ്</string>
     <string name="on">ഓൺ</string>

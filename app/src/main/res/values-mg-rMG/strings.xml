@@ -53,6 +53,10 @@
     <string name="clock_click_app">Tsindrio ny Clock</string>
     <string name="date_click_app">Tsindrio ny Date</string>
     <string name="double_tap">Peho indroa</string>
+    <string name="long_press_swipe_up_app">Tsindrio lava Swipe miakatra</string>
+    <string name="long_press_swipe_down_app">Tsindrio lava Swipe midina</string>
+    <string name="long_press_swipe_left_app">Tsindrio lava Swipe miankavia</string>
+    <string name="long_press_swipe_right_app">Tsindrio lava Swipe miankavanana</string>
     <!-- Settings Strings -->
     <string name="off">eny</string>
     <string name="on">On</string>

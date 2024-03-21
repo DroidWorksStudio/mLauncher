@@ -53,6 +53,10 @@
     <string name="clock_click_app">گھڙي تي ڪلڪ ڪريو</string>
     <string name="date_click_app">تي ڪلڪ ڪريو تاريخ</string>
     <string name="double_tap">ڊبل ٽيپ ڪريو</string>
+    <string name="long_press_swipe_up_app">ڊگھو دٻايو مٿي سوائپ ڪريو</string>
+    <string name="long_press_swipe_down_app">ڊگھو دٻايو ھيٺ سوائپ ڪريو</string>
+    <string name="long_press_swipe_left_app">ڊگھي دٻايو کاٻي پاسي سوائپ ڪريو</string>
+    <string name="long_press_swipe_right_app">ڊگھو دٻايو ساڄي سوائپ ڪريو</string>
     <!-- Settings Strings -->
     <string name="off">بند</string>
     <string name="on">تي</string>

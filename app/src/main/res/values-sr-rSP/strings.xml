@@ -53,6 +53,10 @@
     <string name="clock_click_app">Click on Clock</string>
     <string name="date_click_app">Click on Date</string>
     <string name="double_tap">Double Tap</string>
+    <string name="long_press_swipe_up_app">Дуги притисак Превуците нагоре</string>
+    <string name="long_press_swipe_down_app">Дуги притисак Превуците надоле</string>
+    <string name="long_press_swipe_left_app">Дуги притисак Превуците налево</string>
+    <string name="long_press_swipe_right_app">Дуги притисак Превуците удесно</string>
     <!-- Settings Strings -->
     <string name="off">Off</string>
     <string name="on">On</string>

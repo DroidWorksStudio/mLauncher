@@ -53,6 +53,10 @@
     <string name="clock_click_app">ਘੜੀ \'ਤੇ ਕਲਿੱਕ ਕਰੋ</string>
     <string name="date_click_app">ਮਿਤੀ \'ਤੇ ਕਲਿੱਕ ਕਰੋ</string>
     <string name="double_tap">ਡਬਲ ਟੈਪ ਕਰੋ</string>
+    <string name="long_press_swipe_up_app">ਸਵਾਈਪ ਉੱਪਰ ਦੇਰ ਤੱਕ ਦਬਾਓ</string>
+    <string name="long_press_swipe_down_app">ਹੇਠਾਂ ਵੱਲ ਸਵਾਈਪ ਨੂੰ ਦੇਰ ਤੱਕ ਦਬਾਓ</string>
+    <string name="long_press_swipe_left_app">ਖੱਬੇ ਪਾਸੇ ਸਵਾਈਪ ਨੂੰ ਦੇਰ ਤੱਕ ਦਬਾਓ</string>
+    <string name="long_press_swipe_right_app">ਸੱਜੇ ਸਵਾਈਪ ਨੂੰ ਦੇਰ ਤੱਕ ਦਬਾਓ</string>
     <!-- Settings Strings -->
     <string name="off">ਬੰਦ</string>
     <string name="on">\'ਤੇ</string>

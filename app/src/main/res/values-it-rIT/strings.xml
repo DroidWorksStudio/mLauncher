@@ -53,6 +53,10 @@
     <string name="clock_click_app">Clicca su Orologio</string>
     <string name="date_click_app">Clicca su Data</string>
     <string name="double_tap">Doppio Tocco</string>
+    <string name="long_press_swipe_up_app">Premere a lungo Scorrere verso l\'alto</string>
+    <string name="long_press_swipe_down_app">Pressione lunga Scorri verso il basso</string>
+    <string name="long_press_swipe_left_app">Premere a lungo Scorri verso sinistra</string>
+    <string name="long_press_swipe_right_app">Premere a lungo Scorri verso destra</string>
     <!-- Settings Strings -->
     <string name="off">Off</string>
     <string name="on">Acceso</string>

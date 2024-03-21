@@ -53,6 +53,10 @@
     <string name="clock_click_app">Натисніть на Годинник</string>
     <string name="date_click_app">Натисніть на дату</string>
     <string name="double_tap">Подвійний дотик</string>
+    <string name="long_press_swipe_up_app">Тривале натискання Проведіть пальцем угору</string>
+    <string name="long_press_swipe_down_app">Тривале натискання Проведіть пальцем вниз</string>
+    <string name="long_press_swipe_left_app">Тривале натискання Проведіть пальцем ліворуч</string>
+    <string name="long_press_swipe_right_app">Тривале натискання Проведіть праворуч</string>
     <!-- Settings Strings -->
     <string name="off">Вимкнено</string>
     <string name="on">Увімк</string>

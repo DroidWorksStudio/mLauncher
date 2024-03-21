@@ -53,6 +53,10 @@
     <string name="clock_click_app">Kattintson az Óra gombra</string>
     <string name="date_click_app">Kattintson a Dátumra</string>
     <string name="double_tap">Dupla csapolás</string>
+    <string name="long_press_swipe_up_app">Hosszan megnyomva Csúsztassa felfelé az ujját</string>
+    <string name="long_press_swipe_down_app">Hosszan nyomva Csúsztassa lefelé az ujját</string>
+    <string name="long_press_swipe_left_app">Hosszan megnyomva Csúsztassa balra</string>
+    <string name="long_press_swipe_right_app">Hosszan megnyomva Csúsztassa jobbra az ujját</string>
     <!-- Settings Strings -->
     <string name="off">Off</string>
     <string name="on">A  oldalon.</string>

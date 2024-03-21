@@ -53,6 +53,10 @@
     <string name="clock_click_app">Klicka på klockan</string>
     <string name="date_click_app">Klicka på datum</string>
     <string name="double_tap">Dubbeltryck</string>
+    <string name="long_press_swipe_up_app">Långt tryck Svep uppåt</string>
+    <string name="long_press_swipe_down_app">Långt tryck Svep nedåt</string>
+    <string name="long_press_swipe_left_app">Långt tryck Svep åt vänster</string>
+    <string name="long_press_swipe_right_app">Långt tryck Svep åt höger</string>
     <!-- Settings Strings -->
     <string name="off">Av</string>
     <string name="on">På</string>

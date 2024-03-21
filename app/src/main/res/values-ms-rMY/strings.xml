@@ -53,6 +53,10 @@
     <string name="clock_click_app">Klik pada Jam</string>
     <string name="date_click_app">Klik pada Tarikh</string>
     <string name="double_tap">Tekan dua kali</string>
+    <string name="long_press_swipe_up_app">Tekan Lama Leret ke atas</string>
+    <string name="long_press_swipe_down_app">Tekan Lama Leret ke bawah</string>
+    <string name="long_press_swipe_left_app">Tekan Lama Leret ke kiri</string>
+    <string name="long_press_swipe_right_app">Tekan Lama Leret ke kanan</string>
     <!-- Settings Strings -->
     <string name="off">Mati</string>
     <string name="on">hidup</string>

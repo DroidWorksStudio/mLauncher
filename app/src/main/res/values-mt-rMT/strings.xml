@@ -53,6 +53,10 @@
     <string name="clock_click_app">Ikklikkja fuq Arloġġ</string>
     <string name="date_click_app">Ikklikkja fuq Data</string>
     <string name="double_tap">Tektek Doppju</string>
+    <string name="long_press_swipe_up_app">Agħfas twil Swipe \'l fuq</string>
+    <string name="long_press_swipe_down_app">Agħfas twil Swipe\' l isfel</string>
+    <string name="long_press_swipe_left_app">Agħfas fit-tul Swipe xellug</string>
+    <string name="long_press_swipe_right_app">Agħfas fit-tul Swipe lemin</string>
     <!-- Settings Strings -->
     <string name="off">Mitfi</string>
     <string name="on">Fuq</string>

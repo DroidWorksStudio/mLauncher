@@ -53,6 +53,10 @@
     <string name="clock_click_app">单击时钟启动的应用</string>
     <string name="date_click_app">单击日期启动的应用</string>
     <string name="double_tap">轻按两次启动的应用</string>
+    <string name="long_press_swipe_up_app">长按向上滑动</string>
+    <string name="long_press_swipe_down_app">长按向下滑动</string>
+    <string name="long_press_swipe_left_app">长按向左滑动</string>
+    <string name="long_press_swipe_right_app">长按向右滑动</string>
     <!-- Settings Strings -->
     <string name="off">关</string>
     <string name="on">开</string>

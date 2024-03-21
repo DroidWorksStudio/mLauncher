@@ -53,6 +53,10 @@
     <string name="clock_click_app">時計をクリックしてください</string>
     <string name="date_click_app">日付をクリックしてください</string>
     <string name="double_tap">ダブルタップ</string>
+    <string name="long_press_swipe_up_app">長押し 上にスワイプ</string>
+    <string name="long_press_swipe_down_app">長押し 下にスワイプ</string>
+    <string name="long_press_swipe_left_app">長押し 左にスワイプ</string>
+    <string name="long_press_swipe_right_app">長押し 右にスワイプ</string>
     <!-- Settings Strings -->
     <string name="off">オフ</string>
     <string name="on">オン</string>

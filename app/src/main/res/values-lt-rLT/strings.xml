@@ -53,6 +53,10 @@
     <string name="clock_click_app">Spustelėkite ant laikrodžio</string>
     <string name="date_click_app">Spustelėkite ant datos</string>
     <string name="double_tap">Dukart paspauskite</string>
+    <string name="long_press_swipe_up_app">Ilgas paspaudimas Braukite aukštyn</string>
+    <string name="long_press_swipe_down_app">Ilgai paspauskite Braukite žemyn</string>
+    <string name="long_press_swipe_left_app">Ilgai paspauskite Braukite kairėn</string>
+    <string name="long_press_swipe_right_app">Ilgai paspauskite Braukite dešinėn</string>
     <!-- Settings Strings -->
     <string name="off">Išjungti</string>
     <string name="on">Įjungti</string>

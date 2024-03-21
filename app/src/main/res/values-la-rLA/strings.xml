@@ -53,6 +53,10 @@
     <string name="clock_click_app">Click in Horologium</string>
     <string name="date_click_app">Click in Date</string>
     <string name="double_tap">ICTUS duplo</string>
+    <string name="long_press_swipe_up_app">Long Press Tollenone</string>
+    <string name="long_press_swipe_down_app">Long Press Tollenone</string>
+    <string name="long_press_swipe_left_app">Long Press Tollenone relicto</string>
+    <string name="long_press_swipe_right_app">Long Press Tollenone recta</string>
     <!-- Settings Strings -->
     <string name="off">Off</string>
     <string name="on">On</string>

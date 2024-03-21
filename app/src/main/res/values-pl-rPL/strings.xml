@@ -53,6 +53,10 @@
     <string name="clock_click_app">Kliknij na zegar</string>
     <string name="date_click_app">Kliknij na datę</string>
     <string name="double_tap">Podwójne dotknięcie</string>
+    <string name="long_press_swipe_up_app">Długie naciśnięcie Przesuń w górę</string>
+    <string name="long_press_swipe_down_app">Długie naciśnięcie Przesuń w dół</string>
+    <string name="long_press_swipe_left_app">Długie naciśnięcie Przesuń w lewo</string>
+    <string name="long_press_swipe_right_app">Długie naciśnięcie Przesuń w prawo</string>
     <!-- Settings Strings -->
     <string name="off">Wyłączony</string>
     <string name="on">Włączone</string>
