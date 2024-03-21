@@ -1,0 +1,7 @@
+Version : 1.4.1
+
+Améliorations :
+[Fonctionnalité] - Ajout de gestes de balayage à pression longue.
+
+Support linguistique:
+[Langue] Fichiers de langue mis à jour.
