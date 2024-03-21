@@ -53,6 +53,10 @@
     <string name="clock_click_app">Klik på ur</string>
     <string name="date_click_app">Klik på dato</string>
     <string name="double_tap">Dobbelttryk</string>
+    <string name="long_press_swipe_up_app">Langt tryk Stryg opad</string>
+    <string name="long_press_swipe_down_app">Langt tryk Stryg ned</string>
+    <string name="long_press_swipe_left_app">Langt tryk Stryg til venstre</string>
+    <string name="long_press_swipe_right_app">Langt tryk Stryg til højre</string>
     <!-- Settings Strings -->
     <string name="off">Fra</string>
     <string name="on">Til</string>
