@@ -1,5 +1,13 @@
 # Changelog
 
+## [Coming Soon](https://github.com/HeAndroids2Much/mLauncher/tree/HEAD)
+
+[Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/1.4.0...HEAD)
+
+**Implemented Enhancements:**
+
+- \[Feature\] - Added Long-Press Swipe Gestures [\#374](https://github.com/HeAndroids2Much/mLauncher/pull/374) ([HeCodes2Much](https://github.com/HeCodes2Much))
+
 ## [1.4.0](https://github.com/HeAndroids2Much/mLauncher/tree/1.4.0) (19, March 2024)
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/1.3.5...1.4.0)
