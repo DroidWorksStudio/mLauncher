@@ -53,6 +53,10 @@
     <string name="clock_click_app">Klikoni mbi Orën</string>
     <string name="date_click_app">Klikoni mbi Data</string>
     <string name="double_tap">Trokit dy herë</string>
+    <string name="long_press_swipe_up_app">Shtypni gjatë Rrëshqitni lart</string>
+    <string name="long_press_swipe_down_app">Shtypni gjatë Rrëshqitni poshtë</string>
+    <string name="long_press_swipe_left_app">Shtypni gjatë Rrëshqitni majtas</string>
+    <string name="long_press_swipe_right_app">Shtypni gjatë Rrëshqitni djathtas</string>
     <!-- Settings Strings -->
     <string name="off">Joaktiv</string>
     <string name="on">Aktiv</string>
