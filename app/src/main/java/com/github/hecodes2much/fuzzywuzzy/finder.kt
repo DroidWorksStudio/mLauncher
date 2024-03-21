@@ -3,7 +3,7 @@ package com.github.hecodes2much.fuzzywuzzy
 import com.github.hecodes2much.mlauncher.data.AppModel
 import java.util.*
 
-fun scoreApp(app: AppModel, searchChars: String): Int {
+fun scoreApp(app: AppModel, searchChars: String, topScore: Int): Int {
     val appChars = app.appAlias.ifEmpty { app.appLabel }
 
     val fuzzyScore = calculateFuzzyScore(
@@ -11,7 +11,7 @@ fun scoreApp(app: AppModel, searchChars: String): Int {
         normalizeString(searchChars)
     )
 
-    return (fuzzyScore * 99).toInt()
+    return (fuzzyScore * topScore).toInt()
 }
 
 fun normalizeString(input: String): String {

@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.github.hecodes2much.fuzzywuzzy.scoreApp
 import com.github.hecodes2much.mlauncher.R
 import com.github.hecodes2much.mlauncher.data.AppModel
+import com.github.hecodes2much.mlauncher.data.Constants
 import com.github.hecodes2much.mlauncher.data.Constants.AppDrawerFlag
 import com.github.hecodes2much.mlauncher.data.Prefs
 import com.github.hecodes2much.mlauncher.databinding.AdapterAppDrawerBinding
@@ -90,7 +91,7 @@ class AppDrawerAdapter(
 
                 val scoredApps = mutableMapOf<AppModel, Int>()
                 for (app in appsList) {
-                    scoredApps[app] = scoreApp(app, searchChars)
+                    scoredApps[app] = scoreApp(app, searchChars, Constants.FILTER_STRENGTH_MAX)
                 }
 
                 val filteredApps = if (searchChars.isNotEmpty()) {
