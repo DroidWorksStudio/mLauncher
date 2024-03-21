@@ -1,0 +1,7 @@
+Útgáfa: 1.4.1
+
+Aukabætur:
+[Eiginleiki] - Bætt við langpressu strjúkabendingum.
+
+Tungumálastuðningur:
+[Tungumál] Uppfærðar tungumálaskrár.
