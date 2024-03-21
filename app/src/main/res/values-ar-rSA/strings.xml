@@ -53,6 +53,10 @@
     <string name="clock_click_app">انقر على الساعة</string>
     <string name="date_click_app">انقر على التاريخ</string>
     <string name="double_tap">النقر المزدوج</string>
+    <string name="long_press_swipe_up_app">اضغط لفترة طويلة على السحب لأعلى</string>
+    <string name="long_press_swipe_down_app">الضغط لفترة طويلة اسحب لأسفل</string>
+    <string name="long_press_swipe_left_app">الضغط لفترة طويلة اسحب لليسار</string>
+    <string name="long_press_swipe_right_app">اضغط لفترة طويلة اسحب لليمين</string>
     <!-- Settings Strings -->
     <string name="off">متوقف</string>
     <string name="on">تشغيل</string>
