@@ -53,6 +53,10 @@
     <string name="clock_click_app">Нажмите на часы</string>
     <string name="date_click_app">Нажмите на дату</string>
     <string name="double_tap">Двойное нажатие</string>
+    <string name="long_press_swipe_up_app">Длительное нажатие Проведите пальцем вверх</string>
+    <string name="long_press_swipe_down_app">Длительное нажатие Проведите пальцем вниз</string>
+    <string name="long_press_swipe_left_app">Длительное нажатие Проведите пальцем влево</string>
+    <string name="long_press_swipe_right_app">Длительное нажатие Проведите пальцем вправо</string>
     <!-- Settings Strings -->
     <string name="off">Выкл</string>
     <string name="on">На</string>
