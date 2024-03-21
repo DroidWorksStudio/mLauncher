@@ -1,0 +1,7 @@
+Weergawe: 1.4.1
+
+Verbeterings:
+[Kenmerk] - Langdruk-veeggebare bygevoeg.
+
+Taalondersteuning:
+[Taal] Bygewerkte taallêers.

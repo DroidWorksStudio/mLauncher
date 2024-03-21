@@ -1,0 +1,7 @@
+Version: 1.4.1
+
+Fanatsarana:
+[Endri-javatra] - Nampiana fihetsehana Swipe fanindriana lava.
+
+Fanohanana ny fiteny:
+[Fiteny] Nohavaozina ny rakitra fiteny.

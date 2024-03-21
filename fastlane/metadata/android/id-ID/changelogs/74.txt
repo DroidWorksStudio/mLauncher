@@ -1,0 +1,7 @@
+Versi: 1.4.1
+
+Peningkatan:
+[Fitur] - Menambahkan Gerakan Gesek Tekan Panjang.
+
+Dukungan bahasa:
+[Bahasa] File Bahasa yang Diperbarui.

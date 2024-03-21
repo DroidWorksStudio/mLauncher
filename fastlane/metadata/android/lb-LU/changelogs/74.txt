@@ -1,0 +1,7 @@
+Versioun: 1.4.1
+
+Verbesserungen:
+[Feature] - Added Long-Press Swipe Gestures.
+
+Sprooch Ënnerstëtzung:
+[Sprooch] Aktualiséiert Sproochdateien.

@@ -1,0 +1,7 @@
+Sürüm: 1.4.1
+
+Geliştirmeler:
+[Özellik] - Uzun Basma Kaydırma Hareketleri eklendi.
+
+Dil desteği:
+[Dil] Güncellenmiş Dil Dosyaları.
