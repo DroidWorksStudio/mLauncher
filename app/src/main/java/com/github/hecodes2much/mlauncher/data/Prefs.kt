@@ -52,10 +52,14 @@ private const val APP_ACTIVITY = "APP_ACTIVITY"
 private const val APP_OPACITY = "APP_OPACITY"
 private const val APP_THEME = "APP_THEME"
 
-private const val SWIPE_RIGHT = "SWIPE_RIGHT"
-private const val SWIPE_LEFT = "SWIPE_LEFT"
-private const val SWIPE_DOWN = "SWIPE_DOWN"
 private const val SWIPE_UP = "SWIPE_UP"
+private const val SWIPE_DOWN = "SWIPE_DOWN"
+private const val SWIPE_LEFT = "SWIPE_LEFT"
+private const val SWIPE_RIGHT = "SWIPE_RIGHT"
+private const val LONG_PRESS_SWIPE_UP = "LONG_PRESS_SWIPE_UP"
+private const val LONG_PRESS_SWIPE_DOWN = "LONG_PRESS_SWIPE_DOWN"
+private const val LONG_PRESS_SWIPE_LEFT = "LONG_PRESS_SWIPE_LEFT"
+private const val LONG_PRESS_SWIPE_RIGHT = "LONG_PRESS_SWIPE_RIGHT"
 private const val CLICK_CLOCK = "CLICK_CLOCK"
 private const val CLICK_DATE = "CLICK_DATE"
 private const val DOUBLE_TAP = "DOUBLE_TAP"
@@ -305,21 +309,31 @@ class Prefs(val context: Context) {
         prefs.edit().putString(nameId, name).apply()
     }
 
+    var appSwipeUp: AppModel
+        get() = loadApp(SWIPE_UP)
+        set(appModel) = storeApp(SWIPE_UP, appModel)
+    var appSwipeDown: AppModel
+        get() = loadApp(SWIPE_DOWN)
+        set(appModel) = storeApp(SWIPE_DOWN, appModel)
+    var appSwipeLeft: AppModel
+        get() = loadApp(SWIPE_LEFT)
+        set(appModel) = storeApp(SWIPE_LEFT, appModel)
     var appSwipeRight: AppModel
         get() = loadApp(SWIPE_RIGHT)
         set(appModel) = storeApp(SWIPE_RIGHT, appModel)
 
-    var appSwipeLeft: AppModel
-        get() = loadApp(SWIPE_LEFT)
-        set(appModel) = storeApp(SWIPE_LEFT, appModel)
-
-    var appSwipeDown: AppModel
-        get() = loadApp(SWIPE_DOWN)
-        set(appModel) = storeApp(SWIPE_DOWN, appModel)
-
-    var appSwipeUp: AppModel
-        get() = loadApp(SWIPE_UP)
-        set(appModel) = storeApp(SWIPE_UP, appModel)
+    var appLongPressSwipeUp: AppModel
+        get() = loadApp(LONG_PRESS_SWIPE_UP)
+        set(appModel) = storeApp(LONG_PRESS_SWIPE_UP, appModel)
+    var appLongPressSwipeDown: AppModel
+        get() = loadApp(LONG_PRESS_SWIPE_DOWN)
+        set(appModel) = storeApp(LONG_PRESS_SWIPE_DOWN, appModel)
+    var appLongPressSwipeLeft: AppModel
+        get() = loadApp(LONG_PRESS_SWIPE_LEFT)
+        set(appModel) = storeApp(LONG_PRESS_SWIPE_LEFT, appModel)
+    var appLongPressSwipeRight: AppModel
+        get() = loadApp(LONG_PRESS_SWIPE_RIGHT)
+        set(appModel) = storeApp(LONG_PRESS_SWIPE_RIGHT, appModel)
 
     var appClickClock: AppModel
         get() = loadApp(CLICK_CLOCK)

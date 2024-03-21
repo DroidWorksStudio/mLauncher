@@ -304,6 +304,17 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         }
     }
 
+    private fun openSwipeUpApp() {
+        if (prefs.appSwipeUp.appPackage.isNotEmpty())
+            launchApp(prefs.appSwipeUp)
+        else openDialerApp(requireContext())
+    }
+    private fun openSwipeDownApp() {
+        if (prefs.appSwipeDown.appPackage.isNotEmpty())
+            launchApp(prefs.appSwipeDown)
+        else openDialerApp(requireContext())
+    }
+
     private fun openSwipeLeftApp() {
         if (prefs.appSwipeLeft.appPackage.isNotEmpty())
             launchApp(prefs.appSwipeLeft)
@@ -316,15 +327,26 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         else openDialerApp(requireContext())
     }
 
-    private fun openSwipeDownApp() {
-        if (prefs.appSwipeDown.appPackage.isNotEmpty())
-            launchApp(prefs.appSwipeDown)
+    private fun openLongPressSwipeUpApp() {
+        if (prefs.appLongPressSwipeUp.appPackage.isNotEmpty())
+            launchApp(prefs.appLongPressSwipeUp)
+        else openDialerApp(requireContext())
+    }
+    private fun openLongPressSwipeDownApp() {
+        if (prefs.appLongPressSwipeDown.appPackage.isNotEmpty())
+            launchApp(prefs.appLongPressSwipeDown)
         else openDialerApp(requireContext())
     }
 
-    private fun openSwipeUpApp() {
-        if (prefs.appSwipeUp.appPackage.isNotEmpty())
-            launchApp(prefs.appSwipeUp)
+    private fun openLongPressSwipeLeftApp() {
+        if (prefs.appLongPressSwipeLeft.appPackage.isNotEmpty())
+            launchApp(prefs.appLongPressSwipeLeft)
+        else openCameraApp(requireContext())
+    }
+
+    private fun openLongPressSwipeRightApp() {
+        if (prefs.appLongPressSwipeRight.appPackage.isNotEmpty())
+            launchApp(prefs.appLongPressSwipeRight)
         else openDialerApp(requireContext())
     }
 
