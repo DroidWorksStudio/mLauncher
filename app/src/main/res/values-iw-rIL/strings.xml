@@ -53,6 +53,10 @@
     <string name="clock_click_app">Click on Clock</string>
     <string name="date_click_app">Click on Date</string>
     <string name="double_tap">Double Tap</string>
+    <string name="long_press_swipe_up_app">לחץ לחיצה ארוכה החלק למעלה</string>
+    <string name="long_press_swipe_down_app">לחץ לחיצה ארוכה החלק מטה</string>
+    <string name="long_press_swipe_left_app">לחיצה ארוכה החלק שמאלה</string>
+    <string name="long_press_swipe_right_app">לחץ לחיצה ארוכה החלק ימינה</string>
     <!-- Settings Strings -->
     <string name="off">Off</string>
     <string name="on">On</string>
