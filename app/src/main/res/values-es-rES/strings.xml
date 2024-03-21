@@ -53,6 +53,10 @@
     <string name="clock_click_app">Pulsar reloj</string>
     <string name="date_click_app">Pulsar fecha</string>
     <string name="double_tap">Doble toque</string>
+    <string name="long_press_swipe_up_app">Pulsación larga Deslizar hacia arriba</string>
+    <string name="long_press_swipe_down_app">Pulsación larga Deslizar hacia abajo</string>
+    <string name="long_press_swipe_left_app">Pulsación larga Deslizar hacia la izquierda</string>
+    <string name="long_press_swipe_right_app">Pulsación larga Deslizar hacia la derecha</string>
     <!-- Settings Strings -->
     <string name="off">Ocultar</string>
     <string name="on">Mostrar</string>
