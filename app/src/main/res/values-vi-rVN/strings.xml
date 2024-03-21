@@ -53,6 +53,10 @@
     <string name="clock_click_app">Click on Clock</string>
     <string name="date_click_app">Click on Date</string>
     <string name="double_tap">Double Tap</string>
+    <string name="long_press_swipe_up_app">Nhấn và giữ Vuốt lên</string>
+    <string name="long_press_swipe_down_app">Nhấn và giữ Vuốt xuống</string>
+    <string name="long_press_swipe_left_app">Nhấn và giữ Vuốt sang trái</string>
+    <string name="long_press_swipe_right_app">Nhấn và giữ Vuốt sang phải</string>
     <!-- Settings Strings -->
     <string name="off">Off</string>
     <string name="on">On</string>
