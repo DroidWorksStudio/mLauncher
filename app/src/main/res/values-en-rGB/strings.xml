@@ -32,6 +32,8 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Auto open apps</string>
+    <string name="display_recent_apps">Display Recent Apps</string>
+    <string name="number_of_recents">Number Of Recent Apps</string>
     <string name="filter_strength">Filter Strength</string>
     <string name="search_from_start">App search from start.</string>
     <string name="icon_font">Use Icon Font</string>
@@ -58,6 +60,10 @@
     <string name="clock_click_app">Click on Clock</string>
     <string name="date_click_app">Click on Date</string>
     <string name="double_tap">Double Tap</string>
+    <string name="long_press_swipe_up_app">Long Press Swipe up</string>
+    <string name="long_press_swipe_down_app">Long Press Swipe down</string>
+    <string name="long_press_swipe_left_app">Long Press Swipe left</string>
+    <string name="long_press_swipe_right_app">Long Press Swipe right</string>
 
     <!-- Settings Strings -->
     <string name="off">Off</string>
@@ -102,7 +108,6 @@
     <!-- Miscellaneous Strings -->
     <string name="settings_text_size">Settings Text Size</string>
     <string name="display_hidden_apps">Display Hidden Apps</string>
-    <string name="display_recent_apps">Display Recent Apps</string>
     <string name="lock_settings">Lock Settings</string>
 
     <!-- Backup Strings -->

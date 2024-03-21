@@ -60,6 +60,10 @@
     <string name="clock_click_app">Click on Clock</string>
     <string name="date_click_app">Click on Date</string>
     <string name="double_tap">Double Tap</string>
+    <string name="long_press_swipe_up_app">Long Press Swipe up</string>
+    <string name="long_press_swipe_down_app">Long Press Swipe down</string>
+    <string name="long_press_swipe_left_app">Long Press Swipe left</string>
+    <string name="long_press_swipe_right_app">Long Press Swipe right</string>
 
     <!-- Settings Strings -->
     <string name="off">Off</string>

@@ -38,10 +38,14 @@ object Constants {
         LaunchApp,
         HiddenApps,
         SetHomeApp,
-        SetSwipeLeft,
-        SetSwipeRight,
         SetSwipeUp,
         SetSwipeDown,
+        SetSwipeLeft,
+        SetSwipeRight,
+        SetLongPressSwipeUp,
+        SetLongPressSwipeDown,
+        SetLongPressSwipeLeft,
+        SetLongPressSwipeRight,
         SetClickClock,
         SetClickDate,
         SetDoubleTap,
@@ -247,15 +251,15 @@ object Constants {
     }
 
     enum class Action : EnumOption {
-        Disabled,
         OpenApp,
         LockScreen,
+        ShowNotification,
         ShowAppList,
         OpenQuickSettings,
         ShowRecents,
         OpenPowerDialog,
         TakeScreenShot,
-        ShowNotification;
+        Disabled;
 
         @Composable
         override fun string(): String {
