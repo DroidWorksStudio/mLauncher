@@ -53,6 +53,10 @@
     <string name="clock_click_app">คลิกที่นาฬิกา</string>
     <string name="date_click_app">คลิกที่วันที่</string>
     <string name="double_tap">แตะสองครั้ง</string>
+    <string name="long_press_swipe_up_app">กดแบบยาวปัดขึ้น</string>
+    <string name="long_press_swipe_down_app">กดค้างปัดลง</string>
+    <string name="long_press_swipe_left_app">กดค้าง ปัดไปทางซ้าย</string>
+    <string name="long_press_swipe_right_app">กดค้าง ปัดไปทางขวา</string>
     <!-- Settings Strings -->
     <string name="off">ปิด</string>
     <string name="on">บน</string>
