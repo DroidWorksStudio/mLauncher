@@ -13,6 +13,7 @@ import android.text.format.DateFormat
 import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
+import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
@@ -56,6 +57,8 @@ import com.github.hecodes2much.mlauncher.listener.OnSwipeTouchListener
 import com.github.hecodes2much.mlauncher.listener.ViewSwipeTouchListener
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlin.math.abs
+import kotlin.math.sqrt
 
 class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener {
 
@@ -395,6 +398,47 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
     private fun getHomeScreenGestureListener(context: Context): View.OnTouchListener {
         return object : OnSwipeTouchListener(context) {
+            private var startX = 0f
+            private var startY = 0f
+            private var startTime: Long = 0
+
+            @SuppressLint("ClickableViewAccessibility")
+            override fun onTouch(view: View, motionEvent: MotionEvent): Boolean {
+                when (motionEvent.action) {
+                    MotionEvent.ACTION_DOWN -> {
+                        startX = motionEvent.x
+                        startY = motionEvent.y
+                        startTime = System.currentTimeMillis()
+                    }
+                    MotionEvent.ACTION_UP -> {
+                        val endX = motionEvent.x
+                        val endY = motionEvent.y
+                        val endTime = System.currentTimeMillis()
+                        val duration = endTime - startTime
+                        val deltaX = endX - startX
+                        val deltaY = endY - startY
+                        val distance = sqrt((deltaX * deltaX + deltaY * deltaY).toDouble()).toFloat()
+
+                        // Check if it's a hold swipe gesture
+                        val holdDurationThreshold = 1000L // Adjust as needed
+                        val swipeDistanceThreshold = 200f // Adjust as needed
+
+                        Log.d("deltaX","duration: $duration, holdDurationThreshold: $holdDurationThreshold")
+                        Log.d("deltaX","distance: $distance, swipeDistanceThreshold: $swipeDistanceThreshold")
+                        if (duration <= holdDurationThreshold && distance >= swipeDistanceThreshold) {
+                            Log.d("deltaX","deltaX: $deltaX, deltaY: $deltaY, distance: $distance, duration: $duration")
+                            val direction: String = if (abs(deltaX) > abs(deltaY)) {
+                                if (deltaX > 0) "right" else "left"
+                            } else {
+                                if (deltaY > 0) "down" else "up"
+                            }
+                            Log.d("deltaX", direction)
+                        }
+                    }
+                }
+                return super.onTouch(view, motionEvent)
+            }
+
             override fun onSwipeLeft() {
                 super.onSwipeLeft()
                 when (val action = prefs.swipeLeftAction) {
