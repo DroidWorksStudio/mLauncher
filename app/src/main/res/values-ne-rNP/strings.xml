@@ -53,6 +53,10 @@
     <string name="clock_click_app">घडी मा क्लिक गर्नुहोस्</string>
     <string name="date_click_app">मिति मा क्लिक गर्नुहोस्</string>
     <string name="double_tap">डबल ट्याप गर्नुहोस्</string>
+    <string name="long_press_swipe_up_app">स्वाइप माथि लामो प्रेस गर्नुहोस्</string>
+    <string name="long_press_swipe_down_app">लामो थिच्नुहोस् स्वाइप तल</string>
+    <string name="long_press_swipe_left_app">लामो थिच्नुहोस् बायाँ स्वाइप गर्नुहोस्</string>
+    <string name="long_press_swipe_right_app">लामो थिच्नुहोस् दायाँ स्वाइप गर्नुहोस्</string>
     <!-- Settings Strings -->
     <string name="off">बन्द</string>
     <string name="on">अन</string>
