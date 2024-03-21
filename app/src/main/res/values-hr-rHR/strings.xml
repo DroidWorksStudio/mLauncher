@@ -53,6 +53,10 @@
     <string name="clock_click_app">Pritisnite Sat</string>
     <string name="date_click_app">Kliknite na Datum</string>
     <string name="double_tap">Dvostruki dodir</string>
+    <string name="long_press_swipe_up_app">Dugo pritisnite Povucite prema gore</string>
+    <string name="long_press_swipe_down_app">Dugi pritisak Prijeđite prstom prema dolje</string>
+    <string name="long_press_swipe_left_app">Dugi pritisak Prijeđite prstom ulijevo</string>
+    <string name="long_press_swipe_right_app">Dugi pritisak Prijeđite prstom udesno</string>
     <!-- Settings Strings -->
     <string name="off">Isključeno</string>
     <string name="on">Na</string>
