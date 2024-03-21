@@ -53,6 +53,10 @@
     <string name="clock_click_app">Uhr anklicken</string>
     <string name="date_click_app">Klicken Sie auf Datum</string>
     <string name="double_tap">Doppeltipp</string>
+    <string name="long_press_swipe_up_app">Langes Drücken: Nach oben wischen</string>
+    <string name="long_press_swipe_down_app">Langes Drücken. Wischen Sie nach unten</string>
+    <string name="long_press_swipe_left_app">Langes Drücken. Wischen Sie nach links</string>
+    <string name="long_press_swipe_right_app">Langes Drücken. Wischen Sie nach rechts</string>
     <!-- Settings Strings -->
     <string name="off">Aus</string>
     <string name="on">An</string>
