@@ -1,0 +1,7 @@
+Version: 1.4.1
+
+Enhancements:
+[Feature] - Added Long-Press Swipe Gestures.
+
+Language Support:
+[Language] Updated Language Files.

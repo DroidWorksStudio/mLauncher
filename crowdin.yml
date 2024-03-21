@@ -4,3 +4,5 @@ files:
     translation: /app/src/main/res/values-%android_code%/%original_file_name%
   - source: /fastlane/metadata/android/en-US/*.txt
     translation: /fastlane/metadata/android/%locale%/%original_file_name%
+  - source: /fastlane/metadata/android/en-US/changelog/*.txt
+    translation: /fastlane/metadata/android/%locale%/changelog/%original_file_name%
