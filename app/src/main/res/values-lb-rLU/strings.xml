@@ -53,6 +53,10 @@
     <string name="clock_click_app">Klickt op Auer</string>
     <string name="date_click_app">Klickt op Datum</string>
     <string name="double_tap">Duebel Tap</string>
+    <string name="long_press_swipe_up_app">Laang Press Swipe erop</string>
+    <string name="long_press_swipe_down_app">Laang Press Swipe erof</string>
+    <string name="long_press_swipe_left_app">Laang Press Swipe lénks</string>
+    <string name="long_press_swipe_right_app">Laang Press Swipe riets</string>
     <!-- Settings Strings -->
     <string name="off">Off</string>
     <string name="on">Op</string>
