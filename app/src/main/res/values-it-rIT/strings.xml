@@ -35,6 +35,7 @@
     <string name="icon_font">Usa carattere icona</string>
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Numero di scorciatoie</string>
+    <string name="pages_on_home_screen">Numero di pagine</string>
     <string name="show_time">Mostra ora</string>
     <string name="show_date">Mostra data</string>
     <string name="show_battery">Mostra batteria</string>
@@ -91,6 +92,8 @@
     <string name="show_recents">Show Recents</string>
     <string name="open_power_dialog">Dialogo di potere</string>
     <string name="take_a_screenshot">Fai uno screenshot</string>
+    <string name="left_page">Vai alla pagina di sinistra</string>
+    <string name="right_page">Vai alla pagina giusta</string>
     <string name="double_tap_to_lock_screen">Doppio tocco per bloccare</string>
     <!-- Miscellaneous Strings -->
     <string name="settings_text_size">Impostazioni Dimensione testo</string>
