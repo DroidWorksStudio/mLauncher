@@ -35,6 +35,7 @@
     <string name="icon_font">Úsáid Cló Deilbhín</string>
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Líon na n-aicearraí</string>
+    <string name="pages_on_home_screen">Líon na leathanach</string>
     <string name="show_time">Am seó</string>
     <string name="show_date">Taispeáin dáta</string>
     <string name="show_battery">Taispeáin ceallraí</string>
@@ -91,6 +92,8 @@
     <string name="show_recents">Taispeáin Le Déanaí</string>
     <string name="open_power_dialog">Dialóg Cumhachta</string>
     <string name="take_a_screenshot">Glac Seat</string>
+    <string name="left_page">Téigh go dtí an leathanach ar chlé</string>
+    <string name="right_page">Téigh go dtí an leathanach ar dheis</string>
     <string name="double_tap_to_lock_screen">Tapáil faoi dhó chun glasáil</string>
     <!-- Miscellaneous Strings -->
     <string name="settings_text_size">Méid Téacs Socruithe</string>
