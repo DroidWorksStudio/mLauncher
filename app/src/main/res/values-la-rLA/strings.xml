@@ -35,6 +35,7 @@
     <string name="icon_font">Usus Icone Font</string>
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Numerus shortcuts</string>
+    <string name="pages_on_home_screen">Numerus paginarum</string>
     <string name="show_time">Ostende tempus</string>
     <string name="show_date">Ostende date</string>
     <string name="show_battery">Ostende altilium</string>
@@ -91,6 +92,8 @@
     <string name="show_recents">Ostende Recentes</string>
     <string name="open_power_dialog">Potestas Dialog</string>
     <string name="take_a_screenshot">Accipies Screenshot</string>
+    <string name="left_page">Ad paginam sinistram</string>
+    <string name="right_page">Vade ad dextram paginam</string>
     <string name="double_tap_to_lock_screen">Duplex ICTUS ut cincinno</string>
     <!-- Miscellaneous Strings -->
     <string name="settings_text_size">Optiones Text Size</string>
