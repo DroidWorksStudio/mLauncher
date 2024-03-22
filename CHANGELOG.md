@@ -6,13 +6,17 @@
 
 **Implemented Enhancements:**
 
-- \[Enhancement\] - Add Option for Multiple Pages On Homescreen [\#380](https://github.com/HeAndroids2Much/mLauncher/pull/380) ([HeCodes2Much](https://github.com/HeCodes2Much))
+- \[Feature\] - Add Option for Multiple Pages On Homescreen [\#380](https://github.com/HeAndroids2Much/mLauncher/pull/380) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
 **Fixed Bugs:**
 
 - \[Bug\] Fixed Fuzzy Filter If Set To 0 [\#381](https://github.com/HeAndroids2Much/mLauncher/pull/381) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
-**Merged pull requests:**
+**Language Support:**
+
+- \[Language\] Updated Language Files. [\#383](https://github.com/HeAndroids2Much/mLauncher/pull/383) ([HeCodes2Much](https://github.com/HeCodes2Much))
+
+**Release:**
 
 - \[Release\] - Update version to 142 \(v1.4.2\) [\#382](https://github.com/HeAndroids2Much/mLauncher/pull/382) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
