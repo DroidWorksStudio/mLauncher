@@ -35,6 +35,7 @@
     <string name="icon_font">Використовуйте шрифт значків</string>
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Кількість ярликів</string>
+    <string name="pages_on_home_screen">Кількість сторінок</string>
     <string name="show_time">Відображати час</string>
     <string name="show_date">Показати дату</string>
     <string name="show_battery">Показати акумулятор</string>
@@ -91,6 +92,8 @@
     <string name="show_recents">Show Recents</string>
     <string name="open_power_dialog">Діалог живлення</string>
     <string name="take_a_screenshot">Зробіть знімок екрана</string>
+    <string name="left_page">Перейти на ліву сторінку</string>
+    <string name="right_page">Перейдіть на праву сторінку</string>
     <string name="double_tap_to_lock_screen">Подвійне натискання для блокування</string>
     <!-- Miscellaneous Strings -->
     <string name="settings_text_size">Параметри Розмір тексту</string>
