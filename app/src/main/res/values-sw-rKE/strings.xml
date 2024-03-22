@@ -35,6 +35,7 @@
     <string name="icon_font">Tumia Fonti ya ikoni</string>
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Idadi ya njia za mkato</string>
+    <string name="pages_on_home_screen">Idadi ya kurasa</string>
     <string name="show_time">Onyesha wakati</string>
     <string name="show_date">Onyesha tarehe</string>
     <string name="show_battery">Onyesha betri</string>
@@ -91,6 +92,8 @@
     <string name="show_recents">Onyesha Hivi Karibuni</string>
     <string name="open_power_dialog">Kidirisha cha Nguvu</string>
     <string name="take_a_screenshot">Piga Picha ya skrini</string>
+    <string name="left_page">Nenda kwenye ukurasa wa kushoto</string>
+    <string name="right_page">Nenda kwenye ukurasa wa kulia</string>
     <string name="double_tap_to_lock_screen">Gusa mara mbili ili kufunga</string>
     <!-- Miscellaneous Strings -->
     <string name="settings_text_size">Ukubwa wa Maandishi ya Mipangilio</string>
