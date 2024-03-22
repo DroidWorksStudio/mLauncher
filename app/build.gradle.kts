@@ -10,7 +10,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.github.hecodes2much.mlauncher"
+        applicationId = "app.mlauncher"
         minSdk = 23
         targetSdk = 34
         versionCode = 142
