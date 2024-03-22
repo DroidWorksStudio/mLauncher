@@ -254,11 +254,11 @@ class Prefs(val context: Context) {
         set(value) = storeAction(LONG_PRESS_SWIPE_DOWN_ACTION, value)
 
     var longPressSwipeLeftAction: Constants.Action
-        get() = loadAction(LONG_PRESS_SWIPE_LEFT_ACTION, Constants.Action.Disabled)
+        get() = loadAction(LONG_PRESS_SWIPE_LEFT_ACTION, Constants.Action.LeftPage)
         set(value) = storeAction(LONG_PRESS_SWIPE_LEFT_ACTION, value)
 
     var longPressSwipeRightAction: Constants.Action
-        get() = loadAction(LONG_PRESS_SWIPE_RIGHT_ACTION, Constants.Action.Disabled)
+        get() = loadAction(LONG_PRESS_SWIPE_RIGHT_ACTION, Constants.Action.RightPage)
         set(value) = storeAction(LONG_PRESS_SWIPE_RIGHT_ACTION, value)
 
     var clickClockAction: Constants.Action
