@@ -445,8 +445,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                         val distance = sqrt((deltaX * deltaX + deltaY * deltaY).toDouble()).toFloat()
 
                         // Check if it's a hold swipe gesture
-                        val holdDurationThreshold = 2000L // Adjust as needed
-                        val swipeDistanceThreshold = 200f // Adjust as needed
+                        val holdDurationThreshold = 1000L // Adjust as needed
+                        val swipeDistanceThreshold = 400f // Adjust as needed
 
                         if (duration <= holdDurationThreshold && distance >= swipeDistanceThreshold) {
                             onLongPressSwipe(deltaX, deltaY)
@@ -605,8 +605,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                         val distance = sqrt((deltaX * deltaX + deltaY * deltaY).toDouble()).toFloat()
 
                         // Check if it's a hold swipe gesture
-                        val holdDurationThreshold = 2000L // Adjust as needed
-                        val swipeDistanceThreshold = 200f // Adjust as needed
+                        val holdDurationThreshold = 1000L // Adjust as needed
+                        val swipeDistanceThreshold = 400f // Adjust as needed
 
                         if (duration <= holdDurationThreshold && distance >= swipeDistanceThreshold) {
                             onLongPressSwipe(deltaX, deltaY)
@@ -686,10 +686,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 Action.OpenApp -> openLongPressSwipeRightApp()
                 else -> handleOtherAction(action)
             }
-            else -> showToastLong(
-                requireContext(),
-                "$direction not detected."
-            )
         }
     }
 
