@@ -43,6 +43,9 @@ object Constants {
     const val HOLD_DURATION_THRESHOLD = 1000L // Adjust as needed
     const val SWIPE_DISTANCE_THRESHOLD = 500f // Adjust as needed
 
+    const val MIN_OPACITY = 0
+    const val MAX_OPACITY = 255
+
     enum class AppDrawerFlag {
         LaunchApp,
         HiddenApps,
