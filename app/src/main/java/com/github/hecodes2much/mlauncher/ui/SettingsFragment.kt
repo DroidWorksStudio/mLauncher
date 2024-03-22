@@ -234,8 +234,8 @@ class SettingsFragment : Fragment() {
                             open = open,
                             onChange = onChange,
                             currentSelection = remember { mutableIntStateOf(prefs.opacityNum) },
-                            min = 0,
-                            max = 255,
+                            min = Constants.MIN_OPACITY,
+                            max = Constants.MAX_OPACITY,
                             onSelect = { j -> setOpacityNum(j) }
                         )
                     },
@@ -332,9 +332,21 @@ class SettingsFragment : Fragment() {
                             open = open,
                             onChange = onChange,
                             currentSelection = remember { mutableIntStateOf(prefs.homeAppsNum) },
-                            min = 0,
+                            min = Constants.MIN_HOME_APPS,
                             max = Constants.MAX_HOME_APPS,
                             onSelect = { j -> setHomeAppsNum(j) }
+                        )
+                    },
+                    { open, onChange ->
+                        SettingsSliderItem(
+                            title = stringResource(R.string.pages_on_home_screen),
+                            fontSize = iconFs,
+                            open = open,
+                            onChange = onChange,
+                            currentSelection = remember { mutableIntStateOf(prefs.homePagesNum) },
+                            min = Constants.MIN_HOME_PAGES,
+                            max = Constants.MAX_HOME_PAGES,
+                            onSelect = { j -> setHomePagesNum(j) }
                         )
                     },
                     { _, onChange ->
@@ -737,6 +749,11 @@ class SettingsFragment : Fragment() {
     private fun setHomeAppsNum(homeAppsNum: Int) {
         prefs.homeAppsNum = homeAppsNum
         viewModel.homeAppsCount.value = homeAppsNum
+    }
+
+    private fun setHomePagesNum(homePagesNum: Int) {
+        prefs.homePagesNum = homePagesNum
+        viewModel.homePagesCount.value = homePagesNum
     }
 
     private fun setOpacityNum(opacityNum: Int) {

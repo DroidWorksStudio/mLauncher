@@ -37,6 +37,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     val clockAlignment = MutableLiveData(prefs.clockAlignment)
     val homeAppsAlignment = MutableLiveData(Pair(prefs.homeAlignment, prefs.homeAlignmentBottom))
     val homeAppsCount = MutableLiveData(prefs.homeAppsNum)
+    val homePagesCount = MutableLiveData(prefs.homePagesNum)
     val opacityNum = MutableLiveData(prefs.opacityNum)
     val filterStrength = MutableLiveData(prefs.filterStrength)
     val recentCounter = MutableLiveData(prefs.recentCounter)

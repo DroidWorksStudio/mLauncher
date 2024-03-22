@@ -133,6 +133,8 @@ mLauncher uses the following permissions:
   - Allows an application to broadcast an Intent to set an alarm for the user. Used to open the default alarm app if no other clock app is set in the settings.
 - `android.permission.REQUEST_DELETE_PACKAGES`
   - Required for issuing the request to remove packages. This does not allow the app to remove apps directly; this only gives the permission to issue the request.
+- `android.permission.PACKAGE_USAGE_STATS`
+  - Allows mLauncher to see usage of other apps to list last used apps first in the app list. 
 
 ## Credits
 - [https://gitlab.com/tanujnotes/Olauncher](https://gitlab.com/tanujnotes/Olauncher)

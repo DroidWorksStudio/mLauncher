@@ -18,7 +18,10 @@ object Constants {
     const val TRIPLE_TAP_DELAY_MS = 300
     const val LONG_PRESS_DELAY_MS = 500
 
+    const val MIN_HOME_APPS = 1
     const val MAX_HOME_APPS = 30
+    const val MIN_HOME_PAGES = 1
+    const val MAX_HOME_PAGES = 5
     const val TEXT_SIZE_MIN = 10
     const val TEXT_SIZE_MAX = 50
 
@@ -33,6 +36,9 @@ object Constants {
 
     const val FILTER_STRENGTH_MIN = 1
     const val FILTER_STRENGTH_MAX = 99
+
+    const val MIN_OPACITY = 0
+    const val MAX_OPACITY = 255
 
     enum class AppDrawerFlag {
         LaunchApp,
@@ -259,6 +265,8 @@ object Constants {
         ShowRecents,
         OpenPowerDialog,
         TakeScreenShot,
+        LeftPage,
+        RightPage,
         Disabled;
 
         @Composable
@@ -272,6 +280,8 @@ object Constants {
                 ShowRecents -> stringResource(R.string.show_recents)
                 OpenPowerDialog -> stringResource(R.string.open_power_dialog)
                 TakeScreenShot -> stringResource(R.string.take_a_screenshot)
+                LeftPage -> stringResource(R.string.left_page)
+                RightPage -> stringResource(R.string.right_page)
                 Disabled -> stringResource(R.string.disabled)
             }
         }
