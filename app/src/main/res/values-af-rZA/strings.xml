@@ -35,6 +35,7 @@
     <string name="icon_font">Gebruik ikoonlettertipe</string>
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Number of shortcuts</string>
+    <string name="pages_on_home_screen">Aantal bladsye</string>
     <string name="show_time">Show time</string>
     <string name="show_date">Show date</string>
     <string name="show_battery">Wys battery</string>
@@ -91,6 +92,8 @@
     <string name="show_recents">Show Recents</string>
     <string name="open_power_dialog">Krag dialoog</string>
     <string name="take_a_screenshot">Neem \'n skermskoot</string>
+    <string name="left_page">Gaan na die linker bladsy</string>
+    <string name="right_page">Gaan na die regte bladsy</string>
     <string name="double_tap_to_lock_screen">Double tap to lock</string>
     <!-- Miscellaneous Strings -->
     <string name="settings_text_size">Instellings teksgrootte</string>
