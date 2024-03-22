@@ -35,6 +35,7 @@
     <string name="icon_font">Käytä kuvakkeen fonttia</string>
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Pikakuvakkeiden määrä</string>
+    <string name="pages_on_home_screen">Sivujen määrä</string>
     <string name="show_time">Näytä aika</string>
     <string name="show_date">Näytä päivämäärä</string>
     <string name="show_battery">Näytä akku</string>
@@ -91,6 +92,8 @@
     <string name="show_recents">Show Recents</string>
     <string name="open_power_dialog">Virta-valintaikkuna</string>
     <string name="take_a_screenshot">Ota kuvakaappaus</string>
+    <string name="left_page">Siirry vasemmalle sivulle</string>
+    <string name="right_page">Siirry oikealle sivulle</string>
     <string name="double_tap_to_lock_screen">Napauta kahdesti lukitseaksesi</string>
     <!-- Miscellaneous Strings -->
     <string name="settings_text_size">Asetukset Tekstin koko</string>
