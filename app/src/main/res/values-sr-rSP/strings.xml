@@ -35,6 +35,7 @@
     <string name="icon_font">Користите фонт иконе</string>
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Number of shortcuts</string>
+    <string name="pages_on_home_screen">Број страна</string>
     <string name="show_time">Show time</string>
     <string name="show_date">Show date</string>
     <string name="show_battery">Прикажи батерију</string>
@@ -91,6 +92,8 @@
     <string name="show_recents">Show Recents</string>
     <string name="open_power_dialog">Повер Диалог</string>
     <string name="take_a_screenshot">Направите снимак екрана</string>
+    <string name="left_page">Иди на леву страницу</string>
+    <string name="right_page">Иди на десну страницу</string>
     <string name="double_tap_to_lock_screen">Double tap to lock</string>
     <!-- Miscellaneous Strings -->
     <string name="settings_text_size">Подешавања Величина текста</string>
