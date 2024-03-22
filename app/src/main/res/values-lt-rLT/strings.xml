@@ -35,6 +35,7 @@
     <string name="icon_font">Naudokite piktogramos šriftą</string>
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Nuorodų skaičius</string>
+    <string name="pages_on_home_screen">Puslapių skaičius</string>
     <string name="show_time">Rodyti laiką</string>
     <string name="show_date">Rodyti datą</string>
     <string name="show_battery">Rodyti akumuliatorių</string>
@@ -91,6 +92,8 @@
     <string name="show_recents">Rodyti naujausius</string>
     <string name="open_power_dialog">Maitinimo dialogas</string>
     <string name="take_a_screenshot">Padarykite ekrano kopiją</string>
+    <string name="left_page">Eikite į kairįjį puslapį</string>
+    <string name="right_page">Eikite į dešinįjį puslapį</string>
     <string name="double_tap_to_lock_screen">Dukart palieskite, kad užrakintumėte</string>
     <!-- Miscellaneous Strings -->
     <string name="settings_text_size">Nustatymai Teksto dydis</string>
