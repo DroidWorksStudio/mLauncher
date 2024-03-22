@@ -14,6 +14,7 @@ import androidx.appcompat.content.res.AppCompatResources
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.github.hecodes2much.fuzzywuzzy.normalizeString
 import com.github.hecodes2much.fuzzywuzzy.scoreApp
 import com.github.hecodes2much.mlauncher.R
 import com.github.hecodes2much.mlauncher.data.AppModel
@@ -88,25 +89,37 @@ class AppDrawerAdapter(
         return object : Filter() {
             override fun performFiltering(constraint: CharSequence?): FilterResults {
                 val searchChars = constraint.toString()
+                val filteredApps: MutableList<AppModel>
 
-                val scoredApps = mutableMapOf<AppModel, Int>()
-                for (app in appsList) {
-                    scoredApps[app] = scoreApp(app, searchChars, Constants.FILTER_STRENGTH_MAX)
-                }
+                if (prefs.filterStrength >= 1 ) {
+                    val scoredApps = mutableMapOf<AppModel, Int>()
+                    for (app in appsList) {
+                        scoredApps[app] = scoreApp(app, searchChars, Constants.FILTER_STRENGTH_MAX)
+                    }
 
-                val filteredApps = if (searchChars.isNotEmpty()) {
-                    if (prefs.searchFromStart) {
-                        scoredApps.filter { (app, _) -> app.name.startsWith(searchChars, ignoreCase = true) }
-                            .filter { (_, score) -> score > prefs.filterStrength }
-                            .map { it.key }
-                            .toMutableList()
+                    filteredApps = if (searchChars.isNotEmpty()) {
+                        if (prefs.searchFromStart) {
+                            scoredApps.filter { (app, _) -> app.name.startsWith(searchChars, ignoreCase = true) }
+                                .filter { (_, score) -> score > prefs.filterStrength }
+                                .map { it.key }
+                                .toMutableList()
+                        } else {
+                            scoredApps.filterValues { it > prefs.filterStrength }
+                                .keys
+                                .toMutableList()
+                        }
                     } else {
-                        scoredApps.filterValues { it > prefs.filterStrength }
-                            .keys
-                            .toMutableList()
+                        appsList.toMutableList()
                     }
                 } else {
-                    appsList.toMutableList()
+                    filteredApps = (if (searchChars.isEmpty()) appsList
+                    else appsList.filter { app ->
+                        if (app.appAlias.isEmpty()) {
+                            normalizeString(app.appLabel, searchChars)
+                        } else {
+                            normalizeString(app.appAlias, searchChars)
+                        }
+                    } as MutableList<AppModel>)
                 }
 
                 val filterResults = FilterResults()
