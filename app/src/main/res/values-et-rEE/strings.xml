@@ -35,6 +35,7 @@
     <string name="icon_font">Kasutage ikooni fonti</string>
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Otseteede arv</string>
+    <string name="pages_on_home_screen">Lehtede arv</string>
     <string name="show_time">Näita aega</string>
     <string name="show_date">Näita kuupäeva</string>
     <string name="show_battery">Näita akut</string>
@@ -91,6 +92,8 @@
     <string name="show_recents">Kuva Recents</string>
     <string name="open_power_dialog">Toitedialoog</string>
     <string name="take_a_screenshot">Tehke ekraanipilt</string>
+    <string name="left_page">Mine vasakule lehele</string>
+    <string name="right_page">Mine paremale lehele</string>
     <string name="double_tap_to_lock_screen">Topeltkoputus lukustamiseks</string>
     <!-- Miscellaneous Strings -->
     <string name="settings_text_size">Seaded Teksti suurus</string>
