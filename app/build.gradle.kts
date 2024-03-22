@@ -13,8 +13,8 @@ android {
         applicationId = "com.github.hecodes2much.mlauncher"
         minSdk = 23
         targetSdk = 34
-        versionCode = 74
-        versionName = "1.4.1"
+        versionCode = 142
+        versionName = "1.4.2"
     }
 
     buildTypes {
