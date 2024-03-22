@@ -35,6 +35,7 @@
     <string name="icon_font">Použijte písmo ikony</string>
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Počet zástupců</string>
+    <string name="pages_on_home_screen">Počet stran</string>
     <string name="show_time">Zobrazit čas</string>
     <string name="show_date">Zobrazit datum</string>
     <string name="show_battery">Zobrazit baterii</string>
@@ -91,6 +92,8 @@
     <string name="show_recents">Show Recents</string>
     <string name="open_power_dialog">Dialog napájení</string>
     <string name="take_a_screenshot">Udělejte snímek obrazovky</string>
+    <string name="left_page">Přejděte na levou stránku</string>
+    <string name="right_page">Přejděte na pravou stránku</string>
     <string name="double_tap_to_lock_screen">Zamknout dvojím poklepáním</string>
     <!-- Miscellaneous Strings -->
     <string name="settings_text_size">Nastavení Velikost textu</string>
