@@ -35,6 +35,7 @@
     <string name="icon_font">Использовать иконочный шрифт</string>
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Количество ярлыков</string>
+    <string name="pages_on_home_screen">Количество страниц</string>
     <string name="show_time">Показать время</string>
     <string name="show_date">Показать дату</string>
     <string name="show_battery">Показать батарею</string>
@@ -91,6 +92,8 @@
     <string name="show_recents">Show Recents</string>
     <string name="open_power_dialog">Диалог питания</string>
     <string name="take_a_screenshot">Сделать снимок экрана</string>
+    <string name="left_page">Перейти на левую страницу</string>
+    <string name="right_page">Перейти на правую страницу</string>
     <string name="double_tap_to_lock_screen">Двойное нажатие для блокировки</string>
     <!-- Miscellaneous Strings -->
     <string name="settings_text_size">Размер текста в настройках</string>

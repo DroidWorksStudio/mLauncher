@@ -35,6 +35,7 @@
     <string name="icon_font">Icon فونٽ استعمال ڪريو</string>
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">شارٽ ڪٽ جو تعداد</string>
+    <string name="pages_on_home_screen">صفحن جو تعداد</string>
     <string name="show_time">وقت ڏيکاريو</string>
     <string name="show_date">تاريخ ڏيکاريو</string>
     <string name="show_battery">بيٽري ڏيکاريو</string>
@@ -91,6 +92,8 @@
     <string name="show_recents">تازو ڏيکاريو</string>
     <string name="open_power_dialog">پاور ڊائلاگ</string>
     <string name="take_a_screenshot">هڪ اسڪرين شاٽ وٺو</string>
+    <string name="left_page">کاٻي صفحي ڏانھن وڃو</string>
+    <string name="right_page">ساڄي صفحي ڏانھن وڃو</string>
     <string name="double_tap_to_lock_screen">لاڪ ڪرڻ لاءِ ڊبل ٽيپ ڪريو</string>
     <!-- Miscellaneous Strings -->
     <string name="settings_text_size">سيٽنگون ٽيڪسٽ سائيز</string>

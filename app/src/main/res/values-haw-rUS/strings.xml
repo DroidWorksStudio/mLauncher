@@ -35,6 +35,7 @@
     <string name="icon_font">E hoʻohana i ka Font Icon</string>
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Ka helu o nā pōkole</string>
+    <string name="pages_on_home_screen">Ka helu o nā ʻaoʻao</string>
     <string name="show_time">Hōʻike manawa</string>
     <string name="show_date">Hōʻike lā</string>
     <string name="show_battery">Hōʻike pākaukau</string>
@@ -91,6 +92,8 @@
     <string name="show_recents">Hōʻike i nā mea hou</string>
     <string name="open_power_dialog">Kūkākūkā Mana</string>
     <string name="take_a_screenshot">E kiʻi i kahi kiʻi kiʻi</string>
+    <string name="left_page">E hele i ka ʻaoʻao hema</string>
+    <string name="right_page">E hele i ka ʻaoʻao ʻākau</string>
     <string name="double_tap_to_lock_screen">Koʻu pālua e laka</string>
     <!-- Miscellaneous Strings -->
     <string name="settings_text_size">Hoʻonohonoho i ka nui kikokikona</string>

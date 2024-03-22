@@ -35,6 +35,7 @@
     <string name="icon_font">Χρησιμοποιήστε το Icon Font</string>
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Αριθμός συντομεύσεων</string>
+    <string name="pages_on_home_screen">Αριθμός σελίδων</string>
     <string name="show_time">Εμφάνιση ώρας</string>
     <string name="show_date">Εμφάνιση ημερομηνίας</string>
     <string name="show_battery">Εμφάνιση μπαταρίας</string>
@@ -91,6 +92,8 @@
     <string name="show_recents">Show Recents</string>
     <string name="open_power_dialog">Power Dialog</string>
     <string name="take_a_screenshot">Τραβήξτε ένα στιγμιότυπο οθόνης</string>
+    <string name="left_page">Μεταβείτε στην αριστερή σελίδα</string>
+    <string name="right_page">Μεταβείτε στη δεξιά σελίδα</string>
     <string name="double_tap_to_lock_screen">Διπλό πάτημα για κλείδωμα</string>
     <!-- Miscellaneous Strings -->
     <string name="settings_text_size">Ρυθμίσεις Μέγεθος κειμένου</string>

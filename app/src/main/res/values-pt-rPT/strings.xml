@@ -35,6 +35,7 @@
     <string name="icon_font">Usar fonte do ícone</string>
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Número de atalhos</string>
+    <string name="pages_on_home_screen">Número de páginas</string>
     <string name="show_time">Hora do espectáculo</string>
     <string name="show_date">Mostrar data</string>
     <string name="show_battery">Mostrar bateria</string>
@@ -91,6 +92,8 @@
     <string name="show_recents">Mostrar Recentes</string>
     <string name="open_power_dialog">Diálogo de energia</string>
     <string name="take_a_screenshot">Tirar uma captura de tela</string>
+    <string name="left_page">Ir para a página esquerda</string>
+    <string name="right_page">Ir para a página certa</string>
     <string name="double_tap_to_lock_screen">Torneira dupla para fechar</string>
     <!-- Miscellaneous Strings -->
     <string name="settings_text_size">Tamanho do texto das configurações</string>

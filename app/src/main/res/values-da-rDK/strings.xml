@@ -35,6 +35,7 @@
     <string name="icon_font">Brug Icon Font</string>
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Antal genveje</string>
+    <string name="pages_on_home_screen">Antal sider</string>
     <string name="show_time">Vis tid</string>
     <string name="show_date">Vis dato</string>
     <string name="show_battery">Vis batteri</string>
@@ -91,6 +92,8 @@
     <string name="show_recents">Show Recents</string>
     <string name="open_power_dialog">Power Dialog</string>
     <string name="take_a_screenshot">Tag et skærmbillede</string>
+    <string name="left_page">Gå til venstre side</string>
+    <string name="right_page">Gå til højre side</string>
     <string name="double_tap_to_lock_screen">Dobbelttryk for at låse</string>
     <!-- Miscellaneous Strings -->
     <string name="settings_text_size">Indstillinger Tekststørrelse</string>

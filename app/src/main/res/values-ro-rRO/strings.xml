@@ -35,6 +35,7 @@
     <string name="icon_font">Utilizați fontul pentru pictograme</string>
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Număr de comenzi rapide</string>
+    <string name="pages_on_home_screen">Număr de pagini</string>
     <string name="show_time">Arată timpul</string>
     <string name="show_date">Arată data</string>
     <string name="show_battery">Arată bateria</string>
@@ -91,6 +92,8 @@
     <string name="show_recents">Show Recents</string>
     <string name="open_power_dialog">Dialog Power</string>
     <string name="take_a_screenshot">Faceți o captură de ecran</string>
+    <string name="left_page">Mergeți la pagina din stânga</string>
+    <string name="right_page">Accesați pagina din dreapta</string>
     <string name="double_tap_to_lock_screen">Dublă atingere pentru a bloca</string>
     <!-- Miscellaneous Strings -->
     <string name="settings_text_size">Setări Dimensiunea textului</string>

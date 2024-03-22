@@ -35,6 +35,7 @@
     <string name="icon_font">Tipografía de sistema</string>
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Aplicaciones al inicio</string>
+    <string name="pages_on_home_screen">Número de páginas</string>
     <string name="show_time">Mostrar hora</string>
     <string name="show_date">Mostrar fecha</string>
     <string name="show_battery">Mostrar nivel de batería</string>
@@ -91,6 +92,8 @@
     <string name="show_recents">Mostrar Recientes</string>
     <string name="open_power_dialog">Configuración de energía</string>
     <string name="take_a_screenshot">Captura de pantalla</string>
+    <string name="left_page">Ir a la página izquierda</string>
+    <string name="right_page">Ir a la página derecha</string>
     <string name="double_tap_to_lock_screen">Doble toque para bloqueo</string>
     <!-- Miscellaneous Strings -->
     <string name="settings_text_size">Texto en pantalla</string>

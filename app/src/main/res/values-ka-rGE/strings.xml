@@ -35,6 +35,7 @@
     <string name="icon_font">გამოიყენეთ ხატულა შრიფტი</string>
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">მალსახმობების რაოდენობა</string>
+    <string name="pages_on_home_screen">გვერდების რაოდენობა</string>
     <string name="show_time">Შოუს დრო</string>
     <string name="show_date">თარიღის ჩვენება</string>
     <string name="show_battery">ბატარეის ჩვენება</string>
@@ -91,6 +92,8 @@
     <string name="show_recents">ბოლო დროის ჩვენება</string>
     <string name="open_power_dialog">დენის დიალოგი</string>
     <string name="take_a_screenshot">გადაიღეთ სკრინშოტი</string>
+    <string name="left_page">გადადით მარცხენა გვერდზე</string>
+    <string name="right_page">გადადით მარჯვენა გვერდზე</string>
     <string name="double_tap_to_lock_screen">ორმაგად შეეხეთ ჩასაკეტად</string>
     <!-- Miscellaneous Strings -->
     <string name="settings_text_size">ტექსტის ზომის პარამეტრები</string>

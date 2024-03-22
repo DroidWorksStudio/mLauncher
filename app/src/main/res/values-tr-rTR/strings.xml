@@ -35,6 +35,7 @@
     <string name="icon_font">Simge Yazı Tipi Kullan</string>
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Kısayol sayısı</string>
+    <string name="pages_on_home_screen">Sayfa sayısı</string>
     <string name="show_time">Zamanı göster</string>
     <string name="show_date">Tarih\'i göster</string>
     <string name="show_battery">Pil\'i göster</string>
@@ -91,6 +92,8 @@
     <string name="show_recents">Son Kullanılanları Göster</string>
     <string name="open_power_dialog">Güç Menüsü</string>
     <string name="take_a_screenshot">Ekran görüntüsü al</string>
+    <string name="left_page">Sol sayfaya git</string>
+    <string name="right_page">Sağ sayfaya git</string>
     <string name="double_tap_to_lock_screen">Kilitlemek için çift dokun</string>
     <!-- Miscellaneous Strings -->
     <string name="settings_text_size">Ayarlar Metin Boyutu</string>

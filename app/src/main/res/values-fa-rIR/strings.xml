@@ -35,6 +35,7 @@
     <string name="icon_font">از فونت آیکون استفاده کنید</string>
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">تعداد میانبرها</string>
+    <string name="pages_on_home_screen">تعدادی از صفحات</string>
     <string name="show_time">نمایش زمان</string>
     <string name="show_date">نمایش تاریخ</string>
     <string name="show_battery">نمایش باتری</string>
@@ -91,6 +92,8 @@
     <string name="show_recents">نمایش موارد اخیر</string>
     <string name="open_power_dialog">گفتگوی برق</string>
     <string name="take_a_screenshot">یک اسکرین شات بگیرید</string>
+    <string name="left_page">به صفحه سمت چپ بروید</string>
+    <string name="right_page">به صفحه سمت راست بروید</string>
     <string name="double_tap_to_lock_screen">برای قفل کردن، دو ضربه سریع بزنید</string>
     <!-- Miscellaneous Strings -->
     <string name="settings_text_size">تنظیمات اندازه متن</string>

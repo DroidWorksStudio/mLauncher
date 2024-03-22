@@ -35,6 +35,7 @@
     <string name="icon_font">ഐക്കൺ ഫോണ്ട് ഉപയോഗിക്കുക</string>
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">കുറുക്കുവഴികളുടെ എണ്ണം</string>
+    <string name="pages_on_home_screen">പേജുകളുടെ എണ്ണം</string>
     <string name="show_time">പ്രദർശന സമയം</string>
     <string name="show_date">തീയതി കാണിക്കുക</string>
     <string name="show_battery">ബാറ്ററി കാണിക്കുക</string>
@@ -91,6 +92,8 @@
     <string name="show_recents">സമീപകാലങ്ങൾ കാണിക്കുക</string>
     <string name="open_power_dialog">പവർ ഡയലോഗ്</string>
     <string name="take_a_screenshot">ഒരു സ്ക്രീൻഷോട്ട് എടുക്കുക</string>
+    <string name="left_page">ഇടത് പേജിലേക്ക് പോകുക</string>
+    <string name="right_page">വലത് പേജിലേക്ക് പോകുക</string>
     <string name="double_tap_to_lock_screen">ലോക്ക് ചെയ്യാൻ രണ്ടുതവണ ടാപ്പ് ചെയ്യുക</string>
     <!-- Miscellaneous Strings -->
     <string name="settings_text_size">ക്രമീകരണങ്ങൾ ടെക്സ്റ്റ് വലിപ്പം</string>

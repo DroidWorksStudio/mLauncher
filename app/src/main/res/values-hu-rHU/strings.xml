@@ -35,6 +35,7 @@
     <string name="icon_font">Ikon betűtípus használata</string>
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">A parancsikonok száma</string>
+    <string name="pages_on_home_screen">Oldalszám</string>
     <string name="show_time">Show time</string>
     <string name="show_date">Megjelenés dátuma</string>
     <string name="show_battery">Mutasd az akkumulátort</string>
@@ -91,6 +92,8 @@
     <string name="show_recents">Visszatérők megjelenítése</string>
     <string name="open_power_dialog">Teljesítmény párbeszédpanel</string>
     <string name="take_a_screenshot">Készítsen képernyőképet</string>
+    <string name="left_page">Menjen a bal oldalra</string>
+    <string name="right_page">Ugrás a jobb oldalra</string>
     <string name="double_tap_to_lock_screen">Dupla koppintás a lezáráshoz</string>
     <!-- Miscellaneous Strings -->
     <string name="settings_text_size">Beállítások Szövegméret</string>

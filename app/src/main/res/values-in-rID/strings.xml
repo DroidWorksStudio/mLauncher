@@ -35,6 +35,7 @@
     <string name="icon_font">Gunakan Font Ikon</string>
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Jumlah pintasan</string>
+    <string name="pages_on_home_screen">Jumlah halaman</string>
     <string name="show_time">Waktu pertunjukan</string>
     <string name="show_date">Tanggal pertunjukan</string>
     <string name="show_battery">Tampilkan baterai</string>
@@ -91,6 +92,8 @@
     <string name="show_recents">Tampilkan Terkini</string>
     <string name="open_power_dialog">Dialog Daya</string>
     <string name="take_a_screenshot">Ambil Tangkapan Layar</string>
+    <string name="left_page">Pergi ke halaman kiri</string>
+    <string name="right_page">Pergi ke halaman kanan</string>
     <string name="double_tap_to_lock_screen">Ketuk dua kali untuk mengunci</string>
     <!-- Miscellaneous Strings -->
     <string name="settings_text_size">Ukuran Teks Pengaturan</string>

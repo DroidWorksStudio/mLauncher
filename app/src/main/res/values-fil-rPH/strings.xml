@@ -35,6 +35,7 @@
     <string name="icon_font">Gumamit ng Icon Font</string>
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Bilang ng mga shortcut</string>
+    <string name="pages_on_home_screen">Bilang ng mga pahina</string>
     <string name="show_time">Oras ng palabas</string>
     <string name="show_date">Ipakita ang petsa</string>
     <string name="show_battery">Ipakita ang baterya</string>
@@ -91,6 +92,8 @@
     <string name="show_recents">Ipakita ang Mga Kamakailan</string>
     <string name="open_power_dialog">Power Dialog</string>
     <string name="take_a_screenshot">Kumuha ng Screenshot</string>
+    <string name="left_page">Pumunta sa kaliwang pahina</string>
+    <string name="right_page">Pumunta sa kanang pahina</string>
     <string name="double_tap_to_lock_screen">I-double tap para i-lock</string>
     <!-- Miscellaneous Strings -->
     <string name="settings_text_size">Mga Setting ng Laki ng Teksto</string>
