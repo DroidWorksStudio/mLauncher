@@ -1,5 +1,17 @@
 # Changelog
 
+## [Coming Soon](https://github.com/HeAndroids2Much/mLauncher/tree/HEAD)
+
+[Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/1.4.1...HEAD)
+
+**Breaking changes:**
+
+- \[Enhancement\] Add Option for Multiple Apps Lists [\#327](https://github.com/HeAndroids2Much/mLauncher/issues/327)
+
+**Implemented Enhancements:**
+
+- \[Feature\] - Add Option for Multiple Pages On Homescreen [\#380](https://github.com/HeAndroids2Much/mLauncher/pull/380) ([HeCodes2Much](https://github.com/HeCodes2Much))
+
 ## [1.4.1](https://github.com/HeAndroids2Much/mLauncher/tree/1.4.1) (21, March 2024)
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/1.4.0...1.4.1)
