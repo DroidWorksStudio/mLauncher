@@ -35,6 +35,7 @@
     <string name="icon_font">Notaðu táknleturgerð</string>
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Fjöldi flýtileiða</string>
+    <string name="pages_on_home_screen">Fjöldi síðna</string>
     <string name="show_time">Sýningartími</string>
     <string name="show_date">Sýningardagsetning</string>
     <string name="show_battery">Sýna rafhlöðu</string>
@@ -91,6 +92,8 @@
     <string name="show_recents">Sýna nýlegar</string>
     <string name="open_power_dialog">Power Dialog</string>
     <string name="take_a_screenshot">Taktu skjáskot</string>
+    <string name="left_page">Farðu á vinstri síðu</string>
+    <string name="right_page">Farðu á hægri síðu</string>
     <string name="double_tap_to_lock_screen">Ýttu tvisvar til að læsa</string>
     <!-- Miscellaneous Strings -->
     <string name="settings_text_size">Stillingar Textastærð</string>
