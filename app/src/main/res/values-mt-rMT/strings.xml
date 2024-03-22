@@ -35,6 +35,7 @@
     <string name="icon_font">Uża Icon Font</string>
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Numru ta\' shortcuts</string>
+    <string name="pages_on_home_screen">Numru ta\' paġni</string>
     <string name="show_time">Uri l-ħin</string>
     <string name="show_date">Uri d-data</string>
     <string name="show_battery">Uri batterija</string>
@@ -91,6 +92,8 @@
     <string name="show_recents">Uri riċenti</string>
     <string name="open_power_dialog">Djalogu tal-Enerġija</string>
     <string name="take_a_screenshot">Ħu Screenshot</string>
+    <string name="left_page">Mur fil-paġna tax-xellug</string>
+    <string name="right_page">Mur fil-paġna tal-lemin</string>
     <string name="double_tap_to_lock_screen">Tektek darbtejn biex tissakkar</string>
     <!-- Miscellaneous Strings -->
     <string name="settings_text_size">Settings Test Size</string>
