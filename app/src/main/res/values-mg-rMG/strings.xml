@@ -35,6 +35,7 @@
     <string name="icon_font">Ampiasao ny endritsoratra Icon</string>
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Isan\'ny hitsin-dàlana</string>
+    <string name="pages_on_home_screen">Isan\'ny pejy</string>
     <string name="show_time">Fotoana fampisehoana</string>
     <string name="show_date">Asehoy ny daty</string>
     <string name="show_battery">Asehoy ny bateria</string>
@@ -91,6 +92,8 @@
     <string name="show_recents">Asehoy vao haingana</string>
     <string name="open_power_dialog">Power Dialogue</string>
     <string name="take_a_screenshot">Makà pikantsary</string>
+    <string name="left_page">Mandehana any amin\'ny pejy ankavia</string>
+    <string name="right_page">Mandehana any amin\'ny pejy havanana</string>
     <string name="double_tap_to_lock_screen">Tsindrio indroa hanidy</string>
     <!-- Miscellaneous Strings -->
     <string name="settings_text_size">Haben\'ny lahatsoratra Settings</string>
