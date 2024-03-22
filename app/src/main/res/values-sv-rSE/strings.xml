@@ -35,6 +35,7 @@
     <string name="icon_font">Använd Icon Font</string>
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Antal genvägar</string>
+    <string name="pages_on_home_screen">Antal sidor</string>
     <string name="show_time">Visa tid</string>
     <string name="show_date">Visa datum</string>
     <string name="show_battery">Visa batteri</string>
@@ -91,6 +92,8 @@
     <string name="show_recents">Show Recents</string>
     <string name="open_power_dialog">Power Dialog</string>
     <string name="take_a_screenshot">Ta en skärmdump</string>
+    <string name="left_page">Gå till vänster sida</string>
+    <string name="right_page">Gå till höger sida</string>
     <string name="double_tap_to_lock_screen">Dubbeltryck för att låsa</string>
     <!-- Miscellaneous Strings -->
     <string name="settings_text_size">Inställningar Textstorlek</string>
