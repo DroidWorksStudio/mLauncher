@@ -4,14 +4,17 @@
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/1.4.1...HEAD)
 
-**Breaking changes:**
-
-- \[Enhancement\] Add Option for Multiple Apps Lists [\#327](https://github.com/HeAndroids2Much/mLauncher/issues/327)
-
 **Implemented Enhancements:**
 
-- \[Fix\] Fixed Fuzzy Filter If Set To 0 [\#381](https://github.com/HeAndroids2Much/mLauncher/pull/381) ([HeCodes2Much](https://github.com/HeCodes2Much))
-- \[Feature\] - Add Option for Multiple Pages On Homescreen [\#380](https://github.com/HeAndroids2Much/mLauncher/pull/380) ([HeCodes2Much](https://github.com/HeCodes2Much))
+- \[Enhancement\] - Add Option for Multiple Pages On Homescreen [\#380](https://github.com/HeAndroids2Much/mLauncher/pull/380) ([HeCodes2Much](https://github.com/HeCodes2Much))
+
+**Fixed Bugs:**
+
+- \[Bug\] Fixed Fuzzy Filter If Set To 0 [\#381](https://github.com/HeAndroids2Much/mLauncher/pull/381) ([HeCodes2Much](https://github.com/HeCodes2Much))
+
+**Merged pull requests:**
+
+- \[Release\] - Update version to 142 \(v1.4.2\) [\#382](https://github.com/HeAndroids2Much/mLauncher/pull/382) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
 ## [1.4.1](https://github.com/HeAndroids2Much/mLauncher/tree/1.4.1) (21, March 2024)
 
