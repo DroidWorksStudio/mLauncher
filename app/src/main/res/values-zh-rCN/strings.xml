@@ -35,6 +35,7 @@
     <string name="icon_font">使用图标字体</string>
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">快捷方式数量</string>
+    <string name="pages_on_home_screen">页数</string>
     <string name="show_time">显示时间</string>
     <string name="show_date">显示日期</string>
     <string name="show_battery">显示电池</string>
@@ -91,6 +92,8 @@
     <string name="show_recents">显示最近用过的应用</string>
     <string name="open_power_dialog">电源对话框</string>
     <string name="take_a_screenshot">截图</string>
+    <string name="left_page">转到左侧页面</string>
+    <string name="right_page">转到右侧页面</string>
     <string name="double_tap_to_lock_screen">轻按两次锁定</string>
     <!-- Miscellaneous Strings -->
     <string name="settings_text_size">设置文字大小</string>
