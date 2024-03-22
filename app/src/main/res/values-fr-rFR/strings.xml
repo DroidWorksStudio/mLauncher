@@ -35,6 +35,7 @@
     <string name="icon_font">Utiliser la police de l\'icône</string>
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Nombre de raccourcis</string>
+    <string name="pages_on_home_screen">Nombre de pages</string>
     <string name="show_time">Afficher l\'heure</string>
     <string name="show_date">Afficher la date</string>
     <string name="show_battery">Afficher la batterie</string>
@@ -91,6 +92,8 @@
     <string name="show_recents">Show Recents</string>
     <string name="open_power_dialog">Boîte de dialogue d\'alimentation</string>
     <string name="take_a_screenshot">Prendre une capture d\'écran</string>
+    <string name="left_page">Aller à la page de gauche</string>
+    <string name="right_page">Aller à la bonne page</string>
     <string name="double_tap_to_lock_screen">Double appui pour verrouiller</string>
     <!-- Miscellaneous Strings -->
     <string name="settings_text_size">Taille du texte des paramètres</string>
