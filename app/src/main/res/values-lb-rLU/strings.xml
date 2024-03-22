@@ -35,6 +35,7 @@
     <string name="icon_font">Benotzt Ikon Schrëft</string>
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Zuel vun Ofkiirzungen</string>
+    <string name="pages_on_home_screen">Zuel vun Säiten</string>
     <string name="show_time">Elo geet et lass</string>
     <string name="show_date">Datum weisen</string>
     <string name="show_battery">Batterie weisen</string>
@@ -91,6 +92,8 @@
     <string name="show_recents">Show Rezent</string>
     <string name="open_power_dialog">Power Dialog</string>
     <string name="take_a_screenshot">Maacht e Screenshot</string>
+    <string name="left_page">Gitt op déi lénks Säit</string>
+    <string name="right_page">Gitt op déi richteg Säit</string>
     <string name="double_tap_to_lock_screen">Duebeltapp fir ze spären</string>
     <!-- Miscellaneous Strings -->
     <string name="settings_text_size">Astellungen Text Gréisst</string>
