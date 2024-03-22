@@ -1,6 +1,7 @@
 package com.github.hecodes2much.fuzzywuzzy
 
 import com.github.hecodes2much.mlauncher.data.AppModel
+import java.text.Normalizer
 import java.util.*
 
 fun scoreApp(app: AppModel, searchChars: String, topScore: Int): Int {
@@ -12,6 +13,14 @@ fun scoreApp(app: AppModel, searchChars: String, topScore: Int): Int {
     )
 
     return (fuzzyScore * topScore).toInt()
+}
+
+fun normalizeString(appLabel: String, searchChars: String): Boolean {
+    return (appLabel.contains(searchChars, true) or
+            Normalizer.normalize(appLabel, Normalizer.Form.NFD)
+                .replace(Regex("\\p{InCombiningDiacriticalMarks}+"), "")
+                .replace(Regex("[-_+,. ]"), "")
+                .contains(searchChars, true))
 }
 
 fun normalizeString(input: String): String {

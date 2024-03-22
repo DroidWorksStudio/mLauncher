@@ -33,6 +33,7 @@ import androidx.navigation.fragment.findNavController
 import com.github.hecodes2much.mlauncher.MainViewModel
 import com.github.hecodes2much.mlauncher.R
 import com.github.hecodes2much.mlauncher.data.AppModel
+import com.github.hecodes2much.mlauncher.data.Constants
 import com.github.hecodes2much.mlauncher.data.Constants.Action
 import com.github.hecodes2much.mlauncher.data.Constants.AppDrawerFlag
 import com.github.hecodes2much.mlauncher.data.Prefs
@@ -445,8 +446,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                         val distance = sqrt((deltaX * deltaX + deltaY * deltaY).toDouble()).toFloat()
 
                         // Check if it's a hold swipe gesture
-                        val holdDurationThreshold = 1000L // Adjust as needed
-                        val swipeDistanceThreshold = 400f // Adjust as needed
+                        val holdDurationThreshold = Constants.HOLD_DURATION_THRESHOLD
+                        val swipeDistanceThreshold = Constants.SWIPE_DISTANCE_THRESHOLD
 
                         if (duration <= holdDurationThreshold && distance >= swipeDistanceThreshold) {
                             onLongPressSwipe(deltaX, deltaY)
@@ -605,8 +606,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                         val distance = sqrt((deltaX * deltaX + deltaY * deltaY).toDouble()).toFloat()
 
                         // Check if it's a hold swipe gesture
-                        val holdDurationThreshold = 1000L // Adjust as needed
-                        val swipeDistanceThreshold = 400f // Adjust as needed
+                        val holdDurationThreshold = Constants.HOLD_DURATION_THRESHOLD
+                        val swipeDistanceThreshold = Constants.SWIPE_DISTANCE_THRESHOLD
 
                         if (duration <= holdDurationThreshold && distance >= swipeDistanceThreshold) {
                             onLongPressSwipe(deltaX, deltaY)
