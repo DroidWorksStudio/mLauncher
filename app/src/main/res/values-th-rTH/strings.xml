@@ -35,6 +35,7 @@
     <string name="icon_font">ใช้แบบอักษรไอคอน</string>
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">จำนวนทางลัด</string>
+    <string name="pages_on_home_screen">เลขหน้า</string>
     <string name="show_time">เวลาแสดง</string>
     <string name="show_date">แสดงวันที่</string>
     <string name="show_battery">แสดงแบตเตอรี่</string>
@@ -91,6 +92,8 @@
     <string name="show_recents">แสดงล่าสุด</string>
     <string name="open_power_dialog">กล่องโต้ตอบพลังงาน</string>
     <string name="take_a_screenshot">ถ่ายภาพหน้าจอ</string>
+    <string name="left_page">ไปที่หน้าซ้าย</string>
+    <string name="right_page">ไปที่หน้าขวา</string>
     <string name="double_tap_to_lock_screen">แตะสองครั้งเพื่อล็อค</string>
     <!-- Miscellaneous Strings -->
     <string name="settings_text_size">ขนาดตัวอักษรการตั้งค่า</string>
