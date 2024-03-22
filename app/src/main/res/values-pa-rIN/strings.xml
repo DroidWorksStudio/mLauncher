@@ -35,6 +35,7 @@
     <string name="icon_font">ਆਈਕਨ ਫੌਂਟ ਦੀ ਵਰਤੋਂ ਕਰੋ</string>
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">ਸ਼ਾਰਟਕੱਟਾਂ ਦੀ ਸੰਖਿਆ</string>
+    <string name="pages_on_home_screen">ਪੰਨਿਆਂ ਦੀ ਸੰਖਿਆ</string>
     <string name="show_time">ਸ਼ੋਅ ਸਮਾ</string>
     <string name="show_date">ਮਿਤੀ ਦਿਖਾਓ</string>
     <string name="show_battery">ਬੈਟਰੀ ਦਿਖਾਓ</string>
@@ -91,6 +92,8 @@
     <string name="show_recents">ਹਾਲੀਆ ਦਿਖਾਓ</string>
     <string name="open_power_dialog">ਪਾਵਰ ਡਾਇਲਾਗ</string>
     <string name="take_a_screenshot">ਇੱਕ ਸਕ੍ਰੀਨਸ਼ੌਟ ਲਓ</string>
+    <string name="left_page">ਖੱਬੇ ਪੰਨੇ \'ਤੇ ਜਾਓ</string>
+    <string name="right_page">ਸੱਜੇ ਪੰਨੇ \'ਤੇ ਜਾਓ</string>
     <string name="double_tap_to_lock_screen">ਲਾਕ ਕਰਨ ਲਈ ਡਬਲ ਟੈਪ ਕਰੋ</string>
     <!-- Miscellaneous Strings -->
     <string name="settings_text_size">ਸੈਟਿੰਗਾਂ ਟੈਕਸਟ ਆਕਾਰ</string>
