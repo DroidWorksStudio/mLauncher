@@ -1,0 +1,10 @@
+Versi: 1.4.2
+
+Penambahbaikan:
+[Ciri] - Tambah Pilihan untuk Berbilang Halaman Pada Skrin Utama.
+
+Pembetulan Pepijat:
+[Pepijat] Penapis Fuzzy Tetap Jika Ditetapkan Kepada 0.
+
+Sokongan Bahasa:
+[Bahasa] Fail Bahasa yang dikemas kini.
