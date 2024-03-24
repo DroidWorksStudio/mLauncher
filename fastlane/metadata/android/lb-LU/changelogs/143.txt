@@ -1,0 +1,4 @@
+Versioun: 1.4.3
+
+Bug Fixes:
+[Bug] - Fixéiert ëmbenennen wann Dir zréck op den originelle Numm ëmbenennt.
