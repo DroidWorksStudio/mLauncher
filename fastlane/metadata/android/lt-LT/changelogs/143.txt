@@ -1,0 +1,4 @@
+Versija: 1.4.3
+
+Trikčių pataisymai:
+[Klaida] – ištaisyta Pervardyti, jei pervardijama atgal į pradinį pavadinimą.
