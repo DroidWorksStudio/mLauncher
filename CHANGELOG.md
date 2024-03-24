@@ -11,6 +11,7 @@
 
 **Language Support:**
 
+- \[Language\] Updated Language Files. [\#394](https://github.com/HeAndroids2Much/mLauncher/pull/394) ([HeCodes2Much](https://github.com/HeCodes2Much))
 - \[Language\] Updated Language Files. [\#391](https://github.com/HeAndroids2Much/mLauncher/pull/391) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
 **Release:**
