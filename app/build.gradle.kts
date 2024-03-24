@@ -13,8 +13,8 @@ android {
         applicationId = "app.mlauncher"
         minSdk = 23
         targetSdk = 34
-        versionCode = 142
-        versionName = "1.4.2"
+        versionCode = 143
+        versionName = "1.4.3"
     }
 
     buildTypes {
@@ -84,6 +84,7 @@ android {
 }
 
 dependencies {
+    val androidxTestKotlin = "1.6.4"
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
@@ -109,16 +110,16 @@ dependencies {
     //noinspection GradleDependency
     implementation("androidx.activity:activity-compose:1.8.2")
     // Compose Material Design
-    implementation("androidx.compose.material:material:1.6.3")
+    implementation("androidx.compose.material:material:$androidxTestKotlin")
     implementation("com.github.SmartToolFactory:Compose-Colorful-Sliders:1.2.0")
     // Animations
-    implementation("androidx.compose.animation:animation:1.6.3")
+    implementation("androidx.compose.animation:animation:$androidxTestKotlin")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
 
     // AndroidX
-    implementation("androidx.compose.ui:ui:1.6.3")
-    implementation("androidx.compose.ui:ui-tooling:1.6.3")
-    implementation("androidx.compose.foundation:foundation:1.6.3")
+    implementation("androidx.compose.ui:ui:$androidxTestKotlin")
+    implementation("androidx.compose.ui:ui-tooling:$androidxTestKotlin")
+    implementation("androidx.compose.foundation:foundation:$androidxTestKotlin")
 
     implementation("com.google.code.gson:gson:2.10.1")
     implementation("androidx.biometric:biometric-ktx:1.2.0-alpha05")
@@ -130,9 +131,9 @@ dependencies {
     implementation("androidx.test.espresso:espresso-idling-resource:$androidxTestEspresso")
 
     // Test rules and transitive dependencies:
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.6.3")
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4:$androidxTestKotlin")
     // Needed for createComposeRule, but not createAndroidComposeRule:
-    debugImplementation("androidx.compose.ui:ui-test-manifest:1.6.3")
+    debugImplementation("androidx.compose.ui:ui-test-manifest:$androidxTestKotlin")
     androidTestImplementation("androidx.navigation:navigation-testing:2.7.7")
     debugImplementation("androidx.fragment:fragment-testing:1.6.2")
     implementation("androidx.test:core-ktx:1.5.0")
