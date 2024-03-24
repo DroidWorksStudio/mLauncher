@@ -1,0 +1,10 @@
+Wersja: 1.4.2
+
+Wzmocnienie:
+[Feature] - Dodaj opcję dla wielu stron na ekranie głównym.
+
+Poprawki błędów:
+[Bug] Naprawiony filtr Fuzzy jeśli ustawiony na 0.
+
+Obsługa języków:
+[Język] Zaktualizowano pliki językowe.
