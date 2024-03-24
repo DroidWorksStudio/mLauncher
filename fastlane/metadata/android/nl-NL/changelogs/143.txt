@@ -2,3 +2,8 @@ Versie: 1.4.3
 
 Bugfixes:
 [Bug] - Hernoemen opgelost bij hernoemen naar de oorspronkelijke naam.
+[Bug] - De veegbewegingen zijn opgelost.
+
+Taalondersteuning:
+
+[Taal] Bijgewerkte taalbestanden.
