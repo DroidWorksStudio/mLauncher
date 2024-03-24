@@ -1,6 +1,7 @@
 package com.github.hecodes2much.mlauncher.data
 
 import android.annotation.SuppressLint
+import android.content.Context
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
 import com.github.hecodes2much.mlauncher.R
@@ -41,20 +42,40 @@ object Constants {
     const val MAX_OPACITY = 255
 
     const val HOLD_DURATION_THRESHOLD = 1000L // Adjust as needed
-    const val SWIPE_DISTANCE_THRESHOLD = 500f // Adjust as needed
+
+    // Update SWIPE_DISTANCE_THRESHOLD dynamically based on screen dimensions
+    var SWIPE_DISTANCE_THRESHOLD: Float = 0f
+
+    fun updateSwipeDistanceThreshold(context: Context, direction: String) {
+        val displayMetrics = context.resources.displayMetrics
+
+        // Obtain screen dimensions from displayMetrics
+        val screenWidth = displayMetrics.widthPixels.toFloat()
+        val screenHeight = displayMetrics.heightPixels.toFloat()
+
+        // Ensure display metrics are valid
+        if (screenWidth > 0 && screenHeight > 0) {
+            SWIPE_DISTANCE_THRESHOLD = if (direction == "left" || direction == "right") {
+                0.80f * screenWidth // Use 80% of screen height for left/right swipe
+            } else {
+                0.50f * screenHeight // Use 50% of screen width for up/down swipe
+            }
+        }
+    }
+
 
     enum class AppDrawerFlag {
         LaunchApp,
         HiddenApps,
         SetHomeApp,
-        SetSwipeUp,
-        SetSwipeDown,
-        SetSwipeLeft,
-        SetSwipeRight,
-        SetLongPressSwipeUp,
-        SetLongPressSwipeDown,
-        SetLongPressSwipeLeft,
-        SetLongPressSwipeRight,
+        SetShortSwipeUp,
+        SetShortSwipeDown,
+        SetShortSwipeLeft,
+        SetShortSwipeRight,
+        SetLongSwipeUp,
+        SetLongSwipeDown,
+        SetLongSwipeLeft,
+        SetLongSwipeRight,
         SetClickClock,
         SetClickDate,
         SetDoubleTap,

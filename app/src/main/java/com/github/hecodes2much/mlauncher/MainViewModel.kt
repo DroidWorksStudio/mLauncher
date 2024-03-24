@@ -52,14 +52,14 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 prefs.setHomeAppModel(n, appModel)
             }
 
-            AppDrawerFlag.SetSwipeUp -> prefs.appSwipeUp = appModel
-            AppDrawerFlag.SetSwipeDown -> prefs.appSwipeDown = appModel
-            AppDrawerFlag.SetSwipeLeft -> prefs.appSwipeLeft = appModel
-            AppDrawerFlag.SetSwipeRight -> prefs.appSwipeRight = appModel
-            AppDrawerFlag.SetLongPressSwipeUp -> prefs.appLongPressSwipeUp = appModel
-            AppDrawerFlag.SetLongPressSwipeDown -> prefs.appLongPressSwipeDown = appModel
-            AppDrawerFlag.SetLongPressSwipeLeft -> prefs.appLongPressSwipeLeft = appModel
-            AppDrawerFlag.SetLongPressSwipeRight -> prefs.appLongPressSwipeRight = appModel
+            AppDrawerFlag.SetShortSwipeUp -> prefs.appShortSwipeUp = appModel
+            AppDrawerFlag.SetShortSwipeDown -> prefs.appShortSwipeDown = appModel
+            AppDrawerFlag.SetShortSwipeLeft -> prefs.appShortSwipeLeft = appModel
+            AppDrawerFlag.SetShortSwipeRight -> prefs.appShortSwipeRight = appModel
+            AppDrawerFlag.SetLongSwipeUp -> prefs.appLongSwipeUp = appModel
+            AppDrawerFlag.SetLongSwipeDown -> prefs.appLongSwipeDown = appModel
+            AppDrawerFlag.SetLongSwipeLeft -> prefs.appLongSwipeLeft = appModel
+            AppDrawerFlag.SetLongSwipeRight -> prefs.appLongSwipeRight = appModel
             AppDrawerFlag.SetClickClock -> prefs.appClickClock = appModel
             AppDrawerFlag.SetClickDate -> prefs.appClickDate = appModel
             AppDrawerFlag.SetDoubleTap -> prefs.appDoubleTap = appModel

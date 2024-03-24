@@ -305,48 +305,48 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     }
 
     private fun openSwipeUpApp() {
-        if (prefs.appSwipeUp.appPackage.isNotEmpty())
-            launchApp(prefs.appSwipeUp)
+        if (prefs.appShortSwipeUp.appPackage.isNotEmpty())
+            launchApp(prefs.appShortSwipeUp)
         else openDialerApp(requireContext())
     }
     private fun openSwipeDownApp() {
-        if (prefs.appSwipeDown.appPackage.isNotEmpty())
-            launchApp(prefs.appSwipeDown)
+        if (prefs.appShortSwipeDown.appPackage.isNotEmpty())
+            launchApp(prefs.appShortSwipeDown)
         else openDialerApp(requireContext())
     }
 
     private fun openSwipeLeftApp() {
-        if (prefs.appSwipeLeft.appPackage.isNotEmpty())
-            launchApp(prefs.appSwipeLeft)
+        if (prefs.appShortSwipeLeft.appPackage.isNotEmpty())
+            launchApp(prefs.appShortSwipeLeft)
         else openCameraApp(requireContext())
     }
 
     private fun openSwipeRightApp() {
-        if (prefs.appSwipeRight.appPackage.isNotEmpty())
-            launchApp(prefs.appSwipeRight)
+        if (prefs.appShortSwipeRight.appPackage.isNotEmpty())
+            launchApp(prefs.appShortSwipeRight)
         else openDialerApp(requireContext())
     }
 
-    private fun openLongPressSwipeUpApp() {
-        if (prefs.appLongPressSwipeUp.appPackage.isNotEmpty())
-            launchApp(prefs.appLongPressSwipeUp)
+    private fun openLongSwipeUpApp() {
+        if (prefs.appLongSwipeUp.appPackage.isNotEmpty())
+            launchApp(prefs.appLongSwipeUp)
         else openDialerApp(requireContext())
     }
-    private fun openLongPressSwipeDownApp() {
-        if (prefs.appLongPressSwipeDown.appPackage.isNotEmpty())
-            launchApp(prefs.appLongPressSwipeDown)
+    private fun openLongSwipeDownApp() {
+        if (prefs.appLongSwipeDown.appPackage.isNotEmpty())
+            launchApp(prefs.appLongSwipeDown)
         else openDialerApp(requireContext())
     }
 
-    private fun openLongPressSwipeLeftApp() {
-        if (prefs.appLongPressSwipeLeft.appPackage.isNotEmpty())
-            launchApp(prefs.appLongPressSwipeLeft)
+    private fun openLongSwipeLeftApp() {
+        if (prefs.appLongSwipeLeft.appPackage.isNotEmpty())
+            launchApp(prefs.appLongSwipeLeft)
         else openCameraApp(requireContext())
     }
 
-    private fun openLongPressSwipeRightApp() {
-        if (prefs.appLongPressSwipeRight.appPackage.isNotEmpty())
-            launchApp(prefs.appLongPressSwipeRight)
+    private fun openLongSwipeRightApp() {
+        if (prefs.appLongSwipeRight.appPackage.isNotEmpty())
+            launchApp(prefs.appLongSwipeRight)
         else openDialerApp(requireContext())
     }
 
@@ -425,7 +425,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             private var startX = 0f
             private var startY = 0f
             private var startTime: Long = 0
-            private var longPressSwipeTriggered = false // Flag to indicate if onLongPressSwipe was triggered
+            private var longSwipeTriggered = false // Flag to indicate if onLongSwipe was triggered
 
             @SuppressLint("ClickableViewAccessibility")
             override fun onTouch(view: View, motionEvent: MotionEvent): Boolean {
@@ -434,7 +434,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                         startX = motionEvent.x
                         startY = motionEvent.y
                         startTime = System.currentTimeMillis()
-                        longPressSwipeTriggered = false // Reset the flag
+                        longSwipeTriggered = false // Reset the flag
                     }
                     MotionEvent.ACTION_UP -> {
                         val endX = motionEvent.x
@@ -444,24 +444,30 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                         val deltaX = endX - startX
                         val deltaY = endY - startY
                         val distance = sqrt((deltaX * deltaX + deltaY * deltaY).toDouble()).toFloat()
+                        val direction: String = if (abs(deltaX) < abs(deltaY)) {
+                            if (deltaY < 0) "up" else "down"
+                        } else {
+                            if (deltaX < 0) "left" else "right"
+                        }
 
                         // Check if it's a hold swipe gesture
                         val holdDurationThreshold = Constants.HOLD_DURATION_THRESHOLD
+                        Constants.updateSwipeDistanceThreshold(context, direction)
                         val swipeDistanceThreshold = Constants.SWIPE_DISTANCE_THRESHOLD
 
                         if (duration <= holdDurationThreshold && distance >= swipeDistanceThreshold) {
-                            onLongPressSwipe(deltaX, deltaY)
-                            longPressSwipeTriggered = true // Set the flag if onLongPressSwipe was triggered
+                            onLongSwipe(direction)
+                            longSwipeTriggered = true // Set the flag if onLongSwipe was triggered
                         }
                     }
                 }
-                // Return false to continue to pass the event to onSwipeLeft if onLongPressSwipe was not triggered
-                return !longPressSwipeTriggered && super.onTouch(view, motionEvent)
+                // Return false to continue to pass the event to onSwipeLeft if onLongSwipe was not triggered
+                return !longSwipeTriggered && super.onTouch(view, motionEvent)
             }
 
             override fun onSwipeLeft() {
                 super.onSwipeLeft()
-                when (val action = prefs.swipeLeftAction) {
+                when (val action = prefs.shortSwipeLeftAction) {
                     Action.OpenApp -> openSwipeLeftApp()
                     else -> handleOtherAction(action)
                 }
@@ -469,7 +475,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
             override fun onSwipeRight() {
                 super.onSwipeRight()
-                when (val action = prefs.swipeRightAction) {
+                when (val action = prefs.shortSwipeRightAction) {
                     Action.OpenApp -> openSwipeRightApp()
                     else -> handleOtherAction(action)
                 }
@@ -477,7 +483,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
             override fun onSwipeUp() {
                 super.onSwipeUp()
-                when (val action = prefs.swipeUpAction) {
+                when (val action = prefs.shortSwipeUpAction) {
                     Action.OpenApp -> openSwipeUpApp()
                     else -> handleOtherAction(action)
                 }
@@ -485,7 +491,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
             override fun onSwipeDown() {
                 super.onSwipeDown()
-                when (val action = prefs.swipeDownAction) {
+                when (val action = prefs.shortSwipeDownAction) {
                     Action.OpenApp -> openSwipeDownApp()
                     else -> handleOtherAction(action)
                 }
@@ -585,7 +591,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             private var startX = 0f
             private var startY = 0f
             private var startTime: Long = 0
-            private var longPressSwipeTriggered = false // Flag to indicate if onLongPressSwipe was triggered
+            private var longSwipeTriggered = false // Flag to indicate if onLongSwipe was triggered
 
             @SuppressLint("ClickableViewAccessibility")
             override fun onTouch(view: View, motionEvent: MotionEvent): Boolean {
@@ -594,7 +600,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                         startX = motionEvent.x
                         startY = motionEvent.y
                         startTime = System.currentTimeMillis()
-                        longPressSwipeTriggered = false // Reset the flag
+                        longSwipeTriggered = false // Reset the flag
                     }
                     MotionEvent.ACTION_UP -> {
                         val endX = motionEvent.x
@@ -604,19 +610,25 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                         val deltaX = endX - startX
                         val deltaY = endY - startY
                         val distance = sqrt((deltaX * deltaX + deltaY * deltaY).toDouble()).toFloat()
+                        val direction: String = if (abs(deltaX) < abs(deltaY)) {
+                            if (deltaY < 0) "up" else "down"
+                        } else {
+                            if (deltaX < 0) "left" else "right"
+                        }
 
                         // Check if it's a hold swipe gesture
                         val holdDurationThreshold = Constants.HOLD_DURATION_THRESHOLD
+                        Constants.updateSwipeDistanceThreshold(context, direction)
                         val swipeDistanceThreshold = Constants.SWIPE_DISTANCE_THRESHOLD
 
                         if (duration <= holdDurationThreshold && distance >= swipeDistanceThreshold) {
-                            onLongPressSwipe(deltaX, deltaY)
-                            longPressSwipeTriggered = true // Set the flag if onLongPressSwipe was triggered
+                            onLongSwipe(direction)
+                            longSwipeTriggered = true // Set the flag if onLongSwipe was triggered
                         }
                     }
                 }
-                // Return false to continue to pass the event to onSwipeLeft if onLongPressSwipe was not triggered
-                return !longPressSwipeTriggered && super.onTouch(view, motionEvent)
+                // Return false to continue to pass the event to onSwipeLeft if onLongSwipe was not triggered
+                return !longSwipeTriggered && super.onTouch(view, motionEvent)
             }
 
             override fun onLongClick(view: View) {
@@ -631,7 +643,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
             override fun onSwipeLeft() {
                 super.onSwipeLeft()
-                when (val action = prefs.swipeLeftAction) {
+                when (val action = prefs.shortSwipeLeftAction) {
                     Action.OpenApp -> openSwipeLeftApp()
                     else -> handleOtherAction(action)
                 }
@@ -639,7 +651,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
             override fun onSwipeRight() {
                 super.onSwipeRight()
-                when (val action = prefs.swipeRightAction) {
+                when (val action = prefs.shortSwipeRightAction) {
                     Action.OpenApp -> openSwipeRightApp()
                     else -> handleOtherAction(action)
                 }
@@ -647,7 +659,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
             override fun onSwipeUp() {
                 super.onSwipeUp()
-                when (val action = prefs.swipeUpAction) {
+                when (val action = prefs.shortSwipeUpAction) {
                     Action.OpenApp -> openSwipeUpApp()
                     else -> handleOtherAction(action)
                 }
@@ -655,7 +667,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
             override fun onSwipeDown() {
                 super.onSwipeDown()
-                when (val action = prefs.swipeDownAction) {
+                when (val action = prefs.shortSwipeDownAction) {
                     Action.OpenApp -> openSwipeDownApp()
                     else -> handleOtherAction(action)
                 }
@@ -663,37 +675,26 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         }
     }
 
-    private fun onLongPressSwipe(deltaX: Float, deltaY: Float) {
-        val direction: String = if (abs(deltaX) < abs(deltaY)) {
-            if (deltaY < 0) "up" else "down"
-        } else {
-            if (deltaX < 0) "left" else "right"
-        }
-
+    private fun onLongSwipe(direction: String) {
         when (direction) {
-            "up" -> when (val action = prefs.longPressSwipeUpAction) {
-                Action.OpenApp -> openLongPressSwipeUpApp()
+            "up" -> when (val action = prefs.longSwipeUpAction) {
+                Action.OpenApp -> openLongSwipeUpApp()
                 else -> handleOtherAction(action)
             }
-            "down" -> when (val action = prefs.longPressSwipeDownAction) {
-                Action.OpenApp -> openLongPressSwipeDownApp()
+            "down" -> when (val action = prefs.longSwipeDownAction) {
+                Action.OpenApp -> openLongSwipeDownApp()
                 else -> handleOtherAction(action)
             }
-            "left" -> when (val action = prefs.longPressSwipeLeftAction) {
-                Action.OpenApp -> openLongPressSwipeLeftApp()
+            "left" -> when (val action = prefs.longSwipeLeftAction) {
+                Action.OpenApp -> openLongSwipeLeftApp()
                 else -> handleOtherAction(action)
             }
-            "right" -> when (val action = prefs.longPressSwipeRightAction) {
-                Action.OpenApp -> openLongPressSwipeRightApp()
+            "right" -> when (val action = prefs.longSwipeRightAction) {
+                Action.OpenApp -> openLongSwipeRightApp()
                 else -> handleOtherAction(action)
             }
         }
     }
-
-    // updates number of apps visible on home screen
-    // does nothing if number has not changed
-    private var currentPage = 0
-    private var appsPerPage = 0
 
     @RequiresApi(Build.VERSION_CODES.Q)
     @SuppressLint("InflateParams")
@@ -739,6 +740,11 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         // Update the total number of pages and calculate maximum apps per page
         updatePagesAndAppsPerPage(prefs.homeAppsNum, prefs.homePagesNum)
     }
+
+    // updates number of apps visible on home screen
+    // does nothing if number has not changed
+    private var currentPage = 0
+    private var appsPerPage = 0
 
     private fun updatePagesAndAppsPerPage(totalApps: Int, totalPages: Int) {
         // Calculate the maximum number of apps per page
