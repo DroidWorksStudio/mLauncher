@@ -1,5 +1,8 @@
 Versija: 1.4.3
 
+Patobulinimas:
+[Funkcija] – pridėta galimybė nereikėtų pervardyti programų, jei jau nustatyta programų sąraše.
+
 Trikčių pataisymai:
 [Klaida] – ištaisyta Pervardyti, jei pervardijama atgal į pradinį pavadinimą.
 [Klaida] – ištaisyti perbraukimo gestai.
