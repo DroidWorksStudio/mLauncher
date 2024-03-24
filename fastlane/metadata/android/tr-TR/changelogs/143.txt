@@ -1,0 +1,4 @@
+Sürüm: 1.4.3
+
+Hata düzeltmeleri:
+[Hata] - Orijinal isme geri dönülmesi durumunda Yeniden Adlandırma düzeltildi.
