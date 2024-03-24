@@ -120,8 +120,6 @@ dependencies {
     implementation("androidx.compose.ui:ui:$androidxTestKotlin")
     implementation("androidx.compose.ui:ui-tooling:$androidxTestKotlin")
     implementation("androidx.compose.foundation:foundation:$androidxTestKotlin")
-
-    implementation("com.google.code.gson:gson:2.10.1")
     implementation("androidx.biometric:biometric-ktx:1.2.0-alpha05")
 
     val androidxTestEspresso = "3.5.1"
