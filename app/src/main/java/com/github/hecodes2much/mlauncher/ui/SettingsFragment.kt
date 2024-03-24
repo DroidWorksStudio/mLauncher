@@ -458,46 +458,90 @@ class SettingsFragment : Fragment() {
                 items = arrayOf(
                     { open, onChange ->
                         SettingsGestureItem(
-                            title = stringResource(R.string.swipe_up_app),
+                            title = stringResource(R.string.short_swipe_up_app),
                             fontSize = iconFs,
                             open = open,
                             onChange = onChange,
-                            currentAction = prefs.swipeUpAction,
-                            onSelect = { j -> setGesture(AppDrawerFlag.SetSwipeUp, j) },
-                            appLabel = prefs.appSwipeUp.appLabel,
+                            currentAction = prefs.shortSwipeUpAction,
+                            onSelect = { j -> setGesture(AppDrawerFlag.SetShortSwipeUp, j) },
+                            appLabel = prefs.appShortSwipeUp.appLabel,
                         )
                     },
                     { open, onChange ->
                         SettingsGestureItem(
-                            title = stringResource(R.string.swipe_down_app),
+                            title = stringResource(R.string.short_swipe_down_app),
                             fontSize = iconFs,
                             open = open,
                             onChange = onChange,
-                            currentAction = prefs.swipeDownAction,
-                            onSelect = { j -> setGesture(AppDrawerFlag.SetSwipeDown, j) },
-                            appLabel = prefs.appSwipeDown.appLabel,
+                            currentAction = prefs.shortSwipeDownAction,
+                            onSelect = { j -> setGesture(AppDrawerFlag.SetShortSwipeDown, j) },
+                            appLabel = prefs.appShortSwipeDown.appLabel,
                         )
                     },
                     { open, onChange ->
                         SettingsGestureItem(
-                            title = stringResource(R.string.swipe_left_app),
+                            title = stringResource(R.string.short_swipe_left_app),
                             fontSize = iconFs,
                             open = open,
                             onChange = onChange,
-                            currentAction = prefs.swipeLeftAction,
-                            onSelect = { j -> setGesture(AppDrawerFlag.SetSwipeLeft, j) },
-                            appLabel = prefs.appSwipeLeft.appLabel.ifEmpty { "Camera" },
+                            currentAction = prefs.shortSwipeLeftAction,
+                            onSelect = { j -> setGesture(AppDrawerFlag.SetShortSwipeLeft, j) },
+                            appLabel = prefs.appShortSwipeLeft.appLabel.ifEmpty { "Camera" },
                         )
                     },
                     { open, onChange ->
                         SettingsGestureItem(
-                            title = stringResource(R.string.swipe_right_app),
+                            title = stringResource(R.string.short_swipe_right_app),
                             fontSize = iconFs,
                             open = open,
                             onChange = onChange,
-                            currentAction = prefs.swipeRightAction,
-                            onSelect = { j -> setGesture(AppDrawerFlag.SetSwipeRight, j) },
-                            appLabel = prefs.appSwipeRight.appLabel.ifEmpty { "Phone" },
+                            currentAction = prefs.shortSwipeRightAction,
+                            onSelect = { j -> setGesture(AppDrawerFlag.SetShortSwipeRight, j) },
+                            appLabel = prefs.appShortSwipeRight.appLabel.ifEmpty { "Phone" },
+                        )
+                    },
+                    { open, onChange ->
+                        SettingsGestureItem(
+                            title = stringResource(R.string.long_swipe_up_app),
+                            fontSize = iconFs,
+                            open = open,
+                            onChange = onChange,
+                            currentAction = prefs.longSwipeUpAction,
+                            onSelect = { j -> setGesture(AppDrawerFlag.SetLongSwipeUp, j) },
+                            appLabel = prefs.appLongSwipeUp.appLabel,
+                        )
+                    },
+                    { open, onChange ->
+                        SettingsGestureItem(
+                            title = stringResource(R.string.long_swipe_down_app),
+                            fontSize = iconFs,
+                            open = open,
+                            onChange = onChange,
+                            currentAction = prefs.longSwipeDownAction,
+                            onSelect = { j -> setGesture(AppDrawerFlag.SetLongSwipeDown, j) },
+                            appLabel = prefs.appLongSwipeDown.appLabel,
+                        )
+                    },
+                    { open, onChange ->
+                        SettingsGestureItem(
+                            title = stringResource(R.string.long_swipe_left_app),
+                            fontSize = iconFs,
+                            open = open,
+                            onChange = onChange,
+                            currentAction = prefs.longSwipeLeftAction,
+                            onSelect = { j -> setGesture(AppDrawerFlag.SetLongSwipeLeft, j) },
+                            appLabel = prefs.appLongSwipeLeft.appLabel,
+                        )
+                    },
+                    { open, onChange ->
+                        SettingsGestureItem(
+                            title = stringResource(R.string.long_swipe_right_app),
+                            fontSize = iconFs,
+                            open = open,
+                            onChange = onChange,
+                            currentAction = prefs.longSwipeRightAction,
+                            onSelect = { j -> setGesture(AppDrawerFlag.SetLongSwipeRight, j) },
+                            appLabel = prefs.appLongSwipeRight.appLabel,
                         )
                     },
                     { open, onChange ->
@@ -531,50 +575,6 @@ class SettingsFragment : Fragment() {
                             currentAction = prefs.doubleTapAction,
                             onSelect = { j -> setGesture(AppDrawerFlag.SetDoubleTap, j) },
                             appLabel = prefs.appDoubleTap.appLabel
-                        )
-                    },
-                    { open, onChange ->
-                        SettingsGestureItem(
-                            title = stringResource(R.string.long_press_swipe_up_app),
-                            fontSize = iconFs,
-                            open = open,
-                            onChange = onChange,
-                            currentAction = prefs.longPressSwipeUpAction,
-                            onSelect = { j -> setGesture(AppDrawerFlag.SetLongPressSwipeUp, j) },
-                            appLabel = prefs.appLongPressSwipeUp.appLabel,
-                        )
-                    },
-                    { open, onChange ->
-                        SettingsGestureItem(
-                            title = stringResource(R.string.long_press_swipe_down_app),
-                            fontSize = iconFs,
-                            open = open,
-                            onChange = onChange,
-                            currentAction = prefs.longPressSwipeDownAction,
-                            onSelect = { j -> setGesture(AppDrawerFlag.SetLongPressSwipeDown, j) },
-                            appLabel = prefs.appLongPressSwipeDown.appLabel,
-                        )
-                    },
-                    { open, onChange ->
-                        SettingsGestureItem(
-                            title = stringResource(R.string.long_press_swipe_left_app),
-                            fontSize = iconFs,
-                            open = open,
-                            onChange = onChange,
-                            currentAction = prefs.longPressSwipeLeftAction,
-                            onSelect = { j -> setGesture(AppDrawerFlag.SetLongPressSwipeLeft, j) },
-                            appLabel = prefs.appLongPressSwipeLeft.appLabel,
-                        )
-                    },
-                    { open, onChange ->
-                        SettingsGestureItem(
-                            title = stringResource(R.string.long_press_swipe_right_app),
-                            fontSize = iconFs,
-                            open = open,
-                            onChange = onChange,
-                            currentAction = prefs.longPressSwipeRightAction,
-                            onSelect = { j -> setGesture(AppDrawerFlag.SetLongPressSwipeRight, j) },
-                            appLabel = prefs.appLongPressSwipeRight.appLabel,
                         )
                     }
                 )
@@ -812,17 +812,17 @@ class SettingsFragment : Fragment() {
 
     private fun setGesture(flag: AppDrawerFlag, action: Action) {
         when (flag) {
-            AppDrawerFlag.SetSwipeUp -> prefs.swipeUpAction = action
-            AppDrawerFlag.SetSwipeDown -> prefs.swipeDownAction = action
-            AppDrawerFlag.SetSwipeLeft -> prefs.swipeLeftAction = action
-            AppDrawerFlag.SetSwipeRight -> prefs.swipeRightAction = action
+            AppDrawerFlag.SetShortSwipeUp -> prefs.shortSwipeUpAction = action
+            AppDrawerFlag.SetShortSwipeDown -> prefs.shortSwipeDownAction = action
+            AppDrawerFlag.SetShortSwipeLeft -> prefs.shortSwipeLeftAction = action
+            AppDrawerFlag.SetShortSwipeRight -> prefs.shortSwipeRightAction = action
             AppDrawerFlag.SetClickClock -> prefs.clickClockAction = action
             AppDrawerFlag.SetClickDate -> prefs.clickDateAction = action
             AppDrawerFlag.SetDoubleTap -> prefs.doubleTapAction = action
-            AppDrawerFlag.SetLongPressSwipeUp -> prefs.longPressSwipeUpAction = action
-            AppDrawerFlag.SetLongPressSwipeDown -> prefs.longPressSwipeDownAction = action
-            AppDrawerFlag.SetLongPressSwipeLeft -> prefs.longPressSwipeLeftAction = action
-            AppDrawerFlag.SetLongPressSwipeRight -> prefs.longPressSwipeRightAction = action
+            AppDrawerFlag.SetLongSwipeUp -> prefs.longSwipeUpAction = action
+            AppDrawerFlag.SetLongSwipeDown -> prefs.longSwipeDownAction = action
+            AppDrawerFlag.SetLongSwipeLeft -> prefs.longSwipeLeftAction = action
+            AppDrawerFlag.SetLongSwipeRight -> prefs.longSwipeRightAction = action
             AppDrawerFlag.SetHomeApp,
             AppDrawerFlag.HiddenApps,
             AppDrawerFlag.LaunchApp -> {

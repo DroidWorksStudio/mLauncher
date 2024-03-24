@@ -68,10 +68,10 @@ class AppDrawerFragment : Fragment() {
                 binding.drawerButton.isVisible = true
                 binding.drawerButton.setOnClickListener { renameListener(flag, n) }
             }
-            AppDrawerFlag.SetSwipeRight,
-            AppDrawerFlag.SetSwipeLeft,
-            AppDrawerFlag.SetSwipeUp,
-            AppDrawerFlag.SetSwipeDown,
+            AppDrawerFlag.SetShortSwipeRight,
+            AppDrawerFlag.SetShortSwipeLeft,
+            AppDrawerFlag.SetShortSwipeUp,
+            AppDrawerFlag.SetShortSwipeDown,
             AppDrawerFlag.SetClickClock,
             AppDrawerFlag.SetClickDate -> {
                 binding.drawerButton.setOnClickListener {
