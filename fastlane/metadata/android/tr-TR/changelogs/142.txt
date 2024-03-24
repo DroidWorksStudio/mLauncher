@@ -1,0 +1,10 @@
+Sürüm: 1.4.2
+
+Artırma:
+[Özellik] - Ana Ekranda Birden Fazla Sayfa İçin Seçenek Ekleme.
+
+Hata düzeltmeleri:
+[Hata] Bulanık Filtrenin 0'a Ayarlanması Düzeltildi.
+
+Dil desteği:
+[Dil] Güncellenmiş Dil Dosyaları.
