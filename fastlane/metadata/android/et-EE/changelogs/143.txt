@@ -1,5 +1,8 @@
 Versioon: 1.4.3
 
+Täiendus:
+[Funktsioon] – lisati võimalus, et rakendusi ei pea ümber nimetama, kui need on juba rakenduste loendi kaudu määratud.
+
 Veaparandused:
 [Bug] – Parandatud, kui nimetate ümber algsele nimele.
 [Viga] – pühkimisliigutused on parandatud.
