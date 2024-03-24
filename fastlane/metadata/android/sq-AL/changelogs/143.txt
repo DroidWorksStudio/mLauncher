@@ -2,3 +2,8 @@ Versioni: 1.4.3
 
 Rregullime të gabimeve:
 [Bug] - Rregullohet Riemërtimi nëse riemërtohet përsëri në emrin origjinal.
+[Bug] - Rregulloi gjestet e rrëshqitjes.
+
+Mbështetje gjuhësore:
+
+[Gjuha] Skedarët e përditësuar të gjuhës.
