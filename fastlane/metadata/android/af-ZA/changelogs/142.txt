@@ -1,0 +1,10 @@
+Weergawe: 1.4.2
+
+Verbetering:
+[Kenmerk] - Voeg opsie by vir veelvuldige bladsye op tuisskerm.
+
+Foutoplossings:
+[Fout] Vaste filter reggestel as dit op 0 gestel is.
+
+Taalondersteuning:
+[Taal] Bygewerkte taallêers.
