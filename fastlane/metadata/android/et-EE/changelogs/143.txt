@@ -1,0 +1,4 @@
+Versioon: 1.4.3
+
+Veaparandused:
+[Bug] – Parandatud, kui nimetate ümber algsele nimele.

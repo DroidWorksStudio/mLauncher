@@ -1,0 +1,4 @@
+Version: 1.4.3
+
+Fehlerbehebung:
+[Bug] – Umbenennen behoben, wenn wieder in den ursprünglichen Namen umbenannt wurde.

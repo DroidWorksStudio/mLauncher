@@ -1,0 +1,4 @@
+Útgáfa: 1.4.3
+
+Villuleiðréttingar:
+[Bug] - Fast endurnefna ef endurnefna aftur í upprunalegt nafn.

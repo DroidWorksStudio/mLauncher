@@ -1,0 +1,4 @@
+Verze: 1.4.3
+
+Oprava chyb:
+[Chyba] - Opraveno Přejmenování při přejmenování zpět na původní název.

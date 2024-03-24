@@ -1,0 +1,10 @@
+Versione: 1.4.2
+
+Aumento:
+[Feature] - Aggiungi opzione per pagine multiple sulla schermata iniziale.
+
+Correzioni di bug:
+[Bug] Filtro Fisso Fuzzy Se Impostato A 0.
+
+Supporto linguistico:
+[Lingua] File di lingua aggiornati.

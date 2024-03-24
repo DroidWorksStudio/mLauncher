@@ -1,0 +1,10 @@
+Version: 1.4.2
+
+Enhancement:
+[Feature] - Optionem addere pro Multiplica Paginae In Homescreen.
+
+Bug Fixes:
+[Bug] Fixum Filter Fuzzy si ad 0 constitue.
+
+Support Lingua:
+[Language] Tabularia Linguarum Renovata.

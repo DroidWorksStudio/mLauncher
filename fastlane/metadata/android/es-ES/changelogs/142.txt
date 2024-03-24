@@ -1,0 +1,10 @@
+Versión: 1.4.2
+
+Mejora:
+[Feature] - Añadir opción para múltiples páginas en pantalla de inicio.
+
+Corrección de errores:
+[Bug] Corregido filtro sucio si se establece a 0.
+
+Ayuda de idioma:
+[Idioma] Archivos de idioma actualizados.
