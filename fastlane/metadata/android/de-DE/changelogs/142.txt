@@ -1,0 +1,10 @@
+Version: 1.4.2
+
+Erweiterung:
+[Feature] - Option für mehrere Seiten auf dem Startbildschirm hinzufügen.
+
+Fehlerbehebung:
+[Bug] Fuzzy Filter behoben wenn auf 0 gesetzt.
+
+Sprachunterstützung:
+[Sprache] Aktualisierte Sprachdateien.
