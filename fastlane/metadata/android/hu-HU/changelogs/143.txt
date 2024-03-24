@@ -2,3 +2,8 @@ Verzió: 1.4.3
 
 Hibajavítások:
 [Hiba] – Javítva az Átnevezés, ha visszanevezést az eredeti névre.
+[Hiba] – Javítva a csúsztatási gesztusok.
+
+Nyelvi támogatás:
+
+[Nyelv] Frissített nyelvi fájlok.
