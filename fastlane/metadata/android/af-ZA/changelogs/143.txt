@@ -1,5 +1,8 @@
 Weergawe: 1.4.3
 
+Verbetering:
+[Kenmerk] - Die vermoë bygevoeg om nie programme te hoef te hernoem as dit reeds ingestel is via toepassingslys nie.
+
 Foutoplossings:
 [Fout] - Vaste Hernoem as hernoem terug na oorspronklike naam.
 [Fout] - Het die veeggebare reggestel.
