@@ -1,0 +1,4 @@
+Phiên bản: 1.4.3
+
+Sửa lỗi:
+[Bug] - Đã sửa lỗi Đổi tên nếu đổi tên về tên gốc.
