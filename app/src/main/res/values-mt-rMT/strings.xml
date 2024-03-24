@@ -1,124 +1,324 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<!-- Base Settings -->
-	<string name="app">App</string>
+	<string name="app">
+		App
+	</string>
 	<!-- Admin Settings -->
-	<string name="admin_permission_message">mLauncher iwiegħed li juża permess lock screen b\'mod responsabbli. mLauncher ma jiġbor jew jaqsam l-ebda data.</string>
-	<string name="experimental">(sperimentali)</string>
+	<string name="admin_permission_message">
+		mLauncher iwiegħed li juża permess lock screen b\'mod responsabbli. mLauncher ma jiġbor jew jaqsam l-ebda data.
+	</string>
+	<string name="experimental">
+		(sperimentali)
+	</string>
 	<!-- Settings Headers -->
-	<string name="appearance">Dehra</string>
-	<string name="behavior">Imġieba</string>
-	<string name="homescreen">Homescreen</string>
-	<string name="alignment">Allinjament</string>
-	<string name="gestures">Ġesti</string>
-	<string name="miscellaneous">Mixxellanji</string>
+	<string name="appearance">
+		Dehra
+	</string>
+	<string name="behavior">
+		Imġieba
+	</string>
+	<string name="homescreen">
+		Homescreen
+	</string>
+	<string name="alignment">
+		Allinjament
+	</string>
+	<string name="gestures">
+		Ġesti
+	</string>
+	<string name="miscellaneous">
+		Mixxellanji
+	</string>
 	<!-- Home Strings -->
-	<string name="hidden_apps">Apps moħbija</string>
-	<string name="set_as_default_launcher">Issettja bħala launcher default</string>
-	<string name="change_default_launcher">Ibdel il-lanċjar default</string>
+	<string name="hidden_apps">
+		Apps moħbija
+	</string>
+	<string name="set_as_default_launcher">
+		Issettja bħala launcher default
+	</string>
+	<string name="change_default_launcher">
+		Ibdel il-lanċjar default
+	</string>
 	<!-- Appearance Strings -->
-	<string name="status_bar">Uri l-istatus bar</string>
-	<string name="theme_mode">Modalità Tema</string>
-	<string name="app_language">Lingwa tal-Interface</string>
-	<string name="app_text_size">Daqs tat-Test</string>
-	<string name="app_padding_size">Daqs tal-ikkuttunar</string>
-	<string name="follow_accent_colors">Kuluri Aċċent</string>
-	<string name="background_opacity">Opaċità fl-isfond</string>
-	<string name="all_apps_text">Uri t-Test tal-Apps Kollha</string>
+	<string name="status_bar">
+		Uri l-istatus bar
+	</string>
+	<string name="theme_mode">
+		Modalità Tema
+	</string>
+	<string name="app_language">
+		Lingwa tal-Interface
+	</string>
+	<string name="app_text_size">
+		Daqs tat-Test
+	</string>
+	<string name="app_padding_size">
+		Daqs tal-ikkuttunar
+	</string>
+	<string name="follow_accent_colors">
+		Kuluri Aċċent
+	</string>
+	<string name="background_opacity">
+		Opaċità fl-isfond
+	</string>
+	<string name="all_apps_text">
+		Uri t-Test tal-Apps Kollha
+	</string>
 	<!-- Behavior Strings -->
-	<string name="auto_show_keyboard">Tastiera juru awtomatika</string>
-	<string name="auto_open_apps">Apps miftuħa awtomatikament</string>
-	<string name="display_recent_apps">Uri Apps Riċenti</string>
-	<string name="number_of_recents">Numru Ta\' Apps Riċenti</string>
-	<string name="filter_strength">Qawwa tal-Filtru</string>
-	<string name="search_from_start">Tfittxija tal-app mill-bidu.</string>
-	<string name="icon_font">Uża Icon Font</string>
+	<string name="auto_show_keyboard">
+		Tastiera juru awtomatika
+	</string>
+	<string name="auto_open_apps">
+		Apps miftuħa awtomatikament
+	</string>
+	<string name="display_recent_apps">
+		Uri Apps Riċenti
+	</string>
+	<string name="number_of_recents">
+		Numru Ta\' Apps Riċenti
+	</string>
+	<string name="filter_strength">
+		Qawwa tal-Filtru
+	</string>
+	<string name="search_from_start">
+		Tfittxija tal-app mill-bidu.
+	</string>
+	<string name="icon_font">
+		Uża Icon Font
+	</string>
 	<!-- Home-screen Strings -->
-	<string name="apps_on_home_screen">Numru ta\' shortcuts</string>
-	<string name="pages_on_home_screen">Numru ta\' paġni</string>
-	<string name="show_time">Uri l-ħin</string>
-	<string name="show_date">Uri d-data</string>
-	<string name="show_battery">Uri batterija</string>
-	<string name="lock_home_apps">Lock Apps</string>
-	<string name="extend_home_apps_area">Estendi l-erja li tista\' tikklikkja</string>
-	<string name="home_alignment_bottom">L-iskrin tad-dar tallinja qiegħ</string>
+	<string name="apps_on_home_screen">
+		Numru ta\' shortcuts
+	</string>
+	<string name="pages_on_home_screen">
+		Numru ta\' paġni
+	</string>
+	<string name="show_time">
+		Uri l-ħin
+	</string>
+	<string name="show_date">
+		Uri d-data
+	</string>
+	<string name="show_battery">
+		Uri batterija
+	</string>
+	<string name="lock_home_apps">
+		Lock Apps
+	</string>
+	<string name="extend_home_apps_area">
+		Estendi l-erja li tista\' tikklikkja
+	</string>
+	<string name="home_alignment_bottom">
+		L-iskrin tad-dar tallinja qiegħ
+	</string>
 	<!-- Alignment Strings -->
-	<string name="home_alignment">Apps home screen</string>
-	<string name="clock_alignment">Arloġġ u data</string>
-	<string name="drawer_alignment">Apps fil-kexxun tal-app</string>
+	<string name="home_alignment">
+		Apps home screen
+	</string>
+	<string name="clock_alignment">
+		Arloġġ u data
+	</string>
+	<string name="drawer_alignment">
+		Apps fil-kexxun tal-app
+	</string>
 	<!-- Gestures Strings -->
-	<string name="short_swipe_up_app">Swipe \'l fuq</string>
-	<string name="short_swipe_down_app">Swipe isfel</string>
-	<string name="short_swipe_left_app">Swipe xellug</string>
-	<string name="short_swipe_right_app">Swipe lemin</string>
-	<string name="long_swipe_up_app">Agħfas twil Swipe \'l fuq</string>
-	<string name="long_swipe_down_app">Agħfas twil Swipe\' l isfel</string>
-	<string name="long_swipe_left_app">Agħfas fit-tul Swipe xellug</string>
-	<string name="long_swipe_right_app">Agħfas fit-tul Swipe lemin</string>
-	<string name="clock_click_app">Ikklikkja fuq Arloġġ</string>
-	<string name="date_click_app">Ikklikkja fuq Data</string>
-	<string name="double_tap">Tektek Doppju</string>
+	<string name="short_swipe_up_app">
+		Swipe \'l fuq
+	</string>
+	<string name="short_swipe_down_app">
+		Swipe isfel
+	</string>
+	<string name="short_swipe_left_app">
+		Swipe xellug
+	</string>
+	<string name="short_swipe_right_app">
+		Swipe lemin
+	</string>
+	<string name="long_swipe_up_app">
+		Agħfas twil Swipe \'l fuq
+	</string>
+	<string name="long_swipe_down_app">
+		Agħfas twil Swipe\' l isfel
+	</string>
+	<string name="long_swipe_left_app">
+		Agħfas fit-tul Swipe xellug
+	</string>
+	<string name="long_swipe_right_app">
+		Agħfas fit-tul Swipe lemin
+	</string>
+	<string name="clock_click_app">
+		Ikklikkja fuq Arloġġ
+	</string>
+	<string name="date_click_app">
+		Ikklikkja fuq Data
+	</string>
+	<string name="double_tap">
+		Tektek Doppju
+	</string>
 	<!-- Settings Strings -->
-	<string name="off">Mitfi</string>
-	<string name="on">Fuq</string>
-	<string name="left">Xellug</string>
-	<string name="right">Dritt</string>
-	<string name="center">Ċentru</string>
-	<string name="dark">Dlam</string>
-	<string name="light">Dawl</string>
-	<string name="settings">Settings</string>
-	<string name="lang_system">Sistema</string>
-	<string name="system_default">Sistema</string>
-	<string name="hide">Aħbi</string>
-	<string name="rename">Semmi mill-ġdid</string>
-	<string name="okay">Okay</string>
-	<string name="save">Ħlief</string>
-	<string name="show">Uri</string>
-	<string name="reset">Irrisettja</string>
-	<string name="cancel">Ikkanċella</string>
-	<string name="enable">Ippermettiet</string>
-	<string name="disable">Itfi</string>
-	<string name="enabled">Ippermettiet</string>
-	<string name="disabled">B\'diżabilità</string>
-	<string name="open">Miftuħa</string>
-	<string name="close">Agħlaq</string>
-	<string name="copy">kopja</string>
+	<string name="off">
+		Mitfi
+	</string>
+	<string name="on">
+		Fuq
+	</string>
+	<string name="left">
+		Xellug
+	</string>
+	<string name="right">
+		Dritt
+	</string>
+	<string name="center">
+		Ċentru
+	</string>
+	<string name="dark">
+		Dlam
+	</string>
+	<string name="light">
+		Dawl
+	</string>
+	<string name="settings">
+		Settings
+	</string>
+	<string name="lang_system">
+		Sistema
+	</string>
+	<string name="system_default">
+		Sistema
+	</string>
+	<string name="hide">
+		Aħbi
+	</string>
+	<string name="rename">
+		Semmi mill-ġdid
+	</string>
+	<string name="okay">
+		Okay
+	</string>
+	<string name="save">
+		Ħlief
+	</string>
+	<string name="show">
+		Uri
+	</string>
+	<string name="reset">
+		Irrisettja
+	</string>
+	<string name="cancel">
+		Ikkanċella
+	</string>
+	<string name="enable">
+		Ippermettiet
+	</string>
+	<string name="disable">
+		Itfi
+	</string>
+	<string name="enabled">
+		Ippermettiet
+	</string>
+	<string name="disabled">
+		B\'diżabilità
+	</string>
+	<string name="open">
+		Miftuħa
+	</string>
+	<string name="close">
+		Agħlaq
+	</string>
+	<string name="copy">
+		kopja
+	</string>
 	<!-- Gestures Do Strings -->
-	<string name="show_notifications">Uri Notifika</string>
-	<string name="show_app_list">Uri Lista tal-Apps</string>
-	<string name="open_app">Iftaħ l-App</string>
-	<string name="lock_screen">Lock Screen</string>
-	<string name="open_quick_settings">Settings Quick</string>
-	<string name="show_recents">Uri riċenti</string>
-	<string name="open_power_dialog">Djalogu tal-Enerġija</string>
-	<string name="take_a_screenshot">Ħu Screenshot</string>
-	<string name="left_page">Mur fil-paġna tax-xellug</string>
-	<string name="right_page">Mur fil-paġna tal-lemin</string>
-	<string name="double_tap_to_lock_screen">Tektek darbtejn biex tissakkar</string>
+	<string name="show_notifications">
+		Uri Notifika
+	</string>
+	<string name="show_app_list">
+		Uri Lista tal-Apps
+	</string>
+	<string name="open_app">
+		Iftaħ l-App
+	</string>
+	<string name="lock_screen">
+		Lock Screen
+	</string>
+	<string name="open_quick_settings">
+		Settings Quick
+	</string>
+	<string name="show_recents">
+		Uri riċenti
+	</string>
+	<string name="open_power_dialog">
+		Djalogu tal-Enerġija
+	</string>
+	<string name="take_a_screenshot">
+		Ħu Screenshot
+	</string>
+	<string name="left_page">
+		Mur fil-paġna tax-xellug
+	</string>
+	<string name="right_page">
+		Mur fil-paġna tal-lemin
+	</string>
+	<string name="double_tap_to_lock_screen">
+		Tektek darbtejn biex tissakkar
+	</string>
 	<!-- Miscellaneous Strings -->
-	<string name="settings_text_size">Settings Test Size</string>
-	<string name="display_hidden_apps">Uri Apps Moħbija</string>
-	<string name="lock_settings">Lock Settings</string>
-	<!-- Backup Strings -->
-	<string name="backup">Backup</string>
-	<string name="load_backup">Tagħbija Backup</string>
-	<string name="store_backup">Aħżen Backup</string>
+	<string name="settings_text_size">
+		Settings Test Size
+	</string>
+	<string name="display_hidden_apps">
+		Uri Apps Moħbija
+	</string>
+	<string name="lock_settings">
+		Lock Settings
+	</string>
 	<!-- PinCode Strings -->
-	<string name="text_authentication_cancel">Awtentikazzjoni Ikkanċella.</string>
-	<string name="text_authentication_error">Żball fl-awtentikazzjoni:%1$s(kodiċi %2$d)</string>
-	<string name="text_authentication_failed">L-awtentikazzjoni falliet.</string>
-	<string name="text_biometric_login">Login bijometriku għall-mLauncher</string>
-	<string name="text_biometric_login_sub">Idħol billi tuża l-kredenzjali bijometrika tiegħek</string>
+	<string name="text_authentication_cancel">
+		Awtentikazzjoni Ikkanċella.
+	</string>
+	<string name="text_authentication_error">
+		Żball fl-awtentikazzjoni:%1$s(kodiċi %2$d)
+	</string>
+	<string name="text_authentication_failed">
+		L-awtentikazzjoni falliet.
+	</string>
+	<string name="text_biometric_login">
+		Login bijometriku għall-mLauncher
+	</string>
+	<string name="text_biometric_login_sub">
+		Idħol billi tuża l-kredenzjali bijometrika tiegħek
+	</string>
 	<!-- Unsorted Strings -->
-	<string name="show_apps">L-apps kollha</string>
-	<string name="drawer_list_empty_hint">Ma nstabet l-ebda app</string>
-	<string name="long_press_for_settings">Agħfas fit-tul kullimkien għas-settings</string>
-	<string name="swipe_up_for_apps">Swipe \'l fuq għall-apps kollha</string>
-	<string name="app_drawer_tips">Tip: Swipe \'l isfel biex tiċħad. Skrollja biex taħbi t-tastiera.</string>
-	<string name="double_tap_lock_is_enabled_message">Jekk il-lock double tap tiddiżattiva l-marki tas-swaba\' jew il-wiċċ tal-wiċċ, iftaħ is-settings tal-mLauncher, taptap fuq \'esperimentali\' u segwi l-istruzzjonijiet. Grazzi.</string>
-	<string name="double_tap_lock_uninstall_message">Tektek darbtejn biex tissakkar attivata.
-		\n\nNota: Itfi din l-ewwel jekk tiddeċiedi li tħassar mLauncher.</string>
-	<string name="accessibility_service_name">Servizz ta\' Azzjonijiet mLauncher</string>
-	<string name="accessibility_service_description">Dan is-servizz ta’ aċċessibbiltà jippermetti lil mLauncher jagħmel ċerti azzjonijiet bħall-illokkjar tal-iskrin jew il-ftuħ tas-settings ta’ malajr. Is-servizz ta’ aċċessibbiltà tagħna ma jiġbor jew jaqsam l-ebda data.</string>
-	<string name="version">Verżjoni</string>
+	<string name="show_apps">
+		L-apps kollha
+	</string>
+	<string name="drawer_list_empty_hint">
+		Ma nstabet l-ebda app
+	</string>
+	<string name="long_press_for_settings">
+		Agħfas fit-tul kullimkien għas-settings
+	</string>
+	<string name="swipe_up_for_apps">
+		Swipe \'l fuq għall-apps kollha
+	</string>
+	<string name="app_drawer_tips">
+		Tip: Swipe \'l isfel biex tiċħad. Skrollja biex taħbi t-tastiera.
+	</string>
+	<string name="double_tap_lock_is_enabled_message">
+		Jekk il-lock double tap tiddiżattiva l-marki tas-swaba\' jew il-wiċċ tal-wiċċ, iftaħ is-settings tal-mLauncher, taptap fuq \'esperimentali\' u segwi l-istruzzjonijiet. Grazzi.
+	</string>
+	<string name="double_tap_lock_uninstall_message">
+		Tektek darbtejn biex tissakkar attivata.
+		\n\nNota: Itfi din l-ewwel jekk tiddeċiedi li tħassar mLauncher.
+	</string>
+	<string name="accessibility_service_name">
+		Servizz ta\' Azzjonijiet mLauncher
+	</string>
+	<string name="accessibility_service_description">
+		Dan is-servizz ta’ aċċessibbiltà jippermetti lil mLauncher jagħmel ċerti azzjonijiet bħall-illokkjar tal-iskrin jew il-ftuħ tas-settings ta’ malajr. Is-servizz ta’ aċċessibbiltà tagħna ma jiġbor jew jaqsam l-ebda data.
+	</string>
+	<string name="version">
+		Verżjoni
+	</string>
 </resources>

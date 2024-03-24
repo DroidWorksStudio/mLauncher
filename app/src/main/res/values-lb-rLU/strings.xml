@@ -1,124 +1,324 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<!-- Base Settings -->
-	<string name="app">App</string>
+	<string name="app">
+		App
+	</string>
 	<!-- Admin Settings -->
-	<string name="admin_permission_message">mLauncher versprécht de Sperrbildschirm Erlaabnis verantwortlech ze benotzen. mLauncher sammelt oder deelt keng Daten.</string>
-	<string name="experimental">(experimentell)</string>
+	<string name="admin_permission_message">
+		mLauncher versprécht de Sperrbildschirm Erlaabnis verantwortlech ze benotzen. mLauncher sammelt oder deelt keng Daten.
+	</string>
+	<string name="experimental">
+		(experimentell)
+	</string>
 	<!-- Settings Headers -->
-	<string name="appearance">Ausgesinn</string>
-	<string name="behavior">Verhalen</string>
-	<string name="homescreen">Homescreen</string>
-	<string name="alignment">Ausriichtung</string>
-	<string name="gestures">Gesten</string>
-	<string name="miscellaneous">Verschiddenes</string>
+	<string name="appearance">
+		Ausgesinn
+	</string>
+	<string name="behavior">
+		Verhalen
+	</string>
+	<string name="homescreen">
+		Homescreen
+	</string>
+	<string name="alignment">
+		Ausriichtung
+	</string>
+	<string name="gestures">
+		Gesten
+	</string>
+	<string name="miscellaneous">
+		Verschiddenes
+	</string>
 	<!-- Home Strings -->
-	<string name="hidden_apps">Verstoppt Apps</string>
-	<string name="set_as_default_launcher">Setzt als Standardstarter</string>
-	<string name="change_default_launcher">Default Launcher änneren</string>
+	<string name="hidden_apps">
+		Verstoppt Apps
+	</string>
+	<string name="set_as_default_launcher">
+		Setzt als Standardstarter
+	</string>
+	<string name="change_default_launcher">
+		Default Launcher änneren
+	</string>
 	<!-- Appearance Strings -->
-	<string name="status_bar">Statusbar weisen</string>
-	<string name="theme_mode">Thema Modus</string>
-	<string name="app_language">Interface Sprooch</string>
-	<string name="app_text_size">Text Gréisst</string>
-	<string name="app_padding_size">Padding Gréisst</string>
-	<string name="follow_accent_colors">Akzent Faarwen</string>
-	<string name="background_opacity">Hannergrond Opazitéit</string>
-	<string name="all_apps_text">Display All Apps Text</string>
+	<string name="status_bar">
+		Statusbar weisen
+	</string>
+	<string name="theme_mode">
+		Thema Modus
+	</string>
+	<string name="app_language">
+		Interface Sprooch
+	</string>
+	<string name="app_text_size">
+		Text Gréisst
+	</string>
+	<string name="app_padding_size">
+		Padding Gréisst
+	</string>
+	<string name="follow_accent_colors">
+		Akzent Faarwen
+	</string>
+	<string name="background_opacity">
+		Hannergrond Opazitéit
+	</string>
+	<string name="all_apps_text">
+		Display All Apps Text
+	</string>
 	<!-- Behavior Strings -->
-	<string name="auto_show_keyboard">Auto Show Keyboard</string>
-	<string name="auto_open_apps">Automatesch opmaachen Apps</string>
-	<string name="display_recent_apps">Rezent Apps weisen</string>
-	<string name="number_of_recents">Zuel vun de rezenten Apps</string>
-	<string name="filter_strength">Filter Kraaft</string>
-	<string name="search_from_start">App Sich vun Ufank un.</string>
-	<string name="icon_font">Benotzt Ikon Schrëft</string>
+	<string name="auto_show_keyboard">
+		Auto Show Keyboard
+	</string>
+	<string name="auto_open_apps">
+		Automatesch opmaachen Apps
+	</string>
+	<string name="display_recent_apps">
+		Rezent Apps weisen
+	</string>
+	<string name="number_of_recents">
+		Zuel vun de rezenten Apps
+	</string>
+	<string name="filter_strength">
+		Filter Kraaft
+	</string>
+	<string name="search_from_start">
+		App Sich vun Ufank un.
+	</string>
+	<string name="icon_font">
+		Benotzt Ikon Schrëft
+	</string>
 	<!-- Home-screen Strings -->
-	<string name="apps_on_home_screen">Zuel vun Ofkiirzungen</string>
-	<string name="pages_on_home_screen">Zuel vun Säiten</string>
-	<string name="show_time">Elo geet et lass</string>
-	<string name="show_date">Datum weisen</string>
-	<string name="show_battery">Batterie weisen</string>
-	<string name="lock_home_apps">Spär Apps</string>
-	<string name="extend_home_apps_area">Klickbar Beräich verlängeren</string>
-	<string name="home_alignment_bottom">Heembildschierm alignéiert ënnen</string>
+	<string name="apps_on_home_screen">
+		Zuel vun Ofkiirzungen
+	</string>
+	<string name="pages_on_home_screen">
+		Zuel vun Säiten
+	</string>
+	<string name="show_time">
+		Elo geet et lass
+	</string>
+	<string name="show_date">
+		Datum weisen
+	</string>
+	<string name="show_battery">
+		Batterie weisen
+	</string>
+	<string name="lock_home_apps">
+		Spär Apps
+	</string>
+	<string name="extend_home_apps_area">
+		Klickbar Beräich verlängeren
+	</string>
+	<string name="home_alignment_bottom">
+		Heembildschierm alignéiert ënnen
+	</string>
 	<!-- Alignment Strings -->
-	<string name="home_alignment">Apps Haaptsäit</string>
-	<string name="clock_alignment">Auer an Datum</string>
-	<string name="drawer_alignment">Apps am App Tirang</string>
+	<string name="home_alignment">
+		Apps Haaptsäit
+	</string>
+	<string name="clock_alignment">
+		Auer an Datum
+	</string>
+	<string name="drawer_alignment">
+		Apps am App Tirang
+	</string>
 	<!-- Gestures Strings -->
-	<string name="short_swipe_up_app">Swipe op</string>
-	<string name="short_swipe_down_app">Swipe erof</string>
-	<string name="short_swipe_left_app">Swipe lénks</string>
-	<string name="short_swipe_right_app">Swipe riets</string>
-	<string name="long_swipe_up_app">Laang Press Swipe erop</string>
-	<string name="long_swipe_down_app">Laang Press Swipe erof</string>
-	<string name="long_swipe_left_app">Laang Press Swipe lénks</string>
-	<string name="long_swipe_right_app">Laang Press Swipe riets</string>
-	<string name="clock_click_app">Klickt op Auer</string>
-	<string name="date_click_app">Klickt op Datum</string>
-	<string name="double_tap">Duebel Tap</string>
+	<string name="short_swipe_up_app">
+		Swipe op
+	</string>
+	<string name="short_swipe_down_app">
+		Swipe erof
+	</string>
+	<string name="short_swipe_left_app">
+		Swipe lénks
+	</string>
+	<string name="short_swipe_right_app">
+		Swipe riets
+	</string>
+	<string name="long_swipe_up_app">
+		Laang Press Swipe erop
+	</string>
+	<string name="long_swipe_down_app">
+		Laang Press Swipe erof
+	</string>
+	<string name="long_swipe_left_app">
+		Laang Press Swipe lénks
+	</string>
+	<string name="long_swipe_right_app">
+		Laang Press Swipe riets
+	</string>
+	<string name="clock_click_app">
+		Klickt op Auer
+	</string>
+	<string name="date_click_app">
+		Klickt op Datum
+	</string>
+	<string name="double_tap">
+		Duebel Tap
+	</string>
 	<!-- Settings Strings -->
-	<string name="off">Off</string>
-	<string name="on">Op</string>
-	<string name="left">Lénks</string>
-	<string name="right">Riets</string>
-	<string name="center">Zentrum</string>
-	<string name="dark">Däischter</string>
-	<string name="light">Liicht</string>
-	<string name="settings">Astellungen</string>
-	<string name="lang_system">System</string>
-	<string name="system_default">System</string>
-	<string name="hide">Verstoppen</string>
-	<string name="rename">ëmbenennen</string>
-	<string name="okay">Okay</string>
-	<string name="save">Spueren</string>
-	<string name="show">Show</string>
-	<string name="reset">Zerécksetzen</string>
-	<string name="cancel">Ofbriechen</string>
-	<string name="enable">Aktivéieren</string>
-	<string name="disable">Desaktivéieren</string>
-	<string name="enabled">Aktivéiert</string>
-	<string name="disabled">Behënnert</string>
-	<string name="open">Oppen</string>
-	<string name="close">Zoumaachen</string>
-	<string name="copy">kopéieren</string>
+	<string name="off">
+		Off
+	</string>
+	<string name="on">
+		Op
+	</string>
+	<string name="left">
+		Lénks
+	</string>
+	<string name="right">
+		Riets
+	</string>
+	<string name="center">
+		Zentrum
+	</string>
+	<string name="dark">
+		Däischter
+	</string>
+	<string name="light">
+		Liicht
+	</string>
+	<string name="settings">
+		Astellungen
+	</string>
+	<string name="lang_system">
+		System
+	</string>
+	<string name="system_default">
+		System
+	</string>
+	<string name="hide">
+		Verstoppen
+	</string>
+	<string name="rename">
+		ëmbenennen
+	</string>
+	<string name="okay">
+		Okay
+	</string>
+	<string name="save">
+		Spueren
+	</string>
+	<string name="show">
+		Show
+	</string>
+	<string name="reset">
+		Zerécksetzen
+	</string>
+	<string name="cancel">
+		Ofbriechen
+	</string>
+	<string name="enable">
+		Aktivéieren
+	</string>
+	<string name="disable">
+		Desaktivéieren
+	</string>
+	<string name="enabled">
+		Aktivéiert
+	</string>
+	<string name="disabled">
+		Behënnert
+	</string>
+	<string name="open">
+		Oppen
+	</string>
+	<string name="close">
+		Zoumaachen
+	</string>
+	<string name="copy">
+		kopéieren
+	</string>
 	<!-- Gestures Do Strings -->
-	<string name="show_notifications">Show Notifikatioun</string>
-	<string name="show_app_list">Show App Lëscht</string>
-	<string name="open_app">Open App</string>
-	<string name="lock_screen">Sperrbildschirm</string>
-	<string name="open_quick_settings">Quick Astellunge</string>
-	<string name="show_recents">Show Rezent</string>
-	<string name="open_power_dialog">Power Dialog</string>
-	<string name="take_a_screenshot">Maacht e Screenshot</string>
-	<string name="left_page">Gitt op déi lénks Säit</string>
-	<string name="right_page">Gitt op déi richteg Säit</string>
-	<string name="double_tap_to_lock_screen">Duebeltapp fir ze spären</string>
+	<string name="show_notifications">
+		Show Notifikatioun
+	</string>
+	<string name="show_app_list">
+		Show App Lëscht
+	</string>
+	<string name="open_app">
+		Open App
+	</string>
+	<string name="lock_screen">
+		Sperrbildschirm
+	</string>
+	<string name="open_quick_settings">
+		Quick Astellunge
+	</string>
+	<string name="show_recents">
+		Show Rezent
+	</string>
+	<string name="open_power_dialog">
+		Power Dialog
+	</string>
+	<string name="take_a_screenshot">
+		Maacht e Screenshot
+	</string>
+	<string name="left_page">
+		Gitt op déi lénks Säit
+	</string>
+	<string name="right_page">
+		Gitt op déi richteg Säit
+	</string>
+	<string name="double_tap_to_lock_screen">
+		Duebeltapp fir ze spären
+	</string>
 	<!-- Miscellaneous Strings -->
-	<string name="settings_text_size">Astellungen Text Gréisst</string>
-	<string name="display_hidden_apps">Display Hidden Apps</string>
-	<string name="lock_settings">Spär Astellunge</string>
-	<!-- Backup Strings -->
-	<string name="backup">Backupsatellit</string>
-	<string name="load_backup">Lueden Backupsatellit</string>
-	<string name="store_backup">Store Backupsatellit</string>
+	<string name="settings_text_size">
+		Astellungen Text Gréisst
+	</string>
+	<string name="display_hidden_apps">
+		Display Hidden Apps
+	</string>
+	<string name="lock_settings">
+		Spär Astellunge
+	</string>
 	<!-- PinCode Strings -->
-	<string name="text_authentication_cancel">Authentifikatioun Ofbriechen.</string>
-	<string name="text_authentication_error">Authentifikatiounsfehler:%1$s(Code %2$d)</string>
-	<string name="text_authentication_failed">Authentifikatioun gescheitert.</string>
-	<string name="text_biometric_login">Biometresche Login fir mLauncher</string>
-	<string name="text_biometric_login_sub">Mellt Iech un mat Ärem biometresche Umeldungsinformatioun</string>
+	<string name="text_authentication_cancel">
+		Authentifikatioun Ofbriechen.
+	</string>
+	<string name="text_authentication_error">
+		Authentifikatiounsfehler:%1$s(Code %2$d)
+	</string>
+	<string name="text_authentication_failed">
+		Authentifikatioun gescheitert.
+	</string>
+	<string name="text_biometric_login">
+		Biometresche Login fir mLauncher
+	</string>
+	<string name="text_biometric_login_sub">
+		Mellt Iech un mat Ärem biometresche Umeldungsinformatioun
+	</string>
 	<!-- Unsorted Strings -->
-	<string name="show_apps">All Apps</string>
-	<string name="drawer_list_empty_hint">Keng Apps fonnt</string>
-	<string name="long_press_for_settings">Laang Press iwwerall fir Astellungen</string>
-	<string name="swipe_up_for_apps">Swipe up fir all Apps</string>
-	<string name="app_drawer_tips">Tipp: Swipt erof fir ze entloossen. Scrollen fir d\'Tastatur ze verstoppen.</string>
-	<string name="double_tap_lock_is_enabled_message">Wann d\'Doppeltappschloss de Fangerofdrock oder d\'Gesiichtsspär deaktivéiert, oppen mLauncher Astellungen, tippen op \'experimentell\' a befollegt d\'Instruktioune. Merci.</string>
-	<string name="double_tap_lock_uninstall_message">Duebeltapp fir ze spären aktivéiert.
-		\n\nNotiz: Maacht dëst als éischt OFF wann Dir décidéiert mLauncher ze läschen.</string>
-	<string name="accessibility_service_name">mLauncher Actions Service</string>
-	<string name="accessibility_service_description">Dësen Accessibilitéitsservice erlaabt mLauncher verschidde Aktiounen ze maachen wéi den Ecran ze spären oder d\'schnell Astellungen opzemaachen. Eis Accessibilitéitsservice sammelt oder deelt keng Daten.</string>
-	<string name="version">Versioun</string>
+	<string name="show_apps">
+		All Apps
+	</string>
+	<string name="drawer_list_empty_hint">
+		Keng Apps fonnt
+	</string>
+	<string name="long_press_for_settings">
+		Laang Press iwwerall fir Astellungen
+	</string>
+	<string name="swipe_up_for_apps">
+		Swipe up fir all Apps
+	</string>
+	<string name="app_drawer_tips">
+		Tipp: Swipt erof fir ze entloossen. Scrollen fir d\'Tastatur ze verstoppen.
+	</string>
+	<string name="double_tap_lock_is_enabled_message">
+		Wann d\'Doppeltappschloss de Fangerofdrock oder d\'Gesiichtsspär deaktivéiert, oppen mLauncher Astellungen, tippen op \'experimentell\' a befollegt d\'Instruktioune. Merci.
+	</string>
+	<string name="double_tap_lock_uninstall_message">
+		Duebeltapp fir ze spären aktivéiert.
+		\n\nNotiz: Maacht dëst als éischt OFF wann Dir décidéiert mLauncher ze läschen.
+	</string>
+	<string name="accessibility_service_name">
+		mLauncher Actions Service
+	</string>
+	<string name="accessibility_service_description">
+		Dësen Accessibilitéitsservice erlaabt mLauncher verschidde Aktiounen ze maachen wéi den Ecran ze spären oder d\'schnell Astellungen opzemaachen. Eis Accessibilitéitsservice sammelt oder deelt keng Daten.
+	</string>
+	<string name="version">
+		Versioun
+	</string>
 </resources>

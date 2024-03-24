@@ -43,11 +43,9 @@ import com.github.hecodes2much.mlauncher.databinding.FragmentSettingsBinding
 import com.github.hecodes2much.mlauncher.helper.getHexForOpacity
 import com.github.hecodes2much.mlauncher.helper.hideStatusBar
 import com.github.hecodes2much.mlauncher.helper.ismlauncherDefault
-import com.github.hecodes2much.mlauncher.helper.loadFile
 import com.github.hecodes2much.mlauncher.helper.openAppInfo
 import com.github.hecodes2much.mlauncher.helper.resetDefaultLauncher
 import com.github.hecodes2much.mlauncher.helper.showStatusBar
-import com.github.hecodes2much.mlauncher.helper.storeFile
 import com.github.hecodes2much.mlauncher.listener.DeviceAdmin
 import com.github.hecodes2much.mlauncher.style.SettingsTheme
 import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsArea
@@ -57,7 +55,6 @@ import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsS
 import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsTextButton
 import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsToggle
 import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsTopView
-import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsTwoButtonRow
 
 class SettingsFragment : Fragment() {
 
@@ -612,21 +609,6 @@ class SettingsFragment : Fragment() {
                             state = remember { mutableStateOf(prefs.settingsLocked) }
                         ) { toggleSettingsLocked() }
                     },
-                )
-            )
-            SettingsArea(title = getString(R.string.backup),
-                selected = selected,
-                fontSize = titleFs,
-                items = arrayOf(
-                    { _, _ ->
-                        SettingsTwoButtonRow(
-                            fontSize = iconFs,
-                            firstButtonText = getString(R.string.load_backup),
-                            secondButtonText = getString(R.string.store_backup),
-                            firstButtonAction = { loadFile(requireActivity()) },
-                            secondButtonAction = { storeFile(requireActivity()) },
-                        )
-                    }
                 )
             )
             Text(
