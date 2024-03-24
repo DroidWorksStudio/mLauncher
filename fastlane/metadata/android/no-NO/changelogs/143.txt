@@ -2,3 +2,8 @@ Versjon: 1.4.3
 
 Feilrettinger:
 [Bug] - Fixed Gi nytt navn hvis du endrer navn tilbake til opprinnelig navn.
+[Bug] – Rettet sveipebevegelsene.
+
+Språkstøtte:
+
+[Språk] Oppdaterte språkfiler.
