@@ -1,11 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Base Settings -->
     <string name="app">App</string>
-
     <!-- Admin Settings -->
     <string name="admin_permission_message">mLauncher promises to use lock screen permission responsibly. mLauncher does not collect or share any data.</string>
     <string name="experimental">(experimental)</string>
-
     <!-- Settings Headers -->
     <string name="appearance">Appearance</string>
     <string name="behavior">Behavior</string>
@@ -13,12 +12,10 @@
     <string name="alignment">Alignment</string>
     <string name="gestures">Gestures</string>
     <string name="miscellaneous">Miscellaneous</string>
-
     <!-- Home Strings -->
     <string name="hidden_apps">Hidden apps</string>
     <string name="set_as_default_launcher">Set as default launcher</string>
     <string name="change_default_launcher">Change default launcher</string>
-
     <!-- Appearance Strings -->
     <string name="status_bar">Show status bar</string>
     <string name="theme_mode">Theme mode</string>
@@ -28,7 +25,6 @@
     <string name="follow_accent_colors">Accent Colors</string>
     <string name="background_opacity">Background Opacity</string>
     <string name="all_apps_text">Display All Apps Text</string>
-
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Auto open apps</string>
@@ -37,7 +33,6 @@
     <string name="filter_strength">Filter Strength</string>
     <string name="search_from_start">App search from start.</string>
     <string name="icon_font">Use Icon Font</string>
-
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Number of shortcuts</string>
     <string name="pages_on_home_screen">Number of pages</string>
@@ -47,12 +42,10 @@
     <string name="lock_home_apps">Lock Apps</string>
     <string name="extend_home_apps_area">Extend clickable area</string>
     <string name="home_alignment_bottom">Home screen align bottom</string>
-
     <!-- Alignment Strings -->
     <string name="home_alignment">Apps home screen</string>
     <string name="clock_alignment">Clock and date</string>
     <string name="drawer_alignment">Apps in app drawer</string>
-
     <!-- Gestures Strings -->
     <string name="swipe_up_app">Swipe up</string>
     <string name="swipe_down_app">Swipe down</string>
@@ -65,24 +58,21 @@
     <string name="long_press_swipe_down_app">Long Press Swipe down</string>
     <string name="long_press_swipe_left_app">Long Press Swipe left</string>
     <string name="long_press_swipe_right_app">Long Press Swipe right</string>
-
     <!-- Settings Strings -->
     <string name="off">Off</string>
     <string name="on">On</string>
     <string name="left">Left</string>
     <string name="right">Right</string>
-    <string name="center">Center</string>
+    <string name="center">Centre</string>
     <string name="dark">Dark</string>
     <string name="light">Light</string>
     <string name="settings">Settings</string>
     <string name="lang_system">System</string>
     <string name="system_default">System</string>
-
     <string name="hide">Hide</string>
     <string name="rename">Rename</string>
     <string name="okay">Okay</string>
     <string name="save">Save</string>
-
     <string name="show">Show</string>
     <string name="reset">Reset</string>
     <string name="cancel">Cancel</string>
@@ -90,11 +80,9 @@
     <string name="disable">Disable</string>
     <string name="enabled">Enabled</string>
     <string name="disabled">Disabled</string>
-
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string name="copy">copy</string>
-
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Show Notification</string>
     <string name="show_app_list">Show App List</string>
@@ -107,25 +95,20 @@
     <string name="left_page">Go to left page</string>
     <string name="right_page">Go to right page</string>
     <string name="double_tap_to_lock_screen">Double tap to lock</string>
-
     <!-- Miscellaneous Strings -->
     <string name="settings_text_size">Settings Text Size</string>
     <string name="display_hidden_apps">Display Hidden Apps</string>
     <string name="lock_settings">Lock Settings</string>
-
     <!-- Backup Strings -->
     <string name="backup">Backup</string>
     <string name="load_backup">Load Backup</string>
     <string name="store_backup">Store Backup</string>
-
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Authentication Cancel.</string>
     <string name="text_authentication_error">Authentication error:%1$s(code %2$d)</string>
     <string name="text_authentication_failed">Authentication failed.</string>
-
     <string name="text_biometric_login">Biometric login for mLauncher</string>
     <string name="text_biometric_login_sub">Log in using your biometric credentials.</string>
-
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>
     <string name="drawer_list_empty_hint">No apps found</string>
@@ -138,5 +121,4 @@
     <string name="accessibility_service_name">mLauncher Actions Service</string>
     <string name="accessibility_service_description">This accessibility service allows mLauncher to do certain actions such as locking the screen or opening the quick settings. Our accessibility service does not collect or share any data.</string>
     <string name="version">Version</string>
-
 </resources>
