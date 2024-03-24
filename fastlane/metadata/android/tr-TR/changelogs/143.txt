@@ -2,3 +2,8 @@ Sürüm: 1.4.3
 
 Hata düzeltmeleri:
 [Hata] - Orijinal isme geri dönülmesi durumunda Yeniden Adlandırma düzeltildi.
+[Hata] - Kaydırma hareketleri düzeltildi.
+
+Dil desteği:
+
+[Dil] Güncellenmiş Dil Dosyaları.
