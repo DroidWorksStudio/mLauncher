@@ -1,0 +1,10 @@
+Versija: 1.4.2
+
+Patobulinimas:
+[Funkcija] – pridėkite parinktį keliems puslapiams pagrindiniame ekrane.
+
+Trikčių pataisymai:
+[Klaida] Ištaisytas neryškus filtras, jei nustatytas į 0.
+
+Kalbos palaikymas:
+[Kalba] Atnaujinti kalbos failai.
