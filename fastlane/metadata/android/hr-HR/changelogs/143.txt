@@ -1,0 +1,4 @@
+Verzija: 1.4.3
+
+Ispravke pogrešaka:
+[Bug] - Ispravljeno preimenovanje ako se preimenovanje vrati na izvorni naziv.
