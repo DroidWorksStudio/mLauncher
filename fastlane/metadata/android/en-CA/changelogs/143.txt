@@ -2,3 +2,8 @@ Version: 1.4.3
 
 Bug Fixes:
 [Bug] - Fixed Rename if renaming back to original name.
+[Bug] - Fixed the swipe gestures.
+
+Language Support:
+
+[Language] Updated Language Files.
