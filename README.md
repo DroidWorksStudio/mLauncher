@@ -1,8 +1,8 @@
 <div align='center'>
 	<h2>mLauncher - Minimal and Clutter Free Android launcher</h2>
-	<img src='fastlane/metadata/android/en-US/images/phoneScreenshots/0.png' alt='mLauncher' width='100' height='100'>
+	<img src='fastlane/metadata/android/en-US/images/phoneScreenshots/0.png' alt='mLauncher'>
     	<p></p>
-    	<a href='https://f-droid.org/packages/app.mlauncher'><img src='https://fdroid.gitlab.io/artwork/badge/get-it-on.png' height="80"></a>
+    	<a href='https://f-droid.org/packages/app.mlauncher'><img src='https://fdroid.gitlab.io/artwork/badge/get-it-on.png' height="100"></a>
 </div>
 
 - Chat with us at [mLauncher](https://t.me/mLauncherAndroid) on telegram.
@@ -16,7 +16,7 @@ We try to balance customizability and minimalization well still being simple :)<
 
 # Forked with extra features
 
-<details><summary><h4>List of features</h4> (click to expand)</summary>
+<details><summary>List of features (click to expand)</summary>
 
 - Removed clutter, like ads and links
 - You can rename apps in the app-drawer (Renaming apps on the home screen is already supported. Just long-click on an app on the home screen and start typing)
@@ -42,7 +42,7 @@ We try to balance customizability and minimalization well still being simple :)<
 
 We would like to extend our sincere gratitude to the numerous individuals who have contributed to the translation of our application into various languages. Your efforts have made it possible for users around the world to access and benefit from our product, and we are immensely appreciative of your hard work and dedication. Thank you all for your invaluable contributions!  
 
-<details><summary><h4>List of translations</h4> (click to expand)</summary>
+<details><summary>List of translations (click to expand)</summary>
 
   - Arabic
   - Albanian
@@ -91,19 +91,6 @@ We would like to extend our sincere gratitude to the numerous individuals who ha
   - Vietnamese
 
 </details>
-
-## Screenshots
-As per version 0.4.0. Click on any image to enlarge it. To know more, explore and see for yourself.
-
-<table align='center'>
-	<tr>
-		<td><img src='fastlane/metadata/android/en-US/images/phoneScreenshots/1.png' width='150'></td>
-		<td><img src='fastlane/metadata/android/en-US/images/phoneScreenshots/2.png' width='150'></td>
-		<td><img src='fastlane/metadata/android/en-US/images/phoneScreenshots/3.png' width='150'></td>
-		<td><img src='fastlane/metadata/android/en-US/images/phoneScreenshots/4.png' width='150'></td>
-		<td><img src='fastlane/metadata/android/en-US/images/phoneScreenshots/5.png' width='150'></td>
-	</tr>
-</table>
 
 ## Contribute
 
