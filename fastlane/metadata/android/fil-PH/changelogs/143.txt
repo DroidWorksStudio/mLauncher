@@ -1,0 +1,4 @@
+Bersyon: 1.4.3
+
+Mga Pag-aayos ng Bug:
+[Bug] - Nakapirming Palitan ang Pangalan kung palitan ang pangalan pabalik sa orihinal na pangalan.
