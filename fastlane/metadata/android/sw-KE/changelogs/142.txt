@@ -1,0 +1,10 @@
+Toleo: 1.4.2
+
+Uboreshaji:
+[Kipengele] - Ongeza Chaguo kwa Kurasa Nyingi kwenye Skrini ya Nyumbani.
+
+Marekebisho ya Hitilafu:
+[Mdudu] Kichujio Kilichorekebishwa cha Fuzzy Ikiwa Kimewekwa Kwa 0.
+
+Usaidizi wa Lugha:
+[Lugha] Faili za Lugha Zilizosasishwa.
