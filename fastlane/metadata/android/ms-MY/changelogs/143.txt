@@ -1,0 +1,4 @@
+Versi: 1.4.3
+
+Pembetulan Pepijat:
+[Pepijat] - Namakan Semula Tetap jika menamakan semula kepada nama asal.

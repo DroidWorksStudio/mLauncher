@@ -1,0 +1,10 @@
+Version: 1.4.2
+
+Forbedring:
+[Feature] - Tilføj mulighed for flere sider på startskærmen.
+
+Fejlrettelser:
+[Bug] Fast Fuzzy Filter Hvis Sæt Til 0.
+
+Sprogsupport:
+[Sprog] Opdaterede sprogfiler.

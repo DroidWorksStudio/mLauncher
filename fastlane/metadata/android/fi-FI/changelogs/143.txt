@@ -1,0 +1,4 @@
+Versio: 1.4.3
+
+Virheenkorjauksia:
+[Bug] - Korjattu Nimeä uudelleen, jos nimetään uudelleen alkuperäiseen nimeen.

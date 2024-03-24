@@ -1,0 +1,4 @@
+Versão: 1.4.3
+
+Correções de bugs:
+[Bug] - Corrigida a renomeação ao renomear de volta ao nome original.

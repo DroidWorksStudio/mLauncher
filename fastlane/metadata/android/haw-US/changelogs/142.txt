@@ -1,0 +1,10 @@
+Manaʻo: 1.4.2
+
+Hoʻonui:
+[Hōʻike] - Hoʻohui i ke koho no nā ʻaoʻao he nui ma ka pale home.
+
+Hoʻoponopono Bug:
+[Bug] Hoʻopaʻa ʻia ke kānana Fuzzy inā hoʻonoho ʻia i 0.
+
+Kākoʻo ʻōlelo:
+[Language] Nā waihona ʻōlelo hou.

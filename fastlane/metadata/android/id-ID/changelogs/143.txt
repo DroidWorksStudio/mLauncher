@@ -1,0 +1,4 @@
+Versi: 1.4.3
+
+Perbaikan kerusakan:
+[Bug] - Memperbaiki Ganti Nama jika mengganti nama kembali ke nama asli.

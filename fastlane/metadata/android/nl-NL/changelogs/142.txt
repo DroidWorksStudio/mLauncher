@@ -1,0 +1,10 @@
+Versie: 1.4.2
+
+Verbetering:
+[Feature] - Voeg optie toe voor meerdere pagina's op het startscherm.
+
+Bugfixes:
+[Bug] Vast Fuzzy Filter indien ingesteld op 0.
+
+Taalondersteuning:
+[Taal] Bijgewerkte taalbestanden.

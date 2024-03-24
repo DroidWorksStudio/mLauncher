@@ -1,0 +1,10 @@
+Version: 1.4.2
+
+Fanatsarana:
+[Endri-javatra] - Manampia safidy ho an'ny pejy marobe amin'ny efijery.
+
+Fanamboarana bug:
+[Bug] Sivana Fuzzy raikitra raha apetraka amin'ny 0.
+
+Fanohanana ny fiteny:
+[Fiteny] Nohavaozina ny rakitra fiteny.

@@ -1,0 +1,10 @@
+Versioun: 1.4.2
+
+Verbesserung:
+[Feature] - Füügt Optioun fir Multiple Säiten um Homescreen.
+
+Bug Fixes:
+[Bug] Fixed Fuzzy Filter Wann Op 0 gesat.
+
+Sprooch Ënnerstëtzung:
+[Sprooch] Aktualiséiert Sproochdateien.

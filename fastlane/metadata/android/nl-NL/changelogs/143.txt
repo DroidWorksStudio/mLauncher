@@ -1,0 +1,4 @@
+Versie: 1.4.3
+
+Bugfixes:
+[Bug] - Hernoemen opgelost bij hernoemen naar de oorspronkelijke naam.
