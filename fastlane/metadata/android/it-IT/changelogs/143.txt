@@ -2,3 +2,8 @@ Versione: 1.4.3
 
 Correzioni di bug:
 [Bug] - Risolto il problema con la ridenominazione se si rinominava nuovamente con il nome originale.
+[Bug] - Risolti i gesti di scorrimento.
+
+Supporto linguistico:
+
+[Lingua] File di lingua aggiornati.

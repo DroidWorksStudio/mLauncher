@@ -1,334 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<!-- Base Settings -->
-	<string name="app">
-		App
-	</string>
+	<string name="app">App</string>
 	<!-- Admin Settings -->
-	<string name="admin_permission_message">
-		mLauncher hứa sẽ sử dụng quyền trên màn hình khóa một cách có trách nhiệm. mLauncher không thu thập hoặc chia sẻ bất kỳ dữ liệu nào.
-	</string>
-	<string name="experimental">
-		(experimental)
-	</string>
+	<string name="admin_permission_message">mLauncher hứa sẽ sử dụng quyền trên màn hình khóa một cách có trách nhiệm. mLauncher không thu thập hoặc chia sẻ bất kỳ dữ liệu nào.</string>
+	<string name="experimental">(experimental)</string>
 	<!-- Settings Headers -->
-	<string name="appearance">
-		Appearance
-	</string>
-	<string name="behavior">
-		Behavior
-	</string>
-	<string name="homescreen">
-		Homescreen
-	</string>
-	<string name="alignment">
-		Alignment
-	</string>
-	<string name="gestures">
-		Gestures
-	</string>
-	<string name="miscellaneous">
-		Điều khoản khác
-	</string>
+	<string name="appearance">Appearance</string>
+	<string name="behavior">Behavior</string>
+	<string name="homescreen">Homescreen</string>
+	<string name="alignment">Alignment</string>
+	<string name="gestures">Gestures</string>
+	<string name="miscellaneous">Điều khoản khác</string>
 	<!-- Home Strings -->
-	<string name="hidden_apps">
-		Hidden apps
-	</string>
-	<string name="set_as_default_launcher">
-		Set as default launcher
-	</string>
-	<string name="change_default_launcher">
-		Change default launcher
-	</string>
+	<string name="hidden_apps">Hidden apps</string>
+	<string name="set_as_default_launcher">Set as default launcher</string>
+	<string name="change_default_launcher">Change default launcher</string>
 	<!-- Appearance Strings -->
-	<string name="status_bar">
-		Show status bar
-	</string>
-	<string name="theme_mode">
-		Theme mode
-	</string>
-	<string name="app_language">
-		Interface Language
-	</string>
-	<string name="app_text_size">
-		Text Size
-	</string>
-	<string name="app_padding_size">
-		Kích thước đệm
-	</string>
-	<string name="follow_accent_colors">
-		Màu nhấn
-	</string>
-	<string name="background_opacity">
-		Độ mờ nền
-	</string>
-	<string name="all_apps_text">
-		Hiển thị tất cả văn bản ứng dụng
-	</string>
+	<string name="status_bar">Show status bar</string>
+	<string name="theme_mode">Theme mode</string>
+	<string name="app_language">Interface Language</string>
+	<string name="app_text_size">Text Size</string>
+	<string name="app_padding_size">Kích thước đệm</string>
+	<string name="follow_accent_colors">Màu nhấn</string>
+	<string name="background_opacity">Độ mờ nền</string>
+	<string name="all_apps_text">Hiển thị tất cả văn bản ứng dụng</string>
 	<!-- Behavior Strings -->
-	<string name="auto_show_keyboard">
-		Auto show keyboard
-	</string>
-	<string name="auto_open_apps">
-		Auto open apps
-	</string>
-	<string name="display_recent_apps">
-		Hiển thị ứng dụng gần đây
-	</string>
-	<string name="number_of_recents">
-		Số lượng ứng dụng gần đây
-	</string>
-	<string name="filter_strength">
-		Độ bền của bộ lọc
-	</string>
-	<string name="search_from_start">
-		Tìm kiếm ứng dụng từ đầu.
-	</string>
-	<string name="icon_font">
-		Sử dụng phông chữ biểu tượng
-	</string>
+	<string name="auto_show_keyboard">Auto show keyboard</string>
+	<string name="auto_open_apps">Auto open apps</string>
+	<string name="display_recent_apps">Hiển thị ứng dụng gần đây</string>
+	<string name="number_of_recents">Số lượng ứng dụng gần đây</string>
+	<string name="filter_strength">Độ bền của bộ lọc</string>
+	<string name="search_from_start">Tìm kiếm ứng dụng từ đầu.</string>
+	<string name="icon_font">Sử dụng phông chữ biểu tượng</string>
 	<!-- Home-screen Strings -->
-	<string name="apps_on_home_screen">
-		Number of shortcuts
-	</string>
-	<string name="pages_on_home_screen">
-		Số trang
-	</string>
-	<string name="show_time">
-		Show time
-	</string>
-	<string name="show_date">
-		Show date
-	</string>
-	<string name="show_battery">
-		Hiển thị pin
-	</string>
-	<string name="lock_home_apps">
-		Lock Apps
-	</string>
-	<string name="extend_home_apps_area">
-		Extend clickable area
-	</string>
-	<string name="home_alignment_bottom">
-		Home screen align bottom
-	</string>
+	<string name="apps_on_home_screen">Number of shortcuts</string>
+	<string name="pages_on_home_screen">Số trang</string>
+	<string name="show_time">Show time</string>
+	<string name="show_date">Show date</string>
+	<string name="show_battery">Hiển thị pin</string>
+	<string name="lock_home_apps">Lock Apps</string>
+	<string name="extend_home_apps_area">Extend clickable area</string>
+	<string name="home_alignment_bottom">Home screen align bottom</string>
 	<!-- Alignment Strings -->
-	<string name="home_alignment">
-		Apps home screen
-	</string>
-	<string name="clock_alignment">
-		Clock and date
-	</string>
-	<string name="drawer_alignment">
-		Apps in app drawer
-	</string>
+	<string name="home_alignment">Apps home screen</string>
+	<string name="clock_alignment">Clock and date</string>
+	<string name="drawer_alignment">Apps in app drawer</string>
 	<!-- Gestures Strings -->
-	<string name="short_swipe_up_app">
-		Swipe up
-	</string>
-	<string name="short_swipe_down_app">
-		Swipe down
-	</string>
-	<string name="short_swipe_left_app">
-		Swipe left
-	</string>
-	<string name="short_swipe_right_app">
-		Swipe right
-	</string>
-	<string name="clock_click_app">
-		Click on Clock
-	</string>
-	<string name="date_click_app">
-		Click on Date
-	</string>
-	<string name="double_tap">
-		Double Tap
-	</string>
-	<string name="long_swipe_up_app">
-		Nhấn và giữ Vuốt lên
-	</string>
-	<string name="long_swipe_down_app">
-		Nhấn và giữ Vuốt xuống
-	</string>
-	<string name="long_swipe_left_app">
-		Nhấn và giữ Vuốt sang trái
-	</string>
-	<string name="long_swipe_right_app">
-		Nhấn và giữ Vuốt sang phải
-	</string>
+	<string name="short_swipe_up_app">Swipe up</string>
+	<string name="short_swipe_down_app">Swipe down</string>
+	<string name="short_swipe_left_app">Swipe left</string>
+	<string name="short_swipe_right_app">Swipe right</string>
+	<string name="long_swipe_up_app">Nhấn và giữ Vuốt lên</string>
+	<string name="long_swipe_down_app">Nhấn và giữ Vuốt xuống</string>
+	<string name="long_swipe_left_app">Nhấn và giữ Vuốt sang trái</string>
+	<string name="long_swipe_right_app">Nhấn và giữ Vuốt sang phải</string>
+	<string name="clock_click_app">Click on Clock</string>
+	<string name="date_click_app">Click on Date</string>
+	<string name="double_tap">Double Tap</string>
 	<!-- Settings Strings -->
-	<string name="off">
-		Off
-	</string>
-	<string name="on">
-		On
-	</string>
-	<string name="left">
-		Left
-	</string>
-	<string name="right">
-		Right
-	</string>
-	<string name="center">
-		Center
-	</string>
-	<string name="dark">
-		Dark
-	</string>
-	<string name="light">
-		Light
-	</string>
-	<string name="settings">
-		Cài đặt
-	</string>
-	<string name="lang_system">
-		System
-	</string>
-	<string name="system_default">
-		System
-	</string>
-	<string name="hide">
-		Hide
-	</string>
-	<string name="rename">
-		Rename
-	</string>
-	<string name="okay">
-		Okay
-	</string>
-	<string name="save">
-		Save
-	</string>
-	<string name="show">
-		Show
-	</string>
-	<string name="reset">
-		Reset
-	</string>
-	<string name="cancel">
-		Cancel
-	</string>
-	<string name="enable">
-		Enable
-	</string>
-	<string name="disable">
-		Disable
-	</string>
-	<string name="enabled">
-		Enabled
-	</string>
-	<string name="disabled">
-		Disabled
-	</string>
-	<string name="open">
-		Open
-	</string>
-	<string name="close">
-		Close
-	</string>
-	<string name="copy">
-		sao chép
-	</string>
+	<string name="off">Off</string>
+	<string name="on">On</string>
+	<string name="left">Left</string>
+	<string name="right">Right</string>
+	<string name="center">Center</string>
+	<string name="dark">Dark</string>
+	<string name="light">Light</string>
+	<string name="settings">Cài đặt</string>
+	<string name="lang_system">System</string>
+	<string name="system_default">System</string>
+	<string name="hide">Hide</string>
+	<string name="rename">Rename</string>
+	<string name="okay">Okay</string>
+	<string name="save">Save</string>
+	<string name="show">Show</string>
+	<string name="reset">Reset</string>
+	<string name="cancel">Cancel</string>
+	<string name="enable">Enable</string>
+	<string name="disable">Disable</string>
+	<string name="enabled">Enabled</string>
+	<string name="disabled">Disabled</string>
+	<string name="open">Open</string>
+	<string name="close">Close</string>
+	<string name="copy">sao chép</string>
 	<!-- Gestures Do Strings -->
-	<string name="show_notifications">
-		Show Notification
-	</string>
-	<string name="show_app_list">
-		Show App List
-	</string>
-	<string name="open_app">
-		Open App
-	</string>
-	<string name="lock_screen">
-		Lock Screen
-	</string>
-	<string name="open_quick_settings">
-		Quick Settings
-	</string>
-	<string name="show_recents">
-		Show Recents
-	</string>
-	<string name="open_power_dialog">
-		Hộp thoại nguồn
-	</string>
-	<string name="take_a_screenshot">
-		Chụp màn hình
-	</string>
-	<string name="left_page">
-		Tới trang bên trái
-	</string>
-	<string name="right_page">
-		Tới trang bên phải
-	</string>
-	<string name="double_tap_to_lock_screen">
-		Double tap to lock
-	</string>
+	<string name="show_notifications">Show Notification</string>
+	<string name="show_app_list">Show App List</string>
+	<string name="open_app">Open App</string>
+	<string name="lock_screen">Lock Screen</string>
+	<string name="open_quick_settings">Quick Settings</string>
+	<string name="show_recents">Show Recents</string>
+	<string name="open_power_dialog">Hộp thoại nguồn</string>
+	<string name="take_a_screenshot">Chụp màn hình</string>
+	<string name="left_page">Tới trang bên trái</string>
+	<string name="right_page">Tới trang bên phải</string>
+	<string name="double_tap_to_lock_screen">Double tap to lock</string>
 	<!-- Miscellaneous Strings -->
-	<string name="settings_text_size">
-		Cài đặt Kích thước văn bản
-	</string>
-	<string name="display_hidden_apps">
-		Hiển thị ứng dụng ẩn
-	</string>
-	<string name="lock_settings">
-		Cài đặt khóa
-	</string>
+	<string name="settings_text_size">Cài đặt Kích thước văn bản</string>
+	<string name="display_hidden_apps">Hiển thị ứng dụng ẩn</string>
+	<string name="lock_settings">Cài đặt khóa</string>
 	<!-- Backup Strings -->
-	<string name="backup">
-		Backup
-	</string>
-	<string name="load_backup">
-		Load Backup
-	</string>
-	<string name="store_backup">
-		Store Backup
-	</string>
+	<string name="backup">Backup</string>
+	<string name="load_backup">Load Backup</string>
+	<string name="store_backup">Store Backup</string>
 	<!-- PinCode Strings -->
-	<string name="text_authentication_cancel">
-		Xác thực Hủy bỏ.
-	</string>
-	<string name="text_authentication_error">
-		Lỗi xác thực:%1$s(mã %2$d)
-	</string>
-	<string name="text_authentication_failed">
-		Quá trình xác thực đã thất bại.
-	</string>
-	<string name="text_biometric_login">
-		Đăng nhập sinh trắc học cho mLauncher
-	</string>
-	<string name="text_biometric_login_sub">
-		Đăng nhập bằng thông tin sinh trắc học của bạn
-	</string>
+	<string name="text_authentication_cancel">Xác thực Hủy bỏ.</string>
+	<string name="text_authentication_error">Lỗi xác thực:%1$s(mã %2$d)</string>
+	<string name="text_authentication_failed">Quá trình xác thực đã thất bại.</string>
+	<string name="text_biometric_login">Đăng nhập sinh trắc học cho mLauncher</string>
+	<string name="text_biometric_login_sub">Đăng nhập bằng thông tin sinh trắc học của bạn</string>
 	<!-- Unsorted Strings -->
-	<string name="show_apps">
-		All apps
-	</string>
-	<string name="drawer_list_empty_hint">
-		No apps found
-	</string>
-	<string name="long_press_for_settings">
-		Long press anywhere for settings
-	</string>
-	<string name="swipe_up_for_apps">
-		Swipe up for all apps
-	</string>
-	<string name="app_drawer_tips">
-		Tip: Swipe down to dismiss. Scroll to hide keyboard.
-	</string>
-	<string name="double_tap_lock_is_enabled_message">
-		If double tap lock disables fingerprint or face unlock, open mLauncher settings, tap on \'experimental\' and follow the instructions. Thank you.
-	</string>
-	<string name="double_tap_lock_uninstall_message">
-		Double tap to lock enabled.
-		\n\nNote: Turn this OFF first if you decide to delete mLauncher.
-	</string>
-	<string name="accessibility_service_name">
-		mLauncher Actions Service
-	</string>
-	<string name="accessibility_service_description">
-		Dịch vụ trợ năng này cho phép mLauncher thực hiện một số hành động nhất định như khóa màn hình hoặc mở cài đặt nhanh. Dịch vụ trợ năng của chúng tôi không thu thập hoặc chia sẻ bất kỳ dữ liệu nào.
-	</string>
-	<string name="version">
-		Phiên bản
-	</string>
+	<string name="show_apps">All apps</string>
+	<string name="drawer_list_empty_hint">No apps found</string>
+	<string name="long_press_for_settings">Long press anywhere for settings</string>
+	<string name="swipe_up_for_apps">Swipe up for all apps</string>
+	<string name="app_drawer_tips">Tip: Swipe down to dismiss. Scroll to hide keyboard.</string>
+	<string name="double_tap_lock_is_enabled_message">If double tap lock disables fingerprint or face unlock, open mLauncher settings, tap on \'experimental\' and follow the instructions. Thank you.</string>
+	<string name="double_tap_lock_uninstall_message">Double tap to lock enabled.
+		\n\nNote: Turn this OFF first if you decide to delete mLauncher.</string>
+	<string name="accessibility_service_name">mLauncher Actions Service</string>
+	<string name="accessibility_service_description">Dịch vụ trợ năng này cho phép mLauncher thực hiện một số hành động nhất định như khóa màn hình hoặc mở cài đặt nhanh. Dịch vụ trợ năng của chúng tôi không thu thập hoặc chia sẻ bất kỳ dữ liệu nào.</string>
+	<string name="version">Phiên bản</string>
 </resources>

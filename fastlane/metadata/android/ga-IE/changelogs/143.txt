@@ -2,3 +2,8 @@ Leagan: 1.4.3
 
 Ceartúcháin fhabht:
 [Fabht] - Athainmnigh Seasta má athainmnítear ar ais go dtí an bunainm.
+[Fabht] - Seasta na gothaí swipe.
+
+Tacaíocht Teanga:
+
+[Teanga] Comhaid Teanga Nuashonraithe.

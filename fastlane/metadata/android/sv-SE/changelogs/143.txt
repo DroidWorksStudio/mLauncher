@@ -2,3 +2,8 @@ Version: 1.4.3
 
 Bug fixar:
 [Bug] - Fixed Byt namn om byte tillbaka till originalnamnet.
+[Bug] – Fixade svepgester.
+
+Språkstöd:
+
+[Språk] Uppdaterade språkfiler.

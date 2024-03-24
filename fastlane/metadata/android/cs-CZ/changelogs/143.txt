@@ -2,3 +2,8 @@ Verze: 1.4.3
 
 Oprava chyb:
 [Chyba] - Opraveno Přejmenování při přejmenování zpět na původní název.
+[Chyba] – Opravena gesta přejetí.
+
+Jazyková podpora:
+
+[Jazyk] Aktualizované jazykové soubory.

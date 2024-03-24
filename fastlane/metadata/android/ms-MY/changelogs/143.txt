@@ -2,3 +2,8 @@ Versi: 1.4.3
 
 Pembetulan Pepijat:
 [Pepijat] - Namakan Semula Tetap jika menamakan semula kepada nama asal.
+[Pepijat] - Membetulkan gerak isyarat leret.
+
+Sokongan Bahasa:
+
+[Bahasa] Fail Bahasa yang dikemas kini.
