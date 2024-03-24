@@ -342,10 +342,10 @@ class Prefs(val context: Context) {
 
 
     private fun loadApp(id: String): AppModel {
-        val name = prefs.getString("${APP_NAME}_$id", "").toString()
-        val pack = prefs.getString("${APP_PACKAGE}_$id", "").toString()
-        val alias = prefs.getString("${APP_ALIAS}_$id", "").toString()
-        val activity = prefs.getString("${APP_ACTIVITY}_$id", "").toString()
+        val appName = prefs.getString("${APP_NAME}_$id", "").toString()
+        val appPackage = prefs.getString("${APP_PACKAGE}_$id", "").toString()
+        val appAlias = prefs.getString("${APP_ALIAS}_$id", "").toString()
+        val appActivityName = prefs.getString("${APP_ACTIVITY}_$id", "").toString()
 
         val userHandleString = try {
             prefs.getString("${APP_USER}_$id", "").toString()
@@ -355,10 +355,10 @@ class Prefs(val context: Context) {
         val userHandle: UserHandle = getUserHandleFromString(context, userHandleString)
 
         return AppModel(
-            appLabel = name,
-            appPackage = pack,
-            appAlias = alias,
-            appActivityName = activity,
+            appLabel = appName,
+            appPackage = appPackage,
+            appAlias = appAlias,
+            appActivityName = appActivityName,
             user = userHandle,
             key = null,
         )
@@ -366,7 +366,11 @@ class Prefs(val context: Context) {
 
     private fun storeApp(id: String, appModel: AppModel) {
         val edit = prefs.edit()
-        edit.putString("${APP_NAME}_$id", appModel.appLabel)
+        val appAlias = appModel.appAlias.ifEmpty {
+            appModel.appLabel
+        }
+
+        edit.putString("${APP_NAME}_$id", appAlias)
         edit.putString("${APP_PACKAGE}_$id", appModel.appPackage)
         edit.putString("${APP_ACTIVITY}_$id", appModel.appActivityName)
         edit.putString("${APP_ALIAS}_$id", appModel.appAlias)
