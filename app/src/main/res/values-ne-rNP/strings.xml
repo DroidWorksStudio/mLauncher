@@ -1,324 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<!-- Base Settings -->
-	<string name="app">
-		एप
-	</string>
+	<string name="app">एप</string>
 	<!-- Admin Settings -->
-	<string name="admin_permission_message">
-		mLauncher ले लक स्क्रिन अनुमति जिम्मेवारीपूर्वक प्रयोग गर्ने वाचा गर्दछ। mLauncher ले कुनै पनि डाटा सङ्कलन वा साझेदारी गर्दैन।
-	</string>
-	<string name="experimental">
-		(प्रयोगात्मक)
-	</string>
+	<string name="admin_permission_message">mLauncher ले लक स्क्रिन अनुमति जिम्मेवारीपूर्वक प्रयोग गर्ने वाचा गर्दछ। mLauncher ले कुनै पनि डाटा सङ्कलन वा साझेदारी गर्दैन।</string>
+	<string name="experimental">(प्रयोगात्मक)</string>
 	<!-- Settings Headers -->
-	<string name="appearance">
-		उपस्थिति
-	</string>
-	<string name="behavior">
-		व्यवहार
-	</string>
-	<string name="homescreen">
-		होमस्क्रिन
-	</string>
-	<string name="alignment">
-		पङ्क्तिबद्धता
-	</string>
-	<string name="gestures">
-		इशाराहरू
-	</string>
-	<string name="miscellaneous">
-		विविध
-	</string>
+	<string name="appearance">उपस्थिति</string>
+	<string name="behavior">व्यवहार</string>
+	<string name="homescreen">होमस्क्रिन</string>
+	<string name="alignment">पङ्क्तिबद्धता</string>
+	<string name="gestures">इशाराहरू</string>
+	<string name="miscellaneous">विविध</string>
 	<!-- Home Strings -->
-	<string name="hidden_apps">
-		लुकेका एपहरू
-	</string>
-	<string name="set_as_default_launcher">
-		पूर्वनिर्धारित लन्चरको रूपमा सेट गर्नुहोस्
-	</string>
-	<string name="change_default_launcher">
-		पूर्वनिर्धारित लन्चर परिवर्तन गर्नुहोस्
-	</string>
+	<string name="hidden_apps">लुकेका एपहरू</string>
+	<string name="set_as_default_launcher">पूर्वनिर्धारित लन्चरको रूपमा सेट गर्नुहोस्</string>
+	<string name="change_default_launcher">पूर्वनिर्धारित लन्चर परिवर्तन गर्नुहोस्</string>
 	<!-- Appearance Strings -->
-	<string name="status_bar">
-		स्थिति पट्टी देखाउनुहोस्
-	</string>
-	<string name="theme_mode">
-		थिम मोड
-	</string>
-	<string name="app_language">
-		इन्टरफेस भाषा
-	</string>
-	<string name="app_text_size">
-		पाठ आकार
-	</string>
-	<string name="app_padding_size">
-		प्याडिङ साइज
-	</string>
-	<string name="follow_accent_colors">
-		एक्सेन्ट रङहरू
-	</string>
-	<string name="background_opacity">
-		पृष्ठभूमि अस्पष्टता
-	</string>
-	<string name="all_apps_text">
-		सबै एप पाठ प्रदर्शन गर्नुहोस्
-	</string>
+	<string name="status_bar">स्थिति पट्टी देखाउनुहोस्</string>
+	<string name="theme_mode">थिम मोड</string>
+	<string name="app_language">इन्टरफेस भाषा</string>
+	<string name="app_text_size">पाठ आकार</string>
+	<string name="app_padding_size">प्याडिङ साइज</string>
+	<string name="follow_accent_colors">एक्सेन्ट रङहरू</string>
+	<string name="background_opacity">पृष्ठभूमि अस्पष्टता</string>
+	<string name="all_apps_text">सबै एप पाठ प्रदर्शन गर्नुहोस्</string>
 	<!-- Behavior Strings -->
-	<string name="auto_show_keyboard">
-		किबोर्ड स्वतः देखाउनुहोस्
-	</string>
-	<string name="auto_open_apps">
-		स्वतः खोल्ने एपहरू
-	</string>
-	<string name="display_recent_apps">
-		हालका एपहरू प्रदर्शन गर्नुहोस्
-	</string>
-	<string name="number_of_recents">
-		भर्खरका एपहरूको संख्या
-	</string>
-	<string name="filter_strength">
-		फिल्टर शक्ति
-	</string>
-	<string name="search_from_start">
-		सुरु देखि अनुप्रयोग खोज।
-	</string>
-	<string name="icon_font">
-		आइकन फन्ट प्रयोग गर्नुहोस्
-	</string>
+	<string name="auto_show_keyboard">किबोर्ड स्वतः देखाउनुहोस्</string>
+	<string name="auto_open_apps">स्वतः खोल्ने एपहरू</string>
+	<string name="display_recent_apps">हालका एपहरू प्रदर्शन गर्नुहोस्</string>
+	<string name="number_of_recents">भर्खरका एपहरूको संख्या</string>
+	<string name="filter_strength">फिल्टर शक्ति</string>
+	<string name="search_from_start">सुरु देखि अनुप्रयोग खोज।</string>
+	<string name="icon_font">आइकन फन्ट प्रयोग गर्नुहोस्</string>
 	<!-- Home-screen Strings -->
-	<string name="apps_on_home_screen">
-		सर्टकटहरूको संख्या
-	</string>
-	<string name="pages_on_home_screen">
-		पृष्ठहरूको संख्या
-	</string>
-	<string name="show_time">
-		समय देखाउनुहोस्
-	</string>
-	<string name="show_date">
-		मिति देखाउनुहोस्
-	</string>
-	<string name="show_battery">
-		ब्याट्री देखाउनुहोस्
-	</string>
-	<string name="lock_home_apps">
-		एपहरू लक गर्नुहोस्
-	</string>
-	<string name="extend_home_apps_area">
-		क्लिक योग्य क्षेत्र विस्तार गर्नुहोस्
-	</string>
-	<string name="home_alignment_bottom">
-		गृह स्क्रिन तल पङ्क्तिबद्ध गर्नुहोस्
-	</string>
+	<string name="apps_on_home_screen">सर्टकटहरूको संख्या</string>
+	<string name="pages_on_home_screen">पृष्ठहरूको संख्या</string>
+	<string name="show_time">समय देखाउनुहोस्</string>
+	<string name="show_date">मिति देखाउनुहोस्</string>
+	<string name="show_battery">ब्याट्री देखाउनुहोस्</string>
+	<string name="lock_home_apps">एपहरू लक गर्नुहोस्</string>
+	<string name="extend_home_apps_area">क्लिक योग्य क्षेत्र विस्तार गर्नुहोस्</string>
+	<string name="home_alignment_bottom">गृह स्क्रिन तल पङ्क्तिबद्ध गर्नुहोस्</string>
 	<!-- Alignment Strings -->
-	<string name="home_alignment">
-		एप्स होम स्क्रिन
-	</string>
-	<string name="clock_alignment">
-		घडी र मिति
-	</string>
-	<string name="drawer_alignment">
-		एप ड्रअरमा एपहरू
-	</string>
+	<string name="home_alignment">एप्स होम स्क्रिन</string>
+	<string name="clock_alignment">घडी र मिति</string>
+	<string name="drawer_alignment">एप ड्रअरमा एपहरू</string>
 	<!-- Gestures Strings -->
-	<string name="short_swipe_up_app">
-		माथि स्वाइप गर्नुहोस्
-	</string>
-	<string name="short_swipe_down_app">
-		तल स्वाइप गर्नुहोस्
-	</string>
-	<string name="short_swipe_left_app">
-		बायाँ स्वाइप गर्नुहोस्
-	</string>
-	<string name="short_swipe_right_app">
-		दायाँ स्वाइप गर्नुहोस्
-	</string>
-	<string name="long_swipe_up_app">
-		स्वाइप माथि लामो प्रेस गर्नुहोस्
-	</string>
-	<string name="long_swipe_down_app">
-		लामो थिच्नुहोस् स्वाइप तल
-	</string>
-	<string name="long_swipe_left_app">
-		लामो थिच्नुहोस् बायाँ स्वाइप गर्नुहोस्
-	</string>
-	<string name="long_swipe_right_app">
-		लामो थिच्नुहोस् दायाँ स्वाइप गर्नुहोस्
-	</string>
-	<string name="clock_click_app">
-		घडी मा क्लिक गर्नुहोस्
-	</string>
-	<string name="date_click_app">
-		मिति मा क्लिक गर्नुहोस्
-	</string>
-	<string name="double_tap">
-		डबल ट्याप गर्नुहोस्
-	</string>
+	<string name="short_swipe_up_app">माथि स्वाइप गर्नुहोस्</string>
+	<string name="short_swipe_down_app">तल स्वाइप गर्नुहोस्</string>
+	<string name="short_swipe_left_app">बायाँ स्वाइप गर्नुहोस्</string>
+	<string name="short_swipe_right_app">दायाँ स्वाइप गर्नुहोस्</string>
+	<string name="long_swipe_up_app">स्वाइप माथि लामो प्रेस गर्नुहोस्</string>
+	<string name="long_swipe_down_app">लामो थिच्नुहोस् स्वाइप तल</string>
+	<string name="long_swipe_left_app">लामो थिच्नुहोस् बायाँ स्वाइप गर्नुहोस्</string>
+	<string name="long_swipe_right_app">लामो थिच्नुहोस् दायाँ स्वाइप गर्नुहोस्</string>
+	<string name="clock_click_app">घडी मा क्लिक गर्नुहोस्</string>
+	<string name="date_click_app">मिति मा क्लिक गर्नुहोस्</string>
+	<string name="double_tap">डबल ट्याप गर्नुहोस्</string>
 	<!-- Settings Strings -->
-	<string name="off">
-		बन्द
-	</string>
-	<string name="on">
-		अन
-	</string>
-	<string name="left">
-		बायाँ
-	</string>
-	<string name="right">
-		सहि
-	</string>
-	<string name="center">
-		केन्द्र
-	</string>
-	<string name="dark">
-		अँध्यारो
-	</string>
-	<string name="light">
-		उज्यालो
-	</string>
-	<string name="settings">
-		सेटिङहरू
-	</string>
-	<string name="lang_system">
-		प्रणाली
-	</string>
-	<string name="system_default">
-		प्रणाली
-	</string>
-	<string name="hide">
-		लुकाउनुहोस्
-	</string>
-	<string name="rename">
-		पुन: नामाकरण गर्नुहोस्
-	</string>
-	<string name="okay">
-		ल
-	</string>
-	<string name="save">
-		बचत गर्नुहोस्
-	</string>
-	<string name="show">
-		देखाउनु
-	</string>
-	<string name="reset">
-		रिसेट गर्नुहोस्
-	</string>
-	<string name="cancel">
-		रद्द गर्नुहोस्
-	</string>
-	<string name="enable">
-		सक्षम गर्नुहोस्
-	</string>
-	<string name="disable">
-		असक्षम गर्नुहोस्
-	</string>
-	<string name="enabled">
-		सक्षम गरियो
-	</string>
-	<string name="disabled">
-		अक्षम
-	</string>
-	<string name="open">
-		खोल्नुहोस्
-	</string>
-	<string name="close">
-		बन्द गर्नुहोस्
-	</string>
-	<string name="copy">
-		कापी
-	</string>
+	<string name="off">बन्द</string>
+	<string name="on">अन</string>
+	<string name="left">बायाँ</string>
+	<string name="right">सहि</string>
+	<string name="center">केन्द्र</string>
+	<string name="dark">अँध्यारो</string>
+	<string name="light">उज्यालो</string>
+	<string name="settings">सेटिङहरू</string>
+	<string name="lang_system">प्रणाली</string>
+	<string name="system_default">प्रणाली</string>
+	<string name="hide">लुकाउनुहोस्</string>
+	<string name="rename">पुन: नामाकरण गर्नुहोस्</string>
+	<string name="okay">ल</string>
+	<string name="save">बचत गर्नुहोस्</string>
+	<string name="show">देखाउनु</string>
+	<string name="reset">रिसेट गर्नुहोस्</string>
+	<string name="cancel">रद्द गर्नुहोस्</string>
+	<string name="enable">सक्षम गर्नुहोस्</string>
+	<string name="disable">असक्षम गर्नुहोस्</string>
+	<string name="enabled">सक्षम गरियो</string>
+	<string name="disabled">अक्षम</string>
+	<string name="open">खोल्नुहोस्</string>
+	<string name="close">बन्द गर्नुहोस्</string>
+	<string name="copy">कापी</string>
 	<!-- Gestures Do Strings -->
-	<string name="show_notifications">
-		सूचना देखाउनुहोस्
-	</string>
-	<string name="show_app_list">
-		एप सूची देखाउनुहोस्
-	</string>
-	<string name="open_app">
-		एप खोल्नुहोस्
-	</string>
-	<string name="lock_screen">
-		लक स्क्रिन
-	</string>
-	<string name="open_quick_settings">
-		द्रुत सेटिङहरू
-	</string>
-	<string name="show_recents">
-		हाल देखाउनुहोस्
-	</string>
-	<string name="open_power_dialog">
-		पावर संवाद
-	</string>
-	<string name="take_a_screenshot">
-		स्क्रिनसट लिनुहोस्
-	</string>
-	<string name="left_page">
-		बायाँ पृष्ठमा जानुहोस्
-	</string>
-	<string name="right_page">
-		दायाँ पृष्ठमा जानुहोस्
-	</string>
-	<string name="double_tap_to_lock_screen">
-		लक गर्न डबल ट्याप गर्नुहोस्
-	</string>
+	<string name="show_notifications">सूचना देखाउनुहोस्</string>
+	<string name="show_app_list">एप सूची देखाउनुहोस्</string>
+	<string name="open_app">एप खोल्नुहोस्</string>
+	<string name="lock_screen">लक स्क्रिन</string>
+	<string name="open_quick_settings">द्रुत सेटिङहरू</string>
+	<string name="show_recents">हाल देखाउनुहोस्</string>
+	<string name="open_power_dialog">पावर संवाद</string>
+	<string name="take_a_screenshot">स्क्रिनसट लिनुहोस्</string>
+	<string name="left_page">बायाँ पृष्ठमा जानुहोस्</string>
+	<string name="right_page">दायाँ पृष्ठमा जानुहोस्</string>
+	<string name="double_tap_to_lock_screen">लक गर्न डबल ट्याप गर्नुहोस्</string>
 	<!-- Miscellaneous Strings -->
-	<string name="settings_text_size">
-		सेटिङ पाठ आकार
-	</string>
-	<string name="display_hidden_apps">
-		लुकेका एपहरू प्रदर्शन गर्नुहोस्
-	</string>
-	<string name="lock_settings">
-		लक सेटिङहरू
-	</string>
+	<string name="settings_text_size">सेटिङ पाठ आकार</string>
+	<string name="display_hidden_apps">लुकेका एपहरू प्रदर्शन गर्नुहोस्</string>
+	<string name="lock_settings">लक सेटिङहरू</string>
 	<!-- PinCode Strings -->
-	<string name="text_authentication_cancel">
-		प्रमाणीकरण रद्द।
-	</string>
-	<string name="text_authentication_error">
-		प्रमाणीकरण त्रुटि:%1$s(कोड %2$d)
-	</string>
-	<string name="text_authentication_failed">
-		प्रमाणीकरण असफल भयो।
-	</string>
-	<string name="text_biometric_login">
-		mLauncher को लागि बायोमेट्रिक लगइन
-	</string>
-	<string name="text_biometric_login_sub">
-		आफ्नो बायोमेट्रिक प्रमाण प्रयोग गरेर लग इन गर्नुहोस्
-	</string>
+	<string name="text_authentication_cancel">प्रमाणीकरण रद्द।</string>
+	<string name="text_authentication_error">प्रमाणीकरण त्रुटि:%1$s(कोड %2$d)</string>
+	<string name="text_authentication_failed">प्रमाणीकरण असफल भयो।</string>
+	<string name="text_biometric_login">mLauncher को लागि बायोमेट्रिक लगइन</string>
+	<string name="text_biometric_login_sub">आफ्नो बायोमेट्रिक प्रमाण प्रयोग गरेर लग इन गर्नुहोस्</string>
 	<!-- Unsorted Strings -->
-	<string name="show_apps">
-		सबै एपहरू
-	</string>
-	<string name="drawer_list_empty_hint">
-		कुनै एपहरू फेला परेनन्
-	</string>
-	<string name="long_press_for_settings">
-		सेटिङहरूको लागि जहाँसुकै लामो प्रेस गर्नुहोस्
-	</string>
-	<string name="swipe_up_for_apps">
-		सबै एपहरूको लागि माथि स्वाइप गर्नुहोस्
-	</string>
-	<string name="app_drawer_tips">
-		सुझाव: खारेज गर्न तल स्वाइप गर्नुहोस्। किबोर्ड लुकाउन स्क्रोल गर्नुहोस्।
-	</string>
-	<string name="double_tap_lock_is_enabled_message">
-		यदि डबल ट्याप लकले फिंगरप्रिन्ट वा फेस अनलक असक्षम पार्छ भने, mLauncher सेटिङहरू खोल्नुहोस्, \'प्रयोगात्मक\' मा ट्याप गर्नुहोस् र निर्देशनहरू पालना गर्नुहोस्। धन्यवाद।
-	</string>
-	<string name="double_tap_lock_uninstall_message">
-		लक सक्षम गर्न डबल ट्याप गर्नुहोस्।
-		\n\nनोट: यदि तपाइँ mLauncher मेटाउने निर्णय गर्नुहुन्छ भने पहिले यसलाई बन्द गर्नुहोस्।
-	</string>
-	<string name="accessibility_service_name">
-		mLauncher कार्य सेवा
-	</string>
-	<string name="accessibility_service_description">
-		यो पहुँच सेवाले mLauncher लाई स्क्रिन लक गर्ने वा द्रुत सेटिङहरू खोल्ने जस्ता निश्चित कार्यहरू गर्न अनुमति दिन्छ। हाम्रो पहुँच सेवाले कुनै पनि डाटा सङ्कलन वा साझेदारी गर्दैन।
-	</string>
-	<string name="version">
-		संस्करण
-	</string>
+	<string name="show_apps">सबै एपहरू</string>
+	<string name="drawer_list_empty_hint">कुनै एपहरू फेला परेनन्</string>
+	<string name="long_press_for_settings">सेटिङहरूको लागि जहाँसुकै लामो प्रेस गर्नुहोस्</string>
+	<string name="swipe_up_for_apps">सबै एपहरूको लागि माथि स्वाइप गर्नुहोस्</string>
+	<string name="app_drawer_tips">सुझाव: खारेज गर्न तल स्वाइप गर्नुहोस्। किबोर्ड लुकाउन स्क्रोल गर्नुहोस्।</string>
+	<string name="double_tap_lock_is_enabled_message">यदि डबल ट्याप लकले फिंगरप्रिन्ट वा फेस अनलक असक्षम पार्छ भने, mLauncher सेटिङहरू खोल्नुहोस्, \'प्रयोगात्मक\' मा ट्याप गर्नुहोस् र निर्देशनहरू पालना गर्नुहोस्। धन्यवाद।</string>
+	<string name="double_tap_lock_uninstall_message">लक सक्षम गर्न डबल ट्याप गर्नुहोस्।
+		\n\nनोट: यदि तपाइँ mLauncher मेटाउने निर्णय गर्नुहुन्छ भने पहिले यसलाई बन्द गर्नुहोस्।</string>
+	<string name="accessibility_service_name">mLauncher कार्य सेवा</string>
+	<string name="accessibility_service_description">यो पहुँच सेवाले mLauncher लाई स्क्रिन लक गर्ने वा द्रुत सेटिङहरू खोल्ने जस्ता निश्चित कार्यहरू गर्न अनुमति दिन्छ। हाम्रो पहुँच सेवाले कुनै पनि डाटा सङ्कलन वा साझेदारी गर्दैन।</string>
+	<string name="version">संस्करण</string>
 </resources>

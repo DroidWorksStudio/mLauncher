@@ -1,5 +1,8 @@
 Version : 1.4.3
 
+Renforcement:
+[Fonctionnalité] - Ajout de la possibilité de ne pas avoir à renommer les applications si elles sont déjà définies via la liste des applications.
+
 Corrections de bugs :
 [Bug] - Correction du changement de nom si vous renommez au nom d'origine.
 [Bug] - Correction des gestes de balayage.

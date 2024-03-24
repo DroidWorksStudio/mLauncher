@@ -1,5 +1,8 @@
 Verzija: 1.4.3
 
+Poboljšanje:
+[Značajka] - Dodana mogućnost da ne morate preimenovati aplikacije ako su već postavljene putem popisa aplikacija.
+
 Ispravke pogrešaka:
 [Bug] - Ispravljeno preimenovanje ako se preimenovanje vrati na izvorni naziv.
 [Bug] - Ispravljene su geste prelaska prstom.

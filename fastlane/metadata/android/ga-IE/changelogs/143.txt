@@ -1,5 +1,8 @@
 Leagan: 1.4.3
 
+Feabhsú:
+[Gné] - Cuireadh leis an gcumas nach gá aipeanna a athainmniú má tá siad socraithe cheana féin tríd an liosta aipeanna.
+
 Ceartúcháin fhabht:
 [Fabht] - Athainmnigh Seasta má athainmnítear ar ais go dtí an bunainm.
 [Fabht] - Seasta na gothaí swipe.

@@ -1,5 +1,8 @@
 Verzió: 1.4.3
 
+Fokozás:
+[Funkció] – Hozzáadtuk azt a lehetőséget, hogy ne kelljen átnevezni az alkalmazásokat, ha már be van állítva az alkalmazáslistán keresztül.
+
 Hibajavítások:
 [Hiba] – Javítva az Átnevezés, ha visszanevezést az eredeti névre.
 [Hiba] – Javítva a csúsztatási gesztusok.

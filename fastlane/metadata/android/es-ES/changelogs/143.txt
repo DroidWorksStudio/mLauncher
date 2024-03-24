@@ -1,5 +1,8 @@
 Versión: 1.4.3
 
+Mejora:
+[Función]: se agregó la capacidad de no tener que cambiar el nombre de las aplicaciones si ya están configuradas a través de la lista de aplicaciones.
+
 Corrección de errores:
 [Error] - Se corrigió el cambio de nombre si se volvía a cambiar el nombre al nombre original.
 [Error] - Se corrigieron los gestos de deslizar.

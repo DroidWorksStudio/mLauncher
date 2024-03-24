@@ -1,5 +1,8 @@
 Versie: 1.4.3
 
+Verbetering:
+[Feature] - De mogelijkheid toegevoegd om apps niet te hernoemen als deze al zijn ingesteld via de app-lijst.
+
 Bugfixes:
 [Bug] - Hernoemen opgelost bij hernoemen naar de oorspronkelijke naam.
 [Bug] - De veegbewegingen zijn opgelost.

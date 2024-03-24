@@ -1,5 +1,8 @@
 Versione: 1.4.3
 
+Aumento:
+[Funzione] - Aggiunta la possibilità di non dover rinominare le app se già impostate tramite l'elenco delle app.
+
 Correzioni di bug:
 [Bug] - Risolto il problema con la ridenominazione se si rinominava nuovamente con il nome originale.
 [Bug] - Risolti i gesti di scorrimento.
