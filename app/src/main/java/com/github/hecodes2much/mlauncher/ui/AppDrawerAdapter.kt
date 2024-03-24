@@ -202,11 +202,12 @@ class AppDrawerAdapter(
                     ) {
                         if (appRenameEdit.text.isEmpty()) {
                             appRenameButton.text = context.getString(R.string.reset)
-                        } else if (appRenameEdit.text.toString() == appModel.appAlias || appRenameEdit.text.toString() == appModel.appLabel) {
+                        } else if (appRenameEdit.text.toString() == appModel.appAlias) {
                             appRenameButton.text = context.getString(R.string.cancel)
                         } else {
                             appRenameButton.text = context.getString(R.string.rename)
                         }
+
                     }
                 })
 
