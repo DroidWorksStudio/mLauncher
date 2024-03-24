@@ -1,0 +1,10 @@
+Verzija: 1.4.2
+
+Poboljšanje:
+[Značajka] - Dodajte opciju za više stranica na početnom zaslonu.
+
+Ispravke pogrešaka:
+[Bug] Ispravljen neizraziti filtar ako je postavljen na 0.
+
+Jezična podrška:
+[Jezik] Ažurirane jezične datoteke.
