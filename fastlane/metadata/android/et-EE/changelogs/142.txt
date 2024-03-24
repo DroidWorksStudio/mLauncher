@@ -1,0 +1,10 @@
+Versioon: 1.4.2
+
+Täiendus:
+[Funktsioon] – lisage avaekraanile suvand mitme lehe jaoks.
+
+Veaparandused:
+[Viga] Parandatud hägune filter, kui see on 0.
+
+Keele tugi:
+[Keel] Värskendatud keelefailid.
