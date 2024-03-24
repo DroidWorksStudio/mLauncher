@@ -2,3 +2,8 @@ Version: 1.4.3
 
 Fanamboarana bug:
 [Bug] - Fanovana anarana raha miverina amin'ny anarana voalohany.
+[Bug] - Namboarina ny fihetsehana swipe.
+
+Fanohanana ny fiteny:
+
+[Fiteny] Nohavaozina ny rakitra fiteny.
