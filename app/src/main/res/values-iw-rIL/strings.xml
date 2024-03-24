@@ -1,324 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<!-- Base Settings -->
-	<string name="app">
-		App
-	</string>
+	<string name="app">App</string>
 	<!-- Admin Settings -->
-	<string name="admin_permission_message">
-		mLauncher מבטיח להשתמש בהרשאת מסך הנעילה באחריות. mLauncher אינו אוסף או משתף נתונים כלשהם.
-	</string>
-	<string name="experimental">
-		(experimental)
-	</string>
+	<string name="admin_permission_message">mLauncher מבטיח להשתמש בהרשאת מסך הנעילה באחריות. mLauncher אינו אוסף או משתף נתונים כלשהם.</string>
+	<string name="experimental">(experimental)</string>
 	<!-- Settings Headers -->
-	<string name="appearance">
-		Appearance
-	</string>
-	<string name="behavior">
-		Behavior
-	</string>
-	<string name="homescreen">
-		Homescreen
-	</string>
-	<string name="alignment">
-		Alignment
-	</string>
-	<string name="gestures">
-		Gestures
-	</string>
-	<string name="miscellaneous">
-		שונות
-	</string>
+	<string name="appearance">Appearance</string>
+	<string name="behavior">Behavior</string>
+	<string name="homescreen">Homescreen</string>
+	<string name="alignment">Alignment</string>
+	<string name="gestures">Gestures</string>
+	<string name="miscellaneous">שונות</string>
 	<!-- Home Strings -->
-	<string name="hidden_apps">
-		Hidden apps
-	</string>
-	<string name="set_as_default_launcher">
-		Set as default launcher
-	</string>
-	<string name="change_default_launcher">
-		Change default launcher
-	</string>
+	<string name="hidden_apps">Hidden apps</string>
+	<string name="set_as_default_launcher">Set as default launcher</string>
+	<string name="change_default_launcher">Change default launcher</string>
 	<!-- Appearance Strings -->
-	<string name="status_bar">
-		Show status bar
-	</string>
-	<string name="theme_mode">
-		Theme mode
-	</string>
-	<string name="app_language">
-		Interface Language
-	</string>
-	<string name="app_text_size">
-		Text Size
-	</string>
-	<string name="app_padding_size">
-		גודל ריפוד
-	</string>
-	<string name="follow_accent_colors">
-		צבעי מבטא
-	</string>
-	<string name="background_opacity">
-		אטימות רקע
-	</string>
-	<string name="all_apps_text">
-		הצג טקסט של כל האפליקציות
-	</string>
+	<string name="status_bar">Show status bar</string>
+	<string name="theme_mode">Theme mode</string>
+	<string name="app_language">Interface Language</string>
+	<string name="app_text_size">Text Size</string>
+	<string name="app_padding_size">גודל ריפוד</string>
+	<string name="follow_accent_colors">צבעי מבטא</string>
+	<string name="background_opacity">אטימות רקע</string>
+	<string name="all_apps_text">הצג טקסט של כל האפליקציות</string>
 	<!-- Behavior Strings -->
-	<string name="auto_show_keyboard">
-		Auto show keyboard
-	</string>
-	<string name="auto_open_apps">
-		Auto open apps
-	</string>
-	<string name="display_recent_apps">
-		הצג אפליקציות אחרונות
-	</string>
-	<string name="number_of_recents">
-		מספר האפליקציות האחרונות
-	</string>
-	<string name="filter_strength">
-		חוזק מסנן
-	</string>
-	<string name="search_from_start">
-		חיפוש אפליקציה מההתחלה.
-	</string>
-	<string name="icon_font">
-		השתמש בגופן אייקון
-	</string>
+	<string name="auto_show_keyboard">Auto show keyboard</string>
+	<string name="auto_open_apps">Auto open apps</string>
+	<string name="display_recent_apps">הצג אפליקציות אחרונות</string>
+	<string name="number_of_recents">מספר האפליקציות האחרונות</string>
+	<string name="filter_strength">חוזק מסנן</string>
+	<string name="search_from_start">חיפוש אפליקציה מההתחלה.</string>
+	<string name="icon_font">השתמש בגופן אייקון</string>
 	<!-- Home-screen Strings -->
-	<string name="apps_on_home_screen">
-		Number of shortcuts
-	</string>
-	<string name="pages_on_home_screen">
-		מספר דפים
-	</string>
-	<string name="show_time">
-		Show time
-	</string>
-	<string name="show_date">
-		Show date
-	</string>
-	<string name="show_battery">
-		הצג סוללה
-	</string>
-	<string name="lock_home_apps">
-		Lock Apps
-	</string>
-	<string name="extend_home_apps_area">
-		Extend clickable area
-	</string>
-	<string name="home_alignment_bottom">
-		Home screen align bottom
-	</string>
+	<string name="apps_on_home_screen">Number of shortcuts</string>
+	<string name="pages_on_home_screen">מספר דפים</string>
+	<string name="show_time">Show time</string>
+	<string name="show_date">Show date</string>
+	<string name="show_battery">הצג סוללה</string>
+	<string name="lock_home_apps">Lock Apps</string>
+	<string name="extend_home_apps_area">Extend clickable area</string>
+	<string name="home_alignment_bottom">Home screen align bottom</string>
 	<!-- Alignment Strings -->
-	<string name="home_alignment">
-		Apps home screen
-	</string>
-	<string name="clock_alignment">
-		Clock and date
-	</string>
-	<string name="drawer_alignment">
-		Apps in app drawer
-	</string>
+	<string name="home_alignment">Apps home screen</string>
+	<string name="clock_alignment">Clock and date</string>
+	<string name="drawer_alignment">Apps in app drawer</string>
 	<!-- Gestures Strings -->
-	<string name="short_swipe_up_app">
-		Swipe up
-	</string>
-	<string name="short_swipe_down_app">
-		Swipe down
-	</string>
-	<string name="short_swipe_left_app">
-		Swipe left
-	</string>
-	<string name="short_swipe_right_app">
-		Swipe right
-	</string>
-	<string name="long_swipe_up_app">
-		לחץ לחיצה ארוכה החלק למעלה
-	</string>
-	<string name="long_swipe_down_app">
-		לחץ לחיצה ארוכה החלק מטה
-	</string>
-	<string name="long_swipe_left_app">
-		לחיצה ארוכה החלק שמאלה
-	</string>
-	<string name="long_swipe_right_app">
-		לחץ לחיצה ארוכה החלק ימינה
-	</string>
-	<string name="clock_click_app">
-		Click on Clock
-	</string>
-	<string name="date_click_app">
-		Click on Date
-	</string>
-	<string name="double_tap">
-		Double Tap
-	</string>
+	<string name="short_swipe_up_app">Swipe up</string>
+	<string name="short_swipe_down_app">Swipe down</string>
+	<string name="short_swipe_left_app">Swipe left</string>
+	<string name="short_swipe_right_app">Swipe right</string>
+	<string name="long_swipe_up_app">לחץ לחיצה ארוכה החלק למעלה</string>
+	<string name="long_swipe_down_app">לחץ לחיצה ארוכה החלק מטה</string>
+	<string name="long_swipe_left_app">לחיצה ארוכה החלק שמאלה</string>
+	<string name="long_swipe_right_app">לחץ לחיצה ארוכה החלק ימינה</string>
+	<string name="clock_click_app">Click on Clock</string>
+	<string name="date_click_app">Click on Date</string>
+	<string name="double_tap">Double Tap</string>
 	<!-- Settings Strings -->
-	<string name="off">
-		Off
-	</string>
-	<string name="on">
-		On
-	</string>
-	<string name="left">
-		Left
-	</string>
-	<string name="right">
-		Right
-	</string>
-	<string name="center">
-		Center
-	</string>
-	<string name="dark">
-		Dark
-	</string>
-	<string name="light">
-		Light
-	</string>
-	<string name="settings">
-		הגדרות
-	</string>
-	<string name="lang_system">
-		System
-	</string>
-	<string name="system_default">
-		System
-	</string>
-	<string name="hide">
-		Hide
-	</string>
-	<string name="rename">
-		Rename
-	</string>
-	<string name="okay">
-		Okay
-	</string>
-	<string name="save">
-		Save
-	</string>
-	<string name="show">
-		Show
-	</string>
-	<string name="reset">
-		Reset
-	</string>
-	<string name="cancel">
-		Cancel
-	</string>
-	<string name="enable">
-		Enable
-	</string>
-	<string name="disable">
-		Disable
-	</string>
-	<string name="enabled">
-		Enabled
-	</string>
-	<string name="disabled">
-		Disabled
-	</string>
-	<string name="open">
-		Open
-	</string>
-	<string name="close">
-		Close
-	</string>
-	<string name="copy">
-		עותק
-	</string>
+	<string name="off">Off</string>
+	<string name="on">On</string>
+	<string name="left">Left</string>
+	<string name="right">Right</string>
+	<string name="center">Center</string>
+	<string name="dark">Dark</string>
+	<string name="light">Light</string>
+	<string name="settings">הגדרות</string>
+	<string name="lang_system">System</string>
+	<string name="system_default">System</string>
+	<string name="hide">Hide</string>
+	<string name="rename">Rename</string>
+	<string name="okay">Okay</string>
+	<string name="save">Save</string>
+	<string name="show">Show</string>
+	<string name="reset">Reset</string>
+	<string name="cancel">Cancel</string>
+	<string name="enable">Enable</string>
+	<string name="disable">Disable</string>
+	<string name="enabled">Enabled</string>
+	<string name="disabled">Disabled</string>
+	<string name="open">Open</string>
+	<string name="close">Close</string>
+	<string name="copy">עותק</string>
 	<!-- Gestures Do Strings -->
-	<string name="show_notifications">
-		Show Notification
-	</string>
-	<string name="show_app_list">
-		Show App List
-	</string>
-	<string name="open_app">
-		Open App
-	</string>
-	<string name="lock_screen">
-		Lock Screen
-	</string>
-	<string name="open_quick_settings">
-		Quick Settings
-	</string>
-	<string name="show_recents">
-		Show Recents
-	</string>
-	<string name="open_power_dialog">
-		דיאלוג כוח
-	</string>
-	<string name="take_a_screenshot">
-		צלם מסך
-	</string>
-	<string name="left_page">
-		עבור לדף השמאלי
-	</string>
-	<string name="right_page">
-		עבור לדף הימני
-	</string>
-	<string name="double_tap_to_lock_screen">
-		Double tap to lock
-	</string>
+	<string name="show_notifications">Show Notification</string>
+	<string name="show_app_list">Show App List</string>
+	<string name="open_app">Open App</string>
+	<string name="lock_screen">Lock Screen</string>
+	<string name="open_quick_settings">Quick Settings</string>
+	<string name="show_recents">Show Recents</string>
+	<string name="open_power_dialog">דיאלוג כוח</string>
+	<string name="take_a_screenshot">צלם מסך</string>
+	<string name="left_page">עבור לדף השמאלי</string>
+	<string name="right_page">עבור לדף הימני</string>
+	<string name="double_tap_to_lock_screen">Double tap to lock</string>
 	<!-- Miscellaneous Strings -->
-	<string name="settings_text_size">
-		הגדרות גודל טקסט
-	</string>
-	<string name="display_hidden_apps">
-		הצג אפליקציות נסתרות
-	</string>
-	<string name="lock_settings">
-		הגדרות נעילה
-	</string>
+	<string name="settings_text_size">הגדרות גודל טקסט</string>
+	<string name="display_hidden_apps">הצג אפליקציות נסתרות</string>
+	<string name="lock_settings">הגדרות נעילה</string>
 	<!-- PinCode Strings -->
-	<string name="text_authentication_cancel">
-		ביטול האימות.
-	</string>
-	<string name="text_authentication_error">
-		שגיאת אימות:%1$s(קוד %2$d)
-	</string>
-	<string name="text_authentication_failed">
-		אימות נכשל.
-	</string>
-	<string name="text_biometric_login">
-		התחברות ביומטרית עבור mLauncher
-	</string>
-	<string name="text_biometric_login_sub">
-		היכנס באמצעות האישור הביומטרי שלך
-	</string>
+	<string name="text_authentication_cancel">ביטול האימות.</string>
+	<string name="text_authentication_error">שגיאת אימות:%1$s(קוד %2$d)</string>
+	<string name="text_authentication_failed">אימות נכשל.</string>
+	<string name="text_biometric_login">התחברות ביומטרית עבור mLauncher</string>
+	<string name="text_biometric_login_sub">היכנס באמצעות האישור הביומטרי שלך</string>
 	<!-- Unsorted Strings -->
-	<string name="show_apps">
-		All apps
-	</string>
-	<string name="drawer_list_empty_hint">
-		No apps found
-	</string>
-	<string name="long_press_for_settings">
-		Long press anywhere for settings
-	</string>
-	<string name="swipe_up_for_apps">
-		Swipe up for all apps
-	</string>
-	<string name="app_drawer_tips">
-		Tip: Swipe down to dismiss. Scroll to hide keyboard.
-	</string>
-	<string name="double_tap_lock_is_enabled_message">
-		If double tap lock disables fingerprint or face unlock, open mLauncher settings, tap on \'experimental\' and follow the instructions. Thank you.
-	</string>
-	<string name="double_tap_lock_uninstall_message">
-		Double tap to lock enabled.
-		\n\nNote: Turn this OFF first if you decide to delete mLauncher.
-	</string>
-	<string name="accessibility_service_name">
-		mLauncher Actions Service
-	</string>
-	<string name="accessibility_service_description">
-		שירות נגישות זה מאפשר ל-mLauncher לבצע פעולות מסוימות כמו נעילת המסך או פתיחת ההגדרות המהירות. שירות הנגישות שלנו אינו אוסף או משתף נתונים כלשהם.
-	</string>
-	<string name="version">
-		גִרְסָה
-	</string>
+	<string name="show_apps">All apps</string>
+	<string name="drawer_list_empty_hint">No apps found</string>
+	<string name="long_press_for_settings">Long press anywhere for settings</string>
+	<string name="swipe_up_for_apps">Swipe up for all apps</string>
+	<string name="app_drawer_tips">Tip: Swipe down to dismiss. Scroll to hide keyboard.</string>
+	<string name="double_tap_lock_is_enabled_message">If double tap lock disables fingerprint or face unlock, open mLauncher settings, tap on \'experimental\' and follow the instructions. Thank you.</string>
+	<string name="double_tap_lock_uninstall_message">Double tap to lock enabled.
+		\n\nNote: Turn this OFF first if you decide to delete mLauncher.</string>
+	<string name="accessibility_service_name">mLauncher Actions Service</string>
+	<string name="accessibility_service_description">שירות נגישות זה מאפשר ל-mLauncher לבצע פעולות מסוימות כמו נעילת המסך או פתיחת ההגדרות המהירות. שירות הנגישות שלנו אינו אוסף או משתף נתונים כלשהם.</string>
+	<string name="version">גִרְסָה</string>
 </resources>
