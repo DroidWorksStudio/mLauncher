@@ -2,3 +2,8 @@ Version : 1.4.3
 
 Corrections de bugs :
 [Bug] - Correction du changement de nom si vous renommez au nom d'origine.
+[Bug] - Correction des gestes de balayage.
+
+Support linguistique:
+
+[Langue] Fichiers de langue mis à jour.
