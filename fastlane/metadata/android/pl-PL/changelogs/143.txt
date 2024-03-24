@@ -1,5 +1,8 @@
 Wersja: 1.4.3
 
+Wzmocnienie:
+[Funkcja] — Dodano możliwość braku konieczności zmiany nazw aplikacji, jeśli zostały już ustawione za pomocą listy aplikacji.
+
 Poprawki błędów:
 [Błąd] - Naprawiono opcję Zmień nazwę w przypadku zmiany nazwy z powrotem na pierwotną.
 [Błąd] - Naprawiono gesty machnięcia.
