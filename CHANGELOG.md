@@ -7,6 +7,7 @@
 **Implemented Enhancements:**
 
 - \[Enhancement\] If App list renamed then also rename on Home screen if added later. [\#396](https://github.com/HeAndroids2Much/mLauncher/issues/396)
+- \[Feature\] - Added the ability to not have to rename apps if already set via app list [\#397](https://github.com/HeAndroids2Much/mLauncher/pull/397) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
 **Fixed Bugs:**
 
@@ -21,10 +22,6 @@
 **Release:**
 
 - \[Release\] - Release/update version to 143 \(v1.4.3\) [\#393](https://github.com/HeAndroids2Much/mLauncher/pull/393) ([HeCodes2Much](https://github.com/HeCodes2Much))
-
-**Merged pull requests:**
-
-- \[Feature\] - Added the ability to not have to rename apps if already set via app list [\#397](https://github.com/HeAndroids2Much/mLauncher/pull/397) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
 ## [1.4.2](https://github.com/HeAndroids2Much/mLauncher/tree/1.4.2) (22, March 2024)
 
