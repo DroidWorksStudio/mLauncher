@@ -1,0 +1,4 @@
+Versioni: 1.4.3
+
+Rregullime të gabimeve:
+[Bug] - Rregullohet Riemërtimi nëse riemërtohet përsëri në emrin origjinal.
