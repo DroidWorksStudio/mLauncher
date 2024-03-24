@@ -4,11 +4,11 @@ Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Min
 
 - Removed clutter, like ads and links
 - You can rename apps in the app-drawer (Renaming apps on the home screen is already supported. Just long-click on an app on the home screen and start typing)
-- We have added a lot more options for gestures on the home screen:
+- Much more customizability on home screen gestures
     - Gestures are now:
         - Swiping up, down, left, right
-        - Clicking on the clock
-        - Clicking on the Date
+        - Ability to change the app that opens when clicking on the clock
+        - Ability to change the app that opens when clicking on the date
     - Possible actions now include:
         - Open specified app
         - Display app list
@@ -19,11 +19,11 @@ Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Min
         - Power Dialog
         - Take A Screenshot
         - Disable Gesture
-- You can also position the clock independently of the home apps
+- Align clock independently of home apps
 - Change alignment of apps in app-drawer
 - Lock settings behind biometrics (toggle)
 - Change font size
-- Removed internet permission. You never know what an app developer wants to know about you.
+- Removed internet permission You never know what an app developer wants to know about you.
 
 ## Translations:
 
