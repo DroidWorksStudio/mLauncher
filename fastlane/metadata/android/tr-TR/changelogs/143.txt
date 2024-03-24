@@ -1,5 +1,8 @@
 Sürüm: 1.4.3
 
+Artırma:
+[Özellik] - Uygulama listesi aracılığıyla önceden ayarlanmışsa, uygulamaları yeniden adlandırmanıza gerek kalmaması özelliği eklendi.
+
 Hata düzeltmeleri:
 [Hata] - Orijinal isme geri dönülmesi durumunda Yeniden Adlandırma düzeltildi.
 [Hata] - Kaydırma hareketleri düzeltildi.
