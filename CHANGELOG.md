@@ -6,6 +6,7 @@
 
 **Fixed Bugs:**
 
+- Bug fix/fixed the swipe gestures [\#392](https://github.com/HeAndroids2Much/mLauncher/pull/392) ([HeCodes2Much](https://github.com/HeCodes2Much))
 - \[Bug\] - Fixed Rename if renaming back to original name. [\#389](https://github.com/HeAndroids2Much/mLauncher/pull/389) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
 **Language Support:**
