@@ -1,47 +1,50 @@
-### Type of change <!-- required to be filled in -->
+### Type of Change <!-- Required -->
 
-<!-- Please delete options that are not relevant. -->
+<!-- Select the applicable option(s) by placing an 'X' inside the square brackets, and remove any options that are not relevant. -->
 
-- [ ] Bugfix (user facing) <!-- non-breaking change which fixes an issue -->
-- [ ] Feature Request (user facing) <!-- non-breaking change which adds functionality -->
-- [ ] Codebase Improvement (dev facing) <!-- non-breaking change which refines the code base -->
-- [ ] Breaking Change (dev/user facing) <!--fix or feature that would cause existing functionality to not work as expected -->
-- [ ] Release (user facing) <!-- new release for mLauncher -->
+- [ ] Bug Fix (user-facing) <!-- Non-breaking change which fixes an issue -->
+- [ ] Feature Request (user-facing) <!-- Non-breaking change which adds functionality -->
+- [ ] Codebase Improvement (developer-facing) <!-- Non-breaking change which refines the codebase -->
+- [ ] Breaking Change (developer/user-facing) <!-- Fix or feature that would cause existing functionality to not work as expected -->
+- [ ] Release (user-facing) <!-- New release for mLauncher -->
 - [ ] This change requires a documentation update
 
-### All Submissions <!-- to be checked but remove any that are not required -->
+### All Submissions <!-- Check all applicable options -->
 
-- [ ] Have you checked to ensure there aren't other open [Pull Requests](../../../pulls) for the same update/change? <!-- required -->
-- [ ] Have you made a descriptive commit message with a short title (first line). <!-- required -->
-- [ ] Have you performed a self-review of your code <!-- required -->
-- [ ] Have you commented your code, particularly in hard-to-understand areas <!-- required -->
-- [ ] My changes generate no new warnings or errors of any kind <!-- required -->
-- [ ] You have done your changes in a separate branch. <!-- required -->
-- [ ] Branch has descriptive name that start with either the `bug/` `feat/` or `clean/`  prefixes. <!-- required --> 
-<!-- Good examples are: 'bug/signin-issue' 'feat/issue-templates' or 'clean/code-change-to-app-draw'. -->
+- [ ] Checked for existing [Pull Requests](../../../pulls) for the same update/change <!-- Required -->
+- [ ] Descriptive commit message with a short title <!-- Required -->
+- [ ] Self-reviewed code <!-- Required -->
+- [ ] Code comments, especially in complex areas <!-- Required -->
+- [ ] No new warnings or errors introduced <!-- Required -->
+- [ ] Changes made in a separate branch <!-- Required -->
+- [ ] Branch named with appropriate prefix (e.g., 'bug/', 'feat/', 'clean/', 'release/') <!-- Required -->
+<!-- Examples: 'bug/signin-issue', 'feat/issue-templates', 'clean/code-change-to-app-draw'. -->
 
-**After** these steps, you're ready to open a pull request.
+### Before Opening Pull Request
 
-- [ ] Give a descriptive title to your PR. <!-- required -->
-- [ ] Describe your changes in the area below. <!-- required -->
-- [ ] Put `closes #XXXX` in your comment to auto-close the issue that your PR fixes. <!--- Please delete if not relevant. -->
+- [ ] Descriptive title for your PR <!-- Required -->
+- [ ] Detailed description of changes <!-- Required -->
+- [ ] Include 'closes/fixes #XXXX' in the comment to auto-close relevant issues <!-- Delete if not relevant -->
 
-### Description of the changes in your PR
+### Description of Changes
 
 <!-- 
-Please include a summary of the changes and the related issue. 
-Please also include relevant motivation and context. 
-List any dependencies that are required for this change. 
+Include a summary of changes, related issues, motivation, context, and dependencies.
 -->
 
-#### Fixes the following issue(s) <!-- This section can be removed if this is a new feature and not a issue. -->
+#### Changes Description <!-- Provide a brief description of each new feature or issue fix. -->
 
 1.
 2.
 3.
 
-### Test Device: <!-- required -->
+### Test Device: <!-- Required -->
 - mLauncher version:
 - Device name:
 - Android version:
 - Other information:
+
+<!-- 
+Please ensure compliance with these guidelines to facilitate smoother handling of your submission. 
+Non-compliance may result in delays or rejection of your pull request.
+-->
