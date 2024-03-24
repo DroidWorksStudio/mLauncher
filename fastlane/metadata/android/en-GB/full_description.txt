@@ -1,3 +1,5 @@
+Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal and clean.
+
 # Forked with extra features
 
 - Removed clutter, like ads and links
@@ -9,12 +11,17 @@
         - Clicking on the Date
     - Possible actions now include:
         - Open specified app
+        - Display app list
         - Locking the screen
+        - Show Recent opened apps
         - Opening the notification drawer
         - Opening the quick settings
+        - Power Dialog
+        - Take A Screenshot
+        - Disable Gesture
 - You can also position the clock independently of the home apps
 - Change alignment of apps in app-drawer
-- The ability to have a pass code set for the settings page
+- Lock settings behind biometrics (toggle)
 - Change font size
 - Removed internet permission. You never know what an app developer wants to know about you.
 
