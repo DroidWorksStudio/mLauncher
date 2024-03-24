@@ -6,12 +6,16 @@
 
 **Fixed Bugs:**
 
-- Bug fix/fixed the swipe gestures [\#392](https://github.com/HeAndroids2Much/mLauncher/pull/392) ([HeCodes2Much](https://github.com/HeCodes2Much))
+- \[Bug\] - Fixed the swipe gestures [\#392](https://github.com/HeAndroids2Much/mLauncher/pull/392) ([HeCodes2Much](https://github.com/HeCodes2Much))
 - \[Bug\] - Fixed Rename if renaming back to original name. [\#389](https://github.com/HeAndroids2Much/mLauncher/pull/389) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
 **Language Support:**
 
 - \[Language\] Updated Language Files. [\#391](https://github.com/HeAndroids2Much/mLauncher/pull/391) ([HeCodes2Much](https://github.com/HeCodes2Much))
+
+**Release:**
+
+- \[Release\] - Release/update version to 143 \(v1.4.3\) [\#393](https://github.com/HeAndroids2Much/mLauncher/pull/393) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
 ## [1.4.2](https://github.com/HeAndroids2Much/mLauncher/tree/1.4.2) (22, March 2024)
 
