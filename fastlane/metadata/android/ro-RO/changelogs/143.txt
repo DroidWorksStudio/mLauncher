@@ -2,3 +2,8 @@ Versiune: 1.4.3
 
 Corectarea erorilor:
 [Eroare] - S-a remediat Redenumirea dacă redenumirea la numele original.
+[Eroare] - S-au remediat gesturile de glisare.
+
+Suport lingvistic:
+
+[Language] Fișiere de limbă actualizate.
