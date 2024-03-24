@@ -2,3 +2,8 @@ Version: 1.4.3
 
 Fejlrettelser:
 [Bug] - Fixed Omdøb hvis omdøbning tilbage til det oprindelige navn.
+[Bug] - Rettede swipe-bevægelserne.
+
+Sprogsupport:
+
+[Sprog] Opdaterede sprogfiler.
