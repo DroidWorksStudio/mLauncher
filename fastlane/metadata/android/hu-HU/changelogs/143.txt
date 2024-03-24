@@ -1,0 +1,4 @@
+Verzió: 1.4.3
+
+Hibajavítások:
+[Hiba] – Javítva az Átnevezés, ha visszanevezést az eredeti névre.
