@@ -2,3 +2,8 @@ Manaʻo: 1.4.3
 
 Hoʻoponopono Bug:
 [Bug] - Hoʻopaʻa inoa hou inā hoʻi hou i ka inoa kumu.
+[Bug] - Hoʻopaʻa i nā hana swipe.
+
+Kākoʻo ʻōlelo:
+
+[Language] Nā waihona ʻōlelo hou.
