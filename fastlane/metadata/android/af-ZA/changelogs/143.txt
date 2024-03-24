@@ -2,3 +2,8 @@ Weergawe: 1.4.3
 
 Foutoplossings:
 [Fout] - Vaste Hernoem as hernoem terug na oorspronklike naam.
+[Fout] - Het die veeggebare reggestel.
+
+Taalondersteuning:
+
+[Taal] Bygewerkte taallêers.
