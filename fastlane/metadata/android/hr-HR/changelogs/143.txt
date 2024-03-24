@@ -2,3 +2,8 @@ Verzija: 1.4.3
 
 Ispravke pogrešaka:
 [Bug] - Ispravljeno preimenovanje ako se preimenovanje vrati na izvorni naziv.
+[Bug] - Ispravljene su geste prelaska prstom.
+
+Jezična podrška:
+
+[Jezik] Ažurirane jezične datoteke.
