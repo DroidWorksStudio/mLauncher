@@ -1,7 +1,8 @@
 <div align='center'>
-	<img src='fastlane/metadata/android/en-US/images/icon.png' alt='mLauncher' width='100' height='100'>
-    <h2>mLauncher</h2>
-    <a href='https://f-droid.org/packages/app.mlauncher'><img src='https://camo.githubusercontent.com/f422f6f830e814ec7e766de8fef4db949c6add75a9d58548ab2f5d29855c0616/68747470733a2f2f6664726f69642e6769746c61622e696f2f617274776f726b2f62616467652f6765742d69742d6f6e2e706e67'></a>
+	<h2>mLauncher - Minimal and Clutter Free Android launcher</h2>
+	<img src='fastlane/metadata/android/en-US/images/phoneScreenshots/0.png' alt='mLauncher' width='100' height='100'>
+    	<p></p>
+    	<a href='https://f-droid.org/packages/app.mlauncher'><img src='https://fdroid.gitlab.io/artwork/badge/get-it-on.png' height="80"></a>
 </div>
 
 - Chat with us at [mLauncher](https://t.me/mLauncherAndroid) on telegram.
