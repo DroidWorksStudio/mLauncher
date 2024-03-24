@@ -1,5 +1,8 @@
 Útgáfa: 1.4.3
 
+Aukning:
+[Eiginleiki] - Bætti við möguleikanum á að þurfa ekki að endurnefna forrit ef þau eru þegar stillt í gegnum forritalista.
+
 Villuleiðréttingar:
 [Bug] - Fast endurnefna ef endurnefna aftur í upprunalegt nafn.
 [Bug] - Lagaði strjúkabendingarnar.
