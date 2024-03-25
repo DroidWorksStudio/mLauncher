@@ -48,7 +48,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 launchApp(appModel)
             }
 
-            AppDrawerFlag.SetHomeApp -> {
+            AppDrawerFlag.SetHomeApp, AppDrawerFlag.ReorderApps -> {
                 prefs.setHomeAppModel(n, appModel)
             }
 

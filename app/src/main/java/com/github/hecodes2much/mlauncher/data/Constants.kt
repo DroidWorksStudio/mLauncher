@@ -64,6 +64,7 @@ object Constants {
     enum class AppDrawerFlag {
         LaunchApp,
         HiddenApps,
+        ReorderApps,
         SetHomeApp,
         SetShortSwipeUp,
         SetShortSwipeDown,
