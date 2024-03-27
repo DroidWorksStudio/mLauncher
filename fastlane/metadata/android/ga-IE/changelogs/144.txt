@@ -1,0 +1,9 @@
+Leagan: 1.4.4
+
+Feabhsú:
+[Gné] - Cuireadh blúire leis le haghaidh aipeanna ath-ordú.
+[Gné] - Cuireadh leis an gcumas méid an chloig a athrú go neamhspleách.
+
+Tacaíocht Teanga:
+
+[Teanga] Comhaid Teanga Nuashonraithe.
