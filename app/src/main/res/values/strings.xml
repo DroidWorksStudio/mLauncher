@@ -25,6 +25,7 @@
     <string name="theme_mode">Theme mode</string>
     <string name="app_language">Interface Language</string>
     <string name="app_text_size">Text Size</string>
+    <string name="clock_text_size_multiplier">Clock Text Size Multiplier</string>
     <string name="app_padding_size">Padding Size</string>
     <string name="follow_accent_colors">Accent Colors</string>
     <string name="background_opacity">Background Opacity</string>
@@ -129,6 +130,4 @@
     <string name="accessibility_service_name">mLauncher Actions Service</string>
     <string name="accessibility_service_description">This accessibility service allows mLauncher to do certain actions such as locking the screen or opening the quick settings. Our accessibility service does not collect or share any data.</string>
     <string name="version">Version</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
