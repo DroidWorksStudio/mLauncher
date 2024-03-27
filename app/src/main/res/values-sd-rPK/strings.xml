@@ -22,6 +22,7 @@
     <string name="theme_mode">موضوع موڊ</string>
     <string name="app_language">انٽرفيس ٻولي</string>
     <string name="app_text_size">متن جي ماپ</string>
+    <string name="clock_text_size_multiplier">گھڙي جي متن جي سائيز ضرب</string>
     <string name="app_padding_size">پيڊنگ جي ماپ</string>
     <string name="follow_accent_colors">تلفظ رنگ</string>
     <string name="background_opacity">پس منظر جي شفافيت</string>
@@ -118,6 +119,4 @@
     <string name="accessibility_service_name">ايم لانچر ايڪشن سروس</string>
     <string name="accessibility_service_description">هي رسائي سروس mLauncher کي ڪجهه ڪم ڪرڻ جي اجازت ڏئي ٿي جهڙوڪ اسڪرين کي لاڪ ڪرڻ يا جلدي سيٽنگون کولڻ. اسان جي رسائي جي خدمت ڪنهن به ڊيٽا کي گڏ يا حصيداري نٿو ڪري.</string>
     <string name="version">نسخو</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">هيلو خالي ٽڪرو</string>
 </resources>
