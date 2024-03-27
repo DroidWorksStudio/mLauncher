@@ -22,6 +22,7 @@
     <string name="theme_mode">Modalità Tema</string>
     <string name="app_language">Lingwa tal-Interface</string>
     <string name="app_text_size">Daqs tat-Test</string>
+    <string name="clock_text_size_multiplier">Multiplikatur tad-Daqs tat-Test tal-Arloġġ</string>
     <string name="app_padding_size">Daqs tal-ikkuttunar</string>
     <string name="follow_accent_colors">Kuluri Aċċent</string>
     <string name="background_opacity">Opaċità fl-isfond</string>
@@ -118,6 +119,4 @@
     <string name="accessibility_service_name">Servizz ta\' Azzjonijiet mLauncher</string>
     <string name="accessibility_service_description">Dan is-servizz ta’ aċċessibbiltà jippermetti lil mLauncher jagħmel ċerti azzjonijiet bħall-illokkjar tal-iskrin jew il-ftuħ tas-settings ta’ malajr. Is-servizz ta’ aċċessibbiltà tagħna ma jiġbor jew jaqsam l-ebda data.</string>
     <string name="version">Verżjoni</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello framment vojt</string>
 </resources>
