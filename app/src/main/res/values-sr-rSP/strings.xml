@@ -22,6 +22,7 @@
     <string name="theme_mode">Theme mode</string>
     <string name="app_language">Interface Language</string>
     <string name="app_text_size">Text Size</string>
+    <string name="clock_text_size_multiplier">Множилац величине текста сата</string>
     <string name="app_padding_size">Паддинг Сизе</string>
     <string name="follow_accent_colors">Аццент Цолорс</string>
     <string name="background_opacity">Прозирност позадине</string>
@@ -118,6 +119,4 @@
     <string name="accessibility_service_name">mLauncher Actions Service</string>
     <string name="accessibility_service_description">Ова услуга приступачности омогућава мЛаунцхер-у да изврши одређене радње као што је закључавање екрана или отварање брзих подешавања. Наша услуга приступачности не прикупља нити дели никакве податке.</string>
     <string name="version">Верзија</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Здраво празан фрагмент</string>
 </resources>
