@@ -1,0 +1,9 @@
+Version: 1.4.4
+
+Forbedring:
+[Funktion] - Tilføjet et fragment til genbestilling af apps.
+[Funktion] - Tilføjet muligheden for at ændre urstørrelsen uafhængigt.
+
+Sprogsupport:
+
+[Sprog] Opdaterede sprogfiler.
