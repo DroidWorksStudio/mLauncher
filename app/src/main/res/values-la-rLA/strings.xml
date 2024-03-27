@@ -22,6 +22,7 @@
     <string name="theme_mode">Theme mode</string>
     <string name="app_language">Interface Language</string>
     <string name="app_text_size">Text Size</string>
+    <string name="clock_text_size_multiplier">Horologium Text Size Multiplier</string>
     <string name="app_padding_size">Nullam Location</string>
     <string name="follow_accent_colors">Accent Colores</string>
     <string name="background_opacity">Background Opacity</string>
@@ -118,6 +119,4 @@
     <string name="accessibility_service_name">mLauncher Actiones Service</string>
     <string name="accessibility_service_description">Accessibilitas haec servitii permittit mLauncher aliquas actiones facere, ut velum claudens vel occasus vivos aperiens. Nostri muneris accessibilitas nullas notitias colligit nec communicat.</string>
     <string name="version">Version</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Salve blank fragmentum</string>
 </resources>
