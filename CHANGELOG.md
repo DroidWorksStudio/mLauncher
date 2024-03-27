@@ -14,6 +14,10 @@
 
 - \[Language\] Updated Language Files. [\#405](https://github.com/HeAndroids2Much/mLauncher/pull/405) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
+**Release:**
+
+- \[Release\] - Update the Release version to 144 \(v1.4.4\) [\#407](https://github.com/HeAndroids2Much/mLauncher/pull/407) ([HeCodes2Much](https://github.com/HeCodes2Much))
+
 ## [1.4.3](https://github.com/HeAndroids2Much/mLauncher/tree/1.4.3) (24, March 2024)
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/1.4.2...1.4.3)
