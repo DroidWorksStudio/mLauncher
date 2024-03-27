@@ -1,0 +1,9 @@
+Versija: 1.4.4
+
+Patobulinimas:
+[Funkcija] – pridėtas fragmentas, skirtas pakartotinai užsakyti programas.
+[Funkcija] – Pridėta galimybė savarankiškai keisti laikrodžio dydį.
+
+Kalbos palaikymas:
+
+[Kalba] Atnaujinti kalbos failai.
