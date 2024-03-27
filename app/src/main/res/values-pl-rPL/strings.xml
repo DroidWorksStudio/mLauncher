@@ -22,6 +22,7 @@
     <string name="theme_mode">Tryb motywu</string>
     <string name="app_language">Język interfejsu</string>
     <string name="app_text_size">Rozmiar tekstu</string>
+    <string name="clock_text_size_multiplier">Mnożnik rozmiaru tekstu zegara</string>
     <string name="app_padding_size">Rozmiar wypełnienia</string>
     <string name="follow_accent_colors">Kolory akcentujące</string>
     <string name="background_opacity">Krycie tła</string>
@@ -118,6 +119,4 @@
     <string name="accessibility_service_name">Usługa działań mLauncher</string>
     <string name="accessibility_service_description">Ta usługa ułatwień dostępu umożliwia mLauncherowi wykonywanie określonych czynności, takich jak blokowanie ekranu lub otwieranie szybkich ustawień. Nasza usługa ułatwień dostępu nie gromadzi ani nie udostępnia żadnych danych.</string>
     <string name="version">Wersja</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Witam pusty fragment</string>
 </resources>
