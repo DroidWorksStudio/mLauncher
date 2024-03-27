@@ -1,5 +1,13 @@
 # Changelog
 
+## [Coming Soon](https://github.com/HeAndroids2Much/mLauncher/tree/HEAD)
+
+[Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/1.4.3...HEAD)
+
+**Implemented Enhancements:**
+
+- \[Feature\] - Added a fragment for Re ordering apps. [\#402](https://github.com/HeAndroids2Much/mLauncher/pull/402) ([HeCodes2Much](https://github.com/HeCodes2Much))
+
 ## [1.4.3](https://github.com/HeAndroids2Much/mLauncher/tree/1.4.3) (24, March 2024)
 
 [Full Changelog](https://github.com/HeAndroids2Much/mLauncher/compare/1.4.2...1.4.3)
