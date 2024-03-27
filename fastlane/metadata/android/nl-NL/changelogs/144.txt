@@ -1,0 +1,9 @@
+Versie: 1.4.4
+
+Verbetering:
+[Feature] - Een fragment toegevoegd voor het opnieuw bestellen van apps.
+[Feature] - De mogelijkheid toegevoegd om de klokgrootte onafhankelijk te wijzigen.
+
+Taalondersteuning:
+
+[Taal] Bijgewerkte taalbestanden.
