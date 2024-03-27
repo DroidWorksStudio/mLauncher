@@ -22,6 +22,7 @@
     <string name="theme_mode">Теми</string>
     <string name="app_language">Мова інтерфейсу</string>
     <string name="app_text_size">Розмір тексту</string>
+    <string name="clock_text_size_multiplier">Множник розміру тексту годинника</string>
     <string name="app_padding_size">Розмір прокладки</string>
     <string name="follow_accent_colors">Акцентні кольори</string>
     <string name="background_opacity">Непрозорість фону</string>
@@ -118,6 +119,4 @@
     <string name="accessibility_service_name">функції mLauncher Service</string>
     <string name="accessibility_service_description">Ця служба доступності дозволяє mLauncher виконувати певні дії, наприклад блокувати екран або відкривати швидкі налаштування. Наша служба доступності не збирає та не надає жодних даних.</string>
     <string name="version">Версія</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Привіт пустий фрагмент</string>
 </resources>
