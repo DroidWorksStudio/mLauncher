@@ -1,0 +1,9 @@
+Phiên bản: 1.4.4
+
+Sự nâng cao:
+[Tính năng] - Đã thêm một đoạn cho ứng dụng đặt hàng lại.
+[Tính năng] - Đã thêm khả năng thay đổi kích thước đồng hồ một cách độc lập.
+
+Hỗ trợ ngôn ngữ:
+
+[Ngôn ngữ] Tệp ngôn ngữ được cập nhật.

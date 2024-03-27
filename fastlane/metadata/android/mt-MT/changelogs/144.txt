@@ -1,0 +1,9 @@
+Verżjoni: 1.4.4
+
+Titjib:
+[Karatteristika] - Miżjud framment għall-apps tal-ordni mill-ġdid.
+[Karatteristika] - Żid il-ħila li tbiddel id-daqs tal-arloġġ b'mod indipendenti.
+
+Appoġġ Lingwistiku:
+
+[Lingwa] Fajls tal-Lingwa Aġġornata.

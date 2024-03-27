@@ -1,0 +1,9 @@
+Versioon: 1.4.4
+
+Täiendus:
+[Funktsioon] – lisatud fragment rakenduste uuesti tellimiseks.
+[Funktsioon] – lisati võimalus kella suurust iseseisvalt muuta.
+
+Keele tugi:
+
+[Keel] Värskendatud keelefailid.

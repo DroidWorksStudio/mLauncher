@@ -1,0 +1,9 @@
+Versione: 1.4.4
+
+Aumento:
+[Funzione] - Aggiunto un frammento per riordinare le app.
+[Caratteristica] - Aggiunta la possibilità di modificare le dimensioni dell'orologio in modo indipendente.
+
+Supporto linguistico:
+
+[Lingua] File di lingua aggiornati.
