@@ -22,6 +22,7 @@
     <string name="theme_mode">Mode ng tema</string>
     <string name="app_language">Wika ng Interface</string>
     <string name="app_text_size">Laki ng Teksto</string>
+    <string name="clock_text_size_multiplier">Multiplier ng Laki ng Teksto ng Orasan</string>
     <string name="app_padding_size">Laki ng Padding</string>
     <string name="follow_accent_colors">Mga Kulay ng Accent</string>
     <string name="background_opacity">Opacity ng Background</string>
@@ -118,6 +119,4 @@
     <string name="accessibility_service_name">Serbisyo ng mLauncher Actions</string>
     <string name="accessibility_service_description">Binibigyang-daan ng serbisyo ng accessibility na ito ang mLauncher na gumawa ng ilang partikular na pagkilos gaya ng pag-lock ng screen o pagbubukas ng mga mabilisang setting. Ang aming serbisyo sa pagiging naa-access ay hindi nangongolekta o nagbabahagi ng anumang data.</string>
     <string name="version">Bersyon</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
