@@ -22,6 +22,7 @@
     <string name="theme_mode">โหมดธีม</string>
     <string name="app_language">ภาษาอินเทอร์เฟซ</string>
     <string name="app_text_size">ขนาดตัวอักษร</string>
+    <string name="clock_text_size_multiplier">ตัวคูณขนาดข้อความนาฬิกา</string>
     <string name="app_padding_size">ขนาดช่องว่างภายใน</string>
     <string name="follow_accent_colors">เน้นสี</string>
     <string name="background_opacity">ความทึบของพื้นหลัง</string>
@@ -118,6 +119,4 @@
     <string name="accessibility_service_name">บริการดำเนินการ mLauncher</string>
     <string name="accessibility_service_description">บริการการเข้าถึงนี้ช่วยให้ mLauncher ดำเนินการบางอย่างได้ เช่น ล็อคหน้าจอหรือเปิดการตั้งค่าด่วน บริการการเข้าถึงของเราจะไม่รวบรวมหรือแบ่งปันข้อมูลใดๆ</string>
     <string name="version">เวอร์ชัน</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">สวัสดีส่วนที่ว่างเปล่า</string>
 </resources>
