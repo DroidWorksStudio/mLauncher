@@ -22,6 +22,7 @@
     <string name="theme_mode">थीम मोड</string>
     <string name="app_language">अंतरफलक भाषा</string>
     <string name="app_text_size">शब्दों का आकर</string>
+    <string name="clock_text_size_multiplier">घड़ी पाठ आकार गुणक</string>
     <string name="app_padding_size">पैडिंग आकार</string>
     <string name="follow_accent_colors">एक्सेंट रंग</string>
     <string name="background_opacity">पृष्ठभूमि अस्पष्टता</string>
@@ -118,6 +119,4 @@
     <string name="accessibility_service_name">एमएल लॉन्चर एक्शन सर्विस</string>
     <string name="accessibility_service_description">यह एक्सेसिबिलिटी सेवा एमएल लॉन्चर को स्क्रीन लॉक करने या त्वरित सेटिंग खोलने जैसी कुछ कार्रवाइयां करने की अनुमति देती है। हमारी एक्सेसिबिलिटी सेवा कोई डेटा एकत्र या साझा नहीं करती है।</string>
     <string name="version">संस्करण</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">नमस्ते खाली टुकड़ा</string>
 </resources>
