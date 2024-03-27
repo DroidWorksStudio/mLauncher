@@ -22,6 +22,7 @@
     <string name="theme_mode">Režim motivu</string>
     <string name="app_language">Jazyk rozhraní</string>
     <string name="app_text_size">Velikost textu</string>
+    <string name="clock_text_size_multiplier">Násobitel velikosti textu hodin</string>
     <string name="app_padding_size">Velikost vycpávky</string>
     <string name="follow_accent_colors">Akcentní barvy</string>
     <string name="background_opacity">Neprůhlednost pozadí</string>
@@ -118,6 +119,4 @@
     <string name="accessibility_service_name">mLauncher akční služba</string>
     <string name="accessibility_service_description">Tato služba usnadnění umožňuje mLauncheru provádět určité akce, jako je zamykání obrazovky nebo otevření rychlých nastavení. Naše služba přístupnosti neshromažďuje ani nesdílí žádná data.</string>
     <string name="version">Verze</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Ahoj prázdný fragment</string>
 </resources>
