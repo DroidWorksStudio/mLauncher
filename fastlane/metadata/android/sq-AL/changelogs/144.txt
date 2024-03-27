@@ -1,0 +1,9 @@
+Versioni: 1.4.4
+
+Përmirësimi:
+[Veçori] - Shtoi një fragment për Ri-porositjen e aplikacioneve.
+[Veçori] - U shtua aftësia për të ndryshuar madhësinë e orës në mënyrë të pavarur.
+
+Mbështetje gjuhësore:
+
+[Gjuha] Skedarët e përditësuar të gjuhës.
