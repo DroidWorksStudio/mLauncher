@@ -22,6 +22,7 @@
     <string name="theme_mode">Tema modus</string>
     <string name="app_language">Grensesnitt språk</string>
     <string name="app_text_size">Tekst størrelse</string>
+    <string name="clock_text_size_multiplier">Klokke tekststørrelse multiplikator</string>
     <string name="app_padding_size">Polstring Størrelse</string>
     <string name="follow_accent_colors">Aksentfarger</string>
     <string name="background_opacity">Bakgrunns gjennomsiktighet</string>
@@ -118,6 +119,4 @@
     <string name="accessibility_service_name">mLauncher handlinger Tjeneste</string>
     <string name="accessibility_service_description">Denne tilgjengelighetstjenesten lar mLauncher utføre visse handlinger som å låse skjermen eller åpne hurtiginnstillingene. Vår tilgjengelighetstjeneste samler eller deler ingen data.</string>
     <string name="version">Versjon</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hei tomt fragment</string>
 </resources>
