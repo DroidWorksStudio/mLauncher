@@ -22,6 +22,7 @@
     <string name="theme_mode">Mod temă</string>
     <string name="app_language">Limba interfeței</string>
     <string name="app_text_size">Dimensiune text</string>
+    <string name="clock_text_size_multiplier">Multiplicator de dimensiune a textului ceasului</string>
     <string name="app_padding_size">Dimensiunea căptușelii</string>
     <string name="follow_accent_colors">Culori de accent</string>
     <string name="background_opacity">Opacitatea fundalului</string>
@@ -118,6 +119,4 @@
     <string name="accessibility_service_name">Serviciul de acțiuni mLauncher</string>
     <string name="accessibility_service_description">Acest serviciu de accesibilitate permite mLauncher să facă anumite acțiuni, cum ar fi blocarea ecranului sau deschiderea setărilor rapide. Serviciul nostru de accesibilitate nu colectează și nu partajează date.</string>
     <string name="version">Versiune</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Salut fragment gol</string>
 </resources>
