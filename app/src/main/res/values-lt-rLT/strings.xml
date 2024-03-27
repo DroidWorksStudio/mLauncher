@@ -22,6 +22,7 @@
     <string name="theme_mode">Temavimo režimas</string>
     <string name="app_language">Sąsajos kalba</string>
     <string name="app_text_size">Tesksto dydis</string>
+    <string name="clock_text_size_multiplier">Laikrodžio teksto dydžio daugiklis</string>
     <string name="app_padding_size">Pamušalo dydis</string>
     <string name="follow_accent_colors">Akcentinės spalvos</string>
     <string name="background_opacity">Fono neskaidrumas</string>
@@ -118,6 +119,4 @@
     <string name="accessibility_service_name">mLauncher veiksmų tarnyba</string>
     <string name="accessibility_service_description">Ši pritaikymo neįgaliesiems paslauga leidžia „mLauncher“ atlikti tam tikrus veiksmus, pvz., užrakinti ekraną arba atidaryti sparčiuosius nustatymus. Mūsų pritaikymo neįgaliesiems paslauga nerenka ir nebendrina jokių duomenų.</string>
     <string name="version">Versija</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Sveiki, tuščias fragmentas</string>
 </resources>
