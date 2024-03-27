@@ -22,6 +22,7 @@
     <string name="theme_mode">主题模式</string>
     <string name="app_language">应用界面语言</string>
     <string name="app_text_size">文本尺寸</string>
+    <string name="clock_text_size_multiplier">时钟文本大小乘数</string>
     <string name="app_padding_size">填充尺寸</string>
     <string name="follow_accent_colors">强调色</string>
     <string name="background_opacity">背景不透明度</string>
@@ -118,6 +119,4 @@
     <string name="accessibility_service_name">OlauncherCF 操作服务</string>
     <string name="accessibility_service_description">此辅助功能服务允许 mLauncher 执行某些操作，例如锁定屏幕或打开快速设置。我们的无障碍服务不收集或共享任何数据。</string>
     <string name="version">版本</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">你好空白片段</string>
 </resources>
