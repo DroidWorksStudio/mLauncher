@@ -22,6 +22,7 @@
     <string name="theme_mode">Λειτουργία θέματος</string>
     <string name="app_language">Γλώσσα Διεπαφής</string>
     <string name="app_text_size">Μέγεθος Κειμένου</string>
+    <string name="clock_text_size_multiplier">Πολλαπλασιαστής μεγέθους κειμένου ρολογιού</string>
     <string name="app_padding_size">Μέγεθος padding</string>
     <string name="follow_accent_colors">Χρώματα έμφασης</string>
     <string name="background_opacity">Αδιαφάνεια φόντου</string>
@@ -118,6 +119,4 @@
     <string name="accessibility_service_name">Υπηρεσία ενεργειών mLauncher</string>
     <string name="accessibility_service_description">Αυτή η υπηρεσία προσβασιμότητας επιτρέπει στο mLauncher να κάνει ορισμένες ενέργειες, όπως το κλείδωμα της οθόνης ή το άνοιγμα των γρήγορων ρυθμίσεων. Η υπηρεσία προσβασιμότητας μας δεν συλλέγει ούτε κοινοποιεί δεδομένα.</string>
     <string name="version">Εκδοχή</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Γεια σου κενό κομμάτι</string>
 </resources>
