@@ -22,6 +22,7 @@
     <string name="theme_mode">Teemarežiim</string>
     <string name="app_language">Kasutajaliidese keel</string>
     <string name="app_text_size">Teksti suurus</string>
+    <string name="clock_text_size_multiplier">Kella teksti suuruse kordaja</string>
     <string name="app_padding_size">Polsterduse suurus</string>
     <string name="follow_accent_colors">Aktsentvärvid</string>
     <string name="background_opacity">Tausta läbipaistmatus</string>
@@ -118,6 +119,4 @@
     <string name="accessibility_service_name">mLauncher Actions Service</string>
     <string name="accessibility_service_description">See juurdepääsetavuse teenus võimaldab mLauncheril teha teatud toiminguid, nagu ekraani lukustamine või kiirseadete avamine. Meie juurdepääsetavuse teenus ei kogu ega jaga andmeid.</string>
     <string name="version">Versioon</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Tere tühi fragment</string>
 </resources>
