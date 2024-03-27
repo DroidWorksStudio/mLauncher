@@ -22,6 +22,7 @@
     <string name="theme_mode">Fomba lohahevitra</string>
     <string name="app_language">Fiteny Interface</string>
     <string name="app_text_size">Haben\'ny soratra</string>
+    <string name="clock_text_size_multiplier">Famantaranandro ny haben\'ny soratra</string>
     <string name="app_padding_size">Haben\'ny padding</string>
     <string name="follow_accent_colors">Loko Accent</string>
     <string name="background_opacity">Opacity ambadika</string>
@@ -118,6 +119,4 @@
     <string name="accessibility_service_name">MLauncher Actions Service</string>
     <string name="accessibility_service_description">Ity serivisy fidirana ity dia ahafahan\'ny mLauncher manao hetsika sasany toy ny fanidiana ny efijery na fanokafana ny fanovana haingana. Ny serivisy fidiranay dia tsy manangona na mizara angona.</string>
     <string name="version">Malagasy Bible</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Salama sombiny banga</string>
 </resources>
