@@ -22,6 +22,7 @@
     <string name="theme_mode">Þemahamur</string>
     <string name="app_language">Viðmótstungumál</string>
     <string name="app_text_size">Textastærð</string>
+    <string name="clock_text_size_multiplier">Textastærðarmargfaldari fyrir klukku</string>
     <string name="app_padding_size">Bólstrun Stærð</string>
     <string name="follow_accent_colors">Hreim litir</string>
     <string name="background_opacity">Ógagnsæi í bakgrunni</string>
@@ -118,6 +119,4 @@
     <string name="accessibility_service_name">mLauncher Actions Service</string>
     <string name="accessibility_service_description">Þessi aðgengisþjónusta gerir mLauncher kleift að gera ákveðnar aðgerðir eins og að læsa skjánum eða opna flýtistillingarnar. Aðgengisþjónusta okkar safnar ekki né deilir neinum gögnum.</string>
     <string name="version">Útgáfa</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Halló tómt brot</string>
 </resources>
