@@ -22,6 +22,7 @@
     <string name="theme_mode">وضع السمة</string>
     <string name="app_language">لغة الواجهة</string>
     <string name="app_text_size">حجم النص</string>
+    <string name="clock_text_size_multiplier">مضاعف حجم النص على مدار الساعة</string>
     <string name="app_padding_size">حجم الحشوة</string>
     <string name="follow_accent_colors">ألوان مميزة</string>
     <string name="background_opacity">شفافية الخلفية</string>
@@ -118,6 +119,4 @@
     <string name="accessibility_service_name">خدمة إجراءات mLauncher</string>
     <string name="accessibility_service_description">تتيح خدمة إمكانية الوصول هذه لـ mLauncher القيام بإجراءات معينة مثل قفل الشاشة أو فتح الإعدادات السريعة. خدمة الوصول لدينا لا تجمع أو تشارك أي بيانات.</string>
     <string name="version">إصدار</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">مرحبا جزء فارغ</string>
 </resources>
