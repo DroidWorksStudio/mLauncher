@@ -22,6 +22,7 @@
     <string name="theme_mode">Hali ya mandhari</string>
     <string name="app_language">Lugha ya Kiolesura</string>
     <string name="app_text_size">Ukubwa wa Maandishi</string>
+    <string name="clock_text_size_multiplier">Kizidishi cha Ukubwa wa Maandishi ya Saa</string>
     <string name="app_padding_size">Ukubwa wa Padding</string>
     <string name="follow_accent_colors">Rangi Lafudhi</string>
     <string name="background_opacity">Uwazi wa Mandharinyuma</string>
@@ -118,6 +119,4 @@
     <string name="accessibility_service_name">Huduma ya Vitendo vya mLauncher</string>
     <string name="accessibility_service_description">Huduma hii ya ufikivu huruhusu mLauncher kufanya vitendo fulani kama vile kufunga skrini au kufungua mipangilio ya haraka. Huduma yetu ya ufikivu haikusanyi wala kushiriki data yoyote.</string>
     <string name="version">Toleo</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Habari kipande tupu</string>
 </resources>
