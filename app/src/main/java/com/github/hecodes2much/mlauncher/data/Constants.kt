@@ -26,6 +26,9 @@ object Constants {
     const val TEXT_SIZE_MIN = 10
     const val TEXT_SIZE_MAX = 50
 
+    const val TEXT_MULTIPLIER_SIZE_MIN = 1f
+    const val TEXT_MULTIPLIER_SIZE_MAX = 5f
+
     const val TEXT_MARGIN_MIN = 0
     const val TEXT_MARGIN_MAX = 50
 
