@@ -22,6 +22,7 @@
     <string name="theme_mode">Mode thème</string>
     <string name="app_language">Langue de l\'interface</string>
     <string name="app_text_size">Taille du texte</string>
+    <string name="clock_text_size_multiplier">Multiplicateur de taille de texte d\'horloge</string>
     <string name="app_padding_size">Taille de rembourrage</string>
     <string name="follow_accent_colors">Couleurs d\'accentuation</string>
     <string name="background_opacity">Opacité du fond</string>
@@ -118,6 +119,4 @@
     <string name="accessibility_service_name">Service d\'actions mLauncher</string>
     <string name="accessibility_service_description">Ce service d\'accessibilité permet à mLauncher d\'effectuer certaines actions telles que verrouiller l\'écran ou ouvrir les paramètres rapides. Notre service d\'accessibilité ne collecte ni ne partage aucune donnée.</string>
     <string name="version">Version</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Bonjour fragment vierge</string>
 </resources>
