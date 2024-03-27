@@ -22,6 +22,7 @@
     <string name="theme_mode">Режим на темата</string>
     <string name="app_language">Език на интерфейса</string>
     <string name="app_text_size">Размер на текста</string>
+    <string name="clock_text_size_multiplier">Умножител на размера на текста на часовника</string>
     <string name="app_padding_size">Размер на подложката</string>
     <string name="follow_accent_colors">Акцентни цветове</string>
     <string name="background_opacity">Непрозрачност на фона</string>
@@ -118,6 +119,4 @@
     <string name="accessibility_service_name">Услуга за действия на mLauncher</string>
     <string name="accessibility_service_description">Тази услуга за достъпност позволява на mLauncher да извършва определени действия като заключване на екрана или отваряне на бързите настройки. Нашата услуга за достъпност не събира и не споделя никакви данни.</string>
     <string name="version">Версия</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Здравей празен фрагмент</string>
 </resources>
