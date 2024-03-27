@@ -22,6 +22,7 @@
     <string name="theme_mode">Mode tema</string>
     <string name="app_language">Bahasa Antarmuka</string>
     <string name="app_text_size">Ukuran Teks</string>
+    <string name="clock_text_size_multiplier">Pengganda Ukuran Teks Jam</string>
     <string name="app_padding_size">Ukuran Bantalan</string>
     <string name="follow_accent_colors">Warna Aksen</string>
     <string name="background_opacity">Opasitas Latar Belakang</string>
@@ -118,6 +119,4 @@
     <string name="accessibility_service_name">Layanan Tindakan mLauncher</string>
     <string name="accessibility_service_description">Layanan aksesibilitas ini memungkinkan mLauncher melakukan tindakan tertentu seperti mengunci layar atau membuka pengaturan cepat. Layanan aksesibilitas kami tidak mengumpulkan atau membagikan data apa pun.</string>
     <string name="version">Versi: kapan</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Halo fragmen kosong</string>
 </resources>
