@@ -22,6 +22,7 @@
     <string name="theme_mode">തീം മോഡ്</string>
     <string name="app_language">ഇന്റർഫേസ് ഭാഷ</string>
     <string name="app_text_size">വാചക വലുപ്പം</string>
+    <string name="clock_text_size_multiplier">ക്ലോക്ക് ടെക്സ്റ്റ് സൈസ് മൾട്ടിപ്ലയർ</string>
     <string name="app_padding_size">പാഡിംഗ് വലുപ്പം</string>
     <string name="follow_accent_colors">ആക്സന്റ് നിറങ്ങൾ</string>
     <string name="background_opacity">പശ്ചാത്തല അതാര്യത</string>
@@ -118,6 +119,4 @@
     <string name="accessibility_service_name">mLouncher പ്രവർത്തന സേവനം</string>
     <string name="accessibility_service_description">സ്‌ക്രീൻ ലോക്കുചെയ്യുകയോ ദ്രുത ക്രമീകരണങ്ങൾ തുറക്കുകയോ പോലുള്ള ചില പ്രവർത്തനങ്ങൾ ചെയ്യാൻ mLauncher-നെ ഈ പ്രവേശനക്ഷമത സേവനം അനുവദിക്കുന്നു. ഞങ്ങളുടെ പ്രവേശനക്ഷമത സേവനം ഒരു ഡാറ്റയും ശേഖരിക്കുകയോ പങ്കിടുകയോ ചെയ്യുന്നില്ല.</string>
     <string name="version">പതിപ്പ്</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">ഹലോ ശൂന്യ ശകലം</string>
 </resources>
