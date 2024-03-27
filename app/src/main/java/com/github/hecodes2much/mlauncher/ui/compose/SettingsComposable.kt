@@ -31,6 +31,8 @@ import com.github.hecodes2much.mlauncher.style.BORDER_SIZE
 import com.github.hecodes2much.mlauncher.style.CORNER_RADIUS
 import com.github.hecodes2much.mlauncher.style.SETTINGS_PADDING
 import com.smarttoolfactory.slider.*
+import java.math.BigDecimal
+import java.math.RoundingMode
 
 object SettingsComposable {
 
@@ -216,14 +218,14 @@ object SettingsComposable {
     @Composable
     fun SettingsNumberItem(
         title: String,
-        currentSelection: MutableState<Int>,
-        min: Int = Int.MIN_VALUE,
-        max: Int = Int.MAX_VALUE,
+        currentSelection: MutableState<Float>,
+        min: Float = Float.MIN_VALUE,
+        max: Float = Float.MAX_VALUE,
         open: MutableState<Boolean>,
         onChange: (Boolean) -> Unit,
-        onValueChange: (Int) -> Unit = {},
+        onValueChange: (Float) -> Unit = {},
         fontSize: TextUnit = TextUnit.Unspecified,
-        onSelect: (Int) -> Unit
+        onSelect: (Float) -> Unit
     ) {
         Column {
             Text(
@@ -429,12 +431,12 @@ object SettingsComposable {
 
     @Composable
     private fun SettingsNumberSelector(
-        number: MutableState<Int>,
-        min: Int,
-        max: Int,
+        number: MutableState<Float>,
+        min: Float,
+        max: Float,
         fontSize: TextUnit = TextUnit.Unspecified,
-        onValueChange: (Int) -> Unit = {},
-        onCommit: (Int) -> Unit
+        onValueChange: (Float) -> Unit = {},
+        onCommit: (Float) -> Unit
     ) {
         ConstraintLayout(
             modifier = Modifier
@@ -444,8 +446,9 @@ object SettingsComposable {
             val (plus, minus, text, button) = createRefs()
             TextButton(
                 onClick = {
-                    if (number.value > min) {
-                        number.value -= 1
+                    val newValue = (BigDecimal(number.value.toDouble()) + BigDecimal("0.1")).toFloat()
+                    if (newValue <= max) {
+                        number.value = newValue.roundToTwoDecimalPlaces()
                         onValueChange(number.value)
                     }
                 },
@@ -458,7 +461,7 @@ object SettingsComposable {
                     },
             ) {
                 Text(
-                    "-",
+                    "+",
                     style = SettingsTheme.typography.button,
                     fontSize = fontSize
                 )
@@ -478,8 +481,9 @@ object SettingsComposable {
             )
             TextButton(
                 onClick = {
-                    if (number.value < max) {
-                        number.value += 1
+                    val newValue = (BigDecimal(number.value.toDouble()) - BigDecimal("0.1")).toFloat()
+                    if (newValue >= min) {
+                        number.value = newValue.roundToTwoDecimalPlaces()
                         onValueChange(number.value)
                     }
                 },
@@ -492,7 +496,7 @@ object SettingsComposable {
                     },
             ) {
                 Text(
-                    "+",
+                    "-",
                     style = SettingsTheme.typography.button,
                     fontSize = fontSize
                 )
@@ -514,6 +518,10 @@ object SettingsComposable {
                 )
             }
         }
+    }
+
+    private fun Float.roundToTwoDecimalPlaces(): Float {
+        return BigDecimal(this.toDouble()).setScale(2, RoundingMode.HALF_EVEN).toFloat()
     }
 
     @Composable

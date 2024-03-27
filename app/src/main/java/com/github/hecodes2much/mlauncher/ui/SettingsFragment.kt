@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -51,6 +52,7 @@ import com.github.hecodes2much.mlauncher.style.SettingsTheme
 import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsArea
 import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsGestureItem
 import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsItem
+import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsNumberItem
 import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsSliderItem
 import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsTextButton
 import com.github.hecodes2much.mlauncher.ui.compose.SettingsComposable.SettingsToggle
@@ -208,6 +210,18 @@ class SettingsFragment : Fragment() {
                             min = Constants.TEXT_SIZE_MIN,
                             max = Constants.TEXT_SIZE_MAX,
                             onSelect = { f -> setTextSizeLauncher(f) }
+                        )
+                    },
+                    { open, onChange ->
+                        SettingsNumberItem(
+                            title = stringResource(R.string.clock_text_size_multiplier),
+                            fontSize = iconFs,
+                            open = open,
+                            onChange = onChange,
+                            currentSelection = remember { mutableFloatStateOf(prefs.textSizeMultiplier) },
+                            min = Constants.TEXT_MULTIPLIER_SIZE_MIN,
+                            max = Constants.TEXT_MULTIPLIER_SIZE_MAX,
+                            onSelect = { f -> setTextSizeMultiplier(f) }
                         )
                     },
                     { open, onChange ->
@@ -800,6 +814,10 @@ class SettingsFragment : Fragment() {
 
     private fun setTextSizeSettings(size: Int) {
         prefs.textSizeSettings = size
+    }
+
+    private fun setTextSizeMultiplier(size: Float) {
+        prefs.textSizeMultiplier = size
     }
 
     private fun setTextMarginSize(size: Int) {
