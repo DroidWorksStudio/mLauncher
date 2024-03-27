@@ -22,6 +22,7 @@
     <string name="theme_mode">Tema</string>
     <string name="app_language">Idioma</string>
     <string name="app_text_size">Texto en pantalla</string>
+    <string name="clock_text_size_multiplier">Multiplicador de tamaño de texto del reloj</string>
     <string name="app_padding_size">Interlineado</string>
     <string name="follow_accent_colors">Remarcado</string>
     <string name="background_opacity">Transparencia</string>
@@ -118,6 +119,4 @@
     <string name="accessibility_service_name">Acciones de mLauncher</string>
     <string name="accessibility_service_description">Se requiere el permiso de accesibilidad para habilitar el bloqueo por doble toque o abrir la configuración rápida. Cualquier dato recopilado a través de este permiso no saldrá de su dispositivo.</string>
     <string name="version">Versión</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hola fragmento en blanco</string>
 </resources>
