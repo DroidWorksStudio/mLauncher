@@ -22,6 +22,7 @@
     <string name="theme_mode">Način rada teme</string>
     <string name="app_language">Jezik sučelja</string>
     <string name="app_text_size">Veličina teksta</string>
+    <string name="clock_text_size_multiplier">Množitelj veličine teksta sata</string>
     <string name="app_padding_size">Veličina podloge</string>
     <string name="follow_accent_colors">Naglašene boje</string>
     <string name="background_opacity">Neprozirnost pozadine</string>
@@ -118,6 +119,4 @@
     <string name="accessibility_service_name">Usluga mLauncher Actions</string>
     <string name="accessibility_service_description">Ova usluga pristupačnosti omogućuje mLauncheru određene radnje kao što je zaključavanje zaslona ili otvaranje brzih postavki. Naša usluga pristupačnosti ne prikuplja niti dijeli nikakve podatke.</string>
     <string name="version">Verzija</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Pozdrav prazan fragment</string>
 </resources>
