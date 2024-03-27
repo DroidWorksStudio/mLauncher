@@ -6,7 +6,12 @@
 
 **Implemented Enhancements:**
 
+- \[Enhancement\] Independent Font Sizes [\#404](https://github.com/HeAndroids2Much/mLauncher/issues/404)
 - \[Feature\] - Added a fragment for Re ordering apps. [\#402](https://github.com/HeAndroids2Much/mLauncher/pull/402) ([HeCodes2Much](https://github.com/HeCodes2Much))
+
+**Merged pull requests:**
+
+- \[Feature\] - Added the ability to change clock size independently [\#406](https://github.com/HeAndroids2Much/mLauncher/pull/406) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
 ## [1.4.3](https://github.com/HeAndroids2Much/mLauncher/tree/1.4.3) (24, March 2024)
 
