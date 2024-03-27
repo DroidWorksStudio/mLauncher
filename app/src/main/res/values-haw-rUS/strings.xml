@@ -22,6 +22,7 @@
     <string name="theme_mode">ʻano kumuhana</string>
     <string name="app_language">ʻŌlelo Interface</string>
     <string name="app_text_size">Nui kikokikona</string>
+    <string name="clock_text_size_multiplier">Mea hoʻonui i ka nui kikokikona</string>
     <string name="app_padding_size">Lahi Padding</string>
     <string name="follow_accent_colors">Nā waihoʻoluʻu</string>
     <string name="background_opacity">Opacity o ka hope</string>
@@ -118,6 +119,4 @@
     <string name="accessibility_service_name">lawelawe hana mLauncher</string>
     <string name="accessibility_service_description">Hāʻawi kēia lawelawe hiki iā mLauncher e hana i kekahi mau hana e like me ka laka ʻana i ka pale a i ʻole ka wehe ʻana i nā hoʻonohonoho wikiwiki. ʻAʻole ʻohi a kaʻana like paha kā mākou lawelawe ʻike i kekahi ʻikepili.</string>
     <string name="version">Manao</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Aloha ʻāpana hakahaka</string>
 </resources>
