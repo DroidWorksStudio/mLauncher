@@ -12,15 +12,12 @@
 
 **Language Support:**
 
+- \[Language\] Updated Language Files. [\#408](https://github.com/HeAndroids2Much/mLauncher/pull/408) ([HeCodes2Much](https://github.com/HeCodes2Much))
 - \[Language\] Updated Language Files. [\#405](https://github.com/HeAndroids2Much/mLauncher/pull/405) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
 **Release:**
 
 - \[Release\] - Update the Release version to 144 \(v1.4.4\) [\#407](https://github.com/HeAndroids2Much/mLauncher/pull/407) ([HeCodes2Much](https://github.com/HeCodes2Much))
-
-**Merged pull requests:**
-
-- \[Language\] Updated Language Files. [\#408](https://github.com/HeAndroids2Much/mLauncher/pull/408) ([HeCodes2Much](https://github.com/HeCodes2Much))
 
 ## [1.4.3](https://github.com/HeAndroids2Much/mLauncher/tree/1.4.3) (24, March 2024)
 
