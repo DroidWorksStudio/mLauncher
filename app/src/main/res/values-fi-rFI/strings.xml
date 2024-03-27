@@ -22,6 +22,7 @@
     <string name="theme_mode">Teeman tila</string>
     <string name="app_language">Käyttöliittymän Kieli</string>
     <string name="app_text_size">Tekstin Koko</string>
+    <string name="clock_text_size_multiplier">Kellon tekstin kokokerroin</string>
     <string name="app_padding_size">Pehmusteen koko</string>
     <string name="follow_accent_colors">Korostusvärit</string>
     <string name="background_opacity">Taustan läpinäkymättömyys</string>
@@ -118,6 +119,4 @@
     <string name="accessibility_service_name">mLauncher Actions Service</string>
     <string name="accessibility_service_description">Tämän esteettömyyspalvelun avulla mLauncher voi tehdä tiettyjä toimintoja, kuten lukita näytön tai avata pika-asetukset. Esteettömyyspalvelumme ei kerää tai jaa tietoja.</string>
     <string name="version">Versio</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hei tyhjä fragmentti</string>
 </resources>
