@@ -22,6 +22,7 @@
     <string name="theme_mode">Режим темы</string>
     <string name="app_language">Язык интерфейса</string>
     <string name="app_text_size">Размер текста</string>
+    <string name="clock_text_size_multiplier">Множитель размера текста часов</string>
     <string name="app_padding_size">Размер заполнения</string>
     <string name="follow_accent_colors">Акцентные цвета</string>
     <string name="background_opacity">Непрозрачность фона</string>
@@ -118,6 +119,4 @@
     <string name="accessibility_service_name">mLauncher Служба действий</string>
     <string name="accessibility_service_description">Эта служба специальных возможностей позволяет mLauncher выполнять определенные действия, такие как блокировка экрана или открытие быстрых настроек. Наша служба доступности не собирает и не передает какие-либо данные.</string>
     <string name="version">Версия</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Привет, пустой фрагмент</string>
 </resources>
