@@ -22,6 +22,7 @@
     <string name="theme_mode">Theme mode</string>
     <string name="app_language">Interface Language</string>
     <string name="app_text_size">Text Size</string>
+    <string name="clock_text_size_multiplier">Klok teksgrootte vermenigvuldiger</string>
     <string name="app_padding_size">Opvulling Grootte</string>
     <string name="follow_accent_colors">Aksentkleure</string>
     <string name="background_opacity">Agtergrond ondeursigtigheid</string>
@@ -118,6 +119,4 @@
     <string name="accessibility_service_name">mLauncher Actions Service</string>
     <string name="accessibility_service_description">Hierdie toeganklikheiddiens laat mLauncher toe om sekere aksies uit te voer, soos om die skerm te sluit of die vinnige instellings oop te maak. Ons toeganklikheiddiens versamel of deel geen data nie.</string>
     <string name="version">Weergawe</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hallo leë fragment</string>
 </resources>
