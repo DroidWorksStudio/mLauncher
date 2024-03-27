@@ -22,6 +22,7 @@
     <string name="theme_mode">Theme mode</string>
     <string name="app_language">Interface Language</string>
     <string name="app_text_size">Text Size</string>
+    <string name="clock_text_size_multiplier">מכפיל גודל טקסט של שעון</string>
     <string name="app_padding_size">גודל ריפוד</string>
     <string name="follow_accent_colors">צבעי מבטא</string>
     <string name="background_opacity">אטימות רקע</string>
@@ -118,6 +119,4 @@
     <string name="accessibility_service_name">mLauncher Actions Service</string>
     <string name="accessibility_service_description">שירות נגישות זה מאפשר ל-mLauncher לבצע פעולות מסוימות כמו נעילת המסך או פתיחת ההגדרות המהירות. שירות הנגישות שלנו אינו אוסף או משתף נתונים כלשהם.</string>
     <string name="version">גִרְסָה</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">שלום קטע ריק</string>
 </resources>
