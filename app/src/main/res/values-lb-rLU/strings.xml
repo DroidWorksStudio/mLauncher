@@ -22,6 +22,7 @@
     <string name="theme_mode">Thema Modus</string>
     <string name="app_language">Interface Sprooch</string>
     <string name="app_text_size">Text Gréisst</string>
+    <string name="clock_text_size_multiplier">Auer Text Gréisst Multiplikator</string>
     <string name="app_padding_size">Padding Gréisst</string>
     <string name="follow_accent_colors">Akzent Faarwen</string>
     <string name="background_opacity">Hannergrond Opazitéit</string>
@@ -118,6 +119,4 @@
     <string name="accessibility_service_name">mLauncher Actions Service</string>
     <string name="accessibility_service_description">Dësen Accessibilitéitsservice erlaabt mLauncher verschidde Aktiounen ze maachen wéi den Ecran ze spären oder d\'schnell Astellungen opzemaachen. Eis Accessibilitéitsservice sammelt oder deelt keng Daten.</string>
     <string name="version">Versioun</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hallo eidel Fragment</string>
 </resources>
