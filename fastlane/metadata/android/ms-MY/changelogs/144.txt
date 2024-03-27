@@ -1,0 +1,9 @@
+Versi: 1.4.4
+
+Penambahbaikan:
+[Ciri] - Menambah serpihan untuk apl pesanan semula.
+[Ciri] - Menambah keupayaan untuk menukar saiz jam secara bebas.
+
+Sokongan Bahasa:
+
+[Bahasa] Fail Bahasa yang dikemas kini.

@@ -1,0 +1,9 @@
+Version: 1.4.4
+
+Enhancement:
+[Feature] - Addatur fragmentum pro Apps Re ordinando.
+[Pluma] - Facultatem ad amplitudinem mutandi horologii independenter addidit.
+
+Support Lingua:
+
+[Language] Tabularia Linguarum Renovata.
