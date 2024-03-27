@@ -22,6 +22,7 @@
     <string name="theme_mode">Theme-Modus</string>
     <string name="app_language">Schnittstellensprache</string>
     <string name="app_text_size">Textgröße</string>
+    <string name="clock_text_size_multiplier">Multiplikator für die Uhrtextgröße</string>
     <string name="app_padding_size">Polstergröße</string>
     <string name="follow_accent_colors">Akzentfarben</string>
     <string name="background_opacity">Deckkraft des Hintergrunds</string>
@@ -118,6 +119,4 @@
     <string name="accessibility_service_name">mLauncher Actions Service</string>
     <string name="accessibility_service_description">Dieser Barrierefreiheitsdienst ermöglicht es mLauncher, bestimmte Aktionen auszuführen, wie z. B. das Sperren des Bildschirms oder das Öffnen der Schnelleinstellungen. Unser Barrierefreiheitsdienst sammelt oder teilt keine Daten.</string>
     <string name="version">Ausführung</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hallo leeres Fragment</string>
 </resources>
