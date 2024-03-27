@@ -22,6 +22,7 @@
     <string name="theme_mode">Modh téama</string>
     <string name="app_language">Teanga Chomhéadain</string>
     <string name="app_text_size">Méid an Téacs</string>
+    <string name="clock_text_size_multiplier">Iolraitheoir Méid Téacs Clog</string>
     <string name="app_padding_size">Méid Stuála</string>
     <string name="follow_accent_colors">Dathanna Accent</string>
     <string name="background_opacity">Teimhneacht Cúlra</string>
@@ -118,6 +119,4 @@
     <string name="accessibility_service_name">mLauncher Actions Service</string>
     <string name="accessibility_service_description">Ligeann an tseirbhís inrochtaineachta seo do mLauncher gníomhartha áirithe a dhéanamh ar nós an scáileán a ghlasáil nó na socruithe tapa a oscailt. Ní bhailíonn ná ní roinneann ár seirbhís inrochtaineachta aon sonraí.</string>
     <string name="version">Leagan</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Dia duit blúire bán</string>
 </resources>
