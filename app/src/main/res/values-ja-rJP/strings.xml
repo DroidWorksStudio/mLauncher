@@ -22,6 +22,7 @@
     <string name="theme_mode">テーマモード</string>
     <string name="app_language">インターフェース言語</string>
     <string name="app_text_size">文字サイズ</string>
+    <string name="clock_text_size_multiplier">時計の文字サイズの乗数</string>
     <string name="app_padding_size">パディングサイズ</string>
     <string name="follow_accent_colors">アクセントカラー</string>
     <string name="background_opacity">背景の不透明度</string>
@@ -118,6 +119,4 @@
     <string name="accessibility_service_name">mLauncher アクションサービス</string>
     <string name="accessibility_service_description">このアクセシビリティ サービスにより、mLauncher は画面のロックやクイック設定を開くなどの特定のアクションを実行できます。当社のアクセシビリティ サービスは、いかなるデータも収集または共有しません。</string>
     <string name="version">バージョン</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">こんにちは、空白のフラグメント</string>
 </resources>
