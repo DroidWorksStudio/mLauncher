@@ -22,6 +22,7 @@
     <string name="theme_mode">Tema modu</string>
     <string name="app_language">Arayüz Dili</string>
     <string name="app_text_size">Metin Boyutu</string>
+    <string name="clock_text_size_multiplier">Saat Metin Boyutu Çarpanı</string>
     <string name="app_padding_size">Boşluk Boyutu</string>
     <string name="follow_accent_colors">Vurgu Renkleri</string>
     <string name="background_opacity">Arka Plan Opaklığı</string>
@@ -118,6 +119,4 @@
     <string name="accessibility_service_name">mLauncher Eylemler Hizmeti</string>
     <string name="accessibility_service_description">Bu erişilebilirlik hizmeti, mLauncher\'ın ekranı kilitleme veya hızlı ayarları açma gibi belirli işlemleri yapmasını sağlar. Erişilebilirlik hizmetimiz herhangi bir veri toplamaz veya paylaşmaz.</string>
     <string name="version">Sürüm</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Merhaba boş parça</string>
 </resources>
