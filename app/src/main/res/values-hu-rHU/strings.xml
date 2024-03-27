@@ -22,6 +22,7 @@
     <string name="theme_mode">Téma mód</string>
     <string name="app_language">Interfész nyelv</string>
     <string name="app_text_size">Szöveg mérete</string>
+    <string name="clock_text_size_multiplier">Óra szövegméret-szorzója</string>
     <string name="app_padding_size">Padding Méret</string>
     <string name="follow_accent_colors">Kiemelt színek</string>
     <string name="background_opacity">Háttér átlátszatlanság</string>
@@ -118,6 +119,4 @@
     <string name="accessibility_service_name">mLauncher Műveletek szolgáltatás</string>
     <string name="accessibility_service_description">Ez a kisegítő szolgáltatás lehetővé teszi az mLauncher számára bizonyos műveletek elvégzését, például a képernyő lezárását vagy a gyorsbeállítások megnyitását. Kisegítő lehetőségek szolgáltatásunk nem gyűjt és nem oszt meg adatokat.</string>
     <string name="version">Változat</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello üres töredék</string>
 </resources>
