@@ -1,0 +1,9 @@
+Version: 1.4.4
+
+Förbättring:
+[Funktion] - Lade till ett fragment för ombeställning av appar.
+[Funktion] - Lade till möjligheten att ändra klockstorlek oberoende.
+
+Språkstöd:
+
+[Språk] Uppdaterade språkfiler.
