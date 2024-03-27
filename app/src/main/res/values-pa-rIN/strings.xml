@@ -22,6 +22,7 @@
     <string name="theme_mode">ਥੀਮ ਮੋਡ</string>
     <string name="app_language">ਇੰਟਰਫੇਸ ਭਾਸ਼ਾ</string>
     <string name="app_text_size">ਟੈਕਸਟ ਦਾ ਆਕਾਰ</string>
+    <string name="clock_text_size_multiplier">ਕਲਾਕ ਟੈਕਸਟ ਸਾਈਜ਼ ਗੁਣਕ</string>
     <string name="app_padding_size">ਪੈਡਿੰਗ ਆਕਾਰ</string>
     <string name="follow_accent_colors">ਐਕਸੈਂਟ ਰੰਗ</string>
     <string name="background_opacity">ਬੈਕਗ੍ਰਾਊਂਡ ਓਪੇਸਿਟੀ</string>
@@ -118,6 +119,4 @@
     <string name="accessibility_service_name">mLauncher ਐਕਸ਼ਨ ਸਰਵਿਸ</string>
     <string name="accessibility_service_description">ਇਹ ਪਹੁੰਚਯੋਗਤਾ ਸੇਵਾ mLauncher ਨੂੰ ਕੁਝ ਖਾਸ ਕਾਰਵਾਈਆਂ ਕਰਨ ਦੀ ਇਜਾਜ਼ਤ ਦਿੰਦੀ ਹੈ ਜਿਵੇਂ ਕਿ ਸਕ੍ਰੀਨ ਨੂੰ ਲੌਕ ਕਰਨਾ ਜਾਂ ਤੇਜ਼ ਸੈਟਿੰਗਾਂ ਨੂੰ ਖੋਲ੍ਹਣਾ। ਸਾਡੀ ਪਹੁੰਚਯੋਗਤਾ ਸੇਵਾ ਕੋਈ ਡਾਟਾ ਇਕੱਠਾ ਜਾਂ ਸਾਂਝਾ ਨਹੀਂ ਕਰਦੀ ਹੈ।</string>
     <string name="version">ਸੰਸਕਰਣ</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">ਹੈਲੋ ਖਾਲੀ ਟੁਕੜਾ</string>
 </resources>
