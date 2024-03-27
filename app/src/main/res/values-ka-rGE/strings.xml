@@ -22,6 +22,7 @@
     <string name="theme_mode">თემის რეჟიმი</string>
     <string name="app_language">ინტერფეისის ენა</string>
     <string name="app_text_size">Ტექსტის ზომა</string>
+    <string name="clock_text_size_multiplier">საათის ტექსტის ზომის მულტიპლიკატორი</string>
     <string name="app_padding_size">ბალიშის ზომა</string>
     <string name="follow_accent_colors">აქცენტის ფერები</string>
     <string name="background_opacity">ფონის გამჭვირვალობა</string>
@@ -118,6 +119,4 @@
     <string name="accessibility_service_name">mLauncher მოქმედებების სერვისი</string>
     <string name="accessibility_service_description">ხელმისაწვდომობის ეს სერვისი mLauncher-ს საშუალებას აძლევს განახორციელოს გარკვეული მოქმედებები, როგორიცაა ეკრანის ჩაკეტვა ან სწრაფი პარამეტრების გახსნა. ჩვენი ხელმისაწვდომობის სერვისი არ აგროვებს და არ აზიარებს მონაცემებს.</string>
     <string name="version">ვერსია</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">გამარჯობა ცარიელი ფრაგმენტი</string>
 </resources>
