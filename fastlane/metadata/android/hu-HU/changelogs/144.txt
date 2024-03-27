@@ -1,0 +1,9 @@
+Verzió: 1.4.4
+
+Fokozás:
+[Funkció] – Egy töredék hozzáadva az alkalmazások újrarendeléséhez.
+[Funkció] – Az óra méretének önálló megváltoztatásának lehetősége.
+
+Nyelvi támogatás:
+
+[Nyelv] Frissített nyelvi fájlok.
