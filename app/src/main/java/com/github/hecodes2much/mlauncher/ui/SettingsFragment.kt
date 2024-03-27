@@ -156,6 +156,12 @@ class SettingsFragment : Fragment() {
                 ) {
                     resetDefaultLauncher(requireContext())
                 }
+                SettingsTextButton(
+                    stringResource(R.string.reorder_apps),
+                    fontSize = iconFs
+                ) {
+                    showReorderApps()
+                }
             }
             SettingsArea(
                 title = stringResource(R.string.appearance),
@@ -722,6 +728,14 @@ class SettingsFragment : Fragment() {
         )
     }
 
+    private fun showReorderApps() {
+        viewModel.getHiddenApps()
+        findNavController().navigate(
+            R.id.action_settingsFragment_to_appListReorderFragment,
+            bundleOf("flag" to AppDrawerFlag.ReorderApps.toString())
+        )
+    }
+
     private fun checkAdminPermission() {
         val isAdmin: Boolean = deviceManager.isAdminActive(componentName)
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.P)
@@ -807,6 +821,7 @@ class SettingsFragment : Fragment() {
             AppDrawerFlag.SetLongSwipeRight -> prefs.longSwipeRightAction = action
             AppDrawerFlag.SetHomeApp,
             AppDrawerFlag.HiddenApps,
+            AppDrawerFlag.ReorderApps,
             AppDrawerFlag.LaunchApp -> {
             }
         }

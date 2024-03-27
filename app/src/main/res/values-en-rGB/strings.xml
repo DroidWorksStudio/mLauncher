@@ -16,6 +16,7 @@
 
 	<!-- Home Strings -->
 	<string name="hidden_apps">Hidden apps</string>
+	<string name="reorder_apps">Re-Order apps</string>
 	<string name="set_as_default_launcher">Set as default launcher</string>
 	<string name="change_default_launcher">Change default launcher</string>
 
@@ -128,4 +129,6 @@
 	<string name="accessibility_service_name">mLauncher Actions Service</string>
 	<string name="accessibility_service_description">This accessibility service allows mLauncher to do certain actions such as locking the screen or opening the quick settings. Our accessibility service does not collect or share any data.</string>
 	<string name="version">Version</string>
+	<!-- TODO: Remove or change this placeholder text -->
+	<string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
