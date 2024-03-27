@@ -22,6 +22,7 @@
     <string name="theme_mode">Tema tilstand</string>
     <string name="app_language">Grænsefladesprog</string>
     <string name="app_text_size">Tekst Størrelse</string>
+    <string name="clock_text_size_multiplier">Ur tekststørrelse multiplikator</string>
     <string name="app_padding_size">Polstring størrelse</string>
     <string name="follow_accent_colors">Accent farver</string>
     <string name="background_opacity">Baggrundsopacitet</string>
@@ -117,6 +118,4 @@
     <string name="accessibility_service_name">mLauncher Handlingstjeneste</string>
     <string name="accessibility_service_description">Denne tilgængelighedstjeneste giver mLauncher mulighed for at udføre visse handlinger, såsom at låse skærmen eller åbne de hurtige indstillinger. Vores tilgængelighedstjeneste indsamler eller deler ingen data.</string>
     <string name="version">Version</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hej tomt fragment</string>
 </resources>
