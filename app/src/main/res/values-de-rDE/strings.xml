@@ -1,120 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<!-- Base Settings -->
-	<string name="app">App</string>
-	<!-- Admin Settings -->
-	<string name="admin_permission_message">mLauncher verspricht einen verantwortungsvollen Umgang mit Sperrbildschirmberechtigungen. mLauncher sammelt oder teilt keine Daten.</string>
-	<string name="experimental">(experimentell)</string>
-	<!-- Settings Headers -->
-	<string name="appearance">Erscheinung</string>
-	<string name="behavior">Verhalten</string>
-	<string name="homescreen">Startseite</string>
-	<string name="alignment">Ausrichtung</string>
-	<string name="gestures">Gesten</string>
-	<string name="miscellaneous">Verschiedenes</string>
-	<!-- Home Strings -->
-	<string name="hidden_apps">Versteckte Apps</string>
-	<string name="set_as_default_launcher">Als Standard-Launcher festlegen</string>
-	<string name="change_default_launcher">Standard-Launcher ändern</string>
-	<!-- Appearance Strings -->
-	<string name="status_bar">Statusleiste anzeigen</string>
-	<string name="theme_mode">Theme-Modus</string>
-	<string name="app_language">Schnittstellensprache</string>
-	<string name="app_text_size">Textgröße</string>
-	<string name="app_padding_size">Polstergröße</string>
-	<string name="follow_accent_colors">Akzentfarben</string>
-	<string name="background_opacity">Deckkraft des Hintergrunds</string>
-	<string name="all_apps_text">Alle Apps-Text anzeigen</string>
-	<!-- Behavior Strings -->
-	<string name="auto_show_keyboard">Auto show keyboard</string>
-	<string name="auto_open_apps">Apps automatisch öffnen</string>
-	<string name="display_recent_apps">Aktuelle Apps anzeigen</string>
-	<string name="number_of_recents">Anzahl der letzten Apps</string>
-	<string name="filter_strength">Filterstärke</string>
-	<string name="search_from_start">App-Suche von Anfang an.</string>
-	<string name="icon_font">Verwenden Sie die Symbolschrift</string>
-	<!-- Home-screen Strings -->
-	<string name="apps_on_home_screen">Anzahl der Verknüpfungen</string>
-	<string name="pages_on_home_screen">Seitenzahl</string>
-	<string name="show_time">Zeit anzeigen</string>
-	<string name="show_date">Datum anzeigen</string>
-	<string name="show_battery">Akku anzeigen</string>
-	<string name="lock_home_apps">Apps sperren</string>
-	<string name="extend_home_apps_area">Klickbare Fläche erweitern</string>
-	<string name="home_alignment_bottom">Startbildschirm unten ausrichten</string>
-	<!-- Alignment Strings -->
-	<string name="home_alignment">Apps Startbildschirm</string>
-	<string name="clock_alignment">Uhr und Datum</string>
-	<string name="drawer_alignment">Apps im App-Drawer</string>
-	<!-- Gestures Strings -->
-	<string name="short_swipe_up_app">Nach oben wischen</string>
-	<string name="short_swipe_down_app">Nach unten wischen</string>
-	<string name="short_swipe_left_app">Nach links wischen</string>
-	<string name="short_swipe_right_app">Rechts wischen</string>
-	<string name="long_swipe_up_app">Langes Drücken: Nach oben wischen</string>
-	<string name="long_swipe_down_app">Langes Drücken. Wischen Sie nach unten</string>
-	<string name="long_swipe_left_app">Langes Drücken. Wischen Sie nach links</string>
-	<string name="long_swipe_right_app">Langes Drücken. Wischen Sie nach rechts</string>
-	<string name="clock_click_app">Uhr anklicken</string>
-	<string name="date_click_app">Klicken Sie auf Datum</string>
-	<string name="double_tap">Doppeltipp</string>
-	<!-- Settings Strings -->
-	<string name="off">Aus</string>
-	<string name="on">An</string>
-	<string name="left">Links</string>
-	<string name="right">Rechts</string>
-	<string name="center">Zentriert</string>
-	<string name="dark">Dunkel</string>
-	<string name="light">Hell</string>
-	<string name="settings">Einstellungen</string>
-	<string name="lang_system">System</string>
-	<string name="system_default">System</string>
-	<string name="hide">Verstecken</string>
-	<string name="rename">Umbenennen</string>
-	<string name="okay">Okay</string>
-	<string name="save">Speichern</string>
-	<string name="show">Zeigen</string>
-	<string name="reset">Reset</string>
-	<string name="cancel">Abbrechen</string>
-	<string name="enable">Aktivieren</string>
-	<string name="disable">Deaktivieren</string>
-	<string name="enabled">Aktiviert</string>
-	<string name="disabled">Deaktiviert</string>
-	<string name="open">Öffnen</string>
-	<string name="close">Schließen</string>
-	<string name="copy">Kopieren</string>
-	<!-- Gestures Do Strings -->
-	<string name="show_notifications">Benachrichtigung anzeigen</string>
-	<string name="show_app_list">App-Liste anzeigen</string>
-	<string name="open_app">App öffnen</string>
-	<string name="lock_screen">Sperrbildschirm</string>
-	<string name="open_quick_settings">Schnelleinstellungen</string>
-	<string name="show_recents">Show Recents</string>
-	<string name="open_power_dialog">Power-Dialog</string>
-	<string name="take_a_screenshot">Mache ein Bildschirmfoto</string>
-	<string name="left_page">Gehen Sie zur linken Seite</string>
-	<string name="right_page">Gehen Sie zur rechten Seite</string>
-	<string name="double_tap_to_lock_screen">Doppeltippen zum Sperren</string>
-	<!-- Miscellaneous Strings -->
-	<string name="settings_text_size">Einstellungen Textgröße</string>
-	<string name="display_hidden_apps">Versteckte Apps anzeigen</string>
-	<string name="lock_settings">Sperreinstellungen</string>
-	<!-- PinCode Strings -->
-	<string name="text_authentication_cancel">Authentifizierung abbrechen.</string>
-	<string name="text_authentication_error">Authentifizierungsfehler:%1$s(Code %2$d)</string>
-	<string name="text_authentication_failed">Authentifizierung fehlgeschlagen.</string>
-	<string name="text_biometric_login">Biometrische Anmeldung für mLauncher</string>
-	<string name="text_biometric_login_sub">Melden Sie sich mit Ihren biometrischen Zugangsdaten an</string>
-	<!-- Unsorted Strings -->
-	<string name="show_apps">Alle Apps</string>
-	<string name="drawer_list_empty_hint">Keine Apps gefunden</string>
-	<string name="long_press_for_settings">Lange drücken für Einstellungen</string>
-	<string name="swipe_up_for_apps">Für alle Apps nach oben wischen</string>
-	<string name="app_drawer_tips">Tipp: Nach unten wischen, um zu beenden. Scrollen, um die Tastatur auszublenden.</string>
-	<string name="double_tap_lock_is_enabled_message">Wenn die Doppeltippsperre den Fingerabdruck oder das Entsperren des Gesichts deaktiviert, öffnen Sie mLauncher Einstellungen, tippen Sie auf \"experimentell\" und folgen Sie den Anweisungen. Vielen Dank.</string>
-	<string name="double_tap_lock_uninstall_message">Doppeltippen zum Sperren aktiviert.
+    <!-- Base Settings -->
+    <string name="app">App</string>
+    <!-- Admin Settings -->
+    <string name="admin_permission_message">mLauncher verspricht einen verantwortungsvollen Umgang mit Sperrbildschirmberechtigungen. mLauncher sammelt oder teilt keine Daten.</string>
+    <string name="experimental">(experimentell)</string>
+    <!-- Settings Headers -->
+    <string name="appearance">Erscheinung</string>
+    <string name="behavior">Verhalten</string>
+    <string name="homescreen">Startseite</string>
+    <string name="alignment">Ausrichtung</string>
+    <string name="gestures">Gesten</string>
+    <string name="miscellaneous">Verschiedenes</string>
+    <!-- Home Strings -->
+    <string name="hidden_apps">Versteckte Apps</string>
+    <string name="reorder_apps">Apps neu anordnen</string>
+    <string name="set_as_default_launcher">Als Standard-Launcher festlegen</string>
+    <string name="change_default_launcher">Standard-Launcher ändern</string>
+    <!-- Appearance Strings -->
+    <string name="status_bar">Statusleiste anzeigen</string>
+    <string name="theme_mode">Theme-Modus</string>
+    <string name="app_language">Schnittstellensprache</string>
+    <string name="app_text_size">Textgröße</string>
+    <string name="app_padding_size">Polstergröße</string>
+    <string name="follow_accent_colors">Akzentfarben</string>
+    <string name="background_opacity">Deckkraft des Hintergrunds</string>
+    <string name="all_apps_text">Alle Apps-Text anzeigen</string>
+    <!-- Behavior Strings -->
+    <string name="auto_show_keyboard">Auto show keyboard</string>
+    <string name="auto_open_apps">Apps automatisch öffnen</string>
+    <string name="display_recent_apps">Aktuelle Apps anzeigen</string>
+    <string name="number_of_recents">Anzahl der letzten Apps</string>
+    <string name="filter_strength">Filterstärke</string>
+    <string name="search_from_start">App-Suche von Anfang an.</string>
+    <string name="icon_font">Verwenden Sie die Symbolschrift</string>
+    <!-- Home-screen Strings -->
+    <string name="apps_on_home_screen">Anzahl der Verknüpfungen</string>
+    <string name="pages_on_home_screen">Seitenzahl</string>
+    <string name="show_time">Zeit anzeigen</string>
+    <string name="show_date">Datum anzeigen</string>
+    <string name="show_battery">Akku anzeigen</string>
+    <string name="lock_home_apps">Apps sperren</string>
+    <string name="extend_home_apps_area">Klickbare Fläche erweitern</string>
+    <string name="home_alignment_bottom">Startbildschirm unten ausrichten</string>
+    <!-- Alignment Strings -->
+    <string name="home_alignment">Apps Startbildschirm</string>
+    <string name="clock_alignment">Uhr und Datum</string>
+    <string name="drawer_alignment">Apps im App-Drawer</string>
+    <!-- Gestures Strings -->
+    <string name="short_swipe_up_app">Nach oben wischen</string>
+    <string name="short_swipe_down_app">Nach unten wischen</string>
+    <string name="short_swipe_left_app">Nach links wischen</string>
+    <string name="short_swipe_right_app">Rechts wischen</string>
+    <string name="long_swipe_up_app">Langes Drücken: Nach oben wischen</string>
+    <string name="long_swipe_down_app">Langes Drücken. Wischen Sie nach unten</string>
+    <string name="long_swipe_left_app">Langes Drücken. Wischen Sie nach links</string>
+    <string name="long_swipe_right_app">Langes Drücken. Wischen Sie nach rechts</string>
+    <string name="clock_click_app">Uhr anklicken</string>
+    <string name="date_click_app">Klicken Sie auf Datum</string>
+    <string name="double_tap">Doppeltipp</string>
+    <!-- Settings Strings -->
+    <string name="off">Aus</string>
+    <string name="on">An</string>
+    <string name="left">Links</string>
+    <string name="right">Rechts</string>
+    <string name="center">Zentriert</string>
+    <string name="dark">Dunkel</string>
+    <string name="light">Hell</string>
+    <string name="settings">Einstellungen</string>
+    <string name="lang_system">System</string>
+    <string name="system_default">System</string>
+    <string name="hide">Verstecken</string>
+    <string name="rename">Umbenennen</string>
+    <string name="okay">Okay</string>
+    <string name="save">Speichern</string>
+    <string name="show">Zeigen</string>
+    <string name="reset">Reset</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="enable">Aktivieren</string>
+    <string name="disable">Deaktivieren</string>
+    <string name="enabled">Aktiviert</string>
+    <string name="disabled">Deaktiviert</string>
+    <string name="open">Öffnen</string>
+    <string name="close">Schließen</string>
+    <string name="copy">Kopieren</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">Benachrichtigung anzeigen</string>
+    <string name="show_app_list">App-Liste anzeigen</string>
+    <string name="open_app">App öffnen</string>
+    <string name="lock_screen">Sperrbildschirm</string>
+    <string name="open_quick_settings">Schnelleinstellungen</string>
+    <string name="show_recents">Show Recents</string>
+    <string name="open_power_dialog">Power-Dialog</string>
+    <string name="take_a_screenshot">Mache ein Bildschirmfoto</string>
+    <string name="left_page">Gehen Sie zur linken Seite</string>
+    <string name="right_page">Gehen Sie zur rechten Seite</string>
+    <string name="double_tap_to_lock_screen">Doppeltippen zum Sperren</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Einstellungen Textgröße</string>
+    <string name="display_hidden_apps">Versteckte Apps anzeigen</string>
+    <string name="lock_settings">Sperreinstellungen</string>
+    <!-- PinCode Strings -->
+    <string name="text_authentication_cancel">Authentifizierung abbrechen.</string>
+    <string name="text_authentication_error">Authentifizierungsfehler:%1$s(Code %2$d)</string>
+    <string name="text_authentication_failed">Authentifizierung fehlgeschlagen.</string>
+    <string name="text_biometric_login">Biometrische Anmeldung für mLauncher</string>
+    <string name="text_biometric_login_sub">Melden Sie sich mit Ihren biometrischen Zugangsdaten an</string>
+    <!-- Unsorted Strings -->
+    <string name="show_apps">Alle Apps</string>
+    <string name="drawer_list_empty_hint">Keine Apps gefunden</string>
+    <string name="long_press_for_settings">Lange drücken für Einstellungen</string>
+    <string name="swipe_up_for_apps">Für alle Apps nach oben wischen</string>
+    <string name="app_drawer_tips">Tipp: Nach unten wischen, um zu beenden. Scrollen, um die Tastatur auszublenden.</string>
+    <string name="double_tap_lock_is_enabled_message">Wenn die Doppeltippsperre den Fingerabdruck oder das Entsperren des Gesichts deaktiviert, öffnen Sie mLauncher Einstellungen, tippen Sie auf \"experimentell\" und folgen Sie den Anweisungen. Vielen Dank.</string>
+    <string name="double_tap_lock_uninstall_message">Doppeltippen zum Sperren aktiviert.
 		\n\nHinweis: Schalten Sie diesen AUS zuerst wenn Sie mLauncher löschen möchten.</string>
-	<string name="accessibility_service_name">mLauncher Actions Service</string>
-	<string name="accessibility_service_description">Dieser Barrierefreiheitsdienst ermöglicht es mLauncher, bestimmte Aktionen auszuführen, wie z. B. das Sperren des Bildschirms oder das Öffnen der Schnelleinstellungen. Unser Barrierefreiheitsdienst sammelt oder teilt keine Daten.</string>
-	<string name="version">Ausführung</string>
+    <string name="accessibility_service_name">mLauncher Actions Service</string>
+    <string name="accessibility_service_description">Dieser Barrierefreiheitsdienst ermöglicht es mLauncher, bestimmte Aktionen auszuführen, wie z. B. das Sperren des Bildschirms oder das Öffnen der Schnelleinstellungen. Unser Barrierefreiheitsdienst sammelt oder teilt keine Daten.</string>
+    <string name="version">Ausführung</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hallo leeres Fragment</string>
 </resources>
