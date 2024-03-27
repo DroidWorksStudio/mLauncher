@@ -22,6 +22,7 @@
     <string name="theme_mode">Tema läge</string>
     <string name="app_language">Gränssnittets språk</string>
     <string name="app_text_size">Textstorlek</string>
+    <string name="clock_text_size_multiplier">Multiplikator för klocka textstorlek</string>
     <string name="app_padding_size">Vadderingsstorlek</string>
     <string name="follow_accent_colors">Accentfärger</string>
     <string name="background_opacity">Bakgrundsopacitet</string>
@@ -118,6 +119,4 @@
     <string name="accessibility_service_name">mLauncher åtgärdstjänst</string>
     <string name="accessibility_service_description">Denna tillgänglighetstjänst låter mLauncher utföra vissa åtgärder som att låsa skärmen eller öppna snabbinställningarna. Vår tillgänglighetstjänst samlar inte in eller delar någon data.</string>
     <string name="version">Version</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hej tomt fragment</string>
 </resources>
