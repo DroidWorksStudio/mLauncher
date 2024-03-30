@@ -14,8 +14,7 @@ import androidx.appcompat.content.res.AppCompatResources
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.github.hecodes2much.fuzzywuzzy.normalizeString
-import com.github.hecodes2much.fuzzywuzzy.scoreApp
+import com.github.hecodes2much.fuzzywuzzy.FuzzyFinder
 import com.github.hecodes2much.mlauncher.R
 import com.github.hecodes2much.mlauncher.data.AppModel
 import com.github.hecodes2much.mlauncher.data.Constants
@@ -94,7 +93,7 @@ class AppDrawerAdapter(
                 if (prefs.filterStrength >= 1 ) {
                     val scoredApps = mutableMapOf<AppModel, Int>()
                     for (app in appsList) {
-                        scoredApps[app] = scoreApp(app, searchChars, Constants.FILTER_STRENGTH_MAX)
+                        scoredApps[app] = FuzzyFinder.scoreApp(app, searchChars, Constants.FILTER_STRENGTH_MAX)
                     }
 
                     filteredApps = if (searchChars.isNotEmpty()) {
@@ -115,9 +114,9 @@ class AppDrawerAdapter(
                     filteredApps = (if (searchChars.isEmpty()) appsList
                     else appsList.filter { app ->
                         if (app.appAlias.isEmpty()) {
-                            normalizeString(app.appLabel, searchChars)
+                            FuzzyFinder.normalizeString(app.appLabel, searchChars)
                         } else {
-                            normalizeString(app.appAlias, searchChars)
+                            FuzzyFinder.normalizeString(app.appAlias, searchChars)
                         }
                     } as MutableList<AppModel>)
                 }
