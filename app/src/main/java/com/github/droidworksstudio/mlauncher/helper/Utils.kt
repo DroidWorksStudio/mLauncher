@@ -323,6 +323,12 @@ fun hideStatusBar(activity: Activity) {
     }
 }
 
+fun isPackageInstalled(context: Context, packageName: String, userString: String): Boolean {
+    val launcher = context.getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps
+    val activityInfo = launcher.getActivityList(packageName, getUserHandleFromString(context, userString))
+    return activityInfo.size > 0
+}
+
 /*
 fun Context.isDarkThemeOn(): Boolean {
     return resources.configuration.uiMode and

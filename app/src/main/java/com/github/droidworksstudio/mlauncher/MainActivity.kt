@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
 import android.content.pm.ActivityInfo
+// import android.content.pm.PackageManager
 import android.content.res.Configuration
 import android.os.Build
 import android.os.Bundle
@@ -18,6 +19,7 @@ import androidx.navigation.Navigation
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.ActivityMainBinding
+// import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper
 import com.github.droidworksstudio.mlauncher.helper.isTablet
 import com.github.droidworksstudio.mlauncher.helper.showToastLong
 
@@ -27,6 +29,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController
     private lateinit var viewModel: MainViewModel
     private lateinit var binding: ActivityMainBinding
+    // private lateinit var pm: PackageManager
 
     @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
@@ -64,6 +67,11 @@ class MainActivity : AppCompatActivity() {
         setupOrientation()
 
         window.addFlags(FLAG_LAYOUT_NO_LIMITS)
+
+        // Get the version and info of any app by passing app name. (maybe later used for Pro features if I want top release them for the play store)
+        // pm = packageManager
+        // val getAppVersionAndHash = AppDetailsHelper.getAppVersionAndHash(applicationContext, "app.olauncher.debug", pm)
+        // Log.d("isPremiumInstalled", getAppVersionAndHash.toString())
     }
 
     @Suppress("DEPRECATION")
