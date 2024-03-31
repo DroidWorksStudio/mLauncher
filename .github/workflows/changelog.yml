@@ -4,19 +4,25 @@ on:
   push:
     tags:
       - '*'
-    branches:
-      - 'main'
   workflow_dispatch:
   
 jobs:
   changelog:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v3
+      - name: Check out repository
+        uses: actions/checkout@v3
         with:
           token: ${{ secrets.GIT_BOT_TOKEN }}
-      - name: Generate CHANGELOG
-        uses: tj-actions/github-changelog-generator@v1.15
+          fetch-depth: 0
+
+      - name: Generate a changelog
+        uses: orhun/git-cliff-action@v3
+        with:
+          config: cliff.toml
+          args: --verbose
+        env:
+          OUTPUT: CHANGELOG.md
         
       - name: Import GPG key
         id: import_gpg
@@ -34,7 +40,7 @@ jobs:
             git config --global user.email ${{ secrets.GIT_EMAIL }}
       
             git add -A
-            git commit -m "Update CHANGELOG.md"
+            git commit -m "doc: Update CHANGELOG.md"
             git push origin HEAD:main
           else
             echo "WARNING: No changes were detected."
