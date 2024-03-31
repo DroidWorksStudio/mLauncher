@@ -63,11 +63,7 @@ class AppDrawerFragment : Fragment() {
         val n = arguments?.getInt("n", 0) ?: 0
 
         when (flag) {
-            AppDrawerFlag.SetHomeApp -> {
-                binding.drawerButton.text = getString(R.string.rename)
-                binding.drawerButton.isVisible = true
-                binding.drawerButton.setOnClickListener { renameListener(flag, n) }
-            }
+            AppDrawerFlag.SetHomeApp,
             AppDrawerFlag.SetShortSwipeRight,
             AppDrawerFlag.SetShortSwipeLeft,
             AppDrawerFlag.SetShortSwipeUp,
@@ -132,6 +128,22 @@ class AppDrawerFragment : Fragment() {
             } else
                 binding.search.queryHint = hiddenAppsHint
         }
+        if (flag == AppDrawerFlag.SetHomeApp) {
+            val fontColor = getHexFontColor(requireActivity())
+            val hiddenAppsHint = getString(R.string.please_select_app)
+            if (prefs.followAccentColors) {
+                val coloredHint = SpannableString(hiddenAppsHint)
+                coloredHint.setSpan(
+                    ForegroundColorSpan(fontColor),
+                    0,
+                    hiddenAppsHint.length,
+                    Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+                )
+
+                binding.search.queryHint = coloredHint
+            } else
+                binding.search.queryHint = hiddenAppsHint
+        }
         if (flag == AppDrawerFlag.LaunchApp && prefs.useAllAppsText) {
             val fontColor = getHexFontColor(requireActivity())
             val allAppsHint = getString(R.string.show_apps)
@@ -156,12 +168,17 @@ class AppDrawerFragment : Fragment() {
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
-                newText?.let {
-                    appAdapter.filter.filter(it.trim())
+                binding.drawerButton.apply {
+                    isVisible = !newText.isNullOrEmpty()
+                    text = if (isVisible) getString(R.string.rename) else null
+                    setOnClickListener { if (isVisible) renameListener(flag, n) }
                 }
+                newText?.let { appAdapter.filter.filter(it.trim()) }
                 return false
             }
+
         })
+
     }
 
     @RequiresApi(Build.VERSION_CODES.Q)
