@@ -4,12 +4,11 @@ import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
 import android.content.pm.ActivityInfo
-import android.content.pm.PackageManager
+// import android.content.pm.PackageManager
 import android.content.res.Configuration
 import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
-import android.util.Log
 import android.view.View
 import android.view.WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
 import androidx.appcompat.app.AppCompatActivity
@@ -20,7 +19,7 @@ import androidx.navigation.Navigation
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.ActivityMainBinding
-import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper
+// import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper
 import com.github.droidworksstudio.mlauncher.helper.isTablet
 import com.github.droidworksstudio.mlauncher.helper.showToastLong
 
@@ -30,7 +29,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController
     private lateinit var viewModel: MainViewModel
     private lateinit var binding: ActivityMainBinding
-    private lateinit var pm: PackageManager
+    // private lateinit var pm: PackageManager
 
     @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
