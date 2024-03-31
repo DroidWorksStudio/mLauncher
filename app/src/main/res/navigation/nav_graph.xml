@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.github.hecodes2much.mlauncher.ui.HomeFragment"
+        android:name="com.github.droidworksstudio.mlauncher.ui.HomeFragment"
         android:label="main_fragment"
         tools:layout="@layout/fragment_home">
         <action
@@ -28,7 +28,7 @@
 
     <fragment
         android:id="@+id/appListFragment"
-        android:name="com.github.hecodes2much.mlauncher.ui.AppDrawerFragment"
+        android:name="com.github.droidworksstudio.mlauncher.ui.AppDrawerFragment"
         android:label="app_list_fragment"
         tools:layout="@layout/fragment_app_drawer">
         <action
@@ -44,14 +44,14 @@
 
     <fragment
         android:id="@+id/appListReorderFragment"
-        android:name="com.github.hecodes2much.mlauncher.ui.ReorderHomeAppsFragment"
+        android:name="com.github.droidworksstudio.mlauncher.ui.ReorderHomeAppsFragment"
         android:label="app_list_fragment"
         tools:layout="@layout/fragment_reorder_home_apps">
     </fragment>
 
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.github.hecodes2much.mlauncher.ui.SettingsFragment"
+        android:name="com.github.droidworksstudio.mlauncher.ui.SettingsFragment"
         android:label="SettingsFragment"
         android:layout="@layout/fragment_settings">
         <action

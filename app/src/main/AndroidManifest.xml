@@ -27,7 +27,7 @@
         tools:targetApi="tiramisu">
 
         <activity
-            android:name="com.github.hecodes2much.mlauncher.MainActivity"
+            android:name="com.github.droidworksstudio.mlauncher.MainActivity"
             android:configChanges="uiMode"
             android:excludeFromRecents="true"
             android:launchMode="singleTask"
@@ -44,7 +44,7 @@
         </activity>
 
         <activity
-            android:name="com.github.hecodes2much.mlauncher.helper.FakeHomeActivity"
+            android:name="com.github.droidworksstudio.mlauncher.helper.FakeHomeActivity"
             android:enabled="false"
             android:launchMode="singleTask"
             android:windowSoftInputMode="stateHidden"
@@ -59,7 +59,7 @@
         </activity>
 
         <receiver
-            android:name="com.github.hecodes2much.mlauncher.listener.DeviceAdmin"
+            android:name="com.github.droidworksstudio.mlauncher.listener.DeviceAdmin"
             android:permission="android.permission.BIND_DEVICE_ADMIN"
             android:exported="false">
             <meta-data
@@ -71,7 +71,7 @@
         </receiver>
 
         <service
-            android:name="com.github.hecodes2much.mlauncher.helper.ActionService"
+            android:name="com.github.droidworksstudio.mlauncher.helper.ActionService"
             android:label="@string/accessibility_service_name"
             android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
             android:exported="false">

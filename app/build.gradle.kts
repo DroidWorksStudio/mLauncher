@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.github.hecodes2much.mlauncher"
+    namespace = "com.github.droidworksstudio.mlauncher"
     compileSdk = 34
 
     defaultConfig {
