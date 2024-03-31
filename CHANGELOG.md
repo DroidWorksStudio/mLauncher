@@ -1,5 +1,13 @@
 # Changelog
 
+## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
+
+[Full Changelog](https://github.com/DroidWorksStudio/mLauncher/compare/1.4.4...HEAD)
+
+**Implemented Enhancements:**
+
+- Feature: Added 'please\_select\_app' to the home screen apps [\#411](https://github.com/DroidWorksStudio/mLauncher/pull/411) ([HeCodes2Much](https://github.com/HeCodes2Much))
+
 ## [1.4.4](https://github.com/DroidWorksStudio/mLauncher/tree/1.4.4) (27, March 2024)
 
 [Full Changelog](https://github.com/DroidWorksStudio/mLauncher/compare/1.4.3...1.4.4)
