@@ -1,6 +1,7 @@
 package com.github.droidworksstudio.mlauncher.helper
 
 import android.content.Context
+import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
 import android.os.Build
 import java.io.File
@@ -15,6 +16,18 @@ object AppDetailsHelper {
         val apkVersionName: String,
         val apkHash: String
     )
+
+    fun isSystemApp(packageName: String, packageManager: PackageManager): Boolean {
+        if (packageName.isBlank()) return true
+        return try {
+            val applicationInfo = packageManager.getApplicationInfo(packageName, 0)
+            ((applicationInfo.flags and ApplicationInfo.FLAG_SYSTEM != 0)
+                    || (applicationInfo.flags and ApplicationInfo.FLAG_UPDATED_SYSTEM_APP != 0))
+        } catch (e: Exception) {
+            e.printStackTrace()
+            false
+        }
+    }
 
     fun getAppVersionAndHash(context: Context, packageName: String, pm: PackageManager): AppDetails? {
         val pkgInstalled = isPackageInstalled(context, packageName, "")

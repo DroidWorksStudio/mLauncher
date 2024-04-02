@@ -81,6 +81,8 @@
     <string name="system_default">System</string>
     <string name="hide">Hide</string>
     <string name="rename">Rename</string>
+    <string name="delete">Delete</string>
+    <string name="info">Info</string>
     <string name="okay">Okay</string>
     <string name="save">Save</string>
     <string name="show">Show</string>
@@ -122,6 +124,7 @@
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>
     <string name="please_select_app">Please select an app</string>
+    <string name="system_app_cannot_delete">System app, cannot delete</string>
     <string name="drawer_list_empty_hint">No apps found</string>
     <string name="long_press_for_settings">Long press anywhere for settings</string>
     <string name="swipe_up_for_apps">Swipe up for all apps</string>

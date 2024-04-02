@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
+import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -31,9 +32,12 @@ import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Constants.AppDrawerFlag
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentAppDrawerBinding
+import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.isSystemApp
 import com.github.droidworksstudio.mlauncher.helper.getHexFontColor
 import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
 import com.github.droidworksstudio.mlauncher.helper.openAppInfo
+import com.github.droidworksstudio.mlauncher.helper.showToastShort
+import com.github.droidworksstudio.mlauncher.helper.uninstallApp
 
 class AppDrawerFragment : Fragment() {
 
@@ -87,14 +91,18 @@ class AppDrawerFragment : Fragment() {
             Constants.Gravity.Right -> Gravity.RIGHT
         }
 
-        val appAdapter = AppDrawerAdapter(
-            flag,
-            gravity,
-            appClickListener(viewModel, flag, n),
-            appInfoListener(),
-            appShowHideListener(),
-            this.appRenameListener()
-        )
+        val appAdapter = context?.let {
+            AppDrawerAdapter(
+                it,
+                flag,
+                gravity,
+                appClickListener(viewModel, flag, n),
+                appInfoListener(),
+                appDeleteListener(),
+                appShowHideListener(),
+                this.appRenameListener()
+            )
+        }
 
         val searchTextView = binding.search.findViewById<TextView>(R.id.search_src_text)
         if (searchTextView != null) searchTextView.gravity = gravity
@@ -106,7 +114,9 @@ class AppDrawerFragment : Fragment() {
         val textSize = prefs.textSizeLauncher.toFloat()
         searchTextView.textSize = textSize
 
-        initViewModel(flag, viewModel, appAdapter)
+        if (appAdapter != null) {
+            initViewModel(flag, viewModel, appAdapter)
+        }
 
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
         binding.recyclerView.adapter = appAdapter
@@ -163,7 +173,7 @@ class AppDrawerFragment : Fragment() {
 
         binding.search.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
-                appAdapter.launchFirstInList()
+                appAdapter?.launchFirstInList()
                 return false
             }
 
@@ -173,7 +183,9 @@ class AppDrawerFragment : Fragment() {
                     text = if (isVisible) getString(R.string.rename) else null
                     setOnClickListener { if (isVisible) renameListener(flag, n) }
                 }
-                newText?.let { appAdapter.filter.filter(it.trim()) }
+                newText?.let {
+                    appAdapter?.filter?.filter(it.trim())
+                }
                 return false
             }
 
@@ -265,8 +277,28 @@ class AppDrawerFragment : Fragment() {
             findNavController().popBackStack(R.id.mainFragment, false)
         }
 
+    private fun appDeleteListener(): (appModel: AppModel) -> Unit =
+        { appModel ->
+            val packageManager = requireContext().packageManager
+            if (isSystemApp(appModel.appPackage, packageManager)) {
+                showToastShort(
+                    requireContext(),
+                    getString(R.string.system_app_cannot_delete)
+                )
+            } else {
+                uninstallApp(
+                    requireContext(),
+                    appModel.appPackage
+                )
+                findNavController().popBackStack(R.id.mainFragment, false)
+            }
+
+        }
+
     private fun appShowHideListener(): (flag: AppDrawerFlag, appModel: AppModel) -> Unit =
         { flag, appModel ->
+            Log.d("appHide", "$flag | $appModel")
+
             val prefs = Prefs(requireContext())
             val newSet = mutableSetOf<String>()
             newSet.addAll(prefs.hiddenApps)
