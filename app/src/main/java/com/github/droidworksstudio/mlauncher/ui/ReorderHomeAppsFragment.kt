@@ -108,6 +108,7 @@ class ReorderHomeAppsFragment : Fragment() {
             }
             DragEvent.ACTION_DRAG_ENTERED -> {
                 // Highlight the target view as the drag enters
+                targetView.setBackgroundResource(R.drawable.reorder_apps_background)
                 return true
             }
             DragEvent.ACTION_DRAG_EXITED -> {
@@ -116,14 +117,6 @@ class ReorderHomeAppsFragment : Fragment() {
                 return true
             }
             DragEvent.ACTION_DROP -> {
-                // Extract the dragged TextView
-                val draggedTextView = event.localState as TextView
-
-                // Reorder apps based on the drop position
-                val draggedIndex = (draggedTextView.parent as ViewGroup).indexOfChild(draggedTextView)
-                val targetIndex = (targetView.parent as ViewGroup).indexOfChild(targetView)
-                reorderApps(draggedIndex, targetIndex)
-
                 // Remove highlighting
                 targetView.background = null
                 return true
@@ -133,7 +126,17 @@ class ReorderHomeAppsFragment : Fragment() {
                 targetView.background = null
                 return true
             }
-            else -> return false
+            else -> {
+                // Extract the dragged TextView
+                val draggedTextView = event.localState as TextView
+
+                // Reorder apps based on the drop position
+                val draggedIndex = (draggedTextView.parent as ViewGroup).indexOfChild(draggedTextView)
+                val targetIndex = (targetView.parent as ViewGroup).indexOfChild(targetView)
+                reorderApps(draggedIndex, targetIndex)
+
+                return false
+            }
         }
     }
 
@@ -153,29 +156,13 @@ class ReorderHomeAppsFragment : Fragment() {
         // Remove the dragged view from its current position
         binding.homeAppsLayout.removeViewAt(draggedIndex)
 
-        // Calculate the new position for the dragged view after reordering
-        val newIndex = if (draggedIndex < targetIndex) targetIndex - 1 else targetIndex
-
         // Add the dragged view at the new position
-        binding.homeAppsLayout.addView(draggedView, newIndex)
-
-        // Update the preferences with the new order
-        val newOrderList = mutableListOf<String>()
-        for (i in 0 until binding.homeAppsLayout.childCount) {
-            val textView = binding.homeAppsLayout.getChildAt(i) as? TextView
-            textView?.let {
-                newOrderList.add(textView.text.toString().removePrefix(prefix))
-            }
-        }
-
-        // Save the new order in preferences
-        for (i in newOrderList.indices) {
-            prefs.setHomeAppName(i, newOrderList[i])
-        }
+        binding.homeAppsLayout.addView(draggedView, targetIndex)
+        val packageDetailsOld = prefs.getHomeAppModel(draggedIndex)
+        val packageDetailsNew = prefs.getHomeAppModel(targetIndex)
+        prefs.setHomeAppModel(targetIndex, packageDetailsOld)
+        prefs.setHomeAppModel(draggedIndex, packageDetailsNew)
     }
-
-
-
 
     @RequiresApi(Build.VERSION_CODES.Q)
     @SuppressLint("InflateParams", "SetTextI18n")

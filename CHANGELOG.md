@@ -8,15 +8,19 @@
 
 ### Bug Fixes:
 
+- Fixed the reorder settings ([#416](https://github.com/DroidWorksStudio/mLauncher/issues/416))
 - Fix namespace for the project
 - Fixed FUNDING.yml
 
 ### Documentation:
 
+- Update changelog.yml
+- Update CHANGELOG.md
 - Added a better Changelog
 
 ### Miscellaneous Tasks:
 
+- Update changelog.yml
 - Added App Details (Update)
 - Added App Details
 - Changed App Icon
