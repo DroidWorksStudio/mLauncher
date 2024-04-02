@@ -1,5 +1,15 @@
 # Changelog
 
+## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
+
+### Documentation:
+
+- Update CHANGELOG.md
+
+### Refactor:
+
+- Cleaned up code adding permission request
+
 ## [1.4.5](https://github.com/DroidWorksStudio/mLauncher/tree/1.4.5) - (02, April 2024)
 
 ### Implemented Enhancements:
