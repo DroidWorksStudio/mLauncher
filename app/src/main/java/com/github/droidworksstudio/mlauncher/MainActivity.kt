@@ -1,13 +1,14 @@
 package com.github.droidworksstudio.mlauncher
 
 import android.annotation.SuppressLint
-import android.app.Activity
 import android.content.Intent
 import android.content.pm.ActivityInfo
 // import android.content.pm.PackageManager
 import android.content.res.Configuration
 import android.os.Build
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.provider.Settings
 import android.view.View
 import android.view.WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
@@ -19,8 +20,10 @@ import androidx.navigation.Navigation
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.ActivityMainBinding
+import com.github.droidworksstudio.mlauncher.helper.hasUsagePermission
 // import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper
 import com.github.droidworksstudio.mlauncher.helper.isTablet
+import com.github.droidworksstudio.mlauncher.helper.showPermissionDialog
 import com.github.droidworksstudio.mlauncher.helper.showToastLong
 
 class MainActivity : AppCompatActivity() {
@@ -70,8 +73,22 @@ class MainActivity : AppCompatActivity() {
 
         // Get the version and info of any app by passing app name. (maybe later used for Pro features if I want top release them for the play store)
         // pm = packageManager
-        // val getAppVersionAndHash = AppDetailsHelper.getAppVersionAndHash(applicationContext, "app.olauncher.debug", pm)
+        // val getAppVersionAndHash = AppDetailsHelper.getAppVersionAndHash(this, "app.olauncher.debug", pm)
         // Log.d("isPremiumInstalled", getAppVersionAndHash.toString())
+
+        if (prefs.recentAppsDisplayed) {
+            // Check if the usage permission is not granted
+            if (!hasUsagePermission(this)) {
+                // Postpone showing the dialog until the activity is running
+                Handler(Looper.getMainLooper()).post {
+                    // Check if the activity is still running before showing the dialog
+                    if (!isFinishing) {
+                        // Instantiate MainActivity and pass it to showPermissionDialog
+                        showPermissionDialog(this)
+                    }
+                }
+            }
+        }
     }
 
     @Suppress("DEPRECATION")
@@ -151,25 +168,5 @@ class MainActivity : AppCompatActivity() {
         if (message.isEmpty()) return
         binding.messageTextView.text = message
         binding.messageLayout.visibility = View.VISIBLE
-    }
-
-    @Deprecated("Deprecated in Java")
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        @Suppress("DEPRECATION")
-        super.onActivityResult(requestCode, resultCode, data)
-
-        if (resultCode != Activity.RESULT_OK) {
-            // showToastLong(applicationContext, "Intent Error")
-            return
-        }
-
-        when (requestCode) {
-            Constants.REQUEST_CODE_ENABLE_ADMIN -> {
-                if (Build.VERSION.SDK_INT > Build.VERSION_CODES.P)
-                    showMessage(getString(R.string.double_tap_lock_is_enabled_message))
-                else
-                    showMessage(getString(R.string.double_tap_lock_uninstall_message))
-            }
-        }
     }
 }

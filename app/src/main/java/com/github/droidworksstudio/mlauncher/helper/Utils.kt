@@ -3,8 +3,11 @@ package com.github.droidworksstudio.mlauncher.helper
 //noinspection SuspiciousImport
 import android.R
 import android.app.Activity
+import android.app.AlertDialog
+import android.app.AppOpsManager
 import android.content.ComponentName
 import android.content.Context
+import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.LauncherApps
 import android.content.pm.PackageManager
@@ -14,6 +17,7 @@ import android.os.Build
 import android.os.Bundle
 import android.os.UserHandle
 import android.os.UserManager
+import android.os.Process
 import android.provider.AlarmClock
 import android.provider.CalendarContract
 import android.provider.MediaStore
@@ -51,6 +55,44 @@ fun showToastShort(context: Context, message: String) {
     toast.show()
 }
 
+fun hasUsagePermission(context: Context): Boolean {
+    val appOpsManager = context.getSystemService(Context.APP_OPS_SERVICE) as AppOpsManager
+    val mode = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+        appOpsManager.unsafeCheckOpNoThrow(
+            AppOpsManager.OPSTR_GET_USAGE_STATS,
+            Process.myUid(),
+            context.packageName
+        )
+    } else {
+        @Suppress("DEPRECATION")
+        appOpsManager.checkOpNoThrow(
+            AppOpsManager.OPSTR_GET_USAGE_STATS,
+            Process.myUid(),
+            context.packageName
+        )
+    }
+    return mode == AppOpsManager.MODE_ALLOWED
+}
+
+fun showPermissionDialog(context: Context) {
+    val builder = AlertDialog.Builder(context)
+    builder.setTitle("Permission Required")
+    builder.setMessage("To continue, please grant permission to access usage data.")
+    builder.setPositiveButton("Go to Settings") { dialogInterface: DialogInterface, _: Int ->
+        dialogInterface.dismiss()
+        requestUsagePermission(context)
+    }
+    builder.setNegativeButton("Cancel") { dialogInterface: DialogInterface, _: Int ->
+        dialogInterface.dismiss()
+    }
+    val dialog = builder.create()
+    dialog.show()
+}
+
+fun requestUsagePermission(context: Context) {
+    val intent = Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS)
+    context.startActivity(intent)
+}
 
 suspend fun getAppsList(
     context: Context,
@@ -73,35 +115,7 @@ suspend fun getAppsList(
 
             val prefs = Prefs(context)
 
-            val appUsageTracker = AppUsageTracker.createInstance(context)
-            val lastTenUsedApps = appUsageTracker.getLastTenAppsUsed(context)
-
             for (profile in userManager.userProfiles) {
-                for ((packageName, appName, appActivityName) in lastTenUsedApps) {
-                    val appAlias = prefs.getAppAlias(packageName).ifEmpty {
-                        appName
-                    }
-
-                    val appModel = AppModel(
-                        appName,
-                        collator.getCollationKey(appName),
-                        packageName,
-                        appActivityName,
-                        profile,
-                        appAlias,
-                    )
-
-                    d(
-                        "getLastTenAppsUsed",
-                        "$appModel"
-                    )
-
-                    if (includeRecentApps) {
-                        if (packageName != BuildConfig.APPLICATION_ID) {
-                            appRecentList.add(appModel)
-                        }
-                    }
-                }
                 for (app in launcherApps.getActivityList(null, profile)) {
 
                     // we have changed the alias identifier from app.label to app.applicationInfo.packageName
@@ -138,17 +152,38 @@ suspend fun getAppsList(
                 appList.sortBy {
                     if (it.appAlias.isEmpty()) it.appLabel.lowercase() else it.appAlias.lowercase()
                 }
+
+                if (prefs.recentAppsDisplayed) {
+                    val appUsageTracker = AppUsageTracker.createInstance(context)
+                    val lastTenUsedApps = appUsageTracker.getLastTenAppsUsed(context)
+
+                    for ((packageName, appName, appActivityName) in lastTenUsedApps) {
+                        val appAlias = prefs.getAppAlias(packageName).ifEmpty {
+                            appName
+                        }
+
+                        val appModel = AppModel(
+                            appName,
+                            collator.getCollationKey(appName),
+                            packageName,
+                            appActivityName,
+                            profile,
+                            appAlias,
+                        )
+
+                        if (includeRecentApps) {
+                            if (packageName != BuildConfig.APPLICATION_ID) {
+                                appRecentList.add(appModel)
+                            }
+                        }
+                    }
+                    // Add all elements from appRecentList
+                    combinedList.addAll(appRecentList)
+                }
+
+                // Add all elements from appList
+                combinedList.addAll(appList)
             }
-
-            if (prefs.recentAppsDisplayed) {
-                // Add all elements from appRecentList
-                combinedList.addAll(appRecentList)
-            }
-
-
-            // Add all elements from appList
-            combinedList.addAll(appList)
-
         } catch (e: java.lang.Exception) {
             d("appList", e.toString())
         }
@@ -163,7 +198,7 @@ fun getUserHandleFromString(context: Context, userHandleString: String): UserHan
             return userHandle
         }
     }
-    return android.os.Process.myUserHandle()
+    return Process.myUserHandle()
 }
 
 fun ismlauncherDefault(context: Context): Boolean {
