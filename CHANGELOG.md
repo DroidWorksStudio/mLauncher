@@ -15,7 +15,6 @@
 ### Release:
 
 - Update the Release version to 145 (v1.4.5)
-- Update the Release version to 144 (v1.4.4)
 
 ### Miscellaneous Tasks:
 
