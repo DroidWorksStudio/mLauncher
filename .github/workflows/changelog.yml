@@ -4,6 +4,8 @@ on:
   push:
     tags:
       - '*'
+    branches:
+      - main
   workflow_dispatch:
   
 jobs:
@@ -13,7 +15,7 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.GIT_BOT_TOKEN }}
+          token: ${{ github.token }}
           fetch-depth: 0
 
       - name: Generate a changelog
