@@ -8,15 +8,18 @@
 
 ### Bug Fixes:
 
+- Fixed the reorder settings
 - Fix namespace for the project
 - Fixed FUNDING.yml
 
 ### Documentation:
 
+- Update CHANGELOG.md
 - Added a better Changelog
 
 ### Miscellaneous Tasks:
 
+- Update changelog.yml
 - Added App Details (Update)
 - Added App Details
 - Changed App Icon
