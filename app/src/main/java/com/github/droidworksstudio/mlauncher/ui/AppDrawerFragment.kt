@@ -93,7 +93,6 @@ class AppDrawerFragment : Fragment() {
 
         val appAdapter = context?.let {
             AppDrawerAdapter(
-                it,
                 flag,
                 gravity,
                 appClickListener(viewModel, flag, n),

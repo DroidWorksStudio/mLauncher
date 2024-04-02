@@ -1,7 +1,6 @@
 package com.github.droidworksstudio.mlauncher.ui
 
 import android.annotation.SuppressLint
-import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Build
 import android.text.Editable
@@ -26,7 +25,6 @@ import com.github.droidworksstudio.mlauncher.helper.dp2px
 import com.github.droidworksstudio.mlauncher.helper.getHexFontColor
 
 class AppDrawerAdapter(
-    private val context: Context,
     private var flag: AppDrawerFlag,
     private val gravity: Int,
     private val appClickListener: (AppModel) -> Unit,
