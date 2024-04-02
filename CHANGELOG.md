@@ -15,11 +15,11 @@
 ### Release:
 
 - Update the Release version to 145 (v1.4.5)
+- Update the Release version to 144 (v1.4.4)
 
 ### Miscellaneous Tasks:
 
 - Update changelog.yml
-- Added App Details (Update)
 - Added App Details
 - Changed App Icon
 - Rename finder to FuzzyFinder
