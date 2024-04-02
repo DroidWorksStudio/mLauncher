@@ -5,7 +5,10 @@ on:
     tags:
       - '*'
     branches:
-      - main
+      - '*'         # matches every branch that doesn't contain a '/'
+      - '*/*'       # matches every branch containing a single '/'
+      - '**'        # matches every branch
+      - '!main'   # excludes main
   workflow_dispatch:
   
 jobs:
@@ -43,7 +46,7 @@ jobs:
       
             git add -A
             git commit -m "doc: Update CHANGELOG.md"
-            git push origin HEAD:main
+            git push
           else
             echo "WARNING: No changes were detected."
           fi
