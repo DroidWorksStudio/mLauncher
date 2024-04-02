@@ -1,6 +1,6 @@
 # Changelog
 
-## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
+## [1.4.5](https://github.com/DroidWorksStudio/mLauncher/tree/1.4.5) - (02, April 2024)
 
 ### Implemented Enhancements:
 
@@ -16,6 +16,10 @@
 
 - Update the Release version to 145 (v1.4.5)
 - Update the Release version to 144 (v1.4.4)
+
+### Documentation:
+
+- Update CHANGELOG.md
 
 ### Miscellaneous Tasks:
 
