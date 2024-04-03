@@ -77,6 +77,10 @@
     <string name="settings_text_size">ขนาดตัวอักษรการตั้งค่า</string>
     <string name="display_hidden_apps">แสดงแอปที่ซ่อนอยู่</string>
     <string name="lock_settings">ล็อคการตั้งค่า</string>
+    <!-- Backup Strings -->
+    <string name="backup">สำรองข้อมูล</string>
+    <string name="load_backup">โหลดข้อมูลสำรอง</string>
+    <string name="store_backup">จัดเก็บข้อมูลสำรอง</string>
     <!-- Settings Strings -->
     <string name="off">ปิด</string>
     <string name="on">บน</string>
