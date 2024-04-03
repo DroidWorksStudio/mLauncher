@@ -10,6 +10,10 @@
 
 - Allow HomeScreen apps to be set to 0
 
+### Language Support:
+
+- Updated Language Files. ([#418](https://github.com/DroidWorksStudio/mLauncher/issues/418))
+
 ### Documentation:
 
 - Update CHANGELOG.md
