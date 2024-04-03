@@ -1,0 +1,17 @@
+Phiên bản: 1.4.6
+
+Cải tiến:
+
+Đã thêm máy nhắn tin màn hình chính (bị tắt theo mặc định)
+
+Sửa lỗi:
+
+Cho phép đặt ứng dụng HomeScreen thành 0
+
+Tài liệu:
+
+Cập nhật CHANGELOG.md
+
+Cấu trúc lại:
+
+Đã dọn sạch mã thêm yêu cầu cấp phép
