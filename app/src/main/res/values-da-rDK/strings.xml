@@ -38,6 +38,7 @@
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Antal genveje</string>
     <string name="pages_on_home_screen">Antal sider</string>
+    <string name="enable_home_pager">Aktiver Home Pager</string>
     <string name="show_time">Vis tid</string>
     <string name="show_date">Vis dato</string>
     <string name="show_battery">Vis batteri</string>
@@ -60,6 +61,22 @@
     <string name="clock_click_app">Klik på ur</string>
     <string name="date_click_app">Klik på dato</string>
     <string name="double_tap">Dobbelttryk</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">Vis Notifikation</string>
+    <string name="show_app_list">Vis Appliste</string>
+    <string name="open_app">Åbn App</string>
+    <string name="lock_screen">Lås Skærm</string>
+    <string name="open_quick_settings">Hurtige Indstillinger</string>
+    <string name="show_recents">Show Recents</string>
+    <string name="open_power_dialog">Power Dialog</string>
+    <string name="take_a_screenshot">Tag et skærmbillede</string>
+    <string name="left_page">Gå til venstre side</string>
+    <string name="right_page">Gå til højre side</string>
+    <string name="double_tap_to_lock_screen">Dobbelttryk for at låse</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Indstillinger Tekststørrelse</string>
+    <string name="display_hidden_apps">Vis skjulte apps</string>
+    <string name="lock_settings">Låseindstillinger</string>
     <!-- Settings Strings -->
     <string name="off">Fra</string>
     <string name="on">Til</string>
@@ -85,22 +102,6 @@
     <string name="open">Åbn</string>
     <string name="close">Luk</string>
     <string name="copy">kopi</string>
-    <!-- Gestures Do Strings -->
-    <string name="show_notifications">Vis Notifikation</string>
-    <string name="show_app_list">Vis Appliste</string>
-    <string name="open_app">Åbn App</string>
-    <string name="lock_screen">Lås Skærm</string>
-    <string name="open_quick_settings">Hurtige Indstillinger</string>
-    <string name="show_recents">Show Recents</string>
-    <string name="open_power_dialog">Power Dialog</string>
-    <string name="take_a_screenshot">Tag et skærmbillede</string>
-    <string name="left_page">Gå til venstre side</string>
-    <string name="right_page">Gå til højre side</string>
-    <string name="double_tap_to_lock_screen">Dobbelttryk for at låse</string>
-    <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">Indstillinger Tekststørrelse</string>
-    <string name="display_hidden_apps">Vis skjulte apps</string>
-    <string name="lock_settings">Låseindstillinger</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Godkendelse Annuller.</string>
     <string name="text_authentication_error">Godkendelsesfejl:%1$s(kode %2$d)</string>
@@ -109,6 +110,7 @@
     <string name="text_biometric_login_sub">Log ind med dit biometriske legitimationsoplysninger</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Alle apps</string>
+    <string name="please_select_app">Vælg venligst en app</string>
     <string name="drawer_list_empty_hint">Ingen apps fundet</string>
     <string name="long_press_for_settings">Langt tryk hvor som helst for indstillinger</string>
     <string name="swipe_up_for_apps">Stryg opad for alle apps</string>
