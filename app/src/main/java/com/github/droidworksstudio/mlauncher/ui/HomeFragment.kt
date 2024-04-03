@@ -119,7 +119,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         binding.date.textSize = prefs.textSizeLauncher.toFloat()
         binding.batteryIcon.textSize = prefs.textSizeLauncher.toFloat() / 1.5f
         binding.batteryText.textSize = prefs.textSizeLauncher.toFloat() / 1.5f
-        binding.homeScreenPager.textSize = prefs.textSizeLauncher * prefs.textSizeMultiplier
+        binding.homeScreenPager.textSize = prefs.textSizeLauncher.toFloat()
 
         if (prefs.useCustomIconFont) {
             binding.clock.typeface = typeface
