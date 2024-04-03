@@ -77,6 +77,10 @@
     <string name="settings_text_size">Instellings teksgrootte</string>
     <string name="display_hidden_apps">Wys versteekte toepassings</string>
     <string name="lock_settings">Sluit instellings</string>
+    <!-- Backup Strings -->
+    <string name="backup">Ondersteuning</string>
+    <string name="load_backup">Laai rugsteun</string>
+    <string name="store_backup">Winkel Rugsteun</string>
     <!-- Settings Strings -->
     <string name="off">Off</string>
     <string name="on">On</string>
