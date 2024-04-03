@@ -38,6 +38,7 @@
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Idadi ya njia za mkato</string>
     <string name="pages_on_home_screen">Idadi ya kurasa</string>
+    <string name="enable_home_pager">Washa Kivinjari cha Nyumbani</string>
     <string name="show_time">Onyesha wakati</string>
     <string name="show_date">Onyesha tarehe</string>
     <string name="show_battery">Onyesha betri</string>
@@ -60,6 +61,22 @@
     <string name="clock_click_app">Bonyeza Saa</string>
     <string name="date_click_app">Bonyeza Tarehe</string>
     <string name="double_tap">Gonga Mara Mbili</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">Onyesha Arifa</string>
+    <string name="show_app_list">Onyesha Orodha ya Programu</string>
+    <string name="open_app">Fungua Programu</string>
+    <string name="lock_screen">Funga Skrini</string>
+    <string name="open_quick_settings">Mipangilio ya Haraka</string>
+    <string name="show_recents">Onyesha Hivi Karibuni</string>
+    <string name="open_power_dialog">Kidirisha cha Nguvu</string>
+    <string name="take_a_screenshot">Piga Picha ya skrini</string>
+    <string name="left_page">Nenda kwenye ukurasa wa kushoto</string>
+    <string name="right_page">Nenda kwenye ukurasa wa kulia</string>
+    <string name="double_tap_to_lock_screen">Gusa mara mbili ili kufunga</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Ukubwa wa Maandishi ya Mipangilio</string>
+    <string name="display_hidden_apps">Onyesha Programu Zilizofichwa</string>
+    <string name="lock_settings">Mipangilio ya Kufunga</string>
     <!-- Settings Strings -->
     <string name="off">Imezimwa</string>
     <string name="on">Washa</string>
@@ -85,22 +102,6 @@
     <string name="open">Fungua</string>
     <string name="close">Funga</string>
     <string name="copy">nakala</string>
-    <!-- Gestures Do Strings -->
-    <string name="show_notifications">Onyesha Arifa</string>
-    <string name="show_app_list">Onyesha Orodha ya Programu</string>
-    <string name="open_app">Fungua Programu</string>
-    <string name="lock_screen">Funga Skrini</string>
-    <string name="open_quick_settings">Mipangilio ya Haraka</string>
-    <string name="show_recents">Onyesha Hivi Karibuni</string>
-    <string name="open_power_dialog">Kidirisha cha Nguvu</string>
-    <string name="take_a_screenshot">Piga Picha ya skrini</string>
-    <string name="left_page">Nenda kwenye ukurasa wa kushoto</string>
-    <string name="right_page">Nenda kwenye ukurasa wa kulia</string>
-    <string name="double_tap_to_lock_screen">Gusa mara mbili ili kufunga</string>
-    <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">Ukubwa wa Maandishi ya Mipangilio</string>
-    <string name="display_hidden_apps">Onyesha Programu Zilizofichwa</string>
-    <string name="lock_settings">Mipangilio ya Kufunga</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Uthibitishaji Ghairi.</string>
     <string name="text_authentication_error">Hitilafu ya uthibitishaji:%1$s(msimbo %2$d)</string>
@@ -109,6 +110,7 @@
     <string name="text_biometric_login_sub">Ingia kwa kutumia kitambulisho chako cha kibayometriki</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Programu zote</string>
+    <string name="please_select_app">Tafadhali chagua programu</string>
     <string name="drawer_list_empty_hint">Hakuna programu zilizopatikana</string>
     <string name="long_press_for_settings">Bonyeza kwa muda mrefu mahali popote kwa mipangilio</string>
     <string name="swipe_up_for_apps">Telezesha kidole juu kwa programu zote</string>
