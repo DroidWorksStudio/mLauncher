@@ -7,16 +7,16 @@ Prie pradinio ekrano programų pridėta please_select_app (#411)
 Trikčių pataisymai:
 
 Ištaisyti pertvarkymo nustatymai (#416)
-Pataisykite projekto vardų sritį
+Pataisykite projekto vardų erdvę
 Ištaisyta FUNDING.yml
 
 Išleidimas:
 
-Atnaujinkite leidimo versiją į 145 (v1.4.5)
+Atnaujinta leidimo versiją į 145 (v1.4.5)
 
 Įvairūs:
 
-Atnaujinkite changelog.yml
+Ištaisytas changelog.yml
 Pridėta išsami programos informacija
 Pakeista programos piktograma
 Ieškiklis pervadytas į „FuzzyFinder“.
