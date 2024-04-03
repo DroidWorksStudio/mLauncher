@@ -77,6 +77,10 @@
     <string name="settings_text_size">Indstillinger Tekststørrelse</string>
     <string name="display_hidden_apps">Vis skjulte apps</string>
     <string name="lock_settings">Låseindstillinger</string>
+    <!-- Backup Strings -->
+    <string name="backup">Backup</string>
+    <string name="load_backup">Indlæs sikkerhedskopiering</string>
+    <string name="store_backup">Sikkerhedskopiering af butik</string>
     <!-- Settings Strings -->
     <string name="off">Fra</string>
     <string name="on">Til</string>

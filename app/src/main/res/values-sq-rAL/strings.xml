@@ -77,6 +77,10 @@
     <string name="settings_text_size">Cilësimet e madhësisë së tekstit</string>
     <string name="display_hidden_apps">Shfaq aplikacionet e fshehura</string>
     <string name="lock_settings">Cilësimet e kyçjes</string>
+    <!-- Backup Strings -->
+    <string name="backup">Rezervimi</string>
+    <string name="load_backup">Ngarko kopje rezervë</string>
+    <string name="store_backup">Rezervimi i dyqanit</string>
     <!-- Settings Strings -->
     <string name="off">Joaktiv</string>
     <string name="on">Aktiv</string>

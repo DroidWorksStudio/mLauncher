@@ -77,6 +77,10 @@
     <string name="settings_text_size">Параметри Розмір тексту</string>
     <string name="display_hidden_apps">Показати приховані програми</string>
     <string name="lock_settings">Налаштування блокування</string>
+    <!-- Backup Strings -->
+    <string name="backup">Резервне копіювання</string>
+    <string name="load_backup">Завантажити резервну копію</string>
+    <string name="store_backup">Резервне копіювання</string>
     <!-- Settings Strings -->
     <string name="off">Вимкнено</string>
     <string name="on">Увімк</string>

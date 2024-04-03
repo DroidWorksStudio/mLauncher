@@ -77,6 +77,10 @@
     <string name="settings_text_size">सेटिङ पाठ आकार</string>
     <string name="display_hidden_apps">लुकेका एपहरू प्रदर्शन गर्नुहोस्</string>
     <string name="lock_settings">लक सेटिङहरू</string>
+    <!-- Backup Strings -->
+    <string name="backup">ब्याकअप</string>
+    <string name="load_backup">ब्याकअप लोड गर्नुहोस्</string>
+    <string name="store_backup">स्टोर ब्याकअप</string>
     <!-- Settings Strings -->
     <string name="off">बन्द</string>
     <string name="on">अन</string>

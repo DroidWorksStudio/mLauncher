@@ -77,6 +77,10 @@
     <string name="settings_text_size">سيٽنگون ٽيڪسٽ سائيز</string>
     <string name="display_hidden_apps">پوشیدہ ائپس ڏيکاريو</string>
     <string name="lock_settings">لاڪ سيٽنگون</string>
+    <!-- Backup Strings -->
+    <string name="backup">بيڪ اپ</string>
+    <string name="load_backup">لوڊ بيڪ اپ</string>
+    <string name="store_backup">اسٽور بيڪ اپ</string>
     <!-- Settings Strings -->
     <string name="off">بند</string>
     <string name="on">تي</string>

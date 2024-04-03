@@ -77,6 +77,10 @@
     <string name="settings_text_size">Hoʻonohonoho i ka nui kikokikona</string>
     <string name="display_hidden_apps">Hōʻike i nā polokalamu huna</string>
     <string name="lock_settings">Hoʻonohonoho laka</string>
+    <!-- Backup Strings -->
+    <string name="backup">Kākoʻo</string>
+    <string name="load_backup">Hoʻouka i ka waihona</string>
+    <string name="store_backup">Waihona Waihona</string>
     <!-- Settings Strings -->
     <string name="off">Paʻa</string>
     <string name="on">Ma ka</string>

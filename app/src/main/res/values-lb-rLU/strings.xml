@@ -77,6 +77,10 @@
     <string name="settings_text_size">Astellungen Text Gréisst</string>
     <string name="display_hidden_apps">Display Hidden Apps</string>
     <string name="lock_settings">Spär Astellunge</string>
+    <!-- Backup Strings -->
+    <string name="backup">Backupsatellit</string>
+    <string name="load_backup">Lueden Backupsatellit</string>
+    <string name="store_backup">Store Backupsatellit</string>
     <!-- Settings Strings -->
     <string name="off">Off</string>
     <string name="on">Op</string>

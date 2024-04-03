@@ -77,6 +77,10 @@
     <string name="settings_text_size">सेटिंग्स पाठ का आकार</string>
     <string name="display_hidden_apps">छिपे हुए ऐप्स प्रदर्शित करें</string>
     <string name="lock_settings">सेटिंग्स लॉक करें</string>
+    <!-- Backup Strings -->
+    <string name="backup">बैकअप</string>
+    <string name="load_backup">बैकअप को लोड करना</string>
+    <string name="store_backup">बैकअप स्टोर करें</string>
     <!-- Settings Strings -->
     <string name="off">बंद</string>
     <string name="on">पर</string>

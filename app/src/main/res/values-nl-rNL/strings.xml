@@ -77,6 +77,10 @@
     <string name="settings_text_size">Instellingen Tekstgrootte</string>
     <string name="display_hidden_apps">Geef verborgen apps weer</string>
     <string name="lock_settings">Instellingen vergrendelen</string>
+    <!-- Backup Strings -->
+    <string name="backup">Back-up</string>
+    <string name="load_backup">Backup Laden</string>
+    <string name="store_backup">Back-up opslaan</string>
     <!-- Settings Strings -->
     <string name="off">UIT</string>
     <string name="on">op</string>

@@ -77,6 +77,10 @@
     <string name="settings_text_size">设置文字大小</string>
     <string name="display_hidden_apps">显示隐藏的应用程序</string>
     <string name="lock_settings">锁定设置</string>
+    <!-- Backup Strings -->
+    <string name="backup">备份</string>
+    <string name="load_backup">加载备份</string>
+    <string name="store_backup">存储备份</string>
     <!-- Settings Strings -->
     <string name="off">关</string>
     <string name="on">开</string>

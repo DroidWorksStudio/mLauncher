@@ -77,6 +77,10 @@
     <string name="settings_text_size">Méid Téacs Socruithe</string>
     <string name="display_hidden_apps">Taispeáin Apps Hidden</string>
     <string name="lock_settings">Socruithe Glasála</string>
+    <!-- Backup Strings -->
+    <string name="backup">Cúltaca</string>
+    <string name="load_backup">Luchtaigh Cúltaca</string>
+    <string name="store_backup">Cúltaca Store</string>
     <!-- Settings Strings -->
     <string name="off">as</string>
     <string name="on">Ar</string>

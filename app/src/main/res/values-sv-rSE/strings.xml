@@ -77,6 +77,10 @@
     <string name="settings_text_size">Inställningar Textstorlek</string>
     <string name="display_hidden_apps">Visa dolda appar</string>
     <string name="lock_settings">Låsinställningar</string>
+    <!-- Backup Strings -->
+    <string name="backup">Säkerhetskopiering</string>
+    <string name="load_backup">Ladda säkerhetskopiering</string>
+    <string name="store_backup">Lagra säkerhetskopiering</string>
     <!-- Settings Strings -->
     <string name="off">Av</string>
     <string name="on">På</string>

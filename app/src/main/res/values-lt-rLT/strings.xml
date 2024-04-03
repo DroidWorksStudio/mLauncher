@@ -77,6 +77,10 @@
     <string name="settings_text_size">Nustatymai Teksto dydis</string>
     <string name="display_hidden_apps">Rodyti paslėptas programas</string>
     <string name="lock_settings">Užrakinimo nustatymai</string>
+    <!-- Backup Strings -->
+    <string name="backup">Atsarginė kopija</string>
+    <string name="load_backup">Įkelti atsarginę kopiją</string>
+    <string name="store_backup">Parduotuvė atsarginė kopija</string>
     <!-- Settings Strings -->
     <string name="off">Išjungti</string>
     <string name="on">Įjungti</string>

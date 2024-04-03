@@ -77,6 +77,10 @@
     <string name="settings_text_size">Texto en pantalla</string>
     <string name="display_hidden_apps">Mostrar aplicaciones ocultas</string>
     <string name="lock_settings">Configuración de bloqueo</string>
+    <!-- Backup Strings -->
+    <string name="backup">Respaldo</string>
+    <string name="load_backup">Respaldo de carga</string>
+    <string name="store_backup">Copia de seguridad de la tienda</string>
     <!-- Settings Strings -->
     <string name="off">Ocultar</string>
     <string name="on">Mostrar</string>

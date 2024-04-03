@@ -77,6 +77,10 @@
     <string name="settings_text_size">Stillingar Textastærð</string>
     <string name="display_hidden_apps">Sýna falin forrit</string>
     <string name="lock_settings">Læsa stillingar</string>
+    <!-- Backup Strings -->
+    <string name="backup">Afritun</string>
+    <string name="load_backup">Hlaða öryggisafrit</string>
+    <string name="store_backup">Afritun verslunar</string>
     <!-- Settings Strings -->
     <string name="off">Af</string>
     <string name="on">Á</string>

@@ -77,6 +77,10 @@
     <string name="settings_text_size">Settings Test Size</string>
     <string name="display_hidden_apps">Uri Apps Moħbija</string>
     <string name="lock_settings">Lock Settings</string>
+    <!-- Backup Strings -->
+    <string name="backup">Backup</string>
+    <string name="load_backup">Tagħbija Backup</string>
+    <string name="store_backup">Aħżen Backup</string>
     <!-- Settings Strings -->
     <string name="off">Mitfi</string>
     <string name="on">Fuq</string>

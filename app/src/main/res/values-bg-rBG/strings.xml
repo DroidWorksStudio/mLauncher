@@ -77,6 +77,10 @@
     <string name="settings_text_size">Настройки Размер на текста</string>
     <string name="display_hidden_apps">Показване на скрити приложения</string>
     <string name="lock_settings">Настройки за заключване</string>
+    <!-- Backup Strings -->
+    <string name="backup">Архивиране</string>
+    <string name="load_backup">Заредете резервно копие</string>
+    <string name="store_backup">Резервно копие на магазина</string>
     <!-- Settings Strings -->
     <string name="off">Изключено</string>
     <string name="on">На</string>

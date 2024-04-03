@@ -77,6 +77,10 @@
     <string name="settings_text_size">Beállítások Szövegméret</string>
     <string name="display_hidden_apps">Rejtett alkalmazások megjelenítése</string>
     <string name="lock_settings">Zárolási beállítások</string>
+    <!-- Backup Strings -->
+    <string name="backup">biztonsági mentés</string>
+    <string name="load_backup">Biztonsági mentés betöltése</string>
+    <string name="store_backup">Biztonsági mentés tárolása</string>
     <!-- Settings Strings -->
     <string name="off">Off</string>
     <string name="on">A  oldalon.</string>

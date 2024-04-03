@@ -77,6 +77,10 @@
     <string name="settings_text_size">Nastavení Velikost textu</string>
     <string name="display_hidden_apps">Zobrazit skryté aplikace</string>
     <string name="lock_settings">Nastavení zámku</string>
+    <!-- Backup Strings -->
+    <string name="backup">Záloha</string>
+    <string name="load_backup">Načíst zálohu</string>
+    <string name="store_backup">Store Backup</string>
     <!-- Settings Strings -->
     <string name="off">Vypnuto</string>
     <string name="on">Zapnuto</string>

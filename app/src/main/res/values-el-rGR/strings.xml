@@ -77,6 +77,10 @@
     <string name="settings_text_size">Ρυθμίσεις Μέγεθος κειμένου</string>
     <string name="display_hidden_apps">Εμφάνιση κρυφών εφαρμογών</string>
     <string name="lock_settings">Ρυθμίσεις κλειδώματος</string>
+    <!-- Backup Strings -->
+    <string name="backup">Αντιγράφων ασφαλείας</string>
+    <string name="load_backup">Φόρτωση αντιγράφων ασφαλείας</string>
+    <string name="store_backup">Δημιουργία αντιγράφων ασφαλείας αποθήκευσης</string>
     <!-- Settings Strings -->
     <string name="off">Ανενεργό</string>
     <string name="on">Ενεργό</string>

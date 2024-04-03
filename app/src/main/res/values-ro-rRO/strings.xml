@@ -77,6 +77,10 @@
     <string name="settings_text_size">Setări Dimensiunea textului</string>
     <string name="display_hidden_apps">Afișează aplicații ascunse</string>
     <string name="lock_settings">Setări de blocare</string>
+    <!-- Backup Strings -->
+    <string name="backup">Backup</string>
+    <string name="load_backup">Încărcați backup</string>
+    <string name="store_backup">Salvare de rezervă</string>
     <!-- Settings Strings -->
     <string name="off">Dezactivat</string>
     <string name="on">Activat</string>
