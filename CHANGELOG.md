@@ -2,6 +2,10 @@
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Implemented Enhancements:
+
+- Added a home screen pager (disabled by default)
+
 ### Bug Fixes:
 
 - Allow HomeScreen apps to be set to 0
