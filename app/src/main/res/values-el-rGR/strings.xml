@@ -38,6 +38,7 @@
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Αριθμός συντομεύσεων</string>
     <string name="pages_on_home_screen">Αριθμός σελίδων</string>
+    <string name="enable_home_pager">Ενεργοποίηση Home Pager</string>
     <string name="show_time">Εμφάνιση ώρας</string>
     <string name="show_date">Εμφάνιση ημερομηνίας</string>
     <string name="show_battery">Εμφάνιση μπαταρίας</string>
@@ -60,6 +61,22 @@
     <string name="clock_click_app">Κάντε κλικ στο ρολόι</string>
     <string name="date_click_app">Κάντε κλικ στην ημερομηνία</string>
     <string name="double_tap">Διπλό Πάτημα</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">Εμφάνιση Ειδοποίησης</string>
+    <string name="show_app_list">Εμφάνιση Λίστας Εφαρμογών</string>
+    <string name="open_app">Άνοιγμα Εφαρμογής</string>
+    <string name="lock_screen">Οθόνη Κλειδώματος</string>
+    <string name="open_quick_settings">Γρήγορες Ρυθμίσεις</string>
+    <string name="show_recents">Show Recents</string>
+    <string name="open_power_dialog">Power Dialog</string>
+    <string name="take_a_screenshot">Τραβήξτε ένα στιγμιότυπο οθόνης</string>
+    <string name="left_page">Μεταβείτε στην αριστερή σελίδα</string>
+    <string name="right_page">Μεταβείτε στη δεξιά σελίδα</string>
+    <string name="double_tap_to_lock_screen">Διπλό πάτημα για κλείδωμα</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Ρυθμίσεις Μέγεθος κειμένου</string>
+    <string name="display_hidden_apps">Εμφάνιση κρυφών εφαρμογών</string>
+    <string name="lock_settings">Ρυθμίσεις κλειδώματος</string>
     <!-- Settings Strings -->
     <string name="off">Ανενεργό</string>
     <string name="on">Ενεργό</string>
@@ -85,22 +102,6 @@
     <string name="open">Άνοιγμα</string>
     <string name="close">Κλείσιμο</string>
     <string name="copy">αντίγραφο</string>
-    <!-- Gestures Do Strings -->
-    <string name="show_notifications">Εμφάνιση Ειδοποίησης</string>
-    <string name="show_app_list">Εμφάνιση Λίστας Εφαρμογών</string>
-    <string name="open_app">Άνοιγμα Εφαρμογής</string>
-    <string name="lock_screen">Οθόνη Κλειδώματος</string>
-    <string name="open_quick_settings">Γρήγορες Ρυθμίσεις</string>
-    <string name="show_recents">Show Recents</string>
-    <string name="open_power_dialog">Power Dialog</string>
-    <string name="take_a_screenshot">Τραβήξτε ένα στιγμιότυπο οθόνης</string>
-    <string name="left_page">Μεταβείτε στην αριστερή σελίδα</string>
-    <string name="right_page">Μεταβείτε στη δεξιά σελίδα</string>
-    <string name="double_tap_to_lock_screen">Διπλό πάτημα για κλείδωμα</string>
-    <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">Ρυθμίσεις Μέγεθος κειμένου</string>
-    <string name="display_hidden_apps">Εμφάνιση κρυφών εφαρμογών</string>
-    <string name="lock_settings">Ρυθμίσεις κλειδώματος</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Ακύρωση ελέγχου ταυτότητας.</string>
     <string name="text_authentication_error">Σφάλμα ελέγχου ταυτότητας:%1$s(κωδικός %2$d)</string>
@@ -109,6 +110,7 @@
     <string name="text_biometric_login_sub">Συνδεθείτε χρησιμοποιώντας τα βιομετρικά διαπιστευτήριά σας</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Όλες οι εφαρμογές</string>
+    <string name="please_select_app">Επιλέξτε μια εφαρμογή</string>
     <string name="drawer_list_empty_hint">Δεν βρέθηκαν εφαρμογές</string>
     <string name="long_press_for_settings">Πατήστε παρατεταμένα οπουδήποτε για ρυθμίσεις</string>
     <string name="swipe_up_for_apps">Σύρσιμο προς τα επάνω για όλες τις εφαρμογές</string>
