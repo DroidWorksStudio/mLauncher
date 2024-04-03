@@ -38,6 +38,7 @@
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Kısayol sayısı</string>
     <string name="pages_on_home_screen">Sayfa sayısı</string>
+    <string name="enable_home_pager">Ana Sayfa Cihazını Etkinleştir</string>
     <string name="show_time">Zamanı göster</string>
     <string name="show_date">Tarih\'i göster</string>
     <string name="show_battery">Pil\'i göster</string>
@@ -60,6 +61,22 @@
     <string name="clock_click_app">Saat üzerine Tıklayın</string>
     <string name="date_click_app">Tarih üzerine Tıklayın</string>
     <string name="double_tap">Çift Dokunuş</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">Bildirimi Göster</string>
+    <string name="show_app_list">Uygulama Listesini Göster</string>
+    <string name="open_app">Uygulama\'yı Aç</string>
+    <string name="lock_screen">Ekranı Kilitle</string>
+    <string name="open_quick_settings">Hızlı Ayarlar</string>
+    <string name="show_recents">Son Kullanılanları Göster</string>
+    <string name="open_power_dialog">Güç Menüsü</string>
+    <string name="take_a_screenshot">Ekran görüntüsü al</string>
+    <string name="left_page">Sol sayfaya git</string>
+    <string name="right_page">Sağ sayfaya git</string>
+    <string name="double_tap_to_lock_screen">Kilitlemek için çift dokun</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Ayarlar Metin Boyutu</string>
+    <string name="display_hidden_apps">Gizli Uygulamaları Görüntüle</string>
+    <string name="lock_settings">Kilit Ayarları</string>
     <!-- Settings Strings -->
     <string name="off">Kapalı</string>
     <string name="on">Açık</string>
@@ -85,22 +102,6 @@
     <string name="open">Aç</string>
     <string name="close">Kapat</string>
     <string name="copy">Kopyala</string>
-    <!-- Gestures Do Strings -->
-    <string name="show_notifications">Bildirimi Göster</string>
-    <string name="show_app_list">Uygulama Listesini Göster</string>
-    <string name="open_app">Uygulama\'yı Aç</string>
-    <string name="lock_screen">Ekranı Kilitle</string>
-    <string name="open_quick_settings">Hızlı Ayarlar</string>
-    <string name="show_recents">Son Kullanılanları Göster</string>
-    <string name="open_power_dialog">Güç Menüsü</string>
-    <string name="take_a_screenshot">Ekran görüntüsü al</string>
-    <string name="left_page">Sol sayfaya git</string>
-    <string name="right_page">Sağ sayfaya git</string>
-    <string name="double_tap_to_lock_screen">Kilitlemek için çift dokun</string>
-    <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">Ayarlar Metin Boyutu</string>
-    <string name="display_hidden_apps">Gizli Uygulamaları Görüntüle</string>
-    <string name="lock_settings">Kilit Ayarları</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Kimlik Doğrulama İptali.</string>
     <string name="text_authentication_error">Kimlik doğrulama hatası:%1$s(kod %2$d)</string>
@@ -109,6 +110,7 @@
     <string name="text_biometric_login_sub">Biyometrik kimlik bilgilerinizi kullanarak giriş yapın</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Tüm uygulamalar</string>
+    <string name="please_select_app">Lütfen bir uygulama seçin</string>
     <string name="drawer_list_empty_hint">Herhangi bir uygulama bulunamadı</string>
     <string name="long_press_for_settings">Ayarlar için herhangi bir yere uzun bas</string>
     <string name="swipe_up_for_apps">Tüm uygulamalar için yukarı kaydırın</string>
