@@ -38,6 +38,7 @@
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">കുറുക്കുവഴികളുടെ എണ്ണം</string>
     <string name="pages_on_home_screen">പേജുകളുടെ എണ്ണം</string>
+    <string name="enable_home_pager">ഹോം പേജർ പ്രവർത്തനക്ഷമമാക്കുക</string>
     <string name="show_time">പ്രദർശന സമയം</string>
     <string name="show_date">തീയതി കാണിക്കുക</string>
     <string name="show_battery">ബാറ്ററി കാണിക്കുക</string>
@@ -60,6 +61,22 @@
     <string name="clock_click_app">ക്ലോക്കിൽ ക്ലിക്ക് ചെയ്യുക</string>
     <string name="date_click_app">തീയതിയിൽ ക്ലിക്ക് ചെയ്യുക</string>
     <string name="double_tap">രണ്ടുതവണ ടാപ്പ് ചെയ്യുക</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">അറിയിപ്പ് കാണിക്കുക</string>
+    <string name="show_app_list">ആപ്പ് ലിസ്റ്റ് കാണിക്കുക</string>
+    <string name="open_app">ആപ്പ് തുറക്കുക</string>
+    <string name="lock_screen">ലോക്ക് സ്ക്രീൻ</string>
+    <string name="open_quick_settings">ദ്രുത ക്രമീകരണങ്ങൾ</string>
+    <string name="show_recents">സമീപകാലങ്ങൾ കാണിക്കുക</string>
+    <string name="open_power_dialog">പവർ ഡയലോഗ്</string>
+    <string name="take_a_screenshot">ഒരു സ്ക്രീൻഷോട്ട് എടുക്കുക</string>
+    <string name="left_page">ഇടത് പേജിലേക്ക് പോകുക</string>
+    <string name="right_page">വലത് പേജിലേക്ക് പോകുക</string>
+    <string name="double_tap_to_lock_screen">ലോക്ക് ചെയ്യാൻ രണ്ടുതവണ ടാപ്പ് ചെയ്യുക</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">ക്രമീകരണങ്ങൾ ടെക്സ്റ്റ് വലിപ്പം</string>
+    <string name="display_hidden_apps">മറഞ്ഞിരിക്കുന്ന ആപ്പുകൾ പ്രദർശിപ്പിക്കുക</string>
+    <string name="lock_settings">ലോക്ക് ക്രമീകരണങ്ങൾ</string>
     <!-- Settings Strings -->
     <string name="off">ഓഫ്</string>
     <string name="on">ഓൺ</string>
@@ -85,22 +102,6 @@
     <string name="open">തുറക്കുക</string>
     <string name="close">അടയ്ക്കുക</string>
     <string name="copy">പകർത്തുക</string>
-    <!-- Gestures Do Strings -->
-    <string name="show_notifications">അറിയിപ്പ് കാണിക്കുക</string>
-    <string name="show_app_list">ആപ്പ് ലിസ്റ്റ് കാണിക്കുക</string>
-    <string name="open_app">ആപ്പ് തുറക്കുക</string>
-    <string name="lock_screen">ലോക്ക് സ്ക്രീൻ</string>
-    <string name="open_quick_settings">ദ്രുത ക്രമീകരണങ്ങൾ</string>
-    <string name="show_recents">സമീപകാലങ്ങൾ കാണിക്കുക</string>
-    <string name="open_power_dialog">പവർ ഡയലോഗ്</string>
-    <string name="take_a_screenshot">ഒരു സ്ക്രീൻഷോട്ട് എടുക്കുക</string>
-    <string name="left_page">ഇടത് പേജിലേക്ക് പോകുക</string>
-    <string name="right_page">വലത് പേജിലേക്ക് പോകുക</string>
-    <string name="double_tap_to_lock_screen">ലോക്ക് ചെയ്യാൻ രണ്ടുതവണ ടാപ്പ് ചെയ്യുക</string>
-    <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">ക്രമീകരണങ്ങൾ ടെക്സ്റ്റ് വലിപ്പം</string>
-    <string name="display_hidden_apps">മറഞ്ഞിരിക്കുന്ന ആപ്പുകൾ പ്രദർശിപ്പിക്കുക</string>
-    <string name="lock_settings">ലോക്ക് ക്രമീകരണങ്ങൾ</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">പ്രാമാണീകരണം റദ്ദാക്കുക.</string>
     <string name="text_authentication_error">പ്രാമാണീകരണ പിശക്:%1$s(കോഡ് %2$d)</string>
@@ -109,6 +110,7 @@
     <string name="text_biometric_login_sub">നിങ്ങളുടെ ബയോമെട്രിക് ക്രെഡൻഷ്യൽ ഉപയോഗിച്ച് ലോഗിൻ ചെയ്യുക</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">എല്ലാ ആപ്പുകളും</string>
+    <string name="please_select_app">ദയവായി ഒരു ആപ്പ് തിരഞ്ഞെടുക്കുക</string>
     <string name="drawer_list_empty_hint">ആപ്പുകളൊന്നും കണ്ടെത്തിയില്ല</string>
     <string name="long_press_for_settings">ക്രമീകരണങ്ങൾക്കായി എവിടെയും ദീർഘനേരം അമർത്തുക</string>
     <string name="swipe_up_for_apps">എല്ലാ ആപ്പുകൾക്കും മുകളിലേക്ക് സ്വൈപ്പ് ചെയ്യുക</string>
