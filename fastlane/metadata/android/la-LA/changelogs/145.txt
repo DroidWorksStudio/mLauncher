@@ -1,0 +1,22 @@
+Version: 1.4.5
+
+Enhancement:
+
+Addidit please_select_app screen apps ad domum (# CDXI)
+
+Bug Fixes:
+
+Reorder occasus posuit (# CDXVI)
+Fix spatii ad project
+fixum FUNDING.yml
+
+Dimitte:
+
+Renova emissionem versionis ad 145 (v1.4.5)
+
+Miscellaneous:
+
+Update changelog.yml
+Addidit App Details
+Mutata App Icon
+Rename inventor ad FuzzyFinder
