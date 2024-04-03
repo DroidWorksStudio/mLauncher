@@ -38,6 +38,7 @@
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Antal genvägar</string>
     <string name="pages_on_home_screen">Antal sidor</string>
+    <string name="enable_home_pager">Aktivera Home Pager</string>
     <string name="show_time">Visa tid</string>
     <string name="show_date">Visa datum</string>
     <string name="show_battery">Visa batteri</string>
@@ -60,6 +61,22 @@
     <string name="clock_click_app">Klicka på klockan</string>
     <string name="date_click_app">Klicka på datum</string>
     <string name="double_tap">Dubbeltryck</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">Visa avisering</string>
+    <string name="show_app_list">Visa applista</string>
+    <string name="open_app">Öppna appen</string>
+    <string name="lock_screen">Låsskärm</string>
+    <string name="open_quick_settings">Snabbinställningar</string>
+    <string name="show_recents">Show Recents</string>
+    <string name="open_power_dialog">Power Dialog</string>
+    <string name="take_a_screenshot">Ta en skärmdump</string>
+    <string name="left_page">Gå till vänster sida</string>
+    <string name="right_page">Gå till höger sida</string>
+    <string name="double_tap_to_lock_screen">Dubbeltryck för att låsa</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Inställningar Textstorlek</string>
+    <string name="display_hidden_apps">Visa dolda appar</string>
+    <string name="lock_settings">Låsinställningar</string>
     <!-- Settings Strings -->
     <string name="off">Av</string>
     <string name="on">På</string>
@@ -85,22 +102,6 @@
     <string name="open">Öppna</string>
     <string name="close">Stäng</string>
     <string name="copy">kopiera</string>
-    <!-- Gestures Do Strings -->
-    <string name="show_notifications">Visa avisering</string>
-    <string name="show_app_list">Visa applista</string>
-    <string name="open_app">Öppna appen</string>
-    <string name="lock_screen">Låsskärm</string>
-    <string name="open_quick_settings">Snabbinställningar</string>
-    <string name="show_recents">Show Recents</string>
-    <string name="open_power_dialog">Power Dialog</string>
-    <string name="take_a_screenshot">Ta en skärmdump</string>
-    <string name="left_page">Gå till vänster sida</string>
-    <string name="right_page">Gå till höger sida</string>
-    <string name="double_tap_to_lock_screen">Dubbeltryck för att låsa</string>
-    <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">Inställningar Textstorlek</string>
-    <string name="display_hidden_apps">Visa dolda appar</string>
-    <string name="lock_settings">Låsinställningar</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Autentisering avbryt.</string>
     <string name="text_authentication_error">Autentiseringsfel:%1$s(kod %2$d)</string>
@@ -109,6 +110,7 @@
     <string name="text_biometric_login_sub">Logga in med dina biometriska uppgifter</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Alla appar</string>
+    <string name="please_select_app">Välj en app</string>
     <string name="drawer_list_empty_hint">Inga appar hittades</string>
     <string name="long_press_for_settings">Långtryck var som helst för inställningar</string>
     <string name="swipe_up_for_apps">Svep uppåt för alla appar</string>

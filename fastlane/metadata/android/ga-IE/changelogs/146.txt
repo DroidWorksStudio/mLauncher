@@ -1,0 +1,17 @@
+Leagan: 1.4.6
+
+Feabhsuithe:
+
+Cuireadh glaoire scáileáin baile leis (díchumasaithe de réir réamhshocraithe)
+
+Ceartúcháin fhabht:
+
+Ceadaigh aipeanna HomeScreen a shocrú go 0
+
+Doiciméadúchán:
+
+Nuashonraigh CHANGELOG.md
+
+Refactor:
+
+Cód glanta ag cur iarratas ceada leis

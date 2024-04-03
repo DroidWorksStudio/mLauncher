@@ -1,0 +1,22 @@
+Phiên bản: 1.4.5
+
+Sự nâng cao:
+
+Đã thêm please_select_app vào ứng dụng màn hình chính (#411)
+
+Sửa lỗi:
+
+Đã sửa lỗi cài đặt sắp xếp lại (#416)
+Sửa không gian tên cho dự án
+Đã sửa lỗi FUNDING.yml
+
+Giải phóng:
+
+Cập nhật phiên bản Phát hành lên 145 (v1.4.5)
+
+Điều khoản khác:
+
+Cập nhật Changelog.yml
+Đã thêm chi tiết ứng dụng
+Biểu tượng ứng dụng đã thay đổi
+Đổi tên công cụ tìm thành FuzzyFinder

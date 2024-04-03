@@ -1,0 +1,22 @@
+Versione: 1.4.5
+
+Aumento:
+
+Aggiunto please_select_app alle app della schermata iniziale (#411)
+
+Correzioni di bug:
+
+Risolte le impostazioni di riordino (#416)
+Correggere lo spazio dei nomi per il progetto
+Risolto il problema con FUNDING.yml
+
+Pubblicazione:
+
+Aggiorna la versione di rilascio a 145 (v1.4.5)
+
+Varie:
+
+Aggiorna changelog.yml
+Aggiunti dettagli sull'app
+Icona dell'app modificata
+Rinomina il cercatore in FuzzyFinder

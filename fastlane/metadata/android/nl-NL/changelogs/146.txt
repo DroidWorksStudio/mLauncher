@@ -1,0 +1,17 @@
+Versie: 1.4.6
+
+Verbeteringen:
+
+Een startscherm-pager toegevoegd (standaard uitgeschakeld)
+
+Bugfixes:
+
+Toestaan dat HomeScreen-apps op 0 worden ingesteld
+
+Documentatie:
+
+Update CHANGELOG.md
+
+Refactoring:
+
+Code opgeschoond waarbij toestemmingsverzoek is toegevoegd

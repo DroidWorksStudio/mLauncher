@@ -1,0 +1,17 @@
+Version: 1.4.6
+
+Fanatsarana:
+
+Nampiana pager efijerin'ny trano (efa kilema amin'ny alàlan'ny default)
+
+Fanamboarana bug:
+
+Avelao apetraka ho 0 ny fampiharana HomeScreen
+
+Documentation:
+
+Fanavaozana ny CHANGELOG.md
+
+Refactor:
+
+Nodiovina ny kaody manampy fangatahana fahazoan-dàlana

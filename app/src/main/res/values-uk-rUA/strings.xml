@@ -38,6 +38,7 @@
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Кількість ярликів</string>
     <string name="pages_on_home_screen">Кількість сторінок</string>
+    <string name="enable_home_pager">Увімкнути домашній пейджер</string>
     <string name="show_time">Відображати час</string>
     <string name="show_date">Показати дату</string>
     <string name="show_battery">Показати акумулятор</string>
@@ -60,6 +61,22 @@
     <string name="clock_click_app">Натисніть на Годинник</string>
     <string name="date_click_app">Натисніть на дату</string>
     <string name="double_tap">Подвійний дотик</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">Показувати сповіщення</string>
+    <string name="show_app_list">Показати список додатків</string>
+    <string name="open_app">Відкрити додаток</string>
+    <string name="lock_screen">Блокування екрану</string>
+    <string name="open_quick_settings">Швидкі налаштування</string>
+    <string name="show_recents">Show Recents</string>
+    <string name="open_power_dialog">Діалог живлення</string>
+    <string name="take_a_screenshot">Зробіть знімок екрана</string>
+    <string name="left_page">Перейти на ліву сторінку</string>
+    <string name="right_page">Перейдіть на праву сторінку</string>
+    <string name="double_tap_to_lock_screen">Подвійне натискання для блокування</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Параметри Розмір тексту</string>
+    <string name="display_hidden_apps">Показати приховані програми</string>
+    <string name="lock_settings">Налаштування блокування</string>
     <!-- Settings Strings -->
     <string name="off">Вимкнено</string>
     <string name="on">Увімк</string>
@@ -85,22 +102,6 @@
     <string name="open">Відкриті</string>
     <string name="close">Закрити</string>
     <string name="copy">копія</string>
-    <!-- Gestures Do Strings -->
-    <string name="show_notifications">Показувати сповіщення</string>
-    <string name="show_app_list">Показати список додатків</string>
-    <string name="open_app">Відкрити додаток</string>
-    <string name="lock_screen">Блокування екрану</string>
-    <string name="open_quick_settings">Швидкі налаштування</string>
-    <string name="show_recents">Show Recents</string>
-    <string name="open_power_dialog">Діалог живлення</string>
-    <string name="take_a_screenshot">Зробіть знімок екрана</string>
-    <string name="left_page">Перейти на ліву сторінку</string>
-    <string name="right_page">Перейдіть на праву сторінку</string>
-    <string name="double_tap_to_lock_screen">Подвійне натискання для блокування</string>
-    <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">Параметри Розмір тексту</string>
-    <string name="display_hidden_apps">Показати приховані програми</string>
-    <string name="lock_settings">Налаштування блокування</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Автентифікація Скасувати.</string>
     <string name="text_authentication_error">Помилка автентифікації:%1$s(код %2$d)</string>
@@ -109,6 +110,7 @@
     <string name="text_biometric_login_sub">Увійдіть, використовуючи свої біометричні облікові дані</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Всі програми</string>
+    <string name="please_select_app">Виберіть додаток</string>
     <string name="drawer_list_empty_hint">Додатки не знайдені</string>
     <string name="long_press_for_settings">Натисніть і утримуйте будь-де для налаштувань</string>
     <string name="swipe_up_for_apps">Проведіть пальцем угору для всіх програм</string>

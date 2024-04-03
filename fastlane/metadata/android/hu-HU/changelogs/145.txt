@@ -1,0 +1,22 @@
+Verzió: 1.4.5
+
+Fokozás:
+
+A please_select_app hozzáadva a kezdőképernyőn megjelenő alkalmazásokhoz (#411)
+
+Hibajavítások:
+
+Javítva az átrendezési beállítások (#416)
+Javítsa ki a projekt névterét
+Javítva FUNDING.yml
+
+Kiadás:
+
+Frissítse a kiadási verziót 145-re (v1.4.5)
+
+Vegyes:
+
+Frissítse a changelog.yml fájlt
+Alkalmazás részletei hozzáadva
+Megváltozott alkalmazásikon
+Nevezze át a keresőt FuzzyFinderre

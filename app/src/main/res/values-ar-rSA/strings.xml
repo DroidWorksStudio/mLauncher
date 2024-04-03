@@ -38,6 +38,7 @@
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">عدد الاختصارات</string>
     <string name="pages_on_home_screen">عدد الصفحات</string>
+    <string name="enable_home_pager">تمكين جهاز النداء الرئيسي</string>
     <string name="show_time">إظهار الوقت</string>
     <string name="show_date">إظهار التاريخ</string>
     <string name="show_battery">عرض البطارية</string>
@@ -60,6 +61,22 @@
     <string name="clock_click_app">انقر على الساعة</string>
     <string name="date_click_app">انقر على التاريخ</string>
     <string name="double_tap">النقر المزدوج</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">إظهار الإشعارات</string>
+    <string name="show_app_list">إظهار قائمة التطبيقات</string>
+    <string name="open_app">فتح التطبيق</string>
+    <string name="lock_screen">قفل الشاشة</string>
+    <string name="open_quick_settings">الإعدادات السريعة</string>
+    <string name="show_recents">Show Recents</string>
+    <string name="open_power_dialog">حوار القوة</string>
+    <string name="take_a_screenshot">خذ لقطة شاشة</string>
+    <string name="left_page">انتقل إلى الصفحة اليسرى</string>
+    <string name="right_page">انتقل إلى الصفحة الصحيحة</string>
+    <string name="double_tap_to_lock_screen">النقر المزدوج للقفل</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">إعدادات حجم النص</string>
+    <string name="display_hidden_apps">عرض التطبيقات المخفية</string>
+    <string name="lock_settings">إعدادات القفل</string>
     <!-- Settings Strings -->
     <string name="off">متوقف</string>
     <string name="on">تشغيل</string>
@@ -85,22 +102,6 @@
     <string name="open">فتح</string>
     <string name="close">أغلق</string>
     <string name="copy">ينسخ</string>
-    <!-- Gestures Do Strings -->
-    <string name="show_notifications">إظهار الإشعارات</string>
-    <string name="show_app_list">إظهار قائمة التطبيقات</string>
-    <string name="open_app">فتح التطبيق</string>
-    <string name="lock_screen">قفل الشاشة</string>
-    <string name="open_quick_settings">الإعدادات السريعة</string>
-    <string name="show_recents">Show Recents</string>
-    <string name="open_power_dialog">حوار القوة</string>
-    <string name="take_a_screenshot">خذ لقطة شاشة</string>
-    <string name="left_page">انتقل إلى الصفحة اليسرى</string>
-    <string name="right_page">انتقل إلى الصفحة الصحيحة</string>
-    <string name="double_tap_to_lock_screen">النقر المزدوج للقفل</string>
-    <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">إعدادات حجم النص</string>
-    <string name="display_hidden_apps">عرض التطبيقات المخفية</string>
-    <string name="lock_settings">إعدادات القفل</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">إلغاء المصادقة.</string>
     <string name="text_authentication_error">خطأ في المصادقة:%1$s(الكود %2$d)</string>
@@ -109,6 +110,7 @@
     <string name="text_biometric_login_sub">قم بتسجيل الدخول باستخدام بيانات الاعتماد البيومترية الخاصة بك</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">جميع التطبيقات</string>
+    <string name="please_select_app">الرجاء تحديد التطبيق</string>
     <string name="drawer_list_empty_hint">لم يتم العثور على تطبيقات</string>
     <string name="long_press_for_settings">اضغط مطولاً في أي مكان للإعدادات</string>
     <string name="swipe_up_for_apps">مرر لأعلى لجميع التطبيقات</string>

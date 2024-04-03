@@ -79,6 +79,17 @@
         android:paddingBottom="80dp"
         android:paddingTop="112dp" />
 
+    <TextView
+        android:id="@+id/homeScreenPager"
+        style="@style/TextSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="56dp"
+        android:visibility="gone" />
+
     <!-- First run tips -->
     <LinearLayout
         android:id="@+id/firstRunTips"

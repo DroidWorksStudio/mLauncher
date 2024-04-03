@@ -38,6 +38,7 @@
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Fjöldi flýtileiða</string>
     <string name="pages_on_home_screen">Fjöldi síðna</string>
+    <string name="enable_home_pager">Virkja Home Pager</string>
     <string name="show_time">Sýningartími</string>
     <string name="show_date">Sýningardagsetning</string>
     <string name="show_battery">Sýna rafhlöðu</string>
@@ -60,6 +61,22 @@
     <string name="clock_click_app">Smelltu á Klukka</string>
     <string name="date_click_app">Smelltu á Dagsetning</string>
     <string name="double_tap">Tvíklikka</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">Sýna tilkynningu</string>
+    <string name="show_app_list">Sýna forritalista</string>
+    <string name="open_app">Opnaðu App</string>
+    <string name="lock_screen">Læsa skjá</string>
+    <string name="open_quick_settings">Flýtistillingar</string>
+    <string name="show_recents">Sýna nýlegar</string>
+    <string name="open_power_dialog">Power Dialog</string>
+    <string name="take_a_screenshot">Taktu skjáskot</string>
+    <string name="left_page">Farðu á vinstri síðu</string>
+    <string name="right_page">Farðu á hægri síðu</string>
+    <string name="double_tap_to_lock_screen">Ýttu tvisvar til að læsa</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Stillingar Textastærð</string>
+    <string name="display_hidden_apps">Sýna falin forrit</string>
+    <string name="lock_settings">Læsa stillingar</string>
     <!-- Settings Strings -->
     <string name="off">Af</string>
     <string name="on">Á</string>
@@ -85,22 +102,6 @@
     <string name="open">Opið</string>
     <string name="close">Loka</string>
     <string name="copy">afrit</string>
-    <!-- Gestures Do Strings -->
-    <string name="show_notifications">Sýna tilkynningu</string>
-    <string name="show_app_list">Sýna forritalista</string>
-    <string name="open_app">Opnaðu App</string>
-    <string name="lock_screen">Læsa skjá</string>
-    <string name="open_quick_settings">Flýtistillingar</string>
-    <string name="show_recents">Sýna nýlegar</string>
-    <string name="open_power_dialog">Power Dialog</string>
-    <string name="take_a_screenshot">Taktu skjáskot</string>
-    <string name="left_page">Farðu á vinstri síðu</string>
-    <string name="right_page">Farðu á hægri síðu</string>
-    <string name="double_tap_to_lock_screen">Ýttu tvisvar til að læsa</string>
-    <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">Stillingar Textastærð</string>
-    <string name="display_hidden_apps">Sýna falin forrit</string>
-    <string name="lock_settings">Læsa stillingar</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Hætta við auðkenningu.</string>
     <string name="text_authentication_error">Auðkenningarvilla:%1$s(kóði %2$d)</string>
@@ -109,6 +110,7 @@
     <string name="text_biometric_login_sub">Skráðu þig inn með líffræðilegum tölfræðiskilríkjum þínum</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Öll forrit</string>
+    <string name="please_select_app">Vinsamlegast veldu app</string>
     <string name="drawer_list_empty_hint">Engin forrit fundust</string>
     <string name="long_press_for_settings">Ýttu lengi hvar sem er fyrir stillingar</string>
     <string name="swipe_up_for_apps">Strjúktu upp fyrir öll forrit</string>

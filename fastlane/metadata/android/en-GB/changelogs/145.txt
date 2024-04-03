@@ -1,0 +1,22 @@
+Version: 1.4.5
+
+Enhancement:
+
+Added please_select_app to the home screen apps (#411)
+
+Bug Fixes:
+
+Fixed the reorder settings (#416)
+Fix namespace for the project
+Fixed FUNDING.yml
+
+Release:
+
+Update the Release version to 145 (v1.4.5)
+
+Miscellaneous:
+
+Update changelog.yml
+Added App Details
+Changed App Icon
+Rename finder to FuzzyFinder

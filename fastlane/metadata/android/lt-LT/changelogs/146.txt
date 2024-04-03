@@ -1,0 +1,17 @@
+Versija: 1.4.6
+
+Patobulinimai:
+
+Pridėtas pagrindinio ekrano puslapis (pagal numatytuosius nustatymus išjungtas)
+
+Trikčių pataisymai:
+
+Leisti „HomeScreen“ programoms nustatyti 0
+
+Dokumentacija:
+
+Atnaujinti CHANGELOG.md
+
+Refaktorius:
+
+Išvalytas kodas, pridėjus leidimo užklausą

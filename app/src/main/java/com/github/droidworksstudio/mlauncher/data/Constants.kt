@@ -14,6 +14,8 @@ interface EnumOption {
 
 object Constants {
 
+    const val NEW_PAGE = "\uF444"
+    const val CURRENT_PAGE = "\uF192"
 
     const val TRIPLE_TAP_DELAY_MS = 300
     const val LONG_PRESS_DELAY_MS = 500

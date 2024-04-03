@@ -1,0 +1,22 @@
+Versioon: 1.4.5
+
+Täiendus:
+
+Lisati palun_select_app avaekraani rakendustele (#411)
+
+Veaparandused:
+
+Parandatud ümberkorraldamise seaded (#416)
+Parandage projekti nimeruum
+Parandatud FUNDING.yml
+
+Väljalase:
+
+Värskendage väljalase versioon versioonile 145 (v1.4.5)
+
+Mitmesugust:
+
+Värskendage changelog.yml
+Rakenduse üksikasjad on lisatud
+Muudetud rakenduse ikoon
+Nimetage leidja ümber FuzzyFinderiks

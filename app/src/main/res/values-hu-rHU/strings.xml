@@ -38,6 +38,7 @@
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">A parancsikonok száma</string>
     <string name="pages_on_home_screen">Oldalszám</string>
+    <string name="enable_home_pager">Home Pager engedélyezése</string>
     <string name="show_time">Show time</string>
     <string name="show_date">Megjelenés dátuma</string>
     <string name="show_battery">Mutasd az akkumulátort</string>
@@ -60,6 +61,22 @@
     <string name="clock_click_app">Kattintson az Óra gombra</string>
     <string name="date_click_app">Kattintson a Dátumra</string>
     <string name="double_tap">Dupla csapolás</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">Értesítés megjelenítése</string>
+    <string name="show_app_list">Alkalmazások listájának megjelenítése</string>
+    <string name="open_app">Alkalmazás megnyitása</string>
+    <string name="lock_screen">Képernyő zárolása</string>
+    <string name="open_quick_settings">Gyors beállítások</string>
+    <string name="show_recents">Visszatérők megjelenítése</string>
+    <string name="open_power_dialog">Teljesítmény párbeszédpanel</string>
+    <string name="take_a_screenshot">Készítsen képernyőképet</string>
+    <string name="left_page">Menjen a bal oldalra</string>
+    <string name="right_page">Ugrás a jobb oldalra</string>
+    <string name="double_tap_to_lock_screen">Dupla koppintás a lezáráshoz</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Beállítások Szövegméret</string>
+    <string name="display_hidden_apps">Rejtett alkalmazások megjelenítése</string>
+    <string name="lock_settings">Zárolási beállítások</string>
     <!-- Settings Strings -->
     <string name="off">Off</string>
     <string name="on">A  oldalon.</string>
@@ -85,22 +102,6 @@
     <string name="open">Nyissa meg a  címet.</string>
     <string name="close">Zárja be a</string>
     <string name="copy">másolat</string>
-    <!-- Gestures Do Strings -->
-    <string name="show_notifications">Értesítés megjelenítése</string>
-    <string name="show_app_list">Alkalmazások listájának megjelenítése</string>
-    <string name="open_app">Alkalmazás megnyitása</string>
-    <string name="lock_screen">Képernyő zárolása</string>
-    <string name="open_quick_settings">Gyors beállítások</string>
-    <string name="show_recents">Visszatérők megjelenítése</string>
-    <string name="open_power_dialog">Teljesítmény párbeszédpanel</string>
-    <string name="take_a_screenshot">Készítsen képernyőképet</string>
-    <string name="left_page">Menjen a bal oldalra</string>
-    <string name="right_page">Ugrás a jobb oldalra</string>
-    <string name="double_tap_to_lock_screen">Dupla koppintás a lezáráshoz</string>
-    <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">Beállítások Szövegméret</string>
-    <string name="display_hidden_apps">Rejtett alkalmazások megjelenítése</string>
-    <string name="lock_settings">Zárolási beállítások</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Hitelesítés megszakítása.</string>
     <string name="text_authentication_error">Hitelesítési hiba:%1$s(kód %2$d)</string>
@@ -109,6 +110,7 @@
     <string name="text_biometric_login_sub">Jelentkezzen be biometrikus hitelesítő adataival</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Minden alkalmazás</string>
+    <string name="please_select_app">Kérjük, válasszon egy alkalmazást</string>
     <string name="drawer_list_empty_hint">Nem találtunk alkalmazásokat</string>
     <string name="long_press_for_settings">Hosszan nyomja meg bárhol a beállításokhoz</string>
     <string name="swipe_up_for_apps">Húzza felfelé az összes alkalmazáshoz</string>

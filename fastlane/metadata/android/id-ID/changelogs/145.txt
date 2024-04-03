@@ -1,0 +1,22 @@
+Versi: 1.4.5
+
+Peningkatan:
+
+Ditambahkanplease_select_app ke aplikasi layar beranda (#411)
+
+Perbaikan kerusakan:
+
+Memperbaiki pengaturan penyusunan ulang (#416)
+Perbaiki namespace untuk proyek tersebut
+Memperbaiki PENDANAAN.yml
+
+Melepaskan:
+
+Perbarui versi Rilis ke 145 (v1.4.5)
+
+Aneka ragam:
+
+Perbarui changelog.yml
+Menambahkan Detail Aplikasi
+Ikon Aplikasi Berubah
+Ganti nama pencari menjadi FuzzyFinder

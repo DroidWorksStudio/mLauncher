@@ -372,6 +372,16 @@ class SettingsFragment : Fragment() {
                         }
                     },
                     { _, onChange ->
+                        if (prefs.homePagesNum > 1) {
+                            SettingsToggle(
+                                title = stringResource(R.string.enable_home_pager),
+                                fontSize = iconFs,
+                                onChange = onChange,
+                                state = remember { mutableStateOf(prefs.homePagerOn) }
+                            ) { toggleHomePagerOn() }
+                        }
+                    },
+                    { _, onChange ->
                         SettingsToggle(
                             title = stringResource(R.string.show_time),
                             fontSize = iconFs,
@@ -792,6 +802,10 @@ class SettingsFragment : Fragment() {
 
     private fun toggleAutoOpenApp() {
         prefs.autoOpenApp = !prefs.autoOpenApp
+    }
+
+    private fun toggleHomePagerOn() {
+        prefs.homePagerOn = !prefs.homePagerOn
     }
 
     private fun toggleSearchFromStart() {

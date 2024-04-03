@@ -1,0 +1,22 @@
+Wersja: 1.4.5
+
+Wzmocnienie:
+
+Dodano please_select_app do aplikacji na ekranie głównym (#411)
+
+Poprawki błędów:
+
+Naprawiono ustawienia zmiany kolejności (#416)
+Napraw przestrzeń nazw dla projektu
+Naprawiono plik FUNDING.yml
+
+Uwolnienie:
+
+Zaktualizuj wersję Release do 145 (v1.4.5)
+
+Różnorodny:
+
+Zaktualizuj plik dziennika zmian.yml
+Dodano szczegóły aplikacji
+Zmieniona ikona aplikacji
+Zmień nazwę wyszukiwarki na FuzzyFinder

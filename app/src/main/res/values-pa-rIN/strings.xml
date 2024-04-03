@@ -38,6 +38,7 @@
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">ਸ਼ਾਰਟਕੱਟਾਂ ਦੀ ਸੰਖਿਆ</string>
     <string name="pages_on_home_screen">ਪੰਨਿਆਂ ਦੀ ਸੰਖਿਆ</string>
+    <string name="enable_home_pager">ਹੋਮ ਪੇਜਰ ਨੂੰ ਸਮਰੱਥ ਬਣਾਓ</string>
     <string name="show_time">ਸ਼ੋਅ ਸਮਾ</string>
     <string name="show_date">ਮਿਤੀ ਦਿਖਾਓ</string>
     <string name="show_battery">ਬੈਟਰੀ ਦਿਖਾਓ</string>
@@ -60,6 +61,22 @@
     <string name="clock_click_app">ਘੜੀ \'ਤੇ ਕਲਿੱਕ ਕਰੋ</string>
     <string name="date_click_app">ਮਿਤੀ \'ਤੇ ਕਲਿੱਕ ਕਰੋ</string>
     <string name="double_tap">ਡਬਲ ਟੈਪ ਕਰੋ</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">ਸੂਚਨਾ ਦਿਖਾਓ</string>
+    <string name="show_app_list">ਐਪ ਸੂਚੀ ਦਿਖਾਓ</string>
+    <string name="open_app">ਐਪ ਖੋਲ੍ਹੋ</string>
+    <string name="lock_screen">ਬੰਦ ਸਕ੍ਰੀਨ</string>
+    <string name="open_quick_settings">ਤਤਕਾਲ ਸੈਟਿੰਗਾਂ</string>
+    <string name="show_recents">ਹਾਲੀਆ ਦਿਖਾਓ</string>
+    <string name="open_power_dialog">ਪਾਵਰ ਡਾਇਲਾਗ</string>
+    <string name="take_a_screenshot">ਇੱਕ ਸਕ੍ਰੀਨਸ਼ੌਟ ਲਓ</string>
+    <string name="left_page">ਖੱਬੇ ਪੰਨੇ \'ਤੇ ਜਾਓ</string>
+    <string name="right_page">ਸੱਜੇ ਪੰਨੇ \'ਤੇ ਜਾਓ</string>
+    <string name="double_tap_to_lock_screen">ਲਾਕ ਕਰਨ ਲਈ ਡਬਲ ਟੈਪ ਕਰੋ</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">ਸੈਟਿੰਗਾਂ ਟੈਕਸਟ ਆਕਾਰ</string>
+    <string name="display_hidden_apps">ਲੁਕੇ ਹੋਏ ਐਪਸ ਡਿਸਪਲੇ ਕਰੋ</string>
+    <string name="lock_settings">ਲਾਕ ਸੈਟਿੰਗਾਂ</string>
     <!-- Settings Strings -->
     <string name="off">ਬੰਦ</string>
     <string name="on">\'ਤੇ</string>
@@ -85,22 +102,6 @@
     <string name="open">ਖੋਲ੍ਹੋ</string>
     <string name="close">ਬੰਦ ਕਰੋ</string>
     <string name="copy">ਕਾਪੀ</string>
-    <!-- Gestures Do Strings -->
-    <string name="show_notifications">ਸੂਚਨਾ ਦਿਖਾਓ</string>
-    <string name="show_app_list">ਐਪ ਸੂਚੀ ਦਿਖਾਓ</string>
-    <string name="open_app">ਐਪ ਖੋਲ੍ਹੋ</string>
-    <string name="lock_screen">ਬੰਦ ਸਕ੍ਰੀਨ</string>
-    <string name="open_quick_settings">ਤਤਕਾਲ ਸੈਟਿੰਗਾਂ</string>
-    <string name="show_recents">ਹਾਲੀਆ ਦਿਖਾਓ</string>
-    <string name="open_power_dialog">ਪਾਵਰ ਡਾਇਲਾਗ</string>
-    <string name="take_a_screenshot">ਇੱਕ ਸਕ੍ਰੀਨਸ਼ੌਟ ਲਓ</string>
-    <string name="left_page">ਖੱਬੇ ਪੰਨੇ \'ਤੇ ਜਾਓ</string>
-    <string name="right_page">ਸੱਜੇ ਪੰਨੇ \'ਤੇ ਜਾਓ</string>
-    <string name="double_tap_to_lock_screen">ਲਾਕ ਕਰਨ ਲਈ ਡਬਲ ਟੈਪ ਕਰੋ</string>
-    <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">ਸੈਟਿੰਗਾਂ ਟੈਕਸਟ ਆਕਾਰ</string>
-    <string name="display_hidden_apps">ਲੁਕੇ ਹੋਏ ਐਪਸ ਡਿਸਪਲੇ ਕਰੋ</string>
-    <string name="lock_settings">ਲਾਕ ਸੈਟਿੰਗਾਂ</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">ਪ੍ਰਮਾਣੀਕਰਨ ਰੱਦ ਕਰੋ।</string>
     <string name="text_authentication_error">ਪ੍ਰਮਾਣਿਕਤਾ ਗਲਤੀ:%1$s(ਕੋਡ %2$d)</string>
@@ -109,6 +110,7 @@
     <string name="text_biometric_login_sub">ਆਪਣੇ ਬਾਇਓਮੈਟ੍ਰਿਕ ਪ੍ਰਮਾਣ ਪੱਤਰ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਲੌਗ ਇਨ ਕਰੋ</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">ਸਾਰੀਆਂ ਐਪਾਂ</string>
+    <string name="please_select_app">ਕਿਰਪਾ ਕਰਕੇ ਇੱਕ ਐਪ ਚੁਣੋ</string>
     <string name="drawer_list_empty_hint">ਕੋਈ ਐਪਸ ਨਹੀਂ ਮਿਲੇ</string>
     <string name="long_press_for_settings">ਸੈਟਿੰਗਾਂ ਲਈ ਕਿਤੇ ਵੀ ਦੇਰ ਤੱਕ ਦਬਾਓ</string>
     <string name="swipe_up_for_apps">ਸਾਰੀਆਂ ਐਪਾਂ ਲਈ ਉੱਪਰ ਵੱਲ ਸਵਾਈਪ ਕਰੋ</string>

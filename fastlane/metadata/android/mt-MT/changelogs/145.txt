@@ -1,0 +1,22 @@
+Verżjoni: 1.4.5
+
+Titjib:
+
+Miżjud please_select_app mal-apps tal-iskrin tad-dar (#411)
+
+Soluzzjonijiet ta' Bug:
+
+Irranġa s-settings tal-ordni mill-ġdid (#416)
+Waħħal l-ispazju tal-isem għall-proġett
+FINANZJAMENT fiss.yml
+
+Rilaxx:
+
+Aġġorna l-verżjoni tar-Rilaxx għal 145 (v1.4.5)
+
+Mixxellanji:
+
+Aġġorna changelog.yml
+Dettalji tal-App Miżjuda
+Ikona tal-App mibdula
+Semmi mill-ġdid għal FuzzyFinder

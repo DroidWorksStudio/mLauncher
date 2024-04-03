@@ -1,0 +1,22 @@
+Versie: 1.4.5
+
+Verbetering:
+
+Please_select_app toegevoegd aan de startscherm-apps (#411)
+
+Bugfixes:
+
+De instellingen voor het opnieuw ordenen opgelost (#416)
+Naamruimte voor het project repareren
+Vaste FUNDING.yml
+
+Uitgave:
+
+Update de releaseversie naar 145 (v1.4.5)
+
+Gemengd:
+
+Update changelog.yml
+App-details toegevoegd
+Gewijzigd app-pictogram
+Hernoem de zoeker naar FuzzyFinder
