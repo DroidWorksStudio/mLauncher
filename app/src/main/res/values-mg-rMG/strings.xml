@@ -77,6 +77,10 @@
     <string name="settings_text_size">Haben\'ny lahatsoratra Settings</string>
     <string name="display_hidden_apps">Asehoy ny Apps Hidden</string>
     <string name="lock_settings">Lock Settings</string>
+    <!-- Backup Strings -->
+    <string name="backup">nomaniny ho solon\'izay</string>
+    <string name="load_backup">Load Backup</string>
+    <string name="store_backup">Store Backup</string>
     <!-- Settings Strings -->
     <string name="off">eny</string>
     <string name="on">On</string>
