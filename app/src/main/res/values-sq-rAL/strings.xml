@@ -38,6 +38,7 @@
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Numri i shkurtoreve</string>
     <string name="pages_on_home_screen">Numri i faqeve</string>
+    <string name="enable_home_pager">Aktivizo Home Pager</string>
     <string name="show_time">Koha e shfaqjes</string>
     <string name="show_date">Shfaq datën</string>
     <string name="show_battery">Shfaq baterinë</string>
@@ -60,6 +61,22 @@
     <string name="clock_click_app">Klikoni mbi Orën</string>
     <string name="date_click_app">Klikoni mbi Data</string>
     <string name="double_tap">Trokit dy herë</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">Shfaq njoftimin</string>
+    <string name="show_app_list">Shfaq listën e aplikacioneve</string>
+    <string name="open_app">Hap aplikacionin</string>
+    <string name="lock_screen">Blloko ekranin</string>
+    <string name="open_quick_settings">Cilësimet e shpejta</string>
+    <string name="show_recents">Shfaq të fundit</string>
+    <string name="open_power_dialog">Dialogu i energjisë</string>
+    <string name="take_a_screenshot">Merrni një pamje nga ekrani</string>
+    <string name="left_page">Shkoni në faqen e majtë</string>
+    <string name="right_page">Shkoni në faqen e djathtë</string>
+    <string name="double_tap_to_lock_screen">Trokit dy herë për ta kyçur</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Cilësimet e madhësisë së tekstit</string>
+    <string name="display_hidden_apps">Shfaq aplikacionet e fshehura</string>
+    <string name="lock_settings">Cilësimet e kyçjes</string>
     <!-- Settings Strings -->
     <string name="off">Joaktiv</string>
     <string name="on">Aktiv</string>
@@ -85,22 +102,6 @@
     <string name="open">Hapur</string>
     <string name="close">Mbylle</string>
     <string name="copy">kopje</string>
-    <!-- Gestures Do Strings -->
-    <string name="show_notifications">Shfaq njoftimin</string>
-    <string name="show_app_list">Shfaq listën e aplikacioneve</string>
-    <string name="open_app">Hap aplikacionin</string>
-    <string name="lock_screen">Blloko ekranin</string>
-    <string name="open_quick_settings">Cilësimet e shpejta</string>
-    <string name="show_recents">Shfaq të fundit</string>
-    <string name="open_power_dialog">Dialogu i energjisë</string>
-    <string name="take_a_screenshot">Merrni një pamje nga ekrani</string>
-    <string name="left_page">Shkoni në faqen e majtë</string>
-    <string name="right_page">Shkoni në faqen e djathtë</string>
-    <string name="double_tap_to_lock_screen">Trokit dy herë për ta kyçur</string>
-    <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">Cilësimet e madhësisë së tekstit</string>
-    <string name="display_hidden_apps">Shfaq aplikacionet e fshehura</string>
-    <string name="lock_settings">Cilësimet e kyçjes</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Anulo vërtetimin.</string>
     <string name="text_authentication_error">Gabim vërtetimi:%1$s(kodi %2$d)</string>
@@ -109,6 +110,7 @@
     <string name="text_biometric_login_sub">Hyni duke përdorur kredencialet tuaja biometrike</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Të gjitha aplikacionet</string>
+    <string name="please_select_app">Ju lutemi zgjidhni një aplikacion</string>
     <string name="drawer_list_empty_hint">Nuk u gjet asnjë aplikacion</string>
     <string name="long_press_for_settings">Shtypni gjatë kudo për cilësimet</string>
     <string name="swipe_up_for_apps">Rrëshqitni lart për të gjitha aplikacionet</string>
