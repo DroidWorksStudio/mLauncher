@@ -1,0 +1,17 @@
+Wersja: 1.4.6
+
+Ulepszenia:
+
+Dodano pager na ekranie głównym (domyślnie wyłączony)
+
+Poprawki błędów:
+
+Zezwalaj na ustawienie aplikacji HomeScreen na 0
+
+Dokumentacja:
+
+Zaktualizuj CHANGELOG.md
+
+Refaktoryzacja:
+
+Poprawiono kod dodając żądanie pozwolenia
