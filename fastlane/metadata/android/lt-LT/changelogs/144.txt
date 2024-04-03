@@ -4,6 +4,6 @@ Patobulinimas:
 [Funkcija] – pridėtas fragmentas, skirtas pakartotinai užsakyti programas.
 [Funkcija] – Pridėta galimybė savarankiškai keisti laikrodžio dydį.
 
-Kalbos palaikymas:
+Kalbų palaikymas:
 
 [Kalba] Atnaujinti kalbos failai.
