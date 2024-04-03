@@ -44,7 +44,7 @@
     <string name="show_battery">Asehoy ny bateria</string>
     <string name="lock_home_apps">Lock Apps</string>
     <string name="extend_home_apps_area">Hanitatra ny faritra azo kitihina</string>
-    <string name="home_alignment_bottom">Ampifanaraho ny ambany ny efijery</string>
+    <string name="home_alignment_bottom">Efijery an-trano Align Bottom</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">Efijerin\'ny fampiharana</string>
     <string name="clock_alignment">Ora sy daty</string>
