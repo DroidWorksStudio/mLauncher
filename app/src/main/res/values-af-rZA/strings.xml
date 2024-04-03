@@ -43,8 +43,8 @@
     <string name="show_date">Show date</string>
     <string name="show_battery">Wys battery</string>
     <string name="lock_home_apps">Lock Apps</string>
-    <string name="extend_home_apps_area">Extend clickable area</string>
-    <string name="home_alignment_bottom">Home screen align bottom</string>
+    <string name="extend_home_apps_area">Brei klikbare area uit</string>
+    <string name="home_alignment_bottom">Tuisskerm Belyn onder</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">Apps home screen</string>
     <string name="clock_alignment">Clock and date</string>
@@ -105,7 +105,7 @@
     <string name="disabled">Disabled</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
-    <string name="copy">kopieer</string>
+    <string name="copy">Kopieer</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Stawing Kanselleer.</string>
     <string name="text_authentication_error">Stawingsfout:%1$s(kode %2$d)</string>

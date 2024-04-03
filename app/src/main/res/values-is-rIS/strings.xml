@@ -44,7 +44,7 @@
     <string name="show_battery">Sýna rafhlöðu</string>
     <string name="lock_home_apps">Læstu forritum</string>
     <string name="extend_home_apps_area">Stækkaðu smellanlegt svæði</string>
-    <string name="home_alignment_bottom">Heimaskjár stilla neðst</string>
+    <string name="home_alignment_bottom">Heimaskjár Jafna botn</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">Heimaskjár forrita</string>
     <string name="clock_alignment">Klukka og dagsetning</string>
@@ -105,7 +105,7 @@
     <string name="disabled">Öryrkjar</string>
     <string name="open">Opið</string>
     <string name="close">Loka</string>
-    <string name="copy">afrit</string>
+    <string name="copy">Afrita</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Hætta við auðkenningu.</string>
     <string name="text_authentication_error">Auðkenningarvilla:%1$s(kóði %2$d)</string>

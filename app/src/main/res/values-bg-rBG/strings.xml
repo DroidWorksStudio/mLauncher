@@ -44,7 +44,7 @@
     <string name="show_battery">Показване на батерията</string>
     <string name="lock_home_apps">Приложения за заключване</string>
     <string name="extend_home_apps_area">Разширяване на зоната за кликване</string>
-    <string name="home_alignment_bottom">Изравняване на долната част на началния екран</string>
+    <string name="home_alignment_bottom">Подравняване на началния екран отдолу</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">Начален екран на приложенията</string>
     <string name="clock_alignment">Часовник и дата</string>

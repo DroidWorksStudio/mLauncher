@@ -43,8 +43,8 @@
     <string name="show_date">Arată data</string>
     <string name="show_battery">Arată bateria</string>
     <string name="lock_home_apps">Blocare aplicații</string>
-    <string name="extend_home_apps_area">Extinde zona clickable</string>
-    <string name="home_alignment_bottom">Aliniere ecran de pornire jos</string>
+    <string name="extend_home_apps_area">Extindeți zona de clic</string>
+    <string name="home_alignment_bottom">Ecranul de pornire Aliniați jos</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">Ecran de start pentru aplicații</string>
     <string name="clock_alignment">Ora și data</string>
@@ -105,7 +105,7 @@
     <string name="disabled">Dezactivat</string>
     <string name="open">Deschideți</string>
     <string name="close">Inchide</string>
-    <string name="copy">copie</string>
+    <string name="copy">Copie</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Anulare autentificare.</string>
     <string name="text_authentication_error">Eroare de autentificare:%1$s(cod %2$d)</string>

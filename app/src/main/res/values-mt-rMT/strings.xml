@@ -43,8 +43,8 @@
     <string name="show_date">Uri d-data</string>
     <string name="show_battery">Uri batterija</string>
     <string name="lock_home_apps">Lock Apps</string>
-    <string name="extend_home_apps_area">Estendi l-erja li tista\' tikklikkja</string>
-    <string name="home_alignment_bottom">L-iskrin tad-dar tallinja qiegħ</string>
+    <string name="extend_home_apps_area">Estendi Żona Klikkjabbli</string>
+    <string name="home_alignment_bottom">Home Screen Allinja Qiegħ</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">Apps home screen</string>
     <string name="clock_alignment">Arloġġ u data</string>
@@ -105,7 +105,7 @@
     <string name="disabled">B\'diżabilità</string>
     <string name="open">Miftuħa</string>
     <string name="close">Agħlaq</string>
-    <string name="copy">kopja</string>
+    <string name="copy">Kopja</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Awtentikazzjoni Ikkanċella.</string>
     <string name="text_authentication_error">Żball fl-awtentikazzjoni:%1$s(kodiċi %2$d)</string>

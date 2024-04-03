@@ -43,8 +43,8 @@
     <string name="show_date">Show date</string>
     <string name="show_battery">הצג סוללה</string>
     <string name="lock_home_apps">Lock Apps</string>
-    <string name="extend_home_apps_area">Extend clickable area</string>
-    <string name="home_alignment_bottom">Home screen align bottom</string>
+    <string name="extend_home_apps_area">הרחב את האזור הניתן ללחיצה</string>
+    <string name="home_alignment_bottom">מסך הבית יישור למטה</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">Apps home screen</string>
     <string name="clock_alignment">Clock and date</string>

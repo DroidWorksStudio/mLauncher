@@ -43,8 +43,8 @@
     <string name="show_date">Показати дату</string>
     <string name="show_battery">Показати акумулятор</string>
     <string name="lock_home_apps">Блокування програм</string>
-    <string name="extend_home_apps_area">Розширити активну область</string>
-    <string name="home_alignment_bottom">На домашньому екрані по нижній частині</string>
+    <string name="extend_home_apps_area">Розширити область, яку можна натиснути</string>
+    <string name="home_alignment_bottom">Вирівнювання головного екрана за нижнім краєм</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">Головний екран додатків</string>
     <string name="clock_alignment">Годинник і дата</string>
@@ -105,7 +105,7 @@
     <string name="disabled">Вимкнено</string>
     <string name="open">Відкриті</string>
     <string name="close">Закрити</string>
-    <string name="copy">копія</string>
+    <string name="copy">Копіювати</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Автентифікація Скасувати.</string>
     <string name="text_authentication_error">Помилка автентифікації:%1$s(код %2$d)</string>

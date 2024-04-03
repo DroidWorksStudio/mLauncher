@@ -43,8 +43,8 @@
     <string name="show_date">Zobrazit datum</string>
     <string name="show_battery">Zobrazit baterii</string>
     <string name="lock_home_apps">Zamknout aplikace</string>
-    <string name="extend_home_apps_area">Rozšířit kliknutelnou oblast</string>
-    <string name="home_alignment_bottom">Zarovnání spodní plochy</string>
+    <string name="extend_home_apps_area">Rozšířit oblast, na kterou lze kliknout</string>
+    <string name="home_alignment_bottom">Domovská obrazovka Zarovnat dolů</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">Aplikace na domovské obrazovce</string>
     <string name="clock_alignment">Hodiny a datum</string>

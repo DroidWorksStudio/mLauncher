@@ -43,8 +43,8 @@
     <string name="show_date">Vis dato</string>
     <string name="show_battery">Vis batteri</string>
     <string name="lock_home_apps">Lås Apps</string>
-    <string name="extend_home_apps_area">Udvid klikbart område</string>
-    <string name="home_alignment_bottom">Startskærm justeret nederst</string>
+    <string name="extend_home_apps_area">Udvid det klikbare område</string>
+    <string name="home_alignment_bottom">Startskærm Juster bund</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">Apps startskærm</string>
     <string name="clock_alignment">Ur og dato</string>
@@ -105,7 +105,7 @@
     <string name="disabled">Deaktiveret</string>
     <string name="open">Åbn</string>
     <string name="close">Luk</string>
-    <string name="copy">kopi</string>
+    <string name="copy">Kopi</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Godkendelse Annuller.</string>
     <string name="text_authentication_error">Godkendelsesfejl:%1$s(kode %2$d)</string>

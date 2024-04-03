@@ -43,7 +43,7 @@
     <string name="show_date">Datum anzeigen</string>
     <string name="show_battery">Akku anzeigen</string>
     <string name="lock_home_apps">Apps sperren</string>
-    <string name="extend_home_apps_area">Klickbare Fläche erweitern</string>
+    <string name="extend_home_apps_area">Klickbaren Bereich erweitern</string>
     <string name="home_alignment_bottom">Startbildschirm unten ausrichten</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">Apps Startbildschirm</string>

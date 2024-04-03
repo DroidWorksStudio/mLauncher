@@ -105,7 +105,7 @@
     <string name="disabled">ਅਯੋਗ</string>
     <string name="open">ਖੋਲ੍ਹੋ</string>
     <string name="close">ਬੰਦ ਕਰੋ</string>
-    <string name="copy">ਕਾਪੀ</string>
+    <string name="copy">ਕਾਪੀ ਕਰੋ</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">ਪ੍ਰਮਾਣੀਕਰਨ ਰੱਦ ਕਰੋ।</string>
     <string name="text_authentication_error">ਪ੍ਰਮਾਣਿਕਤਾ ਗਲਤੀ:%1$s(ਕੋਡ %2$d)</string>

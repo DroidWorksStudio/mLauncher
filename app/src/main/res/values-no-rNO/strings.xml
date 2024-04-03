@@ -44,7 +44,7 @@
     <string name="show_battery">Vis batteri</string>
     <string name="lock_home_apps">Lås apper</string>
     <string name="extend_home_apps_area">Utvid klikkbart område</string>
-    <string name="home_alignment_bottom">Juster bunnen på startskjermen</string>
+    <string name="home_alignment_bottom">Hjemmeskjerm Juster bunn</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">Apper startskjermen</string>
     <string name="clock_alignment">Klokke og dato</string>
@@ -105,7 +105,7 @@
     <string name="disabled">Deaktivert</string>
     <string name="open">Åpne</string>
     <string name="close">Lukk</string>
-    <string name="copy">kopiere</string>
+    <string name="copy">Kopiere</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Avbryt autentisering.</string>
     <string name="text_authentication_error">Autentiseringsfeil:%1$s(kode %2$d)</string>

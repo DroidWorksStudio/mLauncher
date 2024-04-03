@@ -44,7 +44,7 @@
     <string name="show_battery">Toon batterij</string>
     <string name="lock_home_apps">Apps vergrendelen</string>
     <string name="extend_home_apps_area">Klikbaar gebied uitbreiden</string>
-    <string name="home_alignment_bottom">Startscherm uitlijning onderaan</string>
+    <string name="home_alignment_bottom">Startscherm Onderaan uitlijnen</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">Apps startscherm</string>
     <string name="clock_alignment">Klok en datum</string>
@@ -105,7 +105,7 @@
     <string name="disabled">Uitgeschakeld</string>
     <string name="open">Open</string>
     <string name="close">Afsluiten</string>
-    <string name="copy">kopiëren</string>
+    <string name="copy">Kopiëren</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Authenticatie Annuleren.</string>
     <string name="text_authentication_error">Authenticatiefout:%1$s(code %2$d)</string>

@@ -1,12 +1,12 @@
 Versija: 1.4.3
 
 Patobulinimas:
-[Funkcija] – pridėta galimybė nereikėtų pervardyti programų, jei jau nustatyta programų sąraše.
+[Funkcija] - Pridėta galimybė nereikėti pervadinti programų, jei tai jau nustatyta per programų sąrašą.
 
 Trikčių pataisymai:
-[Klaida] – ištaisyta Pervardyti, jei pervardijama atgal į pradinį pavadinimą.
-[Klaida] – ištaisyti perbraukimo gestai.
+[Trikdis] – ištaisyta Pervardyti, jei pervardijama atgal į pradinį pavadinimą.
+[Trikdis] – ištaisyti braukimo gestai.
 
-Kalbos palaikymas:
+Kalbų palaikymas:
 
 [Kalba] Atnaujinti kalbos failai.

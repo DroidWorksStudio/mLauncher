@@ -43,8 +43,8 @@
     <string name="show_date">Tanggal pertunjukan</string>
     <string name="show_battery">Tampilkan baterai</string>
     <string name="lock_home_apps">Kunci Aplikasi</string>
-    <string name="extend_home_apps_area">Memperluas area yang dapat diklik</string>
-    <string name="home_alignment_bottom">Layar beranda sejajar bagian bawah</string>
+    <string name="extend_home_apps_area">Perluas Area yang Dapat Diklik</string>
+    <string name="home_alignment_bottom">Layar Beranda Sejajarkan Bawah</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">Layar beranda aplikasi</string>
     <string name="clock_alignment">Jam dan tanggal</string>
@@ -105,7 +105,7 @@
     <string name="disabled">Dinonaktifkan</string>
     <string name="open">Terbuka</string>
     <string name="close">Tutup</string>
-    <string name="copy">salinan</string>
+    <string name="copy">Menyalin</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Pembatalan Otentikasi.</string>
     <string name="text_authentication_error">Kesalahan autentikasi:%1$s(kode %2$d)</string>
