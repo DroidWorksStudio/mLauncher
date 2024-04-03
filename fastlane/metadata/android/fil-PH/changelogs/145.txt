@@ -1,0 +1,22 @@
+Bersyon: 1.4.5
+
+Pagpapahusay:
+
+Idinagdag ang please_select_app sa mga home screen app (#411)
+
+Mga Pag-aayos ng Bug:
+
+Inayos ang mga setting ng muling pagkakaayos (#416)
+Ayusin ang namespace para sa proyekto
+Nakapirming FUNDING.yml
+
+Paglabas:
+
+I-update ang bersyon ng Paglabas sa 145 (v1.4.5)
+
+Miscellaneous:
+
+I-update ang changelog.yml
+Nagdagdag ng Mga Detalye ng App
+Binago ang Icon ng App
+Palitan ang pangalan ng finder sa FuzzyFinder
