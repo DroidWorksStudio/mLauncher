@@ -7,6 +7,6 @@ Trikčių pataisymai:
 [Klaida] – ištaisyta Pervardyti, jei pervardijama atgal į pradinį pavadinimą.
 [Klaida] – ištaisyti perbraukimo gestai.
 
-Kalbos palaikymas:
+Kalbų palaikymas:
 
 [Kalba] Atnaujinti kalbos failai.
