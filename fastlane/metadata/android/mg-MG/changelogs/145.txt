@@ -1,0 +1,22 @@
+Version: 1.4.5
+
+Fanatsarana:
+
+Nampiana azafady_select_app amin'ny fampiharana efijery (#411)
+
+Fanamboarana bug:
+
+Namboarina ny fandrindrana famandrihana (#416)
+Hamboarina ny habaka anarana ho an'ny tetikasa
+FUNDING raikitra.yml
+
+Famoahana:
+
+Havaozy ho 145 (v1.4.5) ny version Release
+
+samihafa:
+
+Havaozy changelog.yml
+Nanampy antsipirian'ny fampiharana
+Kisary App niova
+Avereno anarana ho FuzzyFinder ny finder
