@@ -104,6 +104,7 @@ dependencies {
 
     // Text similarity
     implementation("org.apache.commons:commons-text:1.11.0")
+    implementation("com.google.code.gson:gson:2.10.1")
 
     // JETPACK
     // Integration with activities

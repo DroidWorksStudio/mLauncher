@@ -14,6 +14,8 @@ interface EnumOption {
 
 object Constants {
 
+    const val REQUEST_CODE_ENABLE_ADMIN = 666
+
     const val NEW_PAGE = "\uF444"
     const val CURRENT_PAGE = "\uF192"
 
@@ -26,6 +28,8 @@ object Constants {
     const val TEXT_SIZE_MIN = 10
     const val TEXT_SIZE_MAX = 50
 
+    const val BACKUP_WRITE = 1
+    const val BACKUP_READ = 2
 
     const val TEXT_MULTIPLIER_SIZE_MIN = 1f
     const val TEXT_MULTIPLIER_SIZE_MAX = 5f

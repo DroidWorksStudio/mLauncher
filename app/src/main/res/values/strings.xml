@@ -87,6 +87,11 @@
     <string name="display_hidden_apps">Display Hidden Apps</string>
     <string name="lock_settings">Lock Settings</string>
 
+    <!-- Backup Strings -->
+    <string name="backup">Backup</string>
+    <string name="load_backup">Load Backup</string>
+    <string name="store_backup">Store Backup</string>
+
     <!-- Settings Strings -->
     <string name="off">Off</string>
     <string name="on">On</string>
