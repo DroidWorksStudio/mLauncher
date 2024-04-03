@@ -38,6 +38,7 @@
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Брой преки пътища</string>
     <string name="pages_on_home_screen">Брой страници</string>
+    <string name="enable_home_pager">Активирайте началния пейджър</string>
     <string name="show_time">Време за показване</string>
     <string name="show_date">Дата на показване</string>
     <string name="show_battery">Показване на батерията</string>
@@ -60,6 +61,22 @@
     <string name="clock_click_app">Кликнете върху Часовник</string>
     <string name="date_click_app">Кликнете върху Дата</string>
     <string name="double_tap">Двойно докосване</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">Показване на известие</string>
+    <string name="show_app_list">Показване на списъка с приложения</string>
+    <string name="open_app">Отворено приложение</string>
+    <string name="lock_screen">Екран за заключване</string>
+    <string name="open_quick_settings">Бързи настройки</string>
+    <string name="show_recents">Показване на последните</string>
+    <string name="open_power_dialog">Диалог за захранване</string>
+    <string name="take_a_screenshot">Направете екранна снимка</string>
+    <string name="left_page">Отидете на лявата страница</string>
+    <string name="right_page">Отидете на дясната страница</string>
+    <string name="double_tap_to_lock_screen">Двойно докосване за заключване</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Настройки Размер на текста</string>
+    <string name="display_hidden_apps">Показване на скрити приложения</string>
+    <string name="lock_settings">Настройки за заключване</string>
     <!-- Settings Strings -->
     <string name="off">Изключено</string>
     <string name="on">На</string>
@@ -85,22 +102,6 @@
     <string name="open">Отворете</string>
     <string name="close">Затвори</string>
     <string name="copy">копие</string>
-    <!-- Gestures Do Strings -->
-    <string name="show_notifications">Показване на известие</string>
-    <string name="show_app_list">Показване на списъка с приложения</string>
-    <string name="open_app">Отворено приложение</string>
-    <string name="lock_screen">Екран за заключване</string>
-    <string name="open_quick_settings">Бързи настройки</string>
-    <string name="show_recents">Показване на последните</string>
-    <string name="open_power_dialog">Диалог за захранване</string>
-    <string name="take_a_screenshot">Направете екранна снимка</string>
-    <string name="left_page">Отидете на лявата страница</string>
-    <string name="right_page">Отидете на дясната страница</string>
-    <string name="double_tap_to_lock_screen">Двойно докосване за заключване</string>
-    <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">Настройки Размер на текста</string>
-    <string name="display_hidden_apps">Показване на скрити приложения</string>
-    <string name="lock_settings">Настройки за заключване</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Удостоверяване Отказ.</string>
     <string name="text_authentication_error">Грешка при удостоверяване:%1$s(код %2$d)</string>
@@ -109,6 +110,7 @@
     <string name="text_biometric_login_sub">Влезте с вашите биометрични идентификационни данни</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Всички приложения</string>
+    <string name="please_select_app">Моля, изберете приложение</string>
     <string name="drawer_list_empty_hint">Не са намерени приложения</string>
     <string name="long_press_for_settings">Дълго натискане навсякъде за настройки</string>
     <string name="swipe_up_for_apps">Плъзнете нагоре за всички приложения</string>
