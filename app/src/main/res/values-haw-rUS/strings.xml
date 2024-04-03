@@ -38,6 +38,7 @@
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Ka helu o nā pōkole</string>
     <string name="pages_on_home_screen">Ka helu o nā ʻaoʻao</string>
+    <string name="enable_home_pager">E ho\'ā i ka Home Pager</string>
     <string name="show_time">Hōʻike manawa</string>
     <string name="show_date">Hōʻike lā</string>
     <string name="show_battery">Hōʻike pākaukau</string>
@@ -60,6 +61,22 @@
     <string name="clock_click_app">Kaomi ma ka uaki</string>
     <string name="date_click_app">Kaomi ma ka lā</string>
     <string name="double_tap">Koʻu pālua</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">Hōʻike Hoʻolaha</string>
+    <string name="show_app_list">Hōʻike i ka papa inoa polokalamu</string>
+    <string name="open_app">Wehe App</string>
+    <string name="lock_screen">Laka pale</string>
+    <string name="open_quick_settings">Nā hoʻonohonoho wikiwiki</string>
+    <string name="show_recents">Hōʻike i nā mea hou</string>
+    <string name="open_power_dialog">Kūkākūkā Mana</string>
+    <string name="take_a_screenshot">E kiʻi i kahi kiʻi kiʻi</string>
+    <string name="left_page">E hele i ka ʻaoʻao hema</string>
+    <string name="right_page">E hele i ka ʻaoʻao ʻākau</string>
+    <string name="double_tap_to_lock_screen">Koʻu pālua e laka</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Hoʻonohonoho i ka nui kikokikona</string>
+    <string name="display_hidden_apps">Hōʻike i nā polokalamu huna</string>
+    <string name="lock_settings">Hoʻonohonoho laka</string>
     <!-- Settings Strings -->
     <string name="off">Paʻa</string>
     <string name="on">Ma ka</string>
@@ -85,22 +102,6 @@
     <string name="open">Wehe</string>
     <string name="close">Pani</string>
     <string name="copy">kope</string>
-    <!-- Gestures Do Strings -->
-    <string name="show_notifications">Hōʻike Hoʻolaha</string>
-    <string name="show_app_list">Hōʻike i ka papa inoa polokalamu</string>
-    <string name="open_app">Wehe App</string>
-    <string name="lock_screen">Laka pale</string>
-    <string name="open_quick_settings">Nā hoʻonohonoho wikiwiki</string>
-    <string name="show_recents">Hōʻike i nā mea hou</string>
-    <string name="open_power_dialog">Kūkākūkā Mana</string>
-    <string name="take_a_screenshot">E kiʻi i kahi kiʻi kiʻi</string>
-    <string name="left_page">E hele i ka ʻaoʻao hema</string>
-    <string name="right_page">E hele i ka ʻaoʻao ʻākau</string>
-    <string name="double_tap_to_lock_screen">Koʻu pālua e laka</string>
-    <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">Hoʻonohonoho i ka nui kikokikona</string>
-    <string name="display_hidden_apps">Hōʻike i nā polokalamu huna</string>
-    <string name="lock_settings">Hoʻonohonoho laka</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Hoʻopau i ka hōʻoia.</string>
     <string name="text_authentication_error">Hapa ka hōʻoia:%1$s(code %2$d)</string>
@@ -109,6 +110,7 @@
     <string name="text_biometric_login_sub">E ʻeʻe me ka hoʻohana ʻana i kāu hōʻoia biometric</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Nā polokalamu a pau</string>
+    <string name="please_select_app">E ʻoluʻolu e koho i kahi polokalamu</string>
     <string name="drawer_list_empty_hint">ʻAʻohe polokalamu i loaʻa</string>
     <string name="long_press_for_settings">E kaomi lōʻihi ma nā wahi a pau no nā hoʻonohonoho</string>
     <string name="swipe_up_for_apps">Swipe i luna no nā polokalamu āpau</string>
