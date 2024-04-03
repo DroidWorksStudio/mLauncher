@@ -77,6 +77,10 @@
     <string name="settings_text_size">Cài đặt Kích thước văn bản</string>
     <string name="display_hidden_apps">Hiển thị ứng dụng ẩn</string>
     <string name="lock_settings">Cài đặt khóa</string>
+    <!-- Backup Strings -->
+    <string name="backup">Hỗ trợ</string>
+    <string name="load_backup">Tải bản sao lưu</string>
+    <string name="store_backup">Sao lưu cửa hàng</string>
     <!-- Settings Strings -->
     <string name="off">Off</string>
     <string name="on">On</string>
