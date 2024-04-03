@@ -77,6 +77,10 @@
     <string name="settings_text_size">Taille du texte des paramètres</string>
     <string name="display_hidden_apps">Afficher les applications cachées</string>
     <string name="lock_settings">Paramètres de verrouillage</string>
+    <!-- Backup Strings -->
+    <string name="backup">Sauvegarde</string>
+    <string name="load_backup">Charger la sauvegarde</string>
+    <string name="store_backup">Sauvegarde du magasin</string>
     <!-- Settings Strings -->
     <string name="off">Désactivé</string>
     <string name="on">Activé</string>
