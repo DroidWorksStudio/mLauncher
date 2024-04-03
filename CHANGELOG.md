@@ -13,6 +13,7 @@
 
 ### Language Support:
 
+- Updated Language Files. ([#419](https://github.com/DroidWorksStudio/mLauncher/issues/419))
 - Updated Language Files. ([#418](https://github.com/DroidWorksStudio/mLauncher/issues/418))
 
 ### Documentation:
