@@ -68,9 +68,9 @@ object Constants {
         // Ensure display metrics are valid
         if (screenWidth > 0 && screenHeight > 0) {
             SWIPE_DISTANCE_THRESHOLD = if (direction == "left" || direction == "right") {
-                0.80f * screenWidth // Use 80% of screen height for left/right swipe
+                0.80f * screenWidth // Use 80% of screen width for left/right swipe
             } else {
-                0.50f * screenHeight // Use 50% of screen width for up/down swipe
+                0.50f * screenHeight // Use 50% of screen height for up/down swipe
             }
         }
     }
