@@ -14,15 +14,16 @@ interface EnumOption {
 
 object Constants {
 
+
     const val TRIPLE_TAP_DELAY_MS = 300
     const val LONG_PRESS_DELAY_MS = 500
 
-    const val MIN_HOME_APPS = 1
+    const val MIN_HOME_APPS = 0
     const val MAX_HOME_APPS = 30
     const val MIN_HOME_PAGES = 1
-    const val MAX_HOME_PAGES = 5
     const val TEXT_SIZE_MIN = 10
     const val TEXT_SIZE_MAX = 50
+
 
     const val TEXT_MULTIPLIER_SIZE_MIN = 1f
     const val TEXT_MULTIPLIER_SIZE_MAX = 5f
@@ -43,6 +44,19 @@ object Constants {
 
     // Update SWIPE_DISTANCE_THRESHOLD dynamically based on screen dimensions
     var SWIPE_DISTANCE_THRESHOLD: Float = 0f
+    // Update MAX_HOME_PAGES dynamically based on MAX_HOME_APPS
+    var MAX_HOME_PAGES: Int = 5
+
+    fun updateMaxHomePages(context: Context) {
+        val prefs = Prefs(context)
+
+        MAX_HOME_PAGES = if (prefs.homeAppsNum < MAX_HOME_PAGES) {
+            prefs.homeAppsNum
+        } else {
+            MAX_HOME_PAGES
+        }
+
+    }
 
     fun updateSwipeDistanceThreshold(context: Context, direction: String) {
         val displayMetrics = context.resources.displayMetrics
@@ -54,9 +68,9 @@ object Constants {
         // Ensure display metrics are valid
         if (screenWidth > 0 && screenHeight > 0) {
             SWIPE_DISTANCE_THRESHOLD = if (direction == "left" || direction == "right") {
-                0.80f * screenWidth // Use 80% of screen height for left/right swipe
+                0.80f * screenWidth // Use 80% of screen width for left/right swipe
             } else {
-                0.50f * screenHeight // Use 50% of screen width for up/down swipe
+                0.50f * screenHeight // Use 50% of screen height for up/down swipe
             }
         }
     }

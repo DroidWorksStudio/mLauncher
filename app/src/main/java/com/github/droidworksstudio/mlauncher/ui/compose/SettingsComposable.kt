@@ -56,21 +56,33 @@ object SettingsComposable {
     }
 
     @Composable
-    fun SettingsArea (
+    fun SettingsArea(
         title: String,
         selected: MutableState<String>,
         fontSize: TextUnit = TextUnit.Unspecified,
-        items: Array<@Composable (MutableState<Boolean>, (Boolean) -> Unit ) -> Unit>
+        items: Array<@Composable (MutableState<Boolean>, (Boolean) -> Unit) -> Unit>
     ) {
+        var key by remember { mutableIntStateOf(0) } // Add a key to force recomposition
+
+        val itemsChanged = remember { mutableStateOf(false) } // Track changes in items
+
         SettingsTile {
             SettingsTitle(text = title, fontSize = fontSize)
             items.forEachIndexed { i, item ->
                 item(mutableStateOf("$title-$i" == selected.value)) { b ->
                     val number = if (b) i else -1
                     selected.value = "$title-$number"
+                    itemsChanged.value = true // Mark items as changed
                 }
             }
+        }
 
+        // Update key whenever items change
+        LaunchedEffect(itemsChanged.value) {
+            if (itemsChanged.value) {
+                key++
+                itemsChanged.value = false
+            }
         }
     }
 
