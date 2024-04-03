@@ -1,6 +1,6 @@
 # Changelog
 
-## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
+## [1.4.6](https://github.com/DroidWorksStudio/mLauncher/tree/1.4.6) - (03, April 2024)
 
 ### Implemented Enhancements:
 
