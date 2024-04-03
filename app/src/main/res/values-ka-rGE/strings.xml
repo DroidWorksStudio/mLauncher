@@ -38,6 +38,7 @@
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">მალსახმობების რაოდენობა</string>
     <string name="pages_on_home_screen">გვერდების რაოდენობა</string>
+    <string name="enable_home_pager">ჩართეთ საწყისი პეიჯერი</string>
     <string name="show_time">Შოუს დრო</string>
     <string name="show_date">თარიღის ჩვენება</string>
     <string name="show_battery">ბატარეის ჩვენება</string>
@@ -60,6 +61,22 @@
     <string name="clock_click_app">დააწკაპუნეთ საათზე</string>
     <string name="date_click_app">დააჭირეთ თარიღს</string>
     <string name="double_tap">ორჯერ შეეხეთ</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">შეტყობინების ჩვენება</string>
+    <string name="show_app_list">აპლიკაციების სიის ჩვენება</string>
+    <string name="open_app">გახსენით აპლიკაცია</string>
+    <string name="lock_screen">Ეკრანის დაბლოკვა</string>
+    <string name="open_quick_settings">სწრაფი პარამეტრები</string>
+    <string name="show_recents">ბოლო დროის ჩვენება</string>
+    <string name="open_power_dialog">დენის დიალოგი</string>
+    <string name="take_a_screenshot">გადაიღეთ სკრინშოტი</string>
+    <string name="left_page">გადადით მარცხენა გვერდზე</string>
+    <string name="right_page">გადადით მარჯვენა გვერდზე</string>
+    <string name="double_tap_to_lock_screen">ორმაგად შეეხეთ ჩასაკეტად</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">ტექსტის ზომის პარამეტრები</string>
+    <string name="display_hidden_apps">დამალული აპების ჩვენება</string>
+    <string name="lock_settings">ჩაკეტვის პარამეტრები</string>
     <!-- Settings Strings -->
     <string name="off">გამორთულია</string>
     <string name="on">ჩართულია</string>
@@ -85,22 +102,6 @@
     <string name="open">გახსენით</string>
     <string name="close">დახურვა</string>
     <string name="copy">კოპირება</string>
-    <!-- Gestures Do Strings -->
-    <string name="show_notifications">შეტყობინების ჩვენება</string>
-    <string name="show_app_list">აპლიკაციების სიის ჩვენება</string>
-    <string name="open_app">გახსენით აპლიკაცია</string>
-    <string name="lock_screen">Ეკრანის დაბლოკვა</string>
-    <string name="open_quick_settings">სწრაფი პარამეტრები</string>
-    <string name="show_recents">ბოლო დროის ჩვენება</string>
-    <string name="open_power_dialog">დენის დიალოგი</string>
-    <string name="take_a_screenshot">გადაიღეთ სკრინშოტი</string>
-    <string name="left_page">გადადით მარცხენა გვერდზე</string>
-    <string name="right_page">გადადით მარჯვენა გვერდზე</string>
-    <string name="double_tap_to_lock_screen">ორმაგად შეეხეთ ჩასაკეტად</string>
-    <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">ტექსტის ზომის პარამეტრები</string>
-    <string name="display_hidden_apps">დამალული აპების ჩვენება</string>
-    <string name="lock_settings">ჩაკეტვის პარამეტრები</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">ავთენტიფიკაციის გაუქმება.</string>
     <string name="text_authentication_error">ავტორიზაციის შეცდომა:%1$s(კოდი %2$d)</string>
@@ -109,6 +110,7 @@
     <string name="text_biometric_login_sub">შედით თქვენი ბიომეტრიული სერთიფიკატის გამოყენებით</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">ყველა აპლიკაცია</string>
+    <string name="please_select_app">გთხოვთ, აირჩიოთ აპლიკაცია</string>
     <string name="drawer_list_empty_hint">აპები ვერ მოიძებნა</string>
     <string name="long_press_for_settings">დიდხანს დააჭირეთ სადმე პარამეტრებისთვის</string>
     <string name="swipe_up_for_apps">გადაფურცლეთ ზემოთ ყველა აპისთვის</string>
