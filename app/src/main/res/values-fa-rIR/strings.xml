@@ -77,6 +77,10 @@
     <string name="settings_text_size">تنظیمات اندازه متن</string>
     <string name="display_hidden_apps">نمایش برنامه های مخفی</string>
     <string name="lock_settings">تنظیمات قفل</string>
+    <!-- Backup Strings -->
+    <string name="backup">پشتیبان گیری</string>
+    <string name="load_backup">بارگیری نسخه پشتیبان</string>
+    <string name="store_backup">پشتیبان گیری فروشگاه</string>
     <!-- Settings Strings -->
     <string name="off">خاموش</string>
     <string name="on">بر</string>
