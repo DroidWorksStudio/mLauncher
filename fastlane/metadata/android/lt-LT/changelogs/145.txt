@@ -19,4 +19,4 @@ Atnaujinkite leidimo versiją į 145 (v1.4.5)
 Atnaujinkite changelog.yml
 Pridėta išsami programos informacija
 Pakeista programos piktograma
-Pervardykite ieškiklį į „FuzzyFinder“.
+Ieškiklis pervadytas į „FuzzyFinder“.
