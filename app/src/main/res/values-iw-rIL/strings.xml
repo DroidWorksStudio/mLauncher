@@ -77,6 +77,10 @@
     <string name="settings_text_size">הגדרות גודל טקסט</string>
     <string name="display_hidden_apps">הצג אפליקציות נסתרות</string>
     <string name="lock_settings">הגדרות נעילה</string>
+    <!-- Backup Strings -->
+    <string name="backup">גיבוי</string>
+    <string name="load_backup">טען גיבוי</string>
+    <string name="store_backup">גיבוי בחנות</string>
     <!-- Settings Strings -->
     <string name="off">Off</string>
     <string name="on">On</string>
