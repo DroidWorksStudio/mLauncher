@@ -1,0 +1,17 @@
+Version: 1.4.6
+
+Enhancements:
+
+Added a home screen pager (disabled by default)
+
+Bug Fixes:
+
+Allow HomeScreen apps to be set to 0
+
+Documentation:
+
+Update CHANGELOG.md
+
+Refactor:
+
+Cleaned up code adding permission request
