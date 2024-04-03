@@ -38,6 +38,7 @@
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">快捷方式数量</string>
     <string name="pages_on_home_screen">页数</string>
+    <string name="enable_home_pager">启用主页寻呼机</string>
     <string name="show_time">显示时间</string>
     <string name="show_date">显示日期</string>
     <string name="show_battery">显示电池</string>
@@ -60,6 +61,22 @@
     <string name="clock_click_app">单击时钟启动的应用</string>
     <string name="date_click_app">单击日期启动的应用</string>
     <string name="double_tap">轻按两次启动的应用</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">显示通知</string>
+    <string name="show_app_list">显示应用列表</string>
+    <string name="open_app">打开应用</string>
+    <string name="lock_screen">锁定屏幕</string>
+    <string name="open_quick_settings">快速设置</string>
+    <string name="show_recents">显示最近用过的应用</string>
+    <string name="open_power_dialog">电源对话框</string>
+    <string name="take_a_screenshot">截图</string>
+    <string name="left_page">转到左侧页面</string>
+    <string name="right_page">转到右侧页面</string>
+    <string name="double_tap_to_lock_screen">轻按两次锁定</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">设置文字大小</string>
+    <string name="display_hidden_apps">显示隐藏的应用程序</string>
+    <string name="lock_settings">锁定设置</string>
     <!-- Settings Strings -->
     <string name="off">关</string>
     <string name="on">开</string>
@@ -85,22 +102,6 @@
     <string name="open">打开链接</string>
     <string name="close">关闭</string>
     <string name="copy">复制</string>
-    <!-- Gestures Do Strings -->
-    <string name="show_notifications">显示通知</string>
-    <string name="show_app_list">显示应用列表</string>
-    <string name="open_app">打开应用</string>
-    <string name="lock_screen">锁定屏幕</string>
-    <string name="open_quick_settings">快速设置</string>
-    <string name="show_recents">显示最近用过的应用</string>
-    <string name="open_power_dialog">电源对话框</string>
-    <string name="take_a_screenshot">截图</string>
-    <string name="left_page">转到左侧页面</string>
-    <string name="right_page">转到右侧页面</string>
-    <string name="double_tap_to_lock_screen">轻按两次锁定</string>
-    <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">设置文字大小</string>
-    <string name="display_hidden_apps">显示隐藏的应用程序</string>
-    <string name="lock_settings">锁定设置</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">认证取消。</string>
     <string name="text_authentication_error">身份验证错误：%1$s（代码 %2$d）</string>
@@ -109,6 +110,7 @@
     <string name="text_biometric_login_sub">使用您的生物识别凭据登录</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">所有应用程序</string>
+    <string name="please_select_app">请选择一个应用程序</string>
     <string name="drawer_list_empty_hint">未找到应用</string>
     <string name="long_press_for_settings">在屏幕上任意一处长按进入设置</string>
     <string name="swipe_up_for_apps">上滑查看所有应用</string>
