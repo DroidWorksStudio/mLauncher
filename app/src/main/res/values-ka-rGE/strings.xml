@@ -77,6 +77,10 @@
     <string name="settings_text_size">ტექსტის ზომის პარამეტრები</string>
     <string name="display_hidden_apps">დამალული აპების ჩვენება</string>
     <string name="lock_settings">ჩაკეტვის პარამეტრები</string>
+    <!-- Backup Strings -->
+    <string name="backup">სარეზერვო</string>
+    <string name="load_backup">სარეზერვო ასლის ჩატვირთვა</string>
+    <string name="store_backup">შენახვის სარეზერვო</string>
     <!-- Settings Strings -->
     <string name="off">გამორთულია</string>
     <string name="on">ჩართულია</string>
