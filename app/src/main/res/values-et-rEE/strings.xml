@@ -43,8 +43,8 @@
     <string name="show_date">Näita kuupäeva</string>
     <string name="show_battery">Näita akut</string>
     <string name="lock_home_apps">Lukustage rakendused</string>
-    <string name="extend_home_apps_area">Laiendada klikitav ala</string>
-    <string name="home_alignment_bottom">Esialguse ekraani joondamine allapoole</string>
+    <string name="extend_home_apps_area">Laiendage klõpsatavat ala</string>
+    <string name="home_alignment_bottom">Avakuva Joonda alumine osa</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">Rakenduste avakuva</string>
     <string name="clock_alignment">Kell ja kuupäev</string>
@@ -105,7 +105,7 @@
     <string name="disabled">Puudega inimesed</string>
     <string name="open">Avatud</string>
     <string name="close">Sulge</string>
-    <string name="copy">kopeerida</string>
+    <string name="copy">Kopeeri</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Autentimise tühistamine.</string>
     <string name="text_authentication_error">Autentimisviga:%1$s(kood %2$d)</string>
