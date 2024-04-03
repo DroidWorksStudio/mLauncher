@@ -1,0 +1,17 @@
+Útgáfa: 1.4.6
+
+Aukabætur:
+
+Bætti við heimaskjáskalli (sjálfgefið óvirkt)
+
+Villuleiðréttingar:
+
+Leyfa að HomeScreen forrit séu stillt á 0
+
+Skjöl:
+
+Uppfærðu CHANGELOG.md
+
+Refactor:
+
+Hreinsaði upp kóða sem bætir við leyfisbeiðni

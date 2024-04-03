@@ -38,6 +38,7 @@
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Numru ta\' shortcuts</string>
     <string name="pages_on_home_screen">Numru ta\' paġni</string>
+    <string name="enable_home_pager">Ippermetti Home Pager</string>
     <string name="show_time">Uri l-ħin</string>
     <string name="show_date">Uri d-data</string>
     <string name="show_battery">Uri batterija</string>
@@ -60,6 +61,22 @@
     <string name="clock_click_app">Ikklikkja fuq Arloġġ</string>
     <string name="date_click_app">Ikklikkja fuq Data</string>
     <string name="double_tap">Tektek Doppju</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">Uri Notifika</string>
+    <string name="show_app_list">Uri Lista tal-Apps</string>
+    <string name="open_app">Iftaħ l-App</string>
+    <string name="lock_screen">Lock Screen</string>
+    <string name="open_quick_settings">Settings Quick</string>
+    <string name="show_recents">Uri riċenti</string>
+    <string name="open_power_dialog">Djalogu tal-Enerġija</string>
+    <string name="take_a_screenshot">Ħu Screenshot</string>
+    <string name="left_page">Mur fil-paġna tax-xellug</string>
+    <string name="right_page">Mur fil-paġna tal-lemin</string>
+    <string name="double_tap_to_lock_screen">Tektek darbtejn biex tissakkar</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Settings Test Size</string>
+    <string name="display_hidden_apps">Uri Apps Moħbija</string>
+    <string name="lock_settings">Lock Settings</string>
     <!-- Settings Strings -->
     <string name="off">Mitfi</string>
     <string name="on">Fuq</string>
@@ -85,22 +102,6 @@
     <string name="open">Miftuħa</string>
     <string name="close">Agħlaq</string>
     <string name="copy">kopja</string>
-    <!-- Gestures Do Strings -->
-    <string name="show_notifications">Uri Notifika</string>
-    <string name="show_app_list">Uri Lista tal-Apps</string>
-    <string name="open_app">Iftaħ l-App</string>
-    <string name="lock_screen">Lock Screen</string>
-    <string name="open_quick_settings">Settings Quick</string>
-    <string name="show_recents">Uri riċenti</string>
-    <string name="open_power_dialog">Djalogu tal-Enerġija</string>
-    <string name="take_a_screenshot">Ħu Screenshot</string>
-    <string name="left_page">Mur fil-paġna tax-xellug</string>
-    <string name="right_page">Mur fil-paġna tal-lemin</string>
-    <string name="double_tap_to_lock_screen">Tektek darbtejn biex tissakkar</string>
-    <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">Settings Test Size</string>
-    <string name="display_hidden_apps">Uri Apps Moħbija</string>
-    <string name="lock_settings">Lock Settings</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Awtentikazzjoni Ikkanċella.</string>
     <string name="text_authentication_error">Żball fl-awtentikazzjoni:%1$s(kodiċi %2$d)</string>
@@ -109,6 +110,7 @@
     <string name="text_biometric_login_sub">Idħol billi tuża l-kredenzjali bijometrika tiegħek</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">L-apps kollha</string>
+    <string name="please_select_app">Jekk jogħġbok agħżel app</string>
     <string name="drawer_list_empty_hint">Ma nstabet l-ebda app</string>
     <string name="long_press_for_settings">Agħfas fit-tul kullimkien għas-settings</string>
     <string name="swipe_up_for_apps">Swipe \'l fuq għall-apps kollha</string>

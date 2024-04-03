@@ -1,0 +1,22 @@
+Version: 1.4.5
+
+Forbedring:
+
+Tilføjet please_select_app til startskærmens apps (#411)
+
+Fejlrettelser:
+
+Rettede genbestillingsindstillingerne (#416)
+Ret navneområde for projektet
+Fast FUNDING.yml
+
+Frigøre:
+
+Opdater udgivelsesversionen til 145 (v1.4.5)
+
+Diverse:
+
+Opdater changelog.yml
+Tilføjet appdetaljer
+Ændret app-ikon
+Omdøb finder til FuzzyFinder

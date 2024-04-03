@@ -38,6 +38,7 @@
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Numerus shortcuts</string>
     <string name="pages_on_home_screen">Numerus paginarum</string>
+    <string name="enable_home_pager">Admitte Home Pager</string>
     <string name="show_time">Ostende tempus</string>
     <string name="show_date">Ostende date</string>
     <string name="show_battery">Ostende altilium</string>
@@ -60,6 +61,22 @@
     <string name="clock_click_app">Click in Horologium</string>
     <string name="date_click_app">Click in Date</string>
     <string name="double_tap">ICTUS duplo</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">Ostende Notification</string>
+    <string name="show_app_list">Ostende App List</string>
+    <string name="open_app">Open App</string>
+    <string name="lock_screen">Cincinno \'collaborative</string>
+    <string name="open_quick_settings">Velox Occasus</string>
+    <string name="show_recents">Ostende Recentes</string>
+    <string name="open_power_dialog">Potestas Dialog</string>
+    <string name="take_a_screenshot">Accipies Screenshot</string>
+    <string name="left_page">Ad paginam sinistram</string>
+    <string name="right_page">Vade ad dextram paginam</string>
+    <string name="double_tap_to_lock_screen">Duplex ICTUS ut cincinno</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Optiones Text Size</string>
+    <string name="display_hidden_apps">Propono occulta Apps</string>
+    <string name="lock_settings">Cincinno Optiones</string>
     <!-- Settings Strings -->
     <string name="off">Off</string>
     <string name="on">On</string>
@@ -85,22 +102,6 @@
     <string name="open">Apertum</string>
     <string name="close">Close</string>
     <string name="copy">effingo</string>
-    <!-- Gestures Do Strings -->
-    <string name="show_notifications">Ostende Notification</string>
-    <string name="show_app_list">Ostende App List</string>
-    <string name="open_app">Open App</string>
-    <string name="lock_screen">Cincinno \'collaborative</string>
-    <string name="open_quick_settings">Velox Occasus</string>
-    <string name="show_recents">Ostende Recentes</string>
-    <string name="open_power_dialog">Potestas Dialog</string>
-    <string name="take_a_screenshot">Accipies Screenshot</string>
-    <string name="left_page">Ad paginam sinistram</string>
-    <string name="right_page">Vade ad dextram paginam</string>
-    <string name="double_tap_to_lock_screen">Duplex ICTUS ut cincinno</string>
-    <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">Optiones Text Size</string>
-    <string name="display_hidden_apps">Propono occulta Apps</string>
-    <string name="lock_settings">Cincinno Optiones</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">authenticitate Cancel.</string>
     <string name="text_authentication_error">Authenticatio erroris:%1$s(code %2$d)</string>
@@ -109,6 +110,7 @@
     <string name="text_biometric_login_sub">Log in usus tuos biometric credential</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Omnes apps</string>
+    <string name="please_select_app">Placere eligere app</string>
     <string name="drawer_list_empty_hint">Non apps invenerunt</string>
     <string name="long_press_for_settings">Long torcular huc ad occasus</string>
     <string name="swipe_up_for_apps">Tollenone in omnibus apps</string>

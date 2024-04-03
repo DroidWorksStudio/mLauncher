@@ -1,0 +1,17 @@
+Verze: 1.4.6
+
+Vylepšení:
+
+Přidán pager domovské obrazovky (ve výchozím nastavení zakázán)
+
+Oprava chyb:
+
+Povolit nastavení aplikací HomeScreen na 0
+
+Dokumentace:
+
+Aktualizovat CHANGELOG.md
+
+Refaktor:
+
+Vyčištěný kód přidání žádosti o oprávnění

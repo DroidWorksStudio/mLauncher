@@ -1,0 +1,17 @@
+Versioun: 1.4.6
+
+Verbesserungen:
+
+En Heembildschierm Pager bäigefüügt (Standard behënnert)
+
+Bug Fixes:
+
+Erlaabt HomeScreen Apps op 0 ze setzen
+
+Dokumentatioun:
+
+Update CHANGELOG.md
+
+Refactor:
+
+Gebotzt Code dobäi Erlaabnis Ufro

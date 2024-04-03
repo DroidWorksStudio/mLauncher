@@ -38,6 +38,7 @@
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Jumlah pintasan</string>
     <string name="pages_on_home_screen">Jumlah halaman</string>
+    <string name="enable_home_pager">Aktifkan Halaman Beranda</string>
     <string name="show_time">Waktu pertunjukan</string>
     <string name="show_date">Tanggal pertunjukan</string>
     <string name="show_battery">Tampilkan baterai</string>
@@ -60,6 +61,22 @@
     <string name="clock_click_app">Klik pada Jam</string>
     <string name="date_click_app">Klik pada Tanggal</string>
     <string name="double_tap">Ketuk Ganda</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">Tampilkan Pemberitahuan</string>
+    <string name="show_app_list">Tampilkan Daftar Aplikasi</string>
+    <string name="open_app">Aplikasi Terbuka</string>
+    <string name="lock_screen">Layar Kunci</string>
+    <string name="open_quick_settings">Pengaturan Cepat</string>
+    <string name="show_recents">Tampilkan Terkini</string>
+    <string name="open_power_dialog">Dialog Daya</string>
+    <string name="take_a_screenshot">Ambil Tangkapan Layar</string>
+    <string name="left_page">Pergi ke halaman kiri</string>
+    <string name="right_page">Pergi ke halaman kanan</string>
+    <string name="double_tap_to_lock_screen">Ketuk dua kali untuk mengunci</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Ukuran Teks Pengaturan</string>
+    <string name="display_hidden_apps">Tampilkan Aplikasi Tersembunyi</string>
+    <string name="lock_settings">Pengaturan Kunci</string>
     <!-- Settings Strings -->
     <string name="off">Mati</string>
     <string name="on">Aktif</string>
@@ -85,22 +102,6 @@
     <string name="open">Terbuka</string>
     <string name="close">Tutup</string>
     <string name="copy">salinan</string>
-    <!-- Gestures Do Strings -->
-    <string name="show_notifications">Tampilkan Pemberitahuan</string>
-    <string name="show_app_list">Tampilkan Daftar Aplikasi</string>
-    <string name="open_app">Aplikasi Terbuka</string>
-    <string name="lock_screen">Layar Kunci</string>
-    <string name="open_quick_settings">Pengaturan Cepat</string>
-    <string name="show_recents">Tampilkan Terkini</string>
-    <string name="open_power_dialog">Dialog Daya</string>
-    <string name="take_a_screenshot">Ambil Tangkapan Layar</string>
-    <string name="left_page">Pergi ke halaman kiri</string>
-    <string name="right_page">Pergi ke halaman kanan</string>
-    <string name="double_tap_to_lock_screen">Ketuk dua kali untuk mengunci</string>
-    <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">Ukuran Teks Pengaturan</string>
-    <string name="display_hidden_apps">Tampilkan Aplikasi Tersembunyi</string>
-    <string name="lock_settings">Pengaturan Kunci</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Pembatalan Otentikasi.</string>
     <string name="text_authentication_error">Kesalahan autentikasi:%1$s(kode %2$d)</string>
@@ -109,6 +110,7 @@
     <string name="text_biometric_login_sub">Masuk menggunakan kredensial biometrik Anda</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Semua aplikasi</string>
+    <string name="please_select_app">Silakan pilih aplikasi</string>
     <string name="drawer_list_empty_hint">Tidak ada aplikasi yang ditemukan</string>
     <string name="long_press_for_settings">Tekan lama di mana saja untuk pengaturan</string>
     <string name="swipe_up_for_apps">Geser ke atas untuk semua aplikasi</string>

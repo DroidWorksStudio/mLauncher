@@ -38,6 +38,7 @@
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Isan\'ny hitsin-dàlana</string>
     <string name="pages_on_home_screen">Isan\'ny pejy</string>
+    <string name="enable_home_pager">Alefaso ny Home Pager</string>
     <string name="show_time">Fotoana fampisehoana</string>
     <string name="show_date">Asehoy ny daty</string>
     <string name="show_battery">Asehoy ny bateria</string>
@@ -60,6 +61,22 @@
     <string name="clock_click_app">Tsindrio ny Clock</string>
     <string name="date_click_app">Tsindrio ny Date</string>
     <string name="double_tap">Peho indroa</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">Asehoy ny fampahafantarana</string>
+    <string name="show_app_list">Asehoy ny lisitry ny fampiharana</string>
+    <string name="open_app">Sokafy ny App</string>
+    <string name="lock_screen">Lock Screen</string>
+    <string name="open_quick_settings">Fikirana haingana</string>
+    <string name="show_recents">Asehoy vao haingana</string>
+    <string name="open_power_dialog">Power Dialogue</string>
+    <string name="take_a_screenshot">Makà pikantsary</string>
+    <string name="left_page">Mandehana any amin\'ny pejy ankavia</string>
+    <string name="right_page">Mandehana any amin\'ny pejy havanana</string>
+    <string name="double_tap_to_lock_screen">Tsindrio indroa hanidy</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Haben\'ny lahatsoratra Settings</string>
+    <string name="display_hidden_apps">Asehoy ny Apps Hidden</string>
+    <string name="lock_settings">Lock Settings</string>
     <!-- Settings Strings -->
     <string name="off">eny</string>
     <string name="on">On</string>
@@ -85,22 +102,6 @@
     <string name="open">Misokatra</string>
     <string name="close">AKAIKY</string>
     <string name="copy">dika mitovy</string>
-    <!-- Gestures Do Strings -->
-    <string name="show_notifications">Asehoy ny fampahafantarana</string>
-    <string name="show_app_list">Asehoy ny lisitry ny fampiharana</string>
-    <string name="open_app">Sokafy ny App</string>
-    <string name="lock_screen">Lock Screen</string>
-    <string name="open_quick_settings">Fikirana haingana</string>
-    <string name="show_recents">Asehoy vao haingana</string>
-    <string name="open_power_dialog">Power Dialogue</string>
-    <string name="take_a_screenshot">Makà pikantsary</string>
-    <string name="left_page">Mandehana any amin\'ny pejy ankavia</string>
-    <string name="right_page">Mandehana any amin\'ny pejy havanana</string>
-    <string name="double_tap_to_lock_screen">Tsindrio indroa hanidy</string>
-    <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">Haben\'ny lahatsoratra Settings</string>
-    <string name="display_hidden_apps">Asehoy ny Apps Hidden</string>
-    <string name="lock_settings">Lock Settings</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Fanafoanana ny fanamarinana.</string>
     <string name="text_authentication_error">Hadisoana fanamarinana:%1$s(kaody %2$d)</string>
@@ -109,6 +110,7 @@
     <string name="text_biometric_login_sub">Midira amin\'ny alàlan\'ny fahazoan-dàlana biometrika anao</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Apps rehetra</string>
+    <string name="please_select_app">Mifidiana app azafady</string>
     <string name="drawer_list_empty_hint">Tsy misy fampiharana hita</string>
     <string name="long_press_for_settings">Tsindrio lava na aiza na aiza ho an\'ny fanovana</string>
     <string name="swipe_up_for_apps">Swipe miakatra ho an\'ny fampiharana rehetra</string>

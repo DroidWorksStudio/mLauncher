@@ -38,6 +38,7 @@
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">จำนวนทางลัด</string>
     <string name="pages_on_home_screen">เลขหน้า</string>
+    <string name="enable_home_pager">เปิดใช้งานโฮมเพจเจอร์</string>
     <string name="show_time">เวลาแสดง</string>
     <string name="show_date">แสดงวันที่</string>
     <string name="show_battery">แสดงแบตเตอรี่</string>
@@ -60,6 +61,22 @@
     <string name="clock_click_app">คลิกที่นาฬิกา</string>
     <string name="date_click_app">คลิกที่วันที่</string>
     <string name="double_tap">แตะสองครั้ง</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">แสดงการแจ้งเตือน</string>
+    <string name="show_app_list">แสดงรายการแอพ</string>
+    <string name="open_app">เปิดแอพ</string>
+    <string name="lock_screen">ล็อกหน้าจอ</string>
+    <string name="open_quick_settings">การตั้งค่าด่วน</string>
+    <string name="show_recents">แสดงล่าสุด</string>
+    <string name="open_power_dialog">กล่องโต้ตอบพลังงาน</string>
+    <string name="take_a_screenshot">ถ่ายภาพหน้าจอ</string>
+    <string name="left_page">ไปที่หน้าซ้าย</string>
+    <string name="right_page">ไปที่หน้าขวา</string>
+    <string name="double_tap_to_lock_screen">แตะสองครั้งเพื่อล็อค</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">ขนาดตัวอักษรการตั้งค่า</string>
+    <string name="display_hidden_apps">แสดงแอปที่ซ่อนอยู่</string>
+    <string name="lock_settings">ล็อคการตั้งค่า</string>
     <!-- Settings Strings -->
     <string name="off">ปิด</string>
     <string name="on">บน</string>
@@ -85,22 +102,6 @@
     <string name="open">เปิด</string>
     <string name="close">ปิด</string>
     <string name="copy">สำเนา</string>
-    <!-- Gestures Do Strings -->
-    <string name="show_notifications">แสดงการแจ้งเตือน</string>
-    <string name="show_app_list">แสดงรายการแอพ</string>
-    <string name="open_app">เปิดแอพ</string>
-    <string name="lock_screen">ล็อกหน้าจอ</string>
-    <string name="open_quick_settings">การตั้งค่าด่วน</string>
-    <string name="show_recents">แสดงล่าสุด</string>
-    <string name="open_power_dialog">กล่องโต้ตอบพลังงาน</string>
-    <string name="take_a_screenshot">ถ่ายภาพหน้าจอ</string>
-    <string name="left_page">ไปที่หน้าซ้าย</string>
-    <string name="right_page">ไปที่หน้าขวา</string>
-    <string name="double_tap_to_lock_screen">แตะสองครั้งเพื่อล็อค</string>
-    <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">ขนาดตัวอักษรการตั้งค่า</string>
-    <string name="display_hidden_apps">แสดงแอปที่ซ่อนอยู่</string>
-    <string name="lock_settings">ล็อคการตั้งค่า</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">ยกเลิกการรับรองความถูกต้อง</string>
     <string name="text_authentication_error">ข้อผิดพลาดในการตรวจสอบสิทธิ์:%1$s(รหัส %2$d)</string>
@@ -109,6 +110,7 @@
     <string name="text_biometric_login_sub">เข้าสู่ระบบโดยใช้ข้อมูลประจำตัวไบโอเมตริกซ์ของคุณ</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">แอพทั้งหมด</string>
+    <string name="please_select_app">โปรดเลือกแอป</string>
     <string name="drawer_list_empty_hint">ไม่พบแอป</string>
     <string name="long_press_for_settings">กดที่ใดก็ได้ค้างไว้เพื่อตั้งค่า</string>
     <string name="swipe_up_for_apps">ปัดขึ้นสำหรับแอปทั้งหมด</string>

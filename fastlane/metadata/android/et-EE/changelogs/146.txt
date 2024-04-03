@@ -1,0 +1,17 @@
+Versioon: 1.4.6
+
+Täiustused:
+
+Lisatud avakuva piipar (vaikimisi keelatud)
+
+Veaparandused:
+
+Lubage HomeScreeni rakenduste väärtuseks seada 0
+
+Dokumentatsioon:
+
+Värskendage CHANGELOG.md
+
+Refaktor:
+
+Puhastatud kood, lisades loataotluse

@@ -1,0 +1,22 @@
+Version : 1.4.5
+
+Renforcement:
+
+Ajout de please_select_app aux applications de l'écran d'accueil (#411)
+
+Corrections de bugs :
+
+Correction des paramètres de réapprovisionnement (#416)
+Correction de l'espace de noms pour le projet
+Correction de FUNDING.yml
+
+Libérer:
+
+Mettre à jour la version Release vers 145 (v1.4.5)
+
+Divers:
+
+Mettre à jour changelog.yml
+Détails de l'application ajoutés
+Icône d'application modifiée
+Renommer le chercheur en FuzzyFinder

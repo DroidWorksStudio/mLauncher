@@ -38,6 +38,7 @@
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Nombre de raccourcis</string>
     <string name="pages_on_home_screen">Nombre de pages</string>
+    <string name="enable_home_pager">Activer la page d\'accueil</string>
     <string name="show_time">Afficher l\'heure</string>
     <string name="show_date">Afficher la date</string>
     <string name="show_battery">Afficher la batterie</string>
@@ -60,6 +61,22 @@
     <string name="clock_click_app">Cliquez sur l\'horloge</string>
     <string name="date_click_app">Cliquer sur Date</string>
     <string name="double_tap">Double appui</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">Afficher la notification</string>
+    <string name="show_app_list">Afficher la liste des applications</string>
+    <string name="open_app">Ouvrir l\'application</string>
+    <string name="lock_screen">Verrouiller l\'écran</string>
+    <string name="open_quick_settings">Paramètres Rapides</string>
+    <string name="show_recents">Show Recents</string>
+    <string name="open_power_dialog">Boîte de dialogue d\'alimentation</string>
+    <string name="take_a_screenshot">Prendre une capture d\'écran</string>
+    <string name="left_page">Aller à la page de gauche</string>
+    <string name="right_page">Aller à la bonne page</string>
+    <string name="double_tap_to_lock_screen">Double appui pour verrouiller</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Taille du texte des paramètres</string>
+    <string name="display_hidden_apps">Afficher les applications cachées</string>
+    <string name="lock_settings">Paramètres de verrouillage</string>
     <!-- Settings Strings -->
     <string name="off">Désactivé</string>
     <string name="on">Activé</string>
@@ -85,22 +102,6 @@
     <string name="open">Ouvert</string>
     <string name="close">Fermer</string>
     <string name="copy">copie</string>
-    <!-- Gestures Do Strings -->
-    <string name="show_notifications">Afficher la notification</string>
-    <string name="show_app_list">Afficher la liste des applications</string>
-    <string name="open_app">Ouvrir l\'application</string>
-    <string name="lock_screen">Verrouiller l\'écran</string>
-    <string name="open_quick_settings">Paramètres Rapides</string>
-    <string name="show_recents">Show Recents</string>
-    <string name="open_power_dialog">Boîte de dialogue d\'alimentation</string>
-    <string name="take_a_screenshot">Prendre une capture d\'écran</string>
-    <string name="left_page">Aller à la page de gauche</string>
-    <string name="right_page">Aller à la bonne page</string>
-    <string name="double_tap_to_lock_screen">Double appui pour verrouiller</string>
-    <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">Taille du texte des paramètres</string>
-    <string name="display_hidden_apps">Afficher les applications cachées</string>
-    <string name="lock_settings">Paramètres de verrouillage</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Authentification Annuler.</string>
     <string name="text_authentication_error">Erreur d\'authentification :%1$s(code %2$d)</string>
@@ -109,6 +110,7 @@
     <string name="text_biometric_login_sub">Connectez-vous en utilisant votre identifiant biométrique</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Toutes les applications</string>
+    <string name="please_select_app">Veuillez sélectionner une application</string>
     <string name="drawer_list_empty_hint">Aucune application trouvée</string>
     <string name="long_press_for_settings">Appui long n\'importe où pour les paramètres</string>
     <string name="swipe_up_for_apps">Glisser vers le haut pour toutes les applications</string>

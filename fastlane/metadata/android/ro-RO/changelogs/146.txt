@@ -1,0 +1,17 @@
+Versiune: 1.4.6
+
+Îmbunătățiri:
+
+S-a adăugat un pager pentru ecranul de pornire (dezactivat implicit)
+
+Corectarea erorilor:
+
+Permiteți aplicațiilor HomeScreen să fie setate la 0
+
+Documentație:
+
+Actualizați CHANGELOG.md
+
+Refactorizare:
+
+S-a curățat codul, adăugând cerere de permisiune

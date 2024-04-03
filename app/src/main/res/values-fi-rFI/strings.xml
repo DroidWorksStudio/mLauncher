@@ -38,6 +38,7 @@
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Pikakuvakkeiden määrä</string>
     <string name="pages_on_home_screen">Sivujen määrä</string>
+    <string name="enable_home_pager">Ota Home Pager käyttöön</string>
     <string name="show_time">Näytä aika</string>
     <string name="show_date">Näytä päivämäärä</string>
     <string name="show_battery">Näytä akku</string>
@@ -60,6 +61,22 @@
     <string name="clock_click_app">Klikkaa kello</string>
     <string name="date_click_app">Klikkaa päivämäärää</string>
     <string name="double_tap">Kaksoisnapautus</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">Näytä Ilmoitus</string>
+    <string name="show_app_list">Näytä Sovelluslista</string>
+    <string name="open_app">Avaa Sovellus</string>
+    <string name="lock_screen">Lukitse Näyttö</string>
+    <string name="open_quick_settings">Pika-Asetukset</string>
+    <string name="show_recents">Show Recents</string>
+    <string name="open_power_dialog">Virta-valintaikkuna</string>
+    <string name="take_a_screenshot">Ota kuvakaappaus</string>
+    <string name="left_page">Siirry vasemmalle sivulle</string>
+    <string name="right_page">Siirry oikealle sivulle</string>
+    <string name="double_tap_to_lock_screen">Napauta kahdesti lukitseaksesi</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Asetukset Tekstin koko</string>
+    <string name="display_hidden_apps">Näytä piilotetut sovellukset</string>
+    <string name="lock_settings">Lukitusasetukset</string>
     <!-- Settings Strings -->
     <string name="off">Pois</string>
     <string name="on">Päällä</string>
@@ -85,22 +102,6 @@
     <string name="open">Avaa</string>
     <string name="close">Sulje</string>
     <string name="copy">kopio</string>
-    <!-- Gestures Do Strings -->
-    <string name="show_notifications">Näytä Ilmoitus</string>
-    <string name="show_app_list">Näytä Sovelluslista</string>
-    <string name="open_app">Avaa Sovellus</string>
-    <string name="lock_screen">Lukitse Näyttö</string>
-    <string name="open_quick_settings">Pika-Asetukset</string>
-    <string name="show_recents">Show Recents</string>
-    <string name="open_power_dialog">Virta-valintaikkuna</string>
-    <string name="take_a_screenshot">Ota kuvakaappaus</string>
-    <string name="left_page">Siirry vasemmalle sivulle</string>
-    <string name="right_page">Siirry oikealle sivulle</string>
-    <string name="double_tap_to_lock_screen">Napauta kahdesti lukitseaksesi</string>
-    <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">Asetukset Tekstin koko</string>
-    <string name="display_hidden_apps">Näytä piilotetut sovellukset</string>
-    <string name="lock_settings">Lukitusasetukset</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Todennus Peruuta.</string>
     <string name="text_authentication_error">Todennusvirhe:%1$s(koodi %2$d)</string>
@@ -109,6 +110,7 @@
     <string name="text_biometric_login_sub">Kirjaudu sisään biometrisilla tunnistetiedoillasi</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Kaikki sovellukset</string>
+    <string name="please_select_app">Valitse sovellus</string>
     <string name="drawer_list_empty_hint">Sovelluksia ei löytynyt</string>
     <string name="long_press_for_settings">Paina pitkään saadaksesi asetuksia</string>
     <string name="swipe_up_for_apps">Pyyhkäise ylös kaikille sovelluksille</string>

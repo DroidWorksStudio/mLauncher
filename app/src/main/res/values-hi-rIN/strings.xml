@@ -38,6 +38,7 @@
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">शॉर्टकट की संख्या</string>
     <string name="pages_on_home_screen">पृष्ठों की संख्या</string>
+    <string name="enable_home_pager">होम पेजर सक्षम करें</string>
     <string name="show_time">शो टाइम</string>
     <string name="show_date">तिथि दिखाएं</string>
     <string name="show_battery">बैटरी दिखाओ</string>
@@ -60,6 +61,22 @@
     <string name="clock_click_app">घड़ी पर क्लिक करें</string>
     <string name="date_click_app">दिनांक पर क्लिक करें</string>
     <string name="double_tap">दो बार टैप</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">अधिसूचना दिखाएं</string>
+    <string name="show_app_list">ऐप सूची दिखाएं</string>
+    <string name="open_app">ऐप खोलो</string>
+    <string name="lock_screen">लॉक स्क्रीन</string>
+    <string name="open_quick_settings">शीग्र सेटिंग्स</string>
+    <string name="show_recents">हाल ही दिखाएँ</string>
+    <string name="open_power_dialog">पावर संवाद</string>
+    <string name="take_a_screenshot">कोई स्क्रीनशॉट लें</string>
+    <string name="left_page">बाएँ पृष्ठ पर जाएँ</string>
+    <string name="right_page">दाएँ पृष्ठ पर जाएँ</string>
+    <string name="double_tap_to_lock_screen">लॉक करने के लिए डबल टैप करें</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">सेटिंग्स पाठ का आकार</string>
+    <string name="display_hidden_apps">छिपे हुए ऐप्स प्रदर्शित करें</string>
+    <string name="lock_settings">सेटिंग्स लॉक करें</string>
     <!-- Settings Strings -->
     <string name="off">बंद</string>
     <string name="on">पर</string>
@@ -85,22 +102,6 @@
     <string name="open">खुला</string>
     <string name="close">बंद करना</string>
     <string name="copy">प्रतिलिपि</string>
-    <!-- Gestures Do Strings -->
-    <string name="show_notifications">अधिसूचना दिखाएं</string>
-    <string name="show_app_list">ऐप सूची दिखाएं</string>
-    <string name="open_app">ऐप खोलो</string>
-    <string name="lock_screen">लॉक स्क्रीन</string>
-    <string name="open_quick_settings">शीग्र सेटिंग्स</string>
-    <string name="show_recents">हाल ही दिखाएँ</string>
-    <string name="open_power_dialog">पावर संवाद</string>
-    <string name="take_a_screenshot">कोई स्क्रीनशॉट लें</string>
-    <string name="left_page">बाएँ पृष्ठ पर जाएँ</string>
-    <string name="right_page">दाएँ पृष्ठ पर जाएँ</string>
-    <string name="double_tap_to_lock_screen">लॉक करने के लिए डबल टैप करें</string>
-    <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">सेटिंग्स पाठ का आकार</string>
-    <string name="display_hidden_apps">छिपे हुए ऐप्स प्रदर्शित करें</string>
-    <string name="lock_settings">सेटिंग्स लॉक करें</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">प्रमाणीकरण रद्द.</string>
     <string name="text_authentication_error">प्रमाणीकरण त्रुटि:%1$s(कोड %2$d)</string>
@@ -109,6 +110,7 @@
     <string name="text_biometric_login_sub">अपने बायोमेट्रिक क्रेडेंशियल का उपयोग करके लॉग इन करें</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">सभी एप्लीकेशन</string>
+    <string name="please_select_app">कृपया कोई ऐप चुनें</string>
     <string name="drawer_list_empty_hint">कोई ऐप्लिकेशन नहीं मिला</string>
     <string name="long_press_for_settings">सेटिंग्स के लिए कहीं भी देर तक दबाएं</string>
     <string name="swipe_up_for_apps">सभी ऐप्स के लिए ऊपर की ओर स्वाइप करें</string>

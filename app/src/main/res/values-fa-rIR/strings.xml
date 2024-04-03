@@ -38,6 +38,7 @@
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">تعداد میانبرها</string>
     <string name="pages_on_home_screen">تعدادی از صفحات</string>
+    <string name="enable_home_pager">Home Pager را فعال کنید</string>
     <string name="show_time">نمایش زمان</string>
     <string name="show_date">نمایش تاریخ</string>
     <string name="show_battery">نمایش باتری</string>
@@ -60,6 +61,22 @@
     <string name="clock_click_app">روی ساعت کلیک کنید</string>
     <string name="date_click_app">روی تاریخ کلیک کنید</string>
     <string name="double_tap">دو تا ضربه ی آهسته بزن</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">نمایش اعلان</string>
+    <string name="show_app_list">نمایش لیست برنامه ها</string>
+    <string name="open_app">اپلیکیشن را باز کن</string>
+    <string name="lock_screen">صفحه قفل</string>
+    <string name="open_quick_settings">تنظیمات سریع</string>
+    <string name="show_recents">نمایش موارد اخیر</string>
+    <string name="open_power_dialog">گفتگوی برق</string>
+    <string name="take_a_screenshot">یک اسکرین شات بگیرید</string>
+    <string name="left_page">به صفحه سمت چپ بروید</string>
+    <string name="right_page">به صفحه سمت راست بروید</string>
+    <string name="double_tap_to_lock_screen">برای قفل کردن، دو ضربه سریع بزنید</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">تنظیمات اندازه متن</string>
+    <string name="display_hidden_apps">نمایش برنامه های مخفی</string>
+    <string name="lock_settings">تنظیمات قفل</string>
     <!-- Settings Strings -->
     <string name="off">خاموش</string>
     <string name="on">بر</string>
@@ -85,22 +102,6 @@
     <string name="open">باز کن</string>
     <string name="close">نزدیک</string>
     <string name="copy">کپی 🀄</string>
-    <!-- Gestures Do Strings -->
-    <string name="show_notifications">نمایش اعلان</string>
-    <string name="show_app_list">نمایش لیست برنامه ها</string>
-    <string name="open_app">اپلیکیشن را باز کن</string>
-    <string name="lock_screen">صفحه قفل</string>
-    <string name="open_quick_settings">تنظیمات سریع</string>
-    <string name="show_recents">نمایش موارد اخیر</string>
-    <string name="open_power_dialog">گفتگوی برق</string>
-    <string name="take_a_screenshot">یک اسکرین شات بگیرید</string>
-    <string name="left_page">به صفحه سمت چپ بروید</string>
-    <string name="right_page">به صفحه سمت راست بروید</string>
-    <string name="double_tap_to_lock_screen">برای قفل کردن، دو ضربه سریع بزنید</string>
-    <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">تنظیمات اندازه متن</string>
-    <string name="display_hidden_apps">نمایش برنامه های مخفی</string>
-    <string name="lock_settings">تنظیمات قفل</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">لغو احراز هویت</string>
     <string name="text_authentication_error">خطای احراز هویت:%1$s(کد %2$d)</string>
@@ -109,6 +110,7 @@
     <string name="text_biometric_login_sub">با استفاده از اعتبار بیومتریک خود وارد شوید</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">همه برنامه ها</string>
+    <string name="please_select_app">لطفاً یک برنامه را انتخاب کنید</string>
     <string name="drawer_list_empty_hint">هیچ برنامه ای پیدا نشد</string>
     <string name="long_press_for_settings">برای تنظیمات، هر جایی را به مدت طولانی فشار دهید</string>
     <string name="swipe_up_for_apps">برای همه برنامه ها انگشت خود را به سمت بالا بکشید</string>

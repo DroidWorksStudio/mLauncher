@@ -38,6 +38,7 @@
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Number of shortcuts</string>
     <string name="pages_on_home_screen">페이지 수</string>
+    <string name="enable_home_pager">홈 호출기 활성화</string>
     <string name="show_time">Show time</string>
     <string name="show_date">Show date</string>
     <string name="show_battery">배터리 표시</string>
@@ -60,6 +61,22 @@
     <string name="clock_click_app">Click on Clock</string>
     <string name="date_click_app">Click on Date</string>
     <string name="double_tap">Double Tap</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">Show Notification</string>
+    <string name="show_app_list">Show App List</string>
+    <string name="open_app">Open App</string>
+    <string name="lock_screen">Lock Screen</string>
+    <string name="open_quick_settings">Quick Settings</string>
+    <string name="show_recents">Show Recents</string>
+    <string name="open_power_dialog">전원 대화 상자</string>
+    <string name="take_a_screenshot">스크린샷 찍기</string>
+    <string name="left_page">왼쪽 페이지로 이동</string>
+    <string name="right_page">오른쪽 페이지로 이동</string>
+    <string name="double_tap_to_lock_screen">Double tap to lock</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">설정 텍스트 크기</string>
+    <string name="display_hidden_apps">숨겨진 앱 표시</string>
+    <string name="lock_settings">잠금 설정</string>
     <!-- Settings Strings -->
     <string name="off">Off</string>
     <string name="on">On</string>
@@ -85,22 +102,6 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string name="copy">복사</string>
-    <!-- Gestures Do Strings -->
-    <string name="show_notifications">Show Notification</string>
-    <string name="show_app_list">Show App List</string>
-    <string name="open_app">Open App</string>
-    <string name="lock_screen">Lock Screen</string>
-    <string name="open_quick_settings">Quick Settings</string>
-    <string name="show_recents">Show Recents</string>
-    <string name="open_power_dialog">전원 대화 상자</string>
-    <string name="take_a_screenshot">스크린샷 찍기</string>
-    <string name="left_page">왼쪽 페이지로 이동</string>
-    <string name="right_page">오른쪽 페이지로 이동</string>
-    <string name="double_tap_to_lock_screen">Double tap to lock</string>
-    <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">설정 텍스트 크기</string>
-    <string name="display_hidden_apps">숨겨진 앱 표시</string>
-    <string name="lock_settings">잠금 설정</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">인증 취소.</string>
     <string name="text_authentication_error">인증 오류:%1$s(코드 %2$d)</string>
@@ -109,6 +110,7 @@
     <string name="text_biometric_login_sub">생체 인식 자격 증명을 사용하여 로그인</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>
+    <string name="please_select_app">앱을 선택하세요</string>
     <string name="drawer_list_empty_hint">No apps found</string>
     <string name="long_press_for_settings">Long press anywhere for settings</string>
     <string name="swipe_up_for_apps">Swipe up for all apps</string>

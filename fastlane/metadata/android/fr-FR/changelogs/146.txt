@@ -1,0 +1,17 @@
+Version : 1.4.6
+
+Améliorations :
+
+Ajout d'un pager d'écran d'accueil (désactivé par défaut)
+
+Corrections de bugs :
+
+Autoriser les applications HomeScreen à être définies sur 0
+
+Documentation:
+
+Mettre à jour CHANGELOG.md
+
+Refactoriser :
+
+Code nettoyé en ajoutant une demande d'autorisation

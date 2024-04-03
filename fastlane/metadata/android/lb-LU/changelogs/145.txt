@@ -1,0 +1,22 @@
+Versioun: 1.4.5
+
+Verbesserung:
+
+Please_select_app op den Heembildschierm Apps bäigefüügt (#411)
+
+Bug Fixes:
+
+Fixéiert d'Reorder-Astellunge (#416)
+Fix Nummraum fir de Projet
+Fix FUNDING.yml
+
+Verëffentlechung:
+
+Update d'Verëffentlechungsversioun op 145 (v1.4.5)
+
+Verschiddenes:
+
+Update changelog.yml
+Dobäi App Detailer
+Geännert App Ikon
+Den Finder ëmbenennen op FuzzyFinder

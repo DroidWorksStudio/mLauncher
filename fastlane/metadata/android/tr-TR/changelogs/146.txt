@@ -1,0 +1,17 @@
+Sürüm: 1.4.6
+
+Geliştirmeler:
+
+Bir ana ekran çağrı cihazı eklendi (varsayılan olarak devre dışıdır)
+
+Hata düzeltmeleri:
+
+HomeScreen uygulamalarının 0 olarak ayarlanmasına izin ver
+
+Belgeler:
+
+CHANGELOG.md'yi güncelle
+
+Yeniden düzenleme:
+
+Kod ekleme izni isteği temizlendi

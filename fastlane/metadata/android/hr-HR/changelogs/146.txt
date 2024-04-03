@@ -1,0 +1,17 @@
+Verzija: 1.4.6
+
+Poboljšanja:
+
+Dodan dojavljivač na početni zaslon (onemogućen prema zadanim postavkama)
+
+Ispravke pogrešaka:
+
+Dopusti da se aplikacije početnog zaslona postave na 0
+
+Dokumentacija:
+
+Ažurirajte CHANGELOG.md
+
+Refaktor:
+
+Očišćen zahtjev za dopuštenje za dodavanje koda

@@ -38,6 +38,7 @@
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Otseteede arv</string>
     <string name="pages_on_home_screen">Lehtede arv</string>
+    <string name="enable_home_pager">Avalehtri lubamine</string>
     <string name="show_time">Näita aega</string>
     <string name="show_date">Näita kuupäeva</string>
     <string name="show_battery">Näita akut</string>
@@ -60,6 +61,22 @@
     <string name="clock_click_app">Klõpsake kella</string>
     <string name="date_click_app">Klõpsake kuupäeval</string>
     <string name="double_tap">Double Tap</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">Näita teatist</string>
+    <string name="show_app_list">Näita rakenduste nimekirja</string>
+    <string name="open_app">Avatud rakendus</string>
+    <string name="lock_screen">Lukustusekraan</string>
+    <string name="open_quick_settings">Kiirseaded</string>
+    <string name="show_recents">Kuva Recents</string>
+    <string name="open_power_dialog">Toitedialoog</string>
+    <string name="take_a_screenshot">Tehke ekraanipilt</string>
+    <string name="left_page">Mine vasakule lehele</string>
+    <string name="right_page">Mine paremale lehele</string>
+    <string name="double_tap_to_lock_screen">Topeltkoputus lukustamiseks</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Seaded Teksti suurus</string>
+    <string name="display_hidden_apps">Kuva peidetud rakendused</string>
+    <string name="lock_settings">Luku seaded</string>
     <!-- Settings Strings -->
     <string name="off">Väljaspool</string>
     <string name="on">Veebilehel</string>
@@ -85,22 +102,6 @@
     <string name="open">Avatud</string>
     <string name="close">Sulge</string>
     <string name="copy">kopeerida</string>
-    <!-- Gestures Do Strings -->
-    <string name="show_notifications">Näita teatist</string>
-    <string name="show_app_list">Näita rakenduste nimekirja</string>
-    <string name="open_app">Avatud rakendus</string>
-    <string name="lock_screen">Lukustusekraan</string>
-    <string name="open_quick_settings">Kiirseaded</string>
-    <string name="show_recents">Kuva Recents</string>
-    <string name="open_power_dialog">Toitedialoog</string>
-    <string name="take_a_screenshot">Tehke ekraanipilt</string>
-    <string name="left_page">Mine vasakule lehele</string>
-    <string name="right_page">Mine paremale lehele</string>
-    <string name="double_tap_to_lock_screen">Topeltkoputus lukustamiseks</string>
-    <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">Seaded Teksti suurus</string>
-    <string name="display_hidden_apps">Kuva peidetud rakendused</string>
-    <string name="lock_settings">Luku seaded</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Autentimise tühistamine.</string>
     <string name="text_authentication_error">Autentimisviga:%1$s(kood %2$d)</string>
@@ -109,6 +110,7 @@
     <string name="text_biometric_login_sub">Logige sisse oma biomeetrilise mandaadiga</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Kõik rakendused</string>
+    <string name="please_select_app">Valige rakendus</string>
     <string name="drawer_list_empty_hint">Rakendusi ei leitud</string>
     <string name="long_press_for_settings">Vajutage pikalt kuskil seadete jaoks</string>
     <string name="swipe_up_for_apps">Kõigi rakenduste jaoks pühkige ülespoole</string>

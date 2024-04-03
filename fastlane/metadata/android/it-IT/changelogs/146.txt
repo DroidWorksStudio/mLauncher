@@ -1,0 +1,17 @@
+Versione: 1.4.6
+
+Miglioramenti:
+
+Aggiunto un cercapersone nella schermata iniziale (disabilitato per impostazione predefinita)
+
+Correzioni di bug:
+
+Consenti alle app HomeScreen di essere impostate su 0
+
+Documentazione:
+
+Aggiorna CHANGELOG.md
+
+Refactoring:
+
+Codice pulito aggiungendo richiesta di autorizzazione

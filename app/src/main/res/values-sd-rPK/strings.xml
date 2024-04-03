@@ -38,6 +38,7 @@
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">شارٽ ڪٽ جو تعداد</string>
     <string name="pages_on_home_screen">صفحن جو تعداد</string>
+    <string name="enable_home_pager">هوم پيجر کي فعال ڪريو</string>
     <string name="show_time">وقت ڏيکاريو</string>
     <string name="show_date">تاريخ ڏيکاريو</string>
     <string name="show_battery">بيٽري ڏيکاريو</string>
@@ -60,6 +61,22 @@
     <string name="clock_click_app">گھڙي تي ڪلڪ ڪريو</string>
     <string name="date_click_app">تي ڪلڪ ڪريو تاريخ</string>
     <string name="double_tap">ڊبل ٽيپ ڪريو</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">نوٽيفڪيشن ڏيکاريو</string>
+    <string name="show_app_list">ڏيکاريو ايپ لسٽ</string>
+    <string name="open_app">اوپن ايپ</string>
+    <string name="lock_screen">اسڪرين کي لاڪ ڪيو</string>
+    <string name="open_quick_settings">تڪڙو سيٽنگون</string>
+    <string name="show_recents">تازو ڏيکاريو</string>
+    <string name="open_power_dialog">پاور ڊائلاگ</string>
+    <string name="take_a_screenshot">هڪ اسڪرين شاٽ وٺو</string>
+    <string name="left_page">کاٻي صفحي ڏانھن وڃو</string>
+    <string name="right_page">ساڄي صفحي ڏانھن وڃو</string>
+    <string name="double_tap_to_lock_screen">لاڪ ڪرڻ لاءِ ڊبل ٽيپ ڪريو</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">سيٽنگون ٽيڪسٽ سائيز</string>
+    <string name="display_hidden_apps">پوشیدہ ائپس ڏيکاريو</string>
+    <string name="lock_settings">لاڪ سيٽنگون</string>
     <!-- Settings Strings -->
     <string name="off">بند</string>
     <string name="on">تي</string>
@@ -85,22 +102,6 @@
     <string name="open">کليل</string>
     <string name="close">بند</string>
     <string name="copy">ڪاپي</string>
-    <!-- Gestures Do Strings -->
-    <string name="show_notifications">نوٽيفڪيشن ڏيکاريو</string>
-    <string name="show_app_list">ڏيکاريو ايپ لسٽ</string>
-    <string name="open_app">اوپن ايپ</string>
-    <string name="lock_screen">اسڪرين کي لاڪ ڪيو</string>
-    <string name="open_quick_settings">تڪڙو سيٽنگون</string>
-    <string name="show_recents">تازو ڏيکاريو</string>
-    <string name="open_power_dialog">پاور ڊائلاگ</string>
-    <string name="take_a_screenshot">هڪ اسڪرين شاٽ وٺو</string>
-    <string name="left_page">کاٻي صفحي ڏانھن وڃو</string>
-    <string name="right_page">ساڄي صفحي ڏانھن وڃو</string>
-    <string name="double_tap_to_lock_screen">لاڪ ڪرڻ لاءِ ڊبل ٽيپ ڪريو</string>
-    <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">سيٽنگون ٽيڪسٽ سائيز</string>
-    <string name="display_hidden_apps">پوشیدہ ائپس ڏيکاريو</string>
-    <string name="lock_settings">لاڪ سيٽنگون</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">تصديق منسوخ ڪريو.</string>
     <string name="text_authentication_error">تصديق جي غلطي:%1$s(ڪوڊ %2$d)</string>
@@ -109,6 +110,7 @@
     <string name="text_biometric_login_sub">لاگ ان ڪريو پنھنجي بايوميٽرڪ سند استعمال ڪندي</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">سڀ ائپس</string>
+    <string name="please_select_app">مهرباني ڪري هڪ ايپ چونڊيو</string>
     <string name="drawer_list_empty_hint">ڪابه ايپس نه ملي</string>
     <string name="long_press_for_settings">سيٽنگون لاءِ ڪٿي به ڊگھو دٻايو</string>
     <string name="swipe_up_for_apps">سڀني ائپس لاءِ مٿي سوائپ ڪريو</string>

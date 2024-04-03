@@ -1,0 +1,22 @@
+Versioni: 1.4.5
+
+Përmirësimi:
+
+U shtua please_select_app në aplikacionet e ekranit bazë (#411)
+
+Rregullime të gabimeve:
+
+Rregulloi cilësimet e rirenditjes (#416)
+Rregulloni hapësirën e emrave për projektin
+Fiks FINANCIAR.yml
+
+Lëshimi:
+
+Përditëso versionin e lëshimit në 145 (v1.4.5)
+
+Të ndryshme:
+
+Përditëso changelog.yml
+Detajet e aplikacionit të shtuara
+Ikona e aplikacionit të ndryshuar
+Riemërtoni gjetësin në FuzzyFinder

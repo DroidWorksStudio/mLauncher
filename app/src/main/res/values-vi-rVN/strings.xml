@@ -38,6 +38,7 @@
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Number of shortcuts</string>
     <string name="pages_on_home_screen">Số trang</string>
+    <string name="enable_home_pager">Kích hoạt tính năng nhắn tin trang chủ</string>
     <string name="show_time">Show time</string>
     <string name="show_date">Show date</string>
     <string name="show_battery">Hiển thị pin</string>
@@ -60,6 +61,22 @@
     <string name="clock_click_app">Click on Clock</string>
     <string name="date_click_app">Click on Date</string>
     <string name="double_tap">Double Tap</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">Show Notification</string>
+    <string name="show_app_list">Show App List</string>
+    <string name="open_app">Open App</string>
+    <string name="lock_screen">Lock Screen</string>
+    <string name="open_quick_settings">Quick Settings</string>
+    <string name="show_recents">Show Recents</string>
+    <string name="open_power_dialog">Hộp thoại nguồn</string>
+    <string name="take_a_screenshot">Chụp màn hình</string>
+    <string name="left_page">Tới trang bên trái</string>
+    <string name="right_page">Tới trang bên phải</string>
+    <string name="double_tap_to_lock_screen">Double tap to lock</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Cài đặt Kích thước văn bản</string>
+    <string name="display_hidden_apps">Hiển thị ứng dụng ẩn</string>
+    <string name="lock_settings">Cài đặt khóa</string>
     <!-- Settings Strings -->
     <string name="off">Off</string>
     <string name="on">On</string>
@@ -85,22 +102,6 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string name="copy">sao chép</string>
-    <!-- Gestures Do Strings -->
-    <string name="show_notifications">Show Notification</string>
-    <string name="show_app_list">Show App List</string>
-    <string name="open_app">Open App</string>
-    <string name="lock_screen">Lock Screen</string>
-    <string name="open_quick_settings">Quick Settings</string>
-    <string name="show_recents">Show Recents</string>
-    <string name="open_power_dialog">Hộp thoại nguồn</string>
-    <string name="take_a_screenshot">Chụp màn hình</string>
-    <string name="left_page">Tới trang bên trái</string>
-    <string name="right_page">Tới trang bên phải</string>
-    <string name="double_tap_to_lock_screen">Double tap to lock</string>
-    <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">Cài đặt Kích thước văn bản</string>
-    <string name="display_hidden_apps">Hiển thị ứng dụng ẩn</string>
-    <string name="lock_settings">Cài đặt khóa</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Xác thực Hủy bỏ.</string>
     <string name="text_authentication_error">Lỗi xác thực:%1$s(mã %2$d)</string>
@@ -109,6 +110,7 @@
     <string name="text_biometric_login_sub">Đăng nhập bằng thông tin sinh trắc học của bạn</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>
+    <string name="please_select_app">Vui lòng chọn một ứng dụng</string>
     <string name="drawer_list_empty_hint">No apps found</string>
     <string name="long_press_for_settings">Long press anywhere for settings</string>
     <string name="swipe_up_for_apps">Swipe up for all apps</string>

@@ -1,0 +1,17 @@
+Version: 1.4.6
+
+Förbättringar:
+
+Lade till en startskärmssökare (inaktiverad som standard)
+
+Bug fixar:
+
+Tillåt att HomeScreen-appar ställs in på 0
+
+Dokumentation:
+
+Uppdatera CHANGELOG.md
+
+Refaktor:
+
+Rensat upp kod som lägger till behörighetsbegäran
