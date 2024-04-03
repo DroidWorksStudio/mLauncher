@@ -119,6 +119,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         binding.date.textSize = prefs.textSizeLauncher.toFloat()
         binding.batteryIcon.textSize = prefs.textSizeLauncher.toFloat() / 1.5f
         binding.batteryText.textSize = prefs.textSizeLauncher.toFloat() / 1.5f
+        binding.homeScreenPager.textSize = prefs.textSizeLauncher * prefs.textSizeMultiplier
 
         if (prefs.useCustomIconFont) {
             binding.clock.typeface = typeface
@@ -126,6 +127,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             binding.batteryText.typeface = typeface
             binding.setDefaultLauncher.typeface = typeface
         }
+        binding.homeScreenPager.typeface = typeface
         binding.batteryIcon.typeface = typeface
 
         val backgroundColor = getHexForOpacity(requireContext(), prefs)
@@ -137,6 +139,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             binding.batteryIcon.setTextColor(fontColor)
             binding.batteryText.setTextColor(fontColor)
             binding.setDefaultLauncher.setTextColor(fontColor)
+            binding.homeScreenPager.setTextColor(fontColor)
         }
     }
 
@@ -359,7 +362,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             Action.OpenPowerDialog -> initActionService(requireContext())?.openPowerDialog()
             Action.TakeScreenShot -> initActionService(requireContext())?.takeScreenShot()
             Action.LeftPage -> handleSwipeLeft(prefs.homePagesNum)
-            Action.RightPage -> handleSwipeRight()
+            Action.RightPage -> handleSwipeRight(prefs.homePagesNum)
             Action.Disabled -> {}
         }
     }
@@ -733,10 +736,10 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         }
 
         // Update app visibility based on the current page and calculated apps per page
-        updateAppsVisibility()
+        updateAppsVisibility(totalPages)
     }
 
-    private fun updateAppsVisibility() {
+    private fun updateAppsVisibility(totalPages: Int) {
         val startIdx = currentPage * appsPerPage
         val endIdx = minOf((currentPage + 1) * appsPerPage, getTotalAppsCount())
 
@@ -744,19 +747,26 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             val view = binding.homeAppsLayout.getChildAt(i)
             view.visibility = if (i in startIdx until endIdx) View.VISIBLE else View.GONE
         }
+
+        val pageSelectorTexts = MutableList(totalPages) { _ -> Constants.NEW_PAGE }
+        pageSelectorTexts[currentPage] = Constants.CURRENT_PAGE
+
+        // Set the text for the page selector corresponding to each page
+        binding.homeScreenPager.text = pageSelectorTexts.joinToString(" ")
+        if (prefs.homePagesNum > 1 && prefs.homePagerOn) binding.homeScreenPager.visibility = View.VISIBLE
     }
 
     private fun handleSwipeLeft(totalPages:Int) {
         if (currentPage < totalPages - 1) {
             currentPage++
-            updateAppsVisibility()
+            updateAppsVisibility(totalPages)
         }
     }
 
-    private fun handleSwipeRight() {
+    private fun handleSwipeRight(totalPages:Int) {
         if (currentPage > 0) {
             currentPage--
-            updateAppsVisibility()
+            updateAppsVisibility(totalPages)
         }
     }
 

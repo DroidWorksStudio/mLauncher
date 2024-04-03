@@ -4,7 +4,7 @@
 
     <!-- Admin Settings -->
     <string name="admin_permission_message">mLauncher promises to use lock screen permission responsibly. mLauncher does not collect or share any data.</string>
-    <string name="experimental">(experimental)</string>
+    <string name="experimental">(Experimental)</string>
 
     <!-- Settings Headers -->
     <string name="appearance">Appearance</string>
@@ -15,10 +15,10 @@
     <string name="miscellaneous">Miscellaneous</string>
 
     <!-- Home Strings -->
-    <string name="hidden_apps">Hidden apps</string>
-    <string name="reorder_apps">Re-Order apps</string>
-    <string name="set_as_default_launcher">Set as default launcher</string>
-    <string name="change_default_launcher">Change default launcher</string>
+    <string name="hidden_apps">Hidden Apps</string>
+    <string name="reorder_apps">Re-Order Apps</string>
+    <string name="set_as_default_launcher">Set as Default Launcher</string>
+    <string name="change_default_launcher">Change Default Launcher</string>
 
     <!-- Appearance Strings -->
     <string name="status_bar">Show status bar</string>
@@ -32,28 +32,29 @@
     <string name="all_apps_text">Display All Apps Text</string>
 
     <!-- Behavior Strings -->
-    <string name="auto_show_keyboard">Auto show keyboard</string>
-    <string name="auto_open_apps">Auto open apps</string>
+    <string name="auto_show_keyboard">Auto Show Keyboard</string>
+    <string name="auto_open_apps">Auto Open Apps</string>
     <string name="display_recent_apps">Display Recent Apps</string>
-    <string name="number_of_recents">Number Of Recent Apps</string>
+    <string name="number_of_recents">Number of Recent Apps</string>
     <string name="filter_strength">Filter Strength</string>
-    <string name="search_from_start">App search from start.</string>
+    <string name="search_from_start">App Search from Start.</string>
     <string name="icon_font">Use Icon Font</string>
 
     <!-- Home-screen Strings -->
-    <string name="apps_on_home_screen">Number of shortcuts</string>
-    <string name="pages_on_home_screen">Number of pages</string>
-    <string name="show_time">Show time</string>
-    <string name="show_date">Show date</string>
+    <string name="apps_on_home_screen">Number of Shortcuts</string>
+    <string name="pages_on_home_screen">Number of Pages</string>
+    <string name="enable_home_pager">Enable Home Pager</string>
+    <string name="show_time">Show Time</string>
+    <string name="show_date">Show Date</string>
     <string name="show_battery">Show battery</string>
     <string name="lock_home_apps">Lock Apps</string>
     <string name="extend_home_apps_area">Extend clickable area</string>
     <string name="home_alignment_bottom">Home screen align bottom</string>
 
     <!-- Alignment Strings -->
-    <string name="home_alignment">Apps home screen</string>
-    <string name="clock_alignment">Clock and date</string>
-    <string name="drawer_alignment">Apps in app drawer</string>
+    <string name="home_alignment">Apps Home Screen</string>
+    <string name="clock_alignment">Clock and Date</string>
+    <string name="drawer_alignment">Apps in App Drawer</string>
 
     <!-- Gestures Strings -->
     <string name="short_swipe_up_app">Short Swipe up</string>
@@ -67,6 +68,24 @@
     <string name="clock_click_app">Click on Clock</string>
     <string name="date_click_app">Click on Date</string>
     <string name="double_tap">Double Tap</string>
+
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">Show Notification</string>
+    <string name="show_app_list">Show App List</string>
+    <string name="open_app">Open App</string>
+    <string name="lock_screen">Lock Screen</string>
+    <string name="open_quick_settings">Quick Settings</string>
+    <string name="show_recents">Show Recents</string>
+    <string name="open_power_dialog">Power Dialog</string>
+    <string name="take_a_screenshot">Take a Screenshot</string>
+    <string name="left_page">Go to Left Page</string>
+    <string name="right_page">Go to Right Page</string>
+    <string name="double_tap_to_lock_screen">Double Tap to Lock</string>
+
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Settings Text Size</string>
+    <string name="display_hidden_apps">Display Hidden Apps</string>
+    <string name="lock_settings">Lock Settings</string>
 
     <!-- Settings Strings -->
     <string name="off">Off</string>
@@ -93,24 +112,6 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string name="copy">copy</string>
-
-    <!-- Gestures Do Strings -->
-    <string name="show_notifications">Show Notification</string>
-    <string name="show_app_list">Show App List</string>
-    <string name="open_app">Open App</string>
-    <string name="lock_screen">Lock Screen</string>
-    <string name="open_quick_settings">Quick Settings</string>
-    <string name="show_recents">Show Recents</string>
-    <string name="open_power_dialog">Power Dialog</string>
-    <string name="take_a_screenshot">Take a Screenshot</string>
-    <string name="left_page">Go to left page</string>
-    <string name="right_page">Go to right page</string>
-    <string name="double_tap_to_lock_screen">Double tap to lock</string>
-
-    <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">Settings Text Size</string>
-    <string name="display_hidden_apps">Display Hidden Apps</string>
-    <string name="lock_settings">Lock Settings</string>
 
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Authentication Cancel.</string>

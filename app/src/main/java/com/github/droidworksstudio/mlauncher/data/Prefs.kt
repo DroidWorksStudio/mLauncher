@@ -14,6 +14,7 @@ private const val FIRST_SETTINGS_OPEN = "FIRST_SETTINGS_OPEN"
 private const val LOCK_MODE = "LOCK_MODE"
 private const val HOME_APPS_NUM = "HOME_APPS_NUM"
 private const val HOME_PAGES_NUM = "HOME_PAGES_NUM"
+private const val HOME_PAGES_PAGER = "HOME_PAGES_PAGER"
 private const val AUTO_SHOW_KEYBOARD = "AUTO_SHOW_KEYBOARD"
 private const val AUTO_OPEN_APP = "AUTO_OPEN_APP"
 private const val RECENT_APPS_DISPLAYED = "RECENT_APPS_DISPLAYED"
@@ -92,6 +93,10 @@ class Prefs(val context: Context) {
     var autoOpenApp: Boolean
         get() = prefs.getBoolean(AUTO_OPEN_APP, false)
         set(value) = prefs.edit().putBoolean(AUTO_OPEN_APP, value).apply()
+
+    var homePagerOn: Boolean
+        get() = prefs.getBoolean(HOME_PAGES_PAGER, false)
+        set(value) = prefs.edit().putBoolean(HOME_PAGES_PAGER, value).apply()
 
     var recentAppsDisplayed: Boolean
         get() = prefs.getBoolean(RECENT_APPS_DISPLAYED, false)
