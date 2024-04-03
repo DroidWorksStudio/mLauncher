@@ -77,6 +77,10 @@
     <string name="settings_text_size">Tetapan Saiz Teks</string>
     <string name="display_hidden_apps">Paparkan Apl Tersembunyi</string>
     <string name="lock_settings">Tetapan Kunci</string>
+    <!-- Backup Strings -->
+    <string name="backup">Sandaran</string>
+    <string name="load_backup">Muatkan Sandaran</string>
+    <string name="store_backup">Simpan Sandaran</string>
     <!-- Settings Strings -->
     <string name="off">Mati</string>
     <string name="on">hidup</string>
