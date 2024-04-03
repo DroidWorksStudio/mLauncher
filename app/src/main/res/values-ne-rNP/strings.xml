@@ -43,8 +43,8 @@
     <string name="show_date">मिति देखाउनुहोस्</string>
     <string name="show_battery">ब्याट्री देखाउनुहोस्</string>
     <string name="lock_home_apps">एपहरू लक गर्नुहोस्</string>
-    <string name="extend_home_apps_area">क्लिक योग्य क्षेत्र विस्तार गर्नुहोस्</string>
-    <string name="home_alignment_bottom">गृह स्क्रिन तल पङ्क्तिबद्ध गर्नुहोस्</string>
+    <string name="extend_home_apps_area">क्लिकयोग्य क्षेत्र विस्तार गर्नुहोस्</string>
+    <string name="home_alignment_bottom">गृह स्क्रिन तल पङ्क्तिबद्ध</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">एप्स होम स्क्रिन</string>
     <string name="clock_alignment">घडी र मिति</string>
