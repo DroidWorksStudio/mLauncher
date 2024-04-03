@@ -38,6 +38,7 @@
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Number of shortcuts</string>
     <string name="pages_on_home_screen">Aantal bladsye</string>
+    <string name="enable_home_pager">Aktiveer Home Pager</string>
     <string name="show_time">Show time</string>
     <string name="show_date">Show date</string>
     <string name="show_battery">Wys battery</string>
@@ -60,6 +61,22 @@
     <string name="clock_click_app">Click on Clock</string>
     <string name="date_click_app">Click on Date</string>
     <string name="double_tap">Double Tap</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">Show Notification</string>
+    <string name="show_app_list">Show App List</string>
+    <string name="open_app">Open App</string>
+    <string name="lock_screen">Lock Screen</string>
+    <string name="open_quick_settings">Quick Settings</string>
+    <string name="show_recents">Show Recents</string>
+    <string name="open_power_dialog">Krag dialoog</string>
+    <string name="take_a_screenshot">Neem \'n skermskoot</string>
+    <string name="left_page">Gaan na die linker bladsy</string>
+    <string name="right_page">Gaan na die regte bladsy</string>
+    <string name="double_tap_to_lock_screen">Double tap to lock</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Instellings teksgrootte</string>
+    <string name="display_hidden_apps">Wys versteekte toepassings</string>
+    <string name="lock_settings">Sluit instellings</string>
     <!-- Settings Strings -->
     <string name="off">Off</string>
     <string name="on">On</string>
@@ -85,22 +102,6 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string name="copy">kopieer</string>
-    <!-- Gestures Do Strings -->
-    <string name="show_notifications">Show Notification</string>
-    <string name="show_app_list">Show App List</string>
-    <string name="open_app">Open App</string>
-    <string name="lock_screen">Lock Screen</string>
-    <string name="open_quick_settings">Quick Settings</string>
-    <string name="show_recents">Show Recents</string>
-    <string name="open_power_dialog">Krag dialoog</string>
-    <string name="take_a_screenshot">Neem \'n skermskoot</string>
-    <string name="left_page">Gaan na die linker bladsy</string>
-    <string name="right_page">Gaan na die regte bladsy</string>
-    <string name="double_tap_to_lock_screen">Double tap to lock</string>
-    <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">Instellings teksgrootte</string>
-    <string name="display_hidden_apps">Wys versteekte toepassings</string>
-    <string name="lock_settings">Sluit instellings</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Stawing Kanselleer.</string>
     <string name="text_authentication_error">Stawingsfout:%1$s(kode %2$d)</string>
@@ -109,6 +110,7 @@
     <string name="text_biometric_login_sub">Meld aan met jou biometriese geloofsbriewe</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>
+    <string name="please_select_app">Kies asseblief \'n toepassing</string>
     <string name="drawer_list_empty_hint">No apps found</string>
     <string name="long_press_for_settings">Long press anywhere for settings</string>
     <string name="swipe_up_for_apps">Swipe up for all apps</string>
