@@ -77,6 +77,10 @@
     <string name="settings_text_size">設定文字サイズ</string>
     <string name="display_hidden_apps">隠しアプリを表示する</string>
     <string name="lock_settings">ロック設定</string>
+    <!-- Backup Strings -->
+    <string name="backup">バックアップ</string>
+    <string name="load_backup">バックアップをロード</string>
+    <string name="store_backup">ストアのバックアップ</string>
     <!-- Settings Strings -->
     <string name="off">オフ</string>
     <string name="on">オン</string>
