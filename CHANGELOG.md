@@ -4,6 +4,7 @@
 
 ### Implemented Enhancements:
 
+- Added Backup / Restore Feature
 - Added a home screen pager (disabled by default)
 
 ### Bug Fixes:
