@@ -77,6 +77,10 @@
     <string name="settings_text_size">Optiones Text Size</string>
     <string name="display_hidden_apps">Propono occulta Apps</string>
     <string name="lock_settings">Cincinno Optiones</string>
+    <!-- Backup Strings -->
+    <string name="backup">Tergum</string>
+    <string name="load_backup">Tergum onus</string>
+    <string name="store_backup">Tergum copia</string>
     <!-- Settings Strings -->
     <string name="off">Off</string>
     <string name="on">On</string>
