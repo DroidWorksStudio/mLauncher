@@ -77,6 +77,10 @@
     <string name="settings_text_size">Ustawienia Rozmiar tekstu</string>
     <string name="display_hidden_apps">Wyświetl ukryte aplikacje</string>
     <string name="lock_settings">Zablokuj ustawienia</string>
+    <!-- Backup Strings -->
+    <string name="backup">Kopia zapasowa</string>
+    <string name="load_backup">Załaduj kopię zapasową</string>
+    <string name="store_backup">Kopia zapasowa sklepu</string>
     <!-- Settings Strings -->
     <string name="off">Wyłączony</string>
     <string name="on">Włączone</string>
