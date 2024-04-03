@@ -43,8 +43,8 @@
     <string name="show_date">Εμφάνιση ημερομηνίας</string>
     <string name="show_battery">Εμφάνιση μπαταρίας</string>
     <string name="lock_home_apps">Κλείδωμα Εφαρμογών</string>
-    <string name="extend_home_apps_area">Επέκταση ενεργής περιοχής</string>
-    <string name="home_alignment_bottom">Στοίχιση κάτω της αρχικής οθόνης</string>
+    <string name="extend_home_apps_area">Επέκταση περιοχής με δυνατότητα κλικ</string>
+    <string name="home_alignment_bottom">Ευθυγράμμιση αρχικής οθόνης κάτω</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">Αρχική οθόνη εφαρμογών</string>
     <string name="clock_alignment">Ρολόι και ημερομηνία</string>
