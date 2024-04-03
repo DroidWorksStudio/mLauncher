@@ -77,6 +77,10 @@
     <string name="settings_text_size">Ukuran Teks Pengaturan</string>
     <string name="display_hidden_apps">Tampilkan Aplikasi Tersembunyi</string>
     <string name="lock_settings">Pengaturan Kunci</string>
+    <!-- Backup Strings -->
+    <string name="backup">Cadangan</string>
+    <string name="load_backup">Muat Cadangan</string>
+    <string name="store_backup">Simpan Cadangan</string>
     <!-- Settings Strings -->
     <string name="off">Mati</string>
     <string name="on">Aktif</string>
