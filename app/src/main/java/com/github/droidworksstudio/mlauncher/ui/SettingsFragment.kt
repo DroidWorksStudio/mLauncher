@@ -119,6 +119,7 @@ class SettingsFragment : Fragment() {
     private fun Settings(fontSize: TextUnit = TextUnit.Unspecified) {
         val selected = remember { mutableStateOf("") }
         val fs = remember { mutableStateOf(fontSize) }
+        Constants.updateMaxHomePages(requireContext())
 
         val titleFs = if (fs.value.isSpecified) {
             (fs.value.value * 2.2).sp
@@ -288,16 +289,18 @@ class SettingsFragment : Fragment() {
                         ) { toggleRecentAppsDisplayed() }
                     },
                     { open, onChange ->
-                        SettingsSliderItem(
-                            title = stringResource(R.string.number_of_recents),
-                            fontSize = iconFs,
-                            open = open,
-                            onChange = onChange,
-                            currentSelection = remember { mutableIntStateOf(prefs.recentCounter) },
-                            min = Constants.RECENT_COUNTER_MIN,
-                            max = Constants.RECENT_COUNTER_MAX,
-                            onSelect = { j -> setRecentCounter(j) }
-                        )
+                        if (prefs.recentAppsDisplayed) {
+                            SettingsSliderItem(
+                                title = stringResource(R.string.number_of_recents),
+                                fontSize = iconFs,
+                                open = open,
+                                onChange = onChange,
+                                currentSelection = remember { mutableIntStateOf(prefs.recentCounter) },
+                                min = Constants.RECENT_COUNTER_MIN,
+                                max = Constants.RECENT_COUNTER_MAX,
+                                onSelect = { j -> setRecentCounter(j) }
+                            )
+                        }
                     },
                     { _, onChange ->
                         SettingsToggle(
@@ -355,16 +358,18 @@ class SettingsFragment : Fragment() {
                         )
                     },
                     { open, onChange ->
-                        SettingsSliderItem(
-                            title = stringResource(R.string.pages_on_home_screen),
-                            fontSize = iconFs,
-                            open = open,
-                            onChange = onChange,
-                            currentSelection = remember { mutableIntStateOf(prefs.homePagesNum) },
-                            min = Constants.MIN_HOME_PAGES,
-                            max = Constants.MAX_HOME_PAGES,
-                            onSelect = { j -> setHomePagesNum(j) }
-                        )
+                        if (prefs.homeAppsNum >= 1) {
+                            SettingsSliderItem(
+                                title = stringResource(R.string.pages_on_home_screen),
+                                fontSize = iconFs,
+                                open = open,
+                                onChange = onChange,
+                                currentSelection = remember { mutableIntStateOf(prefs.homePagesNum) },
+                                min = Constants.MIN_HOME_PAGES,
+                                max = Constants.MAX_HOME_PAGES,
+                                onSelect = { j -> setHomePagesNum(j) }
+                            )
+                        }
                     },
                     { _, onChange ->
                         SettingsToggle(
@@ -810,18 +815,22 @@ class SettingsFragment : Fragment() {
 
     private fun setTextSizeLauncher(size: Int) {
         prefs.textSizeLauncher = size
+        requireActivity().recreate()
     }
 
     private fun setTextSizeSettings(size: Int) {
         prefs.textSizeSettings = size
+        requireActivity().recreate()
     }
 
     private fun setTextSizeMultiplier(size: Float) {
         prefs.textSizeMultiplier = size
+        requireActivity().recreate()
     }
 
     private fun setTextMarginSize(size: Int) {
         prefs.textMarginSize = size
+        requireActivity().recreate()
     }
 
     private fun setGesture(flag: AppDrawerFlag, action: Action) {
