@@ -77,6 +77,10 @@
     <string name="settings_text_size">Tamanho do texto das configurações</string>
     <string name="display_hidden_apps">Exibir aplicativos ocultos</string>
     <string name="lock_settings">Configurações de bloqueio</string>
+    <!-- Backup Strings -->
+    <string name="backup">Cópia de segurança</string>
+    <string name="load_backup">Carregar Backup</string>
+    <string name="store_backup">Armazenar backup</string>
     <!-- Settings Strings -->
     <string name="off">Desligado</string>
     <string name="on">Em</string>
