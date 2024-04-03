@@ -77,6 +77,10 @@
     <string name="settings_text_size">Postavke Veličina teksta</string>
     <string name="display_hidden_apps">Prikaz skrivenih aplikacija</string>
     <string name="lock_settings">Postavke zaključavanja</string>
+    <!-- Backup Strings -->
+    <string name="backup">Sigurnosna kopija</string>
+    <string name="load_backup">Učitaj sigurnosnu kopiju</string>
+    <string name="store_backup">Spremi sigurnosnu kopiju</string>
     <!-- Settings Strings -->
     <string name="off">Isključeno</string>
     <string name="on">Na</string>
