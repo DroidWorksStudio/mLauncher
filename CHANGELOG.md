@@ -4,13 +4,10 @@
 
 ### Bug Fixes:
 
-- Update CHANGELOG.md Settings
 - Allow HomeScreen apps to be set to 0
 
 ### Documentation:
 
-- Update CHANGELOG.md
-- Update CHANGELOG.md
 - Update CHANGELOG.md
 
 ### Refactor:
