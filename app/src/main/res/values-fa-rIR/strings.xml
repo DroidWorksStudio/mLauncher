@@ -43,8 +43,8 @@
     <string name="show_date">نمایش تاریخ</string>
     <string name="show_battery">نمایش باتری</string>
     <string name="lock_home_apps">قفل کردن برنامه ها</string>
-    <string name="extend_home_apps_area">منطقه قابل کلیک را گسترش دهید</string>
-    <string name="home_alignment_bottom">تراز کردن صفحه اصلی پایین</string>
+    <string name="extend_home_apps_area">گسترش منطقه قابل کلیک</string>
+    <string name="home_alignment_bottom">تراز کردن صفحه اصلی در پایین</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">صفحه اصلی برنامه ها</string>
     <string name="clock_alignment">ساعت و تاریخ</string>
