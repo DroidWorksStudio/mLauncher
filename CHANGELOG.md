@@ -2,8 +2,13 @@
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Bug Fixes:
+
+- Allow HomeScreen apps to be set to 0
+
 ### Documentation:
 
+- Update CHANGELOG.md
 - Update CHANGELOG.md
 
 ### Refactor:
