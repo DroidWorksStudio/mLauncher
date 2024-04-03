@@ -38,6 +38,7 @@
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Zuel vun Ofkiirzungen</string>
     <string name="pages_on_home_screen">Zuel vun Säiten</string>
+    <string name="enable_home_pager">Aktivéiert Home Pager</string>
     <string name="show_time">Elo geet et lass</string>
     <string name="show_date">Datum weisen</string>
     <string name="show_battery">Batterie weisen</string>
@@ -60,6 +61,22 @@
     <string name="clock_click_app">Klickt op Auer</string>
     <string name="date_click_app">Klickt op Datum</string>
     <string name="double_tap">Duebel Tap</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">Show Notifikatioun</string>
+    <string name="show_app_list">Show App Lëscht</string>
+    <string name="open_app">Open App</string>
+    <string name="lock_screen">Sperrbildschirm</string>
+    <string name="open_quick_settings">Quick Astellunge</string>
+    <string name="show_recents">Show Rezent</string>
+    <string name="open_power_dialog">Power Dialog</string>
+    <string name="take_a_screenshot">Maacht e Screenshot</string>
+    <string name="left_page">Gitt op déi lénks Säit</string>
+    <string name="right_page">Gitt op déi richteg Säit</string>
+    <string name="double_tap_to_lock_screen">Duebeltapp fir ze spären</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Astellungen Text Gréisst</string>
+    <string name="display_hidden_apps">Display Hidden Apps</string>
+    <string name="lock_settings">Spär Astellunge</string>
     <!-- Settings Strings -->
     <string name="off">Off</string>
     <string name="on">Op</string>
@@ -85,22 +102,6 @@
     <string name="open">Oppen</string>
     <string name="close">Zoumaachen</string>
     <string name="copy">kopéieren</string>
-    <!-- Gestures Do Strings -->
-    <string name="show_notifications">Show Notifikatioun</string>
-    <string name="show_app_list">Show App Lëscht</string>
-    <string name="open_app">Open App</string>
-    <string name="lock_screen">Sperrbildschirm</string>
-    <string name="open_quick_settings">Quick Astellunge</string>
-    <string name="show_recents">Show Rezent</string>
-    <string name="open_power_dialog">Power Dialog</string>
-    <string name="take_a_screenshot">Maacht e Screenshot</string>
-    <string name="left_page">Gitt op déi lénks Säit</string>
-    <string name="right_page">Gitt op déi richteg Säit</string>
-    <string name="double_tap_to_lock_screen">Duebeltapp fir ze spären</string>
-    <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">Astellungen Text Gréisst</string>
-    <string name="display_hidden_apps">Display Hidden Apps</string>
-    <string name="lock_settings">Spär Astellunge</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Authentifikatioun Ofbriechen.</string>
     <string name="text_authentication_error">Authentifikatiounsfehler:%1$s(Code %2$d)</string>
@@ -109,6 +110,7 @@
     <string name="text_biometric_login_sub">Mellt Iech un mat Ärem biometresche Umeldungsinformatioun</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">All Apps</string>
+    <string name="please_select_app">Wielt w.e.g. eng App</string>
     <string name="drawer_list_empty_hint">Keng Apps fonnt</string>
     <string name="long_press_for_settings">Laang Press iwwerall fir Astellungen</string>
     <string name="swipe_up_for_apps">Swipe up fir all Apps</string>
