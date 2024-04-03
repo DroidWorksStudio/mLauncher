@@ -38,6 +38,7 @@
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Anzahl der Verknüpfungen</string>
     <string name="pages_on_home_screen">Seitenzahl</string>
+    <string name="enable_home_pager">Aktivieren Sie den Home Pager</string>
     <string name="show_time">Zeit anzeigen</string>
     <string name="show_date">Datum anzeigen</string>
     <string name="show_battery">Akku anzeigen</string>
@@ -60,6 +61,22 @@
     <string name="clock_click_app">Uhr anklicken</string>
     <string name="date_click_app">Klicken Sie auf Datum</string>
     <string name="double_tap">Doppeltipp</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">Benachrichtigung anzeigen</string>
+    <string name="show_app_list">App-Liste anzeigen</string>
+    <string name="open_app">App öffnen</string>
+    <string name="lock_screen">Sperrbildschirm</string>
+    <string name="open_quick_settings">Schnelleinstellungen</string>
+    <string name="show_recents">Show Recents</string>
+    <string name="open_power_dialog">Power-Dialog</string>
+    <string name="take_a_screenshot">Mache ein Bildschirmfoto</string>
+    <string name="left_page">Gehen Sie zur linken Seite</string>
+    <string name="right_page">Gehen Sie zur rechten Seite</string>
+    <string name="double_tap_to_lock_screen">Doppeltippen zum Sperren</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Einstellungen Textgröße</string>
+    <string name="display_hidden_apps">Versteckte Apps anzeigen</string>
+    <string name="lock_settings">Sperreinstellungen</string>
     <!-- Settings Strings -->
     <string name="off">Aus</string>
     <string name="on">An</string>
@@ -85,22 +102,6 @@
     <string name="open">Öffnen</string>
     <string name="close">Schließen</string>
     <string name="copy">Kopieren</string>
-    <!-- Gestures Do Strings -->
-    <string name="show_notifications">Benachrichtigung anzeigen</string>
-    <string name="show_app_list">App-Liste anzeigen</string>
-    <string name="open_app">App öffnen</string>
-    <string name="lock_screen">Sperrbildschirm</string>
-    <string name="open_quick_settings">Schnelleinstellungen</string>
-    <string name="show_recents">Show Recents</string>
-    <string name="open_power_dialog">Power-Dialog</string>
-    <string name="take_a_screenshot">Mache ein Bildschirmfoto</string>
-    <string name="left_page">Gehen Sie zur linken Seite</string>
-    <string name="right_page">Gehen Sie zur rechten Seite</string>
-    <string name="double_tap_to_lock_screen">Doppeltippen zum Sperren</string>
-    <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">Einstellungen Textgröße</string>
-    <string name="display_hidden_apps">Versteckte Apps anzeigen</string>
-    <string name="lock_settings">Sperreinstellungen</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Authentifizierung abbrechen.</string>
     <string name="text_authentication_error">Authentifizierungsfehler:%1$s(Code %2$d)</string>
@@ -109,6 +110,7 @@
     <string name="text_biometric_login_sub">Melden Sie sich mit Ihren biometrischen Zugangsdaten an</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Alle Apps</string>
+    <string name="please_select_app">Bitte wählen Sie eine App aus</string>
     <string name="drawer_list_empty_hint">Keine Apps gefunden</string>
     <string name="long_press_for_settings">Lange drücken für Einstellungen</string>
     <string name="swipe_up_for_apps">Für alle Apps nach oben wischen</string>
