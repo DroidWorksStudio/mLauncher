@@ -6,5 +6,5 @@ Patobulinimas:
 Trikčių pataisymai:
 [Klaida] Ištaisytas neryškus filtras, jei nustatytas į 0.
 
-Kalbos palaikymas:
+Kalbų palaikymas:
 [Kalba] Atnaujinti kalbos failai.
