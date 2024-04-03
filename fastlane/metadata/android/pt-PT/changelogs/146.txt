@@ -1,0 +1,17 @@
+Versão: 1.4.6
+
+Melhorias:
+
+Adicionado um pager na tela inicial (desativado por padrão)
+
+Correções de bugs:
+
+Permitir que os aplicativos da tela inicial sejam definidos como 0
+
+Documentação:
+
+Atualizar CHANGELOG.md
+
+Refatorar:
+
+Código limpo adicionando solicitação de permissão
