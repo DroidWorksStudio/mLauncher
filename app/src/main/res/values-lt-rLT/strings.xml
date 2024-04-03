@@ -38,6 +38,7 @@
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Nuorodų skaičius</string>
     <string name="pages_on_home_screen">Puslapių skaičius</string>
+    <string name="enable_home_pager">Įgalinti Home Pager</string>
     <string name="show_time">Rodyti laiką</string>
     <string name="show_date">Rodyti datą</string>
     <string name="show_battery">Rodyti akumuliatorių</string>
@@ -60,6 +61,22 @@
     <string name="clock_click_app">Spustelėkite ant laikrodžio</string>
     <string name="date_click_app">Spustelėkite ant datos</string>
     <string name="double_tap">Dukart paspauskite</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">Rodyti pranešimą</string>
+    <string name="show_app_list">Rodyti programėlių sąrašą</string>
+    <string name="open_app">Atidaryti programėlę</string>
+    <string name="lock_screen">Užrakinti ekraną</string>
+    <string name="open_quick_settings">Greitieji nustatymai</string>
+    <string name="show_recents">Rodyti naujausius</string>
+    <string name="open_power_dialog">Maitinimo dialogas</string>
+    <string name="take_a_screenshot">Padarykite ekrano kopiją</string>
+    <string name="left_page">Eikite į kairįjį puslapį</string>
+    <string name="right_page">Eikite į dešinįjį puslapį</string>
+    <string name="double_tap_to_lock_screen">Dukart palieskite, kad užrakintumėte</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Nustatymai Teksto dydis</string>
+    <string name="display_hidden_apps">Rodyti paslėptas programas</string>
+    <string name="lock_settings">Užrakinimo nustatymai</string>
     <!-- Settings Strings -->
     <string name="off">Išjungti</string>
     <string name="on">Įjungti</string>
@@ -85,22 +102,6 @@
     <string name="open">Atidaryti</string>
     <string name="close">Uždaryti</string>
     <string name="copy">kopija</string>
-    <!-- Gestures Do Strings -->
-    <string name="show_notifications">Rodyti pranešimą</string>
-    <string name="show_app_list">Rodyti programėlių sąrašą</string>
-    <string name="open_app">Atidaryti programėlę</string>
-    <string name="lock_screen">Užrakinti ekraną</string>
-    <string name="open_quick_settings">Greitieji nustatymai</string>
-    <string name="show_recents">Rodyti naujausius</string>
-    <string name="open_power_dialog">Maitinimo dialogas</string>
-    <string name="take_a_screenshot">Padarykite ekrano kopiją</string>
-    <string name="left_page">Eikite į kairįjį puslapį</string>
-    <string name="right_page">Eikite į dešinįjį puslapį</string>
-    <string name="double_tap_to_lock_screen">Dukart palieskite, kad užrakintumėte</string>
-    <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">Nustatymai Teksto dydis</string>
-    <string name="display_hidden_apps">Rodyti paslėptas programas</string>
-    <string name="lock_settings">Užrakinimo nustatymai</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Autentifikavimo atšaukimas.</string>
     <string name="text_authentication_error">Autentifikavimo klaida:%1$s(kodas %2$d)</string>
@@ -109,6 +110,7 @@
     <string name="text_biometric_login_sub">Prisijunkite naudodami biometrinius kredencialus</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Visos programėlės</string>
+    <string name="please_select_app">Pasirinkite programą</string>
     <string name="drawer_list_empty_hint">Nerasta jokių programėlių</string>
     <string name="long_press_for_settings">Ilgai paspauskite bet kur, kad pamatytumėte nustatymus</string>
     <string name="swipe_up_for_apps">Braukite aukštyn, kad pamatytumėte visas programėlės</string>
