@@ -77,6 +77,10 @@
     <string name="settings_text_size">Impostazioni Dimensione testo</string>
     <string name="display_hidden_apps">Visualizza le app nascoste</string>
     <string name="lock_settings">Blocca impostazioni</string>
+    <!-- Backup Strings -->
+    <string name="backup">Backup</string>
+    <string name="load_backup">Carica backup</string>
+    <string name="store_backup">Archivia backup</string>
     <!-- Settings Strings -->
     <string name="off">Off</string>
     <string name="on">Acceso</string>
