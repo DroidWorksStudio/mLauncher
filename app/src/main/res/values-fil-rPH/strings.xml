@@ -77,6 +77,10 @@
     <string name="settings_text_size">Mga Setting ng Laki ng Teksto</string>
     <string name="display_hidden_apps">Ipakita ang mga Nakatagong App</string>
     <string name="lock_settings">Mga Setting ng Lock</string>
+    <!-- Backup Strings -->
+    <string name="backup">Backup</string>
+    <string name="load_backup">I-load ang Backup</string>
+    <string name="store_backup">Store Backup</string>
     <!-- Settings Strings -->
     <string name="off">Naka-off</string>
     <string name="on">Naka-on</string>
