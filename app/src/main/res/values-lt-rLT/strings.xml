@@ -38,7 +38,7 @@
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Nuorodų skaičius</string>
     <string name="pages_on_home_screen">Puslapių skaičius</string>
-    <string name="enable_home_pager">Įgalinti Home Pager</string>
+    <string name="enable_home_pager">Įjungti pradžios puslapį</string>
     <string name="show_time">Rodyti laiką</string>
     <string name="show_date">Rodyti datą</string>
     <string name="show_battery">Rodyti bateriją</string>
