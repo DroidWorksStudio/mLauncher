@@ -116,7 +116,7 @@
     <string name="disabled">Disabled</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
-    <string name="copy">copy</string>
+    <string name="copy">Copy</string>
 
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Authentication Cancel.</string>
