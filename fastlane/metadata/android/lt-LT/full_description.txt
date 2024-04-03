@@ -1,6 +1,6 @@
-<a href="https://github.com/tanujnotes/Olauncher">Olauncher</a> variantas. Minimalus ir švarus.
+<a href="https://github.com/tanujnotes/Olauncher">Olauncher</a> variantas. Minimalus ir paprastas.
 
-# Šakutė su papildomomis funkcijomis
+# Variantas su papildomomis funkcijomis
 
 - Pašalinta netvarka, pavyzdžiui, skelbimai ir nuorodos
 - Programėlių stalčiuje galite pervadinti programėles (Programėlių pervadinimas pagrindiniame ekrane jau palaikomas. Tiesiog ilgai spustelėkite programą pagrindiniame ekrane ir pradėkite rašyti)
@@ -10,20 +10,20 @@
         - Paspaudus ant laikrodžio
         - Paspaudus ant datos
     – Dabar galimi veiksmai:
-        - Atidarykite nurodytą programą
+        - Atidaryti nurodytą programą
         - Rodyti programų sąrašą
         - Ekrano užrakinimas
         - Rodyti neseniai atidarytas programas
         - Atidaryti pranešimų stalčių
         - Greitųjų nustatymų atidarymas
         - Maitinimo dialogas
-        - Padarykite ekrano kopiją
-        - Išjungti gestą
-- Taip pat galite nustatyti laikrodį nepriklausomai nuo namų programų
+        - Ekrano kopijos darymas
+        - Išjungti gestus
+- Taip pat galite nustatyti laikrodį nepriklausomai nuo namų programėlių
 - Programėlių derinimo programėlių stalčiuje keitimas
-- Užrakinti nustatymus už biometrinių duomenų (perjungti)
+- Užrakinti nustatymus už biometrinių duomenų (pasirinktinai)
 - Šrifto dydžio keitimas
-- Pašalintas interneto leidimas. Niekada nežinote, ką programos kūrėjas nori sužinoti apie jus.
+- Pašalintas interneto leidimo reikalavimas. Niekada nežinote, ką programos kūrėjas nori sužinoti apie jus.
 
 ## Vertimai:
 
@@ -33,7 +33,7 @@
   - Bulgarų kalba
   - Kinų kalba
   - Kroatų kalba
-  - Čekijos
+  - Čekų kalba
   - Danų kalba
   - Anglų kalba
   - Estų kalba
@@ -43,7 +43,7 @@
   - Gruzinų kalba
   - Vokiečių kalba
   - Graikų kalba
-  - Havajietiškas
+  Havajiečių kalba
   - Hebrajų kalba
   - Hindi kalba
   - Vengrų kalba
@@ -62,14 +62,14 @@
   - Nepalų kalba
   - Persų kalba
   - Lenkų kalba
-  - Portugalų (Europos)
+  - Portugalų (Europos) kalba
   - Pandžabų kalba
   - Rusų kalba
   - Serbų kalba
   - Sindų kalba
   - Ispanų kalba
   - Švedų kalba
-  - Tailando
-  - Turkijos
+  - Tailandiečių kalba
+  - Turkų kalba
   - Ukrainiečių kalba
   - Vietnamiečių kalba
