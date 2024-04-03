@@ -77,6 +77,10 @@
     <string name="settings_text_size">Ayarlar Metin Boyutu</string>
     <string name="display_hidden_apps">Gizli Uygulamaları Görüntüle</string>
     <string name="lock_settings">Kilit Ayarları</string>
+    <!-- Backup Strings -->
+    <string name="backup">Destek olmak</string>
+    <string name="load_backup">Yedeklemeyi Yükle</string>
+    <string name="store_backup">Mağaza Yedekleme</string>
     <!-- Settings Strings -->
     <string name="off">Kapalı</string>
     <string name="on">Açık</string>
