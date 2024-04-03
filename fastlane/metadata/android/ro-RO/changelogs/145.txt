@@ -1,0 +1,22 @@
+Versiune: 1.4.5
+
+Sporire:
+
+S-a adăugat please_select_app la aplicațiile de pe ecranul de pornire (#411)
+
+Corectarea erorilor:
+
+S-au remediat setările de reordonare (#416)
+Remediați spațiul de nume pentru proiect
+Fix FUNDING.yml
+
+Eliberare:
+
+Actualizați versiunea de lansare la 145 (v1.4.5)
+
+Diverse:
+
+Actualizați changelog.yml
+S-au adăugat detalii despre aplicație
+Pictograma aplicației schimbată
+Redenumiți găsitorul în FuzzyFinder
