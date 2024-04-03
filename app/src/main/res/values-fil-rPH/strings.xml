@@ -38,6 +38,7 @@
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Bilang ng mga shortcut</string>
     <string name="pages_on_home_screen">Bilang ng mga pahina</string>
+    <string name="enable_home_pager">Paganahin ang Home Pager</string>
     <string name="show_time">Oras ng palabas</string>
     <string name="show_date">Ipakita ang petsa</string>
     <string name="show_battery">Ipakita ang baterya</string>
@@ -60,6 +61,22 @@
     <string name="clock_click_app">Mag-click sa Orasan</string>
     <string name="date_click_app">Mag-click sa Petsa</string>
     <string name="double_tap">I-double Tap</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">Ipakita ang Notification</string>
+    <string name="show_app_list">Ipakita ang Listahan ng App</string>
+    <string name="open_app">Buksan ang App</string>
+    <string name="lock_screen">Lock ng screen</string>
+    <string name="open_quick_settings">Mga Mabilisang Setting</string>
+    <string name="show_recents">Ipakita ang Mga Kamakailan</string>
+    <string name="open_power_dialog">Power Dialog</string>
+    <string name="take_a_screenshot">Kumuha ng Screenshot</string>
+    <string name="left_page">Pumunta sa kaliwang pahina</string>
+    <string name="right_page">Pumunta sa kanang pahina</string>
+    <string name="double_tap_to_lock_screen">I-double tap para i-lock</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Mga Setting ng Laki ng Teksto</string>
+    <string name="display_hidden_apps">Ipakita ang mga Nakatagong App</string>
+    <string name="lock_settings">Mga Setting ng Lock</string>
     <!-- Settings Strings -->
     <string name="off">Naka-off</string>
     <string name="on">Naka-on</string>
@@ -85,22 +102,6 @@
     <string name="open">Bukas</string>
     <string name="close">Isara</string>
     <string name="copy">kopya</string>
-    <!-- Gestures Do Strings -->
-    <string name="show_notifications">Ipakita ang Notification</string>
-    <string name="show_app_list">Ipakita ang Listahan ng App</string>
-    <string name="open_app">Buksan ang App</string>
-    <string name="lock_screen">Lock ng screen</string>
-    <string name="open_quick_settings">Mga Mabilisang Setting</string>
-    <string name="show_recents">Ipakita ang Mga Kamakailan</string>
-    <string name="open_power_dialog">Power Dialog</string>
-    <string name="take_a_screenshot">Kumuha ng Screenshot</string>
-    <string name="left_page">Pumunta sa kaliwang pahina</string>
-    <string name="right_page">Pumunta sa kanang pahina</string>
-    <string name="double_tap_to_lock_screen">I-double tap para i-lock</string>
-    <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">Mga Setting ng Laki ng Teksto</string>
-    <string name="display_hidden_apps">Ipakita ang mga Nakatagong App</string>
-    <string name="lock_settings">Mga Setting ng Lock</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Kanselahin ang Pagpapatotoo.</string>
     <string name="text_authentication_error">Error sa pagpapatunay:%1$s(code %2$d)</string>
@@ -109,6 +110,7 @@
     <string name="text_biometric_login_sub">Mag-log in gamit ang iyong biometric na kredensyal</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Lahat ng app</string>
+    <string name="please_select_app">Mangyaring pumili ng app</string>
     <string name="drawer_list_empty_hint">Walang nakitang app</string>
     <string name="long_press_for_settings">Pindutin nang matagal kahit saan para sa mga setting</string>
     <string name="swipe_up_for_apps">Mag-swipe pataas para sa lahat ng app</string>
