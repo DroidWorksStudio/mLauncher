@@ -38,6 +38,7 @@
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Număr de comenzi rapide</string>
     <string name="pages_on_home_screen">Număr de pagini</string>
+    <string name="enable_home_pager">Activați pagina principală</string>
     <string name="show_time">Arată timpul</string>
     <string name="show_date">Arată data</string>
     <string name="show_battery">Arată bateria</string>
@@ -60,6 +61,22 @@
     <string name="clock_click_app">Faceți clic pe ceas</string>
     <string name="date_click_app">Clic pe data</string>
     <string name="double_tap">Atingere dublă</string>
+    <!-- Gestures Do Strings -->
+    <string name="show_notifications">Arată notificarea</string>
+    <string name="show_app_list">Arată lista de aplicații</string>
+    <string name="open_app">Deschide aplicația</string>
+    <string name="lock_screen">Ecran de blocare</string>
+    <string name="open_quick_settings">Setări rapide</string>
+    <string name="show_recents">Show Recents</string>
+    <string name="open_power_dialog">Dialog Power</string>
+    <string name="take_a_screenshot">Faceți o captură de ecran</string>
+    <string name="left_page">Mergeți la pagina din stânga</string>
+    <string name="right_page">Accesați pagina din dreapta</string>
+    <string name="double_tap_to_lock_screen">Dublă atingere pentru a bloca</string>
+    <!-- Miscellaneous Strings -->
+    <string name="settings_text_size">Setări Dimensiunea textului</string>
+    <string name="display_hidden_apps">Afișează aplicații ascunse</string>
+    <string name="lock_settings">Setări de blocare</string>
     <!-- Settings Strings -->
     <string name="off">Dezactivat</string>
     <string name="on">Activat</string>
@@ -85,22 +102,6 @@
     <string name="open">Deschideți</string>
     <string name="close">Inchide</string>
     <string name="copy">copie</string>
-    <!-- Gestures Do Strings -->
-    <string name="show_notifications">Arată notificarea</string>
-    <string name="show_app_list">Arată lista de aplicații</string>
-    <string name="open_app">Deschide aplicația</string>
-    <string name="lock_screen">Ecran de blocare</string>
-    <string name="open_quick_settings">Setări rapide</string>
-    <string name="show_recents">Show Recents</string>
-    <string name="open_power_dialog">Dialog Power</string>
-    <string name="take_a_screenshot">Faceți o captură de ecran</string>
-    <string name="left_page">Mergeți la pagina din stânga</string>
-    <string name="right_page">Accesați pagina din dreapta</string>
-    <string name="double_tap_to_lock_screen">Dublă atingere pentru a bloca</string>
-    <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">Setări Dimensiunea textului</string>
-    <string name="display_hidden_apps">Afișează aplicații ascunse</string>
-    <string name="lock_settings">Setări de blocare</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Anulare autentificare.</string>
     <string name="text_authentication_error">Eroare de autentificare:%1$s(cod %2$d)</string>
@@ -109,6 +110,7 @@
     <string name="text_biometric_login_sub">Conectați-vă utilizând acreditările dvs. biometrice</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Toate aplicațiile</string>
+    <string name="please_select_app">Vă rugăm să selectați o aplicație</string>
     <string name="drawer_list_empty_hint">Nicio aplicație găsită</string>
     <string name="long_press_for_settings">Apăsați lung oriunde pentru setări</string>
     <string name="swipe_up_for_apps">Glisați în sus pentru toate aplicațiile</string>
