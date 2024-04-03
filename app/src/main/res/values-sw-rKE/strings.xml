@@ -77,6 +77,10 @@
     <string name="settings_text_size">Ukubwa wa Maandishi ya Mipangilio</string>
     <string name="display_hidden_apps">Onyesha Programu Zilizofichwa</string>
     <string name="lock_settings">Mipangilio ya Kufunga</string>
+    <!-- Backup Strings -->
+    <string name="backup">Hifadhi nakala</string>
+    <string name="load_backup">Pakia Hifadhi Nakala</string>
+    <string name="store_backup">Hifadhi Nakala</string>
     <!-- Settings Strings -->
     <string name="off">Imezimwa</string>
     <string name="on">Washa</string>
