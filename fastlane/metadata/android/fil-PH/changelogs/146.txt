@@ -1,0 +1,17 @@
+Bersyon: 1.4.6
+
+Mga pagpapahusay:
+
+Nagdagdag ng home screen pager (naka-disable bilang default)
+
+Mga Pag-aayos ng Bug:
+
+Payagan ang mga HomeScreen app na itakda sa 0
+
+Dokumentasyon:
+
+I-update ang CHANGELOG.md
+
+Refactor:
+
+Nilinis ang code sa pagdaragdag ng kahilingan sa pahintulot
