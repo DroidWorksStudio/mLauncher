@@ -1,0 +1,22 @@
+Verzija: 1.4.5
+
+Poboljšanje:
+
+Dodano please_select_app u aplikacije početnog zaslona (#411)
+
+Ispravke pogrešaka:
+
+Ispravljene postavke ponovnog naručivanja (#416)
+Popravite imenski prostor za projekt
+Fiksno FUNDING.yml
+
+Izdanje:
+
+Ažurirajte verziju izdanja na 145 (v1.4.5)
+
+Razno:
+
+Ažurirajte changelog.yml
+Dodani detalji aplikacije
+Promijenjena ikona aplikacije
+Preimenujte tražilicu u FuzzyFinder
