@@ -1,0 +1,17 @@
+Weergawe: 1.4.6
+
+Verbeterings:
+
+Het 'n tuisskerm-pager bygevoeg (by verstek gedeaktiveer)
+
+Foutoplossings:
+
+Laat toe dat HomeScreen-programme op 0 gestel word
+
+Dokumentasie:
+
+Dateer CHANGELOG.md op
+
+Refaktor:
+
+Skoongemaak kode wat toestemmingversoek byvoeg
