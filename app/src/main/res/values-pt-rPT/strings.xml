@@ -43,8 +43,8 @@
     <string name="show_date">Mostrar data</string>
     <string name="show_battery">Mostrar bateria</string>
     <string name="lock_home_apps">Aplicações de bloqueio</string>
-    <string name="extend_home_apps_area">Ampliar área clicável</string>
-    <string name="home_alignment_bottom">Ecrã inicial alinhar fundo</string>
+    <string name="extend_home_apps_area">Estender área clicável</string>
+    <string name="home_alignment_bottom">Alinhar parte inferior da tela inicial</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">Ecrã inicial das aplicações</string>
     <string name="clock_alignment">Relógio e data</string>
