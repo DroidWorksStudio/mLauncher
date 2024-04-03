@@ -77,6 +77,10 @@
     <string name="settings_text_size">ക്രമീകരണങ്ങൾ ടെക്സ്റ്റ് വലിപ്പം</string>
     <string name="display_hidden_apps">മറഞ്ഞിരിക്കുന്ന ആപ്പുകൾ പ്രദർശിപ്പിക്കുക</string>
     <string name="lock_settings">ലോക്ക് ക്രമീകരണങ്ങൾ</string>
+    <!-- Backup Strings -->
+    <string name="backup">ബാക്കപ്പ്</string>
+    <string name="load_backup">ബാക്കപ്പ് ലോഡ് ചെയ്യുക</string>
+    <string name="store_backup">സ്റ്റോർ ബാക്കപ്പ്</string>
     <!-- Settings Strings -->
     <string name="off">ഓഫ്</string>
     <string name="on">ഓൺ</string>
