@@ -168,10 +168,12 @@ class AppDrawerFragment : Fragment() {
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
-                binding.drawerButton.apply {
-                    isVisible = !newText.isNullOrEmpty()
-                    text = if (isVisible) getString(R.string.rename) else null
-                    setOnClickListener { if (isVisible) renameListener(flag, n) }
+                if (flag == AppDrawerFlag.SetHomeApp) {
+                    binding.drawerButton.apply {
+                        isVisible = !newText.isNullOrEmpty()
+                        text = if (isVisible) getString(R.string.rename) else null
+                        setOnClickListener { if (isVisible) renameListener(flag, n) }
+                    }
                 }
                 newText?.let { appAdapter.filter.filter(it.trim()) }
                 return false
