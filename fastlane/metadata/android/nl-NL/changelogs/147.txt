@@ -1,0 +1,5 @@
+Versie: 1.4.7
+
+Bugfixes:
+
+Probleem opgelost dat RENAME niet werd weergegeven in alle lijstgebieden van de app.
