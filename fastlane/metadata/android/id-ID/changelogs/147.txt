@@ -1,0 +1,5 @@
+Versi: 1.4.7
+
+Perbaikan kerusakan:
+
+Memperbaiki RENAME agar tidak ditampilkan di semua area daftar aplikasi.
