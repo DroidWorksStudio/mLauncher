@@ -1,0 +1,5 @@
+Version: 1.4.7
+
+Bug Fixes:
+
+DENAME fixa ab omnibus locis indices proponendi in app.
