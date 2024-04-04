@@ -1,0 +1,5 @@
+Versiune: 1.4.7
+
+Corectarea erorilor:
+
+S-a remediat afișarea RENAME în toate zonele din listă ale aplicației.
