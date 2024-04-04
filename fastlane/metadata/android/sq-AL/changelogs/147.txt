@@ -1,0 +1,5 @@
+Versioni: 1.4.7
+
+Rregullime të gabimeve:
+
+Rregulloi RENAME që të mos shfaqet në të gjitha zonat e listës së aplikacionit.
