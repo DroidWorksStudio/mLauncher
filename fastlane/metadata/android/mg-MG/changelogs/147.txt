@@ -1,0 +1,5 @@
+Version: 1.4.7
+
+Fanamboarana bug:
+
+Namboarina ny RENAME tsy hiseho amin'ny lisitry ny faritra rehetra amin'ny fampiharana.

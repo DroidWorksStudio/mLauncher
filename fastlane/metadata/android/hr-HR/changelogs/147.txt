@@ -1,0 +1,5 @@
+Verzija: 1.4.7
+
+Ispravke pogrešaka:
+
+Ispravljeno je prikazivanje RENAME-a u svim područjima popisa aplikacije.

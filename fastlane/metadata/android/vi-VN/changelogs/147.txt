@@ -1,0 +1,5 @@
+Phiên bản: 1.4.7
+
+Sửa lỗi:
+
+Đã sửa lỗi RENAME hiển thị trong tất cả các khu vực danh sách của ứng dụng.

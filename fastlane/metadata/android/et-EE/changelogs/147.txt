@@ -1,0 +1,5 @@
+Versioon: 1.4.7
+
+Veaparandused:
+
+Parandatud RENAME kuvamine rakenduse kõigis loendialades.

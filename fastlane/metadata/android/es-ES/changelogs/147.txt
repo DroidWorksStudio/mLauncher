@@ -1,0 +1,5 @@
+Versión: 1.4.7
+
+Corrección de errores:
+
+Se corrigió que RENAME se muestre en todas las áreas de la lista de la aplicación.

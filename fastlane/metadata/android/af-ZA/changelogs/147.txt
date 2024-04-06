@@ -1,0 +1,5 @@
+Weergawe: 1.4.7
+
+Foutoplossings:
+
+Vaste RENAME om in alle lysareas van die toepassing te vertoon.

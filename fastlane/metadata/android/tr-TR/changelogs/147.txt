@@ -1,0 +1,5 @@
+Sürüm: 1.4.7
+
+Hata düzeltmeleri:
+
+RENAME uygulamasının uygulamanın tüm liste alanlarında görüntülenmesi düzeltildi.
