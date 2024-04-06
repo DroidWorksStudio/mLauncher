@@ -6,6 +6,10 @@
 
 - Fixed RENAME from displaying in all list areas of the app.
 
+### Release:
+
+- Update the Release version to 147 (v1.4.7)
+
 ## [1.4.6](https://github.com/DroidWorksStudio/mLauncher/tree/1.4.6) - (03, April 2024)
 
 ### Implemented Enhancements:
