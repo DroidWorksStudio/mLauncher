@@ -44,7 +44,7 @@
     <string name="show_battery">Afficher la batterie</string>
     <string name="lock_home_apps">Verrouiller les applications</string>
     <string name="extend_home_apps_area">Étendre la zone cliquable</string>
-    <string name="home_alignment_bottom">Alignement de l\'écran d\'accueil en bas</string>
+    <string name="home_alignment_bottom">Écran d\'accueil Aligner en bas</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">Écran d\'accueil des applications</string>
     <string name="clock_alignment">Horloge et date</string>
@@ -77,6 +77,10 @@
     <string name="settings_text_size">Taille du texte des paramètres</string>
     <string name="display_hidden_apps">Afficher les applications cachées</string>
     <string name="lock_settings">Paramètres de verrouillage</string>
+    <!-- Backup Strings -->
+    <string name="backup">Sauvegarde</string>
+    <string name="load_backup">Charger la sauvegarde</string>
+    <string name="store_backup">Sauvegarde du magasin</string>
     <!-- Settings Strings -->
     <string name="off">Désactivé</string>
     <string name="on">Activé</string>
@@ -101,7 +105,7 @@
     <string name="disabled">Désactivé</string>
     <string name="open">Ouvert</string>
     <string name="close">Fermer</string>
-    <string name="copy">copie</string>
+    <string name="copy">Copie</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Authentification Annuler.</string>
     <string name="text_authentication_error">Erreur d\'authentification :%1$s(code %2$d)</string>

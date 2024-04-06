@@ -43,8 +43,8 @@
     <string name="show_date">Show date</string>
     <string name="show_battery">Hiển thị pin</string>
     <string name="lock_home_apps">Lock Apps</string>
-    <string name="extend_home_apps_area">Extend clickable area</string>
-    <string name="home_alignment_bottom">Home screen align bottom</string>
+    <string name="extend_home_apps_area">Mở rộng khu vực có thể nhấp</string>
+    <string name="home_alignment_bottom">Màn hình chính Căn chỉnh dưới cùng</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">Apps home screen</string>
     <string name="clock_alignment">Clock and date</string>
@@ -77,6 +77,10 @@
     <string name="settings_text_size">Cài đặt Kích thước văn bản</string>
     <string name="display_hidden_apps">Hiển thị ứng dụng ẩn</string>
     <string name="lock_settings">Cài đặt khóa</string>
+    <!-- Backup Strings -->
+    <string name="backup">Hỗ trợ</string>
+    <string name="load_backup">Tải bản sao lưu</string>
+    <string name="store_backup">Sao lưu cửa hàng</string>
     <!-- Settings Strings -->
     <string name="off">Off</string>
     <string name="on">On</string>
@@ -101,7 +105,7 @@
     <string name="disabled">Disabled</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
-    <string name="copy">sao chép</string>
+    <string name="copy">Sao chép</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Xác thực Hủy bỏ.</string>
     <string name="text_authentication_error">Lỗi xác thực:%1$s(mã %2$d)</string>

@@ -43,7 +43,7 @@
     <string name="show_date">तिथि दिखाएं</string>
     <string name="show_battery">बैटरी दिखाओ</string>
     <string name="lock_home_apps">लॉक ऐप्स</string>
-    <string name="extend_home_apps_area">क्लिक करने योग्य क्षेत्र बढ़ाएँ</string>
+    <string name="extend_home_apps_area">क्लिक करने योग्य क्षेत्र का विस्तार करें</string>
     <string name="home_alignment_bottom">होम स्क्रीन नीचे संरेखित करें</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">ऐप्स होम स्क्रीन</string>
@@ -77,6 +77,10 @@
     <string name="settings_text_size">सेटिंग्स पाठ का आकार</string>
     <string name="display_hidden_apps">छिपे हुए ऐप्स प्रदर्शित करें</string>
     <string name="lock_settings">सेटिंग्स लॉक करें</string>
+    <!-- Backup Strings -->
+    <string name="backup">बैकअप</string>
+    <string name="load_backup">बैकअप को लोड करना</string>
+    <string name="store_backup">बैकअप स्टोर करें</string>
     <!-- Settings Strings -->
     <string name="off">बंद</string>
     <string name="on">पर</string>

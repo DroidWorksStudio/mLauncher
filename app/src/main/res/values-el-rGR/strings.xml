@@ -43,8 +43,8 @@
     <string name="show_date">Εμφάνιση ημερομηνίας</string>
     <string name="show_battery">Εμφάνιση μπαταρίας</string>
     <string name="lock_home_apps">Κλείδωμα Εφαρμογών</string>
-    <string name="extend_home_apps_area">Επέκταση ενεργής περιοχής</string>
-    <string name="home_alignment_bottom">Στοίχιση κάτω της αρχικής οθόνης</string>
+    <string name="extend_home_apps_area">Επέκταση περιοχής με δυνατότητα κλικ</string>
+    <string name="home_alignment_bottom">Ευθυγράμμιση αρχικής οθόνης κάτω</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">Αρχική οθόνη εφαρμογών</string>
     <string name="clock_alignment">Ρολόι και ημερομηνία</string>
@@ -77,6 +77,10 @@
     <string name="settings_text_size">Ρυθμίσεις Μέγεθος κειμένου</string>
     <string name="display_hidden_apps">Εμφάνιση κρυφών εφαρμογών</string>
     <string name="lock_settings">Ρυθμίσεις κλειδώματος</string>
+    <!-- Backup Strings -->
+    <string name="backup">Αντιγράφων ασφαλείας</string>
+    <string name="load_backup">Φόρτωση αντιγράφων ασφαλείας</string>
+    <string name="store_backup">Δημιουργία αντιγράφων ασφαλείας αποθήκευσης</string>
     <!-- Settings Strings -->
     <string name="off">Ανενεργό</string>
     <string name="on">Ενεργό</string>

@@ -43,8 +43,8 @@
     <string name="show_date">Ipakita ang petsa</string>
     <string name="show_battery">Ipakita ang baterya</string>
     <string name="lock_home_apps">I-lock ang Apps</string>
-    <string name="extend_home_apps_area">Palawakin ang naki-click na lugar</string>
-    <string name="home_alignment_bottom">I-align sa ibaba ang home screen</string>
+    <string name="extend_home_apps_area">Palawakin ang Naki-click na Lugar</string>
+    <string name="home_alignment_bottom">I-align sa Ibaba ang Home Screen</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">Home screen ng mga app</string>
     <string name="clock_alignment">Relo at petsa</string>
@@ -77,6 +77,10 @@
     <string name="settings_text_size">Mga Setting ng Laki ng Teksto</string>
     <string name="display_hidden_apps">Ipakita ang mga Nakatagong App</string>
     <string name="lock_settings">Mga Setting ng Lock</string>
+    <!-- Backup Strings -->
+    <string name="backup">Backup</string>
+    <string name="load_backup">I-load ang Backup</string>
+    <string name="store_backup">Store Backup</string>
     <!-- Settings Strings -->
     <string name="off">Naka-off</string>
     <string name="on">Naka-on</string>
@@ -101,7 +105,7 @@
     <string name="disabled">Hindi pinagana</string>
     <string name="open">Bukas</string>
     <string name="close">Isara</string>
-    <string name="copy">kopya</string>
+    <string name="copy">Kopya</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Kanselahin ang Pagpapatotoo.</string>
     <string name="text_authentication_error">Error sa pagpapatunay:%1$s(code %2$d)</string>

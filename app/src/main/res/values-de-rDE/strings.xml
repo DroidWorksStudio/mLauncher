@@ -43,7 +43,7 @@
     <string name="show_date">Datum anzeigen</string>
     <string name="show_battery">Akku anzeigen</string>
     <string name="lock_home_apps">Apps sperren</string>
-    <string name="extend_home_apps_area">Klickbare Fläche erweitern</string>
+    <string name="extend_home_apps_area">Klickbaren Bereich erweitern</string>
     <string name="home_alignment_bottom">Startbildschirm unten ausrichten</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">Apps Startbildschirm</string>
@@ -77,6 +77,10 @@
     <string name="settings_text_size">Einstellungen Textgröße</string>
     <string name="display_hidden_apps">Versteckte Apps anzeigen</string>
     <string name="lock_settings">Sperreinstellungen</string>
+    <!-- Backup Strings -->
+    <string name="backup">Sicherung</string>
+    <string name="load_backup">Backup laden</string>
+    <string name="store_backup">Speichern Sie Backup</string>
     <!-- Settings Strings -->
     <string name="off">Aus</string>
     <string name="on">An</string>

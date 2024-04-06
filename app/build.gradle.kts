@@ -13,8 +13,8 @@ android {
         applicationId = "app.mlauncher"
         minSdk = 23
         targetSdk = 34
-        versionCode = 146
-        versionName = "1.4.6"
+        versionCode = 147
+        versionName = "1.4.7"
     }
 
     buildTypes {
@@ -104,6 +104,7 @@ dependencies {
 
     // Text similarity
     implementation("org.apache.commons:commons-text:1.11.0")
+    implementation("com.google.code.gson:gson:2.10.1")
 
     // JETPACK
     // Integration with activities

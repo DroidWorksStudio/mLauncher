@@ -1,7 +1,7 @@
 Versija: 1.4.1
 
 Patobulinimai:
-[Funkcija] – pridėti ilgo paspaudimo braukimo gestai.
+[Funkcija] – pridėta ilgo paspaudimo braukimo gestai.
 
-Kalbos palaikymas:
+Kalbų palaikymas:
 [Kalba] Atnaujinti kalbos failai.

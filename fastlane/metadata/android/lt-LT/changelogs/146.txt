@@ -2,16 +2,16 @@ Versija: 1.4.6
 
 Patobulinimai:
 
-Pridėtas pagrindinio ekrano puslapis (pagal numatytuosius nustatymus išjungtas)
+Pridėti pagrindinio ekrano puslapiai (pagal numatytuosius nustatymus išjungtas)
 
 Trikčių pataisymai:
 
-Leisti „HomeScreen“ programoms nustatyti 0
+Leisti „HomeScreen“ programoms buti nustatomoms į 0
 
 Dokumentacija:
 
-Atnaujinti CHANGELOG.md
+Atnaujintas CHANGELOG.md
 
-Refaktorius:
+Pakeista:
 
 Išvalytas kodas, pridėjus leidimo užklausą

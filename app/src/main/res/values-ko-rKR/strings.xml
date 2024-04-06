@@ -43,8 +43,8 @@
     <string name="show_date">Show date</string>
     <string name="show_battery">배터리 표시</string>
     <string name="lock_home_apps">Lock Apps</string>
-    <string name="extend_home_apps_area">Extend clickable area</string>
-    <string name="home_alignment_bottom">Home screen align bottom</string>
+    <string name="extend_home_apps_area">클릭 가능한 영역 확장</string>
+    <string name="home_alignment_bottom">홈 화면 하단 정렬</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">Apps home screen</string>
     <string name="clock_alignment">Clock and date</string>
@@ -77,6 +77,10 @@
     <string name="settings_text_size">설정 텍스트 크기</string>
     <string name="display_hidden_apps">숨겨진 앱 표시</string>
     <string name="lock_settings">잠금 설정</string>
+    <!-- Backup Strings -->
+    <string name="backup">지원</string>
+    <string name="load_backup">백업 로드</string>
+    <string name="store_backup">백업 저장</string>
     <!-- Settings Strings -->
     <string name="off">Off</string>
     <string name="on">On</string>

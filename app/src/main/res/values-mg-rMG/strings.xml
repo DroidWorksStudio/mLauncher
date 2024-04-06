@@ -44,7 +44,7 @@
     <string name="show_battery">Asehoy ny bateria</string>
     <string name="lock_home_apps">Lock Apps</string>
     <string name="extend_home_apps_area">Hanitatra ny faritra azo kitihina</string>
-    <string name="home_alignment_bottom">Ampifanaraho ny ambany ny efijery</string>
+    <string name="home_alignment_bottom">Efijery an-trano Align Bottom</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">Efijerin\'ny fampiharana</string>
     <string name="clock_alignment">Ora sy daty</string>
@@ -77,6 +77,10 @@
     <string name="settings_text_size">Haben\'ny lahatsoratra Settings</string>
     <string name="display_hidden_apps">Asehoy ny Apps Hidden</string>
     <string name="lock_settings">Lock Settings</string>
+    <!-- Backup Strings -->
+    <string name="backup">nomaniny ho solon\'izay</string>
+    <string name="load_backup">Load Backup</string>
+    <string name="store_backup">Store Backup</string>
     <!-- Settings Strings -->
     <string name="off">eny</string>
     <string name="on">On</string>

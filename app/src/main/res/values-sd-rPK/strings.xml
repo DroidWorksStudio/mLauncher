@@ -43,8 +43,8 @@
     <string name="show_date">تاريخ ڏيکاريو</string>
     <string name="show_battery">بيٽري ڏيکاريو</string>
     <string name="lock_home_apps">ائپس کي بند ڪريو</string>
-    <string name="extend_home_apps_area">ڪلڪ قابل علائقو وڌايو</string>
-    <string name="home_alignment_bottom">گھر جي اسڪرين ھيٺان ترتيب ڏيو</string>
+    <string name="extend_home_apps_area">ڪلڪ ڪرڻ لائق علائقو وڌايو</string>
+    <string name="home_alignment_bottom">گھر جي اسڪرين جي ھيٺان ترتيب ڏيو</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">ائپس گھر اسڪرين</string>
     <string name="clock_alignment">گھڙي ۽ تاريخ</string>
@@ -77,6 +77,10 @@
     <string name="settings_text_size">سيٽنگون ٽيڪسٽ سائيز</string>
     <string name="display_hidden_apps">پوشیدہ ائپس ڏيکاريو</string>
     <string name="lock_settings">لاڪ سيٽنگون</string>
+    <!-- Backup Strings -->
+    <string name="backup">بيڪ اپ</string>
+    <string name="load_backup">لوڊ بيڪ اپ</string>
+    <string name="store_backup">اسٽور بيڪ اپ</string>
     <!-- Settings Strings -->
     <string name="off">بند</string>
     <string name="on">تي</string>

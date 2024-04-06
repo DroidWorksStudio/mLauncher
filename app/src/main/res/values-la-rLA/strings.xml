@@ -43,8 +43,8 @@
     <string name="show_date">Ostende date</string>
     <string name="show_battery">Ostende altilium</string>
     <string name="lock_home_apps">cincinno Apps</string>
-    <string name="extend_home_apps_area">Praetende clickable area</string>
-    <string name="home_alignment_bottom">Domus screen color fundo</string>
+    <string name="extend_home_apps_area">Praetende Clickable Area</string>
+    <string name="home_alignment_bottom">Domum Screen Conlineare Solum</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">Apps domum screen</string>
     <string name="clock_alignment">Horologium et diem</string>
@@ -77,6 +77,10 @@
     <string name="settings_text_size">Optiones Text Size</string>
     <string name="display_hidden_apps">Propono occulta Apps</string>
     <string name="lock_settings">Cincinno Optiones</string>
+    <!-- Backup Strings -->
+    <string name="backup">Tergum</string>
+    <string name="load_backup">Tergum onus</string>
+    <string name="store_backup">Tergum copia</string>
     <!-- Settings Strings -->
     <string name="off">Off</string>
     <string name="on">On</string>
@@ -101,7 +105,7 @@
     <string name="disabled">debilitatum</string>
     <string name="open">Apertum</string>
     <string name="close">Close</string>
-    <string name="copy">effingo</string>
+    <string name="copy">Copy</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">authenticitate Cancel.</string>
     <string name="text_authentication_error">Authenticatio erroris:%1$s(code %2$d)</string>

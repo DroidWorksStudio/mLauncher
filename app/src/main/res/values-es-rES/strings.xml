@@ -43,8 +43,8 @@
     <string name="show_date">Mostrar fecha</string>
     <string name="show_battery">Mostrar nivel de batería</string>
     <string name="lock_home_apps">Bloquear aplicaciones</string>
-    <string name="extend_home_apps_area">Ampliar área de las aplicaciones de inicio</string>
-    <string name="home_alignment_bottom">Aplicaciones abajo en la pantalla</string>
+    <string name="extend_home_apps_area">Ampliar el área en la que se puede hacer clic</string>
+    <string name="home_alignment_bottom">Pantalla de inicio Alinear abajo</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">Alineación</string>
     <string name="clock_alignment">Alineación del reloj</string>
@@ -77,6 +77,10 @@
     <string name="settings_text_size">Texto en pantalla</string>
     <string name="display_hidden_apps">Mostrar aplicaciones ocultas</string>
     <string name="lock_settings">Configuración de bloqueo</string>
+    <!-- Backup Strings -->
+    <string name="backup">Respaldo</string>
+    <string name="load_backup">Respaldo de carga</string>
+    <string name="store_backup">Copia de seguridad de la tienda</string>
     <!-- Settings Strings -->
     <string name="off">Ocultar</string>
     <string name="on">Mostrar</string>

@@ -43,8 +43,8 @@
     <string name="show_date">Show date</string>
     <string name="show_battery">Прикажи батерију</string>
     <string name="lock_home_apps">Lock Apps</string>
-    <string name="extend_home_apps_area">Extend clickable area</string>
-    <string name="home_alignment_bottom">Home screen align bottom</string>
+    <string name="extend_home_apps_area">Прошири област на коју се може кликнути</string>
+    <string name="home_alignment_bottom">Почетни екран Поравнај дно</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">Apps home screen</string>
     <string name="clock_alignment">Clock and date</string>
@@ -77,6 +77,10 @@
     <string name="settings_text_size">Подешавања Величина текста</string>
     <string name="display_hidden_apps">Прикажи скривене апликације</string>
     <string name="lock_settings">Подешавања закључавања</string>
+    <!-- Backup Strings -->
+    <string name="backup">Бацкуп</string>
+    <string name="load_backup">Учитај резервну копију</string>
+    <string name="store_backup">Сторе Бацкуп</string>
     <!-- Settings Strings -->
     <string name="off">Off</string>
     <string name="on">On</string>
@@ -101,7 +105,7 @@
     <string name="disabled">Disabled</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
-    <string name="copy">копија</string>
+    <string name="copy">Копирај</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Откажи аутентификацију.</string>
     <string name="text_authentication_error">Грешка при аутентификацији:%1$s(код %2$d)</string>

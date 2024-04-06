@@ -77,6 +77,10 @@
     <string name="settings_text_size">ਸੈਟਿੰਗਾਂ ਟੈਕਸਟ ਆਕਾਰ</string>
     <string name="display_hidden_apps">ਲੁਕੇ ਹੋਏ ਐਪਸ ਡਿਸਪਲੇ ਕਰੋ</string>
     <string name="lock_settings">ਲਾਕ ਸੈਟਿੰਗਾਂ</string>
+    <!-- Backup Strings -->
+    <string name="backup">ਬੈਕਅੱਪ</string>
+    <string name="load_backup">ਬੈਕਅੱਪ ਲੋਡ ਕਰੋ</string>
+    <string name="store_backup">ਸਟੋਰ ਬੈਕਅੱਪ</string>
     <!-- Settings Strings -->
     <string name="off">ਬੰਦ</string>
     <string name="on">\'ਤੇ</string>
@@ -101,7 +105,7 @@
     <string name="disabled">ਅਯੋਗ</string>
     <string name="open">ਖੋਲ੍ਹੋ</string>
     <string name="close">ਬੰਦ ਕਰੋ</string>
-    <string name="copy">ਕਾਪੀ</string>
+    <string name="copy">ਕਾਪੀ ਕਰੋ</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">ਪ੍ਰਮਾਣੀਕਰਨ ਰੱਦ ਕਰੋ।</string>
     <string name="text_authentication_error">ਪ੍ਰਮਾਣਿਕਤਾ ਗਲਤੀ:%1$s(ਕੋਡ %2$d)</string>

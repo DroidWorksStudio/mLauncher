@@ -43,8 +43,8 @@
     <string name="show_date">Datum weisen</string>
     <string name="show_battery">Batterie weisen</string>
     <string name="lock_home_apps">Spär Apps</string>
-    <string name="extend_home_apps_area">Klickbar Beräich verlängeren</string>
-    <string name="home_alignment_bottom">Heembildschierm alignéiert ënnen</string>
+    <string name="extend_home_apps_area">Klicktbar Gebitt verlängeren</string>
+    <string name="home_alignment_bottom">Home Screen Align Bottom</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">Apps Haaptsäit</string>
     <string name="clock_alignment">Auer an Datum</string>
@@ -77,6 +77,10 @@
     <string name="settings_text_size">Astellungen Text Gréisst</string>
     <string name="display_hidden_apps">Display Hidden Apps</string>
     <string name="lock_settings">Spär Astellunge</string>
+    <!-- Backup Strings -->
+    <string name="backup">Backupsatellit</string>
+    <string name="load_backup">Lueden Backupsatellit</string>
+    <string name="store_backup">Store Backupsatellit</string>
     <!-- Settings Strings -->
     <string name="off">Off</string>
     <string name="on">Op</string>
@@ -101,7 +105,7 @@
     <string name="disabled">Behënnert</string>
     <string name="open">Oppen</string>
     <string name="close">Zoumaachen</string>
-    <string name="copy">kopéieren</string>
+    <string name="copy">Kopie</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Authentifikatioun Ofbriechen.</string>
     <string name="text_authentication_error">Authentifikatiounsfehler:%1$s(Code %2$d)</string>

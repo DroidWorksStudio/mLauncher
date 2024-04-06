@@ -44,7 +44,7 @@
     <string name="show_battery">Shfaq baterinë</string>
     <string name="lock_home_apps">Blloko aplikacionet</string>
     <string name="extend_home_apps_area">Zgjero zonën e klikueshme</string>
-    <string name="home_alignment_bottom">Përafrimi i ekranit bazë në fund</string>
+    <string name="home_alignment_bottom">Rreshtimi i ekranit bazë në fund</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">Ekrani bazë i aplikacioneve</string>
     <string name="clock_alignment">Ora dhe data</string>
@@ -77,6 +77,10 @@
     <string name="settings_text_size">Cilësimet e madhësisë së tekstit</string>
     <string name="display_hidden_apps">Shfaq aplikacionet e fshehura</string>
     <string name="lock_settings">Cilësimet e kyçjes</string>
+    <!-- Backup Strings -->
+    <string name="backup">Rezervimi</string>
+    <string name="load_backup">Ngarko kopje rezervë</string>
+    <string name="store_backup">Rezervimi i dyqanit</string>
     <!-- Settings Strings -->
     <string name="off">Joaktiv</string>
     <string name="on">Aktiv</string>
@@ -101,7 +105,7 @@
     <string name="disabled">I paaftë</string>
     <string name="open">Hapur</string>
     <string name="close">Mbylle</string>
-    <string name="copy">kopje</string>
+    <string name="copy">Kopjo</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Anulo vërtetimin.</string>
     <string name="text_authentication_error">Gabim vërtetimi:%1$s(kodi %2$d)</string>

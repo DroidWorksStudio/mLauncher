@@ -43,8 +43,8 @@
     <string name="show_date">मिति देखाउनुहोस्</string>
     <string name="show_battery">ब्याट्री देखाउनुहोस्</string>
     <string name="lock_home_apps">एपहरू लक गर्नुहोस्</string>
-    <string name="extend_home_apps_area">क्लिक योग्य क्षेत्र विस्तार गर्नुहोस्</string>
-    <string name="home_alignment_bottom">गृह स्क्रिन तल पङ्क्तिबद्ध गर्नुहोस्</string>
+    <string name="extend_home_apps_area">क्लिकयोग्य क्षेत्र विस्तार गर्नुहोस्</string>
+    <string name="home_alignment_bottom">गृह स्क्रिन तल पङ्क्तिबद्ध</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">एप्स होम स्क्रिन</string>
     <string name="clock_alignment">घडी र मिति</string>
@@ -77,6 +77,10 @@
     <string name="settings_text_size">सेटिङ पाठ आकार</string>
     <string name="display_hidden_apps">लुकेका एपहरू प्रदर्शन गर्नुहोस्</string>
     <string name="lock_settings">लक सेटिङहरू</string>
+    <!-- Backup Strings -->
+    <string name="backup">ब्याकअप</string>
+    <string name="load_backup">ब्याकअप लोड गर्नुहोस्</string>
+    <string name="store_backup">स्टोर ब्याकअप</string>
     <!-- Settings Strings -->
     <string name="off">बन्द</string>
     <string name="on">अन</string>

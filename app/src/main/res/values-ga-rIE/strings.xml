@@ -43,8 +43,8 @@
     <string name="show_date">Taispeáin dáta</string>
     <string name="show_battery">Taispeáin ceallraí</string>
     <string name="lock_home_apps">Glasáil Apps</string>
-    <string name="extend_home_apps_area">Leathnaigh an limistéar inchliceáilte</string>
-    <string name="home_alignment_bottom">Ailínigh bun an scáileáin baile</string>
+    <string name="extend_home_apps_area">Leathnaigh an Limistéar Inchliceáilte</string>
+    <string name="home_alignment_bottom">Scáileán Baile Ailínigh Bun</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">Scáileán baile apps</string>
     <string name="clock_alignment">Clog agus dáta</string>
@@ -77,6 +77,10 @@
     <string name="settings_text_size">Méid Téacs Socruithe</string>
     <string name="display_hidden_apps">Taispeáin Apps Hidden</string>
     <string name="lock_settings">Socruithe Glasála</string>
+    <!-- Backup Strings -->
+    <string name="backup">Cúltaca</string>
+    <string name="load_backup">Luchtaigh Cúltaca</string>
+    <string name="store_backup">Cúltaca Store</string>
     <!-- Settings Strings -->
     <string name="off">as</string>
     <string name="on">Ar</string>
@@ -101,7 +105,7 @@
     <string name="disabled">Faoi mhíchumas</string>
     <string name="open">Oscail</string>
     <string name="close">Dún</string>
-    <string name="copy">cóip</string>
+    <string name="copy">Cóip</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Fíordheimhniú Cealaigh.</string>
     <string name="text_authentication_error">Earráid fhíordheimhnithe:%1$s(cód %2$d)</string>

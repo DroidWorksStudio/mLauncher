@@ -32,8 +32,11 @@ import android.view.WindowManager
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.view.ContextThemeWrapper
+import androidx.core.app.ActivityCompat
 import com.github.droidworksstudio.mlauncher.BuildConfig
 import com.github.droidworksstudio.mlauncher.data.AppModel
+import com.github.droidworksstudio.mlauncher.data.Constants.BACKUP_READ
+import com.github.droidworksstudio.mlauncher.data.Constants.BACKUP_WRITE
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -397,6 +400,23 @@ fun dp2px(resources: Resources, dp: Int): Int {
         dp.toFloat(),
         resources.displayMetrics
     ).toInt()
+}
+
+fun storeFile(activity: Activity) {
+    val intent = Intent(Intent.ACTION_CREATE_DOCUMENT).apply {
+        addCategory(Intent.CATEGORY_OPENABLE)
+        type = "application/json"
+        putExtra(Intent.EXTRA_TITLE, "backup.json")
+    }
+    ActivityCompat.startActivityForResult(activity, intent, BACKUP_WRITE, null)
+}
+
+fun loadFile(activity: Activity) {
+    val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
+        addCategory(Intent.CATEGORY_OPENABLE)
+        type = "application/json"
+    }
+    ActivityCompat.startActivityForResult(activity, intent, BACKUP_READ, null)
 }
 
 @RequiresApi(Build.VERSION_CODES.Q)

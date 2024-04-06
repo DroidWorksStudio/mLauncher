@@ -48,8 +48,8 @@
 	<string name="show_date">Show Date</string>
 	<string name="show_battery">Show Battery</string>
 	<string name="lock_home_apps">Lock Apps</string>
-	<string name="extend_home_apps_area">Extend clickable area</string>
-	<string name="home_alignment_bottom">Home screen align bottom</string>
+	<string name="extend_home_apps_area">Extend Clickable Area</string>
+	<string name="home_alignment_bottom">Home Screen Align Bottom</string>
 
 	<!-- Alignment Strings -->
 	<string name="home_alignment">Apps Home Screen</string>
@@ -87,6 +87,11 @@
 	<string name="display_hidden_apps">Display Hidden Apps</string>
 	<string name="lock_settings">Lock Settings</string>
 
+	<!-- Backup Strings -->
+	<string name="backup">Backup</string>
+	<string name="load_backup">Load Backup</string>
+	<string name="store_backup">Store Backup</string>
+
 	<!-- Settings Strings -->
 	<string name="off">Off</string>
 	<string name="on">On</string>
@@ -113,7 +118,7 @@
 	<string name="disabled">Disabled</string>
 	<string name="open">Open</string>
 	<string name="close">Close</string>
-	<string name="copy">copy</string>
+	<string name="copy">Copy</string>
 
 	<!-- PinCode Strings -->
 	<string name="text_authentication_cancel">Authentication Cancel.</string>

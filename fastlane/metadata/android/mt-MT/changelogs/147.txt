@@ -1,0 +1,5 @@
+Verżjoni: 1.4.7
+
+Soluzzjonijiet ta' Bug:
+
+Fissa RENAME milli jintwera fl-oqsma kollha tal-lista tal-app.

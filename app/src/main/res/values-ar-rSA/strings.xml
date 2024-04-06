@@ -44,7 +44,7 @@
     <string name="show_battery">عرض البطارية</string>
     <string name="lock_home_apps">قفل التطبيقات</string>
     <string name="extend_home_apps_area">توسيع المنطقة القابلة للنقر</string>
-    <string name="home_alignment_bottom">أسفل الشاشة الرئيسية محاذاة</string>
+    <string name="home_alignment_bottom">محاذاة الشاشة الرئيسية إلى الأسفل</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">تطبيقات الشاشة الرئيسية</string>
     <string name="clock_alignment">الساعة والتاريخ</string>
@@ -77,6 +77,10 @@
     <string name="settings_text_size">إعدادات حجم النص</string>
     <string name="display_hidden_apps">عرض التطبيقات المخفية</string>
     <string name="lock_settings">إعدادات القفل</string>
+    <!-- Backup Strings -->
+    <string name="backup">دعم</string>
+    <string name="load_backup">حمل نسخة احتياطية</string>
+    <string name="store_backup">مخزن النسخ الاحتياطي</string>
     <!-- Settings Strings -->
     <string name="off">متوقف</string>
     <string name="on">تشغيل</string>

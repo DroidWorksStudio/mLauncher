@@ -43,8 +43,8 @@
     <string name="show_date">Megjelenés dátuma</string>
     <string name="show_battery">Mutasd az akkumulátort</string>
     <string name="lock_home_apps">Alkalmazások zárolása</string>
-    <string name="extend_home_apps_area">Kattintható terület bővítése</string>
-    <string name="home_alignment_bottom">Kezdőképernyő alulra igazítása</string>
+    <string name="extend_home_apps_area">Kattintható terület kiterjesztése</string>
+    <string name="home_alignment_bottom">Kezdőképernyő Align Bottom</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">Alkalmazások kezdőképernyője</string>
     <string name="clock_alignment">Óra és dátum</string>
@@ -77,6 +77,10 @@
     <string name="settings_text_size">Beállítások Szövegméret</string>
     <string name="display_hidden_apps">Rejtett alkalmazások megjelenítése</string>
     <string name="lock_settings">Zárolási beállítások</string>
+    <!-- Backup Strings -->
+    <string name="backup">biztonsági mentés</string>
+    <string name="load_backup">Biztonsági mentés betöltése</string>
+    <string name="store_backup">Biztonsági mentés tárolása</string>
     <!-- Settings Strings -->
     <string name="off">Off</string>
     <string name="on">A  oldalon.</string>
@@ -101,7 +105,7 @@
     <string name="disabled">Mozgáskorlátozottak</string>
     <string name="open">Nyissa meg a  címet.</string>
     <string name="close">Zárja be a</string>
-    <string name="copy">másolat</string>
+    <string name="copy">Másolat</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Hitelesítés megszakítása.</string>
     <string name="text_authentication_error">Hitelesítési hiba:%1$s(kód %2$d)</string>

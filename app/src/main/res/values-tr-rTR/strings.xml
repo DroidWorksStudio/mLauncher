@@ -43,8 +43,8 @@
     <string name="show_date">Tarih\'i göster</string>
     <string name="show_battery">Pil\'i göster</string>
     <string name="lock_home_apps">Uygulamaları Kilitle</string>
-    <string name="extend_home_apps_area">Tıklanabilir alanı genişlet</string>
-    <string name="home_alignment_bottom">Ana ekran alt hizalama</string>
+    <string name="extend_home_apps_area">Tıklanabilir Alanı Genişlet</string>
+    <string name="home_alignment_bottom">Ana Ekranı Alta Hizala</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">Uygulamalar ana ekranı</string>
     <string name="clock_alignment">Saat ve tarih</string>
@@ -77,6 +77,10 @@
     <string name="settings_text_size">Ayarlar Metin Boyutu</string>
     <string name="display_hidden_apps">Gizli Uygulamaları Görüntüle</string>
     <string name="lock_settings">Kilit Ayarları</string>
+    <!-- Backup Strings -->
+    <string name="backup">Destek olmak</string>
+    <string name="load_backup">Yedeklemeyi Yükle</string>
+    <string name="store_backup">Mağaza Yedekleme</string>
     <!-- Settings Strings -->
     <string name="off">Kapalı</string>
     <string name="on">Açık</string>

@@ -43,8 +43,8 @@
     <string name="show_date">Показать дату</string>
     <string name="show_battery">Показать батарею</string>
     <string name="lock_home_apps">Заблокировать приложения</string>
-    <string name="extend_home_apps_area">Продлить область клика</string>
-    <string name="home_alignment_bottom">Выровнять на главном экране снизу</string>
+    <string name="extend_home_apps_area">Расширить кликабельную область</string>
+    <string name="home_alignment_bottom">Главный экран Выровнять по нижнему краю</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">Домашний экран приложений</string>
     <string name="clock_alignment">Часы и дата</string>
@@ -77,6 +77,10 @@
     <string name="settings_text_size">Размер текста в настройках</string>
     <string name="display_hidden_apps">Отображение скрытых приложений</string>
     <string name="lock_settings">Блокировка настроек</string>
+    <!-- Backup Strings -->
+    <string name="backup">Резервное копирование</string>
+    <string name="load_backup">Загрузить резервную копию</string>
+    <string name="store_backup">Резервное копирование магазина</string>
     <!-- Settings Strings -->
     <string name="off">Выкл</string>
     <string name="on">На</string>

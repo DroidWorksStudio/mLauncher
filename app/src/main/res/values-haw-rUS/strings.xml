@@ -44,7 +44,7 @@
     <string name="show_battery">Hōʻike pākaukau</string>
     <string name="lock_home_apps">Laka Apps</string>
     <string name="extend_home_apps_area">E hoʻonui i kahi hiki ke kaomi</string>
-    <string name="home_alignment_bottom">ʻO ka pale home e align i lalo</string>
+    <string name="home_alignment_bottom">ʻO ka pale home e hoʻopololei i lalo</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">Pākuʻi home Apps</string>
     <string name="clock_alignment">Uaki a me ka lā</string>
@@ -77,6 +77,10 @@
     <string name="settings_text_size">Hoʻonohonoho i ka nui kikokikona</string>
     <string name="display_hidden_apps">Hōʻike i nā polokalamu huna</string>
     <string name="lock_settings">Hoʻonohonoho laka</string>
+    <!-- Backup Strings -->
+    <string name="backup">Kākoʻo</string>
+    <string name="load_backup">Hoʻouka i ka waihona</string>
+    <string name="store_backup">Waihona Waihona</string>
     <!-- Settings Strings -->
     <string name="off">Paʻa</string>
     <string name="on">Ma ka</string>

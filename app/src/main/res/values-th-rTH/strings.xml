@@ -43,7 +43,7 @@
     <string name="show_date">แสดงวันที่</string>
     <string name="show_battery">แสดงแบตเตอรี่</string>
     <string name="lock_home_apps">ล็อคแอพ</string>
-    <string name="extend_home_apps_area">ขยายพื้นที่ที่คลิกได้</string>
+    <string name="extend_home_apps_area">ขยายพื้นที่ที่สามารถคลิกได้</string>
     <string name="home_alignment_bottom">หน้าจอหลักจัดตำแหน่งด้านล่าง</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">หน้าจอหลักของแอพ</string>
@@ -77,6 +77,10 @@
     <string name="settings_text_size">ขนาดตัวอักษรการตั้งค่า</string>
     <string name="display_hidden_apps">แสดงแอปที่ซ่อนอยู่</string>
     <string name="lock_settings">ล็อคการตั้งค่า</string>
+    <!-- Backup Strings -->
+    <string name="backup">สำรองข้อมูล</string>
+    <string name="load_backup">โหลดข้อมูลสำรอง</string>
+    <string name="store_backup">จัดเก็บข้อมูลสำรอง</string>
     <!-- Settings Strings -->
     <string name="off">ปิด</string>
     <string name="on">บน</string>

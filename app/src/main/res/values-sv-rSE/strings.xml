@@ -43,8 +43,8 @@
     <string name="show_date">Visa datum</string>
     <string name="show_battery">Visa batteri</string>
     <string name="lock_home_apps">Lås appar</string>
-    <string name="extend_home_apps_area">Utöka klickbart område</string>
-    <string name="home_alignment_bottom">Startskärmen anpassa botten</string>
+    <string name="extend_home_apps_area">Utöka det klickbara området</string>
+    <string name="home_alignment_bottom">Hemskärm Justera botten</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">Appar hemskärm</string>
     <string name="clock_alignment">Klocka och datum</string>
@@ -77,6 +77,10 @@
     <string name="settings_text_size">Inställningar Textstorlek</string>
     <string name="display_hidden_apps">Visa dolda appar</string>
     <string name="lock_settings">Låsinställningar</string>
+    <!-- Backup Strings -->
+    <string name="backup">Säkerhetskopiering</string>
+    <string name="load_backup">Ladda säkerhetskopiering</string>
+    <string name="store_backup">Lagra säkerhetskopiering</string>
     <!-- Settings Strings -->
     <string name="off">Av</string>
     <string name="on">På</string>
@@ -101,7 +105,7 @@
     <string name="disabled">Inaktiverad</string>
     <string name="open">Öppna</string>
     <string name="close">Stäng</string>
-    <string name="copy">kopiera</string>
+    <string name="copy">Kopiera</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Autentisering avbryt.</string>
     <string name="text_authentication_error">Autentiseringsfel:%1$s(kod %2$d)</string>

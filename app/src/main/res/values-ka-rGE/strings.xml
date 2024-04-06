@@ -43,8 +43,8 @@
     <string name="show_date">თარიღის ჩვენება</string>
     <string name="show_battery">ბატარეის ჩვენება</string>
     <string name="lock_home_apps">აპების ჩაკეტვა</string>
-    <string name="extend_home_apps_area">გააფართოვეთ დაწკაპუნებადი ტერიტორია</string>
-    <string name="home_alignment_bottom">საწყისი ეკრანის გასწორება ბოლოში</string>
+    <string name="extend_home_apps_area">გააფართოვეთ დაწკაპუნებადი ფართობი</string>
+    <string name="home_alignment_bottom">საწყისი ეკრანის გასწორება ქვედა</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">აპების საწყისი ეკრანი</string>
     <string name="clock_alignment">საათი და თარიღი</string>
@@ -77,6 +77,10 @@
     <string name="settings_text_size">ტექსტის ზომის პარამეტრები</string>
     <string name="display_hidden_apps">დამალული აპების ჩვენება</string>
     <string name="lock_settings">ჩაკეტვის პარამეტრები</string>
+    <!-- Backup Strings -->
+    <string name="backup">სარეზერვო</string>
+    <string name="load_backup">სარეზერვო ასლის ჩატვირთვა</string>
+    <string name="store_backup">შენახვის სარეზერვო</string>
     <!-- Settings Strings -->
     <string name="off">გამორთულია</string>
     <string name="on">ჩართულია</string>
