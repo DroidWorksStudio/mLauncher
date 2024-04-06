@@ -10,6 +10,10 @@
 
 - Update the Release version to 147 (v1.4.7)
 
+### Language Support:
+
+- Updated Language Files. ([#424](https://github.com/DroidWorksStudio/mLauncher/issues/424))
+
 ## [1.4.6](https://github.com/DroidWorksStudio/mLauncher/tree/1.4.6) - (03, April 2024)
 
 ### Implemented Enhancements:
