@@ -2,7 +2,7 @@
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
-### Bug Fixes:
+### Bug Fixez:
 
 - Fixed the backup system as it was not working.
 
