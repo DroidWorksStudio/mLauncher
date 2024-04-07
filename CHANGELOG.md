@@ -1,5 +1,11 @@
 # Changelog
 
+## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
+
+### Bug Fixes:
+
+- Fixed the app list to not show duplicates when recent apps is enabled
+
 ## [1.4.8](https://github.com/DroidWorksStudio/mLauncher/tree/1.4.8) - (07, April 2024)
 
 ### Bug Fixes:
