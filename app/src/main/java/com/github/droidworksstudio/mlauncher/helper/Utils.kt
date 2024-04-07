@@ -174,9 +174,17 @@ suspend fun getAppsList(
                             appAlias,
                         )
 
+                        d("appModel",appModel.toString())
+
                         if (includeRecentApps) {
-                            if (packageName != BuildConfig.APPLICATION_ID) {
-                                appRecentList.add(appModel)
+                            appRecentList.add(appModel)
+                            // Remove appModel from appList if its packageName matches
+                            val iterator = appList.iterator()
+                            while (iterator.hasNext()) {
+                                val model = iterator.next()
+                                if (model.appPackage == packageName) {
+                                    iterator.remove()
+                                }
                             }
                         }
                     }

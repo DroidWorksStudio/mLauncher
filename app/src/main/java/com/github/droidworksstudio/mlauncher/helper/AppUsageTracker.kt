@@ -31,7 +31,9 @@ class AppUsageTracker private constructor(context: Context) {
     }
 
     fun getLastTenAppsUsed(context: Context): List<Triple<String, String, String>> {
-        val recentApps = mutableListOf<Triple<String, String, String>>()
+        val recentApps = mutableSetOf<String>() // Set to store unique package names
+        val result = mutableListOf<Triple<String, String, String>>() // List to store recent apps
+
         val usageStatsManager = context.getSystemService(Context.USAGE_STATS_SERVICE) as? UsageStatsManager
         val endTime = System.currentTimeMillis()
         val startTime = endTime - 24 * 60 * 60 * 1000 // 24 hours ago
@@ -42,21 +44,25 @@ class AppUsageTracker private constructor(context: Context) {
             val sortedList = usageStatsList
                 .filter { isPackageLaunchable(context, it.packageName, blacklist) }
                 .sortedByDescending { it.lastTimeUsed }
-                .take(prefs.recentCounter)
 
             sortedList.forEach { usageStats ->
                 val packageName = usageStats.packageName
-                val appName = getAppNameFromPackage(packageName)
-                val className = getComponentNameFromPackage(context, packageName)
-                val appActivityName = className.toString()
-                Log.d("appActivityName",appActivityName)
-                if (appName != null) {
-                    recentApps.add(Triple(packageName, appName, appActivityName))
+                if (packageName != context.packageName && !recentApps.contains(packageName)) {
+                    val appName = getAppNameFromPackage(packageName)
+                    val className = getComponentNameFromPackage(context, packageName)
+                    val appActivityName = className.toString()
+                    Log.d("appActivityName", appActivityName)
+                    if (appName != null) {
+                        recentApps.add(packageName)
+                        result.add(Triple(packageName, appName, appActivityName))
+                    }
                 }
             }
         }
-        return recentApps
+
+        return result.take(prefs.recentCounter) // Return up to 10 recent apps
     }
+
 
     private fun isPackageLaunchable(context: Context, packageName: String, blacklist: List<String>): Boolean {
         if (isAppInBlacklist(packageName, blacklist)){
