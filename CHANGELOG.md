@@ -4,6 +4,12 @@
 
 ### Bug Fixes:
 
+- Fixed the backup system as it was not working.
+
+## [1.4.7](https://github.com/DroidWorksStudio/mLauncher/tree/1.4.7) - (06, April 2024)
+
+### Bug Fixes:
+
 - Fixed RENAME from displaying in all list areas of the app.
 
 ### Release:
