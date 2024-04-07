@@ -1,8 +1,8 @@
 # Changelog
 
-## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
+## [1.4.8](https://github.com/DroidWorksStudio/mLauncher/tree/1.4.8) - (07, April 2024)
 
-### Bug Fixez:
+### Bug Fixes:
 
 - Fixed the backup system as it was not working.
 
