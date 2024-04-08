@@ -4,6 +4,7 @@
 
 ### Bug Fixes:
 
+- Fixed the fDroid app icon for next release.
 - Added Quick Settings Bypass Back
 - Updated Nerd Font
 
