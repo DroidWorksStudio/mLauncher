@@ -4,6 +4,8 @@
 
 ### Bug Fixes:
 
+- Fixed the fDroid app icon for next release.
+- Added Quick Settings Bypass Back
 - Updated Nerd Font
 
 ## [1.4.8](https://github.com/DroidWorksStudio/mLauncher/tree/1.4.8) - (08, April 2024)
