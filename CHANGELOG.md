@@ -1,5 +1,11 @@
 # Changelog
 
+## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
+
+### Bug Fixes:
+
+- Updated Nerd Font
+
 ## [1.4.8](https://github.com/DroidWorksStudio/mLauncher/tree/1.4.8) - (08, April 2024)
 
 ### Bug Fixes:
