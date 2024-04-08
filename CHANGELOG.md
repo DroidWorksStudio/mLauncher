@@ -4,12 +4,13 @@
 
 ### Bug Fixes:
 
-- Fixed the app list to not show duplicates when recent apps is enabled
+- Updated Nerd Font
 
-## [1.4.8](https://github.com/DroidWorksStudio/mLauncher/tree/1.4.8) - (07, April 2024)
+## [1.4.8](https://github.com/DroidWorksStudio/mLauncher/tree/1.4.8) - (08, April 2024)
 
 ### Bug Fixes:
 
+- Fixed the app list to not show duplicates when recent apps is enabled
 - Fixed the backup system as it was not working.
 
 ## [1.4.7](https://github.com/DroidWorksStudio/mLauncher/tree/1.4.7) - (06, April 2024)

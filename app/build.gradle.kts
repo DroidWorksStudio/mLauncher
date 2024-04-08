@@ -30,7 +30,6 @@ android {
         getByName("release") {
             isMinifyEnabled = false
             isShrinkResources = false
-            isDebuggable = true
             resValue("string", "app_name", "mLauncher")
         }
     }
