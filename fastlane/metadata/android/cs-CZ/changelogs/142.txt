@@ -1,10 +1,10 @@
 Verze: 1.4.2
 
 Zvýšení:
-[Feature] - Přidat možnost pro více stránek na domovské obrazovce.
+[Funkce] - Přidat možnost pro více stránek na domovské obrazovce.
 
 Oprava chyb:
-[Bug] Opraven Fuzzy filtr, pokud je nastaven na 0.
+[Chyba] Opraven Fuzzy filtr, pokud je nastaven na 0.
 
 Jazyková podpora:
 [Jazyk] Aktualizované jazykové soubory.
