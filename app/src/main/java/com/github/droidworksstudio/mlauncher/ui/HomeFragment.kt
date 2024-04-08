@@ -284,6 +284,33 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             }
         }
     }
+    @SuppressLint("WrongConstant", "PrivateApi")
+    private fun expandNotificationDrawer(context: Context) {
+        try {
+            Class.forName("android.app.StatusBarManager")
+                .getMethod("expandNotificationsPanel")
+                .invoke(context.getSystemService("statusbar"))
+        } catch (exception: Exception) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+                initActionService(requireContext())?.openNotifications()
+            }
+            exception.printStackTrace()
+        }
+    }
+
+    @SuppressLint("WrongConstant", "PrivateApi")
+    private fun expandQuickSettings(context: Context) {
+        try {
+            Class.forName("android.app.StatusBarManager")
+                .getMethod("expandSettingsPanel")
+                .invoke(context.getSystemService("statusbar"))
+        } catch (exception: Exception) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+                initActionService(requireContext())?.openQuickSettings()
+            }
+            exception.printStackTrace()
+        }
+    }
 
     private fun openSwipeUpApp() {
         if (prefs.appShortSwipeUp.appPackage.isNotEmpty())
@@ -353,11 +380,11 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     @SuppressLint("NewApi")
     private fun handleOtherAction(action: Action) {
         when (action) {
-            Action.ShowNotification -> initActionService(requireContext())?.openNotifications()
+            Action.ShowNotification -> expandNotificationDrawer(requireContext())
             Action.LockScreen -> lockPhone()
             Action.ShowAppList -> showAppList(AppDrawerFlag.LaunchApp, includeHiddenApps = false)
             Action.OpenApp -> {} // this should be handled in the respective onSwipe[Up,Down,Right,Left] functions
-            Action.OpenQuickSettings -> initActionService(requireContext())?.openQuickSettings()
+            Action.OpenQuickSettings -> expandQuickSettings(requireContext())
             Action.ShowRecents -> initActionService(requireContext())?.showRecents()
             Action.OpenPowerDialog -> initActionService(requireContext())?.openPowerDialog()
             Action.TakeScreenShot -> initActionService(requireContext())?.takeScreenShot()
