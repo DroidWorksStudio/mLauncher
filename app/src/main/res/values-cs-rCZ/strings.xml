@@ -23,7 +23,7 @@
     <string name="app_language">Jazyk rozhraní</string>
     <string name="app_text_size">Velikost textu</string>
     <string name="clock_text_size_multiplier">Násobitel velikosti textu hodin</string>
-    <string name="app_padding_size">Velikost vycpávky</string>
+    <string name="app_padding_size">Velikost odsazení položek</string>
     <string name="follow_accent_colors">Akcentní barvy</string>
     <string name="background_opacity">Neprůhlednost pozadí</string>
     <string name="all_apps_text">Zobrazit text všech aplikací</string>
