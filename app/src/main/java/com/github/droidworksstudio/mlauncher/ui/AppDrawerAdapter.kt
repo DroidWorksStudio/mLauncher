@@ -11,8 +11,8 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.appcompat.content.res.AppCompatResources
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.res.ResourcesCompat
+import androidx.core.view.updatePadding
 import androidx.recyclerview.widget.RecyclerView
 import com.github.droidworksstudio.fuzzywuzzy.FuzzyFinder
 import com.github.droidworksstudio.mlauncher.R
@@ -23,15 +23,15 @@ import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.AdapterAppDrawerBinding
 import com.github.droidworksstudio.mlauncher.helper.dp2px
 import com.github.droidworksstudio.mlauncher.helper.getHexFontColor
-import com.github.droidworksstudio.mlauncher.helper.uninstallApp
 
 class AppDrawerAdapter(
     private var flag: AppDrawerFlag,
     private val gravity: Int,
-    private val clickListener: (AppModel) -> Unit,
-    private val appInfoListener: (AppModel) -> Unit,
+    private val appClickListener: (AppModel) -> Unit,
+    private val appDeleteListener: (AppModel) -> Unit,
+    private val appRenameListener: (String, String) -> Unit,
     private val appHideListener: (AppDrawerFlag, AppModel) -> Unit,
-    private val appRenameListener: (String, String) -> Unit
+    private val appInfoListener: (AppModel) -> Unit
 ) : RecyclerView.Adapter<AppDrawerAdapter.ViewHolder>(), Filterable {
 
     private lateinit var prefs: Prefs
@@ -61,16 +61,16 @@ class AppDrawerAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         if (appFilteredList.size == 0) return
         val appModel = appFilteredList[holder.absoluteAdapterPosition]
-        holder.bind(flag, gravity, appModel, clickListener, appInfoListener)
+        holder.bind(flag, gravity, appModel, appClickListener, appInfoListener, appDeleteListener)
 
-        holder.appHideButton.setOnClickListener {
+        holder.appHide.setOnClickListener {
             appFilteredList.removeAt(holder.absoluteAdapterPosition)
             appsList.remove(appModel)
             notifyItemRemoved(holder.absoluteAdapterPosition)
             appHideListener(flag, appModel)
         }
 
-        holder.appRenameButton.setOnClickListener {
+        holder.appRename.setOnClickListener {
             val name = holder.appRenameEdit.text.toString().trim()
             appModel.appAlias = name
             notifyItemChanged(holder.absoluteAdapterPosition)
@@ -142,7 +142,7 @@ class AppDrawerAdapter(
         val autoOpenApp = prefs.autoOpenApp
         if (lastMatch && openApp && autoOpenApp) {
             try { // Automatically open the app when there's only one search result
-                clickListener(appFilteredList[position])
+                appClickListener(appFilteredList[position])
             } catch (e: Exception) {
                 e.printStackTrace()
             }
@@ -158,57 +158,62 @@ class AppDrawerAdapter(
 
     fun launchFirstInList() {
         if (appFilteredList.size > 0)
-            clickListener(appFilteredList[0])
+            appClickListener(appFilteredList[0])
     }
 
     class ViewHolder(itemView: AdapterAppDrawerBinding) : RecyclerView.ViewHolder(itemView.root) {
-        val appHideButton: ImageView = itemView.appHide
-        val appRenameButton: TextView = itemView.appRename
+        val appHide: TextView = itemView.appHide
+        val appRename: TextView = itemView.appRename
         val appRenameEdit: EditText = itemView.appRenameEdit
-        private val appHideLayout: ConstraintLayout = itemView.appHideLayout
+
+        private val appHideLayout: LinearLayout = itemView.appHideLayout
         private val appTitle: TextView = itemView.appTitle
         private val appTitleFrame: FrameLayout = itemView.appTitleFrame
-        private val appInfo: ImageView = itemView.appInfo
+        private val appInfo: TextView = itemView.appInfo
+        private val appDelete: TextView = itemView.appDelete
 
         @SuppressLint("RtlHardcoded")
         fun bind(
             flag: AppDrawerFlag,
             appLabelGravity: Int,
             appModel: AppModel,
-            listener: (AppModel) -> Unit,
-            appInfoListener: (AppModel) -> Unit
+            appClickListener: (AppModel) -> Unit,
+            appInfoListener: (AppModel) -> Unit,
+            appDeleteListener: (AppModel) -> Unit
         ) =
             with(itemView) {
                 appHideLayout.visibility = View.GONE
 
                 // set show/hide icon
                 val drawable = if (flag == AppDrawerFlag.HiddenApps) { R.drawable.visibility } else { R.drawable.visibility_off }
-                appHideButton.setImageDrawable(AppCompatResources.getDrawable(context, drawable))
+                appHide.setCompoundDrawablesWithIntrinsicBounds(0, drawable,0, 0,)
 
-                appRenameEdit.addTextChangedListener(object : TextWatcher {
+                appRenameEdit.apply {
+                    addTextChangedListener(object : TextWatcher {
 
-                    override fun afterTextChanged(s: Editable) {}
+                        override fun afterTextChanged(s: Editable) {}
 
-                    override fun beforeTextChanged(
-                        s: CharSequence, start: Int,
-                        count: Int, after: Int
-                    ) {
-                    }
-
-                    override fun onTextChanged(
-                        s: CharSequence, start: Int,
-                        before: Int, count: Int
-                    ) {
-                        if (appRenameEdit.text.isEmpty()) {
-                            appRenameButton.text = context.getString(R.string.reset)
-                        } else if (appRenameEdit.text.toString() == appModel.appAlias) {
-                            appRenameButton.text = context.getString(R.string.cancel)
-                        } else {
-                            appRenameButton.text = context.getString(R.string.rename)
+                        override fun beforeTextChanged(
+                            s: CharSequence, start: Int,
+                            count: Int, after: Int
+                        ) {
                         }
 
-                    }
-                })
+                        override fun onTextChanged(
+                            s: CharSequence, start: Int,
+                            before: Int, count: Int
+                        ) {
+                            if (appRenameEdit.text.isEmpty()) {
+                                appRename.text = context.getString(R.string.reset)
+                            } else if (appRenameEdit.text.toString() == appModel.appAlias) {
+                                appRename.text = context.getString(R.string.cancel)
+                            } else {
+                                appRename.text = context.getString(R.string.rename)
+                            }
+
+                        }
+                    })
+                }
 
                 val appName = appModel.appAlias.ifEmpty {
                     appModel.appLabel
@@ -230,6 +235,8 @@ class AppDrawerAdapter(
                     val icon = AppCompatResources.getDrawable(context, R.drawable.work_profile)
                     val prefs = Prefs(context)
                     val px = dp2px(resources, prefs.textSizeLauncher)
+                    val padding = dp2px(resources, prefs.textSizeLauncher)
+                    appTitle.updatePadding(left=padding, right=padding)
                     icon?.setBounds(0, 0, px, px)
                     if (appLabelGravity == LEFT) {
                         appTitle.setCompoundDrawables(null, null, icon, null)
@@ -241,20 +248,33 @@ class AppDrawerAdapter(
                     appTitle.setCompoundDrawables(null, null, null, null)
                 }
 
-                appTitleFrame.setOnClickListener { listener(appModel) }
-                appTitleFrame.setOnLongClickListener {
-                    appHideLayout.visibility = View.VISIBLE
-                    true
-                }
-
-                appInfo.apply {
-                    setOnClickListener { appInfoListener(appModel) }
+                appTitleFrame.apply {
+                    setOnClickListener {
+                        appClickListener(appModel)
+                    }
                     setOnLongClickListener {
-                        uninstallApp(context, appModel.appPackage)
+                        appHideLayout.visibility = View.VISIBLE
                         true
                     }
                 }
-                appHideLayout.setOnClickListener { appHideLayout.visibility = View.GONE }
+
+                appInfo.apply {
+                    setOnClickListener {
+                        appInfoListener(appModel)
+                    }
+                }
+
+                appDelete.apply {
+                    setOnClickListener {
+                        appDeleteListener(appModel)
+                    }
+                }
+
+                appHideLayout.apply {
+                    setOnClickListener {
+                        appHideLayout.visibility = View.GONE
+                    }
+                }
             }
     }
 }

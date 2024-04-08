@@ -103,7 +103,9 @@
     <string name="settings">Settings</string>
     <string name="lang_system">System</string>
     <string name="system_default">System</string>
+    <string name="delete">Delete</string>
     <string name="hide">Hide</string>
+    <string name="info">Info</string>
     <string name="rename">Rename</string>
     <string name="okay">Okay</string>
     <string name="save">Save</string>
