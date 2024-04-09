@@ -79,8 +79,9 @@
     <string name="lock_settings">Låseinnstillinger</string>
     <!-- Backup Strings -->
     <string name="backup">Sikkerhetskopiering</string>
-    <string name="load_backup">Last inn sikkerhetskopi</string>
-    <string name="store_backup">Lagre sikkerhetskopi</string>
+    <string name="load_backup">Laste</string>
+    <string name="save_backup">Lagre</string>
+    <string name="clear_backup">Klar</string>
     <!-- Settings Strings -->
     <string name="off">Av</string>
     <string name="on">På</string>
@@ -92,8 +93,10 @@
     <string name="settings">Innstillinger</string>
     <string name="lang_system">Systemadministrasjon</string>
     <string name="system_default">Systemadministrasjon</string>
+    <string name="delete">Slett</string>
     <string name="hide">Skjul</string>
     <string name="rename">Omdøp</string>
+    <string name="info">Info</string>
     <string name="okay">Ok</string>
     <string name="save">Lagre</string>
     <string name="show">Vis</string>
@@ -114,6 +117,7 @@
     <string name="text_biometric_login_sub">Logg på med biometrisk legitimasjon</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Alle apper</string>
+    <string name="can_not_delete_system_apps">Kan ikke slette systemapper</string>
     <string name="please_select_app">Velg en app</string>
     <string name="drawer_list_empty_hint">Ingen apper funnet</string>
     <string name="long_press_for_settings">Langt trykk hvor som helst for innstillinger</string>
