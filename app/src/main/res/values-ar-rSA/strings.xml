@@ -92,8 +92,10 @@
     <string name="settings">الإعدادات</string>
     <string name="lang_system">النظام</string>
     <string name="system_default">النظام</string>
+    <string name="delete">يمسح</string>
     <string name="hide">إخفاء</string>
     <string name="rename">إعادة تسمية</string>
+    <string name="info">معلومات</string>
     <string name="okay">حسنًا</string>
     <string name="save">حفظ</string>
     <string name="show">إظهار</string>
@@ -114,6 +116,7 @@
     <string name="text_biometric_login_sub">قم بتسجيل الدخول باستخدام بيانات الاعتماد البيومترية الخاصة بك</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">جميع التطبيقات</string>
+    <string name="can_not_delete_system_apps">لا يمكن حذف تطبيقات النظام</string>
     <string name="please_select_app">الرجاء تحديد التطبيق</string>
     <string name="drawer_list_empty_hint">لم يتم العثور على تطبيقات</string>
     <string name="long_press_for_settings">اضغط مطولاً في أي مكان للإعدادات</string>
