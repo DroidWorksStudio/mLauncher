@@ -1,0 +1,6 @@
+Versioon: 1.4.8
+
+Veaparandused:
+
+Parandatud rakenduste loend, et ei kuvataks duplikaate, kui hiljutised rakendused on lubatud
+Varundussüsteem on parandatud, kuna see ei töötanud.
