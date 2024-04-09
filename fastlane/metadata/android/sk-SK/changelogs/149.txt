@@ -1,0 +1,15 @@
+Verzia: 1.4.9
+
+Implementované vylepšenia:
+
+Prepracované kontextové menu aplikácie
+
+Opravy chýb:
+
+Opravená ikona aplikácie fDroid pre ďalšie vydanie.
+Pridané Rýchle nastavenia Obísť späť
+Aktualizované písmo Nerd
+
+Jazyková podpora:
+
+Aktualizované jazykové súbory.
