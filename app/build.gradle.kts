@@ -80,7 +80,7 @@ android {
 }
 
 dependencies {
-    val androidxTestKotlin = "1.6.4"
+    val androidxTestKotlin = "1.6.5"
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
