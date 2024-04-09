@@ -179,6 +179,7 @@ class AppDrawerAdapter(
         private val appRename: TextView = itemView.appRename
         private val appTitle: TextView = itemView.appTitle
         private val appTitleFrame: FrameLayout = itemView.appTitleFrame
+        private val appClose: TextView = itemView.appClose
         private val appInfo: TextView = itemView.appInfo
         private val appDelete: TextView = itemView.appDelete
 
@@ -298,7 +299,7 @@ class AppDrawerAdapter(
                     }
                 }
 
-                appHideLayout.apply {
+                appClose.apply {
                     setOnClickListener {
                         appHideLayout.visibility = View.GONE
                     }

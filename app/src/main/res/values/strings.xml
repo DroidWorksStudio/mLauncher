@@ -105,8 +105,8 @@
     <string name="system_default">System</string>
     <string name="delete">Delete</string>
     <string name="hide">Hide</string>
-    <string name="info">Info</string>
     <string name="rename">Rename</string>
+    <string name="info">Info</string>
     <string name="okay">Okay</string>
     <string name="save">Save</string>
     <string name="show">Show</string>

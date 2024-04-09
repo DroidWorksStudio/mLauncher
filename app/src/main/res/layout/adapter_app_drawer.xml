@@ -32,6 +32,7 @@
         android:clickable="true"
         android:focusable="true"
         android:gravity="end|center_vertical"
+        android:paddingVertical="@dimen/app_padding_vertical"
         android:visibility="gone"
         tools:visibility="visible">
 
@@ -95,6 +96,21 @@
             android:textSize="12sp"
             app:drawableTopCompat="@drawable/ic_info" />
 
+        <TextView
+            android:id="@+id/appClose"
+            style="@style/TextSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="2dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingHorizontal="8dp"
+            android:text="@string/close"
+            android:textSize="12sp"
+            app:drawableTopCompat="@drawable/ic_close" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -123,7 +139,9 @@
             android:maxLength="30"
             android:maxLines="1"
             android:paddingVertical="@dimen/app_padding_vertical"
-            android:textColorHint="?attr/primaryColorTrans50" />
+            android:textColorHint="?attr/primaryColorTrans50"
+            android:autofillHints="name"
+            tools:ignore="LabelFor" />
 
         <TextView
             android:id="@+id/appSaveRename"
