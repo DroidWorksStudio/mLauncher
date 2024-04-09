@@ -79,8 +79,9 @@
     <string name="lock_settings">إعدادات القفل</string>
     <!-- Backup Strings -->
     <string name="backup">دعم</string>
-    <string name="load_backup">حمل نسخة احتياطية</string>
-    <string name="store_backup">مخزن النسخ الاحتياطي</string>
+    <string name="load_backup">حمولة</string>
+    <string name="save_backup">يحفظ</string>
+    <string name="clear_backup">واضح</string>
     <!-- Settings Strings -->
     <string name="off">متوقف</string>
     <string name="on">تشغيل</string>
