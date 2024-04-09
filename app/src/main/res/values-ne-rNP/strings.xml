@@ -79,8 +79,9 @@
     <string name="lock_settings">लक सेटिङहरू</string>
     <!-- Backup Strings -->
     <string name="backup">ब्याकअप</string>
-    <string name="load_backup">ब्याकअप लोड गर्नुहोस्</string>
-    <string name="store_backup">स्टोर ब्याकअप</string>
+    <string name="load_backup">लोड</string>
+    <string name="save_backup">बचत गर्नुहोस्</string>
+    <string name="clear_backup">खाली गर्नुहोस्</string>
     <!-- Settings Strings -->
     <string name="off">बन्द</string>
     <string name="on">अन</string>
@@ -92,8 +93,10 @@
     <string name="settings">सेटिङहरू</string>
     <string name="lang_system">प्रणाली</string>
     <string name="system_default">प्रणाली</string>
+    <string name="delete">मेटाउन</string>
     <string name="hide">लुकाउनुहोस्</string>
     <string name="rename">पुन: नामाकरण गर्नुहोस्</string>
+    <string name="info">जानकारी</string>
     <string name="okay">ल</string>
     <string name="save">बचत गर्नुहोस्</string>
     <string name="show">देखाउनु</string>
@@ -114,6 +117,7 @@
     <string name="text_biometric_login_sub">आफ्नो बायोमेट्रिक प्रमाण प्रयोग गरेर लग इन गर्नुहोस्</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">सबै एपहरू</string>
+    <string name="can_not_delete_system_apps">प्रणाली एपहरू मेटाउन सकिँदैन</string>
     <string name="please_select_app">कृपया एउटा एप चयन गर्नुहोस्</string>
     <string name="drawer_list_empty_hint">कुनै एपहरू फेला परेनन्</string>
     <string name="long_press_for_settings">सेटिङहरूको लागि जहाँसुकै लामो प्रेस गर्नुहोस्</string>
