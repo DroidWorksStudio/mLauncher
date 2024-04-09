@@ -4,6 +4,7 @@
 
 ### Implemented Enhancements:
 
+- Added a extra button for the Backup section of settings.
 - Added Yahoo Brave and Bing search
 
 ## [1.4.9](https://github.com/DroidWorksStudio/mLauncher/tree/1.4.9) - (09, April 2024)
