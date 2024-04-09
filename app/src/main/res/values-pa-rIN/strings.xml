@@ -79,8 +79,9 @@
     <string name="lock_settings">ਲਾਕ ਸੈਟਿੰਗਾਂ</string>
     <!-- Backup Strings -->
     <string name="backup">ਬੈਕਅੱਪ</string>
-    <string name="load_backup">ਬੈਕਅੱਪ ਲੋਡ ਕਰੋ</string>
-    <string name="store_backup">ਸਟੋਰ ਬੈਕਅੱਪ</string>
+    <string name="load_backup">ਲੋਡ ਕਰੋ</string>
+    <string name="save_backup">ਸੇਵ ਕਰੋ</string>
+    <string name="clear_backup">ਸਾਫ਼</string>
     <!-- Settings Strings -->
     <string name="off">ਬੰਦ</string>
     <string name="on">\'ਤੇ</string>
@@ -92,8 +93,10 @@
     <string name="settings">ਸੈਟਿੰਗਾਂ</string>
     <string name="lang_system">ਸਿਸਟਮ</string>
     <string name="system_default">ਸਿਸਟਮ</string>
+    <string name="delete">ਮਿਟਾਓ</string>
     <string name="hide">ਓਹਲੇ</string>
     <string name="rename">ਨਾਮ ਬਦਲੋ</string>
+    <string name="info">ਜਾਣਕਾਰੀ</string>
     <string name="okay">ਠੀਕ ਹੈ</string>
     <string name="save">ਸੇਵ ਕਰੋ</string>
     <string name="show">ਦਿਖਾਓ</string>
@@ -114,6 +117,7 @@
     <string name="text_biometric_login_sub">ਆਪਣੇ ਬਾਇਓਮੈਟ੍ਰਿਕ ਪ੍ਰਮਾਣ ਪੱਤਰ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਲੌਗ ਇਨ ਕਰੋ</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">ਸਾਰੀਆਂ ਐਪਾਂ</string>
+    <string name="can_not_delete_system_apps">ਸਿਸਟਮ ਐਪਾਂ ਨੂੰ ਮਿਟਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ</string>
     <string name="please_select_app">ਕਿਰਪਾ ਕਰਕੇ ਇੱਕ ਐਪ ਚੁਣੋ</string>
     <string name="drawer_list_empty_hint">ਕੋਈ ਐਪਸ ਨਹੀਂ ਮਿਲੇ</string>
     <string name="long_press_for_settings">ਸੈਟਿੰਗਾਂ ਲਈ ਕਿਤੇ ਵੀ ਦੇਰ ਤੱਕ ਦਬਾਓ</string>
