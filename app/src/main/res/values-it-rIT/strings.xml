@@ -79,8 +79,9 @@
     <string name="lock_settings">Blocca impostazioni</string>
     <!-- Backup Strings -->
     <string name="backup">Backup</string>
-    <string name="load_backup">Carica backup</string>
-    <string name="store_backup">Archivia backup</string>
+    <string name="load_backup">Carico</string>
+    <string name="save_backup">Salva</string>
+    <string name="clear_backup">Chiaro</string>
     <!-- Settings Strings -->
     <string name="off">Off</string>
     <string name="on">Acceso</string>
@@ -92,8 +93,10 @@
     <string name="settings">Impostazioni</string>
     <string name="lang_system">Sistema</string>
     <string name="system_default">Sistema</string>
+    <string name="delete">Eliminare</string>
     <string name="hide">Nascondi</string>
     <string name="rename">Rinomina</string>
+    <string name="info">Informazioni</string>
     <string name="okay">Ok</string>
     <string name="save">Salva</string>
     <string name="show">Mostra</string>
@@ -114,6 +117,7 @@
     <string name="text_biometric_login_sub">Accedi utilizzando le tue credenziali biometriche</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Tutte le app</string>
+    <string name="can_not_delete_system_apps">Impossibile eliminare le app di sistema</string>
     <string name="please_select_app">Seleziona un\'app</string>
     <string name="drawer_list_empty_hint">Nessuna app trovata</string>
     <string name="long_press_for_settings">Premi a lungo ovunque per le impostazioni</string>
