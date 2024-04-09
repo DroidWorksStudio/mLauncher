@@ -1,0 +1,6 @@
+Sürüm: 1.4.8
+
+Hata düzeltmeleri:
+
+Son uygulamalar etkinleştirildiğinde uygulama listesinin kopyaları göstermeyecek şekilde düzeltildi
+Yedekleme sistemi çalışmadığı için düzeltildi.

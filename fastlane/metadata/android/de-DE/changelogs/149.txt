@@ -1,0 +1,15 @@
+Version: 1.4.9
+
+Implementierte Verbesserungen:
+
+Das Kontextmenü der App wurde überarbeitet
+
+Fehlerbehebung:
+
+Das fDroid-App-Symbol für die nächste Version wurde korrigiert.
+Schnelle Umgehung der Einstellungen hinzugefügt
+Aktualisierte Nerd-Schriftart
+
+Sprachunterstützung:
+
+Aktualisierte Sprachdateien.

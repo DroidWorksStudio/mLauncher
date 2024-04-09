@@ -1,0 +1,15 @@
+Version: 1.4.9
+
+Enhancements implemented:
+
+Revamped in menu context app
+
+Bug Fixes:
+
+Fixit icon app fDroid pro altera emissione.
+Velox addidit Occasus bypass Back
+Updated Nerd Font
+
+Support Lingua:
+
+Tabularia Linguarum Renovata.

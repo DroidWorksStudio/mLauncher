@@ -1,0 +1,15 @@
+Version: 1.4.9
+
+Implementerade förbättringar:
+
+Uppdaterade appens snabbmeny
+
+Bug fixar:
+
+Fixade fDroid-appikonen för nästa utgåva.
+Lade till Snabbinställningar Bypass Back
+Uppdaterat Nerd Font
+
+Språkstöd:
+
+Uppdaterade språkfiler.

@@ -1,0 +1,15 @@
+Versioun: 1.4.9
+
+Ëmgesat Verbesserungen:
+
+Den App Kontextmenü nei ëmgewandelt
+
+Bug Fixes:
+
+FDroid App Ikon fir déi nächst Verëffentlechung fixéiert.
+Zousätzlech Quick Settings Bypass Back
+Aktualiséiert Nerd Schrëft
+
+Sprooch Ënnerstëtzung:
+
+Aktualiséiert Sproochdateien.

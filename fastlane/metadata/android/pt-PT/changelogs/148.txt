@@ -1,0 +1,6 @@
+Versão: 1.4.8
+
+Correções de bugs:
+
+Corrigida a lista de aplicativos para não mostrar duplicatas quando aplicativos recentes estão ativados
+Corrigido o sistema de backup porque não estava funcionando.

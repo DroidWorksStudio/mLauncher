@@ -1,0 +1,6 @@
+Verzija: 1.4.8
+
+Ispravke pogrešaka:
+
+Popravljen popis aplikacija tako da ne prikazuje duplikate kada su nedavne aplikacije omogućene
+Popravio je sigurnosni sustav jer nije radio.

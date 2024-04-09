@@ -1,0 +1,6 @@
+Verżjoni: 1.4.8
+
+Soluzzjonijiet ta' Bug:
+
+Irranġa l-lista tal-apps biex ma turix id-duplikati meta l-apps riċenti jkunu attivati
+Irranġa s-sistema tal-backup peress li ma kinitx qed taħdem.

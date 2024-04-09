@@ -1,0 +1,6 @@
+Bersyon: 1.4.8
+
+Mga Pag-aayos ng Bug:
+
+Inayos ang listahan ng app upang hindi magpakita ng mga duplicate kapag pinagana ang mga kamakailang app
+Inayos ang backup system dahil hindi ito gumagana.

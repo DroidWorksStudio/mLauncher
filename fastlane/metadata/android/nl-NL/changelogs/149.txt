@@ -1,0 +1,15 @@
+Versie: 1.4.9
+
+Geïmplementeerde verbeteringen:
+
+Het app-contextmenu vernieuwd
+
+Bugfixes:
+
+Het fDroid app-pictogram opgelost voor de volgende release.
+Snelle instellingen toegevoegd Terug
+Bijgewerkt Nerd-lettertype
+
+Taalondersteuning:
+
+Bijgewerkte taalbestanden.

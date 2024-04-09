@@ -1,0 +1,6 @@
+Versie: 1.4.8
+
+Bugfixes:
+
+Probleem opgelost dat de app-lijst geen duplicaten weergeeft wanneer recente apps zijn ingeschakeld
+Het back-upsysteem is gerepareerd omdat het niet werkte.

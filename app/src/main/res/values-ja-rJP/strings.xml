@@ -92,8 +92,10 @@
     <string name="settings">設定</string>
     <string name="lang_system">システム</string>
     <string name="system_default">システム</string>
+    <string name="delete">消去</string>
     <string name="hide">非表示</string>
     <string name="rename">名前の変更</string>
+    <string name="info">情報</string>
     <string name="okay">OK</string>
     <string name="save">保存</string>
     <string name="show">表示</string>
@@ -114,6 +116,7 @@
     <string name="text_biometric_login_sub">生体認証資格情報を使用してログインします</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">すべてのアプリ</string>
+    <string name="can_not_delete_system_apps">システムアプリを削除できない</string>
     <string name="please_select_app">アプリを選択してください</string>
     <string name="drawer_list_empty_hint">アプリが見つかりません</string>
     <string name="long_press_for_settings">設定用に長押ししてください</string>

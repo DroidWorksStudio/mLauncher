@@ -1,0 +1,6 @@
+Wersja: 1.4.8
+
+Poprawki błędów:
+
+Naprawiono listę aplikacji, która nie wyświetlała duplikatów, gdy włączone są najnowsze aplikacje
+Naprawiono system tworzenia kopii zapasowych, ponieważ nie działał.

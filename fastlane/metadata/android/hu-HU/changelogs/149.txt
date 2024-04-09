@@ -1,0 +1,15 @@
+Verzió: 1.4.9
+
+Megvalósított fejlesztések:
+
+Megújult az alkalmazás helyi menüje
+
+Hibajavítások:
+
+Javítva az fDroid alkalmazás ikonja a következő kiadáshoz.
+Hozzáadott Gyorsbeállítások Kihagyás Vissza
+Frissített Nerd betűtípus
+
+Nyelvi támogatás:
+
+Frissített nyelvi fájlok.
