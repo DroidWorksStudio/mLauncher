@@ -79,8 +79,9 @@
     <string name="lock_settings">Spär Astellunge</string>
     <!-- Backup Strings -->
     <string name="backup">Backupsatellit</string>
-    <string name="load_backup">Lueden Backupsatellit</string>
-    <string name="store_backup">Store Backupsatellit</string>
+    <string name="load_backup">Lueden</string>
+    <string name="save_backup">Spueren</string>
+    <string name="clear_backup">Kloer</string>
     <!-- Settings Strings -->
     <string name="off">Off</string>
     <string name="on">Op</string>
@@ -92,8 +93,10 @@
     <string name="settings">Astellungen</string>
     <string name="lang_system">System</string>
     <string name="system_default">System</string>
+    <string name="delete">Läschen</string>
     <string name="hide">Verstoppen</string>
     <string name="rename">ëmbenennen</string>
+    <string name="info">Info</string>
     <string name="okay">Okay</string>
     <string name="save">Spueren</string>
     <string name="show">Show</string>
@@ -114,6 +117,7 @@
     <string name="text_biometric_login_sub">Mellt Iech un mat Ärem biometresche Umeldungsinformatioun</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">All Apps</string>
+    <string name="can_not_delete_system_apps">Kann net System Apps läschen</string>
     <string name="please_select_app">Wielt w.e.g. eng App</string>
     <string name="drawer_list_empty_hint">Keng Apps fonnt</string>
     <string name="long_press_for_settings">Laang Press iwwerall fir Astellungen</string>
