@@ -1,0 +1,6 @@
+Leagan: 1.4.8
+
+Ceartúcháin fhabht:
+
+D'éirigh leis an liosta aipeanna gan dúbailt a thaispeáint nuair atá aipeanna le déanaí cumasaithe
+Deisigh an córas cúltaca toisc nach raibh sé ag obair.
