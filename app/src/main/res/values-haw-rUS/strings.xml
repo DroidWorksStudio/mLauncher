@@ -79,8 +79,9 @@
     <string name="lock_settings">Hoʻonohonoho laka</string>
     <!-- Backup Strings -->
     <string name="backup">Kākoʻo</string>
-    <string name="load_backup">Hoʻouka i ka waihona</string>
-    <string name="store_backup">Waihona Waihona</string>
+    <string name="load_backup">Haawe</string>
+    <string name="save_backup">Mālama</string>
+    <string name="clear_backup">Akaka</string>
     <!-- Settings Strings -->
     <string name="off">Paʻa</string>
     <string name="on">Ma ka</string>
@@ -92,8 +93,10 @@
     <string name="settings">Nā hoʻonohonoho</string>
     <string name="lang_system">Pūnaehana</string>
     <string name="system_default">Pūnaehana</string>
+    <string name="delete">Holoi</string>
     <string name="hide">Huna</string>
     <string name="rename">inoa hou</string>
+    <string name="info">ʻIke</string>
     <string name="okay">ʻAe</string>
     <string name="save">Mālama</string>
     <string name="show">Hōʻike</string>
@@ -114,6 +117,7 @@
     <string name="text_biometric_login_sub">E ʻeʻe me ka hoʻohana ʻana i kāu hōʻoia biometric</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Nā polokalamu a pau</string>
+    <string name="can_not_delete_system_apps">ʻAʻole hiki ke holoi i nā polokalamu Pūnaewele</string>
     <string name="please_select_app">E ʻoluʻolu e koho i kahi polokalamu</string>
     <string name="drawer_list_empty_hint">ʻAʻohe polokalamu i loaʻa</string>
     <string name="long_press_for_settings">E kaomi lōʻihi ma nā wahi a pau no nā hoʻonohonoho</string>
