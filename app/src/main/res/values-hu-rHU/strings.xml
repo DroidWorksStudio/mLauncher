@@ -79,8 +79,9 @@
     <string name="lock_settings">Zárolási beállítások</string>
     <!-- Backup Strings -->
     <string name="backup">biztonsági mentés</string>
-    <string name="load_backup">Biztonsági mentés betöltése</string>
-    <string name="store_backup">Biztonsági mentés tárolása</string>
+    <string name="load_backup">Betöltés</string>
+    <string name="save_backup">Megment</string>
+    <string name="clear_backup">Egyértelmű</string>
     <!-- Settings Strings -->
     <string name="off">Off</string>
     <string name="on">A  oldalon.</string>
@@ -92,8 +93,10 @@
     <string name="settings">Beállítások</string>
     <string name="lang_system">Rendszer</string>
     <string name="system_default">Rendszer</string>
+    <string name="delete">Töröl</string>
     <string name="hide">Rejtsd el</string>
     <string name="rename">Átnevezés</string>
+    <string name="info">Info</string>
     <string name="okay">Oké</string>
     <string name="save">Mentés</string>
     <string name="show">Mutasd meg a</string>
@@ -114,6 +117,7 @@
     <string name="text_biometric_login_sub">Jelentkezzen be biometrikus hitelesítő adataival</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Minden alkalmazás</string>
+    <string name="can_not_delete_system_apps">Nem lehet törölni a rendszeralkalmazásokat</string>
     <string name="please_select_app">Kérjük, válasszon egy alkalmazást</string>
     <string name="drawer_list_empty_hint">Nem találtunk alkalmazásokat</string>
     <string name="long_press_for_settings">Hosszan nyomja meg bárhol a beállításokhoz</string>
