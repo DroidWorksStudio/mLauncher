@@ -79,8 +79,9 @@
     <string name="lock_settings">تنظیمات قفل</string>
     <!-- Backup Strings -->
     <string name="backup">پشتیبان گیری</string>
-    <string name="load_backup">بارگیری نسخه پشتیبان</string>
-    <string name="store_backup">پشتیبان گیری فروشگاه</string>
+    <string name="load_backup">بار</string>
+    <string name="save_backup">صرفه جویی</string>
+    <string name="clear_backup">پاک کردن</string>
     <!-- Settings Strings -->
     <string name="off">خاموش</string>
     <string name="on">بر</string>
@@ -92,8 +93,10 @@
     <string name="settings">تنظیمات</string>
     <string name="lang_system">سیستم</string>
     <string name="system_default">سیستم</string>
+    <string name="delete">حذف</string>
     <string name="hide">پنهان شدن</string>
     <string name="rename">تغییر نام دهید</string>
+    <string name="info">اطلاعات</string>
     <string name="okay">باشه</string>
     <string name="save">صرفه جویی</string>
     <string name="show">نمایش دهید</string>
@@ -114,6 +117,7 @@
     <string name="text_biometric_login_sub">با استفاده از اعتبار بیومتریک خود وارد شوید</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">همه برنامه ها</string>
+    <string name="can_not_delete_system_apps">نمی توان برنامه های سیستم را حذف کرد</string>
     <string name="please_select_app">لطفاً یک برنامه را انتخاب کنید</string>
     <string name="drawer_list_empty_hint">هیچ برنامه ای پیدا نشد</string>
     <string name="long_press_for_settings">برای تنظیمات، هر جایی را به مدت طولانی فشار دهید</string>
