@@ -11,10 +11,10 @@
     <string name="homescreen">Domovská obrazovka</string>
     <string name="alignment">Zarovnání</string>
     <string name="gestures">Gesta</string>
-    <string name="miscellaneous">Smíšený</string>
+    <string name="miscellaneous">Různé</string>
     <!-- Home Strings -->
-    <string name="hidden_apps">Skryté aplikace</string>
-    <string name="reorder_apps">Znovu objednejte aplikace</string>
+    <string name="hidden_apps">Skryté Aplikace</string>
+    <string name="reorder_apps">Změnit pořadí aplikací</string>
     <string name="set_as_default_launcher">Nastavit jako výchozí spouštěč</string>
     <string name="change_default_launcher">Změnit výchozí spouštěč</string>
     <!-- Appearance Strings -->
@@ -24,27 +24,27 @@
     <string name="app_text_size">Velikost textu</string>
     <string name="clock_text_size_multiplier">Násobitel velikosti textu hodin</string>
     <string name="app_padding_size">Velikost odsazení položek</string>
-    <string name="follow_accent_colors">Akcentní barvy</string>
-    <string name="background_opacity">Neprůhlednost pozadí</string>
+    <string name="follow_accent_colors">Doplňková barva</string>
+    <string name="background_opacity">Průhlednost pozadí</string>
     <string name="all_apps_text">Zobrazit text všech aplikací</string>
     <!-- Behavior Strings -->
-    <string name="auto_show_keyboard">Auto show keyboard</string>
+    <string name="auto_show_keyboard">Automaticky zobrazit klávesnici</string>
     <string name="auto_open_apps">Automatické otevření aplikací</string>
-    <string name="display_recent_apps">Zobrazit poslední aplikace</string>
-    <string name="number_of_recents">Počet posledních aplikací</string>
+    <string name="display_recent_apps">Zobrazit nedávne aplikace</string>
+    <string name="number_of_recents">Počet nedávných aplikací</string>
     <string name="filter_strength">Síla filtru</string>
     <string name="search_from_start">Hledání aplikací od začátku.</string>
     <string name="icon_font">Použijte písmo ikony</string>
     <!-- Home-screen Strings -->
-    <string name="apps_on_home_screen">Počet zástupců</string>
-    <string name="pages_on_home_screen">Počet stran</string>
+    <string name="apps_on_home_screen">Počet zkratek</string>
+    <string name="pages_on_home_screen">Počet stránek</string>
     <string name="enable_home_pager">Povolit domovskou stránku</string>
     <string name="show_time">Zobrazit čas</string>
     <string name="show_date">Zobrazit datum</string>
     <string name="show_battery">Zobrazit baterii</string>
     <string name="lock_home_apps">Zamknout aplikace</string>
     <string name="extend_home_apps_area">Rozšířit oblast, na kterou lze kliknout</string>
-    <string name="home_alignment_bottom">Domovská obrazovka Zarovnat dolů</string>
+    <string name="home_alignment_bottom">Zarovnání spodní plochy na domovskej obrazovke</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">Aplikace na domovské obrazovce</string>
     <string name="clock_alignment">Hodiny a datum</string>
@@ -54,10 +54,10 @@
     <string name="short_swipe_down_app">Přejetí dolů</string>
     <string name="short_swipe_left_app">Přejetí vlevo</string>
     <string name="short_swipe_right_app">Přejetí doprava</string>
-    <string name="long_swipe_up_app">Dlouhé stisknutí Přejetí nahoru</string>
+    <string name="long_swipe_up_app">Dlouhé přejetí prstem nahoru</string>
     <string name="long_swipe_down_app">Dlouhé stisknutí Přejetím dolů</string>
-    <string name="long_swipe_left_app">Dlouhé stisknutí Přejetí doleva</string>
-    <string name="long_swipe_right_app">Dlouhé stisknutí Přejetím doprava</string>
+    <string name="long_swipe_left_app">Dlouhé přejetí prstem doleva</string>
+    <string name="long_swipe_right_app">Dlouhé přejetí prstem doprava</string>
     <string name="clock_click_app">Klikněte na hodiny</string>
     <string name="date_click_app">Klikněte na datum</string>
     <string name="double_tap">Dvojité klepnutí</string>
@@ -69,12 +69,12 @@
     <string name="open_quick_settings">Rychlé nastavení</string>
     <string name="show_recents">Show Recents</string>
     <string name="open_power_dialog">Dialog napájení</string>
-    <string name="take_a_screenshot">Udělejte snímek obrazovky</string>
+    <string name="take_a_screenshot">Vytvořit snímek obrazovky</string>
     <string name="left_page">Přejděte na levou stránku</string>
     <string name="right_page">Přejděte na pravou stránku</string>
     <string name="double_tap_to_lock_screen">Zamknout dvojím poklepáním</string>
     <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">Nastavení Velikost textu</string>
+    <string name="settings_text_size">Nastavení Velikosti textu</string>
     <string name="display_hidden_apps">Zobrazit skryté aplikace</string>
     <string name="lock_settings">Nastavení zámku</string>
     <!-- Backup Strings -->
@@ -105,7 +105,7 @@
     <string name="disabled">Zakázáno</string>
     <string name="open">Otevřít</string>
     <string name="close">Zavřít</string>
-    <string name="copy">kopírovat</string>
+    <string name="copy">Kopírovat</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Zrušení ověřování.</string>
     <string name="text_authentication_error">Chyba ověření:%1$s(kód %2$d)</string>
