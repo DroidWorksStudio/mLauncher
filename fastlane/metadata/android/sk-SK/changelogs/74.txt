@@ -1,0 +1,7 @@
+Verzia: 1.4.1
+
+Vylepšenia:
+[Funkcia] – Pridané gestá dlhým stlačením.
+
+Jazyková podpora:
+[Jazyk] Aktualizované jazykové súbory.

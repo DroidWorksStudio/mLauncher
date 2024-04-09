@@ -8,6 +8,10 @@
 - Added Quick Settings Bypass Back
 - Updated Nerd Font
 
+### Language Support:
+
+- Updated Language Files. ([#437](https://github.com/DroidWorksStudio/mLauncher/issues/437))
+
 ## [1.4.8](https://github.com/DroidWorksStudio/mLauncher/tree/1.4.8) - (08, April 2024)
 
 ### Bug Fixes:
