@@ -188,6 +188,18 @@ class AppDrawerFragment : Fragment() {
                             searchQuery = query?.substringAfter("!g ")
                             Constants.URL_GOOGLE_SEARCH
                         }
+                        searchQuery.startsWith("!y ") -> {
+                            searchQuery = query?.substringAfter("!y ")
+                            Constants.URL_YAHOO_SEARCH
+                        }
+                        searchQuery.startsWith("!brv ") -> {
+                            searchQuery = query?.substringAfter("!brv ")
+                            Constants.URL_BRAVE_SEARCH
+                        }
+                        searchQuery.startsWith("!bg ") -> {
+                            searchQuery = query?.substringAfter("!bg ")
+                            Constants.URL_BING_SEARCH
+                        }
                         else -> return false // Handle unsupported search engines or invalid queries
                     }
                     val encodedQuery = Uri.encode(searchQuery)

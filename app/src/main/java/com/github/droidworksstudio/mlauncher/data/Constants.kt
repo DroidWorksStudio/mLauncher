@@ -350,5 +350,8 @@ object Constants {
 
     const val URL_DUCK_SEARCH = "https://duck.co/?q="
     const val URL_GOOGLE_SEARCH = "https://google.com/search?q="
+    const val URL_YAHOO_SEARCH = "https://search.yahoo.com/search?p="
+    const val URL_BING_SEARCH = "https://bing.com/search?q="
+    const val URL_BRAVE_SEARCH = "https://search.brave.com/search?q="
     const val URL_GOOGLE_PLAY_STORE = "https://play.google.com/store/search?c=apps&q"
 }
