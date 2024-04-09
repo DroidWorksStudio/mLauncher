@@ -1,0 +1,6 @@
+Verze: 1.4.8
+
+Oprava chyb:
+
+Opraven seznam aplikací, aby se nezobrazovaly duplikáty, když jsou povoleny nedávné aplikace
+Opraven záložní systém, protože nefungoval.
