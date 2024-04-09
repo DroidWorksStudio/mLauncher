@@ -4,6 +4,7 @@
 
 ### Implemented Enhancements:
 
+- Added Search for Google, DuckDuckGo and Google Play Store
 - Revamped the app context menu ([#438](https://github.com/DroidWorksStudio/mLauncher/issues/438))
 
 ### Bug Fixes:
