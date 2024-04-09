@@ -1,0 +1,15 @@
+Version: 1.4.9
+
+Implementerede forbedringer:
+
+Reviderede app-kontekstmenuen
+
+Fejlrettelser:
+
+Rettede fDroid-appikonet til næste udgivelse.
+Tilføjet hurtige indstillinger Bypass tilbage
+Opdateret Nerd-skrifttype
+
+Sprogsupport:
+
+Opdaterede sprogfiler.
