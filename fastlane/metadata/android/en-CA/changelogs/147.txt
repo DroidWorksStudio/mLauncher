@@ -1,5 +1,0 @@
-Version: 1.4.7
-
-Bug Fixes:
-
-Fixed RENAME from displaying in all list areas of the app.

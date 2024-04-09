@@ -1,0 +1,6 @@
+Version: 1.4.8
+
+Bug Fixes:
+
+Fixed the app list to not show duplicates when recent apps is enabled
+Fixed the backup system as it was not working.

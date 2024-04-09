@@ -1,9 +1,0 @@
-Version: 1.4.4
-
-Enhancement:
-[Feature] - Added a fragment for Re ordering apps.
-[Feature] - Added the ability to change clock size independently.
-
-Language Support:
-
-[Language] Updated Language Files.
