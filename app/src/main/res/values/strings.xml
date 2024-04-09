@@ -89,8 +89,9 @@
 
     <!-- Backup Strings -->
     <string name="backup">Backup</string>
-    <string name="load_backup">Load Backup</string>
-    <string name="store_backup">Store Backup</string>
+    <string name="load_backup">Load</string>
+    <string name="save_backup">Save</string>
+    <string name="clear_backup">Clear</string>
 
     <!-- Settings Strings -->
     <string name="off">Off</string>
