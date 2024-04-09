@@ -146,6 +146,7 @@ object Constants {
         Russian,
         Serbian,
         Sindhi,
+        Slovak,
         Spanish,
         Swahili,
         Swedish,
@@ -202,6 +203,7 @@ object Constants {
                 Russian -> "Русский"
                 Serbian -> "Српски"
                 Sindhi -> "سنڌي"
+                Slovak -> "slovenský"
                 Spanish -> "Español"
                 Swahili -> "kiswahili"
                 Swedish -> "Svenska"
@@ -264,6 +266,7 @@ object Constants {
                 Russian -> "ru"
                 Serbian -> "sr"
                 Sindhi -> "sd"
+                Slovak -> "sk"
                 Spanish -> "es"
                 Swahili -> "sw"
                 Swedish -> "sv"
@@ -344,4 +347,6 @@ object Constants {
             }
         }
     }
+
+    const val URL_DUCK_SEARCH = "https://duck.co/?q="
 }
