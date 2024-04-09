@@ -79,8 +79,9 @@
     <string name="lock_settings">Cincinno Optiones</string>
     <!-- Backup Strings -->
     <string name="backup">Tergum</string>
-    <string name="load_backup">Tergum onus</string>
-    <string name="store_backup">Tergum copia</string>
+    <string name="load_backup">Load</string>
+    <string name="save_backup">salvare</string>
+    <string name="clear_backup">Patet</string>
     <!-- Settings Strings -->
     <string name="off">Off</string>
     <string name="on">On</string>
@@ -92,8 +93,10 @@
     <string name="settings">Occasus</string>
     <string name="lang_system">Systema</string>
     <string name="system_default">Systema</string>
+    <string name="delete">Delere</string>
     <string name="hide">Celare</string>
     <string name="rename">Rename</string>
+    <string name="info">Info</string>
     <string name="okay">Bene</string>
     <string name="save">salvare</string>
     <string name="show">Ostendere</string>
@@ -114,6 +117,7 @@
     <string name="text_biometric_login_sub">Log in usus tuos biometric credential</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Omnes apps</string>
+    <string name="can_not_delete_system_apps">Non potest Delere Ratio Apps</string>
     <string name="please_select_app">Placere eligere app</string>
     <string name="drawer_list_empty_hint">Non apps invenerunt</string>
     <string name="long_press_for_settings">Long torcular huc ad occasus</string>
