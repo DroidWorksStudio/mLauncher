@@ -37,7 +37,7 @@ import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.isSystemApp
 import com.github.droidworksstudio.mlauncher.helper.getHexFontColor
 import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
 import com.github.droidworksstudio.mlauncher.helper.openAppInfo
-import com.github.droidworksstudio.mlauncher.helper.showToastLong
+import com.github.droidworksstudio.mlauncher.helper.showToastShort
 
 class AppDrawerFragment : Fragment() {
 
@@ -264,7 +264,7 @@ class AppDrawerFragment : Fragment() {
     private fun appDeleteListener(): (appModel: AppModel) -> Unit =
         { appModel ->
             if (requireContext().isSystemApp(appModel.appPackage))
-                showToastLong(requireContext(),getString(R.string.delete))
+                showToastShort(requireContext(),getString(R.string.can_not_delete_system_apps))
             else {
                 val appPackage = appModel.appPackage
                 val intent = Intent(Intent.ACTION_DELETE)
@@ -277,6 +277,7 @@ class AppDrawerFragment : Fragment() {
         { appPackage, appAlias ->
             val prefs = Prefs(requireContext())
             prefs.setAppAlias(appPackage, appAlias)
+            findNavController().popBackStack()
         }
     private fun renameListener(flag: AppDrawerFlag, i: Int) {
         val name = binding.search.query.toString().trim()

@@ -98,7 +98,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/renameLayout"
+        android:id="@+id/appRenameLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:animateLayoutChanges="true"
@@ -126,7 +126,7 @@
             android:textColorHint="?attr/primaryColorTrans50" />
 
         <TextView
-            android:id="@+id/tvSaveRename"
+            android:id="@+id/appSaveRename"
             style="@style/TextSmallBold"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"

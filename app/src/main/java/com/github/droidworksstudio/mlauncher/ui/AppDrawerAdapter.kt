@@ -8,6 +8,7 @@ import android.view.Gravity.*
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.EditorInfo
 import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.appcompat.content.res.AppCompatResources
@@ -21,8 +22,10 @@ import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Constants.AppDrawerFlag
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.AdapterAppDrawerBinding
+import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.isSystemApp
 import com.github.droidworksstudio.mlauncher.helper.dp2px
 import com.github.droidworksstudio.mlauncher.helper.getHexFontColor
+import com.github.droidworksstudio.mlauncher.helper.showKeyboard
 
 class AppDrawerAdapter(
     private var flag: AppDrawerFlag,
@@ -70,7 +73,7 @@ class AppDrawerAdapter(
             appHideListener(flag, appModel)
         }
 
-        holder.appRename.setOnClickListener {
+        holder.appSaveRename.setOnClickListener {
             val name = holder.appRenameEdit.text.toString().trim()
             appModel.appAlias = name
             notifyItemChanged(holder.absoluteAdapterPosition)
@@ -163,10 +166,12 @@ class AppDrawerAdapter(
 
     class ViewHolder(itemView: AdapterAppDrawerBinding) : RecyclerView.ViewHolder(itemView.root) {
         val appHide: TextView = itemView.appHide
-        val appRename: TextView = itemView.appRename
         val appRenameEdit: EditText = itemView.appRenameEdit
+        val appSaveRename: TextView = itemView.appSaveRename
 
         private val appHideLayout: LinearLayout = itemView.appHideLayout
+        private val appRenameLayout: LinearLayout = itemView.appRenameLayout
+        private val appRename: TextView = itemView.appRename
         private val appTitle: TextView = itemView.appTitle
         private val appTitleFrame: FrameLayout = itemView.appTitleFrame
         private val appInfo: TextView = itemView.appInfo
@@ -182,11 +187,28 @@ class AppDrawerAdapter(
             appDeleteListener: (AppModel) -> Unit
         ) =
             with(itemView) {
+                val prefs = Prefs(context)
                 appHideLayout.visibility = View.GONE
 
                 // set show/hide icon
                 val drawable = if (flag == AppDrawerFlag.HiddenApps) { R.drawable.visibility } else { R.drawable.visibility_off }
-                appHide.setCompoundDrawablesWithIntrinsicBounds(0, drawable,0, 0,)
+                appHide.setCompoundDrawablesWithIntrinsicBounds(0, drawable,0, 0)
+
+                val appName = appModel.appAlias.ifEmpty {
+                    appModel.appLabel
+                }
+
+                appRename.apply {
+                    setOnClickListener {
+                        if (appModel.appPackage.isNotEmpty()) {
+                            appRenameEdit.hint = appModel.appLabel
+                            appRenameLayout.visibility = View.VISIBLE
+                            appHideLayout.visibility = View.GONE
+                            appRenameEdit.showKeyboard()
+                            appRenameEdit.imeOptions = EditorInfo.IME_ACTION_DONE
+                        }
+                    }
+                }
 
                 appRenameEdit.apply {
                     addTextChangedListener(object : TextWatcher {
@@ -204,39 +226,29 @@ class AppDrawerAdapter(
                             before: Int, count: Int
                         ) {
                             if (appRenameEdit.text.isEmpty()) {
-                                appRename.text = context.getString(R.string.reset)
+                                appSaveRename.text = context.getString(R.string.reset)
                             } else if (appRenameEdit.text.toString() == appModel.appAlias) {
-                                appRename.text = context.getString(R.string.cancel)
+                                appSaveRename.text = context.getString(R.string.cancel)
                             } else {
-                                appRename.text = context.getString(R.string.rename)
+                                appSaveRename.text = context.getString(R.string.rename)
                             }
-
                         }
                     })
-                }
-
-                val appName = appModel.appAlias.ifEmpty {
-                    appModel.appLabel
+                    // set current name as default text in EditText
+                    text = Editable.Factory.getInstance().newEditable(appName)
                 }
 
                 appTitle.text = appName
-
-                // set current name as default text in EditText
-                appRenameEdit.text = Editable.Factory.getInstance().newEditable(appName)
 
                 // set text gravity
                 val params = appTitle.layoutParams as FrameLayout.LayoutParams
                 params.gravity = appLabelGravity
                 appTitle.layoutParams = params
 
-
                 // add icon next to app name to indicate that this app is installed on another profile
                 if (appModel.user != android.os.Process.myUserHandle()) {
                     val icon = AppCompatResources.getDrawable(context, R.drawable.work_profile)
-                    val prefs = Prefs(context)
                     val px = dp2px(resources, prefs.textSizeLauncher)
-                    val padding = dp2px(resources, prefs.textSizeLauncher)
-                    appTitle.updatePadding(left=padding, right=padding)
                     icon?.setBounds(0, 0, px, px)
                     if (appLabelGravity == LEFT) {
                         appTitle.setCompoundDrawables(null, null, icon, null)
@@ -248,12 +260,23 @@ class AppDrawerAdapter(
                     appTitle.setCompoundDrawables(null, null, null, null)
                 }
 
+                val padding = dp2px(resources, 24)
+                appTitle.updatePadding(left=padding, right=padding)
+
                 appTitleFrame.apply {
                     setOnClickListener {
                         appClickListener(appModel)
                     }
                     setOnLongClickListener {
-                        appHideLayout.visibility = View.VISIBLE
+                        val openApp = flag == AppDrawerFlag.LaunchApp
+                        if (openApp) {
+                            try {
+                                appDelete.alpha = if (context.isSystemApp(appModel.appPackage)) 0.3f else 1.0f
+                                appHideLayout.visibility = View.VISIBLE
+                            } catch (e: Exception) {
+                                e.printStackTrace()
+                            }
+                        }
                         true
                     }
                 }
