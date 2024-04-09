@@ -4,7 +4,7 @@
 
 ### Implemented Enhancements:
 
-- Feat/revamped the app context menu ([#438](https://github.com/DroidWorksStudio/mLauncher/issues/438))
+- Revamped the app context menu ([#438](https://github.com/DroidWorksStudio/mLauncher/issues/438))
 
 ### Bug Fixes:
 
