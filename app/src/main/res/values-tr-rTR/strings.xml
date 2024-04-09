@@ -79,8 +79,9 @@
     <string name="lock_settings">Kilit Ayarları</string>
     <!-- Backup Strings -->
     <string name="backup">Destek olmak</string>
-    <string name="load_backup">Yedeklemeyi Yükle</string>
-    <string name="store_backup">Mağaza Yedekleme</string>
+    <string name="load_backup">Yük</string>
+    <string name="save_backup">Kaydetmek</string>
+    <string name="clear_backup">Temizlemek</string>
     <!-- Settings Strings -->
     <string name="off">Kapalı</string>
     <string name="on">Açık</string>
@@ -92,8 +93,10 @@
     <string name="settings">Ayarlar</string>
     <string name="lang_system">Sistem</string>
     <string name="system_default">Sistem</string>
+    <string name="delete">Silmek</string>
     <string name="hide">Gizle</string>
     <string name="rename">Yeniden Adlandır</string>
+    <string name="info">Bilgi</string>
     <string name="okay">Tamam</string>
     <string name="save">Kaydet</string>
     <string name="show">Göster</string>
@@ -114,6 +117,7 @@
     <string name="text_biometric_login_sub">Biyometrik kimlik bilgilerinizi kullanarak giriş yapın</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Tüm uygulamalar</string>
+    <string name="can_not_delete_system_apps">Sistem Uygulamaları Silinemiyor</string>
     <string name="please_select_app">Lütfen bir uygulama seçin</string>
     <string name="drawer_list_empty_hint">Herhangi bir uygulama bulunamadı</string>
     <string name="long_press_for_settings">Ayarlar için herhangi bir yere uzun bas</string>
