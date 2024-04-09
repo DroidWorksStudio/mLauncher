@@ -1,0 +1,22 @@
+Verzia: 1.4.5
+
+Vylepšenie:
+
+Do aplikácií na domovskej obrazovke bola pridaná aplikácia please_select_app (#411)
+
+Opravy chýb:
+
+Opravené nastavenia zmeny poradia (#416)
+Opravte priestor názvov pre projekt
+Opravené FINANCOVANIE.yml
+
+Vydanie:
+
+Aktualizujte verziu vydania na 145 (v1.4.5)
+
+Zmiešaný:
+
+Aktualizujte changelog.yml
+Pridané podrobnosti o aplikácii
+Zmenená ikona aplikácie
+Premenujte vyhľadávač na FuzzyFinder
