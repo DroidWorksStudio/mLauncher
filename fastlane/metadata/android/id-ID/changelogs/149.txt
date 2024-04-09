@@ -1,0 +1,15 @@
+Versi: 1.4.9
+
+Peningkatan yang Diimplementasikan:
+
+Mengubah menu konteks aplikasi
+
+Perbaikan kerusakan:
+
+Memperbaiki ikon aplikasi fDroid untuk rilis berikutnya.
+Menambahkan Pengaturan Cepat Bypass Kembali
+Font Nerd yang Diperbarui
+
+Dukungan bahasa:
+
+File Bahasa yang Diperbarui.
