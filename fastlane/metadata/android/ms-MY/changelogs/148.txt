@@ -1,0 +1,6 @@
+Versi: 1.4.8
+
+Pembetulan Pepijat:
+
+Memperbaiki senarai apl untuk tidak menunjukkan pendua apabila apl terbaharu didayakan
+Memperbaiki sistem sandaran kerana ia tidak berfungsi.
