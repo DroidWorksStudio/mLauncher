@@ -1,0 +1,15 @@
+Version: 1.4.9
+
+Fanatsarana nampiharina:
+
+Nohavaozina ny menu contexte app
+
+Fanamboarana bug:
+
+Namboarina ny kisary fampiharana fDroid ho an'ny famoahana manaraka.
+Nampiana Fanitsiana haingana Bypass Back
+Nohavaozina ny endritsoratra Nerd
+
+Fanohanana ny fiteny:
+
+Rakitry ny fiteny nohavaozina.
