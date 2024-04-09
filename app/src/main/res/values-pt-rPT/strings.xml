@@ -79,8 +79,9 @@
     <string name="lock_settings">Configurações de bloqueio</string>
     <!-- Backup Strings -->
     <string name="backup">Cópia de segurança</string>
-    <string name="load_backup">Carregar Backup</string>
-    <string name="store_backup">Armazenar backup</string>
+    <string name="load_backup">Carregar</string>
+    <string name="save_backup">Salvar</string>
+    <string name="clear_backup">Claro</string>
     <!-- Settings Strings -->
     <string name="off">Desligado</string>
     <string name="on">Em</string>
@@ -92,8 +93,10 @@
     <string name="settings">Definições</string>
     <string name="lang_system">Sistema</string>
     <string name="system_default">Sistema</string>
+    <string name="delete">Excluir</string>
     <string name="hide">Esconder</string>
     <string name="rename">Renomear</string>
+    <string name="info">Informações</string>
     <string name="okay">Está bem</string>
     <string name="save">Guardar</string>
     <string name="show">Mostrar</string>
@@ -114,6 +117,7 @@
     <string name="text_biometric_login_sub">Faça login usando sua credencial biométrica</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Todas as aplicações</string>
+    <string name="can_not_delete_system_apps">Não é possível excluir aplicativos do sistema</string>
     <string name="please_select_app">Selecione um aplicativo</string>
     <string name="drawer_list_empty_hint">Nenhuma aplicação encontrada</string>
     <string name="long_press_for_settings">Prensa longa em qualquer lugar para configurações</string>
