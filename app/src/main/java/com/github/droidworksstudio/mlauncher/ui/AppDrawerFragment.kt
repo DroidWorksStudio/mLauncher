@@ -2,6 +2,8 @@ package com.github.droidworksstudio.mlauncher.ui
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.text.Spannable
@@ -31,9 +33,11 @@ import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Constants.AppDrawerFlag
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentAppDrawerBinding
+import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.isSystemApp
 import com.github.droidworksstudio.mlauncher.helper.getHexFontColor
 import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
 import com.github.droidworksstudio.mlauncher.helper.openAppInfo
+import com.github.droidworksstudio.mlauncher.helper.showToastShort
 
 class AppDrawerFragment : Fragment() {
 
@@ -91,9 +95,10 @@ class AppDrawerFragment : Fragment() {
             flag,
             gravity,
             appClickListener(viewModel, flag, n),
-            appInfoListener(),
+            appDeleteListener(),
+            this.appRenameListener(),
             appShowHideListener(),
-            this.appRenameListener()
+            appInfoListener()
         )
 
         val searchTextView = binding.search.findViewById<TextView>(R.id.search_src_text)
@@ -256,16 +261,33 @@ class AppDrawerFragment : Fragment() {
             else
                 findNavController().popBackStack()
         }
-
-    private fun appInfoListener(): (appModel: AppModel) -> Unit =
+    private fun appDeleteListener(): (appModel: AppModel) -> Unit =
         { appModel ->
-            openAppInfo(
-                requireContext(),
-                appModel.user,
-                appModel.appPackage
-            )
-            findNavController().popBackStack(R.id.mainFragment, false)
+            if (requireContext().isSystemApp(appModel.appPackage))
+                showToastShort(requireContext(),getString(R.string.can_not_delete_system_apps))
+            else {
+                val appPackage = appModel.appPackage
+                val intent = Intent(Intent.ACTION_DELETE)
+                intent.data = Uri.parse("package:$appPackage")
+                requireContext().startActivity(intent)
+            }
+
         }
+    private fun appRenameListener(): (appPackage: String, appAlias: String) -> Unit =
+        { appPackage, appAlias ->
+            val prefs = Prefs(requireContext())
+            prefs.setAppAlias(appPackage, appAlias)
+            findNavController().popBackStack()
+        }
+    private fun renameListener(flag: AppDrawerFlag, i: Int) {
+        val name = binding.search.query.toString().trim()
+        if (name.isEmpty()) return
+        if (flag == AppDrawerFlag.SetHomeApp) {
+            Prefs(requireContext()).setHomeAppName(i, name)
+        }
+
+        findNavController().popBackStack()
+    }
 
     private fun appShowHideListener(): (flag: AppDrawerFlag, appModel: AppModel) -> Unit =
         { flag, appModel ->
@@ -282,21 +304,16 @@ class AppDrawerFragment : Fragment() {
 
             if (newSet.isEmpty()) findNavController().popBackStack()
         }
-    private fun appRenameListener(): (appPackage: String, appAlias: String) -> Unit =
-        { appPackage, appAlias ->
-            val prefs = Prefs(requireContext())
-            prefs.setAppAlias(appPackage, appAlias)
-        }
 
-    private fun renameListener(flag: AppDrawerFlag, i: Int) {
-        val name = binding.search.query.toString().trim()
-        if (name.isEmpty()) return
-        if (flag == AppDrawerFlag.SetHomeApp) {
-            Prefs(requireContext()).setHomeAppName(i, name)
+    private fun appInfoListener(): (appModel: AppModel) -> Unit =
+        { appModel ->
+            openAppInfo(
+                requireContext(),
+                appModel.user,
+                appModel.appPackage
+            )
+            findNavController().popBackStack(R.id.mainFragment, false)
         }
-
-        findNavController().popBackStack()
-    }
 
     private fun getRecyclerViewOnScrollListener(): RecyclerView.OnScrollListener {
         return object : RecyclerView.OnScrollListener() {

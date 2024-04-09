@@ -103,7 +103,9 @@
     <string name="settings">Settings</string>
     <string name="lang_system">System</string>
     <string name="system_default">System</string>
+    <string name="delete">Delete</string>
     <string name="hide">Hide</string>
+    <string name="info">Info</string>
     <string name="rename">Rename</string>
     <string name="okay">Okay</string>
     <string name="save">Save</string>
@@ -127,6 +129,7 @@
 
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>
+    <string name="can_not_delete_system_apps">Can\'t Delete System Apps</string>
     <string name="please_select_app">Please select an app</string>
     <string name="drawer_list_empty_hint">No apps found</string>
     <string name="long_press_for_settings">Long press anywhere for settings</string>

@@ -2,6 +2,10 @@
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Implemented Enhancements:
+
+- Feat/revamped the app context menu ([#438](https://github.com/DroidWorksStudio/mLauncher/issues/438))
+
 ### Bug Fixes:
 
 - Fixed the fDroid app icon for next release.

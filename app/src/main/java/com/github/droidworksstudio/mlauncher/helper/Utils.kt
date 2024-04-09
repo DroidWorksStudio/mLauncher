@@ -35,8 +35,7 @@ import androidx.appcompat.view.ContextThemeWrapper
 import androidx.core.app.ActivityCompat
 import com.github.droidworksstudio.mlauncher.BuildConfig
 import com.github.droidworksstudio.mlauncher.data.AppModel
-import com.github.droidworksstudio.mlauncher.data.Constants.BACKUP_READ
-import com.github.droidworksstudio.mlauncher.data.Constants.BACKUP_WRITE
+import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -396,12 +395,6 @@ fun Context.openUrl(url: String) {
 }
 */
 
-fun uninstallApp(context: Context, appPackage: String) {
-    val intent = Intent(Intent.ACTION_DELETE)
-    intent.data = Uri.parse("package:$appPackage")
-    context.startActivity(intent)
-}
-
 fun dp2px(resources: Resources, dp: Int): Int {
     return TypedValue.applyDimension(
         TypedValue.COMPLEX_UNIT_DIP,
@@ -416,7 +409,7 @@ fun storeFile(activity: Activity) {
         type = "application/json"
         putExtra(Intent.EXTRA_TITLE, "backup.json")
     }
-    ActivityCompat.startActivityForResult(activity, intent, BACKUP_WRITE, null)
+    ActivityCompat.startActivityForResult(activity, intent, Constants.BACKUP_WRITE, null)
 }
 
 fun loadFile(activity: Activity) {
@@ -424,7 +417,7 @@ fun loadFile(activity: Activity) {
         addCategory(Intent.CATEGORY_OPENABLE)
         type = "application/json"
     }
-    ActivityCompat.startActivityForResult(activity, intent, BACKUP_READ, null)
+    ActivityCompat.startActivityForResult(activity, intent, Constants.BACKUP_READ, null)
 }
 
 @RequiresApi(Build.VERSION_CODES.Q)
