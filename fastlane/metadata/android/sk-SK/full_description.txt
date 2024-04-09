@@ -1,0 +1,75 @@
+Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimálne a čisté.
+
+# Rozvetvený s extra funkciami
+
+- Odstránený neporiadok, ako sú reklamy a odkazy
+- Môžete premenovať aplikácie na paneli aplikácií (Premenovanie aplikácií na domovskej obrazovke je už podporované. Stačí dlho kliknúť na aplikáciu na domovskej obrazovke a začať písať)
+- Pridali sme oveľa viac možností pre gestá na domovskej obrazovke:
+    - Gestá sú teraz:
+        - Potiahnutím nahor, nadol, doľava, doprava
+        - Kliknutím na hodiny
+        - Kliknutím na dátum
+    - Možné akcie teraz zahŕňajú:
+        - Otvorte špecifikovanú aplikáciu
+        - Zobrazte zoznam aplikácií
+        - Uzamknutie obrazovky
+        - Zobraziť naposledy otvorené aplikácie
+        - Otvorenie oznamovacej zásuvky
+        - Otvorenie rýchlych nastavení
+        - Dialógové okno napájania
+        - Urobte snímku obrazovky
+        - Zakázať gesto
+- Hodiny môžete umiestniť aj nezávisle od domácich aplikácií
+- Zmeňte zarovnanie aplikácií v zásuvke aplikácií
+- Nastavenia uzamknutia za biometriou (prepínač)
+- Zmeňte veľkosť písma
+- Odstránené povolenie na internet. Nikdy neviete, čo o vás chce vývojár aplikácie vedieť.
+
+## Preklady:
+
+- Veľa ľudí preložilo aplikáciu do nasledujúcich jazykov. Veľká vďaka vám všetkým.
+  - arabčina
+  - albánsky
+  - bulharčina
+  - čínsky
+  - chorvátsky
+  - český
+  - Dánsky
+  - Angličtina
+  - estónsky
+  - Filipínsky
+  - fínsky
+  - francúzsky
+  - gruzínsky
+  - Nemčina
+  - grécky
+  - havajský
+  - hebrejsky
+  - hindčina
+  - maďarčina
+  - islandský
+  - indonézsky
+  - írsky
+  - taliansky
+  - Japonec
+  - kórejský
+  - litovský
+  - luxemburský
+  - malajčina
+  - madagaskarský
+  - malajálamčina
+  - nórsky
+  - Nepálsky
+  - perzský
+  - poľský
+  - portugalčina (európska)
+  - pandžábsky
+  - ruský
+  - srbský
+  - Sindhi
+  - španielčina
+  - švédsky
+  - thajčina
+  - turecký
+  - ukrajinský
+  - Vietnamci
