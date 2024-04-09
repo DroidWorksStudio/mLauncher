@@ -79,8 +79,9 @@
     <string name="lock_settings">Pengaturan Kunci</string>
     <!-- Backup Strings -->
     <string name="backup">Cadangan</string>
-    <string name="load_backup">Muat Cadangan</string>
-    <string name="store_backup">Simpan Cadangan</string>
+    <string name="load_backup">Memuat</string>
+    <string name="save_backup">Menyimpan</string>
+    <string name="clear_backup">Jernih</string>
     <!-- Settings Strings -->
     <string name="off">Mati</string>
     <string name="on">Aktif</string>
@@ -92,8 +93,10 @@
     <string name="settings">Pengaturan</string>
     <string name="lang_system">Sistem</string>
     <string name="system_default">Sistem</string>
+    <string name="delete">Menghapus</string>
     <string name="hide">Sembunyikan</string>
     <string name="rename">Ganti nama</string>
+    <string name="info">Informasi</string>
     <string name="okay">Oke</string>
     <string name="save">Simpan</string>
     <string name="show">Tunjukkan</string>
@@ -114,6 +117,7 @@
     <string name="text_biometric_login_sub">Masuk menggunakan kredensial biometrik Anda</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Semua aplikasi</string>
+    <string name="can_not_delete_system_apps">Tidak Dapat Menghapus Aplikasi Sistem</string>
     <string name="please_select_app">Silakan pilih aplikasi</string>
     <string name="drawer_list_empty_hint">Tidak ada aplikasi yang ditemukan</string>
     <string name="long_press_for_settings">Tekan lama di mana saja untuk pengaturan</string>
