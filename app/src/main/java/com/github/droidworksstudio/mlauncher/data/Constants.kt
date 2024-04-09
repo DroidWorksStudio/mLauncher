@@ -349,4 +349,6 @@ object Constants {
     }
 
     const val URL_DUCK_SEARCH = "https://duck.co/?q="
+    const val URL_GOOGLE_SEARCH = "https://google.com/search?q="
+    const val URL_GOOGLE_PLAY_STORE = "https://play.google.com/store/search?c=apps&q"
 }

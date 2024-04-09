@@ -43,6 +43,8 @@ class AppDrawerAdapter(
     var appFilteredList: MutableList<AppModel> = mutableListOf()
     private lateinit var binding: AdapterAppDrawerBinding
 
+    private var isBangSearch = false
+
     @RequiresApi(Build.VERSION_CODES.Q)
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         binding = AdapterAppDrawerBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -89,8 +91,10 @@ class AppDrawerAdapter(
 
     private fun createAppFilter(): Filter {
         return object : Filter() {
-            override fun performFiltering(constraint: CharSequence?): FilterResults {
-                val searchChars = constraint.toString()
+            override fun performFiltering(charSearch: CharSequence?): FilterResults {
+                isBangSearch = charSearch?.startsWith("!") ?: false
+
+                val searchChars = charSearch.toString()
                 val filteredApps: MutableList<AppModel>
 
                 if (prefs.filterStrength >= 1 ) {
@@ -145,7 +149,8 @@ class AppDrawerAdapter(
         val autoOpenApp = prefs.autoOpenApp
         if (lastMatch && openApp && autoOpenApp) {
             try { // Automatically open the app when there's only one search result
-                appClickListener(appFilteredList[position])
+                if (isBangSearch.not())
+                    appClickListener(appFilteredList[position])
             } catch (e: Exception) {
                 e.printStackTrace()
             }

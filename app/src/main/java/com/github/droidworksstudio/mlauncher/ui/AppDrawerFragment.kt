@@ -36,12 +36,18 @@ import com.github.droidworksstudio.mlauncher.databinding.FragmentAppDrawerBindin
 import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.isSystemApp
 import com.github.droidworksstudio.mlauncher.helper.getHexFontColor
 import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
+import com.github.droidworksstudio.mlauncher.helper.hideKeyboard
 import com.github.droidworksstudio.mlauncher.helper.openAppInfo
+import com.github.droidworksstudio.mlauncher.helper.openSearch
+import com.github.droidworksstudio.mlauncher.helper.openUrl
+import com.github.droidworksstudio.mlauncher.helper.searchOnPlayStore
 import com.github.droidworksstudio.mlauncher.helper.showToastShort
 
 class AppDrawerFragment : Fragment() {
 
     private lateinit var prefs: Prefs
+    private lateinit var adapter: AppDrawerAdapter
+
     private var _binding: FragmentAppDrawerBinding? = null
     private val binding get() = _binding!!
 
@@ -100,6 +106,8 @@ class AppDrawerFragment : Fragment() {
             appShowHideListener(),
             appInfoListener()
         )
+
+        adapter = appAdapter
 
         val searchTextView = binding.search.findViewById<TextView>(R.id.search_src_text)
         if (searchTextView != null) searchTextView.gravity = gravity
@@ -168,8 +176,31 @@ class AppDrawerFragment : Fragment() {
 
         binding.search.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
-                appAdapter.launchFirstInList()
-                return false
+                var searchQuery = query
+
+                if (!searchQuery.isNullOrEmpty()) {
+                    val searchUrl = when {
+                        searchQuery.startsWith("!ddg ") -> {
+                            searchQuery = query?.substringAfter("!ddg ")
+                            Constants.URL_DUCK_SEARCH
+                        }
+                        searchQuery.startsWith("!g ") -> {
+                            searchQuery = query?.substringAfter("!g ")
+                            Constants.URL_GOOGLE_SEARCH
+                        }
+                        else -> return false // Handle unsupported search engines or invalid queries
+                    }
+                    val encodedQuery = Uri.encode(searchQuery)
+                    val fullUrl = "$searchUrl$encodedQuery"
+                    requireContext().openUrl(fullUrl)
+                }
+                else if (adapter.itemCount == 0 && requireContext().searchOnPlayStore(query?.trim()).not()) {
+                    requireContext().openSearch(query?.trim())
+                }
+                else {
+                    adapter.launchFirstInList()
+                }
+                return true
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
@@ -226,12 +257,6 @@ class AppDrawerFragment : Fragment() {
     override fun onStop() {
         binding.search.hideKeyboard()
         super.onStop()
-    }
-
-    private fun View.hideKeyboard() {
-        view?.clearFocus()
-        val imm = context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-        imm.hideSoftInputFromWindow(windowToken, 0)
     }
 
     private fun View.showKeyboard() {

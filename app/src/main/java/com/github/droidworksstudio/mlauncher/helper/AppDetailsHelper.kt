@@ -30,7 +30,7 @@ object AppDetailsHelper {
     }
 
     fun getAppVersionAndHash(context: Context, packageName: String, pm: PackageManager): AppDetails? {
-        val pkgInstalled = isPackageInstalled(context, packageName, "")
+        val pkgInstalled = context.isPackageInstalled(packageName)
         if (pkgInstalled) {
             val packageInfo = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
                 pm.getPackageInfo(packageName, PackageManager.GET_SIGNING_CERTIFICATES)
