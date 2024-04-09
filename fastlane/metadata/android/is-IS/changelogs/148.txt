@@ -1,0 +1,6 @@
+Útgáfa: 1.4.8
+
+Villuleiðréttingar:
+
+Lagaði forritalistann til að sýna ekki afrit þegar nýleg forrit eru virkjuð
+Lagaði öryggisafritunarkerfið þar sem það virkaði ekki.
