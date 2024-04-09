@@ -79,8 +79,9 @@
     <string name="lock_settings">Luku seaded</string>
     <!-- Backup Strings -->
     <string name="backup">Varundamine</string>
-    <string name="load_backup">Laadige varukoopia</string>
-    <string name="store_backup">Poe varukoopia</string>
+    <string name="load_backup">Laadige</string>
+    <string name="save_backup">Salvesta</string>
+    <string name="clear_backup">Selge</string>
     <!-- Settings Strings -->
     <string name="off">Väljaspool</string>
     <string name="on">Veebilehel</string>
@@ -92,8 +93,10 @@
     <string name="settings">Seaded</string>
     <string name="lang_system">Süsteem</string>
     <string name="system_default">Süsteem</string>
+    <string name="delete">Kustuta</string>
     <string name="hide">Peida</string>
     <string name="rename">Nimetage ümber</string>
+    <string name="info">Info</string>
     <string name="okay">Okei</string>
     <string name="save">Salvesta</string>
     <string name="show">Näita</string>
@@ -114,6 +117,7 @@
     <string name="text_biometric_login_sub">Logige sisse oma biomeetrilise mandaadiga</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Kõik rakendused</string>
+    <string name="can_not_delete_system_apps">Süsteemirakendusi ei saa kustutada</string>
     <string name="please_select_app">Valige rakendus</string>
     <string name="drawer_list_empty_hint">Rakendusi ei leitud</string>
     <string name="long_press_for_settings">Vajutage pikalt kuskil seadete jaoks</string>
