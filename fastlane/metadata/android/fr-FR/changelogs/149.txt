@@ -1,0 +1,15 @@
+Version : 1.4.9
+
+Améliorations mises en œuvre :
+
+Refonte du menu contextuel de l'application
+
+Corrections de bugs :
+
+Correction de l'icône de l'application fDroid pour la prochaine version.
+Ajout du contournement des paramètres rapides Retour
+Police Nerd mise à jour
+
+Support linguistique:
+
+Fichiers de langue mis à jour.
