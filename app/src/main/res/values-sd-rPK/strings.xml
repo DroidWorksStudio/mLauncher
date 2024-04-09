@@ -79,8 +79,9 @@
     <string name="lock_settings">لاڪ سيٽنگون</string>
     <!-- Backup Strings -->
     <string name="backup">بيڪ اپ</string>
-    <string name="load_backup">لوڊ بيڪ اپ</string>
-    <string name="store_backup">اسٽور بيڪ اپ</string>
+    <string name="load_backup">لوڊ</string>
+    <string name="save_backup">بچايو</string>
+    <string name="clear_backup">پڌرو</string>
     <!-- Settings Strings -->
     <string name="off">بند</string>
     <string name="on">تي</string>
@@ -92,8 +93,10 @@
     <string name="settings">سيٽنگون</string>
     <string name="lang_system">سسٽم</string>
     <string name="system_default">سسٽم</string>
+    <string name="delete">حذف ڪريو</string>
     <string name="hide">لڪائڻ</string>
     <string name="rename">نالو مٽايو</string>
+    <string name="info">ڄاڻ</string>
     <string name="okay">ٺيڪ</string>
     <string name="save">بچايو</string>
     <string name="show">ڏيکاريو</string>
@@ -114,6 +117,7 @@
     <string name="text_biometric_login_sub">لاگ ان ڪريو پنھنجي بايوميٽرڪ سند استعمال ڪندي</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">سڀ ائپس</string>
+    <string name="can_not_delete_system_apps">سسٽم ائپس کي ختم نٿو ڪري سگھجي</string>
     <string name="please_select_app">مهرباني ڪري هڪ ايپ چونڊيو</string>
     <string name="drawer_list_empty_hint">ڪابه ايپس نه ملي</string>
     <string name="long_press_for_settings">سيٽنگون لاءِ ڪٿي به ڊگھو دٻايو</string>
