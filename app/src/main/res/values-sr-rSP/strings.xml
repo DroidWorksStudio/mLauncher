@@ -79,8 +79,9 @@
     <string name="lock_settings">Подешавања закључавања</string>
     <!-- Backup Strings -->
     <string name="backup">Бацкуп</string>
-    <string name="load_backup">Учитај резервну копију</string>
-    <string name="store_backup">Сторе Бацкуп</string>
+    <string name="load_backup">Учитај</string>
+    <string name="save_backup">сачувати</string>
+    <string name="clear_backup">Јасно</string>
     <!-- Settings Strings -->
     <string name="off">Off</string>
     <string name="on">On</string>
@@ -92,8 +93,10 @@
     <string name="settings">Подешавања</string>
     <string name="lang_system">System</string>
     <string name="system_default">System</string>
+    <string name="delete">Избриши</string>
     <string name="hide">Hide</string>
     <string name="rename">Rename</string>
+    <string name="info">Инфо</string>
     <string name="okay">Okay</string>
     <string name="save">Save</string>
     <string name="show">Show</string>
@@ -114,6 +117,7 @@
     <string name="text_biometric_login_sub">Пријавите се користећи свој биометријски акредитив</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>
+    <string name="can_not_delete_system_apps">Није могуће избрисати системске апликације</string>
     <string name="please_select_app">Изаберите апликацију</string>
     <string name="drawer_list_empty_hint">No apps found</string>
     <string name="long_press_for_settings">Long press anywhere for settings</string>
