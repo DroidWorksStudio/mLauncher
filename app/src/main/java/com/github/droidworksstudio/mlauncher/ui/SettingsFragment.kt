@@ -59,7 +59,7 @@ import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.Setti
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsTextButton
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsToggle
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsTopView
-import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsTwoButtonRow
+import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsThreeButtonRow
 
 class SettingsFragment : Fragment() {
 
@@ -655,12 +655,21 @@ class SettingsFragment : Fragment() {
                 fontSize = titleFs,
                 items = arrayOf(
                     { _, _ ->
-                        SettingsTwoButtonRow(
+                        SettingsThreeButtonRow(
                             fontSize = iconFs,
                             firstButtonText = getString(R.string.load_backup),
-                            secondButtonText = getString(R.string.store_backup),
-                            firstButtonAction = { loadFile(requireActivity()) },
-                            secondButtonAction = { storeFile(requireActivity()) },
+                            secondButtonText = getString(R.string.save_backup),
+                            thirdButtonText = getString(R.string.clear_backup),
+                            firstButtonAction = {
+                                loadFile(requireActivity())
+                            },
+                            secondButtonAction = {
+                                storeFile(requireActivity())
+                            },
+                            thirdButtonAction = {
+                                prefs.clear()
+                                requireActivity().recreate()
+                            },
                         )
                     }
                 )

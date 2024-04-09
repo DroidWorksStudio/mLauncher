@@ -380,11 +380,13 @@ object SettingsComposable {
     }
 
     @Composable
-    fun SettingsTwoButtonRow(
+    fun SettingsThreeButtonRow(
         firstButtonText: String,
         secondButtonText: String,
+        thirdButtonText: String,
         firstButtonAction: () -> Unit,
         secondButtonAction: () -> Unit,
+        thirdButtonAction: () -> Unit,
         fontSize: TextUnit = TextUnit.Unspecified,
     ) {
         Row {
@@ -404,6 +406,16 @@ object SettingsComposable {
             ) {
                 Text(
                     secondButtonText,
+                    fontSize = fontSize,
+                    style = SettingsTheme.typography.button,
+                )
+            }
+
+            TextButton(
+                onClick = thirdButtonAction,
+            ) {
+                Text(
+                    thirdButtonText,
                     fontSize = fontSize,
                     style = SettingsTheme.typography.button,
                 )
