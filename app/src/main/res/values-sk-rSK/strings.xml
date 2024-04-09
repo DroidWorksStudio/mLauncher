@@ -79,8 +79,9 @@
     <string name="lock_settings">Nastavenia zámku</string>
     <!-- Backup Strings -->
     <string name="backup">Zálohovanie</string>
-    <string name="load_backup">Načítať zálohu</string>
-    <string name="store_backup">Uložiť zálohu</string>
+    <string name="load_backup">Naložiť</string>
+    <string name="save_backup">Uložiť</string>
+    <string name="clear_backup">jasný</string>
     <!-- Settings Strings -->
     <string name="off">Vypnuté</string>
     <string name="on">Zapnuté</string>
@@ -92,8 +93,10 @@
     <string name="settings">nastavenie</string>
     <string name="lang_system">Systém</string>
     <string name="system_default">Systém</string>
+    <string name="delete">Odstrániť</string>
     <string name="hide">Skryť</string>
     <string name="rename">Premenovať</string>
+    <string name="info">Info</string>
     <string name="okay">Dobre</string>
     <string name="save">Uložiť</string>
     <string name="show">Šou</string>
@@ -114,6 +117,7 @@
     <string name="text_biometric_login_sub">Prihláste sa pomocou svojich biometrických údajov.</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Všetky aplikácie</string>
+    <string name="can_not_delete_system_apps">Systémové aplikácie sa nedajú odstrániť</string>
     <string name="please_select_app">Vyberte aplikáciu</string>
     <string name="drawer_list_empty_hint">Nenašli sa žiadne aplikácie</string>
     <string name="long_press_for_settings">Dlhým stlačením kdekoľvek zobrazíte nastavenia</string>
