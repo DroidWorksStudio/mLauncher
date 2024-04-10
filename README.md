@@ -38,12 +38,13 @@ We try to balance customizability and minimalization well still being simple :)<
 
 </details>
 
-## Translations: [![Crowdin](https://badges.crowdin.net/mlauncher/localized.svg)](https://crowdin.com/project/mlauncher)
+## Translations:
 
 We would like to extend our sincere gratitude to the numerous individuals who have contributed to the translation of our application into various languages. Your efforts have made it possible for users around the world to access and benefit from our product, and we are immensely appreciative of your hard work and dedication. Thank you all for your invaluable contributions!  
 
 <details><summary>List of translations (click to expand)</summary>
 
+  - Afrikaans
   - Arabic
   - Albanian
   - Bulgarian
