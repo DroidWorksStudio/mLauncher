@@ -28,6 +28,7 @@ Rozwidlony od <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. M
 ## Tłumaczenia:
 
 - Wiele osób przetłumaczyło aplikację na następujące języki. Bardzo dziękuję wszystkim.
+  - Afrykanerski
   - arabski
   - Albańczyk
   - język bułgarski
@@ -67,6 +68,7 @@ Rozwidlony od <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. M
   - Rosjanin
   - Serbski
   - Sindhi
+  - Słowacki
   - Hiszpan
   - Szwed
   - Tajlandia

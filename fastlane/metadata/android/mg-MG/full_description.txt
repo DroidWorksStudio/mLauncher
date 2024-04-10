@@ -28,6 +28,7 @@ Nofoanana avy amin'ny <a href="https://github.com/tanujnotes/Olauncher">Olaunche
 ## Dikanteny:
 
 - Betsaka ny olona nandika ny fampiharana amin'ireto fiteny manaraka ireto. Misaotra betsaka anareo rehetra.
+  - Afrikaans
   - Arabo
   - Albaney
   - Bolgara
@@ -67,6 +68,7 @@ Nofoanana avy amin'ny <a href="https://github.com/tanujnotes/Olauncher">Olaunche
   - Rosiana
   - Serba
   - Sindhi
+  - Slovaky
   - Espaniola
   - Soedoà
   - Thai

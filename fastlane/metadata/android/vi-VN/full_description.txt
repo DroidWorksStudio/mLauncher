@@ -28,6 +28,7 @@
 ## Bản dịch:
 
 - Rất nhiều người đã dịch ứng dụng sang các ngôn ngữ sau. Rất cám ơn đến tất cả các bạn.
+  - Tiếng Nam Phi
   - Tiếng Ả Rập
   - Tiếng Albania
   - tiếng Bungari
@@ -67,6 +68,7 @@
   - Tiếng Nga
   - Tiếng Serbia
   - Sindhi
+  - Tiếng Slovakia
   - Người Tây Ban Nha
   - Thụy Điển
   - tiếng Thái

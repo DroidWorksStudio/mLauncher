@@ -28,6 +28,7 @@ Gaffel fra <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mini
 ## Oversettelser:
 
 - Mange har oversatt appen til følgende språk. Mange takk til dere alle.
+  - Afrikaans
   - Arabisk
   - Albansk
   - Bulgarsk
@@ -67,6 +68,7 @@ Gaffel fra <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mini
   - Russisk
   - Serbisk
   - Sindhi
+  - Slovakisk
   - spansk
   - Svensk
   - Thai

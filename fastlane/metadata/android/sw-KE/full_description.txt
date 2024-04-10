@@ -28,6 +28,7 @@ Imegawanywa kutoka kwa <a href="https://github.com/tanujnotes/Olauncher">Olaunch
 ## Tafsiri:
 
 - Watu wengi wametafsiri programu kwa lugha zifuatazo. Shukrani nyingi kwenu nyote.
+  - Kiafrikana
   - Kiarabu
   - Kialbeni
   - Kibulgaria
@@ -67,6 +68,7 @@ Imegawanywa kutoka kwa <a href="https://github.com/tanujnotes/Olauncher">Olaunch
   - Kirusi
   - Kiserbia
   - Kisindhi
+  - Kislovakia
   - Kihispania
   - Kiswidi
   - Thai

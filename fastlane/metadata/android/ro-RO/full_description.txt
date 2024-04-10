@@ -28,6 +28,7 @@ Bifurcat de la <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. 
 ## Traduceri:
 
 - O mulțime de oameni au tradus aplicația în următoarele limbi. Vă mulțumim tuturor.
+  - Afrikaans
   - arabă
   - Albaneză
   - Bulgară
@@ -67,6 +68,7 @@ Bifurcat de la <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. 
   - Rusă
   - Sârbă
   - Sindhi
+  - Slovacă
   - Spaniolă
   - Suedeză
   - Thai

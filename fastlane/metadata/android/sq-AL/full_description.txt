@@ -28,6 +28,7 @@ Forked nga <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mini
 ## Përkthime:
 
 - Shumë njerëz e kanë përkthyer aplikacionin në gjuhët e mëposhtme. Shumë faleminderit për të gjithë ju.
+  - Afrikane
   - Arabisht
   - Shqip
   - bullgar
@@ -67,6 +68,7 @@ Forked nga <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mini
   - Rusisht
   - Serbe
   - Sindhi
+  - Sllovake
   - Spanjisht
   - Suedisht
   - Thai

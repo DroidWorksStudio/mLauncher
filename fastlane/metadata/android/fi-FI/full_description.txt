@@ -28,6 +28,7 @@ Haarukka alkaen <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>.
 ## Käännökset:
 
 - Monet ihmiset ovat kääntäneet sovelluksen seuraaville kielille. Suuret kiitokset teille kaikille.
+  - Afrikaans
   - Arabia
   - albanialainen
   - Bulgarian
@@ -67,6 +68,7 @@ Haarukka alkaen <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>.
   - Venäjä
   - Serbian
   - Sindhi
+  - slovakki
   - espanjaksi
   - Ruotsinkielinen
   - Thaimaalainen

@@ -28,6 +28,7 @@ Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Min
 ## Oversættelser:
 
 - Mange mennesker har oversat appen til følgende sprog. Mange tak til jer alle.
+  - Afrikaans
   - Arabisk
   - Albansk
   - bulgarsk
@@ -67,6 +68,7 @@ Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Min
   - Russisk
   - Serbisk
   - Sindhi
+  - Slovakisk
   - Spansk
   - Svensk
   - Thai

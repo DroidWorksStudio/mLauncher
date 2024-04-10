@@ -28,6 +28,7 @@ Forked ó <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Íosr
 ## Aistriúcháin:
 
 - D'aistrigh go leor daoine an aip go dtí na teangacha seo a leanas. Míle buíochas libh go léir.
+  - Afracach
   - Araibis
   - Albanach
   - Bulgáiris
@@ -67,6 +68,7 @@ Forked ó <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Íosr
   - Rúisis
   - Seirbis
   - Sindhi
+  - Slóvaicis
   - Spainnis
   - Sualainnis
   - Téalainnis

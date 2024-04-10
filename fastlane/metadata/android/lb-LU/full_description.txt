@@ -28,6 +28,7 @@ Forked aus <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mini
 ## Iwwersetzungen:
 
 - Vill Leit hunn d'App an déi folgend Sproochen iwwersat. E grousse Merci un Iech all.
+  - Afrikaans
   - Arabesch
   - Albanesch
   - Bulgarescg
@@ -67,6 +68,7 @@ Forked aus <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mini
   - Russesch
   - Serbesch
   - Sindhi
+  - Slowakesch
   - Spuenesch
   - Schweedesch
   - Thai

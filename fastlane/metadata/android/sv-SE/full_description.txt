@@ -28,6 +28,7 @@ Forked från <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mi
 ## Översättningar:
 
 - Många har översatt appen till följande språk. Stort tack till er alla.
+  - Afrikaans
   - Arabiska
   - Albanska
   - Bulgariska
@@ -67,6 +68,7 @@ Forked från <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mi
   - Ryska
   - Serbiska
   - Sindhi
+  - slovakiska
   - Spanska
   - Svenska
   - Thailändska

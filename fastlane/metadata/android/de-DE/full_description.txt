@@ -28,6 +28,7 @@ Gegabelt von <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mi
 ## Übersetzungen:
 
 - Viele Leute haben die App in die folgenden Sprachen übersetzt. Vielen Dank an Sie alle.
+  - Afrikaans
   - Arabisch
   - Albanisch
   - bulgarisch
@@ -67,6 +68,7 @@ Gegabelt von <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mi
   - Russisch
   - serbisch
   - Sindhi
+  - Slowakisch
   - Spanisch
   - Schwedisch
   - Thailändisch

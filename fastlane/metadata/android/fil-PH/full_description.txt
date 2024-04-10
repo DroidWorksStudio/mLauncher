@@ -28,6 +28,7 @@ Forked mula sa <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. 
 ## Mga Pagsasalin:
 
 - Maraming tao ang nagsalin ng app sa mga sumusunod na wika. Maraming salamat sa inyong lahat.
+  - Afrikaans
   - Arabe
   - Albaniano
   - Bulgarian
@@ -67,6 +68,7 @@ Forked mula sa <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. 
   - Ruso
   - Serbiano
   - Sindhi
+  - Slovak
   - Espanyol
   - Suweko
   - Thai

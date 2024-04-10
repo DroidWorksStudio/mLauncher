@@ -28,6 +28,7 @@
 ## Çeviriler:
 
 - Birçok kişi uygulamayı aşağıdaki dillere çevirmiştir. Hepinize çok teşekkürler.
+  - Afrikaans
   - Arapça
   - Arnavutça
   - Bulgarca
@@ -67,6 +68,7 @@
   - Rusça
   - Sırpça
   - Sindhi
+  - Slovakça
   - İspanyolca
   - İsveçce
   - Tayca

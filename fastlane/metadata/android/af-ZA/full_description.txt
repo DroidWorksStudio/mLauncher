@@ -28,6 +28,7 @@ Gevurk van <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mini
 ## Vertalings:
 
 - Baie mense het die toepassing na die volgende tale vertaal. Baie dankie aan julle almal.
+  - Afrikaans
   - Arabies
   - Albanees
   - Bulgaars
@@ -67,6 +68,7 @@ Gevurk van <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mini
   - Russies
   - Serwies
   - Sindhi
+  - Slowaaks
   - Spaans
   - Sweeds
   - Thai

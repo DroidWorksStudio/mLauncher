@@ -28,6 +28,7 @@ Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Lá
 ## Þýðingar:
 
 - Margir hafa þýtt appið á eftirfarandi tungumál. Kærar þakkir til ykkar allra.
+  - Afrikaans
   - arabíska
   - Albanska
   - búlgarska
@@ -67,6 +68,7 @@ Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Lá
   - Rússneskt
   - Serbneska
   - Sindhi
+  - Slóvakískur
   - Spænska, spænskt
   - Sænska
   - Tælenska

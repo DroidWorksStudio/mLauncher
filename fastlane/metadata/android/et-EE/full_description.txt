@@ -28,6 +28,7 @@ Kahvliga alates <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>.
 ## Tõlked:
 
 - Paljud inimesed on tõlkinud rakenduse järgmistesse keeltesse. Suur tänu teile kõigile.
+  - afrikaani
   - Araabia keel
   - Albaania
   - Bulgaaria
@@ -67,6 +68,7 @@ Kahvliga alates <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>.
   - Vene keel
   - Serbia
   - Sindhi
+  - slovaki
   - Hispaania keel
   - Rootsi
   - Tai

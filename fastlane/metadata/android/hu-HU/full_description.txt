@@ -28,6 +28,7 @@ Villás <a href="https://github.com/tanujnotes/Olauncher">-tól Olauncher</a>. M
 ## Fordítások:
 
 - Sokan lefordították az alkalmazást a következő nyelvekre. Köszönöm mindannyiuknak.
+  - afrikaans
   - Arab
   - albán
   - bolgár
@@ -67,6 +68,7 @@ Villás <a href="https://github.com/tanujnotes/Olauncher">-tól Olauncher</a>. M
   - Orosz
   - szerb
   - Sindhi
+  - szlovák
   - Spanyol
   - Svéd
   - Thai
