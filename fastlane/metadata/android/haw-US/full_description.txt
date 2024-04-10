@@ -28,6 +28,7 @@ Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Ka 
 ## Nā unuhi:
 
 - He nui ka poʻe i unuhi i ka polokalamu i nā ʻōlelo aʻe. Mahalo nui iā ʻoukou a pau.
+  - Apikana
   - Apapika
   - Alapania
   - Pukalia
@@ -67,6 +68,7 @@ Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Ka 
   - Lukia
   - ʻŌlelo Serbia
   - Kiniki
+  - Kolowakia
   - Kepania
   - Kuekene
   - Kailani
