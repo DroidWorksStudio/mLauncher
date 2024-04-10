@@ -28,6 +28,7 @@ Bifurcado de <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. M�
 ## Traduções:
 
 - Muitas pessoas traduziram a aplicação para as seguintes línguas. Muito obrigado a todos vós.
+  - Africâner
   - árabe
   - Albanês
   - Búlgaro
@@ -67,6 +68,7 @@ Bifurcado de <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. M�
   - Russo
   - Sérvio
   - Sindhi
+  - Eslovaco
   - Espanhol
   - Sueco
   - Thai
