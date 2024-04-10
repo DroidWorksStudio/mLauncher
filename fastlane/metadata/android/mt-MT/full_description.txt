@@ -28,6 +28,7 @@ Forked minn <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Min
 ## Traduzzjonijiet:
 
 - Ħafna nies ittraduċu l-app għal-lingwi li ġejjin. Grazzi ħafna lilkom ilkoll.
+  - Afrikans
   - Għarbi
   - Albaniż
   - Bulgaru
@@ -67,6 +68,7 @@ Forked minn <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Min
   - Russu
   - Serb
   - Sindhi
+  - Slovakk
   - Spanjol
   - Svediż
   - Tajlandiż
