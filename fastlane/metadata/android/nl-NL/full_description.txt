@@ -28,6 +28,7 @@ Gevorkt vanaf <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. M
 ## Vertalingen:
 
 - Veel mensen hebben de app vertaald naar de volgende talen. Veel dank aan u allen.
+  - Afrikaans
   - Arabisch
   - Albanees
   - Bulgaars
@@ -67,6 +68,7 @@ Gevorkt vanaf <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. M
   - Russisch
   - Servisch
   - Sindhi
+  - Slowaaks
   - Spaans
   - Zweeds
   - Thaise
