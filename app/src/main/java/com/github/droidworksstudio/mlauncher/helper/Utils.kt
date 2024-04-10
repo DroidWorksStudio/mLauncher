@@ -190,10 +190,9 @@ suspend fun getAppsList(
                     // Add all elements from appRecentList
                     combinedList.addAll(appRecentList)
                 }
-
-                // Add all elements from appList
-                combinedList.addAll(appList)
             }
+            // Add all elements from appList
+            combinedList.addAll(appList)
         } catch (e: java.lang.Exception) {
             d("appList", e.toString())
         }
