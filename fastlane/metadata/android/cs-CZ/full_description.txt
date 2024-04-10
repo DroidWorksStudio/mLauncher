@@ -28,6 +28,7 @@ Forked od <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minim
 ## Překlady:
 
 - Mnoho lidí přeložilo aplikaci do následujících jazyků. Moc vám všem děkujeme.
+  - afrikánština
   - Arabština
   - Albánština
   - Bulharština
@@ -67,6 +68,7 @@ Forked od <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minim
   - Ruský jazyk
   - srbština
   - Sindhi
+  - slovensky
   - Španělština
   - Švédština
   - Thajský
