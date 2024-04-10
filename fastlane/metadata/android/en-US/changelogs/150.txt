@@ -1,0 +1,14 @@
+Version: 1.5.0
+
+Implemented Enhancements:
+
+Added a extra button for the Backup section of settings.
+Added Yahoo Brave and Bing search.
+
+Language Support:
+
+Updated Language Files.
+
+Refactor:
+
+Eliminate duplicate entries in applist when adding a work profile.
