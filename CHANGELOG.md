@@ -7,6 +7,10 @@
 - Added a extra button for the Backup section of settings.
 - Added Yahoo Brave and Bing search
 
+### Language Support:
+
+- Updated Language Files. ([#442](https://github.com/DroidWorksStudio/mLauncher/issues/442))
+
 ### Refactor:
 
 - Eliminate duplicate entries in applist when adding a work profile
