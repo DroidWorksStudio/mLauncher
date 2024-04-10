@@ -28,6 +28,7 @@ Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Min
 ## Translationes:
 
 - Multi homines app ad linguas sequentes interpretati sunt. Tibi omnes gratias agimus.
+  - Afrikaans
   - Arabic
   — Albanian
   - Bulgarorum
@@ -67,6 +68,7 @@ Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Min
   - Russian
   - Serbian
   - Sindhi
+  - Slovac
   - Spanish
   - Swedish
   - Thai
