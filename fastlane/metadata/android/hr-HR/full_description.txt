@@ -28,6 +28,7 @@ Račvan od <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mini
 ## Prijevodi:
 
 - Mnogo je ljudi prevelo aplikaciju na sljedeće jezike. Puno vam hvala svima.
+  - afrikaans
   - arapski
   - Albanac
   - bugarski
@@ -67,6 +68,7 @@ Račvan od <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mini
   - ruski
   - srpski
   - Sindhi
+  - slovački
   - španjolski
   - švedski
   - Tajlandski
