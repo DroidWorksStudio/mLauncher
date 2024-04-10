@@ -79,8 +79,9 @@
     <string name="lock_settings">Lock Settings</string>
     <!-- Backup Strings -->
     <string name="backup">nomaniny ho solon\'izay</string>
-    <string name="load_backup">Load Backup</string>
-    <string name="store_backup">Store Backup</string>
+    <string name="load_backup">entana</string>
+    <string name="save_backup">afa-tsy</string>
+    <string name="clear_backup">Mazava</string>
     <!-- Settings Strings -->
     <string name="off">eny</string>
     <string name="on">On</string>
@@ -92,8 +93,10 @@
     <string name="settings">Fikirana</string>
     <string name="lang_system">RAFITRA</string>
     <string name="system_default">RAFITRA</string>
+    <string name="delete">Mamafa</string>
     <string name="hide">afeno ny</string>
     <string name="rename">Hanova anarana</string>
+    <string name="info">Info</string>
     <string name="okay">Okay</string>
     <string name="save">afa-tsy</string>
     <string name="show">FAMPISEHOANA</string>
@@ -114,6 +117,7 @@
     <string name="text_biometric_login_sub">Midira amin\'ny alàlan\'ny fahazoan-dàlana biometrika anao</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Apps rehetra</string>
+    <string name="can_not_delete_system_apps">Tsy afaka mamafa System Apps</string>
     <string name="please_select_app">Mifidiana app azafady</string>
     <string name="drawer_list_empty_hint">Tsy misy fampiharana hita</string>
     <string name="long_press_for_settings">Tsindrio lava na aiza na aiza ho an\'ny fanovana</string>

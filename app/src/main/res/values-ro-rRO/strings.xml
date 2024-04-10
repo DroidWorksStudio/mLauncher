@@ -79,8 +79,9 @@
     <string name="lock_settings">Setări de blocare</string>
     <!-- Backup Strings -->
     <string name="backup">Backup</string>
-    <string name="load_backup">Încărcați backup</string>
-    <string name="store_backup">Salvare de rezervă</string>
+    <string name="load_backup">Sarcină</string>
+    <string name="save_backup">Salvați</string>
+    <string name="clear_backup">clar</string>
     <!-- Settings Strings -->
     <string name="off">Dezactivat</string>
     <string name="on">Activat</string>
@@ -92,8 +93,10 @@
     <string name="settings">Setări</string>
     <string name="lang_system">Sistem</string>
     <string name="system_default">Sistem</string>
+    <string name="delete">Șterge</string>
     <string name="hide">Ascunde</string>
     <string name="rename">Redenumire</string>
+    <string name="info">Info</string>
     <string name="okay">Bine</string>
     <string name="save">Salvează</string>
     <string name="show">Afișare</string>
@@ -114,6 +117,7 @@
     <string name="text_biometric_login_sub">Conectați-vă utilizând acreditările dvs. biometrice</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Toate aplicațiile</string>
+    <string name="can_not_delete_system_apps">Nu se pot șterge aplicațiile de sistem</string>
     <string name="please_select_app">Vă rugăm să selectați o aplicație</string>
     <string name="drawer_list_empty_hint">Nicio aplicație găsită</string>
     <string name="long_press_for_settings">Apăsați lung oriunde pentru setări</string>

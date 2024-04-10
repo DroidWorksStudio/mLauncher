@@ -79,8 +79,9 @@
     <string name="lock_settings">Paramètres de verrouillage</string>
     <!-- Backup Strings -->
     <string name="backup">Sauvegarde</string>
-    <string name="load_backup">Charger la sauvegarde</string>
-    <string name="store_backup">Sauvegarde du magasin</string>
+    <string name="load_backup">Charger</string>
+    <string name="save_backup">Sauvegarder</string>
+    <string name="clear_backup">Clair</string>
     <!-- Settings Strings -->
     <string name="off">Désactivé</string>
     <string name="on">Activé</string>
@@ -92,8 +93,10 @@
     <string name="settings">Paramètres</string>
     <string name="lang_system">Système</string>
     <string name="system_default">Système</string>
+    <string name="delete">Supprimer</string>
     <string name="hide">Cacher</string>
     <string name="rename">Renommer</string>
+    <string name="info">Info</string>
     <string name="okay">Ok</string>
     <string name="save">Enregistrer</string>
     <string name="show">Afficher</string>
@@ -114,6 +117,7 @@
     <string name="text_biometric_login_sub">Connectez-vous en utilisant votre identifiant biométrique</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Toutes les applications</string>
+    <string name="can_not_delete_system_apps">Impossible de supprimer les applications système</string>
     <string name="please_select_app">Veuillez sélectionner une application</string>
     <string name="drawer_list_empty_hint">Aucune application trouvée</string>
     <string name="long_press_for_settings">Appui long n\'importe où pour les paramètres</string>

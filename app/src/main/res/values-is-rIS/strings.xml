@@ -79,8 +79,9 @@
     <string name="lock_settings">Læsa stillingar</string>
     <!-- Backup Strings -->
     <string name="backup">Afritun</string>
-    <string name="load_backup">Hlaða öryggisafrit</string>
-    <string name="store_backup">Afritun verslunar</string>
+    <string name="load_backup">Hlaða</string>
+    <string name="save_backup">Vista</string>
+    <string name="clear_backup">Hreinsa</string>
     <!-- Settings Strings -->
     <string name="off">Af</string>
     <string name="on">Á</string>
@@ -92,8 +93,10 @@
     <string name="settings">Stillingar</string>
     <string name="lang_system">Kerfi</string>
     <string name="system_default">Kerfi</string>
+    <string name="delete">Eyða</string>
     <string name="hide">Fela</string>
     <string name="rename">Endurnefna</string>
+    <string name="info">Upplýsingar</string>
     <string name="okay">allt í lagi</string>
     <string name="save">Vista</string>
     <string name="show">Sýna</string>
@@ -114,6 +117,7 @@
     <string name="text_biometric_login_sub">Skráðu þig inn með líffræðilegum tölfræðiskilríkjum þínum</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Öll forrit</string>
+    <string name="can_not_delete_system_apps">Get ekki eytt kerfisforritum</string>
     <string name="please_select_app">Vinsamlegast veldu app</string>
     <string name="drawer_list_empty_hint">Engin forrit fundust</string>
     <string name="long_press_for_settings">Ýttu lengi hvar sem er fyrir stillingar</string>

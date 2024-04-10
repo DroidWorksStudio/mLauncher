@@ -79,8 +79,9 @@
     <string name="lock_settings">Cilësimet e kyçjes</string>
     <!-- Backup Strings -->
     <string name="backup">Rezervimi</string>
-    <string name="load_backup">Ngarko kopje rezervë</string>
-    <string name="store_backup">Rezervimi i dyqanit</string>
+    <string name="load_backup">Ngarkoni</string>
+    <string name="save_backup">Ruaj</string>
+    <string name="clear_backup">Qartë</string>
     <!-- Settings Strings -->
     <string name="off">Joaktiv</string>
     <string name="on">Aktiv</string>
@@ -92,8 +93,10 @@
     <string name="settings">Cilësimet</string>
     <string name="lang_system">Sistemi</string>
     <string name="system_default">Sistemi</string>
+    <string name="delete">Fshije</string>
     <string name="hide">Fshih</string>
     <string name="rename">Riemërto</string>
+    <string name="info">Informacion</string>
     <string name="okay">Mirë</string>
     <string name="save">Ruaj</string>
     <string name="show">Shfaqje</string>
@@ -114,6 +117,7 @@
     <string name="text_biometric_login_sub">Hyni duke përdorur kredencialet tuaja biometrike</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Të gjitha aplikacionet</string>
+    <string name="can_not_delete_system_apps">Aplikacionet e sistemit nuk mund të fshihen</string>
     <string name="please_select_app">Ju lutemi zgjidhni një aplikacion</string>
     <string name="drawer_list_empty_hint">Nuk u gjet asnjë aplikacion</string>
     <string name="long_press_for_settings">Shtypni gjatë kudo për cilësimet</string>

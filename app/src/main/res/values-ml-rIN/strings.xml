@@ -79,8 +79,9 @@
     <string name="lock_settings">ലോക്ക് ക്രമീകരണങ്ങൾ</string>
     <!-- Backup Strings -->
     <string name="backup">ബാക്കപ്പ്</string>
-    <string name="load_backup">ബാക്കപ്പ് ലോഡ് ചെയ്യുക</string>
-    <string name="store_backup">സ്റ്റോർ ബാക്കപ്പ്</string>
+    <string name="load_backup">ലോഡ് ചെയ്യുക</string>
+    <string name="save_backup">രക്ഷിക്കും</string>
+    <string name="clear_backup">ക്ലിയർ</string>
     <!-- Settings Strings -->
     <string name="off">ഓഫ്</string>
     <string name="on">ഓൺ</string>
@@ -92,8 +93,10 @@
     <string name="settings">ക്രമീകരണങ്ങൾ</string>
     <string name="lang_system">സിസ്റ്റം</string>
     <string name="system_default">സിസ്റ്റം</string>
+    <string name="delete">ഇല്ലാതാക്കുക</string>
     <string name="hide">മറയ്ക്കുക</string>
     <string name="rename">പേരുമാറ്റുക</string>
+    <string name="info">വിവരം</string>
     <string name="okay">ശരി</string>
     <string name="save">രക്ഷിക്കും</string>
     <string name="show">കാണിക്കുക</string>
@@ -114,6 +117,7 @@
     <string name="text_biometric_login_sub">നിങ്ങളുടെ ബയോമെട്രിക് ക്രെഡൻഷ്യൽ ഉപയോഗിച്ച് ലോഗിൻ ചെയ്യുക</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">എല്ലാ ആപ്പുകളും</string>
+    <string name="can_not_delete_system_apps">സിസ്റ്റം ആപ്പുകൾ ഇല്ലാതാക്കാൻ കഴിയില്ല</string>
     <string name="please_select_app">ദയവായി ഒരു ആപ്പ് തിരഞ്ഞെടുക്കുക</string>
     <string name="drawer_list_empty_hint">ആപ്പുകളൊന്നും കണ്ടെത്തിയില്ല</string>
     <string name="long_press_for_settings">ക്രമീകരണങ്ങൾക്കായി എവിടെയും ദീർഘനേരം അമർത്തുക</string>

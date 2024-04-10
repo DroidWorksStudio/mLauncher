@@ -79,8 +79,9 @@
     <string name="lock_settings">Zablokuj ustawienia</string>
     <!-- Backup Strings -->
     <string name="backup">Kopia zapasowa</string>
-    <string name="load_backup">Załaduj kopię zapasową</string>
-    <string name="store_backup">Kopia zapasowa sklepu</string>
+    <string name="load_backup">Obciążenie</string>
+    <string name="save_backup">Ratować</string>
+    <string name="clear_backup">Jasne</string>
     <!-- Settings Strings -->
     <string name="off">Wyłączony</string>
     <string name="on">Włączone</string>
@@ -92,8 +93,10 @@
     <string name="settings">Ustawienia</string>
     <string name="lang_system">System</string>
     <string name="system_default">System</string>
+    <string name="delete">Usuwać</string>
     <string name="hide">Ukryj</string>
     <string name="rename">Zmień nazwę</string>
+    <string name="info">Informacje</string>
     <string name="okay">OK</string>
     <string name="save">Zapisz</string>
     <string name="show">Pokaż</string>
@@ -114,6 +117,7 @@
     <string name="text_biometric_login_sub">Zaloguj się przy użyciu danych biometrycznych</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Wszystkie aplikacje</string>
+    <string name="can_not_delete_system_apps">Nie można usunąć aplikacji systemowych</string>
     <string name="please_select_app">Wybierz aplikację</string>
     <string name="drawer_list_empty_hint">Nie znaleziono aplikacji</string>
     <string name="long_press_for_settings">Długie naciśnięcie gdziekolwiek dla ustawień</string>

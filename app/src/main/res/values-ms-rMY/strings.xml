@@ -79,8 +79,9 @@
     <string name="lock_settings">Tetapan Kunci</string>
     <!-- Backup Strings -->
     <string name="backup">Sandaran</string>
-    <string name="load_backup">Muatkan Sandaran</string>
-    <string name="store_backup">Simpan Sandaran</string>
+    <string name="load_backup">Muatkan</string>
+    <string name="save_backup">Jimat</string>
+    <string name="clear_backup">Jelas</string>
     <!-- Settings Strings -->
     <string name="off">Mati</string>
     <string name="on">hidup</string>
@@ -92,8 +93,10 @@
     <string name="settings">tetapan</string>
     <string name="lang_system">Sistem</string>
     <string name="system_default">Sistem</string>
+    <string name="delete">Padam</string>
     <string name="hide">Sembunyi</string>
     <string name="rename">Namakan semula</string>
+    <string name="info">info</string>
     <string name="okay">baik</string>
     <string name="save">Jimat</string>
     <string name="show">Tunjukkan</string>
@@ -114,6 +117,7 @@
     <string name="text_biometric_login_sub">Log masuk menggunakan kelayakan biometrik anda</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Semua apl</string>
+    <string name="can_not_delete_system_apps">Tidak Dapat Memadamkan Apl Sistem</string>
     <string name="please_select_app">Sila pilih apl</string>
     <string name="drawer_list_empty_hint">Tiada apl ditemui</string>
     <string name="long_press_for_settings">Tekan lama di mana-mana untuk tetapan</string>

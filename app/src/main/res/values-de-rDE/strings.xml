@@ -79,8 +79,9 @@
     <string name="lock_settings">Sperreinstellungen</string>
     <!-- Backup Strings -->
     <string name="backup">Sicherung</string>
-    <string name="load_backup">Backup laden</string>
-    <string name="store_backup">Speichern Sie Backup</string>
+    <string name="load_backup">Belastung</string>
+    <string name="save_backup">Speichern</string>
+    <string name="clear_backup">Klar</string>
     <!-- Settings Strings -->
     <string name="off">Aus</string>
     <string name="on">An</string>
@@ -92,8 +93,10 @@
     <string name="settings">Einstellungen</string>
     <string name="lang_system">System</string>
     <string name="system_default">System</string>
+    <string name="delete">Löschen</string>
     <string name="hide">Verstecken</string>
     <string name="rename">Umbenennen</string>
+    <string name="info">Die Info</string>
     <string name="okay">Okay</string>
     <string name="save">Speichern</string>
     <string name="show">Zeigen</string>
@@ -114,6 +117,7 @@
     <string name="text_biometric_login_sub">Melden Sie sich mit Ihren biometrischen Zugangsdaten an</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Alle Apps</string>
+    <string name="can_not_delete_system_apps">System-Apps können nicht gelöscht werden</string>
     <string name="please_select_app">Bitte wählen Sie eine App aus</string>
     <string name="drawer_list_empty_hint">Keine Apps gefunden</string>
     <string name="long_press_for_settings">Lange drücken für Einstellungen</string>

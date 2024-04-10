@@ -79,8 +79,9 @@
     <string name="lock_settings">Lock Settings</string>
     <!-- Backup Strings -->
     <string name="backup">Backup</string>
-    <string name="load_backup">Tagħbija Backup</string>
-    <string name="store_backup">Aħżen Backup</string>
+    <string name="load_backup">Tagħbija</string>
+    <string name="save_backup">Ħlief</string>
+    <string name="clear_backup">Ċara</string>
     <!-- Settings Strings -->
     <string name="off">Mitfi</string>
     <string name="on">Fuq</string>
@@ -92,8 +93,10 @@
     <string name="settings">Settings</string>
     <string name="lang_system">Sistema</string>
     <string name="system_default">Sistema</string>
+    <string name="delete">Ħassar</string>
     <string name="hide">Aħbi</string>
     <string name="rename">Semmi mill-ġdid</string>
+    <string name="info">Info</string>
     <string name="okay">Okay</string>
     <string name="save">Ħlief</string>
     <string name="show">Uri</string>
@@ -114,6 +117,7 @@
     <string name="text_biometric_login_sub">Idħol billi tuża l-kredenzjali bijometrika tiegħek</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">L-apps kollha</string>
+    <string name="can_not_delete_system_apps">Ma tistax Ħassar Apps tas-Sistema</string>
     <string name="please_select_app">Jekk jogħġbok agħżel app</string>
     <string name="drawer_list_empty_hint">Ma nstabet l-ebda app</string>
     <string name="long_press_for_settings">Agħfas fit-tul kullimkien għas-settings</string>

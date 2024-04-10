@@ -79,8 +79,9 @@
     <string name="lock_settings">ล็อคการตั้งค่า</string>
     <!-- Backup Strings -->
     <string name="backup">สำรองข้อมูล</string>
-    <string name="load_backup">โหลดข้อมูลสำรอง</string>
-    <string name="store_backup">จัดเก็บข้อมูลสำรอง</string>
+    <string name="load_backup">โหลด</string>
+    <string name="save_backup">บันทึก</string>
+    <string name="clear_backup">ชัดเจน</string>
     <!-- Settings Strings -->
     <string name="off">ปิด</string>
     <string name="on">บน</string>
@@ -92,8 +93,10 @@
     <string name="settings">การตั้งค่า</string>
     <string name="lang_system">ระบบ</string>
     <string name="system_default">ระบบ</string>
+    <string name="delete">ลบ</string>
     <string name="hide">ซ่อน</string>
     <string name="rename">เปลี่ยนชื่อ</string>
+    <string name="info">ข้อมูล</string>
     <string name="okay">ตกลง</string>
     <string name="save">บันทึก</string>
     <string name="show">แสดง</string>
@@ -114,6 +117,7 @@
     <string name="text_biometric_login_sub">เข้าสู่ระบบโดยใช้ข้อมูลประจำตัวไบโอเมตริกซ์ของคุณ</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">แอพทั้งหมด</string>
+    <string name="can_not_delete_system_apps">ไม่สามารถลบแอประบบได้</string>
     <string name="please_select_app">โปรดเลือกแอป</string>
     <string name="drawer_list_empty_hint">ไม่พบแอป</string>
     <string name="long_press_for_settings">กดที่ใดก็ได้ค้างไว้เพื่อตั้งค่า</string>

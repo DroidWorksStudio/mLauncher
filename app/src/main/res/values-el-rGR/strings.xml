@@ -79,8 +79,9 @@
     <string name="lock_settings">Ρυθμίσεις κλειδώματος</string>
     <!-- Backup Strings -->
     <string name="backup">Αντιγράφων ασφαλείας</string>
-    <string name="load_backup">Φόρτωση αντιγράφων ασφαλείας</string>
-    <string name="store_backup">Δημιουργία αντιγράφων ασφαλείας αποθήκευσης</string>
+    <string name="load_backup">Φορτώνω</string>
+    <string name="save_backup">Αποθηκεύσετε</string>
+    <string name="clear_backup">Σαφή</string>
     <!-- Settings Strings -->
     <string name="off">Ανενεργό</string>
     <string name="on">Ενεργό</string>
@@ -92,8 +93,10 @@
     <string name="settings">Ρυθμίσεις</string>
     <string name="lang_system">Σύστημα</string>
     <string name="system_default">Σύστημα</string>
+    <string name="delete">Διαγράφω</string>
     <string name="hide">Απόκρυψη</string>
     <string name="rename">Μετονομασία</string>
+    <string name="info">Πληροφορίες</string>
     <string name="okay">Εντάξει</string>
     <string name="save">Αποθήκευση</string>
     <string name="show">Εμφάνιση</string>
@@ -114,6 +117,7 @@
     <string name="text_biometric_login_sub">Συνδεθείτε χρησιμοποιώντας τα βιομετρικά διαπιστευτήριά σας</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Όλες οι εφαρμογές</string>
+    <string name="can_not_delete_system_apps">Δεν είναι δυνατή η διαγραφή εφαρμογών συστήματος</string>
     <string name="please_select_app">Επιλέξτε μια εφαρμογή</string>
     <string name="drawer_list_empty_hint">Δεν βρέθηκαν εφαρμογές</string>
     <string name="long_press_for_settings">Πατήστε παρατεταμένα οπουδήποτε για ρυθμίσεις</string>

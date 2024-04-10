@@ -79,8 +79,9 @@
     <string name="lock_settings">Блокировка настроек</string>
     <!-- Backup Strings -->
     <string name="backup">Резервное копирование</string>
-    <string name="load_backup">Загрузить резервную копию</string>
-    <string name="store_backup">Резервное копирование магазина</string>
+    <string name="load_backup">Нагрузка</string>
+    <string name="save_backup">Сохранять</string>
+    <string name="clear_backup">Прозрачный</string>
     <!-- Settings Strings -->
     <string name="off">Выкл</string>
     <string name="on">На</string>
@@ -92,8 +93,10 @@
     <string name="settings">Настройки</string>
     <string name="lang_system">Система</string>
     <string name="system_default">Система</string>
+    <string name="delete">Удалить</string>
     <string name="hide">Скрыть</string>
     <string name="rename">Переименовать</string>
+    <string name="info">Информация</string>
     <string name="okay">Окей</string>
     <string name="save">Сохранить</string>
     <string name="show">Показать</string>
@@ -114,6 +117,7 @@
     <string name="text_biometric_login_sub">Войдите в систему, используя свои биометрические учетные данные</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Все приложения</string>
+    <string name="can_not_delete_system_apps">Не могу удалить системные приложения</string>
     <string name="please_select_app">Пожалуйста, выберите приложение</string>
     <string name="drawer_list_empty_hint">Не найдено приложений</string>
     <string name="long_press_for_settings">Долгое нажатие в любом месте для настроек</string>

@@ -79,8 +79,9 @@
     <string name="lock_settings">锁定设置</string>
     <!-- Backup Strings -->
     <string name="backup">备份</string>
-    <string name="load_backup">加载备份</string>
-    <string name="store_backup">存储备份</string>
+    <string name="load_backup">加载</string>
+    <string name="save_backup">节省</string>
+    <string name="clear_backup">清除</string>
     <!-- Settings Strings -->
     <string name="off">关</string>
     <string name="on">开</string>
@@ -92,8 +93,10 @@
     <string name="settings">设置</string>
     <string name="lang_system">系统</string>
     <string name="system_default">系统</string>
+    <string name="delete">删除</string>
     <string name="hide">隐藏</string>
     <string name="rename">重命名</string>
+    <string name="info">信息</string>
     <string name="okay">好的</string>
     <string name="save">保存</string>
     <string name="show">显示</string>
@@ -114,6 +117,7 @@
     <string name="text_biometric_login_sub">使用您的生物识别凭据登录</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">所有应用程序</string>
+    <string name="can_not_delete_system_apps">无法删除系统应用程序</string>
     <string name="please_select_app">请选择一个应用程序</string>
     <string name="drawer_list_empty_hint">未找到应用</string>
     <string name="long_press_for_settings">在屏幕上任意一处长按进入设置</string>

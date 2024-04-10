@@ -79,8 +79,9 @@
     <string name="lock_settings">Instellingen vergrendelen</string>
     <!-- Backup Strings -->
     <string name="backup">Back-up</string>
-    <string name="load_backup">Backup Laden</string>
-    <string name="store_backup">Back-up opslaan</string>
+    <string name="load_backup">Laden</string>
+    <string name="save_backup">Redden</string>
+    <string name="clear_backup">Duidelijk</string>
     <!-- Settings Strings -->
     <string name="off">UIT</string>
     <string name="on">op</string>
@@ -92,8 +93,10 @@
     <string name="settings">Instellingen</string>
     <string name="lang_system">Systeem</string>
     <string name="system_default">Systeem</string>
+    <string name="delete">Verwijderen</string>
     <string name="hide">Verbergen</string>
     <string name="rename">Hernoem</string>
+    <string name="info">Info</string>
     <string name="okay">OK</string>
     <string name="save">Opslaan</string>
     <string name="show">Weergeven</string>
@@ -114,6 +117,7 @@
     <string name="text_biometric_login_sub">Log in met uw biometrische gegevens</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Alle apps</string>
+    <string name="can_not_delete_system_apps">Kan systeemapps niet verwijderen</string>
     <string name="please_select_app">Selecteer een app</string>
     <string name="drawer_list_empty_hint">Geen apps gevonden</string>
     <string name="long_press_for_settings">Lang drukken voor instellingen</string>

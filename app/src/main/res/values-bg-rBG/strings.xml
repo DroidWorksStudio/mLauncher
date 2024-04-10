@@ -79,8 +79,9 @@
     <string name="lock_settings">Настройки за заключване</string>
     <!-- Backup Strings -->
     <string name="backup">Архивиране</string>
-    <string name="load_backup">Заредете резервно копие</string>
-    <string name="store_backup">Резервно копие на магазина</string>
+    <string name="load_backup">Заредете</string>
+    <string name="save_backup">Запазване</string>
+    <string name="clear_backup">ясно</string>
     <!-- Settings Strings -->
     <string name="off">Изключено</string>
     <string name="on">На</string>
@@ -92,8 +93,10 @@
     <string name="settings">Настройки</string>
     <string name="lang_system">Система</string>
     <string name="system_default">Система</string>
+    <string name="delete">Изтрий</string>
     <string name="hide">Скрий</string>
     <string name="rename">Преименуване на</string>
+    <string name="info">Информация</string>
     <string name="okay">Добре</string>
     <string name="save">Запазете</string>
     <string name="show">Покажи</string>
@@ -114,6 +117,7 @@
     <string name="text_biometric_login_sub">Влезте с вашите биометрични идентификационни данни</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Всички приложения</string>
+    <string name="can_not_delete_system_apps">Не могат да се изтрият системни приложения</string>
     <string name="please_select_app">Моля, изберете приложение</string>
     <string name="drawer_list_empty_hint">Не са намерени приложения</string>
     <string name="long_press_for_settings">Дълго натискане навсякъде за настройки</string>

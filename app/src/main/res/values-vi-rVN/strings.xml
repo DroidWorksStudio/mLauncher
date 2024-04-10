@@ -79,8 +79,9 @@
     <string name="lock_settings">Cài đặt khóa</string>
     <!-- Backup Strings -->
     <string name="backup">Hỗ trợ</string>
-    <string name="load_backup">Tải bản sao lưu</string>
-    <string name="store_backup">Sao lưu cửa hàng</string>
+    <string name="load_backup">Trọng tải</string>
+    <string name="save_backup">Cứu</string>
+    <string name="clear_backup">Thông thoáng</string>
     <!-- Settings Strings -->
     <string name="off">Off</string>
     <string name="on">On</string>
@@ -92,8 +93,10 @@
     <string name="settings">Cài đặt</string>
     <string name="lang_system">System</string>
     <string name="system_default">System</string>
+    <string name="delete">Xóa bỏ</string>
     <string name="hide">Hide</string>
     <string name="rename">Rename</string>
+    <string name="info">Thông tin</string>
     <string name="okay">Okay</string>
     <string name="save">Save</string>
     <string name="show">Show</string>
@@ -114,6 +117,7 @@
     <string name="text_biometric_login_sub">Đăng nhập bằng thông tin sinh trắc học của bạn</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>
+    <string name="can_not_delete_system_apps">Không thể xóa ứng dụng hệ thống</string>
     <string name="please_select_app">Vui lòng chọn một ứng dụng</string>
     <string name="drawer_list_empty_hint">No apps found</string>
     <string name="long_press_for_settings">Long press anywhere for settings</string>

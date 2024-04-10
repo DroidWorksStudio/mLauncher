@@ -79,8 +79,9 @@
     <string name="lock_settings">सेटिंग्स लॉक करें</string>
     <!-- Backup Strings -->
     <string name="backup">बैकअप</string>
-    <string name="load_backup">बैकअप को लोड करना</string>
-    <string name="store_backup">बैकअप स्टोर करें</string>
+    <string name="load_backup">भार</string>
+    <string name="save_backup">बचाना</string>
+    <string name="clear_backup">स्पष्ट</string>
     <!-- Settings Strings -->
     <string name="off">बंद</string>
     <string name="on">पर</string>
@@ -92,8 +93,10 @@
     <string name="settings">समायोजन</string>
     <string name="lang_system">प्रणाली</string>
     <string name="system_default">प्रणाली</string>
+    <string name="delete">मिटाना</string>
     <string name="hide">छिपाना</string>
     <string name="rename">नाम बदलें</string>
+    <string name="info">जानकारी</string>
     <string name="okay">ठीक है</string>
     <string name="save">सहेजें</string>
     <string name="show">दिखाना</string>
@@ -114,6 +117,7 @@
     <string name="text_biometric_login_sub">अपने बायोमेट्रिक क्रेडेंशियल का उपयोग करके लॉग इन करें</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">सभी एप्लीकेशन</string>
+    <string name="can_not_delete_system_apps">सिस्टम ऐप्स को हटाया नहीं जा सकता</string>
     <string name="please_select_app">कृपया कोई ऐप चुनें</string>
     <string name="drawer_list_empty_hint">कोई ऐप्लिकेशन नहीं मिला</string>
     <string name="long_press_for_settings">सेटिंग्स के लिए कहीं भी देर तक दबाएं</string>
