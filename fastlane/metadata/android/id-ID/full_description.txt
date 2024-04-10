@@ -28,6 +28,7 @@ Bercabang dari <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. 
 ## Terjemahan:
 
 - Banyak orang telah menerjemahkan aplikasi ini ke bahasa-bahasa berikut. Terima kasih banyak kepada Anda semua.
+  - Afrikaans
   - Bahasa Arab
   - Bahasa Albania
   - Bahasa Bulgaria
@@ -67,6 +68,7 @@ Bercabang dari <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. 
   - Rusia
   - Bahasa Serbia
   - Sindhi
+  - Orang Slovakia
   - Bahasa Spanyol
   - Swedia
   - Thailand
