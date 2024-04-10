@@ -28,6 +28,7 @@ Bifurqué à partir de <a href="https://github.com/tanujnotes/Olauncher">Olaunch
 ## Traductions :
 
 - De nombreuses personnes ont traduit l'application dans les langues suivantes. Un grand merci à vous tous.
+  -Afrikaans
   - Arabe
   - Albanais
   - Bulgare
@@ -67,6 +68,7 @@ Bifurqué à partir de <a href="https://github.com/tanujnotes/Olauncher">Olaunch
   - Russe
   - Serbe
   - Sindhi
+  - slovaque
   - espagnol
   - Suédois
   - thaïlandais
