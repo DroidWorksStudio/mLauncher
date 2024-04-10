@@ -15,6 +15,10 @@
 
 - Eliminate duplicate entries in applist when adding a work profile
 
+### Miscellaneous Tasks:
+
+- *(ci)* Updated FastLane
+
 ## [1.4.9](https://github.com/DroidWorksStudio/mLauncher/tree/1.4.9) - (09, April 2024)
 
 ### Implemented Enhancements:
