@@ -1,7 +1,7 @@
 Verzia: 1.4.2
 
 Vylepšenie:
-[Funkcia] – Pridať možnosť pre viacero stránok na úvodnú obrazovku.
+[Funkcia] – Pridná možnosť pridať viacero stránok na úvodnú obrazovku.
 
 Opravy chýb:
 [Chyba] Opravený fuzzy filter, ak je nastavený na 0.
