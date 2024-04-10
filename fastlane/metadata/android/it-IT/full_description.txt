@@ -28,6 +28,7 @@ Biforcato da <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mi
 ## Traduzioni:
 
 - Molte persone hanno tradotto l'applicazione nelle seguenti lingue. Grazie a tutti voi.
+  - Afrikaans
   - Arabo
   - Albanese
   - Bulgaro
@@ -67,6 +68,7 @@ Biforcato da <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mi
   - Russo
   - Serbo
   - Sindhi
+  - Slovacco
   - Spagnolo
   - Svedese
   - Thailandese
