@@ -1,0 +1,14 @@
+Verżjoni: 1.5.0
+
+Titjib Implimentat:
+
+Żid buttuna żejda għat-taqsima tal-Backup tas-settings.
+Miżjud Yahoo Brave u tfittxija Bing.
+
+Appoġġ Lingwistiku:
+
+Fajls tal-Lingwa Aġġornat.
+
+Fattur mill-ġdid:
+
+Elimina entrati duplikati fl-applist meta żżid profil tax-xogħol.
