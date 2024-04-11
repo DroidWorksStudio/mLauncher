@@ -1,0 +1,14 @@
+Version: 1.5.0
+
+Enhancements implemented:
+
+Addidit bullam extra sectionem pro Tergum occasus.
+Adiecit Yahoo Fortis et Bing quaero.
+
+Support Lingua:
+
+Tabularia Linguarum Renovata.
+
+Refactor:
+
+Duplicare entries in applicatione eliminate, cum profile opus addendo.
