@@ -1,0 +1,9 @@
+Verzió: 1.5.1
+
+Nyelvi támogatás:
+
+Frissített nyelvi fájlok.
+
+Refaktor:
+
+Továbbfejlesztett alkalmazásikon kialakítás a tetszetősebb ikonra való frissítéssel.
