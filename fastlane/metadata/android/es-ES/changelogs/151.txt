@@ -1,0 +1,9 @@
+Versión: 1.5.1
+
+Ayuda de idioma:
+
+Archivos de idioma actualizados.
+
+Refactorizar:
+
+Se mejoró el diseño del ícono de la aplicación al actualizarlo a un ícono más atractivo visualmente.
