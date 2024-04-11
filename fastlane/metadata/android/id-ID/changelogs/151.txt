@@ -1,0 +1,9 @@
+Versi: 1.5.1
+
+Dukungan bahasa:
+
+File Bahasa yang Diperbarui.
+
+Refaktor:
+
+Peningkatan desain ikon aplikasi dengan memperbarui ke ikon yang lebih menarik secara visual.
