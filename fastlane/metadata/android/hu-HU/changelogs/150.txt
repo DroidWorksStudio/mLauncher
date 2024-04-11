@@ -1,0 +1,14 @@
+Verzió: 1.5.0
+
+Megvalósított fejlesztések:
+
+Egy extra gomb hozzáadva a beállítások Biztonsági mentés szakaszához.
+Hozzáadott Yahoo Brave és Bing keresés.
+
+Nyelvi támogatás:
+
+Frissített nyelvi fájlok.
+
+Refaktor:
+
+Munkaprofil hozzáadásakor szüntesse meg az ismétlődő bejegyzéseket az alkalmazáslistában.
