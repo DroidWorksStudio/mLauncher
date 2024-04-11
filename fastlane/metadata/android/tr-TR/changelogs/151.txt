@@ -1,0 +1,9 @@
+Sürüm: 1.5.1
+
+Dil desteği:
+
+Güncellenmiş Dil Dosyaları.
+
+Yeniden düzenleme:
+
+Görsel olarak daha çekici bir simgeye güncelleme yapılarak geliştirilmiş uygulama simgesi tasarımı.
