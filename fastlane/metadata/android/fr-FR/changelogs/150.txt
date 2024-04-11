@@ -1,0 +1,14 @@
+Version : 1.5.0
+
+Améliorations mises en œuvre :
+
+Ajout d'un bouton supplémentaire pour la section Sauvegarde des paramètres.
+Ajout de la recherche Yahoo Brave et Bing.
+
+Support linguistique:
+
+Fichiers de langue mis à jour.
+
+Refactoriser :
+
+Éliminez les entrées en double dans applist lors de l’ajout d’un profil professionnel.
