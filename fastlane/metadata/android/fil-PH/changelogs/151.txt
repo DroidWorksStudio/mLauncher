@@ -1,0 +1,9 @@
+Bersyon: 1.5.1
+
+Suporta sa Wika:
+
+Na-update na Mga File ng Wika.
+
+Refactor:
+
+Pinahusay na disenyo ng icon ng app sa pamamagitan ng pag-update sa isang icon na mas nakakaakit sa paningin.
