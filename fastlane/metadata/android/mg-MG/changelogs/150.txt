@@ -1,0 +1,14 @@
+Dikan-teny: 1.5.0
+
+Fanatsarana nampiharina:
+
+Nanampy bokotra fanampiny ho an'ny fizarana Backup amin'ny toe-javatra.
+Nampiana Yahoo Brave sy Bing fikarohana.
+
+Fanohanana ny fiteny:
+
+Rakitry ny fiteny nohavaozina.
+
+Refactor:
+
+Esory ny dika mitovy amin'ny lisitry ny fangatahana rehefa manampy mombamomba ny asa.
