@@ -1,0 +1,14 @@
+Versione: 1.5.0
+
+Miglioramenti implementati:
+
+Aggiunto un pulsante aggiuntivo per la sezione Backup delle impostazioni.
+Aggiunta la ricerca Yahoo Brave e Bing.
+
+Supporto linguistico:
+
+File di lingua aggiornati.
+
+Refactoring:
+
+Elimina le voci duplicate nell'elenco delle applicazioni quando aggiungi un profilo di lavoro.
