@@ -1,0 +1,9 @@
+Versione: 1.5.1
+
+Supporto linguistico:
+
+File di lingua aggiornati.
+
+Refactoring:
+
+Design migliorato delle icone delle app grazie all'aggiornamento a un'icona visivamente più accattivante.
