@@ -1,0 +1,14 @@
+Version: 1.5.0
+
+Implementerede forbedringer:
+
+Tilføjet en ekstra knap til sektionen Backup af indstillinger.
+Tilføjet Yahoo Brave og Bing-søgning.
+
+Sprogsupport:
+
+Opdaterede sprogfiler.
+
+Refaktor:
+
+Fjern duplikerede poster i applisten, når du tilføjer en arbejdsprofil.

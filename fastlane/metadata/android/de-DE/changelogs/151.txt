@@ -1,0 +1,9 @@
+Version: 1.5.1
+
+Sprachunterstützung:
+
+Aktualisierte Sprachdateien.
+
+Umgestalten:
+
+Verbessertes App-Symboldesign durch Aktualisierung auf ein optisch ansprechenderes Symbol.

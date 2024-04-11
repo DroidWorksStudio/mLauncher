@@ -1,0 +1,14 @@
+Verzija: 1.5.0
+
+Implementirana poboljšanja:
+
+Dodan je dodatni gumb za odjeljak Sigurnosna kopija postavki.
+Dodano Yahoo Brave i Bing pretraživanje.
+
+Jezična podrška:
+
+Ažurirane jezične datoteke.
+
+Refaktor:
+
+Uklonite dvostruke unose na popisu aplikacija prilikom dodavanja radnog profila.

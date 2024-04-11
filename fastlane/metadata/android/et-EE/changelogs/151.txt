@@ -1,0 +1,9 @@
+Versioon: 1.5.1
+
+Keele tugi:
+
+Värskendatud keelefailid.
+
+Refaktor:
+
+Täiustatud rakenduse ikooni kujundus, värskendades visuaalselt atraktiivsemaks ikooniks.

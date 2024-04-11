@@ -1,0 +1,9 @@
+Versioni: 1.5.1
+
+Mbështetje gjuhësore:
+
+Skedarët e përditësuar të gjuhës.
+
+Refaktori:
+
+Përmirësimi i dizajnit të ikonave të aplikacionit duke u përditësuar në një ikonë më tërheqëse vizualisht.

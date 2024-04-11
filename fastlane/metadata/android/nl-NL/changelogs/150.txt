@@ -1,0 +1,14 @@
+Versie: 1.5.0
+
+Geïmplementeerde verbeteringen:
+
+Een extra knop toegevoegd voor het back-upgedeelte van de instellingen.
+Yahoo Brave en Bing-zoekopdracht toegevoegd.
+
+Taalondersteuning:
+
+Bijgewerkte taalbestanden.
+
+Refactoring:
+
+Elimineer dubbele vermeldingen in de sollicitatielijst bij het toevoegen van een werkprofiel.

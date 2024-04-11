@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Base Settings -->
-    <string name="app">App</string>
+    <string name="app">Aplikácia</string>
     <!-- Admin Settings -->
     <string name="admin_permission_message">mLauncher sľubuje, že bude zodpovedne používať povolenie na uzamknutie obrazovky. mLauncher nezhromažďuje ani nezdieľa žiadne údaje.</string>
-    <string name="experimental">(experimentálne)</string>
+    <string name="experimental">(Experimentálne)</string>
     <!-- Settings Headers -->
     <string name="appearance">Vzhľad</string>
     <string name="behavior">Správanie</string>
     <string name="homescreen">Domovská obrazovka</string>
     <string name="alignment">Zarovnanie</string>
     <string name="gestures">Gestá</string>
-    <string name="miscellaneous">Zmiešaný</string>
+    <string name="miscellaneous">Rôzne</string>
     <!-- Home Strings -->
     <string name="hidden_apps">Skryté aplikácie</string>
-    <string name="reorder_apps">Znova objednať aplikácie</string>
+    <string name="reorder_apps">Zmeniť poradie Aplikacií</string>
     <string name="set_as_default_launcher">Nastaviť ako predvolený spúšťač</string>
     <string name="change_default_launcher">Zmeniť predvolený spúšťač</string>
     <!-- Appearance Strings -->
@@ -23,16 +23,16 @@
     <string name="app_language">Jazyk rozhrania</string>
     <string name="app_text_size">Veľkosť textu</string>
     <string name="clock_text_size_multiplier">Násobiteľ veľkosti textu hodín</string>
-    <string name="app_padding_size">Veľkosť výplne</string>
-    <string name="follow_accent_colors">Akcentné farby</string>
-    <string name="background_opacity">Nepriehľadnosť pozadia</string>
+    <string name="app_padding_size">Veľkosť odsadenia</string>
+    <string name="follow_accent_colors">Doplnková farby</string>
+    <string name="background_opacity">Priehľadnosť pozadia</string>
     <string name="all_apps_text">Zobraziť text všetkých aplikácií</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Automaticky zobraziť klávesnicu</string>
     <string name="auto_open_apps">Automatické otváranie aplikácií</string>
     <string name="display_recent_apps">Zobraziť nedávne aplikácie</string>
     <string name="number_of_recents">Počet nedávnych aplikácií</string>
-    <string name="filter_strength">Sila filtra</string>
+    <string name="filter_strength">Sila filtrovania</string>
     <string name="search_from_start">Vyhľadávanie aplikácií od začiatku.</string>
     <string name="icon_font">Použite písmo ikony</string>
     <!-- Home-screen Strings -->
@@ -42,77 +42,77 @@
     <string name="show_time">Zobraziť čas</string>
     <string name="show_date">Zobraziť dátum</string>
     <string name="show_battery">Zobraziť batériu</string>
-    <string name="lock_home_apps">Zamknúť aplikácie</string>
+    <string name="lock_home_apps">Zámok aplikácií</string>
     <string name="extend_home_apps_area">Rozšíriť oblasť kliknutia</string>
     <string name="home_alignment_bottom">Domovská obrazovka Zarovnať dole</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">Domovská obrazovka aplikácií</string>
     <string name="clock_alignment">Hodiny a dátum</string>
-    <string name="drawer_alignment">Aplikácie v zásuvke aplikácií</string>
+    <string name="drawer_alignment">Aplikácie v zozname aplikacií</string>
     <!-- Gestures Strings -->
     <string name="short_swipe_up_app">Krátke potiahnutie prstom nahor</string>
     <string name="short_swipe_down_app">Krátke potiahnutie prstom nadol</string>
-    <string name="short_swipe_left_app">Krátke potiahnutie doľava</string>
+    <string name="short_swipe_left_app">Krátke potiahnutie prstom doľava</string>
     <string name="short_swipe_right_app">Krátke potiahnutie prstom doprava</string>
-    <string name="long_swipe_up_app">Dlhé potiahnutie nahor</string>
-    <string name="long_swipe_down_app">Dlhé potiahnutie nadol</string>
-    <string name="long_swipe_left_app">Dlhé potiahnutie doľava</string>
-    <string name="long_swipe_right_app">Dlhé potiahnutie doprava</string>
-    <string name="clock_click_app">Kliknite na Hodiny</string>
-    <string name="date_click_app">Kliknite na Dátum</string>
+    <string name="long_swipe_up_app">Dlhé potiahnutie prstom nahor</string>
+    <string name="long_swipe_down_app">Dlhé potiahnutie prstom nadol</string>
+    <string name="long_swipe_left_app">Dlhé potiahnutie prstom doľava</string>
+    <string name="long_swipe_right_app">Dlhé potiahnutie prstom doprava</string>
+    <string name="clock_click_app">Kliknúť na Hodiny</string>
+    <string name="date_click_app">Kliknúť na Dátum</string>
     <string name="double_tap">Dvojité poklepanie</string>
     <!-- Gestures Do Strings -->
-    <string name="show_notifications">Zobraziť upozornenie</string>
+    <string name="show_notifications">Zobraziť notifikácie</string>
     <string name="show_app_list">Zobraziť zoznam aplikácií</string>
-    <string name="open_app">Otvorte aplikáciu</string>
-    <string name="lock_screen">Zamknúť obrazovku</string>
+    <string name="open_app">Otvoriť aplikáciu</string>
+    <string name="lock_screen">Zamykacia obrazovka</string>
     <string name="open_quick_settings">Rýchle nastavenia</string>
     <string name="show_recents">Zobraziť Nedávne</string>
     <string name="open_power_dialog">Dialógové okno napájania</string>
-    <string name="take_a_screenshot">Urobte snímku obrazovky</string>
+    <string name="take_a_screenshot">Vytvoriť snímku obrazovky</string>
     <string name="left_page">Prejdite na ľavú stranu</string>
     <string name="right_page">Prejdite na Pravú stranu</string>
     <string name="double_tap_to_lock_screen">Dvojitým klepnutím uzamknete</string>
     <!-- Miscellaneous Strings -->
     <string name="settings_text_size">Nastavenia Veľkosť textu</string>
     <string name="display_hidden_apps">Zobraziť skryté aplikácie</string>
-    <string name="lock_settings">Nastavenia zámku</string>
+    <string name="lock_settings">Uzamknúť nastavenia</string>
     <!-- Backup Strings -->
-    <string name="backup">Zálohovanie</string>
-    <string name="load_backup">Naložiť</string>
+    <string name="backup">Zálohovať</string>
+    <string name="load_backup">Načítať</string>
     <string name="save_backup">Uložiť</string>
-    <string name="clear_backup">jasný</string>
+    <string name="clear_backup">Vymazať</string>
     <!-- Settings Strings -->
-    <string name="off">Vypnuté</string>
-    <string name="on">Zapnuté</string>
+    <string name="off">Vypnúť</string>
+    <string name="on">Zapnuť</string>
     <string name="left">Vľavo</string>
-    <string name="right">Správny</string>
-    <string name="center">centrum</string>
+    <string name="right">Vpravo</string>
+    <string name="center">Stred</string>
     <string name="dark">Tmavý</string>
-    <string name="light">Svetlo</string>
-    <string name="settings">nastavenie</string>
+    <string name="light">Svetlý</string>
+    <string name="settings">Nastavenia</string>
     <string name="lang_system">Systém</string>
     <string name="system_default">Systém</string>
     <string name="delete">Odstrániť</string>
     <string name="hide">Skryť</string>
     <string name="rename">Premenovať</string>
-    <string name="info">Info</string>
-    <string name="okay">Dobre</string>
+    <string name="info">Informácie</string>
+    <string name="okay">Ok</string>
     <string name="save">Uložiť</string>
-    <string name="show">Šou</string>
-    <string name="reset">Resetovať</string>
+    <string name="show">Zobraziť</string>
+    <string name="reset">Obnoviť</string>
     <string name="cancel">Zrušiť</string>
     <string name="enable">Povoliť</string>
     <string name="disable">Zakázať</string>
     <string name="enabled">Povolené</string>
     <string name="disabled">Zakázané</string>
-    <string name="open">OTVORENÉ</string>
-    <string name="close">Zavrieť</string>
+    <string name="open">Otvoriť</string>
+    <string name="close">Zatvoriť</string>
     <string name="copy">Kopírovať</string>
     <!-- PinCode Strings -->
-    <string name="text_authentication_cancel">Zrušenie overenia.</string>
+    <string name="text_authentication_cancel">Zrušiť overenie.</string>
     <string name="text_authentication_error">Chyba overenia:%1$s(kód %2$d)</string>
-    <string name="text_authentication_failed">Overenie zlyhalo.</string>
+    <string name="text_authentication_failed">Overenie zlyhalo</string>
     <string name="text_biometric_login">Biometrické prihlásenie pre mLauncher</string>
     <string name="text_biometric_login_sub">Prihláste sa pomocou svojich biometrických údajov.</string>
     <!-- Unsorted Strings -->
@@ -120,7 +120,7 @@
     <string name="can_not_delete_system_apps">Systémové aplikácie sa nedajú odstrániť</string>
     <string name="please_select_app">Vyberte aplikáciu</string>
     <string name="drawer_list_empty_hint">Nenašli sa žiadne aplikácie</string>
-    <string name="long_press_for_settings">Dlhým stlačením kdekoľvek zobrazíte nastavenia</string>
+    <string name="long_press_for_settings">Dlho podržte pre nastavenia</string>
     <string name="swipe_up_for_apps">Potiahnutím nahor zobrazíte všetky aplikácie</string>
     <string name="app_drawer_tips">Tip: Potiahnutím nadol zatvoríte. Posunutím skryjete klávesnicu.</string>
     <string name="double_tap_lock_is_enabled_message">Ak zámok dvojitým poklepaním zakáže odomknutie odtlačkom prsta alebo tvárou, otvorte nastavenia mlaunchera, klepnite na „experimentálne“ a postupujte podľa pokynov. Ďakujem.</string>

@@ -4,7 +4,7 @@ Vylepšenie:
 [Funkcia] – Pridaná možnosť, aby ste nemuseli premenovať aplikácie, ak sú už nastavené v zozname aplikácií.
 
 Opravy chýb:
-[Chyba] - Opravené Premenovanie pri premenovaní späť na pôvodný názov.
+[Chyba] - Opravené Premenovanie pri premenovaní na pôvodný názov.
 [Chyba] – Opravené gestá potiahnutia.
 
 Jazyková podpora:

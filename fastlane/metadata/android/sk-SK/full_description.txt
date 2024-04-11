@@ -10,7 +10,7 @@ Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Min
         - Kliknutie na hodiny
         - Kliknutie na dátum
     - Možné akcie teraz zahŕňajú:
-        - Otvorte špecifikovanú aplikáciu
+        - Otvoriť špecifikovanú aplikáciu
         - Zobrazenie zoznamu aplikácií
         - Uzamknutie obrazovky
         - Zobraziť naposledy otvorené aplikácie
@@ -19,15 +19,15 @@ Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Min
         - Dialógové okno napájania
         - Vyhotoviť snímku obrazovky
         - Zakázať Gesto
-- Hodiny môžete umiestniť aj nezávisle od domácich aplikácií
-- Zmeňte zarovnanie aplikácií v zásuvke aplikácií
+- Hodiny môžete umiestniť aj nezávisle od domovských aplikácií
+- Zmeňte zarovnanie aplikácií v paneli aplikácií
 - Nastavenia uzamknutia za biometriou (prepínač)
 - Zmena veľkosti písma
 - Odstránené povolenie na internet. Nikdy neviete, čo o vás chce vývojár aplikácie vedieť.
 
 ## Preklady:
 
-- Veľa ľudí preložilo aplikáciu do nasledujúcich jazykov. Veľká vďaka vám všetkým.
+- Mnoho ľudí preložilo aplikáciu do týchto jazykov. Veľká vďaka všetkým.
   - Afrikánsky
   - Arabský
   - Albánsky
@@ -53,25 +53,25 @@ Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Min
   - Írsky
   - Taliansky
   - Japonsky
-  - kórejský
-  - litovský
-  - luxemburský
-  - malajčina
-  - madagaskarský
-  - malajálamčina
-  - nórsky
+  - Kórejský
+  - Litovský
+  - Luxemburský
+  - Malajský
+  - Malgašský
+  - Malajálsky
+  - Nórsky
   - Nepálsky
-  - perzský
-  - poľský
-  - portugalčina (európska)
-  - pandžábsky
-  - ruský
-  - srbský
-  - Sindhi
-  -Slovensky
-  - španielčina
-  - švédsky
-  - thajčina
-  - turecký
-  - ukrajinský
-  - Vietnamčina
+  - Perzský
+  - Poľský
+  - Portugálsky (európska)
+  - Pandžábsky
+  - Ruský
+  - Srbský
+  - Sindhština
+  - Slovensky
+  - Španielsky
+  - Švédsky
+  - Thajsky
+  - Turecký
+  - Ukrajinský
+  - Vietnamsky

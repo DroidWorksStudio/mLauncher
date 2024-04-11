@@ -1,0 +1,9 @@
+Versiune: 1.5.1
+
+Suport lingvistic:
+
+Fișiere de limbă actualizate.
+
+Refactorizare:
+
+Design îmbunătățit al pictogramei aplicației prin actualizarea la o pictogramă mai atractivă din punct de vedere vizual.

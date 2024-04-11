@@ -1,0 +1,9 @@
+Versie: 1.5.1
+
+Taalondersteuning:
+
+Bijgewerkte taalbestanden.
+
+Refactoring:
+
+Verbeterd app-pictogramontwerp door bij te werken naar een visueel aantrekkelijker pictogram.

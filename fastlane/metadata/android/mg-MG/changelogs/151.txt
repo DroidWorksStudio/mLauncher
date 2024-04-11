@@ -1,0 +1,9 @@
+Version: 1.5.1
+
+Fanohanana ny fiteny:
+
+Rakitry ny fiteny nohavaozina.
+
+Refactor:
+
+Nohatsaraina ny famolavolana kisary fampiharana amin'ny alàlan'ny fanavaozana ho kisary manintona kokoa.

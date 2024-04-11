@@ -1,0 +1,14 @@
+Versión: 1.5.0
+
+Mejoras implementadas:
+
+Se agregó un botón adicional para la sección Copia de seguridad de la configuración.
+Se agregó la búsqueda de Yahoo Brave y Bing.
+
+Ayuda de idioma:
+
+Archivos de idioma actualizados.
+
+Refactorizar:
+
+Elimine las entradas duplicadas en la lista de aplicaciones al agregar un perfil de trabajo.
