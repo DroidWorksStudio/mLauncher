@@ -1,0 +1,9 @@
+Verżjoni: 1.5.1
+
+Appoġġ Lingwistiku:
+
+Fajls tal-Lingwa Aġġornat.
+
+Fattur mill-ġdid:
+
+Disinn imtejjeb tal-ikona tal-app billi taġġorna għal ikona aktar attraenti viżwalment.
