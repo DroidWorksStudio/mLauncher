@@ -1,0 +1,9 @@
+Weergawe: 1.5.1
+
+Taalondersteuning:
+
+Opgedateerde taallêers.
+
+Refaktor:
+
+Verbeterde toepassingsikoonontwerp deur op te dateer na 'n meer visueel aantreklike ikoon.
