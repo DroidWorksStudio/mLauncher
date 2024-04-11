@@ -1,14 +1,10 @@
 # Changelog
 
-## [1.5.1](https://github.com/DroidWorksStudio/mLauncher/tree/1.5.1) - (11, April 2024)
+## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
 ### Refactor:
 
 - Improved app icon design by updating to a more visually appealing icon.
-
-### Miscellaneous Tasks:
-
-- *(ci)* Update Release File
 
 ## [1.5.0](https://github.com/DroidWorksStudio/mLauncher/tree/1.5.0) - (10, April 2024)
 
