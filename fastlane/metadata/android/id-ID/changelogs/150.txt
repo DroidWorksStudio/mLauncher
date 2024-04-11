@@ -1,0 +1,14 @@
+Versi: 1.5.0
+
+Peningkatan yang Diimplementasikan:
+
+Menambahkan tombol tambahan untuk bagian pengaturan Cadangan.
+Menambahkan pencarian Yahoo Brave dan Bing.
+
+Dukungan bahasa:
+
+File Bahasa yang Diperbarui.
+
+Refaktor:
+
+Hilangkan entri duplikat di daftar aplikasi saat menambahkan profil kerja.
