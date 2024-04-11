@@ -1,0 +1,9 @@
+Version: 1.5.1
+
+Support Lingua:
+
+Tabularia Linguarum Renovata.
+
+Refactor:
+
+Improved design app icon per adaequationem ad iconem magis uisum appellat.
