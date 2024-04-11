@@ -1,0 +1,9 @@
+Versi: 1.5.1
+
+Sokongan Bahasa:
+
+Fail Bahasa yang dikemas kini.
+
+Refactor:
+
+Reka bentuk ikon apl dipertingkatkan dengan mengemas kini kepada ikon yang lebih menarik secara visual.
