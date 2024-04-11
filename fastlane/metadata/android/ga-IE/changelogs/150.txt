@@ -1,0 +1,14 @@
+Leagan: 1.5.0
+
+Feabhsuithe Curtha i bhFeidhm:
+
+Cuireadh cnaipe breise leis don chuid Cúltaca de na socruithe.
+Cuireadh cuardach Yahoo Brave agus Bing leis.
+
+Tacaíocht Teanga:
+
+Comhaid Teanga Nuashonraithe.
+
+Refactor:
+
+Cuir deireadh le hiontrálacha dúblacha san applist agus próifíl oibre á chur leis.
