@@ -22,7 +22,7 @@
     <string name="theme_mode">Theme mode</string>
     <string name="app_language">Interface Language</string>
     <string name="app_text_size">Text Size</string>
-    <string name="clock_text_size_multiplier">시계 텍스트 크기 승수</string>
+    <string name="clock_text_size">시계 텍스트 크기</string>
     <string name="app_padding_size">패딩 크기</string>
     <string name="follow_accent_colors">악센트 색상</string>
     <string name="background_opacity">배경 불투명도</string>
@@ -95,6 +95,7 @@
     <string name="system_default">System</string>
     <string name="delete">삭제</string>
     <string name="hide">Hide</string>
+    <string name="unhide">숨기기 해제</string>
     <string name="rename">Rename</string>
     <string name="info">정보</string>
     <string name="okay">Okay</string>
