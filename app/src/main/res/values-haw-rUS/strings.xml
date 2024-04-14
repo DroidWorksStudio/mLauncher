@@ -22,7 +22,7 @@
     <string name="theme_mode">ʻano kumuhana</string>
     <string name="app_language">ʻŌlelo Interface</string>
     <string name="app_text_size">Nui kikokikona</string>
-    <string name="clock_text_size_multiplier">Mea hoʻonui i ka nui kikokikona</string>
+    <string name="clock_text_size">Nui kikokikona uaki</string>
     <string name="app_padding_size">Lahi Padding</string>
     <string name="follow_accent_colors">Nā waihoʻoluʻu</string>
     <string name="background_opacity">Opacity o ka hope</string>
@@ -95,6 +95,7 @@
     <string name="system_default">Pūnaehana</string>
     <string name="delete">Holoi</string>
     <string name="hide">Huna</string>
+    <string name="unhide">Hōʻike</string>
     <string name="rename">inoa hou</string>
     <string name="info">ʻIke</string>
     <string name="okay">ʻAe</string>
