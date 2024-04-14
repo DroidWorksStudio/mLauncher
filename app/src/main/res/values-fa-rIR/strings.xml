@@ -22,7 +22,7 @@
     <string name="theme_mode">حالت تم</string>
     <string name="app_language">زبان رابط</string>
     <string name="app_text_size">اندازه متن</string>
-    <string name="clock_text_size_multiplier">ضربدر اندازه متن ساعت</string>
+    <string name="clock_text_size">اندازه متن ساعت</string>
     <string name="app_padding_size">اندازه بالشتک</string>
     <string name="follow_accent_colors">رنگ های تاکیدی</string>
     <string name="background_opacity">کدورت پس زمینه</string>
@@ -95,6 +95,7 @@
     <string name="system_default">سیستم</string>
     <string name="delete">حذف</string>
     <string name="hide">پنهان شدن</string>
+    <string name="unhide">پنهان کردن</string>
     <string name="rename">تغییر نام دهید</string>
     <string name="info">اطلاعات</string>
     <string name="okay">باشه</string>
