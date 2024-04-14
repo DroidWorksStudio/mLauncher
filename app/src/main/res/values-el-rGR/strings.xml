@@ -22,7 +22,7 @@
     <string name="theme_mode">Λειτουργία θέματος</string>
     <string name="app_language">Γλώσσα Διεπαφής</string>
     <string name="app_text_size">Μέγεθος Κειμένου</string>
-    <string name="clock_text_size_multiplier">Πολλαπλασιαστής μεγέθους κειμένου ρολογιού</string>
+    <string name="clock_text_size">Μέγεθος κειμένου ρολογιού</string>
     <string name="app_padding_size">Μέγεθος padding</string>
     <string name="follow_accent_colors">Χρώματα έμφασης</string>
     <string name="background_opacity">Αδιαφάνεια φόντου</string>
@@ -95,6 +95,7 @@
     <string name="system_default">Σύστημα</string>
     <string name="delete">Διαγράφω</string>
     <string name="hide">Απόκρυψη</string>
+    <string name="unhide">Απόκρυψη</string>
     <string name="rename">Μετονομασία</string>
     <string name="info">Πληροφορίες</string>
     <string name="okay">Εντάξει</string>
