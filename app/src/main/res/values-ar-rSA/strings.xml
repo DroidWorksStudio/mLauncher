@@ -22,7 +22,7 @@
     <string name="theme_mode">وضع السمة</string>
     <string name="app_language">لغة الواجهة</string>
     <string name="app_text_size">حجم النص</string>
-    <string name="clock_text_size_multiplier">مضاعف حجم النص على مدار الساعة</string>
+    <string name="clock_text_size">حجم نص الساعة</string>
     <string name="app_padding_size">حجم الحشوة</string>
     <string name="follow_accent_colors">ألوان مميزة</string>
     <string name="background_opacity">شفافية الخلفية</string>
@@ -95,6 +95,7 @@
     <string name="system_default">النظام</string>
     <string name="delete">يمسح</string>
     <string name="hide">إخفاء</string>
+    <string name="unhide">إظهار</string>
     <string name="rename">إعادة تسمية</string>
     <string name="info">معلومات</string>
     <string name="okay">حسنًا</string>
