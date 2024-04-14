@@ -1,6 +1,7 @@
 package com.github.droidworksstudio.mlauncher.ui
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.os.Build
 import android.text.Editable
 import android.text.TextWatcher
@@ -28,6 +29,7 @@ import com.github.droidworksstudio.mlauncher.helper.getHexFontColor
 import com.github.droidworksstudio.mlauncher.helper.showKeyboard
 
 class AppDrawerAdapter(
+    private val context: Context,
     private var flag: AppDrawerFlag,
     private val gravity: Int,
     private val appClickListener: (AppModel) -> Unit,
@@ -93,6 +95,7 @@ class AppDrawerAdapter(
         return object : Filter() {
             override fun performFiltering(charSearch: CharSequence?): FilterResults {
                 isBangSearch = charSearch?.startsWith("!") ?: false
+                prefs = Prefs(context)
 
                 val searchChars = charSearch.toString()
                 val filteredApps: MutableList<AppModel>
@@ -137,8 +140,12 @@ class AppDrawerAdapter(
             @SuppressLint("NotifyDataSetChanged")
             @Suppress("UNCHECKED_CAST")
             override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
-                appFilteredList = results?.values as MutableList<AppModel>
-                notifyDataSetChanged()
+                if (results?.values is MutableList<*>) {
+                    appFilteredList = results.values as MutableList<AppModel>
+                    notifyDataSetChanged()
+                } else {
+                    return
+                }
             }
         }
     }
@@ -197,8 +204,13 @@ class AppDrawerAdapter(
                 appHideLayout.visibility = View.GONE
 
                 // set show/hide icon
-                val drawable = if (flag == AppDrawerFlag.HiddenApps) { R.drawable.visibility } else { R.drawable.visibility_off }
-                appHide.setCompoundDrawablesWithIntrinsicBounds(0, drawable,0, 0)
+                if (flag == AppDrawerFlag.HiddenApps) {
+                    appHide.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.visibility, 0, 0)
+                    appHide.text = context.getString(R.string.unhide)
+                } else {
+                    appHide.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.visibility_off, 0, 0)
+                    appHide.text = context.getString(R.string.hide)
+                }
 
                 val appName = appModel.appAlias.ifEmpty {
                     appModel.appLabel
@@ -274,7 +286,7 @@ class AppDrawerAdapter(
                         appClickListener(appModel)
                     }
                     setOnLongClickListener {
-                        val openApp = flag == AppDrawerFlag.LaunchApp
+                        val openApp = flag == AppDrawerFlag.LaunchApp || flag == AppDrawerFlag.HiddenApps
                         if (openApp) {
                             try {
                                 appDelete.alpha = if (context.isSystemApp(appModel.appPackage)) 0.3f else 1.0f

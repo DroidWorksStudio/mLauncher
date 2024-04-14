@@ -97,17 +97,22 @@ class AppDrawerFragment : Fragment() {
             Constants.Gravity.Right -> Gravity.RIGHT
         }
 
-        val appAdapter = AppDrawerAdapter(
-            flag,
-            gravity,
-            appClickListener(viewModel, flag, n),
-            appDeleteListener(),
-            this.appRenameListener(),
-            appShowHideListener(),
-            appInfoListener()
-        )
+        val appAdapter = context?.let {
+            AppDrawerAdapter(
+                it,
+                flag,
+                gravity,
+                appClickListener(viewModel, flag, n),
+                appDeleteListener(),
+                this.appRenameListener(),
+                appShowHideListener(),
+                appInfoListener()
+            )
+        }
 
-        adapter = appAdapter
+        if (appAdapter != null) {
+            adapter = appAdapter
+        }
 
         val searchTextView = binding.search.findViewById<TextView>(R.id.search_src_text)
         if (searchTextView != null) searchTextView.gravity = gravity
@@ -119,7 +124,9 @@ class AppDrawerFragment : Fragment() {
         val textSize = prefs.textSizeLauncher.toFloat()
         searchTextView.textSize = textSize
 
-        initViewModel(flag, viewModel, appAdapter)
+        if (appAdapter != null) {
+            initViewModel(flag, viewModel, appAdapter)
+        }
 
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
         binding.recyclerView.adapter = appAdapter
@@ -223,7 +230,9 @@ class AppDrawerFragment : Fragment() {
                         setOnClickListener { if (isVisible) renameListener(flag, n) }
                     }
                 }
-                newText?.let { appAdapter.filter.filter(it.trim()) }
+                newText?.let {
+                    appAdapter?.filter?.filter(it.trim())
+                }
                 return false
             }
 
