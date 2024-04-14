@@ -22,7 +22,7 @@
     <string name="theme_mode">തീം മോഡ്</string>
     <string name="app_language">ഇന്റർഫേസ് ഭാഷ</string>
     <string name="app_text_size">വാചക വലുപ്പം</string>
-    <string name="clock_text_size_multiplier">ക്ലോക്ക് ടെക്സ്റ്റ് സൈസ് മൾട്ടിപ്ലയർ</string>
+    <string name="clock_text_size">ക്ലോക്ക് ടെക്സ്റ്റ് വലുപ്പം</string>
     <string name="app_padding_size">പാഡിംഗ് വലുപ്പം</string>
     <string name="follow_accent_colors">ആക്സന്റ് നിറങ്ങൾ</string>
     <string name="background_opacity">പശ്ചാത്തല അതാര്യത</string>
@@ -95,6 +95,7 @@
     <string name="system_default">സിസ്റ്റം</string>
     <string name="delete">ഇല്ലാതാക്കുക</string>
     <string name="hide">മറയ്ക്കുക</string>
+    <string name="unhide">മറയ്ക്കുക</string>
     <string name="rename">പേരുമാറ്റുക</string>
     <string name="info">വിവരം</string>
     <string name="okay">ശരി</string>
