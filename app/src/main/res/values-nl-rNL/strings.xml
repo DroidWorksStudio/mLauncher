@@ -22,7 +22,7 @@
     <string name="theme_mode">Thema modus</string>
     <string name="app_language">Interface taal</string>
     <string name="app_text_size">Tekstgrootte</string>
-    <string name="clock_text_size_multiplier">Vermenigvuldiger van kloktekstgrootte</string>
+    <string name="clock_text_size">Kloktekstgrootte</string>
     <string name="app_padding_size">Vulling maat</string>
     <string name="follow_accent_colors">Accentkleuren</string>
     <string name="background_opacity">Opaciteit van de achtergrond</string>
@@ -95,6 +95,7 @@
     <string name="system_default">Systeem</string>
     <string name="delete">Verwijderen</string>
     <string name="hide">Verbergen</string>
+    <string name="unhide">Zichtbaar maken</string>
     <string name="rename">Hernoem</string>
     <string name="info">Info</string>
     <string name="okay">OK</string>
