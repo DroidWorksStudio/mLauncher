@@ -22,7 +22,7 @@
     <string name="theme_mode">Theme-Modus</string>
     <string name="app_language">Schnittstellensprache</string>
     <string name="app_text_size">Textgröße</string>
-    <string name="clock_text_size_multiplier">Multiplikator für die Uhrtextgröße</string>
+    <string name="clock_text_size">Uhrtextgröße</string>
     <string name="app_padding_size">Polstergröße</string>
     <string name="follow_accent_colors">Akzentfarben</string>
     <string name="background_opacity">Deckkraft des Hintergrunds</string>
@@ -95,6 +95,7 @@
     <string name="system_default">System</string>
     <string name="delete">Löschen</string>
     <string name="hide">Verstecken</string>
+    <string name="unhide">Einblenden</string>
     <string name="rename">Umbenennen</string>
     <string name="info">Die Info</string>
     <string name="okay">Okay</string>
