@@ -22,7 +22,7 @@
     <string name="theme_mode">Teemarežiim</string>
     <string name="app_language">Kasutajaliidese keel</string>
     <string name="app_text_size">Teksti suurus</string>
-    <string name="clock_text_size_multiplier">Kella teksti suuruse kordaja</string>
+    <string name="clock_text_size">Kella teksti suurus</string>
     <string name="app_padding_size">Polsterduse suurus</string>
     <string name="follow_accent_colors">Aktsentvärvid</string>
     <string name="background_opacity">Tausta läbipaistmatus</string>
@@ -95,6 +95,7 @@
     <string name="system_default">Süsteem</string>
     <string name="delete">Kustuta</string>
     <string name="hide">Peida</string>
+    <string name="unhide">Too peidus välja</string>
     <string name="rename">Nimetage ümber</string>
     <string name="info">Info</string>
     <string name="okay">Okei</string>
