@@ -22,7 +22,7 @@
     <string name="theme_mode">Mod tema</string>
     <string name="app_language">Bahasa Antaramuka</string>
     <string name="app_text_size">Saiz Teks</string>
-    <string name="clock_text_size_multiplier">Pengganda Saiz Teks Jam</string>
+    <string name="clock_text_size">Saiz Teks Jam</string>
     <string name="app_padding_size">Saiz Padding</string>
     <string name="follow_accent_colors">Warna Aksen</string>
     <string name="background_opacity">Kelegapan Latar Belakang</string>
@@ -95,6 +95,7 @@
     <string name="system_default">Sistem</string>
     <string name="delete">Padam</string>
     <string name="hide">Sembunyi</string>
+    <string name="unhide">Nyahsembunyikan</string>
     <string name="rename">Namakan semula</string>
     <string name="info">info</string>
     <string name="okay">baik</string>
