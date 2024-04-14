@@ -22,7 +22,7 @@
     <string name="theme_mode">थीम मोड</string>
     <string name="app_language">अंतरफलक भाषा</string>
     <string name="app_text_size">शब्दों का आकर</string>
-    <string name="clock_text_size_multiplier">घड़ी पाठ आकार गुणक</string>
+    <string name="clock_text_size">घड़ी का पाठ आकार</string>
     <string name="app_padding_size">पैडिंग आकार</string>
     <string name="follow_accent_colors">एक्सेंट रंग</string>
     <string name="background_opacity">पृष्ठभूमि अस्पष्टता</string>
@@ -95,6 +95,7 @@
     <string name="system_default">प्रणाली</string>
     <string name="delete">मिटाना</string>
     <string name="hide">छिपाना</string>
+    <string name="unhide">सामने लाएँ</string>
     <string name="rename">नाम बदलें</string>
     <string name="info">जानकारी</string>
     <string name="okay">ठीक है</string>
