@@ -22,7 +22,7 @@
     <string name="theme_mode">Mode thème</string>
     <string name="app_language">Langue de l\'interface</string>
     <string name="app_text_size">Taille du texte</string>
-    <string name="clock_text_size_multiplier">Multiplicateur de taille de texte d\'horloge</string>
+    <string name="clock_text_size">Taille du texte de l\'horloge</string>
     <string name="app_padding_size">Taille de rembourrage</string>
     <string name="follow_accent_colors">Couleurs d\'accentuation</string>
     <string name="background_opacity">Opacité du fond</string>
@@ -95,6 +95,7 @@
     <string name="system_default">Système</string>
     <string name="delete">Supprimer</string>
     <string name="hide">Cacher</string>
+    <string name="unhide">Afficher</string>
     <string name="rename">Renommer</string>
     <string name="info">Info</string>
     <string name="okay">Ok</string>
