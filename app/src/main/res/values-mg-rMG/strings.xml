@@ -22,7 +22,7 @@
     <string name="theme_mode">Fomba lohahevitra</string>
     <string name="app_language">Fiteny Interface</string>
     <string name="app_text_size">Haben\'ny soratra</string>
-    <string name="clock_text_size_multiplier">Famantaranandro ny haben\'ny soratra</string>
+    <string name="clock_text_size">Haben\'ny famantaranandro</string>
     <string name="app_padding_size">Haben\'ny padding</string>
     <string name="follow_accent_colors">Loko Accent</string>
     <string name="background_opacity">Opacity ambadika</string>
@@ -95,6 +95,7 @@
     <string name="system_default">RAFITRA</string>
     <string name="delete">Mamafa</string>
     <string name="hide">afeno ny</string>
+    <string name="unhide">Asehoy</string>
     <string name="rename">Hanova anarana</string>
     <string name="info">Info</string>
     <string name="okay">Okay</string>
