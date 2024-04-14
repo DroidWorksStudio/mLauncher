@@ -22,7 +22,7 @@
     <string name="theme_mode">Tryb motywu</string>
     <string name="app_language">Język interfejsu</string>
     <string name="app_text_size">Rozmiar tekstu</string>
-    <string name="clock_text_size_multiplier">Mnożnik rozmiaru tekstu zegara</string>
+    <string name="clock_text_size">Rozmiar tekstu zegara</string>
     <string name="app_padding_size">Rozmiar wypełnienia</string>
     <string name="follow_accent_colors">Kolory akcentujące</string>
     <string name="background_opacity">Krycie tła</string>
@@ -95,6 +95,7 @@
     <string name="system_default">System</string>
     <string name="delete">Usuwać</string>
     <string name="hide">Ukryj</string>
+    <string name="unhide">Odkryj</string>
     <string name="rename">Zmień nazwę</string>
     <string name="info">Informacje</string>
     <string name="okay">OK</string>
