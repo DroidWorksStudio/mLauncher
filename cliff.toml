@@ -5,10 +5,15 @@
 # Configuration options are organized into tables and keys.
 # See documentation for more information on available options.
 
+[remote.github]
+owner = "DroidWorksStudio"
+repo = "mLauncher"
+
 [changelog]
 # changelog header
 header = """
 # Changelog\n
+All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.\n
 """
 # template for the changelog body
 # https://keats.github.io/tera/docs/#introduction

@@ -1,10 +1,12 @@
 # Changelog
 
+All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
+
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
 ### Bug Fixes:
 
-- Fixed a few bugs listed below. - ([c5a1a36](https://github.com/DroidWorksStudio/mLauncher/commit/c5a1a36aaa4866857c1183d1a59ea46fe948296a))
+- Fixed a few things, Crashing of app when searching hidden apps. Hidden apps couldn't be un hidden. - ([5b3f840](https://github.com/DroidWorksStudio/mLauncher/commit/5b3f8402065eb90c9966f9ef571f231fc1a66147))
 
 ## [1.5.1](https://github.com/DroidWorksStudio/mLauncher/tree/1.5.1) - (11, April 2024)
 
