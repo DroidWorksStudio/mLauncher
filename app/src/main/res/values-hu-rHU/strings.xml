@@ -22,7 +22,7 @@
     <string name="theme_mode">Téma mód</string>
     <string name="app_language">Interfész nyelv</string>
     <string name="app_text_size">Szöveg mérete</string>
-    <string name="clock_text_size_multiplier">Óra szövegméret-szorzója</string>
+    <string name="clock_text_size">Óra szöveg mérete</string>
     <string name="app_padding_size">Padding Méret</string>
     <string name="follow_accent_colors">Kiemelt színek</string>
     <string name="background_opacity">Háttér átlátszatlanság</string>
@@ -95,6 +95,7 @@
     <string name="system_default">Rendszer</string>
     <string name="delete">Töröl</string>
     <string name="hide">Rejtsd el</string>
+    <string name="unhide">Felfed</string>
     <string name="rename">Átnevezés</string>
     <string name="info">Info</string>
     <string name="okay">Oké</string>
