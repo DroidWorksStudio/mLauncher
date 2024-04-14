@@ -14,7 +14,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -54,7 +53,6 @@ import com.github.droidworksstudio.mlauncher.style.SettingsTheme
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsArea
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsGestureItem
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsItem
-import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsNumberItem
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsSliderItem
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsTextButton
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsToggle
@@ -217,15 +215,15 @@ class SettingsFragment : Fragment() {
                         )
                     },
                     { open, onChange ->
-                        SettingsNumberItem(
-                            title = stringResource(R.string.clock_text_size_multiplier),
+                        SettingsSliderItem(
+                            title = stringResource(R.string.clock_text_size),
                             fontSize = iconFs,
                             open = open,
                             onChange = onChange,
-                            currentSelection = remember { mutableFloatStateOf(prefs.textSizeMultiplier) },
-                            min = Constants.TEXT_MULTIPLIER_SIZE_MIN,
-                            max = Constants.TEXT_MULTIPLIER_SIZE_MAX,
-                            onSelect = { f -> setTextSizeMultiplier(f) }
+                            currentSelection = remember { mutableIntStateOf(prefs.clockSize) },
+                            min = Constants.CLOCK_SIZE_MIN,
+                            max = Constants.CLOCK_SIZE_MAX,
+                            onSelect = { f -> setClockSizeSettings(f) }
                         )
                     },
                     { open, onChange ->
@@ -865,8 +863,8 @@ class SettingsFragment : Fragment() {
         requireActivity().recreate()
     }
 
-    private fun setTextSizeMultiplier(size: Float) {
-        prefs.textSizeMultiplier = size
+    private fun setClockSizeSettings(size: Int) {
+        prefs.clockSize = size
         requireActivity().recreate()
     }
 

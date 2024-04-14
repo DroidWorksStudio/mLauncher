@@ -115,7 +115,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         if (prefs.showStatusBar) showStatusBar(requireActivity()) else hideStatusBar(requireActivity())
         val typeface = ResourcesCompat.getFont(requireActivity(), R.font.roboto)
 
-        binding.clock.textSize = prefs.textSizeLauncher * prefs.textSizeMultiplier
+        binding.clock.textSize = prefs.clockSize.toFloat()
         binding.date.textSize = prefs.textSizeLauncher.toFloat()
         binding.batteryIcon.textSize = prefs.textSizeLauncher.toFloat() / 1.5f
         binding.batteryText.textSize = prefs.textSizeLauncher.toFloat() / 1.5f

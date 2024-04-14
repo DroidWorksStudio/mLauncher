@@ -25,7 +25,7 @@
     <string name="theme_mode">Theme mode</string>
     <string name="app_language">Interface Language</string>
     <string name="app_text_size">Text Size</string>
-    <string name="clock_text_size_multiplier">Clock Text Size Multiplier</string>
+    <string name="clock_text_size">Clock Text Size</string>
     <string name="app_padding_size">Padding Size</string>
     <string name="follow_accent_colors">Accent Colors</string>
     <string name="background_opacity">Background Opacity</string>

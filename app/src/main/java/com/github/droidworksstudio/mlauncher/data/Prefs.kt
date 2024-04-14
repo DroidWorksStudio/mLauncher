@@ -73,7 +73,7 @@ private const val CUSTOM_FONT = "CUSTOM_FONT"
 private const val ALL_APPS_TEXT = "ALL_APPS_TEXT"
 
 private const val TEXT_SIZE_LAUNCHER = "TEXT_SIZE_LAUNCHER"
-private const val TEXT_SIZE_MULTIPLIER = "TEXT_SIZE_MULTIPLIER"
+private const val CLOCK_SIZE_TEXT = "CLOCK_SIZE_TEXT"
 private const val TEXT_SIZE_SETTINGS = "TEXT_SIZE_SETTINGS"
 private const val TEXT_MARGIN_SIZE = "TEXT_MARGIN_SIZE"
 
@@ -426,15 +426,15 @@ class Prefs(val context: Context) {
         }
         set(value) = prefs.edit().putInt(TEXT_SIZE_LAUNCHER, value).apply()
 
-    var textSizeMultiplier: Float
+    var clockSize: Int
         get() {
             return try {
-                prefs.getFloat(TEXT_SIZE_MULTIPLIER, 1f)
+                prefs.getInt(CLOCK_SIZE_TEXT, 18)
             } catch (_: Exception) {
-                1f
+                18
             }
         }
-        set(value) = prefs.edit().putFloat(TEXT_SIZE_MULTIPLIER, value).apply()
+        set(value) = prefs.edit().putInt(CLOCK_SIZE_TEXT, value).apply()
 
     var textSizeSettings: Int
         get() {

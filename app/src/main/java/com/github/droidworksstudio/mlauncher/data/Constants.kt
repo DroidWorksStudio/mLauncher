@@ -31,8 +31,8 @@ object Constants {
     const val BACKUP_WRITE = 1
     const val BACKUP_READ = 2
 
-    const val TEXT_MULTIPLIER_SIZE_MIN = 1f
-    const val TEXT_MULTIPLIER_SIZE_MAX = 5f
+    const val CLOCK_SIZE_MIN = 15
+    const val CLOCK_SIZE_MAX = 50
 
     const val TEXT_MARGIN_MIN = 0
     const val TEXT_MARGIN_MAX = 50
