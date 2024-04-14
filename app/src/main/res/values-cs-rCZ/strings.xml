@@ -22,7 +22,7 @@
     <string name="theme_mode">Režim motivu</string>
     <string name="app_language">Jazyk rozhraní</string>
     <string name="app_text_size">Velikost textu</string>
-    <string name="clock_text_size_multiplier">Násobitel velikosti textu hodin</string>
+    <string name="clock_text_size">Velikost textu hodin</string>
     <string name="app_padding_size">Velikost odsazení položek</string>
     <string name="follow_accent_colors">Doplňková barva</string>
     <string name="background_opacity">Průhlednost pozadí</string>
@@ -95,6 +95,7 @@
     <string name="system_default">Systém</string>
     <string name="delete">Vymazat</string>
     <string name="hide">Skrýt</string>
+    <string name="unhide">Odkrýt</string>
     <string name="rename">Přejmenovat</string>
     <string name="info">Info</string>
     <string name="okay">Okay</string>

@@ -22,7 +22,7 @@
     <string name="theme_mode">Teeman tila</string>
     <string name="app_language">Käyttöliittymän Kieli</string>
     <string name="app_text_size">Tekstin Koko</string>
-    <string name="clock_text_size_multiplier">Kellon tekstin kokokerroin</string>
+    <string name="clock_text_size">Kellon tekstin koko</string>
     <string name="app_padding_size">Pehmusteen koko</string>
     <string name="follow_accent_colors">Korostusvärit</string>
     <string name="background_opacity">Taustan läpinäkymättömyys</string>
@@ -95,6 +95,7 @@
     <string name="system_default">Järjestelmä</string>
     <string name="delete">Poistaa</string>
     <string name="hide">Piilota</string>
+    <string name="unhide">Näytä</string>
     <string name="rename">Uudelleennimeä</string>
     <string name="info">Tiedot</string>
     <string name="okay">Okei</string>

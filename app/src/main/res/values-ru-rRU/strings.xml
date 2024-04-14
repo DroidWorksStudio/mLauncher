@@ -22,7 +22,7 @@
     <string name="theme_mode">Режим темы</string>
     <string name="app_language">Язык интерфейса</string>
     <string name="app_text_size">Размер текста</string>
-    <string name="clock_text_size_multiplier">Множитель размера текста часов</string>
+    <string name="clock_text_size">Размер текста часов</string>
     <string name="app_padding_size">Размер заполнения</string>
     <string name="follow_accent_colors">Акцентные цвета</string>
     <string name="background_opacity">Непрозрачность фона</string>
@@ -95,6 +95,7 @@
     <string name="system_default">Система</string>
     <string name="delete">Удалить</string>
     <string name="hide">Скрыть</string>
+    <string name="unhide">Показать</string>
     <string name="rename">Переименовать</string>
     <string name="info">Информация</string>
     <string name="okay">Окей</string>

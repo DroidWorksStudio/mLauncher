@@ -22,7 +22,7 @@
     <string name="theme_mode">Tema modus</string>
     <string name="app_language">Grensesnitt språk</string>
     <string name="app_text_size">Tekst størrelse</string>
-    <string name="clock_text_size_multiplier">Klokke tekststørrelse multiplikator</string>
+    <string name="clock_text_size">Klokketekststørrelse</string>
     <string name="app_padding_size">Polstring Størrelse</string>
     <string name="follow_accent_colors">Aksentfarger</string>
     <string name="background_opacity">Bakgrunns gjennomsiktighet</string>
@@ -95,6 +95,7 @@
     <string name="system_default">Systemadministrasjon</string>
     <string name="delete">Slett</string>
     <string name="hide">Skjul</string>
+    <string name="unhide">Vis frem</string>
     <string name="rename">Omdøp</string>
     <string name="info">Info</string>
     <string name="okay">Ok</string>

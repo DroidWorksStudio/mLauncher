@@ -22,7 +22,7 @@
     <string name="theme_mode">Theme mode</string>
     <string name="app_language">Interface Language</string>
     <string name="app_text_size">Text Size</string>
-    <string name="clock_text_size_multiplier">Hệ số kích thước văn bản đồng hồ</string>
+    <string name="clock_text_size">Kích thước văn bản đồng hồ</string>
     <string name="app_padding_size">Kích thước đệm</string>
     <string name="follow_accent_colors">Màu nhấn</string>
     <string name="background_opacity">Độ mờ nền</string>

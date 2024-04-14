@@ -22,7 +22,7 @@
     <string name="theme_mode">Tema</string>
     <string name="app_language">Idioma</string>
     <string name="app_text_size">Texto en pantalla</string>
-    <string name="clock_text_size_multiplier">Multiplicador de tamaño de texto del reloj</string>
+    <string name="clock_text_size">Tamaño del texto del reloj</string>
     <string name="app_padding_size">Interlineado</string>
     <string name="follow_accent_colors">Remarcado</string>
     <string name="background_opacity">Transparencia</string>
@@ -95,6 +95,7 @@
     <string name="system_default">Por defecto</string>
     <string name="delete">Borrar</string>
     <string name="hide">Ocultar</string>
+    <string name="unhide">Mostrar</string>
     <string name="rename">Renombrar</string>
     <string name="info">Información</string>
     <string name="okay">OK</string>

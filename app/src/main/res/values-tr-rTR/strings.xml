@@ -22,7 +22,7 @@
     <string name="theme_mode">Tema modu</string>
     <string name="app_language">Arayüz Dili</string>
     <string name="app_text_size">Metin Boyutu</string>
-    <string name="clock_text_size_multiplier">Saat Metin Boyutu Çarpanı</string>
+    <string name="clock_text_size">Saat Metin Boyutu</string>
     <string name="app_padding_size">Boşluk Boyutu</string>
     <string name="follow_accent_colors">Vurgu Renkleri</string>
     <string name="background_opacity">Arka Plan Opaklığı</string>
@@ -95,6 +95,7 @@
     <string name="system_default">Sistem</string>
     <string name="delete">Silmek</string>
     <string name="hide">Gizle</string>
+    <string name="unhide">Göster</string>
     <string name="rename">Yeniden Adlandır</string>
     <string name="info">Bilgi</string>
     <string name="okay">Tamam</string>

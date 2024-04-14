@@ -22,7 +22,7 @@
     <string name="theme_mode">Mode ng tema</string>
     <string name="app_language">Wika ng Interface</string>
     <string name="app_text_size">Laki ng Teksto</string>
-    <string name="clock_text_size_multiplier">Multiplier ng Laki ng Teksto ng Orasan</string>
+    <string name="clock_text_size">Laki ng Teksto ng Orasan</string>
     <string name="app_padding_size">Laki ng Padding</string>
     <string name="follow_accent_colors">Mga Kulay ng Accent</string>
     <string name="background_opacity">Opacity ng Background</string>
@@ -95,6 +95,7 @@
     <string name="system_default">Sistema</string>
     <string name="delete">Tanggalin</string>
     <string name="hide">Tago</string>
+    <string name="unhide">I-unhide</string>
     <string name="rename">Palitan ang pangalan</string>
     <string name="info">Impormasyon</string>
     <string name="okay">Sige</string>

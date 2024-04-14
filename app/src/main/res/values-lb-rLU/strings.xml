@@ -22,7 +22,7 @@
     <string name="theme_mode">Thema Modus</string>
     <string name="app_language">Interface Sprooch</string>
     <string name="app_text_size">Text Gréisst</string>
-    <string name="clock_text_size_multiplier">Auer Text Gréisst Multiplikator</string>
+    <string name="clock_text_size">Auer Text Gréisst</string>
     <string name="app_padding_size">Padding Gréisst</string>
     <string name="follow_accent_colors">Akzent Faarwen</string>
     <string name="background_opacity">Hannergrond Opazitéit</string>
@@ -95,6 +95,7 @@
     <string name="system_default">System</string>
     <string name="delete">Läschen</string>
     <string name="hide">Verstoppen</string>
+    <string name="unhide">Verstoppen</string>
     <string name="rename">ëmbenennen</string>
     <string name="info">Info</string>
     <string name="okay">Okay</string>

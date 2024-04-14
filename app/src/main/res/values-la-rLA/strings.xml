@@ -22,7 +22,7 @@
     <string name="theme_mode">Theme mode</string>
     <string name="app_language">Interface Language</string>
     <string name="app_text_size">Text Size</string>
-    <string name="clock_text_size_multiplier">Horologium Text Size Multiplier</string>
+    <string name="clock_text_size">Horologium Text Size</string>
     <string name="app_padding_size">Nullam Location</string>
     <string name="follow_accent_colors">Accent Colores</string>
     <string name="background_opacity">Background Opacity</string>
@@ -95,6 +95,7 @@
     <string name="system_default">Systema</string>
     <string name="delete">Delere</string>
     <string name="hide">Celare</string>
+    <string name="unhide">Unhide</string>
     <string name="rename">Rename</string>
     <string name="info">Info</string>
     <string name="okay">Bene</string>

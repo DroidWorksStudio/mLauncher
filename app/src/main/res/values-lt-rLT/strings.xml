@@ -22,7 +22,7 @@
     <string name="theme_mode">Temavimo režimas</string>
     <string name="app_language">Sąsajos kalba</string>
     <string name="app_text_size">Tesksto dydis</string>
-    <string name="clock_text_size_multiplier">Laikrodžio teksto dydžio daugiklis</string>
+    <string name="clock_text_size">Laikrodžio teksto dydis</string>
     <string name="app_padding_size">Užpildymo Dydis</string>
     <string name="follow_accent_colors">Akcentinės spalvos</string>
     <string name="background_opacity">Fono permatomumas</string>
@@ -95,6 +95,7 @@
     <string name="system_default">Sistema</string>
     <string name="delete">Ištrinti</string>
     <string name="hide">Slėpti</string>
+    <string name="unhide">Neslėpti</string>
     <string name="rename">Pervadyti</string>
     <string name="info">Informacija</string>
     <string name="okay">Gerai</string>

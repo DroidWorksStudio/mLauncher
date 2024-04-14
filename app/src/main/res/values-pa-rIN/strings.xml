@@ -22,7 +22,7 @@
     <string name="theme_mode">ਥੀਮ ਮੋਡ</string>
     <string name="app_language">ਇੰਟਰਫੇਸ ਭਾਸ਼ਾ</string>
     <string name="app_text_size">ਟੈਕਸਟ ਦਾ ਆਕਾਰ</string>
-    <string name="clock_text_size_multiplier">ਕਲਾਕ ਟੈਕਸਟ ਸਾਈਜ਼ ਗੁਣਕ</string>
+    <string name="clock_text_size">ਕਲਾਕ ਟੈਕਸਟ ਦਾ ਆਕਾਰ</string>
     <string name="app_padding_size">ਪੈਡਿੰਗ ਆਕਾਰ</string>
     <string name="follow_accent_colors">ਐਕਸੈਂਟ ਰੰਗ</string>
     <string name="background_opacity">ਬੈਕਗ੍ਰਾਊਂਡ ਓਪੇਸਿਟੀ</string>
@@ -95,6 +95,7 @@
     <string name="system_default">ਸਿਸਟਮ</string>
     <string name="delete">ਮਿਟਾਓ</string>
     <string name="hide">ਓਹਲੇ</string>
+    <string name="unhide">ਲੁਕਾਓ</string>
     <string name="rename">ਨਾਮ ਬਦਲੋ</string>
     <string name="info">ਜਾਣਕਾਰੀ</string>
     <string name="okay">ਠੀਕ ਹੈ</string>

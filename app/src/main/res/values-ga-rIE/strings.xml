@@ -22,7 +22,7 @@
     <string name="theme_mode">Modh téama</string>
     <string name="app_language">Teanga Chomhéadain</string>
     <string name="app_text_size">Méid an Téacs</string>
-    <string name="clock_text_size_multiplier">Iolraitheoir Méid Téacs Clog</string>
+    <string name="clock_text_size">Méid Téacs Clog</string>
     <string name="app_padding_size">Méid Stuála</string>
     <string name="follow_accent_colors">Dathanna Accent</string>
     <string name="background_opacity">Teimhneacht Cúlra</string>
@@ -95,6 +95,7 @@
     <string name="system_default">Córas</string>
     <string name="delete">Scrios</string>
     <string name="hide">Folaigh</string>
+    <string name="unhide">Folaigh</string>
     <string name="rename">Athainmnigh</string>
     <string name="info">Eolas</string>
     <string name="okay">ceart go leor</string>

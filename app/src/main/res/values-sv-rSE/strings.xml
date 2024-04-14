@@ -22,7 +22,7 @@
     <string name="theme_mode">Tema läge</string>
     <string name="app_language">Gränssnittets språk</string>
     <string name="app_text_size">Textstorlek</string>
-    <string name="clock_text_size_multiplier">Multiplikator för klocka textstorlek</string>
+    <string name="clock_text_size">Klocka Textstorlek</string>
     <string name="app_padding_size">Vadderingsstorlek</string>
     <string name="follow_accent_colors">Accentfärger</string>
     <string name="background_opacity">Bakgrundsopacitet</string>
@@ -95,6 +95,7 @@
     <string name="system_default">System</string>
     <string name="delete">Radera</string>
     <string name="hide">Dölj</string>
+    <string name="unhide">Visa upp</string>
     <string name="rename">Döp om</string>
     <string name="info">Info</string>
     <string name="okay">Okej</string>

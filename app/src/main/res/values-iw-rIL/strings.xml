@@ -22,7 +22,7 @@
     <string name="theme_mode">Theme mode</string>
     <string name="app_language">Interface Language</string>
     <string name="app_text_size">Text Size</string>
-    <string name="clock_text_size_multiplier">מכפיל גודל טקסט של שעון</string>
+    <string name="clock_text_size">גודל טקסט שעון</string>
     <string name="app_padding_size">גודל ריפוד</string>
     <string name="follow_accent_colors">צבעי מבטא</string>
     <string name="background_opacity">אטימות רקע</string>
@@ -95,6 +95,7 @@
     <string name="system_default">System</string>
     <string name="delete">לִמְחוֹק</string>
     <string name="hide">Hide</string>
+    <string name="unhide">הצג</string>
     <string name="rename">Rename</string>
     <string name="info">מידע</string>
     <string name="okay">Okay</string>

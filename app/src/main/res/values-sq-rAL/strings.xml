@@ -22,7 +22,7 @@
     <string name="theme_mode">Modaliteti i temës</string>
     <string name="app_language">Gjuha e ndërfaqes</string>
     <string name="app_text_size">Madhësia e tekstit</string>
-    <string name="clock_text_size_multiplier">Shumëzuesi i madhësisë së tekstit të orës</string>
+    <string name="clock_text_size">Madhësia e tekstit të orës</string>
     <string name="app_padding_size">Madhësia e mbushjes</string>
     <string name="follow_accent_colors">Ngjyrat e theksit</string>
     <string name="background_opacity">Opaciteti i sfondit</string>
@@ -95,6 +95,7 @@
     <string name="system_default">Sistemi</string>
     <string name="delete">Fshije</string>
     <string name="hide">Fshih</string>
+    <string name="unhide">Shfaq</string>
     <string name="rename">Riemërto</string>
     <string name="info">Informacion</string>
     <string name="okay">Mirë</string>
