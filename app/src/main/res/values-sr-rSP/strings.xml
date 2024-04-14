@@ -22,7 +22,7 @@
     <string name="theme_mode">Theme mode</string>
     <string name="app_language">Interface Language</string>
     <string name="app_text_size">Text Size</string>
-    <string name="clock_text_size_multiplier">Множилац величине текста сата</string>
+    <string name="clock_text_size">Величина текста на сату</string>
     <string name="app_padding_size">Паддинг Сизе</string>
     <string name="follow_accent_colors">Аццент Цолорс</string>
     <string name="background_opacity">Прозирност позадине</string>
@@ -95,6 +95,7 @@
     <string name="system_default">System</string>
     <string name="delete">Избриши</string>
     <string name="hide">Hide</string>
+    <string name="unhide">Откриј</string>
     <string name="rename">Rename</string>
     <string name="info">Инфо</string>
     <string name="okay">Okay</string>
