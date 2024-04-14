@@ -22,7 +22,7 @@
     <string name="theme_mode">โหมดธีม</string>
     <string name="app_language">ภาษาอินเทอร์เฟซ</string>
     <string name="app_text_size">ขนาดตัวอักษร</string>
-    <string name="clock_text_size_multiplier">ตัวคูณขนาดข้อความนาฬิกา</string>
+    <string name="clock_text_size">ขนาดข้อความนาฬิกา</string>
     <string name="app_padding_size">ขนาดช่องว่างภายใน</string>
     <string name="follow_accent_colors">เน้นสี</string>
     <string name="background_opacity">ความทึบของพื้นหลัง</string>
@@ -95,6 +95,7 @@
     <string name="system_default">ระบบ</string>
     <string name="delete">ลบ</string>
     <string name="hide">ซ่อน</string>
+    <string name="unhide">ยกเลิกการซ่อน</string>
     <string name="rename">เปลี่ยนชื่อ</string>
     <string name="info">ข้อมูล</string>
     <string name="okay">ตกลง</string>
