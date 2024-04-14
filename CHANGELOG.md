@@ -2,6 +2,12 @@
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Bug Fixes:
+
+- Fixed a few bugs listed below.
+
+## [1.5.1](https://github.com/DroidWorksStudio/mLauncher/tree/1.5.1) - (11, April 2024)
+
 ### Refactor:
 
 - Improved app icon design by updating to a more visually appealing icon.
