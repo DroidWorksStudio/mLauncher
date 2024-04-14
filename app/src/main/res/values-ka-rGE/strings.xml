@@ -22,7 +22,7 @@
     <string name="theme_mode">თემის რეჟიმი</string>
     <string name="app_language">ინტერფეისის ენა</string>
     <string name="app_text_size">Ტექსტის ზომა</string>
-    <string name="clock_text_size_multiplier">საათის ტექსტის ზომის მულტიპლიკატორი</string>
+    <string name="clock_text_size">საათის ტექსტის ზომა</string>
     <string name="app_padding_size">ბალიშის ზომა</string>
     <string name="follow_accent_colors">აქცენტის ფერები</string>
     <string name="background_opacity">ფონის გამჭვირვალობა</string>
@@ -95,6 +95,7 @@
     <string name="system_default">სისტემა</string>
     <string name="delete">წაშლა</string>
     <string name="hide">დამალვა</string>
+    <string name="unhide">დამალვა</string>
     <string name="rename">გადარქმევა</string>
     <string name="info">ინფორმაცია</string>
     <string name="okay">კარგი</string>
