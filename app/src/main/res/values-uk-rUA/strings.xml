@@ -22,7 +22,7 @@
     <string name="theme_mode">Теми</string>
     <string name="app_language">Мова інтерфейсу</string>
     <string name="app_text_size">Розмір тексту</string>
-    <string name="clock_text_size_multiplier">Множник розміру тексту годинника</string>
+    <string name="clock_text_size">Розмір тексту годинника</string>
     <string name="app_padding_size">Розмір прокладки</string>
     <string name="follow_accent_colors">Акцентні кольори</string>
     <string name="background_opacity">Непрозорість фону</string>
@@ -95,6 +95,7 @@
     <string name="system_default">Система</string>
     <string name="delete">Видалити</string>
     <string name="hide">Приховати</string>
+    <string name="unhide">Показати</string>
     <string name="rename">Перейменувати</string>
     <string name="info">Інформація</string>
     <string name="okay">Добре</string>
