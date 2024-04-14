@@ -22,7 +22,7 @@
     <string name="theme_mode">Режим на темата</string>
     <string name="app_language">Език на интерфейса</string>
     <string name="app_text_size">Размер на текста</string>
-    <string name="clock_text_size_multiplier">Умножител на размера на текста на часовника</string>
+    <string name="clock_text_size">Размер на текста на часовника</string>
     <string name="app_padding_size">Размер на подложката</string>
     <string name="follow_accent_colors">Акцентни цветове</string>
     <string name="background_opacity">Непрозрачност на фона</string>
@@ -95,6 +95,7 @@
     <string name="system_default">Система</string>
     <string name="delete">Изтрий</string>
     <string name="hide">Скрий</string>
+    <string name="unhide">Показване</string>
     <string name="rename">Преименуване на</string>
     <string name="info">Информация</string>
     <string name="okay">Добре</string>
