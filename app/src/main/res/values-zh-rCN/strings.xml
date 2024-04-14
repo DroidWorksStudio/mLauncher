@@ -22,7 +22,7 @@
     <string name="theme_mode">主题模式</string>
     <string name="app_language">应用界面语言</string>
     <string name="app_text_size">文本尺寸</string>
-    <string name="clock_text_size_multiplier">时钟文本大小乘数</string>
+    <string name="clock_text_size">时钟文字大小</string>
     <string name="app_padding_size">填充尺寸</string>
     <string name="follow_accent_colors">强调色</string>
     <string name="background_opacity">背景不透明度</string>
@@ -95,6 +95,7 @@
     <string name="system_default">系统</string>
     <string name="delete">删除</string>
     <string name="hide">隐藏</string>
+    <string name="unhide">取消隐藏</string>
     <string name="rename">重命名</string>
     <string name="info">信息</string>
     <string name="okay">好的</string>
