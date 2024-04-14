@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Bug Fixes:
 
+- Fixes #454 Clock size. - ([d66577d](https://github.com/DroidWorksStudio/mLauncher/commit/d66577dc2934f6fc979486840bed1e33637b1169))
 - Fixed a few things, Crashing of app when searching hidden apps. Hidden apps couldn't be un hidden. - ([5b3f840](https://github.com/DroidWorksStudio/mLauncher/commit/5b3f8402065eb90c9966f9ef571f231fc1a66147))
 
 ### Language Support:
