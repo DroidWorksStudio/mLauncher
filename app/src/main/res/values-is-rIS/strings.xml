@@ -22,7 +22,7 @@
     <string name="theme_mode">Þemahamur</string>
     <string name="app_language">Viðmótstungumál</string>
     <string name="app_text_size">Textastærð</string>
-    <string name="clock_text_size_multiplier">Textastærðarmargfaldari fyrir klukku</string>
+    <string name="clock_text_size">Textastærð klukku</string>
     <string name="app_padding_size">Bólstrun Stærð</string>
     <string name="follow_accent_colors">Hreim litir</string>
     <string name="background_opacity">Ógagnsæi í bakgrunni</string>
@@ -95,6 +95,7 @@
     <string name="system_default">Kerfi</string>
     <string name="delete">Eyða</string>
     <string name="hide">Fela</string>
+    <string name="unhide">Sýna</string>
     <string name="rename">Endurnefna</string>
     <string name="info">Upplýsingar</string>
     <string name="okay">allt í lagi</string>
