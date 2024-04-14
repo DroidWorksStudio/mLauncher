@@ -95,6 +95,7 @@
     <string name="system_default">System</string>
     <string name="delete">Xóa bỏ</string>
     <string name="hide">Hide</string>
+    <string name="unhide">Bỏ ẩn</string>
     <string name="rename">Rename</string>
     <string name="info">Thông tin</string>
     <string name="okay">Okay</string>
