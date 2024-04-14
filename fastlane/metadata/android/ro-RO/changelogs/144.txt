@@ -1,9 +1,0 @@
-Versiune: 1.4.4
-
-Sporire:
-[Caracteristică] - S-a adăugat un fragment pentru Recomandarea aplicațiilor.
-[Caracteristică] - S-a adăugat posibilitatea de a schimba dimensiunea ceasului în mod independent.
-
-Suport lingvistic:
-
-[Language] Fișiere de limbă actualizate.

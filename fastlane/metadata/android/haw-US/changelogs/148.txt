@@ -1,6 +1,0 @@
-Manaʻo: 1.4.8
-
-Hoʻoponopono Bug:
-
-Hoʻopaʻa i ka papa inoa no ka hōʻike ʻole ʻana i nā kope i ka wā e hiki ai i nā polokalamu hou
-Hoʻoponopono i ka ʻōnaehana hoʻihoʻi no ka mea ʻaʻole i hana.

@@ -1,9 +1,0 @@
-Versi: 1.4.4
-
-Peningkatan:
-[Fitur] - Menambahkan fragmen untuk memesan ulang aplikasi.
-[Fitur] - Menambahkan kemampuan untuk mengubah ukuran jam secara mandiri.
-
-Dukungan bahasa:
-
-[Bahasa] File Bahasa yang Diperbarui.

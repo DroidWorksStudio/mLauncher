@@ -1,7 +1,0 @@
-Versioon: 1.4.1
-
-Täiustused:
-[Funktsioon] – lisatud on pika vajutusega pühkimisliigutused.
-
-Keele tugi:
-[Keel] Värskendatud keelefailid.

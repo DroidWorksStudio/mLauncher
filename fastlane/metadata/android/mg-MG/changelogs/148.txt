@@ -1,6 +1,0 @@
-Version: 1.4.8
-
-Fanamboarana bug:
-
-Namboarina ny lisitry ny fampiharana mba tsy hampiseho dika mitovy rehefa alefa ny fampiharana vao haingana
-Namboarina ny rafitra backup satria tsy mandeha.

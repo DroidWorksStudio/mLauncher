@@ -1,6 +1,0 @@
-Versi: 1.4.8
-
-Perbaikan kerusakan:
-
-Memperbaiki daftar aplikasi agar tidak menampilkan duplikat ketika aplikasi terbaru diaktifkan
-Memperbaiki sistem cadangan karena tidak berfungsi.

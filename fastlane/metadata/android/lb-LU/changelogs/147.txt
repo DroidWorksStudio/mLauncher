@@ -1,5 +1,0 @@
-Versioun: 1.4.7
-
-Bug Fixes:
-
-Fixéiert RENAME fir an all Lëschtberäicher vun der App ze weisen.

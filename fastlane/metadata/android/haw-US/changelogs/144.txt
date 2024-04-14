@@ -1,9 +1,0 @@
-Manaʻo: 1.4.4
-
-Hoʻonui:
-[Hōʻike] - Hoʻohui i kahi ʻāpana no ke kauoha hou ʻana i nā polokalamu.
-[Hōʻike] - Hoʻohui i ka hiki ke hoʻololi i ka nui o ka uaki kūʻokoʻa.
-
-Kākoʻo ʻōlelo:
-
-[Language] Nā waihona ʻōlelo hou.

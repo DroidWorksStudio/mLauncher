@@ -1,7 +1,0 @@
-Verze: 1.4.1
-
-Vylepšení:
-[Funkce] – Přidána gesta přejetí dlouhým stisknutím.
-
-Jazyková podpora:
-[Jazyk] Aktualizované jazykové soubory.

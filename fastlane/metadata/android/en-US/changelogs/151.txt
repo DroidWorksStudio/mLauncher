@@ -1,9 +1,0 @@
-Version: 1.5.1
-
-Language Support:
-
-Updated Language Files.
-
-Refactor:
-
-Improved app icon design by updating to a more visually appealing icon.

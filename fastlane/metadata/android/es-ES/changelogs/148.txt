@@ -1,6 +1,0 @@
-Versión: 1.4.8
-
-Corrección de errores:
-
-Se corrigió la lista de aplicaciones para no mostrar duplicados cuando las aplicaciones recientes están habilitadas.
-Se arregló el sistema de respaldo porque no funcionaba.

@@ -1,9 +1,0 @@
-Sürüm: 1.4.4
-
-Artırma:
-[Özellik] - Uygulamaları yeniden sipariş etmek için bir parça eklendi.
-[Özellik] - Saat boyutunu bağımsız olarak değiştirme yeteneği eklendi.
-
-Dil desteği:
-
-[Dil] Güncellenmiş Dil Dosyaları.

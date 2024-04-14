@@ -1,5 +1,0 @@
-Version: 1.4.7
-
-Bug fixar:
-
-Fixat RENAME från att visas i alla listområden i appen.

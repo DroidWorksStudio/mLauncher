@@ -1,9 +1,0 @@
-Version: 1.4.4
-
-Erweiterung:
-[Funktion] – Fragment zum Neuordnen von Apps hinzugefügt.
-[Funktion] – Möglichkeit hinzugefügt, die Uhrgröße unabhängig zu ändern.
-
-Sprachunterstützung:
-
-[Sprache] Aktualisierte Sprachdateien.

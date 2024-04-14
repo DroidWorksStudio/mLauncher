@@ -1,6 +1,0 @@
-Versioni: 1.4.8
-
-Rregullime të gabimeve:
-
-Rregulloi listën e aplikacioneve për të mos shfaqur dublikatë kur aktivizohen aplikacionet e fundit
-Rregulloi sistemin rezervë pasi nuk funksiononte.

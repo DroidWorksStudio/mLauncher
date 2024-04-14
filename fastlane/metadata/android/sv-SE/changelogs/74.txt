@@ -1,7 +1,0 @@
-Version: 1.4.1
-
-Förbättringar:
-[Funktion] - Lade till långtryckssvepgester.
-
-Språkstöd:
-[Språk] Uppdaterade språkfiler.

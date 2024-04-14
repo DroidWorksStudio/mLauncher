@@ -1,9 +1,0 @@
-Leagan: 1.5.1
-
-Tacaíocht Teanga:
-
-Comhaid Teanga Nuashonraithe.
-
-Refactor:
-
-Dearadh deilbhín app feabhsaithe trí nuashonrú go deilbhín níos tarraingtí.

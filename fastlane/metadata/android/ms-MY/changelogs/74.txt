@@ -1,7 +1,0 @@
-Versi: 1.4.1
-
-Penambahbaikan:
-[Ciri] - Menambah Gerak Isyarat Leret Tekan Lama.
-
-Sokongan Bahasa:
-[Bahasa] Fail Bahasa yang dikemas kini.

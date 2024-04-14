@@ -1,7 +1,0 @@
-Version: 1.4.1
-
-Augmentationes:
-[Feature] - Added Long-Presus Tollenone gestus.
-
-Support Lingua:
-[Language] Tabularia Linguarum Renovata.

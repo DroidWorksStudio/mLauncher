@@ -1,7 +1,0 @@
-Version: 1.4.1
-
-Forbedringer:
-[Funktion] - Tilføjet strygebevægelser med lange tryk.
-
-Sprogsupport:
-[Sprog] Opdaterede sprogfiler.

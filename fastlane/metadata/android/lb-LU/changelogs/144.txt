@@ -1,9 +1,0 @@
-Versioun: 1.4.4
-
-Verbesserung:
-[Feature] - e Fragment bäigefüügt fir d'Apps nei ze bestellen.
-[Feature] - D'Fäegkeet bäigefüügt fir d'Auergréisst onofhängeg z'änneren.
-
-Sprooch Ënnerstëtzung:
-
-[Sprooch] Aktualiséiert Sproochdateien.

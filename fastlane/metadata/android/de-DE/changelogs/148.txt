@@ -1,6 +1,0 @@
-Version: 1.4.8
-
-Fehlerbehebung:
-
-Die App-Liste wurde korrigiert, sodass keine Duplikate mehr angezeigt werden, wenn die zuletzt verwendeten Apps aktiviert sind.
-Das Backup-System wurde repariert, da es nicht funktionierte.

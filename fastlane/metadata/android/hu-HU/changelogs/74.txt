@@ -1,7 +1,0 @@
-Verzió: 1.4.1
-
-Továbbfejlesztések:
-[Funkció] – Hosszan nyomó ellop mozdulatok hozzáadva.
-
-Nyelvi támogatás:
-[Nyelv] Frissített nyelvi fájlok.

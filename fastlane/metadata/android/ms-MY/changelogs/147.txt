@@ -1,5 +1,0 @@
-Versi: 1.4.7
-
-Pembetulan Pepijat:
-
-RENAME telah diperbaiki daripada dipaparkan dalam semua kawasan senarai apl.

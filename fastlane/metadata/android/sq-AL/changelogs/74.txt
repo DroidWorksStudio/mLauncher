@@ -1,7 +1,0 @@
-Versioni: 1.4.1
-
-Përmirësimet:
-[Veçori] - Shtohen gjestet e rrëshqitjes me shtypje të gjatë.
-
-Mbështetje gjuhësore:
-[Gjuha] Skedarët e përditësuar të gjuhës.

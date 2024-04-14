@@ -1,7 +1,0 @@
-Versiune: 1.4.1
-
-Îmbunătățiri:
-[Funcție] - S-au adăugat gesturi de glisare cu apăsare lungă.
-
-Suport lingvistic:
-[Language] Fișiere de limbă actualizate.

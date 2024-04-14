@@ -1,9 +1,0 @@
-Útgáfa: 1.4.4
-
-Aukning:
-[Eiginleiki] - Bætti við broti fyrir endurpöntun á forritum.
-[Eiginleiki] - Bætti við möguleikanum á að breyta klukkustærð sjálfstætt.
-
-Tungumálastuðningur:
-
-[Tungumál] Uppfærðar tungumálaskrár.

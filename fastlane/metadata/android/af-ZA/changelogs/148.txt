@@ -1,6 +1,0 @@
-Weergawe: 1.4.8
-
-Foutoplossings:
-
-Die programlys is reggestel om nie duplikate te wys wanneer onlangse programme geaktiveer is nie
-Het die rugsteunstelsel reggemaak aangesien dit nie werk nie.

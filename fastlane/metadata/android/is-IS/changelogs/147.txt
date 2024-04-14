@@ -1,5 +1,0 @@
-Útgáfa: 1.4.7
-
-Villuleiðréttingar:
-
-Lagað var að RENAME birtist á öllum listasvæðum appsins.

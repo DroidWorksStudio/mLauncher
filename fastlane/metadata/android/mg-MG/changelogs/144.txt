@@ -1,9 +1,0 @@
-Version: 1.4.4
-
-Fanatsarana:
-[Endri-javatra] - Nampiana sombiny ho an'ny fampiharana famandrihana indray.
-[Feature] - Nampiana ny fahafahana manova ny haben'ny famantaranandro tsy miankina.
-
-Fanohanana ny fiteny:
-
-[Fiteny] Nohavaozina ny rakitra fiteny.

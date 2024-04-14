@@ -1,9 +1,0 @@
-Verze: 1.5.1
-
-Jazyková podpora:
-
-Aktualizované jazykové soubory.
-
-Refaktor:
-
-Vylepšený design ikon aplikací aktualizací na vizuálně přitažlivější ikonu.

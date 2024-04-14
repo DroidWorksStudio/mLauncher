@@ -1,6 +1,0 @@
-Versiune: 1.4.8
-
-Corectarea erorilor:
-
-S-a remediat lista de aplicații pentru a nu afișa duplicatele atunci când aplicațiile recente sunt activate
-S-a reparat sistemul de rezervă deoarece nu funcționa.

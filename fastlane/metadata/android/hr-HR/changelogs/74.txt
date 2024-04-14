@@ -1,7 +1,0 @@
-Verzija: 1.4.1
-
-Poboljšanja:
-[Značajka] - Dodane geste prelaska prstom dugim pritiskom.
-
-Jezična podrška:
-[Jezik] Ažurirane jezične datoteke.

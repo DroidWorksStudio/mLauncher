@@ -1,6 +1,0 @@
-Version: 1.4.8
-
-Fejlrettelser:
-
-Rettede applisten til ikke at vise dubletter, når de seneste apps er aktiveret
-Rettede backup-systemet, da det ikke virkede.

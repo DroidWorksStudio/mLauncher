@@ -1,9 +1,0 @@
-Wersja: 1.4.4
-
-Wzmocnienie:
-[Funkcja] - Dodano fragment dotyczący ponownego zamawiania aplikacji.
-[Funkcja] - Dodano możliwość niezależnej zmiany rozmiaru zegara.
-
-Obsługa języków:
-
-[Język] Zaktualizowano pliki językowe.

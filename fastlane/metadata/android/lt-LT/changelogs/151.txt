@@ -1,9 +1,0 @@
-Versija: 1.5.1
-
-Kalbų palaikymas:
-
-Atnaujinti kalbos failai.
-
-Pakeista:
-
-Patobulintas programos piktogramos dizainas, atnaujinus į vizualiai patrauklesnę piktogramą.

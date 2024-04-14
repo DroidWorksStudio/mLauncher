@@ -1,7 +1,0 @@
-Versão: 1.4.1
-
-Melhorias:
-[Recurso] - Adicionados gestos de deslizamento de toque longo.
-
-Suporte de linguas:
-[Idioma] Arquivos de idiomas atualizados.

@@ -1,9 +1,0 @@
-Versão: 1.4.4
-
-Aprimoramento:
-[Recurso] - Adicionado um fragmento para reordenar aplicativos.
-[Recurso] - Adicionada a capacidade de alterar o tamanho do relógio de forma independente.
-
-Suporte de linguas:
-
-[Idioma] Arquivos de idiomas atualizados.

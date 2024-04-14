@@ -1,6 +1,0 @@
-Versija: 1.4.8
-
-Trikčių pataisymai:
-
-Ištaisytas programų sąrašas, kad nebūtų rodomos dublikatai, kai įgalintos naujausios programos
-Ištaisyta atsarginė sistema, nes ji neveikė.

@@ -1,9 +1,0 @@
-Version : 1.4.4
-
-Renforcement:
-[Fonctionnalité] - Ajout d'un fragment pour la réorganisation des applications.
-[Fonctionnalité] - Ajout de la possibilité de modifier la taille de l'horloge indépendamment.
-
-Support linguistique:
-
-[Langue] Fichiers de langue mis à jour.

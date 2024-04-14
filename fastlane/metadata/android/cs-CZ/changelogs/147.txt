@@ -1,5 +1,0 @@
-Verze: 1.4.7
-
-Oprava chyb:
-
-Opraveno zobrazování RENAME ve všech oblastech seznamu aplikace.

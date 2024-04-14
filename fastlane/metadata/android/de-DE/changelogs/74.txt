@@ -1,7 +1,0 @@
-Version: 1.4.1
-
-Verbesserungen:
-[Funktion] – Wischgesten durch langes Drücken hinzugefügt.
-
-Sprachunterstützung:
-[Sprache] Aktualisierte Sprachdateien.

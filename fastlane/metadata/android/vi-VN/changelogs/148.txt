@@ -1,6 +1,0 @@
-Phiên bản: 1.4.8
-
-Sửa lỗi:
-
-Đã sửa danh sách ứng dụng để không hiển thị trùng lặp khi bật ứng dụng gần đây
-Đã sửa lỗi hệ thống sao lưu vì nó không hoạt động.

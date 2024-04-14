@@ -1,6 +1,0 @@
-Versioun: 1.4.8
-
-Bug Fixes:
-
-Fixéiert d'App Lëscht fir keng Duplikate ze weisen wann rezent Apps aktivéiert sinn
-De Backup System fixéiert well et net funktionnéiert.

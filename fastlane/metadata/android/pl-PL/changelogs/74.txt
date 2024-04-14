@@ -1,7 +1,0 @@
-Wersja: 1.4.1
-
-Ulepszenia:
-[Funkcja] - Dodano gesty przesuwania przy długim naciśnięciu.
-
-Obsługa języków:
-[Język] Zaktualizowano pliki językowe.

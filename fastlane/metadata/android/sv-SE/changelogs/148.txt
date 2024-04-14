@@ -1,6 +1,0 @@
-Version: 1.4.8
-
-Bug fixar:
-
-Fixade applistan för att inte visa dubbletter när de senaste apparna är aktiverade
-Fixade säkerhetskopieringssystemet eftersom det inte fungerade.

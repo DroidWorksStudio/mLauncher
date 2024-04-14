@@ -1,5 +1,0 @@
-Bersyon: 1.4.7
-
-Mga Pag-aayos ng Bug:
-
-Inayos ang RENAME mula sa pagpapakita sa lahat ng lugar ng listahan ng app.

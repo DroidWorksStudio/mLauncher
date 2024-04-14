@@ -1,9 +1,0 @@
-Phiên bản: 1.5.1
-
-Hỗ trợ ngôn ngữ:
-
-Tập tin ngôn ngữ được cập nhật.
-
-Cấu trúc lại:
-
-Cải thiện thiết kế biểu tượng ứng dụng bằng cách cập nhật lên biểu tượng hấp dẫn hơn.

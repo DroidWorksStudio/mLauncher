@@ -1,9 +1,0 @@
-Bersyon: 1.4.4
-
-Pagpapahusay:
-[Tampok] - Nagdagdag ng fragment para sa Muling pag-order ng mga app.
-[Tampok] - Nagdagdag ng kakayahang baguhin ang laki ng orasan nang nakapag-iisa.
-
-Suporta sa Wika:
-
-[Language] Na-update na Mga File ng Wika.

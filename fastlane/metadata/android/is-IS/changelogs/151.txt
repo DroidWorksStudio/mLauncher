@@ -1,9 +1,0 @@
-Útgáfa: 1.5.1
-
-Tungumálastuðningur:
-
-Uppfærðar tungumálaskrár.
-
-Refactor:
-
-Bætt hönnun apptákn með því að uppfæra í sjónrænt aðlaðandi tákn.

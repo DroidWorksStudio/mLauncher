@@ -1,9 +1,0 @@
-Versão: 1.5.1
-
-Suporte de linguas:
-
-Arquivos de idioma atualizados.
-
-Refatorar:
-
-Design aprimorado do ícone do aplicativo, atualizando para um ícone visualmente mais atraente.

@@ -1,7 +1,0 @@
-Bersyon: 1.4.1
-
-Mga pagpapahusay:
-[Tampok] - Nagdagdag ng Long-Press Swipe Gestures.
-
-Suporta sa Wika:
-[Language] Na-update na Mga File ng Wika.

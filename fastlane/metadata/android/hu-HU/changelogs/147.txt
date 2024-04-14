@@ -1,5 +1,0 @@
-Verzió: 1.4.7
-
-Hibajavítások:
-
-Javítottuk a RENAME megjelenítését az alkalmazás összes listaterületén.

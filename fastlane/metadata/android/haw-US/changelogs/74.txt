@@ -1,7 +1,0 @@
-Manaʻo: 1.4.1
-
-Nā mea hoʻonui:
-[Hōʻike] - Hoʻohui ʻia i nā ʻano Swipe paʻi lōʻihi.
-
-Kākoʻo ʻōlelo:
-[Language] Nā waihona ʻōlelo hou.

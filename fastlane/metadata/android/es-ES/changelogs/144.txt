@@ -1,9 +1,0 @@
-Versión: 1.4.4
-
-Mejora:
-[Función] - Se agregó un fragmento para reordenar aplicaciones.
-[Función]: se agregó la capacidad de cambiar el tamaño del reloj de forma independiente.
-
-Ayuda de idioma:
-
-[Idioma] Archivos de idioma actualizados.

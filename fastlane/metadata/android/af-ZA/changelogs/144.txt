@@ -1,9 +1,0 @@
-Weergawe: 1.4.4
-
-Verbetering:
-[Kenmerk] - 'n fragment bygevoeg vir herbestelling van toepassings.
-[Kenmerk] - Die vermoë bygevoeg om die klokgrootte onafhanklik te verander.
-
-Taalondersteuning:
-
-[Taal] Bygewerkte taallêers.

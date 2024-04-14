@@ -1,6 +1,0 @@
-Verzió: 1.4.8
-
-Hibajavítások:
-
-Javítottuk az alkalmazáslistát, hogy ne jelenjenek meg ismétlődések, ha a legutóbbi alkalmazások engedélyezve vannak
-Javítva a biztonsági mentési rendszer, mert nem működött.

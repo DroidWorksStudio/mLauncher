@@ -1,9 +1,0 @@
-Wersja: 1.5.1
-
-Obsługa języków:
-
-Zaktualizowane pliki językowe.
-
-Refaktoryzacja:
-
-Ulepszony projekt ikon aplikacji poprzez aktualizację do bardziej atrakcyjnej wizualnie ikony.

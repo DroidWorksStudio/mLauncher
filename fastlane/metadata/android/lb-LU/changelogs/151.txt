@@ -1,9 +1,0 @@
-Versioun: 1.5.1
-
-Sprooch Ënnerstëtzung:
-
-Aktualiséiert Sproochdateien.
-
-Refactor:
-
-Verbessert App Ikon Design andeems Dir op eng méi visuell attraktiv Ikon aktualiséiert gëtt.

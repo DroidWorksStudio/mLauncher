@@ -1,9 +1,0 @@
-Verzija: 1.4.4
-
-Poboljšanje:
-[Značajka] - dodan fragment za ponovno naručivanje aplikacija.
-[Značajka] - Dodana mogućnost neovisne promjene veličine sata.
-
-Jezična podrška:
-
-[Jezik] Ažurirane jezične datoteke.

@@ -1,6 +1,0 @@
-Version : 1.4.8
-
-Corrections de bugs :
-
-Correction de la liste des applications pour ne pas afficher les doublons lorsque les applications récentes sont activées
-Correction du système de sauvegarde car il ne fonctionnait pas.

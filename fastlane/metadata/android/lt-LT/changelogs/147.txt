@@ -1,5 +1,0 @@
-Versija: 1.4.7
-
-Trikčių pataisymai:
-
-Ištaisyta, kad RENAME nebūtų rodomas visose programos sąrašo srityse.

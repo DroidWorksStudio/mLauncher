@@ -1,7 +1,0 @@
-Versión: 1.4.1
-
-Mejoras:
-[Función] - Se agregaron gestos de deslizamiento prolongado.
-
-Ayuda de idioma:
-[Idioma] Archivos de idioma actualizados.

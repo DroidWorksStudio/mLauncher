@@ -1,7 +1,0 @@
-Phiên bản: 1.4.1
-
-Cải tiến:
-[Tính năng] - Đã thêm cử chỉ vuốt dài khi nhấn.
-
-Hỗ trợ ngôn ngữ:
-[Ngôn ngữ] Tệp ngôn ngữ được cập nhật.

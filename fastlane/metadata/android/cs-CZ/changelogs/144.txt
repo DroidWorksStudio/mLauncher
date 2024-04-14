@@ -1,9 +1,0 @@
-Verze: 1.4.4
-
-Zvýšení:
-[Funkce] – Přidán fragment pro aplikace pro opětovné objednání.
-[Funkce] – Přidána možnost nezávisle měnit velikost hodin.
-
-Jazyková podpora:
-
-[Jazyk] Aktualizované jazykové soubory.
