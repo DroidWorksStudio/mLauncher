@@ -22,7 +22,7 @@
     <string name="theme_mode">Hali ya mandhari</string>
     <string name="app_language">Lugha ya Kiolesura</string>
     <string name="app_text_size">Ukubwa wa Maandishi</string>
-    <string name="clock_text_size_multiplier">Kizidishi cha Ukubwa wa Maandishi ya Saa</string>
+    <string name="clock_text_size">Ukubwa wa Maandishi ya Saa</string>
     <string name="app_padding_size">Ukubwa wa Padding</string>
     <string name="follow_accent_colors">Rangi Lafudhi</string>
     <string name="background_opacity">Uwazi wa Mandharinyuma</string>
@@ -95,6 +95,7 @@
     <string name="system_default">Mfumo</string>
     <string name="delete">Futa</string>
     <string name="hide">Ficha</string>
+    <string name="unhide">Onyesha</string>
     <string name="rename">Badilisha jina</string>
     <string name="info">Habari</string>
     <string name="okay">Sawa</string>
