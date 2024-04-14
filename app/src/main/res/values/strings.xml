@@ -106,6 +106,7 @@
     <string name="system_default">System</string>
     <string name="delete">Delete</string>
     <string name="hide">Hide</string>
+    <string name="unhide">Unhide</string>
     <string name="rename">Rename</string>
     <string name="info">Info</string>
     <string name="okay">Okay</string>
