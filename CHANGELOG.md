@@ -8,6 +8,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Fixed a few things, Crashing of app when searching hidden apps. Hidden apps couldn't be un hidden. - ([5b3f840](https://github.com/DroidWorksStudio/mLauncher/commit/5b3f8402065eb90c9966f9ef571f231fc1a66147))
 
+### Language Support:
+
+- Updated Language Files. ([#455](https://github.com/DroidWorksStudio/mLauncher/issues/455)) - ([740fdaa](https://github.com/DroidWorksStudio/mLauncher/commit/740fdaa52a8fb1d639e55c6431f2c759006dab5a))
+
 ## [1.5.1](https://github.com/DroidWorksStudio/mLauncher/tree/1.5.1) - (11, April 2024)
 
 ### Refactor:
