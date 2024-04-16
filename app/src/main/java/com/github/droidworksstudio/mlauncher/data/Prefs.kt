@@ -429,9 +429,9 @@ class Prefs(val context: Context) {
     var clockSize: Int
         get() {
             return try {
-                prefs.getInt(CLOCK_SIZE_TEXT, 18)
+                prefs.getInt(CLOCK_SIZE_TEXT, 42)
             } catch (_: Exception) {
-                18
+                42
             }
         }
         set(value) = prefs.edit().putInt(CLOCK_SIZE_TEXT, value).apply()
