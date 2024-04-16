@@ -1,6 +1,16 @@
 <div align='center'>
 	<h2>mLauncher - Minimal and Clutter Free Android launcher</h2>
-	<img src='fastlane/metadata/android/en-US/images/phoneScreenshots/0.png' alt='mLauncher'>
+    <table align='center'>
+        Click on any image to enlarge it. To know more, explore and see for yourself.
+        <tr>
+            <td><img src='fastlane/metadata/android/en-US/images/phoneScreenshots/0.png' width='150' alt=""></td>
+            <td><img src='fastlane/metadata/android/en-US/images/phoneScreenshots/1.png' width='150' alt=""></td>
+            <td><img src='fastlane/metadata/android/en-US/images/phoneScreenshots/2.png' width='150' alt=""></td>
+            <td><img src='fastlane/metadata/android/en-US/images/phoneScreenshots/3.png' width='150' alt=""></td>
+            <td><img src='fastlane/metadata/android/en-US/images/phoneScreenshots/4.png' width='150' alt=""></td>
+            <td><img src='fastlane/metadata/android/en-US/images/phoneScreenshots/5.png' width='150' alt=""></td>
+        </tr>
+    </table>
     <p>
         <a href='https://f-droid.org/packages/app.mlauncher'><img src='https://github.com/DroidWorksStudio/mLauncher/assets/9284733/a1e7c86f-1c76-46c0-9193-8fde9c9f531c' width="150" alt="fDroid"></a>
         <a href='http://apps.obtainium.imranr.dev/redirect.html?r=obtainium://add/https://github.com/DroidWorksStudio/mLauncher'><img src='https://github.com/DroidWorksStudio/mLauncher/assets/9284733/071cccfa-207b-45fb-8be4-7e668eeec4e5' width="150" alt="Obtanium"></a>
