@@ -57,7 +57,6 @@ import com.github.droidworksstudio.mlauncher.listener.OnSwipeTouchListener
 import com.github.droidworksstudio.mlauncher.listener.ViewSwipeTouchListener
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import java.util.Locale
 import kotlin.math.abs
 import kotlin.math.sqrt
 
@@ -116,6 +115,22 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         if (prefs.showStatusBar) showStatusBar(requireActivity()) else hideStatusBar(requireActivity())
         val typeface = ResourcesCompat.getFont(requireActivity(), R.font.roboto)
 
+        batteryReceiver = BatteryReceiver()
+        /* register battery changes */
+        val filter = IntentFilter(Intent.ACTION_BATTERY_CHANGED)
+        requireContext().registerReceiver(batteryReceiver, filter)
+
+        val locale = prefs.language.locale()
+        val best12 = DateFormat.getBestDateTimePattern(locale, "hhmma")
+        val best24 = DateFormat.getBestDateTimePattern(locale, "HHmm")
+        binding.clock.format12Hour = best12
+        binding.clock.format24Hour = best24
+
+        val best12Date = DateFormat.getBestDateTimePattern(locale, "eeeddMMM")
+        val best24Date = DateFormat.getBestDateTimePattern(locale, "eeeddMMM")
+        binding.date.format12Hour = best12Date
+        binding.date.format24Hour = best24Date
+
         binding.clock.textSize = prefs.clockSize.toFloat()
         binding.date.textSize = prefs.textSizeLauncher.toFloat()
         binding.batteryIcon.textSize = prefs.textSizeLauncher.toFloat() / 1.5f
@@ -146,23 +161,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
     override fun onResume() {
         super.onResume()
-
-        batteryReceiver = BatteryReceiver()
-        /* register battery changes */
-        val filter = IntentFilter(Intent.ACTION_BATTERY_CHANGED)
-        requireContext().registerReceiver(batteryReceiver, filter)
-
-        val locale = prefs.language.locale()
-        val best12 = DateFormat.getBestDateTimePattern(locale, "hhmma")
-        val best24 = DateFormat.getBestDateTimePattern(locale, "HHmm")
-        binding.clock.format12Hour = best12
-        binding.clock.format24Hour = best24
-
-        val best12Date = DateFormat.getBestDateTimePattern(locale, "eeeddMMM")
-        val best24Date = DateFormat.getBestDateTimePattern(locale, "eeeddMMM")
-        binding.date.format12Hour = best12Date
-        binding.date.format24Hour = best24Date
-
         // only show "set as default"-button if tips are GONE
         if (binding.firstRunTips.visibility == View.GONE) {
             binding.setDefaultLauncher.visibility =
