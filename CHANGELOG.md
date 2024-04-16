@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file. See [conven
 ### Chore:
 
 - *(change)* Removed Changelog from FastLane. - ([d5e47cd](https://github.com/DroidWorksStudio/mLauncher/commit/d5e47cd77621e538ec523c730b532f19eb23035c))
+- *(changelog)* Update CHANGELOG.md - ([f7caff5](https://github.com/DroidWorksStudio/mLauncher/commit/f7caff5815efe8b4f8817c4dd0230f1f17d8177d))
 - *(changelog)* Update CHANGELOG.md - ([a1c3434](https://github.com/DroidWorksStudio/mLauncher/commit/a1c343431b0ddcb93f70879a8b043ee131b5949c))
 - *(changelog)* Update CHANGELOG.md - ([f032820](https://github.com/DroidWorksStudio/mLauncher/commit/f0328200af2a2dff9ae6e671f147914dd1017e02))
 - *(changelog)* Update CHANGELOG.md - ([d09239e](https://github.com/DroidWorksStudio/mLauncher/commit/d09239ebb6a719f59b196c594098a2789f3a8e01))
@@ -15,6 +16,10 @@ All notable changes to this project will be documented in this file. See [conven
 ### Configuration Changes:
 
 - Updating to include additional changelog categories for comprehensive tracking and documentation. - ([81bdfbb](https://github.com/DroidWorksStudio/mLauncher/commit/81bdfbbf1c092c2ba81de5048bdd1c8718b7bceb))
+
+### Documentation:
+
+- Update badges in README.md - ([03f7cfc](https://github.com/DroidWorksStudio/mLauncher/commit/03f7cfc1c42a72dd02e9195b17bbb8bb300b659f))
 
 ### Refactoring:
 
