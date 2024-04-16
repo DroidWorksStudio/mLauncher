@@ -4,7 +4,19 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
-### Refactor:
+### Chore:
+
+- *(change)* Removed Changelog from FastLane. - ([d5e47cd](https://github.com/DroidWorksStudio/mLauncher/commit/d5e47cd77621e538ec523c730b532f19eb23035c))
+- *(changelog)* Update CHANGELOG.md - ([a1c3434](https://github.com/DroidWorksStudio/mLauncher/commit/a1c343431b0ddcb93f70879a8b043ee131b5949c))
+- *(changelog)* Update CHANGELOG.md - ([f032820](https://github.com/DroidWorksStudio/mLauncher/commit/f0328200af2a2dff9ae6e671f147914dd1017e02))
+- *(changelog)* Update CHANGELOG.md - ([d09239e](https://github.com/DroidWorksStudio/mLauncher/commit/d09239ebb6a719f59b196c594098a2789f3a8e01))
+- *(release)* Prepare for version 1.5.3 - ([e30a3b8](https://github.com/DroidWorksStudio/mLauncher/commit/e30a3b889a636f73008cdeaeefe5455596ed491c))
+
+### Configuration Changes:
+
+- Updating to include additional changelog categories for comprehensive tracking and documentation. - ([81bdfbb](https://github.com/DroidWorksStudio/mLauncher/commit/81bdfbbf1c092c2ba81de5048bdd1c8718b7bceb))
+
+### Refactoring:
 
 - Removing redundant or unused code segments. - ([0312061](https://github.com/DroidWorksStudio/mLauncher/commit/0312061b1a327a6a27a5d73303403ea4a9a395d6))
 - Revised maximum and minimum size constraints for clock display - ([4b35505](https://github.com/DroidWorksStudio/mLauncher/commit/4b35505653603b8b43f7d37b2255e7b70c219f41))
@@ -16,6 +28,14 @@ All notable changes to this project will be documented in this file. See [conven
 - Fixes #454 Clock size. - ([d66577d](https://github.com/DroidWorksStudio/mLauncher/commit/d66577dc2934f6fc979486840bed1e33637b1169))
 - Fixed a few things, Crashing of app when searching hidden apps. Hidden apps couldn't be un hidden. - ([5b3f840](https://github.com/DroidWorksStudio/mLauncher/commit/5b3f8402065eb90c9966f9ef571f231fc1a66147))
 
+### Chore:
+
+- *(changelog)* Update CHANGELOG.md - ([0ac3d9f](https://github.com/DroidWorksStudio/mLauncher/commit/0ac3d9fb4a30cf43b26bd44904698486c734fd00))
+- *(changelog)* Update CHANGELOG.md - ([84f1181](https://github.com/DroidWorksStudio/mLauncher/commit/84f118109a0a97caf64b1edea2cbe80e08b55efd))
+- *(changelog)* Update CHANGELOG.md - ([8138660](https://github.com/DroidWorksStudio/mLauncher/commit/8138660a0587c24cb6444e36fea43a893114ff31))
+- *(changelog)* Update CHANGELOG.md - ([c2e1cb6](https://github.com/DroidWorksStudio/mLauncher/commit/c2e1cb666e55da5da7a16356b7156802a4f894e0))
+- *(release)* Prepare for version 1.5.2 - ([3511c53](https://github.com/DroidWorksStudio/mLauncher/commit/3511c537f5013b837a3ecd9dd99d1359c64fcbb9))
+
 ### Language Support:
 
 - Updated Language Files. ([#456](https://github.com/DroidWorksStudio/mLauncher/issues/456)) - ([b25032f](https://github.com/DroidWorksStudio/mLauncher/commit/b25032f82d0c11208904ed1968f06d8ca70f0783))
@@ -23,7 +43,14 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [1.5.1](https://github.com/DroidWorksStudio/mLauncher/tree/1.5.1) - (11, April 2024)
 
-### Refactor:
+### Chore:
+
+- *(change)* Updated Gradle - ([bd17ef3](https://github.com/DroidWorksStudio/mLauncher/commit/bd17ef349c82d811847c0f9822c28796c7a105fc))
+- *(changelog)* Update CHANGELOG.md - ([b79236c](https://github.com/DroidWorksStudio/mLauncher/commit/b79236c6ab1e9a297f97d6f981a91d1f6087f28f))
+- *(changelog)* Update CHANGELOG.md - ([7118699](https://github.com/DroidWorksStudio/mLauncher/commit/7118699c9a7682ee57a289b44be2649e7327bca0))
+- *(release)* Prepare for version 1.5.1 - ([dc7bc1c](https://github.com/DroidWorksStudio/mLauncher/commit/dc7bc1c5aabecc4b538089f123971014f57960ed))
+
+### Refactoring:
 
 - Improved app icon design by updating to a more visually appealing icon. - ([b902790](https://github.com/DroidWorksStudio/mLauncher/commit/b9027903c64d5ffec647c4008528073c21b44e51))
 
@@ -34,17 +61,27 @@ All notable changes to this project will be documented in this file. See [conven
 - Added a extra button for the Backup section of settings. - ([38fc111](https://github.com/DroidWorksStudio/mLauncher/commit/38fc1116150d6bbe45cc3d8ccb36ffea90956e07))
 - Added Yahoo Brave and Bing search - ([e4db995](https://github.com/DroidWorksStudio/mLauncher/commit/e4db99569c750da974756188596ccfd5b36107b9))
 
+### Chore:
+
+- *(change)* Update androidxTestKotlin version - ([44594f2](https://github.com/DroidWorksStudio/mLauncher/commit/44594f24d09898bd62cfcd21a31d76c5977457fc))
+- *(change)* Updated Language Files. ([#441](https://github.com/DroidWorksStudio/mLauncher/issues/441)) - ([1289819](https://github.com/DroidWorksStudio/mLauncher/commit/128981960c951414355d6bf8bf5ba5d298706df5))
+- *(change)* Updated JavaVersion to 17 - ([1d745d3](https://github.com/DroidWorksStudio/mLauncher/commit/1d745d38b67d9b6c33ba588e102fa86b4ba602fe))
+- *(change)* Fixed Appfile - ([b1323e5](https://github.com/DroidWorksStudio/mLauncher/commit/b1323e5bc4922a43d249f9389560aade8df6500f))
+- *(changelog)* Update CHANGELOG.md - ([72c39cb](https://github.com/DroidWorksStudio/mLauncher/commit/72c39cb10abb51bc8145a2f8edd20b8fd7c93209))
+- *(changelog)* Update CHANGELOG.md - ([94b61db](https://github.com/DroidWorksStudio/mLauncher/commit/94b61dbac141aef065531500b8839fa47ccb1b73))
+- *(changelog)* Update CHANGELOG.md - ([69b516b](https://github.com/DroidWorksStudio/mLauncher/commit/69b516bd302157e4f27f177fec1a0697bbc19959))
+- *(changelog)* Update CHANGELOG.md - ([2b5316e](https://github.com/DroidWorksStudio/mLauncher/commit/2b5316ee3e582ea6e569663403541fc3df917752))
+- *(changelog)* Update CHANGELOG.md - ([c26e143](https://github.com/DroidWorksStudio/mLauncher/commit/c26e14305fa826138f3b67ff41955e41ddb514b1))
+- *(ci)* Updated FastLane - ([e541821](https://github.com/DroidWorksStudio/mLauncher/commit/e541821c3236ba8628c6c0b56f43353c023c03fb))
+- *(release)* Prepare for version 1.5.0 - ([89a8d59](https://github.com/DroidWorksStudio/mLauncher/commit/89a8d5966d375705ee6d701e54fd4a1a91d1cad6))
+
 ### Language Support:
 
 - Updated Language Files. ([#442](https://github.com/DroidWorksStudio/mLauncher/issues/442)) - ([85ba73b](https://github.com/DroidWorksStudio/mLauncher/commit/85ba73b6c05309e7abfa2a4de3875efe987540ca))
 
-### Refactor:
+### Refactoring:
 
 - Eliminate duplicate entries in applist when adding a work profile - ([3aacf67](https://github.com/DroidWorksStudio/mLauncher/commit/3aacf6789f4547adc658029241a1945ed0496b02))
-
-### Miscellaneous Tasks:
-
-- *(ci)* Updated FastLane - ([e541821](https://github.com/DroidWorksStudio/mLauncher/commit/e541821c3236ba8628c6c0b56f43353c023c03fb))
 
 ## [1.4.9](https://github.com/DroidWorksStudio/mLauncher/tree/1.4.9) - (09, April 2024)
 
@@ -59,6 +96,22 @@ All notable changes to this project will be documented in this file. See [conven
 - Added Quick Settings Bypass Back - ([50f9106](https://github.com/DroidWorksStudio/mLauncher/commit/50f9106787b294016c53c1fc2956132902853eb7))
 - Updated Nerd Font - ([9335162](https://github.com/DroidWorksStudio/mLauncher/commit/9335162268a62a53ca677afe849367e4e936a0e7))
 
+### Chore:
+
+- *(change)* Added a close button onto the new context menu - ([f23a712](https://github.com/DroidWorksStudio/mLauncher/commit/f23a71226c84abdedbbd8e586d7bdd026e0862d7))
+- *(change)* Added Slovak Language & DDG Search URL - ([1df80e0](https://github.com/DroidWorksStudio/mLauncher/commit/1df80e063da9bd76ccce9a3b96015c69f97e8e2b))
+- *(change)* Update Fastlane Files - ([96ecc31](https://github.com/DroidWorksStudio/mLauncher/commit/96ecc315af561ffc331096887f5493d0c3143149))
+- *(change)* Updated the .gitignore - ([e568fd3](https://github.com/DroidWorksStudio/mLauncher/commit/e568fd3959e60585c7dc112ab09189f647f7369d))
+- *(changelog)* Update CHANGELOG.md - ([d15251a](https://github.com/DroidWorksStudio/mLauncher/commit/d15251aaf93570bfe1b512bd1c1158a4770677db))
+- *(changelog)* Update CHANGELOG.md - ([cf3bc43](https://github.com/DroidWorksStudio/mLauncher/commit/cf3bc43480be0dcb6c0afbd2ed993374951c9a87))
+- *(changelog)* Update CHANGELOG.md - ([5d341e2](https://github.com/DroidWorksStudio/mLauncher/commit/5d341e2aac37e8e8b38ecb9eb33acd17120e3257))
+- *(changelog)* Update CHANGELOG.md - ([68189e7](https://github.com/DroidWorksStudio/mLauncher/commit/68189e7a4ba0e3614529f3f910a76a692fe62189))
+- *(changelog)* Update CHANGELOG.md - ([a2ec64c](https://github.com/DroidWorksStudio/mLauncher/commit/a2ec64c7cefbc017c8c3af32d17a8d1f2ce4e73e))
+- *(changelog)* Update CHANGELOG.md - ([8e306cb](https://github.com/DroidWorksStudio/mLauncher/commit/8e306cb1fe394152f37fc03332a8a4df09ad125c))
+- *(changelog)* Update CHANGELOG.md - ([1c7bd0f](https://github.com/DroidWorksStudio/mLauncher/commit/1c7bd0f74a035f4df2ede0727c438b6436178853))
+- *(changelog)* Update CHANGELOG.md - ([71fdd7d](https://github.com/DroidWorksStudio/mLauncher/commit/71fdd7dc248b2c52213d1267c5a861f7db303826))
+- *(release)* Prepare for version 1.4.9 - ([3e86e34](https://github.com/DroidWorksStudio/mLauncher/commit/3e86e34c5e704a29089c7eefb5061aab074b7eca))
+
 ### Language Support:
 
 - Updated Language Files. ([#437](https://github.com/DroidWorksStudio/mLauncher/issues/437)) - ([1d826d6](https://github.com/DroidWorksStudio/mLauncher/commit/1d826d6006e42a9dbba90c6a289501afe7c050eb))
@@ -70,19 +123,33 @@ All notable changes to this project will be documented in this file. See [conven
 - Fixed the app list to not show duplicates when recent apps is enabled - ([1e8e037](https://github.com/DroidWorksStudio/mLauncher/commit/1e8e037ce0544538ae033e75b3f36b759b152e97))
 - Fixed the backup system as it was not working. - ([554878b](https://github.com/DroidWorksStudio/mLauncher/commit/554878b3ec7482874a29d57c26be07b2b34c81cb))
 
+### Chore:
+
+- *(change log)* Update CHANGELOG.md - ([6ff5151](https://github.com/DroidWorksStudio/mLauncher/commit/6ff515147648cf9838ea8644269b53286654a5f7))
+- *(changelog)* Update CHANGELOG.md - ([56b3926](https://github.com/DroidWorksStudio/mLauncher/commit/56b3926a456483aa17af4f9a658819f1a5eab9ca))
+- *(changelog)* Update CHANGELOG.md - ([2472f0c](https://github.com/DroidWorksStudio/mLauncher/commit/2472f0cf75647a2711d3e5511e7aa1ad1951078c))
+- *(changelog)* Update CHANGELOG.md - ([fdaf078](https://github.com/DroidWorksStudio/mLauncher/commit/fdaf0787fd2819c5a8fb496df5770241dbdb3a76))
+
 ## [1.4.7](https://github.com/DroidWorksStudio/mLauncher/tree/1.4.7) - (06, April 2024)
 
 ### Bug Fixes:
 
 - Fixed RENAME from displaying in all list areas of the app. - ([5e8add8](https://github.com/DroidWorksStudio/mLauncher/commit/5e8add8240496d2ddd913f078efc2474ec1eea35))
 
-### Release:
+### Chore:
 
-- Update the Release version to 147 (v1.4.7) - ([cc02343](https://github.com/DroidWorksStudio/mLauncher/commit/cc023438fd2bc11163c6ab97e6e5e09637bc9518))
+- *(changelog)* Update CHANGELOG.md - ([3fdaeab](https://github.com/DroidWorksStudio/mLauncher/commit/3fdaeab898e11360ae1e8ac6b9f9479147983dae))
+- *(changelog)* Update CHANGELOG.md - ([2b80938](https://github.com/DroidWorksStudio/mLauncher/commit/2b80938754fb58a6b1606afff111cf2ae2c2f742))
+- *(changelog)* Update CHANGELOG.md - ([1b1c485](https://github.com/DroidWorksStudio/mLauncher/commit/1b1c485c0be139384e19996f736b6ee96be8decd))
+- *(changelog)* Update CHANGELOG.md - ([c699d38](https://github.com/DroidWorksStudio/mLauncher/commit/c699d388e31929df809faf5d33dc965705dfd5e3))
 
 ### Language Support:
 
 - Updated Language Files. ([#424](https://github.com/DroidWorksStudio/mLauncher/issues/424)) - ([dd4b374](https://github.com/DroidWorksStudio/mLauncher/commit/dd4b3741b111e561c50e5170199cff2bdd958f0e))
+
+### Releases:
+
+- Update the Release version to 147 (v1.4.7) - ([cc02343](https://github.com/DroidWorksStudio/mLauncher/commit/cc023438fd2bc11163c6ab97e6e5e09637bc9518))
 
 ## [1.4.6](https://github.com/DroidWorksStudio/mLauncher/tree/1.4.6) - (03, April 2024)
 
@@ -95,6 +162,28 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Allow HomeScreen apps to be set to 0 - ([c7c5c4e](https://github.com/DroidWorksStudio/mLauncher/commit/c7c5c4e04810c9b309d8101a834e4fe9a2953052))
 
+### Chore:
+
+- *(change)* Found another typo. - ([6227b62](https://github.com/DroidWorksStudio/mLauncher/commit/6227b6239b0150a6588586536151d9f08378354a))
+- *(change)* Fixed the Home Pager from being too big. - ([a302406](https://github.com/DroidWorksStudio/mLauncher/commit/a30240651b48d9413aadf289f03929d77d84e187))
+- *(change)* Fixed a few of the language capitalization. - ([cfb1665](https://github.com/DroidWorksStudio/mLauncher/commit/cfb1665cba5f0cac9118b7e667b5dc581eebf75f))
+- *(change)* Update cliff.toml - ([1a4a25c](https://github.com/DroidWorksStudio/mLauncher/commit/1a4a25c609f8552a4eff32fe229b7456365439c3))
+- *(change)* Forgot fastlane Translations - ([cb0246b](https://github.com/DroidWorksStudio/mLauncher/commit/cb0246b222e30db09986329c5117cc6d5073d798))
+- *(change)* Fixed the caps for some language files. - ([c59bc17](https://github.com/DroidWorksStudio/mLauncher/commit/c59bc170f57036da6a8b8e5566a8a8c1b5d0a596))
+- *(changelog)* Update CHANGELOG.md - ([c5e50b5](https://github.com/DroidWorksStudio/mLauncher/commit/c5e50b5413554e70d67392eb7f8a0473d692ac12))
+- *(changelog)* Update CHANGELOG.md - ([9a66179](https://github.com/DroidWorksStudio/mLauncher/commit/9a661790c637619c27f8a938c7ae074b419d80b7))
+- *(changelog)* Update CHANGELOG.md - ([0618b60](https://github.com/DroidWorksStudio/mLauncher/commit/0618b60aa1f2a8acac2e4a3c2e81f3184e01d81b))
+- *(changelog)* Update CHANGELOG.md - ([d0fbd87](https://github.com/DroidWorksStudio/mLauncher/commit/d0fbd871676b95069a288425c1399b80a9e324fc))
+- *(changelog)* Update CHANGELOG.md - ([aeb6fb2](https://github.com/DroidWorksStudio/mLauncher/commit/aeb6fb208040a2e56cf15d301291a90b7cb45c8d))
+- *(changelog)* Update CHANGELOG.md - ([927cf09](https://github.com/DroidWorksStudio/mLauncher/commit/927cf09e501528c0d3872e141043a3794acdad60))
+- *(changelog)* Update CHANGELOG.md - ([0e6bf6e](https://github.com/DroidWorksStudio/mLauncher/commit/0e6bf6e2778f906e03d38c6b6f4dfa673a1d3d84))
+- *(changelog)* Updated ChangeLog Settings - ([a24865f](https://github.com/DroidWorksStudio/mLauncher/commit/a24865f1b162e68ada8ccc80c2bc7cf5b628b625))
+- *(changelog)* Update Changelog.md - ([91d8814](https://github.com/DroidWorksStudio/mLauncher/commit/91d8814830c0501f975f5983d500eff730b1ccdd))
+- *(changelog)* Update CHANGELOG.md Settings - ([62d5ed4](https://github.com/DroidWorksStudio/mLauncher/commit/62d5ed433e9ac4545daf9ed676b23abb21b09b85))
+- *(changelog)* Update CHANGELOG.md - ([b3aaeba](https://github.com/DroidWorksStudio/mLauncher/commit/b3aaeba7bcbf7a130aa095d459159cfe0421400f))
+- *(changelog)* Update CHANGELOG.md - ([a229523](https://github.com/DroidWorksStudio/mLauncher/commit/a2295235e35778fcf341f78373427e03872be42f))
+- *(release)* Prepare for 1.4.6 - ([4d2c099](https://github.com/DroidWorksStudio/mLauncher/commit/4d2c0995cff5730831363278abf0cbefffe5fd6f))
+
 ### Language Support:
 
 - Updated Language Files. ([#419](https://github.com/DroidWorksStudio/mLauncher/issues/419)) - ([9c32a57](https://github.com/DroidWorksStudio/mLauncher/commit/9c32a57a9b59a571dab6df9563a4394ffd92bf08))
@@ -104,7 +193,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Update CHANGELOG.md - ([d1343ee](https://github.com/DroidWorksStudio/mLauncher/commit/d1343ee010a08af7aee04732c214aab22da077f8))
 
-### Refactor:
+### Refactoring:
 
 - Cleaned up code adding permission request - ([666d2e7](https://github.com/DroidWorksStudio/mLauncher/commit/666d2e7d7f3520c2287673d1274bcc95b851de99))
 
@@ -120,21 +209,21 @@ All notable changes to this project will be documented in this file. See [conven
 - Fix namespace for the project - ([3434ff3](https://github.com/DroidWorksStudio/mLauncher/commit/3434ff35d1da1c2f047fcda9a650f9ec134895ff))
 - Fixed FUNDING.yml - ([edff6c2](https://github.com/DroidWorksStudio/mLauncher/commit/edff6c2a90e3d00b644442c9f670bbfc8faa5a2e))
 
-### Release:
-
-- Update the Release version to 145 (v1.4.5) - ([9212a94](https://github.com/DroidWorksStudio/mLauncher/commit/9212a9485fb5dba0e6bde9de5452202f14a18353))
-- Update the Release version to 144 (v1.4.4) - ([603a5fe](https://github.com/DroidWorksStudio/mLauncher/commit/603a5fee1a45976fc49445fdf2902a4be2a705ff))
-
-### Documentation:
-
-- Update CHANGELOG.md - ([2fa9cce](https://github.com/DroidWorksStudio/mLauncher/commit/2fa9cce971c5e8b26c655beea31d008e5245f887))
-
-### Miscellaneous Tasks:
+### Chore:
 
 - Update changelog.yml - ([4948ec8](https://github.com/DroidWorksStudio/mLauncher/commit/4948ec8db3ba701d6945174b13c032b8df35b0f7))
 - Added App Details - ([26894e6](https://github.com/DroidWorksStudio/mLauncher/commit/26894e6c0e3af13d6af7fcc32aaa2ec49e1a9748))
 - Changed App Icon - ([c5ba89f](https://github.com/DroidWorksStudio/mLauncher/commit/c5ba89f92e4cbe20914ee0429abc3f430f8fdcc8))
 - Rename finder to FuzzyFinder - ([d650e2b](https://github.com/DroidWorksStudio/mLauncher/commit/d650e2b0c36aaa0a7485851ed001d0cf4901254f))
+
+### Documentation:
+
+- Update CHANGELOG.md - ([2fa9cce](https://github.com/DroidWorksStudio/mLauncher/commit/2fa9cce971c5e8b26c655beea31d008e5245f887))
+
+### Releases:
+
+- Update the Release version to 145 (v1.4.5) - ([9212a94](https://github.com/DroidWorksStudio/mLauncher/commit/9212a9485fb5dba0e6bde9de5452202f14a18353))
+- Update the Release version to 144 (v1.4.4) - ([603a5fe](https://github.com/DroidWorksStudio/mLauncher/commit/603a5fee1a45976fc49445fdf2902a4be2a705ff))
 
 ## [1.4.3](https://github.com/DroidWorksStudio/mLauncher/tree/1.4.3) - (24, March 2024)
 
@@ -142,9 +231,34 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Bug fix/fixed the swipe gestures ([#392](https://github.com/DroidWorksStudio/mLauncher/issues/392)) - ([1da6e7f](https://github.com/DroidWorksStudio/mLauncher/commit/1da6e7ffa18800602ad5b228b389b88e5e47a7f8))
 
+### Feature Removal:
+
+- Remove Junk Depends - ([ee96bcd](https://github.com/DroidWorksStudio/mLauncher/commit/ee96bcdc588fa36e60776210833f64b7865c2024))
+- Removed Backup/Restore - ([749f4f0](https://github.com/DroidWorksStudio/mLauncher/commit/749f4f0c5b345da87ceb2e886e703e36dc0703d6))
+
+## [1.4.1](https://github.com/DroidWorksStudio/mLauncher/tree/1.4.1) - (21, March 2024)
+
+### Feature Removal:
+
+- Removed Clean from variable name - ([0d524d7](https://github.com/DroidWorksStudio/mLauncher/commit/0d524d750737046e71df52ea09bcea5d067e0c1e))
+- Removed the need for extra variable that wasn't needed and cleaned up some others - ([0d524d7](https://github.com/DroidWorksStudio/mLauncher/commit/0d524d750737046e71df52ea09bcea5d067e0c1e))
+- Remove Annoying Icon - ([ac6735b](https://github.com/DroidWorksStudio/mLauncher/commit/ac6735b143d1aa1f9c38d1a94fde12ebd25a7974))
+
+## [1.3.4](https://github.com/DroidWorksStudio/mLauncher/tree/1.3.4) - (17, March 2024)
+
+### Versioning:
+
+- Version - ([ac7d27d](https://github.com/DroidWorksStudio/mLauncher/commit/ac7d27ddc477ec0fce5db1077beaf1dab9fe3ceb))
+
 ## [1.3.3](https://github.com/DroidWorksStudio/mLauncher/tree/1.3.3) - (09, March 2024)
 
-### Release:
+### Feature Removal:
+
+- Removed settings for calendar toggle - ([e105dad](https://github.com/DroidWorksStudio/mLauncher/commit/e105dad63af97ccebb91d50f9dcb3b512e8b9b24))
+- Removed calendar permissions - ([e105dad](https://github.com/DroidWorksStudio/mLauncher/commit/e105dad63af97ccebb91d50f9dcb3b512e8b9b24))
+- Removed calendar events displaying on home. - ([e105dad](https://github.com/DroidWorksStudio/mLauncher/commit/e105dad63af97ccebb91d50f9dcb3b512e8b9b24))
+
+### Releases:
 
 - Release/1.3.3 ([#356](https://github.com/DroidWorksStudio/mLauncher/issues/356)) - ([67e2d34](https://github.com/DroidWorksStudio/mLauncher/commit/67e2d34798171eaa7453c6a085a97f9cf4d24f3e))
 
@@ -172,7 +286,7 @@ All notable changes to this project will be documented in this file. See [conven
 - Fixed few typos . - ([1fe45fa](https://github.com/DroidWorksStudio/mLauncher/commit/1fe45fa8403a18c945463012ed1b2eea8065571c))
 - Fixed DateTime formatting - ([167674b](https://github.com/DroidWorksStudio/mLauncher/commit/167674be75c8194c641ad9e8b572f71208ec724a))
 
-### Release:
+### Releases:
 
 - Release 1.3.0 ([#335](https://github.com/DroidWorksStudio/mLauncher/issues/335)) - ([fac3213](https://github.com/DroidWorksStudio/mLauncher/commit/fac3213fe9c053c29f13bc3a3f4edc2f0d263841))
 
@@ -183,7 +297,7 @@ All notable changes to this project will be documented in this file. See [conven
 - Fixed formatting - ([2ff310e](https://github.com/DroidWorksStudio/mLauncher/commit/2ff310ebe638d7712d1eeddcb2b5d6d101e39cd3))
 - Fix the Font - ([b85f81d](https://github.com/DroidWorksStudio/mLauncher/commit/b85f81d509e33921259573e6d6ac65d08920f9b8))
 
-### Release:
+### Releases:
 
 - Update version to 66 (v1.2.1) ([#296](https://github.com/DroidWorksStudio/mLauncher/issues/296)) - ([39aae05](https://github.com/DroidWorksStudio/mLauncher/commit/39aae05e8847bf71fb0329028c684e6b9d5d2730))
 
@@ -193,7 +307,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Fixed other EN Languages - ([b3dbed0](https://github.com/DroidWorksStudio/mLauncher/commit/b3dbed0cb6bb37cced1244a555a1b3ef4bd3e639))
 
-### Release:
+### Releases:
 
 - Update version to 65 (v1.2.0) ([#290](https://github.com/DroidWorksStudio/mLauncher/issues/290)) - ([749a2ff](https://github.com/DroidWorksStudio/mLauncher/commit/749a2ffb20915fc767687abc0b7ed702bf6b71ea))
 
@@ -203,7 +317,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Fixed the README (no need for a PR) - ([2422aae](https://github.com/DroidWorksStudio/mLauncher/commit/2422aae87df5b6ddedc3547305a42354b4643dd3))
 
-### Release:
+### Releases:
 
 - Update version to 64 (v1.1.2) ([#285](https://github.com/DroidWorksStudio/mLauncher/issues/285)) - ([4111ea7](https://github.com/DroidWorksStudio/mLauncher/commit/4111ea70b5a2e30f8fc2209f9dc17b48a82d25e0))
 
@@ -213,13 +327,13 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Fixed the Logic for FuzzyWuzzy ([#277](https://github.com/DroidWorksStudio/mLauncher/issues/277)) - ([02521ce](https://github.com/DroidWorksStudio/mLauncher/commit/02521ce04690cd3810c3df9fac1fd3e7565554e6))
 
-### Release:
-
-- Release/v63 ([#278](https://github.com/DroidWorksStudio/mLauncher/issues/278)) - ([70a08df](https://github.com/DroidWorksStudio/mLauncher/commit/70a08df1fb8c988e999ff2c8b07f8a3e13dcb2b5))
-
 ### Language Support:
 
 - Language Support - ([cd25747](https://github.com/DroidWorksStudio/mLauncher/commit/cd2574719ba159f183e5c2656f864118e4b8132e))
+
+### Releases:
+
+- Release/v63 ([#278](https://github.com/DroidWorksStudio/mLauncher/issues/278)) - ([70a08df](https://github.com/DroidWorksStudio/mLauncher/commit/70a08df1fb8c988e999ff2c8b07f8a3e13dcb2b5))
 
 ## [1.1.0](https://github.com/DroidWorksStudio/mLauncher/tree/1.1.0) - (26, June 2023)
 
@@ -227,7 +341,11 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Updated the logic for the app search. ([#273](https://github.com/DroidWorksStudio/mLauncher/issues/273)) - ([20b2a5d](https://github.com/DroidWorksStudio/mLauncher/commit/20b2a5d80e2f300b575d340823ae6207dade8e1f))
 
-### Release:
+### Feature Removal:
+
+- Removed println() - ([bb3aa87](https://github.com/DroidWorksStudio/mLauncher/commit/bb3aa87b91124137fcb9e91f24bd0751f883c033))
+
+### Releases:
 
 - Update version to 62 (v1.1.0) ([#272](https://github.com/DroidWorksStudio/mLauncher/issues/272)) - ([ef5d6e6](https://github.com/DroidWorksStudio/mLauncher/commit/ef5d6e66a1a525c3632d3e8e736b43712d57588e))
 
@@ -237,7 +355,11 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Auto open apps with spaces in name ([#251](https://github.com/DroidWorksStudio/mLauncher/issues/251)) - ([4b96648](https://github.com/DroidWorksStudio/mLauncher/commit/4b96648220b2fb7ebd02137a47661fd88a4c1e77))
 
-### Release:
+### Feature Removal:
+
+- Remove Junk - ([e86306e](https://github.com/DroidWorksStudio/mLauncher/commit/e86306ee0419b46cf4cee688569c9f1ddea93117))
+
+### Releases:
 
 - Update version to 61 (v1.0.1) ([#265](https://github.com/DroidWorksStudio/mLauncher/issues/265)) - ([ca9966d](https://github.com/DroidWorksStudio/mLauncher/commit/ca9966d1d8fb814c2ac4eb5077594f30fd204b0c))
 
@@ -247,7 +369,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Fixed the accent colors toggle for app draw ([#243](https://github.com/DroidWorksStudio/mLauncher/issues/243)) - ([85e22e6](https://github.com/DroidWorksStudio/mLauncher/commit/85e22e6ab3ed0e7a94f1dba78f4076a6489e18fe))
 
-### Release:
+### Releases:
 
 - Update version to 60 (v1.0.0) ([#244](https://github.com/DroidWorksStudio/mLauncher/issues/244)) - ([e1a9ec4](https://github.com/DroidWorksStudio/mLauncher/commit/e1a9ec458bbe70a2e0550860815bc79f9620c356))
 
@@ -257,7 +379,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Fix the locked screen when no pass set ([#238](https://github.com/DroidWorksStudio/mLauncher/issues/238)) - ([1c47916](https://github.com/DroidWorksStudio/mLauncher/commit/1c47916ef1a3717641283617050b9d0c45abd12c))
 
-### Release:
+### Releases:
 
 - Update version to 59 (v0.5.9) ([#239](https://github.com/DroidWorksStudio/mLauncher/issues/239)) - ([aae3ac8](https://github.com/DroidWorksStudio/mLauncher/commit/aae3ac80b7257dc23cef418f5ab66a0d4abd95f6))
 
@@ -268,7 +390,7 @@ All notable changes to this project will be documented in this file. See [conven
 - System accent color & font for app drawer ([#233](https://github.com/DroidWorksStudio/mLauncher/issues/233)) - ([11abb98](https://github.com/DroidWorksStudio/mLauncher/commit/11abb98b2ecabc20863a0f14207ed273f6504b4e))
 - Doubled the number of apps on the homescreen ([#232](https://github.com/DroidWorksStudio/mLauncher/issues/232)) - ([078fc26](https://github.com/DroidWorksStudio/mLauncher/commit/078fc26774f762d3f1a0b143bd5f4101e3adb64f))
 
-### Release:
+### Releases:
 
 - Update version to 58 (v0.5.8) ([#234](https://github.com/DroidWorksStudio/mLauncher/issues/234)) - ([bbb04a6](https://github.com/DroidWorksStudio/mLauncher/commit/bbb04a66ae355152cf98302e3dd572ec6a52caa5))
 
@@ -282,7 +404,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Fixed app alignment ([#226](https://github.com/DroidWorksStudio/mLauncher/issues/226)) - ([6ec501b](https://github.com/DroidWorksStudio/mLauncher/commit/6ec501b473778ee1fdec55ebcf4bd69618846fd4))
 
-### Release:
+### Releases:
 
 - Update version to 57 (v0.5.7) ([#227](https://github.com/DroidWorksStudio/mLauncher/issues/227)) - ([b77f8ac](https://github.com/DroidWorksStudio/mLauncher/commit/b77f8ac4911376e50572d592918f2b80ef69bf14))
 
@@ -293,7 +415,7 @@ All notable changes to this project will be documented in this file. See [conven
 - Fixed - ([5c5e058](https://github.com/DroidWorksStudio/mLauncher/commit/5c5e0581242339f3e09328a9824fb22d601b8452))
 - Fixed the Settings ([#221](https://github.com/DroidWorksStudio/mLauncher/issues/221)) - ([0213db3](https://github.com/DroidWorksStudio/mLauncher/commit/0213db39e78a4686530ac7d7d83d468290e760ca))
 
-### Release:
+### Releases:
 
 - Update version to 56 (v0.5.6) ([#222](https://github.com/DroidWorksStudio/mLauncher/issues/222)) - ([4325602](https://github.com/DroidWorksStudio/mLauncher/commit/4325602cd3c81e8127c383108a269e0107eae416))
 
@@ -309,7 +431,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Fixed a bug that crashes on battery monitor ([#211](https://github.com/DroidWorksStudio/mLauncher/issues/211)) - ([766a3e1](https://github.com/DroidWorksStudio/mLauncher/commit/766a3e1ef4778b0f1ec883c3af37867fd9c307c8))
 
-### Release:
+### Releases:
 
 - App version bumped to 54 (v0.5.4) ([#212](https://github.com/DroidWorksStudio/mLauncher/issues/212)) - ([ebd4eee](https://github.com/DroidWorksStudio/mLauncher/commit/ebd4eee69ddcb2cdb0b02f3c411497080306876f))
 
@@ -331,11 +453,11 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Fix Settings for Icon Font ([#192](https://github.com/DroidWorksStudio/mLauncher/issues/192)) - ([43a89fd](https://github.com/DroidWorksStudio/mLauncher/commit/43a89fdfd9c04e4e77158a00eaf1e6cd6bfa7724))
 
-### Revert:
+### Reverts:
 
 - Revert "Update release-drafter.yml" - ([15dd6b0](https://github.com/DroidWorksStudio/mLauncher/commit/15dd6b04c9ba38ab863eadb620a44a6d66188796))
 
-### Release:
+### Releases:
 
 - Release.tml - ([fbc4a9a](https://github.com/DroidWorksStudio/mLauncher/commit/fbc4a9a9c0f202fe19f438f4ad60bae63d6f02fc))
 
@@ -393,7 +515,11 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Work on the icons to make them look better. ([#155](https://github.com/DroidWorksStudio/mLauncher/issues/155)) - ([383b5df](https://github.com/DroidWorksStudio/mLauncher/commit/383b5df26e7810781e04871ecd0146c45855cc75))
 
-### Release:
+### Feature Removal:
+
+- Remove leftover import - ([432b3a0](https://github.com/DroidWorksStudio/mLauncher/commit/432b3a0c660bed693947da313af2abc39332cfa9))
+
+### Releases:
 
 - Release 0.4.4 - ([c116020](https://github.com/DroidWorksStudio/mLauncher/commit/c1160202ce8f955afba87023472650e2767c7a04))
 
@@ -418,6 +544,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Fixes the other fragments opacity ([#132](https://github.com/DroidWorksStudio/mLauncher/issues/132)) - ([620c9f7](https://github.com/DroidWorksStudio/mLauncher/commit/620c9f72a218001fd42b1080c32c6cf6ecad8245))
 
+### Code Cleanup:
+
+- Fix some code for opacity ([#130](https://github.com/DroidWorksStudio/mLauncher/issues/130)) - ([1e17fa2](https://github.com/DroidWorksStudio/mLauncher/commit/1e17fa2d69c03f5119ab51fccd49603d28d6ef2e))
+
 ## [0.4.1](https://github.com/DroidWorksStudio/mLauncher/tree/0.4.1) - (30, December 2022)
 
 ### Implemented Enhancements:
@@ -428,7 +558,12 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Fix the README.md - ([d7793aa](https://github.com/DroidWorksStudio/mLauncher/commit/d7793aa820f3ef167171c37585139a87787b42ed))
 
-### Revert:
+### Code Cleanup:
+
+- Just some basic cleanup to the code base - ([d6c190a](https://github.com/DroidWorksStudio/mLauncher/commit/d6c190aef0fed23d103d20d06eaddadb3f0e747f))
+- Just some basic cleanup to the codebase - ([f770ec0](https://github.com/DroidWorksStudio/mLauncher/commit/f770ec0070212f0d9b050c4e52df414a99d4c757))
+
+### Reverts:
 
 - Revert back to java folder as kotlin breaks - ([b0ab5c7](https://github.com/DroidWorksStudio/mLauncher/commit/b0ab5c703b4f3715ea3e18e8a5dad099d24bf168))
 
@@ -438,7 +573,12 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Added custom font size for settings ([#116](https://github.com/DroidWorksStudio/mLauncher/issues/116)) - ([02958c5](https://github.com/DroidWorksStudio/mLauncher/commit/02958c54d5dac1d26a41f8ebfd23a44e0b6b9226))
 
-### Revert:
+### Feature Removal:
+
+- Removed "app_name" from the rest of the languages - ([f835783](https://github.com/DroidWorksStudio/mLauncher/commit/f8357838c9b8931dc9906252dd0b5b261e4a322b))
+- Removed unneeded dependencies - ([8205cb5](https://github.com/DroidWorksStudio/mLauncher/commit/8205cb5342f22253ce2b3d595df9dbd1015383b7))
+
+### Reverts:
 
 - Revert "Update Templates" - ([e0b5524](https://github.com/DroidWorksStudio/mLauncher/commit/e0b5524a4be26869434841994a33233ac7667bf5))
 - Revert "Code Cleanup" - ([f5d129f](https://github.com/DroidWorksStudio/mLauncher/commit/f5d129f6c68b6dae2ccfdad4349f597b3e792287))
@@ -467,6 +607,10 @@ All notable changes to this project will be documented in this file. See [conven
 - Fix the french language string.xml ([#94](https://github.com/DroidWorksStudio/mLauncher/issues/94)) - ([318af22](https://github.com/DroidWorksStudio/mLauncher/commit/318af2246afd2d984198fcd192a2db95005872e1))
 - Fix the OPEN to follow the language ([#91](https://github.com/DroidWorksStudio/mLauncher/issues/91)) - ([23cce1b](https://github.com/DroidWorksStudio/mLauncher/commit/23cce1b6702fd55498c64d5a5d1d45a2f7347d66))
 
+### Code Cleanup:
+
+- Cleanup the Settings panel. ([#97](https://github.com/DroidWorksStudio/mLauncher/issues/97)) - ([fdcf83d](https://github.com/DroidWorksStudio/mLauncher/commit/fdcf83d54a163ba26402d6910dbe59405e10869e))
+
 ## [0.3.6](https://github.com/DroidWorksStudio/mLauncher/tree/0.3.6) - (22, December 2022)
 
 ### Bug Fixes:
@@ -478,6 +622,10 @@ All notable changes to this project will be documented in this file. See [conven
 - Fixed Actions ([#70](https://github.com/DroidWorksStudio/mLauncher/issues/70)) - ([2e32f9e](https://github.com/DroidWorksStudio/mLauncher/commit/2e32f9eaacc7b43d5eed7b9a1b40832ced7c267f))
 - Fix French CDATA ([#68](https://github.com/DroidWorksStudio/mLauncher/issues/68)) - ([cc11e07](https://github.com/DroidWorksStudio/mLauncher/commit/cc11e07c6435b8246356afd8ce3084ae522134ae))
 - FixedMax ([#63](https://github.com/DroidWorksStudio/mLauncher/issues/63)) - ([eed80dc](https://github.com/DroidWorksStudio/mLauncher/commit/eed80dc40773d96332616201f765d78da189b732))
+
+### Code Cleanup:
+
+- Cleanup ([#59](https://github.com/DroidWorksStudio/mLauncher/issues/59)) - ([c90f88b](https://github.com/DroidWorksStudio/mLauncher/commit/c90f88bf9b4a3a34d4585c789b21bea76c806e48))
 
 ## [0.3.5](https://github.com/DroidWorksStudio/mLauncher/tree/0.3.5) - (19, December 2022)
 
@@ -598,48 +746,7 @@ All notable changes to this project will be documented in this file. See [conven
 - App click listener in app list - ([fee0817](https://github.com/DroidWorksStudio/mLauncher/commit/fee08176d13f626a6bc46d90dc582a3ab2205772))
 - Crash on initialising navController in MainActivity - ([c1a287f](https://github.com/DroidWorksStudio/mLauncher/commit/c1a287f201c8680d1538e6f551cc4d681276a658))
 
-### Revert:
-
-- Settings text changin size (i guess it was better as it was before) - ([fe5b2da](https://github.com/DroidWorksStudio/mLauncher/commit/fe5b2daa669d69fa20fbd6dbde31ebb5d38e8b78))
-- Revert "fix: move 'backToHomeScreen()' to onResume to not show home shortly before opening an app" - ([b90dbfa](https://github.com/DroidWorksStudio/mLauncher/commit/b90dbfa6c29e2453f6151d6cfde12b111f4a68ed))
-- Revert "Change App icon" - ([1151ebf](https://github.com/DroidWorksStudio/mLauncher/commit/1151ebf1e02736761d8735bbd7671184296f1a88))
-- Revert "Change App icon" - ([d19b33f](https://github.com/DroidWorksStudio/mLauncher/commit/d19b33fcf676be0d6bfe5f787ef9608613ba16dd))
-- Revert header - ([0f8e831](https://github.com/DroidWorksStudio/mLauncher/commit/0f8e8313d49e8393d7115d30269b4a4a09eeca2e))
-
-### Release:
-
-- Version number - ([3c082e4](https://github.com/DroidWorksStudio/mLauncher/commit/3c082e45c4d95afacdc5a2e259d073ea33c70328))
-
-### Language Support:
-
-- Lang files and removed junk - ([64561b0](https://github.com/DroidWorksStudio/mLauncher/commit/64561b0ca7aaa598b846b2ba1b53a546b886e74a))
-
-### Documentation:
-
-- *(translation)* Add italian translation - ([6e8b691](https://github.com/DroidWorksStudio/mLauncher/commit/6e8b6914b29930cc768a3315d9fe4d8198214585))
-- *(translation)* Add italian translation - ([39f2ee9](https://github.com/DroidWorksStudio/mLauncher/commit/39f2ee91bcc1206dfd5bfa597869fe09bda1c896))
-
-### Refactor:
-
-- Improve text resize behaviour and set broader limits ([#207](https://github.com/DroidWorksStudio/mLauncher/issues/207)) - ([3e18041](https://github.com/DroidWorksStudio/mLauncher/commit/3e18041c01a04d4df8ac59afa83dbd43a5ac3ce6))
-- Replace string with string resourece ([#97](https://github.com/DroidWorksStudio/mLauncher/issues/97)) - ([432148e](https://github.com/DroidWorksStudio/mLauncher/commit/432148e46bf8028c17dafe488f49be2e470a9ff1))
-- Migrate to jetpack compose ([#30](https://github.com/DroidWorksStudio/mLauncher/issues/30)) - ([be2c1c0](https://github.com/DroidWorksStudio/mLauncher/commit/be2c1c052b9c9677f22d33db9a56c563713535b8))
-- Refactoring - ([4f4e1b4](https://github.com/DroidWorksStudio/mLauncher/commit/4f4e1b48857bc13fc7a9aa8292c2da355b3dad25))
-- Refactoring - ([7246ee1](https://github.com/DroidWorksStudio/mLauncher/commit/7246ee1e52d681db2ec1490ca3690711018ee566))
-- Refactoring - ([f88b54a](https://github.com/DroidWorksStudio/mLauncher/commit/f88b54a36ba596b0ce2b664d45dc2e80c8104eb7))
-- Refactored files into packages - ([244b064](https://github.com/DroidWorksStudio/mLauncher/commit/244b0642fe83095b1de7890ebed4e7ad37a9780f))
-- Refactoring launcher reset and default launcher selection - ([7fdadef](https://github.com/DroidWorksStudio/mLauncher/commit/7fdadef12b4f23ba69c49e865fac82d0a1635c21))
-- Moved some logic from view to viewmodel - ([d24d379](https://github.com/DroidWorksStudio/mLauncher/commit/d24d3794ff6a0cfc2d69b08a67ff907ea7c92213))
-
-### Styling:
-
-- Deutsch -> german - ([21ce8bb](https://github.com/DroidWorksStudio/mLauncher/commit/21ce8bbfc6e2308957f95b9576c438f6bbb1ac31))
-
-### Testing:
-
-- Test out automated android builds - ([c98b70f](https://github.com/DroidWorksStudio/mLauncher/commit/c98b70f8a340197a1f882413b0728a1ce173a659))
-
-### Miscellaneous Tasks:
+### Chore:
 
 - *(version)* Update version code - ([8ad6a37](https://github.com/DroidWorksStudio/mLauncher/commit/8ad6a37eae525653e18865dbd26c4ae08d3604d2))
 - Version number - ([41b72e9](https://github.com/DroidWorksStudio/mLauncher/commit/41b72e9e625fc80f56a24e8e9ee48cebc670d817))
@@ -672,5 +779,92 @@ All notable changes to this project will be documented in this file. See [conven
 - Remove unused strings - ([60d8b93](https://github.com/DroidWorksStudio/mLauncher/commit/60d8b939aeb3a98377c544a5ac50a4c724809a74))
 - Change deprecated code - ([da54fc9](https://github.com/DroidWorksStudio/mLauncher/commit/da54fc99ce3255252ead1b40878b74d864d79eb8))
 - Clean up code - ([85d8be7](https://github.com/DroidWorksStudio/mLauncher/commit/85d8be7ce33e26a8f5604688e12ed7c4ce60a3ae))
+
+### Versioning:
+
+- Version Bump - ([9ed78b8](https://github.com/DroidWorksStudio/mLauncher/commit/9ed78b873e71fcd2d0bf57d8766132b7084ad3a2))
+
+### Feature Removal:
+
+- Delete no-response.yml ([#27](https://github.com/DroidWorksStudio/mLauncher/issues/27)) - ([cee5ca9](https://github.com/DroidWorksStudio/mLauncher/commit/cee5ca95f24a8a2fdf05ed6d303365ffc3f9677c))
+- Removed a bit of junk - ([8716553](https://github.com/DroidWorksStudio/mLauncher/commit/87165532d84fcf44f5a7138ce8f07d47f9ba2418))
+- Removed TEST File - ([fb1664f](https://github.com/DroidWorksStudio/mLauncher/commit/fb1664fb844457ab4c2b7cefd2ded379e88b7200))
+- Delete .github/PULL_REQUEST_TEMPLATE directory - ([f28cf8b](https://github.com/DroidWorksStudio/mLauncher/commit/f28cf8b4bfece0182ce00f9454fa13a867a221e7))
+- Delete test.txt - ([df23d4d](https://github.com/DroidWorksStudio/mLauncher/commit/df23d4d0afd21e18a9b1da5b44dbec6e7b27c9ed))
+- Delete test.txt - ([df23d4d](https://github.com/DroidWorksStudio/mLauncher/commit/df23d4d0afd21e18a9b1da5b44dbec6e7b27c9ed))
+- Delete test.txt - ([df23d4d](https://github.com/DroidWorksStudio/mLauncher/commit/df23d4d0afd21e18a9b1da5b44dbec6e7b27c9ed))
+- Delete test.txt - ([df23d4d](https://github.com/DroidWorksStudio/mLauncher/commit/df23d4d0afd21e18a9b1da5b44dbec6e7b27c9ed))
+- Delete test.txt - ([df23d4d](https://github.com/DroidWorksStudio/mLauncher/commit/df23d4d0afd21e18a9b1da5b44dbec6e7b27c9ed))
+- Delete ic_rounded.webp - ([df23d4d](https://github.com/DroidWorksStudio/mLauncher/commit/df23d4d0afd21e18a9b1da5b44dbec6e7b27c9ed))
+- Delete logo.webp - ([df23d4d](https://github.com/DroidWorksStudio/mLauncher/commit/df23d4d0afd21e18a9b1da5b44dbec6e7b27c9ed))
+- Delete logo.webp - ([080bf29](https://github.com/DroidWorksStudio/mLauncher/commit/080bf29eccf7c57f075d4c1c3b9698a996bcaddc))
+- Delete ic_rounded.webp - ([950bb05](https://github.com/DroidWorksStudio/mLauncher/commit/950bb05320f64acddfc52b54c52a5720eec2b921))
+- Delete test.txt - ([2d1d303](https://github.com/DroidWorksStudio/mLauncher/commit/2d1d303560bed75fc2e00e661840dd252f7cb40a))
+- Delete test.txt - ([d3eb1fe](https://github.com/DroidWorksStudio/mLauncher/commit/d3eb1feb03b10df74764e9ffd0b27c5684a13d65))
+- Delete test.txt - ([12dddd4](https://github.com/DroidWorksStudio/mLauncher/commit/12dddd4e5db4bbd545f95c5140642795acbb529b))
+- Delete test.txt - ([1457c7c](https://github.com/DroidWorksStudio/mLauncher/commit/1457c7c61db5cddd97cafe3cdfd45620f417b5f1))
+- Delete test.txt - ([d021aaa](https://github.com/DroidWorksStudio/mLauncher/commit/d021aaa7e2a8bb179916b6747075c17ad47d2c71))
+- Delete test.txt - ([8397ebd](https://github.com/DroidWorksStudio/mLauncher/commit/8397ebd7a18269272b61f112153ceef71b3fa45e))
+- Delete S20 Ultra Screenshot 3.png - ([6246557](https://github.com/DroidWorksStudio/mLauncher/commit/6246557e32a42e7cbb7d5b73c7d6003dae9c6a74))
+- Delete S20 Ultra Screenshot 2.png - ([c4bccd4](https://github.com/DroidWorksStudio/mLauncher/commit/c4bccd4b8c51257b1018e46dc1194a4cb2a6153f))
+- Delete S20 Ultra Screenshot 1.png - ([f76964a](https://github.com/DroidWorksStudio/mLauncher/commit/f76964a44d760712d0c228349dad166d25922533))
+- Delete S20 Ultra Screenshot 0.png - ([66b8f2c](https://github.com/DroidWorksStudio/mLauncher/commit/66b8f2cc0c1addd6e369ccf6e666bba5905c0327))
+- Remove unused strings ([#106](https://github.com/DroidWorksStudio/mLauncher/issues/106)) - ([e61aa36](https://github.com/DroidWorksStudio/mLauncher/commit/e61aa360885cf30cffed6b17ca00e0468ff645f1))
+- Remove build status. Should be always green, anyways, and does not look too good - ([0f8e831](https://github.com/DroidWorksStudio/mLauncher/commit/0f8e8313d49e8393d7115d30269b4a4a09eeca2e))
+- Delete useless privacy policy - ([0f8e831](https://github.com/DroidWorksStudio/mLauncher/commit/0f8e8313d49e8393d7115d30269b4a4a09eeca2e))
+- Removed </resources> leftover tag - ([ae98a2d](https://github.com/DroidWorksStudio/mLauncher/commit/ae98a2da0e99870c11a6d54e0668190a7491f09d))
+- Remove clutter - ([d546ec9](https://github.com/DroidWorksStudio/mLauncher/commit/d546ec9c55c21eec090be809641c11da0be6ec08))
+- Remove clutter - ([e4cef8f](https://github.com/DroidWorksStudio/mLauncher/commit/e4cef8fe5e62f3ce693e3904b59ebe74cbec4a10))
+- Removed vibrate on long press - ([0768cca](https://github.com/DroidWorksStudio/mLauncher/commit/0768cca8fb44511bb2c0569063a4c8ee84096924))
+- Removed triple tap. Not being used. - ([c79885f](https://github.com/DroidWorksStudio/mLauncher/commit/c79885ff4cbb17b141f712d25d53cd5e80afe62c))
+- Removed an overlay - ([cb61bbc](https://github.com/DroidWorksStudio/mLauncher/commit/cb61bbcf09c2c4958ef59078db8ded18b5cd9046))
+- Removed text color change support - ([4a173e8](https://github.com/DroidWorksStudio/mLauncher/commit/4a173e84c92d36c887884eadb85345a389eb08cf))
+- Removed double tap to lock feature - ([800bdfa](https://github.com/DroidWorksStudio/mLauncher/commit/800bdfa02d67e380bf408d1825a50680e5661b49))
+- Remove font thin and increased padding of home apps - ([7681cc3](https://github.com/DroidWorksStudio/mLauncher/commit/7681cc317458423b78fdfa461c3e54ed91fcb418))
+- Removed some toast messages - ([be57f66](https://github.com/DroidWorksStudio/mLauncher/commit/be57f66fe6bab045481c69da5e402c88fd0936af))
+- Removed example test files and libraries - ([2116c68](https://github.com/DroidWorksStudio/mLauncher/commit/2116c683abc8869cbfb72aa6ddb6f1a40efb6c19))
+- Removed sponsor button to comply with play store's payment policies - ([489d67d](https://github.com/DroidWorksStudio/mLauncher/commit/489d67d5f2bcac0abdca289963f8fac6268db418))
+- Removed unused welcome fragment - ([5fd9e3d](https://github.com/DroidWorksStudio/mLauncher/commit/5fd9e3d0687405f0d108b6301d26a59c229dbff3))
+- Removed some options in settings (will be added in next version) - ([b19cfca](https://github.com/DroidWorksStudio/mLauncher/commit/b19cfcac56fe3a46de9830458a631e66cfbcc23c))
+- Removed some unused libraries - ([06c19a1](https://github.com/DroidWorksStudio/mLauncher/commit/06c19a10d01851291c928675ffd4c5a3c53cdb07))
+- Removed olauncher from app list - ([fb32141](https://github.com/DroidWorksStudio/mLauncher/commit/fb321416bfcb6901b240b6ea6fdba0485b2abe7a))
+- Deleted some unused hacky code - ([6a7c29f](https://github.com/DroidWorksStudio/mLauncher/commit/6a7c29fe89afcafa8c378c49bdc7889c8fe37627))
+
+### Language Support:
+
+- Lang files and removed junk - ([64561b0](https://github.com/DroidWorksStudio/mLauncher/commit/64561b0ca7aaa598b846b2ba1b53a546b886e74a))
+
+### Documentation:
+
+- *(translation)* Add italian translation - ([6e8b691](https://github.com/DroidWorksStudio/mLauncher/commit/6e8b6914b29930cc768a3315d9fe4d8198214585))
+- *(translation)* Add italian translation - ([39f2ee9](https://github.com/DroidWorksStudio/mLauncher/commit/39f2ee91bcc1206dfd5bfa597869fe09bda1c896))
+
+### Refactoring:
+
+- Improve text resize behaviour and set broader limits ([#207](https://github.com/DroidWorksStudio/mLauncher/issues/207)) - ([3e18041](https://github.com/DroidWorksStudio/mLauncher/commit/3e18041c01a04d4df8ac59afa83dbd43a5ac3ce6))
+- Replace string with string resourece ([#97](https://github.com/DroidWorksStudio/mLauncher/issues/97)) - ([432148e](https://github.com/DroidWorksStudio/mLauncher/commit/432148e46bf8028c17dafe488f49be2e470a9ff1))
+- Migrate to jetpack compose ([#30](https://github.com/DroidWorksStudio/mLauncher/issues/30)) - ([be2c1c0](https://github.com/DroidWorksStudio/mLauncher/commit/be2c1c052b9c9677f22d33db9a56c563713535b8))
+- Refactoring - ([4f4e1b4](https://github.com/DroidWorksStudio/mLauncher/commit/4f4e1b48857bc13fc7a9aa8292c2da355b3dad25))
+- Refactoring - ([7246ee1](https://github.com/DroidWorksStudio/mLauncher/commit/7246ee1e52d681db2ec1490ca3690711018ee566))
+- Refactoring - ([f88b54a](https://github.com/DroidWorksStudio/mLauncher/commit/f88b54a36ba596b0ce2b664d45dc2e80c8104eb7))
+- Refactored files into packages - ([244b064](https://github.com/DroidWorksStudio/mLauncher/commit/244b0642fe83095b1de7890ebed4e7ad37a9780f))
+- Refactoring launcher reset and default launcher selection - ([7fdadef](https://github.com/DroidWorksStudio/mLauncher/commit/7fdadef12b4f23ba69c49e865fac82d0a1635c21))
+- Moved some logic from view to viewmodel - ([d24d379](https://github.com/DroidWorksStudio/mLauncher/commit/d24d3794ff6a0cfc2d69b08a67ff907ea7c92213))
+
+### Styling Changes:
+
+- Deutsch -> german - ([21ce8bb](https://github.com/DroidWorksStudio/mLauncher/commit/21ce8bbfc6e2308957f95b9576c438f6bbb1ac31))
+
+### Reverts:
+
+- Settings text changin size (i guess it was better as it was before) - ([fe5b2da](https://github.com/DroidWorksStudio/mLauncher/commit/fe5b2daa669d69fa20fbd6dbde31ebb5d38e8b78))
+- Revert "fix: move 'backToHomeScreen()' to onResume to not show home shortly before opening an app" - ([b90dbfa](https://github.com/DroidWorksStudio/mLauncher/commit/b90dbfa6c29e2453f6151d6cfde12b111f4a68ed))
+- Revert "Change App icon" - ([1151ebf](https://github.com/DroidWorksStudio/mLauncher/commit/1151ebf1e02736761d8735bbd7671184296f1a88))
+- Revert "Change App icon" - ([d19b33f](https://github.com/DroidWorksStudio/mLauncher/commit/d19b33fcf676be0d6bfe5f787ef9608613ba16dd))
+- Revert header - ([0f8e831](https://github.com/DroidWorksStudio/mLauncher/commit/0f8e8313d49e8393d7115d30269b4a4a09eeca2e))
+
+### Releases:
+
+- Version number - ([3c082e4](https://github.com/DroidWorksStudio/mLauncher/commit/3c082e45c4d95afacdc5a2e259d073ea33c70328))
 
 <!-- Generated by DroidWorks Studio -->
