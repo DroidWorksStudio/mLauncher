@@ -2,12 +2,12 @@
 	<h2>mLauncher - Minimal and Clutter Free Android launcher</h2>
 	<img src='fastlane/metadata/android/en-US/images/phoneScreenshots/0.png' alt='mLauncher'>
     	<p></p>
-    	<a href='https://f-droid.org/packages/app.mlauncher'><img src='https://fdroid.gitlab.io/artwork/badge/get-it-on.png' height="100"></a>
+    	<a href='https://f-droid.org/packages/app.mlauncher'><img src='https://github.com/DroidWorksStudio/mLauncher/assets/9284733/a1e7c86f-1c76-46c0-9193-8fde9c9f531c' width="150"></a>
+        <a href='http://apps.obtainium.imranr.dev/redirect.html?r=obtainium://add/https://github.com/DroidWorksStudio/mLauncher'><img src='https://github.com/DroidWorksStudio/mLauncher/assets/9284733/071cccfa-207b-45fb-8be4-7e668eeec4e5' width="150"></a>
 </div>
 
 - Chat with us at [mLauncher](https://t.me/mLauncherAndroid) on telegram.
 - This application can be found on [F-Droid](https://f-droid.org/packages/app.mlauncher/) and [Github](https://github.com/HeCodes2Much/mLauncher/releases/).
-- You can also add this repo to [Obtanium](http://apps.obtainium.imranr.dev/redirect.html?r=obtainium://add/https://github.com/DroidWorksStudio/mLauncher) to get auto updates that are faster then F-Droid.
 - The latest stable version is available on the [`main`](https://github.com/HeCodes2Much/mLauncher/tree/main) branch, which can be cloned to build the application independently.
 - Additionally, a Github action has been set up to automatically generate an APK for every [release](https://github.com/HeCodes2Much/mLauncher/releases).
 - The **original** version of the application is also accessible on the [Play Store](https://play.google.com/store/apps/details?id=app.olauncher), [F-Droid](https://f-droid.org/fr/packages/app.olauncher/) & [Github](https://github.com/tanujnotes/Olauncher).
