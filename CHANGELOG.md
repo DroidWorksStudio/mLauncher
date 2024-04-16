@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Bug Fixes:
+
+- Corrected the format of the time and date when focus mode is enabled. - ([1751ee5](https://github.com/DroidWorksStudio/mLauncher/commit/1751ee58dd275c9bd2020a28970fdba7831a76de))
+
 ### Chore:
 
 - Move skip configuration to the top of commit_parsers - ([f62c48a](https://github.com/DroidWorksStudio/mLauncher/commit/f62c48a89671ce11d85b9b65179984045091cb05))
