@@ -1,9 +1,10 @@
 <div align='center'>
 	<h2>mLauncher - Minimal and Clutter Free Android launcher</h2>
 	<img src='fastlane/metadata/android/en-US/images/phoneScreenshots/0.png' alt='mLauncher'>
-    	<p></p>
-    	<a href='https://f-droid.org/packages/app.mlauncher'><img src='https://github.com/DroidWorksStudio/mLauncher/assets/9284733/a1e7c86f-1c76-46c0-9193-8fde9c9f531c' width="150"></a>
-        <a href='http://apps.obtainium.imranr.dev/redirect.html?r=obtainium://add/https://github.com/DroidWorksStudio/mLauncher'><img src='https://github.com/DroidWorksStudio/mLauncher/assets/9284733/071cccfa-207b-45fb-8be4-7e668eeec4e5' width="150"></a>
+    <p>
+        <a href='https://f-droid.org/packages/app.mlauncher'><img src='https://github.com/DroidWorksStudio/mLauncher/assets/9284733/a1e7c86f-1c76-46c0-9193-8fde9c9f531c' width="150" alt="fDroid"></a>
+        <a href='http://apps.obtainium.imranr.dev/redirect.html?r=obtainium://add/https://github.com/DroidWorksStudio/mLauncher'><img src='https://github.com/DroidWorksStudio/mLauncher/assets/9284733/071cccfa-207b-45fb-8be4-7e668eeec4e5' width="150" alt="Obtanium"></a>
+    </p>
 </div>
 
 - Chat with us at [mLauncher](https://t.me/mLauncherAndroid) on telegram.
@@ -142,15 +143,14 @@ We kindly request that you consider supporting the ongoing development of mLaunc
 
 <div align='center'>
     <p>
-        <img src='https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=android&logoColor=white'>
-        <img src='https://img.shields.io/badge/SDK-33-3DDC84?style=flat-square'>
-        <a href='https://github.com/HeCodes2Much/mLauncher/blob/main/LICENSE'><img src='https://img.shields.io/github/license/HeCodes2Much/mLauncher?color=3DDC84&style=flat-square'></a>
+        <img src='https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=android&logoColor=white' alt="Android">
+        <img src='https://img.shields.io/badge/SDK-34-3DDC84?style=flat-square' alt="SDK-34">
+        <a href='https://github.com/HeCodes2Much/mLauncher/blob/main/LICENSE'><img src='https://img.shields.io/github/license/HeCodes2Much/mLauncher?color=3DDC84&style=flat-square' alt="LICENSE"></a>
         <br>
-	<img src='https://img.shields.io/badge/Maintained-yes-44cc11?style=flat-square'>
-        <a href='https://github.com/HeCodes2Much/mLauncher/actions'><img src='https://img.shields.io/github/actions/workflow/status/HeCodes2Much/mLauncher/android-release_ci.yml?style=flat-square'></a>
-	<a href='https://github.com/HeCodes2Much/mLauncher/releases/latest'><img src='https://img.shields.io/github/downloads/HeCodes2Much/mLauncher/total?color=44cc11&style=flat-square'></a>
-	<br>
-	<a href='https://f-droid.org/packages/app.mlauncher'><img alt="F-Droid (including pre-releases)" src="https://img.shields.io/f-droid/v/app.mlauncher?include_prereleases&style=flat-square"></a>
-	<a href='https://github.com/HeCodes2Much/mLauncher/releases/latest'><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/HeCodes2Much/mLauncher?style=flat-square"></a>
+        <img src='https://img.shields.io/badge/Maintained-yes-44cc11?style=flat-square' alt="Maintained">
+        <a href='https://github.com/HeCodes2Much/mLauncher/releases/latest'><img src='https://img.shields.io/github/downloads/HeCodes2Much/mLauncher/total?color=44cc11&style=flat-square' alt="releases"></a>
+        <br>
+        <a href='https://f-droid.org/packages/app.mlauncher'><img alt="F-Droid (including pre-releases)" src="https://img.shields.io/f-droid/v/app.mlauncher?include_prereleases&style=flat-square"></a>
+        <a href='https://github.com/HeCodes2Much/mLauncher/releases/latest'><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/HeCodes2Much/mLauncher?style=flat-square"></a>
     </p>
 </div>
