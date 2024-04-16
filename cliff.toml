@@ -83,6 +83,11 @@ commit_preprocessors = [
 ]
 # regex for parsing and grouping commits
 commit_parsers = [
+    { message = "^chore\\(release\\): prepare for", skip = true },
+    { message = "^chore\\(deps.*\\)", skip = true },
+    { message = "^chore\\(change.*\\)", skip = true },
+    { message = "^chore\\(pr\\)", skip = true },
+    { message = "^chore\\(pull\\)", skip = true },
     { message = "^feat", group = "<!-- 0 -->Implemented Enhancements:" },
     { message = "^Feat", group = "<!-- 0 -->Implemented Enhancements:" },
     { message = "^fix|^bug", group = "<!-- 1 -->Bug Fixes:" },
@@ -118,12 +123,7 @@ commit_parsers = [
     { message = "^remov|^delete|^drop|^remove", group = "<!-- 16 -->Feature Removal:" },
     { message = "^Remov|^Delete|^Drop|^Remove", group = "<!-- 16 -->Feature Removal:" },
     { message = "^hotfix|^emergency", group = "<!-- 17 -->Hotfixes:" },
-    { message = "^Hotfix|^Emergency", group = "<!-- 17 -->Hotfixes:" },
-    { message = "^chore\\(release\\): prepare for", skip = true },
-    { message = "^chore\\(deps.*\\)", skip = true },
-    { message = "^chore\\(change.*\\)", skip = true },
-    { message = "^chore\\(pr\\)", skip = true },
-    { message = "^chore\\(pull\\)", skip = true }
+    { message = "^Hotfix|^Emergency", group = "<!-- 17 -->Hotfixes:" }
 ]
 # protect breaking changes from being skipped due to matching a skipping commit_parser
 protect_breaking_commits = true
