@@ -57,6 +57,7 @@ import com.github.droidworksstudio.mlauncher.listener.OnSwipeTouchListener
 import com.github.droidworksstudio.mlauncher.listener.ViewSwipeTouchListener
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import java.util.Locale
 import kotlin.math.abs
 import kotlin.math.sqrt
 
