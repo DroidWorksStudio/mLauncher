@@ -39,20 +39,6 @@ fun Context.openUrl(url: String) {
     startActivity(intent)
 }
 
-/*
-fun Context.isDarkThemeOn(): Boolean {
-    return resources.configuration.uiMode and
-            Configuration.UI_MODE_NIGHT_MASK == UI_MODE_NIGHT_YES
-}
-
-fun Context.copyToClipboard(text: String) {
-    val clipboardManager = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-    val clipData = ClipData.newPlainText(getString(R.string.app_name), text)
-    clipboardManager.setPrimaryClip(clipData)
-    showToastShort(this, "Copied")
-}
-*/
-
 fun Context.searchOnPlayStore(query: String? = null): Boolean {
     return try {
         startActivity(
