@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
+## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
+
+### Refactor:
+
+- Revised maximum and minimum size constraints for clock display - ([4b35505](https://github.com/DroidWorksStudio/mLauncher/commit/4b35505653603b8b43f7d37b2255e7b70c219f41))
+
 ## [1.5.2](https://github.com/DroidWorksStudio/mLauncher/tree/1.5.2) - (14, April 2024)
 
 ### Bug Fixes:
