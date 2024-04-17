@@ -122,7 +122,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             requireContext().registerReceiver(batteryReceiver, filter)
         } catch (e: IllegalArgumentException) {
             // Receiver registered, ignore the exception
-            Log.d("IllegalArgumentException", e.stackTraceToString())
+            Log.d("BatteryReceiver", e.stackTraceToString())
         }
 
         val locale = prefs.language.locale()
@@ -174,7 +174,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             requireContext().registerReceiver(batteryReceiver, filter)
         } catch (e: IllegalArgumentException) {
             // Receiver registered, ignore the exception
-            Log.d("IllegalArgumentException", e.stackTraceToString())
+            Log.d("BatteryReceiver", e.stackTraceToString())
         }
 
         // only show "set as default"-button if tips are GONE
@@ -192,7 +192,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             requireContext().unregisterReceiver(batteryReceiver)
         } catch (e: IllegalArgumentException) {
             // Receiver not registered, ignore the exception
-            Log.d("IllegalArgumentException", e.stackTraceToString())
+            Log.d("BatteryReceiver", e.stackTraceToString())
         }
     }
 

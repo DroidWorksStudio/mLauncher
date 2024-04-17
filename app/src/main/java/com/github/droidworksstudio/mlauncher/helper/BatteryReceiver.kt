@@ -67,13 +67,12 @@ class BatteryReceiver : BroadcastReceiver() {
             }
         }
 
-        @Suppress("NAME_SHADOWING")
-        val context = context as Activity
-        val iconView = (context).findViewById<TextView>(R.id.batteryIcon)
-        iconView.text = icon
+        val contextBattery = context as? Activity
+        val iconView = (contextBattery)?.findViewById<TextView>(R.id.batteryIcon)
+        iconView?.text = icon
 
-        val textView = (context).findViewById<TextView>(R.id.batteryText)
-        textView.text = "$batteryLevel%"
+        val textView = (contextBattery)?.findViewById<TextView>(R.id.batteryText)
+        textView?.text = "$batteryLevel%"
 
     }
 }
