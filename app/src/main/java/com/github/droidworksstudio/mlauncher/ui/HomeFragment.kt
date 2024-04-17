@@ -188,6 +188,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     override fun onPause() {
         super.onPause()
         /* unregister battery changes if the receiver is registered */
+        requireContext().unregisterReceiver(batteryReceiver)
         try {
             requireContext().unregisterReceiver(batteryReceiver)
         } catch (e: IllegalArgumentException) {

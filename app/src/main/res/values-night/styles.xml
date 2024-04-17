@@ -75,4 +75,7 @@
 		<item name="android:layout_margin">18sp</item>
 		<item name="android:padding">10sp</item>
 	</style>
+	<style name="MaterialDialogTheme" parent="Theme.AppCompat.DayNight.Dialog">
+		<item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+	</style>
 </resources>

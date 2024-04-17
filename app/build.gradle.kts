@@ -23,7 +23,6 @@ android {
             isShrinkResources = false
             isDebuggable = true
             applicationIdSuffix = ".debug"
-            versionNameSuffix = "-debug"
             resValue("string", "app_name", "mLauncher Debug")
         }
 
@@ -118,6 +117,12 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling:$androidxTestKotlin")
     implementation("androidx.compose.foundation:foundation:$androidxTestKotlin")
     implementation("androidx.biometric:biometric-ktx:1.2.0-alpha05")
+
+    val acraVersion = "5.11.3"
+    implementation("ch.acra:acra-core:$acraVersion")
+    implementation("ch.acra:acra-dialog:$acraVersion")
+    implementation("ch.acra:acra-mail:$acraVersion")
+    implementation("ch.acra:acra-notification:$acraVersion")
 
     val androidxTestEspresso = "3.5.1"
     androidTestImplementation("androidx.test.espresso:espresso-core:$androidxTestEspresso")

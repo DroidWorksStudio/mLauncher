@@ -34,6 +34,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto Show Keyboard</string>
     <string name="auto_open_apps">Auto Open Apps</string>
+    <string name="enable_notifications">Enable Notifications</string>
     <string name="display_recent_apps">Display Recent Apps</string>
     <string name="number_of_recents">Number of Recent Apps</string>
     <string name="filter_strength">Filter Strength</string>
@@ -128,6 +129,14 @@
     <string name="text_authentication_failed">Authentication failed.</string>
     <string name="text_biometric_login">Biometric login for mLauncher</string>
     <string name="text_biometric_login_sub">Log in using your biometric credentials.</string>
+
+    <!-- Crash Strings -->
+    <string name="acra_crash">Crash</string>
+    <string name="acra_dialog_text">We\'re sorry, but %1$s has encountered an unexpected issue and needs to close. Please help us improve by sending a crash report.\n\n%1$s values your privacy and the data collected is solely used for improving app stability. No personal information is collected. Thank you for your support!</string>
+    <string name="acra_send_report">Send Report</string>
+    <string name="acra_dont_send">Don\'t Send</string>
+    <string name="acra_mail_body">Please describe the issue you encountered:</string>
+
 
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>
