@@ -118,7 +118,12 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         batteryReceiver = BatteryReceiver()
         /* register battery changes */
         val filter = IntentFilter(Intent.ACTION_BATTERY_CHANGED)
-        requireContext().registerReceiver(batteryReceiver, filter)
+        try {
+            requireContext().registerReceiver(batteryReceiver, filter)
+        } catch (e: IllegalArgumentException) {
+            // Receiver registered, ignore the exception
+            Log.d("IllegalArgumentException", e.stackTraceToString())
+        }
 
         val locale = prefs.language.locale()
         val best12 = DateFormat.getBestDateTimePattern(locale, "hhmma")
@@ -161,6 +166,17 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
     override fun onResume() {
         super.onResume()
+
+        batteryReceiver = BatteryReceiver()
+        /* register battery changes */
+        val filter = IntentFilter(Intent.ACTION_BATTERY_CHANGED)
+        try {
+            requireContext().registerReceiver(batteryReceiver, filter)
+        } catch (e: IllegalArgumentException) {
+            // Receiver registered, ignore the exception
+            Log.d("IllegalArgumentException", e.stackTraceToString())
+        }
+
         // only show "set as default"-button if tips are GONE
         if (binding.firstRunTips.visibility == View.GONE) {
             binding.setDefaultLauncher.visibility =
@@ -171,8 +187,13 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
     override fun onPause() {
         super.onPause()
-        /* unregister battery changes */
-        requireContext().unregisterReceiver(batteryReceiver)
+        /* unregister battery changes if the receiver is registered */
+        try {
+            requireContext().unregisterReceiver(batteryReceiver)
+        } catch (e: IllegalArgumentException) {
+            // Receiver not registered, ignore the exception
+            Log.d("IllegalArgumentException", e.stackTraceToString())
+        }
     }
 
     override fun onClick(view: View) {
