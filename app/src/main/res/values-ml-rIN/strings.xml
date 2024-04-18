@@ -118,7 +118,11 @@
     <string name="text_biometric_login">mLouncher-നുള്ള ബയോമെട്രിക് ലോഗിൻ</string>
     <string name="text_biometric_login_sub">നിങ്ങളുടെ ബയോമെട്രിക് ക്രെഡൻഷ്യൽ ഉപയോഗിച്ച് ലോഗിൻ ചെയ്യുക</string>
     <!-- Crash Strings -->
-    <string name="acra_toast_text">ക്ഷമിക്കണം, ആപ്പ് ക്രാഷായി. ഡെവലപ്പർമാർക്ക് റിപ്പോർട്ട് അയച്ചു. വ്യക്തിഗത വിവരങ്ങളൊന്നും ശേഖരിച്ചിട്ടില്ല.</string>
+    <string name="acra_crash">തകര്ച്ച</string>
+    <string name="acra_dialog_text">ഞങ്ങളോട് ക്ഷമിക്കൂ, %1$s ന് ഒരു അപ്രതീക്ഷിത പ്രശ്നം നേരിട്ടതിനാൽ അത് അടയ്ക്കേണ്ടതുണ്ട്. ഒരു ക്രാഷ് റിപ്പോർട്ട് അയച്ചുകൊണ്ട് മെച്ചപ്പെടുത്താൻ ഞങ്ങളെ സഹായിക്കൂ.\n\n%1$s നിങ്ങളുടെ സ്വകാര്യതയെ വിലമതിക്കുന്നു, ശേഖരിക്കുന്ന ഡാറ്റ ആപ്പ് സ്ഥിരത മെച്ചപ്പെടുത്തുന്നതിന് മാത്രമാണ് ഉപയോഗിക്കുന്നത്. വ്യക്തിഗത വിവരങ്ങളൊന്നും ശേഖരിക്കുന്നില്ല. നിങ്ങളുടെ പിന്തുണയ്ക്ക് നന്ദി!</string>
+    <string name="acra_send_report">റിപ്പോർട്ട് അയയ്ക്കുക</string>
+    <string name="acra_dont_send">അയക്കരുത്</string>
+    <string name="acra_mail_body">നിങ്ങൾ നേരിട്ട പ്രശ്നം വിവരിക്കുക:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">എല്ലാ ആപ്പുകളും</string>
     <string name="can_not_delete_system_apps">സിസ്റ്റം ആപ്പുകൾ ഇല്ലാതാക്കാൻ കഴിയില്ല</string>
