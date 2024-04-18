@@ -30,6 +30,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">فتح التطبيقات تلقائياً</string>
+    <string name="enable_notifications">تمكين الإخطارات</string>
     <string name="display_recent_apps">عرض التطبيقات الحديثة</string>
     <string name="number_of_recents">عدد التطبيقات الحديثة</string>
     <string name="filter_strength">قوة التصفية</string>
@@ -116,6 +117,12 @@
     <string name="text_authentication_failed">المصادقة فشلت.</string>
     <string name="text_biometric_login">تسجيل الدخول البيومتري لـ mLauncher</string>
     <string name="text_biometric_login_sub">قم بتسجيل الدخول باستخدام بيانات الاعتماد البيومترية الخاصة بك</string>
+    <!-- Crash Strings -->
+    <string name="acra_crash">يتحطم</string>
+    <string name="acra_dialog_text">عذرًا، ولكن %1$s واجه مشكلة غير متوقعة ويجب إغلاقه. الرجاء مساعدتنا على التحسين عن طريق إرسال تقرير الأعطال.\n\n%1$s يقدر خصوصيتك ويتم استخدام البيانات التي تم جمعها فقط لتحسين استقرار التطبيق. لا يتم جمع أي معلومات شخصية. شكرا لدعمكم!</string>
+    <string name="acra_send_report">إرسال تقرير</string>
+    <string name="acra_dont_send">لا ترسل</string>
+    <string name="acra_mail_body">يرجى وصف المشكلة التي واجهتها:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">جميع التطبيقات</string>
     <string name="can_not_delete_system_apps">لا يمكن حذف تطبيقات النظام</string>
