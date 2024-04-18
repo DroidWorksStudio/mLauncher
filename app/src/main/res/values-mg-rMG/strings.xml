@@ -118,11 +118,7 @@
     <string name="text_biometric_login">Fidirana biometrika ho an\'ny mLauncher</string>
     <string name="text_biometric_login_sub">Midira amin\'ny alàlan\'ny fahazoan-dàlana biometrika anao</string>
     <!-- Crash Strings -->
-    <string name="acra_crash">fahasimbana</string>
-    <string name="acra_dialog_text">Miala tsiny izahay fa %1$s tojo olana tsy nampoizina ka mila mikatona. Ampio izahay hanatsara amin\'ny fandefasana tatitra fianjerana.\n\n%1$s manome lanja ny fiainanao manokana ary ny angon-drakitra voaangona dia ampiasaina amin\'ny fanatsarana ny fahamarinan\'ny fampiharana fotsiny. Tsy misy mombamomba manokana voaangona. Misaotra anao amin\'ny fanohananao!</string>
-    <string name="acra_send_report">Alefaso ny tatitra</string>
-    <string name="acra_dont_send">Aza mandefa</string>
-    <string name="acra_mail_body">Farito azafady ny olana sendra anao:</string>
+    <string name="acra_toast_text">Miala tsiny fa nianjera ny App. Tatitra nalefa tany amin\'ny mpamorona. Tsy misy fampahalalana manokana voangona.</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Apps rehetra</string>
     <string name="can_not_delete_system_apps">Tsy afaka mamafa System Apps</string>
