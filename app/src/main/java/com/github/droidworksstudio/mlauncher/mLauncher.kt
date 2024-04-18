@@ -7,6 +7,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import com.github.droidworksstudio.mlauncher.data.Prefs
+import org.acra.ReportField
 import org.acra.config.dialog
 import org.acra.config.mailSender
 import org.acra.config.notification
@@ -16,10 +17,79 @@ import org.acra.ktx.initAcra
 class Mlauncher : Application() {
     private lateinit var prefs: Prefs
 
+    override fun attachBaseContext(base: Context) {
+        super.attachBaseContext(base)
+        // Initialize prefs here
+        prefs = Prefs(base)
+
+        val pkgName = getString(R.string.app_name)
+        val pkgVersion = base.packageManager.getPackageInfo(
+            base.packageName,
+            0
+        ).versionName
+
+        initAcra {
+            //core configuration:
+            buildConfigClass = BuildConfig::class.java
+            reportFormat = StringFormat.KEY_VALUE_LIST
+            reportContent = listOf(
+                ReportField.APP_VERSION_CODE,
+                ReportField.APP_VERSION_NAME,
+                ReportField.ANDROID_VERSION,
+                ReportField.PHONE_MODEL,
+                ReportField.CUSTOM_DATA,
+                ReportField.STACK_TRACE,
+                ReportField.LOGCAT
+            )
+            //each plugin you chose above can be configured in a block like this:
+            if (prefs.enableNotifications) {
+                notification {
+                    //required
+                    title = getString(R.string.acra_dialog_text).format(pkgName)
+                    //required
+                    text = getString(R.string.acra_crash)
+                    //required
+                    channelName = getString(R.string.acra_send_report)
+                    //defaults to android.R.string.ok
+                    sendButtonText = getString(R.string.acra_send_report)
+                    //defaults to android.R.string.cancel
+                    discardButtonText = getString(R.string.acra_dont_send)
+                    //defaults to false
+                    sendOnClick = true
+                }
+            } else {
+                dialog {
+                    //required
+                    text = getString(R.string.acra_dialog_text).format(pkgName)
+                    //optional, enables the dialog title
+                    title = getString(R.string.acra_crash)
+                    //defaults to android.R.string.ok
+                    positiveButtonText = getString(R.string.acra_send_report)
+                    //defaults to android.R.string.cancel
+                    negativeButtonText = getString(R.string.acra_dont_send)
+                    //optional, defaults to @android:style/Theme.Dialog
+                    resTheme = R.style.MaterialDialogTheme
+                }
+            }
+
+            mailSender {
+                //required
+                mailTo = getString(R.string.acra_email)
+                //defaults to true
+                reportAsFile = true
+                //defaults to ACRA-report.stacktrace
+                reportFileName = "$pkgName-crash-report.stacktrace"
+                //defaults to "<applicationId> Crash Report"
+                subject = "$pkgName $pkgVersion Crash Report"
+                //defaults to empty
+                body = getString(R.string.acra_mail_body)
+            }
+        }
+    }
+
     override fun onCreate() {
         super.onCreate()
 
-        prefs = Prefs(baseContext)
         createNotificationChannel()
 
         // Check if notifications are enabled
@@ -69,62 +139,5 @@ class Mlauncher : Application() {
         }
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
         startActivity(intent)
-    }
-    override fun attachBaseContext(base: Context) {
-        super.attachBaseContext(base)
-        val pkgName = getString(R.string.app_name)
-        val pkgVersion = base.packageManager.getPackageInfo(
-            base.packageName,
-            0
-        ).versionName
-
-        initAcra {
-            //core configuration:
-            buildConfigClass = BuildConfig::class.java
-            reportFormat = StringFormat.KEY_VALUE_LIST
-            //each plugin you chose above can be configured in a block like this:
-            if (prefs.enableNotifications) {
-                notification {
-                    //required
-                    title = getString(R.string.acra_dialog_text).format(pkgName)
-                    //required
-                    text = getString(R.string.acra_crash)
-                    //required
-                    channelName = getString(R.string.acra_send_report)
-                    //defaults to android.R.string.ok
-                    sendButtonText = getString(R.string.acra_send_report)
-                    //defaults to android.R.string.cancel
-                    discardButtonText = getString(R.string.acra_dont_send)
-                    //defaults to false
-                    sendOnClick = true
-                }
-            } else {
-                dialog {
-                    //required
-                    text = getString(R.string.acra_dialog_text).format(pkgName)
-                    //optional, enables the dialog title
-                    title = getString(R.string.acra_crash)
-                    //defaults to android.R.string.ok
-                    positiveButtonText = getString(R.string.acra_send_report)
-                    //defaults to android.R.string.cancel
-                    negativeButtonText = getString(R.string.acra_dont_send)
-                    //optional, defaults to @android:style/Theme.Dialog
-                    resTheme = R.style.MaterialDialogTheme
-                }
-            }
-
-            mailSender {
-                //required
-                mailTo = getString(R.string.acra_email)
-                //defaults to true
-                reportAsFile = true
-                //defaults to ACRA-report.stacktrace
-                reportFileName = "$pkgName-crash-report.stacktrace"
-                //defaults to "<applicationId> Crash Report"
-                subject = "$pkgName $pkgVersion Crash Report"
-                //defaults to empty
-                body = getString(R.string.acra_mail_body)
-            }
-        }
     }
 }
