@@ -83,32 +83,34 @@ class Mlauncher : Application() {
             buildConfigClass = BuildConfig::class.java
             reportFormat = StringFormat.KEY_VALUE_LIST
             //each plugin you chose above can be configured in a block like this:
-            dialog {
-                //required
-                text = getString(R.string.acra_dialog_text).format(pkgName)
-                //optional, enables the dialog title
-                title = getString(R.string.acra_crash)
-                //defaults to android.R.string.ok
-                positiveButtonText = getString(R.string.acra_send_report)
-                //defaults to android.R.string.cancel
-                negativeButtonText = getString(R.string.acra_dont_send)
-                //optional, defaults to @android:style/Theme.Dialog
-                resTheme = R.style.MaterialDialogTheme
-            }
-
-            notification {
-                //required
-                title = getString(R.string.acra_dialog_text).format(pkgName)
-                //required
-                text = getString(R.string.acra_crash)
-                //required
-                channelName = getString(R.string.acra_send_report)
-                //defaults to android.R.string.ok
-                sendButtonText = getString(R.string.acra_send_report)
-                //defaults to android.R.string.cancel
-                discardButtonText = getString(R.string.acra_dont_send)
-                //defaults to false
-                sendOnClick = true
+            if (prefs.enableNotifications) {
+                notification {
+                    //required
+                    title = getString(R.string.acra_dialog_text).format(pkgName)
+                    //required
+                    text = getString(R.string.acra_crash)
+                    //required
+                    channelName = getString(R.string.acra_send_report)
+                    //defaults to android.R.string.ok
+                    sendButtonText = getString(R.string.acra_send_report)
+                    //defaults to android.R.string.cancel
+                    discardButtonText = getString(R.string.acra_dont_send)
+                    //defaults to false
+                    sendOnClick = true
+                }
+            } else {
+                dialog {
+                    //required
+                    text = getString(R.string.acra_dialog_text).format(pkgName)
+                    //optional, enables the dialog title
+                    title = getString(R.string.acra_crash)
+                    //defaults to android.R.string.ok
+                    positiveButtonText = getString(R.string.acra_send_report)
+                    //defaults to android.R.string.cancel
+                    negativeButtonText = getString(R.string.acra_dont_send)
+                    //optional, defaults to @android:style/Theme.Dialog
+                    resTheme = R.style.MaterialDialogTheme
+                }
             }
 
             mailSender {
