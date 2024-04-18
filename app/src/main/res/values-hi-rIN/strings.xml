@@ -118,11 +118,7 @@
     <string name="text_biometric_login">mLauncher के लिए बायोमेट्रिक लॉगिन</string>
     <string name="text_biometric_login_sub">अपने बायोमेट्रिक क्रेडेंशियल का उपयोग करके लॉग इन करें</string>
     <!-- Crash Strings -->
-    <string name="acra_crash">टकरा जाना</string>
-    <string name="acra_dialog_text">हमें खेद है, लेकिन %1$s को एक अप्रत्याशित समस्या का सामना करना पड़ा है और इसे बंद करने की आवश्यकता है। कृपया क्रैश रिपोर्ट भेजकर हमें बेहतर बनाने में मदद करें।\n\n%1$s आपकी गोपनीयता को महत्व देता है और एकत्र किए गए डेटा का उपयोग केवल ऐप स्थिरता को बेहतर बनाने के लिए किया जाता है। कोई व्यक्तिगत जानकारी एकत्र नहीं की जाती है। आपके समर्थन के लिए धन्यवाद!</string>
-    <string name="acra_send_report">रिपोर्ट भेजना</string>
-    <string name="acra_dont_send">न भेजें</string>
-    <string name="acra_mail_body">कृपया आपके सामने आई समस्या का वर्णन करें:</string>
+    <string name="acra_toast_text">क्षमा करें, ऐप क्रैश हो गया। रिपोर्ट डेवलपर्स को भेज दी गई है। कोई व्यक्तिगत जानकारी एकत्र नहीं की गई।</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">सभी एप्लीकेशन</string>
     <string name="can_not_delete_system_apps">सिस्टम ऐप्स को हटाया नहीं जा सकता</string>
