@@ -30,6 +30,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Tastiera e shfaqjes automatike</string>
     <string name="auto_open_apps">Hapja automatike e aplikacioneve</string>
+    <string name="enable_notifications">Aktivizo Njoftimet</string>
     <string name="display_recent_apps">Shfaq aplikacionet e fundit</string>
     <string name="number_of_recents">Numri i aplikacioneve të fundit</string>
     <string name="filter_strength">Forca e filtrit</string>
@@ -116,6 +117,12 @@
     <string name="text_authentication_failed">Autentifikimi dështoi.</string>
     <string name="text_biometric_login">Identifikimi biometrik për mLauncher</string>
     <string name="text_biometric_login_sub">Hyni duke përdorur kredencialet tuaja biometrike</string>
+    <!-- Crash Strings -->
+    <string name="acra_crash">Përplasje</string>
+    <string name="acra_dialog_text">Na vjen keq, por %1$s ka hasur në një problem të papritur dhe duhet të mbyllet. Ju lutemi, na ndihmoni të përmirësohemi duke dërguar një raport dështimi.\n\n%1$s vlerëson privatësinë tuaj dhe të dhënat e mbledhura përdoren vetëm për të përmirësuar stabilitetin e aplikacionit. Asnjë informacion personal nuk është mbledhur. Faleminderit per mbeshtetjen tuaj!</string>
+    <string name="acra_send_report">Dërgo raport</string>
+    <string name="acra_dont_send">Mos Dërgo</string>
+    <string name="acra_mail_body">Ju lutemi përshkruani problemin që keni hasur:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Të gjitha aplikacionet</string>
     <string name="can_not_delete_system_apps">Aplikacionet e sistemit nuk mund të fshihen</string>
