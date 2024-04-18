@@ -118,12 +118,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         batteryReceiver = BatteryReceiver()
         /* register battery changes */
         val filter = IntentFilter(Intent.ACTION_BATTERY_CHANGED)
-        try {
-            requireContext().registerReceiver(batteryReceiver, filter)
-        } catch (e: IllegalArgumentException) {
-            // Receiver registered, ignore the exception
-            Log.d("BatteryReceiver", e.stackTraceToString())
-        }
+        requireContext().registerReceiver(batteryReceiver, filter)
 
         val locale = prefs.language.locale()
         val best12 = DateFormat.getBestDateTimePattern(locale, "hhmma")
@@ -170,12 +165,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         batteryReceiver = BatteryReceiver()
         /* register battery changes */
         val filter = IntentFilter(Intent.ACTION_BATTERY_CHANGED)
-        try {
-            requireContext().registerReceiver(batteryReceiver, filter)
-        } catch (e: IllegalArgumentException) {
-            // Receiver registered, ignore the exception
-            Log.d("BatteryReceiver", e.stackTraceToString())
-        }
+        requireContext().registerReceiver(batteryReceiver, filter)
 
         // only show "set as default"-button if tips are GONE
         if (binding.firstRunTips.visibility == View.GONE) {
@@ -189,12 +179,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         super.onPause()
         /* unregister battery changes if the receiver is registered */
         requireContext().unregisterReceiver(batteryReceiver)
-        try {
-            requireContext().unregisterReceiver(batteryReceiver)
-        } catch (e: IllegalArgumentException) {
-            // Receiver not registered, ignore the exception
-            Log.d("BatteryReceiver", e.stackTraceToString())
-        }
     }
 
     override fun onClick(view: View) {

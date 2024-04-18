@@ -131,13 +131,7 @@
     <string name="text_biometric_login_sub">Log in using your biometric credentials.</string>
 
     <!-- Crash Strings -->
-    <string name="acra_crash">Crash</string>
-    <string name="acra_email" translatable="false">droidworksstudio@063240.xyz</string>
-    <string name="acra_dialog_text">We\'re sorry, but %1$s has encountered an unexpected issue and needs to close. Please help us improve by sending a crash report.\n\n%1$s values your privacy and the data collected is solely used for improving app stability. No personal information is collected. Thank you for your support!</string>
-    <string name="acra_send_report">Send Report</string>
-    <string name="acra_dont_send">Don\'t Send</string>
-    <string name="acra_mail_body">Please describe the issue you encountered:</string>
-
+    <string name="acra_toast_text">Sorry, App crashed. Report sent to developers. No personal info collected.</string>
 
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>

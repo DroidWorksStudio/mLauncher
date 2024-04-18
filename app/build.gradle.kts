@@ -3,6 +3,10 @@
 plugins {
     id("com.android.application") apply true
     id("kotlin-android") apply true
+    // Make sure that you have the Google services Gradle plugin
+    id("com.google.gms.google-services") apply true
+    // Add the Crashlytics Gradle plugin
+    id("com.google.firebase.crashlytics") apply true
 }
 
 android {
@@ -15,6 +19,8 @@ android {
         targetSdk = 34
         versionCode = 154
         versionName = "1.5.4"
+        buildConfigField("String", "FIREBASE_APP_ID", "\"${System.getenv("FIREBASE_APP_ID") ?: "DEFAULT_APP_ID"}\"")
+        buildConfigField("String", "FIREBASE_API_KEY", "\"${System.getenv("FIREBASE_API_KEY") ?: "DEFAULT_APP_ID"}\"")
     }
 
     buildTypes {
@@ -101,6 +107,14 @@ dependencies {
     implementation("org.apache.commons:commons-text:1.11.0")
     implementation("com.google.code.gson:gson:2.10.1")
 
+    // Import the BoM for the Firebase platform
+    implementation(platform("com.google.firebase:firebase-bom:32.8.1"))
+
+    // Add the dependencies for the Crashlytics NDK and Analytics libraries
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation("com.google.firebase:firebase-crashlytics-ndk")
+    implementation("com.google.firebase:firebase-analytics")
+
     // JETPACK
     // Integration with activities
     //noinspection GradleDependency
@@ -120,9 +134,7 @@ dependencies {
 
     val acraVersion = "5.11.3"
     implementation("ch.acra:acra-core:$acraVersion")
-    implementation("ch.acra:acra-dialog:$acraVersion")
-    implementation("ch.acra:acra-mail:$acraVersion")
-    implementation("ch.acra:acra-notification:$acraVersion")
+    implementation("ch.acra:acra-toast:$acraVersion")
 
     val androidxTestEspresso = "3.5.1"
     androidTestImplementation("androidx.test.espresso:espresso-core:$androidxTestEspresso")
