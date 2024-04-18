@@ -30,6 +30,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Ouvrir automatiquement les applications</string>
+    <string name="enable_notifications">Activer les notifications</string>
     <string name="display_recent_apps">Afficher les applications récentes</string>
     <string name="number_of_recents">Nombre d\'applications récentes</string>
     <string name="filter_strength">Puissance du filtre</string>
@@ -116,6 +117,12 @@
     <string name="text_authentication_failed">Authentification échouée.</string>
     <string name="text_biometric_login">Connexion biométrique pour mLauncher</string>
     <string name="text_biometric_login_sub">Connectez-vous en utilisant votre identifiant biométrique</string>
+    <!-- Crash Strings -->
+    <string name="acra_crash">Accident</string>
+    <string name="acra_dialog_text">Nous sommes désolés, mais %1$s a rencontré un problème inattendu et doit être fermé. Aidez-nous à nous améliorer en envoyant un rapport d\'erreur.\n\n%1$s respecte votre vie privée et les données collectées sont uniquement utilisées pour améliorer la stabilité de l\'application. Aucune donnée personnelle n\'est collectée. Merci pour votre soutien!</string>
+    <string name="acra_send_report">Envoyer un rapport</string>
+    <string name="acra_dont_send">N\'envoyez pas</string>
+    <string name="acra_mail_body">Veuillez décrire le problème que vous avez rencontré :</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Toutes les applications</string>
     <string name="can_not_delete_system_apps">Impossible de supprimer les applications système</string>
