@@ -118,7 +118,11 @@
     <string name="text_biometric_login">Biometrische login voor mLauncher</string>
     <string name="text_biometric_login_sub">Log in met uw biometrische gegevens</string>
     <!-- Crash Strings -->
-    <string name="acra_toast_text">Sorry, app is gecrasht. Rapport verzonden naar ontwikkelaars. Er worden geen persoonlijke gegevens verzameld.</string>
+    <string name="acra_crash">Botsing</string>
+    <string name="acra_dialog_text">Het spijt ons, maar %1$s heeft een onverwacht probleem ondervonden en moet worden afgesloten. Help ons alstublieft verbeteren door een crashrapport te sturen.\n\n%1$s waardeert uw privacy en de verzamelde gegevens worden uitsluitend gebruikt voor het verbeteren van de app-stabiliteit. Er worden geen persoonlijke gegevens verzameld. Bedankt voor je ondersteuning!</string>
+    <string name="acra_send_report">Verzend rapport</string>
+    <string name="acra_dont_send">Niet verzenden</string>
+    <string name="acra_mail_body">Beschrijf het probleem dat u bent tegengekomen:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Alle apps</string>
     <string name="can_not_delete_system_apps">Kan systeemapps niet verwijderen</string>
