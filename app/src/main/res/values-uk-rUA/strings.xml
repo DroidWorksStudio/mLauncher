@@ -118,7 +118,11 @@
     <string name="text_biometric_login">Біометричний логін для mLauncher</string>
     <string name="text_biometric_login_sub">Увійдіть, використовуючи свої біометричні облікові дані</string>
     <!-- Crash Strings -->
-    <string name="acra_toast_text">На жаль, у додатку стався збій. Звіт надіслано розробникам. Особиста інформація не збирається.</string>
+    <string name="acra_crash">Збій</string>
+    <string name="acra_dialog_text">Нам прикро, але %1$s зіткнувся з неочікуваною проблемою та має закритися. Будь ласка, допоможіть нам покращити, надіславши звіт про збій.\n\n%1$s цінує вашу конфіденційність, а зібрані дані використовуються виключно для покращення стабільності програми. Особиста інформація не збирається. Спасибі вам за вашу підтримку!</string>
+    <string name="acra_send_report">Надіслати звіт</string>
+    <string name="acra_dont_send">Не надсилати</string>
+    <string name="acra_mail_body">Опишіть проблему, з якою ви зіткнулися:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Всі програми</string>
     <string name="can_not_delete_system_apps">Не вдається видалити системні програми</string>
