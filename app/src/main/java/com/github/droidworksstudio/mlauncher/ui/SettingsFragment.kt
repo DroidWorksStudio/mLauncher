@@ -283,14 +283,6 @@ class SettingsFragment : Fragment() {
                     },
                     { _, onChange ->
                         SettingsToggle(
-                            title = stringResource(R.string.enable_notifications),
-                            fontSize = iconFs,
-                            onChange = onChange,
-                            state = remember { mutableStateOf(prefs.enableNotifications) },
-                        ) { toggleEnableNotifications() }
-                    },
-                    { _, onChange ->
-                        SettingsToggle(
                             title = stringResource(R.string.display_recent_apps),
                             fontSize = iconFs,
                             onChange = onChange,
@@ -832,10 +824,6 @@ class SettingsFragment : Fragment() {
 
     private fun toggleKeyboardText() {
         prefs.autoShowKeyboard = !prefs.autoShowKeyboard
-    }
-
-    private fun toggleEnableNotifications() {
-        prefs.enableNotifications = !prefs.enableNotifications
     }
 
     private fun toggleAutoOpenApp() {

@@ -77,8 +77,6 @@ private const val CLOCK_SIZE_TEXT = "CLOCK_SIZE_TEXT"
 private const val TEXT_SIZE_SETTINGS = "TEXT_SIZE_SETTINGS"
 private const val TEXT_MARGIN_SIZE = "TEXT_MARGIN_SIZE"
 
-private const val ENABLE_NOTIFICATION_SERVICE = "ENABLE_NOTIFICATION_SERVICE"
-
 class Prefs(val context: Context) {
 
     private val prefs: SharedPreferences = context.getSharedPreferences(PREFS_FILENAME, 0)
@@ -115,10 +113,6 @@ class Prefs(val context: Context) {
     var firstOpen: Boolean
         get() = prefs.getBoolean(FIRST_OPEN, true)
         set(value) = prefs.edit().putBoolean(FIRST_OPEN, value).apply()
-
-    var enableNotifications: Boolean
-        get() = prefs.getBoolean(ENABLE_NOTIFICATION_SERVICE, true)
-        set(value) = prefs.edit().putBoolean(ENABLE_NOTIFICATION_SERVICE, value).apply()
 
     var firstSettingsOpen: Boolean
         get() = prefs.getBoolean(FIRST_SETTINGS_OPEN, true)
