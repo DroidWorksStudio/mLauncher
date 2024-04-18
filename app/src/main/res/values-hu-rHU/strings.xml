@@ -118,7 +118,11 @@
     <string name="text_biometric_login">Biometrikus bejelentkezés az mLauncherhez</string>
     <string name="text_biometric_login_sub">Jelentkezzen be biometrikus hitelesítő adataival</string>
     <!-- Crash Strings -->
-    <string name="acra_toast_text">Sajnáljuk, az alkalmazás összeomlott. A jelentést elküldtük a fejlesztőknek. Nincsenek személyes adatok gyűjtve.</string>
+    <string name="acra_crash">Összeomlás</string>
+    <string name="acra_dialog_text">Sajnáljuk, de a %1$s váratlan problémába ütközött, ezért be kell zárni. Kérjük, segítsen a fejlesztésben hibajelentés elküldésével.\n\n%1$s értékeli az Ön adatait, és az összegyűjtött adatokat kizárólag az alkalmazás stabilitásának javítására használjuk fel. Nem gyűjtenek személyes adatokat. Köszönöm a tamogatásod!</string>
+    <string name="acra_send_report">Jelentés küldése</string>
+    <string name="acra_dont_send">Ne küldj</string>
+    <string name="acra_mail_body">Kérjük, írja le a problémát, amellyel találkozott:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Minden alkalmazás</string>
     <string name="can_not_delete_system_apps">Nem lehet törölni a rendszeralkalmazásokat</string>
