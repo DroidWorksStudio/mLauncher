@@ -118,7 +118,11 @@
     <string name="text_biometric_login">ʻO ka inoa biometric no ka mLauncher</string>
     <string name="text_biometric_login_sub">E ʻeʻe me ka hoʻohana ʻana i kāu hōʻoia biometric</string>
     <!-- Crash Strings -->
-    <string name="acra_toast_text">E kala mai, hāʻule ka App. Hoʻouna ʻia ka hōʻike i nā mea hoʻomohala. ʻAʻohe ʻike pilikino i hōʻiliʻili ʻia.</string>
+    <string name="acra_crash">Hāʻule</string>
+    <string name="acra_dialog_text">E kala mai, akā ua loaʻa ʻo %1$s i kahi pilikia i manaʻo ʻole ʻia a pono e pani. E ʻoluʻolu e kōkua mai iā mākou e hoʻomaikaʻi ma ka hoʻouna ʻana i kahi hōʻike ulia pōpilikia.\n\n%1$s waiwai kou pilikino a hoʻohana wale ʻia ka ʻikepili i hōʻiliʻili ʻia no ka hoʻomaikaʻi ʻana i ka paʻa o ka polokalamu. ʻAʻohe ʻike pilikino i hōʻiliʻili ʻia. Mahalo iā ʻoe no kāu kākoʻo!</string>
+    <string name="acra_send_report">Hoʻouna i ka hōʻike</string>
+    <string name="acra_dont_send">Mai Hoʻouna</string>
+    <string name="acra_mail_body">E ʻoluʻolu e wehewehe i ka pilikia āu i hālāwai ai:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Nā polokalamu a pau</string>
     <string name="can_not_delete_system_apps">ʻAʻole hiki ke holoi i nā polokalamu Pūnaewele</string>
