@@ -115,7 +115,7 @@ class Mlauncher : Application() {
 
             mailSender {
                 //required
-                mailTo = "wayne6324@gmail.com"
+                mailTo = getString(R.string.acra_email)
                 //defaults to true
                 reportAsFile = true
                 //defaults to ACRA-report.stacktrace

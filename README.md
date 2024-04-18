@@ -29,8 +29,8 @@ We try to balance customizability and minimalization well still being simple :)<
 
 <details><summary>List of features (click to expand)</summary>
 
-- Removed clutter, like ads and links
-- You can rename apps in the app-drawer (Renaming apps on the home screen is already supported. Just long-click on an app on the home screen and start typing)
+- Removed clutter, like ads and links.
+- You can rename apps in the app-drawer (Renaming apps on the home screen is already supported. Just long-click on an app on the home screen and start typing.)
 - We have added a lot more options for gestures on the home screen:
     - Gestures are now:
         - Swiping up, down, left, right
@@ -41,11 +41,12 @@ We try to balance customizability and minimalization well still being simple :)<
         - Locking the screen
         - Opening the notification drawer
         - Opening the quick settings
-- You can also position the clock independently of the home apps
-- The ability to have a pass code set for the settings page
-- Change alignment of apps in app-drawer
-- Change font size
+- You can also position the clock independently of the home apps.
+- The ability to have a pass code set for the settings page.
+- Change alignment of apps in app-drawer independent from homescreen.
+- Change font size of sections of the homescreen independent of each other.
 - Removed internet permission. You never know what an app developer wants to know about you.
+- Added the ability to report crashing via email.
 
 </details>
 
