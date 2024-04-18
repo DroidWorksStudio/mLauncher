@@ -15,6 +15,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Improve ACRA configuration in Mlauncher.kt - ([52e1abb](https://github.com/DroidWorksStudio/mLauncher/commit/52e1abbb1f7f42dfed2223eb71924ad054a773c6))
 - Refactor app settings and notification handling - ([2885e77](https://github.com/DroidWorksStudio/mLauncher/commit/2885e773140d4ae906fd50000e5616e31a43c886))
 
 ## [1.5.3](https://github.com/DroidWorksStudio/mLauncher/tree/1.5.3) - (16, April 2024)
