@@ -118,11 +118,7 @@
     <string name="text_biometric_login">mLauncher ਲਈ ਬਾਇਓਮੈਟ੍ਰਿਕ ਲੌਗਇਨ</string>
     <string name="text_biometric_login_sub">ਆਪਣੇ ਬਾਇਓਮੈਟ੍ਰਿਕ ਪ੍ਰਮਾਣ ਪੱਤਰ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਲੌਗ ਇਨ ਕਰੋ</string>
     <!-- Crash Strings -->
-    <string name="acra_crash">ਕਰੈਸ਼</string>
-    <string name="acra_dialog_text">ਸਾਨੂੰ ਅਫ਼ਸੋਸ ਹੈ, ਪਰ %1$s ਇੱਕ ਅਣਕਿਆਸੀ ਸਮੱਸਿਆ ਆਈ ਹੈ ਅਤੇ ਇਸਨੂੰ ਬੰਦ ਕਰਨ ਦੀ ਲੋੜ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਕਰੈਸ਼ ਰਿਪੋਰਟ ਭੇਜ ਕੇ ਸੁਧਾਰ ਕਰਨ ਵਿੱਚ ਸਾਡੀ ਮਦਦ ਕਰੋ।\n\n%1$s ਤੁਹਾਡੀ ਗੋਪਨੀਯਤਾ ਨੂੰ ਮਹੱਤਵ ਦਿੰਦਾ ਹੈ ਅਤੇ ਇਕੱਤਰ ਕੀਤੇ ਡੇਟਾ ਦੀ ਵਰਤੋਂ ਸਿਰਫ਼ ਐਪ ਸਥਿਰਤਾ ਨੂੰ ਬਿਹਤਰ ਬਣਾਉਣ ਲਈ ਕੀਤੀ ਜਾਂਦੀ ਹੈ। ਕੋਈ ਨਿੱਜੀ ਜਾਣਕਾਰੀ ਇਕੱਠੀ ਨਹੀਂ ਕੀਤੀ ਜਾਂਦੀ। ਤੁਹਾਡੇ ਸਹਿਯੋਗ ਲਈ ਧੰਨਵਾਦ!</string>
-    <string name="acra_send_report">ਰਿਪੋਰਟ ਭੇਜੋ</string>
-    <string name="acra_dont_send">ਨਾ ਭੇਜੋ</string>
-    <string name="acra_mail_body">ਕਿਰਪਾ ਕਰਕੇ ਤੁਹਾਡੇ ਸਾਹਮਣੇ ਆਈ ਸਮੱਸਿਆ ਦਾ ਵਰਣਨ ਕਰੋ:</string>
+    <string name="acra_toast_text">ਮਾਫ਼ ਕਰਨਾ, ਐਪ ਕ੍ਰੈਸ਼ ਹੋ ਗਈ। ਡਿਵੈਲਪਰਾਂ ਨੂੰ ਰਿਪੋਰਟ ਭੇਜੀ ਗਈ। ਕੋਈ ਨਿੱਜੀ ਜਾਣਕਾਰੀ ਇਕੱਠੀ ਨਹੀਂ ਕੀਤੀ ਗਈ।</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">ਸਾਰੀਆਂ ਐਪਾਂ</string>
     <string name="can_not_delete_system_apps">ਸਿਸਟਮ ਐਪਾਂ ਨੂੰ ਮਿਟਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ</string>
