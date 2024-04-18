@@ -118,7 +118,11 @@
     <string name="text_biometric_login">Biometresche Login fir mLauncher</string>
     <string name="text_biometric_login_sub">Mellt Iech un mat Ärem biometresche Umeldungsinformatioun</string>
     <!-- Crash Strings -->
-    <string name="acra_toast_text">Entschëllegt, App erofgefall. Bericht un d\'Entwéckler geschéckt. Keng perséinlech Informatioun gesammelt.</string>
+    <string name="acra_crash">Crash</string>
+    <string name="acra_dialog_text">Et deet mir Leed, awer %1$s ass en onerwaart Problem begéint a muss zoumaachen. Hëlleft eis w.e.g. ze verbesseren andeems Dir en Crashbericht schéckt.\n\n%1$s schätzt Är Privatsphär an d\'gesammelt Daten ginn nëmme benotzt fir d\'App Stabilitéit ze verbesseren. Keng perséinlech Informatioun gëtt gesammelt. Merci fir Är Ënnerstëtzung!</string>
+    <string name="acra_send_report">Schécken Rapport</string>
+    <string name="acra_dont_send">Schéckt net</string>
+    <string name="acra_mail_body">Beschreift w.e.g. de Problem deen Dir begéint hutt:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">All Apps</string>
     <string name="can_not_delete_system_apps">Kann net System Apps läschen</string>
