@@ -118,11 +118,7 @@
     <string name="text_biometric_login">Biometrische Anmeldung für mLauncher</string>
     <string name="text_biometric_login_sub">Melden Sie sich mit Ihren biometrischen Zugangsdaten an</string>
     <!-- Crash Strings -->
-    <string name="acra_crash">Absturz</string>
-    <string name="acra_dialog_text">Es tut uns leid, aber bei %1$s ist ein unerwartetes Problem aufgetreten und es muss geschlossen werden. Bitte helfen Sie uns, uns zu verbessern, indem Sie einen Absturzbericht senden.\n\n%1$s schätzt Ihre Privatsphäre und die gesammelten Daten werden ausschließlich zur Verbesserung der App-Stabilität verwendet. Es werden keine persönlichen Daten gesammelt. Vielen Dank für Ihre Unterstützung!</string>
-    <string name="acra_send_report">Bericht senden</string>
-    <string name="acra_dont_send">Nicht senden</string>
-    <string name="acra_mail_body">Bitte beschreiben Sie das aufgetretene Problem:</string>
+    <string name="acra_toast_text">Entschuldigung, die App ist abgestürzt. Bericht an die Entwickler gesendet. Keine persönlichen Daten erfasst.</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Alle Apps</string>
     <string name="can_not_delete_system_apps">System-Apps können nicht gelöscht werden</string>
