@@ -118,7 +118,11 @@
     <string name="text_biometric_login">התחברות ביומטרית עבור mLauncher</string>
     <string name="text_biometric_login_sub">היכנס באמצעות האישור הביומטרי שלך</string>
     <!-- Crash Strings -->
-    <string name="acra_toast_text">סליחה, האפליקציה קרסה. דוח נשלח למפתחים. לא נאסף מידע אישי.</string>
+    <string name="acra_crash">לְהִתְרַסֵק</string>
+    <string name="acra_dialog_text">אנו מצטערים, אבל %1$s נתקל בבעיה בלתי צפויה וצריך להיסגר. אנא עזור לנו להשתפר על ידי שליחת דוח קריסה.\n\n%1$s מעריכה את הפרטיות שלך והנתונים שנאספים משמשים אך ורק לשיפור יציבות האפליקציה. לא נאסף מידע אישי. תודה על תמיכתך!</string>
+    <string name="acra_send_report">שלח דו\"ח</string>
+    <string name="acra_dont_send">אל תשלח</string>
+    <string name="acra_mail_body">אנא תאר את הבעיה שבה נתקלת:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>
     <string name="can_not_delete_system_apps">לא ניתן למחוק אפליקציות מערכת</string>
