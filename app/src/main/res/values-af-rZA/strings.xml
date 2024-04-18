@@ -118,7 +118,11 @@
     <string name="text_biometric_login">Biometriese aanmelding vir mLauncher</string>
     <string name="text_biometric_login_sub">Meld aan met jou biometriese geloofsbriewe</string>
     <!-- Crash Strings -->
-    <string name="acra_toast_text">Jammer, app het omgeval. Verslag gestuur aan ontwikkelaars. Geen persoonlike inligting ingesamel nie.</string>
+    <string name="acra_crash">Ineenstorting</string>
+    <string name="acra_dialog_text">Ons is jammer, maar %1$s het \'n onverwagte probleem ondervind en moet toemaak. Help ons asseblief om te verbeter deur \'n omvalverslag te stuur.\n\n%1$s waardeer jou privaatheid en die data wat ingesamel word, word uitsluitlik gebruik vir die verbetering van programstabiliteit. Geen persoonlike inligting word ingesamel nie. Dankie vir jou ondersteuning!</string>
+    <string name="acra_send_report">Stuur verslag</string>
+    <string name="acra_dont_send">Moenie stuur nie</string>
+    <string name="acra_mail_body">Beskryf asseblief die probleem wat jy teëgekom het:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>
     <string name="can_not_delete_system_apps">Kan nie stelseltoepassings uitvee nie</string>
