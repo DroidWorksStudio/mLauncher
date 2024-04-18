@@ -118,7 +118,11 @@
     <string name="text_biometric_login">Log masuk biometrik untuk mLauncher</string>
     <string name="text_biometric_login_sub">Log masuk menggunakan kelayakan biometrik anda</string>
     <!-- Crash Strings -->
-    <string name="acra_toast_text">Maaf, Apl ranap. Laporan dihantar kepada pembangun. Tiada maklumat peribadi dikumpul.</string>
+    <string name="acra_crash">ranap</string>
+    <string name="acra_dialog_text">Harap maaf, tetapi %1$s telah menghadapi isu yang tidak dijangka dan perlu ditutup. Sila bantu kami menambah baik dengan menghantar laporan ranap sistem.\n\n%1$s menghargai privasi anda dan data yang dikumpul digunakan semata-mata untuk meningkatkan kestabilan apl. Tiada maklumat peribadi dikumpul. Terima kasih atas sokongan anda!</string>
+    <string name="acra_send_report">Hantar laporan</string>
+    <string name="acra_dont_send">Jangan Hantar</string>
+    <string name="acra_mail_body">Sila terangkan isu yang anda hadapi:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Semua apl</string>
     <string name="can_not_delete_system_apps">Tidak Dapat Memadamkan Apl Sistem</string>
