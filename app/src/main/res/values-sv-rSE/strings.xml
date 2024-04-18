@@ -30,6 +30,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Öppna appar automatiskt</string>
+    <string name="enable_notifications">Aktivera aviseringar</string>
     <string name="display_recent_apps">Visa de senaste apparna</string>
     <string name="number_of_recents">Antal nya appar</string>
     <string name="filter_strength">Filterstyrka</string>
@@ -116,6 +117,12 @@
     <string name="text_authentication_failed">Autentisering misslyckades.</string>
     <string name="text_biometric_login">Biometrisk inloggning för mLauncher</string>
     <string name="text_biometric_login_sub">Logga in med dina biometriska uppgifter</string>
+    <!-- Crash Strings -->
+    <string name="acra_crash">Krascha</string>
+    <string name="acra_dialog_text">Vi är ledsna, men %1$s har stött på ett oväntat problem och måste stängas. Hjälp oss att förbättra genom att skicka en kraschrapport.\n\n%1$s värdesätter din integritet och data som samlas in används endast för att förbättra appens stabilitet. Ingen personlig information samlas in. Tack för ditt stöd!</string>
+    <string name="acra_send_report">Skicka rapport</string>
+    <string name="acra_dont_send">Skicka inte</string>
+    <string name="acra_mail_body">Beskriv problemet du stötte på:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Alla appar</string>
     <string name="can_not_delete_system_apps">Kan inte ta bort systemappar</string>
