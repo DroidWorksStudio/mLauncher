@@ -118,7 +118,11 @@
     <string name="text_biometric_login">Logowanie biometryczne do mLaunchera</string>
     <string name="text_biometric_login_sub">Zaloguj się przy użyciu danych biometrycznych</string>
     <!-- Crash Strings -->
-    <string name="acra_toast_text">Przepraszamy, aplikacja uległa awarii. Raport wysłany do programistów. Nie są gromadzone żadne dane osobowe.</string>
+    <string name="acra_crash">Rozbić się</string>
+    <string name="acra_dialog_text">Przepraszamy, ale %1$s napotkał nieoczekiwany problem i musi zostać zamknięty. Pomóż nam ulepszyć usługę, wysyłając raport o awarii.\n\n%1$s ceni Twoją prywatność, a zebrane dane służą wyłącznie do poprawy stabilności aplikacji. Nie są gromadzone żadne dane osobowe. Dziękuję za Twoje wsparcie!</string>
+    <string name="acra_send_report">Wyślij raport</string>
+    <string name="acra_dont_send">Nie wysyłaj</string>
+    <string name="acra_mail_body">Opisz napotkany problem:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Wszystkie aplikacje</string>
     <string name="can_not_delete_system_apps">Nie można usunąć aplikacji systemowych</string>
