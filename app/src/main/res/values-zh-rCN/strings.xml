@@ -118,11 +118,7 @@
     <string name="text_biometric_login">mLauncher 的生物识别登录</string>
     <string name="text_biometric_login_sub">使用您的生物识别凭据登录</string>
     <!-- Crash Strings -->
-    <string name="acra_crash">碰撞</string>
-    <string name="acra_dialog_text">很抱歉， %1$s 遇到了意外问题，需要关闭。请发送崩溃报告帮助我们改进。\n\n%1$s 重视您的隐私，所收集的数据仅用于提高应用稳定性。不会收集任何个人信息。感谢您的支持！</string>
-    <string name="acra_send_report">发送报告</string>
-    <string name="acra_dont_send">不发送</string>
-    <string name="acra_mail_body">请描述您遇到的问题：</string>
+    <string name="acra_toast_text">抱歉，应用程序崩溃了。报告已发送给开发人员。未收集任何个人信息。</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">所有应用程序</string>
     <string name="can_not_delete_system_apps">无法删除系统应用程序</string>
