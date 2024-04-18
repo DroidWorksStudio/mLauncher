@@ -30,6 +30,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Klavye\'yi otomatik göster</string>
     <string name="auto_open_apps">Uygulamaları otomatik aç</string>
+    <string name="enable_notifications">Bildirimleri Etkinleştir</string>
     <string name="display_recent_apps">Son Uygulamaları Görüntüle</string>
     <string name="number_of_recents">Son Uygulama Sayısı</string>
     <string name="filter_strength">Filtre Gücü</string>
@@ -116,6 +117,12 @@
     <string name="text_authentication_failed">Kimlik doğrulama başarısız oldu.</string>
     <string name="text_biometric_login">mLauncher için biyometrik giriş</string>
     <string name="text_biometric_login_sub">Biyometrik kimlik bilgilerinizi kullanarak giriş yapın</string>
+    <!-- Crash Strings -->
+    <string name="acra_crash">Kaza</string>
+    <string name="acra_dialog_text">Üzgünüz ama %1$s beklenmedik bir sorunla karşılaştı ve kapatılması gerekiyor. Lütfen bir kilitlenme raporu göndererek iyileştirmemize yardımcı olun.\n\n%1$s gizliliğinize değer verir ve toplanan veriler yalnızca uygulama kararlılığını iyileştirmek için kullanılır. Hiçbir kişisel bilgi toplanmaz. Desteğin için teşekkürler!</string>
+    <string name="acra_send_report">Rapor gönder</string>
+    <string name="acra_dont_send">Gönderme</string>
+    <string name="acra_mail_body">Lütfen karşılaştığınız sorunu açıklayın:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Tüm uygulamalar</string>
     <string name="can_not_delete_system_apps">Sistem Uygulamaları Silinemiyor</string>
