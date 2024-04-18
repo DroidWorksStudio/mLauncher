@@ -118,11 +118,7 @@
     <string name="text_biometric_login">Líffræðileg tölfræði innskráning fyrir mLauncher</string>
     <string name="text_biometric_login_sub">Skráðu þig inn með líffræðilegum tölfræðiskilríkjum þínum</string>
     <!-- Crash Strings -->
-    <string name="acra_crash">Hrun</string>
-    <string name="acra_dialog_text">Því miður, en %1$s hefur lent í óvæntu vandamáli og þarf að loka. Vinsamlegast hjálpaðu okkur að bæta okkur með því að senda hrunskýrslu.\n\n%1$s metur friðhelgi þína og gögnin sem safnað er eru eingöngu notuð til að bæta stöðugleika forrita. Engum persónulegum upplýsingum er safnað. Þakka þér fyrir stuðninginn!</string>
-    <string name="acra_send_report">Senda skýrslu</string>
-    <string name="acra_dont_send">Ekki senda</string>
-    <string name="acra_mail_body">Vinsamlegast lýstu vandamálinu sem þú lentir í:</string>
+    <string name="acra_toast_text">Því miður, app hrundi. Skýrsla send til þróunaraðila. Engum persónulegum upplýsingum safnað.</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Öll forrit</string>
     <string name="can_not_delete_system_apps">Get ekki eytt kerfisforritum</string>
