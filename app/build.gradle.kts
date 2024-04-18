@@ -1,10 +1,23 @@
 @file:Suppress("UnstableApiUsage")
 
+import java.io.FileInputStream
+import java.util.Properties
+
+
 plugins {
     id("com.android.application") apply true
     id("kotlin-android") apply true
     // Add the Crashlytics Gradle plugin
     id("com.google.firebase.crashlytics") apply true
+}
+
+val apikeyPropertiesFile = rootProject.file("apikey.properties")
+val apikeyProperties = Properties()
+
+if (apikeyPropertiesFile.exists()) {
+    FileInputStream(apikeyPropertiesFile).use { inputStream ->
+        apikeyProperties.load(inputStream)
+    }
 }
 
 android {
@@ -17,8 +30,8 @@ android {
         targetSdk = 34
         versionCode = 154
         versionName = "1.5.4"
-        buildConfigField("String", "FIREBASE_APP_ID", "\"${System.getenv("FIREBASE_APP_ID") ?: "DEFAULT_APP_ID"}\"")
-        buildConfigField("String", "FIREBASE_API_KEY", "\"${System.getenv("FIREBASE_API_KEY") ?: "DEFAULT_APP_ID"}\"")
+        buildConfigField("String", "FIREBASE_APP_ID", "${System.getenv("FIREBASE_APP_ID") ?: apikeyProperties["FIREBASE_APP_ID"]}")
+        buildConfigField("String", "FIREBASE_API_KEY", "${System.getenv("FIREBASE_API_KEY") ?: apikeyProperties["FIREBASE_API_KEY"]}")
     }
 
     buildTypes {

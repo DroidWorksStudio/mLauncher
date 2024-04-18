@@ -1,8 +1,4 @@
-*.iml
-*.jks
 .gradle
-.github_changelog_generator
-/local.properties
 /.idea/*
 /.idea/caches
 /.idea/libraries
@@ -12,11 +8,8 @@
 /.idea/assetWizardSettings.xml
 .DS_Store
 /build
-/captures
-/fdroid
 /pages
 /wiki
 /app/release
-.externalNativeBuild
-.cxx
-google-services.json
+/local.properties
+/apikey.properties
