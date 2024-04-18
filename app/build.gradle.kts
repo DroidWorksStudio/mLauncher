@@ -3,8 +3,6 @@
 plugins {
     id("com.android.application") apply true
     id("kotlin-android") apply true
-    // Make sure that you have the Google services Gradle plugin
-    id("com.google.gms.google-services") apply true
     // Add the Crashlytics Gradle plugin
     id("com.google.firebase.crashlytics") apply true
 }
