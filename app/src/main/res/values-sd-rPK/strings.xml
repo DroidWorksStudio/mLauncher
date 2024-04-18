@@ -30,6 +30,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">خودڪار ڏيکاريو ڪيبورڊ</string>
     <string name="auto_open_apps">خودڪار کوليو ايپس</string>
+    <string name="enable_notifications">اطلاعن کي فعال ڪريو</string>
     <string name="display_recent_apps">ڏيکاريو تازو ائپس</string>
     <string name="number_of_recents">تازو ائپس جو تعداد</string>
     <string name="filter_strength">فلٽر جي طاقت</string>
@@ -116,6 +117,12 @@
     <string name="text_authentication_failed">تصديق ناڪام ٿي.</string>
     <string name="text_biometric_login">mLauncher لاءِ بايوميٽرڪ لاگ ان</string>
     <string name="text_biometric_login_sub">لاگ ان ڪريو پنھنجي بايوميٽرڪ سند استعمال ڪندي</string>
+    <!-- Crash Strings -->
+    <string name="acra_crash">حادثو</string>
+    <string name="acra_dialog_text">معاف ڪجو، پر %1$s هڪ اڻڄاتل مسئلو پيش آيو آهي ۽ بند ٿيڻ جي ضرورت آهي. مھرباني ڪري حادثي جي رپورٽ موڪلڻ سان اسان جي مدد ڪريو.\n\n%1$s توهان جي رازداري کي اهميت ڏئي ٿو ۽ گڏ ڪيل ڊيٽا صرف ايپ جي استحڪام کي بهتر ڪرڻ لاءِ استعمال ڪئي ويندي آهي. ڪابه ذاتي معلومات گڏ نه ڪئي وئي آهي. توهان جي حمايت لاء توهان جي مهرباني!</string>
+    <string name="acra_send_report">رپورٽ موڪليو</string>
+    <string name="acra_dont_send">نه موڪليو</string>
+    <string name="acra_mail_body">مھرباني ڪري بيان ڪريو ته توھان جو مسئلو آھي:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">سڀ ائپس</string>
     <string name="can_not_delete_system_apps">سسٽم ائپس کي ختم نٿو ڪري سگھجي</string>

@@ -30,6 +30,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">किबोर्ड स्वतः देखाउनुहोस्</string>
     <string name="auto_open_apps">स्वतः खोल्ने एपहरू</string>
+    <string name="enable_notifications">सूचनाहरू सक्षम गर्नुहोस्</string>
     <string name="display_recent_apps">हालका एपहरू प्रदर्शन गर्नुहोस्</string>
     <string name="number_of_recents">भर्खरका एपहरूको संख्या</string>
     <string name="filter_strength">फिल्टर शक्ति</string>
@@ -116,6 +117,12 @@
     <string name="text_authentication_failed">प्रमाणीकरण असफल भयो।</string>
     <string name="text_biometric_login">mLauncher को लागि बायोमेट्रिक लगइन</string>
     <string name="text_biometric_login_sub">आफ्नो बायोमेट्रिक प्रमाण प्रयोग गरेर लग इन गर्नुहोस्</string>
+    <!-- Crash Strings -->
+    <string name="acra_crash">दुर्घटना</string>
+    <string name="acra_dialog_text">हामी क्षमाप्रार्थी छौं, तर %1$s ले अप्रत्याशित समस्याको सामना गरेको छ र बन्द गर्न आवश्यक छ। कृपया हामीलाई क्र्यास रिपोर्ट पठाएर सुधार गर्न मद्दत गर्नुहोस्।\n\n%1$s तपाईको गोपनीयताको मूल्याङ्कन गर्दछ र सङ्कलन गरिएको डेटा मात्र एप स्थिरता सुधार गर्न प्रयोग गरिन्छ। कुनै व्यक्तिगत जानकारी सङ्कलन गरिएको छैन। तपाईंको समर्थनको लागि धन्यवाद!</string>
+    <string name="acra_send_report">रिपोर्ट पठाउनुहोस्</string>
+    <string name="acra_dont_send">नपठाउनुहोस्</string>
+    <string name="acra_mail_body">कृपया तपाईंले सामना गर्नुभएको समस्याको वर्णन गर्नुहोस्:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">सबै एपहरू</string>
     <string name="can_not_delete_system_apps">प्रणाली एपहरू मेटाउन सकिँदैन</string>

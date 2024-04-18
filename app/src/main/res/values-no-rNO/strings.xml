@@ -30,6 +30,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Åpne apper automatisk</string>
+    <string name="enable_notifications">Aktiver varsler</string>
     <string name="display_recent_apps">Vis nylige apper</string>
     <string name="number_of_recents">Antall nylige apper</string>
     <string name="filter_strength">Filterstyrke</string>
@@ -116,6 +117,12 @@
     <string name="text_authentication_failed">Autentisering mislyktes.</string>
     <string name="text_biometric_login">Biometrisk pålogging for mLauncher</string>
     <string name="text_biometric_login_sub">Logg på med biometrisk legitimasjon</string>
+    <!-- Crash Strings -->
+    <string name="acra_crash">Brak</string>
+    <string name="acra_dialog_text">Vi beklager, men %1$s har støtt på et uventet problem og må lukkes. Hjelp oss å forbedre oss ved å sende en krasjrapport.\n\n%1$s verdsetter personvernet ditt, og dataene som samles inn brukes utelukkende til å forbedre appstabiliteten. Ingen personopplysninger samles inn. Takk for støtten!</string>
+    <string name="acra_send_report">Send rapport</string>
+    <string name="acra_dont_send">Ikke send</string>
+    <string name="acra_mail_body">Vennligst beskriv problemet du støtt på:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Alle apper</string>
     <string name="can_not_delete_system_apps">Kan ikke slette systemapper</string>

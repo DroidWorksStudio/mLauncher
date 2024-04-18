@@ -30,6 +30,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Automaattiset sovellukset</string>
+    <string name="enable_notifications">Salli ilmoitukset</string>
     <string name="display_recent_apps">Näytä viimeisimmät sovellukset</string>
     <string name="number_of_recents">Viimeaikaisten sovellusten määrä</string>
     <string name="filter_strength">Suodattimen vahvuus</string>
@@ -116,6 +117,12 @@
     <string name="text_authentication_failed">Todennus epäonnistui.</string>
     <string name="text_biometric_login">Biometrinen kirjautuminen mLauncheriin</string>
     <string name="text_biometric_login_sub">Kirjaudu sisään biometrisilla tunnistetiedoillasi</string>
+    <!-- Crash Strings -->
+    <string name="acra_crash">Crash</string>
+    <string name="acra_dialog_text">Olemme pahoillamme, mutta %1$s on havainnut odottamattoman ongelman ja se on suljettava. Auta meitä parantamaan toimintaamme lähettämällä virheraportti.\n\n%1$s arvostaa yksityisyyttäsi ja kerättyjä tietoja käytetään vain sovellusten vakauden parantamiseen. Henkilötietoja ei kerätä. Kiitos tuestasi!</string>
+    <string name="acra_send_report">Lähetä raportti</string>
+    <string name="acra_dont_send">Älä lähetä</string>
+    <string name="acra_mail_body">Kuvaile kohtaamasi ongelmaa:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Kaikki sovellukset</string>
     <string name="can_not_delete_system_apps">Järjestelmäsovelluksia ei voi poistaa</string>

@@ -30,6 +30,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Teclado de exposição automática</string>
     <string name="auto_open_apps">Aplicações abertas automaticamente</string>
+    <string name="enable_notifications">Ativar notificações</string>
     <string name="display_recent_apps">Exibir aplicativos recentes</string>
     <string name="number_of_recents">Número de aplicativos recentes</string>
     <string name="filter_strength">Intensidade do filtro</string>
@@ -116,6 +117,12 @@
     <string name="text_authentication_failed">Falha na autenticação.</string>
     <string name="text_biometric_login">Login biométrico para mLauncher</string>
     <string name="text_biometric_login_sub">Faça login usando sua credencial biométrica</string>
+    <!-- Crash Strings -->
+    <string name="acra_crash">Colidir</string>
+    <string name="acra_dialog_text">Lamentamos, mas %1$s encontrou um problema inesperado e precisa ser fechado. Por favor, ajude-nos a melhorar enviando um relatório de falha.\n\n%1$s valoriza sua privacidade e os dados coletados são usados exclusivamente para melhorar a estabilidade do aplicativo. Nenhuma informação pessoal é coletada. Obrigado pelo seu apoio!</string>
+    <string name="acra_send_report">Enviar relatório</string>
+    <string name="acra_dont_send">Não envie</string>
+    <string name="acra_mail_body">Descreva o problema que você encontrou:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Todas as aplicações</string>
     <string name="can_not_delete_system_apps">Não é possível excluir aplicativos do sistema</string>

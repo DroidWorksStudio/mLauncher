@@ -30,6 +30,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Autoesituse klaviatuur</string>
     <string name="auto_open_apps">Automaatselt avatud rakendused</string>
+    <string name="enable_notifications">Luba märguanded</string>
     <string name="display_recent_apps">Kuva viimased rakendused</string>
     <string name="number_of_recents">Viimaste rakenduste arv</string>
     <string name="filter_strength">Filtri tugevus</string>
@@ -116,6 +117,12 @@
     <string name="text_authentication_failed">Tuvastamine ebaõnnestus.</string>
     <string name="text_biometric_login">mLauncheri biomeetriline sisselogimine</string>
     <string name="text_biometric_login_sub">Logige sisse oma biomeetrilise mandaadiga</string>
+    <!-- Crash Strings -->
+    <string name="acra_crash">Krahh</string>
+    <string name="acra_dialog_text">Vabandame, kuid %1$s ilmnes ootamatu probleem ja see tuleb sulgeda. Palun aidake meid täiustada, saates krahhiaruande.\n\n%1$s väärtustab teie privaatsust ja kogutud andmeid kasutatakse ainult rakenduse stabiilsuse parandamiseks. Isikuandmeid ei koguta. Täname teid toetuse eest!</string>
+    <string name="acra_send_report">Saada aruanne</string>
+    <string name="acra_dont_send">Ära saada</string>
+    <string name="acra_mail_body">Kirjeldage tekkinud probleemi:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Kõik rakendused</string>
     <string name="can_not_delete_system_apps">Süsteemirakendusi ei saa kustutada</string>

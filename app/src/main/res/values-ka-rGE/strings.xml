@@ -30,6 +30,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">ავტომატური ჩვენების კლავიატურა</string>
     <string name="auto_open_apps">აპების ავტომატური გახსნა</string>
+    <string name="enable_notifications">ჩართეთ შეტყობინებები</string>
     <string name="display_recent_apps">უახლესი აპების ჩვენება</string>
     <string name="number_of_recents">ბოლო აპლიკაციების რაოდენობა</string>
     <string name="filter_strength">ფილტრის სიძლიერე</string>
@@ -116,6 +117,12 @@
     <string name="text_authentication_failed">ავთენტიფიკაცია ვერ მოხერხდა.</string>
     <string name="text_biometric_login">ბიომეტრიული შესვლა mLauncher-ისთვის</string>
     <string name="text_biometric_login_sub">შედით თქვენი ბიომეტრიული სერთიფიკატის გამოყენებით</string>
+    <!-- Crash Strings -->
+    <string name="acra_crash">ავარია</string>
+    <string name="acra_dialog_text">ვწუხვართ, მაგრამ %1$s შეექმნა მოულოდნელ პრობლემას და უნდა დაიხუროს. გთხოვთ, დაგვეხმაროთ გაუმჯობესებაში ავარიის ანგარიშის გაგზავნით.\n\n%1$s აფასებს თქვენს კონფიდენციალურობას და შეგროვებული მონაცემები გამოიყენება მხოლოდ აპლიკაციის სტაბილურობის გასაუმჯობესებლად. პერსონალური ინფორმაცია არ გროვდება. Მადლობა თქვენი მხარდაჭერისთვის!</string>
+    <string name="acra_send_report">ანგარიშის გაგზავნა</string>
+    <string name="acra_dont_send">არ გაგზავნო</string>
+    <string name="acra_mail_body">გთხოვთ აღწეროთ პრობლემა, რომელიც შეგხვდათ:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">ყველა აპლიკაცია</string>
     <string name="can_not_delete_system_apps">სისტემის აპების წაშლა შეუძლებელია</string>

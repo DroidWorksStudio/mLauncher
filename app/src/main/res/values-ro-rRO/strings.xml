@@ -30,6 +30,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Deschideți automat aplicațiile</string>
+    <string name="enable_notifications">Activați notificările</string>
     <string name="display_recent_apps">Afișează aplicații recente</string>
     <string name="number_of_recents">Numărul de aplicații recente</string>
     <string name="filter_strength">Puterea filtrului</string>
@@ -116,6 +117,12 @@
     <string name="text_authentication_failed">Autentificare esuata.</string>
     <string name="text_biometric_login">Conectare biometrică pentru mLauncher</string>
     <string name="text_biometric_login_sub">Conectați-vă utilizând acreditările dvs. biometrice</string>
+    <!-- Crash Strings -->
+    <string name="acra_crash">Prăbușire</string>
+    <string name="acra_dialog_text">Ne pare rău, dar %1$s a întâmpinat o problemă neașteptată și trebuie să se închidă. Vă rugăm să ne ajutați să îmbunătățim trimițând un raport de blocare.\n\n%1$s apreciază confidențialitatea dvs., iar datele colectate sunt folosite exclusiv pentru îmbunătățirea stabilității aplicației. Nu se colectează informații personale. Iti multumesc pentru sprijin!</string>
+    <string name="acra_send_report">Trimite raport</string>
+    <string name="acra_dont_send">Nu trimite</string>
+    <string name="acra_mail_body">Vă rugăm să descrieți problema pe care ați întâlnit-o:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Toate aplicațiile</string>
     <string name="can_not_delete_system_apps">Nu se pot șterge aplicațiile de sistem</string>

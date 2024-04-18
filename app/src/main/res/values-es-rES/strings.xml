@@ -30,6 +30,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Teclado automático</string>
     <string name="auto_open_apps">Abrir aplicaciones</string>
+    <string name="enable_notifications">Permitir notificaciones</string>
     <string name="display_recent_apps">Mostrar aplicaciones recientes</string>
     <string name="number_of_recents">Número de aplicaciones recientes</string>
     <string name="filter_strength">Fuerza del filtro</string>
@@ -116,6 +117,12 @@
     <string name="text_authentication_failed">La autenticación falló.</string>
     <string name="text_biometric_login">Inicio de sesión biométrico para mLauncher</string>
     <string name="text_biometric_login_sub">Inicie sesión con su credencial biométrica</string>
+    <!-- Crash Strings -->
+    <string name="acra_crash">Chocar</string>
+    <string name="acra_dialog_text">Lo sentimos, pero %1$s ha encontrado un problema inesperado y necesita cerrarse. Ayúdenos a mejorar enviando un informe de fallos.\n\n%1$s valora su privacidad y los datos recopilados se utilizan únicamente para mejorar la estabilidad de la aplicación. No se recopila información personal. ¡Gracias por tu apoyo!</string>
+    <string name="acra_send_report">Enviar reporte</string>
+    <string name="acra_dont_send">No enviar</string>
+    <string name="acra_mail_body">Describa el problema que encontró:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Todas las aplicaciones</string>
     <string name="can_not_delete_system_apps">No puedo eliminar aplicaciones del sistema</string>
