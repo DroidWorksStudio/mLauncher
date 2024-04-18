@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
+## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
+
+### Bug Fixes:
+
+- Fixed ISSUE_TEMPLATE - ([f520d5d](https://github.com/DroidWorksStudio/mLauncher/commit/f520d5db26f7e5d60a4d9fa67e19626ba7c65133))
+
 ## [1.5.4](https://github.com/DroidWorksStudio/mLauncher/tree/1.5.4) - (18, April 2024)
 
 ### Bug Fixes:
