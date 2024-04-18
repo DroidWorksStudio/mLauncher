@@ -118,11 +118,7 @@
     <string name="text_biometric_login">Đăng nhập sinh trắc học cho mLauncher</string>
     <string name="text_biometric_login_sub">Đăng nhập bằng thông tin sinh trắc học của bạn</string>
     <!-- Crash Strings -->
-    <string name="acra_crash">Tai nạn</string>
-    <string name="acra_dialog_text">Rất tiếc, %1$s đã gặp phải sự cố không mong muốn và cần phải đóng. Hãy giúp chúng tôi cải thiện bằng cách gửi báo cáo sự cố.\n\n%1$s coi trọng quyền riêng tư của bạn và dữ liệu được thu thập chỉ được sử dụng để cải thiện tính ổn định của ứng dụng. Không có thông tin cá nhân được thu thập. Cảm ơn sự hỗ trợ của bạn!</string>
-    <string name="acra_send_report">Gửi báo cáo</string>
-    <string name="acra_dont_send">Đừng gửi</string>
-    <string name="acra_mail_body">Vui lòng mô tả vấn đề bạn gặp phải:</string>
+    <string name="acra_toast_text">Rất tiếc, Ứng dụng đã bị lỗi. Báo cáo được gửi tới nhà phát triển. Không có thông tin cá nhân được thu thập.</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>
     <string name="can_not_delete_system_apps">Không thể xóa ứng dụng hệ thống</string>
