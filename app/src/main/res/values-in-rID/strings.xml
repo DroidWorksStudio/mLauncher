@@ -118,11 +118,7 @@
     <string name="text_biometric_login">Login biometrik untuk mLauncher</string>
     <string name="text_biometric_login_sub">Masuk menggunakan kredensial biometrik Anda</string>
     <!-- Crash Strings -->
-    <string name="acra_crash">Menabrak</string>
-    <string name="acra_dialog_text">Kami minta maaf, tetapi %1$s mengalami masalah yang tidak terduga dan harus ditutup. Tolong bantu kami meningkatkannya dengan mengirimkan laporan kerusakan.\n\n%1$s menghargai privasi Anda dan data yang dikumpulkan semata-mata digunakan untuk meningkatkan stabilitas aplikasi. Tidak ada informasi pribadi yang dikumpulkan. Terima kasih atas dukungan Anda!</string>
-    <string name="acra_send_report">Kirim Laporan</string>
-    <string name="acra_dont_send">Jangan Kirim</string>
-    <string name="acra_mail_body">Harap jelaskan masalah yang Anda temui:</string>
+    <string name="acra_toast_text">Maaf, Aplikasi mogok. Laporan dikirim ke pengembang. Tidak ada informasi pribadi yang dikumpulkan.</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Semua aplikasi</string>
     <string name="can_not_delete_system_apps">Tidak Dapat Menghapus Aplikasi Sistem</string>
