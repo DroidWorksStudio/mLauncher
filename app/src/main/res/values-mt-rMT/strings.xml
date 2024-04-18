@@ -118,11 +118,7 @@
     <string name="text_biometric_login">Login bijometriku għall-mLauncher</string>
     <string name="text_biometric_login_sub">Idħol billi tuża l-kredenzjali bijometrika tiegħek</string>
     <!-- Crash Strings -->
-    <string name="acra_crash">Crash</string>
-    <string name="acra_dialog_text">Jiddispjacini, imma %1$s iltaqa\' ma\' kwistjoni mhux mistennija u jeħtieġ li tagħlaq. Jekk jogħġbok għinna ntejbu billi nibagħtu rapport tal-ħabta.\n\n%1$s japprezza l-privatezza tiegħek u d-dejta miġbura tintuża biss biex ittejjeb l-istabbiltà tal-app. Ma tinġabar l-ebda informazzjoni personali. Grazzi tas-sapport tiegħek!</string>
-    <string name="acra_send_report">Ibgħat ir-Rapport</string>
-    <string name="acra_dont_send">Tibgħatx</string>
-    <string name="acra_mail_body">Jekk jogħġbok iddeskrivi l-kwistjoni li ltqajt magħhom:</string>
+    <string name="acra_toast_text">Jiddispjaċini, App ġġarraf. Rapport mibgħut lill-iżviluppaturi. Ebda informazzjoni personali miġbura.</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">L-apps kollha</string>
     <string name="can_not_delete_system_apps">Ma tistax Ħassar Apps tas-Sistema</string>
