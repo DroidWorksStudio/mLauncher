@@ -118,11 +118,7 @@
     <string name="text_biometric_login">การเข้าสู่ระบบไบโอเมตริกซ์สำหรับ mLauncher</string>
     <string name="text_biometric_login_sub">เข้าสู่ระบบโดยใช้ข้อมูลประจำตัวไบโอเมตริกซ์ของคุณ</string>
     <!-- Crash Strings -->
-    <string name="acra_crash">ชน</string>
-    <string name="acra_dialog_text">ขออภัย %1$s พบปัญหาที่ไม่คาดคิดและจำเป็นต้องปิด โปรดช่วยเราปรับปรุงโดยการส่งรายงานข้อขัดข้อง\n\n%1$s ให้ความสำคัญกับความเป็นส่วนตัวของคุณ และข้อมูลที่รวบรวมจะถูกนำมาใช้เพื่อปรับปรุงเสถียรภาพของแอปเท่านั้น ไม่มีการเก็บรวบรวมข้อมูลส่วนบุคคล ขอบคุณสำหรับการสนับสนุนของคุณ!</string>
-    <string name="acra_send_report">ส่งรายงาน</string>
-    <string name="acra_dont_send">อย่าส่ง</string>
-    <string name="acra_mail_body">โปรดอธิบายปัญหาที่คุณพบ:</string>
+    <string name="acra_toast_text">ขออภัย แอปขัดข้อง รายงานส่งไปยังนักพัฒนา ไม่มีการรวบรวมข้อมูลส่วนบุคคล</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">แอพทั้งหมด</string>
     <string name="can_not_delete_system_apps">ไม่สามารถลบแอประบบได้</string>
