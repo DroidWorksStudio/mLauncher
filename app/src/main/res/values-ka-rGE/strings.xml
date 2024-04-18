@@ -118,7 +118,11 @@
     <string name="text_biometric_login">ბიომეტრიული შესვლა mLauncher-ისთვის</string>
     <string name="text_biometric_login_sub">შედით თქვენი ბიომეტრიული სერთიფიკატის გამოყენებით</string>
     <!-- Crash Strings -->
-    <string name="acra_toast_text">უკაცრავად, აპი გათიშულია. ანგარიში გაეგზავნა დეველოპერებს. არ არის შეგროვებული პირადი ინფორმაცია.</string>
+    <string name="acra_crash">ავარია</string>
+    <string name="acra_dialog_text">ვწუხვართ, მაგრამ %1$s შეექმნა მოულოდნელ პრობლემას და უნდა დაიხუროს. გთხოვთ, დაგვეხმაროთ გაუმჯობესებაში ავარიის ანგარიშის გაგზავნით.\n\n%1$s აფასებს თქვენს კონფიდენციალურობას და შეგროვებული მონაცემები გამოიყენება მხოლოდ აპლიკაციის სტაბილურობის გასაუმჯობესებლად. პერსონალური ინფორმაცია არ გროვდება. Მადლობა თქვენი მხარდაჭერისთვის!</string>
+    <string name="acra_send_report">ანგარიშის გაგზავნა</string>
+    <string name="acra_dont_send">არ გაგზავნო</string>
+    <string name="acra_mail_body">გთხოვთ აღწეროთ პრობლემა, რომელიც შეგხვდათ:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">ყველა აპლიკაცია</string>
     <string name="can_not_delete_system_apps">სისტემის აპების წაშლა შეუძლებელია</string>
