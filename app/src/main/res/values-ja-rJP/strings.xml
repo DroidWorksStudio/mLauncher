@@ -118,7 +118,11 @@
     <string name="text_biometric_login">mLauncher の生体認証ログイン</string>
     <string name="text_biometric_login_sub">生体認証資格情報を使用してログインします</string>
     <!-- Crash Strings -->
-    <string name="acra_toast_text">申し訳ございません。アプリがクラッシュしました。開発者にレポートが送信されました。個人情報は収集されません。</string>
+    <string name="acra_crash">クラッシュ</string>
+    <string name="acra_dialog_text">申し訳ございませんが、 %1$s で予期しない問題が発生したため、終了する必要があります。クラッシュ レポートを送信して改善にご協力ください。\n\n%1$s はお客様のプライバシーを重視しており、収集されたデータはアプリの安定性を向上させるためにのみ使用されます。個人情報は収集されません。ご協力ありがとうございます!</string>
+    <string name="acra_send_report">レポートを送信</string>
+    <string name="acra_dont_send">送信しない</string>
+    <string name="acra_mail_body">発生した問題を説明してください:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">すべてのアプリ</string>
     <string name="can_not_delete_system_apps">システムアプリを削除できない</string>
