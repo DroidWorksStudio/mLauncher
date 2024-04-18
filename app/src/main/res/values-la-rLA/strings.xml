@@ -30,6 +30,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto ostendit tincidunt</string>
     <string name="auto_open_apps">Auto aperta apps</string>
+    <string name="enable_notifications">Admitte Suspendisse</string>
     <string name="display_recent_apps">Display Recent Apps</string>
     <string name="number_of_recents">Numerus recentium Apps</string>
     <string name="filter_strength">Filtrum fortitudo</string>
@@ -116,6 +117,12 @@
     <string name="text_authentication_failed">Non authenticas.</string>
     <string name="text_biometric_login">Biometric login pro mLauncher</string>
     <string name="text_biometric_login_sub">Log in usus tuos biometric credential</string>
+    <!-- Crash Strings -->
+    <string name="acra_crash">Crash</string>
+    <string name="acra_dialog_text">Dolemus, sed %1$s eventum inopinatum incidit et claudere debet. Quaeso adiuva nos emendare nuntiatione mittentes.\n\n%1$s privationem tuam aestimant et notitia collecta tantum adhibetur ad stabilitatem app emendandam. Nulla personalis notitia colligitur. Tibi gratias ago pro subsidio tuo!</string>
+    <string name="acra_send_report">Mitte Report</string>
+    <string name="acra_dont_send">Nolite mittere</string>
+    <string name="acra_mail_body">Quaeso describere exitus te offendit:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Omnes apps</string>
     <string name="can_not_delete_system_apps">Non potest Delere Ratio Apps</string>
