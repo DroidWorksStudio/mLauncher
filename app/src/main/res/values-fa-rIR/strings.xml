@@ -118,11 +118,7 @@
     <string name="text_biometric_login">ورود بیومتریک برای mLauncher</string>
     <string name="text_biometric_login_sub">با استفاده از اعتبار بیومتریک خود وارد شوید</string>
     <!-- Crash Strings -->
-    <string name="acra_crash">تصادف در</string>
-    <string name="acra_dialog_text">متأسفیم، اما %1$s با مشکل غیرمنتظره ای مواجه شده است و باید بسته شود. لطفاً با ارسال گزارش خرابی به ما در بهبود کمک کنید.\n\n%1$s برای حریم خصوصی شما ارزش قائل است و داده های جمع آوری شده صرفاً برای بهبود پایداری برنامه استفاده می شود. هیچ اطلاعات شخصی جمع آوری نمی شود. از حمایت شما متشکرم</string>
-    <string name="acra_send_report">ارسال گزارش</string>
-    <string name="acra_dont_send">ارسال نکنید</string>
-    <string name="acra_mail_body">لطفاً مشکلی را که با آن مواجه شدید شرح دهید:</string>
+    <string name="acra_toast_text">با عرض پوزش، برنامه خراب شد. گزارش برای توسعه دهندگان ارسال شد. هیچ اطلاعات شخصی جمع آوری نشده است.</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">همه برنامه ها</string>
     <string name="can_not_delete_system_apps">نمی توان برنامه های سیستم را حذف کرد</string>
