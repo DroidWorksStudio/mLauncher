@@ -30,6 +30,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Automatski prikaz tipkovnice</string>
     <string name="auto_open_apps">Automatsko otvaranje aplikacija</string>
+    <string name="enable_notifications">Omogući obavijesti</string>
     <string name="display_recent_apps">Prikaz nedavnih aplikacija</string>
     <string name="number_of_recents">Broj nedavnih aplikacija</string>
     <string name="filter_strength">Snaga filtra</string>
@@ -116,6 +117,12 @@
     <string name="text_authentication_failed">Provjera autentičnosti nije uspjela.</string>
     <string name="text_biometric_login">Biometrijska prijava za mLauncher</string>
     <string name="text_biometric_login_sub">Prijavite se pomoću svoje biometrijske vjerodajnice</string>
+    <!-- Crash Strings -->
+    <string name="acra_crash">Sudar</string>
+    <string name="acra_dialog_text">Žao nam je, ali %1$s je naišao na neočekivani problem i mora se zatvoriti. Pomozite nam da se poboljšamo slanjem izvješća o padu programa.\n\n%1$s cijeni vašu privatnost, a prikupljeni podaci koriste se isključivo za poboljšanje stabilnosti aplikacije. Ne prikupljaju se osobni podaci. Hvala na podršci!</string>
+    <string name="acra_send_report">Pošalji izvještaj</string>
+    <string name="acra_dont_send">Nemoj slati</string>
+    <string name="acra_mail_body">Opišite problem na koji ste naišli:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Sve aplikacije</string>
     <string name="can_not_delete_system_apps">Ne mogu izbrisati sistemske aplikacije</string>
