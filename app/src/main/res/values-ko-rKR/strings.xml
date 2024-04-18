@@ -118,11 +118,7 @@
     <string name="text_biometric_login">mLauncher의 생체인식 로그인</string>
     <string name="text_biometric_login_sub">생체 인식 자격 증명을 사용하여 로그인</string>
     <!-- Crash Strings -->
-    <string name="acra_crash">충돌</string>
-    <string name="acra_dialog_text">죄송합니다. %1$s 에 예상치 못한 문제가 발생하여 종료해야 합니다. 충돌 보고서를 보내 개선에 도움을 주세요.\n\n%1$s 은 귀하의 개인정보를 소중히 여기며, 수집된 데이터는 앱 안정성 향상을 위해서만 사용됩니다. 개인정보는 수집되지 않습니다. 귀하의 지원에 감사드립니다!</string>
-    <string name="acra_send_report">보고서 보내기</string>
-    <string name="acra_dont_send">보내지 마세요</string>
-    <string name="acra_mail_body">발생한 문제를 설명해 주세요.</string>
+    <string name="acra_toast_text">죄송합니다. 앱이 다운되었습니다. 보고서가 개발자에게 전송되었습니다. 개인정보는 수집되지 않습니다.</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>
     <string name="can_not_delete_system_apps">시스템 앱을 삭제할 수 없습니다</string>
