@@ -118,11 +118,7 @@
     <string name="text_biometric_login">Biometrisk pålogging for mLauncher</string>
     <string name="text_biometric_login_sub">Logg på med biometrisk legitimasjon</string>
     <!-- Crash Strings -->
-    <string name="acra_crash">Brak</string>
-    <string name="acra_dialog_text">Vi beklager, men %1$s har støtt på et uventet problem og må lukkes. Hjelp oss å forbedre oss ved å sende en krasjrapport.\n\n%1$s verdsetter personvernet ditt, og dataene som samles inn brukes utelukkende til å forbedre appstabiliteten. Ingen personopplysninger samles inn. Takk for støtten!</string>
-    <string name="acra_send_report">Send rapport</string>
-    <string name="acra_dont_send">Ikke send</string>
-    <string name="acra_mail_body">Vennligst beskriv problemet du støtt på:</string>
+    <string name="acra_toast_text">Beklager, appen krasjet. Rapport sendt til utviklere. Ingen personlig informasjon samlet inn.</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Alle apper</string>
     <string name="can_not_delete_system_apps">Kan ikke slette systemapper</string>
