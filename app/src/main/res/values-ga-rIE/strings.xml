@@ -118,11 +118,7 @@
     <string name="text_biometric_login">Logáil isteach bithmhéadrach do mLauncher</string>
     <string name="text_biometric_login_sub">Logáil isteach ag baint úsáide as do shonraí bithmhéadracha</string>
     <!-- Crash Strings -->
-    <string name="acra_crash">tuairteála</string>
-    <string name="acra_dialog_text">Tá brón orainn, ach tá %1$s tar éis teacht ar cheist gan choinne agus ní mór é a dhúnadh. Cabhraigh linn feabhsú trí thuarascáil tuairteála a sheoladh. Tá luach ag\n\n%1$s ar do phríobháideachas agus ní úsáidtear na sonraí a bhailítear ach amháin chun cobhsaíocht aipe a fheabhsú. Ní bhailítear aon fhaisnéis phearsanta. Go raibh maith agat as do chuid tacaíochta!</string>
-    <string name="acra_send_report">Seol Tuairisc</string>
-    <string name="acra_dont_send">Ná Seol</string>
-    <string name="acra_mail_body">Déan cur síos le do thoil ar an tsaincheist ar tháinig tú trasna uirthi:</string>
+    <string name="acra_toast_text">Ár leithscéal, chlis ar an App. Tuairisc seolta chuig na forbróirí. Níor bailíodh aon fhaisnéis phearsanta.</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Gach apps</string>
     <string name="can_not_delete_system_apps">Ní féidir Aipeanna Córais a scriosadh</string>
