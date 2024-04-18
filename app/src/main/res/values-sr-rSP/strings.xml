@@ -118,7 +118,11 @@
     <string name="text_biometric_login">Биометријска пријава за мЛаунцхер</string>
     <string name="text_biometric_login_sub">Пријавите се користећи свој биометријски акредитив</string>
     <!-- Crash Strings -->
-    <string name="acra_toast_text">Жао нам је, апликација је пала. Извештај послат програмерима. Нема прикупљених личних података.</string>
+    <string name="acra_crash">Црасх</string>
+    <string name="acra_dialog_text">Жао нам је, али %1$s је наишао на неочекивани проблем и мора да се затвори. Помозите нам да побољшамо слањем извештаја о паду.\n\n%1$s цени вашу приватност и прикупљени подаци се користе искључиво за побољшање стабилности апликације. Не прикупљају се лични подаци. Хвала вам на подршци!</string>
+    <string name="acra_send_report">Пошаљи извештај</string>
+    <string name="acra_dont_send">Не шаљи</string>
+    <string name="acra_mail_body">Опишите проблем на који сте наишли:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>
     <string name="can_not_delete_system_apps">Није могуће избрисати системске апликације</string>
