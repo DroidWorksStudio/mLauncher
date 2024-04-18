@@ -118,7 +118,11 @@
     <string name="text_biometric_login">mLauncher için biyometrik giriş</string>
     <string name="text_biometric_login_sub">Biyometrik kimlik bilgilerinizi kullanarak giriş yapın</string>
     <!-- Crash Strings -->
-    <string name="acra_toast_text">Üzgünüz, Uygulama çöktü. Rapor geliştiricilere gönderildi. Hiçbir kişisel bilgi toplanmadı.</string>
+    <string name="acra_crash">Kaza</string>
+    <string name="acra_dialog_text">Üzgünüz ama %1$s beklenmedik bir sorunla karşılaştı ve kapatılması gerekiyor. Lütfen bir kilitlenme raporu göndererek iyileştirmemize yardımcı olun.\n\n%1$s gizliliğinize değer verir ve toplanan veriler yalnızca uygulama kararlılığını iyileştirmek için kullanılır. Hiçbir kişisel bilgi toplanmaz. Desteğin için teşekkürler!</string>
+    <string name="acra_send_report">Rapor gönder</string>
+    <string name="acra_dont_send">Gönderme</string>
+    <string name="acra_mail_body">Lütfen karşılaştığınız sorunu açıklayın:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Tüm uygulamalar</string>
     <string name="can_not_delete_system_apps">Sistem Uygulamaları Silinemiyor</string>
