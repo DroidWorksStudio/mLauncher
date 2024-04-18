@@ -118,7 +118,11 @@
     <string name="text_biometric_login">Biometrinis prisijungimas prie mLauncher</string>
     <string name="text_biometric_login_sub">Prisijunkite naudodami biometrinius kredencialus</string>
     <!-- Crash Strings -->
-    <string name="acra_toast_text">Atsiprašome, programa sudužo. Ataskaita išsiųsta kūrėjams. Jokia asmeninė informacija nerenkama.</string>
+    <string name="acra_crash">Avarija</string>
+    <string name="acra_dialog_text">Atsiprašome, bet %1$s susidūrė su netikėta problema ir ją reikia uždaryti. Padėkite mums tobulėti išsiųsdami strigčių ataskaitą.\n\n%1$s vertina jūsų privatumą, o surinkti duomenys naudojami tik programos stabilumui pagerinti. Jokia asmeninė informacija nerenkama. Dėkojame už palaikymą!</string>
+    <string name="acra_send_report">Siųsti ataskaitą</string>
+    <string name="acra_dont_send">Nesiųsti</string>
+    <string name="acra_mail_body">Aprašykite problemą, su kuria susidūrėte:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Visos programėlės</string>
     <string name="can_not_delete_system_apps">Nepavyksta ištrinti sistemos programų</string>
