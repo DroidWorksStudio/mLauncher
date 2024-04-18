@@ -118,7 +118,11 @@
     <string name="text_biometric_login">mLauncher لاءِ بايوميٽرڪ لاگ ان</string>
     <string name="text_biometric_login_sub">لاگ ان ڪريو پنھنجي بايوميٽرڪ سند استعمال ڪندي</string>
     <!-- Crash Strings -->
-    <string name="acra_toast_text">معاف ڪجو، ايپ خراب ٿي وئي. رپورٽ ڊولپرز ڏانهن موڪلي وئي. ڪابه ذاتي معلومات گڏ نه ڪئي وئي.</string>
+    <string name="acra_crash">حادثو</string>
+    <string name="acra_dialog_text">معاف ڪجو، پر %1$s هڪ اڻڄاتل مسئلو پيش آيو آهي ۽ بند ٿيڻ جي ضرورت آهي. مھرباني ڪري حادثي جي رپورٽ موڪلڻ سان اسان جي مدد ڪريو.\n\n%1$s توهان جي رازداري کي اهميت ڏئي ٿو ۽ گڏ ڪيل ڊيٽا صرف ايپ جي استحڪام کي بهتر ڪرڻ لاءِ استعمال ڪئي ويندي آهي. ڪابه ذاتي معلومات گڏ نه ڪئي وئي آهي. توهان جي حمايت لاء توهان جي مهرباني!</string>
+    <string name="acra_send_report">رپورٽ موڪليو</string>
+    <string name="acra_dont_send">نه موڪليو</string>
+    <string name="acra_mail_body">مھرباني ڪري بيان ڪريو ته توھان جو مسئلو آھي:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">سڀ ائپس</string>
     <string name="can_not_delete_system_apps">سسٽم ائپس کي ختم نٿو ڪري سگھجي</string>
