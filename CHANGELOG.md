@@ -9,6 +9,10 @@ All notable changes to this project will be documented in this file. See [conven
 - Ensure proper initialization of TextView objects in updateBatteryStatus() - ([939de4c](https://github.com/DroidWorksStudio/mLauncher/commit/939de4cd7ac48fe8a62c1f9d13f01e428bbc8b80))
 - Fixed IllegalStateException when unregistering BatteryReceiver in onPause() - ([3cefa19](https://github.com/DroidWorksStudio/mLauncher/commit/3cefa19e2bc3a00729df839f4de215b769ec38b2))
 
+### Language Support:
+
+- Updated Language Files. ([#461](https://github.com/DroidWorksStudio/mLauncher/issues/461)) - ([6b427d4](https://github.com/DroidWorksStudio/mLauncher/commit/6b427d437977af25dcdc92d45d9576677551f055))
+
 ### Refactoring:
 
 - Refactor app settings and notification handling - ([2885e77](https://github.com/DroidWorksStudio/mLauncher/commit/2885e773140d4ae906fd50000e5616e31a43c886))
