@@ -118,11 +118,7 @@
     <string name="text_biometric_login">Biometrisk login til mLauncher</string>
     <string name="text_biometric_login_sub">Log ind med dit biometriske legitimationsoplysninger</string>
     <!-- Crash Strings -->
-    <string name="acra_crash">Krak</string>
-    <string name="acra_dialog_text">Vi beklager, men %1$s er stødt på et uventet problem og skal lukke. Hjælp os med at forbedre os ved at sende en nedbrudsrapport.\n\n%1$s værdsætter dit privatliv, og de indsamlede data bruges udelukkende til at forbedre app-stabiliteten. Der indsamles ingen personlige oplysninger. Tak for din støtte!</string>
-    <string name="acra_send_report">Send rapport</string>
-    <string name="acra_dont_send">Send ikke</string>
-    <string name="acra_mail_body">Beskriv venligst det problem, du stødte på:</string>
+    <string name="acra_toast_text">Beklager, appen gik ned. Rapport sendt til udviklere. Ingen personlige oplysninger indsamlet.</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Alle apps</string>
     <string name="can_not_delete_system_apps">Kan ikke slette systemapps</string>
