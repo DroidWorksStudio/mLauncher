@@ -30,6 +30,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Onyesha kibodi kiotomatiki</string>
     <string name="auto_open_apps">Fungua programu kiotomatiki</string>
+    <string name="enable_notifications">Washa Arifa</string>
     <string name="display_recent_apps">Onyesha Programu za Hivi Karibuni</string>
     <string name="number_of_recents">Idadi ya Programu za Hivi Punde</string>
     <string name="filter_strength">Nguvu ya Kichujio</string>
@@ -116,6 +117,12 @@
     <string name="text_authentication_failed">Uthibitishaji umeshindwa.</string>
     <string name="text_biometric_login">Kuingia kwa kibayometriki kwa mLauncher</string>
     <string name="text_biometric_login_sub">Ingia kwa kutumia kitambulisho chako cha kibayometriki</string>
+    <!-- Crash Strings -->
+    <string name="acra_crash">Ajali</string>
+    <string name="acra_dialog_text">Samahani, lakini %1$s amekumbana na suala lisilotarajiwa na anahitaji kufungwa. Tafadhali tusaidie kuboresha kwa kutuma ripoti ya kuacha kufanya kazi.\n\n%1$s inathamini ufaragha wako na data inayokusanywa inatumika kwa ajili ya kuboresha uthabiti wa programu pekee. Hakuna taarifa za kibinafsi zinazokusanywa. Ahsante kwa msaada wako!</string>
+    <string name="acra_send_report">Tuma Ripoti</string>
+    <string name="acra_dont_send">Usitume</string>
+    <string name="acra_mail_body">Tafadhali eleza suala ulilokumbana nalo:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Programu zote</string>
     <string name="can_not_delete_system_apps">Haiwezi Kufuta Programu za Mfumo</string>
