@@ -118,7 +118,11 @@
     <string name="text_biometric_login">Биометрично влизане за mLauncher</string>
     <string name="text_biometric_login_sub">Влезте с вашите биометрични идентификационни данни</string>
     <!-- Crash Strings -->
-    <string name="acra_toast_text">За съжаление приложението се срина. Докладът е изпратен до разработчиците. Няма събрана лична информация.</string>
+    <string name="acra_crash">Катастрофа</string>
+    <string name="acra_dialog_text">Съжаляваме, но %1$s се натъкна на неочакван проблем и трябва да се затвори. Моля, помогнете ни да се подобрим, като изпратите доклад за срив.\n\n%1$s цени вашата поверителност и събраните данни се използват единствено за подобряване на стабилността на приложението. Не се събира лична информация. Благодарим ви за вашата подкрепа!</string>
+    <string name="acra_send_report">Изпрати доклад</string>
+    <string name="acra_dont_send">Не изпращай</string>
+    <string name="acra_mail_body">Моля, опишете проблема, който срещнахте:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Всички приложения</string>
     <string name="can_not_delete_system_apps">Не могат да се изтрият системни приложения</string>
