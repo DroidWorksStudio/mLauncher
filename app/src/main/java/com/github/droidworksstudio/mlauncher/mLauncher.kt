@@ -1,13 +1,13 @@
 package com.github.droidworksstudio.mlauncher
 
 import android.app.Application
-import android.content.Context
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.google.firebase.FirebaseApp
 import com.google.firebase.FirebaseOptions
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import org.acra.ReportField
-import org.acra.config.toast
+import org.acra.config.dialog
+import org.acra.config.mailSender
 import org.acra.data.StringFormat
 import org.acra.ktx.initAcra
 
@@ -15,12 +15,17 @@ import org.acra.ktx.initAcra
 class Mlauncher : Application() {
     private lateinit var prefs: Prefs
 
-    override fun attachBaseContext(base: Context) {
-        super.attachBaseContext(base)
+    override fun onCreate() {
+        super.onCreate()
+
         // Initialize prefs here
-        prefs = Prefs(base)
+        prefs = Prefs(this)
 
         val pkgName = getString(R.string.app_name)
+        val pkgVersion = this.packageManager.getPackageInfo(
+            this.packageName,
+            0
+        ).versionName
 
         initAcra {
             //core configuration:
@@ -36,35 +41,23 @@ class Mlauncher : Application() {
                 ReportField.LOGCAT
             )
             //each plugin you chose above can be configured in a block like this:
-            toast {
-                enabled = true
+            dialog {
+                //required
+                text = getString(R.string.acra_dialog_text).format(pkgName)
+                //optional, enables the dialog title
+                title = getString(R.string.acra_crash)
+                //defaults to android.R.string.ok
+                positiveButtonText = getString(R.string.acra_send_report)
+                //defaults to android.R.string.cancel
+                negativeButtonText = getString(R.string.acra_dont_send)
+                //optional, defaults to @android:style/Theme.Dialog
+                resTheme = R.style.MaterialDialogTheme
+            }
+
+            mailSender {
                 //required
                 text = getString(R.string.acra_toast_text).format(pkgName)
             }
         }
     }
-
-    override fun onCreate() {
-        super.onCreate()
-        val applicationId = BuildConfig.FIREBASE_APP_ID
-        val apiKey = BuildConfig.FIREBASE_API_KEY
-
-        // Manually initialize Firebase with configuration values
-        val options = FirebaseOptions.Builder()
-            .setProjectId("mlauncher-android")
-            .setApplicationId(applicationId)
-            .setApiKey(apiKey)
-            .build()
-        initializeFirebase(options)
-
-        // Enable Crashlytics
-        FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(true)
-    }
-
-    private fun initializeFirebase(options: FirebaseOptions) {
-        if (FirebaseApp.getApps(this).isEmpty()) {
-            FirebaseApp.initializeApp(this, options)
-        }
-    }
-
 }

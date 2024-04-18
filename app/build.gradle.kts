@@ -145,7 +145,8 @@ dependencies {
 
     val acraVersion = "5.11.3"
     implementation("ch.acra:acra-core:$acraVersion")
-    implementation("ch.acra:acra-toast:$acraVersion")
+    implementation("ch.acra:acra-dialog:$acraVersion")
+    implementation("ch.acra:acra-mail:$acraVersion")
 
     val androidxTestEspresso = "3.5.1"
     androidTestImplementation("androidx.test.espresso:espresso-core:$androidxTestEspresso")

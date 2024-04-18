@@ -15,8 +15,6 @@ All notable changes to this project will be documented in this file. See [conven
 - Updated Language Files. ([#461](https://github.com/DroidWorksStudio/mLauncher/issues/461)) - ([6b427d4](https://github.com/DroidWorksStudio/mLauncher/commit/6b427d437977af25dcdc92d45d9576677551f055))
 
 ### Refactoring:
-
-- Cleaned up Bug Reports - ([d6e8455](https://github.com/DroidWorksStudio/mLauncher/commit/d6e8455fa9f41a690bec7217637d8e4d3194d63f))
 - Initialize prefs in attachBaseContext for timely initialization. - ([5a42051](https://github.com/DroidWorksStudio/mLauncher/commit/5a42051608a04ad472290f5ca5a5f8bd8356e45c))
 - Improve ACRA configuration in Mlauncher.kt - ([52e1abb](https://github.com/DroidWorksStudio/mLauncher/commit/52e1abbb1f7f42dfed2223eb71924ad054a773c6))
 - Refactor app settings and notification handling - ([2885e77](https://github.com/DroidWorksStudio/mLauncher/commit/2885e773140d4ae906fd50000e5616e31a43c886))
