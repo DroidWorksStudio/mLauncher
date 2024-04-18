@@ -30,6 +30,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Autókiállítás billentyűzet</string>
     <string name="auto_open_apps">Automatikusan megnyíló alkalmazások</string>
+    <string name="enable_notifications">Értesítések engedélyezése</string>
     <string name="display_recent_apps">Legutóbbi alkalmazások megjelenítése</string>
     <string name="number_of_recents">Legutóbbi alkalmazások száma</string>
     <string name="filter_strength">Szűrő erőssége</string>
@@ -116,6 +117,12 @@
     <string name="text_authentication_failed">Hitelesítés nem sikerült.</string>
     <string name="text_biometric_login">Biometrikus bejelentkezés az mLauncherhez</string>
     <string name="text_biometric_login_sub">Jelentkezzen be biometrikus hitelesítő adataival</string>
+    <!-- Crash Strings -->
+    <string name="acra_crash">Összeomlás</string>
+    <string name="acra_dialog_text">Sajnáljuk, de a %1$s váratlan problémába ütközött, ezért be kell zárni. Kérjük, segítsen a fejlesztésben hibajelentés elküldésével.\n\n%1$s értékeli az Ön adatait, és az összegyűjtött adatokat kizárólag az alkalmazás stabilitásának javítására használjuk fel. Nem gyűjtenek személyes adatokat. Köszönöm a tamogatásod!</string>
+    <string name="acra_send_report">Jelentés küldése</string>
+    <string name="acra_dont_send">Ne küldj</string>
+    <string name="acra_mail_body">Kérjük, írja le a problémát, amellyel találkozott:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Minden alkalmazás</string>
     <string name="can_not_delete_system_apps">Nem lehet törölni a rendszeralkalmazásokat</string>
