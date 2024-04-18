@@ -2,7 +2,7 @@ name: Bug report
 description: Create a bug report
 labels: ['Type: Bug Report']
 title: '[Bug Report] add text here'
-assignees: ['The-Repo-Club']
+assignees: ['HeCodes2Much']
 body:
   - type: markdown
     attributes:
@@ -17,7 +17,7 @@ body:
       options:
         - label: "I will make sure to have the issue written in English with an English title."
           required: true
-        - label: "I made sure that there are **no existing issues** - [open](https://github.com/HeCodes2Much/mLauncher/issues) or [closed](https://github.com/HeCodes2Much/mLauncher/issues?q=is%3Aissue+is%3Aclosed) - which I could contribute my information to."
+        - label: "I made sure that there are **no existing issues** - [open](https://github.com/HeCodes2MuchDroidWorksStudio/mLauncher/issues) or [closed](https://github.com/HeCodes2MuchDroidWorksStudio/mLauncher/issues?q=is%3Aissue+is%3Aclosed) - which I could contribute my information to."
           required: true
         - label: "I have taken the time to fill in all the required details. I understand that the bug report will be dismissed otherwise."
           required: true
