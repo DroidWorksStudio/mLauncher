@@ -118,7 +118,11 @@
     <string name="text_biometric_login">Biometrické prihlásenie pre mLauncher</string>
     <string name="text_biometric_login_sub">Prihláste sa pomocou svojich biometrických údajov.</string>
     <!-- Crash Strings -->
-    <string name="acra_toast_text">Ľutujeme, aplikácia zlyhala. Správa bola odoslaná vývojárom. Nezhromažďujú sa žiadne osobné informácie.</string>
+    <string name="acra_crash">Zrútiť sa</string>
+    <string name="acra_dialog_text">Ľutujeme, ale %1$s sa vyskytol neočakávaný problém a je potrebné ho zavrieť. Pomôžte nám zlepšiť sa odoslaním správy o zlyhaní.\n\n%1$s si váži vaše súkromie a zhromaždené údaje sa používajú výlučne na zlepšenie stability aplikácie. Nezhromažďujú sa žiadne osobné údaje. Ďakujem za tvoju podporu!</string>
+    <string name="acra_send_report">Odoslať správu</string>
+    <string name="acra_dont_send">Neposielajte</string>
+    <string name="acra_mail_body">Popíšte problém, s ktorým ste sa stretli:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Všetky aplikácie</string>
     <string name="can_not_delete_system_apps">Systémové aplikácie sa nedajú odstrániť</string>
