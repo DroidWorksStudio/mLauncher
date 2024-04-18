@@ -30,6 +30,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Αυτόματο άνοιγμα εφαρμογών</string>
+    <string name="enable_notifications">Ενεργοποίηση Ειδοποιήσεων</string>
     <string name="display_recent_apps">Εμφάνιση πρόσφατων εφαρμογών</string>
     <string name="number_of_recents">Αριθμός πρόσφατων εφαρμογών</string>
     <string name="filter_strength">Αντοχή φίλτρου</string>
@@ -116,6 +117,12 @@
     <string name="text_authentication_failed">Η ταυτοποίηση απέτυχε.</string>
     <string name="text_biometric_login">Βιομετρική σύνδεση για mLauncher</string>
     <string name="text_biometric_login_sub">Συνδεθείτε χρησιμοποιώντας τα βιομετρικά διαπιστευτήριά σας</string>
+    <!-- Crash Strings -->
+    <string name="acra_crash">Σύγκρουση</string>
+    <string name="acra_dialog_text">Λυπούμαστε, αλλά το %1$s αντιμετώπισε ένα απροσδόκητο πρόβλημα και πρέπει να κλείσει. Βοηθήστε μας να βελτιωθούμε στέλνοντας μια αναφορά σφαλμάτων. Το\n\n%1$s εκτιμά το απόρρητό σας και τα δεδομένα που συλλέγονται χρησιμοποιούνται αποκλειστικά για τη βελτίωση της σταθερότητας της εφαρμογής. Δεν συλλέγονται προσωπικά στοιχεία. Σας ευχαριστούμε για την υποστήριξή σας!</string>
+    <string name="acra_send_report">Αποστολή αναφοράς</string>
+    <string name="acra_dont_send">Μην στείλετε</string>
+    <string name="acra_mail_body">Περιγράψτε το πρόβλημα που αντιμετωπίσατε:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Όλες οι εφαρμογές</string>
     <string name="can_not_delete_system_apps">Δεν είναι δυνατή η διαγραφή εφαρμογών συστήματος</string>
