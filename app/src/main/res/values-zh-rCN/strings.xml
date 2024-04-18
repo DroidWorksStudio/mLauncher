@@ -30,6 +30,7 @@
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">自动显示键盘</string>
     <string name="auto_open_apps">自动打开应用</string>
+    <string name="enable_notifications">启用通知</string>
     <string name="display_recent_apps">显示最近使用的应用程序</string>
     <string name="number_of_recents">最近使用的应用程序数量</string>
     <string name="filter_strength">过滤强度</string>
@@ -116,6 +117,12 @@
     <string name="text_authentication_failed">认证失败。</string>
     <string name="text_biometric_login">mLauncher 的生物识别登录</string>
     <string name="text_biometric_login_sub">使用您的生物识别凭据登录</string>
+    <!-- Crash Strings -->
+    <string name="acra_crash">碰撞</string>
+    <string name="acra_dialog_text">很抱歉， %1$s 遇到了意外问题，需要关闭。请发送崩溃报告帮助我们改进。\n\n%1$s 重视您的隐私，所收集的数据仅用于提高应用稳定性。不会收集任何个人信息。感谢您的支持！</string>
+    <string name="acra_send_report">发送报告</string>
+    <string name="acra_dont_send">不发送</string>
+    <string name="acra_mail_body">请描述您遇到的问题：</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">所有应用程序</string>
     <string name="can_not_delete_system_apps">无法删除系统应用程序</string>
