@@ -3,7 +3,7 @@
     <!-- Base Settings -->
     <string name="app">App</string>
     <!-- Admin Settings -->
-    <string name="admin_permission_message">mLauncher promette di utilizzare l\'autorizzazione della schermata di blocco in modo responsabile. mLauncher non raccoglie né condivide alcun dato.</string>
+    <string name="admin_permission_message">mLauncher promette di utilizzare l\'autorizzazione della schermata di blocco in modo responsabile. mLauncher non salva né condivide alcun dato.</string>
     <string name="experimental">(sperimentale)</string>
     <!-- Settings Headers -->
     <string name="appearance">Aspetto</string>
@@ -23,41 +23,41 @@
     <string name="app_language">Lingua Dell\'Interfaccia</string>
     <string name="app_text_size">Dimensione Testo</string>
     <string name="clock_text_size">Dimensioni del testo dell\'orologio</string>
-    <string name="app_padding_size">Dimensione imbottitura</string>
-    <string name="follow_accent_colors">Colori accentati</string>
+    <string name="app_padding_size">Dimensione della spaziatura</string>
+    <string name="follow_accent_colors">Colori accentuati</string>
     <string name="background_opacity">Opacità dello sfondo</string>
-    <string name="all_apps_text">Visualizza il testo di tutte le app</string>
+    <string name="all_apps_text">Visualizza nel menu il messaggio tutte le app</string>
     <!-- Behavior Strings -->
-    <string name="auto_show_keyboard">Auto show keyboard</string>
+    <string name="auto_show_keyboard">Mostra tastiera automaticamente</string>
     <string name="auto_open_apps">Apri automaticamente le app</string>
-    <string name="enable_notifications">Attivare le notifiche</string>
+    <string name="enable_notifications">Attiva le notifiche</string>
     <string name="display_recent_apps">Visualizza le app recenti</string>
     <string name="number_of_recents">Numero di app recenti</string>
-    <string name="filter_strength">Forza filtro</string>
+    <string name="filter_strength">Forza filtro ricerca</string>
     <string name="search_from_start">Ricerca app dall\'inizio.</string>
     <string name="icon_font">Usa carattere icona</string>
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Numero di scorciatoie</string>
     <string name="pages_on_home_screen">Numero di pagine</string>
-    <string name="enable_home_pager">Abilita il cercapersone iniziale</string>
+    <string name="enable_home_pager">Abilita l\'Home Pager iniziale</string>
     <string name="show_time">Mostra ora</string>
     <string name="show_date">Mostra data</string>
     <string name="show_battery">Mostra batteria</string>
     <string name="lock_home_apps">Blocca App</string>
     <string name="extend_home_apps_area">Estendi l\'area cliccabile</string>
-    <string name="home_alignment_bottom">Schermata iniziale Allinea in basso</string>
+    <string name="home_alignment_bottom">Schermata iniziale allineata in basso</string>
     <!-- Alignment Strings -->
-    <string name="home_alignment">App schermata home</string>
+    <string name="home_alignment">App schermata iniziale</string>
     <string name="clock_alignment">Orologio e data</string>
-    <string name="drawer_alignment">Applicazioni nel drawer app</string>
+    <string name="drawer_alignment">Applicazioni nell\'elenco app</string>
     <!-- Gestures Strings -->
     <string name="short_swipe_up_app">Scorri verso l\'alto</string>
     <string name="short_swipe_down_app">Scorri giù</string>
     <string name="short_swipe_left_app">Scorri a sinistra</string>
-    <string name="short_swipe_right_app">Scorri a destra</string>
-    <string name="long_swipe_up_app">Premere a lungo Scorrere verso l\'alto</string>
-    <string name="long_swipe_down_app">Pressione lunga Scorri verso il basso</string>
-    <string name="long_swipe_left_app">Premere a lungo Scorri verso sinistra</string>
+    <string name="short_swipe_right_app">Scorrimento breve a destra</string>
+    <string name="long_swipe_up_app">Premere a lungo scorrendo verso l\'alto</string>
+    <string name="long_swipe_down_app">Scorri lungo verso il basso</string>
+    <string name="long_swipe_left_app">Scorri lungo verso sinistra</string>
     <string name="long_swipe_right_app">Premere a lungo Scorri verso destra</string>
     <string name="clock_click_app">Clicca su Orologio</string>
     <string name="date_click_app">Clicca su Data</string>
@@ -69,20 +69,20 @@
     <string name="lock_screen">Schermata Di Blocco</string>
     <string name="open_quick_settings">Impostazioni Rapide</string>
     <string name="show_recents">Show Recents</string>
-    <string name="open_power_dialog">Dialogo di potere</string>
+    <string name="open_power_dialog">Menu di spegnimento</string>
     <string name="take_a_screenshot">Fai uno screenshot</string>
     <string name="left_page">Vai alla pagina di sinistra</string>
-    <string name="right_page">Vai alla pagina giusta</string>
+    <string name="right_page">Vai alla pagina destra</string>
     <string name="double_tap_to_lock_screen">Doppio tocco per bloccare</string>
     <!-- Miscellaneous Strings -->
     <string name="settings_text_size">Impostazioni Dimensione testo</string>
     <string name="display_hidden_apps">Visualizza le app nascoste</string>
-    <string name="lock_settings">Blocca impostazioni</string>
+    <string name="lock_settings">Blocca le impostazioni</string>
     <!-- Backup Strings -->
-    <string name="backup">Backup</string>
-    <string name="load_backup">Carico</string>
-    <string name="save_backup">Salva</string>
-    <string name="clear_backup">Chiaro</string>
+    <string name="backup">Backup </string>
+    <string name="load_backup">Carica backup</string>
+    <string name="save_backup">Salva backup</string>
+    <string name="clear_backup">Cancella</string>
     <!-- Settings Strings -->
     <string name="off">Off</string>
     <string name="on">Acceso</string>
@@ -94,9 +94,9 @@
     <string name="settings">Impostazioni</string>
     <string name="lang_system">Sistema</string>
     <string name="system_default">Sistema</string>
-    <string name="delete">Eliminare</string>
+    <string name="delete">Elimina</string>
     <string name="hide">Nascondi</string>
-    <string name="unhide">Scopri</string>
+    <string name="unhide">Mostra</string>
     <string name="rename">Rinomina</string>
     <string name="info">Informazioni</string>
     <string name="okay">Ok</string>
@@ -110,17 +110,17 @@
     <string name="disabled">Disabilitato</string>
     <string name="open">Apri</string>
     <string name="close">Chiudi</string>
-    <string name="copy">copia</string>
+    <string name="copy">Copia</string>
     <!-- PinCode Strings -->
-    <string name="text_authentication_cancel">Autenticazione Annulla.</string>
+    <string name="text_authentication_cancel">Autenticazione annullata.</string>
     <string name="text_authentication_error">Errore di autenticazione:%1$s(codice %2$d)</string>
     <string name="text_authentication_failed">Autenticazione fallita.</string>
     <string name="text_biometric_login">Accesso biometrico per mLauncher</string>
     <string name="text_biometric_login_sub">Accedi utilizzando le tue credenziali biometriche</string>
     <!-- Crash Strings -->
-    <string name="acra_crash">Incidente</string>
+    <string name="acra_crash">Arresto anomalo</string>
     <string name="acra_dialog_text">Siamo spiacenti, ma %1$s ha riscontrato un problema imprevisto e deve essere chiuso. Aiutaci a migliorare inviando un rapporto sugli arresti anomali.\n\n%1$s valorizza la tua privacy e i dati raccolti vengono utilizzati esclusivamente per migliorare la stabilità dell\'app. Non viene raccolta alcuna informazione personale. Grazie per il vostro sostegno!</string>
-    <string name="acra_send_report">Spedisci il rapporto</string>
+    <string name="acra_send_report">Invia segnalazione</string>
     <string name="acra_dont_send">Non inviare</string>
     <string name="acra_mail_body">Descrivi il problema riscontrato:</string>
     <!-- Unsorted Strings -->
