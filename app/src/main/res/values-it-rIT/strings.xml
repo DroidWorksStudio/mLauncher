@@ -22,20 +22,20 @@
     <string name="theme_mode">Modalità tema</string>
     <string name="app_language">Lingua Dell\'Interfaccia</string>
     <string name="app_text_size">Dimensione Testo</string>
-    <string name="clock_text_size">Dimensioni del testo dell\'orologio</string>
+    <string name="clock_text_size">Dimensione del testo dell\'orologio</string>
     <string name="app_padding_size">Dimensione della spaziatura</string>
     <string name="follow_accent_colors">Colori accentuati</string>
     <string name="background_opacity">Opacità dello sfondo</string>
-    <string name="all_apps_text">Visualizza nel menu il messaggio tutte le app</string>
+    <string name="all_apps_text">Visualizza nel menu la voce tutte le app</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Mostra tastiera automaticamente</string>
     <string name="auto_open_apps">Apri automaticamente le app</string>
     <string name="enable_notifications">Attiva le notifiche</string>
     <string name="display_recent_apps">Visualizza le app recenti</string>
     <string name="number_of_recents">Numero di app recenti</string>
-    <string name="filter_strength">Forza filtro ricerca</string>
+    <string name="filter_strength">Forza filtro di ricerca</string>
     <string name="search_from_start">Ricerca app dall\'inizio.</string>
-    <string name="icon_font">Usa carattere icona</string>
+    <string name="icon_font">Usa il carattere dell\'icona</string>
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Numero di scorciatoie</string>
     <string name="pages_on_home_screen">Numero di pagine</string>
@@ -51,14 +51,14 @@
     <string name="clock_alignment">Orologio e data</string>
     <string name="drawer_alignment">Applicazioni nell\'elenco app</string>
     <!-- Gestures Strings -->
-    <string name="short_swipe_up_app">Scorri verso l\'alto</string>
-    <string name="short_swipe_down_app">Scorri giù</string>
-    <string name="short_swipe_left_app">Scorri a sinistra</string>
-    <string name="short_swipe_right_app">Scorrimento breve a destra</string>
+    <string name="short_swipe_up_app">Scorri brevemente verso l\'alto</string>
+    <string name="short_swipe_down_app">Scorri brevemente verso il basso</string>
+    <string name="short_swipe_left_app">Scorri brevemente a sinistra</string>
+    <string name="short_swipe_right_app">Scorri brevemente a destra</string>
     <string name="long_swipe_up_app">Premere a lungo scorrendo verso l\'alto</string>
-    <string name="long_swipe_down_app">Scorri lungo verso il basso</string>
-    <string name="long_swipe_left_app">Scorri lungo verso sinistra</string>
-    <string name="long_swipe_right_app">Premere a lungo Scorri verso destra</string>
+    <string name="long_swipe_down_app">Pressione lunga e scorri verso il basso</string>
+    <string name="long_swipe_left_app">Pressione lunga verso sinistra</string>
+    <string name="long_swipe_right_app">Premere a lungo scorrendo verso destra</string>
     <string name="clock_click_app">Clicca su Orologio</string>
     <string name="date_click_app">Clicca su Data</string>
     <string name="double_tap">Doppio Tocco</string>
@@ -80,7 +80,7 @@
     <string name="lock_settings">Blocca le impostazioni</string>
     <!-- Backup Strings -->
     <string name="backup">Backup </string>
-    <string name="load_backup">Carica backup</string>
+    <string name="load_backup">Carica</string>
     <string name="save_backup">Salva backup</string>
     <string name="clear_backup">Cancella</string>
     <!-- Settings Strings -->
