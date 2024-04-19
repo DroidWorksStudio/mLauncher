@@ -26,7 +26,7 @@
     <string name="app_padding_size">Dimensione della spaziatura</string>
     <string name="follow_accent_colors">Colori accentuati</string>
     <string name="background_opacity">Opacità dello sfondo</string>
-    <string name="all_apps_text">Visualizza nel menu la voce tutte le app</string>
+    <string name="all_apps_text">Visualizza nel menu la voce Tutte le App</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Mostra tastiera automaticamente</string>
     <string name="auto_open_apps">Apri automaticamente le app</string>
@@ -55,7 +55,7 @@
     <string name="short_swipe_down_app">Scorri brevemente verso il basso</string>
     <string name="short_swipe_left_app">Scorri brevemente a sinistra</string>
     <string name="short_swipe_right_app">Scorri brevemente a destra</string>
-    <string name="long_swipe_up_app">Premere a lungo scorrendo verso l\'alto</string>
+    <string name="long_swipe_up_app">Premi a lungo scorrendo verso l\'alto</string>
     <string name="long_swipe_down_app">Pressione lunga e scorri verso il basso</string>
     <string name="long_swipe_left_app">Pressione lunga verso sinistra</string>
     <string name="long_swipe_right_app">Premere a lungo scorrendo verso destra</string>
@@ -73,16 +73,16 @@
     <string name="take_a_screenshot">Fai uno screenshot</string>
     <string name="left_page">Vai alla pagina di sinistra</string>
     <string name="right_page">Vai alla pagina destra</string>
-    <string name="double_tap_to_lock_screen">Doppio tocco per bloccare</string>
+    <string name="double_tap_to_lock_screen">Doppio tocco per bloccare lo schermo</string>
     <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">Impostazioni Dimensione testo</string>
+    <string name="settings_text_size">Impostazioni dimensione testo</string>
     <string name="display_hidden_apps">Visualizza le app nascoste</string>
     <string name="lock_settings">Blocca le impostazioni</string>
     <!-- Backup Strings -->
     <string name="backup">Backup </string>
-    <string name="load_backup">Carica</string>
+    <string name="load_backup">Carica backup</string>
     <string name="save_backup">Salva backup</string>
-    <string name="clear_backup">Cancella</string>
+    <string name="clear_backup">Resetta tutto</string>
     <!-- Settings Strings -->
     <string name="off">Off</string>
     <string name="on">Acceso</string>
