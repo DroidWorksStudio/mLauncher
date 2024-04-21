@@ -81,8 +81,8 @@
     <!-- Backup Strings -->
     <string name="backup">Atsarginė kopija</string>
     <string name="load_backup">Įkelti</string>
-    <string name="save_backup">Sutaupyti</string>
-    <string name="clear_backup">Aišku</string>
+    <string name="save_backup">Įrašyti</string>
+    <string name="clear_backup">Išvalyti</string>
     <!-- Settings Strings -->
     <string name="off">Išjungti</string>
     <string name="on">Įjungti</string>
@@ -119,7 +119,7 @@
     <string name="text_biometric_login_sub">Prisijunkite naudodami biometrinius kredencialus</string>
     <!-- Crash Strings -->
     <string name="acra_crash">Avarija</string>
-    <string name="acra_dialog_text">Atsiprašome, bet %1$s susidūrė su netikėta problema ir ją reikia uždaryti. Padėkite mums tobulėti išsiųsdami strigčių ataskaitą.\n\n%1$s vertina jūsų privatumą, o surinkti duomenys naudojami tik programos stabilumui pagerinti. Jokia asmeninė informacija nerenkama. Dėkojame už palaikymą!</string>
+    <string name="acra_dialog_text">Atsiprašome, bet %1$s susidūrė su netikėta problema ir turi būti uždarytas. Padėkite mums tobulėti išsiųsdami strigčių ataskaitą.\n\n%1$s vertina jūsų privatumą, o surinkti duomenys naudojami tik programos stabilumui pagerinti. Jokia asmeninė informacija nerenkama. Dėkojame už palaikymą!</string>
     <string name="acra_send_report">Siųsti ataskaitą</string>
     <string name="acra_dont_send">Nesiųsti</string>
     <string name="acra_mail_body">Aprašykite problemą, su kuria susidūrėte:</string>

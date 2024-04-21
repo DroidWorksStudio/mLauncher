@@ -28,7 +28,7 @@
 ## Vertimai:
 
 - Daug žmonių išvertė programėlę į šias kalbas. Dėkojame jums visiems.
-  – afrikanų
+  – Afrikanų kalba
   - Arabų kalba
   - Albanų kalba
   - Bulgarų kalba
@@ -68,7 +68,7 @@
   - Rusų kalba
   - Serbų kalba
   - Sindų kalba
-  – slovakas
+  – Slovakų kalba
   - Ispanų kalba
   - Švedų kalba
   - Tailandiečių kalba
