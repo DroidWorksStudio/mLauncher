@@ -202,6 +202,7 @@ class AppDrawerAdapter(
             with(itemView) {
                 val prefs = Prefs(context)
                 appHideLayout.visibility = View.GONE
+                appRenameLayout.visibility = View.GONE
 
                 // set show/hide icon
                 if (flag == AppDrawerFlag.HiddenApps) {
