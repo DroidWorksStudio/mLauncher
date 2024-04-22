@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Implemented Enhancements:
+
+- Add visibility control for app rename layout in AppDrawerAdapter - ([dd4dbd5](https://github.com/DroidWorksStudio/mLauncher/commit/dd4dbd5a25bc02cba4e9dde73d2d4fd6fac56736))
+
 ### Bug Fixes:
 
 - Fixed the backup so backups have timestamps. - ([886a189](https://github.com/DroidWorksStudio/mLauncher/commit/886a1897a060a7548d02ed10c8832aab7f2d5daa))
