@@ -32,7 +32,6 @@ import android.view.WindowManager
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.view.ContextThemeWrapper
-import androidx.core.app.ActivityCompat
 import com.github.droidworksstudio.mlauncher.BuildConfig
 import com.github.droidworksstudio.mlauncher.data.AppModel
 import com.github.droidworksstudio.mlauncher.data.Constants
@@ -40,8 +39,10 @@ import com.github.droidworksstudio.mlauncher.data.Prefs
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.text.Collator
+import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
+import java.util.Locale
 import kotlin.math.pow
 import kotlin.math.sqrt
 
@@ -376,12 +377,16 @@ fun dp2px(resources: Resources, dp: Int): Int {
 }
 
 fun storeFile(activity: Activity) {
+    // Generate a unique filename with a timestamp
+    val timeStamp = SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(Date())
+    val fileName = "backup_$timeStamp.json"
+
     val intent = Intent(Intent.ACTION_CREATE_DOCUMENT).apply {
         addCategory(Intent.CATEGORY_OPENABLE)
         type = "application/json"
-        putExtra(Intent.EXTRA_TITLE, "backup.json")
+        putExtra(Intent.EXTRA_TITLE, fileName)
     }
-    ActivityCompat.startActivityForResult(activity, intent, Constants.BACKUP_WRITE, null)
+    activity.startActivityForResult(intent, Constants.BACKUP_WRITE, null)
 }
 
 fun loadFile(activity: Activity) {
@@ -389,7 +394,7 @@ fun loadFile(activity: Activity) {
         addCategory(Intent.CATEGORY_OPENABLE)
         type = "application/json"
     }
-    ActivityCompat.startActivityForResult(activity, intent, Constants.BACKUP_READ, null)
+    activity.startActivityForResult(intent, Constants.BACKUP_READ, null)
 }
 
 @RequiresApi(Build.VERSION_CODES.Q)
