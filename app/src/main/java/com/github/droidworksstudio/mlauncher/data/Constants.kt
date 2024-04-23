@@ -225,6 +225,70 @@ object Constants {
 
         private fun value(): String {
             return when (this) {
+                System -> Locale.getDefault().language
+                Afrikaans -> "af"
+                Albanian -> "sq"
+                Arabic -> "ar"
+                Bulgarian -> "bg"
+                Chinese -> "zh"
+                Croatian -> "hr"
+                Czech -> "cs"
+                Danish -> "da"
+                Dutch -> "nl"
+                EnglishUS -> "en"
+                EnglishGB -> "en"
+                EnglishCA -> "en"
+                Estonian -> "et"
+                Filipino -> "fil"
+                Finnish -> "fi"
+                French -> "fr"
+                Georgian -> "ka"
+                German -> "de"
+                Greek -> "el"
+                Hawaiian -> "haw"
+                Hebrew -> "iw"
+                Hindi -> "hi"
+                Hungarian -> "hu"
+                Icelandic -> "is"
+                Indonesian -> "in"
+                Irish -> "ga"
+                Italian -> "it"
+                Japanese -> "ja"
+                Korean -> "ko"
+                Latin -> "la"
+                Lithuanian -> "lt"
+                Luxembourgish -> "lb"
+                Malagasy -> "mg"
+                Malay -> "ms"
+                Malayalam -> "ml"
+                Maltese -> "mt"
+                Nepali -> "ne"
+                Norwegian -> "no"
+                Persian -> "fa"
+                Polish -> "pl"
+                Portuguese -> "pt"
+                Punjabi -> "pa"
+                Romanian -> "ro"
+                Russian -> "ru"
+                Serbian -> "sr"
+                Sindhi -> "sd"
+                Slovak -> "sk"
+                Spanish -> "es"
+                Swahili -> "sw"
+                Swedish -> "sv"
+                Thai -> "th"
+                Turkish -> "tr"
+                Ukrainian -> "uk"
+                Vietnamese -> "vi"
+            }
+        }
+
+        fun timezone(): Locale {
+            return Locale(zone())
+        }
+
+        private fun zone(): String {
+            return when (this) {
                 System -> Locale.getDefault().toLanguageTag()
                 Afrikaans -> "af-ZA"
                 Albanian -> "sq-AL"

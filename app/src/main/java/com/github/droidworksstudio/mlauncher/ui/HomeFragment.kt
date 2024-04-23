@@ -120,14 +120,14 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         val filter = IntentFilter(Intent.ACTION_BATTERY_CHANGED)
         requireContext().registerReceiver(batteryReceiver, filter)
 
-        val locale = prefs.language.locale()
-        val best12 = DateFormat.getBestDateTimePattern(locale, "hhmma")
-        val best24 = DateFormat.getBestDateTimePattern(locale, "HHmm")
+        val timezone = prefs.language.timezone()
+        val best12 = DateFormat.getBestDateTimePattern(timezone, "hhmma")
+        val best24 = DateFormat.getBestDateTimePattern(timezone, "HHmm")
         binding.clock.format12Hour = best12
         binding.clock.format24Hour = best24
 
-        val best12Date = DateFormat.getBestDateTimePattern(locale, "eeeddMMM")
-        val best24Date = DateFormat.getBestDateTimePattern(locale, "eeeddMMM")
+        val best12Date = DateFormat.getBestDateTimePattern(timezone, "eeeddMMM")
+        val best24Date = DateFormat.getBestDateTimePattern(timezone, "eeeddMMM")
         binding.date.format12Hour = best12Date
         binding.date.format24Hour = best24Date
 
