@@ -11,6 +11,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Bug Fixes:
 
+- Correct search behavior in AppDrawerFragment - ([0d12eb5](https://github.com/DroidWorksStudio/mLauncher/commit/0d12eb54ee59fb9d4bfc202fe1284e93895cb449))
 - Fixed the backup so backups have timestamps. - ([886a189](https://github.com/DroidWorksStudio/mLauncher/commit/886a1897a060a7548d02ed10c8832aab7f2d5daa))
 
 ### Language Support:
