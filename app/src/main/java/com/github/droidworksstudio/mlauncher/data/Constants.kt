@@ -424,4 +424,5 @@ object Constants {
     const val URL_BING_SEARCH = "https://bing.com/search?q="
     const val URL_BRAVE_SEARCH = "https://search.brave.com/search?q="
     const val URL_GOOGLE_PLAY_STORE = "https://play.google.com/store/search?c=apps&q"
+    const val APP_GOOGLE_PLAY_STORE = "market://search?c=apps&q"
 }

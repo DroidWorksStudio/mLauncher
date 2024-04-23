@@ -41,22 +41,24 @@ fun Context.openUrl(url: String) {
 
 fun Context.searchOnPlayStore(query: String? = null): Boolean {
     return try {
-        startActivity(
-            Intent(
-                Intent.ACTION_VIEW,
-                Uri.parse("${Constants.URL_GOOGLE_PLAY_STORE}=$query")
-            ).addFlags(
-                Intent.FLAG_ACTIVITY_NO_HISTORY or
-                        Intent.FLAG_ACTIVITY_NEW_DOCUMENT or
-                        Intent.FLAG_ACTIVITY_MULTIPLE_TASK
-            )
-        )
+        val playStoreIntent = Intent(Intent.ACTION_VIEW)
+        playStoreIntent.data = Uri.parse("${Constants.APP_GOOGLE_PLAY_STORE}=$query")
+
+        // Check if the Play Store app is installed
+        if (playStoreIntent.resolveActivity(packageManager) != null) {
+            startActivity(playStoreIntent)
+        } else {
+            // If Play Store app is not installed, open Play Store website in browser
+            playStoreIntent.data = Uri.parse("${Constants.URL_GOOGLE_PLAY_STORE}=$query")
+            startActivity(playStoreIntent)
+        }
         true
     } catch (e: Exception) {
         e.printStackTrace()
         false
     }
 }
+
 
 fun Context.isPackageInstalled(packageName: String, userHandle: UserHandle = android.os.Process.myUserHandle()): Boolean {
     val launcher = getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps

@@ -207,17 +207,19 @@ class AppDrawerFragment : Fragment() {
                             searchQuery = query?.substringAfter("!bg ")
                             Constants.URL_BING_SEARCH
                         }
-                        else -> return false // Handle unsupported search engines or invalid queries
+                        else -> {
+                            // Handle unsupported search engines or invalid queries
+                            if (adapter.itemCount == 0 && requireContext().searchOnPlayStore(query?.trim()).not()) {
+                                requireContext().openSearch(query?.trim())
+                            } else {
+                                adapter.launchFirstInList()
+                            }
+                            return true // Exit the function
+                        }
                     }
                     val encodedQuery = Uri.encode(searchQuery)
                     val fullUrl = "$searchUrl$encodedQuery"
                     requireContext().openUrl(fullUrl)
-                }
-                else if (adapter.itemCount == 0 && requireContext().searchOnPlayStore(query?.trim()).not()) {
-                    requireContext().openSearch(query?.trim())
-                }
-                else {
-                    adapter.launchFirstInList()
                 }
                 return true
             }
