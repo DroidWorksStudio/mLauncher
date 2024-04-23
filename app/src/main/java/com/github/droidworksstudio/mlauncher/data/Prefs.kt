@@ -310,11 +310,11 @@ class Prefs(val context: Context) {
                 Constants.Language.valueOf(
                     prefs.getString(
                         APP_LANGUAGE,
-                        Constants.Language.EnglishUS.name
+                        Constants.Language.System.name
                     ).toString()
                 )
             } catch (_: Exception) {
-                Constants.Language.EnglishUS
+                Constants.Language.System
             }
         }
         set(value) = prefs.edit().putString(APP_LANGUAGE, value.name).apply()

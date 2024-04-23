@@ -121,13 +121,17 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         requireContext().registerReceiver(batteryReceiver, filter)
 
         val timezone = prefs.language.timezone()
+        val is24HourFormat = DateFormat.is24HourFormat(requireContext())
         val best12 = DateFormat.getBestDateTimePattern(timezone, "hhmma")
         val best24 = DateFormat.getBestDateTimePattern(timezone, "HHmm")
-        binding.clock.format12Hour = best12
-        binding.clock.format24Hour = best24
+        val timePattern = if (is24HourFormat) best24 else best12
+        binding.clock.format12Hour = timePattern
+        binding.clock.format24Hour = timePattern
 
         val best12Date = DateFormat.getBestDateTimePattern(timezone, "eeeddMMM")
         val best24Date = DateFormat.getBestDateTimePattern(timezone, "eeeddMMM")
+
+        Log.d("timezone","timezone: $timezone, best12: $best12, best24: $best24, best12Date: $best12Date, best24Date: $best24Date")
         binding.date.format12Hour = best12Date
         binding.date.format24Hour = best24Date
 
