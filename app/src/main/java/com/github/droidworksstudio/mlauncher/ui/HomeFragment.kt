@@ -131,7 +131,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         val best12Date = DateFormat.getBestDateTimePattern(timezone, "eeeddMMM")
         val best24Date = DateFormat.getBestDateTimePattern(timezone, "eeeddMMM")
 
-        Log.d("timezone","timezone: $timezone, best12: $best12, best24: $best24, best12Date: $best12Date, best24Date: $best24Date")
         binding.date.format12Hour = best12Date
         binding.date.format24Hour = best24Date
 
