@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Implemented Enhancements:
 
+- Update time formatting based on system settings - ([e6b3939](https://github.com/DroidWorksStudio/mLauncher/commit/e6b393974e3b1b65d84e583b2255d40a10b370b7))
 - Add timezone support for date and time formatting - ([8be6d1c](https://github.com/DroidWorksStudio/mLauncher/commit/8be6d1cbcb1ab35abfca0ae2af3d37913d55745d))
 - Add visibility control for app rename layout in AppDrawerAdapter - ([dd4dbd5](https://github.com/DroidWorksStudio/mLauncher/commit/dd4dbd5a25bc02cba4e9dde73d2d4fd6fac56736))
 
