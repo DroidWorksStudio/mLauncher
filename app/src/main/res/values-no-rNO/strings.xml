@@ -47,6 +47,7 @@
     <string name="extend_home_apps_area">Utvid klikkbart område</string>
     <string name="home_alignment_bottom">Hjemmeskjerm Juster bunn</string>
     <!-- Alignment Strings -->
+    <string name="display_app_usage_stats">Vis appbruksstatistikk</string>
     <string name="home_alignment">Apper startskjermen</string>
     <string name="clock_alignment">Klokke og dato</string>
     <string name="drawer_alignment">Apper i app drawer</string>
@@ -61,6 +62,7 @@
     <string name="long_swipe_right_app">Langt trykk Sveip til høyre</string>
     <string name="clock_click_app">Klikk på klokke</string>
     <string name="date_click_app">Klikk på dato</string>
+    <string name="usage_click_app">Klikk på Total bruk</string>
     <string name="double_tap">Dobbel trykk</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Vis varsling</string>
@@ -125,6 +127,7 @@
     <string name="acra_mail_body">Vennligst beskriv problemet du støtt på:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Alle apper</string>
+    <string name="total_screen_time">Total skjermtid</string>
     <string name="can_not_delete_system_apps">Kan ikke slette systemapper</string>
     <string name="please_select_app">Velg en app</string>
     <string name="drawer_list_empty_hint">Ingen apper funnet</string>
