@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
+## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
+
+### Implemented Enhancements:
+
+- Add option to display app usage stats. - ([b2bc061](https://github.com/DroidWorksStudio/mLauncher/commit/b2bc061ec4c6c9a7e7a76152d0f5598baa73dddf))
+
 ## [1.5.5](https://github.com/DroidWorksStudio/mLauncher/tree/1.5.5) - (23, April 2024)
 
 ### Implemented Enhancements:
