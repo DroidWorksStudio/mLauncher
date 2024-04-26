@@ -12,6 +12,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Fixed the ability for the launcher to ask for usage permission. - ([580a988](https://github.com/DroidWorksStudio/mLauncher/commit/580a988ae48032ba89dd780f5c9c2018ba579708))
 
+### Feature Removal:
+
+- Delete .README.md.kate-swp - ([bf08deb](https://github.com/DroidWorksStudio/mLauncher/commit/bf08debe6ca9dcd0880634474e361f2608d7a43b))
+
 ### Language Support:
 
 - Updated Language Files. ([#477](https://github.com/DroidWorksStudio/mLauncher/issues/477)) - ([84ca97b](https://github.com/DroidWorksStudio/mLauncher/commit/84ca97bf4f368b5efdb6815777ffe066a364b072))
