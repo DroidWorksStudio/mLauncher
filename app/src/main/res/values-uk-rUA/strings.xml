@@ -47,6 +47,7 @@
     <string name="extend_home_apps_area">Розширити область, яку можна натиснути</string>
     <string name="home_alignment_bottom">Вирівнювання головного екрана за нижнім краєм</string>
     <!-- Alignment Strings -->
+    <string name="display_app_usage_stats">Показати статистику використання програми</string>
     <string name="home_alignment">Головний екран додатків</string>
     <string name="clock_alignment">Годинник і дата</string>
     <string name="drawer_alignment">Меню додатків</string>
@@ -61,6 +62,7 @@
     <string name="long_swipe_right_app">Тривале натискання Проведіть праворуч</string>
     <string name="clock_click_app">Натисніть на Годинник</string>
     <string name="date_click_app">Натисніть на дату</string>
+    <string name="usage_click_app">Натисніть Загальне використання</string>
     <string name="double_tap">Подвійний дотик</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Показувати сповіщення</string>
@@ -125,6 +127,7 @@
     <string name="acra_mail_body">Опишіть проблему, з якою ви зіткнулися:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Всі програми</string>
+    <string name="total_screen_time">Загальний час екрану</string>
     <string name="can_not_delete_system_apps">Не вдається видалити системні програми</string>
     <string name="please_select_app">Виберіть додаток</string>
     <string name="drawer_list_empty_hint">Додатки не знайдені</string>
