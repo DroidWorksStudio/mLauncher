@@ -2,8 +2,8 @@ Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Min
 
 # Fork s extra funkciami
 
-- Odstránený neporiadok, ako sú reklamy a odkazy
-- Môžete premenovať aplikácie na paneli aplikácií (Premenovanie aplikácií na domovskej obrazovke je už podporované. Stačí dlho kliknúť na aplikáciu na domovskej obrazovke a začať písať)
+- Odstránený neporiadok, ako sú reklamy a odkazy.
+- Môžete premenovať aplikácie na paneli aplikácií (Premenovanie aplikácií na domovskej obrazovke je už podporované. Stačí dlho kliknúť na aplikáciu na domovskej obrazovke a začať písať.)
 - Pridali sme oveľa viac možností pre gestá na domovskej obrazovke:
     - Aktuálne gestá sú:
         - Potiahnutie prstom nahor, nadol, doľava, doprava
@@ -19,11 +19,13 @@ Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Min
         - Dialógové okno napájania
         - Vyhotoviť snímku obrazovky
         - Zakázať Gesto
-- Hodiny môžete umiestniť aj nezávisle od domovských aplikácií
-- Zmeňte zarovnanie aplikácií v paneli aplikácií
-- Nastavenia uzamknutia za biometriou (prepínač)
-- Zmena veľkosti písma
+- Hodiny môžete umiestniť aj nezávisle od domácich aplikácií.
+- Zmeňte zarovnanie aplikácií v zásuvke aplikácií nezávisle od úvodnej obrazovky.
+- Zmeňte veľkosť písma častí úvodnej obrazovky nezávisle od seba.
 - Odstránené povolenie na internet. Nikdy neviete, čo o vás chce vývojár aplikácie vedieť.
+- Nastavenia uzamknutia za biometriou (prepínač)
+- Pridaná možnosť nahlásiť zlyhanie prostredníctvom e-mailu.
+- Pridaná možnosť zobraziť čas používania aplikácie.
 
 ## Preklady:
 
