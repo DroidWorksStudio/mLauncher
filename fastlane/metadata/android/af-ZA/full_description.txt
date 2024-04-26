@@ -2,8 +2,8 @@ Gevurk van <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mini
 
 # Gevurk met ekstra kenmerke
 
-- Verwyder rommel, soos advertensies en skakels
-- Jy kan programme in die programlaai hernoem (Hernoem van programme op die tuisskerm word reeds ondersteun. Langkliek net op 'n toepassing op die tuisskerm en begin tik)
+- Verwyder rommel, soos advertensies en skakels.
+- Jy kan programme in die programlaai hernoem (Hernoem van programme op die tuisskerm word reeds ondersteun. Langkliek net op 'n toepassing op die tuisskerm en begin tik.)
 - Ons het baie meer opsies vir gebare op die tuisskerm bygevoeg:
     - Gebare is nou:
         - Swiep op, af, links, regs
@@ -19,11 +19,13 @@ Gevurk van <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mini
         - Krag dialoog
         - Neem 'n skermskoot
         - Deaktiveer gebaar
-- Jy kan ook die horlosie onafhanklik van die tuistoepassings posisioneer
-- Verander belyning van toepassings in toepassingslaai
-- Sluit instellings agter biometrie (wissel)
-- Verander lettergrootte
+- Jy kan ook die horlosie onafhanklik van die tuistoepassings posisioneer.
+- Verander die belyning van toepassings in app-laai onafhanklik van die tuisskerm.
+- Verander lettergrootte van gedeeltes van die tuisskerm onafhanklik van mekaar.
 - Verwyder internettoestemming. Jy weet nooit wat 'n app-ontwikkelaar van jou wil weet nie.
+- Sluit instellings agter biometrie (wissel)
+- Bygevoeg die vermoë om 'n ongeluk per e-pos aan te meld.
+- Bygevoeg die vermoë om toepassingsgebruikstyd te sien.
 
 ## Vertalings:
 
