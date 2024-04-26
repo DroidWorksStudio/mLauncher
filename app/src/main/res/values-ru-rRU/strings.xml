@@ -47,6 +47,7 @@
     <string name="extend_home_apps_area">Расширить кликабельную область</string>
     <string name="home_alignment_bottom">Главный экран Выровнять по нижнему краю</string>
     <!-- Alignment Strings -->
+    <string name="display_app_usage_stats">Отображение статистики использования приложений</string>
     <string name="home_alignment">Домашний экран приложений</string>
     <string name="clock_alignment">Часы и дата</string>
     <string name="drawer_alignment">Приложения в меню приложений</string>
@@ -61,6 +62,7 @@
     <string name="long_swipe_right_app">Длительное нажатие Проведите пальцем вправо</string>
     <string name="clock_click_app">Нажмите на часы</string>
     <string name="date_click_app">Нажмите на дату</string>
+    <string name="usage_click_app">Нажмите «Общее использование».</string>
     <string name="double_tap">Двойное нажатие</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Показать уведомление</string>
@@ -125,6 +127,7 @@
     <string name="acra_mail_body">Опишите проблему, с которой вы столкнулись:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Все приложения</string>
+    <string name="total_screen_time">Общее время экрана</string>
     <string name="can_not_delete_system_apps">Не могу удалить системные приложения</string>
     <string name="please_select_app">Пожалуйста, выберите приложение</string>
     <string name="drawer_list_empty_hint">Не найдено приложений</string>
