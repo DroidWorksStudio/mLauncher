@@ -2,8 +2,8 @@ Gegabelt von <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mi
 
 # Geforkt mit zusätzlichen Funktionen
 
-- Unübersichtliches, wie Werbung und Links, wurde entfernt.
-- Sie können Apps im App-Drawer umbenennen (Das Umbenennen von Apps auf dem Startbildschirm wird bereits unterstützt. Klicken Sie einfach lange auf eine App auf dem Startbildschirm und beginnen Sie zu tippen)
+- Unordnung wie Anzeigen und Links entfernt.
+- Sie können Apps im App-Drawer umbenennen (Das Umbenennen von Apps auf dem Startbildschirm wird bereits unterstützt. Klicken Sie einfach lange auf eine App auf dem Startbildschirm und beginnen Sie mit der Eingabe.)
 - Viel mehr Anpassungsmöglichkeiten bei den Gesten auf dem Startbildschirm
     - Gesten sind jetzt:
         - Wischen nach oben, unten, links, rechts
@@ -19,11 +19,13 @@ Gegabelt von <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mi
         - Power-Dialog
         - Mach ein Bildschirmfoto
         - Geste deaktivieren
-- Uhr unabhängig von Home-Apps ausrichten
-- Ausrichtung von Anwendungen im App-Drawer ändern
-- Einstellungen hinter Biometrie sperren (umschalten)
-- Schriftgröße ändern
+- Sie können die Uhr auch unabhängig von den Home-Apps positionieren.
+- Ändern Sie die Ausrichtung von Apps im App-Drawer unabhängig vom Homescreen.
+- Ändern Sie die Schriftgröße einzelner Abschnitte des Homescreens unabhängig voneinander.
 - Entfernte Interneterlaubnis - Entfernte Interneterlaubnis Du weißt nie, was ein App-Entwickler über dich wissen möchte.
+- Einstellungen hinter Biometrie sperren (umschalten)
+- Möglichkeit hinzugefügt, Abstürze per E-Mail zu melden.
+- Möglichkeit zum Anzeigen der App-Nutzungsdauer hinzugefügt.
 
 ## Übersetzungen:
 
