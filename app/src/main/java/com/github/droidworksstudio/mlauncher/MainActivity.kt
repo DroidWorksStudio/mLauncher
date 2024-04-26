@@ -80,7 +80,7 @@ class MainActivity : AppCompatActivity() {
         // val getAppVersionAndHash = AppDetailsHelper.getAppVersionAndHash(this, "app.olauncher.debug", pm)
         // Log.d("isPremiumInstalled", getAppVersionAndHash.toString())
 
-        if (prefs.recentAppsDisplayed) {
+        if (prefs.recentAppsDisplayed || prefs.appUsageStats) {
             // Check if the usage permission is not granted
             if (!hasUsagePermission(this)) {
                 // Postpone showing the dialog until the activity is running
