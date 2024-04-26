@@ -47,6 +47,7 @@
     <string name="extend_home_apps_area">ڪلڪ ڪرڻ لائق علائقو وڌايو</string>
     <string name="home_alignment_bottom">گھر جي اسڪرين جي ھيٺان ترتيب ڏيو</string>
     <!-- Alignment Strings -->
+    <string name="display_app_usage_stats">ايپ استعمال جا انگ اکر ڏيکاريو</string>
     <string name="home_alignment">ائپس گھر اسڪرين</string>
     <string name="clock_alignment">گھڙي ۽ تاريخ</string>
     <string name="drawer_alignment">ايپ دراج ۾ ائپس</string>
@@ -61,6 +62,7 @@
     <string name="long_swipe_right_app">ڊگھو دٻايو ساڄي سوائپ ڪريو</string>
     <string name="clock_click_app">گھڙي تي ڪلڪ ڪريو</string>
     <string name="date_click_app">تي ڪلڪ ڪريو تاريخ</string>
+    <string name="usage_click_app">کل استعمال تي ڪلڪ ڪريو</string>
     <string name="double_tap">ڊبل ٽيپ ڪريو</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">نوٽيفڪيشن ڏيکاريو</string>
@@ -125,6 +127,7 @@
     <string name="acra_mail_body">مھرباني ڪري بيان ڪريو ته توھان جو مسئلو آھي:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">سڀ ائپس</string>
+    <string name="total_screen_time">ڪل اسڪرين وقت</string>
     <string name="can_not_delete_system_apps">سسٽم ائپس کي ختم نٿو ڪري سگھجي</string>
     <string name="please_select_app">مهرباني ڪري هڪ ايپ چونڊيو</string>
     <string name="drawer_list_empty_hint">ڪابه ايپس نه ملي</string>
