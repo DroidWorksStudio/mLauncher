@@ -2,8 +2,8 @@ Bifurcado desde <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>.
 
 # Bifurcado con características extra
 
-- Eliminación de elementos innecesarios, como anuncios y enlaces.
-- Puedes renombrar aplicaciones en el cajón de aplicaciones (ya es posible renombrar aplicaciones en la pantalla de inicio). Sólo tienes que hacer una pulsación larga en una aplicación de la pantalla de inicio y empezar a escribir)
+- Se eliminó el desorden, como anuncios y enlaces.
+- Puedes renombrar aplicaciones en el cajón de aplicaciones (ya es posible renombrar aplicaciones en la pantalla de inicio). Simplemente haga clic largo en una aplicación en la pantalla de inicio y comience a escribir).
 - Mucha más personalización de los gestos de la pantalla de inicio
     - Los gestos son ahora:
         - Deslizar hacia arriba, abajo, izquierda, derecha
@@ -19,11 +19,13 @@ Bifurcado desde <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>.
         - Diálogo de energía
         - Tomar una captura de pantalla
         - Desactivar gesto
-- Alinear el reloj independientemente de las aplicaciones de inicio
-- Cambiar la alineación de las aplicaciones en el cajón de aplicaciones
-- Bloquear la configuración detrás de la biometría (alternar)
-- Cambiar el tamaño de letra
+- También puedes posicionar el reloj independientemente de las apps de casa.
+- Cambie la alineación de las aplicaciones en el cajón de aplicaciones independientemente de la pantalla de inicio.
+- Cambie el tamaño de fuente de las secciones de la pantalla de inicio de forma independiente entre sí.
 - Permiso de Internet eliminado - Permiso de Internet eliminado - Permiso de Internet eliminado - Permiso de Internet eliminado Nunca sabes lo que un desarrollador de aplicaciones quiere saber sobre ti.
+- Bloquear la configuración detrás de la biometría (alternar)
+- Se agregó la capacidad de informar fallas por correo electrónico.
+- Se agregó la capacidad de ver el tiempo de uso de la aplicación.
 
 ## Traducciones:
 
