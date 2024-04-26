@@ -47,6 +47,7 @@
     <string name="extend_home_apps_area">Praetende Clickable Area</string>
     <string name="home_alignment_bottom">Domum Screen Conlineare Solum</string>
     <!-- Alignment Strings -->
+    <string name="display_app_usage_stats">Propono App Ritus Stats</string>
     <string name="home_alignment">Apps domum screen</string>
     <string name="clock_alignment">Horologium et diem</string>
     <string name="drawer_alignment">Apps in app drawer</string>
@@ -61,6 +62,7 @@
     <string name="long_swipe_right_app">Long Press Tollenone recta</string>
     <string name="clock_click_app">Click in Horologium</string>
     <string name="date_click_app">Click in Date</string>
+    <string name="usage_click_app">Click in Summa Usu</string>
     <string name="double_tap">ICTUS duplo</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Ostende Notification</string>
@@ -125,6 +127,7 @@
     <string name="acra_mail_body">Quaeso describere exitus te offendit:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Omnes apps</string>
+    <string name="total_screen_time">Totalis \'collaborative text Tempus</string>
     <string name="can_not_delete_system_apps">Non potest Delere Ratio Apps</string>
     <string name="please_select_app">Placere eligere app</string>
     <string name="drawer_list_empty_hint">Non apps invenerunt</string>
