@@ -2,8 +2,8 @@ Rozwidlony od <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. M
 
 # rozwidlenie z dodatkowymi funkcjami
 
-- Usunięto bałagan, taki jak reklamy i linki
-- Można zmieniać nazwy aplikacji w szufladzie aplikacji (Zmiana nazw aplikacji na ekranie głównym jest już obsługiwana. Wystarczy długo kliknąć na aplikację na ekranie głównym i zacząć pisać)
+- Usunięto bałagan, taki jak reklamy i linki.
+- Można zmieniać nazwy aplikacji w szufladzie aplikacji (Zmiana nazw aplikacji na ekranie głównym jest już obsługiwana. Po prostu długo kliknij aplikację na ekranie głównym i zacznij pisać.)
 - Znacznie większe możliwości dostosowywania gestów na ekranie głównym
     - Gesty są teraz:
         - Przesuwanie w górę, dół, lewo, prawo
@@ -19,11 +19,13 @@ Rozwidlony od <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. M
         - Okno zasilania
         - Zrób zrzut ekranu
         - Wyłącz gest
-- Wyrównaj zegar niezależnie od aplikacji domowych
-- Zmiana wyrównania aplikacji w szufladzie aplikacji
-- Zablokuj ustawienia biometrii (przełącznik)
-- Zmiana rozmiaru czcionki
+- Możesz także ustawić zegar niezależnie od aplikacji domowych.
+- Zmień ustawienie aplikacji w szufladzie aplikacji niezależnie od ekranu głównego.
+- Zmień rozmiar czcionki w sekcjach ekranu głównego niezależnie od siebie.
 - Usunięte pozwolenie na korzystanie z Internetu Nigdy nie wiesz, co deweloper aplikacji chce o tobie wiedzieć.
+- Zablokuj ustawienia biometrii (przełącznik)
+- Dodano możliwość raportowania awarii poprzez e-mail.
+- Dodano możliwość przeglądania czasu użytkowania aplikacji.
 
 ## Tłumaczenia:
 
