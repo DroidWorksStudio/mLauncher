@@ -2,8 +2,8 @@
 
 #Daha fazla özelliklli bir alıntı.
 
-- Reklamlar ve bağlantılar gibi gereksiz şeyler kaldırdı
-- Uygulama-çekmecesindeki uygulamaları yeniden adlandırabilirsiniz (Ana ekrandaki uygulamaları yeniden adlandırmak zaten desteklenmektedir. Ana ekranda bir uygulamaya uzun tıkla ve yazmaya başla)
+- Reklamlar ve bağlantılar gibi dağınıklık kaldırıldı.
+- Uygulama-çekmecesindeki uygulamaları yeniden adlandırabilirsiniz (Ana ekrandaki uygulamaları yeniden adlandırmak zaten desteklenmektedir. Ana ekrandaki bir uygulamaya uzun tıklayıp yazmaya başlamanız yeterli.)
 - Ana ekran'daki jestler için  çok daha fazla seçenek var:
     - Jestler Günümüz:
         - Yukarı, aşağı, sola, sağa Kaydırma
@@ -19,11 +19,13 @@
         - Güç Diyaloğu
         - Ekran görüntüsü al
         - Hareketi Devre Dışı Bırak
-- Saati Ev uygulamalarından ayrı olarak hizalayabilirsinizde.
-- Uygulama-çekmecesindeki uygulamaların hizalamasını değiştir
-- Biyometrinin arkasındaki ayarları kilitleyin (geçiş)
-- Yazı tipi boyutunu değiştir
+- Saati ev uygulamalarından bağımsız olarak da konumlandırabilirsiniz.
+- Ana ekrandan bağımsız olarak uygulama çekmecesindeki uygulamaların hizalamasını değiştirin.
+- Ana ekranın bölümlerinin yazı tipi boyutunu birbirinden bağımsız olarak değiştirin.
 - İnternet izni kaldırıldı. Bir uygulama geliştiricisinin sizin hakkınızda ne bilmek istediğini asla bilemezsin.
+- Biyometrinin arkasındaki ayarları kilitleyin (geçiş)
+- Çökmeyi e-posta yoluyla bildirme yeteneği eklendi.
+- Uygulama kullanım süresini görüntüleme özelliği eklendi.
 
 ## Çeviriler:
 
