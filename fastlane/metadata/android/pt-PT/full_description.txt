@@ -2,8 +2,8 @@ Bifurcado de <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. M�
 
 # Forked com recursos extras
 
-- Removida a confusão, como anúncios e links
-- É possível renomear aplicações na gaveta da aplicação (a renomeação de aplicações no ecrã inicial já é suportada. Basta um clique longo numa aplicação no ecrã inicial e começar a digitar)
+- Removida a desordem, como anúncios e links.
+- É possível renomear aplicações na gaveta da aplicação (a renomeação de aplicações no ecrã inicial já é suportada. Basta clicar longamente em um aplicativo na tela inicial e começar a digitar.)
 - Muito mais personalizabilidade nos gestos do ecrã inicial
     - Os gestos estão agora:
         - Deslizando para cima, para baixo, esquerda, direita
@@ -19,11 +19,13 @@ Bifurcado de <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. M�
         - Diálogo de energia
         - Faça uma captura de tela
         - Desativar gesto
-- Alinhar o relógio independentemente das aplicações domésticas
-- Alterar o alinhamento das aplicações no app-drawer
-- Bloquear configurações por trás da biometria (alternar)
-- Alterar o tamanho da letra
+- Você também pode posicionar o relógio independentemente dos aplicativos domésticos.
+- Altere o alinhamento de aplicativos na gaveta de aplicativos independente da tela inicial.
+- Altere o tamanho da fonte das seções da tela inicial independentes umas das outras.
 - Removida a permissão da Internet - Removida a permissão da Internet - Removida a permissão da Internet Você nunca sabe o que um desenvolvedor do app quer saber sobre você.
+- Bloquear configurações por trás da biometria (alternar)
+- Adicionada a capacidade de relatar falhas por e-mail.
+- Adicionada a capacidade de visualizar o tempo de uso do aplicativo.
 
 ## Traduções:
 
