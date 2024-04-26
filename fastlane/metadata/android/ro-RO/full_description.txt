@@ -2,8 +2,8 @@ Bifurcat de la <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. 
 
 # Am încercat cu caracteristici suplimentare
 
-- A eliminat dezordinea, cum ar fi anunțurile și linkurile
-- Puteți redenumi aplicațiile din App-drawer (redenumirea aplicațiilor de pe ecranul principal este deja acceptată. Trebuie doar să faceți clic lung pe o aplicație de pe ecranul de pornire și să începeți să scrieți)
+- S-a eliminat dezordinea, cum ar fi reclamele și linkurile.
+- Puteți redenumi aplicațiile din App-drawer (redenumirea aplicațiilor de pe ecranul principal este deja acceptată. Doar faceți clic lung pe o aplicație de pe ecranul de pornire și începeți să tastați.)
 - Am adăugat mult mai multe opțiuni pentru gesturi pe ecranul principal:
     - Gesturile sunt acum:
         - Glisând în sus, jos, stânga, dreapta
@@ -19,11 +19,13 @@ Bifurcat de la <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. 
         - Dialog Power
         - Faceți o captură de ecran
         - Dezactivați gestul
-- De asemenea, puteți poziționa ceasul independent de aplicațiile de pornire
-- Schimbarea alinierii aplicațiilor în App-drawer
-- Blocați setările în spatele biometriei (comutați)
-- Modificarea dimensiunii fontului
+- De asemenea, puteți poziționa ceasul independent de aplicațiile de acasă.
+- Schimbați alinierea aplicațiilor în sertarul de aplicații independent de ecranul de pornire.
+- Schimbați dimensiunea fontului secțiunilor ecranului de pornire independent unele de altele.
 - Permisiunea la internet eliminată. Nu știi niciodată ce vrea să știe un dezvoltator de aplicații despre tine.
+- Blocați setările în spatele biometriei (comutați)
+- S-a adăugat posibilitatea de a raporta blocarea prin e-mail.
+- S-a adăugat posibilitatea de a vizualiza timpul de utilizare a aplicației.
 
 ## Traduceri:
 
