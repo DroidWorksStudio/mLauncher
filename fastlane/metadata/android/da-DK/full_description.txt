@@ -2,8 +2,8 @@ Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Min
 
 # Forked med ekstra funktioner
 
-- Fjernede rod, som f.eks. annoncer og links
-- Du kan omdøbe apps i app-skuffen (omdøbning af apps på startskærmen understøttes allerede. Du skal bare langklikke på en app på startskærmen og begynde at skrive)
+- Fjernet rod, som annoncer og links.
+- Du kan omdøbe apps i app-skuffen (omdøbning af apps på startskærmen understøttes allerede. Bare lang-klik på en app på startskærmen og begynd at skrive.)
 - Vi har tilføjet en masse flere muligheder for fagter på hjemmeskærmen:
     - Bevægelser er nu:
         - Stryg opad, ned, venstre, højre
@@ -19,11 +19,13 @@ Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Min
         - Power Dialog
         - Tag et skærmbillede
         - Deaktiver gestus
-- Du kan også placere uret uafhængigt af hjemmet apps
-- Ændre justeringen af apps i app-skuffen
-- Låseindstillinger bag biometri (skift)
-- Ændre skriftstørrelse
+- Du kan også placere uret uafhængigt af hjemmeapps.
+- Skift justering af apps i app-skuffen uafhængigt af startskærmen.
+- Skift skriftstørrelse på sektioner af startskærmen uafhængigt af hinanden.
 - Fjernet internettilladelse. Du ved aldrig, hvad en app udvikler ønsker at vide om dig.
+- Låseindstillinger bag biometri (skift)
+- Tilføjet muligheden for at rapportere nedbrud via e-mail.
+- Tilføjet muligheden for at se appens brugstid.
 
 ## Oversættelser:
 
