@@ -38,15 +38,21 @@ We try to balance customizability and minimalization well still being simple :)<
         - Clicking on the Date
     - Possible actions now include:
         - Open specified app
+        - Display app list
         - Locking the screen
+        - Show Recent opened apps
         - Opening the notification drawer
         - Opening the quick settings
+        - Power Dialog
+        - Take A Screenshot
+        - Disable Gesture
 - You can also position the clock independently of the home apps.
-- The ability to have a pass code set for the settings page.
 - Change alignment of apps in app-drawer independent from homescreen.
 - Change font size of sections of the homescreen independent of each other.
 - Removed internet permission. You never know what an app developer wants to know about you.
+- Lock settings behind biometrics (toggle)
 - Added the ability to report crashing via email.
+- Added the ability to view app usage time.
 
 </details>
 
