@@ -2,8 +2,8 @@ Bifurqué à partir de <a href="https://github.com/tanujnotes/Olauncher">Olaunch
 
 # Forké avec des fonctionnalités supplémentaires
 
-- Suppression des encombrements, comme les publicités et les liens
-- Vous pouvez renommer les applications dans le tiroir d'applications (le renommage des applications sur l'écran d'accueil est déjà pris en charge. Il suffit de cliquer longuement sur une application de l'écran d'accueil et de commencer à taper).
+- Suppression de l'encombrement, comme les publicités et les liens.
+- Vous pouvez renommer les applications dans le tiroir d'applications (le renommage des applications sur l'écran d'accueil est déjà pris en charge. Cliquez simplement longuement sur une application sur l'écran d'accueil et commencez à taper.)
 - Beaucoup plus de possibilités de personnalisation des gestes de l'écran d'accueil
     - Les gestes sont maintenant :
         - Glissement vers le haut, vers le bas, vers la gauche, vers la droite
@@ -19,11 +19,13 @@ Bifurqué à partir de <a href="https://github.com/tanujnotes/Olauncher">Olaunch
         - Boîte de dialogue d'alimentation
         - Prendre une capture d'écran
         - Désactiver le geste
-- Aligner l'horloge indépendamment des applications domestiques
-- Modifier l'alignement des applications dans le tiroir d'applications
-- Verrouiller les paramètres derrière la biométrie (bascule)
-- Modifier la taille de la police
+- Vous pouvez également positionner l'horloge indépendamment des applications domestiques.
+- Modifiez l'alignement des applications dans le tiroir d'applications indépendamment de l'écran d'accueil.
+- Modifiez la taille de la police des sections de l'écran d'accueil indépendamment les unes des autres.
 - Suppression de l'autorisation d'accès à Internet - Suppression de l'autorisation d'accès à Internet Vous ne savez jamais ce qu'un développeur d'applications veut savoir de vous.
+- Verrouiller les paramètres derrière la biométrie (bascule)
+- Ajout de la possibilité de signaler un crash par e-mail.
+- Ajout de la possibilité d'afficher le temps d'utilisation de l'application.
 
 ## Traductions :
 
