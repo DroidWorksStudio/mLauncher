@@ -2,8 +2,8 @@ Forked mula sa <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. 
 
 # Forked na may mga karagdagang tampok
 
-- Inalis ang kalat, tulad ng mga ad at link
-- Maaari mong palitan ang pangalan ng mga app sa app-drawer (Ang pagpapalit ng pangalan ng mga app sa home screen ay suportado na. Mag-click lang nang matagal sa isang app sa home screen at magsimulang mag-type)
+- Inalis ang kalat, tulad ng mga ad at link.
+- Maaari mong palitan ang pangalan ng mga app sa app-drawer (Ang pagpapalit ng pangalan ng mga app sa home screen ay suportado na. Mag-click lang nang matagal sa isang app sa home screen at magsimulang mag-type.)
 - Nagdagdag kami ng higit pang mga opsyon para sa mga galaw sa home screen:
     - Ang mga galaw ay ngayon:
         - Pag-swipe pataas, pababa, pakaliwa, pakanan
@@ -19,11 +19,13 @@ Forked mula sa <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. 
         - Power Dialog
         - Kumuha ng Screenshot
         - I-disable ang Gesture
-- Maaari mo ring iposisyon ang orasan nang hiwalay sa mga home app
-- Baguhin ang pagkakahanay ng mga app sa app-drawer
-- I-lock ang mga setting sa likod ng biometrics (toggle)
-- Baguhin ang laki ng font
+- Maaari mo ring iposisyon ang orasan nang hiwalay sa mga home app.
+- Baguhin ang pagkakahanay ng mga app sa app-drawer na hiwalay sa homescreen.
+- Baguhin ang laki ng font ng mga seksyon ng homescreen na independyente sa bawat isa.
 - Inalis ang pahintulot sa internet. Hindi mo alam kung ano ang gustong malaman ng isang developer ng app tungkol sa iyo.
+- I-lock ang mga setting sa likod ng biometrics (toggle)
+- Nagdagdag ng kakayahang mag-ulat ng pag-crash sa pamamagitan ng email.
+- Nagdagdag ng kakayahang tingnan ang oras ng paggamit ng app.
 
 ## Mga Pagsasalin:
 
