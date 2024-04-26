@@ -47,6 +47,7 @@
     <string name="extend_home_apps_area">ക്ലിക്ക് ചെയ്യാവുന്ന ഏരിയ വിപുലീകരിക്കുക</string>
     <string name="home_alignment_bottom">ഹോം സ്‌ക്രീൻ താഴെ വിന്യസിക്കുക</string>
     <!-- Alignment Strings -->
+    <string name="display_app_usage_stats">ആപ്പ് ഉപയോഗ സ്ഥിതിവിവരക്കണക്കുകൾ പ്രദർശിപ്പിക്കുക</string>
     <string name="home_alignment">അപ്ലിക്കേഷനുകളുടെ ഹോം സ്‌ക്രീൻ</string>
     <string name="clock_alignment">ക്ലോക്കും തീയതിയും</string>
     <string name="drawer_alignment">ആപ്പ് ഡ്രോയറിലെ ആപ്പുകൾ</string>
@@ -61,6 +62,7 @@
     <string name="long_swipe_right_app">ദീർഘനേരം അമർത്തി വലത്തേക്ക് സ്വൈപ്പ് ചെയ്യുക</string>
     <string name="clock_click_app">ക്ലോക്കിൽ ക്ലിക്ക് ചെയ്യുക</string>
     <string name="date_click_app">തീയതിയിൽ ക്ലിക്ക് ചെയ്യുക</string>
+    <string name="usage_click_app">മൊത്തം ഉപയോഗത്തിൽ ക്ലിക്ക് ചെയ്യുക</string>
     <string name="double_tap">രണ്ടുതവണ ടാപ്പ് ചെയ്യുക</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">അറിയിപ്പ് കാണിക്കുക</string>
@@ -125,6 +127,7 @@
     <string name="acra_mail_body">നിങ്ങൾ നേരിട്ട പ്രശ്നം വിവരിക്കുക:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">എല്ലാ ആപ്പുകളും</string>
+    <string name="total_screen_time">മൊത്തം സ്ക്രീൻ സമയം</string>
     <string name="can_not_delete_system_apps">സിസ്റ്റം ആപ്പുകൾ ഇല്ലാതാക്കാൻ കഴിയില്ല</string>
     <string name="please_select_app">ദയവായി ഒരു ആപ്പ് തിരഞ്ഞെടുക്കുക</string>
     <string name="drawer_list_empty_hint">ആപ്പുകളൊന്നും കണ്ടെത്തിയില്ല</string>
