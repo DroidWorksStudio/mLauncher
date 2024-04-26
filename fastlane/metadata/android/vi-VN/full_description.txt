@@ -2,8 +2,8 @@
 
 # Phân nhánh với các tính năng bổ sung
 
-- Loại bỏ sự lộn xộn, như quảng cáo và liên kết
-- Bạn có thể đổi tên ứng dụng trong ngăn kéo ứng dụng (Đổi tên ứng dụng trên màn hình chính đã được hỗ trợ. Chỉ cần nhấp và giữ vào một ứng dụng trên màn hình chính và bắt đầu nhập)
+- Loại bỏ sự lộn xộn, như quảng cáo và liên kết.
+- Bạn có thể đổi tên ứng dụng trong ngăn kéo ứng dụng (Đổi tên ứng dụng trên màn hình chính đã được hỗ trợ. Chỉ cần nhấp chuột dài vào một ứng dụng trên màn hình chính và bắt đầu nhập.)
 - Chúng tôi đã thêm nhiều tùy chọn hơn cho các cử chỉ trên màn hình chính:
     - Cử chỉ bây giờ là:
         - Vuốt lên, xuống, trái, phải
@@ -19,11 +19,13 @@
         - Hộp thoại nguồn
         - Chụp màn hình
         - Tắt cử chỉ
-- Bạn cũng có thể định vị đồng hồ độc lập với các ứng dụng gia đình
-- Thay đổi căn chỉnh của ứng dụng trong ngăn kéo ứng dụng
-- Khóa cài đặt phía sau sinh trắc học (chuyển đổi)
-- Thay đổi cỡ chữ
+- Bạn cũng có thể định vị đồng hồ độc lập với các ứng dụng trong nhà.
+- Thay đổi cách căn chỉnh các ứng dụng trong ngăn kéo ứng dụng độc lập với màn hình chính.
+- Thay đổi kích thước phông chữ của các phần của màn hình chính độc lập với nhau.
 - Đã xóa quyền truy cập internet. Bạn không bao giờ biết nhà phát triển ứng dụng muốn biết gì về bạn.
+- Khóa cài đặt phía sau sinh trắc học (chuyển đổi)
+- Đã thêm khả năng báo cáo sự cố qua email.
+- Thêm khả năng xem thời gian sử dụng ứng dụng.
 
 ## Bản dịch:
 
