@@ -47,6 +47,7 @@
     <string name="extend_home_apps_area">클릭 가능한 영역 확장</string>
     <string name="home_alignment_bottom">홈 화면 하단 정렬</string>
     <!-- Alignment Strings -->
+    <string name="display_app_usage_stats">앱 사용 통계 표시</string>
     <string name="home_alignment">Apps home screen</string>
     <string name="clock_alignment">Clock and date</string>
     <string name="drawer_alignment">Apps in app drawer</string>
@@ -61,6 +62,7 @@
     <string name="long_swipe_right_app">길게 누르기 오른쪽으로 스와이프</string>
     <string name="clock_click_app">Click on Clock</string>
     <string name="date_click_app">Click on Date</string>
+    <string name="usage_click_app">총 사용량을 클릭하세요</string>
     <string name="double_tap">Double Tap</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Show Notification</string>
@@ -125,6 +127,7 @@
     <string name="acra_mail_body">발생한 문제를 설명해 주세요.</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>
+    <string name="total_screen_time">총 화면 시간</string>
     <string name="can_not_delete_system_apps">시스템 앱을 삭제할 수 없습니다</string>
     <string name="please_select_app">앱을 선택하세요</string>
     <string name="drawer_list_empty_hint">No apps found</string>
