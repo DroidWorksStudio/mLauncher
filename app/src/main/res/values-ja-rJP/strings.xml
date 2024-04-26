@@ -47,6 +47,7 @@
     <string name="extend_home_apps_area">クリック可能な領域を拡張</string>
     <string name="home_alignment_bottom">ホーム画面を下に揃える</string>
     <!-- Alignment Strings -->
+    <string name="display_app_usage_stats">アプリの使用状況統計を表示</string>
     <string name="home_alignment">アプリのホーム画面</string>
     <string name="clock_alignment">時計と日付</string>
     <string name="drawer_alignment">アプリドロワーのアプリ</string>
@@ -61,6 +62,7 @@
     <string name="long_swipe_right_app">長押し 右にスワイプ</string>
     <string name="clock_click_app">時計をクリックしてください</string>
     <string name="date_click_app">日付をクリックしてください</string>
+    <string name="usage_click_app">合計使用量をクリック</string>
     <string name="double_tap">ダブルタップ</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">通知を表示</string>
@@ -125,6 +127,7 @@
     <string name="acra_mail_body">発生した問題を説明してください:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">すべてのアプリ</string>
+    <string name="total_screen_time">合計スクリーン時間</string>
     <string name="can_not_delete_system_apps">システムアプリを削除できない</string>
     <string name="please_select_app">アプリを選択してください</string>
     <string name="drawer_list_empty_hint">アプリが見つかりません</string>
