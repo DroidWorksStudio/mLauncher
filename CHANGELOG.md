@@ -12,10 +12,6 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Fixed the ability for the launcher to ask for usage permission. - ([580a988](https://github.com/DroidWorksStudio/mLauncher/commit/580a988ae48032ba89dd780f5c9c2018ba579708))
 
-### Feature Removal:
-
-- Delete .README.md.kate-swp - ([bf08deb](https://github.com/DroidWorksStudio/mLauncher/commit/bf08debe6ca9dcd0880634474e361f2608d7a43b))
-
 ### Language Support:
 
 - Updated Language Files. ([#477](https://github.com/DroidWorksStudio/mLauncher/issues/477)) - ([84ca97b](https://github.com/DroidWorksStudio/mLauncher/commit/84ca97bf4f368b5efdb6815777ffe066a364b072))
@@ -772,32 +768,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Feature Removal:
 
-- Delete no-response.yml ([#27](https://github.com/DroidWorksStudio/mLauncher/issues/27)) - ([cee5ca9](https://github.com/DroidWorksStudio/mLauncher/commit/cee5ca95f24a8a2fdf05ed6d303365ffc3f9677c))
 - Removed a bit of junk - ([8716553](https://github.com/DroidWorksStudio/mLauncher/commit/87165532d84fcf44f5a7138ce8f07d47f9ba2418))
 - Removed TEST File - ([fb1664f](https://github.com/DroidWorksStudio/mLauncher/commit/fb1664fb844457ab4c2b7cefd2ded379e88b7200))
-- Delete .github/PULL_REQUEST_TEMPLATE directory - ([f28cf8b](https://github.com/DroidWorksStudio/mLauncher/commit/f28cf8b4bfece0182ce00f9454fa13a867a221e7))
-- Delete test.txt - ([df23d4d](https://github.com/DroidWorksStudio/mLauncher/commit/df23d4d0afd21e18a9b1da5b44dbec6e7b27c9ed))
-- Delete test.txt - ([df23d4d](https://github.com/DroidWorksStudio/mLauncher/commit/df23d4d0afd21e18a9b1da5b44dbec6e7b27c9ed))
-- Delete test.txt - ([df23d4d](https://github.com/DroidWorksStudio/mLauncher/commit/df23d4d0afd21e18a9b1da5b44dbec6e7b27c9ed))
-- Delete test.txt - ([df23d4d](https://github.com/DroidWorksStudio/mLauncher/commit/df23d4d0afd21e18a9b1da5b44dbec6e7b27c9ed))
-- Delete test.txt - ([df23d4d](https://github.com/DroidWorksStudio/mLauncher/commit/df23d4d0afd21e18a9b1da5b44dbec6e7b27c9ed))
-- Delete ic_rounded.webp - ([df23d4d](https://github.com/DroidWorksStudio/mLauncher/commit/df23d4d0afd21e18a9b1da5b44dbec6e7b27c9ed))
-- Delete logo.webp - ([df23d4d](https://github.com/DroidWorksStudio/mLauncher/commit/df23d4d0afd21e18a9b1da5b44dbec6e7b27c9ed))
-- Delete logo.webp - ([080bf29](https://github.com/DroidWorksStudio/mLauncher/commit/080bf29eccf7c57f075d4c1c3b9698a996bcaddc))
-- Delete ic_rounded.webp - ([950bb05](https://github.com/DroidWorksStudio/mLauncher/commit/950bb05320f64acddfc52b54c52a5720eec2b921))
-- Delete test.txt - ([2d1d303](https://github.com/DroidWorksStudio/mLauncher/commit/2d1d303560bed75fc2e00e661840dd252f7cb40a))
-- Delete test.txt - ([d3eb1fe](https://github.com/DroidWorksStudio/mLauncher/commit/d3eb1feb03b10df74764e9ffd0b27c5684a13d65))
-- Delete test.txt - ([12dddd4](https://github.com/DroidWorksStudio/mLauncher/commit/12dddd4e5db4bbd545f95c5140642795acbb529b))
-- Delete test.txt - ([1457c7c](https://github.com/DroidWorksStudio/mLauncher/commit/1457c7c61db5cddd97cafe3cdfd45620f417b5f1))
-- Delete test.txt - ([d021aaa](https://github.com/DroidWorksStudio/mLauncher/commit/d021aaa7e2a8bb179916b6747075c17ad47d2c71))
-- Delete test.txt - ([8397ebd](https://github.com/DroidWorksStudio/mLauncher/commit/8397ebd7a18269272b61f112153ceef71b3fa45e))
-- Delete S20 Ultra Screenshot 3.png - ([6246557](https://github.com/DroidWorksStudio/mLauncher/commit/6246557e32a42e7cbb7d5b73c7d6003dae9c6a74))
-- Delete S20 Ultra Screenshot 2.png - ([c4bccd4](https://github.com/DroidWorksStudio/mLauncher/commit/c4bccd4b8c51257b1018e46dc1194a4cb2a6153f))
-- Delete S20 Ultra Screenshot 1.png - ([f76964a](https://github.com/DroidWorksStudio/mLauncher/commit/f76964a44d760712d0c228349dad166d25922533))
-- Delete S20 Ultra Screenshot 0.png - ([66b8f2c](https://github.com/DroidWorksStudio/mLauncher/commit/66b8f2cc0c1addd6e369ccf6e666bba5905c0327))
 - Remove unused strings ([#106](https://github.com/DroidWorksStudio/mLauncher/issues/106)) - ([e61aa36](https://github.com/DroidWorksStudio/mLauncher/commit/e61aa360885cf30cffed6b17ca00e0468ff645f1))
 - Remove build status. Should be always green, anyways, and does not look too good - ([0f8e831](https://github.com/DroidWorksStudio/mLauncher/commit/0f8e8313d49e8393d7115d30269b4a4a09eeca2e))
-- Delete useless privacy policy - ([0f8e831](https://github.com/DroidWorksStudio/mLauncher/commit/0f8e8313d49e8393d7115d30269b4a4a09eeca2e))
 - Removed </resources> leftover tag - ([ae98a2d](https://github.com/DroidWorksStudio/mLauncher/commit/ae98a2da0e99870c11a6d54e0668190a7491f09d))
 - Remove clutter - ([d546ec9](https://github.com/DroidWorksStudio/mLauncher/commit/d546ec9c55c21eec090be809641c11da0be6ec08))
 - Remove clutter - ([e4cef8f](https://github.com/DroidWorksStudio/mLauncher/commit/e4cef8fe5e62f3ce693e3904b59ebe74cbec4a10))
@@ -814,7 +788,6 @@ All notable changes to this project will be documented in this file. See [conven
 - Removed some options in settings (will be added in next version) - ([b19cfca](https://github.com/DroidWorksStudio/mLauncher/commit/b19cfcac56fe3a46de9830458a631e66cfbcc23c))
 - Removed some unused libraries - ([06c19a1](https://github.com/DroidWorksStudio/mLauncher/commit/06c19a10d01851291c928675ffd4c5a3c53cdb07))
 - Removed olauncher from app list - ([fb32141](https://github.com/DroidWorksStudio/mLauncher/commit/fb321416bfcb6901b240b6ea6fdba0485b2abe7a))
-- Deleted some unused hacky code - ([6a7c29f](https://github.com/DroidWorksStudio/mLauncher/commit/6a7c29fe89afcafa8c378c49bdc7889c8fe37627))
 
 ### Language Support:
 
