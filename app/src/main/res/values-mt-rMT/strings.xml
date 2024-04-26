@@ -47,6 +47,7 @@
     <string name="extend_home_apps_area">Estendi Żona Klikkjabbli</string>
     <string name="home_alignment_bottom">Home Screen Allinja Qiegħ</string>
     <!-- Alignment Strings -->
+    <string name="display_app_usage_stats">Uri Stat tal-Użu tal-App</string>
     <string name="home_alignment">Apps home screen</string>
     <string name="clock_alignment">Arloġġ u data</string>
     <string name="drawer_alignment">Apps fil-kexxun tal-app</string>
@@ -61,6 +62,7 @@
     <string name="long_swipe_right_app">Agħfas fit-tul Swipe lemin</string>
     <string name="clock_click_app">Ikklikkja fuq Arloġġ</string>
     <string name="date_click_app">Ikklikkja fuq Data</string>
+    <string name="usage_click_app">Ikklikkja fuq Użu Totali</string>
     <string name="double_tap">Tektek Doppju</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Uri Notifika</string>
@@ -125,6 +127,7 @@
     <string name="acra_mail_body">Jekk jogħġbok iddeskrivi l-kwistjoni li ltqajt magħhom:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">L-apps kollha</string>
+    <string name="total_screen_time">Ħin Totali tal-Iskrin</string>
     <string name="can_not_delete_system_apps">Ma tistax Ħassar Apps tas-Sistema</string>
     <string name="please_select_app">Jekk jogħġbok agħżel app</string>
     <string name="drawer_list_empty_hint">Ma nstabet l-ebda app</string>
