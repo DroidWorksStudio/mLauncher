@@ -47,6 +47,7 @@
     <string name="extend_home_apps_area">Laajenna napsautettavaa aluetta</string>
     <string name="home_alignment_bottom">Aloitusnäyttö Tasaa alareuna</string>
     <!-- Alignment Strings -->
+    <string name="display_app_usage_stats">Näytä sovelluksen käyttötilastot</string>
     <string name="home_alignment">Sovellusten aloitusnäyttö</string>
     <string name="clock_alignment">Kello ja päivämäärä</string>
     <string name="drawer_alignment">Sovellusvalikossa olevat sovellukset</string>
@@ -61,6 +62,7 @@
     <string name="long_swipe_right_app">Pitkä painallus Pyyhkäise oikealle</string>
     <string name="clock_click_app">Klikkaa kello</string>
     <string name="date_click_app">Klikkaa päivämäärää</string>
+    <string name="usage_click_app">Napsauta Kokonaiskäyttö</string>
     <string name="double_tap">Kaksoisnapautus</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Näytä Ilmoitus</string>
@@ -125,6 +127,7 @@
     <string name="acra_mail_body">Kuvaile kohtaamasi ongelmaa:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Kaikki sovellukset</string>
+    <string name="total_screen_time">Kokonaisruutuaika</string>
     <string name="can_not_delete_system_apps">Järjestelmäsovelluksia ei voi poistaa</string>
     <string name="please_select_app">Valitse sovellus</string>
     <string name="drawer_list_empty_hint">Sovelluksia ei löytynyt</string>
