@@ -120,8 +120,8 @@ commit_parsers = [
     { message = "^Config|^Configuration", group = "<!-- 14 -->Configuration Changes:" },
     { message = "^cleanup|^clean\\(up\\)", group = "<!-- 15 -->Code Cleanup:" },
     { message = "^Cleanup|^Clean\\(up\\)", group = "<!-- 15 -->Code Cleanup:" },
-    { message = "^remov|^delete|^drop|^remove", group = "<!-- 16 -->Feature Removal:" },
-    { message = "^Remov|^Delete|^Drop|^Remove", group = "<!-- 16 -->Feature Removal:" },
+    { message = "^drop|^remove", group = "<!-- 16 -->Feature Removal:" },
+    { message = "^Drop|^Remove", group = "<!-- 16 -->Feature Removal:" },
     { message = "^hotfix|^emergency", group = "<!-- 17 -->Hotfixes:" },
     { message = "^Hotfix|^Emergency", group = "<!-- 17 -->Hotfixes:" }
 ]
