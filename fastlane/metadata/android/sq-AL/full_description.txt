@@ -2,8 +2,8 @@ Forked nga <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mini
 
 # I dendur me veçori shtesë
 
-- Hiqni rrëmujën, si reklamat dhe lidhjet
-- Mund t'i riemërtoni aplikacionet në sirtarin e aplikacioneve (Riemërtimi i aplikacioneve në ekranin bazë tashmë mbështetet. Thjesht klikoni gjatë në një aplikacion në ekranin bazë dhe filloni të shkruani)
+- Hiqni rrëmujën, si reklamat dhe lidhjet.
+- Mund t'i riemërtoni aplikacionet në sirtarin e aplikacioneve (Riemërtimi i aplikacioneve në ekranin bazë tashmë mbështetet. Thjesht klikoni gjatë në një aplikacion në ekranin bazë dhe filloni të shkruani.)
 - Ne kemi shtuar shumë më tepër opsione për gjeste në ekranin bazë:
     - Gjestet janë tani:
         - Duke rrëshqitur lart, poshtë, majtas, djathtas
@@ -19,11 +19,13 @@ Forked nga <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mini
         - Dialogu i energjisë
         - Merrni një pamje nga ekrani
         - Çaktivizo gjestet
-- Mund ta poziciononi orën edhe në mënyrë të pavarur nga aplikacionet e shtëpisë
-- Ndrysho shtrirjen e aplikacioneve në sirtarin e aplikacioneve
-- Bllokoni cilësimet pas biometrike (ndryshoni)
-- Ndrysho madhësinë e shkronjave
+- Mund ta poziciononi orën edhe në mënyrë të pavarur nga aplikacionet e shtëpisë.
+- Ndrysho shtrirjen e aplikacioneve në sirtarin e aplikacioneve, pavarësisht nga ekrani bazë.
+- Ndryshoni madhësinë e shkronjave të seksioneve të ekranit bazë të pavarur nga njëri-tjetri.
 - U hoq leja e internetit. Asnjëherë nuk e dini se çfarë dëshiron të dijë një zhvillues aplikacioni për ju.
+- Bllokoni cilësimet pas biometrike (ndryshoni)
+- U shtua aftësia për të raportuar përplasjen me email.
+- U shtua aftësia për të parë kohën e përdorimit të aplikacionit.
 
 ## Përkthime:
 
