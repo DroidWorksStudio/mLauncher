@@ -45,6 +45,7 @@ private const val LONG_SWIPE_DOWN_ACTION = "LONG_SWIPE_DOWN_ACTION"
 private const val LONG_SWIPE_RIGHT_ACTION = "LONG_SWIPE_RIGHT_ACTION"
 private const val LONG_SWIPE_LEFT_ACTION = "LONG_SWIPE_LEFT_ACTION"
 private const val CLICK_CLOCK_ACTION = "CLICK_CLOCK_ACTION"
+private const val CLICK_APP_USAGE = "CLICK_APP_USAGE"
 private const val CLICK_DATE_ACTION = "CLICK_DATE_ACTION"
 private const val DOUBLE_TAP_ACTION = "DOUBLE_TAP_ACTION"
 private const val HIDDEN_APPS = "HIDDEN_APPS"
@@ -55,6 +56,7 @@ private const val APP_PACKAGE = "APP_PACKAGE"
 private const val APP_USER = "APP_USER"
 private const val APP_ALIAS = "APP_ALIAS"
 private const val APP_ACTIVITY = "APP_ACTIVITY"
+private const val APP_USAGE_STATS = "APP_USAGE_STATS"
 private const val APP_OPACITY = "APP_OPACITY"
 private const val APP_THEME = "APP_THEME"
 
@@ -67,6 +69,7 @@ private const val LONG_SWIPE_DOWN = "LONG_SWIPE_DOWN"
 private const val LONG_SWIPE_LEFT = "LONG_SWIPE_LEFT"
 private const val LONG_SWIPE_RIGHT = "LONG_SWIPE_RIGHT"
 private const val CLICK_CLOCK = "CLICK_CLOCK"
+private const val CLICK_USAGE = "CLICK_USAGE"
 private const val CLICK_DATE = "CLICK_DATE"
 private const val DOUBLE_TAP = "DOUBLE_TAP"
 private const val CUSTOM_FONT = "CUSTOM_FONT"
@@ -161,6 +164,10 @@ class Prefs(val context: Context) {
     var opacityNum: Int
         get() = prefs.getInt(APP_OPACITY, 128)
         set(value) = prefs.edit().putInt(APP_OPACITY, value).apply()
+
+    var appUsageStats: Boolean
+        get() = prefs.getBoolean(APP_USAGE_STATS, false)
+        set(value) = prefs.edit().putBoolean(APP_USAGE_STATS, value).apply()
 
     var homeAlignment: Gravity
         get() {
@@ -272,6 +279,10 @@ class Prefs(val context: Context) {
         get() = loadAction(CLICK_CLOCK_ACTION, Constants.Action.OpenApp)
         set(value) = storeAction(CLICK_CLOCK_ACTION, value)
 
+    var clickAppUsageAction: Constants.Action
+        get() = loadAction(CLICK_APP_USAGE, Constants.Action.OpenApp)
+        set(value) = storeAction(CLICK_APP_USAGE, value)
+
     var clickDateAction: Constants.Action
         get() = loadAction(CLICK_DATE_ACTION, Constants.Action.OpenApp)
         set(value) = storeAction(CLICK_DATE_ACTION, value)
@@ -369,6 +380,10 @@ class Prefs(val context: Context) {
     var appClickClock: AppModel
         get() = loadApp(CLICK_CLOCK)
         set(appModel) = storeApp(CLICK_CLOCK, appModel)
+
+    var appClickUsage: AppModel
+        get() = loadApp(CLICK_USAGE)
+        set(appModel) = storeApp(CLICK_USAGE, appModel)
 
     var appClickDate: AppModel
         get() = loadApp(CLICK_DATE)

@@ -5,6 +5,7 @@ import android.R
 import android.app.Activity
 import android.app.AlertDialog
 import android.app.AppOpsManager
+import android.content.ActivityNotFoundException
 import android.content.ComponentName
 import android.content.Context
 import android.content.DialogInterface
@@ -283,6 +284,23 @@ fun openAlarmApp(context: Context) {
         context.startActivity(intent)
     } catch (e: java.lang.Exception) {
         d("openAlarmApp", e.toString())
+    }
+}
+
+fun openDigitalWellbeing(context: Context) {
+    val packageName = "com.google.android.apps.wellbeing"
+    val className = "com.google.android.apps.wellbeing.settings.TopLevelSettingsActivity"
+
+    val intent = Intent()
+    intent.component = ComponentName(packageName, className)
+    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+
+    try {
+        context.startActivity(intent)
+    } catch (e: ActivityNotFoundException) {
+        // Digital Wellbeing app is not installed or cannot be opened
+        // Handle this case as needed
+        showToastLong(context,"Digital Wellbeing is not available on this device.")
     }
 }
 

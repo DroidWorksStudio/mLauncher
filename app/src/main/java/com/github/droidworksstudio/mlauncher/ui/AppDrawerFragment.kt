@@ -79,6 +79,7 @@ class AppDrawerFragment : Fragment() {
             AppDrawerFlag.SetShortSwipeUp,
             AppDrawerFlag.SetShortSwipeDown,
             AppDrawerFlag.SetClickClock,
+            AppDrawerFlag.SetAppUsage,
             AppDrawerFlag.SetClickDate -> {
                 binding.drawerButton.setOnClickListener {
                     findNavController().popBackStack()

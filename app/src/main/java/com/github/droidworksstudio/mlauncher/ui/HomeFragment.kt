@@ -16,6 +16,8 @@ import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
+import android.widget.Space
 import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.biometric.BiometricManager
@@ -39,6 +41,9 @@ import com.github.droidworksstudio.mlauncher.data.Constants.AppDrawerFlag
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentHomeBinding
 import com.github.droidworksstudio.mlauncher.helper.ActionService
+import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.formatMillisToHMS
+import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.getTotalScreenTime
+import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.getUsageStats
 import com.github.droidworksstudio.mlauncher.helper.BatteryReceiver
 import com.github.droidworksstudio.mlauncher.helper.getHexFontColor
 import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
@@ -50,6 +55,7 @@ import com.github.droidworksstudio.mlauncher.helper.openAlarmApp
 import com.github.droidworksstudio.mlauncher.helper.openCalendar
 import com.github.droidworksstudio.mlauncher.helper.openCameraApp
 import com.github.droidworksstudio.mlauncher.helper.openDialerApp
+import com.github.droidworksstudio.mlauncher.helper.openDigitalWellbeing
 import com.github.droidworksstudio.mlauncher.helper.showStatusBar
 import com.github.droidworksstudio.mlauncher.helper.showToastLong
 import com.github.droidworksstudio.mlauncher.helper.showToastShort
@@ -144,6 +150,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             binding.clock.typeface = typeface
             binding.date.typeface = typeface
             binding.batteryText.typeface = typeface
+            binding.setTotalScreenTime.typeface = typeface
             binding.setDefaultLauncher.typeface = typeface
         }
         binding.homeScreenPager.typeface = typeface
@@ -157,6 +164,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             binding.date.setTextColor(fontColor)
             binding.batteryIcon.setTextColor(fontColor)
             binding.batteryText.setTextColor(fontColor)
+            binding.setTotalScreenTime.setTextColor(fontColor)
             binding.setDefaultLauncher.setTextColor(fontColor)
             binding.homeScreenPager.setTextColor(fontColor)
         }
@@ -200,6 +208,14 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 }
             }
 
+            R.id.setTotalScreenTime -> {
+                Log.d("appClickUsage","${prefs.appClickUsage} | ${prefs.clickAppUsageAction}")
+                when (val action = prefs.clickAppUsageAction) {
+                    Action.OpenApp -> openClickUsageApp()
+                    else -> handleOtherAction(action)
+                }
+            }
+
             R.id.setDefaultLauncher -> {
                 viewModel.resetDefaultLauncherApp(requireContext())
             }
@@ -231,6 +247,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     private fun initClickListeners() {
         binding.clock.setOnClickListener(this)
         binding.date.setOnClickListener(this)
+        binding.setTotalScreenTime.setOnClickListener(this)
         binding.setDefaultLauncher.setOnClickListener(this)
     }
 
@@ -255,7 +272,11 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 }
             }
             homeAppsCount.observe(viewLifecycleOwner) {
-                updateAppCount(it)
+                if (prefs.appUsageStats) {
+                    updateAppCountWithUsageStats(it)
+                } else {
+                    updateAppCount(it)
+                }
             }
             showTime.observe(viewLifecycleOwner) {
                 binding.clock.visibility = if (it) View.VISIBLE else View.GONE
@@ -370,6 +391,12 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         if (prefs.appClickClock.appPackage.isNotEmpty())
             launchApp(prefs.appClickClock)
         else openAlarmApp(requireContext())
+    }
+
+    private fun openClickUsageApp() {
+        if (prefs.appClickUsage.appPackage.isNotEmpty())
+            launchApp(prefs.appClickUsage)
+        else openDigitalWellbeing(requireContext())
     }
 
     private fun openClickDateApp() {
@@ -709,6 +736,114 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 Action.OpenApp -> openLongSwipeRightApp()
                 else -> handleOtherAction(action)
             }
+        }
+    }
+
+    @RequiresApi(Build.VERSION_CODES.Q)
+    @SuppressLint("InflateParams")
+    private fun updateAppCountWithUsageStats(newAppsNum: Int) {
+        val oldAppsNum = binding.homeAppsLayout.childCount // current number of apps
+        val diff = newAppsNum - oldAppsNum
+
+        if (diff > 0) {
+            // Add new apps
+            for (i in oldAppsNum until newAppsNum) {
+                // Create a horizontal LinearLayout to hold both existingAppView and newAppView
+                val parentLinearLayout = LinearLayout(context)
+                parentLinearLayout.apply {
+                    orientation = LinearLayout.HORIZONTAL
+                    gravity = Gravity.CENTER
+                    layoutParams = ViewGroup.LayoutParams(
+                        ViewGroup.LayoutParams.MATCH_PARENT, // Use MATCH_PARENT for full width
+                        ViewGroup.LayoutParams.WRAP_CONTENT
+                    )
+                }
+
+                // Create existingAppView
+                val existingAppView = layoutInflater.inflate(R.layout.home_app_button, null) as TextView
+                existingAppView.apply {
+                    // Set properties of existingAppView
+                    textSize = prefs.textSizeLauncher.toFloat()
+                    id = i
+                    text = prefs.getHomeAppModel(i).appLabel
+                    setOnTouchListener(getHomeAppsGestureListener(context, this))
+                    if (!prefs.extendHomeAppsArea) {
+                        layoutParams = ViewGroup.LayoutParams(
+                            ViewGroup.LayoutParams.WRAP_CONTENT,
+                            ViewGroup.LayoutParams.WRAP_CONTENT
+                        )
+                    }
+                    val padding: Int = prefs.textMarginSize
+                    setPadding(0, padding, 0, padding)
+                    if (prefs.useCustomIconFont) {
+                        val typeface = ResourcesCompat.getFont(requireActivity(), R.font.roboto)
+                        typeface?.let { setTypeface(it) }
+                    }
+                    if (prefs.followAccentColors) {
+                        val fontColor = getHexFontColor(requireContext())
+                        setTextColor(fontColor)
+                    }
+                }
+
+                // Create newAppView
+                val newAppView = TextView(context)
+                newAppView.apply {
+                    // Set properties of newAppView
+                    textSize = prefs.textSizeLauncher.toFloat() / 1.5f
+                    id = i
+                    text = formatMillisToHMS(getUsageStats(context, prefs.getHomeAppModel(i).appPackage))
+                    setOnTouchListener(getHomeAppsGestureListener(context, this))
+                    if (!prefs.extendHomeAppsArea) {
+                        layoutParams = ViewGroup.LayoutParams(
+                            ViewGroup.LayoutParams.WRAP_CONTENT,
+                            ViewGroup.LayoutParams.WRAP_CONTENT
+                        )
+                    }
+                    val padding: Int = prefs.textMarginSize
+                    setPadding(0, padding, 0, padding)
+                    if (prefs.useCustomIconFont) {
+                        val typeface = ResourcesCompat.getFont(requireActivity(), R.font.roboto)
+                        typeface?.let { setTypeface(it) }
+                    }
+                    if (prefs.followAccentColors) {
+                        val fontColor = getHexFontColor(requireContext())
+                        setTextColor(fontColor)
+                    }
+                }
+
+                // Add a space between existingAppView and newAppView
+                val space = Space(context)
+                space.layoutParams = LinearLayout.LayoutParams(
+                    0,
+                    ViewGroup.LayoutParams.WRAP_CONTENT,
+                    1f // Weight to fill available space
+                )
+
+                // Add existingAppView to parentLinearLayout
+                parentLinearLayout.addView(existingAppView)
+                // Add space and newAppView to parentLinearLayout
+                parentLinearLayout.addView(space)
+                parentLinearLayout.addView(newAppView)
+
+                // Add parentLinearLayout to homeAppsLayout
+                binding.homeAppsLayout.addView(parentLinearLayout)
+            }
+        } else if (diff < 0) {
+            // Remove extra apps
+            binding.homeAppsLayout.removeViews(oldAppsNum + diff, -diff)
+        }
+
+        // Update the total number of pages and calculate maximum apps per page
+        updatePagesAndAppsPerPage(prefs.homeAppsNum, prefs.homePagesNum)
+
+        // Create a new TextView instance
+        val totalText = getString(R.string.total_screen_time)
+        val totalTime = context?.let { getTotalScreenTime(it) }?.let { formatMillisToHMS(it) }
+        val totalJoin = "$totalText: $totalTime"
+        // Set properties for the TextView (optional)
+        binding.setTotalScreenTime.apply {
+            text = totalJoin
+            visibility = View.VISIBLE
         }
     }
 

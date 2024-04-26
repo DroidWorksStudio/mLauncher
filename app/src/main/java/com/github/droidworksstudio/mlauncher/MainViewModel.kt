@@ -61,6 +61,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             AppDrawerFlag.SetLongSwipeLeft -> prefs.appLongSwipeLeft = appModel
             AppDrawerFlag.SetLongSwipeRight -> prefs.appLongSwipeRight = appModel
             AppDrawerFlag.SetClickClock -> prefs.appClickClock = appModel
+            AppDrawerFlag.SetAppUsage -> prefs.appClickUsage = appModel
             AppDrawerFlag.SetClickDate -> prefs.appClickDate = appModel
             AppDrawerFlag.SetDoubleTap -> prefs.appDoubleTap = appModel
         }

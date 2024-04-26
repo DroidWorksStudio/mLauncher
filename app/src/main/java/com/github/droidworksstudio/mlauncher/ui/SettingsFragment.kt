@@ -437,20 +437,30 @@ class SettingsFragment : Fragment() {
                 fontSize = titleFs,
                 selected = selected,
                 items = arrayOf(
-                    { open, onChange ->
-                        SettingsItem(
-                            title = stringResource(R.string.home_alignment),
+                    { _, onChange ->
+                        SettingsToggle(
+                            title = stringResource(R.string.display_app_usage_stats),
                             fontSize = iconFs,
-                            open = open,
                             onChange = onChange,
-                            currentSelection = remember { mutableStateOf(prefs.homeAlignment) },
-                            values = arrayOf(
-                                Constants.Gravity.Left,
-                                Constants.Gravity.Center,
-                                Constants.Gravity.Right
-                            ),
-                            onSelect = { gravity -> setHomeAlignment(gravity) }
-                        )
+                            state = remember { mutableStateOf(prefs.appUsageStats) }
+                        ) { toggleAppUsageStats() }
+                    },
+                    { open, onChange ->
+                        if (!prefs.appUsageStats) {
+                            SettingsItem(
+                                title = stringResource(R.string.home_alignment),
+                                fontSize = iconFs,
+                                open = open,
+                                onChange = onChange,
+                                currentSelection = remember { mutableStateOf(prefs.homeAlignment) },
+                                values = arrayOf(
+                                    Constants.Gravity.Left,
+                                    Constants.Gravity.Center,
+                                    Constants.Gravity.Right
+                                ),
+                                onSelect = { gravity -> setHomeAlignment(gravity) }
+                            )
+                        }
                     },
                     { open, onChange ->
                         SettingsItem(
@@ -597,6 +607,17 @@ class SettingsFragment : Fragment() {
                             currentAction = prefs.clickDateAction,
                             onSelect = { j -> setGesture(AppDrawerFlag.SetClickDate, j) },
                             appLabel = prefs.appClickDate.appLabel.ifEmpty { "Calendar" },
+                        )
+                    },
+                    { open, onChange ->
+                        SettingsGestureItem(
+                            title = stringResource(R.string.usage_click_app),
+                            fontSize = iconFs,
+                            open = open,
+                            onChange = onChange,
+                            currentAction = prefs.clickAppUsageAction,
+                            onSelect = { j -> setGesture(AppDrawerFlag.SetAppUsage, j) },
+                            appLabel = prefs.appClickUsage.appLabel.ifEmpty { "Digital Wellbeing" },
                         )
                     },
                     { open, onChange ->
@@ -757,6 +778,10 @@ class SettingsFragment : Fragment() {
         prefs.extendHomeAppsArea = !prefs.extendHomeAppsArea
     }
 
+    private fun toggleAppUsageStats() {
+        prefs.appUsageStats = !prefs.appUsageStats
+    }
+
     private fun toggleCustomIconFont() {
         prefs.useCustomIconFont = !prefs.useCustomIconFont
     }
@@ -880,6 +905,7 @@ class SettingsFragment : Fragment() {
             AppDrawerFlag.SetShortSwipeLeft -> prefs.shortSwipeLeftAction = action
             AppDrawerFlag.SetShortSwipeRight -> prefs.shortSwipeRightAction = action
             AppDrawerFlag.SetClickClock -> prefs.clickClockAction = action
+            AppDrawerFlag.SetAppUsage -> prefs.clickAppUsageAction = action
             AppDrawerFlag.SetClickDate -> prefs.clickDateAction = action
             AppDrawerFlag.SetDoubleTap -> prefs.doubleTapAction = action
             AppDrawerFlag.SetLongSwipeUp -> prefs.longSwipeUpAction = action
