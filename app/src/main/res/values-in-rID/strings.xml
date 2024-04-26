@@ -47,6 +47,7 @@
     <string name="extend_home_apps_area">Perluas Area yang Dapat Diklik</string>
     <string name="home_alignment_bottom">Layar Beranda Sejajarkan Bawah</string>
     <!-- Alignment Strings -->
+    <string name="display_app_usage_stats">Tampilkan Statistik Penggunaan Aplikasi</string>
     <string name="home_alignment">Layar beranda aplikasi</string>
     <string name="clock_alignment">Jam dan tanggal</string>
     <string name="drawer_alignment">Aplikasi di laci aplikasi</string>
@@ -61,6 +62,7 @@
     <string name="long_swipe_right_app">Tekan Lama Geser ke kanan</string>
     <string name="clock_click_app">Klik pada Jam</string>
     <string name="date_click_app">Klik pada Tanggal</string>
+    <string name="usage_click_app">Klik pada Penggunaan Total</string>
     <string name="double_tap">Ketuk Ganda</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Tampilkan Pemberitahuan</string>
@@ -125,6 +127,7 @@
     <string name="acra_mail_body">Harap jelaskan masalah yang Anda temui:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Semua aplikasi</string>
+    <string name="total_screen_time">Total Waktu Layar</string>
     <string name="can_not_delete_system_apps">Tidak Dapat Menghapus Aplikasi Sistem</string>
     <string name="please_select_app">Silakan pilih aplikasi</string>
     <string name="drawer_list_empty_hint">Tidak ada aplikasi yang ditemukan</string>

@@ -47,6 +47,7 @@
     <string name="extend_home_apps_area">Ampliar el área en la que se puede hacer clic</string>
     <string name="home_alignment_bottom">Pantalla de inicio Alinear abajo</string>
     <!-- Alignment Strings -->
+    <string name="display_app_usage_stats">Mostrar estadísticas de uso de aplicaciones</string>
     <string name="home_alignment">Alineación</string>
     <string name="clock_alignment">Alineación del reloj</string>
     <string name="drawer_alignment">Alineación de aplicaciones</string>
@@ -61,6 +62,7 @@
     <string name="long_swipe_right_app">Pulsación larga Deslizar hacia la derecha</string>
     <string name="clock_click_app">Pulsar reloj</string>
     <string name="date_click_app">Pulsar fecha</string>
+    <string name="usage_click_app">Haga clic en Uso total</string>
     <string name="double_tap">Doble toque</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Mostrar notificación</string>
@@ -125,6 +127,7 @@
     <string name="acra_mail_body">Describa el problema que encontró:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Todas las aplicaciones</string>
+    <string name="total_screen_time">Tiempo total frente a la pantalla</string>
     <string name="can_not_delete_system_apps">No puedo eliminar aplicaciones del sistema</string>
     <string name="please_select_app">Por favor seleccione una aplicación</string>
     <string name="drawer_list_empty_hint">No hay aplicaciones</string>

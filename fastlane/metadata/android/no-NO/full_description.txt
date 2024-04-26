@@ -2,8 +2,8 @@ Gaffel fra <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mini
 
 # Merket med ekstra funksjoner
 
-- Fjernet clutter, som reklamer og lenker
-- Du kan endre navn på app-skuffen (Gi nytt navn til apper på startskjermen støttes. Bare lang-klikk på en app på startskjermen og begynn å skrive den)
+- Fjernet rot, som annonser og lenker.
+- Du kan endre navn på app-skuffen (Gi nytt navn til apper på startskjermen støttes. Bare langklikk på en app på startskjermen og begynn å skrive.)
 - Vi har lagt til mye flere alternativer for bevegelser på startsiden:
     - Gester er nå:
         - Sveip opp, ned, venstre, høyre
@@ -19,11 +19,13 @@ Gaffel fra <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mini
         - Power Dialog
         - Ta et skjermbilde
         - Deaktiver gest
-- Du kan også posisjonere klokken uavhengig av hjem-appene
-- Endre justering av apper i app-skuff
-- Låseinnstillinger bak biometri (veksle)
-- Endre skriftstørrelse
+– Du kan også stille klokken uavhengig av hjemmeappene.
+- Endre justering av apper i app-skuffen uavhengig av startskjermen.
+- Endre skriftstørrelse på deler av startskjermen uavhengig av hverandre.
 - Fjernet internettilgang. Du vet aldri hva en apputvikler vil vite om deg.
+- Låseinnstillinger bak biometri (veksle)
+- Lagt til muligheten til å rapportere krasj via e-post.
+- Lagt til muligheten til å se appbrukstid.
 
 ## Oversettelser:
 

@@ -2,8 +2,8 @@ Gevorkt vanaf <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. M
 
 # Geforked met extra functies
 
-- Verwijderde rommel, zoals advertenties en links
-- U kunt apps hernoemen in de app-drawer (Het hernoemen van apps op het startscherm wordt al ondersteund. Gewoon langklikken op een app op het beginscherm en beginnen te typen)
+- Rommel verwijderd, zoals advertenties en links.
+- U kunt apps hernoemen in de app-drawer (Het hernoemen van apps op het startscherm wordt al ondersteund. Klik gewoon lang op een app op het startscherm en begin met typen.)
 - We hebben veel meer opties toegevoegd voor gebaren op het beginscherm:
     - Gebaren zijn nu:
         - Veeg omhoog, omlaag, links, rechts
@@ -19,11 +19,13 @@ Gevorkt vanaf <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. M
         - Machtsdialoog
         - Maak een screenshot
         - Schakel gebaar uit
-- Klok onafhankelijk van home apps uitlijnen
-- Uitlijning van apps in app-drawer veranderen
-- Instellingen achter biometrie vergrendelen (schakelaar)
-- Lettergrootte wijzigen
+- Je kunt de klok ook onafhankelijk van de thuisapps positioneren.
+- Wijzig de uitlijning van apps in de app-lade, onafhankelijk van het startscherm.
+- Wijzig de lettergrootte van delen van het startscherm onafhankelijk van elkaar.
 - Internet toestemming verwijderd Je weet nooit wat een app-ontwikkelaar over je wil weten.
+- Instellingen achter biometrie vergrendelen (schakelaar)
+- De mogelijkheid toegevoegd om crashes via e-mail te melden.
+- De mogelijkheid toegevoegd om de gebruikstijd van de app te bekijken.
 
 ## Vertalingen:
 

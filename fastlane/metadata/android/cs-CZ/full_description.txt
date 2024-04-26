@@ -2,7 +2,7 @@ Forked od <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minim
 
 # Rozštěpeno s dalšími funkcemi
 
-- Odstranění nepořádku, jako jsou reklamy a odkazy
+- Odstraněn nepořádek, jako jsou reklamy a odkazy.
 - Aplikace můžete přejmenovat v zásuvce aplikací (Přejmenování aplikací na domovské obrazovce je již podporováno. Stačí dlouze kliknout na aplikaci na domovské obrazovce a začít psát.)
 - Přidali jsme mnohem více možností pro gesta na domovské obrazovce:
     - Gesta jsou nyní:
@@ -19,11 +19,13 @@ Forked od <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minim
         - Dialog napájení
         - Udělejte snímek obrazovky
         - Zakázat gesto
-- Můžete také umístit hodiny nezávisle na domovských aplikacích
-- Změna zarovnání aplikací v zásuvce aplikací
-- Uzamknout nastavení za biometrii (přepnout)
-- Změna velikosti písma
+- Hodiny můžete také umístit nezávisle na domácích aplikacích.
+- Změňte zarovnání aplikací v zásuvce aplikací nezávisle na domovské obrazovce.
+- Změňte velikost písma částí domovské obrazovky nezávisle na sobě.
 - Oprávnění k Internetu odebráno. Nikdy nevíte, co o vás chce vývojář vědět.
+- Uzamknout nastavení za biometrii (přepnout)
+- Přidána možnost hlásit selhání prostřednictvím e-mailu.
+- Přidána možnost zobrazení doby používání aplikace.
 
 ## Překlady:
 

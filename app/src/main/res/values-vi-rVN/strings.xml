@@ -47,6 +47,7 @@
     <string name="extend_home_apps_area">Mở rộng khu vực có thể nhấp</string>
     <string name="home_alignment_bottom">Màn hình chính Căn chỉnh dưới cùng</string>
     <!-- Alignment Strings -->
+    <string name="display_app_usage_stats">Hiển thị số liệu thống kê sử dụng ứng dụng</string>
     <string name="home_alignment">Apps home screen</string>
     <string name="clock_alignment">Clock and date</string>
     <string name="drawer_alignment">Apps in app drawer</string>
@@ -61,6 +62,7 @@
     <string name="long_swipe_right_app">Nhấn và giữ Vuốt sang phải</string>
     <string name="clock_click_app">Click on Clock</string>
     <string name="date_click_app">Click on Date</string>
+    <string name="usage_click_app">Nhấp vào Tổng mức sử dụng</string>
     <string name="double_tap">Double Tap</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Show Notification</string>
@@ -125,6 +127,7 @@
     <string name="acra_mail_body">Vui lòng mô tả vấn đề bạn gặp phải:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>
+    <string name="total_screen_time">Tổng thời gian sử dụng màn hình</string>
     <string name="can_not_delete_system_apps">Không thể xóa ứng dụng hệ thống</string>
     <string name="please_select_app">Vui lòng chọn một ứng dụng</string>
     <string name="drawer_list_empty_hint">No apps found</string>

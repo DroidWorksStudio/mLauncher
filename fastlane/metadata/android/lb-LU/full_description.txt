@@ -2,8 +2,8 @@ Forked aus <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mini
 
 # Forked mat extra Features
 
-- Geläscht Clutter, wéi Annoncen a Linken
-- Dir kënnt Apps am App-Tirang ëmbenennen (Apps um Heembildschierm ëmbenennen gëtt scho ënnerstëtzt. Klickt einfach op eng App um Heembildschierm a fänkt un ze tippen)
+- Geläscht Clutter, wéi Annoncen a Linken.
+- Dir kënnt Apps am App-Tirang ëmbenennen (Apps um Heembildschierm ëmbenennen gëtt scho ënnerstëtzt. Klickt einfach op eng App um Heembildschierm a fänkt un ze tippen.)
 - Mir hunn vill méi Optiounen fir Gesten um Heembildschierm bäigefüügt:
     - Gesten sinn elo:
         - Swiping up, down, left, right
@@ -19,11 +19,13 @@ Forked aus <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mini
         - Power Dialog
         - Maacht e Screenshot
         - Geste auszeschalten
-- Dir kënnt d'Auer och onofhängeg vun den Heemapps positionéieren
-- Änneren Ausrichtung vun Apps am App-Tirang
-- Spär Astellunge hannert Biometrie (toggle)
-- Schrëftgréisst änneren
+- Dir kënnt d'Auer och onofhängeg vun den Heemapps positionéieren.
+- Änneren Ausrichtung vun Apps am App-Tirang onofhängeg vum Heembildschierm.
+- Ännert Schrëftgréisst vun de Sektiounen vum Heembildschierm onofhängeg vuneneen.
 - Internet Erlaabnis geläscht. Dir wësst ni wat en App-Entwéckler iwwer Iech wësse wëllt.
+- Spär Astellunge hannert Biometrie (toggle)
+- D'Fäegkeet bäigefüügt fir Crash per E-Mail ze berichten.
+- D'Fäegkeet bäigefüügt fir d'App Notzungszäit ze gesinn.
 
 ## Iwwersetzungen:
 

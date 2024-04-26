@@ -47,6 +47,7 @@
     <string name="extend_home_apps_area">Laiendage klõpsatavat ala</string>
     <string name="home_alignment_bottom">Avakuva Joonda alumine osa</string>
     <!-- Alignment Strings -->
+    <string name="display_app_usage_stats">Kuva rakenduse kasutamise statistika</string>
     <string name="home_alignment">Rakenduste avakuva</string>
     <string name="clock_alignment">Kell ja kuupäev</string>
     <string name="drawer_alignment">Rakendused rakenduste sahtlis</string>
@@ -61,6 +62,7 @@
     <string name="long_swipe_right_app">Pikk vajutus Pühkige paremale</string>
     <string name="clock_click_app">Klõpsake kella</string>
     <string name="date_click_app">Klõpsake kuupäeval</string>
+    <string name="usage_click_app">Klõpsake valikul Kogukasutus</string>
     <string name="double_tap">Double Tap</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Näita teatist</string>
@@ -125,6 +127,7 @@
     <string name="acra_mail_body">Kirjeldage tekkinud probleemi:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Kõik rakendused</string>
+    <string name="total_screen_time">Kogu ekraaniaeg</string>
     <string name="can_not_delete_system_apps">Süsteemirakendusi ei saa kustutada</string>
     <string name="please_select_app">Valige rakendus</string>
     <string name="drawer_list_empty_hint">Rakendusi ei leitud</string>

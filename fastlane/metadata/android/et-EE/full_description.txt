@@ -2,8 +2,8 @@ Kahvliga alates <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>.
 
 # Forked koos lisafunktsioonidega
 
-- Eemaldatud segadus, nagu reklaamid ja lingid
-- Rakenduste ümbernimetamine on võimalik rakenduste riiulifailis (rakenduste ümbernimetamine avakuval on juba toetatud. Lihtsalt klõpsa pikalt rakenduse avakuval ja hakka kirjutama)
+- Eemaldatud segadus, nagu reklaamid ja lingid.
+- Rakenduste ümbernimetamine on võimalik rakenduste riiulifailis (rakenduste ümbernimetamine avakuval on juba toetatud. Lihtsalt klõpsake avakuval rakendusel pikalt ja alustage tippimist.)
 - Oleme lisanud palju rohkem võimalusi žestide kasutamiseks avakuval:
     - Žestid on nüüd:
         - Liigutamine üles, alla, vasakule, paremale
@@ -19,11 +19,13 @@ Kahvliga alates <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>.
         - Toitedialoog
         - Tehke ekraanipilt
         - Keela žest
-- Samuti saab kella paigutada kodurakendustest sõltumatult
-- Rakenduste joondamise muutmine rakenduste riiulidesse
-- lukustada seaded biomeetria taga (lüliti)
-- Kirjasuuruse muutmine
+- Saate kella paigutada ka kodurakendustest sõltumatult.
+- Muutke rakenduste joondamist rakenduste sahtlis avaekraanist sõltumatult.
+- Muutke avaekraani jaotiste fondi suurust üksteisest sõltumatult.
 - Eemaldatud internetiluba. Sa ei tea kunagi, mida rakenduse arendaja sinu kohta teada tahab.
+- lukustada seaded biomeetria taga (lüliti)
+- Lisatud on võimalus teatada kokkujooksmisest meili teel.
+- Lisati võimalus vaadata rakenduse kasutusaega.
 
 ## Tõlked:
 

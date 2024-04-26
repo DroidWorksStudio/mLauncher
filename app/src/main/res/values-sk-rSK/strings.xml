@@ -47,6 +47,7 @@
     <string name="extend_home_apps_area">Rozšíriť oblasť kliknutia</string>
     <string name="home_alignment_bottom">Domovská obrazovka Zarovnať dole</string>
     <!-- Alignment Strings -->
+    <string name="display_app_usage_stats">Zobraziť štatistiku používania aplikácie</string>
     <string name="home_alignment">Domovská obrazovka aplikácií</string>
     <string name="clock_alignment">Hodiny a dátum</string>
     <string name="drawer_alignment">Aplikácie v zozname aplikacií</string>
@@ -61,6 +62,7 @@
     <string name="long_swipe_right_app">Dlhé potiahnutie prstom doprava</string>
     <string name="clock_click_app">Kliknúť na Hodiny</string>
     <string name="date_click_app">Kliknúť na Dátum</string>
+    <string name="usage_click_app">Kliknite na Celkové využitie</string>
     <string name="double_tap">Dvojité poklepanie</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Zobraziť notifikácie</string>
@@ -125,6 +127,7 @@
     <string name="acra_mail_body">Popíšte problém, s ktorým ste sa stretli:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Všetky aplikácie</string>
+    <string name="total_screen_time">Celkový čas pred obrazovkou</string>
     <string name="can_not_delete_system_apps">Systémové aplikácie sa nedajú odstrániť</string>
     <string name="please_select_app">Vyberte aplikáciu</string>
     <string name="drawer_list_empty_hint">Nenašli sa žiadne aplikácie</string>

@@ -47,6 +47,7 @@
     <string name="extend_home_apps_area">扩展可点击区域</string>
     <string name="home_alignment_bottom">主屏幕底部对齐</string>
     <!-- Alignment Strings -->
+    <string name="display_app_usage_stats">显示应用程序使用情况统计信息</string>
     <string name="home_alignment">主屏应用</string>
     <string name="clock_alignment">时钟和日期</string>
     <string name="drawer_alignment">抽屉内的应用</string>
@@ -61,6 +62,7 @@
     <string name="long_swipe_right_app">长按向右滑动</string>
     <string name="clock_click_app">单击时钟启动的应用</string>
     <string name="date_click_app">单击日期启动的应用</string>
+    <string name="usage_click_app">点击“总使用量”</string>
     <string name="double_tap">轻按两次启动的应用</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">显示通知</string>
@@ -125,6 +127,7 @@
     <string name="acra_mail_body">请描述您遇到的问题：</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">所有应用程序</string>
+    <string name="total_screen_time">总屏幕时间</string>
     <string name="can_not_delete_system_apps">无法删除系统应用程序</string>
     <string name="please_select_app">请选择一个应用程序</string>
     <string name="drawer_list_empty_hint">未找到应用</string>

@@ -2,8 +2,8 @@ Haarukka alkaen <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>.
 
 # Taottu ylimääräisillä ominaisuuksilla
 
-- Poistettu epäselvyyksiä, kuten mainoksia ja linkkejä
-- Voit nimetä sovelluksia uudelleen sovelluslaatikossa (sovellusten uudelleennimeäminen aloitusnäytössä on jo tuettu. Napsauta sovellusta pitkään aloitusnäytössä ja aloita kirjoittaminen.)
+- Poistettu sotku, kuten mainokset ja linkit.
+- Voit nimetä sovelluksia uudelleen sovelluslaatikossa (sovellusten uudelleennimeäminen aloitusnäytössä on jo tuettu. Napsauta vain pitkään sovellusta aloitusnäytössä ja aloita kirjoittaminen.)
 - Olemme lisänneet paljon enemmän vaihtoehtoja eleitä koti-näytöllä:
     - Eleet ovat nyt:
         - Pyyhkäisemällä ylös, alas, vasen, oikea
@@ -19,11 +19,13 @@ Haarukka alkaen <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>.
         - Virta-valintaikkuna
         - Ota kuvakaappaus
         - Poista ele käytöstä
-- Voit myös sijoittaa kellon riippumatta kodin sovelluksista
-- Sovellusten kohdistuksen muuttaminen sovelluslaatikossa
-- Lukitse asetukset biometristen tietojen takana (vaihda)
-- Muuta fonttikokoa
+- Voit myös sijoittaa kellon kotisovelluksista riippumatta.
+- Muuta sovellusten kohdistusta sovelluslaatikossa aloitusnäytöstä riippumatta.
+- Muuta aloitusnäytön osien fonttikokoa toisistaan riippumatta.
 - Poistettu internet-käyttöoikeus. Et koskaan tiedä mitä sovelluksen kehittäjä haluaa tietää sinusta.
+- Lukitse asetukset biometristen tietojen takana (vaihda)
+- Lisätty mahdollisuus ilmoittaa kaatumisista sähköpostitse.
+- Lisätty mahdollisuus tarkastella sovelluksen käyttöaikaa.
 
 ## Käännökset:
 

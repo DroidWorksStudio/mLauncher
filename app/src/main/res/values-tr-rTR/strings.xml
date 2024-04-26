@@ -47,6 +47,7 @@
     <string name="extend_home_apps_area">Tıklanabilir Alanı Genişlet</string>
     <string name="home_alignment_bottom">Ana Ekranı Alta Hizala</string>
     <!-- Alignment Strings -->
+    <string name="display_app_usage_stats">Uygulama Kullanım İstatistiklerini Görüntüle</string>
     <string name="home_alignment">Uygulamalar ana ekranı</string>
     <string name="clock_alignment">Saat ve tarih</string>
     <string name="drawer_alignment">Uygulama çekmecesindeki uygulamalar</string>
@@ -61,6 +62,7 @@
     <string name="long_swipe_right_app">Uzun Bas Sağa kaydır</string>
     <string name="clock_click_app">Saat üzerine Tıklayın</string>
     <string name="date_click_app">Tarih üzerine Tıklayın</string>
+    <string name="usage_click_app">Toplam Kullanım\'a tıklayın</string>
     <string name="double_tap">Çift Dokunuş</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Bildirimi Göster</string>
@@ -125,6 +127,7 @@
     <string name="acra_mail_body">Lütfen karşılaştığınız sorunu açıklayın:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Tüm uygulamalar</string>
+    <string name="total_screen_time">Toplam Ekran Süresi</string>
     <string name="can_not_delete_system_apps">Sistem Uygulamaları Silinemiyor</string>
     <string name="please_select_app">Lütfen bir uygulama seçin</string>
     <string name="drawer_list_empty_hint">Herhangi bir uygulama bulunamadı</string>

@@ -2,8 +2,8 @@ Villás <a href="https://github.com/tanujnotes/Olauncher">-tól Olauncher</a>. M
 
 # Villás extra funkciókkal
 
-- Eltávolítottuk a zavaró elemeket, például hirdetéseket és linkeket
-- Az alkalmazásokat átnevezheti az alkalmazás-tálcán (Az alkalmazások átnevezése a kezdőképernyőn már támogatott. Csak kattintson hosszan egy alkalmazásra a kezdőképernyőn, és kezdjen el gépelni.)
+- Eltávolította a rendetlenséget, például a hirdetéseket és a linkeket.
+- Az alkalmazásokat átnevezheti az alkalmazás-tálcán (Az alkalmazások átnevezése a kezdőképernyőn már támogatott. Csak hosszan kattintson egy alkalmazásra a kezdőképernyőn, és kezdje el a gépelést.)
 - Sokkal több lehetőséget adtunk a gesztusokhoz a kezdőképernyőn:
     - A gesztusok most:
         - Csúsztatás fel, le, balra, jobbra
@@ -19,11 +19,13 @@ Villás <a href="https://github.com/tanujnotes/Olauncher">-tól Olauncher</a>. M
         - Power Dialog
         - Készítsen képernyőképet
         - Gesztus letiltása
-- Az órát az otthoni alkalmazásoktól függetlenül is elhelyezheti
-- Az alkalmazások igazításának módosítása az alkalmazás-tálcában
-- Beállítások zárolása a biometrikus adatok mögött (váltás)
-- Betűméret módosítása
+- Az órát az otthoni alkalmazásoktól függetlenül is elhelyezheti.
+- Módosítsa az alkalmazások beállítását az alkalmazásfiókban a kezdőképernyőtől függetlenül.
+- A kezdőképernyő szakaszainak betűméretének megváltoztatása egymástól függetlenül.
 - Eltávolították az internetes engedélyt. Soha nem tudhatod, hogy egy alkalmazásfejlesztő mit akar tudni rólad.
+- Beállítások zárolása a biometrikus adatok mögött (váltás)
+- Hozzáadtuk az összeomlás e-mailben történő bejelentésének lehetőségét.
+- Hozzáadtuk az alkalmazás használati idejének megtekintésének lehetőségét.
 
 ## Fordítások:
 

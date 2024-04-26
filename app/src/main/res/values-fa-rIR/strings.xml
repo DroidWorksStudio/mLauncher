@@ -47,6 +47,7 @@
     <string name="extend_home_apps_area">گسترش منطقه قابل کلیک</string>
     <string name="home_alignment_bottom">تراز کردن صفحه اصلی در پایین</string>
     <!-- Alignment Strings -->
+    <string name="display_app_usage_stats">نمایش آمار استفاده از برنامه</string>
     <string name="home_alignment">صفحه اصلی برنامه ها</string>
     <string name="clock_alignment">ساعت و تاریخ</string>
     <string name="drawer_alignment">برنامه ها در کشوی برنامه</string>
@@ -61,6 +62,7 @@
     <string name="long_swipe_right_app">انگشت خود را به سمت راست فشار دهید</string>
     <string name="clock_click_app">روی ساعت کلیک کنید</string>
     <string name="date_click_app">روی تاریخ کلیک کنید</string>
+    <string name="usage_click_app">روی Total Usage کلیک کنید</string>
     <string name="double_tap">دو تا ضربه ی آهسته بزن</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">نمایش اعلان</string>
@@ -125,6 +127,7 @@
     <string name="acra_mail_body">لطفاً مشکلی را که با آن مواجه شدید شرح دهید:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">همه برنامه ها</string>
+    <string name="total_screen_time">کل زمان نمایش</string>
     <string name="can_not_delete_system_apps">نمی توان برنامه های سیستم را حذف کرد</string>
     <string name="please_select_app">لطفاً یک برنامه را انتخاب کنید</string>
     <string name="drawer_list_empty_hint">هیچ برنامه ای پیدا نشد</string>

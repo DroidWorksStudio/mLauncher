@@ -2,8 +2,8 @@ Bercabang daripada <a href="https://github.com/tanujnotes/Olauncher">Olauncher</
 
 # Bercabang dengan ciri tambahan
 
-- Mengalih keluar kekusutan, seperti iklan dan pautan
-- Anda boleh menamakan semula apl dalam laci apl (Menamakan semula apl pada skrin utama sudah disokong. Cuma klik lama pada aplikasi pada skrin utama dan mula menaip)
+- Mengalih keluar kekusutan, seperti iklan dan pautan.
+- Anda boleh menamakan semula apl dalam laci apl (Menamakan semula apl pada skrin utama sudah disokong. Cuma klik lama pada apl pada skrin utama dan mula menaip.)
 - Kami telah menambah lebih banyak pilihan untuk gerak isyarat pada skrin utama:
     - Gerak isyarat kini:
         - Meleret ke atas, bawah, kiri, kanan
@@ -19,11 +19,13 @@ Bercabang daripada <a href="https://github.com/tanujnotes/Olauncher">Olauncher</
         - Dialog Kuasa
         - Ambil Tangkapan Skrin
         - Lumpuhkan Gerak Isyarat
-- Anda juga boleh meletakkan jam secara bebas daripada apl rumah
-- Tukar penjajaran apl dalam laci apl
-- Kunci tetapan di belakang biometrik (togol)
-- Tukar saiz fon
+- Anda juga boleh meletakkan jam secara bebas daripada apl rumah.
+- Tukar penjajaran apl dalam laci apl bebas daripada skrin utama.
+- Tukar saiz fon bahagian skrin utama bebas antara satu sama lain.
 - Dialih keluar kebenaran internet. Anda tidak pernah tahu perkara yang ingin diketahui oleh pembangun apl tentang anda.
+- Kunci tetapan di belakang biometrik (togol)
+- Menambah keupayaan untuk melaporkan ranap melalui e-mel.
+- Menambah keupayaan untuk melihat masa penggunaan aplikasi.
 
 ## Terjemahan:
 

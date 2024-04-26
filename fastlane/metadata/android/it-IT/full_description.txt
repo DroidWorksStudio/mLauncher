@@ -2,8 +2,8 @@ Biforcato da <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mi
 
 # Fork con funzionalità aggiuntive
 
-- Rimosso il disordine, come annunci e link
-- È possibile rinominare le app nell'app-drawer (la rinominazione delle app nella schermata iniziale è già supportata. È sufficiente fare clic a lungo su un'applicazione nella schermata iniziale e iniziare a digitare).
+- Rimosso il disordine, come annunci e collegamenti.
+- È possibile rinominare le app nell'app-drawer (la rinominazione delle app nella schermata iniziale è già supportata. Basta fare clic a lungo su un'app nella schermata principale e iniziare a digitare.)
 - Maggiore personalizzazione dei gesti della schermata iniziale
     - I gesti sono ora:
         - Scorri verso l'alto, verso il basso, a sinistra, a destra
@@ -19,11 +19,13 @@ Biforcato da <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mi
         - Menu di spegnimento
         - Fai uno screenshot
         - Disabilita gesti
-- Allineamento dell'orologio indipendente dalle app nella home page
-- Modifica dell'allineamento delle app nell'elenco delle applicazioni
-- Blocca le impostazioni tramite biometria (attiva/disattiva)
-- Modifica della dimensione dei caratteri
+- Puoi anche posizionare l'orologio indipendentemente dalle app domestiche.
+- Modifica l'allineamento delle app nel cassetto delle app indipendentemente dalla schermata iniziale.
+- Modifica la dimensione del carattere delle sezioni della schermata iniziale indipendentemente l'una dall'altra.
 - Rimozione dell'autorizzazione all'accesso a Internet - Rimozione dell'autorizzazione dell'accesso a Internet. Non sai mai cosa uno sviluppatore di app vuole sapere su di te.
+- Blocca le impostazioni tramite biometria (attiva/disattiva)
+- Aggiunta la possibilità di segnalare arresti anomali tramite e-mail.
+- Aggiunta la possibilità di visualizzare il tempo di utilizzo dell'app.
 
 ## Traduzioni:
 

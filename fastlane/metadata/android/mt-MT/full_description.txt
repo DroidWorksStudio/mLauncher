@@ -2,8 +2,8 @@ Forked minn <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Min
 
 # Forked b'karatteristiċi żejda
 
-- Tneħħa l-imbarazz, bħal reklami u links
-- Tista' tibdel l-isem tal-apps fil-kexxun tal-app (It-tismija mill-ġdid tal-apps fuq l-iskrin tad-dar hija diġà appoġġjata. Ikklikkja fit-tul fuq app fuq l-iskrin tad-dar u ibda ttajpja)
+- Tneħħa l-imbarazz, bħal reklami u links.
+- Tista' tibdel l-isem tal-apps fil-kexxun tal-app (It-tismija mill-ġdid tal-apps fuq l-iskrin tad-dar hija diġà appoġġjata. Ikklikkja fit-tul fuq app fuq l-iskrin tad-dar u ibda ttajpja.)
 - Żidna ħafna aktar għażliet għall-ġesti fuq l-iskrin tad-dar:
     - Il-ġesti issa huma:
         - Swiping 'l fuq, 'l isfel, xellug, lemin
@@ -19,11 +19,13 @@ Forked minn <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Min
         - Djalogu dwar l-Enerġija
         - Ħu Screenshot
         - Iddiżattiva Ġest
-- Tista 'wkoll tpoġġi l-arloġġ indipendentement mill-apps tad-dar
-- Ibdel l-allinjament tal-apps fl-app-drawer
-- Issakkar is-settings wara l-bijometrija (toggle)
-- Ibdel id-daqs tat-tipa
+- Tista 'wkoll tpoġġi l-arloġġ indipendentement mill-apps tad-dar.
+- Ibdel l-allinjament tal-apps fl-app-drawer indipendenti mill-homescreen.
+- Ibdel id-daqs tat-tipa tas-sezzjonijiet tal-homescreen indipendenti minn xulxin.
 - Tneħħa l-permess tal-internet. Qatt ma tkun taf x'jixtieq ikun jaf dwarek żviluppatur ta' app.
+- Issakkar is-settings wara l-bijometrija (toggle)
+- Żid il-ħila li tirrapporta l-ħabta permezz tal-email.
+- Żid il-ħila biex tara l-ħin tal-użu tal-app.
 
 ## Traduzzjonijiet:
 

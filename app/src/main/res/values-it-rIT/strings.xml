@@ -47,6 +47,7 @@
     <string name="extend_home_apps_area">Estendi l\'area cliccabile</string>
     <string name="home_alignment_bottom">Schermata iniziale allineata in basso</string>
     <!-- Alignment Strings -->
+    <string name="display_app_usage_stats">Visualizza le statistiche sull\'utilizzo dell\'app</string>
     <string name="home_alignment">App schermata iniziale</string>
     <string name="clock_alignment">Orologio e data</string>
     <string name="drawer_alignment">Applicazioni nell\'elenco app</string>
@@ -61,6 +62,7 @@
     <string name="long_swipe_right_app">Premere a lungo scorrendo verso destra</string>
     <string name="clock_click_app">Clicca su Orologio</string>
     <string name="date_click_app">Clicca su Data</string>
+    <string name="usage_click_app">Fare clic su Utilizzo totale</string>
     <string name="double_tap">Doppio Tocco</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Mostra Notifiche</string>
@@ -125,6 +127,7 @@
     <string name="acra_mail_body">Descrivi il problema riscontrato:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Tutte le app</string>
+    <string name="total_screen_time">Tempo totale sullo schermo</string>
     <string name="can_not_delete_system_apps">Impossibile eliminare le app di sistema</string>
     <string name="please_select_app">Seleziona un\'app</string>
     <string name="drawer_list_empty_hint">Nessuna app trovata</string>

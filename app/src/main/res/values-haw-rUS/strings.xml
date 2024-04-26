@@ -47,6 +47,7 @@
     <string name="extend_home_apps_area">E hoʻonui i kahi hiki ke kaomi</string>
     <string name="home_alignment_bottom">ʻO ka pale home e hoʻopololei i lalo</string>
     <!-- Alignment Strings -->
+    <string name="display_app_usage_stats">Hōʻike i nā helu hoʻohana ʻana i ka polokalamu</string>
     <string name="home_alignment">Pākuʻi home Apps</string>
     <string name="clock_alignment">Uaki a me ka lā</string>
     <string name="drawer_alignment">Nā polokalamu i loko o ka app drawer</string>
@@ -61,6 +62,7 @@
     <string name="long_swipe_right_app">Paʻi lōʻihi Swipe ʻākau</string>
     <string name="clock_click_app">Kaomi ma ka uaki</string>
     <string name="date_click_app">Kaomi ma ka lā</string>
+    <string name="usage_click_app">Kaomi ma ka Total Use</string>
     <string name="double_tap">Koʻu pālua</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Hōʻike Hoʻolaha</string>
@@ -125,6 +127,7 @@
     <string name="acra_mail_body">E ʻoluʻolu e wehewehe i ka pilikia āu i hālāwai ai:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Nā polokalamu a pau</string>
+    <string name="total_screen_time">Huina manawa pale</string>
     <string name="can_not_delete_system_apps">ʻAʻole hiki ke holoi i nā polokalamu Pūnaewele</string>
     <string name="please_select_app">E ʻoluʻolu e koho i kahi polokalamu</string>
     <string name="drawer_list_empty_hint">ʻAʻohe polokalamu i loaʻa</string>

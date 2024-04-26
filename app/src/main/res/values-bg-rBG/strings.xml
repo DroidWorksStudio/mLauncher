@@ -47,6 +47,7 @@
     <string name="extend_home_apps_area">Разширяване на зоната за кликване</string>
     <string name="home_alignment_bottom">Подравняване на началния екран отдолу</string>
     <!-- Alignment Strings -->
+    <string name="display_app_usage_stats">Показване на статистика за използване на приложението</string>
     <string name="home_alignment">Начален екран на приложенията</string>
     <string name="clock_alignment">Часовник и дата</string>
     <string name="drawer_alignment">Приложения в чекмеджето за приложения</string>
@@ -61,6 +62,7 @@
     <string name="long_swipe_right_app">Продължително натискане Плъзнете надясно</string>
     <string name="clock_click_app">Кликнете върху Часовник</string>
     <string name="date_click_app">Кликнете върху Дата</string>
+    <string name="usage_click_app">Кликнете върху Общо използване</string>
     <string name="double_tap">Двойно докосване</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Показване на известие</string>
@@ -125,6 +127,7 @@
     <string name="acra_mail_body">Моля, опишете проблема, който срещнахте:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Всички приложения</string>
+    <string name="total_screen_time">Общо време на екрана</string>
     <string name="can_not_delete_system_apps">Не могат да се изтрият системни приложения</string>
     <string name="please_select_app">Моля, изберете приложение</string>
     <string name="drawer_list_empty_hint">Не са намерени приложения</string>
