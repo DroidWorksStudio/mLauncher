@@ -47,6 +47,7 @@
     <string name="extend_home_apps_area">Hanitatra ny faritra azo kitihina</string>
     <string name="home_alignment_bottom">Efijery an-trano Align Bottom</string>
     <!-- Alignment Strings -->
+    <string name="display_app_usage_stats">Asehoy ny antontan\'isa momba ny fampiasana fampiharana</string>
     <string name="home_alignment">Efijerin\'ny fampiharana</string>
     <string name="clock_alignment">Ora sy daty</string>
     <string name="drawer_alignment">Apps ao amin\'ny app drawer</string>
@@ -61,6 +62,7 @@
     <string name="long_swipe_right_app">Tsindrio lava Swipe miankavanana</string>
     <string name="clock_click_app">Tsindrio ny Clock</string>
     <string name="date_click_app">Tsindrio ny Date</string>
+    <string name="usage_click_app">Tsindrio ny Total Usage</string>
     <string name="double_tap">Peho indroa</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Asehoy ny fampahafantarana</string>
@@ -125,6 +127,7 @@
     <string name="acra_mail_body">Farito azafady ny olana sendra anao:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Apps rehetra</string>
+    <string name="total_screen_time">Fotoan\'ny efijery manontolo</string>
     <string name="can_not_delete_system_apps">Tsy afaka mamafa System Apps</string>
     <string name="please_select_app">Mifidiana app azafady</string>
     <string name="drawer_list_empty_hint">Tsy misy fampiharana hita</string>
