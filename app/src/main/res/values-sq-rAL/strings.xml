@@ -47,6 +47,7 @@
     <string name="extend_home_apps_area">Zgjero zonën e klikueshme</string>
     <string name="home_alignment_bottom">Rreshtimi i ekranit bazë në fund</string>
     <!-- Alignment Strings -->
+    <string name="display_app_usage_stats">Shfaq statistikat e përdorimit të aplikacionit</string>
     <string name="home_alignment">Ekrani bazë i aplikacioneve</string>
     <string name="clock_alignment">Ora dhe data</string>
     <string name="drawer_alignment">Aplikacionet në sirtarin e aplikacioneve</string>
@@ -61,6 +62,7 @@
     <string name="long_swipe_right_app">Shtypni gjatë Rrëshqitni djathtas</string>
     <string name="clock_click_app">Klikoni mbi Orën</string>
     <string name="date_click_app">Klikoni mbi Data</string>
+    <string name="usage_click_app">Klikoni mbi Përdorimi total</string>
     <string name="double_tap">Trokit dy herë</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Shfaq njoftimin</string>
@@ -125,6 +127,7 @@
     <string name="acra_mail_body">Ju lutemi përshkruani problemin që keni hasur:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Të gjitha aplikacionet</string>
+    <string name="total_screen_time">Koha totale e ekranit</string>
     <string name="can_not_delete_system_apps">Aplikacionet e sistemit nuk mund të fshihen</string>
     <string name="please_select_app">Ju lutemi zgjidhni një aplikacion</string>
     <string name="drawer_list_empty_hint">Nuk u gjet asnjë aplikacion</string>
