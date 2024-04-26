@@ -8,6 +8,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Add option to display app usage stats. - ([b2bc061](https://github.com/DroidWorksStudio/mLauncher/commit/b2bc061ec4c6c9a7e7a76152d0f5598baa73dddf))
 
+### Bug Fixes:
+
+- Fixed the ability for the launcher to ask for usage permission. - ([580a988](https://github.com/DroidWorksStudio/mLauncher/commit/580a988ae48032ba89dd780f5c9c2018ba579708))
+
 ## [1.5.5](https://github.com/DroidWorksStudio/mLauncher/tree/1.5.5) - (23, April 2024)
 
 ### Implemented Enhancements:
