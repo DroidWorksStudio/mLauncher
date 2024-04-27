@@ -123,8 +123,12 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
         batteryReceiver = BatteryReceiver()
         /* register battery changes */
-        val filter = IntentFilter(Intent.ACTION_BATTERY_CHANGED)
-        requireContext().registerReceiver(batteryReceiver, filter)
+        try {
+            val filter = IntentFilter(Intent.ACTION_BATTERY_CHANGED)
+            requireContext().registerReceiver(batteryReceiver, filter)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
 
         val timezone = prefs.language.timezone()
         val is24HourFormat = DateFormat.is24HourFormat(requireContext())
@@ -175,8 +179,12 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
         batteryReceiver = BatteryReceiver()
         /* register battery changes */
-        val filter = IntentFilter(Intent.ACTION_BATTERY_CHANGED)
-        requireContext().registerReceiver(batteryReceiver, filter)
+        try {
+            val filter = IntentFilter(Intent.ACTION_BATTERY_CHANGED)
+            requireContext().registerReceiver(batteryReceiver, filter)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
 
         // only show "set as default"-button if tips are GONE
         if (binding.firstRunTips.visibility == View.GONE) {
@@ -189,7 +197,21 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     override fun onPause() {
         super.onPause()
         /* unregister battery changes if the receiver is registered */
-        requireContext().unregisterReceiver(batteryReceiver)
+        try {
+            requireContext().unregisterReceiver(batteryReceiver)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
+    override fun onStop() {
+        super.onStop()
+        /* unregister battery changes if the receiver is registered */
+        try {
+            requireContext().unregisterReceiver(batteryReceiver)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
     }
 
     override fun onClick(view: View) {
