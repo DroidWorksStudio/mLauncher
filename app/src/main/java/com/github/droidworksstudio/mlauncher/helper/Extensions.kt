@@ -4,9 +4,13 @@ import android.app.SearchManager
 import android.content.Context
 import android.content.Intent
 import android.content.pm.LauncherApps
+import android.content.res.Configuration
+import android.hardware.Sensor
+import android.hardware.SensorManager
 import android.net.Uri
 import android.os.UserHandle
 import android.view.View
+import android.view.ViewConfiguration
 import android.view.inputmethod.InputMethodManager
 import com.github.droidworksstudio.mlauncher.data.Constants
 
@@ -64,4 +68,23 @@ fun Context.isPackageInstalled(packageName: String, userHandle: UserHandle = and
     val launcher = getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps
     val activityInfo = launcher.getActivityList(packageName, userHandle)
     return activityInfo.size > 0
+}
+
+fun Context.isFeaturePhone(): Boolean {
+    val viewConfig = ViewConfiguration.get(this)
+
+    // Check for physical navigation buttons
+    val hasPhysicalNavButtons = viewConfig.hasPermanentMenuKey()
+
+    // Check for physical keyboard
+    val configuration = this.resources.configuration
+    val hasPhysicalKeyboard = configuration.keyboard != Configuration.KEYBOARD_NOKEYS &&
+            configuration.hardKeyboardHidden == Configuration.HARDKEYBOARDHIDDEN_NO
+
+    // Check for gyroscope
+    val sensorManager = this.getSystemService(Context.SENSOR_SERVICE) as? SensorManager
+    val hasGyroscope = sensorManager?.getDefaultSensor(Sensor.TYPE_GYROSCOPE) != null
+
+    // Return true if all three features are present
+    return hasPhysicalNavButtons && hasPhysicalKeyboard && hasGyroscope
 }

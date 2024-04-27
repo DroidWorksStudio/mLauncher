@@ -12,6 +12,7 @@ import android.os.Vibrator
 import android.text.format.DateFormat
 import android.util.Log
 import android.view.Gravity
+import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
@@ -113,6 +114,53 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         initObservers()
         initSwipeTouchListener()
         initClickListeners()
+
+        // Set up key event handling for the parent activity
+        requireActivity().window.decorView.setOnKeyListener { _, _, event ->
+            handleKeyEvent(event)
+        }
+    }
+
+    // Method to handle key events
+    private fun handleKeyEvent(event: KeyEvent): Boolean {
+        when (event.keyCode) {
+            KeyEvent.KEYCODE_DPAD_LEFT -> {
+                // Check if no view is currently selected
+                if (view?.findFocus() == null) {
+                    // Select the first item inside homeAppsLayout
+                    val homeAppsLayout = view?.findViewById(R.id.homeAppsLayout) as? LinearLayout
+                    homeAppsLayout?.let {
+                        if (it.childCount > 0) {
+                            val firstItem = it.getChildAt(0)
+                            firstItem.requestFocus()
+                            return true
+                        }
+                    }
+                }
+            }
+            KeyEvent.KEYCODE_DPAD_UP -> {
+                // Move focus to the previous view in the LinearLayout
+                view?.findFocus()?.let { it ->
+                    val previousView = it.focusSearch(View.FOCUS_UP)
+                    previousView?.let {
+                        it.requestFocus()
+                        return true
+                    }
+                }
+            }
+            KeyEvent.KEYCODE_DPAD_DOWN -> {
+                // Move focus to the next view in the LinearLayout
+                view?.findFocus()?.let { it ->
+                    val nextView = it.focusSearch(View.FOCUS_DOWN)
+                    nextView?.let {
+                        it.requestFocus()
+                        return true
+                    }
+                }
+            }
+            // Handle other arrow key events if needed
+        }
+        return false // Return false to allow the system to process the event
     }
 
     @RequiresApi(Build.VERSION_CODES.Q)
