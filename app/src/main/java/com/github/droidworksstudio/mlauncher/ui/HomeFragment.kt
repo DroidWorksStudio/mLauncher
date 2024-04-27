@@ -110,6 +110,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         @Suppress("DEPRECATION")
         vibrator = context?.getSystemService(VIBRATOR_SERVICE) as Vibrator
 
+
         initObservers()
         initSwipeTouchListener()
         initClickListeners()
@@ -891,6 +892,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                         )
                     }
                     gravity = prefs.homeAlignment.value()
+                    isFocusable = true
+                    isFocusableInTouchMode = true
                     val padding: Int = prefs.textMarginSize
                     setPadding(0, padding, 0, padding)
                     if (prefs.useCustomIconFont) {

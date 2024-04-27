@@ -59,7 +59,6 @@ fun Context.searchOnPlayStore(query: String? = null): Boolean {
     }
 }
 
-
 fun Context.isPackageInstalled(packageName: String, userHandle: UserHandle = android.os.Process.myUserHandle()): Boolean {
     val launcher = getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps
     val activityInfo = launcher.getActivityList(packageName, userHandle)
