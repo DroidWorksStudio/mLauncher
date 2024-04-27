@@ -11,7 +11,6 @@ All notable changes to this project will be documented in this file. See [conven
 ### Bug Fixes:
 
 - Better support for feature phones. - ([278ef1e](https://github.com/DroidWorksStudio/mLauncher/commit/278ef1e4d75058d1f8adb84f792fca69fcad0c4c))
-- Fixes #474  - ([278ef1e](https://github.com/DroidWorksStudio/mLauncher/commit/278ef1e4d75058d1f8adb84f792fca69fcad0c4c))
 - Fix receiver registration and unregistration in HomeFragment - ([935e2bb](https://github.com/DroidWorksStudio/mLauncher/commit/935e2bbea241751060b9512fabfef72c2a542c62))
 - Fixed the ability for the launcher to ask for usage permission. - ([580a988](https://github.com/DroidWorksStudio/mLauncher/commit/580a988ae48032ba89dd780f5c9c2018ba579708))
 
@@ -680,7 +679,6 @@ All notable changes to this project will be documented in this file. See [conven
 - Text size string - ([e7e3e07](https://github.com/DroidWorksStudio/mLauncher/commit/e7e3e07cfb6b2b102b58d00b7bb2977fe80db1f7))
 - Fix double tap2lock - ([4f82227](https://github.com/DroidWorksStudio/mLauncher/commit/4f8222708505339ed3c0dfe8a921a48f806feeb3))
 - Fix double tap2lock - ([5e55b3f](https://github.com/DroidWorksStudio/mLauncher/commit/5e55b3f1125baf1edb0ffb58627e94256649b413))
-- Fixes #79 and #122. - ([8b4db53](https://github.com/DroidWorksStudio/mLauncher/commit/8b4db53df183ea608b6f120fb28b3e3dc5068856))
 - App drawer swipe down to dismiss not working sometimes - ([948e0a3](https://github.com/DroidWorksStudio/mLauncher/commit/948e0a3262d2250778a351b36d3949d1ce740dbb))
 - Fixed status bar color for light theme - ([621f089](https://github.com/DroidWorksStudio/mLauncher/commit/621f08967d0eb9044cf5174b53c52f8fe4611a7b))
 - Daily wallpaper not updating correctly - ([acf5168](https://github.com/DroidWorksStudio/mLauncher/commit/acf5168536eea325438f6d0500ac630bdb48236d))
