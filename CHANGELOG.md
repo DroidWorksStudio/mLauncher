@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Bug Fixes:
 
+- Fix receiver registration and unregistration in HomeFragment - ([935e2bb](https://github.com/DroidWorksStudio/mLauncher/commit/935e2bbea241751060b9512fabfef72c2a542c62))
 - Fixed the ability for the launcher to ask for usage permission. - ([580a988](https://github.com/DroidWorksStudio/mLauncher/commit/580a988ae48032ba89dd780f5c9c2018ba579708))
 
 ### Language Support:
