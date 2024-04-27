@@ -5,4 +5,5 @@
 /pages
 /wiki
 /app/release
+/app/debug
 diff.*
