@@ -69,22 +69,3 @@ fun Context.isPackageInstalled(packageName: String, userHandle: UserHandle = and
     val activityInfo = launcher.getActivityList(packageName, userHandle)
     return activityInfo.size > 0
 }
-
-fun Context.isFeaturePhone(): Boolean {
-    val viewConfig = ViewConfiguration.get(this)
-
-    // Check for physical navigation buttons
-    val hasPhysicalNavButtons = viewConfig.hasPermanentMenuKey()
-
-    // Check for physical keyboard
-    val configuration = this.resources.configuration
-    val hasPhysicalKeyboard = configuration.keyboard != Configuration.KEYBOARD_NOKEYS &&
-            configuration.hardKeyboardHidden == Configuration.HARDKEYBOARDHIDDEN_NO
-
-    // Check for gyroscope
-    val sensorManager = this.getSystemService(Context.SENSOR_SERVICE) as? SensorManager
-    val hasGyroscope = sensorManager?.getDefaultSensor(Sensor.TYPE_GYROSCOPE) != null
-
-    // Return true if all three features are present
-    return hasPhysicalNavButtons && hasPhysicalKeyboard && hasGyroscope
-}
