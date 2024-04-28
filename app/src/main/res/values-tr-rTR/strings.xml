@@ -20,6 +20,7 @@
     <!-- Appearance Strings -->
     <string name="status_bar">Durum çubuğunu göster</string>
     <string name="theme_mode">Tema modu</string>
+    <string name="color_mode">Renk Modu</string>
     <string name="app_language">Arayüz Dili</string>
     <string name="app_text_size">Metin Boyutu</string>
     <string name="clock_text_size">Saat Metin Boyutu</string>
@@ -113,6 +114,17 @@
     <string name="open">Aç</string>
     <string name="close">Kapat</string>
     <string name="copy">Kopyala</string>
+    <!-- Colored Themes -->
+    <string name="catppuccino">Catpuccino</string>
+    <string name="nordic">İskandinav</string>
+    <!-- Dark Only Themes -->
+    <string name="dracula">Drakula</string>
+    <string name="arc">Yay</string>
+    <string name="nokto">nokto</string>
+    <string name="breeze">Esinti</string>
+    <string name="yaru">Yaru</string>
+    <!-- Light Only Themes -->
+    <string name="adwaita">Adwaita</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Kimlik Doğrulama İptali.</string>
     <string name="text_authentication_error">Kimlik doğrulama hatası:%1$s(kod %2$d)</string>
