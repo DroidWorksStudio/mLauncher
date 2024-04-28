@@ -20,6 +20,7 @@
     <!-- Appearance Strings -->
     <string name="status_bar">Zobraziť stavový riadok</string>
     <string name="theme_mode">Režim témy</string>
+    <string name="color_mode">Farebný režim</string>
     <string name="app_language">Jazyk rozhrania</string>
     <string name="app_text_size">Veľkosť textu</string>
     <string name="clock_text_size">Veľkosť textu hodín</string>
@@ -113,6 +114,17 @@
     <string name="open">Otvoriť</string>
     <string name="close">Zatvoriť</string>
     <string name="copy">Kopírovať</string>
+    <!-- Colored Themes -->
+    <string name="catppuccino">Catpuccino</string>
+    <string name="nordic">severský</string>
+    <!-- Dark Only Themes -->
+    <string name="dracula">Dracula</string>
+    <string name="arc">Arc</string>
+    <string name="nokto">Nokto</string>
+    <string name="breeze">Vánok</string>
+    <string name="yaru">Yaru</string>
+    <!-- Light Only Themes -->
+    <string name="adwaita">Adwaita</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Zrušiť overenie.</string>
     <string name="text_authentication_error">Chyba overenia:%1$s(kód %2$d)</string>
