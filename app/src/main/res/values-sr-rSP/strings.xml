@@ -20,6 +20,7 @@
     <!-- Appearance Strings -->
     <string name="status_bar">Show status bar</string>
     <string name="theme_mode">Theme mode</string>
+    <string name="color_mode">Цолор Моде</string>
     <string name="app_language">Interface Language</string>
     <string name="app_text_size">Text Size</string>
     <string name="clock_text_size">Величина текста на сату</string>
@@ -113,6 +114,17 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string name="copy">Копирај</string>
+    <!-- Colored Themes -->
+    <string name="catppuccino">Цатппуццино</string>
+    <string name="nordic">Нордиц</string>
+    <!-- Dark Only Themes -->
+    <string name="dracula">Дракула</string>
+    <string name="arc">Арц</string>
+    <string name="nokto">Нокто</string>
+    <string name="breeze">Бреезе</string>
+    <string name="yaru">Иару</string>
+    <!-- Light Only Themes -->
+    <string name="adwaita">Адваита</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Откажи аутентификацију.</string>
     <string name="text_authentication_error">Грешка при аутентификацији:%1$s(код %2$d)</string>
