@@ -139,6 +139,7 @@
     <string name="acra_mail_body">Beskryf asseblief die probleem wat jy teëgekom het:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>
+    <string name="using_feature_phone">Gebruik Feature Phone</string>
     <string name="total_screen_time">Totale skermtyd</string>
     <string name="can_not_delete_system_apps">Kan nie stelseltoepassings uitvee nie</string>
     <string name="please_select_app">Kies asseblief \'n toepassing</string>
