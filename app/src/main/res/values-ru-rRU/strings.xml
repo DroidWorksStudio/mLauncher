@@ -139,6 +139,7 @@
     <string name="acra_mail_body">Опишите проблему, с которой вы столкнулись:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Все приложения</string>
+    <string name="using_feature_phone">Использование обычного телефона</string>
     <string name="total_screen_time">Общее время экрана</string>
     <string name="can_not_delete_system_apps">Не могу удалить системные приложения</string>
     <string name="please_select_app">Пожалуйста, выберите приложение</string>
