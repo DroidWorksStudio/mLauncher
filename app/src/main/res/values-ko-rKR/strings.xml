@@ -20,6 +20,7 @@
     <!-- Appearance Strings -->
     <string name="status_bar">Show status bar</string>
     <string name="theme_mode">Theme mode</string>
+    <string name="color_mode">컬러 모드</string>
     <string name="app_language">Interface Language</string>
     <string name="app_text_size">Text Size</string>
     <string name="clock_text_size">시계 텍스트 크기</string>
@@ -113,6 +114,17 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string name="copy">복사</string>
+    <!-- Colored Themes -->
+    <string name="catppuccino">캣푸치노</string>
+    <string name="nordic">북유럽 인</string>
+    <!-- Dark Only Themes -->
+    <string name="dracula">드라큘라</string>
+    <string name="arc">호</string>
+    <string name="nokto">녹토</string>
+    <string name="breeze">미풍</string>
+    <string name="yaru">야루</string>
+    <!-- Light Only Themes -->
+    <string name="adwaita">아드와이타</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">인증 취소.</string>
     <string name="text_authentication_error">인증 오류:%1$s(코드 %2$d)</string>
