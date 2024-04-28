@@ -20,6 +20,7 @@
     <!-- Appearance Strings -->
     <string name="status_bar">Näytä tilarivi</string>
     <string name="theme_mode">Teeman tila</string>
+    <string name="color_mode">Väritila</string>
     <string name="app_language">Käyttöliittymän Kieli</string>
     <string name="app_text_size">Tekstin Koko</string>
     <string name="clock_text_size">Kellon tekstin koko</string>
@@ -113,6 +114,17 @@
     <string name="open">Avaa</string>
     <string name="close">Sulje</string>
     <string name="copy">Kopio</string>
+    <!-- Colored Themes -->
+    <string name="catppuccino">Catppuccino</string>
+    <string name="nordic">pohjoismainen</string>
+    <!-- Dark Only Themes -->
+    <string name="dracula">Dracula</string>
+    <string name="arc">Arc</string>
+    <string name="nokto">Nokto</string>
+    <string name="breeze">Tuuli</string>
+    <string name="yaru">Yaru</string>
+    <!-- Light Only Themes -->
+    <string name="adwaita">Adwaita</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Todennus Peruuta.</string>
     <string name="text_authentication_error">Todennusvirhe:%1$s(koodi %2$d)</string>
