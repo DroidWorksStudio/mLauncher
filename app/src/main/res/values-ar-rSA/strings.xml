@@ -139,6 +139,7 @@
     <string name="acra_mail_body">يرجى وصف المشكلة التي واجهتها:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">جميع التطبيقات</string>
+    <string name="using_feature_phone">استخدام الهاتف المميز</string>
     <string name="total_screen_time">إجمالي وقت الشاشة</string>
     <string name="can_not_delete_system_apps">لا يمكن حذف تطبيقات النظام</string>
     <string name="please_select_app">الرجاء تحديد التطبيق</string>
