@@ -9,6 +9,10 @@ All notable changes to this project will be documented in this file. See [conven
 - Fixed the background opacity when below 10. - ([ebe667c](https://github.com/DroidWorksStudio/mLauncher/commit/ebe667ccd0b766dc92705d43cc98e25f6ac8c6f3))
 - Fixed BiometricManager for when feature phone is enabled. - ([33ca37f](https://github.com/DroidWorksStudio/mLauncher/commit/33ca37f5a0702a1736c8df9a2eb2599f571db121))
 
+### Dependency Updates:
+
+- Updated androidxTestKotlin - ([17492ec](https://github.com/DroidWorksStudio/mLauncher/commit/17492ecf3950ee06cc3268a56e9da42b0786a616))
+
 ## [1.5.6](https://github.com/DroidWorksStudio/mLauncher/tree/1.5.6) - (28, April 2024)
 
 ### Implemented Enhancements:
