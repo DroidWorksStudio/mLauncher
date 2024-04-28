@@ -20,6 +20,7 @@
     <!-- Appearance Strings -->
     <string name="status_bar">Arată bara de stare</string>
     <string name="theme_mode">Mod temă</string>
+    <string name="color_mode">Modul color</string>
     <string name="app_language">Limba interfeței</string>
     <string name="app_text_size">Dimensiune text</string>
     <string name="clock_text_size">Dimensiunea textului ceasului</string>
@@ -113,6 +114,17 @@
     <string name="open">Deschideți</string>
     <string name="close">Inchide</string>
     <string name="copy">Copie</string>
+    <!-- Colored Themes -->
+    <string name="catppuccino">Catpuccino</string>
+    <string name="nordic">nordic</string>
+    <!-- Dark Only Themes -->
+    <string name="dracula">Dracula</string>
+    <string name="arc">Arc</string>
+    <string name="nokto">Nokto</string>
+    <string name="breeze">Briză</string>
+    <string name="yaru">Yaru</string>
+    <!-- Light Only Themes -->
+    <string name="adwaita">Adwaita</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Anulare autentificare.</string>
     <string name="text_authentication_error">Eroare de autentificare:%1$s(cod %2$d)</string>
