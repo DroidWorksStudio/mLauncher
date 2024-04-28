@@ -20,6 +20,7 @@
     <!-- Appearance Strings -->
     <string name="status_bar">სტატუსის ზოლის ჩვენება</string>
     <string name="theme_mode">თემის რეჟიმი</string>
+    <string name="color_mode">ფერის რეჟიმი</string>
     <string name="app_language">ინტერფეისის ენა</string>
     <string name="app_text_size">Ტექსტის ზომა</string>
     <string name="clock_text_size">საათის ტექსტის ზომა</string>
@@ -113,6 +114,17 @@
     <string name="open">გახსენით</string>
     <string name="close">დახურვა</string>
     <string name="copy">კოპირება</string>
+    <!-- Colored Themes -->
+    <string name="catppuccino">კაპუჩინო</string>
+    <string name="nordic">ნორდიული</string>
+    <!-- Dark Only Themes -->
+    <string name="dracula">დრაკულა</string>
+    <string name="arc">რკალი</string>
+    <string name="nokto">ნოქტო</string>
+    <string name="breeze">Ნიავი</string>
+    <string name="yaru">იარუ</string>
+    <!-- Light Only Themes -->
+    <string name="adwaita">ადვაიტა</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">ავთენტიფიკაციის გაუქმება.</string>
     <string name="text_authentication_error">ავტორიზაციის შეცდომა:%1$s(კოდი %2$d)</string>
