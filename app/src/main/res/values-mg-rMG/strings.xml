@@ -139,6 +139,7 @@
     <string name="acra_mail_body">Farito azafady ny olana sendra anao:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Apps rehetra</string>
+    <string name="using_feature_phone">Mampiasa telefaona finday</string>
     <string name="total_screen_time">Fotoan\'ny efijery manontolo</string>
     <string name="can_not_delete_system_apps">Tsy afaka mamafa System Apps</string>
     <string name="please_select_app">Mifidiana app azafady</string>
