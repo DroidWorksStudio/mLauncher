@@ -20,6 +20,7 @@
     <!-- Appearance Strings -->
     <string name="status_bar">Tampilkan bilah status</string>
     <string name="theme_mode">Mode tema</string>
+    <string name="color_mode">Modus Warna</string>
     <string name="app_language">Bahasa Antarmuka</string>
     <string name="app_text_size">Ukuran Teks</string>
     <string name="clock_text_size">Ukuran Teks Jam</string>
@@ -113,6 +114,17 @@
     <string name="open">Terbuka</string>
     <string name="close">Tutup</string>
     <string name="copy">Menyalin</string>
+    <!-- Colored Themes -->
+    <string name="catppuccino">Catpuccino</string>
+    <string name="nordic">Nordik</string>
+    <!-- Dark Only Themes -->
+    <string name="dracula">Drakula</string>
+    <string name="arc">Busur</string>
+    <string name="nokto">Nokto</string>
+    <string name="breeze">Angin semilir</string>
+    <string name="yaru">Yaru</string>
+    <!-- Light Only Themes -->
+    <string name="adwaita">Adwaita</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Pembatalan Otentikasi.</string>
     <string name="text_authentication_error">Kesalahan autentikasi:%1$s(kode %2$d)</string>
@@ -127,6 +139,7 @@
     <string name="acra_mail_body">Harap jelaskan masalah yang Anda temui:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Semua aplikasi</string>
+    <string name="using_feature_phone">Menggunakan Ponsel Fitur</string>
     <string name="total_screen_time">Total Waktu Layar</string>
     <string name="can_not_delete_system_apps">Tidak Dapat Menghapus Aplikasi Sistem</string>
     <string name="please_select_app">Silakan pilih aplikasi</string>

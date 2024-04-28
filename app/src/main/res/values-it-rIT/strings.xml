@@ -20,6 +20,7 @@
     <!-- Appearance Strings -->
     <string name="status_bar">Mostra barra di stato</string>
     <string name="theme_mode">Modalità tema</string>
+    <string name="color_mode">Modalità colore</string>
     <string name="app_language">Lingua Dell\'Interfaccia</string>
     <string name="app_text_size">Dimensione Testo</string>
     <string name="clock_text_size">Dimensione del testo dell\'orologio</string>
@@ -113,6 +114,17 @@
     <string name="open">Apri</string>
     <string name="close">Chiudi</string>
     <string name="copy">Copia</string>
+    <!-- Colored Themes -->
+    <string name="catppuccino">Catpuccino</string>
+    <string name="nordic">nordico</string>
+    <!-- Dark Only Themes -->
+    <string name="dracula">Dracula</string>
+    <string name="arc">Arco</string>
+    <string name="nokto">Nokto</string>
+    <string name="breeze">Brezza</string>
+    <string name="yaru">Yaru</string>
+    <!-- Light Only Themes -->
+    <string name="adwaita">Adwaita</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Autenticazione annullata.</string>
     <string name="text_authentication_error">Errore di autenticazione:%1$s(codice %2$d)</string>
@@ -127,6 +139,7 @@
     <string name="acra_mail_body">Descrivi il problema riscontrato:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Tutte le app</string>
+    <string name="using_feature_phone">Utilizzo del telefono funzionale</string>
     <string name="total_screen_time">Tempo totale sullo schermo</string>
     <string name="can_not_delete_system_apps">Impossibile eliminare le app di sistema</string>
     <string name="please_select_app">Seleziona un\'app</string>

@@ -20,6 +20,7 @@
     <!-- Appearance Strings -->
     <string name="status_bar">Vis statuslinjen</string>
     <string name="theme_mode">Tema modus</string>
+    <string name="color_mode">Fargemodus</string>
     <string name="app_language">Grensesnitt språk</string>
     <string name="app_text_size">Tekst størrelse</string>
     <string name="clock_text_size">Klokketekststørrelse</string>
@@ -113,6 +114,17 @@
     <string name="open">Åpne</string>
     <string name="close">Lukk</string>
     <string name="copy">Kopiere</string>
+    <!-- Colored Themes -->
+    <string name="catppuccino">Catppuccino</string>
+    <string name="nordic">nordisk</string>
+    <!-- Dark Only Themes -->
+    <string name="dracula">Dracula</string>
+    <string name="arc">Bue</string>
+    <string name="nokto">Nokto</string>
+    <string name="breeze">Bris</string>
+    <string name="yaru">Yaru</string>
+    <!-- Light Only Themes -->
+    <string name="adwaita">Adwaita</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Avbryt autentisering.</string>
     <string name="text_authentication_error">Autentiseringsfeil:%1$s(kode %2$d)</string>
@@ -127,6 +139,7 @@
     <string name="acra_mail_body">Vennligst beskriv problemet du støtt på:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Alle apper</string>
+    <string name="using_feature_phone">Bruker funksjonstelefon</string>
     <string name="total_screen_time">Total skjermtid</string>
     <string name="can_not_delete_system_apps">Kan ikke slette systemapper</string>
     <string name="please_select_app">Velg en app</string>

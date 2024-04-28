@@ -20,6 +20,7 @@
     <!-- Appearance Strings -->
     <string name="status_bar">إظهار شريط الحالة</string>
     <string name="theme_mode">وضع السمة</string>
+    <string name="color_mode">وضع اللون</string>
     <string name="app_language">لغة الواجهة</string>
     <string name="app_text_size">حجم النص</string>
     <string name="clock_text_size">حجم نص الساعة</string>
@@ -113,6 +114,17 @@
     <string name="open">فتح</string>
     <string name="close">أغلق</string>
     <string name="copy">ينسخ</string>
+    <!-- Colored Themes -->
+    <string name="catppuccino">كاتبتشينو</string>
+    <string name="nordic">الشمال</string>
+    <!-- Dark Only Themes -->
+    <string name="dracula">دراكولا</string>
+    <string name="arc">قوس</string>
+    <string name="nokto">نكتو</string>
+    <string name="breeze">نسيم</string>
+    <string name="yaru">يارو</string>
+    <!-- Light Only Themes -->
+    <string name="adwaita">ادويتا</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">إلغاء المصادقة.</string>
     <string name="text_authentication_error">خطأ في المصادقة:%1$s(الكود %2$d)</string>
@@ -127,6 +139,7 @@
     <string name="acra_mail_body">يرجى وصف المشكلة التي واجهتها:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">جميع التطبيقات</string>
+    <string name="using_feature_phone">استخدام الهاتف المميز</string>
     <string name="total_screen_time">إجمالي وقت الشاشة</string>
     <string name="can_not_delete_system_apps">لا يمكن حذف تطبيقات النظام</string>
     <string name="please_select_app">الرجاء تحديد التطبيق</string>

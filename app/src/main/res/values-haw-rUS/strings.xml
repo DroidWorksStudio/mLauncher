@@ -20,6 +20,7 @@
     <!-- Appearance Strings -->
     <string name="status_bar">Hōʻike i ka pae kūlana</string>
     <string name="theme_mode">ʻano kumuhana</string>
+    <string name="color_mode">ʻAno kala</string>
     <string name="app_language">ʻŌlelo Interface</string>
     <string name="app_text_size">Nui kikokikona</string>
     <string name="clock_text_size">Nui kikokikona uaki</string>
@@ -113,6 +114,17 @@
     <string name="open">Wehe</string>
     <string name="close">Pani</string>
     <string name="copy">kope</string>
+    <!-- Colored Themes -->
+    <string name="catppuccino">Catppuccino</string>
+    <string name="nordic">Nordic</string>
+    <!-- Dark Only Themes -->
+    <string name="dracula">Dracula</string>
+    <string name="arc">Arc</string>
+    <string name="nokto">Nokto</string>
+    <string name="breeze">Ka makani</string>
+    <string name="yaru">ʻO Yaru</string>
+    <!-- Light Only Themes -->
+    <string name="adwaita">ʻO Adwaita</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Hoʻopau i ka hōʻoia.</string>
     <string name="text_authentication_error">Hapa ka hōʻoia:%1$s(code %2$d)</string>
@@ -127,6 +139,7 @@
     <string name="acra_mail_body">E ʻoluʻolu e wehewehe i ka pilikia āu i hālāwai ai:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Nā polokalamu a pau</string>
+    <string name="using_feature_phone">Ke hoʻohana nei i ke kelepona hiʻona</string>
     <string name="total_screen_time">Huina manawa pale</string>
     <string name="can_not_delete_system_apps">ʻAʻole hiki ke holoi i nā polokalamu Pūnaewele</string>
     <string name="please_select_app">E ʻoluʻolu e koho i kahi polokalamu</string>

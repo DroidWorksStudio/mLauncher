@@ -20,6 +20,7 @@
     <!-- Appearance Strings -->
     <string name="status_bar">Állapotsor megjelenítése</string>
     <string name="theme_mode">Téma mód</string>
+    <string name="color_mode">Szín mód</string>
     <string name="app_language">Interfész nyelv</string>
     <string name="app_text_size">Szöveg mérete</string>
     <string name="clock_text_size">Óra szöveg mérete</string>
@@ -113,6 +114,17 @@
     <string name="open">Nyissa meg a  címet.</string>
     <string name="close">Zárja be a</string>
     <string name="copy">Másolat</string>
+    <!-- Colored Themes -->
+    <string name="catppuccino">Catppuccino</string>
+    <string name="nordic">északi</string>
+    <!-- Dark Only Themes -->
+    <string name="dracula">Drakula</string>
+    <string name="arc">Ív</string>
+    <string name="nokto">Nokto</string>
+    <string name="breeze">Szellő</string>
+    <string name="yaru">Yaru</string>
+    <!-- Light Only Themes -->
+    <string name="adwaita">Adwaita</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Hitelesítés megszakítása.</string>
     <string name="text_authentication_error">Hitelesítési hiba:%1$s(kód %2$d)</string>
@@ -127,6 +139,7 @@
     <string name="acra_mail_body">Kérjük, írja le a problémát, amellyel találkozott:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Minden alkalmazás</string>
+    <string name="using_feature_phone">Feature Phone használata</string>
     <string name="total_screen_time">Teljes képernyőidő</string>
     <string name="can_not_delete_system_apps">Nem lehet törölni a rendszeralkalmazásokat</string>
     <string name="please_select_app">Kérjük, válasszon egy alkalmazást</string>

@@ -20,6 +20,7 @@
     <!-- Appearance Strings -->
     <string name="status_bar">Sýna stöðustiku</string>
     <string name="theme_mode">Þemahamur</string>
+    <string name="color_mode">Litastilling</string>
     <string name="app_language">Viðmótstungumál</string>
     <string name="app_text_size">Textastærð</string>
     <string name="clock_text_size">Textastærð klukku</string>
@@ -113,6 +114,17 @@
     <string name="open">Opið</string>
     <string name="close">Loka</string>
     <string name="copy">Afrita</string>
+    <!-- Colored Themes -->
+    <string name="catppuccino">Catppuccino</string>
+    <string name="nordic">norrænt</string>
+    <!-- Dark Only Themes -->
+    <string name="dracula">Drakúla</string>
+    <string name="arc">Bogi</string>
+    <string name="nokto">Nokto</string>
+    <string name="breeze">Gola</string>
+    <string name="yaru">Yaru</string>
+    <!-- Light Only Themes -->
+    <string name="adwaita">Adwaita</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Hætta við auðkenningu.</string>
     <string name="text_authentication_error">Auðkenningarvilla:%1$s(kóði %2$d)</string>
@@ -127,6 +139,7 @@
     <string name="acra_mail_body">Vinsamlegast lýstu vandamálinu sem þú lentir í:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Öll forrit</string>
+    <string name="using_feature_phone">Notkun Feature Phone</string>
     <string name="total_screen_time">Heildarskjátími</string>
     <string name="can_not_delete_system_apps">Get ekki eytt kerfisforritum</string>
     <string name="please_select_app">Vinsamlegast veldu app</string>

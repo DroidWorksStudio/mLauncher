@@ -20,6 +20,7 @@
     <!-- Appearance Strings -->
     <string name="status_bar">Onyesha upau wa hali</string>
     <string name="theme_mode">Hali ya mandhari</string>
+    <string name="color_mode">Hali ya Rangi</string>
     <string name="app_language">Lugha ya Kiolesura</string>
     <string name="app_text_size">Ukubwa wa Maandishi</string>
     <string name="clock_text_size">Ukubwa wa Maandishi ya Saa</string>
@@ -113,6 +114,17 @@
     <string name="open">Fungua</string>
     <string name="close">Funga</string>
     <string name="copy">Nakili</string>
+    <!-- Colored Themes -->
+    <string name="catppuccino">Catppuccino</string>
+    <string name="nordic">Nordic</string>
+    <!-- Dark Only Themes -->
+    <string name="dracula">Dracula</string>
+    <string name="arc">Tao</string>
+    <string name="nokto">Nokto</string>
+    <string name="breeze">Upepo</string>
+    <string name="yaru">Yaru</string>
+    <!-- Light Only Themes -->
+    <string name="adwaita">Adwaita</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Uthibitishaji Ghairi.</string>
     <string name="text_authentication_error">Hitilafu ya uthibitishaji:%1$s(msimbo %2$d)</string>
@@ -127,6 +139,7 @@
     <string name="acra_mail_body">Tafadhali eleza suala ulilokumbana nalo:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Programu zote</string>
+    <string name="using_feature_phone">Kutumia Simu ya Kipengele</string>
     <string name="total_screen_time">Jumla ya Muda wa Skrini</string>
     <string name="can_not_delete_system_apps">Haiwezi Kufuta Programu za Mfumo</string>
     <string name="please_select_app">Tafadhali chagua programu</string>

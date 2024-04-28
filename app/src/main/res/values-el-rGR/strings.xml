@@ -20,6 +20,7 @@
     <!-- Appearance Strings -->
     <string name="status_bar">Εμφάνιση γραμμής κατάστασης</string>
     <string name="theme_mode">Λειτουργία θέματος</string>
+    <string name="color_mode">Λειτουργία χρώματος</string>
     <string name="app_language">Γλώσσα Διεπαφής</string>
     <string name="app_text_size">Μέγεθος Κειμένου</string>
     <string name="clock_text_size">Μέγεθος κειμένου ρολογιού</string>
@@ -113,6 +114,17 @@
     <string name="open">Άνοιγμα</string>
     <string name="close">Κλείσιμο</string>
     <string name="copy">αντίγραφο</string>
+    <!-- Colored Themes -->
+    <string name="catppuccino">Κατπουτσίνο</string>
+    <string name="nordic">σκανδιναβικός</string>
+    <!-- Dark Only Themes -->
+    <string name="dracula">Δράκουλας</string>
+    <string name="arc">Τόξο</string>
+    <string name="nokto">Nokto</string>
+    <string name="breeze">Αεράκι</string>
+    <string name="yaru">Yaru</string>
+    <!-- Light Only Themes -->
+    <string name="adwaita">Adwaita</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Ακύρωση ελέγχου ταυτότητας.</string>
     <string name="text_authentication_error">Σφάλμα ελέγχου ταυτότητας:%1$s(κωδικός %2$d)</string>
@@ -127,6 +139,7 @@
     <string name="acra_mail_body">Περιγράψτε το πρόβλημα που αντιμετωπίσατε:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Όλες οι εφαρμογές</string>
+    <string name="using_feature_phone">Χρήση τηλεφώνου με δυνατότητα</string>
     <string name="total_screen_time">Συνολικός χρόνος οθόνης</string>
     <string name="can_not_delete_system_apps">Δεν είναι δυνατή η διαγραφή εφαρμογών συστήματος</string>
     <string name="please_select_app">Επιλέξτε μια εφαρμογή</string>

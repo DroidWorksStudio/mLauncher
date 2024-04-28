@@ -20,6 +20,7 @@
     <!-- Appearance Strings -->
     <string name="status_bar">സ്റ്റാറ്റസ് ബാർ കാണിക്കുക</string>
     <string name="theme_mode">തീം മോഡ്</string>
+    <string name="color_mode">വർണ്ണ മോഡ്</string>
     <string name="app_language">ഇന്റർഫേസ് ഭാഷ</string>
     <string name="app_text_size">വാചക വലുപ്പം</string>
     <string name="clock_text_size">ക്ലോക്ക് ടെക്സ്റ്റ് വലുപ്പം</string>
@@ -113,6 +114,17 @@
     <string name="open">തുറക്കുക</string>
     <string name="close">അടയ്ക്കുക</string>
     <string name="copy">പകർത്തുക</string>
+    <!-- Colored Themes -->
+    <string name="catppuccino">ക്യാറ്റ്പുച്ചിനോ</string>
+    <string name="nordic">നോർഡിക്</string>
+    <!-- Dark Only Themes -->
+    <string name="dracula">ഡ്രാക്കുള</string>
+    <string name="arc">ആർക്ക്</string>
+    <string name="nokto">നോക്ക്ടോ</string>
+    <string name="breeze">കാറ്റ്</string>
+    <string name="yaru">യാരു</string>
+    <!-- Light Only Themes -->
+    <string name="adwaita">അദ്വൈത</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">പ്രാമാണീകരണം റദ്ദാക്കുക.</string>
     <string name="text_authentication_error">പ്രാമാണീകരണ പിശക്:%1$s(കോഡ് %2$d)</string>
@@ -127,6 +139,7 @@
     <string name="acra_mail_body">നിങ്ങൾ നേരിട്ട പ്രശ്നം വിവരിക്കുക:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">എല്ലാ ആപ്പുകളും</string>
+    <string name="using_feature_phone">ഫീച്ചർ ഫോൺ ഉപയോഗിക്കുന്നു</string>
     <string name="total_screen_time">മൊത്തം സ്ക്രീൻ സമയം</string>
     <string name="can_not_delete_system_apps">സിസ്റ്റം ആപ്പുകൾ ഇല്ലാതാക്കാൻ കഴിയില്ല</string>
     <string name="please_select_app">ദയവായി ഒരു ആപ്പ് തിരഞ്ഞെടുക്കുക</string>

@@ -20,6 +20,7 @@
     <!-- Appearance Strings -->
     <string name="status_bar">Zobrazit stavovou lištu</string>
     <string name="theme_mode">Režim motivu</string>
+    <string name="color_mode">Barevný režim</string>
     <string name="app_language">Jazyk rozhraní</string>
     <string name="app_text_size">Velikost textu</string>
     <string name="clock_text_size">Velikost textu hodin</string>
@@ -113,6 +114,17 @@
     <string name="open">Otevřít</string>
     <string name="close">Zavřít</string>
     <string name="copy">Kopírovat</string>
+    <!-- Colored Themes -->
+    <string name="catppuccino">Catpuccino</string>
+    <string name="nordic">severské</string>
+    <!-- Dark Only Themes -->
+    <string name="dracula">Drákula</string>
+    <string name="arc">Oblouk</string>
+    <string name="nokto">Nokto</string>
+    <string name="breeze">Vánek</string>
+    <string name="yaru">Yaru</string>
+    <!-- Light Only Themes -->
+    <string name="adwaita">Adwaita</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Zrušení ověřování.</string>
     <string name="text_authentication_error">Chyba ověření:%1$s(kód %2$d)</string>
@@ -127,6 +139,7 @@
     <string name="acra_mail_body">Popište prosím problém, na který jste narazili:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Všechny aplikace</string>
+    <string name="using_feature_phone">Používání běžného telefonu</string>
     <string name="total_screen_time">Celkový čas obrazovky</string>
     <string name="can_not_delete_system_apps">Systémové aplikace nelze smazat</string>
     <string name="please_select_app">Vyberte aplikaci</string>

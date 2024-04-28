@@ -20,6 +20,7 @@
     <!-- Appearance Strings -->
     <string name="status_bar">Prikaži statusnu traku</string>
     <string name="theme_mode">Način rada teme</string>
+    <string name="color_mode">Način boja</string>
     <string name="app_language">Jezik sučelja</string>
     <string name="app_text_size">Veličina teksta</string>
     <string name="clock_text_size">Veličina teksta sata</string>
@@ -113,6 +114,17 @@
     <string name="open">Otvoren</string>
     <string name="close">Zatvoriti</string>
     <string name="copy">Kopirati</string>
+    <!-- Colored Themes -->
+    <string name="catppuccino">Catppuccino</string>
+    <string name="nordic">nordijski</string>
+    <!-- Dark Only Themes -->
+    <string name="dracula">Drakula</string>
+    <string name="arc">Luk</string>
+    <string name="nokto">Nokto</string>
+    <string name="breeze">Povjetarac</string>
+    <string name="yaru">Yaru</string>
+    <!-- Light Only Themes -->
+    <string name="adwaita">Adwaita</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Odustani od provjere autentičnosti.</string>
     <string name="text_authentication_error">Pogreška provjere autentičnosti:%1$s(kod %2$d)</string>
@@ -127,6 +139,7 @@
     <string name="acra_mail_body">Opišite problem na koji ste naišli:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Sve aplikacije</string>
+    <string name="using_feature_phone">Korištenje telefona s značajkama</string>
     <string name="total_screen_time">Ukupno vrijeme zaslona</string>
     <string name="can_not_delete_system_apps">Ne mogu izbrisati sistemske aplikacije</string>
     <string name="please_select_app">Odaberite aplikaciju</string>

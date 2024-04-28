@@ -20,6 +20,7 @@
     <!-- Appearance Strings -->
     <string name="status_bar">Show status bar</string>
     <string name="theme_mode">Theme mode</string>
+    <string name="color_mode">컬러 모드</string>
     <string name="app_language">Interface Language</string>
     <string name="app_text_size">Text Size</string>
     <string name="clock_text_size">시계 텍스트 크기</string>
@@ -113,6 +114,17 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string name="copy">복사</string>
+    <!-- Colored Themes -->
+    <string name="catppuccino">캣푸치노</string>
+    <string name="nordic">북유럽 인</string>
+    <!-- Dark Only Themes -->
+    <string name="dracula">드라큘라</string>
+    <string name="arc">호</string>
+    <string name="nokto">녹토</string>
+    <string name="breeze">미풍</string>
+    <string name="yaru">야루</string>
+    <!-- Light Only Themes -->
+    <string name="adwaita">아드와이타</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">인증 취소.</string>
     <string name="text_authentication_error">인증 오류:%1$s(코드 %2$d)</string>
@@ -127,6 +139,7 @@
     <string name="acra_mail_body">발생한 문제를 설명해 주세요.</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>
+    <string name="using_feature_phone">피처폰 사용</string>
     <string name="total_screen_time">총 화면 시간</string>
     <string name="can_not_delete_system_apps">시스템 앱을 삭제할 수 없습니다</string>
     <string name="please_select_app">앱을 선택하세요</string>

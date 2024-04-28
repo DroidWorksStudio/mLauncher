@@ -20,6 +20,7 @@
     <!-- Appearance Strings -->
     <string name="status_bar">ਸਥਿਤੀ ਪੱਟੀ ਦਿਖਾਓ</string>
     <string name="theme_mode">ਥੀਮ ਮੋਡ</string>
+    <string name="color_mode">ਰੰਗ ਮੋਡ</string>
     <string name="app_language">ਇੰਟਰਫੇਸ ਭਾਸ਼ਾ</string>
     <string name="app_text_size">ਟੈਕਸਟ ਦਾ ਆਕਾਰ</string>
     <string name="clock_text_size">ਕਲਾਕ ਟੈਕਸਟ ਦਾ ਆਕਾਰ</string>
@@ -113,6 +114,17 @@
     <string name="open">ਖੋਲ੍ਹੋ</string>
     <string name="close">ਬੰਦ ਕਰੋ</string>
     <string name="copy">ਕਾਪੀ ਕਰੋ</string>
+    <!-- Colored Themes -->
+    <string name="catppuccino">ਕੈਟਪੁਚੀਨੋ</string>
+    <string name="nordic">ਨੌਰਡਿਕ</string>
+    <!-- Dark Only Themes -->
+    <string name="dracula">ਡਰੈਕੁਲਾ</string>
+    <string name="arc">ਚਾਪ</string>
+    <string name="nokto">ਨੋਕਟੋ</string>
+    <string name="breeze">ਹਵਾ</string>
+    <string name="yaru">ਯਾਰੂ</string>
+    <!-- Light Only Themes -->
+    <string name="adwaita">ਅਦਵੈਤ</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">ਪ੍ਰਮਾਣੀਕਰਨ ਰੱਦ ਕਰੋ।</string>
     <string name="text_authentication_error">ਪ੍ਰਮਾਣਿਕਤਾ ਗਲਤੀ:%1$s(ਕੋਡ %2$d)</string>
@@ -127,6 +139,7 @@
     <string name="acra_mail_body">ਕਿਰਪਾ ਕਰਕੇ ਤੁਹਾਡੇ ਸਾਹਮਣੇ ਆਈ ਸਮੱਸਿਆ ਦਾ ਵਰਣਨ ਕਰੋ:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">ਸਾਰੀਆਂ ਐਪਾਂ</string>
+    <string name="using_feature_phone">ਫੀਚਰ ਫ਼ੋਨ ਦੀ ਵਰਤੋਂ ਕਰਨਾ</string>
     <string name="total_screen_time">ਕੁੱਲ ਸਕ੍ਰੀਨ ਸਮਾਂ</string>
     <string name="can_not_delete_system_apps">ਸਿਸਟਮ ਐਪਾਂ ਨੂੰ ਮਿਟਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ</string>
     <string name="please_select_app">ਕਿਰਪਾ ਕਰਕੇ ਇੱਕ ਐਪ ਚੁਣੋ</string>

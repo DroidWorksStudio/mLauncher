@@ -20,6 +20,7 @@
     <!-- Appearance Strings -->
     <string name="status_bar">نمایش نوار وضعیت</string>
     <string name="theme_mode">حالت تم</string>
+    <string name="color_mode">حالت رنگ</string>
     <string name="app_language">زبان رابط</string>
     <string name="app_text_size">اندازه متن</string>
     <string name="clock_text_size">اندازه متن ساعت</string>
@@ -113,6 +114,17 @@
     <string name="open">باز کن</string>
     <string name="close">نزدیک</string>
     <string name="copy">کپی 🀄</string>
+    <!-- Colored Themes -->
+    <string name="catppuccino">کتپوچینو</string>
+    <string name="nordic">نوردیک</string>
+    <!-- Dark Only Themes -->
+    <string name="dracula">دراکولا</string>
+    <string name="arc">قوس</string>
+    <string name="nokto">نوکتو</string>
+    <string name="breeze">نسیم</string>
+    <string name="yaru">یارو</string>
+    <!-- Light Only Themes -->
+    <string name="adwaita">ادویتا</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">لغو احراز هویت</string>
     <string name="text_authentication_error">خطای احراز هویت:%1$s(کد %2$d)</string>
@@ -127,6 +139,7 @@
     <string name="acra_mail_body">لطفاً مشکلی را که با آن مواجه شدید شرح دهید:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">همه برنامه ها</string>
+    <string name="using_feature_phone">استفاده از تلفن ویژه</string>
     <string name="total_screen_time">کل زمان نمایش</string>
     <string name="can_not_delete_system_apps">نمی توان برنامه های سیستم را حذف کرد</string>
     <string name="please_select_app">لطفاً یک برنامه را انتخاب کنید</string>

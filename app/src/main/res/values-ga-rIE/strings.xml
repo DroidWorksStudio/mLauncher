@@ -20,6 +20,7 @@
     <!-- Appearance Strings -->
     <string name="status_bar">Taispeáin barra stádais</string>
     <string name="theme_mode">Modh téama</string>
+    <string name="color_mode">Mód Dath</string>
     <string name="app_language">Teanga Chomhéadain</string>
     <string name="app_text_size">Méid an Téacs</string>
     <string name="clock_text_size">Méid Téacs Clog</string>
@@ -113,6 +114,17 @@
     <string name="open">Oscail</string>
     <string name="close">Dún</string>
     <string name="copy">Cóip</string>
+    <!-- Colored Themes -->
+    <string name="catppuccino">Catppuccino</string>
+    <string name="nordic">Nordach</string>
+    <!-- Dark Only Themes -->
+    <string name="dracula">Dracula</string>
+    <string name="arc">Arc</string>
+    <string name="nokto">Nokto</string>
+    <string name="breeze">Breeze</string>
+    <string name="yaru">Iárú</string>
+    <!-- Light Only Themes -->
+    <string name="adwaita">Adwaita</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Fíordheimhniú Cealaigh.</string>
     <string name="text_authentication_error">Earráid fhíordheimhnithe:%1$s(cód %2$d)</string>
@@ -127,6 +139,7 @@
     <string name="acra_mail_body">Déan cur síos le do thoil ar an tsaincheist ar tháinig tú trasna uirthi:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Gach apps</string>
+    <string name="using_feature_phone">Ag baint úsáide as Fón Gné</string>
     <string name="total_screen_time">Am Scáileáin Iomlán</string>
     <string name="can_not_delete_system_apps">Ní féidir Aipeanna Córais a scriosadh</string>
     <string name="please_select_app">Roghnaigh aip le do thoil</string>

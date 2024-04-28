@@ -20,6 +20,7 @@
     <!-- Appearance Strings -->
     <string name="status_bar">Statusbalk weergeven</string>
     <string name="theme_mode">Thema modus</string>
+    <string name="color_mode">Kleur mode</string>
     <string name="app_language">Interface taal</string>
     <string name="app_text_size">Tekstgrootte</string>
     <string name="clock_text_size">Kloktekstgrootte</string>
@@ -113,6 +114,17 @@
     <string name="open">Open</string>
     <string name="close">Afsluiten</string>
     <string name="copy">Kopiëren</string>
+    <!-- Colored Themes -->
+    <string name="catppuccino">Catppuccino</string>
+    <string name="nordic">Noords</string>
+    <!-- Dark Only Themes -->
+    <string name="dracula">Dracula</string>
+    <string name="arc">Boog</string>
+    <string name="nokto">Nokto</string>
+    <string name="breeze">Wind</string>
+    <string name="yaru">Yaru</string>
+    <!-- Light Only Themes -->
+    <string name="adwaita">Advaita</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Authenticatie Annuleren.</string>
     <string name="text_authentication_error">Authenticatiefout:%1$s(code %2$d)</string>
@@ -127,6 +139,7 @@
     <string name="acra_mail_body">Beschrijf het probleem dat u bent tegengekomen:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Alle apps</string>
+    <string name="using_feature_phone">Functietelefoon gebruiken</string>
     <string name="total_screen_time">Totale schermtijd</string>
     <string name="can_not_delete_system_apps">Kan systeemapps niet verwijderen</string>
     <string name="please_select_app">Selecteer een app</string>
