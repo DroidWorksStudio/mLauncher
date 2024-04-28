@@ -20,6 +20,7 @@
     <!-- Appearance Strings -->
     <string name="status_bar">Shfaq shiritin e statusit</string>
     <string name="theme_mode">Modaliteti i temës</string>
+    <string name="color_mode">Modaliteti i ngjyrave</string>
     <string name="app_language">Gjuha e ndërfaqes</string>
     <string name="app_text_size">Madhësia e tekstit</string>
     <string name="clock_text_size">Madhësia e tekstit të orës</string>
@@ -113,6 +114,17 @@
     <string name="open">Hapur</string>
     <string name="close">Mbylle</string>
     <string name="copy">Kopjo</string>
+    <!-- Colored Themes -->
+    <string name="catppuccino">Catppuccino</string>
+    <string name="nordic">nordike</string>
+    <!-- Dark Only Themes -->
+    <string name="dracula">Drakula</string>
+    <string name="arc">Arc</string>
+    <string name="nokto">Nokto</string>
+    <string name="breeze">Flladi</string>
+    <string name="yaru">Yaru</string>
+    <!-- Light Only Themes -->
+    <string name="adwaita">Adwaita</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Anulo vërtetimin.</string>
     <string name="text_authentication_error">Gabim vërtetimi:%1$s(kodi %2$d)</string>
