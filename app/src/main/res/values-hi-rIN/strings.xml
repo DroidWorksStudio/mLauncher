@@ -20,6 +20,7 @@
     <!-- Appearance Strings -->
     <string name="status_bar">स्टेटस बार दिखाएं</string>
     <string name="theme_mode">थीम मोड</string>
+    <string name="color_mode">रंग मोड</string>
     <string name="app_language">अंतरफलक भाषा</string>
     <string name="app_text_size">शब्दों का आकर</string>
     <string name="clock_text_size">घड़ी का पाठ आकार</string>
@@ -113,6 +114,17 @@
     <string name="open">खुला</string>
     <string name="close">बंद करना</string>
     <string name="copy">प्रतिलिपि</string>
+    <!-- Colored Themes -->
+    <string name="catppuccino">कैटपुचीनो</string>
+    <string name="nordic">नॉर्डिक</string>
+    <!-- Dark Only Themes -->
+    <string name="dracula">ड्रेकुला</string>
+    <string name="arc">आर्क</string>
+    <string name="nokto">नोकटो</string>
+    <string name="breeze">हवा</string>
+    <string name="yaru">यारू</string>
+    <!-- Light Only Themes -->
+    <string name="adwaita">अद्वैत</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">प्रमाणीकरण रद्द.</string>
     <string name="text_authentication_error">प्रमाणीकरण त्रुटि:%1$s(कोड %2$d)</string>
