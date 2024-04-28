@@ -20,6 +20,7 @@
     <!-- Appearance Strings -->
     <string name="status_bar">Ipakita ang status bar</string>
     <string name="theme_mode">Mode ng tema</string>
+    <string name="color_mode">Mode ng Kulay</string>
     <string name="app_language">Wika ng Interface</string>
     <string name="app_text_size">Laki ng Teksto</string>
     <string name="clock_text_size">Laki ng Teksto ng Orasan</string>
@@ -113,6 +114,17 @@
     <string name="open">Bukas</string>
     <string name="close">Isara</string>
     <string name="copy">Kopya</string>
+    <!-- Colored Themes -->
+    <string name="catppuccino">Catppuccino</string>
+    <string name="nordic">Nordic</string>
+    <!-- Dark Only Themes -->
+    <string name="dracula">Dracula</string>
+    <string name="arc">Arc</string>
+    <string name="nokto">Nokto</string>
+    <string name="breeze">Simoy ng hangin</string>
+    <string name="yaru">Yaru</string>
+    <!-- Light Only Themes -->
+    <string name="adwaita">Adwaita</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Kanselahin ang Pagpapatotoo.</string>
     <string name="text_authentication_error">Error sa pagpapatunay:%1$s(code %2$d)</string>
