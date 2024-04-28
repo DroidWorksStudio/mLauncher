@@ -139,6 +139,7 @@
     <string name="acra_mail_body">Beskriv venligst det problem, du stødte på:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Alle apps</string>
+    <string name="using_feature_phone">Brug af Feature Phone</string>
     <string name="total_screen_time">Samlet skærmtid</string>
     <string name="can_not_delete_system_apps">Kan ikke slette systemapps</string>
     <string name="please_select_app">Vælg venligst en app</string>
