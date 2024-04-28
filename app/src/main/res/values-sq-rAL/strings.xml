@@ -139,6 +139,7 @@
     <string name="acra_mail_body">Ju lutemi përshkruani problemin që keni hasur:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Të gjitha aplikacionet</string>
+    <string name="using_feature_phone">Përdorimi i telefonit me veçori</string>
     <string name="total_screen_time">Koha totale e ekranit</string>
     <string name="can_not_delete_system_apps">Aplikacionet e sistemit nuk mund të fshihen</string>
     <string name="please_select_app">Ju lutemi zgjidhni një aplikacion</string>
