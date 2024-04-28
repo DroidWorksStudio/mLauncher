@@ -20,6 +20,7 @@
     <!-- Appearance Strings -->
     <string name="status_bar">اسٽيٽس بار ڏيکاريو</string>
     <string name="theme_mode">موضوع موڊ</string>
+    <string name="color_mode">رنگ موڊ</string>
     <string name="app_language">انٽرفيس ٻولي</string>
     <string name="app_text_size">متن جي ماپ</string>
     <string name="clock_text_size">گھڙي جي متن جي ماپ</string>
@@ -113,6 +114,17 @@
     <string name="open">کليل</string>
     <string name="close">بند</string>
     <string name="copy">ڪاپي</string>
+    <!-- Colored Themes -->
+    <string name="catppuccino">ڪيپپوڪينو</string>
+    <string name="nordic">نارڊڪ</string>
+    <!-- Dark Only Themes -->
+    <string name="dracula">ڊريڪولا</string>
+    <string name="arc">آرڪ</string>
+    <string name="nokto">نڪتو</string>
+    <string name="breeze">هوا</string>
+    <string name="yaru">يارو</string>
+    <!-- Light Only Themes -->
+    <string name="adwaita">ادويت</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">تصديق منسوخ ڪريو.</string>
     <string name="text_authentication_error">تصديق جي غلطي:%1$s(ڪوڊ %2$d)</string>
