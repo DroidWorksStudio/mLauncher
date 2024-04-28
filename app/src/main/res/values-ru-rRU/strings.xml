@@ -20,6 +20,7 @@
     <!-- Appearance Strings -->
     <string name="status_bar">Показать строку состояния</string>
     <string name="theme_mode">Режим темы</string>
+    <string name="color_mode">Цветовой режим</string>
     <string name="app_language">Язык интерфейса</string>
     <string name="app_text_size">Размер текста</string>
     <string name="clock_text_size">Размер текста часов</string>
@@ -113,6 +114,17 @@
     <string name="open">Открыть</string>
     <string name="close">Закрыть</string>
     <string name="copy">Копировать</string>
+    <!-- Colored Themes -->
+    <string name="catppuccino">Катпучино</string>
+    <string name="nordic">нордический</string>
+    <!-- Dark Only Themes -->
+    <string name="dracula">Дракула</string>
+    <string name="arc">Дуга</string>
+    <string name="nokto">Нокто</string>
+    <string name="breeze">Ветер</string>
+    <string name="yaru">Яру</string>
+    <!-- Light Only Themes -->
+    <string name="adwaita">Адвайта</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Отмена аутентификации.</string>
     <string name="text_authentication_error">Ошибка аутентификации:%1$s(код %2$d)</string>
