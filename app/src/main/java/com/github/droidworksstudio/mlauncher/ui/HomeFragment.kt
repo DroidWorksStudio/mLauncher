@@ -12,6 +12,7 @@ import android.os.Vibrator
 import android.text.format.DateFormat
 import android.util.Log
 import android.view.Gravity
+import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
@@ -172,6 +173,16 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             binding.setTotalScreenTime.setTextColor(fontColor)
             binding.setDefaultLauncher.setTextColor(fontColor)
             binding.homeScreenPager.setTextColor(fontColor)
+        }
+
+        binding.mainLayout.setOnKeyListener { _, keyCode, _ ->
+            if (keyCode == KeyEvent.KEYCODE_MENU) {
+                // Handle menu button press
+                // Open the desired fragment here
+                showAppList(AppDrawerFlag.LaunchApp, includeHiddenApps = false)
+                return@setOnKeyListener true
+            }
+            return@setOnKeyListener false
         }
     }
 
@@ -614,7 +625,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     } else {
                         sendToSettingFragment()
                     }
-
                 }
             }
 
@@ -790,6 +800,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     id = i
                     text = prefs.getHomeAppModel(i).appLabel
                     setOnTouchListener(getHomeAppsGestureListener(context, this))
+                    setOnClickListener(this@HomeFragment)
                     if (!prefs.extendHomeAppsArea) {
                         layoutParams = ViewGroup.LayoutParams(
                             ViewGroup.LayoutParams.WRAP_CONTENT,
@@ -816,6 +827,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     id = i
                     text = formatMillisToHMS(getUsageStats(context, prefs.getHomeAppModel(i).appPackage))
                     setOnTouchListener(getHomeAppsGestureListener(context, this))
+                    setOnClickListener(this@HomeFragment)
                     if (!prefs.extendHomeAppsArea) {
                         layoutParams = ViewGroup.LayoutParams(
                             ViewGroup.LayoutParams.WRAP_CONTENT,
@@ -885,6 +897,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     id = i
                     text = prefs.getHomeAppModel(i).appLabel
                     setOnTouchListener(getHomeAppsGestureListener(context, this))
+                    setOnClickListener(this@HomeFragment)
                     if (!prefs.extendHomeAppsArea) {
                         layoutParams = ViewGroup.LayoutParams(
                             ViewGroup.LayoutParams.WRAP_CONTENT,
