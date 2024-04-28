@@ -422,7 +422,9 @@ fun getHexForOpacity(context: Context, prefs: Prefs): Int {
     val backgroundColor = getBackgroundColor(context)
     val hexAccentColor = java.lang.String.format("%06X", 0xFFFFFF and backgroundColor)
 
-    val hex = Integer.toHexString(setColor).toString()
+    var hex = Integer.toHexString(setColor).toString()
+    if (hex.length < 2)
+        hex = "$hex$hex"
 
     return android.graphics.Color.parseColor("#${hex}$hexAccentColor")
 }

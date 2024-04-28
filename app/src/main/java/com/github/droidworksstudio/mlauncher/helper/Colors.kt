@@ -205,7 +205,9 @@ class Colors {
 
     private fun getColorWithAccent(context: Context,prefs: Prefs, backgroundColorResId: Int): Int {
         val setColor = prefs.opacityNum
-        val hexColor = Integer.toHexString(setColor).toString()
+        var hexColor = Integer.toHexString(setColor).toString()
+        if (hexColor.length < 2)
+            hexColor = "$hexColor$hexColor"
         val backgroundColor = ContextCompat.getColor(context, backgroundColorResId)
         val hexAccentColor = java.lang.String.format("%06X", 0xFFFFFF and backgroundColor)
         return android.graphics.Color.parseColor("#${hexColor}$hexAccentColor")
