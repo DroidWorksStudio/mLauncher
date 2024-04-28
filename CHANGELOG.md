@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
-## [1.5.6](https://github.com/DroidWorksStudio/mLauncher/tree/1.5.6) - (28, April 2024)
+## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
 ### Implemented Enhancements:
 
@@ -12,6 +12,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Bug Fixes:
 
+- Fixed updateAppCountWithUsageStats to also allow feature phone buttons. - ([dc8c18c](https://github.com/DroidWorksStudio/mLauncher/commit/dc8c18c9b20b7312fc8e131d815cfd583363f092))
 - Add key event handling and click listeners for feature phones - ([97818e5](https://github.com/DroidWorksStudio/mLauncher/commit/97818e571ab0d86b94c4701669a4fe7c8ae3173d))
 - Better support for feature phones. - ([278ef1e](https://github.com/DroidWorksStudio/mLauncher/commit/278ef1e4d75058d1f8adb84f792fca69fcad0c4c))
 - Fix receiver registration and unregistration in HomeFragment - ([935e2bb](https://github.com/DroidWorksStudio/mLauncher/commit/935e2bbea241751060b9512fabfef72c2a542c62))
