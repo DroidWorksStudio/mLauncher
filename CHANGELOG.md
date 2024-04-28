@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Bug Fixes:
 
+- Add key event handling and click listeners for feature phones - ([97818e5](https://github.com/DroidWorksStudio/mLauncher/commit/97818e571ab0d86b94c4701669a4fe7c8ae3173d))
 - Better support for feature phones. - ([278ef1e](https://github.com/DroidWorksStudio/mLauncher/commit/278ef1e4d75058d1f8adb84f792fca69fcad0c4c))
 - Fix receiver registration and unregistration in HomeFragment - ([935e2bb](https://github.com/DroidWorksStudio/mLauncher/commit/935e2bbea241751060b9512fabfef72c2a542c62))
 - Fixed the ability for the launcher to ask for usage permission. - ([580a988](https://github.com/DroidWorksStudio/mLauncher/commit/580a988ae48032ba89dd780f5c9c2018ba579708))
