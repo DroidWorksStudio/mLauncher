@@ -139,6 +139,7 @@
     <string name="acra_mail_body">Popíšte problém, s ktorým ste sa stretli:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Všetky aplikácie</string>
+    <string name="using_feature_phone">Používanie bežného telefónu</string>
     <string name="total_screen_time">Celkový čas pred obrazovkou</string>
     <string name="can_not_delete_system_apps">Systémové aplikácie sa nedajú odstrániť</string>
     <string name="please_select_app">Vyberte aplikáciu</string>
