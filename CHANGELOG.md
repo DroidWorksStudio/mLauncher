@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Implemented Enhancements:
 
+- Add feature phone mode option - ([2042262](https://github.com/DroidWorksStudio/mLauncher/commit/20422622f4c0077e179db69787335ede2cba09d6))
 - Added support for custom dark and light colors in app settings. - ([3d40055](https://github.com/DroidWorksStudio/mLauncher/commit/3d4005591bdd1eadac1a08605ac58045f6650b19))
 - Add option to display app usage stats. - ([b2bc061](https://github.com/DroidWorksStudio/mLauncher/commit/b2bc061ec4c6c9a7e7a76152d0f5598baa73dddf))
 
