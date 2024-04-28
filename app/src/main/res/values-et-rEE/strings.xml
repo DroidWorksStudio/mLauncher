@@ -139,6 +139,7 @@
     <string name="acra_mail_body">Kirjeldage tekkinud probleemi:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Kõik rakendused</string>
+    <string name="using_feature_phone">Funktsioonitelefoni kasutamine</string>
     <string name="total_screen_time">Kogu ekraaniaeg</string>
     <string name="can_not_delete_system_apps">Süsteemirakendusi ei saa kustutada</string>
     <string name="please_select_app">Valige rakendus</string>
