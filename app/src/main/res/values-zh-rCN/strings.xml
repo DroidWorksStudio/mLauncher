@@ -139,6 +139,7 @@
     <string name="acra_mail_body">请描述您遇到的问题：</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">所有应用程序</string>
+    <string name="using_feature_phone">使用功能手机</string>
     <string name="total_screen_time">总屏幕时间</string>
     <string name="can_not_delete_system_apps">无法删除系统应用程序</string>
     <string name="please_select_app">请选择一个应用程序</string>
