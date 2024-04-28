@@ -20,6 +20,7 @@
     <!-- Appearance Strings -->
     <string name="status_bar">Show status bar</string>
     <string name="theme_mode">Theme mode</string>
+    <string name="color_mode">מצב צבע</string>
     <string name="app_language">Interface Language</string>
     <string name="app_text_size">Text Size</string>
     <string name="clock_text_size">גודל טקסט שעון</string>
@@ -113,6 +114,17 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string name="copy">עותק</string>
+    <!-- Colored Themes -->
+    <string name="catppuccino">קאטפוצ\'ינו</string>
+    <string name="nordic">נורדי</string>
+    <!-- Dark Only Themes -->
+    <string name="dracula">דרקולה</string>
+    <string name="arc">קֶשֶׁת</string>
+    <string name="nokto">נוקטו</string>
+    <string name="breeze">רוּחַ</string>
+    <string name="yaru">יארו</string>
+    <!-- Light Only Themes -->
+    <string name="adwaita">אדוואיטה</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">ביטול האימות.</string>
     <string name="text_authentication_error">שגיאת אימות:%1$s(קוד %2$d)</string>
