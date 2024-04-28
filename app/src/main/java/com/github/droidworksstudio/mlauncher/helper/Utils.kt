@@ -419,12 +419,10 @@ fun loadFile(activity: Activity) {
 fun getHexForOpacity(context: Context, prefs: Prefs): Int {
     val setColor = prefs.opacityNum
 
-    val accentColor = getBackgroundColor(context)
-    val hexAccentColor = java.lang.String.format("%06X", 0xFFFFFF and accentColor)
+    val backgroundColor = getBackgroundColor(context)
+    val hexAccentColor = java.lang.String.format("%06X", 0xFFFFFF and backgroundColor)
 
-    var hex = Integer.toHexString(setColor).toString()
-    if (hex.length < 2)
-        hex = "$hex$hex"
+    val hex = Integer.toHexString(setColor).toString()
 
     return android.graphics.Color.parseColor("#${hex}$hexAccentColor")
 }

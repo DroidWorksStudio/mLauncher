@@ -46,8 +46,8 @@ import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.formatMilli
 import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.getTotalScreenTime
 import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.getUsageStats
 import com.github.droidworksstudio.mlauncher.helper.BatteryReceiver
+import com.github.droidworksstudio.mlauncher.helper.Colors
 import com.github.droidworksstudio.mlauncher.helper.getHexFontColor
-import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
 import com.github.droidworksstudio.mlauncher.helper.hideStatusBar
 import com.github.droidworksstudio.mlauncher.helper.initActionService
 import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
@@ -77,6 +77,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
+    // Instantiate Colors object
+    private val colors = Colors()
 
     private lateinit var biometricPrompt: BiometricPrompt
     private lateinit var promptInfo: BiometricPrompt.PromptInfo
@@ -99,9 +101,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val hex = getHexForOpacity(requireContext(), prefs)
-        binding.mainLayout.setBackgroundColor(hex)
-
         viewModel = activity?.run {
             ViewModelProvider(this)[MainViewModel::class.java]
         } ?: throw Exception("Invalid Activity")
@@ -110,7 +109,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             context?.getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
         @Suppress("DEPRECATION")
         vibrator = context?.getSystemService(VIBRATOR_SERVICE) as Vibrator
-
 
         initObservers()
         initSwipeTouchListener()
@@ -161,9 +159,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         }
         binding.homeScreenPager.typeface = typeface
         binding.batteryIcon.typeface = typeface
-
-        val backgroundColor = getHexForOpacity(requireContext(), prefs)
-        binding.mainLayout.setBackgroundColor(backgroundColor)
+        binding.mainLayout.setBackgroundColor(colors.background(requireContext(), prefs))
         if (prefs.followAccentColors) {
             val fontColor = getHexFontColor(requireContext())
             binding.clock.setTextColor(fontColor)
@@ -173,6 +169,14 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             binding.setTotalScreenTime.setTextColor(fontColor)
             binding.setDefaultLauncher.setTextColor(fontColor)
             binding.homeScreenPager.setTextColor(fontColor)
+        }  else {
+            binding.clock.setTextColor(colors.accents(requireContext(), prefs, 1))
+            binding.date.setTextColor(colors.accents(requireContext(), prefs, 1))
+            binding.batteryIcon.setTextColor(colors.accents(requireContext(), prefs, 1))
+            binding.batteryText.setTextColor(colors.accents(requireContext(), prefs, 1))
+            binding.setTotalScreenTime.setTextColor(colors.accents(requireContext(), prefs, 2))
+            binding.setDefaultLauncher.setTextColor(colors.accents(requireContext(), prefs, 2))
+            binding.homeScreenPager.setTextColor(colors.accents(requireContext(), prefs, 2))
         }
 
         binding.mainLayout.setOnKeyListener { _, keyCode, _ ->
@@ -243,7 +247,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             }
 
             R.id.setTotalScreenTime -> {
-                Log.d("appClickUsage","${prefs.appClickUsage} | ${prefs.clickAppUsageAction}")
                 when (val action = prefs.clickAppUsageAction) {
                     Action.OpenApp -> openClickUsageApp()
                     else -> handleOtherAction(action)
@@ -816,6 +819,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     if (prefs.followAccentColors) {
                         val fontColor = getHexFontColor(requireContext())
                         setTextColor(fontColor)
+                    } else {
+                        setTextColor(colors.accents(requireContext(), prefs, 4))
                     }
                 }
 
@@ -843,6 +848,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     if (prefs.followAccentColors) {
                         val fontColor = getHexFontColor(requireContext())
                         setTextColor(fontColor)
+                    }  else {
+                        setTextColor(colors.accents(requireContext(), prefs, 3))
                     }
                 }
 
@@ -916,6 +923,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     if (prefs.followAccentColors) {
                         val fontColor = getHexFontColor(requireContext())
                         setTextColor(fontColor)
+                    } else {
+                        setTextColor(colors.accents(requireContext(), prefs, 4))
                     }
                 }
                 // Add the view to the layout

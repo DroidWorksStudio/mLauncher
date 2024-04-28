@@ -187,10 +187,34 @@ class SettingsFragment : Fragment() {
                             open = open,
                             onChange = onChange,
                             currentSelection = remember { mutableStateOf(prefs.appTheme) },
-                            values = arrayOf(System, Light, Dark),
+                            values = Constants.Theme.values(),
                             onSelect = { j -> setTheme(j) }
                         )
                     },
+                        { open, onChange ->
+                            if (prefs.appTheme.name == "Dark") {
+                                SettingsItem(
+                                    title = stringResource(R.string.color_mode),
+                                    fontSize = iconFs,
+                                    open = open,
+                                    onChange = onChange,
+                                    currentSelection = remember { mutableStateOf(prefs.appDarkColors) },
+                                    values = Constants.DarkColors.values(),
+                                    onSelect = { j -> setDarkColors(j) }
+                                )
+                            }
+                            if (prefs.appTheme.name == "Light") {
+                                SettingsItem(
+                                    title = stringResource(R.string.color_mode),
+                                    fontSize = iconFs,
+                                    open = open,
+                                    onChange = onChange,
+                                    currentSelection = remember { mutableStateOf(prefs.appLightColors) },
+                                    values = Constants.LightColors.values(),
+                                    onSelect = { j -> setLightColors(j) }
+                                )
+                            }
+                        },
                     { open, onChange ->
                         SettingsItem(
                             title = stringResource(R.string.app_language),
@@ -869,6 +893,16 @@ class SettingsFragment : Fragment() {
 
     private fun setTheme(appTheme: Constants.Theme) {
         prefs.appTheme = appTheme
+        requireActivity().recreate()
+    }
+
+    private fun setDarkColors(appTheme: Constants.DarkColors) {
+        prefs.appDarkColors = appTheme
+        requireActivity().recreate()
+    }
+
+    private fun setLightColors(appTheme: Constants.LightColors) {
+        prefs.appLightColors = appTheme
         requireActivity().recreate()
     }
 

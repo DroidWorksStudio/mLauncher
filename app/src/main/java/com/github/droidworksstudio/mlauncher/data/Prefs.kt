@@ -58,6 +58,8 @@ private const val APP_ALIAS = "APP_ALIAS"
 private const val APP_ACTIVITY = "APP_ACTIVITY"
 private const val APP_USAGE_STATS = "APP_USAGE_STATS"
 private const val APP_OPACITY = "APP_OPACITY"
+private const val APP_DARK_COLORS = "APP_DARK_COLORS"
+private const val APP_LIGHT_COLORS = "APP_LIGHT_COLORS"
 private const val APP_THEME = "APP_THEME"
 
 private const val SHORT_SWIPE_UP = "SHORT_SWIPE_UP"
@@ -314,6 +316,30 @@ class Prefs(val context: Context) {
             }
         }
         set(value) = prefs.edit().putString(APP_THEME, value.name).apply()
+
+    var appDarkColors: Constants.DarkColors
+        get() {
+            return try {
+                Constants.DarkColors.valueOf(
+                    prefs.getString(APP_DARK_COLORS, Constants.DarkColors.System.name).toString()
+                )
+            } catch (_: Exception) {
+                Constants.DarkColors.System
+            }
+        }
+        set(value) = prefs.edit().putString(APP_DARK_COLORS, value.name).apply()
+
+    var appLightColors: Constants.LightColors
+        get() {
+            return try {
+                Constants.LightColors.valueOf(
+                    prefs.getString(APP_LIGHT_COLORS, Constants.LightColors.System.name).toString()
+                )
+            } catch (_: Exception) {
+                Constants.LightColors.System
+            }
+        }
+        set(value) = prefs.edit().putString(APP_LIGHT_COLORS, value.name).apply()
 
     var language: Constants.Language
         get() {

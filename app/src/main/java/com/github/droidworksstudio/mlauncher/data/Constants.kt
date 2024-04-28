@@ -419,6 +419,48 @@ object Constants {
         }
     }
 
+    enum class DarkColors : EnumOption {
+        System,
+        Dracula,
+        Arc,
+        Nokto,
+        Breeze,
+        Catppuccino,
+        Nordic,
+        Yaru;
+
+        @Composable
+        override fun string(): String {
+            return when (this) {
+                System -> stringResource(R.string.lang_system)
+                Dracula -> stringResource(R.string.dracula)
+                Arc -> stringResource(R.string.arc)
+                Nokto -> stringResource(R.string.nokto)
+                Breeze -> stringResource(R.string.breeze)
+                Catppuccino -> stringResource(R.string.catppuccino)
+                Nordic -> stringResource(R.string.nordic)
+                Yaru -> stringResource(R.string.yaru)
+            }
+        }
+    }
+
+    enum class LightColors : EnumOption {
+        System,
+        Adwaita,
+        Catppuccino,
+        Nordic;
+
+        @Composable
+        override fun string(): String {
+            return when (this) {
+                System -> stringResource(R.string.lang_system)
+                Adwaita -> stringResource(R.string.adwaita)
+                Catppuccino -> stringResource(R.string.catppuccino)
+                Nordic -> stringResource(R.string.nordic)
+            }
+        }
+    }
+
     const val URL_DUCK_SEARCH = "https://duck.co/?q="
     const val URL_GOOGLE_SEARCH = "https://google.com/search?q="
     const val URL_YAHOO_SEARCH = "https://search.yahoo.com/search?p="

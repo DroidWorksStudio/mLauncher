@@ -23,6 +23,7 @@
     <!-- Appearance Strings -->
     <string name="status_bar">Show status bar</string>
     <string name="theme_mode">Theme mode</string>
+    <string name="color_mode">Color Mode</string>
     <string name="app_language">Interface Language</string>
     <string name="app_text_size">Text Size</string>
     <string name="clock_text_size">Clock Text Size</string>
@@ -124,6 +125,17 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string name="copy">Copy</string>
+    <!-- Colored Themes -->
+    <string name="catppuccino">Catppuccino</string>
+    <string name="nordic">Nordic</string>
+    <!-- Dark Only Themes -->
+    <string name="dracula">Dracula</string>
+    <string name="arc">Arc</string>
+    <string name="nokto">Nokto</string>
+    <string name="breeze">Breeze</string>
+    <string name="yaru">Yaru</string>
+    <!-- Light Only Themes -->
+    <string name="adwaita">Adwaita</string>
 
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Authentication Cancel.</string>
