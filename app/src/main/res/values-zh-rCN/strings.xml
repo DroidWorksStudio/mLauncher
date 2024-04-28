@@ -20,6 +20,7 @@
     <!-- Appearance Strings -->
     <string name="status_bar">显示状态栏</string>
     <string name="theme_mode">主题模式</string>
+    <string name="color_mode">颜色模式</string>
     <string name="app_language">应用界面语言</string>
     <string name="app_text_size">文本尺寸</string>
     <string name="clock_text_size">时钟文字大小</string>
@@ -113,6 +114,17 @@
     <string name="open">打开链接</string>
     <string name="close">关闭</string>
     <string name="copy">复制</string>
+    <!-- Colored Themes -->
+    <string name="catppuccino">卡布奇诺</string>
+    <string name="nordic">北欧的</string>
+    <!-- Dark Only Themes -->
+    <string name="dracula">德古拉</string>
+    <string name="arc">弧</string>
+    <string name="nokto">诺克托</string>
+    <string name="breeze">微风</string>
+    <string name="yaru">亚鲁</string>
+    <!-- Light Only Themes -->
+    <string name="adwaita">阿德瓦伊塔</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">认证取消。</string>
     <string name="text_authentication_error">身份验证错误：%1$s（代码 %2$d）</string>
