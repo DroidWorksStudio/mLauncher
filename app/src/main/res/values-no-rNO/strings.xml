@@ -139,6 +139,7 @@
     <string name="acra_mail_body">Vennligst beskriv problemet du støtt på:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Alle apper</string>
+    <string name="using_feature_phone">Bruker funksjonstelefon</string>
     <string name="total_screen_time">Total skjermtid</string>
     <string name="can_not_delete_system_apps">Kan ikke slette systemapper</string>
     <string name="please_select_app">Velg en app</string>
