@@ -139,6 +139,7 @@
     <string name="acra_mail_body">E ʻoluʻolu e wehewehe i ka pilikia āu i hālāwai ai:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Nā polokalamu a pau</string>
+    <string name="using_feature_phone">Ke hoʻohana nei i ke kelepona hiʻona</string>
     <string name="total_screen_time">Huina manawa pale</string>
     <string name="can_not_delete_system_apps">ʻAʻole hiki ke holoi i nā polokalamu Pūnaewele</string>
     <string name="please_select_app">E ʻoluʻolu e koho i kahi polokalamu</string>
