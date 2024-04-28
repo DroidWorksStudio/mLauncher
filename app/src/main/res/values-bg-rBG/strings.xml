@@ -20,6 +20,7 @@
     <!-- Appearance Strings -->
     <string name="status_bar">Показване на лентата на състоянието</string>
     <string name="theme_mode">Режим на темата</string>
+    <string name="color_mode">Цветен режим</string>
     <string name="app_language">Език на интерфейса</string>
     <string name="app_text_size">Размер на текста</string>
     <string name="clock_text_size">Размер на текста на часовника</string>
@@ -113,6 +114,17 @@
     <string name="open">Отворете</string>
     <string name="close">Затвори</string>
     <string name="copy">копие</string>
+    <!-- Colored Themes -->
+    <string name="catppuccino">Котешко пучино</string>
+    <string name="nordic">скандинавски</string>
+    <!-- Dark Only Themes -->
+    <string name="dracula">Дракула</string>
+    <string name="arc">Дъга</string>
+    <string name="nokto">Нокто</string>
+    <string name="breeze">Полъх</string>
+    <string name="yaru">Яру</string>
+    <!-- Light Only Themes -->
+    <string name="adwaita">Адвайта</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Удостоверяване Отказ.</string>
     <string name="text_authentication_error">Грешка при удостоверяване:%1$s(код %2$d)</string>
