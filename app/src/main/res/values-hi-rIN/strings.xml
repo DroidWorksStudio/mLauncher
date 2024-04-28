@@ -139,6 +139,7 @@
     <string name="acra_mail_body">कृपया आपके सामने आई समस्या का वर्णन करें:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">सभी एप्लीकेशन</string>
+    <string name="using_feature_phone">फ़ीचर फ़ोन का उपयोग करना</string>
     <string name="total_screen_time">कुल स्क्रीन समय</string>
     <string name="can_not_delete_system_apps">सिस्टम ऐप्स को हटाया नहीं जा सकता</string>
     <string name="please_select_app">कृपया कोई ऐप चुनें</string>
