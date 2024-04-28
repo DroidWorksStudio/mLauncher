@@ -20,6 +20,7 @@
     <!-- Appearance Strings -->
     <string name="status_bar">Rodyti būsenos juostą</string>
     <string name="theme_mode">Temavimo režimas</string>
+    <string name="color_mode">Spalvų režimas</string>
     <string name="app_language">Sąsajos kalba</string>
     <string name="app_text_size">Tesksto dydis</string>
     <string name="clock_text_size">Laikrodžio teksto dydis</string>
@@ -113,6 +114,17 @@
     <string name="open">Atidaryti</string>
     <string name="close">Uždaryti</string>
     <string name="copy">Kopijuoti</string>
+    <!-- Colored Themes -->
+    <string name="catppuccino">Catppuccino</string>
+    <string name="nordic">Šiaurės šalių</string>
+    <!-- Dark Only Themes -->
+    <string name="dracula">Drakula</string>
+    <string name="arc">Arc</string>
+    <string name="nokto">Nokto</string>
+    <string name="breeze">Vėjas</string>
+    <string name="yaru">Yaru</string>
+    <!-- Light Only Themes -->
+    <string name="adwaita">Adwaita</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Autentifikavimo atšaukimas.</string>
     <string name="text_authentication_error">Autentifikavimo klaida:%1$s(kodas %2$d)</string>
