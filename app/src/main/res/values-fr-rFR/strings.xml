@@ -20,6 +20,7 @@
     <!-- Appearance Strings -->
     <string name="status_bar">Afficher la barre d\'état</string>
     <string name="theme_mode">Mode thème</string>
+    <string name="color_mode">Mode de couleur</string>
     <string name="app_language">Langue de l\'interface</string>
     <string name="app_text_size">Taille du texte</string>
     <string name="clock_text_size">Taille du texte de l\'horloge</string>
@@ -113,6 +114,17 @@
     <string name="open">Ouvert</string>
     <string name="close">Fermer</string>
     <string name="copy">Copie</string>
+    <!-- Colored Themes -->
+    <string name="catppuccino">Catppuccino</string>
+    <string name="nordic">nordique</string>
+    <!-- Dark Only Themes -->
+    <string name="dracula">Dracula</string>
+    <string name="arc">Arc</string>
+    <string name="nokto">Nokto</string>
+    <string name="breeze">Brise</string>
+    <string name="yaru">Yaru</string>
+    <!-- Light Only Themes -->
+    <string name="adwaita">Adwaita</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Authentification Annuler.</string>
     <string name="text_authentication_error">Erreur d\'authentification :%1$s(code %2$d)</string>
