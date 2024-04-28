@@ -20,6 +20,7 @@
     <!-- Appearance Strings -->
     <string name="status_bar">Показати панель стану</string>
     <string name="theme_mode">Теми</string>
+    <string name="color_mode">Кольоровий режим</string>
     <string name="app_language">Мова інтерфейсу</string>
     <string name="app_text_size">Розмір тексту</string>
     <string name="clock_text_size">Розмір тексту годинника</string>
@@ -113,6 +114,17 @@
     <string name="open">Відкриті</string>
     <string name="close">Закрити</string>
     <string name="copy">Копіювати</string>
+    <!-- Colored Themes -->
+    <string name="catppuccino">Catppuccino</string>
+    <string name="nordic">скандинавський</string>
+    <!-- Dark Only Themes -->
+    <string name="dracula">Дракула</string>
+    <string name="arc">Арк</string>
+    <string name="nokto">Нокто</string>
+    <string name="breeze">Вітерець</string>
+    <string name="yaru">Яру</string>
+    <!-- Light Only Themes -->
+    <string name="adwaita">Адвайта</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Автентифікація Скасувати.</string>
     <string name="text_authentication_error">Помилка автентифікації:%1$s(код %2$d)</string>
