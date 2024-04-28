@@ -20,6 +20,7 @@
     <!-- Appearance Strings -->
     <string name="status_bar">แสดงแถบสถานะ</string>
     <string name="theme_mode">โหมดธีม</string>
+    <string name="color_mode">โหมดสี</string>
     <string name="app_language">ภาษาอินเทอร์เฟซ</string>
     <string name="app_text_size">ขนาดตัวอักษร</string>
     <string name="clock_text_size">ขนาดข้อความนาฬิกา</string>
@@ -113,6 +114,17 @@
     <string name="open">เปิด</string>
     <string name="close">ปิด</string>
     <string name="copy">สำเนา</string>
+    <!-- Colored Themes -->
+    <string name="catppuccino">คัทปุชชิโน</string>
+    <string name="nordic">นอร์ดิก</string>
+    <!-- Dark Only Themes -->
+    <string name="dracula">แดร็กคูล่า</string>
+    <string name="arc">อาร์ค</string>
+    <string name="nokto">นกโต</string>
+    <string name="breeze">สายลม</string>
+    <string name="yaru">ยารุ</string>
+    <!-- Light Only Themes -->
+    <string name="adwaita">แอดเวตา</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">ยกเลิกการรับรองความถูกต้อง</string>
     <string name="text_authentication_error">ข้อผิดพลาดในการตรวจสอบสิทธิ์:%1$s(รหัส %2$d)</string>
