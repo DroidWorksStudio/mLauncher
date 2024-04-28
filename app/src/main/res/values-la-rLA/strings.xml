@@ -139,6 +139,7 @@
     <string name="acra_mail_body">Quaeso describere exitus te offendit:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Omnes apps</string>
+    <string name="using_feature_phone">Using Feature Phone</string>
     <string name="total_screen_time">Totalis \'collaborative text Tempus</string>
     <string name="can_not_delete_system_apps">Non potest Delere Ratio Apps</string>
     <string name="please_select_app">Placere eligere app</string>
