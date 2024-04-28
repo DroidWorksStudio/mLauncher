@@ -20,6 +20,7 @@
     <!-- Appearance Strings -->
     <string name="status_bar">Visa statusfält</string>
     <string name="theme_mode">Tema läge</string>
+    <string name="color_mode">Färg läge</string>
     <string name="app_language">Gränssnittets språk</string>
     <string name="app_text_size">Textstorlek</string>
     <string name="clock_text_size">Klocka Textstorlek</string>
@@ -113,6 +114,17 @@
     <string name="open">Öppna</string>
     <string name="close">Stäng</string>
     <string name="copy">Kopiera</string>
+    <!-- Colored Themes -->
+    <string name="catppuccino">Catppuccino</string>
+    <string name="nordic">nordiska</string>
+    <!-- Dark Only Themes -->
+    <string name="dracula">Dracula</string>
+    <string name="arc">Båge</string>
+    <string name="nokto">Nokto</string>
+    <string name="breeze">Bris</string>
+    <string name="yaru">Yaru</string>
+    <!-- Light Only Themes -->
+    <string name="adwaita">Adwaita</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Autentisering avbryt.</string>
     <string name="text_authentication_error">Autentiseringsfel:%1$s(kod %2$d)</string>
