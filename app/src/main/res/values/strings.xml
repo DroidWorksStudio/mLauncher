@@ -155,6 +155,7 @@
 
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>
+    <string name="using_feature_phone">Using Feature Phone</string>
     <string name="total_screen_time">Total Screen Time</string>
     <string name="can_not_delete_system_apps">Can\'t Delete System Apps</string>
     <string name="please_select_app">Please select an app</string>
