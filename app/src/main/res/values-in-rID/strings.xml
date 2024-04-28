@@ -139,6 +139,7 @@
     <string name="acra_mail_body">Harap jelaskan masalah yang Anda temui:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Semua aplikasi</string>
+    <string name="using_feature_phone">Menggunakan Ponsel Fitur</string>
     <string name="total_screen_time">Total Waktu Layar</string>
     <string name="can_not_delete_system_apps">Tidak Dapat Menghapus Aplikasi Sistem</string>
     <string name="please_select_app">Silakan pilih aplikasi</string>
