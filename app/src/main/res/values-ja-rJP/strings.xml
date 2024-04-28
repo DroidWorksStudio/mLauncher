@@ -20,6 +20,7 @@
     <!-- Appearance Strings -->
     <string name="status_bar">ステータスバーを表示</string>
     <string name="theme_mode">テーマモード</string>
+    <string name="color_mode">カラーモード</string>
     <string name="app_language">インターフェース言語</string>
     <string name="app_text_size">文字サイズ</string>
     <string name="clock_text_size">時計の文字サイズ</string>
@@ -113,6 +114,17 @@
     <string name="open">開く</string>
     <string name="close">閉じる</string>
     <string name="copy">コピー</string>
+    <!-- Colored Themes -->
+    <string name="catppuccino">カプチーノ</string>
+    <string name="nordic">ノルディック</string>
+    <!-- Dark Only Themes -->
+    <string name="dracula">ドラキュラ</string>
+    <string name="arc">アーク</string>
+    <string name="nokto">ノクト</string>
+    <string name="breeze">風</string>
+    <string name="yaru">ヤル</string>
+    <!-- Light Only Themes -->
+    <string name="adwaita">アドワイタ</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">認証をキャンセルします。</string>
     <string name="text_authentication_error">認証エラー:%1$s(コード %2$d)</string>
