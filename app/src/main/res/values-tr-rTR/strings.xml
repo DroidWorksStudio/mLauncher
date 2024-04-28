@@ -139,6 +139,7 @@
     <string name="acra_mail_body">Lütfen karşılaştığınız sorunu açıklayın:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Tüm uygulamalar</string>
+    <string name="using_feature_phone">Özellikli Telefonu Kullanma</string>
     <string name="total_screen_time">Toplam Ekran Süresi</string>
     <string name="can_not_delete_system_apps">Sistem Uygulamaları Silinemiyor</string>
     <string name="please_select_app">Lütfen bir uygulama seçin</string>
