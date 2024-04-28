@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
+## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
+
+### Bug Fixes:
+
+- Fixed BiometricManager for when feature phone is enabled. - ([33ca37f](https://github.com/DroidWorksStudio/mLauncher/commit/33ca37f5a0702a1736c8df9a2eb2599f571db121))
+
 ## [1.5.6](https://github.com/DroidWorksStudio/mLauncher/tree/1.5.6) - (28, April 2024)
 
 ### Implemented Enhancements:
