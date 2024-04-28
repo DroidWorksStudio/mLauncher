@@ -20,6 +20,7 @@
     <!-- Appearance Strings -->
     <string name="status_bar">Asehoy ny toeran\'ny sata</string>
     <string name="theme_mode">Fomba lohahevitra</string>
+    <string name="color_mode">Fomba loko</string>
     <string name="app_language">Fiteny Interface</string>
     <string name="app_text_size">Haben\'ny soratra</string>
     <string name="clock_text_size">Haben\'ny famantaranandro</string>
@@ -113,6 +114,17 @@
     <string name="open">Misokatra</string>
     <string name="close">AKAIKY</string>
     <string name="copy">dika mitovy</string>
+    <!-- Colored Themes -->
+    <string name="catppuccino">Catppuccino</string>
+    <string name="nordic">Nordic</string>
+    <!-- Dark Only Themes -->
+    <string name="dracula">Dracula</string>
+    <string name="arc">Arc</string>
+    <string name="nokto">Nokto</string>
+    <string name="breeze">tsio-drivotra</string>
+    <string name="yaru">Yaru</string>
+    <!-- Light Only Themes -->
+    <string name="adwaita">Adwaita</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Fanafoanana ny fanamarinana.</string>
     <string name="text_authentication_error">Hadisoana fanamarinana:%1$s(kaody %2$d)</string>
