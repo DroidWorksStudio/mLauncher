@@ -20,6 +20,7 @@
     <!-- Appearance Strings -->
     <string name="status_bar">Näita olekuriba</string>
     <string name="theme_mode">Teemarežiim</string>
+    <string name="color_mode">Värvirežiim</string>
     <string name="app_language">Kasutajaliidese keel</string>
     <string name="app_text_size">Teksti suurus</string>
     <string name="clock_text_size">Kella teksti suurus</string>
@@ -113,6 +114,17 @@
     <string name="open">Avatud</string>
     <string name="close">Sulge</string>
     <string name="copy">Kopeeri</string>
+    <!-- Colored Themes -->
+    <string name="catppuccino">Catppuccino</string>
+    <string name="nordic">põhjamaine</string>
+    <!-- Dark Only Themes -->
+    <string name="dracula">Dracula</string>
+    <string name="arc">Arc</string>
+    <string name="nokto">Nokto</string>
+    <string name="breeze">Tuul</string>
+    <string name="yaru">Yaru</string>
+    <!-- Light Only Themes -->
+    <string name="adwaita">Adwaita</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Autentimise tühistamine.</string>
     <string name="text_authentication_error">Autentimisviga:%1$s(kood %2$d)</string>
