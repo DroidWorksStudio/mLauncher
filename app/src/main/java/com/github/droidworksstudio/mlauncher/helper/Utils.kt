@@ -430,11 +430,17 @@ fun getHexForOpacity(context: Context, prefs: Prefs): Int {
 }
 
 @RequiresApi(Build.VERSION_CODES.Q)
-fun getHexFontColor(context: Context): Int {
-    val accentColor = getAccentColor(context)
-    val hexAccentColor = java.lang.String.format("#%06X", 0xFFFFFF and accentColor)
+fun getHexFontColor(context: Context, prefs: Prefs): Int {
+    return if (prefs.followAccentColors) {
+        val accentColor = getAccentColor(context)
+        val hexAccentColor = java.lang.String.format("#%06X", 0xFFFFFF and accentColor)
 
-    return android.graphics.Color.parseColor(hexAccentColor)
+        android.graphics.Color.parseColor(hexAccentColor)
+    } else {
+        val typedValue = TypedValue()
+        context.theme.resolveAttribute(R.attr.colorPrimary, typedValue, true)
+        typedValue.data
+    }
 }
 
 @RequiresApi(Build.VERSION_CODES.Q)

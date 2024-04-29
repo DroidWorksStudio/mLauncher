@@ -160,7 +160,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         binding.batteryIcon.typeface = typeface
         binding.mainLayout.setBackgroundColor(colors.background(requireContext(), prefs))
         if (prefs.followAccentColors) {
-            val fontColor = getHexFontColor(requireContext())
+            val fontColor = getHexFontColor(requireContext(), prefs)
             binding.clock.setTextColor(fontColor)
             binding.date.setTextColor(fontColor)
             binding.batteryIcon.setTextColor(fontColor)
@@ -733,7 +733,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                         typeface?.let { setTypeface(it) }
                     }
                     if (prefs.followAccentColors) {
-                        val fontColor = getHexFontColor(requireContext())
+                        val fontColor = getHexFontColor(requireContext(), prefs)
                         setTextColor(fontColor)
                     } else {
                         setTextColor(colors.accents(requireContext(), prefs, 4))
@@ -762,7 +762,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                         typeface?.let { setTypeface(it) }
                     }
                     if (prefs.followAccentColors) {
-                        val fontColor = getHexFontColor(requireContext())
+                        val fontColor = getHexFontColor(requireContext(), prefs)
                         setTextColor(fontColor)
                     }  else {
                         setTextColor(colors.accents(requireContext(), prefs, 3))
@@ -837,7 +837,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                         typeface?.let { setTypeface(it) }
                     }
                     if (prefs.followAccentColors) {
-                        val fontColor = getHexFontColor(requireContext())
+                        val fontColor = getHexFontColor(requireContext(), prefs)
                         setTextColor(fontColor)
                     } else {
                         setTextColor(colors.accents(requireContext(), prefs, 4))

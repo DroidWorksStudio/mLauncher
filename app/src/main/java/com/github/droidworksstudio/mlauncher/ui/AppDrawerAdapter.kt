@@ -56,7 +56,7 @@ class AppDrawerAdapter(
             binding.appTitle.typeface = typeface
         }
         if (prefs.followAccentColors) {
-            val fontColor = getHexFontColor(parent.context)
+            val fontColor = getHexFontColor(parent.context, prefs)
             binding.appTitle.setTextColor(fontColor)
         }
         binding.appTitle.textSize = prefs.textSizeLauncher.toFloat()

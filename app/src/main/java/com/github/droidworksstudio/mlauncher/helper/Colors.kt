@@ -139,11 +139,11 @@ class Colors {
 
                     else -> {
                         when (accentNumber) {
-                            1 -> getHexFontColor(context)
-                            2 -> getHexFontColor(context)
-                            3 -> getHexFontColor(context)
-                            4 -> getHexFontColor(context)
-                            else -> getHexFontColor(context)
+                            1 -> getHexFontColor(context, prefs)
+                            2 -> getHexFontColor(context, prefs)
+                            3 -> getHexFontColor(context, prefs)
+                            4 -> getHexFontColor(context, prefs)
+                            else -> getHexFontColor(context, prefs)
                         }
                     }
                 }
@@ -182,22 +182,22 @@ class Colors {
 
                     else -> {
                         when (accentNumber) {
-                            1 -> getHexFontColor(context)
-                            2 -> getHexFontColor(context)
-                            3 -> getHexFontColor(context)
-                            4 -> getHexFontColor(context)
-                            else -> getHexFontColor(context)
+                            1 -> getHexFontColor(context, prefs)
+                            2 -> getHexFontColor(context, prefs)
+                            3 -> getHexFontColor(context, prefs)
+                            4 -> getHexFontColor(context, prefs)
+                            else -> getHexFontColor(context, prefs)
                         }
                     }
                 }
             }
             else -> {
                 when (accentNumber) {
-                    1 -> getHexFontColor(context)
-                    2 -> getHexFontColor(context)
-                    3 -> getHexFontColor(context)
-                    4 -> getHexFontColor(context)
-                    else -> getHexFontColor(context)
+                    1 -> getHexFontColor(context, prefs)
+                    2 -> getHexFontColor(context, prefs)
+                    3 -> getHexFontColor(context, prefs)
+                    4 -> getHexFontColor(context, prefs)
+                    else -> getHexFontColor(context, prefs)
                 }
             }
         }

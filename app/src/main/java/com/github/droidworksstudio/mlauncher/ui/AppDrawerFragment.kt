@@ -134,7 +134,7 @@ class AppDrawerFragment : Fragment() {
         binding.recyclerView.addOnScrollListener(getRecyclerViewOnScrollListener())
 
         if (flag == AppDrawerFlag.HiddenApps) {
-            val fontColor = getHexFontColor(requireActivity())
+            val fontColor = getHexFontColor(requireActivity(), prefs)
             val hiddenAppsHint = getString(R.string.hidden_apps)
             if (prefs.followAccentColors) {
                 val coloredHint = SpannableString(hiddenAppsHint)
@@ -150,7 +150,7 @@ class AppDrawerFragment : Fragment() {
                 binding.search.queryHint = hiddenAppsHint
         }
         if (flag == AppDrawerFlag.SetHomeApp) {
-            val fontColor = getHexFontColor(requireActivity())
+            val fontColor = getHexFontColor(requireActivity(), prefs)
             val hiddenAppsHint = getString(R.string.please_select_app)
             if (prefs.followAccentColors) {
                 val coloredHint = SpannableString(hiddenAppsHint)
@@ -166,9 +166,9 @@ class AppDrawerFragment : Fragment() {
                 binding.search.queryHint = hiddenAppsHint
         }
         if (flag == AppDrawerFlag.LaunchApp && prefs.useAllAppsText) {
-            val fontColor = getHexFontColor(requireActivity())
             val allAppsHint = getString(R.string.show_apps)
             if (prefs.followAccentColors) {
+                val fontColor = getHexFontColor(requireActivity(), prefs)
                 val coloredHint = SpannableString(allAppsHint)
                 coloredHint.setSpan(
                     ForegroundColorSpan(fontColor),

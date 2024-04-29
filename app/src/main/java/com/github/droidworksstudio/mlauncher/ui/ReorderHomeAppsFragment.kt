@@ -195,7 +195,7 @@ class ReorderHomeAppsFragment : Fragment() {
                 binding.pageName.textSize = prefs.textSizeLauncher * 1.5f
 
                 if (prefs.followAccentColors) {
-                    val fontColor = getHexFontColor(requireContext())
+                    val fontColor = getHexFontColor(requireContext(), prefs)
                     view.setTextColor(fontColor)
                 }
 
