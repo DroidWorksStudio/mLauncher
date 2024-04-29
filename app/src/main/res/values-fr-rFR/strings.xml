@@ -139,7 +139,6 @@
     <string name="acra_mail_body">Veuillez décrire le problème que vous avez rencontré :</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Toutes les applications</string>
-    <string name="using_feature_phone">Utiliser le téléphone multifonction</string>
     <string name="total_screen_time">Temps d\'écran total</string>
     <string name="can_not_delete_system_apps">Impossible de supprimer les applications système</string>
     <string name="please_select_app">Veuillez sélectionner une application</string>

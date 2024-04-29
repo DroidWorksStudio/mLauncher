@@ -139,7 +139,6 @@
     <string name="acra_mail_body">발생한 문제를 설명해 주세요.</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>
-    <string name="using_feature_phone">피처폰 사용</string>
     <string name="total_screen_time">총 화면 시간</string>
     <string name="can_not_delete_system_apps">시스템 앱을 삭제할 수 없습니다</string>
     <string name="please_select_app">앱을 선택하세요</string>

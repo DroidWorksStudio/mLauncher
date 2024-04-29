@@ -139,7 +139,6 @@
     <string name="acra_mail_body">Опишите проблем на који сте наишли:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>
-    <string name="using_feature_phone">Коришћење телефона са функцијама</string>
     <string name="total_screen_time">Укупно време екрана</string>
     <string name="can_not_delete_system_apps">Није могуће избрисати системске апликације</string>
     <string name="please_select_app">Изаберите апликацију</string>

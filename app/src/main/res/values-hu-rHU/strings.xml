@@ -139,7 +139,6 @@
     <string name="acra_mail_body">Kérjük, írja le a problémát, amellyel találkozott:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Minden alkalmazás</string>
-    <string name="using_feature_phone">Feature Phone használata</string>
     <string name="total_screen_time">Teljes képernyőidő</string>
     <string name="can_not_delete_system_apps">Nem lehet törölni a rendszeralkalmazásokat</string>
     <string name="please_select_app">Kérjük, válasszon egy alkalmazást</string>

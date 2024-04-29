@@ -139,7 +139,6 @@
     <string name="acra_mail_body">Vui lòng mô tả vấn đề bạn gặp phải:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>
-    <string name="using_feature_phone">Sử dụng điện thoại phổ thông</string>
     <string name="total_screen_time">Tổng thời gian sử dụng màn hình</string>
     <string name="can_not_delete_system_apps">Không thể xóa ứng dụng hệ thống</string>
     <string name="please_select_app">Vui lòng chọn một ứng dụng</string>

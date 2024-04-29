@@ -139,7 +139,6 @@
     <string name="acra_mail_body">Kuvaile kohtaamasi ongelmaa:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Kaikki sovellukset</string>
-    <string name="using_feature_phone">Ominaisuuspuhelimen käyttö</string>
     <string name="total_screen_time">Kokonaisruutuaika</string>
     <string name="can_not_delete_system_apps">Järjestelmäsovelluksia ei voi poistaa</string>
     <string name="please_select_app">Valitse sovellus</string>

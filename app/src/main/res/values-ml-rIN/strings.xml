@@ -139,7 +139,6 @@
     <string name="acra_mail_body">നിങ്ങൾ നേരിട്ട പ്രശ്നം വിവരിക്കുക:</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">എല്ലാ ആപ്പുകളും</string>
-    <string name="using_feature_phone">ഫീച്ചർ ഫോൺ ഉപയോഗിക്കുന്നു</string>
     <string name="total_screen_time">മൊത്തം സ്ക്രീൻ സമയം</string>
     <string name="can_not_delete_system_apps">സിസ്റ്റം ആപ്പുകൾ ഇല്ലാതാക്കാൻ കഴിയില്ല</string>
     <string name="please_select_app">ദയവായി ഒരു ആപ്പ് തിരഞ്ഞെടുക്കുക</string>
