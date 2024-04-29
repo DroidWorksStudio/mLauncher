@@ -24,6 +24,7 @@ import com.github.droidworksstudio.mlauncher.data.Constants.AppDrawerFlag
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.AdapterAppDrawerBinding
 import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.isSystemApp
+import com.github.droidworksstudio.mlauncher.helper.Colors
 import com.github.droidworksstudio.mlauncher.helper.dp2px
 import com.github.droidworksstudio.mlauncher.helper.getHexFontColor
 import com.github.droidworksstudio.mlauncher.helper.showKeyboard
@@ -45,6 +46,9 @@ class AppDrawerAdapter(
     var appFilteredList: MutableList<AppModel> = mutableListOf()
     private lateinit var binding: AdapterAppDrawerBinding
 
+    // Instantiate Colors object
+    private val colors = Colors()
+
     private var isBangSearch = false
 
     @RequiresApi(Build.VERSION_CODES.Q)
@@ -57,6 +61,9 @@ class AppDrawerAdapter(
         }
         if (prefs.followAccentColors) {
             val fontColor = getHexFontColor(parent.context, prefs)
+            binding.appTitle.setTextColor(fontColor)
+        } else {
+            val fontColor = colors.accents(parent.context, prefs, 4)
             binding.appTitle.setTextColor(fontColor)
         }
         binding.appTitle.textSize = prefs.textSizeLauncher.toFloat()

@@ -840,7 +840,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                         val fontColor = getHexFontColor(requireContext(), prefs)
                         setTextColor(fontColor)
                     } else {
-                        setTextColor(colors.accents(requireContext(), prefs, 4))
+                        val fontColor = colors.accents(requireContext(), prefs, 4)
+                        setTextColor(fontColor)
                     }
                 }
                 // Add the view to the layout
