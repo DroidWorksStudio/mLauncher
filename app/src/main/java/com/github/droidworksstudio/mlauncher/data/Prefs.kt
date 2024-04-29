@@ -75,7 +75,6 @@ private const val CLICK_USAGE = "CLICK_USAGE"
 private const val CLICK_DATE = "CLICK_DATE"
 private const val DOUBLE_TAP = "DOUBLE_TAP"
 private const val CUSTOM_FONT = "CUSTOM_FONT"
-private const val FEATURE_PHONE = "FEATURE_PHONE"
 private const val ALL_APPS_TEXT = "ALL_APPS_TEXT"
 
 private const val TEXT_SIZE_LAUNCHER = "TEXT_SIZE_LAUNCHER"
@@ -237,10 +236,6 @@ class Prefs(val context: Context) {
     var useCustomIconFont: Boolean
         get() = prefs.getBoolean(CUSTOM_FONT, false)
         set(value) = prefs.edit().putBoolean(CUSTOM_FONT, value).apply()
-
-    var usingFeaturePhone: Boolean
-        get() = prefs.getBoolean(FEATURE_PHONE, false)
-        set(value) = prefs.edit().putBoolean(FEATURE_PHONE, value).apply()
 
     var useAllAppsText: Boolean
         get() = prefs.getBoolean(ALL_APPS_TEXT, true)

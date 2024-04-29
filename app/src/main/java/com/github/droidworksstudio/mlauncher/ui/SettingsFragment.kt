@@ -363,14 +363,6 @@ class SettingsFragment : Fragment() {
                             state = remember { mutableStateOf(prefs.useCustomIconFont) },
                         ) { toggleCustomIconFont() }
                     },
-                    { _, onChange ->
-                        SettingsToggle(
-                            title = stringResource(R.string.using_feature_phone),
-                            fontSize = iconFs,
-                            onChange = onChange,
-                            state = remember { mutableStateOf(prefs.usingFeaturePhone) },
-                        ) { toggleFeaturePhone() }
-                    },
                 )
             )
             SettingsArea(
@@ -817,11 +809,6 @@ class SettingsFragment : Fragment() {
     private fun toggleCustomIconFont() {
         prefs.useCustomIconFont = !prefs.useCustomIconFont
     }
-
-    private fun toggleFeaturePhone() {
-        prefs.usingFeaturePhone = !prefs.usingFeaturePhone
-    }
-
 
     private fun toggleAllAppsText() {
         prefs.useAllAppsText = !prefs.useAllAppsText

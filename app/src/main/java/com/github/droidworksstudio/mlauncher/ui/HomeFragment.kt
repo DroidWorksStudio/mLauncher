@@ -786,7 +786,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 // Add parentLinearLayout to homeAppsLayout
                 binding.homeAppsLayout.addView(parentLinearLayout)
             }
-            addFeaturePhoneSettings()
         } else if (diff < 0) {
             // Remove extra apps
             binding.homeAppsLayout.removeViews(oldAppsNum + diff, -diff)
@@ -847,7 +846,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 // Add the view to the layout
                 binding.homeAppsLayout.addView(view)
             }
-            addFeaturePhoneSettings()
         } else if (diff < 0) {
             // Remove extra apps
             binding.homeAppsLayout.removeViews(oldAppsNum + diff, -diff)
@@ -855,59 +853,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
         // Update the total number of pages and calculate maximum apps per page
         updatePagesAndAppsPerPage(prefs.homeAppsNum, prefs.homePagesNum)
-    }
-
-    @RequiresApi(Build.VERSION_CODES.Q)
-    private fun addFeaturePhoneSettings() {
-        if (prefs.usingFeaturePhone) {
-            // Create and configure the first TextView
-            val showAppsText = TextView(context)
-            showAppsText.apply {
-                layoutParams = LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.WRAP_CONTENT,
-                    LinearLayout.LayoutParams.WRAP_CONTENT
-                )
-                textSize = prefs.textSizeLauncher.toFloat() / 1.2f
-                text = getString(R.string.show_app_list)
-                isFocusable = true
-                isFocusableInTouchMode = true
-                setTextColor(colors.accents(requireContext(), prefs, 3))
-                setOnClickListener {
-                    showAppList(AppDrawerFlag.LaunchApp, includeHiddenApps = false)
-                }
-            }
-            binding.homeButtons.addView(showAppsText)
-
-            // Add a space between existingAppView and newAppView
-            val space = Space(context)
-            space.apply {
-                layoutParams = LinearLayout.LayoutParams(
-                    0,
-                    ViewGroup.LayoutParams.WRAP_CONTENT,
-                    1f // Weight to fill available space
-                )
-            }
-
-            binding.homeButtons.addView(space)
-
-            // Create and configure the second TextView
-            val settingsText = TextView(context)
-            settingsText.apply {
-                layoutParams = LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.WRAP_CONTENT,
-                    LinearLayout.LayoutParams.WRAP_CONTENT
-                )
-                textSize = prefs.textSizeLauncher.toFloat() / 1.2f
-                text = getString(R.string.settings)
-                isFocusable = true
-                isFocusableInTouchMode = true
-                setTextColor(colors.accents(requireContext(), prefs, 3))
-                setOnClickListener {
-                    trySettings()
-                }
-            }
-            binding.homeButtons.addView(settingsText)
-        }
     }
 
     // updates number of apps visible on home screen

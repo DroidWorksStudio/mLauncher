@@ -79,15 +79,6 @@
         android:paddingBottom="80dp"
         android:paddingTop="112dp" />
 
-    <LinearLayout
-        android:id="@+id/homeButtons"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="bottom|center_horizontal"
-        android:orientation="horizontal"
-        android:paddingHorizontal="20dp"
-        android:paddingBottom="20dp"/>
-
     <TextView
         android:id="@+id/homeScreenPager"
         style="@style/TextSmall"
