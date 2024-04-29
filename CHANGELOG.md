@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Feature Removal:
 
+- Removed unused strings - ([6de0b76](https://github.com/DroidWorksStudio/mLauncher/commit/6de0b761eb2ebf45e4566b7b05686b20576b0a2e))
 - Removed Clutter from settings - ([c60bc9a](https://github.com/DroidWorksStudio/mLauncher/commit/c60bc9a946efcb0f214968c70f75fc106856969a))
 
 ## [1.5.7](https://github.com/DroidWorksStudio/mLauncher/tree/1.5.7) - (28, April 2024)
