@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Bug Fixes:
+
+- Fixed Accent Colors When Disabled - ([e25ffa2](https://github.com/DroidWorksStudio/mLauncher/commit/e25ffa20afb6e4ffbb1c107a0ce36d905eb36ff8))
+
 ### Feature Removal:
 
 - Removed Clutter from settings - ([c60bc9a](https://github.com/DroidWorksStudio/mLauncher/commit/c60bc9a946efcb0f214968c70f75fc106856969a))
