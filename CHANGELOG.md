@@ -2,10 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
-## [1.5.8](https://github.com/DroidWorksStudio/mLauncher/tree/1.5.8) - (29, April 2024)
+## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
 ### Bug Fixes:
 
+- Added the custom colors to the app draw too. - ([516eb12](https://github.com/DroidWorksStudio/mLauncher/commit/516eb12edb8ed2f0932c42b9a08f6447d3b813fd))
 - Fixed Accent Colors When Disabled - ([e25ffa2](https://github.com/DroidWorksStudio/mLauncher/commit/e25ffa20afb6e4ffbb1c107a0ce36d905eb36ff8))
 
 ### Feature Removal:
