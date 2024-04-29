@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
+## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
+
+### Feature Removal:
+
+- Removed Clutter from settings - ([c60bc9a](https://github.com/DroidWorksStudio/mLauncher/commit/c60bc9a946efcb0f214968c70f75fc106856969a))
+
 ## [1.5.7](https://github.com/DroidWorksStudio/mLauncher/tree/1.5.7) - (28, April 2024)
 
 ### Bug Fixes:
