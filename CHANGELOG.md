@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
+## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
+
+### Bug Fixes:
+
+- Some color themes were not working. - ([3763b01](https://github.com/DroidWorksStudio/mLauncher/commit/3763b014fd7a19e1e5b1390989483a8c9b4e8d6f))
+
 ## [1.5.8](https://github.com/DroidWorksStudio/mLauncher/tree/1.5.8) - (29, April 2024)
 
 ### Bug Fixes:
