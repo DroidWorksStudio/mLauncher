@@ -10,17 +10,16 @@ import com.github.droidworksstudio.mlauncher.data.Prefs
 class Colors {
     @RequiresApi(Build.VERSION_CODES.Q)
     fun background(context: Context, prefs: Prefs): Int {
-        val opacity = getHexForOpacity(context, prefs)
         return when (prefs.appTheme.name) {
             "Dark" -> {
                 when (prefs.appDarkColors.name) {
                     "Dracula" -> {
                         getColorWithAccent(context, prefs, R.color.draculaBackground)
                     }
-                    "Arc-Darker" -> {
+                    "Arc" -> {
                         getColorWithAccent(context, prefs, R.color.arcBackground)
                     }
-                    "Adapta-Nokto" -> {
+                    "Nokto" -> {
                         getColorWithAccent(context, prefs, R.color.noktoBackground)
                     }
                     "Breeze" -> {
@@ -36,7 +35,7 @@ class Colors {
                         getColorWithAccent(context, prefs, R.color.catppuccinoDarkBackground)
                     }
                     else -> {
-                        opacity
+                        getHexForOpacity(context, prefs)
                     }
                 }
             }
@@ -52,12 +51,12 @@ class Colors {
                         getColorWithAccent(context, prefs, R.color.catppuccinoLightBackground)
                     }
                     else -> {
-                        opacity
+                        getHexForOpacity(context, prefs)
                     }
                 }
             }
             else -> {
-                opacity
+                getHexForOpacity(context, prefs)
             }
         }
     }
