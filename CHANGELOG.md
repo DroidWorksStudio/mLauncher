@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Implemented Enhancements:
+
+- Add onKeyDown handling for menu key press. - ([7d7cc3f](https://github.com/DroidWorksStudio/mLauncher/commit/7d7cc3f44865a01da6d8bbd86b44a0af79099776))
+
 ### Bug Fixes:
 
 - Some color themes were not working. - ([3763b01](https://github.com/DroidWorksStudio/mLauncher/commit/3763b014fd7a19e1e5b1390989483a8c9b4e8d6f))
