@@ -21,6 +21,8 @@ body:
           required: true
         - label: "I have already checked the [WIKI](https://github.com/HeCodes2MuchDroidWorksStudio/mLauncher/wiki) pages and made sure that the feature isn't already exist."
           required: true
+        - label: "I've verified that this issue hasn't been addressed in the [changelogs](https://github.com/DroidWorksStudio/mLauncher/blob/main/CHANGELOG.md)."
+          required: true
         - label: "I have taken the time to fill in all the required details. I understand that the feature request will be dismissed otherwise."
           required: true
         - label: "This issue contains only one feature request."
