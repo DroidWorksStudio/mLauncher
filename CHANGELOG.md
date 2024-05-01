@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
+## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
+
+### Bug Fixes:
+
+- Check the total screen time is over 5 minutes. - ([a600069](https://github.com/DroidWorksStudio/mLauncher/commit/a600069e72e0db8a67468e887b88aef7b9a06975))
+
 ## [1.5.9](https://github.com/DroidWorksStudio/mLauncher/tree/1.5.9) - (01, May 2024)
 
 ### Implemented Enhancements:
