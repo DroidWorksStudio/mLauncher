@@ -11,6 +11,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.provider.Settings
+import android.view.KeyEvent
 import android.view.View
 import android.view.WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
 import androidx.appcompat.app.AppCompatActivity
@@ -43,6 +44,27 @@ class MainActivity : AppCompatActivity() {
         @Suppress("DEPRECATION")
         if (navController.currentDestination?.id != R.id.mainFragment)
             super.onBackPressed()
+    }
+
+    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
+        return when (keyCode) {
+            KeyEvent.KEYCODE_MENU -> {
+                when (navController.currentDestination?.id) {
+                    R.id.mainFragment -> {
+                        Navigation.findNavController(this, R.id.nav_host_fragment)
+                            .navigate(R.id.action_mainFragment_to_appListFragment)
+                        true
+                    }
+
+                    else -> {
+                        false
+                    }
+                }
+            }
+            else -> {
+                super.onKeyDown(keyCode, event)
+            }
+        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -93,85 +115,6 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-    }
-
-    @Suppress("DEPRECATION")
-    private fun setLanguage() {
-        val locale = prefs.language.locale()
-        val config = resources.configuration
-        config.locale = locale
-        resources.updateConfiguration(config, resources.displayMetrics)
-    }
-
-    override fun onStop() {
-        backToHomeScreen()
-        super.onStop()
-    }
-
-    override fun onUserLeaveHint() {
-        backToHomeScreen()
-        super.onUserLeaveHint()
-    }
-
-    override fun onNewIntent(intent: Intent?) {
-        backToHomeScreen()
-        super.onNewIntent(intent)
-    }
-
-    override fun onConfigurationChanged(newConfig: Configuration) {
-        super.onConfigurationChanged(newConfig)
-        recreate()
-    }
-
-    private fun initClickListeners() {
-        binding.okay.setOnClickListener {
-            binding.messageLayout.visibility = View.GONE
-            viewModel.showMessageDialog("")
-        }
-    }
-
-    private fun initObservers(viewModel: MainViewModel) {
-        viewModel.launcherResetFailed.observe(this) {
-            openLauncherChooser(it)
-        }
-        viewModel.showMessageDialog.observe(this) {
-            showMessage(it)
-        }
-    }
-
-    @SuppressLint("SourceLockedOrientationActivity")
-    private fun setupOrientation() {
-        if (isTablet(this)) return
-        // In Android 8.0, windowIsTranslucent cannot be used with screenOrientation=portrait
-        if (Build.VERSION.SDK_INT != Build.VERSION_CODES.O)
-            requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
-    }
-
-    private fun backToHomeScreen() {
-        // Whenever home button is pressed or user leaves the launcher,
-        // pop all the fragments except main
-        if (navController.currentDestination?.id != R.id.mainFragment)
-            navController.popBackStack(R.id.mainFragment, false)
-    }
-
-    private fun openLauncherChooser(resetFailed: Boolean) {
-        if (resetFailed) {
-            val intent = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
-                Intent(Settings.ACTION_MANAGE_DEFAULT_APPS_SETTINGS) else {
-                showToastLong(
-                    this,
-                    "Search for launcher or home app"
-                )
-                Intent(Settings.ACTION_SETTINGS)
-            }
-            startActivity(intent)
-        }
-    }
-
-    private fun showMessage(message: String) {
-        if (message.isEmpty()) return
-        binding.messageTextView.text = message
-        binding.messageLayout.visibility = View.VISIBLE
     }
 
     @Deprecated("Deprecated in Java")
@@ -225,5 +168,84 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    override fun onStop() {
+        backToHomeScreen()
+        super.onStop()
+    }
+
+    override fun onUserLeaveHint() {
+        backToHomeScreen()
+        super.onUserLeaveHint()
+    }
+
+    override fun onNewIntent(intent: Intent?) {
+        backToHomeScreen()
+        super.onNewIntent(intent)
+    }
+
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+        recreate()
+    }
+
+    @Suppress("DEPRECATION")
+    private fun setLanguage() {
+        val locale = prefs.language.locale()
+        val config = resources.configuration
+        config.locale = locale
+        resources.updateConfiguration(config, resources.displayMetrics)
+    }
+
+    private fun initClickListeners() {
+        binding.okay.setOnClickListener {
+            binding.messageLayout.visibility = View.GONE
+            viewModel.showMessageDialog("")
+        }
+    }
+
+    private fun initObservers(viewModel: MainViewModel) {
+        viewModel.launcherResetFailed.observe(this) {
+            openLauncherChooser(it)
+        }
+        viewModel.showMessageDialog.observe(this) {
+            showMessage(it)
+        }
+    }
+
+    @SuppressLint("SourceLockedOrientationActivity")
+    private fun setupOrientation() {
+        if (isTablet(this)) return
+        // In Android 8.0, windowIsTranslucent cannot be used with screenOrientation=portrait
+        if (Build.VERSION.SDK_INT != Build.VERSION_CODES.O)
+            requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+    }
+
+    private fun backToHomeScreen() {
+        // Whenever home button is pressed or user leaves the launcher,
+        // pop all the fragments except main
+        if (navController.currentDestination?.id != R.id.mainFragment)
+            navController.popBackStack(R.id.mainFragment, false)
+    }
+
+    private fun openLauncherChooser(resetFailed: Boolean) {
+        if (resetFailed) {
+            val intent = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
+                Intent(Settings.ACTION_MANAGE_DEFAULT_APPS_SETTINGS) else {
+                showToastLong(
+                    this,
+                    "Search for launcher or home app"
+                )
+                Intent(Settings.ACTION_SETTINGS)
+            }
+            startActivity(intent)
+        }
+    }
+
+    private fun showMessage(message: String) {
+        if (message.isEmpty()) return
+        binding.messageTextView.text = message
+        binding.messageLayout.visibility = View.VISIBLE
     }
 }
