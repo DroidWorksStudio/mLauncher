@@ -796,13 +796,17 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
         // Create a new TextView instance
         val totalText = getString(R.string.total_screen_time)
-        val totalTime = context?.let { getTotalScreenTime(it) }?.let { formatMillisToHMS(it) }
-        val totalJoin = "$totalText: $totalTime"
+        val totalTime = context?.let { getTotalScreenTime(it) }
+        val totalScreenTime = totalTime?.let { formatMillisToHMS(it) }
+        val totalScreenTimeJoin = "$totalText: $totalScreenTime"
         // Set properties for the TextView (optional)
         binding.setTotalScreenTime.apply {
-            text = totalJoin
-            visibility = View.VISIBLE
+            text = totalScreenTimeJoin
+            if (totalTime != null && totalTime > 300000L) { // Checking if totalTime is greater than 5 minutes (300,000 milliseconds)
+                visibility = View.VISIBLE
+            }
         }
+
     }
 
     @RequiresApi(Build.VERSION_CODES.Q)
