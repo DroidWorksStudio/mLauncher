@@ -8,6 +8,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Check the total screen time is over 5 minutes. - ([a600069](https://github.com/DroidWorksStudio/mLauncher/commit/a600069e72e0db8a67468e887b88aef7b9a06975))
 
+### Dependency Updates:
+
+- Updated Gradle - ([dcb55be](https://github.com/DroidWorksStudio/mLauncher/commit/dcb55bedb9f83649d2956e0fcb3fde448cff69e2))
+
 ## [1.5.9](https://github.com/DroidWorksStudio/mLauncher/tree/1.5.9) - (01, May 2024)
 
 ### Implemented Enhancements:
