@@ -22,8 +22,10 @@
     <string name="theme_mode">Režim motivu</string>
     <string name="color_mode">Barevný režim</string>
     <string name="app_language">Jazyk rozhraní</string>
-    <string name="app_text_size">Velikost textu</string>
+    <string name="app_text_size">Velikost textu aplikace</string>
     <string name="clock_text_size">Velikost textu hodin</string>
+    <string name="date_text_size">Datum Velikost textu</string>
+    <string name="battery_text_size">Velikost textu baterie</string>
     <string name="app_padding_size">Velikost odsazení položek</string>
     <string name="follow_accent_colors">Doplňková barva</string>
     <string name="background_opacity">Průhlednost pozadí</string>
@@ -42,8 +44,10 @@
     <string name="pages_on_home_screen">Počet stránek</string>
     <string name="enable_home_pager">Povolit domovskou stránku</string>
     <string name="show_time">Zobrazit čas</string>
+    <string name="show_time_format">Formát času (AM/PM)</string>
     <string name="show_date">Zobrazit datum</string>
     <string name="show_battery">Zobrazit baterii</string>
+    <string name="show_battery_icon">Zobrazit ikonu baterie</string>
     <string name="lock_home_apps">Zamknout aplikace</string>
     <string name="extend_home_apps_area">Rozšířit oblast, na kterou lze kliknout</string>
     <string name="home_alignment_bottom">Zarovnání spodní plochy na domovskej obrazovke</string>
