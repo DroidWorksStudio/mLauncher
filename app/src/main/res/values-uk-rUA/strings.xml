@@ -22,8 +22,10 @@
     <string name="theme_mode">Теми</string>
     <string name="color_mode">Кольоровий режим</string>
     <string name="app_language">Мова інтерфейсу</string>
-    <string name="app_text_size">Розмір тексту</string>
+    <string name="app_text_size">Розмір тексту програми</string>
     <string name="clock_text_size">Розмір тексту годинника</string>
+    <string name="date_text_size">Розмір тексту дати</string>
+    <string name="battery_text_size">Розмір тексту батареї</string>
     <string name="app_padding_size">Розмір прокладки</string>
     <string name="follow_accent_colors">Акцентні кольори</string>
     <string name="background_opacity">Непрозорість фону</string>
@@ -42,8 +44,10 @@
     <string name="pages_on_home_screen">Кількість сторінок</string>
     <string name="enable_home_pager">Увімкнути домашній пейджер</string>
     <string name="show_time">Відображати час</string>
+    <string name="show_time_format">Формат часу (AM/PM)</string>
     <string name="show_date">Показати дату</string>
     <string name="show_battery">Показати акумулятор</string>
+    <string name="show_battery_icon">Показати значок батареї</string>
     <string name="lock_home_apps">Блокування програм</string>
     <string name="extend_home_apps_area">Розширити область, яку можна натиснути</string>
     <string name="home_alignment_bottom">Вирівнювання головного екрана за нижнім краєм</string>
