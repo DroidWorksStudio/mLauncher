@@ -137,6 +137,14 @@
     <string name="acra_send_report">ਰਿਪੋਰਟ ਭੇਜੋ</string>
     <string name="acra_dont_send">ਨਾ ਭੇਜੋ</string>
     <string name="acra_mail_body">ਕਿਰਪਾ ਕਰਕੇ ਤੁਹਾਡੇ ਸਾਹਮਣੇ ਆਈ ਸਮੱਸਿਆ ਦਾ ਵਰਣਨ ਕਰੋ:</string>
+    <!-- Search Stings -->
+    <string name="search_engine">ਖੋਜ ਇੰਜਣ</string>
+    <string name="search_google">ਗੂਗਲ</string>
+    <string name="search_yahoo">ਯਾਹੂ</string>
+    <string name="search_duckduckgo">ਡਕਡਕਗੋ</string>
+    <string name="search_bing">ਬਿੰਗ</string>
+    <string name="search_brave">ਬਹਾਦਰ</string>
+    <string name="search_swisscow">SwissCows</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">ਸਾਰੀਆਂ ਐਪਾਂ</string>
     <string name="total_screen_time">ਕੁੱਲ ਸਕ੍ਰੀਨ ਸਮਾਂ</string>
