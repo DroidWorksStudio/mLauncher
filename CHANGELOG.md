@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Implemented Enhancements:
+
+- Added the ability to hide battery icon. - ([e177b18](https://github.com/DroidWorksStudio/mLauncher/commit/e177b1845e2fa10b7641286ac299ffa0e23fdd69))
+
 ### Bug Fixes:
 
 - Fixed the clock size so it now has a max size of 150 instead of 70. - ([a62886c](https://github.com/DroidWorksStudio/mLauncher/commit/a62886ca0c8ea8e15afe3310d21e16ff576fe9cd))
