@@ -80,10 +80,12 @@ private const val DOUBLE_TAP = "DOUBLE_TAP"
 private const val CUSTOM_FONT = "CUSTOM_FONT"
 private const val ALL_APPS_TEXT = "ALL_APPS_TEXT"
 
-private const val TEXT_SIZE_LAUNCHER = "TEXT_SIZE_LAUNCHER"
+private const val APP_SIZE_TEXT = "APP_SIZE_TEXT"
 private const val CLOCK_SIZE_TEXT = "CLOCK_SIZE_TEXT"
+private const val DATE_SIZE_TEXT = "DATE_SIZE_TEXT"
+private const val BATTERY_SIZE_TEXT = "BATTERY_SIZE_TEXT"
 private const val TEXT_SIZE_SETTINGS = "TEXT_SIZE_SETTINGS"
-private const val TEXT_MARGIN_SIZE = "TEXT_MARGIN_SIZE"
+private const val TEXT_PADDING_SIZE = "TEXT_PADDING_SIZE"
 
 class Prefs(val context: Context) {
 
@@ -483,15 +485,15 @@ class Prefs(val context: Context) {
         edit.apply()
     }
 
-    var textSizeLauncher: Int
+    var appSize: Int
         get() {
             return try {
-                prefs.getInt(TEXT_SIZE_LAUNCHER, 18)
+                prefs.getInt(APP_SIZE_TEXT, 18)
             } catch (_: Exception) {
                 18
             }
         }
-        set(value) = prefs.edit().putInt(TEXT_SIZE_LAUNCHER, value).apply()
+        set(value) = prefs.edit().putInt(APP_SIZE_TEXT, value).apply()
 
     var clockSize: Int
         get() {
@@ -503,7 +505,27 @@ class Prefs(val context: Context) {
         }
         set(value) = prefs.edit().putInt(CLOCK_SIZE_TEXT, value).apply()
 
-    var textSizeSettings: Int
+    var dateSize: Int
+        get() {
+            return try {
+                prefs.getInt(DATE_SIZE_TEXT, 22)
+            } catch (_: Exception) {
+                22
+            }
+        }
+        set(value) = prefs.edit().putInt(DATE_SIZE_TEXT, value).apply()
+
+    var batterySize: Int
+        get() {
+            return try {
+                prefs.getInt(BATTERY_SIZE_TEXT, 18)
+            } catch (_: Exception) {
+                18
+            }
+        }
+        set(value) = prefs.edit().putInt(BATTERY_SIZE_TEXT, value).apply()
+
+    var settingsSize: Int
         get() {
             return try {
                 prefs.getInt(TEXT_SIZE_SETTINGS, 18)
@@ -513,15 +535,15 @@ class Prefs(val context: Context) {
         }
         set(value) = prefs.edit().putInt(TEXT_SIZE_SETTINGS, value).apply()
 
-    var textMarginSize: Int
+    var textPaddingSize: Int
         get() {
             return try {
-                prefs.getInt(TEXT_MARGIN_SIZE, 10)
+                prefs.getInt(TEXT_PADDING_SIZE, 10)
             } catch (_: Exception) {
                 10
             }
         }
-        set(value) = prefs.edit().putInt(TEXT_MARGIN_SIZE, value).apply()
+        set(value) = prefs.edit().putInt(TEXT_PADDING_SIZE, value).apply()
 
 
     // return app label

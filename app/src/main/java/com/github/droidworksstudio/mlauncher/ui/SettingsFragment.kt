@@ -104,7 +104,7 @@ class SettingsFragment : Fragment() {
             }
 
             SettingsTheme(isDark) {
-                Settings((prefs.textSizeSettings - offset).sp)
+                Settings((prefs.settingsSize - offset).sp)
             }
         }
     }
@@ -232,10 +232,10 @@ class SettingsFragment : Fragment() {
                             fontSize = iconFs,
                             open = open,
                             onChange = onChange,
-                            currentSelection = remember { mutableIntStateOf(prefs.textSizeLauncher) },
+                            currentSelection = remember { mutableIntStateOf(prefs.appSize) },
                             min = Constants.TEXT_SIZE_MIN,
                             max = Constants.TEXT_SIZE_MAX,
-                            onSelect = { f -> setTextSizeLauncher(f) }
+                            onSelect = { f -> setAppTextSize(f) }
                         )
                     },
                     { open, onChange ->
@@ -245,9 +245,33 @@ class SettingsFragment : Fragment() {
                             open = open,
                             onChange = onChange,
                             currentSelection = remember { mutableIntStateOf(prefs.clockSize) },
-                            min = Constants.CLOCK_SIZE_MIN,
-                            max = Constants.CLOCK_SIZE_MAX,
-                            onSelect = { f -> setClockSizeSettings(f) }
+                            min = Constants.CLOCK_DATE_SIZE_MIN,
+                            max = Constants.CLOCK_DATE_SIZE_MAX,
+                            onSelect = { f -> setClockSize(f) }
+                        )
+                    },
+                    { open, onChange ->
+                        SettingsSliderItem(
+                            title = stringResource(R.string.date_text_size),
+                            fontSize = iconFs,
+                            open = open,
+                            onChange = onChange,
+                            currentSelection = remember { mutableIntStateOf(prefs.dateSize) },
+                            min = Constants.CLOCK_DATE_SIZE_MIN,
+                            max = Constants.CLOCK_DATE_SIZE_MAX,
+                            onSelect = { f -> setDateSize(f) }
+                        )
+                    },
+                    { open, onChange ->
+                        SettingsSliderItem(
+                            title = stringResource(R.string.battery_text_size),
+                            fontSize = iconFs,
+                            open = open,
+                            onChange = onChange,
+                            currentSelection = remember { mutableIntStateOf(prefs.batterySize) },
+                            min = Constants.BATTERY_SIZE_MIN,
+                            max = Constants.BATTERY_SIZE_MAX,
+                            onSelect = { f -> setBatterySize(f) }
                         )
                     },
                     { open, onChange ->
@@ -256,10 +280,10 @@ class SettingsFragment : Fragment() {
                             fontSize = iconFs,
                             open = open,
                             onChange = onChange,
-                            currentSelection = remember { mutableIntStateOf(prefs.textMarginSize) },
+                            currentSelection = remember { mutableIntStateOf(prefs.textPaddingSize) },
                             min = Constants.TEXT_MARGIN_MIN,
                             max = Constants.TEXT_MARGIN_MAX,
-                            onSelect = { f -> setTextMarginSize(f) }
+                            onSelect = { f -> setTextPaddingSize(f) }
                         )
                     },
                     { _, onChange ->
@@ -699,10 +723,10 @@ class SettingsFragment : Fragment() {
                             fontSize = iconFs,
                             open = open,
                             onChange = onChange,
-                            currentSelection = remember { mutableIntStateOf(prefs.textSizeSettings) },
+                            currentSelection = remember { mutableIntStateOf(prefs.settingsSize) },
                             min = Constants.TEXT_SIZE_MIN,
                             max = Constants.TEXT_SIZE_MAX,
-                            onSelect = { f -> setTextSizeSettings(f) }
+                            onSelect = { f -> setTextSize(f) }
                         )
                     },
                     { _, onChange ->
@@ -955,23 +979,33 @@ class SettingsFragment : Fragment() {
         requireActivity().recreate()
     }
 
-    private fun setTextSizeLauncher(size: Int) {
-        prefs.textSizeLauncher = size
+    private fun setAppTextSize(size: Int) {
+        prefs.appSize = size
         requireActivity().recreate()
     }
 
-    private fun setTextSizeSettings(size: Int) {
-        prefs.textSizeSettings = size
+    private fun setTextSize(size: Int) {
+        prefs.settingsSize = size
         requireActivity().recreate()
     }
 
-    private fun setClockSizeSettings(size: Int) {
+    private fun setClockSize(size: Int) {
         prefs.clockSize = size
         requireActivity().recreate()
     }
 
-    private fun setTextMarginSize(size: Int) {
-        prefs.textMarginSize = size
+    private fun setDateSize(size: Int) {
+        prefs.dateSize = size
+        requireActivity().recreate()
+    }
+
+    private fun setBatterySize(size: Int) {
+        prefs.batterySize = size
+        requireActivity().recreate()
+    }
+
+    private fun setTextPaddingSize(size: Int) {
+        prefs.textPaddingSize = size
         requireActivity().recreate()
     }
 
