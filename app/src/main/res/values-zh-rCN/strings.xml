@@ -137,6 +137,14 @@
     <string name="acra_send_report">发送报告</string>
     <string name="acra_dont_send">不发送</string>
     <string name="acra_mail_body">请描述您遇到的问题：</string>
+    <!-- Search Stings -->
+    <string name="search_engine">搜索引擎</string>
+    <string name="search_google">谷歌</string>
+    <string name="search_yahoo">雅虎</string>
+    <string name="search_duckduckgo">DuckDuckGo</string>
+    <string name="search_bing">必应</string>
+    <string name="search_brave">勇敢的</string>
+    <string name="search_swisscow">瑞士奶牛</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">所有应用程序</string>
     <string name="total_screen_time">总屏幕时间</string>
