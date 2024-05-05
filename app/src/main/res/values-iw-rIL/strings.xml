@@ -137,6 +137,14 @@
     <string name="acra_send_report">שלח דו\"ח</string>
     <string name="acra_dont_send">אל תשלח</string>
     <string name="acra_mail_body">אנא תאר את הבעיה שבה נתקלת:</string>
+    <!-- Search Stings -->
+    <string name="search_engine">מנוע חיפוש</string>
+    <string name="search_google">גוגל</string>
+    <string name="search_yahoo">יאהו</string>
+    <string name="search_duckduckgo">DuckDuckGo</string>
+    <string name="search_bing">בינג</string>
+    <string name="search_brave">אַמִיץ</string>
+    <string name="search_swisscow">SwissCows</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>
     <string name="total_screen_time">זמן מסך כולל</string>
