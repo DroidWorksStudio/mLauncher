@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
+## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
+
+### Bug Fixes:
+
+- Fixed the clock size so it now has a max size of 150 instead of 70. - ([a62886c](https://github.com/DroidWorksStudio/mLauncher/commit/a62886ca0c8ea8e15afe3310d21e16ff576fe9cd))
+
 ## [1.6.0](https://github.com/DroidWorksStudio/mLauncher/tree/1.6.0) - (05, May 2024)
 
 ### Bug Fixes:
