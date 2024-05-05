@@ -16,13 +16,13 @@ Gevorkt vanaf <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. M
         - Toon recent geopende apps
         - Open het meldingenpaneel
         - Snelle instellingen openen
-        - Uitschakelopties tonen
+        - Machtsdialoog
         - Maak een screenshot
         - Schakel gebaar uit
 - Je kunt de klok ook onafhankelijk van de thuisapps positioneren.
 - Wijzig de uitlijning van apps in de app-lade, onafhankelijk van het startscherm.
 - Wijzig de lettergrootte van delen van het startscherm onafhankelijk van elkaar.
-- Internet toestemming verwijderd. Je weet nooit wat een app-ontwikkelaar over je wil weten.
+- Internet toestemming verwijderd Je weet nooit wat een app-ontwikkelaar over je wil weten.
 - Instellingen achter biometrie vergrendelen (schakelaar)
 - De mogelijkheid toegevoegd om crashes via e-mail te melden.
 - De mogelijkheid toegevoegd om de gebruikstijd van de app te bekijken.
