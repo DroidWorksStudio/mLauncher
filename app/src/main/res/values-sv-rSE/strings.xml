@@ -22,8 +22,10 @@
     <string name="theme_mode">Tema läge</string>
     <string name="color_mode">Färg läge</string>
     <string name="app_language">Gränssnittets språk</string>
-    <string name="app_text_size">Textstorlek</string>
+    <string name="app_text_size">Appens textstorlek</string>
     <string name="clock_text_size">Klocka Textstorlek</string>
+    <string name="date_text_size">Datum Textstorlek</string>
+    <string name="battery_text_size">Batteritextstorlek</string>
     <string name="app_padding_size">Vadderingsstorlek</string>
     <string name="follow_accent_colors">Accentfärger</string>
     <string name="background_opacity">Bakgrundsopacitet</string>
@@ -42,8 +44,10 @@
     <string name="pages_on_home_screen">Antal sidor</string>
     <string name="enable_home_pager">Aktivera Home Pager</string>
     <string name="show_time">Visa tid</string>
+    <string name="show_time_format">Tidsformat (AM/PM)</string>
     <string name="show_date">Visa datum</string>
     <string name="show_battery">Visa batteri</string>
+    <string name="show_battery_icon">Visa batteriikon</string>
     <string name="lock_home_apps">Lås appar</string>
     <string name="extend_home_apps_area">Utöka det klickbara området</string>
     <string name="home_alignment_bottom">Hemskärm Justera botten</string>
