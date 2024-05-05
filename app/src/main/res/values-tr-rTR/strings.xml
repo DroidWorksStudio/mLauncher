@@ -137,6 +137,14 @@
     <string name="acra_send_report">Rapor gönder</string>
     <string name="acra_dont_send">Gönderme</string>
     <string name="acra_mail_body">Lütfen karşılaştığınız sorunu açıklayın:</string>
+    <!-- Search Stings -->
+    <string name="search_engine">Arama motoru</string>
+    <string name="search_google">Google</string>
+    <string name="search_yahoo">yahoo</string>
+    <string name="search_duckduckgo">ÖrdekDuckGo</string>
+    <string name="search_bing">Bing</string>
+    <string name="search_brave">Cesur</string>
+    <string name="search_swisscow">İsviçreİnekleri</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Tüm uygulamalar</string>
     <string name="total_screen_time">Toplam Ekran Süresi</string>
