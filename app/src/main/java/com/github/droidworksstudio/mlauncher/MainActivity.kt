@@ -61,6 +61,34 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
             }
+
+            KeyEvent.KEYCODE_A, KeyEvent.KEYCODE_B, KeyEvent.KEYCODE_C, KeyEvent.KEYCODE_D,
+            KeyEvent.KEYCODE_E, KeyEvent.KEYCODE_F, KeyEvent.KEYCODE_G, KeyEvent.KEYCODE_H,
+            KeyEvent.KEYCODE_I, KeyEvent.KEYCODE_J, KeyEvent.KEYCODE_K, KeyEvent.KEYCODE_L,
+            KeyEvent.KEYCODE_M, KeyEvent.KEYCODE_N, KeyEvent.KEYCODE_O, KeyEvent.KEYCODE_P,
+            KeyEvent.KEYCODE_Q, KeyEvent.KEYCODE_R, KeyEvent.KEYCODE_S, KeyEvent.KEYCODE_T,
+            KeyEvent.KEYCODE_U, KeyEvent.KEYCODE_V, KeyEvent.KEYCODE_W, KeyEvent.KEYCODE_X,
+            KeyEvent.KEYCODE_Y, KeyEvent.KEYCODE_Z -> {
+                when (navController.currentDestination?.id) {
+                    R.id.mainFragment -> {
+                        val bundle = Bundle()
+                        bundle.putInt("letterKeyCode", keyCode) // Pass the letter key code
+                        Navigation.findNavController(this, R.id.nav_host_fragment)
+                            .navigate(R.id.action_mainFragment_to_appListFragment, bundle)
+                        true
+                    }
+
+                    else -> {
+                        false
+                    }
+                }
+            }
+
+            KeyEvent.KEYCODE_ESCAPE -> {
+                backToHomeScreen()
+                true
+            }
+
             else -> {
                 super.onKeyDown(keyCode, event)
             }

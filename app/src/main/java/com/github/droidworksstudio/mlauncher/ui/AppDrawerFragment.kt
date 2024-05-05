@@ -10,6 +10,7 @@ import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
 import android.view.Gravity
+import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -68,6 +69,13 @@ class AppDrawerFragment : Fragment() {
     @SuppressLint("RtlHardcoded")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        // Retrieve the letter key code from arguments
+        val letterKeyCode = arguments?.getInt("letterKeyCode", -1)
+        if (letterKeyCode != null && letterKeyCode != -1) {
+            val letterToChar = convertKeyCodeToLetter(letterKeyCode)
+            val searchTextView = binding.search.findViewById<TextView>(R.id.search_src_text)
+            searchTextView.text = letterToChar.toString()
+        }
 
         binding.mainLayout.setBackgroundColor(colors.background(requireContext(), prefs))
 
@@ -252,6 +260,38 @@ class AppDrawerFragment : Fragment() {
 
         })
 
+    }
+
+    private fun convertKeyCodeToLetter(keyCode: Int): Char {
+        return when (keyCode) {
+            KeyEvent.KEYCODE_A -> 'A'
+            KeyEvent.KEYCODE_B -> 'B'
+            KeyEvent.KEYCODE_C -> 'C'
+            KeyEvent.KEYCODE_D -> 'D'
+            KeyEvent.KEYCODE_E -> 'E'
+            KeyEvent.KEYCODE_F -> 'F'
+            KeyEvent.KEYCODE_G -> 'G'
+            KeyEvent.KEYCODE_H -> 'H'
+            KeyEvent.KEYCODE_I -> 'I'
+            KeyEvent.KEYCODE_J -> 'J'
+            KeyEvent.KEYCODE_K -> 'K'
+            KeyEvent.KEYCODE_L -> 'L'
+            KeyEvent.KEYCODE_M -> 'M'
+            KeyEvent.KEYCODE_N -> 'N'
+            KeyEvent.KEYCODE_O -> 'O'
+            KeyEvent.KEYCODE_P -> 'P'
+            KeyEvent.KEYCODE_Q -> 'Q'
+            KeyEvent.KEYCODE_R -> 'R'
+            KeyEvent.KEYCODE_S -> 'S'
+            KeyEvent.KEYCODE_T -> 'T'
+            KeyEvent.KEYCODE_U -> 'U'
+            KeyEvent.KEYCODE_V -> 'V'
+            KeyEvent.KEYCODE_W -> 'W'
+            KeyEvent.KEYCODE_X -> 'X'
+            KeyEvent.KEYCODE_Y -> 'Y'
+            KeyEvent.KEYCODE_Z -> 'Z'
+            else -> throw IllegalArgumentException("Invalid key code: $keyCode")
+        }
     }
 
     @RequiresApi(Build.VERSION_CODES.Q)
