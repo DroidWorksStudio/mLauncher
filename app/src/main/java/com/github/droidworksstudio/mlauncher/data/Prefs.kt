@@ -36,6 +36,7 @@ private const val SHOW_DATE = "SHOW_DATE"
 private const val HOME_LOCKED = "HOME_LOCKED"
 private const val SETTINGS_LOCKED = "SETTINGS_LOCKED"
 private const val SHOW_TIME = "SHOW_TIME"
+private const val SHOW_TIME_FORMAT = "SHOW_TIME_FORMAT"
 private const val SEARCH_START = "SEARCH_START"
 private const val SWIPE_UP_ACTION = "SWIPE_UP_ACTION"
 private const val SWIPE_DOWN_ACTION = "SWIPE_DOWN_ACTION"
@@ -218,6 +219,10 @@ class Prefs(val context: Context) {
     var showTime: Boolean
         get() = prefs.getBoolean(SHOW_TIME, true)
         set(value) = prefs.edit().putBoolean(SHOW_TIME, value).apply()
+
+    var showTimeFormat: Boolean
+        get() = prefs.getBoolean(SHOW_TIME_FORMAT, true)
+        set(value) = prefs.edit().putBoolean(SHOW_TIME_FORMAT, value).apply()
 
     var showDate: Boolean
         get() = prefs.getBoolean(SHOW_DATE, true)

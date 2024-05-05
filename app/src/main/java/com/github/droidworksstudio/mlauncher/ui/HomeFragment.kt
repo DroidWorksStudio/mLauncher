@@ -131,17 +131,18 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
         val timezone = prefs.language.timezone()
         val is24HourFormat = DateFormat.is24HourFormat(requireContext())
-        val best12 = DateFormat.getBestDateTimePattern(timezone, "hhmma")
+        val best12 = DateFormat.getBestDateTimePattern(timezone, if (prefs.showTimeFormat) "hhmma" else "hhmm").let {
+            if (!prefs.showTimeFormat) it.removeSuffix(" a") else it
+        }
+        Log.d("currentDateTime", best12)
         val best24 = DateFormat.getBestDateTimePattern(timezone, "HHmm")
         val timePattern = if (is24HourFormat) best24 else best12
         binding.clock.format12Hour = timePattern
         binding.clock.format24Hour = timePattern
 
-        val best12Date = DateFormat.getBestDateTimePattern(timezone, "eeeddMMM")
-        val best24Date = DateFormat.getBestDateTimePattern(timezone, "eeeddMMM")
-
-        binding.date.format12Hour = best12Date
-        binding.date.format24Hour = best24Date
+        val datePattern = DateFormat.getBestDateTimePattern(timezone, "eeeddMMM")
+        binding.date.format12Hour = datePattern
+        binding.date.format24Hour = datePattern
 
         binding.clock.textSize = prefs.clockSize.toFloat()
         binding.date.textSize = prefs.textSizeLauncher.toFloat()
