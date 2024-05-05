@@ -32,7 +32,7 @@ object Constants {
     const val BACKUP_READ = 2
 
     const val CLOCK_SIZE_MIN = 20
-    const val CLOCK_SIZE_MAX = 70
+    const val CLOCK_SIZE_MAX = 150
 
     const val TEXT_MARGIN_MIN = 0
     const val TEXT_MARGIN_MAX = 50
