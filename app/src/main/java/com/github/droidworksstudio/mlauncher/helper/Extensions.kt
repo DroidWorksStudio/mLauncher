@@ -6,9 +6,11 @@ import android.content.Intent
 import android.content.pm.LauncherApps
 import android.net.Uri
 import android.os.UserHandle
+import android.util.Log
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import com.github.droidworksstudio.mlauncher.data.Constants
+import com.github.droidworksstudio.mlauncher.data.Prefs
 
 fun View.hideKeyboard() {
     this.clearFocus()
@@ -24,6 +26,34 @@ fun View.showKeyboard(show: Boolean = true) {
             @Suppress("DEPRECATION")
             imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, InputMethodManager.HIDE_IMPLICIT_ONLY)
         }, 100)
+}
+
+fun Context.searchCustomSearchEngine(searchQuery: String? = null, prefs: Prefs): Boolean {
+    val searchUrl = when(prefs.searchEngines) {
+        Constants.SearchEngines.Google -> {
+            Constants.URL_GOOGLE_SEARCH
+        }
+        Constants.SearchEngines.Yahoo -> {
+            Constants.URL_YAHOO_SEARCH
+        }
+        Constants.SearchEngines.DuckDuckGo -> {
+            Constants.URL_DUCK_SEARCH
+        }
+        Constants.SearchEngines.Bing -> {
+            Constants.URL_BING_SEARCH
+        }
+        Constants.SearchEngines.Brave -> {
+            Constants.URL_BRAVE_SEARCH
+        }
+        Constants.SearchEngines.SwissCow -> {
+            Constants.URL_SWISSCOW_SEARCH
+        }
+    }
+    val encodedQuery = Uri.encode(searchQuery)
+    val fullUrl = "$searchUrl$encodedQuery"
+    Log.d("fullUrl", fullUrl)
+    openUrl(fullUrl)
+    return true
 }
 
 fun Context.openSearch(query: String? = null) {
