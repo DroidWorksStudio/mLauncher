@@ -22,8 +22,10 @@
     <string name="theme_mode">โหมดธีม</string>
     <string name="color_mode">โหมดสี</string>
     <string name="app_language">ภาษาอินเทอร์เฟซ</string>
-    <string name="app_text_size">ขนาดตัวอักษร</string>
+    <string name="app_text_size">ขนาดข้อความของแอป</string>
     <string name="clock_text_size">ขนาดข้อความนาฬิกา</string>
+    <string name="date_text_size">ขนาดข้อความวันที่</string>
+    <string name="battery_text_size">ขนาดข้อความแบตเตอรี่</string>
     <string name="app_padding_size">ขนาดช่องว่างภายใน</string>
     <string name="follow_accent_colors">เน้นสี</string>
     <string name="background_opacity">ความทึบของพื้นหลัง</string>
@@ -42,8 +44,10 @@
     <string name="pages_on_home_screen">เลขหน้า</string>
     <string name="enable_home_pager">เปิดใช้งานโฮมเพจเจอร์</string>
     <string name="show_time">เวลาแสดง</string>
+    <string name="show_time_format">รูปแบบเวลา (AM/PM)</string>
     <string name="show_date">แสดงวันที่</string>
     <string name="show_battery">แสดงแบตเตอรี่</string>
+    <string name="show_battery_icon">แสดงไอคอนแบตเตอรี่</string>
     <string name="lock_home_apps">ล็อคแอพ</string>
     <string name="extend_home_apps_area">ขยายพื้นที่ที่สามารถคลิกได้</string>
     <string name="home_alignment_bottom">หน้าจอหลักจัดตำแหน่งด้านล่าง</string>
