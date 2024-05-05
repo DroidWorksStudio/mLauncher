@@ -22,8 +22,10 @@
     <string name="theme_mode">Режим темы</string>
     <string name="color_mode">Цветовой режим</string>
     <string name="app_language">Язык интерфейса</string>
-    <string name="app_text_size">Размер текста</string>
+    <string name="app_text_size">Размер текста приложения</string>
     <string name="clock_text_size">Размер текста часов</string>
+    <string name="date_text_size">Размер текста даты</string>
+    <string name="battery_text_size">Размер текста батареи</string>
     <string name="app_padding_size">Размер заполнения</string>
     <string name="follow_accent_colors">Акцентные цвета</string>
     <string name="background_opacity">Непрозрачность фона</string>
@@ -42,8 +44,10 @@
     <string name="pages_on_home_screen">Количество страниц</string>
     <string name="enable_home_pager">Включить домашний пейджер</string>
     <string name="show_time">Показать время</string>
+    <string name="show_time_format">Формат времени (AM/PM)</string>
     <string name="show_date">Показать дату</string>
     <string name="show_battery">Показать батарею</string>
+    <string name="show_battery_icon">Показать значок батареи</string>
     <string name="lock_home_apps">Заблокировать приложения</string>
     <string name="extend_home_apps_area">Расширить кликабельную область</string>
     <string name="home_alignment_bottom">Главный экран Выровнять по нижнему краю</string>
