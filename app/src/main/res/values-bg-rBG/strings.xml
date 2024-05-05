@@ -22,8 +22,10 @@
     <string name="theme_mode">Режим на темата</string>
     <string name="color_mode">Цветен режим</string>
     <string name="app_language">Език на интерфейса</string>
-    <string name="app_text_size">Размер на текста</string>
+    <string name="app_text_size">Размер на текста на приложението</string>
     <string name="clock_text_size">Размер на текста на часовника</string>
+    <string name="date_text_size">Дата Размер на текста</string>
+    <string name="battery_text_size">Размер на текста на батерията</string>
     <string name="app_padding_size">Размер на подложката</string>
     <string name="follow_accent_colors">Акцентни цветове</string>
     <string name="background_opacity">Непрозрачност на фона</string>
@@ -42,8 +44,10 @@
     <string name="pages_on_home_screen">Брой страници</string>
     <string name="enable_home_pager">Активирайте началния пейджър</string>
     <string name="show_time">Време за показване</string>
+    <string name="show_time_format">Формат на часа (AM/PM)</string>
     <string name="show_date">Дата на показване</string>
     <string name="show_battery">Показване на батерията</string>
+    <string name="show_battery_icon">Показване на иконата на батерията</string>
     <string name="lock_home_apps">Приложения за заключване</string>
     <string name="extend_home_apps_area">Разширяване на зоната за кликване</string>
     <string name="home_alignment_bottom">Подравняване на началния екран отдолу</string>

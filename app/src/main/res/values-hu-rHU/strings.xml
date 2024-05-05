@@ -22,8 +22,10 @@
     <string name="theme_mode">Téma mód</string>
     <string name="color_mode">Szín mód</string>
     <string name="app_language">Interfész nyelv</string>
-    <string name="app_text_size">Szöveg mérete</string>
+    <string name="app_text_size">Alkalmazás szövegének mérete</string>
     <string name="clock_text_size">Óra szöveg mérete</string>
+    <string name="date_text_size">Dátum szöveg mérete</string>
+    <string name="battery_text_size">Akkumulátor szöveg mérete</string>
     <string name="app_padding_size">Padding Méret</string>
     <string name="follow_accent_colors">Kiemelt színek</string>
     <string name="background_opacity">Háttér átlátszatlanság</string>
@@ -42,8 +44,10 @@
     <string name="pages_on_home_screen">Oldalszám</string>
     <string name="enable_home_pager">Home Pager engedélyezése</string>
     <string name="show_time">Show time</string>
+    <string name="show_time_format">Időformátum (AM/PM)</string>
     <string name="show_date">Megjelenés dátuma</string>
     <string name="show_battery">Mutasd az akkumulátort</string>
+    <string name="show_battery_icon">Az akkumulátor ikon megjelenítése</string>
     <string name="lock_home_apps">Alkalmazások zárolása</string>
     <string name="extend_home_apps_area">Kattintható terület kiterjesztése</string>
     <string name="home_alignment_bottom">Kezdőképernyő Align Bottom</string>

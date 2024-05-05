@@ -22,8 +22,10 @@
     <string name="theme_mode">وضع السمة</string>
     <string name="color_mode">وضع اللون</string>
     <string name="app_language">لغة الواجهة</string>
-    <string name="app_text_size">حجم النص</string>
+    <string name="app_text_size">حجم نص التطبيق</string>
     <string name="clock_text_size">حجم نص الساعة</string>
+    <string name="date_text_size">حجم نص التاريخ</string>
+    <string name="battery_text_size">حجم نص البطارية</string>
     <string name="app_padding_size">حجم الحشوة</string>
     <string name="follow_accent_colors">ألوان مميزة</string>
     <string name="background_opacity">شفافية الخلفية</string>
@@ -42,8 +44,10 @@
     <string name="pages_on_home_screen">عدد الصفحات</string>
     <string name="enable_home_pager">تمكين جهاز النداء الرئيسي</string>
     <string name="show_time">إظهار الوقت</string>
+    <string name="show_time_format">تنسيق الوقت (صباحًا/مساءً)</string>
     <string name="show_date">إظهار التاريخ</string>
     <string name="show_battery">عرض البطارية</string>
+    <string name="show_battery_icon">إظهار أيقونة البطارية</string>
     <string name="lock_home_apps">قفل التطبيقات</string>
     <string name="extend_home_apps_area">توسيع المنطقة القابلة للنقر</string>
     <string name="home_alignment_bottom">محاذاة الشاشة الرئيسية إلى الأسفل</string>

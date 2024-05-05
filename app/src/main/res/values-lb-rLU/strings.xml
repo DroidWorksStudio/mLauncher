@@ -22,8 +22,10 @@
     <string name="theme_mode">Thema Modus</string>
     <string name="color_mode">Faarf Modus</string>
     <string name="app_language">Interface Sprooch</string>
-    <string name="app_text_size">Text Gréisst</string>
+    <string name="app_text_size">App Text Gréisst</string>
     <string name="clock_text_size">Auer Text Gréisst</string>
+    <string name="date_text_size">Datum Text Gréisst</string>
+    <string name="battery_text_size">Batterie Text Gréisst</string>
     <string name="app_padding_size">Padding Gréisst</string>
     <string name="follow_accent_colors">Akzent Faarwen</string>
     <string name="background_opacity">Hannergrond Opazitéit</string>
@@ -42,8 +44,10 @@
     <string name="pages_on_home_screen">Zuel vun Säiten</string>
     <string name="enable_home_pager">Aktivéiert Home Pager</string>
     <string name="show_time">Elo geet et lass</string>
+    <string name="show_time_format">Zeitformat (AM/PM)</string>
     <string name="show_date">Datum weisen</string>
     <string name="show_battery">Batterie weisen</string>
+    <string name="show_battery_icon">Show Batterie Ikon</string>
     <string name="lock_home_apps">Spär Apps</string>
     <string name="extend_home_apps_area">Klicktbar Gebitt verlängeren</string>
     <string name="home_alignment_bottom">Home Screen Align Bottom</string>

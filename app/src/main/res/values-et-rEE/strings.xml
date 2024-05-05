@@ -22,8 +22,10 @@
     <string name="theme_mode">Teemarežiim</string>
     <string name="color_mode">Värvirežiim</string>
     <string name="app_language">Kasutajaliidese keel</string>
-    <string name="app_text_size">Teksti suurus</string>
+    <string name="app_text_size">Rakenduse teksti suurus</string>
     <string name="clock_text_size">Kella teksti suurus</string>
+    <string name="date_text_size">Kuupäeva teksti suurus</string>
+    <string name="battery_text_size">Aku teksti suurus</string>
     <string name="app_padding_size">Polsterduse suurus</string>
     <string name="follow_accent_colors">Aktsentvärvid</string>
     <string name="background_opacity">Tausta läbipaistmatus</string>
@@ -42,8 +44,10 @@
     <string name="pages_on_home_screen">Lehtede arv</string>
     <string name="enable_home_pager">Avalehtri lubamine</string>
     <string name="show_time">Näita aega</string>
+    <string name="show_time_format">Ajavorming (AM/PM)</string>
     <string name="show_date">Näita kuupäeva</string>
     <string name="show_battery">Näita akut</string>
+    <string name="show_battery_icon">Näita aku ikooni</string>
     <string name="lock_home_apps">Lukustage rakendused</string>
     <string name="extend_home_apps_area">Laiendage klõpsatavat ala</string>
     <string name="home_alignment_bottom">Avakuva Joonda alumine osa</string>

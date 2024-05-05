@@ -22,8 +22,10 @@
     <string name="theme_mode">Način rada teme</string>
     <string name="color_mode">Način boja</string>
     <string name="app_language">Jezik sučelja</string>
-    <string name="app_text_size">Veličina teksta</string>
+    <string name="app_text_size">Veličina teksta aplikacije</string>
     <string name="clock_text_size">Veličina teksta sata</string>
+    <string name="date_text_size">Datum Veličina teksta</string>
+    <string name="battery_text_size">Veličina teksta baterije</string>
     <string name="app_padding_size">Veličina podloge</string>
     <string name="follow_accent_colors">Naglašene boje</string>
     <string name="background_opacity">Neprozirnost pozadine</string>
@@ -42,8 +44,10 @@
     <string name="pages_on_home_screen">Broj stranica</string>
     <string name="enable_home_pager">Omogući Home Pager</string>
     <string name="show_time">Pokaži vrijeme</string>
+    <string name="show_time_format">Format vremena (AM/PM)</string>
     <string name="show_date">Prikaži datum</string>
     <string name="show_battery">Prikaži bateriju</string>
+    <string name="show_battery_icon">Prikaži ikonu baterije</string>
     <string name="lock_home_apps">Zaključaj aplikacije</string>
     <string name="extend_home_apps_area">Proširite područje koje se može kliknuti</string>
     <string name="home_alignment_bottom">Početni zaslon poravnajte s dnom</string>

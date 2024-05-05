@@ -22,8 +22,10 @@
     <string name="theme_mode">Modalità tema</string>
     <string name="color_mode">Modalità colore</string>
     <string name="app_language">Lingua Dell\'Interfaccia</string>
-    <string name="app_text_size">Dimensione Testo</string>
+    <string name="app_text_size">Dimensioni del testo dell\'app</string>
     <string name="clock_text_size">Dimensione del testo dell\'orologio</string>
+    <string name="date_text_size">Dimensioni del testo della data</string>
+    <string name="battery_text_size">Dimensioni del testo della batteria</string>
     <string name="app_padding_size">Dimensione della spaziatura</string>
     <string name="follow_accent_colors">Colori accentuati</string>
     <string name="background_opacity">Opacità dello sfondo</string>
@@ -42,8 +44,10 @@
     <string name="pages_on_home_screen">Numero di pagine</string>
     <string name="enable_home_pager">Abilita l\'Home Pager iniziale</string>
     <string name="show_time">Mostra ora</string>
+    <string name="show_time_format">Formato ora (AM/PM)</string>
     <string name="show_date">Mostra data</string>
     <string name="show_battery">Mostra batteria</string>
+    <string name="show_battery_icon">Mostra l\'icona della batteria</string>
     <string name="lock_home_apps">Blocca App</string>
     <string name="extend_home_apps_area">Estendi l\'area cliccabile</string>
     <string name="home_alignment_bottom">Schermata iniziale allineata in basso</string>

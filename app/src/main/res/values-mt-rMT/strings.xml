@@ -22,8 +22,10 @@
     <string name="theme_mode">Modalità Tema</string>
     <string name="color_mode">Modalità tal-Kulur</string>
     <string name="app_language">Lingwa tal-Interface</string>
-    <string name="app_text_size">Daqs tat-Test</string>
+    <string name="app_text_size">Daqs tat-Test tal-App</string>
     <string name="clock_text_size">Daqs tat-Test tal-Arloġġ</string>
+    <string name="date_text_size">Daqs tat-Test tad-Data</string>
+    <string name="battery_text_size">Daqs tat-Test tal-Batterija</string>
     <string name="app_padding_size">Daqs tal-ikkuttunar</string>
     <string name="follow_accent_colors">Kuluri Aċċent</string>
     <string name="background_opacity">Opaċità fl-isfond</string>
@@ -42,8 +44,10 @@
     <string name="pages_on_home_screen">Numru ta\' paġni</string>
     <string name="enable_home_pager">Ippermetti Home Pager</string>
     <string name="show_time">Uri l-ħin</string>
+    <string name="show_time_format">Format tal-Ħin (AM/PM)</string>
     <string name="show_date">Uri d-data</string>
     <string name="show_battery">Uri batterija</string>
+    <string name="show_battery_icon">Uri l-Ikona tal-Batterija</string>
     <string name="lock_home_apps">Lock Apps</string>
     <string name="extend_home_apps_area">Estendi Żona Klikkjabbli</string>
     <string name="home_alignment_bottom">Home Screen Allinja Qiegħ</string>

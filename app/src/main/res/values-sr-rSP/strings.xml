@@ -22,8 +22,10 @@
     <string name="theme_mode">Theme mode</string>
     <string name="color_mode">Цолор Моде</string>
     <string name="app_language">Interface Language</string>
-    <string name="app_text_size">Text Size</string>
+    <string name="app_text_size">Величина текста апликације</string>
     <string name="clock_text_size">Величина текста на сату</string>
+    <string name="date_text_size">Величина текста датума</string>
+    <string name="battery_text_size">Величина текста батерије</string>
     <string name="app_padding_size">Паддинг Сизе</string>
     <string name="follow_accent_colors">Аццент Цолорс</string>
     <string name="background_opacity">Прозирност позадине</string>
@@ -42,8 +44,10 @@
     <string name="pages_on_home_screen">Број страна</string>
     <string name="enable_home_pager">Омогућите почетни пејџер</string>
     <string name="show_time">Show time</string>
+    <string name="show_time_format">Формат времена (АМ/ПМ)</string>
     <string name="show_date">Show date</string>
     <string name="show_battery">Прикажи батерију</string>
+    <string name="show_battery_icon">Прикажи икону батерије</string>
     <string name="lock_home_apps">Lock Apps</string>
     <string name="extend_home_apps_area">Прошири област на коју се може кликнути</string>
     <string name="home_alignment_bottom">Почетни екран Поравнај дно</string>

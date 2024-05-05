@@ -22,8 +22,10 @@
     <string name="theme_mode">ਥੀਮ ਮੋਡ</string>
     <string name="color_mode">ਰੰਗ ਮੋਡ</string>
     <string name="app_language">ਇੰਟਰਫੇਸ ਭਾਸ਼ਾ</string>
-    <string name="app_text_size">ਟੈਕਸਟ ਦਾ ਆਕਾਰ</string>
+    <string name="app_text_size">ਐਪ ਟੈਕਸਟ ਦਾ ਆਕਾਰ</string>
     <string name="clock_text_size">ਕਲਾਕ ਟੈਕਸਟ ਦਾ ਆਕਾਰ</string>
+    <string name="date_text_size">ਮਿਤੀ ਟੈਕਸਟ ਦਾ ਆਕਾਰ</string>
+    <string name="battery_text_size">ਬੈਟਰੀ ਟੈਕਸਟ ਦਾ ਆਕਾਰ</string>
     <string name="app_padding_size">ਪੈਡਿੰਗ ਆਕਾਰ</string>
     <string name="follow_accent_colors">ਐਕਸੈਂਟ ਰੰਗ</string>
     <string name="background_opacity">ਬੈਕਗ੍ਰਾਊਂਡ ਓਪੇਸਿਟੀ</string>
@@ -42,8 +44,10 @@
     <string name="pages_on_home_screen">ਪੰਨਿਆਂ ਦੀ ਸੰਖਿਆ</string>
     <string name="enable_home_pager">ਹੋਮ ਪੇਜਰ ਨੂੰ ਸਮਰੱਥ ਬਣਾਓ</string>
     <string name="show_time">ਸ਼ੋਅ ਸਮਾ</string>
+    <string name="show_time_format">ਸਮਾਂ ਫਾਰਮੈਟ (AM/PM)</string>
     <string name="show_date">ਮਿਤੀ ਦਿਖਾਓ</string>
     <string name="show_battery">ਬੈਟਰੀ ਦਿਖਾਓ</string>
+    <string name="show_battery_icon">ਬੈਟਰੀ ਪ੍ਰਤੀਕ ਦਿਖਾਓ</string>
     <string name="lock_home_apps">ਐਪਾਂ ਨੂੰ ਲਾਕ ਕਰੋ</string>
     <string name="extend_home_apps_area">ਕਲਿਕ ਕਰਨ ਯੋਗ ਖੇਤਰ ਵਧਾਓ</string>
     <string name="home_alignment_bottom">ਹੋਮ ਸਕ੍ਰੀਨ ਹੇਠਾਂ ਇਕਸਾਰ ਕਰੋ</string>

@@ -22,8 +22,10 @@
     <string name="theme_mode">主题模式</string>
     <string name="color_mode">颜色模式</string>
     <string name="app_language">应用界面语言</string>
-    <string name="app_text_size">文本尺寸</string>
+    <string name="app_text_size">应用程序文本大小</string>
     <string name="clock_text_size">时钟文字大小</string>
+    <string name="date_text_size">日期文字大小</string>
+    <string name="battery_text_size">电池文字大小</string>
     <string name="app_padding_size">填充尺寸</string>
     <string name="follow_accent_colors">强调色</string>
     <string name="background_opacity">背景不透明度</string>
@@ -42,8 +44,10 @@
     <string name="pages_on_home_screen">页数</string>
     <string name="enable_home_pager">启用主页寻呼机</string>
     <string name="show_time">显示时间</string>
+    <string name="show_time_format">时间格式（上午/下午）</string>
     <string name="show_date">显示日期</string>
     <string name="show_battery">显示电池</string>
+    <string name="show_battery_icon">显示电池图标</string>
     <string name="lock_home_apps">锁定应用</string>
     <string name="extend_home_apps_area">扩展可点击区域</string>
     <string name="home_alignment_bottom">主屏幕底部对齐</string>

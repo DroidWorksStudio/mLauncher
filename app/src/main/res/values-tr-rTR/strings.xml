@@ -22,8 +22,10 @@
     <string name="theme_mode">Tema modu</string>
     <string name="color_mode">Renk Modu</string>
     <string name="app_language">Arayüz Dili</string>
-    <string name="app_text_size">Metin Boyutu</string>
+    <string name="app_text_size">Uygulama Metin Boyutu</string>
     <string name="clock_text_size">Saat Metin Boyutu</string>
+    <string name="date_text_size">Tarih Metin Boyutu</string>
+    <string name="battery_text_size">Pil Metin Boyutu</string>
     <string name="app_padding_size">Boşluk Boyutu</string>
     <string name="follow_accent_colors">Vurgu Renkleri</string>
     <string name="background_opacity">Arka Plan Opaklığı</string>
@@ -42,8 +44,10 @@
     <string name="pages_on_home_screen">Sayfa sayısı</string>
     <string name="enable_home_pager">Ana Sayfa Cihazını Etkinleştir</string>
     <string name="show_time">Zamanı göster</string>
+    <string name="show_time_format">Saat Formatı (AM/PM)</string>
     <string name="show_date">Tarih\'i göster</string>
     <string name="show_battery">Pil\'i göster</string>
+    <string name="show_battery_icon">Pil Simgesini Göster</string>
     <string name="lock_home_apps">Uygulamaları Kilitle</string>
     <string name="extend_home_apps_area">Tıklanabilir Alanı Genişlet</string>
     <string name="home_alignment_bottom">Ana Ekranı Alta Hizala</string>

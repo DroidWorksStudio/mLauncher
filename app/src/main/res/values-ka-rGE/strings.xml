@@ -22,8 +22,10 @@
     <string name="theme_mode">თემის რეჟიმი</string>
     <string name="color_mode">ფერის რეჟიმი</string>
     <string name="app_language">ინტერფეისის ენა</string>
-    <string name="app_text_size">Ტექსტის ზომა</string>
+    <string name="app_text_size">აპლიკაციის ტექსტის ზომა</string>
     <string name="clock_text_size">საათის ტექსტის ზომა</string>
+    <string name="date_text_size">თარიღის ტექსტის ზომა</string>
+    <string name="battery_text_size">ბატარეის ტექსტის ზომა</string>
     <string name="app_padding_size">ბალიშის ზომა</string>
     <string name="follow_accent_colors">აქცენტის ფერები</string>
     <string name="background_opacity">ფონის გამჭვირვალობა</string>
@@ -42,8 +44,10 @@
     <string name="pages_on_home_screen">გვერდების რაოდენობა</string>
     <string name="enable_home_pager">ჩართეთ საწყისი პეიჯერი</string>
     <string name="show_time">Შოუს დრო</string>
+    <string name="show_time_format">დროის ფორმატი (AM/PM)</string>
     <string name="show_date">თარიღის ჩვენება</string>
     <string name="show_battery">ბატარეის ჩვენება</string>
+    <string name="show_battery_icon">ბატარეის ხატის ჩვენება</string>
     <string name="lock_home_apps">აპების ჩაკეტვა</string>
     <string name="extend_home_apps_area">გააფართოვეთ დაწკაპუნებადი ფართობი</string>
     <string name="home_alignment_bottom">საწყისი ეკრანის გასწორება ქვედა</string>

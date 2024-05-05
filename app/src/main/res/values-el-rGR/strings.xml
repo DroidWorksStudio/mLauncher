@@ -22,8 +22,10 @@
     <string name="theme_mode">Λειτουργία θέματος</string>
     <string name="color_mode">Λειτουργία χρώματος</string>
     <string name="app_language">Γλώσσα Διεπαφής</string>
-    <string name="app_text_size">Μέγεθος Κειμένου</string>
+    <string name="app_text_size">Μέγεθος κειμένου εφαρμογής</string>
     <string name="clock_text_size">Μέγεθος κειμένου ρολογιού</string>
+    <string name="date_text_size">Μέγεθος κειμένου ημερομηνίας</string>
+    <string name="battery_text_size">Μέγεθος κειμένου μπαταρίας</string>
     <string name="app_padding_size">Μέγεθος padding</string>
     <string name="follow_accent_colors">Χρώματα έμφασης</string>
     <string name="background_opacity">Αδιαφάνεια φόντου</string>
@@ -42,8 +44,10 @@
     <string name="pages_on_home_screen">Αριθμός σελίδων</string>
     <string name="enable_home_pager">Ενεργοποίηση Home Pager</string>
     <string name="show_time">Εμφάνιση ώρας</string>
+    <string name="show_time_format">Μορφή ώρας (ΠΜ/ΜΜ)</string>
     <string name="show_date">Εμφάνιση ημερομηνίας</string>
     <string name="show_battery">Εμφάνιση μπαταρίας</string>
+    <string name="show_battery_icon">Εμφάνιση εικονιδίου μπαταρίας</string>
     <string name="lock_home_apps">Κλείδωμα Εφαρμογών</string>
     <string name="extend_home_apps_area">Επέκταση περιοχής με δυνατότητα κλικ</string>
     <string name="home_alignment_bottom">Ευθυγράμμιση αρχικής οθόνης κάτω</string>

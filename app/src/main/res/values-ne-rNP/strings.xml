@@ -22,8 +22,10 @@
     <string name="theme_mode">थिम मोड</string>
     <string name="color_mode">रङ मोड</string>
     <string name="app_language">इन्टरफेस भाषा</string>
-    <string name="app_text_size">पाठ आकार</string>
+    <string name="app_text_size">एप टेक्स्ट साइज</string>
     <string name="clock_text_size">घडी पाठ आकार</string>
+    <string name="date_text_size">मिति पाठ आकार</string>
+    <string name="battery_text_size">ब्याट्री पाठ आकार</string>
     <string name="app_padding_size">प्याडिङ साइज</string>
     <string name="follow_accent_colors">एक्सेन्ट रङहरू</string>
     <string name="background_opacity">पृष्ठभूमि अस्पष्टता</string>
@@ -42,8 +44,10 @@
     <string name="pages_on_home_screen">पृष्ठहरूको संख्या</string>
     <string name="enable_home_pager">गृह पेजर सक्षम गर्नुहोस्</string>
     <string name="show_time">समय देखाउनुहोस्</string>
+    <string name="show_time_format">समय ढाँचा (AM/PM)</string>
     <string name="show_date">मिति देखाउनुहोस्</string>
     <string name="show_battery">ब्याट्री देखाउनुहोस्</string>
+    <string name="show_battery_icon">ब्याट्री आइकन देखाउनुहोस्</string>
     <string name="lock_home_apps">एपहरू लक गर्नुहोस्</string>
     <string name="extend_home_apps_area">क्लिकयोग्य क्षेत्र विस्तार गर्नुहोस्</string>
     <string name="home_alignment_bottom">गृह स्क्रिन तल पङ्क्तिबद्ध</string>

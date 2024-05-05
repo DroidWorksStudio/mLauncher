@@ -22,8 +22,10 @@
     <string name="theme_mode">തീം മോഡ്</string>
     <string name="color_mode">വർണ്ണ മോഡ്</string>
     <string name="app_language">ഇന്റർഫേസ് ഭാഷ</string>
-    <string name="app_text_size">വാചക വലുപ്പം</string>
+    <string name="app_text_size">ആപ്പ് ടെക്‌സ്‌റ്റ് വലുപ്പം</string>
     <string name="clock_text_size">ക്ലോക്ക് ടെക്സ്റ്റ് വലുപ്പം</string>
+    <string name="date_text_size">തീയതി ടെക്സ്റ്റ് വലിപ്പം</string>
+    <string name="battery_text_size">ബാറ്ററി ടെക്സ്റ്റ് വലുപ്പം</string>
     <string name="app_padding_size">പാഡിംഗ് വലുപ്പം</string>
     <string name="follow_accent_colors">ആക്സന്റ് നിറങ്ങൾ</string>
     <string name="background_opacity">പശ്ചാത്തല അതാര്യത</string>
@@ -42,8 +44,10 @@
     <string name="pages_on_home_screen">പേജുകളുടെ എണ്ണം</string>
     <string name="enable_home_pager">ഹോം പേജർ പ്രവർത്തനക്ഷമമാക്കുക</string>
     <string name="show_time">പ്രദർശന സമയം</string>
+    <string name="show_time_format">സമയ ഫോർമാറ്റ് (AM/PM)</string>
     <string name="show_date">തീയതി കാണിക്കുക</string>
     <string name="show_battery">ബാറ്ററി കാണിക്കുക</string>
+    <string name="show_battery_icon">ബാറ്ററി ഐക്കൺ കാണിക്കുക</string>
     <string name="lock_home_apps">ആപ്പുകൾ ലോക്ക് ചെയ്യുക</string>
     <string name="extend_home_apps_area">ക്ലിക്ക് ചെയ്യാവുന്ന ഏരിയ വിപുലീകരിക്കുക</string>
     <string name="home_alignment_bottom">ഹോം സ്‌ക്രീൻ താഴെ വിന്യസിക്കുക</string>

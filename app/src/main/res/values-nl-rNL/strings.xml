@@ -22,8 +22,10 @@
     <string name="theme_mode">Thema modus</string>
     <string name="color_mode">Kleur mode</string>
     <string name="app_language">Interface taal</string>
-    <string name="app_text_size">Tekstgrootte</string>
+    <string name="app_text_size">App-tekstgrootte</string>
     <string name="clock_text_size">Kloktekstgrootte</string>
+    <string name="date_text_size">Datum tekstgrootte</string>
+    <string name="battery_text_size">Tekstgrootte batterij</string>
     <string name="app_padding_size">Opvullingsgrootte</string>
     <string name="follow_accent_colors">Accentkleuren</string>
     <string name="background_opacity">Dekking van de achtergrond</string>
@@ -42,8 +44,10 @@
     <string name="pages_on_home_screen">Aantal pagina\'s</string>
     <string name="enable_home_pager">Schakel Homepager in</string>
     <string name="show_time">Tijd weergeven</string>
+    <string name="show_time_format">Tijdformaat (AM/PM)</string>
     <string name="show_date">Datum weergeven</string>
     <string name="show_battery">Batterij weergeven</string>
+    <string name="show_battery_icon">Batterijpictogram weergeven</string>
     <string name="lock_home_apps">Apps vergrendelen</string>
     <string name="extend_home_apps_area">Klikbaar gebied uitbreiden</string>
     <string name="home_alignment_bottom">Startscherm onderaan uitlijnen</string>
@@ -139,12 +143,12 @@
     <string name="acra_mail_body">Beschrijf het probleem dat u bent tegengekomen:</string>
     <!-- Search Stings -->
     <string name="search_engine">Zoekmachine</string>
-    <string name="search_google">Googlen</string>
+    <string name="search_google">Google</string>
     <string name="search_yahoo">Yahoo</string>
     <string name="search_duckduckgo">DuckDuckGo</string>
     <string name="search_bing">Bing</string>
-    <string name="search_brave">Moedig</string>
-    <string name="search_swisscow">Zwitserse koeien</string>
+    <string name="search_brave">Brave</string>
+    <string name="search_swisscow">SwissCows</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Alle apps</string>
     <string name="total_screen_time">Totale schermtijd</string>

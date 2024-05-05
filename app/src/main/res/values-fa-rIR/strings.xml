@@ -22,8 +22,10 @@
     <string name="theme_mode">حالت تم</string>
     <string name="color_mode">حالت رنگ</string>
     <string name="app_language">زبان رابط</string>
-    <string name="app_text_size">اندازه متن</string>
+    <string name="app_text_size">اندازه متن برنامه</string>
     <string name="clock_text_size">اندازه متن ساعت</string>
+    <string name="date_text_size">اندازه متن تاریخ</string>
+    <string name="battery_text_size">اندازه متن باتری</string>
     <string name="app_padding_size">اندازه بالشتک</string>
     <string name="follow_accent_colors">رنگ های تاکیدی</string>
     <string name="background_opacity">کدورت پس زمینه</string>
@@ -42,8 +44,10 @@
     <string name="pages_on_home_screen">تعدادی از صفحات</string>
     <string name="enable_home_pager">Home Pager را فعال کنید</string>
     <string name="show_time">نمایش زمان</string>
+    <string name="show_time_format">فرمت زمان (AM/PM)</string>
     <string name="show_date">نمایش تاریخ</string>
     <string name="show_battery">نمایش باتری</string>
+    <string name="show_battery_icon">نمایش نماد باتری</string>
     <string name="lock_home_apps">قفل کردن برنامه ها</string>
     <string name="extend_home_apps_area">گسترش منطقه قابل کلیک</string>
     <string name="home_alignment_bottom">تراز کردن صفحه اصلی در پایین</string>

@@ -22,8 +22,10 @@
     <string name="theme_mode">Teeman tila</string>
     <string name="color_mode">Väritila</string>
     <string name="app_language">Käyttöliittymän Kieli</string>
-    <string name="app_text_size">Tekstin Koko</string>
+    <string name="app_text_size">Sovelluksen tekstin koko</string>
     <string name="clock_text_size">Kellon tekstin koko</string>
+    <string name="date_text_size">Päivämäärän tekstin koko</string>
+    <string name="battery_text_size">Akun tekstin koko</string>
     <string name="app_padding_size">Pehmusteen koko</string>
     <string name="follow_accent_colors">Korostusvärit</string>
     <string name="background_opacity">Taustan läpinäkymättömyys</string>
@@ -42,8 +44,10 @@
     <string name="pages_on_home_screen">Sivujen määrä</string>
     <string name="enable_home_pager">Ota Home Pager käyttöön</string>
     <string name="show_time">Näytä aika</string>
+    <string name="show_time_format">Aikamuoto (AM/PM)</string>
     <string name="show_date">Näytä päivämäärä</string>
     <string name="show_battery">Näytä akku</string>
+    <string name="show_battery_icon">Näytä akkukuvake</string>
     <string name="lock_home_apps">Lukitse Sovellukset</string>
     <string name="extend_home_apps_area">Laajenna napsautettavaa aluetta</string>
     <string name="home_alignment_bottom">Aloitusnäyttö Tasaa alareuna</string>

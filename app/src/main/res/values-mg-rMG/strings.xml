@@ -22,8 +22,10 @@
     <string name="theme_mode">Fomba lohahevitra</string>
     <string name="color_mode">Fomba loko</string>
     <string name="app_language">Fiteny Interface</string>
-    <string name="app_text_size">Haben\'ny soratra</string>
+    <string name="app_text_size">Haben\'ny App Text</string>
     <string name="clock_text_size">Haben\'ny famantaranandro</string>
+    <string name="date_text_size">Daty haben\'ny soratra</string>
+    <string name="battery_text_size">Haben\'ny soratra bateria</string>
     <string name="app_padding_size">Haben\'ny padding</string>
     <string name="follow_accent_colors">Loko Accent</string>
     <string name="background_opacity">Opacity ambadika</string>
@@ -42,8 +44,10 @@
     <string name="pages_on_home_screen">Isan\'ny pejy</string>
     <string name="enable_home_pager">Alefaso ny Home Pager</string>
     <string name="show_time">Fotoana fampisehoana</string>
+    <string name="show_time_format">Fomba ora (AM/PM)</string>
     <string name="show_date">Asehoy ny daty</string>
     <string name="show_battery">Asehoy ny bateria</string>
+    <string name="show_battery_icon">Asehoy ny kisary bateria</string>
     <string name="lock_home_apps">Lock Apps</string>
     <string name="extend_home_apps_area">Hanitatra ny faritra azo kitihina</string>
     <string name="home_alignment_bottom">Efijery an-trano Align Bottom</string>

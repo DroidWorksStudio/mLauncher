@@ -22,8 +22,10 @@
     <string name="theme_mode">Theme mode</string>
     <string name="color_mode">Kleurmodus</string>
     <string name="app_language">Interface Language</string>
-    <string name="app_text_size">Text Size</string>
+    <string name="app_text_size">App teks grootte</string>
     <string name="clock_text_size">Klok teksgrootte</string>
+    <string name="date_text_size">Datum Teks Grootte</string>
+    <string name="battery_text_size">Battery teksgrootte</string>
     <string name="app_padding_size">Opvulling Grootte</string>
     <string name="follow_accent_colors">Aksentkleure</string>
     <string name="background_opacity">Agtergrond ondeursigtigheid</string>
@@ -42,8 +44,10 @@
     <string name="pages_on_home_screen">Aantal bladsye</string>
     <string name="enable_home_pager">Aktiveer Home Pager</string>
     <string name="show_time">Show time</string>
+    <string name="show_time_format">Tydformaat (AM/PM)</string>
     <string name="show_date">Show date</string>
     <string name="show_battery">Wys battery</string>
+    <string name="show_battery_icon">Wys battery-ikoon</string>
     <string name="lock_home_apps">Lock Apps</string>
     <string name="extend_home_apps_area">Brei klikbare area uit</string>
     <string name="home_alignment_bottom">Tuisskerm Belyn onder</string>

@@ -22,8 +22,10 @@
     <string name="theme_mode">Temavimo režimas</string>
     <string name="color_mode">Spalvų režimas</string>
     <string name="app_language">Sąsajos kalba</string>
-    <string name="app_text_size">Tesksto dydis</string>
+    <string name="app_text_size">Programos teksto dydis</string>
     <string name="clock_text_size">Laikrodžio teksto dydis</string>
+    <string name="date_text_size">Datos teksto dydis</string>
+    <string name="battery_text_size">Baterijos teksto dydis</string>
     <string name="app_padding_size">Užpildymo Dydis</string>
     <string name="follow_accent_colors">Akcentinės spalvos</string>
     <string name="background_opacity">Fono permatomumas</string>
@@ -42,8 +44,10 @@
     <string name="pages_on_home_screen">Puslapių skaičius</string>
     <string name="enable_home_pager">Įjungti pradžios puslapį</string>
     <string name="show_time">Rodyti laiką</string>
+    <string name="show_time_format">Laiko formatas (AM/PM)</string>
     <string name="show_date">Rodyti datą</string>
     <string name="show_battery">Rodyti bateriją</string>
+    <string name="show_battery_icon">Rodyti akumuliatoriaus piktogramą</string>
     <string name="lock_home_apps">Užrakinti programas</string>
     <string name="extend_home_apps_area">Išplėsti spustelėjamą sritį</string>
     <string name="home_alignment_bottom">Pradinio ekrano lygiavimas apačioje</string>

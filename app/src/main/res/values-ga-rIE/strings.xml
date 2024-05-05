@@ -22,8 +22,10 @@
     <string name="theme_mode">Modh téama</string>
     <string name="color_mode">Mód Dath</string>
     <string name="app_language">Teanga Chomhéadain</string>
-    <string name="app_text_size">Méid an Téacs</string>
+    <string name="app_text_size">Méid Téacs App</string>
     <string name="clock_text_size">Méid Téacs Clog</string>
+    <string name="date_text_size">Dáta Méid an Téacs</string>
+    <string name="battery_text_size">Méid Téacs Battery</string>
     <string name="app_padding_size">Méid Stuála</string>
     <string name="follow_accent_colors">Dathanna Accent</string>
     <string name="background_opacity">Teimhneacht Cúlra</string>
@@ -42,8 +44,10 @@
     <string name="pages_on_home_screen">Líon na leathanach</string>
     <string name="enable_home_pager">Cumasaigh Leathanachire Baile</string>
     <string name="show_time">Am seó</string>
+    <string name="show_time_format">Formáid Ama (AM/PM)</string>
     <string name="show_date">Taispeáin dáta</string>
     <string name="show_battery">Taispeáin ceallraí</string>
+    <string name="show_battery_icon">Taispeáin Icon Battery</string>
     <string name="lock_home_apps">Glasáil Apps</string>
     <string name="extend_home_apps_area">Leathnaigh an Limistéar Inchliceáilte</string>
     <string name="home_alignment_bottom">Scáileán Baile Ailínigh Bun</string>

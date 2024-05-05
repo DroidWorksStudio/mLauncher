@@ -22,8 +22,10 @@
     <string name="theme_mode">Theme mode</string>
     <string name="color_mode">Color Modus</string>
     <string name="app_language">Interface Language</string>
-    <string name="app_text_size">Text Size</string>
+    <string name="app_text_size">App Text Location</string>
     <string name="clock_text_size">Horologium Text Size</string>
+    <string name="date_text_size">Date Text Size</string>
+    <string name="battery_text_size">Pugna Text Size</string>
     <string name="app_padding_size">Nullam Location</string>
     <string name="follow_accent_colors">Accent Colores</string>
     <string name="background_opacity">Background Opacity</string>
@@ -42,8 +44,10 @@
     <string name="pages_on_home_screen">Numerus paginarum</string>
     <string name="enable_home_pager">Admitte Home Pager</string>
     <string name="show_time">Ostende tempus</string>
+    <string name="show_time_format">Tempus Forma (AM/PM)</string>
     <string name="show_date">Ostende date</string>
     <string name="show_battery">Ostende altilium</string>
+    <string name="show_battery_icon">Monstrare Pugna Icon</string>
     <string name="lock_home_apps">cincinno Apps</string>
     <string name="extend_home_apps_area">Praetende Clickable Area</string>
     <string name="home_alignment_bottom">Domum Screen Conlineare Solum</string>

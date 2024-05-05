@@ -22,8 +22,10 @@
     <string name="theme_mode">Modaliteti i temës</string>
     <string name="color_mode">Modaliteti i ngjyrave</string>
     <string name="app_language">Gjuha e ndërfaqes</string>
-    <string name="app_text_size">Madhësia e tekstit</string>
+    <string name="app_text_size">Madhësia e tekstit të aplikacionit</string>
     <string name="clock_text_size">Madhësia e tekstit të orës</string>
+    <string name="date_text_size">Madhësia e tekstit të datës</string>
+    <string name="battery_text_size">Madhësia e tekstit të baterisë</string>
     <string name="app_padding_size">Madhësia e mbushjes</string>
     <string name="follow_accent_colors">Ngjyrat e theksit</string>
     <string name="background_opacity">Opaciteti i sfondit</string>
@@ -42,8 +44,10 @@
     <string name="pages_on_home_screen">Numri i faqeve</string>
     <string name="enable_home_pager">Aktivizo Home Pager</string>
     <string name="show_time">Koha e shfaqjes</string>
+    <string name="show_time_format">Formati i orës (PAM/PM)</string>
     <string name="show_date">Shfaq datën</string>
     <string name="show_battery">Shfaq baterinë</string>
+    <string name="show_battery_icon">Shfaq ikonën e baterisë</string>
     <string name="lock_home_apps">Blloko aplikacionet</string>
     <string name="extend_home_apps_area">Zgjero zonën e klikueshme</string>
     <string name="home_alignment_bottom">Rreshtimi i ekranit bazë në fund</string>

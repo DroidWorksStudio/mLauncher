@@ -22,8 +22,10 @@
     <string name="theme_mode">Mode tema</string>
     <string name="color_mode">Modus Warna</string>
     <string name="app_language">Bahasa Antarmuka</string>
-    <string name="app_text_size">Ukuran Teks</string>
+    <string name="app_text_size">Ukuran Teks Aplikasi</string>
     <string name="clock_text_size">Ukuran Teks Jam</string>
+    <string name="date_text_size">Ukuran Teks Tanggal</string>
+    <string name="battery_text_size">Ukuran Teks Baterai</string>
     <string name="app_padding_size">Ukuran Bantalan</string>
     <string name="follow_accent_colors">Warna Aksen</string>
     <string name="background_opacity">Opasitas Latar Belakang</string>
@@ -42,8 +44,10 @@
     <string name="pages_on_home_screen">Jumlah halaman</string>
     <string name="enable_home_pager">Aktifkan Halaman Beranda</string>
     <string name="show_time">Waktu pertunjukan</string>
+    <string name="show_time_format">Format Waktu (AM/PM)</string>
     <string name="show_date">Tanggal pertunjukan</string>
     <string name="show_battery">Tampilkan baterai</string>
+    <string name="show_battery_icon">Tampilkan Ikon Baterai</string>
     <string name="lock_home_apps">Kunci Aplikasi</string>
     <string name="extend_home_apps_area">Perluas Area yang Dapat Diklik</string>
     <string name="home_alignment_bottom">Layar Beranda Sejajarkan Bawah</string>

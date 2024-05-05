@@ -22,8 +22,10 @@
     <string name="theme_mode">Mod temă</string>
     <string name="color_mode">Modul color</string>
     <string name="app_language">Limba interfeței</string>
-    <string name="app_text_size">Dimensiune text</string>
+    <string name="app_text_size">Dimensiunea textului aplicației</string>
     <string name="clock_text_size">Dimensiunea textului ceasului</string>
+    <string name="date_text_size">Dimensiunea textului datei</string>
+    <string name="battery_text_size">Dimensiunea textului bateriei</string>
     <string name="app_padding_size">Dimensiunea căptușelii</string>
     <string name="follow_accent_colors">Culori de accent</string>
     <string name="background_opacity">Opacitatea fundalului</string>
@@ -42,8 +44,10 @@
     <string name="pages_on_home_screen">Număr de pagini</string>
     <string name="enable_home_pager">Activați pagina principală</string>
     <string name="show_time">Arată timpul</string>
+    <string name="show_time_format">Format oră (AM/PM)</string>
     <string name="show_date">Arată data</string>
     <string name="show_battery">Arată bateria</string>
+    <string name="show_battery_icon">Afișați pictograma bateriei</string>
     <string name="lock_home_apps">Blocare aplicații</string>
     <string name="extend_home_apps_area">Extindeți zona de clic</string>
     <string name="home_alignment_bottom">Ecranul de pornire Aliniați jos</string>
