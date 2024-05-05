@@ -137,6 +137,14 @@
     <string name="acra_send_report">Siųsti ataskaitą</string>
     <string name="acra_dont_send">Nesiųsti</string>
     <string name="acra_mail_body">Aprašykite problemą, su kuria susidūrėte:</string>
+    <!-- Search Stings -->
+    <string name="search_engine">Paieškos variklis</string>
+    <string name="search_google">Google</string>
+    <string name="search_yahoo">Yahoo</string>
+    <string name="search_duckduckgo">DuckDuckGo</string>
+    <string name="search_bing">Bing</string>
+    <string name="search_brave">Drąsus</string>
+    <string name="search_swisscow">Šveicarijos karvės</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Visos programėlės</string>
     <string name="total_screen_time">Bendras ekrano laikas</string>
