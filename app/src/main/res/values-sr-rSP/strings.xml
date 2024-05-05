@@ -137,6 +137,14 @@
     <string name="acra_send_report">Пошаљи извештај</string>
     <string name="acra_dont_send">Не шаљи</string>
     <string name="acra_mail_body">Опишите проблем на који сте наишли:</string>
+    <!-- Search Stings -->
+    <string name="search_engine">Претраживач</string>
+    <string name="search_google">Гоогле</string>
+    <string name="search_yahoo">Иахоо</string>
+    <string name="search_duckduckgo">ДуцкДуцкГо</string>
+    <string name="search_bing">Бинг</string>
+    <string name="search_brave">Храбро</string>
+    <string name="search_swisscow">СвиссЦовс</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>
     <string name="total_screen_time">Укупно време екрана</string>
