@@ -137,6 +137,14 @@
     <string name="acra_send_report">إرسال تقرير</string>
     <string name="acra_dont_send">لا ترسل</string>
     <string name="acra_mail_body">يرجى وصف المشكلة التي واجهتها:</string>
+    <!-- Search Stings -->
+    <string name="search_engine">محرك البحث</string>
+    <string name="search_google">جوجل</string>
+    <string name="search_yahoo">ياهو</string>
+    <string name="search_duckduckgo">دك دك جو</string>
+    <string name="search_bing">بنج</string>
+    <string name="search_brave">شجاع</string>
+    <string name="search_swisscow">الأبقار السويسرية</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">جميع التطبيقات</string>
     <string name="total_screen_time">إجمالي وقت الشاشة</string>
