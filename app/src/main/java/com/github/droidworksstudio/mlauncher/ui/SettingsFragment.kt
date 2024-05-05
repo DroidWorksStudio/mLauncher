@@ -663,6 +663,17 @@ class SettingsFragment : Fragment() {
                 fontSize = titleFs,
                 items = arrayOf(
                     { open, onChange ->
+                        SettingsItem(
+                            title = stringResource(R.string.search_engine),
+                            fontSize = iconFs,
+                            open = open,
+                            onChange = onChange,
+                            currentSelection = remember { mutableStateOf(prefs.searchEngines) },
+                            values = Constants.SearchEngines.values(),
+                            onSelect = { j -> setEngine(j) }
+                        )
+                    },
+                    { open, onChange ->
                         SettingsSliderItem(
                             title = stringResource(R.string.settings_text_size),
                             fontSize = iconFs,
@@ -907,8 +918,12 @@ class SettingsFragment : Fragment() {
     }
 
     private fun setLang(langInt: Constants.Language) {
-
         prefs.language = langInt
+        requireActivity().recreate()
+    }
+
+    private fun setEngine(engineInt: Constants.SearchEngines) {
+        prefs.searchEngines = engineInt
         requireActivity().recreate()
     }
 

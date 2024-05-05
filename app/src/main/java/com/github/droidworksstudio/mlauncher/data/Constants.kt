@@ -404,6 +404,27 @@ object Constants {
         }
     }
 
+    enum class SearchEngines : EnumOption {
+        Google,
+        Yahoo,
+        DuckDuckGo,
+        Bing,
+        Brave,
+        SwissCow;
+
+        @Composable
+        override fun string(): String {
+            return when (this) {
+                Google -> stringResource(R.string.search_google)
+                Yahoo -> stringResource(R.string.search_yahoo)
+                DuckDuckGo -> stringResource(R.string.search_duckduckgo)
+                Bing -> stringResource(R.string.search_bing)
+                Brave -> stringResource(R.string.search_brave)
+                SwissCow -> stringResource(R.string.search_swisscow)
+            }
+        }
+    }
+
     enum class Theme : EnumOption {
         System,
         Dark,
@@ -461,11 +482,12 @@ object Constants {
         }
     }
 
-    const val URL_DUCK_SEARCH = "https://duck.co/?q="
+    const val URL_DUCK_SEARCH = "https://duckduckgo.com/?q="
     const val URL_GOOGLE_SEARCH = "https://google.com/search?q="
     const val URL_YAHOO_SEARCH = "https://search.yahoo.com/search?p="
     const val URL_BING_SEARCH = "https://bing.com/search?q="
     const val URL_BRAVE_SEARCH = "https://search.brave.com/search?q="
+    const val URL_SWISSCOW_SEARCH = "https://swisscows.com/web?query="
     const val URL_GOOGLE_PLAY_STORE = "https://play.google.com/store/search?c=apps&q"
     const val APP_GOOGLE_PLAY_STORE = "market://search?c=apps&q"
 }

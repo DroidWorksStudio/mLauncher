@@ -50,6 +50,7 @@ private const val CLICK_DATE_ACTION = "CLICK_DATE_ACTION"
 private const val DOUBLE_TAP_ACTION = "DOUBLE_TAP_ACTION"
 private const val HIDDEN_APPS = "HIDDEN_APPS"
 private const val HIDDEN_APPS_DISPLAYED = "HIDDEN_APPS_DISPLAYED"
+private const val SEARCH_ENGINE = "SEARCH_ENGINE"
 
 private const val APP_NAME = "APP_NAME"
 private const val APP_PACKAGE = "APP_PACKAGE"
@@ -355,6 +356,21 @@ class Prefs(val context: Context) {
             }
         }
         set(value) = prefs.edit().putString(APP_LANGUAGE, value.name).apply()
+
+    var searchEngines: Constants.SearchEngines
+        get() {
+            return try {
+                Constants.SearchEngines.valueOf(
+                    prefs.getString(
+                        SEARCH_ENGINE,
+                        Constants.SearchEngines.Google.name
+                    ).toString()
+                )
+            } catch (_: Exception) {
+                Constants.SearchEngines.Google
+            }
+        }
+        set(value) = prefs.edit().putString(SEARCH_ENGINE, value.name).apply()
 
     var hiddenApps: MutableSet<String>
         get() = prefs.getStringSet(HIDDEN_APPS, mutableSetOf()) as MutableSet<String>

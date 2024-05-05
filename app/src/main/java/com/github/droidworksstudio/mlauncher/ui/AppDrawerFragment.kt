@@ -36,11 +36,10 @@ import com.github.droidworksstudio.mlauncher.databinding.FragmentAppDrawerBindin
 import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.isSystemApp
 import com.github.droidworksstudio.mlauncher.helper.Colors
 import com.github.droidworksstudio.mlauncher.helper.getHexFontColor
-import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
 import com.github.droidworksstudio.mlauncher.helper.hideKeyboard
 import com.github.droidworksstudio.mlauncher.helper.openAppInfo
 import com.github.droidworksstudio.mlauncher.helper.openSearch
-import com.github.droidworksstudio.mlauncher.helper.openUrl
+import com.github.droidworksstudio.mlauncher.helper.searchCustomSearchEngine
 import com.github.droidworksstudio.mlauncher.helper.searchOnPlayStore
 import com.github.droidworksstudio.mlauncher.helper.showToastShort
 
@@ -69,8 +68,8 @@ class AppDrawerFragment : Fragment() {
     @SuppressLint("RtlHardcoded")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val hex = getHexForOpacity(requireContext(), prefs)
-        binding.mainLayout.setBackgroundColor(hex)
+
+        binding.mainLayout.setBackgroundColor(colors.background(requireContext(), prefs))
 
         val flagString = arguments?.getString("flag", AppDrawerFlag.LaunchApp.toString()) ?: AppDrawerFlag.LaunchApp.toString()
         val flag = AppDrawerFlag.valueOf(flagString)
@@ -218,26 +217,10 @@ class AppDrawerFragment : Fragment() {
                 var searchQuery = query
 
                 if (!searchQuery.isNullOrEmpty()) {
-                    val searchUrl = when {
-                        searchQuery.startsWith("!ddg ") -> {
-                            searchQuery = query?.substringAfter("!ddg ")
-                            Constants.URL_DUCK_SEARCH
-                        }
-                        searchQuery.startsWith("!g ") -> {
-                            searchQuery = query?.substringAfter("!g ")
-                            Constants.URL_GOOGLE_SEARCH
-                        }
-                        searchQuery.startsWith("!y ") -> {
-                            searchQuery = query?.substringAfter("!y ")
-                            Constants.URL_YAHOO_SEARCH
-                        }
-                        searchQuery.startsWith("!brv ") -> {
-                            searchQuery = query?.substringAfter("!brv ")
-                            Constants.URL_BRAVE_SEARCH
-                        }
-                        searchQuery.startsWith("!bg ") -> {
-                            searchQuery = query?.substringAfter("!bg ")
-                            Constants.URL_BING_SEARCH
+                    when {
+                        searchQuery.startsWith("!") -> {
+                            searchQuery = query?.substringAfter("!")
+                            requireContext().searchCustomSearchEngine(searchQuery, prefs)
                         }
                         else -> {
                             // Handle unsupported search engines or invalid queries
@@ -249,9 +232,6 @@ class AppDrawerFragment : Fragment() {
                             return true // Exit the function
                         }
                     }
-                    val encodedQuery = Uri.encode(searchQuery)
-                    val fullUrl = "$searchUrl$encodedQuery"
-                    requireContext().openUrl(fullUrl)
                 }
                 return true
             }
@@ -277,8 +257,7 @@ class AppDrawerFragment : Fragment() {
     @RequiresApi(Build.VERSION_CODES.Q)
     override fun onResume() {
         super.onResume()
-        val hex = getHexForOpacity(requireContext(), prefs)
-        binding.mainLayout.setBackgroundColor(hex)
+        binding.mainLayout.setBackgroundColor(colors.background(requireContext(), prefs))
     }
 
     private fun initViewModel(flag: AppDrawerFlag, viewModel: MainViewModel, appAdapter: AppDrawerAdapter) {
