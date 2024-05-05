@@ -137,6 +137,14 @@
     <string name="acra_send_report">Invia segnalazione</string>
     <string name="acra_dont_send">Non inviare</string>
     <string name="acra_mail_body">Descrivi il problema riscontrato:</string>
+    <!-- Search Stings -->
+    <string name="search_engine">Motore di ricerca</string>
+    <string name="search_google">Google</string>
+    <string name="search_yahoo">Yahoo</string>
+    <string name="search_duckduckgo">DuckDuckGo</string>
+    <string name="search_bing">Bing</string>
+    <string name="search_brave">Coraggioso</string>
+    <string name="search_swisscow">Mucche svizzere</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Tutte le app</string>
     <string name="total_screen_time">Tempo totale sullo schermo</string>
