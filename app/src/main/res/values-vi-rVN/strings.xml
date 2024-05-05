@@ -22,8 +22,10 @@
     <string name="theme_mode">Theme mode</string>
     <string name="color_mode">Chế độ màu</string>
     <string name="app_language">Interface Language</string>
-    <string name="app_text_size">Text Size</string>
+    <string name="app_text_size">Kích thước văn bản ứng dụng</string>
     <string name="clock_text_size">Kích thước văn bản đồng hồ</string>
+    <string name="date_text_size">Kích thước văn bản ngày</string>
+    <string name="battery_text_size">Kích thước văn bản pin</string>
     <string name="app_padding_size">Kích thước đệm</string>
     <string name="follow_accent_colors">Màu nhấn</string>
     <string name="background_opacity">Độ mờ nền</string>
@@ -42,8 +44,10 @@
     <string name="pages_on_home_screen">Số trang</string>
     <string name="enable_home_pager">Kích hoạt tính năng nhắn tin trang chủ</string>
     <string name="show_time">Show time</string>
+    <string name="show_time_format">Định dạng thời gian (AM/PM)</string>
     <string name="show_date">Show date</string>
     <string name="show_battery">Hiển thị pin</string>
+    <string name="show_battery_icon">Hiển thị biểu tượng pin</string>
     <string name="lock_home_apps">Lock Apps</string>
     <string name="extend_home_apps_area">Mở rộng khu vực có thể nhấp</string>
     <string name="home_alignment_bottom">Màn hình chính Căn chỉnh dưới cùng</string>
