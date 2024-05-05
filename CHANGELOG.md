@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Implemented Enhancements:
 
+- Added the ability to hide times AM/PM. - ([48ed53e](https://github.com/DroidWorksStudio/mLauncher/commit/48ed53e2658cc7c974d1bb0f0d3dc62a4f0f48f4))
 - Added the ability to hide battery icon. - ([e177b18](https://github.com/DroidWorksStudio/mLauncher/commit/e177b1845e2fa10b7641286ac299ffa0e23fdd69))
 
 ### Bug Fixes:
