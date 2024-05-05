@@ -137,6 +137,14 @@
     <string name="acra_send_report">رپورٽ موڪليو</string>
     <string name="acra_dont_send">نه موڪليو</string>
     <string name="acra_mail_body">مھرباني ڪري بيان ڪريو ته توھان جو مسئلو آھي:</string>
+    <!-- Search Stings -->
+    <string name="search_engine">سرچ انجڻ</string>
+    <string name="search_google">گوگل</string>
+    <string name="search_yahoo">ياهو</string>
+    <string name="search_duckduckgo">DuckDuckGo</string>
+    <string name="search_bing">بنگ</string>
+    <string name="search_brave">بهادر</string>
+    <string name="search_swisscow">سوئس ڪائون</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">سڀ ائپس</string>
     <string name="total_screen_time">ڪل اسڪرين وقت</string>
