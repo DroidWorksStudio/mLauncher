@@ -145,9 +145,14 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
         binding.clock.textSize = prefs.clockSize.toFloat()
         binding.date.textSize = prefs.textSizeLauncher.toFloat()
-        binding.batteryIcon.textSize = prefs.textSizeLauncher.toFloat() / 1.5f
         binding.batteryText.textSize = prefs.textSizeLauncher.toFloat() / 1.5f
         binding.homeScreenPager.textSize = prefs.textSizeLauncher.toFloat()
+
+        if(prefs.showBatteryIcon) {
+            binding.batteryIcon.visibility = View.VISIBLE
+            binding.batteryIcon.typeface = typeface
+            binding.batteryIcon.textSize = prefs.textSizeLauncher.toFloat() / 1.5f
+        }
 
         if (prefs.useCustomIconFont) {
             binding.clock.typeface = typeface
@@ -157,7 +162,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             binding.setDefaultLauncher.typeface = typeface
         }
         binding.homeScreenPager.typeface = typeface
-        binding.batteryIcon.typeface = typeface
         binding.mainLayout.setBackgroundColor(colors.background(requireContext(), prefs))
         if (prefs.followAccentColors) {
             val fontColor = getHexFontColor(requireContext(), prefs)

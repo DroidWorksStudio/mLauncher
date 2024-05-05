@@ -431,6 +431,16 @@ class SettingsFragment : Fragment() {
                         ) { toggleShowBattery() }
                     },
                     { _, onChange ->
+                        if(prefs.showBattery) {
+                            SettingsToggle(
+                                title = stringResource(R.string.show_battery_icon),
+                                fontSize = iconFs,
+                                onChange = onChange,
+                                state = remember { mutableStateOf(prefs.showBatteryIcon) }
+                            ) { toggleShowBatteryIcon() }
+                        }
+                    },
+                    { _, onChange ->
                         SettingsToggle(
                             title = stringResource(R.string.lock_home_apps),
                             fontSize = iconFs,
@@ -799,6 +809,10 @@ class SettingsFragment : Fragment() {
 
     private fun toggleShowBattery() {
         prefs.showBattery = !prefs.showBattery
+    }
+
+    private fun toggleShowBatteryIcon() {
+        prefs.showBatteryIcon = !prefs.showBatteryIcon
     }
 
     private fun toggleHomeLocked() {

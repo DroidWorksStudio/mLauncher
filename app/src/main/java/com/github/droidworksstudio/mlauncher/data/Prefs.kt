@@ -31,6 +31,7 @@ private const val DRAWER_ALIGNMENT = "DRAWER_ALIGNMENT"
 private const val TIME_ALIGNMENT = "TIME_ALIGNMENT"
 private const val STATUS_BAR = "STATUS_BAR"
 private const val SHOW_BATTERY = "SHOW_BATTERY"
+private const val SHOW_BATTERY_ICON = "SHOW_BATTERY_ICON"
 private const val SHOW_DATE = "SHOW_DATE"
 private const val HOME_LOCKED = "HOME_LOCKED"
 private const val SETTINGS_LOCKED = "SETTINGS_LOCKED"
@@ -225,6 +226,10 @@ class Prefs(val context: Context) {
     var showBattery: Boolean
         get() = prefs.getBoolean(SHOW_BATTERY, true)
         set(value) = prefs.edit().putBoolean(SHOW_BATTERY, value).apply()
+
+    var showBatteryIcon: Boolean
+        get() = prefs.getBoolean(SHOW_BATTERY_ICON, true)
+        set(value) = prefs.edit().putBoolean(SHOW_BATTERY_ICON, value).apply()
 
     var homeLocked: Boolean
         get() = prefs.getBoolean(HOME_LOCKED, false)
