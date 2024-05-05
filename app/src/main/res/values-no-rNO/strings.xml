@@ -22,8 +22,10 @@
     <string name="theme_mode">Tema modus</string>
     <string name="color_mode">Fargemodus</string>
     <string name="app_language">Grensesnitt språk</string>
-    <string name="app_text_size">Tekst størrelse</string>
+    <string name="app_text_size">App tekststørrelse</string>
     <string name="clock_text_size">Klokketekststørrelse</string>
+    <string name="date_text_size">Dato Tekststørrelse</string>
+    <string name="battery_text_size">Batteritekststørrelse</string>
     <string name="app_padding_size">Polstring Størrelse</string>
     <string name="follow_accent_colors">Aksentfarger</string>
     <string name="background_opacity">Bakgrunns gjennomsiktighet</string>
@@ -42,8 +44,10 @@
     <string name="pages_on_home_screen">Antall sider</string>
     <string name="enable_home_pager">Aktiver Hjemmesøker</string>
     <string name="show_time">Vis tid</string>
+    <string name="show_time_format">Tidsformat (AM/PM)</string>
     <string name="show_date">Vis dato</string>
     <string name="show_battery">Vis batteri</string>
+    <string name="show_battery_icon">Vis batteriikon</string>
     <string name="lock_home_apps">Lås apper</string>
     <string name="extend_home_apps_area">Utvid klikkbart område</string>
     <string name="home_alignment_bottom">Hjemmeskjerm Juster bunn</string>
