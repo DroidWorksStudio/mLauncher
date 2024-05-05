@@ -16,7 +16,7 @@ Gevorkt vanaf <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. M
         - Toon recent geopende apps
         - Open het meldingenpaneel
         - Snelle instellingen openen
-        - Uitschakelopties tonen
+        - Machtsdialoog
         - Maak een screenshot
         - Schakel gebaar uit
 - Je kunt de klok ook onafhankelijk van de thuisapps positioneren.
