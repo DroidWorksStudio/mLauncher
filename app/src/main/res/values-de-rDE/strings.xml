@@ -22,8 +22,10 @@
     <string name="theme_mode">Theme-Modus</string>
     <string name="color_mode">Farbmodus</string>
     <string name="app_language">Schnittstellensprache</string>
-    <string name="app_text_size">Textgröße</string>
+    <string name="app_text_size">App-Textgröße</string>
     <string name="clock_text_size">Uhrtextgröße</string>
+    <string name="date_text_size">Datumstextgröße</string>
+    <string name="battery_text_size">Batterietextgröße</string>
     <string name="app_padding_size">Polstergröße</string>
     <string name="follow_accent_colors">Akzentfarben</string>
     <string name="background_opacity">Deckkraft des Hintergrunds</string>
@@ -42,8 +44,10 @@
     <string name="pages_on_home_screen">Seitenzahl</string>
     <string name="enable_home_pager">Aktivieren Sie den Home Pager</string>
     <string name="show_time">Zeit anzeigen</string>
+    <string name="show_time_format">Zeitformat (AM/PM)</string>
     <string name="show_date">Datum anzeigen</string>
     <string name="show_battery">Akku anzeigen</string>
+    <string name="show_battery_icon">Batteriesymbol anzeigen</string>
     <string name="lock_home_apps">Apps sperren</string>
     <string name="extend_home_apps_area">Klickbaren Bereich erweitern</string>
     <string name="home_alignment_bottom">Startbildschirm unten ausrichten</string>
