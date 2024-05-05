@@ -131,23 +131,29 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
         val timezone = prefs.language.timezone()
         val is24HourFormat = DateFormat.is24HourFormat(requireContext())
-        val best12 = DateFormat.getBestDateTimePattern(timezone, "hhmma")
+        val best12 = DateFormat.getBestDateTimePattern(timezone, if (prefs.showTimeFormat) "hhmma" else "hhmm").let {
+            if (!prefs.showTimeFormat) it.removeSuffix(" a") else it
+        }
+        Log.d("currentDateTime", best12)
         val best24 = DateFormat.getBestDateTimePattern(timezone, "HHmm")
         val timePattern = if (is24HourFormat) best24 else best12
         binding.clock.format12Hour = timePattern
         binding.clock.format24Hour = timePattern
 
-        val best12Date = DateFormat.getBestDateTimePattern(timezone, "eeeddMMM")
-        val best24Date = DateFormat.getBestDateTimePattern(timezone, "eeeddMMM")
-
-        binding.date.format12Hour = best12Date
-        binding.date.format24Hour = best24Date
+        val datePattern = DateFormat.getBestDateTimePattern(timezone, "eeeddMMM")
+        binding.date.format12Hour = datePattern
+        binding.date.format24Hour = datePattern
 
         binding.clock.textSize = prefs.clockSize.toFloat()
         binding.date.textSize = prefs.textSizeLauncher.toFloat()
-        binding.batteryIcon.textSize = prefs.textSizeLauncher.toFloat() / 1.5f
         binding.batteryText.textSize = prefs.textSizeLauncher.toFloat() / 1.5f
         binding.homeScreenPager.textSize = prefs.textSizeLauncher.toFloat()
+
+        if(prefs.showBatteryIcon) {
+            binding.batteryIcon.visibility = View.VISIBLE
+            binding.batteryIcon.typeface = typeface
+            binding.batteryIcon.textSize = prefs.textSizeLauncher.toFloat() / 1.5f
+        }
 
         if (prefs.useCustomIconFont) {
             binding.clock.typeface = typeface
@@ -157,7 +163,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             binding.setDefaultLauncher.typeface = typeface
         }
         binding.homeScreenPager.typeface = typeface
-        binding.batteryIcon.typeface = typeface
         binding.mainLayout.setBackgroundColor(colors.background(requireContext(), prefs))
         if (prefs.followAccentColors) {
             val fontColor = getHexFontColor(requireContext(), prefs)

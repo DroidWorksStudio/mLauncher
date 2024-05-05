@@ -415,6 +415,16 @@ class SettingsFragment : Fragment() {
                         ) { toggleShowTime() }
                     },
                     { _, onChange ->
+                        if (prefs.showTime) {
+                            SettingsToggle(
+                                title = stringResource(R.string.show_time_format),
+                                fontSize = iconFs,
+                                onChange = onChange,
+                                state = remember { mutableStateOf(prefs.showTimeFormat) }
+                            ) { toggleShowTimeFormat() }
+                        }
+                    },
+                    { _, onChange ->
                         SettingsToggle(
                             title = stringResource(R.string.show_date),
                             fontSize = iconFs,
@@ -429,6 +439,16 @@ class SettingsFragment : Fragment() {
                             onChange = onChange,
                             state = remember { mutableStateOf(prefs.showBattery) }
                         ) { toggleShowBattery() }
+                    },
+                    { _, onChange ->
+                        if(prefs.showBattery) {
+                            SettingsToggle(
+                                title = stringResource(R.string.show_battery_icon),
+                                fontSize = iconFs,
+                                onChange = onChange,
+                                state = remember { mutableStateOf(prefs.showBatteryIcon) }
+                            ) { toggleShowBatteryIcon() }
+                        }
                     },
                     { _, onChange ->
                         SettingsToggle(
@@ -801,6 +821,10 @@ class SettingsFragment : Fragment() {
         prefs.showBattery = !prefs.showBattery
     }
 
+    private fun toggleShowBatteryIcon() {
+        prefs.showBatteryIcon = !prefs.showBatteryIcon
+    }
+
     private fun toggleHomeLocked() {
         prefs.homeLocked = !prefs.homeLocked
     }
@@ -833,6 +857,10 @@ class SettingsFragment : Fragment() {
     private fun toggleShowTime() {
         prefs.showTime = !prefs.showTime
         viewModel.setShowTime(prefs.showTime)
+    }
+
+    private fun toggleShowTimeFormat() {
+        prefs.showTimeFormat = !prefs.showTimeFormat
     }
 
     private fun showHiddenApps() {

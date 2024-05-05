@@ -47,8 +47,10 @@
     <string name="pages_on_home_screen">Number of Pages</string>
     <string name="enable_home_pager">Enable Home Pager</string>
     <string name="show_time">Show Time</string>
+    <string name="show_time_format">Time Format (AM/PM)</string>
     <string name="show_date">Show Date</string>
     <string name="show_battery">Show Battery</string>
+    <string name="show_battery_icon">Show Battery Icon</string>
     <string name="lock_home_apps">Lock Apps</string>
     <string name="extend_home_apps_area">Extend Clickable Area</string>
     <string name="home_alignment_bottom">Home Screen Align Bottom</string>
