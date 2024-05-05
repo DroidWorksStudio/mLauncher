@@ -177,7 +177,7 @@ class ReorderHomeAppsFragment : Fragment() {
             for (i in oldAppsNum until newAppsNum) {
                 val view = layoutInflater.inflate(R.layout.home_app_button, null) as TextView
                 view.apply {
-                    textSize = prefs.textSizeLauncher.toFloat()
+                    textSize = prefs.appSize.toFloat()
                     id = i
                     text = "$prefix${prefs.getHomeAppModel(i).appLabel}"
                     if (!prefs.extendHomeAppsArea) {
@@ -187,12 +187,12 @@ class ReorderHomeAppsFragment : Fragment() {
                         )
                     }
                 }
-                val padding: Int = prefs.textMarginSize
+                val padding: Int = prefs.textPaddingSize
                 view.setPadding(0, padding, 0, padding)
                 val typeface = ResourcesCompat.getFont(requireActivity(), R.font.roboto)
                 typeface.also { view.typeface = it }
                 binding.pageName.text = getString(R.string.reorder_apps)
-                binding.pageName.textSize = prefs.textSizeLauncher * 1.5f
+                binding.pageName.textSize = prefs.appSize * 1.5f
 
                 if (prefs.followAccentColors) {
                     val fontColor = getHexFontColor(requireContext(), prefs)

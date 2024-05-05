@@ -66,8 +66,8 @@ class AppDrawerAdapter(
             val fontColor = colors.accents(parent.context, prefs, 4)
             binding.appTitle.setTextColor(fontColor)
         }
-        binding.appTitle.textSize = prefs.textSizeLauncher.toFloat()
-        val padding: Int = prefs.textMarginSize
+        binding.appTitle.textSize = prefs.appSize.toFloat()
+        val padding: Int = prefs.textPaddingSize
         binding.appTitle.setPadding(0, padding, 0, padding)
         return ViewHolder(binding)
     }
@@ -274,7 +274,7 @@ class AppDrawerAdapter(
                 // add icon next to app name to indicate that this app is installed on another profile
                 if (appModel.user != android.os.Process.myUserHandle()) {
                     val icon = AppCompatResources.getDrawable(context, R.drawable.work_profile)
-                    val px = dp2px(resources, prefs.textSizeLauncher)
+                    val px = dp2px(resources, prefs.appSize)
                     icon?.setBounds(0, 0, px, px)
                     if (appLabelGravity == LEFT) {
                         appTitle.setCompoundDrawables(null, null, icon, null)

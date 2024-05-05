@@ -133,7 +133,7 @@ class AppDrawerFragment : Fragment() {
             val typeface = ResourcesCompat.getFont(requireActivity(), R.font.roboto)
             searchTextView.typeface = typeface
         }
-        val textSize = prefs.textSizeLauncher.toFloat()
+        val textSize = prefs.appSize.toFloat()
         searchTextView.textSize = textSize
 
         if (appAdapter != null) {

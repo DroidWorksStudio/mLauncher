@@ -145,14 +145,14 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         binding.date.format24Hour = datePattern
 
         binding.clock.textSize = prefs.clockSize.toFloat()
-        binding.date.textSize = prefs.textSizeLauncher.toFloat()
-        binding.batteryText.textSize = prefs.textSizeLauncher.toFloat() / 1.5f
-        binding.homeScreenPager.textSize = prefs.textSizeLauncher.toFloat()
+        binding.date.textSize = prefs.dateSize.toFloat()
+        binding.batteryText.textSize = prefs.batterySize.toFloat()
+        binding.homeScreenPager.textSize = prefs.appSize.toFloat()
+        binding.batteryIcon.textSize = prefs.batterySize.toFloat()
 
         if(prefs.showBatteryIcon) {
             binding.batteryIcon.visibility = View.VISIBLE
             binding.batteryIcon.typeface = typeface
-            binding.batteryIcon.textSize = prefs.textSizeLauncher.toFloat() / 1.5f
         }
 
         if (prefs.useCustomIconFont) {
@@ -720,7 +720,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 val existingAppView = layoutInflater.inflate(R.layout.home_app_button, null) as TextView
                 existingAppView.apply {
                     // Set properties of existingAppView
-                    textSize = prefs.textSizeLauncher.toFloat()
+                    textSize = prefs.appSize.toFloat()
                     id = i
                     text = prefs.getHomeAppModel(i).appLabel
                     setOnTouchListener(getHomeAppsGestureListener(context, this))
@@ -731,7 +731,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                             ViewGroup.LayoutParams.WRAP_CONTENT
                         )
                     }
-                    val padding: Int = prefs.textMarginSize
+                    val padding: Int = prefs.textPaddingSize
                     setPadding(0, padding, 0, padding)
                     if (prefs.useCustomIconFont) {
                         val typeface = ResourcesCompat.getFont(requireActivity(), R.font.roboto)
@@ -749,7 +749,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 val newAppView = TextView(context)
                 newAppView.apply {
                     // Set properties of newAppView
-                    textSize = prefs.textSizeLauncher.toFloat() / 1.5f
+                    textSize = prefs.appSize.toFloat() / 1.5f
                     id = i
                     text = formatMillisToHMS(getUsageStats(context, prefs.getHomeAppModel(i).appPackage))
                     setOnTouchListener(getHomeAppsGestureListener(context, this))
@@ -760,7 +760,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                             ViewGroup.LayoutParams.WRAP_CONTENT
                         )
                     }
-                    val padding: Int = prefs.textMarginSize
+                    val padding: Int = prefs.textPaddingSize
                     setPadding(0, padding, 0, padding)
                     if (prefs.useCustomIconFont) {
                         val typeface = ResourcesCompat.getFont(requireActivity(), R.font.roboto)
@@ -825,7 +825,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             for (i in oldAppsNum until newAppsNum) {
                 val view = layoutInflater.inflate(R.layout.home_app_button, null) as TextView
                 view.apply {
-                    textSize = prefs.textSizeLauncher.toFloat()
+                    textSize = prefs.appSize.toFloat()
                     id = i
                     text = prefs.getHomeAppModel(i).appLabel
                     setOnTouchListener(getHomeAppsGestureListener(context, this))
@@ -839,7 +839,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     gravity = prefs.homeAlignment.value()
                     isFocusable = true
                     isFocusableInTouchMode = true
-                    val padding: Int = prefs.textMarginSize
+                    val padding: Int = prefs.textPaddingSize
                     setPadding(0, padding, 0, padding)
                     if (prefs.useCustomIconFont) {
                         val typeface = ResourcesCompat.getFont(requireActivity(), R.font.roboto)
