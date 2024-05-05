@@ -139,12 +139,12 @@
     <string name="acra_mail_body">Beschrijf het probleem dat u bent tegengekomen:</string>
     <!-- Search Stings -->
     <string name="search_engine">Zoekmachine</string>
-    <string name="search_google">Googlen</string>
+    <string name="search_google">Google</string>
     <string name="search_yahoo">Yahoo</string>
     <string name="search_duckduckgo">DuckDuckGo</string>
     <string name="search_bing">Bing</string>
-    <string name="search_brave">Moedig</string>
-    <string name="search_swisscow">Zwitserse koeien</string>
+    <string name="search_brave">Brave</string>
+    <string name="search_swisscow">SwissCows</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Alle apps</string>
     <string name="total_screen_time">Totale schermtijd</string>
