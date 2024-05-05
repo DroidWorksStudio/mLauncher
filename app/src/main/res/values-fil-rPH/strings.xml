@@ -22,8 +22,10 @@
     <string name="theme_mode">Mode ng tema</string>
     <string name="color_mode">Mode ng Kulay</string>
     <string name="app_language">Wika ng Interface</string>
-    <string name="app_text_size">Laki ng Teksto</string>
+    <string name="app_text_size">Laki ng Teksto ng App</string>
     <string name="clock_text_size">Laki ng Teksto ng Orasan</string>
+    <string name="date_text_size">Laki ng Teksto ng Petsa</string>
+    <string name="battery_text_size">Laki ng Teksto ng Baterya</string>
     <string name="app_padding_size">Laki ng Padding</string>
     <string name="follow_accent_colors">Mga Kulay ng Accent</string>
     <string name="background_opacity">Opacity ng Background</string>
@@ -42,8 +44,10 @@
     <string name="pages_on_home_screen">Bilang ng mga pahina</string>
     <string name="enable_home_pager">Paganahin ang Home Pager</string>
     <string name="show_time">Oras ng palabas</string>
+    <string name="show_time_format">Format ng Oras (AM/PM)</string>
     <string name="show_date">Ipakita ang petsa</string>
     <string name="show_battery">Ipakita ang baterya</string>
+    <string name="show_battery_icon">Ipakita ang Icon ng Baterya</string>
     <string name="lock_home_apps">I-lock ang Apps</string>
     <string name="extend_home_apps_area">Palawakin ang Naki-click na Lugar</string>
     <string name="home_alignment_bottom">I-align sa Ibaba ang Home Screen</string>
