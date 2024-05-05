@@ -22,8 +22,10 @@
     <string name="theme_mode">ʻano kumuhana</string>
     <string name="color_mode">ʻAno kala</string>
     <string name="app_language">ʻŌlelo Interface</string>
-    <string name="app_text_size">Nui kikokikona</string>
+    <string name="app_text_size">Nui kikokikona App</string>
     <string name="clock_text_size">Nui kikokikona uaki</string>
+    <string name="date_text_size">Lā Nui kikokikona</string>
+    <string name="battery_text_size">Ka nui kikokikona o ka Battery</string>
     <string name="app_padding_size">Lahi Padding</string>
     <string name="follow_accent_colors">Nā waihoʻoluʻu</string>
     <string name="background_opacity">Opacity o ka hope</string>
@@ -42,8 +44,10 @@
     <string name="pages_on_home_screen">Ka helu o nā ʻaoʻao</string>
     <string name="enable_home_pager">E ho\'ā i ka Home Pager</string>
     <string name="show_time">Hōʻike manawa</string>
+    <string name="show_time_format">Hōʻano manawa (AM/PM)</string>
     <string name="show_date">Hōʻike lā</string>
     <string name="show_battery">Hōʻike pākaukau</string>
+    <string name="show_battery_icon">E hōʻike i ke kiʻiona Bateri</string>
     <string name="lock_home_apps">Laka Apps</string>
     <string name="extend_home_apps_area">E hoʻonui i kahi hiki ke kaomi</string>
     <string name="home_alignment_bottom">ʻO ka pale home e hoʻopololei i lalo</string>
