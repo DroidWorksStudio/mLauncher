@@ -22,8 +22,10 @@
     <string name="theme_mode">Theme mode</string>
     <string name="color_mode">컬러 모드</string>
     <string name="app_language">Interface Language</string>
-    <string name="app_text_size">Text Size</string>
+    <string name="app_text_size">앱 텍스트 크기</string>
     <string name="clock_text_size">시계 텍스트 크기</string>
+    <string name="date_text_size">날짜 텍스트 크기</string>
+    <string name="battery_text_size">배터리 텍스트 크기</string>
     <string name="app_padding_size">패딩 크기</string>
     <string name="follow_accent_colors">악센트 색상</string>
     <string name="background_opacity">배경 불투명도</string>
@@ -42,8 +44,10 @@
     <string name="pages_on_home_screen">페이지 수</string>
     <string name="enable_home_pager">홈 호출기 활성화</string>
     <string name="show_time">Show time</string>
+    <string name="show_time_format">시간 형식(AM/PM)</string>
     <string name="show_date">Show date</string>
     <string name="show_battery">배터리 표시</string>
+    <string name="show_battery_icon">배터리 아이콘 표시</string>
     <string name="lock_home_apps">Lock Apps</string>
     <string name="extend_home_apps_area">클릭 가능한 영역 확장</string>
     <string name="home_alignment_bottom">홈 화면 하단 정렬</string>
