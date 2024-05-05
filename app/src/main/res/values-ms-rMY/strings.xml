@@ -22,8 +22,10 @@
     <string name="theme_mode">Mod tema</string>
     <string name="color_mode">Mod Warna</string>
     <string name="app_language">Bahasa Antaramuka</string>
-    <string name="app_text_size">Saiz Teks</string>
+    <string name="app_text_size">Saiz Teks Apl</string>
     <string name="clock_text_size">Saiz Teks Jam</string>
+    <string name="date_text_size">Saiz Teks Tarikh</string>
+    <string name="battery_text_size">Saiz Teks Bateri</string>
     <string name="app_padding_size">Saiz Padding</string>
     <string name="follow_accent_colors">Warna Aksen</string>
     <string name="background_opacity">Kelegapan Latar Belakang</string>
@@ -42,8 +44,10 @@
     <string name="pages_on_home_screen">Bilangan muka surat</string>
     <string name="enable_home_pager">Dayakan Halaman Utama</string>
     <string name="show_time">Masa pertunjukan</string>
+    <string name="show_time_format">Format Masa (AM/PM)</string>
     <string name="show_date">Tunjukkan tarikh</string>
     <string name="show_battery">Tunjukkan bateri</string>
+    <string name="show_battery_icon">Tunjukkan Ikon Bateri</string>
     <string name="lock_home_apps">Kunci Apl</string>
     <string name="extend_home_apps_area">Panjangkan Kawasan Boleh Diklik</string>
     <string name="home_alignment_bottom">Skrin Utama Jajar Bawah</string>
