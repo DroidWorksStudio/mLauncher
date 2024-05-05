@@ -137,6 +137,14 @@
     <string name="acra_send_report">ანგარიშის გაგზავნა</string>
     <string name="acra_dont_send">არ გაგზავნო</string>
     <string name="acra_mail_body">გთხოვთ აღწეროთ პრობლემა, რომელიც შეგხვდათ:</string>
+    <!-- Search Stings -->
+    <string name="search_engine">Საძიებო სისტემა</string>
+    <string name="search_google">Google</string>
+    <string name="search_yahoo">Yahoo</string>
+    <string name="search_duckduckgo">DuckDuckGo</string>
+    <string name="search_bing">ბინგ</string>
+    <string name="search_brave">მამაცი</string>
+    <string name="search_swisscow">შვეიცარიული ძროხები</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">ყველა აპლიკაცია</string>
     <string name="total_screen_time">მთლიანი ეკრანის დრო</string>

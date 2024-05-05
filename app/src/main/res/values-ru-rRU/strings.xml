@@ -137,6 +137,14 @@
     <string name="acra_send_report">Отправить жалобу</string>
     <string name="acra_dont_send">Не отправлять</string>
     <string name="acra_mail_body">Опишите проблему, с которой вы столкнулись:</string>
+    <!-- Search Stings -->
+    <string name="search_engine">Поисковый движок</string>
+    <string name="search_google">Google</string>
+    <string name="search_yahoo">Yahoo</string>
+    <string name="search_duckduckgo">УткаУткаGo</string>
+    <string name="search_bing">Бинг</string>
+    <string name="search_brave">Храбрый</string>
+    <string name="search_swisscow">ШвейцарскиеКоровы</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Все приложения</string>
     <string name="total_screen_time">Общее время экрана</string>

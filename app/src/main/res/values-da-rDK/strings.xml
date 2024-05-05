@@ -137,6 +137,14 @@
     <string name="acra_send_report">Send rapport</string>
     <string name="acra_dont_send">Send ikke</string>
     <string name="acra_mail_body">Beskriv venligst det problem, du stødte på:</string>
+    <!-- Search Stings -->
+    <string name="search_engine">Søgemaskine</string>
+    <string name="search_google">Google</string>
+    <string name="search_yahoo">Yahoo</string>
+    <string name="search_duckduckgo">DuckDuckGo</string>
+    <string name="search_bing">Bing</string>
+    <string name="search_brave">Modig</string>
+    <string name="search_swisscow">SwissCows</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Alle apps</string>
     <string name="total_screen_time">Samlet skærmtid</string>

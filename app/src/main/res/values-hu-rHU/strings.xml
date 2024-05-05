@@ -137,6 +137,14 @@
     <string name="acra_send_report">Jelentés küldése</string>
     <string name="acra_dont_send">Ne küldj</string>
     <string name="acra_mail_body">Kérjük, írja le a problémát, amellyel találkozott:</string>
+    <!-- Search Stings -->
+    <string name="search_engine">Keresőmotor</string>
+    <string name="search_google">Google</string>
+    <string name="search_yahoo">Jehu</string>
+    <string name="search_duckduckgo">DuckDuckGo</string>
+    <string name="search_bing">Bing</string>
+    <string name="search_brave">Bátor</string>
+    <string name="search_swisscow">SwissCows</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Minden alkalmazás</string>
     <string name="total_screen_time">Teljes képernyőidő</string>

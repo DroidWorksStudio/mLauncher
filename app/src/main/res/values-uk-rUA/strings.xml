@@ -137,6 +137,14 @@
     <string name="acra_send_report">Надіслати звіт</string>
     <string name="acra_dont_send">Не надсилати</string>
     <string name="acra_mail_body">Опишіть проблему, з якою ви зіткнулися:</string>
+    <!-- Search Stings -->
+    <string name="search_engine">Пошукова система</string>
+    <string name="search_google">Google</string>
+    <string name="search_yahoo">Yahoo</string>
+    <string name="search_duckduckgo">DuckDuckGo</string>
+    <string name="search_bing">Bing</string>
+    <string name="search_brave">Хоробрий</string>
+    <string name="search_swisscow">SwissCows</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Всі програми</string>
     <string name="total_screen_time">Загальний час екрану</string>

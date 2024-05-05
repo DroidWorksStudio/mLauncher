@@ -137,6 +137,14 @@
     <string name="acra_send_report">レポートを送信</string>
     <string name="acra_dont_send">送信しない</string>
     <string name="acra_mail_body">発生した問題を説明してください:</string>
+    <!-- Search Stings -->
+    <string name="search_engine">検索エンジン</string>
+    <string name="search_google">グーグル</string>
+    <string name="search_yahoo">ヤフー</string>
+    <string name="search_duckduckgo">ダックダックゴー</string>
+    <string name="search_bing">ビング</string>
+    <string name="search_brave">勇敢な</string>
+    <string name="search_swisscow">スイスカウズ</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">すべてのアプリ</string>
     <string name="total_screen_time">合計スクリーン時間</string>

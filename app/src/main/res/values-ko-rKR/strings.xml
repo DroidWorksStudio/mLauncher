@@ -137,6 +137,14 @@
     <string name="acra_send_report">보고서 보내기</string>
     <string name="acra_dont_send">보내지 마세요</string>
     <string name="acra_mail_body">발생한 문제를 설명해 주세요.</string>
+    <!-- Search Stings -->
+    <string name="search_engine">검색 엔진</string>
+    <string name="search_google">Google</string>
+    <string name="search_yahoo">야후</string>
+    <string name="search_duckduckgo">오리오리고</string>
+    <string name="search_bing">빙</string>
+    <string name="search_brave">용감한</string>
+    <string name="search_swisscow">스위스소</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>
     <string name="total_screen_time">총 화면 시간</string>

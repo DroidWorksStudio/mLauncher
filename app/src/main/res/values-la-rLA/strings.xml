@@ -137,6 +137,14 @@
     <string name="acra_send_report">Mitte Report</string>
     <string name="acra_dont_send">Nolite mittere</string>
     <string name="acra_mail_body">Quaeso describere exitus te offendit:</string>
+    <!-- Search Stings -->
+    <string name="search_engine">Machina inquirendi</string>
+    <string name="search_google">Google</string>
+    <string name="search_yahoo">Yahoo</string>
+    <string name="search_duckduckgo">DuckDuckGo</string>
+    <string name="search_bing">Bing</string>
+    <string name="search_brave">Fortis</string>
+    <string name="search_swisscow">SwissCows</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Omnes apps</string>
     <string name="total_screen_time">Totalis \'collaborative text Tempus</string>

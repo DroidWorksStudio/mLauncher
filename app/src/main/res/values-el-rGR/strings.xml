@@ -137,6 +137,14 @@
     <string name="acra_send_report">Αποστολή αναφοράς</string>
     <string name="acra_dont_send">Μην στείλετε</string>
     <string name="acra_mail_body">Περιγράψτε το πρόβλημα που αντιμετωπίσατε:</string>
+    <!-- Search Stings -->
+    <string name="search_engine">Μηχανή αναζήτησης</string>
+    <string name="search_google">Google</string>
+    <string name="search_yahoo">Yahoo</string>
+    <string name="search_duckduckgo">DuckDuckGo</string>
+    <string name="search_bing">Bing</string>
+    <string name="search_brave">Γενναίος</string>
+    <string name="search_swisscow">Ελβετικές Αγελάδες</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Όλες οι εφαρμογές</string>
     <string name="total_screen_time">Συνολικός χρόνος οθόνης</string>

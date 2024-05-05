@@ -7,29 +7,29 @@
     <string name="experimental">(experimental)</string>
     <!-- Settings Headers -->
     <string name="appearance">Appearance</string>
-    <string name="behavior">Behavior</string>
-    <string name="homescreen">Homescreen</string>
-    <string name="alignment">Alignment</string>
+    <string name="behavior">אופן הפעולה</string>
+    <string name="homescreen">מסך הבית</string>
+    <string name="alignment">יישור</string>
     <string name="gestures">Gestures</string>
     <string name="miscellaneous">שונות</string>
     <!-- Home Strings -->
-    <string name="hidden_apps">Hidden apps</string>
+    <string name="hidden_apps">יישומים מוסתרים</string>
     <string name="reorder_apps">הזמנה מחדש של אפליקציות</string>
-    <string name="set_as_default_launcher">Set as default launcher</string>
-    <string name="change_default_launcher">Change default launcher</string>
+    <string name="set_as_default_launcher">הגדר כמשגר ברירת מחדל</string>
+    <string name="change_default_launcher">שנה את משגר ברירת המחדל</string>
     <!-- Appearance Strings -->
     <string name="status_bar">Show status bar</string>
-    <string name="theme_mode">Theme mode</string>
+    <string name="theme_mode">סגנון רקע</string>
     <string name="color_mode">מצב צבע</string>
-    <string name="app_language">Interface Language</string>
-    <string name="app_text_size">Text Size</string>
+    <string name="app_language">שפת ממשק</string>
+    <string name="app_text_size">גודל טקסט</string>
     <string name="clock_text_size">גודל טקסט שעון</string>
     <string name="app_padding_size">גודל ריפוד</string>
     <string name="follow_accent_colors">צבעי מבטא</string>
     <string name="background_opacity">אטימות רקע</string>
     <string name="all_apps_text">הצג טקסט של כל האפליקציות</string>
     <!-- Behavior Strings -->
-    <string name="auto_show_keyboard">Auto show keyboard</string>
+    <string name="auto_show_keyboard">הצג מקלדת בחיפוש</string>
     <string name="auto_open_apps">Auto open apps</string>
     <string name="enable_notifications">הפעל התראות</string>
     <string name="display_recent_apps">הצג אפליקציות אחרונות</string>
@@ -41,10 +41,10 @@
     <string name="apps_on_home_screen">Number of shortcuts</string>
     <string name="pages_on_home_screen">מספר דפים</string>
     <string name="enable_home_pager">הפעל את Home Pager</string>
-    <string name="show_time">Show time</string>
-    <string name="show_date">Show date</string>
+    <string name="show_time">הצג זמן</string>
+    <string name="show_date">הצג תאריך</string>
     <string name="show_battery">הצג סוללה</string>
-    <string name="lock_home_apps">Lock Apps</string>
+    <string name="lock_home_apps">נעילת יישומים</string>
     <string name="extend_home_apps_area">הרחב את האזור הניתן ללחיצה</string>
     <string name="home_alignment_bottom">מסך הבית יישור למטה</string>
     <!-- Alignment Strings -->
@@ -79,13 +79,13 @@
     <string name="double_tap_to_lock_screen">Double tap to lock</string>
     <!-- Miscellaneous Strings -->
     <string name="settings_text_size">הגדרות גודל טקסט</string>
-    <string name="display_hidden_apps">הצג אפליקציות נסתרות</string>
+    <string name="display_hidden_apps">הצג יישומים מוסתרים</string>
     <string name="lock_settings">הגדרות נעילה</string>
     <!-- Backup Strings -->
     <string name="backup">גיבוי</string>
-    <string name="load_backup">לִטעוֹן</string>
-    <string name="save_backup">להציל</string>
-    <string name="clear_backup">ברור</string>
+    <string name="load_backup">שחזור</string>
+    <string name="save_backup">שמירה</string>
+    <string name="clear_backup">איפוס</string>
     <!-- Settings Strings -->
     <string name="off">Off</string>
     <string name="on">On</string>
@@ -96,7 +96,7 @@
     <string name="light">Light</string>
     <string name="settings">הגדרות</string>
     <string name="lang_system">System</string>
-    <string name="system_default">System</string>
+    <string name="system_default">מערכת</string>
     <string name="delete">לִמְחוֹק</string>
     <string name="hide">Hide</string>
     <string name="unhide">הצג</string>
@@ -137,6 +137,14 @@
     <string name="acra_send_report">שלח דו\"ח</string>
     <string name="acra_dont_send">אל תשלח</string>
     <string name="acra_mail_body">אנא תאר את הבעיה שבה נתקלת:</string>
+    <!-- Search Stings -->
+    <string name="search_engine">מנוע חיפוש</string>
+    <string name="search_google">גוגל</string>
+    <string name="search_yahoo">יאהו</string>
+    <string name="search_duckduckgo">DuckDuckGo</string>
+    <string name="search_bing">בינג</string>
+    <string name="search_brave">אַמִיץ</string>
+    <string name="search_swisscow">SwissCows</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>
     <string name="total_screen_time">זמן מסך כולל</string>

@@ -137,6 +137,14 @@
     <string name="acra_send_report">Poslat zprávu</string>
     <string name="acra_dont_send">Neposílejte</string>
     <string name="acra_mail_body">Popište prosím problém, na který jste narazili:</string>
+    <!-- Search Stings -->
+    <string name="search_engine">Vyhledávač</string>
+    <string name="search_google">Google</string>
+    <string name="search_yahoo">Yahoo</string>
+    <string name="search_duckduckgo">DuckDuckGo</string>
+    <string name="search_bing">Bing</string>
+    <string name="search_brave">Statečný</string>
+    <string name="search_swisscow">SwissCows</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Všechny aplikace</string>
     <string name="total_screen_time">Celkový čas obrazovky</string>

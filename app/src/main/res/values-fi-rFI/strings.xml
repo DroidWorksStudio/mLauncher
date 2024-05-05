@@ -137,6 +137,14 @@
     <string name="acra_send_report">Lähetä raportti</string>
     <string name="acra_dont_send">Älä lähetä</string>
     <string name="acra_mail_body">Kuvaile kohtaamasi ongelmaa:</string>
+    <!-- Search Stings -->
+    <string name="search_engine">Hakukone</string>
+    <string name="search_google">Google</string>
+    <string name="search_yahoo">Yahoo</string>
+    <string name="search_duckduckgo">DuckDuckGo</string>
+    <string name="search_bing">Bing</string>
+    <string name="search_brave">urhea</string>
+    <string name="search_swisscow">Sveitsin lehmät</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Kaikki sovellukset</string>
     <string name="total_screen_time">Kokonaisruutuaika</string>

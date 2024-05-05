@@ -137,6 +137,14 @@
     <string name="acra_send_report">Tuma Ripoti</string>
     <string name="acra_dont_send">Usitume</string>
     <string name="acra_mail_body">Tafadhali eleza suala ulilokumbana nalo:</string>
+    <!-- Search Stings -->
+    <string name="search_engine">Injini ya Utafutaji</string>
+    <string name="search_google">Google</string>
+    <string name="search_yahoo">Yahoo</string>
+    <string name="search_duckduckgo">DuckDuckGo</string>
+    <string name="search_bing">Bing</string>
+    <string name="search_brave">Jasiri</string>
+    <string name="search_swisscow">SwissCows</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Programu zote</string>
     <string name="total_screen_time">Jumla ya Muda wa Skrini</string>

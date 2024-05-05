@@ -137,6 +137,14 @@
     <string name="acra_send_report">Hantar laporan</string>
     <string name="acra_dont_send">Jangan Hantar</string>
     <string name="acra_mail_body">Sila terangkan isu yang anda hadapi:</string>
+    <!-- Search Stings -->
+    <string name="search_engine">Enjin carian</string>
+    <string name="search_google">Google</string>
+    <string name="search_yahoo">Yahoo</string>
+    <string name="search_duckduckgo">DuckDuckGo</string>
+    <string name="search_bing">Bing</string>
+    <string name="search_brave">berani</string>
+    <string name="search_swisscow">SwissCows</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Semua apl</string>
     <string name="total_screen_time">Jumlah Masa Skrin</string>

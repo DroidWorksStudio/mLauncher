@@ -137,6 +137,14 @@
     <string name="acra_send_report">Alefaso ny tatitra</string>
     <string name="acra_dont_send">Aza mandefa</string>
     <string name="acra_mail_body">Farito azafady ny olana sendra anao:</string>
+    <!-- Search Stings -->
+    <string name="search_engine">Search Engine</string>
+    <string name="search_google">Google</string>
+    <string name="search_yahoo">Yahoo</string>
+    <string name="search_duckduckgo">DuckDuckGo</string>
+    <string name="search_bing">Bing</string>
+    <string name="search_brave">Nahery Fo</string>
+    <string name="search_swisscow">SwissCows</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Apps rehetra</string>
     <string name="total_screen_time">Fotoan\'ny efijery manontolo</string>

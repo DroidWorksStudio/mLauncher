@@ -137,6 +137,14 @@
     <string name="acra_send_report">Gửi báo cáo</string>
     <string name="acra_dont_send">Đừng gửi</string>
     <string name="acra_mail_body">Vui lòng mô tả vấn đề bạn gặp phải:</string>
+    <!-- Search Stings -->
+    <string name="search_engine">Máy tìm kiếm</string>
+    <string name="search_google">Google</string>
+    <string name="search_yahoo">Yahoo</string>
+    <string name="search_duckduckgo">VịtVịtĐi</string>
+    <string name="search_bing">Bing</string>
+    <string name="search_brave">Can đảm</string>
+    <string name="search_swisscow">Bò Thụy Sĩ</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">All apps</string>
     <string name="total_screen_time">Tổng thời gian sử dụng màn hình</string>
