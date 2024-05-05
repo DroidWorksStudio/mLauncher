@@ -12,6 +12,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Updated Gradle - ([dcb55be](https://github.com/DroidWorksStudio/mLauncher/commit/dcb55bedb9f83649d2956e0fcb3fde448cff69e2))
 
+### Hotfixes:
+
+- Updated !SheBang search functionality: - ([8bfcfc4](https://github.com/DroidWorksStudio/mLauncher/commit/8bfcfc48b76203cf337d136831bba6ee27aba981))
+
 ### Language Support:
 
 - Updated Language Files. ([#493](https://github.com/DroidWorksStudio/mLauncher/issues/493)) - ([89e0ffa](https://github.com/DroidWorksStudio/mLauncher/commit/89e0ffae9273285b4889516661d94529ad5c3f61))
