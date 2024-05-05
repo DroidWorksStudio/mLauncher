@@ -22,8 +22,10 @@
     <string name="theme_mode">Hali ya mandhari</string>
     <string name="color_mode">Hali ya Rangi</string>
     <string name="app_language">Lugha ya Kiolesura</string>
-    <string name="app_text_size">Ukubwa wa Maandishi</string>
+    <string name="app_text_size">Ukubwa wa Maandishi ya Programu</string>
     <string name="clock_text_size">Ukubwa wa Maandishi ya Saa</string>
+    <string name="date_text_size">Ukubwa wa Maandishi ya Tarehe</string>
+    <string name="battery_text_size">Ukubwa wa Maandishi ya Betri</string>
     <string name="app_padding_size">Ukubwa wa Padding</string>
     <string name="follow_accent_colors">Rangi Lafudhi</string>
     <string name="background_opacity">Uwazi wa Mandharinyuma</string>
@@ -42,8 +44,10 @@
     <string name="pages_on_home_screen">Idadi ya kurasa</string>
     <string name="enable_home_pager">Washa Kivinjari cha Nyumbani</string>
     <string name="show_time">Onyesha wakati</string>
+    <string name="show_time_format">Muundo wa Saa (AM/PM)</string>
     <string name="show_date">Onyesha tarehe</string>
     <string name="show_battery">Onyesha betri</string>
+    <string name="show_battery_icon">Onyesha Aikoni ya Betri</string>
     <string name="lock_home_apps">Funga Programu</string>
     <string name="extend_home_apps_area">Panua Eneo Linaloweza Kubofya</string>
     <string name="home_alignment_bottom">Pangilia Skrini ya Nyumbani Chini</string>
