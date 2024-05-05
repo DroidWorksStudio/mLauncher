@@ -22,8 +22,10 @@
     <string name="theme_mode">テーマモード</string>
     <string name="color_mode">カラーモード</string>
     <string name="app_language">インターフェース言語</string>
-    <string name="app_text_size">文字サイズ</string>
+    <string name="app_text_size">アプリのテキストサイズ</string>
     <string name="clock_text_size">時計の文字サイズ</string>
+    <string name="date_text_size">日付のテキストサイズ</string>
+    <string name="battery_text_size">バッテリーのテキストサイズ</string>
     <string name="app_padding_size">パディングサイズ</string>
     <string name="follow_accent_colors">アクセントカラー</string>
     <string name="background_opacity">背景の不透明度</string>
@@ -42,8 +44,10 @@
     <string name="pages_on_home_screen">ページ数</string>
     <string name="enable_home_pager">ホーム ページャーを有効にする</string>
     <string name="show_time">時間を表示</string>
+    <string name="show_time_format">時刻形式 (AM/PM)</string>
     <string name="show_date">日付を表示</string>
     <string name="show_battery">バッテリーを表示</string>
+    <string name="show_battery_icon">バッテリーアイコンを表示</string>
     <string name="lock_home_apps">アプリをロック</string>
     <string name="extend_home_apps_area">クリック可能な領域を拡張</string>
     <string name="home_alignment_bottom">ホーム画面を下に揃える</string>
