@@ -22,8 +22,10 @@
     <string name="theme_mode">Þemahamur</string>
     <string name="color_mode">Litastilling</string>
     <string name="app_language">Viðmótstungumál</string>
-    <string name="app_text_size">Textastærð</string>
+    <string name="app_text_size">Textastærð forrits</string>
     <string name="clock_text_size">Textastærð klukku</string>
+    <string name="date_text_size">Dagsetning Textastærð</string>
+    <string name="battery_text_size">Textastærð rafhlöðu</string>
     <string name="app_padding_size">Bólstrun Stærð</string>
     <string name="follow_accent_colors">Hreim litir</string>
     <string name="background_opacity">Ógagnsæi í bakgrunni</string>
@@ -42,8 +44,10 @@
     <string name="pages_on_home_screen">Fjöldi síðna</string>
     <string name="enable_home_pager">Virkja Home Pager</string>
     <string name="show_time">Sýningartími</string>
+    <string name="show_time_format">Tímasnið (AM/PM)</string>
     <string name="show_date">Sýningardagsetning</string>
     <string name="show_battery">Sýna rafhlöðu</string>
+    <string name="show_battery_icon">Sýna rafhlöðutákn</string>
     <string name="lock_home_apps">Læstu forritum</string>
     <string name="extend_home_apps_area">Stækkaðu smellanlegt svæði</string>
     <string name="home_alignment_bottom">Heimaskjár Jafna botn</string>
