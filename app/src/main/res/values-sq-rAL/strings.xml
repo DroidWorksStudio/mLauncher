@@ -137,6 +137,14 @@
     <string name="acra_send_report">Dërgo raport</string>
     <string name="acra_dont_send">Mos Dërgo</string>
     <string name="acra_mail_body">Ju lutemi përshkruani problemin që keni hasur:</string>
+    <!-- Search Stings -->
+    <string name="search_engine">Motori i kërkimit</string>
+    <string name="search_google">Google</string>
+    <string name="search_yahoo">Yahoo</string>
+    <string name="search_duckduckgo">DuckDuckGo</string>
+    <string name="search_bing">Bing</string>
+    <string name="search_brave">Trim</string>
+    <string name="search_swisscow">Lopët zvicerane</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Të gjitha aplikacionet</string>
     <string name="total_screen_time">Koha totale e ekranit</string>
