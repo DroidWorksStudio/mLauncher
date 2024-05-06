@@ -23,12 +23,14 @@ android {
             isShrinkResources = false
             isDebuggable = true
             applicationIdSuffix = ".debug"
+            proguardFiles (getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
             resValue("string", "app_name", "mLauncher Debug")
         }
 
         getByName("release") {
             isMinifyEnabled = false
             isShrinkResources = false
+            proguardFiles (getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
             resValue("string", "app_name", "mLauncher")
         }
     }
@@ -98,13 +100,13 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout-compose:1.0.1")
 
     // Text similarity
-    implementation("org.apache.commons:commons-text:1.11.0")
+    implementation("org.apache.commons:commons-text:1.12.0")
     implementation("com.google.code.gson:gson:2.10.1")
 
     // JETPACK
     // Integration with activities
     //noinspection GradleDependency
-    implementation("androidx.activity:activity-compose:1.8.2")
+    implementation("androidx.activity:activity-compose:1.9.0")
     // Compose Material Design
     implementation("androidx.compose.material:material:$androidxTestKotlin")
     implementation("com.github.SmartToolFactory:Compose-Colorful-Sliders:1.2.0")
