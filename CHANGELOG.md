@@ -14,6 +14,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Fixed the clock size so it now has a max size of 150 instead of 70. - ([a62886c](https://github.com/DroidWorksStudio/mLauncher/commit/a62886ca0c8ea8e15afe3310d21e16ff576fe9cd))
 
+### Dependency Updates:
+
+- Updated a few depends. - ([f822278](https://github.com/DroidWorksStudio/mLauncher/commit/f82227849de569fd0f73af63018d2e75c16e1f89))
+
 ### Language Support:
 
 - Updated Language Files. ([#499](https://github.com/DroidWorksStudio/mLauncher/issues/499)) - ([34a40d9](https://github.com/DroidWorksStudio/mLauncher/commit/34a40d96a5eedadd7d5559513787c42c7de799c6))
