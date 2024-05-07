@@ -22,10 +22,10 @@
     <string name="theme_mode">Temavimo režimas</string>
     <string name="color_mode">Spalvų režimas</string>
     <string name="app_language">Sąsajos kalba</string>
-    <string name="app_text_size">Programos teksto dydis</string>
+    <string name="app_text_size">Programėlės Šrifto dydis</string>
     <string name="clock_text_size">Laikrodžio teksto dydis</string>
-    <string name="date_text_size">Datos teksto dydis</string>
-    <string name="battery_text_size">Baterijos teksto dydis</string>
+    <string name="date_text_size">Datos Šrifto dydis</string>
+    <string name="battery_text_size">Baterijos Šrifto dydis</string>
     <string name="app_padding_size">Užpildymo Dydis</string>
     <string name="follow_accent_colors">Akcentinės spalvos</string>
     <string name="background_opacity">Fono permatomumas</string>
@@ -142,13 +142,13 @@
     <string name="acra_dont_send">Nesiųsti</string>
     <string name="acra_mail_body">Aprašykite problemą, su kuria susidūrėte:</string>
     <!-- Search Stings -->
-    <string name="search_engine">Paieškos variklis</string>
+    <string name="search_engine">Paieškos sistema</string>
     <string name="search_google">Google</string>
     <string name="search_yahoo">Yahoo</string>
     <string name="search_duckduckgo">DuckDuckGo</string>
     <string name="search_bing">Bing</string>
-    <string name="search_brave">Drąsus</string>
-    <string name="search_swisscow">Šveicarijos karvės</string>
+    <string name="search_brave">Brave</string>
+    <string name="search_swisscow">SwissCows</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Visos programėlės</string>
     <string name="total_screen_time">Bendras ekrano laikas</string>
