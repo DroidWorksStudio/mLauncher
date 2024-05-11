@@ -44,7 +44,7 @@
     <string name="pages_on_home_screen">Numero di pagine</string>
     <string name="enable_home_pager">Abilita l\'Home Pager iniziale</string>
     <string name="show_time">Mostra ora</string>
-    <string name="show_time_format">Formato ora (AM/PM)</string>
+    <string name="show_time_format">Formato ora (12/24 ore)</string>
     <string name="show_date">Mostra data</string>
     <string name="show_battery">Mostra batteria</string>
     <string name="show_battery_icon">Mostra l\'icona della batteria</string>
@@ -58,9 +58,9 @@
     <string name="drawer_alignment">Applicazioni nell\'elenco app</string>
     <!-- Gestures Strings -->
     <string name="short_swipe_up_app">Scorri brevemente verso l\'alto</string>
-    <string name="short_swipe_down_app">Scorri brevemente verso il basso</string>
-    <string name="short_swipe_left_app">Scorri brevemente a sinistra</string>
-    <string name="short_swipe_right_app">Scorri brevemente a destra</string>
+    <string name="short_swipe_down_app">Pressione lunga e scorri verso il basso</string>
+    <string name="short_swipe_left_app">Scorrimento breve a sinistra</string>
+    <string name="short_swipe_right_app">Scorri brevemente verso destra</string>
     <string name="long_swipe_up_app">Premi a lungo scorrendo verso l\'alto</string>
     <string name="long_swipe_down_app">Pressione lunga e scorri verso il basso</string>
     <string name="long_swipe_left_app">Pressione lunga verso sinistra</string>
@@ -147,8 +147,8 @@
     <string name="search_yahoo">Yahoo</string>
     <string name="search_duckduckgo">DuckDuckGo</string>
     <string name="search_bing">Bing</string>
-    <string name="search_brave">Coraggioso</string>
-    <string name="search_swisscow">Mucche svizzere</string>
+    <string name="search_brave">Brave Search</string>
+    <string name="search_swisscow">SwissCows</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Tutte le app</string>
     <string name="total_screen_time">Tempo totale sullo schermo</string>

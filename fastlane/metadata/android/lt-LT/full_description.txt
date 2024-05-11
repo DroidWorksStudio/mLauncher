@@ -3,7 +3,7 @@
 # Variantas su papildomomis funkcijomis
 
 – Pašalinta netvarka, pvz., skelbimai ir nuorodos.
-- Programėlių stalčiuje galite pervadinti programėles (Programėlių pervadinimas pagrindiniame ekrane jau palaikomas. Tiesiog ilgai spustelėkite programą pagrindiniame ekrane ir pradėkite rašyti.)
+- Programėlių stalčiuje galite pervadinti programėles (Programėlių pervadinimas pagrindiniame ekrane jau palaikomas. Tiesiog ilgai spustelėkite programėlę pagrindiniame ekrane ir pradėkite rašyti.)
 - Pradiniame ekrane pridėjome daug daugiau gestų parinkčių:
     - Gestai dabar yra:
         - Braukite aukštyn, žemyn, kairėn, dešinėn
@@ -19,13 +19,13 @@
         - Maitinimo dialogas
         - Ekrano kopijos darymas
         - Išjungti gestus
-- Taip pat galite nustatyti laikrodį nepriklausomai nuo namų programų.
-- Pakeiskite programų išdėstymą programų stalčiuje nepriklausomai nuo pagrindinio ekrano.
-- Pakeiskite pagrindinio ekrano skyrių šrifto dydį nepriklausomai vienas nuo kito.
+- Taip pat galite nustatyti laikrodį nepriklausomai nuo pagrindinio ekrano programėlių.
+- Pakeisti programėlių išdėstymą programėlių stalčiuje nepriklausomai nuo pagrindinio ekrano.
+- Pakeisti pagrindinio ekrano skyrių šrifto dydį nepriklausomai vienas nuo kito.
 - Pašalintas interneto leidimo reikalavimas. Niekada nežinote, ką programos kūrėjas nori sužinoti apie jus.
 - Užrakinti nustatymus už biometrinių duomenų (pasirinktinai)
 - Pridėta galimybė pranešti apie gedimą el. paštu.
-- Pridėta galimybė peržiūrėti programos naudojimo laiką.
+- Pridėta galimybė peržiūrėti programėlės naudojimo laiką.
 
 ## Vertimai:
 
@@ -46,7 +46,7 @@
   - Gruzinų kalba
   - Vokiečių kalba
   - Graikų kalba
-  Havajiečių kalba
+  - Havajiečių kalba
   - Hebrajų kalba
   - Hindi kalba
   - Vengrų kalba
