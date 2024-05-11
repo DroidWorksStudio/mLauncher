@@ -73,7 +73,10 @@ class BatteryReceiver : BroadcastReceiver() {
 
         val textView = (contextBattery)?.findViewById<TextView>(R.id.batteryText)
         textView?.text = "$batteryLevel%"
-
+        textView?.setOnClickListener {
+            val powerUsageIntent = Intent(Intent.ACTION_POWER_USAGE_SUMMARY)
+            context.startActivity(powerUsageIntent)
+        }
     }
 }
 
