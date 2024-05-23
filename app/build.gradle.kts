@@ -13,8 +13,8 @@ android {
         applicationId = "app.mlauncher"
         minSdk = 23
         targetSdk = 34
-        versionCode = 161
-        versionName = "1.6.1"
+        versionCode = 162
+        versionName = "1.6.2"
     }
 
     buildTypes {
@@ -89,7 +89,7 @@ dependencies {
 
     // Android lifecycle
     implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.0")
 
     // Navigation
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
@@ -101,7 +101,7 @@ dependencies {
 
     // Text similarity
     implementation("org.apache.commons:commons-text:1.12.0")
-    implementation("com.google.code.gson:gson:2.10.1")
+    implementation("com.google.code.gson:gson:2.11.0")
 
     // JETPACK
     // Integration with activities
@@ -120,6 +120,9 @@ dependencies {
     implementation("androidx.compose.foundation:foundation:$androidxTestKotlin")
     implementation("androidx.biometric:biometric-ktx:1.2.0-alpha05")
 
+    //color picker
+    implementation("net.mm2d.color-chooser:color-chooser:0.7.3")
+
     val acraVersion = "5.11.3"
     implementation("ch.acra:acra-core:$acraVersion")
     implementation("ch.acra:acra-dialog:$acraVersion")
@@ -136,7 +139,7 @@ dependencies {
     // Needed for createComposeRule, but not createAndroidComposeRule:
     debugImplementation("androidx.compose.ui:ui-test-manifest:$androidxTestKotlin")
     androidTestImplementation("androidx.navigation:navigation-testing:2.7.7")
-    debugImplementation("androidx.fragment:fragment-testing:1.7.0")
+    debugImplementation("androidx.fragment:fragment-testing:1.7.1")
     implementation("androidx.test:core-ktx:1.5.0")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     androidTestImplementation("androidx.test:runner:1.5.2")
