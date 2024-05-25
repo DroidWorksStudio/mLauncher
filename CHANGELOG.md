@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Implemented Enhancements:
+
+- Added battery percentage click. - ([f2ef47f](https://github.com/DroidWorksStudio/mLauncher/commit/f2ef47fc2f4112cb59f575a9d05c942b3dc1658a))
+
 ### Bug Fixes:
 
 - Fix the home screen from not being reloaded if not on home - ([e536fb5](https://github.com/DroidWorksStudio/mLauncher/commit/e536fb53f3dd1547a7ddd9198ad7d7953c74be42))
