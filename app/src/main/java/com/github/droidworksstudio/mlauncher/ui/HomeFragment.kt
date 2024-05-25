@@ -251,6 +251,10 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 viewModel.resetDefaultLauncherApp(requireContext())
             }
 
+            R.id.batteryLayout -> {
+                openBatteryUsage()
+            }
+
             else -> {
                 try { // Launch app
                     val appLocation = view.id
@@ -260,6 +264,11 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 }
             }
         }
+    }
+
+    private fun openBatteryUsage() {
+        val batteryUsageIntent = Intent(Intent.ACTION_POWER_USAGE_SUMMARY)
+        startActivity(batteryUsageIntent)
     }
 
     override fun onLongClick(view: View): Boolean {
@@ -280,6 +289,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         binding.date.setOnClickListener(this)
         binding.setTotalScreenTime.setOnClickListener(this)
         binding.setDefaultLauncher.setOnClickListener(this)
+        binding.batteryLayout.setOnClickListener(this)
     }
 
     @RequiresApi(Build.VERSION_CODES.Q)
