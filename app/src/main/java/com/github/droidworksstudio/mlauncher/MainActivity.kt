@@ -208,6 +208,11 @@ class MainActivity : AppCompatActivity() {
         super.onUserLeaveHint()
     }
 
+    override fun onResume() {
+        backToHomeScreen()
+        super.onResume()
+    }
+
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
         recreate()
