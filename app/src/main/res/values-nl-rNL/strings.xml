@@ -22,7 +22,7 @@
     <string name="theme_mode">Thema modus</string>
     <string name="color_mode">Kleur mode</string>
     <string name="app_language">Interface taal</string>
-    <string name="app_text_size">App-tekstgrootte</string>
+    <string name="app_text_size">App tekstgrootte</string>
     <string name="clock_text_size">Kloktekstgrootte</string>
     <string name="date_text_size">Datum tekstgrootte</string>
     <string name="battery_text_size">Tekstgrootte batterij</string>
@@ -87,9 +87,9 @@
     <string name="lock_settings">Instellingen vergrendelen</string>
     <!-- Backup Strings -->
     <string name="backup">Back-up</string>
-    <string name="load_backup">Backup laden</string>
-    <string name="save_backup">Backup opslaan</string>
-    <string name="clear_backup">Backup verwijderen</string>
+    <string name="load_backup">Back-up laden</string>
+    <string name="save_backup">Back-up opslaan</string>
+    <string name="clear_backup">Back-up verwijderen</string>
     <!-- Settings Strings -->
     <string name="off">Uit</string>
     <string name="on">Aan</string>
@@ -120,15 +120,15 @@
     <string name="copy">Kopiëren</string>
     <!-- Colored Themes -->
     <string name="catppuccino">Catppuccino</string>
-    <string name="nordic">Noords</string>
+    <string name="nordic">Nordic</string>
     <!-- Dark Only Themes -->
     <string name="dracula">Dracula</string>
-    <string name="arc">Boog</string>
+    <string name="arc">Arc</string>
     <string name="nokto">Nokto</string>
-    <string name="breeze">Wind</string>
+    <string name="breeze">Breeze</string>
     <string name="yaru">Yaru</string>
     <!-- Light Only Themes -->
-    <string name="adwaita">Advaita</string>
+    <string name="adwaita">Adwaita</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Authenticatie Annuleren.</string>
     <string name="text_authentication_error">Authenticatiefout:%1$s(code %2$d)</string>
