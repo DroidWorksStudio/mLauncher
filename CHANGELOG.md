@@ -12,6 +12,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Fix the home screen from not being reloaded if not on home - ([e536fb5](https://github.com/DroidWorksStudio/mLauncher/commit/e536fb53f3dd1547a7ddd9198ad7d7953c74be42))
 
+### Language Support:
+
+- Updated Language Files. ([#507](https://github.com/DroidWorksStudio/mLauncher/issues/507)) - ([c28e754](https://github.com/DroidWorksStudio/mLauncher/commit/c28e7545dfa7a23b1dbcc0fa00de01b9388bb65f))
+
 ### Refactoring:
 
 - Changed resetDefaultLauncher to better suit OEM - ([b701c18](https://github.com/DroidWorksStudio/mLauncher/commit/b701c18b76eb1dcea666c442c10bd9bb3cbab4af))
