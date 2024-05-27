@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Refactoring:
+
+- Added a better icon for reorder apps. - ([3b090dc](https://github.com/DroidWorksStudio/mLauncher/commit/3b090dcbc8638b67e02048934baa883d12e0406a))
+
+## [1.6.2](https://github.com/DroidWorksStudio/mLauncher/tree/1.6.2) - (26, May 2024)
+
 ### Implemented Enhancements:
 
 - Added battery percentage click. - ([f2ef47f](https://github.com/DroidWorksStudio/mLauncher/commit/f2ef47fc2f4112cb59f575a9d05c942b3dc1658a))
