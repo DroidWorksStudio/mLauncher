@@ -5,6 +5,7 @@ import android.app.admin.DevicePolicyManager
 import android.content.ClipData
 import android.content.Context
 import android.content.Context.VIBRATOR_SERVICE
+import android.graphics.drawable.Drawable
 import android.os.Build
 import android.os.Bundle
 import android.os.Vibrator
@@ -16,6 +17,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.annotation.RequiresApi
+import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.view.children
 import androidx.core.view.size
@@ -33,7 +35,6 @@ import com.github.droidworksstudio.mlauncher.helper.showStatusBar
 class ReorderHomeAppsFragment : Fragment() {
 
     private lateinit var prefs: Prefs
-    private lateinit var prefix: String
     private lateinit var viewModel: MainViewModel
     private lateinit var deviceManager: DevicePolicyManager
     private lateinit var vibrator: Vibrator
@@ -50,7 +51,6 @@ class ReorderHomeAppsFragment : Fragment() {
 
         val view = binding.root
         prefs = Prefs(requireContext())
-        prefix = "\uEB22     "
 
         return view
     }
@@ -173,13 +173,16 @@ class ReorderHomeAppsFragment : Fragment() {
         if (diff in 1 until oldAppsNum) { // 1 <= diff <= oldNumApps
             binding.homeAppsLayout.children.drop(diff)
         } else if (diff < 0) {
+            val prefixDrawable: Drawable? = context?.let { ContextCompat.getDrawable(it, R.drawable.ic_prefix_drawable) }
             // add all missing apps to list
             for (i in oldAppsNum until newAppsNum) {
                 val view = layoutInflater.inflate(R.layout.home_app_button, null) as TextView
                 view.apply {
+                    val appLabel = prefs.getHomeAppModel(i).appLabel.ifEmpty { getString(R.string.app) }
                     textSize = prefs.appSize.toFloat()
                     id = i
-                    text = "$prefix${prefs.getHomeAppModel(i).appLabel}"
+                    text = "   $appLabel"
+                    setCompoundDrawablesWithIntrinsicBounds(prefixDrawable, null, null, null)
                     if (!prefs.extendHomeAppsArea) {
                         layoutParams = ViewGroup.LayoutParams(
                             ViewGroup.LayoutParams.WRAP_CONTENT,
