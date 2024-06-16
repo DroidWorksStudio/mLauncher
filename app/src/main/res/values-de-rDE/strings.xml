@@ -24,8 +24,8 @@
     <string name="app_language">Schnittstellensprache</string>
     <string name="app_text_size">App-Textgröße</string>
     <string name="clock_text_size">Uhrtextgröße</string>
-    <string name="date_text_size">Datumstextgröße</string>
-    <string name="battery_text_size">Batterietextgröße</string>
+    <string name="date_text_size">Textgröße des Datums</string>
+    <string name="battery_text_size">Textgröße der Akkuanzeige</string>
     <string name="app_padding_size">Polstergröße</string>
     <string name="follow_accent_colors">Akzentfarben</string>
     <string name="background_opacity">Deckkraft des Hintergrunds</string>
@@ -47,7 +47,7 @@
     <string name="show_time_format">Zeitformat (AM/PM)</string>
     <string name="show_date">Datum anzeigen</string>
     <string name="show_battery">Akku anzeigen</string>
-    <string name="show_battery_icon">Batteriesymbol anzeigen</string>
+    <string name="show_battery_icon">Akkusymbol anzeigen</string>
     <string name="lock_home_apps">Apps sperren</string>
     <string name="extend_home_apps_area">Klickbaren Bereich erweitern</string>
     <string name="home_alignment_bottom">Startbildschirm unten ausrichten</string>
@@ -147,8 +147,8 @@
     <string name="search_yahoo">Yahoo</string>
     <string name="search_duckduckgo">DuckDuckGo</string>
     <string name="search_bing">Bing</string>
-    <string name="search_brave">Mutig</string>
-    <string name="search_swisscow">Schweizer Kühe</string>
+    <string name="search_brave">Brave</string>
+    <string name="search_swisscow">SwissCows</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Alle Apps</string>
     <string name="total_screen_time">Gesamte Bildschirmzeit</string>
