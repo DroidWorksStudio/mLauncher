@@ -19,7 +19,7 @@ body:
           required: true
         - label: "I made sure that there are **no existing issues** - [open](https://github.com/DroidWorksStudio/mLauncher/issues) or [closed](https://github.com/DroidWorksStudio/mLauncher/issues?q=is%3Aissue+is%3Aclosed) - which I could contribute my information to."
           required: true
-        - label: "I have already checked the [WIKI](https://github.com/HeCodes2MuchDroidWorksStudio/mLauncher/wiki) pages and made sure that the feature isn't already exist."
+        - label: "I have already checked the [WIKI](https://github.com/DroidWorksStudio/mLauncher/wiki) pages and made sure that the feature isn't already exist."
           required: true
         - label: "I've verified that this issue hasn't been addressed in the [changelogs](https://github.com/DroidWorksStudio/mLauncher/blob/main/CHANGELOG.md)."
           required: true
