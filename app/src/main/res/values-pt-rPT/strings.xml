@@ -140,7 +140,7 @@
     <string name="acra_dialog_text">Lamentamos, mas %1$s encontrou um problema inesperado e precisa ser fechado. Por favor, ajude-nos a melhorar enviando um relatório de falha.\n\n%1$s valoriza sua privacidade e os dados coletados são usados exclusivamente para melhorar a estabilidade do aplicativo. Nenhuma informação pessoal é coletada. Obrigado pelo seu apoio!</string>
     <string name="acra_send_report">Enviar relatório</string>
     <string name="acra_dont_send">Não envie</string>
-    <string name="acra_mail_body">Descreva o problema que você encontrou:</string>
+    <string name="acra_mail_body">Ocorreu uma falha no aplicativo.\n\nAbaixo estão os detalhes do dispositivo. O log de erros foi anexado como um arquivo para sua referência. Agradecemos sua ajuda para resolver esse problema.\n\nInformações do dispositivo: \n[POR FAVOR preencha as informações abaixo também removendo qualquer coisa entre colchetes ou isso será ignorado.]\n\n- Versão do aplicativo: [0.0.1]\n- Versão Android: [14]\n- Nome do dispositivo: [Android Pixel 69]\n- Local de instalação: [github, fdroid, obtanium, self]\n\nSua atenção imediata a este assunto é muito apreciada.\n\nObrigado.\n</string>
     <!-- Search Stings -->
     <string name="search_engine">Mecanismo de busca</string>
     <string name="search_google">Google</string>
