@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Reword the email body for crash reports. - ([e24384a](https://github.com/DroidWorksStudio/mLauncher/commit/e24384a7e1c68f5e2dca5610d8725a70266b57bf))
 - Added a better icon for reorder apps. - ([3b090dc](https://github.com/DroidWorksStudio/mLauncher/commit/3b090dcbc8638b67e02048934baa883d12e0406a))
 
 ## [1.6.2](https://github.com/DroidWorksStudio/mLauncher/tree/1.6.2) - (26, May 2024)
