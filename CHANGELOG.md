@@ -8,6 +8,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Updated depends. - ([862dbd0](https://github.com/DroidWorksStudio/mLauncher/commit/862dbd007fdc52f167f06205ba0cca76f0533743))
 
+### Language Support:
+
+- Updated Language Files. ([#523](https://github.com/DroidWorksStudio/mLauncher/issues/523)) - ([3f7f33b](https://github.com/DroidWorksStudio/mLauncher/commit/3f7f33be35d992d8804bd5a1915ab972ee529cac))
+
 ### Refactoring:
 
 - Reword the email body for crash reports. - ([e24384a](https://github.com/DroidWorksStudio/mLauncher/commit/e24384a7e1c68f5e2dca5610d8725a70266b57bf))
