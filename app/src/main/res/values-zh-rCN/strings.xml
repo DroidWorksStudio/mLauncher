@@ -140,7 +140,21 @@
     <string name="acra_dialog_text">很抱歉， %1$s 遇到了意外问题，需要关闭。请发送崩溃报告帮助我们改进。\n\n%1$s 重视您的隐私，所收集的数据仅用于提高应用稳定性。不会收集任何个人信息。感谢您的支持！</string>
     <string name="acra_send_report">发送报告</string>
     <string name="acra_dont_send">不发送</string>
-    <string name="acra_mail_body">请描述您遇到的问题：</string>
+    <string name="acra_mail_body">        应用程序发生崩溃。\n
+        \n
+        以下是设备的详细信息。错误日志已作为文件附加供您参考。如果您能帮助我们解决此问题，我们将不胜感激。\n
+        \n
+        设备信息： \n[请填写以下信息，并删除方括号之间的任何内容，否则将被忽略。]\n
+        \n
+        - 应用程序版本：[0.0.1]\n
+        - Android 版本：[14]\n
+        - 设备名称：[Android Pixel 69]\n
+        - 安装位置：[github, fdroid, obtanium, self]\n
+        \n
+        非常感谢您对此事的及时关注。\n
+        \n
+        谢谢。\n
+    </string>
     <!-- Search Stings -->
     <string name="search_engine">搜索引擎</string>
     <string name="search_google">谷歌</string>
