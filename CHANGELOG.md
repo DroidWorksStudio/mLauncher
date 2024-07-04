@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Dependency Updates:
+
+- Updated depends. - ([862dbd0](https://github.com/DroidWorksStudio/mLauncher/commit/862dbd007fdc52f167f06205ba0cca76f0533743))
+
 ### Refactoring:
 
 - Reword the email body for crash reports. - ([e24384a](https://github.com/DroidWorksStudio/mLauncher/commit/e24384a7e1c68f5e2dca5610d8725a70266b57bf))
