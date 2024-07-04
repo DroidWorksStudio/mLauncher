@@ -140,21 +140,7 @@
     <string name="acra_dialog_text">申し訳ございませんが、 %1$s で予期しない問題が発生したため、終了する必要があります。クラッシュ レポートを送信して改善にご協力ください。\n\n%1$s はお客様のプライバシーを重視しており、収集されたデータはアプリの安定性を向上させるためにのみ使用されます。個人情報は収集されません。ご協力ありがとうございます!</string>
     <string name="acra_send_report">レポートを送信</string>
     <string name="acra_dont_send">送信しない</string>
-    <string name="acra_mail_body">        アプリケーションでクラッシュが発生しました。\n
-        \n
-        以下はデバイスの詳細です。 エラーログは参考用にファイルとして添付されています。 この問題の解決にご協力いただければ幸いです。\n
-        \n
-        デバイス情報: \n[以下の情報を入力してください。角括弧内の文字を削除しないと無視されます。]\n
-        \n
-        - アプリバージョン: [0.0.1]\n
-        - Androidバージョン: [14]\n
-        - デバイス名: [Android Pixel 69]\n
-        - インストール場所: [github、fdroid、obtanium、self]\n
-        \n
-        この件について早急に対応していただき、誠にありがとうございます。\n
-        \n
-        ありがとうございます。\n
-    </string>
+    <string name="acra_mail_body">アプリケーションでクラッシュが発生しました。\n\n以下はデバイスの詳細です。 エラー ログは参照用のファイルとして添付されています。 この問題の解決にご協力いただければ幸いです。\n\nデバイス情報: \n[以下の情報を入力してください。角括弧内のものはすべて削除してください。削除しないと無視されます。]\n\n- アプリ バージョン: [0.0.1]\n- Android バージョン: [14]\n- デバイス名: [Android Pixel 69]\n- インストール場所: [github、fdroid、obtanium、self]\n\nこの件に早急に対応していただければ幸いです。\n\nありがとう。\n</string>
     <!-- Search Stings -->
     <string name="search_engine">検索エンジン</string>
     <string name="search_google">グーグル</string>
