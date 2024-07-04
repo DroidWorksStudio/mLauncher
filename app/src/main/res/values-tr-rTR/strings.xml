@@ -140,7 +140,7 @@
     <string name="acra_dialog_text">Üzgünüz ama %1$s beklenmedik bir sorunla karşılaştı ve kapatılması gerekiyor. Lütfen bir kilitlenme raporu göndererek iyileştirmemize yardımcı olun.\n\n%1$s gizliliğinize değer verir ve toplanan veriler yalnızca uygulama kararlılığını iyileştirmek için kullanılır. Hiçbir kişisel bilgi toplanmaz. Desteğin için teşekkürler!</string>
     <string name="acra_send_report">Rapor gönder</string>
     <string name="acra_dont_send">Gönderme</string>
-    <string name="acra_mail_body">Lütfen karşılaştığınız sorunu açıklayın:</string>
+    <string name="acra_mail_body">Uygulamada bir çökme meydana geldi.\n\nAşağıda cihazın detayları yer almaktadır. Hata günlüğü referansınız için bir dosya olarak eklenmiştir. Bu sorunun çözümünde yardımınızdan memnuniyet duyarız.\n\nCihaz Bilgileri: \n[LÜTFEN aşağıdaki bilgileri köşeli parantezler arasındaki herhangi bir şeyi kaldırarak doldurun, aksi takdirde bu dikkate alınmayacaktır.]\n\n- Uygulama Sürümü: [0.0.1]\n- Android Sürümü: [14]\n- Cihaz Adı: [Android Pixel 69]\n- Kurulum Konumu: [github, fdroid, obtanium, self]\n\nBu konuya gösterdiğiniz acil ilgi çok takdir edilmektedir.\n\nTeşekkür ederim.\n</string>
     <!-- Search Stings -->
     <string name="search_engine">Arama motoru</string>
     <string name="search_google">Google</string>
