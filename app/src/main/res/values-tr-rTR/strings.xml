@@ -30,6 +30,7 @@
     <string name="follow_accent_colors">Vurgu Renkleri</string>
     <string name="background_opacity">Arka Plan Opaklığı</string>
     <string name="all_apps_text">Tüm Uygulama Metinlerini Görüntüle</string>
+    <string name="app_font">Font ailesi</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Klavye\'yi otomatik göster</string>
     <string name="auto_open_apps">Uygulamaları otomatik aç</string>
@@ -141,6 +142,7 @@
     <string name="acra_send_report">Rapor gönder</string>
     <string name="acra_dont_send">Gönderme</string>
     <string name="acra_mail_body">Uygulamada bir çökme meydana geldi.\n\nAşağıda cihazın detayları yer almaktadır. Hata günlüğü referansınız için bir dosya olarak eklenmiştir. Bu sorunun çözümünde yardımınızdan memnuniyet duyarız.\n\nCihaz Bilgileri: \n[LÜTFEN aşağıdaki bilgileri köşeli parantezler arasındaki herhangi bir şeyi kaldırarak doldurun, aksi takdirde bu dikkate alınmayacaktır.]\n\n- Uygulama Sürümü: [0.0.1]\n- Android Sürümü: [14]\n- Cihaz Adı: [Android Pixel 69]\n- Kurulum Konumu: [github, fdroid, obtanium, self]\n\nBu konuya gösterdiğiniz acil ilgi çok takdir edilmektedir.\n\nTeşekkür ederim.\n</string>
+    <string name="settings_font_system">Sistem</string>
     <!-- Search Stings -->
     <string name="search_engine">Arama motoru</string>
     <string name="search_google">Google</string>
