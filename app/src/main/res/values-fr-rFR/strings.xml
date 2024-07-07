@@ -30,6 +30,7 @@
     <string name="follow_accent_colors">Couleurs d\'accentuation</string>
     <string name="background_opacity">Opacité du fond</string>
     <string name="all_apps_text">Afficher le texte de toutes les applications</string>
+    <string name="app_font">Famille de polices</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Ouvrir automatiquement les applications</string>
@@ -141,6 +142,7 @@
     <string name="acra_send_report">Envoyer un rapport</string>
     <string name="acra_dont_send">N\'envoyez pas</string>
     <string name="acra_mail_body">Un crash s\'est produit dans l\'application.\n\nVous trouverez ci-dessous les détails de l\'appareil. Le journal des erreurs a été joint sous forme de fichier pour votre référence. Nous apprécierions votre aide pour résoudre ce problème.\n\nInformations sur l\'appareil : \n[VEUILLEZ remplir les informations ci-dessous en supprimant également tout ce qui se trouve entre les crochets, sinon cela sera ignoré.]\n\n- Version de l\'application : [0.0.1]\n- Version Android : [14]\n- Nom de l\'appareil : [Android Pixel 69]\n- Emplacement d\'installation : [github, fdroid, obtanium, self]\n\nVotre attention prompte à cette question est grandement appréciée.\n\nMerci.\n</string>
+    <string name="settings_font_system">Système</string>
     <!-- Search Stings -->
     <string name="search_engine">Moteur de recherche</string>
     <string name="search_google">Google</string>
