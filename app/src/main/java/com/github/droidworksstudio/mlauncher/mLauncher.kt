@@ -1,6 +1,9 @@
 package com.github.droidworksstudio.mlauncher
 
 import android.app.Application
+import android.content.Context
+import android.graphics.Typeface
+import android.util.Log
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import org.acra.ReportField
 import org.acra.config.dialog
@@ -15,7 +18,9 @@ class Mlauncher : Application() {
         super.onCreate()
 
         // Initialize prefs here
-        prefs = Prefs(this)
+        prefs = Prefs(applicationContext)
+
+        setCustomFont(applicationContext)
 
         val pkgName = getString(R.string.app_name)
         val pkgVersion = this.packageManager.getPackageInfo(
@@ -62,6 +67,34 @@ class Mlauncher : Application() {
                 //defaults to empty
                 body = getString(R.string.acra_mail_body)
             }
+        }
+    }
+
+
+    private fun setCustomFont(context: Context) {
+        // Load the custom font from resources
+        val customFont = prefs.launcherFont.getFont(context)
+
+        // Apply the custom font to different font families
+        if (customFont != null) {
+            TypefaceUtil.setDefaultFont("DEFAULT", customFont)
+            TypefaceUtil.setDefaultFont("MONOSPACE", customFont)
+            TypefaceUtil.setDefaultFont("SERIF", customFont)
+            TypefaceUtil.setDefaultFont("SANS_SERIF", customFont)
+        }
+    }
+}
+
+object TypefaceUtil {
+
+    fun setDefaultFont(staticTypefaceFieldName: String, fontAssetName: Typeface) {
+        Log.e("setDefaultFont", "$staticTypefaceFieldName | $fontAssetName")
+        try {
+            val staticField = Typeface::class.java.getDeclaredField(staticTypefaceFieldName)
+            staticField.isAccessible = true
+            staticField.set(null, fontAssetName)
+        } catch (e: Exception) {
+            e.printStackTrace()
         }
     }
 }

@@ -54,6 +54,8 @@ private const val HIDDEN_APPS = "HIDDEN_APPS"
 private const val HIDDEN_APPS_DISPLAYED = "HIDDEN_APPS_DISPLAYED"
 private const val SEARCH_ENGINE = "SEARCH_ENGINE"
 
+private const val LAUNCHER_FONT = "LAUNCHER_FONT"
+
 private const val APP_NAME = "APP_NAME"
 private const val APP_PACKAGE = "APP_PACKAGE"
 private const val APP_USER = "APP_USER"
@@ -77,7 +79,6 @@ private const val CLICK_CLOCK = "CLICK_CLOCK"
 private const val CLICK_USAGE = "CLICK_USAGE"
 private const val CLICK_DATE = "CLICK_DATE"
 private const val DOUBLE_TAP = "DOUBLE_TAP"
-private const val CUSTOM_FONT = "CUSTOM_FONT"
 private const val ALL_APPS_TEXT = "ALL_APPS_TEXT"
 
 private const val APP_SIZE_TEXT = "APP_SIZE_TEXT"
@@ -246,10 +247,6 @@ class Prefs(val context: Context) {
         get() = prefs.getBoolean(SETTINGS_LOCKED, false)
         set(value) = prefs.edit().putBoolean(SETTINGS_LOCKED, value).apply()
 
-    var useCustomIconFont: Boolean
-        get() = prefs.getBoolean(CUSTOM_FONT, false)
-        set(value) = prefs.edit().putBoolean(CUSTOM_FONT, value).apply()
-
     var useAllAppsText: Boolean
         get() = prefs.getBoolean(ALL_APPS_TEXT, true)
         set(value) = prefs.edit().putBoolean(ALL_APPS_TEXT, value).apply()
@@ -383,6 +380,21 @@ class Prefs(val context: Context) {
             }
         }
         set(value) = prefs.edit().putString(SEARCH_ENGINE, value.name).apply()
+
+    var launcherFont: Constants.Fonts
+        get() {
+            return try {
+                Constants.Fonts.valueOf(
+                    prefs.getString(
+                        LAUNCHER_FONT,
+                        Constants.Fonts.System.name
+                    ).toString()
+                )
+            } catch (_: Exception) {
+                Constants.Fonts.System
+            }
+        }
+        set(value) = prefs.edit().putString(LAUNCHER_FONT, value.name).apply()
 
     var hiddenApps: MutableSet<String>
         get() = prefs.getStringSet(HIDDEN_APPS, mutableSetOf()) as MutableSet<String>

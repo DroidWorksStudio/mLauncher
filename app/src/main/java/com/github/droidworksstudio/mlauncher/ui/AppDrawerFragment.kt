@@ -19,7 +19,6 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.widget.SearchView
-import androidx.core.content.res.ResourcesCompat
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -129,10 +128,6 @@ class AppDrawerFragment : Fragment() {
         val searchTextView = binding.search.findViewById<TextView>(R.id.search_src_text)
         if (searchTextView != null) searchTextView.gravity = gravity
 
-        if (prefs.useCustomIconFont) {
-            val typeface = ResourcesCompat.getFont(requireActivity(), R.font.roboto)
-            searchTextView.typeface = typeface
-        }
         val textSize = prefs.appSize.toFloat()
         searchTextView.textSize = textSize
 

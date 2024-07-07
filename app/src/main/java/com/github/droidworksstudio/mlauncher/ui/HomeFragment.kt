@@ -118,7 +118,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     override fun onStart() {
         super.onStart()
         if (prefs.showStatusBar) showStatusBar(requireActivity()) else hideStatusBar(requireActivity())
-        val typeface = ResourcesCompat.getFont(requireActivity(), R.font.roboto)
 
         batteryReceiver = BatteryReceiver()
         /* register battery changes */
@@ -148,21 +147,18 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         binding.date.textSize = prefs.dateSize.toFloat()
         binding.batteryText.textSize = prefs.batterySize.toFloat()
         binding.homeScreenPager.textSize = prefs.appSize.toFloat()
-        binding.batteryIcon.textSize = prefs.batterySize.toFloat()
 
         if(prefs.showBatteryIcon) {
             binding.batteryIcon.visibility = View.VISIBLE
+            val typeface = ResourcesCompat.getFont(requireActivity(), R.font.roboto)
             binding.batteryIcon.typeface = typeface
+            binding.batteryIcon.textSize = prefs.batterySize.toFloat()
         }
 
-        if (prefs.useCustomIconFont) {
-            binding.clock.typeface = typeface
-            binding.date.typeface = typeface
-            binding.batteryText.typeface = typeface
-            binding.setTotalScreenTime.typeface = typeface
-            binding.setDefaultLauncher.typeface = typeface
+        if (prefs.showBattery) {
+            binding.batteryLayout.visibility = View.VISIBLE
         }
-        binding.homeScreenPager.typeface = typeface
+
         binding.mainLayout.setBackgroundColor(colors.background(requireContext(), prefs))
         if (prefs.followAccentColors) {
             val fontColor = getHexFontColor(requireContext(), prefs)
@@ -743,10 +739,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     }
                     val padding: Int = prefs.textPaddingSize
                     setPadding(0, padding, 0, padding)
-                    if (prefs.useCustomIconFont) {
-                        val typeface = ResourcesCompat.getFont(requireActivity(), R.font.roboto)
-                        typeface?.let { setTypeface(it) }
-                    }
                     if (prefs.followAccentColors) {
                         val fontColor = getHexFontColor(requireContext(), prefs)
                         setTextColor(fontColor)
@@ -772,10 +764,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     }
                     val padding: Int = prefs.textPaddingSize
                     setPadding(0, padding, 0, padding)
-                    if (prefs.useCustomIconFont) {
-                        val typeface = ResourcesCompat.getFont(requireActivity(), R.font.roboto)
-                        typeface?.let { setTypeface(it) }
-                    }
                     if (prefs.followAccentColors) {
                         val fontColor = getHexFontColor(requireContext(), prefs)
                         setTextColor(fontColor)
@@ -851,10 +839,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     isFocusableInTouchMode = true
                     val padding: Int = prefs.textPaddingSize
                     setPadding(0, padding, 0, padding)
-                    if (prefs.useCustomIconFont) {
-                        val typeface = ResourcesCompat.getFont(requireActivity(), R.font.roboto)
-                        typeface?.let { setTypeface(it) }
-                    }
                     if (prefs.followAccentColors) {
                         val fontColor = getHexFontColor(requireContext(), prefs)
                         setTextColor(fontColor)

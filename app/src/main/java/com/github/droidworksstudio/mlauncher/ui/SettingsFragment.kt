@@ -3,8 +3,11 @@ package com.github.droidworksstudio.mlauncher.ui
 import android.app.admin.DevicePolicyManager
 import android.content.ComponentName
 import android.content.Context
+import android.graphics.Typeface
 import android.os.Build
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -25,6 +28,7 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.isSpecified
 import androidx.compose.ui.unit.sp
+import androidx.core.content.res.ResourcesCompat
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -40,6 +44,7 @@ import com.github.droidworksstudio.mlauncher.data.Constants.Theme.Light
 import com.github.droidworksstudio.mlauncher.data.Constants.Theme.System
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentSettingsBinding
+import com.github.droidworksstudio.mlauncher.helper.AppReloader
 import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
 import com.github.droidworksstudio.mlauncher.helper.hideStatusBar
 import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
@@ -53,6 +58,7 @@ import com.github.droidworksstudio.mlauncher.style.SettingsTheme
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsArea
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsGestureItem
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsItem
+import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsItemFont
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsSliderItem
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsTextButton
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsToggle
@@ -116,6 +122,12 @@ class SettingsFragment : Fragment() {
         binding.scrollView.setBackgroundColor(hex)
     }
 
+    private fun <T> createTypefaceMap(context: Context, typeMappings: Map<T, Int>): Map<T, Typeface?> {
+        return typeMappings.mapValues { (_, fontResId) ->
+            ResourcesCompat.getFont(context, fontResId)
+        }
+    }
+
     @Composable
     private fun Settings(fontSize: TextUnit = TextUnit.Unspecified) {
         val selected = remember { mutableStateOf("") }
@@ -135,6 +147,28 @@ class SettingsFragment : Fragment() {
         } else {
             R.string.set_as_default_launcher
         }
+
+        val typeMappings: Map<Constants.Fonts, Int> = mapOf(
+            Constants.Fonts.System to R.font.roboto,
+            Constants.Fonts.Bitter to R.font.bitter,
+            Constants.Fonts.Dotness to R.font.dotness,
+            Constants.Fonts.DroidSans to R.font.droid_sans,
+            Constants.Fonts.GreatVibes to R.font.great_vibes,
+            Constants.Fonts.Lato to R.font.lato,
+            Constants.Fonts.Lobster to R.font.lobster,
+            Constants.Fonts.Merriweather to R.font.merriweather,
+            Constants.Fonts.Montserrat to R.font.montserrat,
+            Constants.Fonts.OpenSans to R.font.open_sans,
+            Constants.Fonts.Pacifico to R.font.pacifico,
+            Constants.Fonts.Quicksand to R.font.quicksand,
+            Constants.Fonts.Raleway to R.font.raleway,
+            Constants.Fonts.Roboto to R.font.roboto,
+            Constants.Fonts.SourceCodePro to R.font.source_code_pro
+        )
+
+        val typefaceMapFonts: Map<Constants.Fonts, Typeface?> = createTypefaceMap(requireActivity(), typeMappings)
+
+
 
         Column {
             SettingsTopView(
@@ -191,30 +225,30 @@ class SettingsFragment : Fragment() {
                             onSelect = { j -> setTheme(j) }
                         )
                     },
-                        { open, onChange ->
-                            if (prefs.appTheme.name == "Dark") {
-                                SettingsItem(
-                                    title = stringResource(R.string.color_mode),
-                                    fontSize = iconFs,
-                                    open = open,
-                                    onChange = onChange,
-                                    currentSelection = remember { mutableStateOf(prefs.appDarkColors) },
-                                    values = Constants.DarkColors.values(),
-                                    onSelect = { j -> setDarkColors(j) }
-                                )
-                            }
-                            if (prefs.appTheme.name == "Light") {
-                                SettingsItem(
-                                    title = stringResource(R.string.color_mode),
-                                    fontSize = iconFs,
-                                    open = open,
-                                    onChange = onChange,
-                                    currentSelection = remember { mutableStateOf(prefs.appLightColors) },
-                                    values = Constants.LightColors.values(),
-                                    onSelect = { j -> setLightColors(j) }
-                                )
-                            }
-                        },
+                    { open, onChange ->
+                        if (prefs.appTheme.name == "Dark") {
+                            SettingsItem(
+                                title = stringResource(R.string.color_mode),
+                                fontSize = iconFs,
+                                open = open,
+                                onChange = onChange,
+                                currentSelection = remember { mutableStateOf(prefs.appDarkColors) },
+                                values = Constants.DarkColors.values(),
+                                onSelect = { j -> setDarkColors(j) }
+                            )
+                        }
+                        if (prefs.appTheme.name == "Light") {
+                            SettingsItem(
+                                title = stringResource(R.string.color_mode),
+                                fontSize = iconFs,
+                                open = open,
+                                onChange = onChange,
+                                currentSelection = remember { mutableStateOf(prefs.appLightColors) },
+                                values = Constants.LightColors.values(),
+                                onSelect = { j -> setLightColors(j) }
+                            )
+                        }
+                    },
                     { open, onChange ->
                         SettingsItem(
                             title = stringResource(R.string.app_language),
@@ -314,6 +348,18 @@ class SettingsFragment : Fragment() {
                             state = remember { mutableStateOf(prefs.useAllAppsText) },
                         ) { toggleAllAppsText() }
                     },
+                    { open, onChange ->
+                        SettingsItemFont(
+                            title = stringResource(R.string.app_font),
+                            typefaces = typefaceMapFonts,
+                            fontSize = iconFs,
+                            open = open,
+                            onChange = onChange,
+                            currentSelection = remember { mutableStateOf(prefs.launcherFont) },
+                            values = Constants.Fonts.values(),
+                            onSelect = { j -> setLauncherFont(j) }
+                        )
+                    },
                 )
             )
             SettingsArea(
@@ -378,14 +424,6 @@ class SettingsFragment : Fragment() {
                             onChange = onChange,
                             state = remember { mutableStateOf(prefs.searchFromStart) },
                         ) { toggleSearchFromStart() }
-                    },
-                    { _, onChange ->
-                        SettingsToggle(
-                            title = stringResource(R.string.icon_font),
-                            fontSize = iconFs,
-                            onChange = onChange,
-                            state = remember { mutableStateOf(prefs.useCustomIconFont) },
-                        ) { toggleCustomIconFont() }
                     },
                 )
             )
@@ -521,11 +559,7 @@ class SettingsFragment : Fragment() {
                                 open = open,
                                 onChange = onChange,
                                 currentSelection = remember { mutableStateOf(prefs.homeAlignment) },
-                                values = arrayOf(
-                                    Constants.Gravity.Left,
-                                    Constants.Gravity.Center,
-                                    Constants.Gravity.Right
-                                ),
+                                values = Constants.Gravity.values(),
                                 onSelect = { gravity -> setHomeAlignment(gravity) }
                             )
                         }
@@ -537,11 +571,7 @@ class SettingsFragment : Fragment() {
                             open = open,
                             onChange = onChange,
                             currentSelection = remember { mutableStateOf(prefs.clockAlignment) },
-                            values = arrayOf(
-                                Constants.Gravity.Left,
-                                Constants.Gravity.Center,
-                                Constants.Gravity.Right
-                            ),
+                            values = Constants.Gravity.values(),
                             onSelect = { gravity -> setClockAlignment(gravity) }
                         )
                     },
@@ -552,11 +582,7 @@ class SettingsFragment : Fragment() {
                             open = open,
                             onChange = onChange,
                             currentSelection = remember { mutableStateOf(prefs.drawerAlignment) },
-                            values = arrayOf(
-                                Constants.Gravity.Left,
-                                Constants.Gravity.Center,
-                                Constants.Gravity.Right
-                            ),
+                            values = Constants.Gravity.values(),
                             onSelect = { j -> viewModel.updateDrawerAlignment(j) }
                         )
                     },
@@ -865,10 +891,6 @@ class SettingsFragment : Fragment() {
         prefs.appUsageStats = !prefs.appUsageStats
     }
 
-    private fun toggleCustomIconFont() {
-        prefs.useCustomIconFont = !prefs.useCustomIconFont
-    }
-
     private fun toggleAllAppsText() {
         prefs.useAllAppsText = !prefs.useAllAppsText
     }
@@ -972,6 +994,13 @@ class SettingsFragment : Fragment() {
     private fun setLang(langInt: Constants.Language) {
         prefs.language = langInt
         requireActivity().recreate()
+    }
+
+    private fun setLauncherFont(fontInt: Constants.Fonts) {
+        prefs.launcherFont = fontInt
+        Handler(Looper.getMainLooper()).postDelayed({
+            AppReloader.restartApp(requireContext())
+        }, 500) // Delay in milliseconds (e.g., 500ms)
     }
 
     private fun setEngine(engineInt: Constants.SearchEngines) {

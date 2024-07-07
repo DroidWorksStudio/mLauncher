@@ -13,7 +13,6 @@ import android.view.inputmethod.EditorInfo
 import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.appcompat.content.res.AppCompatResources
-import androidx.core.content.res.ResourcesCompat
 import androidx.core.view.updatePadding
 import androidx.recyclerview.widget.RecyclerView
 import com.github.droidworksstudio.fuzzywuzzy.FuzzyFinder
@@ -55,10 +54,6 @@ class AppDrawerAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         binding = AdapterAppDrawerBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         prefs = Prefs(parent.context)
-        if (prefs.useCustomIconFont) {
-            val typeface = ResourcesCompat.getFont(parent.context, R.font.roboto)
-            binding.appTitle.typeface = typeface
-        }
         if (prefs.followAccentColors) {
             val fontColor = getHexFontColor(parent.context, prefs)
             binding.appTitle.setTextColor(fontColor)

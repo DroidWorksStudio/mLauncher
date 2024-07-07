@@ -1,5 +1,6 @@
 package com.github.droidworksstudio.mlauncher.ui.compose
 
+import android.graphics.Typeface
 import androidx.compose.foundation.*
 import com.github.droidworksstudio.mlauncher.style.SettingsTheme
 import androidx.compose.foundation.gestures.detectTapGestures
@@ -20,6 +21,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
@@ -145,7 +147,7 @@ object SettingsComposable {
     @Composable
     fun <T: EnumOption> SettingsItem(
         title: String,
-        currentSelection: MutableState<T>,
+        currentSelection: MutableState<EnumOption>,
         currentSelectionName: String? = null,
         values: Array<T>,
         open: MutableState<Boolean>,
@@ -178,7 +180,7 @@ object SettingsComposable {
                             }
                         }
                 ) {
-                    SettingsSelector(values, fontSize = fontSize) { i ->
+                    SettingsSelector(values, fontSize) { i ->
                         onChange(false)
                         currentSelection.value = i
                         onSelect(i)
@@ -202,6 +204,68 @@ object SettingsComposable {
             }
         }
 
+    }
+
+    @Composable
+    fun <T: EnumOption> SettingsItemFont(
+        title: String,
+        currentSelection: MutableState<EnumOption>,
+        currentSelectionName: String? = null,
+        values: Array<T>,
+        open: MutableState<Boolean>,
+        active: Boolean = true,
+        onChange: (Boolean) -> Unit,
+        typefaces: Map<Constants.Fonts, Typeface?>,
+        fontSize: TextUnit = TextUnit.Unspecified,
+        onSelect: (T) -> Unit,
+    ) {
+
+        Column {
+            Text(
+                title,
+                style = SettingsTheme.typography.item,
+                fontSize = fontSize,
+                modifier = Modifier
+                    .align(Start)
+            )
+
+            if (open.value) {
+                Box(
+                    modifier = Modifier
+                        .pointerInput(Unit) {
+                            detectTapGestures {
+                                onChange(false)
+                            }
+                        }
+                        .onFocusEvent {
+                            if (it.isFocused) {
+                                onChange(false)
+                            }
+                        }
+                ) {
+                    SettingsSelector(values, typefaces, fontSize) { i ->
+                        onChange(false)
+                        currentSelection.value = i
+                        onSelect(i)
+                    }
+                }
+            } else {
+                Box (
+                    modifier = Modifier
+                        .fillMaxWidth()
+                ) {
+                    SettingsButton(
+                        // title = title,
+                        onClick = { onChange(true) },
+                        active = active,
+                        modifier = Modifier
+                            .align(CenterEnd),
+                        fontSize = fontSize,
+                        buttonText = currentSelectionName ?: currentSelection.value.string()
+                    )
+                }
+            }
+        }
     }
 
     @Composable
@@ -449,6 +513,41 @@ object SettingsComposable {
                         }
                     }
                 }
+            }
+        }
+    }
+
+    @Composable
+    private fun <T: EnumOption> SettingsSelector(options: Array<T>, typefaces: Map<Constants.Fonts, Typeface?>, fontSize: TextUnit = TextUnit.Unspecified, onSelect: (T) -> Unit) {
+        Box(
+            modifier = Modifier
+                .background(SettingsTheme.color.selector, SettingsTheme.shapes.settings)
+                .fillMaxWidth()
+        ) {
+            LazyRow(
+                modifier = Modifier
+                    .align(CenterEnd),
+                horizontalArrangement = Arrangement.SpaceEvenly
+            )
+            {
+                for (opt in options) {
+                    val fontFamily = typefaces[opt as Constants.Fonts]?.let { FontFamily(it) } ?: FontFamily.Default
+
+                    item {
+                        TextButton(
+                            onClick = { onSelect(opt) },
+                        ) {
+                            Text(
+                                text = opt.string(),
+                                fontSize = fontSize,
+                                style = SettingsTheme.typography.button.copy(
+                                    fontFamily = fontFamily
+                                )
+                            )
+                        }
+                    }
+                }
+
             }
         }
     }

@@ -18,7 +18,6 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
-import androidx.core.content.res.ResourcesCompat
 import androidx.core.view.children
 import androidx.core.view.size
 import androidx.fragment.app.Fragment
@@ -192,8 +191,6 @@ class ReorderHomeAppsFragment : Fragment() {
                 }
                 val padding: Int = prefs.textPaddingSize
                 view.setPadding(0, padding, 0, padding)
-                val typeface = ResourcesCompat.getFont(requireActivity(), R.font.roboto)
-                typeface.also { view.typeface = it }
                 binding.pageName.text = getString(R.string.reorder_apps)
                 binding.pageName.textSize = prefs.appSize * 1.5f
 

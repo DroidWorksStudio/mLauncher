@@ -2,8 +2,10 @@ package com.github.droidworksstudio.mlauncher.data
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.graphics.Typeface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
+import androidx.core.content.res.ResourcesCompat
 import com.github.droidworksstudio.mlauncher.R
 import java.util.Locale
 
@@ -481,6 +483,65 @@ object Constants {
                 Adwaita -> stringResource(R.string.adwaita)
                 Catppuccino -> stringResource(R.string.catppuccino)
                 Nordic -> stringResource(R.string.nordic)
+            }
+        }
+    }
+
+    enum class Fonts : EnumOption {
+        System,
+        Bitter,
+        Dotness,
+        DroidSans,
+        GreatVibes,
+        Lato,
+        Lobster,
+        Merriweather,
+        Montserrat,
+        OpenSans,
+        Pacifico,
+        Quicksand,
+        Raleway,
+        Roboto,
+        SourceCodePro;
+
+        fun getFont(context: Context): Typeface? {
+            return when (this) {
+                System -> Typeface.DEFAULT
+                Bitter -> ResourcesCompat.getFont(context, R.font.bitter)
+                Dotness -> ResourcesCompat.getFont(context, R.font.dotness)
+                DroidSans -> ResourcesCompat.getFont(context, R.font.open_sans)
+                GreatVibes -> ResourcesCompat.getFont(context, R.font.great_vibes)
+                Lato -> ResourcesCompat.getFont(context, R.font.lato)
+                Lobster -> ResourcesCompat.getFont(context, R.font.lobster)
+                Merriweather -> ResourcesCompat.getFont(context, R.font.merriweather)
+                Montserrat -> ResourcesCompat.getFont(context, R.font.montserrat)
+                OpenSans -> ResourcesCompat.getFont(context, R.font.open_sans)
+                Pacifico -> ResourcesCompat.getFont(context, R.font.pacifico)
+                Quicksand -> ResourcesCompat.getFont(context, R.font.quicksand)
+                Raleway -> ResourcesCompat.getFont(context, R.font.raleway)
+                Roboto -> ResourcesCompat.getFont(context, R.font.roboto)
+                SourceCodePro -> ResourcesCompat.getFont(context, R.font.source_code_pro)
+            }
+        }
+
+        @Composable
+        override fun string(): String {
+            return when (this) {
+                System -> stringResource(R.string.settings_font_system)
+                Bitter -> stringResource(R.string.settings_font_bitter)
+                Dotness -> stringResource(R.string.settings_font_dotness)
+                DroidSans -> stringResource(R.string.settings_font_droidsans)
+                GreatVibes -> stringResource(R.string.settings_font_greatvibes)
+                Lato -> stringResource(R.string.settings_font_lato)
+                Lobster -> stringResource(R.string.settings_font_lobster)
+                Merriweather -> stringResource(R.string.settings_font_merriweather)
+                Montserrat -> stringResource(R.string.settings_font_montserrat)
+                OpenSans -> stringResource(R.string.settings_font_opensans)
+                Pacifico -> stringResource(R.string.settings_font_pacifico)
+                Quicksand -> stringResource(R.string.settings_font_quicksand)
+                Raleway -> stringResource(R.string.settings_font_raleway)
+                Roboto -> stringResource(R.string.settings_font_roboto)
+                SourceCodePro -> stringResource(R.string.settings_font_sourcecodepro)
             }
         }
     }

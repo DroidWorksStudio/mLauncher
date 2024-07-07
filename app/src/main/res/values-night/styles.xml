@@ -1,5 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 	<style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+		<item name="android:fontFamily">@android:fontFamily/system_font</item>
+
 		<item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
 		<item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
 		<item name="android:windowTranslucentStatus">true</item>
