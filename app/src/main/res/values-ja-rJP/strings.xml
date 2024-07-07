@@ -30,6 +30,7 @@
     <string name="follow_accent_colors">アクセントカラー</string>
     <string name="background_opacity">背景の不透明度</string>
     <string name="all_apps_text">すべてのアプリのテキストを表示</string>
+    <string name="app_font">フォントファミリー</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">アプリを自動的に開く</string>
@@ -141,6 +142,7 @@
     <string name="acra_send_report">レポートを送信</string>
     <string name="acra_dont_send">送信しない</string>
     <string name="acra_mail_body">アプリケーションでクラッシュが発生しました。\n\n以下はデバイスの詳細です。 エラー ログは参照用のファイルとして添付されています。 この問題の解決にご協力いただければ幸いです。\n\nデバイス情報: \n[以下の情報を入力してください。角括弧内のものはすべて削除してください。削除しないと無視されます。]\n\n- アプリ バージョン: [0.0.1]\n- Android バージョン: [14]\n- デバイス名: [Android Pixel 69]\n- インストール場所: [github、fdroid、obtanium、self]\n\nこの件に早急に対応していただければ幸いです。\n\nありがとう。\n</string>
+    <string name="settings_font_system">システム</string>
     <!-- Search Stings -->
     <string name="search_engine">検索エンジン</string>
     <string name="search_google">グーグル</string>

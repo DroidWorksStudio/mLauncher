@@ -30,6 +30,7 @@
     <string name="follow_accent_colors">Akzentfarben</string>
     <string name="background_opacity">Deckkraft des Hintergrunds</string>
     <string name="all_apps_text">Alle Apps-Text anzeigen</string>
+    <string name="app_font">Schriftfamilie</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Apps automatisch öffnen</string>
@@ -141,6 +142,7 @@
     <string name="acra_send_report">Bericht senden</string>
     <string name="acra_dont_send">Nicht senden</string>
     <string name="acra_mail_body">In der Anwendung ist ein Absturz aufgetreten.\n\nNachfolgend finden Sie die Details des Geräts. Das Fehlerprotokoll wurde als Datei zu Ihrer Information angehängt. Wir wären Ihnen für Ihre Hilfe bei der Lösung dieses Problems dankbar.\n\nGeräteinformationen: \n[BITTE füllen Sie die folgenden Informationen aus und entfernen Sie auch alles zwischen den eckigen Klammern, sonst werden diese ignoriert.]\n\n- App-Version: [0.0.1]\n- Android-Version: [14]\n- Gerätename: [Android Pixel 69]\n- Installationsort: [github, fdroid, obtanium, self]\n\nWir schätzen Ihre umgehende Aufmerksamkeit in dieser Angelegenheit sehr.\n\nVielen Dank.\n</string>
+    <string name="settings_font_system">System</string>
     <!-- Search Stings -->
     <string name="search_engine">Suchmaschine</string>
     <string name="search_google">Google</string>

@@ -30,6 +30,7 @@
     <string name="follow_accent_colors">ألوان مميزة</string>
     <string name="background_opacity">شفافية الخلفية</string>
     <string name="all_apps_text">عرض نص كل التطبيقات</string>
+    <string name="app_font">خط العائلة</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">فتح التطبيقات تلقائياً</string>
@@ -141,6 +142,7 @@
     <string name="acra_send_report">إرسال تقرير</string>
     <string name="acra_dont_send">لا ترسل</string>
     <string name="acra_mail_body">لقد حدث عطل في التطبيق.\n\nفيما يلي تفاصيل الجهاز. لقد تم إرفاق سجل الأخطاء كملف للرجوع إليه. ونحن نقدر مساعدتكم في حل هذه المشكلة.\n\nمعلومات الجهاز: \n[يرجى ملء المعلومات أدناه أيضًا وإزالة أي شيء بين الأقواس المربعة وإلا سيتم تجاهل ذلك.]\n\n- إصدار التطبيق: [0.0.1]\n- إصدار Android: [14]\n- اسم الجهاز: [Android Pixel 69]\n- موقع التثبيت: [github، fdroid، obtanium، self]\n\nإن اهتمامك السريع بهذا الأمر موضع تقدير كبير.\n\nشكرًا لك.\n</string>
+    <string name="settings_font_system">النظام</string>
     <!-- Search Stings -->
     <string name="search_engine">محرك البحث</string>
     <string name="search_google">جوجل</string>

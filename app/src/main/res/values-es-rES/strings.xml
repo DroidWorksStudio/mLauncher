@@ -30,6 +30,7 @@
     <string name="follow_accent_colors">Remarcado</string>
     <string name="background_opacity">Transparencia</string>
     <string name="all_apps_text">Mostrar texto de todas las aplicaciones</string>
+    <string name="app_font">Familia tipográfica</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Teclado automático</string>
     <string name="auto_open_apps">Abrir aplicaciones</string>
@@ -141,6 +142,7 @@
     <string name="acra_send_report">Enviar reporte</string>
     <string name="acra_dont_send">No enviar</string>
     <string name="acra_mail_body">Se ha producido un fallo en la aplicación.\n\nA continuación se muestran los detalles del dispositivo. El registro de errores se ha adjuntado como un archivo para su referencia. Agradeceríamos su ayuda para resolver este problema.\n\nInformación del dispositivo: \n[POR FAVOR, complete la información a continuación y elimine cualquier elemento entre corchetes o esto se ignorará.]\n\n- Versión de la aplicación: [0.0.1]\n- Versión de Android: [14]\n- Nombre del dispositivo: [Android Pixel 69]\n- Ubicación de instalación: [github, fdroid, obtanium, self]\n\nApreciamos mucho su pronta atención a este asunto.\n\nGracias.\n</string>
+    <string name="settings_font_system">Sistema</string>
     <!-- Search Stings -->
     <string name="search_engine">Buscador</string>
     <string name="search_google">Google</string>

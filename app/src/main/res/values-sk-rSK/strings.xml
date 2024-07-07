@@ -30,6 +30,7 @@
     <string name="follow_accent_colors">Doplnková farby</string>
     <string name="background_opacity">Priehľadnosť pozadia</string>
     <string name="all_apps_text">Zobraziť text všetkých aplikácií</string>
+    <string name="app_font">Rodina písiem</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Automaticky zobraziť klávesnicu</string>
     <string name="auto_open_apps">Automatické otváranie aplikácií</string>
@@ -141,6 +142,7 @@
     <string name="acra_send_report">Odoslať správu</string>
     <string name="acra_dont_send">Neposielajte</string>
     <string name="acra_mail_body">V aplikácii došlo k zlyhaniu.\n\nNižšie sú uvedené podrobnosti o zariadení. Protokol chýb bol priložený ako súbor pre vašu referenciu. Ocenili by sme vašu pomoc pri riešení tohto problému.\n\nInformácie o zariadení: \n[VYPLŇTE, PROSÍM, nižšie uvedené informácie a odstráňte aj čokoľvek medzi hranatými zátvorkami, inak to bude ignorované.]\n\n- Verzia aplikácie: [0.0.1]\n- Verzia systému Android: [14]\n- Názov zariadenia: [Android Pixel 69]\n- Umiestnenie inštalácie: [github, fdroid, obtanium, self]\n\nVašu okamžitú pozornosť venovanú tejto záležitosti si veľmi ceníme.\n\nĎakujem.\n</string>
+    <string name="settings_font_system">Systém</string>
     <!-- Search Stings -->
     <string name="search_engine">Vyhľadávač</string>
     <string name="search_google">Google</string>

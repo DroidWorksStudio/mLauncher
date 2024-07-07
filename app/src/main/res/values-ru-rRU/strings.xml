@@ -30,6 +30,7 @@
     <string name="follow_accent_colors">Акцентные цвета</string>
     <string name="background_opacity">Непрозрачность фона</string>
     <string name="all_apps_text">Отобразить текст всех приложений</string>
+    <string name="app_font">Семейство шрифтов</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Автооткрытие приложений</string>
@@ -141,6 +142,7 @@
     <string name="acra_send_report">Отправить жалобу</string>
     <string name="acra_dont_send">Не отправлять</string>
     <string name="acra_mail_body">В приложении произошел сбой.\n\nНиже приведены подробности устройства. Журнал ошибок прикреплен в виде файла для справки. Будем признательны за вашу помощь в решении данного вопроса.\n\nИнформация об устройстве: \n[ПОЖАЛУЙСТА, заполните информацию ниже, также удалив все, что заключено в квадратные скобки, иначе это будет проигнорировано.]\n\n- Версия приложения: [0.0.1]\n- Версия Android: [14]\n- Имя устройства: [Android Pixel 69]\n- Место установки: [github, fdroid, obtanium, self]\n\nМы очень ценим ваше оперативное внимание к этому вопросу.\n\nСпасибо.\n</string>
+    <string name="settings_font_system">Система</string>
     <!-- Search Stings -->
     <string name="search_engine">Поисковый движок</string>
     <string name="search_google">Google</string>
