@@ -30,6 +30,7 @@
     <string name="follow_accent_colors">악센트 색상</string>
     <string name="background_opacity">배경 불투명도</string>
     <string name="all_apps_text">모든 앱 텍스트 표시</string>
+    <string name="app_font">글꼴군</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Auto open apps</string>
@@ -141,6 +142,7 @@
     <string name="acra_send_report">보고서 보내기</string>
     <string name="acra_dont_send">보내지 마세요</string>
     <string name="acra_mail_body">응용 프로그램에서 충돌이 발생했습니다.\n\n아래는 기기의 상세정보입니다. 참고하실 수 있도록 오류 로그를 파일로 첨부했습니다. 이 문제를 해결하는 데 도움을 주시면 감사하겠습니다.\n\n장치 정보: \n[아래 정보를 입력하고 대괄호 사이의 내용을 제거하십시오. 그렇지 않으면 무시됩니다.]\n\n- 앱 버전: [0.0.1]\n- 안드로이드 버전: [14]\n- 기기 이름: [Android Pixel 69]\n- 설치 위치: [github, fdroid, obtanium, self]\n\n이 문제에 대한 귀하의 신속한 관심에 크게 감사드립니다.\n\n감사합니다.\n</string>
+    <string name="settings_font_system">System</string>
     <!-- Search Stings -->
     <string name="search_engine">검색 엔진</string>
     <string name="search_google">Google</string>
