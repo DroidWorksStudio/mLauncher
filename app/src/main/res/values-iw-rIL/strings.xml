@@ -30,6 +30,7 @@
     <string name="follow_accent_colors">צבעי הדגשה</string>
     <string name="background_opacity">אטימות רקע</string>
     <string name="all_apps_text">הצג טקסט של כל האפליקציות</string>
+    <string name="app_font">משפחת גופן</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">הצג מקלדת בחיפוש</string>
     <string name="auto_open_apps">פתיחה אוטומטית של יישומים</string>
@@ -141,6 +142,7 @@
     <string name="acra_send_report">שלח דו\"ח</string>
     <string name="acra_dont_send">אל תשלח</string>
     <string name="acra_mail_body">התרחשה קריסה באפליקציה.\n\nלהלן הפרטים של המכשיר. יומן השגיאות צורף כקובץ לעיונך. נשמח לעזרתך בפתרון בעיה זו.\n\nמידע על מכשיר: \n[נא למלא את המידע למטה ולהסיר כל דבר בין הסוגריים המרובעים או שזה יתעלם.]\n\n- גרסת אפליקציה: [0.0.1]\n- גרסת אנדרואיד: [14]\n- שם מכשיר: [Android Pixel 69]\n- מיקום התקנה: [github, fdroid, obtanium, עצמי]\n\nתשומת לבך המהירה לעניין זה מוערכת מאוד.\n\nתודה.\n</string>
+    <string name="settings_font_system">מערכת</string>
     <!-- Search Stings -->
     <string name="search_engine">מנוע חיפוש</string>
     <string name="search_google">Google</string>
