@@ -30,6 +30,7 @@
     <string name="follow_accent_colors">เน้นสี</string>
     <string name="background_opacity">ความทึบของพื้นหลัง</string>
     <string name="all_apps_text">แสดงข้อความแอพทั้งหมด</string>
+    <string name="app_font">ครอบครัวแบบอักษร</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">แป้นพิมพ์แสดงอัตโนมัติ</string>
     <string name="auto_open_apps">เปิดแอปอัตโนมัติ</string>
@@ -141,6 +142,7 @@
     <string name="acra_send_report">ส่งรายงาน</string>
     <string name="acra_dont_send">อย่าส่ง</string>
     <string name="acra_mail_body">เกิดข้อขัดข้องในแอปพลิเคชัน\n\nด้านล่างนี้คือรายละเอียดของอุปกรณ์ บันทึกข้อผิดพลาดได้รับการแนบมาเป็นไฟล์สำหรับการอ้างอิงของคุณ เราขอขอบคุณสำหรับความช่วยเหลือของคุณในการแก้ไขปัญหานี้\n\nข้อมูลอุปกรณ์: \n[กรุณากรอกข้อมูลด้านล่างและลบสิ่งใด ๆ ที่อยู่ระหว่างวงเล็บเหลี่ยมออก ไม่เช่นนั้นจะถูกละเว้น]\n\n- เวอร์ชันของแอป: [0.0.1]\n- เวอร์ชัน Android: [14]\n- ชื่ออุปกรณ์: [Android Pixel 69]\n- ตำแหน่งการติดตั้ง: [github, fdroid, obtanium, ตนเอง]\n\nขอขอบคุณที่คุณให้ความสนใจต่อเรื่องนี้ในทันที\n\nขอบคุณ\n</string>
+    <string name="settings_font_system">ระบบ</string>
     <!-- Search Stings -->
     <string name="search_engine">เครื่องมือค้นหา</string>
     <string name="search_google">Google</string>
