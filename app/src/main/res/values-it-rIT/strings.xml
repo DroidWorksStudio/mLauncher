@@ -30,6 +30,7 @@
     <string name="follow_accent_colors">Colori accentuati</string>
     <string name="background_opacity">Opacità dello sfondo</string>
     <string name="all_apps_text">Visualizza nel menu la voce Tutte le App</string>
+    <string name="app_font">Famiglia di font</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Mostra tastiera automaticamente</string>
     <string name="auto_open_apps">Apri automaticamente le app</string>
@@ -141,6 +142,7 @@
     <string name="acra_send_report">Invia segnalazione</string>
     <string name="acra_dont_send">Non inviare</string>
     <string name="acra_mail_body">Si è verificato un arresto anomalo dell\'applicazione.\n\nDi seguito sono riportati i dettagli del dispositivo. Il registro degli errori è stato allegato come file come riferimento. Apprezzeremmo il tuo aiuto per risolvere questo problema.\n\nInformazioni sul dispositivo: \n[SI PREGA di compilare le informazioni di seguito rimuovendo anche qualsiasi cosa tra parentesi quadre, altrimenti verrà ignorata.]\n\n- Versione app: [0.0.1]\n- Versione Android: [14]\n- Nome dispositivo: [Android Pixel 69]\n- Posizione di installazione: [github, fdroid, obtanium, self]\n\nLa tua tempestiva attenzione a questo argomento è molto apprezzata.\n\nGrazie.\n</string>
+    <string name="settings_font_system">Sistema</string>
     <!-- Search Stings -->
     <string name="search_engine">Motore di ricerca</string>
     <string name="search_google">Google</string>
