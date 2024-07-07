@@ -30,6 +30,7 @@
     <string name="follow_accent_colors">Accentkleuren</string>
     <string name="background_opacity">Dekking van de achtergrond</string>
     <string name="all_apps_text">Geef alle apps-tekst weer</string>
+    <string name="app_font">Lettertypefamilie</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Toetsenbord automatisch tonen</string>
     <string name="auto_open_apps">Apps automatisch openen</string>
@@ -141,6 +142,7 @@
     <string name="acra_send_report">Verzend rapport</string>
     <string name="acra_dont_send">Niet verzenden</string>
     <string name="acra_mail_body">Er heeft zich een crash voorgedaan in de applicatie.\n\nHieronder staan de details van het apparaat. Het foutenlogboek is ter referentie als bestand bijgevoegd. Wij stellen uw hulp bij het oplossen van dit probleem zeer op prijs.\n\nApparaatinformatie: \n[Vul de onderstaande informatie in en verwijder alles tussen de vierkante haken, anders wordt dit genegeerd.]\n\n- App-versie: [0.0.1]\n- Android-versie: [14]\n- Apparaatnaam: [Android Pixel 69]\n- Installatielocatie: [github, fdroid, obtanium, self]\n\nUw snelle aandacht voor deze kwestie wordt zeer op prijs gesteld.\n\nBedankt.\n</string>
+    <string name="settings_font_system">Systeem</string>
     <!-- Search Stings -->
     <string name="search_engine">Zoekmachine</string>
     <string name="search_google">Google</string>
