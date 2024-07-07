@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Implemented Enhancements:
+
+- Added custom fonts and removed icon font toggle. - ([3e57981](https://github.com/DroidWorksStudio/mLauncher/commit/3e57981ddb55219b0805e42c8cea872ed84bfe51))
+
+## [1.6.3](https://github.com/DroidWorksStudio/mLauncher/tree/1.6.3) - (04, July 2024)
+
 ### Dependency Updates:
 
 - Updated depends. - ([862dbd0](https://github.com/DroidWorksStudio/mLauncher/commit/862dbd007fdc52f167f06205ba0cca76f0533743))
