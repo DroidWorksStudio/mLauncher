@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Refactoring:
+
+- Disable Script Fonts - ([bf02a6a](https://github.com/DroidWorksStudio/mLauncher/commit/bf02a6a9167140204fbc7b1d8882e39c1587e2c2))
+
+## [1.6.4](https://github.com/DroidWorksStudio/mLauncher/tree/1.6.4) - (07, July 2024)
+
 ### Implemented Enhancements:
 
 - Added custom fonts and removed icon font toggle. - ([3e57981](https://github.com/DroidWorksStudio/mLauncher/commit/3e57981ddb55219b0805e42c8cea872ed84bfe51))
