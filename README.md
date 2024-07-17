@@ -160,14 +160,15 @@ We kindly request that you consider supporting the ongoing development of mLaunc
 
 <div align='center'>
     <p>
-        <img src='https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=android&logoColor=white' alt="Android">
-        <img src='https://img.shields.io/badge/SDK-34-3DDC84?style=flat-square' alt="SDK-34">
-        <a href='https://github.com/HeCodes2Much/mLauncher/blob/main/LICENSE'><img src='https://img.shields.io/github/license/HeCodes2Much/mLauncher?color=3DDC84&style=flat-square' alt="LICENSE"></a>
+        <img src='https://img.shields.io/badge/Android-SDK_34-BD93F9?style=flat-square&logo=android&logoColor=white' alt="SDK-34">
+        <a href='https://github.com/HeCodes2Much/mLauncher/blob/main/LICENSE'><img src='https://img.shields.io/github/license/HeCodes2Much/mLauncher?color=BD93F9&style=flat-square' alt="LICENSE"></a>
         <br>
-        <img src='https://img.shields.io/badge/Maintained-yes-44cc11?style=flat-square' alt="Maintained">
-        <a href='https://github.com/HeCodes2Much/mLauncher/releases/latest'><img src='https://img.shields.io/github/downloads/HeCodes2Much/mLauncher/total?color=44cc11&style=flat-square' alt="releases"></a>
+        <a href='https://github.com/DroidWorksStudio/mLauncher/releases/latest'><img src='https://img.shields.io/github/downloads/DroidWorksStudio/mLauncher/total?color=50FA7B&style=flat-square' alt="releases"></a>
+        <a href='https://github.com/DroidWorksStudio/mLauncher/releases/latest'><img src="https://img.shields.io/github/downloads/DroidWorksStudio/mLauncher/latest/total?color=50FA7B&style=flat-square" alt="GitHub Downloads (all assets, latest release)"></a>
         <br>
-        <a href='https://f-droid.org/packages/app.mlauncher'><img alt="F-Droid (including pre-releases)" src="https://img.shields.io/f-droid/v/app.mlauncher?include_prereleases&style=flat-square"></a>
-        <a href='https://github.com/HeCodes2Much/mLauncher/releases/latest'><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/HeCodes2Much/mLauncher?style=flat-square"></a>
+        <a href='https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/app.mlauncher.yml'><img alt="F-Droid (including pre-releases)" src="https://img.shields.io/f-droid/v/app.mlauncher?color=FFB86C&style=flat-square"></a>
+        <a href='https://github.com/DroidWorksStudio/mLauncher/releases/latest'><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/DroidWorksStudio/mLauncher?color=FFB86C&style=flat-square"></a>
+        <br>
+        <img src='https://img.shields.io/badge/Maintained-yes-FF5555?style=flat-square' alt="Maintained">
     </p>
 </div>
