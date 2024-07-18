@@ -1,117 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <!-- Base Settings -->
+resources>
+    <!-- Temel Ayarlar -->
     <string name="app">Uygulama</string>
-    <!-- Admin Settings -->
-    <string name="admin_permission_message">mLauncher kilit ekranı iznini sorumlu bir şekilde kullanmaya söz veriyor. mLauncher herhangi bir veri toplamaz veya paylaşmaz.</string>
-    <string name="experimental">(deneysel)</string>
-    <!-- Settings Headers -->
-    <string name="appearance">Görünüş</string>
+
+    <!-- Yönetici Ayarları -->
+    <string name="admin_permission_message">mLauncher, kilit ekranı iznini sorumlu bir şekilde kullanmayı vaat eder. mLauncher herhangi bir veri toplamaz veya paylaşmaz.</string>
+    <string name="experimental">(Deneysel)</string>
+
+    <!-- Ayar Başlıkları -->
+    <string name="appearance">Görünüm</string>
     <string name="behavior">Davranış</string>
     <string name="homescreen">Ana Ekran</string>
     <string name="alignment">Hizalama</string>
-    <string name="gestures">Jestler</string>
+    <string name="gestures">Hareketler</string>
     <string name="miscellaneous">Çeşitli</string>
-    <!-- Home Strings -->
-    <string name="hidden_apps">Gizli uygulamalar</string>
-    <string name="reorder_apps">Uygulamaları yeniden sipariş edin</string>
-    <string name="set_as_default_launcher">Varsayılan başlatıcı olarak ayarla</string>
-    <string name="change_default_launcher">Varsayılan başlatıcıyı değiştir</string>
-    <!-- Appearance Strings -->
-    <string name="status_bar">Durum çubuğunu göster</string>
-    <string name="theme_mode">Tema modu</string>
+
+    <!-- Ana Ekran Dizeleri -->
+    <string name="hidden_apps">Gizli Uygulamalar</string>
+    <string name="reorder_apps">Uygulamaları Yeniden Sırala</string>
+    <string name="set_as_default_launcher">Varsayılan Başlatıcı Olarak Ayarla</string>
+    <string name="change_default_launcher">Varsayılan Başlatıcıyı Değiştir</string>
+
+    <!-- Görünüm Dizeleri -->
+    <string name="status_bar">Durum Çubuğunu Göster</string>
+    <string name="theme_mode">Tema Modu</string>
     <string name="color_mode">Renk Modu</string>
     <string name="app_language">Arayüz Dili</string>
-    <string name="app_text_size">Uygulama Metin Boyutu</string>
-    <string name="clock_text_size">Saat Metin Boyutu</string>
-    <string name="date_text_size">Tarih Metin Boyutu</string>
-    <string name="battery_text_size">Pil Metin Boyutu</string>
-    <string name="app_padding_size">Boşluk Boyutu</string>
+    <string name="app_text_size">Uygulama Yazı Boyutu</string>
+    <string name="clock_text_size">Saat Yazı Boyutu</string>
+    <string name="date_text_size">Tarih Yazı Boyutu</string>
+    <string name="battery_text_size">Batarya Yazı Boyutu</string>
+    <string name="app_padding_size">Dolgu Boyutu</string>
     <string name="follow_accent_colors">Vurgu Renkleri</string>
     <string name="background_opacity">Arka Plan Opaklığı</string>
-    <string name="all_apps_text">Tüm Uygulama Metinlerini Görüntüle</string>
-    <string name="app_font">Font ailesi</string>
-    <!-- Behavior Strings -->
-    <string name="auto_show_keyboard">Klavye\'yi otomatik göster</string>
-    <string name="auto_open_apps">Uygulamaları otomatik aç</string>
+    <string name="all_apps_text">Tüm Uygulama Metnini Göster</string>
+    <string name="app_font">Yazı Tipi Ailesi</string>
+
+    <!-- Davranış Dizeleri -->
+    <string name="auto_show_keyboard">Klavye Otomatik Göster</string>
+    <string name="auto_open_apps">Uygulamaları Otomatik Aç</string>
     <string name="enable_notifications">Bildirimleri Etkinleştir</string>
-    <string name="display_recent_apps">Son Uygulamaları Görüntüle</string>
+    <string name="display_recent_apps">Son Uygulamaları Göster</string>
     <string name="number_of_recents">Son Uygulama Sayısı</string>
     <string name="filter_strength">Filtre Gücü</string>
-    <string name="search_from_start">Uygulama isminin başından aramaya başla.</string>
-    <string name="icon_font">Simge Yazı Tipi Kullan</string>
-    <!-- Home-screen Strings -->
-    <string name="apps_on_home_screen">Kısayol sayısı</string>
-    <string name="pages_on_home_screen">Sayfa sayısı</string>
-    <string name="enable_home_pager">Ana Sayfa Cihazını Etkinleştir</string>
-    <string name="show_time">Zamanı göster</string>
-    <string name="show_time_format">Saat Formatı (AM/PM)</string>
-    <string name="show_date">Tarih\'i göster</string>
-    <string name="show_battery">Pil\'i göster</string>
-    <string name="show_battery_icon">Pil Simgesini Göster</string>
+    <string name="search_from_start">Uygulama Aramasına Baştan Başla</string>
+    <string name="icon_font">Simge Yazı Tipini Kullan</string>
+
+    <!-- Ana Ekran Dizeleri -->
+    <string name="apps_on_home_screen">Kısayol Sayısı</string>
+    <string name="pages_on_home_screen">Sayfa Sayısı</string>
+    <string name="enable_home_pager">Ana Sayfa Pager'ı Etkinleştir</string>
+    <string name="show_time">Saati Göster</string>
+    <string name="show_time_format">Zaman Formatı (AM/PM)</string>
+    <string name="show_date">Tarihi Göster</string>
+    <string name="show_battery">Bataryayı Göster</string>
+    <string name="show_battery_icon">Batarya Simgesini Göster</string>
     <string name="lock_home_apps">Uygulamaları Kilitle</string>
     <string name="extend_home_apps_area">Tıklanabilir Alanı Genişlet</string>
     <string name="home_alignment_bottom">Ana Ekranı Alta Hizala</string>
-    <!-- Alignment Strings -->
-    <string name="display_app_usage_stats">Uygulama Kullanım İstatistiklerini Görüntüle</string>
-    <string name="home_alignment">Uygulamalar ana ekranı</string>
-    <string name="clock_alignment">Saat ve tarih</string>
-    <string name="drawer_alignment">Uygulama çekmecesindeki uygulamalar</string>
-    <!-- Gestures Strings -->
-    <string name="short_swipe_up_app">Yukarı kaydır</string>
-    <string name="short_swipe_down_app">Aşağı kaydır</string>
-    <string name="short_swipe_left_app">Sola kaydır</string>
-    <string name="short_swipe_right_app">Sağa kaydır</string>
-    <string name="long_swipe_up_app">Uzun Bas Yukarı Kaydır</string>
-    <string name="long_swipe_down_app">Uzun Basma Aşağı kaydırma</string>
-    <string name="long_swipe_left_app">Uzun Bas Sola kaydır</string>
-    <string name="long_swipe_right_app">Uzun Bas Sağa kaydır</string>
-    <string name="clock_click_app">Saat üzerine Tıklayın</string>
-    <string name="date_click_app">Tarih üzerine Tıklayın</string>
-    <string name="usage_click_app">Toplam Kullanım\'a tıklayın</string>
-    <string name="double_tap">Çift Dokunuş</string>
-    <!-- Gestures Do Strings -->
-    <string name="show_notifications">Bildirimi Göster</string>
+
+    <!-- Hizalama Dizeleri -->
+    <string name="display_app_usage_stats">Uygulama Kullanım İstatistiklerini Göster</string>
+    <string name="home_alignment">Ana Ekrandaki Uygulamalar</string>
+    <string name="clock_alignment">Saat ve Tarih</string>
+    <string name="drawer_alignment">Uygulama Çekmecesindeki Uygulamalar</string>
+
+    <!-- Hareketler Dizeleri -->
+    <string name="short_swipe_up_app">Kısa Yukarı Kaydırma</string>
+    <string name="short_swipe_down_app">Kısa Aşağı Kaydırma</string>
+    <string name="short_swipe_left_app">Kısa Sol Kaydırma</string>
+    <string name="short_swipe_right_app">Kısa Sağ Kaydırma</string>
+    <string name="long_swipe_up_app">Uzun Yukarı Kaydırma</string>
+    <string name="long_swipe_down_app">Uzun Aşağı Kaydırma</string>
+    <string name="long_swipe_left_app">Uzun Sol Kaydırma</string>
+    <string name="long_swipe_right_app">Uzun Sağ Kaydırma</string>
+    <string name="clock_click_app">Saate Tıklama</string>
+    <string name="date_click_app">Tarihe Tıklama</string>
+    <string name="usage_click_app">Toplam Kullanıma Tıklama</string>
+    <string name="double_tap">Çift Tıklama</string>
+
+    <!-- Hareketler Do Dizeleri -->
+    <string name="show_notifications">Bildirimleri Göster</string>
     <string name="show_app_list">Uygulama Listesini Göster</string>
-    <string name="open_app">Uygulama\'yı Aç</string>
+    <string name="open_app">Uygulamayı Aç</string>
     <string name="lock_screen">Ekranı Kilitle</string>
-    <string name="open_quick_settings">Hızlı Ayarlar</string>
+    <string name="open_quick_settings">Hızlı Ayarları Aç</string>
     <string name="show_recents">Son Kullanılanları Göster</string>
-    <string name="open_power_dialog">Güç Menüsü</string>
-    <string name="take_a_screenshot">Ekran görüntüsü al</string>
-    <string name="left_page">Sol sayfaya git</string>
-    <string name="right_page">Sağ sayfaya git</string>
-    <string name="double_tap_to_lock_screen">Kilitlemek için çift dokun</string>
-    <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">Ayarlar Metin Boyutu</string>
-    <string name="display_hidden_apps">Gizli Uygulamaları Görüntüle</string>
+    <string name="open_power_dialog">Güç Diyaloğunu Aç</string>
+    <string name="take_a_screenshot">Ekran Görüntüsü Al</string>
+    <string name="left_page">Sol Sayfaya Git</string>
+    <string name="right_page">Sağ Sayfaya Git</string>
+    <string name="double_tap_to_lock_screen">Çift Tıklama ile Kilitle</string>
+
+    <!-- Çeşitli Dizeler -->
+    <string name="settings_text_size">Ayarlar Yazı Boyutu</string>
+    <string name="display_hidden_apps">Gizli Uygulamaları Göster</string>
     <string name="lock_settings">Kilit Ayarları</string>
-    <!-- Backup Strings -->
-    <string name="backup">Destek olmak</string>
-    <string name="load_backup">Yük</string>
-    <string name="save_backup">Kaydetmek</string>
-    <string name="clear_backup">Temizlemek</string>
-    <!-- Settings Strings -->
+
+    <!-- Yedekleme Dizeleri -->
+    <string name="backup">Yedekle</string>
+    <string name="load_backup">Yükle</string>
+    <string name="save_backup">Kaydet</string>
+    <string name="clear_backup">Temizle</string>
+
+    <!-- Ayarlar Dizeleri -->
     <string name="off">Kapalı</string>
     <string name="on">Açık</string>
     <string name="left">Sol</string>
     <string name="right">Sağ</string>
     <string name="center">Merkez</string>
-    <string name="dark">Karanlık</string>
-    <string name="light">Aydınlık</string>
+    <string name="dark">Koyu</string>
+    <string name="light">Açık</string>
     <string name="settings">Ayarlar</string>
     <string name="lang_system">Sistem</string>
     <string name="system_default">Sistem</string>
-    <string name="delete">Silmek</string>
+    <string name="delete">Sil</string>
     <string name="hide">Gizle</string>
-    <string name="unhide">Göster</string>
+    <string name="unhide">Gizliliği Kaldır</string>
     <string name="rename">Yeniden Adlandır</string>
     <string name="info">Bilgi</string>
     <string name="okay">Tamam</string>
     <string name="save">Kaydet</string>
     <string name="show">Göster</string>
     <string name="reset">Sıfırla</string>
-    <string name="cancel">İptal Et</string>
+    <string name="cancel">İptal</string>
     <string name="enable">Etkinleştir</string>
     <string name="disable">Devre Dışı Bırak</string>
     <string name="enabled">Etkin</string>
@@ -119,51 +131,55 @@
     <string name="open">Aç</string>
     <string name="close">Kapat</string>
     <string name="copy">Kopyala</string>
-    <!-- Colored Themes -->
-    <string name="catppuccino">Catpuccino</string>
-    <string name="nordic">İskandinav</string>
-    <!-- Dark Only Themes -->
-    <string name="dracula">Drakula</string>
-    <string name="arc">Yay</string>
-    <string name="nokto">nokto</string>
-    <string name="breeze">Esinti</string>
+    <!-- Renkli Temalar -->
+    <string name="catppuccino">Catppuccino</string>
+    <string name="nordic">Nordic</string>
+    <!-- Sadece Koyu Temalar -->
+    <string name="dracula">Dracula</string>
+    <string name="arc">Arc</string>
+    <string name="nokto">Nokto</string>
+    <string name="breeze">Breeze</string>
     <string name="yaru">Yaru</string>
-    <!-- Light Only Themes -->
+    <!-- Sadece Açık Temalar -->
     <string name="adwaita">Adwaita</string>
-    <!-- PinCode Strings -->
-    <string name="text_authentication_cancel">Kimlik Doğrulama İptali.</string>
+
+    <!-- PinCode Dizeleri -->
+    <string name="text_authentication_cancel">Kimlik Doğrulama İptal.</string>
     <string name="text_authentication_error">Kimlik doğrulama hatası:%1$s(kod %2$d)</string>
     <string name="text_authentication_failed">Kimlik doğrulama başarısız oldu.</string>
-    <string name="text_biometric_login">mLauncher için biyometrik giriş</string>
-    <string name="text_biometric_login_sub">Biyometrik kimlik bilgilerinizi kullanarak giriş yapın</string>
-    <!-- Crash Strings -->
-    <string name="acra_crash">Kaza</string>
-    <string name="acra_dialog_text">Üzgünüz ama %1$s beklenmedik bir sorunla karşılaştı ve kapatılması gerekiyor. Lütfen bir kilitlenme raporu göndererek iyileştirmemize yardımcı olun.\n\n%1$s gizliliğinize değer verir ve toplanan veriler yalnızca uygulama kararlılığını iyileştirmek için kullanılır. Hiçbir kişisel bilgi toplanmaz. Desteğin için teşekkürler!</string>
-    <string name="acra_send_report">Rapor gönder</string>
+    <string name="text_biometric_login">mLauncher için Biyometrik Giriş</string>
+    <string name="text_biometric_login_sub">Biyometrik kimlik bilgilerinizi kullanarak giriş yapın.</string>
+
+    <!-- Çökme Dizeleri -->
+    <string name="acra_crash">Çökme</string>
+    <string name="acra_dialog_text">Üzgünüz, ancak %1$s beklenmedik bir sorunla karşılaştı ve kapanması gerekiyor. Lütfen bir çökme raporu göndererek bize yardımcı olun.\n\n%1$s gizliliğinize değer verir ve toplanan veriler yalnızca uygulama kararlılığını artırmak için kullanılır. Kişisel bilgi toplanmaz. Desteğiniz için teşekkür ederiz!</string>
+    <string name="acra_send_report">Raporu Gönder</string>
     <string name="acra_dont_send">Gönderme</string>
-    <string name="acra_mail_body">Uygulamada bir çökme meydana geldi.\n\nAşağıda cihazın detayları yer almaktadır. Hata günlüğü referansınız için bir dosya olarak eklenmiştir. Bu sorunun çözümünde yardımınızdan memnuniyet duyarız.\n\nCihaz Bilgileri: \n[LÜTFEN aşağıdaki bilgileri köşeli parantezler arasındaki herhangi bir şeyi kaldırarak doldurun, aksi takdirde bu dikkate alınmayacaktır.]\n\n- Uygulama Sürümü: [0.0.1]\n- Android Sürümü: [14]\n- Cihaz Adı: [Android Pixel 69]\n- Kurulum Konumu: [github, fdroid, obtanium, self]\n\nBu konuya gösterdiğiniz acil ilgi çok takdir edilmektedir.\n\nTeşekkür ederim.\n</string>
+    <string name="acra_mail_body">Uygulamada bir çökme meydana geldi.\n\nAşağıda cihazın detayları bulunmaktadır. Hata günlüğü referansınız için bir dosya olarak eklenmiştir. Bu sorunu çözmemize yardımcı olmanızdan memnuniyet duyarız.\n\nCihaz Bilgileri: \n[LÜTFEN aşağıdaki bilgileri doldurun ve köşeli parantezler arasındaki her şeyi kaldırın, aksi takdirde bu yoksayılacaktır.]\n\n- Uygulama Sürümü: [0.0.1]\n- Android Sürümü: [14]\n- Cihaz Adı: [Android Pixel 69]\n- Kurulum Yeri: [github, fdroid, obtanium, self]\n\nBu konuya acilen ilgilenmenizi rica ederiz.\n\nTeşekkürler.\n</string>
+
     <string name="settings_font_system">Sistem</string>
-    <!-- Search Stings -->
-    <string name="search_engine">Arama motoru</string>
+
+    <!-- Arama Dizeleri -->
+    <string name="search_engine">Arama Motoru</string>
     <string name="search_google">Google</string>
-    <string name="search_yahoo">yahoo</string>
-    <string name="search_duckduckgo">ÖrdekDuckGo</string>
+    <string name="search_yahoo">Yahoo</string>
+    <string name="search_duckduckgo">DuckDuckGo</string>
     <string name="search_bing">Bing</string>
-    <string name="search_brave">Cesur</string>
-    <string name="search_swisscow">İsviçreİnekleri</string>
-    <!-- Unsorted Strings -->
+    <string name="search_brave">Brave</string>
+    <string name="search_swisscow">SwissCows</string>
+
+    <!-- Sıralanmamış Dizeler -->
     <string name="show_apps">Tüm uygulamalar</string>
     <string name="total_screen_time">Toplam Ekran Süresi</string>
     <string name="can_not_delete_system_apps">Sistem Uygulamaları Silinemiyor</string>
     <string name="please_select_app">Lütfen bir uygulama seçin</string>
-    <string name="drawer_list_empty_hint">Herhangi bir uygulama bulunamadı</string>
-    <string name="long_press_for_settings">Ayarlar için herhangi bir yere uzun bas</string>
+    <string name="drawer_list_empty_hint">Uygulama bulunamadı</string>
+    <string name="long_press_for_settings">Ayarlar için herhangi bir yere uzun basın</string>
     <string name="swipe_up_for_apps">Tüm uygulamalar için yukarı kaydırın</string>
     <string name="app_drawer_tips">İpucu: Kapatmak için aşağı kaydırın. Klavyeyi gizlemek için kaydırın.</string>
-    <string name="double_tap_lock_is_enabled_message">Çift dokunma kilidi parmak izi veya yüz kilidini devre dışı bırakırsa, mLauncher ayarlarını açın, \'deneysel\'e dokunun ve talimatları izleyin. Teşekkürler.</string>
-    <string name="double_tap_lock_uninstall_message">Etkin kilitlemek için çift dokunun.
-		\n\nNot: mLauncher\'ı silmeye karar verirseniz önce bunu KAPATIN.</string>
-    <string name="accessibility_service_name">mLauncher Eylemler Hizmeti</string>
-    <string name="accessibility_service_description">Bu erişilebilirlik hizmeti, mLauncher\'ın ekranı kilitleme veya hızlı ayarları açma gibi belirli işlemleri yapmasını sağlar. Erişilebilirlik hizmetimiz herhangi bir veri toplamaz veya paylaşmaz.</string>
+    <string name="double_tap_lock_is_enabled_message">Eğer çift tıklama kilidi parmak izi veya yüz kilidini devre dışı bırakırsa, mLauncher ayarlarını açın, 'deneysel' sekmesine tıklayın ve talimatları izleyin. Teşekkürler.</string>
+    <string name="double_tap_lock_uninstall_message">Çift tıklama ile kilitleme etkin.\n\nNot: mLauncher'ı silmeye karar verirseniz bunu önce KAPATIN.</string>
+    <string name="accessibility_service_name">mLauncher Eylemler Servisi</string>
+    <string name="accessibility_service_description">Bu erişilebilirlik servisi, mLauncher'ın ekranı kilitleme veya hızlı ayarları açma gibi belirli eylemleri gerçekleştirmesine olanak tanır. Erişilebilirlik servisimiz herhangi bir veri toplamaz veya paylaşmaz.</string>
     <string name="version">Sürüm</string>
 </resources>
