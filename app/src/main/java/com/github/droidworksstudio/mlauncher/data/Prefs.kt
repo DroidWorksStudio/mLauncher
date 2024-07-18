@@ -105,9 +105,13 @@ class Prefs(val context: Context) {
             when (value) {
                 is String -> editor.putString(key, value)
                 is Boolean -> editor.putBoolean(key, value)
-                is Int -> editor.putInt(key, value)
-                is Double -> editor.putInt(key, value.toInt()) // we store everything as int
-                is Float -> editor.putInt(key, value.toInt())
+                is Number -> {
+                    if (value.toDouble() == value.toInt().toDouble()) {
+                        editor.putInt(key, value.toInt())
+                    } else {
+                        editor.putFloat(key, value.toFloat())
+                    }
+                }
                 is MutableSet<*> -> {
                     val list = value.filterIsInstance<String>().toSet()
                     editor.putStringSet(key, list)
