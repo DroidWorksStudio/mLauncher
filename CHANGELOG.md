@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Bug Fixes:
+
+- Fixed issue where backup was not doing numbers currently. - ([3a1ee1a](https://github.com/DroidWorksStudio/mLauncher/commit/3a1ee1ab9006649f27fdb97eaf15a4f926872469))
+
 ### Refactoring:
 
 - Disable Script Fonts - ([bf02a6a](https://github.com/DroidWorksStudio/mLauncher/commit/bf02a6a9167140204fbc7b1d8882e39c1587e2c2))
