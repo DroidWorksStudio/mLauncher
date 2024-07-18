@@ -8,6 +8,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Fixed issue where backup was not doing numbers currently. - ([3a1ee1a](https://github.com/DroidWorksStudio/mLauncher/commit/3a1ee1ab9006649f27fdb97eaf15a4f926872469))
 
+### Dependency Updates:
+
+- Updated com.android.application and com.android.library - ([c6b9c56](https://github.com/DroidWorksStudio/mLauncher/commit/c6b9c5612580b79e48cd6ac7c189f41239a8ea08))
+
 ### Refactoring:
 
 - Disable Script Fonts - ([bf02a6a](https://github.com/DroidWorksStudio/mLauncher/commit/bf02a6a9167140204fbc7b1d8882e39c1587e2c2))
