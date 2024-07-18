@@ -8,6 +8,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Disable Script Fonts - ([bf02a6a](https://github.com/DroidWorksStudio/mLauncher/commit/bf02a6a9167140204fbc7b1d8882e39c1587e2c2))
 
+### Reverts:
+
+- Revert "Update TR Locales ([#529](https://github.com/DroidWorksStudio/mLauncher/issues/529))" ([#530](https://github.com/DroidWorksStudio/mLauncher/issues/530)) - ([e09d200](https://github.com/DroidWorksStudio/mLauncher/commit/e09d200f2962ecd63c81be6c09f1a67ec7c75a56))
+
 ## [1.6.4](https://github.com/DroidWorksStudio/mLauncher/tree/1.6.4) - (07, July 2024)
 
 ### Implemented Enhancements:
