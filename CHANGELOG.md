@@ -12,6 +12,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Updated com.android.application and com.android.library - ([c6b9c56](https://github.com/DroidWorksStudio/mLauncher/commit/c6b9c5612580b79e48cd6ac7c189f41239a8ea08))
 
+### Feature Removal:
+
+- Removed Junk - ([f13a91f](https://github.com/DroidWorksStudio/mLauncher/commit/f13a91fec02c6788c09a867357cb7c15bf8f7dbc))
+
 ### Refactoring:
 
 - Disable Script Fonts - ([bf02a6a](https://github.com/DroidWorksStudio/mLauncher/commit/bf02a6a9167140204fbc7b1d8882e39c1587e2c2))
