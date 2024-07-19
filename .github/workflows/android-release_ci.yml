@@ -12,18 +12,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout project
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4.1.7
         with:
           token: ${{ secrets.GIT_BOT_TOKEN }}
 
       - name: set up JDK 17
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4.2.1
         with:
           java-version: '17'
           distribution: 'temurin'
           cache: gradle
 
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4.0.2
         with:
           path: |
             ~/.gradle/caches
@@ -39,7 +39,7 @@ jobs:
         run: ./gradlew clean && ./gradlew assembleRelease
 
       - name: Sign APK
-        uses: ilharp/sign-android-release@v1
+        uses: ilharp/sign-android-release@v1.0.4
         # ID used to access action output
         id: sign_app
         with:
@@ -51,7 +51,7 @@ jobs:
           buildToolsVersion: 33.0.0
 
       - name: Release to GitHub
-        uses: svenstaro/upload-release-action@v2
+        uses: svenstaro/upload-release-action@2.9.0
         with:
           repo_token: ${{ secrets.GIT_BOT_TOKEN }}
           file: ${{steps.sign_app.outputs.signedFile}}
