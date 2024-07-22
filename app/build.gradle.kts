@@ -109,7 +109,7 @@ dependencies {
     implementation("androidx.activity:activity-compose:1.9.0")
     // Compose Material Design
     implementation("androidx.compose.material:material:$androidxTestKotlin")
-    implementation("com.github.SmartToolFactory:Compose-Colorful-Sliders:1.2.0")
+    implementation("com.github.SmartToolFactory:Compose-Colorful-Sliders:1.2.2")
     // Animations
     implementation("androidx.compose.animation:animation:$androidxTestKotlin")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
