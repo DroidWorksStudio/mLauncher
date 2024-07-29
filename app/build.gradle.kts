@@ -7,14 +7,14 @@ plugins {
 
 android {
     namespace = "com.github.droidworksstudio.mlauncher"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "app.mlauncher"
         minSdk = 23
-        targetSdk = 34
-        versionCode = 165
-        versionName = "1.6.5"
+        targetSdk = 35
+        versionCode = 166
+        versionName = "1.6.6"
     }
 
     buildTypes {
@@ -89,7 +89,7 @@ dependencies {
 
     // Android lifecycle
     implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.3")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.4")
 
     // Navigation
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
@@ -106,7 +106,7 @@ dependencies {
     // JETPACK
     // Integration with activities
     //noinspection GradleDependency
-    implementation("androidx.activity:activity-compose:1.9.0")
+    implementation("androidx.activity:activity-compose:1.9.1")
     // Compose Material Design
     implementation("androidx.compose.material:material:$androidxTestKotlin")
     implementation("com.github.SmartToolFactory:Compose-Colorful-Sliders:1.2.0")
@@ -139,7 +139,7 @@ dependencies {
     // Needed for createComposeRule, but not createAndroidComposeRule:
     debugImplementation("androidx.compose.ui:ui-test-manifest:$androidxTestKotlin")
     androidTestImplementation("androidx.navigation:navigation-testing:2.7.7")
-    debugImplementation("androidx.fragment:fragment-testing:1.8.1")
+    debugImplementation("androidx.fragment:fragment-testing:1.8.2")
     implementation("androidx.test:core-ktx:1.6.1")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
     androidTestImplementation("androidx.test:runner:1.6.1")
