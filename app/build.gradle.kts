@@ -139,7 +139,7 @@ dependencies {
     // Needed for createComposeRule, but not createAndroidComposeRule:
     debugImplementation("androidx.compose.ui:ui-test-manifest:$androidxTestKotlin")
     androidTestImplementation("androidx.navigation:navigation-testing:2.7.7")
-    debugImplementation("androidx.fragment:fragment-testing:1.8.1")
+    debugImplementation("androidx.fragment:fragment-testing:1.8.2")
     implementation("androidx.test:core-ktx:1.6.1")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
     androidTestImplementation("androidx.test:runner:1.6.1")
