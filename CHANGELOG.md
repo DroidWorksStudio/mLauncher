@@ -4,12 +4,6 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
-### Releases:
-
-- Prepare for version 1.6.6 - ([80d9711](https://github.com/DroidWorksStudio/mLauncher/commit/80d9711c2a423a0ee865f0a9569aad67b309e359))
-
-## [1.6.5](https://github.com/DroidWorksStudio/mLauncher/tree/1.6.5) - (28, July 2024)
-
 ### Bug Fixes:
 
 - Fixed issue where backup was not doing numbers currently. - ([3a1ee1a](https://github.com/DroidWorksStudio/mLauncher/commit/3a1ee1ab9006649f27fdb97eaf15a4f926872469))
@@ -24,11 +18,16 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Updated Patched Fonts - ([30157c5](https://github.com/DroidWorksStudio/mLauncher/commit/30157c575dced17377278b36aa4629c86339b562))
 - Disable Script Fonts - ([bf02a6a](https://github.com/DroidWorksStudio/mLauncher/commit/bf02a6a9167140204fbc7b1d8882e39c1587e2c2))
 
 ### Reverts:
 
 - Revert "Update TR Locales ([#529](https://github.com/DroidWorksStudio/mLauncher/issues/529))" ([#530](https://github.com/DroidWorksStudio/mLauncher/issues/530)) - ([e09d200](https://github.com/DroidWorksStudio/mLauncher/commit/e09d200f2962ecd63c81be6c09f1a67ec7c75a56))
+
+### Releases:
+
+- Prepare for version 1.6.6 - ([80d9711](https://github.com/DroidWorksStudio/mLauncher/commit/80d9711c2a423a0ee865f0a9569aad67b309e359))
 
 ## [1.6.4](https://github.com/DroidWorksStudio/mLauncher/tree/1.6.4) - (07, July 2024)
 
