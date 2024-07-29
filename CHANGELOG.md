@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Releases:
+
+- Prepare for version 1.6.6 - ([80d9711](https://github.com/DroidWorksStudio/mLauncher/commit/80d9711c2a423a0ee865f0a9569aad67b309e359))
+
+## [1.6.5](https://github.com/DroidWorksStudio/mLauncher/tree/1.6.5) - (28, July 2024)
+
 ### Bug Fixes:
 
 - Fixed issue where backup was not doing numbers currently. - ([3a1ee1a](https://github.com/DroidWorksStudio/mLauncher/commit/3a1ee1ab9006649f27fdb97eaf15a4f926872469))
