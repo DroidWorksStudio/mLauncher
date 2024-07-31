@@ -18,10 +18,10 @@
 </div>
 
 - Chat with us at [mLauncher](https://t.me/DroidWorksStudio) on telegram.
-- This application can be found on [F-Droid](https://f-droid.org/packages/app.mlauncher/) and [Github](https://github.com/HeCodes2Much/mLauncher/releases/).
+- This application can be found on [F-Droid](https://f-droid.org/packages/app.mlauncher/) and [GitHub](https://github.com/HeCodes2Much/mLauncher/releases/).
 - The latest stable version is available on the [`main`](https://github.com/HeCodes2Much/mLauncher/tree/main) branch, which can be cloned to build the application independently.
-- Additionally, a Github action has been set up to automatically generate an APK for every [release](https://github.com/HeCodes2Much/mLauncher/releases).
-- The **original** version of the application is also accessible on the [Play Store](https://play.google.com/store/apps/details?id=app.olauncher), [F-Droid](https://f-droid.org/fr/packages/app.olauncher/) & [Github](https://github.com/tanujnotes/Olauncher).
+- Additionally, a GitHub action has been set up to automatically generate an APK for every [release](https://github.com/HeCodes2Much/mLauncher/releases).
+- The **original** version of the application is also accessible on the [Play Store](https://play.google.com/store/apps/details?id=app.olauncher), [F-Droid](https://f-droid.org/fr/packages/app.olauncher/) & [GitHub](https://github.com/tanujnotes/Olauncher).
 
 We try to balance customizability and minimalization well still being simple :)</h3>
 
