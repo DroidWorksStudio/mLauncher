@@ -40,7 +40,7 @@ jobs:
         run: ./gradlew clean && ./gradlew assembleDebug
 
       - name: Upload Artifact
-        uses: actions/upload-artifact@v4.3.4
+        uses: actions/upload-artifact@v4.3.5
         with:
           name: Signed app bundle
           path: app/build/outputs/apk/debug/*.apk
