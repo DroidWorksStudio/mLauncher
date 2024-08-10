@@ -15,6 +15,8 @@ import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
+import android.widget.ScrollView
 import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
@@ -118,14 +120,7 @@ class ReorderHomeAppsFragment : Fragment() {
             DragEvent.ACTION_DROP -> {
                 // Remove highlighting
                 targetView.background = null
-                return true
-            }
-            DragEvent.ACTION_DRAG_ENDED -> {
-                // Remove highlighting when the drag ends
-                targetView.background = null
-                return true
-            }
-            else -> {
+                
                 // Extract the dragged TextView
                 val draggedTextView = event.localState as TextView
 
@@ -134,8 +129,14 @@ class ReorderHomeAppsFragment : Fragment() {
                 val targetIndex = (targetView.parent as ViewGroup).indexOfChild(targetView)
                 reorderApps(draggedIndex, targetIndex)
 
-                return false
+                return true
             }
+            DragEvent.ACTION_DRAG_ENDED -> {
+                // Remove highlighting when the drag ends
+                targetView.background = null
+                return true
+            }
+            else -> return false
         }
     }
 
@@ -220,5 +221,8 @@ class ReorderHomeAppsFragment : Fragment() {
                 true
             }
         }
+
+        // Scroll to the top of the list after updating
+        (binding.homeAppsLayout.parent as? ScrollView)?.scrollTo(0, 0)
     }
 }
