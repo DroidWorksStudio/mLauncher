@@ -118,7 +118,7 @@ dependencies {
     implementation("androidx.compose.ui:ui:$androidxTestKotlin")
     implementation("androidx.compose.ui:ui-tooling:$androidxTestKotlin")
     implementation("androidx.compose.foundation:foundation:$androidxTestKotlin")
-    implementation("androidx.biometric:biometric-ktx:1.2.0-alpha05")
+    implementation("androidx.biometric:biometric-ktx:1.4.0-alpha02")
 
     //color picker
     implementation("net.mm2d.color-chooser:color-chooser:0.7.3")
@@ -135,7 +135,7 @@ dependencies {
     implementation("androidx.test.espresso:espresso-idling-resource:$androidxTestEspresso")
 
     // Test rules and transitive dependencies:
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4:$androidxTestKotlin")
+   androidTestImplementation("androidx.compose.ui:ui-test-junit4:$androidxTestKotlin")
     // Needed for createComposeRule, but not createAndroidComposeRule:
     debugImplementation("androidx.compose.ui:ui-test-manifest:$androidxTestKotlin")
     androidTestImplementation("androidx.navigation:navigation-testing:2.7.7")
