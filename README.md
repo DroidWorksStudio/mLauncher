@@ -17,6 +17,38 @@
     </p>
 </div>
 
+
+mLauncher
+
+    next time
+        init the collation key
+        introduce priority (doc the prop)
+        sort by priority,name
+        ui to define priority for an app
+    App list (drawer)
+        Search 
+            Fuzzy search
+            Match with transliteration (see collation)
+        Bug: Долго открывается список приложений
+        Bug: recent apps are hidden
+        affect order (set priorities)
+    Home screen
+        App usage times are incorrect
+        Recent apps as a folder
+        Allow app pickers as plugins
+        Bug: home screen pages
+        Show notification count
+        add directories
+        Implement boxes
+            different swipes open different apps : like taking items out of a box
+                8 directions
+            Animate when swiping
+            On tap : look inside the box. Reveal its content
+            Pros: faster than a directory: one action instead of two
+    Settings view
+        Too long to scroll: what if make a content?
+
+
 - Chat with us at [mLauncher](https://t.me/DroidWorksStudio) on telegram.
 - This application can be found on [F-Droid](https://f-droid.org/packages/app.mlauncher/) and [GitHub](https://github.com/HeCodes2Much/mLauncher/releases/).
 - The latest stable version is available on the [`main`](https://github.com/HeCodes2Much/mLauncher/tree/main) branch, which can be cloned to build the application independently.
