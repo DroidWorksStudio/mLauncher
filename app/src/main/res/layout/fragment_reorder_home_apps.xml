@@ -18,7 +18,7 @@
     <LinearLayout
         android:id="@+id/pageLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginStart="24dp"
         android:layout_marginTop="56dp"
         android:layout_marginEnd="24dp"
@@ -34,15 +34,22 @@
             android:textSize="@dimen/date_size" />
 
         <!-- Home apps-->
-        <LinearLayout
-            android:id="@+id/homeAppsLayout"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_vertical"
-            android:orientation="vertical"
-            android:paddingHorizontal="20dp"
-            android:paddingBottom="80dp"
-            android:paddingTop="112dp" />
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/homeAppsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingHorizontal="20dp"
+                android:paddingBottom="80dp"
+                android:paddingTop="112dp" />
+
+        </ScrollView>
     </LinearLayout>
 
 </FrameLayout>

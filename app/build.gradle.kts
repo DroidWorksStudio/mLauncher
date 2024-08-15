@@ -95,7 +95,7 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
 
     // Work Manager
-    implementation("androidx.work:work-runtime-ktx:2.9.0")
+    implementation("androidx.work:work-runtime-ktx:2.9.1")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.constraintlayout:constraintlayout-compose:1.0.1")
 
@@ -118,7 +118,7 @@ dependencies {
     implementation("androidx.compose.ui:ui:$androidxTestKotlin")
     implementation("androidx.compose.ui:ui-tooling:$androidxTestKotlin")
     implementation("androidx.compose.foundation:foundation:$androidxTestKotlin")
-    implementation("androidx.biometric:biometric-ktx:1.2.0-alpha05")
+    implementation("androidx.biometric:biometric-ktx:1.4.0-alpha02")
 
     //color picker
     implementation("net.mm2d.color-chooser:color-chooser:0.7.3")
@@ -135,7 +135,7 @@ dependencies {
     implementation("androidx.test.espresso:espresso-idling-resource:$androidxTestEspresso")
 
     // Test rules and transitive dependencies:
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4:$androidxTestKotlin")
+   androidTestImplementation("androidx.compose.ui:ui-test-junit4:$androidxTestKotlin")
     // Needed for createComposeRule, but not createAndroidComposeRule:
     debugImplementation("androidx.compose.ui:ui-test-manifest:$androidxTestKotlin")
     androidTestImplementation("androidx.navigation:navigation-testing:2.7.7")

@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Implemented Enhancements:
+
+- Add ScrollView for reordering apps screen. - ([145909e](https://github.com/DroidWorksStudio/mLauncher/commit/145909efb113ec71104c4bc9cb29fab08c75dcf0))
+
 ### Documentation:
 
 - Update README.md ([#545](https://github.com/DroidWorksStudio/mLauncher/issues/545)) - ([7b110d4](https://github.com/DroidWorksStudio/mLauncher/commit/7b110d4f70d41274302a76c46d39865325ad192a))
