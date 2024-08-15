@@ -85,6 +85,8 @@ class AppDrawerAdapter(
 
         holder.appSaveRename.setOnClickListener {
             val name = holder.appRenameEdit.text.toString().trim()
+            /* TODO looks like the wrong direction of data flow. The update must be written to the DB,
+                    (which is prefs?), and then propagated from there */
             appModel.appAlias = name
             notifyItemChanged(holder.absoluteAdapterPosition)
             appRenameListener(appModel.appPackage, appModel.appAlias)
@@ -129,11 +131,7 @@ class AppDrawerAdapter(
                 } else {
                     filteredApps = (if (searchChars.isEmpty()) appsList
                     else appsList.filter { app ->
-                        if (app.appAlias.isEmpty()) {
-                            FuzzyFinder.normalizeString(app.appLabel, searchChars)
-                        } else {
-                            FuzzyFinder.normalizeString(app.appAlias, searchChars)
-                        }
+                        FuzzyFinder.normalizeString(app.name, searchChars)
                     } as MutableList<AppModel>)
                 }
 
@@ -219,10 +217,6 @@ class AppDrawerAdapter(
                     appHide.text = context.getString(R.string.hide)
                 }
 
-                val appName = appModel.appAlias.ifEmpty {
-                    appModel.appLabel
-                }
-
                 appRename.apply {
                     setOnClickListener {
                         if (appModel.appPackage.isNotEmpty()) {
@@ -260,10 +254,10 @@ class AppDrawerAdapter(
                         }
                     })
                     // set current name as default text in EditText
-                    text = Editable.Factory.getInstance().newEditable(appName)
+                    text = Editable.Factory.getInstance().newEditable(appModel.name)
                 }
 
-                appTitle.text = appName
+                appTitle.text = appModel.name
 
                 // set text gravity
                 val params = appTitle.layoutParams as FrameLayout.LayoutParams

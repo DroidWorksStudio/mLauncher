@@ -6,7 +6,7 @@ import java.util.*
 
 object FuzzyFinder {
     fun scoreApp(app: AppModel, searchChars: String, topScore: Int): Int {
-        val appChars = app.appAlias.ifEmpty { app.appLabel }
+        val appChars = app.name
 
         val fuzzyScore = calculateFuzzyScore(
             normalizeString(appChars),

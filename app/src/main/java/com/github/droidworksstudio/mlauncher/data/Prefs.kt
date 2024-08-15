@@ -488,14 +488,11 @@ class Prefs(val context: Context) {
 
     private fun storeApp(id: String, appModel: AppModel) {
         val edit = prefs.edit()
-        val appAlias = appModel.appAlias.ifEmpty {
-            appModel.appLabel
-        }
 
-        edit.putString("${APP_NAME}_$id", appAlias)
+        edit.putString("${APP_NAME}_$id", appModel.name)
         edit.putString("${APP_PACKAGE}_$id", appModel.appPackage)
         edit.putString("${APP_ACTIVITY}_$id", appModel.appActivityName)
-        edit.putString("${APP_ALIAS}_$id", appModel.appAlias)
+        edit.putString("${APP_ALIAS}_$id", appModel.appAlias) // TODO can be empty. so what?
         edit.putString("${APP_USER}_$id", appModel.user.toString())
         edit.apply()
     }

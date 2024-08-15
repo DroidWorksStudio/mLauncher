@@ -14,6 +14,7 @@ data class AppModel(
         val user: UserHandle,
         var appAlias: String, // TODO why var?
 ) : Comparable<AppModel> {
+    // TODO rename. Visible name?
     val name = appLabel.ifEmpty { appAlias }
 
     /** Speed up the sort and search */
