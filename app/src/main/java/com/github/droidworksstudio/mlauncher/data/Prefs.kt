@@ -482,8 +482,7 @@ class Prefs(val context: Context) {
             appPackage = appPackage,
             appAlias = appAlias,
             appActivityName = appActivityName,
-            user = userHandle,
-            key = null,
+            user = userHandle
         )
     }
 

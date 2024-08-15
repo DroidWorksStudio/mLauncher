@@ -115,7 +115,6 @@ suspend fun getAppsList(
             val userManager = context.getSystemService(Context.USER_SERVICE) as UserManager
             val launcherApps =
                 context.getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps
-            val collator = Collator.getInstance()
 
             val prefs = Prefs(context)
 
@@ -130,7 +129,6 @@ suspend fun getAppsList(
 
                     val appModel = AppModel(
                         app.label.toString(),
-                        collator.getCollationKey(app.label.toString()),
                         app.applicationInfo.packageName,
                         app.componentName.className,
                         profile,
@@ -153,9 +151,8 @@ suspend fun getAppsList(
                     }
 
                 }
-                appList.sortBy {
-                    if (it.appAlias.isEmpty()) it.appLabel.lowercase() else it.appAlias.lowercase()
-                }
+
+                appList.sort()
 
                 if (prefs.recentAppsDisplayed) {
                     val appUsageTracker = AppUsageTracker.createInstance(context)
@@ -168,7 +165,6 @@ suspend fun getAppsList(
 
                         val appModel = AppModel(
                             appName,
-                            collator.getCollationKey(appName),
                             packageName,
                             appActivityName,
                             profile,
