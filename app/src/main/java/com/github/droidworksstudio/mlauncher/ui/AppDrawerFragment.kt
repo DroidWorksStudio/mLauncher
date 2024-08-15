@@ -1,3 +1,7 @@
+/**
+ * The view for the list of all the installed applications.
+ */
+
 package com.github.droidworksstudio.mlauncher.ui
 
 import android.annotation.SuppressLint

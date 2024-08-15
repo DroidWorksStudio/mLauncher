@@ -1,3 +1,7 @@
+/**
+ * You can get to this fragment from the "reorder
+ */
+
 package com.github.droidworksstudio.mlauncher.ui
 
 import android.annotation.SuppressLint

@@ -1,3 +1,8 @@
+/**
+ * The view of the home screen.
+ * Meaning, the screen with the clock, and the user-defined list of apps.
+ */
+
 package com.github.droidworksstudio.mlauncher.ui
 
 import android.annotation.SuppressLint
