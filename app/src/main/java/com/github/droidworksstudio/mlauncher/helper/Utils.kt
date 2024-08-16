@@ -136,13 +136,15 @@ suspend fun getAppsList(
                         prefs.getAppAlias(app.label.toString())
                     }
 
+                    val priorities = listOf(-1.0, 0.0, 1.0, 2.0, 3.0)
+
                     val appModel = AppModel(
                         app.label.toString(),
                         app.applicationInfo.packageName,
                         app.componentName.className,
                         profile,
                         appAlias,
-                        priority = 0.0,
+                        priority = priorities.random(),
                     )
 
                     // if the current app is not mLauncher

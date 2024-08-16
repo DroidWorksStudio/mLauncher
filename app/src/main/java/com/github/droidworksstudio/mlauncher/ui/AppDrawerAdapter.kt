@@ -257,7 +257,7 @@ class AppDrawerAdapter(
                     text = Editable.Factory.getInstance().newEditable(appModel.name)
                 }
 
-                appTitle.text = appModel.name
+                appTitle.text = "${appModel.name} ${appModel.priority}"
 
                 // set text gravity
                 val params = appTitle.layoutParams as FrameLayout.LayoutParams
