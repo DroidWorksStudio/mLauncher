@@ -465,6 +465,7 @@ class Prefs(val context: Context) {
 
 
     private fun loadApp(id: String): AppListItem {
+        // TODO why these are stored in prefs?
         val appName = prefs.getString("${APP_NAME}_$id", "").toString()
         val appPackage = prefs.getString("${APP_PACKAGE}_$id", "").toString()
         val appAlias = prefs.getString("${APP_ALIAS}_$id", "").toString()
@@ -483,7 +484,7 @@ class Prefs(val context: Context) {
             appAlias = appAlias,
             appActivityName = appActivityName,
             user = userHandle,
-            priority = 0.0,
+            priority = 0.0, // TODO real priority
         )
     }
 

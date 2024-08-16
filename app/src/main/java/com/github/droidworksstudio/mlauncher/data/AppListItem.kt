@@ -5,7 +5,6 @@ import java.text.Collator
 
 val collator: Collator = Collator.getInstance()
 
-// TODO rename instances of the class to `app`
 // TODO: rename fields: cut off the `app` prefix
 // TODO make difference between data from the system, and from the prefs (extract object?)
 /**

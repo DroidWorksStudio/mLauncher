@@ -181,7 +181,7 @@ suspend fun getAppsList(
                             appActivityName,
                             profile,
                             appAlias,
-                            priority = 0.0,
+                            priority = 0.0, // TODO real priority
                         )
 
                         d("appModel",app.toString())
