@@ -47,13 +47,13 @@ import kotlin.math.pow
 import kotlin.math.sqrt
 
 sealed class Duration
-object Long : Duration()
-object Short : Duration()
+object LongTime : Duration()
+object ShortTime : Duration()
 
 fun showToast(context: Context, message: String, duration: Duration) {
     when (duration) {
-        is Long -> Toast.LENGTH_LONG
-        is Short -> Toast.LENGTH_SHORT
+        is LongTime -> Toast.LENGTH_LONG
+        is ShortTime -> Toast.LENGTH_SHORT
     }
         .let { Toast.makeText(context.applicationContext, message, it) }
         .also { it.setGravity(Gravity.CENTER, 0, 0) }
@@ -61,11 +61,11 @@ fun showToast(context: Context, message: String, duration: Duration) {
 }
 
 fun showToastLong(context: Context, message: String) {
-    showToast(context, message, Long)
+    showToast(context, message, LongTime)
 }
 
 fun showToastShort(context: Context, message: String) {
-    showToast(context, message, Short)
+    showToast(context, message, ShortTime)
 }
 
 fun hasUsagePermission(context: Context): Boolean {
