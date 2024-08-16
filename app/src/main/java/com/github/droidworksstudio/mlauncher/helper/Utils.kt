@@ -47,16 +47,26 @@ import java.util.Locale
 import kotlin.math.pow
 import kotlin.math.sqrt
 
+sealed class Duration
+object Long : Duration()
+object Short : Duration()
+
+fun showToast(context: Context, message: String, duration: Duration) {
+    when (duration) {
+        is Long -> Toast.LENGTH_LONG
+        is Short -> Toast.LENGTH_SHORT
+    }
+        .let { Toast.makeText(context.applicationContext, message, it) }
+        .also { it.setGravity(Gravity.CENTER, 0, 0) }
+        .show()
+}
+
 fun showToastLong(context: Context, message: String) {
-    val toast = Toast.makeText(context.applicationContext, message, Toast.LENGTH_LONG)
-    toast.setGravity(Gravity.CENTER, 0, 0)
-    toast.show()
+    showToast(context, message, Long)
 }
 
 fun showToastShort(context: Context, message: String) {
-    val toast = Toast.makeText(context.applicationContext, message, Toast.LENGTH_SHORT)
-    toast.setGravity(Gravity.CENTER, 0, 0)
-    toast.show()
+    showToast(context, message, Short)
 }
 
 fun hasUsagePermission(context: Context): Boolean {
