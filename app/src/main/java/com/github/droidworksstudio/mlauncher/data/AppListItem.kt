@@ -5,7 +5,7 @@ import java.text.Collator
 
 val collator: Collator = Collator.getInstance()
 
-// TODO rename the class ? AppListItem
+// TODO rename instances of the class to `app`
 // TODO: rename fields: cut off the `app` prefix
 // TODO make difference between data from the system, and from the prefs (extract object?)
 /**
@@ -16,14 +16,14 @@ val collator: Collator = Collator.getInstance()
  *
  * TODO why the instances are created in 3 different places?
  */
-data class AppModel(
+data class AppListItem(
     val appLabel: String,
     val appPackage: String,
     val appActivityName: String,
     val user: UserHandle, // TODO doc why it matters
     var appAlias: String, // TODO make immutable by refining data flow
     val priority: Double,
-) : Comparable<AppModel> {
+) : Comparable<AppListItem> {
     // TODO rename. Visible name?
     val name = appLabel.ifEmpty { appAlias }
 
@@ -34,7 +34,7 @@ data class AppModel(
      * Compare by `priority`, then by name.
      * It works like `ORDER BY rank, priority` in sql
      */
-    override fun compareTo(other: AppModel): Int {
+    override fun compareTo(other: AppListItem): Int {
         priority.compareTo(other.priority).also { if (it != 0) return it}
         return collationKey.compareTo(other.collationKey)
     }

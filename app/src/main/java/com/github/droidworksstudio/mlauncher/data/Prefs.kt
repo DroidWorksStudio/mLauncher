@@ -408,12 +408,12 @@ class Prefs(val context: Context) {
         get() = prefs.getBoolean(HIDDEN_APPS_DISPLAYED, false)
         set(value) = prefs.edit().putBoolean(HIDDEN_APPS_DISPLAYED, value).apply()
 
-    fun getHomeAppModel(i: Int): AppModel {
+    fun getHomeAppModel(i: Int): AppListItem {
         return loadApp("$i")
     }
 
-    fun setHomeAppModel(i: Int, appModel: AppModel) {
-        storeApp("$i", appModel)
+    fun setHomeAppModel(i: Int, appListItem: AppListItem) {
+        storeApp("$i", appListItem)
     }
 
     fun setHomeAppName(i: Int, name: String) {
@@ -421,50 +421,50 @@ class Prefs(val context: Context) {
         prefs.edit().putString(nameId, name).apply()
     }
 
-    var appShortSwipeUp: AppModel
+    var appShortSwipeUp: AppListItem
         get() = loadApp(SHORT_SWIPE_UP)
         set(appModel) = storeApp(SHORT_SWIPE_UP, appModel)
-    var appShortSwipeDown: AppModel
+    var appShortSwipeDown: AppListItem
         get() = loadApp(SHORT_SWIPE_DOWN)
         set(appModel) = storeApp(SHORT_SWIPE_DOWN, appModel)
-    var appShortSwipeLeft: AppModel
+    var appShortSwipeLeft: AppListItem
         get() = loadApp(SHORT_SWIPE_LEFT)
         set(appModel) = storeApp(SHORT_SWIPE_LEFT, appModel)
-    var appShortSwipeRight: AppModel
+    var appShortSwipeRight: AppListItem
         get() = loadApp(SHORT_SWIPE_RIGHT)
         set(appModel) = storeApp(SHORT_SWIPE_RIGHT, appModel)
 
-    var appLongSwipeUp: AppModel
+    var appLongSwipeUp: AppListItem
         get() = loadApp(LONG_SWIPE_UP)
         set(appModel) = storeApp(LONG_SWIPE_UP, appModel)
-    var appLongSwipeDown: AppModel
+    var appLongSwipeDown: AppListItem
         get() = loadApp(LONG_SWIPE_DOWN)
         set(appModel) = storeApp(LONG_SWIPE_DOWN, appModel)
-    var appLongSwipeLeft: AppModel
+    var appLongSwipeLeft: AppListItem
         get() = loadApp(LONG_SWIPE_LEFT)
         set(appModel) = storeApp(LONG_SWIPE_LEFT, appModel)
-    var appLongSwipeRight: AppModel
+    var appLongSwipeRight: AppListItem
         get() = loadApp(LONG_SWIPE_RIGHT)
         set(appModel) = storeApp(LONG_SWIPE_RIGHT, appModel)
 
-    var appClickClock: AppModel
+    var appClickClock: AppListItem
         get() = loadApp(CLICK_CLOCK)
         set(appModel) = storeApp(CLICK_CLOCK, appModel)
 
-    var appClickUsage: AppModel
+    var appClickUsage: AppListItem
         get() = loadApp(CLICK_USAGE)
         set(appModel) = storeApp(CLICK_USAGE, appModel)
 
-    var appClickDate: AppModel
+    var appClickDate: AppListItem
         get() = loadApp(CLICK_DATE)
         set(appModel) = storeApp(CLICK_DATE, appModel)
 
-    var appDoubleTap: AppModel
+    var appDoubleTap: AppListItem
         get() = loadApp(DOUBLE_TAP)
         set(appModel) = storeApp(DOUBLE_TAP, appModel)
 
 
-    private fun loadApp(id: String): AppModel {
+    private fun loadApp(id: String): AppListItem {
         val appName = prefs.getString("${APP_NAME}_$id", "").toString()
         val appPackage = prefs.getString("${APP_PACKAGE}_$id", "").toString()
         val appAlias = prefs.getString("${APP_ALIAS}_$id", "").toString()
@@ -477,7 +477,7 @@ class Prefs(val context: Context) {
         }
         val userHandle: UserHandle = getUserHandleFromString(context, userHandleString)
 
-        return AppModel(
+        return AppListItem(
             appLabel = appName,
             appPackage = appPackage,
             appAlias = appAlias,
@@ -487,14 +487,14 @@ class Prefs(val context: Context) {
         )
     }
 
-    private fun storeApp(id: String, appModel: AppModel) {
+    private fun storeApp(id: String, app: AppListItem) {
         val edit = prefs.edit()
 
-        edit.putString("${APP_NAME}_$id", appModel.name)
-        edit.putString("${APP_PACKAGE}_$id", appModel.appPackage)
-        edit.putString("${APP_ACTIVITY}_$id", appModel.appActivityName)
-        edit.putString("${APP_ALIAS}_$id", appModel.appAlias) // TODO can be empty. so what?
-        edit.putString("${APP_USER}_$id", appModel.user.toString())
+        edit.putString("${APP_NAME}_$id", app.name)
+        edit.putString("${APP_PACKAGE}_$id", app.appPackage)
+        edit.putString("${APP_ACTIVITY}_$id", app.appActivityName)
+        edit.putString("${APP_ALIAS}_$id", app.appAlias) // TODO can be empty. so what?
+        edit.putString("${APP_USER}_$id", app.user.toString())
         edit.apply()
     }
 

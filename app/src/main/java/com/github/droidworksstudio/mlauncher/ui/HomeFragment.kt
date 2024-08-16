@@ -39,7 +39,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.github.droidworksstudio.mlauncher.MainViewModel
 import com.github.droidworksstudio.mlauncher.R
-import com.github.droidworksstudio.mlauncher.data.AppModel
+import com.github.droidworksstudio.mlauncher.data.AppListItem
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Constants.Action
 import com.github.droidworksstudio.mlauncher.data.Constants.AppDrawerFlag
@@ -334,8 +334,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         else launchApp(prefs.getHomeAppModel(location))
     }
 
-    private fun launchApp(appModel: AppModel) {
-        viewModel.selectedApp(appModel, AppDrawerFlag.LaunchApp)
+    private fun launchApp(app: AppListItem) {
+        viewModel.selectedApp(app, AppDrawerFlag.LaunchApp)
     }
 
     private fun showAppList(flag: AppDrawerFlag, includeHiddenApps: Boolean = false, n: Int = 0) {

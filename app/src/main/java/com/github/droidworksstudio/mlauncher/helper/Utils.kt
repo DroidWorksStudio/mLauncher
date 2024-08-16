@@ -34,7 +34,7 @@ import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.view.ContextThemeWrapper
 import com.github.droidworksstudio.mlauncher.BuildConfig
-import com.github.droidworksstudio.mlauncher.data.AppModel
+import com.github.droidworksstudio.mlauncher.data.AppListItem
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import kotlinx.coroutines.Dispatchers
@@ -112,11 +112,11 @@ suspend fun getAppsList(
     includeRegularApps: Boolean = true,
     includeHiddenApps: Boolean = false,
     includeRecentApps: Boolean = true,
-): MutableList<AppModel> {
+): MutableList<AppListItem> {
     return withContext(Dispatchers.Main) {
-        val appList: MutableList<AppModel> = mutableListOf()
-        val appRecentList: MutableList<AppModel> = mutableListOf()
-        val combinedList: MutableList<AppModel> = mutableListOf()
+        val appList: MutableList<AppListItem> = mutableListOf()
+        val appRecentList: MutableList<AppListItem> = mutableListOf()
+        val combinedList: MutableList<AppListItem> = mutableListOf()
 
         try {
             val hiddenApps = Prefs(context).hiddenApps
@@ -128,36 +128,36 @@ suspend fun getAppsList(
             val prefs = Prefs(context)
 
             for (profile in userManager.userProfiles) {
-                for (app in launcherApps.getActivityList(null, profile)) {
+                for (activity in launcherApps.getActivityList(null, profile)) {
 
                     // we have changed the alias identifier from app.label to app.applicationInfo.packageName
                     // therefore, we check if the old one is set if the new one is empty
-                    val appAlias = prefs.getAppAlias(app.applicationInfo.packageName).ifEmpty {
-                        prefs.getAppAlias(app.label.toString())
+                    val appAlias = prefs.getAppAlias(activity.applicationInfo.packageName).ifEmpty {
+                        prefs.getAppAlias(activity.label.toString())
                     }
 
                     val priorities = listOf(-1.0, 0.0, 1.0, 2.0, 3.0)
 
-                    val appModel = AppModel(
-                        app.label.toString(),
-                        app.applicationInfo.packageName,
-                        app.componentName.className,
+                    val app = AppListItem(
+                        activity.label.toString(),
+                        activity.applicationInfo.packageName,
+                        activity.componentName.className,
                         profile,
                         appAlias,
                         priority = priorities.random(),
                     )
 
                     // if the current app is not mLauncher
-                    if (app.applicationInfo.packageName != BuildConfig.APPLICATION_ID) {
+                    if (activity.applicationInfo.packageName != BuildConfig.APPLICATION_ID) {
                         // is this a hidden app?
-                        if (hiddenApps.contains(app.applicationInfo.packageName + "|" + profile.toString())) {
+                        if (hiddenApps.contains(activity.applicationInfo.packageName + "|" + profile.toString())) {
                             if (includeHiddenApps) {
-                                appList.add(appModel)
+                                appList.add(app)
                             }
                         } else {
                             // this is a regular app
                             if (includeRegularApps) {
-                                appList.add(appModel)
+                                appList.add(app)
                             }
                         }
                     }
@@ -175,7 +175,7 @@ suspend fun getAppsList(
                             appName
                         }
 
-                        val appModel = AppModel(
+                        val app = AppListItem(
                             appName,
                             packageName,
                             appActivityName,
@@ -184,10 +184,10 @@ suspend fun getAppsList(
                             priority = 0.0,
                         )
 
-                        d("appModel",appModel.toString())
+                        d("appModel",app.toString())
 
                         if (includeRecentApps) {
-                            appRecentList.add(appModel)
+                            appRecentList.add(app)
                             // Remove appModel from appList if its packageName matches
                             val iterator = appList.iterator()
                             while (iterator.hasNext()) {

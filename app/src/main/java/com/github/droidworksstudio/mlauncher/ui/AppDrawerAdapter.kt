@@ -21,7 +21,7 @@ import androidx.core.view.updatePadding
 import androidx.recyclerview.widget.RecyclerView
 import com.github.droidworksstudio.fuzzywuzzy.FuzzyFinder
 import com.github.droidworksstudio.mlauncher.R
-import com.github.droidworksstudio.mlauncher.data.AppModel
+import com.github.droidworksstudio.mlauncher.data.AppListItem
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Constants.AppDrawerFlag
 import com.github.droidworksstudio.mlauncher.data.Prefs
@@ -36,17 +36,17 @@ class AppDrawerAdapter(
     private val context: Context,
     private var flag: AppDrawerFlag,
     private val gravity: Int,
-    private val appClickListener: (AppModel) -> Unit,
-    private val appDeleteListener: (AppModel) -> Unit,
+    private val appClickListener: (AppListItem) -> Unit,
+    private val appDeleteListener: (AppListItem) -> Unit,
     private val appRenameListener: (String, String) -> Unit,
-    private val appHideListener: (AppDrawerFlag, AppModel) -> Unit,
-    private val appInfoListener: (AppModel) -> Unit
+    private val appHideListener: (AppDrawerFlag, AppListItem) -> Unit,
+    private val appInfoListener: (AppListItem) -> Unit
 ) : RecyclerView.Adapter<AppDrawerAdapter.ViewHolder>(), Filterable {
 
     private lateinit var prefs: Prefs
     private var appFilter = createAppFilter()
-    var appsList: MutableList<AppModel> = mutableListOf()
-    var appFilteredList: MutableList<AppModel> = mutableListOf()
+    var appsList: MutableList<AppListItem> = mutableListOf()
+    var appFilteredList: MutableList<AppListItem> = mutableListOf()
     private lateinit var binding: AdapterAppDrawerBinding
 
     // Instantiate Colors object
@@ -106,10 +106,10 @@ class AppDrawerAdapter(
                 prefs = Prefs(context)
 
                 val searchChars = charSearch.toString()
-                val filteredApps: MutableList<AppModel>
+                val filteredApps: MutableList<AppListItem>
 
                 if (prefs.filterStrength >= 1 ) {
-                    val scoredApps = mutableMapOf<AppModel, Int>()
+                    val scoredApps = mutableMapOf<AppListItem, Int>()
                     for (app in appsList) {
                         scoredApps[app] = FuzzyFinder.scoreApp(app, searchChars, Constants.FILTER_STRENGTH_MAX)
                     }
@@ -132,7 +132,7 @@ class AppDrawerAdapter(
                     filteredApps = (if (searchChars.isEmpty()) appsList
                     else appsList.filter { app ->
                         FuzzyFinder.normalizeString(app.name, searchChars)
-                    } as MutableList<AppModel>)
+                    } as MutableList<AppListItem>)
                 }
 
                 val filterResults = FilterResults()
@@ -145,7 +145,7 @@ class AppDrawerAdapter(
             @Suppress("UNCHECKED_CAST")
             override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
                 if (results?.values is MutableList<*>) {
-                    appFilteredList = results.values as MutableList<AppModel>
+                    appFilteredList = results.values as MutableList<AppListItem>
                     notifyDataSetChanged()
                 } else {
                     return
@@ -169,7 +169,7 @@ class AppDrawerAdapter(
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    fun setAppList(appsList: MutableList<AppModel>) {
+    fun setAppList(appsList: MutableList<AppListItem>) {
         this.appsList = appsList
         this.appFilteredList = appsList
         notifyDataSetChanged()
@@ -198,10 +198,10 @@ class AppDrawerAdapter(
         fun bind(
             flag: AppDrawerFlag,
             appLabelGravity: Int,
-            appModel: AppModel,
-            appClickListener: (AppModel) -> Unit,
-            appInfoListener: (AppModel) -> Unit,
-            appDeleteListener: (AppModel) -> Unit
+            appListItem: AppListItem,
+            appClickListener: (AppListItem) -> Unit,
+            appInfoListener: (AppListItem) -> Unit,
+            appDeleteListener: (AppListItem) -> Unit
         ) =
             with(itemView) {
                 val prefs = Prefs(context)
@@ -219,8 +219,8 @@ class AppDrawerAdapter(
 
                 appRename.apply {
                     setOnClickListener {
-                        if (appModel.appPackage.isNotEmpty()) {
-                            appRenameEdit.hint = appModel.appLabel
+                        if (appListItem.appPackage.isNotEmpty()) {
+                            appRenameEdit.hint = appListItem.appLabel
                             appRenameLayout.visibility = View.VISIBLE
                             appHideLayout.visibility = View.GONE
                             appRenameEdit.showKeyboard()
@@ -246,7 +246,7 @@ class AppDrawerAdapter(
                         ) {
                             if (appRenameEdit.text.isEmpty()) {
                                 appSaveRename.text = context.getString(R.string.reset)
-                            } else if (appRenameEdit.text.toString() == appModel.appAlias) {
+                            } else if (appRenameEdit.text.toString() == appListItem.appAlias) {
                                 appSaveRename.text = context.getString(R.string.cancel)
                             } else {
                                 appSaveRename.text = context.getString(R.string.rename)
@@ -254,10 +254,10 @@ class AppDrawerAdapter(
                         }
                     })
                     // set current name as default text in EditText
-                    text = Editable.Factory.getInstance().newEditable(appModel.name)
+                    text = Editable.Factory.getInstance().newEditable(appListItem.name)
                 }
 
-                appTitle.text = "${appModel.name} ${appModel.priority}"
+                appTitle.text = "${appListItem.name} ${appListItem.priority}"
 
                 // set text gravity
                 val params = appTitle.layoutParams as FrameLayout.LayoutParams
@@ -265,7 +265,7 @@ class AppDrawerAdapter(
                 appTitle.layoutParams = params
 
                 // add icon next to app name to indicate that this app is installed on another profile
-                if (appModel.user != android.os.Process.myUserHandle()) {
+                if (appListItem.user != android.os.Process.myUserHandle()) {
                     val icon = AppCompatResources.getDrawable(context, R.drawable.work_profile)
                     val px = dp2px(resources, prefs.appSize)
                     icon?.setBounds(0, 0, px, px)
@@ -284,13 +284,13 @@ class AppDrawerAdapter(
 
                 appTitleFrame.apply {
                     setOnClickListener {
-                        appClickListener(appModel)
+                        appClickListener(appListItem)
                     }
                     setOnLongClickListener {
                         val openApp = flag == AppDrawerFlag.LaunchApp || flag == AppDrawerFlag.HiddenApps
                         if (openApp) {
                             try {
-                                appDelete.alpha = if (context.isSystemApp(appModel.appPackage)) 0.3f else 1.0f
+                                appDelete.alpha = if (context.isSystemApp(appListItem.appPackage)) 0.3f else 1.0f
                                 appHideLayout.visibility = View.VISIBLE
                             } catch (e: Exception) {
                                 e.printStackTrace()
@@ -302,13 +302,13 @@ class AppDrawerAdapter(
 
                 appInfo.apply {
                     setOnClickListener {
-                        appInfoListener(appModel)
+                        appInfoListener(appListItem)
                     }
                 }
 
                 appDelete.apply {
                     setOnClickListener {
-                        appDeleteListener(appModel)
+                        appDeleteListener(appListItem)
                     }
                 }
 
