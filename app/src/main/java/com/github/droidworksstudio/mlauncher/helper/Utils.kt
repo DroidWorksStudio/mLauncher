@@ -142,6 +142,7 @@ suspend fun getAppsList(
                         app.componentName.className,
                         profile,
                         appAlias,
+                        priority = 0.0,
                     )
 
                     // if the current app is not mLauncher
@@ -178,6 +179,7 @@ suspend fun getAppsList(
                             appActivityName,
                             profile,
                             appAlias,
+                            priority = 0.0,
                         )
 
                         d("appModel",appModel.toString())
