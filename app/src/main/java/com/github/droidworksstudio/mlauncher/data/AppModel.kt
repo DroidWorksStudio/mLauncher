@@ -8,11 +8,11 @@ val collator: Collator = Collator.getInstance()
 // TODO rename the class ? AppListItem
 // TODO: rename fields: cut off the `app` prefix
 data class AppModel(
-        val appLabel: String,
-        val appPackage: String,
-        val appActivityName: String,
-        val user: UserHandle,
-        var appAlias: String, // TODO why var?
+    val appLabel: String,
+    val appPackage: String,
+    val appActivityName: String,
+    val user: UserHandle,
+    var appAlias: String, // TODO make immutable by refining data flow
 ) : Comparable<AppModel> {
     // TODO rename. Visible name?
     val name = appLabel.ifEmpty { appAlias }
