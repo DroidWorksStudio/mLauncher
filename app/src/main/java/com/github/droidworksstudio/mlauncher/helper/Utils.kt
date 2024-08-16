@@ -16,9 +16,9 @@ import android.content.res.Resources
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.os.Process
 import android.os.UserHandle
 import android.os.UserManager
-import android.os.Process
 import android.provider.AlarmClock
 import android.provider.CalendarContract
 import android.provider.MediaStore
@@ -39,7 +39,6 @@ import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import java.text.Collator
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
