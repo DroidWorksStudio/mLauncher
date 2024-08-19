@@ -12,6 +12,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Update README.md ([#545](https://github.com/DroidWorksStudio/mLauncher/issues/545)) - ([7b110d4](https://github.com/DroidWorksStudio/mLauncher/commit/7b110d4f70d41274302a76c46d39865325ad192a))
 
+### Reverts:
+
+- Revert "chore(deps): bump org.jetbrains.kotlin.android from 1.8.10 to 2.0.10 …" ([#560](https://github.com/DroidWorksStudio/mLauncher/issues/560)) - ([9acef47](https://github.com/DroidWorksStudio/mLauncher/commit/9acef47d6317247a8275f5eff12058a7bf226a82))
+
 ## [1.6.7](https://github.com/DroidWorksStudio/mLauncher/tree/1.6.7) - (30, July 2024)
 
 ### Bug Fixes:
