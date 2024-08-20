@@ -1,5 +1,6 @@
 package com.github.droidworksstudio.mlauncher.data
 
+import android.health.connect.datatypes.AppInfo
 import android.os.UserHandle
 import java.text.Collator
 
@@ -8,6 +9,15 @@ val collator: Collator = Collator.getInstance()
 // TODO: rename fields: cut off the `app` prefix
 // TODO make difference between data from the system, and from the prefs (extract object?)
 /**
+ * @property appLabel
+ * label of the activity (`LauncherActivityInfo.label`)
+ *
+ * @property appPackage
+ * Package name of the activity (`LauncherActivityInfo.applicationInfo.packageName`)
+ *
+ * @property appActivityName
+ * (`LauncherActivityInfo.componentName.className`)
+ *
  * @property priority user-defined value which affects ordering.
  * Items with higher priority appear higher in the list.
  * Default priority is 0.
@@ -17,8 +27,14 @@ val collator: Collator = Collator.getInstance()
  * userHandle is needed to resolve and start an activity.
  * And also we mark with a special icon the apps which belong to a managed user.
  *
+ * @property appAlias
+ * When user renames an app, we store the rename as `alias`
+ *
+ * @property name
+ * The title of the app item. Either the original name (`appLabel`) or a user-defined alias (``appAlias`).
+ *
  * TODO we create instances in 3 different places:
- *      1. app drawer, 2. recent apps, 3. home screen
+ *      1. app drawer, 2. recent apps, 3. home screen (for the list and for swipes/taps)
  */
 data class AppListItem(
     val appLabel: String,
