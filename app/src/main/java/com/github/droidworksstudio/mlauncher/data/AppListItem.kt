@@ -13,13 +13,18 @@ val collator: Collator = Collator.getInstance()
  * Default priority is 0.
  * You can playfully fine-tune the order by adding a fractional part to priority: 6.5, 10.125.
  *
- * TODO why the instances are created in 3 different places?
+ * @property user
+ * userHandle is needed to resolve and start an activity.
+ * And also we mark with a special icon the apps which belong to a managed user.
+ *
+ * TODO we create instances in 3 different places:
+ *      1. app drawer, 2. recent apps, 3. home screen
  */
 data class AppListItem(
     val appLabel: String,
     val appPackage: String,
     val appActivityName: String,
-    val user: UserHandle, // TODO doc why it matters
+    val user: UserHandle,
     var appAlias: String, // TODO make immutable by refining data flow
     val priority: Double,
 ) : Comparable<AppListItem> {

@@ -132,6 +132,7 @@ suspend fun getAppsList(
 
                     // we have changed the alias identifier from app.label to app.applicationInfo.packageName
                     // therefore, we check if the old one is set if the new one is empty
+                    // TODO inline this fallback logic to prefs
                     val appAlias = prefs.getAppAlias(activity.applicationInfo.packageName).ifEmpty {
                         prefs.getAppAlias(activity.label.toString())
                     }
@@ -144,9 +145,10 @@ suspend fun getAppsList(
                         activity.componentName.className,
                         profile,
                         appAlias,
-                        priority = priorities.random(),
+                        priority = priorities.random(), // TODO real priority
                     )
 
+                    // TODO rewrite as a filter
                     // if the current app is not mLauncher
                     if (activity.applicationInfo.packageName != BuildConfig.APPLICATION_ID) {
                         // is this a hidden app?
@@ -168,6 +170,7 @@ suspend fun getAppsList(
 
                 if (prefs.recentAppsDisplayed) {
                     val appUsageTracker = AppUsageTracker.createInstance(context)
+                    // TODO naming: not always 10 apps?
                     val lastTenUsedApps = appUsageTracker.getLastTenAppsUsed(context)
 
                     for ((packageName, appName, appActivityName) in lastTenUsedApps) {
@@ -181,7 +184,7 @@ suspend fun getAppsList(
                             appActivityName,
                             profile,
                             appAlias,
-                            priority = 0.0, // TODO real priority
+                            priority = 0.0, // recent apps are sorted by last usage time
                         )
 
                         d("appModel",app.toString())
@@ -190,6 +193,8 @@ suspend fun getAppsList(
                             appRecentList.add(app)
                             // Remove appModel from appList if its packageName matches
                             val iterator = appList.iterator()
+
+                            // TODO can be a performance issue.
                             while (iterator.hasNext()) {
                                 val model = iterator.next()
                                 if (model.appPackage == packageName) {
