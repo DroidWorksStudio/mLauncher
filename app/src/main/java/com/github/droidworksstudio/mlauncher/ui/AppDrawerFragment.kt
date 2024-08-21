@@ -361,10 +361,10 @@ class AppDrawerFragment : Fragment() {
         }
     private fun appDeleteListener(): (appListItem: AppListItem) -> Unit =
         { appModel ->
-            if (requireContext().isSystemApp(appModel.appPackage))
+            if (requireContext().isSystemApp(appModel.activityPackage))
                 showToastShort(requireContext(),getString(R.string.can_not_delete_system_apps))
             else {
-                val appPackage = appModel.appPackage
+                val appPackage = appModel.activityPackage
                 val intent = Intent(Intent.ACTION_DELETE)
                 intent.data = Uri.parse("package:$appPackage")
                 requireContext().startActivity(intent)
@@ -394,9 +394,9 @@ class AppDrawerFragment : Fragment() {
             newSet.addAll(prefs.hiddenApps)
 
             if (flag == AppDrawerFlag.HiddenApps) {
-                newSet.remove(appModel.appPackage) // for backward compatibility
-                newSet.remove(appModel.appPackage + "|" + appModel.user.toString())
-            } else newSet.add(appModel.appPackage + "|" + appModel.user.toString())
+                newSet.remove(appModel.activityPackage) // for backward compatibility
+                newSet.remove(appModel.activityPackage + "|" + appModel.user.toString())
+            } else newSet.add(appModel.activityPackage + "|" + appModel.user.toString())
 
             prefs.hiddenApps = newSet
 
@@ -408,7 +408,7 @@ class AppDrawerFragment : Fragment() {
             openAppInfo(
                 requireContext(),
                 appModel.user,
-                appModel.appPackage
+                appModel.activityPackage
             )
             findNavController().popBackStack(R.id.mainFragment, false)
         }

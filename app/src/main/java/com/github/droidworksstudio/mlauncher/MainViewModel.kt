@@ -80,8 +80,8 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     private fun launchApp(appListItem: AppListItem) {
-        val packageName = appListItem.appPackage
-        val appActivityName = appListItem.appActivityName
+        val packageName = appListItem.activityPackage
+        val appActivityName = appListItem.activityClass
         val userHandle = appListItem.user
         val launcher = appContext.getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps
         val activityInfo = launcher.getActivityList(packageName, userHandle)

@@ -87,9 +87,9 @@ class AppDrawerAdapter(
             val name = holder.appRenameEdit.text.toString().trim()
             /* TODO looks like the wrong direction of data flow. The update must be written to the DB,
                     (which is prefs?), and then propagated from there */
-            appModel.appAlias = name
+            appModel.customLabel = name
             notifyItemChanged(holder.absoluteAdapterPosition)
-            appRenameListener(appModel.appPackage, appModel.appAlias)
+            appRenameListener(appModel.activityPackage, appModel.customLabel)
         }
 
         autoLaunch(position)
@@ -116,7 +116,7 @@ class AppDrawerAdapter(
 
                     filteredApps = if (searchChars.isNotEmpty()) {
                         if (prefs.searchFromStart) {
-                            scoredApps.filter { (app, _) -> app.name.startsWith(searchChars, ignoreCase = true) }
+                            scoredApps.filter { (app, _) -> app.label.startsWith(searchChars, ignoreCase = true) }
                                 .filter { (_, score) -> score > prefs.filterStrength }
                                 .map { it.key }
                                 .toMutableList()
@@ -131,7 +131,7 @@ class AppDrawerAdapter(
                 } else {
                     filteredApps = (if (searchChars.isEmpty()) appsList
                     else appsList.filter { app ->
-                        FuzzyFinder.normalizeString(app.name, searchChars)
+                        FuzzyFinder.normalizeString(app.label, searchChars)
                     } as MutableList<AppListItem>)
                 }
 
@@ -219,8 +219,8 @@ class AppDrawerAdapter(
 
                 appRename.apply {
                     setOnClickListener {
-                        if (appListItem.appPackage.isNotEmpty()) {
-                            appRenameEdit.hint = appListItem.appLabel
+                        if (appListItem.activityPackage.isNotEmpty()) {
+                            appRenameEdit.hint = appListItem.activityLabel
                             appRenameLayout.visibility = View.VISIBLE
                             appHideLayout.visibility = View.GONE
                             appRenameEdit.showKeyboard()
@@ -246,7 +246,7 @@ class AppDrawerAdapter(
                         ) {
                             if (appRenameEdit.text.isEmpty()) {
                                 appSaveRename.text = context.getString(R.string.reset)
-                            } else if (appRenameEdit.text.toString() == appListItem.appAlias) {
+                            } else if (appRenameEdit.text.toString() == appListItem.customLabel) {
                                 appSaveRename.text = context.getString(R.string.cancel)
                             } else {
                                 appSaveRename.text = context.getString(R.string.rename)
@@ -254,10 +254,10 @@ class AppDrawerAdapter(
                         }
                     })
                     // set current name as default text in EditText
-                    text = Editable.Factory.getInstance().newEditable(appListItem.name)
+                    text = Editable.Factory.getInstance().newEditable(appListItem.label)
                 }
 
-                appTitle.text = appListItem.name
+                appTitle.text = appListItem.label
 
                 // set text gravity
                 val params = appTitle.layoutParams as FrameLayout.LayoutParams
@@ -290,7 +290,7 @@ class AppDrawerAdapter(
                         val openApp = flag == AppDrawerFlag.LaunchApp || flag == AppDrawerFlag.HiddenApps
                         if (openApp) {
                             try {
-                                appDelete.alpha = if (context.isSystemApp(appListItem.appPackage)) 0.3f else 1.0f
+                                appDelete.alpha = if (context.isSystemApp(appListItem.activityPackage)) 0.3f else 1.0f
                                 appHideLayout.visibility = View.VISIBLE
                             } catch (e: Exception) {
                                 e.printStackTrace()

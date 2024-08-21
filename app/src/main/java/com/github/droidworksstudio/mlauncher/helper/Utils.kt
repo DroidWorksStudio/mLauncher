@@ -143,7 +143,7 @@ suspend fun getAppsList(
                         activity.label.toString(),
                         activity.applicationInfo.packageName,
                         activity.componentName.className,
-                        profile,
+                        user = profile,
                         appAlias,
                         priority = priorities.random(), // TODO real priority
                     )
@@ -194,10 +194,11 @@ suspend fun getAppsList(
                             // Remove appModel from appList if its packageName matches
                             val iterator = appList.iterator()
 
-                            // TODO can be a performance issue.
+                            // FIXME likely a performance issue (a cycle inside a cycle)
+                            //       when I enable "recent apps", the drawer opens significantly slower.
                             while (iterator.hasNext()) {
                                 val model = iterator.next()
-                                if (model.appPackage == packageName) {
+                                if (model.activityPackage == packageName) {
                                     iterator.remove()
                                 }
                             }

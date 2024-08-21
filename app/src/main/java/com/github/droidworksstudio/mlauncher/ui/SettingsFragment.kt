@@ -601,7 +601,7 @@ class SettingsFragment : Fragment() {
                             onChange = onChange,
                             currentAction = prefs.shortSwipeUpAction,
                             onSelect = { j -> setGesture(AppDrawerFlag.SetShortSwipeUp, j) },
-                            appLabel = prefs.appShortSwipeUp.appLabel,
+                            appLabel = prefs.appShortSwipeUp.activityLabel,
                         )
                     },
                     { open, onChange ->
@@ -612,7 +612,7 @@ class SettingsFragment : Fragment() {
                             onChange = onChange,
                             currentAction = prefs.shortSwipeDownAction,
                             onSelect = { j -> setGesture(AppDrawerFlag.SetShortSwipeDown, j) },
-                            appLabel = prefs.appShortSwipeDown.appLabel,
+                            appLabel = prefs.appShortSwipeDown.activityLabel,
                         )
                     },
                     { open, onChange ->
@@ -623,7 +623,7 @@ class SettingsFragment : Fragment() {
                             onChange = onChange,
                             currentAction = prefs.shortSwipeLeftAction,
                             onSelect = { j -> setGesture(AppDrawerFlag.SetShortSwipeLeft, j) },
-                            appLabel = prefs.appShortSwipeLeft.appLabel.ifEmpty { "Camera" },
+                            appLabel = prefs.appShortSwipeLeft.activityLabel.ifEmpty { "Camera" },
                         )
                     },
                     { open, onChange ->
@@ -634,7 +634,7 @@ class SettingsFragment : Fragment() {
                             onChange = onChange,
                             currentAction = prefs.shortSwipeRightAction,
                             onSelect = { j -> setGesture(AppDrawerFlag.SetShortSwipeRight, j) },
-                            appLabel = prefs.appShortSwipeRight.appLabel.ifEmpty { "Phone" },
+                            appLabel = prefs.appShortSwipeRight.activityLabel.ifEmpty { "Phone" },
                         )
                     },
                     { open, onChange ->
@@ -645,7 +645,7 @@ class SettingsFragment : Fragment() {
                             onChange = onChange,
                             currentAction = prefs.longSwipeUpAction,
                             onSelect = { j -> setGesture(AppDrawerFlag.SetLongSwipeUp, j) },
-                            appLabel = prefs.appLongSwipeUp.appLabel,
+                            appLabel = prefs.appLongSwipeUp.activityLabel,
                         )
                     },
                     { open, onChange ->
@@ -656,7 +656,7 @@ class SettingsFragment : Fragment() {
                             onChange = onChange,
                             currentAction = prefs.longSwipeDownAction,
                             onSelect = { j -> setGesture(AppDrawerFlag.SetLongSwipeDown, j) },
-                            appLabel = prefs.appLongSwipeDown.appLabel,
+                            appLabel = prefs.appLongSwipeDown.activityLabel,
                         )
                     },
                     { open, onChange ->
@@ -667,7 +667,7 @@ class SettingsFragment : Fragment() {
                             onChange = onChange,
                             currentAction = prefs.longSwipeLeftAction,
                             onSelect = { j -> setGesture(AppDrawerFlag.SetLongSwipeLeft, j) },
-                            appLabel = prefs.appLongSwipeLeft.appLabel,
+                            appLabel = prefs.appLongSwipeLeft.activityLabel,
                         )
                     },
                     { open, onChange ->
@@ -678,7 +678,7 @@ class SettingsFragment : Fragment() {
                             onChange = onChange,
                             currentAction = prefs.longSwipeRightAction,
                             onSelect = { j -> setGesture(AppDrawerFlag.SetLongSwipeRight, j) },
-                            appLabel = prefs.appLongSwipeRight.appLabel,
+                            appLabel = prefs.appLongSwipeRight.activityLabel,
                         )
                     },
                     { open, onChange ->
@@ -689,7 +689,7 @@ class SettingsFragment : Fragment() {
                             onChange = onChange,
                             currentAction = prefs.clickClockAction,
                             onSelect = { j -> setGesture(AppDrawerFlag.SetClickClock, j) },
-                            appLabel = prefs.appClickClock.appLabel.ifEmpty { "Clock" },
+                            appLabel = prefs.appClickClock.activityLabel.ifEmpty { "Clock" },
                         )
                     },
                     { open, onChange ->
@@ -700,7 +700,7 @@ class SettingsFragment : Fragment() {
                             onChange = onChange,
                             currentAction = prefs.clickDateAction,
                             onSelect = { j -> setGesture(AppDrawerFlag.SetClickDate, j) },
-                            appLabel = prefs.appClickDate.appLabel.ifEmpty { "Calendar" },
+                            appLabel = prefs.appClickDate.activityLabel.ifEmpty { "Calendar" },
                         )
                     },
                     { open, onChange ->
@@ -711,7 +711,7 @@ class SettingsFragment : Fragment() {
                             onChange = onChange,
                             currentAction = prefs.clickAppUsageAction,
                             onSelect = { j -> setGesture(AppDrawerFlag.SetAppUsage, j) },
-                            appLabel = prefs.appClickUsage.appLabel.ifEmpty { "Digital Wellbeing" },
+                            appLabel = prefs.appClickUsage.activityLabel.ifEmpty { "Digital Wellbeing" },
                         )
                     },
                     { open, onChange ->
@@ -722,7 +722,7 @@ class SettingsFragment : Fragment() {
                             onChange = onChange,
                             currentAction = prefs.doubleTapAction,
                             onSelect = { j -> setGesture(AppDrawerFlag.SetDoubleTap, j) },
-                            appLabel = prefs.appDoubleTap.appLabel
+                            appLabel = prefs.appDoubleTap.activityLabel
                         )
                     }
                 )

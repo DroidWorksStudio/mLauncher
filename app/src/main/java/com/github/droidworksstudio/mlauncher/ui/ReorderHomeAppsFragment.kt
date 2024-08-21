@@ -19,7 +19,6 @@ import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import android.widget.ScrollView
 import android.widget.TextView
 import androidx.annotation.RequiresApi
@@ -168,6 +167,12 @@ class ReorderHomeAppsFragment : Fragment() {
         prefs.setHomeAppModel(draggedIndex, packageDetailsNew)
     }
 
+    /**
+     * TODO it looks very complicated. Shouldn't we just rerender the whole list?
+     *      When does it happen?
+     *        - Only when the config option changes,
+     *        - or also when we switch pages of the home screen?
+     */
     @RequiresApi(Build.VERSION_CODES.Q)
     @SuppressLint("InflateParams", "SetTextI18n")
     private fun updateAppCount(newAppsNum: Int) {
@@ -182,7 +187,7 @@ class ReorderHomeAppsFragment : Fragment() {
             for (i in oldAppsNum until newAppsNum) {
                 val view = layoutInflater.inflate(R.layout.home_app_button, null) as TextView
                 view.apply {
-                    val appLabel = prefs.getHomeAppModel(i).appLabel.ifEmpty { getString(R.string.app) }
+                    val appLabel = prefs.getHomeAppModel(i).activityLabel.ifEmpty { getString(R.string.app) }
                     textSize = prefs.appSize.toFloat()
                     id = i
                     text = "   $appLabel"

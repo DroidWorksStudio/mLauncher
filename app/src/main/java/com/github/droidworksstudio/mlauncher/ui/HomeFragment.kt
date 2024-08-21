@@ -384,71 +384,71 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     }
 
     private fun openSwipeUpApp() {
-        if (prefs.appShortSwipeUp.appPackage.isNotEmpty())
+        if (prefs.appShortSwipeUp.activityPackage.isNotEmpty())
             launchApp(prefs.appShortSwipeUp)
         else openDialerApp(requireContext())
     }
     private fun openSwipeDownApp() {
-        if (prefs.appShortSwipeDown.appPackage.isNotEmpty())
+        if (prefs.appShortSwipeDown.activityPackage.isNotEmpty())
             launchApp(prefs.appShortSwipeDown)
         else openDialerApp(requireContext())
     }
 
     private fun openSwipeLeftApp() {
-        if (prefs.appShortSwipeLeft.appPackage.isNotEmpty())
+        if (prefs.appShortSwipeLeft.activityPackage.isNotEmpty())
             launchApp(prefs.appShortSwipeLeft)
         else openCameraApp(requireContext())
     }
 
     private fun openSwipeRightApp() {
-        if (prefs.appShortSwipeRight.appPackage.isNotEmpty())
+        if (prefs.appShortSwipeRight.activityPackage.isNotEmpty())
             launchApp(prefs.appShortSwipeRight)
         else openDialerApp(requireContext())
     }
 
     private fun openLongSwipeUpApp() {
-        if (prefs.appLongSwipeUp.appPackage.isNotEmpty())
+        if (prefs.appLongSwipeUp.activityPackage.isNotEmpty())
             launchApp(prefs.appLongSwipeUp)
         else openDialerApp(requireContext())
     }
     private fun openLongSwipeDownApp() {
-        if (prefs.appLongSwipeDown.appPackage.isNotEmpty())
+        if (prefs.appLongSwipeDown.activityPackage.isNotEmpty())
             launchApp(prefs.appLongSwipeDown)
         else openDialerApp(requireContext())
     }
 
     private fun openLongSwipeLeftApp() {
-        if (prefs.appLongSwipeLeft.appPackage.isNotEmpty())
+        if (prefs.appLongSwipeLeft.activityPackage.isNotEmpty())
             launchApp(prefs.appLongSwipeLeft)
         else openCameraApp(requireContext())
     }
 
     private fun openLongSwipeRightApp() {
-        if (prefs.appLongSwipeRight.appPackage.isNotEmpty())
+        if (prefs.appLongSwipeRight.activityPackage.isNotEmpty())
             launchApp(prefs.appLongSwipeRight)
         else openDialerApp(requireContext())
     }
 
     private fun openClickClockApp() {
-        if (prefs.appClickClock.appPackage.isNotEmpty())
+        if (prefs.appClickClock.activityPackage.isNotEmpty())
             launchApp(prefs.appClickClock)
         else openAlarmApp(requireContext())
     }
 
     private fun openClickUsageApp() {
-        if (prefs.appClickUsage.appPackage.isNotEmpty())
+        if (prefs.appClickUsage.activityPackage.isNotEmpty())
             launchApp(prefs.appClickUsage)
         else openDigitalWellbeing(requireContext())
     }
 
     private fun openClickDateApp() {
-        if (prefs.appClickDate.appPackage.isNotEmpty())
+        if (prefs.appClickDate.activityPackage.isNotEmpty())
             launchApp(prefs.appClickDate)
         else openCalendar(requireContext())
     }
 
     private fun openDoubleTapApp() {
-        if (prefs.appDoubleTap.appPackage.isNotEmpty())
+        if (prefs.appDoubleTap.activityPackage.isNotEmpty())
             launchApp(prefs.appDoubleTap)
         else openCameraApp(requireContext())
     }
@@ -733,7 +733,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     // Set properties of existingAppView
                     textSize = prefs.appSize.toFloat()
                     id = i
-                    text = prefs.getHomeAppModel(i).appLabel
+                    text = prefs.getHomeAppModel(i).activityLabel
                     setOnTouchListener(getHomeAppsGestureListener(context, this))
                     setOnClickListener(this@HomeFragment)
                     if (!prefs.extendHomeAppsArea) {
@@ -758,7 +758,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     // Set properties of newAppView
                     textSize = prefs.appSize.toFloat() / 1.5f
                     id = i
-                    text = formatMillisToHMS(getUsageStats(context, prefs.getHomeAppModel(i).appPackage))
+                    text = formatMillisToHMS(getUsageStats(context, prefs.getHomeAppModel(i).activityPackage))
                     setOnTouchListener(getHomeAppsGestureListener(context, this))
                     setOnClickListener(this@HomeFragment)
                     if (!prefs.extendHomeAppsArea) {
@@ -830,7 +830,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 view.apply {
                     textSize = prefs.appSize.toFloat()
                     id = i
-                    text = prefs.getHomeAppModel(i).appLabel
+                    text = prefs.getHomeAppModel(i).activityLabel
                     setOnTouchListener(getHomeAppsGestureListener(context, this))
                     setOnClickListener(this@HomeFragment)
                     if (!prefs.extendHomeAppsArea) {

@@ -408,6 +408,10 @@ class Prefs(val context: Context) {
         get() = prefs.getBoolean(HIDDEN_APPS_DISPLAYED, false)
         set(value) = prefs.edit().putBoolean(HIDDEN_APPS_DISPLAYED, value).apply()
 
+    /**
+     * By the number in home app list, get the list item.
+     * TODO why not just save it as a list?
+     */
     fun getHomeAppModel(i: Int): AppListItem {
         return loadApp("$i")
     }
@@ -463,9 +467,15 @@ class Prefs(val context: Context) {
         get() = loadApp(DOUBLE_TAP)
         set(appModel) = storeApp(DOUBLE_TAP, appModel)
 
-
+    /**
+     *  Restore an `AppListItem` from preferences.
+     *
+     *  We store not only application name, but everything needed to start the item.
+     *  Because thus we save time to query the system about it?
+     *
+     *  TODO store with protobuf instead of serializing manually.
+     */
     private fun loadApp(id: String): AppListItem {
-        // TODO why these are stored in prefs?
         val appName = prefs.getString("${APP_NAME}_$id", "").toString()
         val appPackage = prefs.getString("${APP_PACKAGE}_$id", "").toString()
         val appAlias = prefs.getString("${APP_ALIAS}_$id", "").toString()
@@ -479,10 +489,10 @@ class Prefs(val context: Context) {
         val userHandle: UserHandle = getUserHandleFromString(context, userHandleString)
 
         return AppListItem(
-            appLabel = appName,
-            appPackage = appPackage,
-            appAlias = appAlias,
-            appActivityName = appActivityName,
+            activityLabel = appName,
+            activityPackage = appPackage,
+            customLabel = appAlias,
+            activityClass = appActivityName,
             user = userHandle,
             priority = 0.0, // TODO real priority
         )
@@ -491,10 +501,10 @@ class Prefs(val context: Context) {
     private fun storeApp(id: String, app: AppListItem) {
         val edit = prefs.edit()
 
-        edit.putString("${APP_NAME}_$id", app.name)
-        edit.putString("${APP_PACKAGE}_$id", app.appPackage)
-        edit.putString("${APP_ACTIVITY}_$id", app.appActivityName)
-        edit.putString("${APP_ALIAS}_$id", app.appAlias) // TODO can be empty. so what?
+        edit.putString("${APP_NAME}_$id", app.label)
+        edit.putString("${APP_PACKAGE}_$id", app.activityPackage)
+        edit.putString("${APP_ACTIVITY}_$id", app.activityClass)
+        edit.putString("${APP_ALIAS}_$id", app.customLabel) // TODO can be empty. so what?
         edit.putString("${APP_USER}_$id", app.user.toString())
         edit.apply()
     }
@@ -562,7 +572,7 @@ class Prefs(val context: Context) {
 
     // return app label
     fun getAppName(location: Int): String {
-        return getHomeAppModel(location).appLabel
+        return getHomeAppModel(location).activityLabel
     }
 
     fun getAppAlias(appName: String): String {
