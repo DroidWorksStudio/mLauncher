@@ -85,8 +85,8 @@ class AppDrawerAdapter(
 
         holder.appSaveRename.setOnClickListener {
             val name = holder.appRenameEdit.text.toString().trim()
-            /* TODO looks like the wrong direction of data flow. The update must be written to the DB,
-                    (which is prefs?), and then propagated from there */
+            /* TODO looks like suboptimal direction of data flow. The update is better to be written
+                    to the database (which is prefs?), and then propagated from there */
             appModel.customLabel = name
             notifyItemChanged(holder.absoluteAdapterPosition)
             appRenameListener(appModel.activityPackage, appModel.customLabel)
