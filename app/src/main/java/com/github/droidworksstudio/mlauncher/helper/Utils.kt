@@ -170,7 +170,6 @@ suspend fun getAppsList(
 
                 if (prefs.recentAppsDisplayed) {
                     val appUsageTracker = AppUsageTracker.createInstance(context)
-                    // TODO naming: not always 10 apps?
                     val lastTenUsedApps = appUsageTracker.getLastTenAppsUsed(context)
 
                     for ((packageName, appName, appActivityName) in lastTenUsedApps) {
