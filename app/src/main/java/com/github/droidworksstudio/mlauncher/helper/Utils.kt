@@ -11,7 +11,6 @@ import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.LauncherApps
-import android.content.pm.PackageManager
 import android.content.res.Resources
 import android.net.Uri
 import android.os.Build
@@ -244,39 +243,6 @@ fun getDefaultLauncherPackage(context: Context): String {
 }
 
 fun resetDefaultLauncher(context: Context) {
-    val manufacturer = Build.MANUFACTURER.lowercase()
-    when (manufacturer) {
-        "google", "essential" -> runningStockAndroid(context)
-        else -> notRunningStockAndroid(context)
-    }
-}
-
-private fun runningStockAndroid(context: Context) {
-    try {
-        val packageManager = context.packageManager
-        val componentName = ComponentName(context, FakeHomeActivity::class.java)
-
-        packageManager.setComponentEnabledSetting(
-            componentName,
-            PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
-            PackageManager.DONT_KILL_APP
-        )
-
-        val selector = Intent(Intent.ACTION_MAIN)
-        selector.addCategory(Intent.CATEGORY_HOME)
-        context.startActivity(selector)
-
-        packageManager.setComponentEnabledSetting(
-            componentName,
-            PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
-            PackageManager.DONT_KILL_APP
-        )
-    } catch (e: Exception) {
-        e.printStackTrace()
-    }
-}
-
-private fun notRunningStockAndroid(context: Context) {
     try {
         val intent = Intent("android.settings.HOME_SETTINGS")
         context.startActivity(intent)
