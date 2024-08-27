@@ -494,7 +494,6 @@ class Prefs(val context: Context) {
             customLabel = appAlias,
             activityClass = appActivityName,
             user = userHandle,
-            priority = 0.0, // TODO real priority
         )
     }
 

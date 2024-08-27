@@ -136,15 +136,12 @@ suspend fun getAppsList(
                         prefs.getAppAlias(activity.label.toString())
                     }
 
-                    val priorities = listOf(-1.0, 0.0, 1.0, 2.0, 3.0)
-
                     val app = AppListItem(
                         activity.label.toString(),
                         activity.applicationInfo.packageName,
                         activity.componentName.className,
                         user = profile,
                         appAlias,
-                        priority = priorities.random(), // TODO real priority
                     )
 
                     // TODO rewrite as a filter
@@ -182,7 +179,7 @@ suspend fun getAppsList(
                             appActivityName,
                             profile,
                             appAlias,
-                            priority = 0.0, // recent apps are sorted by last usage time
+                            // recent apps are sorted by last usage time
                         )
 
                         d("appModel",app.toString())
