@@ -1,5 +1,5 @@
 /**
- * Prepare the date for the app drawer, which is the list of all the installed applications.
+ * Prepare the data for the app drawer, which is the list of all the installed applications.
  */
 
 package com.github.droidworksstudio.mlauncher.ui
