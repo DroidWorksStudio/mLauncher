@@ -39,7 +39,7 @@ data class AppListItem(
     val user: UserHandle,
     var customLabel: String, // TODO make immutable by refining data flow
 ) : Comparable<AppListItem> {
-    val label = activityLabel.ifEmpty { customLabel }
+    val label = customLabel.ifEmpty { activityLabel }
 
     /** Speed up sort and search */
     private val collationKey = collator.getCollationKey(label)
