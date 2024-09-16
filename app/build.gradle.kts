@@ -81,7 +81,7 @@ android {
 }
 
 dependencies {
-    val androidxTestKotlin = "1.6.8"
+    val androidxTestKotlin = "1.7.1"
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
     implementation("androidx.core:core-ktx:1.13.1")
     implementation("androidx.appcompat:appcompat:1.7.0")
@@ -89,10 +89,10 @@ dependencies {
 
     // Android lifecycle
     implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.4")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.5")
 
     // Navigation
-    implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.8.0")
 
     // Work Manager
     implementation("androidx.work:work-runtime-ktx:2.9.1")
@@ -112,7 +112,7 @@ dependencies {
     implementation("com.github.SmartToolFactory:Compose-Colorful-Sliders:1.2.0")
     // Animations
     implementation("androidx.compose.animation:animation:$androidxTestKotlin")
-    implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
+    implementation("androidx.navigation:navigation-ui-ktx:2.8.0")
 
     // AndroidX
     implementation("androidx.compose.ui:ui:$androidxTestKotlin")
@@ -138,8 +138,8 @@ dependencies {
    androidTestImplementation("androidx.compose.ui:ui-test-junit4:$androidxTestKotlin")
     // Needed for createComposeRule, but not createAndroidComposeRule:
     debugImplementation("androidx.compose.ui:ui-test-manifest:$androidxTestKotlin")
-    androidTestImplementation("androidx.navigation:navigation-testing:2.7.7")
-    debugImplementation("androidx.fragment:fragment-testing:1.8.2")
+    androidTestImplementation("androidx.navigation:navigation-testing:2.8.0")
+    debugImplementation("androidx.fragment:fragment-testing:1.8.3")
     implementation("androidx.test:core-ktx:1.6.1")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
     androidTestImplementation("androidx.test:runner:1.6.2")

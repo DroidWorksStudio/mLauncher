@@ -18,7 +18,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: set up JDK 17
-        uses: actions/setup-java@v4.2.2
+        uses: actions/setup-java@v4.3.0
         with:
           java-version: '17'
           distribution: 'temurin'
@@ -40,7 +40,7 @@ jobs:
         run: ./gradlew clean && ./gradlew assembleDebug
 
       - name: Upload Artifact
-        uses: actions/upload-artifact@v4.3.6
+        uses: actions/upload-artifact@v4.4.0
         with:
           name: Signed app bundle
           path: app/build/outputs/apk/debug/*.apk
