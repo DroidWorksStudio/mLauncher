@@ -10,6 +10,7 @@ import org.xmlpull.v1.XmlPullParser
 import java.util.concurrent.ConcurrentHashMap
 
 class AppUsageTracker private constructor(context: Context) {
+    // TODO looks like a singleton? Shall we just make a top-level object in the file?
     companion object {
         private var instance: AppUsageTracker? = null
 
@@ -31,7 +32,7 @@ class AppUsageTracker private constructor(context: Context) {
     }
 
     fun getLastTenAppsUsed(context: Context): List<Triple<String, String, String>> {
-        val recentApps = mutableSetOf<String>() // Set to store unique package names
+        val recentApps = mutableSetOf<String>() // Set is to store unique package names
         val result = mutableListOf<Triple<String, String, String>>() // List to store recent apps
 
         val usageStatsManager = context.getSystemService(Context.USAGE_STATS_SERVICE) as? UsageStatsManager

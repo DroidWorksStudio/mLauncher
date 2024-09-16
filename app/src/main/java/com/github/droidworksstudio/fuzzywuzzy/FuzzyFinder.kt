@@ -1,12 +1,12 @@
 package com.github.droidworksstudio.fuzzywuzzy
 
-import com.github.droidworksstudio.mlauncher.data.AppModel
+import com.github.droidworksstudio.mlauncher.data.AppListItem
 import java.text.Normalizer
 import java.util.*
 
 object FuzzyFinder {
-    fun scoreApp(app: AppModel, searchChars: String, topScore: Int): Int {
-        val appChars = app.appAlias.ifEmpty { app.appLabel }
+    fun scoreApp(app: AppListItem, searchChars: String, topScore: Int): Int {
+        val appChars = app.label
 
         val fuzzyScore = calculateFuzzyScore(
             normalizeString(appChars),

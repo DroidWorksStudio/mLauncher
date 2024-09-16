@@ -1,3 +1,7 @@
+/**
+ * The view for the list of all the installed applications.
+ */
+
 package com.github.droidworksstudio.mlauncher.ui
 
 import android.annotation.SuppressLint
@@ -28,7 +32,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.github.droidworksstudio.mlauncher.MainViewModel
 import com.github.droidworksstudio.mlauncher.R
-import com.github.droidworksstudio.mlauncher.data.AppModel
+import com.github.droidworksstudio.mlauncher.data.AppListItem
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Constants.AppDrawerFlag
 import com.github.droidworksstudio.mlauncher.data.Prefs
@@ -341,13 +345,13 @@ class AppDrawerFragment : Fragment() {
         }, 100)
     }
 
-    private fun populateAppList(apps: List<AppModel>, appAdapter: AppDrawerAdapter) {
+    private fun populateAppList(apps: List<AppListItem>, appAdapter: AppDrawerAdapter) {
         val animation = AnimationUtils.loadLayoutAnimation(requireContext(), R.anim.layout_anim_from_bottom)
         binding.recyclerView.layoutAnimation = animation
         appAdapter.setAppList(apps.toMutableList())
     }
 
-    private fun appClickListener(viewModel: MainViewModel, flag: AppDrawerFlag, n: Int = 0): (appModel: AppModel) -> Unit =
+    private fun appClickListener(viewModel: MainViewModel, flag: AppDrawerFlag, n: Int = 0): (appListItem: AppListItem) -> Unit =
         { appModel ->
             viewModel.selectedApp(appModel, flag, n)
             if (flag == AppDrawerFlag.LaunchApp || flag == AppDrawerFlag.HiddenApps)
@@ -355,12 +359,12 @@ class AppDrawerFragment : Fragment() {
             else
                 findNavController().popBackStack()
         }
-    private fun appDeleteListener(): (appModel: AppModel) -> Unit =
+    private fun appDeleteListener(): (appListItem: AppListItem) -> Unit =
         { appModel ->
-            if (requireContext().isSystemApp(appModel.appPackage))
+            if (requireContext().isSystemApp(appModel.activityPackage))
                 showToastShort(requireContext(),getString(R.string.can_not_delete_system_apps))
             else {
-                val appPackage = appModel.appPackage
+                val appPackage = appModel.activityPackage
                 val intent = Intent(Intent.ACTION_DELETE)
                 intent.data = Uri.parse("package:$appPackage")
                 requireContext().startActivity(intent)
@@ -383,28 +387,28 @@ class AppDrawerFragment : Fragment() {
         findNavController().popBackStack()
     }
 
-    private fun appShowHideListener(): (flag: AppDrawerFlag, appModel: AppModel) -> Unit =
+    private fun appShowHideListener(): (flag: AppDrawerFlag, appListItem: AppListItem) -> Unit =
         { flag, appModel ->
             val prefs = Prefs(requireContext())
             val newSet = mutableSetOf<String>()
             newSet.addAll(prefs.hiddenApps)
 
             if (flag == AppDrawerFlag.HiddenApps) {
-                newSet.remove(appModel.appPackage) // for backward compatibility
-                newSet.remove(appModel.appPackage + "|" + appModel.user.toString())
-            } else newSet.add(appModel.appPackage + "|" + appModel.user.toString())
+                newSet.remove(appModel.activityPackage) // for backward compatibility
+                newSet.remove(appModel.activityPackage + "|" + appModel.user.toString())
+            } else newSet.add(appModel.activityPackage + "|" + appModel.user.toString())
 
             prefs.hiddenApps = newSet
 
             if (newSet.isEmpty()) findNavController().popBackStack()
         }
 
-    private fun appInfoListener(): (appModel: AppModel) -> Unit =
+    private fun appInfoListener(): (appListItem: AppListItem) -> Unit =
         { appModel ->
             openAppInfo(
                 requireContext(),
                 appModel.user,
-                appModel.appPackage
+                appModel.activityPackage
             )
             findNavController().popBackStack(R.id.mainFragment, false)
         }

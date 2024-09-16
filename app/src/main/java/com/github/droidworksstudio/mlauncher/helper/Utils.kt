@@ -15,9 +15,9 @@ import android.content.res.Resources
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.os.Process
 import android.os.UserHandle
 import android.os.UserManager
-import android.os.Process
 import android.provider.AlarmClock
 import android.provider.CalendarContract
 import android.provider.MediaStore
@@ -33,12 +33,11 @@ import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.view.ContextThemeWrapper
 import com.github.droidworksstudio.mlauncher.BuildConfig
-import com.github.droidworksstudio.mlauncher.data.AppModel
+import com.github.droidworksstudio.mlauncher.data.AppListItem
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import java.text.Collator
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
@@ -46,16 +45,26 @@ import java.util.Locale
 import kotlin.math.pow
 import kotlin.math.sqrt
 
+sealed class Duration
+object LongTime : Duration()
+object ShortTime : Duration()
+
+fun showToast(context: Context, message: String, duration: Duration) {
+    when (duration) {
+        is LongTime -> Toast.LENGTH_LONG
+        is ShortTime -> Toast.LENGTH_SHORT
+    }
+        .let { Toast.makeText(context.applicationContext, message, it) }
+        .also { it.setGravity(Gravity.CENTER, 0, 0) }
+        .show()
+}
+
 fun showToastLong(context: Context, message: String) {
-    val toast = Toast.makeText(context.applicationContext, message, Toast.LENGTH_LONG)
-    toast.setGravity(Gravity.CENTER, 0, 0)
-    toast.show()
+    showToast(context, message, LongTime)
 }
 
 fun showToastShort(context: Context, message: String) {
-    val toast = Toast.makeText(context.applicationContext, message, Toast.LENGTH_SHORT)
-    toast.setGravity(Gravity.CENTER, 0, 0)
-    toast.show()
+    showToast(context, message, ShortTime)
 }
 
 fun hasUsagePermission(context: Context): Boolean {
@@ -102,11 +111,11 @@ suspend fun getAppsList(
     includeRegularApps: Boolean = true,
     includeHiddenApps: Boolean = false,
     includeRecentApps: Boolean = true,
-): MutableList<AppModel> {
+): MutableList<AppListItem> {
     return withContext(Dispatchers.Main) {
-        val appList: MutableList<AppModel> = mutableListOf()
-        val appRecentList: MutableList<AppModel> = mutableListOf()
-        val combinedList: MutableList<AppModel> = mutableListOf()
+        val appList: MutableList<AppListItem> = mutableListOf()
+        val appRecentList: MutableList<AppListItem> = mutableListOf()
+        val combinedList: MutableList<AppListItem> = mutableListOf()
 
         try {
             val hiddenApps = Prefs(context).hiddenApps
@@ -114,47 +123,46 @@ suspend fun getAppsList(
             val userManager = context.getSystemService(Context.USER_SERVICE) as UserManager
             val launcherApps =
                 context.getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps
-            val collator = Collator.getInstance()
 
             val prefs = Prefs(context)
 
             for (profile in userManager.userProfiles) {
-                for (app in launcherApps.getActivityList(null, profile)) {
+                for (activity in launcherApps.getActivityList(null, profile)) {
 
                     // we have changed the alias identifier from app.label to app.applicationInfo.packageName
                     // therefore, we check if the old one is set if the new one is empty
-                    val appAlias = prefs.getAppAlias(app.applicationInfo.packageName).ifEmpty {
-                        prefs.getAppAlias(app.label.toString())
+                    // TODO inline this fallback logic to prefs
+                    val appAlias = prefs.getAppAlias(activity.applicationInfo.packageName).ifEmpty {
+                        prefs.getAppAlias(activity.label.toString())
                     }
 
-                    val appModel = AppModel(
-                        app.label.toString(),
-                        collator.getCollationKey(app.label.toString()),
-                        app.applicationInfo.packageName,
-                        app.componentName.className,
-                        profile,
+                    val app = AppListItem(
+                        activity.label.toString(),
+                        activity.applicationInfo.packageName,
+                        activity.componentName.className,
+                        user = profile,
                         appAlias,
                     )
 
+                    // TODO rewrite as a filter
                     // if the current app is not mLauncher
-                    if (app.applicationInfo.packageName != BuildConfig.APPLICATION_ID) {
+                    if (activity.applicationInfo.packageName != BuildConfig.APPLICATION_ID) {
                         // is this a hidden app?
-                        if (hiddenApps.contains(app.applicationInfo.packageName + "|" + profile.toString())) {
+                        if (hiddenApps.contains(activity.applicationInfo.packageName + "|" + profile.toString())) {
                             if (includeHiddenApps) {
-                                appList.add(appModel)
+                                appList.add(app)
                             }
                         } else {
                             // this is a regular app
                             if (includeRegularApps) {
-                                appList.add(appModel)
+                                appList.add(app)
                             }
                         }
                     }
 
                 }
-                appList.sortBy {
-                    if (it.appAlias.isEmpty()) it.appLabel.lowercase() else it.appAlias.lowercase()
-                }
+
+                appList.sort()
 
                 if (prefs.recentAppsDisplayed) {
                     val appUsageTracker = AppUsageTracker.createInstance(context)
@@ -165,24 +173,27 @@ suspend fun getAppsList(
                             appName
                         }
 
-                        val appModel = AppModel(
+                        val app = AppListItem(
                             appName,
-                            collator.getCollationKey(appName),
                             packageName,
                             appActivityName,
                             profile,
                             appAlias,
+                            // recent apps are sorted by last usage time
                         )
 
-                        d("appModel",appModel.toString())
+                        d("appModel",app.toString())
 
                         if (includeRecentApps) {
-                            appRecentList.add(appModel)
+                            appRecentList.add(app)
                             // Remove appModel from appList if its packageName matches
                             val iterator = appList.iterator()
+
+                            // FIXME likely a performance issue (a cycle inside a cycle)
+                            //       when I enable "recent apps", the drawer opens significantly slower.
                             while (iterator.hasNext()) {
                                 val model = iterator.next()
-                                if (model.appPackage == packageName) {
+                                if (model.activityPackage == packageName) {
                                     iterator.remove()
                                 }
                             }

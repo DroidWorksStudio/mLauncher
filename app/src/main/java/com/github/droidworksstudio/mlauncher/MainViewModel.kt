@@ -7,7 +7,7 @@ import android.content.pm.LauncherApps
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.github.droidworksstudio.mlauncher.data.AppModel
+import com.github.droidworksstudio.mlauncher.data.AppListItem
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Constants.AppDrawerFlag
 import com.github.droidworksstudio.mlauncher.data.Prefs
@@ -27,8 +27,8 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     val firstOpen = MutableLiveData<Boolean>()
     val showMessageDialog = MutableLiveData<String>()
 
-    val appList = MutableLiveData<List<AppModel>?>()
-    val hiddenApps = MutableLiveData<List<AppModel>?>()
+    val appList = MutableLiveData<List<AppListItem>?>() // TODO why maybe?
+    val hiddenApps = MutableLiveData<List<AppListItem>?>()
     private val launcherDefault = MutableLiveData<Boolean>()
     val launcherResetFailed = MutableLiveData<Boolean>()
 
@@ -42,28 +42,28 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     val filterStrength = MutableLiveData(prefs.filterStrength)
     val recentCounter = MutableLiveData(prefs.recentCounter)
 
-    fun selectedApp(appModel: AppModel, flag: AppDrawerFlag, n: Int = 0) {
+    fun selectedApp(app: AppListItem, flag: AppDrawerFlag, n: Int = 0) {
         when (flag) {
             AppDrawerFlag.LaunchApp, AppDrawerFlag.HiddenApps -> {
-                launchApp(appModel)
+                launchApp(app)
             }
 
             AppDrawerFlag.SetHomeApp, AppDrawerFlag.ReorderApps -> {
-                prefs.setHomeAppModel(n, appModel)
+                prefs.setHomeAppModel(n, app)
             }
 
-            AppDrawerFlag.SetShortSwipeUp -> prefs.appShortSwipeUp = appModel
-            AppDrawerFlag.SetShortSwipeDown -> prefs.appShortSwipeDown = appModel
-            AppDrawerFlag.SetShortSwipeLeft -> prefs.appShortSwipeLeft = appModel
-            AppDrawerFlag.SetShortSwipeRight -> prefs.appShortSwipeRight = appModel
-            AppDrawerFlag.SetLongSwipeUp -> prefs.appLongSwipeUp = appModel
-            AppDrawerFlag.SetLongSwipeDown -> prefs.appLongSwipeDown = appModel
-            AppDrawerFlag.SetLongSwipeLeft -> prefs.appLongSwipeLeft = appModel
-            AppDrawerFlag.SetLongSwipeRight -> prefs.appLongSwipeRight = appModel
-            AppDrawerFlag.SetClickClock -> prefs.appClickClock = appModel
-            AppDrawerFlag.SetAppUsage -> prefs.appClickUsage = appModel
-            AppDrawerFlag.SetClickDate -> prefs.appClickDate = appModel
-            AppDrawerFlag.SetDoubleTap -> prefs.appDoubleTap = appModel
+            AppDrawerFlag.SetShortSwipeUp -> prefs.appShortSwipeUp = app
+            AppDrawerFlag.SetShortSwipeDown -> prefs.appShortSwipeDown = app
+            AppDrawerFlag.SetShortSwipeLeft -> prefs.appShortSwipeLeft = app
+            AppDrawerFlag.SetShortSwipeRight -> prefs.appShortSwipeRight = app
+            AppDrawerFlag.SetLongSwipeUp -> prefs.appLongSwipeUp = app
+            AppDrawerFlag.SetLongSwipeDown -> prefs.appLongSwipeDown = app
+            AppDrawerFlag.SetLongSwipeLeft -> prefs.appLongSwipeLeft = app
+            AppDrawerFlag.SetLongSwipeRight -> prefs.appLongSwipeRight = app
+            AppDrawerFlag.SetClickClock -> prefs.appClickClock = app
+            AppDrawerFlag.SetAppUsage -> prefs.appClickUsage = app
+            AppDrawerFlag.SetClickDate -> prefs.appClickDate = app
+            AppDrawerFlag.SetDoubleTap -> prefs.appDoubleTap = app
         }
     }
 
@@ -79,10 +79,10 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         showTime.value = visibility
     }
 
-    private fun launchApp(appModel: AppModel) {
-        val packageName = appModel.appPackage
-        val appActivityName = appModel.appActivityName
-        val userHandle = appModel.user
+    private fun launchApp(appListItem: AppListItem) {
+        val packageName = appListItem.activityPackage
+        val appActivityName = appListItem.activityClass
+        val userHandle = appListItem.user
         val launcher = appContext.getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps
         val activityInfo = launcher.getActivityList(packageName, userHandle)
 
