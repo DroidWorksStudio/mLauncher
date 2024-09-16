@@ -123,7 +123,7 @@ dependencies {
     //color picker
     implementation("net.mm2d.color-chooser:color-chooser:0.7.3")
 
-    val acraVersion = "5.11.3"
+    val acraVersion = "5.11.4"
     implementation("ch.acra:acra-core:$acraVersion")
     implementation("ch.acra:acra-dialog:$acraVersion")
     implementation("ch.acra:acra-mail:$acraVersion")
