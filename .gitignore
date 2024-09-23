@@ -1,4 +1,6 @@
 .gradle
+git-cliff*
+/bin/*
 /local.properties
 /.idea/*
 /build
