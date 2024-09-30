@@ -112,7 +112,7 @@ dependencies {
     implementation("com.github.SmartToolFactory:Compose-Colorful-Sliders:1.2.0")
     // Animations
     implementation("androidx.compose.animation:animation:$androidxTestKotlin")
-    implementation("androidx.navigation:navigation-ui-ktx:2.8.0")
+    implementation("androidx.navigation:navigation-ui-ktx:2.8.1")
 
     // AndroidX
     implementation("androidx.compose.ui:ui:$androidxTestKotlin")
