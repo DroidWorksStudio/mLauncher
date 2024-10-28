@@ -92,7 +92,7 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.6")
 
     // Navigation
-    implementation("androidx.navigation:navigation-fragment-ktx:2.8.2")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.8.3")
 
     // Work Manager
     implementation("androidx.work:work-runtime-ktx:2.9.1")
