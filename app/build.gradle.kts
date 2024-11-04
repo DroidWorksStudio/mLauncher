@@ -97,7 +97,7 @@ dependencies {
     // Work Manager
     implementation("androidx.work:work-runtime-ktx:2.9.1")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    implementation("androidx.constraintlayout:constraintlayout-compose:1.0.1")
+    implementation("androidx.constraintlayout:constraintlayout-compose:1.1.0")
 
     // Text similarity
     implementation("org.apache.commons:commons-text:1.12.0")
