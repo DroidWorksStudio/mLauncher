@@ -144,7 +144,7 @@ mLauncher uses the following permissions:
   - Allows mLauncher to see usage of other apps to list last used apps first in the app list. 
 
 ## Credits
-- [https://gitlab.com/tanujnotes/Olauncher](https://gitlab.com/tanujnotes/Olauncher)
+- [https://github.com/tanujnotes/Olauncher](https://github.com/tanujnotes/Olauncher)
 - [https://github.com/OlauncherCF/OlauncherCF](https://github.com/OlauncherCF/OlauncherCF)
 
 ## Donation
