@@ -11,6 +11,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Cleaned up the battery icon. - ([c6ee92e](https://github.com/DroidWorksStudio/mLauncher/commit/c6ee92e336024718eeba1bb489a68a28cbe875f0))
 - Rename Favorite Apps - ([4aaab7c](https://github.com/DroidWorksStudio/mLauncher/commit/4aaab7c6e0334fa2e2935425386576fd9fe7e408))
 
 ## [1.6.8](https://github.com/DroidWorksStudio/mLauncher/tree/1.6.8) - (16, September 2024)
