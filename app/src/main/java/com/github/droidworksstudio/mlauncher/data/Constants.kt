@@ -36,7 +36,7 @@ object Constants {
     const val CLOCK_DATE_SIZE_MIN = 20
     const val CLOCK_DATE_SIZE_MAX = 150
 
-    const val BATTERY_SIZE_MIN = 20
+    const val BATTERY_SIZE_MIN = 10
     const val BATTERY_SIZE_MAX = 150
 
     const val TEXT_MARGIN_MIN = 0

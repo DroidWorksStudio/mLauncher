@@ -81,67 +81,67 @@ android {
 }
 
 dependencies {
-    val androidxTestKotlin = "1.7.5"
-    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
-    implementation("androidx.core:core-ktx:1.15.0")
-    implementation("androidx.appcompat:appcompat:1.7.0")
-    implementation("androidx.recyclerview:recyclerview:1.3.2")
+    // Core libraries
+    implementation(libs.core.ktx)
+    implementation(libs.appcompat)
+    implementation(libs.recyclerview)
 
-    // Android lifecycle
-    implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7")
+    // Android Lifecycle
+    implementation(libs.lifecycle.extensions)
+    implementation(libs.lifecycle.viewmodel.ktx)
 
     // Navigation
-    implementation("androidx.navigation:navigation-fragment-ktx:2.8.3")
+    implementation(libs.navigation.fragment.ktx)
+    implementation(libs.navigation.ui.ktx)
 
     // Work Manager
-    implementation("androidx.work:work-runtime-ktx:2.10.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    implementation("androidx.constraintlayout:constraintlayout-compose:1.1.0")
+    implementation(libs.work.runtime.ktx)
 
-    // Text similarity
-    implementation("org.apache.commons:commons-text:1.12.0")
-    implementation("com.google.code.gson:gson:2.11.0")
+    // UI Components
+    implementation(libs.constraintlayout)
+    implementation(libs.constraintlayout.compose)
+    implementation(libs.activity.compose)
 
-    // JETPACK
-    // Integration with activities
-    //noinspection GradleDependency
-    implementation("androidx.activity:activity-compose:1.9.1")
-    // Compose Material Design
-    implementation("androidx.compose.material:material:$androidxTestKotlin")
-    implementation("com.github.SmartToolFactory:Compose-Colorful-Sliders:1.2.0")
-    // Animations
-    implementation("androidx.compose.animation:animation:$androidxTestKotlin")
-    implementation("androidx.navigation:navigation-ui-ktx:2.8.4")
+    // Jetpack Compose
+    implementation(libs.compose.material) // Compose Material Design
+    implementation(libs.compose.animation) // Animations
+    implementation(libs.compose.ui) // Core UI library
+    implementation(libs.compose.foundation) // Foundation library
+    implementation(libs.compose.ui.tooling) // UI tooling for previews
 
-    // AndroidX
-    implementation("androidx.compose.ui:ui:$androidxTestKotlin")
-    implementation("androidx.compose.ui:ui-tooling:$androidxTestKotlin")
-    implementation("androidx.compose.foundation:foundation:$androidxTestKotlin")
-    implementation("androidx.biometric:biometric-ktx:1.4.0-alpha02")
+    // Text similarity and JSON handling
+    implementation(libs.commons.text)
+    implementation(libs.gson)
 
-    //color picker
-    implementation("net.mm2d.color-chooser:color-chooser:0.7.3")
+    // Color picker and sliders
+    implementation(libs.color.chooser) // Simple color picker
+    implementation(libs.compose.colorful.sliders) // Compose colorful sliders
 
-    val acraVersion = "5.11.3"
-    implementation("ch.acra:acra-core:$acraVersion")
-    implementation("ch.acra:acra-dialog:$acraVersion")
-    implementation("ch.acra:acra-mail:$acraVersion")
+    // Biometric support
+    implementation(libs.biometric.ktx)
 
-    val androidxTestEspresso = "3.6.1"
-    androidTestImplementation("androidx.test.espresso:espresso-core:$androidxTestEspresso")
-    androidTestImplementation("androidx.test.espresso:espresso-contrib:$androidxTestEspresso")
-    implementation("androidx.test.espresso:espresso-idling-resource:$androidxTestEspresso")
-    implementation("androidx.test.espresso:espresso-idling-resource:$androidxTestEspresso")
+    // ACRA for crash reporting
+    implementation(libs.acra.core)
+    implementation(libs.acra.dialog)
+    implementation(libs.acra.mail)
 
-    // Test rules and transitive dependencies:
-   androidTestImplementation("androidx.compose.ui:ui-test-junit4:$androidxTestKotlin")
-    // Needed for createComposeRule, but not createAndroidComposeRule:
-    debugImplementation("androidx.compose.ui:ui-test-manifest:$androidxTestKotlin")
-    androidTestImplementation("androidx.navigation:navigation-testing:2.8.4")
-    debugImplementation("androidx.fragment:fragment-testing:1.8.5")
-    implementation("androidx.test:core-ktx:1.6.1")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
-    androidTestImplementation("androidx.test:runner:1.6.2")
-    androidTestImplementation("androidx.test:rules:1.6.1")
+    // AndroidX Test - Espresso
+    androidTestImplementation(libs.espresso.core)
+    androidTestImplementation(libs.espresso.contrib)
+    implementation(libs.espresso.idling.resource) // Idling resources for Espresso tests
+
+    // Test rules and other testing dependencies
+    androidTestImplementation(libs.test.runner)
+    androidTestImplementation(libs.test.rules)
+    implementation(libs.test.core.ktx) // Test core utilities
+
+    // Jetpack Compose Testing
+    androidTestImplementation(libs.ui.test.junit4) // For createComposeRule
+    debugImplementation(libs.ui.test.manifest) // Debug-only dependencies for Compose testing
+
+    // Fragment testing
+    debugImplementation(libs.fragment.testing)
+
+    // Navigation testing
+    androidTestImplementation(libs.navigation.testing)
 }

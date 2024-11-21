@@ -112,6 +112,7 @@ class Prefs(val context: Context) {
                         editor.putFloat(key, value.toFloat())
                     }
                 }
+
                 is MutableSet<*> -> {
                     val list = value.filterIsInstance<String>().toSet()
                     editor.putStringSet(key, list)
@@ -541,9 +542,9 @@ class Prefs(val context: Context) {
     var batterySize: Int
         get() {
             return try {
-                prefs.getInt(BATTERY_SIZE_TEXT, 18)
+                prefs.getInt(BATTERY_SIZE_TEXT, 14)
             } catch (_: Exception) {
-                18
+                14
             }
         }
         set(value) = prefs.edit().putInt(BATTERY_SIZE_TEXT, value).apply()
