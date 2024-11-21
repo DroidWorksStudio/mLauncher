@@ -14,7 +14,7 @@
     <string name="miscellaneous">Overige</string>
     <!-- Home Strings -->
     <string name="hidden_apps">Verborgen apps</string>
-    <string name="favorite_apps">Apps opnieuw ordenen</string>
+    <string name="favorite_apps">Favoriete apps</string>
     <string name="set_as_default_launcher">Instellen als standaard launcher</string>
     <string name="change_default_launcher">Standaard launcher wijzigen</string>
     <!-- Appearance Strings -->
