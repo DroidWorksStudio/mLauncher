@@ -480,12 +480,12 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             requireActivity().runOnUiThread {
                 try {
                     deviceManager.lockNow()
-                } catch (e: SecurityException) {
+                } catch (_: SecurityException) {
                     showToastLong(
                         requireContext(),
                         "App does not have the permission to lock the device"
                     )
-                } catch (e: Exception) {
+                } catch (_: Exception) {
                     showToastLong(
                         requireContext(),
                         "mLauncher failed to lock device.\nPlease check your app settings."
