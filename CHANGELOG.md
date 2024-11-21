@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Bug Fixes:
 
+- Fixed the formatting of save buttons - ([f4cd15c](https://github.com/DroidWorksStudio/mLauncher/commit/f4cd15cec3100e594fcc35b63aa6f2cf9e3e063c))
 - Fixed the usageStats times - ([d2930a6](https://github.com/DroidWorksStudio/mLauncher/commit/d2930a60674cfd8088cae484136ec8005e0ce7d0))
 
 ### Language Support:
