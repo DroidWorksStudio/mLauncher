@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
+## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
+
+### Refactoring:
+
+- Rename Favorite Apps - ([4aaab7c](https://github.com/DroidWorksStudio/mLauncher/commit/4aaab7c6e0334fa2e2935425386576fd9fe7e408))
+
 ## [1.6.8](https://github.com/DroidWorksStudio/mLauncher/tree/1.6.8) - (16, September 2024)
 
 ### Implemented Enhancements:
