@@ -61,9 +61,9 @@ import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.Setti
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsItemFont
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsSliderItem
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsTextButton
+import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsThreeButtonRow
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsToggle
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsTopView
-import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsThreeButtonRow
 
 class SettingsFragment : Fragment() {
 
@@ -122,7 +122,10 @@ class SettingsFragment : Fragment() {
         binding.scrollView.setBackgroundColor(hex)
     }
 
-    private fun <T> createTypefaceMap(context: Context, typeMappings: Map<T, Int>): Map<T, Typeface?> {
+    private fun <T> createTypefaceMap(
+        context: Context,
+        typeMappings: Map<T, Int>
+    ): Map<T, Typeface?> {
         return typeMappings.mapValues { (_, fontResId) ->
             ResourcesCompat.getFont(context, fontResId)
         }
@@ -166,7 +169,8 @@ class SettingsFragment : Fragment() {
             Constants.Fonts.SourceCodePro to R.font.source_code_pro
         )
 
-        val typefaceMapFonts: Map<Constants.Fonts, Typeface?> = createTypefaceMap(requireActivity(), typeMappings)
+        val typefaceMapFonts: Map<Constants.Fonts, Typeface?> =
+            createTypefaceMap(requireActivity(), typeMappings)
 
 
 
@@ -195,10 +199,10 @@ class SettingsFragment : Fragment() {
                     resetDefaultLauncher(requireContext())
                 }
                 SettingsTextButton(
-                    stringResource(R.string.reorder_apps),
+                    stringResource(R.string.favorite_apps),
                     fontSize = iconFs
                 ) {
-                    showReorderApps()
+                    showFavoriteApps()
                 }
             }
             SettingsArea(
@@ -503,7 +507,7 @@ class SettingsFragment : Fragment() {
                         ) { toggleShowBattery() }
                     },
                     { _, onChange ->
-                        if(prefs.showBattery) {
+                        if (prefs.showBattery) {
                             SettingsToggle(
                                 title = stringResource(R.string.show_battery_icon),
                                 fontSize = iconFs,
@@ -917,10 +921,10 @@ class SettingsFragment : Fragment() {
         )
     }
 
-    private fun showReorderApps() {
+    private fun showFavoriteApps() {
         viewModel.getHiddenApps()
         findNavController().navigate(
-            R.id.action_settingsFragment_to_appListReorderFragment,
+            R.id.action_settingsFragment_to_appFavoriteFragment,
             bundleOf("flag" to AppDrawerFlag.ReorderApps.toString())
         )
     }

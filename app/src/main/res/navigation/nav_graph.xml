@@ -43,10 +43,10 @@
     </fragment>
 
     <fragment
-        android:id="@+id/appListReorderFragment"
+        android:id="@+id/appFavoriteFragment"
         android:name="com.github.droidworksstudio.mlauncher.ui.FavoriteFragment"
         android:label="app_list_fragment"
-        tools:layout="@layout/fragment_favorite"></fragment>
+        tools:layout="@layout/fragment_favorite" />
 
     <fragment
         android:id="@+id/settingsFragment"
@@ -62,8 +62,8 @@
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
 
         <action
-            android:id="@+id/action_settingsFragment_to_appListReorderFragment"
-            app:destination="@id/appListReorderFragment"
+            android:id="@+id/action_settingsFragment_to_appFavoriteFragment"
+            app:destination="@id/appFavoriteFragment"
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
