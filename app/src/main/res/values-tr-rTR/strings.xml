@@ -14,7 +14,7 @@
     <string name="miscellaneous">Çeşitli</string>
     <!-- Home Strings -->
     <string name="hidden_apps">Gizli uygulamalar</string>
-    <string name="favorite_apps">Yeniden Sıralama Uygulamaları</string>
+    <string name="favorite_apps">Favori Uygulamalar</string>
     <string name="set_as_default_launcher">Varsayılan başlatıcı olarak ayarla</string>
     <string name="change_default_launcher">Varsayılan başlatıcıyı değiştir</string>
     <!-- Appearance Strings -->

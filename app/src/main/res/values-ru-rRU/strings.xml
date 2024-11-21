@@ -14,7 +14,7 @@
     <string name="miscellaneous">Разнообразный</string>
     <!-- Home Strings -->
     <string name="hidden_apps">Скрытые приложения</string>
-    <string name="favorite_apps">Повторный заказ приложений</string>
+    <string name="favorite_apps">Любимые приложения</string>
     <string name="set_as_default_launcher">Установить как лаунчер по умолчанию</string>
     <string name="change_default_launcher">Изменить лаунчер по умолчанию</string>
     <!-- Appearance Strings -->

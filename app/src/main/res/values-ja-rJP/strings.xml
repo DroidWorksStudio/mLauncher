@@ -14,7 +14,7 @@
     <string name="miscellaneous">その他</string>
     <!-- Home Strings -->
     <string name="hidden_apps">非表示のアプリ</string>
-    <string name="favorite_apps">アプリの並べ替え</string>
+    <string name="favorite_apps">お気に入りのアプリ</string>
     <string name="set_as_default_launcher">デフォルトのランチャーに設定</string>
     <string name="change_default_launcher">デフォルトのランチャーを変更する</string>
     <!-- Appearance Strings -->

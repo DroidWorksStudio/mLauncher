@@ -14,7 +14,7 @@
     <string name="miscellaneous">Misceláneas</string>
     <!-- Home Strings -->
     <string name="hidden_apps">Aplicaciones ocultas</string>
-    <string name="favorite_apps">Reordenar aplicaciones</string>
+    <string name="favorite_apps">Aplicaciones favoritas</string>
     <string name="set_as_default_launcher">Establecer como lanzador predeterminado</string>
     <string name="change_default_launcher">Cambiar lanzador predeterminado</string>
     <!-- Appearance Strings -->

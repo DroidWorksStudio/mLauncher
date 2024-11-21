@@ -14,7 +14,7 @@
     <string name="miscellaneous">שונות</string>
     <!-- Home Strings -->
     <string name="hidden_apps">יישומים מוסתרים</string>
-    <string name="favorite_apps">הזמנה מחדש של אפליקציות</string>
+    <string name="favorite_apps">יישומים מועדפים</string>
     <string name="set_as_default_launcher">הגדר כמשגר ברירת מחדל</string>
     <string name="change_default_launcher">שנה את משגר ברירת המחדל</string>
     <!-- Appearance Strings -->

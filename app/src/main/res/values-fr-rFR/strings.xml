@@ -14,7 +14,7 @@
     <string name="miscellaneous">Divers</string>
     <!-- Home Strings -->
     <string name="hidden_apps">Applications masquées</string>
-    <string name="favorite_apps">Réorganiser les applications</string>
+    <string name="favorite_apps">Applications préférées</string>
     <string name="set_as_default_launcher">Définir comme lanceur par défaut</string>
     <string name="change_default_launcher">Changer le lanceur par défaut</string>
     <!-- Appearance Strings -->
