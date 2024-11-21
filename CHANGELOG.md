@@ -16,6 +16,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Removed roundToTwoDecimalPlaces - ([4b145ae](https://github.com/DroidWorksStudio/mLauncher/commit/4b145aee55822fc66708115c5247250c820f8184))
 - Removed unused languages - ([30c74e8](https://github.com/DroidWorksStudio/mLauncher/commit/30c74e815191d9129b78957ac1e841221dbddb7c))
 - Cleaned up HomeFragment - ([1aae3bd](https://github.com/DroidWorksStudio/mLauncher/commit/1aae3bd7acaea22f11e522eced44b2828d07bb36))
 - Cleaned up the battery icon. - ([c6ee92e](https://github.com/DroidWorksStudio/mLauncher/commit/c6ee92e336024718eeba1bb489a68a28cbe875f0))
