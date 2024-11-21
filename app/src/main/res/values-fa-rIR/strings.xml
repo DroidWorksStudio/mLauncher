@@ -1,167 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <!-- Base Settings -->
-    <string name="app">برنامه</string>
-    <!-- Admin Settings -->
-    <string name="admin_permission_message">mLauncher قول می دهد از مجوز قفل صفحه به طور مسئولانه استفاده کند. mLauncher هیچ داده ای را جمع آوری یا به اشتراک نمی گذارد.</string>
-    <string name="experimental">(تجربی)</string>
-    <!-- Settings Headers -->
-    <string name="appearance">ظاهر</string>
-    <string name="behavior">رفتار - اخلاق</string>
-    <string name="homescreen">صفحه اصلی</string>
-    <string name="alignment">هم ترازی</string>
-    <string name="gestures">حرکات</string>
-    <string name="miscellaneous">متفرقه</string>
-    <!-- Home Strings -->
-    <string name="hidden_apps">برنامه های مخفی</string>
-    <string name="reorder_apps">سفارش مجدد برنامه ها</string>
-    <string name="set_as_default_launcher">به عنوان راه‌انداز پیش‌فرض تنظیم کنید</string>
-    <string name="change_default_launcher">لانچر پیش فرض را تغییر دهید</string>
-    <!-- Appearance Strings -->
-    <string name="status_bar">نمایش نوار وضعیت</string>
-    <string name="theme_mode">حالت تم</string>
-    <string name="color_mode">حالت رنگ</string>
-    <string name="app_language">زبان رابط</string>
-    <string name="app_text_size">اندازه متن برنامه</string>
-    <string name="clock_text_size">اندازه متن ساعت</string>
-    <string name="date_text_size">اندازه متن تاریخ</string>
-    <string name="battery_text_size">اندازه متن باتری</string>
-    <string name="app_padding_size">اندازه بالشتک</string>
-    <string name="follow_accent_colors">رنگ های تاکیدی</string>
-    <string name="background_opacity">کدورت پس زمینه</string>
-    <string name="all_apps_text">نمایش متن همه برنامه ها</string>
-    <!-- Behavior Strings -->
-    <string name="auto_show_keyboard">صفحه کلید نمایش خودکار</string>
-    <string name="auto_open_apps">باز کردن خودکار برنامه ها</string>
-    <string name="enable_notifications">اعلان ها را فعال کنید</string>
-    <string name="display_recent_apps">نمایش برنامه های اخیر</string>
-    <string name="number_of_recents">تعداد برنامه های اخیر</string>
-    <string name="filter_strength">قدرت فیلتر</string>
-    <string name="search_from_start">جستجوی برنامه از ابتدا</string>
-    <string name="icon_font">از فونت آیکون استفاده کنید</string>
-    <!-- Home-screen Strings -->
-    <string name="apps_on_home_screen">تعداد میانبرها</string>
-    <string name="pages_on_home_screen">تعدادی از صفحات</string>
-    <string name="enable_home_pager">Home Pager را فعال کنید</string>
-    <string name="show_time">نمایش زمان</string>
-    <string name="show_time_format">فرمت زمان (AM/PM)</string>
-    <string name="show_date">نمایش تاریخ</string>
-    <string name="show_battery">نمایش باتری</string>
-    <string name="show_battery_icon">نمایش نماد باتری</string>
-    <string name="lock_home_apps">قفل کردن برنامه ها</string>
-    <string name="extend_home_apps_area">گسترش منطقه قابل کلیک</string>
-    <string name="home_alignment_bottom">تراز کردن صفحه اصلی در پایین</string>
-    <!-- Alignment Strings -->
-    <string name="display_app_usage_stats">نمایش آمار استفاده از برنامه</string>
-    <string name="home_alignment">صفحه اصلی برنامه ها</string>
-    <string name="clock_alignment">ساعت و تاریخ</string>
-    <string name="drawer_alignment">برنامه ها در کشوی برنامه</string>
-    <!-- Gestures Strings -->
-    <string name="short_swipe_up_app">بالا کشیدن</string>
-    <string name="short_swipe_down_app">انگشت خود را به پایین بکشید</string>
-    <string name="short_swipe_left_app">به چپ بکشید</string>
-    <string name="short_swipe_right_app">انگشت خود را به سمت راست بکشید</string>
-    <string name="long_swipe_up_app">Swipe up را طولانی فشار دهید</string>
-    <string name="long_swipe_down_app">Swipe down را طولانی فشار دهید</string>
-    <string name="long_swipe_left_app">با فشار طولانی، انگشت خود را به چپ بکشید</string>
-    <string name="long_swipe_right_app">انگشت خود را به سمت راست فشار دهید</string>
-    <string name="clock_click_app">روی ساعت کلیک کنید</string>
-    <string name="date_click_app">روی تاریخ کلیک کنید</string>
-    <string name="usage_click_app">روی Total Usage کلیک کنید</string>
-    <string name="double_tap">دو تا ضربه ی آهسته بزن</string>
-    <!-- Gestures Do Strings -->
-    <string name="show_notifications">نمایش اعلان</string>
-    <string name="show_app_list">نمایش لیست برنامه ها</string>
-    <string name="open_app">اپلیکیشن را باز کن</string>
-    <string name="lock_screen">صفحه قفل</string>
-    <string name="open_quick_settings">تنظیمات سریع</string>
-    <string name="show_recents">نمایش موارد اخیر</string>
-    <string name="open_power_dialog">گفتگوی برق</string>
-    <string name="take_a_screenshot">یک اسکرین شات بگیرید</string>
-    <string name="left_page">به صفحه سمت چپ بروید</string>
-    <string name="right_page">به صفحه سمت راست بروید</string>
-    <string name="double_tap_to_lock_screen">برای قفل کردن، دو ضربه سریع بزنید</string>
-    <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">تنظیمات اندازه متن</string>
-    <string name="display_hidden_apps">نمایش برنامه های مخفی</string>
-    <string name="lock_settings">تنظیمات قفل</string>
-    <!-- Backup Strings -->
-    <string name="backup">پشتیبان گیری</string>
-    <string name="load_backup">بار</string>
-    <string name="save_backup">صرفه جویی</string>
-    <string name="clear_backup">پاک کردن</string>
-    <!-- Settings Strings -->
-    <string name="off">خاموش</string>
-    <string name="on">بر</string>
-    <string name="left">ترک کرد</string>
-    <string name="right">درست</string>
-    <string name="center">مرکز</string>
-    <string name="dark">تاریک</string>
-    <string name="light">سبک</string>
-    <string name="settings">تنظیمات</string>
-    <string name="lang_system">سیستم</string>
-    <string name="system_default">سیستم</string>
-    <string name="delete">حذف</string>
-    <string name="hide">پنهان شدن</string>
-    <string name="unhide">پنهان کردن</string>
-    <string name="rename">تغییر نام دهید</string>
-    <string name="info">اطلاعات</string>
-    <string name="okay">باشه</string>
-    <string name="save">صرفه جویی</string>
-    <string name="show">نمایش دهید</string>
-    <string name="reset">بازنشانی کنید</string>
-    <string name="cancel">لغو کنید</string>
-    <string name="enable">فعال کردن</string>
-    <string name="disable">غیر فعال کردن</string>
-    <string name="enabled">فعال شد</string>
-    <string name="disabled">معلول</string>
-    <string name="open">باز کن</string>
-    <string name="close">نزدیک</string>
-    <string name="copy">کپی 🀄</string>
-    <!-- Colored Themes -->
-    <string name="catppuccino">کتپوچینو</string>
-    <string name="nordic">نوردیک</string>
-    <!-- Dark Only Themes -->
-    <string name="dracula">دراکولا</string>
-    <string name="arc">قوس</string>
-    <string name="nokto">نوکتو</string>
-    <string name="breeze">نسیم</string>
-    <string name="yaru">یارو</string>
-    <!-- Light Only Themes -->
-    <string name="adwaita">ادویتا</string>
-    <!-- PinCode Strings -->
-    <string name="text_authentication_cancel">لغو احراز هویت</string>
-    <string name="text_authentication_error">خطای احراز هویت:%1$s(کد %2$d)</string>
-    <string name="text_authentication_failed">احراز هویت ناموفق بود.</string>
-    <string name="text_biometric_login">ورود بیومتریک برای mLauncher</string>
-    <string name="text_biometric_login_sub">با استفاده از اعتبار بیومتریک خود وارد شوید</string>
-    <!-- Crash Strings -->
-    <string name="acra_crash">تصادف در</string>
-    <string name="acra_dialog_text">متأسفیم، اما %1$s با مشکل غیرمنتظره ای مواجه شده است و باید بسته شود. لطفاً با ارسال گزارش خرابی به ما در بهبود کمک کنید.\n\n%1$s برای حریم خصوصی شما ارزش قائل است و داده های جمع آوری شده صرفاً برای بهبود پایداری برنامه استفاده می شود. هیچ اطلاعات شخصی جمع آوری نمی شود. از حمایت شما متشکرم</string>
-    <string name="acra_send_report">ارسال گزارش</string>
-    <string name="acra_dont_send">ارسال نکنید</string>
-    <string name="acra_mail_body">لطفاً مشکلی را که با آن مواجه شدید شرح دهید:</string>
-    <!-- Search Stings -->
-    <string name="search_engine">موتور جستجو</string>
-    <string name="search_google">گوگل</string>
-    <string name="search_yahoo">یاهو</string>
-    <string name="search_duckduckgo">DuckDuckGo</string>
-    <string name="search_bing">بینگ</string>
-    <string name="search_brave">شجاع</string>
-    <string name="search_swisscow">گاوهای سوئیسی</string>
-    <!-- Unsorted Strings -->
-    <string name="show_apps">همه برنامه ها</string>
-    <string name="total_screen_time">کل زمان نمایش</string>
-    <string name="can_not_delete_system_apps">نمی توان برنامه های سیستم را حذف کرد</string>
-    <string name="please_select_app">لطفاً یک برنامه را انتخاب کنید</string>
-    <string name="drawer_list_empty_hint">هیچ برنامه ای پیدا نشد</string>
-    <string name="long_press_for_settings">برای تنظیمات، هر جایی را به مدت طولانی فشار دهید</string>
-    <string name="swipe_up_for_apps">برای همه برنامه ها انگشت خود را به سمت بالا بکشید</string>
-    <string name="app_drawer_tips">نکته: برای رد کردن، انگشت خود را به پایین بکشید. برای مخفی کردن صفحه کلید، پیمایش کنید.</string>
-    <string name="double_tap_lock_is_enabled_message">اگر قفل دوبار ضربه زدن اثر انگشت یا قفل با چهره را غیرفعال می‌کند، تنظیمات mLauncher را باز کنید، روی «تجربی» ضربه بزنید و دستورالعمل‌ها را دنبال کنید. متشکرم.</string>
-    <string name="double_tap_lock_uninstall_message">دو ضربه سریع برای قفل فعال است.
-		\n\nتوجه: اگر تصمیم به حذف mLauncher دارید، ابتدا آن را خاموش کنید.</string>
-    <string name="accessibility_service_name">سرویس اقدامات mLauncher</string>
-    <string name="accessibility_service_description">این سرویس دسترسی به mLauncher اجازه می دهد تا اقدامات خاصی مانند قفل کردن صفحه یا باز کردن تنظیمات سریع را انجام دهد. سرویس دسترسی ما هیچ داده ای را جمع آوری یا به اشتراک نمی گذارد.</string>
-    <string name="version">نسخه</string>
-</resources>
