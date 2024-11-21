@@ -3,7 +3,7 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     val kotlinVersion = "1.8.10"
-    extra ["kotlinVersion"] = kotlinVersion
+    extra["kotlinVersion"] = kotlinVersion
     dependencies {
         classpath(kotlin("gradle-plugin", version = kotlinVersion))
 
@@ -14,10 +14,10 @@ buildscript {
 
 plugins {
     id("com.android.application") version "8.7.2" apply false
-    id("com.android.library") version "8.7.1" apply false
+    id("com.android.library") version "8.7.2" apply false
     id("org.jetbrains.kotlin.android") version "1.8.10" apply false
 }
 
 tasks.register<Delete>("clean").configure {
     delete(rootProject.buildDir)
- }
+}
