@@ -14,7 +14,7 @@
     <string name="miscellaneous">Różnorodny</string>
     <!-- Home Strings -->
     <string name="hidden_apps">Ukryte aplikacje</string>
-    <string name="reorder_apps">Zamów ponownie aplikacje</string>
+    <string name="favorite_apps">Zmień kolejność aplikacji</string>
     <string name="set_as_default_launcher">Ustaw jako domyślny launcher</string>
     <string name="change_default_launcher">Zmień domyślny launcher</string>
     <!-- Appearance Strings -->
