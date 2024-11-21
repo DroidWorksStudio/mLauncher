@@ -19,8 +19,8 @@ navigation-testing = "2.8.4"
 work-runtime-ktx = "2.10.0"
 
 # ConstraintLayout
-constraintlayout = "2.1.4"
-constraintlayout-compose = "1.0.1"
+constraintlayout = "2.2.0"
+constraintlayout-compose = "1.1.0"
 
 # Compose Versions
 activity-compose = "1.9.3"
