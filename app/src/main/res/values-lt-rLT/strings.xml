@@ -14,7 +14,7 @@
     <string name="miscellaneous">Įvairūs</string>
     <!-- Home Strings -->
     <string name="hidden_apps">Paslėptos programėlės</string>
-    <string name="reorder_apps">Perrūšiuoti programėles</string>
+    <string name="favorite_apps">Iš naujo užsakykite programas</string>
     <string name="set_as_default_launcher">Nustatyti kaip numatytajį darbalaukį</string>
     <string name="change_default_launcher">Pakeisti numatytajį darbalaukį</string>
     <!-- Appearance Strings -->

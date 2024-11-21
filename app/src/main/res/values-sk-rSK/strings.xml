@@ -14,7 +14,7 @@
     <string name="miscellaneous">Rôzne</string>
     <!-- Home Strings -->
     <string name="hidden_apps">Skryté aplikácie</string>
-    <string name="reorder_apps">Zmeniť poradie Aplikacií</string>
+    <string name="favorite_apps">Znova objednať aplikácie</string>
     <string name="set_as_default_launcher">Nastaviť ako predvolený spúšťač</string>
     <string name="change_default_launcher">Zmeniť predvolený spúšťač</string>
     <!-- Appearance Strings -->

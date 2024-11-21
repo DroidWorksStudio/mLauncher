@@ -14,7 +14,7 @@
     <string name="miscellaneous">여러 가지 잡다한</string>
     <!-- Home Strings -->
     <string name="hidden_apps">Hidden apps</string>
-    <string name="reorder_apps">앱 재주문</string>
+    <string name="favorite_apps">앱 다시 주문하기</string>
     <string name="set_as_default_launcher">Set as default launcher</string>
     <string name="change_default_launcher">Change default launcher</string>
     <!-- Appearance Strings -->

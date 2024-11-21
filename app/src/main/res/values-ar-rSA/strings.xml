@@ -14,7 +14,7 @@
     <string name="miscellaneous">متنوع</string>
     <!-- Home Strings -->
     <string name="hidden_apps">التطبيقات المخفية</string>
-    <string name="reorder_apps">إعادة طلب التطبيقات</string>
+    <string name="favorite_apps">إعادة ترتيب التطبيقات</string>
     <string name="set_as_default_launcher">تعيين كمشغل افتراضي</string>
     <string name="change_default_launcher">تغيير المشغل الافتراضي</string>
     <!-- Appearance Strings -->

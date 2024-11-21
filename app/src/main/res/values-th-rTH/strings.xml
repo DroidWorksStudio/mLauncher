@@ -14,7 +14,7 @@
     <string name="miscellaneous">เบ็ดเตล็ด</string>
     <!-- Home Strings -->
     <string name="hidden_apps">แอพที่ซ่อนอยู่</string>
-    <string name="reorder_apps">สั่งซื้อแอปอีกครั้ง</string>
+    <string name="favorite_apps">การเรียงลำดับแอปใหม่</string>
     <string name="set_as_default_launcher">ตั้งเป็นตัวเรียกใช้งานเริ่มต้น</string>
     <string name="change_default_launcher">เปลี่ยนตัวเรียกใช้งานเริ่มต้น</string>
     <!-- Appearance Strings -->
