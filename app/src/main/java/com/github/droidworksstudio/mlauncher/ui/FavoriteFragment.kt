@@ -30,20 +30,20 @@ import androidx.lifecycle.ViewModelProvider
 import com.github.droidworksstudio.mlauncher.MainViewModel
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.Prefs
-import com.github.droidworksstudio.mlauncher.databinding.FragmentReorderHomeAppsBinding
+import com.github.droidworksstudio.mlauncher.databinding.FragmentFavoriteBinding
 import com.github.droidworksstudio.mlauncher.helper.getHexFontColor
 import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
 import com.github.droidworksstudio.mlauncher.helper.hideStatusBar
 import com.github.droidworksstudio.mlauncher.helper.showStatusBar
 
-class ReorderHomeAppsFragment : Fragment() {
+class FavoriteFragment : Fragment() {
 
     private lateinit var prefs: Prefs
     private lateinit var viewModel: MainViewModel
     private lateinit var deviceManager: DevicePolicyManager
     private lateinit var vibrator: Vibrator
 
-    private var _binding: FragmentReorderHomeAppsBinding? = null
+    private var _binding: FragmentFavoriteBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -51,7 +51,7 @@ class ReorderHomeAppsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentReorderHomeAppsBinding.inflate(inflater, container, false)
+        _binding = FragmentFavoriteBinding.inflate(inflater, container, false)
 
         val view = binding.root
         prefs = Prefs(requireContext())
@@ -110,35 +110,41 @@ class ReorderHomeAppsFragment : Fragment() {
                 // Indicate that we accept drag events
                 return true
             }
+
             DragEvent.ACTION_DRAG_ENTERED -> {
                 // Highlight the target view as the drag enters
                 targetView.setBackgroundResource(R.drawable.reorder_apps_background)
                 return true
             }
+
             DragEvent.ACTION_DRAG_EXITED -> {
                 // Remove highlighting when the drag exits
                 targetView.background = null
                 return true
             }
+
             DragEvent.ACTION_DROP -> {
                 // Remove highlighting
                 targetView.background = null
-                
+
                 // Extract the dragged TextView
                 val draggedTextView = event.localState as TextView
 
                 // Reorder apps based on the drop position
-                val draggedIndex = (draggedTextView.parent as ViewGroup).indexOfChild(draggedTextView)
+                val draggedIndex =
+                    (draggedTextView.parent as ViewGroup).indexOfChild(draggedTextView)
                 val targetIndex = (targetView.parent as ViewGroup).indexOfChild(targetView)
                 reorderApps(draggedIndex, targetIndex)
 
                 return true
             }
+
             DragEvent.ACTION_DRAG_ENDED -> {
                 // Remove highlighting when the drag ends
                 targetView.background = null
                 return true
             }
+
             else -> return false
         }
     }
@@ -149,7 +155,10 @@ class ReorderHomeAppsFragment : Fragment() {
             targetIndex < 0 || targetIndex >= binding.homeAppsLayout.childCount
         ) {
             // Handle out of bounds indices gracefully, or log an error
-            Log.e("ReorderApps", "Invalid indices: draggedIndex=$draggedIndex, targetIndex=$targetIndex")
+            Log.e(
+                "ReorderApps",
+                "Invalid indices: draggedIndex=$draggedIndex, targetIndex=$targetIndex"
+            )
             return
         }
 
@@ -182,12 +191,14 @@ class ReorderHomeAppsFragment : Fragment() {
         if (diff in 1 until oldAppsNum) { // 1 <= diff <= oldNumApps
             binding.homeAppsLayout.children.drop(diff)
         } else if (diff < 0) {
-            val prefixDrawable: Drawable? = context?.let { ContextCompat.getDrawable(it, R.drawable.ic_prefix_drawable) }
+            val prefixDrawable: Drawable? =
+                context?.let { ContextCompat.getDrawable(it, R.drawable.ic_prefix_drawable) }
             // add all missing apps to list
             for (i in oldAppsNum until newAppsNum) {
                 val view = layoutInflater.inflate(R.layout.home_app_button, null) as TextView
                 view.apply {
-                    val appLabel = prefs.getHomeAppModel(i).activityLabel.ifEmpty { getString(R.string.app) }
+                    val appLabel =
+                        prefs.getHomeAppModel(i).activityLabel.ifEmpty { getString(R.string.app) }
                     textSize = prefs.appSize.toFloat()
                     id = i
                     text = "   $appLabel"
@@ -201,7 +212,7 @@ class ReorderHomeAppsFragment : Fragment() {
                 }
                 val padding: Int = prefs.textPaddingSize
                 view.setPadding(0, padding, 0, padding)
-                binding.pageName.text = getString(R.string.reorder_apps)
+                binding.pageName.text = getString(R.string.favorite_apps)
                 binding.pageName.textSize = prefs.appSize * 1.5f
 
                 if (prefs.followAccentColors) {

@@ -16,7 +16,7 @@
 
     <!-- Home Strings -->
     <string name="hidden_apps">Hidden Apps</string>
-    <string name="reorder_apps">Re-Order Apps</string>
+    <string name="favorite_apps">Re-Order Apps</string>
     <string name="set_as_default_launcher">Set as Default Launcher</string>
     <string name="change_default_launcher">Change Default Launcher</string>
 

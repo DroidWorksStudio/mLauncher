@@ -6,14 +6,14 @@
     android:layout_height="match_parent"
     android:animateLayoutChanges="true"
     android:orientation="vertical"
-    tools:context=".ui.ReorderHomeAppsFragment">
+    tools:context=".ui.FavoriteFragment">
 
     <FrameLayout
         android:id="@+id/touchArea"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="50dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp" />
 
     <LinearLayout
         android:id="@+id/pageLayout"
@@ -46,8 +46,8 @@
                 android:gravity="center_vertical"
                 android:orientation="vertical"
                 android:paddingHorizontal="20dp"
-                android:paddingBottom="80dp"
-                android:paddingTop="112dp" />
+                android:paddingTop="112dp"
+                android:paddingBottom="80dp" />
 
         </ScrollView>
     </LinearLayout>

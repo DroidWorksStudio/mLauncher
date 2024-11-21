@@ -44,10 +44,9 @@
 
     <fragment
         android:id="@+id/appListReorderFragment"
-        android:name="com.github.droidworksstudio.mlauncher.ui.ReorderHomeAppsFragment"
+        android:name="com.github.droidworksstudio.mlauncher.ui.FavoriteFragment"
         android:label="app_list_fragment"
-        tools:layout="@layout/fragment_reorder_home_apps">
-    </fragment>
+        tools:layout="@layout/fragment_favorite"></fragment>
 
     <fragment
         android:id="@+id/settingsFragment"
