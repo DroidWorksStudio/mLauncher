@@ -34,8 +34,6 @@ import com.github.droidworksstudio.mlauncher.style.CORNER_RADIUS
 import com.github.droidworksstudio.mlauncher.style.SETTINGS_PADDING
 import com.github.droidworksstudio.mlauncher.style.SettingsTheme
 import com.smarttoolfactory.slider.*
-import java.math.BigDecimal
-import java.math.RoundingMode
 
 object SettingsComposable {
 
@@ -673,11 +671,6 @@ object SettingsComposable {
                 )
             }
         }
-    }
-
-
-    private fun Float.roundToTwoDecimalPlaces(): Float {
-        return BigDecimal(this.toDouble()).setScale(2, RoundingMode.HALF_EVEN).toFloat()
     }
 
     @Composable
