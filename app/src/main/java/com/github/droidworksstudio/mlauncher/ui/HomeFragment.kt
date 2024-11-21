@@ -30,7 +30,6 @@ import androidx.biometric.BiometricManager.Authenticators.BIOMETRIC_WEAK
 import androidx.biometric.BiometricManager.Authenticators.DEVICE_CREDENTIAL
 import androidx.biometric.BiometricPrompt
 import androidx.core.content.ContextCompat
-import androidx.core.content.res.ResourcesCompat
 import androidx.core.os.bundleOf
 import androidx.core.view.children
 import androidx.fragment.app.Fragment
@@ -81,6 +80,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
+
     // Instantiate Colors object
     private val colors = Colors()
 
@@ -135,7 +135,10 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
         val timezone = prefs.language.timezone()
         val is24HourFormat = DateFormat.is24HourFormat(requireContext())
-        val best12 = DateFormat.getBestDateTimePattern(timezone, if (prefs.showTimeFormat) "hhmma" else "hhmm").let {
+        val best12 = DateFormat.getBestDateTimePattern(
+            timezone,
+            if (prefs.showTimeFormat) "hhmma" else "hhmm"
+        ).let {
             if (!prefs.showTimeFormat) it.removeSuffix(" a") else it
         }
         Log.d("currentDateTime", best12)
@@ -150,18 +153,11 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
         binding.clock.textSize = prefs.clockSize.toFloat()
         binding.date.textSize = prefs.dateSize.toFloat()
-        binding.batteryText.textSize = prefs.batterySize.toFloat()
+        binding.battery.textSize = prefs.batterySize.toFloat()
         binding.homeScreenPager.textSize = prefs.appSize.toFloat()
 
-        if(prefs.showBatteryIcon) {
-            binding.batteryIcon.visibility = View.VISIBLE
-            val typeface = ResourcesCompat.getFont(requireActivity(), R.font.roboto)
-            binding.batteryIcon.typeface = typeface
-            binding.batteryIcon.textSize = prefs.batterySize.toFloat()
-        }
-
         if (prefs.showBattery) {
-            binding.batteryLayout.visibility = View.VISIBLE
+            binding.battery.visibility = View.VISIBLE
         }
 
         binding.mainLayout.setBackgroundColor(colors.background(requireContext(), prefs))
@@ -169,16 +165,14 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             val fontColor = getHexFontColor(requireContext(), prefs)
             binding.clock.setTextColor(fontColor)
             binding.date.setTextColor(fontColor)
-            binding.batteryIcon.setTextColor(fontColor)
-            binding.batteryText.setTextColor(fontColor)
+            binding.battery.setTextColor(fontColor)
             binding.setTotalScreenTime.setTextColor(fontColor)
             binding.setDefaultLauncher.setTextColor(fontColor)
             binding.homeScreenPager.setTextColor(fontColor)
-        }  else {
+        } else {
             binding.clock.setTextColor(colors.accents(requireContext(), prefs, 1))
             binding.date.setTextColor(colors.accents(requireContext(), prefs, 1))
-            binding.batteryIcon.setTextColor(colors.accents(requireContext(), prefs, 1))
-            binding.batteryText.setTextColor(colors.accents(requireContext(), prefs, 1))
+            binding.battery.setTextColor(colors.accents(requireContext(), prefs, 1))
             binding.setTotalScreenTime.setTextColor(colors.accents(requireContext(), prefs, 2))
             binding.setDefaultLauncher.setTextColor(colors.accents(requireContext(), prefs, 2))
             binding.homeScreenPager.setTextColor(colors.accents(requireContext(), prefs, 2))
@@ -252,7 +246,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 viewModel.resetDefaultLauncherApp(requireContext())
             }
 
-            R.id.batteryLayout -> {
+            R.id.battery -> {
                 openBatteryUsage()
             }
 
@@ -290,7 +284,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         binding.date.setOnClickListener(this)
         binding.setTotalScreenTime.setOnClickListener(this)
         binding.setDefaultLauncher.setOnClickListener(this)
-        binding.batteryLayout.setOnClickListener(this)
+        binding.battery.setOnClickListener(this)
     }
 
     @RequiresApi(Build.VERSION_CODES.Q)
@@ -355,6 +349,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             }
         }
     }
+
     @SuppressLint("WrongConstant", "PrivateApi")
     private fun expandNotificationDrawer(context: Context) {
         try {
@@ -388,6 +383,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             launchApp(prefs.appShortSwipeUp)
         else openDialerApp(requireContext())
     }
+
     private fun openSwipeDownApp() {
         if (prefs.appShortSwipeDown.activityPackage.isNotEmpty())
             launchApp(prefs.appShortSwipeDown)
@@ -411,6 +407,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             launchApp(prefs.appLongSwipeUp)
         else openDialerApp(requireContext())
     }
+
     private fun openLongSwipeDownApp() {
         if (prefs.appLongSwipeDown.activityPackage.isNotEmpty())
             launchApp(prefs.appLongSwipeDown)
@@ -521,6 +518,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                         startTime = System.currentTimeMillis()
                         longSwipeTriggered = false // Reset the flag
                     }
+
                     MotionEvent.ACTION_UP -> {
                         val endX = motionEvent.x
                         val endY = motionEvent.y
@@ -528,7 +526,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                         val duration = endTime - startTime
                         val deltaX = endX - startX
                         val deltaY = endY - startY
-                        val distance = sqrt((deltaX * deltaX + deltaY * deltaY).toDouble()).toFloat()
+                        val distance =
+                            sqrt((deltaX * deltaX + deltaY * deltaY).toDouble()).toFloat()
                         val direction: String = if (abs(deltaX) < abs(deltaY)) {
                             if (deltaY < 0) "up" else "down"
                         } else {
@@ -613,6 +612,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                         startTime = System.currentTimeMillis()
                         longSwipeTriggered = false // Reset the flag
                     }
+
                     MotionEvent.ACTION_UP -> {
                         val endX = motionEvent.x
                         val endY = motionEvent.y
@@ -620,7 +620,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                         val duration = endTime - startTime
                         val deltaX = endX - startX
                         val deltaY = endY - startY
-                        val distance = sqrt((deltaX * deltaX + deltaY * deltaY).toDouble()).toFloat()
+                        val distance =
+                            sqrt((deltaX * deltaX + deltaY * deltaY).toDouble()).toFloat()
                         val direction: String = if (abs(deltaX) < abs(deltaY)) {
                             if (deltaY < 0) "up" else "down"
                         } else {
@@ -692,14 +693,17 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 Action.OpenApp -> openLongSwipeUpApp()
                 else -> handleOtherAction(action)
             }
+
             "down" -> when (val action = prefs.longSwipeDownAction) {
                 Action.OpenApp -> openLongSwipeDownApp()
                 else -> handleOtherAction(action)
             }
+
             "left" -> when (val action = prefs.longSwipeLeftAction) {
                 Action.OpenApp -> openLongSwipeLeftApp()
                 else -> handleOtherAction(action)
             }
+
             "right" -> when (val action = prefs.longSwipeRightAction) {
                 Action.OpenApp -> openLongSwipeRightApp()
                 else -> handleOtherAction(action)
@@ -728,7 +732,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 }
 
                 // Create existingAppView
-                val existingAppView = layoutInflater.inflate(R.layout.home_app_button, null) as TextView
+                val existingAppView =
+                    layoutInflater.inflate(R.layout.home_app_button, null) as TextView
                 existingAppView.apply {
                     // Set properties of existingAppView
                     textSize = prefs.appSize.toFloat()
@@ -758,7 +763,12 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     // Set properties of newAppView
                     textSize = prefs.appSize.toFloat() / 1.5f
                     id = i
-                    text = formatMillisToHMS(getUsageStats(context, prefs.getHomeAppModel(i).activityPackage))
+                    text = formatMillisToHMS(
+                        getUsageStats(
+                            context,
+                            prefs.getHomeAppModel(i).activityPackage
+                        )
+                    )
                     setOnTouchListener(getHomeAppsGestureListener(context, this))
                     setOnClickListener(this@HomeFragment)
                     if (!prefs.extendHomeAppsArea) {
@@ -772,7 +782,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     if (prefs.followAccentColors) {
                         val fontColor = getHexFontColor(requireContext(), prefs)
                         setTextColor(fontColor)
-                    }  else {
+                    } else {
                         setTextColor(colors.accents(requireContext(), prefs, 3))
                     }
                 }
@@ -895,17 +905,18 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
         // Set the text for the page selector corresponding to each page
         binding.homeScreenPager.text = pageSelectorTexts.joinToString(" ")
-        if (prefs.homePagesNum > 1 && prefs.homePagerOn) binding.homeScreenPager.visibility = View.VISIBLE
+        if (prefs.homePagesNum > 1 && prefs.homePagerOn) binding.homeScreenPager.visibility =
+            View.VISIBLE
     }
 
-    private fun handleSwipeLeft(totalPages:Int) {
+    private fun handleSwipeLeft(totalPages: Int) {
         if (currentPage < totalPages - 1) {
             currentPage++
             updateAppsVisibility(totalPages)
         }
     }
 
-    private fun handleSwipeRight(totalPages:Int) {
+    private fun handleSwipeRight(totalPages: Int) {
         if (currentPage > 0) {
             currentPage--
             updateAppsVisibility(totalPages)
