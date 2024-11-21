@@ -55,6 +55,7 @@ object Constants {
 
     // Update SWIPE_DISTANCE_THRESHOLD dynamically based on screen dimensions
     var SWIPE_DISTANCE_THRESHOLD: Float = 0f
+
     // Update MAX_HOME_PAGES dynamically based on MAX_HOME_APPS
     var MAX_HOME_PAGES: Int = 5
 
@@ -108,119 +109,45 @@ object Constants {
 
     enum class Language : EnumOption {
         System,
-        Afrikaans,
-        Albanian,
         Arabic,
-        Bulgarian,
-        Chinese,
-        Croatian,
-        Czech,
-        Danish,
         Dutch,
-        EnglishUS,
-        EnglishGB,
-        EnglishCA,
-        Estonian,
-        Filipino,
-        Finnish,
+        English,
         French,
-        Georgian,
         German,
-        Greek,
-        Hawaiian,
         Hebrew,
-        Hindi,
-        Hungarian,
-        Icelandic,
-        Indonesian,
-        Irish,
         Italian,
         Japanese,
         Korean,
-        Latin,
         Lithuanian,
-        Luxembourgish,
-        Malagasy,
-        Malay,
-        Malayalam,
-        Maltese,
-        Nepali,
-        Norwegian,
-        Persian,
         Polish,
         Portuguese,
-        Punjabi,
-        Romanian,
         Russian,
-        Serbian,
-        Sindhi,
         Slovak,
         Spanish,
-        Swahili,
-        Swedish,
         Thai,
-        Turkish,
-        Ukrainian,
-        Vietnamese;
+        Turkish;
 
         @Composable
         override fun string(): String {
             return when (this) {
                 System -> stringResource(R.string.lang_system)
-                Afrikaans -> "afrikaans"
-                Albanian -> "shqiptare"
                 Arabic -> "العربية"
-                Bulgarian -> "български"
-                Chinese -> "中文"
-                Croatian -> "Hrvatski"
-                Czech -> "čeština"
-                Danish -> "dansk"
                 Dutch -> "Nederlands"
-                EnglishUS -> "English (US)"
-                EnglishGB -> "English (GB)"
-                EnglishCA -> "English (CA)"
-                Estonian -> "Eesti keel"
-                Filipino -> "Filipino"
-                Finnish -> "Suomalainen"
+                English -> "English "
                 French -> "Français"
-                Georgian -> "ქართული"
                 German -> "Deutsch"
-                Greek -> "Ελληνική"
-                Hawaiian -> "ʻŌlelo Hawaiʻi"
                 Hebrew -> "עִברִית"
-                Hindi -> "हिंदी"
-                Hungarian -> "Magyar"
-                Icelandic -> "íslenskur"
-                Indonesian -> "Bahasa Indonesia"
-                Irish -> "Gaeilge"
                 Italian -> "Italiano"
                 Japanese -> "日本"
                 Korean -> "한국어"
-                Latin -> "latin"
                 Lithuanian -> "Lietuvių"
-                Luxembourgish -> "lëtzebuergesch"
-                Malagasy -> "Malagasy"
-                Malay -> "Melayu"
-                Malayalam -> "മലയാളം"
-                Maltese -> "malti"
-                Nepali -> "नेपाली"
-                Norwegian -> "norsk"
-                Persian -> "فارسی"
                 Polish -> "Polski"
                 Portuguese -> "Português"
-                Punjabi -> "ਪੰਜਾਬੀ"
-                Romanian -> "Română"
                 Russian -> "Русский"
-                Serbian -> "Српски"
-                Sindhi -> "سنڌي"
                 Slovak -> "slovenský"
                 Spanish -> "Español"
-                Swahili -> "kiswahili"
-                Swedish -> "Svenska"
                 Thai -> "ไทย"
                 Turkish -> "Türkçe"
-                Ukrainian -> "українська"
-                Vietnamese -> "Tiếng Việt"
             }
         }
 
@@ -232,60 +159,23 @@ object Constants {
         private fun value(): String {
             return when (this) {
                 System -> Locale.getDefault().language
-                Afrikaans -> "af"
-                Albanian -> "sq"
                 Arabic -> "ar"
-                Bulgarian -> "bg"
-                Chinese -> "zh"
-                Croatian -> "hr"
-                Czech -> "cs"
-                Danish -> "da"
                 Dutch -> "nl"
-                EnglishUS -> "en"
-                EnglishGB -> "en"
-                EnglishCA -> "en"
-                Estonian -> "et"
-                Filipino -> "fil"
-                Finnish -> "fi"
+                English -> "en"
                 French -> "fr"
-                Georgian -> "ka"
                 German -> "de"
-                Greek -> "el"
-                Hawaiian -> "haw"
                 Hebrew -> "iw"
-                Hindi -> "hi"
-                Hungarian -> "hu"
-                Icelandic -> "is"
-                Indonesian -> "in"
-                Irish -> "ga"
                 Italian -> "it"
                 Japanese -> "ja"
                 Korean -> "ko"
-                Latin -> "la"
                 Lithuanian -> "lt"
-                Luxembourgish -> "lb"
-                Malagasy -> "mg"
-                Malay -> "ms"
-                Malayalam -> "ml"
-                Maltese -> "mt"
-                Nepali -> "ne"
-                Norwegian -> "no"
-                Persian -> "fa"
                 Polish -> "pl"
                 Portuguese -> "pt"
-                Punjabi -> "pa"
-                Romanian -> "ro"
                 Russian -> "ru"
-                Serbian -> "sr"
-                Sindhi -> "sd"
                 Slovak -> "sk"
                 Spanish -> "es"
-                Swahili -> "sw"
-                Swedish -> "sv"
                 Thai -> "th"
                 Turkish -> "tr"
-                Ukrainian -> "uk"
-                Vietnamese -> "vi"
             }
         }
 
@@ -296,60 +186,23 @@ object Constants {
         private fun zone(): String {
             return when (this) {
                 System -> Locale.getDefault().toLanguageTag()
-                Afrikaans -> "af-ZA"
-                Albanian -> "sq-AL"
                 Arabic -> "ar-SA"
-                Bulgarian -> "bg-BG"
-                Chinese -> "zh-CN"
-                Croatian -> "hr-HR"
-                Czech -> "cs-CZ"
-                Danish -> "da-DK"
                 Dutch -> "nl-NL"
-                EnglishUS -> "en-US"
-                EnglishGB -> "en-GB"
-                EnglishCA -> "en-CA"
-                Estonian -> "et-EE"
-                Filipino -> "fil-PH"
-                Finnish -> "fi-FI"
+                English -> "en-US"
                 French -> "fr-FR"
-                Georgian -> "ka-GE"
                 German -> "de-DE"
-                Greek -> "el-GR"
-                Hawaiian -> "haw-US"
                 Hebrew -> "he-IL"
-                Hindi -> "hi-IN"
-                Hungarian -> "hu-HU"
-                Icelandic -> "is-IS"
-                Indonesian -> "id-ID"
-                Irish -> "ga-IE"
                 Italian -> "it-IT"
                 Japanese -> "ja-JP"
                 Korean -> "ko-KR"
-                Latin -> "la-LA"
                 Lithuanian -> "lt-LT"
-                Luxembourgish -> "lb-LU"
-                Malagasy -> "mg-MG"
-                Malay -> "ms-MY"
-                Malayalam -> "ml-IN"
-                Maltese -> "mt-MT"
-                Nepali -> "ne-NP"
-                Norwegian -> "no-NO"
-                Persian -> "fa-IR"
                 Polish -> "pl-PL"
                 Portuguese -> "pt-PT"
-                Punjabi -> "pa-IN"
-                Romanian -> "ro-RO"
                 Russian -> "ru-RU"
-                Serbian -> "sr-RS"
-                Sindhi -> "sd-PK"
                 Slovak -> "sk-SK"
                 Spanish -> "es-ES"
-                Swahili -> "sw-TZ"
-                Swedish -> "sv-SE"
                 Thai -> "th-TH"
                 Turkish -> "tr-TR"
-                Ukrainian -> "uk-UA"
-                Vietnamese -> "vi-VN"
             }
         }
     }
@@ -492,13 +345,16 @@ object Constants {
         Bitter,
         Dotness,
         DroidSans,
-//        GreatVibes,
+
+        //        GreatVibes,
         Lato,
-//        Lobster,
+
+        //        Lobster,
         Merriweather,
         Montserrat,
         OpenSans,
-//        Pacifico,
+
+        //        Pacifico,
         Quicksand,
         Raleway,
         Roboto,
