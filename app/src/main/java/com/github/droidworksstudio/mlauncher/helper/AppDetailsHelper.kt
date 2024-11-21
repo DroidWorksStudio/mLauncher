@@ -3,6 +3,7 @@ package com.github.droidworksstudio.mlauncher.helper
 import android.app.usage.UsageStatsManager
 import android.content.Context
 import android.content.pm.ApplicationInfo
+import android.util.Log
 import java.util.Calendar
 
 object AppDetailsHelper {
@@ -20,15 +21,20 @@ object AppDetailsHelper {
     }
 
     fun getUsageStats(context: Context, packageName: String): Long {
-        val calendar = Calendar.getInstance()
-        calendar.set(Calendar.HOUR_OF_DAY, 0)
-        calendar.set(Calendar.MINUTE, 0)
-        calendar.set(Calendar.SECOND, 0)
+        val calendar = Calendar.getInstance().apply {
+            set(Calendar.HOUR_OF_DAY, 0)
+            set(Calendar.MINUTE, 0)
+            set(Calendar.SECOND, 0)
+            set(Calendar.MILLISECOND, 0)
+        }
+
         val startTime = calendar.timeInMillis
         val endTime = System.currentTimeMillis()
 
-        val usageStatsManager = context.getSystemService(Context.USAGE_STATS_SERVICE) as? UsageStatsManager
-        val usageStatsList = usageStatsManager?.queryUsageStats(UsageStatsManager.INTERVAL_DAILY, startTime, endTime)
+        val usageStatsManager =
+            context.getSystemService(Context.USAGE_STATS_SERVICE) as? UsageStatsManager
+        val usageStatsList =
+            usageStatsManager?.queryUsageStats(UsageStatsManager.INTERVAL_DAILY, startTime, endTime)
         var totalUsageTime: Long = 0
 
         usageStatsList?.let { statsList ->
@@ -43,25 +49,45 @@ object AppDetailsHelper {
     }
 
     fun getTotalScreenTime(context: Context): Long {
-        val usageStatsManager = context.getSystemService(Context.USAGE_STATS_SERVICE) as UsageStatsManager
-        val calendar = Calendar.getInstance()
-        calendar.set(Calendar.HOUR_OF_DAY, 0)
-        calendar.set(Calendar.MINUTE, 0)
-        calendar.set(Calendar.SECOND, 0)
-        val startTime = calendar.timeInMillis
-        val endTime = System.currentTimeMillis()
+        // Get the current time
+        val calendar = Calendar.getInstance().apply {
+            set(Calendar.HOUR_OF_DAY, 0)  // Set to the start of the day
+            set(Calendar.MINUTE, 0)
+            set(Calendar.SECOND, 0)
+            set(Calendar.MILLISECOND, 0)
+        }
 
+        // Define the start and end time range for stats
+        val start = calendar.timeInMillis
+        val end = System.currentTimeMillis()
+
+        // Get the UsageStatsManager system service
+        val usm = context.getSystemService(Context.USAGE_STATS_SERVICE) as UsageStatsManager
+
+        // Query usage stats for the given time range
+        val usageStatsList = usm.queryUsageStats(UsageStatsManager.INTERVAL_BEST, start, end)
+
+        if (usageStatsList.isEmpty()) {
+            Log.w("getTotalScreenTime", "No usage stats available.")
+            return 0L
+        }
+
+        // Sort the stats based on last used time in descending order
+        usageStatsList.sortWith(compareByDescending { it.lastTimeUsed })
+
+        // Calculate the total screen time for all apps (excluding the current app)
         var totalScreenTime: Long = 0
-
         val packageName = context.packageName
-
-        val usageStatsList = usageStatsManager.queryUsageStats(
-            UsageStatsManager.INTERVAL_DAILY, startTime, endTime
-        )
 
         for (usageStats in usageStatsList) {
             if (usageStats.packageName != packageName) {
-                totalScreenTime += usageStats.totalTimeInForeground
+                if (usageStats.totalTimeInForeground.toInt() != 0) {
+                    Log.d(
+                        "usageStatsList",
+                        "App: ${usageStats.packageName}, Foreground time: ${usageStats.totalTimeInForeground}"
+                    )
+                    totalScreenTime += usageStats.totalTimeInForeground
+                }
             }
         }
 
@@ -83,6 +109,4 @@ object AppDetailsHelper {
         formattedString.append("")
         return formattedString.toString().trim()
     }
-
-
 }
