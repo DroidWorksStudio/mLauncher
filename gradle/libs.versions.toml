@@ -23,7 +23,6 @@ constraintlayout = "2.1.4"
 constraintlayout-compose = "1.0.1"
 
 # Compose Versions
-androidxTestKotlin = "1.7.1" # Compose-related libraries version
 activity-compose = "1.9.3"
 compose-material = "1.7.5"
 compose-animation = "1.7.5"
