@@ -11,6 +11,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Cleaned up HomeFragment - ([1aae3bd](https://github.com/DroidWorksStudio/mLauncher/commit/1aae3bd7acaea22f11e522eced44b2828d07bb36))
 - Cleaned up the battery icon. - ([c6ee92e](https://github.com/DroidWorksStudio/mLauncher/commit/c6ee92e336024718eeba1bb489a68a28cbe875f0))
 - Rename Favorite Apps - ([4aaab7c](https://github.com/DroidWorksStudio/mLauncher/commit/4aaab7c6e0334fa2e2935425386576fd9fe7e408))
 
