@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Releases:
+
+- Prepare for version 1.7.0 - ([3d2e32a](https://github.com/DroidWorksStudio/mLauncher/commit/3d2e32a1c3ab40a17301f5efbea3f406d128adfa))
+
+## [1.6.9](https://github.com/DroidWorksStudio/mLauncher/tree/1.6.9) - (21, November 2024)
+
 ### Bug Fixes:
 
 - Fixed the formatting of save buttons - ([f4cd15c](https://github.com/DroidWorksStudio/mLauncher/commit/f4cd15cec3100e594fcc35b63aa6f2cf9e3e063c))
