@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Language Support:
+
+- Updated Language Files. ([#633](https://github.com/DroidWorksStudio/mLauncher/issues/633)) - ([393b732](https://github.com/DroidWorksStudio/mLauncher/commit/393b732a3bcb5daa78455ddde59d013c87e5ae29))
+
 ### Refactoring:
 
 - Rename Favorite Apps - ([4aaab7c](https://github.com/DroidWorksStudio/mLauncher/commit/4aaab7c6e0334fa2e2935425386576fd9fe7e408))
