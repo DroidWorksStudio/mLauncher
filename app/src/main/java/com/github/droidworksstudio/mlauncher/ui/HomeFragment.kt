@@ -142,40 +142,40 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             if (!prefs.showTimeFormat) it.removeSuffix(" a") else it
         }
         Log.d("currentDateTime", best12)
-        val best24 = DateFormat.getBestDateTimePattern(timezone, "HHmm")
-        val timePattern = if (is24HourFormat) best24 else best12
-        binding.clock.format12Hour = timePattern
-        binding.clock.format24Hour = timePattern
+        binding.apply {
+            val best24 = DateFormat.getBestDateTimePattern(timezone, "HHmm")
+            val timePattern = if (is24HourFormat) best24 else best12
+            clock.format12Hour = timePattern
+            clock.format24Hour = timePattern
 
-        val datePattern = DateFormat.getBestDateTimePattern(timezone, "eeeddMMM")
-        binding.date.format12Hour = datePattern
-        binding.date.format24Hour = datePattern
+            val datePattern = DateFormat.getBestDateTimePattern(timezone, "eeeddMMM")
+            date.format12Hour = datePattern
+            date.format24Hour = datePattern
 
-        binding.clock.textSize = prefs.clockSize.toFloat()
-        binding.date.textSize = prefs.dateSize.toFloat()
-        binding.battery.textSize = prefs.batterySize.toFloat()
-        binding.homeScreenPager.textSize = prefs.appSize.toFloat()
+            clock.textSize = prefs.clockSize.toFloat()
+            date.textSize = prefs.dateSize.toFloat()
+            battery.textSize = prefs.batterySize.toFloat()
+            homeScreenPager.textSize = prefs.appSize.toFloat()
 
-        if (prefs.showBattery) {
-            binding.battery.visibility = View.VISIBLE
-        }
+            battery.visibility = if (prefs.showBattery) View.VISIBLE else View.GONE
+            mainLayout.setBackgroundColor(colors.background(requireContext(), prefs))
 
-        binding.mainLayout.setBackgroundColor(colors.background(requireContext(), prefs))
-        if (prefs.followAccentColors) {
-            val fontColor = getHexFontColor(requireContext(), prefs)
-            binding.clock.setTextColor(fontColor)
-            binding.date.setTextColor(fontColor)
-            binding.battery.setTextColor(fontColor)
-            binding.setTotalScreenTime.setTextColor(fontColor)
-            binding.setDefaultLauncher.setTextColor(fontColor)
-            binding.homeScreenPager.setTextColor(fontColor)
-        } else {
-            binding.clock.setTextColor(colors.accents(requireContext(), prefs, 1))
-            binding.date.setTextColor(colors.accents(requireContext(), prefs, 1))
-            binding.battery.setTextColor(colors.accents(requireContext(), prefs, 1))
-            binding.setTotalScreenTime.setTextColor(colors.accents(requireContext(), prefs, 2))
-            binding.setDefaultLauncher.setTextColor(colors.accents(requireContext(), prefs, 2))
-            binding.homeScreenPager.setTextColor(colors.accents(requireContext(), prefs, 2))
+            if (prefs.followAccentColors) {
+                val fontColor = getHexFontColor(requireContext(), prefs)
+                clock.setTextColor(fontColor)
+                date.setTextColor(fontColor)
+                battery.setTextColor(fontColor)
+                setTotalScreenTime.setTextColor(fontColor)
+                setDefaultLauncher.setTextColor(fontColor)
+                homeScreenPager.setTextColor(fontColor)
+            } else {
+                clock.setTextColor(colors.accents(requireContext(), prefs, 1))
+                date.setTextColor(colors.accents(requireContext(), prefs, 1))
+                battery.setTextColor(colors.accents(requireContext(), prefs, 1))
+                setTotalScreenTime.setTextColor(colors.accents(requireContext(), prefs, 2))
+                setDefaultLauncher.setTextColor(colors.accents(requireContext(), prefs, 2))
+                homeScreenPager.setTextColor(colors.accents(requireContext(), prefs, 2))
+            }
         }
     }
 
@@ -320,6 +320,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             showDate.observe(viewLifecycleOwner) {
                 binding.date.visibility = if (it) View.VISIBLE else View.GONE
             }
+
         }
     }
 
