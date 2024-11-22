@@ -19,6 +19,7 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.view.updatePadding
 import androidx.recyclerview.widget.RecyclerView
+import com.github.droidworksstudio.common.showKeyboard
 import com.github.droidworksstudio.fuzzywuzzy.FuzzyFinder
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.AppListItem
@@ -30,7 +31,6 @@ import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.isSystemApp
 import com.github.droidworksstudio.mlauncher.helper.Colors
 import com.github.droidworksstudio.mlauncher.helper.dp2px
 import com.github.droidworksstudio.mlauncher.helper.getHexFontColor
-import com.github.droidworksstudio.mlauncher.helper.showKeyboard
 
 class AppDrawerAdapter(
     private val context: Context,
@@ -56,7 +56,8 @@ class AppDrawerAdapter(
 
     @RequiresApi(Build.VERSION_CODES.Q)
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        binding = AdapterAppDrawerBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        binding =
+            AdapterAppDrawerBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         prefs = Prefs(parent.context)
         if (prefs.followAccentColors) {
             val fontColor = getHexFontColor(parent.context, prefs)
@@ -108,15 +109,21 @@ class AppDrawerAdapter(
                 val searchChars = charSearch.toString()
                 val filteredApps: MutableList<AppListItem>
 
-                if (prefs.filterStrength >= 1 ) {
+                if (prefs.filterStrength >= 1) {
                     val scoredApps = mutableMapOf<AppListItem, Int>()
                     for (app in appsList) {
-                        scoredApps[app] = FuzzyFinder.scoreApp(app, searchChars, Constants.FILTER_STRENGTH_MAX)
+                        scoredApps[app] =
+                            FuzzyFinder.scoreApp(app, searchChars, Constants.FILTER_STRENGTH_MAX)
                     }
 
                     filteredApps = if (searchChars.isNotEmpty()) {
                         if (prefs.searchFromStart) {
-                            scoredApps.filter { (app, _) -> app.label.startsWith(searchChars, ignoreCase = true) }
+                            scoredApps.filter { (app, _) ->
+                                app.label.startsWith(
+                                    searchChars,
+                                    ignoreCase = true
+                                )
+                            }
                                 .filter { (_, score) -> score > prefs.filterStrength }
                                 .map { it.key }
                                 .toMutableList()
@@ -213,7 +220,12 @@ class AppDrawerAdapter(
                     appHide.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.visibility, 0, 0)
                     appHide.text = context.getString(R.string.unhide)
                 } else {
-                    appHide.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.visibility_off, 0, 0)
+                    appHide.setCompoundDrawablesWithIntrinsicBounds(
+                        0,
+                        R.drawable.visibility_off,
+                        0,
+                        0
+                    )
                     appHide.text = context.getString(R.string.hide)
                 }
 
@@ -280,17 +292,19 @@ class AppDrawerAdapter(
                 }
 
                 val padding = dp2px(resources, 24)
-                appTitle.updatePadding(left=padding, right=padding)
+                appTitle.updatePadding(left = padding, right = padding)
 
                 appTitleFrame.apply {
                     setOnClickListener {
                         appClickListener(appListItem)
                     }
                     setOnLongClickListener {
-                        val openApp = flag == AppDrawerFlag.LaunchApp || flag == AppDrawerFlag.HiddenApps
+                        val openApp =
+                            flag == AppDrawerFlag.LaunchApp || flag == AppDrawerFlag.HiddenApps
                         if (openApp) {
                             try {
-                                appDelete.alpha = if (context.isSystemApp(appListItem.activityPackage)) 0.3f else 1.0f
+                                appDelete.alpha =
+                                    if (context.isSystemApp(appListItem.activityPackage)) 0.3f else 1.0f
                                 appHideLayout.visibility = View.VISIBLE
                             } catch (e: Exception) {
                                 e.printStackTrace()

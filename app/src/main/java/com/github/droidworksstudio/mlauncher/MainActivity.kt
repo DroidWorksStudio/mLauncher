@@ -1,10 +1,9 @@
 package com.github.droidworksstudio.mlauncher
 
+// import android.content.pm.PackageManager
 import android.annotation.SuppressLint
-import android.app.Activity
 import android.content.Intent
 import android.content.pm.ActivityInfo
-// import android.content.pm.PackageManager
 import android.content.res.Configuration
 import android.os.Build
 import android.os.Bundle
@@ -19,14 +18,13 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import com.github.droidworksstudio.common.showLongToast
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.ActivityMainBinding
 import com.github.droidworksstudio.mlauncher.helper.hasUsagePermission
-// import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper
 import com.github.droidworksstudio.mlauncher.helper.isTablet
 import com.github.droidworksstudio.mlauncher.helper.showPermissionDialog
-import com.github.droidworksstudio.mlauncher.helper.showToastLong
 import java.io.BufferedReader
 import java.io.FileOutputStream
 import java.io.InputStreamReader
@@ -150,8 +148,8 @@ class MainActivity : AppCompatActivity() {
         @Suppress("DEPRECATION")
         super.onActivityResult(requestCode, resultCode, data)
 
-        if (resultCode != Activity.RESULT_OK) {
-            // showToastLong(applicationContext, "Intent Error")
+        if (resultCode != RESULT_OK) {
+            showLongToast("Intent Error")
             return
         }
 
@@ -261,8 +259,7 @@ class MainActivity : AppCompatActivity() {
         if (resetFailed) {
             val intent = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
                 Intent(Settings.ACTION_MANAGE_DEFAULT_APPS_SETTINGS) else {
-                showToastLong(
-                    this,
+                showLongToast(
                     "Search for launcher or home app"
                 )
                 Intent(Settings.ACTION_SETTINGS)

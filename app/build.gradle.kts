@@ -92,6 +92,7 @@ dependencies {
     implementation(libs.core.ktx)
     implementation(libs.appcompat)
     implementation(libs.recyclerview)
+    implementation(libs.palette.ktx)
 
     // Android Lifecycle
     implementation(libs.lifecycle.extensions)

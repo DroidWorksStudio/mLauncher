@@ -36,6 +36,14 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import com.github.droidworksstudio.common.launchCalendar
+import com.github.droidworksstudio.common.openAccessibilitySettings
+import com.github.droidworksstudio.common.openAlarmApp
+import com.github.droidworksstudio.common.openCameraApp
+import com.github.droidworksstudio.common.openDialerApp
+import com.github.droidworksstudio.common.openDigitalWellbeing
+import com.github.droidworksstudio.common.showLongToast
+import com.github.droidworksstudio.common.showShortToast
 import com.github.droidworksstudio.mlauncher.MainViewModel
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.AppListItem
@@ -54,15 +62,7 @@ import com.github.droidworksstudio.mlauncher.helper.getHexFontColor
 import com.github.droidworksstudio.mlauncher.helper.hideStatusBar
 import com.github.droidworksstudio.mlauncher.helper.initActionService
 import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
-import com.github.droidworksstudio.mlauncher.helper.openAccessibilitySettings
-import com.github.droidworksstudio.mlauncher.helper.openAlarmApp
-import com.github.droidworksstudio.mlauncher.helper.openCalendar
-import com.github.droidworksstudio.mlauncher.helper.openCameraApp
-import com.github.droidworksstudio.mlauncher.helper.openDialerApp
-import com.github.droidworksstudio.mlauncher.helper.openDigitalWellbeing
 import com.github.droidworksstudio.mlauncher.helper.showStatusBar
-import com.github.droidworksstudio.mlauncher.helper.showToastLong
-import com.github.droidworksstudio.mlauncher.helper.showToastShort
 import com.github.droidworksstudio.mlauncher.listener.OnSwipeTouchListener
 import com.github.droidworksstudio.mlauncher.listener.ViewSwipeTouchListener
 import kotlinx.coroutines.Dispatchers
@@ -382,73 +382,73 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     private fun openSwipeUpApp() {
         if (prefs.appShortSwipeUp.activityPackage.isNotEmpty())
             launchApp(prefs.appShortSwipeUp)
-        else openDialerApp(requireContext())
+        else requireContext().openDialerApp()
     }
 
     private fun openSwipeDownApp() {
         if (prefs.appShortSwipeDown.activityPackage.isNotEmpty())
             launchApp(prefs.appShortSwipeDown)
-        else openDialerApp(requireContext())
+        else requireContext().openDialerApp()
     }
 
     private fun openSwipeLeftApp() {
         if (prefs.appShortSwipeLeft.activityPackage.isNotEmpty())
             launchApp(prefs.appShortSwipeLeft)
-        else openCameraApp(requireContext())
+        else requireContext().openCameraApp()
     }
 
     private fun openSwipeRightApp() {
         if (prefs.appShortSwipeRight.activityPackage.isNotEmpty())
             launchApp(prefs.appShortSwipeRight)
-        else openDialerApp(requireContext())
+        else requireContext().openDialerApp()
     }
 
     private fun openLongSwipeUpApp() {
         if (prefs.appLongSwipeUp.activityPackage.isNotEmpty())
             launchApp(prefs.appLongSwipeUp)
-        else openDialerApp(requireContext())
+        else requireContext().openDialerApp()
     }
 
     private fun openLongSwipeDownApp() {
         if (prefs.appLongSwipeDown.activityPackage.isNotEmpty())
             launchApp(prefs.appLongSwipeDown)
-        else openDialerApp(requireContext())
+        else requireContext().openDialerApp()
     }
 
     private fun openLongSwipeLeftApp() {
         if (prefs.appLongSwipeLeft.activityPackage.isNotEmpty())
             launchApp(prefs.appLongSwipeLeft)
-        else openCameraApp(requireContext())
+        else requireContext().openCameraApp()
     }
 
     private fun openLongSwipeRightApp() {
         if (prefs.appLongSwipeRight.activityPackage.isNotEmpty())
             launchApp(prefs.appLongSwipeRight)
-        else openDialerApp(requireContext())
+        else requireContext().openDialerApp()
     }
 
     private fun openClickClockApp() {
         if (prefs.appClickClock.activityPackage.isNotEmpty())
             launchApp(prefs.appClickClock)
-        else openAlarmApp(requireContext())
+        else requireContext().openAlarmApp()
     }
 
     private fun openClickUsageApp() {
         if (prefs.appClickUsage.activityPackage.isNotEmpty())
             launchApp(prefs.appClickUsage)
-        else openDigitalWellbeing(requireContext())
+        else requireContext().openDigitalWellbeing()
     }
 
     private fun openClickDateApp() {
         if (prefs.appClickDate.activityPackage.isNotEmpty())
             launchApp(prefs.appClickDate)
-        else openCalendar(requireContext())
+        else requireContext().launchCalendar()
     }
 
     private fun openDoubleTapApp() {
         if (prefs.appDoubleTap.activityPackage.isNotEmpty())
             launchApp(prefs.appDoubleTap)
-        else openCameraApp(requireContext())
+        else requireContext().openCameraApp()
     }
 
     // This function handles all swipe actions that a independent of the actual swipe direction
@@ -475,20 +475,18 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             if (actionService != null) {
                 actionService.lockScreen()
             } else {
-                openAccessibilitySettings(requireContext())
+                requireContext().openAccessibilitySettings()
             }
         } else {
             requireActivity().runOnUiThread {
                 try {
                     deviceManager.lockNow()
                 } catch (_: SecurityException) {
-                    showToastLong(
-                        requireContext(),
+                    showLongToast(
                         "App does not have the permission to lock the device"
                     )
                 } catch (_: Exception) {
-                    showToastLong(
-                        requireContext(),
+                    showLongToast(
                         "mLauncher failed to lock device.\nPlease check your app settings."
                     )
                     prefs.lockModeOn = false
@@ -497,7 +495,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         }
     }
 
-    private fun showLongPressToast() = showToastShort(requireContext(), "Long press to select app")
+    private fun showLongPressToast() = showShortToast("Long press to select app")
 
     private fun textOnClick(view: View) = onClick(view)
 
@@ -938,13 +936,11 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                         errString: CharSequence
                     ) {
                         when (errorCode) {
-                            BiometricPrompt.ERROR_USER_CANCELED -> showToastLong(
-                                requireContext(),
+                            BiometricPrompt.ERROR_USER_CANCELED -> showLongToast(
                                 getString(R.string.text_authentication_cancel)
                             )
 
-                            else -> showToastLong(
-                                requireContext(),
+                            else -> showLongToast(
                                 getString(R.string.text_authentication_error).format(
                                     errString,
                                     errorCode
@@ -958,8 +954,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     }
 
                     override fun onAuthenticationFailed() {
-                        showToastLong(
-                            requireContext(),
+                        showLongToast(
                             getString(R.string.text_authentication_failed)
                         )
                     }
@@ -991,7 +986,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
             BiometricManager.BIOMETRIC_ERROR_NONE_ENROLLED -> sendToSettingFragment()
 
-            else -> showToastLong(requireContext(), getString(R.string.text_authentication_error))
+            else -> showLongToast(getString(R.string.text_authentication_error))
         }
     }
 

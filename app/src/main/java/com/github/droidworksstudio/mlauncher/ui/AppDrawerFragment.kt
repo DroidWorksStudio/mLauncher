@@ -30,6 +30,11 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.github.droidworksstudio.common.hideKeyboard
+import com.github.droidworksstudio.common.openSearch
+import com.github.droidworksstudio.common.searchCustomSearchEngine
+import com.github.droidworksstudio.common.searchOnPlayStore
+import com.github.droidworksstudio.common.showShortToast
 import com.github.droidworksstudio.mlauncher.MainViewModel
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.AppListItem
@@ -40,12 +45,7 @@ import com.github.droidworksstudio.mlauncher.databinding.FragmentAppDrawerBindin
 import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.isSystemApp
 import com.github.droidworksstudio.mlauncher.helper.Colors
 import com.github.droidworksstudio.mlauncher.helper.getHexFontColor
-import com.github.droidworksstudio.mlauncher.helper.hideKeyboard
 import com.github.droidworksstudio.mlauncher.helper.openAppInfo
-import com.github.droidworksstudio.mlauncher.helper.openSearch
-import com.github.droidworksstudio.mlauncher.helper.searchCustomSearchEngine
-import com.github.droidworksstudio.mlauncher.helper.searchOnPlayStore
-import com.github.droidworksstudio.mlauncher.helper.showToastShort
 
 class AppDrawerFragment : Fragment() {
 
@@ -82,7 +82,8 @@ class AppDrawerFragment : Fragment() {
 
         binding.mainLayout.setBackgroundColor(colors.background(requireContext(), prefs))
 
-        val flagString = arguments?.getString("flag", AppDrawerFlag.LaunchApp.toString()) ?: AppDrawerFlag.LaunchApp.toString()
+        val flagString = arguments?.getString("flag", AppDrawerFlag.LaunchApp.toString())
+            ?: AppDrawerFlag.LaunchApp.toString()
         val flag = AppDrawerFlag.valueOf(flagString)
         val n = arguments?.getInt("n", 0) ?: 0
 
@@ -99,6 +100,7 @@ class AppDrawerFragment : Fragment() {
                     findNavController().popBackStack()
                 }
             }
+
             else -> {}
         }
 
@@ -106,7 +108,7 @@ class AppDrawerFragment : Fragment() {
             ViewModelProvider(this)[MainViewModel::class.java]
         } ?: throw Exception("Invalid Activity")
 
-        val gravity = when(Prefs(requireContext()).drawerAlignment) {
+        val gravity = when (Prefs(requireContext()).drawerAlignment) {
             Constants.Gravity.Left -> Gravity.LEFT
             Constants.Gravity.Center -> Gravity.CENTER
             Constants.Gravity.Right -> Gravity.RIGHT
@@ -229,9 +231,12 @@ class AppDrawerFragment : Fragment() {
                             searchQuery = query?.substringAfter("!")
                             requireContext().searchCustomSearchEngine(searchQuery, prefs)
                         }
+
                         else -> {
                             // Handle unsupported search engines or invalid queries
-                            if (adapter.itemCount == 0 && requireContext().searchOnPlayStore(query?.trim()).not()) {
+                            if (adapter.itemCount == 0 && requireContext().searchOnPlayStore(query?.trim())
+                                    .not()
+                            ) {
                                 requireContext().openSearch(query?.trim())
                             } else {
                                 adapter.launchFirstInList()
@@ -299,11 +304,16 @@ class AppDrawerFragment : Fragment() {
         binding.mainLayout.setBackgroundColor(colors.background(requireContext(), prefs))
     }
 
-    private fun initViewModel(flag: AppDrawerFlag, viewModel: MainViewModel, appAdapter: AppDrawerAdapter) {
+    private fun initViewModel(
+        flag: AppDrawerFlag,
+        viewModel: MainViewModel,
+        appAdapter: AppDrawerAdapter
+    ) {
         viewModel.hiddenApps.observe(viewLifecycleOwner, Observer {
             if (flag != AppDrawerFlag.HiddenApps) return@Observer
             it?.let { appList ->
-                binding.listEmptyHint.visibility = if (appList.isEmpty()) View.VISIBLE else View.GONE
+                binding.listEmptyHint.visibility =
+                    if (appList.isEmpty()) View.VISIBLE else View.GONE
                 populateAppList(appList, appAdapter)
             }
         })
@@ -312,7 +322,8 @@ class AppDrawerFragment : Fragment() {
             if (flag == AppDrawerFlag.HiddenApps) return@Observer
             if (it == appAdapter.appsList) return@Observer
             it?.let { appList ->
-                binding.listEmptyHint.visibility = if (appList.isEmpty()) View.VISIBLE else View.GONE
+                binding.listEmptyHint.visibility =
+                    if (appList.isEmpty()) View.VISIBLE else View.GONE
                 populateAppList(appList, appAdapter)
             }
         })
@@ -346,12 +357,17 @@ class AppDrawerFragment : Fragment() {
     }
 
     private fun populateAppList(apps: List<AppListItem>, appAdapter: AppDrawerAdapter) {
-        val animation = AnimationUtils.loadLayoutAnimation(requireContext(), R.anim.layout_anim_from_bottom)
+        val animation =
+            AnimationUtils.loadLayoutAnimation(requireContext(), R.anim.layout_anim_from_bottom)
         binding.recyclerView.layoutAnimation = animation
         appAdapter.setAppList(apps.toMutableList())
     }
 
-    private fun appClickListener(viewModel: MainViewModel, flag: AppDrawerFlag, n: Int = 0): (appListItem: AppListItem) -> Unit =
+    private fun appClickListener(
+        viewModel: MainViewModel,
+        flag: AppDrawerFlag,
+        n: Int = 0
+    ): (appListItem: AppListItem) -> Unit =
         { appModel ->
             viewModel.selectedApp(appModel, flag, n)
             if (flag == AppDrawerFlag.LaunchApp || flag == AppDrawerFlag.HiddenApps)
@@ -359,10 +375,11 @@ class AppDrawerFragment : Fragment() {
             else
                 findNavController().popBackStack()
         }
+
     private fun appDeleteListener(): (appListItem: AppListItem) -> Unit =
         { appModel ->
             if (requireContext().isSystemApp(appModel.activityPackage))
-                showToastShort(requireContext(),getString(R.string.can_not_delete_system_apps))
+                showShortToast(getString(R.string.can_not_delete_system_apps))
             else {
                 val appPackage = appModel.activityPackage
                 val intent = Intent(Intent.ACTION_DELETE)
@@ -371,12 +388,14 @@ class AppDrawerFragment : Fragment() {
             }
 
         }
+
     private fun appRenameListener(): (appPackage: String, appAlias: String) -> Unit =
         { appPackage, appAlias ->
             val prefs = Prefs(requireContext())
             prefs.setAppAlias(appPackage, appAlias)
             findNavController().popBackStack()
         }
+
     private fun renameListener(flag: AppDrawerFlag, i: Int) {
         val name = binding.search.query.toString().trim()
         if (name.isEmpty()) return
