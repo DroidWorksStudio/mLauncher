@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Bug Fixes:
+
+- Fixed the battery still displayed when disabled. - ([e9a62d7](https://github.com/DroidWorksStudio/mLauncher/commit/e9a62d7aae46478b5a777a4879a7e9355b6fd979))
+
 ### Releases:
 
 - Prepare for version 1.7.0 - ([3d2e32a](https://github.com/DroidWorksStudio/mLauncher/commit/3d2e32a1c3ab40a17301f5efbea3f406d128adfa))
