@@ -8,6 +8,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Fixed the battery still displayed when disabled. - ([e9a62d7](https://github.com/DroidWorksStudio/mLauncher/commit/e9a62d7aae46478b5a777a4879a7e9355b6fd979))
 
+### Refactoring:
+
+- Moving functions about and added common functions - ([328786b](https://github.com/DroidWorksStudio/mLauncher/commit/328786bcad5a3a39ef924efccaed6017669c9d98))
+
 ### Releases:
 
 - Prepare for version 1.7.0 - ([3d2e32a](https://github.com/DroidWorksStudio/mLauncher/commit/3d2e32a1c3ab40a17301f5efbea3f406d128adfa))
