@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Bug Fixes:
 
+- Fixed the usage time - ([34a3e55](https://github.com/DroidWorksStudio/mLauncher/commit/34a3e55f76a5adc0f40123fccfaac1ed158c21c8))
 - Fixed the battery still displayed when disabled. - ([e9a62d7](https://github.com/DroidWorksStudio/mLauncher/commit/e9a62d7aae46478b5a777a4879a7e9355b6fd979))
 
 ### Refactoring:
