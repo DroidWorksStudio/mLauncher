@@ -11,6 +11,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Cleanup Favorites - ([cddfc27](https://github.com/DroidWorksStudio/mLauncher/commit/cddfc2737df16b342d08dfaedbb861ae4637c6fa))
 - Moving functions about and added common functions - ([328786b](https://github.com/DroidWorksStudio/mLauncher/commit/328786bcad5a3a39ef924efccaed6017669c9d98))
 
 ### Releases:
