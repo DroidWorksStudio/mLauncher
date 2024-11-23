@@ -15,11 +15,10 @@ import android.os.Bundle
 import android.os.Vibrator
 import android.util.Log
 import android.view.DragEvent
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.LinearLayout
 import android.widget.ScrollView
 import android.widget.TextView
 import androidx.annotation.RequiresApi
@@ -186,19 +185,8 @@ class FavoriteFragment : Fragment() {
         } else if (diff < 0) {
             val prefixDrawable: Drawable? =
                 context?.let { ContextCompat.getDrawable(it, R.drawable.ic_prefix_drawable) }
-
-            // Add all missing apps to the list
+            // add all missing apps to list
             for (i in oldAppsNum until newAppsNum) {
-                // Create a LinearLayout with horizontal orientation
-                val horizontalLayout = LinearLayout(context).apply {
-                    orientation = LinearLayout.HORIZONTAL
-                    layoutParams = LinearLayout.LayoutParams(
-                        LinearLayout.LayoutParams.WRAP_CONTENT,
-                        LinearLayout.LayoutParams.WRAP_CONTENT
-                    )
-                }
-
-                // Create the TextView
                 val view = layoutInflater.inflate(R.layout.home_app_button, null) as TextView
                 view.apply {
                     val appLabel =
@@ -206,28 +194,12 @@ class FavoriteFragment : Fragment() {
                     textSize = prefs.appSize.toFloat()
                     id = i
                     text = appLabel
-
-                    if (!prefs.extendHomeAppsArea) {
-                        layoutParams = LinearLayout.LayoutParams(
-                            LinearLayout.LayoutParams.WRAP_CONTENT,
-                            LinearLayout.LayoutParams.WRAP_CONTENT
-                        )
-                    }
+                    setCompoundDrawablesWithIntrinsicBounds(prefixDrawable, null, null, null)
+                    // Set the gravity to align the text to the end (right side in LTR)
+                    gravity = Gravity.END
                 }
-
-                // Create the ImageView for the drawable
-                val imageView = ImageView(context).apply {
-                    layoutParams = LinearLayout.LayoutParams(
-                        LinearLayout.LayoutParams.WRAP_CONTENT,
-                        LinearLayout.LayoutParams.WRAP_CONTENT
-                    )
-                    prefixDrawable?.let { setImageDrawable(it) }
-                }
-
-                // Add padding and other styling
                 val padding: Int = prefs.textPaddingSize
                 view.setPadding(0, padding, 0, padding)
-
                 binding.pageName.text = getString(R.string.favorite_apps)
                 binding.pageName.textSize = prefs.appSize * 1.5f
 
@@ -236,32 +208,25 @@ class FavoriteFragment : Fragment() {
                     view.setTextColor(fontColor)
                 }
 
-                // Add the TextView and ImageView to the horizontal layout
-                horizontalLayout.addView(view)
-                horizontalLayout.addView(imageView)
-
-                // Add the horizontal layout to the home apps layout
-                binding.homeAppsLayout.addView(horizontalLayout)
+                binding.homeAppsLayout.addView(view)
             }
         }
 
-        (0 until newAppsNum).forEach { i ->
-            val view = layoutInflater.inflate(R.layout.home_app_button, null) as TextView
-            view.apply {
-                setOnDragListener { v, event ->
-                    handleDragEvent(event, v as TextView)
+        for (i in 0 until newAppsNum) {
+            val view = binding.homeAppsLayout.getChildAt(i) as TextView
+            view.setOnDragListener { v, event ->
+                handleDragEvent(event, v as TextView)
+            }
+            view.setOnLongClickListener { v ->
+                val dragData = ClipData.newPlainText("", "")
+                val shadowBuilder = View.DragShadowBuilder(v)
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                    v.startDragAndDrop(dragData, shadowBuilder, v, 0)
+                } else {
+                    @Suppress("DEPRECATION")
+                    v.startDrag(dragData, shadowBuilder, v, 0)
                 }
-                setOnLongClickListener { v ->
-                    val dragData = ClipData.newPlainText("", "")
-                    val shadowBuilder = View.DragShadowBuilder(v)
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                        v.startDragAndDrop(dragData, shadowBuilder, v, 0)
-                    } else {
-                        @Suppress("DEPRECATION")
-                        v.startDrag(dragData, shadowBuilder, v, 0)
-                    }
-                    true
-                }
+                true
             }
         }
 
