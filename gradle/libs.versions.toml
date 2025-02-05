@@ -13,7 +13,7 @@ lifecycle-viewmodel-ktx = "2.8.7"
 
 # Navigation
 navigation-fragment-ktx = "2.8.4"
-navigation-ui-ktx = "2.8.4"
+navigation-ui-ktx = "2.8.6"
 navigation-testing = "2.8.4"
 
 # Work Manager
