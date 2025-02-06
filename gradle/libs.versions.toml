@@ -28,7 +28,7 @@ activity-compose = "1.9.3"
 compose-material = "1.7.5"
 compose-animation = "1.7.7"
 compose-ui = "1.7.5"
-compose-foundation = "1.7.5"
+compose-foundation = "1.7.7"
 compose-ui-tooling = "1.7.5"
 
 # Other Libraries
