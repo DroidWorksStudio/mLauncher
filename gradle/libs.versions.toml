@@ -29,7 +29,7 @@ compose-material = "1.7.5"
 compose-animation = "1.7.7"
 compose-ui = "1.7.7"
 compose-foundation = "1.7.7"
-compose-ui-tooling = "1.7.5"
+compose-ui-tooling = "1.7.7"
 
 # Other Libraries
 commons-text = "1.12.0"
