@@ -12,12 +12,13 @@
         </tr>
     </table>
     <p>
+        <a href='https://f-droid.org/packages/app.mlauncher'><img src='https://github.com/DroidWorksStudio/mLauncher/assets/9284733/a1e7c86f-1c76-46c0-9193-8fde9c9f531c' width="150" alt="fDroid"></a>
         <a href='http://apps.obtainium.imranr.dev/redirect.html?r=obtainium://add/https://github.com/DroidWorksStudio/mLauncher'><img src='https://github.com/DroidWorksStudio/mLauncher/assets/9284733/071cccfa-207b-45fb-8be4-7e668eeec4e5' width="150" alt="Obtanium"></a>
     </p>
 </div>
 
 - Chat with us at [mLauncher](https://t.me/DroidWorksStudio) on telegram.
-- This application can be found on [GitHub](https://github.com/HeCodes2Much/mLauncher/releases/).
+- This application can be found on [F-Droid](https://f-droid.org/packages/app.mlauncher/) and [GitHub](https://github.com/HeCodes2Much/mLauncher/releases/).
 - The latest stable version is available on the [`main`](https://github.com/HeCodes2Much/mLauncher/tree/main) branch, which can be cloned to build the application independently.
 - Additionally, a GitHub action has been set up to automatically generate an APK for every [release](https://github.com/HeCodes2Much/mLauncher/releases).
 - The **original** version of the application is also accessible on the [Play Store](https://play.google.com/store/apps/details?id=app.olauncher), [F-Droid](https://f-droid.org/fr/packages/app.olauncher/) & [GitHub](https://github.com/tanujnotes/Olauncher).
@@ -165,8 +166,9 @@ We kindly request that you consider supporting the ongoing development of mLaunc
         <a href='https://github.com/DroidWorksStudio/mLauncher/releases/latest'><img src='https://img.shields.io/github/downloads/DroidWorksStudio/mLauncher/total?color=50FA7B&style=flat-square' alt="releases"></a>
         <a href='https://github.com/DroidWorksStudio/mLauncher/releases/latest'><img src="https://img.shields.io/github/downloads/DroidWorksStudio/mLauncher/latest/total?color=50FA7B&style=flat-square" alt="GitHub Downloads (all assets, latest release)"></a>
         <br>
+        <a href='https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/app.mlauncher.yml'><img alt="F-Droid (including pre-releases)" src="https://img.shields.io/f-droid/v/app.mlauncher?color=FFB86C&style=flat-square"></a>
         <a href='https://github.com/DroidWorksStudio/mLauncher/releases/latest'><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/DroidWorksStudio/mLauncher?color=FFB86C&style=flat-square"></a>
         <br>
-        <img src='https://img.shields.io/badge/Maintained-NO-FF5555?style=flat-square' alt="Maintained">
+        <img src='https://img.shields.io/badge/Maintained-yes-FF5555?style=flat-square' alt="Maintained">
     </p>
 </div>
