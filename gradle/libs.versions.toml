@@ -1,6 +1,9 @@
 # gradle/libs.versions.toml
 
 [versions]
+agp = "8.8.0"
+kotlin = "2.0.0"
+
 # AndroidX Core and AppCompat
 core-ktx = "1.15.0"
 appcompat = "1.7.0"
@@ -25,6 +28,7 @@ constraintlayout-compose = "1.1.0"
 
 # Compose Versions
 activity-compose = "1.10.0"
+compose-android = "1.7.7"
 compose-material = "1.7.7"
 compose-animation = "1.7.7"
 compose-ui = "1.7.7"
@@ -75,6 +79,7 @@ constraintlayout-compose = { group = "androidx.constraintlayout", name = "constr
 
 # Compose
 activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activity-compose" }
+compose-android = { group = "androidx.compose.runtime", name = "runtime-android", version.ref = "compose-android" }
 compose-material = { group = "androidx.compose.material", name = "material", version.ref = "compose-material" }
 compose-animation = { group = "androidx.compose.animation", name = "animation", version.ref = "compose-animation" }
 compose-ui = { group = "androidx.compose.ui", name = "ui", version.ref = "compose-ui" }
@@ -103,3 +108,9 @@ test-rules = { group = "androidx.test", name = "rules", version.ref = "test-rule
 fragment-testing = { group = "androidx.fragment", name = "fragment-testing", version.ref = "fragment-testing" }
 ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4", version.ref = "ui-test-junit4" }
 ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest", version.ref = "ui-test-manifest" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }

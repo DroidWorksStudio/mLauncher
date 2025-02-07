@@ -1,8 +1,12 @@
 @file:Suppress("UnstableApiUsage")
 
 plugins {
-    id("com.android.application") apply true
-    id("kotlin-android") apply true
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
+    id("org.jetbrains.kotlin.plugin.compose")
+    id("kotlin-android")
+    id("kotlin-kapt")
+    id("kotlin-parcelize")
 }
 
 android {
@@ -112,6 +116,7 @@ dependencies {
 
     // Jetpack Compose
     implementation(libs.compose.material) // Compose Material Design
+    implementation(libs.compose.android) // Android
     implementation(libs.compose.animation) // Animations
     implementation(libs.compose.ui) // Core UI library
     implementation(libs.compose.foundation) // Foundation library
