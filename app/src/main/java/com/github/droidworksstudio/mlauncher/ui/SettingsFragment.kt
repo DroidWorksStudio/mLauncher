@@ -225,7 +225,7 @@ class SettingsFragment : Fragment() {
                             open = open,
                             onChange = onChange,
                             currentSelection = remember { mutableStateOf(prefs.appTheme) },
-                            values = Constants.Theme.values(),
+                            values = Constants.Theme.entries.toTypedArray(),
                             onSelect = { j -> setTheme(j) }
                         )
                     },
@@ -237,7 +237,7 @@ class SettingsFragment : Fragment() {
                                 open = open,
                                 onChange = onChange,
                                 currentSelection = remember { mutableStateOf(prefs.appDarkColors) },
-                                values = Constants.DarkColors.values(),
+                                values = Constants.DarkColors.entries.toTypedArray(),
                                 onSelect = { j -> setDarkColors(j) }
                             )
                         }
@@ -248,7 +248,7 @@ class SettingsFragment : Fragment() {
                                 open = open,
                                 onChange = onChange,
                                 currentSelection = remember { mutableStateOf(prefs.appLightColors) },
-                                values = Constants.LightColors.values(),
+                                values = Constants.LightColors.entries.toTypedArray(),
                                 onSelect = { j -> setLightColors(j) }
                             )
                         }
@@ -260,7 +260,7 @@ class SettingsFragment : Fragment() {
                             open = open,
                             onChange = onChange,
                             currentSelection = remember { mutableStateOf(prefs.language) },
-                            values = Constants.Language.values(),
+                            values = Constants.Language.entries.toTypedArray(),
                             onSelect = { j -> setLang(j) }
                         )
                     },
@@ -360,7 +360,7 @@ class SettingsFragment : Fragment() {
                             open = open,
                             onChange = onChange,
                             currentSelection = remember { mutableStateOf(prefs.launcherFont) },
-                            values = Constants.Fonts.values(),
+                            values = Constants.Fonts.entries.toTypedArray(),
                             onSelect = { j -> setLauncherFont(j) }
                         )
                     },
@@ -563,7 +563,7 @@ class SettingsFragment : Fragment() {
                                 open = open,
                                 onChange = onChange,
                                 currentSelection = remember { mutableStateOf(prefs.homeAlignment) },
-                                values = Constants.Gravity.values(),
+                                values = Constants.Gravity.entries.toTypedArray(),
                                 onSelect = { gravity -> setHomeAlignment(gravity) }
                             )
                         }
@@ -575,7 +575,7 @@ class SettingsFragment : Fragment() {
                             open = open,
                             onChange = onChange,
                             currentSelection = remember { mutableStateOf(prefs.clockAlignment) },
-                            values = Constants.Gravity.values(),
+                            values = Constants.Gravity.entries.toTypedArray(),
                             onSelect = { gravity -> setClockAlignment(gravity) }
                         )
                     },
@@ -586,7 +586,7 @@ class SettingsFragment : Fragment() {
                             open = open,
                             onChange = onChange,
                             currentSelection = remember { mutableStateOf(prefs.drawerAlignment) },
-                            values = Constants.Gravity.values(),
+                            values = Constants.Gravity.entries.toTypedArray(),
                             onSelect = { j -> viewModel.updateDrawerAlignment(j) }
                         )
                     },
@@ -743,7 +743,7 @@ class SettingsFragment : Fragment() {
                             open = open,
                             onChange = onChange,
                             currentSelection = remember { mutableStateOf(prefs.searchEngines) },
-                            values = Constants.SearchEngines.values(),
+                            values = Constants.SearchEngines.entries.toTypedArray(),
                             onSelect = { j -> setEngine(j) }
                         )
                     },

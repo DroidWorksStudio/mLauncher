@@ -169,7 +169,7 @@ class FavoriteFragment : Fragment() {
     }
 
     /**
-     * TODO it looks very complicated. Shouldn't we just rerender the whole list?
+     * TODO it looks very complicated. Shouldn't we just re-render the whole list?
      *      When does it happen?
      *        - Only when the config option changes,
      *        - or also when we switch pages of the home screen?
@@ -220,12 +220,7 @@ class FavoriteFragment : Fragment() {
             view.setOnLongClickListener { v ->
                 val dragData = ClipData.newPlainText("", "")
                 val shadowBuilder = View.DragShadowBuilder(v)
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                    v.startDragAndDrop(dragData, shadowBuilder, v, 0)
-                } else {
-                    @Suppress("DEPRECATION")
-                    v.startDrag(dragData, shadowBuilder, v, 0)
-                }
+                v.startDragAndDrop(dragData, shadowBuilder, v, 0)
                 true
             }
         }

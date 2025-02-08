@@ -1,14 +1,33 @@
 package com.github.droidworksstudio.mlauncher.ui.compose
 
 import android.graphics.Typeface
-import androidx.compose.foundation.*
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.detectTapGestures
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
 import androidx.compose.material.TextButton
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableFloatStateOf
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment.Companion.CenterEnd
 import androidx.compose.ui.Alignment.Companion.CenterStart
 import androidx.compose.ui.Alignment.Companion.End
@@ -33,7 +52,9 @@ import com.github.droidworksstudio.mlauncher.style.BORDER_SIZE
 import com.github.droidworksstudio.mlauncher.style.CORNER_RADIUS
 import com.github.droidworksstudio.mlauncher.style.SETTINGS_PADDING
 import com.github.droidworksstudio.mlauncher.style.SettingsTheme
-import com.smarttoolfactory.slider.*
+import com.smarttoolfactory.slider.ColorfulSlider
+import com.smarttoolfactory.slider.MaterialSliderDefaults
+import com.smarttoolfactory.slider.SliderBrushColor
 
 object SettingsComposable {
 
@@ -296,7 +317,7 @@ object SettingsComposable {
             title = title,
             currentSelection = remember { mutableStateOf(currentAction) },
             currentSelectionName = if (currentAction == Constants.Action.OpenApp) "Open $appLabel" else currentAction.string(),
-            values = Constants.Action.values(),
+            values = Constants.Action.entries.toTypedArray(),
             fontSize = fontSize,
             active = currentAction != Constants.Action.Disabled,
             onSelect = onSelect,
