@@ -9,9 +9,9 @@ import com.github.droidworksstudio.mlauncher.helper.getUserHandleFromString
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
-private const val APP_LANGUAGE = "app_language"
 private const val PREFS_FILENAME = "com.github.droidworksstudio.mlauncher"
 
+private const val APP_VERSION = "APP_VERSION"
 private const val FIRST_OPEN = "FIRST_OPEN"
 private const val FIRST_SETTINGS_OPEN = "FIRST_SETTINGS_OPEN"
 private const val LOCK_MODE = "LOCK_MODE"
@@ -26,7 +26,6 @@ private const val FILTER_STRENGTH = "FILTER_STRENGTH"
 private const val HOME_ALIGNMENT = "HOME_ALIGNMENT"
 private const val HOME_ALIGNMENT_BOTTOM = "HOME_ALIGNMENT_BOTTOM"
 private const val HOME_CLICK_AREA = "HOME_CLICK_AREA"
-private const val HOME_FOLLOW_ACCENT = "HOME_FOLLOW_ACCENT"
 private const val DRAWER_ALIGNMENT = "DRAWER_ALIGNMENT"
 private const val TIME_ALIGNMENT = "TIME_ALIGNMENT"
 private const val STATUS_BAR = "STATUS_BAR"
@@ -53,9 +52,7 @@ private const val DOUBLE_TAP_ACTION = "DOUBLE_TAP_ACTION"
 private const val HIDDEN_APPS = "HIDDEN_APPS"
 private const val HIDDEN_APPS_DISPLAYED = "HIDDEN_APPS_DISPLAYED"
 private const val SEARCH_ENGINE = "SEARCH_ENGINE"
-
 private const val LAUNCHER_FONT = "LAUNCHER_FONT"
-
 private const val APP_NAME = "APP_NAME"
 private const val APP_PACKAGE = "APP_PACKAGE"
 private const val APP_USER = "APP_USER"
@@ -63,10 +60,8 @@ private const val APP_ALIAS = "APP_ALIAS"
 private const val APP_ACTIVITY = "APP_ACTIVITY"
 private const val APP_USAGE_STATS = "APP_USAGE_STATS"
 private const val APP_OPACITY = "APP_OPACITY"
-private const val APP_DARK_COLORS = "APP_DARK_COLORS"
-private const val APP_LIGHT_COLORS = "APP_LIGHT_COLORS"
+private const val APP_LANGUAGE = "APP_LANGUAGE"
 private const val APP_THEME = "APP_THEME"
-
 private const val SHORT_SWIPE_UP = "SHORT_SWIPE_UP"
 private const val SHORT_SWIPE_DOWN = "SHORT_SWIPE_DOWN"
 private const val SHORT_SWIPE_LEFT = "SHORT_SWIPE_LEFT"
@@ -80,7 +75,6 @@ private const val CLICK_USAGE = "CLICK_USAGE"
 private const val CLICK_DATE = "CLICK_DATE"
 private const val DOUBLE_TAP = "DOUBLE_TAP"
 private const val ALL_APPS_TEXT = "ALL_APPS_TEXT"
-
 private const val APP_SIZE_TEXT = "APP_SIZE_TEXT"
 private const val CLOCK_SIZE_TEXT = "CLOCK_SIZE_TEXT"
 private const val DATE_SIZE_TEXT = "DATE_SIZE_TEXT"
@@ -125,6 +119,10 @@ class Prefs(val context: Context) {
         }
         editor.apply()
     }
+
+    var appVersion: Int
+        get() = prefs.getInt(APP_VERSION, -1)
+        set(value) = prefs.edit().putInt(APP_VERSION, value).apply()
 
     var firstOpen: Boolean
         get() = prefs.getBoolean(FIRST_OPEN, true)
@@ -256,10 +254,6 @@ class Prefs(val context: Context) {
         get() = prefs.getBoolean(ALL_APPS_TEXT, true)
         set(value) = prefs.edit().putBoolean(ALL_APPS_TEXT, value).apply()
 
-    var followAccentColors: Boolean
-        get() = prefs.getBoolean(HOME_FOLLOW_ACCENT, false)
-        set(value) = prefs.edit().putBoolean(HOME_FOLLOW_ACCENT, value).apply()
-
     var shortSwipeUpAction: Constants.Action
         get() = loadAction(SWIPE_UP_ACTION, Constants.Action.ShowAppList)
         set(value) = storeAction(SWIPE_UP_ACTION, value)
@@ -331,30 +325,6 @@ class Prefs(val context: Context) {
             }
         }
         set(value) = prefs.edit().putString(APP_THEME, value.name).apply()
-
-    var appDarkColors: Constants.DarkColors
-        get() {
-            return try {
-                Constants.DarkColors.valueOf(
-                    prefs.getString(APP_DARK_COLORS, Constants.DarkColors.System.name).toString()
-                )
-            } catch (_: Exception) {
-                Constants.DarkColors.System
-            }
-        }
-        set(value) = prefs.edit().putString(APP_DARK_COLORS, value.name).apply()
-
-    var appLightColors: Constants.LightColors
-        get() {
-            return try {
-                Constants.LightColors.valueOf(
-                    prefs.getString(APP_LIGHT_COLORS, Constants.LightColors.System.name).toString()
-                )
-            } catch (_: Exception) {
-                Constants.LightColors.System
-            }
-        }
-        set(value) = prefs.edit().putString(APP_LIGHT_COLORS, value.name).apply()
 
     var language: Constants.Language
         get() {
@@ -581,6 +551,10 @@ class Prefs(val context: Context) {
 
     fun setAppAlias(appPackage: String, appAlias: String) {
         prefs.edit().putString(appPackage, appAlias).apply()
+    }
+
+    fun remove(prefName: String) {
+        prefs.edit().remove(prefName).apply()
     }
 
     fun clear() {

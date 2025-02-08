@@ -328,20 +328,6 @@ fun getHexForOpacity(context: Context, prefs: Prefs): Int {
 }
 
 @RequiresApi(Build.VERSION_CODES.Q)
-fun getHexFontColor(context: Context, prefs: Prefs): Int {
-    return if (prefs.followAccentColors) {
-        val accentColor = getAccentColor(context)
-        val hexAccentColor = java.lang.String.format("#%06X", 0xFFFFFF and accentColor)
-
-        android.graphics.Color.parseColor(hexAccentColor)
-    } else {
-        val typedValue = TypedValue()
-        context.theme.resolveAttribute(R.attr.colorPrimary, typedValue, true)
-        typedValue.data
-    }
-}
-
-@RequiresApi(Build.VERSION_CODES.Q)
 private fun getBackgroundColor(context: Context): Int {
     val typedValue = TypedValue()
     val contextThemeWrapper = ContextThemeWrapper(
@@ -350,20 +336,6 @@ private fun getBackgroundColor(context: Context): Int {
     )
     contextThemeWrapper.theme.resolveAttribute(
         R.attr.windowBackground,
-        typedValue, true
-    )
-    return typedValue.data
-}
-
-@RequiresApi(Build.VERSION_CODES.Q)
-private fun getAccentColor(context: Context): Int {
-    val typedValue = TypedValue()
-    val contextThemeWrapper = ContextThemeWrapper(
-        context,
-        R.style.Theme_DeviceDefault_DayNight
-    )
-    contextThemeWrapper.theme.resolveAttribute(
-        R.attr.colorAccent,
         typedValue, true
     )
     return typedValue.data

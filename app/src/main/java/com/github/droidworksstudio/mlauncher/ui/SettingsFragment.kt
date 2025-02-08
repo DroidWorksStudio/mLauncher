@@ -156,13 +156,13 @@ class SettingsFragment : Fragment() {
             Constants.Fonts.Bitter to R.font.bitter,
             Constants.Fonts.Dotness to R.font.dotness,
             Constants.Fonts.DroidSans to R.font.droid_sans,
-//            Constants.Fonts.GreatVibes to R.font.great_vibes,
+            Constants.Fonts.GreatVibes to R.font.great_vibes,
             Constants.Fonts.Lato to R.font.lato,
-//            Constants.Fonts.Lobster to R.font.lobster,
+            Constants.Fonts.Lobster to R.font.lobster,
             Constants.Fonts.Merriweather to R.font.merriweather,
             Constants.Fonts.Montserrat to R.font.montserrat,
             Constants.Fonts.OpenSans to R.font.open_sans,
-//            Constants.Fonts.Pacifico to R.font.pacifico,
+            Constants.Fonts.Pacifico to R.font.pacifico,
             Constants.Fonts.Quicksand to R.font.quicksand,
             Constants.Fonts.Raleway to R.font.raleway,
             Constants.Fonts.Roboto to R.font.roboto,
@@ -228,30 +228,6 @@ class SettingsFragment : Fragment() {
                             values = Constants.Theme.entries.toTypedArray(),
                             onSelect = { j -> setTheme(j) }
                         )
-                    },
-                    { open, onChange ->
-                        if (prefs.appTheme.name == "Dark") {
-                            SettingsItem(
-                                title = stringResource(R.string.color_mode),
-                                fontSize = iconFs,
-                                open = open,
-                                onChange = onChange,
-                                currentSelection = remember { mutableStateOf(prefs.appDarkColors) },
-                                values = Constants.DarkColors.entries.toTypedArray(),
-                                onSelect = { j -> setDarkColors(j) }
-                            )
-                        }
-                        if (prefs.appTheme.name == "Light") {
-                            SettingsItem(
-                                title = stringResource(R.string.color_mode),
-                                fontSize = iconFs,
-                                open = open,
-                                onChange = onChange,
-                                currentSelection = remember { mutableStateOf(prefs.appLightColors) },
-                                values = Constants.LightColors.entries.toTypedArray(),
-                                onSelect = { j -> setLightColors(j) }
-                            )
-                        }
                     },
                     { open, onChange ->
                         SettingsItem(
@@ -323,14 +299,6 @@ class SettingsFragment : Fragment() {
                             max = Constants.TEXT_MARGIN_MAX,
                             onSelect = { f -> setTextPaddingSize(f) }
                         )
-                    },
-                    { _, onChange ->
-                        SettingsToggle(
-                            title = stringResource(R.string.follow_accent_colors),
-                            fontSize = iconFs,
-                            onChange = onChange,
-                            state = remember { mutableStateOf(prefs.followAccentColors) },
-                        ) { toggleFollowAccent() }
                     },
                     { open, onChange ->
                         SettingsSliderItem(
@@ -976,22 +944,8 @@ class SettingsFragment : Fragment() {
         prefs.searchFromStart = !prefs.searchFromStart
     }
 
-    private fun toggleFollowAccent() {
-        prefs.followAccentColors = !prefs.followAccentColors
-    }
-
     private fun setTheme(appTheme: Constants.Theme) {
         prefs.appTheme = appTheme
-        requireActivity().recreate()
-    }
-
-    private fun setDarkColors(appTheme: Constants.DarkColors) {
-        prefs.appDarkColors = appTheme
-        requireActivity().recreate()
-    }
-
-    private fun setLightColors(appTheme: Constants.LightColors) {
-        prefs.appLightColors = appTheme
         requireActivity().recreate()
     }
 

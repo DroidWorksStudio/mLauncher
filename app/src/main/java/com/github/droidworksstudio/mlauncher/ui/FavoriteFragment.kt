@@ -31,7 +31,6 @@ import com.github.droidworksstudio.mlauncher.MainViewModel
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentFavoriteBinding
-import com.github.droidworksstudio.mlauncher.helper.getHexFontColor
 import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
 import com.github.droidworksstudio.mlauncher.helper.hideStatusBar
 import com.github.droidworksstudio.mlauncher.helper.showStatusBar
@@ -202,11 +201,6 @@ class FavoriteFragment : Fragment() {
                 view.setPadding(0, padding, 0, padding)
                 binding.pageName.text = getString(R.string.favorite_apps)
                 binding.pageName.textSize = prefs.appSize * 1.5f
-
-                if (prefs.followAccentColors) {
-                    val fontColor = getHexFontColor(requireContext(), prefs)
-                    view.setTextColor(fontColor)
-                }
 
                 binding.homeAppsLayout.addView(view)
             }

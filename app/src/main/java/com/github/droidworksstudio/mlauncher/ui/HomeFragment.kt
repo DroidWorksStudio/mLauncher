@@ -57,8 +57,6 @@ import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.formatMilli
 import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.getTotalScreenTime
 import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.getUsageStats
 import com.github.droidworksstudio.mlauncher.helper.BatteryReceiver
-import com.github.droidworksstudio.mlauncher.helper.Colors
-import com.github.droidworksstudio.mlauncher.helper.getHexFontColor
 import com.github.droidworksstudio.mlauncher.helper.hideStatusBar
 import com.github.droidworksstudio.mlauncher.helper.initActionService
 import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
@@ -80,9 +78,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
-
-    // Instantiate Colors object
-    private val colors = Colors()
 
     private lateinit var biometricPrompt: BiometricPrompt
     private lateinit var promptInfo: BiometricPrompt.PromptInfo
@@ -158,24 +153,16 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             homeScreenPager.textSize = prefs.appSize.toFloat()
 
             battery.visibility = if (prefs.showBattery) View.VISIBLE else View.GONE
-            mainLayout.setBackgroundColor(colors.background(requireContext(), prefs))
+//            mainLayout.setBackgroundColor(colors.background(requireContext(), prefs))
 
-            if (prefs.followAccentColors) {
-                val fontColor = getHexFontColor(requireContext(), prefs)
-                clock.setTextColor(fontColor)
-                date.setTextColor(fontColor)
-                battery.setTextColor(fontColor)
-                setTotalScreenTime.setTextColor(fontColor)
-                setDefaultLauncher.setTextColor(fontColor)
-                homeScreenPager.setTextColor(fontColor)
-            } else {
-                clock.setTextColor(colors.accents(requireContext(), prefs, 1))
-                date.setTextColor(colors.accents(requireContext(), prefs, 1))
-                battery.setTextColor(colors.accents(requireContext(), prefs, 1))
-                setTotalScreenTime.setTextColor(colors.accents(requireContext(), prefs, 2))
-                setDefaultLauncher.setTextColor(colors.accents(requireContext(), prefs, 2))
-                homeScreenPager.setTextColor(colors.accents(requireContext(), prefs, 2))
-            }
+
+//            clock.setTextColor(colors.accents(requireContext(), prefs, 1))
+//            date.setTextColor(colors.accents(requireContext(), prefs, 1))
+//            battery.setTextColor(colors.accents(requireContext(), prefs, 1))
+//            setTotalScreenTime.setTextColor(colors.accents(requireContext(), prefs, 2))
+//            setDefaultLauncher.setTextColor(colors.accents(requireContext(), prefs, 2))
+//            homeScreenPager.setTextColor(colors.accents(requireContext(), prefs, 2))
+
         }
     }
 
@@ -748,12 +735,9 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     }
                     val padding: Int = prefs.textPaddingSize
                     setPadding(0, padding, 0, padding)
-                    if (prefs.followAccentColors) {
-                        val fontColor = getHexFontColor(requireContext(), prefs)
-                        setTextColor(fontColor)
-                    } else {
-                        setTextColor(colors.accents(requireContext(), prefs, 4))
-                    }
+
+//                    setTextColor(colors.accents(requireContext(), prefs, 4))
+
                 }
 
                 // Create newAppView
@@ -778,12 +762,9 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     }
                     val padding: Int = prefs.textPaddingSize
                     setPadding(0, padding, 0, padding)
-                    if (prefs.followAccentColors) {
-                        val fontColor = getHexFontColor(requireContext(), prefs)
-                        setTextColor(fontColor)
-                    } else {
-                        setTextColor(colors.accents(requireContext(), prefs, 3))
-                    }
+
+//                    setTextColor(colors.accents(requireContext(), prefs, 3))
+
                 }
 
                 // Add a space between existingAppView and newAppView
@@ -853,13 +834,10 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     isFocusableInTouchMode = true
                     val padding: Int = prefs.textPaddingSize
                     setPadding(0, padding, 0, padding)
-                    if (prefs.followAccentColors) {
-                        val fontColor = getHexFontColor(requireContext(), prefs)
-                        setTextColor(fontColor)
-                    } else {
-                        val fontColor = colors.accents(requireContext(), prefs, 4)
-                        setTextColor(fontColor)
-                    }
+
+//                    val fontColor = colors.accents(requireContext(), prefs, 4)
+//                    setTextColor(fontColor)
+
                 }
                 // Add the view to the layout
                 binding.homeAppsLayout.addView(view)

@@ -14,12 +14,12 @@ import android.view.KeyEvent
 import android.view.View
 import android.view.WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.app.AppCompatDelegate
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.github.droidworksstudio.common.showLongToast
 import com.github.droidworksstudio.mlauncher.data.Constants
+import com.github.droidworksstudio.mlauncher.data.Migration
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.ActivityMainBinding
 import com.github.droidworksstudio.mlauncher.helper.hasUsagePermission
@@ -32,6 +32,7 @@ import java.io.InputStreamReader
 class MainActivity : AppCompatActivity() {
 
     private lateinit var prefs: Prefs
+    private lateinit var migration: Migration
     private lateinit var navController: NavController
     private lateinit var viewModel: MainViewModel
     private lateinit var binding: ActivityMainBinding
@@ -95,19 +96,14 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         prefs = Prefs(this)
-        val themeMode = when (prefs.appTheme) {
-            Constants.Theme.Light -> AppCompatDelegate.MODE_NIGHT_NO
-            Constants.Theme.Dark -> AppCompatDelegate.MODE_NIGHT_YES
-            Constants.Theme.System -> AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM
-        }
-        AppCompatDelegate.setDefaultNightMode(themeMode)
+        migration = Migration(this)
 
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-
         setLanguage()
+        migration.migratePreferencesOnVersionUpdate(prefs)
 
         navController = Navigation.findNavController(this, R.id.nav_host_fragment)
         viewModel = ViewModelProvider(this)[MainViewModel::class.java]
@@ -125,7 +121,7 @@ class MainActivity : AppCompatActivity() {
 
         // Get the version and info of any app by passing app name. (maybe later used for Pro features if I want top release them for the play store)
         // pm = packageManager
-        // val getAppVersionAndHash = AppDetailsHelper.getAppVersionAndHash(this, "app.olauncher.debug", pm)
+        // val getAppVersionAndHash = AppDetailsHelper.getAppVersionAndHash(this, "app.mlauncher.debug", pm)
         // Log.d("isPremiumInstalled", getAppVersionAndHash.toString())
 
         if (prefs.recentAppsDisplayed || prefs.appUsageStats) {
@@ -145,7 +141,6 @@ class MainActivity : AppCompatActivity() {
 
     @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        @Suppress("DEPRECATION")
         super.onActivityResult(requestCode, resultCode, data)
 
         if (resultCode != RESULT_OK) {

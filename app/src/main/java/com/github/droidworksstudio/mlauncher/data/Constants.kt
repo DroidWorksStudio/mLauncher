@@ -298,63 +298,18 @@ object Constants {
         }
     }
 
-    enum class DarkColors : EnumOption {
-        System,
-        Dracula,
-        Arc,
-        Nokto,
-        Breeze,
-        Catppuccino,
-        Nordic,
-        Yaru;
-
-        @Composable
-        override fun string(): String {
-            return when (this) {
-                System -> stringResource(R.string.lang_system)
-                Dracula -> stringResource(R.string.dracula)
-                Arc -> stringResource(R.string.arc)
-                Nokto -> stringResource(R.string.nokto)
-                Breeze -> stringResource(R.string.breeze)
-                Catppuccino -> stringResource(R.string.catppuccino)
-                Nordic -> stringResource(R.string.nordic)
-                Yaru -> stringResource(R.string.yaru)
-            }
-        }
-    }
-
-    enum class LightColors : EnumOption {
-        System,
-        Adwaita,
-        Catppuccino,
-        Nordic;
-
-        @Composable
-        override fun string(): String {
-            return when (this) {
-                System -> stringResource(R.string.lang_system)
-                Adwaita -> stringResource(R.string.adwaita)
-                Catppuccino -> stringResource(R.string.catppuccino)
-                Nordic -> stringResource(R.string.nordic)
-            }
-        }
-    }
-
     enum class Fonts : EnumOption {
         System,
         Bitter,
         Dotness,
         DroidSans,
-
-        //        GreatVibes,
+        GreatVibes,
         Lato,
-
-        //        Lobster,
+        Lobster,
         Merriweather,
         Montserrat,
         OpenSans,
-
-        //        Pacifico,
+        Pacifico,
         Quicksand,
         Raleway,
         Roboto,
@@ -366,13 +321,13 @@ object Constants {
                 Bitter -> ResourcesCompat.getFont(context, R.font.bitter)
                 Dotness -> ResourcesCompat.getFont(context, R.font.dotness)
                 DroidSans -> ResourcesCompat.getFont(context, R.font.open_sans)
-//                GreatVibes -> ResourcesCompat.getFont(context, R.font.great_vibes)
+                GreatVibes -> ResourcesCompat.getFont(context, R.font.great_vibes)
                 Lato -> ResourcesCompat.getFont(context, R.font.lato)
-//                Lobster -> ResourcesCompat.getFont(context, R.font.lobster)
+                Lobster -> ResourcesCompat.getFont(context, R.font.lobster)
                 Merriweather -> ResourcesCompat.getFont(context, R.font.merriweather)
                 Montserrat -> ResourcesCompat.getFont(context, R.font.montserrat)
                 OpenSans -> ResourcesCompat.getFont(context, R.font.open_sans)
-//                Pacifico -> ResourcesCompat.getFont(context, R.font.pacifico)
+                Pacifico -> ResourcesCompat.getFont(context, R.font.pacifico)
                 Quicksand -> ResourcesCompat.getFont(context, R.font.quicksand)
                 Raleway -> ResourcesCompat.getFont(context, R.font.raleway)
                 Roboto -> ResourcesCompat.getFont(context, R.font.roboto)
@@ -387,13 +342,13 @@ object Constants {
                 Bitter -> stringResource(R.string.settings_font_bitter)
                 Dotness -> stringResource(R.string.settings_font_dotness)
                 DroidSans -> stringResource(R.string.settings_font_droidsans)
-//                GreatVibes -> stringResource(R.string.settings_font_greatvibes)
+                GreatVibes -> stringResource(R.string.settings_font_greatvibes)
                 Lato -> stringResource(R.string.settings_font_lato)
-//                Lobster -> stringResource(R.string.settings_font_lobster)
+                Lobster -> stringResource(R.string.settings_font_lobster)
                 Merriweather -> stringResource(R.string.settings_font_merriweather)
                 Montserrat -> stringResource(R.string.settings_font_montserrat)
                 OpenSans -> stringResource(R.string.settings_font_opensans)
-//                Pacifico -> stringResource(R.string.settings_font_pacifico)
+                Pacifico -> stringResource(R.string.settings_font_pacifico)
                 Quicksand -> stringResource(R.string.settings_font_quicksand)
                 Raleway -> stringResource(R.string.settings_font_raleway)
                 Roboto -> stringResource(R.string.settings_font_roboto)

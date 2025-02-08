@@ -9,12 +9,17 @@ import android.content.Context
 import android.os.Build
 import android.text.Editable
 import android.text.TextWatcher
-import android.view.Gravity.*
+import android.view.Gravity.LEFT
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
-import android.widget.*
+import android.widget.EditText
+import android.widget.Filter
+import android.widget.Filterable
+import android.widget.FrameLayout
+import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.view.updatePadding
@@ -28,9 +33,7 @@ import com.github.droidworksstudio.mlauncher.data.Constants.AppDrawerFlag
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.AdapterAppDrawerBinding
 import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.isSystemApp
-import com.github.droidworksstudio.mlauncher.helper.Colors
 import com.github.droidworksstudio.mlauncher.helper.dp2px
-import com.github.droidworksstudio.mlauncher.helper.getHexFontColor
 
 class AppDrawerAdapter(
     private val context: Context,
@@ -49,9 +52,6 @@ class AppDrawerAdapter(
     var appFilteredList: MutableList<AppListItem> = mutableListOf()
     private lateinit var binding: AdapterAppDrawerBinding
 
-    // Instantiate Colors object
-    private val colors = Colors()
-
     private var isBangSearch = false
 
     @RequiresApi(Build.VERSION_CODES.Q)
@@ -59,13 +59,9 @@ class AppDrawerAdapter(
         binding =
             AdapterAppDrawerBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         prefs = Prefs(parent.context)
-        if (prefs.followAccentColors) {
-            val fontColor = getHexFontColor(parent.context, prefs)
-            binding.appTitle.setTextColor(fontColor)
-        } else {
-            val fontColor = colors.accents(parent.context, prefs, 4)
-            binding.appTitle.setTextColor(fontColor)
-        }
+//        val fontColor = colors.accents(parent.context, prefs, 4)
+//        binding.appTitle.setTextColor(fontColor)
+
         binding.appTitle.textSize = prefs.appSize.toFloat()
         val padding: Int = prefs.textPaddingSize
         binding.appTitle.setPadding(0, padding, 0, padding)

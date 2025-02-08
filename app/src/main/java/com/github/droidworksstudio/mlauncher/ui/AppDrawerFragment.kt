@@ -10,9 +10,6 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
-import android.text.Spannable
-import android.text.SpannableString
-import android.text.style.ForegroundColorSpan
 import android.view.Gravity
 import android.view.KeyEvent
 import android.view.LayoutInflater
@@ -43,8 +40,6 @@ import com.github.droidworksstudio.mlauncher.data.Constants.AppDrawerFlag
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentAppDrawerBinding
 import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.isSystemApp
-import com.github.droidworksstudio.mlauncher.helper.Colors
-import com.github.droidworksstudio.mlauncher.helper.getHexFontColor
 import com.github.droidworksstudio.mlauncher.helper.openAppInfo
 
 class AppDrawerFragment : Fragment() {
@@ -54,9 +49,6 @@ class AppDrawerFragment : Fragment() {
 
     private var _binding: FragmentAppDrawerBinding? = null
     private val binding get() = _binding!!
-
-    // Instantiate Colors object
-    private val colors = Colors()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -80,7 +72,7 @@ class AppDrawerFragment : Fragment() {
             searchTextView.text = letterToChar.toString()
         }
 
-        binding.mainLayout.setBackgroundColor(colors.background(requireContext(), prefs))
+//        binding.mainLayout.setBackgroundColor(colors.background(requireContext(), prefs))
 
         val flagString = arguments?.getString("flag", AppDrawerFlag.LaunchApp.toString())
             ?: AppDrawerFlag.LaunchApp.toString()
@@ -147,78 +139,45 @@ class AppDrawerFragment : Fragment() {
 
         if (flag == AppDrawerFlag.HiddenApps) {
             val hiddenAppsHint = getString(R.string.hidden_apps)
-            if (prefs.followAccentColors) {
-                val fontColor = getHexFontColor(requireActivity(), prefs)
-                val coloredHint = SpannableString(hiddenAppsHint)
-                coloredHint.setSpan(
-                    ForegroundColorSpan(fontColor),
-                    0,
-                    hiddenAppsHint.length,
-                    Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-                )
 
-                binding.search.queryHint = coloredHint
-            } else {
-                val fontColor = colors.accents(requireContext(), prefs, 4)
-                val coloredHint = SpannableString(hiddenAppsHint)
-                coloredHint.setSpan(
-                    ForegroundColorSpan(fontColor),
-                    0,
-                    hiddenAppsHint.length,
-                    Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-                )
-                binding.search.queryHint = coloredHint
-            }
+//            val fontColor = colors.accents(requireContext(), prefs, 4)
+//            val coloredHint = SpannableString(hiddenAppsHint)
+//            coloredHint.setSpan(
+//                ForegroundColorSpan(fontColor),
+//                0,
+//                hiddenAppsHint.length,
+//                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+//            )
+//            binding.search.queryHint = coloredHint
+
         }
         if (flag == AppDrawerFlag.SetHomeApp) {
-            val hiddenAppsHint = getString(R.string.please_select_app)
-            if (prefs.followAccentColors) {
-                val fontColor = getHexFontColor(requireActivity(), prefs)
-                val coloredHint = SpannableString(hiddenAppsHint)
-                coloredHint.setSpan(
-                    ForegroundColorSpan(fontColor),
-                    0,
-                    hiddenAppsHint.length,
-                    Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-                )
+            val selectAppsHint = getString(R.string.please_select_app)
 
-                binding.search.queryHint = coloredHint
-            } else {
-                val fontColor = colors.accents(requireContext(), prefs, 4)
-                val coloredHint = SpannableString(hiddenAppsHint)
-                coloredHint.setSpan(
-                    ForegroundColorSpan(fontColor),
-                    0,
-                    hiddenAppsHint.length,
-                    Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-                )
-                binding.search.queryHint = coloredHint
-            }
+//            val fontColor = colors.accents(requireContext(), prefs, 4)
+//            val coloredHint = SpannableString(selectAppsHint)
+//            coloredHint.setSpan(
+//                ForegroundColorSpan(fontColor),
+//                0,
+//                hiddenAppsHint.length,
+//                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+//            )
+//            binding.search.queryHint = coloredHint
+
         }
         if (flag == AppDrawerFlag.LaunchApp && prefs.useAllAppsText) {
             val allAppsHint = getString(R.string.show_apps)
-            if (prefs.followAccentColors) {
-                val fontColor = getHexFontColor(requireActivity(), prefs)
-                val coloredHint = SpannableString(allAppsHint)
-                coloredHint.setSpan(
-                    ForegroundColorSpan(fontColor),
-                    0,
-                    allAppsHint.length,
-                    Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-                )
 
-                binding.search.queryHint = coloredHint
-            } else {
-                val fontColor = colors.accents(requireContext(), prefs, 4)
-                val coloredHint = SpannableString(allAppsHint)
-                coloredHint.setSpan(
-                    ForegroundColorSpan(fontColor),
-                    0,
-                    allAppsHint.length,
-                    Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-                )
-                binding.search.queryHint = coloredHint
-            }
+//            val fontColor = colors.accents(requireContext(), prefs, 4)
+//            val coloredHint = SpannableString(allAppsHint)
+//            coloredHint.setSpan(
+//                ForegroundColorSpan(fontColor),
+//                0,
+//                allAppsHint.length,
+//                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+//            )
+//            binding.search.queryHint = coloredHint
+
         }
 
         binding.search.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
@@ -301,7 +260,7 @@ class AppDrawerFragment : Fragment() {
     @RequiresApi(Build.VERSION_CODES.Q)
     override fun onResume() {
         super.onResume()
-        binding.mainLayout.setBackgroundColor(colors.background(requireContext(), prefs))
+//        binding.mainLayout.setBackgroundColor(colors.background(requireContext(), prefs))
     }
 
     private fun initViewModel(
