@@ -82,19 +82,32 @@ object SettingsComposable {
         title: String,
         selected: MutableState<String>,
         fontSize: TextUnit = TextUnit.Unspecified,
-        items: Array<@Composable (MutableState<Boolean>, (Boolean) -> Unit) -> Unit>
+        items: Array<@Composable (MutableState<Boolean>, (Boolean) -> Unit) -> Unit>,
+        visibleSection: MutableState<String?> // State to track the currently visible section
     ) {
         var key by remember { mutableIntStateOf(0) } // Add a key to force recomposition
-
         val itemsChanged = remember { mutableStateOf(false) } // Track changes in items
+        var isVisible by remember { mutableStateOf(false) } // State to control visibility
+
+        // Determine if this section should be visible based on the shared state
+        isVisible = visibleSection.value == title
 
         SettingsTile {
-            SettingsTitle(text = title, fontSize = fontSize)
-            items.forEachIndexed { i, item ->
-                item(mutableStateOf("$title-$i" == selected.value)) { b ->
-                    val number = if (b) i else -1
-                    selected.value = "$title-$number"
-                    itemsChanged.value = true // Mark items as changed
+            SettingsTitle(
+                text = title,
+                fontSize = fontSize,
+                modifier = Modifier.clickable {
+                    // Toggle visibility and update the shared state to show the current section
+                    visibleSection.value = if (isVisible) null else title
+                }
+            )
+            if (isVisible) {
+                items.forEachIndexed { i, item ->
+                    item(mutableStateOf("$title-$i" == selected.value)) { b ->
+                        val number = if (b) i else -1
+                        selected.value = "$title-$number"
+                        itemsChanged.value = true // Mark items as changed
+                    }
                 }
             }
         }
@@ -107,6 +120,7 @@ object SettingsComposable {
             }
         }
     }
+
 
     @Composable
     fun SettingsTopView(

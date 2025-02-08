@@ -172,7 +172,8 @@ class SettingsFragment : Fragment() {
         val typefaceMapFonts: Map<Constants.Fonts, Typeface?> =
             createTypefaceMap(requireActivity(), typeMappings)
 
-
+        // Shared state to track which section is visible
+        val visibleSection = remember { mutableStateOf<String?>(null) }
 
         Column {
             SettingsTopView(
@@ -187,12 +188,6 @@ class SettingsFragment : Fragment() {
                 },
             ) {
                 SettingsTextButton(
-                    stringResource(R.string.hidden_apps),
-                    fontSize = iconFs
-                ) {
-                    showHiddenApps()
-                }
-                SettingsTextButton(
                     stringResource(changeLauncherText),
                     fontSize = iconFs
                 ) {
@@ -203,6 +198,12 @@ class SettingsFragment : Fragment() {
                     fontSize = iconFs
                 ) {
                     showFavoriteApps()
+                }
+                SettingsTextButton(
+                    stringResource(R.string.hidden_apps),
+                    fontSize = iconFs
+                ) {
+                    showHiddenApps()
                 }
             }
             SettingsArea(
@@ -332,7 +333,8 @@ class SettingsFragment : Fragment() {
                             onSelect = { j -> setLauncherFont(j) }
                         )
                     },
-                )
+                ),
+                visibleSection = visibleSection
             )
             SettingsArea(
                 title = stringResource(R.string.behavior),
@@ -397,7 +399,8 @@ class SettingsFragment : Fragment() {
                             state = remember { mutableStateOf(prefs.searchFromStart) },
                         ) { toggleSearchFromStart() }
                     },
-                )
+                ),
+                visibleSection = visibleSection
             )
             SettingsArea(
                 title = stringResource(R.string.homescreen),
@@ -508,7 +511,8 @@ class SettingsFragment : Fragment() {
                             state = remember { mutableStateOf(prefs.homeAlignmentBottom) }
                         ) { toggleHomeAppsBottom() }
                     }
-                )
+                ),
+                visibleSection = visibleSection
             )
             SettingsArea(
                 title = stringResource(R.string.alignment),
@@ -558,7 +562,8 @@ class SettingsFragment : Fragment() {
                             onSelect = { j -> viewModel.updateDrawerAlignment(j) }
                         )
                     },
-                )
+                ),
+                visibleSection = visibleSection
             )
             SettingsArea(
                 title = stringResource(R.string.gestures),
@@ -697,7 +702,8 @@ class SettingsFragment : Fragment() {
                             appLabel = prefs.appDoubleTap.activityLabel
                         )
                     }
-                )
+                ),
+                visibleSection = visibleSection
             )
             SettingsArea(
                 title = getString(R.string.miscellaneous),
@@ -743,7 +749,8 @@ class SettingsFragment : Fragment() {
                             state = remember { mutableStateOf(prefs.settingsLocked) }
                         ) { toggleSettingsLocked() }
                     },
-                )
+                ),
+                visibleSection = visibleSection
             )
             SettingsArea(
                 title = getString(R.string.backup),
@@ -768,7 +775,8 @@ class SettingsFragment : Fragment() {
                             },
                         )
                     }
-                )
+                ),
+                visibleSection = visibleSection
             )
             Text(
                 modifier = Modifier
