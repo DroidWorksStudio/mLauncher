@@ -1,0 +1,14 @@
+<full-backup-content xmlns:tools="http://schemas.android.com/tools">
+    <include
+        domain="shared_prefs"
+        path="."
+        tools:ignore="FullBackupContent" />
+    <include
+        domain="databases"
+        path="."
+        tools:ignore="FullBackupContent" />
+    <include
+        domain="files"
+        path="."
+        tools:ignore="FullBackupContent" />
+</full-backup-content>
