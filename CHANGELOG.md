@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Implemented Enhancements:
+
+- Added the ability to toggle settings. - ([739d82d](https://github.com/DroidWorksStudio/mLauncher/commit/739d82d6cc5c92b9d75cff0085d9ccd427988c71))
+
 ### Feature Removal:
 
 - Custom Themes, Accent Color Toggle, - ([d18ad18](https://github.com/DroidWorksStudio/mLauncher/commit/d18ad18c6735ef40ac0e6a6b7bf3bbd473efc291))
