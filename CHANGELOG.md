@@ -14,6 +14,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Cleaned up .gitignore - ([08b2f4c](https://github.com/DroidWorksStudio/mLauncher/commit/08b2f4cf1dda1ab27239300becb6289b88f12822))
 - Cleaned up code and replaced deprecated code. - ([5b13384](https://github.com/DroidWorksStudio/mLauncher/commit/5b133844e59ef6cb7f72c0bc3a6ff711556a54b4))
 - Trying out backup_rules.xml - ([7734b62](https://github.com/DroidWorksStudio/mLauncher/commit/7734b62a05cd0655edc669a1e549c4e5a1d651bb))
 
