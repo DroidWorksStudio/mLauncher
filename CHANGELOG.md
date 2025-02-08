@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Feature Removal:
+
+- Custom Themes, Accent Color Toggle, - ([d18ad18](https://github.com/DroidWorksStudio/mLauncher/commit/d18ad18c6735ef40ac0e6a6b7bf3bbd473efc291))
+
 ### Refactoring:
 
 - Cleaned up code and replaced deprecated code. - ([5b13384](https://github.com/DroidWorksStudio/mLauncher/commit/5b133844e59ef6cb7f72c0bc3a6ff711556a54b4))
