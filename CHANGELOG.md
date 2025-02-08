@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Refactoring:
+
+- Trying out backup_rules.xml - ([7734b62](https://github.com/DroidWorksStudio/mLauncher/commit/7734b62a05cd0655edc669a1e549c4e5a1d651bb))
+
 ### Releases:
 
 - Prepare for version 1.7.1 - ([e6b0ebc](https://github.com/DroidWorksStudio/mLauncher/commit/e6b0ebcdcafc39330824a5ebe79cda9afde00a38))
