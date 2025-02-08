@@ -7,6 +7,7 @@
     <string name="experimental">(Experimental)</string>
 
     <!-- Settings Headers -->
+    <string name="display">Display</string>
     <string name="appearance">Appearance</string>
     <string name="behavior">Behavior</string>
     <string name="homescreen">Homescreen</string>
@@ -20,17 +21,24 @@
     <string name="set_as_default_launcher">Set as Default Launcher</string>
     <string name="change_default_launcher">Change Default Launcher</string>
 
+    <!-- Display Strings -->
+    <string name="show_status_bar">Show Status bar</string>
+    <string name="show_recent_apps">Show Recent Apps</string>
+    <string name="show_app_usage_stats">Show App Usage Stats</string>
+    <string name="show_time">Show Time</string>
+    <string name="show_time_format">Time Format (AM/PM)</string>
+    <string name="show_date">Show Date</string>
+    <string name="show_battery">Show Battery</string>
+    <string name="show_battery_icon">Show Battery Icon</string>
+
     <!-- Appearance Strings -->
-    <string name="status_bar">Show status bar</string>
     <string name="theme_mode">Theme mode</string>
-    <string name="color_mode">Color Mode</string>
     <string name="app_language">Interface Language</string>
     <string name="app_text_size">App Text Size</string>
     <string name="clock_text_size">Clock Text Size</string>
     <string name="date_text_size">Date Text Size</string>
     <string name="battery_text_size">Battery Text Size</string>
     <string name="app_padding_size">Padding Size</string>
-    <string name="follow_accent_colors">Accent Colors</string>
     <string name="background_opacity">Background Opacity</string>
     <string name="all_apps_text">Display All Apps Text</string>
     <string name="app_font">Font Family</string>
@@ -39,7 +47,6 @@
     <string name="auto_show_keyboard">Auto Show Keyboard</string>
     <string name="auto_open_apps">Auto Open Apps</string>
     <string name="enable_notifications">Enable Notifications</string>
-    <string name="display_recent_apps">Display Recent Apps</string>
     <string name="number_of_recents">Number of Recent Apps</string>
     <string name="filter_strength">Filter Strength</string>
     <string name="search_from_start">App Search from Start.</string>
@@ -49,17 +56,11 @@
     <string name="apps_on_home_screen">Number of Shortcuts</string>
     <string name="pages_on_home_screen">Number of Pages</string>
     <string name="enable_home_pager">Enable Home Pager</string>
-    <string name="show_time">Show Time</string>
-    <string name="show_time_format">Time Format (AM/PM)</string>
-    <string name="show_date">Show Date</string>
-    <string name="show_battery">Show Battery</string>
-    <string name="show_battery_icon">Show Battery Icon</string>
     <string name="lock_home_apps">Lock Apps</string>
     <string name="extend_home_apps_area">Extend Clickable Area</string>
     <string name="home_alignment_bottom">Home Screen Align Bottom</string>
 
     <!-- Alignment Strings -->
-    <string name="display_app_usage_stats">Display App Usage Stats</string>
     <string name="home_alignment">Apps Home Screen</string>
     <string name="clock_alignment">Clock and Date</string>
     <string name="drawer_alignment">Apps in App Drawer</string>

@@ -121,7 +121,6 @@ object SettingsComposable {
         }
     }
 
-
     @Composable
     fun SettingsTopView(
         title: String,

@@ -207,18 +207,86 @@ class SettingsFragment : Fragment() {
                 }
             }
             SettingsArea(
-                title = stringResource(R.string.appearance),
+                title = stringResource(R.string.display),
                 fontSize = titleFs,
                 selected = selected,
                 items = arrayOf(
                     { _, onChange ->
                         SettingsToggle(
-                            title = stringResource(R.string.status_bar),
+                            title = stringResource(R.string.show_status_bar),
                             fontSize = iconFs,
                             onChange = onChange,
                             state = remember { mutableStateOf(prefs.showStatusBar) },
                         ) { toggleStatusBar() }
                     },
+                    { _, onChange ->
+                        SettingsToggle(
+                            title = stringResource(R.string.show_recent_apps),
+                            fontSize = iconFs,
+                            onChange = onChange,
+                            state = remember { mutableStateOf(prefs.recentAppsDisplayed) }
+                        ) { toggleRecentAppsDisplayed() }
+                    },
+                    { _, onChange ->
+                        SettingsToggle(
+                            title = stringResource(R.string.show_app_usage_stats),
+                            fontSize = iconFs,
+                            onChange = onChange,
+                            state = remember { mutableStateOf(prefs.appUsageStats) }
+                        ) { toggleAppUsageStats() }
+                    },
+                    { _, onChange ->
+                        SettingsToggle(
+                            title = stringResource(R.string.show_time),
+                            fontSize = iconFs,
+                            onChange = onChange,
+                            state = remember { mutableStateOf(prefs.showTime) }
+                        ) { toggleShowTime() }
+                    },
+                    { _, onChange ->
+                        if (prefs.showTime) {
+                            SettingsToggle(
+                                title = stringResource(R.string.show_time_format),
+                                fontSize = iconFs,
+                                onChange = onChange,
+                                state = remember { mutableStateOf(prefs.showTimeFormat) }
+                            ) { toggleShowTimeFormat() }
+                        }
+                    },
+                    { _, onChange ->
+                        SettingsToggle(
+                            title = stringResource(R.string.show_date),
+                            fontSize = iconFs,
+                            onChange = onChange,
+                            state = remember { mutableStateOf(prefs.showDate) }
+                        ) { toggleShowDate() }
+                    },
+                    { _, onChange ->
+                        SettingsToggle(
+                            title = stringResource(R.string.show_battery),
+                            fontSize = iconFs,
+                            onChange = onChange,
+                            state = remember { mutableStateOf(prefs.showBattery) }
+                        ) { toggleShowBattery() }
+                    },
+                    { _, onChange ->
+                        if (prefs.showBattery) {
+                            SettingsToggle(
+                                title = stringResource(R.string.show_battery_icon),
+                                fontSize = iconFs,
+                                onChange = onChange,
+                                state = remember { mutableStateOf(prefs.showBatteryIcon) }
+                            ) { toggleShowBatteryIcon() }
+                        }
+                    },
+                ),
+                visibleSection = visibleSection
+            )
+            SettingsArea(
+                title = stringResource(R.string.appearance),
+                fontSize = titleFs,
+                selected = selected,
+                items = arrayOf(
                     { open, onChange ->
                         SettingsItem(
                             title = stringResource(R.string.theme_mode),
@@ -349,14 +417,6 @@ class SettingsFragment : Fragment() {
                             state = remember { mutableStateOf(prefs.autoShowKeyboard) },
                         ) { toggleKeyboardText() }
                     },
-                    { _, onChange ->
-                        SettingsToggle(
-                            title = stringResource(R.string.display_recent_apps),
-                            fontSize = iconFs,
-                            onChange = onChange,
-                            state = remember { mutableStateOf(prefs.recentAppsDisplayed) }
-                        ) { toggleRecentAppsDisplayed() }
-                    },
                     { open, onChange ->
                         if (prefs.recentAppsDisplayed) {
                             SettingsSliderItem(
@@ -445,50 +505,6 @@ class SettingsFragment : Fragment() {
                     },
                     { _, onChange ->
                         SettingsToggle(
-                            title = stringResource(R.string.show_time),
-                            fontSize = iconFs,
-                            onChange = onChange,
-                            state = remember { mutableStateOf(prefs.showTime) }
-                        ) { toggleShowTime() }
-                    },
-                    { _, onChange ->
-                        if (prefs.showTime) {
-                            SettingsToggle(
-                                title = stringResource(R.string.show_time_format),
-                                fontSize = iconFs,
-                                onChange = onChange,
-                                state = remember { mutableStateOf(prefs.showTimeFormat) }
-                            ) { toggleShowTimeFormat() }
-                        }
-                    },
-                    { _, onChange ->
-                        SettingsToggle(
-                            title = stringResource(R.string.show_date),
-                            fontSize = iconFs,
-                            onChange = onChange,
-                            state = remember { mutableStateOf(prefs.showDate) }
-                        ) { toggleShowDate() }
-                    },
-                    { _, onChange ->
-                        SettingsToggle(
-                            title = stringResource(R.string.show_battery),
-                            fontSize = iconFs,
-                            onChange = onChange,
-                            state = remember { mutableStateOf(prefs.showBattery) }
-                        ) { toggleShowBattery() }
-                    },
-                    { _, onChange ->
-                        if (prefs.showBattery) {
-                            SettingsToggle(
-                                title = stringResource(R.string.show_battery_icon),
-                                fontSize = iconFs,
-                                onChange = onChange,
-                                state = remember { mutableStateOf(prefs.showBatteryIcon) }
-                            ) { toggleShowBatteryIcon() }
-                        }
-                    },
-                    { _, onChange ->
-                        SettingsToggle(
                             title = stringResource(R.string.lock_home_apps),
                             fontSize = iconFs,
                             onChange = onChange,
@@ -519,14 +535,6 @@ class SettingsFragment : Fragment() {
                 fontSize = titleFs,
                 selected = selected,
                 items = arrayOf(
-                    { _, onChange ->
-                        SettingsToggle(
-                            title = stringResource(R.string.display_app_usage_stats),
-                            fontSize = iconFs,
-                            onChange = onChange,
-                            state = remember { mutableStateOf(prefs.appUsageStats) }
-                        ) { toggleAppUsageStats() }
-                    },
                     { open, onChange ->
                         if (!prefs.appUsageStats) {
                             SettingsItem(

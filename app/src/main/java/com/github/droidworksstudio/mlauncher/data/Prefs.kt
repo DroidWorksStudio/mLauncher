@@ -4,6 +4,8 @@ import android.content.Context
 import android.content.SharedPreferences
 import android.os.UserHandle
 import android.util.Log
+import androidx.core.content.ContextCompat.getColor
+import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.Constants.Gravity
 import com.github.droidworksstudio.mlauncher.helper.getUserHandleFromString
 import com.google.gson.Gson
@@ -81,6 +83,13 @@ private const val DATE_SIZE_TEXT = "DATE_SIZE_TEXT"
 private const val BATTERY_SIZE_TEXT = "BATTERY_SIZE_TEXT"
 private const val TEXT_SIZE_SETTINGS = "TEXT_SIZE_SETTINGS"
 private const val TEXT_PADDING_SIZE = "TEXT_PADDING_SIZE"
+
+private const val APP_COLOR = "APP_COLOR"
+private const val DATE_COLOR = "DATE_COLOR"
+private const val TIME_COLOR = "TIME_COLOR"
+private const val BATTERY_COLOR = "BATTERY_COLOR"
+private const val DAILY_WORD_COLOR = "DAILY_WORD_COLOR"
+private const val ALARM_CLOCK_COLOR = "ALARM_CLOCK_COLOR"
 
 class Prefs(val context: Context) {
 
@@ -171,6 +180,30 @@ class Prefs(val context: Context) {
     var homePagesNum: Int
         get() = prefs.getInt(HOME_PAGES_NUM, 1)
         set(value) = prefs.edit().putInt(HOME_PAGES_NUM, value).apply()
+
+    var appColor: Int
+        get() = prefs.getInt(APP_COLOR, getColor(context, R.color.white))
+        set(value) = prefs.edit().putInt(APP_COLOR, value).apply()
+
+    var dateColor: Int
+        get() = prefs.getInt(DATE_COLOR, getColor(context, R.color.white))
+        set(value) = prefs.edit().putInt(DATE_COLOR, value).apply()
+
+    var timeColor: Int
+        get() = prefs.getInt(TIME_COLOR, getColor(context, R.color.white))
+        set(value) = prefs.edit().putInt(TIME_COLOR, value).apply()
+
+    var batteryColor: Int
+        get() = prefs.getInt(BATTERY_COLOR, getColor(context, R.color.white))
+        set(value) = prefs.edit().putInt(BATTERY_COLOR, value).apply()
+
+    var dailyWordColor: Int
+        get() = prefs.getInt(DAILY_WORD_COLOR, getColor(context, R.color.white))
+        set(value) = prefs.edit().putInt(DAILY_WORD_COLOR, value).apply()
+
+    var alarmClockColor: Int
+        get() = prefs.getInt(ALARM_CLOCK_COLOR, getColor(context, R.color.white))
+        set(value) = prefs.edit().putInt(ALARM_CLOCK_COLOR, value).apply()
 
     var opacityNum: Int
         get() = prefs.getInt(APP_OPACITY, 128)
