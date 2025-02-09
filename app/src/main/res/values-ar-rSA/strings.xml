@@ -1,148 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Base Settings -->
-    <string name="app">التطبيق</string>
+    <string name="select_app">حدد التطبيق</string>
+    <!-- Strings used for settings menus -->
+    <string name="settings_name">إعدادات mLauncher</string>
+    <string name="settings_features_title">سمات</string>
+    <string name="settings_features_description">تحسين إنتاجيتك.</string>
+    <string name="settings_look_feel_title">انظر واشعر</string>
+    <string name="settings_look_feel_description">قم بإضفاء لمسة شخصية على الشاشة الرئيسية الخاصة بك.</string>
+    <string name="settings_favorite_apps_title">التطبيقات المفضلة</string>
+    <string name="settings_hidden_apps_title">التطبيقات المخفية</string>
+    <string name="settings_advanced_title">متقدم</string>
+    <string name="settings_app_info_title">معلومات التطبيق</string>
+    <string name="settings_app_info_description">%1$s</string>
     <!-- Admin Settings -->
-    <string name="admin_permission_message">يعد mLauncher باستخدام إذن قفل الشاشة بشكل مسؤول. لا يقوم mLauncher بجمع أو مشاركة أي بيانات.</string>
+    <string name="admin_permission_message">يعد تطبيق mLauncher باستخدام أذونات شاشة القفل بشكل مسؤول. ولا يقوم تطبيق mLauncher بجمع أو مشاركة أي بيانات.</string>
     <string name="experimental">(تجريبي)</string>
     <!-- Settings Headers -->
-    <string name="appearance">المظهر</string>
-    <string name="behavior">السلوك</string>
+    <string name="display">عرض</string>
+    <string name="language_region">اللغة &amp; المنطقة</string>
+    <string name="accessibility">إمكانية الوصول</string>
+    <string name="appearance">مظهر</string>
+    <string name="behavior">سلوك</string>
     <string name="homescreen">الشاشة الرئيسية</string>
-    <string name="alignment">محاذاة</string>
-    <string name="gestures">إيماءات</string>
+    <string name="alignment">تنسيق</string>
+    <string name="gestures">الإيماءات</string>
     <string name="miscellaneous">متنوع</string>
     <!-- Home Strings -->
     <string name="hidden_apps">التطبيقات المخفية</string>
     <string name="favorite_apps">التطبيقات المفضلة</string>
     <string name="set_as_default_launcher">تعيين كمشغل افتراضي</string>
     <string name="change_default_launcher">تغيير المشغل الافتراضي</string>
-    <!-- Appearance Strings -->
-    <string name="status_bar">إظهار شريط الحالة</string>
-    <string name="theme_mode">وضع السمة</string>
-    <string name="color_mode">وضع اللون</string>
+    <!-- Display Strings -->
+    <string name="show_status_bar">إظهار شريط الحالة</string>
+    <string name="show_recent_apps">إظهار التطبيقات الأخيرة</string>
+    <string name="show_app_usage_stats">إظهار إحصائيات استخدام التطبيق</string>
+    <string name="show_time">موعد العرض</string>
+    <string name="show_time_format">تنسيق الوقت (ص/م)</string>
+    <string name="show_date">تاريخ العرض</string>
+    <string name="show_battery">عرض البطارية</string>
+    <string name="show_battery_icon">إظهار رمز البطارية</string>
+    <string name="show_header_text">إظهار نص الرأس</string>
+    <!-- Language & Region Strings -->
     <string name="app_language">لغة الواجهة</string>
+    <!-- Accessibility Strings -->
     <string name="app_text_size">حجم نص التطبيق</string>
     <string name="clock_text_size">حجم نص الساعة</string>
     <string name="date_text_size">حجم نص التاريخ</string>
     <string name="battery_text_size">حجم نص البطارية</string>
-    <string name="app_padding_size">حجم الحشوة</string>
-    <string name="follow_accent_colors">ألوان مميزة</string>
-    <string name="background_opacity">شفافية الخلفية</string>
-    <string name="all_apps_text">عرض نص كل التطبيقات</string>
-    <string name="app_font">خط العائلة</string>
+    <string name="app_padding_size">حجم الحشو</string>
+    <string name="app_font">عائلة الخطوط</string>
+    <!-- Appearance Strings -->
+    <string name="theme_mode">وضع الموضوع</string>
+    <string name="background_opacity">تعتيم الخلفية</string>
+    <string name="home_alignment_bottom">محاذاة الشاشة الرئيسية لأسفل</string>
     <!-- Behavior Strings -->
-    <string name="auto_show_keyboard">Auto show keyboard</string>
-    <string name="auto_open_apps">فتح التطبيقات تلقائياً</string>
-    <string name="enable_notifications">تمكين الإخطارات</string>
-    <string name="display_recent_apps">عرض التطبيقات الحديثة</string>
+    <string name="auto_show_keyboard">لوحة مفاتيح العرض التلقائي</string>
+    <string name="auto_open_apps">فتح التطبيقات تلقائيًا</string>
+    <string name="enable_notifications">تمكين الإشعارات</string>
     <string name="number_of_recents">عدد التطبيقات الحديثة</string>
-    <string name="filter_strength">قوة التصفية</string>
+    <string name="filter_strength">قوة الفلتر</string>
     <string name="search_from_start">البحث عن التطبيق من البداية.</string>
-    <string name="icon_font">استخدم خط الأيقونة</string>
+    <string name="icon_font">استخدم الخط الأيقوني</string>
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">عدد الاختصارات</string>
     <string name="pages_on_home_screen">عدد الصفحات</string>
-    <string name="enable_home_pager">تمكين جهاز النداء الرئيسي</string>
-    <string name="show_time">إظهار الوقت</string>
-    <string name="show_time_format">تنسيق الوقت (صباحًا/مساءً)</string>
-    <string name="show_date">إظهار التاريخ</string>
-    <string name="show_battery">عرض البطارية</string>
-    <string name="show_battery_icon">إظهار أيقونة البطارية</string>
+    <string name="enable_home_pager">تمكين الصفحة الرئيسية</string>
     <string name="lock_home_apps">قفل التطبيقات</string>
     <string name="extend_home_apps_area">توسيع المنطقة القابلة للنقر</string>
-    <string name="home_alignment_bottom">محاذاة الشاشة الرئيسية إلى الأسفل</string>
     <!-- Alignment Strings -->
-    <string name="display_app_usage_stats">عرض إحصائيات استخدام التطبيق</string>
-    <string name="home_alignment">تطبيقات الشاشة الرئيسية</string>
+    <string name="home_alignment">الشاشة الرئيسية للتطبيقات</string>
     <string name="clock_alignment">الساعة والتاريخ</string>
     <string name="drawer_alignment">التطبيقات في درج التطبيقات</string>
     <!-- Gestures Strings -->
-    <string name="short_swipe_up_app">مرر لأعلى</string>
-    <string name="short_swipe_down_app">مرر لأسفل</string>
-    <string name="short_swipe_left_app">مرر لليسار</string>
-    <string name="short_swipe_right_app">مرر لليمين</string>
-    <string name="long_swipe_up_app">اضغط لفترة طويلة على السحب لأعلى</string>
-    <string name="long_swipe_down_app">الضغط لفترة طويلة اسحب لأسفل</string>
-    <string name="long_swipe_left_app">الضغط لفترة طويلة اسحب لليسار</string>
-    <string name="long_swipe_right_app">اضغط لفترة طويلة اسحب لليمين</string>
-    <string name="clock_click_app">انقر على الساعة</string>
-    <string name="date_click_app">انقر على التاريخ</string>
-    <string name="usage_click_app">انقر على إجمالي الاستخدام</string>
-    <string name="double_tap">النقر المزدوج</string>
+    <string name="short_swipe_up_app">تمريرة قصيرة لأعلى</string>
+    <string name="short_swipe_down_app">تمريرة قصيرة للأسفل</string>
+    <string name="short_swipe_left_app">تمريرة قصيرة لليسار</string>
+    <string name="short_swipe_right_app">تمريرة قصيرة لليمين</string>
+    <string name="long_swipe_up_app">التمرير الطويل لأعلى</string>
+    <string name="long_swipe_down_app">التمرير لأسفل لفترة طويلة</string>
+    <string name="long_swipe_left_app">تمرير طويل لليسار</string>
+    <string name="long_swipe_right_app">تمرير طويل لليمين</string>
+    <string name="clock_click_app">انقر فوق الساعة</string>
+    <string name="date_click_app">انقر فوق التاريخ</string>
+    <string name="usage_click_app">انقر فوق إجمالي الاستخدام</string>
+    <string name="double_tap">الضغط مرتين</string>
     <!-- Gestures Do Strings -->
-    <string name="show_notifications">إظهار الإشعارات</string>
+    <string name="show_notifications">إظهار الإشعار</string>
     <string name="show_app_list">إظهار قائمة التطبيقات</string>
-    <string name="open_app">فتح التطبيق</string>
+    <string name="open_app">افتح التطبيق</string>
     <string name="lock_screen">قفل الشاشة</string>
     <string name="open_quick_settings">الإعدادات السريعة</string>
-    <string name="show_recents">Show Recents</string>
-    <string name="open_power_dialog">حوار القوة</string>
-    <string name="take_a_screenshot">خذ لقطة شاشة</string>
+    <string name="show_recents">إظهار العناصر الحديثة</string>
+    <string name="open_power_dialog">حوار الطاقة</string>
+    <string name="take_a_screenshot">التقط لقطة للشاشة</string>
     <string name="left_page">انتقل إلى الصفحة اليسرى</string>
-    <string name="right_page">انتقل إلى الصفحة الصحيحة</string>
-    <string name="double_tap_to_lock_screen">النقر المزدوج للقفل</string>
+    <string name="right_page">انتقل إلى الصفحة اليمنى</string>
+    <string name="double_tap_to_lock_screen">انقر مرتين للقفل</string>
     <!-- Miscellaneous Strings -->
     <string name="settings_text_size">إعدادات حجم النص</string>
     <string name="display_hidden_apps">عرض التطبيقات المخفية</string>
     <string name="lock_settings">إعدادات القفل</string>
     <!-- Backup Strings -->
-    <string name="backup">دعم</string>
+    <string name="backup">النسخ الاحتياطي</string>
     <string name="load_backup">حمولة</string>
     <string name="save_backup">يحفظ</string>
     <string name="clear_backup">واضح</string>
     <!-- Settings Strings -->
-    <string name="off">متوقف</string>
-    <string name="on">تشغيل</string>
-    <string name="left">اليسار</string>
+    <string name="off">عن</string>
+    <string name="on">على</string>
+    <string name="left">غادر</string>
     <string name="right">يمين</string>
-    <string name="center">الوسط</string>
-    <string name="dark">داكن</string>
-    <string name="light">فاتح</string>
-    <string name="settings">الإعدادات</string>
-    <string name="lang_system">النظام</string>
-    <string name="system_default">النظام</string>
+    <string name="center">مركز</string>
+    <string name="dark">مظلم</string>
+    <string name="light">ضوء</string>
+    <string name="settings">إعدادات</string>
+    <string name="lang_system">نظام</string>
+    <string name="system_default">نظام</string>
     <string name="delete">يمسح</string>
-    <string name="hide">إخفاء</string>
+    <string name="hide">يخفي</string>
     <string name="unhide">إظهار</string>
     <string name="rename">إعادة تسمية</string>
     <string name="info">معلومات</string>
-    <string name="okay">حسنًا</string>
-    <string name="save">حفظ</string>
-    <string name="show">إظهار</string>
-    <string name="reset">Reset</string>
-    <string name="cancel">إلغاء</string>
-    <string name="enable">تمكين</string>
-    <string name="disable">تعطيل</string>
-    <string name="enabled">تمكين</string>
-    <string name="disabled">معطل</string>
-    <string name="open">فتح</string>
-    <string name="close">أغلق</string>
+    <string name="okay">تمام</string>
+    <string name="save">يحفظ</string>
+    <string name="show">يعرض</string>
+    <string name="reset">إعادة ضبط</string>
+    <string name="cancel">يلغي</string>
+    <string name="enable">يُمكَِن</string>
+    <string name="disable">إبطال</string>
+    <string name="enabled">مُمَكَّن</string>
+    <string name="disabled">عاجز</string>
+    <string name="open">يفتح</string>
+    <string name="close">يغلق</string>
     <string name="copy">ينسخ</string>
     <!-- Colored Themes -->
-    <string name="catppuccino">كاتبتشينو</string>
+    <string name="catppuccino">كاتبوتشينو</string>
     <string name="nordic">الشمال</string>
     <!-- Dark Only Themes -->
     <string name="dracula">دراكولا</string>
     <string name="arc">قوس</string>
-    <string name="nokto">نكتو</string>
+    <string name="nokto">نوكتو</string>
     <string name="breeze">نسيم</string>
     <string name="yaru">يارو</string>
     <!-- Light Only Themes -->
-    <string name="adwaita">ادويتا</string>
+    <string name="adwaita">أدوايتا</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">إلغاء المصادقة.</string>
-    <string name="text_authentication_error">خطأ في المصادقة:%1$s(الكود %2$d)</string>
-    <string name="text_authentication_failed">المصادقة فشلت.</string>
+    <string name="text_authentication_error">خطأ في المصادقة:%1$s(الرمز %2$d)</string>
+    <string name="text_authentication_failed">فشل المصادقة.</string>
     <string name="text_biometric_login">تسجيل الدخول البيومتري لـ mLauncher</string>
-    <string name="text_biometric_login_sub">قم بتسجيل الدخول باستخدام بيانات الاعتماد البيومترية الخاصة بك</string>
+    <string name="text_biometric_login_sub">قم بتسجيل الدخول باستخدام بياناتك البيومترية.</string>
     <!-- Crash Strings -->
     <string name="acra_crash">يتحطم</string>
-    <string name="acra_dialog_text">عذرًا، ولكن %1$s واجه مشكلة غير متوقعة ويجب إغلاقه. الرجاء مساعدتنا على التحسين عن طريق إرسال تقرير الأعطال.\n\n%1$s يقدر خصوصيتك ويتم استخدام البيانات التي تم جمعها فقط لتحسين استقرار التطبيق. لا يتم جمع أي معلومات شخصية. شكرا لدعمكم!</string>
-    <string name="acra_send_report">إرسال تقرير</string>
+    <string name="acra_dialog_text">نأسف، ولكن %1$s واجه مشكلة غير متوقعة ويجب إغلاقه. يُرجى مساعدتنا على التحسين من خلال إرسال تقرير تعطل.\n\n%1$s يقدّر خصوصيتك ويتم استخدام البيانات المجمعة فقط لتحسين استقرار التطبيق. لا يتم جمع أي معلومات شخصية. شكرًا لك على دعمك!</string>
+    <string name="acra_send_report">إرسال التقرير</string>
     <string name="acra_dont_send">لا ترسل</string>
-    <string name="acra_mail_body">لقد حدث عطل في التطبيق.\n\nفيما يلي تفاصيل الجهاز. لقد تم إرفاق سجل الأخطاء كملف للرجوع إليه. ونحن نقدر مساعدتكم في حل هذه المشكلة.\n\nمعلومات الجهاز: \n[يرجى ملء المعلومات أدناه أيضًا وإزالة أي شيء بين الأقواس المربعة وإلا سيتم تجاهل ذلك.]\n\n- إصدار التطبيق: [0.0.1]\n- إصدار Android: [14]\n- اسم الجهاز: [Android Pixel 69]\n- موقع التثبيت: [github، fdroid، obtanium، self]\n\nإن اهتمامك السريع بهذا الأمر موضع تقدير كبير.\n\nشكرًا لك.\n</string>
-    <string name="settings_font_system">النظام</string>
+    <string name="acra_mail_body">حدث تعطل في التطبيق.\n\nفيما يلي تفاصيل الجهاز. تم إرفاق سجل الأخطاء كملف للرجوع إليه. سنكون شاكرين لمساعدتك في حل هذه المشكلة.\n\nمعلومات الجهاز: \n[يرجى ملء المعلومات أدناه وإزالة أي شيء بين الأقواس المربعة أو سيتم تجاهل ذلك.]\n\n- إصدار التطبيق: [0.0.1]\n- إصدار Android: [14]\n- اسم الجهاز: [Android Pixel 69]\n- موقع التثبيت: [github، fdroid، obtanium، self]\n\nنقدر اهتمامك السريع بهذه المسألة كثيرًا.\n\nشكرا لك.\n</string>
+    <string name="settings_font_system">نظام</string>
     <!-- Search Stings -->
     <string name="search_engine">محرك البحث</string>
     <string name="search_google">جوجل</string>
@@ -150,20 +165,19 @@
     <string name="search_duckduckgo">دك دك جو</string>
     <string name="search_bing">بنج</string>
     <string name="search_brave">شجاع</string>
-    <string name="search_swisscow">الأبقار السويسرية</string>
+    <string name="search_swisscow">سويس كاوز</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">جميع التطبيقات</string>
     <string name="total_screen_time">إجمالي وقت الشاشة</string>
     <string name="can_not_delete_system_apps">لا يمكن حذف تطبيقات النظام</string>
-    <string name="please_select_app">الرجاء تحديد التطبيق</string>
+    <string name="please_select_app">الرجاء اختيار التطبيق</string>
     <string name="drawer_list_empty_hint">لم يتم العثور على تطبيقات</string>
-    <string name="long_press_for_settings">اضغط مطولاً في أي مكان للإعدادات</string>
+    <string name="long_press_for_settings">اضغط لفترة طويلة في أي مكان للحصول على الإعدادات</string>
     <string name="swipe_up_for_apps">مرر لأعلى لجميع التطبيقات</string>
-    <string name="app_drawer_tips">نصيحة: مرر لأسفل للإغلاق. مرر لإخفاء لوحة المفاتيح.</string>
-    <string name="double_tap_lock_is_enabled_message">إذا كان الضغط المزدوج على قفل يعطل بصمة الأصابع أو فتح شاشة القفل، افتح إعدادات mLauncher ، انقر على \"تجريبي\" واتبع التعليمات. شكراً لك.</string>
-    <string name="double_tap_lock_uninstall_message">انقر نقراً مزدوجاً للقفل مفعل.
-		\n\nملاحظة: قم بتشغيل هذا الخيار أولاً إذا قررت حذف mLauncher.</string>
+    <string name="app_drawer_tips">نصيحة: مرر لأسفل لإغلاق لوحة المفاتيح. مرر لأسفل لإخفاء لوحة المفاتيح.</string>
+    <string name="double_tap_lock_is_enabled_message">إذا كان القفل بالنقر المزدوج يعطل فتح القفل ببصمة الإصبع أو الوجه، فافتح إعدادات mLauncher، وانقر على \"تجريبي\" واتبع التعليمات. شكرًا لك.</string>
+    <string name="double_tap_lock_uninstall_message">انقر نقرًا مزدوجًا لتفعيل القفل. \n\nملاحظة: قم بإيقاف تشغيل هذا أولاً إذا قررت حذف mLauncher.</string>
     <string name="accessibility_service_name">خدمة إجراءات mLauncher</string>
-    <string name="accessibility_service_description">تتيح خدمة إمكانية الوصول هذه لـ mLauncher القيام بإجراءات معينة مثل قفل الشاشة أو فتح الإعدادات السريعة. خدمة الوصول لدينا لا تجمع أو تشارك أي بيانات.</string>
+    <string name="accessibility_service_description">تتيح خدمة إمكانية الوصول هذه لـ mLauncher القيام ببعض الإجراءات مثل قفل الشاشة أو فتح الإعدادات السريعة. لا تجمع خدمة إمكانية الوصول الخاصة بنا أي بيانات أو تشاركها.</string>
     <string name="version">إصدار</string>
 </resources>
