@@ -1,52 +1,52 @@
-Abgezweigt von <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimalistisch und sauber.
+Abgezweigt von <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal und sauber.
 
-# Mit zusätzlichen Funktionen gegabelt
+# Geforkt mit zusätzlichen Funktionen
 
 - Unordnung wie Anzeigen und Links entfernt.
-- Sie können Apps in der App-Schublade umbenennen (das Umbenennen von Apps auf dem Startbildschirm wird bereits unterstützt). Klicken Sie einfach lange auf eine App auf dem Startbildschirm und beginnen Sie mit der Eingabe.)
-- Wir haben viele weitere Optionen für Gesten auf dem Startbildschirm hinzugefügt:
+- Sie können Apps im App-Drawer umbenennen (Das Umbenennen von Apps auf dem Startbildschirm wird bereits unterstützt. Klicken Sie einfach lange auf eine App auf dem Startbildschirm und beginnen Sie mit der Eingabe.)
+- Viel mehr Anpassungsmöglichkeiten bei den Gesten auf dem Startbildschirm
     - Gesten sind jetzt:
-        - Wischen Sie nach oben, unten, links, rechts
+        - Wischen nach oben, unten, links, rechts
         - Klicken Sie auf die Uhr
-        - Klicken Sie auf das Datum
-    - Zu den möglichen Aktionen gehören jetzt:
-        - Öffnen Sie die angegebene App
+        - Möglichkeit, die Anwendung zu ändern, die beim Klicken auf das Datum geöffnet wird
+    - Mögliche Aktionen jetzt inklusive:
+        - Angegebene App öffnen
         - App-Liste anzeigen
-        - Sperren des Bildschirms
+        - Sperrung des Bildschirms
         - Zuletzt geöffnete Apps anzeigen
-        - Öffnen der Benachrichtigungsleiste
+        - Öffne die Benachrichtigungsleiste
         - Öffnen der Schnelleinstellungen
         - Power-Dialog
-        - Machen Sie einen Screenshot
+        - Mach ein Bildschirmfoto
         - Geste deaktivieren
 - Sie können die Uhr auch unabhängig von den Home-Apps positionieren.
 - Ändern Sie die Ausrichtung von Apps im App-Drawer unabhängig vom Homescreen.
 - Ändern Sie die Schriftgröße einzelner Abschnitte des Homescreens unabhängig voneinander.
-- Internetberechtigung entfernt. Sie wissen nie, was ein App-Entwickler über Sie wissen möchte.
+- Entfernte Interneterlaubnis - Entfernte Interneterlaubnis Du weißt nie, was ein App-Entwickler über dich wissen möchte.
 - Einstellungen hinter Biometrie sperren (umschalten)
 - Möglichkeit hinzugefügt, Abstürze per E-Mail zu melden.
 - Möglichkeit zum Anzeigen der App-Nutzungsdauer hinzugefügt.
 
 ## Übersetzungen:
 
-- Viele Leute haben die App in die folgenden Sprachen übersetzt. Vielen Dank an euch alle.
+- Viele Leute haben die App in die folgenden Sprachen übersetzt. Vielen Dank an Sie alle.
   - Afrikaans
   - Arabisch
   - Albanisch
-  - Bulgarisch
-  Chinesisch
-  - Kroatisch
+  - bulgarisch
+  - Chinesisch
+  - kroatisch
   - Tschechisch
   - Dänisch
   - Englisch
   - Estnisch
-  - Philippinisch
+  - Filipino
   - Finnisch
   - Französisch
-  - Georgisch
+  - georgisch
   - Deutsch
   - Griechisch
-  - Hawaiisch
+  - Hawaiianisch
   - Hebräisch
   - Hindi
   - Ungarisch
@@ -54,26 +54,26 @@ Abgezweigt von <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. 
   - Indonesisch
   - Irisch
   - Italienisch
-  Japanisch
-  - Korean
+  - Japanisch
+  - Koreanisch
   - Litauisch
   - Luxemburgisch
   - Malaiisch
   - Madagassisch
-  - Deutsch
-  - Norwegisch
-  - Nepalesisch
+  - Malayalam
+  - norwegisch
+  - nepalesisch
   - Persisch
   - Polnisch
-  Portugiesisch (Europäisch)
-  - Deutsch
+  - Portugiesisch (europäisch)
+  - Pandschabi
   - Russisch
-  Serbisch
-  - Singhalesisch
+  - serbisch
+  - Sindhi
   - Slowakisch
-  Spanisch
-  Schwedisch
-  - Thai
-  Türkisch
-  - Ukrainisch
+  - Spanisch
+  - Schwedisch
+  - Thailändisch
+  - Türkisch
+  - ukrainisch
   - Vietnamesisch
