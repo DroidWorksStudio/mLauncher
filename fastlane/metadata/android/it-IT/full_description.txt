@@ -1,79 +1,79 @@
-Biforcato da <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimale e pulito.
+Derivato da <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimalista e pulito.
 
-# Fork con funzionalità aggiuntive
+# Biforcato con funzionalità extra
 
-- Rimosso il disordine, come annunci e collegamenti.
-- È possibile rinominare le app nell'app-drawer (la rinominazione delle app nella schermata iniziale è già supportata. Basta fare clic a lungo su un'app nella schermata principale e iniziare a digitare.)
-- Maggiore personalizzazione dei gesti della schermata iniziale
-    - I gesti sono ora:
-        - Scorri verso l'alto, verso il basso, a sinistra, a destra
-        - Possibilità di cambiare l'app che si apre cliccando sull'orologio
-        - Cliccando sulla data
+- Rimossi elementi superflui, come pubblicità e link.
+- Puoi rinominare le app nel cassetto delle app (la rinominazione delle app nella schermata iniziale è già supportata). Basta fare clic a lungo su un'app nella schermata iniziale e iniziare a digitare.)
+- Abbiamo aggiunto molte più opzioni per i gesti nella schermata iniziale:
+    - I gesti ora sono:
+        - Scorrere verso l'alto, verso il basso, verso sinistra, verso destra
+        - Cliccando sull'orologio
+        - Cliccando sulla Data
     - Le azioni possibili ora includono:
-        - Apri app specificata
-        - Visualizzazione dell'elenco delle app
+        - Apri l'app specificata
+        - Visualizza l'elenco delle app
         - Blocco dello schermo
         - Mostra le app aperte di recente
-        - Apertura del pannello notifiche
+        - Apertura del cassetto delle notifiche
         - Apertura delle impostazioni rapide
-        - Menu di spegnimento
+        - Dialogo di potenza
         - Fai uno screenshot
-        - Disabilita gesti
-- Puoi anche posizionare l'orologio indipendentemente dalle app domestiche.
-- Modifica l'allineamento delle app nel cassetto delle app indipendentemente dalla schermata iniziale.
-- Modifica la dimensione del carattere delle sezioni della schermata iniziale indipendentemente l'una dall'altra.
-- Rimozione dell'autorizzazione all'accesso a Internet - Rimozione dell'autorizzazione dell'accesso a Internet. Non sai mai cosa uno sviluppatore di app vuole sapere su di te.
-- Blocca le impostazioni tramite biometria (attiva/disattiva)
-- Aggiunta la possibilità di segnalare arresti anomali tramite e-mail.
+        - Disattiva gesto
+- È possibile posizionare l'orologio anche indipendentemente dalle app per la casa.
+- Modifica l'allineamento delle app nel cassetto delle applicazioni indipendentemente dalla schermata iniziale.
+- Modificare la dimensione del carattere delle sezioni della schermata iniziale in modo indipendente l'una dall'altra.
+- Rimosso il permesso di accesso a Internet. Non sai mai cosa uno sviluppatore di app vuole sapere di te.
+- Blocca le impostazioni dietro la biometria (attiva/disattiva)
+- Aggiunta la possibilità di segnalare gli arresti anomali via e-mail.
 - Aggiunta la possibilità di visualizzare il tempo di utilizzo dell'app.
 
 ## Traduzioni:
 
-- Molte persone hanno tradotto l'applicazione nelle seguenti lingue. Grazie a tutti voi.
-  - Afrikaans
+- Molte persone hanno tradotto l'app nelle seguenti lingue. Grazie di cuore a tutti voi.
+  - Africano
   - Arabo
   - Albanese
-  - Bulgaro
+  - bulgaro
   - Cinese
-  - Croato
-  - Ceca
+  - croato
+  - ceco
   - Danese
   - Inglese
   - Estone
   - Filippino
-  - Finlandese
+  - finlandese
   - Francese
   - Georgiano
   - Tedesco
   - Greco
   - Hawaiano
   - Ebraico
-  - Hindi
+  - Italiano
   - Ungherese
   - Islandese
   - Indonesiano
-  - Irlandese
+  - irlandese
   - Italiano
   - Giapponese
-  - Coreano
+  - coreano
   - Lituano
   - Lussemburghese
   - Malese
   - Malgascio
   - Malayalam
   - Norvegese
-  - Nepali
-  - Persiano
+  - Nepalese
+  - persiano
   - Polacco
-  - Portoghese (europeo)
+  - Portoghese (Europeo)
   - Punjabi
   - Russo
-  - Serbo
+  - serbo
   - Sindhi
-  - Slovacco
+  - slovacco
   - Spagnolo
-  - Svedese
-  - Thailandese
+  - svedese
+  - tailandese
   - Turco
-  - Ucraino
+  - ucraino
   - Vietnamita
