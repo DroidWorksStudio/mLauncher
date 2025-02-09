@@ -1,1 +1,1 @@
-Derivato da Olauncher, +minimalizzazione, +personalizzabilità
+Biforcato da Olauncher, +minimalizzazione, +personalizzazione
