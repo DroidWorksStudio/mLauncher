@@ -1,1 +1,1 @@
-Forked from Olauncher, +minimalization, +customizability
+Forked od Olauncher, +minimalizácia, +prispôsobiteľnosť
