@@ -1,79 +1,79 @@
-Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal and clean.
+Derivato da <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimalista e pulito.
 
-# Forked with extra features
+# Biforcato con funzionalità extra
 
-- Removed clutter, like ads and links.
-- You can rename apps in the app-drawer (Renaming apps on the home screen is already supported. Just long-click on an app on the home screen and start typing.)
-- We have added a lot more options for gestures on the home screen:
-    - Gestures are now:
-        - Swiping up, down, left, right
-        - Clicking on the clock
-        - Clicking on the Date
-    - Possible actions now include:
-        - Open specified app
-        - Display app list
-        - Locking the screen
-        - Show Recent opened apps
-        - Opening the notification drawer
-        - Opening the quick settings
-        - Power Dialog
-        - Take A Screenshot
-        - Disable Gesture
-- You can also position the clock independently of the home apps.
-- Change alignment of apps in app-drawer independent from homescreen.
-- Change font size of sections of the homescreen independent of each other.
-- Removed internet permission. You never know what an app developer wants to know about you.
-- Lock settings behind biometrics (toggle)
-- Added the ability to report crashing via email.
-- Added the ability to view app usage time.
+- Rimossi elementi superflui, come pubblicità e link.
+- Puoi rinominare le app nel cassetto delle app (la rinominazione delle app nella schermata iniziale è già supportata). Basta fare clic a lungo su un'app nella schermata iniziale e iniziare a digitare.)
+- Abbiamo aggiunto molte più opzioni per i gesti nella schermata iniziale:
+    - I gesti ora sono:
+        - Scorrere verso l'alto, verso il basso, verso sinistra, verso destra
+        - Cliccando sull'orologio
+        - Cliccando sulla Data
+    - Le azioni possibili ora includono:
+        - Apri l'app specificata
+        - Visualizza l'elenco delle app
+        - Blocco dello schermo
+        - Mostra le app aperte di recente
+        - Apertura del cassetto delle notifiche
+        - Apertura delle impostazioni rapide
+        - Dialogo di potenza
+        - Fai uno screenshot
+        - Disattiva gesto
+- È possibile posizionare l'orologio anche indipendentemente dalle app per la casa.
+- Modifica l'allineamento delle app nel cassetto delle applicazioni indipendentemente dalla schermata iniziale.
+- Modificare la dimensione del carattere delle sezioni della schermata iniziale in modo indipendente l'una dall'altra.
+- Rimosso il permesso di accesso a Internet. Non sai mai cosa uno sviluppatore di app vuole sapere di te.
+- Blocca le impostazioni dietro la biometria (attiva/disattiva)
+- Aggiunta la possibilità di segnalare gli arresti anomali via e-mail.
+- Aggiunta la possibilità di visualizzare il tempo di utilizzo dell'app.
 
-## Translations:
+## Traduzioni:
 
-- A lot of people have translated the app to the following languages. Many thanks to you all.
-  - Afrikaans
-  - Arabic
-  - Albanian
-  - Bulgarian
-  - Chinese
-  - Croatian
-  - Czech
-  - Danish
-  - English
-  - Estonian
-  - Filipino
-  - Finnish
-  - French
-  - Georgian
-  - German
-  - Greek
-  - Hawaiian
-  - Hebrew
-  - Hindi
-  - Hungarian
-  - Icelandic
-  - Indonesian
-  - Irish
-  - Italian
-  - Japanese
-  - Korean
-  - Lithuanian
-  - Luxembourgish
-  - Malay
-  - Malagasy
+- Molte persone hanno tradotto l'app nelle seguenti lingue. Grazie di cuore a tutti voi.
+  - Africano
+  - Arabo
+  - Albanese
+  - bulgaro
+  - Cinese
+  - croato
+  - ceco
+  - Danese
+  - Inglese
+  - Estone
+  - Filippino
+  - finlandese
+  - Francese
+  - Georgiano
+  - Tedesco
+  - Greco
+  - Hawaiano
+  - Ebraico
+  - Italiano
+  - Ungherese
+  - Islandese
+  - Indonesiano
+  - irlandese
+  - Italiano
+  - Giapponese
+  - coreano
+  - Lituano
+  - Lussemburghese
+  - Malese
+  - Malgascio
   - Malayalam
-  - Norwegian
-  - Nepali
-  - Persian
-  - Polish
-  - Portuguese (European)
+  - Norvegese
+  - Nepalese
+  - persiano
+  - Polacco
+  - Portoghese (Europeo)
   - Punjabi
-  - Russian
-  - Serbian
+  - Russo
+  - serbo
   - Sindhi
-  - Slovak
-  - Spanish
-  - Swedish
-  - Thai
-  - Turkish
-  - Ukrainian
-  - Vietnamese
+  - slovacco
+  - Spagnolo
+  - svedese
+  - tailandese
+  - Turco
+  - ucraino
+  - Vietnamita
