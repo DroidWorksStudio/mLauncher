@@ -1,1 +1,1 @@
-Forked from Olauncher, +minimisation, +personnalisation
+Forked d'Olauncher, +minimalisation, +personnalisation
