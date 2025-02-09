@@ -14,13 +14,13 @@
     <string name="settings_app_info_title">Информация о приложении</string>
     <string name="settings_app_info_description">%1$s</string>
     <!-- Admin Settings -->
-    <string name="admin_permission_message">mlauncher обещает ответственно использовать разрешение на блокировку экрана. mlauncher не собирает и не передает никакие данные.</string>
-    <string name="experimental">(Экспериментальный)</string>
+    <string name="admin_permission_message">mLauncher обещает ответственно использовать разрешение экрана блокировки. mLauncher не собирает и не передает какие-либо данные.</string>
+    <string name="experimental">(экспериментальный)</string>
     <!-- Settings Headers -->
     <string name="display">Отображать</string>
     <string name="language_region">Язык &amp; Регион</string>
     <string name="accessibility">Доступность</string>
-    <string name="appearance">Появление</string>
+    <string name="appearance">Внешний вид</string>
     <string name="behavior">Поведение</string>
     <string name="homescreen">Домашний экран</string>
     <string name="alignment">Выравнивание</string>
@@ -29,13 +29,13 @@
     <!-- Home Strings -->
     <string name="hidden_apps">Скрытые приложения</string>
     <string name="favorite_apps">Любимые приложения</string>
-    <string name="set_as_default_launcher">Установить как средство запуска по умолчанию</string>
+    <string name="set_as_default_launcher">Установить как лаунчер по умолчанию</string>
     <string name="change_default_launcher">Изменить лаунчер по умолчанию</string>
     <!-- Display Strings -->
     <string name="show_status_bar">Показать строку состояния</string>
     <string name="show_recent_apps">Показать последние приложения</string>
     <string name="show_app_usage_stats">Показать статистику использования приложения</string>
-    <string name="show_time">Время для шоу</string>
+    <string name="show_time">Показать время</string>
     <string name="show_time_format">Формат времени (AM/PM)</string>
     <string name="show_date">Показать дату</string>
     <string name="show_battery">Показать батарею</string>
@@ -51,91 +51,91 @@
     <string name="app_padding_size">Размер заполнения</string>
     <string name="app_font">Семейство шрифтов</string>
     <!-- Appearance Strings -->
-    <string name="theme_mode">Тематический режим</string>
+    <string name="theme_mode">Режим темы</string>
     <string name="background_opacity">Непрозрачность фона</string>
     <string name="home_alignment_bottom">Главный экран Выровнять по нижнему краю</string>
     <!-- Behavior Strings -->
-    <string name="auto_show_keyboard">Автопоказ клавиатуры</string>
-    <string name="auto_open_apps">Автоматически открываемые приложения</string>
+    <string name="auto_show_keyboard">Auto show keyboard</string>
+    <string name="auto_open_apps">Автооткрытие приложений</string>
     <string name="enable_notifications">Включить уведомления</string>
     <string name="number_of_recents">Количество последних приложений</string>
-    <string name="filter_strength">Сила фильтра</string>
+    <string name="filter_strength">Строгость фильтра</string>
     <string name="search_from_start">Поиск приложений с самого начала.</string>
     <string name="icon_font">Использовать иконочный шрифт</string>
     <!-- Home-screen Strings -->
-    <string name="apps_on_home_screen">Количество сочетаний клавиш</string>
+    <string name="apps_on_home_screen">Количество ярлыков</string>
     <string name="pages_on_home_screen">Количество страниц</string>
     <string name="enable_home_pager">Включить домашний пейджер</string>
-    <string name="lock_home_apps">Блокировка приложений</string>
+    <string name="lock_home_apps">Заблокировать приложения</string>
     <string name="extend_home_apps_area">Расширить кликабельную область</string>
     <!-- Alignment Strings -->
-    <string name="home_alignment">Главный экран приложений</string>
+    <string name="home_alignment">Домашний экран приложений</string>
     <string name="clock_alignment">Часы и дата</string>
-    <string name="drawer_alignment">Приложения в App Drawer</string>
+    <string name="drawer_alignment">Приложения в меню приложений</string>
     <!-- Gestures Strings -->
-    <string name="short_swipe_up_app">Короткий свайп вверх</string>
-    <string name="short_swipe_down_app">Короткий свайп вниз</string>
-    <string name="short_swipe_left_app">Короткий свайп влево</string>
-    <string name="short_swipe_right_app">Короткий свайп вправо</string>
-    <string name="long_swipe_up_app">Длинный свайп вверх</string>
-    <string name="long_swipe_down_app">Длинный свайп вниз</string>
-    <string name="long_swipe_left_app">Длинный свайп влево</string>
-    <string name="long_swipe_right_app">Длинный свайп вправо</string>
-    <string name="clock_click_app">Нажмите на Часы.</string>
-    <string name="date_click_app">Нажмите на дату.</string>
+    <string name="short_swipe_up_app">Свайп вверх</string>
+    <string name="short_swipe_down_app">Свайп вниз</string>
+    <string name="short_swipe_left_app">Свайп влево</string>
+    <string name="short_swipe_right_app">Свайп вправо</string>
+    <string name="long_swipe_up_app">Длительное нажатие Проведите пальцем вверх</string>
+    <string name="long_swipe_down_app">Длительное нажатие Проведите пальцем вниз</string>
+    <string name="long_swipe_left_app">Длительное нажатие Проведите пальцем влево</string>
+    <string name="long_swipe_right_app">Длительное нажатие Проведите пальцем вправо</string>
+    <string name="clock_click_app">Нажмите на часы</string>
+    <string name="date_click_app">Нажмите на дату</string>
     <string name="usage_click_app">Нажмите «Общее использование».</string>
     <string name="double_tap">Двойное нажатие</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">Показать уведомление</string>
     <string name="show_app_list">Показать список приложений</string>
     <string name="open_app">Открыть приложение</string>
-    <string name="lock_screen">Блокировка экрана</string>
+    <string name="lock_screen">Экран блокировки</string>
     <string name="open_quick_settings">Быстрые настройки</string>
-    <string name="show_recents">Показать недавние</string>
-    <string name="open_power_dialog">Диалог власти</string>
+    <string name="show_recents">Show Recents</string>
+    <string name="open_power_dialog">Диалог питания</string>
     <string name="take_a_screenshot">Сделать снимок экрана</string>
     <string name="left_page">Перейти на левую страницу</string>
     <string name="right_page">Перейти на правую страницу</string>
     <string name="double_tap_to_lock_screen">Двойное нажатие для блокировки</string>
     <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">Настройки Размер текста</string>
-    <string name="display_hidden_apps">Показать скрытые приложения</string>
-    <string name="lock_settings">Настройки блокировки</string>
+    <string name="settings_text_size">Размер текста в настройках</string>
+    <string name="display_hidden_apps">Отображение скрытых приложений</string>
+    <string name="lock_settings">Блокировка настроек</string>
     <!-- Backup Strings -->
     <string name="backup">Резервное копирование</string>
     <string name="load_backup">Нагрузка</string>
     <string name="save_backup">Сохранять</string>
     <string name="clear_backup">Прозрачный</string>
     <!-- Settings Strings -->
-    <string name="off">Выключенный</string>
+    <string name="off">Выкл</string>
     <string name="on">На</string>
-    <string name="left">Левый</string>
-    <string name="right">Верно</string>
-    <string name="center">Центр</string>
-    <string name="dark">Темный</string>
-    <string name="light">Свет</string>
+    <string name="left">Слева</string>
+    <string name="right">Справа</string>
+    <string name="center">По центру</string>
+    <string name="dark">Тёмная</string>
+    <string name="light">Светлая</string>
     <string name="settings">Настройки</string>
     <string name="lang_system">Система</string>
     <string name="system_default">Система</string>
     <string name="delete">Удалить</string>
-    <string name="hide">Скрывать</string>
+    <string name="hide">Скрыть</string>
     <string name="unhide">Показать</string>
     <string name="rename">Переименовать</string>
     <string name="info">Информация</string>
-    <string name="okay">Хорошо</string>
-    <string name="save">Сохранять</string>
-    <string name="show">Показывать</string>
-    <string name="reset">Перезагрузить</string>
+    <string name="okay">Окей</string>
+    <string name="save">Сохранить</string>
+    <string name="show">Показать</string>
+    <string name="reset">Reset</string>
     <string name="cancel">Отмена</string>
-    <string name="enable">Давать возможность</string>
-    <string name="disable">Запрещать</string>
+    <string name="enable">Включить</string>
+    <string name="disable">Отключено</string>
     <string name="enabled">Включено</string>
-    <string name="disabled">Неполноценный</string>
+    <string name="disabled">Отключено</string>
     <string name="open">Открыть</string>
-    <string name="close">Закрывать</string>
+    <string name="close">Закрыть</string>
     <string name="copy">Копировать</string>
     <!-- Colored Themes -->
-    <string name="catppuccino">Каппучино</string>
+    <string name="catppuccino">Катпучино</string>
     <string name="nordic">нордический</string>
     <!-- Dark Only Themes -->
     <string name="dracula">Дракула</string>
@@ -149,12 +149,12 @@
     <string name="text_authentication_cancel">Отмена аутентификации.</string>
     <string name="text_authentication_error">Ошибка аутентификации:%1$s(код %2$d)</string>
     <string name="text_authentication_failed">Аутентификация не удалась.</string>
-    <string name="text_biometric_login">Биометрический вход для mlauncher</string>
-    <string name="text_biometric_login_sub">Войдите в систему, используя свои биометрические данные.</string>
+    <string name="text_biometric_login">Биометрический вход в mLauncher</string>
+    <string name="text_biometric_login_sub">Войдите в систему, используя свои биометрические учетные данные</string>
     <!-- Crash Strings -->
     <string name="acra_crash">Крушение</string>
-    <string name="acra_dialog_text">Извините, но %1$s столкнулся с неожиданной проблемой и должен быть закрыт. Пожалуйста, помогите нам улучшить работу, отправив отчет о сбое.\n\n%1$s ценит вашу конфиденциальность, и собранные данные используются исключительно для улучшения стабильности приложения. Никакая личная информация не собирается. Спасибо за вашу поддержку!</string>
-    <string name="acra_send_report">Отправить отчет</string>
+    <string name="acra_dialog_text">Сожалеем, но %1$s столкнулся с непредвиденной проблемой и должен закрыться. Пожалуйста, помогите нам стать лучше, отправив отчет о сбое.\n\n%1$s ценит вашу конфиденциальность, и собранные данные используются исключительно для повышения стабильности приложения. Никакая личная информация не собирается. Спасибо за Вашу поддержку!</string>
+    <string name="acra_send_report">Отправить жалобу</string>
     <string name="acra_dont_send">Не отправлять</string>
     <string name="acra_mail_body">В приложении произошел сбой.\n\nНиже приведены сведения об устройстве. Журнал ошибок прикреплен в виде файла для справки. Мы будем признательны за вашу помощь в решении этой проблемы.\n\nИнформация об устройстве: \n[ПОЖАЛУЙСТА, заполните информацию ниже, также удалив все, что находится в квадратных скобках, иначе она будет проигнорирована.]\n\n- Версия приложения: [0.0.1]\n- Версия Android: [14]\n- Имя устройства: [Android Pixel 69]\n- Место установки: [github, fdroid, obtanium, self]\n\nМы будем очень признательны за ваше оперативное внимание к этому вопросу.\n\nСпасибо.\n</string>
     <string name="settings_font_system">Система</string>
@@ -168,16 +168,17 @@
     <string name="search_swisscow">SwissCows</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Все приложения</string>
-    <string name="total_screen_time">Общее время просмотра экрана</string>
-    <string name="can_not_delete_system_apps">Невозможно удалить системные приложения</string>
+    <string name="total_screen_time">Общее время экрана</string>
+    <string name="can_not_delete_system_apps">Не могу удалить системные приложения</string>
     <string name="please_select_app">Пожалуйста, выберите приложение</string>
-    <string name="drawer_list_empty_hint">Приложения не найдены</string>
+    <string name="drawer_list_empty_hint">Не найдено приложений</string>
     <string name="long_press_for_settings">Долгое нажатие в любом месте для настроек</string>
-    <string name="swipe_up_for_apps">Проведите пальцем вверх, чтобы увидеть все приложения</string>
-    <string name="app_drawer_tips">Совет: проведите пальцем вниз, чтобы закрыть. Прокрутите, чтобы скрыть клавиатуру.</string>
-    <string name="double_tap_lock_is_enabled_message">Если блокировка двойным нажатием отключает разблокировку по отпечатку пальца или лицу, откройте настройки mlauncher, нажмите «экспериментальный» и следуйте инструкциям. Спасибо.</string>
-    <string name="double_tap_lock_uninstall_message">Двойное нажатие для блокировки включено. \n\nПримечание: сначала отключите эту функцию, если вы решили удалить mlauncher.</string>
-    <string name="accessibility_service_name">Служба действий mlauncher</string>
-    <string name="accessibility_service_description">Эта служба доступности позволяет mlauncher выполнять определенные действия, такие как блокировка экрана или открытие быстрых настроек. Наша служба доступности не собирает и не передает никакие данные.</string>
+    <string name="swipe_up_for_apps">Свайп вверх для всех приложений</string>
+    <string name="app_drawer_tips">Совет: проведите пальцем вниз, чтобы уволить. Прокрутите для скрытия клавиатуры.</string>
+    <string name="double_tap_lock_is_enabled_message">Если двойное нажатие отключает отпечаток пальца или разблокировку, откройте настройки mLauncher, нажмите «экспериментальные» и следуйте инструкциям. Спасибо.</string>
+    <string name="double_tap_lock_uninstall_message">Блокировка включена двойным нажатием для двойного нажатия.
+		\n\nПримечание: сначала включите эту опцию, если вы решите удалить mLauncher.</string>
+    <string name="accessibility_service_name">mLauncher Служба действий</string>
+    <string name="accessibility_service_description">Эта служба специальных возможностей позволяет mLauncher выполнять определенные действия, такие как блокировка экрана или открытие быстрых настроек. Наша служба доступности не собирает и не передает какие-либо данные.</string>
     <string name="version">Версия</string>
 </resources>
