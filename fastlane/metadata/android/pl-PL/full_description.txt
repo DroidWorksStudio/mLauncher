@@ -1,79 +1,79 @@
-Rozwidlony od <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimalne i czyste.
+Rozdzielono z <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimalistyczne i czyste.
 
-# rozwidlenie z dodatkowymi funkcjami
+# Rozwidlony z dodatkowymi funkcjami
 
-- Usunięto bałagan, taki jak reklamy i linki.
-- Można zmieniać nazwy aplikacji w szufladzie aplikacji (Zmiana nazw aplikacji na ekranie głównym jest już obsługiwana. Po prostu długo kliknij aplikację na ekranie głównym i zacznij pisać.)
-- Znacznie większe możliwości dostosowywania gestów na ekranie głównym
+- Usunięto zbędne elementy, takie jak reklamy i linki.
+- Możesz zmieniać nazwy aplikacji w szufladzie aplikacji (zmiana nazw aplikacji na ekranie głównym jest już obsługiwana. Wystarczy długo kliknąć aplikację na ekranie głównym i zacząć pisać.)
+- Dodaliśmy dużo więcej opcji gestów na ekranie głównym:
     - Gesty są teraz:
-        - Przesuwanie w górę, dół, lewo, prawo
-        - Możliwość zmiany aplikacji, która otwiera się po kliknięciu na zegar
-        - Kliknięcie daty
-    - Możliwe działania to:
+        - Przesuwanie w górę, w dół, w lewo, w prawo
+        - Kliknięcie na zegar
+        - Kliknięcie na datę
+    - Możliwe działania obejmują teraz:
         - Otwórz określoną aplikację
         - Wyświetl listę aplikacji
-        - Zablokowanie ekranu
+        - Blokowanie ekranu
         - Pokaż ostatnio otwarte aplikacje
-        - Otwieranie listy powiadomień
+        - Otwieranie szuflady powiadomień
         - Otwieranie szybkich ustawień
-        - Okno zasilania
+        - Dialog zasilania
         - Zrób zrzut ekranu
         - Wyłącz gest
 - Możesz także ustawić zegar niezależnie od aplikacji domowych.
-- Zmień ustawienie aplikacji w szufladzie aplikacji niezależnie od ekranu głównego.
-- Zmień rozmiar czcionki w sekcjach ekranu głównego niezależnie od siebie.
-- Usunięte pozwolenie na korzystanie z Internetu Nigdy nie wiesz, co deweloper aplikacji chce o tobie wiedzieć.
-- Zablokuj ustawienia biometrii (przełącznik)
-- Dodano możliwość raportowania awarii poprzez e-mail.
-- Dodano możliwość przeglądania czasu użytkowania aplikacji.
+- Zmiana układu aplikacji w szufladzie aplikacji niezależnie od ekranu głównego.
+- Zmiana rozmiaru czcionki w niezależnych od siebie sekcjach ekranu głównego.
+- Usunięto uprawnienia dostępu do Internetu. Nigdy nie wiesz, co twórca aplikacji chce o Tobie wiedzieć.
+- Ustawienia blokady biometrycznej (przełącznik)
+- Dodano możliwość zgłaszania awarii za pośrednictwem poczty elektronicznej.
+- Dodano możliwość przeglądania czasu korzystania z aplikacji.
 
 ## Tłumaczenia:
 
-- Wiele osób przetłumaczyło aplikację na następujące języki. Bardzo dziękuję wszystkim.
+- Wiele osób przetłumaczyło aplikację na następujące języki. Dziękuję wam wszystkim bardzo serdecznie.
   - Afrykanerski
-  - arabski
-  - Albańczyk
-  - język bułgarski
-  - Chińczyk
-  - Chorwat
-  - Czech
-  - Duńczyk
-  - Anglik
-  - estoński
-  - Filipińczyk
-  - Język fiński
-  - Francuzi
-  - Gruzin
-  - Niemiec
-  - Grek
-  - Hawajczyk
+  - Arabski
+  - Albański
+  - Bułgarski
+  - chiński
+  - Chorwacki
+  - Czeski
+  - Duński
+  - Angielski
+  - Estoński
+  - Filipiński
+  - Fiński
+  - Francuski
+  - Gruziński
+  - Niemiecki
+  - grecki
+  - Hawajski
   - Hebrajski
-  - hindi
-  - Węgier
-  - islandzki
-  - indonezyjski
-  - Irlandczycy
-  - Włoch
-  - Japończyk
-  - Koreańczyk
-  - Litwin
+  -Hinduski
+  - Węgierski
+  - Islandzki
+  - Indonezyjski
+  - irlandzki
+  - Włoski
+  - Japoński
+  - Koreański
+  - Litewski
   - luksemburski
-  - Malaj
-  - Malgasze
+  - Malajski
+  - malgaski
   - Malajalam
-  - Norweg
+  - Norweski
   - Nepalski
   - Perski
-  - polski
-  - Język portugalski (europejski)
-  - pendżabski
-  - Rosjanin
+  - Polski
+  - Portugalski (europejski)
+  - Pendżabski
+  - rosyjski
   - Serbski
   - Sindhi
-  - Słowacki
-  - Hiszpan
-  - Szwed
-  - Tajlandia
-  - Turek
-  - Ukrainiec
-  - wietnamski
+  - słowacki
+  - Hiszpański
+  - Szwedzki
+  - Tajski
+  - Turecki
+  - ukraiński
+  - Wietnamski
