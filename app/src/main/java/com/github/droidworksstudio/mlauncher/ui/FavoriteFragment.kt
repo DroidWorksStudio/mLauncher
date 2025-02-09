@@ -31,7 +31,6 @@ import com.github.droidworksstudio.mlauncher.MainViewModel
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentFavoriteBinding
-import com.github.droidworksstudio.mlauncher.helper.getHexFontColor
 import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
 import com.github.droidworksstudio.mlauncher.helper.hideStatusBar
 import com.github.droidworksstudio.mlauncher.helper.showStatusBar
@@ -63,8 +62,8 @@ class FavoriteFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val hex = getHexForOpacity(requireContext(), prefs)
-        binding.mainLayout.setBackgroundColor(hex)
+        val backgroundColor = getHexForOpacity(prefs)
+        binding.mainLayout.setBackgroundColor(backgroundColor)
 
         viewModel = activity?.run {
             ViewModelProvider(this)[MainViewModel::class.java]
@@ -83,21 +82,13 @@ class FavoriteFragment : Fragment() {
         super.onStart()
         if (prefs.showStatusBar) showStatusBar(requireActivity()) else hideStatusBar(requireActivity())
 
-        val backgroundColor = getHexForOpacity(requireContext(), prefs)
+        val backgroundColor = getHexForOpacity(prefs)
         binding.mainLayout.setBackgroundColor(backgroundColor)
     }
 
     @RequiresApi(Build.VERSION_CODES.Q)
     private fun initObservers() {
         with(viewModel) {
-            homeAppsAlignment.observe(viewLifecycleOwner) { (gravity, onBottom) ->
-                val horizontalAlignment = if (onBottom) Gravity.BOTTOM else Gravity.CENTER_VERTICAL
-                binding.homeAppsLayout.gravity = gravity.value() or horizontalAlignment
-
-                binding.homeAppsLayout.children.forEach { view ->
-                    (view as TextView).gravity = gravity.value()
-                }
-            }
             homeAppsCount.observe(viewLifecycleOwner) {
                 updateAppCount(it)
             }
@@ -177,7 +168,7 @@ class FavoriteFragment : Fragment() {
     }
 
     /**
-     * TODO it looks very complicated. Shouldn't we just rerender the whole list?
+     * TODO it looks very complicated. Shouldn't we just re-render the whole list?
      *      When does it happen?
      *        - Only when the config option changes,
      *        - or also when we switch pages of the home screen?
@@ -198,27 +189,18 @@ class FavoriteFragment : Fragment() {
                 val view = layoutInflater.inflate(R.layout.home_app_button, null) as TextView
                 view.apply {
                     val appLabel =
-                        prefs.getHomeAppModel(i).activityLabel.ifEmpty { getString(R.string.app) }
+                        prefs.getHomeAppModel(i).activityLabel.ifEmpty { getString(R.string.select_app) }
                     textSize = prefs.appSize.toFloat()
                     id = i
-                    text = "   $appLabel"
+                    text = appLabel
                     setCompoundDrawablesWithIntrinsicBounds(prefixDrawable, null, null, null)
-                    if (!prefs.extendHomeAppsArea) {
-                        layoutParams = ViewGroup.LayoutParams(
-                            ViewGroup.LayoutParams.WRAP_CONTENT,
-                            ViewGroup.LayoutParams.WRAP_CONTENT
-                        )
-                    }
+                    // Set the gravity to align the text to the end (right side in LTR)
+                    gravity = Gravity.END
                 }
                 val padding: Int = prefs.textPaddingSize
                 view.setPadding(0, padding, 0, padding)
                 binding.pageName.text = getString(R.string.favorite_apps)
                 binding.pageName.textSize = prefs.appSize * 1.5f
-
-                if (prefs.followAccentColors) {
-                    val fontColor = getHexFontColor(requireContext(), prefs)
-                    view.setTextColor(fontColor)
-                }
 
                 binding.homeAppsLayout.addView(view)
             }
@@ -232,12 +214,7 @@ class FavoriteFragment : Fragment() {
             view.setOnLongClickListener { v ->
                 val dragData = ClipData.newPlainText("", "")
                 val shadowBuilder = View.DragShadowBuilder(v)
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                    v.startDragAndDrop(dragData, shadowBuilder, v, 0)
-                } else {
-                    @Suppress("DEPRECATION")
-                    v.startDrag(dragData, shadowBuilder, v, 0)
-                }
+                v.startDragAndDrop(dragData, shadowBuilder, v, 0)
                 true
             }
         }

@@ -6,32 +6,26 @@ import android.app.Activity
 import android.app.AlertDialog
 import android.app.AppOpsManager
 import android.content.ActivityNotFoundException
-import android.content.ComponentName
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.LauncherApps
 import android.content.res.Resources
-import android.net.Uri
 import android.os.Build
-import android.os.Bundle
 import android.os.Process
 import android.os.UserHandle
 import android.os.UserManager
-import android.provider.AlarmClock
-import android.provider.CalendarContract
-import android.provider.MediaStore
 import android.provider.Settings
 import android.util.DisplayMetrics
 import android.util.Log.d
 import android.util.TypedValue
-import android.view.Gravity
 import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
-import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.view.ContextThemeWrapper
+import com.github.droidworksstudio.common.openAccessibilitySettings
+import com.github.droidworksstudio.common.showLongToast
 import com.github.droidworksstudio.mlauncher.BuildConfig
 import com.github.droidworksstudio.mlauncher.data.AppListItem
 import com.github.droidworksstudio.mlauncher.data.Constants
@@ -39,33 +33,10 @@ import com.github.droidworksstudio.mlauncher.data.Prefs
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.text.SimpleDateFormat
-import java.util.Calendar
 import java.util.Date
 import java.util.Locale
 import kotlin.math.pow
 import kotlin.math.sqrt
-
-sealed class Duration
-object LongTime : Duration()
-object ShortTime : Duration()
-
-fun showToast(context: Context, message: String, duration: Duration) {
-    when (duration) {
-        is LongTime -> Toast.LENGTH_LONG
-        is ShortTime -> Toast.LENGTH_SHORT
-    }
-        .let { Toast.makeText(context.applicationContext, message, it) }
-        .also { it.setGravity(Gravity.CENTER, 0, 0) }
-        .show()
-}
-
-fun showToastLong(context: Context, message: String) {
-    showToast(context, message, LongTime)
-}
-
-fun showToastShort(context: Context, message: String) {
-    showToast(context, message, ShortTime)
-}
 
 fun hasUsagePermission(context: Context): Boolean {
     val appOpsManager = context.getSystemService(Context.APP_OPS_SERVICE) as AppOpsManager
@@ -182,7 +153,7 @@ suspend fun getAppsList(
                             // recent apps are sorted by last usage time
                         )
 
-                        d("appModel",app.toString())
+                        d("appModel", app.toString())
 
                         if (includeRecentApps) {
                             appRecentList.add(app)
@@ -243,7 +214,7 @@ fun resetDefaultLauncher(context: Context) {
     try {
         val intent = Intent("android.settings.HOME_SETTINGS")
         context.startActivity(intent)
-    } catch (e: ActivityNotFoundException) {
+    } catch (_: ActivityNotFoundException) {
         // Fallback to general settings if specific launcher settings are not found
         try {
             val intent = Intent(Settings.ACTION_SETTINGS)
@@ -259,72 +230,9 @@ fun openAppInfo(context: Context, userHandle: UserHandle, packageName: String) {
     val intent: Intent? = context.packageManager.getLaunchIntentForPackage(packageName)
     intent?.let {
         launcher.startAppDetailsActivity(intent.component, userHandle, null, null)
-    } ?: showToastShort(context, "Unable to to open app info")
+    } ?: context.showLongToast("Unable to to open app info")
 }
 
-fun openDialerApp(context: Context) {
-    try {
-        val sendIntent = Intent(Intent.ACTION_DIAL)
-        context.startActivity(sendIntent)
-    } catch (e: java.lang.Exception) {
-        d("openDialerApp", e.toString())
-    }
-}
-
-fun openCameraApp(context: Context) {
-    try {
-        val sendIntent = Intent(MediaStore.INTENT_ACTION_STILL_IMAGE_CAMERA)
-        context.startActivity(sendIntent)
-    } catch (e: java.lang.Exception) {
-        d("openCameraApp", e.toString())
-    }
-}
-
-fun openAlarmApp(context: Context) {
-    try {
-        val intent = Intent(AlarmClock.ACTION_SHOW_ALARMS)
-        context.startActivity(intent)
-    } catch (e: java.lang.Exception) {
-        d("openAlarmApp", e.toString())
-    }
-}
-
-fun openDigitalWellbeing(context: Context) {
-    val packageName = "com.google.android.apps.wellbeing"
-    val className = "com.google.android.apps.wellbeing.settings.TopLevelSettingsActivity"
-
-    val intent = Intent()
-    intent.component = ComponentName(packageName, className)
-    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
-
-    try {
-        context.startActivity(intent)
-    } catch (e: ActivityNotFoundException) {
-        // Digital Wellbeing app is not installed or cannot be opened
-        // Handle this case as needed
-        showToastLong(context,"Digital Wellbeing is not available on this device.")
-    }
-}
-
-fun openCalendar(context: Context) {
-    try {
-        val cal: Calendar = Calendar.getInstance()
-        cal.time = Date()
-        val time = cal.time.time
-        val builder: Uri.Builder = CalendarContract.CONTENT_URI.buildUpon()
-        builder.appendPath("time")
-        builder.appendPath(time.toString())
-        context.startActivity(Intent(Intent.ACTION_VIEW, builder.build()))
-    } catch (e: Exception) {
-        try {
-            val intent = Intent(Intent.ACTION_MAIN)
-            intent.addCategory(Intent.CATEGORY_APP_CALENDAR)
-            context.startActivity(intent)
-        } catch (e: Exception) {
-            d("openCalendar", e.toString())
-        }
-    }
-}
 
 fun isTablet(context: Context): Boolean {
     val windowManager = context.getSystemService(Context.WINDOW_SERVICE) as WindowManager
@@ -344,27 +252,15 @@ fun initActionService(context: Context): ActionService? {
         if (actionService != null) {
             return actionService
         } else {
-            openAccessibilitySettings(context)
+            context.openAccessibilitySettings()
         }
     } else {
-        showToastLong(context, "This action requires Android P (9) or higher")
+        context.showLongToast("This action requires Android P (9) or higher")
     }
 
     return null
 }
 
-fun openAccessibilitySettings(context: Context) {
-    val intent = Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS)
-    val cs = ComponentName(context.packageName, ActionService::class.java.name).flattenToString()
-    val bundle = Bundle()
-    bundle.putString(":settings:fragment_args_key", cs)
-    intent.apply {
-        addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-        putExtra(":settings:fragment_args_key", cs)
-        putExtra(":settings:show_fragment_args", bundle)
-    }
-    context.startActivity(intent)
-}
 
 fun showStatusBar(activity: Activity) {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R)
@@ -418,32 +314,19 @@ fun loadFile(activity: Activity) {
 }
 
 @RequiresApi(Build.VERSION_CODES.Q)
-fun getHexForOpacity(context: Context, prefs: Prefs): Int {
-    val setColor = prefs.opacityNum
+fun getHexForOpacity(prefs: Prefs): Int {
+    val setOpacity = prefs.opacityNum.coerceIn(0, 255) // Ensure opacity is in the range (0-255)
+    val backgroundColor = prefs.backgroundColor // This is already an Int
 
-    val backgroundColor = getBackgroundColor(context)
-    val hexAccentColor = java.lang.String.format("%06X", 0xFFFFFF and backgroundColor)
+    // Extract RGB from background color
+    val red = android.graphics.Color.red(backgroundColor)
+    val green = android.graphics.Color.green(backgroundColor)
+    val blue = android.graphics.Color.blue(backgroundColor)
 
-    var hex = Integer.toHexString(setColor).toString()
-    if (hex.length < 2)
-        hex = "$hex$hex"
-
-    return android.graphics.Color.parseColor("#${hex}$hexAccentColor")
+    // Combine opacity with RGB and return final color
+    return android.graphics.Color.argb(setOpacity, red, green, blue)
 }
 
-@RequiresApi(Build.VERSION_CODES.Q)
-fun getHexFontColor(context: Context, prefs: Prefs): Int {
-    return if (prefs.followAccentColors) {
-        val accentColor = getAccentColor(context)
-        val hexAccentColor = java.lang.String.format("#%06X", 0xFFFFFF and accentColor)
-
-        android.graphics.Color.parseColor(hexAccentColor)
-    } else {
-        val typedValue = TypedValue()
-        context.theme.resolveAttribute(R.attr.colorPrimary, typedValue, true)
-        typedValue.data
-    }
-}
 
 @RequiresApi(Build.VERSION_CODES.Q)
 private fun getBackgroundColor(context: Context): Int {
@@ -454,20 +337,6 @@ private fun getBackgroundColor(context: Context): Int {
     )
     contextThemeWrapper.theme.resolveAttribute(
         R.attr.windowBackground,
-        typedValue, true
-    )
-    return typedValue.data
-}
-
-@RequiresApi(Build.VERSION_CODES.Q)
-private fun getAccentColor(context: Context): Int {
-    val typedValue = TypedValue()
-    val contextThemeWrapper = ContextThemeWrapper(
-        context,
-        R.style.Theme_DeviceDefault_DayNight
-    )
-    contextThemeWrapper.theme.resolveAttribute(
-        R.attr.colorAccent,
         typedValue, true
     )
     return typedValue.data

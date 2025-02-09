@@ -1,10 +1,9 @@
 package com.github.droidworksstudio.mlauncher
 
+// import android.content.pm.PackageManager
 import android.annotation.SuppressLint
-import android.app.Activity
 import android.content.Intent
 import android.content.pm.ActivityInfo
-// import android.content.pm.PackageManager
 import android.content.res.Configuration
 import android.os.Build
 import android.os.Bundle
@@ -19,14 +18,14 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import com.github.droidworksstudio.common.showLongToast
 import com.github.droidworksstudio.mlauncher.data.Constants
+import com.github.droidworksstudio.mlauncher.data.Migration
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.ActivityMainBinding
 import com.github.droidworksstudio.mlauncher.helper.hasUsagePermission
-// import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper
 import com.github.droidworksstudio.mlauncher.helper.isTablet
 import com.github.droidworksstudio.mlauncher.helper.showPermissionDialog
-import com.github.droidworksstudio.mlauncher.helper.showToastLong
 import java.io.BufferedReader
 import java.io.FileOutputStream
 import java.io.InputStreamReader
@@ -34,6 +33,7 @@ import java.io.InputStreamReader
 class MainActivity : AppCompatActivity() {
 
     private lateinit var prefs: Prefs
+    private lateinit var migration: Migration
     private lateinit var navController: NavController
     private lateinit var viewModel: MainViewModel
     private lateinit var binding: ActivityMainBinding
@@ -97,6 +97,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         prefs = Prefs(this)
+        migration = Migration(this)
+
         val themeMode = when (prefs.appTheme) {
             Constants.Theme.Light -> AppCompatDelegate.MODE_NIGHT_NO
             Constants.Theme.Dark -> AppCompatDelegate.MODE_NIGHT_YES
@@ -108,8 +110,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-
         setLanguage()
+        migration.migratePreferencesOnVersionUpdate(prefs)
 
         navController = Navigation.findNavController(this, R.id.nav_host_fragment)
         viewModel = ViewModelProvider(this)[MainViewModel::class.java]
@@ -127,7 +129,7 @@ class MainActivity : AppCompatActivity() {
 
         // Get the version and info of any app by passing app name. (maybe later used for Pro features if I want top release them for the play store)
         // pm = packageManager
-        // val getAppVersionAndHash = AppDetailsHelper.getAppVersionAndHash(this, "app.olauncher.debug", pm)
+        // val getAppVersionAndHash = AppDetailsHelper.getAppVersionAndHash(this, "app.mlauncher.debug", pm)
         // Log.d("isPremiumInstalled", getAppVersionAndHash.toString())
 
         if (prefs.recentAppsDisplayed || prefs.appUsageStats) {
@@ -147,11 +149,10 @@ class MainActivity : AppCompatActivity() {
 
     @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        @Suppress("DEPRECATION")
         super.onActivityResult(requestCode, resultCode, data)
 
-        if (resultCode != Activity.RESULT_OK) {
-            // showToastLong(applicationContext, "Intent Error")
+        if (resultCode != RESULT_OK) {
+            showLongToast("Intent Error")
             return
         }
 
@@ -261,8 +262,7 @@ class MainActivity : AppCompatActivity() {
         if (resetFailed) {
             val intent = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
                 Intent(Settings.ACTION_MANAGE_DEFAULT_APPS_SETTINGS) else {
-                showToastLong(
-                    this,
+                showLongToast(
                     "Search for launcher or home app"
                 )
                 Intent(Settings.ACTION_SETTINGS)

@@ -7,6 +7,7 @@ import android.content.pm.LauncherApps
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import com.github.droidworksstudio.common.showShortToast
 import com.github.droidworksstudio.mlauncher.data.AppListItem
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Constants.AppDrawerFlag
@@ -16,7 +17,6 @@ import com.github.droidworksstudio.mlauncher.helper.getAppsList
 import com.github.droidworksstudio.mlauncher.helper.getDefaultLauncherPackage
 import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
 import com.github.droidworksstudio.mlauncher.helper.resetDefaultLauncher
-import com.github.droidworksstudio.mlauncher.helper.showToastShort
 import kotlinx.coroutines.launch
 
 class MainViewModel(application: Application) : AndroidViewModel(application) {
@@ -88,7 +88,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
         val component = when (activityInfo.size) {
             0 -> {
-                showToastShort(appContext, "App not found")
+                appContext.showShortToast("App not found")
                 return
             }
 
@@ -104,16 +104,16 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             val appUsageTracker = AppUsageTracker.createInstance(appContext)
             appUsageTracker.updateLastUsedTimestamp(packageName)
             launcher.startMainActivity(component, userHandle, null, null)
-        } catch (e: SecurityException) {
+        } catch (_: SecurityException) {
             try {
                 val appUsageTracker = AppUsageTracker.createInstance(appContext)
                 appUsageTracker.updateLastUsedTimestamp(packageName)
                 launcher.startMainActivity(component, android.os.Process.myUserHandle(), null, null)
-            } catch (e: Exception) {
-                showToastShort(appContext, "Unable to launch app")
+            } catch (_: Exception) {
+                appContext.showShortToast("Unable to launch app")
             }
-        } catch (e: Exception) {
-            showToastShort(appContext, "Unable to launch app")
+        } catch (_: Exception) {
+            appContext.showShortToast("Unable to launch app")
         }
     }
 

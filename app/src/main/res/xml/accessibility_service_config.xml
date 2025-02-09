@@ -1,2 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android" android:accessibilityEventTypes="typeViewClicked" android:accessibilityFeedbackType="feedbackGeneric" android:accessibilityFlags="flagDefault" android:canRetrieveWindowContent="true" android:description="@string/accessibility_service_description" android:notificationTimeout="100" android:packageNames="com.github.hecodes2much.mlauncher.debug, com.github.hecodes2much.mlauncher" android:settingsActivity="com.example.android.accessibility.ServiceSettingsActivity" />
+<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accessibilityEventTypes="typeViewClicked"
+    android:accessibilityFeedbackType="feedbackGeneric"
+    android:accessibilityFlags="flagDefault"
+    android:canRetrieveWindowContent="true"
+    android:description="@string/accessibility_service_description"
+    android:notificationTimeout="100"
+    android:packageNames="com.github.hecodes2much.mlauncher.debug, com.github.hecodes2much.mlauncher"
+    android:settingsActivity="com.example.android.accessibility.ServiceSettingsActivity" />

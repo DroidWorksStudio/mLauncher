@@ -36,6 +36,14 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import com.github.droidworksstudio.common.launchCalendar
+import com.github.droidworksstudio.common.openAccessibilitySettings
+import com.github.droidworksstudio.common.openAlarmApp
+import com.github.droidworksstudio.common.openCameraApp
+import com.github.droidworksstudio.common.openDialerApp
+import com.github.droidworksstudio.common.openDigitalWellbeing
+import com.github.droidworksstudio.common.showLongToast
+import com.github.droidworksstudio.common.showShortToast
 import com.github.droidworksstudio.mlauncher.MainViewModel
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.AppListItem
@@ -49,20 +57,11 @@ import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.formatMilli
 import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.getTotalScreenTime
 import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.getUsageStats
 import com.github.droidworksstudio.mlauncher.helper.BatteryReceiver
-import com.github.droidworksstudio.mlauncher.helper.Colors
-import com.github.droidworksstudio.mlauncher.helper.getHexFontColor
+import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
 import com.github.droidworksstudio.mlauncher.helper.hideStatusBar
 import com.github.droidworksstudio.mlauncher.helper.initActionService
 import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
-import com.github.droidworksstudio.mlauncher.helper.openAccessibilitySettings
-import com.github.droidworksstudio.mlauncher.helper.openAlarmApp
-import com.github.droidworksstudio.mlauncher.helper.openCalendar
-import com.github.droidworksstudio.mlauncher.helper.openCameraApp
-import com.github.droidworksstudio.mlauncher.helper.openDialerApp
-import com.github.droidworksstudio.mlauncher.helper.openDigitalWellbeing
 import com.github.droidworksstudio.mlauncher.helper.showStatusBar
-import com.github.droidworksstudio.mlauncher.helper.showToastLong
-import com.github.droidworksstudio.mlauncher.helper.showToastShort
 import com.github.droidworksstudio.mlauncher.listener.OnSwipeTouchListener
 import com.github.droidworksstudio.mlauncher.listener.ViewSwipeTouchListener
 import kotlinx.coroutines.Dispatchers
@@ -80,9 +79,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
-
-    // Instantiate Colors object
-    private val colors = Colors()
 
     private lateinit var biometricPrompt: BiometricPrompt
     private lateinit var promptInfo: BiometricPrompt.PromptInfo
@@ -142,40 +138,32 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             if (!prefs.showTimeFormat) it.removeSuffix(" a") else it
         }
         Log.d("currentDateTime", best12)
-        val best24 = DateFormat.getBestDateTimePattern(timezone, "HHmm")
-        val timePattern = if (is24HourFormat) best24 else best12
-        binding.clock.format12Hour = timePattern
-        binding.clock.format24Hour = timePattern
+        binding.apply {
+            val best24 = DateFormat.getBestDateTimePattern(timezone, "HHmm")
+            val timePattern = if (is24HourFormat) best24 else best12
+            clock.format12Hour = timePattern
+            clock.format24Hour = timePattern
 
-        val datePattern = DateFormat.getBestDateTimePattern(timezone, "eeeddMMM")
-        binding.date.format12Hour = datePattern
-        binding.date.format24Hour = datePattern
+            val datePattern = DateFormat.getBestDateTimePattern(timezone, "eeeddMMM")
+            date.format12Hour = datePattern
+            date.format24Hour = datePattern
 
-        binding.clock.textSize = prefs.clockSize.toFloat()
-        binding.date.textSize = prefs.dateSize.toFloat()
-        binding.battery.textSize = prefs.batterySize.toFloat()
-        binding.homeScreenPager.textSize = prefs.appSize.toFloat()
+            clock.textSize = prefs.clockSize.toFloat()
+            date.textSize = prefs.dateSize.toFloat()
+            battery.textSize = prefs.batterySize.toFloat()
+            homeScreenPager.textSize = prefs.appSize.toFloat()
 
-        if (prefs.showBattery) {
-            binding.battery.visibility = View.VISIBLE
-        }
+            battery.visibility = if (prefs.showBattery) View.VISIBLE else View.GONE
+            val backgroundColor = getHexForOpacity(prefs)
+            mainLayout.setBackgroundColor(backgroundColor)
 
-        binding.mainLayout.setBackgroundColor(colors.background(requireContext(), prefs))
-        if (prefs.followAccentColors) {
-            val fontColor = getHexFontColor(requireContext(), prefs)
-            binding.clock.setTextColor(fontColor)
-            binding.date.setTextColor(fontColor)
-            binding.battery.setTextColor(fontColor)
-            binding.setTotalScreenTime.setTextColor(fontColor)
-            binding.setDefaultLauncher.setTextColor(fontColor)
-            binding.homeScreenPager.setTextColor(fontColor)
-        } else {
-            binding.clock.setTextColor(colors.accents(requireContext(), prefs, 1))
-            binding.date.setTextColor(colors.accents(requireContext(), prefs, 1))
-            binding.battery.setTextColor(colors.accents(requireContext(), prefs, 1))
-            binding.setTotalScreenTime.setTextColor(colors.accents(requireContext(), prefs, 2))
-            binding.setDefaultLauncher.setTextColor(colors.accents(requireContext(), prefs, 2))
-            binding.homeScreenPager.setTextColor(colors.accents(requireContext(), prefs, 2))
+
+            clock.setTextColor(prefs.timeColor)
+            date.setTextColor(prefs.timeColor)
+            battery.setTextColor(prefs.batteryColor)
+            setTotalScreenTime.setTextColor(prefs.appColor)
+            setDefaultLauncher.setTextColor(prefs.appColor)
+            homeScreenPager.setTextColor(prefs.appColor)
         }
     }
 
@@ -320,6 +308,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             showDate.observe(viewLifecycleOwner) {
                 binding.date.visibility = if (it) View.VISIBLE else View.GONE
             }
+
         }
     }
 
@@ -381,73 +370,73 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     private fun openSwipeUpApp() {
         if (prefs.appShortSwipeUp.activityPackage.isNotEmpty())
             launchApp(prefs.appShortSwipeUp)
-        else openDialerApp(requireContext())
+        else requireContext().openDialerApp()
     }
 
     private fun openSwipeDownApp() {
         if (prefs.appShortSwipeDown.activityPackage.isNotEmpty())
             launchApp(prefs.appShortSwipeDown)
-        else openDialerApp(requireContext())
+        else requireContext().openDialerApp()
     }
 
     private fun openSwipeLeftApp() {
         if (prefs.appShortSwipeLeft.activityPackage.isNotEmpty())
             launchApp(prefs.appShortSwipeLeft)
-        else openCameraApp(requireContext())
+        else requireContext().openCameraApp()
     }
 
     private fun openSwipeRightApp() {
         if (prefs.appShortSwipeRight.activityPackage.isNotEmpty())
             launchApp(prefs.appShortSwipeRight)
-        else openDialerApp(requireContext())
+        else requireContext().openDialerApp()
     }
 
     private fun openLongSwipeUpApp() {
         if (prefs.appLongSwipeUp.activityPackage.isNotEmpty())
             launchApp(prefs.appLongSwipeUp)
-        else openDialerApp(requireContext())
+        else requireContext().openDialerApp()
     }
 
     private fun openLongSwipeDownApp() {
         if (prefs.appLongSwipeDown.activityPackage.isNotEmpty())
             launchApp(prefs.appLongSwipeDown)
-        else openDialerApp(requireContext())
+        else requireContext().openDialerApp()
     }
 
     private fun openLongSwipeLeftApp() {
         if (prefs.appLongSwipeLeft.activityPackage.isNotEmpty())
             launchApp(prefs.appLongSwipeLeft)
-        else openCameraApp(requireContext())
+        else requireContext().openCameraApp()
     }
 
     private fun openLongSwipeRightApp() {
         if (prefs.appLongSwipeRight.activityPackage.isNotEmpty())
             launchApp(prefs.appLongSwipeRight)
-        else openDialerApp(requireContext())
+        else requireContext().openDialerApp()
     }
 
     private fun openClickClockApp() {
         if (prefs.appClickClock.activityPackage.isNotEmpty())
             launchApp(prefs.appClickClock)
-        else openAlarmApp(requireContext())
+        else requireContext().openAlarmApp()
     }
 
     private fun openClickUsageApp() {
         if (prefs.appClickUsage.activityPackage.isNotEmpty())
             launchApp(prefs.appClickUsage)
-        else openDigitalWellbeing(requireContext())
+        else requireContext().openDigitalWellbeing()
     }
 
     private fun openClickDateApp() {
         if (prefs.appClickDate.activityPackage.isNotEmpty())
             launchApp(prefs.appClickDate)
-        else openCalendar(requireContext())
+        else requireContext().launchCalendar()
     }
 
     private fun openDoubleTapApp() {
         if (prefs.appDoubleTap.activityPackage.isNotEmpty())
             launchApp(prefs.appDoubleTap)
-        else openCameraApp(requireContext())
+        else requireContext().openCameraApp()
     }
 
     // This function handles all swipe actions that a independent of the actual swipe direction
@@ -474,20 +463,18 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             if (actionService != null) {
                 actionService.lockScreen()
             } else {
-                openAccessibilitySettings(requireContext())
+                requireContext().openAccessibilitySettings()
             }
         } else {
             requireActivity().runOnUiThread {
                 try {
                     deviceManager.lockNow()
                 } catch (_: SecurityException) {
-                    showToastLong(
-                        requireContext(),
+                    showLongToast(
                         "App does not have the permission to lock the device"
                     )
                 } catch (_: Exception) {
-                    showToastLong(
-                        requireContext(),
+                    showLongToast(
                         "mLauncher failed to lock device.\nPlease check your app settings."
                     )
                     prefs.lockModeOn = false
@@ -496,7 +483,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         }
     }
 
-    private fun showLongPressToast() = showToastShort(requireContext(), "Long press to select app")
+    private fun showLongPressToast() = showShortToast("Long press to select app")
 
     private fun textOnClick(view: View) = onClick(view)
 
@@ -749,12 +736,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     }
                     val padding: Int = prefs.textPaddingSize
                     setPadding(0, padding, 0, padding)
-                    if (prefs.followAccentColors) {
-                        val fontColor = getHexFontColor(requireContext(), prefs)
-                        setTextColor(fontColor)
-                    } else {
-                        setTextColor(colors.accents(requireContext(), prefs, 4))
-                    }
+                    setTextColor(prefs.appColor)
+
                 }
 
                 // Create newAppView
@@ -779,12 +762,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     }
                     val padding: Int = prefs.textPaddingSize
                     setPadding(0, padding, 0, padding)
-                    if (prefs.followAccentColors) {
-                        val fontColor = getHexFontColor(requireContext(), prefs)
-                        setTextColor(fontColor)
-                    } else {
-                        setTextColor(colors.accents(requireContext(), prefs, 3))
-                    }
+                    setTextColor(prefs.appColor)
                 }
 
                 // Add a space between existingAppView and newAppView
@@ -854,13 +832,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     isFocusableInTouchMode = true
                     val padding: Int = prefs.textPaddingSize
                     setPadding(0, padding, 0, padding)
-                    if (prefs.followAccentColors) {
-                        val fontColor = getHexFontColor(requireContext(), prefs)
-                        setTextColor(fontColor)
-                    } else {
-                        val fontColor = colors.accents(requireContext(), prefs, 4)
-                        setTextColor(fontColor)
-                    }
+                    setTextColor(prefs.appColor)
                 }
                 // Add the view to the layout
                 binding.homeAppsLayout.addView(view)
@@ -937,13 +909,11 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                         errString: CharSequence
                     ) {
                         when (errorCode) {
-                            BiometricPrompt.ERROR_USER_CANCELED -> showToastLong(
-                                requireContext(),
+                            BiometricPrompt.ERROR_USER_CANCELED -> showLongToast(
                                 getString(R.string.text_authentication_cancel)
                             )
 
-                            else -> showToastLong(
-                                requireContext(),
+                            else -> showLongToast(
                                 getString(R.string.text_authentication_error).format(
                                     errString,
                                     errorCode
@@ -957,8 +927,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     }
 
                     override fun onAuthenticationFailed() {
-                        showToastLong(
-                            requireContext(),
+                        showLongToast(
                             getString(R.string.text_authentication_failed)
                         )
                     }
@@ -990,7 +959,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
             BiometricManager.BIOMETRIC_ERROR_NONE_ENROLLED -> sendToSettingFragment()
 
-            else -> showToastLong(requireContext(), getString(R.string.text_authentication_error))
+            else -> showLongToast(getString(R.string.text_authentication_error))
         }
     }
 

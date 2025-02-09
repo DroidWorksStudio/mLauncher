@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.github.droidworksstudio.mlauncher.ui.HomeFragment"
-        android:label="main_fragment"
+        android:label="mainFragment"
         tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_mainFragment_to_appListFragment"
@@ -29,7 +29,7 @@
     <fragment
         android:id="@+id/appListFragment"
         android:name="com.github.droidworksstudio.mlauncher.ui.AppDrawerFragment"
-        android:label="app_list_fragment"
+        android:label="appListFragment"
         tools:layout="@layout/fragment_app_drawer">
         <action
             android:id="@+id/action_appListFragment_to_settingsFragment"
@@ -45,7 +45,7 @@
     <fragment
         android:id="@+id/appFavoriteFragment"
         android:name="com.github.droidworksstudio.mlauncher.ui.FavoriteFragment"
-        android:label="app_list_fragment"
+        android:label="appFavoriteFragment"
         tools:layout="@layout/fragment_favorite" />
 
     <fragment
@@ -68,6 +68,20 @@
             app:exitAnim="@anim/nav_default_exit_anim"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+        <action
+            android:id="@+id/action_settingsFragment_to_settingsAdvancedFragment"
+            app:destination="@id/settingsAdvancedFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
     </fragment>
+
+    <fragment
+        android:id="@+id/settingsAdvancedFragment"
+        android:name="com.github.droidworksstudio.mlauncher.ui.settings.AdvancedFragment"
+        android:label="settingsAdvancedFragment"
+        tools:layout="@layout/fragment_settings" />
 
 </navigation>

@@ -30,6 +30,11 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.github.droidworksstudio.common.hideKeyboard
+import com.github.droidworksstudio.common.openSearch
+import com.github.droidworksstudio.common.searchCustomSearchEngine
+import com.github.droidworksstudio.common.searchOnPlayStore
+import com.github.droidworksstudio.common.showShortToast
 import com.github.droidworksstudio.mlauncher.MainViewModel
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.AppListItem
@@ -38,14 +43,7 @@ import com.github.droidworksstudio.mlauncher.data.Constants.AppDrawerFlag
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentAppDrawerBinding
 import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.isSystemApp
-import com.github.droidworksstudio.mlauncher.helper.Colors
-import com.github.droidworksstudio.mlauncher.helper.getHexFontColor
-import com.github.droidworksstudio.mlauncher.helper.hideKeyboard
 import com.github.droidworksstudio.mlauncher.helper.openAppInfo
-import com.github.droidworksstudio.mlauncher.helper.openSearch
-import com.github.droidworksstudio.mlauncher.helper.searchCustomSearchEngine
-import com.github.droidworksstudio.mlauncher.helper.searchOnPlayStore
-import com.github.droidworksstudio.mlauncher.helper.showToastShort
 
 class AppDrawerFragment : Fragment() {
 
@@ -54,9 +52,6 @@ class AppDrawerFragment : Fragment() {
 
     private var _binding: FragmentAppDrawerBinding? = null
     private val binding get() = _binding!!
-
-    // Instantiate Colors object
-    private val colors = Colors()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -80,9 +75,10 @@ class AppDrawerFragment : Fragment() {
             searchTextView.text = letterToChar.toString()
         }
 
-        binding.mainLayout.setBackgroundColor(colors.background(requireContext(), prefs))
+        binding.mainLayout.setBackgroundColor(prefs.backgroundColor)
 
-        val flagString = arguments?.getString("flag", AppDrawerFlag.LaunchApp.toString()) ?: AppDrawerFlag.LaunchApp.toString()
+        val flagString = arguments?.getString("flag", AppDrawerFlag.LaunchApp.toString())
+            ?: AppDrawerFlag.LaunchApp.toString()
         val flag = AppDrawerFlag.valueOf(flagString)
         val n = arguments?.getInt("n", 0) ?: 0
 
@@ -99,6 +95,7 @@ class AppDrawerFragment : Fragment() {
                     findNavController().popBackStack()
                 }
             }
+
             else -> {}
         }
 
@@ -106,7 +103,7 @@ class AppDrawerFragment : Fragment() {
             ViewModelProvider(this)[MainViewModel::class.java]
         } ?: throw Exception("Invalid Activity")
 
-        val gravity = when(Prefs(requireContext()).drawerAlignment) {
+        val gravity = when (Prefs(requireContext()).drawerAlignment) {
             Constants.Gravity.Left -> Gravity.LEFT
             Constants.Gravity.Center -> Gravity.CENTER
             Constants.Gravity.Right -> Gravity.RIGHT
@@ -143,81 +140,21 @@ class AppDrawerFragment : Fragment() {
         binding.recyclerView.adapter = appAdapter
         binding.recyclerView.addOnScrollListener(getRecyclerViewOnScrollListener())
 
-        if (flag == AppDrawerFlag.HiddenApps) {
-            val hiddenAppsHint = getString(R.string.hidden_apps)
-            if (prefs.followAccentColors) {
-                val fontColor = getHexFontColor(requireActivity(), prefs)
-                val coloredHint = SpannableString(hiddenAppsHint)
-                coloredHint.setSpan(
-                    ForegroundColorSpan(fontColor),
-                    0,
-                    hiddenAppsHint.length,
-                    Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-                )
+        when (flag) {
+            AppDrawerFlag.LaunchApp -> if (prefs.useAllAppsText) binding.search.queryHint =
+                applyTextColor(getString(R.string.show_apps), prefs.appColor)
 
-                binding.search.queryHint = coloredHint
-            } else {
-                val fontColor = colors.accents(requireContext(), prefs, 4)
-                val coloredHint = SpannableString(hiddenAppsHint)
-                coloredHint.setSpan(
-                    ForegroundColorSpan(fontColor),
-                    0,
-                    hiddenAppsHint.length,
-                    Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-                )
-                binding.search.queryHint = coloredHint
-            }
-        }
-        if (flag == AppDrawerFlag.SetHomeApp) {
-            val hiddenAppsHint = getString(R.string.please_select_app)
-            if (prefs.followAccentColors) {
-                val fontColor = getHexFontColor(requireActivity(), prefs)
-                val coloredHint = SpannableString(hiddenAppsHint)
-                coloredHint.setSpan(
-                    ForegroundColorSpan(fontColor),
-                    0,
-                    hiddenAppsHint.length,
-                    Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-                )
+            AppDrawerFlag.HiddenApps -> binding.search.queryHint =
+                applyTextColor(getString(R.string.hidden_apps), prefs.appColor)
 
-                binding.search.queryHint = coloredHint
-            } else {
-                val fontColor = colors.accents(requireContext(), prefs, 4)
-                val coloredHint = SpannableString(hiddenAppsHint)
-                coloredHint.setSpan(
-                    ForegroundColorSpan(fontColor),
-                    0,
-                    hiddenAppsHint.length,
-                    Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-                )
-                binding.search.queryHint = coloredHint
-            }
-        }
-        if (flag == AppDrawerFlag.LaunchApp && prefs.useAllAppsText) {
-            val allAppsHint = getString(R.string.show_apps)
-            if (prefs.followAccentColors) {
-                val fontColor = getHexFontColor(requireActivity(), prefs)
-                val coloredHint = SpannableString(allAppsHint)
-                coloredHint.setSpan(
-                    ForegroundColorSpan(fontColor),
-                    0,
-                    allAppsHint.length,
-                    Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-                )
+            AppDrawerFlag.SetHomeApp -> binding.search.queryHint =
+                applyTextColor(getString(R.string.please_select_app), prefs.appColor)
 
-                binding.search.queryHint = coloredHint
-            } else {
-                val fontColor = colors.accents(requireContext(), prefs, 4)
-                val coloredHint = SpannableString(allAppsHint)
-                coloredHint.setSpan(
-                    ForegroundColorSpan(fontColor),
-                    0,
-                    allAppsHint.length,
-                    Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-                )
-                binding.search.queryHint = coloredHint
-            }
+            else -> binding.search.queryHint =
+                applyTextColor("---", prefs.appColor)
         }
+
+        binding.listEmptyHint.text = applyTextColor(getString(R.string.drawer_list_empty_hint), prefs.appColor)
 
         binding.search.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
@@ -229,9 +166,12 @@ class AppDrawerFragment : Fragment() {
                             searchQuery = query?.substringAfter("!")
                             requireContext().searchCustomSearchEngine(searchQuery, prefs)
                         }
+
                         else -> {
                             // Handle unsupported search engines or invalid queries
-                            if (adapter.itemCount == 0 && requireContext().searchOnPlayStore(query?.trim()).not()) {
+                            if (adapter.itemCount == 0 && requireContext().searchOnPlayStore(query?.trim())
+                                    .not()
+                            ) {
                                 requireContext().openSearch(query?.trim())
                             } else {
                                 adapter.launchFirstInList()
@@ -259,6 +199,17 @@ class AppDrawerFragment : Fragment() {
 
         })
 
+    }
+
+    private fun applyTextColor(text: String, color: Int): SpannableString {
+        val spannableString = SpannableString(text)
+        spannableString.setSpan(
+            ForegroundColorSpan(color),
+            0,
+            text.length,
+            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+        )
+        return spannableString
     }
 
     private fun convertKeyCodeToLetter(keyCode: Int): Char {
@@ -296,14 +247,19 @@ class AppDrawerFragment : Fragment() {
     @RequiresApi(Build.VERSION_CODES.Q)
     override fun onResume() {
         super.onResume()
-        binding.mainLayout.setBackgroundColor(colors.background(requireContext(), prefs))
+        binding.mainLayout.setBackgroundColor(prefs.backgroundColor)
     }
 
-    private fun initViewModel(flag: AppDrawerFlag, viewModel: MainViewModel, appAdapter: AppDrawerAdapter) {
+    private fun initViewModel(
+        flag: AppDrawerFlag,
+        viewModel: MainViewModel,
+        appAdapter: AppDrawerAdapter
+    ) {
         viewModel.hiddenApps.observe(viewLifecycleOwner, Observer {
             if (flag != AppDrawerFlag.HiddenApps) return@Observer
             it?.let { appList ->
-                binding.listEmptyHint.visibility = if (appList.isEmpty()) View.VISIBLE else View.GONE
+                binding.listEmptyHint.visibility =
+                    if (appList.isEmpty()) View.VISIBLE else View.GONE
                 populateAppList(appList, appAdapter)
             }
         })
@@ -312,7 +268,8 @@ class AppDrawerFragment : Fragment() {
             if (flag == AppDrawerFlag.HiddenApps) return@Observer
             if (it == appAdapter.appsList) return@Observer
             it?.let { appList ->
-                binding.listEmptyHint.visibility = if (appList.isEmpty()) View.VISIBLE else View.GONE
+                binding.listEmptyHint.visibility =
+                    if (appList.isEmpty()) View.VISIBLE else View.GONE
                 populateAppList(appList, appAdapter)
             }
         })
@@ -346,12 +303,17 @@ class AppDrawerFragment : Fragment() {
     }
 
     private fun populateAppList(apps: List<AppListItem>, appAdapter: AppDrawerAdapter) {
-        val animation = AnimationUtils.loadLayoutAnimation(requireContext(), R.anim.layout_anim_from_bottom)
+        val animation =
+            AnimationUtils.loadLayoutAnimation(requireContext(), R.anim.layout_anim_from_bottom)
         binding.recyclerView.layoutAnimation = animation
         appAdapter.setAppList(apps.toMutableList())
     }
 
-    private fun appClickListener(viewModel: MainViewModel, flag: AppDrawerFlag, n: Int = 0): (appListItem: AppListItem) -> Unit =
+    private fun appClickListener(
+        viewModel: MainViewModel,
+        flag: AppDrawerFlag,
+        n: Int = 0
+    ): (appListItem: AppListItem) -> Unit =
         { appModel ->
             viewModel.selectedApp(appModel, flag, n)
             if (flag == AppDrawerFlag.LaunchApp || flag == AppDrawerFlag.HiddenApps)
@@ -359,10 +321,11 @@ class AppDrawerFragment : Fragment() {
             else
                 findNavController().popBackStack()
         }
+
     private fun appDeleteListener(): (appListItem: AppListItem) -> Unit =
         { appModel ->
             if (requireContext().isSystemApp(appModel.activityPackage))
-                showToastShort(requireContext(),getString(R.string.can_not_delete_system_apps))
+                showShortToast(getString(R.string.can_not_delete_system_apps))
             else {
                 val appPackage = appModel.activityPackage
                 val intent = Intent(Intent.ACTION_DELETE)
@@ -371,12 +334,14 @@ class AppDrawerFragment : Fragment() {
             }
 
         }
+
     private fun appRenameListener(): (appPackage: String, appAlias: String) -> Unit =
         { appPackage, appAlias ->
             val prefs = Prefs(requireContext())
             prefs.setAppAlias(appPackage, appAlias)
             findNavController().popBackStack()
         }
+
     private fun renameListener(flag: AppDrawerFlag, i: Int) {
         val name = binding.search.query.toString().trim()
         if (name.isEmpty()) return

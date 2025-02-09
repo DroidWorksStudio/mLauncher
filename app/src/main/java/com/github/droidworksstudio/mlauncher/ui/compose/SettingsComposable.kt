@@ -1,15 +1,36 @@
 package com.github.droidworksstudio.mlauncher.ui.compose
 
 import android.graphics.Typeface
-import androidx.compose.foundation.*
-import com.github.droidworksstudio.mlauncher.style.SettingsTheme
+import androidx.annotation.DrawableRes
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.detectTapGestures
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
 import androidx.compose.material.TextButton
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableFloatStateOf
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Alignment.Companion.CenterEnd
 import androidx.compose.ui.Alignment.Companion.CenterStart
 import androidx.compose.ui.Alignment.Companion.End
@@ -18,6 +39,7 @@ import androidx.compose.ui.Alignment.Companion.TopEnd
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.onFocusEvent
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -25,25 +47,111 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
+import androidx.constraintlayout.compose.Dimension
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.EnumOption
 import com.github.droidworksstudio.mlauncher.style.BORDER_SIZE
 import com.github.droidworksstudio.mlauncher.style.CORNER_RADIUS
 import com.github.droidworksstudio.mlauncher.style.SETTINGS_PADDING
-import com.smarttoolfactory.slider.*
-import java.math.BigDecimal
-import java.math.RoundingMode
+import com.github.droidworksstudio.mlauncher.style.SettingsTheme
+import com.smarttoolfactory.slider.ColorfulSlider
+import com.smarttoolfactory.slider.MaterialSliderDefaults
+import com.smarttoolfactory.slider.SliderBrushColor
 
 object SettingsComposable {
+
+    @Composable
+    fun HeaderWithIconAndTitle(
+        @DrawableRes iconRes: Int,
+        title: String,
+        iconSize: Dp = 96.dp, // Default size for the icon
+        fontSize: TextUnit = 24.sp, // Default font size for the title
+    ) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 16.dp), // Optional horizontal padding
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            // Image Icon
+            Image(
+                painter = painterResource(id = iconRes),
+                contentDescription = title,
+                modifier = Modifier
+                    .size(iconSize)
+                    .padding(bottom = 16.dp) // Bottom margin like in XML
+            )
+
+            // Title Text
+            Text(
+                text = title,
+                style = SettingsTheme.typography.title,
+                fontSize = fontSize,
+                modifier = Modifier
+                    .padding(bottom = 24.dp)
+            )
+        }
+    }
+
+
+    @Composable
+    fun SettingsHomeItem(
+        title: String,
+        description: String? = null,
+        imageVector: ImageVector,
+        onClick: () -> Unit = {},
+        titleFontSize: TextUnit = TextUnit.Unspecified,
+        descriptionFontSize: TextUnit = TextUnit.Unspecified,
+        iconSize: Dp = 18.dp,
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .clickable(onClick = onClick)
+                .padding(
+                    vertical = 16.dp,
+                    horizontal = 16.dp
+                ),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Image(
+                imageVector,
+                contentDescription = title,
+                modifier = Modifier
+                    .size(iconSize)
+            )
+
+            Spacer(
+                modifier = Modifier
+                    .width(16.dp)
+            )
+
+            Column {
+                Text(
+                    text = title,
+                    style = SettingsTheme.typography.title,
+                    fontSize = titleFontSize
+                )
+                description?.let {
+                    Text(
+                        text = it,
+                        style = SettingsTheme.typography.title,
+                        fontSize = descriptionFontSize
+                    )
+                }
+            }
+        }
+    }
 
     // Most basic settings background tile
     @Composable
     fun SettingsTile(content: @Composable () -> Unit) {
         Column(
             modifier = Modifier
-                .padding(6.dp, 6.dp, 6.dp, 0.dp)
+                .padding(6.dp, 2.dp, 6.dp, 2.dp)
                 .background(SettingsTheme.color.settings, SettingsTheme.shapes.settings)
                 .border(
                     BORDER_SIZE,
@@ -62,19 +170,32 @@ object SettingsComposable {
         title: String,
         selected: MutableState<String>,
         fontSize: TextUnit = TextUnit.Unspecified,
-        items: Array<@Composable (MutableState<Boolean>, (Boolean) -> Unit) -> Unit>
+        items: Array<@Composable (MutableState<Boolean>, (Boolean) -> Unit) -> Unit>,
+        visibleSection: MutableState<String?> // State to track the currently visible section
     ) {
         var key by remember { mutableIntStateOf(0) } // Add a key to force recomposition
-
         val itemsChanged = remember { mutableStateOf(false) } // Track changes in items
+        var isVisible by remember { mutableStateOf(false) } // State to control visibility
+
+        // Determine if this section should be visible based on the shared state
+        isVisible = visibleSection.value == title
 
         SettingsTile {
-            SettingsTitle(text = title, fontSize = fontSize)
-            items.forEachIndexed { i, item ->
-                item(mutableStateOf("$title-$i" == selected.value)) { b ->
-                    val number = if (b) i else -1
-                    selected.value = "$title-$number"
-                    itemsChanged.value = true // Mark items as changed
+            SettingsTitle(
+                text = title,
+                fontSize = fontSize,
+                modifier = Modifier.clickable {
+                    // Toggle visibility and update the shared state to show the current section
+                    visibleSection.value = if (isVisible) null else title
+                }
+            )
+            if (isVisible) {
+                items.forEachIndexed { i, item ->
+                    item(mutableStateOf("$title-$i" == selected.value)) { b ->
+                        val number = if (b) i else -1
+                        selected.value = "$title-$number"
+                        itemsChanged.value = true // Mark items as changed
+                    }
                 }
             }
         }
@@ -89,10 +210,18 @@ object SettingsComposable {
     }
 
     @Composable
-    fun SettingsTopView(title: String, onClick: () -> Unit = {}, fontSize: TextUnit = TextUnit.Unspecified, iconSize: Dp = 16.dp, content: @Composable () -> Unit) {
+    fun SettingsTopView(
+        title: String,
+        onClick: () -> Unit = {},
+        fontSize: TextUnit = TextUnit.Unspecified,
+        iconSize: Dp = 16.dp,
+        content: @Composable () -> Unit
+    ) {
         SettingsTile {
-            Box(modifier = Modifier
-                .fillMaxWidth()) {
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+            ) {
                 SettingsTitle(
                     text = title,
                     fontSize = fontSize,
@@ -113,13 +242,17 @@ object SettingsComposable {
     }
 
     @Composable
-    fun SettingsTitle(text: String, modifier: Modifier = Modifier, fontSize: TextUnit = TextUnit.Unspecified) {
+    fun SettingsTitle(
+        text: String,
+        modifier: Modifier = Modifier,
+        fontSize: TextUnit = TextUnit.Unspecified
+    ) {
         Text(
             text = text,
             style = SettingsTheme.typography.title,
             fontSize = fontSize,
             modifier = modifier
-                .padding(0.dp, 0.dp, 0.dp, 12.dp)
+                .padding(0.dp, 0.dp, 0.dp, 6.dp)
         )
     }
 
@@ -131,7 +264,8 @@ object SettingsComposable {
         fontSize: TextUnit = TextUnit.Unspecified,
         onToggle: () -> Unit
     ) {
-        val buttonText = if (state.value) stringResource(R.string.on) else stringResource(R.string.off)
+        val buttonText =
+            if (state.value) stringResource(R.string.on) else stringResource(R.string.off)
         SettingsItem(
             title = title,
             onClick = {
@@ -145,7 +279,7 @@ object SettingsComposable {
     }
 
     @Composable
-    fun <T: EnumOption> SettingsItem(
+    fun <T : EnumOption> SettingsItem(
         title: String,
         currentSelection: MutableState<EnumOption>,
         currentSelectionName: String? = null,
@@ -187,7 +321,7 @@ object SettingsComposable {
                     }
                 }
             } else {
-                Box (
+                Box(
                     modifier = Modifier
                         .fillMaxWidth()
                 ) {
@@ -207,7 +341,7 @@ object SettingsComposable {
     }
 
     @Composable
-    fun <T: EnumOption> SettingsItemFont(
+    fun <T : EnumOption> SettingsItemFont(
         title: String,
         currentSelection: MutableState<EnumOption>,
         currentSelectionName: String? = null,
@@ -250,7 +384,7 @@ object SettingsComposable {
                     }
                 }
             } else {
-                Box (
+                Box(
                     modifier = Modifier
                         .fillMaxWidth()
                 ) {
@@ -284,7 +418,7 @@ object SettingsComposable {
             title = title,
             currentSelection = remember { mutableStateOf(currentAction) },
             currentSelectionName = if (currentAction == Constants.Action.OpenApp) "Open $appLabel" else currentAction.string(),
-            values = Constants.Action.values(),
+            values = Constants.Action.entries.toTypedArray(),
             fontSize = fontSize,
             active = currentAction != Constants.Action.Disabled,
             onSelect = onSelect,
@@ -294,14 +428,14 @@ object SettingsComposable {
     @Composable
     fun SettingsNumberItem(
         title: String,
-        currentSelection: MutableState<Float>,
-        min: Float = Float.MIN_VALUE,
-        max: Float = Float.MAX_VALUE,
+        currentSelection: MutableState<Int>,
+        min: Int = Int.MIN_VALUE,
+        max: Int = Int.MAX_VALUE,
         open: MutableState<Boolean>,
         onChange: (Boolean) -> Unit,
-        onValueChange: (Float) -> Unit = {},
+        onValueChange: (Int) -> Unit = {},
         fontSize: TextUnit = TextUnit.Unspecified,
-        onSelect: (Float) -> Unit
+        onSelect: (Int) -> Unit
     ) {
         Column {
             Text(
@@ -325,7 +459,7 @@ object SettingsComposable {
                     onSelect(i)
                 }
             } else {
-                Box (
+                Box(
                     modifier = Modifier
                         .fillMaxWidth()
                 ) {
@@ -373,7 +507,7 @@ object SettingsComposable {
                     onSelect(i)
                 }
             } else {
-                Box (
+                Box(
                     modifier = Modifier
                         .fillMaxWidth()
                 ) {
@@ -430,7 +564,7 @@ object SettingsComposable {
         active: Boolean = true,
         onClick: () -> Unit = { },
         fontSize: TextUnit = TextUnit.Unspecified,
-    ){
+    ) {
         TextButton(
             onClick = onClick,
             modifier = modifier,
@@ -488,7 +622,87 @@ object SettingsComposable {
     }
 
     @Composable
-    private fun <T: EnumOption> SettingsSelector(options: Array<T>, fontSize: TextUnit = TextUnit.Unspecified, onSelect: (T) -> Unit) {
+    fun SettingsFiveButtonRow(
+        title: String,
+        firstButtonText: String,
+        secondButtonText: String,
+        thirdButtonText: String,
+        forthButtonText: String,
+        fifthButtonText: String,
+        firstButtonAction: () -> Unit,
+        secondButtonAction: () -> Unit,
+        thirdButtonAction: () -> Unit,
+        forthButtonAction: () -> Unit,
+        fifthButtonAction: () -> Unit,
+        fontSize: TextUnit = TextUnit.Unspecified,
+    ) {
+        Column {
+            Text(
+                title,
+                style = SettingsTheme.typography.item,
+                fontSize = fontSize,
+                modifier = Modifier
+                    .align(Start)
+            )
+            Spacer(Modifier.weight(1f))
+            TextButton(
+                onClick = firstButtonAction,
+            ) {
+                Text(
+                    firstButtonText,
+                    fontSize = fontSize,
+                    style = SettingsTheme.typography.button,
+                )
+            }
+
+            TextButton(
+                onClick = secondButtonAction,
+            ) {
+                Text(
+                    secondButtonText,
+                    fontSize = fontSize,
+                    style = SettingsTheme.typography.button,
+                )
+            }
+
+            TextButton(
+                onClick = thirdButtonAction,
+            ) {
+                Text(
+                    thirdButtonText,
+                    fontSize = fontSize,
+                    style = SettingsTheme.typography.button,
+                )
+            }
+
+            TextButton(
+                onClick = forthButtonAction,
+            ) {
+                Text(
+                    forthButtonText,
+                    fontSize = fontSize,
+                    style = SettingsTheme.typography.button,
+                )
+            }
+
+            TextButton(
+                onClick = fifthButtonAction,
+            ) {
+                Text(
+                    fifthButtonText,
+                    fontSize = fontSize,
+                    style = SettingsTheme.typography.button,
+                )
+            }
+        }
+    }
+
+    @Composable
+    private fun <T : EnumOption> SettingsSelector(
+        options: Array<T>,
+        fontSize: TextUnit = TextUnit.Unspecified,
+        onSelect: (T) -> Unit
+    ) {
         Box(
             modifier = Modifier
                 .background(SettingsTheme.color.selector, SettingsTheme.shapes.settings)
@@ -518,7 +732,12 @@ object SettingsComposable {
     }
 
     @Composable
-    private fun <T: EnumOption> SettingsSelector(options: Array<T>, typefaces: Map<Constants.Fonts, Typeface?>, fontSize: TextUnit = TextUnit.Unspecified, onSelect: (T) -> Unit) {
+    private fun <T : EnumOption> SettingsSelector(
+        options: Array<T>,
+        typefaces: Map<Constants.Fonts, Typeface?>,
+        fontSize: TextUnit = TextUnit.Unspecified,
+        onSelect: (T) -> Unit
+    ) {
         Box(
             modifier = Modifier
                 .background(SettingsTheme.color.selector, SettingsTheme.shapes.settings)
@@ -531,7 +750,8 @@ object SettingsComposable {
             )
             {
                 for (opt in options) {
-                    val fontFamily = typefaces[opt as Constants.Fonts]?.let { FontFamily(it) } ?: FontFamily.Default
+                    val fontFamily = typefaces[opt as Constants.Fonts]?.let { FontFamily(it) }
+                        ?: FontFamily.Default
 
                     item {
                         TextButton(
@@ -554,12 +774,12 @@ object SettingsComposable {
 
     @Composable
     private fun SettingsNumberSelector(
-        number: MutableState<Float>,
-        min: Float,
-        max: Float,
+        number: MutableState<Int>, // Change from Float to Int
+        min: Int,                  // Change from Float to Int
+        max: Int,                  // Change from Float to Int
         fontSize: TextUnit = TextUnit.Unspecified,
-        onValueChange: (Float) -> Unit = {},
-        onCommit: (Float) -> Unit
+        onValueChange: (Int) -> Unit = {},
+        onCommit: (Int) -> Unit
     ) {
         ConstraintLayout(
             modifier = Modifier
@@ -567,11 +787,13 @@ object SettingsComposable {
                 .fillMaxWidth()
         ) {
             val (plus, minus, text, button) = createRefs()
+
+            // Minus button
             TextButton(
                 onClick = {
-                    val newValue = (BigDecimal(number.value.toDouble()) + BigDecimal("0.1")).toFloat()
-                    if (newValue <= max) {
-                        number.value = newValue.roundToTwoDecimalPlaces()
+                    val newValue = number.value - 1 // Decrement by 1
+                    if (newValue >= min) {
+                        number.value = newValue
                         onValueChange(number.value)
                     }
                 },
@@ -579,16 +801,18 @@ object SettingsComposable {
                     .constrainAs(minus) {
                         top.linkTo(parent.top)
                         bottom.linkTo(parent.bottom)
-                        start.linkTo(text.end)
-                        end.linkTo(button.start)
-                    },
+                        start.linkTo(parent.start)
+                        end.linkTo(text.start)  // Align the end of minus button to the start of the number
+                    }
             ) {
                 Text(
-                    "+",
+                    "-",
                     style = SettingsTheme.typography.button,
                     fontSize = fontSize
                 )
             }
+
+            // Number display (centered text)
             Text(
                 text = number.value.toString(),
                 fontSize = fontSize,
@@ -597,16 +821,18 @@ object SettingsComposable {
                     .constrainAs(text) {
                         top.linkTo(parent.top)
                         bottom.linkTo(parent.bottom)
-                        start.linkTo(plus.end)
-                        end.linkTo(minus.start)
+                        start.linkTo(minus.end)  // Align the start of the number to the end of the minus button
+                        end.linkTo(plus.start)  // Align the end of the number to the start of the plus button
                     },
-                style = SettingsTheme.typography.item,
+                style = SettingsTheme.typography.item
             )
+
+            // Plus button
             TextButton(
                 onClick = {
-                    val newValue = (BigDecimal(number.value.toDouble()) - BigDecimal("0.1")).toFloat()
-                    if (newValue >= min) {
-                        number.value = newValue.roundToTwoDecimalPlaces()
+                    val newValue = number.value + 1 // Increment by 1
+                    if (newValue <= max) {
+                        number.value = newValue
                         onValueChange(number.value)
                     }
                 },
@@ -614,25 +840,27 @@ object SettingsComposable {
                     .constrainAs(plus) {
                         top.linkTo(parent.top)
                         bottom.linkTo(parent.bottom)
-                        start.linkTo(parent.start)
-                        end.linkTo(text.start)
-                    },
+                        start.linkTo(text.end)  // Align the start of the plus button to the end of the number
+                        end.linkTo(parent.end)  // Align the end of the plus button to the parent end
+                    }
             ) {
                 Text(
-                    "-",
+                    "+",
                     style = SettingsTheme.typography.button,
                     fontSize = fontSize
                 )
             }
+
+            // Save button
             TextButton(
                 onClick = { onCommit(number.value) },
                 modifier = Modifier
                     .constrainAs(button) {
                         top.linkTo(parent.top)
                         bottom.linkTo(parent.bottom)
-                        start.linkTo(minus.end)
-                        end.linkTo(parent.end)
-                    },
+                        start.linkTo(plus.end)  // Align button start to the end of the plus button
+                        end.linkTo(parent.end)  // Align button to the parent's end
+                    }
             ) {
                 Text(
                     stringResource(R.string.save),
@@ -641,10 +869,6 @@ object SettingsComposable {
                 )
             }
         }
-    }
-
-    private fun Float.roundToTwoDecimalPlaces(): Float {
-        return BigDecimal(this.toDouble()).setScale(2, RoundingMode.HALF_EVEN).toFloat()
     }
 
     @Composable
@@ -656,16 +880,27 @@ object SettingsComposable {
         onCommit: (Int) -> Unit
     ) {
         ConstraintLayout(
-            modifier = Modifier
-                .fillMaxWidth()
+            modifier = Modifier.fillMaxWidth()
         ) {
-            val (text, button) = createRefs()
+            // Create references for each component inside the ConstraintLayout
+            val (text, slider, button) = createRefs()
+
+            // Create a mutable state for the slider progress
             var labelProgress by remember { mutableFloatStateOf(number.value.toFloat()) }
+
+            // Text displaying the progress
             Text(
                 labelProgress.toInt().toString(),
                 style = SettingsTheme.typography.button,
-                fontSize = fontSize
+                fontSize = fontSize,
+                modifier = Modifier.constrainAs(text) {
+                    top.linkTo(parent.top)
+                    start.linkTo(parent.start)
+                    end.linkTo(slider.start) // Link to the start of the slider
+                }
             )
+
+            // ColorfulSlider to adjust the progress
             ColorfulSlider(
                 value = labelProgress,
                 thumbRadius = 5.dp,
@@ -676,16 +911,23 @@ object SettingsComposable {
                     inactiveTrackColor = SliderBrushColor(color = Color.Transparent),
                 ),
                 modifier = Modifier
-                    .padding(end = 62.dp)
+                    .constrainAs(slider) {
+                        top.linkTo(text.top)  // Align slider top with text top
+                        start.linkTo(text.end) // Place slider next to the text
+                        end.linkTo(button.start) // Keep some space between slider and button
+                        width = Dimension.fillToConstraints // Make slider fill the available width
+                    }
             )
+
+            // Save Button
             TextButton(
                 onClick = { onCommit(labelProgress.toInt()) },
                 modifier = Modifier
                     .constrainAs(button) {
                         top.linkTo(parent.top)
                         bottom.linkTo(parent.bottom)
-                        start.linkTo(text.end)
-                        end.linkTo(parent.end)
+                        start.linkTo(slider.end)  // Link button to the end of the slider
+                        end.linkTo(parent.end)  // Place button at the rightmost edge of the parent
                     },
             ) {
                 Text(
@@ -698,14 +940,18 @@ object SettingsComposable {
     }
 
     @Composable
-    fun SettingsTextButton(title: String, fontSize: TextUnit = TextUnit.Unspecified, onClick: () -> Unit) {
+    fun SettingsTextButton(
+        title: String,
+        fontSize: TextUnit = TextUnit.Unspecified,
+        onClick: () -> Unit
+    ) {
         TextButton(
             onClick = onClick,
-        ){
+        ) {
             Text(
                 title,
                 style = SettingsTheme.typography.item,
-                fontSize = fontSize
+                fontSize = fontSize,
             )
         }
     }

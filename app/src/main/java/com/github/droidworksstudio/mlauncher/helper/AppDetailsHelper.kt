@@ -1,8 +1,10 @@
 package com.github.droidworksstudio.mlauncher.helper
 
+import android.annotation.SuppressLint
 import android.app.usage.UsageStatsManager
 import android.content.Context
 import android.content.pm.ApplicationInfo
+import android.util.Log
 import java.util.Calendar
 
 object AppDetailsHelper {
@@ -19,22 +21,35 @@ object AppDetailsHelper {
         }
     }
 
+    @SuppressLint("NewApi")
     fun getUsageStats(context: Context, packageName: String): Long {
-        val calendar = Calendar.getInstance()
-        calendar.set(Calendar.HOUR_OF_DAY, 0)
-        calendar.set(Calendar.MINUTE, 0)
-        calendar.set(Calendar.SECOND, 0)
-        val startTime = calendar.timeInMillis
-        val endTime = System.currentTimeMillis()
+        // Set calendar to midnight of today (start of the day)
+        val calendar = Calendar.getInstance().apply {
+            set(Calendar.HOUR_OF_DAY, 0)
+            set(Calendar.MINUTE, 0)
+            set(Calendar.SECOND, 0)
+            set(Calendar.MILLISECOND, 100)
+        }
 
+        val startTime = calendar.timeInMillis // Midnight today
+        val endTime = System.currentTimeMillis() // Current time
+
+        // Get UsageStatsManager system service
         val usageStatsManager = context.getSystemService(Context.USAGE_STATS_SERVICE) as? UsageStatsManager
+
+        // Query usage stats for the specific time range (startTime to endTime)
         val usageStatsList = usageStatsManager?.queryUsageStats(UsageStatsManager.INTERVAL_DAILY, startTime, endTime)
+
         var totalUsageTime: Long = 0
 
+        // Iterate through the stats to get the specific package usage
         usageStatsList?.let { statsList ->
             for (usageStats in statsList) {
                 if (usageStats.packageName == packageName) {
-                    totalUsageTime = usageStats.totalTimeInForeground
+                    // Use totalTimeInForeground for actual usage time
+                    if (usageStats.totalTimeVisible > 0) {
+                        totalUsageTime += usageStats.totalTimeVisible
+                    }
                 }
             }
         }
@@ -42,32 +57,46 @@ object AppDetailsHelper {
         return totalUsageTime
     }
 
+
+    @SuppressLint("NewApi")
     fun getTotalScreenTime(context: Context): Long {
-        val usageStatsManager = context.getSystemService(Context.USAGE_STATS_SERVICE) as UsageStatsManager
-        val calendar = Calendar.getInstance()
-        calendar.set(Calendar.HOUR_OF_DAY, 0)
-        calendar.set(Calendar.MINUTE, 0)
-        calendar.set(Calendar.SECOND, 0)
+        // Get the start of the current day (midnight)
+        val calendar = Calendar.getInstance().apply {
+            set(Calendar.HOUR_OF_DAY, 0)
+            set(Calendar.MINUTE, 0)
+            set(Calendar.SECOND, 0)
+            set(Calendar.MILLISECOND, 100)
+        }
+
         val startTime = calendar.timeInMillis
         val endTime = System.currentTimeMillis()
 
+        // Get the UsageStatsManager system service
+        val usm = context.getSystemService(Context.USAGE_STATS_SERVICE) as UsageStatsManager
+
+        // Query usage stats for today (from midnight to current time)
+        val usageStatsList = usm.queryUsageStats(UsageStatsManager.INTERVAL_DAILY, startTime, endTime)
+
+        if (usageStatsList.isEmpty()) {
+            Log.w("getTotalScreenTime", "No usage stats available.")
+            return 0L
+        }
+
+        // Calculate the total screen time for all apps (excluding the current app)
         var totalScreenTime: Long = 0
-
         val packageName = context.packageName
-
-        val usageStatsList = usageStatsManager.queryUsageStats(
-            UsageStatsManager.INTERVAL_DAILY, startTime, endTime
-        )
 
         for (usageStats in usageStatsList) {
             if (usageStats.packageName != packageName) {
-                totalScreenTime += usageStats.totalTimeInForeground
+                // Only consider apps with non-zero foreground time
+                if (usageStats.totalTimeVisible > 0) {
+                    totalScreenTime += usageStats.totalTimeVisible
+                }
             }
         }
 
         return totalScreenTime
     }
-
 
     fun formatMillisToHMS(millis: Long): String {
         val hours = millis / (1000 * 60 * 60)
@@ -83,6 +112,4 @@ object AppDetailsHelper {
         formattedString.append("")
         return formattedString.toString().trim()
     }
-
-
 }

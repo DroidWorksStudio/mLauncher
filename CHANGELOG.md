@@ -4,6 +4,48 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Implemented Enhancements:
+
+- Added the ability to toggle settings. - ([739d82d](https://github.com/DroidWorksStudio/mLauncher/commit/739d82d6cc5c92b9d75cff0085d9ccd427988c71))
+
+### Feature Removal:
+
+- Custom Themes, Accent Color Toggle, - ([d18ad18](https://github.com/DroidWorksStudio/mLauncher/commit/d18ad18c6735ef40ac0e6a6b7bf3bbd473efc291))
+
+### Refactoring:
+
+- Moved around the settings - ([8ea6649](https://github.com/DroidWorksStudio/mLauncher/commit/8ea6649cd6d25a6e17f96e4e4c0219fc50655798))
+- Cleaned up .gitignore - ([08b2f4c](https://github.com/DroidWorksStudio/mLauncher/commit/08b2f4cf1dda1ab27239300becb6289b88f12822))
+- Cleaned up code and replaced deprecated code. - ([5b13384](https://github.com/DroidWorksStudio/mLauncher/commit/5b133844e59ef6cb7f72c0bc3a6ff711556a54b4))
+- Trying out backup_rules.xml - ([7734b62](https://github.com/DroidWorksStudio/mLauncher/commit/7734b62a05cd0655edc669a1e549c4e5a1d651bb))
+
+### Releases:
+
+- Prepare for version 1.7.1 - ([e6b0ebc](https://github.com/DroidWorksStudio/mLauncher/commit/e6b0ebcdcafc39330824a5ebe79cda9afde00a38))
+
+## [1.7.0](https://github.com/DroidWorksStudio/mLauncher/tree/1.7.0) - (04, December 2024)
+
+### Bug Fixes:
+
+- Fixed the usage time - ([34a3e55](https://github.com/DroidWorksStudio/mLauncher/commit/34a3e55f76a5adc0f40123fccfaac1ed158c21c8))
+- Fixed the battery still displayed when disabled. - ([e9a62d7](https://github.com/DroidWorksStudio/mLauncher/commit/e9a62d7aae46478b5a777a4879a7e9355b6fd979))
+
+### Refactoring:
+
+- Cleanup Favorites - ([cddfc27](https://github.com/DroidWorksStudio/mLauncher/commit/cddfc2737df16b342d08dfaedbb861ae4637c6fa))
+- Moving functions about and added common functions - ([328786b](https://github.com/DroidWorksStudio/mLauncher/commit/328786bcad5a3a39ef924efccaed6017669c9d98))
+
+### Releases:
+
+- Prepare for version 1.7.0 - ([3d2e32a](https://github.com/DroidWorksStudio/mLauncher/commit/3d2e32a1c3ab40a17301f5efbea3f406d128adfa))
+
+## [1.6.9](https://github.com/DroidWorksStudio/mLauncher/tree/1.6.9) - (21, November 2024)
+
+### Bug Fixes:
+
+- Fixed the formatting of save buttons - ([f4cd15c](https://github.com/DroidWorksStudio/mLauncher/commit/f4cd15cec3100e594fcc35b63aa6f2cf9e3e063c))
+- Fixed the usageStats times - ([d2930a6](https://github.com/DroidWorksStudio/mLauncher/commit/d2930a60674cfd8088cae484136ec8005e0ce7d0))
+
 ### Language Support:
 
 - Updated Language Files. ([#634](https://github.com/DroidWorksStudio/mLauncher/issues/634)) - ([4f90f1e](https://github.com/DroidWorksStudio/mLauncher/commit/4f90f1e99e6487159e7706f9f3b6a0c03f4fa814))
@@ -11,10 +53,15 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Removed roundToTwoDecimalPlaces - ([4b145ae](https://github.com/DroidWorksStudio/mLauncher/commit/4b145aee55822fc66708115c5247250c820f8184))
 - Removed unused languages - ([30c74e8](https://github.com/DroidWorksStudio/mLauncher/commit/30c74e815191d9129b78957ac1e841221dbddb7c))
 - Cleaned up HomeFragment - ([1aae3bd](https://github.com/DroidWorksStudio/mLauncher/commit/1aae3bd7acaea22f11e522eced44b2828d07bb36))
 - Cleaned up the battery icon. - ([c6ee92e](https://github.com/DroidWorksStudio/mLauncher/commit/c6ee92e336024718eeba1bb489a68a28cbe875f0))
 - Rename Favorite Apps - ([4aaab7c](https://github.com/DroidWorksStudio/mLauncher/commit/4aaab7c6e0334fa2e2935425386576fd9fe7e408))
+
+### Releases:
+
+- Prepare for version 1.6.9 - ([06c3ff3](https://github.com/DroidWorksStudio/mLauncher/commit/06c3ff3c640b9dee78ed96d44891937f4a43641b))
 
 ## [1.6.8](https://github.com/DroidWorksStudio/mLauncher/tree/1.6.8) - (16, September 2024)
 
