@@ -1,79 +1,79 @@
-Gegabelt von <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal und sauber.
+Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal and clean.
 
-# Geforkt mit zusätzlichen Funktionen
+# Forked with extra features
 
-- Unordnung wie Anzeigen und Links entfernt.
-- Sie können Apps im App-Drawer umbenennen (Das Umbenennen von Apps auf dem Startbildschirm wird bereits unterstützt. Klicken Sie einfach lange auf eine App auf dem Startbildschirm und beginnen Sie mit der Eingabe.)
-- Viel mehr Anpassungsmöglichkeiten bei den Gesten auf dem Startbildschirm
-    - Gesten sind jetzt:
-        - Wischen nach oben, unten, links, rechts
-        - Klicken Sie auf die Uhr
-        - Möglichkeit, die Anwendung zu ändern, die beim Klicken auf das Datum geöffnet wird
-    - Mögliche Aktionen jetzt inklusive:
-        - Angegebene App öffnen
-        - App-Liste anzeigen
-        - Sperrung des Bildschirms
-        - Zuletzt geöffnete Apps anzeigen
-        - Öffne die Benachrichtigungsleiste
-        - Öffnen der Schnelleinstellungen
-        - Power-Dialog
-        - Mach ein Bildschirmfoto
-        - Geste deaktivieren
-- Sie können die Uhr auch unabhängig von den Home-Apps positionieren.
-- Ändern Sie die Ausrichtung von Apps im App-Drawer unabhängig vom Homescreen.
-- Ändern Sie die Schriftgröße einzelner Abschnitte des Homescreens unabhängig voneinander.
-- Entfernte Interneterlaubnis - Entfernte Interneterlaubnis Du weißt nie, was ein App-Entwickler über dich wissen möchte.
-- Einstellungen hinter Biometrie sperren (umschalten)
-- Möglichkeit hinzugefügt, Abstürze per E-Mail zu melden.
-- Möglichkeit zum Anzeigen der App-Nutzungsdauer hinzugefügt.
+- Removed clutter, like ads and links.
+- You can rename apps in the app-drawer (Renaming apps on the home screen is already supported. Just long-click on an app on the home screen and start typing.)
+- We have added a lot more options for gestures on the home screen:
+    - Gestures are now:
+        - Swiping up, down, left, right
+        - Clicking on the clock
+        - Clicking on the Date
+    - Possible actions now include:
+        - Open specified app
+        - Display app list
+        - Locking the screen
+        - Show Recent opened apps
+        - Opening the notification drawer
+        - Opening the quick settings
+        - Power Dialog
+        - Take A Screenshot
+        - Disable Gesture
+- You can also position the clock independently of the home apps.
+- Change alignment of apps in app-drawer independent from homescreen.
+- Change font size of sections of the homescreen independent of each other.
+- Removed internet permission. You never know what an app developer wants to know about you.
+- Lock settings behind biometrics (toggle)
+- Added the ability to report crashing via email.
+- Added the ability to view app usage time.
 
-## Übersetzungen:
+## Translations:
 
-- Viele Leute haben die App in die folgenden Sprachen übersetzt. Vielen Dank an Sie alle.
+- A lot of people have translated the app to the following languages. Many thanks to you all.
   - Afrikaans
-  - Arabisch
-  - Albanisch
-  - bulgarisch
-  - Chinesisch
-  - kroatisch
-  - Tschechisch
-  - Dänisch
-  - Englisch
-  - Estnisch
+  - Arabic
+  - Albanian
+  - Bulgarian
+  - Chinese
+  - Croatian
+  - Czech
+  - Danish
+  - English
+  - Estonian
   - Filipino
-  - Finnisch
-  - Französisch
-  - georgisch
-  - Deutsch
-  - Griechisch
-  - Hawaiianisch
-  - Hebräisch
+  - Finnish
+  - French
+  - Georgian
+  - German
+  - Greek
+  - Hawaiian
+  - Hebrew
   - Hindi
-  - Ungarisch
-  - Isländisch
-  - Indonesisch
-  - Irisch
-  - Italienisch
-  - Japanisch
-  - Koreanisch
-  - Litauisch
-  - Luxemburgisch
-  - Malaiisch
-  - Madagassisch
+  - Hungarian
+  - Icelandic
+  - Indonesian
+  - Irish
+  - Italian
+  - Japanese
+  - Korean
+  - Lithuanian
+  - Luxembourgish
+  - Malay
+  - Malagasy
   - Malayalam
-  - norwegisch
-  - nepalesisch
-  - Persisch
-  - Polnisch
-  - Portugiesisch (europäisch)
-  - Pandschabi
-  - Russisch
-  - serbisch
+  - Norwegian
+  - Nepali
+  - Persian
+  - Polish
+  - Portuguese (European)
+  - Punjabi
+  - Russian
+  - Serbian
   - Sindhi
-  - Slowakisch
-  - Spanisch
-  - Schwedisch
-  - Thailändisch
-  - Türkisch
-  - ukrainisch
-  - Vietnamesisch
+  - Slovak
+  - Spanish
+  - Swedish
+  - Thai
+  - Turkish
+  - Ukrainian
+  - Vietnamese
