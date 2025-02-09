@@ -1,79 +1,79 @@
-Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal and clean.
+Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimální a čisté.
 
-# Forked with extra features
+# Rozvětvený s extra funkcemi
 
-- Removed clutter, like ads and links.
-- You can rename apps in the app-drawer (Renaming apps on the home screen is already supported. Just long-click on an app on the home screen and start typing.)
-- We have added a lot more options for gestures on the home screen:
-    - Gestures are now:
-        - Swiping up, down, left, right
-        - Clicking on the clock
-        - Clicking on the Date
-    - Possible actions now include:
-        - Open specified app
-        - Display app list
-        - Locking the screen
-        - Show Recent opened apps
-        - Opening the notification drawer
-        - Opening the quick settings
-        - Power Dialog
-        - Take A Screenshot
-        - Disable Gesture
-- You can also position the clock independently of the home apps.
-- Change alignment of apps in app-drawer independent from homescreen.
-- Change font size of sections of the homescreen independent of each other.
-- Removed internet permission. You never know what an app developer wants to know about you.
-- Lock settings behind biometrics (toggle)
-- Added the ability to report crashing via email.
-- Added the ability to view app usage time.
+- Odstraněn nepořádek, jako jsou reklamy a odkazy.
+- Aplikace můžete přejmenovat v zásuvce aplikací (Přejmenování aplikací na domovské obrazovce je již podporováno. Stačí dlouze kliknout na aplikaci na domovské obrazovce a začít psát.)
+- Na domovskou obrazovku jsme přidali mnohem více možností pro gesta:
+    - Gesta jsou nyní:
+        - Přejetí nahoru, dolů, doleva, doprava
+        - Kliknutím na hodiny
+        - Kliknutím na Datum
+    - Možné akce nyní zahrnují:
+        - Otevřete zadanou aplikaci
+        - Zobrazit seznam aplikací
+        - Zamykání obrazovky
+        - Zobrazit naposledy otevřené aplikace
+        - Otevření šuplíku oznámení
+        - Otevření rychlého nastavení
+        - Dialog napájení
+        - Udělejte snímek obrazovky
+        - Zakázat gesto
+- Hodiny můžete také umístit nezávisle na domácích aplikacích.
+- Změňte zarovnání aplikací v zásuvce aplikací nezávisle na domovské obrazovce.
+- Změňte velikost písma částí domovské obrazovky nezávisle na sobě.
+- Odebráno oprávnění k internetu. Nikdy nevíte, co o vás chce vývojář aplikace vědět.
+- Uzamknout nastavení za biometrii (přepnout)
+- Přidána možnost hlásit selhání prostřednictvím e-mailu.
+- Přidána možnost zobrazení doby používání aplikace.
 
-## Translations:
+## Překlady:
 
-- A lot of people have translated the app to the following languages. Many thanks to you all.
-  - Afrikaans
-  - Arabic
-  - Albanian
-  - Bulgarian
-  - Chinese
-  - Croatian
-  - Czech
-  - Danish
-  - English
-  - Estonian
-  - Filipino
-  - Finnish
-  - French
-  - Georgian
-  - German
-  - Greek
-  - Hawaiian
-  - Hebrew
-  - Hindi
-  - Hungarian
-  - Icelandic
-  - Indonesian
-  - Irish
-  - Italian
-  - Japanese
-  - Korean
-  - Lithuanian
-  - Luxembourgish
-  - Malay
-  - Malagasy
-  - Malayalam
-  - Norwegian
-  - Nepali
-  - Persian
-  - Polish
-  - Portuguese (European)
-  - Punjabi
-  - Russian
-  - Serbian
+- Mnoho lidí přeložilo aplikaci do následujících jazyků. Mnohokrát vám všem děkuji.
+  - afrikánština
+  - arabsky
+  - Albánec
+  - bulharština
+  - Číňané
+  - chorvatština
+  - český
+  - Dánština
+  - anglicky
+  - estonský
+  - Filipínský
+  - finština
+  - Francouzština
+  - Gruzínský
+  - Němčina
+  - Řek
+  - Havajský
+  - hebrejsky
+  - Hindština
+  - maďarština
+  - Islandský
+  - indonéský
+  - Irština
+  - italsky
+  - Japonci
+  - korejský
+  - litevský
+  - lucemburský
+  - malajsky
+  - Madagaskar
+  - malajálamština
+  - Norština
+  - Nepálština
+  - Peršan
+  - polština
+  - portugalština (evropská)
+  - Pandžábština
+  - Rusky
+  - srbský
   - Sindhi
-  - Slovak
-  - Spanish
-  - Swedish
-  - Thai
-  - Turkish
-  - Ukrainian
-  - Vietnamese
+  - slovensky
+  - Španělština
+  - švédština
+  - thajština
+  - turečtina
+  - Ukrajinština
+  - Vietnamci
