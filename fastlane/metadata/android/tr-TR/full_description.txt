@@ -1,79 +1,79 @@
-Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal and clean.
+<a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>'den türetilmiştir. Minimal ve temiz.
 
-# Forked with extra features
+# Ekstra özelliklerle çatallandı
 
-- Removed clutter, like ads and links.
-- You can rename apps in the app-drawer (Renaming apps on the home screen is already supported. Just long-click on an app on the home screen and start typing.)
-- We have added a lot more options for gestures on the home screen:
-    - Gestures are now:
-        - Swiping up, down, left, right
-        - Clicking on the clock
-        - Clicking on the Date
-    - Possible actions now include:
-        - Open specified app
-        - Display app list
-        - Locking the screen
-        - Show Recent opened apps
-        - Opening the notification drawer
-        - Opening the quick settings
-        - Power Dialog
-        - Take A Screenshot
-        - Disable Gesture
-- You can also position the clock independently of the home apps.
-- Change alignment of apps in app-drawer independent from homescreen.
-- Change font size of sections of the homescreen independent of each other.
-- Removed internet permission. You never know what an app developer wants to know about you.
-- Lock settings behind biometrics (toggle)
-- Added the ability to report crashing via email.
-- Added the ability to view app usage time.
+- Reklamlar ve bağlantılar gibi gereksiz içerikler kaldırıldı.
+- Uygulama çekmecesindeki uygulamaları yeniden adlandırabilirsiniz (Ana ekrandaki uygulamaları yeniden adlandırma zaten destekleniyor. (Ana ekranda bir uygulamaya uzun tıklayın ve yazmaya başlayın.)
+- Ana ekrana hareketler için çok daha fazla seçenek ekledik:
+    - Jestler artık şöyle:
+        - Yukarı, aşağı, sola, sağa kaydırma
+        - Saate tıklamak
+        - Tarihe Tıklayarak
+    - Olası eylemler artık şunları içeriyor:
+        - Belirtilen uygulamayı aç
+        - Uygulama listesini görüntüle
+        - Ekranı kilitleme
+        - Son açılan uygulamaları göster
+        - Bildirim çekmecesini açma
+        - Hızlı ayarların açılması
+        - Güç Diyalogu
+        - Ekran Görüntüsü Alın
+        - Hareketi Devre Dışı Bırak
+- Saati ev uygulamalarından bağımsız olarak da konumlandırabilirsiniz.
+- Uygulama çekmecesindeki uygulamaların hizalamasını ana ekrandan bağımsız olarak değiştirin.
+- Ana ekrandaki bölümlerin yazı büyüklüklerini birbirinden bağımsız olarak değiştirebilme.
+- İnternet izni kaldırıldı. Bir uygulama geliştiricisinin sizin hakkınızda ne bilmek istediğini asla bilemezsiniz.
+- Biyometrik verilerin arkasındaki ayarları kilitle (değiştir)
+- Çökmeleri e-posta yoluyla bildirme özelliği eklendi.
+- Uygulama kullanım süresini görüntüleme özelliği eklendi.
 
-## Translations:
+## Çeviriler:
 
-- A lot of people have translated the app to the following languages. Many thanks to you all.
+- Uygulamayı aşağıdaki dillere çok sayıda kişi çevirdi. Hepinize çok teşekkür ederim.
   - Afrikaans
-  - Arabic
-  - Albanian
-  - Bulgarian
-  - Chinese
-  - Croatian
-  - Czech
-  - Danish
-  - English
-  - Estonian
-  - Filipino
-  - Finnish
-  - French
-  - Georgian
-  - German
-  - Greek
-  - Hawaiian
-  - Hebrew
-  - Hindi
-  - Hungarian
-  - Icelandic
-  - Indonesian
-  - Irish
-  - Italian
-  - Japanese
-  - Korean
-  - Lithuanian
-  - Luxembourgish
+  - Arapça
+  - Arnavutça
+  - Bulgarca
+  - Çince
+  - Hırvatça
+  - Çek
+  - Danimarkalı
+  - İngilizce
+  - Estonyaca
+  - Filipinli
+  - Fince
+  - Fransızca
+  - Gürcü
+  - Almanca
+  - Yunanca
+  - Hawaii
+  - İbranice
+  - Hintçe
+  - Macarca
+  - İzlandaca
+  - Endonezyaca
+  - İrlandalı
+  - İtalyan
+  - Japonca
+  - Korece
+  - Litvanyaca
+  - Lüksemburgca
   - Malay
-  - Malagasy
+  - Malgaşça
   - Malayalam
-  - Norwegian
-  - Nepali
-  - Persian
-  - Polish
-  - Portuguese (European)
-  - Punjabi
-  - Russian
-  - Serbian
+  - Norveççe
+  - Nepalce
+  - Farsça
+  - Lehçe
+  - Portekizce (Avrupa)
+  - Pencapça
+  - Rusça
+  - Sırpça
   - Sindhi
   - Slovak
-  - Spanish
-  - Swedish
-  - Thai
-  - Turkish
-  - Ukrainian
-  - Vietnamese
+  - İspanyolca
+  - İsveççe
+  - Tayca
+  - Türkçe
+  - Ukraynaca
+  - Vietnamca
