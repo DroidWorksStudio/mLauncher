@@ -1,102 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Base Settings -->
-    <string name="app">App</string>
+    <string name="select_app">Selecteer App</string>
+    <!-- Strings used for settings menus -->
+    <string name="settings_name">mLauncher-instellingen</string>
+    <string name="settings_features_title">Functies</string>
+    <string name="settings_features_description">Verbeter uw productiviteit.</string>
+    <string name="settings_look_feel_title">Kijk en voel</string>
+    <string name="settings_look_feel_description">Geef uw startscherm een persoonlijk tintje.</string>
+    <string name="settings_favorite_apps_title">Favoriete apps</string>
+    <string name="settings_hidden_apps_title">Verborgen apps</string>
+    <string name="settings_advanced_title">Geavanceerd</string>
+    <string name="settings_app_info_title">App-info</string>
+    <string name="settings_app_info_description">%1$s</string>
     <!-- Admin Settings -->
-    <string name="admin_permission_message">mLauncher belooft de toestemming voor het vergrendelscherm op een verantwoorde manier te gebruiken. mLauncher verzamelt of deelt geen gegevens.</string>
-    <string name="experimental">(experimenteel)</string>
+    <string name="admin_permission_message">mLauncher belooft verantwoord om te gaan met de machtigingen voor het vergrendelscherm. mLauncher verzamelt of deelt geen gegevens.</string>
+    <string name="experimental">(Experimenteel)</string>
     <!-- Settings Headers -->
-    <string name="appearance">Uiterlijk</string>
+    <string name="display">Weergave</string>
+    <string name="language_region">Taal &amp; Regio</string>
+    <string name="accessibility">Toegankelijkheid</string>
+    <string name="appearance">Verschijning</string>
     <string name="behavior">Gedrag</string>
-    <string name="homescreen">Thuisscherm</string>
+    <string name="homescreen">Startscherm</string>
     <string name="alignment">Uitlijning</string>
-    <string name="gestures">Vingerbewegingen</string>
-    <string name="miscellaneous">Overige</string>
+    <string name="gestures">Gebaren</string>
+    <string name="miscellaneous">Gemengd</string>
     <!-- Home Strings -->
     <string name="hidden_apps">Verborgen apps</string>
     <string name="favorite_apps">Favoriete apps</string>
-    <string name="set_as_default_launcher">Instellen als standaard launcher</string>
-    <string name="change_default_launcher">Standaard launcher wijzigen</string>
-    <!-- Appearance Strings -->
-    <string name="status_bar">Statusbalk weergeven</string>
-    <string name="theme_mode">Thema modus</string>
-    <string name="color_mode">Kleur mode</string>
-    <string name="app_language">Interface taal</string>
-    <string name="app_text_size">App tekstgrootte</string>
-    <string name="clock_text_size">Kloktekstgrootte</string>
-    <string name="date_text_size">Datum tekstgrootte</string>
-    <string name="battery_text_size">Tekstgrootte batterij</string>
-    <string name="app_padding_size">Opvullingsgrootte</string>
-    <string name="follow_accent_colors">Accentkleuren</string>
-    <string name="background_opacity">Dekking van de achtergrond</string>
-    <string name="all_apps_text">Geef alle apps-tekst weer</string>
-    <string name="app_font">Lettertypefamilie</string>
-    <!-- Behavior Strings -->
-    <string name="auto_show_keyboard">Toetsenbord automatisch tonen</string>
-    <string name="auto_open_apps">Apps automatisch openen</string>
-    <string name="enable_notifications">Notificaties aanzetten</string>
-    <string name="display_recent_apps">Recente apps weergeven</string>
-    <string name="number_of_recents">Aantal recente apps</string>
-    <string name="filter_strength">Filtersterkte</string>
-    <string name="search_from_start">App zoeken vanaf het begin.</string>
-    <string name="icon_font">Gebruik pictogramlettertype</string>
-    <!-- Home-screen Strings -->
-    <string name="apps_on_home_screen">Aantal snelkoppelingen</string>
-    <string name="pages_on_home_screen">Aantal pagina\'s</string>
-    <string name="enable_home_pager">Schakel Homepager in</string>
-    <string name="show_time">Tijd weergeven</string>
+    <string name="set_as_default_launcher">Instellen als standaardstarter</string>
+    <string name="change_default_launcher">Standaard Launcher wijzigen</string>
+    <!-- Display Strings -->
+    <string name="show_status_bar">Statusbalk weergeven</string>
+    <string name="show_recent_apps">Recente apps weergeven</string>
+    <string name="show_app_usage_stats">Toon app-gebruikstatistieken</string>
+    <string name="show_time">Toon tijd</string>
     <string name="show_time_format">Tijdformaat (AM/PM)</string>
     <string name="show_date">Datum weergeven</string>
     <string name="show_battery">Batterij weergeven</string>
     <string name="show_battery_icon">Batterijpictogram weergeven</string>
+    <string name="show_header_text">Koptekst weergeven</string>
+    <!-- Language & Region Strings -->
+    <string name="app_language">Interfacetaal</string>
+    <!-- Accessibility Strings -->
+    <string name="app_text_size">App-tekstgrootte</string>
+    <string name="clock_text_size">Klok Tekstgrootte</string>
+    <string name="date_text_size">Datum Tekstgrootte</string>
+    <string name="battery_text_size">Batterij Tekstgrootte</string>
+    <string name="app_padding_size">Opvulmaat</string>
+    <string name="app_font">Lettertypefamilie</string>
+    <!-- Appearance Strings -->
+    <string name="theme_mode">Themamodus</string>
+    <string name="background_opacity">Achtergronddekking</string>
+    <string name="home_alignment_bottom">Startscherm Onderkant uitlijnen</string>
+    <!-- Behavior Strings -->
+    <string name="auto_show_keyboard">Automatisch toetsenbord weergeven</string>
+    <string name="auto_open_apps">Automatisch apps openen</string>
+    <string name="enable_notifications">Meldingen inschakelen</string>
+    <string name="number_of_recents">Aantal recente apps</string>
+    <string name="filter_strength">Filtersterkte</string>
+    <string name="search_from_start">App-zoekfunctie vanaf Start.</string>
+    <string name="icon_font">Gebruik pictogramlettertype</string>
+    <!-- Home-screen Strings -->
+    <string name="apps_on_home_screen">Aantal snelkoppelingen</string>
+    <string name="pages_on_home_screen">Aantal pagina\'s</string>
+    <string name="enable_home_pager">Home Pager inschakelen</string>
     <string name="lock_home_apps">Apps vergrendelen</string>
     <string name="extend_home_apps_area">Klikbaar gebied uitbreiden</string>
-    <string name="home_alignment_bottom">Startscherm onderaan uitlijnen</string>
     <!-- Alignment Strings -->
-    <string name="display_app_usage_stats">App-gebruiksstatistieken weergeven</string>
-    <string name="home_alignment">Apps startscherm</string>
+    <string name="home_alignment">Apps-startscherm</string>
     <string name="clock_alignment">Klok en datum</string>
-    <string name="drawer_alignment">Apps in app-overzicht</string>
+    <string name="drawer_alignment">Apps in de app-lade</string>
     <!-- Gestures Strings -->
-    <string name="short_swipe_up_app">Omhoog vegen</string>
-    <string name="short_swipe_down_app">Omlaag vegen</string>
-    <string name="short_swipe_left_app">Naar links vegen</string>
-    <string name="short_swipe_right_app">Naar rechts vegen</string>
-    <string name="long_swipe_up_app">Lang indrukken omhoog vegen</string>
-    <string name="long_swipe_down_app">Lang indrukken omlaag vegen</string>
-    <string name="long_swipe_left_app">Lang indrukken naar links vegen</string>
-    <string name="long_swipe_right_app">Lang indrukken naar rechts vegen</string>
-    <string name="clock_click_app">Klik op de klok</string>
+    <string name="short_swipe_up_app">Korte veeg omhoog</string>
+    <string name="short_swipe_down_app">Kort omlaag vegen</string>
+    <string name="short_swipe_left_app">Korte veeg naar links</string>
+    <string name="short_swipe_right_app">Korte veeg naar rechts</string>
+    <string name="long_swipe_up_app">Lange veeg omhoog</string>
+    <string name="long_swipe_down_app">Lange veeg omlaag</string>
+    <string name="long_swipe_left_app">Lange veeg naar links</string>
+    <string name="long_swipe_right_app">Lange veeg naar rechts</string>
+    <string name="clock_click_app">Klik op Klok</string>
     <string name="date_click_app">Klik op Datum</string>
     <string name="usage_click_app">Klik op Totaal gebruik</string>
     <string name="double_tap">Dubbeltik</string>
     <!-- Gestures Do Strings -->
-    <string name="show_notifications">Toon melding</string>
-    <string name="show_app_list">Toon App Lijst</string>
+    <string name="show_notifications">Melding weergeven</string>
+    <string name="show_app_list">App-lijst weergeven</string>
     <string name="open_app">App openen</string>
-    <string name="lock_screen">Vergrendel scherm</string>
-    <string name="open_quick_settings">Snelle Instellingen</string>
-    <string name="show_recents">Toon recente apps</string>
-    <string name="open_power_dialog">Toon uitschakel-opties</string>
+    <string name="lock_screen">Vergrendelscherm</string>
+    <string name="open_quick_settings">Snelle instellingen</string>
+    <string name="show_recents">Recente items weergeven</string>
+    <string name="open_power_dialog">Power-dialoog</string>
     <string name="take_a_screenshot">Maak een screenshot</string>
     <string name="left_page">Ga naar de linkerpagina</string>
-    <string name="right_page">Ga naar de rechterpagina</string>
+    <string name="right_page">Ga naar de juiste pagina</string>
     <string name="double_tap_to_lock_screen">Dubbeltik om te vergrendelen</string>
     <!-- Miscellaneous Strings -->
     <string name="settings_text_size">Instellingen Tekstgrootte</string>
-    <string name="display_hidden_apps">Geef verborgen apps weer</string>
-    <string name="lock_settings">Instellingen vergrendelen</string>
+    <string name="display_hidden_apps">Verborgen apps weergeven</string>
+    <string name="lock_settings">Vergrendelingsinstellingen</string>
     <!-- Backup Strings -->
     <string name="backup">Back-up</string>
-    <string name="load_backup">Back-up laden</string>
-    <string name="save_backup">Back-up opslaan</string>
-    <string name="clear_backup">Back-up verwijderen</string>
+    <string name="load_backup">Laden</string>
+    <string name="save_backup">Redden</string>
+    <string name="clear_backup">Duidelijk</string>
     <!-- Settings Strings -->
     <string name="off">Uit</string>
-    <string name="on">Aan</string>
-    <string name="left">Linkerkant</string>
-    <string name="right">Rechterkant</string>
-    <string name="center">Gecentreerd</string>
+    <string name="on">Op</string>
+    <string name="left">Links</string>
+    <string name="right">Rechts</string>
+    <string name="center">Centrum</string>
     <string name="dark">Donker</string>
     <string name="light">Licht</string>
     <string name="settings">Instellingen</string>
@@ -105,65 +120,64 @@
     <string name="delete">Verwijderen</string>
     <string name="hide">Verbergen</string>
     <string name="unhide">Zichtbaar maken</string>
-    <string name="rename">Hernoem</string>
-    <string name="info">Info</string>
-    <string name="okay">OK</string>
-    <string name="save">Opslaan</string>
-    <string name="show">Weergeven</string>
-    <string name="reset">Reset</string>
+    <string name="rename">Hernoemen</string>
+    <string name="info">Informatie</string>
+    <string name="okay">Oké</string>
+    <string name="save">Redden</string>
+    <string name="show">Show</string>
+    <string name="reset">Opnieuw instellen</string>
     <string name="cancel">Annuleren</string>
     <string name="enable">Inschakelen</string>
-    <string name="disable">Uitschakelen</string>
+    <string name="disable">Uitzetten</string>
     <string name="enabled">Ingeschakeld</string>
-    <string name="disabled">Uitgeschakeld</string>
+    <string name="disabled">Gehandicapt</string>
     <string name="open">Open</string>
-    <string name="close">Afsluiten</string>
+    <string name="close">Dichtbij</string>
     <string name="copy">Kopiëren</string>
     <!-- Colored Themes -->
-    <string name="catppuccino">Catppuccino</string>
-    <string name="nordic">Nordic</string>
+    <string name="catppuccino">Katpuccino</string>
+    <string name="nordic">Noords</string>
     <!-- Dark Only Themes -->
     <string name="dracula">Dracula</string>
-    <string name="arc">Arc</string>
+    <string name="arc">Boog</string>
     <string name="nokto">Nokto</string>
-    <string name="breeze">Breeze</string>
-    <string name="yaru">Yaru</string>
+    <string name="breeze">Briesje</string>
+    <string name="yaru">Jaru</string>
     <!-- Light Only Themes -->
     <string name="adwaita">Adwaita</string>
     <!-- PinCode Strings -->
-    <string name="text_authentication_cancel">Authenticatie Annuleren.</string>
+    <string name="text_authentication_cancel">Authenticatie annuleren.</string>
     <string name="text_authentication_error">Authenticatiefout:%1$s(code %2$d)</string>
     <string name="text_authentication_failed">Authenticatie mislukt.</string>
     <string name="text_biometric_login">Biometrische login voor mLauncher</string>
-    <string name="text_biometric_login_sub">Log in met uw biometrische gegevens</string>
+    <string name="text_biometric_login_sub">Meld u aan met uw biometrische gegevens.</string>
     <!-- Crash Strings -->
-    <string name="acra_crash">Botsing</string>
-    <string name="acra_dialog_text">Het spijt ons, maar %1$s heeft een onverwacht probleem ondervonden en moet worden afgesloten. Help ons alstublieft verbeteren door een crashrapport te sturen.\n\n%1$s waardeert uw privacy en de verzamelde gegevens worden uitsluitend gebruikt voor het verbeteren van de app-stabiliteit. Er worden geen persoonlijke gegevens verzameld. Bedankt voor je ondersteuning!</string>
-    <string name="acra_send_report">Verzend rapport</string>
+    <string name="acra_crash">Crash</string>
+    <string name="acra_dialog_text">Het spijt ons, maar %1$s heeft een onverwacht probleem ondervonden en moet sluiten. Help ons verbeteren door een crashrapport te sturen.\n\n%1$s hecht waarde aan uw privacy en de verzamelde gegevens worden uitsluitend gebruikt om de stabiliteit van de app te verbeteren. Er wordt geen persoonlijke informatie verzameld. Bedankt voor uw steun!</string>
+    <string name="acra_send_report">Rapport verzenden</string>
     <string name="acra_dont_send">Niet verzenden</string>
-    <string name="acra_mail_body">Er heeft zich een crash voorgedaan in de applicatie.\n\nHieronder staan de details van het apparaat. Het foutenlogboek is ter referentie als bestand bijgevoegd. Wij stellen uw hulp bij het oplossen van dit probleem zeer op prijs.\n\nApparaatinformatie: \n[Vul de onderstaande informatie in en verwijder alles tussen de vierkante haken, anders wordt dit genegeerd.]\n\n- App-versie: [0.0.1]\n- Android-versie: [14]\n- Apparaatnaam: [Android Pixel 69]\n- Installatielocatie: [github, fdroid, obtanium, self]\n\nUw snelle aandacht voor deze kwestie wordt zeer op prijs gesteld.\n\nBedankt.\n</string>
+    <string name="acra_mail_body">Er is een crash opgetreden in de applicatie.\n\nHieronder staan de details van het apparaat. Het foutenlogboek is als bestand bijgevoegd ter referentie. Wij stellen uw hulp bij het oplossen van dit probleem op prijs.\n\nApparaatinformatie: \n[VUL de onderstaande informatie in en verwijder alles tussen de vierkante haken, anders wordt dit genegeerd.]\n\n- App-versie: [0.0.1]\n- Android-versie: [14]\n- Apparaatnaam: [Android Pixel 69]\n- Installatielocatie: [github, fdroid, obtanium, self]\n\nUw snelle aandacht voor deze kwestie wordt zeer op prijs gesteld.\n\nDank u wel.\n</string>
     <string name="settings_font_system">Systeem</string>
     <!-- Search Stings -->
     <string name="search_engine">Zoekmachine</string>
     <string name="search_google">Google</string>
     <string name="search_yahoo">Yahoo</string>
-    <string name="search_duckduckgo">DuckDuckGo</string>
+    <string name="search_duckduckgo">EendEendGa</string>
     <string name="search_bing">Bing</string>
-    <string name="search_brave">Brave</string>
-    <string name="search_swisscow">SwissCows</string>
+    <string name="search_brave">Moedig</string>
+    <string name="search_swisscow">ZwitserseKoeien</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Alle apps</string>
     <string name="total_screen_time">Totale schermtijd</string>
-    <string name="can_not_delete_system_apps">Kan systeemapps niet verwijderen</string>
+    <string name="can_not_delete_system_apps">Kan systeem-apps niet verwijderen</string>
     <string name="please_select_app">Selecteer een app</string>
     <string name="drawer_list_empty_hint">Geen apps gevonden</string>
-    <string name="long_press_for_settings">Lang drukken voor instellingen</string>
+    <string name="long_press_for_settings">Lang ergens indrukken voor instellingen</string>
     <string name="swipe_up_for_apps">Veeg omhoog voor alle apps</string>
-    <string name="app_drawer_tips">Tip: Veeg naar beneden om te sluiten. Scroll om het toetsenbord te verbergen.</string>
-    <string name="double_tap_lock_is_enabled_message">Als het vergrendelen met dubbele tik vingerafdruk of gezichtsontgrendeling uitschakelt, open dan de mLauncher instellingen, tik op \'experimenteel\' en volg de instructies. Dank u.</string>
-    <string name="double_tap_lock_uninstall_message">Dubbel tikken om te vergrendelen ingeschakeld.
-		\n\nOpmerking: schakel eerst deze UIT uit als u besluit om mLauncher te verwijderen.</string>
+    <string name="app_drawer_tips">Tip: Veeg omlaag om te sluiten. Scroll om het toetsenbord te verbergen.</string>
+    <string name="double_tap_lock_is_enabled_message">Als dubbeltikvergrendeling vingerafdruk- of gezichtsontgrendeling uitschakelt, open dan de mLauncher-instellingen, tik op \'experimenteel\' en volg de instructies. Dank u.</string>
+    <string name="double_tap_lock_uninstall_message">Dubbeltik om vergrendeling in te schakelen. \n\nLet op: Schakel dit eerst UIT als u besluit mLauncher te verwijderen.</string>
     <string name="accessibility_service_name">mLauncher Acties Service</string>
-    <string name="accessibility_service_description">Met deze toegankelijkheidsservice kan mLauncher bepaalde acties uitvoeren, zoals het scherm vergrendelen of de snelle instellingen openen. Onze toegankelijkheidsdienst verzamelt of deelt geen gegevens.</string>
+    <string name="accessibility_service_description">Deze toegankelijkheidsservice stelt mLauncher in staat om bepaalde acties uit te voeren, zoals het vergrendelen van het scherm of het openen van de snelle instellingen. Onze toegankelijkheidsservice verzamelt of deelt geen gegevens.</string>
     <string name="version">Versie</string>
 </resources>
