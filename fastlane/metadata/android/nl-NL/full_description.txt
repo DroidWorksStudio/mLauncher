@@ -1,36 +1,36 @@
-Gevorkt van <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimalistisch en strak.
+Gevorkt van <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimaal en schoon.
 
-# Gevorkt met extra functies
+# Geforked met extra functies
 
-- Rommel, zoals advertenties en links, is verwijderd.
-- U kunt apps hernoemen in de app-lade (het hernoemen van apps op het startscherm wordt al ondersteund). (Klik gewoon lang op een app op het startscherm en begin met typen.)
-- We hebben veel meer opties voor gebaren op het startscherm toegevoegd:
+- Rommel verwijderd, zoals advertenties en links.
+- U kunt apps hernoemen in de app-drawer (Het hernoemen van apps op het startscherm wordt al ondersteund. Klik gewoon lang op een app op het startscherm en begin met typen.)
+- We hebben veel meer opties toegevoegd voor gebaren op het beginscherm:
     - Gebaren zijn nu:
-        - Omhoog, omlaag, naar links, naar rechts vegen
+        - Veeg omhoog, omlaag, links, rechts
         - Klikken op de klok
-        - Klik op de datum
-    - Mogelijke acties zijn nu:
+        - Klikken op de datum
+    - Mogelijke acties omvatten:
         - Open de opgegeven app
         - App-lijst weergeven
-        - Het scherm vergrendelen
+        - Scherm vergrendelen
         - Toon recent geopende apps
-        - Het openen van de meldingslade
-        - De snelle instellingen openen
-        - Power-dialoog
+        - Open het meldingenpaneel
+        - Snelle instellingen openen
+        - Machtsdialoog
         - Maak een screenshot
-        - Gebaar uitschakelen
-- Je kunt de klok ook onafhankelijk van de home-apps positioneren.
+        - Schakel gebaar uit
+- Je kunt de klok ook onafhankelijk van de thuisapps positioneren.
 - Wijzig de uitlijning van apps in de app-lade, onafhankelijk van het startscherm.
-- Wijzig de lettergrootte van verschillende secties op het startscherm, onafhankelijk van elkaar.
-- Internetmachtiging verwijderd. Je weet nooit wat een app-ontwikkelaar over je wil weten.
-- Vergrendel instellingen achter biometrie (wisselen)
-- Mogelijkheid toegevoegd om crashes via e-mail te melden.
-- Mogelijkheid toegevoegd om app-gebruikstijd te bekijken.
+- Wijzig de lettergrootte van delen van het startscherm onafhankelijk van elkaar.
+- Internet toestemming verwijderd. Je weet nooit wat een app-ontwikkelaar over je wil weten.
+- Instellingen achter biometrie vergrendelen (schakelaar)
+- De mogelijkheid toegevoegd om crashes via e-mail te melden.
+- De mogelijkheid toegevoegd om de gebruikstijd van de app te bekijken.
 
 ## Vertalingen:
 
-- Veel mensen hebben de app vertaald naar de volgende talen. Hartelijk dank allemaal.
-  -Afrikaans
+- Veel mensen hebben de app vertaald naar de volgende talen. Veel dank aan u allen.
+  - Afrikaans
   - Arabisch
   - Albanees
   - Bulgaars
@@ -39,28 +39,28 @@ Gevorkt van <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Min
   - Tsjechisch
   - Deens
   - Engels
-  - Estisch
+  - Ests
   - Filipijns
   - Fins
   - Frans
   - Georgisch
-  - Duits
+  - Duitser
   - Grieks
   - Hawaïaans
   - Hebreeuws
-  -Hindi
+  - Hindi
   - Hongaars
   - IJslands
   - Indonesisch
-  - Iers
+  - Ieren
   - Italiaans
-  - Japans
+  - Japanse
   - Koreaans
   - Litouws
   - Luxemburgs
   - Maleis
-  - Malagasi
-  -Maleis
+  - Malagasy
+  - Malayalam
   - Noors
   - Nepalees
   - Perzisch
@@ -73,7 +73,7 @@ Gevorkt van <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Min
   - Slowaaks
   - Spaans
   - Zweeds
-  - Thai
+  - Thaise
   - Turks
   - Oekraïens
-  - Vietnamees
+  - Vietnamezen
