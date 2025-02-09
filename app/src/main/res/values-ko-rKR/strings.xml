@@ -9,40 +9,40 @@
     <string name="settings_look_feel_title">모양과 느낌</string>
     <string name="settings_look_feel_description">홈 화면에 개성을 더해보세요.</string>
     <string name="settings_favorite_apps_title">즐겨찾는 앱</string>
-    <string name="settings_hidden_apps_title">숨겨진 앱</string>
+    <string name="settings_hidden_apps_title">Hidden apps</string>
     <string name="settings_advanced_title">고급의</string>
     <string name="settings_app_info_title">앱 정보</string>
     <string name="settings_app_info_description">%1$s</string>
     <!-- Admin Settings -->
-    <string name="admin_permission_message">mLauncher는 잠금 화면 권한을 책임감 있게 사용할 것을 약속합니다. mLauncher는 어떠한 데이터도 수집하거나 공유하지 않습니다.</string>
-    <string name="experimental">(실험적)</string>
+    <string name="admin_permission_message">mLauncher는 잠금 화면 권한을 책임감 있게 사용할 것을 약속합니다. mLauncher는 데이터를 수집하거나 공유하지 않습니다.</string>
+    <string name="experimental">(experimental)</string>
     <!-- Settings Headers -->
     <string name="display">표시하다</string>
     <string name="language_region">언어 &amp; 지역</string>
     <string name="accessibility">접근성</string>
-    <string name="appearance">모습</string>
-    <string name="behavior">행동</string>
-    <string name="homescreen">홈 화면</string>
-    <string name="alignment">조정</string>
-    <string name="gestures">제스처</string>
+    <string name="appearance">Appearance</string>
+    <string name="behavior">Behavior</string>
+    <string name="homescreen">Homescreen</string>
+    <string name="alignment">Alignment</string>
+    <string name="gestures">Gestures</string>
     <string name="miscellaneous">여러 가지 잡다한</string>
     <!-- Home Strings -->
-    <string name="hidden_apps">숨겨진 앱</string>
+    <string name="hidden_apps">Hidden apps</string>
     <string name="favorite_apps">즐겨찾는 앱</string>
-    <string name="set_as_default_launcher">기본 런처로 설정</string>
-    <string name="change_default_launcher">기본 런처 변경</string>
+    <string name="set_as_default_launcher">Set as default launcher</string>
+    <string name="change_default_launcher">Change default launcher</string>
     <!-- Display Strings -->
     <string name="show_status_bar">상태 표시줄 표시</string>
     <string name="show_recent_apps">최근 앱 표시</string>
     <string name="show_app_usage_stats">앱 사용 통계 표시</string>
-    <string name="show_time">쇼타임</string>
+    <string name="show_time">Show time</string>
     <string name="show_time_format">시간 형식(오전/오후)</string>
-    <string name="show_date">쇼 날짜</string>
+    <string name="show_date">Show date</string>
     <string name="show_battery">배터리 표시</string>
     <string name="show_battery_icon">배터리 아이콘 표시</string>
     <string name="show_header_text">헤더 텍스트 표시</string>
     <!-- Language & Region Strings -->
-    <string name="app_language">인터페이스 언어</string>
+    <string name="app_language">Interface Language</string>
     <!-- Accessibility Strings -->
     <string name="app_text_size">앱 텍스트 크기</string>
     <string name="clock_text_size">시계 텍스트 크기</string>
@@ -51,52 +51,52 @@
     <string name="app_padding_size">패딩 크기</string>
     <string name="app_font">글꼴 패밀리</string>
     <!-- Appearance Strings -->
-    <string name="theme_mode">테마 모드</string>
+    <string name="theme_mode">Theme mode</string>
     <string name="background_opacity">배경 불투명도</string>
     <string name="home_alignment_bottom">홈 화면 하단 정렬</string>
     <!-- Behavior Strings -->
-    <string name="auto_show_keyboard">자동 쇼 키보드</string>
-    <string name="auto_open_apps">앱 자동 열기</string>
+    <string name="auto_show_keyboard">Auto show keyboard</string>
+    <string name="auto_open_apps">Auto open apps</string>
     <string name="enable_notifications">알림 활성화</string>
     <string name="number_of_recents">최근 앱 수</string>
     <string name="filter_strength">필터 강도</string>
-    <string name="search_from_start">시작에서 앱 검색.</string>
+    <string name="search_from_start">처음부터 앱 검색.</string>
     <string name="icon_font">아이콘 글꼴 사용</string>
     <!-- Home-screen Strings -->
-    <string name="apps_on_home_screen">단축키의 수</string>
+    <string name="apps_on_home_screen">Number of shortcuts</string>
     <string name="pages_on_home_screen">페이지 수</string>
-    <string name="enable_home_pager">홈페이지 활성화</string>
-    <string name="lock_home_apps">앱 잠금</string>
+    <string name="enable_home_pager">홈 호출기 활성화</string>
+    <string name="lock_home_apps">Lock Apps</string>
     <string name="extend_home_apps_area">클릭 가능한 영역 확장</string>
     <!-- Alignment Strings -->
-    <string name="home_alignment">앱 홈 화면</string>
-    <string name="clock_alignment">시계와 날짜</string>
-    <string name="drawer_alignment">앱 서랍의 앱</string>
+    <string name="home_alignment">Apps home screen</string>
+    <string name="clock_alignment">Clock and date</string>
+    <string name="drawer_alignment">Apps in app drawer</string>
     <!-- Gestures Strings -->
-    <string name="short_swipe_up_app">짧게 위로 스와이프</string>
-    <string name="short_swipe_down_app">짧게 아래로 스와이프</string>
-    <string name="short_swipe_left_app">짧게 왼쪽으로 스와이프</string>
-    <string name="short_swipe_right_app">오른쪽으로 짧게 스와이프</string>
-    <string name="long_swipe_up_app">길게 위로 스와이프</string>
-    <string name="long_swipe_down_app">아래로 길게 스와이프</string>
-    <string name="long_swipe_left_app">왼쪽으로 길게 스와이프</string>
-    <string name="long_swipe_right_app">오른쪽으로 길게 스와이프</string>
-    <string name="clock_click_app">시계를 클릭하세요</string>
-    <string name="date_click_app">날짜를 클릭하세요</string>
+    <string name="short_swipe_up_app">Swipe up</string>
+    <string name="short_swipe_down_app">Swipe down</string>
+    <string name="short_swipe_left_app">Swipe left</string>
+    <string name="short_swipe_right_app">Swipe right</string>
+    <string name="long_swipe_up_app">길게 누르기 위로 스와이프</string>
+    <string name="long_swipe_down_app">길게 누르기 아래로 스와이프</string>
+    <string name="long_swipe_left_app">길게 누르기 왼쪽으로 스와이프</string>
+    <string name="long_swipe_right_app">길게 누르기 오른쪽으로 스와이프</string>
+    <string name="clock_click_app">Click on Clock</string>
+    <string name="date_click_app">Click on Date</string>
     <string name="usage_click_app">총 사용량을 클릭하세요</string>
-    <string name="double_tap">더블 탭</string>
+    <string name="double_tap">Double Tap</string>
     <!-- Gestures Do Strings -->
-    <string name="show_notifications">알림 표시</string>
-    <string name="show_app_list">앱 목록 표시</string>
-    <string name="open_app">앱 열기</string>
-    <string name="lock_screen">잠금 화면</string>
-    <string name="open_quick_settings">빠른 설정</string>
-    <string name="show_recents">최근 항목 표시</string>
-    <string name="open_power_dialog">파워 다이얼로그</string>
+    <string name="show_notifications">Show Notification</string>
+    <string name="show_app_list">Show App List</string>
+    <string name="open_app">Open App</string>
+    <string name="lock_screen">Lock Screen</string>
+    <string name="open_quick_settings">Quick Settings</string>
+    <string name="show_recents">Show Recents</string>
+    <string name="open_power_dialog">전원 대화 상자</string>
     <string name="take_a_screenshot">스크린샷 찍기</string>
     <string name="left_page">왼쪽 페이지로 이동</string>
     <string name="right_page">오른쪽 페이지로 이동</string>
-    <string name="double_tap_to_lock_screen">두 번 탭하여 잠금</string>
+    <string name="double_tap_to_lock_screen">Double tap to lock</string>
     <!-- Miscellaneous Strings -->
     <string name="settings_text_size">설정 텍스트 크기</string>
     <string name="display_hidden_apps">숨겨진 앱 표시</string>
@@ -107,32 +107,32 @@
     <string name="save_backup">구하다</string>
     <string name="clear_backup">분명한</string>
     <!-- Settings Strings -->
-    <string name="off">끄다</string>
-    <string name="on">~에</string>
-    <string name="left">왼쪽</string>
-    <string name="right">오른쪽</string>
-    <string name="center">센터</string>
-    <string name="dark">어두운</string>
-    <string name="light">빛</string>
+    <string name="off">Off</string>
+    <string name="on">On</string>
+    <string name="left">Left</string>
+    <string name="right">Right</string>
+    <string name="center">Center</string>
+    <string name="dark">Dark</string>
+    <string name="light">Light</string>
     <string name="settings">설정</string>
-    <string name="lang_system">체계</string>
-    <string name="system_default">체계</string>
+    <string name="lang_system">System</string>
+    <string name="system_default">System</string>
     <string name="delete">삭제</string>
-    <string name="hide">숨다</string>
+    <string name="hide">Hide</string>
     <string name="unhide">숨기기 해제</string>
-    <string name="rename">이름 바꾸기</string>
+    <string name="rename">Rename</string>
     <string name="info">정보</string>
-    <string name="okay">좋아요</string>
-    <string name="save">구하다</string>
-    <string name="show">보여주다</string>
-    <string name="reset">다시 놓기</string>
-    <string name="cancel">취소</string>
-    <string name="enable">할 수 있게 하다</string>
-    <string name="disable">장애를 입히다</string>
-    <string name="enabled">활성화됨</string>
-    <string name="disabled">장애가 있는</string>
-    <string name="open">열려 있는</string>
-    <string name="close">닫다</string>
+    <string name="okay">Okay</string>
+    <string name="save">Save</string>
+    <string name="show">Show</string>
+    <string name="reset">Reset</string>
+    <string name="cancel">Cancel</string>
+    <string name="enable">Enable</string>
+    <string name="disable">Disable</string>
+    <string name="enabled">Enabled</string>
+    <string name="disabled">Disabled</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
     <string name="copy">복사</string>
     <!-- Colored Themes -->
     <string name="catppuccino">캣푸치노</string>
@@ -148,16 +148,16 @@
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">인증 취소.</string>
     <string name="text_authentication_error">인증 오류:%1$s(코드 %2$d)</string>
-    <string name="text_authentication_failed">인증에 실패했습니다.</string>
-    <string name="text_biometric_login">mLauncher를 위한 생체 인식 로그인</string>
-    <string name="text_biometric_login_sub">생체 인식 정보를 사용하여 로그인하세요.</string>
+    <string name="text_authentication_failed">인증 실패.</string>
+    <string name="text_biometric_login">mLauncher의 생체인식 로그인</string>
+    <string name="text_biometric_login_sub">생체 인식 자격 증명을 사용하여 로그인</string>
     <!-- Crash Strings -->
     <string name="acra_crash">충돌</string>
-    <string name="acra_dialog_text">죄송합니다만, %1$s 에서 예상치 못한 문제가 발생하여 종료해야 합니다. 충돌 보고서를 보내 개선에 도움을 주세요.\n\n%1$s 는 귀하의 개인 정보를 소중히 여기며 수집된 데이터는 앱 안정성을 개선하는 데에만 사용됩니다. 개인 정보는 수집되지 않습니다. 지원해 주셔서 감사합니다!</string>
+    <string name="acra_dialog_text">죄송합니다. %1$s 에 예상치 못한 문제가 발생하여 종료해야 합니다. 충돌 보고서를 보내 개선에 도움을 주세요.\n\n%1$s 은 귀하의 개인정보를 소중히 여기며, 수집된 데이터는 앱 안정성 향상을 위해서만 사용됩니다. 개인정보는 수집되지 않습니다. 귀하의 지원에 감사드립니다!</string>
     <string name="acra_send_report">보고서 보내기</string>
     <string name="acra_dont_send">보내지 마세요</string>
     <string name="acra_mail_body">애플리케이션에서 충돌이 발생했습니다.\n\n아래는 기기의 세부 정보입니다. 오류 로그가 참고용으로 파일로 첨부되었습니다. 이 문제를 해결하는 데 도움을 주시면 감사하겠습니다.\n\n기기 정보: \n[아래 정보를 입력하고 대괄호 사이의 내용은 제거하세요. 그렇지 않으면 무시됩니다.]\n\n- 앱 버전: [0.0.1]\n- Android 버전: [14]\n- 기기 이름: [Android Pixel 69]\n- 설치 위치: [github, fdroid, obtanium, self]\n\n이 문제에 대한 귀하의 신속한 대응에 감사드립니다.\n\n감사합니다.\n</string>
-    <string name="settings_font_system">체계</string>
+    <string name="settings_font_system">System</string>
     <!-- Search Stings -->
     <string name="search_engine">검색 엔진</string>
     <string name="search_google">Google</string>
@@ -167,17 +167,18 @@
     <string name="search_brave">용감한</string>
     <string name="search_swisscow">스위스카우즈</string>
     <!-- Unsorted Strings -->
-    <string name="show_apps">모든 앱</string>
+    <string name="show_apps">All apps</string>
     <string name="total_screen_time">총 화면 시간</string>
     <string name="can_not_delete_system_apps">시스템 앱을 삭제할 수 없습니다</string>
-    <string name="please_select_app">앱을 선택해주세요</string>
-    <string name="drawer_list_empty_hint">앱을 찾을 수 없습니다</string>
-    <string name="long_press_for_settings">설정을 위해 아무 곳이나 길게 누르세요</string>
-    <string name="swipe_up_for_apps">모든 앱을 위로 스와이프하세요</string>
-    <string name="app_drawer_tips">팁: 아래로 스와이프하여 해제합니다. 스크롤하여 키보드를 숨깁니다.</string>
-    <string name="double_tap_lock_is_enabled_message">더블 탭 잠금이 지문 또는 얼굴 잠금 해제를 비활성화하는 경우, mLauncher 설정을 열고 \'실험적\'을 탭하고 지침을 따르세요. 감사합니다.</string>
-    <string name="double_tap_lock_uninstall_message">두 번 탭하면 잠금 기능이 활성화됩니다. \n\n참고: mLauncher를 삭제하려면 먼저 이 기능을 해제하세요.</string>
-    <string name="accessibility_service_name">mLauncher 액션 서비스</string>
-    <string name="accessibility_service_description">이 접근성 서비스를 통해 mLauncher는 화면 잠금이나 빠른 설정 열기와 같은 특정 작업을 수행할 수 있습니다. 당사의 접근성 서비스는 어떠한 데이터도 수집하거나 공유하지 않습니다.</string>
+    <string name="please_select_app">앱을 선택하세요</string>
+    <string name="drawer_list_empty_hint">No apps found</string>
+    <string name="long_press_for_settings">Long press anywhere for settings</string>
+    <string name="swipe_up_for_apps">Swipe up for all apps</string>
+    <string name="app_drawer_tips">Tip: Swipe down to dismiss. Scroll to hide keyboard.</string>
+    <string name="double_tap_lock_is_enabled_message">If double tap lock disables fingerprint or face unlock, open mLauncher settings, tap on \'experimental\' and follow the instructions. Thank you.</string>
+    <string name="double_tap_lock_uninstall_message">Double tap to lock enabled.
+		\n\nNote: Turn this OFF first if you decide to delete mLauncher.</string>
+    <string name="accessibility_service_name">mLauncher Actions Service</string>
+    <string name="accessibility_service_description">이 접근성 서비스를 통해 mLauncher는 화면 잠금 또는 빠른 설정 열기와 같은 특정 작업을 수행할 수 있습니다. 당사의 접근성 서비스는 데이터를 수집하거나 공유하지 않습니다.</string>
     <string name="version">버전</string>
 </resources>
