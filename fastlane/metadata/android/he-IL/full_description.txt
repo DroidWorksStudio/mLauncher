@@ -1,79 +1,79 @@
-Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal and clean.
+מזלג מ- <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. מינימלית ונקייה.
 
-# Forked with extra features
+# מזולג עם תכונות נוספות
 
-- Removed clutter, like ads and links.
-- You can rename apps in the app-drawer (Renaming apps on the home screen is already supported. Just long-click on an app on the home screen and start typing.)
-- We have added a lot more options for gestures on the home screen:
-    - Gestures are now:
-        - Swiping up, down, left, right
-        - Clicking on the clock
-        - Clicking on the Date
-    - Possible actions now include:
-        - Open specified app
-        - Display app list
-        - Locking the screen
-        - Show Recent opened apps
-        - Opening the notification drawer
-        - Opening the quick settings
-        - Power Dialog
-        - Take A Screenshot
-        - Disable Gesture
-- You can also position the clock independently of the home apps.
-- Change alignment of apps in app-drawer independent from homescreen.
-- Change font size of sections of the homescreen independent of each other.
-- Removed internet permission. You never know what an app developer wants to know about you.
-- Lock settings behind biometrics (toggle)
-- Added the ability to report crashing via email.
-- Added the ability to view app usage time.
+- הוסר העומס, כמו מודעות וקישורים.
+- אתה יכול לשנות את שמות האפליקציות במגירת האפליקציות (שינוי שמות של אפליקציות במסך הבית כבר נתמך. פשוט לחץ לחיצה ארוכה על אפליקציה במסך הבית והתחל להקליד.)
+- הוספנו הרבה יותר אפשרויות למחוות במסך הבית:
+    - המחוות הן כעת:
+        - החלקה למעלה, למטה, שמאלה, ימינה
+        - לחיצה על השעון
+        - לחיצה על התאריך
+    - פעולות אפשריות כעת כוללות:
+        - פתח את האפליקציה שצוינה
+        - הצג רשימת אפליקציות
+        - נעילת המסך
+        - הצג אפליקציות שנפתחו לאחרונה
+        - פתיחת מגירת ההודעות
+        - פתיחת ההגדרות המהירות
+        - דיאלוג כוח
+        - צלם צילום מסך
+        - השבת מחוות
+- ניתן גם למקם את השעון ללא תלות באפליקציות הביתיות.
+- שנה יישור של אפליקציות במגירת האפליקציות ללא תלות במסך הבית.
+- שנה את גודל הגופן של חלקים במסך הבית ללא תלות זה בזה.
+- הוסרה הרשאת אינטרנט. אתה אף פעם לא יודע מה מפתח אפליקציות רוצה לדעת עליך.
+- הגדרות נעילה מאחורי ביומטריה (החלפת מצב)
+- נוספה היכולת לדווח על קריסה באמצעות דואר אלקטרוני.
+- נוספה את היכולת להציג את זמן השימוש באפליקציה.
 
-## Translations:
+## תרגומים:
 
-- A lot of people have translated the app to the following languages. Many thanks to you all.
-  - Afrikaans
-  - Arabic
-  - Albanian
-  - Bulgarian
-  - Chinese
-  - Croatian
-  - Czech
-  - Danish
-  - English
-  - Estonian
-  - Filipino
-  - Finnish
-  - French
-  - Georgian
-  - German
-  - Greek
-  - Hawaiian
-  - Hebrew
-  - Hindi
-  - Hungarian
-  - Icelandic
-  - Indonesian
-  - Irish
-  - Italian
-  - Japanese
-  - Korean
-  - Lithuanian
-  - Luxembourgish
-  - Malay
-  - Malagasy
-  - Malayalam
-  - Norwegian
-  - Nepali
-  - Persian
-  - Polish
-  - Portuguese (European)
-  - Punjabi
-  - Russian
-  - Serbian
-  - Sindhi
-  - Slovak
-  - Spanish
-  - Swedish
-  - Thai
-  - Turkish
-  - Ukrainian
-  - Vietnamese
+- הרבה אנשים תרגמו את האפליקציה לשפות הבאות. תודה רבה לכולכם.
+  - אפריקאנס
+  - ערבית
+  - אלבני
+  - בולגרית
+  - סינית
+  - קרואטית
+  - צ'כית
+  - דנית
+  - אנגלית
+  - אסטונית
+  - פיליפינית
+  - פינית
+  - צרפתית
+  - גרוזינית
+  - גרמנית
+  - יוונית
+  - הוואי
+  - עברית
+  - הינדי
+  - הונגרית
+  - איסלנדית
+  - אינדונזית
+  - אירית
+  - איטלקי
+  - יפני
+  - קוריאנית
+  - ליטאי
+  - לוקסמבורג
+  - מלאית
+  - מלגזית
+  - מלאיאלאם
+  - נורווגית
+  - נפאלית
+  - פרסית
+  - פולני
+  - פורטוגזית (אירופאית)
+  - פנג'בי
+  - רוסית
+  - סרבית
+  - סינדהי
+  - סלובקית
+  - ספרדית
+  - שוודית
+  - תאילנדית
+  - טורקית
+  - אוקראינית
+  - ויאטנמית
