@@ -1,64 +1,64 @@
 <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>'den türetilmiştir. Minimal ve temiz.
 
-# Ekstra özelliklerle çatallandı
+#Daha fazla özelliklli bir alıntı.
 
-- Reklamlar ve bağlantılar gibi gereksiz içerikler kaldırıldı.
-- Uygulama çekmecesindeki uygulamaları yeniden adlandırabilirsiniz (Ana ekrandaki uygulamaları yeniden adlandırma zaten destekleniyor. (Ana ekranda bir uygulamaya uzun tıklayın ve yazmaya başlayın.)
-- Ana ekrana hareketler için çok daha fazla seçenek ekledik:
-    - Jestler artık şöyle:
-        - Yukarı, aşağı, sola, sağa kaydırma
-        - Saate tıklamak
-        - Tarihe Tıklayarak
+- Reklamlar ve bağlantılar gibi dağınıklık kaldırıldı.
+- Uygulama-çekmecesindeki uygulamaları yeniden adlandırabilirsiniz (Ana ekrandaki uygulamaları yeniden adlandırmak zaten desteklenmektedir. Ana ekrandaki bir uygulamaya uzun tıklayıp yazmaya başlamanız yeterli.)
+- Ana ekran'daki jestler için  çok daha fazla seçenek var:
+    - Jestler Günümüz:
+        - Yukarı, aşağı, sola, sağa Kaydırma
+        - Saat'e Tıklama
+        - Tarih'e Tıklama
     - Olası eylemler artık şunları içeriyor:
         - Belirtilen uygulamayı aç
         - Uygulama listesini görüntüle
-        - Ekranı kilitleme
-        - Son açılan uygulamaları göster
+        - Ekranı Kilitle
+        - En son açılan uygulamaları göster
         - Bildirim çekmecesini açma
-        - Hızlı ayarların açılması
-        - Güç Diyalogu
-        - Ekran Görüntüsü Alın
+        - Hızlı ayarları açma
+        - Güç Diyaloğu
+        - Ekran görüntüsü al
         - Hareketi Devre Dışı Bırak
 - Saati ev uygulamalarından bağımsız olarak da konumlandırabilirsiniz.
-- Uygulama çekmecesindeki uygulamaların hizalamasını ana ekrandan bağımsız olarak değiştirin.
-- Ana ekrandaki bölümlerin yazı büyüklüklerini birbirinden bağımsız olarak değiştirebilme.
-- İnternet izni kaldırıldı. Bir uygulama geliştiricisinin sizin hakkınızda ne bilmek istediğini asla bilemezsiniz.
-- Biyometrik verilerin arkasındaki ayarları kilitle (değiştir)
-- Çökmeleri e-posta yoluyla bildirme özelliği eklendi.
+- Ana ekrandan bağımsız olarak uygulama çekmecesindeki uygulamaların hizalamasını değiştirin.
+- Ana ekranın bölümlerinin yazı tipi boyutunu birbirinden bağımsız olarak değiştirin.
+- İnternet izni kaldırıldı. Bir uygulama geliştiricisinin sizin hakkınızda ne bilmek istediğini asla bilemezsin.
+- Biyometrinin arkasındaki ayarları kilitleyin (geçiş)
+- Çökmeyi e-posta yoluyla bildirme yeteneği eklendi.
 - Uygulama kullanım süresini görüntüleme özelliği eklendi.
 
 ## Çeviriler:
 
-- Uygulamayı aşağıdaki dillere çok sayıda kişi çevirdi. Hepinize çok teşekkür ederim.
+- Birçok kişi uygulamayı aşağıdaki dillere çevirmiştir. Hepinize çok teşekkürler.
   - Afrikaans
   - Arapça
   - Arnavutça
   - Bulgarca
   - Çince
   - Hırvatça
-  - Çek
-  - Danimarkalı
+  - Çekçe
+  - Danca
   - İngilizce
-  - Estonyaca
-  - Filipinli
+  - Estonca
+  - Filipince
   - Fince
   - Fransızca
-  - Gürcü
+  - Gürcüce
   - Almanca
   - Yunanca
-  - Hawaii
+  - Hawaii dili
   - İbranice
   - Hintçe
   - Macarca
   - İzlandaca
   - Endonezyaca
-  - İrlandalı
-  - İtalyan
+  - İrlandaca
+  - İtalyanca
   - Japonca
   - Korece
   - Litvanyaca
   - Lüksemburgca
-  - Malay
+  - Malayca
   - Malgaşça
   - Malayalam
   - Norveççe
@@ -66,14 +66,14 @@
   - Farsça
   - Lehçe
   - Portekizce (Avrupa)
-  - Pencapça
+  - Punjabi
   - Rusça
   - Sırpça
   - Sindhi
-  - Slovak
+  - Slovakça
   - İspanyolca
-  - İsveççe
+  - İsveçce
   - Tayca
   - Türkçe
-  - Ukraynaca
+  - Ukrayna
   - Vietnamca
