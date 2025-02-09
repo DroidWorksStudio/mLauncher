@@ -1,79 +1,79 @@
-<a href="https://github.com/tanujnotes/Olauncher">Olauncher</a> 'dan alındı. Minimal ve temiz.
+Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal and clean.
 
-#Daha fazla özelliklli bir alıntı.
+# Forked with extra features
 
-- Reklamlar ve bağlantılar gibi dağınıklık kaldırıldı.
-- Uygulama-çekmecesindeki uygulamaları yeniden adlandırabilirsiniz (Ana ekrandaki uygulamaları yeniden adlandırmak zaten desteklenmektedir. Ana ekrandaki bir uygulamaya uzun tıklayıp yazmaya başlamanız yeterli.)
-- Ana ekran'daki jestler için  çok daha fazla seçenek var:
-    - Jestler Günümüz:
-        - Yukarı, aşağı, sola, sağa Kaydırma
-        - Saat'e Tıklama
-        - Tarih'e Tıklama
-    - Olası eylemler artık şunları içeriyor:
-        - Belirtilen uygulamayı aç
-        - Uygulama listesini görüntüle
-        - Ekranı Kilitle
-        - En son açılan uygulamaları göster
-        - Bildirim çekmecesini açma
-        - Hızlı ayarları açma
-        - Güç Diyaloğu
-        - Ekran görüntüsü al
-        - Hareketi Devre Dışı Bırak
-- Saati ev uygulamalarından bağımsız olarak da konumlandırabilirsiniz.
-- Ana ekrandan bağımsız olarak uygulama çekmecesindeki uygulamaların hizalamasını değiştirin.
-- Ana ekranın bölümlerinin yazı tipi boyutunu birbirinden bağımsız olarak değiştirin.
-- İnternet izni kaldırıldı. Bir uygulama geliştiricisinin sizin hakkınızda ne bilmek istediğini asla bilemezsin.
-- Biyometrinin arkasındaki ayarları kilitleyin (geçiş)
-- Çökmeyi e-posta yoluyla bildirme yeteneği eklendi.
-- Uygulama kullanım süresini görüntüleme özelliği eklendi.
+- Removed clutter, like ads and links.
+- You can rename apps in the app-drawer (Renaming apps on the home screen is already supported. Just long-click on an app on the home screen and start typing.)
+- We have added a lot more options for gestures on the home screen:
+    - Gestures are now:
+        - Swiping up, down, left, right
+        - Clicking on the clock
+        - Clicking on the Date
+    - Possible actions now include:
+        - Open specified app
+        - Display app list
+        - Locking the screen
+        - Show Recent opened apps
+        - Opening the notification drawer
+        - Opening the quick settings
+        - Power Dialog
+        - Take A Screenshot
+        - Disable Gesture
+- You can also position the clock independently of the home apps.
+- Change alignment of apps in app-drawer independent from homescreen.
+- Change font size of sections of the homescreen independent of each other.
+- Removed internet permission. You never know what an app developer wants to know about you.
+- Lock settings behind biometrics (toggle)
+- Added the ability to report crashing via email.
+- Added the ability to view app usage time.
 
-## Çeviriler:
+## Translations:
 
-- Birçok kişi uygulamayı aşağıdaki dillere çevirmiştir. Hepinize çok teşekkürler.
+- A lot of people have translated the app to the following languages. Many thanks to you all.
   - Afrikaans
-  - Arapça
-  - Arnavutça
-  - Bulgarca
-  - Çince
-  - Hırvatça
-  - Çekçe
-  - Danca
-  - İngilizce
-  - Estonca
-  - Filipince
-  - Fince
-  - Fransızca
-  - Gürcüce
-  - Almanca
-  - Yunanca
-  - Hawaii dili
-  - İbranice
-  - Hintçe
-  - Macarca
-  - İzlandaca
-  - Endonezyaca
-  - İrlandaca
-  - İtalyanca
-  - Japonca
-  - Korece
-  - Litvanyaca
-  - Lüksemburgca
-  - Malayca
-  - Malgaşça
+  - Arabic
+  - Albanian
+  - Bulgarian
+  - Chinese
+  - Croatian
+  - Czech
+  - Danish
+  - English
+  - Estonian
+  - Filipino
+  - Finnish
+  - French
+  - Georgian
+  - German
+  - Greek
+  - Hawaiian
+  - Hebrew
+  - Hindi
+  - Hungarian
+  - Icelandic
+  - Indonesian
+  - Irish
+  - Italian
+  - Japanese
+  - Korean
+  - Lithuanian
+  - Luxembourgish
+  - Malay
+  - Malagasy
   - Malayalam
-  - Norveççe
-  - Nepalce
-  - Farsça
-  - Lehçe
-  - Portekizce (Avrupa)
+  - Norwegian
+  - Nepali
+  - Persian
+  - Polish
+  - Portuguese (European)
   - Punjabi
-  - Rusça
-  - Sırpça
+  - Russian
+  - Serbian
   - Sindhi
-  - Slovakça
-  - İspanyolca
-  - İsveçce
-  - Tayca
-  - Türkçe
-  - Ukrayna
-  - Vietnamca
+  - Slovak
+  - Spanish
+  - Swedish
+  - Thai
+  - Turkish
+  - Ukrainian
+  - Vietnamese
