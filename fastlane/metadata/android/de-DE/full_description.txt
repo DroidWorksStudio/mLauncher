@@ -1,79 +1,79 @@
-Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal and clean.
+Abgezweigt von <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimalistisch und sauber.
 
-# Forked with extra features
+# Mit zusätzlichen Funktionen gegabelt
 
-- Removed clutter, like ads and links.
-- You can rename apps in the app-drawer (Renaming apps on the home screen is already supported. Just long-click on an app on the home screen and start typing.)
-- We have added a lot more options for gestures on the home screen:
-    - Gestures are now:
-        - Swiping up, down, left, right
-        - Clicking on the clock
-        - Clicking on the Date
-    - Possible actions now include:
-        - Open specified app
-        - Display app list
-        - Locking the screen
-        - Show Recent opened apps
-        - Opening the notification drawer
-        - Opening the quick settings
-        - Power Dialog
-        - Take A Screenshot
-        - Disable Gesture
-- You can also position the clock independently of the home apps.
-- Change alignment of apps in app-drawer independent from homescreen.
-- Change font size of sections of the homescreen independent of each other.
-- Removed internet permission. You never know what an app developer wants to know about you.
-- Lock settings behind biometrics (toggle)
-- Added the ability to report crashing via email.
-- Added the ability to view app usage time.
+- Unordnung wie Anzeigen und Links entfernt.
+- Sie können Apps in der App-Schublade umbenennen (das Umbenennen von Apps auf dem Startbildschirm wird bereits unterstützt). Klicken Sie einfach lange auf eine App auf dem Startbildschirm und beginnen Sie mit der Eingabe.)
+- Wir haben viele weitere Optionen für Gesten auf dem Startbildschirm hinzugefügt:
+    - Gesten sind jetzt:
+        - Wischen Sie nach oben, unten, links, rechts
+        - Klicken Sie auf die Uhr
+        - Klicken Sie auf das Datum
+    - Zu den möglichen Aktionen gehören jetzt:
+        - Öffnen Sie die angegebene App
+        - App-Liste anzeigen
+        - Sperren des Bildschirms
+        - Zuletzt geöffnete Apps anzeigen
+        - Öffnen der Benachrichtigungsleiste
+        - Öffnen der Schnelleinstellungen
+        - Power-Dialog
+        - Machen Sie einen Screenshot
+        - Geste deaktivieren
+- Sie können die Uhr auch unabhängig von den Home-Apps positionieren.
+- Ändern Sie die Ausrichtung von Apps im App-Drawer unabhängig vom Homescreen.
+- Ändern Sie die Schriftgröße einzelner Abschnitte des Homescreens unabhängig voneinander.
+- Internetberechtigung entfernt. Sie wissen nie, was ein App-Entwickler über Sie wissen möchte.
+- Einstellungen hinter Biometrie sperren (umschalten)
+- Möglichkeit hinzugefügt, Abstürze per E-Mail zu melden.
+- Möglichkeit zum Anzeigen der App-Nutzungsdauer hinzugefügt.
 
-## Translations:
+## Übersetzungen:
 
-- A lot of people have translated the app to the following languages. Many thanks to you all.
+- Viele Leute haben die App in die folgenden Sprachen übersetzt. Vielen Dank an euch alle.
   - Afrikaans
-  - Arabic
-  - Albanian
-  - Bulgarian
-  - Chinese
-  - Croatian
-  - Czech
-  - Danish
-  - English
-  - Estonian
-  - Filipino
-  - Finnish
-  - French
-  - Georgian
-  - German
-  - Greek
-  - Hawaiian
-  - Hebrew
+  - Arabisch
+  - Albanisch
+  - Bulgarisch
+  Chinesisch
+  - Kroatisch
+  - Tschechisch
+  - Dänisch
+  - Englisch
+  - Estnisch
+  - Philippinisch
+  - Finnisch
+  - Französisch
+  - Georgisch
+  - Deutsch
+  - Griechisch
+  - Hawaiisch
+  - Hebräisch
   - Hindi
-  - Hungarian
-  - Icelandic
-  - Indonesian
-  - Irish
-  - Italian
-  - Japanese
+  - Ungarisch
+  - Isländisch
+  - Indonesisch
+  - Irisch
+  - Italienisch
+  Japanisch
   - Korean
-  - Lithuanian
-  - Luxembourgish
-  - Malay
-  - Malagasy
-  - Malayalam
-  - Norwegian
-  - Nepali
-  - Persian
-  - Polish
-  - Portuguese (European)
-  - Punjabi
-  - Russian
-  - Serbian
-  - Sindhi
-  - Slovak
-  - Spanish
-  - Swedish
+  - Litauisch
+  - Luxemburgisch
+  - Malaiisch
+  - Madagassisch
+  - Deutsch
+  - Norwegisch
+  - Nepalesisch
+  - Persisch
+  - Polnisch
+  Portugiesisch (Europäisch)
+  - Deutsch
+  - Russisch
+  Serbisch
+  - Singhalesisch
+  - Slowakisch
+  Spanisch
+  Schwedisch
   - Thai
-  - Turkish
-  - Ukrainian
-  - Vietnamese
+  Türkisch
+  - Ukrainisch
+  - Vietnamesisch
