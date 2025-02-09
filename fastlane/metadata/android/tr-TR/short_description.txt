@@ -1,1 +1,1 @@
-Olauncher'dan çatallanmış, +minimizasyon, +özelleştirilebilirlik
+Olauncher'dan türetilmiştir, +minimalizasyon, +özelleştirilebilirlik
