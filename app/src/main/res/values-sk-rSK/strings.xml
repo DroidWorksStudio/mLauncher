@@ -3,7 +3,7 @@
     <!-- Base Settings -->
     <string name="select_app">Vyberte App</string>
     <!-- Strings used for settings menus -->
-    <string name="settings_name">Nastavenia MLaunchera</string>
+    <string name="settings_name">Nastavenia mlaunchera</string>
     <string name="settings_features_title">Vlastnosti</string>
     <string name="settings_features_description">Zlepšite svoju produktivitu.</string>
     <string name="settings_look_feel_title">Pozrite sa a cíťte</string>
