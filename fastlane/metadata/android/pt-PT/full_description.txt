@@ -1,37 +1,37 @@
 Bifurcado de <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mínimo e limpo.
 
-# Bifurcado com recursos extras
+# Forked com recursos extras
 
-- Remoção de desordem, como anúncios e links.
-- Você pode renomear aplicativos na gaveta de aplicativos (Renomear aplicativos na tela inicial já é suportado). Basta clicar longamente em um aplicativo na tela inicial e começar a digitar.)
-- Adicionamos muito mais opções de gestos na tela inicial:
-    - Os gestos agora são:
-        - Deslizar para cima, para baixo, para a esquerda, para a direita
+- Removida a desordem, como anúncios e links.
+- É possível renomear aplicações na gaveta da aplicação (a renomeação de aplicações no ecrã inicial já é suportada. Basta clicar longamente em um aplicativo na tela inicial e começar a digitar.)
+- Muito mais personalizabilidade nos gestos do ecrã inicial
+    - Os gestos estão agora:
+        - Deslizando para cima, para baixo, esquerda, direita
         - Clicando no relógio
-        - Clicando na data
-    - As ações possíveis agora incluem:
-        - Abra o aplicativo especificado
+        - Clicando na Data
+    - Possíveis ações agora incluem:
+        - Abrir o aplicativo especificado
         - Exibir lista de aplicativos
-        - Bloqueio de tela
+        - Bloqueando a tela
         - Mostrar aplicativos abertos recentemente
-        - Abrindo a gaveta de notificações
-        - Abrindo as configurações rápidas
+        - Abrindo a gaveta de notificação
+        - Abrir as configurações rápidas
         - Diálogo de energia
-        - Tire uma captura de tela
-        - Desativar Gesto
+        - Faça uma captura de tela
+        - Desativar gesto
 - Você também pode posicionar o relógio independentemente dos aplicativos domésticos.
-- Alterar o alinhamento dos aplicativos na gaveta de aplicativos independentemente da tela inicial.
-- Altere o tamanho da fonte das seções da tela inicial independentemente umas das outras.
-- Permissão de internet removida. Você nunca sabe o que um desenvolvedor de aplicativo quer saber sobre você.
+- Altere o alinhamento de aplicativos na gaveta de aplicativos independente da tela inicial.
+- Altere o tamanho da fonte das seções da tela inicial independentes umas das outras.
+- Removida a permissão da Internet - Removida a permissão da Internet - Removida a permissão da Internet Você nunca sabe o que um desenvolvedor do app quer saber sobre você.
 - Bloquear configurações por trás da biometria (alternar)
 - Adicionada a capacidade de relatar falhas por e-mail.
 - Adicionada a capacidade de visualizar o tempo de uso do aplicativo.
 
 ## Traduções:
 
-- Muitas pessoas traduziram o aplicativo para os seguintes idiomas. Muito obrigado a todos vocês.
+- Muitas pessoas traduziram a aplicação para as seguintes línguas. Muito obrigado a todos vós.
   - Africâner
-  - Árabe
+  - árabe
   - Albanês
   - Búlgaro
   - Chinês
@@ -39,41 +39,41 @@ Bifurcado de <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. M�
   - Checo
   - Dinamarquês
   - Inglês
-  - Estoniano
+  - Estónio
   - Filipino
   - Finlandês
   - Francês
   - Georgiano
   - Alemão
   - Grego
-  - Havaiano
+  - havaiano
   - Hebraico
   - Hindi
   - Húngaro
   - Islandês
   - Indonésio
   - Irlandês
-  - Italian
+  - Italiano
   - Japonês
   - Coreano
   - Lituano
   - Luxemburguês
   - Malaio
   - Malgaxe
-  - Malaiala
+  - Malayalam
   - Norueguês
   - Nepalês
   - Persa
-  - Polonês
+  - Polaco
   - Português (Europeu)
-  - Punjab
+  - Punjabi
   - Russo
   - Sérvio
-  - Sindi
+  - Sindhi
   - Eslovaco
   - Espanhol
   - Sueco
-  - Tailandês
+  - Thai
   - Turco
   - Ucraniano
   - Vietnamita
