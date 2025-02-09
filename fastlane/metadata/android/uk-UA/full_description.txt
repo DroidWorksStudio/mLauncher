@@ -1,79 +1,79 @@
-Розгалужено з <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Мінімальний і чистий.
+Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal and clean.
 
-# Формування з додатковими можливостями
+# Forked with extra features
 
-- Видалено безлад, як-от оголошення та посилання.
-- Ви можете перейменовувати програми в панелі програм (перейменування програм на головному екрані вже підтримується. Просто клацніть програму на головному екрані та почніть вводити текст.)
-- Ми додали набагато більше опцій для жестів на головному екрані:
-    - Жести зараз:
-        - Свайп вгору, вниз, ліворуч, праворуч
-        - Натискання на годинник
-        - Клік на Дата
-    - Можливі дії тепер включають:
-        - Відкрити вказаний додаток
-        - Показати список програм
-        - Блокування екрану
-        - Показати останні відкриті програми
-        - Відкриття панелі сповіщень
-        - Відкриття швидких налаштувань
-        - Діалог живлення
-        - Зробіть знімок екрана
-        - Вимкнути жести
-- Ви також можете розташувати годинник незалежно від домашніх програм.
-- Змініть вирівнювання програм у ящику програм незалежно від головного екрана.
-- Змінюйте розмір шрифту розділів головного екрана незалежно один від одного.
-- Видалено дозвіл на доступ до Інтернету. Ви ніколи не знаєте, що хоче знати про вас робить додаток.
-- Блокування налаштувань за біометрією (перемикач)
-— Додано можливість повідомляти про збій електронною поштою.
-— Додана можливість перегляду часу використання програми.
+- Removed clutter, like ads and links.
+- You can rename apps in the app-drawer (Renaming apps on the home screen is already supported. Just long-click on an app on the home screen and start typing.)
+- We have added a lot more options for gestures on the home screen:
+    - Gestures are now:
+        - Swiping up, down, left, right
+        - Clicking on the clock
+        - Clicking on the Date
+    - Possible actions now include:
+        - Open specified app
+        - Display app list
+        - Locking the screen
+        - Show Recent opened apps
+        - Opening the notification drawer
+        - Opening the quick settings
+        - Power Dialog
+        - Take A Screenshot
+        - Disable Gesture
+- You can also position the clock independently of the home apps.
+- Change alignment of apps in app-drawer independent from homescreen.
+- Change font size of sections of the homescreen independent of each other.
+- Removed internet permission. You never know what an app developer wants to know about you.
+- Lock settings behind biometrics (toggle)
+- Added the ability to report crashing via email.
+- Added the ability to view app usage time.
 
-# Переклади:
+## Translations:
 
-- Багато людей переклали додаток на наступні мови. Щиро дякую вам усім.
-  - африкаанс
-  - арабська
-  - албанська
-  - болгарський
-  - китайський
-  - хорватська
-  - чеська
-  - данська
-  - Англійська мова
-  - естонська
-  - філіппінський
-  - фінська
-  - французький
-  - грузинський
-  - німецька
-  - грецький
-  - гавайський
-  - іврит
-  - хінді
-  - угорська
-  - ісландська
-  - індонезійський
-  - ірландський
-  - Італійська
-  - японський
-  - корейська
-  - литовська
-  - Люксембурзький
-  - малайська
-  - малагасійська
-  - малаялам
-  - норвезький
-  - непальська
-  - перська
-  - польська
-  - Португальська (європейська)
-  - пенджабська
-  - російська
-  - сербська
-  - Сіндхі
-  – словацький
-  - іспанська
-  - шведський
-  - тайська
-  - турецький
-  - український
-  - в'єтнамці
+- A lot of people have translated the app to the following languages. Many thanks to you all.
+  - Afrikaans
+  - Arabic
+  - Albanian
+  - Bulgarian
+  - Chinese
+  - Croatian
+  - Czech
+  - Danish
+  - English
+  - Estonian
+  - Filipino
+  - Finnish
+  - French
+  - Georgian
+  - German
+  - Greek
+  - Hawaiian
+  - Hebrew
+  - Hindi
+  - Hungarian
+  - Icelandic
+  - Indonesian
+  - Irish
+  - Italian
+  - Japanese
+  - Korean
+  - Lithuanian
+  - Luxembourgish
+  - Malay
+  - Malagasy
+  - Malayalam
+  - Norwegian
+  - Nepali
+  - Persian
+  - Polish
+  - Portuguese (European)
+  - Punjabi
+  - Russian
+  - Serbian
+  - Sindhi
+  - Slovak
+  - Spanish
+  - Swedish
+  - Thai
+  - Turkish
+  - Ukrainian
+  - Vietnamese
