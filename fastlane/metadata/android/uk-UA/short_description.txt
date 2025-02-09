@@ -1,1 +1,1 @@
-Розгалужено з Olauncher, +мінімізація, +настроюваність
+Forked from Olauncher, +minimalization, +customizability
