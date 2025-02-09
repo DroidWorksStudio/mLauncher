@@ -62,8 +62,8 @@ class FavoriteFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val hex = getHexForOpacity(requireContext(), prefs)
-        binding.mainLayout.setBackgroundColor(hex)
+        val backgroundColor = getHexForOpacity(prefs)
+        binding.mainLayout.setBackgroundColor(backgroundColor)
 
         viewModel = activity?.run {
             ViewModelProvider(this)[MainViewModel::class.java]
@@ -82,7 +82,7 @@ class FavoriteFragment : Fragment() {
         super.onStart()
         if (prefs.showStatusBar) showStatusBar(requireActivity()) else hideStatusBar(requireActivity())
 
-        val backgroundColor = getHexForOpacity(requireContext(), prefs)
+        val backgroundColor = getHexForOpacity(prefs)
         binding.mainLayout.setBackgroundColor(backgroundColor)
     }
 
@@ -189,7 +189,7 @@ class FavoriteFragment : Fragment() {
                 val view = layoutInflater.inflate(R.layout.home_app_button, null) as TextView
                 view.apply {
                     val appLabel =
-                        prefs.getHomeAppModel(i).activityLabel.ifEmpty { getString(R.string.app) }
+                        prefs.getHomeAppModel(i).activityLabel.ifEmpty { getString(R.string.select_app) }
                     textSize = prefs.appSize.toFloat()
                     id = i
                     text = appLabel

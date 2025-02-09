@@ -14,16 +14,17 @@ import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material.Text
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.height
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.res.vectorResource
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.isSpecified
@@ -33,7 +34,7 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import com.github.droidworksstudio.mlauncher.BuildConfig
+import com.github.droidworksstudio.common.showShortToast
 import com.github.droidworksstudio.mlauncher.MainViewModel
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.Constants
@@ -47,23 +48,12 @@ import com.github.droidworksstudio.mlauncher.databinding.FragmentSettingsBinding
 import com.github.droidworksstudio.mlauncher.helper.AppReloader
 import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
 import com.github.droidworksstudio.mlauncher.helper.hideStatusBar
-import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
-import com.github.droidworksstudio.mlauncher.helper.loadFile
-import com.github.droidworksstudio.mlauncher.helper.openAppInfo
-import com.github.droidworksstudio.mlauncher.helper.resetDefaultLauncher
 import com.github.droidworksstudio.mlauncher.helper.showStatusBar
-import com.github.droidworksstudio.mlauncher.helper.storeFile
 import com.github.droidworksstudio.mlauncher.listener.DeviceAdmin
 import com.github.droidworksstudio.mlauncher.style.SettingsTheme
-import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsArea
-import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsGestureItem
-import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsItem
-import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsItemFont
-import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsSliderItem
-import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsTextButton
-import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsThreeButtonRow
-import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsToggle
-import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsTopView
+import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.HeaderWithIconAndTitle
+import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsHomeItem
+import net.mm2d.color.chooser.ColorChooserDialog
 
 class SettingsFragment : Fragment() {
 
@@ -75,8 +65,6 @@ class SettingsFragment : Fragment() {
     private var _binding: FragmentSettingsBinding? = null
     private val binding get() = _binding!!
 
-    private val offset = 5
-
     @RequiresApi(Build.VERSION_CODES.Q)
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -85,16 +73,16 @@ class SettingsFragment : Fragment() {
     ): View {
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
         prefs = Prefs(requireContext())
-        val hex = getHexForOpacity(requireContext(), prefs)
-        binding.scrollView.setBackgroundColor(hex)
+        val backgroundColor = getHexForOpacity(prefs)
+        binding.scrollView.setBackgroundColor(backgroundColor)
         return binding.root
     }
 
     @RequiresApi(Build.VERSION_CODES.Q)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val hex = getHexForOpacity(requireContext(), prefs)
-        binding.scrollView.setBackgroundColor(hex)
+        val backgroundColor = getHexForOpacity(prefs)
+        binding.scrollView.setBackgroundColor(backgroundColor)
 
 
         if (prefs.firstSettingsOpen) {
@@ -109,8 +97,10 @@ class SettingsFragment : Fragment() {
                 System -> isSystemInDarkTheme()
             }
 
+            val settingsSize = (prefs.settingsSize - 3)
+
             SettingsTheme(isDark) {
-                Settings((prefs.settingsSize - offset).sp)
+                Settings(settingsSize.sp)
             }
         }
     }
@@ -118,8 +108,8 @@ class SettingsFragment : Fragment() {
     @RequiresApi(Build.VERSION_CODES.Q)
     override fun onResume() {
         super.onResume()
-        val hex = getHexForOpacity(requireContext(), prefs)
-        binding.scrollView.setBackgroundColor(hex)
+        val backgroundColor = getHexForOpacity(prefs)
+        binding.scrollView.setBackgroundColor(backgroundColor)
     }
 
     private fun <T> createTypefaceMap(
@@ -133,23 +123,21 @@ class SettingsFragment : Fragment() {
 
     @Composable
     private fun Settings(fontSize: TextUnit = TextUnit.Unspecified) {
-        val selected = remember { mutableStateOf("") }
+        val selected = remember { mutableStateOf("selected") }
         val fs = remember { mutableStateOf(fontSize) }
         Constants.updateMaxHomePages(requireContext())
 
-        val titleFs = if (fs.value.isSpecified) {
-            (fs.value.value * 2.2).sp
+        val titleFontSize = if (fs.value.isSpecified) {
+            (fs.value.value * 1.5).sp
         } else fs.value
 
-        val iconFs = if (fs.value.isSpecified) {
-            (fs.value.value * 1.3).sp
+        val descriptionFontSize = if (fs.value.isSpecified) {
+            (fs.value.value * 1.2).sp
         } else fs.value
 
-        val changeLauncherText = if (ismlauncherDefault(requireContext())) {
-            R.string.change_default_launcher
-        } else {
-            R.string.set_as_default_launcher
-        }
+        val iconSize = if (fs.value.isSpecified) {
+            tuToDp((fs.value * 0.8))
+        } else tuToDp(fs.value)
 
         val typeMappings: Map<Constants.Fonts, Int> = mapOf(
             Constants.Fonts.System to R.font.roboto,
@@ -176,630 +164,94 @@ class SettingsFragment : Fragment() {
         val visibleSection = remember { mutableStateOf<String?>(null) }
 
         Column {
-            SettingsTopView(
-                stringResource(R.string.app_name),
-                fontSize = titleFs,
-                onClick = {
-                    openAppInfo(
-                        requireContext(),
-                        android.os.Process.myUserHandle(),
-                        BuildConfig.APPLICATION_ID
-                    )
-                },
-            ) {
-                SettingsTextButton(
-                    stringResource(changeLauncherText),
-                    fontSize = iconFs
-                ) {
-                    resetDefaultLauncher(requireContext())
-                }
-                SettingsTextButton(
-                    stringResource(R.string.favorite_apps),
-                    fontSize = iconFs
-                ) {
-                    showFavoriteApps()
-                }
-                SettingsTextButton(
-                    stringResource(R.string.hidden_apps),
-                    fontSize = iconFs
-                ) {
-                    showHiddenApps()
-                }
-            }
-            SettingsArea(
-                title = stringResource(R.string.display),
-                fontSize = titleFs,
-                selected = selected,
-                items = arrayOf(
-                    { _, onChange ->
-                        SettingsToggle(
-                            title = stringResource(R.string.show_status_bar),
-                            fontSize = iconFs,
-                            onChange = onChange,
-                            state = remember { mutableStateOf(prefs.showStatusBar) },
-                        ) { toggleStatusBar() }
-                    },
-                    { _, onChange ->
-                        SettingsToggle(
-                            title = stringResource(R.string.show_recent_apps),
-                            fontSize = iconFs,
-                            onChange = onChange,
-                            state = remember { mutableStateOf(prefs.recentAppsDisplayed) }
-                        ) { toggleRecentAppsDisplayed() }
-                    },
-                    { _, onChange ->
-                        SettingsToggle(
-                            title = stringResource(R.string.show_app_usage_stats),
-                            fontSize = iconFs,
-                            onChange = onChange,
-                            state = remember { mutableStateOf(prefs.appUsageStats) }
-                        ) { toggleAppUsageStats() }
-                    },
-                    { _, onChange ->
-                        SettingsToggle(
-                            title = stringResource(R.string.show_time),
-                            fontSize = iconFs,
-                            onChange = onChange,
-                            state = remember { mutableStateOf(prefs.showTime) }
-                        ) { toggleShowTime() }
-                    },
-                    { _, onChange ->
-                        if (prefs.showTime) {
-                            SettingsToggle(
-                                title = stringResource(R.string.show_time_format),
-                                fontSize = iconFs,
-                                onChange = onChange,
-                                state = remember { mutableStateOf(prefs.showTimeFormat) }
-                            ) { toggleShowTimeFormat() }
-                        }
-                    },
-                    { _, onChange ->
-                        SettingsToggle(
-                            title = stringResource(R.string.show_date),
-                            fontSize = iconFs,
-                            onChange = onChange,
-                            state = remember { mutableStateOf(prefs.showDate) }
-                        ) { toggleShowDate() }
-                    },
-                    { _, onChange ->
-                        SettingsToggle(
-                            title = stringResource(R.string.show_battery),
-                            fontSize = iconFs,
-                            onChange = onChange,
-                            state = remember { mutableStateOf(prefs.showBattery) }
-                        ) { toggleShowBattery() }
-                    },
-                    { _, onChange ->
-                        if (prefs.showBattery) {
-                            SettingsToggle(
-                                title = stringResource(R.string.show_battery_icon),
-                                fontSize = iconFs,
-                                onChange = onChange,
-                                state = remember { mutableStateOf(prefs.showBatteryIcon) }
-                            ) { toggleShowBatteryIcon() }
-                        }
-                    },
-                ),
-                visibleSection = visibleSection
-            )
-            SettingsArea(
-                title = stringResource(R.string.appearance),
-                fontSize = titleFs,
-                selected = selected,
-                items = arrayOf(
-                    { open, onChange ->
-                        SettingsItem(
-                            title = stringResource(R.string.theme_mode),
-                            fontSize = iconFs,
-                            open = open,
-                            onChange = onChange,
-                            currentSelection = remember { mutableStateOf(prefs.appTheme) },
-                            values = Constants.Theme.entries.toTypedArray(),
-                            onSelect = { j -> setTheme(j) }
-                        )
-                    },
-                    { open, onChange ->
-                        SettingsItem(
-                            title = stringResource(R.string.app_language),
-                            fontSize = iconFs,
-                            open = open,
-                            onChange = onChange,
-                            currentSelection = remember { mutableStateOf(prefs.language) },
-                            values = Constants.Language.entries.toTypedArray(),
-                            onSelect = { j -> setLang(j) }
-                        )
-                    },
-                    { open, onChange ->
-                        SettingsSliderItem(
-                            title = stringResource(R.string.app_text_size),
-                            fontSize = iconFs,
-                            open = open,
-                            onChange = onChange,
-                            currentSelection = remember { mutableIntStateOf(prefs.appSize) },
-                            min = Constants.TEXT_SIZE_MIN,
-                            max = Constants.TEXT_SIZE_MAX,
-                            onSelect = { f -> setAppTextSize(f) }
-                        )
-                    },
-                    { open, onChange ->
-                        SettingsSliderItem(
-                            title = stringResource(R.string.clock_text_size),
-                            fontSize = iconFs,
-                            open = open,
-                            onChange = onChange,
-                            currentSelection = remember { mutableIntStateOf(prefs.clockSize) },
-                            min = Constants.CLOCK_DATE_SIZE_MIN,
-                            max = Constants.CLOCK_DATE_SIZE_MAX,
-                            onSelect = { f -> setClockSize(f) }
-                        )
-                    },
-                    { open, onChange ->
-                        SettingsSliderItem(
-                            title = stringResource(R.string.date_text_size),
-                            fontSize = iconFs,
-                            open = open,
-                            onChange = onChange,
-                            currentSelection = remember { mutableIntStateOf(prefs.dateSize) },
-                            min = Constants.CLOCK_DATE_SIZE_MIN,
-                            max = Constants.CLOCK_DATE_SIZE_MAX,
-                            onSelect = { f -> setDateSize(f) }
-                        )
-                    },
-                    { open, onChange ->
-                        SettingsSliderItem(
-                            title = stringResource(R.string.battery_text_size),
-                            fontSize = iconFs,
-                            open = open,
-                            onChange = onChange,
-                            currentSelection = remember { mutableIntStateOf(prefs.batterySize) },
-                            min = Constants.BATTERY_SIZE_MIN,
-                            max = Constants.BATTERY_SIZE_MAX,
-                            onSelect = { f -> setBatterySize(f) }
-                        )
-                    },
-                    { open, onChange ->
-                        SettingsSliderItem(
-                            title = stringResource(R.string.app_padding_size),
-                            fontSize = iconFs,
-                            open = open,
-                            onChange = onChange,
-                            currentSelection = remember { mutableIntStateOf(prefs.textPaddingSize) },
-                            min = Constants.TEXT_MARGIN_MIN,
-                            max = Constants.TEXT_MARGIN_MAX,
-                            onSelect = { f -> setTextPaddingSize(f) }
-                        )
-                    },
-                    { open, onChange ->
-                        SettingsSliderItem(
-                            title = stringResource(R.string.background_opacity),
-                            fontSize = iconFs,
-                            open = open,
-                            onChange = onChange,
-                            currentSelection = remember { mutableIntStateOf(prefs.opacityNum) },
-                            min = Constants.MIN_OPACITY,
-                            max = Constants.MAX_OPACITY,
-                            onSelect = { j -> setOpacityNum(j) }
-                        )
-                    },
-                    { _, onChange ->
-                        SettingsToggle(
-                            title = stringResource(R.string.all_apps_text),
-                            fontSize = iconFs,
-                            onChange = onChange,
-                            state = remember { mutableStateOf(prefs.useAllAppsText) },
-                        ) { toggleAllAppsText() }
-                    },
-                    { open, onChange ->
-                        SettingsItemFont(
-                            title = stringResource(R.string.app_font),
-                            typefaces = typefaceMapFonts,
-                            fontSize = iconFs,
-                            open = open,
-                            onChange = onChange,
-                            currentSelection = remember { mutableStateOf(prefs.launcherFont) },
-                            values = Constants.Fonts.entries.toTypedArray(),
-                            onSelect = { j -> setLauncherFont(j) }
-                        )
-                    },
-                ),
-                visibleSection = visibleSection
-            )
-            SettingsArea(
-                title = stringResource(R.string.behavior),
-                fontSize = titleFs,
-                selected = selected,
-                items = arrayOf(
-                    { _, onChange ->
-                        SettingsToggle(
-                            title = stringResource(R.string.auto_show_keyboard),
-                            fontSize = iconFs,
-                            onChange = onChange,
-                            state = remember { mutableStateOf(prefs.autoShowKeyboard) },
-                        ) { toggleKeyboardText() }
-                    },
-                    { open, onChange ->
-                        if (prefs.recentAppsDisplayed) {
-                            SettingsSliderItem(
-                                title = stringResource(R.string.number_of_recents),
-                                fontSize = iconFs,
-                                open = open,
-                                onChange = onChange,
-                                currentSelection = remember { mutableIntStateOf(prefs.recentCounter) },
-                                min = Constants.RECENT_COUNTER_MIN,
-                                max = Constants.RECENT_COUNTER_MAX,
-                                onSelect = { j -> setRecentCounter(j) }
-                            )
-                        }
-                    },
-                    { _, onChange ->
-                        SettingsToggle(
-                            title = stringResource(R.string.auto_open_apps),
-                            fontSize = iconFs,
-                            onChange = onChange,
-                            state = remember { mutableStateOf(prefs.autoOpenApp) },
-                        ) { toggleAutoOpenApp() }
-                    },
-                    { open, onChange ->
-                        SettingsSliderItem(
-                            title = stringResource(R.string.filter_strength),
-                            fontSize = iconFs,
-                            open = open,
-                            onChange = onChange,
-                            currentSelection = remember { mutableIntStateOf(prefs.filterStrength) },
-                            min = Constants.FILTER_STRENGTH_MIN,
-                            max = Constants.FILTER_STRENGTH_MAX,
-                            onSelect = { j -> setFilterStrength(j) }
-                        )
-                    },
-                    { _, onChange ->
-                        SettingsToggle(
-                            title = stringResource(R.string.search_from_start),
-                            fontSize = iconFs,
-                            onChange = onChange,
-                            state = remember { mutableStateOf(prefs.searchFromStart) },
-                        ) { toggleSearchFromStart() }
-                    },
-                ),
-                visibleSection = visibleSection
-            )
-            SettingsArea(
-                title = stringResource(R.string.homescreen),
-                fontSize = titleFs,
-                selected = selected,
-                items = arrayOf(
-                    { open, onChange ->
-                        SettingsSliderItem(
-                            title = stringResource(R.string.apps_on_home_screen),
-                            fontSize = iconFs,
-                            open = open,
-                            onChange = onChange,
-                            currentSelection = remember { mutableIntStateOf(prefs.homeAppsNum) },
-                            min = Constants.MIN_HOME_APPS,
-                            max = Constants.MAX_HOME_APPS,
-                            onSelect = { j -> setHomeAppsNum(j) }
-                        )
-                    },
-                    { open, onChange ->
-                        if (prefs.homeAppsNum >= 1) {
-                            SettingsSliderItem(
-                                title = stringResource(R.string.pages_on_home_screen),
-                                fontSize = iconFs,
-                                open = open,
-                                onChange = onChange,
-                                currentSelection = remember { mutableIntStateOf(prefs.homePagesNum) },
-                                min = Constants.MIN_HOME_PAGES,
-                                max = Constants.MAX_HOME_PAGES,
-                                onSelect = { j -> setHomePagesNum(j) }
-                            )
-                        }
-                    },
-                    { _, onChange ->
-                        if (prefs.homePagesNum > 1) {
-                            SettingsToggle(
-                                title = stringResource(R.string.enable_home_pager),
-                                fontSize = iconFs,
-                                onChange = onChange,
-                                state = remember { mutableStateOf(prefs.homePagerOn) }
-                            ) { toggleHomePagerOn() }
-                        }
-                    },
-                    { _, onChange ->
-                        SettingsToggle(
-                            title = stringResource(R.string.lock_home_apps),
-                            fontSize = iconFs,
-                            onChange = onChange,
-                            state = remember { mutableStateOf(prefs.homeLocked) }
-                        ) { toggleHomeLocked() }
-                    },
-                    { _, onChange ->
-                        SettingsToggle(
-                            title = stringResource(R.string.extend_home_apps_area),
-                            fontSize = iconFs,
-                            onChange = onChange,
-                            state = remember { mutableStateOf(prefs.extendHomeAppsArea) }
-                        ) { toggleExtendHomeAppsArea() }
-                    },
-                    { _, onChange ->
-                        SettingsToggle(
-                            title = stringResource(R.string.home_alignment_bottom),
-                            fontSize = iconFs,
-                            onChange = onChange,
-                            state = remember { mutableStateOf(prefs.homeAlignmentBottom) }
-                        ) { toggleHomeAppsBottom() }
-                    }
-                ),
-                visibleSection = visibleSection
-            )
-            SettingsArea(
-                title = stringResource(R.string.alignment),
-                fontSize = titleFs,
-                selected = selected,
-                items = arrayOf(
-                    { open, onChange ->
-                        if (!prefs.appUsageStats) {
-                            SettingsItem(
-                                title = stringResource(R.string.home_alignment),
-                                fontSize = iconFs,
-                                open = open,
-                                onChange = onChange,
-                                currentSelection = remember { mutableStateOf(prefs.homeAlignment) },
-                                values = Constants.Gravity.entries.toTypedArray(),
-                                onSelect = { gravity -> setHomeAlignment(gravity) }
-                            )
-                        }
-                    },
-                    { open, onChange ->
-                        SettingsItem(
-                            title = stringResource(R.string.clock_alignment),
-                            fontSize = iconFs,
-                            open = open,
-                            onChange = onChange,
-                            currentSelection = remember { mutableStateOf(prefs.clockAlignment) },
-                            values = Constants.Gravity.entries.toTypedArray(),
-                            onSelect = { gravity -> setClockAlignment(gravity) }
-                        )
-                    },
-                    { open, onChange ->
-                        SettingsItem(
-                            title = stringResource(R.string.drawer_alignment),
-                            fontSize = iconFs,
-                            open = open,
-                            onChange = onChange,
-                            currentSelection = remember { mutableStateOf(prefs.drawerAlignment) },
-                            values = Constants.Gravity.entries.toTypedArray(),
-                            onSelect = { j -> viewModel.updateDrawerAlignment(j) }
-                        )
-                    },
-                ),
-                visibleSection = visibleSection
-            )
-            SettingsArea(
-                title = stringResource(R.string.gestures),
-                fontSize = titleFs,
-                selected = selected,
-                items = arrayOf(
-                    { open, onChange ->
-                        SettingsGestureItem(
-                            title = stringResource(R.string.short_swipe_up_app),
-                            fontSize = iconFs,
-                            open = open,
-                            onChange = onChange,
-                            currentAction = prefs.shortSwipeUpAction,
-                            onSelect = { j -> setGesture(AppDrawerFlag.SetShortSwipeUp, j) },
-                            appLabel = prefs.appShortSwipeUp.activityLabel,
-                        )
-                    },
-                    { open, onChange ->
-                        SettingsGestureItem(
-                            title = stringResource(R.string.short_swipe_down_app),
-                            fontSize = iconFs,
-                            open = open,
-                            onChange = onChange,
-                            currentAction = prefs.shortSwipeDownAction,
-                            onSelect = { j -> setGesture(AppDrawerFlag.SetShortSwipeDown, j) },
-                            appLabel = prefs.appShortSwipeDown.activityLabel,
-                        )
-                    },
-                    { open, onChange ->
-                        SettingsGestureItem(
-                            title = stringResource(R.string.short_swipe_left_app),
-                            fontSize = iconFs,
-                            open = open,
-                            onChange = onChange,
-                            currentAction = prefs.shortSwipeLeftAction,
-                            onSelect = { j -> setGesture(AppDrawerFlag.SetShortSwipeLeft, j) },
-                            appLabel = prefs.appShortSwipeLeft.activityLabel.ifEmpty { "Camera" },
-                        )
-                    },
-                    { open, onChange ->
-                        SettingsGestureItem(
-                            title = stringResource(R.string.short_swipe_right_app),
-                            fontSize = iconFs,
-                            open = open,
-                            onChange = onChange,
-                            currentAction = prefs.shortSwipeRightAction,
-                            onSelect = { j -> setGesture(AppDrawerFlag.SetShortSwipeRight, j) },
-                            appLabel = prefs.appShortSwipeRight.activityLabel.ifEmpty { "Phone" },
-                        )
-                    },
-                    { open, onChange ->
-                        SettingsGestureItem(
-                            title = stringResource(R.string.long_swipe_up_app),
-                            fontSize = iconFs,
-                            open = open,
-                            onChange = onChange,
-                            currentAction = prefs.longSwipeUpAction,
-                            onSelect = { j -> setGesture(AppDrawerFlag.SetLongSwipeUp, j) },
-                            appLabel = prefs.appLongSwipeUp.activityLabel,
-                        )
-                    },
-                    { open, onChange ->
-                        SettingsGestureItem(
-                            title = stringResource(R.string.long_swipe_down_app),
-                            fontSize = iconFs,
-                            open = open,
-                            onChange = onChange,
-                            currentAction = prefs.longSwipeDownAction,
-                            onSelect = { j -> setGesture(AppDrawerFlag.SetLongSwipeDown, j) },
-                            appLabel = prefs.appLongSwipeDown.activityLabel,
-                        )
-                    },
-                    { open, onChange ->
-                        SettingsGestureItem(
-                            title = stringResource(R.string.long_swipe_left_app),
-                            fontSize = iconFs,
-                            open = open,
-                            onChange = onChange,
-                            currentAction = prefs.longSwipeLeftAction,
-                            onSelect = { j -> setGesture(AppDrawerFlag.SetLongSwipeLeft, j) },
-                            appLabel = prefs.appLongSwipeLeft.activityLabel,
-                        )
-                    },
-                    { open, onChange ->
-                        SettingsGestureItem(
-                            title = stringResource(R.string.long_swipe_right_app),
-                            fontSize = iconFs,
-                            open = open,
-                            onChange = onChange,
-                            currentAction = prefs.longSwipeRightAction,
-                            onSelect = { j -> setGesture(AppDrawerFlag.SetLongSwipeRight, j) },
-                            appLabel = prefs.appLongSwipeRight.activityLabel,
-                        )
-                    },
-                    { open, onChange ->
-                        SettingsGestureItem(
-                            title = stringResource(R.string.clock_click_app),
-                            fontSize = iconFs,
-                            open = open,
-                            onChange = onChange,
-                            currentAction = prefs.clickClockAction,
-                            onSelect = { j -> setGesture(AppDrawerFlag.SetClickClock, j) },
-                            appLabel = prefs.appClickClock.activityLabel.ifEmpty { "Clock" },
-                        )
-                    },
-                    { open, onChange ->
-                        SettingsGestureItem(
-                            title = stringResource(R.string.date_click_app),
-                            fontSize = iconFs,
-                            open = open,
-                            onChange = onChange,
-                            currentAction = prefs.clickDateAction,
-                            onSelect = { j -> setGesture(AppDrawerFlag.SetClickDate, j) },
-                            appLabel = prefs.appClickDate.activityLabel.ifEmpty { "Calendar" },
-                        )
-                    },
-                    { open, onChange ->
-                        SettingsGestureItem(
-                            title = stringResource(R.string.usage_click_app),
-                            fontSize = iconFs,
-                            open = open,
-                            onChange = onChange,
-                            currentAction = prefs.clickAppUsageAction,
-                            onSelect = { j -> setGesture(AppDrawerFlag.SetAppUsage, j) },
-                            appLabel = prefs.appClickUsage.activityLabel.ifEmpty { "Digital Wellbeing" },
-                        )
-                    },
-                    { open, onChange ->
-                        SettingsGestureItem(
-                            title = stringResource(R.string.double_tap),
-                            fontSize = iconFs,
-                            open = open,
-                            onChange = onChange,
-                            currentAction = prefs.doubleTapAction,
-                            onSelect = { j -> setGesture(AppDrawerFlag.SetDoubleTap, j) },
-                            appLabel = prefs.appDoubleTap.activityLabel
-                        )
-                    }
-                ),
-                visibleSection = visibleSection
-            )
-            SettingsArea(
-                title = getString(R.string.miscellaneous),
-                selected = selected,
-                fontSize = titleFs,
-                items = arrayOf(
-                    { open, onChange ->
-                        SettingsItem(
-                            title = stringResource(R.string.search_engine),
-                            fontSize = iconFs,
-                            open = open,
-                            onChange = onChange,
-                            currentSelection = remember { mutableStateOf(prefs.searchEngines) },
-                            values = Constants.SearchEngines.entries.toTypedArray(),
-                            onSelect = { j -> setEngine(j) }
-                        )
-                    },
-                    { open, onChange ->
-                        SettingsSliderItem(
-                            title = stringResource(R.string.settings_text_size),
-                            fontSize = iconFs,
-                            open = open,
-                            onChange = onChange,
-                            currentSelection = remember { mutableIntStateOf(prefs.settingsSize) },
-                            min = Constants.TEXT_SIZE_MIN,
-                            max = Constants.TEXT_SIZE_MAX,
-                            onSelect = { f -> setTextSize(f) }
-                        )
-                    },
-                    { _, onChange ->
-                        SettingsToggle(
-                            title = stringResource(R.string.display_hidden_apps),
-                            fontSize = iconFs,
-                            onChange = onChange,
-                            state = remember { mutableStateOf(prefs.hiddenAppsDisplayed) }
-                        ) { toggleHiddenAppsDisplayed() }
-                    },
-                    { _, onChange ->
-                        SettingsToggle(
-                            title = stringResource(R.string.lock_settings),
-                            fontSize = iconFs,
-                            onChange = onChange,
-                            state = remember { mutableStateOf(prefs.settingsLocked) }
-                        ) { toggleSettingsLocked() }
-                    },
-                ),
-                visibleSection = visibleSection
-            )
-            SettingsArea(
-                title = getString(R.string.backup),
-                selected = selected,
-                fontSize = titleFs,
-                items = arrayOf(
-                    { _, _ ->
-                        SettingsThreeButtonRow(
-                            fontSize = iconFs,
-                            firstButtonText = getString(R.string.load_backup),
-                            secondButtonText = getString(R.string.save_backup),
-                            thirdButtonText = getString(R.string.clear_backup),
-                            firstButtonAction = {
-                                loadFile(requireActivity())
-                            },
-                            secondButtonAction = {
-                                storeFile(requireActivity())
-                            },
-                            thirdButtonAction = {
-                                prefs.clear()
-                                requireActivity().recreate()
-                            },
-                        )
-                    }
-                ),
-                visibleSection = visibleSection
-            )
-            Text(
+            Spacer(
                 modifier = Modifier
-                    .align(Alignment.End)
-                    .padding(10.dp, 5.dp),
-                text = "${getString(R.string.version)}: ${
-                    requireContext().packageManager.getPackageInfo(
-                        requireContext().packageName,
-                        0
-                    ).versionName
-                }",
-                fontSize = iconFs,
-                color = Color.LightGray
+                    .height(16.dp)
+            )
+
+            HeaderWithIconAndTitle(
+                iconRes = R.drawable.app_launcher,
+                title = stringResource(R.string.settings_name)
+            )
+
+            SettingsHomeItem(
+                title = stringResource(R.string.settings_features_title),
+                description = stringResource(R.string.settings_features_description),
+                imageVector = ImageVector.vectorResource(id = R.drawable.ic_feature),
+                titleFontSize = titleFontSize,
+                descriptionFontSize = descriptionFontSize,
+                iconSize = iconSize,
+                onClick = { showShortToast("Features Clicked") },
+            )
+
+            SettingsHomeItem(
+                title = stringResource(R.string.settings_look_feel_title),
+                description = stringResource(R.string.settings_look_feel_description),
+                imageVector = ImageVector.vectorResource(id = R.drawable.ic_look_feel),
+                titleFontSize = titleFontSize,
+                descriptionFontSize = descriptionFontSize,
+                iconSize = iconSize,
+                onClick = { showShortToast("Look & Feel Clicked") },
+            )
+
+            SettingsHomeItem(
+                title = stringResource(R.string.settings_favorite_apps_title),
+                imageVector = ImageVector.vectorResource(id = R.drawable.ic_favorite),
+                titleFontSize = titleFontSize,
+                descriptionFontSize = descriptionFontSize,
+                iconSize = iconSize,
+                onClick = { showFavoriteApps() },
+            )
+
+            SettingsHomeItem(
+                title = stringResource(R.string.settings_hidden_apps_title),
+                imageVector = ImageVector.vectorResource(id = R.drawable.ic_hidden),
+                titleFontSize = titleFontSize,
+                descriptionFontSize = descriptionFontSize,
+                iconSize = iconSize,
+                onClick = { showHiddenApps() },
+            )
+
+            SettingsHomeItem(
+                title = stringResource(R.string.settings_advanced_title),
+                imageVector = ImageVector.vectorResource(id = R.drawable.ic_advanced),
+                titleFontSize = titleFontSize,
+                descriptionFontSize = descriptionFontSize,
+                iconSize = iconSize,
+                onClick = { showAdvancedSettings() },
             )
         }
+    }
+
+    @Composable
+    fun tuToDp(textUnit: TextUnit): Dp {
+        val density = LocalDensity.current.density
+        val scaledDensity = LocalDensity.current.fontScale
+        val dpValue = textUnit.value * (density / scaledDensity)
+        return dpValue.dp  // Convert to Dp using the 'dp' extension
+    }
+
+    private fun showColorPickerDialog(requestCode: String, color: Int) {
+        ColorChooserDialog.show(
+            fragment = this,
+            requestKey = requestCode,
+            initialColor = color,
+            withAlpha = true,
+            initialTab = 1,
+            tabs = intArrayOf(
+                ColorChooserDialog.TAB_RGB,
+                ColorChooserDialog.TAB_HSV,
+                ColorChooserDialog.TAB_PALETTE
+            )
+        )
+
+        ColorChooserDialog.registerListener(fragment = this, requestKey = requestCode, { pickedColor ->
+            when (requestCode) {
+                "appColor" -> prefs.appColor = pickedColor
+                "dateColor" -> prefs.dateColor = pickedColor
+                "timeColor" -> prefs.timeColor = pickedColor
+            }
+        })
     }
 
     @Deprecated("Deprecated in Java")
@@ -822,6 +274,12 @@ class SettingsFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    private fun checkAdminPermission() {
+        val isAdmin: Boolean = deviceManager.isAdminActive(componentName)
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.P)
+            prefs.lockModeOn = isAdmin
     }
 
     private fun setHomeAlignment(gravity: Constants.Gravity) {
@@ -906,17 +364,16 @@ class SettingsFragment : Fragment() {
     }
 
     private fun showFavoriteApps() {
-        viewModel.getHiddenApps()
         findNavController().navigate(
             R.id.action_settingsFragment_to_appFavoriteFragment,
             bundleOf("flag" to AppDrawerFlag.ReorderApps.toString())
         )
     }
 
-    private fun checkAdminPermission() {
-        val isAdmin: Boolean = deviceManager.isAdminActive(componentName)
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.P)
-            prefs.lockModeOn = isAdmin
+    private fun showAdvancedSettings() {
+        findNavController().navigate(
+            R.id.action_settingsFragment_to_settingsAdvancedFragment,
+        )
     }
 
     private fun setHomeAppsNum(homeAppsNum: Int) {
@@ -1046,5 +503,3 @@ class SettingsFragment : Fragment() {
         }
     }
 }
-
-

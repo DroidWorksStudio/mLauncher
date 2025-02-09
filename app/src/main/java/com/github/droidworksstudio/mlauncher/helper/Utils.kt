@@ -314,18 +314,19 @@ fun loadFile(activity: Activity) {
 }
 
 @RequiresApi(Build.VERSION_CODES.Q)
-fun getHexForOpacity(context: Context, prefs: Prefs): Int {
-    val setColor = prefs.opacityNum
+fun getHexForOpacity(prefs: Prefs): Int {
+    val setOpacity = prefs.opacityNum.coerceIn(0, 255) // Ensure opacity is in the range (0-255)
+    val backgroundColor = prefs.backgroundColor // This is already an Int
 
-    val backgroundColor = getBackgroundColor(context)
-    val hexAccentColor = java.lang.String.format("%06X", 0xFFFFFF and backgroundColor)
+    // Extract RGB from background color
+    val red = android.graphics.Color.red(backgroundColor)
+    val green = android.graphics.Color.green(backgroundColor)
+    val blue = android.graphics.Color.blue(backgroundColor)
 
-    var hex = Integer.toHexString(setColor).toString()
-    if (hex.length < 2)
-        hex = "$hex$hex"
-
-    return android.graphics.Color.parseColor("#${hex}$hexAccentColor")
+    // Combine opacity with RGB and return final color
+    return android.graphics.Color.argb(setOpacity, red, green, blue)
 }
+
 
 @RequiresApi(Build.VERSION_CODES.Q)
 private fun getBackgroundColor(context: Context): Int {
