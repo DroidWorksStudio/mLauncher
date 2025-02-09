@@ -14,30 +14,30 @@
     <string name="settings_app_info_title">アプリ情報</string>
     <string name="settings_app_info_description">%1$s</string>
     <!-- Admin Settings -->
-    <string name="admin_permission_message">mLauncher は、ロック画面の許可を責任を持って使用することを約束します。mLauncher はデータを収集または共有しません。</string>
-    <string name="experimental">（実験的）</string>
+    <string name="admin_permission_message">mLauncher は、責任を持ってロック画面のアクセス許可を使用することを約束します。 mLauncher は、いかなるデータも収集または共有しません。</string>
+    <string name="experimental">(実験的)</string>
     <!-- Settings Headers -->
     <string name="display">画面</string>
     <string name="language_region">言語 &amp; 地域</string>
     <string name="accessibility">アクセシビリティ</string>
     <string name="appearance">外観</string>
-    <string name="behavior">行動</string>
+    <string name="behavior">動作</string>
     <string name="homescreen">ホーム画面</string>
-    <string name="alignment">アライメント</string>
+    <string name="alignment">配置</string>
     <string name="gestures">ジェスチャー</string>
     <string name="miscellaneous">その他</string>
     <!-- Home Strings -->
     <string name="hidden_apps">非表示のアプリ</string>
     <string name="favorite_apps">お気に入りのアプリ</string>
-    <string name="set_as_default_launcher">デフォルトのランチャーとして設定</string>
+    <string name="set_as_default_launcher">デフォルトのランチャーに設定</string>
     <string name="change_default_launcher">デフォルトのランチャーを変更する</string>
     <!-- Display Strings -->
     <string name="show_status_bar">ステータスバーを表示</string>
     <string name="show_recent_apps">最近使ったアプリを表示</string>
     <string name="show_app_usage_stats">アプリの使用状況統計を表示</string>
-    <string name="show_time">ショータイム</string>
+    <string name="show_time">時間を表示</string>
     <string name="show_time_format">時刻形式 (AM/PM)</string>
-    <string name="show_date">開催日</string>
+    <string name="show_date">日付を表示</string>
     <string name="show_battery">バッテリーを表示</string>
     <string name="show_battery_icon">バッテリーアイコンを表示</string>
     <string name="show_header_text">ヘッダーテキストを表示</string>
@@ -53,53 +53,53 @@
     <!-- Appearance Strings -->
     <string name="theme_mode">テーマモード</string>
     <string name="background_opacity">背景の不透明度</string>
-    <string name="home_alignment_bottom">ホーム画面下揃え</string>
+    <string name="home_alignment_bottom">ホーム画面を下に揃える</string>
     <!-- Behavior Strings -->
-    <string name="auto_show_keyboard">キーボードの自動表示</string>
-    <string name="auto_open_apps">アプリの自動起動</string>
-    <string name="enable_notifications">通知を有効にする</string>
+    <string name="auto_show_keyboard">Auto show keyboard</string>
+    <string name="auto_open_apps">アプリを自動的に開く</string>
+    <string name="enable_notifications">通知を有効にします</string>
     <string name="number_of_recents">最近使用したアプリの数</string>
-    <string name="filter_strength">フィルターの強度</string>
-    <string name="search_from_start">スタートからアプリを検索します。</string>
-    <string name="icon_font">アイコンフォントを使用する</string>
+    <string name="filter_strength">フィルター強度</string>
+    <string name="search_from_start">最初からアプリ検索。</string>
+    <string name="icon_font">アイコンフォントを使用</string>
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">ショートカットの数</string>
     <string name="pages_on_home_screen">ページ数</string>
     <string name="enable_home_pager">ホーム ページャーを有効にする</string>
-    <string name="lock_home_apps">アプリをロックする</string>
+    <string name="lock_home_apps">アプリをロック</string>
     <string name="extend_home_apps_area">クリック可能な領域を拡張</string>
     <!-- Alignment Strings -->
     <string name="home_alignment">アプリのホーム画面</string>
     <string name="clock_alignment">時計と日付</string>
-    <string name="drawer_alignment">アプリドロワー内のアプリ</string>
+    <string name="drawer_alignment">アプリドロワーのアプリ</string>
     <!-- Gestures Strings -->
-    <string name="short_swipe_up_app">短く上にスワイプ</string>
-    <string name="short_swipe_down_app">短く下にスワイプ</string>
-    <string name="short_swipe_left_app">左に短くスワイプ</string>
-    <string name="short_swipe_right_app">右に短くスワイプ</string>
-    <string name="long_swipe_up_app">上に長くスワイプ</string>
-    <string name="long_swipe_down_app">下に長くスワイプ</string>
-    <string name="long_swipe_left_app">左に長くスワイプ</string>
-    <string name="long_swipe_right_app">右に長くスワイプ</string>
-    <string name="clock_click_app">時計をクリック</string>
-    <string name="date_click_app">日付をクリック</string>
+    <string name="short_swipe_up_app">上にスワイプ</string>
+    <string name="short_swipe_down_app">下にスワイプ</string>
+    <string name="short_swipe_left_app">左にスワイプ</string>
+    <string name="short_swipe_right_app">右にスワイプ</string>
+    <string name="long_swipe_up_app">長押し 上にスワイプ</string>
+    <string name="long_swipe_down_app">長押し 下にスワイプ</string>
+    <string name="long_swipe_left_app">長押し 左にスワイプ</string>
+    <string name="long_swipe_right_app">長押し 右にスワイプ</string>
+    <string name="clock_click_app">時計をクリックしてください</string>
+    <string name="date_click_app">日付をクリックしてください</string>
     <string name="usage_click_app">合計使用量をクリック</string>
     <string name="double_tap">ダブルタップ</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">通知を表示</string>
-    <string name="show_app_list">アプリリストを表示</string>
+    <string name="show_app_list">アプリ一覧を表示</string>
     <string name="open_app">アプリを開く</string>
     <string name="lock_screen">ロック画面</string>
     <string name="open_quick_settings">クイック設定</string>
-    <string name="show_recents">最近表示</string>
-    <string name="open_power_dialog">パワーダイアログ</string>
+    <string name="show_recents">Show Recents</string>
+    <string name="open_power_dialog">電源ダイアログ</string>
     <string name="take_a_screenshot">スクリーンショットを撮る</string>
     <string name="left_page">左ページへ</string>
-    <string name="right_page">右ページへ移動</string>
-    <string name="double_tap_to_lock_screen">ダブルタップしてロック</string>
+    <string name="right_page">右ページへ</string>
+    <string name="double_tap_to_lock_screen">ダブルタップでロック</string>
     <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">設定 テキストサイズ</string>
-    <string name="display_hidden_apps">非表示のアプリを表示する</string>
+    <string name="settings_text_size">設定文字サイズ</string>
+    <string name="display_hidden_apps">隠しアプリを表示する</string>
     <string name="lock_settings">ロック設定</string>
     <!-- Backup Strings -->
     <string name="backup">バックアップ</string>
@@ -108,31 +108,31 @@
     <string name="clear_backup">クリア</string>
     <!-- Settings Strings -->
     <string name="off">オフ</string>
-    <string name="on">の上</string>
+    <string name="on">オン</string>
     <string name="left">左</string>
     <string name="right">右</string>
-    <string name="center">中心</string>
-    <string name="dark">暗い</string>
+    <string name="center">中央揃え</string>
+    <string name="dark">ダーク</string>
     <string name="light">ライト</string>
     <string name="settings">設定</string>
     <string name="lang_system">システム</string>
     <string name="system_default">システム</string>
     <string name="delete">消去</string>
-    <string name="hide">隠れる</string>
+    <string name="hide">非表示</string>
     <string name="unhide">非表示解除</string>
-    <string name="rename">名前を変更</string>
+    <string name="rename">名前の変更</string>
     <string name="info">情報</string>
-    <string name="okay">わかった</string>
+    <string name="okay">OK</string>
     <string name="save">保存</string>
-    <string name="show">見せる</string>
-    <string name="reset">リセット</string>
+    <string name="show">表示</string>
+    <string name="reset">Reset</string>
     <string name="cancel">キャンセル</string>
     <string name="enable">有効にする</string>
-    <string name="disable">無効にする</string>
+    <string name="disable">無効</string>
     <string name="enabled">有効</string>
     <string name="disabled">無効</string>
-    <string name="open">開ける</string>
-    <string name="close">近い</string>
+    <string name="open">開く</string>
+    <string name="close">閉じる</string>
     <string name="copy">コピー</string>
     <!-- Colored Themes -->
     <string name="catppuccino">カプチーノ</string>
@@ -150,7 +150,7 @@
     <string name="text_authentication_error">認証エラー:%1$s(コード %2$d)</string>
     <string name="text_authentication_failed">認証に失敗しました。</string>
     <string name="text_biometric_login">mLauncher の生体認証ログイン</string>
-    <string name="text_biometric_login_sub">生体認証情報を使用してログインします。</string>
+    <string name="text_biometric_login_sub">生体認証資格情報を使用してログインします</string>
     <!-- Crash Strings -->
     <string name="acra_crash">クラッシュ</string>
     <string name="acra_dialog_text">申し訳ございませんが、 %1$s で予期しない問題が発生したため、終了する必要があります。クラッシュ レポートを送信して改善にご協力ください。\n\n%1$s はお客様のプライバシーを重視しており、収集されたデータはアプリの安定性を向上させるためにのみ使用されます。個人情報は収集されません。ご協力ありがとうございます!</string>
@@ -172,12 +172,13 @@
     <string name="can_not_delete_system_apps">システムアプリを削除できない</string>
     <string name="please_select_app">アプリを選択してください</string>
     <string name="drawer_list_empty_hint">アプリが見つかりません</string>
-    <string name="long_press_for_settings">設定するにはどこでも長押ししてください</string>
-    <string name="swipe_up_for_apps">すべてのアプリを上にスワイプ</string>
-    <string name="app_drawer_tips">ヒント: 下にスワイプすると閉じます。スクロールするとキーボードが非表示になります。</string>
-    <string name="double_tap_lock_is_enabled_message">ダブルタップロックにより指紋または顔認証が無効になる場合は、mLauncher 設定を開き、「実験的」をタップして指示に従ってください。ありがとうございます。</string>
-    <string name="double_tap_lock_uninstall_message">ダブルタップするとロックが有効になります。 \n\n注: mLauncher を削除する場合は、まずこれをオフにしてください。</string>
-    <string name="accessibility_service_name">mLauncher アクション サービス</string>
-    <string name="accessibility_service_description">このアクセシビリティ サービスにより、mLauncher は画面のロックやクイック設定の起動などの特定のアクションを実行できます。当社のアクセシビリティ サービスは、データを収集または共有しません。</string>
+    <string name="long_press_for_settings">設定用に長押ししてください</string>
+    <string name="swipe_up_for_apps">すべてのアプリで上にスワイプ</string>
+    <string name="app_drawer_tips">ヒント: 下にスワイプして解除します。スクロールしてキーボードを非表示にします。</string>
+    <string name="double_tap_lock_is_enabled_message">ダブルタップで指紋やフェイスロックを無効にする場合は、mLauncher の設定を開き、「実験的」をタップして指示に従ってください。ありがとうございます。</string>
+    <string name="double_tap_lock_uninstall_message">ダブルタップしてロックを有効にします。
+		\n\n注意: mLauncherを削除することにした場合は、最初にオフにします。</string>
+    <string name="accessibility_service_name">mLauncher アクションサービス</string>
+    <string name="accessibility_service_description">このアクセシビリティ サービスにより、mLauncher は画面のロックやクイック設定を開くなどの特定のアクションを実行できます。当社のアクセシビリティ サービスは、いかなるデータも収集または共有しません。</string>
     <string name="version">バージョン</string>
 </resources>
