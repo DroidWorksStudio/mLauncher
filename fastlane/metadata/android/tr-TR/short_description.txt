@@ -1,1 +1,1 @@
-Olauncher'dan çatallanmış, +minimizasyon, +özelleştirilebilirlik
+Forked from Olauncher, +minimalization, +customizability
