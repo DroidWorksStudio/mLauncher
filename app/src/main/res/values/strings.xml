@@ -1,6 +1,50 @@
 <resources>
     <!-- Base Settings -->
-    <string name="app">App</string>
+    <string name="select_app">Select App</string>
+
+    <!-- Strings used for settings menus -->
+    <string name="settings_name">mLauncher Settings</string>
+
+    <string name="settings_features_title">Features</string>
+    <string name="settings_features_description">Improve your productivity.</string>
+
+    <string name="settings_look_feel_title">Look and Feel</string>
+    <string name="settings_look_feel_description">Give your home screen a personal touch.</string>
+
+    <string name="settings_favorite_apps_title">Favorite Apps</string>
+    <string name="settings_hidden_apps_title">Hidden Apps</string>
+
+    <string name="settings_advanced_title">Advanced</string>
+
+    <!-- Strings used for advanced settings -->
+    <string name="advanced_settings_title">Advanced Settings</string>
+
+    <string name="advanced_settings_app_info_title">App Info</string>
+    <string name="advanced_settings_app_info_description">%1$s</string>
+
+    <string name="advanced_settings_set_as_default_launcher">Set as Default Launcher</string>
+    <string name="advanced_settings_change_default_launcher">Change Default Launcher</string>
+
+    <string name="advanced_settings_restart_title">Restart Launcher</string>
+    <string name="advanced_settings_restart_description">Have you tried turning it on and off?</string>
+
+    <string name="advanced_settings_backup_restore_title">Backup/Restore</string>
+    <string name="advanced_settings_backup_restore_description">Please be careful what you wish for?</string>
+
+    <string name="advanced_settings_backup_restore_backup">Backup</string>
+    <string name="advanced_settings_backup_restore_restore">Restore</string>
+    <string name="advanced_settings_backup_restore_clear">Clear All Data</string>
+
+    <string name="advanced_settings_backup_restore_clear_title">Clear Preferences</string>
+    <string name="advanced_settings_backup_restore_clear_description">Are you sure you want to do this?</string>
+    <string name="advanced_settings_backup_restore_clear_yes">Yes</string>
+    <string name="advanced_settings_backup_restore_clear_no">No</string>
+
+    <string name="advanced_settings_help_feedback_title">Help and Feedback</string>
+    <string name="advanced_settings_community_support_title">Community Support</string>
+
+    <string name="advanced_settings_share_application_title">Share Application</string>
+    <string name="advanced_settings_share_application_description">Elevate your experience with %1$s! Get it now on fDroid and see what everyone is talking about!\n</string>
 
     <!-- Admin Settings -->
     <string name="admin_permission_message">mLauncher promises to use lock screen permission responsibly. mLauncher does not collect or share any data.</string>
@@ -8,6 +52,8 @@
 
     <!-- Settings Headers -->
     <string name="display">Display</string>
+    <string name="language_region">Language &amp; Region</string>
+    <string name="accessibility">Accessibility</string>
     <string name="appearance">Appearance</string>
     <string name="behavior">Behavior</string>
     <string name="homescreen">Homescreen</string>
@@ -18,8 +64,7 @@
     <!-- Home Strings -->
     <string name="hidden_apps">Hidden Apps</string>
     <string name="favorite_apps">Favorite Apps</string>
-    <string name="set_as_default_launcher">Set as Default Launcher</string>
-    <string name="change_default_launcher">Change Default Launcher</string>
+
 
     <!-- Display Strings -->
     <string name="show_status_bar">Show Status bar</string>
@@ -30,18 +75,23 @@
     <string name="show_date">Show Date</string>
     <string name="show_battery">Show Battery</string>
     <string name="show_battery_icon">Show Battery Icon</string>
+    <string name="show_header_text">Show Header Text</string>
 
-    <!-- Appearance Strings -->
-    <string name="theme_mode">Theme mode</string>
+    <!-- Language & Region Strings -->
     <string name="app_language">Interface Language</string>
+
+    <!-- Accessibility Strings -->
     <string name="app_text_size">App Text Size</string>
     <string name="clock_text_size">Clock Text Size</string>
     <string name="date_text_size">Date Text Size</string>
     <string name="battery_text_size">Battery Text Size</string>
     <string name="app_padding_size">Padding Size</string>
-    <string name="background_opacity">Background Opacity</string>
-    <string name="all_apps_text">Display All Apps Text</string>
     <string name="app_font">Font Family</string>
+
+    <!-- Appearance Strings -->
+    <string name="theme_mode">Theme mode</string>
+    <string name="background_opacity">Background Opacity</string>
+    <string name="home_alignment_bottom">Home Screen Align Bottom</string>
 
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto Show Keyboard</string>
@@ -58,7 +108,6 @@
     <string name="enable_home_pager">Enable Home Pager</string>
     <string name="lock_home_apps">Lock Apps</string>
     <string name="extend_home_apps_area">Extend Clickable Area</string>
-    <string name="home_alignment_bottom">Home Screen Align Bottom</string>
 
     <!-- Alignment Strings -->
     <string name="home_alignment">Apps Home Screen</string>

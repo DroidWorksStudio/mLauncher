@@ -59,8 +59,8 @@ class AppDrawerAdapter(
         binding =
             AdapterAppDrawerBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         prefs = Prefs(parent.context)
-//        val fontColor = colors.accents(parent.context, prefs, 4)
-//        binding.appTitle.setTextColor(fontColor)
+        val fontColor = prefs.appColor
+        binding.appTitle.setTextColor(fontColor)
 
         binding.appTitle.textSize = prefs.appSize.toFloat()
         val padding: Int = prefs.textPaddingSize

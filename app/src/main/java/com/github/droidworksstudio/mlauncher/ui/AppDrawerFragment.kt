@@ -10,6 +10,9 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.style.ForegroundColorSpan
 import android.view.Gravity
 import android.view.KeyEvent
 import android.view.LayoutInflater
@@ -72,7 +75,7 @@ class AppDrawerFragment : Fragment() {
             searchTextView.text = letterToChar.toString()
         }
 
-//        binding.mainLayout.setBackgroundColor(colors.background(requireContext(), prefs))
+        binding.mainLayout.setBackgroundColor(prefs.backgroundColor)
 
         val flagString = arguments?.getString("flag", AppDrawerFlag.LaunchApp.toString())
             ?: AppDrawerFlag.LaunchApp.toString()
@@ -137,48 +140,21 @@ class AppDrawerFragment : Fragment() {
         binding.recyclerView.adapter = appAdapter
         binding.recyclerView.addOnScrollListener(getRecyclerViewOnScrollListener())
 
-        if (flag == AppDrawerFlag.HiddenApps) {
-            val hiddenAppsHint = getString(R.string.hidden_apps)
+        when (flag) {
+            AppDrawerFlag.LaunchApp -> if (prefs.useAllAppsText) binding.search.queryHint =
+                applyTextColor(getString(R.string.show_apps), prefs.appColor)
 
-//            val fontColor = colors.accents(requireContext(), prefs, 4)
-//            val coloredHint = SpannableString(hiddenAppsHint)
-//            coloredHint.setSpan(
-//                ForegroundColorSpan(fontColor),
-//                0,
-//                hiddenAppsHint.length,
-//                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-//            )
-//            binding.search.queryHint = coloredHint
+            AppDrawerFlag.HiddenApps -> binding.search.queryHint =
+                applyTextColor(getString(R.string.hidden_apps), prefs.appColor)
 
+            AppDrawerFlag.SetHomeApp -> binding.search.queryHint =
+                applyTextColor(getString(R.string.please_select_app), prefs.appColor)
+
+            else -> binding.search.queryHint =
+                applyTextColor("---", prefs.appColor)
         }
-        if (flag == AppDrawerFlag.SetHomeApp) {
-            val selectAppsHint = getString(R.string.please_select_app)
 
-//            val fontColor = colors.accents(requireContext(), prefs, 4)
-//            val coloredHint = SpannableString(selectAppsHint)
-//            coloredHint.setSpan(
-//                ForegroundColorSpan(fontColor),
-//                0,
-//                hiddenAppsHint.length,
-//                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-//            )
-//            binding.search.queryHint = coloredHint
-
-        }
-        if (flag == AppDrawerFlag.LaunchApp && prefs.useAllAppsText) {
-            val allAppsHint = getString(R.string.show_apps)
-
-//            val fontColor = colors.accents(requireContext(), prefs, 4)
-//            val coloredHint = SpannableString(allAppsHint)
-//            coloredHint.setSpan(
-//                ForegroundColorSpan(fontColor),
-//                0,
-//                allAppsHint.length,
-//                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-//            )
-//            binding.search.queryHint = coloredHint
-
-        }
+        binding.listEmptyHint.text = applyTextColor(getString(R.string.drawer_list_empty_hint), prefs.appColor)
 
         binding.search.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
@@ -225,6 +201,17 @@ class AppDrawerFragment : Fragment() {
 
     }
 
+    private fun applyTextColor(text: String, color: Int): SpannableString {
+        val spannableString = SpannableString(text)
+        spannableString.setSpan(
+            ForegroundColorSpan(color),
+            0,
+            text.length,
+            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+        )
+        return spannableString
+    }
+
     private fun convertKeyCodeToLetter(keyCode: Int): Char {
         return when (keyCode) {
             KeyEvent.KEYCODE_A -> 'A'
@@ -260,7 +247,7 @@ class AppDrawerFragment : Fragment() {
     @RequiresApi(Build.VERSION_CODES.Q)
     override fun onResume() {
         super.onResume()
-//        binding.mainLayout.setBackgroundColor(colors.background(requireContext(), prefs))
+        binding.mainLayout.setBackgroundColor(prefs.backgroundColor)
     }
 
     private fun initViewModel(

@@ -57,6 +57,7 @@ import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.formatMilli
 import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.getTotalScreenTime
 import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.getUsageStats
 import com.github.droidworksstudio.mlauncher.helper.BatteryReceiver
+import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
 import com.github.droidworksstudio.mlauncher.helper.hideStatusBar
 import com.github.droidworksstudio.mlauncher.helper.initActionService
 import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
@@ -153,16 +154,16 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             homeScreenPager.textSize = prefs.appSize.toFloat()
 
             battery.visibility = if (prefs.showBattery) View.VISIBLE else View.GONE
-//            mainLayout.setBackgroundColor(colors.background(requireContext(), prefs))
+            val backgroundColor = getHexForOpacity(prefs)
+            mainLayout.setBackgroundColor(backgroundColor)
 
 
-//            clock.setTextColor(colors.accents(requireContext(), prefs, 1))
-//            date.setTextColor(colors.accents(requireContext(), prefs, 1))
-//            battery.setTextColor(colors.accents(requireContext(), prefs, 1))
-//            setTotalScreenTime.setTextColor(colors.accents(requireContext(), prefs, 2))
-//            setDefaultLauncher.setTextColor(colors.accents(requireContext(), prefs, 2))
-//            homeScreenPager.setTextColor(colors.accents(requireContext(), prefs, 2))
-
+            clock.setTextColor(prefs.timeColor)
+            date.setTextColor(prefs.timeColor)
+            battery.setTextColor(prefs.batteryColor)
+            setTotalScreenTime.setTextColor(prefs.appColor)
+            setDefaultLauncher.setTextColor(prefs.appColor)
+            homeScreenPager.setTextColor(prefs.appColor)
         }
     }
 
@@ -735,8 +736,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     }
                     val padding: Int = prefs.textPaddingSize
                     setPadding(0, padding, 0, padding)
-
-//                    setTextColor(colors.accents(requireContext(), prefs, 4))
+                    setTextColor(prefs.appColor)
 
                 }
 
@@ -762,9 +762,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     }
                     val padding: Int = prefs.textPaddingSize
                     setPadding(0, padding, 0, padding)
-
-//                    setTextColor(colors.accents(requireContext(), prefs, 3))
-
+                    setTextColor(prefs.appColor)
                 }
 
                 // Add a space between existingAppView and newAppView
@@ -834,10 +832,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     isFocusableInTouchMode = true
                     val padding: Int = prefs.textPaddingSize
                     setPadding(0, padding, 0, padding)
-
-//                    val fontColor = colors.accents(requireContext(), prefs, 4)
-//                    setTextColor(fontColor)
-
+                    setTextColor(prefs.appColor)
                 }
                 // Add the view to the layout
                 binding.homeAppsLayout.addView(view)

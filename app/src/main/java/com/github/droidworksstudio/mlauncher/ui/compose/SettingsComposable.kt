@@ -1,6 +1,7 @@
 package com.github.droidworksstudio.mlauncher.ui.compose
 
 import android.graphics.Typeface
+import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -15,6 +16,7 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
@@ -28,6 +30,7 @@ import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Alignment.Companion.CenterEnd
 import androidx.compose.ui.Alignment.Companion.CenterStart
 import androidx.compose.ui.Alignment.Companion.End
@@ -36,6 +39,7 @@ import androidx.compose.ui.Alignment.Companion.TopEnd
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.onFocusEvent
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -43,6 +47,7 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
 import com.github.droidworksstudio.mlauncher.R
@@ -58,12 +63,131 @@ import com.smarttoolfactory.slider.SliderBrushColor
 
 object SettingsComposable {
 
+    @Composable
+    fun PageHeader(
+        @DrawableRes iconRes: Int,
+        title: String,
+        iconSize: Dp = 24.dp, // Default size for the icon
+        fontSize: TextUnit = 24.sp, // Default font size for the title
+        onClick: () -> Unit = {},
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 16.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            // Image Icon
+            Image(
+                painter = painterResource(id = iconRes),
+                contentDescription = title,
+                modifier = Modifier
+                    .clickable(onClick = onClick)
+                    .size(iconSize)
+            )
+
+            Spacer(modifier = Modifier.weight(1f)) // Pushes the text to center
+
+            // Title Text
+            Text(
+                text = title,
+                style = SettingsTheme.typography.title,
+                fontSize = fontSize
+            )
+
+            Spacer(modifier = Modifier.weight(1f)) // Balances spacing on the right
+        }
+    }
+
+    @Composable
+    fun TopMainHeader(
+        @DrawableRes iconRes: Int,
+        title: String,
+        iconSize: Dp = 96.dp, // Default size for the icon
+        fontSize: TextUnit = 24.sp, // Default font size for the title
+    ) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 16.dp), // Optional horizontal padding
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            // Image Icon
+            Image(
+                painter = painterResource(id = iconRes),
+                contentDescription = title,
+                modifier = Modifier
+                    .size(iconSize)
+                    .padding(bottom = 16.dp) // Bottom margin like in XML
+            )
+
+            // Title Text
+            Text(
+                text = title,
+                style = SettingsTheme.typography.title,
+                fontSize = fontSize,
+                modifier = Modifier
+                    .padding(bottom = 24.dp)
+            )
+        }
+    }
+
+
+    @Composable
+    fun SettingsHomeItem(
+        title: String,
+        description: String? = null,
+        imageVector: ImageVector,
+        onClick: () -> Unit = {},
+        titleFontSize: TextUnit = TextUnit.Unspecified,
+        descriptionFontSize: TextUnit = TextUnit.Unspecified,
+        iconSize: Dp = 18.dp,
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .clickable(onClick = onClick)
+                .padding(
+                    vertical = 16.dp,
+                    horizontal = 16.dp
+                ),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Image(
+                imageVector,
+                contentDescription = title,
+                modifier = Modifier
+                    .size(iconSize)
+            )
+
+            Spacer(
+                modifier = Modifier
+                    .width(16.dp)
+            )
+
+            Column {
+                Text(
+                    text = title,
+                    style = SettingsTheme.typography.title,
+                    fontSize = titleFontSize
+                )
+                description?.let {
+                    Text(
+                        text = it,
+                        style = SettingsTheme.typography.title,
+                        fontSize = descriptionFontSize
+                    )
+                }
+            }
+        }
+    }
+
     // Most basic settings background tile
     @Composable
     fun SettingsTile(content: @Composable () -> Unit) {
         Column(
             modifier = Modifier
-                .padding(6.dp, 6.dp, 6.dp, 0.dp)
+                .padding(6.dp, 2.dp, 6.dp, 2.dp)
                 .background(SettingsTheme.color.settings, SettingsTheme.shapes.settings)
                 .border(
                     BORDER_SIZE,
@@ -164,7 +288,7 @@ object SettingsComposable {
             style = SettingsTheme.typography.title,
             fontSize = fontSize,
             modifier = modifier
-                .padding(0.dp, 0.dp, 0.dp, 12.dp)
+                .padding(0.dp, 0.dp, 0.dp, 6.dp)
         )
     }
 
@@ -534,6 +658,82 @@ object SettingsComposable {
     }
 
     @Composable
+    fun SettingsFiveButtonRow(
+        title: String,
+        firstButtonText: String,
+        secondButtonText: String,
+        thirdButtonText: String,
+        forthButtonText: String,
+        fifthButtonText: String,
+        firstButtonAction: () -> Unit,
+        secondButtonAction: () -> Unit,
+        thirdButtonAction: () -> Unit,
+        forthButtonAction: () -> Unit,
+        fifthButtonAction: () -> Unit,
+        fontSize: TextUnit = TextUnit.Unspecified,
+    ) {
+        Column {
+            Text(
+                title,
+                style = SettingsTheme.typography.item,
+                fontSize = fontSize,
+                modifier = Modifier
+                    .align(Start)
+            )
+            Spacer(Modifier.weight(1f))
+            TextButton(
+                onClick = firstButtonAction,
+            ) {
+                Text(
+                    firstButtonText,
+                    fontSize = fontSize,
+                    style = SettingsTheme.typography.button,
+                )
+            }
+
+            TextButton(
+                onClick = secondButtonAction,
+            ) {
+                Text(
+                    secondButtonText,
+                    fontSize = fontSize,
+                    style = SettingsTheme.typography.button,
+                )
+            }
+
+            TextButton(
+                onClick = thirdButtonAction,
+            ) {
+                Text(
+                    thirdButtonText,
+                    fontSize = fontSize,
+                    style = SettingsTheme.typography.button,
+                )
+            }
+
+            TextButton(
+                onClick = forthButtonAction,
+            ) {
+                Text(
+                    forthButtonText,
+                    fontSize = fontSize,
+                    style = SettingsTheme.typography.button,
+                )
+            }
+
+            TextButton(
+                onClick = fifthButtonAction,
+            ) {
+                Text(
+                    fifthButtonText,
+                    fontSize = fontSize,
+                    style = SettingsTheme.typography.button,
+                )
+            }
+        }
+    }
+
+    @Composable
     private fun <T : EnumOption> SettingsSelector(
         options: Array<T>,
         fontSize: TextUnit = TextUnit.Unspecified,
@@ -775,7 +975,6 @@ object SettingsComposable {
         }
     }
 
-
     @Composable
     fun SettingsTextButton(
         title: String,
@@ -788,7 +987,7 @@ object SettingsComposable {
             Text(
                 title,
                 style = SettingsTheme.typography.item,
-                fontSize = fontSize
+                fontSize = fontSize,
             )
         }
     }

@@ -84,6 +84,7 @@ private const val BATTERY_SIZE_TEXT = "BATTERY_SIZE_TEXT"
 private const val TEXT_SIZE_SETTINGS = "TEXT_SIZE_SETTINGS"
 private const val TEXT_PADDING_SIZE = "TEXT_PADDING_SIZE"
 
+private const val BACKGROUND_COLOR = "BACKGROUND_COLOR"
 private const val APP_COLOR = "APP_COLOR"
 private const val DATE_COLOR = "DATE_COLOR"
 private const val TIME_COLOR = "TIME_COLOR"
@@ -180,6 +181,10 @@ class Prefs(val context: Context) {
     var homePagesNum: Int
         get() = prefs.getInt(HOME_PAGES_NUM, 1)
         set(value) = prefs.edit().putInt(HOME_PAGES_NUM, value).apply()
+
+    var backgroundColor: Int
+        get() = prefs.getInt(BACKGROUND_COLOR, getColor(context, R.color.blackTrans50))
+        set(value) = prefs.edit().putInt(BACKGROUND_COLOR, value).apply()
 
     var appColor: Int
         get() = prefs.getInt(APP_COLOR, getColor(context, R.color.white))
@@ -555,9 +560,9 @@ class Prefs(val context: Context) {
     var settingsSize: Int
         get() {
             return try {
-                prefs.getInt(TEXT_SIZE_SETTINGS, 18)
+                prefs.getInt(TEXT_SIZE_SETTINGS, 14)
             } catch (_: Exception) {
-                18
+                14
             }
         }
         set(value) = prefs.edit().putInt(TEXT_SIZE_SETTINGS, value).apply()

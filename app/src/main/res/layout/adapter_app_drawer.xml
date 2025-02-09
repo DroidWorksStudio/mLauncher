@@ -19,7 +19,7 @@
             android:maxLines="1"
             android:paddingHorizontal="24dp"
             android:paddingVertical="@dimen/app_padding_vertical"
-            android:text="@string/app" />
+            android:text="@string/select_app" />
 
     </FrameLayout>
 
@@ -133,6 +133,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_weight="1"
+            android:autofillHints="name"
             android:background="@null"
             android:gravity="center_vertical"
             android:inputType="textCapWords"
@@ -140,7 +141,6 @@
             android:maxLines="1"
             android:paddingVertical="@dimen/app_padding_vertical"
             android:textColorHint="?attr/primaryColorTrans50"
-            android:autofillHints="name"
             tools:ignore="LabelFor" />
 
         <TextView

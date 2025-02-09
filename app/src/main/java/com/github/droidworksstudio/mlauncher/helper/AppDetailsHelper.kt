@@ -28,7 +28,7 @@ object AppDetailsHelper {
             set(Calendar.HOUR_OF_DAY, 0)
             set(Calendar.MINUTE, 0)
             set(Calendar.SECOND, 0)
-            set(Calendar.MILLISECOND, 0)
+            set(Calendar.MILLISECOND, 100)
         }
 
         val startTime = calendar.timeInMillis // Midnight today
@@ -65,7 +65,7 @@ object AppDetailsHelper {
             set(Calendar.HOUR_OF_DAY, 0)
             set(Calendar.MINUTE, 0)
             set(Calendar.SECOND, 0)
-            set(Calendar.MILLISECOND, 0)
+            set(Calendar.MILLISECOND, 100)
         }
 
         val startTime = calendar.timeInMillis
