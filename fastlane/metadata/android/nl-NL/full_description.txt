@@ -1,79 +1,79 @@
-Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal and clean.
+Gevorkt van <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimalistisch en strak.
 
-# Forked with extra features
+# Gevorkt met extra functies
 
-- Removed clutter, like ads and links.
-- You can rename apps in the app-drawer (Renaming apps on the home screen is already supported. Just long-click on an app on the home screen and start typing.)
-- We have added a lot more options for gestures on the home screen:
-    - Gestures are now:
-        - Swiping up, down, left, right
-        - Clicking on the clock
-        - Clicking on the Date
-    - Possible actions now include:
-        - Open specified app
-        - Display app list
-        - Locking the screen
-        - Show Recent opened apps
-        - Opening the notification drawer
-        - Opening the quick settings
-        - Power Dialog
-        - Take A Screenshot
-        - Disable Gesture
-- You can also position the clock independently of the home apps.
-- Change alignment of apps in app-drawer independent from homescreen.
-- Change font size of sections of the homescreen independent of each other.
-- Removed internet permission. You never know what an app developer wants to know about you.
-- Lock settings behind biometrics (toggle)
-- Added the ability to report crashing via email.
-- Added the ability to view app usage time.
+- Rommel, zoals advertenties en links, is verwijderd.
+- U kunt apps hernoemen in de app-lade (het hernoemen van apps op het startscherm wordt al ondersteund). (Klik gewoon lang op een app op het startscherm en begin met typen.)
+- We hebben veel meer opties voor gebaren op het startscherm toegevoegd:
+    - Gebaren zijn nu:
+        - Omhoog, omlaag, naar links, naar rechts vegen
+        - Klikken op de klok
+        - Klik op de datum
+    - Mogelijke acties zijn nu:
+        - Open de opgegeven app
+        - App-lijst weergeven
+        - Het scherm vergrendelen
+        - Toon recent geopende apps
+        - Het openen van de meldingslade
+        - De snelle instellingen openen
+        - Power-dialoog
+        - Maak een screenshot
+        - Gebaar uitschakelen
+- Je kunt de klok ook onafhankelijk van de home-apps positioneren.
+- Wijzig de uitlijning van apps in de app-lade, onafhankelijk van het startscherm.
+- Wijzig de lettergrootte van verschillende secties op het startscherm, onafhankelijk van elkaar.
+- Internetmachtiging verwijderd. Je weet nooit wat een app-ontwikkelaar over je wil weten.
+- Vergrendel instellingen achter biometrie (wisselen)
+- Mogelijkheid toegevoegd om crashes via e-mail te melden.
+- Mogelijkheid toegevoegd om app-gebruikstijd te bekijken.
 
-## Translations:
+## Vertalingen:
 
-- A lot of people have translated the app to the following languages. Many thanks to you all.
-  - Afrikaans
-  - Arabic
-  - Albanian
-  - Bulgarian
-  - Chinese
-  - Croatian
-  - Czech
-  - Danish
-  - English
-  - Estonian
-  - Filipino
-  - Finnish
-  - French
-  - Georgian
-  - German
-  - Greek
-  - Hawaiian
-  - Hebrew
-  - Hindi
-  - Hungarian
-  - Icelandic
-  - Indonesian
-  - Irish
-  - Italian
-  - Japanese
-  - Korean
-  - Lithuanian
-  - Luxembourgish
-  - Malay
-  - Malagasy
-  - Malayalam
-  - Norwegian
-  - Nepali
-  - Persian
-  - Polish
-  - Portuguese (European)
+- Veel mensen hebben de app vertaald naar de volgende talen. Hartelijk dank allemaal.
+  -Afrikaans
+  - Arabisch
+  - Albanees
+  - Bulgaars
+  - Chinees
+  - Kroatisch
+  - Tsjechisch
+  - Deens
+  - Engels
+  - Estisch
+  - Filipijns
+  - Fins
+  - Frans
+  - Georgisch
+  - Duits
+  - Grieks
+  - Hawaïaans
+  - Hebreeuws
+  -Hindi
+  - Hongaars
+  - IJslands
+  - Indonesisch
+  - Iers
+  - Italiaans
+  - Japans
+  - Koreaans
+  - Litouws
+  - Luxemburgs
+  - Maleis
+  - Malagasi
+  -Maleis
+  - Noors
+  - Nepalees
+  - Perzisch
+  - Pools
+  - Portugees (Europees)
   - Punjabi
-  - Russian
-  - Serbian
+  - Russisch
+  - Servisch
   - Sindhi
-  - Slovak
-  - Spanish
-  - Swedish
+  - Slowaaks
+  - Spaans
+  - Zweeds
   - Thai
-  - Turkish
-  - Ukrainian
-  - Vietnamese
+  - Turks
+  - Oekraïens
+  - Vietnamees
