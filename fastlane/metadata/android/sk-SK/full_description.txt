@@ -1,25 +1,25 @@
-Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimálne a čisté.
+Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimálistický a čistý.
 
-# Rozvetvený s extra funkciami
+# Fork s extra funkciami
 
 - Odstránený neporiadok, ako sú reklamy a odkazy.
 - Môžete premenovať aplikácie na paneli aplikácií (Premenovanie aplikácií na domovskej obrazovke je už podporované. Stačí dlho kliknúť na aplikáciu na domovskej obrazovke a začať písať.)
 - Pridali sme oveľa viac možností pre gestá na domovskej obrazovke:
-    - Gestá sú teraz:
-        - Potiahnutím nahor, nadol, doľava, doprava
-        - Kliknutím na hodiny
-        - Kliknutím na dátum
+    - Aktuálne gestá sú:
+        - Potiahnutie prstom nahor, nadol, doľava, doprava
+        - Kliknutie na hodiny
+        - Kliknutie na dátum
     - Možné akcie teraz zahŕňajú:
-        - Otvorte zadanú aplikáciu
-        - Zobrazte zoznam aplikácií
+        - Otvoriť špecifikovanú aplikáciu
+        - Zobrazenie zoznamu aplikácií
         - Uzamknutie obrazovky
         - Zobraziť naposledy otvorené aplikácie
-        - Otvorenie oznamovacej zásuvky
+        - Otvorenie notifikačnej lišty
         - Otvorenie rýchlych nastavení
         - Dialógové okno napájania
-        - Urobte snímku obrazovky
-        - Zakázať gesto
-- Hodiny môžete umiestniť aj nezávisle od domácich aplikácií.
+        - Vyhotoviť snímku obrazovky
+        - Zakázať Gesto
+- Hodiny môžete umiestniť aj nezávisle od domovských aplikácií.
 - Zmeňte zarovnanie aplikácií v zásuvke aplikácií nezávisle od úvodnej obrazovky.
 - Zmeňte veľkosť písma častí úvodnej obrazovky nezávisle od seba.
 - Odstránené povolenie na internet. Nikdy neviete, čo o vás chce vývojár aplikácie vedieť.
@@ -29,51 +29,51 @@ Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Min
 
 ## Preklady:
 
-- Veľa ľudí preložilo aplikáciu do nasledujúcich jazykov. Veľká vďaka vám všetkým.
-  - afrikánčina
-  - arabčina
-  - albánsky
-  - bulharčina
-  - čínsky
-  - chorvátsky
-  - český
+- Mnoho ľudí preložilo aplikáciu do týchto jazykov. Veľká vďaka všetkým.
+  - Afrikánsky
+  - Arabský
+  - Albánsky
+  - Bulharský
+  - Čínsky
+  - Chorvátsky
+  - Český
   - Dánsky
-  - anglicky
-  - estónsky
+  - Anglický
+  - Estónsky
   - Filipínsky
-  - fínsky
-  - francúzsky
-  - gruzínsky
-  - Nemčina
-  - grécky
-  - havajský
-  - hebrejsky
-  - hindčina
-  - maďarčina
-  - islandský
-  - indonézsky
-  - írsky
-  - taliansky
-  - Japonec
-  - kórejský
-  - litovský
-  - luxemburský
-  - malajčina
-  - madagaskarský
-  - Malajálamčina
-  - nórsky
+  - Fínsky
+  - Francúzsky
+  - Gruzínsky
+  - Nemecky
+  - Grécky
+  - Havajský
+  - Hebrejsky
+  - Hindsky
+  - Maďarsky
+  - Islandský
+  - Indonézsky
+  - Írsky
+  - Taliansky
+  - Japonsky
+  - Kórejský
+  - Litovský
+  - Luxemburský
+  - Malajský
+  - Malgašský
+  - Malajálsky
+  - Nórsky
   - Nepálsky
-  - perzský
-  - poľský
-  - portugalčina (európska)
-  - pandžábsky
-  - ruský
-  - srbský
-  - Sindhi
-  - slovenský
-  - španielčina
-  - švédsky
-  - thajčina
-  - turecký
-  - ukrajinský
-  - Vietnamci
+  - Perzský
+  - Poľský
+  - Portugálsky (európska)
+  - Pandžábsky
+  - Ruský
+  - Srbský
+  - Sindhština
+  - Slovensky
+  - Španielsky
+  - Švédsky
+  - Thajsky
+  - Turecký
+  - Ukrajinský
+  - Vietnamsky
