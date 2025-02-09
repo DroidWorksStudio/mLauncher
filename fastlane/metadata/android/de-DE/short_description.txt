@@ -1,1 +1,1 @@
-Abgezweigt von Olauncher, +Minimalisierung, +Anpassbarkeit
+Abgespalten von Olauncher, +Minimierung, +Anpassbarkeit
