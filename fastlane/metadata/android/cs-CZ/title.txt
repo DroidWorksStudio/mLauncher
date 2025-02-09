@@ -1,1 +1,1 @@
-mLauncher - Minimal a Clutter Free launcher
+mLauncher - Minimal and Clutter Free launcher
