@@ -1,48 +1,48 @@
 Fourchu à partir de <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal et propre.
 
-# Fork avec des fonctionnalités supplémentaires
+# Forké avec des fonctionnalités supplémentaires
 
 - Suppression de l'encombrement, comme les publicités et les liens.
-- Vous pouvez renommer des applications dans le tiroir d'applications (le changement de nom des applications sur l'écran d'accueil est déjà pris en charge. (Cliquez simplement longuement sur une application sur l'écran d'accueil et commencez à taper.)
-- Nous avons ajouté beaucoup plus d'options pour les gestes sur l'écran d'accueil :
-    - Les gestes sont désormais :
-        - Glisser vers le haut, le bas, la gauche, la droite
-        - Cliquer sur l'horloge
-        - En cliquant sur la date
-    - Les actions possibles incluent désormais :
+- Vous pouvez renommer les applications dans le tiroir d'applications (le renommage des applications sur l'écran d'accueil est déjà pris en charge. Cliquez simplement longuement sur une application sur l'écran d'accueil et commencez à taper.)
+- Beaucoup plus de possibilités de personnalisation des gestes de l'écran d'accueil
+    - Les gestes sont maintenant :
+        - Glissement vers le haut, vers le bas, vers la gauche, vers la droite
+        - Possibilité de changer l'application qui s'ouvre en cliquant sur l'horloge
+        - Possibilité de changer l'application qui s'ouvre en cliquant sur la date
+    - Les actions possibles incluent maintenant :
         - Ouvrir l'application spécifiée
         - Afficher la liste des applications
         - Verrouillage de l'écran
-        - Afficher les applications récemment ouvertes
-        - Ouverture du tiroir de notifications
+        - Afficher les applications ouvertes récemment
+        - Ouverture du panneau de notification
         - Ouverture des paramètres rapides
-        - Dialogue de puissance
+        - Boîte de dialogue d'alimentation
         - Prendre une capture d'écran
         - Désactiver le geste
 - Vous pouvez également positionner l'horloge indépendamment des applications domestiques.
 - Modifiez l'alignement des applications dans le tiroir d'applications indépendamment de l'écran d'accueil.
 - Modifiez la taille de la police des sections de l'écran d'accueil indépendamment les unes des autres.
-- Suppression de l'autorisation Internet. Vous ne savez jamais ce qu’un développeur d’applications veut savoir sur vous.
+- Suppression de l'autorisation d'accès à Internet - Suppression de l'autorisation d'accès à Internet Vous ne savez jamais ce qu'un développeur d'applications veut savoir de vous.
 - Verrouiller les paramètres derrière la biométrie (bascule)
 - Ajout de la possibilité de signaler un crash par e-mail.
 - Ajout de la possibilité d'afficher le temps d'utilisation de l'application.
 
-## Traductions:
+## Traductions :
 
 - De nombreuses personnes ont traduit l'application dans les langues suivantes. Un grand merci à vous tous.
-  - Afrikaans
+  -Afrikaans
   - Arabe
   - Albanais
   - Bulgare
-  - Chinois
+  - chinois
   - Croate
   - Tchèque
-  - Danois
-  - Anglais
+  - danois
+  - anglais
   - Estonien
   - Philippin
-  - Finnois
-  - Français
+  - finlandais
+  - français
   - Géorgien
   - Allemand
   - Grec
@@ -53,7 +53,7 @@ Fourchu à partir de <a href="https://github.com/tanujnotes/Olauncher">Olauncher
   - islandais
   - Indonésien
   - Irlandais
-  - italien
+  - Italien
   - Japonais
   - Coréen
   - Lituanien
@@ -61,19 +61,19 @@ Fourchu à partir de <a href="https://github.com/tanujnotes/Olauncher">Olauncher
   - Malais
   - Malgache
   - Malayalam
-  - norvégien
+  - Norvégien
   - Népalais
-  - Persan
-  - Polonais
+  - Perse
+  - polonais
   - Portugais (européen)
-  - Pendjabi
+  - Punjabi
   - Russe
   - Serbe
   - Sindhi
-  - Slovaque
-  - Espagnol
+  - slovaque
+  - espagnol
   - Suédois
-  - Thaïlandais
-  - Turc
+  - thaïlandais
+  - turc
   - Ukrainien
-  - Vietnamien
+  - vietnamien
