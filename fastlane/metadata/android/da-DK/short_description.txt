@@ -1,1 +1,1 @@
-Forked fra Olauncher, +minimalisering, +tilpasning
+Forked from Olauncher, +minimalization, +customizability
