@@ -1,79 +1,79 @@
-Gevorkt vanaf <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimaal en schoon.
+Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal and clean.
 
-# Geforked met extra functies
+# Forked with extra features
 
-- Rommel verwijderd, zoals advertenties en links.
-- U kunt apps hernoemen in de app-drawer (Het hernoemen van apps op het startscherm wordt al ondersteund. Klik gewoon lang op een app op het startscherm en begin met typen.)
-- We hebben veel meer opties toegevoegd voor gebaren op het beginscherm:
-    - Gebaren zijn nu:
-        - Veeg omhoog, omlaag, links, rechts
-        - Klikken op de klok
-        - Klikken op de datum
-    - Mogelijke acties omvatten:
-        - Open de opgegeven app
-        - App-lijst weergeven
-        - Scherm vergrendelen
-        - Toon recent geopende apps
-        - Open het meldingenpaneel
-        - Snelle instellingen openen
-        - Machtsdialoog
-        - Maak een screenshot
-        - Schakel gebaar uit
-- Je kunt de klok ook onafhankelijk van de thuisapps positioneren.
-- Wijzig de uitlijning van apps in de app-lade, onafhankelijk van het startscherm.
-- Wijzig de lettergrootte van delen van het startscherm onafhankelijk van elkaar.
-- Internet toestemming verwijderd. Je weet nooit wat een app-ontwikkelaar over je wil weten.
-- Instellingen achter biometrie vergrendelen (schakelaar)
-- De mogelijkheid toegevoegd om crashes via e-mail te melden.
-- De mogelijkheid toegevoegd om de gebruikstijd van de app te bekijken.
+- Removed clutter, like ads and links.
+- You can rename apps in the app-drawer (Renaming apps on the home screen is already supported. Just long-click on an app on the home screen and start typing.)
+- We have added a lot more options for gestures on the home screen:
+    - Gestures are now:
+        - Swiping up, down, left, right
+        - Clicking on the clock
+        - Clicking on the Date
+    - Possible actions now include:
+        - Open specified app
+        - Display app list
+        - Locking the screen
+        - Show Recent opened apps
+        - Opening the notification drawer
+        - Opening the quick settings
+        - Power Dialog
+        - Take A Screenshot
+        - Disable Gesture
+- You can also position the clock independently of the home apps.
+- Change alignment of apps in app-drawer independent from homescreen.
+- Change font size of sections of the homescreen independent of each other.
+- Removed internet permission. You never know what an app developer wants to know about you.
+- Lock settings behind biometrics (toggle)
+- Added the ability to report crashing via email.
+- Added the ability to view app usage time.
 
-## Vertalingen:
+## Translations:
 
-- Veel mensen hebben de app vertaald naar de volgende talen. Veel dank aan u allen.
+- A lot of people have translated the app to the following languages. Many thanks to you all.
   - Afrikaans
-  - Arabisch
-  - Albanees
-  - Bulgaars
-  - Chinees
-  - Kroatisch
-  - Tsjechisch
-  - Deens
-  - Engels
-  - Ests
-  - Filipijns
-  - Fins
-  - Frans
-  - Georgisch
-  - Duitser
-  - Grieks
-  - Hawaïaans
-  - Hebreeuws
+  - Arabic
+  - Albanian
+  - Bulgarian
+  - Chinese
+  - Croatian
+  - Czech
+  - Danish
+  - English
+  - Estonian
+  - Filipino
+  - Finnish
+  - French
+  - Georgian
+  - German
+  - Greek
+  - Hawaiian
+  - Hebrew
   - Hindi
-  - Hongaars
-  - IJslands
-  - Indonesisch
-  - Ieren
-  - Italiaans
-  - Japanse
-  - Koreaans
-  - Litouws
-  - Luxemburgs
-  - Maleis
+  - Hungarian
+  - Icelandic
+  - Indonesian
+  - Irish
+  - Italian
+  - Japanese
+  - Korean
+  - Lithuanian
+  - Luxembourgish
+  - Malay
   - Malagasy
   - Malayalam
-  - Noors
-  - Nepalees
-  - Perzisch
-  - Pools
-  - Portugees (Europees)
+  - Norwegian
+  - Nepali
+  - Persian
+  - Polish
+  - Portuguese (European)
   - Punjabi
-  - Russisch
-  - Servisch
+  - Russian
+  - Serbian
   - Sindhi
-  - Slowaaks
-  - Spaans
-  - Zweeds
-  - Thaise
-  - Turks
-  - Oekraïens
-  - Vietnamezen
+  - Slovak
+  - Spanish
+  - Swedish
+  - Thai
+  - Turkish
+  - Ukrainian
+  - Vietnamese
