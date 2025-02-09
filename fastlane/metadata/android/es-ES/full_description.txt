@@ -1,49 +1,49 @@
-Bifurcado de <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimalista y limpio.
+Bifurcado de <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mínimo y limpio.
 
-# Bifurcado con funciones adicionales
+# Bifurcado con características extra
 
 - Se eliminó el desorden, como anuncios y enlaces.
-- Puedes cambiar el nombre de las aplicaciones en el cajón de aplicaciones (ya se admite cambiar el nombre de las aplicaciones en la pantalla de inicio). (Simplemente haga clic prolongado en una aplicación en la pantalla de inicio y comience a escribir).
-- Hemos añadido muchas más opciones para gestos en la pantalla de inicio:
-    - Los gestos ahora son:
+- Puedes renombrar aplicaciones en el cajón de aplicaciones (ya es posible renombrar aplicaciones en la pantalla de inicio). Simplemente haga clic largo en una aplicación en la pantalla de inicio y comience a escribir).
+- Mucha más personalización de los gestos de la pantalla de inicio
+    - Los gestos son ahora:
         - Deslizar hacia arriba, abajo, izquierda, derecha
-        - Haciendo clic en el reloj
-        - Haciendo clic en la fecha
+        - Haga clic en el reloj
+        - Posibilidad de cambiar la aplicación que se abre al hacer clic en la fecha
     - Las posibles acciones ahora incluyen:
-        - Abrir la aplicación especificada
+        - Abrir aplicación especificada
         - Mostrar lista de aplicaciones
         - Bloquear la pantalla
-        - Mostrar aplicaciones abiertas recientemente
-        - Abrir el cajón de notificaciones
-        - Abrir la configuración rápida
+        - Mostrar aplicaciones abiertas recientes
+        - Abriendo el cajón de notificaciones
+        - Abriendo los ajustes rápidos
         - Diálogo de energía
         - Tomar una captura de pantalla
-        - Deshabilitar gesto
-- También puedes posicionar el reloj independientemente de las aplicaciones de inicio.
-- Cambiar la alineación de las aplicaciones en el cajón de aplicaciones independientemente de la pantalla de inicio.
-- Cambiar el tamaño de fuente de las secciones de la pantalla de inicio independientemente unas de otras.
-- Se eliminó el permiso de Internet. Nunca se sabe lo que un desarrollador de aplicaciones quiere saber sobre usted.
-- Bloquear configuraciones detrás de datos biométricos (alternar)
-- Se agregó la posibilidad de informar fallas por correo electrónico.
+        - Desactivar gesto
+- También puedes posicionar el reloj independientemente de las apps de casa.
+- Cambie la alineación de las aplicaciones en el cajón de aplicaciones independientemente de la pantalla de inicio.
+- Cambie el tamaño de fuente de las secciones de la pantalla de inicio de forma independiente entre sí.
+- Permiso de Internet eliminado - Permiso de Internet eliminado - Permiso de Internet eliminado - Permiso de Internet eliminado Nunca sabes lo que un desarrollador de aplicaciones quiere saber sobre ti.
+- Bloquear la configuración detrás de la biometría (alternar)
+- Se agregó la capacidad de informar fallas por correo electrónico.
 - Se agregó la capacidad de ver el tiempo de uso de la aplicación.
 
 ## Traducciones:
 
 - Mucha gente ha traducido la aplicación a los siguientes idiomas. Muchas gracias a todos.
-  - Afrikáans
+  - afrikáans
   - Árabe
-  - Albanés
+  - albanés
   - Búlgaro
   - Chino
-  - croata
-  - Checo
-  - danés
+  - Croata
+  - Checa
+  - Danés
   - Inglés
-  - estonio
-  - filipino
-  - finlandés
+  - Estonio
+  - Filipino
+  - Finlandés
   - Francés
-  - Georgiano
+  - Georgia
   - Alemán
   - Griego
   - Hawaiano
@@ -52,28 +52,28 @@ Bifurcado de <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mi
   - Húngaro
   - Islandés
   - Indonesio
-  - Irlandés
-  - italiano
+  - Irlanda
+  - Italiano
   - Japonés
   - Coreano
   - Lituano
   - Luxemburgués
   - Malayo
   - Malgache
-  - Malabar
-  - Noruego
+  - Malayalam
+  - Noruega
   - Nepalí
-  - persa
+  - Persa
   - Polaco
   - Portugués (europeo)
-  -Punjabi
+  - Punjabí
   - Ruso
-  - serbio
+  - Serbio
   - Sindhi
   - eslovaco
   - Español
   - Sueco
-  - Tailandés
+  - Tailandia
   - Turco
-  - Ucraniano
-  - vietnamita
+  - Ucrania
+  - Vietnamita
