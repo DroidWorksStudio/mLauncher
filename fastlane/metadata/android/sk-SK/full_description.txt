@@ -1,79 +1,79 @@
-Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal and clean.
+Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimálne a čisté.
 
-# Forked with extra features
+# Rozvetvený s extra funkciami
 
-- Removed clutter, like ads and links.
-- You can rename apps in the app-drawer (Renaming apps on the home screen is already supported. Just long-click on an app on the home screen and start typing.)
-- We have added a lot more options for gestures on the home screen:
-    - Gestures are now:
-        - Swiping up, down, left, right
-        - Clicking on the clock
-        - Clicking on the Date
-    - Possible actions now include:
-        - Open specified app
-        - Display app list
-        - Locking the screen
-        - Show Recent opened apps
-        - Opening the notification drawer
-        - Opening the quick settings
-        - Power Dialog
-        - Take A Screenshot
-        - Disable Gesture
-- You can also position the clock independently of the home apps.
-- Change alignment of apps in app-drawer independent from homescreen.
-- Change font size of sections of the homescreen independent of each other.
-- Removed internet permission. You never know what an app developer wants to know about you.
-- Lock settings behind biometrics (toggle)
-- Added the ability to report crashing via email.
-- Added the ability to view app usage time.
+- Odstránený neporiadok, ako sú reklamy a odkazy.
+- Môžete premenovať aplikácie na paneli aplikácií (Premenovanie aplikácií na domovskej obrazovke je už podporované. Stačí dlho kliknúť na aplikáciu na domovskej obrazovke a začať písať.)
+- Pridali sme oveľa viac možností pre gestá na domovskej obrazovke:
+    - Gestá sú teraz:
+        - Potiahnutím nahor, nadol, doľava, doprava
+        - Kliknutím na hodiny
+        - Kliknutím na dátum
+    - Možné akcie teraz zahŕňajú:
+        - Otvorte zadanú aplikáciu
+        - Zobrazte zoznam aplikácií
+        - Uzamknutie obrazovky
+        - Zobraziť naposledy otvorené aplikácie
+        - Otvorenie oznamovacej zásuvky
+        - Otvorenie rýchlych nastavení
+        - Dialógové okno napájania
+        - Urobte snímku obrazovky
+        - Zakázať gesto
+- Hodiny môžete umiestniť aj nezávisle od domácich aplikácií.
+- Zmeňte zarovnanie aplikácií v zásuvke aplikácií nezávisle od úvodnej obrazovky.
+- Zmeňte veľkosť písma častí úvodnej obrazovky nezávisle od seba.
+- Odstránené povolenie na internet. Nikdy neviete, čo o vás chce vývojár aplikácie vedieť.
+- Nastavenia uzamknutia za biometriou (prepínač)
+- Pridaná možnosť nahlásiť zlyhanie prostredníctvom e-mailu.
+- Pridaná možnosť zobraziť čas používania aplikácie.
 
-## Translations:
+## Preklady:
 
-- A lot of people have translated the app to the following languages. Many thanks to you all.
-  - Afrikaans
-  - Arabic
-  - Albanian
-  - Bulgarian
-  - Chinese
-  - Croatian
-  - Czech
-  - Danish
-  - English
-  - Estonian
-  - Filipino
-  - Finnish
-  - French
-  - Georgian
-  - German
-  - Greek
-  - Hawaiian
-  - Hebrew
-  - Hindi
-  - Hungarian
-  - Icelandic
-  - Indonesian
-  - Irish
-  - Italian
-  - Japanese
-  - Korean
-  - Lithuanian
-  - Luxembourgish
-  - Malay
-  - Malagasy
-  - Malayalam
-  - Norwegian
-  - Nepali
-  - Persian
-  - Polish
-  - Portuguese (European)
-  - Punjabi
-  - Russian
-  - Serbian
+- Veľa ľudí preložilo aplikáciu do nasledujúcich jazykov. Veľká vďaka vám všetkým.
+  - afrikánčina
+  - arabčina
+  - albánsky
+  - bulharčina
+  - čínsky
+  - chorvátsky
+  - český
+  - Dánsky
+  - anglicky
+  - estónsky
+  - Filipínsky
+  - fínsky
+  - francúzsky
+  - gruzínsky
+  - Nemčina
+  - grécky
+  - havajský
+  - hebrejsky
+  - hindčina
+  - maďarčina
+  - islandský
+  - indonézsky
+  - írsky
+  - taliansky
+  - Japonec
+  - kórejský
+  - litovský
+  - luxemburský
+  - malajčina
+  - madagaskarský
+  - Malajálamčina
+  - nórsky
+  - Nepálsky
+  - perzský
+  - poľský
+  - portugalčina (európska)
+  - pandžábsky
+  - ruský
+  - srbský
   - Sindhi
-  - Slovak
-  - Spanish
-  - Swedish
-  - Thai
-  - Turkish
-  - Ukrainian
-  - Vietnamese
+  - slovenský
+  - španielčina
+  - švédsky
+  - thajčina
+  - turecký
+  - ukrajinský
+  - Vietnamci
