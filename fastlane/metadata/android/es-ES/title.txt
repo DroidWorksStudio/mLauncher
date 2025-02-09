@@ -1,1 +1,1 @@
-mLauncher: un lanzador minimalista y sin complicaciones
+mLauncher: lanzador mínimo y libre de desorden
