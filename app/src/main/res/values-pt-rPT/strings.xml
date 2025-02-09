@@ -1,105 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Base Settings -->
-    <string name="app">App</string>
+    <string name="select_app">Selecione o aplicativo</string>
+    <!-- Strings used for settings menus -->
+    <string name="settings_name">Configurações do mLauncher</string>
+    <string name="settings_features_title">Características</string>
+    <string name="settings_features_description">Melhore sua produtividade.</string>
+    <string name="settings_look_feel_title">Aparência e sensação</string>
+    <string name="settings_look_feel_description">Dê um toque pessoal à sua tela inicial.</string>
+    <string name="settings_favorite_apps_title">Aplicativos favoritos</string>
+    <string name="settings_hidden_apps_title">Aplicativos ocultos</string>
+    <string name="settings_advanced_title">Avançado</string>
+    <string name="settings_app_info_title">Informações do aplicativo</string>
+    <string name="settings_app_info_description">%1$s</string>
     <!-- Admin Settings -->
-    <string name="admin_permission_message">O mLauncher promete usar a permissão da tela de bloqueio com responsabilidade. O mLauncher não coleta ou compartilha nenhum dado.</string>
-    <string name="experimental">(experimental)</string>
+    <string name="admin_permission_message">O mLauncher promete usar a permissão da tela de bloqueio de forma responsável. O mLauncher não coleta nem compartilha nenhum dado.</string>
+    <string name="experimental">(Experimental)</string>
     <!-- Settings Headers -->
+    <string name="display">Mostrar</string>
+    <string name="language_region">Idioma &amp; Região</string>
+    <string name="accessibility">Acessibilidade</string>
     <string name="appearance">Aparência</string>
     <string name="behavior">Comportamento</string>
-    <string name="homescreen">Homescreen</string>
+    <string name="homescreen">Tela inicial</string>
     <string name="alignment">Alinhamento</string>
     <string name="gestures">Gestos</string>
-    <string name="miscellaneous">Diversos</string>
+    <string name="miscellaneous">Variado</string>
     <!-- Home Strings -->
-    <string name="hidden_apps">Aplicações ocultas</string>
+    <string name="hidden_apps">Aplicativos ocultos</string>
     <string name="favorite_apps">Aplicativos favoritos</string>
-    <string name="set_as_default_launcher">Definido como lançador padrão</string>
-    <string name="change_default_launcher">Alterar lançador padrão</string>
-    <!-- Appearance Strings -->
-    <string name="status_bar">Mostrar barra de estado</string>
-    <string name="theme_mode">Modo temático</string>
-    <string name="color_mode">Modo de cor</string>
-    <string name="app_language">Linguagem de interface</string>
+    <string name="set_as_default_launcher">Definir como inicializador padrão</string>
+    <string name="change_default_launcher">Alterar iniciador padrão</string>
+    <!-- Display Strings -->
+    <string name="show_status_bar">Mostrar barra de status</string>
+    <string name="show_recent_apps">Mostrar aplicativos recentes</string>
+    <string name="show_app_usage_stats">Mostrar estatísticas de uso do aplicativo</string>
+    <string name="show_time">Altura de começar</string>
+    <string name="show_time_format">Formato de hora (AM/PM)</string>
+    <string name="show_date">Data do show</string>
+    <string name="show_battery">Mostrar bateria</string>
+    <string name="show_battery_icon">Mostrar ícone da bateria</string>
+    <string name="show_header_text">Mostrar texto do cabeçalho</string>
+    <!-- Language & Region Strings -->
+    <string name="app_language">Interface de idioma</string>
+    <!-- Accessibility Strings -->
     <string name="app_text_size">Tamanho do texto do aplicativo</string>
     <string name="clock_text_size">Tamanho do texto do relógio</string>
     <string name="date_text_size">Tamanho do texto da data</string>
     <string name="battery_text_size">Tamanho do texto da bateria</string>
-    <string name="app_padding_size">Tamanho do Preenchimento</string>
-    <string name="follow_accent_colors">Cores de destaque</string>
-    <string name="background_opacity">Opacidade de fundo</string>
-    <string name="all_apps_text">Exibir texto de todos os aplicativos</string>
+    <string name="app_padding_size">Tamanho do preenchimento</string>
     <string name="app_font">Família de fontes</string>
+    <!-- Appearance Strings -->
+    <string name="theme_mode">Modo temático</string>
+    <string name="background_opacity">Opacidade de fundo</string>
+    <string name="home_alignment_bottom">Alinhar a tela inicial na parte inferior</string>
     <!-- Behavior Strings -->
-    <string name="auto_show_keyboard">Teclado de exposição automática</string>
-    <string name="auto_open_apps">Aplicações abertas automaticamente</string>
-    <string name="enable_notifications">Ativar notificações</string>
-    <string name="display_recent_apps">Exibir aplicativos recentes</string>
+    <string name="auto_show_keyboard">Teclado de exibição automática</string>
+    <string name="auto_open_apps">Aplicativos abertos automaticamente</string>
+    <string name="enable_notifications">Habilitar notificações</string>
     <string name="number_of_recents">Número de aplicativos recentes</string>
-    <string name="filter_strength">Intensidade do filtro</string>
+    <string name="filter_strength">Força do filtro</string>
     <string name="search_from_start">Pesquisa de aplicativos desde o início.</string>
-    <string name="icon_font">Usar fonte do ícone</string>
+    <string name="icon_font">Usar fonte de ícone</string>
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Número de atalhos</string>
     <string name="pages_on_home_screen">Número de páginas</string>
-    <string name="enable_home_pager">Ativar página inicial</string>
-    <string name="show_time">Hora do espectáculo</string>
-    <string name="show_time_format">Formato de hora (AM/PM)</string>
-    <string name="show_date">Mostrar data</string>
-    <string name="show_battery">Mostrar bateria</string>
-    <string name="show_battery_icon">Mostrar ícone da bateria</string>
-    <string name="lock_home_apps">Aplicações de bloqueio</string>
+    <string name="enable_home_pager">Habilitar Home Pager</string>
+    <string name="lock_home_apps">Bloquear aplicativos</string>
     <string name="extend_home_apps_area">Estender área clicável</string>
-    <string name="home_alignment_bottom">Alinhar parte inferior da tela inicial</string>
     <!-- Alignment Strings -->
-    <string name="display_app_usage_stats">Exibir estatísticas de uso do aplicativo</string>
-    <string name="home_alignment">Ecrã inicial das aplicações</string>
-    <string name="clock_alignment">Relógio e data</string>
-    <string name="drawer_alignment">Aplicações na gaveta da aplicação</string>
+    <string name="home_alignment">Tela inicial de aplicativos</string>
+    <string name="clock_alignment">Relógio e Data</string>
+    <string name="drawer_alignment">Aplicativos na gaveta de aplicativos</string>
     <!-- Gestures Strings -->
-    <string name="short_swipe_up_app">Deslizar</string>
-    <string name="short_swipe_down_app">Descer</string>
-    <string name="short_swipe_left_app">Desviar para a esquerda</string>
-    <string name="short_swipe_right_app">Desviar para a direita</string>
-    <string name="long_swipe_up_app">Pressione longamente e deslize para cima</string>
-    <string name="long_swipe_down_app">Pressione longamente e deslize para baixo</string>
-    <string name="long_swipe_left_app">Pressione e deslize para a esquerda</string>
-    <string name="long_swipe_right_app">Pressione longamente e deslize para a direita</string>
-    <string name="clock_click_app">Clique em Relógio</string>
+    <string name="short_swipe_up_app">Deslize curto para cima</string>
+    <string name="short_swipe_down_app">Deslize rapidamente para baixo</string>
+    <string name="short_swipe_left_app">Deslize curto para a esquerda</string>
+    <string name="short_swipe_right_app">Deslize curto para a direita</string>
+    <string name="long_swipe_up_app">Deslize longo para cima</string>
+    <string name="long_swipe_down_app">Deslize longo para baixo</string>
+    <string name="long_swipe_left_app">Deslize longo para a esquerda</string>
+    <string name="long_swipe_right_app">Deslize longo para a direita</string>
+    <string name="clock_click_app">Clique no relógio</string>
     <string name="date_click_app">Clique em Data</string>
-    <string name="usage_click_app">Clique em Uso total</string>
-    <string name="double_tap">Torneira dupla</string>
+    <string name="usage_click_app">Clique em Uso Total</string>
+    <string name="double_tap">Toque duplo</string>
     <!-- Gestures Do Strings -->
-    <string name="show_notifications">Mostrar Notificação</string>
-    <string name="show_app_list">Mostrar lista de aplicações</string>
-    <string name="open_app">Aplicação aberta</string>
-    <string name="lock_screen">Ecrã de bloqueio</string>
-    <string name="open_quick_settings">Definições rápidas</string>
+    <string name="show_notifications">Mostrar notificação</string>
+    <string name="show_app_list">Mostrar lista de aplicativos</string>
+    <string name="open_app">Abra o aplicativo</string>
+    <string name="lock_screen">Tela de bloqueio</string>
+    <string name="open_quick_settings">Configurações rápidas</string>
     <string name="show_recents">Mostrar Recentes</string>
     <string name="open_power_dialog">Diálogo de energia</string>
     <string name="take_a_screenshot">Tirar uma captura de tela</string>
     <string name="left_page">Ir para a página esquerda</string>
     <string name="right_page">Ir para a página certa</string>
-    <string name="double_tap_to_lock_screen">Torneira dupla para fechar</string>
+    <string name="double_tap_to_lock_screen">Toque duas vezes para bloquear</string>
     <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">Tamanho do texto das configurações</string>
+    <string name="settings_text_size">Configurações Tamanho do texto</string>
     <string name="display_hidden_apps">Exibir aplicativos ocultos</string>
     <string name="lock_settings">Configurações de bloqueio</string>
     <!-- Backup Strings -->
-    <string name="backup">Cópia de segurança</string>
+    <string name="backup">Backup</string>
     <string name="load_backup">Carregar</string>
     <string name="save_backup">Salvar</string>
     <string name="clear_backup">Claro</string>
     <!-- Settings Strings -->
     <string name="off">Desligado</string>
-    <string name="on">Em</string>
+    <string name="on">Sobre</string>
     <string name="left">Esquerda</string>
     <string name="right">Certo</string>
     <string name="center">Centro</string>
     <string name="dark">Escuro</string>
     <string name="light">Luz</string>
-    <string name="settings">Definições</string>
+    <string name="settings">Configurações</string>
     <string name="lang_system">Sistema</string>
     <string name="system_default">Sistema</string>
     <string name="delete">Excluir</string>
@@ -107,21 +122,21 @@
     <string name="unhide">Mostrar</string>
     <string name="rename">Renomear</string>
     <string name="info">Informações</string>
-    <string name="okay">Está bem</string>
-    <string name="save">Guardar</string>
+    <string name="okay">OK</string>
+    <string name="save">Salvar</string>
     <string name="show">Mostrar</string>
-    <string name="reset">Reinicialização</string>
+    <string name="reset">Reiniciar</string>
     <string name="cancel">Cancelar</string>
     <string name="enable">Habilitar</string>
-    <string name="disable">Desactivar</string>
-    <string name="enabled">Activado</string>
-    <string name="disabled">Deficientes</string>
-    <string name="open">Aberto</string>
+    <string name="disable">Desabilitar</string>
+    <string name="enabled">Habilitado</string>
+    <string name="disabled">Desabilitado</string>
+    <string name="open">Abrir</string>
     <string name="close">Fechar</string>
-    <string name="copy">cópia de</string>
+    <string name="copy">Cópia</string>
     <!-- Colored Themes -->
     <string name="catppuccino">Catppuccino</string>
-    <string name="nordic">Nórdico</string>
+    <string name="nordic">nórdico</string>
     <!-- Dark Only Themes -->
     <string name="dracula">Drácula</string>
     <string name="arc">Arco</string>
@@ -131,39 +146,38 @@
     <!-- Light Only Themes -->
     <string name="adwaita">Adwaita</string>
     <!-- PinCode Strings -->
-    <string name="text_authentication_cancel">Cancelamento de autenticação.</string>
+    <string name="text_authentication_cancel">Cancelar autenticação.</string>
     <string name="text_authentication_error">Erro de autenticação:%1$s(código %2$d)</string>
     <string name="text_authentication_failed">Falha na autenticação.</string>
     <string name="text_biometric_login">Login biométrico para mLauncher</string>
-    <string name="text_biometric_login_sub">Faça login usando sua credencial biométrica</string>
+    <string name="text_biometric_login_sub">Faça login usando suas credenciais biométricas.</string>
     <!-- Crash Strings -->
     <string name="acra_crash">Colidir</string>
-    <string name="acra_dialog_text">Lamentamos, mas %1$s encontrou um problema inesperado e precisa ser fechado. Por favor, ajude-nos a melhorar enviando um relatório de falha.\n\n%1$s valoriza sua privacidade e os dados coletados são usados exclusivamente para melhorar a estabilidade do aplicativo. Nenhuma informação pessoal é coletada. Obrigado pelo seu apoio!</string>
+    <string name="acra_dialog_text">Lamentamos, mas %1$s encontrou um problema inesperado e precisa fechar. Ajude-nos a melhorar enviando um relatório de falha.\n\n%1$s valoriza sua privacidade e os dados coletados são usados exclusivamente para melhorar a estabilidade do aplicativo. Nenhuma informação pessoal é coletada. Obrigado pelo seu apoio!</string>
     <string name="acra_send_report">Enviar relatório</string>
-    <string name="acra_dont_send">Não envie</string>
-    <string name="acra_mail_body">Ocorreu uma falha no aplicativo.\n\nAbaixo estão os detalhes do dispositivo. O log de erros foi anexado como um arquivo para sua referência. Agradecemos sua ajuda para resolver esse problema.\n\nInformações do dispositivo: \n[POR FAVOR preencha as informações abaixo também removendo qualquer coisa entre colchetes ou isso será ignorado.]\n\n- Versão do aplicativo: [0.0.1]\n- Versão Android: [14]\n- Nome do dispositivo: [Android Pixel 69]\n- Local de instalação: [github, fdroid, obtanium, self]\n\nSua atenção imediata a este assunto é muito apreciada.\n\nObrigado.\n</string>
+    <string name="acra_dont_send">Não enviar</string>
+    <string name="acra_mail_body">Ocorreu uma falha no aplicativo.\n\nAbaixo estão os detalhes do dispositivo. O log de erros foi anexado como um arquivo para sua referência. Gostaríamos de sua ajuda para resolver esse problema.\n\nInformações do dispositivo: \n[POR FAVOR, preencha as informações abaixo removendo também tudo entre os colchetes ou isso será ignorado.]\n\n- Versão do aplicativo: [0.0.1]\n- Versão do Android: [14]\n- Nome do dispositivo: [Android Pixel 69]\n- Local de instalação: [github, fdroid, obtanium, self]\n\nSua pronta atenção a este assunto é muito apreciada.\n\nObrigado.\n</string>
     <string name="settings_font_system">Sistema</string>
     <!-- Search Stings -->
-    <string name="search_engine">Mecanismo de busca</string>
+    <string name="search_engine">Motor de busca</string>
     <string name="search_google">Google</string>
     <string name="search_yahoo">Yahoo</string>
-    <string name="search_duckduckgo">PatoDuckGo</string>
-    <string name="search_bing">Google</string>
+    <string name="search_duckduckgo">PatoPatoVai</string>
+    <string name="search_bing">Bing</string>
     <string name="search_brave">Corajoso</string>
-    <string name="search_swisscow">Vacas Suíças</string>
+    <string name="search_swisscow">Vacas suíças</string>
     <!-- Unsorted Strings -->
-    <string name="show_apps">Todas as aplicações</string>
+    <string name="show_apps">Todos os aplicativos</string>
     <string name="total_screen_time">Tempo total de tela</string>
     <string name="can_not_delete_system_apps">Não é possível excluir aplicativos do sistema</string>
     <string name="please_select_app">Selecione um aplicativo</string>
-    <string name="drawer_list_empty_hint">Nenhuma aplicação encontrada</string>
-    <string name="long_press_for_settings">Prensa longa em qualquer lugar para configurações</string>
-    <string name="swipe_up_for_apps">Descarregar para todas as aplicações</string>
-    <string name="app_drawer_tips">Dica: Descer para despedir. Deslizar para esconder o teclado.</string>
-    <string name="double_tap_lock_is_enabled_message">Se o fecho de dupla torneira desactivar a impressão digital ou o desbloqueio facial, abra as definições do mLauncher, toque em \'experimental\' e siga as instruções. Obrigado.</string>
-    <string name="double_tap_lock_uninstall_message">Dupla torneira para bloquear activada.
-		\n\nNota: Desligue isto primeiro se decidir apagar o mLauncher.</string>
-    <string name="accessibility_service_name">Serviço de Acções mLauncher</string>
-    <string name="accessibility_service_description">Este serviço de acessibilidade permite que o mLauncher execute determinadas ações, como bloquear a tela ou abrir as configurações rápidas. Nosso serviço de acessibilidade não coleta nem compartilha nenhum dado.</string>
+    <string name="drawer_list_empty_hint">Nenhum aplicativo encontrado</string>
+    <string name="long_press_for_settings">Pressione e segure em qualquer lugar para configurações</string>
+    <string name="swipe_up_for_apps">Deslize para cima para ver todos os aplicativos</string>
+    <string name="app_drawer_tips">Dica: Deslize para baixo para dispensar. Role para ocultar o teclado.</string>
+    <string name="double_tap_lock_is_enabled_message">Se o bloqueio de toque duplo desabilitar o desbloqueio por impressão digital ou facial, abra as configurações do mLauncher, toque em \"experimental\" e siga as instruções. Obrigado.</string>
+    <string name="double_tap_lock_uninstall_message">Toque duas vezes para bloquear habilitado. \n\nNota: Desligue isso primeiro se decidir excluir o mLauncher.</string>
+    <string name="accessibility_service_name">Serviço de Ações mLauncher</string>
+    <string name="accessibility_service_description">Este serviço de acessibilidade permite que o mLauncher faça certas ações, como bloquear a tela ou abrir as configurações rápidas. Nosso serviço de acessibilidade não coleta nem compartilha nenhum dado.</string>
     <string name="version">Versão</string>
 </resources>
