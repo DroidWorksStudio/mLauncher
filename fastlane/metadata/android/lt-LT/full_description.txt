@@ -1,79 +1,79 @@
-Šakė nuo <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimalus ir švarus.
+Šakė nuo <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimalus ir paprastas.
 
-# Šakutė su papildomomis funkcijomis
+# Variantas su papildomomis funkcijomis
 
 – Pašalinta netvarka, pvz., skelbimai ir nuorodos.
-- Programas galite pervardyti programų stalčiuje (programų pervadinimas pagrindiniame ekrane jau palaikomas. Tiesiog ilgai spustelėkite programą pagrindiniame ekrane ir pradėkite rašyti.)
+- Programėlių stalčiuje galite pervadinti programėles (Programėlių pervadinimas pagrindiniame ekrane jau palaikomas. Tiesiog ilgai spustelėkite programėlę pagrindiniame ekrane ir pradėkite rašyti.)
 - Pradiniame ekrane pridėjome daug daugiau gestų parinkčių:
     - Gestai dabar yra:
         - Braukite aukštyn, žemyn, kairėn, dešinėn
         - Paspaudus ant laikrodžio
         - Paspaudus ant datos
     – Dabar galimi veiksmai:
-        - Atidarykite nurodytą programą
+        - Atidaryti nurodytą programą
         - Rodyti programų sąrašą
         - Ekrano užrakinimas
         - Rodyti neseniai atidarytas programas
         - Atidaryti pranešimų stalčių
         - Greitųjų nustatymų atidarymas
         - Maitinimo dialogas
-        - Padarykite ekrano kopiją
-        - Išjungti gestą
-- Taip pat galite nustatyti laikrodį nepriklausomai nuo namų programų.
-- Pakeiskite programų išdėstymą programų stalčiuje nepriklausomai nuo pagrindinio ekrano.
-- Pakeiskite pagrindinio ekrano skyrių šrifto dydį nepriklausomai vienas nuo kito.
-- Pašalintas interneto leidimas. Niekada nežinote, ką programos kūrėjas nori sužinoti apie jus.
-- Užrakinti nustatymus už biometrinių duomenų (perjungti)
+        - Ekrano kopijos darymas
+        - Išjungti gestus
+- Taip pat galite nustatyti laikrodį nepriklausomai nuo pagrindinio ekrano programėlių.
+- Pakeisti programėlių išdėstymą programėlių stalčiuje nepriklausomai nuo pagrindinio ekrano.
+- Pakeisti pagrindinio ekrano skyrių šrifto dydį nepriklausomai vienas nuo kito.
+- Pašalintas interneto leidimo reikalavimas. Niekada nežinote, ką programos kūrėjas nori sužinoti apie jus.
+- Užrakinti nustatymus už biometrinių duomenų (pasirinktinai)
 - Pridėta galimybė pranešti apie gedimą el. paštu.
-- Pridėta galimybė peržiūrėti programos naudojimo laiką.
+- Pridėta galimybė peržiūrėti programėlės naudojimo laiką.
 
 ## Vertimai:
 
-- Daug žmonių išvertė programą į šias kalbas. Labai ačiū jums visiems.
-  – afrikanų
-  – arabiškai
-  - albanas
-  - bulgarų
-  – kinų
-  – kroatų
-  – Čekų
-  - danų
-  – Anglų kalba
-  – Estų
-  - filipinietis
-  - suomių
-  – prancūzų
-  – gruzinų
-  – Vokiečių
-  – graikų
-  - Havajų
-  – hebrajų
-  - Hindi
-  – vengrų
-  – islandų
-  – Indoneziečių
-  – airių
-  – italų
-  - Japonai
-  - Korėjiečių
-  - Lietuvių
-  – Liuksemburgiečių
-  – malajų
-  - Madagaskarė
-  - Malajalamų
-  – norvegų
-  - Nepalas
-  - persų
-  – lenkų
-  – portugalų (europiečių)
-  - Pandžabų
-  – Rusų
-  - Serbų
-  - Sindhi
-  – slovakas
-  – ispanų
-  - Švedų
-  – Tajų
-  – turkų
-  – ukrainietė
-  - Vietnamiečių
+- Daug žmonių išvertė programėlę į šias kalbas. Dėkojame jums visiems.
+  – Afrikanų kalba
+  - Arabų kalba
+  - Albanų kalba
+  - Bulgarų kalba
+  - Kinų kalba
+  - Kroatų kalba
+  - Čekų kalba
+  - Danų kalba
+  - Anglų kalba
+  - Estų kalba
+  - Filipiniečių kalba
+  - Suomių kalba
+  - Prancūzų kalba
+  - Gruzinų kalba
+  - Vokiečių kalba
+  - Graikų kalba
+  - Havajiečių kalba
+  - Hebrajų kalba
+  - Hindi kalba
+  - Vengrų kalba
+  - Islandų kalba
+  - Indoneziečių kalba
+  - Airijos
+  - Italų kalba
+  - Japonų kalba
+  - Korėjiečių kalba
+  - Lietuvių kalba
+  - Liuksemburgo kalba
+  - Malajų kalba
+  - Malagasių kalba
+  - Malajalamų kalba
+  - Norvegų kalba
+  - Nepalų kalba
+  - Persų kalba
+  - Lenkų kalba
+  - Portugalų (Europos) kalba
+  - Pandžabų kalba
+  - Rusų kalba
+  - Serbų kalba
+  - Sindų kalba
+  – Slovakų kalba
+  - Ispanų kalba
+  - Švedų kalba
+  - Tailandiečių kalba
+  - Turkų kalba
+  - Ukrainiečių kalba
+  - Vietnamiečių kalba
