@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Base Settings -->
-    <string name="app">แอป</string>
+    <string name="select_app">เลือกแอป</string>
+    <!-- Strings used for settings menus -->
+    <string name="settings_name">การตั้งค่า mLauncher</string>
+    <string name="settings_features_title">คุณสมบัติ</string>
+    <string name="settings_features_description">ปรับปรุงประสิทธิภาพการทำงานของคุณ</string>
+    <string name="settings_look_feel_title">มองและรู้สึก</string>
+    <string name="settings_look_feel_description">เพิ่มความเป็นส่วนตัวให้กับหน้าจอหลักของคุณ</string>
+    <string name="settings_favorite_apps_title">แอปพลิเคชั่นที่ชื่นชอบ</string>
+    <string name="settings_hidden_apps_title">แอปที่ซ่อนอยู่</string>
+    <string name="settings_advanced_title">ขั้นสูง</string>
+    <string name="settings_app_info_title">ข้อมูลแอป</string>
+    <string name="settings_app_info_description">%1$s</string>
     <!-- Admin Settings -->
-    <string name="admin_permission_message">mLauncher สัญญาว่าจะใช้การอนุญาตล็อคหน้าจออย่างมีความรับผิดชอบ mLauncher ไม่รวบรวมหรือแบ่งปันข้อมูลใด ๆ</string>
+    <string name="admin_permission_message">mLauncher สัญญาว่าจะใช้การอนุญาตล็อคหน้าจออย่างมีความรับผิดชอบ mLauncher จะไม่เก็บหรือแบ่งปันข้อมูลใดๆ</string>
     <string name="experimental">(ทดลอง)</string>
     <!-- Settings Headers -->
+    <string name="display">แสดง</string>
+    <string name="language_region">ภาษา &amp; ภูมิภาค</string>
+    <string name="accessibility">การเข้าถึงได้</string>
     <string name="appearance">รูปร่าง</string>
     <string name="behavior">พฤติกรรม</string>
     <string name="homescreen">หน้าจอหลัก</string>
@@ -13,81 +27,82 @@
     <string name="gestures">ท่าทาง</string>
     <string name="miscellaneous">เบ็ดเตล็ด</string>
     <!-- Home Strings -->
-    <string name="hidden_apps">แอพที่ซ่อนอยู่</string>
+    <string name="hidden_apps">แอปที่ซ่อนอยู่</string>
     <string name="favorite_apps">แอปพลิเคชั่นที่ชื่นชอบ</string>
-    <string name="set_as_default_launcher">ตั้งเป็นตัวเรียกใช้งานเริ่มต้น</string>
-    <string name="change_default_launcher">เปลี่ยนตัวเรียกใช้งานเริ่มต้น</string>
-    <!-- Appearance Strings -->
-    <string name="status_bar">แสดงแถบสถานะ</string>
-    <string name="theme_mode">โหมดธีม</string>
-    <string name="color_mode">โหมดสี</string>
-    <string name="app_language">ภาษาอินเทอร์เฟซ</string>
-    <string name="app_text_size">ขนาดข้อความของแอป</string>
-    <string name="clock_text_size">ขนาดข้อความนาฬิกา</string>
-    <string name="date_text_size">ขนาดข้อความวันที่</string>
-    <string name="battery_text_size">ขนาดข้อความแบตเตอรี่</string>
-    <string name="app_padding_size">ขนาดช่องว่างภายใน</string>
-    <string name="follow_accent_colors">เน้นสี</string>
-    <string name="background_opacity">ความทึบของพื้นหลัง</string>
-    <string name="all_apps_text">แสดงข้อความแอพทั้งหมด</string>
-    <string name="app_font">ครอบครัวแบบอักษร</string>
-    <!-- Behavior Strings -->
-    <string name="auto_show_keyboard">แป้นพิมพ์แสดงอัตโนมัติ</string>
-    <string name="auto_open_apps">เปิดแอปอัตโนมัติ</string>
-    <string name="enable_notifications">เปิดใช้งานการแจ้งเตือน</string>
-    <string name="display_recent_apps">แสดงแอปล่าสุด</string>
-    <string name="number_of_recents">จำนวนแอปล่าสุด</string>
-    <string name="filter_strength">ความแรงของตัวกรอง</string>
-    <string name="search_from_start">ค้นหาแอปตั้งแต่เริ่มต้น</string>
-    <string name="icon_font">ใช้แบบอักษรไอคอน</string>
-    <!-- Home-screen Strings -->
-    <string name="apps_on_home_screen">จำนวนทางลัด</string>
-    <string name="pages_on_home_screen">เลขหน้า</string>
-    <string name="enable_home_pager">เปิดใช้งานโฮมเพจเจอร์</string>
-    <string name="show_time">เวลาแสดง</string>
+    <string name="set_as_default_launcher">ตั้งค่าเป็นตัวเปิดใช้เริ่มต้น</string>
+    <string name="change_default_launcher">เปลี่ยนตัวเปิดใช้เริ่มต้น</string>
+    <!-- Display Strings -->
+    <string name="show_status_bar">แสดงแถบสถานะ</string>
+    <string name="show_recent_apps">แสดงแอปล่าสุด</string>
+    <string name="show_app_usage_stats">แสดงสถิติการใช้งานแอป</string>
+    <string name="show_time">เวลาการแสดง</string>
     <string name="show_time_format">รูปแบบเวลา (AM/PM)</string>
     <string name="show_date">แสดงวันที่</string>
     <string name="show_battery">แสดงแบตเตอรี่</string>
     <string name="show_battery_icon">แสดงไอคอนแบตเตอรี่</string>
-    <string name="lock_home_apps">ล็อคแอพ</string>
+    <string name="show_header_text">แสดงข้อความส่วนหัว</string>
+    <!-- Language & Region Strings -->
+    <string name="app_language">ภาษาอินเทอร์เฟซ</string>
+    <!-- Accessibility Strings -->
+    <string name="app_text_size">ขนาดข้อความแอป</string>
+    <string name="clock_text_size">ขนาดตัวอักษรนาฬิกา</string>
+    <string name="date_text_size">ขนาดตัวอักษรวันที่</string>
+    <string name="battery_text_size">ขนาดตัวอักษรแบตเตอรี่</string>
+    <string name="app_padding_size">ขนาดแพดดิ้ง</string>
+    <string name="app_font">ฟอนต์ตระกูล</string>
+    <!-- Appearance Strings -->
+    <string name="theme_mode">โหมดธีม</string>
+    <string name="background_opacity">ความทึบของพื้นหลัง</string>
+    <string name="home_alignment_bottom">จัดตำแหน่งหน้าจอหลักให้ด้านล่าง</string>
+    <!-- Behavior Strings -->
+    <string name="auto_show_keyboard">แป้นพิมพ์แสดงอัตโนมัติ</string>
+    <string name="auto_open_apps">เปิดแอปอัตโนมัติ</string>
+    <string name="enable_notifications">เปิดใช้งานการแจ้งเตือน</string>
+    <string name="number_of_recents">จำนวนแอปที่ใช้งานล่าสุด</string>
+    <string name="filter_strength">ความแข็งแรงของตัวกรอง</string>
+    <string name="search_from_start">ค้นหาแอปจากเริ่มต้น</string>
+    <string name="icon_font">ใช้แบบอักษรไอคอน</string>
+    <!-- Home-screen Strings -->
+    <string name="apps_on_home_screen">จำนวนทางลัด</string>
+    <string name="pages_on_home_screen">จำนวนหน้า</string>
+    <string name="enable_home_pager">เปิดใช้งานโฮมเพจเจอร์</string>
+    <string name="lock_home_apps">ล็อคแอป</string>
     <string name="extend_home_apps_area">ขยายพื้นที่ที่สามารถคลิกได้</string>
-    <string name="home_alignment_bottom">หน้าจอหลักจัดตำแหน่งด้านล่าง</string>
     <!-- Alignment Strings -->
-    <string name="display_app_usage_stats">แสดงสถิติการใช้งานแอป</string>
     <string name="home_alignment">หน้าจอหลักของแอพ</string>
     <string name="clock_alignment">นาฬิกาและวันที่</string>
     <string name="drawer_alignment">แอปในลิ้นชักแอป</string>
     <!-- Gestures Strings -->
-    <string name="short_swipe_up_app">ปัดขึ้น</string>
-    <string name="short_swipe_down_app">เลื่อนลง</string>
-    <string name="short_swipe_left_app">ปัดไปทางซ้าย</string>
-    <string name="short_swipe_right_app">ปัดไปทางขวา</string>
-    <string name="long_swipe_up_app">กดแบบยาวปัดขึ้น</string>
-    <string name="long_swipe_down_app">กดค้างปัดลง</string>
-    <string name="long_swipe_left_app">กดค้าง ปัดไปทางซ้าย</string>
-    <string name="long_swipe_right_app">กดค้าง ปัดไปทางขวา</string>
+    <string name="short_swipe_up_app">ปัดขึ้นสั้นๆ</string>
+    <string name="short_swipe_down_app">ปัดลงสั้นๆ</string>
+    <string name="short_swipe_left_app">ปัดไปทางซ้ายสั้นๆ</string>
+    <string name="short_swipe_right_app">ปัดขวาสั้น ๆ</string>
+    <string name="long_swipe_up_app">ปัดขึ้นยาวๆ</string>
+    <string name="long_swipe_down_app">ปัดลงยาวๆ</string>
+    <string name="long_swipe_left_app">ปัดยาวไปทางซ้าย</string>
+    <string name="long_swipe_right_app">ปัดขวายาวๆ</string>
     <string name="clock_click_app">คลิกที่นาฬิกา</string>
     <string name="date_click_app">คลิกที่วันที่</string>
     <string name="usage_click_app">คลิกที่การใช้งานทั้งหมด</string>
     <string name="double_tap">แตะสองครั้ง</string>
     <!-- Gestures Do Strings -->
     <string name="show_notifications">แสดงการแจ้งเตือน</string>
-    <string name="show_app_list">แสดงรายการแอพ</string>
-    <string name="open_app">เปิดแอพ</string>
-    <string name="lock_screen">ล็อกหน้าจอ</string>
+    <string name="show_app_list">แสดงรายการแอป</string>
+    <string name="open_app">เปิดแอป</string>
+    <string name="lock_screen">ล็อคหน้าจอ</string>
     <string name="open_quick_settings">การตั้งค่าด่วน</string>
     <string name="show_recents">แสดงล่าสุด</string>
-    <string name="open_power_dialog">กล่องโต้ตอบพลังงาน</string>
+    <string name="open_power_dialog">บทสนทนาแห่งพลัง</string>
     <string name="take_a_screenshot">ถ่ายภาพหน้าจอ</string>
     <string name="left_page">ไปที่หน้าซ้าย</string>
     <string name="right_page">ไปที่หน้าขวา</string>
     <string name="double_tap_to_lock_screen">แตะสองครั้งเพื่อล็อค</string>
     <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">ขนาดตัวอักษรการตั้งค่า</string>
-    <string name="display_hidden_apps">แสดงแอปที่ซ่อนอยู่</string>
-    <string name="lock_settings">ล็อคการตั้งค่า</string>
+    <string name="settings_text_size">การตั้งค่าขนาดตัวอักษร</string>
+    <string name="display_hidden_apps">แสดงแอพที่ซ่อนไว้</string>
+    <string name="lock_settings">การตั้งค่าการล็อค</string>
     <!-- Backup Strings -->
-    <string name="backup">สำรองข้อมูล</string>
+    <string name="backup">การสำรองข้อมูล</string>
     <string name="load_backup">โหลด</string>
     <string name="save_backup">บันทึก</string>
     <string name="clear_backup">ชัดเจน</string>
@@ -95,8 +110,8 @@
     <string name="off">ปิด</string>
     <string name="on">บน</string>
     <string name="left">ซ้าย</string>
-    <string name="right">ถูกต้อง</string>
-    <string name="center">ศูนย์กลาง</string>
+    <string name="right">ขวา</string>
+    <string name="center">ศูนย์</string>
     <string name="dark">มืด</string>
     <string name="light">แสงสว่าง</string>
     <string name="settings">การตั้งค่า</string>
@@ -114,13 +129,13 @@
     <string name="cancel">ยกเลิก</string>
     <string name="enable">เปิดใช้งาน</string>
     <string name="disable">ปิดการใช้งาน</string>
-    <string name="enabled">เปิดใช้งาน</string>
+    <string name="enabled">เปิดใช้งานแล้ว</string>
     <string name="disabled">พิการ</string>
     <string name="open">เปิด</string>
     <string name="close">ปิด</string>
     <string name="copy">สำเนา</string>
     <!-- Colored Themes -->
-    <string name="catppuccino">คัทปุชชิโน</string>
+    <string name="catppuccino">คาปูชิโน่</string>
     <string name="nordic">นอร์ดิก</string>
     <!-- Dark Only Themes -->
     <string name="dracula">แดร็กคูล่า</string>
@@ -129,41 +144,40 @@
     <string name="breeze">สายลม</string>
     <string name="yaru">ยารุ</string>
     <!-- Light Only Themes -->
-    <string name="adwaita">แอดเวตา</string>
+    <string name="adwaita">อัดไวตะ</string>
     <!-- PinCode Strings -->
-    <string name="text_authentication_cancel">ยกเลิกการรับรองความถูกต้อง</string>
-    <string name="text_authentication_error">ข้อผิดพลาดในการตรวจสอบสิทธิ์:%1$s(รหัส %2$d)</string>
-    <string name="text_authentication_failed">รับรองความถูกต้องล้มเหลว.</string>
+    <string name="text_authentication_cancel">การยกเลิกการตรวจสอบสิทธิ์</string>
+    <string name="text_authentication_error">ข้อผิดพลาดในการรับรองความถูกต้อง:%1$s(รหัส %2$d)</string>
+    <string name="text_authentication_failed">การตรวจสอบสิทธิ์ล้มเหลว</string>
     <string name="text_biometric_login">การเข้าสู่ระบบไบโอเมตริกซ์สำหรับ mLauncher</string>
     <string name="text_biometric_login_sub">เข้าสู่ระบบโดยใช้ข้อมูลประจำตัวไบโอเมตริกซ์ของคุณ</string>
     <!-- Crash Strings -->
     <string name="acra_crash">ชน</string>
-    <string name="acra_dialog_text">ขออภัย %1$s พบปัญหาที่ไม่คาดคิดและจำเป็นต้องปิด โปรดช่วยเราปรับปรุงโดยการส่งรายงานข้อขัดข้อง\n\n%1$s ให้ความสำคัญกับความเป็นส่วนตัวของคุณ และข้อมูลที่รวบรวมจะถูกนำมาใช้เพื่อปรับปรุงเสถียรภาพของแอปเท่านั้น ไม่มีการเก็บรวบรวมข้อมูลส่วนบุคคล ขอบคุณสำหรับการสนับสนุนของคุณ!</string>
+    <string name="acra_dialog_text">เราขออภัย แต่ %1$s พบปัญหาที่ไม่คาดคิดและจำเป็นต้องปิด โปรดช่วยเราปรับปรุงโดยส่งรายงานข้อขัดข้อง\n\n%1$s ให้ความสำคัญกับความเป็นส่วนตัวของคุณ และข้อมูลที่รวบรวมจะใช้เพื่อปรับปรุงเสถียรภาพของแอปเท่านั้น ไม่มีการรวบรวมข้อมูลส่วนบุคคลใดๆ ขอบคุณสำหรับการสนับสนุนของคุณ!</string>
     <string name="acra_send_report">ส่งรายงาน</string>
     <string name="acra_dont_send">อย่าส่ง</string>
-    <string name="acra_mail_body">เกิดข้อขัดข้องในแอปพลิเคชัน\n\nด้านล่างนี้คือรายละเอียดของอุปกรณ์ บันทึกข้อผิดพลาดได้รับการแนบมาเป็นไฟล์สำหรับการอ้างอิงของคุณ เราขอขอบคุณสำหรับความช่วยเหลือของคุณในการแก้ไขปัญหานี้\n\nข้อมูลอุปกรณ์: \n[กรุณากรอกข้อมูลด้านล่างและลบสิ่งใด ๆ ที่อยู่ระหว่างวงเล็บเหลี่ยมออก ไม่เช่นนั้นจะถูกละเว้น]\n\n- เวอร์ชันของแอป: [0.0.1]\n- เวอร์ชัน Android: [14]\n- ชื่ออุปกรณ์: [Android Pixel 69]\n- ตำแหน่งการติดตั้ง: [github, fdroid, obtanium, ตนเอง]\n\nขอขอบคุณที่คุณให้ความสนใจต่อเรื่องนี้ในทันที\n\nขอบคุณ\n</string>
+    <string name="acra_mail_body">เกิดการขัดข้องในแอปพลิเคชัน\n\nด้านล่างนี้คือรายละเอียดของอุปกรณ์ บันทึกข้อผิดพลาดได้แนบมาเป็นไฟล์สำหรับการอ้างอิงของคุณ เราจะขอบคุณมากหากคุณช่วยแก้ไขปัญหานี้\n\nข้อมูลอุปกรณ์: \n[โปรดกรอกข้อมูลด้านล่างนี้ รวมถึงลบข้อมูลใดๆ ที่อยู่ระหว่างวงเล็บเหลี่ยม มิฉะนั้นระบบจะละเว้นข้อมูลนี้]\n\n- เวอร์ชันแอป: [0.0.1]\n- เวอร์ชัน Android: [14]\n- ชื่ออุปกรณ์: [Android Pixel 69]\n- ตำแหน่งการติดตั้ง: [github, fdroid, obtanium, self]\n\nเราชื่นชมความเอาใจใส่ในเรื่องนี้ของคุณโดยเร็ว\n\nขอบคุณค่ะ\n</string>
     <string name="settings_font_system">ระบบ</string>
     <!-- Search Stings -->
     <string name="search_engine">เครื่องมือค้นหา</string>
     <string name="search_google">Google</string>
     <string name="search_yahoo">ยาฮู</string>
-    <string name="search_duckduckgo">เป็ดเป็ดGo</string>
-    <string name="search_bing">ปิง</string>
+    <string name="search_duckduckgo">ดั๊กดั๊กโก</string>
+    <string name="search_bing">บิง</string>
     <string name="search_brave">กล้าหาญ</string>
-    <string name="search_swisscow">SwissCows</string>
+    <string name="search_swisscow">สวิสวัวส์</string>
     <!-- Unsorted Strings -->
-    <string name="show_apps">แอพทั้งหมด</string>
-    <string name="total_screen_time">เวลาอยู่หน้าจอทั้งหมด</string>
+    <string name="show_apps">แอปทั้งหมด</string>
+    <string name="total_screen_time">เวลาหน้าจอทั้งหมด</string>
     <string name="can_not_delete_system_apps">ไม่สามารถลบแอประบบได้</string>
-    <string name="please_select_app">โปรดเลือกแอป</string>
+    <string name="please_select_app">กรุณาเลือกแอป</string>
     <string name="drawer_list_empty_hint">ไม่พบแอป</string>
-    <string name="long_press_for_settings">กดที่ใดก็ได้ค้างไว้เพื่อตั้งค่า</string>
+    <string name="long_press_for_settings">กดค้างที่ใดก็ได้เพื่อตั้งค่า</string>
     <string name="swipe_up_for_apps">ปัดขึ้นสำหรับแอปทั้งหมด</string>
-    <string name="app_drawer_tips">เคล็ดลับ: ปัดลงเพื่อปิด เลื่อนเพื่อซ่อนแป้นพิมพ์</string>
-    <string name="double_tap_lock_is_enabled_message">หากการล็อกด้วยการแตะสองครั้งปิดใช้งานการปลดล็อกด้วยลายนิ้วมือหรือใบหน้า ให้เปิดการตั้งค่า mLauncher แตะที่ \'ทดลอง\' แล้วทำตามคำแนะนำ ขอขอบคุณ.</string>
-    <string name="double_tap_lock_uninstall_message">แตะสองครั้งเพื่อล็อคเปิดใช้งาน
-		\n\nหมายเหตุ: ปิดการทำงานนี้ก่อนหากคุณตัดสินใจที่จะลบ mLauncher</string>
-    <string name="accessibility_service_name">บริการดำเนินการ mLauncher</string>
-    <string name="accessibility_service_description">บริการการเข้าถึงนี้ช่วยให้ mLauncher ดำเนินการบางอย่างได้ เช่น ล็อคหน้าจอหรือเปิดการตั้งค่าด่วน บริการการเข้าถึงของเราจะไม่รวบรวมหรือแบ่งปันข้อมูลใดๆ</string>
+    <string name="app_drawer_tips">เคล็ดลับ: ปัดลงเพื่อยกเลิก เลื่อนเพื่อซ่อนแป้นพิมพ์</string>
+    <string name="double_tap_lock_is_enabled_message">หากการแตะสองครั้งเพื่อล็อกทำให้การปลดล็อกด้วยลายนิ้วมือหรือใบหน้าถูกปิดใช้งาน ให้เปิดการตั้งค่า mLauncher แตะที่ \"ทดลอง\" แล้วทำตามคำแนะนำ ขอบคุณ</string>
+    <string name="double_tap_lock_uninstall_message">แตะสองครั้งเพื่อล็อคการเปิดใช้งาน \n\nหมายเหตุ: ปิดสิ่งนี้ก่อนหากคุณตัดสินใจที่จะลบ mLauncher</string>
+    <string name="accessibility_service_name">บริการการดำเนินการ mLauncher</string>
+    <string name="accessibility_service_description">บริการการเข้าถึงนี้ช่วยให้ mLauncher สามารถดำเนินการบางอย่างได้ เช่น ล็อกหน้าจอหรือเปิดการตั้งค่าด่วน บริการการเข้าถึงของเราไม่รวบรวมหรือแบ่งปันข้อมูลใดๆ</string>
     <string name="version">เวอร์ชัน</string>
 </resources>
