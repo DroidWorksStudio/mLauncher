@@ -11,6 +11,10 @@
     <string name="settings_favorite_apps_title">お気に入りのアプリ</string>
     <string name="settings_hidden_apps_title">非表示のアプリ</string>
     <string name="settings_advanced_title">高度な</string>
+    <!-- Strings used for features settings -->
+    <string name="features_settings_title">特徴</string>
+    <!-- Strings used for look And feel settings -->
+    <string name="look_feel_settings_title">見た目と感触</string>
     <!-- Strings used for advanced settings -->
     <string name="advanced_settings_title">詳細設定</string>
     <string name="advanced_settings_app_info_title">アプリ情報</string>
