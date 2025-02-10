@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lang_arabic">عربي</string>
+    <string name="lang_dutch">هولندي</string>
+    <string name="lang_english">إنجليزي</string>
+    <string name="lang_french">فرنسي</string>
+    <string name="lang_german">الألمانية</string>
+    <string name="lang_hebrew">العبرية</string>
+    <string name="lang_italian">ايطالي</string>
+    <string name="lang_japanese">اليابانية</string>
+    <string name="lang_korean">كوري</string>
+    <string name="lang_lithuanian">الليتوانية</string>
+    <string name="lang_polish">بولندي</string>
+    <string name="lang_portuguese">البرتغالية</string>
+    <string name="lang_russian">الروسية</string>
+    <string name="lang_slovak">السلوفاكية</string>
+    <string name="lang_spanish">الأسبانية</string>
+    <string name="lang_thai">تايلاندي</string>
+    <string name="lang_turkish">اللغة التركية</string>
+</resources>
