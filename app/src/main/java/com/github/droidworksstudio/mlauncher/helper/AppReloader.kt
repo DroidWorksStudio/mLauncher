@@ -13,9 +13,9 @@ object AppReloader {
         val mainIntent = Intent.makeRestartActivityTask(componentName)
 
         // Delay the restart slightly to ensure all current activities are finished
-        Handler(Looper.getMainLooper()).post {
+        Handler(Looper.getMainLooper()).postDelayed({
             context.startActivity(mainIntent)
             Runtime.getRuntime().exit(0)
-        }
+        }, 500) // Delay of 500ms
     }
 }

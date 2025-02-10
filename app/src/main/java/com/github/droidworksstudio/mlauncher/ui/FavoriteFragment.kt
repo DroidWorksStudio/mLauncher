@@ -58,7 +58,7 @@ class FavoriteFragment : Fragment() {
         return view
     }
 
-    @RequiresApi(Build.VERSION_CODES.Q)
+    
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -77,7 +77,7 @@ class FavoriteFragment : Fragment() {
         initObservers()
     }
 
-    @RequiresApi(Build.VERSION_CODES.Q)
+    
     override fun onStart() {
         super.onStart()
         if (prefs.showStatusBar) showStatusBar(requireActivity()) else hideStatusBar(requireActivity())
@@ -86,7 +86,7 @@ class FavoriteFragment : Fragment() {
         binding.mainLayout.setBackgroundColor(backgroundColor)
     }
 
-    @RequiresApi(Build.VERSION_CODES.Q)
+    
     private fun initObservers() {
         with(viewModel) {
             homeAppsCount.observe(viewLifecycleOwner) {
@@ -173,7 +173,7 @@ class FavoriteFragment : Fragment() {
      *        - Only when the config option changes,
      *        - or also when we switch pages of the home screen?
      */
-    @RequiresApi(Build.VERSION_CODES.Q)
+    
     @SuppressLint("InflateParams", "SetTextI18n")
     private fun updateAppCount(newAppsNum: Int) {
         val oldAppsNum = binding.homeAppsLayout.size // current number

@@ -24,7 +24,6 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.Space
 import android.widget.TextView
-import androidx.annotation.RequiresApi
 import androidx.biometric.BiometricManager
 import androidx.biometric.BiometricManager.Authenticators.BIOMETRIC_WEAK
 import androidx.biometric.BiometricManager.Authenticators.DEVICE_CREDENTIAL
@@ -97,7 +96,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         return view
     }
 
-    @RequiresApi(Build.VERSION_CODES.Q)
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -115,7 +114,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         initClickListeners()
     }
 
-    @RequiresApi(Build.VERSION_CODES.Q)
+
     override fun onStart() {
         super.onStart()
         if (prefs.showStatusBar) showStatusBar(requireActivity()) else hideStatusBar(requireActivity())
@@ -129,7 +128,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             e.printStackTrace()
         }
 
-        val timezone = prefs.language.timezone()
+        val timezone = prefs.appLanguage.timezone()
         val is24HourFormat = DateFormat.is24HourFormat(requireContext())
         val best12 = DateFormat.getBestDateTimePattern(
             timezone,
@@ -275,7 +274,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         binding.battery.setOnClickListener(this)
     }
 
-    @RequiresApi(Build.VERSION_CODES.Q)
+
     private fun initObservers() {
         if (prefs.firstSettingsOpen) {
             binding.firstRunTips.visibility = View.VISIBLE
@@ -698,7 +697,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         }
     }
 
-    @RequiresApi(Build.VERSION_CODES.Q)
+
     @SuppressLint("InflateParams")
     private fun updateAppCountWithUsageStats(newAppsNum: Int) {
         val oldAppsNum = binding.homeAppsLayout.childCount // current number of apps
@@ -805,7 +804,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
     }
 
-    @RequiresApi(Build.VERSION_CODES.Q)
+
     @SuppressLint("InflateParams")
     private fun updateAppCount(newAppsNum: Int) {
         val oldAppsNum = binding.homeAppsLayout.childCount // current number of apps

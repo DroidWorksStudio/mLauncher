@@ -8,7 +8,6 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
-import android.os.Build
 import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableString
@@ -21,7 +20,6 @@ import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import android.view.inputmethod.InputMethodManager
 import android.widget.TextView
-import androidx.annotation.RequiresApi
 import androidx.appcompat.widget.SearchView
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
@@ -43,6 +41,7 @@ import com.github.droidworksstudio.mlauncher.data.Constants.AppDrawerFlag
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentAppDrawerBinding
 import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.isSystemApp
+import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
 import com.github.droidworksstudio.mlauncher.helper.openAppInfo
 
 class AppDrawerFragment : Fragment() {
@@ -63,7 +62,7 @@ class AppDrawerFragment : Fragment() {
         return binding.root
     }
 
-    @RequiresApi(Build.VERSION_CODES.Q)
+
     @SuppressLint("RtlHardcoded")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -75,7 +74,8 @@ class AppDrawerFragment : Fragment() {
             searchTextView.text = letterToChar.toString()
         }
 
-        binding.mainLayout.setBackgroundColor(prefs.backgroundColor)
+        val backgroundColor = getHexForOpacity(prefs)
+        binding.mainLayout.setBackgroundColor(backgroundColor)
 
         val flagString = arguments?.getString("flag", AppDrawerFlag.LaunchApp.toString())
             ?: AppDrawerFlag.LaunchApp.toString()
@@ -244,7 +244,7 @@ class AppDrawerFragment : Fragment() {
         }
     }
 
-    @RequiresApi(Build.VERSION_CODES.Q)
+
     override fun onResume() {
         super.onResume()
         binding.mainLayout.setBackgroundColor(prefs.backgroundColor)
