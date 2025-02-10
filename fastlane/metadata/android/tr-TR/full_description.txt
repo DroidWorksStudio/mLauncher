@@ -1,4 +1,4 @@
-<a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>'den türetilmiştir. Minimal ve temiz.
+<a href="https://github.com/tanujnotes/Olauncher">Olauncher</a> 'dan alındı. Minimal ve temiz.
 
 #Daha fazla özelliklli bir alıntı.
 
