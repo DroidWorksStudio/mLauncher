@@ -11,8 +11,27 @@
     <string name="settings_favorite_apps_title">お気に入りのアプリ</string>
     <string name="settings_hidden_apps_title">非表示のアプリ</string>
     <string name="settings_advanced_title">高度な</string>
-    <string name="settings_app_info_title">アプリ情報</string>
-    <string name="settings_app_info_description">%1$s</string>
+    <!-- Strings used for advanced settings -->
+    <string name="advanced_settings_title">Advanced Settings</string>
+    <string name="advanced_settings_app_info_title">App Info</string>
+    <string name="advanced_settings_app_info_description">%1$s</string>
+    <string name="advanced_settings_set_as_default_launcher">Set as Default Launcher</string>
+    <string name="advanced_settings_change_default_launcher">Change Default Launcher</string>
+    <string name="advanced_settings_restart_title">Restart Launcher</string>
+    <string name="advanced_settings_restart_description">Have you tried turning it on and off?</string>
+    <string name="advanced_settings_backup_restore_title">Backup/Restore</string>
+    <string name="advanced_settings_backup_restore_description">Please be careful what you wish for?</string>
+    <string name="advanced_settings_backup_restore_backup">Backup</string>
+    <string name="advanced_settings_backup_restore_restore">Restore</string>
+    <string name="advanced_settings_backup_restore_clear">Clear All Data</string>
+    <string name="advanced_settings_backup_restore_clear_title">Clear Preferences</string>
+    <string name="advanced_settings_backup_restore_clear_description">Are you sure you want to do this?</string>
+    <string name="advanced_settings_backup_restore_clear_yes">Yes</string>
+    <string name="advanced_settings_backup_restore_clear_no">No</string>
+    <string name="advanced_settings_help_feedback_title">Help and Feedback</string>
+    <string name="advanced_settings_community_support_title">Community Support</string>
+    <string name="advanced_settings_share_application_title">Share Application</string>
+    <string name="advanced_settings_share_application_description">Elevate your experience with %1$s! Get it now on fDroid and see what everyone is talking about!\n</string>
     <!-- Admin Settings -->
     <string name="admin_permission_message">mLauncher は、責任を持ってロック画面のアクセス許可を使用することを約束します。 mLauncher は、いかなるデータも収集または共有しません。</string>
     <string name="experimental">(実験的)</string>
@@ -29,8 +48,6 @@
     <!-- Home Strings -->
     <string name="hidden_apps">非表示のアプリ</string>
     <string name="favorite_apps">お気に入りのアプリ</string>
-    <string name="set_as_default_launcher">デフォルトのランチャーに設定</string>
-    <string name="change_default_launcher">デフォルトのランチャーを変更する</string>
     <!-- Display Strings -->
     <string name="show_status_bar">ステータスバーを表示</string>
     <string name="show_recent_apps">最近使ったアプリを表示</string>
