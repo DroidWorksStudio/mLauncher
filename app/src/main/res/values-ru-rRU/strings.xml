@@ -11,8 +11,27 @@
     <string name="settings_favorite_apps_title">Любимые приложения</string>
     <string name="settings_hidden_apps_title">Скрытые приложения</string>
     <string name="settings_advanced_title">Передовой</string>
-    <string name="settings_app_info_title">Информация о приложении</string>
-    <string name="settings_app_info_description">%1$s</string>
+    <!-- Strings used for advanced settings -->
+    <string name="advanced_settings_title">Advanced Settings</string>
+    <string name="advanced_settings_app_info_title">App Info</string>
+    <string name="advanced_settings_app_info_description">%1$s</string>
+    <string name="advanced_settings_set_as_default_launcher">Set as Default Launcher</string>
+    <string name="advanced_settings_change_default_launcher">Change Default Launcher</string>
+    <string name="advanced_settings_restart_title">Restart Launcher</string>
+    <string name="advanced_settings_restart_description">Have you tried turning it on and off?</string>
+    <string name="advanced_settings_backup_restore_title">Backup/Restore</string>
+    <string name="advanced_settings_backup_restore_description">Please be careful what you wish for?</string>
+    <string name="advanced_settings_backup_restore_backup">Backup</string>
+    <string name="advanced_settings_backup_restore_restore">Restore</string>
+    <string name="advanced_settings_backup_restore_clear">Clear All Data</string>
+    <string name="advanced_settings_backup_restore_clear_title">Clear Preferences</string>
+    <string name="advanced_settings_backup_restore_clear_description">Are you sure you want to do this?</string>
+    <string name="advanced_settings_backup_restore_clear_yes">Yes</string>
+    <string name="advanced_settings_backup_restore_clear_no">No</string>
+    <string name="advanced_settings_help_feedback_title">Help and Feedback</string>
+    <string name="advanced_settings_community_support_title">Community Support</string>
+    <string name="advanced_settings_share_application_title">Share Application</string>
+    <string name="advanced_settings_share_application_description">Elevate your experience with %1$s! Get it now on fDroid and see what everyone is talking about!\n</string>
     <!-- Admin Settings -->
     <string name="admin_permission_message">mLauncher обещает ответственно использовать разрешение экрана блокировки. mLauncher не собирает и не передает какие-либо данные.</string>
     <string name="experimental">(экспериментальный)</string>
@@ -29,8 +48,6 @@
     <!-- Home Strings -->
     <string name="hidden_apps">Скрытые приложения</string>
     <string name="favorite_apps">Любимые приложения</string>
-    <string name="set_as_default_launcher">Установить как лаунчер по умолчанию</string>
-    <string name="change_default_launcher">Изменить лаунчер по умолчанию</string>
     <!-- Display Strings -->
     <string name="show_status_bar">Показать строку состояния</string>
     <string name="show_recent_apps">Показать последние приложения</string>
@@ -156,16 +173,16 @@
     <string name="acra_dialog_text">Сожалеем, но %1$s столкнулся с непредвиденной проблемой и должен закрыться. Пожалуйста, помогите нам стать лучше, отправив отчет о сбое.\n\n%1$s ценит вашу конфиденциальность, и собранные данные используются исключительно для повышения стабильности приложения. Никакая личная информация не собирается. Спасибо за Вашу поддержку!</string>
     <string name="acra_send_report">Отправить жалобу</string>
     <string name="acra_dont_send">Не отправлять</string>
-    <string name="acra_mail_body">В приложении произошел сбой.\n\nНиже приведены сведения об устройстве. Журнал ошибок прикреплен в виде файла для справки. Мы будем признательны за вашу помощь в решении этой проблемы.\n\nИнформация об устройстве: \n[ПОЖАЛУЙСТА, заполните информацию ниже, также удалив все, что находится в квадратных скобках, иначе она будет проигнорирована.]\n\n- Версия приложения: [0.0.1]\n- Версия Android: [14]\n- Имя устройства: [Android Pixel 69]\n- Место установки: [github, fdroid, obtanium, self]\n\nМы будем очень признательны за ваше оперативное внимание к этому вопросу.\n\nСпасибо.\n</string>
+    <string name="acra_mail_body">В приложении произошел сбой.\n\nНиже приведены подробности устройства. Журнал ошибок прикреплен в виде файла для справки. Будем признательны за вашу помощь в решении данного вопроса.\n\nИнформация об устройстве: \n[ПОЖАЛУЙСТА, заполните информацию ниже, также удалив все, что заключено в квадратные скобки, иначе это будет проигнорировано.]\n\n- Версия приложения: [0.0.1]\n- Версия Android: [14]\n- Имя устройства: [Android Pixel 69]\n- Место установки: [github, fdroid, obtanium, self]\n\nМы очень ценим ваше оперативное внимание к этому вопросу.\n\nСпасибо.\n</string>
     <string name="settings_font_system">Система</string>
     <!-- Search Stings -->
-    <string name="search_engine">Поисковая система</string>
+    <string name="search_engine">Поисковый движок</string>
     <string name="search_google">Google</string>
     <string name="search_yahoo">Яху</string>
-    <string name="search_duckduckgo">DuckDuckGo</string>
+    <string name="search_duckduckgo">УткаУткаGo</string>
     <string name="search_bing">Бинг</string>
     <string name="search_brave">Храбрый</string>
-    <string name="search_swisscow">SwissCows</string>
+    <string name="search_swisscow">ШвейцарскиеКоровы</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Все приложения</string>
     <string name="total_screen_time">Общее время экрана</string>
