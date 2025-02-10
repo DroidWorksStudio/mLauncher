@@ -11,6 +11,10 @@
     <string name="settings_favorite_apps_title">App preferite</string>
     <string name="settings_hidden_apps_title">Applicazioni nascoste</string>
     <string name="settings_advanced_title">Avanzato</string>
+    <!-- Strings used for features settings -->
+    <string name="features_settings_title">Caratteristiche</string>
+    <!-- Strings used for look And feel settings -->
+    <string name="look_feel_settings_title">Guarda e senti</string>
     <!-- Strings used for advanced settings -->
     <string name="advanced_settings_title">Impostazioni avanzate</string>
     <string name="advanced_settings_app_info_title">Informazioni sull\'app</string>
