@@ -11,8 +11,27 @@
     <string name="settings_favorite_apps_title">App preferite</string>
     <string name="settings_hidden_apps_title">Applicazioni nascoste</string>
     <string name="settings_advanced_title">Avanzato</string>
-    <string name="settings_app_info_title">Informazioni sull\'app</string>
-    <string name="settings_app_info_description">%1$s</string>
+    <!-- Strings used for advanced settings -->
+    <string name="advanced_settings_title">Advanced Settings</string>
+    <string name="advanced_settings_app_info_title">App Info</string>
+    <string name="advanced_settings_app_info_description">%1$s</string>
+    <string name="advanced_settings_set_as_default_launcher">Set as Default Launcher</string>
+    <string name="advanced_settings_change_default_launcher">Change Default Launcher</string>
+    <string name="advanced_settings_restart_title">Restart Launcher</string>
+    <string name="advanced_settings_restart_description">Have you tried turning it on and off?</string>
+    <string name="advanced_settings_backup_restore_title">Backup/Restore</string>
+    <string name="advanced_settings_backup_restore_description">Please be careful what you wish for?</string>
+    <string name="advanced_settings_backup_restore_backup">Backup</string>
+    <string name="advanced_settings_backup_restore_restore">Restore</string>
+    <string name="advanced_settings_backup_restore_clear">Clear All Data</string>
+    <string name="advanced_settings_backup_restore_clear_title">Clear Preferences</string>
+    <string name="advanced_settings_backup_restore_clear_description">Are you sure you want to do this?</string>
+    <string name="advanced_settings_backup_restore_clear_yes">Yes</string>
+    <string name="advanced_settings_backup_restore_clear_no">No</string>
+    <string name="advanced_settings_help_feedback_title">Help and Feedback</string>
+    <string name="advanced_settings_community_support_title">Community Support</string>
+    <string name="advanced_settings_share_application_title">Share Application</string>
+    <string name="advanced_settings_share_application_description">Elevate your experience with %1$s! Get it now on fDroid and see what everyone is talking about!\n</string>
     <!-- Admin Settings -->
     <string name="admin_permission_message">mLauncher promette di utilizzare l\'autorizzazione della schermata di blocco in modo responsabile. mLauncher non salva né condivide alcun dato.</string>
     <string name="experimental">(sperimentale)</string>
@@ -29,8 +48,6 @@
     <!-- Home Strings -->
     <string name="hidden_apps">Applicazioni nascoste</string>
     <string name="favorite_apps">App preferite</string>
-    <string name="set_as_default_launcher">Usa come launcher predefinito</string>
-    <string name="change_default_launcher">Cambia launcher predefinito</string>
     <!-- Display Strings -->
     <string name="show_status_bar">Mostra barra di stato</string>
     <string name="show_recent_apps">Mostra app recenti</string>
@@ -49,7 +66,7 @@
     <string name="date_text_size">Dimensioni del testo della data</string>
     <string name="battery_text_size">Dimensioni del testo della batteria</string>
     <string name="app_padding_size">Dimensione della spaziatura</string>
-    <string name="app_font">Famiglia di caratteri</string>
+    <string name="app_font">Famiglia di font</string>
     <!-- Appearance Strings -->
     <string name="theme_mode">Modalità tema</string>
     <string name="background_opacity">Opacità dello sfondo</string>
@@ -156,7 +173,7 @@
     <string name="acra_dialog_text">Siamo spiacenti, ma %1$s ha riscontrato un problema imprevisto e deve essere chiuso. Aiutaci a migliorare inviando un rapporto sugli arresti anomali.\n\n%1$s valorizza la tua privacy e i dati raccolti vengono utilizzati esclusivamente per migliorare la stabilità dell\'app. Non viene raccolta alcuna informazione personale. Grazie per il vostro sostegno!</string>
     <string name="acra_send_report">Invia segnalazione</string>
     <string name="acra_dont_send">Non inviare</string>
-    <string name="acra_mail_body">Si è verificato un arresto anomalo nell\'applicazione.\n\nDi seguito sono riportati i dettagli del dispositivo. Il registro degli errori è stato allegato come file per riferimento. Apprezzeremmo il tuo aiuto nella risoluzione di questo problema.\n\nInformazioni sul dispositivo: \n[SI PREGA di compilare le informazioni di seguito rimuovendo anche tutto ciò che è tra parentesi quadre o verrà ignorato.]\n\n- Versione app: [0.0.1]\n- Versione Android: [14]\n- Nome dispositivo: [Android Pixel 69]\n- Posizione di installazione: [github, fdroid, obtanium, self]\n\nLa tua tempestiva attenzione a questa questione è molto apprezzata.\n\nGrazie.\n</string>
+    <string name="acra_mail_body">Si è verificato un arresto anomalo dell\'applicazione.\n\nDi seguito sono riportati i dettagli del dispositivo. Il registro degli errori è stato allegato come file come riferimento. Apprezzeremmo il tuo aiuto per risolvere questo problema.\n\nInformazioni sul dispositivo: \n[SI PREGA di compilare le informazioni di seguito rimuovendo anche qualsiasi cosa tra parentesi quadre, altrimenti verrà ignorata.]\n\n- Versione app: [0.0.1]\n- Versione Android: [14]\n- Nome dispositivo: [Android Pixel 69]\n- Posizione di installazione: [github, fdroid, obtanium, self]\n\nLa tua tempestiva attenzione a questo argomento è molto apprezzata.\n\nGrazie.\n</string>
     <string name="settings_font_system">Sistema</string>
     <!-- Search Stings -->
     <string name="search_engine">Motore di ricerca</string>
