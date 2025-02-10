@@ -26,6 +26,8 @@
         <item name="colorPrimary">@color/black</item>
         <item name="colorPrimaryDark">@android:color/darker_gray</item>
         <item name="colorAccent">@color/black</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnSurface">@color/black</item>
         <item name="primaryColor">@color/black</item>
         <item name="primaryInverseColor">@color/blackInverse</item>
         <item name="primaryTextShadowColor">@color/blackInverseTrans50</item>

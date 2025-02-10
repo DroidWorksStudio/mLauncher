@@ -6,8 +6,6 @@ import android.content.Context
 import android.graphics.Typeface
 import android.os.Build
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -45,14 +43,13 @@ import com.github.droidworksstudio.mlauncher.data.Constants.Theme.Light
 import com.github.droidworksstudio.mlauncher.data.Constants.Theme.System
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentSettingsBinding
-import com.github.droidworksstudio.mlauncher.helper.AppReloader
 import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
 import com.github.droidworksstudio.mlauncher.helper.hideStatusBar
 import com.github.droidworksstudio.mlauncher.helper.showStatusBar
 import com.github.droidworksstudio.mlauncher.listener.DeviceAdmin
 import com.github.droidworksstudio.mlauncher.style.SettingsTheme
-import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.HeaderWithIconAndTitle
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsHomeItem
+import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.TopMainHeader
 import net.mm2d.color.chooser.ColorChooserDialog
 
 class SettingsFragment : Fragment() {
@@ -169,7 +166,7 @@ class SettingsFragment : Fragment() {
                     .height(16.dp)
             )
 
-            HeaderWithIconAndTitle(
+            TopMainHeader(
                 iconRes = R.drawable.app_launcher,
                 title = stringResource(R.string.settings_name)
             )
@@ -429,9 +426,7 @@ class SettingsFragment : Fragment() {
 
     private fun setLauncherFont(fontInt: Constants.Fonts) {
         prefs.launcherFont = fontInt
-        Handler(Looper.getMainLooper()).postDelayed({
-            AppReloader.restartApp(requireContext())
-        }, 500) // Delay in milliseconds (e.g., 500ms)
+        requireActivity().recreate()
     }
 
     private fun setEngine(engineInt: Constants.SearchEngines) {

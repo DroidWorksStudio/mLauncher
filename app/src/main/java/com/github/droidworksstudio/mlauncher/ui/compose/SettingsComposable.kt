@@ -64,7 +64,43 @@ import com.smarttoolfactory.slider.SliderBrushColor
 object SettingsComposable {
 
     @Composable
-    fun HeaderWithIconAndTitle(
+    fun PageHeader(
+        @DrawableRes iconRes: Int,
+        title: String,
+        iconSize: Dp = 24.dp, // Default size for the icon
+        fontSize: TextUnit = 24.sp, // Default font size for the title
+        onClick: () -> Unit = {},
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 16.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            // Image Icon
+            Image(
+                painter = painterResource(id = iconRes),
+                contentDescription = title,
+                modifier = Modifier
+                    .clickable(onClick = onClick)
+                    .size(iconSize)
+            )
+
+            Spacer(modifier = Modifier.weight(1f)) // Pushes the text to center
+
+            // Title Text
+            Text(
+                text = title,
+                style = SettingsTheme.typography.title,
+                fontSize = fontSize
+            )
+
+            Spacer(modifier = Modifier.weight(1f)) // Balances spacing on the right
+        }
+    }
+
+    @Composable
+    fun TopMainHeader(
         @DrawableRes iconRes: Int,
         title: String,
         iconSize: Dp = 96.dp, // Default size for the icon

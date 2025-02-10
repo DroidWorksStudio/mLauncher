@@ -1,7 +1,6 @@
 package com.github.droidworksstudio.mlauncher.helper
 
 //noinspection SuspiciousImport
-import android.R
 import android.app.Activity
 import android.app.AlertDialog
 import android.app.AppOpsManager
@@ -11,6 +10,7 @@ import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.LauncherApps
 import android.content.res.Resources
+import android.net.Uri
 import android.os.Build
 import android.os.Process
 import android.os.UserHandle
@@ -23,10 +23,10 @@ import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
 import androidx.annotation.RequiresApi
-import androidx.appcompat.view.ContextThemeWrapper
 import com.github.droidworksstudio.common.openAccessibilitySettings
 import com.github.droidworksstudio.common.showLongToast
 import com.github.droidworksstudio.mlauncher.BuildConfig
+import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.AppListItem
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Prefs
@@ -225,6 +225,33 @@ fun resetDefaultLauncher(context: Context) {
     }
 }
 
+fun helpFeedbackButton(context: Context) {
+    val uri = Uri.parse("https://github.com/DroidWorksStudio/mLauncher")
+    val intent = Intent(Intent.ACTION_VIEW, uri)
+    context.startActivity(intent)
+}
+
+fun communitySupportButton(context: Context) {
+    val uri = Uri.parse("https://discord.gg/qG6hFuAzfu")
+    val intent = Intent(Intent.ACTION_VIEW, uri)
+    context.startActivity(intent)
+}
+
+fun shareApplicationButton(context: Context) {
+    val shareIntent = Intent(Intent.ACTION_SEND)
+    val description = context.getString(
+        R.string.advanced_settings_share_application_description,
+        context.getString(R.string.app_name)
+    )
+    shareIntent.type = "text/plain"
+    shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Share Application")
+    shareIntent.putExtra(
+        Intent.EXTRA_TEXT,
+        "$description https://f-droid.org/packages/${context.packageName}"
+    )
+    context.startActivity(Intent.createChooser(shareIntent, "Share Application"))
+}
+
 fun openAppInfo(context: Context, userHandle: UserHandle, packageName: String) {
     val launcher = context.getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps
     val intent: Intent? = context.packageManager.getLaunchIntentForPackage(packageName)
@@ -325,19 +352,4 @@ fun getHexForOpacity(prefs: Prefs): Int {
 
     // Combine opacity with RGB and return final color
     return android.graphics.Color.argb(setOpacity, red, green, blue)
-}
-
-
-@RequiresApi(Build.VERSION_CODES.Q)
-private fun getBackgroundColor(context: Context): Int {
-    val typedValue = TypedValue()
-    val contextThemeWrapper = ContextThemeWrapper(
-        context,
-        R.style.Theme_DeviceDefault_DayNight
-    )
-    contextThemeWrapper.theme.resolveAttribute(
-        R.attr.windowBackground,
-        typedValue, true
-    )
-    return typedValue.data
 }
