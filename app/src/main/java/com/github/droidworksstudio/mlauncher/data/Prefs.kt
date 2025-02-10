@@ -211,7 +211,7 @@ class Prefs(val context: Context) {
         set(value) = prefs.edit().putInt(ALARM_CLOCK_COLOR, value).apply()
 
     var opacityNum: Int
-        get() = prefs.getInt(APP_OPACITY, 128)
+        get() = prefs.getInt(APP_OPACITY, 255)
         set(value) = prefs.edit().putInt(APP_OPACITY, value).apply()
 
     var appUsageStats: Boolean
@@ -364,7 +364,7 @@ class Prefs(val context: Context) {
         }
         set(value) = prefs.edit().putString(APP_THEME, value.name).apply()
 
-    var language: Constants.Language
+    var appLanguage: Constants.Language
         get() {
             return try {
                 Constants.Language.valueOf(
@@ -394,17 +394,17 @@ class Prefs(val context: Context) {
         }
         set(value) = prefs.edit().putString(SEARCH_ENGINE, value.name).apply()
 
-    var launcherFont: Constants.Fonts
+    var fontFamily: Constants.FontFamily
         get() {
             return try {
-                Constants.Fonts.valueOf(
+                Constants.FontFamily.valueOf(
                     prefs.getString(
                         LAUNCHER_FONT,
-                        Constants.Fonts.System.name
+                        Constants.FontFamily.System.name
                     ).toString()
                 )
             } catch (_: Exception) {
-                Constants.Fonts.System
+                Constants.FontFamily.System
             }
         }
         set(value) = prefs.edit().putString(LAUNCHER_FONT, value.name).apply()

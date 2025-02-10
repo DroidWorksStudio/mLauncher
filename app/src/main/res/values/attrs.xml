@@ -10,4 +10,16 @@
     <attr name="primaryColorInverseTrans50" format="color" />
     <attr name="primaryShadeColor" format="color" />
     <attr name="primaryShadeDarkColor" format="color" />
+
+    <declare-styleable name="ThemeAttributes">
+        <attr name="backgroundLight" format="reference" />
+        <attr name="backgroundDark" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="Slider">
+        <attr name="sliderColor" format="color" />
+        <attr name="sliderThumbColor" format="color" />
+        <attr name="sliderTrackColor" format="color" />
+    </declare-styleable>
 </resources>
+

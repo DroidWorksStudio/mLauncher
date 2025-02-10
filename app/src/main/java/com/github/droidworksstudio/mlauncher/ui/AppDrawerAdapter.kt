@@ -6,7 +6,6 @@ package com.github.droidworksstudio.mlauncher.ui
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.os.Build
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.Gravity.LEFT
@@ -20,7 +19,6 @@ import android.widget.Filterable
 import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.annotation.RequiresApi
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.view.updatePadding
 import androidx.recyclerview.widget.RecyclerView
@@ -54,7 +52,7 @@ class AppDrawerAdapter(
 
     private var isBangSearch = false
 
-    @RequiresApi(Build.VERSION_CODES.Q)
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         binding =
             AdapterAppDrawerBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -109,7 +107,7 @@ class AppDrawerAdapter(
                     val scoredApps = mutableMapOf<AppListItem, Int>()
                     for (app in appsList) {
                         scoredApps[app] =
-                            FuzzyFinder.scoreApp(app, searchChars, Constants.FILTER_STRENGTH_MAX)
+                            FuzzyFinder.scoreApp(app, searchChars, Constants.MAX_FILTER_STRENGTH)
                     }
 
                     filteredApps = if (searchChars.isNotEmpty()) {

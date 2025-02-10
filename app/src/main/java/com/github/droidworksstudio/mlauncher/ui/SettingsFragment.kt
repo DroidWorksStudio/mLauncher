@@ -3,14 +3,11 @@ package com.github.droidworksstudio.mlauncher.ui
 import android.app.admin.DevicePolicyManager
 import android.content.ComponentName
 import android.content.Context
-import android.graphics.Typeface
 import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.annotation.RequiresApi
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
@@ -27,12 +24,10 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.isSpecified
 import androidx.compose.ui.unit.sp
-import androidx.core.content.res.ResourcesCompat
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import com.github.droidworksstudio.common.showShortToast
 import com.github.droidworksstudio.mlauncher.MainViewModel
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.Constants
@@ -43,9 +38,8 @@ import com.github.droidworksstudio.mlauncher.data.Constants.Theme.Light
 import com.github.droidworksstudio.mlauncher.data.Constants.Theme.System
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentSettingsBinding
-import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
-import com.github.droidworksstudio.mlauncher.helper.hideStatusBar
-import com.github.droidworksstudio.mlauncher.helper.showStatusBar
+import com.github.droidworksstudio.mlauncher.helper.isSystemInDarkMode
+import com.github.droidworksstudio.mlauncher.helper.setThemeMode
 import com.github.droidworksstudio.mlauncher.listener.DeviceAdmin
 import com.github.droidworksstudio.mlauncher.style.SettingsTheme
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsHomeItem
@@ -62,7 +56,7 @@ class SettingsFragment : Fragment() {
     private var _binding: FragmentSettingsBinding? = null
     private val binding get() = _binding!!
 
-    @RequiresApi(Build.VERSION_CODES.Q)
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -70,57 +64,22 @@ class SettingsFragment : Fragment() {
     ): View {
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
         prefs = Prefs(requireContext())
-        val backgroundColor = getHexForOpacity(prefs)
-        binding.scrollView.setBackgroundColor(backgroundColor)
         return binding.root
     }
 
-    @RequiresApi(Build.VERSION_CODES.Q)
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val backgroundColor = getHexForOpacity(prefs)
-        binding.scrollView.setBackgroundColor(backgroundColor)
-
 
         if (prefs.firstSettingsOpen) {
             prefs.firstSettingsOpen = false
         }
 
-        binding.settingsView.setContent {
-
-            val isDark = when (prefs.appTheme) {
-                Light -> false
-                Dark -> true
-                System -> isSystemInDarkTheme()
-            }
-
-            val settingsSize = (prefs.settingsSize - 3)
-
-            SettingsTheme(isDark) {
-                Settings(settingsSize.sp)
-            }
-        }
-    }
-
-    @RequiresApi(Build.VERSION_CODES.Q)
-    override fun onResume() {
-        super.onResume()
-        val backgroundColor = getHexForOpacity(prefs)
-        binding.scrollView.setBackgroundColor(backgroundColor)
-    }
-
-    private fun <T> createTypefaceMap(
-        context: Context,
-        typeMappings: Map<T, Int>
-    ): Map<T, Typeface?> {
-        return typeMappings.mapValues { (_, fontResId) ->
-            ResourcesCompat.getFont(context, fontResId)
-        }
+        resetThemeColors()
     }
 
     @Composable
     private fun Settings(fontSize: TextUnit = TextUnit.Unspecified) {
-        val selected = remember { mutableStateOf("selected") }
         val fs = remember { mutableStateOf(fontSize) }
         Constants.updateMaxHomePages(requireContext())
 
@@ -135,30 +94,6 @@ class SettingsFragment : Fragment() {
         val iconSize = if (fs.value.isSpecified) {
             tuToDp((fs.value * 0.8))
         } else tuToDp(fs.value)
-
-        val typeMappings: Map<Constants.Fonts, Int> = mapOf(
-            Constants.Fonts.System to R.font.roboto,
-            Constants.Fonts.Bitter to R.font.bitter,
-            Constants.Fonts.Dotness to R.font.dotness,
-            Constants.Fonts.DroidSans to R.font.droid_sans,
-            Constants.Fonts.GreatVibes to R.font.great_vibes,
-            Constants.Fonts.Lato to R.font.lato,
-            Constants.Fonts.Lobster to R.font.lobster,
-            Constants.Fonts.Merriweather to R.font.merriweather,
-            Constants.Fonts.Montserrat to R.font.montserrat,
-            Constants.Fonts.OpenSans to R.font.open_sans,
-            Constants.Fonts.Pacifico to R.font.pacifico,
-            Constants.Fonts.Quicksand to R.font.quicksand,
-            Constants.Fonts.Raleway to R.font.raleway,
-            Constants.Fonts.Roboto to R.font.roboto,
-            Constants.Fonts.SourceCodePro to R.font.source_code_pro
-        )
-
-        val typefaceMapFonts: Map<Constants.Fonts, Typeface?> =
-            createTypefaceMap(requireActivity(), typeMappings)
-
-        // Shared state to track which section is visible
-        val visibleSection = remember { mutableStateOf<String?>(null) }
 
         Column {
             Spacer(
@@ -178,7 +113,7 @@ class SettingsFragment : Fragment() {
                 titleFontSize = titleFontSize,
                 descriptionFontSize = descriptionFontSize,
                 iconSize = iconSize,
-                onClick = { showShortToast("Features Clicked") },
+                onClick = { showFeaturesSettings() },
             )
 
             SettingsHomeItem(
@@ -188,7 +123,7 @@ class SettingsFragment : Fragment() {
                 titleFontSize = titleFontSize,
                 descriptionFontSize = descriptionFontSize,
                 iconSize = iconSize,
-                onClick = { showShortToast("Look & Feel Clicked") },
+                onClick = { showLookFeelSettings() },
             )
 
             SettingsHomeItem(
@@ -226,6 +161,24 @@ class SettingsFragment : Fragment() {
         val scaledDensity = LocalDensity.current.fontScale
         val dpValue = textUnit.value * (density / scaledDensity)
         return dpValue.dp  // Convert to Dp using the 'dp' extension
+    }
+
+    private fun resetThemeColors() {
+        binding.settingsView.setContent {
+
+            val isDark = when (prefs.appTheme) {
+                Light -> false
+                Dark -> true
+                System -> isSystemInDarkMode(requireContext())
+            }
+
+            setThemeMode(requireContext(), isDark, binding.scrollView)
+            val settingsSize = (prefs.settingsSize - 3)
+
+            SettingsTheme(isDark) {
+                Settings(settingsSize.sp)
+            }
+        }
     }
 
     private fun showColorPickerDialog(requestCode: String, color: Int) {
@@ -284,58 +237,14 @@ class SettingsFragment : Fragment() {
         viewModel.updateHomeAppsAlignment(gravity, prefs.homeAlignmentBottom)
     }
 
-    private fun toggleHomeAppsBottom() {
-        val onBottom = !prefs.homeAlignmentBottom
-
-        prefs.homeAlignmentBottom = onBottom
-        viewModel.updateHomeAppsAlignment(prefs.homeAlignment, onBottom)
-    }
-
-    private fun toggleHiddenAppsDisplayed() {
-        prefs.hiddenAppsDisplayed = !prefs.hiddenAppsDisplayed
-    }
-
-    private fun toggleRecentAppsDisplayed() {
-        prefs.recentAppsDisplayed = !prefs.recentAppsDisplayed
+    private fun setDrawerAlignment(gravity: Constants.Gravity) {
+        prefs.drawerAlignment = gravity
+        viewModel.updateDrawerAlignment(gravity)
     }
 
     private fun setClockAlignment(gravity: Constants.Gravity) {
         prefs.clockAlignment = gravity
         viewModel.updateClockAlignment(gravity)
-    }
-
-    private fun toggleStatusBar() {
-        val showStatusbar = !prefs.showStatusBar
-        prefs.showStatusBar = showStatusbar
-        if (showStatusbar) showStatusBar(requireActivity()) else hideStatusBar(requireActivity())
-    }
-
-    private fun toggleShowBattery() {
-        prefs.showBattery = !prefs.showBattery
-    }
-
-    private fun toggleShowBatteryIcon() {
-        prefs.showBatteryIcon = !prefs.showBatteryIcon
-    }
-
-    private fun toggleHomeLocked() {
-        prefs.homeLocked = !prefs.homeLocked
-    }
-
-    private fun toggleSettingsLocked() {
-        prefs.settingsLocked = !prefs.settingsLocked
-    }
-
-    private fun toggleExtendHomeAppsArea() {
-        prefs.extendHomeAppsArea = !prefs.extendHomeAppsArea
-    }
-
-    private fun toggleAppUsageStats() {
-        prefs.appUsageStats = !prefs.appUsageStats
-    }
-
-    private fun toggleAllAppsText() {
-        prefs.useAllAppsText = !prefs.useAllAppsText
     }
 
     private fun toggleShowDate() {
@@ -348,8 +257,16 @@ class SettingsFragment : Fragment() {
         viewModel.setShowTime(prefs.showTime)
     }
 
-    private fun toggleShowTimeFormat() {
-        prefs.showTimeFormat = !prefs.showTimeFormat
+    private fun showFeaturesSettings() {
+        findNavController().navigate(
+            R.id.action_settingsFragment_to_settingsFeaturesFragment,
+        )
+    }
+
+    private fun showLookFeelSettings() {
+        findNavController().navigate(
+            R.id.action_settingsFragment_to_settingsLookFeelFragment,
+        )
     }
 
     private fun showHiddenApps() {
@@ -373,6 +290,7 @@ class SettingsFragment : Fragment() {
         )
     }
 
+
     private fun setHomeAppsNum(homeAppsNum: Int) {
         prefs.homeAppsNum = homeAppsNum
         viewModel.homeAppsCount.value = homeAppsNum
@@ -388,81 +306,11 @@ class SettingsFragment : Fragment() {
         viewModel.opacityNum.value = opacityNum
     }
 
-    private fun setFilterStrength(filterStrength: Int) {
-        prefs.filterStrength = filterStrength
-        viewModel.filterStrength.value = filterStrength
-    }
-
     private fun setRecentCounter(recentCount: Int) {
         prefs.recentCounter = recentCount
         viewModel.recentCounter.value = recentCount
     }
 
-    private fun toggleKeyboardText() {
-        prefs.autoShowKeyboard = !prefs.autoShowKeyboard
-    }
-
-    private fun toggleAutoOpenApp() {
-        prefs.autoOpenApp = !prefs.autoOpenApp
-    }
-
-    private fun toggleHomePagerOn() {
-        prefs.homePagerOn = !prefs.homePagerOn
-    }
-
-    private fun toggleSearchFromStart() {
-        prefs.searchFromStart = !prefs.searchFromStart
-    }
-
-    private fun setTheme(appTheme: Constants.Theme) {
-        prefs.appTheme = appTheme
-        requireActivity().recreate()
-    }
-
-    private fun setLang(langInt: Constants.Language) {
-        prefs.language = langInt
-        requireActivity().recreate()
-    }
-
-    private fun setLauncherFont(fontInt: Constants.Fonts) {
-        prefs.launcherFont = fontInt
-        requireActivity().recreate()
-    }
-
-    private fun setEngine(engineInt: Constants.SearchEngines) {
-        prefs.searchEngines = engineInt
-        requireActivity().recreate()
-    }
-
-    private fun setAppTextSize(size: Int) {
-        prefs.appSize = size
-        requireActivity().recreate()
-    }
-
-    private fun setTextSize(size: Int) {
-        prefs.settingsSize = size
-        requireActivity().recreate()
-    }
-
-    private fun setClockSize(size: Int) {
-        prefs.clockSize = size
-        requireActivity().recreate()
-    }
-
-    private fun setDateSize(size: Int) {
-        prefs.dateSize = size
-        requireActivity().recreate()
-    }
-
-    private fun setBatterySize(size: Int) {
-        prefs.batterySize = size
-        requireActivity().recreate()
-    }
-
-    private fun setTextPaddingSize(size: Int) {
-        prefs.textPaddingSize = size
-        requireActivity().recreate()
-    }
 
     private fun setGesture(flag: AppDrawerFlag, action: Action) {
         when (flag) {
