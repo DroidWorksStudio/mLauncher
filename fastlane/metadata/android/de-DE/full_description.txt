@@ -1,4 +1,4 @@
-Abgezweigt von <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal und sauber.
+Gegabelt von <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal und sauber.
 
 # Geforkt mit zusätzlichen Funktionen
 
