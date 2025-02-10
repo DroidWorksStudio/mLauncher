@@ -11,8 +11,27 @@
     <string name="settings_favorite_apps_title">Favori Uygulamalar</string>
     <string name="settings_hidden_apps_title">Gizli uygulamalar</string>
     <string name="settings_advanced_title">Gelişmiş</string>
-    <string name="settings_app_info_title">Uygulama Bilgileri</string>
-    <string name="settings_app_info_description">%1$s</string>
+    <!-- Strings used for advanced settings -->
+    <string name="advanced_settings_title">Advanced Settings</string>
+    <string name="advanced_settings_app_info_title">App Info</string>
+    <string name="advanced_settings_app_info_description">%1$s</string>
+    <string name="advanced_settings_set_as_default_launcher">Set as Default Launcher</string>
+    <string name="advanced_settings_change_default_launcher">Change Default Launcher</string>
+    <string name="advanced_settings_restart_title">Restart Launcher</string>
+    <string name="advanced_settings_restart_description">Have you tried turning it on and off?</string>
+    <string name="advanced_settings_backup_restore_title">Backup/Restore</string>
+    <string name="advanced_settings_backup_restore_description">Please be careful what you wish for?</string>
+    <string name="advanced_settings_backup_restore_backup">Backup</string>
+    <string name="advanced_settings_backup_restore_restore">Restore</string>
+    <string name="advanced_settings_backup_restore_clear">Clear All Data</string>
+    <string name="advanced_settings_backup_restore_clear_title">Clear Preferences</string>
+    <string name="advanced_settings_backup_restore_clear_description">Are you sure you want to do this?</string>
+    <string name="advanced_settings_backup_restore_clear_yes">Yes</string>
+    <string name="advanced_settings_backup_restore_clear_no">No</string>
+    <string name="advanced_settings_help_feedback_title">Help and Feedback</string>
+    <string name="advanced_settings_community_support_title">Community Support</string>
+    <string name="advanced_settings_share_application_title">Share Application</string>
+    <string name="advanced_settings_share_application_description">Elevate your experience with %1$s! Get it now on fDroid and see what everyone is talking about!\n</string>
     <!-- Admin Settings -->
     <string name="admin_permission_message">mLauncher kilit ekranı iznini sorumlu bir şekilde kullanmaya söz veriyor. mLauncher herhangi bir veri toplamaz veya paylaşmaz.</string>
     <string name="experimental">(deneysel)</string>
@@ -29,14 +48,12 @@
     <!-- Home Strings -->
     <string name="hidden_apps">Gizli uygulamalar</string>
     <string name="favorite_apps">Favori Uygulamalar</string>
-    <string name="set_as_default_launcher">Varsayılan başlatıcı olarak ayarla</string>
-    <string name="change_default_launcher">Varsayılan başlatıcıyı değiştir</string>
     <!-- Display Strings -->
     <string name="show_status_bar">Durum çubuğunu göster</string>
     <string name="show_recent_apps">Son Uygulamaları Göster</string>
     <string name="show_app_usage_stats">Uygulama Kullanım İstatistiklerini Göster</string>
     <string name="show_time">Zamanı göster</string>
-    <string name="show_time_format">Zaman Formatı (AM/PM)</string>
+    <string name="show_time_format">Saat Formatı (AM/PM)</string>
     <string name="show_date">Tarih\'i göster</string>
     <string name="show_battery">Pil\'i göster</string>
     <string name="show_battery_icon">Pil Simgesini Göster</string>
@@ -49,7 +66,7 @@
     <string name="date_text_size">Tarih Metin Boyutu</string>
     <string name="battery_text_size">Pil Metin Boyutu</string>
     <string name="app_padding_size">Boşluk Boyutu</string>
-    <string name="app_font">Yazı Tipi Ailesi</string>
+    <string name="app_font">Font ailesi</string>
     <!-- Appearance Strings -->
     <string name="theme_mode">Tema modu</string>
     <string name="background_opacity">Arka Plan Opaklığı</string>
@@ -156,16 +173,16 @@
     <string name="acra_dialog_text">Üzgünüz ama %1$s beklenmedik bir sorunla karşılaştı ve kapatılması gerekiyor. Lütfen bir kilitlenme raporu göndererek iyileştirmemize yardımcı olun.\n\n%1$s gizliliğinize değer verir ve toplanan veriler yalnızca uygulama kararlılığını iyileştirmek için kullanılır. Hiçbir kişisel bilgi toplanmaz. Desteğin için teşekkürler!</string>
     <string name="acra_send_report">Rapor gönder</string>
     <string name="acra_dont_send">Gönderme</string>
-    <string name="acra_mail_body">Uygulamada bir çökme meydana geldi.\n\nAşağıda cihazın ayrıntıları verilmiştir. Hata günlüğü referansınız için bir dosya olarak eklenmiştir. Bu sorunu çözmede yardımınızı rica ederiz.\n\nCihaz Bilgileri: \n[LÜTFEN aşağıdaki bilgileri doldurun ve köşeli parantez içindekileri kaldırın, aksi takdirde bu dikkate alınmayacaktır.]\n\n- Uygulama Sürümü: [0.0.1]\n- Android Sürümü: [14]\n- Cihaz Adı: [Android Pixel 69]\n- Kurulum Konumu: [github, fdroid, obtanium, self]\n\nBu konuya gösterdiğiniz hızlı ilgi için çok teşekkür ederiz.\n\nTeşekkür ederim.\n</string>
+    <string name="acra_mail_body">Uygulamada bir çökme meydana geldi.\n\nAşağıda cihazın detayları yer almaktadır. Hata günlüğü referansınız için bir dosya olarak eklenmiştir. Bu sorunun çözümünde yardımınızdan memnuniyet duyarız.\n\nCihaz Bilgileri: \n[LÜTFEN aşağıdaki bilgileri köşeli parantezler arasındaki herhangi bir şeyi kaldırarak doldurun, aksi takdirde bu dikkate alınmayacaktır.]\n\n- Uygulama Sürümü: [0.0.1]\n- Android Sürümü: [14]\n- Cihaz Adı: [Android Pixel 69]\n- Kurulum Konumu: [github, fdroid, obtanium, self]\n\nBu konuya gösterdiğiniz acil ilgi çok takdir edilmektedir.\n\nTeşekkür ederim.\n</string>
     <string name="settings_font_system">Sistem</string>
     <!-- Search Stings -->
-    <string name="search_engine">Arama Motoru</string>
+    <string name="search_engine">Arama motoru</string>
     <string name="search_google">Google</string>
-    <string name="search_yahoo">Yahoo</string>
-    <string name="search_duckduckgo">ÖrdekÖrdekGit</string>
+    <string name="search_yahoo">yahoo</string>
+    <string name="search_duckduckgo">ÖrdekDuckGo</string>
     <string name="search_bing">Bing</string>
     <string name="search_brave">Cesur</string>
-    <string name="search_swisscow">İsviçre inekleri</string>
+    <string name="search_swisscow">İsviçreİnekleri</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Tüm uygulamalar</string>
     <string name="total_screen_time">Toplam Ekran Süresi</string>
