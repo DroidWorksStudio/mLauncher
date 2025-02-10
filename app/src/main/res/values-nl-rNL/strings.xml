@@ -24,7 +24,7 @@
     <string name="advanced_settings_restart_title">Start Launcher opnieuw</string>
     <string name="advanced_settings_restart_description">Heb je geprobeerd het aan en uit te zetten?</string>
     <string name="advanced_settings_backup_restore_title">Back-up/Herstellen</string>
-    <string name="advanced_settings_backup_restore_description">Wees voorzichtig met wat je wenst.</string>
+    <string name="advanced_settings_backup_restore_description">Wees voorzichtig met wat je wenst?</string>
     <string name="advanced_settings_backup_restore_backup">Back-up</string>
     <string name="advanced_settings_backup_restore_restore">Herstellen</string>
     <string name="advanced_settings_backup_restore_clear">Alle gegevens wissen</string>
@@ -81,7 +81,7 @@
     <string name="enable_notifications">Notificaties aanzetten</string>
     <string name="number_of_recents">Aantal recente apps</string>
     <string name="filter_strength">Filtersterkte</string>
-    <string name="search_from_start">App zoeken vanaf het begin.</string>
+    <string name="search_from_start">App zoeken vanaf het begin</string>
     <string name="icon_font">Gebruik pictogramlettertype</string>
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">Aantal snelkoppelingen</string>
