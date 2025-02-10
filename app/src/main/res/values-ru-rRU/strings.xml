@@ -11,6 +11,10 @@
     <string name="settings_favorite_apps_title">Любимые приложения</string>
     <string name="settings_hidden_apps_title">Скрытые приложения</string>
     <string name="settings_advanced_title">Передовой</string>
+    <!-- Strings used for features settings -->
+    <string name="features_settings_title">Функции</string>
+    <!-- Strings used for look And feel settings -->
+    <string name="look_feel_settings_title">Посмотрите и почувствуйте</string>
     <!-- Strings used for advanced settings -->
     <string name="advanced_settings_title">Расширенные настройки</string>
     <string name="advanced_settings_app_info_title">Информация о приложении</string>
