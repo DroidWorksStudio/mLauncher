@@ -11,8 +11,27 @@
     <string name="settings_favorite_apps_title">Mėgstamiausios programos</string>
     <string name="settings_hidden_apps_title">Paslėptos programėlės</string>
     <string name="settings_advanced_title">Išplėstinė</string>
-    <string name="settings_app_info_title">Programos informacija</string>
-    <string name="settings_app_info_description">%1$s</string>
+    <!-- Strings used for advanced settings -->
+    <string name="advanced_settings_title">Advanced Settings</string>
+    <string name="advanced_settings_app_info_title">App Info</string>
+    <string name="advanced_settings_app_info_description">%1$s</string>
+    <string name="advanced_settings_set_as_default_launcher">Set as Default Launcher</string>
+    <string name="advanced_settings_change_default_launcher">Change Default Launcher</string>
+    <string name="advanced_settings_restart_title">Restart Launcher</string>
+    <string name="advanced_settings_restart_description">Have you tried turning it on and off?</string>
+    <string name="advanced_settings_backup_restore_title">Backup/Restore</string>
+    <string name="advanced_settings_backup_restore_description">Please be careful what you wish for?</string>
+    <string name="advanced_settings_backup_restore_backup">Backup</string>
+    <string name="advanced_settings_backup_restore_restore">Restore</string>
+    <string name="advanced_settings_backup_restore_clear">Clear All Data</string>
+    <string name="advanced_settings_backup_restore_clear_title">Clear Preferences</string>
+    <string name="advanced_settings_backup_restore_clear_description">Are you sure you want to do this?</string>
+    <string name="advanced_settings_backup_restore_clear_yes">Yes</string>
+    <string name="advanced_settings_backup_restore_clear_no">No</string>
+    <string name="advanced_settings_help_feedback_title">Help and Feedback</string>
+    <string name="advanced_settings_community_support_title">Community Support</string>
+    <string name="advanced_settings_share_application_title">Share Application</string>
+    <string name="advanced_settings_share_application_description">Elevate your experience with %1$s! Get it now on fDroid and see what everyone is talking about!\n</string>
     <!-- Admin Settings -->
     <string name="admin_permission_message">„mLauncher“ žada atsakingai naudoti ekrano užrakinimo leidimą. „mLauncher“ nerenka ir  jokių duomenų.</string>
     <string name="experimental">(Eksperimentinis)</string>
@@ -29,8 +48,6 @@
     <!-- Home Strings -->
     <string name="hidden_apps">Paslėptos programėlės</string>
     <string name="favorite_apps">Mėgstamiausios programos</string>
-    <string name="set_as_default_launcher">Nustatyti kaip numatytajį darbalaukį</string>
-    <string name="change_default_launcher">Pakeisti numatytajį darbalaukį</string>
     <!-- Display Strings -->
     <string name="show_status_bar">Rodyti būsenos juostą</string>
     <string name="show_recent_apps">Rodyti naujausias programas</string>
@@ -49,7 +66,7 @@
     <string name="date_text_size">Datos Šrifto dydis</string>
     <string name="battery_text_size">Baterijos Šrifto dydis</string>
     <string name="app_padding_size">Užpildymo Dydis</string>
-    <string name="app_font">Šriftų šeima</string>
+    <string name="app_font">Šrifto šeima</string>
     <!-- Appearance Strings -->
     <string name="theme_mode">Temavimo režimas</string>
     <string name="background_opacity">Fono permatomumas</string>
@@ -156,7 +173,7 @@
     <string name="acra_dialog_text">Atsiprašome, bet %1$s susidūrė su netikėta problema ir turi būti uždarytas. Padėkite mums tobulėti išsiųsdami strigčių ataskaitą.\n\n%1$s vertina jūsų privatumą, o surinkti duomenys naudojami tik programos stabilumui pagerinti. Jokia asmeninė informacija nerenkama. Dėkojame už palaikymą!</string>
     <string name="acra_send_report">Siųsti ataskaitą</string>
     <string name="acra_dont_send">Nesiųsti</string>
-    <string name="acra_mail_body">Programoje įvyko avarija.\n\nToliau pateikiama išsami informacija apie įrenginį. Klaidų žurnalas pridėtas kaip failas, kad galėtumėte juo naudotis. Būtume dėkingi už pagalbą sprendžiant šią problemą.\n\nInformacija apie įrenginį: \n[PRAŠOME užpildyti toliau pateikiamą informaciją, taip pat pašalinant viską, kas yra tarp laužtinių skliaustų, nes priešingu atveju ji bus ignoruojama].\n\n- Programėlės versija: [0.0.1]\n- \"Android\" versija: Įrenginio pavadinimas: [14]\n: Įrenginio vieta: [Android Pixel 69]\n- Įdiegimo vieta: [\n\nLabai vertiname jūsų greitą dėmesį šiam klausimui.\n\nAčiū.\n</string>
+    <string name="acra_mail_body">Programoje įvyko gedimas.\n\nŽemiau pateikiama išsami informacija apie įrenginį. Klaidų žurnalas buvo pridėtas kaip failas jūsų nuorodai. Būsime dėkingi už pagalbą sprendžiant šią problemą.\n\nĮrenginio informacija: \n[PRAŠOME užpildyti toliau pateiktą informaciją, taip pat pašalinant bet ką tarp laužtinių skliaustų, kitaip tai bus nepaisoma.]\n\n- Programos versija: [0.0.1]\n– Android versija: [14]\n– Įrenginio pavadinimas: [Android Pixel 69]\n– Diegimo vieta: [github, fdroid, obtanium, pats]\n\nLabai vertiname Jūsų greitą dėmesį šiuo klausimu.\n\nAčiū.\n</string>
     <string name="settings_font_system">Sistema</string>
     <!-- Search Stings -->
     <string name="search_engine">Paieškos sistema</string>
