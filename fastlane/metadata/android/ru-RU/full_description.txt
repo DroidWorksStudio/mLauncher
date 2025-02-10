@@ -1,4 +1,4 @@
-Форк от <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Минимальный и чистый.
+Разветвлен от <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Минимальный и чистый.
 
 # Форкнуто с дополнительными возможностями
 
