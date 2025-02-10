@@ -1,4 +1,4 @@
-Derivato da <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimale e pulito.
+Biforcato da <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimale e pulito.
 
 # Fork con funzionalità aggiuntive
 
