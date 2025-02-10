@@ -11,8 +11,27 @@
     <string name="settings_favorite_apps_title">Favoriete apps</string>
     <string name="settings_hidden_apps_title">Verborgen apps</string>
     <string name="settings_advanced_title">Geavanceerd</string>
-    <string name="settings_app_info_title">App informatie</string>
-    <string name="settings_app_info_description">%1$s</string>
+    <!-- Strings used for advanced settings -->
+    <string name="advanced_settings_title">Advanced Settings</string>
+    <string name="advanced_settings_app_info_title">App Info</string>
+    <string name="advanced_settings_app_info_description">%1$s</string>
+    <string name="advanced_settings_set_as_default_launcher">Set as Default Launcher</string>
+    <string name="advanced_settings_change_default_launcher">Change Default Launcher</string>
+    <string name="advanced_settings_restart_title">Restart Launcher</string>
+    <string name="advanced_settings_restart_description">Have you tried turning it on and off?</string>
+    <string name="advanced_settings_backup_restore_title">Backup/Restore</string>
+    <string name="advanced_settings_backup_restore_description">Please be careful what you wish for?</string>
+    <string name="advanced_settings_backup_restore_backup">Backup</string>
+    <string name="advanced_settings_backup_restore_restore">Restore</string>
+    <string name="advanced_settings_backup_restore_clear">Clear All Data</string>
+    <string name="advanced_settings_backup_restore_clear_title">Clear Preferences</string>
+    <string name="advanced_settings_backup_restore_clear_description">Are you sure you want to do this?</string>
+    <string name="advanced_settings_backup_restore_clear_yes">Yes</string>
+    <string name="advanced_settings_backup_restore_clear_no">No</string>
+    <string name="advanced_settings_help_feedback_title">Help and Feedback</string>
+    <string name="advanced_settings_community_support_title">Community Support</string>
+    <string name="advanced_settings_share_application_title">Share Application</string>
+    <string name="advanced_settings_share_application_description">Elevate your experience with %1$s! Get it now on fDroid and see what everyone is talking about!\n</string>
     <!-- Admin Settings -->
     <string name="admin_permission_message">mLauncher belooft de toestemming voor het vergrendelscherm op een verantwoorde manier te gebruiken. mLauncher verzamelt of deelt geen gegevens.</string>
     <string name="experimental">(experimenteel)</string>
@@ -29,8 +48,6 @@
     <!-- Home Strings -->
     <string name="hidden_apps">Verborgen apps</string>
     <string name="favorite_apps">Favoriete apps</string>
-    <string name="set_as_default_launcher">Instellen als standaard launcher</string>
-    <string name="change_default_launcher">Standaard launcher wijzigen</string>
     <!-- Display Strings -->
     <string name="show_status_bar">Statusbalk weergeven</string>
     <string name="show_recent_apps">Recente apps weergeven</string>
@@ -156,7 +173,7 @@
     <string name="acra_dialog_text">Het spijt ons, maar %1$s heeft een onverwacht probleem ondervonden en moet worden afgesloten. Help ons alstublieft verbeteren door een crashrapport te sturen.\n\n%1$s waardeert uw privacy en de verzamelde gegevens worden uitsluitend gebruikt voor het verbeteren van de app-stabiliteit. Er worden geen persoonlijke gegevens verzameld. Bedankt voor je ondersteuning!</string>
     <string name="acra_send_report">Verzend rapport</string>
     <string name="acra_dont_send">Niet verzenden</string>
-    <string name="acra_mail_body">Er is een crash opgetreden in de applicatie.\n\nHieronder staan de details van het apparaat. Het foutenlogboek is als bestand bijgevoegd ter referentie. Wij stellen uw hulp bij het oplossen van dit probleem op prijs.\n\nApparaatinformatie: \n[VUL de onderstaande informatie in en verwijder alles tussen de vierkante haken, anders wordt dit genegeerd.]\n\n- App-versie: [0.0.1]\n- Android-versie: [14]\n- Apparaatnaam: [Android Pixel 69]\n- Installatielocatie: [github, fdroid, obtanium, self]\n\nUw snelle aandacht voor deze kwestie wordt zeer op prijs gesteld.\n\nDank u wel.\n</string>
+    <string name="acra_mail_body">Er heeft zich een crash voorgedaan in de applicatie.\n\nHieronder staan de details van het apparaat. Het foutenlogboek is ter referentie als bestand bijgevoegd. Wij stellen uw hulp bij het oplossen van dit probleem zeer op prijs.\n\nApparaatinformatie: \n[Vul de onderstaande informatie in en verwijder alles tussen de vierkante haken, anders wordt dit genegeerd.]\n\n- App-versie: [0.0.1]\n- Android-versie: [14]\n- Apparaatnaam: [Android Pixel 69]\n- Installatielocatie: [github, fdroid, obtanium, self]\n\nUw snelle aandacht voor deze kwestie wordt zeer op prijs gesteld.\n\nBedankt.\n</string>
     <string name="settings_font_system">Systeem</string>
     <!-- Search Stings -->
     <string name="search_engine">Zoekmachine</string>
