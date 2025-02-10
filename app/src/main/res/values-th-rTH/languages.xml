@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lang_arabic">ภาษาอาหรับ</string>
+    <string name="lang_dutch">ดัตช์</string>
+    <string name="lang_english">ภาษาอังกฤษ</string>
+    <string name="lang_french">ภาษาฝรั่งเศส</string>
+    <string name="lang_german">เยอรมัน</string>
+    <string name="lang_hebrew">ภาษาฮีบรู</string>
+    <string name="lang_italian">อิตาลี</string>
+    <string name="lang_japanese">ญี่ปุ่น</string>
+    <string name="lang_korean">เกาหลี</string>
+    <string name="lang_lithuanian">ลิทัวเนีย</string>
+    <string name="lang_polish">ขัด</string>
+    <string name="lang_portuguese">โปรตุเกส</string>
+    <string name="lang_russian">รัสเซีย</string>
+    <string name="lang_slovak">สโลวัก</string>
+    <string name="lang_spanish">สเปน</string>
+    <string name="lang_thai">แบบไทย</string>
+    <string name="lang_turkish">ภาษาตุรกี</string>
+</resources>
