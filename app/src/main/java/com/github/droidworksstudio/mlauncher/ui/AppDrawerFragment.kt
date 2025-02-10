@@ -141,7 +141,7 @@ class AppDrawerFragment : Fragment() {
         binding.recyclerView.addOnScrollListener(getRecyclerViewOnScrollListener())
 
         when (flag) {
-            AppDrawerFlag.LaunchApp -> if (prefs.useAllAppsText) binding.search.queryHint =
+            AppDrawerFlag.LaunchApp -> binding.search.queryHint =
                 applyTextColor(getString(R.string.show_apps), prefs.appColor)
 
             AppDrawerFlag.HiddenApps -> binding.search.queryHint =

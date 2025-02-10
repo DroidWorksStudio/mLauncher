@@ -22,7 +22,7 @@ Rozwidlony od <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. M
 - Możesz także ustawić zegar niezależnie od aplikacji domowych.
 - Zmień ustawienie aplikacji w szufladzie aplikacji niezależnie od ekranu głównego.
 - Zmień rozmiar czcionki w sekcjach ekranu głównego niezależnie od siebie.
-- Usunięte pozwolenie na korzystanie z Internetu Nigdy nie wiesz, co deweloper aplikacji chce o tobie wiedzieć.
+- Usunięte pozwolenie na korzystanie z Internetu Nigdy nie wiesz, co twórca aplikacji chce o Tobie wiedzieć.
 - Zablokuj ustawienia biometrii (przełącznik)
 - Dodano możliwość raportowania awarii poprzez e-mail.
 - Dodano możliwość przeglądania czasu użytkowania aplikacji.

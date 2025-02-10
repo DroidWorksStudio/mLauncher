@@ -31,6 +31,7 @@ import android.view.WindowManager
 import android.widget.Toast
 import androidx.annotation.ColorRes
 import androidx.annotation.DrawableRes
+import androidx.biometric.BiometricManager
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.IconCompat
 import androidx.core.graphics.drawable.toBitmap
@@ -98,20 +99,16 @@ fun Context.createIconWithResourceCompat(
     @DrawableRes adaptiveIconForegroundId: Int,
     @DrawableRes adaptiveIconBackgroundId: Int
 ): IconCompat {
-    return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-        val adaptiveIconDrawable = AdaptiveIconDrawable(
-            ContextCompat.getDrawable(this, adaptiveIconBackgroundId),
-            ContextCompat.getDrawable(this, adaptiveIconForegroundId)
-        )
+    val adaptiveIconDrawable = AdaptiveIconDrawable(
+        ContextCompat.getDrawable(this, adaptiveIconBackgroundId),
+        ContextCompat.getDrawable(this, adaptiveIconForegroundId)
+    )
 
-        IconCompat.createWithAdaptiveBitmap(
-            adaptiveIconDrawable.toBitmap(
-                config = Bitmap.Config.ARGB_8888
-            )
+    return IconCompat.createWithAdaptiveBitmap(
+        adaptiveIconDrawable.toBitmap(
+            config = Bitmap.Config.ARGB_8888
         )
-    } else {
-        IconCompat.createWithResource(this, vectorIconId)
-    }
+    )
 }
 
 fun Context.currentLanguage() = ConfigurationCompat.getLocales(resources.configuration)[0]?.language
@@ -357,6 +354,16 @@ fun Context.getAppNameFromPackageName(packageName: String): String? {
         null
     }
 }
+
+fun Context.isBiometricEnabled(): Boolean {
+    val biometricManager = BiometricManager.from(this)
+
+    return when (biometricManager.canAuthenticate(BiometricManager.Authenticators.BIOMETRIC_STRONG or BiometricManager.Authenticators.DEVICE_CREDENTIAL)) {
+        BiometricManager.BIOMETRIC_SUCCESS -> true
+        else -> false
+    }
+}
+
 
 fun Context.openAccessibilitySettings() {
     val intent = Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS)

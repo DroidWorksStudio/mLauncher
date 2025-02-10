@@ -113,7 +113,9 @@ class SettingsFragment : Fragment() {
                 titleFontSize = titleFontSize,
                 descriptionFontSize = descriptionFontSize,
                 iconSize = iconSize,
-                onClick = { showFeaturesSettings() },
+                onClick = {
+                    showFeaturesSettings()
+                },
             )
 
             SettingsHomeItem(
@@ -123,7 +125,21 @@ class SettingsFragment : Fragment() {
                 titleFontSize = titleFontSize,
                 descriptionFontSize = descriptionFontSize,
                 iconSize = iconSize,
-                onClick = { showLookFeelSettings() },
+                onClick = {
+                    showLookFeelSettings()
+                },
+            )
+
+            SettingsHomeItem(
+                title = stringResource(R.string.settings_gestures_title),
+                description = stringResource(R.string.settings_gestures_description),
+                imageVector = ImageVector.vectorResource(id = R.drawable.ic_gestures),
+                titleFontSize = titleFontSize,
+                descriptionFontSize = descriptionFontSize,
+                iconSize = iconSize,
+                onClick = {
+                    showGesturesSettings()
+                },
             )
 
             SettingsHomeItem(
@@ -132,7 +148,9 @@ class SettingsFragment : Fragment() {
                 titleFontSize = titleFontSize,
                 descriptionFontSize = descriptionFontSize,
                 iconSize = iconSize,
-                onClick = { showFavoriteApps() },
+                onClick = {
+                    showFavoriteApps()
+                },
             )
 
             SettingsHomeItem(
@@ -141,7 +159,9 @@ class SettingsFragment : Fragment() {
                 titleFontSize = titleFontSize,
                 descriptionFontSize = descriptionFontSize,
                 iconSize = iconSize,
-                onClick = { showHiddenApps() },
+                onClick = {
+                    showHiddenApps()
+                },
             )
 
             SettingsHomeItem(
@@ -150,7 +170,9 @@ class SettingsFragment : Fragment() {
                 titleFontSize = titleFontSize,
                 descriptionFontSize = descriptionFontSize,
                 iconSize = iconSize,
-                onClick = { showAdvancedSettings() },
+                onClick = {
+                    showAdvancedSettings()
+                },
             )
         }
     }
@@ -266,6 +288,12 @@ class SettingsFragment : Fragment() {
     private fun showLookFeelSettings() {
         findNavController().navigate(
             R.id.action_settingsFragment_to_settingsLookFeelFragment,
+        )
+    }
+
+    private fun showGesturesSettings() {
+        findNavController().navigate(
+            R.id.action_settingsFragment_to_settingsGesturesFragment,
         )
     }
 

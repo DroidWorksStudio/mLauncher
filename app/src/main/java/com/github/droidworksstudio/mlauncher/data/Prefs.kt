@@ -76,7 +76,6 @@ private const val CLICK_CLOCK = "CLICK_CLOCK"
 private const val CLICK_USAGE = "CLICK_USAGE"
 private const val CLICK_DATE = "CLICK_DATE"
 private const val DOUBLE_TAP = "DOUBLE_TAP"
-private const val ALL_APPS_TEXT = "ALL_APPS_TEXT"
 private const val APP_SIZE_TEXT = "APP_SIZE_TEXT"
 private const val CLOCK_SIZE_TEXT = "CLOCK_SIZE_TEXT"
 private const val DATE_SIZE_TEXT = "DATE_SIZE_TEXT"
@@ -288,10 +287,6 @@ class Prefs(val context: Context) {
         get() = prefs.getBoolean(SETTINGS_LOCKED, false)
         set(value) = prefs.edit().putBoolean(SETTINGS_LOCKED, value).apply()
 
-    var useAllAppsText: Boolean
-        get() = prefs.getBoolean(ALL_APPS_TEXT, true)
-        set(value) = prefs.edit().putBoolean(ALL_APPS_TEXT, value).apply()
-
     var shortSwipeUpAction: Constants.Action
         get() = loadAction(SWIPE_UP_ACTION, Constants.Action.ShowAppList)
         set(value) = storeAction(SWIPE_UP_ACTION, value)
@@ -412,10 +407,6 @@ class Prefs(val context: Context) {
     var hiddenApps: MutableSet<String>
         get() = prefs.getStringSet(HIDDEN_APPS, mutableSetOf()) as MutableSet<String>
         set(value) = prefs.edit().putStringSet(HIDDEN_APPS, value).apply()
-
-    var hiddenAppsDisplayed: Boolean
-        get() = prefs.getBoolean(HIDDEN_APPS_DISPLAYED, false)
-        set(value) = prefs.edit().putBoolean(HIDDEN_APPS_DISPLAYED, value).apply()
 
     /**
      * By the number in home app list, get the list item.

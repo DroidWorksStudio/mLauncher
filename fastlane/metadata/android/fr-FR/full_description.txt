@@ -1,4 +1,4 @@
-Bifurqué à partir de <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal et propre.
+Bifurqué à partir de <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimaliste et propre.
 
 # Forké avec des fonctionnalités supplémentaires
 

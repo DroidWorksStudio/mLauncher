@@ -1,11 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Base Settings -->
-    <string name="app">Programėlė</string>
+    <string name="select_app">Pasirinkite programą</string>
+    <!-- Strings used for settings menus -->
+    <string name="settings_name">mLauncher nustatymai</string>
+    <string name="settings_features_title">Savybės</string>
+    <string name="settings_features_description">Pagerinkite savo produktyvumą.</string>
+    <string name="settings_look_feel_title">Pažiūrėk ir Jausk</string>
+    <string name="settings_look_feel_description">Suteikite savo pagrindiniam ekranui asmeniškumo.</string>
+    <string name="settings_favorite_apps_title">Mėgstamiausios programos</string>
+    <string name="settings_hidden_apps_title">Paslėptos programėlės</string>
+    <string name="settings_advanced_title">Išplėstinė</string>
+    <!-- Strings used for features settings -->
+    <string name="features_settings_title">Savybės</string>
+    <!-- Strings used for look And feel settings -->
+    <string name="look_feel_settings_title">Žiūrėti ir Jausti</string>
+    <!-- Strings used for advanced settings -->
+    <string name="advanced_settings_title">Išplėstiniai nustatymai</string>
+    <string name="advanced_settings_app_info_title">Programos informacija</string>
+    <string name="advanced_settings_app_info_description">%1$s</string>
+    <string name="advanced_settings_set_as_default_launcher">Nustatyti kaip numatytąją paleidimo priemonę</string>
+    <string name="advanced_settings_change_default_launcher">Pakeiskite numatytąją paleidimo priemonę</string>
+    <string name="advanced_settings_restart_title">Iš naujo paleiskite paleidimo priemonę</string>
+    <string name="advanced_settings_restart_description">Ar bandėte jį įjungti ir išjungti?</string>
+    <string name="advanced_settings_backup_restore_title">Atsarginė kopija / atkūrimas</string>
+    <string name="advanced_settings_backup_restore_description">Būkite atsargūs, ko norite?</string>
+    <string name="advanced_settings_backup_restore_backup">Atsarginė kopija</string>
+    <string name="advanced_settings_backup_restore_restore">Atkurti</string>
+    <string name="advanced_settings_backup_restore_clear">Išvalyti visus duomenis</string>
+    <string name="advanced_settings_backup_restore_clear_title">Išvalyti nuostatas</string>
+    <string name="advanced_settings_backup_restore_clear_description">Ar tikrai norite tai padaryti?</string>
+    <string name="advanced_settings_backup_restore_clear_yes">Taip</string>
+    <string name="advanced_settings_backup_restore_clear_no">Nr</string>
+    <string name="advanced_settings_help_feedback_title">Pagalba ir atsiliepimai</string>
+    <string name="advanced_settings_community_support_title">Bendruomenės parama</string>
+    <string name="advanced_settings_share_application_title">Dalintis programa</string>
+    <string name="advanced_settings_share_application_description">Padidinkite savo patirtį naudodami %1$s! Gaukite jį dabar „fDroid“ ir pažiūrėkite, apie ką visi kalba!\n</string>
     <!-- Admin Settings -->
     <string name="admin_permission_message">„mLauncher“ žada atsakingai naudoti ekrano užrakinimo leidimą. „mLauncher“ nerenka ir  jokių duomenų.</string>
     <string name="experimental">(Eksperimentinis)</string>
     <!-- Settings Headers -->
+    <string name="display">Ekranas</string>
+    <string name="language_region">Kalba &amp; Regionas</string>
+    <string name="accessibility">Prieinamumas</string>
     <string name="appearance">Išvaizda</string>
     <string name="behavior">Funkcionavimas</string>
     <string name="homescreen">Pagrindinis ekranas</string>
@@ -15,27 +52,33 @@
     <!-- Home Strings -->
     <string name="hidden_apps">Paslėptos programėlės</string>
     <string name="favorite_apps">Mėgstamiausios programos</string>
-    <string name="set_as_default_launcher">Nustatyti kaip numatytajį darbalaukį</string>
-    <string name="change_default_launcher">Pakeisti numatytajį darbalaukį</string>
-    <!-- Appearance Strings -->
-    <string name="status_bar">Rodyti būsenos juostą</string>
-    <string name="theme_mode">Temavimo režimas</string>
-    <string name="color_mode">Spalvų režimas</string>
+    <!-- Display Strings -->
+    <string name="show_status_bar">Rodyti būsenos juostą</string>
+    <string name="show_recent_apps">Rodyti naujausias programas</string>
+    <string name="show_app_usage_stats">Rodyti programos naudojimo statistiką</string>
+    <string name="show_time">Rodyti laiką</string>
+    <string name="show_time_format">Laiko formatas (AM/PM)</string>
+    <string name="show_date">Rodyti datą</string>
+    <string name="show_battery">Rodyti bateriją</string>
+    <string name="show_battery_icon">Rodyti akumuliatoriaus piktogramą</string>
+    <string name="show_header_text">Rodyti antraštės tekstą</string>
+    <!-- Language & Region Strings -->
     <string name="app_language">Sąsajos kalba</string>
+    <!-- Accessibility Strings -->
     <string name="app_text_size">Programėlės Šrifto dydis</string>
     <string name="clock_text_size">Laikrodžio teksto dydis</string>
     <string name="date_text_size">Datos Šrifto dydis</string>
     <string name="battery_text_size">Baterijos Šrifto dydis</string>
     <string name="app_padding_size">Užpildymo Dydis</string>
-    <string name="follow_accent_colors">Akcentinės spalvos</string>
-    <string name="background_opacity">Fono permatomumas</string>
-    <string name="all_apps_text">Rodyti visų programėlių tekstą</string>
     <string name="app_font">Šrifto šeima</string>
+    <!-- Appearance Strings -->
+    <string name="theme_mode">Temavimo režimas</string>
+    <string name="background_opacity">Fono permatomumas</string>
+    <string name="home_alignment_bottom">Pradinio ekrano lygiavimas apačioje</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Automatiškai rodyti klaviatūrą</string>
     <string name="auto_open_apps">Automatiškai atidaryti programėlės</string>
     <string name="enable_notifications">Įgalinti pranešimus</string>
-    <string name="display_recent_apps">Rodyti Naujausiai Atidarytas Programėles</string>
     <string name="number_of_recents">Naujausiai atdarytų programėlių skaičius</string>
     <string name="filter_strength">Filtro stiprumas</string>
     <string name="search_from_start">Programėlių paieška nuo pradžių.</string>
@@ -44,16 +87,9 @@
     <string name="apps_on_home_screen">Nuorodų skaičius</string>
     <string name="pages_on_home_screen">Puslapių skaičius</string>
     <string name="enable_home_pager">Įjungti pradžios puslapį</string>
-    <string name="show_time">Rodyti laiką</string>
-    <string name="show_time_format">Laiko formatas (AM/PM)</string>
-    <string name="show_date">Rodyti datą</string>
-    <string name="show_battery">Rodyti bateriją</string>
-    <string name="show_battery_icon">Rodyti akumuliatoriaus piktogramą</string>
     <string name="lock_home_apps">Užrakinti programas</string>
     <string name="extend_home_apps_area">Išplėsti spustelėjamą sritį</string>
-    <string name="home_alignment_bottom">Pradinio ekrano lygiavimas apačioje</string>
     <!-- Alignment Strings -->
-    <string name="display_app_usage_stats">Rodyti programos naudojimo statistiką</string>
     <string name="home_alignment">Pagrindinis programėlių ekranas</string>
     <string name="clock_alignment">Laikas ir data</string>
     <string name="drawer_alignment">Programėlės programėlių stalčiuje</string>

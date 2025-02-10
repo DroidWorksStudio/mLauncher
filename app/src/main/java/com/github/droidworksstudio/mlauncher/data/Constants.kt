@@ -133,7 +133,7 @@ object Constants {
         // Function to get a string from a context (for non-Composable use)
         fun getString(context: Context): String {
             return when (this) {
-                System -> context.getString(R.string.lang_system)
+                System -> context.getString(R.string.system_default)
                 Arabic -> context.getString(R.string.lang_arabic)
                 Dutch -> context.getString(R.string.lang_dutch)
                 English -> context.getString(R.string.lang_english)
@@ -157,7 +157,7 @@ object Constants {
         @Composable
         override fun string(): String {
             return when (this) {
-                System -> stringResource(R.string.lang_system)
+                System -> stringResource(R.string.system_default)
                 Arabic -> stringResource(R.string.lang_arabic)
                 Dutch -> stringResource(R.string.lang_dutch)
                 English -> stringResource(R.string.lang_english)
@@ -318,7 +318,7 @@ object Constants {
         // Function to get a string from a context (for non-Composable use)
         fun getString(context: Context): String {
             return when (this) {
-                System -> context.getString(R.string.lang_system)
+                System -> context.getString(R.string.system_default)
                 Dark -> context.getString(R.string.dark)
                 Light -> context.getString(R.string.light)
             }
@@ -328,7 +328,7 @@ object Constants {
         @Composable
         override fun string(): String {
             return when (this) {
-                System -> stringResource(R.string.lang_system)
+                System -> stringResource(R.string.system_default)
                 Dark -> stringResource(R.string.dark)
                 Light -> stringResource(R.string.light)
             }
@@ -376,7 +376,7 @@ object Constants {
         @Composable
         override fun string(): String {
             return when (this) {
-                System -> stringResource(R.string.settings_font_system)
+                System -> stringResource(R.string.system_default)
                 Bitter -> stringResource(R.string.settings_font_bitter)
                 Dotness -> stringResource(R.string.settings_font_dotness)
                 DroidSans -> stringResource(R.string.settings_font_droidsans)

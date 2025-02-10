@@ -1,11 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Base Settings -->
-    <string name="app">Uygulama</string>
+    <string name="select_app">Uygulama Seçin</string>
+    <!-- Strings used for settings menus -->
+    <string name="settings_name">mLauncher Ayarları</string>
+    <string name="settings_features_title">Özellikler</string>
+    <string name="settings_features_description">Verimliliğinizi artırın.</string>
+    <string name="settings_look_feel_title">Görünüm ve His</string>
+    <string name="settings_look_feel_description">Ana ekranınıza kişisel bir dokunuş katın.</string>
+    <string name="settings_favorite_apps_title">Favori Uygulamalar</string>
+    <string name="settings_hidden_apps_title">Gizli uygulamalar</string>
+    <string name="settings_advanced_title">Gelişmiş</string>
+    <!-- Strings used for features settings -->
+    <string name="features_settings_title">Özellikler</string>
+    <!-- Strings used for look And feel settings -->
+    <string name="look_feel_settings_title">Görünüm ve His</string>
+    <!-- Strings used for advanced settings -->
+    <string name="advanced_settings_title">Gelişmiş Ayarlar</string>
+    <string name="advanced_settings_app_info_title">Uygulama Bilgileri</string>
+    <string name="advanced_settings_app_info_description">%1$s</string>
+    <string name="advanced_settings_set_as_default_launcher">Varsayılan Başlatıcı Olarak Ayarla</string>
+    <string name="advanced_settings_change_default_launcher">Varsayılan Başlatıcıyı Değiştir</string>
+    <string name="advanced_settings_restart_title">Başlatıcıyı yeniden başlat</string>
+    <string name="advanced_settings_restart_description">Açıp kapatmayı denediniz mi?</string>
+    <string name="advanced_settings_backup_restore_title">Yedekleme/Geri Yükleme</string>
+    <string name="advanced_settings_backup_restore_description">Lütfen ne dilediğinize dikkat edin?</string>
+    <string name="advanced_settings_backup_restore_backup">Yedekleme</string>
+    <string name="advanced_settings_backup_restore_restore">Eski haline getirmek</string>
+    <string name="advanced_settings_backup_restore_clear">Tüm Verileri Temizle</string>
+    <string name="advanced_settings_backup_restore_clear_title">Tercihleri Temizle</string>
+    <string name="advanced_settings_backup_restore_clear_description">Bunu gerçekten yapmak istiyor musun?</string>
+    <string name="advanced_settings_backup_restore_clear_yes">Evet</string>
+    <string name="advanced_settings_backup_restore_clear_no">HAYIR</string>
+    <string name="advanced_settings_help_feedback_title">Yardım ve Geri Bildirim</string>
+    <string name="advanced_settings_community_support_title">Topluluk Desteği</string>
+    <string name="advanced_settings_share_application_title">Paylaşım Uygulaması</string>
+    <string name="advanced_settings_share_application_description">%1$sile deneyiminizi yükseltin! Hemen fDroid\'den edinin ve herkesin ne hakkında konuştuğunu görün!\n</string>
     <!-- Admin Settings -->
     <string name="admin_permission_message">mLauncher kilit ekranı iznini sorumlu bir şekilde kullanmaya söz veriyor. mLauncher herhangi bir veri toplamaz veya paylaşmaz.</string>
     <string name="experimental">(deneysel)</string>
     <!-- Settings Headers -->
+    <string name="display">Görüntülemek</string>
+    <string name="language_region">Dil &amp; Bölge</string>
+    <string name="accessibility">Erişilebilirlik</string>
     <string name="appearance">Görünüş</string>
     <string name="behavior">Davranış</string>
     <string name="homescreen">Ana Ekran</string>
@@ -15,27 +52,33 @@
     <!-- Home Strings -->
     <string name="hidden_apps">Gizli uygulamalar</string>
     <string name="favorite_apps">Favori Uygulamalar</string>
-    <string name="set_as_default_launcher">Varsayılan başlatıcı olarak ayarla</string>
-    <string name="change_default_launcher">Varsayılan başlatıcıyı değiştir</string>
-    <!-- Appearance Strings -->
-    <string name="status_bar">Durum çubuğunu göster</string>
-    <string name="theme_mode">Tema modu</string>
-    <string name="color_mode">Renk Modu</string>
+    <!-- Display Strings -->
+    <string name="show_status_bar">Durum çubuğunu göster</string>
+    <string name="show_recent_apps">Son Uygulamaları Göster</string>
+    <string name="show_app_usage_stats">Uygulama Kullanım İstatistiklerini Göster</string>
+    <string name="show_time">Zamanı göster</string>
+    <string name="show_time_format">Saat Formatı (AM/PM)</string>
+    <string name="show_date">Tarih\'i göster</string>
+    <string name="show_battery">Pil\'i göster</string>
+    <string name="show_battery_icon">Pil Simgesini Göster</string>
+    <string name="show_header_text">Başlık Metnini Göster</string>
+    <!-- Language & Region Strings -->
     <string name="app_language">Arayüz Dili</string>
+    <!-- Accessibility Strings -->
     <string name="app_text_size">Uygulama Metin Boyutu</string>
     <string name="clock_text_size">Saat Metin Boyutu</string>
     <string name="date_text_size">Tarih Metin Boyutu</string>
     <string name="battery_text_size">Pil Metin Boyutu</string>
     <string name="app_padding_size">Boşluk Boyutu</string>
-    <string name="follow_accent_colors">Vurgu Renkleri</string>
-    <string name="background_opacity">Arka Plan Opaklığı</string>
-    <string name="all_apps_text">Tüm Uygulama Metinlerini Görüntüle</string>
     <string name="app_font">Font ailesi</string>
+    <!-- Appearance Strings -->
+    <string name="theme_mode">Tema modu</string>
+    <string name="background_opacity">Arka Plan Opaklığı</string>
+    <string name="home_alignment_bottom">Ana Ekranı Alta Hizala</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Klavye\'yi otomatik göster</string>
     <string name="auto_open_apps">Uygulamaları otomatik aç</string>
     <string name="enable_notifications">Bildirimleri Etkinleştir</string>
-    <string name="display_recent_apps">Son Uygulamaları Görüntüle</string>
     <string name="number_of_recents">Son Uygulama Sayısı</string>
     <string name="filter_strength">Filtre Gücü</string>
     <string name="search_from_start">Uygulama isminin başından aramaya başla.</string>
@@ -44,16 +87,9 @@
     <string name="apps_on_home_screen">Kısayol sayısı</string>
     <string name="pages_on_home_screen">Sayfa sayısı</string>
     <string name="enable_home_pager">Ana Sayfa Cihazını Etkinleştir</string>
-    <string name="show_time">Zamanı göster</string>
-    <string name="show_time_format">Saat Formatı (AM/PM)</string>
-    <string name="show_date">Tarih\'i göster</string>
-    <string name="show_battery">Pil\'i göster</string>
-    <string name="show_battery_icon">Pil Simgesini Göster</string>
-    <string name="lock_home_apps">Uygulamaları Kilitle</string>
+    <string name="lock_home_apps">Kilit Uygulamaları</string>
     <string name="extend_home_apps_area">Tıklanabilir Alanı Genişlet</string>
-    <string name="home_alignment_bottom">Ana Ekranı Alta Hizala</string>
     <!-- Alignment Strings -->
-    <string name="display_app_usage_stats">Uygulama Kullanım İstatistiklerini Görüntüle</string>
     <string name="home_alignment">Uygulamalar ana ekranı</string>
     <string name="clock_alignment">Saat ve tarih</string>
     <string name="drawer_alignment">Uygulama çekmecesindeki uygulamalar</string>

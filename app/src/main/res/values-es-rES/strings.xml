@@ -1,11 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Base Settings -->
-    <string name="app">Aplicación</string>
+    <string name="select_app">Seleccionar aplicación</string>
+    <!-- Strings used for settings menus -->
+    <string name="settings_name">Configuración de mLauncher</string>
+    <string name="settings_features_title">Características</string>
+    <string name="settings_features_description">Mejora tu productividad.</string>
+    <string name="settings_look_feel_title">Mira y siente</string>
+    <string name="settings_look_feel_description">Dale un toque personal a tu pantalla de inicio.</string>
+    <string name="settings_favorite_apps_title">Aplicaciones favoritas</string>
+    <string name="settings_hidden_apps_title">Aplicaciones ocultas</string>
+    <string name="settings_advanced_title">Avanzado</string>
+    <!-- Strings used for features settings -->
+    <string name="features_settings_title">Características</string>
+    <!-- Strings used for look And feel settings -->
+    <string name="look_feel_settings_title">Mira y siente</string>
+    <!-- Strings used for advanced settings -->
+    <string name="advanced_settings_title">Configuración avanzada</string>
+    <string name="advanced_settings_app_info_title">Información de la aplicación</string>
+    <string name="advanced_settings_app_info_description">%1$s</string>
+    <string name="advanced_settings_set_as_default_launcher">Establecer como lanzador predeterminado</string>
+    <string name="advanced_settings_change_default_launcher">Cambiar el lanzador predeterminado</string>
+    <string name="advanced_settings_restart_title">Reiniciar el lanzador</string>
+    <string name="advanced_settings_restart_description">¿Has probado a encenderlo y apagarlo?</string>
+    <string name="advanced_settings_backup_restore_title">Copia de seguridad/restauración</string>
+    <string name="advanced_settings_backup_restore_description">¿Por favor ten cuidado con lo que deseas?</string>
+    <string name="advanced_settings_backup_restore_backup">Respaldo</string>
+    <string name="advanced_settings_backup_restore_restore">Restaurar</string>
+    <string name="advanced_settings_backup_restore_clear">Borrar todos los datos</string>
+    <string name="advanced_settings_backup_restore_clear_title">Borrar preferencias</string>
+    <string name="advanced_settings_backup_restore_clear_description">¿Estás seguro que deseas hacer esto?</string>
+    <string name="advanced_settings_backup_restore_clear_yes">Sí</string>
+    <string name="advanced_settings_backup_restore_clear_no">No</string>
+    <string name="advanced_settings_help_feedback_title">Ayuda y comentarios</string>
+    <string name="advanced_settings_community_support_title">Apoyo comunitario</string>
+    <string name="advanced_settings_share_application_title">Compartir aplicación</string>
+    <string name="advanced_settings_share_application_description">Mejora tu experiencia con %1$s. ¡Consíguelo ahora en fDroid y descubre de qué habla todo el mundo!\n</string>
     <!-- Admin Settings -->
     <string name="admin_permission_message">mLauncher usa el permiso de la pantalla de bloqueo de manera responsable. mLauncher no recopila ni comparte ningún dato.</string>
     <string name="experimental">(experimental)</string>
     <!-- Settings Headers -->
+    <string name="display">Mostrar</string>
+    <string name="language_region">Idioma &amp; Región</string>
+    <string name="accessibility">Accesibilidad</string>
     <string name="appearance">Apariencia</string>
     <string name="behavior">Comportamiento</string>
     <string name="homescreen">Pantalla principal</string>
@@ -15,27 +52,33 @@
     <!-- Home Strings -->
     <string name="hidden_apps">Aplicaciones ocultas</string>
     <string name="favorite_apps">Aplicaciones favoritas</string>
-    <string name="set_as_default_launcher">Establecer como lanzador predeterminado</string>
-    <string name="change_default_launcher">Cambiar lanzador predeterminado</string>
-    <!-- Appearance Strings -->
-    <string name="status_bar">Barra de estado</string>
-    <string name="theme_mode">Tema</string>
-    <string name="color_mode">Modo de color</string>
+    <!-- Display Strings -->
+    <string name="show_status_bar">Mostrar barra de estado</string>
+    <string name="show_recent_apps">Mostrar aplicaciones recientes</string>
+    <string name="show_app_usage_stats">Mostrar estadísticas de uso de la aplicación</string>
+    <string name="show_time">Mostrar hora</string>
+    <string name="show_time_format">Formato de hora (AM/PM)</string>
+    <string name="show_date">Mostrar fecha</string>
+    <string name="show_battery">Mostrar nivel de batería</string>
+    <string name="show_battery_icon">Mostrar icono de batería</string>
+    <string name="show_header_text">Mostrar texto del encabezado</string>
+    <!-- Language & Region Strings -->
     <string name="app_language">Idioma</string>
+    <!-- Accessibility Strings -->
     <string name="app_text_size">Tamaño del texto de la aplicación</string>
     <string name="clock_text_size">Tamaño del texto del reloj</string>
     <string name="date_text_size">Tamaño del texto de la fecha</string>
     <string name="battery_text_size">Tamaño del texto de la batería</string>
     <string name="app_padding_size">Interlineado</string>
-    <string name="follow_accent_colors">Remarcado</string>
-    <string name="background_opacity">Transparencia</string>
-    <string name="all_apps_text">Mostrar texto de todas las aplicaciones</string>
     <string name="app_font">Familia tipográfica</string>
+    <!-- Appearance Strings -->
+    <string name="theme_mode">Tema</string>
+    <string name="background_opacity">Transparencia</string>
+    <string name="home_alignment_bottom">Pantalla de inicio Alinear abajo</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Teclado automático</string>
     <string name="auto_open_apps">Abrir aplicaciones</string>
     <string name="enable_notifications">Permitir notificaciones</string>
-    <string name="display_recent_apps">Mostrar aplicaciones recientes</string>
     <string name="number_of_recents">Número de aplicaciones recientes</string>
     <string name="filter_strength">Fuerza del filtro</string>
     <string name="search_from_start">Buscar aplicaciones desde el principio.</string>
@@ -44,16 +87,9 @@
     <string name="apps_on_home_screen">Aplicaciones al inicio</string>
     <string name="pages_on_home_screen">Número de páginas</string>
     <string name="enable_home_pager">Habilitar buscapersonas de inicio</string>
-    <string name="show_time">Mostrar hora</string>
-    <string name="show_time_format">Formato de hora (AM/PM)</string>
-    <string name="show_date">Mostrar fecha</string>
-    <string name="show_battery">Mostrar nivel de batería</string>
-    <string name="show_battery_icon">Mostrar icono de batería</string>
     <string name="lock_home_apps">Bloquear aplicaciones</string>
     <string name="extend_home_apps_area">Ampliar el área en la que se puede hacer clic</string>
-    <string name="home_alignment_bottom">Pantalla de inicio Alinear abajo</string>
     <!-- Alignment Strings -->
-    <string name="display_app_usage_stats">Mostrar estadísticas de uso de aplicaciones</string>
     <string name="home_alignment">Alineación</string>
     <string name="clock_alignment">Alineación del reloj</string>
     <string name="drawer_alignment">Alineación de aplicaciones</string>
@@ -87,7 +123,7 @@
     <string name="display_hidden_apps">Mostrar aplicaciones ocultas</string>
     <string name="lock_settings">Configuración de bloqueo</string>
     <!-- Backup Strings -->
-    <string name="backup">Respaldo</string>
+    <string name="backup">Respaldar</string>
     <string name="load_backup">Carga</string>
     <string name="save_backup">Ahorrar</string>
     <string name="clear_backup">Claro</string>
@@ -142,7 +178,7 @@
     <string name="acra_send_report">Enviar reporte</string>
     <string name="acra_dont_send">No enviar</string>
     <string name="acra_mail_body">Se ha producido un fallo en la aplicación.\n\nA continuación se muestran los detalles del dispositivo. El registro de errores se ha adjuntado como un archivo para su referencia. Agradeceríamos su ayuda para resolver este problema.\n\nInformación del dispositivo: \n[POR FAVOR, complete la información a continuación y elimine cualquier elemento entre corchetes o esto se ignorará.]\n\n- Versión de la aplicación: [0.0.1]\n- Versión de Android: [14]\n- Nombre del dispositivo: [Android Pixel 69]\n- Ubicación de instalación: [github, fdroid, obtanium, self]\n\nApreciamos mucho su pronta atención a este asunto.\n\nGracias.\n</string>
-    <string name="settings_font_system">Sistema</string>
+    <string name="settings_font_system">Por defecto</string>
     <!-- Search Stings -->
     <string name="search_engine">Buscador</string>
     <string name="search_google">Google</string>

@@ -257,7 +257,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         if (prefs.homeLocked) return true
 
         val n = view.id
-        showAppList(AppDrawerFlag.SetHomeApp, includeHiddenApps = prefs.hiddenAppsDisplayed, n)
+        showAppList(AppDrawerFlag.SetHomeApp, includeHiddenApps = true, n)
         return true
     }
 
@@ -482,7 +482,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         }
     }
 
-    private fun showLongPressToast() = showShortToast("Long press to select app")
+    private fun showLongPressToast() = showShortToast(getString(R.string.long_press_to_select_app))
 
     private fun textOnClick(view: View) = onClick(view)
 

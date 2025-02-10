@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lang_arabic">עֲרָבִית</string>
+    <string name="lang_dutch">הוֹלַנדִי</string>
+    <string name="lang_english">אַנגְלִית</string>
+    <string name="lang_french">צָרְפָתִית</string>
+    <string name="lang_german">גֶרמָנִיָת</string>
+    <string name="lang_hebrew">עִברִית</string>
+    <string name="lang_italian">אִיטַלְקִית</string>
+    <string name="lang_japanese">יַפָּנִית</string>
+    <string name="lang_korean">קוריאנית</string>
+    <string name="lang_lithuanian">ליטאית</string>
+    <string name="lang_polish">פּוֹלָנִית</string>
+    <string name="lang_portuguese">פורטוגזית</string>
+    <string name="lang_russian">רוּסִי</string>
+    <string name="lang_slovak">סלובקית</string>
+    <string name="lang_spanish">סְפָרַדִית</string>
+    <string name="lang_thai">תאילנדית</string>
+    <string name="lang_turkish">טוּרקִית</string>
+</resources>

@@ -1,11 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Base Settings -->
-    <string name="app">แอป</string>
+    <string name="select_app">เลือกแอป</string>
+    <!-- Strings used for settings menus -->
+    <string name="settings_name">การตั้งค่า mLauncher</string>
+    <string name="settings_features_title">คุณสมบัติ</string>
+    <string name="settings_features_description">ปรับปรุงประสิทธิภาพการทำงานของคุณ</string>
+    <string name="settings_look_feel_title">มองและรู้สึก</string>
+    <string name="settings_look_feel_description">เพิ่มความเป็นส่วนตัวให้กับหน้าจอหลักของคุณ</string>
+    <string name="settings_favorite_apps_title">แอปพลิเคชั่นที่ชื่นชอบ</string>
+    <string name="settings_hidden_apps_title">แอพที่ซ่อนอยู่</string>
+    <string name="settings_advanced_title">ขั้นสูง</string>
+    <!-- Strings used for features settings -->
+    <string name="features_settings_title">คุณสมบัติ</string>
+    <!-- Strings used for look And feel settings -->
+    <string name="look_feel_settings_title">มองและรู้สึก</string>
+    <!-- Strings used for advanced settings -->
+    <string name="advanced_settings_title">การตั้งค่าขั้นสูง</string>
+    <string name="advanced_settings_app_info_title">ข้อมูลแอป</string>
+    <string name="advanced_settings_app_info_description">%1$s</string>
+    <string name="advanced_settings_set_as_default_launcher">ตั้งค่าเป็นตัวเปิดใช้เริ่มต้น</string>
+    <string name="advanced_settings_change_default_launcher">เปลี่ยนตัวเปิดใช้เริ่มต้น</string>
+    <string name="advanced_settings_restart_title">รีสตาร์ทตัวเรียกใช้งาน</string>
+    <string name="advanced_settings_restart_description">คุณได้ลองเปิดและปิดมันแล้วหรือยัง?</string>
+    <string name="advanced_settings_backup_restore_title">การสำรองข้อมูล/กู้คืน</string>
+    <string name="advanced_settings_backup_restore_description">โปรดระวังสิ่งที่คุณปรารถนา?</string>
+    <string name="advanced_settings_backup_restore_backup">การสำรองข้อมูล</string>
+    <string name="advanced_settings_backup_restore_restore">คืนค่า</string>
+    <string name="advanced_settings_backup_restore_clear">ล้างข้อมูลทั้งหมด</string>
+    <string name="advanced_settings_backup_restore_clear_title">ล้างการตั้งค่า</string>
+    <string name="advanced_settings_backup_restore_clear_description">คุณแน่ใจว่าต้องการทำเช่นนี้หรือไม่?</string>
+    <string name="advanced_settings_backup_restore_clear_yes">ใช่</string>
+    <string name="advanced_settings_backup_restore_clear_no">เลขที่</string>
+    <string name="advanced_settings_help_feedback_title">ความช่วยเหลือและข้อเสนอแนะ</string>
+    <string name="advanced_settings_community_support_title">การสนับสนุนชุมชน</string>
+    <string name="advanced_settings_share_application_title">แอปพลิเคชั่นแบ่งปัน</string>
+    <string name="advanced_settings_share_application_description">ยกระดับประสบการณ์ของคุณด้วย %1$sดาวน์โหลดเลยตอนนี้บน fDroid และดูว่าทุกคนกำลังพูดถึงอะไร!\n</string>
     <!-- Admin Settings -->
     <string name="admin_permission_message">mLauncher สัญญาว่าจะใช้การอนุญาตล็อคหน้าจออย่างมีความรับผิดชอบ mLauncher ไม่รวบรวมหรือแบ่งปันข้อมูลใด ๆ</string>
     <string name="experimental">(ทดลอง)</string>
     <!-- Settings Headers -->
+    <string name="display">แสดง</string>
+    <string name="language_region">ภาษา &amp; ภูมิภาค</string>
+    <string name="accessibility">การเข้าถึงได้</string>
     <string name="appearance">รูปร่าง</string>
     <string name="behavior">พฤติกรรม</string>
     <string name="homescreen">หน้าจอหลัก</string>
@@ -15,27 +52,33 @@
     <!-- Home Strings -->
     <string name="hidden_apps">แอพที่ซ่อนอยู่</string>
     <string name="favorite_apps">แอปพลิเคชั่นที่ชื่นชอบ</string>
-    <string name="set_as_default_launcher">ตั้งเป็นตัวเรียกใช้งานเริ่มต้น</string>
-    <string name="change_default_launcher">เปลี่ยนตัวเรียกใช้งานเริ่มต้น</string>
-    <!-- Appearance Strings -->
-    <string name="status_bar">แสดงแถบสถานะ</string>
-    <string name="theme_mode">โหมดธีม</string>
-    <string name="color_mode">โหมดสี</string>
+    <!-- Display Strings -->
+    <string name="show_status_bar">แสดงแถบสถานะ</string>
+    <string name="show_recent_apps">แสดงแอปล่าสุด</string>
+    <string name="show_app_usage_stats">แสดงสถิติการใช้งานแอป</string>
+    <string name="show_time">เวลาแสดง</string>
+    <string name="show_time_format">รูปแบบเวลา (AM/PM)</string>
+    <string name="show_date">แสดงวันที่</string>
+    <string name="show_battery">แสดงแบตเตอรี่</string>
+    <string name="show_battery_icon">แสดงไอคอนแบตเตอรี่</string>
+    <string name="show_header_text">แสดงข้อความส่วนหัว</string>
+    <!-- Language & Region Strings -->
     <string name="app_language">ภาษาอินเทอร์เฟซ</string>
+    <!-- Accessibility Strings -->
     <string name="app_text_size">ขนาดข้อความของแอป</string>
     <string name="clock_text_size">ขนาดข้อความนาฬิกา</string>
     <string name="date_text_size">ขนาดข้อความวันที่</string>
     <string name="battery_text_size">ขนาดข้อความแบตเตอรี่</string>
     <string name="app_padding_size">ขนาดช่องว่างภายใน</string>
-    <string name="follow_accent_colors">เน้นสี</string>
-    <string name="background_opacity">ความทึบของพื้นหลัง</string>
-    <string name="all_apps_text">แสดงข้อความแอพทั้งหมด</string>
     <string name="app_font">ครอบครัวแบบอักษร</string>
+    <!-- Appearance Strings -->
+    <string name="theme_mode">โหมดธีม</string>
+    <string name="background_opacity">ความทึบของพื้นหลัง</string>
+    <string name="home_alignment_bottom">หน้าจอหลักจัดตำแหน่งด้านล่าง</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">แป้นพิมพ์แสดงอัตโนมัติ</string>
     <string name="auto_open_apps">เปิดแอปอัตโนมัติ</string>
     <string name="enable_notifications">เปิดใช้งานการแจ้งเตือน</string>
-    <string name="display_recent_apps">แสดงแอปล่าสุด</string>
     <string name="number_of_recents">จำนวนแอปล่าสุด</string>
     <string name="filter_strength">ความแรงของตัวกรอง</string>
     <string name="search_from_start">ค้นหาแอปตั้งแต่เริ่มต้น</string>
@@ -44,16 +87,9 @@
     <string name="apps_on_home_screen">จำนวนทางลัด</string>
     <string name="pages_on_home_screen">เลขหน้า</string>
     <string name="enable_home_pager">เปิดใช้งานโฮมเพจเจอร์</string>
-    <string name="show_time">เวลาแสดง</string>
-    <string name="show_time_format">รูปแบบเวลา (AM/PM)</string>
-    <string name="show_date">แสดงวันที่</string>
-    <string name="show_battery">แสดงแบตเตอรี่</string>
-    <string name="show_battery_icon">แสดงไอคอนแบตเตอรี่</string>
     <string name="lock_home_apps">ล็อคแอพ</string>
     <string name="extend_home_apps_area">ขยายพื้นที่ที่สามารถคลิกได้</string>
-    <string name="home_alignment_bottom">หน้าจอหลักจัดตำแหน่งด้านล่าง</string>
     <!-- Alignment Strings -->
-    <string name="display_app_usage_stats">แสดงสถิติการใช้งานแอป</string>
     <string name="home_alignment">หน้าจอหลักของแอพ</string>
     <string name="clock_alignment">นาฬิกาและวันที่</string>
     <string name="drawer_alignment">แอปในลิ้นชักแอป</string>
@@ -150,7 +186,7 @@
     <string name="search_duckduckgo">เป็ดเป็ดGo</string>
     <string name="search_bing">ปิง</string>
     <string name="search_brave">กล้าหาญ</string>
-    <string name="search_swisscow">SwissCows</string>
+    <string name="search_swisscow">สวิสวัวส์</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">แอพทั้งหมด</string>
     <string name="total_screen_time">เวลาอยู่หน้าจอทั้งหมด</string>

@@ -1,11 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Base Settings -->
-    <string name="app">יישום</string>
+    <string name="select_app">בחר אפליקציה</string>
+    <!-- Strings used for settings menus -->
+    <string name="settings_name">הגדרות mLauncher</string>
+    <string name="settings_features_title">תכונות</string>
+    <string name="settings_features_description">שפר את הפרודוקטיביות שלך.</string>
+    <string name="settings_look_feel_title">תראה ותרגיש</string>
+    <string name="settings_look_feel_description">תן למסך הבית שלך מגע אישי.</string>
+    <string name="settings_favorite_apps_title">יישומים מועדפים</string>
+    <string name="settings_hidden_apps_title">יישומים מוסתרים</string>
+    <string name="settings_advanced_title">מִתקַדֵם</string>
+    <!-- Strings used for features settings -->
+    <string name="features_settings_title">תכונות</string>
+    <!-- Strings used for look And feel settings -->
+    <string name="look_feel_settings_title">תראה ותרגיש</string>
+    <!-- Strings used for advanced settings -->
+    <string name="advanced_settings_title">הגדרות מתקדמות</string>
+    <string name="advanced_settings_app_info_title">מידע על האפליקציה</string>
+    <string name="advanced_settings_app_info_description">%1$s</string>
+    <string name="advanced_settings_set_as_default_launcher">הגדר כמפעיל ברירת מחדל</string>
+    <string name="advanced_settings_change_default_launcher">שנה את מפעיל ברירת המחדל</string>
+    <string name="advanced_settings_restart_title">הפעל מחדש את משגר</string>
+    <string name="advanced_settings_restart_description">ניסית להדליק ולכבות?</string>
+    <string name="advanced_settings_backup_restore_title">גיבוי/שחזור</string>
+    <string name="advanced_settings_backup_restore_description">אנא היזהר במה אתה מייחל?</string>
+    <string name="advanced_settings_backup_restore_backup">גיבוי</string>
+    <string name="advanced_settings_backup_restore_restore">לְשַׁחְזֵר</string>
+    <string name="advanced_settings_backup_restore_clear">נקה את כל הנתונים</string>
+    <string name="advanced_settings_backup_restore_clear_title">נקה העדפות</string>
+    <string name="advanced_settings_backup_restore_clear_description">האם אתה בטוח שאתה רוצה לעשות זאת?</string>
+    <string name="advanced_settings_backup_restore_clear_yes">כֵּן</string>
+    <string name="advanced_settings_backup_restore_clear_no">לֹא</string>
+    <string name="advanced_settings_help_feedback_title">עזרה ומשוב</string>
+    <string name="advanced_settings_community_support_title">תמיכה בקהילה</string>
+    <string name="advanced_settings_share_application_title">שתף אפליקציה</string>
+    <string name="advanced_settings_share_application_description">שפר את החוויה שלך עם %1$s! קבל את זה עכשיו ב-fDroid וראה על מה כולם מדברים!\n</string>
     <!-- Admin Settings -->
     <string name="admin_permission_message">mLauncher מבטיח להשתמש בהרשאת מסך הנעילה באחריות. mLauncher אינו אוסף או משתף נתונים כלשהם.</string>
     <string name="experimental">(ניסיוני)</string>
     <!-- Settings Headers -->
+    <string name="display">תצוגה</string>
+    <string name="language_region">שפה &amp; אזור</string>
+    <string name="accessibility">נְגִישׁוּת</string>
     <string name="appearance">מראה</string>
     <string name="behavior">אופן הפעולה</string>
     <string name="homescreen">מסך הבית</string>
@@ -15,27 +52,33 @@
     <!-- Home Strings -->
     <string name="hidden_apps">יישומים מוסתרים</string>
     <string name="favorite_apps">יישומים מועדפים</string>
-    <string name="set_as_default_launcher">הגדר כמשגר ברירת מחדל</string>
-    <string name="change_default_launcher">שנה את משגר ברירת המחדל</string>
-    <!-- Appearance Strings -->
-    <string name="status_bar">הצגת שורת המצב</string>
-    <string name="theme_mode">סגנון רקע</string>
-    <string name="color_mode">מצב צבע</string>
+    <!-- Display Strings -->
+    <string name="show_status_bar">הצג שורת מצב</string>
+    <string name="show_recent_apps">הצג אפליקציות אחרונות</string>
+    <string name="show_app_usage_stats">הצג סטטיסטיקות שימוש באפליקציה</string>
+    <string name="show_time">הצג זמן</string>
+    <string name="show_time_format">תצוגת זמן (AM/PM)</string>
+    <string name="show_date">הצג תאריך</string>
+    <string name="show_battery">הצג סוללה</string>
+    <string name="show_battery_icon">הצגת סמליל סוללה</string>
+    <string name="show_header_text">הצג טקסט כותרת</string>
+    <!-- Language & Region Strings -->
     <string name="app_language">שפת ממשק</string>
+    <!-- Accessibility Strings -->
     <string name="app_text_size">גודל הטקסט של היישום</string>
     <string name="clock_text_size">גודל טקסט שעון</string>
     <string name="date_text_size">גודל הטקסט של התאריך</string>
     <string name="battery_text_size">גודל הטקסט של הסוללה</string>
     <string name="app_padding_size">גודל ריפוד</string>
-    <string name="follow_accent_colors">צבעי הדגשה</string>
-    <string name="background_opacity">אטימות רקע</string>
-    <string name="all_apps_text">הצג טקסט של כל האפליקציות</string>
     <string name="app_font">משפחת גופן</string>
+    <!-- Appearance Strings -->
+    <string name="theme_mode">סגנון רקע</string>
+    <string name="background_opacity">אטימות רקע</string>
+    <string name="home_alignment_bottom">יישור מסך הבית למטה</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">הצג מקלדת בחיפוש</string>
     <string name="auto_open_apps">פתיחה אוטומטית של יישומים</string>
     <string name="enable_notifications">הפעל התראות</string>
-    <string name="display_recent_apps">הצג אפליקציות אחרונות</string>
     <string name="number_of_recents">מספר היישומים האחרונים</string>
     <string name="filter_strength">חוזק מסנן</string>
     <string name="search_from_start">חיפוש אפליקציה מההתחלה.</string>
@@ -44,17 +87,10 @@
     <string name="apps_on_home_screen">מספר קיצורי דרך</string>
     <string name="pages_on_home_screen">מספר דפים</string>
     <string name="enable_home_pager">הפעל את Home Pager</string>
-    <string name="show_time">הצג זמן</string>
-    <string name="show_time_format">תצוגת זמן (AM/PM)</string>
-    <string name="show_date">הצג תאריך</string>
-    <string name="show_battery">הצג סוללה</string>
-    <string name="show_battery_icon">הצגת סמליל סוללה</string>
     <string name="lock_home_apps">נעילת יישומים</string>
     <string name="extend_home_apps_area">הרחב את האזור הניתן ללחיצה</string>
-    <string name="home_alignment_bottom">יישור מסך הבית למטה</string>
     <!-- Alignment Strings -->
-    <string name="display_app_usage_stats">הצג סטטיסטיקות שימוש באפליקציה</string>
-    <string name="home_alignment">דף הבית של יישומים</string>
+    <string name="home_alignment">Apps home screen</string>
     <string name="clock_alignment">שעון ותאריך</string>
     <string name="drawer_alignment">יישומים במגירת היישומים</string>
     <!-- Gestures Strings -->

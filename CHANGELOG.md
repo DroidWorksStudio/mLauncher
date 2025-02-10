@@ -12,6 +12,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Custom Themes, Accent Color Toggle, - ([d18ad18](https://github.com/DroidWorksStudio/mLauncher/commit/d18ad18c6735ef40ac0e6a6b7bf3bbd473efc291))
 
+### Language Support:
+
+- Updated Language Files. ([#646](https://github.com/DroidWorksStudio/mLauncher/issues/646)) - ([dc2ab98](https://github.com/DroidWorksStudio/mLauncher/commit/dc2ab98cc2657a1a7e3e3dcea981eed26b1c2476))
+
 ### Refactoring:
 
 - Moved around the settings - ([8ea6649](https://github.com/DroidWorksStudio/mLauncher/commit/8ea6649cd6d25a6e17f96e4e4c0219fc50655798))

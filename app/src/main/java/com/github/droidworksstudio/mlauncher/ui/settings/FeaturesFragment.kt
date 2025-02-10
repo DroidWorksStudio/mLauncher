@@ -33,6 +33,7 @@ import androidx.compose.ui.unit.sp
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.github.droidworksstudio.common.isBiometricEnabled
 import com.github.droidworksstudio.mlauncher.MainViewModel
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.Constants
@@ -82,6 +83,11 @@ class FeaturesFragment : Fragment() {
     private fun Settings(fontSize: TextUnit = TextUnit.Unspecified) {
         var selectedTheme by remember { mutableStateOf(prefs.appTheme) }
         var selectedLanguage by remember { mutableStateOf(prefs.appLanguage) }
+        var selectedAutoShowKeyboard by remember { mutableStateOf(prefs.autoShowKeyboard) }
+        var selectedAutoOpenApp by remember { mutableStateOf(prefs.autoOpenApp) }
+        var selectedSearchFromStart by remember { mutableStateOf(prefs.searchFromStart) }
+        var selectedSettingsLocked by remember { mutableStateOf(prefs.settingsLocked) }
+        var selectedAppsLocked by remember { mutableStateOf(prefs.homeLocked) }
         var selectedFilterStrength by remember { mutableIntStateOf(prefs.filterStrength) }
         val fs = remember { mutableStateOf(fontSize) }
         Constants.updateMaxHomePages(requireContext())
@@ -94,7 +100,9 @@ class FeaturesFragment : Fragment() {
             PageHeader(
                 iconRes = R.drawable.ic_back,
                 title = stringResource(R.string.features_settings_title),
-                onClick = { goBackToLastFragment() }
+                onClick = {
+                    goBackToLastFragment()
+                }
             )
 
             Spacer(
@@ -153,38 +161,54 @@ class FeaturesFragment : Fragment() {
             SettingsSwitch(
                 text = stringResource(R.string.auto_show_keyboard),
                 fontSize = titleFontSize,
-                defaultState = prefs.autoShowKeyboard,
-                onCheckedChange = { _ ->
-                    prefs.autoShowKeyboard = !prefs.autoShowKeyboard
+                defaultState = selectedAutoShowKeyboard,
+                onCheckedChange = {
+                    selectedAutoShowKeyboard = !prefs.autoShowKeyboard
+                    prefs.autoShowKeyboard = selectedAutoShowKeyboard
                 }
             )
 
             SettingsSwitch(
                 text = stringResource(R.string.auto_open_apps),
                 fontSize = titleFontSize,
-                defaultState = prefs.autoOpenApp,
-                onCheckedChange = { _ ->
-                    prefs.autoOpenApp = !prefs.autoOpenApp
+                defaultState = selectedAutoOpenApp,
+                onCheckedChange = {
+                    selectedAutoOpenApp = !prefs.autoOpenApp
+                    prefs.autoOpenApp = selectedAutoOpenApp
                 }
             )
 
             SettingsSwitch(
                 text = stringResource(R.string.search_from_start),
                 fontSize = titleFontSize,
-                defaultState = prefs.searchFromStart,
-                onCheckedChange = { _ ->
-                    prefs.searchFromStart = !prefs.searchFromStart
+                defaultState = selectedSearchFromStart,
+                onCheckedChange = {
+                    selectedSearchFromStart = !prefs.searchFromStart
+                    prefs.searchFromStart = selectedSearchFromStart
                 }
             )
 
             SettingsSwitch(
-                text = stringResource(R.string.lock_settings),
+                text = stringResource(R.string.lock_home_apps),
                 fontSize = titleFontSize,
-                defaultState = prefs.settingsLocked,
-                onCheckedChange = { _ ->
-                    prefs.settingsLocked = !prefs.settingsLocked
+                defaultState = selectedAppsLocked,
+                onCheckedChange = {
+                    selectedAppsLocked = !prefs.homeLocked
+                    prefs.homeLocked = selectedAppsLocked
                 }
             )
+
+            if (requireContext().isBiometricEnabled()) {
+                SettingsSwitch(
+                    text = stringResource(R.string.lock_settings),
+                    fontSize = titleFontSize,
+                    defaultState = selectedSettingsLocked,
+                    onCheckedChange = {
+                        selectedSettingsLocked = !prefs.settingsLocked
+                        prefs.settingsLocked = selectedSettingsLocked
+                    }
+                )
+            }
 
             SettingsSelect(
                 title = stringResource(R.string.filter_strength),
@@ -240,7 +264,13 @@ class FeaturesFragment : Fragment() {
         fontSize: Float = 18f, // Default font size
         onItemSelected: (T) -> Unit
     ) {
-        val itemStrings = options.map { (it as Enum<*>).name } // Convert enum options to string
+        val itemStrings = options.map { option ->
+            when (option) {
+                is Constants.Language -> option.getString(context) // Use getString() if it's a Language enum
+                is Enum<*> -> option.name // Fallback for other Enums
+                else -> option.toString() // Generic fallback
+            }
+        }
 
         // Inflate the custom dialog layout
         val dialogView = LayoutInflater.from(context).inflate(R.layout.dialog_single_choice, null)

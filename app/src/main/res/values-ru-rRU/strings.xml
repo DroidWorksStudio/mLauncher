@@ -1,11 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Base Settings -->
-    <string name="app">Приложение</string>
+    <string name="select_app">Выбрать приложение</string>
+    <!-- Strings used for settings menus -->
+    <string name="settings_name">Настройки mlauncher</string>
+    <string name="settings_features_title">Функции</string>
+    <string name="settings_features_description">Повысьте свою производительность.</string>
+    <string name="settings_look_feel_title">Посмотрите и почувствуйте</string>
+    <string name="settings_look_feel_description">Придайте индивидуальность вашему главному экрану.</string>
+    <string name="settings_favorite_apps_title">Любимые приложения</string>
+    <string name="settings_hidden_apps_title">Скрытые приложения</string>
+    <string name="settings_advanced_title">Передовой</string>
+    <!-- Strings used for features settings -->
+    <string name="features_settings_title">Функции</string>
+    <!-- Strings used for look And feel settings -->
+    <string name="look_feel_settings_title">Посмотрите и почувствуйте</string>
+    <!-- Strings used for advanced settings -->
+    <string name="advanced_settings_title">Расширенные настройки</string>
+    <string name="advanced_settings_app_info_title">Информация о приложении</string>
+    <string name="advanced_settings_app_info_description">%1$s</string>
+    <string name="advanced_settings_set_as_default_launcher">Установить как средство запуска по умолчанию</string>
+    <string name="advanced_settings_change_default_launcher">Изменить лаунчер по умолчанию</string>
+    <string name="advanced_settings_restart_title">Перезапустить лаунчер</string>
+    <string name="advanced_settings_restart_description">Вы пробовали включать и выключать его?</string>
+    <string name="advanced_settings_backup_restore_title">Резервное копирование/Восстановление</string>
+    <string name="advanced_settings_backup_restore_description">Пожалуйста, будьте осторожны в своих желаниях.</string>
+    <string name="advanced_settings_backup_restore_backup">Резервное копирование</string>
+    <string name="advanced_settings_backup_restore_restore">Восстановить</string>
+    <string name="advanced_settings_backup_restore_clear">Очистить все данные</string>
+    <string name="advanced_settings_backup_restore_clear_title">Очистить настройки</string>
+    <string name="advanced_settings_backup_restore_clear_description">Вы уверены, что хотите это сделать?</string>
+    <string name="advanced_settings_backup_restore_clear_yes">Да</string>
+    <string name="advanced_settings_backup_restore_clear_no">Нет</string>
+    <string name="advanced_settings_help_feedback_title">Помощь и обратная связь</string>
+    <string name="advanced_settings_community_support_title">Поддержка сообщества</string>
+    <string name="advanced_settings_share_application_title">Поделиться приложением</string>
+    <string name="advanced_settings_share_application_description">Повысьте свой опыт с %1$s! Загрузите его сейчас на fDroid и посмотрите, о чем все говорят!\n</string>
     <!-- Admin Settings -->
     <string name="admin_permission_message">mLauncher обещает ответственно использовать разрешение экрана блокировки. mLauncher не собирает и не передает какие-либо данные.</string>
     <string name="experimental">(экспериментальный)</string>
     <!-- Settings Headers -->
+    <string name="display">Отображать</string>
+    <string name="language_region">Язык &amp; Регион</string>
+    <string name="accessibility">Доступность</string>
     <string name="appearance">Внешний вид</string>
     <string name="behavior">Поведение</string>
     <string name="homescreen">Домашний экран</string>
@@ -15,27 +52,33 @@
     <!-- Home Strings -->
     <string name="hidden_apps">Скрытые приложения</string>
     <string name="favorite_apps">Любимые приложения</string>
-    <string name="set_as_default_launcher">Установить как лаунчер по умолчанию</string>
-    <string name="change_default_launcher">Изменить лаунчер по умолчанию</string>
-    <!-- Appearance Strings -->
-    <string name="status_bar">Показать строку состояния</string>
-    <string name="theme_mode">Режим темы</string>
-    <string name="color_mode">Цветовой режим</string>
+    <!-- Display Strings -->
+    <string name="show_status_bar">Показать строку состояния</string>
+    <string name="show_recent_apps">Показать последние приложения</string>
+    <string name="show_app_usage_stats">Показать статистику использования приложения</string>
+    <string name="show_time">Показать время</string>
+    <string name="show_time_format">Формат времени (AM/PM)</string>
+    <string name="show_date">Показать дату</string>
+    <string name="show_battery">Показать батарею</string>
+    <string name="show_battery_icon">Показать значок батареи</string>
+    <string name="show_header_text">Показать текст заголовка</string>
+    <!-- Language & Region Strings -->
     <string name="app_language">Язык интерфейса</string>
+    <!-- Accessibility Strings -->
     <string name="app_text_size">Размер текста приложения</string>
     <string name="clock_text_size">Размер текста часов</string>
     <string name="date_text_size">Размер текста даты</string>
     <string name="battery_text_size">Размер текста батареи</string>
     <string name="app_padding_size">Размер заполнения</string>
-    <string name="follow_accent_colors">Акцентные цвета</string>
-    <string name="background_opacity">Непрозрачность фона</string>
-    <string name="all_apps_text">Отобразить текст всех приложений</string>
     <string name="app_font">Семейство шрифтов</string>
+    <!-- Appearance Strings -->
+    <string name="theme_mode">Режим темы</string>
+    <string name="background_opacity">Непрозрачность фона</string>
+    <string name="home_alignment_bottom">Главный экран Выровнять по нижнему краю</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Автооткрытие приложений</string>
     <string name="enable_notifications">Включить уведомления</string>
-    <string name="display_recent_apps">Отобразить последние приложения</string>
     <string name="number_of_recents">Количество последних приложений</string>
     <string name="filter_strength">Строгость фильтра</string>
     <string name="search_from_start">Поиск приложений с самого начала.</string>
@@ -44,16 +87,9 @@
     <string name="apps_on_home_screen">Количество ярлыков</string>
     <string name="pages_on_home_screen">Количество страниц</string>
     <string name="enable_home_pager">Включить домашний пейджер</string>
-    <string name="show_time">Показать время</string>
-    <string name="show_time_format">Формат времени (AM/PM)</string>
-    <string name="show_date">Показать дату</string>
-    <string name="show_battery">Показать батарею</string>
-    <string name="show_battery_icon">Показать значок батареи</string>
     <string name="lock_home_apps">Заблокировать приложения</string>
     <string name="extend_home_apps_area">Расширить кликабельную область</string>
-    <string name="home_alignment_bottom">Главный экран Выровнять по нижнему краю</string>
     <!-- Alignment Strings -->
-    <string name="display_app_usage_stats">Отображение статистики использования приложений</string>
     <string name="home_alignment">Домашний экран приложений</string>
     <string name="clock_alignment">Часы и дата</string>
     <string name="drawer_alignment">Приложения в меню приложений</string>
@@ -146,7 +182,7 @@
     <!-- Search Stings -->
     <string name="search_engine">Поисковый движок</string>
     <string name="search_google">Google</string>
-    <string name="search_yahoo">Yahoo</string>
+    <string name="search_yahoo">Яху</string>
     <string name="search_duckduckgo">УткаУткаGo</string>
     <string name="search_bing">Бинг</string>
     <string name="search_brave">Храбрый</string>

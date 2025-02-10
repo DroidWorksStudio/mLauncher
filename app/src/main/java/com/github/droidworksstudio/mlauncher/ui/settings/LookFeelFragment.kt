@@ -95,6 +95,11 @@ class LookFeelFragment : Fragment() {
         var selectedClockSize by remember { mutableIntStateOf(prefs.clockSize) }
         var selectedDateSize by remember { mutableIntStateOf(prefs.dateSize) }
         var selectedBatterySize by remember { mutableIntStateOf(prefs.batterySize) }
+        var showStatusBar by remember { mutableStateOf(prefs.showStatusBar) }
+        var recentAppsDisplayed by remember { mutableStateOf(prefs.recentAppsDisplayed) }
+        var selectedRecentCounter by remember { mutableIntStateOf(prefs.recentCounter) }
+        var selectedBackgroundOpacity by remember { mutableIntStateOf(prefs.opacityNum) }
+        var selectedSettingsSize by remember { mutableIntStateOf(prefs.settingsSize) }
         var selectedSearchEngine by remember { mutableStateOf(prefs.searchEngines) }
         var selectedFontFamily by remember { mutableStateOf(prefs.fontFamily) }
 
@@ -109,7 +114,9 @@ class LookFeelFragment : Fragment() {
             PageHeader(
                 iconRes = R.drawable.ic_back,
                 title = stringResource(R.string.look_feel_settings_title),
-                onClick = { goBackToLastFragment() }
+                onClick = {
+                    goBackToLastFragment()
+                }
             )
 
             Spacer(
@@ -225,20 +232,61 @@ class LookFeelFragment : Fragment() {
             SettingsSwitch(
                 text = stringResource(R.string.show_status_bar),
                 fontSize = titleFontSize,
-                defaultState = prefs.showStatusBar,
-                onCheckedChange = { _ ->
-                    val showStatusbar = !prefs.showStatusBar
-                    prefs.showStatusBar = showStatusbar
-                    if (showStatusbar) showStatusBar(requireActivity()) else hideStatusBar(requireActivity())
+                defaultState = showStatusBar,
+                onCheckedChange = {
+                    showStatusBar = !prefs.showStatusBar
+                    prefs.showStatusBar = !prefs.showStatusBar
+                    if (showStatusBar) showStatusBar(requireActivity()) else hideStatusBar(requireActivity())
                 }
             )
 
             SettingsSwitch(
                 text = stringResource(R.string.show_recent_apps),
                 fontSize = titleFontSize,
-                defaultState = prefs.recentAppsDisplayed,
-                onCheckedChange = { _ ->
-                    prefs.recentAppsDisplayed = !prefs.recentAppsDisplayed
+                defaultState = recentAppsDisplayed,
+                onCheckedChange = {
+                    recentAppsDisplayed = !prefs.recentAppsDisplayed
+                    prefs.recentAppsDisplayed = recentAppsDisplayed
+                }
+            )
+
+            if (recentAppsDisplayed) {
+                SettingsSelect(
+                    title = stringResource(R.string.number_of_recents),
+                    option = selectedRecentCounter.toString(),
+                    fontSize = titleFontSize,
+                    onClick = {
+                        showSliderDialog(
+                            context = requireContext(),
+                            title = getString(R.string.number_of_recents),
+                            minValue = Constants.MIN_RECENT_COUNTER,
+                            maxValue = Constants.MAX_RECENT_COUNTER,
+                            currentValue = prefs.recentCounter,
+                            onValueSelected = { newRecentCounter ->
+                                selectedRecentCounter = newRecentCounter // Update state
+                                prefs.recentCounter = newRecentCounter // Persist selection in preferences
+                            }
+                        )
+                    }
+                )
+            }
+
+            SettingsSelect(
+                title = stringResource(R.string.background_opacity),
+                option = selectedBackgroundOpacity.toString(),
+                fontSize = titleFontSize,
+                onClick = {
+                    showSliderDialog(
+                        context = requireContext(),
+                        title = getString(R.string.background_opacity),
+                        minValue = Constants.MIN_OPACITY,
+                        maxValue = Constants.MAX_OPACITY,
+                        currentValue = prefs.opacityNum,
+                        onValueSelected = { newBackgroundOpacity ->
+                            selectedBackgroundOpacity = newBackgroundOpacity // Update state
+                            prefs.opacityNum = newBackgroundOpacity // Persist selection in preferences
+                        }
+                    )
                 }
             )
 
@@ -249,7 +297,7 @@ class LookFeelFragment : Fragment() {
 
             SettingsSelect(
                 title = stringResource(R.string.settings_text_size),
-                option = selectedAppSize.toString(),
+                option = selectedSettingsSize.toString(),
                 fontSize = titleFontSize,
                 onClick = {
                     showSliderDialog(
@@ -258,9 +306,9 @@ class LookFeelFragment : Fragment() {
                         minValue = Constants.MIN_TEXT_SIZE,
                         maxValue = Constants.MAX_TEXT_SIZE,
                         currentValue = prefs.appSize,
-                        onValueSelected = { newAppSize ->
-                            selectedAppSize = newAppSize // Update state
-                            prefs.appSize = newAppSize // Persist selection in preferences
+                        onValueSelected = { newSettingsSize ->
+                            selectedSettingsSize = newSettingsSize // Update state
+                            prefs.appSize = newSettingsSize // Persist selection in preferences
                         }
                     )
                 }
@@ -285,7 +333,7 @@ class LookFeelFragment : Fragment() {
             )
 
             SettingsSelect(
-                title = stringResource(R.string.app_font),
+                title = stringResource(R.string.font_family),
                 option = selectedFontFamily.string(),
                 fontSize = titleFontSize,
                 onClick = {
@@ -294,7 +342,7 @@ class LookFeelFragment : Fragment() {
                         options = Constants.FontFamily.entries.toTypedArray(),
                         fonts = Constants.FontFamily.entries.toTypedArray()
                             .map { it.getFont(requireContext()) ?: Typeface.DEFAULT },
-                        titleResId = R.string.app_font,
+                        titleResId = R.string.font_family,
                         onItemSelected = { newFontFamily ->
                             selectedFontFamily = newFontFamily // Update state
                             prefs.fontFamily = newFontFamily // Persist selection in preferences
@@ -341,7 +389,13 @@ class LookFeelFragment : Fragment() {
         fontSize: Float = 18f, // Default font size
         onItemSelected: (T) -> Unit
     ) {
-        val itemStrings = options.map { (it as Enum<*>).name } // Convert enum options to string
+        val itemStrings = options.map { option ->
+            when (option) {
+                is Constants.Language -> option.getString(context) // Use getString() if it's a Language enum
+                is Enum<*> -> option.name // Fallback for other Enums
+                else -> option.toString() // Generic fallback
+            }
+        }
 
         // Inflate the custom dialog layout
         val dialogView = LayoutInflater.from(context).inflate(R.layout.dialog_single_choice, null)

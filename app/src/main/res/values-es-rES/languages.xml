@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lang_arabic">árabe</string>
+    <string name="lang_dutch">Holandés</string>
+    <string name="lang_english">Inglés</string>
+    <string name="lang_french">Francés</string>
+    <string name="lang_german">Alemán</string>
+    <string name="lang_hebrew">hebreo</string>
+    <string name="lang_italian">italiano</string>
+    <string name="lang_japanese">japonés</string>
+    <string name="lang_korean">coreano</string>
+    <string name="lang_lithuanian">lituano</string>
+    <string name="lang_polish">Polaco</string>
+    <string name="lang_portuguese">portugués</string>
+    <string name="lang_russian">ruso</string>
+    <string name="lang_slovak">eslovaco</string>
+    <string name="lang_spanish">Español</string>
+    <string name="lang_thai">tailandés</string>
+    <string name="lang_turkish">turco</string>
+</resources>

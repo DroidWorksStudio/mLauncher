@@ -1,11 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Base Settings -->
-    <string name="app">App</string>
+    <string name="select_app">앱 선택</string>
+    <!-- Strings used for settings menus -->
+    <string name="settings_name">mLauncher 설정</string>
+    <string name="settings_features_title">특징</string>
+    <string name="settings_features_description">생산성을 향상시키세요.</string>
+    <string name="settings_look_feel_title">모양과 느낌</string>
+    <string name="settings_look_feel_description">홈 화면에 개성을 더해보세요.</string>
+    <string name="settings_favorite_apps_title">즐겨찾는 앱</string>
+    <string name="settings_hidden_apps_title">Hidden apps</string>
+    <string name="settings_advanced_title">고급의</string>
+    <!-- Strings used for features settings -->
+    <string name="features_settings_title">특징</string>
+    <!-- Strings used for look And feel settings -->
+    <string name="look_feel_settings_title">룩앤필</string>
+    <!-- Strings used for advanced settings -->
+    <string name="advanced_settings_title">고급 설정</string>
+    <string name="advanced_settings_app_info_title">앱 정보</string>
+    <string name="advanced_settings_app_info_description">%1$s</string>
+    <string name="advanced_settings_set_as_default_launcher">기본 런처로 설정</string>
+    <string name="advanced_settings_change_default_launcher">기본 런처 변경</string>
+    <string name="advanced_settings_restart_title">런처 재시작</string>
+    <string name="advanced_settings_restart_description">켜고 끄는 걸 시도해 보셨나요?</string>
+    <string name="advanced_settings_backup_restore_title">백업/복원</string>
+    <string name="advanced_settings_backup_restore_description">원하는 것이 무엇인지 조심하세요.</string>
+    <string name="advanced_settings_backup_restore_backup">지원</string>
+    <string name="advanced_settings_backup_restore_restore">복원하다</string>
+    <string name="advanced_settings_backup_restore_clear">모든 데이터 지우기</string>
+    <string name="advanced_settings_backup_restore_clear_title">환경 설정 지우기</string>
+    <string name="advanced_settings_backup_restore_clear_description">정말로 이 작업을 수행하시겠습니까?</string>
+    <string name="advanced_settings_backup_restore_clear_yes">예</string>
+    <string name="advanced_settings_backup_restore_clear_no">아니요</string>
+    <string name="advanced_settings_help_feedback_title">도움말 및 피드백</string>
+    <string name="advanced_settings_community_support_title">커뮤니티 지원</string>
+    <string name="advanced_settings_share_application_title">공유 응용 프로그램</string>
+    <string name="advanced_settings_share_application_description">%1$s로 당신의 경험을 한 단계 업그레이드하세요! 지금 fDroid에서 받아보시고 모두가 무슨 이야기를 하는지 확인해보세요!\n</string>
     <!-- Admin Settings -->
     <string name="admin_permission_message">mLauncher는 잠금 화면 권한을 책임감 있게 사용할 것을 약속합니다. mLauncher는 데이터를 수집하거나 공유하지 않습니다.</string>
     <string name="experimental">(experimental)</string>
     <!-- Settings Headers -->
+    <string name="display">표시하다</string>
+    <string name="language_region">언어 &amp; 지역</string>
+    <string name="accessibility">접근성</string>
     <string name="appearance">Appearance</string>
     <string name="behavior">Behavior</string>
     <string name="homescreen">Homescreen</string>
@@ -15,27 +52,33 @@
     <!-- Home Strings -->
     <string name="hidden_apps">Hidden apps</string>
     <string name="favorite_apps">즐겨찾는 앱</string>
-    <string name="set_as_default_launcher">Set as default launcher</string>
-    <string name="change_default_launcher">Change default launcher</string>
-    <!-- Appearance Strings -->
-    <string name="status_bar">Show status bar</string>
-    <string name="theme_mode">Theme mode</string>
-    <string name="color_mode">컬러 모드</string>
+    <!-- Display Strings -->
+    <string name="show_status_bar">상태 표시줄 표시</string>
+    <string name="show_recent_apps">최근 앱 표시</string>
+    <string name="show_app_usage_stats">앱 사용 통계 표시</string>
+    <string name="show_time">Show time</string>
+    <string name="show_time_format">시간 형식(AM/PM)</string>
+    <string name="show_date">Show date</string>
+    <string name="show_battery">배터리 표시</string>
+    <string name="show_battery_icon">배터리 아이콘 표시</string>
+    <string name="show_header_text">헤더 텍스트 표시</string>
+    <!-- Language & Region Strings -->
     <string name="app_language">Interface Language</string>
+    <!-- Accessibility Strings -->
     <string name="app_text_size">앱 텍스트 크기</string>
     <string name="clock_text_size">시계 텍스트 크기</string>
     <string name="date_text_size">날짜 텍스트 크기</string>
     <string name="battery_text_size">배터리 텍스트 크기</string>
     <string name="app_padding_size">패딩 크기</string>
-    <string name="follow_accent_colors">악센트 색상</string>
-    <string name="background_opacity">배경 불투명도</string>
-    <string name="all_apps_text">모든 앱 텍스트 표시</string>
     <string name="app_font">글꼴군</string>
+    <!-- Appearance Strings -->
+    <string name="theme_mode">Theme mode</string>
+    <string name="background_opacity">배경 불투명도</string>
+    <string name="home_alignment_bottom">홈 화면 하단 정렬</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Auto open apps</string>
     <string name="enable_notifications">알림 활성화</string>
-    <string name="display_recent_apps">최근 앱 표시</string>
     <string name="number_of_recents">최근 앱 수</string>
     <string name="filter_strength">필터 강도</string>
     <string name="search_from_start">처음부터 앱 검색.</string>
@@ -44,16 +87,9 @@
     <string name="apps_on_home_screen">Number of shortcuts</string>
     <string name="pages_on_home_screen">페이지 수</string>
     <string name="enable_home_pager">홈 호출기 활성화</string>
-    <string name="show_time">Show time</string>
-    <string name="show_time_format">시간 형식(AM/PM)</string>
-    <string name="show_date">Show date</string>
-    <string name="show_battery">배터리 표시</string>
-    <string name="show_battery_icon">배터리 아이콘 표시</string>
     <string name="lock_home_apps">Lock Apps</string>
     <string name="extend_home_apps_area">클릭 가능한 영역 확장</string>
-    <string name="home_alignment_bottom">홈 화면 하단 정렬</string>
     <!-- Alignment Strings -->
-    <string name="display_app_usage_stats">앱 사용 통계 표시</string>
     <string name="home_alignment">Apps home screen</string>
     <string name="clock_alignment">Clock and date</string>
     <string name="drawer_alignment">Apps in app drawer</string>

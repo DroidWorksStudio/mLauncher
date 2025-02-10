@@ -1,11 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Base Settings -->
-    <string name="app">التطبيق</string>
+    <string name="select_app">حدد التطبيق</string>
+    <!-- Strings used for settings menus -->
+    <string name="settings_name">إعدادات mLauncher</string>
+    <string name="settings_features_title">سمات</string>
+    <string name="settings_features_description">تحسين إنتاجيتك.</string>
+    <string name="settings_look_feel_title">انظر واشعر</string>
+    <string name="settings_look_feel_description">قم بإضفاء لمسة شخصية على الشاشة الرئيسية الخاصة بك.</string>
+    <string name="settings_favorite_apps_title">التطبيقات المفضلة</string>
+    <string name="settings_hidden_apps_title">التطبيقات المخفية</string>
+    <string name="settings_advanced_title">متقدم</string>
+    <!-- Strings used for features settings -->
+    <string name="features_settings_title">سمات</string>
+    <!-- Strings used for look And feel settings -->
+    <string name="look_feel_settings_title">انظر واشعر</string>
+    <!-- Strings used for advanced settings -->
+    <string name="advanced_settings_title">الإعدادات المتقدمة</string>
+    <string name="advanced_settings_app_info_title">معلومات التطبيق</string>
+    <string name="advanced_settings_app_info_description">%1$s</string>
+    <string name="advanced_settings_set_as_default_launcher">تعيين كمشغل افتراضي</string>
+    <string name="advanced_settings_change_default_launcher">تغيير المشغل الافتراضي</string>
+    <string name="advanced_settings_restart_title">إعادة تشغيل المشغل</string>
+    <string name="advanced_settings_restart_description">هل حاولت تشغيله وإيقافه؟</string>
+    <string name="advanced_settings_backup_restore_title">النسخ الاحتياطي/الاستعادة</string>
+    <string name="advanced_settings_backup_restore_description">من فضلك كن حذرا مما تتمنى؟</string>
+    <string name="advanced_settings_backup_restore_backup">النسخ الاحتياطي</string>
+    <string name="advanced_settings_backup_restore_restore">يعيد</string>
+    <string name="advanced_settings_backup_restore_clear">مسح كافة البيانات</string>
+    <string name="advanced_settings_backup_restore_clear_title">مسح التفضيلات</string>
+    <string name="advanced_settings_backup_restore_clear_description">هل أنت متأكد أنك تريد القيام بهذا؟</string>
+    <string name="advanced_settings_backup_restore_clear_yes">نعم</string>
+    <string name="advanced_settings_backup_restore_clear_no">لا</string>
+    <string name="advanced_settings_help_feedback_title">المساعدة وردود الفعل</string>
+    <string name="advanced_settings_community_support_title">دعم المجتمع</string>
+    <string name="advanced_settings_share_application_title">مشاركة التطبيق</string>
+    <string name="advanced_settings_share_application_description">ارتقِ بتجربتك مع %1$s! احصل عليه الآن على fDroid وشاهد ما يتحدث عنه الجميع!\n</string>
     <!-- Admin Settings -->
     <string name="admin_permission_message">يعد mLauncher باستخدام إذن قفل الشاشة بشكل مسؤول. لا يقوم mLauncher بجمع أو مشاركة أي بيانات.</string>
     <string name="experimental">(تجريبي)</string>
     <!-- Settings Headers -->
+    <string name="display">عرض</string>
+    <string name="language_region">اللغة &amp; المنطقة</string>
+    <string name="accessibility">إمكانية الوصول</string>
     <string name="appearance">المظهر</string>
     <string name="behavior">السلوك</string>
     <string name="homescreen">الشاشة الرئيسية</string>
@@ -15,45 +52,44 @@
     <!-- Home Strings -->
     <string name="hidden_apps">التطبيقات المخفية</string>
     <string name="favorite_apps">التطبيقات المفضلة</string>
-    <string name="set_as_default_launcher">تعيين كمشغل افتراضي</string>
-    <string name="change_default_launcher">تغيير المشغل الافتراضي</string>
-    <!-- Appearance Strings -->
-    <string name="status_bar">إظهار شريط الحالة</string>
-    <string name="theme_mode">وضع السمة</string>
-    <string name="color_mode">وضع اللون</string>
-    <string name="app_language">لغة الواجهة</string>
-    <string name="app_text_size">حجم نص التطبيق</string>
-    <string name="clock_text_size">حجم نص الساعة</string>
-    <string name="date_text_size">حجم نص التاريخ</string>
-    <string name="battery_text_size">حجم نص البطارية</string>
-    <string name="app_padding_size">حجم الحشوة</string>
-    <string name="follow_accent_colors">ألوان مميزة</string>
-    <string name="background_opacity">شفافية الخلفية</string>
-    <string name="all_apps_text">عرض نص كل التطبيقات</string>
-    <string name="app_font">خط العائلة</string>
-    <!-- Behavior Strings -->
-    <string name="auto_show_keyboard">Auto show keyboard</string>
-    <string name="auto_open_apps">فتح التطبيقات تلقائياً</string>
-    <string name="enable_notifications">تمكين الإخطارات</string>
-    <string name="display_recent_apps">عرض التطبيقات الحديثة</string>
-    <string name="number_of_recents">عدد التطبيقات الحديثة</string>
-    <string name="filter_strength">قوة التصفية</string>
-    <string name="search_from_start">البحث عن التطبيق من البداية.</string>
-    <string name="icon_font">استخدم خط الأيقونة</string>
-    <!-- Home-screen Strings -->
-    <string name="apps_on_home_screen">عدد الاختصارات</string>
-    <string name="pages_on_home_screen">عدد الصفحات</string>
-    <string name="enable_home_pager">تمكين جهاز النداء الرئيسي</string>
+    <!-- Display Strings -->
+    <string name="show_status_bar">إظهار شريط الحالة</string>
+    <string name="show_recent_apps">إظهار التطبيقات الأخيرة</string>
+    <string name="show_app_usage_stats">إظهار إحصائيات استخدام التطبيق</string>
     <string name="show_time">إظهار الوقت</string>
     <string name="show_time_format">تنسيق الوقت (صباحًا/مساءً)</string>
     <string name="show_date">إظهار التاريخ</string>
     <string name="show_battery">عرض البطارية</string>
     <string name="show_battery_icon">إظهار أيقونة البطارية</string>
+    <string name="show_header_text">إظهار نص الرأس</string>
+    <!-- Language & Region Strings -->
+    <string name="app_language">لغة الواجهة</string>
+    <!-- Accessibility Strings -->
+    <string name="app_text_size">حجم نص التطبيق</string>
+    <string name="clock_text_size">حجم نص الساعة</string>
+    <string name="date_text_size">حجم نص التاريخ</string>
+    <string name="battery_text_size">حجم نص البطارية</string>
+    <string name="app_padding_size">حجم الحشوة</string>
+    <string name="app_font">خط العائلة</string>
+    <!-- Appearance Strings -->
+    <string name="theme_mode">وضع السمة</string>
+    <string name="background_opacity">شفافية الخلفية</string>
+    <string name="home_alignment_bottom">محاذاة الشاشة الرئيسية إلى الأسفل</string>
+    <!-- Behavior Strings -->
+    <string name="auto_show_keyboard">Auto show keyboard</string>
+    <string name="auto_open_apps">فتح التطبيقات تلقائياً</string>
+    <string name="enable_notifications">تمكين الإخطارات</string>
+    <string name="number_of_recents">عدد التطبيقات الحديثة</string>
+    <string name="filter_strength">قوة التصفية</string>
+    <string name="search_from_start">البحث عن التطبيق من البداية</string>
+    <string name="icon_font">استخدم خط الأيقونة</string>
+    <!-- Home-screen Strings -->
+    <string name="apps_on_home_screen">عدد الاختصارات</string>
+    <string name="pages_on_home_screen">عدد الصفحات</string>
+    <string name="enable_home_pager">تمكين جهاز النداء الرئيسي</string>
     <string name="lock_home_apps">قفل التطبيقات</string>
     <string name="extend_home_apps_area">توسيع المنطقة القابلة للنقر</string>
-    <string name="home_alignment_bottom">محاذاة الشاشة الرئيسية إلى الأسفل</string>
     <!-- Alignment Strings -->
-    <string name="display_app_usage_stats">عرض إحصائيات استخدام التطبيق</string>
     <string name="home_alignment">تطبيقات الشاشة الرئيسية</string>
     <string name="clock_alignment">الساعة والتاريخ</string>
     <string name="drawer_alignment">التطبيقات في درج التطبيقات</string>

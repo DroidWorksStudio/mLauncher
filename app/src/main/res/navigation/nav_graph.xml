@@ -86,6 +86,14 @@
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
 
         <action
+            android:id="@+id/action_settingsFragment_to_settingsGesturesFragment"
+            app:destination="@id/settingsGesturesFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+        <action
             android:id="@+id/action_settingsFragment_to_settingsAdvancedFragment"
             app:destination="@id/settingsAdvancedFragment"
             app:enterAnim="@anim/nav_default_enter_anim"
@@ -104,6 +112,12 @@
         android:id="@+id/settingsLookFeelFragment"
         android:name="com.github.droidworksstudio.mlauncher.ui.settings.LookFeelFragment"
         android:label="LookFeelFragment"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/settingsGesturesFragment"
+        android:name="com.github.droidworksstudio.mlauncher.ui.settings.GesturesFragment"
+        android:label="GesturesFragment"
         tools:layout="@layout/fragment_settings" />
 
     <fragment

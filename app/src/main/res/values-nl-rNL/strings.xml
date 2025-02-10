@@ -1,11 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Base Settings -->
-    <string name="app">App</string>
+    <string name="select_app">Selecteer App</string>
+    <!-- Strings used for settings menus -->
+    <string name="settings_name">mLauncher-instellingen</string>
+    <string name="settings_features_title">Functies</string>
+    <string name="settings_features_description">Verbeter uw productiviteit.</string>
+    <string name="settings_look_feel_title">Weergave en stijl</string>
+    <string name="settings_look_feel_description">Geef uw startscherm een persoonlijk tintje.</string>
+    <string name="settings_favorite_apps_title">Favoriete apps</string>
+    <string name="settings_hidden_apps_title">Verborgen apps</string>
+    <string name="settings_advanced_title">Geavanceerd</string>
+    <!-- Strings used for features settings -->
+    <string name="features_settings_title">Functies</string>
+    <!-- Strings used for look And feel settings -->
+    <string name="look_feel_settings_title">Kijk en voel</string>
+    <!-- Strings used for advanced settings -->
+    <string name="advanced_settings_title">Geavanceerde instellingen</string>
+    <string name="advanced_settings_app_info_title">App-info</string>
+    <string name="advanced_settings_app_info_description">%1$s</string>
+    <string name="advanced_settings_set_as_default_launcher">Instellen als standaardstarter</string>
+    <string name="advanced_settings_change_default_launcher">Standaard Launcher wijzigen</string>
+    <string name="advanced_settings_restart_title">Start Launcher opnieuw</string>
+    <string name="advanced_settings_restart_description">Heb je geprobeerd het aan en uit te zetten?</string>
+    <string name="advanced_settings_backup_restore_title">Back-up/Herstellen</string>
+    <string name="advanced_settings_backup_restore_description">Wees voorzichtig met wat je wenst?</string>
+    <string name="advanced_settings_backup_restore_backup">Back-up</string>
+    <string name="advanced_settings_backup_restore_restore">Herstellen</string>
+    <string name="advanced_settings_backup_restore_clear">Alle gegevens wissen</string>
+    <string name="advanced_settings_backup_restore_clear_title">Voorkeuren wissen</string>
+    <string name="advanced_settings_backup_restore_clear_description">Weet u zeker dat u dit wilt doen?</string>
+    <string name="advanced_settings_backup_restore_clear_yes">Ja</string>
+    <string name="advanced_settings_backup_restore_clear_no">Nee</string>
+    <string name="advanced_settings_help_feedback_title">Hulp en feedback</string>
+    <string name="advanced_settings_community_support_title">Gemeenschapsondersteuning</string>
+    <string name="advanced_settings_share_application_title">Deel applicatie</string>
+    <string name="advanced_settings_share_application_description">Verbeter je ervaring met %1$s! Haal het nu op fDroid en zie waar iedereen het over heeft!\n</string>
     <!-- Admin Settings -->
     <string name="admin_permission_message">mLauncher belooft de toestemming voor het vergrendelscherm op een verantwoorde manier te gebruiken. mLauncher verzamelt of deelt geen gegevens.</string>
     <string name="experimental">(experimenteel)</string>
     <!-- Settings Headers -->
+    <string name="display">Weergave</string>
+    <string name="language_region">Taal &amp; Regio</string>
+    <string name="accessibility">Toegankelijkheid</string>
     <string name="appearance">Uiterlijk</string>
     <string name="behavior">Gedrag</string>
     <string name="homescreen">Thuisscherm</string>
@@ -15,45 +52,44 @@
     <!-- Home Strings -->
     <string name="hidden_apps">Verborgen apps</string>
     <string name="favorite_apps">Favoriete apps</string>
-    <string name="set_as_default_launcher">Instellen als standaard launcher</string>
-    <string name="change_default_launcher">Standaard launcher wijzigen</string>
-    <!-- Appearance Strings -->
-    <string name="status_bar">Statusbalk weergeven</string>
-    <string name="theme_mode">Thema modus</string>
-    <string name="color_mode">Kleur mode</string>
-    <string name="app_language">Interface taal</string>
-    <string name="app_text_size">App tekstgrootte</string>
-    <string name="clock_text_size">Kloktekstgrootte</string>
-    <string name="date_text_size">Datum tekstgrootte</string>
-    <string name="battery_text_size">Tekstgrootte batterij</string>
-    <string name="app_padding_size">Opvullingsgrootte</string>
-    <string name="follow_accent_colors">Accentkleuren</string>
-    <string name="background_opacity">Dekking van de achtergrond</string>
-    <string name="all_apps_text">Geef alle apps-tekst weer</string>
-    <string name="app_font">Lettertypefamilie</string>
-    <!-- Behavior Strings -->
-    <string name="auto_show_keyboard">Toetsenbord automatisch tonen</string>
-    <string name="auto_open_apps">Apps automatisch openen</string>
-    <string name="enable_notifications">Notificaties aanzetten</string>
-    <string name="display_recent_apps">Recente apps weergeven</string>
-    <string name="number_of_recents">Aantal recente apps</string>
-    <string name="filter_strength">Filtersterkte</string>
-    <string name="search_from_start">App zoeken vanaf het begin.</string>
-    <string name="icon_font">Gebruik pictogramlettertype</string>
-    <!-- Home-screen Strings -->
-    <string name="apps_on_home_screen">Aantal snelkoppelingen</string>
-    <string name="pages_on_home_screen">Aantal pagina\'s</string>
-    <string name="enable_home_pager">Schakel Homepager in</string>
+    <!-- Display Strings -->
+    <string name="show_status_bar">Statusbalk weergeven</string>
+    <string name="show_recent_apps">Recente apps weergeven</string>
+    <string name="show_app_usage_stats">Toon app-gebruikstatistieken</string>
     <string name="show_time">Tijd weergeven</string>
     <string name="show_time_format">Tijdformaat (AM/PM)</string>
     <string name="show_date">Datum weergeven</string>
     <string name="show_battery">Batterij weergeven</string>
     <string name="show_battery_icon">Batterijpictogram weergeven</string>
+    <string name="show_header_text">Koptekst weergeven</string>
+    <!-- Language & Region Strings -->
+    <string name="app_language">Interface taal</string>
+    <!-- Accessibility Strings -->
+    <string name="app_text_size">App tekstgrootte</string>
+    <string name="clock_text_size">Kloktekstgrootte</string>
+    <string name="date_text_size">Datum tekstgrootte</string>
+    <string name="battery_text_size">Tekstgrootte batterij</string>
+    <string name="app_padding_size">Opvullingsgrootte</string>
+    <string name="app_font">Lettertypefamilie</string>
+    <!-- Appearance Strings -->
+    <string name="theme_mode">Thema modus</string>
+    <string name="background_opacity">Dekking van de achtergrond</string>
+    <string name="home_alignment_bottom">Startscherm onderaan uitlijnen</string>
+    <!-- Behavior Strings -->
+    <string name="auto_show_keyboard">Toetsenbord automatisch tonen</string>
+    <string name="auto_open_apps">Apps automatisch openen</string>
+    <string name="enable_notifications">Notificaties aanzetten</string>
+    <string name="number_of_recents">Aantal recente apps</string>
+    <string name="filter_strength">Filtersterkte</string>
+    <string name="search_from_start">App zoeken vanaf het begin</string>
+    <string name="icon_font">Gebruik pictogramlettertype</string>
+    <!-- Home-screen Strings -->
+    <string name="apps_on_home_screen">Aantal snelkoppelingen</string>
+    <string name="pages_on_home_screen">Aantal pagina\'s</string>
+    <string name="enable_home_pager">Schakel Homepager in</string>
     <string name="lock_home_apps">Apps vergrendelen</string>
     <string name="extend_home_apps_area">Klikbaar gebied uitbreiden</string>
-    <string name="home_alignment_bottom">Startscherm onderaan uitlijnen</string>
     <!-- Alignment Strings -->
-    <string name="display_app_usage_stats">App-gebruiksstatistieken weergeven</string>
     <string name="home_alignment">Apps startscherm</string>
     <string name="clock_alignment">Klok en datum</string>
     <string name="drawer_alignment">Apps in app-overzicht</string>

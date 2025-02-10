@@ -28,6 +28,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import com.github.droidworksstudio.mlauncher.BuildConfig
 import com.github.droidworksstudio.mlauncher.MainViewModel
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.Constants
@@ -43,6 +44,7 @@ import com.github.droidworksstudio.mlauncher.helper.helpFeedbackButton
 import com.github.droidworksstudio.mlauncher.helper.isSystemInDarkMode
 import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
 import com.github.droidworksstudio.mlauncher.helper.loadFile
+import com.github.droidworksstudio.mlauncher.helper.openAppInfo
 import com.github.droidworksstudio.mlauncher.helper.setThemeMode
 import com.github.droidworksstudio.mlauncher.helper.shareApplicationButton
 import com.github.droidworksstudio.mlauncher.helper.storeFile
@@ -127,6 +129,13 @@ class AdvancedFragment : Fragment() {
                 titleFontSize = titleFontSize,
                 descriptionFontSize = descriptionFontSize,
                 iconSize = iconSize,
+                onClick = {
+                    openAppInfo(
+                        requireContext(),
+                        android.os.Process.myUserHandle(),
+                        BuildConfig.APPLICATION_ID
+                    )
+                },
             )
 
             SettingsHomeItem(
@@ -135,7 +144,9 @@ class AdvancedFragment : Fragment() {
                 titleFontSize = titleFontSize,
                 descriptionFontSize = descriptionFontSize,
                 iconSize = iconSize,
-                onClick = { viewModel.resetDefaultLauncherApp(requireContext()) }
+                onClick = {
+                    viewModel.resetDefaultLauncherApp(requireContext())
+                }
             )
 
             SettingsHomeItem(
@@ -145,7 +156,9 @@ class AdvancedFragment : Fragment() {
                 titleFontSize = titleFontSize,
                 descriptionFontSize = descriptionFontSize,
                 iconSize = iconSize,
-                onClick = { AppReloader.restartApp(requireContext()) }
+                onClick = {
+                    AppReloader.restartApp(requireContext())
+                }
             )
 
             SettingsHomeItem(
@@ -155,7 +168,9 @@ class AdvancedFragment : Fragment() {
                 titleFontSize = titleFontSize,
                 descriptionFontSize = descriptionFontSize,
                 iconSize = iconSize,
-                onClick = { showBackupRestoreDialog(requireContext()) }
+                onClick = {
+                    showBackupRestoreDialog(requireContext())
+                }
             )
 
             SettingsHomeItem(
@@ -164,7 +179,9 @@ class AdvancedFragment : Fragment() {
                 titleFontSize = titleFontSize,
                 descriptionFontSize = descriptionFontSize,
                 iconSize = iconSize,
-                onClick = { helpFeedbackButton(requireContext()) }
+                onClick = {
+                    helpFeedbackButton(requireContext())
+                }
             )
 
             SettingsHomeItem(
@@ -173,7 +190,9 @@ class AdvancedFragment : Fragment() {
                 titleFontSize = titleFontSize,
                 descriptionFontSize = descriptionFontSize,
                 iconSize = iconSize,
-                onClick = { communitySupportButton(requireContext()) }
+                onClick = {
+                    communitySupportButton(requireContext())
+                }
             )
 
             SettingsHomeItem(
@@ -182,7 +201,9 @@ class AdvancedFragment : Fragment() {
                 titleFontSize = titleFontSize,
                 descriptionFontSize = descriptionFontSize,
                 iconSize = iconSize,
-                onClick = { shareApplicationButton(requireContext()) }
+                onClick = {
+                    shareApplicationButton(requireContext())
+                }
             )
         }
     }

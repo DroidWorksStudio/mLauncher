@@ -1,4 +1,4 @@
-<a href="https://github.com/tanujnotes/Olauncher">Olauncher</a> variantas. Minimalus ir paprastas.
+Šakė nuo <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimalus ir paprastas.
 
 # Variantas su papildomomis funkcijomis
 

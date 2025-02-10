@@ -19,7 +19,7 @@ Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Min
         - Dialógové okno napájania
         - Vyhotoviť snímku obrazovky
         - Zakázať Gesto
-- Hodiny môžete umiestniť aj nezávisle od domácich aplikácií.
+- Hodiny môžete umiestniť aj nezávisle od domovských aplikácií.
 - Zmeňte zarovnanie aplikácií v zásuvke aplikácií nezávisle od úvodnej obrazovky.
 - Zmeňte veľkosť písma častí úvodnej obrazovky nezávisle od seba.
 - Odstránené povolenie na internet. Nikdy neviete, čo o vás chce vývojár aplikácie vedieť.

@@ -1,6 +1,7 @@
 <resources>
     <string name="acra_email" translatable="false">droidworksstudio@063240.xyz</string>
 
+    <!-- Font Stings -->
     <string name="settings_font_bitter" translatable="false">Bitter</string>
     <string name="settings_font_dotness" translatable="false">Dotness</string>
     <string name="settings_font_droidsans" translatable="false">Droid Sans</string>
@@ -15,4 +16,12 @@
     <string name="settings_font_raleway" translatable="false">Raleway</string>
     <string name="settings_font_roboto" translatable="false">Roboto</string>
     <string name="settings_font_sourcecodepro" translatable="false">Source Code Pro</string>
+
+    <!-- Search Stings -->
+    <string name="search_google" translatable="false">Google</string>
+    <string name="search_yahoo" translatable="false">Yahoo</string>
+    <string name="search_duckduckgo" translatable="false">DuckDuckGo</string>
+    <string name="search_bing" translatable="false">Bing</string>
+    <string name="search_brave" translatable="false">Brave</string>
+    <string name="search_swisscow" translatable="false">SwissCows</string>
 </resources>

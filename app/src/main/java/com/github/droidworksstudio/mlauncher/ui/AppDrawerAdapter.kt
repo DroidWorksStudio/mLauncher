@@ -212,7 +212,7 @@ class AppDrawerAdapter(
                 // set show/hide icon
                 if (flag == AppDrawerFlag.HiddenApps) {
                     appHide.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.visibility, 0, 0)
-                    appHide.text = context.getString(R.string.unhide)
+                    appHide.text = context.getString(R.string.show)
                 } else {
                     appHide.setCompoundDrawablesWithIntrinsicBounds(
                         0,

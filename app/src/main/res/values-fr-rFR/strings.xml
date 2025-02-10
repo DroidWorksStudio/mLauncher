@@ -1,11 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Base Settings -->
-    <string name="app">App</string>
+    <string name="select_app">Sélectionner l\'application</string>
+    <!-- Strings used for settings menus -->
+    <string name="settings_name">Paramètres de mLauncher</string>
+    <string name="settings_features_title">Caractéristiques</string>
+    <string name="settings_features_description">Améliorez votre productivité.</string>
+    <string name="settings_look_feel_title">Apparence et ressenti</string>
+    <string name="settings_look_feel_description">Donnez une touche personnelle à votre écran d’accueil.</string>
+    <string name="settings_favorite_apps_title">Applications préférées</string>
+    <string name="settings_hidden_apps_title">Applications masquées</string>
+    <string name="settings_advanced_title">Avancé</string>
+    <!-- Strings used for features settings -->
+    <string name="features_settings_title">Caractéristiques</string>
+    <!-- Strings used for look And feel settings -->
+    <string name="look_feel_settings_title">Apparence et ressenti</string>
+    <!-- Strings used for advanced settings -->
+    <string name="advanced_settings_title">Paramètres avancés</string>
+    <string name="advanced_settings_app_info_title">Informations sur l\'application</string>
+    <string name="advanced_settings_app_info_description">%1$s</string>
+    <string name="advanced_settings_set_as_default_launcher">Définir comme lanceur par défaut</string>
+    <string name="advanced_settings_change_default_launcher">Changer le lanceur par défaut</string>
+    <string name="advanced_settings_restart_title">Redémarrer le lanceur</string>
+    <string name="advanced_settings_restart_description">Avez-vous essayé de l\'allumer et de l\'éteindre ?</string>
+    <string name="advanced_settings_backup_restore_title">Sauvegarde/Restauration</string>
+    <string name="advanced_settings_backup_restore_description">S\'il vous plaît, faites attention à ce que vous souhaitez ?</string>
+    <string name="advanced_settings_backup_restore_backup">Sauvegarde</string>
+    <string name="advanced_settings_backup_restore_restore">Restaurer</string>
+    <string name="advanced_settings_backup_restore_clear">Effacer toutes les données</string>
+    <string name="advanced_settings_backup_restore_clear_title">Effacer les préférences</string>
+    <string name="advanced_settings_backup_restore_clear_description">Etes-vous sûr de vouloir faire cela ?</string>
+    <string name="advanced_settings_backup_restore_clear_yes">Oui</string>
+    <string name="advanced_settings_backup_restore_clear_no">Non</string>
+    <string name="advanced_settings_help_feedback_title">Aide et commentaires</string>
+    <string name="advanced_settings_community_support_title">Soutien communautaire</string>
+    <string name="advanced_settings_share_application_title">Demande de partage</string>
+    <string name="advanced_settings_share_application_description">Améliorez votre expérience avec %1$s! Obtenez-le maintenant sur fDroid et voyez de quoi tout le monde parle !\n</string>
     <!-- Admin Settings -->
     <string name="admin_permission_message">mLauncher promet d\'utiliser l\'autorisation d\'écran de verrouillage de manière responsable. mLauncher ne collecte ni ne partage aucune donnée.</string>
     <string name="experimental">(expérimental)</string>
     <!-- Settings Headers -->
+    <string name="display">Afficher</string>
+    <string name="language_region">Langue &amp; Région</string>
+    <string name="accessibility">Accessibilité</string>
     <string name="appearance">Apparence</string>
     <string name="behavior">Comportement</string>
     <string name="homescreen">Ecran d\'accueil</string>
@@ -15,27 +52,33 @@
     <!-- Home Strings -->
     <string name="hidden_apps">Applications masquées</string>
     <string name="favorite_apps">Applications préférées</string>
-    <string name="set_as_default_launcher">Définir comme lanceur par défaut</string>
-    <string name="change_default_launcher">Changer le lanceur par défaut</string>
-    <!-- Appearance Strings -->
-    <string name="status_bar">Afficher la barre d\'état</string>
-    <string name="theme_mode">Mode thème</string>
-    <string name="color_mode">Mode de couleur</string>
+    <!-- Display Strings -->
+    <string name="show_status_bar">Afficher la barre d\'état</string>
+    <string name="show_recent_apps">Afficher les applications récentes</string>
+    <string name="show_app_usage_stats">Afficher les statistiques d\'utilisation de l\'application</string>
+    <string name="show_time">Afficher l\'heure</string>
+    <string name="show_time_format">Format de l\'heure (AM/PM)</string>
+    <string name="show_date">Afficher la date</string>
+    <string name="show_battery">Afficher la batterie</string>
+    <string name="show_battery_icon">Afficher l\'icône de la batterie</string>
+    <string name="show_header_text">Afficher le texte d\'en-tête</string>
+    <!-- Language & Region Strings -->
     <string name="app_language">Langue de l\'interface</string>
+    <!-- Accessibility Strings -->
     <string name="app_text_size">Taille du texte de l\'application</string>
     <string name="clock_text_size">Taille du texte de l\'horloge</string>
     <string name="date_text_size">Taille du texte de la date</string>
     <string name="battery_text_size">Taille du texte de la batterie</string>
     <string name="app_padding_size">Taille de rembourrage</string>
-    <string name="follow_accent_colors">Couleurs d\'accentuation</string>
-    <string name="background_opacity">Opacité du fond</string>
-    <string name="all_apps_text">Afficher le texte de toutes les applications</string>
     <string name="app_font">Famille de polices</string>
+    <!-- Appearance Strings -->
+    <string name="theme_mode">Mode thème</string>
+    <string name="background_opacity">Opacité du fond</string>
+    <string name="home_alignment_bottom">Écran d\'accueil Aligner en bas</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">Ouvrir automatiquement les applications</string>
     <string name="enable_notifications">Activer les notifications</string>
-    <string name="display_recent_apps">Afficher les applications récentes</string>
     <string name="number_of_recents">Nombre d\'applications récentes</string>
     <string name="filter_strength">Puissance du filtre</string>
     <string name="search_from_start">Recherche d\'applications depuis le début.</string>
@@ -44,16 +87,9 @@
     <string name="apps_on_home_screen">Nombre de raccourcis</string>
     <string name="pages_on_home_screen">Nombre de pages</string>
     <string name="enable_home_pager">Activer la page d\'accueil</string>
-    <string name="show_time">Afficher l\'heure</string>
-    <string name="show_time_format">Format de l\'heure (AM/PM)</string>
-    <string name="show_date">Afficher la date</string>
-    <string name="show_battery">Afficher la batterie</string>
-    <string name="show_battery_icon">Afficher l\'icône de la batterie</string>
     <string name="lock_home_apps">Verrouiller les applications</string>
     <string name="extend_home_apps_area">Étendre la zone cliquable</string>
-    <string name="home_alignment_bottom">Écran d\'accueil Aligner en bas</string>
     <!-- Alignment Strings -->
-    <string name="display_app_usage_stats">Afficher les statistiques d\'utilisation des applications</string>
     <string name="home_alignment">Écran d\'accueil des applications</string>
     <string name="clock_alignment">Horloge et date</string>
     <string name="drawer_alignment">Applications dans le tiroir d\'applications</string>

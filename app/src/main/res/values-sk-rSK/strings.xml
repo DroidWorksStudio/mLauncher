@@ -1,11 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Base Settings -->
-    <string name="app">Aplikácia</string>
+    <string name="select_app">Vyberte App</string>
+    <!-- Strings used for settings menus -->
+    <string name="settings_name">Nastavenia mlaunchera</string>
+    <string name="settings_features_title">Vlastnosti</string>
+    <string name="settings_features_description">Zlepšite svoju produktivitu.</string>
+    <string name="settings_look_feel_title">Pozrite sa a cíťte</string>
+    <string name="settings_look_feel_description">Dodajte svojej domovskej obrazovke osobný nádych.</string>
+    <string name="settings_favorite_apps_title">Obľúbené aplikácie</string>
+    <string name="settings_hidden_apps_title">Skryté aplikácie</string>
+    <string name="settings_advanced_title">Pokročilé</string>
+    <!-- Strings used for features settings -->
+    <string name="features_settings_title">Vlastnosti</string>
+    <!-- Strings used for look And feel settings -->
+    <string name="look_feel_settings_title">Pozrite sa a cíťte</string>
+    <!-- Strings used for advanced settings -->
+    <string name="advanced_settings_title">Rozšírené nastavenia</string>
+    <string name="advanced_settings_app_info_title">Informácie o aplikácii</string>
+    <string name="advanced_settings_app_info_description">%1$s</string>
+    <string name="advanced_settings_set_as_default_launcher">Nastaviť ako predvolený spúšťač</string>
+    <string name="advanced_settings_change_default_launcher">Zmeniť predvolený spúšťač</string>
+    <string name="advanced_settings_restart_title">Reštartujte spúšťač</string>
+    <string name="advanced_settings_restart_description">Skúšali ste to zapnúť a vypnúť?</string>
+    <string name="advanced_settings_backup_restore_title">Zálohovanie/obnovenie</string>
+    <string name="advanced_settings_backup_restore_description">Dávajte si prosím pozor na to, čo si želáte?</string>
+    <string name="advanced_settings_backup_restore_backup">Zálohovanie</string>
+    <string name="advanced_settings_backup_restore_restore">Obnoviť</string>
+    <string name="advanced_settings_backup_restore_clear">Vymazať všetky údaje</string>
+    <string name="advanced_settings_backup_restore_clear_title">Vymazať predvoľby</string>
+    <string name="advanced_settings_backup_restore_clear_description">Naozaj to chcete urobiť?</string>
+    <string name="advanced_settings_backup_restore_clear_yes">áno</string>
+    <string name="advanced_settings_backup_restore_clear_no">Nie</string>
+    <string name="advanced_settings_help_feedback_title">Pomoc a spätná väzba</string>
+    <string name="advanced_settings_community_support_title">Podpora komunity</string>
+    <string name="advanced_settings_share_application_title">Zdieľať aplikáciu</string>
+    <string name="advanced_settings_share_application_description">Zvýšte svoje skúsenosti s %1$s! Získajte to teraz na fDroid a uvidíte, o čom všetci hovoria!\n</string>
     <!-- Admin Settings -->
     <string name="admin_permission_message">mLauncher sľubuje, že bude zodpovedne používať povolenie na uzamknutie obrazovky. mLauncher nezhromažďuje ani nezdieľa žiadne údaje.</string>
     <string name="experimental">(Experimentálne)</string>
     <!-- Settings Headers -->
+    <string name="display">Displej</string>
+    <string name="language_region">Jazyk &amp; Región</string>
+    <string name="accessibility">Prístupnosť</string>
     <string name="appearance">Vzhľad</string>
     <string name="behavior">Správanie</string>
     <string name="homescreen">Domovská obrazovka</string>
@@ -15,27 +52,33 @@
     <!-- Home Strings -->
     <string name="hidden_apps">Skryté aplikácie</string>
     <string name="favorite_apps">Obľúbené aplikácie</string>
-    <string name="set_as_default_launcher">Nastaviť ako predvolený spúšťač</string>
-    <string name="change_default_launcher">Zmeniť predvolený spúšťač</string>
-    <!-- Appearance Strings -->
-    <string name="status_bar">Zobraziť stavový riadok</string>
-    <string name="theme_mode">Režim témy</string>
-    <string name="color_mode">Farebný režim</string>
+    <!-- Display Strings -->
+    <string name="show_status_bar">Zobraziť stavový riadok</string>
+    <string name="show_recent_apps">Zobraziť nedávne aplikácie</string>
+    <string name="show_app_usage_stats">Zobraziť štatistiku používania aplikácie</string>
+    <string name="show_time">Zobraziť čas</string>
+    <string name="show_time_format">Formát času (AM/PM)</string>
+    <string name="show_date">Zobraziť dátum</string>
+    <string name="show_battery">Zobraziť batériu</string>
+    <string name="show_battery_icon">Zobraziť ikonu batérie</string>
+    <string name="show_header_text">Zobraziť text hlavičky</string>
+    <!-- Language & Region Strings -->
     <string name="app_language">Jazyk rozhrania</string>
+    <!-- Accessibility Strings -->
     <string name="app_text_size">Veľkosť textu aplikácie</string>
     <string name="clock_text_size">Veľkosť textu hodín</string>
     <string name="date_text_size">Veľkosť textu dátumu</string>
     <string name="battery_text_size">Veľkosť textu batérie</string>
     <string name="app_padding_size">Veľkosť odsadenia</string>
-    <string name="follow_accent_colors">Doplnková farby</string>
-    <string name="background_opacity">Priehľadnosť pozadia</string>
-    <string name="all_apps_text">Zobraziť text všetkých aplikácií</string>
     <string name="app_font">Rodina písiem</string>
+    <!-- Appearance Strings -->
+    <string name="theme_mode">Režim témy</string>
+    <string name="background_opacity">Priehľadnosť pozadia</string>
+    <string name="home_alignment_bottom">Domovská obrazovka Zarovnať dole</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Automaticky zobraziť klávesnicu</string>
     <string name="auto_open_apps">Automatické otváranie aplikácií</string>
     <string name="enable_notifications">Povoliť upozornenia</string>
-    <string name="display_recent_apps">Zobraziť nedávne aplikácie</string>
     <string name="number_of_recents">Počet nedávnych aplikácií</string>
     <string name="filter_strength">Sila filtrovania</string>
     <string name="search_from_start">Vyhľadávanie aplikácií od začiatku.</string>
@@ -44,16 +87,9 @@
     <string name="apps_on_home_screen">Počet skratiek</string>
     <string name="pages_on_home_screen">Počet strán</string>
     <string name="enable_home_pager">Povoliť domovskú stránku</string>
-    <string name="show_time">Zobraziť čas</string>
-    <string name="show_time_format">Formát času (AM/PM)</string>
-    <string name="show_date">Zobraziť dátum</string>
-    <string name="show_battery">Zobraziť batériu</string>
-    <string name="show_battery_icon">Zobraziť ikonu batérie</string>
     <string name="lock_home_apps">Zámok aplikácií</string>
     <string name="extend_home_apps_area">Rozšíriť oblasť kliknutia</string>
-    <string name="home_alignment_bottom">Domovská obrazovka Zarovnať dole</string>
     <!-- Alignment Strings -->
-    <string name="display_app_usage_stats">Zobraziť štatistiku používania aplikácie</string>
     <string name="home_alignment">Domovská obrazovka aplikácií</string>
     <string name="clock_alignment">Hodiny a dátum</string>
     <string name="drawer_alignment">Aplikácie v zozname aplikacií</string>

@@ -13,7 +13,8 @@ class Migration(val context: Context) {
             171 to listOf(
                 "APP_DARK_COLORS",
                 "APP_LIGHT_COLORS",
-                "HOME_FOLLOW_ACCENT"
+                "HOME_FOLLOW_ACCENT",
+                "ALL_APPS_TEXT"
             ), // Version 171 Removes these from Prefs
             // Add more versions and preferences to remove here
         )

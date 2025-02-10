@@ -1,11 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Base Settings -->
-    <string name="app">アプリ</string>
+    <string name="select_app">アプリを選択</string>
+    <!-- Strings used for settings menus -->
+    <string name="settings_name">mLauncher設定</string>
+    <string name="settings_features_title">特徴</string>
+    <string name="settings_features_description">生産性を向上させます。</string>
+    <string name="settings_look_feel_title">見た目と感触</string>
+    <string name="settings_look_feel_description">ホーム画面に個性的なタッチを加えましょう。</string>
+    <string name="settings_favorite_apps_title">お気に入りのアプリ</string>
+    <string name="settings_hidden_apps_title">非表示のアプリ</string>
+    <string name="settings_advanced_title">高度な</string>
+    <!-- Strings used for features settings -->
+    <string name="features_settings_title">特徴</string>
+    <!-- Strings used for look And feel settings -->
+    <string name="look_feel_settings_title">見た目と感触</string>
+    <!-- Strings used for advanced settings -->
+    <string name="advanced_settings_title">詳細設定</string>
+    <string name="advanced_settings_app_info_title">アプリ情報</string>
+    <string name="advanced_settings_app_info_description">%1$s</string>
+    <string name="advanced_settings_set_as_default_launcher">デフォルトのランチャーとして設定</string>
+    <string name="advanced_settings_change_default_launcher">デフォルトのランチャーを変更する</string>
+    <string name="advanced_settings_restart_title">ランチャーを再起動</string>
+    <string name="advanced_settings_restart_description">オンとオフを切り替えてみましたか?</string>
+    <string name="advanced_settings_backup_restore_title">バックアップ/復元</string>
+    <string name="advanced_settings_backup_restore_description">何を願うか注意してください。</string>
+    <string name="advanced_settings_backup_restore_backup">バックアップ</string>
+    <string name="advanced_settings_backup_restore_restore">復元する</string>
+    <string name="advanced_settings_backup_restore_clear">すべてのデータを消去</string>
+    <string name="advanced_settings_backup_restore_clear_title">設定をクリア</string>
+    <string name="advanced_settings_backup_restore_clear_description">本当にこれを実行しますか?</string>
+    <string name="advanced_settings_backup_restore_clear_yes">はい</string>
+    <string name="advanced_settings_backup_restore_clear_no">いいえ</string>
+    <string name="advanced_settings_help_feedback_title">ヘルプとフィードバック</string>
+    <string name="advanced_settings_community_support_title">コミュニティサポート</string>
+    <string name="advanced_settings_share_application_title">アプリケーションを共有する</string>
+    <string name="advanced_settings_share_application_description">%1$sで体験を向上させましょう! 今すぐ fDroid で入手して、みんなが何を話しているか見てみましょう!\n</string>
     <!-- Admin Settings -->
     <string name="admin_permission_message">mLauncher は、責任を持ってロック画面のアクセス許可を使用することを約束します。 mLauncher は、いかなるデータも収集または共有しません。</string>
     <string name="experimental">(実験的)</string>
     <!-- Settings Headers -->
+    <string name="display">画面</string>
+    <string name="language_region">言語 &amp; 地域</string>
+    <string name="accessibility">アクセシビリティ</string>
     <string name="appearance">外観</string>
     <string name="behavior">動作</string>
     <string name="homescreen">ホーム画面</string>
@@ -15,27 +52,33 @@
     <!-- Home Strings -->
     <string name="hidden_apps">非表示のアプリ</string>
     <string name="favorite_apps">お気に入りのアプリ</string>
-    <string name="set_as_default_launcher">デフォルトのランチャーに設定</string>
-    <string name="change_default_launcher">デフォルトのランチャーを変更する</string>
-    <!-- Appearance Strings -->
-    <string name="status_bar">ステータスバーを表示</string>
-    <string name="theme_mode">テーマモード</string>
-    <string name="color_mode">カラーモード</string>
+    <!-- Display Strings -->
+    <string name="show_status_bar">ステータスバーを表示</string>
+    <string name="show_recent_apps">最近使ったアプリを表示</string>
+    <string name="show_app_usage_stats">アプリの使用状況統計を表示</string>
+    <string name="show_time">時間を表示</string>
+    <string name="show_time_format">時刻形式 (AM/PM)</string>
+    <string name="show_date">日付を表示</string>
+    <string name="show_battery">バッテリーを表示</string>
+    <string name="show_battery_icon">バッテリーアイコンを表示</string>
+    <string name="show_header_text">ヘッダーテキストを表示</string>
+    <!-- Language & Region Strings -->
     <string name="app_language">インターフェース言語</string>
+    <!-- Accessibility Strings -->
     <string name="app_text_size">アプリのテキストサイズ</string>
     <string name="clock_text_size">時計の文字サイズ</string>
     <string name="date_text_size">日付のテキストサイズ</string>
     <string name="battery_text_size">バッテリーのテキストサイズ</string>
     <string name="app_padding_size">パディングサイズ</string>
-    <string name="follow_accent_colors">アクセントカラー</string>
-    <string name="background_opacity">背景の不透明度</string>
-    <string name="all_apps_text">すべてのアプリのテキストを表示</string>
     <string name="app_font">フォントファミリー</string>
+    <!-- Appearance Strings -->
+    <string name="theme_mode">テーマモード</string>
+    <string name="background_opacity">背景の不透明度</string>
+    <string name="home_alignment_bottom">ホーム画面を下に揃える</string>
     <!-- Behavior Strings -->
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="auto_open_apps">アプリを自動的に開く</string>
     <string name="enable_notifications">通知を有効にします</string>
-    <string name="display_recent_apps">最近のアプリを表示</string>
     <string name="number_of_recents">最近使用したアプリの数</string>
     <string name="filter_strength">フィルター強度</string>
     <string name="search_from_start">最初からアプリ検索。</string>
@@ -44,16 +87,9 @@
     <string name="apps_on_home_screen">ショートカットの数</string>
     <string name="pages_on_home_screen">ページ数</string>
     <string name="enable_home_pager">ホーム ページャーを有効にする</string>
-    <string name="show_time">時間を表示</string>
-    <string name="show_time_format">時刻形式 (AM/PM)</string>
-    <string name="show_date">日付を表示</string>
-    <string name="show_battery">バッテリーを表示</string>
-    <string name="show_battery_icon">バッテリーアイコンを表示</string>
     <string name="lock_home_apps">アプリをロック</string>
     <string name="extend_home_apps_area">クリック可能な領域を拡張</string>
-    <string name="home_alignment_bottom">ホーム画面を下に揃える</string>
     <!-- Alignment Strings -->
-    <string name="display_app_usage_stats">アプリの使用状況統計を表示</string>
     <string name="home_alignment">アプリのホーム画面</string>
     <string name="clock_alignment">時計と日付</string>
     <string name="drawer_alignment">アプリドロワーのアプリ</string>
