@@ -11,8 +11,27 @@
     <string name="settings_favorite_apps_title">Obľúbené aplikácie</string>
     <string name="settings_hidden_apps_title">Skryté aplikácie</string>
     <string name="settings_advanced_title">Pokročilé</string>
-    <string name="settings_app_info_title">Informácie o aplikácii</string>
-    <string name="settings_app_info_description">%1$s</string>
+    <!-- Strings used for advanced settings -->
+    <string name="advanced_settings_title">Advanced Settings</string>
+    <string name="advanced_settings_app_info_title">App Info</string>
+    <string name="advanced_settings_app_info_description">%1$s</string>
+    <string name="advanced_settings_set_as_default_launcher">Set as Default Launcher</string>
+    <string name="advanced_settings_change_default_launcher">Change Default Launcher</string>
+    <string name="advanced_settings_restart_title">Restart Launcher</string>
+    <string name="advanced_settings_restart_description">Have you tried turning it on and off?</string>
+    <string name="advanced_settings_backup_restore_title">Backup/Restore</string>
+    <string name="advanced_settings_backup_restore_description">Please be careful what you wish for?</string>
+    <string name="advanced_settings_backup_restore_backup">Backup</string>
+    <string name="advanced_settings_backup_restore_restore">Restore</string>
+    <string name="advanced_settings_backup_restore_clear">Clear All Data</string>
+    <string name="advanced_settings_backup_restore_clear_title">Clear Preferences</string>
+    <string name="advanced_settings_backup_restore_clear_description">Are you sure you want to do this?</string>
+    <string name="advanced_settings_backup_restore_clear_yes">Yes</string>
+    <string name="advanced_settings_backup_restore_clear_no">No</string>
+    <string name="advanced_settings_help_feedback_title">Help and Feedback</string>
+    <string name="advanced_settings_community_support_title">Community Support</string>
+    <string name="advanced_settings_share_application_title">Share Application</string>
+    <string name="advanced_settings_share_application_description">Elevate your experience with %1$s! Get it now on fDroid and see what everyone is talking about!\n</string>
     <!-- Admin Settings -->
     <string name="admin_permission_message">mLauncher sľubuje, že bude zodpovedne používať povolenie na uzamknutie obrazovky. mLauncher nezhromažďuje ani nezdieľa žiadne údaje.</string>
     <string name="experimental">(Experimentálne)</string>
@@ -29,8 +48,6 @@
     <!-- Home Strings -->
     <string name="hidden_apps">Skryté aplikácie</string>
     <string name="favorite_apps">Obľúbené aplikácie</string>
-    <string name="set_as_default_launcher">Nastaviť ako predvolený spúšťač</string>
-    <string name="change_default_launcher">Zmeniť predvolený spúšťač</string>
     <!-- Display Strings -->
     <string name="show_status_bar">Zobraziť stavový riadok</string>
     <string name="show_recent_apps">Zobraziť nedávne aplikácie</string>
@@ -156,7 +173,7 @@
     <string name="acra_dialog_text">Ľutujeme, ale %1$s sa vyskytol neočakávaný problém a je potrebné ho zavrieť. Pomôžte nám zlepšiť sa odoslaním správy o zlyhaní.\n\n%1$s si váži vaše súkromie a zhromaždené údaje sa používajú výlučne na zlepšenie stability aplikácie. Nezhromažďujú sa žiadne osobné údaje. Ďakujem za tvoju podporu!</string>
     <string name="acra_send_report">Odoslať správu</string>
     <string name="acra_dont_send">Neposielajte</string>
-    <string name="acra_mail_body">V aplikácii došlo k zlyhaniu.\n\nNižšie sú uvedené podrobnosti o zariadení. Protokol o chybe bol priložený ako súbor pre vašu potrebu. Boli by sme vám vďační za pomoc pri riešení tohto problému.\n\nInformácie o zariadení: \n[Vyplňte, prosím, aj nižšie uvedené informácie, pričom odstráňte všetko, čo je medzi hranatými zátvorkami, inak sa to bude ignorovať].\n\n- Verzia aplikácie: [0.0.1]\n- Verzia systému Android: Názov zariadenia: [14]\n: Pixel 69]\n- Miesto inštalácie: [Android Pixel 69] - Miesto inštalácie: [github, fdroid, obtanium, self]\n\nVašu rýchlu pozornosť tejto záležitosti si veľmi ceníme.\n\nĎakujeme.\n</string>
+    <string name="acra_mail_body">V aplikácii došlo k zlyhaniu.\n\nNižšie sú uvedené podrobnosti o zariadení. Protokol chýb bol priložený ako súbor pre vašu referenciu. Ocenili by sme vašu pomoc pri riešení tohto problému.\n\nInformácie o zariadení: \n[VYPLŇTE, PROSÍM, nižšie uvedené informácie a odstráňte aj čokoľvek medzi hranatými zátvorkami, inak to bude ignorované.]\n\n- Verzia aplikácie: [0.0.1]\n- Verzia systému Android: [14]\n- Názov zariadenia: [Android Pixel 69]\n- Umiestnenie inštalácie: [github, fdroid, obtanium, self]\n\nVašu okamžitú pozornosť venovanú tejto záležitosti si veľmi ceníme.\n\nĎakujem.\n</string>
     <string name="settings_font_system">Systém</string>
     <!-- Search Stings -->
     <string name="search_engine">Vyhľadávač</string>
