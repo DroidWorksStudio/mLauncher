@@ -11,8 +11,27 @@
     <string name="settings_favorite_apps_title">التطبيقات المفضلة</string>
     <string name="settings_hidden_apps_title">التطبيقات المخفية</string>
     <string name="settings_advanced_title">متقدم</string>
-    <string name="settings_app_info_title">معلومات التطبيق</string>
-    <string name="settings_app_info_description">%1$s</string>
+    <!-- Strings used for advanced settings -->
+    <string name="advanced_settings_title">Advanced Settings</string>
+    <string name="advanced_settings_app_info_title">App Info</string>
+    <string name="advanced_settings_app_info_description">%1$s</string>
+    <string name="advanced_settings_set_as_default_launcher">Set as Default Launcher</string>
+    <string name="advanced_settings_change_default_launcher">Change Default Launcher</string>
+    <string name="advanced_settings_restart_title">Restart Launcher</string>
+    <string name="advanced_settings_restart_description">Have you tried turning it on and off?</string>
+    <string name="advanced_settings_backup_restore_title">Backup/Restore</string>
+    <string name="advanced_settings_backup_restore_description">Please be careful what you wish for?</string>
+    <string name="advanced_settings_backup_restore_backup">Backup</string>
+    <string name="advanced_settings_backup_restore_restore">Restore</string>
+    <string name="advanced_settings_backup_restore_clear">Clear All Data</string>
+    <string name="advanced_settings_backup_restore_clear_title">Clear Preferences</string>
+    <string name="advanced_settings_backup_restore_clear_description">Are you sure you want to do this?</string>
+    <string name="advanced_settings_backup_restore_clear_yes">Yes</string>
+    <string name="advanced_settings_backup_restore_clear_no">No</string>
+    <string name="advanced_settings_help_feedback_title">Help and Feedback</string>
+    <string name="advanced_settings_community_support_title">Community Support</string>
+    <string name="advanced_settings_share_application_title">Share Application</string>
+    <string name="advanced_settings_share_application_description">Elevate your experience with %1$s! Get it now on fDroid and see what everyone is talking about!\n</string>
     <!-- Admin Settings -->
     <string name="admin_permission_message">يعد mLauncher باستخدام إذن قفل الشاشة بشكل مسؤول. لا يقوم mLauncher بجمع أو مشاركة أي بيانات.</string>
     <string name="experimental">(تجريبي)</string>
@@ -29,17 +48,15 @@
     <!-- Home Strings -->
     <string name="hidden_apps">التطبيقات المخفية</string>
     <string name="favorite_apps">التطبيقات المفضلة</string>
-    <string name="set_as_default_launcher">تعيين كمشغل افتراضي</string>
-    <string name="change_default_launcher">تغيير المشغل الافتراضي</string>
     <!-- Display Strings -->
     <string name="show_status_bar">إظهار شريط الحالة</string>
     <string name="show_recent_apps">إظهار التطبيقات الأخيرة</string>
     <string name="show_app_usage_stats">إظهار إحصائيات استخدام التطبيق</string>
     <string name="show_time">إظهار الوقت</string>
-    <string name="show_time_format">تنسيق الوقت (ص/م)</string>
+    <string name="show_time_format">تنسيق الوقت (صباحًا/مساءً)</string>
     <string name="show_date">إظهار التاريخ</string>
     <string name="show_battery">عرض البطارية</string>
-    <string name="show_battery_icon">إظهار رمز البطارية</string>
+    <string name="show_battery_icon">إظهار أيقونة البطارية</string>
     <string name="show_header_text">إظهار نص الرأس</string>
     <!-- Language & Region Strings -->
     <string name="app_language">لغة الواجهة</string>
@@ -49,7 +66,7 @@
     <string name="date_text_size">حجم نص التاريخ</string>
     <string name="battery_text_size">حجم نص البطارية</string>
     <string name="app_padding_size">حجم الحشوة</string>
-    <string name="app_font">عائلة الخطوط</string>
+    <string name="app_font">خط العائلة</string>
     <!-- Appearance Strings -->
     <string name="theme_mode">وضع السمة</string>
     <string name="background_opacity">شفافية الخلفية</string>
@@ -156,7 +173,7 @@
     <string name="acra_dialog_text">عذرًا، ولكن %1$s واجه مشكلة غير متوقعة ويجب إغلاقه. الرجاء مساعدتنا على التحسين عن طريق إرسال تقرير الأعطال.\n\n%1$s يقدر خصوصيتك ويتم استخدام البيانات التي تم جمعها فقط لتحسين استقرار التطبيق. لا يتم جمع أي معلومات شخصية. شكرا لدعمكم!</string>
     <string name="acra_send_report">إرسال تقرير</string>
     <string name="acra_dont_send">لا ترسل</string>
-    <string name="acra_mail_body">حدث تعطل في التطبيق.\n\nفيما يلي تفاصيل الجهاز. تم إرفاق سجل الأخطاء كملف للرجوع إليه. سنكون شاكرين لمساعدتك في حل هذه المشكلة.\n\nمعلومات الجهاز: \n[يرجى ملء المعلومات أدناه وإزالة أي شيء بين الأقواس المربعة أو سيتم تجاهل ذلك.]\n\n- إصدار التطبيق: [0.0.1]\n- إصدار Android: [14]\n- اسم الجهاز: [Android Pixel 69]\n- موقع التثبيت: [github، fdroid، obtanium، self]\n\nنقدر اهتمامك السريع بهذه المسألة كثيرًا.\n\nشكرا لك.\n</string>
+    <string name="acra_mail_body">لقد حدث عطل في التطبيق.\n\nفيما يلي تفاصيل الجهاز. لقد تم إرفاق سجل الأخطاء كملف للرجوع إليه. ونحن نقدر مساعدتكم في حل هذه المشكلة.\n\nمعلومات الجهاز: \n[يرجى ملء المعلومات أدناه أيضًا وإزالة أي شيء بين الأقواس المربعة وإلا سيتم تجاهل ذلك.]\n\n- إصدار التطبيق: [0.0.1]\n- إصدار Android: [14]\n- اسم الجهاز: [Android Pixel 69]\n- موقع التثبيت: [github، fdroid، obtanium، self]\n\nإن اهتمامك السريع بهذا الأمر موضع تقدير كبير.\n\nشكرًا لك.\n</string>
     <string name="settings_font_system">النظام</string>
     <!-- Search Stings -->
     <string name="search_engine">محرك البحث</string>
@@ -165,7 +182,7 @@
     <string name="search_duckduckgo">دك دك جو</string>
     <string name="search_bing">بنج</string>
     <string name="search_brave">شجاع</string>
-    <string name="search_swisscow">سويس كاوز</string>
+    <string name="search_swisscow">الأبقار السويسرية</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">جميع التطبيقات</string>
     <string name="total_screen_time">إجمالي وقت الشاشة</string>
