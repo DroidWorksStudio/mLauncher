@@ -1,4 +1,4 @@
-متفرع من <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. بسيطة ونظيفة.
+متشعب من <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. بسيطة ونظيفة.
 
 # تم اختياره مع ميزات إضافية
 
