@@ -11,8 +11,27 @@
     <string name="settings_favorite_apps_title">Aplicativos favoritos</string>
     <string name="settings_hidden_apps_title">Aplicações ocultas</string>
     <string name="settings_advanced_title">Avançado</string>
-    <string name="settings_app_info_title">Informações do aplicativo</string>
-    <string name="settings_app_info_description">%1$s</string>
+    <!-- Strings used for advanced settings -->
+    <string name="advanced_settings_title">Advanced Settings</string>
+    <string name="advanced_settings_app_info_title">App Info</string>
+    <string name="advanced_settings_app_info_description">%1$s</string>
+    <string name="advanced_settings_set_as_default_launcher">Set as Default Launcher</string>
+    <string name="advanced_settings_change_default_launcher">Change Default Launcher</string>
+    <string name="advanced_settings_restart_title">Restart Launcher</string>
+    <string name="advanced_settings_restart_description">Have you tried turning it on and off?</string>
+    <string name="advanced_settings_backup_restore_title">Backup/Restore</string>
+    <string name="advanced_settings_backup_restore_description">Please be careful what you wish for?</string>
+    <string name="advanced_settings_backup_restore_backup">Backup</string>
+    <string name="advanced_settings_backup_restore_restore">Restore</string>
+    <string name="advanced_settings_backup_restore_clear">Clear All Data</string>
+    <string name="advanced_settings_backup_restore_clear_title">Clear Preferences</string>
+    <string name="advanced_settings_backup_restore_clear_description">Are you sure you want to do this?</string>
+    <string name="advanced_settings_backup_restore_clear_yes">Yes</string>
+    <string name="advanced_settings_backup_restore_clear_no">No</string>
+    <string name="advanced_settings_help_feedback_title">Help and Feedback</string>
+    <string name="advanced_settings_community_support_title">Community Support</string>
+    <string name="advanced_settings_share_application_title">Share Application</string>
+    <string name="advanced_settings_share_application_description">Elevate your experience with %1$s! Get it now on fDroid and see what everyone is talking about!\n</string>
     <!-- Admin Settings -->
     <string name="admin_permission_message">O mLauncher promete usar a permissão da tela de bloqueio com responsabilidade. O mLauncher não coleta ou compartilha nenhum dado.</string>
     <string name="experimental">(experimental)</string>
@@ -29,8 +48,6 @@
     <!-- Home Strings -->
     <string name="hidden_apps">Aplicações ocultas</string>
     <string name="favorite_apps">Aplicativos favoritos</string>
-    <string name="set_as_default_launcher">Definido como lançador padrão</string>
-    <string name="change_default_launcher">Alterar lançador padrão</string>
     <!-- Display Strings -->
     <string name="show_status_bar">Mostrar barra de status</string>
     <string name="show_recent_apps">Mostrar aplicativos recentes</string>
@@ -156,16 +173,16 @@
     <string name="acra_dialog_text">Lamentamos, mas %1$s encontrou um problema inesperado e precisa ser fechado. Por favor, ajude-nos a melhorar enviando um relatório de falha.\n\n%1$s valoriza sua privacidade e os dados coletados são usados exclusivamente para melhorar a estabilidade do aplicativo. Nenhuma informação pessoal é coletada. Obrigado pelo seu apoio!</string>
     <string name="acra_send_report">Enviar relatório</string>
     <string name="acra_dont_send">Não envie</string>
-    <string name="acra_mail_body">Ocorreu uma falha no aplicativo.\n\nAbaixo estão os detalhes do dispositivo. O log de erros foi anexado como um arquivo para sua referência. Gostaríamos de sua ajuda para resolver esse problema.\n\nInformações do dispositivo: \n[POR FAVOR, preencha as informações abaixo removendo também tudo entre os colchetes ou isso será ignorado.]\n\n- Versão do aplicativo: [0.0.1]\n- Versão do Android: [14]\n- Nome do dispositivo: [Android Pixel 69]\n- Local de instalação: [github, fdroid, obtanium, self]\n\nSua pronta atenção a este assunto é muito apreciada.\n\nObrigado.\n</string>
+    <string name="acra_mail_body">Ocorreu uma falha no aplicativo.\n\nAbaixo estão os detalhes do dispositivo. O log de erros foi anexado como um arquivo para sua referência. Agradecemos sua ajuda para resolver esse problema.\n\nInformações do dispositivo: \n[POR FAVOR preencha as informações abaixo também removendo qualquer coisa entre colchetes ou isso será ignorado.]\n\n- Versão do aplicativo: [0.0.1]\n- Versão Android: [14]\n- Nome do dispositivo: [Android Pixel 69]\n- Local de instalação: [github, fdroid, obtanium, self]\n\nSua atenção imediata a este assunto é muito apreciada.\n\nObrigado.\n</string>
     <string name="settings_font_system">Sistema</string>
     <!-- Search Stings -->
-    <string name="search_engine">Motor de busca</string>
+    <string name="search_engine">Mecanismo de busca</string>
     <string name="search_google">Google</string>
     <string name="search_yahoo">Yahoo</string>
-    <string name="search_duckduckgo">PatoPatoVai</string>
-    <string name="search_bing">Bing</string>
+    <string name="search_duckduckgo">PatoDuckGo</string>
+    <string name="search_bing">Google</string>
     <string name="search_brave">Corajoso</string>
-    <string name="search_swisscow">Vacas suíças</string>
+    <string name="search_swisscow">Vacas Suíças</string>
     <!-- Unsorted Strings -->
     <string name="show_apps">Todas as aplicações</string>
     <string name="total_screen_time">Tempo total de tela</string>
