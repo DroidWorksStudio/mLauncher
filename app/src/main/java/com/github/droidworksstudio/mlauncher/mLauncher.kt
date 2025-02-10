@@ -73,7 +73,7 @@ class Mlauncher : Application() {
 
     private fun setCustomFont(context: Context) {
         // Load the custom font from resources
-        val customFont = prefs.launcherFont.getFont(context)
+        val customFont = prefs.fontFamily.getFont(context)
 
         // Apply the custom font to different font families
         if (customFont != null) {

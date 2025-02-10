@@ -4,6 +4,7 @@ package com.github.droidworksstudio.mlauncher.helper
 import android.app.Activity
 import android.app.AlertDialog
 import android.app.AppOpsManager
+import android.app.UiModeManager
 import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.DialogInterface
@@ -22,7 +23,6 @@ import android.util.TypedValue
 import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
-import androidx.annotation.RequiresApi
 import com.github.droidworksstudio.common.openAccessibilitySettings
 import com.github.droidworksstudio.common.showLongToast
 import com.github.droidworksstudio.mlauncher.BuildConfig
@@ -340,7 +340,7 @@ fun loadFile(activity: Activity) {
     activity.startActivityForResult(intent, Constants.BACKUP_READ, null)
 }
 
-@RequiresApi(Build.VERSION_CODES.Q)
+
 fun getHexForOpacity(prefs: Prefs): Int {
     val setOpacity = prefs.opacityNum.coerceIn(0, 255) // Ensure opacity is in the range (0-255)
     val backgroundColor = prefs.backgroundColor // This is already an Int
@@ -352,4 +352,21 @@ fun getHexForOpacity(prefs: Prefs): Int {
 
     // Combine opacity with RGB and return final color
     return android.graphics.Color.argb(setOpacity, red, green, blue)
+}
+
+fun isSystemInDarkMode(context: Context): Boolean {
+    val uiModeManager = context.getSystemService(Context.UI_MODE_SERVICE) as UiModeManager
+    return uiModeManager.nightMode == UiModeManager.MODE_NIGHT_YES
+}
+
+fun setThemeMode(context: Context, isDark: Boolean, view: View) {
+    // Retrieve background color based on the theme
+    val backgroundAttr = if (isDark) R.attr.backgroundDark else R.attr.backgroundLight
+
+    val typedValue = TypedValue()
+    val theme: Resources.Theme = context.theme
+    theme.resolveAttribute(backgroundAttr, typedValue, true)
+
+    // Apply the background color from styles.xml
+    view.setBackgroundResource(typedValue.resourceId)
 }

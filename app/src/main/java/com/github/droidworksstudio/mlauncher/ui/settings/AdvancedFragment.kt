@@ -3,14 +3,11 @@ package com.github.droidworksstudio.mlauncher.ui.settings
 import android.app.admin.DevicePolicyManager
 import android.content.ComponentName
 import android.content.Context
-import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
@@ -43,9 +40,10 @@ import com.github.droidworksstudio.mlauncher.helper.AppReloader
 import com.github.droidworksstudio.mlauncher.helper.communitySupportButton
 import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
 import com.github.droidworksstudio.mlauncher.helper.helpFeedbackButton
+import com.github.droidworksstudio.mlauncher.helper.isSystemInDarkMode
 import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
 import com.github.droidworksstudio.mlauncher.helper.loadFile
-import com.github.droidworksstudio.mlauncher.helper.resetDefaultLauncher
+import com.github.droidworksstudio.mlauncher.helper.setThemeMode
 import com.github.droidworksstudio.mlauncher.helper.shareApplicationButton
 import com.github.droidworksstudio.mlauncher.helper.storeFile
 import com.github.droidworksstudio.mlauncher.listener.DeviceAdmin
@@ -65,7 +63,7 @@ class AdvancedFragment : Fragment() {
     private var _binding: FragmentSettingsBinding? = null
     private val binding get() = _binding!!
 
-    @RequiresApi(Build.VERSION_CODES.Q)
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -78,33 +76,11 @@ class AdvancedFragment : Fragment() {
         return binding.root
     }
 
-    @RequiresApi(Build.VERSION_CODES.Q)
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val backgroundColor = getHexForOpacity(prefs)
-        binding.scrollView.setBackgroundColor(backgroundColor)
 
-        binding.settingsView.setContent {
-
-            val isDark = when (prefs.appTheme) {
-                Light -> false
-                Dark -> true
-                System -> isSystemInDarkTheme()
-            }
-
-            val settingsSize = (prefs.settingsSize - 3)
-
-            SettingsTheme(isDark) {
-                Settings(settingsSize.sp)
-            }
-        }
-    }
-
-    @RequiresApi(Build.VERSION_CODES.Q)
-    override fun onResume() {
-        super.onResume()
-        val backgroundColor = getHexForOpacity(prefs)
-        binding.scrollView.setBackgroundColor(backgroundColor)
+        resetThemeColors()
     }
 
     @Composable
@@ -159,7 +135,7 @@ class AdvancedFragment : Fragment() {
                 titleFontSize = titleFontSize,
                 descriptionFontSize = descriptionFontSize,
                 iconSize = iconSize,
-                onClick = { resetDefaultLauncher(requireContext()) }
+                onClick = { viewModel.resetDefaultLauncherApp(requireContext()) }
             )
 
             SettingsHomeItem(
@@ -217,6 +193,24 @@ class AdvancedFragment : Fragment() {
         val scaledDensity = LocalDensity.current.fontScale
         val dpValue = textUnit.value * (density / scaledDensity)
         return dpValue.dp  // Convert to Dp using the 'dp' extension
+    }
+
+    private fun resetThemeColors() {
+        binding.settingsView.setContent {
+
+            val isDark = when (prefs.appTheme) {
+                Light -> false
+                Dark -> true
+                System -> isSystemInDarkMode(requireContext())
+            }
+
+            setThemeMode(requireContext(), isDark, binding.scrollView)
+            val settingsSize = (prefs.settingsSize - 3)
+
+            SettingsTheme(isDark) {
+                Settings(settingsSize.sp)
+            }
+        }
     }
 
     private fun goBackToLastFragment() {

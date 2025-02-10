@@ -17,8 +17,9 @@ import com.github.droidworksstudio.mlauncher.R
 
 @Immutable
 data class ReplacementTypography(
-    val body: TextStyle,
+    val header: TextStyle,
     val title: TextStyle,
+    val body: TextStyle,
     val item: TextStyle,
     val button: TextStyle,
     val buttonDisabled: TextStyle,
@@ -32,14 +33,16 @@ data class ReplacementShapes(
 @Immutable
 data class ReplacementColor(
     val settings: Color,
+    val image: Color,
     val selector: Color,
     val border: Color,
 )
 
 val LocalReplacementTypography = staticCompositionLocalOf {
     ReplacementTypography(
-        body = TextStyle.Default,
+        header = TextStyle.Default,
         title = TextStyle.Default,
+        body = TextStyle.Default,
         item = TextStyle.Default,
         button = TextStyle.Default,
         buttonDisabled = TextStyle.Default,
@@ -53,6 +56,7 @@ val LocalReplacementShapes = staticCompositionLocalOf {
 val LocalReplacementColor = staticCompositionLocalOf {
     ReplacementColor(
         settings = Color.Unspecified,
+        image = Color.Unspecified,
         selector = Color.Unspecified,
         border = Color.Unspecified,
     )
@@ -64,12 +68,19 @@ fun SettingsTheme(
     content: @Composable () -> Unit
 ) {
     val replacementTypography = ReplacementTypography(
-        body = TextStyle(
-            fontSize = 16.sp
+        header = TextStyle(
+            fontWeight = FontWeight.Light,
+            fontSize = 16.sp,
+            color = if (isDark) textLightHeader else textDarkHeader,
         ),
         title = TextStyle(
             fontWeight = FontWeight.Light,
             fontSize = 32.sp,
+            color = if (isDark) textLight else textDark,
+        ),
+        body = TextStyle(
+            fontWeight = FontWeight.Light,
+            fontSize = 16.sp,
             color = if (isDark) textLight else textDark,
         ),
         item = TextStyle(
@@ -92,9 +103,10 @@ fun SettingsTheme(
         settings = RoundedCornerShape(CORNER_RADIUS),
     )
     val replacementColor = ReplacementColor(
-        settings = colorResource( if (isDark) R.color.blackTrans50 else R.color.blackInverseTrans50 ),
-        selector = colorResource( if (isDark) R.color.blackTrans50 else R.color.blackInverseTrans50 ),
-        border = colorResource( if (isDark) R.color.blackInverseTrans25 else R.color.whiteInverseTrans25 ),
+        settings = colorResource(if (isDark) R.color.blackTrans50 else R.color.blackInverseTrans50),
+        image = if (isDark) Color.LightGray else Color.DarkGray,
+        selector = colorResource(if (isDark) R.color.blackTrans50 else R.color.blackInverseTrans50),
+        border = colorResource(if (isDark) R.color.blackInverseTrans25 else R.color.whiteInverseTrans25),
     )
     CompositionLocalProvider(
         LocalReplacementTypography provides replacementTypography,

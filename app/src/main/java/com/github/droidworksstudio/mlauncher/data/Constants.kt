@@ -14,6 +14,7 @@ interface EnumOption {
     fun string(): String
 }
 
+
 object Constants {
 
     const val REQUEST_CODE_ENABLE_ADMIN = 666
@@ -26,27 +27,29 @@ object Constants {
 
     const val MIN_HOME_APPS = 0
     const val MAX_HOME_APPS = 30
+
     const val MIN_HOME_PAGES = 1
-    const val TEXT_SIZE_MIN = 10
-    const val TEXT_SIZE_MAX = 50
+
+    const val MIN_TEXT_SIZE = 10
+    const val MAX_TEXT_SIZE = 50
 
     const val BACKUP_WRITE = 1
     const val BACKUP_READ = 2
 
-    const val CLOCK_DATE_SIZE_MIN = 20
-    const val CLOCK_DATE_SIZE_MAX = 150
+    const val MIN_CLOCK_DATE_SIZE = 10
+    const val MAX_CLOCK_DATE_SIZE = 120
 
-    const val BATTERY_SIZE_MIN = 10
-    const val BATTERY_SIZE_MAX = 150
+    const val MIN_BATTERY_SIZE = 10
+    const val MAX_BATTERY_SIZE = 75
 
-    const val TEXT_MARGIN_MIN = 0
-    const val TEXT_MARGIN_MAX = 50
+    const val MIN_TEXT_PADDING = 0
+    const val MAX_TEXT_PADDING = 50
 
-    const val RECENT_COUNTER_MIN = 1
-    const val RECENT_COUNTER_MAX = 35
+    const val MIN_RECENT_COUNTER = 1
+    const val MAX_RECENT_COUNTER = 35
 
-    const val FILTER_STRENGTH_MIN = 0
-    const val FILTER_STRENGTH_MAX = 100
+    const val MIN_FILTER_STRENGTH = 0
+    const val MAX_FILTER_STRENGTH = 100
 
     const val MIN_OPACITY = 0
     const val MAX_OPACITY = 255
@@ -57,7 +60,7 @@ object Constants {
     var SWIPE_DISTANCE_THRESHOLD: Float = 0f
 
     // Update MAX_HOME_PAGES dynamically based on MAX_HOME_APPS
-    var MAX_HOME_PAGES: Int = 5
+    private var MAX_HOME_PAGES: Int = 5
 
     fun updateMaxHomePages(context: Context) {
         val prefs = Prefs(context)
@@ -127,27 +130,51 @@ object Constants {
         Thai,
         Turkish;
 
+        // Function to get a string from a context (for non-Composable use)
+        fun getString(context: Context): String {
+            return when (this) {
+                System -> context.getString(R.string.lang_system)
+                Arabic -> context.getString(R.string.lang_arabic)
+                Dutch -> context.getString(R.string.lang_dutch)
+                English -> context.getString(R.string.lang_english)
+                French -> context.getString(R.string.lang_french)
+                German -> context.getString(R.string.lang_german)
+                Hebrew -> context.getString(R.string.lang_hebrew)
+                Italian -> context.getString(R.string.lang_italian)
+                Japanese -> context.getString(R.string.lang_japanese)
+                Korean -> context.getString(R.string.lang_korean)
+                Lithuanian -> context.getString(R.string.lang_lithuanian)
+                Polish -> context.getString(R.string.lang_polish)
+                Portuguese -> context.getString(R.string.lang_portuguese)
+                Russian -> context.getString(R.string.lang_russian)
+                Slovak -> context.getString(R.string.lang_slovak)
+                Spanish -> context.getString(R.string.lang_spanish)
+                Thai -> context.getString(R.string.lang_thai)
+                Turkish -> context.getString(R.string.lang_turkish)
+            }
+        }
+
         @Composable
         override fun string(): String {
             return when (this) {
                 System -> stringResource(R.string.lang_system)
-                Arabic -> "العربية"
-                Dutch -> "Nederlands"
-                English -> "English "
-                French -> "Français"
-                German -> "Deutsch"
-                Hebrew -> "עִברִית"
-                Italian -> "Italiano"
-                Japanese -> "日本"
-                Korean -> "한국어"
-                Lithuanian -> "Lietuvių"
-                Polish -> "Polski"
-                Portuguese -> "Português"
-                Russian -> "Русский"
-                Slovak -> "slovenský"
-                Spanish -> "Español"
-                Thai -> "ไทย"
-                Turkish -> "Türkçe"
+                Arabic -> stringResource(R.string.lang_arabic)
+                Dutch -> stringResource(R.string.lang_dutch)
+                English -> stringResource(R.string.lang_english)
+                French -> stringResource(R.string.lang_french)
+                German -> stringResource(R.string.lang_german)
+                Hebrew -> stringResource(R.string.lang_hebrew)
+                Italian -> stringResource(R.string.lang_italian)
+                Japanese -> stringResource(R.string.lang_japanese)
+                Korean -> stringResource(R.string.lang_korean)
+                Lithuanian -> stringResource(R.string.lang_lithuanian)
+                Polish -> stringResource(R.string.lang_polish)
+                Portuguese -> stringResource(R.string.lang_portuguese)
+                Russian -> stringResource(R.string.lang_russian)
+                Slovak -> stringResource(R.string.lang_slovak)
+                Spanish -> stringResource(R.string.lang_spanish)
+                Thai -> stringResource(R.string.lang_thai)
+                Turkish -> stringResource(R.string.lang_turkish)
             }
         }
 
@@ -288,6 +315,16 @@ object Constants {
         Dark,
         Light;
 
+        // Function to get a string from a context (for non-Composable use)
+        fun getString(context: Context): String {
+            return when (this) {
+                System -> context.getString(R.string.lang_system)
+                Dark -> context.getString(R.string.dark)
+                Light -> context.getString(R.string.light)
+            }
+        }
+
+        // Keep this for Composable usage
         @Composable
         override fun string(): String {
             return when (this) {
@@ -298,7 +335,8 @@ object Constants {
         }
     }
 
-    enum class Fonts : EnumOption {
+
+    enum class FontFamily : EnumOption {
         System,
         Bitter,
         Dotness,

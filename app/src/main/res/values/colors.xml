@@ -30,6 +30,9 @@
     <color name="blackInverseTrans80">#CCFFFFFF</color>
     <color name="blackInverseTrans90">#E6FFFFFF</color>
 
+    <color name="background_light">#FFFFFFFF</color>
+    <color name="background_dark">#FF121212</color>
+
     <color name="green">#4CAF50</color>
     <color name="orange">#AF684C</color>
     <color name="red">#AF4C4C</color>

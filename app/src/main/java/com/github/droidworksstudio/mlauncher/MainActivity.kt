@@ -221,7 +221,7 @@ class MainActivity : AppCompatActivity() {
 
     @Suppress("DEPRECATION")
     private fun setLanguage() {
-        val locale = prefs.language.locale()
+        val locale = prefs.appLanguage.locale()
         val config = resources.configuration
         config.locale = locale
         resources.updateConfiguration(config, resources.displayMetrics)
@@ -260,13 +260,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun openLauncherChooser(resetFailed: Boolean) {
         if (resetFailed) {
-            val intent = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
-                Intent(Settings.ACTION_MANAGE_DEFAULT_APPS_SETTINGS) else {
-                showLongToast(
-                    "Search for launcher or home app"
-                )
-                Intent(Settings.ACTION_SETTINGS)
-            }
+            val intent = Intent(Settings.ACTION_MANAGE_DEFAULT_APPS_SETTINGS)
             startActivity(intent)
         }
     }
