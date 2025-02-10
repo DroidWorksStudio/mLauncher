@@ -1,4 +1,4 @@
-Gevorkt van <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimaal en schoon.
+Gevorkt vanaf <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimaal en schoon.
 
 # Geforked met extra functies
 
