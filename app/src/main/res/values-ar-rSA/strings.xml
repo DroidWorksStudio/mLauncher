@@ -81,7 +81,7 @@
     <string name="enable_notifications">تمكين الإخطارات</string>
     <string name="number_of_recents">عدد التطبيقات الحديثة</string>
     <string name="filter_strength">قوة التصفية</string>
-    <string name="search_from_start">البحث عن التطبيق من البداية.</string>
+    <string name="search_from_start">البحث عن التطبيق من البداية</string>
     <string name="icon_font">استخدم خط الأيقونة</string>
     <!-- Home-screen Strings -->
     <string name="apps_on_home_screen">عدد الاختصارات</string>
