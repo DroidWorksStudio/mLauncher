@@ -1,4 +1,4 @@
-Rozdzielono z <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimalne i czyste.
+Rozwidlony od <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimalne i czyste.
 
 # rozwidlenie z dodatkowymi funkcjami
 
