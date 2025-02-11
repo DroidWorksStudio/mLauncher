@@ -14,10 +14,12 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Language Support:
 
-- Updated Language Files. ([#646](https://github.com/DroidWorksStudio/mLauncher/issues/646)) - ([dc2ab98](https://github.com/DroidWorksStudio/mLauncher/commit/dc2ab98cc2657a1a7e3e3dcea981eed26b1c2476))
+- Updated Language Files. ([#646](https://github.com/DroidWorksStudio/mLauncher/issues/646)) - ([f90a0a4](https://github.com/DroidWorksStudio/mLauncher/commit/f90a0a49691dd61a090f0551c00bdab09664123a))
 
 ### Refactoring:
 
+- Cleaning Up Settings Part 2 - ([ddba550](https://github.com/DroidWorksStudio/mLauncher/commit/ddba5501c99ea9a3702d39762927c77aeeefcd51))
+- Cleaning Up Settings Part 1 - ([48e493b](https://github.com/DroidWorksStudio/mLauncher/commit/48e493bac1e3a6b31e4500666f61301071648827))
 - Moved around the settings - ([8ea6649](https://github.com/DroidWorksStudio/mLauncher/commit/8ea6649cd6d25a6e17f96e4e4c0219fc50655798))
 - Cleaned up .gitignore - ([08b2f4c](https://github.com/DroidWorksStudio/mLauncher/commit/08b2f4cf1dda1ab27239300becb6289b88f12822))
 - Cleaned up code and replaced deprecated code. - ([5b13384](https://github.com/DroidWorksStudio/mLauncher/commit/5b133844e59ef6cb7f72c0bc3a6ff711556a54b4))
