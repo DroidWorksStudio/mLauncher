@@ -1,4 +1,4 @@
-<a href="https://github.com/tanujnotes/Olauncher">Olauncher</a> からフォークされました。 ミニマルでクリーン。 ミニマルでクリーン。 ミニマムでクリーン。
+<a href="https://github.com/tanujnotes/Olauncher">Olauncher</a> からフォークされました。 ミニマルでクリーン。 ミニマルでクリーン。 ミニマムでクリーン。 ミニマムでクリーン。
 
 # 余分な機能をフォークしました
 
