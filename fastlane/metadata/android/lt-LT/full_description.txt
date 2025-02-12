@@ -1,79 +1,73 @@
-Šakė nuo <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimalus ir paprastas.
+<p>Šakė nuo <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimalus ir švarus.</p>
 
-# Variantas su papildomomis funkcijomis
+<h2>Šakės su papildomomis funkcijomis</h2>
 
-– Pašalinta netvarka, pvz., skelbimai ir nuorodos.
-- Programėlių stalčiuje galite pervadinti programėles (Programėlių pervadinimas pagrindiniame ekrane jau palaikomas. Tiesiog ilgai spustelėkite programėlę pagrindiniame ekrane ir pradėkite rašyti.)
-- Pradiniame ekrane pridėjome daug daugiau gestų parinkčių:
-    - Gestai dabar yra:
-        - Braukite aukštyn, žemyn, kairėn, dešinėn
-        - Paspaudus ant laikrodžio
-        - Paspaudus ant datos
-    – Dabar galimi veiksmai:
-        - Atidaryti nurodytą programą
-        - Rodyti programų sąrašą
-        - Ekrano užrakinimas
-        - Rodyti neseniai atidarytas programas
-        - Atidaryti pranešimų stalčių
-        - Greitųjų nustatymų atidarymas
-        - Maitinimo dialogas
-        - Ekrano kopijos darymas
-        - Išjungti gestus
-- Taip pat galite nustatyti laikrodį nepriklausomai nuo pagrindinio ekrano programėlių.
-- Pakeisti programėlių išdėstymą programėlių stalčiuje nepriklausomai nuo pagrindinio ekrano.
-- Pakeisti pagrindinio ekrano skyrių šrifto dydį nepriklausomai vienas nuo kito.
-- Pašalintas interneto leidimo reikalavimas. Niekada nežinote, ką programos kūrėjas nori sužinoti apie jus.
-- Užrakinti nustatymus už biometrinių duomenų (pasirinktinai)
-- Pridėta galimybė pranešti apie gedimą el. paštu.
-- Pridėta galimybė peržiūrėti programėlės naudojimo laiką.
+<ul>
+    <li>Pašalinta netvarka, pvz., skelbimai ir nuorodos.</li>
+    <li>Galite pervardyti programas programų stalčiuje (Programų pervadinimas pagrindiniame ekrane jau palaikomas. Tiesiog ilgai spustelėkite programą pagrindiniame ekrane ir pradėkite rašyti.)</li>
+    <li>Pridėjome daug daugiau gestų parinkčių pagrindiniame ekrane:
+        <ul>
+            <li><b>Gestai dabar apima:</b>
+                <ul>
+                    <li>Dukart palieskite</li>
+                    <li>Spustelėjus laikrodį</li>
+                    <li>Spustelėjus datą</li>
+                    <li>Spustelėjus bendrą naudojimą</li>
+                    <li>Trumpai perbraukite aukštyn</li>
+                    <li>Trumpai braukite žemyn</li>
+                    <li>Trumpai braukite kairėn</li>
+                    <li>Trumpai braukite dešinėn</li>
+                    <li>Ilgai braukite aukštyn</li>
+                    <li>Ilgai braukite žemyn</li>
+                    <li>Ilgai braukite kairėn</li>
+                    <li>Ilgai braukite dešinėn</li>
+                </ul>
+            </li>
+            <li><b>Dabar galimi veiksmai:</b>
+                <ul>
+                    <li>Atidarykite nurodytą programą</li>
+                    <li>Rodyti programų sąrašą</li>
+                    <li>Užrakinkite ekraną</li>
+                    <li>Rodyti neseniai atidarytas programas</li>
+                    <li>Atidarykite pranešimų stalčių</li>
+                    <li>Atidarykite sparčiuosius nustatymus</li>
+                    <li>Maitinimo dialogo langas</li>
+                    <li>Padarykite ekrano kopiją</li>
+                    <li>Perjungti puslapį</li>
+                    <li>Išjungti gestą</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>Taip pat galite nustatyti laikrodžio padėtį nepriklausomai nuo namų programų.</li>
+    <li>Keiskite programų išdėstymą programų stalčiuje nepriklausomai nuo pagrindinio ekrano.</li>
+    <li>Pakeiskite pagrindinio ekrano skyrių šrifto dydį nepriklausomai vienas nuo kito.</li>
+    <li>Pašalintas interneto leidimas. Niekada nežinote, ką programos kūrėjas nori sužinoti apie jus.</li>
+    <li>Užrakinti nustatymus už biometrinių duomenų (perjungti).</li>
+    <li>Pridėta galimybė pranešti apie gedimus el. paštu.</li>
+    <li>Pridėta galimybė peržiūrėti programos naudojimo laiką.</li>
+</ul>
 
-## Vertimai:
+<h2>Vertimai</h2>
 
-- Daug žmonių išvertė programėlę į šias kalbas. Dėkojame jums visiems.
-  – Afrikanų kalba
-  - Arabų kalba
-  - Albanų kalba
-  - Bulgarų kalba
-  - Kinų kalba
-  - Kroatų kalba
-  - Čekų kalba
-  - Danų kalba
-  - Anglų kalba
-  - Estų kalba
-  - Filipiniečių kalba
-  - Suomių kalba
-  - Prancūzų kalba
-  - Gruzinų kalba
-  - Vokiečių kalba
-  - Graikų kalba
-  - Havajiečių kalba
-  - Hebrajų kalba
-  - Hindi kalba
-  - Vengrų kalba
-  - Islandų kalba
-  - Indoneziečių kalba
-  - Airijos
-  - Italų kalba
-  - Japonų kalba
-  - Korėjiečių kalba
-  - Lietuvių kalba
-  - Liuksemburgo kalba
-  - Malajų kalba
-  - Malagasių kalba
-  - Malajalamų kalba
-  - Norvegų kalba
-  - Nepalų kalba
-  - Persų kalba
-  - Lenkų kalba
-  - Portugalų (Europos) kalba
-  - Pandžabų kalba
-  - Rusų kalba
-  - Serbų kalba
-  - Sindų kalba
-  – Slovakų kalba
-  - Ispanų kalba
-  - Švedų kalba
-  - Tailandiečių kalba
-  - Turkų kalba
-  - Ukrainiečių kalba
-  - Vietnamiečių kalba
+<p>Daug žmonių išvertė programą į šias kalbas. Labai ačiū jums visiems:</p>
+
+<ul>
+    <li>arabų</li>
+    <li>olandų</li>
+    <li>Anglų kalba</li>
+    <li>prancūzų</li>
+    <li>Vokiečių</li>
+    <li>hebrajų</li>
+    <li>italų</li>
+    <li>japonų</li>
+    <li>korėjiečių</li>
+    <li>Lietuviškai</li>
+    <li>lenkų</li>
+    <li>portugalų</li>
+    <li>Rusų</li>
+    <li>slovakų</li>
+    <li>Ispanų</li>
+    <li>tajų</li>
+    <li>turkų</li>
+</ul>

@@ -1,79 +1,73 @@
-Bifurqué à partir de <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimaliste et propre.
+<p>Fourchu à partir de <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimaliste et propre.</p>
 
-# Forké avec des fonctionnalités supplémentaires
+<h2>Fourchu avec des fonctionnalités supplémentaires</h2>
 
-- Suppression de l'encombrement, comme les publicités et les liens.
-- Vous pouvez renommer les applications dans le tiroir d'applications (le renommage des applications sur l'écran d'accueil est déjà pris en charge. Cliquez simplement longuement sur une application sur l'écran d'accueil et commencez à taper.)
-- Beaucoup plus de possibilités de personnalisation des gestes de l'écran d'accueil
-    - Les gestes sont maintenant :
-        - Glissement vers le haut, vers le bas, vers la gauche, vers la droite
-        - Possibilité de changer l'application qui s'ouvre en cliquant sur l'horloge
-        - Possibilité de changer l'application qui s'ouvre en cliquant sur la date
-    - Les actions possibles incluent maintenant :
-        - Ouvrir l'application spécifiée
-        - Afficher la liste des applications
-        - Verrouillage de l'écran
-        - Afficher les applications ouvertes récemment
-        - Ouverture du panneau de notification
-        - Ouverture des paramètres rapides
-        - Boîte de dialogue d'alimentation
-        - Prendre une capture d'écran
-        - Désactiver le geste
-- Vous pouvez également positionner l'horloge indépendamment des applications domestiques.
-- Modifiez l'alignement des applications dans le tiroir d'applications indépendamment de l'écran d'accueil.
-- Modifiez la taille de la police des sections de l'écran d'accueil indépendamment les unes des autres.
-- Suppression de l'autorisation d'accès à Internet - Suppression de l'autorisation d'accès à Internet Vous ne savez jamais ce qu'un développeur d'applications veut savoir de vous.
-- Verrouiller les paramètres derrière la biométrie (bascule)
-- Ajout de la possibilité de signaler un crash par e-mail.
-- Ajout de la possibilité d'afficher le temps d'utilisation de l'application.
+<ul>
+    <li>Suppression des éléments encombrants, comme les publicités et les liens.</li>
+    <li>Vous pouvez renommer des applications dans le tiroir d'applications (le renommage des applications sur l'écran d'accueil est déjà pris en charge. Cliquez longuement sur une application sur l'écran d'accueil et commencez à taper.)</li>
+    <li>Nous avons ajouté beaucoup plus d'options pour les gestes sur l'écran d'accueil :
+        <ul>
+            <li><b>Les gestes incluent désormais :</b>
+                <ul>
+                    <li>Appuyez deux fois</li>
+                    <li>Cliquer sur l'horloge</li>
+                    <li>En cliquant sur la date</li>
+                    <li>En cliquant sur l'utilisation totale</li>
+                    <li>Glissement court vers le haut</li>
+                    <li>Glissement court vers le bas</li>
+                    <li>Glissement court vers la gauche</li>
+                    <li>Glissement court vers la droite</li>
+                    <li>Balayage long vers le haut</li>
+                    <li>Glissement long vers le bas</li>
+                    <li>Balayage long vers la gauche</li>
+                    <li>Balayage long vers la droite</li>
+                </ul>
+            </li>
+            <li><b>Les actions possibles incluent désormais :</b>
+                <ul>
+                    <li>Ouvrir l'application spécifiée</li>
+                    <li>Afficher la liste des applications</li>
+                    <li>Verrouiller l'écran</li>
+                    <li>Afficher les applications récemment ouvertes</li>
+                    <li>Ouvrir le tiroir de notifications</li>
+                    <li>Ouvrir les paramètres rapides</li>
+                    <li>Dialogue d'alimentation</li>
+                    <li>Prendre une capture d'écran</li>
+                    <li>Changer de page</li>
+                    <li>Désactiver le geste</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>Vous pouvez également positionner l'horloge indépendamment des applications domestiques.</li>
+    <li>Modifiez l'alignement des applications dans le tiroir d'applications indépendamment de l'écran d'accueil.</li>
+    <li>Modifiez la taille de la police des sections de l'écran d'accueil indépendamment les unes des autres.</li>
+    <li>Autorisation Internet supprimée. On ne sait jamais ce qu'un développeur d'applications veut savoir sur vous.</li>
+    <li>Verrouiller les paramètres derrière la biométrie (bascule).</li>
+    <li>Ajout de la possibilité de signaler les plantages par e-mail.</li>
+    <li>Ajout de la possibilité d'afficher le temps d'utilisation de l'application.</li>
+</ul>
 
-## Traductions :
+<h2>Traductions</h2>
 
-- De nombreuses personnes ont traduit l'application dans les langues suivantes. Un grand merci à vous tous.
-  -Afrikaans
-  - Arabe
-  - Albanais
-  - Bulgare
-  - chinois
-  - Croate
-  - Tchèque
-  - danois
-  - anglais
-  - Estonien
-  - Philippin
-  - finlandais
-  - français
-  - Géorgien
-  - Allemand
-  - Grec
-  - Hawaïen
-  - Hébreu
-  - Hindi
-  - Hongrois
-  - islandais
-  - Indonésien
-  - Irlandais
-  - Italien
-  - Japonais
-  - Coréen
-  - Lituanien
-  - luxembourgeois
-  - Malais
-  - Malgache
-  - Malayalam
-  - Norvégien
-  - Népalais
-  - Perse
-  - polonais
-  - Portugais (européen)
-  - Punjabi
-  - Russe
-  - Serbe
-  - Sindhi
-  - slovaque
-  - espagnol
-  - Suédois
-  - thaïlandais
-  - turc
-  - Ukrainien
-  - vietnamien
+<p>De nombreuses personnes ont traduit l'application dans les langues suivantes. Un grand merci à vous tous :</p>
+
+<ul>
+    <li>Arabe</li>
+    <li>Néerlandais</li>
+    <li>Anglais</li>
+    <li>Français</li>
+    <li>Allemand</li>
+    <li>Hébreu</li>
+    <li>Italien</li>
+    <li>Japonais</li>
+    <li>Coréen</li>
+    <li>Lituanien</li>
+    <li>Polonais</li>
+    <li>Portugais</li>
+    <li>Russe</li>
+    <li>Slovaque</li>
+    <li>Espagnol</li>
+    <li>Thaï</li>
+    <li>Turc</li>
+</ul>

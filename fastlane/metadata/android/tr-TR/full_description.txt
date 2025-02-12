@@ -1,79 +1,73 @@
-<a href="https://github.com/tanujnotes/Olauncher">Olauncher</a> 'dan alındı. Minimal ve temiz.
+<p> <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>'den türetilmiştir. Minimal ve temiz.</p>
 
-#Daha fazla özelliklli bir alıntı.
+<h2>Ekstra Özelliklerle Çatallandı</h2>
 
-- Reklamlar ve bağlantılar gibi dağınıklık kaldırıldı.
-- Uygulama-çekmecesindeki uygulamaları yeniden adlandırabilirsiniz (Ana ekrandaki uygulamaları yeniden adlandırmak zaten desteklenmektedir. Ana ekrandaki bir uygulamaya uzun tıklayıp yazmaya başlamanız yeterli.)
-- Ana ekran'daki jestler için  çok daha fazla seçenek var:
-    - Jestler Günümüz:
-        - Yukarı, aşağı, sola, sağa Kaydırma
-        - Saat'e Tıklama
-        - Tarih'e Tıklama
-    - Olası eylemler artık şunları içeriyor:
-        - Belirtilen uygulamayı aç
-        - Uygulama listesini görüntüle
-        - Ekranı Kilitle
-        - En son açılan uygulamaları göster
-        - Bildirim çekmecesini açma
-        - Hızlı ayarları açma
-        - Güç Diyaloğu
-        - Ekran görüntüsü al
-        - Hareketi Devre Dışı Bırak
-- Saati ev uygulamalarından bağımsız olarak da konumlandırabilirsiniz.
-- Ana ekrandan bağımsız olarak uygulama çekmecesindeki uygulamaların hizalamasını değiştirin.
-- Ana ekranın bölümlerinin yazı tipi boyutunu birbirinden bağımsız olarak değiştirin.
-- İnternet izni kaldırıldı. Bir uygulama geliştiricisinin sizin hakkınızda ne bilmek istediğini asla bilemezsin.
-- Biyometrinin arkasındaki ayarları kilitleyin (geçiş)
-- Çökmeyi e-posta yoluyla bildirme yeteneği eklendi.
-- Uygulama kullanım süresini görüntüleme özelliği eklendi.
+<ul>
+    <li>Reklamlar ve bağlantılar gibi karışıklıklar kaldırıldı.</li>
+    <li>Uygulama çekmecesinde uygulamaların adını değiştirebilirsiniz (Ana ekrandaki uygulamaların adını değiştirme özelliği zaten destekleniyor. (Ana ekranda bir uygulamaya uzun tıklayın ve yazmaya başlayın.)</li>
+    <li>Ana ekrana hareketler için çok daha fazla seçenek ekledik:
+        <ul>
+            <li><b>Hareketler artık şunları içeriyor:</b>
+                <ul>
+                    <li>Çift dokunuş</li>
+                    <li>Saate tıklamak</li>
+                    <li>Tarihe tıklayın</li>
+                    <li>Toplam kullanıma tıklayın</li>
+                    <li>Kısa yukarı kaydırma</li>
+                    <li>Kısa aşağı kaydırma</li>
+                    <li>Sola kısa kaydırma</li>
+                    <li>Kısa sağa kaydırma</li>
+                    <li>Yukarı doğru uzun kaydırma</li>
+                    <li>Aşağıya doğru uzun kaydırma</li>
+                    <li>Sola uzun kaydırma</li>
+                    <li>Sağa uzun kaydırma</li>
+                </ul>
+            </li>
+            <li><b>Olası eylemler artık şunları içeriyor:</b>
+                <ul>
+                    <li>Belirtilen uygulamayı aç</li>
+                    <li>Uygulama listesini görüntüle</li>
+                    <li>Ekranı kilitle</li>
+                    <li>Son açılan uygulamaları göster</li>
+                    <li>Bildirim çekmecesini aç</li>
+                    <li>Hızlı ayarları aç</li>
+                    <li>Güç iletişim kutusu</li>
+                    <li>Ekran görüntüsü al</li>
+                    <li>Sayfayı Değiştir</li>
+                    <li>Hareketi devre dışı bırak</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>Saati ev uygulamalarından bağımsız olarak da konumlandırabilirsiniz.</li>
+    <li>Uygulama çekmecesindeki uygulamaların hizalamasını ana ekrandan bağımsız olarak değiştirin.</li>
+    <li>Ana ekranın bölümlerinin yazı tipi boyutunu birbirinden bağımsız olarak değiştirin.</li>
+    <li>İnternet izni kaldırıldı. Bir uygulama geliştiricisinin sizin hakkınızda ne bilmek istediğini asla bilemezsiniz.</li>
+    <li>Biyometrik verilerin arkasındaki ayarları kilitle (değiştir).</li>
+    <li>Çökmeleri e-posta yoluyla bildirme yeteneği eklendi.</li>
+    <li>Uygulama kullanım süresini görüntüleme yeteneği eklendi.</li>
+</ul>
 
-## Çeviriler:
+<h2>Çeviriler</h2>
 
-- Birçok kişi uygulamayı aşağıdaki dillere çevirmiştir. Hepinize çok teşekkürler.
-  - Afrikaans
-  - Arapça
-  - Arnavutça
-  - Bulgarca
-  - Çince
-  - Hırvatça
-  - Çekçe
-  - Danca
-  - İngilizce
-  - Estonca
-  - Filipince
-  - Fince
-  - Fransızca
-  - Gürcüce
-  - Almanca
-  - Yunanca
-  - Hawaii dili
-  - İbranice
-  - Hintçe
-  - Macarca
-  - İzlandaca
-  - Endonezyaca
-  - İrlandaca
-  - İtalyanca
-  - Japonca
-  - Korece
-  - Litvanyaca
-  - Lüksemburgca
-  - Malayca
-  - Malgaşça
-  - Malayalam
-  - Norveççe
-  - Nepalce
-  - Farsça
-  - Lehçe
-  - Portekizce (Avrupa)
-  - Punjabi
-  - Rusça
-  - Sırpça
-  - Sindhi
-  - Slovakça
-  - İspanyolca
-  - İsveçce
-  - Tayca
-  - Türkçe
-  - Ukrayna
-  - Vietnamca
+<p>Birçok kişi uygulamayı aşağıdaki dillere çevirdi. Hepinize çok teşekkürler:</p>
+
+<ul>
+    <li>Arapça</li>
+    <li>Hollandaca</li>
+    <li>İngilizce</li>
+    <li>Fransızca</li>
+    <li>Almanca</li>
+    <li>İbranice</li>
+    <li>İtalyanca</li>
+    <li>Japonca</li>
+    <li>Korece</li>
+    <li>Litvanyaca</li>
+    <li>Lehçe</li>
+    <li>Portekizce</li>
+    <li>Rusça</li>
+    <li>Slovakça</li>
+    <li>İspanyolca</li>
+    <li>Tayca</li>
+    <li>Türkçe</li>
+</ul>

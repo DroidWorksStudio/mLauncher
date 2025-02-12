@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="lang_arabic">아라비아 말</string>
+    <string name="lang_arabic">아랍어</string>
     <string name="lang_dutch">네덜란드 사람</string>
     <string name="lang_english">영어</string>
-    <string name="lang_french">프랑스 국민</string>
-    <string name="lang_german">독일 사람</string>
-    <string name="lang_hebrew">헤브라이 사람</string>
-    <string name="lang_italian">이탈리아 사람</string>
+    <string name="lang_french">프랑스어</string>
+    <string name="lang_german">독일어</string>
+    <string name="lang_hebrew">히브리어</string>
+    <string name="lang_italian">이탈리아어</string>
     <string name="lang_japanese">일본어</string>
     <string name="lang_korean">한국인</string>
-    <string name="lang_lithuanian">리투아니아 사람</string>
-    <string name="lang_polish">광택</string>
+    <string name="lang_lithuanian">리투아니아어</string>
+    <string name="lang_polish">폴란드어</string>
     <string name="lang_portuguese">포르투갈 인</string>
-    <string name="lang_russian">러시아인</string>
-    <string name="lang_slovak">슬로바키아 사람</string>
-    <string name="lang_spanish">스페인 사람</string>
+    <string name="lang_russian">러시아어</string>
+    <string name="lang_slovak">슬로바키아어</string>
+    <string name="lang_spanish">스페인의</string>
     <string name="lang_thai">태국어</string>
     <string name="lang_turkish">터키어</string>
 </resources>

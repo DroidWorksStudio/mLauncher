@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="lang_arabic">arabo</string>
+    <string name="lang_arabic">Arabo</string>
     <string name="lang_dutch">Olandese</string>
     <string name="lang_english">Inglese</string>
-    <string name="lang_french">francese</string>
-    <string name="lang_german">tedesco</string>
-    <string name="lang_hebrew">ebraico</string>
+    <string name="lang_french">Francese</string>
+    <string name="lang_german">Tedesco</string>
+    <string name="lang_hebrew">Ebraico</string>
     <string name="lang_italian">Italiano</string>
-    <string name="lang_japanese">giapponese</string>
-    <string name="lang_korean">coreano</string>
-    <string name="lang_lithuanian">lituano</string>
+    <string name="lang_japanese">Giapponese</string>
+    <string name="lang_korean">Coreano</string>
+    <string name="lang_lithuanian">Lituano</string>
     <string name="lang_polish">Polacco</string>
     <string name="lang_portuguese">portoghese</string>
-    <string name="lang_russian">russo</string>
-    <string name="lang_slovak">slovacco</string>
-    <string name="lang_spanish">spagnolo</string>
+    <string name="lang_russian">Russo</string>
+    <string name="lang_slovak">Slovacco</string>
+    <string name="lang_spanish">Spagnolo</string>
     <string name="lang_thai">tailandese</string>
-    <string name="lang_turkish">turco</string>
+    <string name="lang_turkish">Turco</string>
 </resources>

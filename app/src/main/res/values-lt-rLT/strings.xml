@@ -2,25 +2,99 @@
 <resources>
     <!-- Base Settings -->
     <string name="select_app">Pasirinkite programą</string>
+    <string name="show_apps">Visos programėlės</string>
     <!-- Strings used for settings menus -->
     <string name="settings_name">mLauncher nustatymai</string>
     <string name="settings_features_title">Savybės</string>
     <string name="settings_features_description">Pagerinkite savo produktyvumą.</string>
-    <string name="settings_look_feel_title">Pažiūrėk ir Jausk</string>
+    <string name="settings_look_feel_title">Pažiūrėk &amp; Jausk</string>
     <string name="settings_look_feel_description">Suteikite savo pagrindiniam ekranui asmeniškumo.</string>
+    <string name="settings_gestures_title">Gestai</string>
+    <string name="settings_gestures_description">Tinkinkite gestus, kad galėtumėte greitai ir lengvai naršyti.</string>
     <string name="settings_favorite_apps_title">Mėgstamiausios programos</string>
     <string name="settings_hidden_apps_title">Paslėptos programėlės</string>
-    <string name="settings_advanced_title">Išplėstinė</string>
+    <string name="settings_advanced_title">Išplėstiniai nustatymai</string>
     <!-- Strings used for features settings -->
     <string name="features_settings_title">Savybės</string>
-    <!-- Strings used for look And feel settings -->
-    <string name="look_feel_settings_title">Žiūrėti ir Jausti</string>
+    <string name="user_preferences">Vartotojo nuostatos</string>
+    <string name="theme_mode">Temavimo režimas</string>
+    <string name="app_language">Sąsajos kalba</string>
+    <string name="font_family">Šrifto šeima</string>
+    <string name="settings_text_size">Nustatymai Teksto dydis</string>
+    <string name="search">Ieškoti</string>
+    <string name="search_engine">Paieškos sistema</string>
+    <string name="auto_show_keyboard">Automatiškai rodyti klaviatūrą</string>
+    <string name="search_from_start">Programėlių paieška nuo pradžių.</string>
+    <string name="home_management">Pagrindinis &amp; Programų valdymas</string>
+    <string name="auto_open_apps">Automatiškai atidaryti programėlės</string>
+    <string name="lock_home_apps">Užrakinti programas</string>
+    <string name="lock_settings">Užrakinimo nustatymai</string>
+    <string name="apps_on_home_screen">Nuorodų skaičius</string>
+    <string name="pages_on_home_screen">Puslapių skaičius</string>
+    <string name="enable_home_pager">Įjungti pradžios puslapį</string>
+    <string name="battery_date_time">Baterija &amp; Data/Laikas</string>
+    <string name="show_time">Rodyti laiką</string>
+    <string name="show_time_format">Laiko formatas (AM/PM)</string>
+    <string name="show_date">Rodyti datą</string>
+    <string name="show_battery">Rodyti bateriją</string>
+    <string name="show_battery_icon">Rodyti akumuliatoriaus piktogramą</string>
+    <string name="show_total_screen_time">Rodyti bendrą ekrano laiką</string>
+    <!-- Strings used for look & feel settings -->
+    <string name="look_feel_settings_title">Pažiūrėk &amp; Jausk</string>
+    <string name="text_size_adjustments">Tekstas &amp; Dydžio koregavimas</string>
+    <string name="app_text_size">Programėlės Šrifto dydis</string>
+    <string name="clock_text_size">Laikrodžio teksto dydis</string>
+    <string name="date_text_size">Datos Šrifto dydis</string>
+    <string name="battery_text_size">Baterijos Šrifto dydis</string>
+    <string name="layout_positioning">Išdėstymas &amp; Padėties nustatymas</string>
+    <string name="app_padding_size">Užpildymo Dydis</string>
+    <string name="extend_home_apps_area">Išplėsti spustelėjamą sritį</string>
+    <string name="alignment_to_bottom">Sulygiuoti į apačią</string>
+    <string name="visibility_display">Matomumas &amp; Ekranas</string>
+    <string name="show_status_bar">Rodyti būsenos juostą</string>
+    <string name="show_recent_apps">Rodyti naujausias programas</string>
+    <string name="number_of_recents">Naujausiai atdarytų programėlių skaičius</string>
+    <string name="show_app_usage_stats">Rodyti programos naudojimo statistiką</string>
+    <string name="filter_strength">Filtro stiprumas</string>
+    <string name="background_opacity">Fono permatomumas</string>
+    <string name="element_alignment">Elementų lygiavimas</string>
+    <string name="date_alignment">Data</string>
+    <string name="clock_alignment">Laikrodis</string>
+    <string name="home_alignment">Namų programos</string>
+    <string name="drawer_alignment">Stalčių programos</string>
+    <string name="element_colors">Elementų spalvos</string>
+    <!-- Strings used for gestures settings -->
+    <string name="gestures_settings_title">Gestai</string>
+    <string name="tap_click_actions">Bakstelėkite / spustelėkite Veiksmai</string>
+    <string name="double_tap">Dukart paspauskite</string>
+    <string name="clock_click_app">Spustelėkite ant laikrodžio</string>
+    <string name="date_click_app">Spustelėkite ant datos</string>
+    <string name="usage_click_app">Spustelėkite Bendras naudojimas</string>
+    <string name="swipe_movement">Braukimo judesys</string>
+    <string name="short_swipe_up_app">Trumpai braukti į viršų</string>
+    <string name="short_swipe_down_app">Trumpai braukti žemyn</string>
+    <string name="short_swipe_left_app">Trumpai braukti kairėn</string>
+    <string name="short_swipe_right_app">Trumpai braukti dešinėn</string>
+    <string name="long_swipe_up_app">Ilgai braukti aukštyn</string>
+    <string name="long_swipe_down_app">Ilgai braukti žemyn</string>
+    <string name="long_swipe_left_app">Ilgai braukti kairėn</string>
+    <string name="long_swipe_right_app">Ilgai braukti dešinėn</string>
+    <string name="open_app">Atidaryti programėlę</string>
+    <string name="lock_screen">Užrakinti ekraną</string>
+    <string name="show_notifications">Rodyti pranešimą</string>
+    <string name="show_app_list">Rodyti programėlių sąrašą</string>
+    <string name="open_quick_settings">Greitieji nustatymai</string>
+    <string name="show_recents">Rodyti naujausius</string>
+    <string name="open_power_dialog">Maitinimo dialogas</string>
+    <string name="take_a_screenshot">Padaryti ekrano kopiją</string>
+    <string name="left_page">Eiti į kairįjį puslapį</string>
+    <string name="right_page">Eiti į dešinįjį puslapį</string>
     <!-- Strings used for advanced settings -->
     <string name="advanced_settings_title">Išplėstiniai nustatymai</string>
     <string name="advanced_settings_app_info_title">Programos informacija</string>
     <string name="advanced_settings_app_info_description">%1$s</string>
-    <string name="advanced_settings_set_as_default_launcher">Nustatyti kaip numatytąją paleidimo priemonę</string>
-    <string name="advanced_settings_change_default_launcher">Pakeiskite numatytąją paleidimo priemonę</string>
+    <string name="advanced_settings_set_as_default_launcher">Nustatyti kaip numatytajį darbalaukį</string>
+    <string name="advanced_settings_change_default_launcher">Pakeisti numatytajį darbalaukį</string>
     <string name="advanced_settings_restart_title">Iš naujo paleiskite paleidimo priemonę</string>
     <string name="advanced_settings_restart_description">Ar bandėte jį įjungti ir išjungti?</string>
     <string name="advanced_settings_backup_restore_title">Atsarginė kopija / atkūrimas</string>
@@ -32,140 +106,26 @@
     <string name="advanced_settings_backup_restore_clear_description">Ar tikrai norite tai padaryti?</string>
     <string name="advanced_settings_backup_restore_clear_yes">Taip</string>
     <string name="advanced_settings_backup_restore_clear_no">Nr</string>
-    <string name="advanced_settings_help_feedback_title">Pagalba ir atsiliepimai</string>
+    <string name="advanced_settings_help_feedback_title">Pagalba &amp; Atsiliepimai</string>
     <string name="advanced_settings_community_support_title">Bendruomenės parama</string>
     <string name="advanced_settings_share_application_title">Dalintis programa</string>
     <string name="advanced_settings_share_application_description">Padidinkite savo patirtį naudodami %1$s! Gaukite jį dabar „fDroid“ ir pažiūrėkite, apie ką visi kalba!\n</string>
-    <!-- Admin Settings -->
-    <string name="admin_permission_message">„mLauncher“ žada atsakingai naudoti ekrano užrakinimo leidimą. „mLauncher“ nerenka ir  jokių duomenų.</string>
-    <string name="experimental">(Eksperimentinis)</string>
-    <!-- Settings Headers -->
-    <string name="display">Ekranas</string>
-    <string name="language_region">Kalba &amp; Regionas</string>
-    <string name="accessibility">Prieinamumas</string>
-    <string name="appearance">Išvaizda</string>
-    <string name="behavior">Funkcionavimas</string>
-    <string name="homescreen">Pagrindinis ekranas</string>
-    <string name="alignment">Lygiavimas</string>
-    <string name="gestures">Gestai</string>
-    <string name="miscellaneous">Įvairūs</string>
-    <!-- Home Strings -->
+    <!-- App Page Strings -->
     <string name="hidden_apps">Paslėptos programėlės</string>
     <string name="favorite_apps">Mėgstamiausios programos</string>
-    <!-- Display Strings -->
-    <string name="show_status_bar">Rodyti būsenos juostą</string>
-    <string name="show_recent_apps">Rodyti naujausias programas</string>
-    <string name="show_app_usage_stats">Rodyti programos naudojimo statistiką</string>
-    <string name="show_time">Rodyti laiką</string>
-    <string name="show_time_format">Laiko formatas (AM/PM)</string>
-    <string name="show_date">Rodyti datą</string>
-    <string name="show_battery">Rodyti bateriją</string>
-    <string name="show_battery_icon">Rodyti akumuliatoriaus piktogramą</string>
-    <string name="show_header_text">Rodyti antraštės tekstą</string>
-    <!-- Language & Region Strings -->
-    <string name="app_language">Sąsajos kalba</string>
-    <!-- Accessibility Strings -->
-    <string name="app_text_size">Programėlės Šrifto dydis</string>
-    <string name="clock_text_size">Laikrodžio teksto dydis</string>
-    <string name="date_text_size">Datos Šrifto dydis</string>
-    <string name="battery_text_size">Baterijos Šrifto dydis</string>
-    <string name="app_padding_size">Užpildymo Dydis</string>
-    <string name="app_font">Šrifto šeima</string>
-    <!-- Appearance Strings -->
-    <string name="theme_mode">Temavimo režimas</string>
-    <string name="background_opacity">Fono permatomumas</string>
-    <string name="home_alignment_bottom">Pradinio ekrano lygiavimas apačioje</string>
-    <!-- Behavior Strings -->
-    <string name="auto_show_keyboard">Automatiškai rodyti klaviatūrą</string>
-    <string name="auto_open_apps">Automatiškai atidaryti programėlės</string>
-    <string name="enable_notifications">Įgalinti pranešimus</string>
-    <string name="number_of_recents">Naujausiai atdarytų programėlių skaičius</string>
-    <string name="filter_strength">Filtro stiprumas</string>
-    <string name="search_from_start">Programėlių paieška nuo pradžių.</string>
-    <string name="icon_font">Naudoti piktogramos šriftą</string>
-    <!-- Home-screen Strings -->
-    <string name="apps_on_home_screen">Nuorodų skaičius</string>
-    <string name="pages_on_home_screen">Puslapių skaičius</string>
-    <string name="enable_home_pager">Įjungti pradžios puslapį</string>
-    <string name="lock_home_apps">Užrakinti programas</string>
-    <string name="extend_home_apps_area">Išplėsti spustelėjamą sritį</string>
-    <!-- Alignment Strings -->
-    <string name="home_alignment">Pagrindinis programėlių ekranas</string>
-    <string name="clock_alignment">Laikas ir data</string>
-    <string name="drawer_alignment">Programėlės programėlių stalčiuje</string>
-    <!-- Gestures Strings -->
-    <string name="short_swipe_up_app">Trumpai braukti į viršų</string>
-    <string name="short_swipe_down_app">Trumpai braukti žemyn</string>
-    <string name="short_swipe_left_app">Trumpai braukti kairėn</string>
-    <string name="short_swipe_right_app">Trumpai braukti dešinėn</string>
-    <string name="long_swipe_up_app">Ilgai braukti aukštyn</string>
-    <string name="long_swipe_down_app">Ilgai braukti žemyn</string>
-    <string name="long_swipe_left_app">Ilgai braukti kairėn</string>
-    <string name="long_swipe_right_app">Ilgai braukti dešinėn</string>
-    <string name="clock_click_app">Spustelėkite ant laikrodžio</string>
-    <string name="date_click_app">Spustelėkite ant datos</string>
-    <string name="usage_click_app">Spustelėkite Bendras naudojimas</string>
-    <string name="double_tap">Dukart paspauskite</string>
-    <!-- Gestures Do Strings -->
-    <string name="show_notifications">Rodyti pranešimą</string>
-    <string name="show_app_list">Rodyti programėlių sąrašą</string>
-    <string name="open_app">Atidaryti programėlę</string>
-    <string name="lock_screen">Užrakinti ekraną</string>
-    <string name="open_quick_settings">Greitieji nustatymai</string>
-    <string name="show_recents">Rodyti naujausius</string>
-    <string name="open_power_dialog">Maitinimo dialogas</string>
-    <string name="take_a_screenshot">Padaryti ekrano kopiją</string>
-    <string name="left_page">Eiti į kairįjį puslapį</string>
-    <string name="right_page">Eiti į dešinįjį puslapį</string>
-    <string name="double_tap_to_lock_screen">Dukart palieskite, kad užrakintumėte</string>
-    <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">Nustatymai Teksto dydis</string>
-    <string name="display_hidden_apps">Rodyti paslėptas programėles</string>
-    <string name="lock_settings">Užrakinimo nustatymai</string>
-    <!-- Backup Strings -->
-    <string name="backup">Atsarginė kopija</string>
-    <string name="load_backup">Įkelti</string>
-    <string name="save_backup">Įrašyti</string>
-    <string name="clear_backup">Išvalyti</string>
-    <!-- Settings Strings -->
-    <string name="off">Išjungti</string>
-    <string name="on">Įjungti</string>
-    <string name="left">Kairė</string>
-    <string name="right">Dešnė</string>
-    <string name="center">Centras</string>
-    <string name="dark">Tamsi</string>
-    <string name="light">Šviesi</string>
-    <string name="settings">Nustatymai</string>
-    <string name="lang_system">Sistema</string>
-    <string name="system_default">Sistema</string>
-    <string name="delete">Ištrinti</string>
-    <string name="hide">Slėpti</string>
-    <string name="unhide">Neslėpti</string>
-    <string name="rename">Pervadyti</string>
-    <string name="info">Informacija</string>
-    <string name="okay">Gerai</string>
-    <string name="save">Išsaugoti</string>
-    <string name="show">Rodyti</string>
-    <string name="reset">Atstatyti</string>
-    <string name="cancel">Atšaukti</string>
-    <string name="enable">Įgalinti</string>
-    <string name="disable">Išjungti</string>
-    <string name="enabled">Įgalintas</string>
-    <string name="disabled">Išjungtas</string>
-    <string name="open">Atidaryti</string>
-    <string name="close">Uždaryti</string>
-    <string name="copy">Kopijuoti</string>
-    <!-- Colored Themes -->
-    <string name="catppuccino">Catppuccino</string>
-    <string name="nordic">Šiaurės šalių</string>
-    <!-- Dark Only Themes -->
-    <string name="dracula">Drakula</string>
-    <string name="arc">Arc</string>
-    <string name="nokto">Nokto</string>
-    <string name="breeze">Vėjas</string>
-    <string name="yaru">Yaru</string>
-    <!-- Light Only Themes -->
-    <string name="adwaita">Adwaita</string>
+    <!-- Accessibility/Help Strings -->
+    <string name="double_tap_lock_is_enabled_message">Jei užraktas spustelėjus du kartus išjungia piršto atspaudą arba atrakinimą pagal veidą, atidarykite mLauncher nustatymus, bakstelėkite \'eksperimentinis\' ir vadovaukitės instrukcijomis. Ačiū.</string>
+    <string name="double_tap_lock_uninstall_message">Dukart palieskite, kad užrakintumėte įgalinimą.
+		\n\nPastaba: pirmiausia IŠJUNKITE, jei nuspręsite ištrinti mLauncher.</string>
+    <string name="accessibility_service_name">mLauncher veiksmų tarnyba</string>
+    <string name="accessibility_service_description">Ši pritaikymo neįgaliesiems paslauga leidžia „mLauncher“ atlikti tam tikrus veiksmus, pvz., užrakinti ekraną arba atidaryti sparčiuosius nustatymus. Mūsų pritaikymo neįgaliesiems paslauga nerenka ir nebendrina jokių duomenų.</string>
+    <string name="can_not_delete_system_apps">Nepavyksta ištrinti sistemos programų</string>
+    <string name="please_select_app">Pasirinkite programėlę</string>
+    <string name="drawer_list_empty_hint">Nerasta jokių programėlių</string>
+    <string name="long_press_for_settings">Ilgai paspauskite bet kur, kad pamatytumėte nustatymus</string>
+    <string name="long_press_to_select_app">Ilgai paspauskite, kad pasirinktumėte programą</string>
+    <string name="swipe_up_for_apps">Braukite aukštyn, kad pamatytumėte visas programėlės</string>
+    <string name="app_drawer_tips">Patarimas: perbraukite žemyn, kad atsisakytumėte. Slinkite, kad paslėptumėte klaviatūrą.</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Autentifikavimo atšaukimas.</string>
     <string name="text_authentication_error">Autentifikavimo klaida:%1$s(kodas %2$d)</string>
@@ -178,28 +138,22 @@
     <string name="acra_send_report">Siųsti ataskaitą</string>
     <string name="acra_dont_send">Nesiųsti</string>
     <string name="acra_mail_body">Programoje įvyko gedimas.\n\nŽemiau pateikiama išsami informacija apie įrenginį. Klaidų žurnalas buvo pridėtas kaip failas jūsų nuorodai. Būsime dėkingi už pagalbą sprendžiant šią problemą.\n\nĮrenginio informacija: \n[PRAŠOME užpildyti toliau pateiktą informaciją, taip pat pašalinant bet ką tarp laužtinių skliaustų, kitaip tai bus nepaisoma.]\n\n- Programos versija: [0.0.1]\n– Android versija: [14]\n– Įrenginio pavadinimas: [Android Pixel 69]\n– Diegimo vieta: [github, fdroid, obtanium, pats]\n\nLabai vertiname Jūsų greitą dėmesį šiuo klausimu.\n\nAčiū.\n</string>
-    <string name="settings_font_system">Sistema</string>
-    <!-- Search Stings -->
-    <string name="search_engine">Paieškos sistema</string>
-    <string name="search_google">Google</string>
-    <string name="search_yahoo">Yahoo</string>
-    <string name="search_duckduckgo">DuckDuckGo</string>
-    <string name="search_bing">Bing</string>
-    <string name="search_brave">Brave</string>
-    <string name="search_swisscow">SwissCows</string>
-    <!-- Unsorted Strings -->
-    <string name="show_apps">Visos programėlės</string>
-    <string name="total_screen_time">Bendras ekrano laikas</string>
-    <string name="can_not_delete_system_apps">Nepavyksta ištrinti sistemos programų</string>
-    <string name="please_select_app">Pasirinkite programėlę</string>
-    <string name="drawer_list_empty_hint">Nerasta jokių programėlių</string>
-    <string name="long_press_for_settings">Ilgai paspauskite bet kur, kad pamatytumėte nustatymus</string>
-    <string name="swipe_up_for_apps">Braukite aukštyn, kad pamatytumėte visas programėlės</string>
-    <string name="app_drawer_tips">Patarimas: perbraukite žemyn, kad atsisakytumėte. Slinkite, kad paslėptumėte klaviatūrą.</string>
-    <string name="double_tap_lock_is_enabled_message">Jei užraktas spustelėjus du kartus išjungia piršto atspaudą arba atrakinimą pagal veidą, atidarykite mLauncher nustatymus, bakstelėkite \'eksperimentinis\' ir vadovaukitės instrukcijomis. Ačiū.</string>
-    <string name="double_tap_lock_uninstall_message">Dukart palieskite, kad užrakintumėte įgalinimą.
-		\n\nPastaba: pirmiausia IŠJUNKITE, jei nuspręsite ištrinti mLauncher.</string>
-    <string name="accessibility_service_name">mLauncher veiksmų tarnyba</string>
-    <string name="accessibility_service_description">Ši pritaikymo neįgaliesiems paslauga leidžia „mLauncher“ atlikti tam tikrus veiksmus, pvz., užrakinti ekraną arba atidaryti sparčiuosius nustatymus. Mūsų pritaikymo neįgaliesiems paslauga nerenka ir nebendrina jokių duomenų.</string>
-    <string name="version">Versija</string>
+    <!-- Settings Strings -->
+    <string name="left">Kairė</string>
+    <string name="right">Dešnė</string>
+    <string name="center">Centras</string>
+    <string name="dark">Tamsi</string>
+    <string name="light">Šviesi</string>
+    <string name="system_default">Sistema</string>
+    <string name="delete">Ištrinti</string>
+    <string name="hide">Slėpti</string>
+    <string name="show">Rodyti</string>
+    <string name="rename">Pervadyti</string>
+    <string name="info">Informacija</string>
+    <string name="okay">Gerai</string>
+    <string name="reset">Atstatyti</string>
+    <string name="cancel">Atšaukti</string>
+    <string name="disabled">Išjungtas</string>
+    <string name="open">Atidaryti</string>
+    <string name="close">Uždaryti</string>
 </resources>

@@ -1,79 +1,73 @@
-Gegabelt von <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal und sauber.
+<p>Abgezweigt von <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimalistisch und sauber.</p>
 
-# Geforkt mit zusätzlichen Funktionen
+<h2>Mit zusätzlichen Funktionen gegabelt</h2>
 
-- Unordnung wie Anzeigen und Links entfernt.
-- Sie können Apps im App-Drawer umbenennen (Das Umbenennen von Apps auf dem Startbildschirm wird bereits unterstützt. Klicken Sie einfach lange auf eine App auf dem Startbildschirm und beginnen Sie mit der Eingabe.)
-- Viel mehr Anpassungsmöglichkeiten bei den Gesten auf dem Startbildschirm
-    - Gesten sind jetzt:
-        - Wischen nach oben, unten, links, rechts
-        - Klicken Sie auf die Uhr
-        - Möglichkeit, die Anwendung zu ändern, die beim Klicken auf das Datum geöffnet wird
-    - Mögliche Aktionen jetzt inklusive:
-        - Angegebene App öffnen
-        - App-Liste anzeigen
-        - Sperrung des Bildschirms
-        - Zuletzt geöffnete Apps anzeigen
-        - Öffne die Benachrichtigungsleiste
-        - Öffnen der Schnelleinstellungen
-        - Power-Dialog
-        - Mach ein Bildschirmfoto
-        - Geste deaktivieren
-- Sie können die Uhr auch unabhängig von den Home-Apps positionieren.
-- Ändern Sie die Ausrichtung von Apps im App-Drawer unabhängig vom Homescreen.
-- Ändern Sie die Schriftgröße einzelner Abschnitte des Homescreens unabhängig voneinander.
-- Entfernte Interneterlaubnis - Entfernte Interneterlaubnis Du weißt nie, was ein App-Entwickler über dich wissen möchte.
-- Einstellungen hinter Biometrie sperren (umschalten)
-- Möglichkeit hinzugefügt, Abstürze per E-Mail zu melden.
-- Möglichkeit zum Anzeigen der App-Nutzungsdauer hinzugefügt.
+<ul>
+    <li>Unordnung wie Anzeigen und Links entfernt.</li>
+    <li>Sie können Apps in der App-Schublade umbenennen (das Umbenennen von Apps auf dem Startbildschirm wird bereits unterstützt). Klicken Sie einfach lange auf eine App auf dem Startbildschirm und beginnen Sie mit der Eingabe.)</li>
+    <li>Wir haben viele weitere Optionen für Gesten auf dem Startbildschirm hinzugefügt:
+        <ul>
+            <li><b>Gesten umfassen jetzt:</b>
+                <ul>
+                    <li>Doppeltippen</li>
+                    <li>Klicken auf die Uhr</li>
+                    <li>Klicken Sie auf das Datum</li>
+                    <li>Klicken auf Gesamtnutzung</li>
+                    <li>Kurz nach oben wischen</li>
+                    <li>Kurz nach unten wischen</li>
+                    <li>Kurz nach links wischen</li>
+                    <li>Kurz nach rechts wischen</li>
+                    <li>Langes Wischen nach oben</li>
+                    <li>Langes Wischen nach unten</li>
+                    <li>Langes Wischen nach links</li>
+                    <li>Langes Wischen nach rechts</li>
+                </ul>
+            </li>
+            <li><b>Mögliche Aktionen sind jetzt:</b>
+                <ul>
+                    <li>Angegebene App öffnen</li>
+                    <li>App-Liste anzeigen</li>
+                    <li>Bildschirm sperren</li>
+                    <li>Zuletzt geöffnete Apps anzeigen</li>
+                    <li>Öffne die Benachrichtigungsleiste</li>
+                    <li>Schnelleinstellungen öffnen</li>
+                    <li>Power-Dialog</li>
+                    <li>Mach einen Screenshot</li>
+                    <li>Seite wechseln</li>
+                    <li>Geste deaktivieren</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>Du kannst die Uhr auch unabhängig von den Home-Apps positionieren.</li>
+    <li>Ausrichtung von Apps im App-Drawer unabhängig vom Home-Bildschirm ändern.</li>
+    <li>Schriftgröße einzelner Abschnitte des Home-Bildschirms unabhängig voneinander ändern.</li>
+    <li>Internetberechtigung entfernt. Man weiß nie, was ein App-Entwickler über einen wissen möchte.</li>
+    <li>Einstellungen hinter Biometrie sperren (Umschalter).</li>
+    <li>Möglichkeit hinzugefügt, Abstürze per E-Mail zu melden.</li>
+    <li>Möglichkeit zum Anzeigen der App-Nutzungsdauer hinzugefügt.</li>
+</ul>
 
-## Übersetzungen:
+<h2>Übersetzungen</h2>
 
-- Viele Leute haben die App in die folgenden Sprachen übersetzt. Vielen Dank an Sie alle.
-  - Afrikaans
-  - Arabisch
-  - Albanisch
-  - bulgarisch
-  - Chinesisch
-  - kroatisch
-  - Tschechisch
-  - Dänisch
-  - Englisch
-  - Estnisch
-  - Filipino
-  - Finnisch
-  - Französisch
-  - georgisch
-  - Deutsch
-  - Griechisch
-  - Hawaiianisch
-  - Hebräisch
-  - Hindi
-  - Ungarisch
-  - Isländisch
-  - Indonesisch
-  - Irisch
-  - Italienisch
-  - Japanisch
-  - Koreanisch
-  - Litauisch
-  - Luxemburgisch
-  - Malaiisch
-  - Madagassisch
-  - Malayalam
-  - norwegisch
-  - nepalesisch
-  - Persisch
-  - Polnisch
-  - Portugiesisch (europäisch)
-  - Pandschabi
-  - Russisch
-  - serbisch
-  - Sindhi
-  - Slowakisch
-  - Spanisch
-  - Schwedisch
-  - Thailändisch
-  - Türkisch
-  - ukrainisch
-  - Vietnamesisch
+<p>Viele Leute haben die App in die folgenden Sprachen übersetzt. Vielen Dank an euch alle:</p>
+
+<ul>
+    <li>Arabisch</li>
+    <li>Niederländisch</li>
+    <li>Englisch</li>
+    <li>Französisch</li>
+    <li>Deutsch</li>
+    <li>Hebräisch</li>
+    <li>Italienisch</li>
+    <li>Japanisch</li>
+    <li>Koreanisch</li>
+    <li>Litauisch</li>
+    <li>Polnisch</li>
+    <li>Portugiesisch</li>
+    <li>Russisch</li>
+    <li>Slowakisch</li>
+    <li>Spanisch</li>
+    <li>Thailändisch</li>
+    <li>Türkisch</li>
+</ul>

@@ -2,19 +2,93 @@
 <resources>
     <!-- Base Settings -->
     <string name="select_app">Vyberte App</string>
+    <string name="show_apps">Všetky aplikácie</string>
     <!-- Strings used for settings menus -->
     <string name="settings_name">Nastavenia mlaunchera</string>
     <string name="settings_features_title">Vlastnosti</string>
     <string name="settings_features_description">Zlepšite svoju produktivitu.</string>
-    <string name="settings_look_feel_title">Pozrite sa a cíťte</string>
+    <string name="settings_look_feel_title">Pozrite sa &amp; Cítite</string>
     <string name="settings_look_feel_description">Dodajte svojej domovskej obrazovke osobný nádych.</string>
+    <string name="settings_gestures_title">Gestá</string>
+    <string name="settings_gestures_description">Prispôsobte si gestá pre rýchlu a jednoduchú navigáciu.</string>
     <string name="settings_favorite_apps_title">Obľúbené aplikácie</string>
     <string name="settings_hidden_apps_title">Skryté aplikácie</string>
-    <string name="settings_advanced_title">Pokročilé</string>
+    <string name="settings_advanced_title">Rozšírené nastavenia</string>
     <!-- Strings used for features settings -->
     <string name="features_settings_title">Vlastnosti</string>
-    <!-- Strings used for look And feel settings -->
-    <string name="look_feel_settings_title">Pozrite sa a cíťte</string>
+    <string name="user_preferences">Používateľské preferencie</string>
+    <string name="theme_mode">Režim témy</string>
+    <string name="app_language">Jazyk rozhrania</string>
+    <string name="font_family">Rodina písiem</string>
+    <string name="settings_text_size">Nastavenia Veľkosť textu</string>
+    <string name="search">Hľadať</string>
+    <string name="search_engine">Vyhľadávač</string>
+    <string name="auto_show_keyboard">Automaticky zobraziť klávesnicu</string>
+    <string name="search_from_start">Vyhľadávanie aplikácií od začiatku.</string>
+    <string name="home_management">Domov &amp; Správa aplikácií</string>
+    <string name="auto_open_apps">Automatické otváranie aplikácií</string>
+    <string name="lock_home_apps">Zámok aplikácií</string>
+    <string name="lock_settings">Uzamknúť nastavenia</string>
+    <string name="apps_on_home_screen">Počet skratiek</string>
+    <string name="pages_on_home_screen">Počet strán</string>
+    <string name="enable_home_pager">Povoliť domovskú stránku</string>
+    <string name="battery_date_time">Batéria &amp; Dátum/čas</string>
+    <string name="show_time">Zobraziť čas</string>
+    <string name="show_time_format">Formát času (AM/PM)</string>
+    <string name="show_date">Zobraziť dátum</string>
+    <string name="show_battery">Zobraziť batériu</string>
+    <string name="show_battery_icon">Zobraziť ikonu batérie</string>
+    <string name="show_total_screen_time">Zobraziť celkový čas obrazovky</string>
+    <!-- Strings used for look & feel settings -->
+    <string name="look_feel_settings_title">Pozrite sa &amp; Cítite</string>
+    <string name="text_size_adjustments">Text &amp; Úpravy veľkosti</string>
+    <string name="app_text_size">Veľkosť textu aplikácie</string>
+    <string name="clock_text_size">Veľkosť textu hodín</string>
+    <string name="date_text_size">Veľkosť textu dátumu</string>
+    <string name="battery_text_size">Veľkosť textu batérie</string>
+    <string name="layout_positioning">Rozloženie &amp; Umiestnenie</string>
+    <string name="app_padding_size">Veľkosť odsadenia</string>
+    <string name="extend_home_apps_area">Rozšíriť oblasť kliknutia</string>
+    <string name="alignment_to_bottom">Zarovnať nadol</string>
+    <string name="visibility_display">Viditeľnosť &amp; Displej</string>
+    <string name="show_status_bar">Zobraziť stavový riadok</string>
+    <string name="show_recent_apps">Zobraziť nedávne aplikácie</string>
+    <string name="number_of_recents">Počet nedávnych aplikácií</string>
+    <string name="show_app_usage_stats">Zobraziť štatistiku používania aplikácie</string>
+    <string name="filter_strength">Sila filtrovania</string>
+    <string name="background_opacity">Priehľadnosť pozadia</string>
+    <string name="element_alignment">Zarovnanie prvkov</string>
+    <string name="date_alignment">Dátum</string>
+    <string name="clock_alignment">Hodiny</string>
+    <string name="home_alignment">Domáce aplikácie</string>
+    <string name="drawer_alignment">Zásuvkové aplikácie</string>
+    <string name="element_colors">Farby prvkov</string>
+    <!-- Strings used for gestures settings -->
+    <string name="gestures_settings_title">Gestá</string>
+    <string name="tap_click_actions">Klepnite/kliknite na Akcie</string>
+    <string name="double_tap">Dvojité poklepanie</string>
+    <string name="clock_click_app">Kliknúť na Hodiny</string>
+    <string name="date_click_app">Kliknúť na Dátum</string>
+    <string name="usage_click_app">Kliknite na Celkové využitie</string>
+    <string name="swipe_movement">Pohyb potiahnutím prstom</string>
+    <string name="short_swipe_up_app">Krátke potiahnutie prstom nahor</string>
+    <string name="short_swipe_down_app">Krátke potiahnutie prstom nadol</string>
+    <string name="short_swipe_left_app">Krátke potiahnutie prstom doľava</string>
+    <string name="short_swipe_right_app">Krátke potiahnutie prstom doprava</string>
+    <string name="long_swipe_up_app">Dlhé potiahnutie prstom nahor</string>
+    <string name="long_swipe_down_app">Dlhé potiahnutie prstom nadol</string>
+    <string name="long_swipe_left_app">Dlhé potiahnutie prstom doľava</string>
+    <string name="long_swipe_right_app">Dlhé potiahnutie prstom doprava</string>
+    <string name="open_app">Otvoriť aplikáciu</string>
+    <string name="lock_screen">Zamykacia obrazovka</string>
+    <string name="show_notifications">Zobraziť notifikácie</string>
+    <string name="show_app_list">Zobraziť zoznam aplikácií</string>
+    <string name="open_quick_settings">Rýchle nastavenia</string>
+    <string name="show_recents">Zobraziť Nedávne</string>
+    <string name="open_power_dialog">Dialógové okno napájania</string>
+    <string name="take_a_screenshot">Vytvoriť snímku obrazovky</string>
+    <string name="left_page">Prejdite na ľavú stranu</string>
+    <string name="right_page">Prejdite na Pravú stranu</string>
     <!-- Strings used for advanced settings -->
     <string name="advanced_settings_title">Rozšírené nastavenia</string>
     <string name="advanced_settings_app_info_title">Informácie o aplikácii</string>
@@ -25,147 +99,32 @@
     <string name="advanced_settings_restart_description">Skúšali ste to zapnúť a vypnúť?</string>
     <string name="advanced_settings_backup_restore_title">Zálohovanie/obnovenie</string>
     <string name="advanced_settings_backup_restore_description">Dávajte si prosím pozor na to, čo si želáte?</string>
-    <string name="advanced_settings_backup_restore_backup">Zálohovanie</string>
+    <string name="advanced_settings_backup_restore_backup">Zálohovať</string>
     <string name="advanced_settings_backup_restore_restore">Obnoviť</string>
     <string name="advanced_settings_backup_restore_clear">Vymazať všetky údaje</string>
     <string name="advanced_settings_backup_restore_clear_title">Vymazať predvoľby</string>
     <string name="advanced_settings_backup_restore_clear_description">Naozaj to chcete urobiť?</string>
     <string name="advanced_settings_backup_restore_clear_yes">áno</string>
     <string name="advanced_settings_backup_restore_clear_no">Nie</string>
-    <string name="advanced_settings_help_feedback_title">Pomoc a spätná väzba</string>
+    <string name="advanced_settings_help_feedback_title">Pomoc &amp; Spätná väzba</string>
     <string name="advanced_settings_community_support_title">Podpora komunity</string>
     <string name="advanced_settings_share_application_title">Zdieľať aplikáciu</string>
     <string name="advanced_settings_share_application_description">Zvýšte svoje skúsenosti s %1$s! Získajte to teraz na fDroid a uvidíte, o čom všetci hovoria!\n</string>
-    <!-- Admin Settings -->
-    <string name="admin_permission_message">mLauncher sľubuje, že bude zodpovedne používať povolenie na uzamknutie obrazovky. mLauncher nezhromažďuje ani nezdieľa žiadne údaje.</string>
-    <string name="experimental">(Experimentálne)</string>
-    <!-- Settings Headers -->
-    <string name="display">Displej</string>
-    <string name="language_region">Jazyk &amp; Región</string>
-    <string name="accessibility">Prístupnosť</string>
-    <string name="appearance">Vzhľad</string>
-    <string name="behavior">Správanie</string>
-    <string name="homescreen">Domovská obrazovka</string>
-    <string name="alignment">Zarovnanie</string>
-    <string name="gestures">Gestá</string>
-    <string name="miscellaneous">Rôzne</string>
-    <!-- Home Strings -->
+    <!-- App Page Strings -->
     <string name="hidden_apps">Skryté aplikácie</string>
     <string name="favorite_apps">Obľúbené aplikácie</string>
-    <!-- Display Strings -->
-    <string name="show_status_bar">Zobraziť stavový riadok</string>
-    <string name="show_recent_apps">Zobraziť nedávne aplikácie</string>
-    <string name="show_app_usage_stats">Zobraziť štatistiku používania aplikácie</string>
-    <string name="show_time">Zobraziť čas</string>
-    <string name="show_time_format">Formát času (AM/PM)</string>
-    <string name="show_date">Zobraziť dátum</string>
-    <string name="show_battery">Zobraziť batériu</string>
-    <string name="show_battery_icon">Zobraziť ikonu batérie</string>
-    <string name="show_header_text">Zobraziť text hlavičky</string>
-    <!-- Language & Region Strings -->
-    <string name="app_language">Jazyk rozhrania</string>
-    <!-- Accessibility Strings -->
-    <string name="app_text_size">Veľkosť textu aplikácie</string>
-    <string name="clock_text_size">Veľkosť textu hodín</string>
-    <string name="date_text_size">Veľkosť textu dátumu</string>
-    <string name="battery_text_size">Veľkosť textu batérie</string>
-    <string name="app_padding_size">Veľkosť odsadenia</string>
-    <string name="app_font">Rodina písiem</string>
-    <!-- Appearance Strings -->
-    <string name="theme_mode">Režim témy</string>
-    <string name="background_opacity">Priehľadnosť pozadia</string>
-    <string name="home_alignment_bottom">Domovská obrazovka Zarovnať dole</string>
-    <!-- Behavior Strings -->
-    <string name="auto_show_keyboard">Automaticky zobraziť klávesnicu</string>
-    <string name="auto_open_apps">Automatické otváranie aplikácií</string>
-    <string name="enable_notifications">Povoliť upozornenia</string>
-    <string name="number_of_recents">Počet nedávnych aplikácií</string>
-    <string name="filter_strength">Sila filtrovania</string>
-    <string name="search_from_start">Vyhľadávanie aplikácií od začiatku.</string>
-    <string name="icon_font">Použite písmo ikony</string>
-    <!-- Home-screen Strings -->
-    <string name="apps_on_home_screen">Počet skratiek</string>
-    <string name="pages_on_home_screen">Počet strán</string>
-    <string name="enable_home_pager">Povoliť domovskú stránku</string>
-    <string name="lock_home_apps">Zámok aplikácií</string>
-    <string name="extend_home_apps_area">Rozšíriť oblasť kliknutia</string>
-    <!-- Alignment Strings -->
-    <string name="home_alignment">Domovská obrazovka aplikácií</string>
-    <string name="clock_alignment">Hodiny a dátum</string>
-    <string name="drawer_alignment">Aplikácie v zozname aplikacií</string>
-    <!-- Gestures Strings -->
-    <string name="short_swipe_up_app">Krátke potiahnutie prstom nahor</string>
-    <string name="short_swipe_down_app">Krátke potiahnutie prstom nadol</string>
-    <string name="short_swipe_left_app">Krátke potiahnutie prstom doľava</string>
-    <string name="short_swipe_right_app">Krátke potiahnutie prstom doprava</string>
-    <string name="long_swipe_up_app">Dlhé potiahnutie prstom nahor</string>
-    <string name="long_swipe_down_app">Dlhé potiahnutie prstom nadol</string>
-    <string name="long_swipe_left_app">Dlhé potiahnutie prstom doľava</string>
-    <string name="long_swipe_right_app">Dlhé potiahnutie prstom doprava</string>
-    <string name="clock_click_app">Kliknúť na Hodiny</string>
-    <string name="date_click_app">Kliknúť na Dátum</string>
-    <string name="usage_click_app">Kliknite na Celkové využitie</string>
-    <string name="double_tap">Dvojité poklepanie</string>
-    <!-- Gestures Do Strings -->
-    <string name="show_notifications">Zobraziť notifikácie</string>
-    <string name="show_app_list">Zobraziť zoznam aplikácií</string>
-    <string name="open_app">Otvoriť aplikáciu</string>
-    <string name="lock_screen">Zamykacia obrazovka</string>
-    <string name="open_quick_settings">Rýchle nastavenia</string>
-    <string name="show_recents">Zobraziť Nedávne</string>
-    <string name="open_power_dialog">Dialógové okno napájania</string>
-    <string name="take_a_screenshot">Vytvoriť snímku obrazovky</string>
-    <string name="left_page">Prejdite na ľavú stranu</string>
-    <string name="right_page">Prejdite na Pravú stranu</string>
-    <string name="double_tap_to_lock_screen">Dvojitým klepnutím uzamknete</string>
-    <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">Nastavenia Veľkosť textu</string>
-    <string name="display_hidden_apps">Zobraziť skryté aplikácie</string>
-    <string name="lock_settings">Uzamknúť nastavenia</string>
-    <!-- Backup Strings -->
-    <string name="backup">Zálohovať</string>
-    <string name="load_backup">Načítať</string>
-    <string name="save_backup">Uložiť</string>
-    <string name="clear_backup">Vymazať</string>
-    <!-- Settings Strings -->
-    <string name="off">Vypnúť</string>
-    <string name="on">Zapnuť</string>
-    <string name="left">Vľavo</string>
-    <string name="right">Vpravo</string>
-    <string name="center">Stred</string>
-    <string name="dark">Tmavý</string>
-    <string name="light">Svetlý</string>
-    <string name="settings">Nastavenia</string>
-    <string name="lang_system">Systém</string>
-    <string name="system_default">Systém</string>
-    <string name="delete">Odstrániť</string>
-    <string name="hide">Skryť</string>
-    <string name="unhide">Odkryť</string>
-    <string name="rename">Premenovať</string>
-    <string name="info">Informácie</string>
-    <string name="okay">Ok</string>
-    <string name="save">Uložiť</string>
-    <string name="show">Zobraziť</string>
-    <string name="reset">Obnoviť</string>
-    <string name="cancel">Zrušiť</string>
-    <string name="enable">Povoliť</string>
-    <string name="disable">Zakázať</string>
-    <string name="enabled">Povolené</string>
-    <string name="disabled">Zakázané</string>
-    <string name="open">Otvoriť</string>
-    <string name="close">Zatvoriť</string>
-    <string name="copy">Kopírovať</string>
-    <!-- Colored Themes -->
-    <string name="catppuccino">Catpuccino</string>
-    <string name="nordic">severský</string>
-    <!-- Dark Only Themes -->
-    <string name="dracula">Dracula</string>
-    <string name="arc">Arc</string>
-    <string name="nokto">Nokto</string>
-    <string name="breeze">Vánok</string>
-    <string name="yaru">Yaru</string>
-    <!-- Light Only Themes -->
-    <string name="adwaita">Adwaita</string>
+    <!-- Accessibility/Help Strings -->
+    <string name="double_tap_lock_is_enabled_message">Ak zámok dvojitým poklepaním zakáže odomknutie odtlačkom prsta alebo tvárou, otvorte nastavenia mlaunchera, klepnite na „experimentálne“ a postupujte podľa pokynov. Ďakujem.</string>
+    <string name="double_tap_lock_uninstall_message">Dvojitým klepnutím uzamknutie aktivujete. \n\nPoznámka: Ak sa rozhodnete odstrániť mLauncher, najprv toto VYPNITE.</string>
+    <string name="accessibility_service_name">Služba mlauncher Actions Service</string>
+    <string name="accessibility_service_description">Táto služba dostupnosti umožňuje mlauncheru vykonávať určité akcie, ako je uzamknutie obrazovky alebo otvorenie rýchlych nastavení. Naša služba dostupnosti nezhromažďuje ani nezdieľa žiadne údaje.</string>
+    <string name="can_not_delete_system_apps">Systémové aplikácie sa nedajú odstrániť</string>
+    <string name="please_select_app">Vyberte aplikáciu</string>
+    <string name="drawer_list_empty_hint">Nenašli sa žiadne aplikácie</string>
+    <string name="long_press_for_settings">Dlho podržte pre nastavenia</string>
+    <string name="long_press_to_select_app">Dlhým stlačením vyberte aplikáciu</string>
+    <string name="swipe_up_for_apps">Potiahnutím nahor zobrazíte všetky aplikácie</string>
+    <string name="app_drawer_tips">Tip: Potiahnutím nadol zatvoríte. Posunutím skryjete klávesnicu.</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Zrušiť overenie.</string>
     <string name="text_authentication_error">Chyba overenia:%1$s(kód %2$d)</string>
@@ -178,27 +137,22 @@
     <string name="acra_send_report">Odoslať správu</string>
     <string name="acra_dont_send">Neposielajte</string>
     <string name="acra_mail_body">V aplikácii došlo k zlyhaniu.\n\nNižšie sú uvedené podrobnosti o zariadení. Protokol chýb bol priložený ako súbor pre vašu referenciu. Ocenili by sme vašu pomoc pri riešení tohto problému.\n\nInformácie o zariadení: \n[VYPLŇTE, PROSÍM, nižšie uvedené informácie a odstráňte aj čokoľvek medzi hranatými zátvorkami, inak to bude ignorované.]\n\n- Verzia aplikácie: [0.0.1]\n- Verzia systému Android: [14]\n- Názov zariadenia: [Android Pixel 69]\n- Umiestnenie inštalácie: [github, fdroid, obtanium, self]\n\nVašu okamžitú pozornosť venovanú tejto záležitosti si veľmi ceníme.\n\nĎakujem.\n</string>
-    <string name="settings_font_system">Systém</string>
-    <!-- Search Stings -->
-    <string name="search_engine">Vyhľadávač</string>
-    <string name="search_google">Google</string>
-    <string name="search_yahoo">Yahoo</string>
-    <string name="search_duckduckgo">DuckDuckGo</string>
-    <string name="search_bing">Bing</string>
-    <string name="search_brave">Statočný</string>
-    <string name="search_swisscow">SwissCows</string>
-    <!-- Unsorted Strings -->
-    <string name="show_apps">Všetky aplikácie</string>
-    <string name="total_screen_time">Celkový čas pred obrazovkou</string>
-    <string name="can_not_delete_system_apps">Systémové aplikácie sa nedajú odstrániť</string>
-    <string name="please_select_app">Vyberte aplikáciu</string>
-    <string name="drawer_list_empty_hint">Nenašli sa žiadne aplikácie</string>
-    <string name="long_press_for_settings">Dlho podržte pre nastavenia</string>
-    <string name="swipe_up_for_apps">Potiahnutím nahor zobrazíte všetky aplikácie</string>
-    <string name="app_drawer_tips">Tip: Potiahnutím nadol zatvoríte. Posunutím skryjete klávesnicu.</string>
-    <string name="double_tap_lock_is_enabled_message">Ak zámok dvojitým poklepaním zakáže odomknutie odtlačkom prsta alebo tvárou, otvorte nastavenia mlaunchera, klepnite na „experimentálne“ a postupujte podľa pokynov. Ďakujem.</string>
-    <string name="double_tap_lock_uninstall_message">Dvojitým klepnutím uzamknutie aktivujete. \n\nPoznámka: Ak sa rozhodnete odstrániť mLauncher, najprv toto VYPNITE.</string>
-    <string name="accessibility_service_name">Služba mlauncher Actions Service</string>
-    <string name="accessibility_service_description">Táto služba dostupnosti umožňuje mlauncheru vykonávať určité akcie, ako je uzamknutie obrazovky alebo otvorenie rýchlych nastavení. Naša služba dostupnosti nezhromažďuje ani nezdieľa žiadne údaje.</string>
-    <string name="version">Verzia</string>
+    <!-- Settings Strings -->
+    <string name="left">Vľavo</string>
+    <string name="right">Vpravo</string>
+    <string name="center">Stred</string>
+    <string name="dark">Tmavý</string>
+    <string name="light">Svetlý</string>
+    <string name="system_default">Systém</string>
+    <string name="delete">Odstrániť</string>
+    <string name="hide">Skryť</string>
+    <string name="show">Zobraziť</string>
+    <string name="rename">Premenovať</string>
+    <string name="info">Informácie</string>
+    <string name="okay">Ok</string>
+    <string name="reset">Obnoviť</string>
+    <string name="cancel">Zrušiť</string>
+    <string name="disabled">Zakázané</string>
+    <string name="open">Otvoriť</string>
+    <string name="close">Zatvoriť</string>
 </resources>

@@ -1,79 +1,73 @@
-Gevorkt vanaf <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimaal en schoon.
+<p>Gevorkt van <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimaal en schoon.</p>
 
-# Geforked met extra functies
+<h2>Gevorkt met extra functies</h2>
 
-- Rommel verwijderd, zoals advertenties en links.
-- U kunt apps hernoemen in de app-drawer (Het hernoemen van apps op het startscherm wordt al ondersteund. Klik gewoon lang op een app op het startscherm en begin met typen.)
-- We hebben veel meer opties toegevoegd voor gebaren op het beginscherm:
-    - Gebaren zijn nu:
-        - Veeg omhoog, omlaag, links, rechts
-        - Klikken op de klok
-        - Klikken op de datum
-    - Mogelijke acties omvatten:
-        - Open de opgegeven app
-        - App-lijst weergeven
-        - Scherm vergrendelen
-        - Toon recent geopende apps
-        - Open het meldingenpaneel
-        - Snelle instellingen openen
-        - Machtsdialoog
-        - Maak een screenshot
-        - Schakel gebaar uit
-- Je kunt de klok ook onafhankelijk van de thuisapps positioneren.
-- Wijzig de uitlijning van apps in de app-lade, onafhankelijk van het startscherm.
-- Wijzig de lettergrootte van delen van het startscherm onafhankelijk van elkaar.
-- Internet toestemming verwijderd. Je weet nooit wat een app-ontwikkelaar over je wil weten.
-- Instellingen achter biometrie vergrendelen (schakelaar)
-- De mogelijkheid toegevoegd om crashes via e-mail te melden.
-- De mogelijkheid toegevoegd om de gebruikstijd van de app te bekijken.
+<ul>
+    <li>Rommel verwijderd, zoals advertenties en links.</li>
+    <li>U kunt apps hernoemen in de app-lade (het hernoemen van apps op het startscherm wordt al ondersteund. Klik gewoon lang op een app op het startscherm en begin met typen.)</li>
+    <li>We hebben veel meer opties voor gebaren op het startscherm toegevoegd:
+        <ul>
+            <li><b>Gebaren omvatten nu:</b>
+                <ul>
+                    <li>Dubbeltik</li>
+                    <li>Klikken op de klok</li>
+                    <li>Klikken op de datum</li>
+                    <li>Klikken op totaal gebruik</li>
+                    <li>Korte veeg omhoog</li>
+                    <li>Korte veeg omlaag</li>
+                    <li>Korte veeg naar links</li>
+                    <li>Korte veeg naar rechts</li>
+                    <li>Lange veeg omhoog</li>
+                    <li>Lange veeg omlaag</li>
+                    <li>Lange veeg naar links</li>
+                    <li>Lange veeg naar rechts</li>
+                </ul>
+            </li>
+            <li><b>Mogelijke acties zijn nu:</b>
+                <ul>
+                    <li>Gespecificeerde app openen</li>
+                    <li>App-lijst weergeven</li>
+                    <li>Vergrendel het scherm</li>
+                    <li>Toon recent geopende apps</li>
+                    <li>Open de meldingslade</li>
+                    <li>Snelle instellingen openen</li>
+                    <li>Power-dialoog</li>
+                    <li>Maak een screenshot</li>
+                    <li>Wissel pagina</li>
+                    <li>Gebaar uitschakelen</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>Je kunt de klok ook onafhankelijk van de home-apps positioneren.</li>
+    <li>Wijzig de uitlijning van apps in de app-lade, onafhankelijk van het startscherm.</li>
+    <li>Wijzig de lettergrootte van secties van het startscherm onafhankelijk van elkaar.</li>
+    <li>Internetmachtiging verwijderd. Je weet nooit wat een app-ontwikkelaar over je wil weten.</li>
+    <li>Instellingen achter biometrie vergrendelen (wisselen).</li>
+    <li>Mogelijkheid toegevoegd om crashes via e-mail te melden.</li>
+    <li>Mogelijkheid toegevoegd om app-gebruikstijd te bekijken.</li>
+</ul>
 
-## Vertalingen:
+<h2>Vertalingen</h2>
 
-- Veel mensen hebben de app vertaald naar de volgende talen. Veel dank aan u allen.
-  - Afrikaans
-  - Arabisch
-  - Albanees
-  - Bulgaars
-  - Chinees
-  - Kroatisch
-  - Tsjechisch
-  - Deens
-  - Engels
-  - Ests
-  - Filipijns
-  - Fins
-  - Frans
-  - Georgisch
-  - Duitser
-  - Grieks
-  - Hawaïaans
-  - Hebreeuws
-  - Hindi
-  - Hongaars
-  - IJslands
-  - Indonesisch
-  - Ieren
-  - Italiaans
-  - Japanse
-  - Koreaans
-  - Litouws
-  - Luxemburgs
-  - Maleis
-  - Malagasy
-  - Malayalam
-  - Noors
-  - Nepalees
-  - Perzisch
-  - Pools
-  - Portugees (Europees)
-  - Punjabi
-  - Russisch
-  - Servisch
-  - Sindhi
-  - Slowaaks
-  - Spaans
-  - Zweeds
-  - Thaise
-  - Turks
-  - Oekraïens
-  - Vietnamezen
+<p>Veel mensen hebben de app vertaald in de volgende talen. Hartelijk dank aan jullie allemaal:</p>
+
+<ul>
+    <li>Arabisch</li>
+    <li>Nederlands</li>
+    <li>Engels</li>
+    <li>Frans</li>
+    <li>Duits</li>
+    <li>Hebreeuws</li>
+    <li>Italiaans</li>
+    <li>Japans</li>
+    <li>Koreaans</li>
+    <li>Litouws</li>
+    <li>Pools</li>
+    <li>Portugees</li>
+    <li>Russisch</li>
+    <li>Slowaaks</li>
+    <li>Spaans</li>
+    <li>Thais</li>
+    <li>Turks</li>
+</ul>

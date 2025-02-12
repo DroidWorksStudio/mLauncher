@@ -1,79 +1,73 @@
-Bifurcado desde <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mínimo y limpio.
+<p>Bifurcado de <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimalista y limpio.</p>
 
-# Bifurcado con características extra
+<h2>Bifurcado con funciones adicionales</h2>
 
-- Se eliminó el desorden, como anuncios y enlaces.
-- Puedes renombrar aplicaciones en el cajón de aplicaciones (ya es posible renombrar aplicaciones en la pantalla de inicio). Simplemente haga clic largo en una aplicación en la pantalla de inicio y comience a escribir).
-- Mucha más personalización de los gestos de la pantalla de inicio
-    - Los gestos son ahora:
-        - Deslizar hacia arriba, abajo, izquierda, derecha
-        - Haga clic en el reloj
-        - Posibilidad de cambiar la aplicación que se abre al hacer clic en la fecha
-    - Las posibles acciones ahora incluyen:
-        - Abrir aplicación especificada
-        - Mostrar lista de aplicaciones
-        - Bloquear la pantalla
-        - Mostrar aplicaciones abiertas recientes
-        - Abriendo el cajón de notificaciones
-        - Abriendo los ajustes rápidos
-        - Diálogo de energía
-        - Tomar una captura de pantalla
-        - Desactivar gesto
-- También puedes posicionar el reloj independientemente de las apps de casa.
-- Cambie la alineación de las aplicaciones en el cajón de aplicaciones independientemente de la pantalla de inicio.
-- Cambie el tamaño de fuente de las secciones de la pantalla de inicio de forma independiente entre sí.
-- Permiso de Internet eliminado - Permiso de Internet eliminado - Permiso de Internet eliminado - Permiso de Internet eliminado Nunca sabes lo que un desarrollador de aplicaciones quiere saber sobre ti.
-- Bloquear la configuración detrás de la biometría (alternar)
-- Se agregó la capacidad de informar fallas por correo electrónico.
-- Se agregó la capacidad de ver el tiempo de uso de la aplicación.
+<ul>
+    <li>Se eliminaron elementos innecesarios, como anuncios y enlaces.</li>
+    <li>Puedes cambiar el nombre de las aplicaciones en el cajón de aplicaciones (ya se admite cambiar el nombre de las aplicaciones en la pantalla de inicio). Simplemente haz clic prolongado en una aplicación en la pantalla de inicio y comienza a escribir).</li>
+    <li>Hemos agregado muchas más opciones para gestos en la pantalla de inicio:
+        <ul>
+            <li><b>Los gestos ahora incluyen:</b>
+                <ul>
+                    <li>Doble toque</li>
+                    <li>Haciendo clic en el reloj</li>
+                    <li>Haciendo clic en la fecha</li>
+                    <li>Haciendo clic en el uso total</li>
+                    <li>Desliza brevemente hacia arriba</li>
+                    <li>Desliza brevemente hacia abajo</li>
+                    <li>Desliza brevemente hacia la izquierda</li>
+                    <li>Desliza brevemente hacia la derecha</li>
+                    <li>Desliza el dedo hacia arriba durante un rato</li>
+                    <li>Desliza el dedo hacia abajo durante un rato</li>
+                    <li>Deslizamiento largo hacia la izquierda</li>
+                    <li>Desliza el dedo hacia la derecha durante un rato</li>
+                </ul>
+            </li>
+            <li><b>Las posibles acciones ahora incluyen:</b>
+                <ul>
+                    <li>Abrir la aplicación especificada</li>
+                    <li>Mostrar lista de aplicaciones</li>
+                    <li>Bloquear la pantalla</li>
+                    <li>Mostrar aplicaciones abiertas recientemente</li>
+                    <li>Abre el cajón de notificaciones</li>
+                    <li>Abrir configuración rápida</li>
+                    <li>Diálogo de energía</li>
+                    <li>Tomar una captura de pantalla</li>
+                    <li>Cambiar página</li>
+                    <li>Deshabilitar gesto</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>También puedes colocar el reloj independientemente de las aplicaciones de inicio.</li>
+    <li>Cambia la alineación de las aplicaciones en el cajón de aplicaciones independientemente de la pantalla de inicio.</li>
+    <li>Cambia el tamaño de fuente de las secciones de la pantalla de inicio de forma independiente una de otra.</li>
+    <li>Se eliminó el permiso de Internet. Nunca se sabe lo que un desarrollador de aplicaciones quiere saber sobre ti.</li>
+    <li>Bloquear ajustes detrás de datos biométricos (activar/desactivar).</li>
+    <li>Se agregó la capacidad de informar fallas por correo electrónico.</li>
+    <li>Se agregó la capacidad de ver el tiempo de uso de la aplicación.</li>
+</ul>
 
-## Traducciones:
+<h2>Traducciones</h2>
 
-- Mucha gente ha traducido la aplicación a los siguientes idiomas. Muchas gracias a todos.
-  - afrikáans
-  - Árabe
-  - albanés
-  - Búlgaro
-  - Chino
-  - Croata
-  - Checa
-  - Danés
-  - Inglés
-  - Estonio
-  - Filipino
-  - Finlandés
-  - Francés
-  - Georgia
-  - Alemán
-  - Griego
-  - Hawaiano
-  - Hebreo
-  - Hindi
-  - Húngaro
-  - Islandés
-  - Indonesio
-  - Irlanda
-  - Italiano
-  - Japonés
-  - Coreano
-  - Lituano
-  - Luxemburgués
-  - Malayo
-  - Malgache
-  - Malayalam
-  - Noruega
-  - Nepalí
-  - Persa
-  - Polaco
-  - Portugués (europeo)
-  - Punjabí
-  - Ruso
-  - Serbio
-  - Sindhi
-  - eslovaco
-  - Español
-  - Sueco
-  - Tailandia
-  - Turco
-  - Ucrania
-  - Vietnamita
+<p>Muchas personas han traducido la aplicación a los siguientes idiomas. Muchas gracias a todos:</p>
+
+<ul>
+    <li>Árabe</li>
+    <li>Holandés</li>
+    <li>Inglés</li>
+    <li>Francés</li>
+    <li>Alemán</li>
+    <li>Hebreo</li>
+    <li>Italiano</li>
+    <li>Japonés</li>
+    <li>Coreano</li>
+    <li>Lituano</li>
+    <li>Polaco</li>
+    <li>Portugués</li>
+    <li>Ruso</li>
+    <li>Eslovaco</li>
+    <li>Español</li>
+    <li>Tailandés</li>
+    <li>Turco</li>
+</ul>

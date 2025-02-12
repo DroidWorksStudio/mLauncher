@@ -1,79 +1,73 @@
-Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimálistický a čistý.
+<p>Rozvetvené z <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimálne a čisté.</p>
 
-# Fork s extra funkciami
+<h2>Rozvetvený s extra funkciami</h2>
 
-- Odstránený neporiadok, ako sú reklamy a odkazy.
-- Môžete premenovať aplikácie na paneli aplikácií (Premenovanie aplikácií na domovskej obrazovke je už podporované. Stačí dlho kliknúť na aplikáciu na domovskej obrazovke a začať písať.)
-- Pridali sme oveľa viac možností pre gestá na domovskej obrazovke:
-    - Aktuálne gestá sú:
-        - Potiahnutie prstom nahor, nadol, doľava, doprava
-        - Kliknutie na hodiny
-        - Kliknutie na dátum
-    - Možné akcie teraz zahŕňajú:
-        - Otvoriť špecifikovanú aplikáciu
-        - Zobrazenie zoznamu aplikácií
-        - Uzamknutie obrazovky
-        - Zobraziť naposledy otvorené aplikácie
-        - Otvorenie notifikačnej lišty
-        - Otvorenie rýchlych nastavení
-        - Dialógové okno napájania
-        - Vyhotoviť snímku obrazovky
-        - Zakázať Gesto
-- Hodiny môžete umiestniť aj nezávisle od domovských aplikácií.
-- Zmeňte zarovnanie aplikácií v zásuvke aplikácií nezávisle od úvodnej obrazovky.
-- Zmeňte veľkosť písma častí úvodnej obrazovky nezávisle od seba.
-- Odstránené povolenie na internet. Nikdy neviete, čo o vás chce vývojár aplikácie vedieť.
-- Nastavenia uzamknutia za biometriou (prepínač)
-- Pridaná možnosť nahlásiť zlyhanie prostredníctvom e-mailu.
-- Pridaná možnosť zobraziť čas používania aplikácie.
+<ul>
+    <li>Odstránený neporiadok, ako sú reklamy a odkazy.</li>
+    <li>Aplikácie môžete premenovať na paneli aplikácií (Premenovanie aplikácií na domovskej obrazovke je už podporované. Stačí dlho kliknúť na aplikáciu na domovskej obrazovke a začať písať.)</li>
+    <li>Pridali sme oveľa viac možností pre gestá na domovskej obrazovke:
+        <ul>
+            <li><b>Gestá teraz zahŕňajú:</b>
+                <ul>
+                    <li>Dvakrát klepnite na</li>
+                    <li>Kliknutím na hodiny</li>
+                    <li>Kliknutím na dátum</li>
+                    <li>Kliknutím na celkové využitie</li>
+                    <li>Krátkym potiahnutím nahor</li>
+                    <li>Krátke potiahnutie prstom nadol</li>
+                    <li>Krátkym potiahnutím doľava</li>
+                    <li>Krátkym potiahnutím doprava</li>
+                    <li>Dlhým potiahnutím nahor</li>
+                    <li>Dlho potiahnite prstom nadol</li>
+                    <li>Dlhým potiahnutím doľava</li>
+                    <li>Dlhým potiahnutím doprava</li>
+                </ul>
+            </li>
+            <li><b>Možné akcie teraz zahŕňajú:</b>
+                <ul>
+                    <li>Otvorte zadanú aplikáciu</li>
+                    <li>Zobraziť zoznam aplikácií</li>
+                    <li>Uzamknutie obrazovky</li>
+                    <li>Zobraziť nedávno otvorené aplikácie</li>
+                    <li>Otvorte zásuvku upozornení</li>
+                    <li>Otvoriť rýchle nastavenia</li>
+                    <li>Dialógové okno napájania</li>
+                    <li>Urobte snímku obrazovky</li>
+                    <li>Prepnúť stránku</li>
+                    <li>Zakázať gesto</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>Hodiny môžete umiestniť aj nezávisle od domácich aplikácií.</li>
+    <li>Zmeňte zarovnanie aplikácií na paneli aplikácií nezávisle od domovskej obrazovky.</li>
+    <li>Zmeňte veľkosť písma častí domovskej obrazovky nezávisle od seba.</li>
+    <li>Odstránené povolenie na internet. Nikdy neviete, čo o vás chce vývojár aplikácie vedieť.</li>
+    <li>Uzamknutie nastavení za biometriou (prepínač).</li>
+    <li>Pridaná možnosť hlásiť zlyhania prostredníctvom e-mailu.</li>
+    <li>Pridaná možnosť zobrazenia času používania aplikácie.</li>
+</ul>
 
-## Preklady:
+<h2>Preklady</h2>
 
-- Mnoho ľudí preložilo aplikáciu do týchto jazykov. Veľká vďaka všetkým.
-  - Afrikánsky
-  - Arabský
-  - Albánsky
-  - Bulharský
-  - Čínsky
-  - Chorvátsky
-  - Český
-  - Dánsky
-  - Anglický
-  - Estónsky
-  - Filipínsky
-  - Fínsky
-  - Francúzsky
-  - Gruzínsky
-  - Nemecky
-  - Grécky
-  - Havajský
-  - Hebrejsky
-  - Hindsky
-  - Maďarsky
-  - Islandský
-  - Indonézsky
-  - Írsky
-  - Taliansky
-  - Japonsky
-  - Kórejský
-  - Litovský
-  - Luxemburský
-  - Malajský
-  - Malgašský
-  - Malajálsky
-  - Nórsky
-  - Nepálsky
-  - Perzský
-  - Poľský
-  - Portugálsky (európska)
-  - Pandžábsky
-  - Ruský
-  - Srbský
-  - Sindhština
-  - Slovensky
-  - Španielsky
-  - Švédsky
-  - Thajsky
-  - Turecký
-  - Ukrajinský
-  - Vietnamsky
+<p>Veľa ľudí preložilo aplikáciu do nasledujúcich jazykov. Veľká vďaka vám všetkým:</p>
+
+<ul>
+    <li>arabsky</li>
+    <li>holandský</li>
+    <li>anglicky</li>
+    <li>Francúzština</li>
+    <li>Nemčina</li>
+    <li>hebrejsky</li>
+    <li>taliansky</li>
+    <li>japončina</li>
+    <li>kórejsky</li>
+    <li>litovčina</li>
+    <li>poľština</li>
+    <li>portugalčina</li>
+    <li>rusky</li>
+    <li>slovensky</li>
+    <li>Španielčina</li>
+    <li>Thajčina</li>
+    <li>turečtina</li>
+</ul>

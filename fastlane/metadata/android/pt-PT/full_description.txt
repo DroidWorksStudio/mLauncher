@@ -1,79 +1,73 @@
-Bifurcado de <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mínimo e limpo.
+<p>Bifurcado de <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimalista e limpo.</p>
 
-# Forked com recursos extras
+<h2>Bifurcado com recursos extras</h2>
 
-- Removida a desordem, como anúncios e links.
-- É possível renomear aplicações na gaveta da aplicação (a renomeação de aplicações no ecrã inicial já é suportada. Basta clicar longamente em um aplicativo na tela inicial e começar a digitar.)
-- Muito mais personalizabilidade nos gestos do ecrã inicial
-    - Os gestos estão agora:
-        - Deslizando para cima, para baixo, esquerda, direita
-        - Clicando no relógio
-        - Clicando na Data
-    - Possíveis ações agora incluem:
-        - Abrir o aplicativo especificado
-        - Exibir lista de aplicativos
-        - Bloqueando a tela
-        - Mostrar aplicativos abertos recentemente
-        - Abrindo a gaveta de notificação
-        - Abrir as configurações rápidas
-        - Diálogo de energia
-        - Faça uma captura de tela
-        - Desativar gesto
-- Você também pode posicionar o relógio independentemente dos aplicativos domésticos.
-- Altere o alinhamento de aplicativos na gaveta de aplicativos independente da tela inicial.
-- Altere o tamanho da fonte das seções da tela inicial independentes umas das outras.
-- Removida a permissão da Internet - Removida a permissão da Internet - Removida a permissão da Internet Você nunca sabe o que um desenvolvedor do app quer saber sobre você.
-- Bloquear configurações por trás da biometria (alternar)
-- Adicionada a capacidade de relatar falhas por e-mail.
-- Adicionada a capacidade de visualizar o tempo de uso do aplicativo.
+<ul>
+    <li>Desordem removida, como anúncios e links.</li>
+    <li>Você pode renomear aplicativos na gaveta de aplicativos (Renomear aplicativos na tela inicial já é suportado). Basta clicar longamente em um aplicativo na tela inicial e começar a digitar.)</li>
+    <li>Adicionamos muito mais opções de gestos na tela inicial:
+        <ul>
+            <li><b>Os gestos agora incluem:</b>
+                <ul>
+                    <li>Toque duas vezes</li>
+                    <li>Clicando no relógio</li>
+                    <li>Clicando na data</li>
+                    <li>Clicando no uso total</li>
+                    <li>Deslize rapidamente para cima</li>
+                    <li>Deslize rapidamente para baixo</li>
+                    <li>Deslize rapidamente para a esquerda</li>
+                    <li>Deslize rapidamente para a direita</li>
+                    <li>Deslize longo para cima</li>
+                    <li>Deslize para baixo longamente</li>
+                    <li>Deslize longo para a esquerda</li>
+                    <li>Deslize longo para a direita</li>
+                </ul>
+            </li>
+            <li><b>As ações possíveis agora incluem:</b>
+                <ul>
+                    <li>Abrir aplicativo especificado</li>
+                    <li>Exibir lista de aplicativos</li>
+                    <li>Bloquear a tela</li>
+                    <li>Mostrar aplicativos abertos recentemente</li>
+                    <li>Abra a gaveta de notificações</li>
+                    <li>Abra as configurações rápidas</li>
+                    <li>Diálogo de poder</li>
+                    <li>Tire uma captura de tela</li>
+                    <li>Trocar de página</li>
+                    <li>Desativar gesto</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>Você também pode posicionar o relógio independentemente dos aplicativos domésticos.</li>
+    <li>Altera o alinhamento dos aplicativos na gaveta de aplicativos independentemente da tela inicial.</li>
+    <li>Altera o tamanho da fonte das seções da tela inicial independentemente umas das outras.</li>
+    <li>Permissão de internet removida. Você nunca sabe o que um desenvolvedor de aplicativo quer saber sobre você.</li>
+    <li>Bloquear configurações atrás da biometria (alternar).</li>
+    <li>Adicionada a capacidade de relatar falhas por e-mail.</li>
+    <li>Adicionada a capacidade de visualizar o tempo de uso do aplicativo.</li>
+</ul>
 
-## Traduções:
+<h2>Traduções</h2>
 
-- Muitas pessoas traduziram a aplicação para as seguintes línguas. Muito obrigado a todos vós.
-  - Africâner
-  - árabe
-  - Albanês
-  - Búlgaro
-  - Chinês
-  - Croata
-  - Checo
-  - Dinamarquês
-  - Inglês
-  - Estónio
-  - Filipino
-  - Finlandês
-  - Francês
-  - Georgiano
-  - Alemão
-  - Grego
-  - havaiano
-  - Hebraico
-  - Hindi
-  - Húngaro
-  - Islandês
-  - Indonésio
-  - Irlandês
-  - Italiano
-  - Japonês
-  - Coreano
-  - Lituano
-  - Luxemburguês
-  - Malaio
-  - Malgaxe
-  - Malayalam
-  - Norueguês
-  - Nepalês
-  - Persa
-  - Polaco
-  - Português (Europeu)
-  - Punjabi
-  - Russo
-  - Sérvio
-  - Sindhi
-  - Eslovaco
-  - Espanhol
-  - Sueco
-  - Thai
-  - Turco
-  - Ucraniano
-  - Vietnamita
+<p>Muitas pessoas traduziram o aplicativo para os seguintes idiomas. Muito obrigado a todos vocês:</p>
+
+<ul>
+    <li>Árabe</li>
+    <li>Holandês</li>
+    <li>Inglês</li>
+    <li>Francês</li>
+    <li>Alemão</li>
+    <li>Hebraico</li>
+    <li>Italiano</li>
+    <li>Japonês</li>
+    <li>Coreano</li>
+    <li>Lituano</li>
+    <li>Polonês</li>
+    <li>Português</li>
+    <li>Russo</li>
+    <li>Eslovaco</li>
+    <li>Espanhol</li>
+    <li>Tailandês</li>
+    <li>Turco</li>
+</ul>

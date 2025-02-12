@@ -1,79 +1,73 @@
-Biforcato da <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimale e pulito.
+<p>Derivato da <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimo e pulito.</p>
 
-# Fork con funzionalità aggiuntive
+<h2>Biforcato con funzionalità extra</h2>
 
-- Rimosso il disordine, come annunci e collegamenti.
-- È possibile rinominare le app nell'app-drawer (la rinominazione delle app nella schermata iniziale è già supportata. Basta fare clic a lungo su un'app nella schermata principale e iniziare a digitare.)
-- Maggiore personalizzazione dei gesti della schermata iniziale
-    - I gesti sono ora:
-        - Scorri verso l'alto, verso il basso, a sinistra, a destra
-        - Possibilità di cambiare l'app che si apre cliccando sull'orologio
-        - Cliccando sulla data
-    - Le azioni possibili ora includono:
-        - Apri app specificata
-        - Visualizzazione dell'elenco delle app
-        - Blocco dello schermo
-        - Mostra le app aperte di recente
-        - Apertura del pannello notifiche
-        - Apertura delle impostazioni rapide
-        - Menu di spegnimento
-        - Fai uno screenshot
-        - Disabilita gesti
-- Puoi anche posizionare l'orologio indipendentemente dalle app domestiche.
-- Modifica l'allineamento delle app nel cassetto delle app indipendentemente dalla schermata iniziale.
-- Modifica la dimensione del carattere delle sezioni della schermata iniziale indipendentemente l'una dall'altra.
-- Rimozione dell'autorizzazione all'accesso a Internet - Rimozione dell'autorizzazione dell'accesso a Internet. Non sai mai cosa uno sviluppatore di app vuole sapere su di te.
-- Blocca le impostazioni tramite biometria (attiva/disattiva)
-- Aggiunta la possibilità di segnalare arresti anomali tramite e-mail.
-- Aggiunta la possibilità di visualizzare il tempo di utilizzo dell'app.
+<ul>
+    <li>Rimossi elementi superflui, come pubblicità e link.</li>
+    <li>Puoi rinominare le app nel cassetto delle app (la rinominazione delle app nella schermata iniziale è già supportata). Basta fare clic a lungo su un'app nella schermata iniziale e iniziare a digitare.)</li>
+    <li>Abbiamo aggiunto molte più opzioni per i gesti nella schermata iniziale:
+        <ul>
+            <li><b>I gesti ora includono:</b>
+                <ul>
+                    <li>Doppio tocco</li>
+                    <li>Cliccando sull'orologio</li>
+                    <li>Cliccando sulla data</li>
+                    <li>Cliccando sull'utilizzo totale</li>
+                    <li>Breve scorrimento verso l'alto</li>
+                    <li>Scorrimento breve verso il basso</li>
+                    <li>Scorrimento breve verso sinistra</li>
+                    <li>Scorrimento breve verso destra</li>
+                    <li>Scorrimento lungo verso l'alto</li>
+                    <li>Scorrimento lungo verso il basso</li>
+                    <li>Scorrimento lungo verso sinistra</li>
+                    <li>Scorrimento lungo verso destra</li>
+                </ul>
+            </li>
+            <li><b>Le azioni possibili ora includono:</b>
+                <ul>
+                    <li>Apre l'app specificata</li>
+                    <li>Visualizza l'elenco delle app</li>
+                    <li>Blocca lo schermo</li>
+                    <li>Mostra le app aperte di recente</li>
+                    <li>Apri il cassetto delle notifiche</li>
+                    <li>Apri le impostazioni rapide</li>
+                    <li>Dialogo di potenza</li>
+                    <li>Fai uno screenshot</li>
+                    <li>Cambia pagina</li>
+                    <li>Disattiva gesto</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>Puoi anche posizionare l'orologio indipendentemente dalle app domestiche.</li>
+    <li>Cambia l'allineamento delle app nel cassetto delle app indipendentemente dalla schermata iniziale.</li>
+    <li>Modifica la dimensione del carattere delle sezioni della schermata iniziale indipendentemente l'una dall'altra.</li>
+    <li>Rimosso il permesso di accesso a Internet. Non sai mai cosa uno sviluppatore di app vuole sapere di te.</li>
+    <li>Blocca le impostazioni dietro la biometria (attiva/disattiva).</li>
+    <li>Aggiunta la possibilità di segnalare gli arresti anomali tramite e-mail.</li>
+    <li>Aggiunta la possibilità di visualizzare il tempo di utilizzo dell'app.</li>
+</ul>
 
-## Traduzioni:
+<h2>Traduzioni</h2>
 
-- Molte persone hanno tradotto l'applicazione nelle seguenti lingue. Grazie a tutti voi.
-  - Afrikaans
-  - Arabo
-  - Albanese
-  - Bulgaro
-  - Cinese
-  - Croato
-  - Ceca
-  - Danese
-  - Inglese
-  - Estone
-  - Filippino
-  - Finlandese
-  - Francese
-  - Georgiano
-  - Tedesco
-  - Greco
-  - Hawaiano
-  - Ebraico
-  - Hindi
-  - Ungherese
-  - Islandese
-  - Indonesiano
-  - Irlandese
-  - Italiano
-  - Giapponese
-  - Coreano
-  - Lituano
-  - Lussemburghese
-  - Malese
-  - Malgascio
-  - Malayalam
-  - Norvegese
-  - Nepali
-  - Persiano
-  - Polacco
-  - Portoghese (europeo)
-  - Punjabi
-  - Russo
-  - Serbo
-  - Sindhi
-  - Slovacco
-  - Spagnolo
-  - Svedese
-  - Thailandese
-  - Turco
-  - Ucraino
-  - Vietnamita
+<p>Molte persone hanno tradotto l'app nelle seguenti lingue. Grazie mille a tutti voi:</p>
+
+<ul>
+    <li>Arabo</li>
+    <li>Olandese</li>
+    <li>Inglese</li>
+    <li>Francese</li>
+    <li>Tedesco</li>
+    <li>Ebraico</li>
+    <li>Italiano</li>
+    <li>Giapponese</li>
+    <li>Coreano</li>
+    <li>Lituano</li>
+    <li>Polacco</li>
+    <li>Portoghese</li>
+    <li>Russo</li>
+    <li>slovacco</li>
+    <li>Spagnolo</li>
+    <li>Tailandese</li>
+    <li>Turco</li>
+</ul>

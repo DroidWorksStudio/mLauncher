@@ -2,25 +2,99 @@
 <resources>
     <!-- Base Settings -->
     <string name="select_app">בחר אפליקציה</string>
+    <string name="show_apps">כל היישומים</string>
     <!-- Strings used for settings menus -->
     <string name="settings_name">הגדרות mLauncher</string>
     <string name="settings_features_title">תכונות</string>
     <string name="settings_features_description">שפר את הפרודוקטיביות שלך.</string>
-    <string name="settings_look_feel_title">תראה ותרגיש</string>
+    <string name="settings_look_feel_title">תראה &amp; תרגיש</string>
     <string name="settings_look_feel_description">תן למסך הבית שלך מגע אישי.</string>
+    <string name="settings_gestures_title">מחוות</string>
+    <string name="settings_gestures_description">התאם אישית מחוות לניווט מהיר וקל.</string>
     <string name="settings_favorite_apps_title">יישומים מועדפים</string>
     <string name="settings_hidden_apps_title">יישומים מוסתרים</string>
-    <string name="settings_advanced_title">מִתקַדֵם</string>
+    <string name="settings_advanced_title">הגדרות מתקדמות</string>
     <!-- Strings used for features settings -->
     <string name="features_settings_title">תכונות</string>
-    <!-- Strings used for look And feel settings -->
-    <string name="look_feel_settings_title">תראה ותרגיש</string>
+    <string name="user_preferences">העדפות משתמש</string>
+    <string name="theme_mode">סגנון רקע</string>
+    <string name="app_language">שפת ממשק</string>
+    <string name="font_family">משפחת גופן</string>
+    <string name="settings_text_size">הגדרות גודל טקסט</string>
+    <string name="search">חיפוש</string>
+    <string name="search_engine">מנוע חיפוש</string>
+    <string name="auto_show_keyboard">הצג מקלדת בחיפוש</string>
+    <string name="search_from_start">חיפוש אפליקציה מההתחלה.</string>
+    <string name="home_management">דף הבית &amp; ניהול אפליקציות</string>
+    <string name="auto_open_apps">פתיחה אוטומטית של יישומים</string>
+    <string name="lock_home_apps">נעילת יישומים</string>
+    <string name="lock_settings">הגדרות נעילה</string>
+    <string name="apps_on_home_screen">מספר קיצורי דרך</string>
+    <string name="pages_on_home_screen">מספר דפים</string>
+    <string name="enable_home_pager">הפעל את Home Pager</string>
+    <string name="battery_date_time">סוללה &amp; תאריך/שעה</string>
+    <string name="show_time">הצג זמן</string>
+    <string name="show_time_format">תצוגת זמן (AM/PM)</string>
+    <string name="show_date">הצג תאריך</string>
+    <string name="show_battery">הצג סוללה</string>
+    <string name="show_battery_icon">הצגת סמליל סוללה</string>
+    <string name="show_total_screen_time">הצג זמן מסך כולל</string>
+    <!-- Strings used for look & feel settings -->
+    <string name="look_feel_settings_title">תראה &amp; תרגיש</string>
+    <string name="text_size_adjustments">טקסט &amp; התאמות גודל</string>
+    <string name="app_text_size">גודל הטקסט של היישום</string>
+    <string name="clock_text_size">גודל טקסט שעון</string>
+    <string name="date_text_size">גודל הטקסט של התאריך</string>
+    <string name="battery_text_size">גודל הטקסט של הסוללה</string>
+    <string name="layout_positioning">פריסה &amp; מיקום</string>
+    <string name="app_padding_size">גודל ריפוד</string>
+    <string name="extend_home_apps_area">הרחב את האזור הניתן ללחיצה</string>
+    <string name="alignment_to_bottom">יישר לתחתית</string>
+    <string name="visibility_display">נראות &amp; תצוגה</string>
+    <string name="show_status_bar">הצג שורת מצב</string>
+    <string name="show_recent_apps">הצג אפליקציות אחרונות</string>
+    <string name="number_of_recents">מספר היישומים האחרונים</string>
+    <string name="show_app_usage_stats">הצג סטטיסטיקות שימוש באפליקציה</string>
+    <string name="filter_strength">חוזק מסנן</string>
+    <string name="background_opacity">אטימות רקע</string>
+    <string name="element_alignment">יישור אלמנטים</string>
+    <string name="date_alignment">תַאֲרִיך</string>
+    <string name="clock_alignment">שָׁעוֹן</string>
+    <string name="home_alignment">אפליקציות בית</string>
+    <string name="drawer_alignment">אפליקציות מגירה</string>
+    <string name="element_colors">צבעי אלמנט</string>
+    <!-- Strings used for gestures settings -->
+    <string name="gestures_settings_title">מחוות</string>
+    <string name="tap_click_actions">הקש/לחץ על פעולות</string>
+    <string name="double_tap">הקשה כפולה</string>
+    <string name="clock_click_app">לחיצה על השעון</string>
+    <string name="date_click_app">לחיצה על התאריך</string>
+    <string name="usage_click_app">לחץ על סך שימוש</string>
+    <string name="swipe_movement">תנועת החלקה</string>
+    <string name="short_swipe_up_app">החלקה למעלה</string>
+    <string name="short_swipe_down_app">החלקה למטה</string>
+    <string name="short_swipe_left_app">החלקה שמאלה</string>
+    <string name="short_swipe_right_app">החלקה ימינה</string>
+    <string name="long_swipe_up_app">לחץ לחיצה ארוכה החלק למעלה</string>
+    <string name="long_swipe_down_app">לחץ לחיצה ארוכה החלק מטה</string>
+    <string name="long_swipe_left_app">לחיצה ארוכה החלק שמאלה</string>
+    <string name="long_swipe_right_app">לחץ לחיצה ארוכה החלק ימינה</string>
+    <string name="open_app">הפעלת יישום</string>
+    <string name="lock_screen">נעילת מסך</string>
+    <string name="show_notifications">הצגת התרעות</string>
+    <string name="show_app_list">הצגת רשימת יישומים</string>
+    <string name="open_quick_settings">הגדרות מהירות</string>
+    <string name="show_recents">הצגת האחרונים</string>
+    <string name="open_power_dialog">תפריט הפעלה</string>
+    <string name="take_a_screenshot">צלם מסך</string>
+    <string name="left_page">מעבר לדף השמאלי</string>
+    <string name="right_page">מעבר לדף הימני</string>
     <!-- Strings used for advanced settings -->
     <string name="advanced_settings_title">הגדרות מתקדמות</string>
     <string name="advanced_settings_app_info_title">מידע על האפליקציה</string>
     <string name="advanced_settings_app_info_description">%1$s</string>
-    <string name="advanced_settings_set_as_default_launcher">הגדר כמפעיל ברירת מחדל</string>
-    <string name="advanced_settings_change_default_launcher">שנה את מפעיל ברירת המחדל</string>
+    <string name="advanced_settings_set_as_default_launcher">הגדר כמשגר ברירת מחדל</string>
+    <string name="advanced_settings_change_default_launcher">שנה את משגר ברירת המחדל</string>
     <string name="advanced_settings_restart_title">הפעל מחדש את משגר</string>
     <string name="advanced_settings_restart_description">ניסית להדליק ולכבות?</string>
     <string name="advanced_settings_backup_restore_title">גיבוי/שחזור</string>
@@ -32,140 +106,26 @@
     <string name="advanced_settings_backup_restore_clear_description">האם אתה בטוח שאתה רוצה לעשות זאת?</string>
     <string name="advanced_settings_backup_restore_clear_yes">כֵּן</string>
     <string name="advanced_settings_backup_restore_clear_no">לֹא</string>
-    <string name="advanced_settings_help_feedback_title">עזרה ומשוב</string>
+    <string name="advanced_settings_help_feedback_title">עזרה &amp; משוב</string>
     <string name="advanced_settings_community_support_title">תמיכה בקהילה</string>
     <string name="advanced_settings_share_application_title">שתף אפליקציה</string>
     <string name="advanced_settings_share_application_description">שפר את החוויה שלך עם %1$s! קבל את זה עכשיו ב-fDroid וראה על מה כולם מדברים!\n</string>
-    <!-- Admin Settings -->
-    <string name="admin_permission_message">mLauncher מבטיח להשתמש בהרשאת מסך הנעילה באחריות. mLauncher אינו אוסף או משתף נתונים כלשהם.</string>
-    <string name="experimental">(ניסיוני)</string>
-    <!-- Settings Headers -->
-    <string name="display">תצוגה</string>
-    <string name="language_region">שפה &amp; אזור</string>
-    <string name="accessibility">נְגִישׁוּת</string>
-    <string name="appearance">מראה</string>
-    <string name="behavior">אופן הפעולה</string>
-    <string name="homescreen">מסך הבית</string>
-    <string name="alignment">יישור</string>
-    <string name="gestures">מחוות</string>
-    <string name="miscellaneous">שונות</string>
-    <!-- Home Strings -->
+    <!-- App Page Strings -->
     <string name="hidden_apps">יישומים מוסתרים</string>
     <string name="favorite_apps">יישומים מועדפים</string>
-    <!-- Display Strings -->
-    <string name="show_status_bar">הצג שורת מצב</string>
-    <string name="show_recent_apps">הצג אפליקציות אחרונות</string>
-    <string name="show_app_usage_stats">הצג סטטיסטיקות שימוש באפליקציה</string>
-    <string name="show_time">הצג זמן</string>
-    <string name="show_time_format">תצוגת זמן (AM/PM)</string>
-    <string name="show_date">הצג תאריך</string>
-    <string name="show_battery">הצג סוללה</string>
-    <string name="show_battery_icon">הצגת סמליל סוללה</string>
-    <string name="show_header_text">הצג טקסט כותרת</string>
-    <!-- Language & Region Strings -->
-    <string name="app_language">שפת ממשק</string>
-    <!-- Accessibility Strings -->
-    <string name="app_text_size">גודל הטקסט של היישום</string>
-    <string name="clock_text_size">גודל טקסט שעון</string>
-    <string name="date_text_size">גודל הטקסט של התאריך</string>
-    <string name="battery_text_size">גודל הטקסט של הסוללה</string>
-    <string name="app_padding_size">גודל ריפוד</string>
-    <string name="app_font">משפחת גופן</string>
-    <!-- Appearance Strings -->
-    <string name="theme_mode">סגנון רקע</string>
-    <string name="background_opacity">אטימות רקע</string>
-    <string name="home_alignment_bottom">יישור מסך הבית למטה</string>
-    <!-- Behavior Strings -->
-    <string name="auto_show_keyboard">הצג מקלדת בחיפוש</string>
-    <string name="auto_open_apps">פתיחה אוטומטית של יישומים</string>
-    <string name="enable_notifications">הפעל התראות</string>
-    <string name="number_of_recents">מספר היישומים האחרונים</string>
-    <string name="filter_strength">חוזק מסנן</string>
-    <string name="search_from_start">חיפוש אפליקציה מההתחלה.</string>
-    <string name="icon_font">השתמש בגופן אייקון</string>
-    <!-- Home-screen Strings -->
-    <string name="apps_on_home_screen">מספר קיצורי דרך</string>
-    <string name="pages_on_home_screen">מספר דפים</string>
-    <string name="enable_home_pager">הפעל את Home Pager</string>
-    <string name="lock_home_apps">נעילת יישומים</string>
-    <string name="extend_home_apps_area">הרחב את האזור הניתן ללחיצה</string>
-    <!-- Alignment Strings -->
-    <string name="home_alignment">Apps home screen</string>
-    <string name="clock_alignment">שעון ותאריך</string>
-    <string name="drawer_alignment">יישומים במגירת היישומים</string>
-    <!-- Gestures Strings -->
-    <string name="short_swipe_up_app">החלקה למעלה</string>
-    <string name="short_swipe_down_app">החלקה למטה</string>
-    <string name="short_swipe_left_app">החלקה שמאלה</string>
-    <string name="short_swipe_right_app">החלקה ימינה</string>
-    <string name="long_swipe_up_app">לחץ לחיצה ארוכה החלק למעלה</string>
-    <string name="long_swipe_down_app">לחץ לחיצה ארוכה החלק מטה</string>
-    <string name="long_swipe_left_app">לחיצה ארוכה החלק שמאלה</string>
-    <string name="long_swipe_right_app">לחץ לחיצה ארוכה החלק ימינה</string>
-    <string name="clock_click_app">לחיצה על השעון</string>
-    <string name="date_click_app">לחיצה על התאריך</string>
-    <string name="usage_click_app">לחץ על סך שימוש</string>
-    <string name="double_tap">הקשה כפולה</string>
-    <!-- Gestures Do Strings -->
-    <string name="show_notifications">הצגת התרעות</string>
-    <string name="show_app_list">הצגת רשימת יישומים</string>
-    <string name="open_app">הפעלת יישום</string>
-    <string name="lock_screen">נעילת מסך</string>
-    <string name="open_quick_settings">הגדרות מהירות</string>
-    <string name="show_recents">הצגת האחרונים</string>
-    <string name="open_power_dialog">תפריט הפעלה</string>
-    <string name="take_a_screenshot">צלם מסך</string>
-    <string name="left_page">מעבר לדף השמאלי</string>
-    <string name="right_page">מעבר לדף הימני</string>
-    <string name="double_tap_to_lock_screen">נקישה כפולה לנעילה</string>
-    <!-- Miscellaneous Strings -->
-    <string name="settings_text_size">הגדרות גודל טקסט</string>
-    <string name="display_hidden_apps">הצג יישומים מוסתרים</string>
-    <string name="lock_settings">הגדרות נעילה</string>
-    <!-- Backup Strings -->
-    <string name="backup">גיבוי</string>
-    <string name="load_backup">שחזור</string>
-    <string name="save_backup">שמירה</string>
-    <string name="clear_backup">איפוס</string>
-    <!-- Settings Strings -->
-    <string name="off">כבוי</string>
-    <string name="on">פעיל</string>
-    <string name="left">שמאל</string>
-    <string name="right">ימין</string>
-    <string name="center">מרכז</string>
-    <string name="dark">כהה</string>
-    <string name="light">בהיר</string>
-    <string name="settings">הגדרות</string>
-    <string name="lang_system">מערכת</string>
-    <string name="system_default">מערכת</string>
-    <string name="delete">למחוק</string>
-    <string name="hide">הסתרה</string>
-    <string name="unhide">הצגה</string>
-    <string name="rename">שינוי שם</string>
-    <string name="info">מידע</string>
-    <string name="okay">אוקיי</string>
-    <string name="save">שמור</string>
-    <string name="show">הצג</string>
-    <string name="reset">אפס</string>
-    <string name="cancel">בטל</string>
-    <string name="enable">אפשר</string>
-    <string name="disable">השבת</string>
-    <string name="enabled">מאופשר</string>
-    <string name="disabled">מושבת</string>
-    <string name="open">פתח</string>
-    <string name="close">סגור</string>
-    <string name="copy">העתק</string>
-    <!-- Colored Themes -->
-    <string name="catppuccino">קאטפוצ\'ינו</string>
-    <string name="nordic">נורדי</string>
-    <!-- Dark Only Themes -->
-    <string name="dracula">דרקולה</string>
-    <string name="arc">קשת</string>
-    <string name="nokto">נוקטו</string>
-    <string name="breeze">רוּחַ</string>
-    <string name="yaru">יארו</string>
-    <!-- Light Only Themes -->
-    <string name="adwaita">אדוואיטה</string>
+    <!-- Accessibility/Help Strings -->
+    <string name="double_tap_lock_is_enabled_message">אם נעילת הקשה כפולה מנטרלת את ביטול הנעילה על ידי זיהוי האצבע או זיהוי פנים, פתח את הגדרות mLauncher, הקש על \'ניסיוני\' ועקוב אחרי ההוראות. תודה לך.</string>
+    <string name="double_tap_lock_uninstall_message">נעילה בהקשה כפולה מאופשרת.
+		\n\nהערה: כבה אופציה זו תחילה אם תחליט למחוק את mLauncher.</string>
+    <string name="accessibility_service_name"> שירות פעולות של mLauncher</string>
+    <string name="accessibility_service_description">שירות נגישות זה מאפשר ל-mLauncher לבצע פעולות מסוימות כמו נעילת המסך או פתיחת ההגדרות המהירות. שירות הנגישות שלנו אינו אוסף או משתף נתונים כלשהם.</string>
+    <string name="can_not_delete_system_apps">לא ניתן למחוק אפליקציות מערכת</string>
+    <string name="please_select_app">אנא בחר אפליקציה</string>
+    <string name="drawer_list_empty_hint">לא נמצאו יישומים</string>
+    <string name="long_press_for_settings">לחץ לחיצה ארוכה בכל מקום להגדרות</string>
+    <string name="long_press_to_select_app">לחץ לחיצה ארוכה כדי לבחור אפליקציה</string>
+    <string name="swipe_up_for_apps">החלק למעלה לכל היישומים</string>
+    <string name="app_drawer_tips">טיפ: החלק למטה בכדי לבטל. החלק להסתרת המקלדת.</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">ביטול האימות.</string>
     <string name="text_authentication_error">שגיאת אימות:%1$s(קוד %2$d)</string>
@@ -178,28 +138,22 @@
     <string name="acra_send_report">שלח דו\"ח</string>
     <string name="acra_dont_send">אל תשלח</string>
     <string name="acra_mail_body">התרחשה קריסה באפליקציה.\n\nלהלן הפרטים של המכשיר. יומן השגיאות צורף כקובץ לעיונך. נשמח לעזרתך בפתרון בעיה זו.\n\nמידע על מכשיר: \n[נא למלא את המידע למטה ולהסיר כל דבר בין הסוגריים המרובעים או שזה יתעלם.]\n\n- גרסת אפליקציה: [0.0.1]\n- גרסת אנדרואיד: [14]\n- שם מכשיר: [Android Pixel 69]\n- מיקום התקנה: [github, fdroid, obtanium, עצמי]\n\nתשומת לבך המהירה לעניין זה מוערכת מאוד.\n\nתודה.\n</string>
-    <string name="settings_font_system">מערכת</string>
-    <!-- Search Stings -->
-    <string name="search_engine">מנוע חיפוש</string>
-    <string name="search_google">Google</string>
-    <string name="search_yahoo">Yahoo</string>
-    <string name="search_duckduckgo">DuckDuckGo</string>
-    <string name="search_bing">Bing</string>
-    <string name="search_brave">Brave</string>
-    <string name="search_swisscow">SwissCows</string>
-    <!-- Unsorted Strings -->
-    <string name="show_apps">כל היישומים</string>
-    <string name="total_screen_time">זמן מסך כולל</string>
-    <string name="can_not_delete_system_apps">לא ניתן למחוק אפליקציות מערכת</string>
-    <string name="please_select_app">אנא בחר אפליקציה</string>
-    <string name="drawer_list_empty_hint">לא נמצאו יישומים</string>
-    <string name="long_press_for_settings">לחץ לחיצה ארוכה בכל מקום להגדרות</string>
-    <string name="swipe_up_for_apps">החלק למעלה לכל היישומים</string>
-    <string name="app_drawer_tips">טיפ: החלק למטה בכדי לבטל. החלק להסתרת המקלדת.</string>
-    <string name="double_tap_lock_is_enabled_message">אם נעילת הקשה כפולה מנטרלת את ביטול הנעילה על ידי זיהוי האצבע או זיהוי פנים, פתח את הגדרות mLauncher, הקש על \'ניסיוני\' ועקוב אחרי ההוראות. תודה לך.</string>
-    <string name="double_tap_lock_uninstall_message">נעילה בהקשה כפולה מאופשרת.
-		\n\nהערה: כבה אופציה זו תחילה אם תחליט למחוק את mLauncher.</string>
-    <string name="accessibility_service_name"> שירות פעולות של mLauncher</string>
-    <string name="accessibility_service_description">שירות נגישות זה מאפשר ל-mLauncher לבצע פעולות מסוימות כמו נעילת המסך או פתיחת ההגדרות המהירות. שירות הנגישות שלנו אינו אוסף או משתף נתונים כלשהם.</string>
-    <string name="version">גרסה</string>
+    <!-- Settings Strings -->
+    <string name="left">שמאל</string>
+    <string name="right">ימין</string>
+    <string name="center">מרכז</string>
+    <string name="dark">כהה</string>
+    <string name="light">בהיר</string>
+    <string name="system_default">מערכת</string>
+    <string name="delete">למחוק</string>
+    <string name="hide">הסתרה</string>
+    <string name="show">הצג</string>
+    <string name="rename">שינוי שם</string>
+    <string name="info">מידע</string>
+    <string name="okay">אוקיי</string>
+    <string name="reset">אפס</string>
+    <string name="cancel">בטל</string>
+    <string name="disabled">מושבת</string>
+    <string name="open">פתח</string>
+    <string name="close">סגור</string>
 </resources>
