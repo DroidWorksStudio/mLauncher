@@ -9,7 +9,7 @@
     <string name="settings_features_title">Features</string>
     <string name="settings_features_description">Improve your productivity.</string>
 
-    <string name="settings_look_feel_title">Look and Feel</string>
+    <string name="settings_look_feel_title">Look &amp; Feel</string>
     <string name="settings_look_feel_description">Give your home screen a personal touch.</string>
 
     <string name="settings_gestures_title">Gestures</string>
@@ -23,50 +23,81 @@
     <!-- Strings used for features settings -->
     <string name="features_settings_title">Features</string>
 
-    <string name="behavior">Behavior</string>
+    <string name="user_preferences">User Preferences</string>
 
     <string name="theme_mode">Theme mode</string>
     <string name="app_language">Interface Language</string>
+    <string name="font_family">Font Family</string>
+    <string name="settings_text_size">Settings Text Size</string>
+
+    <string name="search">Search</string>
+
+    <string name="search_engine">Search Engine</string>
     <string name="auto_show_keyboard">Auto Show Keyboard</string>
-    <string name="auto_open_apps">Auto Open Apps</string>
     <string name="search_from_start">Search from Start</string>
+
+    <string name="home_management">Home &amp; App Management</string>
+
+    <string name="auto_open_apps">Auto Open Apps</string>
     <string name="lock_home_apps">Lock Home Apps</string>
     <string name="lock_settings">Lock Settings</string>
-    <string name="filter_strength">Filter Strength</string>
+    <string name="apps_on_home_screen">Number of Shortcuts</string>
+    <string name="pages_on_home_screen">Number of Pages</string>
+    <string name="enable_home_pager">Enable Home Pager</string>
 
-    <!-- Strings used for look And feel settings -->
-    <string name="look_feel_settings_title">Look And Feel</string>
+    <string name="battery_date_time">Battery &amp; Date/Time</string>
 
-    <string name="appearance">Appearance</string>
+    <string name="show_time">Show Time</string>
+    <string name="show_time_format">Time Format (AM/PM)</string>
+    <string name="show_date">Show Date</string>
+    <string name="show_battery">Show Battery</string>
+    <string name="show_battery_icon">Show Battery Icon</string>
+    <string name="show_total_screen_time">Show Total Screen Time</string>
+
+
+    <!-- Strings used for look & feel settings -->
+    <string name="look_feel_settings_title">Look &amp; Feel</string>
+
+    <string name="text_size_adjustments">Text &amp; Size Adjustments</string>
 
     <string name="app_text_size">App Text Size</string>
-    <string name="app_padding_size">Padding Size</string>
     <string name="clock_text_size">Clock Text Size</string>
     <string name="date_text_size">Date Text Size</string>
     <string name="battery_text_size">Battery Text Size</string>
 
-    <string name="display">Display</string>
+    <string name="layout_positioning">Layout &amp; Positioning</string>
+
+    <string name="app_padding_size">Padding Size</string>
+    <string name="extend_home_apps_area">Extend Clickable Area</string>
+    <string name="alignment_to_bottom">Align to Bottom</string>
+
+    <string name="visibility_display">Visibility &amp; Display</string>
 
     <string name="show_status_bar">Show Status bar</string>
     <string name="show_recent_apps">Show Recent Apps</string>
     <string name="number_of_recents">Number of Recent Apps</string>
+    <string name="show_app_usage_stats">Show App Usage Stats</string>
+    <string name="filter_strength">Filter Strength</string>
     <string name="background_opacity">Background Opacity</string>
 
-    <string name="miscellaneous">Miscellaneous</string>
+    <string name="element_alignment">Element Alignment</string>
 
-    <string name="settings_text_size">Settings Text Size</string>
-    <string name="search_engine">Search Engine</string>
-    <string name="font_family">Font Family</string>
+    <string name="date_alignment">Date</string>
+    <string name="clock_alignment">Clock</string>
+    <string name="home_alignment">Home Apps</string>
+    <string name="drawer_alignment">Drawer Apps</string>
 
-
-    <!-- Strings gestures settings -->
+    <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">Gestures</string>
 
-    <string name="double_tap">Double Tap</string>
+    <string name="tap_click_actions">Tap &amp; Click Actions</string>
 
+    <string name="double_tap">Double Tap</string>
     <string name="clock_click_app">Click on Clock</string>
     <string name="date_click_app">Click on Date</string>
     <string name="usage_click_app">Click on Total Usage</string>
+
+    <string name="swipe_movement">Swipe &amp; Movement</string>
 
     <string name="short_swipe_up_app">Short Swipe up</string>
     <string name="short_swipe_down_app">Short Swipe down</string>
@@ -113,7 +144,7 @@
     <string name="advanced_settings_backup_restore_clear_yes">Yes</string>
     <string name="advanced_settings_backup_restore_clear_no">No</string>
 
-    <string name="advanced_settings_help_feedback_title">Help and Feedback</string>
+    <string name="advanced_settings_help_feedback_title">Help &amp; Feedback</string>
     <string name="advanced_settings_community_support_title">Community Support</string>
 
     <string name="advanced_settings_share_application_title">Share Application</string>
@@ -135,24 +166,6 @@
     <string name="long_press_to_select_app">Long press to select app</string>
     <string name="swipe_up_for_apps">Swipe up for all apps</string>
     <string name="app_drawer_tips">Tip: Swipe down to dismiss. Scroll to hide keyboard.</string>
-
-
-    <!-- Display Strings -->
-    <string name="total_screen_time">Total Screen Time</string>
-    <string name="show_app_usage_stats">Show App Usage Stats</string>
-    <string name="show_time">Show Time</string>
-    <string name="show_time_format">Time Format (AM/PM)</string>
-    <string name="show_date">Show Date</string>
-    <string name="show_battery">Show Battery</string>
-    <string name="show_battery_icon">Show Battery Icon</string>
-    <string name="home_alignment_bottom">Home Screen Align Bottom</string>
-    <string name="apps_on_home_screen">Number of Shortcuts</string>
-    <string name="pages_on_home_screen">Number of Pages</string>
-    <string name="enable_home_pager">Enable Home Pager</string>
-    <string name="extend_home_apps_area">Extend Clickable Area</string>
-    <string name="home_alignment">Apps Home Screen</string>
-    <string name="clock_alignment">Clock and Date</string>
-    <string name="drawer_alignment">Apps in App Drawer</string>
 
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Authentication Cancel.</string>

@@ -60,7 +60,7 @@ object Constants {
     var SWIPE_DISTANCE_THRESHOLD: Float = 0f
 
     // Update MAX_HOME_PAGES dynamically based on MAX_HOME_APPS
-    private var MAX_HOME_PAGES: Int = 5
+    var MAX_HOME_PAGES: Int = 5
 
     fun updateMaxHomePages(context: Context) {
         val prefs = Prefs(context)

@@ -39,10 +39,10 @@
 
             <!-- Clock and calendar-->
             <LinearLayout
-                android:id="@+id/dateTimeLayout"
+                android:id="@+id/dateLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="2dp"
+                android:layout_marginVertical="1dp"
                 android:orientation="vertical"
                 tools:visibility="visible">
 
@@ -53,13 +53,21 @@
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/time_size"
                     tools:text="02:34" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/timeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="1dp"
+                android:orientation="vertical"
+                tools:visibility="visible">
 
                 <TextClock
                     android:id="@+id/date"
                     style="@style/TextDefaultStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingHorizontal="2dp"
                     android:textSize="@dimen/date_size"
                     tools:text="Thu, 30 Dec" />
             </LinearLayout>
@@ -119,7 +127,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/setTotalScreenTime"
+        android:id="@+id/totalScreenTime"
         style="@style/TextSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -127,7 +135,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="36dp"
-        android:text="@string/total_screen_time"
+        android:text="@string/show_total_screen_time"
         android:visibility="gone" />
 
     <!-- Set default launcher -->

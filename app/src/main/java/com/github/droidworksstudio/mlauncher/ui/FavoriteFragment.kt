@@ -10,7 +10,6 @@ import android.content.ClipData
 import android.content.Context
 import android.content.Context.VIBRATOR_SERVICE
 import android.graphics.drawable.Drawable
-import android.os.Build
 import android.os.Bundle
 import android.os.Vibrator
 import android.util.Log
@@ -21,7 +20,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ScrollView
 import android.widget.TextView
-import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import androidx.core.view.children
 import androidx.core.view.size
@@ -58,7 +56,7 @@ class FavoriteFragment : Fragment() {
         return view
     }
 
-    
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -77,7 +75,7 @@ class FavoriteFragment : Fragment() {
         initObservers()
     }
 
-    
+
     override fun onStart() {
         super.onStart()
         if (prefs.showStatusBar) showStatusBar(requireActivity()) else hideStatusBar(requireActivity())
@@ -86,10 +84,10 @@ class FavoriteFragment : Fragment() {
         binding.mainLayout.setBackgroundColor(backgroundColor)
     }
 
-    
+
     private fun initObservers() {
         with(viewModel) {
-            homeAppsCount.observe(viewLifecycleOwner) {
+            homeAppsNum.observe(viewLifecycleOwner) {
                 updateAppCount(it)
             }
         }
@@ -173,7 +171,7 @@ class FavoriteFragment : Fragment() {
      *        - Only when the config option changes,
      *        - or also when we switch pages of the home screen?
      */
-    
+
     @SuppressLint("InflateParams", "SetTextI18n")
     private fun updateAppCount(newAppsNum: Int) {
         val oldAppsNum = binding.homeAppsLayout.size // current number

@@ -30,6 +30,7 @@ private const val HOME_ALIGNMENT_BOTTOM = "HOME_ALIGNMENT_BOTTOM"
 private const val HOME_CLICK_AREA = "HOME_CLICK_AREA"
 private const val DRAWER_ALIGNMENT = "DRAWER_ALIGNMENT"
 private const val TIME_ALIGNMENT = "TIME_ALIGNMENT"
+private const val DATE_ALIGNMENT = "DATE_ALIGNMENT"
 private const val STATUS_BAR = "STATUS_BAR"
 private const val SHOW_BATTERY = "SHOW_BATTERY"
 private const val SHOW_BATTERY_ICON = "SHOW_BATTERY_ICON"
@@ -52,7 +53,6 @@ private const val CLICK_APP_USAGE = "CLICK_APP_USAGE"
 private const val CLICK_DATE_ACTION = "CLICK_DATE_ACTION"
 private const val DOUBLE_TAP_ACTION = "DOUBLE_TAP_ACTION"
 private const val HIDDEN_APPS = "HIDDEN_APPS"
-private const val HIDDEN_APPS_DISPLAYED = "HIDDEN_APPS_DISPLAYED"
 private const val SEARCH_ENGINE = "SEARCH_ENGINE"
 private const val LAUNCHER_FONT = "LAUNCHER_FONT"
 private const val APP_NAME = "APP_NAME"
@@ -149,7 +149,7 @@ class Prefs(val context: Context) {
         get() = prefs.getBoolean(AUTO_OPEN_APP, false)
         set(value) = prefs.edit().putBoolean(AUTO_OPEN_APP, value).apply()
 
-    var homePagerOn: Boolean
+    var homePager: Boolean
         get() = prefs.getBoolean(HOME_PAGES_PAGER, false)
         set(value) = prefs.edit().putBoolean(HOME_PAGES_PAGER, value).apply()
 
@@ -235,7 +235,7 @@ class Prefs(val context: Context) {
         get() = prefs.getBoolean(HOME_CLICK_AREA, false)
         set(value) = prefs.edit().putBoolean(HOME_CLICK_AREA, value).apply()
 
-    var clockAlignment: Gravity
+    var timeAlignment: Gravity
         get() {
             val string = prefs.getString(
                 TIME_ALIGNMENT,
@@ -244,6 +244,16 @@ class Prefs(val context: Context) {
             return Gravity.valueOf(string)
         }
         set(value) = prefs.edit().putString(TIME_ALIGNMENT, value.toString()).apply()
+
+    var dateAlignment: Gravity
+        get() {
+            val string = prefs.getString(
+                DATE_ALIGNMENT,
+                Gravity.Left.name
+            ).toString()
+            return Gravity.valueOf(string)
+        }
+        set(value) = prefs.edit().putString(DATE_ALIGNMENT, value.toString()).apply()
 
     var drawerAlignment: Gravity
         get() {

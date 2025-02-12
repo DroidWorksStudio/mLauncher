@@ -32,6 +32,7 @@ import androidx.compose.ui.unit.isSpecified
 import androidx.compose.ui.unit.sp
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.github.droidworksstudio.common.isBiometricEnabled
 import com.github.droidworksstudio.mlauncher.MainViewModel
@@ -42,6 +43,7 @@ import com.github.droidworksstudio.mlauncher.data.Constants.Theme.Light
 import com.github.droidworksstudio.mlauncher.data.Constants.Theme.System
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentSettingsBinding
+import com.github.droidworksstudio.mlauncher.helper.AppReloader
 import com.github.droidworksstudio.mlauncher.helper.isSystemInDarkMode
 import com.github.droidworksstudio.mlauncher.helper.setThemeMode
 import com.github.droidworksstudio.mlauncher.listener.DeviceAdmin
@@ -51,6 +53,8 @@ import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.Setti
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsSwitch
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsTitle
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class FeaturesFragment : Fragment() {
 
@@ -83,12 +87,26 @@ class FeaturesFragment : Fragment() {
     private fun Settings(fontSize: TextUnit = TextUnit.Unspecified) {
         var selectedTheme by remember { mutableStateOf(prefs.appTheme) }
         var selectedLanguage by remember { mutableStateOf(prefs.appLanguage) }
-        var selectedAutoShowKeyboard by remember { mutableStateOf(prefs.autoShowKeyboard) }
-        var selectedAutoOpenApp by remember { mutableStateOf(prefs.autoOpenApp) }
-        var selectedSearchFromStart by remember { mutableStateOf(prefs.searchFromStart) }
-        var selectedSettingsLocked by remember { mutableStateOf(prefs.settingsLocked) }
-        var selectedAppsLocked by remember { mutableStateOf(prefs.homeLocked) }
-        var selectedFilterStrength by remember { mutableIntStateOf(prefs.filterStrength) }
+        var selectedFontFamily by remember { mutableStateOf(prefs.fontFamily) }
+        var selectedSettingsSize by remember { mutableIntStateOf(prefs.settingsSize) }
+
+        var selectedSearchEngine by remember { mutableStateOf(prefs.searchEngines) }
+        var toggledAutoShowKeyboard by remember { mutableStateOf(prefs.autoShowKeyboard) }
+        var toggledSearchFromStart by remember { mutableStateOf(prefs.searchFromStart) }
+
+        var toggledAutoOpenApp by remember { mutableStateOf(prefs.autoOpenApp) }
+        var toggledAppsLocked by remember { mutableStateOf(prefs.homeLocked) }
+        var toggledSettingsLocked by remember { mutableStateOf(prefs.settingsLocked) }
+        var selectedHomeAppsNum by remember { mutableIntStateOf(prefs.homeAppsNum) }
+        var selectedHomePagesNum by remember { mutableIntStateOf(prefs.homePagesNum) }
+        var toggledHomePager by remember { mutableStateOf(prefs.homePager) }
+
+        var toggledShowTime by remember { mutableStateOf(prefs.showTime) }
+        var toggledShowTimeFormat by remember { mutableStateOf(prefs.showTimeFormat) }
+        var toggledShowDate by remember { mutableStateOf(prefs.showDate) }
+        var toggledShowBattery by remember { mutableStateOf(prefs.showBattery) }
+        var toggledShowBatteryIcon by remember { mutableStateOf(prefs.showBatteryIcon) }
+
         val fs = remember { mutableStateOf(fontSize) }
         Constants.updateMaxHomePages(requireContext())
 
@@ -111,7 +129,7 @@ class FeaturesFragment : Fragment() {
             )
 
             SettingsTitle(
-                text = stringResource(R.string.behavior),
+                text = stringResource(R.string.user_preferences),
                 fontSize = titleFontSize,
             )
 
@@ -158,43 +176,114 @@ class FeaturesFragment : Fragment() {
                 }
             )
 
-            SettingsSwitch(
-                text = stringResource(R.string.auto_show_keyboard),
+            SettingsSelect(
+                title = stringResource(R.string.font_family),
+                option = selectedFontFamily.string(),
                 fontSize = titleFontSize,
-                defaultState = selectedAutoShowKeyboard,
-                onCheckedChange = {
-                    selectedAutoShowKeyboard = !prefs.autoShowKeyboard
-                    prefs.autoShowKeyboard = selectedAutoShowKeyboard
+                onClick = {
+                    showSingleChoiceDialog(
+                        context = requireContext(),
+                        options = Constants.FontFamily.entries.toTypedArray(),
+                        fonts = Constants.FontFamily.entries.toTypedArray()
+                            .map { it.getFont(requireContext()) ?: Typeface.DEFAULT },
+                        titleResId = R.string.font_family,
+                        onItemSelected = { newFontFamily ->
+                            selectedFontFamily = newFontFamily // Update state
+                            prefs.fontFamily = newFontFamily // Persist selection in preferences
+                            lifecycleScope.launch {
+                                delay(500)
+                                AppReloader.restartApp(requireContext())
+                            }
+                        }
+                    )
+                }
+            )
+
+            SettingsSelect(
+                title = stringResource(R.string.settings_text_size),
+                option = selectedSettingsSize.toString(),
+                fontSize = titleFontSize,
+                onClick = {
+                    showSliderDialog(
+                        context = requireContext(),
+                        title = getString(R.string.settings_text_size),
+                        minValue = Constants.MIN_TEXT_SIZE,
+                        maxValue = Constants.MAX_TEXT_SIZE,
+                        currentValue = prefs.appSize,
+                        onValueSelected = { newSettingsSize ->
+                            selectedSettingsSize = newSettingsSize // Update state
+                            prefs.appSize = newSettingsSize // Persist selection in preferences
+                        }
+                    )
+                }
+            )
+
+            SettingsTitle(
+                text = stringResource(R.string.search),
+                fontSize = titleFontSize,
+            )
+
+            SettingsSelect(
+                title = stringResource(R.string.search_engine),
+                option = selectedSearchEngine.string(),
+                fontSize = titleFontSize,
+                onClick = {
+                    showSingleChoiceDialog(
+                        context = requireContext(),
+                        options = Constants.SearchEngines.entries.toTypedArray(),
+                        titleResId = R.string.search_engine,
+                        onItemSelected = { newSearchEngine ->
+                            selectedSearchEngine = newSearchEngine // Update state
+                            prefs.searchEngines = newSearchEngine // Persist selection in preferences
+                            requireActivity().recreate()
+                        }
+                    )
                 }
             )
 
             SettingsSwitch(
-                text = stringResource(R.string.auto_open_apps),
+                text = stringResource(R.string.auto_show_keyboard),
                 fontSize = titleFontSize,
-                defaultState = selectedAutoOpenApp,
+                defaultState = toggledAutoShowKeyboard,
                 onCheckedChange = {
-                    selectedAutoOpenApp = !prefs.autoOpenApp
-                    prefs.autoOpenApp = selectedAutoOpenApp
+                    toggledAutoShowKeyboard = !prefs.autoShowKeyboard
+                    prefs.autoShowKeyboard = toggledAutoShowKeyboard
                 }
             )
 
             SettingsSwitch(
                 text = stringResource(R.string.search_from_start),
                 fontSize = titleFontSize,
-                defaultState = selectedSearchFromStart,
+                defaultState = toggledSearchFromStart,
                 onCheckedChange = {
-                    selectedSearchFromStart = !prefs.searchFromStart
-                    prefs.searchFromStart = selectedSearchFromStart
+                    toggledSearchFromStart = !prefs.searchFromStart
+                    prefs.searchFromStart = toggledSearchFromStart
+                }
+            )
+
+            SettingsTitle(
+                text = stringResource(R.string.home_management),
+                fontSize = titleFontSize,
+            )
+
+
+            SettingsSwitch(
+                text = stringResource(R.string.auto_open_apps),
+                fontSize = titleFontSize,
+                defaultState = toggledAutoOpenApp,
+                onCheckedChange = {
+                    toggledAutoOpenApp = !prefs.autoOpenApp
+                    prefs.autoOpenApp = toggledAutoOpenApp
                 }
             )
 
             SettingsSwitch(
                 text = stringResource(R.string.lock_home_apps),
                 fontSize = titleFontSize,
-                defaultState = selectedAppsLocked,
+                defaultState = toggledAppsLocked,
                 onCheckedChange = {
-                    selectedAppsLocked = !prefs.homeLocked
-                    prefs.homeLocked = selectedAppsLocked
+                    toggledAppsLocked = !prefs.homeLocked
+                    prefs.homeLocked = toggledAppsLocked
                 }
             )
 
@@ -202,31 +291,118 @@ class FeaturesFragment : Fragment() {
                 SettingsSwitch(
                     text = stringResource(R.string.lock_settings),
                     fontSize = titleFontSize,
-                    defaultState = selectedSettingsLocked,
+                    defaultState = toggledSettingsLocked,
                     onCheckedChange = {
-                        selectedSettingsLocked = !prefs.settingsLocked
-                        prefs.settingsLocked = selectedSettingsLocked
+                        toggledSettingsLocked = !prefs.settingsLocked
+                        prefs.settingsLocked = toggledSettingsLocked
                     }
                 )
             }
 
             SettingsSelect(
-                title = stringResource(R.string.filter_strength),
-                option = selectedFilterStrength.toString(),
+                title = stringResource(R.string.apps_on_home_screen),
+                option = selectedHomeAppsNum.toString(),
                 fontSize = titleFontSize,
                 onClick = {
                     showSliderDialog(
                         context = requireContext(),
-                        title = getString(R.string.filter_strength),
-                        minValue = Constants.MIN_FILTER_STRENGTH,
-                        maxValue = Constants.MAX_FILTER_STRENGTH,
-                        currentValue = prefs.filterStrength,
-                        onValueSelected = { newFilterStrength ->
-                            selectedFilterStrength = newFilterStrength // Update state
-                            prefs.filterStrength = newFilterStrength // Persist selection in preferences
-                            viewModel.filterStrength.value = newFilterStrength
+                        title = getString(R.string.apps_on_home_screen),
+                        minValue = Constants.MIN_HOME_APPS,
+                        maxValue = Constants.MAX_HOME_APPS,
+                        currentValue = prefs.homeAppsNum,
+                        onValueSelected = { newHomeAppsNum ->
+                            selectedHomeAppsNum = newHomeAppsNum // Update state
+                            prefs.homeAppsNum = newHomeAppsNum // Persist selection in preferences
+                            viewModel.homeAppsNum.value = newHomeAppsNum
                         }
                     )
+                }
+            )
+
+            SettingsSelect(
+                title = stringResource(R.string.pages_on_home_screen),
+                option = selectedHomePagesNum.toString(),
+                fontSize = titleFontSize,
+                onClick = {
+                    showSliderDialog(
+                        context = requireContext(),
+                        title = getString(R.string.pages_on_home_screen),
+                        minValue = Constants.MIN_HOME_PAGES,
+                        maxValue = Constants.MAX_HOME_PAGES,
+                        currentValue = prefs.homePagesNum,
+                        onValueSelected = { newHomePagesNum ->
+                            selectedHomePagesNum = newHomePagesNum // Update state
+                            prefs.homePagesNum = newHomePagesNum // Persist selection in preferences
+                            viewModel.homePagesNum.value = newHomePagesNum
+                        }
+                    )
+                }
+            )
+
+            SettingsSwitch(
+                text = stringResource(R.string.enable_home_pager),
+                fontSize = titleFontSize,
+                defaultState = toggledHomePager,
+                onCheckedChange = {
+                    toggledHomePager = !prefs.homePager
+                    prefs.homePager = toggledHomePager
+                }
+            )
+
+            SettingsTitle(
+                text = stringResource(R.string.battery_date_time),
+                fontSize = titleFontSize,
+            )
+
+            SettingsSwitch(
+                text = stringResource(R.string.show_time),
+                fontSize = titleFontSize,
+                defaultState = toggledShowTime,
+                onCheckedChange = {
+                    toggledShowTime = !prefs.showTime
+                    prefs.showTime = toggledShowTime
+                    viewModel.setShowTime(prefs.showTime)
+                }
+            )
+
+            SettingsSwitch(
+                text = stringResource(R.string.show_time_format),
+                fontSize = titleFontSize,
+                defaultState = toggledShowTimeFormat,
+                onCheckedChange = {
+                    toggledShowTimeFormat = !prefs.showTimeFormat
+                    prefs.showTimeFormat = toggledShowTimeFormat
+                }
+            )
+
+            SettingsSwitch(
+                text = stringResource(R.string.show_date),
+                fontSize = titleFontSize,
+                defaultState = toggledShowDate,
+                onCheckedChange = {
+                    toggledShowDate = !prefs.showDate
+                    prefs.showDate = toggledShowDate
+                    viewModel.setShowDate(prefs.showDate)
+                }
+            )
+
+            SettingsSwitch(
+                text = stringResource(R.string.show_battery),
+                fontSize = titleFontSize,
+                defaultState = toggledShowBattery,
+                onCheckedChange = {
+                    toggledShowBattery = !prefs.showBattery
+                    prefs.showBattery = toggledShowBattery
+                }
+            )
+
+            SettingsSwitch(
+                text = stringResource(R.string.show_battery_icon),
+                fontSize = titleFontSize,
+                defaultState = toggledShowBatteryIcon,
+                onCheckedChange = {
+                    toggledShowBatteryIcon = !prefs.showBatteryIcon
+                    prefs.showBatteryIcon = toggledShowBatteryIcon
                 }
             )
         }
