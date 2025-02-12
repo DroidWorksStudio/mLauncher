@@ -62,14 +62,15 @@
     <string name="clock_alignment">Clock</string>
     <string name="home_alignment">Home Apps</string>
     <string name="drawer_alignment">Drawer Apps</string>
+    <string name="element_colors">Element Colors</string>
     <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">Gestai</string>
-    <string name="tap_click_actions">Tap &amp; Click Actions</string>
+    <string name="tap_click_actions">Tap/Click Actions</string>
     <string name="double_tap">Dukart paspauskite</string>
     <string name="clock_click_app">Spustelėkite ant laikrodžio</string>
     <string name="date_click_app">Spustelėkite ant datos</string>
     <string name="usage_click_app">Spustelėkite Bendras naudojimas</string>
-    <string name="swipe_movement">Swipe &amp; Movement</string>
+    <string name="swipe_movement">Swipe Movement</string>
     <string name="short_swipe_up_app">Trumpai braukti į viršų</string>
     <string name="short_swipe_down_app">Trumpai braukti žemyn</string>
     <string name="short_swipe_left_app">Trumpai braukti kairėn</string>
@@ -153,5 +154,6 @@
     <string name="reset">Atstatyti</string>
     <string name="cancel">Atšaukti</string>
     <string name="disabled">Išjungtas</string>
+    <string name="open">Open</string>
     <string name="close">Uždaryti</string>
 </resources>
