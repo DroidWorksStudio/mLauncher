@@ -1,79 +1,73 @@
-Bifurcado desde <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Mínimo y limpio.
+<p>Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal and clean.</p>
 
-# Bifurcado con características extra
+<h2>Forked with Extra Features</h2>
 
-- Se eliminó el desorden, como anuncios y enlaces.
-- Puedes renombrar aplicaciones en el cajón de aplicaciones (ya es posible renombrar aplicaciones en la pantalla de inicio). Simplemente haga clic largo en una aplicación en la pantalla de inicio y comience a escribir).
-- Mucha más personalización de los gestos de la pantalla de inicio
-    - Los gestos son ahora:
-        - Deslizar hacia arriba, abajo, izquierda, derecha
-        - Haga clic en el reloj
-        - Posibilidad de cambiar la aplicación que se abre al hacer clic en la fecha
-    - Las posibles acciones ahora incluyen:
-        - Abrir aplicación especificada
-        - Mostrar lista de aplicaciones
-        - Bloquear la pantalla
-        - Mostrar aplicaciones abiertas recientes
-        - Abriendo el cajón de notificaciones
-        - Abriendo los ajustes rápidos
-        - Diálogo de energía
-        - Tomar una captura de pantalla
-        - Desactivar gesto
-- También puedes posicionar el reloj independientemente de las apps de casa.
-- Cambie la alineación de las aplicaciones en el cajón de aplicaciones independientemente de la pantalla de inicio.
-- Cambie el tamaño de fuente de las secciones de la pantalla de inicio de forma independiente entre sí.
-- Permiso de Internet eliminado - Permiso de Internet eliminado - Permiso de Internet eliminado - Permiso de Internet eliminado Nunca sabes lo que un desarrollador de aplicaciones quiere saber sobre ti.
-- Bloquear la configuración detrás de la biometría (alternar)
-- Se agregó la capacidad de informar fallas por correo electrónico.
-- Se agregó la capacidad de ver el tiempo de uso de la aplicación.
+<ul>
+    <li>Removed clutter, like ads and links.</li>
+    <li>You can rename apps in the app-drawer (Renaming apps on the home screen is already supported. Just long-click on an app on the home screen and start typing.)</li>
+    <li>We have added a lot more options for gestures on the home screen:
+        <ul>
+            <li><b>Gestures now include:</b>
+                <ul>
+                    <li>Double tap</li>
+                    <li>Clicking on the clock</li>
+                    <li>Clicking on the date</li>
+                    <li>Clicking on total usage</li>
+                    <li>Short swipe up</li>
+                    <li>Short swipe down</li>
+                    <li>Short swipe left</li>
+                    <li>Short swipe right</li>
+                    <li>Long swipe up</li>
+                    <li>Long swipe down</li>
+                    <li>Long swipe left</li>
+                    <li>Long swipe right</li>
+                </ul>
+            </li>
+            <li><b>Possible actions now include:</b>
+                <ul>
+                    <li>Open specified app</li>
+                    <li>Display app list</li>
+                    <li>Lock the screen</li>
+                    <li>Show recently opened apps</li>
+                    <li>Open the notification drawer</li>
+                    <li>Open quick settings</li>
+                    <li>Power dialog</li>
+                    <li>Take a screenshot</li>
+                    <li>Switch Page</li>
+                    <li>Disable gesture</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>You can also position the clock independently of the home apps.</li>
+    <li>Change alignment of apps in the app-drawer independent from the home screen.</li>
+    <li>Change font size of sections of the home screen independently of each other.</li>
+    <li>Removed internet permission. You never know what an app developer wants to know about you.</li>
+    <li>Lock settings behind biometrics (toggle).</li>
+    <li>Added the ability to report crashes via email.</li>
+    <li>Added the ability to view app usage time.</li>
+</ul>
 
-## Traducciones:
+<h2>Translations</h2>
 
-- Mucha gente ha traducido la aplicación a los siguientes idiomas. Muchas gracias a todos.
-  - afrikáans
-  - Árabe
-  - albanés
-  - Búlgaro
-  - Chino
-  - Croata
-  - Checa
-  - Danés
-  - Inglés
-  - Estonio
-  - Filipino
-  - Finlandés
-  - Francés
-  - Georgia
-  - Alemán
-  - Griego
-  - Hawaiano
-  - Hebreo
-  - Hindi
-  - Húngaro
-  - Islandés
-  - Indonesio
-  - Irlanda
-  - Italiano
-  - Japonés
-  - Coreano
-  - Lituano
-  - Luxemburgués
-  - Malayo
-  - Malgache
-  - Malayalam
-  - Noruega
-  - Nepalí
-  - Persa
-  - Polaco
-  - Portugués (europeo)
-  - Punjabí
-  - Ruso
-  - Serbio
-  - Sindhi
-  - eslovaco
-  - Español
-  - Sueco
-  - Tailandia
-  - Turco
-  - Ucrania
-  - Vietnamita
+<p>A lot of people have translated the app into the following languages. Many thanks to you all:</p>
+
+<ul>
+    <li>Arabic</li>
+    <li>Dutch</li>
+    <li>English</li>
+    <li>French</li>
+    <li>German</li>
+    <li>Hebrew</li>
+    <li>Italian</li>
+    <li>Japanese</li>
+    <li>Korean</li>
+    <li>Lithuanian</li>
+    <li>Polish</li>
+    <li>Portuguese</li>
+    <li>Russian</li>
+    <li>Slovak</li>
+    <li>Spanish</li>
+    <li>Thai</li>
+    <li>Turkish</li>
+</ul>
