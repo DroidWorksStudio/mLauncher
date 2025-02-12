@@ -7,7 +7,7 @@
     <string name="settings_name">mLauncher nustatymai</string>
     <string name="settings_features_title">Savybės</string>
     <string name="settings_features_description">Pagerinkite savo produktyvumą.</string>
-    <string name="settings_look_feel_title">Pažiūrėk ir Jausk</string>
+    <string name="settings_look_feel_title">Look &amp; Feel</string>
     <string name="settings_look_feel_description">Suteikite savo pagrindiniam ekranui asmeniškumo.</string>
     <string name="settings_gestures_title">Gestai</string>
     <string name="settings_gestures_description">Tinkinkite gestus, kad galėtumėte greitai ir lengvai naršyti.</string>
@@ -16,38 +16,60 @@
     <string name="settings_advanced_title">Išplėstinė</string>
     <!-- Strings used for features settings -->
     <string name="features_settings_title">Savybės</string>
-    <string name="behavior">Funkcionavimas</string>
+    <string name="user_preferences">User Preferences</string>
     <string name="theme_mode">Temavimo režimas</string>
     <string name="app_language">Sąsajos kalba</string>
+    <string name="font_family">Šriftų šeima</string>
+    <string name="settings_text_size">Nustatymai Teksto dydis</string>
+    <string name="search">Search</string>
+    <string name="search_engine">Paieškos sistema</string>
     <string name="auto_show_keyboard">Automatiškai rodyti klaviatūrą</string>
-    <string name="auto_open_apps">Automatiškai atidaryti programėlės</string>
     <string name="search_from_start">Programėlių paieška nuo pradžių.</string>
+    <string name="home_management">Home &amp; App Management</string>
+    <string name="auto_open_apps">Automatiškai atidaryti programėlės</string>
     <string name="lock_home_apps">Užrakinti programas</string>
     <string name="lock_settings">Užrakinimo nustatymai</string>
-    <string name="filter_strength">Filtro stiprumas</string>
-    <!-- Strings used for look And feel settings -->
-    <string name="look_feel_settings_title">Žiūrėti ir Jausti</string>
-    <string name="appearance">Išvaizda</string>
+    <string name="apps_on_home_screen">Nuorodų skaičius</string>
+    <string name="pages_on_home_screen">Puslapių skaičius</string>
+    <string name="enable_home_pager">Įjungti pradžios puslapį</string>
+    <string name="battery_date_time">Battery &amp; Date/Time</string>
+    <string name="show_time">Rodyti laiką</string>
+    <string name="show_time_format">Laiko formatas (AM/PM)</string>
+    <string name="show_date">Rodyti datą</string>
+    <string name="show_battery">Rodyti bateriją</string>
+    <string name="show_battery_icon">Rodyti akumuliatoriaus piktogramą</string>
+    <string name="show_total_screen_time">Show Total Screen Time</string>
+    <!-- Strings used for look & feel settings -->
+    <string name="look_feel_settings_title">Look &amp; Feel</string>
+    <string name="text_size_adjustments">Text &amp; Size Adjustments</string>
     <string name="app_text_size">Programėlės Šrifto dydis</string>
-    <string name="app_padding_size">Užpildymo Dydis</string>
     <string name="clock_text_size">Laikrodžio teksto dydis</string>
     <string name="date_text_size">Datos Šrifto dydis</string>
     <string name="battery_text_size">Baterijos Šrifto dydis</string>
-    <string name="display">Ekranas</string>
+    <string name="layout_positioning">Layout &amp; Positioning</string>
+    <string name="app_padding_size">Užpildymo Dydis</string>
+    <string name="extend_home_apps_area">Išplėsti spustelėjamą sritį</string>
+    <string name="alignment_to_bottom">Align to Bottom</string>
+    <string name="visibility_display">Visibility &amp; Display</string>
     <string name="show_status_bar">Rodyti būsenos juostą</string>
     <string name="show_recent_apps">Rodyti naujausias programas</string>
     <string name="number_of_recents">Naujausiai atdarytų programėlių skaičius</string>
+    <string name="show_app_usage_stats">Rodyti programos naudojimo statistiką</string>
+    <string name="filter_strength">Filtro stiprumas</string>
     <string name="background_opacity">Fono permatomumas</string>
-    <string name="miscellaneous">Įvairūs</string>
-    <string name="settings_text_size">Nustatymai Teksto dydis</string>
-    <string name="search_engine">Paieškos sistema</string>
-    <string name="font_family">Šriftų šeima</string>
-    <!-- Strings gestures settings -->
+    <string name="element_alignment">Element Alignment</string>
+    <string name="date_alignment">Date</string>
+    <string name="clock_alignment">Clock</string>
+    <string name="home_alignment">Home Apps</string>
+    <string name="drawer_alignment">Drawer Apps</string>
+    <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">Gestai</string>
+    <string name="tap_click_actions">Tap &amp; Click Actions</string>
     <string name="double_tap">Dukart paspauskite</string>
     <string name="clock_click_app">Spustelėkite ant laikrodžio</string>
     <string name="date_click_app">Spustelėkite ant datos</string>
     <string name="usage_click_app">Spustelėkite Bendras naudojimas</string>
+    <string name="swipe_movement">Swipe &amp; Movement</string>
     <string name="short_swipe_up_app">Trumpai braukti į viršų</string>
     <string name="short_swipe_down_app">Trumpai braukti žemyn</string>
     <string name="short_swipe_left_app">Trumpai braukti kairėn</string>
@@ -83,7 +105,7 @@
     <string name="advanced_settings_backup_restore_clear_description">Ar tikrai norite tai padaryti?</string>
     <string name="advanced_settings_backup_restore_clear_yes">Taip</string>
     <string name="advanced_settings_backup_restore_clear_no">Nr</string>
-    <string name="advanced_settings_help_feedback_title">Pagalba ir atsiliepimai</string>
+    <string name="advanced_settings_help_feedback_title">Help &amp; Feedback</string>
     <string name="advanced_settings_community_support_title">Bendruomenės parama</string>
     <string name="advanced_settings_share_application_title">Dalintis programa</string>
     <string name="advanced_settings_share_application_description">Padidinkite savo patirtį naudodami %1$s! Gaukite jį dabar „fDroid“ ir pažiūrėkite, apie ką visi kalba!\n</string>
@@ -103,22 +125,6 @@
     <string name="long_press_to_select_app">Ilgai paspauskite, kad pasirinktumėte programą</string>
     <string name="swipe_up_for_apps">Braukite aukštyn, kad pamatytumėte visas programėlės</string>
     <string name="app_drawer_tips">Patarimas: perbraukite žemyn, kad atsisakytumėte. Slinkite, kad paslėptumėte klaviatūrą.</string>
-    <!-- Display Strings -->
-    <string name="total_screen_time">Bendras ekrano laikas</string>
-    <string name="show_app_usage_stats">Rodyti programos naudojimo statistiką</string>
-    <string name="show_time">Rodyti laiką</string>
-    <string name="show_time_format">Laiko formatas (AM/PM)</string>
-    <string name="show_date">Rodyti datą</string>
-    <string name="show_battery">Rodyti bateriją</string>
-    <string name="show_battery_icon">Rodyti akumuliatoriaus piktogramą</string>
-    <string name="home_alignment_bottom">Pradinio ekrano lygiavimas apačioje</string>
-    <string name="apps_on_home_screen">Nuorodų skaičius</string>
-    <string name="pages_on_home_screen">Puslapių skaičius</string>
-    <string name="enable_home_pager">Įjungti pradžios puslapį</string>
-    <string name="extend_home_apps_area">Išplėsti spustelėjamą sritį</string>
-    <string name="home_alignment">Pagrindinis programėlių ekranas</string>
-    <string name="clock_alignment">Laikas ir data</string>
-    <string name="drawer_alignment">Programėlės programėlių stalčiuje</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Autentifikavimo atšaukimas.</string>
     <string name="text_authentication_error">Autentifikavimo klaida:%1$s(kodas %2$d)</string>
