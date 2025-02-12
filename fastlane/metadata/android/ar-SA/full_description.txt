@@ -1,73 +1,73 @@
-<p>Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal and clean.</p>
+<p>متفرع من <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. بسيطة ونظيفة.</p>
 
-<h2>Forked with Extra Features</h2>
+<h2>متفرع مع ميزات إضافية</h2>
 
 <ul>
-    <li>Removed clutter, like ads and links.</li>
-    <li>You can rename apps in the app-drawer (Renaming apps on the home screen is already supported. Just long-click on an app on the home screen and start typing.)</li>
-    <li>We have added a lot more options for gestures on the home screen:
+    <li>تمت إزالة الفوضى، مثل الإعلانات والروابط.</li>
+    <li>يمكنك إعادة تسمية التطبيقات في درج التطبيقات (إعادة تسمية التطبيقات على الشاشة الرئيسية مدعومة بالفعل. ما عليك سوى النقر مطولاً على أحد التطبيقات على الشاشة الرئيسية والبدء في الكتابة.)</li>
+    <li>لقد أضفنا المزيد من الخيارات للإيماءات على الشاشة الرئيسية:
         <ul>
-            <li><b>Gestures now include:</b>
+            <li><b>تتضمن الإيماءات الآن:</b>
                 <ul>
-                    <li>Double tap</li>
-                    <li>Clicking on the clock</li>
-                    <li>Clicking on the date</li>
-                    <li>Clicking on total usage</li>
-                    <li>Short swipe up</li>
-                    <li>Short swipe down</li>
-                    <li>Short swipe left</li>
-                    <li>Short swipe right</li>
-                    <li>Long swipe up</li>
-                    <li>Long swipe down</li>
-                    <li>Long swipe left</li>
-                    <li>Long swipe right</li>
+                    <li>انقر مرتين</li>
+                    <li>النقر على الساعة</li>
+                    <li>النقر على التاريخ</li>
+                    <li>النقر على إجمالي الاستخدام</li>
+                    <li>تمريرة قصيرة لأعلى</li>
+                    <li>تمريرة قصيرة للأسفل</li>
+                    <li>تمريرة قصيرة إلى اليسار</li>
+                    <li>تمريرة قصيرة لليمين</li>
+                    <li>تمريرة طويلة لأعلى</li>
+                    <li>تمريرة طويلة لأسفل</li>
+                    <li>تمريرة طويلة لليسار</li>
+                    <li>تمريرة طويلة لليمين</li>
                 </ul>
             </li>
-            <li><b>Possible actions now include:</b>
+            <li><b>تشمل الإجراءات الممكنة الآن ما يلي:</b>
                 <ul>
-                    <li>Open specified app</li>
-                    <li>Display app list</li>
-                    <li>Lock the screen</li>
-                    <li>Show recently opened apps</li>
-                    <li>Open the notification drawer</li>
-                    <li>Open quick settings</li>
-                    <li>Power dialog</li>
-                    <li>Take a screenshot</li>
-                    <li>Switch Page</li>
-                    <li>Disable gesture</li>
+                    <li>فتح التطبيق المحدد</li>
+                    <li>عرض قائمة التطبيقات</li>
+                    <li>قفل الشاشة</li>
+                    <li>عرض التطبيقات التي تم فتحها مؤخرًا</li>
+                    <li>افتح درج الإشعارات</li>
+                    <li>فتح الإعدادات السريعة</li>
+                    <li>مربع حوار الطاقة</li>
+                    <li>التقط لقطة شاشة</li>
+                    <li>تبديل الصفحة</li>
+                    <li>تعطيل الإيماءة</li>
                 </ul>
             </li>
         </ul>
     </li>
-    <li>You can also position the clock independently of the home apps.</li>
-    <li>Change alignment of apps in the app-drawer independent from the home screen.</li>
-    <li>Change font size of sections of the home screen independently of each other.</li>
-    <li>Removed internet permission. You never know what an app developer wants to know about you.</li>
-    <li>Lock settings behind biometrics (toggle).</li>
-    <li>Added the ability to report crashes via email.</li>
-    <li>Added the ability to view app usage time.</li>
+    <li>يمكنك أيضًا تحديد موضع الساعة بشكل مستقل عن تطبيقات الصفحة الرئيسية.</li>
+    <li>تغيير محاذاة التطبيقات في درج التطبيقات بشكل مستقل عن الشاشة الرئيسية.</li>
+    <li>تغيير حجم الخط لأقسام الشاشة الرئيسية بشكل مستقل عن بعضها البعض.</li>
+    <li>تمت إزالة أذونات الإنترنت. لا تعرف أبدًا ما يريد مطور التطبيق أن يعرفه عنك.</li>
+    <li>قفل الإعدادات خلف القياسات الحيوية (تبديل).</li>
+    <li>تمت إضافة القدرة على الإبلاغ عن الأعطال عبر البريد الإلكتروني.</li>
+    <li>تمت إضافة القدرة على عرض وقت استخدام التطبيق.</li>
 </ul>
 
-<h2>Translations</h2>
+<h2>الترجمات</h2>
 
-<p>A lot of people have translated the app into the following languages. Many thanks to you all:</p>
+<p>قام الكثير من الأشخاص بترجمة التطبيق إلى اللغات التالية. شكرا جزيلا لكم جميعا:</p>
 
 <ul>
-    <li>Arabic</li>
-    <li>Dutch</li>
-    <li>English</li>
-    <li>French</li>
-    <li>German</li>
-    <li>Hebrew</li>
-    <li>Italian</li>
-    <li>Japanese</li>
-    <li>Korean</li>
-    <li>Lithuanian</li>
-    <li>Polish</li>
-    <li>Portuguese</li>
-    <li>Russian</li>
-    <li>Slovak</li>
-    <li>Spanish</li>
-    <li>Thai</li>
-    <li>Turkish</li>
+    <li>عربي</li>
+    <li>الهولندية</li>
+    <li>انجليزي</li>
+    <li>الفرنسية</li>
+    <li>ألماني</li>
+    <li>العبرية</li>
+    <li>إيطالي</li>
+    <li>اليابانية</li>
+    <li>كوري</li>
+    <li>الليتوانية</li>
+    <li>البولندية</li>
+    <li>البرتغالية</li>
+    <li>روسي</li>
+    <li>السلوفاكية</li>
+    <li>الإسبانية</li>
+    <li>التايلاندية</li>
+    <li>تركي</li>
 </ul>
