@@ -7,7 +7,7 @@
     <string name="settings_name">mLauncher-instellingen</string>
     <string name="settings_features_title">Functies</string>
     <string name="settings_features_description">Verbeter uw productiviteit.</string>
-    <string name="settings_look_feel_title">Weergave en stijl</string>
+    <string name="settings_look_feel_title">Look &amp; Feel</string>
     <string name="settings_look_feel_description">Geef uw startscherm een persoonlijk tintje.</string>
     <string name="settings_gestures_title">Gebaren</string>
     <string name="settings_gestures_description">Pas gebaren aan voor snelle en eenvoudige navigatie.</string>
@@ -16,38 +16,60 @@
     <string name="settings_advanced_title">Geavanceerd</string>
     <!-- Strings used for features settings -->
     <string name="features_settings_title">Functies</string>
-    <string name="behavior">Gedrag</string>
+    <string name="user_preferences">User Preferences</string>
     <string name="theme_mode">Thema modus</string>
     <string name="app_language">Interface taal</string>
+    <string name="font_family">Lettertypefamilie</string>
+    <string name="settings_text_size">Instellingen Tekstgrootte</string>
+    <string name="search">Search</string>
+    <string name="search_engine">Zoekmachine</string>
     <string name="auto_show_keyboard">Toetsenbord automatisch tonen</string>
-    <string name="auto_open_apps">Apps automatisch openen</string>
     <string name="search_from_start">App zoeken vanaf het begin</string>
+    <string name="home_management">Home &amp; App Management</string>
+    <string name="auto_open_apps">Apps automatisch openen</string>
     <string name="lock_home_apps">Apps vergrendelen</string>
     <string name="lock_settings">Instellingen vergrendelen</string>
-    <string name="filter_strength">Filtersterkte</string>
-    <!-- Strings used for look And feel settings -->
-    <string name="look_feel_settings_title">Kijk en voel</string>
-    <string name="appearance">Uiterlijk</string>
+    <string name="apps_on_home_screen">Aantal snelkoppelingen</string>
+    <string name="pages_on_home_screen">Aantal pagina\'s</string>
+    <string name="enable_home_pager">Schakel Homepager in</string>
+    <string name="battery_date_time">Battery &amp; Date/Time</string>
+    <string name="show_time">Tijd weergeven</string>
+    <string name="show_time_format">Tijdformaat (AM/PM)</string>
+    <string name="show_date">Datum weergeven</string>
+    <string name="show_battery">Batterij weergeven</string>
+    <string name="show_battery_icon">Batterijpictogram weergeven</string>
+    <string name="show_total_screen_time">Show Total Screen Time</string>
+    <!-- Strings used for look & feel settings -->
+    <string name="look_feel_settings_title">Look &amp; Feel</string>
+    <string name="text_size_adjustments">Text &amp; Size Adjustments</string>
     <string name="app_text_size">App tekstgrootte</string>
-    <string name="app_padding_size">Opvullingsgrootte</string>
     <string name="clock_text_size">Kloktekstgrootte</string>
     <string name="date_text_size">Datum tekstgrootte</string>
     <string name="battery_text_size">Tekstgrootte batterij</string>
-    <string name="display">Weergave</string>
+    <string name="layout_positioning">Layout &amp; Positioning</string>
+    <string name="app_padding_size">Opvullingsgrootte</string>
+    <string name="extend_home_apps_area">Klikbaar gebied uitbreiden</string>
+    <string name="alignment_to_bottom">Align to Bottom</string>
+    <string name="visibility_display">Visibility &amp; Display</string>
     <string name="show_status_bar">Statusbalk weergeven</string>
     <string name="show_recent_apps">Recente apps weergeven</string>
     <string name="number_of_recents">Aantal recente apps</string>
+    <string name="show_app_usage_stats">Toon app-gebruikstatistieken</string>
+    <string name="filter_strength">Filtersterkte</string>
     <string name="background_opacity">Dekking van de achtergrond</string>
-    <string name="miscellaneous">Overige</string>
-    <string name="settings_text_size">Instellingen Tekstgrootte</string>
-    <string name="search_engine">Zoekmachine</string>
-    <string name="font_family">Lettertypefamilie</string>
-    <!-- Strings gestures settings -->
+    <string name="element_alignment">Element Alignment</string>
+    <string name="date_alignment">Date</string>
+    <string name="clock_alignment">Clock</string>
+    <string name="home_alignment">Home Apps</string>
+    <string name="drawer_alignment">Drawer Apps</string>
+    <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">Gebaren</string>
+    <string name="tap_click_actions">Tap &amp; Click Actions</string>
     <string name="double_tap">Dubbeltik</string>
     <string name="clock_click_app">Klik op de klok</string>
     <string name="date_click_app">Klik op Datum</string>
     <string name="usage_click_app">Klik op Totaal gebruik</string>
+    <string name="swipe_movement">Swipe &amp; Movement</string>
     <string name="short_swipe_up_app">Omhoog vegen</string>
     <string name="short_swipe_down_app">Omlaag vegen</string>
     <string name="short_swipe_left_app">Naar links vegen</string>
@@ -83,7 +105,7 @@
     <string name="advanced_settings_backup_restore_clear_description">Weet u zeker dat u dit wilt doen?</string>
     <string name="advanced_settings_backup_restore_clear_yes">Ja</string>
     <string name="advanced_settings_backup_restore_clear_no">Nee</string>
-    <string name="advanced_settings_help_feedback_title">Hulp en feedback</string>
+    <string name="advanced_settings_help_feedback_title">Help &amp; Feedback</string>
     <string name="advanced_settings_community_support_title">Gemeenschapsondersteuning</string>
     <string name="advanced_settings_share_application_title">Deel applicatie</string>
     <string name="advanced_settings_share_application_description">Verbeter je ervaring met %1$s! Haal het nu op fDroid en zie waar iedereen het over heeft!\n</string>
@@ -103,22 +125,6 @@
     <string name="long_press_to_select_app">Lang indrukken om app te selecteren</string>
     <string name="swipe_up_for_apps">Veeg omhoog voor alle apps</string>
     <string name="app_drawer_tips">Tip: Veeg naar beneden om te sluiten. Scroll om het toetsenbord te verbergen.</string>
-    <!-- Display Strings -->
-    <string name="total_screen_time">Totale schermtijd</string>
-    <string name="show_app_usage_stats">Toon app-gebruikstatistieken</string>
-    <string name="show_time">Tijd weergeven</string>
-    <string name="show_time_format">Tijdformaat (AM/PM)</string>
-    <string name="show_date">Datum weergeven</string>
-    <string name="show_battery">Batterij weergeven</string>
-    <string name="show_battery_icon">Batterijpictogram weergeven</string>
-    <string name="home_alignment_bottom">Startscherm onderaan uitlijnen</string>
-    <string name="apps_on_home_screen">Aantal snelkoppelingen</string>
-    <string name="pages_on_home_screen">Aantal pagina\'s</string>
-    <string name="enable_home_pager">Schakel Homepager in</string>
-    <string name="extend_home_apps_area">Klikbaar gebied uitbreiden</string>
-    <string name="home_alignment">Apps startscherm</string>
-    <string name="clock_alignment">Klok en datum</string>
-    <string name="drawer_alignment">Apps in app-overzicht</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Authenticatie Annuleren.</string>
     <string name="text_authentication_error">Authenticatiefout:%1$s(code %2$d)</string>
