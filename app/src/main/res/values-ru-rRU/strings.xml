@@ -7,7 +7,7 @@
     <string name="settings_name">Настройки mlauncher</string>
     <string name="settings_features_title">Функции</string>
     <string name="settings_features_description">Повысьте свою производительность.</string>
-    <string name="settings_look_feel_title">Посмотрите и почувствуйте</string>
+    <string name="settings_look_feel_title">Look &amp; Feel</string>
     <string name="settings_look_feel_description">Придайте индивидуальность вашему главному экрану.</string>
     <string name="settings_gestures_title">Жесты</string>
     <string name="settings_gestures_description">Настройте жесты для быстрой и легкой навигации.</string>
@@ -16,38 +16,60 @@
     <string name="settings_advanced_title">Передовой</string>
     <!-- Strings used for features settings -->
     <string name="features_settings_title">Функции</string>
-    <string name="behavior">Поведение</string>
+    <string name="user_preferences">User Preferences</string>
     <string name="theme_mode">Режим темы</string>
     <string name="app_language">Язык интерфейса</string>
+    <string name="font_family">Семейство шрифтов</string>
+    <string name="settings_text_size">Размер текста в настройках</string>
+    <string name="search">Search</string>
+    <string name="search_engine">Поисковый движок</string>
     <string name="auto_show_keyboard">Auto show keyboard</string>
-    <string name="auto_open_apps">Автооткрытие приложений</string>
     <string name="search_from_start">Поиск приложений с самого начала.</string>
+    <string name="home_management">Home &amp; App Management</string>
+    <string name="auto_open_apps">Автооткрытие приложений</string>
     <string name="lock_home_apps">Заблокировать приложения</string>
     <string name="lock_settings">Блокировка настроек</string>
-    <string name="filter_strength">Строгость фильтра</string>
-    <!-- Strings used for look And feel settings -->
-    <string name="look_feel_settings_title">Посмотрите и почувствуйте</string>
-    <string name="appearance">Внешний вид</string>
+    <string name="apps_on_home_screen">Количество ярлыков</string>
+    <string name="pages_on_home_screen">Количество страниц</string>
+    <string name="enable_home_pager">Включить домашний пейджер</string>
+    <string name="battery_date_time">Battery &amp; Date/Time</string>
+    <string name="show_time">Показать время</string>
+    <string name="show_time_format">Формат времени (AM/PM)</string>
+    <string name="show_date">Показать дату</string>
+    <string name="show_battery">Показать батарею</string>
+    <string name="show_battery_icon">Показать значок батареи</string>
+    <string name="show_total_screen_time">Show Total Screen Time</string>
+    <!-- Strings used for look & feel settings -->
+    <string name="look_feel_settings_title">Look &amp; Feel</string>
+    <string name="text_size_adjustments">Text &amp; Size Adjustments</string>
     <string name="app_text_size">Размер текста приложения</string>
-    <string name="app_padding_size">Размер заполнения</string>
     <string name="clock_text_size">Размер текста часов</string>
     <string name="date_text_size">Размер текста даты</string>
     <string name="battery_text_size">Размер текста батареи</string>
-    <string name="display">Отображать</string>
+    <string name="layout_positioning">Layout &amp; Positioning</string>
+    <string name="app_padding_size">Размер заполнения</string>
+    <string name="extend_home_apps_area">Расширить кликабельную область</string>
+    <string name="alignment_to_bottom">Align to Bottom</string>
+    <string name="visibility_display">Visibility &amp; Display</string>
     <string name="show_status_bar">Показать строку состояния</string>
     <string name="show_recent_apps">Показать последние приложения</string>
     <string name="number_of_recents">Количество последних приложений</string>
+    <string name="show_app_usage_stats">Показать статистику использования приложения</string>
+    <string name="filter_strength">Строгость фильтра</string>
     <string name="background_opacity">Непрозрачность фона</string>
-    <string name="miscellaneous">Разнообразный</string>
-    <string name="settings_text_size">Размер текста в настройках</string>
-    <string name="search_engine">Поисковый движок</string>
-    <string name="font_family">Семейство шрифтов</string>
-    <!-- Strings gestures settings -->
+    <string name="element_alignment">Element Alignment</string>
+    <string name="date_alignment">Date</string>
+    <string name="clock_alignment">Clock</string>
+    <string name="home_alignment">Home Apps</string>
+    <string name="drawer_alignment">Drawer Apps</string>
+    <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">Жесты</string>
+    <string name="tap_click_actions">Tap &amp; Click Actions</string>
     <string name="double_tap">Двойное нажатие</string>
     <string name="clock_click_app">Нажмите на часы</string>
     <string name="date_click_app">Нажмите на дату</string>
     <string name="usage_click_app">Нажмите «Общее использование».</string>
+    <string name="swipe_movement">Swipe &amp; Movement</string>
     <string name="short_swipe_up_app">Свайп вверх</string>
     <string name="short_swipe_down_app">Свайп вниз</string>
     <string name="short_swipe_left_app">Свайп влево</string>
@@ -83,7 +105,7 @@
     <string name="advanced_settings_backup_restore_clear_description">Вы уверены, что хотите это сделать?</string>
     <string name="advanced_settings_backup_restore_clear_yes">Да</string>
     <string name="advanced_settings_backup_restore_clear_no">Нет</string>
-    <string name="advanced_settings_help_feedback_title">Помощь и обратная связь</string>
+    <string name="advanced_settings_help_feedback_title">Help &amp; Feedback</string>
     <string name="advanced_settings_community_support_title">Поддержка сообщества</string>
     <string name="advanced_settings_share_application_title">Поделиться приложением</string>
     <string name="advanced_settings_share_application_description">Повысьте свой опыт с %1$s! Загрузите его сейчас на fDroid и посмотрите, о чем все говорят!\n</string>
@@ -103,22 +125,6 @@
     <string name="long_press_to_select_app">Длительное нажатие для выбора приложения</string>
     <string name="swipe_up_for_apps">Свайп вверх для всех приложений</string>
     <string name="app_drawer_tips">Совет: проведите пальцем вниз, чтобы уволить. Прокрутите для скрытия клавиатуры.</string>
-    <!-- Display Strings -->
-    <string name="total_screen_time">Общее время экрана</string>
-    <string name="show_app_usage_stats">Показать статистику использования приложения</string>
-    <string name="show_time">Показать время</string>
-    <string name="show_time_format">Формат времени (AM/PM)</string>
-    <string name="show_date">Показать дату</string>
-    <string name="show_battery">Показать батарею</string>
-    <string name="show_battery_icon">Показать значок батареи</string>
-    <string name="home_alignment_bottom">Главный экран Выровнять по нижнему краю</string>
-    <string name="apps_on_home_screen">Количество ярлыков</string>
-    <string name="pages_on_home_screen">Количество страниц</string>
-    <string name="enable_home_pager">Включить домашний пейджер</string>
-    <string name="extend_home_apps_area">Расширить кликабельную область</string>
-    <string name="home_alignment">Домашний экран приложений</string>
-    <string name="clock_alignment">Часы и дата</string>
-    <string name="drawer_alignment">Приложения в меню приложений</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Отмена аутентификации.</string>
     <string name="text_authentication_error">Ошибка аутентификации:%1$s(код %2$d)</string>
