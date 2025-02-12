@@ -1,73 +1,73 @@
-<p>Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal and clean.</p>
+<p>Rozdzielono z <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimalistyczne i czyste.</p>
 
-<h2>Forked with Extra Features</h2>
+<h2>Rozdzielony z dodatkowymi funkcjami</h2>
 
 <ul>
-    <li>Removed clutter, like ads and links.</li>
-    <li>You can rename apps in the app-drawer (Renaming apps on the home screen is already supported. Just long-click on an app on the home screen and start typing.)</li>
-    <li>We have added a lot more options for gestures on the home screen:
+    <li>Usunięto zbędne elementy, takie jak reklamy i linki.</li>
+    <li>Możesz zmieniać nazwy aplikacji w szufladzie aplikacji (zmiana nazw aplikacji na ekranie głównym jest już obsługiwana. Wystarczy kliknąć długo na aplikację na ekranie głównym i zacząć pisać.)</li>
+    <li>Dodaliśmy dużo więcej opcji gestów na ekranie głównym:
         <ul>
-            <li><b>Gestures now include:</b>
+            <li><b>Gesty obejmują teraz:</b>
                 <ul>
-                    <li>Double tap</li>
-                    <li>Clicking on the clock</li>
-                    <li>Clicking on the date</li>
-                    <li>Clicking on total usage</li>
-                    <li>Short swipe up</li>
-                    <li>Short swipe down</li>
-                    <li>Short swipe left</li>
-                    <li>Short swipe right</li>
-                    <li>Long swipe up</li>
-                    <li>Long swipe down</li>
-                    <li>Long swipe left</li>
-                    <li>Long swipe right</li>
+                    <li>Kliknij dwukrotnie</li>
+                    <li>Kliknięcie na zegar</li>
+                    <li>Kliknięcie na datę</li>
+                    <li>Kliknięcie na całkowite wykorzystanie</li>
+                    <li>Krótkie przesunięcie w górę</li>
+                    <li>Krótkie przesunięcie w dół</li>
+                    <li>Krótkie przesunięcie w lewo</li>
+                    <li>Krótkie przesunięcie w prawo</li>
+                    <li>Długie przesunięcie w górę</li>
+                    <li>Długie przesunięcie w dół</li>
+                    <li>Długie przesunięcie w lewo</li>
+                    <li>Długie przesunięcie w prawo</li>
                 </ul>
             </li>
-            <li><b>Possible actions now include:</b>
+            <li><b>Możliwe akcje obejmują teraz:</b>
                 <ul>
-                    <li>Open specified app</li>
-                    <li>Display app list</li>
-                    <li>Lock the screen</li>
-                    <li>Show recently opened apps</li>
-                    <li>Open the notification drawer</li>
-                    <li>Open quick settings</li>
-                    <li>Power dialog</li>
-                    <li>Take a screenshot</li>
-                    <li>Switch Page</li>
-                    <li>Disable gesture</li>
+                    <li>Otwórz określoną aplikację</li>
+                    <li>Wyświetl listę aplikacji</li>
+                    <li>Zablokuj ekran</li>
+                    <li>Pokaż ostatnio otwarte aplikacje</li>
+                    <li>Otwórz szufladkę powiadomień</li>
+                    <li>Otwórz szybkie ustawienia</li>
+                    <li>Dialog zasilania</li>
+                    <li>Zrób zrzut ekranu</li>
+                    <li>Zmień stronę</li>
+                    <li>Wyłącz gest</li>
                 </ul>
             </li>
         </ul>
     </li>
-    <li>You can also position the clock independently of the home apps.</li>
-    <li>Change alignment of apps in the app-drawer independent from the home screen.</li>
-    <li>Change font size of sections of the home screen independently of each other.</li>
-    <li>Removed internet permission. You never know what an app developer wants to know about you.</li>
-    <li>Lock settings behind biometrics (toggle).</li>
-    <li>Added the ability to report crashes via email.</li>
-    <li>Added the ability to view app usage time.</li>
+    <li>Możesz także ustawić zegar niezależnie od aplikacji domowych.</li>
+    <li>Zmień wyrównanie aplikacji w szufladzie aplikacji niezależnie od ekranu głównego.</li>
+    <li>Zmień rozmiar czcionki w poszczególnych sekcjach ekranu głównego niezależnie od siebie.</li>
+    <li>Usunięto uprawnienia dostępu do Internetu. Nigdy nie wiesz, co twórca aplikacji chce o Tobie wiedzieć.</li>
+    <li>Zablokuj ustawienia za biometrią (przełącz).</li>
+    <li>Dodano możliwość zgłaszania awarii za pośrednictwem poczty elektronicznej.</li>
+    <li>Dodano możliwość wyświetlania czasu korzystania z aplikacji.</li>
 </ul>
 
-<h2>Translations</h2>
+<h2>Tłumaczenia</h2>
 
-<p>A lot of people have translated the app into the following languages. Many thanks to you all:</p>
+<p>Wiele osób przetłumaczyło aplikację na następujące języki. Wielkie dzięki dla was wszystkich:</p>
 
 <ul>
-    <li>Arabic</li>
-    <li>Dutch</li>
-    <li>English</li>
-    <li>French</li>
-    <li>German</li>
-    <li>Hebrew</li>
-    <li>Italian</li>
-    <li>Japanese</li>
-    <li>Korean</li>
-    <li>Lithuanian</li>
-    <li>Polish</li>
-    <li>Portuguese</li>
-    <li>Russian</li>
-    <li>Slovak</li>
-    <li>Spanish</li>
-    <li>Thai</li>
-    <li>Turkish</li>
+    <li>Arabski</li>
+    <li>Holenderski</li>
+    <li>Angielski</li>
+    <li>Francuski</li>
+    <li>Niemiecki</li>
+    <li>Hebrajski</li>
+    <li>Włoski</li>
+    <li>Japoński</li>
+    <li>Koreański</li>
+    <li>Litewski</li>
+    <li>Polski</li>
+    <li>Portugalski</li>
+    <li>Rosyjski</li>
+    <li>Słowacki</li>
+    <li>Hiszpański</li>
+    <li>Tajski</li>
+    <li>Turecki</li>
 </ul>
