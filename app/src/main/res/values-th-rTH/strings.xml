@@ -7,7 +7,7 @@
     <string name="settings_name">การตั้งค่า mLauncher</string>
     <string name="settings_features_title">คุณสมบัติ</string>
     <string name="settings_features_description">ปรับปรุงประสิทธิภาพการทำงานของคุณ</string>
-    <string name="settings_look_feel_title">มองและรู้สึก</string>
+    <string name="settings_look_feel_title">Look &amp; Feel</string>
     <string name="settings_look_feel_description">เพิ่มความเป็นส่วนตัวให้กับหน้าจอหลักของคุณ</string>
     <string name="settings_gestures_title">ท่าทาง</string>
     <string name="settings_gestures_description">ปรับแต่งท่าทางเพื่อการนำทางที่รวดเร็วและง่ายดาย</string>
@@ -16,38 +16,60 @@
     <string name="settings_advanced_title">ขั้นสูง</string>
     <!-- Strings used for features settings -->
     <string name="features_settings_title">คุณสมบัติ</string>
-    <string name="behavior">พฤติกรรม</string>
+    <string name="user_preferences">User Preferences</string>
     <string name="theme_mode">โหมดธีม</string>
     <string name="app_language">ภาษาอินเทอร์เฟซ</string>
+    <string name="font_family">ฟอนต์ตระกูล</string>
+    <string name="settings_text_size">ขนาดตัวอักษรการตั้งค่า</string>
+    <string name="search">Search</string>
+    <string name="search_engine">เครื่องมือค้นหา</string>
     <string name="auto_show_keyboard">แป้นพิมพ์แสดงอัตโนมัติ</string>
-    <string name="auto_open_apps">เปิดแอปอัตโนมัติ</string>
     <string name="search_from_start">ค้นหาแอปตั้งแต่เริ่มต้น</string>
+    <string name="home_management">Home &amp; App Management</string>
+    <string name="auto_open_apps">เปิดแอปอัตโนมัติ</string>
     <string name="lock_home_apps">ล็อคแอพ</string>
     <string name="lock_settings">ล็อคการตั้งค่า</string>
-    <string name="filter_strength">ความแรงของตัวกรอง</string>
-    <!-- Strings used for look And feel settings -->
-    <string name="look_feel_settings_title">มองและรู้สึก</string>
-    <string name="appearance">รูปร่าง</string>
+    <string name="apps_on_home_screen">จำนวนทางลัด</string>
+    <string name="pages_on_home_screen">เลขหน้า</string>
+    <string name="enable_home_pager">เปิดใช้งานโฮมเพจเจอร์</string>
+    <string name="battery_date_time">Battery &amp; Date/Time</string>
+    <string name="show_time">เวลาแสดง</string>
+    <string name="show_time_format">รูปแบบเวลา (AM/PM)</string>
+    <string name="show_date">แสดงวันที่</string>
+    <string name="show_battery">แสดงแบตเตอรี่</string>
+    <string name="show_battery_icon">แสดงไอคอนแบตเตอรี่</string>
+    <string name="show_total_screen_time">Show Total Screen Time</string>
+    <!-- Strings used for look & feel settings -->
+    <string name="look_feel_settings_title">Look &amp; Feel</string>
+    <string name="text_size_adjustments">Text &amp; Size Adjustments</string>
     <string name="app_text_size">ขนาดข้อความของแอป</string>
-    <string name="app_padding_size">ขนาดช่องว่างภายใน</string>
     <string name="clock_text_size">ขนาดข้อความนาฬิกา</string>
     <string name="date_text_size">ขนาดข้อความวันที่</string>
     <string name="battery_text_size">ขนาดข้อความแบตเตอรี่</string>
-    <string name="display">แสดง</string>
+    <string name="layout_positioning">Layout &amp; Positioning</string>
+    <string name="app_padding_size">ขนาดช่องว่างภายใน</string>
+    <string name="extend_home_apps_area">ขยายพื้นที่ที่สามารถคลิกได้</string>
+    <string name="alignment_to_bottom">Align to Bottom</string>
+    <string name="visibility_display">Visibility &amp; Display</string>
     <string name="show_status_bar">แสดงแถบสถานะ</string>
     <string name="show_recent_apps">แสดงแอปล่าสุด</string>
     <string name="number_of_recents">จำนวนแอปล่าสุด</string>
+    <string name="show_app_usage_stats">แสดงสถิติการใช้งานแอป</string>
+    <string name="filter_strength">ความแรงของตัวกรอง</string>
     <string name="background_opacity">ความทึบของพื้นหลัง</string>
-    <string name="miscellaneous">เบ็ดเตล็ด</string>
-    <string name="settings_text_size">ขนาดตัวอักษรการตั้งค่า</string>
-    <string name="search_engine">เครื่องมือค้นหา</string>
-    <string name="font_family">ฟอนต์ตระกูล</string>
-    <!-- Strings gestures settings -->
+    <string name="element_alignment">Element Alignment</string>
+    <string name="date_alignment">Date</string>
+    <string name="clock_alignment">Clock</string>
+    <string name="home_alignment">Home Apps</string>
+    <string name="drawer_alignment">Drawer Apps</string>
+    <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">ท่าทาง</string>
+    <string name="tap_click_actions">Tap &amp; Click Actions</string>
     <string name="double_tap">แตะสองครั้ง</string>
     <string name="clock_click_app">คลิกที่นาฬิกา</string>
     <string name="date_click_app">คลิกที่วันที่</string>
     <string name="usage_click_app">คลิกที่การใช้งานทั้งหมด</string>
+    <string name="swipe_movement">Swipe &amp; Movement</string>
     <string name="short_swipe_up_app">ปัดขึ้น</string>
     <string name="short_swipe_down_app">เลื่อนลง</string>
     <string name="short_swipe_left_app">ปัดไปทางซ้าย</string>
@@ -83,7 +105,7 @@
     <string name="advanced_settings_backup_restore_clear_description">คุณแน่ใจว่าต้องการทำเช่นนี้หรือไม่?</string>
     <string name="advanced_settings_backup_restore_clear_yes">ใช่</string>
     <string name="advanced_settings_backup_restore_clear_no">เลขที่</string>
-    <string name="advanced_settings_help_feedback_title">ความช่วยเหลือและข้อเสนอแนะ</string>
+    <string name="advanced_settings_help_feedback_title">Help &amp; Feedback</string>
     <string name="advanced_settings_community_support_title">การสนับสนุนชุมชน</string>
     <string name="advanced_settings_share_application_title">แอปพลิเคชั่นแบ่งปัน</string>
     <string name="advanced_settings_share_application_description">ยกระดับประสบการณ์ของคุณด้วย %1$sดาวน์โหลดเลยตอนนี้บน fDroid และดูว่าทุกคนกำลังพูดถึงอะไร!\n</string>
@@ -103,22 +125,6 @@
     <string name="long_press_to_select_app">กดยาวเพื่อเลือกแอป</string>
     <string name="swipe_up_for_apps">ปัดขึ้นสำหรับแอปทั้งหมด</string>
     <string name="app_drawer_tips">เคล็ดลับ: ปัดลงเพื่อปิด เลื่อนเพื่อซ่อนแป้นพิมพ์</string>
-    <!-- Display Strings -->
-    <string name="total_screen_time">เวลาอยู่หน้าจอทั้งหมด</string>
-    <string name="show_app_usage_stats">แสดงสถิติการใช้งานแอป</string>
-    <string name="show_time">เวลาแสดง</string>
-    <string name="show_time_format">รูปแบบเวลา (AM/PM)</string>
-    <string name="show_date">แสดงวันที่</string>
-    <string name="show_battery">แสดงแบตเตอรี่</string>
-    <string name="show_battery_icon">แสดงไอคอนแบตเตอรี่</string>
-    <string name="home_alignment_bottom">หน้าจอหลักจัดตำแหน่งด้านล่าง</string>
-    <string name="apps_on_home_screen">จำนวนทางลัด</string>
-    <string name="pages_on_home_screen">เลขหน้า</string>
-    <string name="enable_home_pager">เปิดใช้งานโฮมเพจเจอร์</string>
-    <string name="extend_home_apps_area">ขยายพื้นที่ที่สามารถคลิกได้</string>
-    <string name="home_alignment">หน้าจอหลักของแอพ</string>
-    <string name="clock_alignment">นาฬิกาและวันที่</string>
-    <string name="drawer_alignment">แอปในลิ้นชักแอป</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">ยกเลิกการรับรองความถูกต้อง</string>
     <string name="text_authentication_error">ข้อผิดพลาดในการตรวจสอบสิทธิ์:%1$s(รหัส %2$d)</string>
