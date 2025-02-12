@@ -1,79 +1,73 @@
-แยกจาก <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. เรียบง่ายและสะอาด
+<p>Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal and clean.</p>
 
-#แยกด้วยคุณสมบัติพิเศษ
+<h2>Forked with Extra Features</h2>
 
-- ลบความยุ่งเหยิง เช่น โฆษณาและลิงก์
-- คุณสามารถเปลี่ยนชื่อแอพใน app-drawer (รองรับการเปลี่ยนชื่อแอพบนหน้าจอหลักแล้ว เพียงคลิกค้างที่แอปบนหน้าจอหลักแล้วเริ่มพิมพ์) เพียงคลิกค้างที่แอปบนหน้าจอหลักแล้วเริ่มพิมพ์) เพียงคลิกค้างที่แอปบนหน้าจอหลักแล้วเริ่มพิมพ์) เพียงคลิกค้างที่แอปบนหน้าจอหลักแล้วเริ่มพิมพ์) เพียงคลิกค้างที่แอปบนหน้าจอหลักแล้วเริ่มพิมพ์) เพียงคลิกค้างไว้บนแอปบนหน้าจอหลักและเริ่มพิมพ์)
-- เราได้เพิ่มตัวเลือกมากมายสำหรับรูปแบบลายเส้นบนหน้าจอหลัก:
-    - ท่าทางอยู่ในขณะนี้:
-        - ปัดขึ้น ลง ซ้าย ขวา
-        - คลิกที่นาฬิกา
-        - คลิกที่วันที่
-    - การดำเนินการที่เป็นไปได้รวมถึง:
-        - เปิดแอปที่ระบุ
-        - แสดงรายการแอป
-        - ล็อคหน้าจอ
-        - แสดงแอปที่เปิดล่าสุด
-        - การเปิดลิ้นชักการแจ้งเตือน
-        - การเปิดการตั้งค่าด่วน
-        - ไดอะล็อกพาวเวอร์
-        - ถ่ายภาพหน้าจอ
-        - ปิดการใช้งานท่าทาง
-- คุณยังสามารถวางตำแหน่งนาฬิกาได้อย่างอิสระจากแอปโฮม
-- เปลี่ยนการจัดตำแหน่งของแอปในลิ้นชักแอปโดยไม่ขึ้นอยู่กับหน้าจอหลัก
-- เปลี่ยนขนาดตัวอักษรของส่วนของหน้าจอหลักแยกจากกัน
-- ยกเลิกการอนุญาตการเข้าถึงอินเทอร์เน็ต - ลบการอนุญาตทางอินเทอร์เน็ต คุณไม่มีทางรู้ว่านักพัฒนาแอพต้องการรู้อะไรเกี่ยวกับคุณ
-- ล็อคการตั้งค่าเบื้องหลังไบโอเมตริกซ์ (สลับ)
-- เพิ่มความสามารถในการรายงานข้อขัดข้องผ่านทางอีเมล
-- เพิ่มความสามารถในการดูเวลาการใช้งานแอป
+<ul>
+    <li>Removed clutter, like ads and links.</li>
+    <li>You can rename apps in the app-drawer (Renaming apps on the home screen is already supported. Just long-click on an app on the home screen and start typing.)</li>
+    <li>We have added a lot more options for gestures on the home screen:
+        <ul>
+            <li><b>Gestures now include:</b>
+                <ul>
+                    <li>Double tap</li>
+                    <li>Clicking on the clock</li>
+                    <li>Clicking on the date</li>
+                    <li>Clicking on total usage</li>
+                    <li>Short swipe up</li>
+                    <li>Short swipe down</li>
+                    <li>Short swipe left</li>
+                    <li>Short swipe right</li>
+                    <li>Long swipe up</li>
+                    <li>Long swipe down</li>
+                    <li>Long swipe left</li>
+                    <li>Long swipe right</li>
+                </ul>
+            </li>
+            <li><b>Possible actions now include:</b>
+                <ul>
+                    <li>Open specified app</li>
+                    <li>Display app list</li>
+                    <li>Lock the screen</li>
+                    <li>Show recently opened apps</li>
+                    <li>Open the notification drawer</li>
+                    <li>Open quick settings</li>
+                    <li>Power dialog</li>
+                    <li>Take a screenshot</li>
+                    <li>Switch Page</li>
+                    <li>Disable gesture</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>You can also position the clock independently of the home apps.</li>
+    <li>Change alignment of apps in the app-drawer independent from the home screen.</li>
+    <li>Change font size of sections of the home screen independently of each other.</li>
+    <li>Removed internet permission. You never know what an app developer wants to know about you.</li>
+    <li>Lock settings behind biometrics (toggle).</li>
+    <li>Added the ability to report crashes via email.</li>
+    <li>Added the ability to view app usage time.</li>
+</ul>
 
-## คำแปล:
+<h2>Translations</h2>
 
-- ลบการอนุญาตทางอินเทอร์เน็ต - ลบการอนุญาตทางอินเทอร์เน็ต คุณไม่มีทางรู้ว่านักพัฒนาแอพต้องการรู้อะไรเกี่ยวกับคุณ - ผู้คนจำนวนมากได้แปลแอปเป็นภาษาต่อไปนี้ ขอบคุณมากสำหรับทุกท่าน ขอบคุณมากสำหรับทุกท่าน
-  - แอฟริกัน
-  - ภาษาอาหรับ
-  - แอลเบเนีย
-  - บัลแกเรีย
-  - ชาวจีน
-  - ภาษาโครเอเชีย
-  - เช็ก
-  - ภาษาเดนมาร์ก
-  - ภาษาอังกฤษ
-  - เอสโตเนีย
-  - ฟิลิปปินส์
-  - ภาษาฟินแลนด์
-  - ภาษาฝรั่งเศส
-  - จอร์เจีย
-  - ภาษาเยอรมัน
-  - กรีก
-  - ฮาวายเอี้ยน
-  - ภาษาฮิบรู
-  - ภาษาฮินดี
-  - ฮังการี
-  - ไอซ์แลนด์
-  - ภาษาชาวอินโดนีเซีย
-  - ไอริช
-  - ภาษาอิตาลี
-  - ภาษาญี่ปุ่น
-  - ภาษาเกาหลี
-  - ภาษาลิทัวเนีย
-  - ลักเซมเบิร์ก
-  - มาเลย์
-  - มาลากาซี
-  - มาลายาลัม
-  - ภาษานอร์เวย์
-  - เนปาล
-  - เปอร์เซีย
-  - โปแลนด์
-  - โปรตุเกส (ยุโรป)
-  - ปัญจาบ
-  - รัสเซีย
-  - เซอร์เบีย
-  - สินธุ
-  - สโลวัก
-  - ภาษาสเปน
-  - ภาษาสวีเดน
-  - ไทย
-  - ตุรกี
-  - ภาษายูเครน
-  - ภาษาเวียดนาม
+<p>A lot of people have translated the app into the following languages. Many thanks to you all:</p>
+
+<ul>
+    <li>Arabic</li>
+    <li>Dutch</li>
+    <li>English</li>
+    <li>French</li>
+    <li>German</li>
+    <li>Hebrew</li>
+    <li>Italian</li>
+    <li>Japanese</li>
+    <li>Korean</li>
+    <li>Lithuanian</li>
+    <li>Polish</li>
+    <li>Portuguese</li>
+    <li>Russian</li>
+    <li>Slovak</li>
+    <li>Spanish</li>
+    <li>Thai</li>
+    <li>Turkish</li>
+</ul>
