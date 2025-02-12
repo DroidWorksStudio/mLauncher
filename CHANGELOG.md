@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Releases:
+
+- Prepare for version 1.7.2 - ([db9c8da](https://github.com/DroidWorksStudio/mLauncher/commit/db9c8dabfaca199ed94ee44e671895bbec5775ce))
+
+## [1.7.1](https://github.com/DroidWorksStudio/mLauncher/tree/1.7.1) - (12, February 2025)
+
 ### Implemented Enhancements:
 
 - Added the new Gesture system. - ([e948dbb](https://github.com/DroidWorksStudio/mLauncher/commit/e948dbb7b8c8c28dee8fa8d9691c9b0e3e8ff055))
