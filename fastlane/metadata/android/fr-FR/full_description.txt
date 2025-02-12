@@ -1,79 +1,73 @@
-Bifurqué à partir de <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimaliste et propre.
+<p>Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal and clean.</p>
 
-# Forké avec des fonctionnalités supplémentaires
+<h2>Forked with Extra Features</h2>
 
-- Suppression de l'encombrement, comme les publicités et les liens.
-- Vous pouvez renommer les applications dans le tiroir d'applications (le renommage des applications sur l'écran d'accueil est déjà pris en charge. Cliquez simplement longuement sur une application sur l'écran d'accueil et commencez à taper.)
-- Beaucoup plus de possibilités de personnalisation des gestes de l'écran d'accueil
-    - Les gestes sont maintenant :
-        - Glissement vers le haut, vers le bas, vers la gauche, vers la droite
-        - Possibilité de changer l'application qui s'ouvre en cliquant sur l'horloge
-        - Possibilité de changer l'application qui s'ouvre en cliquant sur la date
-    - Les actions possibles incluent maintenant :
-        - Ouvrir l'application spécifiée
-        - Afficher la liste des applications
-        - Verrouillage de l'écran
-        - Afficher les applications ouvertes récemment
-        - Ouverture du panneau de notification
-        - Ouverture des paramètres rapides
-        - Boîte de dialogue d'alimentation
-        - Prendre une capture d'écran
-        - Désactiver le geste
-- Vous pouvez également positionner l'horloge indépendamment des applications domestiques.
-- Modifiez l'alignement des applications dans le tiroir d'applications indépendamment de l'écran d'accueil.
-- Modifiez la taille de la police des sections de l'écran d'accueil indépendamment les unes des autres.
-- Suppression de l'autorisation d'accès à Internet - Suppression de l'autorisation d'accès à Internet Vous ne savez jamais ce qu'un développeur d'applications veut savoir de vous.
-- Verrouiller les paramètres derrière la biométrie (bascule)
-- Ajout de la possibilité de signaler un crash par e-mail.
-- Ajout de la possibilité d'afficher le temps d'utilisation de l'application.
+<ul>
+    <li>Removed clutter, like ads and links.</li>
+    <li>You can rename apps in the app-drawer (Renaming apps on the home screen is already supported. Just long-click on an app on the home screen and start typing.)</li>
+    <li>We have added a lot more options for gestures on the home screen:
+        <ul>
+            <li><b>Gestures now include:</b>
+                <ul>
+                    <li>Double tap</li>
+                    <li>Clicking on the clock</li>
+                    <li>Clicking on the date</li>
+                    <li>Clicking on total usage</li>
+                    <li>Short swipe up</li>
+                    <li>Short swipe down</li>
+                    <li>Short swipe left</li>
+                    <li>Short swipe right</li>
+                    <li>Long swipe up</li>
+                    <li>Long swipe down</li>
+                    <li>Long swipe left</li>
+                    <li>Long swipe right</li>
+                </ul>
+            </li>
+            <li><b>Possible actions now include:</b>
+                <ul>
+                    <li>Open specified app</li>
+                    <li>Display app list</li>
+                    <li>Lock the screen</li>
+                    <li>Show recently opened apps</li>
+                    <li>Open the notification drawer</li>
+                    <li>Open quick settings</li>
+                    <li>Power dialog</li>
+                    <li>Take a screenshot</li>
+                    <li>Switch Page</li>
+                    <li>Disable gesture</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>You can also position the clock independently of the home apps.</li>
+    <li>Change alignment of apps in the app-drawer independent from the home screen.</li>
+    <li>Change font size of sections of the home screen independently of each other.</li>
+    <li>Removed internet permission. You never know what an app developer wants to know about you.</li>
+    <li>Lock settings behind biometrics (toggle).</li>
+    <li>Added the ability to report crashes via email.</li>
+    <li>Added the ability to view app usage time.</li>
+</ul>
 
-## Traductions :
+<h2>Translations</h2>
 
-- De nombreuses personnes ont traduit l'application dans les langues suivantes. Un grand merci à vous tous.
-  -Afrikaans
-  - Arabe
-  - Albanais
-  - Bulgare
-  - chinois
-  - Croate
-  - Tchèque
-  - danois
-  - anglais
-  - Estonien
-  - Philippin
-  - finlandais
-  - français
-  - Géorgien
-  - Allemand
-  - Grec
-  - Hawaïen
-  - Hébreu
-  - Hindi
-  - Hongrois
-  - islandais
-  - Indonésien
-  - Irlandais
-  - Italien
-  - Japonais
-  - Coréen
-  - Lituanien
-  - luxembourgeois
-  - Malais
-  - Malgache
-  - Malayalam
-  - Norvégien
-  - Népalais
-  - Perse
-  - polonais
-  - Portugais (européen)
-  - Punjabi
-  - Russe
-  - Serbe
-  - Sindhi
-  - slovaque
-  - espagnol
-  - Suédois
-  - thaïlandais
-  - turc
-  - Ukrainien
-  - vietnamien
+<p>A lot of people have translated the app into the following languages. Many thanks to you all:</p>
+
+<ul>
+    <li>Arabic</li>
+    <li>Dutch</li>
+    <li>English</li>
+    <li>French</li>
+    <li>German</li>
+    <li>Hebrew</li>
+    <li>Italian</li>
+    <li>Japanese</li>
+    <li>Korean</li>
+    <li>Lithuanian</li>
+    <li>Polish</li>
+    <li>Portuguese</li>
+    <li>Russian</li>
+    <li>Slovak</li>
+    <li>Spanish</li>
+    <li>Thai</li>
+    <li>Turkish</li>
+</ul>
