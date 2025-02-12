@@ -62,14 +62,15 @@
     <string name="clock_alignment">Clock</string>
     <string name="home_alignment">Home Apps</string>
     <string name="drawer_alignment">Drawer Apps</string>
+    <string name="element_colors">Element Colors</string>
     <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">ท่าทาง</string>
-    <string name="tap_click_actions">Tap &amp; Click Actions</string>
+    <string name="tap_click_actions">Tap/Click Actions</string>
     <string name="double_tap">แตะสองครั้ง</string>
     <string name="clock_click_app">คลิกที่นาฬิกา</string>
     <string name="date_click_app">คลิกที่วันที่</string>
     <string name="usage_click_app">คลิกที่การใช้งานทั้งหมด</string>
-    <string name="swipe_movement">Swipe &amp; Movement</string>
+    <string name="swipe_movement">Swipe Movement</string>
     <string name="short_swipe_up_app">ปัดขึ้น</string>
     <string name="short_swipe_down_app">เลื่อนลง</string>
     <string name="short_swipe_left_app">ปัดไปทางซ้าย</string>
@@ -153,5 +154,6 @@
     <string name="reset">รีเซ็ต</string>
     <string name="cancel">ยกเลิก</string>
     <string name="disabled">พิการ</string>
+    <string name="open">Open</string>
     <string name="close">ปิด</string>
 </resources>
