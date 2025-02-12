@@ -1,73 +1,73 @@
-<p>Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal and clean.</p>
+<p>は <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>からフォークされました。 ミニマルでクリーン。</p>
 
-<h2>Forked with Extra Features</h2>
+<h2>追加機能付きフォーク</h2>
 
 <ul>
-    <li>Removed clutter, like ads and links.</li>
-    <li>You can rename apps in the app-drawer (Renaming apps on the home screen is already supported. Just long-click on an app on the home screen and start typing.)</li>
-    <li>We have added a lot more options for gestures on the home screen:
+    <li>広告やリンクなどの不要なものを削除しました。</li>
+    <li>アプリドロワー内のアプリの名前を変更できます (ホーム画面上のアプリの名前変更はすでにサポートされています。 ホーム画面でアプリを長押しして入力を開始するだけです。)</li>
+    <li>ホーム画面のジェスチャのオプションをさらに追加しました:
         <ul>
-            <li><b>Gestures now include:</b>
+            <li><b>ジェスチャーに以下が含まれるようになりました:</b>
                 <ul>
-                    <li>Double tap</li>
-                    <li>Clicking on the clock</li>
-                    <li>Clicking on the date</li>
-                    <li>Clicking on total usage</li>
-                    <li>Short swipe up</li>
-                    <li>Short swipe down</li>
-                    <li>Short swipe left</li>
-                    <li>Short swipe right</li>
-                    <li>Long swipe up</li>
-                    <li>Long swipe down</li>
-                    <li>Long swipe left</li>
-                    <li>Long swipe right</li>
+                    <li>ダブルタップ</li>
+                    <li>時計をクリック</li>
+                    <li>日付をクリック</li>
+                    <li>合計使用量をクリック</li>
+                    <li>上に短くスワイプ</li>
+                    <li>下に短くスワイプ</li>
+                    <li>左に短くスワイプ</li>
+                    <li>右に短くスワイプ</li>
+                    <li>上に長くスワイプ</li>
+                    <li>下に長くスワイプ</li>
+                    <li>左に長くスワイプ</li>
+                    <li>右に長くスワイプ</li>
                 </ul>
             </li>
-            <li><b>Possible actions now include:</b>
+            <li><b>実行可能なアクションは次のとおりです:</b>
                 <ul>
-                    <li>Open specified app</li>
-                    <li>Display app list</li>
-                    <li>Lock the screen</li>
-                    <li>Show recently opened apps</li>
-                    <li>Open the notification drawer</li>
-                    <li>Open quick settings</li>
-                    <li>Power dialog</li>
-                    <li>Take a screenshot</li>
-                    <li>Switch Page</li>
-                    <li>Disable gesture</li>
+                    <li>指定したアプリを開く</li>
+                    <li>アプリリストを表示</li>
+                    <li>画面をロックします</li>
+                    <li>最近開いたアプリを表示</li>
+                    <li>通知ドロワーを開く</li>
+                    <li>クイック設定を開く</li>
+                    <li>パワーダイアログ</li>
+                    <li>スクリーンショットを撮る</li>
+                    <li>ページ切り替え</li>
+                    <li>ジェスチャーを無効にする</li>
                 </ul>
             </li>
         </ul>
     </li>
-    <li>You can also position the clock independently of the home apps.</li>
-    <li>Change alignment of apps in the app-drawer independent from the home screen.</li>
-    <li>Change font size of sections of the home screen independently of each other.</li>
-    <li>Removed internet permission. You never know what an app developer wants to know about you.</li>
-    <li>Lock settings behind biometrics (toggle).</li>
-    <li>Added the ability to report crashes via email.</li>
-    <li>Added the ability to view app usage time.</li>
+    <li>ホームアプリとは独立して時計を配置することもできます。</li>
+    <li>ホーム画面とは独立して、アプリドロワー内のアプリの配置を変更します。</li>
+    <li>ホーム画面のセクションのフォントサイズを個別に変更します。</li>
+    <li>インターネット権限を削除しました。 アプリ開発者があなたについて何を知りたいかはわかりません。</li>
+    <li>生体認証による設定をロックします（トグル）。</li>
+    <li>クラッシュを電子メールで報告する機能を追加しました。</li>
+    <li>アプリの使用時間を表示する機能を追加しました。</li>
 </ul>
 
-<h2>Translations</h2>
+<h2>翻訳</h2>
 
-<p>A lot of people have translated the app into the following languages. Many thanks to you all:</p>
+<p>多くの人がこのアプリを以下の言語に翻訳しています。 皆さん本当にありがとう:</p>
 
 <ul>
-    <li>Arabic</li>
-    <li>Dutch</li>
-    <li>English</li>
-    <li>French</li>
-    <li>German</li>
-    <li>Hebrew</li>
-    <li>Italian</li>
-    <li>Japanese</li>
-    <li>Korean</li>
-    <li>Lithuanian</li>
-    <li>Polish</li>
-    <li>Portuguese</li>
-    <li>Russian</li>
-    <li>Slovak</li>
-    <li>Spanish</li>
-    <li>Thai</li>
-    <li>Turkish</li>
+    <li>アラビア語</li>
+    <li>オランダ語</li>
+    <li>英語</li>
+    <li>フランス語</li>
+    <li>ドイツ語</li>
+    <li>ヘブライ語</li>
+    <li>イタリア語</li>
+    <li>日本語</li>
+    <li>韓国語</li>
+    <li>リトアニア語</li>
+    <li>ポーランド語</li>
+    <li>ポルトガル語</li>
+    <li>ロシア語</li>
+    <li>スロバキア語</li>
+    <li>スペイン語</li>
+    <li>タイ語</li>
+    <li>トルコ語</li>
 </ul>
