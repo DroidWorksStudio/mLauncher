@@ -32,7 +32,6 @@ import androidx.compose.ui.unit.isSpecified
 import androidx.compose.ui.unit.sp
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.github.droidworksstudio.mlauncher.MainViewModel
 import com.github.droidworksstudio.mlauncher.R
@@ -42,7 +41,6 @@ import com.github.droidworksstudio.mlauncher.data.Constants.Theme.Light
 import com.github.droidworksstudio.mlauncher.data.Constants.Theme.System
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentSettingsBinding
-import com.github.droidworksstudio.mlauncher.helper.AppReloader
 import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
 import com.github.droidworksstudio.mlauncher.helper.hideStatusBar
 import com.github.droidworksstudio.mlauncher.helper.isSystemInDarkMode
@@ -55,8 +53,6 @@ import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.Setti
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsSwitch
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsTitle
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 
 class LookFeelFragment : Fragment() {
 
@@ -91,17 +87,26 @@ class LookFeelFragment : Fragment() {
     @Composable
     private fun Settings(fontSize: TextUnit = TextUnit.Unspecified) {
         var selectedAppSize by remember { mutableIntStateOf(prefs.appSize) }
-        var selectedPaddingSize by remember { mutableIntStateOf(prefs.textPaddingSize) }
         var selectedClockSize by remember { mutableIntStateOf(prefs.clockSize) }
         var selectedDateSize by remember { mutableIntStateOf(prefs.dateSize) }
         var selectedBatterySize by remember { mutableIntStateOf(prefs.batterySize) }
-        var showStatusBar by remember { mutableStateOf(prefs.showStatusBar) }
-        var recentAppsDisplayed by remember { mutableStateOf(prefs.recentAppsDisplayed) }
+
+        var selectedPaddingSize by remember { mutableIntStateOf(prefs.textPaddingSize) }
+        var toggledExtendHomeAppsArea by remember { mutableStateOf(prefs.extendHomeAppsArea) }
+        var toggledHomeAlignmentBottom by remember { mutableStateOf(prefs.homeAlignmentBottom) }
+
+
+        var toggledShowStatusBar by remember { mutableStateOf(prefs.showStatusBar) }
+        var toggledRecentAppsDisplayed by remember { mutableStateOf(prefs.recentAppsDisplayed) }
         var selectedRecentCounter by remember { mutableIntStateOf(prefs.recentCounter) }
+        var toggledRecentAppUsageStats by remember { mutableStateOf(prefs.appUsageStats) }
+        var selectedFilterStrength by remember { mutableIntStateOf(prefs.filterStrength) }
         var selectedBackgroundOpacity by remember { mutableIntStateOf(prefs.opacityNum) }
-        var selectedSettingsSize by remember { mutableIntStateOf(prefs.settingsSize) }
-        var selectedSearchEngine by remember { mutableStateOf(prefs.searchEngines) }
-        var selectedFontFamily by remember { mutableStateOf(prefs.fontFamily) }
+
+        var selectedHomeAlignment by remember { mutableStateOf(prefs.homeAlignment) }
+        var selectedTimeAlignment by remember { mutableStateOf(prefs.timeAlignment) }
+        var selectedDateAlignment by remember { mutableStateOf(prefs.dateAlignment) }
+        var selectedDrawAlignment by remember { mutableStateOf(prefs.drawerAlignment) }
 
         val fs = remember { mutableStateOf(fontSize) }
         Constants.updateMaxHomePages(requireContext())
@@ -125,7 +130,7 @@ class LookFeelFragment : Fragment() {
             )
 
             SettingsTitle(
-                text = stringResource(R.string.appearance),
+                text = stringResource(R.string.text_size_adjustments),
                 fontSize = titleFontSize,
             )
 
@@ -143,25 +148,6 @@ class LookFeelFragment : Fragment() {
                         onValueSelected = { newAppSize ->
                             selectedAppSize = newAppSize // Update state
                             prefs.appSize = newAppSize // Persist selection in preferences
-                        }
-                    )
-                }
-            )
-
-            SettingsSelect(
-                title = stringResource(R.string.app_padding_size),
-                option = selectedPaddingSize.toString(),
-                fontSize = titleFontSize,
-                onClick = {
-                    showSliderDialog(
-                        context = requireContext(),
-                        title = getString(R.string.app_padding_size),
-                        minValue = Constants.MIN_TEXT_PADDING,
-                        maxValue = Constants.MAX_TEXT_PADDING,
-                        currentValue = prefs.textPaddingSize,
-                        onValueSelected = { newPaddingSize ->
-                            selectedPaddingSize = newPaddingSize // Update state
-                            prefs.textPaddingSize = newPaddingSize // Persist selection in preferences
                         }
                     )
                 }
@@ -225,32 +211,76 @@ class LookFeelFragment : Fragment() {
             )
 
             SettingsTitle(
-                text = stringResource(R.string.display),
+                text = stringResource(R.string.layout_positioning),
+                fontSize = titleFontSize,
+            )
+
+            SettingsSelect(
+                title = stringResource(R.string.app_padding_size),
+                option = selectedPaddingSize.toString(),
+                fontSize = titleFontSize,
+                onClick = {
+                    showSliderDialog(
+                        context = requireContext(),
+                        title = getString(R.string.app_padding_size),
+                        minValue = Constants.MIN_TEXT_PADDING,
+                        maxValue = Constants.MAX_TEXT_PADDING,
+                        currentValue = prefs.textPaddingSize,
+                        onValueSelected = { newPaddingSize ->
+                            selectedPaddingSize = newPaddingSize // Update state
+                            prefs.textPaddingSize = newPaddingSize // Persist selection in preferences
+                        }
+                    )
+                }
+            )
+
+            SettingsSwitch(
+                text = stringResource(R.string.extend_home_apps_area),
+                fontSize = titleFontSize,
+                defaultState = toggledExtendHomeAppsArea,
+                onCheckedChange = {
+                    toggledExtendHomeAppsArea = !prefs.extendHomeAppsArea
+                    prefs.extendHomeAppsArea = toggledExtendHomeAppsArea
+                }
+            )
+
+            SettingsSwitch(
+                text = stringResource(R.string.alignment_to_bottom),
+                fontSize = titleFontSize,
+                defaultState = toggledHomeAlignmentBottom,
+                onCheckedChange = {
+                    toggledHomeAlignmentBottom = !prefs.homeAlignmentBottom
+                    prefs.homeAlignmentBottom = toggledHomeAlignmentBottom
+                }
+            )
+
+            SettingsTitle(
+                text = stringResource(R.string.visibility_display),
                 fontSize = titleFontSize,
             )
 
             SettingsSwitch(
                 text = stringResource(R.string.show_status_bar),
                 fontSize = titleFontSize,
-                defaultState = showStatusBar,
+                defaultState = toggledShowStatusBar,
                 onCheckedChange = {
-                    showStatusBar = !prefs.showStatusBar
-                    prefs.showStatusBar = !prefs.showStatusBar
-                    if (showStatusBar) showStatusBar(requireActivity()) else hideStatusBar(requireActivity())
+                    toggledShowStatusBar = !prefs.showStatusBar
+                    prefs.showStatusBar = toggledShowStatusBar
+                    if (toggledShowStatusBar) showStatusBar(requireActivity()) else hideStatusBar(requireActivity())
                 }
             )
 
             SettingsSwitch(
                 text = stringResource(R.string.show_recent_apps),
                 fontSize = titleFontSize,
-                defaultState = recentAppsDisplayed,
+                defaultState = toggledRecentAppsDisplayed,
                 onCheckedChange = {
-                    recentAppsDisplayed = !prefs.recentAppsDisplayed
-                    prefs.recentAppsDisplayed = recentAppsDisplayed
+                    toggledRecentAppsDisplayed = !prefs.recentAppsDisplayed
+                    prefs.recentAppsDisplayed = toggledRecentAppsDisplayed
                 }
             )
 
-            if (recentAppsDisplayed) {
+            if (toggledRecentAppsDisplayed) {
                 SettingsSelect(
                     title = stringResource(R.string.number_of_recents),
                     option = selectedRecentCounter.toString(),
@@ -265,11 +295,42 @@ class LookFeelFragment : Fragment() {
                             onValueSelected = { newRecentCounter ->
                                 selectedRecentCounter = newRecentCounter // Update state
                                 prefs.recentCounter = newRecentCounter // Persist selection in preferences
+                                viewModel.recentCounter.value = newRecentCounter
                             }
                         )
                     }
                 )
             }
+
+            SettingsSwitch(
+                text = stringResource(R.string.show_app_usage_stats),
+                fontSize = titleFontSize,
+                defaultState = toggledRecentAppUsageStats,
+                onCheckedChange = {
+                    toggledRecentAppUsageStats = !prefs.appUsageStats
+                    prefs.appUsageStats = toggledRecentAppUsageStats
+                }
+            )
+
+            SettingsSelect(
+                title = stringResource(R.string.filter_strength),
+                option = selectedFilterStrength.toString(),
+                fontSize = titleFontSize,
+                onClick = {
+                    showSliderDialog(
+                        context = requireContext(),
+                        title = getString(R.string.filter_strength),
+                        minValue = Constants.MIN_FILTER_STRENGTH,
+                        maxValue = Constants.MAX_FILTER_STRENGTH,
+                        currentValue = prefs.filterStrength,
+                        onValueSelected = { newFilterStrength ->
+                            selectedFilterStrength = newFilterStrength // Update state
+                            prefs.filterStrength = newFilterStrength // Persist selection in preferences
+                            viewModel.filterStrength.value = newFilterStrength
+                        }
+                    )
+                }
+            )
 
             SettingsSelect(
                 title = stringResource(R.string.background_opacity),
@@ -285,71 +346,84 @@ class LookFeelFragment : Fragment() {
                         onValueSelected = { newBackgroundOpacity ->
                             selectedBackgroundOpacity = newBackgroundOpacity // Update state
                             prefs.opacityNum = newBackgroundOpacity // Persist selection in preferences
+                            viewModel.opacityNum.value = newBackgroundOpacity
                         }
                     )
                 }
             )
 
             SettingsTitle(
-                text = stringResource(R.string.miscellaneous),
+                text = stringResource(R.string.element_alignment),
                 fontSize = titleFontSize,
             )
 
             SettingsSelect(
-                title = stringResource(R.string.settings_text_size),
-                option = selectedSettingsSize.toString(),
+                title = stringResource(R.string.date_alignment),
+                option = selectedDateAlignment.string(),
                 fontSize = titleFontSize,
                 onClick = {
-                    showSliderDialog(
+                    showSingleChoiceDialog(
                         context = requireContext(),
-                        title = getString(R.string.settings_text_size),
-                        minValue = Constants.MIN_TEXT_SIZE,
-                        maxValue = Constants.MAX_TEXT_SIZE,
-                        currentValue = prefs.appSize,
-                        onValueSelected = { newSettingsSize ->
-                            selectedSettingsSize = newSettingsSize // Update state
-                            prefs.appSize = newSettingsSize // Persist selection in preferences
+                        options = Constants.Gravity.entries.toTypedArray(),
+                        titleResId = R.string.clock_alignment,
+                        onItemSelected = { newGravity ->
+                            selectedDateAlignment = newGravity // Update state
+                            prefs.dateAlignment = newGravity // Persist selection in preferences
+                            viewModel.updateDateAlignment(newGravity)
                         }
                     )
                 }
             )
 
             SettingsSelect(
-                title = stringResource(R.string.search_engine),
-                option = selectedSearchEngine.string(),
+                title = stringResource(R.string.clock_alignment),
+                option = selectedTimeAlignment.string(),
                 fontSize = titleFontSize,
                 onClick = {
                     showSingleChoiceDialog(
                         context = requireContext(),
-                        options = Constants.SearchEngines.entries.toTypedArray(),
-                        titleResId = R.string.search_engine,
-                        onItemSelected = { newSearchEngine ->
-                            selectedSearchEngine = newSearchEngine // Update state
-                            prefs.searchEngines = newSearchEngine // Persist selection in preferences
-                            requireActivity().recreate()
+                        options = Constants.Gravity.entries.toTypedArray(),
+                        titleResId = R.string.clock_alignment,
+                        onItemSelected = { newGravity ->
+                            selectedTimeAlignment = newGravity // Update state
+                            prefs.timeAlignment = newGravity // Persist selection in preferences
+                            viewModel.updateTimeAlignment(newGravity)
                         }
                     )
                 }
             )
 
             SettingsSelect(
-                title = stringResource(R.string.font_family),
-                option = selectedFontFamily.string(),
+                title = stringResource(R.string.home_alignment),
+                option = selectedHomeAlignment.string(),
                 fontSize = titleFontSize,
                 onClick = {
                     showSingleChoiceDialog(
                         context = requireContext(),
-                        options = Constants.FontFamily.entries.toTypedArray(),
-                        fonts = Constants.FontFamily.entries.toTypedArray()
-                            .map { it.getFont(requireContext()) ?: Typeface.DEFAULT },
-                        titleResId = R.string.font_family,
-                        onItemSelected = { newFontFamily ->
-                            selectedFontFamily = newFontFamily // Update state
-                            prefs.fontFamily = newFontFamily // Persist selection in preferences
-                            lifecycleScope.launch {
-                                delay(500)
-                                AppReloader.restartApp(requireContext())
-                            }
+                        options = Constants.Gravity.entries.toTypedArray(),
+                        titleResId = R.string.home_alignment,
+                        onItemSelected = { newGravity ->
+                            selectedHomeAlignment = newGravity // Update state
+                            prefs.homeAlignment = newGravity // Persist selection in preferences
+                            viewModel.updateHomeAppsAlignment(newGravity, prefs.homeAlignmentBottom)
+                        }
+                    )
+                }
+            )
+
+            SettingsSelect(
+                title = stringResource(R.string.drawer_alignment),
+                option = selectedDrawAlignment.string(),
+                fontSize = titleFontSize,
+                onClick = {
+                    showSingleChoiceDialog(
+                        context = requireContext(),
+                        options = Constants.Gravity.entries.toTypedArray(),
+                        titleResId = R.string.drawer_alignment,
+                        onItemSelected = { newGravity ->
+                            selectedDrawAlignment = newGravity // Update state
+                            prefs.drawerAlignment = newGravity // Persist selection in preferences
+                            viewModel.updateDrawerAlignment(newGravity)
                         }
                     )
                 }

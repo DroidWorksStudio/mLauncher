@@ -160,7 +160,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             clock.setTextColor(prefs.timeColor)
             date.setTextColor(prefs.timeColor)
             battery.setTextColor(prefs.batteryColor)
-            setTotalScreenTime.setTextColor(prefs.appColor)
+            totalScreenTime.setTextColor(prefs.appColor)
             setDefaultLauncher.setTextColor(prefs.appColor)
             homeScreenPager.setTextColor(prefs.appColor)
         }
@@ -222,7 +222,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 }
             }
 
-            R.id.setTotalScreenTime -> {
+            R.id.totalScreenTime -> {
                 when (val action = prefs.clickAppUsageAction) {
                     Action.OpenApp -> openClickUsageApp()
                     else -> handleOtherAction(action)
@@ -269,7 +269,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     private fun initClickListeners() {
         binding.clock.setOnClickListener(this)
         binding.date.setOnClickListener(this)
-        binding.setTotalScreenTime.setOnClickListener(this)
+        binding.totalScreenTime.setOnClickListener(this)
         binding.setDefaultLauncher.setOnClickListener(this)
         binding.battery.setOnClickListener(this)
     }
@@ -283,9 +283,14 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
         with(viewModel) {
 
-            clockAlignment.observe(viewLifecycleOwner) { gravity ->
-                binding.dateTimeLayout.gravity = gravity.value()
+            timeAlignment.observe(viewLifecycleOwner) { gravity ->
+                binding.timeLayout.gravity = gravity.value()
             }
+
+            dateAlignment.observe(viewLifecycleOwner) { gravity ->
+                binding.dateLayout.gravity = gravity.value()
+            }
+
             homeAppsAlignment.observe(viewLifecycleOwner) { (gravity, onBottom) ->
                 val horizontalAlignment = if (onBottom) Gravity.BOTTOM else Gravity.CENTER_VERTICAL
                 binding.homeAppsLayout.gravity = gravity.value() or horizontalAlignment
@@ -294,7 +299,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     (view as TextView).gravity = gravity.value()
                 }
             }
-            homeAppsCount.observe(viewLifecycleOwner) {
+            homeAppsNum.observe(viewLifecycleOwner) {
                 if (prefs.appUsageStats) {
                     updateAppCountWithUsageStats(it)
                 } else {
@@ -790,12 +795,12 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         updatePagesAndAppsPerPage(prefs.homeAppsNum, prefs.homePagesNum)
 
         // Create a new TextView instance
-        val totalText = getString(R.string.total_screen_time)
+        val totalText = getString(R.string.show_total_screen_time)
         val totalTime = context?.let { getTotalScreenTime(it) }
         val totalScreenTime = totalTime?.let { formatMillisToHMS(it) }
         val totalScreenTimeJoin = "$totalText: $totalScreenTime"
         // Set properties for the TextView (optional)
-        binding.setTotalScreenTime.apply {
+        binding.totalScreenTime.apply {
             text = totalScreenTimeJoin
             if (totalTime != null && totalTime > 300000L) { // Checking if totalTime is greater than 5 minutes (300,000 milliseconds)
                 visibility = View.VISIBLE
@@ -876,7 +881,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
         // Set the text for the page selector corresponding to each page
         binding.homeScreenPager.text = pageSelectorTexts.joinToString(" ")
-        if (prefs.homePagesNum > 1 && prefs.homePagerOn) binding.homeScreenPager.visibility =
+        if (prefs.homePagesNum > 1 && prefs.homePager) binding.homeScreenPager.visibility =
             View.VISIBLE
     }
 

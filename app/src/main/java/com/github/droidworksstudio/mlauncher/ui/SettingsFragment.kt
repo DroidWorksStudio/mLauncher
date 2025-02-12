@@ -254,30 +254,6 @@ class SettingsFragment : Fragment() {
             prefs.lockModeOn = isAdmin
     }
 
-    private fun setHomeAlignment(gravity: Constants.Gravity) {
-        prefs.homeAlignment = gravity
-        viewModel.updateHomeAppsAlignment(gravity, prefs.homeAlignmentBottom)
-    }
-
-    private fun setDrawerAlignment(gravity: Constants.Gravity) {
-        prefs.drawerAlignment = gravity
-        viewModel.updateDrawerAlignment(gravity)
-    }
-
-    private fun setClockAlignment(gravity: Constants.Gravity) {
-        prefs.clockAlignment = gravity
-        viewModel.updateClockAlignment(gravity)
-    }
-
-    private fun toggleShowDate() {
-        prefs.showDate = !prefs.showDate
-        viewModel.setShowDate(prefs.showDate)
-    }
-
-    private fun toggleShowTime() {
-        prefs.showTime = !prefs.showTime
-        viewModel.setShowTime(prefs.showTime)
-    }
 
     private fun showFeaturesSettings() {
         findNavController().navigate(
@@ -317,28 +293,6 @@ class SettingsFragment : Fragment() {
             R.id.action_settingsFragment_to_settingsAdvancedFragment,
         )
     }
-
-
-    private fun setHomeAppsNum(homeAppsNum: Int) {
-        prefs.homeAppsNum = homeAppsNum
-        viewModel.homeAppsCount.value = homeAppsNum
-    }
-
-    private fun setHomePagesNum(homePagesNum: Int) {
-        prefs.homePagesNum = homePagesNum
-        viewModel.homePagesCount.value = homePagesNum
-    }
-
-    private fun setOpacityNum(opacityNum: Int) {
-        prefs.opacityNum = opacityNum
-        viewModel.opacityNum.value = opacityNum
-    }
-
-    private fun setRecentCounter(recentCount: Int) {
-        prefs.recentCounter = recentCount
-        viewModel.recentCounter.value = recentCount
-    }
-
 
     private fun setGesture(flag: AppDrawerFlag, action: Action) {
         when (flag) {

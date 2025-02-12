@@ -34,10 +34,11 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     val showTime = MutableLiveData(prefs.showTime)
     val showDate = MutableLiveData(prefs.showDate)
-    val clockAlignment = MutableLiveData(prefs.clockAlignment)
+    val timeAlignment = MutableLiveData(prefs.timeAlignment)
+    val dateAlignment = MutableLiveData(prefs.dateAlignment)
     val homeAppsAlignment = MutableLiveData(Pair(prefs.homeAlignment, prefs.homeAlignmentBottom))
-    val homeAppsCount = MutableLiveData(prefs.homeAppsNum)
-    val homePagesCount = MutableLiveData(prefs.homePagesNum)
+    val homeAppsNum = MutableLiveData(prefs.homeAppsNum)
+    val homePagesNum = MutableLiveData(prefs.homePagesNum)
     val opacityNum = MutableLiveData(prefs.opacityNum)
     val filterStrength = MutableLiveData(prefs.filterStrength)
     val recentCounter = MutableLiveData(prefs.recentCounter)
@@ -145,8 +146,12 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         prefs.drawerAlignment = gravity
     }
 
-    fun updateClockAlignment(gravity: Constants.Gravity) {
-        clockAlignment.value = gravity
+    fun updateTimeAlignment(gravity: Constants.Gravity) {
+        timeAlignment.value = gravity
+    }
+
+    fun updateDateAlignment(gravity: Constants.Gravity) {
+        dateAlignment.value = gravity
     }
 
     fun updateHomeAppsAlignment(gravity: Constants.Gravity, onBottom: Boolean) {
