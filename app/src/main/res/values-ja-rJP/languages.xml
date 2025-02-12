@@ -2,19 +2,19 @@
 <resources>
     <string name="lang_arabic">アラビア語</string>
     <string name="lang_dutch">オランダ語</string>
-    <string name="lang_english">英語</string>
-    <string name="lang_french">フランス語</string>
-    <string name="lang_german">ドイツ語</string>
+    <string name="lang_english">イングリッシュ</string>
+    <string name="lang_french">フレンチ</string>
+    <string name="lang_german">ジャーマン</string>
     <string name="lang_hebrew">ヘブライ語</string>
-    <string name="lang_italian">イタリア語</string>
+    <string name="lang_italian">イタリアン</string>
     <string name="lang_japanese">日本語</string>
-    <string name="lang_korean">韓国語</string>
+    <string name="lang_korean">コリアン</string>
     <string name="lang_lithuanian">リトアニア語</string>
-    <string name="lang_polish">研磨</string>
+    <string name="lang_polish">ポーランド語</string>
     <string name="lang_portuguese">ポルトガル語</string>
-    <string name="lang_russian">ロシア</string>
+    <string name="lang_russian">ロシア語</string>
     <string name="lang_slovak">スロバキア語</string>
-    <string name="lang_spanish">スペイン語</string>
+    <string name="lang_spanish">スパニッシュ</string>
     <string name="lang_thai">タイ語</string>
     <string name="lang_turkish">トルコ語</string>
 </resources>
