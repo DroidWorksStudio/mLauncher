@@ -62,14 +62,15 @@
     <string name="clock_alignment">Clock</string>
     <string name="home_alignment">Home Apps</string>
     <string name="drawer_alignment">Drawer Apps</string>
+    <string name="element_colors">Element Colors</string>
     <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">제스처</string>
-    <string name="tap_click_actions">Tap &amp; Click Actions</string>
+    <string name="tap_click_actions">Tap/Click Actions</string>
     <string name="double_tap">Double Tap</string>
     <string name="clock_click_app">Click on Clock</string>
     <string name="date_click_app">Click on Date</string>
     <string name="usage_click_app">총 사용량을 클릭하세요</string>
-    <string name="swipe_movement">Swipe &amp; Movement</string>
+    <string name="swipe_movement">Swipe Movement</string>
     <string name="short_swipe_up_app">Swipe up</string>
     <string name="short_swipe_down_app">Swipe down</string>
     <string name="short_swipe_left_app">Swipe left</string>
@@ -153,5 +154,6 @@
     <string name="reset">Reset</string>
     <string name="cancel">Cancel</string>
     <string name="disabled">Disabled</string>
+    <string name="open">Open</string>
     <string name="close">Close</string>
 </resources>
