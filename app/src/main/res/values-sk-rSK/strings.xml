@@ -62,14 +62,15 @@
     <string name="clock_alignment">Clock</string>
     <string name="home_alignment">Home Apps</string>
     <string name="drawer_alignment">Drawer Apps</string>
+    <string name="element_colors">Element Colors</string>
     <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">Gestá</string>
-    <string name="tap_click_actions">Tap &amp; Click Actions</string>
+    <string name="tap_click_actions">Tap/Click Actions</string>
     <string name="double_tap">Dvojité poklepanie</string>
     <string name="clock_click_app">Kliknúť na Hodiny</string>
     <string name="date_click_app">Kliknúť na Dátum</string>
     <string name="usage_click_app">Kliknite na Celkové využitie</string>
-    <string name="swipe_movement">Swipe &amp; Movement</string>
+    <string name="swipe_movement">Swipe Movement</string>
     <string name="short_swipe_up_app">Krátke potiahnutie prstom nahor</string>
     <string name="short_swipe_down_app">Krátke potiahnutie prstom nadol</string>
     <string name="short_swipe_left_app">Krátke potiahnutie prstom doľava</string>
@@ -152,5 +153,6 @@
     <string name="reset">Obnoviť</string>
     <string name="cancel">Zrušiť</string>
     <string name="disabled">Zakázané</string>
+    <string name="open">Open</string>
     <string name="close">Zatvoriť</string>
 </resources>
