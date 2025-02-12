@@ -62,14 +62,15 @@
     <string name="clock_alignment">Clock</string>
     <string name="home_alignment">Home Apps</string>
     <string name="drawer_alignment">Drawer Apps</string>
+    <string name="element_colors">Element Colors</string>
     <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">Жесты</string>
-    <string name="tap_click_actions">Tap &amp; Click Actions</string>
+    <string name="tap_click_actions">Tap/Click Actions</string>
     <string name="double_tap">Двойное нажатие</string>
     <string name="clock_click_app">Нажмите на часы</string>
     <string name="date_click_app">Нажмите на дату</string>
     <string name="usage_click_app">Нажмите «Общее использование».</string>
-    <string name="swipe_movement">Swipe &amp; Movement</string>
+    <string name="swipe_movement">Swipe Movement</string>
     <string name="short_swipe_up_app">Свайп вверх</string>
     <string name="short_swipe_down_app">Свайп вниз</string>
     <string name="short_swipe_left_app">Свайп влево</string>
@@ -153,5 +154,6 @@
     <string name="reset">Reset</string>
     <string name="cancel">Отмена</string>
     <string name="disabled">Отключено</string>
+    <string name="open">Open</string>
     <string name="close">Закрыть</string>
 </resources>
