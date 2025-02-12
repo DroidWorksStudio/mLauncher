@@ -62,14 +62,15 @@
     <string name="clock_alignment">Clock</string>
     <string name="home_alignment">Home Apps</string>
     <string name="drawer_alignment">Drawer Apps</string>
+    <string name="element_colors">Element Colors</string>
     <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">Jestler</string>
-    <string name="tap_click_actions">Tap &amp; Click Actions</string>
+    <string name="tap_click_actions">Tap/Click Actions</string>
     <string name="double_tap">Çift Dokunuş</string>
     <string name="clock_click_app">Saat üzerine Tıklayın</string>
     <string name="date_click_app">Tarih üzerine Tıklayın</string>
     <string name="usage_click_app">Toplam Kullanım\'a tıklayın</string>
-    <string name="swipe_movement">Swipe &amp; Movement</string>
+    <string name="swipe_movement">Swipe Movement</string>
     <string name="short_swipe_up_app">Yukarı kaydır</string>
     <string name="short_swipe_down_app">Aşağı kaydır</string>
     <string name="short_swipe_left_app">Sola kaydır</string>
@@ -153,5 +154,6 @@
     <string name="reset">Sıfırla</string>
     <string name="cancel">İptal Et</string>
     <string name="disabled">Devre Dışı</string>
+    <string name="open">Open</string>
     <string name="close">Kapat</string>
 </resources>
