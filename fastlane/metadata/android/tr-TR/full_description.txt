@@ -1,79 +1,73 @@
-<a href="https://github.com/tanujnotes/Olauncher">Olauncher</a> 'dan alındı. Minimal ve temiz.
+<p>Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal and clean.</p>
 
-#Daha fazla özelliklli bir alıntı.
+<h2>Forked with Extra Features</h2>
 
-- Reklamlar ve bağlantılar gibi dağınıklık kaldırıldı.
-- Uygulama-çekmecesindeki uygulamaları yeniden adlandırabilirsiniz (Ana ekrandaki uygulamaları yeniden adlandırmak zaten desteklenmektedir. Ana ekrandaki bir uygulamaya uzun tıklayıp yazmaya başlamanız yeterli.)
-- Ana ekran'daki jestler için  çok daha fazla seçenek var:
-    - Jestler Günümüz:
-        - Yukarı, aşağı, sola, sağa Kaydırma
-        - Saat'e Tıklama
-        - Tarih'e Tıklama
-    - Olası eylemler artık şunları içeriyor:
-        - Belirtilen uygulamayı aç
-        - Uygulama listesini görüntüle
-        - Ekranı Kilitle
-        - En son açılan uygulamaları göster
-        - Bildirim çekmecesini açma
-        - Hızlı ayarları açma
-        - Güç Diyaloğu
-        - Ekran görüntüsü al
-        - Hareketi Devre Dışı Bırak
-- Saati ev uygulamalarından bağımsız olarak da konumlandırabilirsiniz.
-- Ana ekrandan bağımsız olarak uygulama çekmecesindeki uygulamaların hizalamasını değiştirin.
-- Ana ekranın bölümlerinin yazı tipi boyutunu birbirinden bağımsız olarak değiştirin.
-- İnternet izni kaldırıldı. Bir uygulama geliştiricisinin sizin hakkınızda ne bilmek istediğini asla bilemezsin.
-- Biyometrinin arkasındaki ayarları kilitleyin (geçiş)
-- Çökmeyi e-posta yoluyla bildirme yeteneği eklendi.
-- Uygulama kullanım süresini görüntüleme özelliği eklendi.
+<ul>
+    <li>Removed clutter, like ads and links.</li>
+    <li>You can rename apps in the app-drawer (Renaming apps on the home screen is already supported. Just long-click on an app on the home screen and start typing.)</li>
+    <li>We have added a lot more options for gestures on the home screen:
+        <ul>
+            <li><b>Gestures now include:</b>
+                <ul>
+                    <li>Double tap</li>
+                    <li>Clicking on the clock</li>
+                    <li>Clicking on the date</li>
+                    <li>Clicking on total usage</li>
+                    <li>Short swipe up</li>
+                    <li>Short swipe down</li>
+                    <li>Short swipe left</li>
+                    <li>Short swipe right</li>
+                    <li>Long swipe up</li>
+                    <li>Long swipe down</li>
+                    <li>Long swipe left</li>
+                    <li>Long swipe right</li>
+                </ul>
+            </li>
+            <li><b>Possible actions now include:</b>
+                <ul>
+                    <li>Open specified app</li>
+                    <li>Display app list</li>
+                    <li>Lock the screen</li>
+                    <li>Show recently opened apps</li>
+                    <li>Open the notification drawer</li>
+                    <li>Open quick settings</li>
+                    <li>Power dialog</li>
+                    <li>Take a screenshot</li>
+                    <li>Switch Page</li>
+                    <li>Disable gesture</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>You can also position the clock independently of the home apps.</li>
+    <li>Change alignment of apps in the app-drawer independent from the home screen.</li>
+    <li>Change font size of sections of the home screen independently of each other.</li>
+    <li>Removed internet permission. You never know what an app developer wants to know about you.</li>
+    <li>Lock settings behind biometrics (toggle).</li>
+    <li>Added the ability to report crashes via email.</li>
+    <li>Added the ability to view app usage time.</li>
+</ul>
 
-## Çeviriler:
+<h2>Translations</h2>
 
-- Birçok kişi uygulamayı aşağıdaki dillere çevirmiştir. Hepinize çok teşekkürler.
-  - Afrikaans
-  - Arapça
-  - Arnavutça
-  - Bulgarca
-  - Çince
-  - Hırvatça
-  - Çekçe
-  - Danca
-  - İngilizce
-  - Estonca
-  - Filipince
-  - Fince
-  - Fransızca
-  - Gürcüce
-  - Almanca
-  - Yunanca
-  - Hawaii dili
-  - İbranice
-  - Hintçe
-  - Macarca
-  - İzlandaca
-  - Endonezyaca
-  - İrlandaca
-  - İtalyanca
-  - Japonca
-  - Korece
-  - Litvanyaca
-  - Lüksemburgca
-  - Malayca
-  - Malgaşça
-  - Malayalam
-  - Norveççe
-  - Nepalce
-  - Farsça
-  - Lehçe
-  - Portekizce (Avrupa)
-  - Punjabi
-  - Rusça
-  - Sırpça
-  - Sindhi
-  - Slovakça
-  - İspanyolca
-  - İsveçce
-  - Tayca
-  - Türkçe
-  - Ukrayna
-  - Vietnamca
+<p>A lot of people have translated the app into the following languages. Many thanks to you all:</p>
+
+<ul>
+    <li>Arabic</li>
+    <li>Dutch</li>
+    <li>English</li>
+    <li>French</li>
+    <li>German</li>
+    <li>Hebrew</li>
+    <li>Italian</li>
+    <li>Japanese</li>
+    <li>Korean</li>
+    <li>Lithuanian</li>
+    <li>Polish</li>
+    <li>Portuguese</li>
+    <li>Russian</li>
+    <li>Slovak</li>
+    <li>Spanish</li>
+    <li>Thai</li>
+    <li>Turkish</li>
+</ul>
