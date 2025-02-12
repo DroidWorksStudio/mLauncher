@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Implemented Enhancements:
 
+- Added the new Gesture system. - ([e948dbb](https://github.com/DroidWorksStudio/mLauncher/commit/e948dbb7b8c8c28dee8fa8d9691c9b0e3e8ff055))
 - Added a new settings system. - ([adbbf52](https://github.com/DroidWorksStudio/mLauncher/commit/adbbf52c1ada6a33a58e0d73619df36a6d030908))
 - Added the ability to toggle settings. - ([739d82d](https://github.com/DroidWorksStudio/mLauncher/commit/739d82d6cc5c92b9d75cff0085d9ccd427988c71))
 
