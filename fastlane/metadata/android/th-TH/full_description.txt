@@ -1,73 +1,73 @@
-<p>Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal and clean.</p>
+<p>แยกมาจาก <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. เรียบง่ายและสะอาด</p>
 
-<h2>Forked with Extra Features</h2>
+<h2>แยกสาขาด้วยคุณสมบัติพิเศษ</h2>
 
 <ul>
-    <li>Removed clutter, like ads and links.</li>
-    <li>You can rename apps in the app-drawer (Renaming apps on the home screen is already supported. Just long-click on an app on the home screen and start typing.)</li>
-    <li>We have added a lot more options for gestures on the home screen:
+    <li>ลบสิ่งที่ไม่จำเป็น เช่น โฆษณาและลิงก์</li>
+    <li>คุณสามารถเปลี่ยนชื่อแอปใน app-drawer ได้ (รองรับการเปลี่ยนชื่อแอปบนหน้าจอหลักแล้ว) เพียงคลิกค้างไว้บนแอปบนหน้าจอหลักและเริ่มพิมพ์)</li>
+    <li>เราได้เพิ่มตัวเลือกเพิ่มเติมมากมายสำหรับท่าทางบนหน้าจอหลัก:
         <ul>
-            <li><b>Gestures now include:</b>
+            <li><b>ท่าทางต่างๆ ตอนนี้ได้แก่:</b>
                 <ul>
-                    <li>Double tap</li>
-                    <li>Clicking on the clock</li>
-                    <li>Clicking on the date</li>
-                    <li>Clicking on total usage</li>
-                    <li>Short swipe up</li>
-                    <li>Short swipe down</li>
-                    <li>Short swipe left</li>
-                    <li>Short swipe right</li>
-                    <li>Long swipe up</li>
-                    <li>Long swipe down</li>
-                    <li>Long swipe left</li>
-                    <li>Long swipe right</li>
+                    <li>แตะสองครั้ง</li>
+                    <li>คลิกที่นาฬิกา</li>
+                    <li>คลิกที่วันที่</li>
+                    <li>คลิกที่การใช้งานทั้งหมด</li>
+                    <li>ปัดขึ้นสั้นๆ</li>
+                    <li>ปัดลงสั้นๆ</li>
+                    <li>ปัดซ้ายสั้นๆ</li>
+                    <li>ปัดขวาสั้นๆ</li>
+                    <li>ปัดขึ้นยาว</li>
+                    <li>ปัดลงยาว</li>
+                    <li>ปัดซ้ายยาว</li>
+                    <li>ปัดขวายาว</li>
                 </ul>
             </li>
-            <li><b>Possible actions now include:</b>
+            <li><b>การกระทำที่เป็นไปได้ตอนนี้มีดังนี้:</b>
                 <ul>
-                    <li>Open specified app</li>
-                    <li>Display app list</li>
-                    <li>Lock the screen</li>
-                    <li>Show recently opened apps</li>
-                    <li>Open the notification drawer</li>
-                    <li>Open quick settings</li>
-                    <li>Power dialog</li>
-                    <li>Take a screenshot</li>
-                    <li>Switch Page</li>
-                    <li>Disable gesture</li>
+                    <li>เปิดแอปที่ระบุ</li>
+                    <li>แสดงรายการแอป</li>
+                    <li>ล็อคหน้าจอ</li>
+                    <li>แสดงแอปที่เปิดล่าสุด</li>
+                    <li>เปิดลิ้นชักการแจ้งเตือน</li>
+                    <li>เปิดการตั้งค่าด่วน</li>
+                    <li>บทสนทนาพลัง</li>
+                    <li>จับภาพหน้าจอ</li>
+                    <li>สลับหน้า</li>
+                    <li>ปิดใช้งานท่าทาง</li>
                 </ul>
             </li>
         </ul>
     </li>
-    <li>You can also position the clock independently of the home apps.</li>
-    <li>Change alignment of apps in the app-drawer independent from the home screen.</li>
-    <li>Change font size of sections of the home screen independently of each other.</li>
-    <li>Removed internet permission. You never know what an app developer wants to know about you.</li>
-    <li>Lock settings behind biometrics (toggle).</li>
-    <li>Added the ability to report crashes via email.</li>
-    <li>Added the ability to view app usage time.</li>
+    <li>คุณสามารถวางตำแหน่งนาฬิกาแยกจากแอปโฮมได้</li>
+    <li>เปลี่ยนการจัดตำแหน่งของแอปในลิ้นชักแอปโดยไม่ขึ้นกับหน้าจอหลัก</li>
+    <li>ปรับขนาดตัวอักษรของส่วนต่างๆ ของหน้าจอหลักแยกจากกัน</li>
+    <li>ลบสิทธิ์อนุญาตอินเทอร์เน็ต คุณไม่มีทางรู้เลยว่านักพัฒนาแอพอยากรู้เรื่องอะไรเกี่ยวกับคุณ</li>
+    <li>ล็อคการตั้งค่าไว้ด้านหลังข้อมูลชีวภาพ (สลับ)</li>
+    <li>เพิ่มความสามารถในการรายงานข้อขัดข้องผ่านทางอีเมล</li>
+    <li>เพิ่มความสามารถในการดูเวลาการใช้งานแอป</li>
 </ul>
 
-<h2>Translations</h2>
+<h2>แปล</h2>
 
-<p>A lot of people have translated the app into the following languages. Many thanks to you all:</p>
+<p>มีผู้คนจำนวนมากได้แปลแอปเป็นภาษาต่อไปนี้ ขอขอบคุณทุกท่านมากๆครับ:</p>
 
 <ul>
-    <li>Arabic</li>
-    <li>Dutch</li>
-    <li>English</li>
-    <li>French</li>
-    <li>German</li>
-    <li>Hebrew</li>
-    <li>Italian</li>
-    <li>Japanese</li>
-    <li>Korean</li>
-    <li>Lithuanian</li>
-    <li>Polish</li>
-    <li>Portuguese</li>
-    <li>Russian</li>
-    <li>Slovak</li>
-    <li>Spanish</li>
-    <li>Thai</li>
-    <li>Turkish</li>
+    <li>อาหรับ</li>
+    <li>ดัตช์</li>
+    <li>อังกฤษ</li>
+    <li>ฝรั่งเศส</li>
+    <li>เยอรมัน</li>
+    <li>ภาษาฮีบรู</li>
+    <li>อิตาลี</li>
+    <li>ญี่ปุ่น</li>
+    <li>ภาษาเกาหลี</li>
+    <li>ลิทัวเนีย</li>
+    <li>โปแลนด์</li>
+    <li>โปรตุเกส</li>
+    <li>รัสเซีย</li>
+    <li>สโลวัก</li>
+    <li>สเปน</li>
+    <li>ไทย</li>
+    <li>ตุรกี</li>
 </ul>
