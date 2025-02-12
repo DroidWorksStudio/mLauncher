@@ -1,79 +1,73 @@
-Rozwidlony od <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimalne i czyste.
+<p>Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal and clean.</p>
 
-# rozwidlenie z dodatkowymi funkcjami
+<h2>Forked with Extra Features</h2>
 
-- Usunięto bałagan, taki jak reklamy i linki.
-- Można zmieniać nazwy aplikacji w szufladzie aplikacji (Zmiana nazw aplikacji na ekranie głównym jest już obsługiwana. Po prostu długo kliknij aplikację na ekranie głównym i zacznij pisać.)
-- Znacznie większe możliwości dostosowywania gestów na ekranie głównym
-    - Gesty są teraz:
-        - Przesuwanie w górę, dół, lewo, prawo
-        - Możliwość zmiany aplikacji, która otwiera się po kliknięciu na zegar
-        - Kliknięcie daty
-    - Możliwe działania to:
-        - Otwórz określoną aplikację
-        - Wyświetl listę aplikacji
-        - Zablokowanie ekranu
-        - Pokaż ostatnio otwarte aplikacje
-        - Otwieranie listy powiadomień
-        - Otwieranie szybkich ustawień
-        - Okno zasilania
-        - Zrób zrzut ekranu
-        - Wyłącz gest
-- Możesz także ustawić zegar niezależnie od aplikacji domowych.
-- Zmień ustawienie aplikacji w szufladzie aplikacji niezależnie od ekranu głównego.
-- Zmień rozmiar czcionki w sekcjach ekranu głównego niezależnie od siebie.
-- Usunięte pozwolenie na korzystanie z Internetu Nigdy nie wiesz, co twórca aplikacji chce o Tobie wiedzieć.
-- Zablokuj ustawienia biometrii (przełącznik)
-- Dodano możliwość raportowania awarii poprzez e-mail.
-- Dodano możliwość przeglądania czasu użytkowania aplikacji.
+<ul>
+    <li>Removed clutter, like ads and links.</li>
+    <li>You can rename apps in the app-drawer (Renaming apps on the home screen is already supported. Just long-click on an app on the home screen and start typing.)</li>
+    <li>We have added a lot more options for gestures on the home screen:
+        <ul>
+            <li><b>Gestures now include:</b>
+                <ul>
+                    <li>Double tap</li>
+                    <li>Clicking on the clock</li>
+                    <li>Clicking on the date</li>
+                    <li>Clicking on total usage</li>
+                    <li>Short swipe up</li>
+                    <li>Short swipe down</li>
+                    <li>Short swipe left</li>
+                    <li>Short swipe right</li>
+                    <li>Long swipe up</li>
+                    <li>Long swipe down</li>
+                    <li>Long swipe left</li>
+                    <li>Long swipe right</li>
+                </ul>
+            </li>
+            <li><b>Possible actions now include:</b>
+                <ul>
+                    <li>Open specified app</li>
+                    <li>Display app list</li>
+                    <li>Lock the screen</li>
+                    <li>Show recently opened apps</li>
+                    <li>Open the notification drawer</li>
+                    <li>Open quick settings</li>
+                    <li>Power dialog</li>
+                    <li>Take a screenshot</li>
+                    <li>Switch Page</li>
+                    <li>Disable gesture</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>You can also position the clock independently of the home apps.</li>
+    <li>Change alignment of apps in the app-drawer independent from the home screen.</li>
+    <li>Change font size of sections of the home screen independently of each other.</li>
+    <li>Removed internet permission. You never know what an app developer wants to know about you.</li>
+    <li>Lock settings behind biometrics (toggle).</li>
+    <li>Added the ability to report crashes via email.</li>
+    <li>Added the ability to view app usage time.</li>
+</ul>
 
-## Tłumaczenia:
+<h2>Translations</h2>
 
-- Wiele osób przetłumaczyło aplikację na następujące języki. Bardzo dziękuję wszystkim.
-  - Afrykanerski
-  - arabski
-  - Albańczyk
-  - język bułgarski
-  - Chińczyk
-  - Chorwat
-  - Czech
-  - Duńczyk
-  - Anglik
-  - estoński
-  - Filipińczyk
-  - Język fiński
-  - Francuzi
-  - Gruzin
-  - Niemiec
-  - Grek
-  - Hawajczyk
-  - Hebrajski
-  - hindi
-  - Węgier
-  - islandzki
-  - indonezyjski
-  - Irlandczycy
-  - Włoch
-  - Japończyk
-  - Koreańczyk
-  - Litwin
-  - luksemburski
-  - Malaj
-  - Malgasze
-  - Malajalam
-  - Norweg
-  - Nepalski
-  - Perski
-  - polski
-  - Język portugalski (europejski)
-  - pendżabski
-  - Rosjanin
-  - Serbski
-  - Sindhi
-  - Słowacki
-  - Hiszpan
-  - Szwed
-  - Tajlandia
-  - Turek
-  - Ukrainiec
-  - wietnamski
+<p>A lot of people have translated the app into the following languages. Many thanks to you all:</p>
+
+<ul>
+    <li>Arabic</li>
+    <li>Dutch</li>
+    <li>English</li>
+    <li>French</li>
+    <li>German</li>
+    <li>Hebrew</li>
+    <li>Italian</li>
+    <li>Japanese</li>
+    <li>Korean</li>
+    <li>Lithuanian</li>
+    <li>Polish</li>
+    <li>Portuguese</li>
+    <li>Russian</li>
+    <li>Slovak</li>
+    <li>Spanish</li>
+    <li>Thai</li>
+    <li>Turkish</li>
+</ul>
