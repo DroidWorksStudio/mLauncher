@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Implemented Enhancements:
 
+- Added a new settings system. - ([adbbf52](https://github.com/DroidWorksStudio/mLauncher/commit/adbbf52c1ada6a33a58e0d73619df36a6d030908))
 - Added the ability to toggle settings. - ([739d82d](https://github.com/DroidWorksStudio/mLauncher/commit/739d82d6cc5c92b9d75cff0085d9ccd427988c71))
 
 ### Feature Removal:
