@@ -374,73 +374,85 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     private fun openSwipeUpApp() {
         if (prefs.appShortSwipeUp.activityPackage.isNotEmpty())
             launchApp(prefs.appShortSwipeUp)
-        else requireContext().openDialerApp()
+        else
+            requireContext().openCameraApp()
     }
 
     private fun openSwipeDownApp() {
         if (prefs.appShortSwipeDown.activityPackage.isNotEmpty())
             launchApp(prefs.appShortSwipeDown)
-        else requireContext().openDialerApp()
+        else
+            requireContext().openDialerApp()
     }
 
     private fun openSwipeLeftApp() {
         if (prefs.appShortSwipeLeft.activityPackage.isNotEmpty())
             launchApp(prefs.appShortSwipeLeft)
-        else requireContext().openCameraApp()
+        else
+            requireContext().openCameraApp()
     }
 
     private fun openSwipeRightApp() {
         if (prefs.appShortSwipeRight.activityPackage.isNotEmpty())
             launchApp(prefs.appShortSwipeRight)
-        else requireContext().openDialerApp()
+        else
+            requireContext().openDialerApp()
     }
 
     private fun openLongSwipeUpApp() {
         if (prefs.appLongSwipeUp.activityPackage.isNotEmpty())
             launchApp(prefs.appLongSwipeUp)
-        else requireContext().openDialerApp()
+        else
+            requireContext().openCameraApp()
     }
 
     private fun openLongSwipeDownApp() {
         if (prefs.appLongSwipeDown.activityPackage.isNotEmpty())
             launchApp(prefs.appLongSwipeDown)
-        else requireContext().openDialerApp()
+        else
+            requireContext().openDialerApp()
     }
 
     private fun openLongSwipeLeftApp() {
         if (prefs.appLongSwipeLeft.activityPackage.isNotEmpty())
             launchApp(prefs.appLongSwipeLeft)
-        else requireContext().openCameraApp()
+        else
+            requireContext().openCameraApp()
     }
 
     private fun openLongSwipeRightApp() {
         if (prefs.appLongSwipeRight.activityPackage.isNotEmpty())
             launchApp(prefs.appLongSwipeRight)
-        else requireContext().openDialerApp()
+        else
+            requireContext().openDialerApp()
     }
 
     private fun openClickClockApp() {
         if (prefs.appClickClock.activityPackage.isNotEmpty())
             launchApp(prefs.appClickClock)
-        else requireContext().openAlarmApp()
+        else
+            requireContext().openAlarmApp()
     }
 
     private fun openClickUsageApp() {
         if (prefs.appClickUsage.activityPackage.isNotEmpty())
             launchApp(prefs.appClickUsage)
-        else requireContext().openDigitalWellbeing()
+        else
+            requireContext().openDigitalWellbeing()
     }
 
     private fun openClickDateApp() {
         if (prefs.appClickDate.activityPackage.isNotEmpty())
             launchApp(prefs.appClickDate)
-        else requireContext().launchCalendar()
+        else
+            requireContext().launchCalendar()
     }
 
     private fun openDoubleTapApp() {
         if (prefs.appDoubleTap.activityPackage.isNotEmpty())
             launchApp(prefs.appDoubleTap)
-        else requireContext().openCameraApp()
+        else
+            requireContext().openAccessibilitySettings()
     }
 
     // This function handles all swipe actions that a independent of the actual swipe direction

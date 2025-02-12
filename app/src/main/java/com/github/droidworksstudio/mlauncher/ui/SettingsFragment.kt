@@ -31,7 +31,6 @@ import androidx.navigation.fragment.findNavController
 import com.github.droidworksstudio.mlauncher.MainViewModel
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.Constants
-import com.github.droidworksstudio.mlauncher.data.Constants.Action
 import com.github.droidworksstudio.mlauncher.data.Constants.AppDrawerFlag
 import com.github.droidworksstudio.mlauncher.data.Constants.Theme.Dark
 import com.github.droidworksstudio.mlauncher.data.Constants.Theme.Light
@@ -292,39 +291,5 @@ class SettingsFragment : Fragment() {
         findNavController().navigate(
             R.id.action_settingsFragment_to_settingsAdvancedFragment,
         )
-    }
-
-    private fun setGesture(flag: AppDrawerFlag, action: Action) {
-        when (flag) {
-            AppDrawerFlag.SetShortSwipeUp -> prefs.shortSwipeUpAction = action
-            AppDrawerFlag.SetShortSwipeDown -> prefs.shortSwipeDownAction = action
-            AppDrawerFlag.SetShortSwipeLeft -> prefs.shortSwipeLeftAction = action
-            AppDrawerFlag.SetShortSwipeRight -> prefs.shortSwipeRightAction = action
-            AppDrawerFlag.SetClickClock -> prefs.clickClockAction = action
-            AppDrawerFlag.SetAppUsage -> prefs.clickAppUsageAction = action
-            AppDrawerFlag.SetClickDate -> prefs.clickDateAction = action
-            AppDrawerFlag.SetDoubleTap -> prefs.doubleTapAction = action
-            AppDrawerFlag.SetLongSwipeUp -> prefs.longSwipeUpAction = action
-            AppDrawerFlag.SetLongSwipeDown -> prefs.longSwipeDownAction = action
-            AppDrawerFlag.SetLongSwipeLeft -> prefs.longSwipeLeftAction = action
-            AppDrawerFlag.SetLongSwipeRight -> prefs.longSwipeRightAction = action
-            AppDrawerFlag.SetHomeApp,
-            AppDrawerFlag.HiddenApps,
-            AppDrawerFlag.ReorderApps,
-            AppDrawerFlag.LaunchApp -> {
-            }
-        }
-
-        when (action) {
-            Action.OpenApp -> {
-                viewModel.getAppList(true)
-                findNavController().navigate(
-                    R.id.action_settingsFragment_to_appListFragment,
-                    bundleOf("flag" to flag.toString())
-                )
-            }
-
-            else -> {}
-        }
     }
 }
