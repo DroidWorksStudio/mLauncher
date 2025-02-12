@@ -1,73 +1,73 @@
-<p>Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal and clean.</p>
+<p>Šakė nuo <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimalus ir švarus.</p>
 
-<h2>Forked with Extra Features</h2>
+<h2>Šakės su papildomomis funkcijomis</h2>
 
 <ul>
-    <li>Removed clutter, like ads and links.</li>
-    <li>You can rename apps in the app-drawer (Renaming apps on the home screen is already supported. Just long-click on an app on the home screen and start typing.)</li>
-    <li>We have added a lot more options for gestures on the home screen:
+    <li>Pašalinta netvarka, pvz., skelbimai ir nuorodos.</li>
+    <li>Galite pervardyti programas programų stalčiuje (Programų pervadinimas pagrindiniame ekrane jau palaikomas. Tiesiog ilgai spustelėkite programą pagrindiniame ekrane ir pradėkite rašyti.)</li>
+    <li>Pridėjome daug daugiau gestų parinkčių pagrindiniame ekrane:
         <ul>
-            <li><b>Gestures now include:</b>
+            <li><b>Gestai dabar apima:</b>
                 <ul>
-                    <li>Double tap</li>
-                    <li>Clicking on the clock</li>
-                    <li>Clicking on the date</li>
-                    <li>Clicking on total usage</li>
-                    <li>Short swipe up</li>
-                    <li>Short swipe down</li>
-                    <li>Short swipe left</li>
-                    <li>Short swipe right</li>
-                    <li>Long swipe up</li>
-                    <li>Long swipe down</li>
-                    <li>Long swipe left</li>
-                    <li>Long swipe right</li>
+                    <li>Dukart palieskite</li>
+                    <li>Spustelėjus laikrodį</li>
+                    <li>Spustelėjus datą</li>
+                    <li>Spustelėjus bendrą naudojimą</li>
+                    <li>Trumpai perbraukite aukštyn</li>
+                    <li>Trumpai braukite žemyn</li>
+                    <li>Trumpai braukite kairėn</li>
+                    <li>Trumpai braukite dešinėn</li>
+                    <li>Ilgai braukite aukštyn</li>
+                    <li>Ilgai braukite žemyn</li>
+                    <li>Ilgai braukite kairėn</li>
+                    <li>Ilgai braukite dešinėn</li>
                 </ul>
             </li>
-            <li><b>Possible actions now include:</b>
+            <li><b>Dabar galimi veiksmai:</b>
                 <ul>
-                    <li>Open specified app</li>
-                    <li>Display app list</li>
-                    <li>Lock the screen</li>
-                    <li>Show recently opened apps</li>
-                    <li>Open the notification drawer</li>
-                    <li>Open quick settings</li>
-                    <li>Power dialog</li>
-                    <li>Take a screenshot</li>
-                    <li>Switch Page</li>
-                    <li>Disable gesture</li>
+                    <li>Atidarykite nurodytą programą</li>
+                    <li>Rodyti programų sąrašą</li>
+                    <li>Užrakinkite ekraną</li>
+                    <li>Rodyti neseniai atidarytas programas</li>
+                    <li>Atidarykite pranešimų stalčių</li>
+                    <li>Atidarykite sparčiuosius nustatymus</li>
+                    <li>Maitinimo dialogo langas</li>
+                    <li>Padarykite ekrano kopiją</li>
+                    <li>Perjungti puslapį</li>
+                    <li>Išjungti gestą</li>
                 </ul>
             </li>
         </ul>
     </li>
-    <li>You can also position the clock independently of the home apps.</li>
-    <li>Change alignment of apps in the app-drawer independent from the home screen.</li>
-    <li>Change font size of sections of the home screen independently of each other.</li>
-    <li>Removed internet permission. You never know what an app developer wants to know about you.</li>
-    <li>Lock settings behind biometrics (toggle).</li>
-    <li>Added the ability to report crashes via email.</li>
-    <li>Added the ability to view app usage time.</li>
+    <li>Taip pat galite nustatyti laikrodžio padėtį nepriklausomai nuo namų programų.</li>
+    <li>Keiskite programų išdėstymą programų stalčiuje nepriklausomai nuo pagrindinio ekrano.</li>
+    <li>Pakeiskite pagrindinio ekrano skyrių šrifto dydį nepriklausomai vienas nuo kito.</li>
+    <li>Pašalintas interneto leidimas. Niekada nežinote, ką programos kūrėjas nori sužinoti apie jus.</li>
+    <li>Užrakinti nustatymus už biometrinių duomenų (perjungti).</li>
+    <li>Pridėta galimybė pranešti apie gedimus el. paštu.</li>
+    <li>Pridėta galimybė peržiūrėti programos naudojimo laiką.</li>
 </ul>
 
-<h2>Translations</h2>
+<h2>Vertimai</h2>
 
-<p>A lot of people have translated the app into the following languages. Many thanks to you all:</p>
+<p>Daug žmonių išvertė programą į šias kalbas. Labai ačiū jums visiems:</p>
 
 <ul>
-    <li>Arabic</li>
-    <li>Dutch</li>
-    <li>English</li>
-    <li>French</li>
-    <li>German</li>
-    <li>Hebrew</li>
-    <li>Italian</li>
-    <li>Japanese</li>
-    <li>Korean</li>
-    <li>Lithuanian</li>
-    <li>Polish</li>
-    <li>Portuguese</li>
-    <li>Russian</li>
-    <li>Slovak</li>
-    <li>Spanish</li>
-    <li>Thai</li>
-    <li>Turkish</li>
+    <li>arabų</li>
+    <li>olandų</li>
+    <li>Anglų kalba</li>
+    <li>prancūzų</li>
+    <li>Vokiečių</li>
+    <li>hebrajų</li>
+    <li>italų</li>
+    <li>japonų</li>
+    <li>korėjiečių</li>
+    <li>Lietuviškai</li>
+    <li>lenkų</li>
+    <li>portugalų</li>
+    <li>Rusų</li>
+    <li>slovakų</li>
+    <li>Ispanų</li>
+    <li>tajų</li>
+    <li>turkų</li>
 </ul>
