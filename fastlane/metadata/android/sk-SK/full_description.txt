@@ -1,79 +1,73 @@
-Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimálistický a čistý.
+<p>Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal and clean.</p>
 
-# Fork s extra funkciami
+<h2>Forked with Extra Features</h2>
 
-- Odstránený neporiadok, ako sú reklamy a odkazy.
-- Môžete premenovať aplikácie na paneli aplikácií (Premenovanie aplikácií na domovskej obrazovke je už podporované. Stačí dlho kliknúť na aplikáciu na domovskej obrazovke a začať písať.)
-- Pridali sme oveľa viac možností pre gestá na domovskej obrazovke:
-    - Aktuálne gestá sú:
-        - Potiahnutie prstom nahor, nadol, doľava, doprava
-        - Kliknutie na hodiny
-        - Kliknutie na dátum
-    - Možné akcie teraz zahŕňajú:
-        - Otvoriť špecifikovanú aplikáciu
-        - Zobrazenie zoznamu aplikácií
-        - Uzamknutie obrazovky
-        - Zobraziť naposledy otvorené aplikácie
-        - Otvorenie notifikačnej lišty
-        - Otvorenie rýchlych nastavení
-        - Dialógové okno napájania
-        - Vyhotoviť snímku obrazovky
-        - Zakázať Gesto
-- Hodiny môžete umiestniť aj nezávisle od domovských aplikácií.
-- Zmeňte zarovnanie aplikácií v zásuvke aplikácií nezávisle od úvodnej obrazovky.
-- Zmeňte veľkosť písma častí úvodnej obrazovky nezávisle od seba.
-- Odstránené povolenie na internet. Nikdy neviete, čo o vás chce vývojár aplikácie vedieť.
-- Nastavenia uzamknutia za biometriou (prepínač)
-- Pridaná možnosť nahlásiť zlyhanie prostredníctvom e-mailu.
-- Pridaná možnosť zobraziť čas používania aplikácie.
+<ul>
+    <li>Removed clutter, like ads and links.</li>
+    <li>You can rename apps in the app-drawer (Renaming apps on the home screen is already supported. Just long-click on an app on the home screen and start typing.)</li>
+    <li>We have added a lot more options for gestures on the home screen:
+        <ul>
+            <li><b>Gestures now include:</b>
+                <ul>
+                    <li>Double tap</li>
+                    <li>Clicking on the clock</li>
+                    <li>Clicking on the date</li>
+                    <li>Clicking on total usage</li>
+                    <li>Short swipe up</li>
+                    <li>Short swipe down</li>
+                    <li>Short swipe left</li>
+                    <li>Short swipe right</li>
+                    <li>Long swipe up</li>
+                    <li>Long swipe down</li>
+                    <li>Long swipe left</li>
+                    <li>Long swipe right</li>
+                </ul>
+            </li>
+            <li><b>Possible actions now include:</b>
+                <ul>
+                    <li>Open specified app</li>
+                    <li>Display app list</li>
+                    <li>Lock the screen</li>
+                    <li>Show recently opened apps</li>
+                    <li>Open the notification drawer</li>
+                    <li>Open quick settings</li>
+                    <li>Power dialog</li>
+                    <li>Take a screenshot</li>
+                    <li>Switch Page</li>
+                    <li>Disable gesture</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>You can also position the clock independently of the home apps.</li>
+    <li>Change alignment of apps in the app-drawer independent from the home screen.</li>
+    <li>Change font size of sections of the home screen independently of each other.</li>
+    <li>Removed internet permission. You never know what an app developer wants to know about you.</li>
+    <li>Lock settings behind biometrics (toggle).</li>
+    <li>Added the ability to report crashes via email.</li>
+    <li>Added the ability to view app usage time.</li>
+</ul>
 
-## Preklady:
+<h2>Translations</h2>
 
-- Mnoho ľudí preložilo aplikáciu do týchto jazykov. Veľká vďaka všetkým.
-  - Afrikánsky
-  - Arabský
-  - Albánsky
-  - Bulharský
-  - Čínsky
-  - Chorvátsky
-  - Český
-  - Dánsky
-  - Anglický
-  - Estónsky
-  - Filipínsky
-  - Fínsky
-  - Francúzsky
-  - Gruzínsky
-  - Nemecky
-  - Grécky
-  - Havajský
-  - Hebrejsky
-  - Hindsky
-  - Maďarsky
-  - Islandský
-  - Indonézsky
-  - Írsky
-  - Taliansky
-  - Japonsky
-  - Kórejský
-  - Litovský
-  - Luxemburský
-  - Malajský
-  - Malgašský
-  - Malajálsky
-  - Nórsky
-  - Nepálsky
-  - Perzský
-  - Poľský
-  - Portugálsky (európska)
-  - Pandžábsky
-  - Ruský
-  - Srbský
-  - Sindhština
-  - Slovensky
-  - Španielsky
-  - Švédsky
-  - Thajsky
-  - Turecký
-  - Ukrajinský
-  - Vietnamsky
+<p>A lot of people have translated the app into the following languages. Many thanks to you all:</p>
+
+<ul>
+    <li>Arabic</li>
+    <li>Dutch</li>
+    <li>English</li>
+    <li>French</li>
+    <li>German</li>
+    <li>Hebrew</li>
+    <li>Italian</li>
+    <li>Japanese</li>
+    <li>Korean</li>
+    <li>Lithuanian</li>
+    <li>Polish</li>
+    <li>Portuguese</li>
+    <li>Russian</li>
+    <li>Slovak</li>
+    <li>Spanish</li>
+    <li>Thai</li>
+    <li>Turkish</li>
+</ul>
