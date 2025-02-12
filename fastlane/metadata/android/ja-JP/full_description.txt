@@ -1,79 +1,73 @@
-<a href="https://github.com/tanujnotes/Olauncher">Olauncher</a> からフォークされました。 ミニマルでクリーン。 ミニマルでクリーン。 ミニマムでクリーン。 ミニマムでクリーン。
+<p>Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal and clean.</p>
 
-# 余分な機能をフォークしました
+<h2>Forked with Extra Features</h2>
 
-- 広告やリンクなどの不要なものを削除しました。
-- リストの最後にあるアプリを開く自動化をトグルできるようにしました。 - アプリドロワーでアプリ名の変更が可能（ホーム画面でのアプリ名変更は対応済み ホーム画面でアプリをロングクリックして、入力を開始するだけ) ホーム画面でアプリを長押しして入力を開始するだけです。 ホーム画面でアプリを長押しして入力を開始するだけです。
-- ホーム画面のジェスチャーのカスタマイズ性を大幅に向上
-    - ジェスチャーは以下のとおりです：
-        - 上下左右にスワイプ
-        - 時計をクリックしたときに開くアプリを変更する機能
-        - 日付をクリックしたときに開くアプリを変更する機能
-    - 可能なアクションは次のとおりです。
-        - 指定したアプリを開く
-        - アプリ一覧を表示
-        - 画面のロック
-        - 最近開いたアプリを表示
-        - 通知ドロワーを開く
-        - クイック設定を開く
-        - 電源ダイアログ
-        - スクリーンショットを撮る
-        - ジェスチャーを無効にする
-- ホームアプリとは独立して時計を配置することもできます。
-- ホーム画面とは独立して、アプリドロワー内のアプリの配置を変更します。
-- ホーム画面のセクションのフォント サイズを個別に変更します。
-- インターネット接続許可の解除 アプリ開発者があなたについて何を知りたいかはわかりません。
-- 生体認証の背後にあるロック設定 (トグル)
-- クラッシュを電子メールで報告する機能を追加しました。
-- アプリの使用時間を表示する機能を追加しました。
+<ul>
+    <li>Removed clutter, like ads and links.</li>
+    <li>You can rename apps in the app-drawer (Renaming apps on the home screen is already supported. Just long-click on an app on the home screen and start typing.)</li>
+    <li>We have added a lot more options for gestures on the home screen:
+        <ul>
+            <li><b>Gestures now include:</b>
+                <ul>
+                    <li>Double tap</li>
+                    <li>Clicking on the clock</li>
+                    <li>Clicking on the date</li>
+                    <li>Clicking on total usage</li>
+                    <li>Short swipe up</li>
+                    <li>Short swipe down</li>
+                    <li>Short swipe left</li>
+                    <li>Short swipe right</li>
+                    <li>Long swipe up</li>
+                    <li>Long swipe down</li>
+                    <li>Long swipe left</li>
+                    <li>Long swipe right</li>
+                </ul>
+            </li>
+            <li><b>Possible actions now include:</b>
+                <ul>
+                    <li>Open specified app</li>
+                    <li>Display app list</li>
+                    <li>Lock the screen</li>
+                    <li>Show recently opened apps</li>
+                    <li>Open the notification drawer</li>
+                    <li>Open quick settings</li>
+                    <li>Power dialog</li>
+                    <li>Take a screenshot</li>
+                    <li>Switch Page</li>
+                    <li>Disable gesture</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>You can also position the clock independently of the home apps.</li>
+    <li>Change alignment of apps in the app-drawer independent from the home screen.</li>
+    <li>Change font size of sections of the home screen independently of each other.</li>
+    <li>Removed internet permission. You never know what an app developer wants to know about you.</li>
+    <li>Lock settings behind biometrics (toggle).</li>
+    <li>Added the ability to report crashes via email.</li>
+    <li>Added the ability to view app usage time.</li>
+</ul>
 
-## 翻訳：
+<h2>Translations</h2>
 
-- 多くの人がこのアプリを以下の言語に翻訳しています。 皆様、本当にありがとうございました。
-  - アフリカーンス語
-  - アラビア語
-  - アルバニア語
-  - ブルガリア語
-  - シンディー語
-  - クロアチア語
-  - チェコ語
-  - デンマーク語
-  - イングリッシュ
-  - エストニア語
-  - フィリピン人
-  - フィンランド語
-  - フレンチ
-  - グリーク
-  - ジャーマン
-  - グルジア語
-  - ハワイアン
-  - ヘブライ語
-  - ヒンディー語
-  - ハンガリー語
-  - アイスランド語
-  - インドネシア語
-  - アイリッシュ
-  - イタリアン
-  - 日本語
-  - コリアン
-  - リトアニア語
-  - ルクセンブルク語
-  - マレイ
-  - マダガスカル
-  - マラヤーラム語
-  - ノルウェー語
-  - ネパール語
-  - ペルシャ語
-  - ポーランド語
-  - ポルトガル語（ヨーロッパ）
-  - パンジャブ語
-  - ロシア語
-  - セルビア人
-  - 唐
-  - スロバキア語
-  - スパニッシュ
-  - スウェーデン語
-  - タイ人
-  - トルコ語
-  - ウクライナ人
-  - ベトナム語
+<p>A lot of people have translated the app into the following languages. Many thanks to you all:</p>
+
+<ul>
+    <li>Arabic</li>
+    <li>Dutch</li>
+    <li>English</li>
+    <li>French</li>
+    <li>German</li>
+    <li>Hebrew</li>
+    <li>Italian</li>
+    <li>Japanese</li>
+    <li>Korean</li>
+    <li>Lithuanian</li>
+    <li>Polish</li>
+    <li>Portuguese</li>
+    <li>Russian</li>
+    <li>Slovak</li>
+    <li>Spanish</li>
+    <li>Thai</li>
+    <li>Turkish</li>
+</ul>
