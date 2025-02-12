@@ -20,6 +20,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Cleaned up the FastLane files - ([bed9bcc](https://github.com/DroidWorksStudio/mLauncher/commit/bed9bcc260e7e2c493c8cd93384bf75a082b3cdb))
 - Cleaning Up Settings Part 2 - ([ddba550](https://github.com/DroidWorksStudio/mLauncher/commit/ddba5501c99ea9a3702d39762927c77aeeefcd51))
 - Cleaning Up Settings Part 1 - ([48e493b](https://github.com/DroidWorksStudio/mLauncher/commit/48e493bac1e3a6b31e4500666f61301071648827))
 - Moved around the settings - ([8ea6649](https://github.com/DroidWorksStudio/mLauncher/commit/8ea6649cd6d25a6e17f96e4e4c0219fc50655798))
