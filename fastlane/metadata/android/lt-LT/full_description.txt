@@ -1,79 +1,73 @@
-Šakė nuo <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimalus ir paprastas.
+<p>Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal and clean.</p>
 
-# Variantas su papildomomis funkcijomis
+<h2>Forked with Extra Features</h2>
 
-– Pašalinta netvarka, pvz., skelbimai ir nuorodos.
-- Programėlių stalčiuje galite pervadinti programėles (Programėlių pervadinimas pagrindiniame ekrane jau palaikomas. Tiesiog ilgai spustelėkite programėlę pagrindiniame ekrane ir pradėkite rašyti.)
-- Pradiniame ekrane pridėjome daug daugiau gestų parinkčių:
-    - Gestai dabar yra:
-        - Braukite aukštyn, žemyn, kairėn, dešinėn
-        - Paspaudus ant laikrodžio
-        - Paspaudus ant datos
-    – Dabar galimi veiksmai:
-        - Atidaryti nurodytą programą
-        - Rodyti programų sąrašą
-        - Ekrano užrakinimas
-        - Rodyti neseniai atidarytas programas
-        - Atidaryti pranešimų stalčių
-        - Greitųjų nustatymų atidarymas
-        - Maitinimo dialogas
-        - Ekrano kopijos darymas
-        - Išjungti gestus
-- Taip pat galite nustatyti laikrodį nepriklausomai nuo pagrindinio ekrano programėlių.
-- Pakeisti programėlių išdėstymą programėlių stalčiuje nepriklausomai nuo pagrindinio ekrano.
-- Pakeisti pagrindinio ekrano skyrių šrifto dydį nepriklausomai vienas nuo kito.
-- Pašalintas interneto leidimo reikalavimas. Niekada nežinote, ką programos kūrėjas nori sužinoti apie jus.
-- Užrakinti nustatymus už biometrinių duomenų (pasirinktinai)
-- Pridėta galimybė pranešti apie gedimą el. paštu.
-- Pridėta galimybė peržiūrėti programėlės naudojimo laiką.
+<ul>
+    <li>Removed clutter, like ads and links.</li>
+    <li>You can rename apps in the app-drawer (Renaming apps on the home screen is already supported. Just long-click on an app on the home screen and start typing.)</li>
+    <li>We have added a lot more options for gestures on the home screen:
+        <ul>
+            <li><b>Gestures now include:</b>
+                <ul>
+                    <li>Double tap</li>
+                    <li>Clicking on the clock</li>
+                    <li>Clicking on the date</li>
+                    <li>Clicking on total usage</li>
+                    <li>Short swipe up</li>
+                    <li>Short swipe down</li>
+                    <li>Short swipe left</li>
+                    <li>Short swipe right</li>
+                    <li>Long swipe up</li>
+                    <li>Long swipe down</li>
+                    <li>Long swipe left</li>
+                    <li>Long swipe right</li>
+                </ul>
+            </li>
+            <li><b>Possible actions now include:</b>
+                <ul>
+                    <li>Open specified app</li>
+                    <li>Display app list</li>
+                    <li>Lock the screen</li>
+                    <li>Show recently opened apps</li>
+                    <li>Open the notification drawer</li>
+                    <li>Open quick settings</li>
+                    <li>Power dialog</li>
+                    <li>Take a screenshot</li>
+                    <li>Switch Page</li>
+                    <li>Disable gesture</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>You can also position the clock independently of the home apps.</li>
+    <li>Change alignment of apps in the app-drawer independent from the home screen.</li>
+    <li>Change font size of sections of the home screen independently of each other.</li>
+    <li>Removed internet permission. You never know what an app developer wants to know about you.</li>
+    <li>Lock settings behind biometrics (toggle).</li>
+    <li>Added the ability to report crashes via email.</li>
+    <li>Added the ability to view app usage time.</li>
+</ul>
 
-## Vertimai:
+<h2>Translations</h2>
 
-- Daug žmonių išvertė programėlę į šias kalbas. Dėkojame jums visiems.
-  – Afrikanų kalba
-  - Arabų kalba
-  - Albanų kalba
-  - Bulgarų kalba
-  - Kinų kalba
-  - Kroatų kalba
-  - Čekų kalba
-  - Danų kalba
-  - Anglų kalba
-  - Estų kalba
-  - Filipiniečių kalba
-  - Suomių kalba
-  - Prancūzų kalba
-  - Gruzinų kalba
-  - Vokiečių kalba
-  - Graikų kalba
-  - Havajiečių kalba
-  - Hebrajų kalba
-  - Hindi kalba
-  - Vengrų kalba
-  - Islandų kalba
-  - Indoneziečių kalba
-  - Airijos
-  - Italų kalba
-  - Japonų kalba
-  - Korėjiečių kalba
-  - Lietuvių kalba
-  - Liuksemburgo kalba
-  - Malajų kalba
-  - Malagasių kalba
-  - Malajalamų kalba
-  - Norvegų kalba
-  - Nepalų kalba
-  - Persų kalba
-  - Lenkų kalba
-  - Portugalų (Europos) kalba
-  - Pandžabų kalba
-  - Rusų kalba
-  - Serbų kalba
-  - Sindų kalba
-  – Slovakų kalba
-  - Ispanų kalba
-  - Švedų kalba
-  - Tailandiečių kalba
-  - Turkų kalba
-  - Ukrainiečių kalba
-  - Vietnamiečių kalba
+<p>A lot of people have translated the app into the following languages. Many thanks to you all:</p>
+
+<ul>
+    <li>Arabic</li>
+    <li>Dutch</li>
+    <li>English</li>
+    <li>French</li>
+    <li>German</li>
+    <li>Hebrew</li>
+    <li>Italian</li>
+    <li>Japanese</li>
+    <li>Korean</li>
+    <li>Lithuanian</li>
+    <li>Polish</li>
+    <li>Portuguese</li>
+    <li>Russian</li>
+    <li>Slovak</li>
+    <li>Spanish</li>
+    <li>Thai</li>
+    <li>Turkish</li>
+</ul>
