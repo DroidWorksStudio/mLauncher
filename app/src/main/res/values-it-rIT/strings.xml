@@ -7,7 +7,7 @@
     <string name="settings_name">Impostazioni mLauncher</string>
     <string name="settings_features_title">Caratteristiche</string>
     <string name="settings_features_description">Migliora la tua produttività.</string>
-    <string name="settings_look_feel_title">Aspetto e sensazione</string>
+    <string name="settings_look_feel_title">Look &amp; Feel</string>
     <string name="settings_look_feel_description">Dai un tocco personale alla tua schermata iniziale.</string>
     <string name="settings_gestures_title">Gesti</string>
     <string name="settings_gestures_description">Personalizza i gesti per una navigazione rapida e semplice.</string>
@@ -16,38 +16,60 @@
     <string name="settings_advanced_title">Avanzato</string>
     <!-- Strings used for features settings -->
     <string name="features_settings_title">Caratteristiche</string>
-    <string name="behavior">Comportamento</string>
+    <string name="user_preferences">User Preferences</string>
     <string name="theme_mode">Modalità tema</string>
     <string name="app_language">Lingua Dell\'Interfaccia</string>
+    <string name="font_family">Famiglia di caratteri</string>
+    <string name="settings_text_size">Impostazioni dimensione testo</string>
+    <string name="search">Search</string>
+    <string name="search_engine">Motore di ricerca</string>
     <string name="auto_show_keyboard">Mostra tastiera automaticamente</string>
-    <string name="auto_open_apps">Apri automaticamente le app</string>
     <string name="search_from_start">Ricerca app dall\'inizio.</string>
+    <string name="home_management">Home &amp; App Management</string>
+    <string name="auto_open_apps">Apri automaticamente le app</string>
     <string name="lock_home_apps">Blocca App</string>
     <string name="lock_settings">Blocca le impostazioni</string>
-    <string name="filter_strength">Forza filtro di ricerca</string>
-    <!-- Strings used for look And feel settings -->
-    <string name="look_feel_settings_title">Guarda e senti</string>
-    <string name="appearance">Aspetto</string>
+    <string name="apps_on_home_screen">Numero di scorciatoie</string>
+    <string name="pages_on_home_screen">Numero di pagine</string>
+    <string name="enable_home_pager">Abilita l\'Home Pager iniziale</string>
+    <string name="battery_date_time">Battery &amp; Date/Time</string>
+    <string name="show_time">Mostra ora</string>
+    <string name="show_time_format">Formato ora (12/24 ore)</string>
+    <string name="show_date">Mostra data</string>
+    <string name="show_battery">Mostra batteria</string>
+    <string name="show_battery_icon">Mostra l\'icona della batteria</string>
+    <string name="show_total_screen_time">Show Total Screen Time</string>
+    <!-- Strings used for look & feel settings -->
+    <string name="look_feel_settings_title">Look &amp; Feel</string>
+    <string name="text_size_adjustments">Text &amp; Size Adjustments</string>
     <string name="app_text_size">Dimensioni del testo dell\'app</string>
-    <string name="app_padding_size">Dimensione della spaziatura</string>
     <string name="clock_text_size">Dimensione del testo dell\'orologio</string>
     <string name="date_text_size">Dimensioni del testo della data</string>
     <string name="battery_text_size">Dimensioni del testo della batteria</string>
-    <string name="display">Display</string>
+    <string name="layout_positioning">Layout &amp; Positioning</string>
+    <string name="app_padding_size">Dimensione della spaziatura</string>
+    <string name="extend_home_apps_area">Estendi l\'area cliccabile</string>
+    <string name="alignment_to_bottom">Align to Bottom</string>
+    <string name="visibility_display">Visibility &amp; Display</string>
     <string name="show_status_bar">Mostra barra di stato</string>
     <string name="show_recent_apps">Mostra app recenti</string>
     <string name="number_of_recents">Numero di app recenti</string>
+    <string name="show_app_usage_stats">Mostra statistiche sull\'utilizzo dell\'app</string>
+    <string name="filter_strength">Forza filtro di ricerca</string>
     <string name="background_opacity">Opacità dello sfondo</string>
-    <string name="miscellaneous">Varie</string>
-    <string name="settings_text_size">Impostazioni dimensione testo</string>
-    <string name="search_engine">Motore di ricerca</string>
-    <string name="font_family">Famiglia di caratteri</string>
-    <!-- Strings gestures settings -->
+    <string name="element_alignment">Element Alignment</string>
+    <string name="date_alignment">Date</string>
+    <string name="clock_alignment">Clock</string>
+    <string name="home_alignment">Home Apps</string>
+    <string name="drawer_alignment">Drawer Apps</string>
+    <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">Gesti</string>
+    <string name="tap_click_actions">Tap &amp; Click Actions</string>
     <string name="double_tap">Doppio Tocco</string>
     <string name="clock_click_app">Clicca su Orologio</string>
     <string name="date_click_app">Clicca su Data</string>
     <string name="usage_click_app">Fare clic su Utilizzo totale</string>
+    <string name="swipe_movement">Swipe &amp; Movement</string>
     <string name="short_swipe_up_app">Scorri brevemente verso l\'alto</string>
     <string name="short_swipe_down_app">Pressione lunga e scorri verso il basso</string>
     <string name="short_swipe_left_app">Scorrimento breve a sinistra</string>
@@ -83,7 +105,7 @@
     <string name="advanced_settings_backup_restore_clear_description">Sei sicuro di volerlo fare?</string>
     <string name="advanced_settings_backup_restore_clear_yes">SÌ</string>
     <string name="advanced_settings_backup_restore_clear_no">NO</string>
-    <string name="advanced_settings_help_feedback_title">Aiuto e feedback</string>
+    <string name="advanced_settings_help_feedback_title">Help &amp; Feedback</string>
     <string name="advanced_settings_community_support_title">Supporto della comunità</string>
     <string name="advanced_settings_share_application_title">Condividi applicazione</string>
     <string name="advanced_settings_share_application_description">Migliora la tua esperienza con %1$s! Scaricalo ora su fDroid e scopri di cosa parlano tutti!\n</string>
@@ -103,22 +125,6 @@
     <string name="long_press_to_select_app">Premere a lungo per selezionare l\'app</string>
     <string name="swipe_up_for_apps">Scorri verso l\'alto per tutte le app</string>
     <string name="app_drawer_tips">Suggerimento: scorri verso il basso per rimuovere. Scorri per nascondere la tastiera.</string>
-    <!-- Display Strings -->
-    <string name="total_screen_time">Tempo totale sullo schermo</string>
-    <string name="show_app_usage_stats">Mostra statistiche sull\'utilizzo dell\'app</string>
-    <string name="show_time">Mostra ora</string>
-    <string name="show_time_format">Formato ora (12/24 ore)</string>
-    <string name="show_date">Mostra data</string>
-    <string name="show_battery">Mostra batteria</string>
-    <string name="show_battery_icon">Mostra l\'icona della batteria</string>
-    <string name="home_alignment_bottom">Schermata iniziale allineata in basso</string>
-    <string name="apps_on_home_screen">Numero di scorciatoie</string>
-    <string name="pages_on_home_screen">Numero di pagine</string>
-    <string name="enable_home_pager">Abilita l\'Home Pager iniziale</string>
-    <string name="extend_home_apps_area">Estendi l\'area cliccabile</string>
-    <string name="home_alignment">App schermata iniziale</string>
-    <string name="clock_alignment">Orologio e data</string>
-    <string name="drawer_alignment">Applicazioni nell\'elenco app</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Autenticazione annullata.</string>
     <string name="text_authentication_error">Errore di autenticazione:%1$s(codice %2$d)</string>
