@@ -7,7 +7,7 @@
     <string name="settings_name">הגדרות mLauncher</string>
     <string name="settings_features_title">תכונות</string>
     <string name="settings_features_description">שפר את הפרודוקטיביות שלך.</string>
-    <string name="settings_look_feel_title">תראה ותרגיש</string>
+    <string name="settings_look_feel_title">Look &amp; Feel</string>
     <string name="settings_look_feel_description">תן למסך הבית שלך מגע אישי.</string>
     <string name="settings_gestures_title">מחוות</string>
     <string name="settings_gestures_description">התאם אישית מחוות לניווט מהיר וקל.</string>
@@ -16,38 +16,60 @@
     <string name="settings_advanced_title">מִתקַדֵם</string>
     <!-- Strings used for features settings -->
     <string name="features_settings_title">תכונות</string>
-    <string name="behavior">אופן הפעולה</string>
+    <string name="user_preferences">User Preferences</string>
     <string name="theme_mode">סגנון רקע</string>
     <string name="app_language">שפת ממשק</string>
+    <string name="font_family">משפחת גופנים</string>
+    <string name="settings_text_size">הגדרות גודל טקסט</string>
+    <string name="search">Search</string>
+    <string name="search_engine">מנוע חיפוש</string>
     <string name="auto_show_keyboard">הצג מקלדת בחיפוש</string>
-    <string name="auto_open_apps">פתיחה אוטומטית של יישומים</string>
     <string name="search_from_start">חיפוש אפליקציה מההתחלה.</string>
+    <string name="home_management">Home &amp; App Management</string>
+    <string name="auto_open_apps">פתיחה אוטומטית של יישומים</string>
     <string name="lock_home_apps">נעילת יישומים</string>
     <string name="lock_settings">הגדרות נעילה</string>
-    <string name="filter_strength">חוזק מסנן</string>
-    <!-- Strings used for look And feel settings -->
-    <string name="look_feel_settings_title">תראה ותרגיש</string>
-    <string name="appearance">מראה</string>
+    <string name="apps_on_home_screen">מספר קיצורי דרך</string>
+    <string name="pages_on_home_screen">מספר דפים</string>
+    <string name="enable_home_pager">הפעל את Home Pager</string>
+    <string name="battery_date_time">Battery &amp; Date/Time</string>
+    <string name="show_time">הצג זמן</string>
+    <string name="show_time_format">תצוגת זמן (AM/PM)</string>
+    <string name="show_date">הצג תאריך</string>
+    <string name="show_battery">הצג סוללה</string>
+    <string name="show_battery_icon">הצגת סמליל סוללה</string>
+    <string name="show_total_screen_time">Show Total Screen Time</string>
+    <!-- Strings used for look & feel settings -->
+    <string name="look_feel_settings_title">Look &amp; Feel</string>
+    <string name="text_size_adjustments">Text &amp; Size Adjustments</string>
     <string name="app_text_size">גודל הטקסט של היישום</string>
-    <string name="app_padding_size">גודל ריפוד</string>
     <string name="clock_text_size">גודל טקסט שעון</string>
     <string name="date_text_size">גודל הטקסט של התאריך</string>
     <string name="battery_text_size">גודל הטקסט של הסוללה</string>
-    <string name="display">תצוגה</string>
+    <string name="layout_positioning">Layout &amp; Positioning</string>
+    <string name="app_padding_size">גודל ריפוד</string>
+    <string name="extend_home_apps_area">הרחב את האזור הניתן ללחיצה</string>
+    <string name="alignment_to_bottom">Align to Bottom</string>
+    <string name="visibility_display">Visibility &amp; Display</string>
     <string name="show_status_bar">הצג שורת מצב</string>
     <string name="show_recent_apps">הצג אפליקציות אחרונות</string>
     <string name="number_of_recents">מספר היישומים האחרונים</string>
+    <string name="show_app_usage_stats">הצג סטטיסטיקות שימוש באפליקציה</string>
+    <string name="filter_strength">חוזק מסנן</string>
     <string name="background_opacity">אטימות רקע</string>
-    <string name="miscellaneous">שונות</string>
-    <string name="settings_text_size">הגדרות גודל טקסט</string>
-    <string name="search_engine">מנוע חיפוש</string>
-    <string name="font_family">משפחת גופנים</string>
-    <!-- Strings gestures settings -->
+    <string name="element_alignment">Element Alignment</string>
+    <string name="date_alignment">Date</string>
+    <string name="clock_alignment">Clock</string>
+    <string name="home_alignment">Home Apps</string>
+    <string name="drawer_alignment">Drawer Apps</string>
+    <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">מחוות</string>
+    <string name="tap_click_actions">Tap &amp; Click Actions</string>
     <string name="double_tap">הקשה כפולה</string>
     <string name="clock_click_app">לחיצה על השעון</string>
     <string name="date_click_app">לחיצה על התאריך</string>
     <string name="usage_click_app">לחץ על סך שימוש</string>
+    <string name="swipe_movement">Swipe &amp; Movement</string>
     <string name="short_swipe_up_app">החלקה למעלה</string>
     <string name="short_swipe_down_app">החלקה למטה</string>
     <string name="short_swipe_left_app">החלקה שמאלה</string>
@@ -83,7 +105,7 @@
     <string name="advanced_settings_backup_restore_clear_description">האם אתה בטוח שאתה רוצה לעשות זאת?</string>
     <string name="advanced_settings_backup_restore_clear_yes">כֵּן</string>
     <string name="advanced_settings_backup_restore_clear_no">לֹא</string>
-    <string name="advanced_settings_help_feedback_title">עזרה ומשוב</string>
+    <string name="advanced_settings_help_feedback_title">Help &amp; Feedback</string>
     <string name="advanced_settings_community_support_title">תמיכה בקהילה</string>
     <string name="advanced_settings_share_application_title">שתף אפליקציה</string>
     <string name="advanced_settings_share_application_description">שפר את החוויה שלך עם %1$s! קבל את זה עכשיו ב-fDroid וראה על מה כולם מדברים!\n</string>
@@ -103,22 +125,6 @@
     <string name="long_press_to_select_app">לחץ לחיצה ארוכה כדי לבחור אפליקציה</string>
     <string name="swipe_up_for_apps">החלק למעלה לכל היישומים</string>
     <string name="app_drawer_tips">טיפ: החלק למטה בכדי לבטל. החלק להסתרת המקלדת.</string>
-    <!-- Display Strings -->
-    <string name="total_screen_time">זמן מסך כולל</string>
-    <string name="show_app_usage_stats">הצג סטטיסטיקות שימוש באפליקציה</string>
-    <string name="show_time">הצג זמן</string>
-    <string name="show_time_format">תצוגת זמן (AM/PM)</string>
-    <string name="show_date">הצג תאריך</string>
-    <string name="show_battery">הצג סוללה</string>
-    <string name="show_battery_icon">הצגת סמליל סוללה</string>
-    <string name="home_alignment_bottom">יישור מסך הבית למטה</string>
-    <string name="apps_on_home_screen">מספר קיצורי דרך</string>
-    <string name="pages_on_home_screen">מספר דפים</string>
-    <string name="enable_home_pager">הפעל את Home Pager</string>
-    <string name="extend_home_apps_area">הרחב את האזור הניתן ללחיצה</string>
-    <string name="home_alignment">Apps home screen</string>
-    <string name="clock_alignment">שעון ותאריך</string>
-    <string name="drawer_alignment">יישומים במגירת היישומים</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">ביטול האימות.</string>
     <string name="text_authentication_error">שגיאת אימות:%1$s(קוד %2$d)</string>
