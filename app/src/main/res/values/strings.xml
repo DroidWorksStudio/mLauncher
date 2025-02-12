@@ -87,17 +87,19 @@
     <string name="home_alignment">Home Apps</string>
     <string name="drawer_alignment">Drawer Apps</string>
 
+    <string name="element_colors">Element Colors</string>
+
     <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">Gestures</string>
 
-    <string name="tap_click_actions">Tap &amp; Click Actions</string>
+    <string name="tap_click_actions">Tap/Click Actions</string>
 
     <string name="double_tap">Double Tap</string>
     <string name="clock_click_app">Click on Clock</string>
     <string name="date_click_app">Click on Date</string>
     <string name="usage_click_app">Click on Total Usage</string>
 
-    <string name="swipe_movement">Swipe &amp; Movement</string>
+    <string name="swipe_movement">Swipe Movement</string>
 
     <string name="short_swipe_up_app">Short Swipe up</string>
     <string name="short_swipe_down_app">Short Swipe down</string>
@@ -197,5 +199,6 @@
     <string name="reset">Reset</string>
     <string name="cancel">Cancel</string>
     <string name="disabled">Disabled</string>
+    <string name="open">Open</string>
     <string name="close">Close</string>
 </resources>
