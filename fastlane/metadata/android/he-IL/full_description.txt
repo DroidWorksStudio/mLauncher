@@ -1,73 +1,73 @@
-<p>Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal and clean.</p>
+<p>מזלג מ- <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. מינימלית ונקייה.</p>
 
-<h2>Forked with Extra Features</h2>
+<h2>מזלג עם תכונות נוספות</h2>
 
 <ul>
-    <li>Removed clutter, like ads and links.</li>
-    <li>You can rename apps in the app-drawer (Renaming apps on the home screen is already supported. Just long-click on an app on the home screen and start typing.)</li>
-    <li>We have added a lot more options for gestures on the home screen:
+    <li>הוסר העומס, כמו מודעות וקישורים.</li>
+    <li>ניתן לשנות את שמות האפליקציות במגירת האפליקציות (שינוי שמות של אפליקציות במסך הבית כבר נתמך. פשוט לחץ לחיצה ארוכה על אפליקציה במסך הבית והתחל להקליד.)</li>
+    <li>הוספנו הרבה יותר אפשרויות למחוות במסך הבית:
         <ul>
-            <li><b>Gestures now include:</b>
+            <li><b>המחוות כוללות כעת:</b>
                 <ul>
-                    <li>Double tap</li>
-                    <li>Clicking on the clock</li>
-                    <li>Clicking on the date</li>
-                    <li>Clicking on total usage</li>
-                    <li>Short swipe up</li>
-                    <li>Short swipe down</li>
-                    <li>Short swipe left</li>
-                    <li>Short swipe right</li>
-                    <li>Long swipe up</li>
-                    <li>Long swipe down</li>
-                    <li>Long swipe left</li>
-                    <li>Long swipe right</li>
+                    <li>הקש פעמיים על</li>
+                    <li>לחיצה על השעון</li>
+                    <li>לחיצה על התאריך</li>
+                    <li>לחיצה על סך השימוש</li>
+                    <li>החלקה קצרה למעלה</li>
+                    <li>החלקה קצרה למטה</li>
+                    <li>החלקה קצרה שמאלה</li>
+                    <li>החלקה קצרה ימינה</li>
+                    <li>החלקה ארוכה למעלה</li>
+                    <li>החלקה ארוכה למטה</li>
+                    <li>החלקה ארוכה שמאלה</li>
+                    <li>החלקה ארוכה ימינה</li>
                 </ul>
             </li>
-            <li><b>Possible actions now include:</b>
+            <li><b>פעולות אפשריות כוללות כעת:</b>
                 <ul>
-                    <li>Open specified app</li>
-                    <li>Display app list</li>
-                    <li>Lock the screen</li>
-                    <li>Show recently opened apps</li>
-                    <li>Open the notification drawer</li>
-                    <li>Open quick settings</li>
-                    <li>Power dialog</li>
-                    <li>Take a screenshot</li>
-                    <li>Switch Page</li>
-                    <li>Disable gesture</li>
+                    <li>פתח את האפליקציה שצוינה</li>
+                    <li>הצג את רשימת האפליקציות</li>
+                    <li>נעילת המסך</li>
+                    <li>הצג אפליקציות שנפתחו לאחרונה</li>
+                    <li>פתח את מגירת ההתראות</li>
+                    <li>פתח את ההגדרות המהירות</li>
+                    <li>תיבת הפעלה</li>
+                    <li>צלם צילום מסך</li>
+                    <li>החלף דף</li>
+                    <li>השבת את המחווה</li>
                 </ul>
             </li>
         </ul>
     </li>
-    <li>You can also position the clock independently of the home apps.</li>
-    <li>Change alignment of apps in the app-drawer independent from the home screen.</li>
-    <li>Change font size of sections of the home screen independently of each other.</li>
-    <li>Removed internet permission. You never know what an app developer wants to know about you.</li>
-    <li>Lock settings behind biometrics (toggle).</li>
-    <li>Added the ability to report crashes via email.</li>
-    <li>Added the ability to view app usage time.</li>
+    <li>ניתן גם למקם את השעון ללא תלות באפליקציות הביתיות.</li>
+    <li>שנה יישור של אפליקציות במגירת האפליקציות ללא תלות במסך הבית.</li>
+    <li>שנה את גודל הגופן של חלקים במסך הבית ללא תלות זה בזה.</li>
+    <li>הוסרה הרשאת אינטרנט. אתה אף פעם לא יודע מה מפתח אפליקציות רוצה לדעת עליך.</li>
+    <li>נעילת הגדרות מאחורי ביומטריה (החלפת מצב).</li>
+    <li>נוספה את היכולת לדווח על קריסות באמצעות דואר אלקטרוני.</li>
+    <li>נוספה את היכולת להציג את זמן השימוש באפליקציה.</li>
 </ul>
 
-<h2>Translations</h2>
+<h2>תרגומים</h2>
 
-<p>A lot of people have translated the app into the following languages. Many thanks to you all:</p>
+<p>הרבה אנשים תרגמו את האפליקציה לשפות הבאות. תודה רבה לכולכם:</p>
 
 <ul>
-    <li>Arabic</li>
-    <li>Dutch</li>
-    <li>English</li>
-    <li>French</li>
-    <li>German</li>
-    <li>Hebrew</li>
-    <li>Italian</li>
-    <li>Japanese</li>
-    <li>Korean</li>
-    <li>Lithuanian</li>
-    <li>Polish</li>
-    <li>Portuguese</li>
-    <li>Russian</li>
-    <li>Slovak</li>
-    <li>Spanish</li>
-    <li>Thai</li>
-    <li>Turkish</li>
+    <li>ערבית</li>
+    <li>הולנדית</li>
+    <li>אנגלית</li>
+    <li>צרפתית</li>
+    <li>גרמנית</li>
+    <li>עברית</li>
+    <li>איטלקית</li>
+    <li>יפנית</li>
+    <li>קוריאני</li>
+    <li></li>ליטאית
+    <li>פולנית</li>
+    <li>פורטוגזית</li>
+    <li>רוסית</li>
+    <li>סלובקית</li>
+    <li>ספרדית</li>
+    <li>תאילנדית</li>
+    <li>טורקית</li>
 </ul>
