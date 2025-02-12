@@ -1,79 +1,73 @@
-מזלג מ- <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. מינימלי ונקי.
+<p>Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal and clean.</p>
 
-# פיצול עם תכונות נוספות
+<h2>Forked with Extra Features</h2>
 
-- הוסר העומס, כמו מודעות וקישורים.
-- ניתן לשנות את שמות היישומים במגירת היישומים (שינוי שמות של יישומים במסך הבית כבר נתמך). פשוט לחץ לחיצה ארוכה על יישום במסך הבית והתחל להקליד).
-- הוספנו הרבה יותר אפשרויות למחוות במסך הבית:
-    - המחוות הן כעת:
-        - החלקה למעלה, למטה, שמאלה, ימינה
-        - לחיצה על השעון
-        - לחיצה על התאריך
-    - פעולות אפשריות כוללות כעת:
-        - פתח יישום מסוים
-        - הצגת רשימת יישומים
-        - נעילת המסך
-        - הצגת יישומים שנפתחו לאחרונה
-        - פתיחת מגירת ההודעות
-        - פתיחת ההגדרות המהירות
-        - תפריט הפעלה
-        - צילום מסך
-        - השבתת מחוות
-- ניתן גם למקם את השעון ללא תלות ביישומי דף הבית.
-- שינוי יישור של יישומים במגירת היישומים ללא תלות במסך הבית.
-- שינוי גודל הגופן של חלקים במסך הבית ללא תלות זה בזה.
-- הוסרה הרשאת אינטרנט. אתה אף פעם לא יודע מה מפתח היישום רוצה לדעת עליך.
-- הגדרות נעילה מוגנות בביומטריה (החלפת מצב)
-- נוספה היכולת לדווח על קריסה באמצעות דואר אלקטרוני.
-- נוספה היכולת להציג את זמן השימוש באפליקציה.
+<ul>
+    <li>Removed clutter, like ads and links.</li>
+    <li>You can rename apps in the app-drawer (Renaming apps on the home screen is already supported. Just long-click on an app on the home screen and start typing.)</li>
+    <li>We have added a lot more options for gestures on the home screen:
+        <ul>
+            <li><b>Gestures now include:</b>
+                <ul>
+                    <li>Double tap</li>
+                    <li>Clicking on the clock</li>
+                    <li>Clicking on the date</li>
+                    <li>Clicking on total usage</li>
+                    <li>Short swipe up</li>
+                    <li>Short swipe down</li>
+                    <li>Short swipe left</li>
+                    <li>Short swipe right</li>
+                    <li>Long swipe up</li>
+                    <li>Long swipe down</li>
+                    <li>Long swipe left</li>
+                    <li>Long swipe right</li>
+                </ul>
+            </li>
+            <li><b>Possible actions now include:</b>
+                <ul>
+                    <li>Open specified app</li>
+                    <li>Display app list</li>
+                    <li>Lock the screen</li>
+                    <li>Show recently opened apps</li>
+                    <li>Open the notification drawer</li>
+                    <li>Open quick settings</li>
+                    <li>Power dialog</li>
+                    <li>Take a screenshot</li>
+                    <li>Switch Page</li>
+                    <li>Disable gesture</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>You can also position the clock independently of the home apps.</li>
+    <li>Change alignment of apps in the app-drawer independent from the home screen.</li>
+    <li>Change font size of sections of the home screen independently of each other.</li>
+    <li>Removed internet permission. You never know what an app developer wants to know about you.</li>
+    <li>Lock settings behind biometrics (toggle).</li>
+    <li>Added the ability to report crashes via email.</li>
+    <li>Added the ability to view app usage time.</li>
+</ul>
 
-## תרגומים:
+<h2>Translations</h2>
 
-- הרבה אנשים תרגמו את האפליקציה לשפות הבאות. תודה רבה לכולכם.
-  - אפריקנס
-  - ערבית
-  - אלבני
-  - בולגרית
-  - סינית
-  - קרואטית
-  - צ'כית
-  - דנית
-  - אנגלית
-  - אסטונית
-  - פיליפינית
-  - פינית
-  - צרפתית
-  - גרוזינית
-  - גרמנית
-  - יוונית
-  - הוואי
-  - עברית
-  - הינדי
-  - הונגרית
-  - איסלנדית
-  - אינדונזית
-  - אירית
-  - איטלקית
-  - יפנית
-  - קוריאנית
-  - ליטאית
-  - לוקסמבורגית
-  - מלאית
-  - מלגזית
-  - מלאיאלאם
-  - נורווגית
-  - נפאלית
-  - פרסית
-  - פולנית
-  - פורטוגזית (אירופאית)
-  - פנג'בי
-  - רוסית
-  - סרבית
-  - סינדהי
-  - סלובקית
-  - ספרדית
-  - שוודית
-  - תאילנדית
-  - טורקית
-  - אוקראינית
-  - ויאטנמית
+<p>A lot of people have translated the app into the following languages. Many thanks to you all:</p>
+
+<ul>
+    <li>Arabic</li>
+    <li>Dutch</li>
+    <li>English</li>
+    <li>French</li>
+    <li>German</li>
+    <li>Hebrew</li>
+    <li>Italian</li>
+    <li>Japanese</li>
+    <li>Korean</li>
+    <li>Lithuanian</li>
+    <li>Polish</li>
+    <li>Portuguese</li>
+    <li>Russian</li>
+    <li>Slovak</li>
+    <li>Spanish</li>
+    <li>Thai</li>
+    <li>Turkish</li>
+</ul>
