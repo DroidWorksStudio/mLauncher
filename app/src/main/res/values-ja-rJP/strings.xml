@@ -7,7 +7,7 @@
     <string name="settings_name">mLauncher設定</string>
     <string name="settings_features_title">特徴</string>
     <string name="settings_features_description">生産性を向上させます。</string>
-    <string name="settings_look_feel_title">見た目と感触</string>
+    <string name="settings_look_feel_title">Look &amp; Feel</string>
     <string name="settings_look_feel_description">ホーム画面に個性的なタッチを加えましょう。</string>
     <string name="settings_gestures_title">ジェスチャー</string>
     <string name="settings_gestures_description">ジェスチャをカスタマイズして、すばやく簡単にナビゲーションできます。</string>
@@ -16,38 +16,60 @@
     <string name="settings_advanced_title">高度な</string>
     <!-- Strings used for features settings -->
     <string name="features_settings_title">特徴</string>
-    <string name="behavior">動作</string>
+    <string name="user_preferences">User Preferences</string>
     <string name="theme_mode">テーマモード</string>
     <string name="app_language">インターフェース言語</string>
+    <string name="font_family">フォントファミリー</string>
+    <string name="settings_text_size">設定文字サイズ</string>
+    <string name="search">Search</string>
+    <string name="search_engine">検索エンジン</string>
     <string name="auto_show_keyboard">Auto show keyboard</string>
-    <string name="auto_open_apps">アプリを自動的に開く</string>
     <string name="search_from_start">最初からアプリ検索。</string>
+    <string name="home_management">Home &amp; App Management</string>
+    <string name="auto_open_apps">アプリを自動的に開く</string>
     <string name="lock_home_apps">アプリをロック</string>
     <string name="lock_settings">ロック設定</string>
-    <string name="filter_strength">フィルター強度</string>
-    <!-- Strings used for look And feel settings -->
-    <string name="look_feel_settings_title">見た目と感触</string>
-    <string name="appearance">外観</string>
+    <string name="apps_on_home_screen">ショートカットの数</string>
+    <string name="pages_on_home_screen">ページ数</string>
+    <string name="enable_home_pager">ホーム ページャーを有効にする</string>
+    <string name="battery_date_time">Battery &amp; Date/Time</string>
+    <string name="show_time">時間を表示</string>
+    <string name="show_time_format">時刻形式 (AM/PM)</string>
+    <string name="show_date">日付を表示</string>
+    <string name="show_battery">バッテリーを表示</string>
+    <string name="show_battery_icon">バッテリーアイコンを表示</string>
+    <string name="show_total_screen_time">Show Total Screen Time</string>
+    <!-- Strings used for look & feel settings -->
+    <string name="look_feel_settings_title">Look &amp; Feel</string>
+    <string name="text_size_adjustments">Text &amp; Size Adjustments</string>
     <string name="app_text_size">アプリのテキストサイズ</string>
-    <string name="app_padding_size">パディングサイズ</string>
     <string name="clock_text_size">時計の文字サイズ</string>
     <string name="date_text_size">日付のテキストサイズ</string>
     <string name="battery_text_size">バッテリーのテキストサイズ</string>
-    <string name="display">画面</string>
+    <string name="layout_positioning">Layout &amp; Positioning</string>
+    <string name="app_padding_size">パディングサイズ</string>
+    <string name="extend_home_apps_area">クリック可能な領域を拡張</string>
+    <string name="alignment_to_bottom">Align to Bottom</string>
+    <string name="visibility_display">Visibility &amp; Display</string>
     <string name="show_status_bar">ステータスバーを表示</string>
     <string name="show_recent_apps">最近使ったアプリを表示</string>
     <string name="number_of_recents">最近使用したアプリの数</string>
+    <string name="show_app_usage_stats">アプリの使用状況統計を表示</string>
+    <string name="filter_strength">フィルター強度</string>
     <string name="background_opacity">背景の不透明度</string>
-    <string name="miscellaneous">その他</string>
-    <string name="settings_text_size">設定文字サイズ</string>
-    <string name="search_engine">検索エンジン</string>
-    <string name="font_family">フォントファミリー</string>
-    <!-- Strings gestures settings -->
+    <string name="element_alignment">Element Alignment</string>
+    <string name="date_alignment">Date</string>
+    <string name="clock_alignment">Clock</string>
+    <string name="home_alignment">Home Apps</string>
+    <string name="drawer_alignment">Drawer Apps</string>
+    <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">ジェスチャー</string>
+    <string name="tap_click_actions">Tap &amp; Click Actions</string>
     <string name="double_tap">ダブルタップ</string>
     <string name="clock_click_app">時計をクリックしてください</string>
     <string name="date_click_app">日付をクリックしてください</string>
     <string name="usage_click_app">合計使用量をクリック</string>
+    <string name="swipe_movement">Swipe &amp; Movement</string>
     <string name="short_swipe_up_app">上にスワイプ</string>
     <string name="short_swipe_down_app">下にスワイプ</string>
     <string name="short_swipe_left_app">左にスワイプ</string>
@@ -83,7 +105,7 @@
     <string name="advanced_settings_backup_restore_clear_description">本当にこれを実行しますか?</string>
     <string name="advanced_settings_backup_restore_clear_yes">はい</string>
     <string name="advanced_settings_backup_restore_clear_no">いいえ</string>
-    <string name="advanced_settings_help_feedback_title">ヘルプとフィードバック</string>
+    <string name="advanced_settings_help_feedback_title">Help &amp; Feedback</string>
     <string name="advanced_settings_community_support_title">コミュニティサポート</string>
     <string name="advanced_settings_share_application_title">アプリケーションを共有する</string>
     <string name="advanced_settings_share_application_description">%1$sで体験を向上させましょう! 今すぐ fDroid で入手して、みんなが何を話しているか見てみましょう!\n</string>
@@ -103,22 +125,6 @@
     <string name="long_press_to_select_app">長押ししてアプリを選択</string>
     <string name="swipe_up_for_apps">すべてのアプリで上にスワイプ</string>
     <string name="app_drawer_tips">ヒント: 下にスワイプして解除します。スクロールしてキーボードを非表示にします。</string>
-    <!-- Display Strings -->
-    <string name="total_screen_time">合計スクリーン時間</string>
-    <string name="show_app_usage_stats">アプリの使用状況統計を表示</string>
-    <string name="show_time">時間を表示</string>
-    <string name="show_time_format">時刻形式 (AM/PM)</string>
-    <string name="show_date">日付を表示</string>
-    <string name="show_battery">バッテリーを表示</string>
-    <string name="show_battery_icon">バッテリーアイコンを表示</string>
-    <string name="home_alignment_bottom">ホーム画面を下に揃える</string>
-    <string name="apps_on_home_screen">ショートカットの数</string>
-    <string name="pages_on_home_screen">ページ数</string>
-    <string name="enable_home_pager">ホーム ページャーを有効にする</string>
-    <string name="extend_home_apps_area">クリック可能な領域を拡張</string>
-    <string name="home_alignment">アプリのホーム画面</string>
-    <string name="clock_alignment">時計と日付</string>
-    <string name="drawer_alignment">アプリドロワーのアプリ</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">認証をキャンセルします。</string>
     <string name="text_authentication_error">認証エラー:%1$s(コード %2$d)</string>
