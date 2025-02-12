@@ -62,14 +62,15 @@
     <string name="clock_alignment">Clock</string>
     <string name="home_alignment">Home Apps</string>
     <string name="drawer_alignment">Drawer Apps</string>
+    <string name="element_colors">Element Colors</string>
     <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">מחוות</string>
-    <string name="tap_click_actions">Tap &amp; Click Actions</string>
+    <string name="tap_click_actions">Tap/Click Actions</string>
     <string name="double_tap">הקשה כפולה</string>
     <string name="clock_click_app">לחיצה על השעון</string>
     <string name="date_click_app">לחיצה על התאריך</string>
     <string name="usage_click_app">לחץ על סך שימוש</string>
-    <string name="swipe_movement">Swipe &amp; Movement</string>
+    <string name="swipe_movement">Swipe Movement</string>
     <string name="short_swipe_up_app">החלקה למעלה</string>
     <string name="short_swipe_down_app">החלקה למטה</string>
     <string name="short_swipe_left_app">החלקה שמאלה</string>
@@ -153,5 +154,6 @@
     <string name="reset">אפס</string>
     <string name="cancel">בטל</string>
     <string name="disabled">מושבת</string>
+    <string name="open">Open</string>
     <string name="close">סגור</string>
 </resources>
