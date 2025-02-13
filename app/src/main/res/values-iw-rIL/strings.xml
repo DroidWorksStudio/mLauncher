@@ -145,6 +145,7 @@
     <string name="dark">כהה</string>
     <string name="light">בהיר</string>
     <string name="system_default">מערכת</string>
+    <string name="restart_launcher">Restart Launcher</string>
     <string name="delete">למחוק</string>
     <string name="hide">הסתרה</string>
     <string name="show">הצג</string>
