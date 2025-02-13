@@ -3,15 +3,10 @@ package com.github.droidworksstudio.mlauncher.ui.settings
 import android.app.admin.DevicePolicyManager
 import android.content.ComponentName
 import android.content.Context
-import android.graphics.Typeface
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
-import android.widget.ListView
-import android.widget.TextView
-import androidx.appcompat.app.AlertDialog
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
@@ -40,6 +35,7 @@ import com.github.droidworksstudio.mlauncher.data.Constants.Theme.Light
 import com.github.droidworksstudio.mlauncher.data.Constants.Theme.System
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentSettingsBinding
+import com.github.droidworksstudio.mlauncher.helper.DialogBuilder
 import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
 import com.github.droidworksstudio.mlauncher.helper.isSystemInDarkMode
 import com.github.droidworksstudio.mlauncher.helper.setThemeMode
@@ -48,7 +44,6 @@ import com.github.droidworksstudio.mlauncher.style.SettingsTheme
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.PageHeader
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsSelect
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsTitle
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class GesturesFragment : Fragment() {
 
@@ -56,6 +51,7 @@ class GesturesFragment : Fragment() {
     private lateinit var viewModel: MainViewModel
     private lateinit var deviceManager: DevicePolicyManager
     private lateinit var componentName: ComponentName
+    private lateinit var dialogBuilder: DialogBuilder
 
     private var _binding: FragmentSettingsBinding? = null
     private val binding get() = _binding!!
@@ -66,6 +62,7 @@ class GesturesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
+        dialogBuilder = DialogBuilder(requireContext(), requireActivity())
         prefs = Prefs(requireContext())
         val backgroundColor = getHexForOpacity(prefs)
         binding.scrollView.setBackgroundColor(backgroundColor)
@@ -135,7 +132,7 @@ class GesturesFragment : Fragment() {
                 },
                 fontSize = titleFontSize,
                 onClick = {
-                    showSingleChoiceDialog(
+                    dialogBuilder.showSingleChoiceDialog(
                         context = requireContext(),
                         options = actionStrings,
                         titleResId = R.string.double_tap,
@@ -164,7 +161,7 @@ class GesturesFragment : Fragment() {
                 },
                 fontSize = titleFontSize,
                 onClick = {
-                    showSingleChoiceDialog(
+                    dialogBuilder.showSingleChoiceDialog(
                         context = requireContext(),
                         options = actionStrings,
                         titleResId = R.string.clock_click_app,
@@ -192,7 +189,7 @@ class GesturesFragment : Fragment() {
                 },
                 fontSize = titleFontSize,
                 onClick = {
-                    showSingleChoiceDialog(
+                    dialogBuilder.showSingleChoiceDialog(
                         context = requireContext(),
                         options = actionStrings,
                         titleResId = R.string.date_click_app,
@@ -220,7 +217,7 @@ class GesturesFragment : Fragment() {
                 },
                 fontSize = titleFontSize,
                 onClick = {
-                    showSingleChoiceDialog(
+                    dialogBuilder.showSingleChoiceDialog(
                         context = requireContext(),
                         options = actionStrings,
                         titleResId = R.string.usage_click_app,
@@ -254,7 +251,7 @@ class GesturesFragment : Fragment() {
                 },
                 fontSize = titleFontSize,
                 onClick = {
-                    showSingleChoiceDialog(
+                    dialogBuilder.showSingleChoiceDialog(
                         context = requireContext(),
                         options = actionStrings,
                         titleResId = R.string.short_swipe_up_app,
@@ -284,7 +281,7 @@ class GesturesFragment : Fragment() {
                 },
                 fontSize = titleFontSize,
                 onClick = {
-                    showSingleChoiceDialog(
+                    dialogBuilder.showSingleChoiceDialog(
                         context = requireContext(),
                         options = actionStrings,
                         titleResId = R.string.short_swipe_down_app,
@@ -313,7 +310,7 @@ class GesturesFragment : Fragment() {
                 },
                 fontSize = titleFontSize,
                 onClick = {
-                    showSingleChoiceDialog(
+                    dialogBuilder.showSingleChoiceDialog(
                         context = requireContext(),
                         options = actionStrings,
                         titleResId = R.string.short_swipe_left_app,
@@ -342,7 +339,7 @@ class GesturesFragment : Fragment() {
                 },
                 fontSize = titleFontSize,
                 onClick = {
-                    showSingleChoiceDialog(
+                    dialogBuilder.showSingleChoiceDialog(
                         context = requireContext(),
                         options = actionStrings,
                         titleResId = R.string.short_swipe_right_app,
@@ -371,7 +368,7 @@ class GesturesFragment : Fragment() {
                 },
                 fontSize = titleFontSize,
                 onClick = {
-                    showSingleChoiceDialog(
+                    dialogBuilder.showSingleChoiceDialog(
                         context = requireContext(),
                         options = actionStrings,
                         titleResId = R.string.long_swipe_up_app,
@@ -400,7 +397,7 @@ class GesturesFragment : Fragment() {
                 },
                 fontSize = titleFontSize,
                 onClick = {
-                    showSingleChoiceDialog(
+                    dialogBuilder.showSingleChoiceDialog(
                         context = requireContext(),
                         options = actionStrings,
                         titleResId = R.string.long_swipe_down_app,
@@ -429,7 +426,7 @@ class GesturesFragment : Fragment() {
                 },
                 fontSize = titleFontSize,
                 onClick = {
-                    showSingleChoiceDialog(
+                    dialogBuilder.showSingleChoiceDialog(
                         context = requireContext(),
                         options = actionStrings, // Pass the list of localized strings
                         titleResId = R.string.long_swipe_left_app,
@@ -458,7 +455,7 @@ class GesturesFragment : Fragment() {
                 },
                 fontSize = titleFontSize,
                 onClick = {
-                    showSingleChoiceDialog(
+                    dialogBuilder.showSingleChoiceDialog(
                         context = requireContext(),
                         options = actionStrings,
                         titleResId = R.string.long_swipe_right_app,
@@ -501,74 +498,6 @@ class GesturesFragment : Fragment() {
         findNavController().popBackStack()
     }
 
-    private var singleChoiceDialog: AlertDialog? = null
-
-    private fun <T> showSingleChoiceDialog(
-        context: Context,
-        options: Array<T>,
-        titleResId: Int,
-        fonts: List<Typeface>? = null, // Optional fonts
-        fontSize: Float = 18f, // Default font size
-        onItemSelected: (T) -> Unit
-    ) {
-        val itemStrings = options.map { option ->
-            when (option) {
-                is Constants.Language -> option.getString(context) // Use getString() if it's a Language enum
-                is Enum<*> -> option.name // Fallback for other Enums
-                else -> option.toString() // Generic fallback
-            }
-        }
-
-        // Inflate the custom dialog layout
-        val dialogView = LayoutInflater.from(context).inflate(R.layout.dialog_single_choice, null)
-        val listView = dialogView.findViewById<ListView>(R.id.dialogListView)
-        val titleView = dialogView.findViewById<TextView>(R.id.dialogTitle)
-
-        // Set title text
-        titleView.text = context.getString(titleResId)
-
-        // Setup adapter for the ListView
-        val adapter = object : ArrayAdapter<String>(context, R.layout.item_single_choice, itemStrings) {
-            override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-                val view =
-                    convertView ?: LayoutInflater.from(context).inflate(R.layout.item_single_choice, parent, false)
-                val textView = view.findViewById<TextView>(R.id.text_item)
-
-                // Set text, font, and size
-                textView.text = itemStrings[position]
-                textView.typeface = fonts?.getOrNull(position) ?: Typeface.DEFAULT
-                textView.textSize = fontSize
-
-                return view
-            }
-        }
-        listView.adapter = adapter
-
-        // Create the dialog
-        val dialog = MaterialAlertDialogBuilder(context)
-            .setView(dialogView)
-            .create()
-
-        dialog.show()
-
-        // Handle item selection (auto-close dialog)
-        listView.setOnItemClickListener { _, _, position, _ ->
-            onItemSelected(options[position]) // Callback with selected item
-            dialog.dismiss() // Close dialog immediately
-        }
-
-        // Ensure the dialog width remains WRAP_CONTENT
-        dialog.window?.setLayout(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
-
-        // Enforce max height (7 items max)
-        listView.post {
-            val itemHeight = listView.getChildAt(0)?.height ?: return@post
-            val maxHeight = itemHeight * 7 // Max height for 7 items
-            listView.layoutParams.height = maxHeight.coerceAtMost(itemHeight * options.size)
-            listView.requestLayout()
-        }
-    }
-
     private fun setGesture(flag: AppDrawerFlag, action: Action) {
         when (flag) {
             AppDrawerFlag.SetShortSwipeUp -> prefs.shortSwipeUpAction = action
@@ -604,13 +533,14 @@ class GesturesFragment : Fragment() {
     }
 
     private fun dismissDialogs() {
-        singleChoiceDialog?.dismiss()
+        dialogBuilder.singleChoiceDialog?.dismiss()
     }
 
     @Deprecated("Deprecated in Java")
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         @Suppress("DEPRECATION")
         super.onActivityCreated(savedInstanceState)
+        dialogBuilder = DialogBuilder(requireContext(), requireActivity())
         prefs = Prefs(requireContext())
         viewModel = activity?.run {
             ViewModelProvider(this)[MainViewModel::class.java]

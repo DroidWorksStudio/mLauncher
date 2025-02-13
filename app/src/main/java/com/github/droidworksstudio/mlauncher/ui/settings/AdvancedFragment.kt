@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AlertDialog
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
@@ -26,7 +25,6 @@ import androidx.compose.ui.unit.isSpecified
 import androidx.compose.ui.unit.sp
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.github.droidworksstudio.mlauncher.BuildConfig
 import com.github.droidworksstudio.mlauncher.MainViewModel
@@ -38,22 +36,19 @@ import com.github.droidworksstudio.mlauncher.data.Constants.Theme.System
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentSettingsBinding
 import com.github.droidworksstudio.mlauncher.helper.AppReloader
+import com.github.droidworksstudio.mlauncher.helper.DialogBuilder
 import com.github.droidworksstudio.mlauncher.helper.communitySupportButton
 import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
 import com.github.droidworksstudio.mlauncher.helper.helpFeedbackButton
 import com.github.droidworksstudio.mlauncher.helper.isSystemInDarkMode
 import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
-import com.github.droidworksstudio.mlauncher.helper.loadFile
 import com.github.droidworksstudio.mlauncher.helper.openAppInfo
 import com.github.droidworksstudio.mlauncher.helper.setThemeMode
 import com.github.droidworksstudio.mlauncher.helper.shareApplicationButton
-import com.github.droidworksstudio.mlauncher.helper.storeFile
 import com.github.droidworksstudio.mlauncher.listener.DeviceAdmin
 import com.github.droidworksstudio.mlauncher.style.SettingsTheme
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.PageHeader
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsHomeItem
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import kotlinx.coroutines.launch
 
 class AdvancedFragment : Fragment() {
 
@@ -61,6 +56,7 @@ class AdvancedFragment : Fragment() {
     private lateinit var viewModel: MainViewModel
     private lateinit var deviceManager: DevicePolicyManager
     private lateinit var componentName: ComponentName
+    private lateinit var dialogBuilder: DialogBuilder
 
     private var _binding: FragmentSettingsBinding? = null
     private val binding get() = _binding!!
@@ -72,6 +68,7 @@ class AdvancedFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
+        dialogBuilder = DialogBuilder(requireContext(), requireActivity())
         prefs = Prefs(requireContext())
         val backgroundColor = getHexForOpacity(prefs)
         binding.scrollView.setBackgroundColor(backgroundColor)
@@ -169,7 +166,7 @@ class AdvancedFragment : Fragment() {
                 descriptionFontSize = descriptionFontSize,
                 iconSize = iconSize,
                 onClick = {
-                    showBackupRestoreDialog(requireContext())
+                    dialogBuilder.showBackupRestoreDialog()
                 }
             )
 
@@ -238,61 +235,15 @@ class AdvancedFragment : Fragment() {
         findNavController().popBackStack()
     }
 
-    private var backupRestoreDialog: AlertDialog? = null
-
-    private fun showBackupRestoreDialog(context: Context) {
-        // Dismiss any existing dialog to prevent multiple dialogs open simultaneously
-        backupRestoreDialog?.dismiss()
-
-        // Define the items for the dialog (Backup, Restore, Clear Data)
-        val items = arrayOf(
-            getString(R.string.advanced_settings_backup_restore_backup),
-            getString(R.string.advanced_settings_backup_restore_restore),
-            getString(R.string.advanced_settings_backup_restore_clear)
-        )
-
-        val dialogBuilder = MaterialAlertDialogBuilder(context)
-        dialogBuilder.setTitle(getString(R.string.advanced_settings_backup_restore_title))
-        dialogBuilder.setItems(items) { _, which ->
-            when (which) {
-                0 -> storeFile(requireActivity())
-                1 -> loadFile(requireActivity())
-                else -> confirmClearData(context)
-            }
-        }
-
-        // Assign the created dialog to backupRestoreDialog
-        backupRestoreDialog = dialogBuilder.create()
-        backupRestoreDialog?.show()
-    }
-
-    // Function to handle the Clear Data action, with a confirmation dialog
-    private fun confirmClearData(context: Context) {
-        MaterialAlertDialogBuilder(context)
-            .setTitle(getString(R.string.advanced_settings_backup_restore_clear_title))
-            .setMessage(getString(R.string.advanced_settings_backup_restore_clear_description))
-            .setPositiveButton(getString(R.string.advanced_settings_backup_restore_clear_yes)) { _, _ ->
-                clearData(context)
-            }
-            .setNegativeButton(getString(R.string.advanced_settings_backup_restore_clear_no), null)
-            .show()
-    }
-
-    private fun clearData(context: Context) {
-        prefs.clear()
-        lifecycleScope.launch {
-            AppReloader.restartApp(context)
-        }
-    }
-
     private fun dismissDialogs() {
-        backupRestoreDialog?.dismiss()
+        dialogBuilder.backupRestoreDialog?.dismiss()
     }
 
     @Deprecated("Deprecated in Java")
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         @Suppress("DEPRECATION")
         super.onActivityCreated(savedInstanceState)
+        dialogBuilder = DialogBuilder(requireContext(), requireActivity())
         prefs = Prefs(requireContext())
         viewModel = activity?.run {
             ViewModelProvider(this)[MainViewModel::class.java]

@@ -5,16 +5,9 @@ import android.content.ComponentName
 import android.content.Context
 import android.graphics.Typeface
 import android.os.Bundle
-import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
-import android.widget.LinearLayout
-import android.widget.ListView
-import android.widget.SeekBar
-import android.widget.TextView
-import androidx.appcompat.app.AlertDialog
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
@@ -44,6 +37,7 @@ import com.github.droidworksstudio.mlauncher.data.Constants.Theme.System
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentSettingsBinding
 import com.github.droidworksstudio.mlauncher.helper.AppReloader
+import com.github.droidworksstudio.mlauncher.helper.DialogBuilder
 import com.github.droidworksstudio.mlauncher.helper.isSystemInDarkMode
 import com.github.droidworksstudio.mlauncher.helper.setThemeMode
 import com.github.droidworksstudio.mlauncher.listener.DeviceAdmin
@@ -52,7 +46,6 @@ import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.PageH
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsSelect
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsSwitch
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsTitle
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -62,6 +55,7 @@ class FeaturesFragment : Fragment() {
     private lateinit var viewModel: MainViewModel
     private lateinit var deviceManager: DevicePolicyManager
     private lateinit var componentName: ComponentName
+    private lateinit var dialogBuilder: DialogBuilder
 
     private var _binding: FragmentSettingsBinding? = null
     private val binding get() = _binding!!
@@ -73,6 +67,7 @@ class FeaturesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
+        dialogBuilder = DialogBuilder(requireContext(), requireActivity())
         prefs = Prefs(requireContext())
         return binding.root
     }
@@ -138,7 +133,7 @@ class FeaturesFragment : Fragment() {
                 option = selectedTheme.string(),
                 fontSize = titleFontSize,
                 onClick = {
-                    showSingleChoiceDialog(
+                    dialogBuilder.showSingleChoiceDialog(
                         context = requireContext(),
                         options = Constants.Theme.entries.toTypedArray(),
                         titleResId = R.string.theme_mode,
@@ -163,7 +158,7 @@ class FeaturesFragment : Fragment() {
                 option = selectedLanguage.string(),
                 fontSize = titleFontSize,
                 onClick = {
-                    showSingleChoiceDialog(
+                    dialogBuilder.showSingleChoiceDialog(
                         context = requireContext(),
                         options = Constants.Language.entries.toTypedArray(),
                         titleResId = R.string.app_language,
@@ -181,7 +176,7 @@ class FeaturesFragment : Fragment() {
                 option = selectedFontFamily.string(),
                 fontSize = titleFontSize,
                 onClick = {
-                    showSingleChoiceDialog(
+                    dialogBuilder.showSingleChoiceDialog(
                         context = requireContext(),
                         options = Constants.FontFamily.entries.toTypedArray(),
                         fonts = Constants.FontFamily.entries.toTypedArray()
@@ -204,7 +199,7 @@ class FeaturesFragment : Fragment() {
                 option = selectedSettingsSize.toString(),
                 fontSize = titleFontSize,
                 onClick = {
-                    showSliderDialog(
+                    dialogBuilder.showSliderDialog(
                         context = requireContext(),
                         title = getString(R.string.settings_text_size),
                         minValue = Constants.MIN_TEXT_SIZE,
@@ -228,7 +223,7 @@ class FeaturesFragment : Fragment() {
                 option = selectedSearchEngine.string(),
                 fontSize = titleFontSize,
                 onClick = {
-                    showSingleChoiceDialog(
+                    dialogBuilder.showSingleChoiceDialog(
                         context = requireContext(),
                         options = Constants.SearchEngines.entries.toTypedArray(),
                         titleResId = R.string.search_engine,
@@ -304,7 +299,7 @@ class FeaturesFragment : Fragment() {
                 option = selectedHomeAppsNum.toString(),
                 fontSize = titleFontSize,
                 onClick = {
-                    showSliderDialog(
+                    dialogBuilder.showSliderDialog(
                         context = requireContext(),
                         title = getString(R.string.apps_on_home_screen),
                         minValue = Constants.MIN_HOME_APPS,
@@ -324,7 +319,7 @@ class FeaturesFragment : Fragment() {
                 option = selectedHomePagesNum.toString(),
                 fontSize = titleFontSize,
                 onClick = {
-                    showSliderDialog(
+                    dialogBuilder.showSliderDialog(
                         context = requireContext(),
                         title = getString(R.string.pages_on_home_screen),
                         minValue = Constants.MIN_HOME_PAGES,
@@ -430,154 +425,17 @@ class FeaturesFragment : Fragment() {
         findNavController().popBackStack()
     }
 
-    private var singleChoiceDialog: AlertDialog? = null
-
-    private fun <T> showSingleChoiceDialog(
-        context: Context,
-        options: Array<T>,
-        titleResId: Int,
-        fonts: List<Typeface>? = null, // Optional fonts
-        fontSize: Float = 18f, // Default font size
-        onItemSelected: (T) -> Unit
-    ) {
-        val itemStrings = options.map { option ->
-            when (option) {
-                is Constants.Language -> option.getString(context) // Use getString() if it's a Language enum
-                is Enum<*> -> option.name // Fallback for other Enums
-                else -> option.toString() // Generic fallback
-            }
-        }
-
-        // Inflate the custom dialog layout
-        val dialogView = LayoutInflater.from(context).inflate(R.layout.dialog_single_choice, null)
-        val listView = dialogView.findViewById<ListView>(R.id.dialogListView)
-        val titleView = dialogView.findViewById<TextView>(R.id.dialogTitle)
-
-        // Set title text
-        titleView.text = context.getString(titleResId)
-
-        // Setup adapter for the ListView
-        val adapter = object : ArrayAdapter<String>(context, R.layout.item_single_choice, itemStrings) {
-            override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-                val view =
-                    convertView ?: LayoutInflater.from(context).inflate(R.layout.item_single_choice, parent, false)
-                val textView = view.findViewById<TextView>(R.id.text_item)
-
-                // Set text, font, and size
-                textView.text = itemStrings[position]
-                textView.typeface = fonts?.getOrNull(position) ?: Typeface.DEFAULT
-                textView.textSize = fontSize
-
-                return view
-            }
-        }
-        listView.adapter = adapter
-
-        // Create the dialog
-        val dialog = MaterialAlertDialogBuilder(context)
-            .setView(dialogView)
-            .create()
-
-        dialog.show()
-
-        // Handle item selection (auto-close dialog)
-        listView.setOnItemClickListener { _, _, position, _ ->
-            onItemSelected(options[position]) // Callback with selected item
-            dialog.dismiss() // Close dialog immediately
-        }
-
-        // Ensure the dialog width remains WRAP_CONTENT
-        dialog.window?.setLayout(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
-
-        // Enforce max height (7 items max)
-        listView.post {
-            val itemHeight = listView.getChildAt(0)?.height ?: return@post
-            val maxHeight = itemHeight * 7 // Max height for 7 items
-            listView.layoutParams.height = maxHeight.coerceAtMost(itemHeight * options.size)
-            listView.requestLayout()
-        }
-    }
-
-    private var sliderDialog: AlertDialog? = null
-
-    private fun showSliderDialog(
-        context: Context,
-        title: String,
-        minValue: Int,
-        maxValue: Int,
-        currentValue: Int,
-        onValueSelected: (Int) -> Unit // Callback for when the user selects a value
-    ) {
-        // Dismiss any existing dialog to prevent multiple dialogs from being open simultaneously
-        sliderDialog?.dismiss()
-
-        var seekBar: SeekBar
-
-        // Create a layout to hold the SeekBar and the value display
-        val seekBarLayout = LinearLayout(context).apply {
-            orientation = LinearLayout.VERTICAL
-            gravity = Gravity.CENTER
-            setPadding(16, 16, 16, 16)
-
-            // TextView to display the current value
-            val valueText = TextView(context).apply {
-                text = "$currentValue"
-                textSize = 16f
-                gravity = Gravity.CENTER
-            }
-
-            // Declare the seekBar outside the layout block so we can access it later
-            seekBar = SeekBar(context).apply {
-                min = minValue // Minimum value
-                max = maxValue // Maximum value
-                progress = currentValue // Default value
-                setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
-                    override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
-                        valueText.text = "$progress"
-                    }
-
-                    override fun onStartTrackingTouch(seekBar: SeekBar) {
-                        // Not used
-                    }
-
-                    override fun onStopTrackingTouch(seekBar: SeekBar) {
-                        // Not used
-                    }
-                })
-            }
-
-            // Add TextView and SeekBar to the layout
-            addView(valueText)
-            addView(seekBar)
-        }
-
-        // Create the dialog
-        val dialogBuilder = MaterialAlertDialogBuilder(context).apply {
-            setTitle(title)
-            setView(seekBarLayout) // Add the slider directly to the dialog
-            setPositiveButton(context.getString(R.string.okay)) { _, _ ->
-                // Get the progress from the seekBar now that it's accessible
-                val finalValue = seekBar.progress
-                onValueSelected(finalValue) // Trigger the callback with the selected value
-            }
-            setNegativeButton(context.getString(R.string.cancel), null)
-        }
-
-        // Assign the created dialog to sliderDialog and show it
-        sliderDialog = dialogBuilder.create()
-        sliderDialog?.show()
-    }
-
 
     private fun dismissDialogs() {
-        singleChoiceDialog?.dismiss()
-        sliderDialog?.dismiss()
+        dialogBuilder.singleChoiceDialog?.dismiss()
+        dialogBuilder.sliderDialog?.dismiss()
     }
 
     @Deprecated("Deprecated in Java")
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         @Suppress("DEPRECATION")
         super.onActivityCreated(savedInstanceState)
+        dialogBuilder = DialogBuilder(requireContext(), requireActivity())
         prefs = Prefs(requireContext())
         viewModel = activity?.run {
             ViewModelProvider(this)[MainViewModel::class.java]
