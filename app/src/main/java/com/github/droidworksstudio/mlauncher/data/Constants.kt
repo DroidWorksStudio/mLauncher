@@ -269,7 +269,25 @@ object Constants {
         TakeScreenShot,
         LeftPage,
         RightPage,
+        RestartApp,
         Disabled;
+
+        fun getString(context: Context): String {
+            return when (this) {
+                OpenApp -> context.getString(R.string.open_app)
+                LockScreen -> context.getString(R.string.lock_screen)
+                ShowNotification -> context.getString(R.string.show_notifications)
+                ShowAppList -> context.getString(R.string.show_app_list)
+                OpenQuickSettings -> context.getString(R.string.open_quick_settings)
+                ShowRecents -> context.getString(R.string.show_recents)
+                OpenPowerDialog -> context.getString(R.string.open_power_dialog)
+                TakeScreenShot -> context.getString(R.string.take_a_screenshot)
+                LeftPage -> context.getString(R.string.left_page)
+                RightPage -> context.getString(R.string.right_page)
+                RestartApp -> context.getString(R.string.restart_launcher)
+                Disabled -> context.getString(R.string.disabled)
+            }
+        }
 
         @Composable
         override fun string(): String {
@@ -284,6 +302,7 @@ object Constants {
                 TakeScreenShot -> stringResource(R.string.take_a_screenshot)
                 LeftPage -> stringResource(R.string.left_page)
                 RightPage -> stringResource(R.string.right_page)
+                RestartApp -> stringResource(R.string.restart_launcher)
                 Disabled -> stringResource(R.string.disabled)
             }
         }

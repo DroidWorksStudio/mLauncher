@@ -60,7 +60,6 @@ class GesturesFragment : Fragment() {
     private var _binding: FragmentSettingsBinding? = null
     private val binding get() = _binding!!
 
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -96,6 +95,11 @@ class GesturesFragment : Fragment() {
         var selectedLongSwipeDownAction by remember { mutableStateOf(prefs.longSwipeDownAction) }
         var selectedLongSwipeLeftAction by remember { mutableStateOf(prefs.longSwipeLeftAction) }
         var selectedLongSwipeRightAction by remember { mutableStateOf(prefs.longSwipeRightAction) }
+
+        val actions = Constants.Action.entries
+
+        // Convert enums to their string representations
+        val actionStrings = actions.map { it.getString(requireContext()) }.toTypedArray()
 
         val fs = remember { mutableStateOf(fontSize) }
         Constants.updateMaxHomePages(requireContext())
@@ -133,14 +137,18 @@ class GesturesFragment : Fragment() {
                 onClick = {
                     showSingleChoiceDialog(
                         context = requireContext(),
-                        options = Constants.Action.entries.toTypedArray(),
+                        options = actionStrings,
                         titleResId = R.string.double_tap,
                         onItemSelected = { newDoubleTapAction ->
-                            selectedDoubleTapAction = newDoubleTapAction // Update state
-                            setGesture(
-                                AppDrawerFlag.SetDoubleTap,
-                                newDoubleTapAction
-                            ) // Persist selection in preferences
+                            val selectedAction =
+                                actions.firstOrNull { it.getString(requireContext()) == newDoubleTapAction }
+                            if (selectedAction != null) {
+                                selectedDoubleTapAction = selectedAction // Store the enum itself
+                                setGesture(
+                                    AppDrawerFlag.SetDoubleTap,
+                                    selectedAction
+                                ) // Persist selection in preferences
+                            }
                         }
                     )
                 }
@@ -158,14 +166,17 @@ class GesturesFragment : Fragment() {
                 onClick = {
                     showSingleChoiceDialog(
                         context = requireContext(),
-                        options = Constants.Action.entries.toTypedArray(),
+                        options = actionStrings,
                         titleResId = R.string.clock_click_app,
                         onItemSelected = { newClickClock ->
-                            selectedClickClockAction = newClickClock // Update state
-                            setGesture(
-                                AppDrawerFlag.SetClickClock,
-                                newClickClock
-                            ) // Persist selection in preferences
+                            val selectedAction = actions.firstOrNull { it.getString(requireContext()) == newClickClock }
+                            if (selectedAction != null) {
+                                selectedClickClockAction = selectedAction // Store the enum itself
+                                setGesture(
+                                    AppDrawerFlag.SetClickClock,
+                                    selectedAction
+                                ) // Persist selection in preferences
+                            }
                         }
                     )
                 }
@@ -183,14 +194,17 @@ class GesturesFragment : Fragment() {
                 onClick = {
                     showSingleChoiceDialog(
                         context = requireContext(),
-                        options = Constants.Action.entries.toTypedArray(),
+                        options = actionStrings,
                         titleResId = R.string.date_click_app,
                         onItemSelected = { newClickDate ->
-                            selectedClickDateAction = newClickDate // Update state
-                            setGesture(
-                                AppDrawerFlag.SetClickDate,
-                                newClickDate
-                            ) // Persist selection in preferences
+                            val selectedAction = actions.firstOrNull { it.getString(requireContext()) == newClickDate }
+                            if (selectedAction != null) {
+                                selectedClickDateAction = selectedAction // Store the enum itself
+                                setGesture(
+                                    AppDrawerFlag.SetClickDate,
+                                    selectedAction
+                                ) // Persist selection in preferences
+                            }
                         }
                     )
                 }
@@ -208,14 +222,18 @@ class GesturesFragment : Fragment() {
                 onClick = {
                     showSingleChoiceDialog(
                         context = requireContext(),
-                        options = Constants.Action.entries.toTypedArray(),
+                        options = actionStrings,
                         titleResId = R.string.usage_click_app,
                         onItemSelected = { newClickAppUsage ->
-                            selectedClickAppUsageAction = newClickAppUsage // Update state
-                            setGesture(
-                                AppDrawerFlag.SetAppUsage,
-                                newClickAppUsage
-                            ) // Persist selection in preferences
+                            val selectedAction =
+                                actions.firstOrNull { it.getString(requireContext()) == newClickAppUsage }
+                            if (selectedAction != null) {
+                                selectedClickAppUsageAction = selectedAction // Store the enum itself
+                                setGesture(
+                                    AppDrawerFlag.SetAppUsage,
+                                    selectedAction
+                                ) // Persist selection in preferences
+                            }
                         }
                     )
                 }
@@ -238,14 +256,19 @@ class GesturesFragment : Fragment() {
                 onClick = {
                     showSingleChoiceDialog(
                         context = requireContext(),
-                        options = Constants.Action.entries.toTypedArray(),
+                        options = actionStrings,
                         titleResId = R.string.short_swipe_up_app,
                         onItemSelected = { newShortSwipeUpAction ->
-                            selectedShortSwipeUpAction = newShortSwipeUpAction // Update state
-                            setGesture(
-                                AppDrawerFlag.SetShortSwipeUp,
-                                newShortSwipeUpAction
-                            ) // Persist selection in preferences
+
+                            val selectedAction =
+                                actions.firstOrNull { it.getString(requireContext()) == newShortSwipeUpAction }
+                            if (selectedAction != null) {
+                                selectedShortSwipeUpAction = selectedAction // Store the enum itself
+                                setGesture(
+                                    AppDrawerFlag.SetShortSwipeUp,
+                                    selectedAction
+                                ) // Persist selection in preferences
+                            }
                         }
                     )
                 }
@@ -263,14 +286,18 @@ class GesturesFragment : Fragment() {
                 onClick = {
                     showSingleChoiceDialog(
                         context = requireContext(),
-                        options = Constants.Action.entries.toTypedArray(),
+                        options = actionStrings,
                         titleResId = R.string.short_swipe_down_app,
                         onItemSelected = { newShortSwipeDownAction ->
-                            selectedShortSwipeDownAction = newShortSwipeDownAction // Update state
-                            setGesture(
-                                AppDrawerFlag.SetShortSwipeDown,
-                                newShortSwipeDownAction
-                            ) // Persist selection in preferences
+                            val selectedAction =
+                                actions.firstOrNull { it.getString(requireContext()) == newShortSwipeDownAction }
+                            if (selectedAction != null) {
+                                selectedShortSwipeDownAction = selectedAction // Store the enum itself
+                                setGesture(
+                                    AppDrawerFlag.SetShortSwipeDown,
+                                    selectedAction
+                                ) // Persist selection in preferences
+                            }
                         }
                     )
                 }
@@ -288,14 +315,18 @@ class GesturesFragment : Fragment() {
                 onClick = {
                     showSingleChoiceDialog(
                         context = requireContext(),
-                        options = Constants.Action.entries.toTypedArray(),
+                        options = actionStrings,
                         titleResId = R.string.short_swipe_left_app,
                         onItemSelected = { newShortSwipeLeftAction ->
-                            selectedShortSwipeLeftAction = newShortSwipeLeftAction // Update state
-                            setGesture(
-                                AppDrawerFlag.SetShortSwipeLeft,
-                                newShortSwipeLeftAction
-                            ) // Persist selection in preferences
+                            val selectedAction =
+                                actions.firstOrNull { it.getString(requireContext()) == newShortSwipeLeftAction }
+                            if (selectedAction != null) {
+                                selectedShortSwipeLeftAction = selectedAction // Store the enum itself
+                                setGesture(
+                                    AppDrawerFlag.SetShortSwipeLeft,
+                                    selectedAction
+                                ) // Persist selection in preferences
+                            }
                         }
                     )
                 }
@@ -313,14 +344,18 @@ class GesturesFragment : Fragment() {
                 onClick = {
                     showSingleChoiceDialog(
                         context = requireContext(),
-                        options = Constants.Action.entries.toTypedArray(),
+                        options = actionStrings,
                         titleResId = R.string.short_swipe_right_app,
                         onItemSelected = { newShortSwipeRightAction ->
-                            selectedShortSwipeRightAction = newShortSwipeRightAction // Update state
-                            setGesture(
-                                AppDrawerFlag.SetShortSwipeRight,
-                                newShortSwipeRightAction
-                            ) // Persist selection in preferences
+                            val selectedAction =
+                                actions.firstOrNull { it.getString(requireContext()) == newShortSwipeRightAction }
+                            if (selectedAction != null) {
+                                selectedShortSwipeRightAction = selectedAction // Store the enum itself
+                                setGesture(
+                                    AppDrawerFlag.SetShortSwipeRight,
+                                    selectedAction
+                                ) // Persist selection in preferences
+                            }
                         }
                     )
                 }
@@ -338,14 +373,18 @@ class GesturesFragment : Fragment() {
                 onClick = {
                     showSingleChoiceDialog(
                         context = requireContext(),
-                        options = Constants.Action.entries.toTypedArray(),
+                        options = actionStrings,
                         titleResId = R.string.long_swipe_up_app,
                         onItemSelected = { newLongSwipeUpAction ->
-                            selectedLongSwipeUpAction = newLongSwipeUpAction // Update state
-                            setGesture(
-                                AppDrawerFlag.SetLongSwipeUp,
-                                newLongSwipeUpAction
-                            ) // Persist selection in preferences
+                            val selectedAction =
+                                actions.firstOrNull { it.getString(requireContext()) == newLongSwipeUpAction }
+                            if (selectedAction != null) {
+                                selectedLongSwipeUpAction = selectedAction // Store the enum itself
+                                setGesture(
+                                    AppDrawerFlag.SetLongSwipeUp,
+                                    selectedAction
+                                ) // Persist selection in preferences
+                            }
                         }
                     )
                 }
@@ -363,14 +402,18 @@ class GesturesFragment : Fragment() {
                 onClick = {
                     showSingleChoiceDialog(
                         context = requireContext(),
-                        options = Constants.Action.entries.toTypedArray(),
+                        options = actionStrings,
                         titleResId = R.string.long_swipe_down_app,
                         onItemSelected = { newLongSwipeDownAction ->
-                            selectedLongSwipeDownAction = newLongSwipeDownAction // Update state
-                            setGesture(
-                                AppDrawerFlag.SetLongSwipeDown,
-                                newLongSwipeDownAction
-                            ) // Persist selection in preferences
+                            val selectedAction =
+                                actions.firstOrNull { it.getString(requireContext()) == newLongSwipeDownAction }
+                            if (selectedAction != null) {
+                                selectedLongSwipeDownAction = selectedAction // Store the enum itself
+                                setGesture(
+                                    AppDrawerFlag.SetLongSwipeDown,
+                                    selectedAction
+                                ) // Persist selection in preferences
+                            }
                         }
                     )
                 }
@@ -388,14 +431,18 @@ class GesturesFragment : Fragment() {
                 onClick = {
                     showSingleChoiceDialog(
                         context = requireContext(),
-                        options = Constants.Action.entries.toTypedArray(),
+                        options = actionStrings, // Pass the list of localized strings
                         titleResId = R.string.long_swipe_left_app,
                         onItemSelected = { newLongSwipeLeftAction ->
-                            selectedLongSwipeLeftAction = newLongSwipeLeftAction // Update state
-                            setGesture(
-                                AppDrawerFlag.SetLongSwipeLeft,
-                                newLongSwipeLeftAction
-                            ) // Persist selection in preferences
+                            val selectedAction =
+                                actions.firstOrNull { it.getString(requireContext()) == newLongSwipeLeftAction }
+                            if (selectedAction != null) {
+                                selectedLongSwipeLeftAction = selectedAction // Store the enum itself
+                                setGesture(
+                                    AppDrawerFlag.SetLongSwipeLeft,
+                                    selectedAction
+                                ) // Persist selection in preferences
+                            }
                         }
                     )
                 }
@@ -413,14 +460,18 @@ class GesturesFragment : Fragment() {
                 onClick = {
                     showSingleChoiceDialog(
                         context = requireContext(),
-                        options = Constants.Action.entries.toTypedArray(),
+                        options = actionStrings,
                         titleResId = R.string.long_swipe_right_app,
                         onItemSelected = { newLongSwipeRightAction ->
-                            selectedLongSwipeRightAction = newLongSwipeRightAction // Update state
-                            setGesture(
-                                AppDrawerFlag.SetLongSwipeRight,
-                                newLongSwipeRightAction
-                            ) // Persist selection in preferences
+                            val selectedAction =
+                                actions.firstOrNull { it.getString(requireContext()) == newLongSwipeRightAction }
+                            if (selectedAction != null) {
+                                selectedLongSwipeRightAction = selectedAction // Store the enum itself
+                                setGesture(
+                                    AppDrawerFlag.SetLongSwipeRight,
+                                    selectedAction
+                                ) // Persist selection in preferences
+                            }
                         }
                     )
                 }
@@ -568,7 +619,7 @@ class GesturesFragment : Fragment() {
         viewModel.ismlauncherDefault()
 
         deviceManager =
-            context?.getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
+            requireContext().getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
         componentName = ComponentName(requireContext(), DeviceAdmin::class.java)
     }
 

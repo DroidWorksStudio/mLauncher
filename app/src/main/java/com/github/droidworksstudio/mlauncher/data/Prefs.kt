@@ -342,7 +342,7 @@ class Prefs(val context: Context) {
         set(value) = storeAction(CLICK_DATE_ACTION, value)
 
     var doubleTapAction: Constants.Action
-        get() = loadAction(DOUBLE_TAP_ACTION, Constants.Action.LockScreen)
+        get() = loadAction(DOUBLE_TAP_ACTION, Constants.Action.RestartApp)
         set(value) = storeAction(DOUBLE_TAP_ACTION, value)
 
     private fun loadAction(prefString: String, default: Constants.Action): Constants.Action {

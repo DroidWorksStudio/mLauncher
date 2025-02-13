@@ -190,6 +190,7 @@
     <string name="dark">Dark</string>
     <string name="light">Light</string>
     <string name="system_default">System</string>
+    <string name="restart_launcher">Restart Launcher</string>
     <string name="delete">Delete</string>
     <string name="hide">Hide</string>
     <string name="show">Show</string>

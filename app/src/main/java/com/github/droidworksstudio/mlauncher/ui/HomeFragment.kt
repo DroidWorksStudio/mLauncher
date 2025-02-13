@@ -55,6 +55,7 @@ import com.github.droidworksstudio.mlauncher.helper.ActionService
 import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.formatMillisToHMS
 import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.getTotalScreenTime
 import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.getUsageStats
+import com.github.droidworksstudio.mlauncher.helper.AppReloader
 import com.github.droidworksstudio.mlauncher.helper.BatteryReceiver
 import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
 import com.github.droidworksstudio.mlauncher.helper.hideStatusBar
@@ -469,6 +470,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             Action.TakeScreenShot -> initActionService(requireContext())?.takeScreenShot()
             Action.LeftPage -> handleSwipeLeft(prefs.homePagesNum)
             Action.RightPage -> handleSwipeRight(prefs.homePagesNum)
+            Action.RestartApp -> AppReloader.restartApp(requireContext())
             Action.Disabled -> {}
         }
     }
