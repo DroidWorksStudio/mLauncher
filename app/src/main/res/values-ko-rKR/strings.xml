@@ -145,6 +145,7 @@
     <string name="dark">Dark</string>
     <string name="light">Light</string>
     <string name="system_default">System</string>
+    <string name="restart_launcher">Restart Launcher</string>
     <string name="delete">삭제</string>
     <string name="hide">Hide</string>
     <string name="show">Show</string>
