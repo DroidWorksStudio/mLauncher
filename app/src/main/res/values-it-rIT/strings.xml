@@ -145,6 +145,7 @@
     <string name="dark">Scuro</string>
     <string name="light">Chiaro</string>
     <string name="system_default">Sistema</string>
+    <string name="restart_launcher">Restart Launcher</string>
     <string name="delete">Elimina</string>
     <string name="hide">Nascondi</string>
     <string name="show">Mostra</string>
