@@ -145,6 +145,7 @@
     <string name="dark">Karanlık</string>
     <string name="light">Aydınlık</string>
     <string name="system_default">Sistem</string>
+    <string name="restart_launcher">Restart Launcher</string>
     <string name="delete">Silmek</string>
     <string name="hide">Gizle</string>
     <string name="show">Göster</string>
