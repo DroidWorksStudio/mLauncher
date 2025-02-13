@@ -9,6 +9,10 @@ All notable changes to this project will be documented in this file. See [conven
 - Fixed the Gesture system to show the right language - ([676897b](https://github.com/DroidWorksStudio/mLauncher/commit/676897b89625becc6f2aa3ed61f15dc5bd308a49))
 - Fixed the Settings Text Size - ([12cfd69](https://github.com/DroidWorksStudio/mLauncher/commit/12cfd69dec712438aa741750738eb3103ae70e43))
 
+### Refactoring:
+
+- Cleaned up the dialog building system. - ([aef27c2](https://github.com/DroidWorksStudio/mLauncher/commit/aef27c2c5173694efc32fb0165d14591bc4755a3))
+
 ### Releases:
 
 - Prepare for version 1.7.2 - ([db9c8da](https://github.com/DroidWorksStudio/mLauncher/commit/db9c8dabfaca199ed94ee44e671895bbec5775ce))
