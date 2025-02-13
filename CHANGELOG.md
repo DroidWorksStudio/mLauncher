@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Implemented Enhancements:
+
+- Added the ability to change colors on the homescreen. - ([b34878c](https://github.com/DroidWorksStudio/mLauncher/commit/b34878cd9bb25eb4fdf539793d700adfebb92637))
+
 ### Bug Fixes:
 
 - Fixed the Gesture system to show the right language - ([676897b](https://github.com/DroidWorksStudio/mLauncher/commit/676897b89625becc6f2aa3ed61f15dc5bd308a49))
@@ -11,6 +15,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Cleaned up the favorites page. - ([d4ab060](https://github.com/DroidWorksStudio/mLauncher/commit/d4ab06005d8b89598fa6b2f6f2281588ac0f5b96))
 - Cleaned up the dialog building system. - ([aef27c2](https://github.com/DroidWorksStudio/mLauncher/commit/aef27c2c5173694efc32fb0165d14591bc4755a3))
 
 ### Releases:
