@@ -33,8 +33,8 @@
     <string name="pages_on_home_screen">Numer stron</string>
     <string name="enable_home_pager">Włącz pager główny</string>
     <string name="battery_date_time">Bateria &amp; Data/Godzina</string>
-    <string name="show_time">Pokaż czas</string>
-    <string name="show_time_format">Format czasu (AM/PM)</string>
+    <string name="show_clock">Show Clock</string>
+    <string name="show_clock_format">Show Format (AM/PM)</string>
     <string name="show_date">Pokaż datę</string>
     <string name="show_battery">Pokaż baterię</string>
     <string name="show_battery_icon">Pokaż ikonę baterii</string>
@@ -63,6 +63,11 @@
     <string name="home_alignment">Aplikacje domowe</string>
     <string name="drawer_alignment">Aplikacje szufladowe</string>
     <string name="element_colors">Kolory elementów</string>
+    <string name="background_color">Background</string>
+    <string name="app_color">Apps</string>
+    <string name="clock_color">Clock</string>
+    <string name="date_color">Date</string>
+    <string name="battery_color">Battery</string>
     <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">Gesty</string>
     <string name="tap_click_actions">Akcje dotknięcia/kliknięcia</string>
