@@ -145,6 +145,7 @@
     <string name="dark">Тёмная</string>
     <string name="light">Светлая</string>
     <string name="system_default">Система</string>
+    <string name="restart_launcher">Restart Launcher</string>
     <string name="delete">Удалить</string>
     <string name="hide">Скрыть</string>
     <string name="show">Показать</string>
