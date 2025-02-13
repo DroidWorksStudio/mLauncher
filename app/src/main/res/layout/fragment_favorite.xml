@@ -8,21 +8,15 @@
     android:orientation="vertical"
     tools:context=".ui.FavoriteFragment">
 
-    <FrameLayout
-        android:id="@+id/touchArea"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="50dp" />
-
     <LinearLayout
         android:id="@+id/pageLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="22dp"
         android:layout_marginEnd="24dp"
         android:orientation="vertical"
+        tools:ignore="UselessParent"
         tools:visibility="visible">
 
         <TextView
@@ -45,8 +39,8 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="vertical"
-                android:paddingTop="72dp"
-                android:paddingBottom="80dp" />
+                android:paddingTop="22dp"
+                android:paddingBottom="50dp" />
 
         </ScrollView>
     </LinearLayout>
