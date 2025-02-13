@@ -145,6 +145,7 @@
     <string name="dark">Escuro</string>
     <string name="light">Luz</string>
     <string name="system_default">Sistema</string>
+    <string name="restart_launcher">Restart Launcher</string>
     <string name="delete">Excluir</string>
     <string name="hide">Esconder</string>
     <string name="show">Mostrar</string>
