@@ -33,8 +33,8 @@
     <string name="pages_on_home_screen">Seitenzahl</string>
     <string name="enable_home_pager">Aktivieren Sie den Home Pager</string>
     <string name="battery_date_time">Batterie &amp; Datum/Uhrzeit</string>
-    <string name="show_time">Zeit anzeigen</string>
-    <string name="show_time_format">Zeitformat (AM/PM)</string>
+    <string name="show_clock">Show Clock</string>
+    <string name="show_clock_format">Show Format (AM/PM)</string>
     <string name="show_date">Datum anzeigen</string>
     <string name="show_battery">Akku anzeigen</string>
     <string name="show_battery_icon">Akkusymbol anzeigen</string>
@@ -63,6 +63,11 @@
     <string name="home_alignment">Home Apps</string>
     <string name="drawer_alignment">Schubladen-Apps</string>
     <string name="element_colors">Elementfarben</string>
+    <string name="background_color">Background</string>
+    <string name="app_color">Apps</string>
+    <string name="clock_color">Clock</string>
+    <string name="date_color">Date</string>
+    <string name="battery_color">Battery</string>
     <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">Gesten</string>
     <string name="tap_click_actions">Tipp-/Klick-Aktionen</string>
