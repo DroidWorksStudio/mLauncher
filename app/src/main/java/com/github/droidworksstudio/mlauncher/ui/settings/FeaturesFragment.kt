@@ -209,10 +209,10 @@ class FeaturesFragment : Fragment() {
                         title = getString(R.string.settings_text_size),
                         minValue = Constants.MIN_TEXT_SIZE,
                         maxValue = Constants.MAX_TEXT_SIZE,
-                        currentValue = prefs.appSize,
+                        currentValue = prefs.settingsSize,
                         onValueSelected = { newSettingsSize ->
                             selectedSettingsSize = newSettingsSize // Update state
-                            prefs.appSize = newSettingsSize // Persist selection in preferences
+                            prefs.settingsSize = newSettingsSize // Persist selection in preferences
                         }
                     )
                 }
