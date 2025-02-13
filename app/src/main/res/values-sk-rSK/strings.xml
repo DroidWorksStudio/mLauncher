@@ -144,6 +144,7 @@
     <string name="dark">Tmavý</string>
     <string name="light">Svetlý</string>
     <string name="system_default">Systém</string>
+    <string name="restart_launcher">Restart Launcher</string>
     <string name="delete">Odstrániť</string>
     <string name="hide">Skryť</string>
     <string name="show">Zobraziť</string>
