@@ -145,6 +145,7 @@
     <string name="dark">Dunkel</string>
     <string name="light">Hell</string>
     <string name="system_default">System</string>
+    <string name="restart_launcher">Restart Launcher</string>
     <string name="delete">Löschen</string>
     <string name="hide">Verstecken</string>
     <string name="show">Zeigen</string>
