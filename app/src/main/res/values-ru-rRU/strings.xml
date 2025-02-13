@@ -33,8 +33,8 @@
     <string name="pages_on_home_screen">Количество страниц</string>
     <string name="enable_home_pager">Включить домашний пейджер</string>
     <string name="battery_date_time">Батарея &amp; Дата/Время</string>
-    <string name="show_time">Показать время</string>
-    <string name="show_time_format">Формат времени (AM/PM)</string>
+    <string name="show_clock">Show Clock</string>
+    <string name="show_clock_format">Show Format (AM/PM)</string>
     <string name="show_date">Показать дату</string>
     <string name="show_battery">Показать батарею</string>
     <string name="show_battery_icon">Показать значок батареи</string>
@@ -63,6 +63,11 @@
     <string name="home_alignment">Домашние приложения</string>
     <string name="drawer_alignment">Приложения для ящиков</string>
     <string name="element_colors">Цвета элементов</string>
+    <string name="background_color">Background</string>
+    <string name="app_color">Apps</string>
+    <string name="clock_color">Clock</string>
+    <string name="date_color">Date</string>
+    <string name="battery_color">Battery</string>
     <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">Жесты</string>
     <string name="tap_click_actions">Действия при нажатии/щелчке</string>
