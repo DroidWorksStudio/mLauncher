@@ -2,12 +2,17 @@ package com.github.droidworksstudio.mlauncher.helper
 
 import android.app.Activity
 import android.content.Context
+import android.graphics.Color
 import android.graphics.Typeface
+import android.text.Editable
+import android.text.InputType
+import android.text.TextWatcher
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.ListView
 import android.widget.SeekBar
@@ -209,6 +214,152 @@ class DialogBuilder(val context: Context, val activity: Activity) {
             val maxHeight = itemHeight * 7 // Max height for 7 items
             listView.layoutParams.height = maxHeight.coerceAtMost(itemHeight * options.size)
             listView.requestLayout()
+        }
+    }
+
+    var colorPickerDialog: AlertDialog? = null
+
+    fun showColorPickerDialog(
+        context: Context,
+        titleResId: Int,
+        color: Int,
+        onItemSelected: (Int) -> Unit // Callback to handle the selected color
+    ) {
+        val red = Color.red(color)
+        val green = Color.green(color)
+        val blue = Color.blue(color)
+
+        var isUpdatingText = false
+
+        val dialogBuilder = MaterialAlertDialogBuilder(context)
+            .setTitle(context.getString(titleResId))
+
+        // Create SeekBars for Red, Green, and Blue
+        val redSeekBar = createColorSeekBar(context, red)
+        val greenSeekBar = createColorSeekBar(context, green)
+        val blueSeekBar = createColorSeekBar(context, blue)
+
+        // Create color preview box and RGB Hex input field
+        val colorPreviewBox = createColorPreviewBox(context, color)
+        val rgbText = createRgbTextField(context, red, green, blue)
+
+        // Layout with SeekBars, Color Preview, and RGB Hex Text Input
+        val layout = LinearLayout(context).apply {
+            orientation = LinearLayout.VERTICAL
+
+            // Create a horizontal layout for the text box and color preview
+            val horizontalLayout = LinearLayout(context).apply {
+                orientation = LinearLayout.HORIZONTAL
+                gravity = Gravity.CENTER_VERTICAL // Vertically center the views
+
+                // RGB Text field
+                val rgbParams = LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f).apply {
+                    marginStart = 32 // Optional: Add margin between the text and the color box
+                }
+                rgbText.layoutParams = rgbParams
+                addView(rgbText)
+
+                // Color preview box
+                val colorParams = LinearLayout.LayoutParams(150, 50).apply {
+                    marginEnd = 32 // Optional: Add margin between the text and the color box
+                }
+                colorPreviewBox.layoutParams = colorParams
+                addView(colorPreviewBox)
+            }
+
+            addView(redSeekBar)
+            addView(greenSeekBar)
+            addView(blueSeekBar)
+            addView(horizontalLayout)
+        }
+
+        // Update color preview and text input when SeekBars are adjusted
+        val updateColorPreview = {
+            val updatedColor = Color.rgb(
+                redSeekBar.progress, greenSeekBar.progress, blueSeekBar.progress
+            )
+            colorPreviewBox.setBackgroundColor(updatedColor)
+
+            if (!isUpdatingText) {
+                isUpdatingText = true
+                rgbText.setText(
+                    String.format(
+                        "#%02X%02X%02X",
+                        redSeekBar.progress, greenSeekBar.progress, blueSeekBar.progress
+                    )
+                )
+                isUpdatingText = false
+            }
+        }
+
+        // Listeners to update color preview when sliders are adjusted
+        redSeekBar.setOnSeekBarChangeListener(createSeekBarChangeListener(updateColorPreview))
+        greenSeekBar.setOnSeekBarChangeListener(createSeekBarChangeListener(updateColorPreview))
+        blueSeekBar.setOnSeekBarChangeListener(createSeekBarChangeListener(updateColorPreview))
+
+        // Listen for text input and update sliders and preview
+        rgbText.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(s: Editable?) {
+                s?.toString()?.trim()?.let { colorString ->
+                    if (colorString.matches(Regex("^#[0-9A-Fa-f]{6}$"))) {
+                        val hexColor = Color.parseColor(colorString)
+                        redSeekBar.progress = Color.red(hexColor)
+                        greenSeekBar.progress = Color.green(hexColor)
+                        blueSeekBar.progress = Color.blue(hexColor)
+                        updateColorPreview()
+                    }
+                }
+            }
+
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+        })
+
+        // Set up the dialog view and buttons
+        dialogBuilder.setView(layout)
+        dialogBuilder.setPositiveButton("OK") { _, _ ->
+            val pickedColor = Color.rgb(
+                redSeekBar.progress, greenSeekBar.progress, blueSeekBar.progress
+            )
+            onItemSelected(pickedColor)
+        }
+        dialogBuilder.setNegativeButton("Cancel", null)
+
+        // Show the dialog
+        dialogBuilder.create().show()
+    }
+
+    private fun createColorSeekBar(context: Context, initialValue: Int): SeekBar {
+        return SeekBar(context).apply {
+            max = 255
+            progress = initialValue
+        }
+    }
+
+    private fun createColorPreviewBox(context: Context, color: Int): View {
+        return View(context).apply {
+            setBackgroundColor(color)
+        }
+    }
+
+    private fun createRgbTextField(context: Context, red: Int, green: Int, blue: Int): EditText {
+        return EditText(context).apply {
+            setText(String.format("#%02X%02X%02X", red, green, blue))
+            inputType = InputType.TYPE_CLASS_TEXT
+
+            // Remove the bottom line (underline) from the EditText
+            background = null
+        }
+    }
+
+    private fun createSeekBarChangeListener(updateColorPreview: () -> Unit): SeekBar.OnSeekBarChangeListener {
+        return object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+                updateColorPreview()
+            }
+
+            override fun onStartTrackingTouch(seekBar: SeekBar?) {}
+            override fun onStopTrackingTouch(seekBar: SeekBar?) {}
         }
     }
 }

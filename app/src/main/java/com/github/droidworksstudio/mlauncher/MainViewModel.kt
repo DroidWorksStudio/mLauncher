@@ -32,9 +32,9 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     private val launcherDefault = MutableLiveData<Boolean>()
     val launcherResetFailed = MutableLiveData<Boolean>()
 
-    val showTime = MutableLiveData(prefs.showTime)
+    val showClock = MutableLiveData(prefs.showClock)
     val showDate = MutableLiveData(prefs.showDate)
-    val timeAlignment = MutableLiveData(prefs.timeAlignment)
+    val clockAlignment = MutableLiveData(prefs.clockAlignment)
     val dateAlignment = MutableLiveData(prefs.dateAlignment)
     val homeAppsAlignment = MutableLiveData(Pair(prefs.homeAlignment, prefs.homeAlignmentBottom))
     val homeAppsNum = MutableLiveData(prefs.homeAppsNum)
@@ -76,8 +76,8 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         showDate.value = visibility
     }
 
-    fun setShowTime(visibility: Boolean) {
-        showTime.value = visibility
+    fun setShowClock(visibility: Boolean) {
+        showClock.value = visibility
     }
 
     private fun launchApp(appListItem: AppListItem) {
@@ -146,8 +146,8 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         prefs.drawerAlignment = gravity
     }
 
-    fun updateTimeAlignment(gravity: Constants.Gravity) {
-        timeAlignment.value = gravity
+    fun updateClockAlignment(gravity: Constants.Gravity) {
+        clockAlignment.value = gravity
     }
 
     fun updateDateAlignment(gravity: Constants.Gravity) {

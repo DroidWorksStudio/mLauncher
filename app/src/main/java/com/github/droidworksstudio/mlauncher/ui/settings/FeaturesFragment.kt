@@ -96,8 +96,8 @@ class FeaturesFragment : Fragment() {
         var selectedHomePagesNum by remember { mutableIntStateOf(prefs.homePagesNum) }
         var toggledHomePager by remember { mutableStateOf(prefs.homePager) }
 
-        var toggledShowTime by remember { mutableStateOf(prefs.showTime) }
-        var toggledShowTimeFormat by remember { mutableStateOf(prefs.showTimeFormat) }
+        var toggledShowClock by remember { mutableStateOf(prefs.showClock) }
+        var toggledShowClockFormat by remember { mutableStateOf(prefs.showClockFormat) }
         var toggledShowDate by remember { mutableStateOf(prefs.showDate) }
         var toggledShowBattery by remember { mutableStateOf(prefs.showBattery) }
         var toggledShowBatteryIcon by remember { mutableStateOf(prefs.showBatteryIcon) }
@@ -350,23 +350,23 @@ class FeaturesFragment : Fragment() {
             )
 
             SettingsSwitch(
-                text = stringResource(R.string.show_time),
+                text = stringResource(R.string.show_clock),
                 fontSize = titleFontSize,
-                defaultState = toggledShowTime,
+                defaultState = toggledShowClock,
                 onCheckedChange = {
-                    toggledShowTime = !prefs.showTime
-                    prefs.showTime = toggledShowTime
-                    viewModel.setShowTime(prefs.showTime)
+                    toggledShowClock = !prefs.showClock
+                    prefs.showClock = toggledShowClock
+                    viewModel.setShowClock(prefs.showClock)
                 }
             )
 
             SettingsSwitch(
-                text = stringResource(R.string.show_time_format),
+                text = stringResource(R.string.show_clock_format),
                 fontSize = titleFontSize,
-                defaultState = toggledShowTimeFormat,
+                defaultState = toggledShowClockFormat,
                 onCheckedChange = {
-                    toggledShowTimeFormat = !prefs.showTimeFormat
-                    prefs.showTimeFormat = toggledShowTimeFormat
+                    toggledShowClockFormat = !prefs.showClockFormat
+                    prefs.showClockFormat = toggledShowClockFormat
                 }
             )
 

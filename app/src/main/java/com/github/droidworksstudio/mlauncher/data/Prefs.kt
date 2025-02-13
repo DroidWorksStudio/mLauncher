@@ -8,6 +8,7 @@ import androidx.core.content.ContextCompat.getColor
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.Constants.Gravity
 import com.github.droidworksstudio.mlauncher.helper.getUserHandleFromString
+import com.github.droidworksstudio.mlauncher.helper.isSystemInDarkMode
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
@@ -29,7 +30,7 @@ private const val HOME_ALIGNMENT = "HOME_ALIGNMENT"
 private const val HOME_ALIGNMENT_BOTTOM = "HOME_ALIGNMENT_BOTTOM"
 private const val HOME_CLICK_AREA = "HOME_CLICK_AREA"
 private const val DRAWER_ALIGNMENT = "DRAWER_ALIGNMENT"
-private const val TIME_ALIGNMENT = "TIME_ALIGNMENT"
+private const val CLOCK_ALIGNMENT = "CLOCK_ALIGNMENT"
 private const val DATE_ALIGNMENT = "DATE_ALIGNMENT"
 private const val STATUS_BAR = "STATUS_BAR"
 private const val SHOW_BATTERY = "SHOW_BATTERY"
@@ -37,8 +38,8 @@ private const val SHOW_BATTERY_ICON = "SHOW_BATTERY_ICON"
 private const val SHOW_DATE = "SHOW_DATE"
 private const val HOME_LOCKED = "HOME_LOCKED"
 private const val SETTINGS_LOCKED = "SETTINGS_LOCKED"
-private const val SHOW_TIME = "SHOW_TIME"
-private const val SHOW_TIME_FORMAT = "SHOW_TIME_FORMAT"
+private const val SHOW_CLOCK = "SHOW_CLOCK"
+private const val SHOW_CLOCK_FORMAT = "SHOW_CLOCK_FORMAT"
 private const val SEARCH_START = "SEARCH_START"
 private const val SWIPE_UP_ACTION = "SWIPE_UP_ACTION"
 private const val SWIPE_DOWN_ACTION = "SWIPE_DOWN_ACTION"
@@ -86,7 +87,7 @@ private const val TEXT_PADDING_SIZE = "TEXT_PADDING_SIZE"
 private const val BACKGROUND_COLOR = "BACKGROUND_COLOR"
 private const val APP_COLOR = "APP_COLOR"
 private const val DATE_COLOR = "DATE_COLOR"
-private const val TIME_COLOR = "TIME_COLOR"
+private const val CLOCK_COLOR = "CLOCK_COLOR"
 private const val BATTERY_COLOR = "BATTERY_COLOR"
 private const val DAILY_WORD_COLOR = "DAILY_WORD_COLOR"
 private const val ALARM_CLOCK_COLOR = "ALARM_CLOCK_COLOR"
@@ -182,31 +183,31 @@ class Prefs(val context: Context) {
         set(value) = prefs.edit().putInt(HOME_PAGES_NUM, value).apply()
 
     var backgroundColor: Int
-        get() = prefs.getInt(BACKGROUND_COLOR, getColor(context, R.color.blackTrans50))
+        get() = prefs.getInt(BACKGROUND_COLOR, getColor(context, getColorInt("bg")))
         set(value) = prefs.edit().putInt(BACKGROUND_COLOR, value).apply()
 
     var appColor: Int
-        get() = prefs.getInt(APP_COLOR, getColor(context, R.color.white))
+        get() = prefs.getInt(APP_COLOR, getColor(context, getColorInt("txt")))
         set(value) = prefs.edit().putInt(APP_COLOR, value).apply()
 
     var dateColor: Int
-        get() = prefs.getInt(DATE_COLOR, getColor(context, R.color.white))
+        get() = prefs.getInt(DATE_COLOR, getColor(context, getColorInt("txt")))
         set(value) = prefs.edit().putInt(DATE_COLOR, value).apply()
 
-    var timeColor: Int
-        get() = prefs.getInt(TIME_COLOR, getColor(context, R.color.white))
-        set(value) = prefs.edit().putInt(TIME_COLOR, value).apply()
+    var clockColor: Int
+        get() = prefs.getInt(CLOCK_COLOR, getColor(context, getColorInt("txt")))
+        set(value) = prefs.edit().putInt(CLOCK_COLOR, value).apply()
 
     var batteryColor: Int
-        get() = prefs.getInt(BATTERY_COLOR, getColor(context, R.color.white))
+        get() = prefs.getInt(BATTERY_COLOR, getColor(context, getColorInt("txt")))
         set(value) = prefs.edit().putInt(BATTERY_COLOR, value).apply()
 
     var dailyWordColor: Int
-        get() = prefs.getInt(DAILY_WORD_COLOR, getColor(context, R.color.white))
+        get() = prefs.getInt(DAILY_WORD_COLOR, getColor(context, getColorInt("txt")))
         set(value) = prefs.edit().putInt(DAILY_WORD_COLOR, value).apply()
 
     var alarmClockColor: Int
-        get() = prefs.getInt(ALARM_CLOCK_COLOR, getColor(context, R.color.white))
+        get() = prefs.getInt(ALARM_CLOCK_COLOR, getColor(context, getColorInt("txt")))
         set(value) = prefs.edit().putInt(ALARM_CLOCK_COLOR, value).apply()
 
     var opacityNum: Int
@@ -235,15 +236,15 @@ class Prefs(val context: Context) {
         get() = prefs.getBoolean(HOME_CLICK_AREA, false)
         set(value) = prefs.edit().putBoolean(HOME_CLICK_AREA, value).apply()
 
-    var timeAlignment: Gravity
+    var clockAlignment: Gravity
         get() {
             val string = prefs.getString(
-                TIME_ALIGNMENT,
+                CLOCK_ALIGNMENT,
                 Gravity.Left.name
             ).toString()
             return Gravity.valueOf(string)
         }
-        set(value) = prefs.edit().putString(TIME_ALIGNMENT, value.toString()).apply()
+        set(value) = prefs.edit().putString(CLOCK_ALIGNMENT, value.toString()).apply()
 
     var dateAlignment: Gravity
         get() {
@@ -269,13 +270,13 @@ class Prefs(val context: Context) {
         get() = prefs.getBoolean(STATUS_BAR, false)
         set(value) = prefs.edit().putBoolean(STATUS_BAR, value).apply()
 
-    var showTime: Boolean
-        get() = prefs.getBoolean(SHOW_TIME, true)
-        set(value) = prefs.edit().putBoolean(SHOW_TIME, value).apply()
+    var showClock: Boolean
+        get() = prefs.getBoolean(SHOW_CLOCK, true)
+        set(value) = prefs.edit().putBoolean(SHOW_CLOCK, value).apply()
 
-    var showTimeFormat: Boolean
-        get() = prefs.getBoolean(SHOW_TIME_FORMAT, true)
-        set(value) = prefs.edit().putBoolean(SHOW_TIME_FORMAT, value).apply()
+    var showClockFormat: Boolean
+        get() = prefs.getBoolean(SHOW_CLOCK_FORMAT, true)
+        set(value) = prefs.edit().putBoolean(SHOW_CLOCK_FORMAT, value).apply()
 
     var showDate: Boolean
         get() = prefs.getBoolean(SHOW_DATE, true)
@@ -578,6 +579,29 @@ class Prefs(val context: Context) {
         }
         set(value) = prefs.edit().putInt(TEXT_PADDING_SIZE, value).apply()
 
+    private fun getColorInt(type: String): Int {
+        when (appTheme) {
+            Constants.Theme.System -> {
+                return if (isSystemInDarkMode(context)) {
+                    if (type == "bg") R.color.black
+                    else R.color.white
+                } else {
+                    if (type == "bg") R.color.white
+                    else R.color.black
+                }
+            }
+
+            Constants.Theme.Dark -> {
+                return if (type == "bg") R.color.black
+                else R.color.white
+            }
+
+            Constants.Theme.Light -> {
+                return if (type == "bg") R.color.white
+                else R.color.black
+            }
+        }
+    }
 
     // return app label
     fun getAppName(location: Int): String {

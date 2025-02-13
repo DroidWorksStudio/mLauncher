@@ -127,10 +127,6 @@ dependencies {
     implementation(libs.commons.text)
     implementation(libs.gson)
 
-    // Color picker and sliders
-    implementation(libs.color.chooser) // Simple color picker
-    implementation(libs.compose.colorful.sliders) // Compose colorful sliders
-
     // Biometric support
     implementation(libs.biometric.ktx)
 
