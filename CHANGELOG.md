@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Bug Fixes:
+
+- Fixed the Settings Text Size - ([12cfd69](https://github.com/DroidWorksStudio/mLauncher/commit/12cfd69dec712438aa741750738eb3103ae70e43))
+
 ### Releases:
 
 - Prepare for version 1.7.2 - ([db9c8da](https://github.com/DroidWorksStudio/mLauncher/commit/db9c8dabfaca199ed94ee44e671895bbec5775ce))
