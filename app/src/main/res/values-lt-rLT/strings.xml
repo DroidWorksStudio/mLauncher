@@ -33,8 +33,8 @@
     <string name="pages_on_home_screen">Puslapių skaičius</string>
     <string name="enable_home_pager">Įjungti pradžios puslapį</string>
     <string name="battery_date_time">Baterija &amp; Data/Laikas</string>
-    <string name="show_time">Rodyti laiką</string>
-    <string name="show_time_format">Laiko formatas (AM/PM)</string>
+    <string name="show_clock">Show Clock</string>
+    <string name="show_clock_format">Show Format (AM/PM)</string>
     <string name="show_date">Rodyti datą</string>
     <string name="show_battery">Rodyti bateriją</string>
     <string name="show_battery_icon">Rodyti akumuliatoriaus piktogramą</string>
@@ -63,6 +63,11 @@
     <string name="home_alignment">Namų programos</string>
     <string name="drawer_alignment">Stalčių programos</string>
     <string name="element_colors">Elementų spalvos</string>
+    <string name="background_color">Background</string>
+    <string name="app_color">Apps</string>
+    <string name="clock_color">Clock</string>
+    <string name="date_color">Date</string>
+    <string name="battery_color">Battery</string>
     <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">Gestai</string>
     <string name="tap_click_actions">Bakstelėkite / spustelėkite Veiksmai</string>
