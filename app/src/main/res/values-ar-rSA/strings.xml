@@ -145,6 +145,7 @@
     <string name="dark">داكن</string>
     <string name="light">فاتح</string>
     <string name="system_default">النظام</string>
+    <string name="restart_launcher">Restart Launcher</string>
     <string name="delete">يمسح</string>
     <string name="hide">إخفاء</string>
     <string name="show">إظهار</string>
