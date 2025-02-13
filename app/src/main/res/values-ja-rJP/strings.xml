@@ -33,8 +33,8 @@
     <string name="pages_on_home_screen">ページ数</string>
     <string name="enable_home_pager">ホーム ページャーを有効にする</string>
     <string name="battery_date_time">バッテリー &amp; 日付/時刻</string>
-    <string name="show_time">時間を表示</string>
-    <string name="show_time_format">時刻形式 (AM/PM)</string>
+    <string name="show_clock">Show Clock</string>
+    <string name="show_clock_format">Show Format (AM/PM)</string>
     <string name="show_date">日付を表示</string>
     <string name="show_battery">バッテリーを表示</string>
     <string name="show_battery_icon">バッテリーアイコンを表示</string>
@@ -63,6 +63,11 @@
     <string name="home_alignment">ホームアプリ</string>
     <string name="drawer_alignment">ドロワーアプリ</string>
     <string name="element_colors">要素の色</string>
+    <string name="background_color">Background</string>
+    <string name="app_color">Apps</string>
+    <string name="clock_color">Clock</string>
+    <string name="date_color">Date</string>
+    <string name="battery_color">Battery</string>
     <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">ジェスチャー</string>
     <string name="tap_click_actions">タップ/クリックアクション</string>
