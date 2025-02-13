@@ -145,6 +145,7 @@
     <string name="dark">มืด</string>
     <string name="light">แสงสว่าง</string>
     <string name="system_default">ระบบ</string>
+    <string name="restart_launcher">Restart Launcher</string>
     <string name="delete">ลบ</string>
     <string name="hide">ซ่อน</string>
     <string name="show">แสดง</string>
