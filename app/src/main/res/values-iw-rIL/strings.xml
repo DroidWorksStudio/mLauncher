@@ -36,7 +36,7 @@
     <string name="show_clock">הצג שעון</string>
     <string name="show_clock_format">פורמט הצג (AM/PM)</string>
     <string name="show_date">הצג תאריך</string>
-    <string name="show_alarm">Show Alarm</string>
+    <string name="show_alarm">הצג אזעקה</string>
     <string name="show_battery">הצג סוללה</string>
     <string name="show_battery_icon">הצגת סמליל סוללה</string>
     <string name="show_total_screen_time">הצג זמן מסך כולל</string>
@@ -46,7 +46,7 @@
     <string name="app_text_size">גודל הטקסט של היישום</string>
     <string name="date_text_size">גודל הטקסט של התאריך</string>
     <string name="clock_text_size">גודל טקסט שעון</string>
-    <string name="alarm_text_size">Alarm Text Size</string>
+    <string name="alarm_text_size">גודל טקסט אזעקה</string>
     <string name="battery_text_size">גודל הטקסט של הסוללה</string>
     <string name="layout_positioning">פריסה &amp; מיקום</string>
     <string name="app_padding_size">גודל ריפוד</string>
@@ -62,7 +62,7 @@
     <string name="element_alignment">יישור אלמנטים</string>
     <string name="date_alignment">תַאֲרִיך</string>
     <string name="clock_alignment">שָׁעוֹן</string>
-    <string name="alarm_alignment">Alarm</string>
+    <string name="alarm_alignment">אַזעָקָה</string>
     <string name="home_alignment">אפליקציות בית</string>
     <string name="drawer_alignment">אפליקציות מגירה</string>
     <string name="element_colors">צבעי אלמנט</string>
@@ -70,7 +70,7 @@
     <string name="app_color">אפליקציות</string>
     <string name="clock_color">שָׁעוֹן</string>
     <string name="date_color">תַאֲרִיך</string>
-    <string name="alarm_color">Alarm</string>
+    <string name="alarm_color">אַזעָקָה</string>
     <string name="battery_color">סוֹלְלָה</string>
     <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">מחוות</string>
