@@ -36,7 +36,7 @@
     <string name="show_clock">Uhr anzeigen</string>
     <string name="show_clock_format">Format anzeigen (AM/PM)</string>
     <string name="show_date">Datum anzeigen</string>
-    <string name="show_alarm">Show Alarm</string>
+    <string name="show_alarm">Alarm anzeigen</string>
     <string name="show_battery">Akku anzeigen</string>
     <string name="show_battery_icon">Akkusymbol anzeigen</string>
     <string name="show_total_screen_time">Gesamte Bildschirmzeit anzeigen</string>
@@ -46,7 +46,7 @@
     <string name="app_text_size">App-Textgröße</string>
     <string name="date_text_size">Textgröße des Datums</string>
     <string name="clock_text_size">Uhrtextgröße</string>
-    <string name="alarm_text_size">Alarm Text Size</string>
+    <string name="alarm_text_size">Alarmtextgröße</string>
     <string name="battery_text_size">Textgröße der Akkuanzeige</string>
     <string name="layout_positioning">Layout &amp; Positionierung</string>
     <string name="app_padding_size">Polstergröße</string>
