@@ -36,7 +36,7 @@
     <string name="show_clock">Mostra orologio</string>
     <string name="show_clock_format">Mostra formato (AM/PM)</string>
     <string name="show_date">Mostra data</string>
-    <string name="show_alarm">Show Alarm</string>
+    <string name="show_alarm">Mostra allarme</string>
     <string name="show_battery">Mostra batteria</string>
     <string name="show_battery_icon">Mostra l\'icona della batteria</string>
     <string name="show_total_screen_time">Mostra tempo totale di utilizzo dello schermo</string>
@@ -46,7 +46,7 @@
     <string name="app_text_size">Dimensioni del testo dell\'app</string>
     <string name="date_text_size">Dimensioni del testo della data</string>
     <string name="clock_text_size">Dimensione del testo dell\'orologio</string>
-    <string name="alarm_text_size">Alarm Text Size</string>
+    <string name="alarm_text_size">Dimensione del testo dell\'allarme</string>
     <string name="battery_text_size">Dimensioni del testo della batteria</string>
     <string name="layout_positioning">Disposizione &amp; Posizionamento</string>
     <string name="app_padding_size">Dimensione della spaziatura</string>
@@ -62,7 +62,7 @@
     <string name="element_alignment">Allineamento degli elementi</string>
     <string name="date_alignment">Data</string>
     <string name="clock_alignment">Orologio</string>
-    <string name="alarm_alignment">Alarm</string>
+    <string name="alarm_alignment">Allarme</string>
     <string name="home_alignment">Applicazioni per la casa</string>
     <string name="drawer_alignment">App cassetto</string>
     <string name="element_colors">Colori degli elementi</string>
@@ -70,7 +70,7 @@
     <string name="app_color">Applicazioni</string>
     <string name="clock_color">Orologio</string>
     <string name="date_color">Data</string>
-    <string name="alarm_color">Alarm</string>
+    <string name="alarm_color">Allarme</string>
     <string name="battery_color">Batteria</string>
     <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">Gesti</string>
