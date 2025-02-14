@@ -36,7 +36,7 @@
     <string name="show_clock">Saati göster</string>
     <string name="show_clock_format">Gösteri Formatı (AM/PM)</string>
     <string name="show_date">Tarih\'i göster</string>
-    <string name="show_alarm">Show Alarm</string>
+    <string name="show_alarm">Alarmı Göster</string>
     <string name="show_battery">Pil\'i göster</string>
     <string name="show_battery_icon">Pil Simgesini Göster</string>
     <string name="show_total_screen_time">Toplam Ekran Süresini Göster</string>
@@ -46,7 +46,7 @@
     <string name="app_text_size">Uygulama Metin Boyutu</string>
     <string name="date_text_size">Tarih Metin Boyutu</string>
     <string name="clock_text_size">Saat Metin Boyutu</string>
-    <string name="alarm_text_size">Alarm Text Size</string>
+    <string name="alarm_text_size">Alarm Metin Boyutu</string>
     <string name="battery_text_size">Pil Metin Boyutu</string>
     <string name="layout_positioning">Düzen &amp; Konumlandırma</string>
     <string name="app_padding_size">Boşluk Boyutu</string>
