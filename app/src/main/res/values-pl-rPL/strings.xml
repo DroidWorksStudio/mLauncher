@@ -36,7 +36,7 @@
     <string name="show_clock">Pokaż zegar</string>
     <string name="show_clock_format">Format pokazu (AM/PM)</string>
     <string name="show_date">Pokaż datę</string>
-    <string name="show_alarm">Show Alarm</string>
+    <string name="show_alarm">Pokaż alarm</string>
     <string name="show_battery">Pokaż baterię</string>
     <string name="show_battery_icon">Pokaż ikonę baterii</string>
     <string name="show_total_screen_time">Pokaż całkowity czas ekranowy</string>
@@ -46,7 +46,7 @@
     <string name="app_text_size">Rozmiar tekstu aplikacji</string>
     <string name="date_text_size">Rozmiar tekstu daty</string>
     <string name="clock_text_size">Rozmiar tekstu zegara</string>
-    <string name="alarm_text_size">Alarm Text Size</string>
+    <string name="alarm_text_size">Rozmiar tekstu alarmu</string>
     <string name="battery_text_size">Rozmiar tekstu baterii</string>
     <string name="layout_positioning">Układ &amp; Pozycjonowanie</string>
     <string name="app_padding_size">Rozmiar wypełnienia</string>
