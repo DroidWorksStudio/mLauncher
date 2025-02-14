@@ -36,7 +36,7 @@
     <string name="show_clock">Rodyti laikrodį</string>
     <string name="show_clock_format">Rodyti formatą (AM/PM)</string>
     <string name="show_date">Rodyti datą</string>
-    <string name="show_alarm">Show Alarm</string>
+    <string name="show_alarm">Rodyti signalą</string>
     <string name="show_battery">Rodyti bateriją</string>
     <string name="show_battery_icon">Rodyti akumuliatoriaus piktogramą</string>
     <string name="show_total_screen_time">Rodyti bendrą ekrano laiką</string>
@@ -46,7 +46,7 @@
     <string name="app_text_size">Programėlės Šrifto dydis</string>
     <string name="date_text_size">Datos Šrifto dydis</string>
     <string name="clock_text_size">Laikrodžio teksto dydis</string>
-    <string name="alarm_text_size">Alarm Text Size</string>
+    <string name="alarm_text_size">Signalo teksto dydis</string>
     <string name="battery_text_size">Baterijos Šrifto dydis</string>
     <string name="layout_positioning">Išdėstymas &amp; Padėties nustatymas</string>
     <string name="app_padding_size">Užpildymo Dydis</string>
@@ -62,7 +62,7 @@
     <string name="element_alignment">Elementų lygiavimas</string>
     <string name="date_alignment">Data</string>
     <string name="clock_alignment">Laikrodis</string>
-    <string name="alarm_alignment">Alarm</string>
+    <string name="alarm_alignment">Signalizacija</string>
     <string name="home_alignment">Namų programos</string>
     <string name="drawer_alignment">Stalčių programos</string>
     <string name="element_colors">Elementų spalvos</string>
@@ -70,7 +70,7 @@
     <string name="app_color">Programėlės</string>
     <string name="clock_color">Laikrodis</string>
     <string name="date_color">Data</string>
-    <string name="alarm_color">Alarm</string>
+    <string name="alarm_color">Signalizacija</string>
     <string name="battery_color">Baterija</string>
     <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">Gestai</string>
