@@ -33,8 +33,8 @@
     <string name="pages_on_home_screen">Nombre de pages</string>
     <string name="enable_home_pager">Activer la page d\'accueil</string>
     <string name="battery_date_time">Batterie &amp; Date/Heure</string>
-    <string name="show_clock">Show Clock</string>
-    <string name="show_clock_format">Show Format (AM/PM)</string>
+    <string name="show_clock">Afficher l\'horloge</string>
+    <string name="show_clock_format">Format de l\'émission (AM/PM)</string>
     <string name="show_date">Afficher la date</string>
     <string name="show_battery">Afficher la batterie</string>
     <string name="show_battery_icon">Afficher l\'icône de la batterie</string>
@@ -63,11 +63,11 @@
     <string name="home_alignment">Accueil Applications</string>
     <string name="drawer_alignment">Applications de tiroir</string>
     <string name="element_colors">Couleurs des éléments</string>
-    <string name="background_color">Background</string>
-    <string name="app_color">Apps</string>
-    <string name="clock_color">Clock</string>
+    <string name="background_color">Arrière-plan</string>
+    <string name="app_color">Applications</string>
+    <string name="clock_color">Horloge</string>
     <string name="date_color">Date</string>
-    <string name="battery_color">Battery</string>
+    <string name="battery_color">Batterie</string>
     <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">Gestes</string>
     <string name="tap_click_actions">Actions de type Tap/Click</string>
@@ -150,7 +150,7 @@
     <string name="dark">Sombre</string>
     <string name="light">Lumière</string>
     <string name="system_default">Système</string>
-    <string name="restart_launcher">Restart Launcher</string>
+    <string name="restart_launcher">Redémarrer le lanceur</string>
     <string name="delete">Supprimer</string>
     <string name="hide">Cacher</string>
     <string name="show">Afficher</string>
