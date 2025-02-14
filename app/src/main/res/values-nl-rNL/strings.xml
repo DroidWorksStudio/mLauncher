@@ -36,6 +36,7 @@
     <string name="show_clock">Klok weergeven</string>
     <string name="show_clock_format">Weergaveformaat (AM/PM)</string>
     <string name="show_date">Datum weergeven</string>
+    <string name="show_alarm">Show Alarm</string>
     <string name="show_battery">Batterij weergeven</string>
     <string name="show_battery_icon">Batterijpictogram weergeven</string>
     <string name="show_total_screen_time">Toon totale schermtijd</string>
@@ -43,8 +44,9 @@
     <string name="look_feel_settings_title">Kijk &amp; Voel</string>
     <string name="text_size_adjustments">Tekst &amp; Grootte aanpassingen</string>
     <string name="app_text_size">App tekstgrootte</string>
-    <string name="clock_text_size">Kloktekstgrootte</string>
     <string name="date_text_size">Datum tekstgrootte</string>
+    <string name="clock_text_size">Kloktekstgrootte</string>
+    <string name="alarm_text_size">Alarm Text Size</string>
     <string name="battery_text_size">Tekstgrootte batterij</string>
     <string name="layout_positioning">Lay-out &amp; Positionering</string>
     <string name="app_padding_size">Opvullingsgrootte</string>
@@ -60,6 +62,7 @@
     <string name="element_alignment">Elementuitlijning</string>
     <string name="date_alignment">Datum</string>
     <string name="clock_alignment">Klok</string>
+    <string name="alarm_alignment">Alarm</string>
     <string name="home_alignment">Startpagina Apps</string>
     <string name="drawer_alignment">Lade-apps</string>
     <string name="element_colors">Elementkleuren</string>
@@ -67,6 +70,7 @@
     <string name="app_color">Toepassingen</string>
     <string name="clock_color">Klok</string>
     <string name="date_color">Datum</string>
+    <string name="alarm_color">Alarm</string>
     <string name="battery_color">Batterij</string>
     <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">Vingerbewegingen</string>
