@@ -163,8 +163,8 @@ class LookFeelFragment : Fragment() {
                     dialogBuilder.showSliderDialog(
                         context = requireContext(),
                         title = getString(R.string.clock_text_size),
-                        minValue = Constants.MAX_CLOCK_DATE_SIZE,
-                        maxValue = Constants.MIN_CLOCK_DATE_SIZE,
+                        minValue = Constants.MIN_CLOCK_DATE_SIZE,
+                        maxValue = Constants.MAX_CLOCK_DATE_SIZE,
                         currentValue = prefs.clockSize,
                         onValueSelected = { newClockSize ->
                             selectedClockSize = newClockSize // Update state
@@ -182,8 +182,8 @@ class LookFeelFragment : Fragment() {
                     dialogBuilder.showSliderDialog(
                         context = requireContext(),
                         title = getString(R.string.date_text_size),
-                        minValue = Constants.MAX_CLOCK_DATE_SIZE,
-                        maxValue = Constants.MIN_CLOCK_DATE_SIZE,
+                        minValue = Constants.MIN_CLOCK_DATE_SIZE,
+                        maxValue = Constants.MAX_CLOCK_DATE_SIZE,
                         currentValue = prefs.dateSize,
                         onValueSelected = { newDateSize ->
                             selectedDateSize = newDateSize // Update state
@@ -201,8 +201,8 @@ class LookFeelFragment : Fragment() {
                     dialogBuilder.showSliderDialog(
                         context = requireContext(),
                         title = getString(R.string.battery_text_size),
-                        minValue = Constants.MAX_BATTERY_SIZE,
-                        maxValue = Constants.MIN_BATTERY_SIZE,
+                        minValue = Constants.MIN_BATTERY_SIZE,
+                        maxValue = Constants.MAX_BATTERY_SIZE,
                         currentValue = prefs.batterySize,
                         onValueSelected = { newBatterySize ->
                             selectedBatterySize = newBatterySize // Update state

@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Bug Fixes:
 
+- Fixed the issue with size bars. - ([840d7a9](https://github.com/DroidWorksStudio/mLauncher/commit/840d7a9bd5f92baceac579dfa8cf77f41f342676))
 - Fixed the Gesture system to show the right language - ([676897b](https://github.com/DroidWorksStudio/mLauncher/commit/676897b89625becc6f2aa3ed61f15dc5bd308a49))
 - Fixed the Settings Text Size - ([12cfd69](https://github.com/DroidWorksStudio/mLauncher/commit/12cfd69dec712438aa741750738eb3103ae70e43))
 
