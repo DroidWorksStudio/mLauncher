@@ -36,6 +36,7 @@
     <string name="show_clock">시계 표시</string>
     <string name="show_clock_format">쇼 형식(오전/오후)</string>
     <string name="show_date">Show date</string>
+    <string name="show_alarm">Show Alarm</string>
     <string name="show_battery">배터리 표시</string>
     <string name="show_battery_icon">배터리 아이콘 표시</string>
     <string name="show_total_screen_time">총 화면 시간 표시</string>
@@ -43,8 +44,9 @@
     <string name="look_feel_settings_title">보세요 &amp; 느껴보세요</string>
     <string name="text_size_adjustments">텍스트 &amp; 크기 조정</string>
     <string name="app_text_size">앱 텍스트 크기</string>
-    <string name="clock_text_size">시계 텍스트 크기</string>
     <string name="date_text_size">날짜 텍스트 크기</string>
+    <string name="clock_text_size">시계 텍스트 크기</string>
+    <string name="alarm_text_size">Alarm Text Size</string>
     <string name="battery_text_size">배터리 텍스트 크기</string>
     <string name="layout_positioning">레이아웃 &amp; 위치 지정</string>
     <string name="app_padding_size">패딩 크기</string>
@@ -60,6 +62,7 @@
     <string name="element_alignment">요소 정렬</string>
     <string name="date_alignment">날짜</string>
     <string name="clock_alignment">시계</string>
+    <string name="alarm_alignment">Alarm</string>
     <string name="home_alignment">홈 앱</string>
     <string name="drawer_alignment">서랍 앱</string>
     <string name="element_colors">요소 색상</string>
@@ -67,6 +70,7 @@
     <string name="app_color">앱</string>
     <string name="clock_color">시계</string>
     <string name="date_color">날짜</string>
+    <string name="alarm_color">Alarm</string>
     <string name="battery_color">배터리</string>
     <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">Gestures</string>
