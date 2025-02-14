@@ -33,8 +33,8 @@
     <string name="pages_on_home_screen">Seitenzahl</string>
     <string name="enable_home_pager">Aktivieren Sie den Home Pager</string>
     <string name="battery_date_time">Batterie &amp; Datum/Uhrzeit</string>
-    <string name="show_clock">Show Clock</string>
-    <string name="show_clock_format">Show Format (AM/PM)</string>
+    <string name="show_clock">Uhr anzeigen</string>
+    <string name="show_clock_format">Format anzeigen (AM/PM)</string>
     <string name="show_date">Datum anzeigen</string>
     <string name="show_battery">Akku anzeigen</string>
     <string name="show_battery_icon">Akkusymbol anzeigen</string>
@@ -63,11 +63,11 @@
     <string name="home_alignment">Home Apps</string>
     <string name="drawer_alignment">Schubladen-Apps</string>
     <string name="element_colors">Elementfarben</string>
-    <string name="background_color">Background</string>
+    <string name="background_color">Hintergrund</string>
     <string name="app_color">Apps</string>
-    <string name="clock_color">Clock</string>
-    <string name="date_color">Date</string>
-    <string name="battery_color">Battery</string>
+    <string name="clock_color">Uhr</string>
+    <string name="date_color">Datum</string>
+    <string name="battery_color">Batterie</string>
     <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">Gesten</string>
     <string name="tap_click_actions">Tipp-/Klick-Aktionen</string>
@@ -150,7 +150,7 @@
     <string name="dark">Dunkel</string>
     <string name="light">Hell</string>
     <string name="system_default">System</string>
-    <string name="restart_launcher">Restart Launcher</string>
+    <string name="restart_launcher">Launcher neu starten</string>
     <string name="delete">Löschen</string>
     <string name="hide">Verstecken</string>
     <string name="show">Zeigen</string>
