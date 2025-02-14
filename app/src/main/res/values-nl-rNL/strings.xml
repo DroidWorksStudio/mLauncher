@@ -33,8 +33,8 @@
     <string name="pages_on_home_screen">Aantal pagina\'s</string>
     <string name="enable_home_pager">Schakel Homepager in</string>
     <string name="battery_date_time">Batterij &amp; Datum/Tijd</string>
-    <string name="show_clock">Show Clock</string>
-    <string name="show_clock_format">Show Format (AM/PM)</string>
+    <string name="show_clock">Klok weergeven</string>
+    <string name="show_clock_format">Weergaveformaat (AM/PM)</string>
     <string name="show_date">Datum weergeven</string>
     <string name="show_battery">Batterij weergeven</string>
     <string name="show_battery_icon">Batterijpictogram weergeven</string>
@@ -63,11 +63,11 @@
     <string name="home_alignment">Startpagina Apps</string>
     <string name="drawer_alignment">Lade-apps</string>
     <string name="element_colors">Elementkleuren</string>
-    <string name="background_color">Background</string>
-    <string name="app_color">Apps</string>
-    <string name="clock_color">Clock</string>
-    <string name="date_color">Date</string>
-    <string name="battery_color">Battery</string>
+    <string name="background_color">Achtergrond</string>
+    <string name="app_color">Toepassingen</string>
+    <string name="clock_color">Klok</string>
+    <string name="date_color">Datum</string>
+    <string name="battery_color">Batterij</string>
     <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">Vingerbewegingen</string>
     <string name="tap_click_actions">Tik/klikacties</string>
@@ -150,7 +150,7 @@
     <string name="dark">Donker</string>
     <string name="light">Licht</string>
     <string name="system_default">Systeem</string>
-    <string name="restart_launcher">Restart Launcher</string>
+    <string name="restart_launcher">Start Launcher opnieuw</string>
     <string name="delete">Verwijderen</string>
     <string name="hide">Verbergen</string>
     <string name="show">Weergeven</string>
