@@ -36,6 +36,7 @@
     <string name="show_clock">Saati göster</string>
     <string name="show_clock_format">Gösteri Formatı (AM/PM)</string>
     <string name="show_date">Tarih\'i göster</string>
+    <string name="show_alarm">Show Alarm</string>
     <string name="show_battery">Pil\'i göster</string>
     <string name="show_battery_icon">Pil Simgesini Göster</string>
     <string name="show_total_screen_time">Toplam Ekran Süresini Göster</string>
@@ -43,8 +44,9 @@
     <string name="look_feel_settings_title">Bak &amp; Hisset</string>
     <string name="text_size_adjustments">Metin &amp; Boyut Ayarlamaları</string>
     <string name="app_text_size">Uygulama Metin Boyutu</string>
-    <string name="clock_text_size">Saat Metin Boyutu</string>
     <string name="date_text_size">Tarih Metin Boyutu</string>
+    <string name="clock_text_size">Saat Metin Boyutu</string>
+    <string name="alarm_text_size">Alarm Text Size</string>
     <string name="battery_text_size">Pil Metin Boyutu</string>
     <string name="layout_positioning">Düzen &amp; Konumlandırma</string>
     <string name="app_padding_size">Boşluk Boyutu</string>
@@ -60,6 +62,7 @@
     <string name="element_alignment">Eleman Hizalaması</string>
     <string name="date_alignment">Tarih</string>
     <string name="clock_alignment">Saat</string>
+    <string name="alarm_alignment">Alarm</string>
     <string name="home_alignment">Ana Sayfa Uygulamalar</string>
     <string name="drawer_alignment">Çekmece Uygulamaları</string>
     <string name="element_colors">Element Renkleri</string>
@@ -67,6 +70,7 @@
     <string name="app_color">Uygulamalar</string>
     <string name="clock_color">Saat</string>
     <string name="date_color">Tarih</string>
+    <string name="alarm_color">Alarm</string>
     <string name="battery_color">Pil</string>
     <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">Jestler</string>
