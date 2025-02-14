@@ -174,6 +174,12 @@ class FavoriteFragment : Fragment() {
 
     @SuppressLint("InflateParams", "SetTextI18n")
     private fun updateAppCount(newAppsNum: Int) {
+        binding.pageName.apply {
+            text = getString(R.string.favorite_apps)
+            textSize = prefs.appSize * 1.1f
+            setTextColor(prefs.appColor)
+        }
+        
         val oldAppsNum = binding.homeAppsLayout.size // current number
         val diff = oldAppsNum - newAppsNum
 
@@ -181,7 +187,7 @@ class FavoriteFragment : Fragment() {
             binding.homeAppsLayout.children.drop(diff)
         } else if (diff < 0) {
             val prefixDrawable: Drawable? =
-                context?.let { ContextCompat.getDrawable(it, R.drawable.ic_prefix_drawable) }
+                context?.let { ContextCompat.getDrawable(it, R.drawable.ic_order_apps) }
             // add all missing apps to list
             for (i in oldAppsNum until newAppsNum) {
                 val view = layoutInflater.inflate(R.layout.home_app_button, null) as TextView
@@ -189,17 +195,15 @@ class FavoriteFragment : Fragment() {
                     val appLabel =
                         prefs.getHomeAppModel(i).activityLabel.ifEmpty { getString(R.string.select_app) }
                     textSize = prefs.appSize.toFloat()
+                    setTextColor(prefs.appColor)
                     id = i
                     text = appLabel
-                    setCompoundDrawablesWithIntrinsicBounds(prefixDrawable, null, null, null)
+                    setCompoundDrawablesWithIntrinsicBounds(null, null, prefixDrawable, null)
                     // Set the gravity to align the text to the end (right side in LTR)
-                    gravity = Gravity.END
+                    gravity = Gravity.START
                 }
                 val padding: Int = prefs.textPaddingSize
                 view.setPadding(0, padding, 0, padding)
-                binding.pageName.text = getString(R.string.favorite_apps)
-                binding.pageName.textSize = prefs.appSize * 1.5f
-
                 binding.homeAppsLayout.addView(view)
             }
         }

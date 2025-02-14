@@ -43,7 +43,6 @@ import com.github.droidworksstudio.mlauncher.listener.DeviceAdmin
 import com.github.droidworksstudio.mlauncher.style.SettingsTheme
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsHomeItem
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.TopMainHeader
-import net.mm2d.color.chooser.ColorChooserDialog
 
 class SettingsFragment : Fragment() {
 
@@ -200,29 +199,6 @@ class SettingsFragment : Fragment() {
                 Settings(settingsSize.sp)
             }
         }
-    }
-
-    private fun showColorPickerDialog(requestCode: String, color: Int) {
-        ColorChooserDialog.show(
-            fragment = this,
-            requestKey = requestCode,
-            initialColor = color,
-            withAlpha = true,
-            initialTab = 1,
-            tabs = intArrayOf(
-                ColorChooserDialog.TAB_RGB,
-                ColorChooserDialog.TAB_HSV,
-                ColorChooserDialog.TAB_PALETTE
-            )
-        )
-
-        ColorChooserDialog.registerListener(fragment = this, requestKey = requestCode, { pickedColor ->
-            when (requestCode) {
-                "appColor" -> prefs.appColor = pickedColor
-                "dateColor" -> prefs.dateColor = pickedColor
-                "timeColor" -> prefs.timeColor = pickedColor
-            }
-        })
     }
 
     @Deprecated("Deprecated in Java")

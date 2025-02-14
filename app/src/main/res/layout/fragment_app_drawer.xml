@@ -56,14 +56,14 @@
         android:text="@string/app_drawer_tips"
         android:textColor="?attr/primaryColor"
         android:textSize="16sp"
-        android:visibility="gone"/>
+        android:visibility="gone" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="150dp"
-        android:layout_marginBottom ="50dp"
+        android:layout_marginBottom="50dp"
         android:clipChildren="false"
         android:clipToPadding="false"
         android:overScrollMode="never"
@@ -71,11 +71,10 @@
 
     <TextView
         android:id="@+id/listEmptyHint"
-        android:text="@string/drawer_list_empty_hint"
-        android:textSize="20sp"
-        android:layout_gravity="center"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/drawer_list_empty_hint"
+        android:textSize="20sp" />
 
 </FrameLayout>

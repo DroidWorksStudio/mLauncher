@@ -15,7 +15,13 @@ class Migration(val context: Context) {
                 "APP_LIGHT_COLORS",
                 "HOME_FOLLOW_ACCENT",
                 "ALL_APPS_TEXT"
-            ), // Version 171 Removes these from Prefs
+            ),
+            172 to listOf(
+                "TIME_ALIGNMENT",
+                "SHOW_TIME",
+                "SHOW_TIME_FORMAT",
+                "TIME_COLOR"
+            ),
             // Add more versions and preferences to remove here
         )
 

@@ -3,6 +3,7 @@ package com.github.droidworksstudio.mlauncher.ui.settings
 import android.app.admin.DevicePolicyManager
 import android.content.ComponentName
 import android.content.Context
+import android.graphics.Color.parseColor
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -17,6 +18,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
@@ -98,9 +100,15 @@ class LookFeelFragment : Fragment() {
         var selectedBackgroundOpacity by remember { mutableIntStateOf(prefs.opacityNum) }
 
         var selectedHomeAlignment by remember { mutableStateOf(prefs.homeAlignment) }
-        var selectedTimeAlignment by remember { mutableStateOf(prefs.timeAlignment) }
+        var selectedClockAlignment by remember { mutableStateOf(prefs.clockAlignment) }
         var selectedDateAlignment by remember { mutableStateOf(prefs.dateAlignment) }
         var selectedDrawAlignment by remember { mutableStateOf(prefs.drawerAlignment) }
+
+        var selectedBackgroundColor by remember { mutableIntStateOf(prefs.backgroundColor) }
+        var selectedAppColor by remember { mutableIntStateOf(prefs.appColor) }
+        var selectedClockColor by remember { mutableIntStateOf(prefs.clockColor) }
+        var selectedDateColor by remember { mutableIntStateOf(prefs.dateColor) }
+        var selectedBatteryColor by remember { mutableIntStateOf(prefs.batteryColor) }
 
         val fs = remember { mutableStateOf(fontSize) }
         Constants.updateMaxHomePages(requireContext())
@@ -371,7 +379,7 @@ class LookFeelFragment : Fragment() {
 
             SettingsSelect(
                 title = stringResource(R.string.clock_alignment),
-                option = selectedTimeAlignment.string(),
+                option = selectedClockAlignment.string(),
                 fontSize = titleFontSize,
                 onClick = {
                     dialogBuilder.showSingleChoiceDialog(
@@ -379,9 +387,9 @@ class LookFeelFragment : Fragment() {
                         options = Constants.Gravity.entries.toTypedArray(),
                         titleResId = R.string.clock_alignment,
                         onItemSelected = { newGravity ->
-                            selectedTimeAlignment = newGravity // Update state
-                            prefs.timeAlignment = newGravity // Persist selection in preferences
-                            viewModel.updateTimeAlignment(newGravity)
+                            selectedClockAlignment = newGravity // Update state
+                            prefs.clockAlignment = newGravity // Persist selection in preferences
+                            viewModel.updateClockAlignment(newGravity)
                         }
                     )
                 }
@@ -422,6 +430,101 @@ class LookFeelFragment : Fragment() {
                     )
                 }
             )
+
+            SettingsTitle(
+                text = stringResource(R.string.element_colors),
+                fontSize = titleFontSize,
+            )
+
+            val hexBackgroundColor = String.format("#%06X", (0xFFFFFF and selectedBackgroundColor))
+            SettingsSelect(
+                title = stringResource(R.string.background_color),
+                option = hexBackgroundColor,
+                fontSize = titleFontSize,
+                fontColor = Color(parseColor(hexBackgroundColor)),
+                onClick = {
+                    dialogBuilder.showColorPickerDialog(
+                        context = requireContext(),
+                        color = selectedBackgroundColor,
+                        titleResId = R.string.background_color,
+                        onItemSelected = { selectedColor ->
+                            selectedBackgroundColor = selectedColor
+                            prefs.backgroundColor = selectedColor
+                        })
+                }
+            )
+
+            val hexAppColor = String.format("#%06X", (0xFFFFFF and selectedAppColor))
+            SettingsSelect(
+                title = stringResource(R.string.app_color),
+                option = hexAppColor,
+                fontSize = titleFontSize,
+                fontColor = Color(parseColor(hexAppColor)),
+                onClick = {
+                    dialogBuilder.showColorPickerDialog(
+                        context = requireContext(),
+                        color = selectedAppColor,
+                        titleResId = R.string.app_color,
+                        onItemSelected = { selectedColor ->
+                            selectedAppColor = selectedColor
+                            prefs.appColor = selectedColor
+                        })
+                }
+            )
+
+            val hexClockColor = String.format("#%06X", (0xFFFFFF and selectedClockColor))
+            SettingsSelect(
+                title = stringResource(R.string.clock_color),
+                option = hexClockColor,
+                fontSize = titleFontSize,
+                fontColor = Color(parseColor(hexClockColor)),
+                onClick = {
+                    dialogBuilder.showColorPickerDialog(
+                        context = requireContext(),
+                        color = selectedClockColor,
+                        titleResId = R.string.clock_color,
+                        onItemSelected = { selectedColor ->
+                            selectedClockColor = selectedColor
+                            prefs.clockColor = selectedColor
+                        })
+                }
+            )
+
+            val hexDateColor = String.format("#%06X", (0xFFFFFF and selectedDateColor))
+            SettingsSelect(
+                title = stringResource(R.string.date_color),
+                option = hexDateColor,
+                fontSize = titleFontSize,
+                fontColor = Color(parseColor(hexDateColor)),
+                onClick = {
+                    dialogBuilder.showColorPickerDialog(
+                        context = requireContext(),
+                        color = selectedDateColor,
+                        titleResId = R.string.date_color,
+                        onItemSelected = { selectedColor ->
+                            selectedDateColor = selectedColor
+                            prefs.dateColor = selectedColor
+                        })
+                }
+            )
+
+            val hexBatteryColor = String.format("#%06X", (0xFFFFFF and selectedBatteryColor))
+            SettingsSelect(
+                title = stringResource(R.string.battery_color),
+                option = hexBatteryColor,
+                fontSize = titleFontSize,
+                fontColor = Color(parseColor(hexBatteryColor)),
+                onClick = {
+                    dialogBuilder.showColorPickerDialog(
+                        context = requireContext(),
+                        color = selectedBatteryColor,
+                        titleResId = R.string.battery_color,
+                        onItemSelected = { selectedColor ->
+                            selectedBatteryColor = selectedColor
+                            prefs.batteryColor = selectedColor
+                        })
+                }
+            )
         }
     }
 
@@ -448,6 +551,7 @@ class LookFeelFragment : Fragment() {
     }
 
     private fun dismissDialogs() {
+        dialogBuilder.colorPickerDialog?.dismiss()
         dialogBuilder.singleChoiceDialog?.dismiss()
         dialogBuilder.sliderDialog?.dismiss()
     }

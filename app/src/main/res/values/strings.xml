@@ -47,8 +47,8 @@
 
     <string name="battery_date_time">Battery &amp; Date/Time</string>
 
-    <string name="show_time">Show Time</string>
-    <string name="show_time_format">Time Format (AM/PM)</string>
+    <string name="show_clock">Show Clock</string>
+    <string name="show_clock_format">Show Format (AM/PM)</string>
     <string name="show_date">Show Date</string>
     <string name="show_battery">Show Battery</string>
     <string name="show_battery_icon">Show Battery Icon</string>
@@ -88,6 +88,12 @@
     <string name="drawer_alignment">Drawer Apps</string>
 
     <string name="element_colors">Element Colors</string>
+
+    <string name="background_color">Background</string>
+    <string name="app_color">Apps</string>
+    <string name="clock_color">Clock</string>
+    <string name="date_color">Date</string>
+    <string name="battery_color">Battery</string>
 
     <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">Gestures</string>

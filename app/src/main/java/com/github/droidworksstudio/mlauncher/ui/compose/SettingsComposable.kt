@@ -218,6 +218,7 @@ object SettingsComposable {
         title: String,
         option: String,
         fontSize: TextUnit = 24.sp, // Default font size for the title
+        fontColor: Color = SettingsTheme.typography.title.color,
         onClick: () -> Unit = {},
     ) {
         Row(
@@ -239,6 +240,7 @@ object SettingsComposable {
                 text = option,
                 style = SettingsTheme.typography.title,
                 fontSize = fontSize,
+                color = fontColor,
                 modifier = Modifier
                     .clickable(onClick = onClick)
 

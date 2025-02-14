@@ -133,9 +133,9 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         val is24HourFormat = DateFormat.is24HourFormat(requireContext())
         val best12 = DateFormat.getBestDateTimePattern(
             timezone,
-            if (prefs.showTimeFormat) "hhmma" else "hhmm"
+            if (prefs.showClockFormat) "hhmma" else "hhmm"
         ).let {
-            if (!prefs.showTimeFormat) it.removeSuffix(" a") else it
+            if (!prefs.showClockFormat) it.removeSuffix(" a") else it
         }
         Log.d("currentDateTime", best12)
         binding.apply {
@@ -158,8 +158,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             mainLayout.setBackgroundColor(backgroundColor)
 
 
-            clock.setTextColor(prefs.timeColor)
-            date.setTextColor(prefs.timeColor)
+            clock.setTextColor(prefs.clockColor)
+            date.setTextColor(prefs.dateColor)
             battery.setTextColor(prefs.batteryColor)
             totalScreenTime.setTextColor(prefs.appColor)
             setDefaultLauncher.setTextColor(prefs.appColor)
@@ -284,7 +284,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
         with(viewModel) {
 
-            timeAlignment.observe(viewLifecycleOwner) { gravity ->
+            clockAlignment.observe(viewLifecycleOwner) { gravity ->
                 binding.timeLayout.gravity = gravity.value()
             }
 
@@ -307,7 +307,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     updateAppCount(it)
                 }
             }
-            showTime.observe(viewLifecycleOwner) {
+            showClock.observe(viewLifecycleOwner) {
                 binding.clock.visibility = if (it) View.VISIBLE else View.GONE
             }
             showDate.observe(viewLifecycleOwner) {
@@ -755,7 +755,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     val padding: Int = prefs.textPaddingSize
                     setPadding(0, padding, 0, padding)
                     setTextColor(prefs.appColor)
-
                 }
 
                 // Create newAppView
@@ -828,6 +827,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     private fun updateAppCount(newAppsNum: Int) {
         val oldAppsNum = binding.homeAppsLayout.childCount // current number of apps
         val diff = newAppsNum - oldAppsNum
+
 
         if (diff > 0) {
             // Add new apps

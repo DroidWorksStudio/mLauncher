@@ -39,8 +39,6 @@ compose-ui-tooling = "1.7.7"
 commons-text = "1.13.0"
 gson = "2.12.1"
 biometric-ktx = "1.4.0-alpha02"
-color-chooser = "0.7.3"
-compose-colorful-sliders = "1.2.0" # Compose colorful sliders library
 
 # ACRA
 acra = "5.12.0"
@@ -85,14 +83,11 @@ compose-animation = { group = "androidx.compose.animation", name = "animation", 
 compose-ui = { group = "androidx.compose.ui", name = "ui", version.ref = "compose-ui" }
 compose-foundation = { group = "androidx.compose.foundation", name = "foundation", version.ref = "compose-foundation" }
 compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling", version.ref = "compose-ui-tooling" }
-compose-colorful-sliders = { group = "com.github.SmartToolFactory", name = "Compose-Colorful-Sliders", version.ref = "compose-colorful-sliders" }
 
 # Miscellaneous Libraries
 commons-text = { group = "org.apache.commons", name = "commons-text", version.ref = "commons-text" }
 gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
 biometric-ktx = { group = "androidx.biometric", name = "biometric-ktx", version.ref = "biometric-ktx" }
-color-chooser = { group = "net.mm2d.color-chooser", name = "color-chooser", version.ref = "color-chooser" }
-
 # ACRA
 acra-core = { group = "ch.acra", name = "acra-core", version.ref = "acra" }
 acra-dialog = { group = "ch.acra", name = "acra-dialog", version.ref = "acra" }
