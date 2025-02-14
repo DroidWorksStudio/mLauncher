@@ -33,8 +33,8 @@
     <string name="pages_on_home_screen">Počet strán</string>
     <string name="enable_home_pager">Povoliť domovskú stránku</string>
     <string name="battery_date_time">Batéria &amp; Dátum/čas</string>
-    <string name="show_clock">Show Clock</string>
-    <string name="show_clock_format">Show Format (AM/PM)</string>
+    <string name="show_clock">Zobraziť hodiny</string>
+    <string name="show_clock_format">Zobraziť formát (AM/PM)</string>
     <string name="show_date">Zobraziť dátum</string>
     <string name="show_battery">Zobraziť batériu</string>
     <string name="show_battery_icon">Zobraziť ikonu batérie</string>
@@ -63,11 +63,11 @@
     <string name="home_alignment">Domáce aplikácie</string>
     <string name="drawer_alignment">Zásuvkové aplikácie</string>
     <string name="element_colors">Farby prvkov</string>
-    <string name="background_color">Background</string>
-    <string name="app_color">Apps</string>
-    <string name="clock_color">Clock</string>
-    <string name="date_color">Date</string>
-    <string name="battery_color">Battery</string>
+    <string name="background_color">Pozadie</string>
+    <string name="app_color">Aplikácie</string>
+    <string name="clock_color">Hodiny</string>
+    <string name="date_color">Dátum</string>
+    <string name="battery_color">Batéria</string>
     <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">Gestá</string>
     <string name="tap_click_actions">Klepnite/kliknite na Akcie</string>
@@ -149,7 +149,7 @@
     <string name="dark">Tmavý</string>
     <string name="light">Svetlý</string>
     <string name="system_default">Systém</string>
-    <string name="restart_launcher">Restart Launcher</string>
+    <string name="restart_launcher">Reštartujte spúšťač</string>
     <string name="delete">Odstrániť</string>
     <string name="hide">Skryť</string>
     <string name="show">Zobraziť</string>
