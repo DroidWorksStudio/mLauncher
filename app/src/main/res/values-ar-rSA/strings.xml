@@ -33,8 +33,8 @@
     <string name="pages_on_home_screen">عدد الصفحات</string>
     <string name="enable_home_pager">تمكين جهاز النداء الرئيسي</string>
     <string name="battery_date_time">البطارية &amp; التاريخ/الوقت</string>
-    <string name="show_clock">Show Clock</string>
-    <string name="show_clock_format">Show Format (AM/PM)</string>
+    <string name="show_clock">عرض الساعة</string>
+    <string name="show_clock_format">تنسيق العرض (صباحًا/مساءً)</string>
     <string name="show_date">إظهار التاريخ</string>
     <string name="show_battery">عرض البطارية</string>
     <string name="show_battery_icon">إظهار أيقونة البطارية</string>
@@ -63,11 +63,11 @@
     <string name="home_alignment">تطبيقات المنزل</string>
     <string name="drawer_alignment">تطبيقات الأدراج</string>
     <string name="element_colors">ألوان العناصر</string>
-    <string name="background_color">Background</string>
-    <string name="app_color">Apps</string>
-    <string name="clock_color">Clock</string>
-    <string name="date_color">Date</string>
-    <string name="battery_color">Battery</string>
+    <string name="background_color">خلفية</string>
+    <string name="app_color">التطبيقات</string>
+    <string name="clock_color">ساعة</string>
+    <string name="date_color">تاريخ</string>
+    <string name="battery_color">بطارية</string>
     <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">إيماءات</string>
     <string name="tap_click_actions">إجراءات الضغط/النقر</string>
@@ -150,7 +150,7 @@
     <string name="dark">داكن</string>
     <string name="light">فاتح</string>
     <string name="system_default">النظام</string>
-    <string name="restart_launcher">Restart Launcher</string>
+    <string name="restart_launcher">إعادة تشغيل المشغل</string>
     <string name="delete">يمسح</string>
     <string name="hide">إخفاء</string>
     <string name="show">إظهار</string>
