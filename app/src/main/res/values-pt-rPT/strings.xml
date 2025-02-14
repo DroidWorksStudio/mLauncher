@@ -36,6 +36,7 @@
     <string name="show_clock">Mostrar relógio</string>
     <string name="show_clock_format">Formato do programa (AM/PM)</string>
     <string name="show_date">Mostrar data</string>
+    <string name="show_alarm">Show Alarm</string>
     <string name="show_battery">Mostrar bateria</string>
     <string name="show_battery_icon">Mostrar ícone da bateria</string>
     <string name="show_total_screen_time">Mostrar tempo total de tela</string>
@@ -43,8 +44,9 @@
     <string name="look_feel_settings_title">Olhar &amp; Sentir</string>
     <string name="text_size_adjustments">Ajustes de tamanho do texto &amp;</string>
     <string name="app_text_size">Tamanho do texto do aplicativo</string>
-    <string name="clock_text_size">Tamanho do texto do relógio</string>
     <string name="date_text_size">Tamanho do texto da data</string>
+    <string name="clock_text_size">Tamanho do texto do relógio</string>
+    <string name="alarm_text_size">Alarm Text Size</string>
     <string name="battery_text_size">Tamanho do texto da bateria</string>
     <string name="layout_positioning">Layout &amp; Posicionamento</string>
     <string name="app_padding_size">Tamanho do Preenchimento</string>
@@ -60,6 +62,7 @@
     <string name="element_alignment">Alinhamento de Elementos</string>
     <string name="date_alignment">Data</string>
     <string name="clock_alignment">Relógio</string>
+    <string name="alarm_alignment">Alarm</string>
     <string name="home_alignment">Aplicativos para casa</string>
     <string name="drawer_alignment">Aplicativos de gaveta</string>
     <string name="element_colors">Cores dos Elementos</string>
@@ -67,6 +70,7 @@
     <string name="app_color">Aplicativos</string>
     <string name="clock_color">Relógio</string>
     <string name="date_color">Data</string>
+    <string name="alarm_color">Alarm</string>
     <string name="battery_color">Bateria</string>
     <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">Gestos</string>
