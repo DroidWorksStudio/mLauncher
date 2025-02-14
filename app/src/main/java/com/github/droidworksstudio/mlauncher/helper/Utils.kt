@@ -2,6 +2,7 @@ package com.github.droidworksstudio.mlauncher.helper
 
 //noinspection SuspiciousImport
 import android.app.Activity
+import android.app.AlarmManager
 import android.app.AlertDialog
 import android.app.AppOpsManager
 import android.app.UiModeManager
@@ -17,12 +18,16 @@ import android.os.Process
 import android.os.UserHandle
 import android.os.UserManager
 import android.provider.Settings
+import android.text.SpannableStringBuilder
+import android.text.style.ImageSpan
 import android.util.DisplayMetrics
 import android.util.Log.d
 import android.util.TypedValue
 import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
+import androidx.annotation.RequiresApi
+import androidx.appcompat.content.res.AppCompatResources
 import com.github.droidworksstudio.common.openAccessibilitySettings
 import com.github.droidworksstudio.common.showLongToast
 import com.github.droidworksstudio.mlauncher.BuildConfig
@@ -191,6 +196,35 @@ fun getUserHandleFromString(context: Context, userHandleString: String): UserHan
         }
     }
     return Process.myUserHandle()
+}
+
+@RequiresApi(Build.VERSION_CODES.Q)
+fun getNextAlarm(context: Context, prefs: Prefs): CharSequence {
+    val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
+    val nextAlarmClock = alarmManager.nextAlarmClock ?: return "No alarm is set."
+
+    val alarmTime = nextAlarmClock.triggerTime
+    val formattedTime = SimpleDateFormat("EEE, MMM d hh:mm a", Locale.getDefault()).format(alarmTime)
+
+    val drawable = AppCompatResources.getDrawable(context, R.drawable.ic_alarm_clock)
+    val fontSize = TypedValue.applyDimension(
+        TypedValue.COMPLEX_UNIT_SP,
+        (prefs.alarmSize / 1.5).toFloat(),
+        context.resources.displayMetrics
+    ).toInt()
+
+    drawable?.setBounds(0, 0, fontSize, fontSize)
+
+    return SpannableStringBuilder(" ").apply {
+        drawable?.let {
+            setSpan(
+                ImageSpan(it, ImageSpan.ALIGN_CENTER),
+                0, 1,
+                SpannableStringBuilder.SPAN_EXCLUSIVE_EXCLUSIVE
+            )
+        }
+        append(" $formattedTime")
+    }
 }
 
 fun ismlauncherDefault(context: Context): Boolean {

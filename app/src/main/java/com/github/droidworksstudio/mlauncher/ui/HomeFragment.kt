@@ -24,6 +24,7 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.Space
 import android.widget.TextView
+import androidx.annotation.RequiresApi
 import androidx.biometric.BiometricManager
 import androidx.biometric.BiometricManager.Authenticators.BIOMETRIC_WEAK
 import androidx.biometric.BiometricManager.Authenticators.DEVICE_CREDENTIAL
@@ -58,6 +59,7 @@ import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.getUsageSta
 import com.github.droidworksstudio.mlauncher.helper.AppReloader
 import com.github.droidworksstudio.mlauncher.helper.BatteryReceiver
 import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
+import com.github.droidworksstudio.mlauncher.helper.getNextAlarm
 import com.github.droidworksstudio.mlauncher.helper.hideStatusBar
 import com.github.droidworksstudio.mlauncher.helper.initActionService
 import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
@@ -116,6 +118,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     }
 
 
+    @RequiresApi(Build.VERSION_CODES.Q)
     override fun onStart() {
         super.onStart()
         if (prefs.showStatusBar) showStatusBar(requireActivity()) else hideStatusBar(requireActivity())
@@ -148,6 +151,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             date.format12Hour = datePattern
             date.format24Hour = datePattern
 
+            alarm.text = getNextAlarm(requireContext(), prefs)
+
             clock.textSize = prefs.clockSize.toFloat()
             date.textSize = prefs.dateSize.toFloat()
             battery.textSize = prefs.batterySize.toFloat()
@@ -157,9 +162,9 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             val backgroundColor = getHexForOpacity(prefs)
             mainLayout.setBackgroundColor(backgroundColor)
 
-
-            clock.setTextColor(prefs.clockColor)
             date.setTextColor(prefs.dateColor)
+            clock.setTextColor(prefs.clockColor)
+            alarm.setTextColor(prefs.alarmClockColor)
             battery.setTextColor(prefs.batteryColor)
             totalScreenTime.setTextColor(prefs.appColor)
             setDefaultLauncher.setTextColor(prefs.appColor)
@@ -284,20 +289,39 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
         with(viewModel) {
 
-            clockAlignment.observe(viewLifecycleOwner) { gravity ->
-                binding.timeLayout.gravity = gravity.value()
+            clockAlignment.observe(viewLifecycleOwner) { clockGravity ->
+                binding.clock.gravity = clockGravity.value()
+
+                // Set layout_gravity to align the TextClock (clock) within the parent (LinearLayout)
+                binding.clock.layoutParams = (binding.clock.layoutParams as LinearLayout.LayoutParams).apply {
+                    gravity = clockGravity.value()
+                }
             }
 
-            dateAlignment.observe(viewLifecycleOwner) { gravity ->
-                binding.dateLayout.gravity = gravity.value()
+            dateAlignment.observe(viewLifecycleOwner) { dateGravity ->
+                binding.date.gravity = dateGravity.value()
+
+                // Set layout_gravity to align the TextClock (date) within the parent (LinearLayout)
+                binding.date.layoutParams = (binding.date.layoutParams as LinearLayout.LayoutParams).apply {
+                    gravity = dateGravity.value()
+                }
             }
 
-            homeAppsAlignment.observe(viewLifecycleOwner) { (gravity, onBottom) ->
+            alarmAlignment.observe(viewLifecycleOwner) { alarmGravity ->
+                binding.alarm.gravity = alarmGravity.value()
+
+                // Set layout_gravity to align the TextView (alarm) within the parent (LinearLayout)
+                binding.alarm.layoutParams = (binding.alarm.layoutParams as LinearLayout.LayoutParams).apply {
+                    gravity = alarmGravity.value()
+                }
+            }
+
+            homeAppsAlignment.observe(viewLifecycleOwner) { (homeAppsGravity, onBottom) ->
                 val horizontalAlignment = if (onBottom) Gravity.BOTTOM else Gravity.CENTER_VERTICAL
-                binding.homeAppsLayout.gravity = gravity.value() or horizontalAlignment
+                binding.homeAppsLayout.gravity = homeAppsGravity.value() or horizontalAlignment
 
                 binding.homeAppsLayout.children.forEach { view ->
-                    (view as TextView).gravity = gravity.value()
+                    (view as TextView).gravity = homeAppsGravity.value()
                 }
             }
             homeAppsNum.observe(viewLifecycleOwner) {
@@ -307,11 +331,14 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     updateAppCount(it)
                 }
             }
+            showDate.observe(viewLifecycleOwner) {
+                binding.date.visibility = if (it) View.VISIBLE else View.GONE
+            }
             showClock.observe(viewLifecycleOwner) {
                 binding.clock.visibility = if (it) View.VISIBLE else View.GONE
             }
-            showDate.observe(viewLifecycleOwner) {
-                binding.date.visibility = if (it) View.VISIBLE else View.GONE
+            showAlarm.observe(viewLifecycleOwner) {
+                binding.alarm.visibility = if (it) View.VISIBLE else View.GONE
             }
 
         }
@@ -328,19 +355,21 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
     private fun showAppList(flag: AppDrawerFlag, includeHiddenApps: Boolean = false, n: Int = 0) {
         viewModel.getAppList(includeHiddenApps)
-        lifecycleScope.launch(Dispatchers.Main) {
-            try {
+        try {
+            if (findNavController().currentDestination?.id == R.id.mainFragment) {
                 findNavController().navigate(
                     R.id.action_mainFragment_to_appListFragment,
                     bundleOf("flag" to flag.toString(), "n" to n)
                 )
-            } catch (e: Exception) {
+            }
+        } catch (e: Exception) {
+            if (findNavController().currentDestination?.id == R.id.mainFragment) {
                 findNavController().navigate(
                     R.id.appListFragment,
                     bundleOf("flag" to flag.toString())
                 )
-                e.printStackTrace()
             }
+            e.printStackTrace()
         }
     }
 
