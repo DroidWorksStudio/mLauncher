@@ -32,6 +32,7 @@ private const val HOME_CLICK_AREA = "HOME_CLICK_AREA"
 private const val DRAWER_ALIGNMENT = "DRAWER_ALIGNMENT"
 private const val CLOCK_ALIGNMENT = "CLOCK_ALIGNMENT"
 private const val DATE_ALIGNMENT = "DATE_ALIGNMENT"
+private const val ALARM_ALIGNMENT = "ALARM_ALIGNMENT"
 private const val STATUS_BAR = "STATUS_BAR"
 private const val SHOW_BATTERY = "SHOW_BATTERY"
 private const val SHOW_BATTERY_ICON = "SHOW_BATTERY_ICON"
@@ -40,6 +41,7 @@ private const val HOME_LOCKED = "HOME_LOCKED"
 private const val SETTINGS_LOCKED = "SETTINGS_LOCKED"
 private const val SHOW_CLOCK = "SHOW_CLOCK"
 private const val SHOW_CLOCK_FORMAT = "SHOW_CLOCK_FORMAT"
+private const val SHOW_ALARM = "SHOW_ALARM"
 private const val SEARCH_START = "SEARCH_START"
 private const val SWIPE_UP_ACTION = "SWIPE_UP_ACTION"
 private const val SWIPE_DOWN_ACTION = "SWIPE_DOWN_ACTION"
@@ -78,8 +80,9 @@ private const val CLICK_USAGE = "CLICK_USAGE"
 private const val CLICK_DATE = "CLICK_DATE"
 private const val DOUBLE_TAP = "DOUBLE_TAP"
 private const val APP_SIZE_TEXT = "APP_SIZE_TEXT"
-private const val CLOCK_SIZE_TEXT = "CLOCK_SIZE_TEXT"
 private const val DATE_SIZE_TEXT = "DATE_SIZE_TEXT"
+private const val CLOCK_SIZE_TEXT = "CLOCK_SIZE_TEXT"
+private const val ALARM_SIZE_TEXT = "ALARM_SIZE_TEXT"
 private const val BATTERY_SIZE_TEXT = "BATTERY_SIZE_TEXT"
 private const val TEXT_SIZE_SETTINGS = "TEXT_SIZE_SETTINGS"
 private const val TEXT_PADDING_SIZE = "TEXT_PADDING_SIZE"
@@ -256,6 +259,16 @@ class Prefs(val context: Context) {
         }
         set(value) = prefs.edit().putString(DATE_ALIGNMENT, value.toString()).apply()
 
+    var alarmAlignment: Gravity
+        get() {
+            val string = prefs.getString(
+                ALARM_ALIGNMENT,
+                Gravity.Left.name
+            ).toString()
+            return Gravity.valueOf(string)
+        }
+        set(value) = prefs.edit().putString(ALARM_ALIGNMENT, value.toString()).apply()
+
     var drawerAlignment: Gravity
         get() {
             val string = prefs.getString(
@@ -270,6 +283,10 @@ class Prefs(val context: Context) {
         get() = prefs.getBoolean(STATUS_BAR, false)
         set(value) = prefs.edit().putBoolean(STATUS_BAR, value).apply()
 
+    var showDate: Boolean
+        get() = prefs.getBoolean(SHOW_DATE, true)
+        set(value) = prefs.edit().putBoolean(SHOW_DATE, value).apply()
+
     var showClock: Boolean
         get() = prefs.getBoolean(SHOW_CLOCK, true)
         set(value) = prefs.edit().putBoolean(SHOW_CLOCK, value).apply()
@@ -278,9 +295,9 @@ class Prefs(val context: Context) {
         get() = prefs.getBoolean(SHOW_CLOCK_FORMAT, true)
         set(value) = prefs.edit().putBoolean(SHOW_CLOCK_FORMAT, value).apply()
 
-    var showDate: Boolean
-        get() = prefs.getBoolean(SHOW_DATE, true)
-        set(value) = prefs.edit().putBoolean(SHOW_DATE, value).apply()
+    var showAlarm: Boolean
+        get() = prefs.getBoolean(SHOW_ALARM, true)
+        set(value) = prefs.edit().putBoolean(SHOW_ALARM, value).apply()
 
     var showBattery: Boolean
         get() = prefs.getBoolean(SHOW_BATTERY, true)
@@ -529,6 +546,16 @@ class Prefs(val context: Context) {
         }
         set(value) = prefs.edit().putInt(APP_SIZE_TEXT, value).apply()
 
+    var dateSize: Int
+        get() {
+            return try {
+                prefs.getInt(DATE_SIZE_TEXT, 22)
+            } catch (_: Exception) {
+                22
+            }
+        }
+        set(value) = prefs.edit().putInt(DATE_SIZE_TEXT, value).apply()
+
     var clockSize: Int
         get() {
             return try {
@@ -539,15 +566,16 @@ class Prefs(val context: Context) {
         }
         set(value) = prefs.edit().putInt(CLOCK_SIZE_TEXT, value).apply()
 
-    var dateSize: Int
+    var alarmSize: Int
         get() {
             return try {
-                prefs.getInt(DATE_SIZE_TEXT, 22)
+                prefs.getInt(ALARM_SIZE_TEXT, 20)
             } catch (_: Exception) {
-                22
+                20
             }
         }
-        set(value) = prefs.edit().putInt(DATE_SIZE_TEXT, value).apply()
+        set(value) = prefs.edit().putInt(ALARM_SIZE_TEXT, value).apply()
+
 
     var batterySize: Int
         get() {

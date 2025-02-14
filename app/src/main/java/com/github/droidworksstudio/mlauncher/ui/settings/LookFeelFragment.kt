@@ -83,8 +83,9 @@ class LookFeelFragment : Fragment() {
     @Composable
     private fun Settings(fontSize: TextUnit = TextUnit.Unspecified) {
         var selectedAppSize by remember { mutableIntStateOf(prefs.appSize) }
-        var selectedClockSize by remember { mutableIntStateOf(prefs.clockSize) }
         var selectedDateSize by remember { mutableIntStateOf(prefs.dateSize) }
+        var selectedClockSize by remember { mutableIntStateOf(prefs.clockSize) }
+        var selectedAlarmSize by remember { mutableIntStateOf(prefs.alarmSize) }
         var selectedBatterySize by remember { mutableIntStateOf(prefs.batterySize) }
 
         var selectedPaddingSize by remember { mutableIntStateOf(prefs.textPaddingSize) }
@@ -102,12 +103,14 @@ class LookFeelFragment : Fragment() {
         var selectedHomeAlignment by remember { mutableStateOf(prefs.homeAlignment) }
         var selectedClockAlignment by remember { mutableStateOf(prefs.clockAlignment) }
         var selectedDateAlignment by remember { mutableStateOf(prefs.dateAlignment) }
+        var selectedAlarmAlignment by remember { mutableStateOf(prefs.alarmAlignment) }
         var selectedDrawAlignment by remember { mutableStateOf(prefs.drawerAlignment) }
 
         var selectedBackgroundColor by remember { mutableIntStateOf(prefs.backgroundColor) }
         var selectedAppColor by remember { mutableIntStateOf(prefs.appColor) }
-        var selectedClockColor by remember { mutableIntStateOf(prefs.clockColor) }
         var selectedDateColor by remember { mutableIntStateOf(prefs.dateColor) }
+        var selectedClockColor by remember { mutableIntStateOf(prefs.clockColor) }
+        var selectedAlarmColor by remember { mutableIntStateOf(prefs.alarmClockColor) }
         var selectedBatteryColor by remember { mutableIntStateOf(prefs.batteryColor) }
 
         val fs = remember { mutableStateOf(fontSize) }
@@ -156,6 +159,25 @@ class LookFeelFragment : Fragment() {
             )
 
             SettingsSelect(
+                title = stringResource(R.string.date_text_size),
+                option = selectedDateSize.toString(),
+                fontSize = titleFontSize,
+                onClick = {
+                    dialogBuilder.showSliderDialog(
+                        context = requireContext(),
+                        title = getString(R.string.date_text_size),
+                        minValue = Constants.MIN_CLOCK_DATE_SIZE,
+                        maxValue = Constants.MAX_CLOCK_DATE_SIZE,
+                        currentValue = prefs.dateSize,
+                        onValueSelected = { newDateSize ->
+                            selectedDateSize = newDateSize // Update state
+                            prefs.dateSize = newDateSize // Persist selection in preferences
+                        }
+                    )
+                }
+            )
+
+            SettingsSelect(
                 title = stringResource(R.string.clock_text_size),
                 option = selectedClockSize.toString(),
                 fontSize = titleFontSize,
@@ -175,19 +197,19 @@ class LookFeelFragment : Fragment() {
             )
 
             SettingsSelect(
-                title = stringResource(R.string.date_text_size),
-                option = selectedDateSize.toString(),
+                title = stringResource(R.string.alarm_text_size),
+                option = selectedAlarmSize.toString(),
                 fontSize = titleFontSize,
                 onClick = {
                     dialogBuilder.showSliderDialog(
                         context = requireContext(),
-                        title = getString(R.string.date_text_size),
-                        minValue = Constants.MIN_CLOCK_DATE_SIZE,
-                        maxValue = Constants.MAX_CLOCK_DATE_SIZE,
-                        currentValue = prefs.dateSize,
+                        title = getString(R.string.alarm_text_size),
+                        minValue = Constants.MIN_ALARM_SIZE,
+                        maxValue = Constants.MAX_ALARM_SIZE,
+                        currentValue = prefs.alarmSize,
                         onValueSelected = { newDateSize ->
-                            selectedDateSize = newDateSize // Update state
-                            prefs.dateSize = newDateSize // Persist selection in preferences
+                            selectedAlarmSize = newDateSize // Update state
+                            prefs.alarmSize = newDateSize // Persist selection in preferences
                         }
                     )
                 }
@@ -360,24 +382,6 @@ class LookFeelFragment : Fragment() {
             )
 
             SettingsSelect(
-                title = stringResource(R.string.date_alignment),
-                option = selectedDateAlignment.string(),
-                fontSize = titleFontSize,
-                onClick = {
-                    dialogBuilder.showSingleChoiceDialog(
-                        context = requireContext(),
-                        options = Constants.Gravity.entries.toTypedArray(),
-                        titleResId = R.string.clock_alignment,
-                        onItemSelected = { newGravity ->
-                            selectedDateAlignment = newGravity // Update state
-                            prefs.dateAlignment = newGravity // Persist selection in preferences
-                            viewModel.updateDateAlignment(newGravity)
-                        }
-                    )
-                }
-            )
-
-            SettingsSelect(
                 title = stringResource(R.string.clock_alignment),
                 option = selectedClockAlignment.string(),
                 fontSize = titleFontSize,
@@ -390,6 +394,42 @@ class LookFeelFragment : Fragment() {
                             selectedClockAlignment = newGravity // Update state
                             prefs.clockAlignment = newGravity // Persist selection in preferences
                             viewModel.updateClockAlignment(newGravity)
+                        }
+                    )
+                }
+            )
+
+            SettingsSelect(
+                title = stringResource(R.string.date_alignment),
+                option = selectedDateAlignment.string(),
+                fontSize = titleFontSize,
+                onClick = {
+                    dialogBuilder.showSingleChoiceDialog(
+                        context = requireContext(),
+                        options = Constants.Gravity.entries.toTypedArray(),
+                        titleResId = R.string.date_alignment,
+                        onItemSelected = { newGravity ->
+                            selectedDateAlignment = newGravity // Update state
+                            prefs.dateAlignment = newGravity // Persist selection in preferences
+                            viewModel.updateDateAlignment(newGravity)
+                        }
+                    )
+                }
+            )
+
+            SettingsSelect(
+                title = stringResource(R.string.alarm_alignment),
+                option = selectedAlarmAlignment.string(),
+                fontSize = titleFontSize,
+                onClick = {
+                    dialogBuilder.showSingleChoiceDialog(
+                        context = requireContext(),
+                        options = Constants.Gravity.entries.toTypedArray(),
+                        titleResId = R.string.alarm_alignment,
+                        onItemSelected = { newGravity ->
+                            selectedAlarmAlignment = newGravity // Update state
+                            prefs.alarmAlignment = newGravity // Persist selection in preferences
+                            viewModel.updateAlarmAlignment(newGravity)
                         }
                     )
                 }
@@ -472,6 +512,24 @@ class LookFeelFragment : Fragment() {
                 }
             )
 
+            val hexDateColor = String.format("#%06X", (0xFFFFFF and selectedDateColor))
+            SettingsSelect(
+                title = stringResource(R.string.date_color),
+                option = hexDateColor,
+                fontSize = titleFontSize,
+                fontColor = Color(parseColor(hexDateColor)),
+                onClick = {
+                    dialogBuilder.showColorPickerDialog(
+                        context = requireContext(),
+                        color = selectedDateColor,
+                        titleResId = R.string.date_color,
+                        onItemSelected = { selectedColor ->
+                            selectedDateColor = selectedColor
+                            prefs.dateColor = selectedColor
+                        })
+                }
+            )
+
             val hexClockColor = String.format("#%06X", (0xFFFFFF and selectedClockColor))
             SettingsSelect(
                 title = stringResource(R.string.clock_color),
@@ -490,20 +548,20 @@ class LookFeelFragment : Fragment() {
                 }
             )
 
-            val hexDateColor = String.format("#%06X", (0xFFFFFF and selectedDateColor))
+            val hexAlarmColor = String.format("#%06X", (0xFFFFFF and selectedAlarmColor))
             SettingsSelect(
-                title = stringResource(R.string.date_color),
-                option = hexDateColor,
+                title = stringResource(R.string.alarm_color),
+                option = hexAlarmColor,
                 fontSize = titleFontSize,
-                fontColor = Color(parseColor(hexDateColor)),
+                fontColor = Color(parseColor(hexAlarmColor)),
                 onClick = {
                     dialogBuilder.showColorPickerDialog(
                         context = requireContext(),
-                        color = selectedDateColor,
-                        titleResId = R.string.date_color,
+                        color = selectedAlarmColor,
+                        titleResId = R.string.alarm_color,
                         onItemSelected = { selectedColor ->
-                            selectedDateColor = selectedColor
-                            prefs.dateColor = selectedColor
+                            selectedAlarmColor = selectedColor
+                            prefs.alarmClockColor = selectedColor
                         })
                 }
             )

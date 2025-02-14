@@ -72,7 +72,6 @@ class DialogBuilder(val context: Context, val activity: Activity) {
         prefs.clear()
 
         AppReloader.restartApp(context)
-
     }
 
     var sliderDialog: AlertDialog? = null

@@ -7,4 +7,5 @@
     <dimen name="home_app_padding_vertical">6dp</dimen>
     <dimen name="time_size">32sp</dimen>
     <dimen name="date_size">14sp</dimen>
+    <dimen name="alarm_size">12sp</dimen>
 </resources>

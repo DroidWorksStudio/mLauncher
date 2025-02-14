@@ -37,9 +37,8 @@
                 android:layout_gravity="end"
                 android:textSize="16sp" />
 
-            <!-- Clock and calendar-->
             <LinearLayout
-                android:id="@+id/dateLayout"
+                android:id="@+id/timeDateLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="1dp"
@@ -53,15 +52,6 @@
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/time_size"
                     tools:text="02:34" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/timeLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="1dp"
-                android:orientation="vertical"
-                tools:visibility="visible">
 
                 <TextClock
                     android:id="@+id/date"
@@ -70,6 +60,14 @@
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/date_size"
                     tools:text="Thu, 30 Dec" />
+
+                <TextView
+                    android:id="@+id/alarm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/alarm_size"
+                    android:visibility="gone" />
             </LinearLayout>
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.appcompat.widget.LinearLayoutCompat>

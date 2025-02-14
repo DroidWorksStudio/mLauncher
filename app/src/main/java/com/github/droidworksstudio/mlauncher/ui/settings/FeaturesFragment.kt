@@ -25,7 +25,6 @@ import androidx.compose.ui.unit.isSpecified
 import androidx.compose.ui.unit.sp
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.github.droidworksstudio.common.isBiometricEnabled
 import com.github.droidworksstudio.mlauncher.MainViewModel
@@ -46,8 +45,6 @@ import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.PageH
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsSelect
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsSwitch
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsTitle
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 
 class FeaturesFragment : Fragment() {
 
@@ -96,9 +93,10 @@ class FeaturesFragment : Fragment() {
         var selectedHomePagesNum by remember { mutableIntStateOf(prefs.homePagesNum) }
         var toggledHomePager by remember { mutableStateOf(prefs.homePager) }
 
+        var toggledShowDate by remember { mutableStateOf(prefs.showDate) }
         var toggledShowClock by remember { mutableStateOf(prefs.showClock) }
         var toggledShowClockFormat by remember { mutableStateOf(prefs.showClockFormat) }
-        var toggledShowDate by remember { mutableStateOf(prefs.showDate) }
+        var toggledShowAlarm by remember { mutableStateOf(prefs.showAlarm) }
         var toggledShowBattery by remember { mutableStateOf(prefs.showBattery) }
         var toggledShowBatteryIcon by remember { mutableStateOf(prefs.showBatteryIcon) }
 
@@ -185,10 +183,7 @@ class FeaturesFragment : Fragment() {
                         onItemSelected = { newFontFamily ->
                             selectedFontFamily = newFontFamily // Update state
                             prefs.fontFamily = newFontFamily // Persist selection in preferences
-                            lifecycleScope.launch {
-                                delay(500)
-                                AppReloader.restartApp(requireContext())
-                            }
+                            AppReloader.restartApp(requireContext())
                         }
                     )
                 }
@@ -350,6 +345,17 @@ class FeaturesFragment : Fragment() {
             )
 
             SettingsSwitch(
+                text = stringResource(R.string.show_date),
+                fontSize = titleFontSize,
+                defaultState = toggledShowDate,
+                onCheckedChange = {
+                    toggledShowDate = !prefs.showDate
+                    prefs.showDate = toggledShowDate
+                    viewModel.setShowDate(prefs.showDate)
+                }
+            )
+
+            SettingsSwitch(
                 text = stringResource(R.string.show_clock),
                 fontSize = titleFontSize,
                 defaultState = toggledShowClock,
@@ -371,13 +377,13 @@ class FeaturesFragment : Fragment() {
             )
 
             SettingsSwitch(
-                text = stringResource(R.string.show_date),
+                text = stringResource(R.string.show_alarm),
                 fontSize = titleFontSize,
-                defaultState = toggledShowDate,
+                defaultState = toggledShowAlarm,
                 onCheckedChange = {
-                    toggledShowDate = !prefs.showDate
-                    prefs.showDate = toggledShowDate
-                    viewModel.setShowDate(prefs.showDate)
+                    toggledShowAlarm = !prefs.showAlarm
+                    prefs.showAlarm = toggledShowAlarm
+                    viewModel.setShowAlarm(prefs.showAlarm)
                 }
             )
 

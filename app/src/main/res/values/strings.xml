@@ -50,6 +50,7 @@
     <string name="show_clock">Show Clock</string>
     <string name="show_clock_format">Show Format (AM/PM)</string>
     <string name="show_date">Show Date</string>
+    <string name="show_alarm">Show Alarm</string>
     <string name="show_battery">Show Battery</string>
     <string name="show_battery_icon">Show Battery Icon</string>
     <string name="show_total_screen_time">Show Total Screen Time</string>
@@ -61,8 +62,9 @@
     <string name="text_size_adjustments">Text &amp; Size Adjustments</string>
 
     <string name="app_text_size">App Text Size</string>
-    <string name="clock_text_size">Clock Text Size</string>
     <string name="date_text_size">Date Text Size</string>
+    <string name="clock_text_size">Clock Text Size</string>
+    <string name="alarm_text_size">Alarm Text Size</string>
     <string name="battery_text_size">Battery Text Size</string>
 
     <string name="layout_positioning">Layout &amp; Positioning</string>
@@ -84,6 +86,7 @@
 
     <string name="date_alignment">Date</string>
     <string name="clock_alignment">Clock</string>
+    <string name="alarm_alignment">Alarm</string>
     <string name="home_alignment">Home Apps</string>
     <string name="drawer_alignment">Drawer Apps</string>
 
@@ -93,6 +96,7 @@
     <string name="app_color">Apps</string>
     <string name="clock_color">Clock</string>
     <string name="date_color">Date</string>
+    <string name="alarm_color">Alarm</string>
     <string name="battery_color">Battery</string>
 
     <!-- Strings used for gestures settings -->
