@@ -33,9 +33,10 @@
     <string name="pages_on_home_screen">Numer stron</string>
     <string name="enable_home_pager">Włącz pager główny</string>
     <string name="battery_date_time">Bateria &amp; Data/Godzina</string>
-    <string name="show_time">Pokaż czas</string>
-    <string name="show_time_format">Format czasu (AM/PM)</string>
+    <string name="show_clock">Pokaż zegar</string>
+    <string name="show_clock_format">Format pokazu (AM/PM)</string>
     <string name="show_date">Pokaż datę</string>
+    <string name="show_alarm">Pokaż alarm</string>
     <string name="show_battery">Pokaż baterię</string>
     <string name="show_battery_icon">Pokaż ikonę baterii</string>
     <string name="show_total_screen_time">Pokaż całkowity czas ekranowy</string>
@@ -43,8 +44,9 @@
     <string name="look_feel_settings_title">Wygląd &amp; Czuć</string>
     <string name="text_size_adjustments">Tekst &amp; Dostosowanie rozmiaru</string>
     <string name="app_text_size">Rozmiar tekstu aplikacji</string>
-    <string name="clock_text_size">Rozmiar tekstu zegara</string>
     <string name="date_text_size">Rozmiar tekstu daty</string>
+    <string name="clock_text_size">Rozmiar tekstu zegara</string>
+    <string name="alarm_text_size">Rozmiar tekstu alarmu</string>
     <string name="battery_text_size">Rozmiar tekstu baterii</string>
     <string name="layout_positioning">Układ &amp; Pozycjonowanie</string>
     <string name="app_padding_size">Rozmiar wypełnienia</string>
@@ -60,9 +62,16 @@
     <string name="element_alignment">Wyrównanie elementów</string>
     <string name="date_alignment">Data</string>
     <string name="clock_alignment">Zegar</string>
+    <string name="alarm_alignment">Alarm</string>
     <string name="home_alignment">Aplikacje domowe</string>
     <string name="drawer_alignment">Aplikacje szufladowe</string>
     <string name="element_colors">Kolory elementów</string>
+    <string name="background_color">Tło</string>
+    <string name="app_color">Aplikacje</string>
+    <string name="clock_color">Zegar</string>
+    <string name="date_color">Data</string>
+    <string name="alarm_color">Alarm</string>
+    <string name="battery_color">Bateria</string>
     <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">Gesty</string>
     <string name="tap_click_actions">Akcje dotknięcia/kliknięcia</string>
@@ -145,6 +154,7 @@
     <string name="dark">Ciemny</string>
     <string name="light">Światło</string>
     <string name="system_default">System</string>
+    <string name="restart_launcher">Uruchom ponownie program uruchamiający</string>
     <string name="delete">Usuwać</string>
     <string name="hide">Ukryj</string>
     <string name="show">Pokaż</string>

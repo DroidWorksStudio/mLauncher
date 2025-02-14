@@ -33,9 +33,10 @@
     <string name="pages_on_home_screen">페이지 수</string>
     <string name="enable_home_pager">홈 호출기 활성화</string>
     <string name="battery_date_time">배터리 &amp; 날짜/시간</string>
-    <string name="show_time">Show time</string>
-    <string name="show_time_format">시간 형식(AM/PM)</string>
+    <string name="show_clock">시계 표시</string>
+    <string name="show_clock_format">쇼 형식(오전/오후)</string>
     <string name="show_date">Show date</string>
+    <string name="show_alarm">알람 표시</string>
     <string name="show_battery">배터리 표시</string>
     <string name="show_battery_icon">배터리 아이콘 표시</string>
     <string name="show_total_screen_time">총 화면 시간 표시</string>
@@ -43,8 +44,9 @@
     <string name="look_feel_settings_title">보세요 &amp; 느껴보세요</string>
     <string name="text_size_adjustments">텍스트 &amp; 크기 조정</string>
     <string name="app_text_size">앱 텍스트 크기</string>
-    <string name="clock_text_size">시계 텍스트 크기</string>
     <string name="date_text_size">날짜 텍스트 크기</string>
+    <string name="clock_text_size">시계 텍스트 크기</string>
+    <string name="alarm_text_size">알람 텍스트 크기</string>
     <string name="battery_text_size">배터리 텍스트 크기</string>
     <string name="layout_positioning">레이아웃 &amp; 위치 지정</string>
     <string name="app_padding_size">패딩 크기</string>
@@ -60,9 +62,16 @@
     <string name="element_alignment">요소 정렬</string>
     <string name="date_alignment">날짜</string>
     <string name="clock_alignment">시계</string>
+    <string name="alarm_alignment">경보</string>
     <string name="home_alignment">홈 앱</string>
     <string name="drawer_alignment">서랍 앱</string>
     <string name="element_colors">요소 색상</string>
+    <string name="background_color">배경</string>
+    <string name="app_color">앱</string>
+    <string name="clock_color">시계</string>
+    <string name="date_color">날짜</string>
+    <string name="alarm_color">경보</string>
+    <string name="battery_color">배터리</string>
     <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">Gestures</string>
     <string name="tap_click_actions">탭/클릭 동작</string>
@@ -145,6 +154,7 @@
     <string name="dark">Dark</string>
     <string name="light">Light</string>
     <string name="system_default">System</string>
+    <string name="restart_launcher">런처 재시작</string>
     <string name="delete">삭제</string>
     <string name="hide">Hide</string>
     <string name="show">Show</string>

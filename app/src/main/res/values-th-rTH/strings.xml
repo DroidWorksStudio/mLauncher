@@ -33,9 +33,10 @@
     <string name="pages_on_home_screen">เลขหน้า</string>
     <string name="enable_home_pager">เปิดใช้งานโฮมเพจเจอร์</string>
     <string name="battery_date_time">แบตเตอรี่ &amp; วันที่/เวลา</string>
-    <string name="show_time">เวลาแสดง</string>
-    <string name="show_time_format">รูปแบบเวลา (AM/PM)</string>
+    <string name="show_clock">แสดงนาฬิกา</string>
+    <string name="show_clock_format">รูปแบบการแสดง (AM/PM)</string>
     <string name="show_date">แสดงวันที่</string>
+    <string name="show_alarm">แสดงสัญญาณเตือน</string>
     <string name="show_battery">แสดงแบตเตอรี่</string>
     <string name="show_battery_icon">แสดงไอคอนแบตเตอรี่</string>
     <string name="show_total_screen_time">แสดงเวลาหน้าจอทั้งหมด</string>
@@ -43,8 +44,9 @@
     <string name="look_feel_settings_title">มอง &amp; รู้สึก</string>
     <string name="text_size_adjustments">ข้อความ &amp; ปรับขนาด</string>
     <string name="app_text_size">ขนาดข้อความของแอป</string>
-    <string name="clock_text_size">ขนาดข้อความนาฬิกา</string>
     <string name="date_text_size">ขนาดข้อความวันที่</string>
+    <string name="clock_text_size">ขนาดข้อความนาฬิกา</string>
+    <string name="alarm_text_size">ขนาดข้อความแจ้งเตือน</string>
     <string name="battery_text_size">ขนาดข้อความแบตเตอรี่</string>
     <string name="layout_positioning">เค้าโครง &amp; การจัดตำแหน่ง</string>
     <string name="app_padding_size">ขนาดช่องว่างภายใน</string>
@@ -60,9 +62,16 @@
     <string name="element_alignment">การจัดเรียงองค์ประกอบ</string>
     <string name="date_alignment">วันที่</string>
     <string name="clock_alignment">นาฬิกา</string>
+    <string name="alarm_alignment">เตือน</string>
     <string name="home_alignment">แอปพลิเคชั่นสำหรับบ้าน</string>
     <string name="drawer_alignment">แอปลิ้นชัก</string>
     <string name="element_colors">สีธาตุ</string>
+    <string name="background_color">พื้นหลัง</string>
+    <string name="app_color">แอปพลิเคชั่น</string>
+    <string name="clock_color">นาฬิกา</string>
+    <string name="date_color">วันที่</string>
+    <string name="alarm_color">เตือน</string>
+    <string name="battery_color">แบตเตอรี่</string>
     <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">ท่าทาง</string>
     <string name="tap_click_actions">การแตะ/คลิกการกระทำ</string>
@@ -145,6 +154,7 @@
     <string name="dark">มืด</string>
     <string name="light">แสงสว่าง</string>
     <string name="system_default">ระบบ</string>
+    <string name="restart_launcher">รีสตาร์ทตัวเรียกใช้งาน</string>
     <string name="delete">ลบ</string>
     <string name="hide">ซ่อน</string>
     <string name="show">แสดง</string>
