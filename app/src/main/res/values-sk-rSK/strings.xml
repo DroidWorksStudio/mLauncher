@@ -36,7 +36,7 @@
     <string name="show_clock">Zobraziť hodiny</string>
     <string name="show_clock_format">Zobraziť formát (AM/PM)</string>
     <string name="show_date">Zobraziť dátum</string>
-    <string name="show_alarm">Show Alarm</string>
+    <string name="show_alarm">Zobraziť budík</string>
     <string name="show_battery">Zobraziť batériu</string>
     <string name="show_battery_icon">Zobraziť ikonu batérie</string>
     <string name="show_total_screen_time">Zobraziť celkový čas obrazovky</string>
@@ -46,7 +46,7 @@
     <string name="app_text_size">Veľkosť textu aplikácie</string>
     <string name="date_text_size">Veľkosť textu dátumu</string>
     <string name="clock_text_size">Veľkosť textu hodín</string>
-    <string name="alarm_text_size">Alarm Text Size</string>
+    <string name="alarm_text_size">Veľkosť textu budíka</string>
     <string name="battery_text_size">Veľkosť textu batérie</string>
     <string name="layout_positioning">Rozloženie &amp; Umiestnenie</string>
     <string name="app_padding_size">Veľkosť odsadenia</string>
