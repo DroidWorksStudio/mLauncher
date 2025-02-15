@@ -37,7 +37,7 @@
     <string name="show_clock_format">Zobraziť formát (AM/PM)</string>
     <string name="show_date">Zobraziť dátum</string>
     <string name="show_alarm">Zobraziť budík</string>
-    <string name="show_daily_word">Show Daily Word</string>
+    <string name="show_daily_word">Zobraziť denné slovo</string>
     <string name="show_battery">Zobraziť batériu</string>
     <string name="show_battery_icon">Zobraziť ikonu batérie</string>
     <string name="show_total_screen_time">Zobraziť celkový čas obrazovky</string>
@@ -48,7 +48,7 @@
     <string name="date_text_size">Veľkosť textu dátumu</string>
     <string name="clock_text_size">Veľkosť textu hodín</string>
     <string name="alarm_text_size">Veľkosť textu budíka</string>
-    <string name="daily_word_text_size">Daily Word Text Size</string>
+    <string name="daily_word_text_size">Veľkosť textu denného slova</string>
     <string name="battery_text_size">Veľkosť textu batérie</string>
     <string name="layout_positioning">Rozloženie &amp; Umiestnenie</string>
     <string name="app_padding_size">Veľkosť odsadenia</string>
@@ -65,7 +65,7 @@
     <string name="date_alignment">Dátum</string>
     <string name="clock_alignment">Hodiny</string>
     <string name="alarm_alignment">Alarm</string>
-    <string name="daily_word_alignment">Daily Word</string>
+    <string name="daily_word_alignment">Slovo na každý deň</string>
     <string name="home_alignment">Domáce aplikácie</string>
     <string name="drawer_alignment">Zásuvkové aplikácie</string>
     <string name="element_colors">Farby prvkov</string>
@@ -74,7 +74,7 @@
     <string name="clock_color">Hodiny</string>
     <string name="date_color">Dátum</string>
     <string name="alarm_color">Alarm</string>
-    <string name="daily_word_color">Daily Word</string>
+    <string name="daily_word_color">Slovo na každý deň</string>
     <string name="battery_color">Batéria</string>
     <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">Gestá</string>
