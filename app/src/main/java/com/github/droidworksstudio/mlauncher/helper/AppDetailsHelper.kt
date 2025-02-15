@@ -5,6 +5,8 @@ import android.app.usage.UsageStatsManager
 import android.content.Context
 import android.content.pm.ApplicationInfo
 import android.util.Log
+import com.github.droidworksstudio.mlauncher.R
+import org.xmlpull.v1.XmlPullParser
 import java.util.Calendar
 
 object AppDetailsHelper {
@@ -23,49 +25,59 @@ object AppDetailsHelper {
 
     @SuppressLint("NewApi")
     fun getUsageStats(context: Context, packageName: String): Long {
+        val blacklist = parseBlacklistXML(context)
+        val pm = context.packageManager
+
         // Set calendar to midnight of today (start of the day)
-        val calendar = Calendar.getInstance().apply {
+        val startTime = Calendar.getInstance().apply {
             set(Calendar.HOUR_OF_DAY, 0)
             set(Calendar.MINUTE, 0)
             set(Calendar.SECOND, 0)
-            set(Calendar.MILLISECOND, 100)
-        }
+            set(Calendar.MILLISECOND, 0)
+        }.timeInMillis
 
-        val startTime = calendar.timeInMillis // Midnight today
-        val endTime = System.currentTimeMillis() // Current time
+        val endTime = System.currentTimeMillis()
 
         // Get UsageStatsManager system service
         val usageStatsManager = context.getSystemService(Context.USAGE_STATS_SERVICE) as? UsageStatsManager
+            ?: return 0L // Return 0 if service is unavailable
 
-        // Query usage stats for the specific time range (startTime to endTime)
-        val usageStatsList = usageStatsManager?.queryUsageStats(UsageStatsManager.INTERVAL_DAILY, startTime, endTime)
+        val usageStatsList = usageStatsManager.queryUsageStats(UsageStatsManager.INTERVAL_DAILY, startTime, endTime)
+            ?: return 0L // Return 0 if no data is available
 
         var totalUsageTime: Long = 0
 
-        // Iterate through the stats to get the specific package usage
-        usageStatsList?.let { statsList ->
-            for (usageStats in statsList) {
-                if (usageStats.packageName == packageName) {
-                    // Use totalTimeInForeground for actual usage time
-                    if (usageStats.totalTimeVisible > 0) {
-                        totalUsageTime += usageStats.totalTimeVisible
-                    }
-                }
-            }
-        }
+        for (usageStats in usageStatsList) {
+            val packageNameToCheck = usageStats.packageName
 
+            // Skip if not the target package, if blacklisted, or if there's no recorded usage
+            if (packageNameToCheck != packageName ||
+                blacklist.contains(packageNameToCheck) ||
+                usageStats.totalTimeVisible <= 0
+            ) {
+                continue
+            }
+
+            // Exclude system services (apps without a launcher activity)
+            if (pm.getLaunchIntentForPackage(packageNameToCheck) == null) {
+                continue
+            }
+
+            totalUsageTime += usageStats.totalTimeVisible
+        }
         return totalUsageTime
     }
 
 
     @SuppressLint("NewApi")
     fun getTotalScreenTime(context: Context): Long {
+        val blacklist = parseBlacklistXML(context)
         // Get the start of the current day (midnight)
         val calendar = Calendar.getInstance().apply {
             set(Calendar.HOUR_OF_DAY, 0)
             set(Calendar.MINUTE, 0)
             set(Calendar.SECOND, 0)
-            set(Calendar.MILLISECOND, 100)
+            set(Calendar.MILLISECOND, 0)
         }
 
         val startTime = calendar.timeInMillis
@@ -83,19 +95,45 @@ object AppDetailsHelper {
         }
 
         // Calculate the total screen time for all apps (excluding the current app)
-        var totalScreenTime: Long = 0
+        val pm = context.packageManager
         val packageName = context.packageName
+        var totalScreenTime: Long = 0
 
         for (usageStats in usageStatsList) {
-            if (usageStats.packageName != packageName) {
-                // Only consider apps with non-zero foreground time
-                if (usageStats.totalTimeVisible > 0) {
-                    totalScreenTime += usageStats.totalTimeVisible
-                }
+            val packageNameToCheck = usageStats.packageName
+
+            // Skip current app, blacklisted apps, and apps without usage time
+            if (packageNameToCheck == packageName ||
+                blacklist.contains(packageNameToCheck) ||
+                usageStats.totalTimeVisible <= 0
+            ) continue
+
+            // Exclude system services (apps without a launcher activity)
+            if (pm.getLaunchIntentForPackage(packageNameToCheck) == null) {
+                continue
             }
+
+            totalScreenTime += usageStats.totalTimeVisible
         }
 
         return totalScreenTime
+    }
+
+    private fun parseBlacklistXML(context: Context): List<String> {
+        val packageNames = mutableListOf<String>()
+
+        // Obtain an XmlPullParser for the blacklist.xml file
+        context.resources.getXml(R.xml.blacklist).use { parser ->
+            while (parser.eventType != XmlPullParser.END_DOCUMENT) {
+                if (parser.eventType == XmlPullParser.START_TAG && parser.name == "app") {
+                    val packageName = parser.getAttributeValue(null, "packageName")
+                    packageNames.add(packageName)
+                }
+                parser.next()
+            }
+        }
+
+        return packageNames
     }
 
     fun formatMillisToHMS(millis: Long): String {
