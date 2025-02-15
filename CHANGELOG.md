@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Implemented Enhancements:
 
+- Added motivational word of the day to homescreen - ([d27012d](https://github.com/DroidWorksStudio/mLauncher/commit/d27012d7bed9cb99828f62a50e63a6410b2defde))
 - Added next alarm clock to home screen. - ([0fcfddb](https://github.com/DroidWorksStudio/mLauncher/commit/0fcfddbbd155450e6ea4efb48f9415a6f40c3edd))
 - Added the ability to change colors on the homescreen. - ([b34878c](https://github.com/DroidWorksStudio/mLauncher/commit/b34878cd9bb25eb4fdf539793d700adfebb92637))
 
