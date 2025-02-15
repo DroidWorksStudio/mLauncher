@@ -12,6 +12,9 @@ import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.LauncherApps
 import android.content.res.Resources
+import android.graphics.ColorFilter
+import android.graphics.PorterDuff
+import android.graphics.PorterDuffColorFilter
 import android.net.Uri
 import android.os.Build
 import android.os.Process
@@ -38,6 +41,7 @@ import com.github.droidworksstudio.mlauncher.data.Prefs
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.text.SimpleDateFormat
+import java.util.Calendar
 import java.util.Date
 import java.util.Locale
 import kotlin.math.pow
@@ -213,7 +217,11 @@ fun getNextAlarm(context: Context, prefs: Prefs): CharSequence {
         context.resources.displayMetrics
     ).toInt()
 
-    drawable?.setBounds(0, 0, fontSize, fontSize)
+    drawable?.apply {
+        setBounds(0, 0, fontSize, fontSize)
+        val colorFilterColor: ColorFilter = PorterDuffColorFilter(prefs.alarmClockColor, PorterDuff.Mode.SRC_IN)
+        drawable.colorFilter = colorFilterColor
+    }
 
     return SpannableStringBuilder(" ").apply {
         drawable?.let {
@@ -225,6 +233,15 @@ fun getNextAlarm(context: Context, prefs: Prefs): CharSequence {
         }
         append(" $formattedTime")
     }
+}
+
+fun wordOfTheDay(resources: Resources): String {
+    val dailyWordsArray =
+        resources.getStringArray(R.array.word_of_the_day)
+    val dayOfYear = Calendar.getInstance().get(Calendar.DAY_OF_YEAR)
+    val wordIndex =
+        (dayOfYear - 1) % dailyWordsArray.size // Subtracting 1 to align with array indexing
+    return dailyWordsArray[wordIndex]
 }
 
 fun ismlauncherDefault(context: Context): Boolean {

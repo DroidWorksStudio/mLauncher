@@ -65,7 +65,13 @@
                     android:id="@+id/alarm"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:textSize="@dimen/alarm_size"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/daily_word"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:textSize="@dimen/alarm_size"
                     android:visibility="gone" />
             </LinearLayout>

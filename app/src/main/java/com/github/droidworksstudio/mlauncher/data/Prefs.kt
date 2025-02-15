@@ -33,6 +33,7 @@ private const val DRAWER_ALIGNMENT = "DRAWER_ALIGNMENT"
 private const val CLOCK_ALIGNMENT = "CLOCK_ALIGNMENT"
 private const val DATE_ALIGNMENT = "DATE_ALIGNMENT"
 private const val ALARM_ALIGNMENT = "ALARM_ALIGNMENT"
+private const val DAILY_WORD_ALIGNMENT = "DAILY_WORD_ALIGNMENT"
 private const val STATUS_BAR = "STATUS_BAR"
 private const val SHOW_BATTERY = "SHOW_BATTERY"
 private const val SHOW_BATTERY_ICON = "SHOW_BATTERY_ICON"
@@ -42,6 +43,7 @@ private const val SETTINGS_LOCKED = "SETTINGS_LOCKED"
 private const val SHOW_CLOCK = "SHOW_CLOCK"
 private const val SHOW_CLOCK_FORMAT = "SHOW_CLOCK_FORMAT"
 private const val SHOW_ALARM = "SHOW_ALARM"
+private const val SHOW_DAILY_WORD = "SHOW_DAILY_WORD"
 private const val SEARCH_START = "SEARCH_START"
 private const val SWIPE_UP_ACTION = "SWIPE_UP_ACTION"
 private const val SWIPE_DOWN_ACTION = "SWIPE_DOWN_ACTION"
@@ -83,6 +85,7 @@ private const val APP_SIZE_TEXT = "APP_SIZE_TEXT"
 private const val DATE_SIZE_TEXT = "DATE_SIZE_TEXT"
 private const val CLOCK_SIZE_TEXT = "CLOCK_SIZE_TEXT"
 private const val ALARM_SIZE_TEXT = "ALARM_SIZE_TEXT"
+private const val DAILY_WORD_SIZE_TEXT = "DAILY_WORD_SIZE_TEXT"
 private const val BATTERY_SIZE_TEXT = "BATTERY_SIZE_TEXT"
 private const val TEXT_SIZE_SETTINGS = "TEXT_SIZE_SETTINGS"
 private const val TEXT_PADDING_SIZE = "TEXT_PADDING_SIZE"
@@ -90,10 +93,11 @@ private const val TEXT_PADDING_SIZE = "TEXT_PADDING_SIZE"
 private const val BACKGROUND_COLOR = "BACKGROUND_COLOR"
 private const val APP_COLOR = "APP_COLOR"
 private const val DATE_COLOR = "DATE_COLOR"
+private const val ALARM_CLOCK_COLOR = "ALARM_CLOCK_COLOR"
 private const val CLOCK_COLOR = "CLOCK_COLOR"
 private const val BATTERY_COLOR = "BATTERY_COLOR"
 private const val DAILY_WORD_COLOR = "DAILY_WORD_COLOR"
-private const val ALARM_CLOCK_COLOR = "ALARM_CLOCK_COLOR"
+
 
 class Prefs(val context: Context) {
 
@@ -269,6 +273,16 @@ class Prefs(val context: Context) {
         }
         set(value) = prefs.edit().putString(ALARM_ALIGNMENT, value.toString()).apply()
 
+    var dailyWordAlignment: Gravity
+        get() {
+            val string = prefs.getString(
+                DAILY_WORD_ALIGNMENT,
+                Gravity.Left.name
+            ).toString()
+            return Gravity.valueOf(string)
+        }
+        set(value) = prefs.edit().putString(DAILY_WORD_ALIGNMENT, value.toString()).apply()
+
     var drawerAlignment: Gravity
         get() {
             val string = prefs.getString(
@@ -296,8 +310,12 @@ class Prefs(val context: Context) {
         set(value) = prefs.edit().putBoolean(SHOW_CLOCK_FORMAT, value).apply()
 
     var showAlarm: Boolean
-        get() = prefs.getBoolean(SHOW_ALARM, true)
+        get() = prefs.getBoolean(SHOW_ALARM, false)
         set(value) = prefs.edit().putBoolean(SHOW_ALARM, value).apply()
+
+    var showDailyWord: Boolean
+        get() = prefs.getBoolean(SHOW_DAILY_WORD, false)
+        set(value) = prefs.edit().putBoolean(SHOW_DAILY_WORD, value).apply()
 
     var showBattery: Boolean
         get() = prefs.getBoolean(SHOW_BATTERY, true)
@@ -575,6 +593,16 @@ class Prefs(val context: Context) {
             }
         }
         set(value) = prefs.edit().putInt(ALARM_SIZE_TEXT, value).apply()
+
+    var dailyWordSize: Int
+        get() {
+            return try {
+                prefs.getInt(DAILY_WORD_SIZE_TEXT, 20)
+            } catch (_: Exception) {
+                20
+            }
+        }
+        set(value) = prefs.edit().putInt(DAILY_WORD_SIZE_TEXT, value).apply()
 
 
     var batterySize: Int

@@ -71,6 +71,7 @@ import com.github.droidworksstudio.mlauncher.helper.hideStatusBar
 import com.github.droidworksstudio.mlauncher.helper.initActionService
 import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
 import com.github.droidworksstudio.mlauncher.helper.showStatusBar
+import com.github.droidworksstudio.mlauncher.helper.wordOfTheDay
 import com.github.droidworksstudio.mlauncher.listener.OnSwipeTouchListener
 import com.github.droidworksstudio.mlauncher.listener.ViewSwipeTouchListener
 import kotlinx.coroutines.Dispatchers
@@ -105,7 +106,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
         return view
     }
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -158,9 +158,12 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             date.format24Hour = datePattern
 
             alarm.text = getNextAlarm(requireContext(), prefs)
+            dailyWord.text = wordOfTheDay(resources)
 
-            clock.textSize = prefs.clockSize.toFloat()
             date.textSize = prefs.dateSize.toFloat()
+            clock.textSize = prefs.clockSize.toFloat()
+            alarm.textSize = prefs.alarmSize.toFloat()
+            dailyWord.textSize = prefs.dailyWordSize.toFloat()
             battery.textSize = prefs.batterySize.toFloat()
             homeScreenPager.textSize = prefs.appSize.toFloat()
 
@@ -171,6 +174,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             date.setTextColor(prefs.dateColor)
             clock.setTextColor(prefs.clockColor)
             alarm.setTextColor(prefs.alarmClockColor)
+            dailyWord.setTextColor(prefs.dailyWordColor)
             battery.setTextColor(prefs.batteryColor)
             totalScreenTime.setTextColor(prefs.appColor)
             setDefaultLauncher.setTextColor(prefs.appColor)
@@ -321,6 +325,15 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 }
             }
 
+            dailyWordAlignment.observe(viewLifecycleOwner) { dailyWordGravity ->
+                binding.dailyWord.gravity = dailyWordGravity.value()
+
+                // Set layout_gravity to align the TextView (alarm) within the parent (LinearLayout)
+                binding.dailyWord.layoutParams = (binding.dailyWord.layoutParams as LinearLayout.LayoutParams).apply {
+                    gravity = dailyWordGravity.value()
+                }
+            }
+
             homeAppsAlignment.observe(viewLifecycleOwner) { (homeAppsGravity, onBottom) ->
                 val horizontalAlignment = if (onBottom) Gravity.BOTTOM else Gravity.CENTER_VERTICAL
                 binding.homeAppsLayout.gravity = homeAppsGravity.value() or horizontalAlignment
@@ -345,7 +358,9 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             showAlarm.observe(viewLifecycleOwner) {
                 binding.alarm.visibility = if (it) View.VISIBLE else View.GONE
             }
-
+            showDailyWord.observe(viewLifecycleOwner) {
+                binding.dailyWord.visibility = if (it) View.VISIBLE else View.GONE
+            }
         }
     }
 
@@ -935,8 +950,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         pageSelectorIcons.forEach { drawableRes ->
             val drawable = ContextCompat.getDrawable(requireContext(), drawableRes)?.apply {
                 setBounds(0, 0, intrinsicWidth, intrinsicHeight)
-                val colorFilter: ColorFilter = PorterDuffColorFilter(prefs.appColor, PorterDuff.Mode.SRC_IN)
-                setColorFilter(colorFilter)
+                val colorFilterColor: ColorFilter = PorterDuffColorFilter(prefs.appColor, PorterDuff.Mode.SRC_IN)
+                colorFilter = colorFilterColor
             }
             val imageSpan = drawable?.let { ImageSpan(it, ImageSpan.ALIGN_BASELINE) }
 

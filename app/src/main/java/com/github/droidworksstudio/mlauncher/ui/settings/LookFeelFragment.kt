@@ -86,6 +86,7 @@ class LookFeelFragment : Fragment() {
         var selectedDateSize by remember { mutableIntStateOf(prefs.dateSize) }
         var selectedClockSize by remember { mutableIntStateOf(prefs.clockSize) }
         var selectedAlarmSize by remember { mutableIntStateOf(prefs.alarmSize) }
+        var selectedDailyWordSize by remember { mutableIntStateOf(prefs.dailyWordSize) }
         var selectedBatterySize by remember { mutableIntStateOf(prefs.batterySize) }
 
         var selectedPaddingSize by remember { mutableIntStateOf(prefs.textPaddingSize) }
@@ -104,6 +105,7 @@ class LookFeelFragment : Fragment() {
         var selectedClockAlignment by remember { mutableStateOf(prefs.clockAlignment) }
         var selectedDateAlignment by remember { mutableStateOf(prefs.dateAlignment) }
         var selectedAlarmAlignment by remember { mutableStateOf(prefs.alarmAlignment) }
+        var selectedDailyWordAlignment by remember { mutableStateOf(prefs.dailyWordAlignment) }
         var selectedDrawAlignment by remember { mutableStateOf(prefs.drawerAlignment) }
 
         var selectedBackgroundColor by remember { mutableIntStateOf(prefs.backgroundColor) }
@@ -111,6 +113,7 @@ class LookFeelFragment : Fragment() {
         var selectedDateColor by remember { mutableIntStateOf(prefs.dateColor) }
         var selectedClockColor by remember { mutableIntStateOf(prefs.clockColor) }
         var selectedAlarmColor by remember { mutableIntStateOf(prefs.alarmClockColor) }
+        var selectedDailyWordColor by remember { mutableIntStateOf(prefs.dailyWordColor) }
         var selectedBatteryColor by remember { mutableIntStateOf(prefs.batteryColor) }
 
         val fs = remember { mutableStateOf(fontSize) }
@@ -210,6 +213,25 @@ class LookFeelFragment : Fragment() {
                         onValueSelected = { newDateSize ->
                             selectedAlarmSize = newDateSize // Update state
                             prefs.alarmSize = newDateSize // Persist selection in preferences
+                        }
+                    )
+                }
+            )
+
+            SettingsSelect(
+                title = stringResource(R.string.daily_word_text_size),
+                option = selectedDailyWordSize.toString(),
+                fontSize = titleFontSize,
+                onClick = {
+                    dialogBuilder.showSliderDialog(
+                        context = requireContext(),
+                        title = getString(R.string.daily_word_text_size),
+                        minValue = Constants.MIN_DAILY_WORD_SIZE,
+                        maxValue = Constants.MAX_DAILY_WORD_SIZE,
+                        currentValue = prefs.dailyWordSize,
+                        onValueSelected = { newDateSize ->
+                            selectedDailyWordSize = newDateSize // Update state
+                            prefs.dailyWordSize = newDateSize // Persist selection in preferences
                         }
                     )
                 }
@@ -436,6 +458,24 @@ class LookFeelFragment : Fragment() {
             )
 
             SettingsSelect(
+                title = stringResource(R.string.daily_word_alignment),
+                option = selectedDailyWordAlignment.string(),
+                fontSize = titleFontSize,
+                onClick = {
+                    dialogBuilder.showSingleChoiceDialog(
+                        context = requireContext(),
+                        options = Constants.Gravity.entries.toTypedArray(),
+                        titleResId = R.string.daily_word_alignment,
+                        onItemSelected = { newGravity ->
+                            selectedDailyWordAlignment = newGravity // Update state
+                            prefs.dailyWordAlignment = newGravity // Persist selection in preferences
+                            viewModel.updateDailyWordAlignment(newGravity)
+                        }
+                    )
+                }
+            )
+
+            SettingsSelect(
                 title = stringResource(R.string.home_alignment),
                 option = selectedHomeAlignment.string(),
                 fontSize = titleFontSize,
@@ -562,6 +602,24 @@ class LookFeelFragment : Fragment() {
                         onItemSelected = { selectedColor ->
                             selectedAlarmColor = selectedColor
                             prefs.alarmClockColor = selectedColor
+                        })
+                }
+            )
+
+            val hexDailyWordColor = String.format("#%06X", (0xFFFFFF and selectedDailyWordColor))
+            SettingsSelect(
+                title = stringResource(R.string.daily_word_color),
+                option = hexDailyWordColor,
+                fontSize = titleFontSize,
+                fontColor = Color(parseColor(hexDailyWordColor)),
+                onClick = {
+                    dialogBuilder.showColorPickerDialog(
+                        context = requireContext(),
+                        color = selectedDailyWordColor,
+                        titleResId = R.string.daily_word_color,
+                        onItemSelected = { selectedColor ->
+                            selectedDailyWordColor = selectedColor
+                            prefs.dailyWordColor = selectedColor
                         })
                 }
             )

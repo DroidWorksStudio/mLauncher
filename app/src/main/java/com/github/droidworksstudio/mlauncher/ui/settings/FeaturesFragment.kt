@@ -97,6 +97,7 @@ class FeaturesFragment : Fragment() {
         var toggledShowClock by remember { mutableStateOf(prefs.showClock) }
         var toggledShowClockFormat by remember { mutableStateOf(prefs.showClockFormat) }
         var toggledShowAlarm by remember { mutableStateOf(prefs.showAlarm) }
+        var toggledShowDailyWord by remember { mutableStateOf(prefs.showDailyWord) }
         var toggledShowBattery by remember { mutableStateOf(prefs.showBattery) }
         var toggledShowBatteryIcon by remember { mutableStateOf(prefs.showBatteryIcon) }
 
@@ -391,6 +392,17 @@ class FeaturesFragment : Fragment() {
                     toggledShowAlarm = !prefs.showAlarm
                     prefs.showAlarm = toggledShowAlarm
                     viewModel.setShowAlarm(prefs.showAlarm)
+                }
+            )
+
+            SettingsSwitch(
+                text = stringResource(R.string.show_daily_word),
+                fontSize = titleFontSize,
+                defaultState = toggledShowDailyWord,
+                onCheckedChange = {
+                    toggledShowDailyWord = !prefs.showDailyWord
+                    prefs.showDailyWord = toggledShowDailyWord
+                    viewModel.setShowDailyWord(prefs.showDailyWord)
                 }
             )
 

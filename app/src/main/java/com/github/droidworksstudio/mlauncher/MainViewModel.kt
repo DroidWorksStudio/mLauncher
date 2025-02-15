@@ -35,9 +35,11 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     val showDate = MutableLiveData(prefs.showDate)
     val showClock = MutableLiveData(prefs.showClock)
     val showAlarm = MutableLiveData(prefs.showAlarm)
+    val showDailyWord = MutableLiveData(prefs.showDailyWord)
     val clockAlignment = MutableLiveData(prefs.clockAlignment)
     val dateAlignment = MutableLiveData(prefs.dateAlignment)
     val alarmAlignment = MutableLiveData(prefs.alarmAlignment)
+    val dailyWordAlignment = MutableLiveData(prefs.dailyWordAlignment)
     val homeAppsAlignment = MutableLiveData(Pair(prefs.homeAlignment, prefs.homeAlignmentBottom))
     val homeAppsNum = MutableLiveData(prefs.homeAppsNum)
     val homePagesNum = MutableLiveData(prefs.homePagesNum)
@@ -84,6 +86,10 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     fun setShowAlarm(visibility: Boolean) {
         showAlarm.value = visibility
+    }
+
+    fun setShowDailyWord(visibility: Boolean) {
+        showDailyWord.value = visibility
     }
 
     private fun launchApp(appListItem: AppListItem) {
@@ -162,6 +168,10 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     fun updateAlarmAlignment(gravity: Constants.Gravity) {
         alarmAlignment.value = gravity
+    }
+
+    fun updateDailyWordAlignment(gravity: Constants.Gravity) {
+        dailyWordAlignment.value = gravity
     }
 
     fun updateHomeAppsAlignment(gravity: Constants.Gravity, onBottom: Boolean) {
