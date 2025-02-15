@@ -37,7 +37,7 @@
     <string name="show_clock_format">تنسيق العرض (صباحًا/مساءً)</string>
     <string name="show_date">إظهار التاريخ</string>
     <string name="show_alarm">عرض التنبيه</string>
-    <string name="show_daily_word">Show Daily Word</string>
+    <string name="show_daily_word">إظهار الكلمة اليومية</string>
     <string name="show_battery">عرض البطارية</string>
     <string name="show_battery_icon">إظهار أيقونة البطارية</string>
     <string name="show_total_screen_time">إظهار إجمالي وقت الشاشة</string>
@@ -48,7 +48,7 @@
     <string name="date_text_size">حجم نص التاريخ</string>
     <string name="clock_text_size">حجم نص الساعة</string>
     <string name="alarm_text_size">حجم نص التنبيه</string>
-    <string name="daily_word_text_size">Daily Word Text Size</string>
+    <string name="daily_word_text_size">حجم نص الكلمة اليومية</string>
     <string name="battery_text_size">حجم نص البطارية</string>
     <string name="layout_positioning">التخطيط &amp; تحديد المواقع</string>
     <string name="app_padding_size">حجم الحشوة</string>
@@ -65,7 +65,7 @@
     <string name="date_alignment">تاريخ</string>
     <string name="clock_alignment">ساعة</string>
     <string name="alarm_alignment">إنذار</string>
-    <string name="daily_word_alignment">Daily Word</string>
+    <string name="daily_word_alignment">الكلمة اليومية</string>
     <string name="home_alignment">تطبيقات المنزل</string>
     <string name="drawer_alignment">تطبيقات الأدراج</string>
     <string name="element_colors">ألوان العناصر</string>
@@ -74,7 +74,7 @@
     <string name="clock_color">ساعة</string>
     <string name="date_color">تاريخ</string>
     <string name="alarm_color">إنذار</string>
-    <string name="daily_word_color">Daily Word</string>
+    <string name="daily_word_color">الكلمة اليومية</string>
     <string name="battery_color">بطارية</string>
     <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">إيماءات</string>
