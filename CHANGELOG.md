@@ -21,6 +21,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Cleaned up page viewer to work with default font - ([b5c0103](https://github.com/DroidWorksStudio/mLauncher/commit/b5c0103d62ea0963d1e4dc0c33e3a2ed1469c489))
 - Cleaned up the favorites page. - ([d4ab060](https://github.com/DroidWorksStudio/mLauncher/commit/d4ab06005d8b89598fa6b2f6f2281588ac0f5b96))
 - Cleaned up the dialog building system. - ([aef27c2](https://github.com/DroidWorksStudio/mLauncher/commit/aef27c2c5173694efc32fb0165d14591bc4755a3))
 
