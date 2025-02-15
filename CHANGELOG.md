@@ -11,6 +11,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Bug Fixes:
 
+- Fixed the queryUsageStats data. - ([13f3f5c](https://github.com/DroidWorksStudio/mLauncher/commit/13f3f5c31fc34244403f3a089b47efb3b6ffa5fa))
 - Fixed the slider for pages to stay up to date. - ([3fa2fd7](https://github.com/DroidWorksStudio/mLauncher/commit/3fa2fd7fc8fea530198b8043e448258d00e55f34))
 - Fixed the issue with size bars. - ([840d7a9](https://github.com/DroidWorksStudio/mLauncher/commit/840d7a9bd5f92baceac579dfa8cf77f41f342676))
 - Fixed the Gesture system to show the right language - ([676897b](https://github.com/DroidWorksStudio/mLauncher/commit/676897b89625becc6f2aa3ed61f15dc5bd308a49))
@@ -22,6 +23,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Updated the blacklist to remove junk from the list. - ([5bae059](https://github.com/DroidWorksStudio/mLauncher/commit/5bae05995b6e75f0211fddabcac9e433d21b33c3))
 - Cleaned up page viewer to work with default font - ([b5c0103](https://github.com/DroidWorksStudio/mLauncher/commit/b5c0103d62ea0963d1e4dc0c33e3a2ed1469c489))
 - Cleaned up the favorites page. - ([d4ab060](https://github.com/DroidWorksStudio/mLauncher/commit/d4ab06005d8b89598fa6b2f6f2281588ac0f5b96))
 - Cleaned up the dialog building system. - ([aef27c2](https://github.com/DroidWorksStudio/mLauncher/commit/aef27c2c5173694efc32fb0165d14591bc4755a3))
