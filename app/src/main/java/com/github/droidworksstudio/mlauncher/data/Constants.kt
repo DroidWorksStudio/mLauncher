@@ -57,10 +57,10 @@ object Constants {
     const val HOLD_DURATION_THRESHOLD = 1000L // Adjust as needed
 
     // Update SWIPE_DISTANCE_THRESHOLD dynamically based on screen dimensions
-    var SWIPE_DISTANCE_THRESHOLD: Float = 0f
+    var SWIPE_DISTANCE_THRESHOLD = 0f
 
     // Update MAX_HOME_PAGES dynamically based on MAX_HOME_APPS
-    var MAX_HOME_PAGES: Int = 5
+    var MAX_HOME_PAGES = 10
 
     fun updateMaxHomePages(context: Context) {
         val prefs = Prefs(context)

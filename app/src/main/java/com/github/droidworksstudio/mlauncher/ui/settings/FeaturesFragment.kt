@@ -101,7 +101,6 @@ class FeaturesFragment : Fragment() {
         var toggledShowBatteryIcon by remember { mutableStateOf(prefs.showBatteryIcon) }
 
         val fs = remember { mutableStateOf(fontSize) }
-        Constants.updateMaxHomePages(requireContext())
 
         val titleFontSize = if (fs.value.isSpecified) {
             (fs.value.value * 1.5).sp
@@ -304,6 +303,13 @@ class FeaturesFragment : Fragment() {
                             selectedHomeAppsNum = newHomeAppsNum // Update state
                             prefs.homeAppsNum = newHomeAppsNum // Persist selection in preferences
                             viewModel.homeAppsNum.value = newHomeAppsNum
+
+                            // Check if homeAppsNum is less than homePagesNum and update homePagesNum accordingly
+                            if (newHomeAppsNum < selectedHomePagesNum) {
+                                selectedHomePagesNum = newHomeAppsNum
+                                prefs.homePagesNum = newHomeAppsNum // Persist the new homePagesNum
+                                viewModel.homePagesNum.value = newHomeAppsNum
+                            }
                         }
                     )
                 }
@@ -314,6 +320,7 @@ class FeaturesFragment : Fragment() {
                 option = selectedHomePagesNum.toString(),
                 fontSize = titleFontSize,
                 onClick = {
+                    Constants.updateMaxHomePages(requireContext())
                     dialogBuilder.showSliderDialog(
                         context = requireContext(),
                         title = getString(R.string.pages_on_home_screen),

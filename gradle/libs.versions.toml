@@ -1,7 +1,7 @@
 # gradle/libs.versions.toml
 
 [versions]
-agp = "8.8.0"
+agp = "8.8.1"
 kotlin = "2.1.10"
 
 # AndroidX Core and AppCompat
@@ -15,9 +15,9 @@ lifecycle-extensions = "2.2.0"
 lifecycle-viewmodel-ktx = "2.8.7"
 
 # Navigation
-navigation-fragment-ktx = "2.8.6"
-navigation-ui-ktx = "2.8.6"
-navigation-testing = "2.8.6"
+navigation-fragment-ktx = "2.8.7"
+navigation-ui-ktx = "2.8.7"
+navigation-testing = "2.8.7"
 
 # Work Manager
 work-runtime-ktx = "2.10.0"
@@ -28,12 +28,12 @@ constraintlayout-compose = "1.1.0"
 
 # Compose Versions
 activity-compose = "1.10.0"
-compose-android = "1.7.7"
-compose-material = "1.7.7"
-compose-animation = "1.7.7"
-compose-ui = "1.7.7"
-compose-foundation = "1.7.7"
-compose-ui-tooling = "1.7.7"
+compose-android = "1.7.8"
+compose-material = "1.7.8"
+compose-animation = "1.7.8"
+compose-ui = "1.7.8"
+compose-foundation = "1.7.8"
+compose-ui-tooling = "1.7.8"
 
 # Other Libraries
 commons-text = "1.13.0"
@@ -48,9 +48,9 @@ espresso = "3.6.1"
 test-core-ktx = "1.6.1"
 test-runner = "1.6.2"
 test-rules = "1.6.1"
-fragment-testing = "1.8.5"
-ui-test-junit4 = "1.7.7"
-ui-test-manifest = "1.7.7"
+fragment-testing = "1.8.6"
+ui-test-junit4 = "1.7.8"
+ui-test-manifest = "1.7.8"
 
 [libraries]
 # Core Libraries
