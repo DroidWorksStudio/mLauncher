@@ -37,7 +37,7 @@
     <string name="show_clock_format">쇼 형식(오전/오후)</string>
     <string name="show_date">Show date</string>
     <string name="show_alarm">알람 표시</string>
-    <string name="show_daily_word">Show Daily Word</string>
+    <string name="show_daily_word">일일 단어 표시</string>
     <string name="show_battery">배터리 표시</string>
     <string name="show_battery_icon">배터리 아이콘 표시</string>
     <string name="show_total_screen_time">총 화면 시간 표시</string>
@@ -48,7 +48,7 @@
     <string name="date_text_size">날짜 텍스트 크기</string>
     <string name="clock_text_size">시계 텍스트 크기</string>
     <string name="alarm_text_size">알람 텍스트 크기</string>
-    <string name="daily_word_text_size">Daily Word Text Size</string>
+    <string name="daily_word_text_size">일일 단어 텍스트 크기</string>
     <string name="battery_text_size">배터리 텍스트 크기</string>
     <string name="layout_positioning">레이아웃 &amp; 위치 지정</string>
     <string name="app_padding_size">패딩 크기</string>
@@ -65,7 +65,7 @@
     <string name="date_alignment">날짜</string>
     <string name="clock_alignment">시계</string>
     <string name="alarm_alignment">경보</string>
-    <string name="daily_word_alignment">Daily Word</string>
+    <string name="daily_word_alignment">데일리 워드</string>
     <string name="home_alignment">홈 앱</string>
     <string name="drawer_alignment">서랍 앱</string>
     <string name="element_colors">요소 색상</string>
@@ -74,7 +74,7 @@
     <string name="clock_color">시계</string>
     <string name="date_color">날짜</string>
     <string name="alarm_color">경보</string>
-    <string name="daily_word_color">Daily Word</string>
+    <string name="daily_word_color">데일리 워드</string>
     <string name="battery_color">배터리</string>
     <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">Gestures</string>
