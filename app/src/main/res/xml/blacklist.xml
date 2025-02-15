@@ -4,5 +4,10 @@
     <app packageName="app.mlauncher" />
     <app packageName="com.google.android.apps.healthdata" />
     <app packageName="com.google.android.healthconnect.controller" />
+    <app packageName="com.google.android.deskclock" />
+    <app packageName="com.google.android.permissioncontroller" />
+    <app packageName="com.google.android.apps.wellbeing" />
+    <app packageName="com.google.android.apps.nexuslauncher" />
+    <app packageName="com.android.intentresolver" />
     <!-- Add more app entries as needed -->
 </blacklist>
