@@ -11,10 +11,17 @@ import android.content.Context
 import android.content.Context.VIBRATOR_SERVICE
 import android.content.Intent
 import android.content.IntentFilter
+import android.graphics.ColorFilter
+import android.graphics.PorterDuff
+import android.graphics.PorterDuffColorFilter
 import android.os.Build
 import android.os.Bundle
 import android.os.Vibrator
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.SpannableStringBuilder
 import android.text.format.DateFormat
+import android.text.style.ImageSpan
 import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
@@ -140,7 +147,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         ).let {
             if (!prefs.showClockFormat) it.removeSuffix(" a") else it
         }
-        Log.d("currentDateTime", best12)
         binding.apply {
             val best24 = DateFormat.getBestDateTimePattern(timezone, "HHmm")
             val timePattern = if (is24HourFormat) best24 else best12
@@ -168,7 +174,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             battery.setTextColor(prefs.batteryColor)
             totalScreenTime.setTextColor(prefs.appColor)
             setDefaultLauncher.setTextColor(prefs.appColor)
-            homeScreenPager.setTextColor(prefs.appColor)
         }
     }
 
@@ -550,7 +555,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                         startX = motionEvent.x
                         startY = motionEvent.y
                         startTime = System.currentTimeMillis()
-                        longSwipeTriggered = false // Reset the flag
+                        longSwipeTriggered = false // Reset the flag at the start
                     }
 
                     MotionEvent.ACTION_UP -> {
@@ -560,28 +565,32 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                         val duration = endTime - startTime
                         val deltaX = endX - startX
                         val deltaY = endY - startY
-                        val distance =
-                            sqrt((deltaX * deltaX + deltaY * deltaY).toDouble()).toFloat()
+                        val distance = sqrt((deltaX * deltaX + deltaY * deltaY).toDouble()).toFloat()
+
                         val direction: String = if (abs(deltaX) < abs(deltaY)) {
                             if (deltaY < 0) "up" else "down"
                         } else {
                             if (deltaX < 0) "left" else "right"
                         }
 
-                        // Check if it's a hold swipe gesture
+                        // Get thresholds
                         val holdDurationThreshold = Constants.HOLD_DURATION_THRESHOLD
                         Constants.updateSwipeDistanceThreshold(context, direction)
                         val swipeDistanceThreshold = Constants.SWIPE_DISTANCE_THRESHOLD
 
-                        if (duration <= holdDurationThreshold && distance >= swipeDistanceThreshold) {
+                        // Check if it's a long swipe
+                        if (duration >= holdDurationThreshold && distance >= swipeDistanceThreshold) {
+                            longSwipeTriggered = true // Set the flag BEFORE calling the function
                             onLongSwipe(direction)
-                            longSwipeTriggered = true // Set the flag if onLongSwipe was triggered
+                            return true // Stop event propagation
                         }
                     }
                 }
-                // Return false to continue to pass the event to onSwipeLeft if onLongSwipe was not triggered
-                return !longSwipeTriggered && super.onTouch(view, motionEvent)
+
+                // If a long swipe was detected, don't let the event propagate to `onSwipeLeft()`
+                return if (longSwipeTriggered) true else super.onTouch(view, motionEvent)
             }
+
 
             override fun onSwipeLeft() {
                 super.onSwipeLeft()
@@ -857,7 +866,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         val oldAppsNum = binding.homeAppsLayout.childCount // current number of apps
         val diff = newAppsNum - oldAppsNum
 
-
         if (diff > 0) {
             // Add new apps
             for (i in oldAppsNum until newAppsNum) {
@@ -919,11 +927,28 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             view.visibility = if (i in startIdx until endIdx) View.VISIBLE else View.GONE
         }
 
-        val pageSelectorTexts = MutableList(totalPages) { _ -> Constants.NEW_PAGE }
-        pageSelectorTexts[currentPage] = Constants.CURRENT_PAGE
+        val pageSelectorIcons = MutableList(totalPages) { _ -> R.drawable.ic_new_page }
+        pageSelectorIcons[currentPage] = R.drawable.ic_current_page
+
+        val spannable = SpannableStringBuilder()
+
+        pageSelectorIcons.forEach { drawableRes ->
+            val drawable = ContextCompat.getDrawable(requireContext(), drawableRes)?.apply {
+                setBounds(0, 0, intrinsicWidth, intrinsicHeight)
+                val colorFilter: ColorFilter = PorterDuffColorFilter(prefs.appColor, PorterDuff.Mode.SRC_IN)
+                setColorFilter(colorFilter)
+            }
+            val imageSpan = drawable?.let { ImageSpan(it, ImageSpan.ALIGN_BASELINE) }
+
+            val placeholder = SpannableString(" ") // Placeholder for the image
+            imageSpan?.let { placeholder.setSpan(it, 0, 1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE) }
+
+            spannable.append(placeholder)
+            spannable.append(" ") // Add space between icons
+        }
 
         // Set the text for the page selector corresponding to each page
-        binding.homeScreenPager.text = pageSelectorTexts.joinToString(" ")
+        binding.homeScreenPager.text = spannable
         if (prefs.homePagesNum > 1 && prefs.homePager) binding.homeScreenPager.visibility =
             View.VISIBLE
     }

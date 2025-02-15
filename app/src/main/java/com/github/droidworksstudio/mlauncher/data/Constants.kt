@@ -19,9 +19,6 @@ object Constants {
 
     const val REQUEST_CODE_ENABLE_ADMIN = 666
 
-    const val NEW_PAGE = "\uF444"
-    const val CURRENT_PAGE = "\uF192"
-
     const val TRIPLE_TAP_DELAY_MS = 300
     const val LONG_PRESS_DELAY_MS = 500
 
