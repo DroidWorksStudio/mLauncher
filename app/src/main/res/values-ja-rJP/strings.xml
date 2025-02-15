@@ -37,6 +37,7 @@
     <string name="show_clock_format">表示形式 (AM/PM)</string>
     <string name="show_date">日付を表示</string>
     <string name="show_alarm">アラームを表示</string>
+    <string name="show_daily_word">毎日の単語を表示</string>
     <string name="show_battery">バッテリーを表示</string>
     <string name="show_battery_icon">バッテリーアイコンを表示</string>
     <string name="show_total_screen_time">合計スクリーンタイムを表示</string>
@@ -47,6 +48,7 @@
     <string name="date_text_size">日付のテキストサイズ</string>
     <string name="clock_text_size">時計の文字サイズ</string>
     <string name="alarm_text_size">アラームのテキストサイズ</string>
+    <string name="daily_word_text_size">日々の単語のテキストサイズ</string>
     <string name="battery_text_size">バッテリーのテキストサイズ</string>
     <string name="layout_positioning">レイアウト &amp; 配置</string>
     <string name="app_padding_size">パディングサイズ</string>
@@ -63,6 +65,7 @@
     <string name="date_alignment">日付</string>
     <string name="clock_alignment">クロック</string>
     <string name="alarm_alignment">アラーム</string>
+    <string name="daily_word_alignment">日々の単語</string>
     <string name="home_alignment">ホームアプリ</string>
     <string name="drawer_alignment">ドロワーアプリ</string>
     <string name="element_colors">要素の色</string>
@@ -71,6 +74,7 @@
     <string name="clock_color">クロック</string>
     <string name="date_color">日付</string>
     <string name="alarm_color">アラーム</string>
+    <string name="daily_word_color">日々の単語</string>
     <string name="battery_color">バッテリー</string>
     <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">ジェスチャー</string>

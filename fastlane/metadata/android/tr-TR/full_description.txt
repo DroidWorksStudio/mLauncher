@@ -17,10 +17,10 @@
                     <li>Kısa aşağı kaydırma</li>
                     <li>Sola kısa kaydırma</li>
                     <li>Kısa sağa kaydırma</li>
-                    <li>Yukarı doğru uzun kaydırma</li>
-                    <li>Aşağıya doğru uzun kaydırma</li>
-                    <li>Sola uzun kaydırma</li>
                     <li>Sağa uzun kaydırma</li>
+                    <li>Yukarı doğru uzun kaydırma</li>
+                    <li>Sola uzun kaydırma</li>
+                    <li>Aşağıya doğru uzun kaydırma</li>
                 </ul>
             </li>
             <li><b>Olası eylemler artık şunları içeriyor:</b>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="word_of_the_day">
+        <item>Dayanıklı kalın!</item>
+        <item>Başarabilirsin!</item>
+        <item>Parla!</item>
+        <item>Kaderi yarat.</item>
+        <item>Yolculuğa sarılın.</item>
+        <item>İçimizdeki güç.</item>
+        <item>İtmeye devam edin!</item>
+        <item>Harikasın!</item>
+        <item>Güven, asla verme.</item>
+        <item>Sınırsız potansiyel.</item>
+        <item>Mükemmeliyetten ziyade ilerleme.</item>
+        <item>Zorluklar = büyüme.</item>
+        <item>Başarıya layık.</item>
+        <item>Hayallerinin peşinden git.</item>
+        <item>Her şeyin üstesinden gel!</item>
+        <item>Azimle hareket eden kazanır.</item>
+        <item>Her adımın önemi var.</item>
+        <item>Pozitif kalın!</item>
+        <item>Dayanıklılık muhteşem.</item>
+        <item>Senin içinde kuvvet var.</item>
+        <item>İlerlemeyi kutlayın.</item>
+        <item>Çalışkanlığın karşılığı vardır.</item>
+        <item>Güvenin, inanın.</item>
+        <item>Benzersiz yolculuk.</item>
+        <item>Gözler ödülde.</item>
+        <item>Her şeyi başar!</item>
+        <item>Cesur adımlar atın.</item>
+        <item>Tutku sizi besler.</item>
+        <item>Hedeflere odaklanın.</item>
+        <item>Azmet, kazan.</item>
+        <item>Özgüvenin anahtarı.</item>
+        <item>İyiliğe layık.</item>
+        <item>Hayallere ulaşın.</item>
+        <item>Cesur, güçlü, akıllı.</item>
+        <item>Olumlu tutum.</item>
+        <item>Yolculuğa güvenin.</item>
+        <item>Sarsılmaz kararlılık.</item>
+        <item>Gerilemeler = geri dönüş.</item>
+        <item>Hayalleri gerçeğe dönüştürün.</item>
+        <item>Hedeflere bağlı kalın.</item>
+        <item>Güç, sınır tanımaz.</item>
+        <item>Baş yukarı, atılım.</item>
+        <item>Potansiyeliniz parlıyor.</item>
+        <item>Hayaller elinizin altında.</item>
+        <item>Seni kimse durduramaz!</item>
+        <item>İnan, başar.</item>
+        <item>Sınırları zorla.</item>
+        <item>Azmin meyvesini alırsınız.</item>
+        <item>Korkusuz kalın!</item>
+        <item>Zorlukların üstesinden gelin.</item>
+        <item>Büyük hayaller kurmaya devam edin.</item>
+        <item>Amaçlı yaşa.</item>
+        <item>İyiye odaklanın.</item>
+        <item>İçten gelen güç.</item>
+        <item>Sihire inanın.</item>
+        <item>Gülümse, başarabilirsin.</item>
+        <item>Hiçbir zaman umudunuzu kaybetmeyin.</item>
+        <item>Her anın tadını çıkarın.</item>
+        <item>Kendi kahramanın ol.</item>
+        <item>Sen yeterlisin.</item>
+        <item>Korkularınızı yenin.</item>
+        <item>Anın tadını çıkar!</item>
+        <item>Önce kendini sev.</item>
+        <item>Her zaman pozitif kalın.</item>
+        <item>Sen bir savaşçısın.</item>
+        <item>Kendine inan.</item>
+        <item>Olasılıkları kucaklayın.</item>
+        <item>Tutkuyla yaşa.</item>
+        <item>İlerlemeye devam edin.</item>
+        <item>Seni kimse durduramaz!</item>
+        <item>Kendine sadık kal.</item>
+        <item>Cesaretle yaşa.</item>
+        <item>İnancınızı koruyun.</item>
+        <item>Zorluklar karşısında güç.</item>
+        <item>Her gün büyü.</item>
+        <item>Azim, zafer.</item>
+        <item>Tutkularınızın peşinden gidin.</item>
+        <item>Yolculuğun tadını çıkarın.</item>
+        <item>Risk al, geliş.</item>
+        <item>Güçlü ve cesur ol.</item>
+        <item>İçsel bilgeliğe güvenin.</item>
+        <item>Parıldamaya devam et.</item>
+        <item>Hayal et, inan, başar.</item>
+        <item>Durdurulamaz ol.</item>
+        <item>Büyüklüğünüze sahip çıkın.</item>
+        <item>Bilinmeyene kucak açın.</item>
+        <item>İlerlemeye devam edin.</item>
+        <item>Kendinize güvenin.</item>
+        <item>Her zaman iyilik yayın.</item>
+        <item>Hayallerinize inanıyorum.</item>
+        <item>Odaklanın, kararlı olun.</item>
+        <item>Yolculuğunuzu kucaklayın.</item>
+        <item>Başını dik tut.</item>
+        <item>Hiçbir zaman umudunuzu kaybetmeyin.</item>
+        <item>İçten gelen güç.</item>
+        <item>Dayanıklı ve güçlü ol.</item>
+        <item>Seni kimse durduramaz!</item>
+        <item>Meydan okumayı kucaklayın.</item>
+        <item>Ateşi canlı tutun.</item>
+        <item>Mümkün olana odaklanın.</item>
+        <item>Büyük hayaller kur, sıkı çalış.</item>
+        <item>Gözünüzü ödülden ayırmayın.</item>
+        <item>Sürece güvenin.</item>
+        <item>Kendinize sadık kalın.</item>
+        <item>İnan, başar, başar.</item>
+        <item>İlhamınızı her zaman koruyun.</item>
+        <item>Takipte korkusuz olun.</item>
+        <item>Ayakların yere sağlam bassın, yüksel.</item>
+        <item>Mücadeleden kuvvet al.</item>
+        <item>Her zorluğun üstesinden gel.</item>
+        <item>Cesur ol, parlak kal.</item>
+        <item>Sen büyük işler başarabilecek kapasitedesin.</item>
+        <item>Yolculuğunuza güvenin.</item>
+        <item>Mücadeleye devam, yükselmeye devam.</item>
+        <item>İmkansıza inan.</item>
+        <item>Dayanıklı olun, asla pes etmeyin.</item>
+        <item>Sen sandığından daha güçlüsün.</item>
+        <item>Tutku ve amaçla yaşayın.</item>
+        <item>Her yolculuğunuzda neşe bulun.</item>
+        <item>Hayal et, inan, başar!</item>
+        <item>Pozitif kalın, güçlü kalın.</item>
+        <item>Her gün yeni bir şanstır.</item>
+        <item>Her fırsatı değerlendirin.</item>
+        <item>Sınırları zorlamaya devam edin.</item>
+        <item>İçinizdeki güce güvenin.</item>
+        <item>Sen büyüklüğe mahkumsun.</item>
+        <item>Hayallerinize inanıyorum!</item>
+        <item>Kararlı ol, başar.</item>
+        <item>Hedeflerinize doğru ilerlemeye devam edin.</item>
+        <item>Hayallerinizin peşinden yılmadan koşun.</item>
+        <item>Güç içeriden gelir.</item>
+        <item>Hedeflerinize odaklanın.</item>
+        <item>Sen her şeyi başarabilirsin.</item>
+        <item>Korkusuz ol, güçlü ol.</item>
+        <item>İnan, başar, başar!</item>
+        <item>Yolculuğunuza güvenin.</item>
+        <item>Dayanıklı ol, yüksel.</item>
+        <item>Güç içinizde.</item>
+        <item>Büyük hayaller kur, sıkı çalış, başar.</item>
+        <item>Odaklanın, güçlü kalın.</item>
+        <item>Düşündüğünden daha güçlüsün!</item>
+        <item>Kendinize inanın, her zaman.</item>
+        <item>Kararlı olun, güçlü kalın.</item>
+        <item>Her fırsatı değerlendirin.</item>
+        <item>Sen büyük işler başarabilecek kapasitedesin!</item>
+        <item>Kendinize sadık kalın.</item>
+        <item>Yolculuğunuza güvenin.</item>
+        <item>İlerlemeye devam edin.</item>
+        <item>Hayal et, inan, başar!</item>
+    </string-array>
+</resources>

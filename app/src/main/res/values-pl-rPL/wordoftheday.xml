@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="word_of_the_day">
+        <item>Zachowaj odporność!</item>
+        <item>Dasz radę!</item>
+        <item>Świeć jasno!</item>
+        <item>Stwórz przeznaczenie.</item>
+        <item>Poddaj się podróży.</item>
+        <item>Siła wewnątrz.</item>
+        <item>Naciskaj dalej!</item>
+        <item>Jesteś niesamowity!</item>
+        <item>Ufaj, nigdy nie dawaj.</item>
+        <item>Nieograniczony potencjał.</item>
+        <item>Postęp ważniejszy od perfekcji.</item>
+        <item>Wyzwania = rozwój.</item>
+        <item>Godny sukcesu.</item>
+        <item>Podążaj za swoimi marzeniami.</item>
+        <item>Pokonaj wszystko!</item>
+        <item>Determinacja zwycięża.</item>
+        <item>Każdy krok się liczy.</item>
+        <item>Myśl pozytywnie!</item>
+        <item>Odporność jest najważniejsza.</item>
+        <item>Siła w Tobie.</item>
+        <item>Świętuj postęp.</item>
+        <item>Ciężka praca popłaca.</item>
+        <item>Zaufaj, miej wiarę.</item>
+        <item>Niepowtarzalna podróż.</item>
+        <item>Skupiamy wzrok na nagrodzie.</item>
+        <item>Osiągnij wszystko!</item>
+        <item>Podejmij odważne kroki.</item>
+        <item>Pasja Cię napędza.</item>
+        <item>Skup się na celach.</item>
+        <item>Wytrwaj, wygraj.</item>
+        <item>Klucz do wiary w siebie.</item>
+        <item>Zasługujący na dobro.</item>
+        <item>Sięgaj po marzenia.</item>
+        <item>Odważny, silny, mądry.</item>
+        <item>Pozytywne nastawienie.</item>
+        <item>Zaufaj podróży.</item>
+        <item>Niezachwiana determinacja.</item>
+        <item>Niepowodzenia = powrót.</item>
+        <item>Spraw, by marzenia stały się rzeczywistością.</item>
+        <item>Dąż do realizacji celów.</item>
+        <item>Siła nie zna granic.</item>
+        <item>Głowa do góry, przełom.</item>
+        <item>Twój potencjał błyszczy.</item>
+        <item>Marzenia w zasięgu ręki.</item>
+        <item>Jesteś nie do zatrzymania!</item>
+        <item>Wierz, osiągaj.</item>
+        <item>Przekrocz granice.</item>
+        <item>Wytrwałość popłaca.</item>
+        <item>Nie lękaj się!</item>
+        <item>Staw czoła wyzwaniom.</item>
+        <item>Nie przestawaj marzyć o wielkich rzeczach.</item>
+        <item>Żyj z sensem.</item>
+        <item>Skup się na tym, co dobre.</item>
+        <item>Siła z wnętrza.</item>
+        <item>Wierzę w magię.</item>
+        <item>Uśmiechnij się, dasz radę.</item>
+        <item>Nigdy nie trać nadziei.</item>
+        <item>Ciesz się każdą chwilą.</item>
+        <item>Bądź swoim własnym bohaterem.</item>
+        <item>Jesteś wystarczający.</item>
+        <item>Pokonaj swoje lęki.</item>
+        <item>Chwytaj dzień!</item>
+        <item>Najpierw pokochaj siebie.</item>
+        <item>Zawsze bądź pozytywnie nastawiony.</item>
+        <item>Jesteś wojownikiem.</item>
+        <item>Wierz w siebie.</item>
+        <item>Korzystaj z możliwości.</item>
+        <item>Żyj z pasją.</item>
+        <item>Ciągle idź naprzód.</item>
+        <item>Jesteś nie do zatrzymania!</item>
+        <item>Pozostań wierny sobie.</item>
+        <item>Żyj odważnie.</item>
+        <item>Zachowaj wiarę.</item>
+        <item>Siła w przeciwnościach losu.</item>
+        <item>Rośnij każdego dnia.</item>
+        <item>Wytrwałość, zwycięstwo.</item>
+        <item>Podążaj za swoimi pasjami.</item>
+        <item>Znajdź radość w podróży.</item>
+        <item>Podejmuj ryzyko i rozwijaj się.</item>
+        <item>Bądź silny i odważny.</item>
+        <item>Zaufaj wewnętrznej mądrości.</item>
+        <item>Świeć dalej jasno.</item>
+        <item>Marz, wierz, osiągaj.</item>
+        <item>Bądź niepowstrzymany.</item>
+        <item>Przyznaj się do swojej wielkości.</item>
+        <item>Otwórz się na nieznane.</item>
+        <item>Ciągle naciskaj.</item>
+        <item>Ufaj sobie.</item>
+        <item>Zawsze szerz życzliwość.</item>
+        <item>Wierz w swoje marzenia.</item>
+        <item>Pozostań skoncentrowany i zdeterminowany.</item>
+        <item>Ciesz się swoją podróżą.</item>
+        <item>Trzymaj głowę do góry.</item>
+        <item>Nigdy nie trać nadziei.</item>
+        <item>Siła z wnętrza.</item>
+        <item>Pozostań odporny i silny.</item>
+        <item>Jesteś nie do zatrzymania!</item>
+        <item>Podejmij wyzwanie.</item>
+        <item>Podtrzymuj ogień.</item>
+        <item>Skup się na tym, co możliwe.</item>
+        <item>Miej wielkie marzenia i ciężko pracuj.</item>
+        <item>Skup się na nagrodzie.</item>
+        <item>Zaufaj procesowi.</item>
+        <item>Pozostań wierny sobie.</item>
+        <item>Wierz, osiągaj, odnoś sukcesy.</item>
+        <item>Zawsze bądź zainspirowany.</item>
+        <item>Bądź bez lęku w dążeniu do celu.</item>
+        <item>Pozostań na ziemi, powstań.</item>
+        <item>Znajdź siłę w walce.</item>
+        <item>Podejmij każde wyzwanie.</item>
+        <item>Bądź odważny i bystry.</item>
+        <item>Jesteś zdolny do czegoś wielkiego.</item>
+        <item>Zaufaj swojej podróży.</item>
+        <item>Walcz dalej, wzrastaj dalej.</item>
+        <item>Wierz w to, co niemożliwe.</item>
+        <item>Bądź wytrwały i nigdy się nie poddawaj.</item>
+        <item>Jesteś silniejszy niż myślisz.</item>
+        <item>Żyj z pasją i celem.</item>
+        <item>Znajdź radość w każdej podróży.</item>
+        <item>Marz, wierz, osiągaj!</item>
+        <item>Bądź pozytywny i silny.</item>
+        <item>Każdy dzień to nowa szansa.</item>
+        <item>Korzystaj z każdej okazji.</item>
+        <item>Ciągle przekraczaj granice.</item>
+        <item>Zaufaj swojej wewnętrznej sile.</item>
+        <item>Jesteś przeznaczony do wielkości.</item>
+        <item>Wierz w swoje marzenia!</item>
+        <item>Trzymaj się determinacji i odnieś sukces.</item>
+        <item>Kontynuuj dążenie do swoich celów.</item>
+        <item>Nieustannie dąż do realizacji swoich marzeń.</item>
+        <item>Siła pochodzi z wnętrza.</item>
+        <item>Skup się na swoich celach.</item>
+        <item>Jesteś zdolny do wszystkiego.</item>
+        <item>Nie lękaj się, bądź silny.</item>
+        <item>Wierz, osiągaj, odnoś sukcesy!</item>
+        <item>Ufaj swojej podróży.</item>
+        <item>Zachowaj odporność i wznieś się ponad wszystko.</item>
+        <item>Masz w sobie siłę.</item>
+        <item>Miej wielkie marzenia, ciężko pracuj i osiągaj sukcesy.</item>
+        <item>Pozostań skoncentrowany i silny.</item>
+        <item>Jesteś silniejszy niż myślisz!</item>
+        <item>Zawsze wierz w siebie.</item>
+        <item>Pozostań zdecydowany i silny.</item>
+        <item>Korzystaj z każdej okazji.</item>
+        <item>Jesteś zdolny do wielkich rzeczy!</item>
+        <item>Pozostań wierny sobie.</item>
+        <item>Ufaj swojej podróży.</item>
+        <item>Ciągle naciskaj.</item>
+        <item>Marz, wierz, osiągaj!</item>
+    </string-array>
+</resources>
