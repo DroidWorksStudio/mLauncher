@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Releases:
+
+- Prepare for version 1.7.3 - ([8dd8f24](https://github.com/DroidWorksStudio/mLauncher/commit/8dd8f249680ffb367dffd961901559d4d5a5fb49))
+
+## [1.7.2](https://github.com/DroidWorksStudio/mLauncher/tree/1.7.2) - (15, February 2025)
+
 ### Implemented Enhancements:
 
 - Added motivational word of the day to homescreen - ([d27012d](https://github.com/DroidWorksStudio/mLauncher/commit/d27012d7bed9cb99828f62a50e63a6410b2defde))
