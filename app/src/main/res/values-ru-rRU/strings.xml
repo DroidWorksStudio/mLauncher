@@ -37,7 +37,7 @@
     <string name="show_clock_format">Формат показа (AM/PM)</string>
     <string name="show_date">Показать дату</string>
     <string name="show_alarm">Показать будильник</string>
-    <string name="show_daily_word">Show Daily Word</string>
+    <string name="show_daily_word">Показать ежедневное слово</string>
     <string name="show_battery">Показать батарею</string>
     <string name="show_battery_icon">Показать значок батареи</string>
     <string name="show_total_screen_time">Показать общее время экрана</string>
@@ -48,7 +48,7 @@
     <string name="date_text_size">Размер текста даты</string>
     <string name="clock_text_size">Размер текста часов</string>
     <string name="alarm_text_size">Размер текста будильника</string>
-    <string name="daily_word_text_size">Daily Word Text Size</string>
+    <string name="daily_word_text_size">Размер текста слова в день</string>
     <string name="battery_text_size">Размер текста батареи</string>
     <string name="layout_positioning">Макет &amp; Позиционирование</string>
     <string name="app_padding_size">Размер заполнения</string>
@@ -65,7 +65,7 @@
     <string name="date_alignment">Дата</string>
     <string name="clock_alignment">Часы</string>
     <string name="alarm_alignment">Тревога</string>
-    <string name="daily_word_alignment">Daily Word</string>
+    <string name="daily_word_alignment">Ежедневное слово</string>
     <string name="home_alignment">Домашние приложения</string>
     <string name="drawer_alignment">Приложения для ящиков</string>
     <string name="element_colors">Цвета элементов</string>
@@ -74,7 +74,7 @@
     <string name="clock_color">Часы</string>
     <string name="date_color">Дата</string>
     <string name="alarm_color">Тревога</string>
-    <string name="daily_word_color">Daily Word</string>
+    <string name="daily_word_color">Ежедневное слово</string>
     <string name="battery_color">Аккумулятор</string>
     <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">Жесты</string>
