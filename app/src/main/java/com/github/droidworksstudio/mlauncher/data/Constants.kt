@@ -7,6 +7,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
 import androidx.core.content.res.ResourcesCompat
 import com.github.droidworksstudio.mlauncher.R
+import com.github.droidworksstudio.mlauncher.helper.getTrueSystemFont
 import java.util.Locale
 
 interface EnumOption {
@@ -363,11 +364,15 @@ object Constants {
         Bitter,
         Doto,
         DroidSans,
+        FiraCode,
         GreatVibes,
+        Hack,
         Lato,
         Lobster,
         Merriweather,
+        MiSans,
         Montserrat,
+        NotoSans,
         OpenSans,
         Pacifico,
         Quicksand,
@@ -377,15 +382,19 @@ object Constants {
 
         fun getFont(context: Context): Typeface? {
             return when (this) {
-                System -> Typeface.DEFAULT
+                System -> getTrueSystemFont()
                 Bitter -> ResourcesCompat.getFont(context, R.font.bitter)
                 Doto -> ResourcesCompat.getFont(context, R.font.doto)
+                FiraCode -> ResourcesCompat.getFont(context, R.font.fira_code)
                 DroidSans -> ResourcesCompat.getFont(context, R.font.open_sans)
                 GreatVibes -> ResourcesCompat.getFont(context, R.font.great_vibes)
+                Hack -> ResourcesCompat.getFont(context, R.font.hack)
                 Lato -> ResourcesCompat.getFont(context, R.font.lato)
                 Lobster -> ResourcesCompat.getFont(context, R.font.lobster)
                 Merriweather -> ResourcesCompat.getFont(context, R.font.merriweather)
+                MiSans -> ResourcesCompat.getFont(context, R.font.mi_sans)
                 Montserrat -> ResourcesCompat.getFont(context, R.font.montserrat)
+                NotoSans -> ResourcesCompat.getFont(context, R.font.noto_sans)
                 OpenSans -> ResourcesCompat.getFont(context, R.font.open_sans)
                 Pacifico -> ResourcesCompat.getFont(context, R.font.pacifico)
                 Quicksand -> ResourcesCompat.getFont(context, R.font.quicksand)
@@ -402,11 +411,15 @@ object Constants {
                 Bitter -> stringResource(R.string.settings_font_bitter)
                 Doto -> stringResource(R.string.settings_font_doto)
                 DroidSans -> stringResource(R.string.settings_font_droidsans)
+                FiraCode -> stringResource(R.string.settings_font_firacode)
                 GreatVibes -> stringResource(R.string.settings_font_greatvibes)
+                Hack -> stringResource(R.string.settings_font_hack)
                 Lato -> stringResource(R.string.settings_font_lato)
                 Lobster -> stringResource(R.string.settings_font_lobster)
                 Merriweather -> stringResource(R.string.settings_font_merriweather)
+                MiSans -> stringResource(R.string.settings_font_misans)
                 Montserrat -> stringResource(R.string.settings_font_montserrat)
+                NotoSans -> stringResource(R.string.settings_font_notosans)
                 OpenSans -> stringResource(R.string.settings_font_opensans)
                 Pacifico -> stringResource(R.string.settings_font_pacifico)
                 Quicksand -> stringResource(R.string.settings_font_quicksand)

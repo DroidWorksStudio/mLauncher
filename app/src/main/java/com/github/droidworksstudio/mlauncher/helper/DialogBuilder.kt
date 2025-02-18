@@ -182,7 +182,7 @@ class DialogBuilder(val context: Context, val activity: Activity) {
 
                 // Set text, font, and size
                 textView.text = itemStrings[position]
-                textView.typeface = fonts?.getOrNull(position) ?: Typeface.DEFAULT
+                textView.typeface = fonts?.getOrNull(position) ?: getTrueSystemFont()
                 textView.textSize = fontSize
 
                 return view

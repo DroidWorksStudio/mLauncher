@@ -3,7 +3,6 @@ package com.github.droidworksstudio.mlauncher.ui.settings
 import android.app.admin.DevicePolicyManager
 import android.content.ComponentName
 import android.content.Context
-import android.graphics.Typeface
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -37,6 +36,7 @@ import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentSettingsBinding
 import com.github.droidworksstudio.mlauncher.helper.AppReloader
 import com.github.droidworksstudio.mlauncher.helper.DialogBuilder
+import com.github.droidworksstudio.mlauncher.helper.getTrueSystemFont
 import com.github.droidworksstudio.mlauncher.helper.isSystemInDarkMode
 import com.github.droidworksstudio.mlauncher.helper.setThemeMode
 import com.github.droidworksstudio.mlauncher.listener.DeviceAdmin
@@ -178,7 +178,7 @@ class FeaturesFragment : Fragment() {
                         context = requireContext(),
                         options = Constants.FontFamily.entries.toTypedArray(),
                         fonts = Constants.FontFamily.entries.toTypedArray()
-                            .map { it.getFont(requireContext()) ?: Typeface.DEFAULT },
+                            .map { it.getFont(requireContext()) ?: getTrueSystemFont() },
                         titleResId = R.string.font_family,
                         onItemSelected = { newFontFamily ->
                             selectedFontFamily = newFontFamily // Update state

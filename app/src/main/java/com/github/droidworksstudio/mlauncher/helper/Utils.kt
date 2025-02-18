@@ -15,6 +15,7 @@ import android.content.res.Resources
 import android.graphics.ColorFilter
 import android.graphics.PorterDuff
 import android.graphics.PorterDuffColorFilter
+import android.graphics.Typeface
 import android.net.Uri
 import android.os.Build
 import android.os.Process
@@ -40,6 +41,7 @@ import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import java.io.File
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
@@ -420,4 +422,24 @@ fun setThemeMode(context: Context, isDark: Boolean, view: View) {
 
     // Apply the background color from styles.xml
     view.setBackgroundResource(typedValue.resourceId)
+}
+
+fun getTrueSystemFont(): Typeface {
+    val possibleSystemFonts = listOf(
+        "/system/fonts/Roboto-Regular.ttf",       // Stock Android (Pixel, AOSP)
+        "/system/fonts/NotoSans-Regular.ttf",    // Some Android One devices
+        "/system/fonts/SamsungOne-Regular.ttf",  // Samsung
+        "/system/fonts/MiSans-Regular.ttf",      // Xiaomi MIUI
+        "/system/fonts/OPSans-Regular.ttf"       // OnePlus
+    )
+
+    for (fontPath in possibleSystemFonts) {
+        val fontFile = File(fontPath)
+        if (fontFile.exists()) {
+            return Typeface.createFromFile(fontFile)
+        }
+    }
+
+    // Fallback to Roboto as a default if no system font is found
+    return Typeface.DEFAULT
 }
