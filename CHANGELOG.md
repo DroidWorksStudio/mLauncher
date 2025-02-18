@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Implemented Enhancements:
+
+- Added new fonts - ([3d005a8](https://github.com/DroidWorksStudio/mLauncher/commit/3d005a8bcf845a0d9bd5e08fe437849fd6602651))
+
 ### Refactoring:
 
 - Updated Nerd Fonts - ([42729b4](https://github.com/DroidWorksStudio/mLauncher/commit/42729b4bce43614c1008abb7c2159c3022568421))
