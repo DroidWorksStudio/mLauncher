@@ -426,7 +426,7 @@ fun setThemeMode(context: Context, isDark: Boolean, view: View) {
 
 fun getTrueSystemFont(): Typeface {
     val possibleSystemFonts = listOf(
-        "/system/fonts/Roboto-Regular.ttf",       // Stock Android (Pixel, AOSP)
+        "/system/fonts/Roboto-Regular.ttf",      // Stock Android (Pixel, AOSP)
         "/system/fonts/NotoSans-Regular.ttf",    // Some Android One devices
         "/system/fonts/SamsungOne-Regular.ttf",  // Samsung
         "/system/fonts/MiSans-Regular.ttf",      // Xiaomi MIUI
