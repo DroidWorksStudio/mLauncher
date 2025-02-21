@@ -15,6 +15,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Cleanup wrong namespaces - ([edc7e2b](https://github.com/DroidWorksStudio/mLauncher/commit/edc7e2bdc9c7e980198f7b8a9b65ac38c67fd418))
 - Updated Nerd Fonts - ([42729b4](https://github.com/DroidWorksStudio/mLauncher/commit/42729b4bce43614c1008abb7c2159c3022568421))
 
 ### Releases:
