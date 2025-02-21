@@ -1,9 +1,0 @@
-Versjon: 1.5.1
-
-Språkstøtte:
-
-Oppdaterte språkfiler.
-
-Refaktor:
-
-Forbedret appikondesign ved å oppdatere til et mer visuelt tiltalende ikon.

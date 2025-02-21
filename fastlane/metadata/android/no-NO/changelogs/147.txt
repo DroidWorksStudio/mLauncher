@@ -1,5 +1,0 @@
-Versjon: 1.4.7
-
-Feilrettinger:
-
-Fikset RENAME fra å vises i alle listeområder i appen.

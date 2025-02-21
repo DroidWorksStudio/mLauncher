@@ -1,7 +1,0 @@
-Versjon: 1.4.1
-
-Forbedringer:
-[Funksjon] - Lagt til langtrykks sveipebevegelser.
-
-Språkstøtte:
-[Språk] Oppdaterte språkfiler.
