@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Implemented Enhancements:
 
+- Added a toggle to hide search text - ([5f91323](https://github.com/DroidWorksStudio/mLauncher/commit/5f91323708f31338880e4b2e900f7ced108ed43d))
 - Added new fonts - ([3d005a8](https://github.com/DroidWorksStudio/mLauncher/commit/3d005a8bcf845a0d9bd5e08fe437849fd6602651))
 
 ### Refactoring:
