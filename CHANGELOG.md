@@ -9,6 +9,10 @@ All notable changes to this project will be documented in this file. See [conven
 - Added a toggle to hide search text - ([5f91323](https://github.com/DroidWorksStudio/mLauncher/commit/5f91323708f31338880e4b2e900f7ced108ed43d))
 - Added new fonts - ([3d005a8](https://github.com/DroidWorksStudio/mLauncher/commit/3d005a8bcf845a0d9bd5e08fe437849fd6602651))
 
+### Bug Fixes:
+
+- Fixed a few toggles to only display if child is correct. - ([fad1e73](https://github.com/DroidWorksStudio/mLauncher/commit/fad1e73d2f1c88d2a1cdd8fd797cc11cb48e5947))
+
 ### Refactoring:
 
 - Updated Nerd Fonts - ([42729b4](https://github.com/DroidWorksStudio/mLauncher/commit/42729b4bce43614c1008abb7c2159c3022568421))
