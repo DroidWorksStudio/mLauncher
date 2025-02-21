@@ -19,6 +19,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Cleaned up 35 dead languages ([#660](https://github.com/DroidWorksStudio/mLauncher/issues/660)) - ([a718674](https://github.com/DroidWorksStudio/mLauncher/commit/a7186748fa823bd40b8569fec2b2dbe07f01f20d))
 - Cleanup wrong namespaces - ([edc7e2b](https://github.com/DroidWorksStudio/mLauncher/commit/edc7e2bdc9c7e980198f7b8a9b65ac38c67fd418))
 - Updated Nerd Fonts - ([42729b4](https://github.com/DroidWorksStudio/mLauncher/commit/42729b4bce43614c1008abb7c2159c3022568421))
 
