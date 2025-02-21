@@ -1,1 +1,0 @@
-Forked från Olauncher, +minimalisering, +anpassningsbarhet
