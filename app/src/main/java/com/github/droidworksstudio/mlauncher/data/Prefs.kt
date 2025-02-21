@@ -40,6 +40,7 @@ private const val SHOW_BATTERY_ICON = "SHOW_BATTERY_ICON"
 private const val SHOW_DATE = "SHOW_DATE"
 private const val HOME_LOCKED = "HOME_LOCKED"
 private const val SETTINGS_LOCKED = "SETTINGS_LOCKED"
+private const val HIDE_SEARCH_VIEW = "HIDE_SEARCH_VIEW"
 private const val SHOW_CLOCK = "SHOW_CLOCK"
 private const val SHOW_CLOCK_FORMAT = "SHOW_CLOCK_FORMAT"
 private const val SHOW_ALARM = "SHOW_ALARM"
@@ -332,6 +333,10 @@ class Prefs(val context: Context) {
     var settingsLocked: Boolean
         get() = prefs.getBoolean(SETTINGS_LOCKED, false)
         set(value) = prefs.edit().putBoolean(SETTINGS_LOCKED, value).apply()
+
+    var hideSearchView: Boolean
+        get() = prefs.getBoolean(HIDE_SEARCH_VIEW, false)
+        set(value) = prefs.edit().putBoolean(HIDE_SEARCH_VIEW, value).apply()
 
     var shortSwipeUpAction: Constants.Action
         get() = loadAction(SWIPE_UP_ACTION, Constants.Action.ShowAppList)

@@ -18,9 +18,9 @@
 </div>
 
 - Chat with us at [mLauncher](https://discord.gg/qG6hFuAzfu) on discord.
-- This application can be found on [F-Droid](https://f-droid.org/packages/app.mlauncher/) and [GitHub](https://github.com/HeCodes2Much/mLauncher/releases/).
-- The latest stable version is available on the [`main`](https://github.com/HeCodes2Much/mLauncher/tree/main) branch, which can be cloned to build the application independently.
-- Additionally, a GitHub action has been set up to automatically generate an APK for every [release](https://github.com/HeCodes2Much/mLauncher/releases).
+- This application can be found on [F-Droid](https://f-droid.org/packages/app.mlauncher/) and [GitHub](https://github.com/DroidWorksStudio/mLauncher/releases/).
+- The latest stable version is available on the [`main`](https://github.com/DroidWorksStudio/mLauncher/tree/main) branch, which can be cloned to build the application independently.
+- Additionally, a GitHub action has been set up to automatically generate an APK for every [release](https://github.com/DroidWorksStudio/mLauncher/releases).
 - The **original** version of the application is also accessible on the [Play Store](https://play.google.com/store/apps/details?id=app.olauncher), [F-Droid](https://f-droid.org/fr/packages/app.olauncher/) & [GitHub](https://github.com/tanujnotes/Olauncher).
 
 We try to balance customizability and minimalization well still being simple :)</h3>
@@ -113,11 +113,11 @@ We would like to extend our sincere gratitude to the numerous individuals who ha
 
 ## Contribute
 
-- If you are unhappy with any part of the app or feel like missing something, you can open a pull request or an [**issue**](https://github.com/HeCodes2Much/mLauncher/issues/new/choose) as you like.
+- If you are unhappy with any part of the app or feel like missing something, you can open a pull request or an [**issue**](https://github.com/DroidWorksStudio/mLauncher/issues/new/choose) as you like.
   - Please go through the issues marked as `Bug report`, `Crash report` or `Feature request`.
   - Please can we discuss before sending pull requests.
   - Make pull requests to `main` branch.
-- Any help in translating mLauncher into other languages is greatly appreciated. If you don't know how to perform a pull request, feel free to check out our dedicated [**Wiki**](https://github.com/HeCodes2Much/mLauncher/wiki).
+- Any help in translating mLauncher into other languages is greatly appreciated. If you don't know how to perform a pull request, feel free to check out our dedicated [**Wiki**](https://github.com/DroidWorksStudio/mLauncher/wiki).
 
 ## License
 

@@ -81,6 +81,7 @@ class FeaturesFragment : Fragment() {
         var selectedLanguage by remember { mutableStateOf(prefs.appLanguage) }
         var selectedFontFamily by remember { mutableStateOf(prefs.fontFamily) }
         var selectedSettingsSize by remember { mutableIntStateOf(prefs.settingsSize) }
+        var toggledHideSearchView by remember { mutableStateOf(prefs.hideSearchView) }
 
         var selectedSearchEngine by remember { mutableStateOf(prefs.searchEngines) }
         var toggledAutoShowKeyboard by remember { mutableStateOf(prefs.autoShowKeyboard) }
@@ -208,6 +209,21 @@ class FeaturesFragment : Fragment() {
                 }
             )
 
+            SettingsSwitch(
+                text = stringResource(R.string.hide_search_view),
+                fontSize = titleFontSize,
+                defaultState = toggledHideSearchView,
+                onCheckedChange = {
+                    toggledHideSearchView = !prefs.hideSearchView
+                    prefs.hideSearchView = toggledHideSearchView
+
+                    if (prefs.hideSearchView) {
+                        toggledAutoShowKeyboard = false
+                        prefs.autoShowKeyboard = toggledAutoShowKeyboard
+                    }
+                }
+            )
+
             SettingsTitle(
                 text = stringResource(R.string.search),
                 fontSize = titleFontSize,
@@ -231,15 +247,17 @@ class FeaturesFragment : Fragment() {
                 }
             )
 
-            SettingsSwitch(
-                text = stringResource(R.string.auto_show_keyboard),
-                fontSize = titleFontSize,
-                defaultState = toggledAutoShowKeyboard,
-                onCheckedChange = {
-                    toggledAutoShowKeyboard = !prefs.autoShowKeyboard
-                    prefs.autoShowKeyboard = toggledAutoShowKeyboard
-                }
-            )
+            if (!toggledHideSearchView) {
+                SettingsSwitch(
+                    text = stringResource(R.string.auto_show_keyboard),
+                    fontSize = titleFontSize,
+                    defaultState = toggledAutoShowKeyboard,
+                    onCheckedChange = {
+                        toggledAutoShowKeyboard = !prefs.autoShowKeyboard
+                        prefs.autoShowKeyboard = toggledAutoShowKeyboard
+                    }
+                )
+            }
 
             SettingsSwitch(
                 text = stringResource(R.string.search_from_start),

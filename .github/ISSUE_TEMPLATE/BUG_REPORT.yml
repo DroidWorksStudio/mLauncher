@@ -2,7 +2,7 @@ name: Bug report
 description: Create a bug report
 labels: ['Type: Bug Report']
 title: '[Bug Report] add text here'
-assignees: ['HeCodes2Much']
+assignees: ['CreativeCodeCat']
 body:
   - type: markdown
     attributes:

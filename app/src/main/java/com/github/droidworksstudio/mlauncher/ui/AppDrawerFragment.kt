@@ -140,18 +140,21 @@ class AppDrawerFragment : Fragment() {
         binding.recyclerView.adapter = appAdapter
         binding.recyclerView.addOnScrollListener(getRecyclerViewOnScrollListener())
 
-        when (flag) {
-            AppDrawerFlag.LaunchApp -> binding.search.queryHint =
-                applyTextColor(getString(R.string.show_apps), prefs.appColor)
+        if (prefs.hideSearchView) {
+            binding.search.visibility = View.GONE
+        } else {
+            when (flag) {
+                AppDrawerFlag.LaunchApp -> binding.search.queryHint =
+                    applyTextColor(getString(R.string.show_apps), prefs.appColor)
 
-            AppDrawerFlag.HiddenApps -> binding.search.queryHint =
-                applyTextColor(getString(R.string.hidden_apps), prefs.appColor)
+                AppDrawerFlag.HiddenApps -> binding.search.queryHint =
+                    applyTextColor(getString(R.string.hidden_apps), prefs.appColor)
 
-            AppDrawerFlag.SetHomeApp -> binding.search.queryHint =
-                applyTextColor(getString(R.string.please_select_app), prefs.appColor)
+                AppDrawerFlag.SetHomeApp -> binding.search.queryHint =
+                    applyTextColor(getString(R.string.please_select_app), prefs.appColor)
 
-            else -> binding.search.queryHint =
-                applyTextColor("---", prefs.appColor)
+                else -> {}
+            }
         }
 
         binding.listEmptyHint.text = applyTextColor(getString(R.string.drawer_list_empty_hint), prefs.appColor)
@@ -291,6 +294,7 @@ class AppDrawerFragment : Fragment() {
 
     private fun View.showKeyboard() {
         if (!Prefs(requireContext()).autoShowKeyboard) return
+        if (Prefs(requireContext()).hideSearchView) return
 
         val searchTextView = binding.search.findViewById<TextView>(R.id.search_src_text)
         searchTextView.requestFocus()

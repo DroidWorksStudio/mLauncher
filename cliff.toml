@@ -76,7 +76,8 @@ commit_preprocessors = [
     { pattern = "Merge pull request #([0-9]+) from [^ ]+", replace = "PR # [${1}](<REPO>/pull/${1}):"},
     # Replace Signed-off-by
     { pattern = "Signed-off-by: HeCodes2Much <wayne6324@gmail.com>", replace = ""},
-    { pattern = "Signed-off-by: The-Repo-Club <wayne6324@gmail.com>", replace = ""}
+    { pattern = "Signed-off-by: The-Repo-Club <wayne6324@gmail.com>", replace = ""},
+    { pattern = "Signed-off-by: CreativeCodeCat <wayne6324@gmail.com>", replace = ""}
     # Check spelling of the commit with https://github.com/crate-ci/typos
     # If the spelling is incorrect, it will be automatically fixed.
     # { pattern = '.*', replace_command = 'typos --write-changes -' },
