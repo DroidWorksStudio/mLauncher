@@ -21,6 +21,7 @@
     <string name="app_language">ภาษาอินเทอร์เฟซ</string>
     <string name="font_family">ครอบครัวแบบอักษร</string>
     <string name="settings_text_size">ขนาดตัวอักษรการตั้งค่า</string>
+    <string name="hide_search_view">Hide Search View</string>
     <string name="search">ค้นหา</string>
     <string name="search_engine">เครื่องมือค้นหา</string>
     <string name="auto_show_keyboard">แป้นพิมพ์แสดงอัตโนมัติ</string>
