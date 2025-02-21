@@ -1,9 +1,0 @@
-Versio: 1.5.1
-
-Kielituki:
-
-Päivitetyt kielitiedostot.
-
-Refaktori:
-
-Parannettu sovelluskuvakkeen suunnittelu päivittämällä visuaalisesti houkuttelevampaan kuvakkeeseen.

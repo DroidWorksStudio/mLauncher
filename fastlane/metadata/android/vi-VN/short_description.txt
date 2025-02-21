@@ -1,1 +1,0 @@
-Được phân nhánh từ Olauncher, +tối giản hóa, +khả năng tùy chỉnh

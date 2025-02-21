@@ -1,5 +1,0 @@
-Toleo: 1.4.7
-
-Marekebisho ya Hitilafu:
-
-RENAME imerekebishwa kutokana na kuonyeshwa katika maeneo yote ya orodha ya programu.

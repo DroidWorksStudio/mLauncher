@@ -1,7 +1,0 @@
-Versio: 1.4.1
-
-Parannukset:
-[Ominaisuus] - Lisätty pitkän painalluksen pyyhkäisyeleitä.
-
-Kielituki:
-[Kieli] Päivitetyt kielitiedostot.

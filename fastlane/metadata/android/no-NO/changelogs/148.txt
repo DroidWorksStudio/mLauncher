@@ -1,6 +1,0 @@
-Versjon: 1.4.8
-
-Feilrettinger:
-
-Rettet applisten for ikke å vise duplikater når nylige apper er aktivert
-Rettet backup-systemet da det ikke fungerte.

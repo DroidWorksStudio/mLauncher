@@ -1,9 +1,0 @@
-Versio: 1.4.4
-
-Lisävarusteet:
-[Ominaisuus] - Lisätty fragmentti sovellusten tilaamista varten.
-[Ominaisuus] - Lisätty mahdollisuus muuttaa kellon kokoa itsenäisesti.
-
-Kielituki:
-
-[Kieli] Päivitetyt kielitiedostot.

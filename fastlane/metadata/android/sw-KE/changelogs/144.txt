@@ -1,9 +1,0 @@
-Toleo: 1.4.4
-
-Uboreshaji:
-[Kipengele] - Imeongeza kipande cha programu za kuagiza Re.
-[Kipengele] - Aliongeza uwezo wa kubadilisha ukubwa wa saa kwa kujitegemea.
-
-Usaidizi wa Lugha:
-
-[Lugha] Faili za Lugha Zilizosasishwa.

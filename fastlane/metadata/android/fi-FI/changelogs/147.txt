@@ -1,5 +1,0 @@
-Versio: 1.4.7
-
-Virheenkorjauksia:
-
-Korjattu RENAME, joka ei näy sovelluksen kaikilla luetteloalueilla.

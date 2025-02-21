@@ -1,9 +1,0 @@
-Versjon: 1.4.4
-
-Forbedring:
-[Funksjon] - Lagt til et fragment for å bestille apper på nytt.
-[Funksjon] - Lagt til muligheten til å endre klokkestørrelsen uavhengig.
-
-Språkstøtte:
-
-[Språk] Oppdaterte språkfiler.
