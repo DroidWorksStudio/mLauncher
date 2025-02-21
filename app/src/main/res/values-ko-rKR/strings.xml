@@ -21,7 +21,7 @@
     <string name="app_language">Interface Language</string>
     <string name="font_family">글꼴군</string>
     <string name="settings_text_size">설정 텍스트 크기</string>
-    <string name="hide_search_view">Hide Search View</string>
+    <string name="hide_search_view">검색보기 숨기기</string>
     <string name="search">찾다</string>
     <string name="search_engine">검색 엔진</string>
     <string name="auto_show_keyboard">Auto show keyboard</string>
