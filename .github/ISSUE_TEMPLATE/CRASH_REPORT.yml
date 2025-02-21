@@ -2,7 +2,7 @@ name: Crash Report
 description: Create a report with a generated crash log attached (if possible) to help mLauncher improve
 labels: ['Type: Crash Report']
 title: '[Crash Report] add text here'
-assignees: ['HeCodes2Much']
+assignees: ['CreativeCodeCat']
 body:
   - type: markdown
     attributes:

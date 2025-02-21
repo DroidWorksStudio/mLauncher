@@ -2,7 +2,7 @@ name: Feature request
 description: Suggest an idea for this project
 labels: ['Type: Enhancement']
 title: '[Enhancement] add text here'
-assignees: ['HeCodes2Much']
+assignees: ['CreativeCodeCat']
 body:
   - type: markdown
     attributes:

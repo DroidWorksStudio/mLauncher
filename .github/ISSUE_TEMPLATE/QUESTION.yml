@@ -2,7 +2,7 @@ name: Question
 description: Ask about anything related
 labels: ['Type: Question']
 title: '[Question] add text here'
-assignees: ['HeCodes2Much']
+assignees: ['HeCodes2MCreativeCodeCatuch']
 body:
   - type: markdown
     attributes:

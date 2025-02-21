@@ -62,9 +62,9 @@ Issues should be used to report problems with the project, request a new feature
 
 If you find an Issue that addresses the problem you're having, please add your own reproduction information to the existing issue rather than creating a new one. Adding a [reaction](https://github.blog/2016-03-10-add-reactions-to-pull-requests-issues-and-comments/) can also help be indicating to our maintainers that a particular problem is affecting more than just the reporter.
 
-**Report bugs using Github's [issues](https://github.com/HeCodes2Much/mLauncher/issues)**
+**Report bugs using Github's [issues](https://github.com/DroidWorksStudio/mLauncher/issues)**
 
-We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/HeCodes2Much/mLauncher/issues/new/choose); it's that easy!
+We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/DroidWorksStudio/mLauncher/issues/new/choose); it's that easy!
 
 Write bug reports with detail, background, and sample code
 
