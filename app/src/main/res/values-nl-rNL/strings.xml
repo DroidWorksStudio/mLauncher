@@ -21,6 +21,7 @@
     <string name="app_language">Interface taal</string>
     <string name="font_family">Lettertypefamilie</string>
     <string name="settings_text_size">Instellingen Tekstgrootte</string>
+    <string name="hide_search_view">Verberg Zoekweergave</string>
     <string name="search">Zoek</string>
     <string name="search_engine">Zoekmachine</string>
     <string name="auto_show_keyboard">Toetsenbord automatisch tonen</string>

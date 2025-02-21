@@ -21,6 +21,7 @@
     <string name="app_language">Sąsajos kalba</string>
     <string name="font_family">Šrifto šeima</string>
     <string name="settings_text_size">Nustatymai Teksto dydis</string>
+    <string name="hide_search_view">Slėpti paieškos rodinį</string>
     <string name="search">Ieškoti</string>
     <string name="search_engine">Paieškos sistema</string>
     <string name="auto_show_keyboard">Automatiškai rodyti klaviatūrą</string>

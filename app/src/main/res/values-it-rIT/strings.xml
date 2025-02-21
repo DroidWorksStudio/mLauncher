@@ -21,6 +21,7 @@
     <string name="app_language">Lingua Dell\'Interfaccia</string>
     <string name="font_family">Famiglia di font</string>
     <string name="settings_text_size">Impostazioni dimensione testo</string>
+    <string name="hide_search_view">Nascondi la vista di ricerca</string>
     <string name="search">Ricerca</string>
     <string name="search_engine">Motore di ricerca</string>
     <string name="auto_show_keyboard">Mostra tastiera automaticamente</string>

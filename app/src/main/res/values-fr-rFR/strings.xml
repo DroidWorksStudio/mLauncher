@@ -21,6 +21,7 @@
     <string name="app_language">Langue de l\'interface</string>
     <string name="font_family">Famille de polices</string>
     <string name="settings_text_size">Taille du texte des paramètres</string>
+    <string name="hide_search_view">Masquer la vue de recherche</string>
     <string name="search">Recherche</string>
     <string name="search_engine">Moteur de recherche</string>
     <string name="auto_show_keyboard">Auto show keyboard</string>
