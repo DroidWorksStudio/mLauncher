@@ -216,6 +216,11 @@ class FeaturesFragment : Fragment() {
                 onCheckedChange = {
                     toggledHideSearchView = !prefs.hideSearchView
                     prefs.hideSearchView = toggledHideSearchView
+
+                    if (prefs.hideSearchView) {
+                        toggledAutoShowKeyboard = false
+                        prefs.autoShowKeyboard = toggledAutoShowKeyboard
+                    }
                 }
             )
 
@@ -242,15 +247,17 @@ class FeaturesFragment : Fragment() {
                 }
             )
 
-            SettingsSwitch(
-                text = stringResource(R.string.auto_show_keyboard),
-                fontSize = titleFontSize,
-                defaultState = toggledAutoShowKeyboard,
-                onCheckedChange = {
-                    toggledAutoShowKeyboard = !prefs.autoShowKeyboard
-                    prefs.autoShowKeyboard = toggledAutoShowKeyboard
-                }
-            )
+            if (!toggledHideSearchView) {
+                SettingsSwitch(
+                    text = stringResource(R.string.auto_show_keyboard),
+                    fontSize = titleFontSize,
+                    defaultState = toggledAutoShowKeyboard,
+                    onCheckedChange = {
+                        toggledAutoShowKeyboard = !prefs.autoShowKeyboard
+                        prefs.autoShowKeyboard = toggledAutoShowKeyboard
+                    }
+                )
+            }
 
             SettingsSwitch(
                 text = stringResource(R.string.search_from_start),
