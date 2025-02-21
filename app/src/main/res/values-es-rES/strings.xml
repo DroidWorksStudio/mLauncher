@@ -21,6 +21,7 @@
     <string name="app_language">Idioma</string>
     <string name="font_family">Familia tipográfica</string>
     <string name="settings_text_size">Texto en pantalla</string>
+    <string name="hide_search_view">Hide Search View</string>
     <string name="search">Buscar</string>
     <string name="search_engine">Buscador</string>
     <string name="auto_show_keyboard">Teclado automático</string>
