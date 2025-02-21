@@ -13,6 +13,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Fixed a few toggles to only display if child is correct. - ([fad1e73](https://github.com/DroidWorksStudio/mLauncher/commit/fad1e73d2f1c88d2a1cdd8fd797cc11cb48e5947))
 
+### Language Support:
+
+- Updated Language Files. ([#658](https://github.com/DroidWorksStudio/mLauncher/issues/658)) - ([94914cb](https://github.com/DroidWorksStudio/mLauncher/commit/94914cbf32c0d51778bc9e54b5d4a7b9b40dd359))
+
 ### Refactoring:
 
 - Cleanup wrong namespaces - ([edc7e2b](https://github.com/DroidWorksStudio/mLauncher/commit/edc7e2bdc9c7e980198f7b8a9b65ac38c67fd418))
