@@ -29,6 +29,7 @@
     <string name="app_language">Interface Language</string>
     <string name="font_family">Font Family</string>
     <string name="settings_text_size">Settings Text Size</string>
+    <string name="hide_search_view">Hide Search View</string>
 
     <string name="search">Search</string>
 
