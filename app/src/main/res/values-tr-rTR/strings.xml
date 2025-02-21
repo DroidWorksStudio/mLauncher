@@ -21,7 +21,7 @@
     <string name="app_language">Arayüz Dili</string>
     <string name="font_family">Font ailesi</string>
     <string name="settings_text_size">Ayarlar Metin Boyutu</string>
-    <string name="hide_search_view">Hide Search View</string>
+    <string name="hide_search_view">Arama Görünümünü Gizle</string>
     <string name="search">Aramak</string>
     <string name="search_engine">Arama motoru</string>
     <string name="auto_show_keyboard">Klavye\'yi otomatik göster</string>
