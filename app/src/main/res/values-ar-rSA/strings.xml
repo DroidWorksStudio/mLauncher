@@ -21,7 +21,7 @@
     <string name="app_language">لغة الواجهة</string>
     <string name="font_family">خط العائلة</string>
     <string name="settings_text_size">إعدادات حجم النص</string>
-    <string name="hide_search_view">Hide Search View</string>
+    <string name="hide_search_view">إخفاء عرض البحث</string>
     <string name="search">يبحث</string>
     <string name="search_engine">محرك البحث</string>
     <string name="auto_show_keyboard">Auto show keyboard</string>
