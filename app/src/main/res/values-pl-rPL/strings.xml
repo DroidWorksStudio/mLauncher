@@ -21,7 +21,7 @@
     <string name="app_language">Język interfejsu</string>
     <string name="font_family">Rodzina czcionek</string>
     <string name="settings_text_size">Ustawienia Rozmiar tekstu</string>
-    <string name="hide_search_view">Hide Search View</string>
+    <string name="hide_search_view">Ukryj widok wyszukiwania</string>
     <string name="search">Szukaj</string>
     <string name="search_engine">Wyszukiwarka</string>
     <string name="auto_show_keyboard">Auto show keyboard</string>
