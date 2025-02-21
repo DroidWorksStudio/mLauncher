@@ -21,7 +21,7 @@
     <string name="app_language">Jazyk rozhrania</string>
     <string name="font_family">Rodina písiem</string>
     <string name="settings_text_size">Nastavenia Veľkosť textu</string>
-    <string name="hide_search_view">Hide Search View</string>
+    <string name="hide_search_view">Skryť zobrazenie vyhľadávania</string>
     <string name="search">Hľadať</string>
     <string name="search_engine">Vyhľadávač</string>
     <string name="auto_show_keyboard">Automaticky zobraziť klávesnicu</string>
