@@ -1,6 +1,0 @@
-Versio: 1.4.8
-
-Virheenkorjauksia:
-
-Korjattu sovellusluettelo siten, ettei kaksoiskappaleita näytetä, kun viimeisimmät sovellukset on otettu käyttöön
-Varajärjestelmä korjattiin, koska se ei toiminut.
