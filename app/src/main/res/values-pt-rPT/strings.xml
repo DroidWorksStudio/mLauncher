@@ -95,6 +95,7 @@
     <string name="long_swipe_right_app">Pressione longamente e deslize para a direita</string>
     <string name="open_app">Aplicação aberta</string>
     <string name="lock_screen">Ecrã de bloqueio</string>
+    <string name="private_space">Espaços Privados</string>
     <string name="show_notifications">Mostrar Notificação</string>
     <string name="show_app_list">Mostrar lista de aplicações</string>
     <string name="open_quick_settings">Definições rápidas</string>
@@ -171,4 +172,10 @@
     <string name="disabled">Deficientes</string>
     <string name="open">Aberto</string>
     <string name="close">Fechar</string>
+    <!-- Private Spaces Strings -->
+    <string name="alert_requires_android_v">Esta funcionalidade requer Android 15 ou posterior.</string>
+    <string name="toast_private_space_default_home_screen">O mLauncher precisa ser a tela inicial padrão para acessar o espaço privado.</string>
+    <string name="toast_private_space_locked">Espaço privado bloqueado</string>
+    <string name="toast_private_space_unlocked">Espaço privado desbloqueado</string>
+    <string name="toast_private_space_not_available">Espaço privado não está disponível</string>
 </resources>
