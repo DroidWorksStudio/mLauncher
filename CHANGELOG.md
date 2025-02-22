@@ -20,6 +20,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Moved private spaces to main settings - ([eb19330](https://github.com/DroidWorksStudio/mLauncher/commit/eb193306a2af2d095895ad888aae6892d2d9cdb1))
 - Cleanup drawable colors - ([073c0bc](https://github.com/DroidWorksStudio/mLauncher/commit/073c0bc366a24b356ea1ed80d26995fbada32967))
 - Cleaned up 35 dead languages ([#660](https://github.com/DroidWorksStudio/mLauncher/issues/660)) - ([a718674](https://github.com/DroidWorksStudio/mLauncher/commit/a7186748fa823bd40b8569fec2b2dbe07f01f20d))
 - Cleanup wrong namespaces - ([edc7e2b](https://github.com/DroidWorksStudio/mLauncher/commit/edc7e2bdc9c7e980198f7b8a9b65ac38c67fd418))
