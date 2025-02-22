@@ -1,8 +1,8 @@
 name: Bug report
 description: Create a bug report
-labels: ['Type: Bug Report']
+labels: [ 'Type: Bug Report' ]
 title: '[Bug Report] add text here'
-assignees: ['CreativeCodeCat']
+assignees: [ 'CreativeCodeCat' ]
 body:
   - type: markdown
     attributes:
@@ -19,6 +19,8 @@ body:
           required: true
         - label: "I made sure that there are **no existing issues** - [open](https://github.com/DroidWorksStudio/mLauncher/issues) or [closed](https://github.com/DroidWorksStudio/mLauncher/issues?q=is%3Aissue+is%3Aclosed) - which I could contribute my information to."
           required: true
+        - label: "Yes, I have reviewed the [Known Issues](https://github.com/DroidWorksStudio/mLauncher/blob/main/KnownIssues.md) and my issue is not listed."
+          required: true
         - label: "I've verified that this issue hasn't been addressed in the [changelogs](https://github.com/DroidWorksStudio/mLauncher/blob/main/CHANGELOG.md)."
           required: true
         - label: "I have taken the time to fill in all the required details. I understand that the bug report will be dismissed otherwise."
@@ -31,19 +33,19 @@ body:
   - type: input
     id: app-version
     attributes:
-     label: App version
-     description: "In which version did you encounter the bug?"
-     placeholder: "xx.xx - Can be seen in the app from the 'Settings' section"
+      label: App version
+      description: "In which version did you encounter the bug?"
+      placeholder: "xx.xx - Can be seen in the app from the 'Settings' section"
     validations:
       required: true
 
   - type: input
     id: device-os-info
     attributes:
-     label: Android version
-     description: |
-      With what operating system (+ version) did you encounter the bug?
-     placeholder: "Example: Android 10"
+      label: Android version
+      description: |
+        With what operating system (+ version) did you encounter the bug?
+      placeholder: "Example: Android 10"
     validations:
       required: true
 
