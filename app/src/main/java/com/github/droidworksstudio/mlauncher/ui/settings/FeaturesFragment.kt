@@ -26,6 +26,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.github.droidworksstudio.common.isBiometricEnabled
+import com.github.droidworksstudio.common.isGestureNavigationEnabled
 import com.github.droidworksstudio.mlauncher.MainViewModel
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.Constants
@@ -443,6 +444,13 @@ class FeaturesFragment : Fragment() {
                     prefs.showBatteryIcon = toggledShowBatteryIcon
                 }
             )
+
+            if (!isGestureNavigationEnabled(requireContext())) {
+                Spacer(
+                    modifier = Modifier
+                        .height(52.dp)
+                )
+            }
         }
     }
 

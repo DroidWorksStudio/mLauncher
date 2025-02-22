@@ -25,6 +25,7 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.github.droidworksstudio.common.isGestureNavigationEnabled
 import com.github.droidworksstudio.mlauncher.MainViewModel
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.Constants
@@ -481,6 +482,13 @@ class GesturesFragment : Fragment() {
                     )
                 }
             )
+
+            if (!isGestureNavigationEnabled(requireContext())) {
+                Spacer(
+                    modifier = Modifier
+                        .height(52.dp)
+                )
+            }
         }
     }
 

@@ -46,6 +46,7 @@ import androidx.navigation.fragment.findNavController
 import com.github.droidworksstudio.common.launchCalendar
 import com.github.droidworksstudio.common.openAccessibilitySettings
 import com.github.droidworksstudio.common.openAlarmApp
+import com.github.droidworksstudio.common.openBatteryManager
 import com.github.droidworksstudio.common.openCameraApp
 import com.github.droidworksstudio.common.openDialerApp
 import com.github.droidworksstudio.common.openDigitalWellbeing
@@ -233,7 +234,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             }
 
             R.id.battery -> {
-                openBatteryUsage()
+                requireContext().openBatteryManager()
             }
 
             else -> {
@@ -245,11 +246,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 }
             }
         }
-    }
-
-    private fun openBatteryUsage() {
-        val batteryUsageIntent = Intent(Intent.ACTION_POWER_USAGE_SUMMARY)
-        startActivity(batteryUsageIntent)
     }
 
     override fun onLongClick(view: View): Boolean {
@@ -488,7 +484,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         if (prefs.appDoubleTap.activityPackage.isNotEmpty())
             launchApp(prefs.appDoubleTap)
         else
-            requireContext().openAccessibilitySettings()
+            AppReloader.restartApp(requireContext())
     }
 
     // This function handles all swipe actions that a independent of the actual swipe direction
