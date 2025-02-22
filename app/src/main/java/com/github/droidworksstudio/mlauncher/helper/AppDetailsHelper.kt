@@ -7,7 +7,6 @@ import android.content.pm.ApplicationInfo
 import android.util.Log
 import com.github.droidworksstudio.mlauncher.R
 import org.xmlpull.v1.XmlPullParser
-import java.util.Calendar
 
 object AppDetailsHelper {
 
@@ -28,13 +27,11 @@ object AppDetailsHelper {
         val blacklist = parseBlacklistXML(context)
         val pm = context.packageManager
 
-        // Set calendar to midnight of today (start of the day)
-        val startTime = Calendar.getInstance().apply {
-            set(Calendar.HOUR_OF_DAY, 0)
-            set(Calendar.MINUTE, 0)
-            set(Calendar.SECOND, 0)
-            set(Calendar.MILLISECOND, 0)
-        }.timeInMillis
+        // Get current time in milliseconds (epoch time)
+        val currentTime = System.currentTimeMillis()
+
+        // Calculate start of the day (midnight) in epoch time
+        val startTime = currentTime - (currentTime % (24 * 60 * 60 * 1000)) // Set the time to midnight of the current day
 
         val endTime = System.currentTimeMillis()
 
@@ -72,15 +69,13 @@ object AppDetailsHelper {
     @SuppressLint("NewApi")
     fun getTotalScreenTime(context: Context): Long {
         val blacklist = parseBlacklistXML(context)
-        // Get the start of the current day (midnight)
-        val calendar = Calendar.getInstance().apply {
-            set(Calendar.HOUR_OF_DAY, 0)
-            set(Calendar.MINUTE, 0)
-            set(Calendar.SECOND, 0)
-            set(Calendar.MILLISECOND, 0)
-        }
 
-        val startTime = calendar.timeInMillis
+        // Get current time in milliseconds (epoch time)
+        val currentTime = System.currentTimeMillis()
+
+        // Calculate start of the day (midnight) in epoch time
+        val startTime = currentTime - (currentTime % (24 * 60 * 60 * 1000)) // Set the time to midnight of the current day
+
         val endTime = System.currentTimeMillis()
 
         // Get the UsageStatsManager system service
