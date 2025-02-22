@@ -95,6 +95,7 @@
     <string name="long_swipe_right_app">長押し 右にスワイプ</string>
     <string name="open_app">アプリを開く</string>
     <string name="lock_screen">ロック画面</string>
+    <string name="private_space">プライベートスペース</string>
     <string name="show_notifications">通知を表示</string>
     <string name="show_app_list">アプリ一覧を表示</string>
     <string name="open_quick_settings">クイック設定</string>
@@ -171,4 +172,10 @@
     <string name="disabled">無効</string>
     <string name="open">開く</string>
     <string name="close">閉じる</string>
+    <!-- Private Spaces Strings -->
+    <string name="alert_requires_android_v">この機能には Android 15 以降が必要です。</string>
+    <string name="toast_private_space_default_home_screen">プライベート スペースにアクセスするには、mLauncher をデフォルトのホーム画面にする必要があります。</string>
+    <string name="toast_private_space_locked">プライベートスペースはロックされています</string>
+    <string name="toast_private_space_unlocked">プライベートスペースのロック解除</string>
+    <string name="toast_private_space_not_available">プライベートスペースは利用できません</string>
 </resources>

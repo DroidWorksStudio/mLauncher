@@ -95,6 +95,7 @@
     <string name="long_swipe_right_app">Appui long, glisser vers la droite</string>
     <string name="open_app">Ouvrir l\'application</string>
     <string name="lock_screen">Verrouiller l\'écran</string>
+    <string name="private_space">Espaces privés</string>
     <string name="show_notifications">Afficher la notification</string>
     <string name="show_app_list">Afficher la liste des applications</string>
     <string name="open_quick_settings">Paramètres Rapides</string>
@@ -171,4 +172,10 @@
     <string name="disabled">Désactivé</string>
     <string name="open">Ouvert</string>
     <string name="close">Fermer</string>
+    <!-- Private Spaces Strings -->
+    <string name="alert_requires_android_v">Cette fonctionnalité nécessite Android 15 ou version ultérieure.</string>
+    <string name="toast_private_space_default_home_screen">mLauncher doit être l\'écran d\'accueil par défaut pour accéder à l\'espace privé.</string>
+    <string name="toast_private_space_locked">Espace privé fermé à clé</string>
+    <string name="toast_private_space_unlocked">Espace privé déverrouillé</string>
+    <string name="toast_private_space_not_available">L\'espace privé n\'est pas disponible</string>
 </resources>

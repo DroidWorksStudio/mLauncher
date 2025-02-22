@@ -95,6 +95,7 @@
     <string name="long_swipe_right_app">اضغط لفترة طويلة اسحب لليمين</string>
     <string name="open_app">فتح التطبيق</string>
     <string name="lock_screen">قفل الشاشة</string>
+    <string name="private_space">المساحات الخاصة</string>
     <string name="show_notifications">إظهار الإشعارات</string>
     <string name="show_app_list">إظهار قائمة التطبيقات</string>
     <string name="open_quick_settings">الإعدادات السريعة</string>
@@ -171,4 +172,10 @@
     <string name="disabled">معطل</string>
     <string name="open">فتح</string>
     <string name="close">أغلق</string>
+    <!-- Private Spaces Strings -->
+    <string name="alert_requires_android_v">تتطلب هذه الوظيفة نظام Android 15 أو إصدارًا أحدث.</string>
+    <string name="toast_private_space_default_home_screen">يجب أن تكون mLauncher هي الشاشة الرئيسية الافتراضية للوصول إلى المساحة الخاصة.</string>
+    <string name="toast_private_space_locked">مساحة خاصة مغلقة</string>
+    <string name="toast_private_space_unlocked">مساحة خاصة مفتوحة</string>
+    <string name="toast_private_space_not_available">المساحة الخاصة غير متاحة</string>
 </resources>

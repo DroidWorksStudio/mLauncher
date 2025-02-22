@@ -95,6 +95,7 @@
     <string name="long_swipe_right_app">Dlhé potiahnutie prstom doprava</string>
     <string name="open_app">Otvoriť aplikáciu</string>
     <string name="lock_screen">Zamykacia obrazovka</string>
+    <string name="private_space">Súkromné priestory</string>
     <string name="show_notifications">Zobraziť notifikácie</string>
     <string name="show_app_list">Zobraziť zoznam aplikácií</string>
     <string name="open_quick_settings">Rýchle nastavenia</string>
@@ -170,4 +171,10 @@
     <string name="disabled">Zakázané</string>
     <string name="open">Otvoriť</string>
     <string name="close">Zatvoriť</string>
+    <!-- Private Spaces Strings -->
+    <string name="alert_requires_android_v">Táto funkcia vyžaduje Android 15 alebo novší.</string>
+    <string name="toast_private_space_default_home_screen">Na prístup k súkromnému priestoru musí byť mLauncher predvolenou domovskou obrazovkou.</string>
+    <string name="toast_private_space_locked">Súkromný priestor je zamknutý</string>
+    <string name="toast_private_space_unlocked">Súkromný priestor je odomknutý</string>
+    <string name="toast_private_space_not_available">Súkromný priestor nie je k dispozícii</string>
 </resources>
