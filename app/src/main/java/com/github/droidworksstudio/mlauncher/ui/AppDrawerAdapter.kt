@@ -22,7 +22,6 @@ import android.widget.Filterable
 import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.annotation.RequiresApi
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.view.updatePadding
 import androidx.recyclerview.widget.RecyclerView
@@ -72,7 +71,6 @@ class AppDrawerAdapter(
         return ViewHolder(binding)
     }
 
-    @RequiresApi(Build.VERSION_CODES.VANILLA_ICE_CREAM)
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         if (appFilteredList.size == 0) return
         val appModel = appFilteredList[holder.absoluteAdapterPosition]
@@ -87,8 +85,6 @@ class AppDrawerAdapter(
 
         holder.appSaveRename.setOnClickListener {
             val name = holder.appRenameEdit.text.toString().trim()
-            /* TODO looks like suboptimal direction of data flow. The update is better to be written
-                    to the database (which is prefs?), and then propagated from there */
             appModel.customLabel = name
             notifyItemChanged(holder.absoluteAdapterPosition)
             appRenameListener(appModel.activityPackage, appModel.customLabel)

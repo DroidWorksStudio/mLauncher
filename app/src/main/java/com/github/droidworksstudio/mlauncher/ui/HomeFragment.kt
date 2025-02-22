@@ -130,7 +130,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     }
 
 
-    @RequiresApi(Build.VERSION_CODES.VANILLA_ICE_CREAM)
+    @RequiresApi(Build.VERSION_CODES.Q)
     override fun onStart() {
         super.onStart()
         if (prefs.showStatusBar) showStatusBar(requireActivity()) else hideStatusBar(requireActivity())
@@ -147,8 +147,10 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         privateSpaceReceiver = PrivateSpaceReceiver()
         /* register private Space changes */
         try {
-            val filter = IntentFilter(Intent.ACTION_PROFILE_AVAILABLE)
-            requireContext().registerReceiver(privateSpaceReceiver, filter)
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.VANILLA_ICE_CREAM) {
+                val filter = IntentFilter(Intent.ACTION_PROFILE_AVAILABLE)
+                requireContext().registerReceiver(privateSpaceReceiver, filter)
+            }
         } catch (e: Exception) {
             e.printStackTrace()
         }
