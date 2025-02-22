@@ -45,6 +45,7 @@ import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
 import com.github.droidworksstudio.mlauncher.helper.openAppInfo
 import com.github.droidworksstudio.mlauncher.helper.setThemeMode
 import com.github.droidworksstudio.mlauncher.helper.shareApplicationButton
+import com.github.droidworksstudio.mlauncher.helper.togglePrivateSpaceLock
 import com.github.droidworksstudio.mlauncher.listener.DeviceAdmin
 import com.github.droidworksstudio.mlauncher.style.SettingsTheme
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.PageHeader
@@ -200,6 +201,17 @@ class AdvancedFragment : Fragment() {
                 iconSize = iconSize,
                 onClick = {
                     shareApplicationButton(requireContext())
+                }
+            )
+
+            SettingsHomeItem(
+                title = stringResource(R.string.private_space),
+                imageVector = ImageVector.vectorResource(id = R.drawable.private_space),
+                titleFontSize = titleFontSize,
+                descriptionFontSize = descriptionFontSize,
+                iconSize = iconSize,
+                onClick = {
+                    togglePrivateSpaceLock(requireContext())
                 }
             )
         }

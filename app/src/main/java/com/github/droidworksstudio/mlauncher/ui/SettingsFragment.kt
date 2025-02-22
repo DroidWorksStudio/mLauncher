@@ -259,7 +259,7 @@ class SettingsFragment : Fragment() {
     private fun showFavoriteApps() {
         findNavController().navigate(
             R.id.action_settingsFragment_to_appFavoriteFragment,
-            bundleOf("flag" to AppDrawerFlag.ReorderApps.toString())
+            bundleOf("flag" to AppDrawerFlag.SetHomeApp.toString())
         )
     }
 

@@ -1,12 +1,11 @@
 package com.github.droidworksstudio.mlauncher.helper
 
-//noinspection SuspiciousImport
 import android.app.Activity
 import android.app.AlarmManager
 import android.app.AlertDialog
 import android.app.AppOpsManager
 import android.app.UiModeManager
-import android.content.ActivityNotFoundException
+import android.app.role.RoleManager
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
@@ -25,7 +24,7 @@ import android.provider.Settings
 import android.text.SpannableStringBuilder
 import android.text.style.ImageSpan
 import android.util.DisplayMetrics
-import android.util.Log.d
+import android.util.Log
 import android.util.TypedValue
 import android.view.View
 import android.view.WindowInsets
@@ -88,6 +87,7 @@ fun requestUsagePermission(context: Context) {
     context.startActivity(intent)
 }
 
+
 suspend fun getAppsList(
     context: Context,
     includeRegularApps: Boolean = true,
@@ -103,17 +103,22 @@ suspend fun getAppsList(
             val hiddenApps = Prefs(context).hiddenApps
 
             val userManager = context.getSystemService(Context.USER_SERVICE) as UserManager
-            val launcherApps =
-                context.getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps
+            val launcherApps = context.getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps
 
             val prefs = Prefs(context)
 
             for (profile in userManager.userProfiles) {
+
+                // Check if the profile is private space
+                val isProfilePrivate = isPrivateSpaceProfile(context, profile)
+
+                // Skip the private space if it's locked and we don't want to include private space apps
+                if (isProfilePrivate && isPrivateSpaceLocked(context)) {
+                    continue
+                }
+
                 for (activity in launcherApps.getActivityList(null, profile)) {
 
-                    // we have changed the alias identifier from app.label to app.applicationInfo.packageName
-                    // therefore, we check if the old one is set if the new one is empty
-                    // TODO inline this fallback logic to prefs
                     val appAlias = prefs.getAppAlias(activity.applicationInfo.packageName).ifEmpty {
                         prefs.getAppAlias(activity.label.toString())
                     }
@@ -126,16 +131,15 @@ suspend fun getAppsList(
                         appAlias,
                     )
 
-                    // TODO rewrite as a filter
-                    // if the current app is not mLauncher
+                    // Filter out mLauncher
                     if (activity.applicationInfo.packageName != BuildConfig.APPLICATION_ID) {
-                        // is this a hidden app?
+                        // Check if it's a hidden app
                         if (hiddenApps.contains(activity.applicationInfo.packageName + "|" + profile.toString())) {
                             if (includeHiddenApps) {
                                 appList.add(app)
                             }
                         } else {
-                            // this is a regular app
+                            // Regular app
                             if (includeRegularApps) {
                                 appList.add(app)
                             }
@@ -146,6 +150,7 @@ suspend fun getAppsList(
 
                 appList.sort()
 
+                // Handle recent apps
                 if (prefs.recentAppsDisplayed) {
                     val appUsageTracker = AppUsageTracker.createInstance(context)
                     val lastTenUsedApps = appUsageTracker.getLastTenAppsUsed(context)
@@ -161,18 +166,13 @@ suspend fun getAppsList(
                             appActivityName,
                             profile,
                             appAlias,
-                            // recent apps are sorted by last usage time
                         )
-
-                        d("appModel", app.toString())
 
                         if (includeRecentApps) {
                             appRecentList.add(app)
-                            // Remove appModel from appList if its packageName matches
-                            val iterator = appList.iterator()
 
-                            // FIXME likely a performance issue (a cycle inside a cycle)
-                            //       when I enable "recent apps", the drawer opens significantly slower.
+                            // Remove the app from appList if its packageName matches
+                            val iterator = appList.iterator()
                             while (iterator.hasNext()) {
                                 val model = iterator.next()
                                 if (model.activityPackage == packageName) {
@@ -181,15 +181,16 @@ suspend fun getAppsList(
                             }
                         }
                     }
-                    // Add all elements from appRecentList
+                    // Add all recent apps to the combined list
                     combinedList.addAll(appRecentList)
                 }
             }
-            // Add all elements from appList
+            // Add regular apps to the combined list
             combinedList.addAll(appList)
-        } catch (e: java.lang.Exception) {
-            d("appList", e.toString())
+        } catch (e: Exception) {
+            Log.d("appList", e.toString())
         }
+
         combinedList
     }
 }
@@ -247,35 +248,38 @@ fun wordOfTheDay(resources: Resources): String {
 }
 
 fun ismlauncherDefault(context: Context): Boolean {
-    val launcherPackageName = getDefaultLauncherPackage(context)
-    return BuildConfig.APPLICATION_ID == launcherPackageName
-}
-
-fun getDefaultLauncherPackage(context: Context): String {
-    val intent = Intent()
-    intent.action = Intent.ACTION_MAIN
-    intent.addCategory(Intent.CATEGORY_HOME)
-    val packageManager = context.packageManager
-
-    val result = packageManager.resolveActivity(intent, 0)
-    return if (result?.activityInfo != null) {
-        result.activityInfo.packageName
-    } else "android"
-}
-
-fun resetDefaultLauncher(context: Context) {
-    try {
-        val intent = Intent("android.settings.HOME_SETTINGS")
-        context.startActivity(intent)
-    } catch (_: ActivityNotFoundException) {
-        // Fallback to general settings if specific launcher settings are not found
-        try {
-            val intent = Intent(Settings.ACTION_SETTINGS)
-            context.startActivity(intent)
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+        val roleManager = context.getSystemService(RoleManager::class.java)
+        return roleManager.isRoleHeld(RoleManager.ROLE_HOME)
+    } else {
+        val testIntent = Intent(Intent.ACTION_MAIN)
+        testIntent.addCategory(Intent.CATEGORY_HOME)
+        val defaultHome = testIntent.resolveActivity(context.packageManager)?.packageName
+        return defaultHome == context.packageName
     }
+}
+
+fun setDefaultHomeScreen(context: Context, checkDefault: Boolean = false) {
+    val isDefault = ismlauncherDefault(context)
+    if (checkDefault && isDefault) {
+        // Launcher is already the default home app
+        return
+    }
+
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q
+        && context is Activity
+        && !isDefault // using role manager only works when µLauncher is not already the default.
+    ) {
+        val roleManager = context.getSystemService(RoleManager::class.java)
+        context.startActivityForResult(
+            roleManager.createRequestRoleIntent(RoleManager.ROLE_HOME),
+            Constants.REQUEST_SET_DEFAULT_HOME
+        )
+        return
+    }
+
+    val intent = Intent(Settings.ACTION_HOME_SETTINGS)
+    context.startActivity(intent)
 }
 
 fun helpFeedbackButton(context: Context) {

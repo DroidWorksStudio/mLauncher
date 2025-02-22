@@ -19,6 +19,7 @@ interface EnumOption {
 object Constants {
 
     const val REQUEST_CODE_ENABLE_ADMIN = 666
+    const val REQUEST_SET_DEFAULT_HOME = 777
 
     const val TRIPLE_TAP_DELAY_MS = 300
     const val LONG_PRESS_DELAY_MS = 500
@@ -98,7 +99,7 @@ object Constants {
     enum class AppDrawerFlag {
         LaunchApp,
         HiddenApps,
-        ReorderApps,
+        PrivateApps,
         SetHomeApp,
         SetShortSwipeUp,
         SetShortSwipeDown,
@@ -264,6 +265,7 @@ object Constants {
 
     enum class Action : EnumOption {
         OpenApp,
+        TogglePrivateSpace,
         LockScreen,
         ShowNotification,
         ShowAppList,
@@ -280,6 +282,7 @@ object Constants {
             return when (this) {
                 OpenApp -> context.getString(R.string.open_app)
                 LockScreen -> context.getString(R.string.lock_screen)
+                TogglePrivateSpace -> context.getString(R.string.private_space)
                 ShowNotification -> context.getString(R.string.show_notifications)
                 ShowAppList -> context.getString(R.string.show_app_list)
                 OpenQuickSettings -> context.getString(R.string.open_quick_settings)
@@ -298,6 +301,7 @@ object Constants {
             return when (this) {
                 OpenApp -> stringResource(R.string.open_app)
                 LockScreen -> stringResource(R.string.lock_screen)
+                TogglePrivateSpace -> stringResource(R.string.private_space)
                 ShowNotification -> stringResource(R.string.show_notifications)
                 ShowAppList -> stringResource(R.string.show_app_list)
                 OpenQuickSettings -> stringResource(R.string.open_quick_settings)

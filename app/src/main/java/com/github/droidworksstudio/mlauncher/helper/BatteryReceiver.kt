@@ -55,7 +55,7 @@ class BatteryReceiver : BroadcastReceiver() {
             }
         }
 
-        var batteryLevelInt = batteryLevel.toInt()
+        val batteryLevelInt = batteryLevel.toInt()
         batteryTextView?.text = buildString {
             append(batteryLevelInt)
             append("%")

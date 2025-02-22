@@ -127,6 +127,7 @@
 
     <string name="open_app">Open App</string>
     <string name="lock_screen">Lock Screen</string>
+    <string name="private_space">Private Spaces</string>
     <string name="show_notifications">Show Notification</string>
     <string name="show_app_list">Show App List</string>
     <string name="open_quick_settings">Quick Settings</string>
@@ -217,4 +218,11 @@
     <string name="disabled">Disabled</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
+
+    <!-- Private Spaces Strings -->
+    <string name="alert_requires_android_v">This functionality requires Android 15 or later.</string>
+    <string name="toast_private_space_default_home_screen">mLauncher needs to be the default home screen to access private space.</string>
+    <string name="toast_private_space_locked">Private space locked</string>
+    <string name="toast_private_space_unlocked">Private space unlocked</string>
+    <string name="toast_private_space_not_available">Private space is not available</string>
 </resources>

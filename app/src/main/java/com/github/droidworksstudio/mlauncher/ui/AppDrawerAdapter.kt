@@ -6,6 +6,9 @@ package com.github.droidworksstudio.mlauncher.ui
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.pm.LauncherApps
+import android.os.Build
+import android.os.UserManager
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.Gravity.LEFT
@@ -19,6 +22,7 @@ import android.widget.Filterable
 import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.annotation.RequiresApi
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.view.updatePadding
 import androidx.recyclerview.widget.RecyclerView
@@ -66,6 +70,7 @@ class AppDrawerAdapter(
         return ViewHolder(binding)
     }
 
+    @RequiresApi(Build.VERSION_CODES.VANILLA_ICE_CREAM)
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         if (appFilteredList.size == 0) return
         val appModel = appFilteredList[holder.absoluteAdapterPosition]
@@ -195,6 +200,7 @@ class AppDrawerAdapter(
         private val appInfo: TextView = itemView.appInfo
         private val appDelete: TextView = itemView.appDelete
 
+        @RequiresApi(Build.VERSION_CODES.VANILLA_ICE_CREAM)
         @SuppressLint("RtlHardcoded")
         fun bind(
             flag: AppDrawerFlag,
@@ -271,8 +277,22 @@ class AppDrawerAdapter(
                 appTitle.layoutParams = params
 
                 // add icon next to app name to indicate that this app is installed on another profile
-                if (appListItem.user != android.os.Process.myUserHandle()) {
+                val launcherApps = context.getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps
+                val isWorkProfile = launcherApps.getLauncherUserInfo(appListItem.user)?.userType == UserManager.USER_TYPE_PROFILE_MANAGED
+                val isPrivateSpace = launcherApps.getLauncherUserInfo(appListItem.user)?.userType == UserManager.USER_TYPE_PROFILE_PRIVATE
+
+                if (isWorkProfile) {
                     val icon = AppCompatResources.getDrawable(context, R.drawable.work_profile)
+                    val px = dp2px(resources, prefs.appSize)
+                    icon?.setBounds(0, 0, px, px)
+                    if (appLabelGravity == LEFT) {
+                        appTitle.setCompoundDrawables(null, null, icon, null)
+                    } else {
+                        appTitle.setCompoundDrawables(icon, null, null, null)
+                    }
+                    appTitle.compoundDrawablePadding = 20
+                } else if (isPrivateSpace) {
+                    val icon = AppCompatResources.getDrawable(context, R.drawable.private_space)
                     val px = dp2px(resources, prefs.appSize)
                     icon?.setBounds(0, 0, px, px)
                     if (appLabelGravity == LEFT) {

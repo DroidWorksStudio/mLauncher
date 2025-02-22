@@ -14,9 +14,8 @@ import com.github.droidworksstudio.mlauncher.data.Constants.AppDrawerFlag
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.helper.AppUsageTracker
 import com.github.droidworksstudio.mlauncher.helper.getAppsList
-import com.github.droidworksstudio.mlauncher.helper.getDefaultLauncherPackage
 import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
-import com.github.droidworksstudio.mlauncher.helper.resetDefaultLauncher
+import com.github.droidworksstudio.mlauncher.helper.setDefaultHomeScreen
 import kotlinx.coroutines.launch
 
 class MainViewModel(application: Application) : AndroidViewModel(application) {
@@ -30,7 +29,6 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     val appList = MutableLiveData<List<AppListItem>?>() // TODO why maybe?
     val hiddenApps = MutableLiveData<List<AppListItem>?>()
     private val launcherDefault = MutableLiveData<Boolean>()
-    val launcherResetFailed = MutableLiveData<Boolean>()
 
     val showDate = MutableLiveData(prefs.showDate)
     val showClock = MutableLiveData(prefs.showClock)
@@ -49,11 +47,11 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     fun selectedApp(app: AppListItem, flag: AppDrawerFlag, n: Int = 0) {
         when (flag) {
-            AppDrawerFlag.LaunchApp, AppDrawerFlag.HiddenApps -> {
+            AppDrawerFlag.LaunchApp, AppDrawerFlag.HiddenApps, AppDrawerFlag.PrivateApps -> {
                 launchApp(app)
             }
 
-            AppDrawerFlag.SetHomeApp, AppDrawerFlag.ReorderApps -> {
+            AppDrawerFlag.SetHomeApp -> {
                 prefs.setHomeAppModel(n, app)
             }
 
@@ -148,10 +146,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     fun resetDefaultLauncherApp(context: Context) {
-        resetDefaultLauncher(context)
-        launcherResetFailed.value = getDefaultLauncherPackage(
-            appContext
-        ).contains(".")
+        setDefaultHomeScreen(context)
     }
 
     fun updateDrawerAlignment(gravity: Constants.Gravity) {

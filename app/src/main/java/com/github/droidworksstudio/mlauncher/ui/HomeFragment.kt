@@ -65,12 +65,13 @@ import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.getTotalScr
 import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.getUsageStats
 import com.github.droidworksstudio.mlauncher.helper.AppReloader
 import com.github.droidworksstudio.mlauncher.helper.BatteryReceiver
+import com.github.droidworksstudio.mlauncher.helper.PrivateSpaceReceiver
 import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
 import com.github.droidworksstudio.mlauncher.helper.getNextAlarm
 import com.github.droidworksstudio.mlauncher.helper.hideStatusBar
 import com.github.droidworksstudio.mlauncher.helper.initActionService
-import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
 import com.github.droidworksstudio.mlauncher.helper.showStatusBar
+import com.github.droidworksstudio.mlauncher.helper.togglePrivateSpaceLock
 import com.github.droidworksstudio.mlauncher.helper.wordOfTheDay
 import com.github.droidworksstudio.mlauncher.listener.OnSwipeTouchListener
 import com.github.droidworksstudio.mlauncher.listener.ViewSwipeTouchListener
@@ -85,6 +86,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     private lateinit var viewModel: MainViewModel
     private lateinit var deviceManager: DevicePolicyManager
     private lateinit var batteryReceiver: BatteryReceiver
+    private lateinit var privateSpaceReceiver: PrivateSpaceReceiver
     private lateinit var vibrator: Vibrator
 
     private var _binding: FragmentHomeBinding? = null
@@ -92,6 +94,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
     private lateinit var biometricPrompt: BiometricPrompt
     private lateinit var promptInfo: BiometricPrompt.PromptInfo
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -103,6 +106,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         val view = binding.root
         prefs = Prefs(requireContext())
         batteryReceiver = BatteryReceiver()
+        privateSpaceReceiver = PrivateSpaceReceiver()
 
         return view
     }
@@ -125,7 +129,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     }
 
 
-    @RequiresApi(Build.VERSION_CODES.Q)
+    @RequiresApi(Build.VERSION_CODES.VANILLA_ICE_CREAM)
     override fun onStart() {
         super.onStart()
         if (prefs.showStatusBar) showStatusBar(requireActivity()) else hideStatusBar(requireActivity())
@@ -135,6 +139,15 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         try {
             val filter = IntentFilter(Intent.ACTION_BATTERY_CHANGED)
             requireContext().registerReceiver(batteryReceiver, filter)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+
+        privateSpaceReceiver = PrivateSpaceReceiver()
+        /* register private Space changes */
+        try {
+            val filter = IntentFilter(Intent.ACTION_PROFILE_AVAILABLE)
+            requireContext().registerReceiver(privateSpaceReceiver, filter)
         } catch (e: Exception) {
             e.printStackTrace()
         }
@@ -181,41 +194,12 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         }
     }
 
-    override fun onResume() {
-        super.onResume()
-
-        batteryReceiver = BatteryReceiver()
-        /* register battery changes */
-        try {
-            val filter = IntentFilter(Intent.ACTION_BATTERY_CHANGED)
-            requireContext().registerReceiver(batteryReceiver, filter)
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-
-        // only show "set as default"-button if tips are GONE
-        if (binding.firstRunTips.visibility == View.GONE) {
-            binding.setDefaultLauncher.visibility =
-                if (ismlauncherDefault(requireContext())) View.GONE else View.VISIBLE
-        }
-
-    }
-
-    override fun onPause() {
-        super.onPause()
-        /* unregister battery changes if the receiver is registered */
-        try {
-            requireContext().unregisterReceiver(batteryReceiver)
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-    }
-
     override fun onStop() {
         super.onStop()
-        /* unregister battery changes if the receiver is registered */
         try {
+            /* unregister battery changes if the receiver is registered */
             requireContext().unregisterReceiver(batteryReceiver)
+            requireContext().unregisterReceiver(privateSpaceReceiver)
         } catch (e: Exception) {
             e.printStackTrace()
         }
@@ -291,10 +275,12 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
 
     private fun initObservers() {
-        if (prefs.firstSettingsOpen) {
-            binding.firstRunTips.visibility = View.VISIBLE
-            binding.setDefaultLauncher.visibility = View.GONE
-        } else binding.firstRunTips.visibility = View.GONE
+        binding.apply {
+            if (prefs.firstSettingsOpen) {
+                firstRunTips.visibility = View.VISIBLE
+                setDefaultLauncher.visibility = View.GONE
+            } else firstRunTips.visibility = View.GONE
+        }
 
         with(viewModel) {
 
@@ -511,6 +497,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         when (action) {
             Action.ShowNotification -> expandNotificationDrawer(requireContext())
             Action.LockScreen -> lockPhone()
+            Action.TogglePrivateSpace -> togglePrivateSpaceLock(requireContext())
             Action.ShowAppList -> showAppList(AppDrawerFlag.LaunchApp, includeHiddenApps = false)
             Action.OpenApp -> {} // this should be handled in the respective onSwipe[Up,Down,Right,Left] functions
             Action.OpenQuickSettings -> expandQuickSettings(requireContext())

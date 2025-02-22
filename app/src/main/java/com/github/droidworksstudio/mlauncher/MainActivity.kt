@@ -9,7 +9,6 @@ import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.provider.Settings
 import android.view.KeyEvent
 import android.view.View
 import android.view.WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
@@ -18,7 +17,6 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import com.github.droidworksstudio.common.showLongToast
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Migration
 import com.github.droidworksstudio.mlauncher.data.Prefs
@@ -150,12 +148,6 @@ class MainActivity : AppCompatActivity() {
     @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-
-        if (resultCode != RESULT_OK) {
-            showLongToast("Intent Error")
-            return
-        }
-
         when (requestCode) {
             Constants.REQUEST_CODE_ENABLE_ADMIN -> {
                 if (Build.VERSION.SDK_INT > Build.VERSION_CODES.P)
@@ -235,9 +227,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initObservers(viewModel: MainViewModel) {
-        viewModel.launcherResetFailed.observe(this) {
-            openLauncherChooser(it)
-        }
         viewModel.showMessageDialog.observe(this) {
             showMessage(it)
         }
@@ -256,13 +245,6 @@ class MainActivity : AppCompatActivity() {
         // pop all the fragments except main
         if (navController.currentDestination?.id != R.id.mainFragment)
             navController.popBackStack(R.id.mainFragment, false)
-    }
-
-    private fun openLauncherChooser(resetFailed: Boolean) {
-        if (resetFailed) {
-            val intent = Intent(Settings.ACTION_MANAGE_DEFAULT_APPS_SETTINGS)
-            startActivity(intent)
-        }
     }
 
     private fun showMessage(message: String) {
