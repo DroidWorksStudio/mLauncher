@@ -95,6 +95,7 @@
     <string name="long_swipe_right_app">Ilgai braukti dešinėn</string>
     <string name="open_app">Atidaryti programėlę</string>
     <string name="lock_screen">Užrakinti ekraną</string>
+    <string name="private_space">Private Spaces</string>
     <string name="show_notifications">Rodyti pranešimą</string>
     <string name="show_app_list">Rodyti programėlių sąrašą</string>
     <string name="open_quick_settings">Greitieji nustatymai</string>
@@ -171,4 +172,10 @@
     <string name="disabled">Išjungtas</string>
     <string name="open">Atidaryti</string>
     <string name="close">Uždaryti</string>
+    <!-- Private Spaces Strings -->
+    <string name="alert_requires_android_v">This functionality requires Android 15 or later.</string>
+    <string name="toast_private_space_default_home_screen">mLauncher needs to be the default home screen to access private space.</string>
+    <string name="toast_private_space_locked">Private space locked</string>
+    <string name="toast_private_space_unlocked">Private space unlocked</string>
+    <string name="toast_private_space_not_available">Private space is not available</string>
 </resources>
