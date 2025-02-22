@@ -12,6 +12,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Bug Fixes:
 
+- Fixed setting displaying on versions of android that can not use it. - ([ac197cb](https://github.com/DroidWorksStudio/mLauncher/commit/ac197cb8c1e0d3d3770c885bf3598ed1d4f75ea6))
 - Fixed a few toggles to only display if child is correct. - ([fad1e73](https://github.com/DroidWorksStudio/mLauncher/commit/fad1e73d2f1c88d2a1cdd8fd797cc11cb48e5947))
 
 ### Language Support:
