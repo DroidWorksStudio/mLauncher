@@ -37,6 +37,7 @@ import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentSettingsBinding
 import com.github.droidworksstudio.mlauncher.helper.DialogBuilder
 import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
+import com.github.droidworksstudio.mlauncher.helper.isPrivateSpaceSupported
 import com.github.droidworksstudio.mlauncher.helper.isSystemInDarkMode
 import com.github.droidworksstudio.mlauncher.helper.setThemeMode
 import com.github.droidworksstudio.mlauncher.listener.DeviceAdmin
@@ -95,8 +96,15 @@ class GesturesFragment : Fragment() {
 
         val actions = Constants.Action.entries
 
+        // Filter out 'TogglePrivateSpace' if private space is not supported
+        val filteredActions = if (!isPrivateSpaceSupported()) {
+            actions.filter { it != Action.TogglePrivateSpace }
+        } else {
+            actions
+        }
+
         // Convert enums to their string representations
-        val actionStrings = actions.map { it.getString(requireContext()) }.toTypedArray()
+        val actionStrings = filteredActions.map { it.getString(requireContext()) }.toTypedArray()
 
         val fs = remember { mutableStateOf(fontSize) }
         Constants.updateMaxHomePages(requireContext())

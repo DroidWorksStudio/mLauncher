@@ -37,6 +37,7 @@ import com.github.droidworksstudio.mlauncher.data.Constants.Theme.Light
 import com.github.droidworksstudio.mlauncher.data.Constants.Theme.System
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentSettingsBinding
+import com.github.droidworksstudio.mlauncher.helper.isPrivateSpaceSupported
 import com.github.droidworksstudio.mlauncher.helper.isSystemInDarkMode
 import com.github.droidworksstudio.mlauncher.helper.setThemeMode
 import com.github.droidworksstudio.mlauncher.helper.togglePrivateSpaceLock
@@ -141,16 +142,18 @@ class SettingsFragment : Fragment() {
                 },
             )
 
-            SettingsHomeItem(
-                title = stringResource(R.string.private_space),
-                imageVector = ImageVector.vectorResource(id = R.drawable.private_space),
-                titleFontSize = titleFontSize,
-                descriptionFontSize = descriptionFontSize,
-                iconSize = iconSize,
-                onClick = {
-                    togglePrivateSpaceLock(requireContext())
-                }
-            )
+            if (isPrivateSpaceSupported()) {
+                SettingsHomeItem(
+                    title = stringResource(R.string.private_space),
+                    imageVector = ImageVector.vectorResource(id = R.drawable.private_space),
+                    titleFontSize = titleFontSize,
+                    descriptionFontSize = descriptionFontSize,
+                    iconSize = iconSize,
+                    onClick = {
+                        togglePrivateSpaceLock(requireContext())
+                    }
+                )
+            }
 
             SettingsHomeItem(
                 title = stringResource(R.string.settings_favorite_apps_title),
