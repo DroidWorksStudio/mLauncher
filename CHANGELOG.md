@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Refactoring:
+
+- Cleaned up function not needed. - ([ca7c522](https://github.com/DroidWorksStudio/mLauncher/commit/ca7c5223abac8d99c83c5c7309a6a472478cfd7a))
+
+## [1.7.3](https://github.com/DroidWorksStudio/mLauncher/tree/1.7.3) - (22, February 2025)
+
 ### Implemented Enhancements:
 
 - Added the start of Private Spaces - ([c072588](https://github.com/DroidWorksStudio/mLauncher/commit/c0725885150db50fcde1f742c1bb6c467823a695))
