@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Bug Fixes:
+
+- Fixed settings hidden for 3 button navigation mode. - ([f42fd07](https://github.com/DroidWorksStudio/mLauncher/commit/f42fd077431ace44418cbab2a0cc7160c59e28dc))
+
 ### Refactoring:
 
 - Cleaned up function not needed. - ([ca7c522](https://github.com/DroidWorksStudio/mLauncher/commit/ca7c5223abac8d99c83c5c7309a6a472478cfd7a))
