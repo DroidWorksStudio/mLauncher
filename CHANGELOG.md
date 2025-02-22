@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Cleaned up AppDetailsHelper to not require Calender. - ([66093cb](https://github.com/DroidWorksStudio/mLauncher/commit/66093cb8061b50ad779adf638e40b0a039fbe0e8))
 - Cleaned up function not needed. - ([ca7c522](https://github.com/DroidWorksStudio/mLauncher/commit/ca7c5223abac8d99c83c5c7309a6a472478cfd7a))
 
 ## [1.7.3](https://github.com/DroidWorksStudio/mLauncher/tree/1.7.3) - (22, February 2025)
