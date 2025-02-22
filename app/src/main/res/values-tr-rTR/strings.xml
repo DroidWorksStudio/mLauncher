@@ -95,7 +95,7 @@
     <string name="long_swipe_right_app">Uzun Bas Sağa kaydır</string>
     <string name="open_app">Uygulama\'yı Aç</string>
     <string name="lock_screen">Ekranı Kilitle</string>
-    <string name="private_space">Private Spaces</string>
+    <string name="private_space">Özel Alanlar</string>
     <string name="show_notifications">Bildirimi Göster</string>
     <string name="show_app_list">Uygulama Listesini Göster</string>
     <string name="open_quick_settings">Hızlı Ayarlar</string>
@@ -173,9 +173,9 @@
     <string name="open">Aç</string>
     <string name="close">Kapat</string>
     <!-- Private Spaces Strings -->
-    <string name="alert_requires_android_v">This functionality requires Android 15 or later.</string>
-    <string name="toast_private_space_default_home_screen">mLauncher needs to be the default home screen to access private space.</string>
-    <string name="toast_private_space_locked">Private space locked</string>
-    <string name="toast_private_space_unlocked">Private space unlocked</string>
-    <string name="toast_private_space_not_available">Private space is not available</string>
+    <string name="alert_requires_android_v">Bu işlevsellik için Android 15 veya üzeri gerekir.</string>
+    <string name="toast_private_space_default_home_screen">Özel alana erişebilmek için mLauncher\'ın varsayılan ana ekran olması gerekir.</string>
+    <string name="toast_private_space_locked">Özel alan kilitli</string>
+    <string name="toast_private_space_unlocked">Özel alan açıldı</string>
+    <string name="toast_private_space_not_available">Özel alan mevcut değil</string>
 </resources>
