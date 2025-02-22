@@ -8,127 +8,29 @@ import android.content.Context
 import android.content.Intent
 import android.content.pm.LauncherApps
 import android.content.pm.PackageManager
-import android.content.res.Configuration
-import android.graphics.Bitmap
-import android.graphics.drawable.AdaptiveIconDrawable
 import android.net.Uri
-import android.os.Build
 import android.os.Bundle
 import android.os.UserHandle
-import android.os.UserManager
 import android.provider.AlarmClock
 import android.provider.CalendarContract
 import android.provider.MediaStore
 import android.provider.Settings
-import android.util.DisplayMetrics
-import android.util.Log
 import android.util.Log.d
-import android.view.ContextThemeWrapper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.WindowManager
 import android.widget.Toast
-import androidx.annotation.ColorRes
-import androidx.annotation.DrawableRes
 import androidx.biometric.BiometricManager
 import androidx.core.content.ContextCompat
-import androidx.core.graphics.drawable.IconCompat
-import androidx.core.graphics.drawable.toBitmap
-import androidx.core.os.ConfigurationCompat
-import androidx.lifecycle.LifecycleObserver
-import androidx.lifecycle.LifecycleOwner
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.helper.ActionService
 import java.util.Calendar
 import java.util.Date
-import kotlin.math.pow
-import kotlin.math.sqrt
-
-fun Context.isTabletConfig(): Boolean =
-    resources.configuration.smallestScreenWidthDp >= SMALLEST_WIDTH_600
-
-fun Context.isTablet(): Boolean {
-    val windowManager = this.getSystemService(Context.WINDOW_SERVICE) as WindowManager
-    val metrics = DisplayMetrics()
-    @Suppress("DEPRECATION")
-    windowManager.defaultDisplay.getMetrics(metrics)
-    val widthInches = metrics.widthPixels / metrics.xdpi
-    val heightInches = metrics.heightPixels / metrics.ydpi
-    val diagonalInches =
-        sqrt(widthInches.toDouble().pow(2.0) + heightInches.toDouble().pow(2.0))
-    if (diagonalInches >= 7.0) return true
-    return false
-}
-
-fun Context.isPortraitSw600Config(): Boolean =
-    resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT &&
-            resources.configuration.smallestScreenWidthDp >= SMALLEST_WIDTH_600
-
-fun Context.isLandscapeSw600Config(): Boolean =
-    resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE &&
-            resources.configuration.smallestScreenWidthDp >= SMALLEST_WIDTH_600
-
-fun Context.isLandscapeDisplayOrientation(): Boolean =
-    resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE
-
-internal fun Context.addLifecycleObserver(observer: LifecycleObserver) {
-    when (this) {
-        is LifecycleOwner -> this.lifecycle.addObserver(observer)
-        is ContextThemeWrapper -> this.baseContext.addLifecycleObserver(observer)
-        is androidx.appcompat.view.ContextThemeWrapper -> this.baseContext.addLifecycleObserver(
-            observer
-        )
-    }
-}
-
-fun Context.getMiddleScreenX(): Int {
-    val screenEndX = this.resources.displayMetrics.widthPixels
-    return (screenEndX / 2)
-}
-
-fun Context.getMiddleScreenY(): Int {
-    val screenEndY = this.resources.displayMetrics.heightPixels
-    return (screenEndY / 2)
-}
-
-const val SMALLEST_WIDTH_600: Int = 600
-fun Context.createIconWithResourceCompat(
-    @DrawableRes vectorIconId: Int,
-    @DrawableRes adaptiveIconForegroundId: Int,
-    @DrawableRes adaptiveIconBackgroundId: Int
-): IconCompat {
-    val adaptiveIconDrawable = AdaptiveIconDrawable(
-        ContextCompat.getDrawable(this, adaptiveIconBackgroundId),
-        ContextCompat.getDrawable(this, adaptiveIconForegroundId)
-    )
-
-    return IconCompat.createWithAdaptiveBitmap(
-        adaptiveIconDrawable.toBitmap(
-            config = Bitmap.Config.ARGB_8888
-        )
-    )
-}
-
-fun Context.currentLanguage() = ConfigurationCompat.getLocales(resources.configuration)[0]?.language
-
-fun Context.openBrowser(url: String, clearFromRecent: Boolean = true) {
-    val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
-    browserIntent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
-    if (clearFromRecent) browserIntent.flags =
-        browserIntent.flags or Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS
-    startActivity(browserIntent)
-}
 
 fun Context.inflate(resource: Int, root: ViewGroup? = null, attachToRoot: Boolean = false): View {
     return LayoutInflater.from(this).inflate(resource, root, attachToRoot)
 }
-
-fun Context.getColorCompat(@ColorRes color: Int) = ContextCompat.getColor(this, color)
-
-fun Context.getDrawableCompat(@DrawableRes drawable: Int) =
-    ContextCompat.getDrawable(this, drawable)
 
 fun Context.showLongToast(message: String) {
     Toast.makeText(this, message, Toast.LENGTH_LONG).show()
@@ -152,41 +54,17 @@ fun Context.openUrl(url: String) {
     startActivity(intent)
 }
 
-fun Context.resetDefaultLauncher() {
-    try {
-        val intent = Intent("android.settings.HOME_SETTINGS")
-        this.startActivity(intent)
-    } catch (_: ActivityNotFoundException) {
-        // Fallback to general settings if specific launcher settings are not found
-        try {
-            val intent = Intent(Settings.ACTION_SETTINGS)
-            this.startActivity(intent)
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-    }
-}
-
-fun Context.getUserHandleFromId(userId: Int): UserHandle? {
-    val userManager = getSystemService(Context.USER_SERVICE) as UserManager
-    // Get all available UserHandles
-    val userProfiles = userManager.userProfiles
-    // Iterate over user profiles
-    for (userProfile in userProfiles) {
-        // Check if the UserHandle matches the provided user ID
-        if (userProfile.hashCode() == userId) {
-            return userProfile
-        }
-    }
-    return null
-}
-
-fun Context.launchClock() {
-    try {
-        val intent = Intent(AlarmClock.ACTION_SHOW_ALARMS)
-        this.startActivity(intent)
-    } catch (e: Exception) {
-        Log.e("launchClock", "Error launching clock app: ${e.message}")
+fun isGestureNavigationEnabled(context: Context): Boolean {
+    return try {
+        val navigationMode = Settings.Secure.getInt(
+            context.contentResolver,
+            "navigation_mode"  // This is the key to check the current navigation mode
+        )
+        // 2 corresponds to gesture navigation mode
+        navigationMode == 2
+    } catch (e: Settings.SettingNotFoundException) {
+        // Handle the case where the setting isn't found, assume not enabled
+        false
     }
 }
 
@@ -240,11 +118,8 @@ fun Context.openCameraApp() {
 fun Context.openBatteryManager() {
     try {
         val intent = Intent(Intent.ACTION_POWER_USAGE_SUMMARY)
-        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
         this.startActivity(intent)
     } catch (_: ActivityNotFoundException) {
-        // Battery manager settings cannot be opened
-        // Handle this case as needed
         showLongToast("Battery manager settings are not available on this device.")
     }
 }
@@ -317,16 +192,6 @@ fun Context.searchCustomSearchEngine(searchQuery: String? = null, prefs: Prefs):
     d("fullUrl", fullUrl)
     openUrl(fullUrl)
     return true
-}
-
-fun Context.isWorkProfileEnabled(): Boolean {
-    val userManager = getSystemService(Context.USER_SERVICE) as? UserManager
-    return if (userManager != null && Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-        val profiles = userManager.userProfiles
-        profiles.size > 1
-    } else {
-        false
-    }
 }
 
 fun Context.hasInternetPermission(): Boolean {
