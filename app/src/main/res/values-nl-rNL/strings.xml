@@ -95,7 +95,7 @@
     <string name="long_swipe_right_app">Lang indrukken naar rechts vegen</string>
     <string name="open_app">App openen</string>
     <string name="lock_screen">Vergrendel scherm</string>
-    <string name="private_space">Private Spaces</string>
+    <string name="private_space">Privéruimtes</string>
     <string name="show_notifications">Toon melding</string>
     <string name="show_app_list">Toon App Lijst</string>
     <string name="open_quick_settings">Snelle Instellingen</string>
@@ -173,9 +173,9 @@
     <string name="open">Open</string>
     <string name="close">Afsluiten</string>
     <!-- Private Spaces Strings -->
-    <string name="alert_requires_android_v">This functionality requires Android 15 or later.</string>
-    <string name="toast_private_space_default_home_screen">mLauncher needs to be the default home screen to access private space.</string>
-    <string name="toast_private_space_locked">Private space locked</string>
-    <string name="toast_private_space_unlocked">Private space unlocked</string>
-    <string name="toast_private_space_not_available">Private space is not available</string>
+    <string name="alert_requires_android_v">Voor deze functionaliteit is Android 15 of hoger vereist.</string>
+    <string name="toast_private_space_default_home_screen">mLauncher moet het standaard startscherm zijn om toegang te krijgen tot uw privéruimte.</string>
+    <string name="toast_private_space_locked">Privéruimte afgesloten</string>
+    <string name="toast_private_space_unlocked">Privéruimte ontgrendeld</string>
+    <string name="toast_private_space_not_available">Privéruimte is niet beschikbaar</string>
 </resources>
