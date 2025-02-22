@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Bug Fixes:
 
+- Fixed work profiles not working on versions below 32 - ([3ae0a3d](https://github.com/DroidWorksStudio/mLauncher/commit/3ae0a3dc0c046bbfcd078f1d3ed43f0168cd3e93))
 - Fixed settings hidden for 3 button navigation mode. - ([f42fd07](https://github.com/DroidWorksStudio/mLauncher/commit/f42fd077431ace44418cbab2a0cc7160c59e28dc))
 
 ### Refactoring:
