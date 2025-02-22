@@ -95,6 +95,7 @@
     <string name="long_swipe_right_app">לחץ לחיצה ארוכה החלק ימינה</string>
     <string name="open_app">הפעלת יישום</string>
     <string name="lock_screen">נעילת מסך</string>
+    <string name="private_space">Private Spaces</string>
     <string name="show_notifications">הצגת התרעות</string>
     <string name="show_app_list">הצגת רשימת יישומים</string>
     <string name="open_quick_settings">הגדרות מהירות</string>
@@ -171,4 +172,10 @@
     <string name="disabled">מושבת</string>
     <string name="open">פתח</string>
     <string name="close">סגור</string>
+    <!-- Private Spaces Strings -->
+    <string name="alert_requires_android_v">This functionality requires Android 15 or later.</string>
+    <string name="toast_private_space_default_home_screen">mLauncher needs to be the default home screen to access private space.</string>
+    <string name="toast_private_space_locked">Private space locked</string>
+    <string name="toast_private_space_unlocked">Private space unlocked</string>
+    <string name="toast_private_space_not_available">Private space is not available</string>
 </resources>
