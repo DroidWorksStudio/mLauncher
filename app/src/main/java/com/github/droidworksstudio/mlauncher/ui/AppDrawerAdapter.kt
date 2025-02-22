@@ -26,6 +26,7 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.view.updatePadding
 import androidx.recyclerview.widget.RecyclerView
+import com.github.droidworksstudio.common.isManagedProfile
 import com.github.droidworksstudio.common.showKeyboard
 import com.github.droidworksstudio.fuzzywuzzy.FuzzyFinder
 import com.github.droidworksstudio.mlauncher.R
@@ -36,6 +37,7 @@ import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.AdapterAppDrawerBinding
 import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.isSystemApp
 import com.github.droidworksstudio.mlauncher.helper.dp2px
+import com.github.droidworksstudio.mlauncher.helper.isPrivateSpaceSupported
 
 class AppDrawerAdapter(
     private val context: Context,
@@ -200,8 +202,7 @@ class AppDrawerAdapter(
         private val appInfo: TextView = itemView.appInfo
         private val appDelete: TextView = itemView.appDelete
 
-        @RequiresApi(Build.VERSION_CODES.VANILLA_ICE_CREAM)
-        @SuppressLint("RtlHardcoded")
+        @SuppressLint("RtlHardcoded", "NewApi")
         fun bind(
             flag: AppDrawerFlag,
             appLabelGravity: Int,
@@ -278,8 +279,16 @@ class AppDrawerAdapter(
 
                 // add icon next to app name to indicate that this app is installed on another profile
                 val launcherApps = context.getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps
-                val isWorkProfile = launcherApps.getLauncherUserInfo(appListItem.user)?.userType == UserManager.USER_TYPE_PROFILE_MANAGED
-                val isPrivateSpace = launcherApps.getLauncherUserInfo(appListItem.user)?.userType == UserManager.USER_TYPE_PROFILE_PRIVATE
+                val isWorkProfile = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.VANILLA_ICE_CREAM) {
+                    launcherApps.getLauncherUserInfo(appListItem.user)?.userType == UserManager.USER_TYPE_PROFILE_MANAGED
+                } else {
+                    context.isManagedProfile()
+                }
+                val isPrivateSpace = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.VANILLA_ICE_CREAM) {
+                    launcherApps.getLauncherUserInfo(appListItem.user)?.userType == UserManager.USER_TYPE_PROFILE_PRIVATE
+                } else {
+                    isPrivateSpaceSupported()
+                }
 
                 if (isWorkProfile) {
                     val icon = AppCompatResources.getDrawable(context, R.drawable.work_profile)
