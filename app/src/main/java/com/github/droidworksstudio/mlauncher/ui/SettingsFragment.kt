@@ -39,6 +39,7 @@ import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentSettingsBinding
 import com.github.droidworksstudio.mlauncher.helper.isSystemInDarkMode
 import com.github.droidworksstudio.mlauncher.helper.setThemeMode
+import com.github.droidworksstudio.mlauncher.helper.togglePrivateSpaceLock
 import com.github.droidworksstudio.mlauncher.listener.DeviceAdmin
 import com.github.droidworksstudio.mlauncher.style.SettingsTheme
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsHomeItem
@@ -138,6 +139,17 @@ class SettingsFragment : Fragment() {
                 onClick = {
                     showGesturesSettings()
                 },
+            )
+
+            SettingsHomeItem(
+                title = stringResource(R.string.private_space),
+                imageVector = ImageVector.vectorResource(id = R.drawable.private_space),
+                titleFontSize = titleFontSize,
+                descriptionFontSize = descriptionFontSize,
+                iconSize = iconSize,
+                onClick = {
+                    togglePrivateSpaceLock(requireContext())
+                }
             )
 
             SettingsHomeItem(
