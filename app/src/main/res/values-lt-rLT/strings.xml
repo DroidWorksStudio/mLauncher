@@ -61,6 +61,7 @@
     <string name="show_recent_apps">Rodyti naujausias programas</string>
     <string name="number_of_recents">Naujausiai atdarytų programėlių skaičius</string>
     <string name="show_app_usage_stats">Rodyti programos naudojimo statistiką</string>
+    <string name="select_app_icons">Select App Icons</string>
     <string name="filter_strength">Filtro stiprumas</string>
     <string name="background_opacity">Fono permatomumas</string>
     <string name="element_alignment">Elementų lygiavimas</string>
