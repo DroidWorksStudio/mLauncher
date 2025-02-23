@@ -100,6 +100,7 @@
     <string name="private_space">プライベートスペース</string>
     <string name="show_notifications">通知を表示</string>
     <string name="show_app_list">アプリ一覧を表示</string>
+    <string name="show_digital_wellbeing">Show Digital Wellbeing</string>
     <string name="open_quick_settings">クイック設定</string>
     <string name="show_recents">Show Recents</string>
     <string name="open_power_dialog">電源ダイアログ</string>
