@@ -22,7 +22,7 @@
     <string name="font_family">Famille de polices</string>
     <string name="settings_text_size">Taille du texte des paramètres</string>
     <string name="hide_search_view">Masquer la vue de recherche</string>
-    <string name="show_floating_button">Show Floating Button</string>
+    <string name="show_floating_button">Afficher le bouton flottant</string>
     <string name="search">Recherche</string>
     <string name="search_engine">Moteur de recherche</string>
     <string name="auto_show_keyboard">Auto show keyboard</string>
@@ -85,7 +85,7 @@
     <string name="clock_click_app">Cliquez sur l\'horloge</string>
     <string name="date_click_app">Cliquer sur Date</string>
     <string name="usage_click_app">Cliquez sur Utilisation totale</string>
-    <string name="floating_click_app">Click on Logo</string>
+    <string name="floating_click_app">Cliquez sur le logo</string>
     <string name="swipe_movement">Mouvement de balayage</string>
     <string name="short_swipe_up_app">Glisser vers le haut</string>
     <string name="short_swipe_down_app">Glisser vers le bas</string>
