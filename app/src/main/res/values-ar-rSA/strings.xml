@@ -22,7 +22,7 @@
     <string name="font_family">خط العائلة</string>
     <string name="settings_text_size">إعدادات حجم النص</string>
     <string name="hide_search_view">إخفاء عرض البحث</string>
-    <string name="show_floating_button">Show Floating Button</string>
+    <string name="show_floating_button">إظهار الزر العائم</string>
     <string name="search">يبحث</string>
     <string name="search_engine">محرك البحث</string>
     <string name="auto_show_keyboard">Auto show keyboard</string>
@@ -85,7 +85,7 @@
     <string name="clock_click_app">انقر على الساعة</string>
     <string name="date_click_app">انقر على التاريخ</string>
     <string name="usage_click_app">انقر على إجمالي الاستخدام</string>
-    <string name="floating_click_app">Click on Logo</string>
+    <string name="floating_click_app">انقر على الشعار</string>
     <string name="swipe_movement">حركة التمرير</string>
     <string name="short_swipe_up_app">مرر لأعلى</string>
     <string name="short_swipe_down_app">مرر لأسفل</string>
