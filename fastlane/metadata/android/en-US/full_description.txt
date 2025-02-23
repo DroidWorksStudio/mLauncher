@@ -1,73 +1,60 @@
-<p>Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimal and clean.</p>
+<p>Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>: A minimal and clean launcher with
+    enhanced features.</p>
 
 <h2>Forked with Extra Features</h2>
 
-<ul>
-    <li>Removed clutter, like ads and links.</li>
-    <li>You can rename apps in the app-drawer (Renaming apps on the home screen is already supported. Just long-click on an app on the home screen and start typing.)</li>
-    <li>We have added a lot more options for gestures on the home screen:
-        <ul>
-            <li><b>Gestures now include:</b>
-                <ul>
-                    <li>Double tap</li>
-                    <li>Clicking on the clock</li>
-                    <li>Clicking on the date</li>
-                    <li>Clicking on total usage</li>
-                    <li>Short swipe up</li>
-                    <li>Short swipe down</li>
-                    <li>Short swipe left</li>
-                    <li>Short swipe right</li>
-                    <li>Long swipe up</li>
-                    <li>Long swipe down</li>
-                    <li>Long swipe left</li>
-                    <li>Long swipe right</li>
-                </ul>
-            </li>
-            <li><b>Possible actions now include:</b>
-                <ul>
-                    <li>Open specified app</li>
-                    <li>Display app list</li>
-                    <li>Lock the screen</li>
-                    <li>Show recently opened apps</li>
-                    <li>Open the notification drawer</li>
-                    <li>Open quick settings</li>
-                    <li>Power dialog</li>
-                    <li>Take a screenshot</li>
-                    <li>Switch Page</li>
-                    <li>Disable gesture</li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-    <li>You can also position the clock independently of the home apps.</li>
-    <li>Change alignment of apps in the app-drawer independent from the home screen.</li>
-    <li>Change font size of sections of the home screen independently of each other.</li>
-    <li>Removed internet permission. You never know what an app developer wants to know about you.</li>
-    <li>Lock settings behind biometrics (toggle).</li>
-    <li>Added the ability to report crashes via email.</li>
-    <li>Added the ability to view app usage time.</li>
-</ul>
+<b>Features:</b>
 
-<h2>Translations</h2>
+- App Drawer Customization: Rename apps in the app drawer (home screen app renaming is already supported with a long
+click).
+- Advanced Gestures: A wide range of gestures, including taps and swipes, to trigger different actions.
+- Clock Customization: Position the clock independently of the home apps, giving more control over your home screen
+layout.
+- App Drawer Layout: Change the alignment of apps in the app drawer independently of the home screen.
+- Font Size Customization: Adjust the font size of sections of the home screen separately.
+- Privacy Focused: Removed internet permission, ensuring your data remains private.
+- Biometric Security: Lock settings behind biometric authentication (toggle option).
+- Crash Reports: Ability to report crashes via email for better troubleshooting.
+- App Usage Tracking: View app usage time directly from the home screen.
 
-<p>A lot of people have translated the app into the following languages. Many thanks to you all:</p>
+<b>Gestures Include:</b>
 
-<ul>
-    <li>Arabic</li>
-    <li>Dutch</li>
-    <li>English</li>
-    <li>French</li>
-    <li>German</li>
-    <li>Hebrew</li>
-    <li>Italian</li>
-    <li>Japanese</li>
-    <li>Korean</li>
-    <li>Lithuanian</li>
-    <li>Polish</li>
-    <li>Portuguese</li>
-    <li>Russian</li>
-    <li>Slovak</li>
-    <li>Spanish</li>
-    <li>Thai</li>
-    <li>Turkish</li>
-</ul>
+- Double Tap: Quickly tap twice to trigger a predefined action.
+- Clock Tap: Tap the clock to access additional features or settings.
+- Date Tap: Tap the date for easy access to the calendar.
+- Usage Tap: Tap on the total usage to view system or app usage data.
+- Short Swipes: Swipe up, down, left, or right to navigate or trigger different actions.
+- Long Swipes: Swipe up, down, left, or right for additional gesture actions.
+
+<b>Possible Actions Include:</b>
+
+- Open Specified App: Instantly open any app of your choice with a gesture.
+- Display App List: Show the full list of apps installed on the device.
+- Lock Screen: Lock your device for security.
+- Show Recently Opened Apps: Access recently used apps for quick multitasking.
+- Open Notification Drawer: Trigger the notification drawer with a swipe or tap.
+- Open Quick Settings: Access quick settings directly from the home screen.
+- Power Dialog: Open power options like shutdown, restart, and more.
+- Take a Screenshot: Capture the screen to save or share your content.
+- Switch Page: Quickly switch between home screen pages.
+- Disable Gesture: Disable specific gestures as needed.
+
+<b>Translations:</b>
+
+- Arabic
+- Dutch
+- English
+- French
+- German
+- Hebrew
+- Italian
+- Japanese
+- Korean
+- Lithuanian
+- Polish
+- Portuguese
+- Russian
+- Slovak
+- Spanish
+- Thai
+- Turkish
