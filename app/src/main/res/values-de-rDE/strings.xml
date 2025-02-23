@@ -22,6 +22,7 @@
     <string name="font_family">Schriftfamilie</string>
     <string name="settings_text_size">Einstellungen Textgröße</string>
     <string name="hide_search_view">Suchansicht ausblenden</string>
+    <string name="show_floating_button">Show Floating Button</string>
     <string name="search">Suchen</string>
     <string name="search_engine">Suchmaschine</string>
     <string name="auto_show_keyboard">Auto show keyboard</string>
@@ -84,6 +85,7 @@
     <string name="clock_click_app">Uhr anklicken</string>
     <string name="date_click_app">Klicken Sie auf Datum</string>
     <string name="usage_click_app">Klicken Sie auf „Gesamtnutzung“</string>
+    <string name="floating_click_app">Click on Logo</string>
     <string name="swipe_movement">Wischbewegung</string>
     <string name="short_swipe_up_app">Nach oben wischen</string>
     <string name="short_swipe_down_app">Nach unten wischen</string>
