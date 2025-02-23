@@ -20,6 +20,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Cleaned up the private space setting to display if locked or unlocked in the settings menu - ([d457b62](https://github.com/DroidWorksStudio/mLauncher/commit/d457b62cfcc8163acd2c81290c2185c8c4310747))
 - Format fdroid page better. - ([ba26d05](https://github.com/DroidWorksStudio/mLauncher/commit/ba26d05d710a073b5e5beac7f94a22917d758209))
 
 ### Releases:
