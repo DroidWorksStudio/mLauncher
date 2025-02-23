@@ -241,7 +241,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             }
 
             R.id.floatingActionButton -> {
-                when (val action = prefs.clickAppUsageAction) {
+                when (val action = prefs.clickFloatingAction) {
                     Action.OpenApp -> openFloatingActionApp()
                     else -> handleOtherAction(action)
                 }
@@ -521,6 +521,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             Action.LockScreen -> lockPhone()
             Action.TogglePrivateSpace -> togglePrivateSpaceLock(requireContext())
             Action.ShowAppList -> showAppList(AppDrawerFlag.LaunchApp, includeHiddenApps = false)
+            Action.ShowDigitalWellbeing -> requireContext().openDigitalWellbeing()
             Action.OpenApp -> {} // this should be handled in the respective onSwipe[Up,Down,Right,Left] functions
             Action.OpenQuickSettings -> expandQuickSettings(requireContext())
             Action.ShowRecents -> initActionService(requireContext())?.showRecents()

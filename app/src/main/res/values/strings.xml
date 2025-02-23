@@ -132,6 +132,7 @@
     <string name="private_space">Private Spaces</string>
     <string name="show_notifications">Show Notification</string>
     <string name="show_app_list">Show App List</string>
+    <string name="show_digital_wellbeing">Show Digital Wellbeing</string>
     <string name="open_quick_settings">Quick Settings</string>
     <string name="show_recents">Show Recents</string>
     <string name="open_power_dialog">Power Dialog</string>

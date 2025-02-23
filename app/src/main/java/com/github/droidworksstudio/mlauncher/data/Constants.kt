@@ -270,6 +270,7 @@ object Constants {
         LockScreen,
         ShowNotification,
         ShowAppList,
+        ShowDigitalWellbeing,
         OpenQuickSettings,
         ShowRecents,
         OpenPowerDialog,
@@ -286,6 +287,7 @@ object Constants {
                 TogglePrivateSpace -> context.getString(R.string.private_space)
                 ShowNotification -> context.getString(R.string.show_notifications)
                 ShowAppList -> context.getString(R.string.show_app_list)
+                ShowDigitalWellbeing -> context.getString(R.string.show_digital_wellbeing)
                 OpenQuickSettings -> context.getString(R.string.open_quick_settings)
                 ShowRecents -> context.getString(R.string.show_recents)
                 OpenPowerDialog -> context.getString(R.string.open_power_dialog)
@@ -305,6 +307,7 @@ object Constants {
                 TogglePrivateSpace -> stringResource(R.string.private_space)
                 ShowNotification -> stringResource(R.string.show_notifications)
                 ShowAppList -> stringResource(R.string.show_app_list)
+                ShowDigitalWellbeing -> stringResource(R.string.show_digital_wellbeing)
                 OpenQuickSettings -> stringResource(R.string.open_quick_settings)
                 ShowRecents -> stringResource(R.string.show_recents)
                 OpenPowerDialog -> stringResource(R.string.open_power_dialog)

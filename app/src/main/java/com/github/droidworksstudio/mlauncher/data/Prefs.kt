@@ -382,7 +382,7 @@ class Prefs(val context: Context) {
         set(value) = storeAction(CLICK_CLOCK_ACTION, value)
 
     var clickAppUsageAction: Constants.Action
-        get() = loadAction(CLICK_APP_USAGE_ACTION, Constants.Action.OpenApp)
+        get() = loadAction(CLICK_APP_USAGE_ACTION, Constants.Action.ShowDigitalWellbeing)
         set(value) = storeAction(CLICK_APP_USAGE_ACTION, value)
 
     var clickFloatingAction: Constants.Action
