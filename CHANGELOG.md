@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Bug Fixes:
+
+- Work icons are now displaying again. - ([5040094](https://github.com/DroidWorksStudio/mLauncher/commit/5040094926720b9267d0d7695e37268c891f9f2f))
+
 ### Releases:
 
 - Prepare for version 1.7.5 - ([f2f3ba6](https://github.com/DroidWorksStudio/mLauncher/commit/f2f3ba6482b30fe3acaf4fd3213d9357e41c5984))
