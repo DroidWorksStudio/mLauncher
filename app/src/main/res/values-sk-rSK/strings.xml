@@ -22,6 +22,7 @@
     <string name="font_family">Rodina písiem</string>
     <string name="settings_text_size">Nastavenia Veľkosť textu</string>
     <string name="hide_search_view">Skryť zobrazenie vyhľadávania</string>
+    <string name="show_floating_button">Zobraziť plávajúce tlačidlo</string>
     <string name="search">Hľadať</string>
     <string name="search_engine">Vyhľadávač</string>
     <string name="auto_show_keyboard">Automaticky zobraziť klávesnicu</string>
@@ -84,6 +85,7 @@
     <string name="clock_click_app">Kliknúť na Hodiny</string>
     <string name="date_click_app">Kliknúť na Dátum</string>
     <string name="usage_click_app">Kliknite na Celkové využitie</string>
+    <string name="floating_click_app">Kliknite na Logo</string>
     <string name="swipe_movement">Pohyb potiahnutím prstom</string>
     <string name="short_swipe_up_app">Krátke potiahnutie prstom nahor</string>
     <string name="short_swipe_down_app">Krátke potiahnutie prstom nadol</string>

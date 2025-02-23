@@ -22,6 +22,7 @@
     <string name="font_family">Семейство шрифтов</string>
     <string name="settings_text_size">Размер текста в настройках</string>
     <string name="hide_search_view">Скрыть Поиск Вид</string>
+    <string name="show_floating_button">Показать плавающую кнопку</string>
     <string name="search">Поиск</string>
     <string name="search_engine">Поисковый движок</string>
     <string name="auto_show_keyboard">Auto show keyboard</string>
@@ -84,6 +85,7 @@
     <string name="clock_click_app">Нажмите на часы</string>
     <string name="date_click_app">Нажмите на дату</string>
     <string name="usage_click_app">Нажмите «Общее использование».</string>
+    <string name="floating_click_app">Нажмите на логотип.</string>
     <string name="swipe_movement">Движение свайпа</string>
     <string name="short_swipe_up_app">Свайп вверх</string>
     <string name="short_swipe_down_app">Свайп вниз</string>

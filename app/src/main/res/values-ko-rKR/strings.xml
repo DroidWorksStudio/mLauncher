@@ -22,6 +22,7 @@
     <string name="font_family">글꼴군</string>
     <string name="settings_text_size">설정 텍스트 크기</string>
     <string name="hide_search_view">검색보기 숨기기</string>
+    <string name="show_floating_button">플로팅 버튼 표시</string>
     <string name="search">찾다</string>
     <string name="search_engine">검색 엔진</string>
     <string name="auto_show_keyboard">Auto show keyboard</string>
@@ -84,6 +85,7 @@
     <string name="clock_click_app">Click on Clock</string>
     <string name="date_click_app">Click on Date</string>
     <string name="usage_click_app">총 사용량을 클릭하세요</string>
+    <string name="floating_click_app">로고를 클릭하세요</string>
     <string name="swipe_movement">스와이프 동작</string>
     <string name="short_swipe_up_app">Swipe up</string>
     <string name="short_swipe_down_app">Swipe down</string>
