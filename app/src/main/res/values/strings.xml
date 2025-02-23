@@ -30,6 +30,7 @@
     <string name="font_family">Font Family</string>
     <string name="settings_text_size">Settings Text Size</string>
     <string name="hide_search_view">Hide Search View</string>
+    <string name="show_floating_button">Show Floating Button</string>
 
     <string name="search">Search</string>
 
@@ -113,6 +114,7 @@
     <string name="clock_click_app">Click on Clock</string>
     <string name="date_click_app">Click on Date</string>
     <string name="usage_click_app">Click on Total Usage</string>
+    <string name="floating_click_app">Click on Logo</string>
 
     <string name="swipe_movement">Swipe Movement</string>
 

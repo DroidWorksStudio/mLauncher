@@ -111,6 +111,7 @@ object Constants {
         SetLongSwipeRight,
         SetClickClock,
         SetAppUsage,
+        SetFloating,
         SetClickDate,
         SetDoubleTap,
     }

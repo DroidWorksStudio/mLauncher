@@ -34,8 +34,8 @@
     <color name="background_light">#FFFFFFFF</color>
     <color name="background_dark">#FF121212</color>
 
-    <color name="fab_background">#FFFFFFFF</color>
-    <color name="fab_border">#FFCCCCCC</color>
+    <color name="fab_background">#FF282A36</color>
+    <color name="fab_border">#FFBD93F9</color>
 
     <color name="green">#4CAF50</color>
     <color name="orange">#AF684C</color>

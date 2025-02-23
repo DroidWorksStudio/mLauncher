@@ -45,6 +45,7 @@ private const val SHOW_CLOCK = "SHOW_CLOCK"
 private const val SHOW_CLOCK_FORMAT = "SHOW_CLOCK_FORMAT"
 private const val SHOW_ALARM = "SHOW_ALARM"
 private const val SHOW_DAILY_WORD = "SHOW_DAILY_WORD"
+private const val SHOW_FLOATING = "SHOW_FLOATING"
 private const val SEARCH_START = "SEARCH_START"
 private const val SWIPE_UP_ACTION = "SWIPE_UP_ACTION"
 private const val SWIPE_DOWN_ACTION = "SWIPE_DOWN_ACTION"
@@ -55,7 +56,8 @@ private const val LONG_SWIPE_DOWN_ACTION = "LONG_SWIPE_DOWN_ACTION"
 private const val LONG_SWIPE_RIGHT_ACTION = "LONG_SWIPE_RIGHT_ACTION"
 private const val LONG_SWIPE_LEFT_ACTION = "LONG_SWIPE_LEFT_ACTION"
 private const val CLICK_CLOCK_ACTION = "CLICK_CLOCK_ACTION"
-private const val CLICK_APP_USAGE = "CLICK_APP_USAGE"
+private const val CLICK_APP_USAGE_ACTION = "CLICK_APP_USAGE_ACTION"
+private const val CLICK_FLOATING_ACTION = "CLICK_FLOATING_ACTION"
 private const val CLICK_DATE_ACTION = "CLICK_DATE_ACTION"
 private const val DOUBLE_TAP_ACTION = "DOUBLE_TAP_ACTION"
 private const val HIDDEN_APPS = "HIDDEN_APPS"
@@ -80,6 +82,7 @@ private const val LONG_SWIPE_LEFT = "LONG_SWIPE_LEFT"
 private const val LONG_SWIPE_RIGHT = "LONG_SWIPE_RIGHT"
 private const val CLICK_CLOCK = "CLICK_CLOCK"
 private const val CLICK_USAGE = "CLICK_USAGE"
+private const val CLICK_FLOATING = "CLICK_FLOATING"
 private const val CLICK_DATE = "CLICK_DATE"
 private const val DOUBLE_TAP = "DOUBLE_TAP"
 private const val APP_SIZE_TEXT = "APP_SIZE_TEXT"
@@ -318,6 +321,10 @@ class Prefs(val context: Context) {
         get() = prefs.getBoolean(SHOW_DAILY_WORD, false)
         set(value) = prefs.edit().putBoolean(SHOW_DAILY_WORD, value).apply()
 
+    var showFloating: Boolean
+        get() = prefs.getBoolean(SHOW_FLOATING, false)
+        set(value) = prefs.edit().putBoolean(SHOW_FLOATING, value).apply()
+
     var showBattery: Boolean
         get() = prefs.getBoolean(SHOW_BATTERY, true)
         set(value) = prefs.edit().putBoolean(SHOW_BATTERY, value).apply()
@@ -375,8 +382,12 @@ class Prefs(val context: Context) {
         set(value) = storeAction(CLICK_CLOCK_ACTION, value)
 
     var clickAppUsageAction: Constants.Action
-        get() = loadAction(CLICK_APP_USAGE, Constants.Action.OpenApp)
-        set(value) = storeAction(CLICK_APP_USAGE, value)
+        get() = loadAction(CLICK_APP_USAGE_ACTION, Constants.Action.OpenApp)
+        set(value) = storeAction(CLICK_APP_USAGE_ACTION, value)
+
+    var clickFloatingAction: Constants.Action
+        get() = loadAction(CLICK_FLOATING_ACTION, Constants.Action.Disabled)
+        set(value) = storeAction(CLICK_FLOATING_ACTION, value)
 
     var clickDateAction: Constants.Action
         get() = loadAction(CLICK_DATE_ACTION, Constants.Action.OpenApp)
@@ -510,6 +521,10 @@ class Prefs(val context: Context) {
         get() = loadApp(CLICK_USAGE)
         set(appModel) = storeApp(CLICK_USAGE, appModel)
 
+    var appFloating: AppListItem
+        get() = loadApp(CLICK_FLOATING)
+        set(appModel) = storeApp(CLICK_FLOATING, appModel)
+
     var appClickDate: AppListItem
         get() = loadApp(CLICK_DATE)
         set(appModel) = storeApp(CLICK_DATE, appModel)
@@ -623,9 +638,9 @@ class Prefs(val context: Context) {
     var settingsSize: Int
         get() {
             return try {
-                prefs.getInt(TEXT_SIZE_SETTINGS, 14)
+                prefs.getInt(TEXT_SIZE_SETTINGS, 12)
             } catch (_: Exception) {
-                14
+                12
             }
         }
         set(value) = prefs.edit().putInt(TEXT_SIZE_SETTINGS, value).apply()

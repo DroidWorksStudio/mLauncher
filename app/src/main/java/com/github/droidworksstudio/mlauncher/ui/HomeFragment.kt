@@ -239,6 +239,13 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 requireContext().openBatteryManager()
             }
 
+            R.id.floatingActionButton -> {
+                when (val action = prefs.clickAppUsageAction) {
+                    Action.OpenApp -> openFloatingActionApp()
+                    else -> handleOtherAction(action)
+                }
+            }
+
             else -> {
                 try { // Launch app
                     val appLocation = view.id
@@ -264,13 +271,15 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     }
 
     private fun initClickListeners() {
-        binding.clock.setOnClickListener(this)
-        binding.date.setOnClickListener(this)
-        binding.totalScreenTime.setOnClickListener(this)
-        binding.setDefaultLauncher.setOnClickListener(this)
-        binding.battery.setOnClickListener(this)
+        binding.apply {
+            clock.setOnClickListener(this@HomeFragment)
+            date.setOnClickListener(this@HomeFragment)
+            totalScreenTime.setOnClickListener(this@HomeFragment)
+            setDefaultLauncher.setOnClickListener(this@HomeFragment)
+            battery.setOnClickListener(this@HomeFragment)
+            floatingActionButton.setOnClickListener(this@HomeFragment)
+        }
     }
-
 
     private fun initObservers() {
         binding.apply {
@@ -344,6 +353,9 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             }
             showDailyWord.observe(viewLifecycleOwner) {
                 binding.dailyWord.visibility = if (it) View.VISIBLE else View.GONE
+            }
+            showFloating.observe(viewLifecycleOwner) {
+                binding.floatingActionButton.visibility = if (it) View.VISIBLE else View.GONE
             }
         }
     }
@@ -473,6 +485,13 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             launchApp(prefs.appClickUsage)
         else
             requireContext().openDigitalWellbeing()
+    }
+
+    private fun openFloatingActionApp() {
+        if (prefs.appFloating.activityPackage.isNotEmpty())
+            launchApp(prefs.appFloating)
+        else
+            requireContext().openBatteryManager()
     }
 
     private fun openClickDateApp() {

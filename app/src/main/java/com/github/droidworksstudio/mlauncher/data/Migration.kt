@@ -22,6 +22,9 @@ class Migration(val context: Context) {
                 "SHOW_TIME_FORMAT",
                 "TIME_COLOR"
             ),
+            175 to listOf(
+                "CLICK_APP_USAGE"
+            )
             // Add more versions and preferences to remove here
         )
 

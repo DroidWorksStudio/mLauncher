@@ -34,6 +34,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     val showClock = MutableLiveData(prefs.showClock)
     val showAlarm = MutableLiveData(prefs.showAlarm)
     val showDailyWord = MutableLiveData(prefs.showDailyWord)
+    val showFloating = MutableLiveData(prefs.showFloating)
     val clockAlignment = MutableLiveData(prefs.clockAlignment)
     val dateAlignment = MutableLiveData(prefs.dateAlignment)
     val alarmAlignment = MutableLiveData(prefs.alarmAlignment)
@@ -65,6 +66,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             AppDrawerFlag.SetLongSwipeRight -> prefs.appLongSwipeRight = app
             AppDrawerFlag.SetClickClock -> prefs.appClickClock = app
             AppDrawerFlag.SetAppUsage -> prefs.appClickUsage = app
+            AppDrawerFlag.SetFloating -> prefs.appFloating = app
             AppDrawerFlag.SetClickDate -> prefs.appClickDate = app
             AppDrawerFlag.SetDoubleTap -> prefs.appDoubleTap = app
         }
@@ -88,6 +90,10 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     fun setShowDailyWord(visibility: Boolean) {
         showDailyWord.value = visibility
+    }
+
+    fun setShowFloating(visibility: Boolean) {
+        showFloating.value = visibility
     }
 
     private fun launchApp(appListItem: AppListItem) {

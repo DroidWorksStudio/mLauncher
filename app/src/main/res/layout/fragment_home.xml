@@ -130,6 +130,21 @@
 
     </LinearLayout>
 
+    <ImageView
+        android:id="@+id/floatingActionButton"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="64dp"
+        android:background="@drawable/fab_background"
+        android:contentDescription="@string/show"
+        android:elevation="6dp"
+        android:padding="6dp"
+        android:src="@drawable/app_launcher"
+        android:visibility="gone" />
+
+
     <TextView
         android:id="@+id/totalScreenTime"
         style="@style/TextSmall"

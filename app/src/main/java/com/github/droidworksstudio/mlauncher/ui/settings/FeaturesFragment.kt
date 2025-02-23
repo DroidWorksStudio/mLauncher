@@ -83,6 +83,7 @@ class FeaturesFragment : Fragment() {
         var selectedFontFamily by remember { mutableStateOf(prefs.fontFamily) }
         var selectedSettingsSize by remember { mutableIntStateOf(prefs.settingsSize) }
         var toggledHideSearchView by remember { mutableStateOf(prefs.hideSearchView) }
+        var toggledFloating by remember { mutableStateOf(prefs.showFloating) }
 
         var selectedSearchEngine by remember { mutableStateOf(prefs.searchEngines) }
         var toggledAutoShowKeyboard by remember { mutableStateOf(prefs.autoShowKeyboard) }
@@ -222,6 +223,17 @@ class FeaturesFragment : Fragment() {
                         toggledAutoShowKeyboard = false
                         prefs.autoShowKeyboard = toggledAutoShowKeyboard
                     }
+                }
+            )
+
+            SettingsSwitch(
+                text = stringResource(R.string.show_floating_button),
+                fontSize = titleFontSize,
+                defaultState = toggledFloating,
+                onCheckedChange = {
+                    toggledFloating = !prefs.showFloating
+                    prefs.showFloating = toggledFloating
+                    viewModel.setShowFloating(prefs.showFloating)
                 }
             )
 

@@ -84,6 +84,7 @@ class GesturesFragment : Fragment() {
         var selectedClickClockAction by remember { mutableStateOf(prefs.clickClockAction) }
         var selectedClickDateAction by remember { mutableStateOf(prefs.clickDateAction) }
         var selectedClickAppUsageAction by remember { mutableStateOf(prefs.clickAppUsageAction) }
+        var selectedClickFloatingAction by remember { mutableStateOf(prefs.clickFloatingAction) }
 
         var selectedShortSwipeUpAction by remember { mutableStateOf(prefs.shortSwipeUpAction) }
         var selectedShortSwipeDownAction by remember { mutableStateOf(prefs.shortSwipeDownAction) }
@@ -237,6 +238,35 @@ class GesturesFragment : Fragment() {
                                 selectedClickAppUsageAction = selectedAction // Store the enum itself
                                 setGesture(
                                     AppDrawerFlag.SetAppUsage,
+                                    selectedAction
+                                ) // Persist selection in preferences
+                            }
+                        }
+                    )
+                }
+            )
+
+            val appLabelClickFloatingAction = prefs.appFloating.activityLabel.ifEmpty { "None" }
+            SettingsSelect(
+                title = stringResource(R.string.floating_click_app),
+                option = if (selectedClickFloatingAction == Action.OpenApp) {
+                    "${stringResource(R.string.open)} $appLabelClickFloatingAction"
+                } else {
+                    selectedClickFloatingAction.string()
+                },
+                fontSize = titleFontSize,
+                onClick = {
+                    dialogBuilder.showSingleChoiceDialog(
+                        context = requireContext(),
+                        options = actionStrings,
+                        titleResId = R.string.floating_click_app,
+                        onItemSelected = { newClickFloating ->
+                            val selectedAction =
+                                actions.firstOrNull { it.getString(requireContext()) == newClickFloating }
+                            if (selectedAction != null) {
+                                selectedClickFloatingAction = selectedAction // Store the enum itself
+                                setGesture(
+                                    AppDrawerFlag.SetFloating,
                                     selectedAction
                                 ) // Persist selection in preferences
                             }
@@ -522,6 +552,7 @@ class GesturesFragment : Fragment() {
             AppDrawerFlag.SetShortSwipeRight -> prefs.shortSwipeRightAction = action
             AppDrawerFlag.SetClickClock -> prefs.clickClockAction = action
             AppDrawerFlag.SetAppUsage -> prefs.clickAppUsageAction = action
+            AppDrawerFlag.SetFloating -> prefs.clickFloatingAction = action
             AppDrawerFlag.SetClickDate -> prefs.clickDateAction = action
             AppDrawerFlag.SetDoubleTap -> prefs.doubleTapAction = action
             AppDrawerFlag.SetLongSwipeUp -> prefs.longSwipeUpAction = action

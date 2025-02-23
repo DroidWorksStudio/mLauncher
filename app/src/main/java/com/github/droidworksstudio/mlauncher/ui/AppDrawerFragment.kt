@@ -247,12 +247,6 @@ class AppDrawerFragment : Fragment() {
         }
     }
 
-
-    override fun onResume() {
-        super.onResume()
-        binding.mainLayout.setBackgroundColor(prefs.backgroundColor)
-    }
-
     private fun initViewModel(
         flag: AppDrawerFlag,
         viewModel: MainViewModel,
