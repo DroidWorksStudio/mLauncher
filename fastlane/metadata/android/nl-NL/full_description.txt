@@ -1,60 +1,60 @@
-<p>Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>: A minimal and clean launcher with
-    enhanced features.</p>
+<p>Gevorkt van <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>: Een minimale en schone launcher met
+    verbeterde functies.</p>
 
 <h2>Gevorkt met extra functies</h2>
 
-<b>Features:</b>
+<b>Kenmerken:</b>
 
-- App Drawer Customization: Rename apps in the app drawer (home screen app renaming is already supported with a long
-click).
-- Advanced Gestures: A wide range of gestures, including taps and swipes, to trigger different actions.
-- Clock Customization: Position the clock independently of the home apps, giving more control over your home screen
-layout.
-- App Drawer Layout: Change the alignment of apps in the app drawer independently of the home screen.
-- Font Size Customization: Adjust the font size of sections of the home screen separately.
-- Privacy Focused: Removed internet permission, ensuring your data remains private.
-- Biometric Security: Lock settings behind biometric authentication (toggle option).
-- Crash Reports: Ability to report crashes via email for better troubleshooting.
-- App Usage Tracking: View app usage time directly from the home screen.
+- Aanpassing van de app-lade: hernoem apps in de app-lade (het hernoemen van apps op het startscherm wordt al ondersteund met een lange
+(klikken).
+- Geavanceerde gebaren: een breed scala aan gebaren, waaronder tikken en vegen, om verschillende acties te activeren.
+- Klok aanpassen: plaats de klok onafhankelijk van de home-apps, zodat u meer controle hebt over uw startscherm
+indeling.
+- Lay-out van de app-lade: wijzig de uitlijning van apps in de app-lade, onafhankelijk van het startscherm.
+- Aanpassing van de lettergrootte: pas de lettergrootte van delen van het startscherm afzonderlijk aan.
+- Gericht op privacy: internetmachtigingen zijn verwijderd, zodat uw gegevens privé blijven.
+- Biometrische beveiliging: vergrendel instellingen achter biometrische authenticatie (schakeloptie).
+- Crashrapporten: u kunt crashes via e-mail melden voor betere probleemoplossing.
+- App-gebruik bijhouden: Bekijk de gebruikstijd van de app rechtstreeks vanaf het startscherm.
 
-<b>Gestures Include:</b>
+<b>Gebaren omvatten:</b>
 
-- Double Tap: Quickly tap twice to trigger a predefined action.
-- Clock Tap: Tap the clock to access additional features or settings.
-- Date Tap: Tap the date for easy access to the calendar.
-- Usage Tap: Tap on the total usage to view system or app usage data.
-- Short Swipes: Swipe up, down, left, or right to navigate or trigger different actions.
-- Long Swipes: Swipe up, down, left, or right for additional gesture actions.
+- Dubbeltikken: Tik snel twee keer om een vooraf gedefinieerde actie te activeren.
+- Tik op de klok: Tik op de klok om toegang te krijgen tot extra functies of instellingen.
+- Datum tikken: Tik op de datum voor eenvoudige toegang tot de kalender.
+- Gebruikstip: Tik op het totale gebruik om gegevens over het systeem- of app-gebruik te bekijken.
+- Korte veegbewegingen: veeg omhoog, omlaag, naar links of naar rechts om te navigeren of verschillende acties te activeren.
+- Lange veegbewegingen: veeg omhoog, omlaag, naar links of naar rechts voor extra gebaaracties.
 
-<b>Possible Actions Include:</b>
+<b>Mogelijke acties zijn onder meer:</b>
 
-- Open Specified App: Instantly open any app of your choice with a gesture.
-- Display App List: Show the full list of apps installed on the device.
-- Lock Screen: Lock your device for security.
-- Show Recently Opened Apps: Access recently used apps for quick multitasking.
-- Open Notification Drawer: Trigger the notification drawer with a swipe or tap.
-- Open Quick Settings: Access quick settings directly from the home screen.
-- Power Dialog: Open power options like shutdown, restart, and more.
-- Take a Screenshot: Capture the screen to save or share your content.
-- Switch Page: Quickly switch between home screen pages.
-- Disable Gesture: Disable specific gestures as needed.
+- Gespecificeerde app openen: open direct een app naar keuze met een gebaar.
+- App-lijst weergeven: Toon de volledige lijst met apps die op het apparaat zijn geïnstalleerd.
+- Vergrendelscherm: vergrendel uw apparaat voor de veiligheid.
+- Toon recent geopende apps: Krijg toegang tot recent gebruikte apps voor snelle multitasking.
+- Meldingenlade openen: Activeer de meldingenlade door te vegen of tikken.
+- Snelle instellingen openen: krijg rechtstreeks vanaf het startscherm toegang tot snelle instellingen.
+- Energiedialoog: open energieopties zoals afsluiten, opnieuw opstarten en meer.
+- Maak een schermafbeelding: leg het scherm vast om uw inhoud op te slaan of te delen.
+- Pagina wisselen: snel schakelen tussen startschermpagina's.
+- Gebaren uitschakelen: Schakel specifieke gebaren uit indien nodig.
 
-<b>Translations:</b>
+<b>Vertalingen:</b>
 
-- Arabic
-- Dutch
-- English
-- French
-- German
-- Hebrew
-- Italian
-- Japanese
-- Korean
-- Lithuanian
-- Polish
-- Portuguese
-- Russian
-- Slovak
-- Spanish
+- Arabisch
+- Nederlands
+- Engels
+- Frans
+- Duits
+- Hebreeuws
+- Italiaans
+- Japans
+- Koreaans
+- Litouws
+- Pools
+- Portugees
+- Russisch
+- Slowaaks
+- Spaans
 - Thai
-- Turkish
+- Turks
