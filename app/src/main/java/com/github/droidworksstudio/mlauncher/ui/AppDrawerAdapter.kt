@@ -292,7 +292,7 @@ class AppDrawerAdapter(
                     }
                     appTitle.compoundDrawablePadding = 20
                 } else if (isPrivateSpace) {
-                    val icon = AppCompatResources.getDrawable(context, R.drawable.private_space)
+                    val icon = AppCompatResources.getDrawable(context, R.drawable.ic_unlock)
                     val px = dp2px(resources, prefs.appSize)
                     icon?.setBounds(0, 0, px, px)
                     if (appLabelGravity == LEFT) {

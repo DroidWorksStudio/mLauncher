@@ -12,8 +12,10 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalDensity
@@ -37,6 +39,7 @@ import com.github.droidworksstudio.mlauncher.data.Constants.Theme.Light
 import com.github.droidworksstudio.mlauncher.data.Constants.Theme.System
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentSettingsBinding
+import com.github.droidworksstudio.mlauncher.helper.isPrivateSpaceLocked
 import com.github.droidworksstudio.mlauncher.helper.isPrivateSpaceSupported
 import com.github.droidworksstudio.mlauncher.helper.isSystemInDarkMode
 import com.github.droidworksstudio.mlauncher.helper.setThemeMode
@@ -80,6 +83,7 @@ class SettingsFragment : Fragment() {
 
     @Composable
     private fun Settings(fontSize: TextUnit = TextUnit.Unspecified) {
+        var toggledPrivateSpaces by remember { mutableStateOf(isPrivateSpaceLocked(requireContext())) }
         val fs = remember { mutableStateOf(fontSize) }
         Constants.updateMaxHomePages(requireContext())
 
@@ -94,6 +98,12 @@ class SettingsFragment : Fragment() {
         val iconSize = if (fs.value.isSpecified) {
             tuToDp((fs.value * 0.8))
         } else tuToDp(fs.value)
+
+        val setPrivateSpaces = if (toggledPrivateSpaces) {
+            R.drawable.ic_lock
+        } else {
+            R.drawable.ic_unlock
+        }
 
         Column {
             Spacer(
@@ -145,12 +155,13 @@ class SettingsFragment : Fragment() {
             if (isPrivateSpaceSupported()) {
                 SettingsHomeItem(
                     title = stringResource(R.string.private_space),
-                    imageVector = ImageVector.vectorResource(id = R.drawable.private_space),
+                    imageVector = ImageVector.vectorResource(id = setPrivateSpaces),
                     titleFontSize = titleFontSize,
                     descriptionFontSize = descriptionFontSize,
                     iconSize = iconSize,
                     onClick = {
                         togglePrivateSpaceLock(requireContext())
+                        toggledPrivateSpaces = !toggledPrivateSpaces
                     }
                 )
             }
