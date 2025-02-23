@@ -22,6 +22,7 @@
     <string name="font_family">משפחת גופן</string>
     <string name="settings_text_size">הגדרות גודל טקסט</string>
     <string name="hide_search_view">הסתר תצוגת חיפוש</string>
+    <string name="show_floating_button">Show Floating Button</string>
     <string name="search">חיפוש</string>
     <string name="search_engine">מנוע חיפוש</string>
     <string name="auto_show_keyboard">הצג מקלדת בחיפוש</string>
@@ -84,6 +85,7 @@
     <string name="clock_click_app">לחיצה על השעון</string>
     <string name="date_click_app">לחיצה על התאריך</string>
     <string name="usage_click_app">לחץ על סך שימוש</string>
+    <string name="floating_click_app">Click on Logo</string>
     <string name="swipe_movement">תנועת החלקה</string>
     <string name="short_swipe_up_app">החלקה למעלה</string>
     <string name="short_swipe_down_app">החלקה למטה</string>
