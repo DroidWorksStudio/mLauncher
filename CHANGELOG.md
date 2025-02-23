@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Bug Fixes:
 
+- Fixed the setDefaultLauncher not displaying when its not the default launcher. - ([1d6db78](https://github.com/DroidWorksStudio/mLauncher/commit/1d6db780daa0ee46972b75cd96076da938bbdfa3))
 - Work icons are now displaying again. - ([5040094](https://github.com/DroidWorksStudio/mLauncher/commit/5040094926720b9267d0d7695e37268c891f9f2f))
 
 ### Language Support:
