@@ -1,60 +1,60 @@
-<p>Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>: A minimal and clean launcher with
-    enhanced features.</p>
+<p> <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>'den çatallanmıştır: Minimal ve temiz bir başlatıcı
+    gelişmiş özellikler.</p>
 
 <h2>Ekstra Özelliklerle Çatallandı</h2>
 
-<b>Features:</b>
+<b>Özellikler:</b>
 
-- App Drawer Customization: Rename apps in the app drawer (home screen app renaming is already supported with a long
-click).
-- Advanced Gestures: A wide range of gestures, including taps and swipes, to trigger different actions.
-- Clock Customization: Position the clock independently of the home apps, giving more control over your home screen
-layout.
-- App Drawer Layout: Change the alignment of apps in the app drawer independently of the home screen.
-- Font Size Customization: Adjust the font size of sections of the home screen separately.
-- Privacy Focused: Removed internet permission, ensuring your data remains private.
-- Biometric Security: Lock settings behind biometric authentication (toggle option).
-- Crash Reports: Ability to report crashes via email for better troubleshooting.
-- App Usage Tracking: View app usage time directly from the home screen.
+- Uygulama Çekmecesi Özelleştirmesi: Uygulama çekmecesindeki uygulamaları yeniden adlandırın (ana ekran uygulamasının yeniden adlandırılması uzun bir süre önce desteklenmiştir)
+tıklamak).
+- Gelişmiş Hareketler: Farklı eylemleri tetiklemek için dokunma ve kaydırma gibi geniş bir hareket yelpazesi.
+- Saat Özelleştirme: Saati ana uygulamalardan bağımsız olarak konumlandırın, böylece ana ekranınız üzerinde daha fazla kontrol sahibi olun
+düzen.
+- Uygulama Çekmecesi Düzeni: Uygulamaların ana ekrandan bağımsız olarak uygulama çekmecesindeki hizalamasını değiştirin.
+- Yazı Boyutu Özelleştirme: Ana ekranın bölümlerinin yazı boyutunu ayrı ayrı ayarlayın.
+- Gizlilik Odaklı: İnternet izni kaldırıldı, verilerinizin gizli kalması sağlandı.
+- Biyometrik Güvenlik: Biyometrik kimlik doğrulamanın arkasındaki ayarları kilitleyin (değiştirme seçeneği).
+- Çökme Raporları: Daha iyi sorun giderme için çökmeleri e-posta yoluyla bildirme olanağı.
+- Uygulama Kullanım Takibi: Uygulama kullanım süresini doğrudan ana ekrandan görüntüleyin.
 
-<b>Gestures Include:</b>
+<b>Jestler şunları içerir:</b>
 
-- Double Tap: Quickly tap twice to trigger a predefined action.
-- Clock Tap: Tap the clock to access additional features or settings.
-- Date Tap: Tap the date for easy access to the calendar.
-- Usage Tap: Tap on the total usage to view system or app usage data.
-- Short Swipes: Swipe up, down, left, or right to navigate or trigger different actions.
-- Long Swipes: Swipe up, down, left, or right for additional gesture actions.
+- Çift Dokunma: Önceden tanımlanmış bir eylemi tetiklemek için hızlıca iki kez dokunun.
+- Saat Dokunuşu: Ek özelliklere veya ayarlara erişmek için saate dokunun.
+- Tarih Dokunuşu: Takvime kolay erişim için tarihe dokunun.
+- Kullanım Dokunuşu: Sistem veya uygulama kullanım verilerini görüntülemek için toplam kullanıma dokunun.
+- Kısa Kaydırmalar: Farklı eylemleri gezinmek veya tetiklemek için yukarı, aşağı, sola veya sağa kaydırın.
+- Uzun Kaydırmalar: Ek hareket eylemleri için yukarı, aşağı, sola veya sağa kaydırın.
 
-<b>Possible Actions Include:</b>
+<b>Olası Eylemler Şunları İçerir:</b>
 
-- Open Specified App: Instantly open any app of your choice with a gesture.
-- Display App List: Show the full list of apps installed on the device.
-- Lock Screen: Lock your device for security.
-- Show Recently Opened Apps: Access recently used apps for quick multitasking.
-- Open Notification Drawer: Trigger the notification drawer with a swipe or tap.
-- Open Quick Settings: Access quick settings directly from the home screen.
-- Power Dialog: Open power options like shutdown, restart, and more.
-- Take a Screenshot: Capture the screen to save or share your content.
-- Switch Page: Quickly switch between home screen pages.
-- Disable Gesture: Disable specific gestures as needed.
+- Belirtilen Uygulamayı Aç: İstediğiniz herhangi bir uygulamayı bir hareketle anında açın.
+- Uygulama Listesini Görüntüle: Cihaza yüklenen uygulamaların tam listesini gösterir.
+- Kilit Ekranı: Güvenlik için cihazınızı kilitleyin.
+- Son Açılan Uygulamaları Göster: Hızlı çoklu görev için son kullanılan uygulamalara erişin.
+- Bildirim Çekmecesini Açın: Bildirim çekmecesini kaydırma veya dokunma hareketiyle etkinleştirin.
+- Hızlı Ayarları Açın: Hızlı ayarlara doğrudan ana ekrandan erişin.
+- Güç İletişim Kutusu: Kapatma, yeniden başlatma ve daha fazlası gibi güç seçeneklerini açın.
+- Ekran Görüntüsü Alın: İçeriğinizi kaydetmek veya paylaşmak için ekranı yakalayın.
+- Sayfa Değiştir: Ana ekran sayfaları arasında hızlı geçiş yapın.
+- Hareketleri Devre Dışı Bırak: Gerektiğinde belirli hareketleri devre dışı bırakın.
 
-<b>Translations:</b>
+<b>Çeviriler:</b>
 
-- Arabic
-- Dutch
-- English
-- French
-- German
-- Hebrew
-- Italian
-- Japanese
-- Korean
-- Lithuanian
-- Polish
-- Portuguese
-- Russian
+- Arapça
+- Hollandalı
+- İngilizce
+- Fransızca
+- Almanca
+- İbranice
+- İtalyan
+- Japonca
+- Korece
+- Litvanyaca
+- Lehçe
+- Portekizce
+- Rusça
 - Slovak
-- Spanish
-- Thai
-- Turkish
+- İspanyolca
+- Tayca
+- Türkçe
