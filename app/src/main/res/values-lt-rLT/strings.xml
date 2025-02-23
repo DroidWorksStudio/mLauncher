@@ -22,6 +22,7 @@
     <string name="font_family">Šrifto šeima</string>
     <string name="settings_text_size">Nustatymai Teksto dydis</string>
     <string name="hide_search_view">Slėpti paieškos rodinį</string>
+    <string name="show_floating_button">Show Floating Button</string>
     <string name="search">Ieškoti</string>
     <string name="search_engine">Paieškos sistema</string>
     <string name="auto_show_keyboard">Automatiškai rodyti klaviatūrą</string>
@@ -84,6 +85,7 @@
     <string name="clock_click_app">Spustelėkite ant laikrodžio</string>
     <string name="date_click_app">Spustelėkite ant datos</string>
     <string name="usage_click_app">Spustelėkite Bendras naudojimas</string>
+    <string name="floating_click_app">Click on Logo</string>
     <string name="swipe_movement">Braukimo judesys</string>
     <string name="short_swipe_up_app">Trumpai braukti į viršų</string>
     <string name="short_swipe_down_app">Trumpai braukti žemyn</string>
