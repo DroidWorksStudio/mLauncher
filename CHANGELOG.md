@@ -6,9 +6,9 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Releases:
 
-- Prepare for version 1.7.4 - ([b16415d](https://github.com/DroidWorksStudio/mLauncher/commit/b16415d48ca54238714239e673a881d745173948))
+- Prepare for version 1.7.5 - ([f2f3ba6](https://github.com/DroidWorksStudio/mLauncher/commit/f2f3ba6482b30fe3acaf4fd3213d9357e41c5984))
 
-## [174](https://github.com/DroidWorksStudio/mLauncher/tree/174) - (23, February 2025)
+## [1.7.4](https://github.com/DroidWorksStudio/mLauncher/tree/1.7.4) - (23, February 2025)
 
 ### Bug Fixes:
 
