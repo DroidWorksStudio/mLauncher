@@ -22,7 +22,7 @@
     <string name="font_family">ครอบครัวแบบอักษร</string>
     <string name="settings_text_size">ขนาดตัวอักษรการตั้งค่า</string>
     <string name="hide_search_view">ซ่อนมุมมองการค้นหา</string>
-    <string name="show_floating_button">Show Floating Button</string>
+    <string name="show_floating_button">แสดงปุ่มลอย</string>
     <string name="search">ค้นหา</string>
     <string name="search_engine">เครื่องมือค้นหา</string>
     <string name="auto_show_keyboard">แป้นพิมพ์แสดงอัตโนมัติ</string>
@@ -85,7 +85,7 @@
     <string name="clock_click_app">คลิกที่นาฬิกา</string>
     <string name="date_click_app">คลิกที่วันที่</string>
     <string name="usage_click_app">คลิกที่การใช้งานทั้งหมด</string>
-    <string name="floating_click_app">Click on Logo</string>
+    <string name="floating_click_app">คลิกที่โลโก้</string>
     <string name="swipe_movement">การเคลื่อนไหวด้วยการปัด</string>
     <string name="short_swipe_up_app">ปัดขึ้น</string>
     <string name="short_swipe_down_app">เลื่อนลง</string>
