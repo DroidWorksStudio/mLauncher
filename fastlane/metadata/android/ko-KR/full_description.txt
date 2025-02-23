@@ -1,60 +1,60 @@
-<p>Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>: A minimal and clean launcher with
-    enhanced features.</p>
+<p> <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>에서 분기됨: 최소한이고 깔끔한 런처
+    향상된 기능.</p>
 
 <h2>추가 기능이 포함된 포크</h2>
 
-<b>Features:</b>
+<b>특징:</b>
 
-- App Drawer Customization: Rename apps in the app drawer (home screen app renaming is already supported with a long
-click).
-- Advanced Gestures: A wide range of gestures, including taps and swipes, to trigger different actions.
-- Clock Customization: Position the clock independently of the home apps, giving more control over your home screen
-layout.
-- App Drawer Layout: Change the alignment of apps in the app drawer independently of the home screen.
-- Font Size Customization: Adjust the font size of sections of the home screen separately.
-- Privacy Focused: Removed internet permission, ensuring your data remains private.
-- Biometric Security: Lock settings behind biometric authentication (toggle option).
-- Crash Reports: Ability to report crashes via email for better troubleshooting.
-- App Usage Tracking: View app usage time directly from the home screen.
+- 앱 서랍 사용자 지정: 앱 서랍의 앱 이름 변경(홈 화면 앱 이름 변경은 이미 긴 이름으로 지원됨)
+딸깍 하는 소리).
+- 고급 제스처: 탭, 스와이프 등 다양한 제스처를 사용하여 다양한 동작을 트리거합니다.
+- 시계 사용자 지정: 홈 앱과 별도로 시계 위치를 조정하여 홈 화면을 더욱 효과적으로 제어할 수 있습니다.
+공들여 나열한 것.
+- 앱 서랍 레이아웃: 홈 화면과 상관없이 앱 서랍에 있는 앱의 정렬을 변경합니다.
+- 글꼴 크기 사용자 지정: 홈 화면 섹션의 글꼴 크기를 개별적으로 조절합니다.
+- 개인정보 보호 중심: 인터넷 권한을 제거하여 데이터가 비공개로 유지되도록 합니다.
+- 생체 인식 보안: 생체 인식 인증 뒤에 있는 잠금 설정(옵션 전환).
+- 충돌 보고서: 더 나은 문제 해결을 위해 이메일을 통해 충돌을 보고할 수 있는 기능.
+- 앱 사용 추적: 홈 화면에서 바로 앱 사용 시간을 확인하세요.
 
-<b>Gestures Include:</b>
+<b>제스처에는 다음이 포함됩니다:</b>
 
-- Double Tap: Quickly tap twice to trigger a predefined action.
-- Clock Tap: Tap the clock to access additional features or settings.
-- Date Tap: Tap the date for easy access to the calendar.
-- Usage Tap: Tap on the total usage to view system or app usage data.
-- Short Swipes: Swipe up, down, left, or right to navigate or trigger different actions.
-- Long Swipes: Swipe up, down, left, or right for additional gesture actions.
+- 두 번 탭: 미리 정의된 동작을 트리거하려면 빠르게 두 번 탭하세요.
+- 시계 탭: 시계를 탭하면 추가 기능이나 설정에 액세스할 수 있습니다.
+- 날짜 탭: 날짜를 탭하면 달력에 쉽게 접근할 수 있습니다.
+- 사용량 탭: 전체 사용량을 탭하여 시스템이나 앱 사용 데이터를 확인하세요.
+- 짧은 스와이프: 위, 아래, 왼쪽, 오른쪽으로 스와이프하여 다양한 작업을 탐색하거나 트리거합니다.
+- 긴 스와이프: 추가 제스처 동작을 수행하려면 위, 아래, 왼쪽 또는 오른쪽으로 스와이프하세요.
 
-<b>Possible Actions Include:</b>
+<b>가능한 작업은 다음과 같습니다.</b>
 
-- Open Specified App: Instantly open any app of your choice with a gesture.
-- Display App List: Show the full list of apps installed on the device.
-- Lock Screen: Lock your device for security.
-- Show Recently Opened Apps: Access recently used apps for quick multitasking.
-- Open Notification Drawer: Trigger the notification drawer with a swipe or tap.
-- Open Quick Settings: Access quick settings directly from the home screen.
-- Power Dialog: Open power options like shutdown, restart, and more.
-- Take a Screenshot: Capture the screen to save or share your content.
-- Switch Page: Quickly switch between home screen pages.
-- Disable Gesture: Disable specific gestures as needed.
+- 지정된 앱 열기: 제스처로 원하는 앱을 즉시 엽니다.
+- 앱 목록 표시: 기기에 설치된 앱의 전체 목록을 표시합니다.
+- 잠금 화면: 보안을 위해 기기를 잠급니다.
+- 최근에 연 앱 표시: 최근 사용한 앱에 액세스하여 빠르게 멀티태스킹을 수행할 수 있습니다.
+- 알림 서랍 열기: 스와이프나 탭으로 알림 서랍을 엽니다.
+- 빠른 설정 열기: 홈 화면에서 바로 빠른 설정에 접근합니다.
+- 전원 대화 상자: 종료, 다시 시작 등의 전원 옵션을 엽니다.
+- 스크린샷 찍기: 화면을 캡처하여 콘텐츠를 저장하거나 공유하세요.
+- 페이지 전환: 홈 화면 페이지를 빠르게 전환합니다.
+- 제스처 비활성화: 필요에 따라 특정 제스처를 비활성화합니다.
 
-<b>Translations:</b>
+<b>번역:</b>
 
-- Arabic
-- Dutch
-- English
-- French
-- German
-- Hebrew
-- Italian
-- Japanese
-- Korean
-- Lithuanian
-- Polish
-- Portuguese
-- Russian
-- Slovak
-- Spanish
-- Thai
-- Turkish
+- 아랍어
+- 네덜란드어
+- 영어
+- 프랑스어
+- 독일어
+- 히브리어
+- 이탈리아어
+- 일본어
+- 한국인
+- 리투아니아어
+- 폴란드어
+- 포르투갈어
+- 러시아어
+- 슬로바키아어
+- 스페인어
+- 태국어
+- 터키어
