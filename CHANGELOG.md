@@ -8,6 +8,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Work icons are now displaying again. - ([5040094](https://github.com/DroidWorksStudio/mLauncher/commit/5040094926720b9267d0d7695e37268c891f9f2f))
 
+### Language Support:
+
+- Updated Language Files. ([#667](https://github.com/DroidWorksStudio/mLauncher/issues/667)) - ([206046c](https://github.com/DroidWorksStudio/mLauncher/commit/206046c80512f7c850c9beb442ddc5e6211bc48e))
+
 ### Refactoring:
 
 - Format fdroid page better. - ([ba26d05](https://github.com/DroidWorksStudio/mLauncher/commit/ba26d05d710a073b5e5beac7f94a22917d758209))
