@@ -1,73 +1,60 @@
-<p>แยกมาจาก <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. เรียบง่ายและสะอาด</p>
+<p>Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>: A minimal and clean launcher with
+    enhanced features.</p>
 
 <h2>แยกสาขาด้วยคุณสมบัติพิเศษ</h2>
 
-<ul>
-    <li>ลบสิ่งที่ไม่จำเป็น เช่น โฆษณาและลิงก์</li>
-    <li>คุณสามารถเปลี่ยนชื่อแอปใน app-drawer ได้ (รองรับการเปลี่ยนชื่อแอปบนหน้าจอหลักแล้ว) เพียงคลิกค้างไว้บนแอปบนหน้าจอหลักและเริ่มพิมพ์)</li> เพียงคลิกค้างไว้บนแอปบนหน้าจอหลักและเริ่มพิมพ์)</li>
-    <li>เราได้เพิ่มตัวเลือกเพิ่มเติมมากมายสำหรับท่าทางบนหน้าจอหลัก:
-        <ul>
-            <li><b>ท่าทางต่างๆ ตอนนี้ได้แก่:</b>
-                <ul>
-                    <li>แตะสองครั้ง</li>
-                    <li>คลิกที่นาฬิกา</li>
-                    <li>คลิกที่วันที่</li>
-                    <li>คลิกที่การใช้งานทั้งหมด</li>
-                    <li>ปัดขึ้นสั้นๆ</li>
-                    <li>ปัดลงสั้นๆ</li>
-                    <li>ปัดซ้ายสั้นๆ</li>
-                    <li>ปัดขวาสั้นๆ</li>
-                    <li>ปัดขึ้นยาว</li>
-                    <li>ปัดลงยาว</li>
-                    <li>ปัดซ้ายยาว</li>
-                    <li>ปัดขวายาว</li>
-                </ul>
-            </li>
-            <li><b>การกระทำที่เป็นไปได้ตอนนี้มีดังนี้:</b>
-                <ul>
-                    <li>เปิดแอปที่ระบุ</li>
-                    <li>แสดงรายการแอป</li>
-                    <li>ล็อคหน้าจอ</li>
-                    <li>แสดงแอปที่เปิดล่าสุด</li>
-                    <li>เปิดลิ้นชักการแจ้งเตือน</li>
-                    <li>เปิดการตั้งค่าด่วน</li>
-                    <li>บทสนทนาพลัง</li>
-                    <li>จับภาพหน้าจอ</li>
-                    <li>สลับหน้า</li>
-                    <li>ปิดใช้งานท่าทาง</li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-    <li>คุณสามารถวางตำแหน่งนาฬิกาแยกจากแอปโฮมได้</li>
-    <li>เปลี่ยนการจัดตำแหน่งของแอปในลิ้นชักแอปโดยไม่ขึ้นกับหน้าจอหลัก</li>
-    <li>ปรับขนาดตัวอักษรของส่วนต่างๆ ของหน้าจอหลักแยกจากกัน</li>
-    <li>ลบสิทธิ์อนุญาตอินเทอร์เน็ต <li>ลบสิทธิ์อนุญาตอินเทอร์เน็ต คุณไม่มีทางรู้เลยว่านักพัฒนาแอพอยากรู้เรื่องอะไรเกี่ยวกับคุณ</li>
-    <li>ล็อคการตั้งค่าไว้ด้านหลังข้อมูลชีวภาพ (สลับ)</li>
-    <li>เพิ่มความสามารถในการรายงานข้อขัดข้องผ่านทางอีเมล</li>
-    <li>เพิ่มความสามารถในการดูเวลาการใช้งานแอป</li>
-</ul>
+<b>Features:</b>
 
-<h2>แปล</h2>
+- App Drawer Customization: Rename apps in the app drawer (home screen app renaming is already supported with a long
+click).
+- Advanced Gestures: A wide range of gestures, including taps and swipes, to trigger different actions.
+- Clock Customization: Position the clock independently of the home apps, giving more control over your home screen
+layout.
+- App Drawer Layout: Change the alignment of apps in the app drawer independently of the home screen.
+- Font Size Customization: Adjust the font size of sections of the home screen separately.
+- Privacy Focused: Removed internet permission, ensuring your data remains private.
+- Biometric Security: Lock settings behind biometric authentication (toggle option).
+- Crash Reports: Ability to report crashes via email for better troubleshooting.
+- App Usage Tracking: View app usage time directly from the home screen.
 
-<p>มีผู้คนจำนวนมากได้แปลแอปเป็นภาษาต่อไปนี้ ขอขอบคุณทุกท่านมากๆครับ:</p> ขอขอบคุณทุกท่านมากๆครับ:</p>
+<b>Gestures Include:</b>
 
-<ul>
-    <li>อาหรับ</li>
-    <li>ดัตช์</li>
-    <li>อังกฤษ</li>
-    <li>ฝรั่งเศส</li>
-    <li>เยอรมัน</li>
-    <li>ภาษาฮีบรู</li>
-    <li>อิตาลี</li>
-    <li>ญี่ปุ่น</li>
-    <li>ภาษาเกาหลี</li>
-    <li>ลิทัวเนีย</li>
-    <li>โปแลนด์</li>
-    <li>โปรตุเกส</li>
-    <li>รัสเซีย</li>
-    <li>สโลวัก</li>
-    <li>สเปน</li>
-    <li>ไทย</li>
-    <li>ตุรกี</li>
-</ul>
+- Double Tap: Quickly tap twice to trigger a predefined action.
+- Clock Tap: Tap the clock to access additional features or settings.
+- Date Tap: Tap the date for easy access to the calendar.
+- Usage Tap: Tap on the total usage to view system or app usage data.
+- Short Swipes: Swipe up, down, left, or right to navigate or trigger different actions.
+- Long Swipes: Swipe up, down, left, or right for additional gesture actions.
+
+<b>Possible Actions Include:</b>
+
+- Open Specified App: Instantly open any app of your choice with a gesture.
+- Display App List: Show the full list of apps installed on the device.
+- Lock Screen: Lock your device for security.
+- Show Recently Opened Apps: Access recently used apps for quick multitasking.
+- Open Notification Drawer: Trigger the notification drawer with a swipe or tap.
+- Open Quick Settings: Access quick settings directly from the home screen.
+- Power Dialog: Open power options like shutdown, restart, and more.
+- Take a Screenshot: Capture the screen to save or share your content.
+- Switch Page: Quickly switch between home screen pages.
+- Disable Gesture: Disable specific gestures as needed.
+
+<b>Translations:</b>
+
+- Arabic
+- Dutch
+- English
+- French
+- German
+- Hebrew
+- Italian
+- Japanese
+- Korean
+- Lithuanian
+- Polish
+- Portuguese
+- Russian
+- Slovak
+- Spanish
+- Thai
+- Turkish
