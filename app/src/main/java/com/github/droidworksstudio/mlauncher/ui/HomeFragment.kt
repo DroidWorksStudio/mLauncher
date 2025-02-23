@@ -71,6 +71,7 @@ import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
 import com.github.droidworksstudio.mlauncher.helper.getNextAlarm
 import com.github.droidworksstudio.mlauncher.helper.hideStatusBar
 import com.github.droidworksstudio.mlauncher.helper.initActionService
+import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
 import com.github.droidworksstudio.mlauncher.helper.showStatusBar
 import com.github.droidworksstudio.mlauncher.helper.togglePrivateSpaceLock
 import com.github.droidworksstudio.mlauncher.helper.wordOfTheDay
@@ -287,6 +288,10 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 firstRunTips.visibility = View.VISIBLE
                 setDefaultLauncher.visibility = View.GONE
             } else firstRunTips.visibility = View.GONE
+
+            if (!ismlauncherDefault(requireContext())) {
+                setDefaultLauncher.visibility = View.VISIBLE
+            }
         }
 
         with(viewModel) {
