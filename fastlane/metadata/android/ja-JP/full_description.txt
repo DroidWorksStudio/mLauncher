@@ -1,60 +1,60 @@
-<p>Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>: A minimal and clean launcher with
-    enhanced features.</p>
+<p> <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>からフォーク: 最小限でクリーンなランチャーで、
+    強化された機能。</p>
 
 <h2>追加機能付きフォーク</h2>
 
-<b>Features:</b>
+<b>特徴:</b>
 
-- App Drawer Customization: Rename apps in the app drawer (home screen app renaming is already supported with a long
-click).
-- Advanced Gestures: A wide range of gestures, including taps and swipes, to trigger different actions.
-- Clock Customization: Position the clock independently of the home apps, giving more control over your home screen
-layout.
-- App Drawer Layout: Change the alignment of apps in the app drawer independently of the home screen.
-- Font Size Customization: Adjust the font size of sections of the home screen separately.
-- Privacy Focused: Removed internet permission, ensuring your data remains private.
-- Biometric Security: Lock settings behind biometric authentication (toggle option).
-- Crash Reports: Ability to report crashes via email for better troubleshooting.
-- App Usage Tracking: View app usage time directly from the home screen.
+- アプリドロワーのカスタマイズ: アプリドロワー内のアプリの名前を変更(ホーム画面のアプリの名前変更は、すでに長い
+クリック）。
+- 高度なジェスチャー: タップやスワイプなど、さまざまなアクションをトリガーする幅広いジェスチャー。
+- 時計のカスタマイズ: ホームアプリとは独立して時計を配置し、ホーム画面をより細かく制御できます。
+レイアウト。
+- アプリ ドロワー レイアウト: ホーム画面とは別に、アプリ ドロワー内のアプリの配置を変更します。
+- フォント サイズのカスタマイズ: ホーム画面のセクションのフォント サイズを個別に調整します。
+- プライバシー重視: インターネットのアクセス許可を削除し、データのプライバシーを確保します。
+- 生体認証セキュリティ: 生体認証で設定をロックします (トグル オプション)。
+- クラッシュ レポート: より適切なトラブルシューティングを行うために、電子メールでクラッシュを報告する機能。
+- アプリの使用状況の追跡: ホーム画面から直接アプリの使用時間を表示します。
 
-<b>Gestures Include:</b>
+<b>ジェスチャーには以下が含まれます:</b>
 
-- Double Tap: Quickly tap twice to trigger a predefined action.
-- Clock Tap: Tap the clock to access additional features or settings.
-- Date Tap: Tap the date for easy access to the calendar.
-- Usage Tap: Tap on the total usage to view system or app usage data.
-- Short Swipes: Swipe up, down, left, or right to navigate or trigger different actions.
-- Long Swipes: Swipe up, down, left, or right for additional gesture actions.
+- ダブルタップ: すばやく 2 回タップすると、定義済みのアクションがトリガーされます。
+- 時計タップ: 時計をタップすると、追加の機能や設定にアクセスできます。
+- 日付タップ: 日付をタップするとカレンダーに簡単にアクセスできます。
+- 使用状況タップ: 合計使用量をタップすると、システムまたはアプリの使用状況データが表示されます。
+- 短いスワイプ: 上、下、左、右にスワイプして、さまざまなアクションをナビゲートまたはトリガーします。
+- ロングスワイプ: 上、下、左、右にスワイプすると、追加のジェスチャアクションが実行されます。
 
-<b>Possible Actions Include:</b>
+<b>実行可能なアクションは次のとおりです:</b>
 
-- Open Specified App: Instantly open any app of your choice with a gesture.
-- Display App List: Show the full list of apps installed on the device.
-- Lock Screen: Lock your device for security.
-- Show Recently Opened Apps: Access recently used apps for quick multitasking.
-- Open Notification Drawer: Trigger the notification drawer with a swipe or tap.
-- Open Quick Settings: Access quick settings directly from the home screen.
-- Power Dialog: Open power options like shutdown, restart, and more.
-- Take a Screenshot: Capture the screen to save or share your content.
-- Switch Page: Quickly switch between home screen pages.
-- Disable Gesture: Disable specific gestures as needed.
+- 指定したアプリを開く: ジェスチャで任意のアプリを即座に開きます。
+- アプリリストを表示: デバイスにインストールされているアプリの完全なリストを表示します。
+- 画面のロック: セキュリティのためにデバイスをロックします。
+- 最近開いたアプリを表示: 最近使用したアプリにアクセスして、マルチタスクをすばやく実行します。
+- 通知ドロワーを開く: スワイプまたはタップで通知ドロワーを起動します。
+- クイック設定を開く: ホーム画面から直接クイック設定にアクセスします。
+- 電源ダイアログ: シャットダウン、再起動などの電源オプションを開きます。
+- スクリーンショットを撮る: 画面をキャプチャしてコンテンツを保存または共有します。
+- ページの切り替え: ホーム画面のページをすばやく切り替えます。
+- ジェスチャを無効にする: 必要に応じて特定のジェスチャを無効にします。
 
-<b>Translations:</b>
+<b>翻訳:</b>
 
-- Arabic
-- Dutch
-- English
-- French
-- German
-- Hebrew
-- Italian
-- Japanese
-- Korean
-- Lithuanian
-- Polish
-- Portuguese
-- Russian
-- Slovak
-- Spanish
-- Thai
-- Turkish
+- アラビア語
+- オランダ語
+- 英語
+- フランス語
+- ドイツ語
+- ヘブライ語
+- イタリア語
+- 日本語
+- 韓国語
+- リトアニア語
+- ポーランド語
+- ポルトガル語
+- ロシア語
+- スロバキア語
+- スペイン語
+- タイ語
+- トルコ語
