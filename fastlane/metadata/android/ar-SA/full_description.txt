@@ -1,60 +1,60 @@
-<p>Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>: A minimal and clean launcher with
-    enhanced features.</p>
+<p>متفرع من <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>: مشغل بسيط ونظيف مع
+    ميزات محسنة.</p>
 
 <h2>متفرع مع ميزات إضافية</h2>
 
-<b>Features:</b>
+<b>المميزات:</b>
 
-- App Drawer Customization: Rename apps in the app drawer (home screen app renaming is already supported with a long
-click).
-- Advanced Gestures: A wide range of gestures, including taps and swipes, to trigger different actions.
-- Clock Customization: Position the clock independently of the home apps, giving more control over your home screen
-layout.
-- App Drawer Layout: Change the alignment of apps in the app drawer independently of the home screen.
-- Font Size Customization: Adjust the font size of sections of the home screen separately.
-- Privacy Focused: Removed internet permission, ensuring your data remains private.
-- Biometric Security: Lock settings behind biometric authentication (toggle option).
-- Crash Reports: Ability to report crashes via email for better troubleshooting.
-- App Usage Tracking: View app usage time directly from the home screen.
+- تخصيص درج التطبيقات: إعادة تسمية التطبيقات في درج التطبيقات (إعادة تسمية تطبيقات الشاشة الرئيسية مدعومة بالفعل بامتداد طويل)
+(انقر).
+- الإيماءات المتقدمة: مجموعة واسعة من الإيماءات، بما في ذلك النقرات والسحب، لتحفيز إجراءات مختلفة.
+- تخصيص الساعة: ضع الساعة بشكل مستقل عن تطبيقات الصفحة الرئيسية، مما يمنحك مزيدًا من التحكم في الشاشة الرئيسية
+تَخطِيط.
+- تخطيط درج التطبيقات: قم بتغيير محاذاة التطبيقات في درج التطبيقات بشكل مستقل عن الشاشة الرئيسية.
+- تخصيص حجم الخط: اضبط حجم الخط لأقسام الشاشة الرئيسية بشكل منفصل.
+- التركيز على الخصوصية: إزالة أذونات الإنترنت، مما يضمن بقاء بياناتك خاصة.
+- الأمان البيومتري: قفل الإعدادات خلف المصادقة البيومترية (خيار التبديل).
+- تقارير الأعطال: القدرة على الإبلاغ عن الأعطال عبر البريد الإلكتروني لاستكشاف الأخطاء وإصلاحها بشكل أفضل.
+- تتبع استخدام التطبيق: عرض وقت استخدام التطبيق مباشرة من الشاشة الرئيسية.
 
-<b>Gestures Include:</b>
+<b>تشمل الإيماءات:</b>
 
-- Double Tap: Quickly tap twice to trigger a predefined action.
-- Clock Tap: Tap the clock to access additional features or settings.
-- Date Tap: Tap the date for easy access to the calendar.
-- Usage Tap: Tap on the total usage to view system or app usage data.
-- Short Swipes: Swipe up, down, left, or right to navigate or trigger different actions.
-- Long Swipes: Swipe up, down, left, or right for additional gesture actions.
+- النقر المزدوج: انقر بسرعة مرتين لتشغيل إجراء محدد مسبقًا.
+- الضغط على الساعة: اضغط على الساعة للوصول إلى ميزات أو إعدادات إضافية.
+- النقر على التاريخ: انقر على التاريخ للوصول بسهولة إلى التقويم.
+- انقر فوق الاستخدام: انقر فوق الاستخدام الإجمالي لعرض بيانات استخدام النظام أو التطبيق.
+- التمريرات القصيرة: مرر لأعلى أو لأسفل أو لليسار أو لليمين للتنقل أو تشغيل إجراءات مختلفة.
+- التمريرات الطويلة: مرر لأعلى أو لأسفل أو لليسار أو لليمين للحصول على إجراءات إيماءة إضافية.
 
-<b>Possible Actions Include:</b>
+<b>تشمل الإجراءات الممكنة:</b>
 
-- Open Specified App: Instantly open any app of your choice with a gesture.
-- Display App List: Show the full list of apps installed on the device.
-- Lock Screen: Lock your device for security.
-- Show Recently Opened Apps: Access recently used apps for quick multitasking.
-- Open Notification Drawer: Trigger the notification drawer with a swipe or tap.
-- Open Quick Settings: Access quick settings directly from the home screen.
-- Power Dialog: Open power options like shutdown, restart, and more.
-- Take a Screenshot: Capture the screen to save or share your content.
-- Switch Page: Quickly switch between home screen pages.
-- Disable Gesture: Disable specific gestures as needed.
+- فتح التطبيق المحدد: افتح أي تطبيق من اختيارك على الفور بإيماءة واحدة.
+- عرض قائمة التطبيقات: إظهار القائمة الكاملة للتطبيقات المثبتة على الجهاز.
+- قفل الشاشة: قم بقفل جهازك لأغراض الأمان.
+- إظهار التطبيقات التي تم فتحها مؤخرًا: يمكنك الوصول إلى التطبيقات المستخدمة مؤخرًا للقيام بمهام متعددة بسرعة.
+- فتح درج الإشعارات: قم بتشغيل درج الإشعارات من خلال التمرير أو النقر.
+- فتح الإعدادات السريعة: يمكنك الوصول إلى الإعدادات السريعة مباشرة من الشاشة الرئيسية.
+- مربع حوار الطاقة: افتح خيارات الطاقة مثل إيقاف التشغيل وإعادة التشغيل والمزيد.
+- التقاط لقطة شاشة: التقط لقطة للشاشة لحفظ المحتوى الخاص بك أو مشاركته.
+- تبديل الصفحة: التبديل بسرعة بين صفحات الشاشة الرئيسية.
+- تعطيل الإيماءة: قم بتعطيل إيماءات محددة حسب الحاجة.
 
-<b>Translations:</b>
+<b>الترجمات:</b>
 
-- Arabic
-- Dutch
-- English
-- French
-- German
-- Hebrew
-- Italian
-- Japanese
-- Korean
-- Lithuanian
-- Polish
-- Portuguese
-- Russian
-- Slovak
-- Spanish
-- Thai
-- Turkish
+- عربي
+- هولندي
+- إنجليزي
+- فرنسي
+- الألمانية
+- العبرية
+- ايطالي
+- اليابانية
+- الكورية
+- الليتوانية
+- البولندية
+- البرتغالية
+- الروسية
+- السلوفاكية
+- الاسبانية
+- التايلاندية
+- تركي
