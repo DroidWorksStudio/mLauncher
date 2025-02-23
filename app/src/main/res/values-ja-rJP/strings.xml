@@ -61,6 +61,7 @@
     <string name="show_recent_apps">最近使ったアプリを表示</string>
     <string name="number_of_recents">最近使用したアプリの数</string>
     <string name="show_app_usage_stats">アプリの使用状況統計を表示</string>
+    <string name="select_app_icons">Select App Icons</string>
     <string name="filter_strength">フィルター強度</string>
     <string name="background_opacity">背景の不透明度</string>
     <string name="element_alignment">要素の配置</string>
