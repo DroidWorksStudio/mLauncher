@@ -1,73 +1,60 @@
-<p>מזלג מ- <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. מינימלית ונקייה.</p>
+<p>Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>: A minimal and clean launcher with
+    enhanced features.</p>
 
 <h2>מזלג עם תכונות נוספות</h2>
 
-<ul>
-    <li>הוסר העומס, כמו מודעות וקישורים.</li>
-    <li>ניתן לשנות את שמות האפליקציות במגירת האפליקציות (שינוי שמות של אפליקציות במסך הבית כבר נתמך. פשוט לחץ לחיצה ארוכה על אפליקציה במסך הבית והתחל להקליד.)</li>
-    <li>הוספנו הרבה יותר אפשרויות למחוות במסך הבית:
-        <ul>
-            <li><b>המחוות כוללות כעת:</b>
-                <ul>
-                    <li>הקש פעמיים על</li>
-                    <li>לחיצה על השעון</li>
-                    <li>לחיצה על התאריך</li>
-                    <li>לחיצה על סך השימוש</li>
-                    <li>החלקה קצרה למעלה</li>
-                    <li>החלקה קצרה למטה</li>
-                    <li>החלקה קצרה שמאלה</li>
-                    <li>החלקה קצרה ימינה</li>
-                    <li>החלקה ארוכה למעלה</li>
-                    <li>החלקה ארוכה למטה</li>
-                    <li>החלקה ארוכה שמאלה</li>
-                    <li>החלקה ארוכה ימינה</li>
-                </ul>
-            </li>
-            <li><b>פעולות אפשריות כוללות כעת:</b>
-                <ul>
-                    <li>פתח את האפליקציה שצוינה</li>
-                    <li>הצג את רשימת האפליקציות</li>
-                    <li>נעילת המסך</li>
-                    <li>הצג אפליקציות שנפתחו לאחרונה</li>
-                    <li>פתח את מגירת ההתראות</li>
-                    <li>פתח את ההגדרות המהירות</li>
-                    <li>תיבת הפעלה</li>
-                    <li>צלם צילום מסך</li>
-                    <li>החלף דף</li>
-                    <li>השבת את המחווה</li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-    <li>ניתן גם למקם את השעון ללא תלות באפליקציות הביתיות.</li>
-    <li>שנה יישור של אפליקציות במגירת האפליקציות ללא תלות במסך הבית.</li>
-    <li>שנה את גודל הגופן של חלקים במסך הבית ללא תלות זה בזה.</li>
-    <li>הוסרה הרשאת אינטרנט. אתה אף פעם לא יודע מה מפתח אפליקציות רוצה לדעת עליך.</li>
-    <li>נעילת הגדרות מאחורי ביומטריה (החלפת מצב).</li>
-    <li>נוספה את היכולת לדווח על קריסות באמצעות דואר אלקטרוני.</li>
-    <li>נוספה את היכולת להציג את זמן השימוש באפליקציה.</li>
-</ul>
+<b>Features:</b>
 
-<h2>תרגומים</h2>
+- App Drawer Customization: Rename apps in the app drawer (home screen app renaming is already supported with a long
+click).
+- Advanced Gestures: A wide range of gestures, including taps and swipes, to trigger different actions.
+- Clock Customization: Position the clock independently of the home apps, giving more control over your home screen
+layout.
+- App Drawer Layout: Change the alignment of apps in the app drawer independently of the home screen.
+- Font Size Customization: Adjust the font size of sections of the home screen separately.
+- Privacy Focused: Removed internet permission, ensuring your data remains private.
+- Biometric Security: Lock settings behind biometric authentication (toggle option).
+- Crash Reports: Ability to report crashes via email for better troubleshooting.
+- App Usage Tracking: View app usage time directly from the home screen.
 
-<p>הרבה אנשים תרגמו את האפליקציה לשפות הבאות. תודה רבה לכולכם:</p>
+<b>Gestures Include:</b>
 
-<ul>
-    <li>ערבית</li>
-    <li>הולנדית</li>
-    <li>אנגלית</li>
-    <li>צרפתית</li>
-    <li>גרמנית</li>
-    <li>עברית</li>
-    <li>איטלקית</li>
-    <li>יפנית</li>
-    <li>קוריאני</li>
-    <li></li>ליטאית
-    <li>פולנית</li>
-    <li>פורטוגזית</li>
-    <li>רוסית</li>
-    <li>סלובקית</li>
-    <li>ספרדית</li>
-    <li>תאילנדית</li>
-    <li>טורקית</li>
-</ul>
+- Double Tap: Quickly tap twice to trigger a predefined action.
+- Clock Tap: Tap the clock to access additional features or settings.
+- Date Tap: Tap the date for easy access to the calendar.
+- Usage Tap: Tap on the total usage to view system or app usage data.
+- Short Swipes: Swipe up, down, left, or right to navigate or trigger different actions.
+- Long Swipes: Swipe up, down, left, or right for additional gesture actions.
+
+<b>Possible Actions Include:</b>
+
+- Open Specified App: Instantly open any app of your choice with a gesture.
+- Display App List: Show the full list of apps installed on the device.
+- Lock Screen: Lock your device for security.
+- Show Recently Opened Apps: Access recently used apps for quick multitasking.
+- Open Notification Drawer: Trigger the notification drawer with a swipe or tap.
+- Open Quick Settings: Access quick settings directly from the home screen.
+- Power Dialog: Open power options like shutdown, restart, and more.
+- Take a Screenshot: Capture the screen to save or share your content.
+- Switch Page: Quickly switch between home screen pages.
+- Disable Gesture: Disable specific gestures as needed.
+
+<b>Translations:</b>
+
+- Arabic
+- Dutch
+- English
+- French
+- German
+- Hebrew
+- Italian
+- Japanese
+- Korean
+- Lithuanian
+- Polish
+- Portuguese
+- Russian
+- Slovak
+- Spanish
+- Thai
+- Turkish
