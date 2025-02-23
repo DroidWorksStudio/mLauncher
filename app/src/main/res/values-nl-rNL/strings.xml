@@ -22,7 +22,7 @@
     <string name="font_family">Lettertypefamilie</string>
     <string name="settings_text_size">Instellingen Tekstgrootte</string>
     <string name="hide_search_view">Verberg Zoekweergave</string>
-    <string name="show_floating_button">Show Floating Button</string>
+    <string name="show_floating_button">Zwevende knop weergeven</string>
     <string name="search">Zoek</string>
     <string name="search_engine">Zoekmachine</string>
     <string name="auto_show_keyboard">Toetsenbord automatisch tonen</string>
@@ -85,7 +85,7 @@
     <string name="clock_click_app">Klik op de klok</string>
     <string name="date_click_app">Klik op Datum</string>
     <string name="usage_click_app">Klik op Totaal gebruik</string>
-    <string name="floating_click_app">Click on Logo</string>
+    <string name="floating_click_app">Klik op Logo</string>
     <string name="swipe_movement">Veegbeweging</string>
     <string name="short_swipe_up_app">Omhoog vegen</string>
     <string name="short_swipe_down_app">Omlaag vegen</string>
