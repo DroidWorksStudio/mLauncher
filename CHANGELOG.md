@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Implemented Enhancements:
 
+- Added app icon support for homescreen - ([2736339](https://github.com/DroidWorksStudio/mLauncher/commit/27363396c85dcc601336b1bccaf1a3ccfcb5eb47))
 - Added Digital Wellbeing to the gesture settings - ([bb9ca59](https://github.com/DroidWorksStudio/mLauncher/commit/bb9ca59924fb76fd36dd72387a19251962a5c650))
 - Add a button to the home screen that can be used as a gesture. - ([2ce7e52](https://github.com/DroidWorksStudio/mLauncher/commit/2ce7e520003248e5e84e61cfe4457d0950a94aa2))
 
