@@ -1,73 +1,60 @@
-<p>Rozvetvené z <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimálne a čisté.</p>
+<p>Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>: A minimal and clean launcher with
+    enhanced features.</p>
 
 <h2>Rozvetvený s extra funkciami</h2>
 
-<ul>
-    <li>Odstránený neporiadok, ako sú reklamy a odkazy.</li>
-    <li>Aplikácie môžete premenovať na paneli aplikácií (Premenovanie aplikácií na domovskej obrazovke je už podporované. Stačí dlho kliknúť na aplikáciu na domovskej obrazovke a začať písať.)</li>
-    <li>Pridali sme oveľa viac možností pre gestá na domovskej obrazovke:
-        <ul>
-            <li><b>Gestá teraz zahŕňajú:</b>
-                <ul>
-                    <li>Dvakrát klepnite na</li>
-                    <li>Kliknutím na hodiny</li>
-                    <li>Kliknutím na dátum</li>
-                    <li>Kliknutím na celkové využitie</li>
-                    <li>Krátkym potiahnutím nahor</li>
-                    <li>Krátke potiahnutie prstom nadol</li>
-                    <li>Krátkym potiahnutím doľava</li>
-                    <li>Krátkym potiahnutím doprava</li>
-                    <li>Dlhým potiahnutím nahor</li>
-                    <li>Dlho potiahnite prstom nadol</li>
-                    <li>Dlhým potiahnutím doľava</li>
-                    <li>Dlhým potiahnutím doprava</li>
-                </ul>
-            </li>
-            <li><b>Možné akcie teraz zahŕňajú:</b>
-                <ul>
-                    <li>Otvorte zadanú aplikáciu</li>
-                    <li>Zobraziť zoznam aplikácií</li>
-                    <li>Uzamknutie obrazovky</li>
-                    <li>Zobraziť nedávno otvorené aplikácie</li>
-                    <li>Otvorte zásuvku upozornení</li>
-                    <li>Otvoriť rýchle nastavenia</li>
-                    <li>Dialógové okno napájania</li>
-                    <li>Urobte snímku obrazovky</li>
-                    <li>Prepnúť stránku</li>
-                    <li>Zakázať gesto</li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-    <li>Hodiny môžete umiestniť aj nezávisle od domácich aplikácií.</li>
-    <li>Zmeňte zarovnanie aplikácií na paneli aplikácií nezávisle od domovskej obrazovky.</li>
-    <li>Zmeňte veľkosť písma častí domovskej obrazovky nezávisle od seba.</li>
-    <li>Odstránené povolenie na internet. Nikdy neviete, čo o vás chce vývojár aplikácie vedieť.</li>
-    <li>Uzamknutie nastavení za biometriou (prepínač).</li>
-    <li>Pridaná možnosť hlásiť zlyhania prostredníctvom e-mailu.</li>
-    <li>Pridaná možnosť zobrazenia času používania aplikácie.</li>
-</ul>
+<b>Features:</b>
 
-<h2>Preklady</h2>
+- App Drawer Customization: Rename apps in the app drawer (home screen app renaming is already supported with a long
+click).
+- Advanced Gestures: A wide range of gestures, including taps and swipes, to trigger different actions.
+- Clock Customization: Position the clock independently of the home apps, giving more control over your home screen
+layout.
+- App Drawer Layout: Change the alignment of apps in the app drawer independently of the home screen.
+- Font Size Customization: Adjust the font size of sections of the home screen separately.
+- Privacy Focused: Removed internet permission, ensuring your data remains private.
+- Biometric Security: Lock settings behind biometric authentication (toggle option).
+- Crash Reports: Ability to report crashes via email for better troubleshooting.
+- App Usage Tracking: View app usage time directly from the home screen.
 
-<p>Veľa ľudí preložilo aplikáciu do nasledujúcich jazykov. Veľká vďaka vám všetkým:</p>
+<b>Gestures Include:</b>
 
-<ul>
-    <li>arabsky</li>
-    <li>holandský</li>
-    <li>anglicky</li>
-    <li>Francúzština</li>
-    <li>Nemčina</li>
-    <li>hebrejsky</li>
-    <li>taliansky</li>
-    <li>japončina</li>
-    <li>kórejsky</li>
-    <li>litovčina</li>
-    <li>poľština</li>
-    <li>portugalčina</li>
-    <li>rusky</li>
-    <li>slovensky</li>
-    <li>Španielčina</li>
-    <li>Thajčina</li>
-    <li>turečtina</li>
-</ul>
+- Double Tap: Quickly tap twice to trigger a predefined action.
+- Clock Tap: Tap the clock to access additional features or settings.
+- Date Tap: Tap the date for easy access to the calendar.
+- Usage Tap: Tap on the total usage to view system or app usage data.
+- Short Swipes: Swipe up, down, left, or right to navigate or trigger different actions.
+- Long Swipes: Swipe up, down, left, or right for additional gesture actions.
+
+<b>Possible Actions Include:</b>
+
+- Open Specified App: Instantly open any app of your choice with a gesture.
+- Display App List: Show the full list of apps installed on the device.
+- Lock Screen: Lock your device for security.
+- Show Recently Opened Apps: Access recently used apps for quick multitasking.
+- Open Notification Drawer: Trigger the notification drawer with a swipe or tap.
+- Open Quick Settings: Access quick settings directly from the home screen.
+- Power Dialog: Open power options like shutdown, restart, and more.
+- Take a Screenshot: Capture the screen to save or share your content.
+- Switch Page: Quickly switch between home screen pages.
+- Disable Gesture: Disable specific gestures as needed.
+
+<b>Translations:</b>
+
+- Arabic
+- Dutch
+- English
+- French
+- German
+- Hebrew
+- Italian
+- Japanese
+- Korean
+- Lithuanian
+- Polish
+- Portuguese
+- Russian
+- Slovak
+- Spanish
+- Thai
+- Turkish
