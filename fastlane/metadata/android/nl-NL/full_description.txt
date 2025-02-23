@@ -1,73 +1,60 @@
-<p>Gevorkt van <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimaal en schoon.</p>
+<p>Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>: A minimal and clean launcher with
+    enhanced features.</p>
 
 <h2>Gevorkt met extra functies</h2>
 
-<ul>
-    <li>Rommel verwijderd, zoals advertenties en links.</li>
-    <li>U kunt apps hernoemen in de app-lade (het hernoemen van apps op het startscherm wordt al ondersteund. Klik gewoon lang op een app op het startscherm en begin met typen.)</li>
-    <li>We hebben veel meer opties voor gebaren op het startscherm toegevoegd:
-        <ul>
-            <li><b>Gebaren omvatten nu:</b>
-                <ul>
-                    <li>Dubbeltik</li>
-                    <li>Klikken op de klok</li>
-                    <li>Klikken op de datum</li>
-                    <li>Klikken op totaal gebruik</li>
-                    <li>Korte veeg omhoog</li>
-                    <li>Korte veeg omlaag</li>
-                    <li>Korte veeg naar links</li>
-                    <li>Korte veeg naar rechts</li>
-                    <li>Lange veeg omhoog</li>
-                    <li>Lange veeg omlaag</li>
-                    <li>Lange veeg naar links</li>
-                    <li>Lange veeg naar rechts</li>
-                </ul>
-            </li>
-            <li><b>Mogelijke acties zijn nu:</b>
-                <ul>
-                    <li>Gespecificeerde app openen</li>
-                    <li>App-lijst weergeven</li>
-                    <li>Vergrendel het scherm</li>
-                    <li>Toon recent geopende apps</li>
-                    <li>Open de meldingslade</li>
-                    <li>Snelle instellingen openen</li>
-                    <li>Power-dialoog</li>
-                    <li>Maak een screenshot</li>
-                    <li>Wissel pagina</li>
-                    <li>Gebaar uitschakelen</li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-    <li>Je kunt de klok ook onafhankelijk van de home-apps positioneren.</li>
-    <li>Wijzig de uitlijning van apps in de app-lade, onafhankelijk van het startscherm.</li>
-    <li>Wijzig de lettergrootte van secties van het startscherm onafhankelijk van elkaar.</li>
-    <li>Internetmachtiging verwijderd. Je weet nooit wat een app-ontwikkelaar over je wil weten.</li>
-    <li>Instellingen achter biometrie vergrendelen (wisselen).</li>
-    <li>Mogelijkheid toegevoegd om crashes via e-mail te melden.</li>
-    <li>Mogelijkheid toegevoegd om app-gebruikstijd te bekijken.</li>
-</ul>
+<b>Features:</b>
 
-<h2>Vertalingen</h2>
+- App Drawer Customization: Rename apps in the app drawer (home screen app renaming is already supported with a long
+click).
+- Advanced Gestures: A wide range of gestures, including taps and swipes, to trigger different actions.
+- Clock Customization: Position the clock independently of the home apps, giving more control over your home screen
+layout.
+- App Drawer Layout: Change the alignment of apps in the app drawer independently of the home screen.
+- Font Size Customization: Adjust the font size of sections of the home screen separately.
+- Privacy Focused: Removed internet permission, ensuring your data remains private.
+- Biometric Security: Lock settings behind biometric authentication (toggle option).
+- Crash Reports: Ability to report crashes via email for better troubleshooting.
+- App Usage Tracking: View app usage time directly from the home screen.
 
-<p>Veel mensen hebben de app vertaald in de volgende talen. Hartelijk dank aan jullie allemaal:</p>
+<b>Gestures Include:</b>
 
-<ul>
-    <li>Arabisch</li>
-    <li>Nederlands</li>
-    <li>Engels</li>
-    <li>Frans</li>
-    <li>Duits</li>
-    <li>Hebreeuws</li>
-    <li>Italiaans</li>
-    <li>Japans</li>
-    <li>Koreaans</li>
-    <li>Litouws</li>
-    <li>Pools</li>
-    <li>Portugees</li>
-    <li>Russisch</li>
-    <li>Slowaaks</li>
-    <li>Spaans</li>
-    <li>Thais</li>
-    <li>Turks</li>
-</ul>
+- Double Tap: Quickly tap twice to trigger a predefined action.
+- Clock Tap: Tap the clock to access additional features or settings.
+- Date Tap: Tap the date for easy access to the calendar.
+- Usage Tap: Tap on the total usage to view system or app usage data.
+- Short Swipes: Swipe up, down, left, or right to navigate or trigger different actions.
+- Long Swipes: Swipe up, down, left, or right for additional gesture actions.
+
+<b>Possible Actions Include:</b>
+
+- Open Specified App: Instantly open any app of your choice with a gesture.
+- Display App List: Show the full list of apps installed on the device.
+- Lock Screen: Lock your device for security.
+- Show Recently Opened Apps: Access recently used apps for quick multitasking.
+- Open Notification Drawer: Trigger the notification drawer with a swipe or tap.
+- Open Quick Settings: Access quick settings directly from the home screen.
+- Power Dialog: Open power options like shutdown, restart, and more.
+- Take a Screenshot: Capture the screen to save or share your content.
+- Switch Page: Quickly switch between home screen pages.
+- Disable Gesture: Disable specific gestures as needed.
+
+<b>Translations:</b>
+
+- Arabic
+- Dutch
+- English
+- French
+- German
+- Hebrew
+- Italian
+- Japanese
+- Korean
+- Lithuanian
+- Polish
+- Portuguese
+- Russian
+- Slovak
+- Spanish
+- Thai
+- Turkish
