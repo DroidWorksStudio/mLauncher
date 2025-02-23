@@ -1,73 +1,60 @@
-<p> <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>에서 포크되었습니다. 최소한이고 깔끔합니다.</p>
+<p>Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>: A minimal and clean launcher with
+    enhanced features.</p>
 
 <h2>추가 기능이 포함된 포크</h2>
 
-<ul>
-    <li>광고와 링크 등의 불필요한 내용을 제거했습니다.</li>
-    <li>앱 서랍에서 앱 이름을 바꿀 수 있습니다. (홈 화면에서 앱 이름을 바꾸는 것은 이미 지원됩니다.) 홈 화면에서 앱을 길게 클릭하고 입력을 시작하세요.)</li>
-    <li>홈 화면 제스처에 대한 옵션을 더 많이 추가했습니다.
-        <ul>
-            <li><b>제스처에 다음이 추가되었습니다:</b>
-                <ul>
-                    <li>두 번 탭</li>
-                    <li>시계 클릭</li>
-                    <li>날짜를 클릭하세요</li>
-                    <li>전체 사용량 클릭</li>
-                    <li>짧게 위로 스와이프</li>
-                    <li>짧게 아래로 스와이프</li>
-                    <li>오른쪽으로 짧게 스와이프</li>
-                    <li>왼쪽으로 짧게 스와이프</li>
-                    <li>아래로 길게 스와이프</li>
-                    <li>위로 길게 스와이프</li>
-                    <li>오른쪽으로 길게 스와이프</li>
-                    <li>왼쪽으로 길게 스와이프</li>
-                </ul>
-            </li>
-            <li><b>이제 가능한 작업은 다음과 같습니다.</b>
-                <ul>
-                    <li>지정된 앱 열기</li>
-                    <li>앱 목록 표시</li>
-                    <li>화면 잠금</li>
-                    <li>최근에 열었던 앱 표시</li>
-                    <li>알림 서랍을 엽니다</li>
-                    <li>빠른 설정 열기</li>
-                    <li>전원 대화 상자</li>
-                    <li>스크린샷 찍기</li>
-                    <li>페이지 전환</li>
-                    <li>제스처 비활성화</li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-    <li>홈 앱과 상관없이 시계 위치를 조정할 수도 있습니다.</li>
-    <li>홈 화면과 별도로 앱 서랍에서 앱의 정렬을 변경합니다.</li>
-    <li>홈 화면 섹션의 글꼴 크기를 서로 독립적으로 변경합니다.</li>
-    <li>인터넷 권한이 제거되었습니다. 앱 개발자가 당신에 대해 무엇을 알고 싶어하는지 알 수 없습니다.</li>
-    <li>생체 인식 뒤의 잠금 설정(토글).</li>
-    <li>이메일을 통해 충돌을 보고하는 기능을 추가했습니다.</li>
-    <li>앱 사용 시간을 볼 수 있는 기능이 추가되었습니다.</li>
-</ul>
+<b>Features:</b>
 
-<h2>번역</h2>
+- App Drawer Customization: Rename apps in the app drawer (home screen app renaming is already supported with a long
+click).
+- Advanced Gestures: A wide range of gestures, including taps and swipes, to trigger different actions.
+- Clock Customization: Position the clock independently of the home apps, giving more control over your home screen
+layout.
+- App Drawer Layout: Change the alignment of apps in the app drawer independently of the home screen.
+- Font Size Customization: Adjust the font size of sections of the home screen separately.
+- Privacy Focused: Removed internet permission, ensuring your data remains private.
+- Biometric Security: Lock settings behind biometric authentication (toggle option).
+- Crash Reports: Ability to report crashes via email for better troubleshooting.
+- App Usage Tracking: View app usage time directly from the home screen.
 
-<p>많은 사람들이 앱을 다음 언어로 번역했습니다. 여러분 모두에게 진심으로 감사드립니다:</p>
+<b>Gestures Include:</b>
 
-<ul>
-    <li>아랍어</li>
-    <li>네덜란드어</li>
-    <li>영어</li>
-    <li>프랑스어</li>
-    <li>독일어</li>
-    <li>히브리어</li>
-    <li>이탈리아어</li>
-    <li>일본어</li>
-    <li>한국어</li>
-    <li>리투아니아어</li>
-    <li>폴란드어</li>
-    <li>포르투갈어</li>
-    <li>러시아어</li>
-    <li>슬로바키아어</li>
-    <li>스페인어</li>
-    <li>태국어</li>
-    <li>터키어</li>
-</ul>
+- Double Tap: Quickly tap twice to trigger a predefined action.
+- Clock Tap: Tap the clock to access additional features or settings.
+- Date Tap: Tap the date for easy access to the calendar.
+- Usage Tap: Tap on the total usage to view system or app usage data.
+- Short Swipes: Swipe up, down, left, or right to navigate or trigger different actions.
+- Long Swipes: Swipe up, down, left, or right for additional gesture actions.
+
+<b>Possible Actions Include:</b>
+
+- Open Specified App: Instantly open any app of your choice with a gesture.
+- Display App List: Show the full list of apps installed on the device.
+- Lock Screen: Lock your device for security.
+- Show Recently Opened Apps: Access recently used apps for quick multitasking.
+- Open Notification Drawer: Trigger the notification drawer with a swipe or tap.
+- Open Quick Settings: Access quick settings directly from the home screen.
+- Power Dialog: Open power options like shutdown, restart, and more.
+- Take a Screenshot: Capture the screen to save or share your content.
+- Switch Page: Quickly switch between home screen pages.
+- Disable Gesture: Disable specific gestures as needed.
+
+<b>Translations:</b>
+
+- Arabic
+- Dutch
+- English
+- French
+- German
+- Hebrew
+- Italian
+- Japanese
+- Korean
+- Lithuanian
+- Polish
+- Portuguese
+- Russian
+- Slovak
+- Spanish
+- Thai
+- Turkish
