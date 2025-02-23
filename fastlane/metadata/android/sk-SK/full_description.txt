@@ -1,60 +1,60 @@
-<p>Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>: A minimal and clean launcher with
-    enhanced features.</p>
+<p>Rozvetvený z <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>: Minimálny a čistý spúšťač s
+    vylepšené funkcie.</p>
 
 <h2>Rozvetvený s extra funkciami</h2>
 
-<b>Features:</b>
+<b>Vlastnosti:</b>
 
-- App Drawer Customization: Rename apps in the app drawer (home screen app renaming is already supported with a long
-click).
-- Advanced Gestures: A wide range of gestures, including taps and swipes, to trigger different actions.
-- Clock Customization: Position the clock independently of the home apps, giving more control over your home screen
-layout.
-- App Drawer Layout: Change the alignment of apps in the app drawer independently of the home screen.
-- Font Size Customization: Adjust the font size of sections of the home screen separately.
-- Privacy Focused: Removed internet permission, ensuring your data remains private.
-- Biometric Security: Lock settings behind biometric authentication (toggle option).
-- Crash Reports: Ability to report crashes via email for better troubleshooting.
-- App Usage Tracking: View app usage time directly from the home screen.
+- Prispôsobenie zásuvky aplikácií: Premenujte aplikácie v zásuvke aplikácií (premenovanie aplikácií na domovskej obrazovke je už podporované s dlhým
+kliknite).
+- Pokročilé gestá: Široká škála gest, vrátane klepnutí a potiahnutia, na spustenie rôznych akcií.
+- Prispôsobenie hodín: Umiestnite hodiny nezávisle od domácich aplikácií, čím získate väčšiu kontrolu nad svojou domovskou obrazovkou
+rozloženie.
+- Rozloženie zásuviek aplikácií: Zmeňte zarovnanie aplikácií v zásuvke aplikácií nezávisle od domovskej obrazovky.
+- Prispôsobenie veľkosti písma: Samostatne upravte veľkosť písma častí domovskej obrazovky.
+- Zamerané na súkromie: Odstránené povolenie na internet, čím sa zabezpečí, že vaše údaje zostanú súkromné.
+- Biometrické zabezpečenie: Uzamknutie nastavení za biometrickú autentifikáciu (možnosť prepínania).
+- Správy o zlyhaní: Schopnosť hlásiť zlyhania prostredníctvom e-mailu pre lepšie riešenie problémov.
+- Sledovanie používania aplikácie: Zobrazte si čas používania aplikácie priamo z domovskej obrazovky.
 
-<b>Gestures Include:</b>
+<b>Gestá zahŕňajú:</b>
 
-- Double Tap: Quickly tap twice to trigger a predefined action.
-- Clock Tap: Tap the clock to access additional features or settings.
-- Date Tap: Tap the date for easy access to the calendar.
-- Usage Tap: Tap on the total usage to view system or app usage data.
-- Short Swipes: Swipe up, down, left, or right to navigate or trigger different actions.
-- Long Swipes: Swipe up, down, left, or right for additional gesture actions.
+- Dvojité klepnutie: Rýchlym dvojitým klepnutím spustíte preddefinovanú akciu.
+- Clock Tap: Klepnutím na hodiny získate prístup k ďalším funkciám alebo nastaveniam.
+- Date Tap: Klepnutím na dátum získate jednoduchý prístup ku kalendáru.
+- Použitie Tap: Klepnutím na celkové využitie zobrazíte údaje o používaní systému alebo aplikácie.
+- Krátke potiahnutie: Potiahnutím nahor, nadol, doľava alebo doprava môžete navigovať alebo spúšťať rôzne akcie.
+- Dlhé potiahnutie: Potiahnutím nahor, nadol, doľava alebo doprava získate ďalšie akcie gest.
 
-<b>Possible Actions Include:</b>
+<b>Možné akcie:</b>
 
-- Open Specified App: Instantly open any app of your choice with a gesture.
-- Display App List: Show the full list of apps installed on the device.
-- Lock Screen: Lock your device for security.
-- Show Recently Opened Apps: Access recently used apps for quick multitasking.
-- Open Notification Drawer: Trigger the notification drawer with a swipe or tap.
-- Open Quick Settings: Access quick settings directly from the home screen.
-- Power Dialog: Open power options like shutdown, restart, and more.
-- Take a Screenshot: Capture the screen to save or share your content.
-- Switch Page: Quickly switch between home screen pages.
-- Disable Gesture: Disable specific gestures as needed.
+- Otvorte špecifikovanú aplikáciu: Okamžite otvorte ľubovoľnú aplikáciu podľa vášho výberu gestom.
+- Zobraziť zoznam aplikácií: Zobrazí úplný zoznam aplikácií nainštalovaných v zariadení.
+- Uzamknúť obrazovku: Zamknite svoje zariadenie pre bezpečnosť.
+- Zobraziť nedávno otvorené aplikácie: Prístup k nedávno použitým aplikáciám pre rýchly multitasking.
+- Otvoriť zásuvku upozornení: Spustite zásuvku upozornení potiahnutím prstom alebo klepnutím.
+- Otvoriť Rýchle nastavenia: Prístup k rýchlym nastaveniam priamo z domovskej obrazovky.
+- Dialógové okno napájania: Otvorte možnosti napájania, ako je vypnutie, reštart a ďalšie.
+- Urobte snímku obrazovky: Zachyťte obrazovku a uložte alebo zdieľajte svoj obsah.
+- Prepnúť stránku: Rýchle prepínanie medzi stránkami domovskej obrazovky.
+- Vypnúť gestá: Podľa potreby zakážte konkrétne gestá.
 
-<b>Translations:</b>
+<b>Preklady:</b>
 
-- Arabic
-- Dutch
-- English
-- French
-- German
-- Hebrew
-- Italian
-- Japanese
-- Korean
-- Lithuanian
-- Polish
-- Portuguese
-- Russian
-- Slovak
-- Spanish
-- Thai
-- Turkish
+- arabčina
+- holandský
+- anglicky
+- francúzsky
+- Nemčina
+- hebrejsky
+- taliansky
+- Japonec
+- kórejský
+- litovský
+- poľský
+- portugalčina
+- ruský
+- slovenský
+- španielčina
+- thajčina
+- turecký
