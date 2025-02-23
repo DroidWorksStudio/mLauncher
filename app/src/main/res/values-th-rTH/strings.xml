@@ -61,7 +61,7 @@
     <string name="show_recent_apps">แสดงแอปล่าสุด</string>
     <string name="number_of_recents">จำนวนแอปล่าสุด</string>
     <string name="show_app_usage_stats">แสดงสถิติการใช้งานแอป</string>
-    <string name="select_app_icons">Select App Icons</string>
+    <string name="select_app_icons">เลือกไอคอนแอป</string>
     <string name="filter_strength">ความแรงของตัวกรอง</string>
     <string name="background_opacity">ความทึบของพื้นหลัง</string>
     <string name="element_alignment">การจัดเรียงองค์ประกอบ</string>
