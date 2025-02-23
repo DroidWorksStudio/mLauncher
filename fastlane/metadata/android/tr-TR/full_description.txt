@@ -1,73 +1,60 @@
-<p> <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>'den türetilmiştir. Minimal ve temiz.</p>
+<p>Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>: A minimal and clean launcher with
+    enhanced features.</p>
 
 <h2>Ekstra Özelliklerle Çatallandı</h2>
 
-<ul>
-    <li>Reklamlar ve bağlantılar gibi karışıklıklar kaldırıldı.</li>
-    <li>Uygulama çekmecesinde uygulamaların adını değiştirebilirsiniz (Ana ekrandaki uygulamaların adını değiştirme özelliği zaten destekleniyor. (Ana ekranda bir uygulamaya uzun tıklayın ve yazmaya başlayın.)</li>
-    <li>Ana ekrana hareketler için çok daha fazla seçenek ekledik:
-        <ul>
-            <li><b>Hareketler artık şunları içeriyor:</b>
-                <ul>
-                    <li>Çift dokunuş</li>
-                    <li>Saate tıklamak</li>
-                    <li>Tarihe tıklayın</li>
-                    <li>Toplam kullanıma tıklayın</li>
-                    <li>Kısa yukarı kaydırma</li>
-                    <li>Kısa aşağı kaydırma</li>
-                    <li>Sola kısa kaydırma</li>
-                    <li>Kısa sağa kaydırma</li>
-                    <li>Sağa uzun kaydırma</li>
-                    <li>Yukarı doğru uzun kaydırma</li>
-                    <li>Sola uzun kaydırma</li>
-                    <li>Aşağıya doğru uzun kaydırma</li>
-                </ul>
-            </li>
-            <li><b>Olası eylemler artık şunları içeriyor:</b>
-                <ul>
-                    <li>Belirtilen uygulamayı aç</li>
-                    <li>Uygulama listesini görüntüle</li>
-                    <li>Ekranı kilitle</li>
-                    <li>Son açılan uygulamaları göster</li>
-                    <li>Bildirim çekmecesini aç</li>
-                    <li>Hızlı ayarları aç</li>
-                    <li>Güç iletişim kutusu</li>
-                    <li>Ekran görüntüsü al</li>
-                    <li>Sayfayı Değiştir</li>
-                    <li>Hareketi devre dışı bırak</li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-    <li>Saati ev uygulamalarından bağımsız olarak da konumlandırabilirsiniz.</li>
-    <li>Uygulama çekmecesindeki uygulamaların hizalamasını ana ekrandan bağımsız olarak değiştirin.</li>
-    <li>Ana ekranın bölümlerinin yazı tipi boyutunu birbirinden bağımsız olarak değiştirin.</li>
-    <li>İnternet izni kaldırıldı. Bir uygulama geliştiricisinin sizin hakkınızda ne bilmek istediğini asla bilemezsiniz.</li>
-    <li>Biyometrik verilerin arkasındaki ayarları kilitle (değiştir).</li>
-    <li>Çökmeleri e-posta yoluyla bildirme yeteneği eklendi.</li>
-    <li>Uygulama kullanım süresini görüntüleme yeteneği eklendi.</li>
-</ul>
+<b>Features:</b>
 
-<h2>Çeviriler</h2>
+- App Drawer Customization: Rename apps in the app drawer (home screen app renaming is already supported with a long
+click).
+- Advanced Gestures: A wide range of gestures, including taps and swipes, to trigger different actions.
+- Clock Customization: Position the clock independently of the home apps, giving more control over your home screen
+layout.
+- App Drawer Layout: Change the alignment of apps in the app drawer independently of the home screen.
+- Font Size Customization: Adjust the font size of sections of the home screen separately.
+- Privacy Focused: Removed internet permission, ensuring your data remains private.
+- Biometric Security: Lock settings behind biometric authentication (toggle option).
+- Crash Reports: Ability to report crashes via email for better troubleshooting.
+- App Usage Tracking: View app usage time directly from the home screen.
 
-<p>Birçok kişi uygulamayı aşağıdaki dillere çevirdi. Hepinize çok teşekkürler:</p>
+<b>Gestures Include:</b>
 
-<ul>
-    <li>Arapça</li>
-    <li>Hollandaca</li>
-    <li>İngilizce</li>
-    <li>Fransızca</li>
-    <li>Almanca</li>
-    <li>İbranice</li>
-    <li>İtalyanca</li>
-    <li>Japonca</li>
-    <li>Korece</li>
-    <li>Litvanyaca</li>
-    <li>Lehçe</li>
-    <li>Portekizce</li>
-    <li>Rusça</li>
-    <li>Slovakça</li>
-    <li>İspanyolca</li>
-    <li>Tayca</li>
-    <li>Türkçe</li>
-</ul>
+- Double Tap: Quickly tap twice to trigger a predefined action.
+- Clock Tap: Tap the clock to access additional features or settings.
+- Date Tap: Tap the date for easy access to the calendar.
+- Usage Tap: Tap on the total usage to view system or app usage data.
+- Short Swipes: Swipe up, down, left, or right to navigate or trigger different actions.
+- Long Swipes: Swipe up, down, left, or right for additional gesture actions.
+
+<b>Possible Actions Include:</b>
+
+- Open Specified App: Instantly open any app of your choice with a gesture.
+- Display App List: Show the full list of apps installed on the device.
+- Lock Screen: Lock your device for security.
+- Show Recently Opened Apps: Access recently used apps for quick multitasking.
+- Open Notification Drawer: Trigger the notification drawer with a swipe or tap.
+- Open Quick Settings: Access quick settings directly from the home screen.
+- Power Dialog: Open power options like shutdown, restart, and more.
+- Take a Screenshot: Capture the screen to save or share your content.
+- Switch Page: Quickly switch between home screen pages.
+- Disable Gesture: Disable specific gestures as needed.
+
+<b>Translations:</b>
+
+- Arabic
+- Dutch
+- English
+- French
+- German
+- Hebrew
+- Italian
+- Japanese
+- Korean
+- Lithuanian
+- Polish
+- Portuguese
+- Russian
+- Slovak
+- Spanish
+- Thai
+- Turkish
