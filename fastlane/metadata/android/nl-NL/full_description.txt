@@ -1,73 +1,60 @@
-<p>Gevorkt van <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimaal en schoon.</p>
+<p>Gevorkt van <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>: Een minimale en schone launcher met
+    verbeterde functies.</p>
 
 <h2>Gevorkt met extra functies</h2>
 
-<ul>
-    <li>Rommel verwijderd, zoals advertenties en links.</li>
-    <li>U kunt apps hernoemen in de app-lade (het hernoemen van apps op het startscherm wordt al ondersteund. Klik gewoon lang op een app op het startscherm en begin met typen.)</li>
-    <li>We hebben veel meer opties voor gebaren op het startscherm toegevoegd:
-        <ul>
-            <li><b>Gebaren omvatten nu:</b>
-                <ul>
-                    <li>Dubbeltik</li>
-                    <li>Klikken op de klok</li>
-                    <li>Klikken op de datum</li>
-                    <li>Klikken op totaal gebruik</li>
-                    <li>Korte veeg omhoog</li>
-                    <li>Korte veeg omlaag</li>
-                    <li>Korte veeg naar links</li>
-                    <li>Korte veeg naar rechts</li>
-                    <li>Lange veeg omhoog</li>
-                    <li>Lange veeg omlaag</li>
-                    <li>Lange veeg naar links</li>
-                    <li>Lange veeg naar rechts</li>
-                </ul>
-            </li>
-            <li><b>Mogelijke acties zijn nu:</b>
-                <ul>
-                    <li>Gespecificeerde app openen</li>
-                    <li>App-lijst weergeven</li>
-                    <li>Vergrendel het scherm</li>
-                    <li>Toon recent geopende apps</li>
-                    <li>Open de meldingslade</li>
-                    <li>Snelle instellingen openen</li>
-                    <li>Power-dialoog</li>
-                    <li>Maak een screenshot</li>
-                    <li>Wissel pagina</li>
-                    <li>Gebaar uitschakelen</li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-    <li>Je kunt de klok ook onafhankelijk van de home-apps positioneren.</li>
-    <li>Wijzig de uitlijning van apps in de app-lade, onafhankelijk van het startscherm.</li>
-    <li>Wijzig de lettergrootte van secties van het startscherm onafhankelijk van elkaar.</li>
-    <li>Internetmachtiging verwijderd. Je weet nooit wat een app-ontwikkelaar over je wil weten.</li>
-    <li>Instellingen achter biometrie vergrendelen (wisselen).</li>
-    <li>Mogelijkheid toegevoegd om crashes via e-mail te melden.</li>
-    <li>Mogelijkheid toegevoegd om app-gebruikstijd te bekijken.</li>
-</ul>
+<b>Kenmerken:</b>
 
-<h2>Vertalingen</h2>
+- Aanpassing van de app-lade: hernoem apps in de app-lade (het hernoemen van apps op het startscherm wordt al ondersteund met een lange
+(klikken).
+- Geavanceerde gebaren: een breed scala aan gebaren, waaronder tikken en vegen, om verschillende acties te activeren.
+- Klok aanpassen: plaats de klok onafhankelijk van de home-apps, zodat u meer controle hebt over uw startscherm
+indeling.
+- Lay-out van de app-lade: wijzig de uitlijning van apps in de app-lade, onafhankelijk van het startscherm.
+- Aanpassing van de lettergrootte: pas de lettergrootte van delen van het startscherm afzonderlijk aan.
+- Gericht op privacy: internetmachtigingen zijn verwijderd, zodat uw gegevens privé blijven.
+- Biometrische beveiliging: vergrendel instellingen achter biometrische authenticatie (schakeloptie).
+- Crashrapporten: u kunt crashes via e-mail melden voor betere probleemoplossing.
+- App-gebruik bijhouden: Bekijk de gebruikstijd van de app rechtstreeks vanaf het startscherm.
 
-<p>Veel mensen hebben de app vertaald in de volgende talen. Hartelijk dank aan jullie allemaal:</p>
+<b>Gebaren omvatten:</b>
 
-<ul>
-    <li>Arabisch</li>
-    <li>Nederlands</li>
-    <li>Engels</li>
-    <li>Frans</li>
-    <li>Duits</li>
-    <li>Hebreeuws</li>
-    <li>Italiaans</li>
-    <li>Japans</li>
-    <li>Koreaans</li>
-    <li>Litouws</li>
-    <li>Pools</li>
-    <li>Portugees</li>
-    <li>Russisch</li>
-    <li>Slowaaks</li>
-    <li>Spaans</li>
-    <li>Thais</li>
-    <li>Turks</li>
-</ul>
+- Dubbeltikken: Tik snel twee keer om een vooraf gedefinieerde actie te activeren.
+- Tik op de klok: Tik op de klok om toegang te krijgen tot extra functies of instellingen.
+- Datum tikken: Tik op de datum voor eenvoudige toegang tot de kalender.
+- Gebruikstip: Tik op het totale gebruik om gegevens over het systeem- of app-gebruik te bekijken.
+- Korte veegbewegingen: veeg omhoog, omlaag, naar links of naar rechts om te navigeren of verschillende acties te activeren.
+- Lange veegbewegingen: veeg omhoog, omlaag, naar links of naar rechts voor extra gebaaracties.
+
+<b>Mogelijke acties zijn onder meer:</b>
+
+- Gespecificeerde app openen: open direct een app naar keuze met een gebaar.
+- App-lijst weergeven: Toon de volledige lijst met apps die op het apparaat zijn geïnstalleerd.
+- Vergrendelscherm: vergrendel uw apparaat voor de veiligheid.
+- Toon recent geopende apps: Krijg toegang tot recent gebruikte apps voor snelle multitasking.
+- Meldingenlade openen: Activeer de meldingenlade door te vegen of tikken.
+- Snelle instellingen openen: krijg rechtstreeks vanaf het startscherm toegang tot snelle instellingen.
+- Energiedialoog: open energieopties zoals afsluiten, opnieuw opstarten en meer.
+- Maak een schermafbeelding: leg het scherm vast om uw inhoud op te slaan of te delen.
+- Pagina wisselen: snel schakelen tussen startschermpagina's.
+- Gebaren uitschakelen: Schakel specifieke gebaren uit indien nodig.
+
+<b>Vertalingen:</b>
+
+- Arabisch
+- Nederlands
+- Engels
+- Frans
+- Duits
+- Hebreeuws
+- Italiaans
+- Japans
+- Koreaans
+- Litouws
+- Pools
+- Portugees
+- Russisch
+- Slowaaks
+- Spaans
+- Thai
+- Turks

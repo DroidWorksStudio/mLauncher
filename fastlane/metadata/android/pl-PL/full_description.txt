@@ -1,73 +1,60 @@
-<p>Rozdzielono z <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimalistyczne i czyste.</p>
+<p>Rozwidlony z <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>: Minimalistyczny i czysty launcher z
+    ulepszone funkcje.</p>
 
 <h2>Rozdzielony z dodatkowymi funkcjami</h2>
 
-<ul>
-    <li>Usunięto zbędne elementy, takie jak reklamy i linki.</li>
-    <li>Możesz zmieniać nazwy aplikacji w szufladzie aplikacji (zmiana nazw aplikacji na ekranie głównym jest już obsługiwana. Wystarczy kliknąć długo na aplikację na ekranie głównym i zacząć pisać.)</li>
-    <li>Dodaliśmy dużo więcej opcji gestów na ekranie głównym:
-        <ul>
-            <li><b>Gesty obejmują teraz:</b>
-                <ul>
-                    <li>Kliknij dwukrotnie</li>
-                    <li>Kliknięcie na zegar</li>
-                    <li>Kliknięcie na datę</li>
-                    <li>Kliknięcie na całkowite wykorzystanie</li>
-                    <li>Krótkie przesunięcie w górę</li>
-                    <li>Krótkie przesunięcie w dół</li>
-                    <li>Krótkie przesunięcie w lewo</li>
-                    <li>Krótkie przesunięcie w prawo</li>
-                    <li>Długie przesunięcie w górę</li>
-                    <li>Długie przesunięcie w dół</li>
-                    <li>Długie przesunięcie w lewo</li>
-                    <li>Długie przesunięcie w prawo</li>
-                </ul>
-            </li>
-            <li><b>Możliwe akcje obejmują teraz:</b>
-                <ul>
-                    <li>Otwórz określoną aplikację</li>
-                    <li>Wyświetl listę aplikacji</li>
-                    <li>Zablokuj ekran</li>
-                    <li>Pokaż ostatnio otwarte aplikacje</li>
-                    <li>Otwórz szufladkę powiadomień</li>
-                    <li>Otwórz szybkie ustawienia</li>
-                    <li>Dialog zasilania</li>
-                    <li>Zrób zrzut ekranu</li>
-                    <li>Zmień stronę</li>
-                    <li>Wyłącz gest</li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-    <li>Możesz także ustawić zegar niezależnie od aplikacji domowych.</li>
-    <li>Zmień wyrównanie aplikacji w szufladzie aplikacji niezależnie od ekranu głównego.</li>
-    <li>Zmień rozmiar czcionki w poszczególnych sekcjach ekranu głównego niezależnie od siebie.</li>
-    <li>Usunięto uprawnienia dostępu do Internetu. Nigdy nie wiesz, co twórca aplikacji chce o Tobie wiedzieć.</li>
-    <li>Zablokuj ustawienia za biometrią (przełącz).</li>
-    <li>Dodano możliwość zgłaszania awarii za pośrednictwem poczty elektronicznej.</li>
-    <li>Dodano możliwość wyświetlania czasu korzystania z aplikacji.</li>
-</ul>
+<b>Cechy:</b>
 
-<h2>Tłumaczenia</h2>
+- Dostosowywanie szuflady aplikacji: Zmień nazwy aplikacji w szufladzie aplikacji (zmiana nazw aplikacji na ekranie głównym jest już obsługiwana przez długi czas)
+trzask).
+- Zaawansowane gesty: Szeroka gama gestów, w tym stuknięcia i przesunięcia, umożliwiających wykonywanie różnych akcji.
+- Dostosowywanie zegara: Ustaw zegar niezależnie od aplikacji domowych, co daje większą kontrolę nad ekranem głównym
+układ.
+- Układ szuflady aplikacji: Zmień układ aplikacji w szufladzie aplikacji niezależnie od ekranu głównego.
+- Dostosowywanie rozmiaru czcionki: Możliwość oddzielnego dostosowania rozmiaru czcionki w poszczególnych sekcjach ekranu głównego.
+- Skupienie na prywatności: usunięto uprawnienia dostępu do Internetu, dzięki czemu Twoje dane pozostają prywatne.
+- Bezpieczeństwo biometryczne: Zablokuj ustawienia uwierzytelniania biometrycznego (opcja przełączania).
+- Raporty o awariach: Możliwość zgłaszania awarii za pośrednictwem poczty e-mail w celu lepszego rozwiązywania problemów.
+- Śledzenie korzystania z aplikacji: Wyświetlaj czas korzystania z aplikacji bezpośrednio na ekranie głównym.
 
-<p>Wiele osób przetłumaczyło aplikację na następujące języki. Wielkie dzięki dla was wszystkich:</p>
+<b>Gesty obejmują:</b>
 
-<ul>
-    <li>Arabski</li>
-    <li>Holenderski</li>
-    <li>Angielski</li>
-    <li>Francuski</li>
-    <li>Niemiecki</li>
-    <li>Hebrajski</li>
-    <li>Włoski</li>
-    <li>Japoński</li>
-    <li>Koreański</li>
-    <li>Litewski</li>
-    <li>Polski</li>
-    <li>Portugalski</li>
-    <li>Rosyjski</li>
-    <li>Słowacki</li>
-    <li>Hiszpański</li>
-    <li>Tajski</li>
-    <li>Turecki</li>
-</ul>
+- Podwójne dotknięcie: Szybkie dwukrotne dotknięcie uruchamia zdefiniowaną wcześniej akcję.
+- Dotknij zegara: dotknij zegara, aby uzyskać dostęp do dodatkowych funkcji lub ustawień.
+- Dotknij daty: Dotknij daty, aby uzyskać łatwy dostęp do kalendarza.
+- Dotknij zużycia: Dotknij całkowitego zużycia, aby wyświetlić dane dotyczące zużycia w systemie lub aplikacji.
+- Krótkie przesunięcia: Przesuń w górę, w dół, w lewo lub w prawo, aby nawigować lub uruchamiać różne akcje.
+- Długie przesunięcia: przesuń w górę, w dół, w lewo lub w prawo, aby wykonać dodatkowe gesty.
+
+<b>Możliwe działania obejmują:</b>
+
+- Otwórz określoną aplikację: Natychmiast otwórz dowolną wybraną aplikację za pomocą gestu.
+- Wyświetl listę aplikacji: Pokaż pełną listę aplikacji zainstalowanych na urządzeniu.
+- Ekran blokady: Zablokuj urządzenie ze względów bezpieczeństwa.
+- Pokaż ostatnio otwierane aplikacje: Uzyskaj dostęp do ostatnio używanych aplikacji, aby szybko wykonywać wiele zadań jednocześnie.
+- Otwórz szufladę powiadomień: Otwórz szufladę powiadomień, przesuwając palcem lub stukając.
+- Otwórz Szybkie ustawienia: Uzyskaj dostęp do szybkich ustawień bezpośrednio z ekranu głównego.
+- Okno dialogowe zasilania: Otwórz opcje zasilania, takie jak wyłączanie, ponowne uruchamianie i inne.
+- Zrób zrzut ekranu: Zrób zrzut ekranu, aby zapisać lub udostępnić swoją zawartość.
+- Przełącz stronę: Szybkie przełączanie między stronami ekranu głównego.
+- Wyłącz gesty: Wyłącz określone gesty, jeśli to konieczne.
+
+<b>Tłumaczenia:</b>
+
+- Arabski
+- Holenderski
+- Angielski
+- Francuski
+- Niemiecki
+- Hebrajski
+- Włoski
+- Japoński
+- Koreański
+- Litewski
+- Polski
+- Portugalski
+- rosyjski
+- słowacki
+- Hiszpański
+- Tajski
+- Turecki

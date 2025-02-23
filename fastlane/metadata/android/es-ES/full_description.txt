@@ -1,73 +1,60 @@
-<p>Bifurcado de <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimalista y limpio.</p>
+<p>Bifurcado de <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>: Un lanzador minimalista y limpio con
+    Funciones mejoradas.</p>
 
 <h2>Bifurcado con funciones adicionales</h2>
 
-<ul>
-    <li>Se eliminaron elementos innecesarios, como anuncios y enlaces.</li>
-    <li>Puedes cambiar el nombre de las aplicaciones en el cajón de aplicaciones (ya se admite cambiar el nombre de las aplicaciones en la pantalla de inicio). Simplemente haz clic prolongado en una aplicación en la pantalla de inicio y comienza a escribir).</li>
-    <li>Hemos agregado muchas más opciones para gestos en la pantalla de inicio:
-        <ul>
-            <li><b>Los gestos ahora incluyen:</b>
-                <ul>
-                    <li>Doble toque</li>
-                    <li>Haciendo clic en el reloj</li>
-                    <li>Haciendo clic en la fecha</li>
-                    <li>Haciendo clic en el uso total</li>
-                    <li>Desliza brevemente hacia arriba</li>
-                    <li>Desliza brevemente hacia abajo</li>
-                    <li>Desliza brevemente hacia la izquierda</li>
-                    <li>Desliza brevemente hacia la derecha</li>
-                    <li>Desliza el dedo hacia arriba durante un rato</li>
-                    <li>Desliza el dedo hacia abajo durante un rato</li>
-                    <li>Deslizamiento largo hacia la izquierda</li>
-                    <li>Desliza el dedo hacia la derecha durante un rato</li>
-                </ul>
-            </li>
-            <li><b>Las posibles acciones ahora incluyen:</b>
-                <ul>
-                    <li>Abrir la aplicación especificada</li>
-                    <li>Mostrar lista de aplicaciones</li>
-                    <li>Bloquear la pantalla</li>
-                    <li>Mostrar aplicaciones abiertas recientemente</li>
-                    <li>Abre el cajón de notificaciones</li>
-                    <li>Abrir configuración rápida</li>
-                    <li>Diálogo de energía</li>
-                    <li>Tomar una captura de pantalla</li>
-                    <li>Cambiar página</li>
-                    <li>Deshabilitar gesto</li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-    <li>También puedes colocar el reloj independientemente de las aplicaciones de inicio.</li>
-    <li>Cambia la alineación de las aplicaciones en el cajón de aplicaciones independientemente de la pantalla de inicio.</li>
-    <li>Cambia el tamaño de fuente de las secciones de la pantalla de inicio de forma independiente una de otra.</li>
-    <li>Se eliminó el permiso de Internet. Nunca se sabe lo que un desarrollador de aplicaciones quiere saber sobre ti.</li>
-    <li>Bloquear ajustes detrás de datos biométricos (activar/desactivar).</li>
-    <li>Se agregó la capacidad de informar fallas por correo electrónico.</li>
-    <li>Se agregó la capacidad de ver el tiempo de uso de la aplicación.</li>
-</ul>
+<b>Características:</b>
 
-<h2>Traducciones</h2>
+- Personalización del cajón de aplicaciones: cambie el nombre de las aplicaciones en el cajón de aplicaciones (el cambio de nombre de las aplicaciones de la pantalla de inicio ya es compatible con una aplicación larga).
+hacer clic).
+- Gestos avanzados: una amplia gama de gestos, incluidos toques y deslizamientos, para activar diferentes acciones.
+- Personalización del reloj: coloca el reloj independientemente de las aplicaciones de inicio, lo que te brinda más control sobre tu pantalla de inicio.
+disposición.
+- Diseño del cajón de aplicaciones: cambia la alineación de las aplicaciones en el cajón de aplicaciones independientemente de la pantalla de inicio.
+- Personalización del tamaño de fuente: ajuste el tamaño de fuente de las secciones de la pantalla de inicio por separado.
+- Centrado en la privacidad: se eliminó el permiso de Internet, lo que garantiza que sus datos permanezcan privados.
+- Seguridad biométrica: Bloquear configuraciones detrás de la autenticación biométrica (opción de alternancia).
+- Informes de fallos: capacidad de informar fallos por correo electrónico para una mejor resolución de problemas.
+- Seguimiento del uso de la aplicación: vea el tiempo de uso de la aplicación directamente desde la pantalla de inicio.
 
-<p>Muchas personas han traducido la aplicación a los siguientes idiomas. Muchas gracias a todos:</p>
+<b>Los gestos incluyen:</b>
 
-<ul>
-    <li>Árabe</li>
-    <li>Holandés</li>
-    <li>Inglés</li>
-    <li>Francés</li>
-    <li>Alemán</li>
-    <li>Hebreo</li>
-    <li>Italiano</li>
-    <li>Japonés</li>
-    <li>Coreano</li>
-    <li>Lituano</li>
-    <li>Polaco</li>
-    <li>Portugués</li>
-    <li>Ruso</li>
-    <li>Eslovaco</li>
-    <li>Español</li>
-    <li>Tailandés</li>
-    <li>Turco</li>
-</ul>
+- Doble toque: toca rápidamente dos veces para activar una acción predefinida.
+- Toque el reloj: toque el reloj para acceder a funciones o configuraciones adicionales.
+- Toque de fecha: toque la fecha para acceder fácilmente al calendario.
+- Toque de uso: toque el uso total para ver los datos de uso del sistema o de la aplicación.
+- Deslizamientos cortos: deslice hacia arriba, abajo, izquierda o derecha para navegar o activar diferentes acciones.
+- Deslizamientos largos: deslice hacia arriba, abajo, izquierda o derecha para realizar acciones gestuales adicionales.
+
+<b>Las posibles acciones incluyen:</b>
+
+- Abrir aplicación específica: abre instantáneamente cualquier aplicación que elijas con un gesto.
+- Mostrar lista de aplicaciones: muestra la lista completa de aplicaciones instaladas en el dispositivo.
+- Pantalla de bloqueo: bloquea tu dispositivo por seguridad.
+- Mostrar aplicaciones abiertas recientemente: acceda a las aplicaciones utilizadas recientemente para realizar múltiples tareas rápidamente.
+- Abrir cajón de notificaciones: activa el cajón de notificaciones deslizando el dedo o tocando.
+- Abrir configuración rápida: accede a la configuración rápida directamente desde la pantalla de inicio.
+- Cuadro de diálogo de energía: abre opciones de energía como apagar, reiniciar y más.
+- Tomar una captura de pantalla: captura la pantalla para guardar o compartir tu contenido.
+- Cambiar página: cambia rápidamente entre las páginas de la pantalla de inicio.
+- Deshabilitar gesto: deshabilite gestos específicos según sea necesario.
+
+<b>Traducciones:</b>
+
+- Árabe
+- Holandés
+- Inglés
+- Francés
+- Alemán
+- Hebreo
+- italiano
+- Japonés
+- Coreano
+- Lituano
+- Polaco
+- Portugués
+- Ruso
+- eslovaco
+- Español
+- Tailandés
+- Turco

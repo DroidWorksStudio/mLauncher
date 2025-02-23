@@ -1,73 +1,60 @@
-<p>Bifurcado de <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimalista e limpo.</p>
+<p>Bifurcado de <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>: Um iniciador minimalista e limpo com
+    recursos aprimorados.</p>
 
 <h2>Bifurcado com recursos extras</h2>
 
-<ul>
-    <li>Desordem removida, como anúncios e links.</li>
-    <li>Você pode renomear aplicativos na gaveta de aplicativos (Renomear aplicativos na tela inicial já é suportado). Basta clicar longamente em um aplicativo na tela inicial e começar a digitar.)</li>
-    <li>Adicionamos muito mais opções de gestos na tela inicial:
-        <ul>
-            <li><b>Os gestos agora incluem:</b>
-                <ul>
-                    <li>Toque duas vezes</li>
-                    <li>Clicando no relógio</li>
-                    <li>Clicando na data</li>
-                    <li>Clicando no uso total</li>
-                    <li>Deslize rapidamente para cima</li>
-                    <li>Deslize rapidamente para baixo</li>
-                    <li>Deslize rapidamente para a esquerda</li>
-                    <li>Deslize rapidamente para a direita</li>
-                    <li>Deslize longo para cima</li>
-                    <li>Deslize para baixo longamente</li>
-                    <li>Deslize longo para a esquerda</li>
-                    <li>Deslize longo para a direita</li>
-                </ul>
-            </li>
-            <li><b>As ações possíveis agora incluem:</b>
-                <ul>
-                    <li>Abrir aplicativo especificado</li>
-                    <li>Exibir lista de aplicativos</li>
-                    <li>Bloquear a tela</li>
-                    <li>Mostrar aplicativos abertos recentemente</li>
-                    <li>Abra a gaveta de notificações</li>
-                    <li>Abra as configurações rápidas</li>
-                    <li>Diálogo de poder</li>
-                    <li>Tire uma captura de tela</li>
-                    <li>Trocar de página</li>
-                    <li>Desativar gesto</li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-    <li>Você também pode posicionar o relógio independentemente dos aplicativos domésticos.</li>
-    <li>Altera o alinhamento dos aplicativos na gaveta de aplicativos independentemente da tela inicial.</li>
-    <li>Altera o tamanho da fonte das seções da tela inicial independentemente umas das outras.</li>
-    <li>Permissão de internet removida. Você nunca sabe o que um desenvolvedor de aplicativo quer saber sobre você.</li>
-    <li>Bloquear configurações atrás da biometria (alternar).</li>
-    <li>Adicionada a capacidade de relatar falhas por e-mail.</li>
-    <li>Adicionada a capacidade de visualizar o tempo de uso do aplicativo.</li>
-</ul>
+<b>Características:</b>
 
-<h2>Traduções</h2>
+- Personalização da gaveta de aplicativos: renomeie aplicativos na gaveta de aplicativos (a renomeação de aplicativos da tela inicial já é compatível com um longo
+clique).
+- Gestos avançados: uma ampla variedade de gestos, incluindo toques e deslizamentos, para acionar diferentes ações.
+- Personalização do relógio: posicione o relógio independentemente dos aplicativos domésticos, dando mais controle sobre sua tela inicial
+disposição.
+- Layout da gaveta de aplicativos: altere o alinhamento dos aplicativos na gaveta de aplicativos independentemente da tela inicial.
+- Personalização do tamanho da fonte: ajuste o tamanho da fonte das seções da tela inicial separadamente.
+- Foco na privacidade: permissão de internet removida, garantindo que seus dados permaneçam privados.
+- Segurança biométrica: bloqueie as configurações por meio de autenticação biométrica (alternar opção).
+- Relatórios de falhas: capacidade de relatar falhas por e-mail para melhor solução de problemas.
+- Rastreamento de uso do aplicativo: visualize o tempo de uso do aplicativo diretamente na tela inicial.
 
-<p>Muitas pessoas traduziram o aplicativo para os seguintes idiomas. Muito obrigado a todos vocês:</p>
+<b>Gestos incluem:</b>
 
-<ul>
-    <li>Árabe</li>
-    <li>Holandês</li>
-    <li>Inglês</li>
-    <li>Francês</li>
-    <li>Alemão</li>
-    <li>Hebraico</li>
-    <li>Italiano</li>
-    <li>Japonês</li>
-    <li>Coreano</li>
-    <li>Lituano</li>
-    <li>Polonês</li>
-    <li>Português</li>
-    <li>Russo</li>
-    <li>Eslovaco</li>
-    <li>Espanhol</li>
-    <li>Tailandês</li>
-    <li>Turco</li>
-</ul>
+- Toque duplo: toque rapidamente duas vezes para acionar uma ação predefinida.
+- Toque no relógio: toque no relógio para acessar recursos ou configurações adicionais.
+- Toque na data: toque na data para acessar facilmente o calendário.
+- Toque em Uso: toque no uso total para visualizar os dados de uso do sistema ou do aplicativo.
+- Deslizamentos curtos: deslize para cima, para baixo, para a esquerda ou para a direita para navegar ou acionar diferentes ações.
+- Deslizamentos longos: deslize para cima, para baixo, para a esquerda ou para a direita para obter ações de gestos adicionais.
+
+<b>Ações possíveis incluem:</b>
+
+- Abrir aplicativo específico: abra instantaneamente qualquer aplicativo de sua escolha com um gesto.
+- Exibir lista de aplicativos: mostra a lista completa de aplicativos instalados no dispositivo.
+- Tela de bloqueio: bloqueie seu dispositivo por segurança.
+- Mostrar aplicativos abertos recentemente: acesse os aplicativos usados recentemente para realizar multitarefas rapidamente.
+- Abrir gaveta de notificações: acione a gaveta de notificações deslizando ou tocando.
+- Abra as configurações rápidas: acesse as configurações rápidas diretamente na tela inicial.
+- Caixa de diálogo de energia: abra opções de energia, como desligar, reiniciar e muito mais.
+- Faça uma captura de tela: capture a tela para salvar ou compartilhar seu conteúdo.
+- Alternar página: alterne rapidamente entre as páginas da tela inicial.
+- Desativar gestos: desative gestos específicos conforme necessário.
+
+<b>Traduções:</b>
+
+- Árabe
+- Holandês
+- Inglês
+- Francês
+- Alemão
+- Hebraico
+- Italian
+- Japonês
+- Coreano
+- Lituano
+- Polonês
+- Português
+- Russo
+- Eslovaco
+- Espanhol
+- Tailandês
+- Turco

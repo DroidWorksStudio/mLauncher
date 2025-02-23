@@ -1,73 +1,60 @@
-<p>Abgezweigt von <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimalistisch und sauber.</p>
+<p>Abgezweigt von <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>: Ein minimaler und sauberer Launcher mit
+    erweiterte Funktionen.</p>
 
 <h2>Mit zusätzlichen Funktionen gegabelt</h2>
 
-<ul>
-    <li>Unordnung wie Anzeigen und Links entfernt.</li>
-    <li>Sie können Apps in der App-Schublade umbenennen (das Umbenennen von Apps auf dem Startbildschirm wird bereits unterstützt). Klicken Sie einfach lange auf eine App auf dem Startbildschirm und beginnen Sie mit der Eingabe.)</li>
-    <li>Wir haben viele weitere Optionen für Gesten auf dem Startbildschirm hinzugefügt:
-        <ul>
-            <li><b>Gesten umfassen jetzt:</b>
-                <ul>
-                    <li>Doppeltippen</li>
-                    <li>Klicken auf die Uhr</li>
-                    <li>Klicken Sie auf das Datum</li>
-                    <li>Klicken auf Gesamtnutzung</li>
-                    <li>Kurz nach oben wischen</li>
-                    <li>Kurz nach unten wischen</li>
-                    <li>Kurz nach links wischen</li>
-                    <li>Kurz nach rechts wischen</li>
-                    <li>Langes Wischen nach oben</li>
-                    <li>Langes Wischen nach unten</li>
-                    <li>Langes Wischen nach links</li>
-                    <li>Langes Wischen nach rechts</li>
-                </ul>
-            </li>
-            <li><b>Mögliche Aktionen sind jetzt:</b>
-                <ul>
-                    <li>Angegebene App öffnen</li>
-                    <li>App-Liste anzeigen</li>
-                    <li>Bildschirm sperren</li>
-                    <li>Zuletzt geöffnete Apps anzeigen</li>
-                    <li>Öffne die Benachrichtigungsleiste</li>
-                    <li>Schnelleinstellungen öffnen</li>
-                    <li>Power-Dialog</li>
-                    <li>Mach einen Screenshot</li>
-                    <li>Seite wechseln</li>
-                    <li>Geste deaktivieren</li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-    <li>Du kannst die Uhr auch unabhängig von den Home-Apps positionieren.</li>
-    <li>Ausrichtung von Apps im App-Drawer unabhängig vom Home-Bildschirm ändern.</li>
-    <li>Schriftgröße einzelner Abschnitte des Home-Bildschirms unabhängig voneinander ändern.</li>
-    <li>Internetberechtigung entfernt. Man weiß nie, was ein App-Entwickler über einen wissen möchte.</li>
-    <li>Einstellungen hinter Biometrie sperren (Umschalter).</li>
-    <li>Möglichkeit hinzugefügt, Abstürze per E-Mail zu melden.</li>
-    <li>Möglichkeit zum Anzeigen der App-Nutzungsdauer hinzugefügt.</li>
-</ul>
+<b>Funktionen:</b>
 
-<h2>Übersetzungen</h2>
+- App-Schubladenanpassung: Benennen Sie Apps in der App-Schublade um (die Umbenennung von Apps auf dem Home-Bildschirm wird bereits mit einer langen
+klicken).
+- Erweiterte Gesten: Eine große Auswahl an Gesten, einschließlich Tippen und Wischen, um verschiedene Aktionen auszulösen.
+- Uhranpassung: Positionieren Sie die Uhr unabhängig von den Home-Apps und haben Sie so mehr Kontrolle über Ihren Home-Bildschirm
+Layout.
+- App-Drawer-Layout: Ändern Sie die Ausrichtung von Apps im App-Drawer unabhängig vom Home-Bildschirm.
+- Anpassung der Schriftgröße: Passen Sie die Schriftgröße einzelner Abschnitte des Startbildschirms separat an.
+- Auf Datenschutz ausgerichtet: Internetberechtigung entfernt, um sicherzustellen, dass Ihre Daten privat bleiben.
+- Biometrische Sicherheit: Sperreinstellungen hinter biometrischer Authentifizierung (Umschaltoption).
+- Absturzberichte: Möglichkeit, Abstürze zur besseren Fehlerbehebung per E-Mail zu melden.
+- App-Nutzungsverfolgung: Zeigen Sie die App-Nutzungszeit direkt vom Startbildschirm aus an.
 
-<p>Viele Leute haben die App in die folgenden Sprachen übersetzt. Vielen Dank an euch alle:</p>
+<b>Gesten umfassen:</b>
 
-<ul>
-    <li>Arabisch</li>
-    <li>Niederländisch</li>
-    <li>Englisch</li>
-    <li>Französisch</li>
-    <li>Deutsch</li>
-    <li>Hebräisch</li>
-    <li>Italienisch</li>
-    <li>Japanisch</li>
-    <li>Koreanisch</li>
-    <li>Litauisch</li>
-    <li>Polnisch</li>
-    <li>Portugiesisch</li>
-    <li>Russisch</li>
-    <li>Slowakisch</li>
-    <li>Spanisch</li>
-    <li>Thailändisch</li>
-    <li>Türkisch</li>
-</ul>
+- Doppeltippen: Tippen Sie schnell zweimal, um eine vordefinierte Aktion auszulösen.
+- Tippen Sie auf die Uhr: Tippen Sie auf die Uhr, um auf zusätzliche Funktionen oder Einstellungen zuzugreifen.
+- Auf Datum tippen: Tippen Sie auf das Datum, um einfach auf den Kalender zuzugreifen.
+- Tippen Sie auf die Nutzung: Tippen Sie auf die Gesamtnutzung, um Daten zur System- oder App-Nutzung anzuzeigen.
+- Kurze Wischbewegungen: Wischen Sie nach oben, unten, links oder rechts, um zu navigieren oder verschiedene Aktionen auszulösen.
+- Lange Wischbewegungen: Wischen Sie für zusätzliche Gestenaktionen nach oben, unten, links oder rechts.
+
+<b>Mögliche Aktionen umfassen:</b>
+
+- Bestimmte App öffnen: Öffnen Sie mit einer Geste sofort eine App Ihrer Wahl.
+- App-Liste anzeigen: Zeigt die vollständige Liste der auf dem Gerät installierten Apps an.
+- Sperrbildschirm: Sperren Sie Ihr Gerät aus Sicherheitsgründen.
+- Zuletzt geöffnete Apps anzeigen: Greifen Sie für schnelles Multitasking auf zuletzt verwendete Apps zu.
+- Benachrichtigungsleiste öffnen: Lösen Sie die Benachrichtigungsleiste durch Wischen oder Tippen aus.
+- Schnelleinstellungen öffnen: Greifen Sie direkt vom Startbildschirm auf die Schnelleinstellungen zu.
+- Energiedialogfeld: Öffnen Sie Energieoptionen wie Herunterfahren, Neustart und mehr.
+- Machen Sie einen Screenshot: Erfassen Sie den Bildschirm, um Ihre Inhalte zu speichern oder freizugeben.
+- Seite wechseln: Schnell zwischen den Seiten des Startbildschirms wechseln.
+- Gesten deaktivieren: Deaktivieren Sie bestimmte Gesten nach Bedarf.
+
+<b>Übersetzungen:</b>
+
+- Arabisch
+- Niederländisch
+- Englisch
+- Französisch
+- Deutsch
+- Hebräisch
+- Italienisch
+Japanisch
+- Korean
+- Litauisch
+- Polnisch
+Portugiesisch
+- Russisch
+- Slowakisch
+Spanisch
+- Thai
+Türkisch

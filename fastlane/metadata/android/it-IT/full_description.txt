@@ -1,73 +1,60 @@
-<p>Derivato da <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimo e pulito.</p>
+<p>Forked da <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>: Un launcher minimale e pulito con
+    funzionalità migliorate.</p>
 
 <h2>Biforcato con funzionalità extra</h2>
 
-<ul>
-    <li>Rimossi elementi superflui, come pubblicità e link.</li>
-    <li>Puoi rinominare le app nel cassetto delle app (la rinominazione delle app nella schermata iniziale è già supportata). Basta fare clic a lungo su un'app nella schermata iniziale e iniziare a digitare.)</li>
-    <li>Abbiamo aggiunto molte più opzioni per i gesti nella schermata iniziale:
-        <ul>
-            <li><b>I gesti ora includono:</b>
-                <ul>
-                    <li>Doppio tocco</li>
-                    <li>Cliccando sull'orologio</li>
-                    <li>Cliccando sulla data</li>
-                    <li>Cliccando sull'utilizzo totale</li>
-                    <li>Breve scorrimento verso l'alto</li>
-                    <li>Scorrimento breve verso il basso</li>
-                    <li>Scorrimento breve verso sinistra</li>
-                    <li>Scorrimento breve verso destra</li>
-                    <li>Scorrimento lungo verso l'alto</li>
-                    <li>Scorrimento lungo verso il basso</li>
-                    <li>Scorrimento lungo verso sinistra</li>
-                    <li>Scorrimento lungo verso destra</li>
-                </ul>
-            </li>
-            <li><b>Le azioni possibili ora includono:</b>
-                <ul>
-                    <li>Apre l'app specificata</li>
-                    <li>Visualizza l'elenco delle app</li>
-                    <li>Blocca lo schermo</li>
-                    <li>Mostra le app aperte di recente</li>
-                    <li>Apri il cassetto delle notifiche</li>
-                    <li>Apri le impostazioni rapide</li>
-                    <li>Dialogo di potenza</li>
-                    <li>Fai uno screenshot</li>
-                    <li>Cambia pagina</li>
-                    <li>Disattiva gesto</li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-    <li>Puoi anche posizionare l'orologio indipendentemente dalle app domestiche.</li>
-    <li>Cambia l'allineamento delle app nel cassetto delle app indipendentemente dalla schermata iniziale.</li>
-    <li>Modifica la dimensione del carattere delle sezioni della schermata iniziale indipendentemente l'una dall'altra.</li>
-    <li>Rimosso il permesso di accesso a Internet. Non sai mai cosa uno sviluppatore di app vuole sapere di te.</li>
-    <li>Blocca le impostazioni dietro la biometria (attiva/disattiva).</li>
-    <li>Aggiunta la possibilità di segnalare gli arresti anomali tramite e-mail.</li>
-    <li>Aggiunta la possibilità di visualizzare il tempo di utilizzo dell'app.</li>
-</ul>
+<b>Caratteristiche:</b>
 
-<h2>Traduzioni</h2>
+- Personalizzazione del cassetto delle app: rinomina le app nel cassetto delle app (la rinominazione delle app nella schermata iniziale è già supportata con una lunga
+clic).
+- Gesti avanzati: un'ampia gamma di gesti, tra cui tocchi e scorrimenti, per attivare diverse azioni.
+- Personalizzazione dell'orologio: posiziona l'orologio indipendentemente dalle app home, offrendo un maggiore controllo sulla schermata home
+disposizione.
+- Layout del cassetto delle app: modifica l'allineamento delle app nel cassetto delle app indipendentemente dalla schermata iniziale.
+- Personalizzazione della dimensione del carattere: regola separatamente la dimensione del carattere delle sezioni della schermata iniziale.
+- Incentrato sulla privacy: è stata rimossa l'autorizzazione a usare Internet, garantendo la riservatezza dei dati.
+- Sicurezza biometrica: blocca le impostazioni dietro l'autenticazione biometrica (opzione di attivazione/disattivazione).
+- Segnalazioni di arresti anomali: possibilità di segnalare gli arresti anomali via e-mail per una migliore risoluzione dei problemi.
+- Monitoraggio dell'utilizzo delle app: visualizza il tempo di utilizzo delle app direttamente dalla schermata iniziale.
 
-<p>Molte persone hanno tradotto l'app nelle seguenti lingue. Grazie mille a tutti voi:</p>
+<b>I gesti includono:</b>
 
-<ul>
-    <li>Arabo</li>
-    <li>Olandese</li>
-    <li>Inglese</li>
-    <li>Francese</li>
-    <li>Tedesco</li>
-    <li>Ebraico</li>
-    <li>Italiano</li>
-    <li>Giapponese</li>
-    <li>Coreano</li>
-    <li>Lituano</li>
-    <li>Polacco</li>
-    <li>Portoghese</li>
-    <li>Russo</li>
-    <li>slovacco</li>
-    <li>Spagnolo</li>
-    <li>Tailandese</li>
-    <li>Turco</li>
-</ul>
+- Doppio tocco: tocca rapidamente due volte per attivare un'azione predefinita.
+- Tocca l'orologio: tocca l'orologio per accedere a funzioni o impostazioni aggiuntive.
+- Tocca la data: tocca la data per accedere facilmente al calendario.
+- Tocca Utilizzo: tocca l'utilizzo totale per visualizzare i dati sull'utilizzo del sistema o dell'app.
+- Scorrimenti brevi: scorri verso l'alto, verso il basso, verso sinistra o verso destra per navigare o attivare diverse azioni.
+- Scorrimenti lunghi: scorri verso l'alto, verso il basso, verso sinistra o verso destra per eseguire ulteriori azioni gestuali.
+
+<b>Le azioni possibili includono:</b>
+
+- Apri app specificata: apri all'istante qualsiasi app di tua scelta con un gesto.
+- Visualizza elenco app: mostra l'elenco completo delle app installate sul dispositivo.
+- Schermata di blocco: blocca il dispositivo per motivi di sicurezza.
+- Mostra app aperte di recente: accedi alle app utilizzate di recente per un multitasking rapido.
+- Apri cassetto notifiche: attiva il cassetto notifiche con uno scorrimento o un tocco.
+- Apri Impostazioni rapide: accedi alle impostazioni rapide direttamente dalla schermata iniziale.
+- Finestra di dialogo di alimentazione: apre le opzioni di alimentazione come spegnimento, riavvio e altro.
+- Cattura uno screenshot: cattura lo schermo per salvare o condividere i tuoi contenuti.
+- Cambia pagina: passa rapidamente da una pagina all'altra della schermata iniziale.
+- Disattiva gesto: disattiva gesti specifici in base alle tue esigenze.
+
+<b>Traduzioni:</b>
+
+- Arabo
+- Olandese
+- Inglese
+- Francese
+- Tedesco
+- Ebraico
+- Italiano
+- Giapponese
+- coreano
+- Lituano
+- Polacco
+- portoghese
+- Russo
+- slovacco
+- Spagnolo
+- tailandese
+- Turco
