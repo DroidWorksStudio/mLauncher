@@ -61,7 +61,7 @@
     <string name="show_recent_apps">Zuletzt verwendete Apps anzeigen</string>
     <string name="number_of_recents">Anzahl der letzten Apps</string>
     <string name="show_app_usage_stats">App-Nutzungsstatistiken anzeigen</string>
-    <string name="select_app_icons">Select App Icons</string>
+    <string name="select_app_icons">App-Symbole auswählen</string>
     <string name="filter_strength">Filterstärke</string>
     <string name="background_opacity">Deckkraft des Hintergrunds</string>
     <string name="element_alignment">Elementausrichtung</string>
