@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Implemented Enhancements:
+
+- Add a button to the home screen that can be used as a gesture. - ([2ce7e52](https://github.com/DroidWorksStudio/mLauncher/commit/2ce7e520003248e5e84e61cfe4457d0950a94aa2))
+
 ### Bug Fixes:
 
 - Work icons are now displaying again. - ([5040094](https://github.com/DroidWorksStudio/mLauncher/commit/5040094926720b9267d0d7695e37268c891f9f2f))
