@@ -1,60 +1,60 @@
-<p>Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>: A minimal and clean launcher with
-    enhanced features.</p>
+<p>מזלג מ- <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>: משגר מינימלי ונקי עם
+    תכונות משופרות.</p>
 
 <h2>מזלג עם תכונות נוספות</h2>
 
-<b>Features:</b>
+<b>תכונות:</b>
 
-- App Drawer Customization: Rename apps in the app drawer (home screen app renaming is already supported with a long
-click).
-- Advanced Gestures: A wide range of gestures, including taps and swipes, to trigger different actions.
-- Clock Customization: Position the clock independently of the home apps, giving more control over your home screen
-layout.
-- App Drawer Layout: Change the alignment of apps in the app drawer independently of the home screen.
-- Font Size Customization: Adjust the font size of sections of the home screen separately.
-- Privacy Focused: Removed internet permission, ensuring your data remains private.
-- Biometric Security: Lock settings behind biometric authentication (toggle option).
-- Crash Reports: Ability to report crashes via email for better troubleshooting.
-- App Usage Tracking: View app usage time directly from the home screen.
+- התאמה אישית של מגירת אפליקציות: שנה את שמות האפליקציות במגירת האפליקציות (שינוי שם האפליקציה במסך הבית כבר נתמך עם
+נְקִישָׁה).
+- מחוות מתקדמות: מגוון רחב של מחוות, כולל הקשות והחלקות, להפעלת פעולות שונות.
+- התאמה אישית של שעון: מקם את השעון ללא תלות באפליקציות הבית, מתן שליטה רבה יותר על מסך הבית שלך
+מַעֲרָך.
+- פריסת מגירת אפליקציות: שנה את יישור האפליקציות במגירת האפליקציות ללא תלות במסך הבית.
+- התאמה אישית של גודל גופן: התאם את גודל הגופן של חלקים במסך הבית בנפרד.
+- ממוקד פרטיות: הוסרת הרשאת האינטרנט, מה שמבטיח שהנתונים שלך יישארו פרטיים.
+- אבטחה ביומטרית: נעילת הגדרות מאחורי אימות ביומטרי (אפשרות החלפה).
+- דוחות קריסה: יכולת לדווח על קריסות באמצעות דואר אלקטרוני לפתרון בעיות טוב יותר.
+- מעקב אחר שימוש באפליקציה: הצג את זמן השימוש באפליקציה ישירות ממסך הבית.
 
-<b>Gestures Include:</b>
+<b>מחוות כוללות:</b>
 
-- Double Tap: Quickly tap twice to trigger a predefined action.
-- Clock Tap: Tap the clock to access additional features or settings.
-- Date Tap: Tap the date for easy access to the calendar.
-- Usage Tap: Tap on the total usage to view system or app usage data.
-- Short Swipes: Swipe up, down, left, or right to navigate or trigger different actions.
-- Long Swipes: Swipe up, down, left, or right for additional gesture actions.
+- הקשה כפולה: הקש במהירות פעמיים כדי להפעיל פעולה מוגדרת מראש.
+- הקשה על שעון: הקש על השעון כדי לגשת לתכונות או להגדרות נוספות.
+- הקשה על תאריך: הקש על התאריך לגישה נוחה ללוח השנה.
+- הקש על שימוש: הקש על סך השימוש כדי להציג נתוני שימוש במערכת או באפליקציה.
+- החלקות קצרות: החלק למעלה, למטה, שמאלה או ימינה כדי לנווט או להפעיל פעולות שונות.
+- החלקות ארוכות: החלק למעלה, למטה, שמאלה או ימינה לפעולות מחוות נוספות.
 
-<b>Possible Actions Include:</b>
+<b>פעולות אפשריות כוללות:</b>
 
-- Open Specified App: Instantly open any app of your choice with a gesture.
-- Display App List: Show the full list of apps installed on the device.
-- Lock Screen: Lock your device for security.
-- Show Recently Opened Apps: Access recently used apps for quick multitasking.
-- Open Notification Drawer: Trigger the notification drawer with a swipe or tap.
-- Open Quick Settings: Access quick settings directly from the home screen.
-- Power Dialog: Open power options like shutdown, restart, and more.
-- Take a Screenshot: Capture the screen to save or share your content.
-- Switch Page: Quickly switch between home screen pages.
-- Disable Gesture: Disable specific gestures as needed.
+- פתח אפליקציה מוגדרת: פתח מיד כל אפליקציה לבחירתך בתנועה.
+- הצג רשימת אפליקציות: הצג את הרשימה המלאה של האפליקציות המותקנות במכשיר.
+- מסך נעילה: נעל את המכשיר שלך לאבטחה.
+- הצג אפליקציות שנפתחו לאחרונה: גש לאפליקציות בהן השתמשת לאחרונה לריבוי משימות מהיר.
+- פתח את מגירת ההודעות: הפעל את מגירת ההודעות באמצעות החלקה או הקשה.
+- פתח את ההגדרות המהירות: גש להגדרות מהירות ישירות ממסך הבית.
+- דיאלוג כוח: פתח אפשרויות הפעלה כמו כיבוי, הפעלה מחדש ועוד.
+- צלם צילום מסך: צלם את המסך כדי לשמור או לשתף את התוכן שלך.
+- החלף עמוד: מעבר מהיר בין דפי מסך הבית.
+- השבת מחוות: השבת מחוות ספציפיות לפי הצורך.
 
-<b>Translations:</b>
+<b>תרגומים:</b>
 
-- Arabic
-- Dutch
-- English
-- French
-- German
-- Hebrew
-- Italian
-- Japanese
-- Korean
-- Lithuanian
-- Polish
-- Portuguese
-- Russian
-- Slovak
-- Spanish
-- Thai
-- Turkish
+- ערבית
+- הולנדית
+- אנגלית
+- צרפתית
+- גרמנית
+- עברית
+- איטלקי
+- יפני
+- קוריאנית
+- ליטאי
+- פולני
+- פורטוגזית
+- רוסית
+- סלובקית
+- ספרדית
+- תאילנדית
+- טורקית
