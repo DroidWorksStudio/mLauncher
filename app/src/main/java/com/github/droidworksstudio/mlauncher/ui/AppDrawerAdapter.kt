@@ -25,7 +25,6 @@ import android.widget.TextView
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.view.updatePadding
 import androidx.recyclerview.widget.RecyclerView
-import com.github.droidworksstudio.common.isManagedProfile
 import com.github.droidworksstudio.common.showKeyboard
 import com.github.droidworksstudio.fuzzywuzzy.FuzzyFinder
 import com.github.droidworksstudio.mlauncher.R
@@ -275,16 +274,12 @@ class AppDrawerAdapter(
 
                 // add icon next to app name to indicate that this app is installed on another profile
                 val launcherApps = context.getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps
-                val isWorkProfile = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.VANILLA_ICE_CREAM) {
-                    launcherApps.getLauncherUserInfo(appListItem.user)?.userType == UserManager.USER_TYPE_PROFILE_MANAGED
-                } else {
-                    context.isManagedProfile()
-                }
                 val isPrivateSpace = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.VANILLA_ICE_CREAM) {
                     launcherApps.getLauncherUserInfo(appListItem.user)?.userType == UserManager.USER_TYPE_PROFILE_PRIVATE
                 } else {
                     isPrivateSpaceSupported()
                 }
+                val isWorkProfile = appListItem.user != android.os.Process.myUserHandle() && !isPrivateSpace
 
                 if (isWorkProfile) {
                     val icon = AppCompatResources.getDrawable(context, R.drawable.work_profile)

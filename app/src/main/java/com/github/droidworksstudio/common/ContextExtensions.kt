@@ -9,10 +9,8 @@ import android.content.Intent
 import android.content.pm.LauncherApps
 import android.content.pm.PackageManager
 import android.net.Uri
-import android.os.Build
 import android.os.Bundle
 import android.os.UserHandle
-import android.os.UserManager
 import android.provider.AlarmClock
 import android.provider.CalendarContract
 import android.provider.MediaStore
@@ -27,7 +25,6 @@ import androidx.core.content.ContextCompat
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.helper.ActionService
-import java.lang.reflect.Method
 import java.util.Calendar
 import java.util.Date
 
@@ -68,22 +65,6 @@ fun isGestureNavigationEnabled(context: Context): Boolean {
     } catch (e: Settings.SettingNotFoundException) {
         // Handle the case where the setting isn't found, assume not enabled
         false
-    }
-}
-
-fun Context.isManagedProfile(): Boolean {
-    val userManager = this.getSystemService(UserManager::class.java)
-
-    return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) { // API 30+
-        userManager?.isManagedProfile ?: false
-    } else {
-        // Reflection for API 26-29
-        try {
-            val method: Method = UserManager::class.java.getMethod("isManagedProfile")
-            method.invoke(userManager) as? Boolean ?: false
-        } catch (e: Exception) {
-            false
-        }
     }
 }
 
