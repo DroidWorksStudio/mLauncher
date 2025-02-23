@@ -1,73 +1,60 @@
-<p>Šakė nuo <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>. Minimalus ir švarus.</p>
+<p>Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>: A minimal and clean launcher with
+    enhanced features.</p>
 
 <h2>Šakės su papildomomis funkcijomis</h2>
 
-<ul>
-    <li>Pašalinta netvarka, pvz., skelbimai ir nuorodos.</li>
-    <li>Galite pervardyti programas programų stalčiuje (Programų pervadinimas pagrindiniame ekrane jau palaikomas. Tiesiog ilgai spustelėkite programą pagrindiniame ekrane ir pradėkite rašyti.)</li>
-    <li>Pridėjome daug daugiau gestų parinkčių pagrindiniame ekrane:
-        <ul>
-            <li><b>Gestai dabar apima:</b>
-                <ul>
-                    <li>Dukart palieskite</li>
-                    <li>Spustelėjus laikrodį</li>
-                    <li>Spustelėjus datą</li>
-                    <li>Spustelėjus bendrą naudojimą</li>
-                    <li>Trumpai perbraukite aukštyn</li>
-                    <li>Trumpai braukite žemyn</li>
-                    <li>Trumpai braukite kairėn</li>
-                    <li>Trumpai braukite dešinėn</li>
-                    <li>Ilgai braukite aukštyn</li>
-                    <li>Ilgai braukite žemyn</li>
-                    <li>Ilgai braukite kairėn</li>
-                    <li>Ilgai braukite dešinėn</li>
-                </ul>
-            </li>
-            <li><b>Dabar galimi veiksmai:</b>
-                <ul>
-                    <li>Atidarykite nurodytą programą</li>
-                    <li>Rodyti programų sąrašą</li>
-                    <li>Užrakinkite ekraną</li>
-                    <li>Rodyti neseniai atidarytas programas</li>
-                    <li>Atidarykite pranešimų stalčių</li>
-                    <li>Atidarykite sparčiuosius nustatymus</li>
-                    <li>Maitinimo dialogo langas</li>
-                    <li>Padarykite ekrano kopiją</li>
-                    <li>Perjungti puslapį</li>
-                    <li>Išjungti gestą</li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-    <li>Taip pat galite nustatyti laikrodžio padėtį nepriklausomai nuo namų programų.</li>
-    <li>Keiskite programų išdėstymą programų stalčiuje nepriklausomai nuo pagrindinio ekrano.</li>
-    <li>Pakeiskite pagrindinio ekrano skyrių šrifto dydį nepriklausomai vienas nuo kito.</li>
-    <li>Pašalintas interneto leidimas. Niekada nežinote, ką programos kūrėjas nori sužinoti apie jus.</li>
-    <li>Užrakinti nustatymus už biometrinių duomenų (perjungti).</li>
-    <li>Pridėta galimybė pranešti apie gedimus el. paštu.</li>
-    <li>Pridėta galimybė peržiūrėti programos naudojimo laiką.</li>
-</ul>
+<b>Features:</b>
 
-<h2>Vertimai</h2>
+- App Drawer Customization: Rename apps in the app drawer (home screen app renaming is already supported with a long
+click).
+- Advanced Gestures: A wide range of gestures, including taps and swipes, to trigger different actions.
+- Clock Customization: Position the clock independently of the home apps, giving more control over your home screen
+layout.
+- App Drawer Layout: Change the alignment of apps in the app drawer independently of the home screen.
+- Font Size Customization: Adjust the font size of sections of the home screen separately.
+- Privacy Focused: Removed internet permission, ensuring your data remains private.
+- Biometric Security: Lock settings behind biometric authentication (toggle option).
+- Crash Reports: Ability to report crashes via email for better troubleshooting.
+- App Usage Tracking: View app usage time directly from the home screen.
 
-<p>Daug žmonių išvertė programą į šias kalbas. Labai ačiū jums visiems:</p>
+<b>Gestures Include:</b>
 
-<ul>
-    <li>arabų</li>
-    <li>olandų</li>
-    <li>Anglų kalba</li>
-    <li>prancūzų</li>
-    <li>Vokiečių</li>
-    <li>hebrajų</li>
-    <li>italų</li>
-    <li>japonų</li>
-    <li>korėjiečių</li>
-    <li>Lietuviškai</li>
-    <li>lenkų</li>
-    <li>portugalų</li>
-    <li>Rusų</li>
-    <li>slovakų</li>
-    <li>Ispanų</li>
-    <li>tajų</li>
-    <li>turkų</li>
-</ul>
+- Double Tap: Quickly tap twice to trigger a predefined action.
+- Clock Tap: Tap the clock to access additional features or settings.
+- Date Tap: Tap the date for easy access to the calendar.
+- Usage Tap: Tap on the total usage to view system or app usage data.
+- Short Swipes: Swipe up, down, left, or right to navigate or trigger different actions.
+- Long Swipes: Swipe up, down, left, or right for additional gesture actions.
+
+<b>Possible Actions Include:</b>
+
+- Open Specified App: Instantly open any app of your choice with a gesture.
+- Display App List: Show the full list of apps installed on the device.
+- Lock Screen: Lock your device for security.
+- Show Recently Opened Apps: Access recently used apps for quick multitasking.
+- Open Notification Drawer: Trigger the notification drawer with a swipe or tap.
+- Open Quick Settings: Access quick settings directly from the home screen.
+- Power Dialog: Open power options like shutdown, restart, and more.
+- Take a Screenshot: Capture the screen to save or share your content.
+- Switch Page: Quickly switch between home screen pages.
+- Disable Gesture: Disable specific gestures as needed.
+
+<b>Translations:</b>
+
+- Arabic
+- Dutch
+- English
+- French
+- German
+- Hebrew
+- Italian
+- Japanese
+- Korean
+- Lithuanian
+- Polish
+- Portuguese
+- Russian
+- Slovak
+- Spanish
+- Thai
+- Turkish
