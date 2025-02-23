@@ -28,4 +28,8 @@
     <string name="search_bing" translatable="false">Bing</string>
     <string name="search_brave" translatable="false">Brave</string>
     <string name="search_swisscow" translatable="false">SwissCows</string>
+
+    <!-- IconPacks Stings -->
+    <string name="app_icons_easy_dots" translatable="false">Easy Dots</string>
+    <string name="app_icons_niagara_dots" translatable="false">Niagara Dots</string>
 </resources>

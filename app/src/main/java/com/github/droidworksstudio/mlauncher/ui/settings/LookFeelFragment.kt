@@ -94,11 +94,11 @@ class LookFeelFragment : Fragment() {
         var toggledExtendHomeAppsArea by remember { mutableStateOf(prefs.extendHomeAppsArea) }
         var toggledHomeAlignmentBottom by remember { mutableStateOf(prefs.homeAlignmentBottom) }
 
-
         var toggledShowStatusBar by remember { mutableStateOf(prefs.showStatusBar) }
         var toggledRecentAppsDisplayed by remember { mutableStateOf(prefs.recentAppsDisplayed) }
         var selectedRecentCounter by remember { mutableIntStateOf(prefs.recentCounter) }
         var toggledRecentAppUsageStats by remember { mutableStateOf(prefs.appUsageStats) }
+        var selectedAppIcons by remember { mutableStateOf(prefs.iconPack) }
         var selectedFilterStrength by remember { mutableIntStateOf(prefs.filterStrength) }
         var selectedBackgroundOpacity by remember { mutableIntStateOf(prefs.opacityNum) }
 
@@ -356,6 +356,24 @@ class LookFeelFragment : Fragment() {
                 onCheckedChange = {
                     toggledRecentAppUsageStats = !prefs.appUsageStats
                     prefs.appUsageStats = toggledRecentAppUsageStats
+                }
+            )
+
+            SettingsSelect(
+                title = stringResource(R.string.select_app_icons),
+                option = selectedAppIcons.string(),
+                fontSize = titleFontSize,
+                onClick = {
+                    dialogBuilder.showSingleChoiceDialog(
+                        context = requireContext(),
+                        options = Constants.IconPacks.entries.toTypedArray(),
+                        titleResId = R.string.select_app_icons,
+                        onItemSelected = { newAppIcons ->
+                            selectedAppIcons = newAppIcons // Update state
+                            prefs.iconPack = newAppIcons // Persist selection in preferences
+                            viewModel.updateIconPack(newAppIcons)
+                        }
+                    )
                 }
             )
 

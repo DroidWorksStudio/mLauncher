@@ -264,6 +264,32 @@ object Constants {
         }
     }
 
+    enum class IconPacks : EnumOption {
+        System,
+        EasyDots,
+        NiagaraDots,
+        Disabled;
+
+        fun getString(context: Context): String {
+            return when (this) {
+                System -> context.getString(R.string.system_default)
+                EasyDots -> context.getString(R.string.app_icons_easy_dots)
+                NiagaraDots -> context.getString(R.string.app_icons_niagara_dots)
+                Disabled -> context.getString(R.string.disabled)
+            }
+        }
+
+        @Composable
+        override fun string(): String {
+            return when (this) {
+                System -> stringResource(R.string.system_default)
+                EasyDots -> stringResource(R.string.app_icons_easy_dots)
+                NiagaraDots -> stringResource(R.string.app_icons_niagara_dots)
+                Disabled -> stringResource(R.string.disabled)
+            }
+        }
+    }
+
     enum class Action : EnumOption {
         OpenApp,
         TogglePrivateSpace,

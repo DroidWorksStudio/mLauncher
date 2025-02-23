@@ -46,6 +46,7 @@ private const val SHOW_CLOCK_FORMAT = "SHOW_CLOCK_FORMAT"
 private const val SHOW_ALARM = "SHOW_ALARM"
 private const val SHOW_DAILY_WORD = "SHOW_DAILY_WORD"
 private const val SHOW_FLOATING = "SHOW_FLOATING"
+private const val ICON_PACK = "ICON_PACK"
 private const val SEARCH_START = "SEARCH_START"
 private const val SWIPE_UP_ACTION = "SWIPE_UP_ACTION"
 private const val SWIPE_DOWN_ACTION = "SWIPE_DOWN_ACTION"
@@ -333,6 +334,10 @@ class Prefs(val context: Context) {
         get() = prefs.getBoolean(SHOW_BATTERY_ICON, true)
         set(value) = prefs.edit().putBoolean(SHOW_BATTERY_ICON, value).apply()
 
+    var iconPack: Constants.IconPacks
+        get() = loadIconPacks()
+        set(value) = storeIconPacks(value)
+
     var homeLocked: Boolean
         get() = prefs.getBoolean(HOME_LOCKED, false)
         set(value) = prefs.edit().putBoolean(HOME_LOCKED, value).apply()
@@ -407,6 +412,18 @@ class Prefs(val context: Context) {
 
     private fun storeAction(prefString: String, value: Constants.Action) {
         prefs.edit().putString(prefString, value.name).apply()
+    }
+
+    private fun storeIconPacks(value: Constants.IconPacks) {
+        prefs.edit().putString(ICON_PACK, value.name).apply()
+    }
+
+    private fun loadIconPacks(): Constants.IconPacks {
+        val string = prefs.getString(
+            ICON_PACK,
+            Constants.IconPacks.System.toString()
+        ).toString()
+        return Constants.IconPacks.valueOf(string)
     }
 
     var appTheme: Constants.Theme

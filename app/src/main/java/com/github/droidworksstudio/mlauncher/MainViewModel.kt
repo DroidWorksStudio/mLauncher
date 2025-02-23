@@ -45,6 +45,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     val opacityNum = MutableLiveData(prefs.opacityNum)
     val filterStrength = MutableLiveData(prefs.filterStrength)
     val recentCounter = MutableLiveData(prefs.recentCounter)
+    val iconPack = MutableLiveData(prefs.iconPack)
 
     fun selectedApp(app: AppListItem, flag: AppDrawerFlag, n: Int = 0) {
         when (flag) {
@@ -181,5 +182,9 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     fun showMessageDialog(message: String) {
         showMessageDialog.postValue(message)
+    }
+
+    fun updateIconPack(gravity: Constants.IconPacks) {
+        iconPack.value = gravity
     }
 }

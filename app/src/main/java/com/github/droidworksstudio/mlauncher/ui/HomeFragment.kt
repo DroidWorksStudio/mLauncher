@@ -11,9 +11,11 @@ import android.content.Context
 import android.content.Context.VIBRATOR_SERVICE
 import android.content.Intent
 import android.content.IntentFilter
+import android.content.pm.PackageManager
 import android.graphics.ColorFilter
 import android.graphics.PorterDuff
 import android.graphics.PorterDuffColorFilter
+import android.graphics.drawable.Drawable
 import android.os.Build
 import android.os.Bundle
 import android.os.Vibrator
@@ -43,6 +45,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import com.github.droidworksstudio.common.ColorIconsExtensions
 import com.github.droidworksstudio.common.launchCalendar
 import com.github.droidworksstudio.common.openAccessibilitySettings
 import com.github.droidworksstudio.common.openAlarmApp
@@ -901,18 +904,83 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     text = prefs.getHomeAppModel(i).activityLabel
                     setOnTouchListener(getHomeAppsGestureListener(context, this))
                     setOnClickListener(this@HomeFragment)
+
                     if (!prefs.extendHomeAppsArea) {
                         layoutParams = ViewGroup.LayoutParams(
                             ViewGroup.LayoutParams.WRAP_CONTENT,
                             ViewGroup.LayoutParams.WRAP_CONTENT
                         )
                     }
+
                     gravity = prefs.homeAlignment.value()
                     isFocusable = true
                     isFocusableInTouchMode = true
+
                     val padding: Int = prefs.textPaddingSize
                     setPadding(0, padding, 0, padding)
                     setTextColor(prefs.appColor)
+
+                    val packageName = prefs.getHomeAppModel(i).activityPackage
+                    val packageManager = context.packageManager
+
+                    if (packageName.isNotBlank() && prefs.iconPack != Constants.IconPacks.Disabled) {
+                        // Get app icon or fallback drawable
+                        val icon: Drawable? = try {
+                            packageManager.getApplicationIcon(packageName)
+                        } catch (e: PackageManager.NameNotFoundException) {
+                            null
+                        }
+
+                        val defaultIcon = ContextCompat.getDrawable(context, R.drawable.launcher_dot_icon)
+                        val nonNullDrawable: Drawable = icon ?: defaultIcon!!
+
+                        // Recolor the icon with the dominant color
+                        val appNewIcon: Drawable? =
+                            when (prefs.iconPack) {
+                                Constants.IconPacks.EasyDots -> {
+                                    val newIcon = ContextCompat.getDrawable(
+                                        context,
+                                        R.drawable.launcher_dot_icon
+                                    )!!
+                                    val bitmap = ColorIconsExtensions.drawableToBitmap(nonNullDrawable)
+                                    val dominantColor = ColorIconsExtensions.getDominantColor(bitmap)
+                                    ColorIconsExtensions.recolorDrawable(newIcon, dominantColor)
+                                }
+
+                                Constants.IconPacks.NiagaraDots -> {
+                                    val newIcon = ContextCompat.getDrawable(
+                                        context,
+                                        R.drawable.niagara_dot_icon
+                                    )!!
+                                    val bitmap = ColorIconsExtensions.drawableToBitmap(nonNullDrawable)
+                                    val dominantColor = ColorIconsExtensions.getDominantColor(bitmap)
+                                    ColorIconsExtensions.recolorDrawable(newIcon, dominantColor)
+                                }
+
+                                else -> {
+                                    null
+                                }
+                            }
+
+                        // Set the icon size to match text size and add padding
+                        val iconSize = (prefs.appSize * 1.4).toInt()  // Base size from preferences
+                        val iconPadding = (iconSize / 1.2).toInt() //
+
+                        appNewIcon?.setBounds(0, 0, iconSize, iconSize)
+                        nonNullDrawable.setBounds(0, 0, ((iconSize * 1.8).toInt()), ((iconSize * 1.8).toInt()))
+
+                        // Set drawable position based on alignment
+                        when (prefs.homeAlignment) {
+                            Constants.Gravity.Left -> setCompoundDrawables(appNewIcon ?: nonNullDrawable, null, null, null)
+                            Constants.Gravity.Right -> setCompoundDrawables(null, null, appNewIcon ?: nonNullDrawable, null)
+                            else -> setCompoundDrawables(null, null, null, null)
+                        }
+
+                        // Add padding between text and icon if an icon is set
+                        if (prefs.homeAlignment == Constants.Gravity.Left || prefs.homeAlignment == Constants.Gravity.Right) {
+                            compoundDrawablePadding = iconPadding
+                        }
+                    }
                 }
                 // Add the view to the layout
                 binding.homeAppsLayout.addView(view)
@@ -925,6 +993,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         // Update the total number of pages and calculate maximum apps per page
         updatePagesAndAppsPerPage(prefs.homeAppsNum, prefs.homePagesNum)
     }
+
 
     // updates number of apps visible on home screen
     // does nothing if number has not changed
