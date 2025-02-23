@@ -1,60 +1,60 @@
-<p>Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>: A minimal and clean launcher with
-    enhanced features.</p>
+<p>Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>: ตัวเรียกใช้งานที่เรียบง่ายและสะอาดพร้อมด้วย
+    คุณสมบัติขั้นสูง</p>
 
 <h2>แยกสาขาด้วยคุณสมบัติพิเศษ</h2>
 
-<b>Features:</b>
+<b>คุณสมบัติ:</b>
 
-- App Drawer Customization: Rename apps in the app drawer (home screen app renaming is already supported with a long
-click).
-- Advanced Gestures: A wide range of gestures, including taps and swipes, to trigger different actions.
-- Clock Customization: Position the clock independently of the home apps, giving more control over your home screen
-layout.
-- App Drawer Layout: Change the alignment of apps in the app drawer independently of the home screen.
-- Font Size Customization: Adjust the font size of sections of the home screen separately.
-- Privacy Focused: Removed internet permission, ensuring your data remains private.
-- Biometric Security: Lock settings behind biometric authentication (toggle option).
-- Crash Reports: Ability to report crashes via email for better troubleshooting.
-- App Usage Tracking: View app usage time directly from the home screen.
+- การปรับแต่งลิ้นชักแอป: เปลี่ยนชื่อแอปในลิ้นชักแอป (การเปลี่ยนชื่อแอปบนหน้าจอหลักได้รับการสนับสนุนแล้วด้วยระยะเวลาอันยาวนาน
+คลิก).
+- ท่าทางขั้นสูง: ท่าทางต่างๆ มากมาย รวมถึงการแตะและปัด เพื่อเรียกใช้การดำเนินการที่แตกต่างกัน
+- การปรับแต่งนาฬิกา: วางนาฬิกาแยกจากแอพหลัก ทำให้ควบคุมหน้าจอหลักได้มากขึ้น
+เค้าโครง
+- เค้าโครงลิ้นชักแอพ: เปลี่ยนการจัดตำแหน่งของแอพในลิ้นชักแอพแยกจากหน้าจอหลัก
+- การปรับแต่งขนาดตัวอักษร: ปรับขนาดตัวอักษรของส่วนต่างๆ ของหน้าจอหลักแยกกัน
+- เน้นความเป็นส่วนตัว: ยกเลิกการอนุญาตการเข้าถึงอินเทอร์เน็ต ทำให้แน่ใจว่าข้อมูลของคุณยังคงเป็นส่วนตัว
+- ความปลอดภัยทางชีวมาตร: ล็อคการตั้งค่าเบื้องหลังการตรวจสอบชีวมาตร (ตัวเลือกสลับ)
+- รายงานความผิดพลาด: ความสามารถในการรายงานความผิดพลาดผ่านทางอีเมลเพื่อการแก้ไขปัญหาที่ดีขึ้น
+- การติดตามการใช้แอป: ดูเวลาการใช้แอปโดยตรงจากหน้าจอหลัก
 
-<b>Gestures Include:</b>
+<b>ท่าทางประกอบด้วย:</b>
 
-- Double Tap: Quickly tap twice to trigger a predefined action.
-- Clock Tap: Tap the clock to access additional features or settings.
-- Date Tap: Tap the date for easy access to the calendar.
-- Usage Tap: Tap on the total usage to view system or app usage data.
-- Short Swipes: Swipe up, down, left, or right to navigate or trigger different actions.
-- Long Swipes: Swipe up, down, left, or right for additional gesture actions.
+- แตะสองครั้ง: แตะสองครั้งอย่างรวดเร็วเพื่อกระตุ้นการดำเนินการที่กำหนดไว้ล่วงหน้า
+- แตะนาฬิกา: แตะนาฬิกาเพื่อเข้าถึงคุณลักษณะหรือการตั้งค่าเพิ่มเติม
+- แตะวันที่: แตะวันที่เพื่อเข้าถึงปฏิทินได้อย่างง่ายดาย
+- แตะการใช้งาน: แตะที่การใช้งานทั้งหมดเพื่อดูข้อมูลการใช้งานระบบหรือแอป
+- การปัดสั้น: ปัดขึ้น ลง ซ้าย หรือขวา เพื่อนำทางหรือเรียกใช้การดำเนินการที่แตกต่างกัน
+- การปัดยาว: ปัดขึ้น ลง ซ้าย หรือขวา สำหรับการดำเนินการท่าทางเพิ่มเติม
 
-<b>Possible Actions Include:</b>
+<b>การดำเนินการที่เป็นไปได้ ได้แก่:</b>
 
-- Open Specified App: Instantly open any app of your choice with a gesture.
-- Display App List: Show the full list of apps installed on the device.
-- Lock Screen: Lock your device for security.
-- Show Recently Opened Apps: Access recently used apps for quick multitasking.
-- Open Notification Drawer: Trigger the notification drawer with a swipe or tap.
-- Open Quick Settings: Access quick settings directly from the home screen.
-- Power Dialog: Open power options like shutdown, restart, and more.
-- Take a Screenshot: Capture the screen to save or share your content.
-- Switch Page: Quickly switch between home screen pages.
-- Disable Gesture: Disable specific gestures as needed.
+- เปิดแอปที่ระบุ: เปิดแอปใด ๆ ที่คุณเลือกทันทีด้วยท่าทาง
+- แสดงรายการแอป: แสดงรายการแอปทั้งหมดที่ติดตั้งบนอุปกรณ์
+- ล็อคหน้าจอ: ล็อคอุปกรณ์ของคุณเพื่อความปลอดภัย
+- แสดงแอพที่เปิดล่าสุด: เข้าถึงแอพที่ใช้ล่าสุดเพื่อการทำงานมัลติทาสก์อย่างรวดเร็ว
+- เปิดลิ้นชักการแจ้งเตือน: เปิดลิ้นชักการแจ้งเตือนด้วยการปัดหรือแตะ
+- เปิดการตั้งค่าด่วน: เข้าถึงการตั้งค่าด่วนโดยตรงจากหน้าจอหลัก
+- กล่องโต้ตอบพลังงาน: เปิดตัวเลือกพลังงาน เช่น ปิดเครื่อง รีสตาร์ท และอื่นๆ
+- ถ่ายภาพหน้าจอ: จับภาพหน้าจอเพื่อบันทึกหรือแชร์เนื้อหาของคุณ
+- สลับหน้า: สลับระหว่างหน้าจอหลักได้อย่างรวดเร็ว
+- ปิดใช้งานท่าทาง: ปิดใช้งานท่าทางเฉพาะตามต้องการ
 
-<b>Translations:</b>
+<b>คำแปล:</b>
 
-- Arabic
-- Dutch
-- English
-- French
-- German
-- Hebrew
-- Italian
-- Japanese
-- Korean
-- Lithuanian
-- Polish
-- Portuguese
-- Russian
-- Slovak
-- Spanish
-- Thai
-- Turkish
+- อาหรับ
+- ดัตช์
+- ภาษาอังกฤษ
+- ภาษาฝรั่งเศส
+- เยอรมัน
+- ภาษาฮีบรู
+- อิตาลี
+- ภาษาญี่ปุ่น
+- ภาษาเกาหลี
+- ลิทัวเนีย
+- โปแลนด์
+- โปรตุเกส
+- รัสเซีย
+- สโลวัก
+- สเปน
+- แบบไทย
+- ตุรกี
