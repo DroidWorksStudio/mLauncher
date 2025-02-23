@@ -100,6 +100,7 @@
     <string name="private_space">Espaços Privados</string>
     <string name="show_notifications">Mostrar Notificação</string>
     <string name="show_app_list">Mostrar lista de aplicações</string>
+    <string name="show_digital_wellbeing">Mostrar bem-estar digital</string>
     <string name="open_quick_settings">Definições rápidas</string>
     <string name="show_recents">Mostrar Recentes</string>
     <string name="open_power_dialog">Diálogo de energia</string>

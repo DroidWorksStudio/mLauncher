@@ -100,6 +100,7 @@
     <string name="private_space">พื้นที่ส่วนตัว</string>
     <string name="show_notifications">แสดงการแจ้งเตือน</string>
     <string name="show_app_list">แสดงรายการแอพ</string>
+    <string name="show_digital_wellbeing">แสดงความเป็นอยู่ที่ดีทางดิจิทัล</string>
     <string name="open_quick_settings">การตั้งค่าด่วน</string>
     <string name="show_recents">แสดงล่าสุด</string>
     <string name="open_power_dialog">กล่องโต้ตอบพลังงาน</string>

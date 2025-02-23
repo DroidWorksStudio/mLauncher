@@ -100,6 +100,7 @@
     <string name="private_space">Частные пространства</string>
     <string name="show_notifications">Показать уведомление</string>
     <string name="show_app_list">Показать список приложений</string>
+    <string name="show_digital_wellbeing">Показать цифровое благополучие</string>
     <string name="open_quick_settings">Быстрые настройки</string>
     <string name="show_recents">Show Recents</string>
     <string name="open_power_dialog">Диалог питания</string>
