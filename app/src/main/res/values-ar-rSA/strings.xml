@@ -100,6 +100,7 @@
     <string name="private_space">المساحات الخاصة</string>
     <string name="show_notifications">إظهار الإشعارات</string>
     <string name="show_app_list">إظهار قائمة التطبيقات</string>
+    <string name="show_digital_wellbeing">عرض الرفاهية الرقمية</string>
     <string name="open_quick_settings">الإعدادات السريعة</string>
     <string name="show_recents">Show Recents</string>
     <string name="open_power_dialog">حوار القوة</string>
