@@ -61,6 +61,7 @@
     <string name="show_recent_apps">Recente apps weergeven</string>
     <string name="number_of_recents">Aantal recente apps</string>
     <string name="show_app_usage_stats">Toon app-gebruikstatistieken</string>
+    <string name="select_app_icons">Select App Icons</string>
     <string name="filter_strength">Filtersterkte</string>
     <string name="background_opacity">Dekking van de achtergrond</string>
     <string name="element_alignment">Elementuitlijning</string>
