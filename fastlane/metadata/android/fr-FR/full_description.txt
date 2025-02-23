@@ -1,60 +1,60 @@
-<p>Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>: A minimal and clean launcher with
-    enhanced features.</p>
+<p>Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>: Un lanceur minimal et propre avec
+    fonctionnalités améliorées.</p>
 
 <h2>Fourchu avec des fonctionnalités supplémentaires</h2>
 
-<b>Features:</b>
+<b>Caractéristiques :</b>
 
-- App Drawer Customization: Rename apps in the app drawer (home screen app renaming is already supported with a long
-click).
-- Advanced Gestures: A wide range of gestures, including taps and swipes, to trigger different actions.
-- Clock Customization: Position the clock independently of the home apps, giving more control over your home screen
-layout.
-- App Drawer Layout: Change the alignment of apps in the app drawer independently of the home screen.
-- Font Size Customization: Adjust the font size of sections of the home screen separately.
-- Privacy Focused: Removed internet permission, ensuring your data remains private.
-- Biometric Security: Lock settings behind biometric authentication (toggle option).
-- Crash Reports: Ability to report crashes via email for better troubleshooting.
-- App Usage Tracking: View app usage time directly from the home screen.
+- Personnalisation du tiroir d'applications : renommer les applications dans le tiroir d'applications (le renommage des applications sur l'écran d'accueil est déjà pris en charge avec un long
+cliquez).
+- Gestes avancés : une large gamme de gestes, notamment des appuis et des balayages, pour déclencher différentes actions.
+- Personnalisation de l'horloge : positionnez l'horloge indépendamment des applications d'accueil, ce qui vous donne plus de contrôle sur votre écran d'accueil
+mise en page.
+- Disposition du tiroir d'applications : modifiez l'alignement des applications dans le tiroir d'applications indépendamment de l'écran d'accueil.
+- Personnalisation de la taille de la police : ajustez la taille de la police des sections de l'écran d'accueil séparément.
+- Axé sur la confidentialité : suppression de l'autorisation Internet, garantissant que vos données restent privées.
+- Sécurité biométrique : verrouiller les paramètres derrière l'authentification biométrique (option de basculement).
+- Rapports de plantage : possibilité de signaler les plantages par e-mail pour un meilleur dépannage.
+- Suivi de l'utilisation de l'application : affichez le temps d'utilisation de l'application directement depuis l'écran d'accueil.
 
-<b>Gestures Include:</b>
+<b>Les gestes incluent :</b>
 
-- Double Tap: Quickly tap twice to trigger a predefined action.
-- Clock Tap: Tap the clock to access additional features or settings.
-- Date Tap: Tap the date for easy access to the calendar.
-- Usage Tap: Tap on the total usage to view system or app usage data.
-- Short Swipes: Swipe up, down, left, or right to navigate or trigger different actions.
-- Long Swipes: Swipe up, down, left, or right for additional gesture actions.
+- Double Tap : appuyez rapidement deux fois pour déclencher une action prédéfinie.
+- Horloge Tap : appuyez sur l'horloge pour accéder à des fonctionnalités ou paramètres supplémentaires.
+- Date Tap : appuyez sur la date pour accéder facilement au calendrier.
+- Utilisation : appuyez sur l'utilisation totale pour afficher les données d'utilisation du système ou de l'application.
+- Balayages courts : balayez vers le haut, le bas, la gauche ou la droite pour naviguer ou déclencher différentes actions.
+- Balayages longs : balayez vers le haut, le bas, la gauche ou la droite pour des actions gestuelles supplémentaires.
 
-<b>Possible Actions Include:</b>
+<b>Les actions possibles incluent :</b>
 
-- Open Specified App: Instantly open any app of your choice with a gesture.
-- Display App List: Show the full list of apps installed on the device.
-- Lock Screen: Lock your device for security.
-- Show Recently Opened Apps: Access recently used apps for quick multitasking.
-- Open Notification Drawer: Trigger the notification drawer with a swipe or tap.
-- Open Quick Settings: Access quick settings directly from the home screen.
-- Power Dialog: Open power options like shutdown, restart, and more.
-- Take a Screenshot: Capture the screen to save or share your content.
-- Switch Page: Quickly switch between home screen pages.
-- Disable Gesture: Disable specific gestures as needed.
+- Ouvrir l'application spécifiée : ouvrez instantanément n'importe quelle application de votre choix d'un geste.
+- Afficher la liste des applications : affiche la liste complète des applications installées sur l'appareil.
+- Écran de verrouillage : verrouillez votre appareil pour plus de sécurité.
+- Afficher les applications récemment ouvertes : accédez aux applications récemment utilisées pour un multitâche rapide.
+- Ouvrir le tiroir de notifications : déclenchez le tiroir de notifications avec un glissement ou un appui.
+- Ouvrir les paramètres rapides : accédez aux paramètres rapides directement depuis l'écran d'accueil.
+- Boîte de dialogue d'alimentation : ouvrez les options d'alimentation telles que l'arrêt, le redémarrage, etc.
+- Prendre une capture d'écran : capturez l'écran pour enregistrer ou partager votre contenu.
+- Changer de page : basculez rapidement entre les pages de l'écran d'accueil.
+- Désactiver le geste : désactivez des gestes spécifiques selon vos besoins.
 
-<b>Translations:</b>
+<b>Traductions :</b>
 
-- Arabic
-- Dutch
-- English
-- French
-- German
-- Hebrew
-- Italian
-- Japanese
-- Korean
-- Lithuanian
-- Polish
-- Portuguese
-- Russian
-- Slovak
-- Spanish
-- Thai
-- Turkish
+- Arabe
+- Néerlandais
+- Anglais
+- Français
+- Allemand
+- Hébreu
+- italien
+- Japonais
+- Coréen
+- Lituanien
+- Polonais
+- Portugais
+- Russe
+- Slovaque
+- Espagnol
+- Thaïlandais
+- Turc
