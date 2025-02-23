@@ -22,6 +22,7 @@
     <string name="font_family">フォントファミリー</string>
     <string name="settings_text_size">設定文字サイズ</string>
     <string name="hide_search_view">検索ビューを非表示</string>
+    <string name="show_floating_button">Show Floating Button</string>
     <string name="search">検索</string>
     <string name="search_engine">検索エンジン</string>
     <string name="auto_show_keyboard">Auto show keyboard</string>
@@ -84,6 +85,7 @@
     <string name="clock_click_app">時計をクリックしてください</string>
     <string name="date_click_app">日付をクリックしてください</string>
     <string name="usage_click_app">合計使用量をクリック</string>
+    <string name="floating_click_app">Click on Logo</string>
     <string name="swipe_movement">スワイプ動作</string>
     <string name="short_swipe_up_app">上にスワイプ</string>
     <string name="short_swipe_down_app">下にスワイプ</string>
