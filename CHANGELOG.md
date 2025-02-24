@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Bug Fixes:
+
+- Fixed usage time display - ([7eff169](https://github.com/DroidWorksStudio/mLauncher/commit/7eff169a1563605677bb4204aeb9ae523b26fa2f))
+
+## [1.7.5](https://github.com/DroidWorksStudio/mLauncher/tree/1.7.5) - (23, February 2025)
+
 ### Implemented Enhancements:
 
 - Added app icon support for homescreen - ([2736339](https://github.com/DroidWorksStudio/mLauncher/commit/27363396c85dcc601336b1bccaf1a3ccfcb5eb47))
