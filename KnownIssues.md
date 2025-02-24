@@ -2,6 +2,12 @@
 
 This document lists known issues in the project and possible workarounds.
 
+## 1.7.5 - mLauncher [Release Notes](https://github.com/DroidWorksStudio/mLauncher/releases/tag/1.7.5)
+
+### 📱 Issue: Icons and Usage Problems
+
+- **Cause:** The usage prevents the icons from functioning properly. If you want the icons to work, avoid using the "usage" feature. I'm unsure if I'll fix this issue.
+
 ## 1.7.4 - mLauncher [Release Notes](https://github.com/DroidWorksStudio/mLauncher/releases/tag/1.7.4)
 
 ### 🛠️ Issue: `isManagedProfile()` Requires API 30+
