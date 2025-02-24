@@ -20,6 +20,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Switched icons to Disabled by default. - ([7a9ab24](https://github.com/DroidWorksStudio/mLauncher/commit/7a9ab2457bfc39f522f1d8b834e22c530a1927f2))
 - Added error handling to theme imports - ([00cc656](https://github.com/DroidWorksStudio/mLauncher/commit/00cc65632a7c7ea20cc127e4089da070baf34530))
 
 ### Releases:
