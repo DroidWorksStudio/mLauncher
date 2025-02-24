@@ -392,8 +392,8 @@ fun storeFile(activity: Activity, backupType: Constants.BackupType) {
         }
 
         Constants.BackupType.Theme -> {
-            val timeStamp = SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(Date())
-            val fileName = "backup_$timeStamp.mtheme"
+            val timeStamp = SimpleDateFormat("yyyyMMdd", Locale.getDefault()).format(Date())
+            val fileName = "theme_$timeStamp.mtheme"
 
             val intent = Intent(Intent.ACTION_CREATE_DOCUMENT).apply {
                 addCategory(Intent.CATEGORY_OPENABLE)

@@ -36,7 +36,8 @@ class DialogBuilder(val context: Context, val activity: Activity) {
         // Define the items for the dialog (Backup, Restore, Clear Data)
         val items = arrayOf(
             context.getString(R.string.advanced_settings_backup_restore_backup),
-            context.getString(R.string.advanced_settings_backup_restore_restore)
+            context.getString(R.string.advanced_settings_backup_restore_restore),
+            context.getString(R.string.advanced_settings_backup_restore_clear)
         )
 
         val dialogBuilder = MaterialAlertDialogBuilder(context)
@@ -45,7 +46,7 @@ class DialogBuilder(val context: Context, val activity: Activity) {
             when (which) {
                 0 -> storeFile(activity, Constants.BackupType.FullSystem)
                 1 -> loadFile(activity, Constants.BackupType.FullSystem)
-                else -> confirmClearData()
+                2 -> confirmClearData()
             }
         }
 
