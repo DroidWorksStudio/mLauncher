@@ -8,6 +8,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Fixed usage time display - ([7eff169](https://github.com/DroidWorksStudio/mLauncher/commit/7eff169a1563605677bb4204aeb9ae523b26fa2f))
 
+### Releases:
+
+- Prepare for version 1.7.6 - ([730efbd](https://github.com/DroidWorksStudio/mLauncher/commit/730efbd2287f19e15b967c8237c2b51cebda6245))
+
 ## [1.7.5](https://github.com/DroidWorksStudio/mLauncher/tree/1.7.5) - (23, February 2025)
 
 ### Implemented Enhancements:
