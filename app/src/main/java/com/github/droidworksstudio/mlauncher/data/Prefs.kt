@@ -2,6 +2,7 @@ package com.github.droidworksstudio.mlauncher.data
 
 import android.content.Context
 import android.content.SharedPreferences
+import android.graphics.Color
 import android.os.UserHandle
 import android.util.Log
 import androidx.core.content.ContextCompat.getColor
@@ -141,6 +142,48 @@ class Prefs(val context: Context) {
         }
         editor.apply()
     }
+
+    fun saveToTheme(colorNames: List<String>): String {
+        val allPrefs = prefs.all
+        val filteredPrefs = mutableMapOf<String, String>()
+
+        for (colorName in colorNames) {
+            if (allPrefs.containsKey(colorName)) {
+                val colorInt = allPrefs[colorName] as? Int
+                if (colorInt != null) {
+                    val hexColor = String.format("#%08X", colorInt) // Converts ARGB int to #AARRGGBB
+                    filteredPrefs[colorName] = hexColor
+                }
+            }
+        }
+
+        return Gson().toJson(filteredPrefs)
+    }
+
+    fun loadFromTheme(json: String) {
+        val editor = prefs.edit()
+        val all: HashMap<String, Any?> =
+            Gson().fromJson(json, object : TypeToken<HashMap<String, Any?>>() {}.type)
+
+        for ((key, value) in all) {
+            when (value) {
+                is String -> {
+                    if (value.matches(Regex("^#([A-Fa-f0-9]{8})$"))) {
+                        // Convert HEX color (#AARRGGBB) to Int
+                        editor.putInt(key, Color.parseColor(value))
+                    } else {
+                        editor.putString(key, value)
+                    }
+                }
+
+                else -> {
+                    Log.d("backup error", "Unsupported value: $value")
+                }
+            }
+        }
+        editor.apply()
+    }
+
 
     var appVersion: Int
         get() = prefs.getInt(APP_VERSION, -1)

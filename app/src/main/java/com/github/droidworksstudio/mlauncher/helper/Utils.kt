@@ -376,25 +376,56 @@ fun dp2px(resources: Resources, dp: Int): Int {
     ).toInt()
 }
 
-fun storeFile(activity: Activity) {
+fun storeFile(activity: Activity, backupType: Constants.BackupType) {
     // Generate a unique filename with a timestamp
-    val timeStamp = SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(Date())
-    val fileName = "backup_$timeStamp.json"
+    when (backupType) {
+        Constants.BackupType.FullSystem -> {
+            val timeStamp = SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(Date())
+            val fileName = "backup_$timeStamp.json"
 
-    val intent = Intent(Intent.ACTION_CREATE_DOCUMENT).apply {
-        addCategory(Intent.CATEGORY_OPENABLE)
-        type = "application/json"
-        putExtra(Intent.EXTRA_TITLE, fileName)
+            val intent = Intent(Intent.ACTION_CREATE_DOCUMENT).apply {
+                addCategory(Intent.CATEGORY_OPENABLE)
+                type = "application/json"
+                putExtra(Intent.EXTRA_TITLE, fileName)
+            }
+            activity.startActivityForResult(intent, Constants.BACKUP_WRITE, null)
+        }
+
+        Constants.BackupType.Theme -> {
+            val timeStamp = SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(Date())
+            val fileName = "backup_$timeStamp.mtheme"
+
+            val intent = Intent(Intent.ACTION_CREATE_DOCUMENT).apply {
+                addCategory(Intent.CATEGORY_OPENABLE)
+                type = "application/octet-stream"
+                putExtra(Intent.EXTRA_TITLE, fileName)
+            }
+            activity.startActivityForResult(intent, Constants.THEME_BACKUP_WRITE, null)
+        }
+
     }
-    activity.startActivityForResult(intent, Constants.BACKUP_WRITE, null)
+
 }
 
-fun loadFile(activity: Activity) {
-    val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
-        addCategory(Intent.CATEGORY_OPENABLE)
-        type = "application/json"
+fun loadFile(activity: Activity, backupType: Constants.BackupType) {
+    when (backupType) {
+        Constants.BackupType.FullSystem -> {
+            val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
+                addCategory(Intent.CATEGORY_OPENABLE)
+                type = "application/json"
+            }
+            activity.startActivityForResult(intent, Constants.BACKUP_READ, null)
+        }
+
+        Constants.BackupType.Theme -> {
+            val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
+                addCategory(Intent.CATEGORY_OPENABLE)
+                type = "application/octet-stream"
+            }
+            activity.startActivityForResult(intent, Constants.THEME_BACKUP_READ, null)
+        }
     }
-    activity.startActivityForResult(intent, Constants.BACKUP_READ, null)
+
 }
 
 

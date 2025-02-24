@@ -36,16 +36,15 @@ class DialogBuilder(val context: Context, val activity: Activity) {
         // Define the items for the dialog (Backup, Restore, Clear Data)
         val items = arrayOf(
             context.getString(R.string.advanced_settings_backup_restore_backup),
-            context.getString(R.string.advanced_settings_backup_restore_restore),
-            context.getString(R.string.advanced_settings_backup_restore_clear)
+            context.getString(R.string.advanced_settings_backup_restore_restore)
         )
 
         val dialogBuilder = MaterialAlertDialogBuilder(context)
         dialogBuilder.setTitle(context.getString(R.string.advanced_settings_backup_restore_title))
         dialogBuilder.setItems(items) { _, which ->
             when (which) {
-                0 -> storeFile(activity)
-                1 -> loadFile(activity)
+                0 -> storeFile(activity, Constants.BackupType.FullSystem)
+                1 -> loadFile(activity, Constants.BackupType.FullSystem)
                 else -> confirmClearData()
             }
         }
@@ -54,6 +53,33 @@ class DialogBuilder(val context: Context, val activity: Activity) {
         backupRestoreDialog = dialogBuilder.create()
         backupRestoreDialog?.show()
     }
+
+    var saveLoadThemeDialog: AlertDialog? = null
+
+    fun saveLoadThemeDialogDialog() {
+        // Dismiss any existing dialog to prevent multiple dialogs open simultaneously
+        saveLoadThemeDialog?.dismiss()
+
+        // Define the items for the dialog (Export, Import)
+        val items = arrayOf(
+            context.getString(R.string.advanced_settings_theme_export),
+            context.getString(R.string.advanced_settings_theme_import),
+        )
+
+        val dialogBuilder = MaterialAlertDialogBuilder(context)
+        dialogBuilder.setTitle(context.getString(R.string.advanced_settings_theme_title))
+        dialogBuilder.setItems(items) { _, which ->
+            when (which) {
+                0 -> storeFile(activity, Constants.BackupType.Theme)
+                1 -> loadFile(activity, Constants.BackupType.Theme)
+            }
+        }
+
+        // Assign the created dialog to backupRestoreDialog
+        saveLoadThemeDialog = dialogBuilder.create()
+        saveLoadThemeDialog?.show()
+    }
+
 
     // Function to handle the Clear Data action, with a confirmation dialog
     private fun confirmClearData() {

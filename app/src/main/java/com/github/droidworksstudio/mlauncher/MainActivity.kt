@@ -24,6 +24,7 @@ import com.github.droidworksstudio.mlauncher.databinding.ActivityMainBinding
 import com.github.droidworksstudio.mlauncher.helper.hasUsagePermission
 import com.github.droidworksstudio.mlauncher.helper.isTablet
 import com.github.droidworksstudio.mlauncher.helper.showPermissionDialog
+import org.xmlpull.v1.XmlPullParser
 import java.io.BufferedReader
 import java.io.FileOutputStream
 import java.io.InputStreamReader
@@ -181,9 +182,58 @@ class MainActivity : AppCompatActivity() {
                 data?.data?.also { uri ->
                     applicationContext.contentResolver.openFileDescriptor(uri, "w")?.use { file ->
                         FileOutputStream(file.fileDescriptor).use { stream ->
-                            val text = Prefs(applicationContext).saveToString()
+                            val prefs = Prefs(applicationContext).saveToString()
                             stream.channel.truncate(0)
-                            stream.write(text.toByteArray())
+                            stream.write(prefs.toByteArray())
+                        }
+                    }
+                }
+            }
+
+            Constants.THEME_BACKUP_READ -> {
+                data?.data?.also { uri ->
+                    applicationContext.contentResolver.openInputStream(uri).use { inputStream ->
+                        val stringBuilder = StringBuilder()
+                        BufferedReader(InputStreamReader(inputStream)).use { reader ->
+                            var line: String? = reader.readLine()
+                            while (line != null) {
+                                stringBuilder.append(line)
+                                line = reader.readLine()
+                            }
+                        }
+
+                        val string = stringBuilder.toString()
+                        val prefs = Prefs(applicationContext)
+                        prefs.loadFromTheme(string)
+                    }
+                }
+                startActivity(Intent.makeRestartActivityTask(this.intent?.component))
+            }
+
+
+            Constants.THEME_BACKUP_WRITE -> {
+                // Step 1: Read the color names from theme.xml
+                val colorNames = mutableListOf<String>()
+
+                // Obtain an XmlPullParser for the theme.xml file
+                applicationContext.resources.getXml(R.xml.theme).use { parser ->
+                    while (parser.eventType != XmlPullParser.END_DOCUMENT) {
+                        if (parser.eventType == XmlPullParser.START_TAG && parser.name == "color") {
+                            val colorName = parser.getAttributeValue(null, "colorName")
+                            colorNames.add(colorName)
+                        }
+                        parser.next()
+                    }
+                }
+
+                // Step 2: Back up the relevant preferences based on the extracted colorNames
+                data?.data?.also { uri ->
+                    applicationContext.contentResolver.openFileDescriptor(uri, "w")?.use { file ->
+                        FileOutputStream(file.fileDescriptor).use { stream ->
+                            // Get the filtered preferences (only those in the colorNames list)
+                            val prefs = Prefs(applicationContext).saveToTheme(colorNames)
+                            stream.channel.truncate(0)
+                            stream.write(prefs.toByteArray())
                         }
                     }
                 }
@@ -210,6 +260,7 @@ class MainActivity : AppCompatActivity() {
         super.onConfigurationChanged(newConfig)
         recreate()
     }
+
 
     @Suppress("DEPRECATION")
     private fun setLanguage() {

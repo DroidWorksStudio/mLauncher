@@ -171,6 +171,18 @@ class AdvancedFragment : Fragment() {
             )
 
             SettingsHomeItem(
+                title = stringResource(R.string.advanced_settings_theme_title),
+                description = stringResource(R.string.advanced_settings_theme_description),
+                imageVector = ImageVector.vectorResource(id = R.drawable.ic_theme),
+                titleFontSize = titleFontSize,
+                descriptionFontSize = descriptionFontSize,
+                iconSize = iconSize,
+                onClick = {
+                    dialogBuilder.saveLoadThemeDialogDialog()
+                }
+            )
+
+            SettingsHomeItem(
                 title = stringResource(R.string.advanced_settings_help_feedback_title),
                 imageVector = ImageVector.vectorResource(id = R.drawable.ic_help_feedback),
                 titleFontSize = titleFontSize,
@@ -237,6 +249,7 @@ class AdvancedFragment : Fragment() {
 
     private fun dismissDialogs() {
         dialogBuilder.backupRestoreDialog?.dismiss()
+        dialogBuilder.saveLoadThemeDialog?.dismiss()
     }
 
     @Deprecated("Deprecated in Java")
