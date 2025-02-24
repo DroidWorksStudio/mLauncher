@@ -23,8 +23,25 @@ This folder contains exported themes for the mLauncher. Themes are stored as `.m
 
 - The `.mtheme` file is an XML file containing key-value pairs corresponding to `SharedPreferences` settings.
 - Keys follow the format `keyName` to ensure compatibility with the launcher.
-- Example:
-    - [Download Dracula Theme](dracula.mtheme)
+- Examples:
+    - [Download AdaptaDark Theme](AdaptaDark.mtheme)
+    - [Download AdaptaLight Theme](AdaptaLight.mtheme)
+    - [Download AyuDark Theme](AyuDark.mtheme)
+    - [Download BreezeDark Theme](BreezeDark.mtheme)
+    - [Download Cyberpunk Theme](Cyberpunk.mtheme)
+    - [Download Dracula Theme](Dracula.mtheme)
+    - [Download GruvboxDark Theme](GruvboxDark.mtheme)
+    - [Download Layan Theme](Layan.mtheme)
+    - [Download MaterialDark Theme](MaterialDark.mtheme)
+    - [Download MojaveLight Theme](MojaveLight.mtheme)
+    - [Download Monokai Theme](Monokai.mtheme)
+    - [Download NightOwl Theme](NightOwl.mtheme)
+    - [Download Nord Theme](Nord.mtheme)
+    - [Download OneDark Theme](OneDark.mtheme)
+    - [Download Palenight Theme](Palenight.mtheme)
+    - [Download SolarizedDark Theme](SolarizedDark.mtheme)
+    - [Download TangoDark Theme](TangoDark.mtheme)
+    - [Download UbuntuLight Theme](UbuntuLight.mtheme)
 
 ## Notes
 
