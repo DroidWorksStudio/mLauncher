@@ -121,6 +121,10 @@
     <string name="advanced_settings_backup_restore_backup">Zálohovať</string>
     <string name="advanced_settings_backup_restore_restore">Obnoviť</string>
     <string name="advanced_settings_backup_restore_clear">Vymazať všetky údaje</string>
+    <string name="advanced_settings_theme_title">Témové výtvory</string>
+    <string name="advanced_settings_theme_description">Prispôsobte si témy tak, aby vám vyhovovali.</string>
+    <string name="advanced_settings_theme_export">Exportovať</string>
+    <string name="advanced_settings_theme_import">Importovať</string>
     <string name="advanced_settings_backup_restore_clear_title">Vymazať predvoľby</string>
     <string name="advanced_settings_backup_restore_clear_description">Naozaj to chcete urobiť?</string>
     <string name="advanced_settings_backup_restore_clear_yes">áno</string>

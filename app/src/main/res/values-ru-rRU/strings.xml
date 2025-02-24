@@ -121,6 +121,10 @@
     <string name="advanced_settings_backup_restore_backup">Резервное копирование</string>
     <string name="advanced_settings_backup_restore_restore">Восстановить</string>
     <string name="advanced_settings_backup_restore_clear">Очистить все данные</string>
+    <string name="advanced_settings_theme_title">Тематические творения</string>
+    <string name="advanced_settings_theme_description">Настройте темы по своему вкусу.</string>
+    <string name="advanced_settings_theme_export">Экспорт</string>
+    <string name="advanced_settings_theme_import">Импорт</string>
     <string name="advanced_settings_backup_restore_clear_title">Очистить настройки</string>
     <string name="advanced_settings_backup_restore_clear_description">Вы уверены, что хотите это сделать?</string>
     <string name="advanced_settings_backup_restore_clear_yes">Да</string>

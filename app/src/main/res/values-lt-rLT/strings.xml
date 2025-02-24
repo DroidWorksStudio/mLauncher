@@ -121,6 +121,10 @@
     <string name="advanced_settings_backup_restore_backup">Atsarginė kopija</string>
     <string name="advanced_settings_backup_restore_restore">Atkurti</string>
     <string name="advanced_settings_backup_restore_clear">Išvalyti visus duomenis</string>
+    <string name="advanced_settings_theme_title">Temos kūriniai</string>
+    <string name="advanced_settings_theme_description">Tinkinkite jums tinkančias temas.</string>
+    <string name="advanced_settings_theme_export">Eksportuoti</string>
+    <string name="advanced_settings_theme_import">Importuoti</string>
     <string name="advanced_settings_backup_restore_clear_title">Išvalyti nuostatas</string>
     <string name="advanced_settings_backup_restore_clear_description">Ar tikrai norite tai padaryti?</string>
     <string name="advanced_settings_backup_restore_clear_yes">Taip</string>
