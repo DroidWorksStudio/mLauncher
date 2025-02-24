@@ -14,6 +14,10 @@ All notable changes to this project will be documented in this file. See [conven
 - Typo on the word `Click` - ([8ea6176](https://github.com/DroidWorksStudio/mLauncher/commit/8ea61765c32e4f87058ad1a6ab0d192c5150736a))
 - Fixed usage time display - ([7eff169](https://github.com/DroidWorksStudio/mLauncher/commit/7eff169a1563605677bb4204aeb9ae523b26fa2f))
 
+### Language Support:
+
+- Updated Language Files. ([#672](https://github.com/DroidWorksStudio/mLauncher/issues/672)) - ([d86ad65](https://github.com/DroidWorksStudio/mLauncher/commit/d86ad65b055b33d3c6552d529c2d9ee6d153691e))
+
 ### Refactoring:
 
 - Added error handling to theme imports - ([00cc656](https://github.com/DroidWorksStudio/mLauncher/commit/00cc65632a7c7ea20cc127e4089da070baf34530))
