@@ -121,6 +121,10 @@
     <string name="advanced_settings_backup_restore_backup">지원</string>
     <string name="advanced_settings_backup_restore_restore">복원하다</string>
     <string name="advanced_settings_backup_restore_clear">모든 데이터 지우기</string>
+    <string name="advanced_settings_theme_title">Theme Creations</string>
+    <string name="advanced_settings_theme_description">Customize themes to suit you.</string>
+    <string name="advanced_settings_theme_export">Export</string>
+    <string name="advanced_settings_theme_import">Import</string>
     <string name="advanced_settings_backup_restore_clear_title">환경 설정 지우기</string>
     <string name="advanced_settings_backup_restore_clear_description">정말로 이 작업을 수행하시겠습니까?</string>
     <string name="advanced_settings_backup_restore_clear_yes">예</string>
