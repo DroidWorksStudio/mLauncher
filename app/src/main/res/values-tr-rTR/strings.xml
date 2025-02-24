@@ -121,10 +121,10 @@
     <string name="advanced_settings_backup_restore_backup">Destek olmak</string>
     <string name="advanced_settings_backup_restore_restore">Eski haline getirmek</string>
     <string name="advanced_settings_backup_restore_clear">Tüm Verileri Temizle</string>
-    <string name="advanced_settings_theme_title">Theme Creations</string>
-    <string name="advanced_settings_theme_description">Customize themes to suit you.</string>
-    <string name="advanced_settings_theme_export">Export</string>
-    <string name="advanced_settings_theme_import">Import</string>
+    <string name="advanced_settings_theme_title">Tema Yaratımları</string>
+    <string name="advanced_settings_theme_description">Kendinize uygun temaları özelleştirin.</string>
+    <string name="advanced_settings_theme_export">İhracat</string>
+    <string name="advanced_settings_theme_import">İçe aktarmak</string>
     <string name="advanced_settings_backup_restore_clear_title">Tercihleri Temizle</string>
     <string name="advanced_settings_backup_restore_clear_description">Bunu gerçekten yapmak istiyor musun?</string>
     <string name="advanced_settings_backup_restore_clear_yes">Evet</string>
