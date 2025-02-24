@@ -485,7 +485,7 @@ class Prefs(val context: Context) {
     private fun loadIconPacks(): Constants.IconPacks {
         val string = prefs.getString(
             ICON_PACK,
-            Constants.IconPacks.System.toString()
+            Constants.IconPacks.Disabled.toString()
         ).toString()
         return Constants.IconPacks.valueOf(string)
     }
