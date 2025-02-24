@@ -2,6 +2,7 @@
 <blacklist>
     <!-- Example: Package names of apps to be blacklisted -->
     <app packageName="app.mlauncher" />
+    <app packageName="com.opera.browser" />
     <app packageName="com.google.android.apps.healthdata" />
     <app packageName="com.google.android.healthconnect.controller" />
     <app packageName="com.google.android.deskclock" />

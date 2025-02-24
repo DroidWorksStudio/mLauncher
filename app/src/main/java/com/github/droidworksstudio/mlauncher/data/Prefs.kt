@@ -2,9 +2,11 @@ package com.github.droidworksstudio.mlauncher.data
 
 import android.content.Context
 import android.content.SharedPreferences
+import android.graphics.Color
 import android.os.UserHandle
 import android.util.Log
 import androidx.core.content.ContextCompat.getColor
+import com.github.droidworksstudio.common.showLongToast
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.Constants.Gravity
 import com.github.droidworksstudio.mlauncher.helper.getUserHandleFromString
@@ -141,6 +143,68 @@ class Prefs(val context: Context) {
         }
         editor.apply()
     }
+
+    fun saveToTheme(colorNames: List<String>): String {
+        val allPrefs = prefs.all
+        val filteredPrefs = mutableMapOf<String, String>()
+
+        for (colorName in colorNames) {
+            if (allPrefs.containsKey(colorName)) {
+                val colorInt = allPrefs[colorName] as? Int
+                if (colorInt != null) {
+                    val hexColor = String.format("#%08X", colorInt) // Converts ARGB int to #AARRGGBB
+                    filteredPrefs[colorName] = hexColor
+                }
+            }
+        }
+
+        return Gson().toJson(filteredPrefs)
+    }
+
+    fun loadFromTheme(json: String) {
+        val editor = prefs.edit()
+        val all: HashMap<String, Any?> =
+            Gson().fromJson(json, object : TypeToken<HashMap<String, Any?>>() {}.type)
+
+        for ((key, value) in all) {
+            try {
+                when (value) {
+                    is String -> {
+                        if (value.matches(Regex("^#([A-Fa-f0-9]{8})$"))) {
+                            // Convert HEX color (#AARRGGBB) to Int safely
+                            try {
+                                editor.putInt(key, Color.parseColor(value))
+                            } catch (e: IllegalArgumentException) {
+                                context.showLongToast("Invalid color format for key: $key, value: $value")
+                                Log.e("Theme Import", "Invalid color format for key: $key, value: $value", e)
+                                continue
+                            }
+                        } else {
+                            context.showLongToast("Unsupported value type for key: $key, value: $value")
+                            Log.e("Theme Import", "Null value found for key: $key")
+                        }
+                    }
+
+                    null -> {
+                        context.showLongToast("Null value found for key: $key")
+                        Log.e("Theme Import", "Null value found for key: $key")
+                        continue
+                    }
+
+                    else -> {
+                        context.showLongToast("Unsupported value type for key: $key, value: $value")
+                        Log.e("Theme Import", "Unsupported value type for key: $key, value: $value")
+                        continue
+                    }
+                }
+            } catch (e: Exception) {
+                context.showLongToast("Error processing key: $key, value: $value")
+                Log.e("Theme Import", "Error processing key: $key, value: $value", e)
+            }
+        }
+        editor.apply()
+    }
+
 
     var appVersion: Int
         get() = prefs.getInt(APP_VERSION, -1)

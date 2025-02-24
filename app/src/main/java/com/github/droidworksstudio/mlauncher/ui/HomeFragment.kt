@@ -833,7 +833,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                         getUsageStats(
                             context,
                             prefs.getHomeAppModel(i).activityPackage
-                        )
+                        ), false
                     )
                     setOnTouchListener(getHomeAppsGestureListener(context, this))
                     setOnClickListener(this@HomeFragment)
@@ -876,7 +876,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         // Create a new TextView instance
         val totalText = getString(R.string.show_total_screen_time)
         val totalTime = context?.let { getTotalScreenTime(it) }
-        val totalScreenTime = totalTime?.let { formatMillisToHMS(it) }
+        val totalScreenTime = totalTime?.let { formatMillisToHMS(it, true) }
+        Log.d("totalScreenTime", "$totalScreenTime")
         val totalScreenTimeJoin = "$totalText: $totalScreenTime"
         // Set properties for the TextView (optional)
         binding.totalScreenTime.apply {

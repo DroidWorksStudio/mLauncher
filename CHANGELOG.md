@@ -6,6 +6,26 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Implemented Enhancements:
 
+- Added dracula color theme for download. - ([212f783](https://github.com/DroidWorksStudio/mLauncher/commit/212f783770dae128202245fbf59126e9ffd83727))
+- Added custom theme import and export. - ([a56e9a9](https://github.com/DroidWorksStudio/mLauncher/commit/a56e9a9531adf8c65b8d5a775cacf5a4897a10eb))
+
+### Bug Fixes:
+
+- Typo on the word `Click` - ([8ea6176](https://github.com/DroidWorksStudio/mLauncher/commit/8ea61765c32e4f87058ad1a6ab0d192c5150736a))
+- Fixed usage time display - ([7eff169](https://github.com/DroidWorksStudio/mLauncher/commit/7eff169a1563605677bb4204aeb9ae523b26fa2f))
+
+### Refactoring:
+
+- Added error handling to theme imports - ([00cc656](https://github.com/DroidWorksStudio/mLauncher/commit/00cc65632a7c7ea20cc127e4089da070baf34530))
+
+### Releases:
+
+- Prepare for version 1.7.6 - ([730efbd](https://github.com/DroidWorksStudio/mLauncher/commit/730efbd2287f19e15b967c8237c2b51cebda6245))
+
+## [1.7.5](https://github.com/DroidWorksStudio/mLauncher/tree/1.7.5) - (23, February 2025)
+
+### Implemented Enhancements:
+
 - Added app icon support for homescreen - ([2736339](https://github.com/DroidWorksStudio/mLauncher/commit/27363396c85dcc601336b1bccaf1a3ccfcb5eb47))
 - Added Digital Wellbeing to the gesture settings - ([bb9ca59](https://github.com/DroidWorksStudio/mLauncher/commit/bb9ca59924fb76fd36dd72387a19251962a5c650))
 - Add a button to the home screen that can be used as a gesture. - ([2ce7e52](https://github.com/DroidWorksStudio/mLauncher/commit/2ce7e520003248e5e84e61cfe4457d0950a94aa2))

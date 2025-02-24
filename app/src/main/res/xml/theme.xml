@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<theme>
+    <color colorName="BACKGROUND_COLOR" />
+    <color colorName="APP_COLOR" />
+    <color colorName="DATE_COLOR" />
+    <color colorName="ALARM_CLOCK_COLOR" />
+    <color colorName="CLOCK_COLOR" />
+    <color colorName="BATTERY_COLOR" />
+    <color colorName="DAILY_WORD_COLOR" />
+</theme>

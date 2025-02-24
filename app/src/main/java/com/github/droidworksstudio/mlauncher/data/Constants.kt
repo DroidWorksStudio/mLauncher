@@ -35,6 +35,9 @@ object Constants {
     const val BACKUP_WRITE = 1
     const val BACKUP_READ = 2
 
+    const val THEME_BACKUP_WRITE = 11
+    const val THEME_BACKUP_READ = 12
+
     const val MIN_CLOCK_DATE_SIZE = 10
     const val MAX_CLOCK_DATE_SIZE = 120
 
@@ -95,6 +98,10 @@ object Constants {
         }
     }
 
+    enum class BackupType {
+        FullSystem,
+        Theme
+    }
 
     enum class AppDrawerFlag {
         LaunchApp,
