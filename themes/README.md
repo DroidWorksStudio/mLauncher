@@ -7,7 +7,7 @@ This folder contains exported themes for the mLauncher. Themes are stored as `.m
 
 1. Open the mLauncher settings.
 2. Navigate to the advanced section.
-3. Clcik `Theme Creations` then Export.
+3. Click `Theme Creations` then Export.
 4. Choose a filename (must have the `.mtheme` extension).
 5. Save the file to your desired location.
 
@@ -15,7 +15,7 @@ This folder contains exported themes for the mLauncher. Themes are stored as `.m
 
 1. Open the mLauncher settings.
 2. Navigate to the advanced section.
-3. Clcik `Theme Creations` then Import.
+3. Click `Theme Creations` then Import.
 4. Select an `.mtheme` file from your device.
 5. The theme settings will be applied after verification.
 
