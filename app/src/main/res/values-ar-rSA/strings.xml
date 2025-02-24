@@ -121,6 +121,10 @@
     <string name="advanced_settings_backup_restore_backup">دعم</string>
     <string name="advanced_settings_backup_restore_restore">يعيد</string>
     <string name="advanced_settings_backup_restore_clear">مسح كافة البيانات</string>
+    <string name="advanced_settings_theme_title">Theme Creations</string>
+    <string name="advanced_settings_theme_description">Customize themes to suit you.</string>
+    <string name="advanced_settings_theme_export">Export</string>
+    <string name="advanced_settings_theme_import">Import</string>
     <string name="advanced_settings_backup_restore_clear_title">مسح التفضيلات</string>
     <string name="advanced_settings_backup_restore_clear_description">هل أنت متأكد أنك تريد القيام بهذا؟</string>
     <string name="advanced_settings_backup_restore_clear_yes">نعم</string>
