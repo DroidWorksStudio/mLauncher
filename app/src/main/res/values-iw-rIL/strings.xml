@@ -121,6 +121,10 @@
     <string name="advanced_settings_backup_restore_backup">גיבוי</string>
     <string name="advanced_settings_backup_restore_restore">לְשַׁחְזֵר</string>
     <string name="advanced_settings_backup_restore_clear">נקה את כל הנתונים</string>
+    <string name="advanced_settings_theme_title">Theme Creations</string>
+    <string name="advanced_settings_theme_description">Customize themes to suit you.</string>
+    <string name="advanced_settings_theme_export">Export</string>
+    <string name="advanced_settings_theme_import">Import</string>
     <string name="advanced_settings_backup_restore_clear_title">נקה העדפות</string>
     <string name="advanced_settings_backup_restore_clear_description">האם אתה בטוח שאתה רוצה לעשות זאת?</string>
     <string name="advanced_settings_backup_restore_clear_yes">כֵּן</string>
