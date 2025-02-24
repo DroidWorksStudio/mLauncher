@@ -121,10 +121,10 @@
     <string name="advanced_settings_backup_restore_backup">バックアップ</string>
     <string name="advanced_settings_backup_restore_restore">復元する</string>
     <string name="advanced_settings_backup_restore_clear">すべてのデータを消去</string>
-    <string name="advanced_settings_theme_title">Theme Creations</string>
-    <string name="advanced_settings_theme_description">Customize themes to suit you.</string>
-    <string name="advanced_settings_theme_export">Export</string>
-    <string name="advanced_settings_theme_import">Import</string>
+    <string name="advanced_settings_theme_title">テーマ作成</string>
+    <string name="advanced_settings_theme_description">自分に合ったテーマをカスタマイズします。</string>
+    <string name="advanced_settings_theme_export">輸出</string>
+    <string name="advanced_settings_theme_import">輸入</string>
     <string name="advanced_settings_backup_restore_clear_title">設定をクリア</string>
     <string name="advanced_settings_backup_restore_clear_description">本当にこれを実行しますか?</string>
     <string name="advanced_settings_backup_restore_clear_yes">はい</string>
