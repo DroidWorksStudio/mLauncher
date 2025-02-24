@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Implemented Enhancements:
+
+- Added custom theme import and export. - ([a56e9a9](https://github.com/DroidWorksStudio/mLauncher/commit/a56e9a9531adf8c65b8d5a775cacf5a4897a10eb))
+
 ### Bug Fixes:
 
 - Fixed usage time display - ([7eff169](https://github.com/DroidWorksStudio/mLauncher/commit/7eff169a1563605677bb4204aeb9ae523b26fa2f))
