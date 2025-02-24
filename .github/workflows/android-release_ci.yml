@@ -58,3 +58,12 @@ jobs:
           asset_name: mLauncher-${{ github.ref_name }}-Signed.apk
           tag: ${{ github.ref }}
           overwrite: true
+
+      # Send APK to Discord
+      - name: Send Signed APK to Discord
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          curl -X POST $DISCORD_WEBHOOK_URL \
+            -F "content=Here is the signed APK for version ${{ github.ref_name }}!" \
+            -F "file=@${{ steps.sign_app.outputs.signedFile }}"
