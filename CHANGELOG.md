@@ -6,11 +6,16 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Implemented Enhancements:
 
+- Added dracula color theme for download. - ([212f783](https://github.com/DroidWorksStudio/mLauncher/commit/212f783770dae128202245fbf59126e9ffd83727))
 - Added custom theme import and export. - ([a56e9a9](https://github.com/DroidWorksStudio/mLauncher/commit/a56e9a9531adf8c65b8d5a775cacf5a4897a10eb))
 
 ### Bug Fixes:
 
 - Fixed usage time display - ([7eff169](https://github.com/DroidWorksStudio/mLauncher/commit/7eff169a1563605677bb4204aeb9ae523b26fa2f))
+
+### Refactoring:
+
+- Added error handling to theme imports - ([00cc656](https://github.com/DroidWorksStudio/mLauncher/commit/00cc65632a7c7ea20cc127e4089da070baf34530))
 
 ### Releases:
 
