@@ -8,6 +8,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Added Bank Gothic font. - ([bd5078d](https://github.com/DroidWorksStudio/mLauncher/commit/bd5078d24b8547052e4d4d3a8178f8993ca88833))
 
+### Bug Fixes:
+
+- Fixed the reordering of apps in FavoriteFragment - ([da7c627](https://github.com/DroidWorksStudio/mLauncher/commit/da7c62764c15848bdc92cbcc23eadaa62be2ed6f))
+
 ### Releases:
 
 - Prepare for version 1.7.7 - ([1e5a9bf](https://github.com/DroidWorksStudio/mLauncher/commit/1e5a9bf74741129c2b6a9a0400a2ce59b2a36c59))
