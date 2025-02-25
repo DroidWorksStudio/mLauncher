@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
+## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
+
+### Releases:
+
+- Prepare for version 1.7.7 - ([1e5a9bf](https://github.com/DroidWorksStudio/mLauncher/commit/1e5a9bf74741129c2b6a9a0400a2ce59b2a36c59))
+
 ## [1.7.6](https://github.com/DroidWorksStudio/mLauncher/tree/1.7.6) - (25, February 2025)
 
 ### Implemented Enhancements:
