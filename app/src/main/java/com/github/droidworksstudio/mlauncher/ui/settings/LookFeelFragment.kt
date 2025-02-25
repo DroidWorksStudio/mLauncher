@@ -371,7 +371,7 @@ class LookFeelFragment : Fragment() {
                         onItemSelected = { newAppIcons ->
                             selectedAppIcons = newAppIcons // Update state
                             prefs.iconPack = newAppIcons // Persist selection in preferences
-                            viewModel.updateIconPack(newAppIcons)
+                            viewModel.iconPack.value = newAppIcons
                         }
                     )
                 }

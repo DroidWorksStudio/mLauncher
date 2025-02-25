@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/homeApp1"
+    android:id="@+id/homeAppLabel"
     style="@style/TextLarge"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:hint="@string/select_app"
     android:paddingVertical="@dimen/home_app_padding_vertical"

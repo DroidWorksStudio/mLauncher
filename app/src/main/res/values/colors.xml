@@ -37,6 +37,8 @@
     <color name="fab_background">#FFFFFFFF</color>
     <color name="fab_border">#FFCCCCCC</color>
 
+    <color name="hover_effect">#1AFFFFFF</color>
+
     <color name="green">#4CAF50</color>
     <color name="orange">#AF684C</color>
     <color name="red">#AF4C4C</color>

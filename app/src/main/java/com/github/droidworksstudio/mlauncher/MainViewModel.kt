@@ -26,8 +26,9 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     val firstOpen = MutableLiveData<Boolean>()
     val showMessageDialog = MutableLiveData<String>()
 
-    val appList = MutableLiveData<List<AppListItem>?>() // TODO why maybe?
+    val appList = MutableLiveData<List<AppListItem>?>()
     val hiddenApps = MutableLiveData<List<AppListItem>?>()
+    val homeAppsOrder = MutableLiveData<List<AppListItem>>()  // Store actual app items
     private val launcherDefault = MutableLiveData<Boolean>()
 
     val showDate = MutableLiveData(prefs.showDate)
@@ -184,7 +185,26 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         showMessageDialog.postValue(message)
     }
 
-    fun updateIconPack(gravity: Constants.IconPacks) {
-        iconPack.value = gravity
+    fun updateAppOrder(fromPosition: Int, toPosition: Int) {
+        val currentOrder = homeAppsOrder.value?.toMutableList() ?: return
+
+        // Move the actual app object in the list
+        val app = currentOrder.removeAt(fromPosition)
+        currentOrder.add(toPosition, app)
+
+        homeAppsOrder.postValue(currentOrder)
+        saveAppOrder(currentOrder)  // Save new order in preferences
+    }
+
+    private fun saveAppOrder(order: List<AppListItem>) {
+        order.forEachIndexed { index, app ->
+            prefs.setHomeAppModel(index, app)  // Save app in its new order
+        }
+    }
+
+    fun loadAppOrder() {
+        val savedOrder = (0 until prefs.homeAppsNum)
+            .mapNotNull { prefs.getHomeAppModel(it) } // Ensure it doesn’t return null
+        homeAppsOrder.postValue(savedOrder) // ✅ Now posts a valid list
     }
 }

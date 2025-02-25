@@ -12,9 +12,8 @@
         android:id="@+id/pageLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="22dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginHorizontal="22dp"
+        android:layout_marginVertical="24dp"
         android:orientation="vertical"
         tools:ignore="UselessParent"
         tools:visibility="visible">
@@ -24,25 +23,16 @@
             style="@style/TextDefault"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingVertical="2dp"
+            android:layout_marginVertical="24dp"
             android:textSize="@dimen/date_size" />
 
         <!-- Home apps-->
-        <ScrollView
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/homeAppsRecyclerview"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/home_app_button" />
 
-            <LinearLayout
-                android:id="@+id/homeAppsLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="vertical"
-                android:paddingTop="22dp"
-                android:paddingBottom="50dp" />
-
-        </ScrollView>
     </LinearLayout>
 
 </FrameLayout>

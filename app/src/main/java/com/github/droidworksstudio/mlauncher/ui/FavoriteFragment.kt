@@ -1,30 +1,19 @@
-/**
- * You can get to this fragment from the "reorder
- */
-
 package com.github.droidworksstudio.mlauncher.ui
 
-import android.annotation.SuppressLint
 import android.app.admin.DevicePolicyManager
-import android.content.ClipData
 import android.content.Context
 import android.content.Context.VIBRATOR_SERVICE
-import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.os.Vibrator
-import android.util.Log
-import android.view.DragEvent
-import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ScrollView
-import android.widget.TextView
 import androidx.core.content.ContextCompat
-import androidx.core.view.children
-import androidx.core.view.size
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.ItemTouchHelper
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.github.droidworksstudio.mlauncher.MainViewModel
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.Prefs
@@ -56,7 +45,6 @@ class FavoriteFragment : Fragment() {
         return view
     }
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -72,9 +60,88 @@ class FavoriteFragment : Fragment() {
         @Suppress("DEPRECATION")
         vibrator = context?.getSystemService(VIBRATOR_SERVICE) as Vibrator
 
+        // Initialize the adapter and pass prefs to it
+        val adapter = HomeAppsAdapter(mutableListOf(), { from, to ->
+            viewModel.updateAppOrder(from, to)
+        }, prefs)  // Pass prefs to the adapter
+
+        binding.homeAppsRecyclerview.layoutManager = LinearLayoutManager(requireContext()) // Set LayoutManager
+        binding.homeAppsRecyclerview.adapter = adapter
+
+        // Initialize the ItemTouchHelper to enable drag-and-drop
+        val callback = object : ItemTouchHelper.Callback() {
+            override fun getMovementFlags(
+                recyclerView: RecyclerView,
+                viewHolder: RecyclerView.ViewHolder
+            ): Int {
+                val dragFlags = ItemTouchHelper.UP or ItemTouchHelper.DOWN
+                return makeMovementFlags(dragFlags, 0)
+            }
+
+            override fun onMove(
+                recyclerView: RecyclerView,
+                source: RecyclerView.ViewHolder,
+                target: RecyclerView.ViewHolder
+            ): Boolean {
+                val fromPosition = source.bindingAdapterPosition  // Use bindingAdapterPosition here
+                val toPosition = target.bindingAdapterPosition  // Use bindingAdapterPosition here
+
+                // Change the background color when the item is being dragged
+                source.itemView.setBackgroundColor(ContextCompat.getColor(source.itemView.context, R.color.hover_effect))
+
+                // Check if the positions are valid
+                if (fromPosition != RecyclerView.NO_POSITION && toPosition != RecyclerView.NO_POSITION) {
+                    // Update the order of the items in the adapter
+                    (recyclerView.adapter as HomeAppsAdapter).moveItem(fromPosition, toPosition)
+                    return true
+                }
+                return false
+            }
+
+            override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+                // Not handling swipe-to-dismiss here
+            }
+
+            override fun onSelectedChanged(
+                viewHolder: RecyclerView.ViewHolder?,
+                actionState: Int
+            ) {
+                super.onSelectedChanged(viewHolder, actionState)
+
+                viewHolder?.itemView?.setBackgroundColor(
+                    ContextCompat.getColor(viewHolder.itemView.context, R.color.hover_effect)
+                )
+            }
+
+
+            override fun clearView(recyclerView: RecyclerView, viewHolder: RecyclerView.ViewHolder) {
+                // Reset the background color after dragging is finished
+                super.clearView(recyclerView, viewHolder)
+                viewHolder.itemView.setBackgroundColor(
+                    ContextCompat.getColor(
+                        viewHolder.itemView.context,
+                        R.color.transparent
+                    )
+                )  // Set the background to transparent
+            }
+        }
+
+
+        val itemTouchHelper = ItemTouchHelper(callback)
+        itemTouchHelper.attachToRecyclerView(binding.homeAppsRecyclerview)
+
+        // Load the saved order when the fragment starts
+        viewModel.loadAppOrder()  // Load the app order
+
+        // Observe LiveData and update RecyclerView when order changes
+        viewModel.homeAppsOrder.observe(viewLifecycleOwner) { order ->
+            if (order.isNotEmpty()) {
+                adapter.updateList(order)  // Update the adapter with the new order
+            }
+        }
+
         initObservers()
     }
-
 
     override fun onStart() {
         super.onStart()
@@ -84,144 +151,29 @@ class FavoriteFragment : Fragment() {
         binding.mainLayout.setBackgroundColor(backgroundColor)
     }
 
-
     private fun initObservers() {
-        with(viewModel) {
-            homeAppsNum.observe(viewLifecycleOwner) {
-                updateAppCount(it)
-            }
-        }
-    }
-
-    private fun handleDragEvent(event: DragEvent, targetView: TextView): Boolean {
-        when (event.action) {
-            DragEvent.ACTION_DRAG_STARTED -> {
-                // Indicate that we accept drag events
-                return true
-            }
-
-            DragEvent.ACTION_DRAG_ENTERED -> {
-                // Highlight the target view as the drag enters
-                targetView.setBackgroundResource(R.drawable.reorder_apps_background)
-                return true
-            }
-
-            DragEvent.ACTION_DRAG_EXITED -> {
-                // Remove highlighting when the drag exits
-                targetView.background = null
-                return true
-            }
-
-            DragEvent.ACTION_DROP -> {
-                // Remove highlighting
-                targetView.background = null
-
-                // Extract the dragged TextView
-                val draggedTextView = event.localState as TextView
-
-                // Reorder apps based on the drop position
-                val draggedIndex =
-                    (draggedTextView.parent as ViewGroup).indexOfChild(draggedTextView)
-                val targetIndex = (targetView.parent as ViewGroup).indexOfChild(targetView)
-                reorderApps(draggedIndex, targetIndex)
-
-                return true
-            }
-
-            DragEvent.ACTION_DRAG_ENDED -> {
-                // Remove highlighting when the drag ends
-                targetView.background = null
-                return true
-            }
-
-            else -> return false
-        }
-    }
-
-    private fun reorderApps(draggedIndex: Int, targetIndex: Int) {
-        // Ensure indices are within bounds
-        if (draggedIndex < 0 || draggedIndex >= binding.homeAppsLayout.childCount ||
-            targetIndex < 0 || targetIndex >= binding.homeAppsLayout.childCount
-        ) {
-            // Handle out of bounds indices gracefully, or log an error
-            Log.e(
-                "ReorderApps",
-                "Invalid indices: draggedIndex=$draggedIndex, targetIndex=$targetIndex"
-            )
-            return
-        }
-
-        // Get references to the dragged and target views
-        val draggedView = binding.homeAppsLayout.getChildAt(draggedIndex)
-
-        // Remove the dragged view from its current position
-        binding.homeAppsLayout.removeViewAt(draggedIndex)
-
-        // Add the dragged view at the new position
-        binding.homeAppsLayout.addView(draggedView, targetIndex)
-        val packageDetailsOld = prefs.getHomeAppModel(draggedIndex)
-        val packageDetailsNew = prefs.getHomeAppModel(targetIndex)
-        prefs.setHomeAppModel(targetIndex, packageDetailsOld)
-        prefs.setHomeAppModel(draggedIndex, packageDetailsNew)
-    }
-
-    /**
-     * TODO it looks very complicated. Shouldn't we just re-render the whole list?
-     *      When does it happen?
-     *        - Only when the config option changes,
-     *        - or also when we switch pages of the home screen?
-     */
-
-    @SuppressLint("InflateParams", "SetTextI18n")
-    private fun updateAppCount(newAppsNum: Int) {
         binding.pageName.apply {
             text = getString(R.string.favorite_apps)
             textSize = prefs.appSize * 1.1f
             setTextColor(prefs.appColor)
         }
-        
-        val oldAppsNum = binding.homeAppsLayout.size // current number
-        val diff = oldAppsNum - newAppsNum
 
-        if (diff in 1 until oldAppsNum) { // 1 <= diff <= oldNumApps
-            binding.homeAppsLayout.children.drop(diff)
-        } else if (diff < 0) {
-            val prefixDrawable: Drawable? =
-                context?.let { ContextCompat.getDrawable(it, R.drawable.ic_order_apps) }
-            // add all missing apps to list
-            for (i in oldAppsNum until newAppsNum) {
-                val view = layoutInflater.inflate(R.layout.home_app_button, null) as TextView
-                view.apply {
-                    val appLabel =
-                        prefs.getHomeAppModel(i).activityLabel.ifEmpty { getString(R.string.select_app) }
-                    textSize = prefs.appSize.toFloat()
-                    setTextColor(prefs.appColor)
-                    id = i
-                    text = appLabel
-                    setCompoundDrawablesWithIntrinsicBounds(null, null, prefixDrawable, null)
-                    // Set the gravity to align the text to the end (right side in LTR)
-                    gravity = Gravity.START
-                }
-                val padding: Int = prefs.textPaddingSize
-                view.setPadding(0, padding, 0, padding)
-                binding.homeAppsLayout.addView(view)
+        with(viewModel) {
+            homeAppsNum.observe(viewLifecycleOwner) { newAppsNum ->
+                updateRecyclerView(newAppsNum)
             }
         }
+    }
 
-        for (i in 0 until newAppsNum) {
-            val view = binding.homeAppsLayout.getChildAt(i) as TextView
-            view.setOnDragListener { v, event ->
-                handleDragEvent(event, v as TextView)
+    private fun updateRecyclerView(newAppsNum: Int) {
+        val currentList = viewModel.homeAppsOrder.value ?: emptyList()
+
+        // If the number of apps has changed, update the RecyclerView's list
+        if (currentList.size != newAppsNum) {
+            val newList = (0 until newAppsNum).map { index ->
+                prefs.getHomeAppModel(index) // Retrieve app info from Prefs
             }
-            view.setOnLongClickListener { v ->
-                val dragData = ClipData.newPlainText("", "")
-                val shadowBuilder = View.DragShadowBuilder(v)
-                v.startDragAndDrop(dragData, shadowBuilder, v, 0)
-                true
-            }
+            viewModel.homeAppsOrder.postValue(newList) // Update LiveData to trigger RecyclerView refresh
         }
-
-        // Scroll to the top of the list after updating
-        (binding.homeAppsLayout.parent as? ScrollView)?.scrollTo(0, 0)
     }
 }
