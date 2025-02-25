@@ -2,6 +2,7 @@
     <string name="acra_email" translatable="false">droidworksstudio@063240.xyz</string>
 
     <!-- Font Stings -->
+    <string name="settings_font_bank_gothic" translatable="false">Bank Gothic</string>
     <string name="settings_font_bitter" translatable="false">Bitter</string>
     <string name="settings_font_doto" translatable="false">Doto</string>
     <string name="settings_font_droidsans" translatable="false">Droid Sans</string>

@@ -402,6 +402,7 @@ object Constants {
 
     enum class FontFamily : EnumOption {
         System,
+        BankGothic,
         Bitter,
         Doto,
         DroidSans,
@@ -424,6 +425,7 @@ object Constants {
         fun getFont(context: Context): Typeface? {
             return when (this) {
                 System -> getTrueSystemFont()
+                BankGothic -> ResourcesCompat.getFont(context, R.font.bank_gothic)
                 Bitter -> ResourcesCompat.getFont(context, R.font.bitter)
                 Doto -> ResourcesCompat.getFont(context, R.font.doto)
                 FiraCode -> ResourcesCompat.getFont(context, R.font.fira_code)
@@ -449,6 +451,7 @@ object Constants {
         override fun string(): String {
             return when (this) {
                 System -> stringResource(R.string.system_default)
+                BankGothic -> stringResource(R.string.settings_font_bank_gothic)
                 Bitter -> stringResource(R.string.settings_font_bitter)
                 Doto -> stringResource(R.string.settings_font_doto)
                 DroidSans -> stringResource(R.string.settings_font_droidsans)
