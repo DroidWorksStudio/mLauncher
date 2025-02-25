@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Implemented Enhancements:
+
+- Added Bank Gothic font. - ([bd5078d](https://github.com/DroidWorksStudio/mLauncher/commit/bd5078d24b8547052e4d4d3a8178f8993ca88833))
+
 ### Releases:
 
 - Prepare for version 1.7.7 - ([1e5a9bf](https://github.com/DroidWorksStudio/mLauncher/commit/1e5a9bf74741129c2b6a9a0400a2ce59b2a36c59))
