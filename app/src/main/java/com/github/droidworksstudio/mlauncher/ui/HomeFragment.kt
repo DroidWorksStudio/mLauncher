@@ -1,8 +1,3 @@
-/**
- * The view of the home screen.
- * Meaning, the screen with the clock, and the user-defined list of apps.
- */
-
 package com.github.droidworksstudio.mlauncher.ui
 
 import android.annotation.SuppressLint
@@ -583,40 +578,28 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                         startX = motionEvent.x
                         startY = motionEvent.y
                         startTime = System.currentTimeMillis()
-                        longSwipeTriggered = false // Reset the flag at the start
+                        longSwipeTriggered = false
                     }
 
                     MotionEvent.ACTION_UP -> {
                         val endX = motionEvent.x
                         val endY = motionEvent.y
                         val endTime = System.currentTimeMillis()
-                        val duration = endTime - startTime
                         val deltaX = endX - startX
                         val deltaY = endY - startY
-                        val distance = sqrt((deltaX * deltaX + deltaY * deltaY).toDouble()).toFloat()
+                        val distance = calculateDistance(deltaX, deltaY)
+                        val duration = endTime - startTime
+                        val direction = determineSwipeDirection(deltaX, deltaY)
 
-                        val direction: String = if (abs(deltaX) < abs(deltaY)) {
-                            if (deltaY < 0) "up" else "down"
-                        } else {
-                            if (deltaX < 0) "left" else "right"
-                        }
+                        val isLongSwipe = isLongSwipe(direction, duration, distance)
 
-                        // Get thresholds
-                        val holdDurationThreshold = Constants.HOLD_DURATION_THRESHOLD
-                        Constants.updateSwipeDistanceThreshold(context, direction)
-                        val swipeDistanceThreshold = Constants.SWIPE_DISTANCE_THRESHOLD
-
-                        // Check if it's a long swipe
-                        if (duration >= holdDurationThreshold && distance >= swipeDistanceThreshold) {
-                            longSwipeTriggered = true // Set the flag BEFORE calling the function
+                        if (isLongSwipe) {
                             onLongSwipe(direction)
-                            return true // Stop event propagation
+                            longSwipeTriggered = true
                         }
                     }
                 }
-
-                // If a long swipe was detected, don't let the event propagate to `onSwipeLeft()`
-                return if (longSwipeTriggered) true else super.onTouch(view, motionEvent)
+                return !longSwipeTriggered && super.onTouch(view, motionEvent)
             }
 
 
@@ -672,7 +655,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             private var startX = 0f
             private var startY = 0f
             private var startTime: Long = 0
-            private var longSwipeTriggered = false // Flag to indicate if onLongSwipe was triggered
+            private var longSwipeTriggered = false
 
             @SuppressLint("ClickableViewAccessibility")
             override fun onTouch(view: View, motionEvent: MotionEvent): Boolean {
@@ -681,36 +664,27 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                         startX = motionEvent.x
                         startY = motionEvent.y
                         startTime = System.currentTimeMillis()
-                        longSwipeTriggered = false // Reset the flag
+                        longSwipeTriggered = false
                     }
 
                     MotionEvent.ACTION_UP -> {
                         val endX = motionEvent.x
                         val endY = motionEvent.y
                         val endTime = System.currentTimeMillis()
-                        val duration = endTime - startTime
                         val deltaX = endX - startX
                         val deltaY = endY - startY
-                        val distance =
-                            sqrt((deltaX * deltaX + deltaY * deltaY).toDouble()).toFloat()
-                        val direction: String = if (abs(deltaX) < abs(deltaY)) {
-                            if (deltaY < 0) "up" else "down"
-                        } else {
-                            if (deltaX < 0) "left" else "right"
-                        }
+                        val distance = calculateDistance(deltaX, deltaY)
+                        val duration = endTime - startTime
+                        val direction = determineSwipeDirection(deltaX, deltaY)
 
-                        // Check if it's a hold swipe gesture
-                        val holdDurationThreshold = Constants.HOLD_DURATION_THRESHOLD
-                        Constants.updateSwipeDistanceThreshold(context, direction)
-                        val swipeDistanceThreshold = Constants.SWIPE_DISTANCE_THRESHOLD
+                        val isLongSwipe = isLongSwipe(direction, duration, distance)
 
-                        if (duration <= holdDurationThreshold && distance >= swipeDistanceThreshold) {
+                        if (isLongSwipe) {
                             onLongSwipe(direction)
-                            longSwipeTriggered = true // Set the flag if onLongSwipe was triggered
+                            longSwipeTriggered = true
                         }
                     }
                 }
-                // Return false to continue to pass the event to onSwipeLeft if onLongSwipe was not triggered
                 return !longSwipeTriggered && super.onTouch(view, motionEvent)
             }
 
@@ -724,6 +698,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 textOnClick(view)
             }
 
+            // Short swipe handling for various directions
             override fun onSwipeLeft() {
                 super.onSwipeLeft()
                 when (val action = prefs.shortSwipeLeftAction) {
@@ -756,6 +731,29 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 }
             }
         }
+    }
+
+    // Helper method to calculate distance of swipe
+    private fun calculateDistance(deltaX: Float, deltaY: Float): Float {
+        return sqrt((deltaX * deltaX + deltaY * deltaY).toDouble()).toFloat()
+    }
+
+    // Helper method to determine the swipe direction
+    private fun determineSwipeDirection(deltaX: Float, deltaY: Float): String {
+        return if (abs(deltaX) < abs(deltaY)) {
+            if (deltaY < 0) "up" else "down"
+        } else {
+            if (deltaX < 0) "left" else "right"
+        }
+    }
+
+    // Helper method to check if the swipe is long based on duration and distance
+    private fun isLongSwipe(direction: String, duration: Long, distance: Float): Boolean {
+        val holdDurationThreshold = Constants.HOLD_DURATION_THRESHOLD
+        Constants.updateSwipeDistanceThreshold(requireContext(), direction)
+        val swipeDistanceThreshold = Constants.SWIPE_DISTANCE_THRESHOLD
+
+        return duration <= holdDurationThreshold && distance >= swipeDistanceThreshold
     }
 
     private fun onLongSwipe(direction: String) {
