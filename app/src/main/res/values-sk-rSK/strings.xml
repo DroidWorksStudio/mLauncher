@@ -132,7 +132,8 @@
     <string name="advanced_settings_help_feedback_title">Pomoc &amp; Spätná väzba</string>
     <string name="advanced_settings_community_support_title">Podpora komunity</string>
     <string name="advanced_settings_share_application_title">Zdieľať aplikáciu</string>
-    <string name="advanced_settings_share_application_description">Zvýšte svoje skúsenosti s %1$s! Získajte to teraz na fDroid a uvidíte, o čom všetci hovoria!\n</string>
+    <string name="advanced_settings_share_application_description">Elevate your experience with %1$s!</string>
+    <string name="advanced_settings_share_application_description_addon">Get it now on %1$s and see what everyone is talking about! %2$s\n</string>
     <!-- App Page Strings -->
     <string name="hidden_apps">Skryté aplikácie</string>
     <string name="favorite_apps">Obľúbené aplikácie</string>
