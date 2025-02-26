@@ -132,7 +132,8 @@
     <string name="advanced_settings_help_feedback_title">Ayuda &amp; Comentarios</string>
     <string name="advanced_settings_community_support_title">Apoyo comunitario</string>
     <string name="advanced_settings_share_application_title">Compartir aplicación</string>
-    <string name="advanced_settings_share_application_description">Mejora tu experiencia con %1$s. ¡Consíguelo ahora en fDroid y descubre de qué habla todo el mundo!\n</string>
+    <string name="advanced_settings_share_application_description">Elevate your experience with %1$s!</string>
+    <string name="advanced_settings_share_application_description_addon">Get it now on %1$s and see what everyone is talking about! %2$s\n</string>
     <!-- App Page Strings -->
     <string name="hidden_apps">Aplicaciones ocultas</string>
     <string name="favorite_apps">Aplicaciones favoritas</string>
