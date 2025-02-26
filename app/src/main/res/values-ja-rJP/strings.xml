@@ -132,7 +132,8 @@
     <string name="advanced_settings_help_feedback_title">ヘルプ &amp; フィードバック</string>
     <string name="advanced_settings_community_support_title">コミュニティサポート</string>
     <string name="advanced_settings_share_application_title">アプリケーションを共有する</string>
-    <string name="advanced_settings_share_application_description">%1$sで体験を向上させましょう! 今すぐ fDroid で入手して、みんなが何を話しているか見てみましょう!\n</string>
+    <string name="advanced_settings_share_application_description">Elevate your experience with %1$s!</string>
+    <string name="advanced_settings_share_application_description_addon">Get it now on %1$s and see what everyone is talking about! %2$s\n</string>
     <!-- App Page Strings -->
     <string name="hidden_apps">非表示のアプリ</string>
     <string name="favorite_apps">お気に入りのアプリ</string>
