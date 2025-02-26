@@ -176,7 +176,9 @@
     <string name="advanced_settings_community_support_title">Community Support</string>
 
     <string name="advanced_settings_share_application_title">Share Application</string>
-    <string name="advanced_settings_share_application_description">Elevate your experience with %1$s! Get it now on fDroid and see what everyone is talking about!\n</string>
+    <string name="advanced_settings_share_application_description">Elevate your experience with %1$s!</string>
+    <string name="advanced_settings_share_application_description_addon">Get it now on %1$s and see what everyone is talking about! %2$s\n</string>
+
 
     <!-- App Page Strings -->
     <string name="hidden_apps">Hidden Apps</string>
