@@ -1,1 +1,1 @@
-Forked from mLauncher, +minimalization, +customizability
+Bifurcado de mLauncher, +minimalización, +personalización
