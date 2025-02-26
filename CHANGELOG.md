@@ -12,6 +12,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Fixed the reordering of apps in FavoriteFragment - ([da7c627](https://github.com/DroidWorksStudio/mLauncher/commit/da7c62764c15848bdc92cbcc23eadaa62be2ed6f))
 
+### Feature Removal:
+
+- Removed the old HomeAppsAdapter.kt - ([44e501d](https://github.com/DroidWorksStudio/mLauncher/commit/44e501d23dee5b4fdb2d6b9ef8ed3fc5e33c555d))
+
 ### Language Support:
 
 - Updated Language Files. ([#677](https://github.com/DroidWorksStudio/mLauncher/issues/677)) - ([fa09207](https://github.com/DroidWorksStudio/mLauncher/commit/fa092073ba90fee517d0204e706b418896670dc3))
