@@ -1,1 +1,1 @@
-Abgespalten von Olauncher, +Minimierung, +Anpassbarkeit
+Forked from mLauncher, +minimalization, +customizability
