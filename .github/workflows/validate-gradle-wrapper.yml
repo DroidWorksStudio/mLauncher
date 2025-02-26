@@ -16,5 +16,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4.2.2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GIT_BOT_TOKEN }}
       - uses: gradle/wrapper-validation-action@v3.5.0
