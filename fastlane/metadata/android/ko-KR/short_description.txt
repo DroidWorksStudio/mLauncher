@@ -1,1 +1,1 @@
-Olauncher에서 분기됨, +최소화, +사용자 정의 가능
+Forked from mLauncher, +minimalization, +customizability
