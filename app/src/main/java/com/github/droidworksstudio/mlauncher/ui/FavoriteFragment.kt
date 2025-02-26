@@ -61,7 +61,7 @@ class FavoriteFragment : Fragment() {
         vibrator = context?.getSystemService(VIBRATOR_SERVICE) as Vibrator
 
         // Initialize the adapter and pass prefs to it
-        val adapter = HomeAppsAdapter(mutableListOf(), { from, to ->
+        val adapter = FavoriteAdapter(mutableListOf(), { from, to ->
             viewModel.updateAppOrder(from, to)
         }, prefs)  // Pass prefs to the adapter
 
@@ -92,7 +92,7 @@ class FavoriteFragment : Fragment() {
                 // Check if the positions are valid
                 if (fromPosition != RecyclerView.NO_POSITION && toPosition != RecyclerView.NO_POSITION) {
                     // Update the order of the items in the adapter
-                    (recyclerView.adapter as HomeAppsAdapter).moveItem(fromPosition, toPosition)
+                    (recyclerView.adapter as FavoriteAdapter).moveItem(fromPosition, toPosition)
                     return true
                 }
                 return false
