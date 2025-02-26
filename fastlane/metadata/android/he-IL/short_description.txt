@@ -1,1 +1,1 @@
-פוצל מ-Olauncher, +מזעור, +התאמה אישית
+Forked from mLauncher, +minimalization, +customizability
