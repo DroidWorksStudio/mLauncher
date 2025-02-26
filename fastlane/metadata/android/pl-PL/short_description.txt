@@ -1,1 +1,1 @@
-Rozwidlony z Olauncher, +minimalizacja, +możliwość dostosowania
+Forked from mLauncher, +minimalization, +customizability
