@@ -132,8 +132,8 @@
     <string name="advanced_settings_help_feedback_title">עזרה &amp; משוב</string>
     <string name="advanced_settings_community_support_title">תמיכה קהילתית</string>
     <string name="advanced_settings_share_application_title">שתף את היישום</string>
-    <string name="advanced_settings_share_application_description">Elevate your experience with %1$s!</string>
-    <string name="advanced_settings_share_application_description_addon">Get it now on %1$s and see what everyone is talking about! %2$s\n</string>
+    <string name="advanced_settings_share_application_description">שפר את החוויה שלך עם %1$s!</string>
+    <string name="advanced_settings_share_application_description_addon">השג אותו עכשיו ב- %1$s וראה על מה כולם מדברים! %2$s\n</string>
     <!-- App Page Strings -->
     <string name="hidden_apps">יישומים מוסתרים</string>
     <string name="favorite_apps">יישומים מועדפים</string>
