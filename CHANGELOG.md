@@ -12,6 +12,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Fixed the reordering of apps in FavoriteFragment - ([da7c627](https://github.com/DroidWorksStudio/mLauncher/commit/da7c62764c15848bdc92cbcc23eadaa62be2ed6f))
 
+### Language Support:
+
+- Updated Language Files. ([#677](https://github.com/DroidWorksStudio/mLauncher/issues/677)) - ([fa09207](https://github.com/DroidWorksStudio/mLauncher/commit/fa092073ba90fee517d0204e706b418896670dc3))
+
 ### Refactoring:
 
 - Cleaned up the share info. - ([ebaf2cc](https://github.com/DroidWorksStudio/mLauncher/commit/ebaf2cce8ec6532f107dbd1a66076f3b8a5f6422))
