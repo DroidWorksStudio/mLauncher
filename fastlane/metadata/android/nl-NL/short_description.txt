@@ -1,1 +1,1 @@
-Gevorkt van Olauncher, +minimalisatie, +aanpasbaarheid
+Forked from mLauncher, +minimalization, +customizability
