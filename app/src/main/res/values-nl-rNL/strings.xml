@@ -132,8 +132,8 @@
     <string name="advanced_settings_help_feedback_title">Hulp &amp; Feedback</string>
     <string name="advanced_settings_community_support_title">Ondersteuning van de gemeenschap</string>
     <string name="advanced_settings_share_application_title">Deel applicatie</string>
-    <string name="advanced_settings_share_application_description">Elevate your experience with %1$s!</string>
-    <string name="advanced_settings_share_application_description_addon">Get it now on %1$s and see what everyone is talking about! %2$s\n</string>
+    <string name="advanced_settings_share_application_description">Verbeter uw ervaring met %1$s!</string>
+    <string name="advanced_settings_share_application_description_addon">Download het nu op %1$s en zie waar iedereen het over heeft! %2$s\n</string>
     <!-- App Page Strings -->
     <string name="hidden_apps">Verborgen apps</string>
     <string name="favorite_apps">Favoriete apps</string>
