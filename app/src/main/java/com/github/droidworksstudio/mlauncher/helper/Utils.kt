@@ -294,20 +294,59 @@ fun communitySupportButton(context: Context) {
     context.startActivity(intent)
 }
 
+@RequiresApi(Build.VERSION_CODES.R)
 fun shareApplicationButton(context: Context) {
     val shareIntent = Intent(Intent.ACTION_SEND)
-    val description = context.getString(
-        R.string.advanced_settings_share_application_description,
-        context.getString(R.string.app_name)
-    )
+
     shareIntent.type = "text/plain"
     shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Share Application")
     shareIntent.putExtra(
         Intent.EXTRA_TEXT,
-        "$description https://f-droid.org/packages/${context.packageName}"
+        checkWhoInstalled(context)
     )
     context.startActivity(Intent.createChooser(shareIntent, "Share Application"))
 }
+
+
+@Suppress("DEPRECATION")
+fun checkWhoInstalled(context: Context): String {
+    val appName = context.getString(R.string.app_name)
+    val descriptionTemplate = context.getString(R.string.advanced_settings_share_application_description)
+    val descriptionTemplate2 = context.getString(R.string.advanced_settings_share_application_description_addon)
+
+    // Get the installer package name
+    val installer: String? = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+        // For Android 11 (API 30) and above
+        val installSourceInfo = context.packageManager.getInstallSourceInfo(context.packageName)
+        installSourceInfo.installingPackageName
+    } else {
+        // For older versions
+        context.packageManager.getInstallerPackageName(context.packageName)
+    }
+
+    // Handle null installer package name
+    val installSource = when (installer) {
+        "com.android.vending" -> "Google Play Store"
+        "org.fdroid.fdroid" -> "F-Droid"
+        null -> "GitHub" // In case installer is null
+        else -> installer // Default to the installer package name
+    }
+
+    val installURL = when (installer) {
+        "com.android.vending" -> "Google Play Store"
+        "org.fdroid.fdroid" -> "https://f-droid.org/packages/app.mlauncher"
+        null -> "https://github.com/DroidWorksStudio/mLauncher" // In case installer is null
+        else -> "Google Play Store" // Default to the Google Play Store
+    }
+
+    // Format the description with the app name and install source
+    return String.format(
+        "%s %s",
+        String.format(descriptionTemplate, appName),
+        String.format(descriptionTemplate2, installSource, installURL)
+    )
+}
+
 
 fun openAppInfo(context: Context, userHandle: UserHandle, packageName: String) {
     val launcher = context.getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps

@@ -19,3 +19,7 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+-dontwarn javax.annotation.processing.Processor
+-dontwarn javax.annotation.processing.AbstractProcessor
+-dontwarn javax.annotation.processing.SupportedOptions

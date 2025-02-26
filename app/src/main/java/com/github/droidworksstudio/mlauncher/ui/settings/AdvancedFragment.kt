@@ -3,10 +3,12 @@ package com.github.droidworksstudio.mlauncher.ui.settings
 import android.app.admin.DevicePolicyManager
 import android.content.ComponentName
 import android.content.Context
+import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.RequiresApi
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
@@ -76,12 +78,14 @@ class AdvancedFragment : Fragment() {
     }
 
 
+    @RequiresApi(Build.VERSION_CODES.R)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         resetThemeColors()
     }
 
+    @RequiresApi(Build.VERSION_CODES.R)
     @Composable
     private fun Settings(fontSize: TextUnit = TextUnit.Unspecified) {
         val fs = remember { mutableStateOf(fontSize) }
@@ -225,6 +229,7 @@ class AdvancedFragment : Fragment() {
         return dpValue.dp  // Convert to Dp using the 'dp' extension
     }
 
+    @RequiresApi(Build.VERSION_CODES.R)
     private fun resetThemeColors() {
         binding.settingsView.setContent {
 
