@@ -1,1 +1,1 @@
-Olauncher variantas, +minimalizacija, +pritaikomumas
+Forked from mLauncher, +minimalization, +customizability
