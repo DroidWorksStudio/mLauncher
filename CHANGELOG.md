@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Bug Fixes:
 
+- Fixed the detection of swipes on the home screen. - ([93ea551](https://github.com/DroidWorksStudio/mLauncher/commit/93ea55172296d86c47284d7bc5e3a00409e7fd5e))
 - Fixed the reordering of apps in FavoriteFragment - ([da7c627](https://github.com/DroidWorksStudio/mLauncher/commit/da7c62764c15848bdc92cbcc23eadaa62be2ed6f))
 
 ### Feature Removal:
