@@ -1,1 +1,1 @@
-Forked from mLauncher, +minimalization, +customizability
+mLauncher에서 포크됨, +최소화, +사용자 정의 가능
