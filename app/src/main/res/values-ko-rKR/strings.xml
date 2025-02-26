@@ -132,8 +132,8 @@
     <string name="advanced_settings_help_feedback_title">도움말 &amp; 피드백</string>
     <string name="advanced_settings_community_support_title">커뮤니티 지원</string>
     <string name="advanced_settings_share_application_title">공유 응용 프로그램</string>
-    <string name="advanced_settings_share_application_description">Elevate your experience with %1$s!</string>
-    <string name="advanced_settings_share_application_description_addon">Get it now on %1$s and see what everyone is talking about! %2$s\n</string>
+    <string name="advanced_settings_share_application_description">%1$s로 더욱 향상된 경험을 느껴보세요!</string>
+    <string name="advanced_settings_share_application_description_addon">지금 %1$s 에서 받아보시고 모두가 무슨 이야기를 하는지 확인해보세요! %2$s\n</string>
     <!-- App Page Strings -->
     <string name="hidden_apps">Hidden apps</string>
     <string name="favorite_apps">즐겨찾는 앱</string>
