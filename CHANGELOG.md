@@ -14,6 +14,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Updated for Google Play Usage - ([87d7190](https://github.com/DroidWorksStudio/mLauncher/commit/87d719027be90930ffbe686883cb918821a64d92))
 - Increased app drawer search bar max length from 20 to 50 - ([6027718](https://github.com/DroidWorksStudio/mLauncher/commit/6027718fd043c2621c099843ddf42517b535c502))
 
 ### Releases:
