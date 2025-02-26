@@ -132,7 +132,8 @@
     <string name="advanced_settings_help_feedback_title">Yardım &amp; Geri bildirim</string>
     <string name="advanced_settings_community_support_title">Topluluk Desteği</string>
     <string name="advanced_settings_share_application_title">Paylaşım Uygulaması</string>
-    <string name="advanced_settings_share_application_description">%1$sile deneyiminizi yükseltin! Hemen fDroid\'den edinin ve herkesin ne hakkında konuştuğunu görün!\n</string>
+    <string name="advanced_settings_share_application_description">Elevate your experience with %1$s!</string>
+    <string name="advanced_settings_share_application_description_addon">Get it now on %1$s and see what everyone is talking about! %2$s\n</string>
     <!-- App Page Strings -->
     <string name="hidden_apps">Gizli uygulamalar</string>
     <string name="favorite_apps">Favori Uygulamalar</string>
