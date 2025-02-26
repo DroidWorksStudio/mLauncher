@@ -1,1 +1,1 @@
-Bifurcado de Olauncher, +minimalización, +personalización
+Bifurcado de mLauncher, +minimalización, +personalización

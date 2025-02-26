@@ -1,1 +1,1 @@
-Olauncher variantas, +minimalizacija, +pritaikomumas
+Šakė iš mLauncher, +minimalizavimas, +pritaikymas

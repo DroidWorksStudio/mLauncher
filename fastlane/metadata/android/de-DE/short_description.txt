@@ -1,1 +1,1 @@
-Abgespalten von Olauncher, +Minimierung, +Anpassbarkeit
+Abgezweigt von mLauncher, +Minimalisierung, +Anpassbarkeit
