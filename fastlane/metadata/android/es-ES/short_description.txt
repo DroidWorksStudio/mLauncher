@@ -1,1 +1,1 @@
-Bifurcado de Olauncher, +minimalización, +personalización
+Forked from mLauncher, +minimalization, +customizability
