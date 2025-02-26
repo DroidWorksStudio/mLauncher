@@ -1,1 +1,1 @@
-Форк от Olauncher, +минимализация, +настраиваемость
+Forked from mLauncher, +minimalization, +customizability
