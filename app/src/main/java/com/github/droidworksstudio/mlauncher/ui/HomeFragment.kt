@@ -1047,18 +1047,29 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     }
 
     private fun handleSwipeLeft(totalPages: Int) {
-        if (currentPage < totalPages - 1) {
-            currentPage++
-            updateAppsVisibility(totalPages)
+        if (totalPages <= 0) return // Prevent issues if totalPages is 0 or negative
+
+        currentPage = if (currentPage == 0) {
+            totalPages - 1 // Wrap to last page if on the first page
+        } else {
+            currentPage - 1 // Move to the previous page
         }
+
+        updateAppsVisibility(totalPages)
     }
 
     private fun handleSwipeRight(totalPages: Int) {
-        if (currentPage > 0) {
-            currentPage--
-            updateAppsVisibility(totalPages)
+        if (totalPages <= 0) return // Prevent issues if totalPages is 0 or negative
+
+        currentPage = if (currentPage == totalPages - 1) {
+            0 // Wrap to first page if on the last page
+        } else {
+            currentPage + 1 // Move to the next page
         }
+
+        updateAppsVisibility(totalPages)
     }
+
 
     private fun getTotalAppsCount(): Int {
         return binding.homeAppsLayout.childCount
