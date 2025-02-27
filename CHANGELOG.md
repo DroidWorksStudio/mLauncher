@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Implemented Enhancements:
 
+- Add page wrapping when scrolling home screen pages. - ([2427ccd](https://github.com/DroidWorksStudio/mLauncher/commit/2427ccd499f7355203990d37a036dde284434c40))
 - Added Bank Gothic font. - ([bd5078d](https://github.com/DroidWorksStudio/mLauncher/commit/bd5078d24b8547052e4d4d3a8178f8993ca88833))
 
 ### Bug Fixes:
