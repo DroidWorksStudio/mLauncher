@@ -6,10 +6,12 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Implemented Enhancements:
 
+- Add page wrapping when scrolling home screen pages. - ([2427ccd](https://github.com/DroidWorksStudio/mLauncher/commit/2427ccd499f7355203990d37a036dde284434c40))
 - Added Bank Gothic font. - ([bd5078d](https://github.com/DroidWorksStudio/mLauncher/commit/bd5078d24b8547052e4d4d3a8178f8993ca88833))
 
 ### Bug Fixes:
 
+- Fixed the app crashing and having to clear all data if apps set to 0 - ([e03432f](https://github.com/DroidWorksStudio/mLauncher/commit/e03432fe3d0d21c6635c96bc337373f861c5bf6a))
 - Fixed the detection of swipes on the home screen. - ([93ea551](https://github.com/DroidWorksStudio/mLauncher/commit/93ea55172296d86c47284d7bc5e3a00409e7fd5e))
 - Fixed the reordering of apps in FavoriteFragment - ([da7c627](https://github.com/DroidWorksStudio/mLauncher/commit/da7c62764c15848bdc92cbcc23eadaa62be2ed6f))
 
@@ -23,6 +25,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Cleaned useless commented out code - ([ac1705e](https://github.com/DroidWorksStudio/mLauncher/commit/ac1705ed23a68d0ce07d2eb375c6e0424cd14130))
 - Changed the swipe distance thresholds - ([e0b95c4](https://github.com/DroidWorksStudio/mLauncher/commit/e0b95c42d1e06852777569f09a10341af1b62cfa))
 - Cleaned up the Class files for Favorites - ([99340c6](https://github.com/DroidWorksStudio/mLauncher/commit/99340c6fa04a7acea30922e64961bff8298d0368))
 - Cleaned up the share info. - ([ebaf2cc](https://github.com/DroidWorksStudio/mLauncher/commit/ebaf2cce8ec6532f107dbd1a66076f3b8a5f6422))

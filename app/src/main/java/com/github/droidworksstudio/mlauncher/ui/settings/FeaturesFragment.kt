@@ -337,7 +337,7 @@ class FeaturesFragment : Fragment() {
                             viewModel.homeAppsNum.value = newHomeAppsNum
 
                             // Check if homeAppsNum is less than homePagesNum and update homePagesNum accordingly
-                            if (newHomeAppsNum < selectedHomePagesNum) {
+                            if (newHomeAppsNum in 1..<selectedHomePagesNum) {
                                 selectedHomePagesNum = newHomeAppsNum
                                 prefs.homePagesNum = newHomeAppsNum // Persist the new homePagesNum
                                 viewModel.homePagesNum.value = newHomeAppsNum
