@@ -24,6 +24,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Cleaned useless commented out code - ([ac1705e](https://github.com/DroidWorksStudio/mLauncher/commit/ac1705ed23a68d0ce07d2eb375c6e0424cd14130))
 - Changed the swipe distance thresholds - ([e0b95c4](https://github.com/DroidWorksStudio/mLauncher/commit/e0b95c42d1e06852777569f09a10341af1b62cfa))
 - Cleaned up the Class files for Favorites - ([99340c6](https://github.com/DroidWorksStudio/mLauncher/commit/99340c6fa04a7acea30922e64961bff8298d0368))
 - Cleaned up the share info. - ([ebaf2cc](https://github.com/DroidWorksStudio/mLauncher/commit/ebaf2cce8ec6532f107dbd1a66076f3b8a5f6422))
