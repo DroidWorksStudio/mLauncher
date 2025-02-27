@@ -67,16 +67,16 @@
     <string name="element_alignment">יישור אלמנטים</string>
     <string name="date_alignment">תַאֲרִיך</string>
     <string name="clock_alignment">שָׁעוֹן</string>
-    <string name="alarm_alignment">אַזעָקָה</string>
+    <string name="alarm_alignment">שעון מעורר</string>
     <string name="daily_word_alignment">מילה יומית</string>
-    <string name="home_alignment">אפליקציות בית</string>
-    <string name="drawer_alignment">אפליקציות מגירה</string>
+    <string name="home_alignment">יישומי בית</string>
+    <string name="drawer_alignment">יישומי מגירה</string>
     <string name="element_colors">צבעי אלמנט</string>
-    <string name="background_color">רֶקַע</string>
-    <string name="app_color">אפליקציות</string>
-    <string name="clock_color">שָׁעוֹן</string>
-    <string name="date_color">תַאֲרִיך</string>
-    <string name="alarm_color">אַזעָקָה</string>
+    <string name="background_color">רקע</string>
+    <string name="app_color">יישומים</string>
+    <string name="clock_color">שעון</string>
+    <string name="date_color">תאריך</string>
+    <string name="alarm_color">שעון מעורר</string>
     <string name="daily_word_color">מילה יומית</string>
     <string name="battery_color">סוֹלְלָה</string>
     <!-- Strings used for gestures settings -->
@@ -109,12 +109,12 @@
     <string name="left_page">מעבר לדף השמאלי</string>
     <string name="right_page">מעבר לדף הימני</string>
     <!-- Strings used for advanced settings -->
-    <string name="advanced_settings_title">הגדרות מתקדמות</string>
+    <string name="advanced_settings_title">מתקדם</string>
     <string name="advanced_settings_app_info_title">מידע על האפליקציה</string>
     <string name="advanced_settings_app_info_description">%1$s</string>
     <string name="advanced_settings_set_as_default_launcher">הגדר כמשגר ברירת מחדל</string>
     <string name="advanced_settings_change_default_launcher">שנה את משגר ברירת המחדל</string>
-    <string name="advanced_settings_restart_title">הפעל מחדש את משגר</string>
+    <string name="advanced_settings_restart_title">הפעל מחדש את המשגר</string>
     <string name="advanced_settings_restart_description">ניסית להדליק ולכבות?</string>
     <string name="advanced_settings_backup_restore_title">גיבוי/שחזור</string>
     <string name="advanced_settings_backup_restore_description">אנא היזהר במה אתה מייחל?</string>
@@ -124,11 +124,11 @@
     <string name="advanced_settings_theme_title">יצירות נושא</string>
     <string name="advanced_settings_theme_description">התאם אישית ערכות נושא שיתאימו לך.</string>
     <string name="advanced_settings_theme_export">יְצוּא</string>
-    <string name="advanced_settings_theme_import">יְבוּא</string>
+    <string name="advanced_settings_theme_import">ייבוא</string>
     <string name="advanced_settings_backup_restore_clear_title">נקה העדפות</string>
     <string name="advanced_settings_backup_restore_clear_description">האם אתה בטוח שאתה רוצה לעשות זאת?</string>
-    <string name="advanced_settings_backup_restore_clear_yes">כֵּן</string>
-    <string name="advanced_settings_backup_restore_clear_no">לֹא</string>
+    <string name="advanced_settings_backup_restore_clear_yes">כן</string>
+    <string name="advanced_settings_backup_restore_clear_no">לא</string>
     <string name="advanced_settings_help_feedback_title">עזרה &amp; משוב</string>
     <string name="advanced_settings_community_support_title">תמיכה קהילתית</string>
     <string name="advanced_settings_share_application_title">שתף את היישום</string>
