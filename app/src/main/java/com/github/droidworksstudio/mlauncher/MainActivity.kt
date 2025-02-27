@@ -98,8 +98,6 @@ class MainActivity : AppCompatActivity() {
         prefs = Prefs(this)
         migration = Migration(this)
 
-//        prefs.remove("HOME_PAGES_NUM")
-
         val themeMode = when (prefs.appTheme) {
             Constants.Theme.Light -> AppCompatDelegate.MODE_NIGHT_NO
             Constants.Theme.Dark -> AppCompatDelegate.MODE_NIGHT_YES
