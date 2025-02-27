@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Releases:
+
+- Prepare for version 1.7.8 - ([5c31405](https://github.com/DroidWorksStudio/mLauncher/commit/5c314058b4c88ab7dc673b9c84aaab9f4f4f2ca1))
+
+## [1.7.7](https://github.com/DroidWorksStudio/mLauncher/tree/1.7.7) - (27, February 2025)
+
 ### Implemented Enhancements:
 
 - Add page wrapping when scrolling home screen pages. - ([2427ccd](https://github.com/DroidWorksStudio/mLauncher/commit/2427ccd499f7355203990d37a036dde284434c40))
