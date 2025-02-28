@@ -3,12 +3,16 @@
     <table align='center'>
         Click on any image to enlarge it. To know more, explore and see for yourself.
         <tr>
-            <td><img src='fastlane/metadata/android/en-US/images/phoneScreenshots/0.png' width='150' alt=""></td>
-            <td><img src='fastlane/metadata/android/en-US/images/phoneScreenshots/1.png' width='150' alt=""></td>
-            <td><img src='fastlane/metadata/android/en-US/images/phoneScreenshots/2.png' width='150' alt=""></td>
-            <td><img src='fastlane/metadata/android/en-US/images/phoneScreenshots/3.png' width='150' alt=""></td>
-            <td><img src='fastlane/metadata/android/en-US/images/phoneScreenshots/4.png' width='150' alt=""></td>
-            <td><img src='fastlane/metadata/android/en-US/images/phoneScreenshots/5.png' width='150' alt=""></td>
+            <td><img src='fastlane/metadata/android/en-US/images/phoneScreenshots/0.png' height='200' alt=""></td>
+            <td><img src='fastlane/metadata/android/en-US/images/phoneScreenshots/1.png' height='200' alt=""></td>
+            <td><img src='fastlane/metadata/android/en-US/images/phoneScreenshots/2.png' height='200' alt=""></td>
+            <td><img src='fastlane/metadata/android/en-US/images/phoneScreenshots/3.png' height='200' alt=""></td>
+        </tr>
+        <tr>
+            <td><img src='fastlane/metadata/android/en-US/images/phoneScreenshots/4.png' height='200' alt=""></td>
+            <td><img src='fastlane/metadata/android/en-US/images/phoneScreenshots/5.png' height='200' alt=""></td>
+            <td><img src='fastlane/metadata/android/en-US/images/phoneScreenshots/6.png' height='200' alt=""></td>
+            <td><img src='fastlane/metadata/android/en-US/images/phoneScreenshots/7.png' height='200' alt=""></td>
         </tr>
     </table>
     <p>
@@ -95,7 +99,8 @@ your hard work and dedication. Thank you all for your invaluable contributions!
 
 ## Contribute
 
-- If you are unhappy with any part of the app or feel like missing something, you can open a pull request or an [**issue**](https://github.com/DroidWorksStudio/mLauncher/issues/new/choose) as you like.
+- If you are unhappy with any part of the app or feel like missing something, you can open a pull request or an [**issue
+  **](https://github.com/DroidWorksStudio/mLauncher/issues/new/choose) as you like.
     - Please go through the issues marked as `Bug report`, `Crash report` or `Feature request`.
     - Please can we discuss before sending pull requests.
     - Make pull requests to `main` branch.
