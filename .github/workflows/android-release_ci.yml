@@ -36,12 +36,12 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build
-        run: ./gradlew clean && ./gradlew assembleRelease
+        run: ./gradlew clean && ./gradlew assembleRelease && ./gradlew bundleRelease
 
       - name: Sign APK
         uses: ilharp/sign-android-release@v1.0.4
         # ID used to access action output
-        id: sign_app
+        id: sign_app_apk
         with:
           releaseDir: app/build/outputs/apk/release
           signingKey: ${{ secrets.SIGNINGKEY_BASE64 }}
@@ -54,16 +54,28 @@ jobs:
         uses: svenstaro/upload-release-action@2.9.0
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: ${{steps.sign_app.outputs.signedFile}}
+          file: ${{steps.sign_app_apk.outputs.signedFile}}
           asset_name: mLauncher-${{ github.ref_name }}-Signed.apk
           tag: ${{ github.ref }}
           overwrite: true
 
-      # Send APK to Discord
-      - name: Send Signed APK to Discord
-        env:
-          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-        run: |
-          curl -X POST $DISCORD_WEBHOOK_URL \
-            -F "content=Here is the signed APK for version ${{ github.ref_name }}!" \
-            -F "file=@${{ steps.sign_app.outputs.signedFile }}"
+      - name: Sign AAB
+        uses: ilharp/sign-android-release@v1.0.4
+        # ID used to access action output
+        id: sign_app_aab
+        with:
+          releaseDir: app/build/outputs/bundle/release/
+          signingKey: ${{ secrets.SIGNINGKEY_BASE64 }}
+          keyAlias: ${{ secrets.KEY_ALIAS }}
+          keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
+          keyPassword: ${{ secrets.KEY_PASSWORD }}
+          buildToolsVersion: 35.0.0
+
+      - name: Release to GitHub
+        uses: svenstaro/upload-release-action@2.9.0
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: ${{steps.sign_app_aab.outputs.signedFile}}
+          asset_name: mLauncher-${{ github.ref_name }}-Signed.aab
+          tag: ${{ github.ref }}
+          overwrite: true
