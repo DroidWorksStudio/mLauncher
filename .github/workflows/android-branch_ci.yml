@@ -44,6 +44,6 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4.6.1
         with:
-          name: Signed app bundle
+          name: Signed app apk
           path: app/build/outputs/apk/debug/*.apk
           retention-days: 3
