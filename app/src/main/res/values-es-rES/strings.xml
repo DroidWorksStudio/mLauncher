@@ -161,7 +161,6 @@
     <string name="acra_dialog_text">Lo sentimos, pero %1$s ha encontrado un problema inesperado y necesita cerrarse. Ayúdenos a mejorar enviando un informe de fallos.\n\n%1$s valora su privacidad y los datos recopilados se utilizan únicamente para mejorar la estabilidad de la aplicación. No se recopila información personal. ¡Gracias por tu apoyo!</string>
     <string name="acra_send_report">Enviar reporte</string>
     <string name="acra_dont_send">No enviar</string>
-    <string name="acra_mail_body">Se ha producido un fallo en la aplicación.\n\nA continuación se muestran los detalles del dispositivo. El registro de errores se ha adjuntado como un archivo para su referencia. Agradeceríamos su ayuda para resolver este problema.\n\nInformación del dispositivo: \n[POR FAVOR, complete la información a continuación y elimine cualquier elemento entre corchetes o esto se ignorará.]\n\n- Versión de la aplicación: [0.0.1]\n- Versión de Android: [14]\n- Nombre del dispositivo: [Android Pixel 69]\n- Ubicación de instalación: [github, fdroid, obtanium, self]\n\nApreciamos mucho su pronta atención a este asunto.\n\nGracias.\n</string>
     <!-- Settings Strings -->
     <string name="left">Izquierda</string>
     <string name="right">Derecha</string>
