@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Refactoring:
+
+- Added the link for Google Play Store - ([6bff961](https://github.com/DroidWorksStudio/mLauncher/commit/6bff9619b7e743b4f5c04abea0c4a5158a7fbe63))
+
+## [1.7.8](https://github.com/DroidWorksStudio/mLauncher/tree/1.7.8) - (01, March 2025)
+
 ### Language Support:
 
 - Updated Language Files. ([#681](https://github.com/DroidWorksStudio/mLauncher/issues/681)) - ([02dbc77](https://github.com/DroidWorksStudio/mLauncher/commit/02dbc77e83dcd26f8bc045c1261e5b9f4258d723))
