@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Implemented Enhancements:
+
+- Added the ability to import a Word of the day json file. - ([1985201](https://github.com/DroidWorksStudio/mLauncher/commit/1985201aafd0d1201733722e9f96bbcc94da8184))
+
 ### Refactoring:
 
 - Added the link for Google Play Store - ([6bff961](https://github.com/DroidWorksStudio/mLauncher/commit/6bff9619b7e743b4f5c04abea0c4a5158a7fbe63))
