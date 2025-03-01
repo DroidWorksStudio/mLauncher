@@ -1,7 +1,7 @@
 # gradle/libs.versions.toml
 
 [versions]
-agp = "8.8.1"
+agp = "8.8.2"
 kotlin = "2.1.10"
 
 # AndroidX Core and AppCompat
@@ -15,19 +15,19 @@ lifecycle-extensions = "2.2.0"
 lifecycle-viewmodel-ktx = "2.8.7"
 
 # Navigation
-navigation-fragment-ktx = "2.8.7"
-navigation-ui-ktx = "2.8.7"
-navigation-testing = "2.8.7"
+navigation-fragment-ktx = "2.8.8"
+navigation-ui-ktx = "2.8.8"
+navigation-testing = "2.8.8"
 
 # Work Manager
 work-runtime-ktx = "2.10.0"
 
 # ConstraintLayout
-constraintlayout = "2.2.0"
-constraintlayout-compose = "1.1.0"
+constraintlayout = "2.2.1"
+constraintlayout-compose = "1.1.1"
 
 # Compose Versions
-activity-compose = "1.10.0"
+activity-compose = "1.10.1"
 compose-android = "1.7.8"
 compose-material = "1.7.8"
 compose-animation = "1.7.8"

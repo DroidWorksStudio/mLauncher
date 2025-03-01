@@ -42,7 +42,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/searchContainer"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="10dp"
         android:paddingVertical="@dimen/app_padding_vertical"
         android:textAllCaps="true"
         android:visibility="gone" />
@@ -69,12 +68,11 @@
         android:layout_height="0dp"
         android:layout_below="@id/appDrawerTip"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="25dp"
         android:clipChildren="false"
         android:clipToPadding="false"
         android:overScrollMode="never"
-        android:paddingBottom="48dp" />
+        android:paddingBottom="25dp" />
 
     <!-- List Empty Hint, center aligned -->
     <TextView
