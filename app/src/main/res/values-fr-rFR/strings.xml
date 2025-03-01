@@ -161,7 +161,6 @@
     <string name="acra_dialog_text">Nous sommes désolés, mais %1$s a rencontré un problème inattendu et doit être fermé. Aidez-nous à nous améliorer en envoyant un rapport d\'erreur.\n\n%1$s respecte votre vie privée et les données collectées sont uniquement utilisées pour améliorer la stabilité de l\'application. Aucune donnée personnelle n\'est collectée. Merci pour votre soutien!</string>
     <string name="acra_send_report">Envoyer un rapport</string>
     <string name="acra_dont_send">N\'envoyez pas</string>
-    <string name="acra_mail_body">Un crash s\'est produit dans l\'application.\n\nVous trouverez ci-dessous les détails de l\'appareil. Le journal des erreurs a été joint sous forme de fichier pour votre référence. Nous apprécierions votre aide pour résoudre ce problème.\n\nInformations sur l\'appareil : \n[VEUILLEZ remplir les informations ci-dessous en supprimant également tout ce qui se trouve entre les crochets, sinon cela sera ignoré.]\n\n- Version de l\'application : [0.0.1]\n- Version Android : [14]\n- Nom de l\'appareil : [Android Pixel 69]\n- Emplacement d\'installation : [github, fdroid, obtanium, self]\n\nVotre attention prompte à cette question est grandement appréciée.\n\nMerci.\n</string>
     <!-- Settings Strings -->
     <string name="left">Gauche</string>
     <string name="right">Droite</string>
