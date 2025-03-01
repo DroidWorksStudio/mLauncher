@@ -333,10 +333,10 @@ fun checkWhoInstalled(context: Context): String {
     }
 
     val installURL = when (installer) {
-        "com.android.vending" -> "Google Play Store"
+        "com.android.vending" -> "https://play.google.com/store/apps/details?id=app.mlauncher"
         "org.fdroid.fdroid" -> "https://f-droid.org/packages/app.mlauncher"
         null -> "https://github.com/DroidWorksStudio/mLauncher" // In case installer is null
-        else -> "Google Play Store" // Default to the Google Play Store
+        else -> "https://play.google.com/store/apps/details?id=app.mlauncher" // Default to the Google Play Store
     }
 
     // Format the description with the app name and install source
