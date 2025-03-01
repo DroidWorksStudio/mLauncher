@@ -65,10 +65,10 @@ jobs:
         id: sign_app_aab
         with:
           releaseDir: app/build/outputs/bundle/release/
-          signingKey: ${{ secrets.SIGNINGKEY_BASE64 }}
-          keyAlias: ${{ secrets.KEY_ALIAS }}
-          keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
-          keyPassword: ${{ secrets.KEY_PASSWORD }}
+          signingKey: ${{ secrets.AAB_SIGNINGKEY_BASE64 }}
+          keyAlias: ${{ secrets.AAB_KEY_ALIAS }}
+          keyStorePassword: ${{ secrets.AAB_KEY_STORE_PASSWORD }}
+          keyPassword: ${{ secrets.AAB_KEY_PASSWORD }}
           buildToolsVersion: 35.0.0
 
       - name: Release to GitHub
