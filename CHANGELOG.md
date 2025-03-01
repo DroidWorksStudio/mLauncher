@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Cleaned up app draw. - ([26bb87c](https://github.com/DroidWorksStudio/mLauncher/commit/26bb87c80e9ad68922009d6cb132d22d49905c02))
 - Added abb builds to the workflow for releases - ([87cbbc8](https://github.com/DroidWorksStudio/mLauncher/commit/87cbbc875cb52cc0ab4b156de938c744691742c1))
 
 ### Releases:
