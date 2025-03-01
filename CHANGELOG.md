@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Releases:
+
+- Prepare for version 1.7.9 - ([3ef1927](https://github.com/DroidWorksStudio/mLauncher/commit/3ef1927e7d7f07fe52d2b6de4b394c5df20b5c93))
+
+## [1.7.8](https://github.com/DroidWorksStudio/mLauncher/tree/1.7.8) - (01, March 2025)
+
 ### Language Support:
 
 - Updated Language Files. ([#681](https://github.com/DroidWorksStudio/mLauncher/issues/681)) - ([02dbc77](https://github.com/DroidWorksStudio/mLauncher/commit/02dbc77e83dcd26f8bc045c1261e5b9f4258d723))
