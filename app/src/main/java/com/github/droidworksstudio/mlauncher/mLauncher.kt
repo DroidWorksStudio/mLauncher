@@ -59,7 +59,7 @@ class Mlauncher : Application() {
                 //required
                 mailTo = getString(R.string.acra_email)
                 //defaults to true
-                reportAsFile = true
+                reportAsFile = false
                 //defaults to ACRA-report.stacktrace
                 reportFileName = "$pkgName-crash-report.stacktrace"
                 //defaults to "<applicationId> Crash Report"
