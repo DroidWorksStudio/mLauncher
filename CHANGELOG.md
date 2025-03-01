@@ -8,6 +8,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Added the ability to import a Word of the day json file. - ([1985201](https://github.com/DroidWorksStudio/mLauncher/commit/1985201aafd0d1201733722e9f96bbcc94da8184))
 
+### Language Support:
+
+- Updated Language Files. ([#685](https://github.com/DroidWorksStudio/mLauncher/issues/685)) - ([f197259](https://github.com/DroidWorksStudio/mLauncher/commit/f197259eeabfaa1fb78d4705d9f37a37f3a61536))
+
 ### Refactoring:
 
 - Added a demo wordoftheday.json for imports - ([dba35b1](https://github.com/DroidWorksStudio/mLauncher/commit/dba35b13c7dd73999ca4e5ec18283b1787c2a540))
