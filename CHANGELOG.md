@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Language Support:
+
+- Updated Language Files. ([#681](https://github.com/DroidWorksStudio/mLauncher/issues/681)) - ([02dbc77](https://github.com/DroidWorksStudio/mLauncher/commit/02dbc77e83dcd26f8bc045c1261e5b9f4258d723))
+
 ### Refactoring:
 
 - Added abb builds to the workflow for releases - ([87cbbc8](https://github.com/DroidWorksStudio/mLauncher/commit/87cbbc875cb52cc0ab4b156de938c744691742c1))
