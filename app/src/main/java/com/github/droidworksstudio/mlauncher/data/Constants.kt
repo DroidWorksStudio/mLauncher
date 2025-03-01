@@ -38,6 +38,8 @@ object Constants {
     const val THEME_BACKUP_WRITE = 11
     const val THEME_BACKUP_READ = 12
 
+    const val IMPORT_WORDS_OF_THE_DAY = 21
+
     const val MIN_CLOCK_DATE_SIZE = 10
     const val MAX_CLOCK_DATE_SIZE = 120
 

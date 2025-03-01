@@ -49,6 +49,7 @@ private const val SHOW_ALARM = "SHOW_ALARM"
 private const val SHOW_DAILY_WORD = "SHOW_DAILY_WORD"
 private const val SHOW_FLOATING = "SHOW_FLOATING"
 private const val ICON_PACK = "ICON_PACK"
+private const val WORD_LIST = "WORD_LIST"
 private const val SEARCH_START = "SEARCH_START"
 private const val SWIPE_UP_ACTION = "SWIPE_UP_ACTION"
 private const val SWIPE_DOWN_ACTION = "SWIPE_DOWN_ACTION"
@@ -399,8 +400,23 @@ class Prefs(val context: Context) {
         set(value) = prefs.edit().putBoolean(SHOW_BATTERY_ICON, value).apply()
 
     var iconPack: Constants.IconPacks
-        get() = loadIconPacks()
-        set(value) = storeIconPacks(value)
+        get() {
+            return try {
+                Constants.IconPacks.valueOf(
+                    prefs.getString(
+                        ICON_PACK,
+                        Constants.IconPacks.Disabled.name
+                    ).toString()
+                )
+            } catch (_: Exception) {
+                Constants.IconPacks.Disabled
+            }
+        }
+        set(value) = prefs.edit().putString(ICON_PACK, value.name).apply()
+
+    var wordList: String
+        get() = prefs.getString(WORD_LIST, null).toString()
+        set(value) = prefs.edit().putString(WORD_LIST, value).apply()
 
     var homeLocked: Boolean
         get() = prefs.getBoolean(HOME_LOCKED, false)
@@ -415,80 +431,199 @@ class Prefs(val context: Context) {
         set(value) = prefs.edit().putBoolean(HIDE_SEARCH_VIEW, value).apply()
 
     var shortSwipeUpAction: Constants.Action
-        get() = loadAction(SWIPE_UP_ACTION, Constants.Action.ShowAppList)
-        set(value) = storeAction(SWIPE_UP_ACTION, value)
+        get() {
+            return try {
+                Constants.Action.valueOf(
+                    prefs.getString(
+                        SWIPE_UP_ACTION,
+                        Constants.Action.ShowAppList.name
+                    ).toString()
+                )
+            } catch (_: Exception) {
+                Constants.Action.ShowAppList
+            }
+        }
+        set(value) = prefs.edit().putString(SWIPE_UP_ACTION, value.name).apply()
 
     var shortSwipeDownAction: Constants.Action
-        get() = loadAction(SWIPE_DOWN_ACTION, Constants.Action.ShowNotification)
-        set(value) = storeAction(SWIPE_DOWN_ACTION, value)
+        get() {
+            return try {
+                Constants.Action.valueOf(
+                    prefs.getString(
+                        SWIPE_DOWN_ACTION,
+                        Constants.Action.ShowNotification.name
+                    ).toString()
+                )
+            } catch (_: Exception) {
+                Constants.Action.ShowNotification
+            }
+        }
+        set(value) = prefs.edit().putString(SWIPE_DOWN_ACTION, value.name).apply()
 
     var shortSwipeLeftAction: Constants.Action
-        get() = loadAction(SWIPE_LEFT_ACTION, Constants.Action.OpenApp)
-        set(value) = storeAction(SWIPE_LEFT_ACTION, value)
+        get() {
+            return try {
+                Constants.Action.valueOf(
+                    prefs.getString(
+                        SWIPE_LEFT_ACTION,
+                        Constants.Action.OpenApp.name
+                    ).toString()
+                )
+            } catch (_: Exception) {
+                Constants.Action.OpenApp
+            }
+        }
+        set(value) = prefs.edit().putString(SWIPE_LEFT_ACTION, value.name).apply()
 
     var shortSwipeRightAction: Constants.Action
-        get() = loadAction(SWIPE_RIGHT_ACTION, Constants.Action.OpenApp)
-        set(value) = storeAction(SWIPE_RIGHT_ACTION, value)
+        get() {
+            return try {
+                Constants.Action.valueOf(
+                    prefs.getString(
+                        SWIPE_RIGHT_ACTION,
+                        Constants.Action.OpenApp.name
+                    ).toString()
+                )
+            } catch (_: Exception) {
+                Constants.Action.OpenApp
+            }
+        }
+        set(value) = prefs.edit().putString(SWIPE_RIGHT_ACTION, value.name).apply()
 
     var longSwipeUpAction: Constants.Action
-        get() = loadAction(LONG_SWIPE_UP_ACTION, Constants.Action.ShowAppList)
-        set(value) = storeAction(LONG_SWIPE_UP_ACTION, value)
+        get() {
+            return try {
+                Constants.Action.valueOf(
+                    prefs.getString(
+                        LONG_SWIPE_UP_ACTION,
+                        Constants.Action.ShowAppList.name
+                    ).toString()
+                )
+            } catch (_: Exception) {
+                Constants.Action.ShowAppList
+            }
+        }
+        set(value) = prefs.edit().putString(LONG_SWIPE_UP_ACTION, value.name).apply()
 
     var longSwipeDownAction: Constants.Action
-        get() = loadAction(LONG_SWIPE_DOWN_ACTION, Constants.Action.ShowNotification)
-        set(value) = storeAction(LONG_SWIPE_DOWN_ACTION, value)
+        get() {
+            return try {
+                Constants.Action.valueOf(
+                    prefs.getString(
+                        LONG_SWIPE_DOWN_ACTION,
+                        Constants.Action.ShowNotification.name
+                    ).toString()
+                )
+            } catch (_: Exception) {
+                Constants.Action.ShowNotification
+            }
+        }
+        set(value) = prefs.edit().putString(LONG_SWIPE_DOWN_ACTION, value.name).apply()
 
     var longSwipeLeftAction: Constants.Action
-        get() = loadAction(LONG_SWIPE_LEFT_ACTION, Constants.Action.LeftPage)
-        set(value) = storeAction(LONG_SWIPE_LEFT_ACTION, value)
+        get() {
+            return try {
+                Constants.Action.valueOf(
+                    prefs.getString(
+                        LONG_SWIPE_LEFT_ACTION,
+                        Constants.Action.LeftPage.name
+                    ).toString()
+                )
+            } catch (_: Exception) {
+                Constants.Action.LeftPage
+            }
+        }
+        set(value) = prefs.edit().putString(LONG_SWIPE_LEFT_ACTION, value.name).apply()
 
     var longSwipeRightAction: Constants.Action
-        get() = loadAction(LONG_SWIPE_RIGHT_ACTION, Constants.Action.RightPage)
-        set(value) = storeAction(LONG_SWIPE_RIGHT_ACTION, value)
+        get() {
+            return try {
+                Constants.Action.valueOf(
+                    prefs.getString(
+                        LONG_SWIPE_RIGHT_ACTION,
+                        Constants.Action.RightPage.name
+                    ).toString()
+                )
+            } catch (_: Exception) {
+                Constants.Action.RightPage
+            }
+        }
+        set(value) = prefs.edit().putString(LONG_SWIPE_RIGHT_ACTION, value.name).apply()
 
     var clickClockAction: Constants.Action
-        get() = loadAction(CLICK_CLOCK_ACTION, Constants.Action.OpenApp)
-        set(value) = storeAction(CLICK_CLOCK_ACTION, value)
+        get() {
+            return try {
+                Constants.Action.valueOf(
+                    prefs.getString(
+                        CLICK_CLOCK_ACTION,
+                        Constants.Action.OpenApp.name
+                    ).toString()
+                )
+            } catch (_: Exception) {
+                Constants.Action.OpenApp
+            }
+        }
+        set(value) = prefs.edit().putString(CLICK_CLOCK_ACTION, value.name).apply()
 
     var clickAppUsageAction: Constants.Action
-        get() = loadAction(CLICK_APP_USAGE_ACTION, Constants.Action.ShowDigitalWellbeing)
-        set(value) = storeAction(CLICK_APP_USAGE_ACTION, value)
+        get() {
+            return try {
+                Constants.Action.valueOf(
+                    prefs.getString(
+                        CLICK_APP_USAGE_ACTION,
+                        Constants.Action.ShowDigitalWellbeing.name
+                    ).toString()
+                )
+            } catch (_: Exception) {
+                Constants.Action.ShowDigitalWellbeing
+            }
+        }
+        set(value) = prefs.edit().putString(CLICK_APP_USAGE_ACTION, value.name).apply()
 
     var clickFloatingAction: Constants.Action
-        get() = loadAction(CLICK_FLOATING_ACTION, Constants.Action.Disabled)
-        set(value) = storeAction(CLICK_FLOATING_ACTION, value)
+        get() {
+            return try {
+                Constants.Action.valueOf(
+                    prefs.getString(
+                        CLICK_FLOATING_ACTION,
+                        Constants.Action.Disabled.name
+                    ).toString()
+                )
+            } catch (_: Exception) {
+                Constants.Action.Disabled
+            }
+        }
+        set(value) = prefs.edit().putString(CLICK_FLOATING_ACTION, value.name).apply()
 
     var clickDateAction: Constants.Action
-        get() = loadAction(CLICK_DATE_ACTION, Constants.Action.OpenApp)
-        set(value) = storeAction(CLICK_DATE_ACTION, value)
+        get() {
+            return try {
+                Constants.Action.valueOf(
+                    prefs.getString(
+                        CLICK_DATE_ACTION,
+                        Constants.Action.OpenApp.name
+                    ).toString()
+                )
+            } catch (_: Exception) {
+                Constants.Action.OpenApp
+            }
+        }
+        set(value) = prefs.edit().putString(CLICK_DATE_ACTION, value.name).apply()
 
     var doubleTapAction: Constants.Action
-        get() = loadAction(DOUBLE_TAP_ACTION, Constants.Action.RestartApp)
-        set(value) = storeAction(DOUBLE_TAP_ACTION, value)
-
-    private fun loadAction(prefString: String, default: Constants.Action): Constants.Action {
-        val string = prefs.getString(
-            prefString,
-            default.toString()
-        ).toString()
-        return Constants.Action.valueOf(string)
-    }
-
-    private fun storeAction(prefString: String, value: Constants.Action) {
-        prefs.edit().putString(prefString, value.name).apply()
-    }
-
-    private fun storeIconPacks(value: Constants.IconPacks) {
-        prefs.edit().putString(ICON_PACK, value.name).apply()
-    }
-
-    private fun loadIconPacks(): Constants.IconPacks {
-        val string = prefs.getString(
-            ICON_PACK,
-            Constants.IconPacks.Disabled.toString()
-        ).toString()
-        return Constants.IconPacks.valueOf(string)
-    }
+        get() {
+            return try {
+                Constants.Action.valueOf(
+                    prefs.getString(
+                        DOUBLE_TAP_ACTION,
+                        Constants.Action.RestartApp.name
+                    ).toString()
+                )
+            } catch (_: Exception) {
+                Constants.Action.RestartApp
+            }
+        }
+        set(value) = prefs.edit().putString(DOUBLE_TAP_ACTION, value.name).apply()
 
     var appTheme: Constants.Theme
         get() {

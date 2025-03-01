@@ -42,6 +42,7 @@ import com.github.droidworksstudio.mlauncher.helper.DialogBuilder
 import com.github.droidworksstudio.mlauncher.helper.communitySupportButton
 import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
 import com.github.droidworksstudio.mlauncher.helper.helpFeedbackButton
+import com.github.droidworksstudio.mlauncher.helper.importWordsOfTheDay
 import com.github.droidworksstudio.mlauncher.helper.isSystemInDarkMode
 import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
 import com.github.droidworksstudio.mlauncher.helper.openAppInfo
@@ -183,6 +184,18 @@ class AdvancedFragment : Fragment() {
                 iconSize = iconSize,
                 onClick = {
                     dialogBuilder.saveLoadThemeDialogDialog()
+                }
+            )
+
+            SettingsHomeItem(
+                title = stringResource(R.string.advanced_settings_wotd_title),
+                description = stringResource(R.string.advanced_settings_wotd_description),
+                imageVector = ImageVector.vectorResource(id = R.drawable.ic_word_of_the_day),
+                titleFontSize = titleFontSize,
+                descriptionFontSize = descriptionFontSize,
+                iconSize = iconSize,
+                onClick = {
+                    importWordsOfTheDay(requireActivity())
                 }
             )
 

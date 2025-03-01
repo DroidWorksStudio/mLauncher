@@ -21,12 +21,16 @@ import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Migration
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.ActivityMainBinding
+import com.github.droidworksstudio.mlauncher.helper.AppReloader
 import com.github.droidworksstudio.mlauncher.helper.hasUsagePermission
 import com.github.droidworksstudio.mlauncher.helper.isTablet
 import com.github.droidworksstudio.mlauncher.helper.showPermissionDialog
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import org.xmlpull.v1.XmlPullParser
 import java.io.BufferedReader
 import java.io.FileOutputStream
+import java.io.InputStream
 import java.io.InputStreamReader
 
 class MainActivity : AppCompatActivity() {
@@ -238,8 +242,50 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
             }
+
+            Constants.IMPORT_WORDS_OF_THE_DAY -> {
+                data?.data?.let { uri ->
+                    // Handle the imported file
+                    val inputStream = contentResolver.openInputStream(uri)
+                    val importedWords = readWordsFromFile(inputStream)
+                    saveCustomWordList(importedWords)
+                    AppReloader.restartApp(applicationContext)
+                }
+            }
         }
     }
+
+    private fun readWordsFromFile(inputStream: InputStream?): List<String> {
+        val words = mutableListOf<String>()
+
+        // Make sure the input stream is not null
+        inputStream?.let {
+            // Read the input stream into a string
+            val reader = InputStreamReader(it)
+
+            // Use Gson to parse the JSON
+            val gson = Gson()
+            try {
+                // Use TypeToken to specify the expected type (a list of strings)
+                val type = object : TypeToken<Map<String, List<String>>>() {}.type
+                val jsonMap: Map<String, List<String>> = gson.fromJson(reader, type)
+
+                // Get the list of words from the "word_of_the_day" key
+                words.addAll(jsonMap["word_of_the_day"] ?: emptyList())
+            } catch (e: Exception) {
+                e.printStackTrace() // Handle the error (e.g., logging)
+            }
+        }
+
+        return words
+    }
+
+
+    private fun saveCustomWordList(words: List<String>) {
+        val wordList = words.joinToString(";")
+        prefs.wordList = wordList
+    }
+
 
     override fun onStop() {
         backToHomeScreen()

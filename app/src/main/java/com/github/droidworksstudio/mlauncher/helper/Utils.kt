@@ -238,9 +238,8 @@ fun getNextAlarm(context: Context, prefs: Prefs): CharSequence {
     }
 }
 
-fun wordOfTheDay(resources: Resources): String {
-    val dailyWordsArray =
-        resources.getStringArray(R.array.word_of_the_day)
+fun wordOfTheDay(context: Context, prefs: Prefs): String {
+    val dailyWordsArray = loadWordList(context, prefs)
     val dayOfYear = Calendar.getInstance().get(Calendar.DAY_OF_YEAR)
     val wordIndex =
         (dayOfYear - 1) % dailyWordsArray.size // Subtracting 1 to align with array indexing
@@ -465,6 +464,25 @@ fun loadFile(activity: Activity, backupType: Constants.BackupType) {
         }
     }
 
+}
+
+fun importWordsOfTheDay(activity: Activity) {
+    val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
+        addCategory(Intent.CATEGORY_OPENABLE)
+        type = "application/json"
+    }
+    activity.startActivityForResult(intent, Constants.IMPORT_WORDS_OF_THE_DAY, null)
+}
+
+fun loadWordList(context: Context, prefs: Prefs): List<String> {
+    val customWordListString = prefs.wordList
+    // If the user has imported their own list, use it
+    return if (customWordListString != "") {
+        prefs.wordList.split(";")
+    } else {
+        // Fallback to the default list from resources
+        context.resources.getStringArray(R.array.word_of_the_day).toList()
+    }
 }
 
 

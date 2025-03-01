@@ -173,7 +173,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             date.format24Hour = datePattern
 
             alarm.text = getNextAlarm(requireContext(), prefs)
-            dailyWord.text = wordOfTheDay(resources)
+            dailyWord.text = wordOfTheDay(requireContext(), prefs)
 
             date.textSize = prefs.dateSize.toFloat()
             clock.textSize = prefs.clockSize.toFloat()
