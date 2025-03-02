@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Implemented Enhancements:
 
+- Added a better logging system for crashes - ([20bdc65](https://github.com/DroidWorksStudio/mLauncher/commit/20bdc65f2ab65ce7b6eba6e28f1480fd5eddc1ec))
 - Added the ability to import a Word of the day json file. - ([1985201](https://github.com/DroidWorksStudio/mLauncher/commit/1985201aafd0d1201733722e9f96bbcc94da8184))
 
 ### Language Support:
