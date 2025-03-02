@@ -415,7 +415,7 @@ class Prefs(val context: Context) {
         set(value) = prefs.edit().putString(ICON_PACK, value.name).apply()
 
     var wordList: String
-        get() = prefs.getString(WORD_LIST, null).toString()
+        get() = prefs.getString(WORD_LIST, "").toString()
         set(value) = prefs.edit().putString(WORD_LIST, value).apply()
 
     var homeLocked: Boolean
