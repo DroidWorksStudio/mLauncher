@@ -41,6 +41,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.github.droidworksstudio.common.ColorIconsExtensions
+import com.github.droidworksstudio.common.CrashHandler
 import com.github.droidworksstudio.common.launchCalendar
 import com.github.droidworksstudio.common.openAccessibilitySettings
 import com.github.droidworksstudio.common.openAlarmApp
@@ -214,6 +215,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     Action.OpenApp -> openClickClockApp()
                     else -> handleOtherAction(action)
                 }
+                CrashHandler.logUserAction("Clock Clicked")
             }
 
             R.id.date -> {
@@ -221,6 +223,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     Action.OpenApp -> openClickDateApp()
                     else -> handleOtherAction(action)
                 }
+                CrashHandler.logUserAction("Date Clicked")
             }
 
             R.id.totalScreenTime -> {
@@ -228,14 +231,17 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     Action.OpenApp -> openClickUsageApp()
                     else -> handleOtherAction(action)
                 }
+                CrashHandler.logUserAction("TotalScreenTime Clicked")
             }
 
             R.id.setDefaultLauncher -> {
                 viewModel.resetDefaultLauncherApp(requireContext())
+                CrashHandler.logUserAction("SetDefaultLauncher Clicked")
             }
 
             R.id.battery -> {
                 requireContext().openBatteryManager()
+                CrashHandler.logUserAction("Battery Clicked")
             }
 
             R.id.floatingActionButton -> {
@@ -243,6 +249,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     Action.OpenApp -> openFloatingActionApp()
                     else -> handleOtherAction(action)
                 }
+                CrashHandler.logUserAction("FloatingActionButton Clicked")
             }
 
             else -> {
@@ -261,6 +268,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
         val n = view.id
         showAppList(AppDrawerFlag.SetHomeApp, includeHiddenApps = true, n)
+        CrashHandler.logUserAction("Show App List")
         return true
     }
 
@@ -370,6 +378,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
     private fun launchApp(app: AppListItem) {
         viewModel.selectedApp(app, AppDrawerFlag.LaunchApp)
+        CrashHandler.logUserAction("${app.activityLabel} App Launched")
     }
 
     private fun showAppList(flag: AppDrawerFlag, includeHiddenApps: Boolean = false, n: Int = 0) {
@@ -404,6 +413,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             }
             exception.printStackTrace()
         }
+        CrashHandler.logUserAction("Expand Notification Drawer")
     }
 
     @SuppressLint("WrongConstant", "PrivateApi")
@@ -418,6 +428,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             }
             exception.printStackTrace()
         }
+        CrashHandler.logUserAction("Expand Quick Settings")
     }
 
     private fun openSwipeUpApp() {
@@ -609,6 +620,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     Action.OpenApp -> openSwipeLeftApp()
                     else -> handleOtherAction(action)
                 }
+                CrashHandler.logUserAction("SwipeLeft Gesture")
             }
 
             override fun onSwipeRight() {
@@ -617,6 +629,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     Action.OpenApp -> openSwipeRightApp()
                     else -> handleOtherAction(action)
                 }
+                CrashHandler.logUserAction("SwipeRight Gesture")
             }
 
             override fun onSwipeUp() {
@@ -625,6 +638,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     Action.OpenApp -> openSwipeUpApp()
                     else -> handleOtherAction(action)
                 }
+                CrashHandler.logUserAction("SwipeUp Gesture")
             }
 
             override fun onSwipeDown() {
@@ -633,10 +647,12 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     Action.OpenApp -> openSwipeDownApp()
                     else -> handleOtherAction(action)
                 }
+                CrashHandler.logUserAction("SwipeDown Gesture")
             }
 
             override fun onLongClick() {
                 super.onLongClick()
+                CrashHandler.logUserAction("Launcher Settings Opened")
                 trySettings()
             }
 
@@ -646,6 +662,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     Action.OpenApp -> openDoubleTapApp()
                     else -> handleOtherAction(action)
                 }
+                CrashHandler.logUserAction("DoubleClick Gesture")
             }
         }
     }
@@ -705,6 +722,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     Action.OpenApp -> openSwipeLeftApp()
                     else -> handleOtherAction(action)
                 }
+                CrashHandler.logUserAction("SwipeLeft Gesture")
             }
 
             override fun onSwipeRight() {
@@ -713,6 +731,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     Action.OpenApp -> openSwipeRightApp()
                     else -> handleOtherAction(action)
                 }
+                CrashHandler.logUserAction("SwipeRight Gesture")
             }
 
             override fun onSwipeUp() {
@@ -721,6 +740,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     Action.OpenApp -> openSwipeUpApp()
                     else -> handleOtherAction(action)
                 }
+                CrashHandler.logUserAction("SwipeUp Gesture")
             }
 
             override fun onSwipeDown() {
@@ -729,6 +749,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     Action.OpenApp -> openSwipeDownApp()
                     else -> handleOtherAction(action)
                 }
+                CrashHandler.logUserAction("SwipeDown Gesture")
             }
         }
     }
@@ -778,6 +799,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 else -> handleOtherAction(action)
             }
         }
+        CrashHandler.logUserAction("LongSwipe_${direction} Gesture")
     }
 
 

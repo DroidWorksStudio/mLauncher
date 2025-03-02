@@ -86,6 +86,7 @@ fun Context.launchCalendar() {
             d("openCalendar", e.toString())
         }
     }
+    CrashHandler.logUserAction("Calendar App Launched")
 }
 
 fun Context.openDialerApp() {
@@ -95,6 +96,7 @@ fun Context.openDialerApp() {
     } catch (e: java.lang.Exception) {
         d("openDialerApp", e.toString())
     }
+    CrashHandler.logUserAction("Dialer App Launched")
 }
 
 fun Context.openAlarmApp() {
@@ -104,6 +106,7 @@ fun Context.openAlarmApp() {
     } catch (e: java.lang.Exception) {
         d("openAlarmApp", e.toString())
     }
+    CrashHandler.logUserAction("Alarm App Launched")
 }
 
 fun Context.openCameraApp() {
@@ -113,6 +116,7 @@ fun Context.openCameraApp() {
     } catch (e: java.lang.Exception) {
         d("openCameraApp", e.toString())
     }
+    CrashHandler.logUserAction("Camera App Launched")
 }
 
 fun Context.openBatteryManager() {
@@ -122,6 +126,7 @@ fun Context.openBatteryManager() {
     } catch (_: ActivityNotFoundException) {
         showLongToast("Battery manager settings are not available on this device.")
     }
+    CrashHandler.logUserAction("Battery Manager Launched")
 }
 
 fun Context.openDigitalWellbeing() {
@@ -139,6 +144,7 @@ fun Context.openDigitalWellbeing() {
         // Handle this case as needed
         this.showLongToast("Digital Wellbeing is not available on this device.")
     }
+    CrashHandler.logUserAction("Digital Wellbeing Launched")
 }
 
 fun Context.searchOnPlayStore(query: String? = null): Boolean {
@@ -154,6 +160,7 @@ fun Context.searchOnPlayStore(query: String? = null): Boolean {
             playStoreIntent.data = Uri.parse("${Constants.URL_GOOGLE_PLAY_STORE}=$query")
             startActivity(playStoreIntent)
         }
+        CrashHandler.logUserAction("Play Store Launched")
         true
     } catch (e: Exception) {
         e.printStackTrace()
@@ -164,26 +171,32 @@ fun Context.searchOnPlayStore(query: String? = null): Boolean {
 fun Context.searchCustomSearchEngine(searchQuery: String? = null, prefs: Prefs): Boolean {
     val searchUrl = when (prefs.searchEngines) {
         Constants.SearchEngines.Google -> {
+            CrashHandler.logUserAction("Google Search")
             Constants.URL_GOOGLE_SEARCH
         }
 
         Constants.SearchEngines.Yahoo -> {
+            CrashHandler.logUserAction("Yahoo Search")
             Constants.URL_YAHOO_SEARCH
         }
 
         Constants.SearchEngines.DuckDuckGo -> {
+            CrashHandler.logUserAction("DuckDuckGo Search")
             Constants.URL_DUCK_SEARCH
         }
 
         Constants.SearchEngines.Bing -> {
+            CrashHandler.logUserAction("Bing Search")
             Constants.URL_BING_SEARCH
         }
 
         Constants.SearchEngines.Brave -> {
+            CrashHandler.logUserAction("Brave Search")
             Constants.URL_BRAVE_SEARCH
         }
 
         Constants.SearchEngines.SwissCow -> {
+            CrashHandler.logUserAction("SwissCow Search")
             Constants.URL_SWISSCOW_SEARCH
         }
     }
@@ -241,4 +254,5 @@ fun Context.openAccessibilitySettings() {
         putExtra(":settings:show_fragment_args", bundle)
     }
     this.startActivity(intent)
+    CrashHandler.logUserAction("Accessibility Settings Opened")
 }

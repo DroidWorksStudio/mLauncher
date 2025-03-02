@@ -4,6 +4,7 @@ import android.app.Application
 import android.content.Context
 import android.graphics.Typeface
 import android.util.Log
+import com.github.droidworksstudio.common.CrashHandler
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import org.acra.ReportField
 import org.acra.config.dialog
@@ -17,10 +18,16 @@ class Mlauncher : Application() {
     override fun onCreate() {
         super.onCreate()
 
+        // Initialize com.github.droidworksstudio.common.CrashHandler to catch uncaught exceptions
+        Thread.setDefaultUncaughtExceptionHandler(CrashHandler(applicationContext))
+
         // Initialize prefs here
         prefs = Prefs(applicationContext)
 
         setCustomFont(applicationContext)
+
+        // Log app launch
+        CrashHandler.logUserAction("App Launched")
 
         val pkgName = getString(R.string.app_name)
         val pkgVersion = this.packageManager.getPackageInfo(
@@ -55,17 +62,19 @@ class Mlauncher : Application() {
                 resTheme = R.style.MaterialDialogTheme
             }
 
+            val crashFileUri = CrashHandler.customReportSender(applicationContext)
+
             mailSender {
                 //required
                 mailTo = getString(R.string.acra_email)
-                //defaults to true
-                reportAsFile = false
                 //defaults to ACRA-report.stacktrace
-                reportFileName = "$pkgName-crash-report.stacktrace"
+                reportFileName = ""
                 //defaults to "<applicationId> Crash Report"
                 subject = "$pkgName $pkgVersion Crash Report"
                 //defaults to empty
                 body = getString(R.string.acra_mail_body)
+
+                attachmentUris = listOf(crashFileUri.toString())
             }
         }
     }
