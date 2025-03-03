@@ -20,6 +20,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Improved margin application for home screen elements - ([cc94745](https://github.com/DroidWorksStudio/mLauncher/commit/cc9474525aef7565b6642d95d873f516ccb97f06))
 - Added a demo wordoftheday.json for imports - ([dba35b1](https://github.com/DroidWorksStudio/mLauncher/commit/dba35b13c7dd73999ca4e5ec18283b1787c2a540))
 - Added the link for Google Play Store - ([6bff961](https://github.com/DroidWorksStudio/mLauncher/commit/6bff9619b7e743b4f5c04abea0c4a5158a7fbe63))
 
