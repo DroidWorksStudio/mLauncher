@@ -6,13 +6,13 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Implemented Enhancements:
 
-- Added a better logging system for crashes - ([20bdc65](https://github.com/DroidWorksStudio/mLauncher/commit/20bdc65f2ab65ce7b6eba6e28f1480fd5eddc1ec))
+- Added a better logging system for crashes - ([3638233](https://github.com/DroidWorksStudio/mLauncher/commit/3638233207a46cb7e4654b2831e7a4c009969c99))
 - Added the ability to import a Word of the day json file. - ([1985201](https://github.com/DroidWorksStudio/mLauncher/commit/1985201aafd0d1201733722e9f96bbcc94da8184))
 
 ### Bug Fixes:
 
-- Adjusted Search Container margin to prevent it from touching the top of the screen. - ([87f74f1](https://github.com/DroidWorksStudio/mLauncher/commit/87f74f1ae2ee7ed504ffcd04cec3fa1fa448fd18))
-- Fix the null word list - ([7f81340](https://github.com/DroidWorksStudio/mLauncher/commit/7f813401428ab657493355ce26eb2d1dc0ebb54e))
+- Adjusted Search Container margin to prevent it from touching the top of the screen. - ([3acd5a8](https://github.com/DroidWorksStudio/mLauncher/commit/3acd5a86a143e2daf15962b155fb20fbd710e66c))
+- Fix the null word list - ([3fb3dfc](https://github.com/DroidWorksStudio/mLauncher/commit/3fb3dfcf961dc15955025b6a1aa3a656f27266e8))
 
 ### Language Support:
 
@@ -20,15 +20,9 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
-- Improved margin application for home screen elements - ([cc94745](https://github.com/DroidWorksStudio/mLauncher/commit/cc9474525aef7565b6642d95d873f516ccb97f06))
+- Improved margin application for home screen elements - ([3b5b7ca](https://github.com/DroidWorksStudio/mLauncher/commit/3b5b7ca42a961b8c51579e28728f57597377c2b5))
 - Added a demo wordoftheday.json for imports - ([dba35b1](https://github.com/DroidWorksStudio/mLauncher/commit/dba35b13c7dd73999ca4e5ec18283b1787c2a540))
 - Added the link for Google Play Store - ([6bff961](https://github.com/DroidWorksStudio/mLauncher/commit/6bff9619b7e743b4f5c04abea0c4a5158a7fbe63))
-
-### Releases:
-
-- Prepare for version 1.8.1 - ([d2b1bf7](https://github.com/DroidWorksStudio/mLauncher/commit/d2b1bf715d8b856ab1c8701a788d35288d75027a))
-- Prepare for version 1.8.0 - ([89dae13](https://github.com/DroidWorksStudio/mLauncher/commit/89dae13ee5f0c6660b95109282f63cac4cb60c3d))
-- Prepare for version 1.7.9 - ([d9d355d](https://github.com/DroidWorksStudio/mLauncher/commit/d9d355dddd47d23a76a5b48489aef767e4a756b4))
 
 ## [1.7.8](https://github.com/DroidWorksStudio/mLauncher/tree/1.7.8) - (01, March 2025)
 
