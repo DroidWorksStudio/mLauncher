@@ -17,7 +17,7 @@ android {
         applicationId = "app.mlauncher"
         minSdk = 26
         targetSdk = 35
-        versionCode = 181
+        versionCode = 10801
         versionName = "1.8.1"
     }
 
