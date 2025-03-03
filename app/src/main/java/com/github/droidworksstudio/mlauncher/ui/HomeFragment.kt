@@ -42,6 +42,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.github.droidworksstudio.common.ColorIconsExtensions
 import com.github.droidworksstudio.common.CrashHandler
+import com.github.droidworksstudio.common.isGestureNavigationEnabled
 import com.github.droidworksstudio.common.launchCalendar
 import com.github.droidworksstudio.common.openAccessibilitySettings
 import com.github.droidworksstudio.common.openAlarmApp
@@ -365,6 +366,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             showDailyWord.observe(viewLifecycleOwner) {
                 binding.dailyWord.visibility = if (it) View.VISIBLE else View.GONE
             }
+
             showFloating.observe(viewLifecycleOwner) {
                 binding.floatingActionButton.visibility = if (it) View.VISIBLE else View.GONE
             }
@@ -890,9 +892,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             binding.homeAppsLayout.removeViews(oldAppsNum + diff, -diff)
         }
 
-        // Update the total number of pages and calculate maximum apps per page
-        updatePagesAndAppsPerPage(prefs.homeAppsNum, prefs.homePagesNum)
-
         // Create a new TextView instance
         val totalText = getString(R.string.show_total_screen_time)
         val totalTime = context?.let { getTotalScreenTime(it) }
@@ -902,11 +901,53 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         // Set properties for the TextView (optional)
         binding.totalScreenTime.apply {
             text = totalScreenTimeJoin
-            if (totalTime != null && totalTime > 300000L) { // Checking if totalTime is greater than 5 minutes (300,000 milliseconds)
+            if (totalTime != null && totalTime > 300L) { // Checking if totalTime is greater than 5 minutes (300,000 milliseconds)
                 visibility = View.VISIBLE
             }
         }
 
+        // Update the total number of pages and calculate maximum apps per page
+        updatePagesAndAppsPerPage(prefs.homeAppsNum, prefs.homePagesNum)
+        adjustTextViewMargins()
+    }
+
+    private fun adjustTextViewMargins() {
+        binding.apply {
+            val homeAppsLayout = homeAppsLayout
+            val homeScreenPager = homeScreenPager
+            val totalScreenTime = totalScreenTime
+            val setDefaultLauncher = setDefaultLauncher
+
+            val views = listOf(setDefaultLauncher, totalScreenTime, homeScreenPager, homeAppsLayout)
+
+            // Check if device is using gesture navigation or 3-button navigation
+            val isGestureNav = isGestureNavigationEnabled(requireContext())
+
+            // Set margins based on navigation mode
+            val margins = if (isGestureNav) {
+                listOf(50, 100, 150, 200) // Adjusted margins for gesture navigation
+            } else {
+                listOf(100, 150, 200, 250) // Adjusted margins for 3-button navigation
+            }
+
+            val visibleViews = views.filter { it.visibility == View.VISIBLE }
+            val visibleMargins = margins.take(visibleViews.size) // Trim margins list to match visible views
+
+            // Reset margins for all views
+            views.forEach { view ->
+                val params = view.layoutParams as ViewGroup.MarginLayoutParams
+                params.bottomMargin = 0
+                view.layoutParams = params
+            }
+
+            // Apply correct spacing for visible views
+            visibleViews.forEachIndexed { index, view ->
+                val params = view.layoutParams as ViewGroup.MarginLayoutParams
+                params.bottomMargin = visibleMargins.getOrElse(index) { 0 } // Ensure the margin list doesn't go out of bounds
+                view.layoutParams = params
+                Log.d("layoutParams", "${view.layoutParams}")
+            }
+        }
     }
 
 
@@ -1013,6 +1054,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
         // Update the total number of pages and calculate maximum apps per page
         updatePagesAndAppsPerPage(prefs.homeAppsNum, prefs.homePagesNum)
+        adjustTextViewMargins()
     }
 
 

@@ -298,6 +298,7 @@ class LookFeelFragment : Fragment() {
                 onCheckedChange = {
                     toggledHomeAlignmentBottom = !prefs.homeAlignmentBottom
                     prefs.homeAlignmentBottom = toggledHomeAlignmentBottom
+                    viewModel.updateHomeAppsAlignment(prefs.homeAlignment, prefs.homeAlignmentBottom)
                 }
             )
 
@@ -506,7 +507,7 @@ class LookFeelFragment : Fragment() {
                         onItemSelected = { newGravity ->
                             selectedHomeAlignment = newGravity // Update state
                             prefs.homeAlignment = newGravity // Persist selection in preferences
-                            viewModel.updateHomeAppsAlignment(newGravity, prefs.homeAlignmentBottom)
+                            viewModel.updateHomeAppsAlignment(prefs.homeAlignment, prefs.homeAlignmentBottom)
                         }
                     )
                 }

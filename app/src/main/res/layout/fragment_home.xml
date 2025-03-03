@@ -87,8 +87,8 @@
         android:gravity="center_vertical"
         android:orientation="vertical"
         android:paddingHorizontal="20dp"
-        android:paddingTop="112dp"
-        android:paddingBottom="80dp" />
+        android:paddingTop="100dp"
+        android:paddingBottom="30dp" />
 
     <TextView
         android:id="@+id/homeScreenPager"
@@ -98,7 +98,29 @@
         android:layout_gravity="bottom|center_horizontal"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="56dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/totalScreenTime"
+        style="@style/TextSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/show_total_screen_time"
+        android:visibility="gone" />
+
+    <!-- Set default launcher -->
+    <TextView
+        android:id="@+id/setDefaultLauncher"
+        style="@style/TextSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/advanced_settings_set_as_default_launcher"
         android:visibility="gone" />
 
     <!-- First run tips -->
@@ -143,29 +165,4 @@
         android:src="@drawable/app_launcher"
         android:visibility="gone" />
 
-
-    <TextView
-        android:id="@+id/totalScreenTime"
-        style="@style/TextSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="36dp"
-        android:text="@string/show_total_screen_time"
-        android:visibility="gone" />
-
-    <!-- Set default launcher -->
-    <TextView
-        android:id="@+id/setDefaultLauncher"
-        style="@style/TextSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="56dp"
-        android:text="@string/advanced_settings_set_as_default_launcher"
-        android:visibility="gone" />
 </FrameLayout>
