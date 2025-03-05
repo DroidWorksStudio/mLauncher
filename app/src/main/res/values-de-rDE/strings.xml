@@ -23,7 +23,7 @@
     <string name="settings_text_size">Einstellungen Textgröße</string>
     <string name="hide_search_view">Suchansicht ausblenden</string>
     <string name="show_floating_button">Schwebende Schaltfläche anzeigen</string>
-    <string name="allow_edge_panel">Allow Edge Panel</string>
+    <string name="allow_edge_panel">Randbereich zulassen</string>
     <string name="search">Suchen</string>
     <string name="search_engine">Suchmaschine</string>
     <string name="auto_show_keyboard">Auto show keyboard</string>
@@ -32,8 +32,8 @@
     <string name="auto_open_apps">Apps automatisch öffnen</string>
     <string name="lock_home_apps">Apps sperren</string>
     <string name="lock_settings">Sperreinstellungen</string>
-    <string name="apps_on_home_screen">Number of Home Apps</string>
-    <string name="apps_on_edge_screen">Number of Edge Apps</string>
+    <string name="apps_on_home_screen">Anzahl der Home-Apps</string>
+    <string name="apps_on_edge_screen">Anzahl der Edge-Apps</string>
     <string name="pages_on_home_screen">Seitenzahl</string>
     <string name="enable_home_pager">Aktivieren Sie den Home Pager</string>
     <string name="battery_date_time">Batterie &amp; Datum/Uhrzeit</string>
@@ -185,10 +185,10 @@
     <string name="open">Öffnen</string>
     <string name="close">Schließen</string>
     <!-- Permissions Strings -->
-    <string name="permission_required">Permission Required</string>
-    <string name="access_usage_data_permission">To proceed, please enable permission to access usage data in your device settings.</string>
-    <string name="access_overlay_permission">To proceed, please enable permission to display content over other apps in your device settings.</string>
-    <string name="goto_settings">Go to Settings</string>
+    <string name="permission_required">Erforderliche Genehmigung</string>
+    <string name="access_usage_data_permission">Um fortzufahren, aktivieren Sie bitte in Ihren Geräteeinstellungen die Berechtigung zum Zugriff auf Nutzungsdaten.</string>
+    <string name="access_overlay_permission">Um fortzufahren, aktivieren Sie bitte in Ihren Geräteeinstellungen die Berechtigung, Inhalte über anderen Apps anzuzeigen.</string>
+    <string name="goto_settings">Gehen Sie zu Einstellungen</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">Diese Funktion erfordert Android 15 oder höher.</string>
     <string name="toast_private_space_default_home_screen">Um auf den privaten Bereich zugreifen zu können, muss mLauncher der Standard-Startbildschirm sein.</string>
