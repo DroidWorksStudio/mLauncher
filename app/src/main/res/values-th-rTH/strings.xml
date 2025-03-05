@@ -23,7 +23,7 @@
     <string name="settings_text_size">ขนาดตัวอักษรการตั้งค่า</string>
     <string name="hide_search_view">ซ่อนมุมมองการค้นหา</string>
     <string name="show_floating_button">แสดงปุ่มลอย</string>
-    <string name="allow_edge_panel">Allow Edge Panel</string>
+    <string name="allow_edge_panel">อนุญาตให้ Edge Panel</string>
     <string name="search">ค้นหา</string>
     <string name="search_engine">เครื่องมือค้นหา</string>
     <string name="auto_show_keyboard">แป้นพิมพ์แสดงอัตโนมัติ</string>
@@ -32,8 +32,8 @@
     <string name="auto_open_apps">เปิดแอปอัตโนมัติ</string>
     <string name="lock_home_apps">ล็อคแอพ</string>
     <string name="lock_settings">ล็อคการตั้งค่า</string>
-    <string name="apps_on_home_screen">Number of Home Apps</string>
-    <string name="apps_on_edge_screen">Number of Edge Apps</string>
+    <string name="apps_on_home_screen">จำนวนแอปพลิเคชั่นภายในบ้าน</string>
+    <string name="apps_on_edge_screen">จำนวนแอป Edge</string>
     <string name="pages_on_home_screen">เลขหน้า</string>
     <string name="enable_home_pager">เปิดใช้งานโฮมเพจเจอร์</string>
     <string name="battery_date_time">แบตเตอรี่ &amp; วันที่/เวลา</string>
@@ -185,10 +185,10 @@
     <string name="open">เปิด</string>
     <string name="close">ปิด</string>
     <!-- Permissions Strings -->
-    <string name="permission_required">Permission Required</string>
-    <string name="access_usage_data_permission">To proceed, please enable permission to access usage data in your device settings.</string>
-    <string name="access_overlay_permission">To proceed, please enable permission to display content over other apps in your device settings.</string>
-    <string name="goto_settings">Go to Settings</string>
+    <string name="permission_required">ต้องได้รับอนุญาต</string>
+    <string name="access_usage_data_permission">หากต้องการดำเนินการต่อ โปรดเปิดสิทธิ์การเข้าถึงข้อมูลการใช้งานในการตั้งค่าอุปกรณ์ของคุณ</string>
+    <string name="access_overlay_permission">หากต้องการดำเนินการต่อ โปรดเปิดใช้การอนุญาตเพื่อแสดงเนื้อหาทับแอปอื่นๆ ในการตั้งค่าอุปกรณ์ของคุณ</string>
+    <string name="goto_settings">ไปที่การตั้งค่า</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">ฟังก์ชันนี้ต้องใช้ Android 15 ขึ้นไป</string>
     <string name="toast_private_space_default_home_screen">mLauncher จะต้องเป็นหน้าจอหลักเริ่มต้นเพื่อเข้าถึงพื้นที่ส่วนตัว</string>
