@@ -406,7 +406,7 @@ class Prefs(val context: Context) {
         set(value) = prefs.edit().putBoolean(SHOW_BATTERY_ICON, value).apply()
 
     var showEdgePanel: Boolean
-        get() = prefs.getBoolean(SHOW_EDGE_PANEL, true)
+        get() = prefs.getBoolean(SHOW_EDGE_PANEL, false)
         set(value) = prefs.edit().putBoolean(SHOW_EDGE_PANEL, value).apply()
 
     var iconPack: Constants.IconPacks
