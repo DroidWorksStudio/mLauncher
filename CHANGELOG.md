@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Implemented Enhancements:
 
+- Add edge panel menu displaying recently used apps. - ([039a642](https://github.com/DroidWorksStudio/mLauncher/commit/039a6425c163d3fb3c626da2c9a93aaaa2209a9f))
 - Added a better logging system for crashes - ([3638233](https://github.com/DroidWorksStudio/mLauncher/commit/3638233207a46cb7e4654b2831e7a4c009969c99))
 - Added the ability to import a Word of the day json file. - ([1985201](https://github.com/DroidWorksStudio/mLauncher/commit/1985201aafd0d1201733722e9f96bbcc94da8184))
 
