@@ -13,6 +13,8 @@ import android.graphics.PorterDuffColorFilter
 import android.graphics.drawable.Drawable
 import android.os.Build
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.os.Vibrator
 import android.text.Spannable
 import android.text.SpannableString
@@ -60,7 +62,6 @@ import com.github.droidworksstudio.mlauncher.data.Constants.Action
 import com.github.droidworksstudio.mlauncher.data.Constants.AppDrawerFlag
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentHomeBinding
-import com.github.droidworksstudio.mlauncher.helper.ActionService
 import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.formatMillisToHMS
 import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.getTotalScreenTime
 import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.getUsageStats
@@ -69,14 +70,18 @@ import com.github.droidworksstudio.mlauncher.helper.BatteryReceiver
 import com.github.droidworksstudio.mlauncher.helper.PrivateSpaceReceiver
 import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
 import com.github.droidworksstudio.mlauncher.helper.getNextAlarm
+import com.github.droidworksstudio.mlauncher.helper.hasOverlayPermission
+import com.github.droidworksstudio.mlauncher.helper.hasUsagePermission
 import com.github.droidworksstudio.mlauncher.helper.hideStatusBar
 import com.github.droidworksstudio.mlauncher.helper.initActionService
 import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
+import com.github.droidworksstudio.mlauncher.helper.showPermissionDialog
 import com.github.droidworksstudio.mlauncher.helper.showStatusBar
 import com.github.droidworksstudio.mlauncher.helper.togglePrivateSpaceLock
 import com.github.droidworksstudio.mlauncher.helper.wordOfTheDay
 import com.github.droidworksstudio.mlauncher.listener.OnSwipeTouchListener
 import com.github.droidworksstudio.mlauncher.listener.ViewSwipeTouchListener
+import com.github.droidworksstudio.mlauncher.services.ActionService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlin.math.abs
@@ -126,8 +131,9 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         vibrator = context?.getSystemService(VIBRATOR_SERVICE) as Vibrator
 
         initObservers()
-        initSwipeTouchListener()
         initClickListeners()
+        initPermissionCheck()
+        initSwipeTouchListener()
     }
 
 
@@ -273,9 +279,32 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         return true
     }
 
+
     @SuppressLint("ClickableViewAccessibility")
     private fun initSwipeTouchListener() {
         binding.touchArea.setOnTouchListener(getHomeScreenGestureListener(requireContext()))
+    }
+
+    private fun initPermissionCheck() {
+        val context = requireContext()
+        if (prefs.recentAppsDisplayed || prefs.appUsageStats) {
+            // Check if the usage permission is not granted
+            if (!hasUsagePermission(context)) {
+                // Postpone showing the dialog until the activity is running
+                Handler(Looper.getMainLooper()).post {
+                    // Instantiate MainActivity and pass it to showPermissionDialog
+                    showPermissionDialog(context, true)
+                }
+            }
+        }
+        if (prefs.showEdgePanel) {
+            if (!hasOverlayPermission(context)) {
+                Handler(Looper.getMainLooper()).post {
+                    // Instantiate MainActivity and pass it to showPermissionDialog
+                    showPermissionDialog(context, false)
+                }
+            }
+        }
     }
 
     private fun initClickListeners() {

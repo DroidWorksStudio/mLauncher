@@ -36,12 +36,14 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     val showAlarm = MutableLiveData(prefs.showAlarm)
     val showDailyWord = MutableLiveData(prefs.showDailyWord)
     val showFloating = MutableLiveData(prefs.showFloating)
+    val showEdgePanel = MutableLiveData(prefs.showEdgePanel)
     val clockAlignment = MutableLiveData(prefs.clockAlignment)
     val dateAlignment = MutableLiveData(prefs.dateAlignment)
     val alarmAlignment = MutableLiveData(prefs.alarmAlignment)
     val dailyWordAlignment = MutableLiveData(prefs.dailyWordAlignment)
     val homeAppsAlignment = MutableLiveData(Pair(prefs.homeAlignment, prefs.homeAlignmentBottom))
     val homeAppsNum = MutableLiveData(prefs.homeAppsNum)
+    val edgeAppsNum = MutableLiveData(prefs.edgeAppsNum)
     val homePagesNum = MutableLiveData(prefs.homePagesNum)
     val opacityNum = MutableLiveData(prefs.opacityNum)
     val filterStrength = MutableLiveData(prefs.filterStrength)
@@ -96,6 +98,10 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     fun setShowFloating(visibility: Boolean) {
         showFloating.value = visibility
+    }
+
+    fun setShowEdgePanel(visibility: Boolean) {
+        showEdgePanel.value = visibility
     }
 
     private fun launchApp(appListItem: AppListItem) {

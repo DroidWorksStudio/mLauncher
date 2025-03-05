@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background color -->
+    <solid android:color="@color/edge_effect_background" />
+
+    <!-- Border (stroke) with 1dp width and color -->
+    <stroke
+        android:color="@color/edge_effect_border"
+        android:width="1dp" />
+
+    <!-- Rounded corners -->
+    <corners android:radius="8dp" />  <!-- Adjust the radius value as needed for desired roundness -->
+</shape>

@@ -22,6 +22,7 @@ private const val FIRST_SETTINGS_OPEN = "FIRST_SETTINGS_OPEN"
 private const val LOCK_MODE = "LOCK_MODE"
 private const val HOME_APPS_NUM = "HOME_APPS_NUM"
 private const val HOME_PAGES_NUM = "HOME_PAGES_NUM"
+private const val EDGE_APPS_NUM = "EDGE_APPS_NUM"
 private const val HOME_PAGES_PAGER = "HOME_PAGES_PAGER"
 private const val AUTO_SHOW_KEYBOARD = "AUTO_SHOW_KEYBOARD"
 private const val AUTO_OPEN_APP = "AUTO_OPEN_APP"
@@ -39,6 +40,7 @@ private const val DAILY_WORD_ALIGNMENT = "DAILY_WORD_ALIGNMENT"
 private const val STATUS_BAR = "STATUS_BAR"
 private const val SHOW_BATTERY = "SHOW_BATTERY"
 private const val SHOW_BATTERY_ICON = "SHOW_BATTERY_ICON"
+private const val SHOW_EDGE_PANEL = "SHOW_EDGE_PANEL"
 private const val SHOW_DATE = "SHOW_DATE"
 private const val HOME_LOCKED = "HOME_LOCKED"
 private const val SETTINGS_LOCKED = "SETTINGS_LOCKED"
@@ -259,6 +261,10 @@ class Prefs(val context: Context) {
         get() = prefs.getInt(HOME_PAGES_NUM, 1)
         set(value) = prefs.edit().putInt(HOME_PAGES_NUM, value).apply()
 
+    var edgeAppsNum: Int
+        get() = prefs.getInt(EDGE_APPS_NUM, 5)
+        set(value) = prefs.edit().putInt(EDGE_APPS_NUM, value).apply()
+
     var backgroundColor: Int
         get() = prefs.getInt(BACKGROUND_COLOR, getColor(context, getColorInt("bg")))
         set(value) = prefs.edit().putInt(BACKGROUND_COLOR, value).apply()
@@ -398,6 +404,10 @@ class Prefs(val context: Context) {
     var showBatteryIcon: Boolean
         get() = prefs.getBoolean(SHOW_BATTERY_ICON, true)
         set(value) = prefs.edit().putBoolean(SHOW_BATTERY_ICON, value).apply()
+
+    var showEdgePanel: Boolean
+        get() = prefs.getBoolean(SHOW_EDGE_PANEL, true)
+        set(value) = prefs.edit().putBoolean(SHOW_EDGE_PANEL, value).apply()
 
     var iconPack: Constants.IconPacks
         get() {

@@ -84,6 +84,7 @@ class FeaturesFragment : Fragment() {
         var selectedSettingsSize by remember { mutableIntStateOf(prefs.settingsSize) }
         var toggledHideSearchView by remember { mutableStateOf(prefs.hideSearchView) }
         var toggledFloating by remember { mutableStateOf(prefs.showFloating) }
+        var toggledEdgePanel by remember { mutableStateOf(prefs.showEdgePanel) }
 
         var selectedSearchEngine by remember { mutableStateOf(prefs.searchEngines) }
         var toggledAutoShowKeyboard by remember { mutableStateOf(prefs.autoShowKeyboard) }
@@ -93,6 +94,7 @@ class FeaturesFragment : Fragment() {
         var toggledAppsLocked by remember { mutableStateOf(prefs.homeLocked) }
         var toggledSettingsLocked by remember { mutableStateOf(prefs.settingsLocked) }
         var selectedHomeAppsNum by remember { mutableIntStateOf(prefs.homeAppsNum) }
+        var selectedEdgeAppsNum by remember { mutableIntStateOf(prefs.edgeAppsNum) }
         var selectedHomePagesNum by remember { mutableIntStateOf(prefs.homePagesNum) }
         var toggledHomePager by remember { mutableStateOf(prefs.homePager) }
 
@@ -237,6 +239,17 @@ class FeaturesFragment : Fragment() {
                 }
             )
 
+            SettingsSwitch(
+                text = stringResource(R.string.allow_edge_panel),
+                fontSize = titleFontSize,
+                defaultState = toggledEdgePanel,
+                onCheckedChange = {
+                    toggledEdgePanel = !prefs.showEdgePanel
+                    prefs.showEdgePanel = toggledEdgePanel
+                    viewModel.setShowEdgePanel(prefs.showEdgePanel)
+                }
+            )
+
             SettingsTitle(
                 text = stringResource(R.string.search),
                 fontSize = titleFontSize,
@@ -342,6 +355,26 @@ class FeaturesFragment : Fragment() {
                                 prefs.homePagesNum = newHomeAppsNum // Persist the new homePagesNum
                                 viewModel.homePagesNum.value = newHomeAppsNum
                             }
+                        }
+                    )
+                }
+            )
+
+            SettingsSelect(
+                title = stringResource(R.string.apps_on_edge_screen),
+                option = selectedEdgeAppsNum.toString(),
+                fontSize = titleFontSize,
+                onClick = {
+                    dialogBuilder.showSliderDialog(
+                        context = requireContext(),
+                        title = getString(R.string.apps_on_edge_screen),
+                        minValue = Constants.MIN_EDGE_APPS,
+                        maxValue = Constants.MAX_EDGE_APPS,
+                        currentValue = prefs.edgeAppsNum,
+                        onValueSelected = { newEdgeAppsNum ->
+                            selectedEdgeAppsNum = newEdgeAppsNum // Update state
+                            prefs.edgeAppsNum = newEdgeAppsNum // Persist selection in preferences
+                            viewModel.edgeAppsNum.value = newEdgeAppsNum
                         }
                     )
                 }

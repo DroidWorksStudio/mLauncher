@@ -1,8 +1,7 @@
-package com.github.droidworksstudio.mlauncher.helper
+package com.github.droidworksstudio.mlauncher
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.github.droidworksstudio.mlauncher.R
 
 class FakeHomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

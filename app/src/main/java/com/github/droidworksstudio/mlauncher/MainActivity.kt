@@ -7,8 +7,6 @@ import android.content.pm.ActivityInfo
 import android.content.res.Configuration
 import android.os.Build
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.view.KeyEvent
 import android.view.View
 import android.view.WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
@@ -23,9 +21,9 @@ import com.github.droidworksstudio.mlauncher.data.Migration
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.ActivityMainBinding
 import com.github.droidworksstudio.mlauncher.helper.AppReloader
-import com.github.droidworksstudio.mlauncher.helper.hasUsagePermission
+import com.github.droidworksstudio.mlauncher.helper.hasOverlayPermission
 import com.github.droidworksstudio.mlauncher.helper.isTablet
-import com.github.droidworksstudio.mlauncher.helper.showPermissionDialog
+import com.github.droidworksstudio.mlauncher.services.EdgeService
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import org.xmlpull.v1.XmlPullParser
@@ -101,11 +99,14 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // Initialize com.github.droidworksstudio.common.CrashHandler to catch uncaught exceptions
-        Thread.setDefaultUncaughtExceptionHandler(CrashHandler(applicationContext))
-
         prefs = Prefs(this)
         migration = Migration(this)
+
+        // Initialize com.github.droidworksstudio.common.CrashHandler to catch uncaught exceptions
+        Thread.setDefaultUncaughtExceptionHandler(CrashHandler(applicationContext))
+        if (prefs.showEdgePanel && hasOverlayPermission(applicationContext)) {
+            startService(Intent(this, EdgeService::class.java))
+        }
 
         val themeMode = when (prefs.appTheme) {
             Constants.Theme.Light -> AppCompatDelegate.MODE_NIGHT_NO
@@ -137,20 +138,6 @@ class MainActivity : AppCompatActivity() {
         // pm = packageManager
         // val getAppVersionAndHash = AppDetailsHelper.getAppVersionAndHash(this, "app.mlauncher.debug", pm)
         // Log.d("isPremiumInstalled", getAppVersionAndHash.toString())
-
-        if (prefs.recentAppsDisplayed || prefs.appUsageStats) {
-            // Check if the usage permission is not granted
-            if (!hasUsagePermission(this)) {
-                // Postpone showing the dialog until the activity is running
-                Handler(Looper.getMainLooper()).post {
-                    // Check if the activity is still running before showing the dialog
-                    if (!isFinishing) {
-                        // Instantiate MainActivity and pass it to showPermissionDialog
-                        showPermissionDialog(this)
-                    }
-                }
-            }
-        }
     }
 
     @Deprecated("Deprecated in Java")

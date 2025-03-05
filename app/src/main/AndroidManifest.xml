@@ -17,6 +17,9 @@
     <uses-permission android:name="android.permission.ACCESS_HIDDEN_PROFILES" />
     <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
 
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
     <application
         android:name="com.github.droidworksstudio.mlauncher.Mlauncher"
         android:allowBackup="true"
@@ -59,7 +62,7 @@
         </activity>
 
         <activity
-            android:name="com.github.droidworksstudio.mlauncher.helper.FakeHomeActivity"
+            android:name="com.github.droidworksstudio.mlauncher.FakeHomeActivity"
             android:enabled="false"
             android:exported="true"
             android:launchMode="singleTask"
@@ -86,7 +89,7 @@
         </receiver>
 
         <service
-            android:name="com.github.droidworksstudio.mlauncher.helper.ActionService"
+            android:name="com.github.droidworksstudio.mlauncher.services.ActionService"
             android:exported="false"
             android:label="@string/accessibility_service_name"
             android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
@@ -97,6 +100,15 @@
                 <action android:name="android.accessibilityservice.AccessibilityService" />
             </intent-filter>
         </service>
-    </application>
 
+        <service
+            android:name="com.github.droidworksstudio.mlauncher.services.EdgeService"
+            android:exported="false"
+            android:permission="android.permission.FOREGROUND_SERVICE" />
+
+        <service
+            android:name="com.github.droidworksstudio.mlauncher.services.EdgePanelService"
+            android:exported="false"
+            android:permission="android.permission.FOREGROUND_SERVICE" />
+    </application>
 </manifest>

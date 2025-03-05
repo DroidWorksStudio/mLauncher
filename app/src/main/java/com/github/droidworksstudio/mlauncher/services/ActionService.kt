@@ -1,4 +1,4 @@
-package com.github.droidworksstudio.mlauncher.helper
+package com.github.droidworksstudio.mlauncher.services
 
 import android.accessibilityservice.AccessibilityService
 import android.content.Intent

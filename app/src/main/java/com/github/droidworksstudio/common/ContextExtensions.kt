@@ -24,7 +24,7 @@ import androidx.biometric.BiometricManager
 import androidx.core.content.ContextCompat
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Prefs
-import com.github.droidworksstudio.mlauncher.helper.ActionService
+import com.github.droidworksstudio.mlauncher.services.ActionService
 import java.util.Calendar
 import java.util.Date
 
