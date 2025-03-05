@@ -23,7 +23,7 @@
     <string name="settings_text_size">Ayarlar Metin Boyutu</string>
     <string name="hide_search_view">Arama Görünümünü Gizle</string>
     <string name="show_floating_button">Kayan Düğmeyi Göster</string>
-    <string name="allow_edge_panel">Allow Edge Panel</string>
+    <string name="allow_edge_panel">Kenar Paneline İzin Ver</string>
     <string name="search">Aramak</string>
     <string name="search_engine">Arama motoru</string>
     <string name="auto_show_keyboard">Klavye\'yi otomatik göster</string>
@@ -32,8 +32,8 @@
     <string name="auto_open_apps">Uygulamaları otomatik aç</string>
     <string name="lock_home_apps">Kilit Uygulamaları</string>
     <string name="lock_settings">Kilit Ayarları</string>
-    <string name="apps_on_home_screen">Number of Home Apps</string>
-    <string name="apps_on_edge_screen">Number of Edge Apps</string>
+    <string name="apps_on_home_screen">Ev Uygulamalarının Sayısı</string>
+    <string name="apps_on_edge_screen">Edge Uygulamalarının Sayısı</string>
     <string name="pages_on_home_screen">Sayfa sayısı</string>
     <string name="enable_home_pager">Ana Sayfa Cihazını Etkinleştir</string>
     <string name="battery_date_time">Pil &amp; Tarih/Saat</string>
@@ -185,10 +185,10 @@
     <string name="open">Aç</string>
     <string name="close">Kapat</string>
     <!-- Permissions Strings -->
-    <string name="permission_required">Permission Required</string>
-    <string name="access_usage_data_permission">To proceed, please enable permission to access usage data in your device settings.</string>
-    <string name="access_overlay_permission">To proceed, please enable permission to display content over other apps in your device settings.</string>
-    <string name="goto_settings">Go to Settings</string>
+    <string name="permission_required">İzin Gerekli</string>
+    <string name="access_usage_data_permission">Devam etmek için lütfen cihaz ayarlarınızdan kullanım verilerine erişim iznini etkinleştirin.</string>
+    <string name="access_overlay_permission">Devam etmek için lütfen cihaz ayarlarınızdan içeriğin diğer uygulamalar üzerinde görüntülenmesine izin verin.</string>
+    <string name="goto_settings">Ayarlara git</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">Bu işlevsellik için Android 15 veya üzeri gerekir.</string>
     <string name="toast_private_space_default_home_screen">Özel alana erişebilmek için mLauncher\'ın varsayılan ana ekran olması gerekir.</string>
