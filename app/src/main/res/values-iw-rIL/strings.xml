@@ -23,6 +23,7 @@
     <string name="settings_text_size">הגדרות גודל טקסט</string>
     <string name="hide_search_view">הסתר תצוגת חיפוש</string>
     <string name="show_floating_button">הצג כפתור צף</string>
+    <string name="allow_edge_panel">Allow Edge Panel</string>
     <string name="search">חיפוש</string>
     <string name="search_engine">מנוע חיפוש</string>
     <string name="auto_show_keyboard">הצג מקלדת בחיפוש</string>
@@ -31,7 +32,8 @@
     <string name="auto_open_apps">פתיחה אוטומטית של יישומים</string>
     <string name="lock_home_apps">נעילת יישומי דף הבית</string>
     <string name="lock_settings">הגדרות נעילה</string>
-    <string name="apps_on_home_screen">מספר קיצורי דרך</string>
+    <string name="apps_on_home_screen">Number of Home Apps</string>
+    <string name="apps_on_edge_screen">Number of Edge Apps</string>
     <string name="pages_on_home_screen">מספר דפים</string>
     <string name="enable_home_pager">הפעל את Home Pager</string>
     <string name="battery_date_time">סוללה &amp; תאריך/שעה</string>
@@ -182,6 +184,11 @@
     <string name="disabled">מושבת</string>
     <string name="open">פתח</string>
     <string name="close">סגור</string>
+    <!-- Permissions Strings -->
+    <string name="permission_required">Permission Required</string>
+    <string name="access_usage_data_permission">To proceed, please enable permission to access usage data in your device settings.</string>
+    <string name="access_overlay_permission">To proceed, please enable permission to display content over other apps in your device settings.</string>
+    <string name="goto_settings">Go to Settings</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">פונקציונליות זו דורשת אנדרואיד 15 ואילך.</string>
     <string name="toast_private_space_default_home_screen">mLauncher צריך להיות מסך הבית המוגדר כברירת מחדל כדי לגשת למרחב פרטי.</string>
