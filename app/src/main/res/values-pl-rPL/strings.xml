@@ -23,6 +23,7 @@
     <string name="settings_text_size">Ustawienia Rozmiar tekstu</string>
     <string name="hide_search_view">Ukryj widok wyszukiwania</string>
     <string name="show_floating_button">Pokaż przycisk pływający</string>
+    <string name="allow_edge_panel">Allow Edge Panel</string>
     <string name="search">Szukaj</string>
     <string name="search_engine">Wyszukiwarka</string>
     <string name="auto_show_keyboard">Auto show keyboard</string>
@@ -31,7 +32,8 @@
     <string name="auto_open_apps">Automatyczne otwieranie aplikacji</string>
     <string name="lock_home_apps">Zablokuj aplikacje</string>
     <string name="lock_settings">Zablokuj ustawienia</string>
-    <string name="apps_on_home_screen">Liczba skrótów</string>
+    <string name="apps_on_home_screen">Number of Home Apps</string>
+    <string name="apps_on_edge_screen">Number of Edge Apps</string>
     <string name="pages_on_home_screen">Numer stron</string>
     <string name="enable_home_pager">Włącz pager główny</string>
     <string name="battery_date_time">Bateria &amp; Data/Godzina</string>
@@ -182,6 +184,11 @@
     <string name="disabled">Wyłączone</string>
     <string name="open">Otwórz</string>
     <string name="close">Zamknij</string>
+    <!-- Permissions Strings -->
+    <string name="permission_required">Permission Required</string>
+    <string name="access_usage_data_permission">To proceed, please enable permission to access usage data in your device settings.</string>
+    <string name="access_overlay_permission">To proceed, please enable permission to display content over other apps in your device settings.</string>
+    <string name="goto_settings">Go to Settings</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">Ta funkcjonalność wymaga systemu Android 15 lub nowszego.</string>
     <string name="toast_private_space_default_home_screen">Aby uzyskać dostęp do przestrzeni prywatnej, domyślnym ekranem głównym musi być mLauncher.</string>
