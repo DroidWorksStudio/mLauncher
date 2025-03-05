@@ -23,7 +23,7 @@
     <string name="settings_text_size">設定文字サイズ</string>
     <string name="hide_search_view">検索ビューを非表示</string>
     <string name="show_floating_button">フローティングボタンを表示</string>
-    <string name="allow_edge_panel">Allow Edge Panel</string>
+    <string name="allow_edge_panel">エッジパネルを許可する</string>
     <string name="search">検索</string>
     <string name="search_engine">検索エンジン</string>
     <string name="auto_show_keyboard">Auto show keyboard</string>
@@ -32,8 +32,8 @@
     <string name="auto_open_apps">アプリを自動的に開く</string>
     <string name="lock_home_apps">アプリをロック</string>
     <string name="lock_settings">ロック設定</string>
-    <string name="apps_on_home_screen">Number of Home Apps</string>
-    <string name="apps_on_edge_screen">Number of Edge Apps</string>
+    <string name="apps_on_home_screen">ホームアプリの数</string>
+    <string name="apps_on_edge_screen">エッジアプリの数</string>
     <string name="pages_on_home_screen">ページ数</string>
     <string name="enable_home_pager">ホーム ページャーを有効にする</string>
     <string name="battery_date_time">バッテリー &amp; 日付/時刻</string>
@@ -185,10 +185,10 @@
     <string name="open">開く</string>
     <string name="close">閉じる</string>
     <!-- Permissions Strings -->
-    <string name="permission_required">Permission Required</string>
-    <string name="access_usage_data_permission">To proceed, please enable permission to access usage data in your device settings.</string>
-    <string name="access_overlay_permission">To proceed, please enable permission to display content over other apps in your device settings.</string>
-    <string name="goto_settings">Go to Settings</string>
+    <string name="permission_required">許可が必要</string>
+    <string name="access_usage_data_permission">続行するには、デバイス設定で使用状況データにアクセスする権限を有効にしてください。</string>
+    <string name="access_overlay_permission">続行するには、デバイス設定で他のアプリの上にコンテンツを表示する許可を有効にしてください。</string>
+    <string name="goto_settings">設定に移動</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">この機能には Android 15 以降が必要です。</string>
     <string name="toast_private_space_default_home_screen">プライベート スペースにアクセスするには、mLauncher をデフォルトのホーム画面にする必要があります。</string>
