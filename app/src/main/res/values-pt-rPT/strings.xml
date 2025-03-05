@@ -23,6 +23,7 @@
     <string name="settings_text_size">Tamanho do texto das configurações</string>
     <string name="hide_search_view">Ocultar visualização de pesquisa</string>
     <string name="show_floating_button">Mostrar botão flutuante</string>
+    <string name="allow_edge_panel">Allow Edge Panel</string>
     <string name="search">Procurar</string>
     <string name="search_engine">Mecanismo de busca</string>
     <string name="auto_show_keyboard">Teclado de exposição automática</string>
@@ -31,7 +32,8 @@
     <string name="auto_open_apps">Aplicações abertas automaticamente</string>
     <string name="lock_home_apps">Aplicações de bloqueio</string>
     <string name="lock_settings">Configurações de bloqueio</string>
-    <string name="apps_on_home_screen">Número de atalhos</string>
+    <string name="apps_on_home_screen">Number of Home Apps</string>
+    <string name="apps_on_edge_screen">Number of Edge Apps</string>
     <string name="pages_on_home_screen">Número de páginas</string>
     <string name="enable_home_pager">Ativar página inicial</string>
     <string name="battery_date_time">Bateria &amp; Data/Hora</string>
@@ -182,6 +184,11 @@
     <string name="disabled">Deficientes</string>
     <string name="open">Aberto</string>
     <string name="close">Fechar</string>
+    <!-- Permissions Strings -->
+    <string name="permission_required">Permission Required</string>
+    <string name="access_usage_data_permission">To proceed, please enable permission to access usage data in your device settings.</string>
+    <string name="access_overlay_permission">To proceed, please enable permission to display content over other apps in your device settings.</string>
+    <string name="goto_settings">Go to Settings</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">Esta funcionalidade requer Android 15 ou posterior.</string>
     <string name="toast_private_space_default_home_screen">O mLauncher precisa ser a tela inicial padrão para acessar o espaço privado.</string>
