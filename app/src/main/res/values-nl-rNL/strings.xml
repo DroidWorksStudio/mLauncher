@@ -23,6 +23,7 @@
     <string name="settings_text_size">Instellingen Tekstgrootte</string>
     <string name="hide_search_view">Verberg Zoekweergave</string>
     <string name="show_floating_button">Zwevende knop weergeven</string>
+    <string name="allow_edge_panel">Allow Edge Panel</string>
     <string name="search">Zoek</string>
     <string name="search_engine">Zoekmachine</string>
     <string name="auto_show_keyboard">Toetsenbord automatisch tonen</string>
@@ -31,7 +32,8 @@
     <string name="auto_open_apps">Apps automatisch openen</string>
     <string name="lock_home_apps">Apps vergrendelen</string>
     <string name="lock_settings">Instellingen vergrendelen</string>
-    <string name="apps_on_home_screen">Aantal snelkoppelingen</string>
+    <string name="apps_on_home_screen">Number of Home Apps</string>
+    <string name="apps_on_edge_screen">Number of Edge Apps</string>
     <string name="pages_on_home_screen">Aantal pagina\'s</string>
     <string name="enable_home_pager">Schakel Homepager in</string>
     <string name="battery_date_time">Batterij &amp; Datum/Tijd</string>
@@ -182,6 +184,11 @@
     <string name="disabled">Uitgeschakeld</string>
     <string name="open">Open</string>
     <string name="close">Afsluiten</string>
+    <!-- Permissions Strings -->
+    <string name="permission_required">Permission Required</string>
+    <string name="access_usage_data_permission">To proceed, please enable permission to access usage data in your device settings.</string>
+    <string name="access_overlay_permission">To proceed, please enable permission to display content over other apps in your device settings.</string>
+    <string name="goto_settings">Go to Settings</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">Voor deze functionaliteit is Android 15 of hoger vereist.</string>
     <string name="toast_private_space_default_home_screen">mLauncher moet het standaard startscherm zijn om toegang te krijgen tot uw privéruimte.</string>
