@@ -23,6 +23,7 @@
     <string name="settings_text_size">Размер текста в настройках</string>
     <string name="hide_search_view">Скрыть Поиск Вид</string>
     <string name="show_floating_button">Показать плавающую кнопку</string>
+    <string name="allow_edge_panel">Разрешить панель Edge</string>
     <string name="search">Поиск</string>
     <string name="search_engine">Поисковый движок</string>
     <string name="auto_show_keyboard">Auto show keyboard</string>
@@ -31,7 +32,8 @@
     <string name="auto_open_apps">Автооткрытие приложений</string>
     <string name="lock_home_apps">Заблокировать приложения</string>
     <string name="lock_settings">Блокировка настроек</string>
-    <string name="apps_on_home_screen">Количество ярлыков</string>
+    <string name="apps_on_home_screen">Количество домашних приложений</string>
+    <string name="apps_on_edge_screen">Количество приложений Edge</string>
     <string name="pages_on_home_screen">Количество страниц</string>
     <string name="enable_home_pager">Включить домашний пейджер</string>
     <string name="battery_date_time">Батарея &amp; Дата/Время</string>
@@ -182,6 +184,11 @@
     <string name="disabled">Отключено</string>
     <string name="open">Открыть</string>
     <string name="close">Закрыть</string>
+    <!-- Permissions Strings -->
+    <string name="permission_required">Требуется разрешение</string>
+    <string name="access_usage_data_permission">Чтобы продолжить, включите разрешение на доступ к данным об использовании в настройках вашего устройства.</string>
+    <string name="access_overlay_permission">Чтобы продолжить, включите разрешение на отображение контента поверх других приложений в настройках вашего устройства.</string>
+    <string name="goto_settings">Перейти в настройки</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">Для этой функции требуется Android 15 или более поздняя версия.</string>
     <string name="toast_private_space_default_home_screen">Для доступа к личному пространству mlauncher должен быть домашним экраном по умолчанию.</string>

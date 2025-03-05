@@ -23,6 +23,7 @@
     <string name="settings_text_size">설정 텍스트 크기</string>
     <string name="hide_search_view">검색보기 숨기기</string>
     <string name="show_floating_button">플로팅 버튼 표시</string>
+    <string name="allow_edge_panel">Edge 패널 허용</string>
     <string name="search">찾다</string>
     <string name="search_engine">검색 엔진</string>
     <string name="auto_show_keyboard">Auto show keyboard</string>
@@ -31,7 +32,8 @@
     <string name="auto_open_apps">Auto open apps</string>
     <string name="lock_home_apps">Lock Apps</string>
     <string name="lock_settings">잠금 설정</string>
-    <string name="apps_on_home_screen">Number of shortcuts</string>
+    <string name="apps_on_home_screen">홈 앱 수</string>
+    <string name="apps_on_edge_screen">Edge 앱 수</string>
     <string name="pages_on_home_screen">페이지 수</string>
     <string name="enable_home_pager">홈 호출기 활성화</string>
     <string name="battery_date_time">배터리 &amp; 날짜/시간</string>
@@ -182,6 +184,11 @@
     <string name="disabled">Disabled</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
+    <!-- Permissions Strings -->
+    <string name="permission_required">허가 필요</string>
+    <string name="access_usage_data_permission">계속하려면 기기 설정에서 사용 데이터에 액세스할 수 있는 권한을 허용하세요.</string>
+    <string name="access_overlay_permission">계속하려면 기기 설정에서 다른 앱 위에 콘텐츠를 표시할 수 있는 권한을 허용하세요.</string>
+    <string name="goto_settings">설정으로 이동</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">이 기능을 사용하려면 Android 15 이상이 필요합니다.</string>
     <string name="toast_private_space_default_home_screen">개인 공간에 접근하려면 mLauncher가 기본 홈 화면이어야 합니다.</string>
