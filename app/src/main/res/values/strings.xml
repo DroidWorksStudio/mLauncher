@@ -31,7 +31,6 @@
     <string name="settings_text_size">Settings Text Size</string>
     <string name="hide_search_view">Hide Search View</string>
     <string name="show_floating_button">Show Floating Button</string>
-    <string name="allow_edge_panel">Allow Edge Panel</string>
 
     <string name="search">Search</string>
 
@@ -45,7 +44,6 @@
     <string name="lock_home_apps">Lock Home Apps</string>
     <string name="lock_settings">Lock Settings</string>
     <string name="apps_on_home_screen">Number of Home Apps</string>
-    <string name="apps_on_edge_screen">Number of Edge Apps</string>
     <string name="pages_on_home_screen">Number of Pages</string>
     <string name="enable_home_pager">Enable Home Pager</string>
 
@@ -238,7 +236,6 @@
     <!-- Permissions Strings -->
     <string name="permission_required">Permission Required</string>
     <string name="access_usage_data_permission">To proceed, please enable permission to access usage data in your device settings.</string>
-    <string name="access_overlay_permission">To proceed, please enable permission to display content over other apps in your device settings.</string>
     <string name="goto_settings">Go to Settings</string>
 
     <!-- Private Spaces Strings -->
