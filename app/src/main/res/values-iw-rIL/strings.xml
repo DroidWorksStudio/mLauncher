@@ -23,7 +23,6 @@
     <string name="settings_text_size">הגדרות גודל טקסט</string>
     <string name="hide_search_view">הסתר תצוגת חיפוש</string>
     <string name="show_floating_button">הצג כפתור צף</string>
-    <string name="allow_edge_panel">אפשר פאנל Edge</string>
     <string name="search">חיפוש</string>
     <string name="search_engine">מנוע חיפוש</string>
     <string name="auto_show_keyboard">הצג מקלדת בחיפוש</string>
@@ -33,7 +32,6 @@
     <string name="lock_home_apps">נעילת יישומי דף הבית</string>
     <string name="lock_settings">הגדרות נעילה</string>
     <string name="apps_on_home_screen">מספר אפליקציות הבית</string>
-    <string name="apps_on_edge_screen">מספר אפליקציות Edge</string>
     <string name="pages_on_home_screen">מספר דפים</string>
     <string name="enable_home_pager">הפעל את Home Pager</string>
     <string name="battery_date_time">סוללה &amp; תאריך/שעה</string>
@@ -187,7 +185,6 @@
     <!-- Permissions Strings -->
     <string name="permission_required">נדרשת הרשאה</string>
     <string name="access_usage_data_permission">כדי להמשיך, אפשר הרשאת גישה לנתוני שימוש בהגדרות המכשיר שלך.</string>
-    <string name="access_overlay_permission">כדי להמשיך, אנא אפשר הרשאה להציג תוכן מעל אפליקציות אחרות בהגדרות המכשיר שלך.</string>
     <string name="goto_settings">עבור אל הגדרות</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">פונקציונליות זו דורשת אנדרואיד 15 ואילך.</string>
