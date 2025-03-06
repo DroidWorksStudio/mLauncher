@@ -26,6 +26,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Cleaned up string file - ([e265ae8](https://github.com/DroidWorksStudio/mLauncher/commit/e265ae8961198c9fc64a88a407f157e9841f6544))
 - Added systemGestureExclusionRects - ([346ac85](https://github.com/DroidWorksStudio/mLauncher/commit/346ac85594e2613d7f8b994aff0732ce91e52b06))
 - Disable the edge panel by default. - ([219fcc3](https://github.com/DroidWorksStudio/mLauncher/commit/219fcc3b0a8080ecea194af6a4bc725c68ebdcb7))
 - Improved margin application for home screen elements - ([3b5b7ca](https://github.com/DroidWorksStudio/mLauncher/commit/3b5b7ca42a961b8c51579e28728f57597377c2b5))
