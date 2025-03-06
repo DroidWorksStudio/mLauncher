@@ -39,9 +39,6 @@
 
     <color name="hover_effect">#1AFFFFFF</color>
 
-    <color name="edge_effect_background">#80FFFFFF</color>
-    <color name="edge_effect_border">#80CCCCCC</color>
-
     <color name="green">#4CAF50</color>
     <color name="orange">#AF684C</color>
     <color name="red">#AF4C4C</color>

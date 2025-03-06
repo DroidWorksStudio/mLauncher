@@ -21,9 +21,7 @@ import com.github.droidworksstudio.mlauncher.data.Migration
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.ActivityMainBinding
 import com.github.droidworksstudio.mlauncher.helper.AppReloader
-import com.github.droidworksstudio.mlauncher.helper.hasOverlayPermission
 import com.github.droidworksstudio.mlauncher.helper.isTablet
-import com.github.droidworksstudio.mlauncher.services.EdgeService
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import org.xmlpull.v1.XmlPullParser
@@ -104,9 +102,6 @@ class MainActivity : AppCompatActivity() {
 
         // Initialize com.github.droidworksstudio.common.CrashHandler to catch uncaught exceptions
         Thread.setDefaultUncaughtExceptionHandler(CrashHandler(applicationContext))
-        if (prefs.showEdgePanel && hasOverlayPermission(applicationContext)) {
-            startService(Intent(this, EdgeService::class.java))
-        }
 
         val themeMode = when (prefs.appTheme) {
             Constants.Theme.Light -> AppCompatDelegate.MODE_NIGHT_NO

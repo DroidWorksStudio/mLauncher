@@ -39,7 +39,6 @@ import com.github.droidworksstudio.mlauncher.data.AppListItem
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.services.ActionService
-import com.github.droidworksstudio.mlauncher.services.EdgeService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.io.File
@@ -69,32 +68,17 @@ fun hasUsagePermission(context: Context): Boolean {
     return mode == AppOpsManager.MODE_ALLOWED
 }
 
-fun hasOverlayPermission(context: Context): Boolean {
-    return Settings.canDrawOverlays(context)
-}
 
-fun showPermissionDialog(context: Context, isUsageStatsPermission: Boolean) {
+fun showPermissionDialog(context: Context) {
     val builder = AlertDialog.Builder(context)
-    if (isUsageStatsPermission) {
-        builder.setTitle(context.getString(R.string.permission_required))
-        builder.setMessage(context.getString(R.string.access_usage_data_permission))
-        builder.setPositiveButton(context.getString(R.string.goto_settings)) { dialogInterface: DialogInterface, _: Int ->
-            dialogInterface.dismiss()
-            requestUsagePermission(context)
-        }
-        builder.setNegativeButton(context.getString(R.string.cancel)) { dialogInterface: DialogInterface, _: Int ->
-            dialogInterface.dismiss()
-        }
-    } else {
-        builder.setTitle(context.getString(R.string.permission_required))
-        builder.setMessage(context.getString(R.string.access_overlay_permission))
-        builder.setPositiveButton(context.getString(R.string.goto_settings)) { dialogInterface: DialogInterface, _: Int ->
-            dialogInterface.dismiss()
-            requestOverlayPermission(context)
-        }
-        builder.setNegativeButton(context.getString(R.string.cancel)) { dialogInterface: DialogInterface, _: Int ->
-            dialogInterface.dismiss()
-        }
+    builder.setTitle(context.getString(R.string.permission_required))
+    builder.setMessage(context.getString(R.string.access_usage_data_permission))
+    builder.setPositiveButton(context.getString(R.string.goto_settings)) { dialogInterface: DialogInterface, _: Int ->
+        dialogInterface.dismiss()
+        requestUsagePermission(context)
+    }
+    builder.setNegativeButton(context.getString(R.string.cancel)) { dialogInterface: DialogInterface, _: Int ->
+        dialogInterface.dismiss()
     }
     val dialog = builder.create()
     dialog.show()
@@ -104,18 +88,6 @@ fun requestUsagePermission(context: Context) {
     val intent = Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS)
     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
     context.startActivity(intent)
-}
-
-fun requestOverlayPermission(context: Context) {
-    if (!Settings.canDrawOverlays(context)) {
-        val intent = Intent(
-            Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
-            Uri.parse("package:${context.packageName}")
-        )
-        context.startActivity(intent)
-    } else {
-        context.startService(Intent(context, EdgeService::class.java))  // Start Edge Detection
-    }
 }
 
 suspend fun getAppsList(

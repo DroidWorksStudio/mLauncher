@@ -70,7 +70,6 @@ import com.github.droidworksstudio.mlauncher.helper.BatteryReceiver
 import com.github.droidworksstudio.mlauncher.helper.PrivateSpaceReceiver
 import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
 import com.github.droidworksstudio.mlauncher.helper.getNextAlarm
-import com.github.droidworksstudio.mlauncher.helper.hasOverlayPermission
 import com.github.droidworksstudio.mlauncher.helper.hasUsagePermission
 import com.github.droidworksstudio.mlauncher.helper.hideStatusBar
 import com.github.droidworksstudio.mlauncher.helper.initActionService
@@ -293,15 +292,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 // Postpone showing the dialog until the activity is running
                 Handler(Looper.getMainLooper()).post {
                     // Instantiate MainActivity and pass it to showPermissionDialog
-                    showPermissionDialog(context, true)
-                }
-            }
-        }
-        if (prefs.showEdgePanel) {
-            if (!hasOverlayPermission(context)) {
-                Handler(Looper.getMainLooper()).post {
-                    // Instantiate MainActivity and pass it to showPermissionDialog
-                    showPermissionDialog(context, false)
+                    showPermissionDialog(context)
                 }
             }
         }

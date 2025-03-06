@@ -100,15 +100,5 @@
                 <action android:name="android.accessibilityservice.AccessibilityService" />
             </intent-filter>
         </service>
-
-        <service
-            android:name="com.github.droidworksstudio.mlauncher.services.EdgeService"
-            android:exported="false"
-            android:permission="android.permission.FOREGROUND_SERVICE" />
-
-        <service
-            android:name="com.github.droidworksstudio.mlauncher.services.EdgePanelService"
-            android:exported="false"
-            android:permission="android.permission.FOREGROUND_SERVICE" />
     </application>
 </manifest>

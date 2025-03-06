@@ -24,7 +24,11 @@ class Migration(val context: Context) {
             ),
             175 to listOf(
                 "CLICK_APP_USAGE"
-            )
+            ),
+            10803 to listOf(
+                "SHOW_EDGE_PANEL",
+                "EDGE_APPS_NUM"
+            ),
             // Add more versions and preferences to remove here
         )
 
