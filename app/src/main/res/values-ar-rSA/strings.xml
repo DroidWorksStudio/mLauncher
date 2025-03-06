@@ -23,7 +23,6 @@
     <string name="settings_text_size">إعدادات حجم النص</string>
     <string name="hide_search_view">إخفاء عرض البحث</string>
     <string name="show_floating_button">إظهار الزر العائم</string>
-    <string name="allow_edge_panel">السماح بلوحة الحافة</string>
     <string name="search">يبحث</string>
     <string name="search_engine">محرك البحث</string>
     <string name="auto_show_keyboard">Auto show keyboard</string>
@@ -33,7 +32,6 @@
     <string name="lock_home_apps">قفل التطبيقات</string>
     <string name="lock_settings">إعدادات القفل</string>
     <string name="apps_on_home_screen">عدد التطبيقات المنزلية</string>
-    <string name="apps_on_edge_screen">عدد تطبيقات الحافة</string>
     <string name="pages_on_home_screen">عدد الصفحات</string>
     <string name="enable_home_pager">تمكين جهاز النداء الرئيسي</string>
     <string name="battery_date_time">البطارية &amp; التاريخ/الوقت</string>
@@ -187,7 +185,6 @@
     <!-- Permissions Strings -->
     <string name="permission_required">مطلوب إذن</string>
     <string name="access_usage_data_permission">للمتابعة، يرجى تمكين الإذن بالوصول إلى بيانات الاستخدام في إعدادات جهازك.</string>
-    <string name="access_overlay_permission">للمتابعة، يرجى تمكين الإذن لعرض المحتوى فوق التطبيقات الأخرى في إعدادات جهازك.</string>
     <string name="goto_settings">انتقل إلى الإعدادات</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">تتطلب هذه الوظيفة نظام Android 15 أو إصدارًا أحدث.</string>

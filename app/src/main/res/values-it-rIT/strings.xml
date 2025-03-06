@@ -23,7 +23,6 @@
     <string name="settings_text_size">Impostazioni dimensione testo</string>
     <string name="hide_search_view">Nascondi la vista di ricerca</string>
     <string name="show_floating_button">Mostra pulsante mobile</string>
-    <string name="allow_edge_panel">Consenti pannello bordo</string>
     <string name="search">Ricerca</string>
     <string name="search_engine">Motore di ricerca</string>
     <string name="auto_show_keyboard">Mostra tastiera automaticamente</string>
@@ -33,7 +32,6 @@
     <string name="lock_home_apps">Blocca App</string>
     <string name="lock_settings">Blocca le impostazioni</string>
     <string name="apps_on_home_screen">Numero di app per la casa</string>
-    <string name="apps_on_edge_screen">Numero di app Edge</string>
     <string name="pages_on_home_screen">Numero di pagine</string>
     <string name="enable_home_pager">Abilita l\'Home Pager iniziale</string>
     <string name="battery_date_time">Batteria &amp; Data/Ora</string>
@@ -187,7 +185,6 @@
     <!-- Permissions Strings -->
     <string name="permission_required">Permesso richiesto</string>
     <string name="access_usage_data_permission">Per procedere, abilita l\'autorizzazione ad accedere ai dati di utilizzo nelle impostazioni del tuo dispositivo.</string>
-    <string name="access_overlay_permission">Per procedere, abilita l\'autorizzazione a visualizzare i contenuti su altre app nelle impostazioni del tuo dispositivo.</string>
     <string name="goto_settings">Vai su Impostazioni</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">Questa funzionalità richiede Android 15 o versione successiva.</string>

@@ -23,7 +23,6 @@
     <string name="settings_text_size">Nustatymai Teksto dydis</string>
     <string name="hide_search_view">Slėpti paieškos rodinį</string>
     <string name="show_floating_button">Rodyti slankųjį mygtuką</string>
-    <string name="allow_edge_panel">Leisti kraštinį skydelį</string>
     <string name="search">Ieškoti</string>
     <string name="search_engine">Paieškos sistema</string>
     <string name="auto_show_keyboard">Automatiškai rodyti klaviatūrą</string>
@@ -33,7 +32,6 @@
     <string name="lock_home_apps">Užrakinti programas</string>
     <string name="lock_settings">Užrakinimo nustatymai</string>
     <string name="apps_on_home_screen">Namų programų skaičius</string>
-    <string name="apps_on_edge_screen">„Edge“ programų skaičius</string>
     <string name="pages_on_home_screen">Puslapių skaičius</string>
     <string name="enable_home_pager">Įjungti pradžios puslapį</string>
     <string name="battery_date_time">Baterija &amp; Data/Laikas</string>
@@ -187,7 +185,6 @@
     <!-- Permissions Strings -->
     <string name="permission_required">Reikalingas leidimas</string>
     <string name="access_usage_data_permission">Norėdami tęsti, įrenginio nustatymuose įgalinkite leidimą pasiekti naudojimo duomenis.</string>
-    <string name="access_overlay_permission">Jei norite tęsti, įrenginio nustatymuose įgalinkite leidimą rodyti turinį per kitas programas.</string>
     <string name="goto_settings">Eikite į nustatymus</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">Šiai funkcijai reikalinga „Android 15“ arba naujesnė versija.</string>
