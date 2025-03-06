@@ -15,6 +15,10 @@ All notable changes to this project will be documented in this file. See [conven
 - Adjusted Search Container margin to prevent it from touching the top of the screen. - ([3acd5a8](https://github.com/DroidWorksStudio/mLauncher/commit/3acd5a86a143e2daf15962b155fb20fbd710e66c))
 - Fix the null word list - ([3fb3dfc](https://github.com/DroidWorksStudio/mLauncher/commit/3fb3dfcf961dc15955025b6a1aa3a656f27266e8))
 
+### Feature Removal:
+
+- Removed Edge Panels - ([7757a76](https://github.com/DroidWorksStudio/mLauncher/commit/7757a76318e66f0acbe7511d55ef2691386acbff))
+
 ### Language Support:
 
 - Updated Language Files. ([#687](https://github.com/DroidWorksStudio/mLauncher/issues/687)) - ([672ea1d](https://github.com/DroidWorksStudio/mLauncher/commit/672ea1df47486b8ab1d14165dc4a773085cb6654))
