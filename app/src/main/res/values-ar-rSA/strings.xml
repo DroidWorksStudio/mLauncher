@@ -157,6 +157,7 @@
     <string name="text_authentication_error">خطأ في المصادقة:%1$s(الكود %2$d)</string>
     <string name="text_authentication_failed">المصادقة فشلت.</string>
     <string name="text_biometric_login">تسجيل الدخول البيومتري لـ mLauncher</string>
+    <string name="text_biometric_login_app">Biometric login for %1$s</string>
     <string name="text_biometric_login_sub">قم بتسجيل الدخول باستخدام بيانات الاعتماد البيومترية الخاصة بك</string>
     <!-- Crash Strings -->
     <string name="acra_crash">يتحطم</string>
@@ -174,6 +175,8 @@
     <string name="delete">يمسح</string>
     <string name="hide">إخفاء</string>
     <string name="show">إظهار</string>
+    <string name="lock">Lock</string>
+    <string name="unlock">Unlock</string>
     <string name="rename">إعادة تسمية</string>
     <string name="info">معلومات</string>
     <string name="okay">حسنًا</string>
