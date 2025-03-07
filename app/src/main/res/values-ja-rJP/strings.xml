@@ -157,6 +157,7 @@
     <string name="text_authentication_error">認証エラー:%1$s(コード %2$d)</string>
     <string name="text_authentication_failed">認証に失敗しました。</string>
     <string name="text_biometric_login">mLauncher の生体認証ログイン</string>
+    <string name="text_biometric_login_app">Biometric login for %1$s</string>
     <string name="text_biometric_login_sub">生体認証資格情報を使用してログインします</string>
     <!-- Crash Strings -->
     <string name="acra_crash">クラッシュ</string>
@@ -174,6 +175,8 @@
     <string name="delete">消去</string>
     <string name="hide">非表示</string>
     <string name="show">表示</string>
+    <string name="lock">Lock</string>
+    <string name="unlock">Unlock</string>
     <string name="rename">名前の変更</string>
     <string name="info">情報</string>
     <string name="okay">OK</string>
