@@ -157,6 +157,7 @@
     <string name="text_authentication_error">ข้อผิดพลาดในการตรวจสอบสิทธิ์:%1$s(รหัส %2$d)</string>
     <string name="text_authentication_failed">รับรองความถูกต้องล้มเหลว.</string>
     <string name="text_biometric_login">การเข้าสู่ระบบไบโอเมตริกซ์สำหรับ mLauncher</string>
+    <string name="text_biometric_login_app">Biometric login for %1$s</string>
     <string name="text_biometric_login_sub">เข้าสู่ระบบโดยใช้ข้อมูลประจำตัวไบโอเมตริกซ์ของคุณ</string>
     <!-- Crash Strings -->
     <string name="acra_crash">ชน</string>
@@ -174,6 +175,8 @@
     <string name="delete">ลบ</string>
     <string name="hide">ซ่อน</string>
     <string name="show">แสดง</string>
+    <string name="lock">Lock</string>
+    <string name="unlock">Unlock</string>
     <string name="rename">เปลี่ยนชื่อ</string>
     <string name="info">ข้อมูล</string>
     <string name="okay">ตกลง</string>
