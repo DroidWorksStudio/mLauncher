@@ -1,6 +1,5 @@
 package com.github.droidworksstudio.mlauncher.helper
 
-import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.pm.LauncherApps
 import android.os.Build
@@ -10,10 +9,7 @@ import android.os.UserHandle
 import android.os.UserManager
 import android.util.Log
 import com.github.droidworksstudio.common.showLongToast
-import com.github.droidworksstudio.mlauncher.MainViewModel
 import com.github.droidworksstudio.mlauncher.R
-
-private lateinit var viewModel: MainViewModel
 
 /*
  * Checks whether the device supports private space.
@@ -75,17 +71,11 @@ fun isPrivateSpaceSetUp(
             context.showLongToast(context.getString(R.string.toast_private_space_default_home_screen))
         }
         if (launchSettings) {
-            viewModel.resetDefaultLauncherApp(context)
+            setDefaultHomeScreen(context)
         }
     } else {
         if (showToast) {
             context.showLongToast(context.getString(R.string.toast_private_space_not_available))
-        }
-        if (launchSettings) {
-            try {
-                viewModel.resetDefaultLauncherApp(context)
-            } catch (_: ActivityNotFoundException) {
-            }
         }
     }
     return false

@@ -76,6 +76,11 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name="com.github.droidworksstudio.mlauncher.CrashReportActivity"
+            android:enabled="true"
+            android:exported="true" />
+
         <receiver
             android:name="com.github.droidworksstudio.mlauncher.listener.DeviceAdmin"
             android:exported="false"
