@@ -157,7 +157,7 @@
     <string name="text_authentication_error">Erreur d\'authentification :%1$s(code %2$d)</string>
     <string name="text_authentication_failed">Authentification échouée.</string>
     <string name="text_biometric_login">Connexion biométrique pour mLauncher</string>
-    <string name="text_biometric_login_app">Biometric login for %1$s</string>
+    <string name="text_biometric_login_app">Connexion biométrique pour %1$s</string>
     <string name="text_biometric_login_sub">Connectez-vous en utilisant votre identifiant biométrique</string>
     <!-- Crash Strings -->
     <string name="acra_crash">Accident</string>
@@ -175,8 +175,8 @@
     <string name="delete">Supprimer</string>
     <string name="hide">Cacher</string>
     <string name="show">Afficher</string>
-    <string name="lock">Lock</string>
-    <string name="unlock">Unlock</string>
+    <string name="lock">Verrouillage</string>
+    <string name="unlock">Ouvrir</string>
     <string name="rename">Renommer</string>
     <string name="info">Info</string>
     <string name="okay">Ok</string>
