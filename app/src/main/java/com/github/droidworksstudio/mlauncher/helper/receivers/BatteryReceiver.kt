@@ -1,4 +1,4 @@
-package com.github.droidworksstudio.mlauncher.helper
+package com.github.droidworksstudio.mlauncher.helper.receivers
 
 import android.app.Activity
 import android.content.BroadcastReceiver

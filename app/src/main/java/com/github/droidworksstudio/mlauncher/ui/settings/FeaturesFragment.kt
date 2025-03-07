@@ -35,17 +35,17 @@ import com.github.droidworksstudio.mlauncher.data.Constants.Theme.Light
 import com.github.droidworksstudio.mlauncher.data.Constants.Theme.System
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentSettingsBinding
-import com.github.droidworksstudio.mlauncher.helper.AppReloader
-import com.github.droidworksstudio.mlauncher.helper.DialogBuilder
 import com.github.droidworksstudio.mlauncher.helper.getTrueSystemFont
 import com.github.droidworksstudio.mlauncher.helper.isSystemInDarkMode
 import com.github.droidworksstudio.mlauncher.helper.setThemeMode
+import com.github.droidworksstudio.mlauncher.helper.utils.AppReloader
 import com.github.droidworksstudio.mlauncher.listener.DeviceAdmin
 import com.github.droidworksstudio.mlauncher.style.SettingsTheme
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.PageHeader
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsSelect
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsSwitch
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsTitle
+import com.github.droidworksstudio.mlauncher.ui.dialogs.DialogManager
 
 class FeaturesFragment : Fragment() {
 
@@ -53,7 +53,7 @@ class FeaturesFragment : Fragment() {
     private lateinit var viewModel: MainViewModel
     private lateinit var deviceManager: DevicePolicyManager
     private lateinit var componentName: ComponentName
-    private lateinit var dialogBuilder: DialogBuilder
+    private lateinit var dialogBuilder: DialogManager
 
     private var _binding: FragmentSettingsBinding? = null
     private val binding get() = _binding!!
@@ -65,7 +65,7 @@ class FeaturesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
-        dialogBuilder = DialogBuilder(requireContext(), requireActivity())
+        dialogBuilder = DialogManager(requireContext(), requireActivity())
         prefs = Prefs(requireContext())
         return binding.root
     }
@@ -498,7 +498,7 @@ class FeaturesFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         @Suppress("DEPRECATION")
         super.onActivityCreated(savedInstanceState)
-        dialogBuilder = DialogBuilder(requireContext(), requireActivity())
+        dialogBuilder = DialogManager(requireContext(), requireActivity())
         prefs = Prefs(requireContext())
         viewModel = activity?.run {
             ViewModelProvider(this)[MainViewModel::class.java]

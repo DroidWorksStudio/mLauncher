@@ -1,4 +1,4 @@
-package com.github.droidworksstudio.mlauncher.helper
+package com.github.droidworksstudio.mlauncher.helper.utils
 
 import android.content.ActivityNotFoundException
 import android.content.ComponentName

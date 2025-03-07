@@ -29,6 +29,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.github.droidworksstudio.common.hideKeyboard
+import com.github.droidworksstudio.common.isSystemApp
 import com.github.droidworksstudio.common.openSearch
 import com.github.droidworksstudio.common.searchCustomSearchEngine
 import com.github.droidworksstudio.common.searchOnPlayStore
@@ -40,7 +41,6 @@ import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Constants.AppDrawerFlag
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentAppDrawerBinding
-import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.isSystemApp
 import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
 import com.github.droidworksstudio.mlauncher.helper.openAppInfo
 

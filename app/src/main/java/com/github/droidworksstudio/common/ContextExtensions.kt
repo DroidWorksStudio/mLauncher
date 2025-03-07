@@ -6,6 +6,7 @@ import android.content.ActivityNotFoundException
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
+import android.content.pm.ApplicationInfo
 import android.content.pm.LauncherApps
 import android.content.pm.PackageManager
 import android.net.Uri
@@ -230,6 +231,18 @@ fun Context.getAppNameFromPackageName(packageName: String): String? {
     } catch (e: PackageManager.NameNotFoundException) {
         e.printStackTrace()
         null
+    }
+}
+
+fun Context.isSystemApp(packageName: String): Boolean {
+    if (packageName.isBlank()) return true
+    return try {
+        val applicationInfo = packageManager.getApplicationInfo(packageName, 0)
+        ((applicationInfo.flags and ApplicationInfo.FLAG_SYSTEM != 0)
+                || (applicationInfo.flags and ApplicationInfo.FLAG_UPDATED_SYSTEM_APP != 0))
+    } catch (e: Exception) {
+        e.printStackTrace()
+        false
     }
 }
 

@@ -25,6 +25,7 @@ import android.widget.TextView
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.view.updatePadding
 import androidx.recyclerview.widget.RecyclerView
+import com.github.droidworksstudio.common.isSystemApp
 import com.github.droidworksstudio.common.showKeyboard
 import com.github.droidworksstudio.fuzzywuzzy.FuzzyFinder
 import com.github.droidworksstudio.mlauncher.R
@@ -33,9 +34,8 @@ import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Constants.AppDrawerFlag
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.AdapterAppDrawerBinding
-import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.isSystemApp
 import com.github.droidworksstudio.mlauncher.helper.dp2px
-import com.github.droidworksstudio.mlauncher.helper.isPrivateSpaceSupported
+import com.github.droidworksstudio.mlauncher.helper.utils.PrivateSpaceManager
 
 class AppDrawerAdapter(
     private val context: Context,
@@ -277,7 +277,7 @@ class AppDrawerAdapter(
                 val isPrivateSpace = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.VANILLA_ICE_CREAM) {
                     launcherApps.getLauncherUserInfo(appListItem.user)?.userType == UserManager.USER_TYPE_PROFILE_PRIVATE
                 } else {
-                    isPrivateSpaceSupported()
+                    PrivateSpaceManager(context).isPrivateSpaceSupported()
                 }
                 val isWorkProfile = appListItem.user != android.os.Process.myUserHandle() && !isPrivateSpace
 

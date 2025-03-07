@@ -12,7 +12,7 @@ import com.github.droidworksstudio.mlauncher.data.AppListItem
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Constants.AppDrawerFlag
 import com.github.droidworksstudio.mlauncher.data.Prefs
-import com.github.droidworksstudio.mlauncher.helper.AppUsageTracker
+import com.github.droidworksstudio.mlauncher.helper.analytics.AppUsageMonitor
 import com.github.droidworksstudio.mlauncher.helper.getAppsList
 import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
 import com.github.droidworksstudio.mlauncher.helper.setDefaultHomeScreen
@@ -120,12 +120,12 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         }
 
         try {
-            val appUsageTracker = AppUsageTracker.createInstance(appContext)
+            val appUsageTracker = AppUsageMonitor.createInstance(appContext)
             appUsageTracker.updateLastUsedTimestamp(packageName)
             launcher.startMainActivity(component, userHandle, null, null)
         } catch (_: SecurityException) {
             try {
-                val appUsageTracker = AppUsageTracker.createInstance(appContext)
+                val appUsageTracker = AppUsageMonitor.createInstance(appContext)
                 appUsageTracker.updateLastUsedTimestamp(packageName)
                 launcher.startMainActivity(component, android.os.Process.myUserHandle(), null, null)
             } catch (_: Exception) {

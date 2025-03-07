@@ -62,21 +62,20 @@ import com.github.droidworksstudio.mlauncher.data.Constants.Action
 import com.github.droidworksstudio.mlauncher.data.Constants.AppDrawerFlag
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentHomeBinding
-import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.formatMillisToHMS
-import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.getTotalScreenTime
-import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.getUsageStats
-import com.github.droidworksstudio.mlauncher.helper.AppReloader
-import com.github.droidworksstudio.mlauncher.helper.BatteryReceiver
-import com.github.droidworksstudio.mlauncher.helper.PrivateSpaceReceiver
+import com.github.droidworksstudio.mlauncher.helper.analytics.AppUsageMonitor
+import com.github.droidworksstudio.mlauncher.helper.formatMillisToHMS
 import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
 import com.github.droidworksstudio.mlauncher.helper.getNextAlarm
 import com.github.droidworksstudio.mlauncher.helper.hasUsagePermission
 import com.github.droidworksstudio.mlauncher.helper.hideStatusBar
 import com.github.droidworksstudio.mlauncher.helper.initActionService
 import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
+import com.github.droidworksstudio.mlauncher.helper.receivers.BatteryReceiver
+import com.github.droidworksstudio.mlauncher.helper.receivers.PrivateSpaceReceiver
 import com.github.droidworksstudio.mlauncher.helper.showPermissionDialog
 import com.github.droidworksstudio.mlauncher.helper.showStatusBar
-import com.github.droidworksstudio.mlauncher.helper.togglePrivateSpaceLock
+import com.github.droidworksstudio.mlauncher.helper.utils.AppReloader
+import com.github.droidworksstudio.mlauncher.helper.utils.PrivateSpaceManager
 import com.github.droidworksstudio.mlauncher.helper.wordOfTheDay
 import com.github.droidworksstudio.mlauncher.listener.OnSwipeTouchListener
 import com.github.droidworksstudio.mlauncher.listener.ViewSwipeTouchListener
@@ -550,7 +549,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         when (action) {
             Action.ShowNotification -> expandNotificationDrawer(requireContext())
             Action.LockScreen -> lockPhone()
-            Action.TogglePrivateSpace -> togglePrivateSpaceLock(requireContext())
+            Action.TogglePrivateSpace -> PrivateSpaceManager(requireContext()).togglePrivateSpaceLock(showToast = true, launchSettings = true)
             Action.ShowAppList -> showAppList(AppDrawerFlag.LaunchApp, includeHiddenApps = false)
             Action.ShowDigitalWellbeing -> requireContext().openDigitalWellbeing()
             Action.OpenApp -> {} // this should be handled in the respective onSwipe[Up,Down,Right,Left] functions
@@ -827,6 +826,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
     @SuppressLint("InflateParams")
     private fun updateAppCountWithUsageStats(newAppsNum: Int) {
+        val appUsageMonitor = AppUsageMonitor.getInstance(requireContext())
         val oldAppsNum = binding.homeAppsLayout.childCount // current number of apps
         val diff = newAppsNum - oldAppsNum
 
@@ -872,7 +872,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     textSize = prefs.appSize.toFloat() / 1.5f
                     id = i
                     text = formatMillisToHMS(
-                        getUsageStats(
+                        appUsageMonitor.getUsageStats(
                             context,
                             prefs.getHomeAppModel(i).activityPackage
                         ), false
@@ -914,14 +914,14 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
         // Create a new TextView instance
         val totalText = getString(R.string.show_total_screen_time)
-        val totalTime = context?.let { getTotalScreenTime(it) }
-        val totalScreenTime = totalTime?.let { formatMillisToHMS(it, true) }
-        Log.d("totalScreenTime", "$totalScreenTime")
+        val totalTime = appUsageMonitor.getTotalScreenTime(requireContext())
+        val totalScreenTime = formatMillisToHMS(totalTime, true)
+        Log.d("totalScreenTime", totalScreenTime)
         val totalScreenTimeJoin = "$totalText: $totalScreenTime"
         // Set properties for the TextView (optional)
         binding.totalScreenTime.apply {
             text = totalScreenTimeJoin
-            if (totalTime != null && totalTime > 300L) { // Checking if totalTime is greater than 5 minutes (300,000 milliseconds)
+            if (totalTime > 300L) { // Checking if totalTime is greater than 5 minutes (300,000 milliseconds)
                 visibility = View.VISIBLE
             }
         }

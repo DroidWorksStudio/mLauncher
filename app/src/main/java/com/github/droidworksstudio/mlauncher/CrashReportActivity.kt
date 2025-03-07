@@ -7,7 +7,7 @@ import android.net.Uri
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.github.droidworksstudio.common.CrashHandler
-import com.github.droidworksstudio.mlauncher.helper.SimpleEmailSender
+import com.github.droidworksstudio.mlauncher.helper.utils.SimpleEmailSender
 
 class CrashReportActivity : AppCompatActivity() {
     private var pkgName: String = ""

@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.AppListItem
 import com.github.droidworksstudio.mlauncher.data.Prefs
-import com.github.droidworksstudio.mlauncher.helper.AppListItemDiffCallback
+import com.github.droidworksstudio.mlauncher.helper.utils.AppDiffCallback
 
 // Adapter to display Home Apps
 class FavoriteAdapter(
@@ -65,7 +65,7 @@ class FavoriteAdapter(
 
     // Update the list when the data changes
     fun updateList(newList: List<AppListItem>) {
-        val diffCallback = AppListItemDiffCallback(apps, newList)
+        val diffCallback = AppDiffCallback(apps, newList)
         val diffResult = DiffUtil.calculateDiff(diffCallback)
         apps.clear()
         apps.addAll(newList)

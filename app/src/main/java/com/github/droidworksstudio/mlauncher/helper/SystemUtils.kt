@@ -38,9 +38,12 @@ import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.AppListItem
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Prefs
+import com.github.droidworksstudio.mlauncher.helper.analytics.AppUsageMonitor
+import com.github.droidworksstudio.mlauncher.helper.utils.PrivateSpaceManager
 import com.github.droidworksstudio.mlauncher.services.ActionService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import org.xmlpull.v1.XmlPullParser
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.Calendar
@@ -112,10 +115,10 @@ suspend fun getAppsList(
             for (profile in userManager.userProfiles) {
 
                 // Check if the profile is private space
-                val isProfilePrivate = isPrivateSpaceProfile(context, profile)
+                val isProfilePrivate = PrivateSpaceManager(context).isPrivateSpaceProfile(profile)
 
                 // Skip the private space if it's locked and we don't want to include private space apps
-                if (isProfilePrivate && isPrivateSpaceLocked(context)) {
+                if (isProfilePrivate && PrivateSpaceManager(context).isPrivateSpaceLocked()) {
                     continue
                 }
 
@@ -154,7 +157,7 @@ suspend fun getAppsList(
 
                 // Handle recent apps
                 if (prefs.recentAppsDisplayed) {
-                    val appUsageTracker = AppUsageTracker.createInstance(context)
+                    val appUsageTracker = AppUsageMonitor.createInstance(context)
                     val lastTenUsedApps = appUsageTracker.getLastTenAppsUsed(context)
 
                     for ((packageName, appName, appActivityName) in lastTenUsedApps) {
@@ -518,6 +521,23 @@ fun setThemeMode(context: Context, isDark: Boolean, view: View) {
     view.setBackgroundResource(typedValue.resourceId)
 }
 
+fun parseBlacklistXML(context: Context): List<String> {
+    val packageNames = mutableListOf<String>()
+
+    // Obtain an XmlPullParser for the blacklist.xml file
+    context.resources.getXml(R.xml.blacklist).use { parser ->
+        while (parser.eventType != XmlPullParser.END_DOCUMENT) {
+            if (parser.eventType == XmlPullParser.START_TAG && parser.name == "app") {
+                val packageName = parser.getAttributeValue(null, "packageName")
+                packageNames.add(packageName)
+            }
+            parser.next()
+        }
+    }
+
+    return packageNames
+}
+
 fun getTrueSystemFont(): Typeface {
     val possibleSystemFonts = listOf(
         "/system/fonts/Roboto-Regular.ttf",      // Stock Android (Pixel, AOSP)
@@ -536,4 +556,35 @@ fun getTrueSystemFont(): Typeface {
 
     // Fallback to Roboto as a default if no system font is found
     return Typeface.DEFAULT
+}
+
+fun formatLongToCalendar(longTimestamp: Long): String {
+    // Create a Calendar instance and set its time to the given timestamp (in milliseconds)
+    val calendar = Calendar.getInstance().apply {
+        timeInMillis = longTimestamp
+    }
+
+    // Format the calendar object to a readable string
+    val dateFormat = SimpleDateFormat("MMMM dd, yyyy, HH:mm:ss", Locale.getDefault()) // You can modify the format
+    return dateFormat.format(calendar.time) // Return the formatted date string
+}
+
+fun formatMillisToHMS(millis: Long, showSeconds: Boolean): String {
+    val hours = millis / (1000 * 60 * 60)
+    val minutes = (millis % (1000 * 60 * 60)) / (1000 * 60)
+    val seconds = (millis % (1000 * 60)) / 1000
+
+    val formattedString = StringBuilder()
+    if (hours > 0) {
+        formattedString.append("$hours h ")
+    }
+    if (minutes > 0 || hours > 0) {
+        formattedString.append("$minutes m ")
+    }
+    // Only append seconds if showSeconds is true
+    if (showSeconds) {
+        formattedString.append("$seconds s")
+    }
+
+    return formattedString.toString().trim()
 }

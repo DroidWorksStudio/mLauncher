@@ -1,32 +1,41 @@
-package com.github.droidworksstudio.mlauncher.helper
+package com.github.droidworksstudio.mlauncher.helper.analytics
 
 import android.annotation.SuppressLint
 import android.app.usage.UsageStatsManager
 import android.content.Context
-import android.content.Context.USAGE_STATS_SERVICE
 import android.content.Intent
-import android.content.pm.ApplicationInfo
+import android.content.pm.PackageManager
 import android.util.Log
-import com.github.droidworksstudio.mlauncher.R
-import org.xmlpull.v1.XmlPullParser
-import java.text.SimpleDateFormat
+import com.github.droidworksstudio.mlauncher.data.Prefs
+import com.github.droidworksstudio.mlauncher.helper.formatLongToCalendar
+import com.github.droidworksstudio.mlauncher.helper.formatMillisToHMS
+import com.github.droidworksstudio.mlauncher.helper.parseBlacklistXML
 import java.util.Calendar
-import java.util.Locale
 import java.util.TimeZone
+import java.util.concurrent.ConcurrentHashMap
 
-object AppDetailsHelper {
+class AppUsageMonitor private constructor(context: Context) {
+    // TODO looks like a singleton? Shall we just make a top-level object in the file?
+    companion object {
+        private var instance: AppUsageMonitor? = null
 
-    fun Context.isSystemApp(packageName: String): Boolean {
-        if (packageName.isBlank()) return true
-        return try {
-            val applicationInfo = packageManager.getApplicationInfo(packageName, 0)
-            ((applicationInfo.flags and ApplicationInfo.FLAG_SYSTEM != 0)
-                    || (applicationInfo.flags and ApplicationInfo.FLAG_UPDATED_SYSTEM_APP != 0))
-        } catch (e: Exception) {
-            e.printStackTrace()
-            false
+        fun createInstance(context: Context): AppUsageMonitor {
+            if (instance == null) {
+                instance = AppUsageMonitor(context.applicationContext)
+            }
+            return instance!!
+        }
+
+        fun getInstance(context: Context): AppUsageMonitor {
+            return instance ?: synchronized(this) {
+                instance ?: AppUsageMonitor(context).also { instance = it }
+            }
         }
     }
+
+    private val appLastUsedMap: ConcurrentHashMap<String, Long> = ConcurrentHashMap()
+
+    private val packageManager: PackageManager = context.packageManager
 
     @SuppressLint("NewApi")
     fun getUsageStats(context: Context, targetPackageName: String): Long {
@@ -46,7 +55,7 @@ object AppDetailsHelper {
             timeZone = TimeZone.getDefault()
         }.timeInMillis
 
-        val usageStatsManager = context.getSystemService(USAGE_STATS_SERVICE) as? UsageStatsManager
+        val usageStatsManager = context.getSystemService(Context.USAGE_STATS_SERVICE) as? UsageStatsManager
             ?: return 0L // Return 0 if service is unavailable
 
         // Get launcher apps (home screen apps)
@@ -100,7 +109,7 @@ object AppDetailsHelper {
         val currentTime = Calendar.getInstance().apply {
             timeZone = TimeZone.getDefault()
         }.timeInMillis
-        val usageStatsManager = context.getSystemService(USAGE_STATS_SERVICE) as UsageStatsManager
+        val usageStatsManager = context.getSystemService(Context.USAGE_STATS_SERVICE) as UsageStatsManager
 
         // Get launcher apps (home screen apps)
         val launcherApps = packageManager.queryIntentActivities(
@@ -138,51 +147,75 @@ object AppDetailsHelper {
             .sumOf { it.totalTimeInForeground }
     }
 
-    private fun parseBlacklistXML(context: Context): List<String> {
-        val packageNames = mutableListOf<String>()
+    fun updateLastUsedTimestamp(packageName: String) {
+        val currentTime = System.currentTimeMillis()
+        appLastUsedMap[packageName] = currentTime
+    }
 
-        // Obtain an XmlPullParser for the blacklist.xml file
-        context.resources.getXml(R.xml.blacklist).use { parser ->
-            while (parser.eventType != XmlPullParser.END_DOCUMENT) {
-                if (parser.eventType == XmlPullParser.START_TAG && parser.name == "app") {
-                    val packageName = parser.getAttributeValue(null, "packageName")
-                    packageNames.add(packageName)
+    fun getLastTenAppsUsed(context: Context): List<Triple<String, String, String>> {
+        val recentApps = mutableSetOf<String>() // Set is to store unique package names
+        val result = mutableListOf<Triple<String, String, String>>() // List to store recent apps
+
+        val usageStatsManager = context.getSystemService(Context.USAGE_STATS_SERVICE) as? UsageStatsManager
+        val endTime = System.currentTimeMillis()
+        val startTime = endTime - 24 * 60 * 60 * 1000 // 24 hours ago
+        val blacklist = parseBlacklistXML(context)
+        val prefs = Prefs(context)
+
+        usageStatsManager?.queryUsageStats(UsageStatsManager.INTERVAL_DAILY, startTime, endTime)?.let { usageStatsList ->
+            val sortedList = usageStatsList
+                .filter { isPackageLaunchable(context, it.packageName, blacklist) }
+                .sortedByDescending { it.lastTimeUsed }
+
+            sortedList.forEach { usageStats ->
+                val packageName = usageStats.packageName
+                if (packageName != context.packageName && !recentApps.contains(packageName)) {
+                    val appName = getAppNameFromPackage(packageName)
+                    val className = getComponentNameFromPackage(context, packageName)
+                    val appActivityName = className.toString()
+                    Log.d("appActivityName", appActivityName)
+                    if (appName != null) {
+                        recentApps.add(packageName)
+                        result.add(Triple(packageName, appName, appActivityName))
+                    }
                 }
-                parser.next()
             }
         }
 
-        return packageNames
+        return result.take(prefs.recentCounter) // Return up to 10 recent apps
     }
 
-    private fun formatLongToCalendar(longTimestamp: Long): String {
-        // Create a Calendar instance and set its time to the given timestamp (in milliseconds)
-        val calendar = Calendar.getInstance().apply {
-            timeInMillis = longTimestamp
-        }
 
-        // Format the calendar object to a readable string
-        val dateFormat = SimpleDateFormat("MMMM dd, yyyy, HH:mm:ss", Locale.getDefault()) // You can modify the format
-        return dateFormat.format(calendar.time) // Return the formatted date string
+    private fun isPackageLaunchable(context: Context, packageName: String, blacklist: List<String>): Boolean {
+        if (isAppInBlacklist(packageName, blacklist)) {
+            return false
+        }
+        val launchIntent = context.packageManager.getLaunchIntentForPackage(packageName)
+        return launchIntent != null
     }
 
-    fun formatMillisToHMS(millis: Long, showSeconds: Boolean): String {
-        val hours = millis / (1000 * 60 * 60)
-        val minutes = (millis % (1000 * 60 * 60)) / (1000 * 60)
-        val seconds = (millis % (1000 * 60)) / 1000
+    private fun isAppInBlacklist(appPackageName: String, blacklist: List<String>): Boolean {
+        return blacklist.contains(appPackageName)
+    }
 
-        val formattedString = StringBuilder()
-        if (hours > 0) {
-            formattedString.append("$hours h ")
+    private fun getComponentNameFromPackage(context: Context, packageName: String): String? {
+        val packageManager = context.packageManager
+        val launchIntent = packageManager.getLaunchIntentForPackage(packageName)
+        return if (launchIntent != null) {
+            val componentName = launchIntent.component
+            componentName?.className
+        } else {
+            null
         }
-        if (minutes > 0 || hours > 0) {
-            formattedString.append("$minutes m ")
-        }
-        // Only append seconds if showSeconds is true
-        if (showSeconds) {
-            formattedString.append("$seconds s")
-        }
+    }
 
-        return formattedString.toString().trim()
+
+    private fun getAppNameFromPackage(packageName: String): String? {
+        return try {
+            val appInfo = packageManager.getApplicationInfo(packageName, 0)
+            packageManager.getApplicationLabel(appInfo).toString()
+        } catch (e: PackageManager.NameNotFoundException) {
+            null
+        }
     }
 }
