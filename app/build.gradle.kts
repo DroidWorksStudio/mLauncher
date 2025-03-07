@@ -1,12 +1,8 @@
-@file:Suppress("UnstableApiUsage")
-
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("org.jetbrains.kotlin.plugin.compose")
     id("kotlin-android")
-    id("kotlin-kapt")
-    id("kotlin-parcelize")
 }
 
 android {
@@ -17,8 +13,8 @@ android {
         applicationId = "app.mlauncher"
         minSdk = 26
         targetSdk = 35
-        versionCode = 10803
-        versionName = "1.8.3"
+        versionCode = 10804
+        versionName = "1.8.4"
     }
 
     buildTypes {
@@ -69,7 +65,6 @@ android {
     buildFeatures {
         compose = true
         viewBinding = true
-        dataBinding = true
         buildConfig = true
     }
 
@@ -88,6 +83,13 @@ android {
 
     lint {
         abortOnError = false
+    }
+
+    packaging {
+        // Keep debug symbols for specific native libraries
+        jniLibs {
+            keepDebugSymbols.add("libandroidx.graphics.path.so") // Ensure debug symbols are kept
+        }
     }
 }
 
@@ -129,11 +131,6 @@ dependencies {
 
     // Biometric support
     implementation(libs.biometric.ktx)
-
-    // ACRA for crash reporting
-    implementation(libs.acra.core)
-    implementation(libs.acra.dialog)
-    implementation(libs.acra.mail)
 
     // AndroidX Test - Espresso
     androidTestImplementation(libs.espresso.core)
