@@ -157,6 +157,7 @@
     <string name="text_authentication_error">Authentifizierungsfehler:%1$s(Code %2$d)</string>
     <string name="text_authentication_failed">Authentifizierung fehlgeschlagen.</string>
     <string name="text_biometric_login">Biometrische Anmeldung für mLauncher</string>
+    <string name="text_biometric_login_app">Biometric login for %1$s</string>
     <string name="text_biometric_login_sub">Melden Sie sich mit Ihren biometrischen Zugangsdaten an</string>
     <!-- Crash Strings -->
     <string name="acra_crash">Absturz</string>
@@ -174,6 +175,8 @@
     <string name="delete">Löschen</string>
     <string name="hide">Verstecken</string>
     <string name="show">Zeigen</string>
+    <string name="lock">Lock</string>
+    <string name="unlock">Unlock</string>
     <string name="rename">Umbenennen</string>
     <string name="info">Die Info</string>
     <string name="okay">Okay</string>
