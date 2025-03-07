@@ -156,6 +156,7 @@
     <string name="text_authentication_error">Chyba overenia:%1$s(kód %2$d)</string>
     <string name="text_authentication_failed">Overenie zlyhalo</string>
     <string name="text_biometric_login">Biometrické prihlásenie pre mLauncher</string>
+    <string name="text_biometric_login_app">Biometric login for %1$s</string>
     <string name="text_biometric_login_sub">Prihláste sa pomocou svojich biometrických údajov.</string>
     <!-- Crash Strings -->
     <string name="acra_crash">Zrútiť sa</string>
@@ -173,6 +174,8 @@
     <string name="delete">Odstrániť</string>
     <string name="hide">Skryť</string>
     <string name="show">Zobraziť</string>
+    <string name="lock">Lock</string>
+    <string name="unlock">Unlock</string>
     <string name="rename">Premenovať</string>
     <string name="info">Informácie</string>
     <string name="okay">Ok</string>
