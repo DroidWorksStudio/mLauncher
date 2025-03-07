@@ -157,6 +157,7 @@
     <string name="text_authentication_error">Errore di autenticazione:%1$s(codice %2$d)</string>
     <string name="text_authentication_failed">Autenticazione fallita.</string>
     <string name="text_biometric_login">Accesso biometrico per mLauncher</string>
+    <string name="text_biometric_login_app">Biometric login for %1$s</string>
     <string name="text_biometric_login_sub">Accedi utilizzando le tue credenziali biometriche</string>
     <!-- Crash Strings -->
     <string name="acra_crash">Arresto anomalo</string>
@@ -174,6 +175,8 @@
     <string name="delete">Elimina</string>
     <string name="hide">Nascondi</string>
     <string name="show">Mostra</string>
+    <string name="lock">Lock</string>
+    <string name="unlock">Unlock</string>
     <string name="rename">Rinomina</string>
     <string name="info">Informazioni</string>
     <string name="okay">Ok</string>
