@@ -1,6 +1,7 @@
 package com.github.droidworksstudio.common
 
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageInfo
 import android.content.pm.PackageManager
 import android.net.Uri
@@ -8,7 +9,7 @@ import android.os.Build
 import android.util.Log
 import androidx.annotation.RequiresApi
 import androidx.core.content.FileProvider
-import org.acra.ACRA
+import com.github.droidworksstudio.mlauncher.CrashReportActivity
 import java.io.File
 import java.io.FileInputStream
 import java.io.FileWriter
@@ -81,12 +82,15 @@ class CrashHandler(private val context: Context) : Thread.UncaughtExceptionHandl
         // Step 1: Save custom crash log
         saveCrashLog(exception)
 
-        // Step 2: Send the crash report to ACRA
-        if (ACRA.isInitialised) {
-            ACRA.errorReporter.handleException(exception)
+        // Step 2: Start CrashReportActivity with the crash details
+        val intent = Intent(context, CrashReportActivity::class.java).apply {
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
         }
+        context.startActivity(intent)
 
-        exitProcess(0)
+        // Kill the process
+        android.os.Process.killProcess(android.os.Process.myPid())
+        exitProcess(1)
     }
 
     @RequiresApi(Build.VERSION_CODES.P)

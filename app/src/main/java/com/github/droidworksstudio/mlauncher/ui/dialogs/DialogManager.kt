@@ -1,4 +1,4 @@
-package com.github.droidworksstudio.mlauncher.helper
+package com.github.droidworksstudio.mlauncher.ui.dialogs
 
 import android.app.Activity
 import android.content.Context
@@ -21,9 +21,13 @@ import androidx.appcompat.app.AlertDialog
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Prefs
+import com.github.droidworksstudio.mlauncher.helper.getTrueSystemFont
+import com.github.droidworksstudio.mlauncher.helper.loadFile
+import com.github.droidworksstudio.mlauncher.helper.storeFile
+import com.github.droidworksstudio.mlauncher.helper.utils.AppReloader
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
-class DialogBuilder(val context: Context, val activity: Activity) {
+class DialogManager(val context: Context, val activity: Activity) {
 
     private lateinit var prefs: Prefs
 

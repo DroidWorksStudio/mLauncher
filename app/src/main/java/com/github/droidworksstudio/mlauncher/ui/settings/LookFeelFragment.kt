@@ -36,7 +36,6 @@ import com.github.droidworksstudio.mlauncher.data.Constants.Theme.Light
 import com.github.droidworksstudio.mlauncher.data.Constants.Theme.System
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentSettingsBinding
-import com.github.droidworksstudio.mlauncher.helper.DialogBuilder
 import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
 import com.github.droidworksstudio.mlauncher.helper.hideStatusBar
 import com.github.droidworksstudio.mlauncher.helper.isSystemInDarkMode
@@ -48,6 +47,7 @@ import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.PageH
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsSelect
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsSwitch
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsTitle
+import com.github.droidworksstudio.mlauncher.ui.dialogs.DialogManager
 
 class LookFeelFragment : Fragment() {
 
@@ -55,7 +55,7 @@ class LookFeelFragment : Fragment() {
     private lateinit var viewModel: MainViewModel
     private lateinit var deviceManager: DevicePolicyManager
     private lateinit var componentName: ComponentName
-    private lateinit var dialogBuilder: DialogBuilder
+    private lateinit var dialogBuilder: DialogManager
 
     private var _binding: FragmentSettingsBinding? = null
     private val binding get() = _binding!!
@@ -67,7 +67,7 @@ class LookFeelFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
-        dialogBuilder = DialogBuilder(requireContext(), requireActivity())
+        dialogBuilder = DialogManager(requireContext(), requireActivity())
         prefs = Prefs(requireContext())
         val backgroundColor = getHexForOpacity(prefs)
         binding.scrollView.setBackgroundColor(backgroundColor)
@@ -703,7 +703,7 @@ class LookFeelFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         @Suppress("DEPRECATION")
         super.onActivityCreated(savedInstanceState)
-        dialogBuilder = DialogBuilder(requireContext(), requireActivity())
+        dialogBuilder = DialogManager(requireContext(), requireActivity())
         prefs = Prefs(requireContext())
         viewModel = activity?.run {
             ViewModelProvider(this)[MainViewModel::class.java]

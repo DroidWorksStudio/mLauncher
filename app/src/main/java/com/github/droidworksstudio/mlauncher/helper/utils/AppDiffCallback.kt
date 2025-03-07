@@ -1,10 +1,10 @@
-package com.github.droidworksstudio.mlauncher.helper
+package com.github.droidworksstudio.mlauncher.helper.utils
 
 import androidx.recyclerview.widget.DiffUtil
 import com.github.droidworksstudio.mlauncher.data.AppListItem
 
 // DiffUtil for efficiently handling list updates
-class AppListItemDiffCallback(
+class AppDiffCallback(
     private val oldList: List<AppListItem>,
     private val newList: List<AppListItem>
 ) : DiffUtil.Callback() {

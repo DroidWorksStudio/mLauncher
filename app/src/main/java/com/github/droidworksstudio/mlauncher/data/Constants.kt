@@ -27,9 +27,6 @@ object Constants {
     const val MIN_HOME_APPS = 0
     const val MAX_HOME_APPS = 30
 
-    const val MIN_EDGE_APPS = 1
-    const val MAX_EDGE_APPS = 15
-
     const val MIN_HOME_PAGES = 1
 
     const val MIN_TEXT_SIZE = 10
@@ -111,6 +108,7 @@ object Constants {
     enum class AppDrawerFlag {
         LaunchApp,
         HiddenApps,
+        LockedApps,
         PrivateApps,
         SetHomeApp,
         SetShortSwipeUp,

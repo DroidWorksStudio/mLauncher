@@ -40,9 +40,6 @@ commons-text = "1.13.0"
 gson = "2.12.1"
 biometric-ktx = "1.4.0-alpha02"
 
-# ACRA
-acra = "5.12.0"
-
 # AndroidX Test Libraries
 espresso = "3.6.1"
 test-core-ktx = "1.6.1"
@@ -88,10 +85,6 @@ compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling", versi
 commons-text = { group = "org.apache.commons", name = "commons-text", version.ref = "commons-text" }
 gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
 biometric-ktx = { group = "androidx.biometric", name = "biometric-ktx", version.ref = "biometric-ktx" }
-# ACRA
-acra-core = { group = "ch.acra", name = "acra-core", version.ref = "acra" }
-acra-dialog = { group = "ch.acra", name = "acra-dialog", version.ref = "acra" }
-acra-mail = { group = "ch.acra", name = "acra-mail", version.ref = "acra" }
 
 # Testing Libraries
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso" }

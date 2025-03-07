@@ -6,8 +6,10 @@ import android.content.ActivityNotFoundException
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
+import android.content.pm.ApplicationInfo
 import android.content.pm.LauncherApps
 import android.content.pm.PackageManager
+import android.content.res.Configuration
 import android.net.Uri
 import android.os.Bundle
 import android.os.UserHandle
@@ -19,6 +21,7 @@ import android.util.Log.d
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.biometric.BiometricManager
 import androidx.core.content.ContextCompat
@@ -38,6 +41,14 @@ fun Context.showLongToast(message: String) {
 
 fun Context.showShortToast(message: String) {
     Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+}
+
+fun Context.hasSoftKeyboard(): Boolean {
+    val config = resources.configuration
+    val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+
+    // True if the device does not have physical keys AND at least one soft input method is installed
+    return config.keyboard == Configuration.KEYBOARD_NOKEYS && imm.inputMethodList.isNotEmpty()
 }
 
 fun Context.openSearch(query: String? = null) {
@@ -230,6 +241,18 @@ fun Context.getAppNameFromPackageName(packageName: String): String? {
     } catch (e: PackageManager.NameNotFoundException) {
         e.printStackTrace()
         null
+    }
+}
+
+fun Context.isSystemApp(packageName: String): Boolean {
+    if (packageName.isBlank()) return true
+    return try {
+        val applicationInfo = packageManager.getApplicationInfo(packageName, 0)
+        ((applicationInfo.flags and ApplicationInfo.FLAG_SYSTEM != 0)
+                || (applicationInfo.flags and ApplicationInfo.FLAG_UPDATED_SYSTEM_APP != 0))
+    } catch (e: Exception) {
+        e.printStackTrace()
+        false
     }
 }
 

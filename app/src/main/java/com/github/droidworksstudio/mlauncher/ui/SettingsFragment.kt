@@ -39,11 +39,9 @@ import com.github.droidworksstudio.mlauncher.data.Constants.Theme.Light
 import com.github.droidworksstudio.mlauncher.data.Constants.Theme.System
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentSettingsBinding
-import com.github.droidworksstudio.mlauncher.helper.isPrivateSpaceLocked
-import com.github.droidworksstudio.mlauncher.helper.isPrivateSpaceSupported
 import com.github.droidworksstudio.mlauncher.helper.isSystemInDarkMode
 import com.github.droidworksstudio.mlauncher.helper.setThemeMode
-import com.github.droidworksstudio.mlauncher.helper.togglePrivateSpaceLock
+import com.github.droidworksstudio.mlauncher.helper.utils.PrivateSpaceManager
 import com.github.droidworksstudio.mlauncher.listener.DeviceAdmin
 import com.github.droidworksstudio.mlauncher.style.SettingsTheme
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsHomeItem
@@ -83,7 +81,8 @@ class SettingsFragment : Fragment() {
 
     @Composable
     private fun Settings(fontSize: TextUnit = TextUnit.Unspecified) {
-        var toggledPrivateSpaces by remember { mutableStateOf(isPrivateSpaceLocked(requireContext())) }
+
+        var toggledPrivateSpaces by remember { mutableStateOf(PrivateSpaceManager(requireContext()).isPrivateSpaceLocked()) }
         val fs = remember { mutableStateOf(fontSize) }
         Constants.updateMaxHomePages(requireContext())
 
@@ -152,7 +151,9 @@ class SettingsFragment : Fragment() {
                 },
             )
 
-            if (isPrivateSpaceSupported()) {
+            if (PrivateSpaceManager(requireContext()).isPrivateSpaceSupported() &&
+                PrivateSpaceManager(requireContext()).isPrivateSpaceSetUp(showToast = false, launchSettings = false)
+            ) {
                 SettingsHomeItem(
                     title = stringResource(R.string.private_space),
                     imageVector = ImageVector.vectorResource(id = setPrivateSpaces),
@@ -160,7 +161,7 @@ class SettingsFragment : Fragment() {
                     descriptionFontSize = descriptionFontSize,
                     iconSize = iconSize,
                     onClick = {
-                        togglePrivateSpaceLock(requireContext())
+                        PrivateSpaceManager(requireContext()).togglePrivateSpaceLock(showToast = true, launchSettings = true)
                         toggledPrivateSpaces = !toggledPrivateSpaces
                     }
                 )

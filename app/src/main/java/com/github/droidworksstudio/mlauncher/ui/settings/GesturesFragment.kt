@@ -36,16 +36,16 @@ import com.github.droidworksstudio.mlauncher.data.Constants.Theme.Light
 import com.github.droidworksstudio.mlauncher.data.Constants.Theme.System
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentSettingsBinding
-import com.github.droidworksstudio.mlauncher.helper.DialogBuilder
 import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
-import com.github.droidworksstudio.mlauncher.helper.isPrivateSpaceSupported
 import com.github.droidworksstudio.mlauncher.helper.isSystemInDarkMode
 import com.github.droidworksstudio.mlauncher.helper.setThemeMode
+import com.github.droidworksstudio.mlauncher.helper.utils.PrivateSpaceManager
 import com.github.droidworksstudio.mlauncher.listener.DeviceAdmin
 import com.github.droidworksstudio.mlauncher.style.SettingsTheme
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.PageHeader
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsSelect
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsTitle
+import com.github.droidworksstudio.mlauncher.ui.dialogs.DialogManager
 
 class GesturesFragment : Fragment() {
 
@@ -53,7 +53,7 @@ class GesturesFragment : Fragment() {
     private lateinit var viewModel: MainViewModel
     private lateinit var deviceManager: DevicePolicyManager
     private lateinit var componentName: ComponentName
-    private lateinit var dialogBuilder: DialogBuilder
+    private lateinit var dialogBuilder: DialogManager
 
     private var _binding: FragmentSettingsBinding? = null
     private val binding get() = _binding!!
@@ -64,7 +64,7 @@ class GesturesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
-        dialogBuilder = DialogBuilder(requireContext(), requireActivity())
+        dialogBuilder = DialogManager(requireContext(), requireActivity())
         prefs = Prefs(requireContext())
         val backgroundColor = getHexForOpacity(prefs)
         binding.scrollView.setBackgroundColor(backgroundColor)
@@ -99,7 +99,7 @@ class GesturesFragment : Fragment() {
         val actions = Constants.Action.entries
 
         // Filter out 'TogglePrivateSpace' if private space is not supported
-        val filteredActions = if (!isPrivateSpaceSupported()) {
+        val filteredActions = if (!PrivateSpaceManager(requireContext()).isPrivateSpaceSupported()) {
             actions.filter { it != Action.TogglePrivateSpace }
         } else {
             actions
@@ -561,6 +561,7 @@ class GesturesFragment : Fragment() {
             AppDrawerFlag.SetLongSwipeRight -> prefs.longSwipeRightAction = action
             AppDrawerFlag.SetHomeApp,
             AppDrawerFlag.HiddenApps,
+            AppDrawerFlag.LockedApps,
             AppDrawerFlag.PrivateApps,
             AppDrawerFlag.LaunchApp -> {
             }
@@ -587,7 +588,7 @@ class GesturesFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         @Suppress("DEPRECATION")
         super.onActivityCreated(savedInstanceState)
-        dialogBuilder = DialogBuilder(requireContext(), requireActivity())
+        dialogBuilder = DialogManager(requireContext(), requireActivity())
         prefs = Prefs(requireContext())
         viewModel = activity?.run {
             ViewModelProvider(this)[MainViewModel::class.java]

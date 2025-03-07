@@ -11,6 +11,7 @@ import android.os.Build
 import android.os.UserManager
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.Gravity.LEFT
 import android.view.LayoutInflater
 import android.view.View
@@ -25,6 +26,7 @@ import android.widget.TextView
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.view.updatePadding
 import androidx.recyclerview.widget.RecyclerView
+import com.github.droidworksstudio.common.isSystemApp
 import com.github.droidworksstudio.common.showKeyboard
 import com.github.droidworksstudio.fuzzywuzzy.FuzzyFinder
 import com.github.droidworksstudio.mlauncher.R
@@ -33,9 +35,8 @@ import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Constants.AppDrawerFlag
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.AdapterAppDrawerBinding
-import com.github.droidworksstudio.mlauncher.helper.AppDetailsHelper.isSystemApp
 import com.github.droidworksstudio.mlauncher.helper.dp2px
-import com.github.droidworksstudio.mlauncher.helper.isPrivateSpaceSupported
+import com.github.droidworksstudio.mlauncher.helper.utils.PrivateSpaceManager
 
 class AppDrawerAdapter(
     private val context: Context,
@@ -80,6 +81,33 @@ class AppDrawerAdapter(
             appsList.remove(appModel)
             notifyItemRemoved(holder.absoluteAdapterPosition)
             appHideListener(flag, appModel)
+        }
+
+        holder.appLock.setOnClickListener {
+            val appName = appModel.activityPackage
+            // Access the current locked apps set
+            val currentLockedApps = prefs.lockedApps
+
+            if (currentLockedApps.contains(appName)) {
+                holder.appLock.setCompoundDrawablesWithIntrinsicBounds(
+                    0,
+                    R.drawable.padlock_off,
+                    0,
+                    0
+                )
+                holder.appLock.text = context.getString(R.string.lock)
+                // If appName is already in the set, remove it
+                currentLockedApps.remove(appName)
+            } else {
+                holder.appLock.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.padlock, 0, 0)
+                holder.appLock.text = context.getString(R.string.unlock)
+                // If appName is not in the set, add it
+                currentLockedApps.add(appName)
+            }
+
+            // Update the lockedApps value (save the updated set back to prefs)
+            prefs.lockedApps = currentLockedApps
+            Log.d("lockedApps", prefs.lockedApps.toString())
         }
 
         holder.appSaveRename.setOnClickListener {
@@ -185,6 +213,7 @@ class AppDrawerAdapter(
 
     class ViewHolder(itemView: AdapterAppDrawerBinding) : RecyclerView.ViewHolder(itemView.root) {
         val appHide: TextView = itemView.appHide
+        val appLock: TextView = itemView.appLock
         val appRenameEdit: EditText = itemView.appRenameEdit
         val appSaveRename: TextView = itemView.appSaveRename
 
@@ -223,6 +252,24 @@ class AppDrawerAdapter(
                         0
                     )
                     appHide.text = context.getString(R.string.hide)
+                }
+
+                val appName = appListItem.activityPackage
+                // Access the current locked apps set
+                val currentLockedApps = prefs.lockedApps
+
+                if (currentLockedApps.contains(appName)) {
+                    appLock.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.padlock, 0, 0)
+                    appLock.text = context.getString(R.string.unlock)
+                } else {
+                    appLock.setCompoundDrawablesWithIntrinsicBounds(
+                        0,
+                        R.drawable.padlock_off,
+                        0,
+                        0
+                    )
+                    appLock.text = context.getString(R.string.lock)
+
                 }
 
                 appRename.apply {
@@ -277,7 +324,7 @@ class AppDrawerAdapter(
                 val isPrivateSpace = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.VANILLA_ICE_CREAM) {
                     launcherApps.getLauncherUserInfo(appListItem.user)?.userType == UserManager.USER_TYPE_PROFILE_PRIVATE
                 } else {
-                    isPrivateSpaceSupported()
+                    PrivateSpaceManager(context).isPrivateSpaceSupported()
                 }
                 val isWorkProfile = appListItem.user != android.os.Process.myUserHandle() && !isPrivateSpace
 

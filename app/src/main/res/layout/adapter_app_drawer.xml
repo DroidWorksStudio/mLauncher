@@ -82,6 +82,21 @@
             app:drawableTopCompat="@drawable/visibility_off" />
 
         <TextView
+            android:id="@+id/appLock"
+            style="@style/TextSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="2dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingHorizontal="8dp"
+            android:text="@string/lock"
+            android:textSize="12sp"
+            app:drawableTopCompat="@drawable/padlock_off" />
+
+        <TextView
             android:id="@+id/appInfo"
             style="@style/TextSmall"
             android:layout_width="0dp"

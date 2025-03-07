@@ -6,6 +6,21 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Implemented Enhancements:
 
+- Add biometric authentication for locked apps and enable locking apps from app drawer - ([12788fd](https://github.com/DroidWorksStudio/mLauncher/commit/12788fd3c7fc9f3ae530fb0c4b2705e4c1f35251))
+
+### Refactoring:
+
+- Cleaned up class and function locations - ([bbeaeb5](https://github.com/DroidWorksStudio/mLauncher/commit/bbeaeb5464951495834d0d3e15ef758e6fcbf451))
+
+### Releases:
+
+- Prepare for version 10805 - ([502436f](https://github.com/DroidWorksStudio/mLauncher/commit/502436f3533724c5c30ae99e12ea227c4a064dda))
+
+## [1.8.4](https://github.com/DroidWorksStudio/mLauncher/tree/1.8.4) - (07, March 2025)
+
+### Implemented Enhancements:
+
+- Implement custom email-based crash reporting (replacing ACRA) - ([6943534](https://github.com/DroidWorksStudio/mLauncher/commit/694353455ffe2ee1b41eec170a7acb0175336093))
 - Add edge panel menu displaying recently used apps. - ([039a642](https://github.com/DroidWorksStudio/mLauncher/commit/039a6425c163d3fb3c626da2c9a93aaaa2209a9f))
 - Added a better logging system for crashes - ([3638233](https://github.com/DroidWorksStudio/mLauncher/commit/3638233207a46cb7e4654b2831e7a4c009969c99))
 - Added the ability to import a Word of the day json file. - ([1985201](https://github.com/DroidWorksStudio/mLauncher/commit/1985201aafd0d1201733722e9f96bbcc94da8184))
