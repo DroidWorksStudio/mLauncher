@@ -31,9 +31,6 @@ import android.widget.LinearLayout
 import android.widget.Space
 import android.widget.TextView
 import androidx.annotation.RequiresApi
-import androidx.biometric.BiometricManager
-import androidx.biometric.BiometricManager.Authenticators.BIOMETRIC_WEAK
-import androidx.biometric.BiometricManager.Authenticators.DEVICE_CREDENTIAL
 import androidx.biometric.BiometricPrompt
 import androidx.core.content.ContextCompat
 import androidx.core.os.bundleOf
@@ -56,7 +53,6 @@ import com.github.droidworksstudio.common.showLongToast
 import com.github.droidworksstudio.common.showShortToast
 import com.github.droidworksstudio.mlauncher.MainViewModel
 import com.github.droidworksstudio.mlauncher.R
-import com.github.droidworksstudio.mlauncher.data.AppListItem
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Constants.Action
 import com.github.droidworksstudio.mlauncher.data.Constants.AppDrawerFlag
@@ -75,6 +71,7 @@ import com.github.droidworksstudio.mlauncher.helper.receivers.PrivateSpaceReceiv
 import com.github.droidworksstudio.mlauncher.helper.showPermissionDialog
 import com.github.droidworksstudio.mlauncher.helper.showStatusBar
 import com.github.droidworksstudio.mlauncher.helper.utils.AppReloader
+import com.github.droidworksstudio.mlauncher.helper.utils.BiometricHelper
 import com.github.droidworksstudio.mlauncher.helper.utils.PrivateSpaceManager
 import com.github.droidworksstudio.mlauncher.helper.wordOfTheDay
 import com.github.droidworksstudio.mlauncher.listener.OnSwipeTouchListener
@@ -91,15 +88,12 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     private lateinit var viewModel: MainViewModel
     private lateinit var deviceManager: DevicePolicyManager
     private lateinit var batteryReceiver: BatteryReceiver
+    private lateinit var biometricHelper: BiometricHelper
     private lateinit var privateSpaceReceiver: PrivateSpaceReceiver
     private lateinit var vibrator: Vibrator
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
-
-    private lateinit var biometricPrompt: BiometricPrompt
-    private lateinit var promptInfo: BiometricPrompt.PromptInfo
-
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -118,6 +112,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        biometricHelper = BiometricHelper(this)
 
         viewModel = activity?.run {
             ViewModelProvider(this)[MainViewModel::class.java]
@@ -394,12 +389,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
     private fun homeAppClicked(location: Int) {
         if (prefs.getAppName(location).isEmpty()) showLongPressToast()
-        else launchApp(prefs.getHomeAppModel(location))
-    }
-
-    private fun launchApp(app: AppListItem) {
-        viewModel.selectedApp(app, AppDrawerFlag.LaunchApp)
-        CrashHandler.logUserAction("${app.activityLabel} App Launched")
+        else viewModel.launchApp(prefs.getHomeAppModel(location), this)
     }
 
     private fun showAppList(flag: AppDrawerFlag, includeHiddenApps: Boolean = false, n: Int = 0) {
@@ -454,91 +444,91 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
     private fun openSwipeUpApp() {
         if (prefs.appShortSwipeUp.activityPackage.isNotEmpty())
-            launchApp(prefs.appShortSwipeUp)
+            viewModel.launchApp(prefs.appShortSwipeUp, this)
         else
             requireContext().openCameraApp()
     }
 
     private fun openSwipeDownApp() {
         if (prefs.appShortSwipeDown.activityPackage.isNotEmpty())
-            launchApp(prefs.appShortSwipeDown)
+            viewModel.launchApp(prefs.appShortSwipeDown, this)
         else
             requireContext().openDialerApp()
     }
 
     private fun openSwipeLeftApp() {
         if (prefs.appShortSwipeLeft.activityPackage.isNotEmpty())
-            launchApp(prefs.appShortSwipeLeft)
+            viewModel.launchApp(prefs.appShortSwipeLeft, this)
         else
             requireContext().openCameraApp()
     }
 
     private fun openSwipeRightApp() {
         if (prefs.appShortSwipeRight.activityPackage.isNotEmpty())
-            launchApp(prefs.appShortSwipeRight)
+            viewModel.launchApp(prefs.appShortSwipeRight, this)
         else
             requireContext().openDialerApp()
     }
 
     private fun openLongSwipeUpApp() {
         if (prefs.appLongSwipeUp.activityPackage.isNotEmpty())
-            launchApp(prefs.appLongSwipeUp)
+            viewModel.launchApp(prefs.appLongSwipeUp, this)
         else
             requireContext().openCameraApp()
     }
 
     private fun openLongSwipeDownApp() {
         if (prefs.appLongSwipeDown.activityPackage.isNotEmpty())
-            launchApp(prefs.appLongSwipeDown)
+            viewModel.launchApp(prefs.appLongSwipeDown, this)
         else
             requireContext().openDialerApp()
     }
 
     private fun openLongSwipeLeftApp() {
         if (prefs.appLongSwipeLeft.activityPackage.isNotEmpty())
-            launchApp(prefs.appLongSwipeLeft)
+            viewModel.launchApp(prefs.appLongSwipeLeft, this)
         else
             requireContext().openCameraApp()
     }
 
     private fun openLongSwipeRightApp() {
         if (prefs.appLongSwipeRight.activityPackage.isNotEmpty())
-            launchApp(prefs.appLongSwipeRight)
+            viewModel.launchApp(prefs.appLongSwipeRight, this)
         else
             requireContext().openDialerApp()
     }
 
     private fun openClickClockApp() {
         if (prefs.appClickClock.activityPackage.isNotEmpty())
-            launchApp(prefs.appClickClock)
+            viewModel.launchApp(prefs.appClickClock, this)
         else
             requireContext().openAlarmApp()
     }
 
     private fun openClickUsageApp() {
         if (prefs.appClickUsage.activityPackage.isNotEmpty())
-            launchApp(prefs.appClickUsage)
+            viewModel.launchApp(prefs.appClickUsage, this)
         else
             requireContext().openDigitalWellbeing()
     }
 
     private fun openFloatingActionApp() {
         if (prefs.appFloating.activityPackage.isNotEmpty())
-            launchApp(prefs.appFloating)
+            viewModel.launchApp(prefs.appFloating, this)
         else
             requireContext().openBatteryManager()
     }
 
     private fun openClickDateApp() {
         if (prefs.appClickDate.activityPackage.isNotEmpty())
-            launchApp(prefs.appClickDate)
+            viewModel.launchApp(prefs.appClickDate, this)
         else
             requireContext().launchCalendar()
     }
 
     private fun openDoubleTapApp() {
         if (prefs.appDoubleTap.activityPackage.isNotEmpty())
-            launchApp(prefs.appDoubleTap)
+            viewModel.launchApp(prefs.appDoubleTap, this)
         else
             AppReloader.restartApp(requireContext())
     }
@@ -1161,28 +1151,9 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
     private fun trySettings() {
         lifecycleScope.launch(Dispatchers.Main) {
-            biometricPrompt = BiometricPrompt(this@HomeFragment,
-                ContextCompat.getMainExecutor(requireContext()),
-                object : BiometricPrompt.AuthenticationCallback() {
-                    override fun onAuthenticationError(
-                        errorCode: Int,
-                        errString: CharSequence
-                    ) {
-                        when (errorCode) {
-                            BiometricPrompt.ERROR_USER_CANCELED -> showLongToast(
-                                getString(R.string.text_authentication_cancel)
-                            )
-
-                            else -> showLongToast(
-                                getString(R.string.text_authentication_error).format(
-                                    errString,
-                                    errorCode
-                                )
-                            )
-                        }
-                    }
-
-                    override fun onAuthenticationSucceeded(result: BiometricPrompt.AuthenticationResult) {
+            if (prefs.settingsLocked) {
+                biometricHelper.startBiometricSettingsAuth(object : BiometricHelper.CallbackSettings {
+                    override fun onAuthenticationSucceeded() {
                         sendToSettingFragment()
                     }
 
@@ -1191,35 +1162,25 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                             getString(R.string.text_authentication_failed)
                         )
                     }
+
+                    override fun onAuthenticationError(errorCode: Int, errorMessage: CharSequence?) {
+                        when (errorCode) {
+                            BiometricPrompt.ERROR_USER_CANCELED -> showLongToast(
+                                getString(R.string.text_authentication_cancel)
+                            )
+
+                            else -> showLongToast(
+                                getString(R.string.text_authentication_error).format(
+                                    errorMessage,
+                                    errorCode
+                                )
+                            )
+                        }
+                    }
                 })
-
-            promptInfo = BiometricPrompt.PromptInfo.Builder()
-                .setTitle(getString(R.string.text_biometric_login))
-                .setSubtitle(getString(R.string.text_biometric_login_sub))
-                .setAllowedAuthenticators(BIOMETRIC_WEAK or DEVICE_CREDENTIAL)
-                .setConfirmationRequired(false)
-                .build()
-
-            if (prefs.settingsLocked) {
-                authenticate()
             } else {
                 sendToSettingFragment()
             }
-        }
-    }
-
-    private fun authenticate() {
-        val code = BiometricManager.from(requireContext())
-            .canAuthenticate(BIOMETRIC_WEAK or DEVICE_CREDENTIAL)
-        when (code) {
-            BiometricManager.BIOMETRIC_SUCCESS -> biometricPrompt.authenticate(promptInfo)
-            BiometricManager.BIOMETRIC_ERROR_NO_HARDWARE -> sendToSettingFragment()
-
-            BiometricManager.BIOMETRIC_ERROR_HW_UNAVAILABLE -> sendToSettingFragment()
-
-            BiometricManager.BIOMETRIC_ERROR_NONE_ENROLLED -> sendToSettingFragment()
-
-            else -> showLongToast(getString(R.string.text_authentication_error))
         }
     }
 

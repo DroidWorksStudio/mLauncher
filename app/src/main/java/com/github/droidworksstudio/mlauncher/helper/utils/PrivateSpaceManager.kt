@@ -57,7 +57,7 @@ class PrivateSpaceManager(private val context: Context) {
     /**
      * Check whether the user has created a private space and whether mLauncher can access it.
      */
-    private fun isPrivateSpaceSetUp(
+    fun isPrivateSpaceSetUp(
         showToast: Boolean = false,
         launchSettings: Boolean = false
     ): Boolean {

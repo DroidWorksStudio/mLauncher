@@ -28,7 +28,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.github.droidworksstudio.common.hideKeyboard
+import com.github.droidworksstudio.common.hasSoftKeyboard
 import com.github.droidworksstudio.common.isSystemApp
 import com.github.droidworksstudio.common.openSearch
 import com.github.droidworksstudio.common.searchCustomSearchEngine
@@ -66,6 +66,7 @@ class AppDrawerFragment : Fragment() {
     @SuppressLint("RtlHardcoded")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         // Retrieve the letter key code from arguments
         val letterKeyCode = arguments?.getInt("letterKeyCode", -1)
         if (letterKeyCode != null && letterKeyCode != -1) {
@@ -278,13 +279,18 @@ class AppDrawerFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        binding.search.showKeyboard()
+        if (requireContext().hasSoftKeyboard()) {
+            binding.search.showKeyboard()
+        }
     }
 
     override fun onStop() {
-        binding.search.hideKeyboard()
         super.onStop()
+        if (requireContext().hasSoftKeyboard()) {
+            binding.search.hideKeyboard()
+        }
     }
+
 
     private fun View.showKeyboard() {
         if (!Prefs(requireContext()).autoShowKeyboard) return
@@ -300,6 +306,14 @@ class AppDrawerFragment : Fragment() {
         }, 100)
     }
 
+    private fun View.hideKeyboard() {
+        val imm: InputMethodManager? =
+            context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager?
+        imm?.hideSoftInputFromWindow(windowToken, 0)
+        this.clearFocus()
+    }
+
+
     private fun populateAppList(apps: List<AppListItem>, appAdapter: AppDrawerAdapter) {
         val animation =
             AnimationUtils.loadLayoutAnimation(requireContext(), R.anim.layout_anim_from_bottom)
@@ -313,11 +327,7 @@ class AppDrawerFragment : Fragment() {
         n: Int = 0
     ): (appListItem: AppListItem) -> Unit =
         { appModel ->
-            viewModel.selectedApp(appModel, flag, n)
-            if (flag == AppDrawerFlag.LaunchApp || flag == AppDrawerFlag.HiddenApps)
-                findNavController().popBackStack(R.id.mainFragment, false)
-            else
-                findNavController().popBackStack()
+            viewModel.selectedApp(this, appModel, flag, n)
         }
 
     private fun appDeleteListener(): (appListItem: AppListItem) -> Unit =
@@ -387,17 +397,27 @@ class AppDrawerFragment : Fragment() {
 
                     RecyclerView.SCROLL_STATE_DRAGGING -> {
                         onTop = !recyclerView.canScrollVertically(-1)
-                        if (onTop) binding.search.hideKeyboard()
-                        if (onTop && !recyclerView.canScrollVertically(1))
+                        if (onTop) {
+                            if (requireContext().hasSoftKeyboard()) {
+                                binding.search.hideKeyboard()
+                            }
+                        }
+                        if (onTop && !recyclerView.canScrollVertically(1)) {
                             findNavController().popBackStack()
+                        }
                     }
 
                     RecyclerView.SCROLL_STATE_IDLE -> {
                         if (!recyclerView.canScrollVertically(1)) {
                             binding.search.hideKeyboard()
                         } else if (!recyclerView.canScrollVertically(-1)) {
-                            if (onTop) findNavController().popBackStack()
-                            else binding.search.showKeyboard()
+                            if (onTop) {
+                                findNavController().popBackStack()
+                            } else {
+                                if (requireContext().hasSoftKeyboard()) {
+                                    binding.search.showKeyboard()
+                                }
+                            }
                         }
                     }
                 }

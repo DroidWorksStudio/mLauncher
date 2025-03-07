@@ -11,6 +11,7 @@ import android.os.Build
 import android.os.UserManager
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.Gravity.LEFT
 import android.view.LayoutInflater
 import android.view.View
@@ -80,6 +81,33 @@ class AppDrawerAdapter(
             appsList.remove(appModel)
             notifyItemRemoved(holder.absoluteAdapterPosition)
             appHideListener(flag, appModel)
+        }
+
+        holder.appLock.setOnClickListener {
+            val appName = appModel.activityPackage
+            // Access the current locked apps set
+            val currentLockedApps = prefs.lockedApps
+
+            if (currentLockedApps.contains(appName)) {
+                holder.appLock.setCompoundDrawablesWithIntrinsicBounds(
+                    0,
+                    R.drawable.padlock_off,
+                    0,
+                    0
+                )
+                holder.appLock.text = context.getString(R.string.lock)
+                // If appName is already in the set, remove it
+                currentLockedApps.remove(appName)
+            } else {
+                holder.appLock.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.padlock, 0, 0)
+                holder.appLock.text = context.getString(R.string.unlock)
+                // If appName is not in the set, add it
+                currentLockedApps.add(appName)
+            }
+
+            // Update the lockedApps value (save the updated set back to prefs)
+            prefs.lockedApps = currentLockedApps
+            Log.d("lockedApps", prefs.lockedApps.toString())
         }
 
         holder.appSaveRename.setOnClickListener {
@@ -185,6 +213,7 @@ class AppDrawerAdapter(
 
     class ViewHolder(itemView: AdapterAppDrawerBinding) : RecyclerView.ViewHolder(itemView.root) {
         val appHide: TextView = itemView.appHide
+        val appLock: TextView = itemView.appLock
         val appRenameEdit: EditText = itemView.appRenameEdit
         val appSaveRename: TextView = itemView.appSaveRename
 
@@ -223,6 +252,24 @@ class AppDrawerAdapter(
                         0
                     )
                     appHide.text = context.getString(R.string.hide)
+                }
+
+                val appName = appListItem.activityPackage
+                // Access the current locked apps set
+                val currentLockedApps = prefs.lockedApps
+
+                if (currentLockedApps.contains(appName)) {
+                    appLock.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.padlock, 0, 0)
+                    appLock.text = context.getString(R.string.unlock)
+                } else {
+                    appLock.setCompoundDrawablesWithIntrinsicBounds(
+                        0,
+                        R.drawable.padlock_off,
+                        0,
+                        0
+                    )
+                    appLock.text = context.getString(R.string.lock)
+
                 }
 
                 appRename.apply {

@@ -151,7 +151,9 @@ class SettingsFragment : Fragment() {
                 },
             )
 
-            if (PrivateSpaceManager(requireContext()).isPrivateSpaceSupported()) {
+            if (PrivateSpaceManager(requireContext()).isPrivateSpaceSupported() &&
+                PrivateSpaceManager(requireContext()).isPrivateSpaceSetUp(showToast = false, launchSettings = false)
+            ) {
                 SettingsHomeItem(
                     title = stringResource(R.string.private_space),
                     imageVector = ImageVector.vectorResource(id = setPrivateSpaces),

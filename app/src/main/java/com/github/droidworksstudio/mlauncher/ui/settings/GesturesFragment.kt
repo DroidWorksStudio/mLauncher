@@ -561,6 +561,7 @@ class GesturesFragment : Fragment() {
             AppDrawerFlag.SetLongSwipeRight -> prefs.longSwipeRightAction = action
             AppDrawerFlag.SetHomeApp,
             AppDrawerFlag.HiddenApps,
+            AppDrawerFlag.LockedApps,
             AppDrawerFlag.PrivateApps,
             AppDrawerFlag.LaunchApp -> {
             }

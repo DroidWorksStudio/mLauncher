@@ -4,9 +4,16 @@ import android.app.Application
 import android.content.ComponentName
 import android.content.Context
 import android.content.pm.LauncherApps
+import android.os.Process
+import android.os.UserHandle
+import androidx.biometric.BiometricPrompt
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import com.github.droidworksstudio.common.CrashHandler
+import com.github.droidworksstudio.common.hideKeyboard
+import com.github.droidworksstudio.common.showLongToast
 import com.github.droidworksstudio.common.showShortToast
 import com.github.droidworksstudio.mlauncher.data.AppListItem
 import com.github.droidworksstudio.mlauncher.data.Constants
@@ -16,9 +23,12 @@ import com.github.droidworksstudio.mlauncher.helper.analytics.AppUsageMonitor
 import com.github.droidworksstudio.mlauncher.helper.getAppsList
 import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
 import com.github.droidworksstudio.mlauncher.helper.setDefaultHomeScreen
+import com.github.droidworksstudio.mlauncher.helper.utils.BiometricHelper
 import kotlinx.coroutines.launch
 
 class MainViewModel(application: Application) : AndroidViewModel(application) {
+    private lateinit var biometricHelper: BiometricHelper
+
     private val appContext by lazy { application.applicationContext }
     private val prefs = Prefs(appContext)
 
@@ -48,10 +58,13 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     val recentCounter = MutableLiveData(prefs.recentCounter)
     val iconPack = MutableLiveData(prefs.iconPack)
 
-    fun selectedApp(app: AppListItem, flag: AppDrawerFlag, n: Int = 0) {
+    fun selectedApp(fragment: Fragment, app: AppListItem, flag: AppDrawerFlag, n: Int = 0) {
         when (flag) {
-            AppDrawerFlag.LaunchApp, AppDrawerFlag.HiddenApps, AppDrawerFlag.PrivateApps -> {
-                launchApp(app)
+            AppDrawerFlag.LaunchApp,
+            AppDrawerFlag.HiddenApps,
+            AppDrawerFlag.LockedApps,
+            AppDrawerFlag.PrivateApps -> {
+                launchApp(app, fragment)
             }
 
             AppDrawerFlag.SetHomeApp -> {
@@ -98,36 +111,72 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         showFloating.value = visibility
     }
 
-    private fun launchApp(appListItem: AppListItem) {
+    fun launchApp(appListItem: AppListItem, fragment: Fragment) {
+        biometricHelper = BiometricHelper(fragment)
+
         val packageName = appListItem.activityPackage
-        val appActivityName = appListItem.activityClass
+        val currentLockedApps = prefs.lockedApps
+
+        if (currentLockedApps.contains(packageName)) {
+            fragment.hideKeyboard()
+            biometricHelper.startBiometricAuth(appListItem, object : BiometricHelper.CallbackApp {
+                override fun onAuthenticationSucceeded(appListItem: AppListItem) {
+                    launchUnlockedApp(appListItem)
+                }
+
+                override fun onAuthenticationFailed() {
+                    appContext.showLongToast(
+                        appContext.getString(R.string.text_authentication_failed)
+                    )
+                }
+
+                override fun onAuthenticationError(errorCode: Int, errorMessage: CharSequence?) {
+                    when (errorCode) {
+                        BiometricPrompt.ERROR_USER_CANCELED -> appContext.showLongToast(
+                            appContext.getString(R.string.text_authentication_cancel)
+                        )
+
+                        else -> appContext.showLongToast(
+                            appContext.getString(R.string.text_authentication_error).format(
+                                errorMessage,
+                                errorCode
+                            )
+                        )
+                    }
+                }
+            })
+        } else {
+            launchUnlockedApp(appListItem)
+        }
+    }
+
+    private fun launchUnlockedApp(appListItem: AppListItem) {
+        val packageName = appListItem.activityPackage
         val userHandle = appListItem.user
         val launcher = appContext.getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps
         val activityInfo = launcher.getActivityList(packageName, userHandle)
 
-        val component = when (activityInfo.size) {
-            0 -> {
-                appContext.showShortToast("App not found")
-                return
-            }
-
-            1 -> ComponentName(packageName, activityInfo[0].name)
-            else -> if (appActivityName.isNotEmpty()) {
-                ComponentName(packageName, appActivityName)
-            } else {
-                ComponentName(packageName, activityInfo[activityInfo.size - 1].name)
-            }
+        if (activityInfo.isNotEmpty()) {
+            val component = ComponentName(packageName, activityInfo.first().name)
+            launchAppWithPermissionCheck(component, packageName, userHandle, launcher)
+        } else {
+            appContext.showShortToast("App not found")
         }
+    }
 
+
+    private fun launchAppWithPermissionCheck(component: ComponentName, packageName: String, userHandle: UserHandle, launcher: LauncherApps) {
         try {
             val appUsageTracker = AppUsageMonitor.createInstance(appContext)
             appUsageTracker.updateLastUsedTimestamp(packageName)
             launcher.startMainActivity(component, userHandle, null, null)
+            CrashHandler.logUserAction("${component.packageName} App Launched")
         } catch (_: SecurityException) {
             try {
                 val appUsageTracker = AppUsageMonitor.createInstance(appContext)
                 appUsageTracker.updateLastUsedTimestamp(packageName)
-                launcher.startMainActivity(component, android.os.Process.myUserHandle(), null, null)
+                launcher.startMainActivity(component, Process.myUserHandle(), null, null)
+                CrashHandler.logUserAction("${component.packageName} App Launched")
             } catch (_: Exception) {
                 appContext.showShortToast("Unable to launch app")
             }

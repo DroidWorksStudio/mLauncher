@@ -65,6 +65,7 @@ private const val CLICK_FLOATING_ACTION = "CLICK_FLOATING_ACTION"
 private const val CLICK_DATE_ACTION = "CLICK_DATE_ACTION"
 private const val DOUBLE_TAP_ACTION = "DOUBLE_TAP_ACTION"
 private const val HIDDEN_APPS = "HIDDEN_APPS"
+private const val LOCKED_APPS = "LOCKED_APPS"
 private const val SEARCH_ENGINE = "SEARCH_ENGINE"
 private const val LAUNCHER_FONT = "LAUNCHER_FONT"
 private const val APP_NAME = "APP_NAME"
@@ -685,6 +686,10 @@ class Prefs(val context: Context) {
     var hiddenApps: MutableSet<String>
         get() = prefs.getStringSet(HIDDEN_APPS, mutableSetOf()) as MutableSet<String>
         set(value) = prefs.edit().putStringSet(HIDDEN_APPS, value).apply()
+
+    var lockedApps: MutableSet<String>
+        get() = prefs.getStringSet(LOCKED_APPS, mutableSetOf()) as MutableSet<String>
+        set(value) = prefs.edit().putStringSet(LOCKED_APPS, value).apply()
 
     /**
      * By the number in home app list, get the list item.

@@ -205,6 +205,7 @@
     <string name="text_authentication_error">Authentication error: %1$s (code %2$d)</string>
     <string name="text_authentication_failed">Authentication failed.</string>
     <string name="text_biometric_login">Biometric login mLauncher Settings</string>
+    <string name="text_biometric_login_app">Biometric login for %1$s</string>
     <string name="text_biometric_login_sub">Log in using your biometric credentials.</string>
 
     <!-- Crash Strings -->
@@ -224,6 +225,8 @@
     <string name="delete">Delete</string>
     <string name="hide">Hide</string>
     <string name="show">Show</string>
+    <string name="lock">Lock</string>
+    <string name="unlock">Unlock</string>
     <string name="rename">Rename</string>
     <string name="info">Info</string>
     <string name="okay">Okay</string>
