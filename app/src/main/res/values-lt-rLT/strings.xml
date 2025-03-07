@@ -157,6 +157,7 @@
     <string name="text_authentication_error">Autentifikavimo klaida:%1$s(kodas %2$d)</string>
     <string name="text_authentication_failed">Autentifikavimas nepavyko.</string>
     <string name="text_biometric_login">Biometrinis prisijungimas prie mLauncher</string>
+    <string name="text_biometric_login_app">Biometric login for %1$s</string>
     <string name="text_biometric_login_sub">Prisijunkite naudodami biometrinius kredencialus</string>
     <!-- Crash Strings -->
     <string name="acra_crash">Avarija</string>
@@ -174,6 +175,8 @@
     <string name="delete">Ištrinti</string>
     <string name="hide">Slėpti</string>
     <string name="show">Rodyti</string>
+    <string name="lock">Lock</string>
+    <string name="unlock">Unlock</string>
     <string name="rename">Pervadyti</string>
     <string name="info">Informacija</string>
     <string name="okay">Gerai</string>
