@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Implemented Enhancements:
+
+- Add biometric authentication for locked apps and enable locking apps from app drawer - ([12788fd](https://github.com/DroidWorksStudio/mLauncher/commit/12788fd3c7fc9f3ae530fb0c4b2705e4c1f35251))
+
 ### Refactoring:
 
 - Cleaned up class and function locations - ([bbeaeb5](https://github.com/DroidWorksStudio/mLauncher/commit/bbeaeb5464951495834d0d3e15ef758e6fcbf451))
