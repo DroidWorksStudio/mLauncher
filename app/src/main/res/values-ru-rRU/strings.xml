@@ -157,7 +157,7 @@
     <string name="text_authentication_error">Ошибка аутентификации:%1$s(код %2$d)</string>
     <string name="text_authentication_failed">Аутентификация не удалась.</string>
     <string name="text_biometric_login">Биометрический вход в mLauncher</string>
-    <string name="text_biometric_login_app">Biometric login for %1$s</string>
+    <string name="text_biometric_login_app">Биометрический вход для %1$s</string>
     <string name="text_biometric_login_sub">Войдите в систему, используя свои биометрические учетные данные</string>
     <!-- Crash Strings -->
     <string name="acra_crash">Крушение</string>
@@ -175,8 +175,8 @@
     <string name="delete">Удалить</string>
     <string name="hide">Скрыть</string>
     <string name="show">Показать</string>
-    <string name="lock">Lock</string>
-    <string name="unlock">Unlock</string>
+    <string name="lock">Замок</string>
+    <string name="unlock">Разблокировать</string>
     <string name="rename">Переименовать</string>
     <string name="info">Информация</string>
     <string name="okay">Окей</string>
