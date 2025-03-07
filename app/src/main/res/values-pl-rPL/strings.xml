@@ -157,6 +157,7 @@
     <string name="text_authentication_error">Błąd uwierzytelnienia:%1$s(kod %2$d)</string>
     <string name="text_authentication_failed">Uwierzytelnianie nie powiodło się.</string>
     <string name="text_biometric_login">Logowanie biometryczne do mLaunchera</string>
+    <string name="text_biometric_login_app">Biometric login for %1$s</string>
     <string name="text_biometric_login_sub">Zaloguj się przy użyciu danych biometrycznych</string>
     <!-- Crash Strings -->
     <string name="acra_crash">Rozbić się</string>
@@ -174,6 +175,8 @@
     <string name="delete">Usuwać</string>
     <string name="hide">Ukryj</string>
     <string name="show">Pokaż</string>
+    <string name="lock">Lock</string>
+    <string name="unlock">Unlock</string>
     <string name="rename">Zmień nazwę</string>
     <string name="info">Informacje</string>
     <string name="okay">OK</string>
