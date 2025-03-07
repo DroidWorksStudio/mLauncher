@@ -8,6 +8,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Cleaned up class and function locations - ([bbeaeb5](https://github.com/DroidWorksStudio/mLauncher/commit/bbeaeb5464951495834d0d3e15ef758e6fcbf451))
 
+### Releases:
+
+- Prepare for version 10805 - ([502436f](https://github.com/DroidWorksStudio/mLauncher/commit/502436f3533724c5c30ae99e12ea227c4a064dda))
+
 ## [1.8.4](https://github.com/DroidWorksStudio/mLauncher/tree/1.8.4) - (07, March 2025)
 
 ### Implemented Enhancements:
