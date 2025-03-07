@@ -157,7 +157,7 @@
     <string name="text_authentication_error">Kimlik doğrulama hatası:%1$s(kod %2$d)</string>
     <string name="text_authentication_failed">Kimlik doğrulama başarısız oldu.</string>
     <string name="text_biometric_login">mLauncher için biyometrik giriş</string>
-    <string name="text_biometric_login_app">Biometric login for %1$s</string>
+    <string name="text_biometric_login_app">%1$siçin biyometrik giriş</string>
     <string name="text_biometric_login_sub">Biyometrik kimlik bilgilerinizi kullanarak giriş yapın</string>
     <!-- Crash Strings -->
     <string name="acra_crash">Kaza</string>
@@ -175,8 +175,8 @@
     <string name="delete">Silmek</string>
     <string name="hide">Gizle</string>
     <string name="show">Göster</string>
-    <string name="lock">Lock</string>
-    <string name="unlock">Unlock</string>
+    <string name="lock">Kilit</string>
+    <string name="unlock">Kilidini aç</string>
     <string name="rename">Yeniden Adlandır</string>
     <string name="info">Bilgi</string>
     <string name="okay">Tamam</string>
