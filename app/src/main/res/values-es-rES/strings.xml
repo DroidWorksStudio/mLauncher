@@ -157,6 +157,7 @@
     <string name="text_authentication_error">Error de autenticación:%1$s(código %2$d)</string>
     <string name="text_authentication_failed">La autenticación falló.</string>
     <string name="text_biometric_login">Inicio de sesión biométrico para mLauncher</string>
+    <string name="text_biometric_login_app">Inicio de sesión biométrico para %1$s</string>
     <string name="text_biometric_login_sub">Inicie sesión con su credencial biométrica</string>
     <!-- Crash Strings -->
     <string name="acra_crash">Chocar</string>
@@ -174,6 +175,8 @@
     <string name="delete">Borrar</string>
     <string name="hide">Ocultar</string>
     <string name="show">Mostrar</string>
+    <string name="lock">Cerrar</string>
+    <string name="unlock">Descubrir</string>
     <string name="rename">Renombrar</string>
     <string name="info">Información</string>
     <string name="okay">OK</string>
