@@ -157,7 +157,7 @@
     <string name="text_authentication_error">인증 오류:%1$s(코드 %2$d)</string>
     <string name="text_authentication_failed">인증 실패.</string>
     <string name="text_biometric_login">mLauncher의 생체인식 로그인</string>
-    <string name="text_biometric_login_app">Biometric login for %1$s</string>
+    <string name="text_biometric_login_app">%1$s에 대한 생체 인식 로그인</string>
     <string name="text_biometric_login_sub">생체 인식 자격 증명을 사용하여 로그인</string>
     <!-- Crash Strings -->
     <string name="acra_crash">충돌</string>
@@ -175,8 +175,8 @@
     <string name="delete">삭제</string>
     <string name="hide">Hide</string>
     <string name="show">Show</string>
-    <string name="lock">Lock</string>
-    <string name="unlock">Unlock</string>
+    <string name="lock">잠그다</string>
+    <string name="unlock">터놓다</string>
     <string name="rename">Rename</string>
     <string name="info">정보</string>
     <string name="okay">Okay</string>
