@@ -157,7 +157,7 @@
     <string name="text_authentication_error">Authenticatiefout:%1$s(code %2$d)</string>
     <string name="text_authentication_failed">Authenticatie mislukt.</string>
     <string name="text_biometric_login">Biometrische login voor mLauncher</string>
-    <string name="text_biometric_login_app">Biometric login for %1$s</string>
+    <string name="text_biometric_login_app">Biometrische login voor %1$s</string>
     <string name="text_biometric_login_sub">Log in met uw biometrische gegevens</string>
     <!-- Crash Strings -->
     <string name="acra_crash">Botsing</string>
@@ -175,8 +175,8 @@
     <string name="delete">Verwijderen</string>
     <string name="hide">Verbergen</string>
     <string name="show">Weergeven</string>
-    <string name="lock">Lock</string>
-    <string name="unlock">Unlock</string>
+    <string name="lock">Slot</string>
+    <string name="unlock">Ontgrendelen</string>
     <string name="rename">Hernoem</string>
     <string name="info">Info</string>
     <string name="okay">OK</string>
