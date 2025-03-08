@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
 import com.github.droidworksstudio.common.CrashHandler
 import com.github.droidworksstudio.common.hideKeyboard
 import com.github.droidworksstudio.common.showLongToast
@@ -62,13 +63,13 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         when (flag) {
             AppDrawerFlag.LaunchApp,
             AppDrawerFlag.HiddenApps,
-            AppDrawerFlag.LockedApps,
             AppDrawerFlag.PrivateApps -> {
                 launchApp(app, fragment)
             }
 
             AppDrawerFlag.SetHomeApp -> {
                 prefs.setHomeAppModel(n, app)
+                findNavController(fragment).popBackStack()
             }
 
             AppDrawerFlag.SetShortSwipeUp -> prefs.appShortSwipeUp = app

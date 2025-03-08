@@ -328,10 +328,6 @@ class AppDrawerFragment : Fragment() {
     ): (appListItem: AppListItem) -> Unit =
         { appModel ->
             viewModel.selectedApp(this, appModel, flag, n)
-            if (flag == AppDrawerFlag.LaunchApp || flag == AppDrawerFlag.HiddenApps)
-                findNavController().popBackStack(R.id.mainFragment, false)
-            else
-                findNavController().popBackStack()
         }
 
     private fun appDeleteListener(): (appListItem: AppListItem) -> Unit =
