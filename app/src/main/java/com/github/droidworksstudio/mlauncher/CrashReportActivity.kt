@@ -41,7 +41,7 @@ class CrashReportActivity : AppCompatActivity() {
 
         val emailSender = SimpleEmailSender() // Create an instance
         val crashReportContent = getString(R.string.acra_mail_body)
-        val subject = "$pkgName $pkgVersion Crash Report"
+        val subject = String.format("Crash Report %s - %s", pkgName, pkgVersion)
         val recipient = getString(R.string.acra_email) // Replace with your email
 
         emailSender.sendCrashReport(context, crashReportContent, crashFileUris, subject, recipient)
