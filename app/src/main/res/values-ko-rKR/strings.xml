@@ -140,9 +140,6 @@
     <string name="hidden_apps">Hidden apps</string>
     <string name="favorite_apps">즐겨찾는 앱</string>
     <!-- Accessibility/Help Strings -->
-    <string name="double_tap_lock_is_enabled_message">If double tap lock disables fingerprint or face unlock, open mLauncher settings, tap on \'experimental\' and follow the instructions. Thank you.</string>
-    <string name="double_tap_lock_uninstall_message">Double tap to lock enabled.
-		\n\nNote: Turn this OFF first if you decide to delete mLauncher.</string>
     <string name="accessibility_service_name">mLauncher Actions Service</string>
     <string name="accessibility_service_description">이 접근성 서비스를 통해 mLauncher는 화면 잠금 또는 빠른 설정 열기와 같은 특정 작업을 수행할 수 있습니다. 당사의 접근성 서비스는 데이터를 수집하거나 공유하지 않습니다.</string>
     <string name="can_not_delete_system_apps">시스템 앱을 삭제할 수 없습니다</string>
@@ -182,6 +179,7 @@
     <string name="okay">Okay</string>
     <string name="reset">Reset</string>
     <string name="cancel">Cancel</string>
+    <string name="enabled">Enabled</string>
     <string name="disabled">Disabled</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
