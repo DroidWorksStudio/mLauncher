@@ -140,9 +140,6 @@
     <string name="hidden_apps">Gizli uygulamalar</string>
     <string name="favorite_apps">Favori Uygulamalar</string>
     <!-- Accessibility/Help Strings -->
-    <string name="double_tap_lock_is_enabled_message">Çift dokunma kilidi parmak izi veya yüz kilidini devre dışı bırakırsa, mLauncher ayarlarını açın, \'deneysel\'e dokunun ve talimatları izleyin. Teşekkürler.</string>
-    <string name="double_tap_lock_uninstall_message">Etkin kilitlemek için çift dokunun.
-		\n\nNot: mLauncher\'ı silmeye karar verirseniz önce bunu KAPATIN.</string>
     <string name="accessibility_service_name">mLauncher Eylemler Hizmeti</string>
     <string name="accessibility_service_description">Bu erişilebilirlik hizmeti, mLauncher\'ın ekranı kilitleme veya hızlı ayarları açma gibi belirli işlemleri yapmasını sağlar. Erişilebilirlik hizmetimiz herhangi bir veri toplamaz veya paylaşmaz.</string>
     <string name="can_not_delete_system_apps">Sistem Uygulamaları Silinemiyor</string>
@@ -182,6 +179,7 @@
     <string name="okay">Tamam</string>
     <string name="reset">Sıfırla</string>
     <string name="cancel">İptal Et</string>
+    <string name="enabled">Etkinleştirilmiş</string>
     <string name="disabled">Devre Dışı</string>
     <string name="open">Aç</string>
     <string name="close">Kapat</string>

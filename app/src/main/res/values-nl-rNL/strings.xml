@@ -140,9 +140,6 @@
     <string name="hidden_apps">Verborgen apps</string>
     <string name="favorite_apps">Favoriete apps</string>
     <!-- Accessibility/Help Strings -->
-    <string name="double_tap_lock_is_enabled_message">Als het vergrendelen met dubbele tik vingerafdruk of gezichtsontgrendeling uitschakelt, open dan de mLauncher instellingen, tik op \'experimenteel\' en volg de instructies. Dank u.</string>
-    <string name="double_tap_lock_uninstall_message">Dubbel tikken om te vergrendelen ingeschakeld.
-		\n\nOpmerking: schakel eerst deze UIT uit als u besluit om mLauncher te verwijderen.</string>
     <string name="accessibility_service_name">mLauncher Acties Service</string>
     <string name="accessibility_service_description">Met deze toegankelijkheidsservice kan mLauncher bepaalde acties uitvoeren, zoals het scherm vergrendelen of de snelle instellingen openen. Onze toegankelijkheidsdienst verzamelt of deelt geen gegevens.</string>
     <string name="can_not_delete_system_apps">Kan systeemapps niet verwijderen</string>
@@ -182,6 +179,7 @@
     <string name="okay">OK</string>
     <string name="reset">Reset</string>
     <string name="cancel">Annuleren</string>
+    <string name="enabled">Ingeschakeld</string>
     <string name="disabled">Uitgeschakeld</string>
     <string name="open">Open</string>
     <string name="close">Afsluiten</string>

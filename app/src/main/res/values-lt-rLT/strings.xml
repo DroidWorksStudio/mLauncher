@@ -140,9 +140,6 @@
     <string name="hidden_apps">Paslėptos programėlės</string>
     <string name="favorite_apps">Mėgstamiausios programos</string>
     <!-- Accessibility/Help Strings -->
-    <string name="double_tap_lock_is_enabled_message">Jei užraktas spustelėjus du kartus išjungia piršto atspaudą arba atrakinimą pagal veidą, atidarykite mLauncher nustatymus, bakstelėkite \'eksperimentinis\' ir vadovaukitės instrukcijomis. Ačiū.</string>
-    <string name="double_tap_lock_uninstall_message">Dukart palieskite, kad užrakintumėte įgalinimą.
-		\n\nPastaba: pirmiausia IŠJUNKITE, jei nuspręsite ištrinti mLauncher.</string>
     <string name="accessibility_service_name">mLauncher veiksmų tarnyba</string>
     <string name="accessibility_service_description">Ši pritaikymo neįgaliesiems paslauga leidžia „mLauncher“ atlikti tam tikrus veiksmus, pvz., užrakinti ekraną arba atidaryti sparčiuosius nustatymus. Mūsų pritaikymo neįgaliesiems paslauga nerenka ir nebendrina jokių duomenų.</string>
     <string name="can_not_delete_system_apps">Nepavyksta ištrinti sistemos programų</string>
@@ -182,6 +179,7 @@
     <string name="okay">Gerai</string>
     <string name="reset">Atstatyti</string>
     <string name="cancel">Atšaukti</string>
+    <string name="enabled">Įjungta</string>
     <string name="disabled">Išjungtas</string>
     <string name="open">Atidaryti</string>
     <string name="close">Uždaryti</string>

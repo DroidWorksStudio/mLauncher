@@ -140,9 +140,6 @@
     <string name="hidden_apps">יישומים מוסתרים</string>
     <string name="favorite_apps">יישומים מועדפים</string>
     <!-- Accessibility/Help Strings -->
-    <string name="double_tap_lock_is_enabled_message">אם נעילת הקשה כפולה מנטרלת את ביטול הנעילה על ידי זיהוי האצבע או זיהוי פנים, פתח את הגדרות mLauncher, הקש על \'ניסיוני\' ועקוב אחרי ההוראות. תודה לך.</string>
-    <string name="double_tap_lock_uninstall_message">נעילה בהקשה כפולה מאופשרת.
-		\n\nהערה: כבה אופציה זו תחילה אם תחליט למחוק את mLauncher.</string>
     <string name="accessibility_service_name"> שירות פעולות של mLauncher</string>
     <string name="accessibility_service_description">שירות נגישות זה מאפשר ל-mLauncher לבצע פעולות מסוימות כמו נעילת המסך או פתיחת ההגדרות המהירות. שירות הנגישות שלנו אינו אוסף או משתף נתונים כלשהם.</string>
     <string name="can_not_delete_system_apps">לא ניתן למחוק אפליקציות מערכת</string>
@@ -182,6 +179,7 @@
     <string name="okay">אוקיי</string>
     <string name="reset">אפס</string>
     <string name="cancel">בטל</string>
+    <string name="enabled">מופעל</string>
     <string name="disabled">מושבת</string>
     <string name="open">פתח</string>
     <string name="close">סגור</string>

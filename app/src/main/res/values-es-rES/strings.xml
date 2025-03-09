@@ -140,9 +140,6 @@
     <string name="hidden_apps">Aplicaciones ocultas</string>
     <string name="favorite_apps">Aplicaciones favoritas</string>
     <!-- Accessibility/Help Strings -->
-    <string name="double_tap_lock_is_enabled_message">Si el doble toque deshabilita la huella digital o el desbloqueo facial, abre los ajustes de mLauncher, pulsa en \"experimental\" y sigue las instrucciones.</string>
-    <string name="double_tap_lock_uninstall_message">Si el doble toque para bloqueo está activado.
-		\n\nNota: Desactive primero esta opción si quiere desinstalar mLauncher.</string>
     <string name="accessibility_service_name">Acciones de mLauncher</string>
     <string name="accessibility_service_description">Se requiere el permiso de accesibilidad para habilitar el bloqueo por doble toque o abrir la configuración rápida. Cualquier dato recopilado a través de este permiso no saldrá de su dispositivo.</string>
     <string name="can_not_delete_system_apps">No puedo eliminar aplicaciones del sistema</string>
@@ -182,6 +179,7 @@
     <string name="okay">OK</string>
     <string name="reset">Restablecer</string>
     <string name="cancel">Cancelar</string>
+    <string name="enabled">Activado</string>
     <string name="disabled">Desactivado</string>
     <string name="open">Abrir</string>
     <string name="close">Cerrar</string>
