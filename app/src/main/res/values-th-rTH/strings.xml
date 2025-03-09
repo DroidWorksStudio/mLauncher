@@ -140,9 +140,6 @@
     <string name="hidden_apps">แอพที่ซ่อนอยู่</string>
     <string name="favorite_apps">แอปพลิเคชั่นที่ชื่นชอบ</string>
     <!-- Accessibility/Help Strings -->
-    <string name="double_tap_lock_is_enabled_message">หากการล็อกด้วยการแตะสองครั้งปิดใช้งานการปลดล็อกด้วยลายนิ้วมือหรือใบหน้า ให้เปิดการตั้งค่า mLauncher แตะที่ \'ทดลอง\' แล้วทำตามคำแนะนำ ขอขอบคุณ.</string>
-    <string name="double_tap_lock_uninstall_message">แตะสองครั้งเพื่อล็อคเปิดใช้งาน
-		\n\nหมายเหตุ: ปิดการทำงานนี้ก่อนหากคุณตัดสินใจที่จะลบ mLauncher</string>
     <string name="accessibility_service_name">บริการดำเนินการ mLauncher</string>
     <string name="accessibility_service_description">บริการการเข้าถึงนี้ช่วยให้ mLauncher ดำเนินการบางอย่างได้ เช่น ล็อคหน้าจอหรือเปิดการตั้งค่าด่วน บริการการเข้าถึงของเราจะไม่รวบรวมหรือแบ่งปันข้อมูลใดๆ</string>
     <string name="can_not_delete_system_apps">ไม่สามารถลบแอประบบได้</string>
@@ -182,6 +179,7 @@
     <string name="okay">ตกลง</string>
     <string name="reset">รีเซ็ต</string>
     <string name="cancel">ยกเลิก</string>
+    <string name="enabled">Enabled</string>
     <string name="disabled">พิการ</string>
     <string name="open">เปิด</string>
     <string name="close">ปิด</string>
