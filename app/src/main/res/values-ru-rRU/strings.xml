@@ -140,9 +140,6 @@
     <string name="hidden_apps">Скрытые приложения</string>
     <string name="favorite_apps">Любимые приложения</string>
     <!-- Accessibility/Help Strings -->
-    <string name="double_tap_lock_is_enabled_message">Если двойное нажатие отключает отпечаток пальца или разблокировку, откройте настройки mLauncher, нажмите «экспериментальные» и следуйте инструкциям. Спасибо.</string>
-    <string name="double_tap_lock_uninstall_message">Блокировка включена двойным нажатием для двойного нажатия.
-		\n\nПримечание: сначала включите эту опцию, если вы решите удалить mLauncher.</string>
     <string name="accessibility_service_name">mLauncher Служба действий</string>
     <string name="accessibility_service_description">Эта служба специальных возможностей позволяет mLauncher выполнять определенные действия, такие как блокировка экрана или открытие быстрых настроек. Наша служба доступности не собирает и не передает какие-либо данные.</string>
     <string name="can_not_delete_system_apps">Не могу удалить системные приложения</string>
@@ -182,6 +179,7 @@
     <string name="okay">Окей</string>
     <string name="reset">Reset</string>
     <string name="cancel">Отмена</string>
+    <string name="enabled">Enabled</string>
     <string name="disabled">Отключено</string>
     <string name="open">Открыть</string>
     <string name="close">Закрыть</string>
