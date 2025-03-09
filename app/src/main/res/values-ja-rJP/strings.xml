@@ -140,9 +140,6 @@
     <string name="hidden_apps">非表示のアプリ</string>
     <string name="favorite_apps">お気に入りのアプリ</string>
     <!-- Accessibility/Help Strings -->
-    <string name="double_tap_lock_is_enabled_message">ダブルタップで指紋やフェイスロックを無効にする場合は、mLauncher の設定を開き、「実験的」をタップして指示に従ってください。ありがとうございます。</string>
-    <string name="double_tap_lock_uninstall_message">ダブルタップしてロックを有効にします。
-		\n\n注意: mLauncherを削除することにした場合は、最初にオフにします。</string>
     <string name="accessibility_service_name">mLauncher アクションサービス</string>
     <string name="accessibility_service_description">このアクセシビリティ サービスにより、mLauncher は画面のロックやクイック設定を開くなどの特定のアクションを実行できます。当社のアクセシビリティ サービスは、いかなるデータも収集または共有しません。</string>
     <string name="can_not_delete_system_apps">システムアプリを削除できない</string>
@@ -182,6 +179,7 @@
     <string name="okay">OK</string>
     <string name="reset">Reset</string>
     <string name="cancel">キャンセル</string>
+    <string name="enabled">Enabled</string>
     <string name="disabled">無効</string>
     <string name="open">開く</string>
     <string name="close">閉じる</string>
