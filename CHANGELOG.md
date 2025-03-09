@@ -16,6 +16,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Language Support:
 
+- Updated Language Files. ([#695](https://github.com/DroidWorksStudio/mLauncher/issues/695)) - ([6dc8dd0](https://github.com/DroidWorksStudio/mLauncher/commit/6dc8dd0ef96f288a50d8645763f80b4030479c4a))
 - Updated Language Files. ([#693](https://github.com/DroidWorksStudio/mLauncher/issues/693)) - ([bf4f94e](https://github.com/DroidWorksStudio/mLauncher/commit/bf4f94e91517e3bede182dd07b1fb9fc2e97f17a))
 
 ### Refactoring:
