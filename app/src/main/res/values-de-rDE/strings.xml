@@ -140,9 +140,6 @@
     <string name="hidden_apps">Versteckte Apps</string>
     <string name="favorite_apps">Lieblings-Apps</string>
     <!-- Accessibility/Help Strings -->
-    <string name="double_tap_lock_is_enabled_message">Wenn die Doppeltippsperre den Fingerabdruck oder das Entsperren des Gesichts deaktiviert, öffnen Sie mLauncher Einstellungen, tippen Sie auf \"experimentell\" und folgen Sie den Anweisungen. Vielen Dank.</string>
-    <string name="double_tap_lock_uninstall_message">Doppeltippen zum Sperren aktiviert.
-		\n\nHinweis: Schalten Sie diesen AUS zuerst wenn Sie mLauncher löschen möchten.</string>
     <string name="accessibility_service_name">mLauncher Actions Service</string>
     <string name="accessibility_service_description">Dieser Barrierefreiheitsdienst ermöglicht es mLauncher, bestimmte Aktionen auszuführen, wie z. B. das Sperren des Bildschirms oder das Öffnen der Schnelleinstellungen. Unser Barrierefreiheitsdienst sammelt oder teilt keine Daten.</string>
     <string name="can_not_delete_system_apps">System-Apps können nicht gelöscht werden</string>
@@ -182,6 +179,7 @@
     <string name="okay">Okay</string>
     <string name="reset">Reset</string>
     <string name="cancel">Abbrechen</string>
+    <string name="enabled">Enabled</string>
     <string name="disabled">Deaktiviert</string>
     <string name="open">Öffnen</string>
     <string name="close">Schließen</string>
