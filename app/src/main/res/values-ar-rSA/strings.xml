@@ -140,9 +140,6 @@
     <string name="hidden_apps">التطبيقات المخفية</string>
     <string name="favorite_apps">التطبيقات المفضلة</string>
     <!-- Accessibility/Help Strings -->
-    <string name="double_tap_lock_is_enabled_message">إذا كان الضغط المزدوج على قفل يعطل بصمة الأصابع أو فتح شاشة القفل، افتح إعدادات mLauncher ، انقر على \"تجريبي\" واتبع التعليمات. شكراً لك.</string>
-    <string name="double_tap_lock_uninstall_message">انقر نقراً مزدوجاً للقفل مفعل.
-		\n\nملاحظة: قم بتشغيل هذا الخيار أولاً إذا قررت حذف mLauncher.</string>
     <string name="accessibility_service_name">خدمة إجراءات mLauncher</string>
     <string name="accessibility_service_description">تتيح خدمة إمكانية الوصول هذه لـ mLauncher القيام بإجراءات معينة مثل قفل الشاشة أو فتح الإعدادات السريعة. خدمة الوصول لدينا لا تجمع أو تشارك أي بيانات.</string>
     <string name="can_not_delete_system_apps">لا يمكن حذف تطبيقات النظام</string>
@@ -182,6 +179,7 @@
     <string name="okay">حسنًا</string>
     <string name="reset">Reset</string>
     <string name="cancel">إلغاء</string>
+    <string name="enabled">Enabled</string>
     <string name="disabled">معطل</string>
     <string name="open">فتح</string>
     <string name="close">أغلق</string>
