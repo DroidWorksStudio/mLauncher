@@ -140,9 +140,6 @@
     <string name="hidden_apps">Applications masquées</string>
     <string name="favorite_apps">Applications préférées</string>
     <!-- Accessibility/Help Strings -->
-    <string name="double_tap_lock_is_enabled_message">Si le verrouillage par double appui désactive l\'empreinte digitale ou le déverrouillage facial, ouvrez les paramètres de mLauncher, appuyez sur « expérimental» et suivez les instructions. Merci.</string>
-    <string name="double_tap_lock_uninstall_message">Double appui pour verrouiller activé.
-		\n\nNote : Désactiver d\'abord si vous décidez de supprimer mLauncher.</string>
     <string name="accessibility_service_name">Service d\'actions mLauncher</string>
     <string name="accessibility_service_description">Ce service d\'accessibilité permet à mLauncher d\'effectuer certaines actions telles que verrouiller l\'écran ou ouvrir les paramètres rapides. Notre service d\'accessibilité ne collecte ni ne partage aucune donnée.</string>
     <string name="can_not_delete_system_apps">Impossible de supprimer les applications système</string>
@@ -182,6 +179,7 @@
     <string name="okay">Ok</string>
     <string name="reset">Reset</string>
     <string name="cancel">Abandonner</string>
+    <string name="enabled">Enabled</string>
     <string name="disabled">Désactivé</string>
     <string name="open">Ouvert</string>
     <string name="close">Fermer</string>
