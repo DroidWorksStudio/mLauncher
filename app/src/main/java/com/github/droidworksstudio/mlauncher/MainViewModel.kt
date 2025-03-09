@@ -6,6 +6,7 @@ import android.content.Context
 import android.content.pm.LauncherApps
 import android.os.Process
 import android.os.UserHandle
+import android.util.Log
 import androidx.biometric.BiometricPrompt
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.AndroidViewModel
@@ -14,7 +15,6 @@ import androidx.lifecycle.viewModelScope
 import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
 import com.github.droidworksstudio.common.CrashHandler
 import com.github.droidworksstudio.common.hideKeyboard
-import com.github.droidworksstudio.common.showLongToast
 import com.github.droidworksstudio.common.showShortToast
 import com.github.droidworksstudio.mlauncher.data.AppListItem
 import com.github.droidworksstudio.mlauncher.data.Constants
@@ -35,7 +35,6 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     // setup variables with initial values
     val firstOpen = MutableLiveData<Boolean>()
-    val showMessageDialog = MutableLiveData<String>()
 
     val appList = MutableLiveData<List<AppListItem>?>()
     val hiddenApps = MutableLiveData<List<AppListItem>?>()
@@ -126,18 +125,21 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 }
 
                 override fun onAuthenticationFailed() {
-                    appContext.showLongToast(
+                    Log.e(
+                        "Authentication",
                         appContext.getString(R.string.text_authentication_failed)
                     )
                 }
 
                 override fun onAuthenticationError(errorCode: Int, errorMessage: CharSequence?) {
                     when (errorCode) {
-                        BiometricPrompt.ERROR_USER_CANCELED -> appContext.showLongToast(
+                        BiometricPrompt.ERROR_USER_CANCELED -> Log.e(
+                            "Authentication",
                             appContext.getString(R.string.text_authentication_cancel)
                         )
 
-                        else -> appContext.showLongToast(
+                        else -> Log.e(
+                            "Authentication",
                             appContext.getString(R.string.text_authentication_error).format(
                                 errorMessage,
                                 errorCode
@@ -229,10 +231,6 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     fun updateHomeAppsAlignment(gravity: Constants.Gravity, onBottom: Boolean) {
         homeAppsAlignment.value = Pair(gravity, onBottom)
-    }
-
-    fun showMessageDialog(message: String) {
-        showMessageDialog.postValue(message)
     }
 
     fun updateAppOrder(fromPosition: Int, toPosition: Int) {

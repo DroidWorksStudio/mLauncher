@@ -2,10 +2,11 @@ package com.github.droidworksstudio.mlauncher.data
 
 import android.content.Context
 import android.content.SharedPreferences
-import android.graphics.Color
 import android.os.UserHandle
 import android.util.Log
 import androidx.core.content.ContextCompat.getColor
+import androidx.core.content.edit
+import androidx.core.graphics.toColorInt
 import com.github.droidworksstudio.common.showLongToast
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.Constants.Gravity
@@ -118,32 +119,32 @@ class Prefs(val context: Context) {
     }
 
     fun loadFromString(json: String) {
-        val editor = prefs.edit()
-        val all: HashMap<String, Any?> =
-            Gson().fromJson(json, object : TypeToken<HashMap<String, Any?>>() {}.type)
-        for ((key, value) in all) {
-            when (value) {
-                is String -> editor.putString(key, value)
-                is Boolean -> editor.putBoolean(key, value)
-                is Number -> {
-                    if (value.toDouble() == value.toInt().toDouble()) {
-                        editor.putInt(key, value.toInt())
-                    } else {
-                        editor.putFloat(key, value.toFloat())
+        prefs.edit {
+            val all: HashMap<String, Any?> =
+                Gson().fromJson(json, object : TypeToken<HashMap<String, Any?>>() {}.type)
+            for ((key, value) in all) {
+                when (value) {
+                    is String -> putString(key, value)
+                    is Boolean -> putBoolean(key, value)
+                    is Number -> {
+                        if (value.toDouble() == value.toInt().toDouble()) {
+                            putInt(key, value.toInt())
+                        } else {
+                            putFloat(key, value.toFloat())
+                        }
                     }
-                }
 
-                is MutableSet<*> -> {
-                    val list = value.filterIsInstance<String>().toSet()
-                    editor.putStringSet(key, list)
-                }
+                    is MutableSet<*> -> {
+                        val list = value.filterIsInstance<String>().toSet()
+                        putStringSet(key, list)
+                    }
 
-                else -> {
-                    Log.d("backup error", "$value")
+                    else -> {
+                        Log.d("backup error", "$value")
+                    }
                 }
             }
         }
-        editor.apply()
     }
 
     fun saveToTheme(colorNames: List<String>): String {
@@ -164,137 +165,137 @@ class Prefs(val context: Context) {
     }
 
     fun loadFromTheme(json: String) {
-        val editor = prefs.edit()
-        val all: HashMap<String, Any?> =
-            Gson().fromJson(json, object : TypeToken<HashMap<String, Any?>>() {}.type)
+        prefs.edit {
+            val all: HashMap<String, Any?> =
+                Gson().fromJson(json, object : TypeToken<HashMap<String, Any?>>() {}.type)
 
-        for ((key, value) in all) {
-            try {
-                when (value) {
-                    is String -> {
-                        if (value.matches(Regex("^#([A-Fa-f0-9]{8})$"))) {
-                            // Convert HEX color (#AARRGGBB) to Int safely
-                            try {
-                                editor.putInt(key, Color.parseColor(value))
-                            } catch (e: IllegalArgumentException) {
-                                context.showLongToast("Invalid color format for key: $key, value: $value")
-                                Log.e("Theme Import", "Invalid color format for key: $key, value: $value", e)
-                                continue
+            for ((key, value) in all) {
+                try {
+                    when (value) {
+                        is String -> {
+                            if (value.matches(Regex("^#([A-Fa-f0-9]{8})$"))) {
+                                // Convert HEX color (#AARRGGBB) to Int safely
+                                try {
+                                    putInt(key, value.toColorInt())
+                                } catch (e: IllegalArgumentException) {
+                                    context.showLongToast("Invalid color format for key: $key, value: $value")
+                                    Log.e("Theme Import", "Invalid color format for key: $key, value: $value", e)
+                                    continue
+                                }
+                            } else {
+                                context.showLongToast("Unsupported value type for key: $key, value: $value")
+                                Log.e("Theme Import", "Null value found for key: $key")
                             }
-                        } else {
-                            context.showLongToast("Unsupported value type for key: $key, value: $value")
+                        }
+
+                        null -> {
+                            context.showLongToast("Null value found for key: $key")
                             Log.e("Theme Import", "Null value found for key: $key")
+                            continue
+                        }
+
+                        else -> {
+                            context.showLongToast("Unsupported value type for key: $key, value: $value")
+                            Log.e("Theme Import", "Unsupported value type for key: $key, value: $value")
+                            continue
                         }
                     }
-
-                    null -> {
-                        context.showLongToast("Null value found for key: $key")
-                        Log.e("Theme Import", "Null value found for key: $key")
-                        continue
-                    }
-
-                    else -> {
-                        context.showLongToast("Unsupported value type for key: $key, value: $value")
-                        Log.e("Theme Import", "Unsupported value type for key: $key, value: $value")
-                        continue
-                    }
+                } catch (e: Exception) {
+                    context.showLongToast("Error processing key: $key, value: $value")
+                    Log.e("Theme Import", "Error processing key: $key, value: $value", e)
                 }
-            } catch (e: Exception) {
-                context.showLongToast("Error processing key: $key, value: $value")
-                Log.e("Theme Import", "Error processing key: $key, value: $value", e)
             }
         }
-        editor.apply()
     }
 
 
     var appVersion: Int
         get() = prefs.getInt(APP_VERSION, -1)
-        set(value) = prefs.edit().putInt(APP_VERSION, value).apply()
+        set(value) = prefs.edit { putInt(APP_VERSION, value) }
 
     var firstOpen: Boolean
         get() = prefs.getBoolean(FIRST_OPEN, true)
-        set(value) = prefs.edit().putBoolean(FIRST_OPEN, value).apply()
+        set(value) = prefs.edit { putBoolean(FIRST_OPEN, value) }
 
     var firstSettingsOpen: Boolean
         get() = prefs.getBoolean(FIRST_SETTINGS_OPEN, true)
-        set(value) = prefs.edit().putBoolean(FIRST_SETTINGS_OPEN, value).apply()
+        set(value) = prefs.edit { putBoolean(FIRST_SETTINGS_OPEN, value) }
 
     var lockModeOn: Boolean
         get() = prefs.getBoolean(LOCK_MODE, false)
-        set(value) = prefs.edit().putBoolean(LOCK_MODE, value).apply()
+        set(value) = prefs.edit { putBoolean(LOCK_MODE, value) }
 
     var autoOpenApp: Boolean
         get() = prefs.getBoolean(AUTO_OPEN_APP, false)
-        set(value) = prefs.edit().putBoolean(AUTO_OPEN_APP, value).apply()
+        set(value) = prefs.edit { putBoolean(AUTO_OPEN_APP, value) }
 
     var homePager: Boolean
         get() = prefs.getBoolean(HOME_PAGES_PAGER, false)
-        set(value) = prefs.edit().putBoolean(HOME_PAGES_PAGER, value).apply()
+        set(value) = prefs.edit { putBoolean(HOME_PAGES_PAGER, value) }
 
     var recentAppsDisplayed: Boolean
         get() = prefs.getBoolean(RECENT_APPS_DISPLAYED, false)
-        set(value) = prefs.edit().putBoolean(RECENT_APPS_DISPLAYED, value).apply()
+        set(value) = prefs.edit { putBoolean(RECENT_APPS_DISPLAYED, value) }
 
     var recentCounter: Int
         get() = prefs.getInt(RECENT_COUNTER, 10)
-        set(value) = prefs.edit().putInt(RECENT_COUNTER, value).apply()
+        set(value) = prefs.edit { putInt(RECENT_COUNTER, value) }
 
     var filterStrength: Int
         get() = prefs.getInt(FILTER_STRENGTH, 25)
-        set(value) = prefs.edit().putInt(FILTER_STRENGTH, value).apply()
+        set(value) = prefs.edit { putInt(FILTER_STRENGTH, value) }
 
     var searchFromStart: Boolean
         get() = prefs.getBoolean(SEARCH_START, false)
-        set(value) = prefs.edit().putBoolean(SEARCH_START, value).apply()
+        set(value) = prefs.edit { putBoolean(SEARCH_START, value) }
 
     var autoShowKeyboard: Boolean
         get() = prefs.getBoolean(AUTO_SHOW_KEYBOARD, true)
-        set(value) = prefs.edit().putBoolean(AUTO_SHOW_KEYBOARD, value).apply()
+        set(value) = prefs.edit { putBoolean(AUTO_SHOW_KEYBOARD, value) }
 
     var homeAppsNum: Int
         get() = prefs.getInt(HOME_APPS_NUM, 4)
-        set(value) = prefs.edit().putInt(HOME_APPS_NUM, value).apply()
+        set(value) = prefs.edit { putInt(HOME_APPS_NUM, value) }
 
     var homePagesNum: Int
         get() = prefs.getInt(HOME_PAGES_NUM, 1)
-        set(value) = prefs.edit().putInt(HOME_PAGES_NUM, value).apply()
+        set(value) = prefs.edit { putInt(HOME_PAGES_NUM, value) }
 
     var backgroundColor: Int
         get() = prefs.getInt(BACKGROUND_COLOR, getColor(context, getColorInt("bg")))
-        set(value) = prefs.edit().putInt(BACKGROUND_COLOR, value).apply()
+        set(value) = prefs.edit { putInt(BACKGROUND_COLOR, value) }
 
     var appColor: Int
         get() = prefs.getInt(APP_COLOR, getColor(context, getColorInt("txt")))
-        set(value) = prefs.edit().putInt(APP_COLOR, value).apply()
+        set(value) = prefs.edit { putInt(APP_COLOR, value) }
 
     var dateColor: Int
         get() = prefs.getInt(DATE_COLOR, getColor(context, getColorInt("txt")))
-        set(value) = prefs.edit().putInt(DATE_COLOR, value).apply()
+        set(value) = prefs.edit { putInt(DATE_COLOR, value) }
 
     var clockColor: Int
         get() = prefs.getInt(CLOCK_COLOR, getColor(context, getColorInt("txt")))
-        set(value) = prefs.edit().putInt(CLOCK_COLOR, value).apply()
+        set(value) = prefs.edit { putInt(CLOCK_COLOR, value) }
 
     var batteryColor: Int
         get() = prefs.getInt(BATTERY_COLOR, getColor(context, getColorInt("txt")))
-        set(value) = prefs.edit().putInt(BATTERY_COLOR, value).apply()
+        set(value) = prefs.edit { putInt(BATTERY_COLOR, value) }
 
     var dailyWordColor: Int
         get() = prefs.getInt(DAILY_WORD_COLOR, getColor(context, getColorInt("txt")))
-        set(value) = prefs.edit().putInt(DAILY_WORD_COLOR, value).apply()
+        set(value) = prefs.edit { putInt(DAILY_WORD_COLOR, value) }
 
     var alarmClockColor: Int
         get() = prefs.getInt(ALARM_CLOCK_COLOR, getColor(context, getColorInt("txt")))
-        set(value) = prefs.edit().putInt(ALARM_CLOCK_COLOR, value).apply()
+        set(value) = prefs.edit { putInt(ALARM_CLOCK_COLOR, value) }
 
     var opacityNum: Int
         get() = prefs.getInt(APP_OPACITY, 255)
-        set(value) = prefs.edit().putInt(APP_OPACITY, value).apply()
+        set(value) = prefs.edit { putInt(APP_OPACITY, value) }
 
     var appUsageStats: Boolean
         get() = prefs.getBoolean(APP_USAGE_STATS, false)
-        set(value) = prefs.edit().putBoolean(APP_USAGE_STATS, value).apply()
+        set(value) = prefs.edit { putBoolean(APP_USAGE_STATS, value) }
 
     var homeAlignment: Gravity
         get() {
@@ -304,15 +305,15 @@ class Prefs(val context: Context) {
             ).toString()
             return Gravity.valueOf(string)
         }
-        set(value) = prefs.edit().putString(HOME_ALIGNMENT, value.toString()).apply()
+        set(value) = prefs.edit { putString(HOME_ALIGNMENT, value.toString()) }
 
     var homeAlignmentBottom: Boolean
         get() = prefs.getBoolean(HOME_ALIGNMENT_BOTTOM, false)
-        set(value) = prefs.edit().putBoolean(HOME_ALIGNMENT_BOTTOM, value).apply()
+        set(value) = prefs.edit { putBoolean(HOME_ALIGNMENT_BOTTOM, value) }
 
     var extendHomeAppsArea: Boolean
         get() = prefs.getBoolean(HOME_CLICK_AREA, false)
-        set(value) = prefs.edit().putBoolean(HOME_CLICK_AREA, value).apply()
+        set(value) = prefs.edit { putBoolean(HOME_CLICK_AREA, value) }
 
     var clockAlignment: Gravity
         get() {
@@ -322,7 +323,7 @@ class Prefs(val context: Context) {
             ).toString()
             return Gravity.valueOf(string)
         }
-        set(value) = prefs.edit().putString(CLOCK_ALIGNMENT, value.toString()).apply()
+        set(value) = prefs.edit { putString(CLOCK_ALIGNMENT, value.toString()) }
 
     var dateAlignment: Gravity
         get() {
@@ -332,7 +333,7 @@ class Prefs(val context: Context) {
             ).toString()
             return Gravity.valueOf(string)
         }
-        set(value) = prefs.edit().putString(DATE_ALIGNMENT, value.toString()).apply()
+        set(value) = prefs.edit { putString(DATE_ALIGNMENT, value.toString()) }
 
     var alarmAlignment: Gravity
         get() {
@@ -342,7 +343,7 @@ class Prefs(val context: Context) {
             ).toString()
             return Gravity.valueOf(string)
         }
-        set(value) = prefs.edit().putString(ALARM_ALIGNMENT, value.toString()).apply()
+        set(value) = prefs.edit { putString(ALARM_ALIGNMENT, value.toString()) }
 
     var dailyWordAlignment: Gravity
         get() {
@@ -352,7 +353,7 @@ class Prefs(val context: Context) {
             ).toString()
             return Gravity.valueOf(string)
         }
-        set(value) = prefs.edit().putString(DAILY_WORD_ALIGNMENT, value.toString()).apply()
+        set(value) = prefs.edit { putString(DAILY_WORD_ALIGNMENT, value.toString()) }
 
     var drawerAlignment: Gravity
         get() {
@@ -362,43 +363,43 @@ class Prefs(val context: Context) {
             ).toString()
             return Gravity.valueOf(string)
         }
-        set(value) = prefs.edit().putString(DRAWER_ALIGNMENT, value.name).apply()
+        set(value) = prefs.edit { putString(DRAWER_ALIGNMENT, value.name) }
 
     var showStatusBar: Boolean
         get() = prefs.getBoolean(STATUS_BAR, false)
-        set(value) = prefs.edit().putBoolean(STATUS_BAR, value).apply()
+        set(value) = prefs.edit { putBoolean(STATUS_BAR, value) }
 
     var showDate: Boolean
         get() = prefs.getBoolean(SHOW_DATE, true)
-        set(value) = prefs.edit().putBoolean(SHOW_DATE, value).apply()
+        set(value) = prefs.edit { putBoolean(SHOW_DATE, value) }
 
     var showClock: Boolean
         get() = prefs.getBoolean(SHOW_CLOCK, true)
-        set(value) = prefs.edit().putBoolean(SHOW_CLOCK, value).apply()
+        set(value) = prefs.edit { putBoolean(SHOW_CLOCK, value) }
 
     var showClockFormat: Boolean
         get() = prefs.getBoolean(SHOW_CLOCK_FORMAT, true)
-        set(value) = prefs.edit().putBoolean(SHOW_CLOCK_FORMAT, value).apply()
+        set(value) = prefs.edit { putBoolean(SHOW_CLOCK_FORMAT, value) }
 
     var showAlarm: Boolean
         get() = prefs.getBoolean(SHOW_ALARM, false)
-        set(value) = prefs.edit().putBoolean(SHOW_ALARM, value).apply()
+        set(value) = prefs.edit { putBoolean(SHOW_ALARM, value) }
 
     var showDailyWord: Boolean
         get() = prefs.getBoolean(SHOW_DAILY_WORD, false)
-        set(value) = prefs.edit().putBoolean(SHOW_DAILY_WORD, value).apply()
+        set(value) = prefs.edit { putBoolean(SHOW_DAILY_WORD, value) }
 
     var showFloating: Boolean
         get() = prefs.getBoolean(SHOW_FLOATING, false)
-        set(value) = prefs.edit().putBoolean(SHOW_FLOATING, value).apply()
+        set(value) = prefs.edit { putBoolean(SHOW_FLOATING, value) }
 
     var showBattery: Boolean
         get() = prefs.getBoolean(SHOW_BATTERY, true)
-        set(value) = prefs.edit().putBoolean(SHOW_BATTERY, value).apply()
+        set(value) = prefs.edit { putBoolean(SHOW_BATTERY, value) }
 
     var showBatteryIcon: Boolean
         get() = prefs.getBoolean(SHOW_BATTERY_ICON, true)
-        set(value) = prefs.edit().putBoolean(SHOW_BATTERY_ICON, value).apply()
+        set(value) = prefs.edit { putBoolean(SHOW_BATTERY_ICON, value) }
 
     var iconPack: Constants.IconPacks
         get() {
@@ -413,23 +414,23 @@ class Prefs(val context: Context) {
                 Constants.IconPacks.Disabled
             }
         }
-        set(value) = prefs.edit().putString(ICON_PACK, value.name).apply()
+        set(value) = prefs.edit { putString(ICON_PACK, value.name) }
 
     var wordList: String
         get() = prefs.getString(WORD_LIST, "").toString()
-        set(value) = prefs.edit().putString(WORD_LIST, value).apply()
+        set(value) = prefs.edit { putString(WORD_LIST, value) }
 
     var homeLocked: Boolean
         get() = prefs.getBoolean(HOME_LOCKED, false)
-        set(value) = prefs.edit().putBoolean(HOME_LOCKED, value).apply()
+        set(value) = prefs.edit { putBoolean(HOME_LOCKED, value) }
 
     var settingsLocked: Boolean
         get() = prefs.getBoolean(SETTINGS_LOCKED, false)
-        set(value) = prefs.edit().putBoolean(SETTINGS_LOCKED, value).apply()
+        set(value) = prefs.edit { putBoolean(SETTINGS_LOCKED, value) }
 
     var hideSearchView: Boolean
         get() = prefs.getBoolean(HIDE_SEARCH_VIEW, false)
-        set(value) = prefs.edit().putBoolean(HIDE_SEARCH_VIEW, value).apply()
+        set(value) = prefs.edit { putBoolean(HIDE_SEARCH_VIEW, value) }
 
     var shortSwipeUpAction: Constants.Action
         get() {
@@ -444,7 +445,7 @@ class Prefs(val context: Context) {
                 Constants.Action.ShowAppList
             }
         }
-        set(value) = prefs.edit().putString(SWIPE_UP_ACTION, value.name).apply()
+        set(value) = prefs.edit { putString(SWIPE_UP_ACTION, value.name) }
 
     var shortSwipeDownAction: Constants.Action
         get() {
@@ -459,7 +460,7 @@ class Prefs(val context: Context) {
                 Constants.Action.ShowNotification
             }
         }
-        set(value) = prefs.edit().putString(SWIPE_DOWN_ACTION, value.name).apply()
+        set(value) = prefs.edit { putString(SWIPE_DOWN_ACTION, value.name) }
 
     var shortSwipeLeftAction: Constants.Action
         get() {
@@ -474,7 +475,7 @@ class Prefs(val context: Context) {
                 Constants.Action.OpenApp
             }
         }
-        set(value) = prefs.edit().putString(SWIPE_LEFT_ACTION, value.name).apply()
+        set(value) = prefs.edit { putString(SWIPE_LEFT_ACTION, value.name) }
 
     var shortSwipeRightAction: Constants.Action
         get() {
@@ -489,7 +490,7 @@ class Prefs(val context: Context) {
                 Constants.Action.OpenApp
             }
         }
-        set(value) = prefs.edit().putString(SWIPE_RIGHT_ACTION, value.name).apply()
+        set(value) = prefs.edit { putString(SWIPE_RIGHT_ACTION, value.name) }
 
     var longSwipeUpAction: Constants.Action
         get() {
@@ -504,7 +505,7 @@ class Prefs(val context: Context) {
                 Constants.Action.ShowAppList
             }
         }
-        set(value) = prefs.edit().putString(LONG_SWIPE_UP_ACTION, value.name).apply()
+        set(value) = prefs.edit { putString(LONG_SWIPE_UP_ACTION, value.name) }
 
     var longSwipeDownAction: Constants.Action
         get() {
@@ -519,7 +520,7 @@ class Prefs(val context: Context) {
                 Constants.Action.ShowNotification
             }
         }
-        set(value) = prefs.edit().putString(LONG_SWIPE_DOWN_ACTION, value.name).apply()
+        set(value) = prefs.edit { putString(LONG_SWIPE_DOWN_ACTION, value.name) }
 
     var longSwipeLeftAction: Constants.Action
         get() {
@@ -534,7 +535,7 @@ class Prefs(val context: Context) {
                 Constants.Action.LeftPage
             }
         }
-        set(value) = prefs.edit().putString(LONG_SWIPE_LEFT_ACTION, value.name).apply()
+        set(value) = prefs.edit { putString(LONG_SWIPE_LEFT_ACTION, value.name) }
 
     var longSwipeRightAction: Constants.Action
         get() {
@@ -549,7 +550,7 @@ class Prefs(val context: Context) {
                 Constants.Action.RightPage
             }
         }
-        set(value) = prefs.edit().putString(LONG_SWIPE_RIGHT_ACTION, value.name).apply()
+        set(value) = prefs.edit { putString(LONG_SWIPE_RIGHT_ACTION, value.name) }
 
     var clickClockAction: Constants.Action
         get() {
@@ -564,7 +565,7 @@ class Prefs(val context: Context) {
                 Constants.Action.OpenApp
             }
         }
-        set(value) = prefs.edit().putString(CLICK_CLOCK_ACTION, value.name).apply()
+        set(value) = prefs.edit { putString(CLICK_CLOCK_ACTION, value.name) }
 
     var clickAppUsageAction: Constants.Action
         get() {
@@ -579,7 +580,7 @@ class Prefs(val context: Context) {
                 Constants.Action.ShowDigitalWellbeing
             }
         }
-        set(value) = prefs.edit().putString(CLICK_APP_USAGE_ACTION, value.name).apply()
+        set(value) = prefs.edit { putString(CLICK_APP_USAGE_ACTION, value.name) }
 
     var clickFloatingAction: Constants.Action
         get() {
@@ -594,7 +595,7 @@ class Prefs(val context: Context) {
                 Constants.Action.Disabled
             }
         }
-        set(value) = prefs.edit().putString(CLICK_FLOATING_ACTION, value.name).apply()
+        set(value) = prefs.edit { putString(CLICK_FLOATING_ACTION, value.name) }
 
     var clickDateAction: Constants.Action
         get() {
@@ -609,7 +610,7 @@ class Prefs(val context: Context) {
                 Constants.Action.OpenApp
             }
         }
-        set(value) = prefs.edit().putString(CLICK_DATE_ACTION, value.name).apply()
+        set(value) = prefs.edit { putString(CLICK_DATE_ACTION, value.name) }
 
     var doubleTapAction: Constants.Action
         get() {
@@ -624,7 +625,7 @@ class Prefs(val context: Context) {
                 Constants.Action.RestartApp
             }
         }
-        set(value) = prefs.edit().putString(DOUBLE_TAP_ACTION, value.name).apply()
+        set(value) = prefs.edit { putString(DOUBLE_TAP_ACTION, value.name) }
 
     var appTheme: Constants.Theme
         get() {
@@ -636,7 +637,7 @@ class Prefs(val context: Context) {
                 Constants.Theme.System
             }
         }
-        set(value) = prefs.edit().putString(APP_THEME, value.name).apply()
+        set(value) = prefs.edit { putString(APP_THEME, value.name) }
 
     var appLanguage: Constants.Language
         get() {
@@ -651,7 +652,7 @@ class Prefs(val context: Context) {
                 Constants.Language.System
             }
         }
-        set(value) = prefs.edit().putString(APP_LANGUAGE, value.name).apply()
+        set(value) = prefs.edit { putString(APP_LANGUAGE, value.name) }
 
     var searchEngines: Constants.SearchEngines
         get() {
@@ -666,7 +667,7 @@ class Prefs(val context: Context) {
                 Constants.SearchEngines.Google
             }
         }
-        set(value) = prefs.edit().putString(SEARCH_ENGINE, value.name).apply()
+        set(value) = prefs.edit { putString(SEARCH_ENGINE, value.name) }
 
     var fontFamily: Constants.FontFamily
         get() {
@@ -681,15 +682,15 @@ class Prefs(val context: Context) {
                 Constants.FontFamily.System
             }
         }
-        set(value) = prefs.edit().putString(LAUNCHER_FONT, value.name).apply()
+        set(value) = prefs.edit { putString(LAUNCHER_FONT, value.name) }
 
     var hiddenApps: MutableSet<String>
         get() = prefs.getStringSet(HIDDEN_APPS, mutableSetOf()) as MutableSet<String>
-        set(value) = prefs.edit().putStringSet(HIDDEN_APPS, value).apply()
+        set(value) = prefs.edit { putStringSet(HIDDEN_APPS, value) }
 
     var lockedApps: MutableSet<String>
         get() = prefs.getStringSet(LOCKED_APPS, mutableSetOf()) as MutableSet<String>
-        set(value) = prefs.edit().putStringSet(LOCKED_APPS, value).apply()
+        set(value) = prefs.edit { putStringSet(LOCKED_APPS, value) }
 
     /**
      * By the number in home app list, get the list item.
@@ -705,7 +706,7 @@ class Prefs(val context: Context) {
 
     fun setHomeAppName(i: Int, name: String) {
         val nameId = "${APP_NAME}_$i"
-        prefs.edit().putString(nameId, name).apply()
+        prefs.edit { putString(nameId, name) }
     }
 
     var appShortSwipeUp: AppListItem
@@ -785,14 +786,14 @@ class Prefs(val context: Context) {
     }
 
     private fun storeApp(id: String, app: AppListItem) {
-        val edit = prefs.edit()
+        prefs.edit {
 
-        edit.putString("${APP_NAME}_$id", app.label)
-        edit.putString("${APP_PACKAGE}_$id", app.activityPackage)
-        edit.putString("${APP_ACTIVITY}_$id", app.activityClass)
-        edit.putString("${APP_ALIAS}_$id", app.customLabel) // TODO can be empty. so what?
-        edit.putString("${APP_USER}_$id", app.user.toString())
-        edit.apply()
+            putString("${APP_NAME}_$id", app.label)
+            putString("${APP_PACKAGE}_$id", app.activityPackage)
+            putString("${APP_ACTIVITY}_$id", app.activityClass)
+            putString("${APP_ALIAS}_$id", app.customLabel)
+            putString("${APP_USER}_$id", app.user.toString())
+        }
     }
 
     var appSize: Int
@@ -803,7 +804,7 @@ class Prefs(val context: Context) {
                 18
             }
         }
-        set(value) = prefs.edit().putInt(APP_SIZE_TEXT, value).apply()
+        set(value) = prefs.edit { putInt(APP_SIZE_TEXT, value) }
 
     var dateSize: Int
         get() {
@@ -813,7 +814,7 @@ class Prefs(val context: Context) {
                 22
             }
         }
-        set(value) = prefs.edit().putInt(DATE_SIZE_TEXT, value).apply()
+        set(value) = prefs.edit { putInt(DATE_SIZE_TEXT, value) }
 
     var clockSize: Int
         get() {
@@ -823,7 +824,7 @@ class Prefs(val context: Context) {
                 42
             }
         }
-        set(value) = prefs.edit().putInt(CLOCK_SIZE_TEXT, value).apply()
+        set(value) = prefs.edit { putInt(CLOCK_SIZE_TEXT, value) }
 
     var alarmSize: Int
         get() {
@@ -833,7 +834,7 @@ class Prefs(val context: Context) {
                 20
             }
         }
-        set(value) = prefs.edit().putInt(ALARM_SIZE_TEXT, value).apply()
+        set(value) = prefs.edit { putInt(ALARM_SIZE_TEXT, value) }
 
     var dailyWordSize: Int
         get() {
@@ -843,7 +844,7 @@ class Prefs(val context: Context) {
                 20
             }
         }
-        set(value) = prefs.edit().putInt(DAILY_WORD_SIZE_TEXT, value).apply()
+        set(value) = prefs.edit { putInt(DAILY_WORD_SIZE_TEXT, value) }
 
 
     var batterySize: Int
@@ -854,7 +855,7 @@ class Prefs(val context: Context) {
                 14
             }
         }
-        set(value) = prefs.edit().putInt(BATTERY_SIZE_TEXT, value).apply()
+        set(value) = prefs.edit { putInt(BATTERY_SIZE_TEXT, value) }
 
     var settingsSize: Int
         get() {
@@ -864,7 +865,7 @@ class Prefs(val context: Context) {
                 12
             }
         }
-        set(value) = prefs.edit().putInt(TEXT_SIZE_SETTINGS, value).apply()
+        set(value) = prefs.edit { putInt(TEXT_SIZE_SETTINGS, value) }
 
     var textPaddingSize: Int
         get() {
@@ -874,7 +875,7 @@ class Prefs(val context: Context) {
                 10
             }
         }
-        set(value) = prefs.edit().putInt(TEXT_PADDING_SIZE, value).apply()
+        set(value) = prefs.edit { putInt(TEXT_PADDING_SIZE, value) }
 
     private fun getColorInt(type: String): Int {
         when (appTheme) {
@@ -910,14 +911,14 @@ class Prefs(val context: Context) {
     }
 
     fun setAppAlias(appPackage: String, appAlias: String) {
-        prefs.edit().putString(appPackage, appAlias).apply()
+        prefs.edit { putString(appPackage, appAlias) }
     }
 
     fun remove(prefName: String) {
-        prefs.edit().remove(prefName).apply()
+        prefs.edit { remove(prefName) }
     }
 
     fun clear() {
-        prefs.edit().clear().apply()
+        prefs.edit { clear() }
     }
 }

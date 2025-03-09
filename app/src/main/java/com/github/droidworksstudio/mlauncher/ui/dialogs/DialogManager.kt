@@ -18,6 +18,7 @@ import android.widget.ListView
 import android.widget.SeekBar
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
+import androidx.core.graphics.toColorInt
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Prefs
@@ -332,7 +333,7 @@ class DialogManager(val context: Context, val activity: Activity) {
             override fun afterTextChanged(s: Editable?) {
                 s?.toString()?.trim()?.let { colorString ->
                     if (colorString.matches(Regex("^#[0-9A-Fa-f]{6}$"))) {
-                        val hexColor = Color.parseColor(colorString)
+                        val hexColor = colorString.toColorInt()
                         redSeekBar.progress = Color.red(hexColor)
                         greenSeekBar.progress = Color.green(hexColor)
                         blueSeekBar.progress = Color.blue(hexColor)

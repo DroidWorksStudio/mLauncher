@@ -3,7 +3,6 @@ package com.github.droidworksstudio.mlauncher.ui.settings
 import android.app.admin.DevicePolicyManager
 import android.content.ComponentName
 import android.content.Context
-import android.graphics.Color.parseColor
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -24,6 +23,7 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.isSpecified
 import androidx.compose.ui.unit.sp
+import androidx.core.graphics.toColorInt
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -541,7 +541,7 @@ class LookFeelFragment : Fragment() {
                 title = stringResource(R.string.background_color),
                 option = hexBackgroundColor,
                 fontSize = titleFontSize,
-                fontColor = Color(parseColor(hexBackgroundColor)),
+                fontColor = Color(hexBackgroundColor.toColorInt()),
                 onClick = {
                     dialogBuilder.showColorPickerDialog(
                         context = requireContext(),
@@ -559,7 +559,7 @@ class LookFeelFragment : Fragment() {
                 title = stringResource(R.string.app_color),
                 option = hexAppColor,
                 fontSize = titleFontSize,
-                fontColor = Color(parseColor(hexAppColor)),
+                fontColor = Color(hexAppColor.toColorInt()),
                 onClick = {
                     dialogBuilder.showColorPickerDialog(
                         context = requireContext(),
@@ -577,7 +577,7 @@ class LookFeelFragment : Fragment() {
                 title = stringResource(R.string.date_color),
                 option = hexDateColor,
                 fontSize = titleFontSize,
-                fontColor = Color(parseColor(hexDateColor)),
+                fontColor = Color(hexDateColor.toColorInt()),
                 onClick = {
                     dialogBuilder.showColorPickerDialog(
                         context = requireContext(),
@@ -595,7 +595,7 @@ class LookFeelFragment : Fragment() {
                 title = stringResource(R.string.clock_color),
                 option = hexClockColor,
                 fontSize = titleFontSize,
-                fontColor = Color(parseColor(hexClockColor)),
+                fontColor = Color(hexClockColor.toColorInt()),
                 onClick = {
                     dialogBuilder.showColorPickerDialog(
                         context = requireContext(),
@@ -613,7 +613,7 @@ class LookFeelFragment : Fragment() {
                 title = stringResource(R.string.alarm_color),
                 option = hexAlarmColor,
                 fontSize = titleFontSize,
-                fontColor = Color(parseColor(hexAlarmColor)),
+                fontColor = Color(hexAlarmColor.toColorInt()),
                 onClick = {
                     dialogBuilder.showColorPickerDialog(
                         context = requireContext(),
@@ -631,7 +631,7 @@ class LookFeelFragment : Fragment() {
                 title = stringResource(R.string.daily_word_color),
                 option = hexDailyWordColor,
                 fontSize = titleFontSize,
-                fontColor = Color(parseColor(hexDailyWordColor)),
+                fontColor = Color(hexDailyWordColor.toColorInt()),
                 onClick = {
                     dialogBuilder.showColorPickerDialog(
                         context = requireContext(),
@@ -649,7 +649,7 @@ class LookFeelFragment : Fragment() {
                 title = stringResource(R.string.battery_color),
                 option = hexBatteryColor,
                 fontSize = titleFontSize,
-                fontColor = Color(parseColor(hexBatteryColor)),
+                fontColor = Color(hexBatteryColor.toColorInt()),
                 onClick = {
                     dialogBuilder.showColorPickerDialog(
                         context = requireContext(),

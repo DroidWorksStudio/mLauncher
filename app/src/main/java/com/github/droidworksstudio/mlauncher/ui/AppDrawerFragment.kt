@@ -7,7 +7,6 @@ package com.github.droidworksstudio.mlauncher.ui
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableString
@@ -21,6 +20,7 @@ import android.view.animation.AnimationUtils
 import android.view.inputmethod.InputMethodManager
 import android.widget.TextView
 import androidx.appcompat.widget.SearchView
+import androidx.core.net.toUri
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -167,16 +167,16 @@ class AppDrawerFragment : Fragment() {
                 if (!searchQuery.isNullOrEmpty()) {
                     when {
                         searchQuery.startsWith("!") -> {
-                            searchQuery = query?.substringAfter("!")
+                            searchQuery = query.substringAfter("!")
                             requireContext().searchCustomSearchEngine(searchQuery, prefs)
                         }
 
                         else -> {
                             // Handle unsupported search engines or invalid queries
-                            if (adapter.itemCount == 0 && requireContext().searchOnPlayStore(query?.trim())
+                            if (adapter.itemCount == 0 && requireContext().searchOnPlayStore(query.trim())
                                     .not()
                             ) {
-                                requireContext().openSearch(query?.trim())
+                                requireContext().openSearch(query.trim())
                             } else {
                                 adapter.launchFirstInList()
                             }
@@ -337,7 +337,7 @@ class AppDrawerFragment : Fragment() {
             else {
                 val appPackage = appModel.activityPackage
                 val intent = Intent(Intent.ACTION_DELETE)
-                intent.data = Uri.parse("package:$appPackage")
+                intent.data = "package:$appPackage".toUri()
                 requireContext().startActivity(intent)
             }
 

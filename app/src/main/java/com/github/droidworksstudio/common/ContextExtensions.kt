@@ -25,6 +25,7 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.biometric.BiometricManager
 import androidx.core.content.ContextCompat
+import androidx.core.net.toUri
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.services.ActionService
@@ -61,7 +62,7 @@ fun Context.openSearch(query: String? = null) {
 fun Context.openUrl(url: String) {
     if (url.isEmpty()) return
     val intent = Intent(Intent.ACTION_VIEW)
-    intent.data = Uri.parse(url)
+    intent.data = url.toUri()
     startActivity(intent)
 }
 
@@ -73,7 +74,7 @@ fun isGestureNavigationEnabled(context: Context): Boolean {
         )
         // 2 corresponds to gesture navigation mode
         navigationMode == 2
-    } catch (e: Settings.SettingNotFoundException) {
+    } catch (_: Settings.SettingNotFoundException) {
         // Handle the case where the setting isn't found, assume not enabled
         false
     }
@@ -161,14 +162,14 @@ fun Context.openDigitalWellbeing() {
 fun Context.searchOnPlayStore(query: String? = null): Boolean {
     return try {
         val playStoreIntent = Intent(Intent.ACTION_VIEW)
-        playStoreIntent.data = Uri.parse("${Constants.APP_GOOGLE_PLAY_STORE}=$query")
+        playStoreIntent.data = "${Constants.APP_GOOGLE_PLAY_STORE}=$query".toUri()
 
         // Check if the Play Store app is installed
         if (playStoreIntent.resolveActivity(packageManager) != null) {
             startActivity(playStoreIntent)
         } else {
             // If Play Store app is not installed, open Play Store website in browser
-            playStoreIntent.data = Uri.parse("${Constants.URL_GOOGLE_PLAY_STORE}=$query")
+            playStoreIntent.data = "${Constants.URL_GOOGLE_PLAY_STORE}=$query".toUri()
             startActivity(playStoreIntent)
         }
         CrashHandler.logUserAction("Play Store Launched")

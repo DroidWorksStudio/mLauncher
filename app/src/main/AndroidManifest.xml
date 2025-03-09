@@ -81,20 +81,9 @@
             android:enabled="true"
             android:exported="true" />
 
-        <receiver
-            android:name="com.github.droidworksstudio.mlauncher.listener.DeviceAdmin"
-            android:exported="false"
-            android:permission="android.permission.BIND_DEVICE_ADMIN">
-            <meta-data
-                android:name="android.app.device_admin"
-                android:resource="@xml/policies" />
-            <intent-filter>
-                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
-            </intent-filter>
-        </receiver>
-
         <service
             android:name="com.github.droidworksstudio.mlauncher.services.ActionService"
+            android:enabled="true"
             android:exported="false"
             android:label="@string/accessibility_service_name"
             android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">

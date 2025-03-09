@@ -35,6 +35,7 @@ import androidx.biometric.BiometricPrompt
 import androidx.core.content.ContextCompat
 import androidx.core.os.bundleOf
 import androidx.core.view.children
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
@@ -940,7 +941,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 listOf(100, 150, 200, 250) // Adjusted margins for 3-button navigation
             }
 
-            val visibleViews = views.filter { it.visibility == View.VISIBLE }
+            val visibleViews = views.filter { it.isVisible }
             val visibleMargins = margins.take(visibleViews.size) // Trim margins list to match visible views
 
             // Reset margins for all views
@@ -999,7 +1000,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                         // Get app icon or fallback drawable
                         val icon: Drawable? = try {
                             packageManager.getApplicationIcon(packageName)
-                        } catch (e: PackageManager.NameNotFoundException) {
+                        } catch (_: PackageManager.NameNotFoundException) {
                             null
                         }
 
@@ -1158,23 +1159,27 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     }
 
                     override fun onAuthenticationFailed() {
-                        showLongToast(
+                        Log.e(
+                            "Authentication",
                             getString(R.string.text_authentication_failed)
                         )
                     }
 
                     override fun onAuthenticationError(errorCode: Int, errorMessage: CharSequence?) {
                         when (errorCode) {
-                            BiometricPrompt.ERROR_USER_CANCELED -> showLongToast(
+                            BiometricPrompt.ERROR_USER_CANCELED -> Log.e(
+                                "Authentication",
                                 getString(R.string.text_authentication_cancel)
                             )
 
-                            else -> showLongToast(
-                                getString(R.string.text_authentication_error).format(
-                                    errorMessage,
-                                    errorCode
+                            else ->
+                                Log.e(
+                                    "Authentication",
+                                    getString(R.string.text_authentication_error).format(
+                                        errorMessage,
+                                        errorCode
+                                    )
                                 )
-                            )
                         }
                     }
                 })

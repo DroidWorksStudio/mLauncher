@@ -15,7 +15,6 @@ import android.graphics.ColorFilter
 import android.graphics.PorterDuff
 import android.graphics.PorterDuffColorFilter
 import android.graphics.Typeface
-import android.net.Uri
 import android.os.Build
 import android.os.Process
 import android.os.UserHandle
@@ -31,6 +30,7 @@ import android.view.WindowInsets
 import android.view.WindowManager
 import androidx.annotation.RequiresApi
 import androidx.appcompat.content.res.AppCompatResources
+import androidx.core.net.toUri
 import com.github.droidworksstudio.common.openAccessibilitySettings
 import com.github.droidworksstudio.common.showLongToast
 import com.github.droidworksstudio.mlauncher.BuildConfig
@@ -287,13 +287,13 @@ fun setDefaultHomeScreen(context: Context, checkDefault: Boolean = false) {
 }
 
 fun helpFeedbackButton(context: Context) {
-    val uri = Uri.parse("https://github.com/DroidWorksStudio/mLauncher")
+    val uri = "https://github.com/DroidWorksStudio/mLauncher".toUri()
     val intent = Intent(Intent.ACTION_VIEW, uri)
     context.startActivity(intent)
 }
 
 fun communitySupportButton(context: Context) {
-    val uri = Uri.parse("https://discord.gg/qG6hFuAzfu")
+    val uri = "https://discord.gg/qG6hFuAzfu".toUri()
     val intent = Intent(Intent.ACTION_VIEW, uri)
     context.startActivity(intent)
 }

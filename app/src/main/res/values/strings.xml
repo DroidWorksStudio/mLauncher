@@ -188,8 +188,6 @@
     <string name="favorite_apps">Favorite Apps</string>
 
     <!-- Accessibility/Help Strings -->
-    <string name="double_tap_lock_is_enabled_message">If double tap lock disables fingerprint or face unlock, open mLauncher settings, tap on \'experimental\' and follow the instructions. Thank you.</string>
-    <string name="double_tap_lock_uninstall_message">Double tap to lock enabled. \n\nNote: Turn this OFF first if you decide to delete mLauncher.</string>
     <string name="accessibility_service_name">mLauncher Actions Service</string>
     <string name="accessibility_service_description">This accessibility service allows mLauncher to do certain actions such as locking the screen or opening the quick settings. Our accessibility service does not collect or share any data.</string>
     <string name="can_not_delete_system_apps">Can\'t Delete System Apps</string>
@@ -232,6 +230,7 @@
     <string name="okay">Okay</string>
     <string name="reset">Reset</string>
     <string name="cancel">Cancel</string>
+    <string name="enabled">Enabled</string>
     <string name="disabled">Disabled</string>
     <string name="open">Open</string>
     <string name="close">Close</string>

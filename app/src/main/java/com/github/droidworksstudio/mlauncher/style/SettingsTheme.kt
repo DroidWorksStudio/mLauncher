@@ -1,14 +1,11 @@
 package com.github.droidworksstudio.mlauncher.style
 
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.shape.ZeroCornerSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -23,11 +20,6 @@ data class ReplacementTypography(
     val item: TextStyle,
     val button: TextStyle,
     val buttonDisabled: TextStyle,
-)
-
-@Immutable
-data class ReplacementShapes(
-    val settings: Shape,
 )
 
 @Immutable
@@ -46,11 +38,6 @@ val LocalReplacementTypography = staticCompositionLocalOf {
         item = TextStyle.Default,
         button = TextStyle.Default,
         buttonDisabled = TextStyle.Default,
-    )
-}
-val LocalReplacementShapes = staticCompositionLocalOf {
-    ReplacementShapes(
-        settings = RoundedCornerShape(ZeroCornerSize)
     )
 }
 val LocalReplacementColor = staticCompositionLocalOf {
@@ -99,9 +86,6 @@ fun SettingsTheme(
             color = textGray,
         ),
     )
-    val replacementShapes = ReplacementShapes(
-        settings = RoundedCornerShape(CORNER_RADIUS),
-    )
     val replacementColor = ReplacementColor(
         settings = colorResource(if (isDark) R.color.blackTrans50 else R.color.blackInverseTrans50),
         image = if (isDark) Color.LightGray else Color.DarkGray,
@@ -110,7 +94,6 @@ fun SettingsTheme(
     )
     CompositionLocalProvider(
         LocalReplacementTypography provides replacementTypography,
-        LocalReplacementShapes provides replacementShapes,
         LocalReplacementColor provides replacementColor,
     ) {
         MaterialTheme(
@@ -119,15 +102,10 @@ fun SettingsTheme(
     }
 }
 
-// Use with eg. ReplacementTheme.typography.body
 object SettingsTheme {
     val typography: ReplacementTypography
         @Composable
         get() = LocalReplacementTypography.current
-
-    val shapes: ReplacementShapes
-        @Composable
-        get() = LocalReplacementShapes.current
 
     val color: ReplacementColor
         @Composable

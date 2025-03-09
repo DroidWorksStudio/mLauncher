@@ -6,6 +6,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
+import androidx.core.net.toUri
 
 class SimpleEmailSender {
 
@@ -67,7 +68,7 @@ class SimpleEmailSender {
         intent.selector = buildResolveIntent()
         try {
             context.startActivity(intent)
-        } catch (e: ActivityNotFoundException) {
+        } catch (_: ActivityNotFoundException) {
             resolveAndSend(subject, body, attachments, context, emailRecipient)
         }
     }
@@ -94,14 +95,14 @@ class SimpleEmailSender {
 
     private fun buildResolveIntent(): Intent {
         val intent = Intent(Intent.ACTION_SENDTO)
-        intent.data = Uri.parse("mailto:")
+        intent.data = "mailto:".toUri()
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
         return intent
     }
 
     private fun buildFallbackIntent(subject: String, body: String, emailRecipient: String): Intent {
         val intent = Intent(Intent.ACTION_SENDTO)
-        intent.data = Uri.parse("mailto:${emailRecipient}?subject=${Uri.encode(subject)}&body=${Uri.encode(body)}")
+        intent.data = "mailto:${emailRecipient}?subject=${Uri.encode(subject)}&body=${Uri.encode(body)}".toUri()
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
         intent.putExtra(Intent.EXTRA_SUBJECT, subject)
         intent.putExtra(Intent.EXTRA_TEXT, body)

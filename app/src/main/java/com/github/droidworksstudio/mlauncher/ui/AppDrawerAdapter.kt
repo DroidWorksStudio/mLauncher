@@ -72,7 +72,7 @@ class AppDrawerAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        if (appFilteredList.size == 0) return
+        if (appFilteredList.isEmpty()) return
         val appModel = appFilteredList[holder.absoluteAdapterPosition]
         holder.bind(flag, gravity, appModel, appClickListener, appInfoListener, appDeleteListener)
 
@@ -127,7 +127,7 @@ class AppDrawerAdapter(
     private fun createAppFilter(): Filter {
         return object : Filter() {
             override fun performFiltering(charSearch: CharSequence?): FilterResults {
-                isBangSearch = charSearch?.startsWith("!") ?: false
+                isBangSearch = charSearch?.startsWith("!") == true
                 prefs = Prefs(context)
 
                 val searchChars = charSearch.toString()
@@ -207,7 +207,7 @@ class AppDrawerAdapter(
     }
 
     fun launchFirstInList() {
-        if (appFilteredList.size > 0)
+        if (appFilteredList.isNotEmpty())
             appClickListener(appFilteredList[0])
     }
 

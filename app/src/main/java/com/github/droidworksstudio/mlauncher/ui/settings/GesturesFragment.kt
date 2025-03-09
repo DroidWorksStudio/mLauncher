@@ -96,7 +96,7 @@ class GesturesFragment : Fragment() {
         var selectedLongSwipeLeftAction by remember { mutableStateOf(prefs.longSwipeLeftAction) }
         var selectedLongSwipeRightAction by remember { mutableStateOf(prefs.longSwipeRightAction) }
 
-        val actions = Constants.Action.entries
+        val actions = Action.entries
 
         // Filter out 'TogglePrivateSpace' if private space is not supported
         val filteredActions = if (!PrivateSpaceManager(requireContext()).isPrivateSpaceSupported()) {

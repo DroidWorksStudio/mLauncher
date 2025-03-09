@@ -8,13 +8,12 @@ import android.content.res.Configuration
 import android.os.Build
 import android.os.Bundle
 import android.view.KeyEvent
-import android.view.View
 import android.view.WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
-import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import com.github.droidworksstudio.common.CrashHandler
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Migration
@@ -51,7 +50,7 @@ class MainActivity : AppCompatActivity() {
             KeyEvent.KEYCODE_MENU -> {
                 when (navController.currentDestination?.id) {
                     R.id.mainFragment -> {
-                        Navigation.findNavController(this, R.id.nav_host_fragment)
+                        this.findNavController(R.id.nav_host_fragment)
                             .navigate(R.id.action_mainFragment_to_appListFragment)
                         true
                     }
@@ -73,7 +72,7 @@ class MainActivity : AppCompatActivity() {
                     R.id.mainFragment -> {
                         val bundle = Bundle()
                         bundle.putInt("letterKeyCode", keyCode) // Pass the letter key code
-                        Navigation.findNavController(this, R.id.nav_host_fragment)
+                        this.findNavController(R.id.nav_host_fragment)
                             .navigate(R.id.action_mainFragment_to_appListFragment, bundle)
                         true
                     }
@@ -115,15 +114,13 @@ class MainActivity : AppCompatActivity() {
         setLanguage()
         migration.migratePreferencesOnVersionUpdate(prefs)
 
-        navController = Navigation.findNavController(this, R.id.nav_host_fragment)
+        navController = this.findNavController(R.id.nav_host_fragment)
         viewModel = ViewModelProvider(this)[MainViewModel::class.java]
         if (prefs.firstOpen) {
             viewModel.firstOpen(true)
             prefs.firstOpen = false
         }
 
-        initClickListeners()
-        initObservers(viewModel)
         viewModel.getAppList(includeHiddenApps = true)
         setupOrientation()
 
@@ -139,13 +136,6 @@ class MainActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         when (requestCode) {
-            Constants.REQUEST_CODE_ENABLE_ADMIN -> {
-                if (Build.VERSION.SDK_INT > Build.VERSION_CODES.P)
-                    showMessage(getString(R.string.double_tap_lock_is_enabled_message))
-                else
-                    showMessage(getString(R.string.double_tap_lock_uninstall_message))
-            }
-
             Constants.BACKUP_READ -> {
                 data?.data?.also { uri ->
                     applicationContext.contentResolver.openInputStream(uri).use { inputStream ->
@@ -271,7 +261,6 @@ class MainActivity : AppCompatActivity() {
         prefs.wordList = wordList
     }
 
-
     override fun onStop() {
         backToHomeScreen()
         super.onStop()
@@ -301,19 +290,6 @@ class MainActivity : AppCompatActivity() {
         resources.updateConfiguration(config, resources.displayMetrics)
     }
 
-    private fun initClickListeners() {
-        binding.okay.setOnClickListener {
-            binding.messageLayout.visibility = View.GONE
-            viewModel.showMessageDialog("")
-        }
-    }
-
-    private fun initObservers(viewModel: MainViewModel) {
-        viewModel.showMessageDialog.observe(this) {
-            showMessage(it)
-        }
-    }
-
     @SuppressLint("SourceLockedOrientationActivity")
     private fun setupOrientation() {
         if (isTablet(this)) return
@@ -327,11 +303,5 @@ class MainActivity : AppCompatActivity() {
         // pop all the fragments except main
         if (navController.currentDestination?.id != R.id.mainFragment)
             navController.popBackStack(R.id.mainFragment, false)
-    }
-
-    private fun showMessage(message: String) {
-        if (message.isEmpty()) return
-        binding.messageTextView.text = message
-        binding.messageLayout.visibility = View.VISIBLE
     }
 }
