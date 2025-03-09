@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Bug Fixes:
 
+- Resolve all KTX extension function warnings - ([b5809cd](https://github.com/DroidWorksStudio/mLauncher/commit/b5809cd56a3b4fdcccaf89fce24d069a5c2d3633))
 - Fixed some view models that had stopped working with a previous update. - ([38b8011](https://github.com/DroidWorksStudio/mLauncher/commit/38b8011603b6dc6f9792ec8692d52f26eb95a752))
 - Pop back after app selection. - ([0729091](https://github.com/DroidWorksStudio/mLauncher/commit/07290914c7efc9a46c4a4c546ab2f9a4ff2e775e))
 
