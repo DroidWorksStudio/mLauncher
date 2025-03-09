@@ -54,6 +54,7 @@ body:
     attributes:
       label: How did you download the software?
       options:
+        - Google Play
         - F-Droid
         - Github (Release)
         - Github (Action)
