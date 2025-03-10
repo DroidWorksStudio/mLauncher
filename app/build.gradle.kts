@@ -89,6 +89,7 @@ android {
 
     packaging {
         // Keep debug symbols for specific native libraries
+        // found in /app/build/intermediates/merged_native_libs/release/mergeReleaseNativeLibs/out/lib
         jniLibs {
             keepDebugSymbols.add("libandroidx.graphics.path.so") // Ensure debug symbols are kept
         }
