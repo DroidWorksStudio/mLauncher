@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/scrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,27 +10,20 @@
     android:overScrollMode="never"
     android:scrollbars="none">
 
-    <ScrollView
+    <LinearLayout
+        android:id="@+id/scrollLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:ignore="UselessParent">
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+        android:paddingBottom="10dp">
 
-        <LinearLayout
-            android:id="@+id/scrollLayout"
+        <androidx.compose.ui.platform.ComposeView
+            android:id="@+id/settingsView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="20dp"
-            android:paddingBottom="10dp"
-            android:clipChildren="false"
-            android:clipToPadding="false"
-            android:orientation="vertical">
+            android:layout_height="match_parent" />
 
-            <androidx.compose.ui.platform.ComposeView
-                android:id="@+id/settingsView"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-
-        </LinearLayout>
-    </ScrollView>
-
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>
