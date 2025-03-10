@@ -22,6 +22,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Removed junk Constants - ([9d7bd2a](https://github.com/DroidWorksStudio/mLauncher/commit/9d7bd2af3afae546b38362cdb3b61234123c154b))
 - Cleaned up crash report subject. - ([433feda](https://github.com/DroidWorksStudio/mLauncher/commit/433feda0e0a67261e29242c0445e9b89f51b138e))
 - Cleaned up class and function locations - ([bbeaeb5](https://github.com/DroidWorksStudio/mLauncher/commit/bbeaeb5464951495834d0d3e15ef758e6fcbf451))
 
