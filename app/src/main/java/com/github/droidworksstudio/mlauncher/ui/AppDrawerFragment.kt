@@ -67,6 +67,10 @@ class AppDrawerFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        if (prefs.firstSettingsOpen) {
+            prefs.firstSettingsOpen = false
+        }
+
         // Retrieve the letter key code from arguments
         val letterKeyCode = arguments?.getInt("letterKeyCode", -1)
         if (letterKeyCode != null && letterKeyCode != -1) {

@@ -20,6 +20,7 @@ import com.github.droidworksstudio.mlauncher.data.Migration
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.ActivityMainBinding
 import com.github.droidworksstudio.mlauncher.helper.isTablet
+import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
 import com.github.droidworksstudio.mlauncher.helper.utils.AppReloader
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
@@ -136,6 +137,17 @@ class MainActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         when (requestCode) {
+
+            Constants.REQUEST_SET_DEFAULT_HOME -> {
+                val isDefault = ismlauncherDefault(this) // Check again if the app is now default
+
+                if (isDefault) {
+                    viewModel.setDefaultLauncher(false)
+                } else {
+                    viewModel.setDefaultLauncher(true)
+                }
+            }
+
             Constants.BACKUP_READ -> {
                 data?.data?.also { uri ->
                     applicationContext.contentResolver.openInputStream(uri).use { inputStream ->

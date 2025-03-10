@@ -39,7 +39,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     val appList = MutableLiveData<List<AppListItem>?>()
     val hiddenApps = MutableLiveData<List<AppListItem>?>()
     val homeAppsOrder = MutableLiveData<List<AppListItem>>()  // Store actual app items
-    private val launcherDefault = MutableLiveData<Boolean>()
+    val launcherDefault = MutableLiveData<Boolean>()
 
     val showDate = MutableLiveData(prefs.showDate)
     val showClock = MutableLiveData(prefs.showClock)
@@ -109,6 +109,10 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     fun setShowFloating(visibility: Boolean) {
         showFloating.value = visibility
+    }
+
+    fun setDefaultLauncher(visibility: Boolean) {
+        launcherDefault.value = visibility
     }
 
     fun launchApp(appListItem: AppListItem, fragment: Fragment) {
@@ -202,7 +206,8 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     fun ismlauncherDefault() {
-        launcherDefault.value = ismlauncherDefault(appContext)
+        val isDefault = ismlauncherDefault(appContext)
+        launcherDefault.value = !isDefault
     }
 
     fun resetDefaultLauncherApp(context: Context) {

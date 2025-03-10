@@ -119,6 +119,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             ViewModelProvider(this)[MainViewModel::class.java]
         } ?: throw Exception("Invalid Activity")
 
+        viewModel.ismlauncherDefault()
+
         deviceManager =
             context?.getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
         @Suppress("DEPRECATION")
@@ -306,14 +308,11 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
     private fun initObservers() {
         binding.apply {
-            if (prefs.firstSettingsOpen) {
-                firstRunTips.visibility = View.VISIBLE
-                setDefaultLauncher.visibility = View.GONE
-            } else firstRunTips.visibility = View.GONE
+            if (prefs.firstSettingsOpen) firstRunTips.visibility = View.VISIBLE
+            else firstRunTips.visibility = View.GONE
 
-            if (!ismlauncherDefault(requireContext())) {
-                setDefaultLauncher.visibility = View.VISIBLE
-            }
+            if (!ismlauncherDefault(requireContext())) setDefaultLauncher.visibility = View.VISIBLE
+            else setDefaultLauncher.visibility = View.GONE
         }
 
         with(viewModel) {
@@ -381,9 +380,11 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             showDailyWord.observe(viewLifecycleOwner) {
                 binding.dailyWord.visibility = if (it) View.VISIBLE else View.GONE
             }
-
             showFloating.observe(viewLifecycleOwner) {
                 binding.floatingActionButton.visibility = if (it) View.VISIBLE else View.GONE
+            }
+            launcherDefault.observe(viewLifecycleOwner) {
+                binding.setDefaultLauncher.visibility = if (it) View.VISIBLE else View.GONE
             }
         }
     }
@@ -936,9 +937,9 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
             // Set margins based on navigation mode
             val margins = if (isGestureNav) {
-                listOf(50, 100, 150, 200) // Adjusted margins for gesture navigation
+                listOf(100, 150, 200, 250) // Adjusted margins for gesture navigation
             } else {
-                listOf(100, 150, 200, 250) // Adjusted margins for 3-button navigation
+                listOf(150, 200, 250, 300) // Adjusted margins for 3-button navigation
             }
 
             val visibleViews = views.filter { it.isVisible }

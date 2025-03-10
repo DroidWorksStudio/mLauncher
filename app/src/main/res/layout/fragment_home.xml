@@ -76,6 +76,34 @@
                     android:visibility="gone" />
             </LinearLayout>
         </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!-- First run tips -->
+        <LinearLayout
+            android:id="@+id/firstRunTips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="106dp"
+            android:layout_marginEnd="4dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <TextView
+                style="@style/TextSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/swipe_up_for_apps" />
+
+            <TextView
+                style="@style/TextSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/long_press_for_settings" />
+
+        </LinearLayout>
     </androidx.appcompat.widget.LinearLayoutCompat>
 
 
@@ -122,34 +150,6 @@
         android:layout_marginEnd="24dp"
         android:text="@string/advanced_settings_set_as_default_launcher"
         android:visibility="gone" />
-
-    <!-- First run tips -->
-    <LinearLayout
-        android:id="@+id/firstRunTips"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:layout_marginStart="4dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginBottom="106dp"
-        android:gravity="center_horizontal"
-        android:orientation="vertical"
-        android:visibility="gone"
-        tools:visibility="visible">
-
-        <TextView
-            style="@style/TextSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/swipe_up_for_apps" />
-
-        <TextView
-            style="@style/TextSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/long_press_for_settings" />
-
-    </LinearLayout>
 
     <ImageView
         android:id="@+id/floatingActionButton"
