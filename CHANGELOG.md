@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Bug Fixes:
 
+- More sane defaults. - ([d85be07](https://github.com/DroidWorksStudio/mLauncher/commit/d85be07a3fe1643a2f2f1d4471be7142b242f37c))
 - Corrected missing spaces in some string names in settings - ([833272f](https://github.com/DroidWorksStudio/mLauncher/commit/833272fe2f1d8bb56a6d51bb51c885d3796b3c2e))
 - Resolve all KTX extension function warnings - ([b5809cd](https://github.com/DroidWorksStudio/mLauncher/commit/b5809cd56a3b4fdcccaf89fce24d069a5c2d3633))
 - Fixed some view models that had stopped working with a previous update. - ([38b8011](https://github.com/DroidWorksStudio/mLauncher/commit/38b8011603b6dc6f9792ec8692d52f26eb95a752))
