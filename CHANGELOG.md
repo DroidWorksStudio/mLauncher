@@ -10,6 +10,9 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Bug Fixes:
 
+- Updated alarm formatting to use correct timezone and pattern - ([77bfc81](https://github.com/DroidWorksStudio/mLauncher/commit/77bfc814afe6c825f8ed5a1a557002ac6dd4ca23))
+- More sane defaults. - ([d85be07](https://github.com/DroidWorksStudio/mLauncher/commit/d85be07a3fe1643a2f2f1d4471be7142b242f37c))
+- Corrected missing spaces in some string names in settings - ([833272f](https://github.com/DroidWorksStudio/mLauncher/commit/833272fe2f1d8bb56a6d51bb51c885d3796b3c2e))
 - Resolve all KTX extension function warnings - ([b5809cd](https://github.com/DroidWorksStudio/mLauncher/commit/b5809cd56a3b4fdcccaf89fce24d069a5c2d3633))
 - Fixed some view models that had stopped working with a previous update. - ([38b8011](https://github.com/DroidWorksStudio/mLauncher/commit/38b8011603b6dc6f9792ec8692d52f26eb95a752))
 - Pop back after app selection. - ([0729091](https://github.com/DroidWorksStudio/mLauncher/commit/07290914c7efc9a46c4a4c546ab2f9a4ff2e775e))
@@ -21,6 +24,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Removed junk Constants - ([9d7bd2a](https://github.com/DroidWorksStudio/mLauncher/commit/9d7bd2af3afae546b38362cdb3b61234123c154b))
 - Cleaned up crash report subject. - ([433feda](https://github.com/DroidWorksStudio/mLauncher/commit/433feda0e0a67261e29242c0445e9b89f51b138e))
 - Cleaned up class and function locations - ([bbeaeb5](https://github.com/DroidWorksStudio/mLauncher/commit/bbeaeb5464951495834d0d3e15ef758e6fcbf451))
 

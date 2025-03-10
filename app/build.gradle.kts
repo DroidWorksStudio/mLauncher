@@ -15,8 +15,8 @@ android {
         applicationId = "app.mlauncher"
         minSdk = 26
         targetSdk = 35
-        versionCode = 10807
-        versionName = "1.8.7"
+        versionCode = 10808
+        versionName = "1.8.8"
     }
 
     buildTypes {
@@ -89,6 +89,7 @@ android {
 
     packaging {
         // Keep debug symbols for specific native libraries
+        // found in /app/build/intermediates/merged_native_libs/release/mergeReleaseNativeLibs/out/lib
         jniLibs {
             keepDebugSymbols.add("libandroidx.graphics.path.so") // Ensure debug symbols are kept
         }

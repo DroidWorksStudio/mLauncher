@@ -26,10 +26,10 @@
     <!-- Search Stings -->
     <string name="search_google" translatable="false">Google</string>
     <string name="search_yahoo" translatable="false">Yahoo</string>
-    <string name="search_duckduckgo" translatable="false">DuckDuckGo</string>
+    <string name="search_duckduckgo" translatable="false">Duck Duck Go</string>
     <string name="search_bing" translatable="false">Bing</string>
     <string name="search_brave" translatable="false">Brave</string>
-    <string name="search_swisscow" translatable="false">SwissCows</string>
+    <string name="search_swisscow" translatable="false">Swiss Cows</string>
 
     <!-- IconPacks Stings -->
     <string name="app_icons_easy_dots" translatable="false">Easy Dots</string>

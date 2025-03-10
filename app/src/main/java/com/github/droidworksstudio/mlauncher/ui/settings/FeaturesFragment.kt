@@ -177,20 +177,34 @@ class FeaturesFragment : Fragment() {
                 option = selectedFontFamily.string(),
                 fontSize = titleFontSize,
                 onClick = {
+                    val fontFamilyEntries = Constants.FontFamily.entries
+
+                    val fontFamilyOptions = fontFamilyEntries.map {
+                        it.getString(requireContext())
+                    }
+
+                    val fontFamilyFonts = fontFamilyEntries.map {
+                        it.getFont(requireContext()) ?: getTrueSystemFont()
+                    }
                     dialogBuilder.showSingleChoiceDialog(
                         context = requireContext(),
-                        options = Constants.FontFamily.entries.toTypedArray(),
-                        fonts = Constants.FontFamily.entries.toTypedArray()
-                            .map { it.getFont(requireContext()) ?: getTrueSystemFont() },
+                        options = fontFamilyOptions.map { it.toString() }.toTypedArray(), // Display font names as strings
+                        fonts = fontFamilyFonts, // Actual font values (Typeface) for display
                         titleResId = R.string.font_family,
-                        onItemSelected = { newFontFamily ->
-                            selectedFontFamily = newFontFamily // Update state
-                            prefs.fontFamily = newFontFamily // Persist selection in preferences
-                            AppReloader.restartApp(requireContext())
+                        onItemSelected = { newFontFamilyName ->
+                            // Find the index of the selected font based on its name
+                            val newFontFamilyIndex = fontFamilyOptions.indexOfFirst { it.toString() == newFontFamilyName }
+                            if (newFontFamilyIndex != -1) {
+                                val newFontFamily = fontFamilyEntries[newFontFamilyIndex] // Get the selected FontFamily enum
+                                selectedFontFamily = newFontFamily // Update state
+                                prefs.fontFamily = newFontFamily // Persist selection in preferences
+                                AppReloader.restartApp(requireContext())
+                            }
                         }
                     )
                 }
             )
+
 
             SettingsSelect(
                 title = stringResource(R.string.settings_text_size),
@@ -247,14 +261,23 @@ class FeaturesFragment : Fragment() {
                 option = selectedSearchEngine.string(),
                 fontSize = titleFontSize,
                 onClick = {
+                    val searchEnginesEntries = Constants.SearchEngines.entries
+
+                    val searchEnginesOptions = searchEnginesEntries.map {
+                        it.getString(requireContext())
+                    }
+
                     dialogBuilder.showSingleChoiceDialog(
                         context = requireContext(),
-                        options = Constants.SearchEngines.entries.toTypedArray(),
+                        options = searchEnginesOptions.map { it.toString() }.toTypedArray(),
                         titleResId = R.string.search_engine,
-                        onItemSelected = { newSearchEngine ->
-                            selectedSearchEngine = newSearchEngine // Update state
-                            prefs.searchEngines = newSearchEngine // Persist selection in preferences
-                            requireActivity().recreate()
+                        onItemSelected = { newSearchEngineName ->
+                            val newFontFamilyIndex = searchEnginesOptions.indexOfFirst { it.toString() == newSearchEngineName }
+                            if (newFontFamilyIndex != -1) {
+                                val newSearchEngine = searchEnginesEntries[newFontFamilyIndex] // Get the selected FontFamily enum
+                                selectedSearchEngine = newSearchEngine // Update state
+                                prefs.searchEngines = newSearchEngine // Persist selection in preferences
+                            }
                         }
                     )
                 }

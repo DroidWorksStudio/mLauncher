@@ -18,7 +18,6 @@ interface EnumOption {
 
 object Constants {
 
-    const val REQUEST_CODE_ENABLE_ADMIN = 666
     const val REQUEST_SET_DEFAULT_HOME = 777
 
     const val TRIPLE_TAP_DELAY_MS = 300
@@ -363,6 +362,17 @@ object Constants {
         Brave,
         SwissCow;
 
+        fun getString(context: Context): String {
+            return when (this) {
+                Google -> context.getString(R.string.search_google)
+                Yahoo -> context.getString(R.string.search_yahoo)
+                DuckDuckGo -> context.getString(R.string.search_duckduckgo)
+                Bing -> context.getString(R.string.search_bing)
+                Brave -> context.getString(R.string.search_brave)
+                SwissCow -> context.getString(R.string.search_swisscow)
+            }
+        }
+
         @Composable
         override fun string(): String {
             return when (this) {
@@ -446,6 +456,31 @@ object Constants {
                 Raleway -> ResourcesCompat.getFont(context, R.font.raleway)
                 Roboto -> ResourcesCompat.getFont(context, R.font.roboto)
                 SourceCodePro -> ResourcesCompat.getFont(context, R.font.source_code_pro)
+            }
+        }
+
+        fun getString(context: Context): String {
+            return when (this) {
+                System -> context.getString(R.string.system_default)
+                BankGothic -> context.getString(R.string.settings_font_bank_gothic)
+                Bitter -> context.getString(R.string.settings_font_bitter)
+                Doto -> context.getString(R.string.settings_font_doto)
+                DroidSans -> context.getString(R.string.settings_font_droidsans)
+                FiraCode -> context.getString(R.string.settings_font_firacode)
+                GreatVibes -> context.getString(R.string.settings_font_greatvibes)
+                Hack -> context.getString(R.string.settings_font_hack)
+                Lato -> context.getString(R.string.settings_font_lato)
+                Lobster -> context.getString(R.string.settings_font_lobster)
+                Merriweather -> context.getString(R.string.settings_font_merriweather)
+                MiSans -> context.getString(R.string.settings_font_misans)
+                Montserrat -> context.getString(R.string.settings_font_montserrat)
+                NotoSans -> context.getString(R.string.settings_font_notosans)
+                OpenSans -> context.getString(R.string.settings_font_opensans)
+                Pacifico -> context.getString(R.string.settings_font_pacifico)
+                Quicksand -> context.getString(R.string.settings_font_quicksand)
+                Raleway -> context.getString(R.string.settings_font_raleway)
+                Roboto -> context.getString(R.string.settings_font_roboto)
+                SourceCodePro -> context.getString(R.string.settings_font_sourcecodepro)
             }
         }
 
