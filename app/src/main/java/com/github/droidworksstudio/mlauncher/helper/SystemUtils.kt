@@ -21,6 +21,7 @@ import android.os.UserHandle
 import android.os.UserManager
 import android.provider.Settings
 import android.text.SpannableStringBuilder
+import android.text.format.DateFormat
 import android.text.style.ImageSpan
 import android.util.DisplayMetrics
 import android.util.Log
@@ -213,10 +214,21 @@ fun getUserHandleFromString(context: Context, userHandleString: String): UserHan
 @RequiresApi(Build.VERSION_CODES.Q)
 fun getNextAlarm(context: Context, prefs: Prefs): CharSequence {
     val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
+    val is24HourFormat = DateFormat.is24HourFormat(context)
     val nextAlarmClock = alarmManager.nextAlarmClock ?: return "No alarm is set."
 
     val alarmTime = nextAlarmClock.triggerTime
-    val formattedTime = SimpleDateFormat("EEE, MMM d hh:mm a", Locale.getDefault()).format(alarmTime)
+    val timezone = prefs.appLanguage.timezone()  // Assuming this returns a string like "America/New_York"
+    val formattedDate = DateFormat.getBestDateTimePattern(timezone, "eeeddMMM")
+    val best12 = DateFormat.getBestDateTimePattern(
+        timezone,
+        if (prefs.showClockFormat) "hhmma" else "hhmm"
+    ).let {
+        if (!prefs.showClockFormat) it.removeSuffix(" a") else it
+    }
+    val best24 = DateFormat.getBestDateTimePattern(timezone, "HHmm")
+    val formattedTime = if (is24HourFormat) best24 else best12
+    val formattedAlarm = SimpleDateFormat("$formattedDate $formattedTime", Locale.getDefault()).format(alarmTime)
 
     val drawable = AppCompatResources.getDrawable(context, R.drawable.ic_alarm_clock)
     val fontSize = TypedValue.applyDimension(
@@ -239,7 +251,7 @@ fun getNextAlarm(context: Context, prefs: Prefs): CharSequence {
                 SpannableStringBuilder.SPAN_EXCLUSIVE_EXCLUSIVE
             )
         }
-        append(" $formattedTime")
+        append(" $formattedAlarm")
     }
 }
 

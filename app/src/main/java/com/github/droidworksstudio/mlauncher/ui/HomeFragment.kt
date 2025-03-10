@@ -158,13 +158,13 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
         val timezone = prefs.appLanguage.timezone()
         val is24HourFormat = DateFormat.is24HourFormat(requireContext())
-        val best12 = DateFormat.getBestDateTimePattern(
-            timezone,
-            if (prefs.showClockFormat) "hhmma" else "hhmm"
-        ).let {
-            if (!prefs.showClockFormat) it.removeSuffix(" a") else it
-        }
         binding.apply {
+            val best12 = DateFormat.getBestDateTimePattern(
+                timezone,
+                if (prefs.showClockFormat) "hhmma" else "hhmm"
+            ).let {
+                if (!prefs.showClockFormat) it.removeSuffix(" a") else it
+            }
             val best24 = DateFormat.getBestDateTimePattern(timezone, "HHmm")
             val timePattern = if (is24HourFormat) best24 else best12
             clock.format12Hour = timePattern
