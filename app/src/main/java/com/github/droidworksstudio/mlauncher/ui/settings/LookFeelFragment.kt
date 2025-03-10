@@ -365,14 +365,24 @@ class LookFeelFragment : Fragment() {
                 option = selectedAppIcons.string(),
                 fontSize = titleFontSize,
                 onClick = {
+                    val iconPacksEntries = Constants.IconPacks.entries
+
+                    val iconPacksOptions = iconPacksEntries.map {
+                        it.getString(requireContext())
+                    }
+
                     dialogBuilder.showSingleChoiceDialog(
                         context = requireContext(),
-                        options = Constants.IconPacks.entries.toTypedArray(),
+                        options = iconPacksOptions.map { it.toString() }.toTypedArray(),
                         titleResId = R.string.select_app_icons,
-                        onItemSelected = { newAppIcons ->
-                            selectedAppIcons = newAppIcons // Update state
-                            prefs.iconPack = newAppIcons // Persist selection in preferences
-                            viewModel.iconPack.value = newAppIcons
+                        onItemSelected = { newAppIconsName ->
+                            val newIconPacksIndex = iconPacksOptions.indexOfFirst { it.toString() == newAppIconsName }
+                            if (newIconPacksIndex != -1) {
+                                val newAppIcons = iconPacksEntries[newIconPacksIndex] // Get the selected FontFamily enum
+                                selectedAppIcons = newAppIcons // Update state
+                                prefs.iconPack = newAppIcons // Persist selection in preferences
+                                viewModel.iconPack.value = newAppIcons
+                            }
                         }
                     )
                 }
