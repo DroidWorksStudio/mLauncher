@@ -308,11 +308,11 @@ class Prefs(val context: Context) {
         set(value) = prefs.edit { putString(HOME_ALIGNMENT, value.toString()) }
 
     var homeAlignmentBottom: Boolean
-        get() = prefs.getBoolean(HOME_ALIGNMENT_BOTTOM, false)
+        get() = prefs.getBoolean(HOME_ALIGNMENT_BOTTOM, true)
         set(value) = prefs.edit { putBoolean(HOME_ALIGNMENT_BOTTOM, value) }
 
     var extendHomeAppsArea: Boolean
-        get() = prefs.getBoolean(HOME_CLICK_AREA, false)
+        get() = prefs.getBoolean(HOME_CLICK_AREA, true)
         set(value) = prefs.edit { putBoolean(HOME_CLICK_AREA, value) }
 
     var clockAlignment: Gravity
@@ -366,7 +366,7 @@ class Prefs(val context: Context) {
         set(value) = prefs.edit { putString(DRAWER_ALIGNMENT, value.name) }
 
     var showStatusBar: Boolean
-        get() = prefs.getBoolean(STATUS_BAR, false)
+        get() = prefs.getBoolean(STATUS_BAR, true)
         set(value) = prefs.edit { putBoolean(STATUS_BAR, value) }
 
     var showDate: Boolean
