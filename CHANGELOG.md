@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Bug Fixes:
 
+- Removed UselessParent - ([c8662be](https://github.com/DroidWorksStudio/mLauncher/commit/c8662be2cfe7c3859da1d398d6858b8f6c4e5f94))
 - Updated alarm formatting to use correct timezone and pattern - ([77bfc81](https://github.com/DroidWorksStudio/mLauncher/commit/77bfc814afe6c825f8ed5a1a557002ac6dd4ca23))
 - More sane defaults. - ([d85be07](https://github.com/DroidWorksStudio/mLauncher/commit/d85be07a3fe1643a2f2f1d4471be7142b242f37c))
 - Corrected missing spaces in some string names in settings - ([833272f](https://github.com/DroidWorksStudio/mLauncher/commit/833272fe2f1d8bb56a6d51bb51c885d3796b3c2e))
