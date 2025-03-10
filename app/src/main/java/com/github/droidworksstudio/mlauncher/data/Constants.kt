@@ -18,7 +18,6 @@ interface EnumOption {
 
 object Constants {
 
-    const val REQUEST_CODE_ENABLE_ADMIN = 666
     const val REQUEST_SET_DEFAULT_HOME = 777
 
     const val TRIPLE_TAP_DELAY_MS = 300
