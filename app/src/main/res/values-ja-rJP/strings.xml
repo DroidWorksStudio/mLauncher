@@ -123,8 +123,8 @@
     <string name="advanced_settings_backup_restore_clear">すべてのデータを消去</string>
     <string name="advanced_settings_theme_title">テーマ作成</string>
     <string name="advanced_settings_theme_description">自分に合ったテーマをカスタマイズします。</string>
-    <string name="advanced_settings_wotd_title">今日の言葉</string>
-    <string name="advanced_settings_wotd_description">カスタムの今日の言葉リストをインポートします。</string>
+    <string name="advanced_settings_wotd_title">今日の一言</string>
+    <string name="advanced_settings_wotd_description">カスタムの今日の一言リストをインポートします。</string>
     <string name="advanced_settings_theme_export">エクスポート</string>
     <string name="advanced_settings_theme_import">インポート</string>
     <string name="advanced_settings_backup_restore_clear_title">設定をクリア</string>
