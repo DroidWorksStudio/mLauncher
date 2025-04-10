@@ -39,7 +39,7 @@
     <string name="show_clock_format">表示形式 (AM/PM)</string>
     <string name="show_date">日付を表示</string>
     <string name="show_alarm">アラームを表示</string>
-    <string name="show_daily_word">毎日の単語を表示</string>
+    <string name="show_daily_word">今日の一言を表示</string>
     <string name="show_battery">バッテリーを表示</string>
     <string name="show_battery_icon">バッテリーアイコンを表示</string>
     <string name="show_total_screen_time">合計スクリーンタイムを表示</string>
@@ -50,7 +50,7 @@
     <string name="date_text_size">日付のテキストサイズ</string>
     <string name="clock_text_size">時計の文字サイズ</string>
     <string name="alarm_text_size">アラームのテキストサイズ</string>
-    <string name="daily_word_text_size">日々の単語のテキストサイズ</string>
+    <string name="daily_word_text_size">今日の一言のテキストサイズ</string>
     <string name="battery_text_size">バッテリーのテキストサイズ</string>
     <string name="layout_positioning">レイアウト &amp; 配置</string>
     <string name="app_padding_size">パディングサイズ</string>
@@ -68,7 +68,7 @@
     <string name="date_alignment">日付</string>
     <string name="clock_alignment">クロック</string>
     <string name="alarm_alignment">アラーム</string>
-    <string name="daily_word_alignment">日々の単語</string>
+    <string name="daily_word_alignment">今日の一言</string>
     <string name="home_alignment">ホームアプリ</string>
     <string name="drawer_alignment">ドロワーアプリ</string>
     <string name="element_colors">要素の色</string>
@@ -77,14 +77,14 @@
     <string name="clock_color">クロック</string>
     <string name="date_color">日付</string>
     <string name="alarm_color">アラーム</string>
-    <string name="daily_word_color">日々の単語</string>
+    <string name="daily_word_color">今日の一言</string>
     <string name="battery_color">バッテリー</string>
     <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">ジェスチャー</string>
     <string name="tap_click_actions">タップ/クリックアクション</string>
     <string name="double_tap">ダブルタップ</string>
-    <string name="clock_click_app">時計をクリックしてください</string>
-    <string name="date_click_app">日付をクリックしてください</string>
+    <string name="clock_click_app">時計をクリック</string>
+    <string name="date_click_app">日付をクリック</string>
     <string name="usage_click_app">合計使用量をクリック</string>
     <string name="floating_click_app">ロゴをクリック</string>
     <string name="swipe_movement">スワイプ動作</string>
@@ -123,10 +123,10 @@
     <string name="advanced_settings_backup_restore_clear">すべてのデータを消去</string>
     <string name="advanced_settings_theme_title">テーマ作成</string>
     <string name="advanced_settings_theme_description">自分に合ったテーマをカスタマイズします。</string>
-    <string name="advanced_settings_wotd_title">今日の言葉</string>
-    <string name="advanced_settings_wotd_description">カスタムの今日の単語リストをインポートします。</string>
-    <string name="advanced_settings_theme_export">輸出</string>
-    <string name="advanced_settings_theme_import">輸入</string>
+    <string name="advanced_settings_wotd_title">今日の一言</string>
+    <string name="advanced_settings_wotd_description">カスタムの今日の一言リストをインポートします。</string>
+    <string name="advanced_settings_theme_export">エクスポート</string>
+    <string name="advanced_settings_theme_import">インポート</string>
     <string name="advanced_settings_backup_restore_clear_title">設定をクリア</string>
     <string name="advanced_settings_backup_restore_clear_description">本当にこれを実行しますか?</string>
     <string name="advanced_settings_backup_restore_clear_yes">はい</string>
