@@ -39,7 +39,7 @@
     <string name="show_clock_format">表示形式 (AM/PM)</string>
     <string name="show_date">日付を表示</string>
     <string name="show_alarm">アラームを表示</string>
-    <string name="show_daily_word">毎日の単語を表示</string>
+    <string name="show_daily_word">日々の単語を表示</string>
     <string name="show_battery">バッテリーを表示</string>
     <string name="show_battery_icon">バッテリーアイコンを表示</string>
     <string name="show_total_screen_time">合計スクリーンタイムを表示</string>
@@ -83,8 +83,8 @@
     <string name="gestures_settings_title">ジェスチャー</string>
     <string name="tap_click_actions">タップ/クリックアクション</string>
     <string name="double_tap">ダブルタップ</string>
-    <string name="clock_click_app">時計をクリックしてください</string>
-    <string name="date_click_app">日付をクリックしてください</string>
+    <string name="clock_click_app">時計をクリック</string>
+    <string name="date_click_app">日付をクリック</string>
     <string name="usage_click_app">合計使用量をクリック</string>
     <string name="floating_click_app">ロゴをクリック</string>
     <string name="swipe_movement">スワイプ動作</string>
@@ -125,8 +125,8 @@
     <string name="advanced_settings_theme_description">自分に合ったテーマをカスタマイズします。</string>
     <string name="advanced_settings_wotd_title">今日の言葉</string>
     <string name="advanced_settings_wotd_description">カスタムの今日の単語リストをインポートします。</string>
-    <string name="advanced_settings_theme_export">輸出</string>
-    <string name="advanced_settings_theme_import">輸入</string>
+    <string name="advanced_settings_theme_export">エクスポート</string>
+    <string name="advanced_settings_theme_import">インポート</string>
     <string name="advanced_settings_backup_restore_clear_title">設定をクリア</string>
     <string name="advanced_settings_backup_restore_clear_description">本当にこれを実行しますか?</string>
     <string name="advanced_settings_backup_restore_clear_yes">はい</string>
