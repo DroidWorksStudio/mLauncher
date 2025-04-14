@@ -5,7 +5,7 @@ agp = "8.9.1"
 kotlin = "2.1.20"
 
 # AndroidX Core and AppCompat
-core-ktx = "1.15.0"
+core-ktx = "1.16.0"
 appcompat = "1.7.0"
 recyclerview = "1.4.0"
 paletteKtx = "1.0.0"
