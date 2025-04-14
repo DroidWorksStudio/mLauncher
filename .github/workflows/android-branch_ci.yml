@@ -20,7 +20,7 @@ jobs:
           token: ${{ secrets.GIT_BOT_TOKEN }}
 
       - name: set up JDK 17
-        uses: actions/setup-java@v4.7.0
+        uses: actions/setup-java@v4.7.1
         with:
           java-version: '17'
           distribution: 'temurin'
