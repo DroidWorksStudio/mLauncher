@@ -37,7 +37,7 @@ compose-ui-tooling = "1.7.8"
 
 # Other Libraries
 commons-text = "1.13.1"
-gson = "2.12.1"
+gson = "2.13.0"
 biometric-ktx = "1.4.0-alpha02"
 
 # AndroidX Test Libraries
