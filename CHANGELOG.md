@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
+## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
+
+### Implemented Enhancements:
+
+- *(settings)* Add 'Exit mLauncher' option to switch to default launcher temporarily ([#719](https://github.com/DroidWorksStudio/mLauncher/issues/719)) - ([794348a](https://github.com/DroidWorksStudio/mLauncher/commit/794348a514b845967079ebdfbb0a3e6444e0cff0))
+
 ## [1.8.9](https://github.com/DroidWorksStudio/mLauncher/tree/1.8.9) - (11, March 2025)
 
 ### Implemented Enhancements:
