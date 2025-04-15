@@ -20,6 +20,10 @@
 
     <string name="settings_advanced_title">Advanced</string>
 
+    <string name="settings_exit_mlauncher_title">Exit mLauncher</string>
+    <string name="settings_exit_mlauncher_description">Switch to your default launcher temporarily.</string>
+
+
     <!-- Strings used for features settings -->
     <string name="features_settings_title">Features</string>
 

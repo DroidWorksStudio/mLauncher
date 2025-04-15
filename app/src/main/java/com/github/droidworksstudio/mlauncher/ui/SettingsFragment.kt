@@ -2,6 +2,7 @@ package com.github.droidworksstudio.mlauncher.ui
 
 import android.app.admin.DevicePolicyManager
 import android.content.ComponentName
+import android.content.Intent
 import android.content.Context
 import android.os.Build
 import android.os.Bundle
@@ -199,6 +200,18 @@ class SettingsFragment : Fragment() {
                     showAdvancedSettings()
                 },
             )
+
+            SettingsHomeItem(
+                title = stringResource(R.string.settings_exit_mlauncher_title),
+                description = stringResource(R.string.settings_exit_mlauncher_description),
+                imageVector = ImageVector.vectorResource(id = R.drawable.ic_exit), 
+                titleFontSize = titleFontSize,
+                descriptionFontSize = descriptionFontSize,
+                iconSize = iconSize,
+                onClick = {
+                    exitLauncher()
+                },
+            )
         }
     }
 
@@ -294,5 +307,13 @@ class SettingsFragment : Fragment() {
         findNavController().navigate(
             R.id.action_settingsFragment_to_settingsAdvancedFragment,
         )
+    }
+
+    private fun exitLauncher() {
+        val intent = Intent(Intent.ACTION_MAIN).apply {
+            addCategory(Intent.CATEGORY_HOME)
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK
+        }
+        startActivity(Intent.createChooser(intent, "Choose your launcher"))
     }
 }
