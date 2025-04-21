@@ -9,14 +9,14 @@ plugins {
 
 android {
     namespace = "com.github.droidworksstudio.mlauncher"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "app.mlauncher"
         minSdk = 26
-        targetSdk = 35
-        versionCode = 10809
-        versionName = "1.8.9"
+        targetSdk = 36
+        versionCode = 101001
+        versionName = "1.10.1"
     }
 
     buildTypes {
