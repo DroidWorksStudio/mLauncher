@@ -24,7 +24,7 @@ body:
           required: true
         - label: "I have taken the time to fill in all the required details. I understand that the question will be dismissed otherwise."
           required: true
-        - label: "I optionally [donated](https://www.buymeacoffee.com/HeCodes2Much) to support the mLauncher mission."
+        - label: "I optionally [donated](https://www.buymeacoffee.com/CreativeCodeCat) to support the mLauncher mission."
           required: false
 
   - type: textarea
