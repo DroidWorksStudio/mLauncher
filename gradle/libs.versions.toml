@@ -28,7 +28,7 @@ constraintlayout-compose = "1.1.1"
 
 # Compose Versions
 activity-compose = "1.10.1"
-compose-android = "1.7.8"
+compose-android = "1.8.0"
 compose-material = "1.7.8"
 compose-animation = "1.7.8"
 compose-ui = "1.7.8"
