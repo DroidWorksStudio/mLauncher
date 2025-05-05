@@ -47,7 +47,7 @@ test-runner = "1.6.2"
 test-rules = "1.6.1"
 fragment-testing = "1.8.6"
 ui-test-junit4 = "1.7.8"
-ui-test-manifest = "1.7.8"
+ui-test-manifest = "1.8.0"
 
 [libraries]
 # Core Libraries
