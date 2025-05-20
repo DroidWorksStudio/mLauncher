@@ -1,60 +1,35 @@
-<p>Rozwidlony z <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>: Minimalistyczny i czysty launcher z
-    ulepszone funkcje.</p>
+<h1>Multi Launcher: Czysty, prosty program uruchamiający Androida, stworzony z myślą o czytelności i kontroli</h1>
 
-<h2>Rozdzielony z dodatkowymi funkcjami</h2>
+<p>Szukasz launchera, który uporządkuje wszystko i ułatwi działanie? <strong>Multi Launcher</strong> to potężny, a zarazem minimalistyczny launcher Androida, który zastępuje małe ikony wyraźnymi, czytelnymi przyciskami tekstowymi, dzięki czemu nawigacja w telefonie jest łatwiejsza.</p>
 
-<b>Cechy:</b>
+<p>Niezależnie od tego, czy chcesz mieć prosty ekran główny, potrzebujesz dużego tekstu dla lepszej widoczności, czy wolisz szybkie akcje oparte na gestach, Multi Launcher zapewnia pełną kontrolę bez przytłaczania Cię opcjami.</p>
 
-- Dostosowywanie szuflady aplikacji: Zmień nazwy aplikacji w szufladzie aplikacji (zmiana nazw aplikacji na ekranie głównym jest już obsługiwana przez długi czas)
-trzask).
-- Zaawansowane gesty: Szeroka gama gestów, w tym stuknięcia i przesunięcia, umożliwiających wykonywanie różnych akcji.
-- Dostosowywanie zegara: Ustaw zegar niezależnie od aplikacji domowych, co daje większą kontrolę nad ekranem głównym
-układ.
-- Układ szuflady aplikacji: Zmień układ aplikacji w szufladzie aplikacji niezależnie od ekranu głównego.
-- Dostosowywanie rozmiaru czcionki: Możliwość oddzielnego dostosowania rozmiaru czcionki w poszczególnych sekcjach ekranu głównego.
-- Skupienie na prywatności: usunięto uprawnienia dostępu do Internetu, dzięki czemu Twoje dane pozostają prywatne.
-- Bezpieczeństwo biometryczne: Zablokuj ustawienia uwierzytelniania biometrycznego (opcja przełączania).
-- Raporty o awariach: Możliwość zgłaszania awarii za pośrednictwem poczty e-mail w celu lepszego rozwiązywania problemów.
-- Śledzenie korzystania z aplikacji: Wyświetlaj czas korzystania z aplikacji bezpośrednio na ekranie głównym.
+<h2>Dlaczego warto wybrać Multi Launcher?</h2>
+<ul>
+    <li><strong>Program uruchamiający oparty na tekście:</strong> Żadnych mylących ikon — tylko opisane przyciski tekstowe dla Twoich aplikacji.</li>
+    <li><strong>Wysoki poziom personalizacji:</strong> Dostosuj układ, rozmiary czcionek, położenie zegara i wiele więcej.</li>
+    <li><strong>Szybkie gesty:</strong> Użyj stuknięć, przesunięć i długich przesunięć, aby otwierać aplikacje, blokować ekran i uzyskiwać dostęp do powiadomień.</li>
+    <li><strong>Bezpieczne:</strong> Biometryczna blokada ustawień i prywatności.</li>
+    <li><strong>Idealne dla seniorów i miłośników prostoty:</strong> Łatwe do odczytania, użycia i dostosowania.</li>
+</ul>
 
-<b>Gesty obejmują:</b>
+<h2>Główne cechy:</h2>
+<ul>
+    <li>Niestandardowe nazwy aplikacji: Zmień nazwy aplikacji tak, aby odpowiadały temu, jak o nich myślisz.</li>
+    <li>Elastyczne układy: Organizuj aplikacje w sposób, który ma dla Ciebie sens.</li>
+    <li>Dostosowywanie zegara i daty: Umieść widżety gdziekolwiek chcesz.</li>
+    <li>Wgląd w korzystanie z aplikacji: Zobacz, ile czasu spędzasz w każdej aplikacji.</li>
+    <li>Skróty gestów: Ustaw niestandardowe akcje dla dwukrotnego dotknięcia, przesunięcia i innych.</li>
+</ul>
 
-- Podwójne dotknięcie: Szybkie dwukrotne dotknięcie uruchamia zdefiniowaną wcześniej akcję.
-- Dotknij zegara: dotknij zegara, aby uzyskać dostęp do dodatkowych funkcji lub ustawień.
-- Dotknij daty: Dotknij daty, aby uzyskać łatwy dostęp do kalendarza.
-- Dotknij zużycia: Dotknij całkowitego zużycia, aby wyświetlić dane dotyczące zużycia w systemie lub aplikacji.
-- Krótkie przesunięcia: Przesuń w górę, w dół, w lewo lub w prawo, aby nawigować lub uruchamiać różne akcje.
-- Długie przesunięcia: przesuń w górę, w dół, w lewo lub w prawo, aby wykonać dodatkowe gesty.
+<h2>Funkcje ułatwień dostępu:</h2>
+<p>Ta aplikacja używa <strong>interfejsu API usługi dostępności</strong> w celu:</p>
+<ul>
+    <li>Zablokuj ekran gestem</li>
+    <li>Otwórz menu zasilania</li>
+    <li>Rozwiń szufladkę powiadomień</li>
+</ul>
 
-<b>Możliwe działania obejmują:</b>
+<p><em>Multi Launcher szanuje Twoją prywatność. Funkcje te nie gromadzą ani nie udostępniają danych osobowych.</em></p>
 
-- Otwórz określoną aplikację: Natychmiast otwórz dowolną wybraną aplikację za pomocą gestu.
-- Wyświetl listę aplikacji: Pokaż pełną listę aplikacji zainstalowanych na urządzeniu.
-- Ekran blokady: Zablokuj urządzenie ze względów bezpieczeństwa.
-- Pokaż ostatnio otwierane aplikacje: Uzyskaj dostęp do ostatnio używanych aplikacji, aby szybko wykonywać wiele zadań jednocześnie.
-- Otwórz szufladę powiadomień: Otwórz szufladę powiadomień, przesuwając palcem lub stukając.
-- Otwórz Szybkie ustawienia: Uzyskaj dostęp do szybkich ustawień bezpośrednio z ekranu głównego.
-- Okno dialogowe zasilania: Otwórz opcje zasilania, takie jak wyłączanie, ponowne uruchamianie i inne.
-- Zrób zrzut ekranu: Zrób zrzut ekranu, aby zapisać lub udostępnić swoją zawartość.
-- Przełącz stronę: Szybkie przełączanie między stronami ekranu głównego.
-- Wyłącz gesty: Wyłącz określone gesty, jeśli to konieczne.
-
-<b>Tłumaczenia:</b>
-
-- Arabski
-- Holenderski
-- Angielski
-- Francuski
-- Niemiecki
-- Hebrajski
-- Włoski
-- Japoński
-- Koreański
-- Litewski
-- Polski
-- Portugalski
-- rosyjski
-- słowacki
-- Hiszpański
-- Tajski
-- Turecki
+<p>Jeśli masz dość efektownych, zagraconych launcherów i chcesz czegoś prostego, stylowego i wydajnego, <strong>Multi Launcher</strong> będzie dla Ciebie idealnym rozwiązaniem na ekran główny.</p>

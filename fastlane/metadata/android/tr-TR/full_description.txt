@@ -1,60 +1,35 @@
-<p> <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>'den çatallanmıştır: Minimal ve temiz bir başlatıcı
-    gelişmiş özellikler.</p>
+<h1>Çoklu Başlatıcı: Okunabilirlik ve Kontrol için Oluşturulmuş Temiz, Basit Bir Android Başlatıcı</h1>
 
-<h2>Ekstra Özelliklerle Çatallandı</h2>
+<p>Karmaşıklığı ortadan kaldıran ve işleri kolaylaştıran bir başlatıcı mı arıyorsunuz? <strong>Çoklu Başlatıcı</strong> küçük ikonları net, okunabilir metin düğmeleriyle değiştiren, telefonunuzda gezinmeyi kolaylaştıran güçlü ancak minimalist bir Android başlatıcısıdır.</p>
 
-<b>Özellikler:</b>
+<p>Basit bir ana ekran istiyorsanız, görünürlük için büyük metne ihtiyacınız varsa veya hızlı hareket tabanlı eylemleri tercih ediyorsanız, Multi Launcher sizi seçeneklerle boğmadan tam kontrol sağlar.</p>
 
-- Uygulama Çekmecesi Özelleştirmesi: Uygulama çekmecesindeki uygulamaları yeniden adlandırın (ana ekran uygulamasının yeniden adlandırılması uzun bir süre önce desteklenmiştir)
-tıklamak).
-- Gelişmiş Hareketler: Farklı eylemleri tetiklemek için dokunma ve kaydırma gibi geniş bir hareket yelpazesi.
-- Saat Özelleştirme: Saati ana uygulamalardan bağımsız olarak konumlandırın, böylece ana ekranınız üzerinde daha fazla kontrol sahibi olun
-düzen.
-- Uygulama Çekmecesi Düzeni: Uygulamaların ana ekrandan bağımsız olarak uygulama çekmecesindeki hizalamasını değiştirin.
-- Yazı Boyutu Özelleştirme: Ana ekranın bölümlerinin yazı boyutunu ayrı ayrı ayarlayın.
-- Gizlilik Odaklı: İnternet izni kaldırıldı, verilerinizin gizli kalması sağlandı.
-- Biyometrik Güvenlik: Biyometrik kimlik doğrulamanın arkasındaki ayarları kilitleyin (değiştirme seçeneği).
-- Çökme Raporları: Daha iyi sorun giderme için çökmeleri e-posta yoluyla bildirme olanağı.
-- Uygulama Kullanım Takibi: Uygulama kullanım süresini doğrudan ana ekrandan görüntüleyin.
+<h2>Neden Multi Launcher'ı Seçmelisiniz?</h2>
+<ul>
+    <li><strong>Metin Tabanlı Başlatıcı:</strong> Kafa karıştırıcı simgeler yok — sadece uygulamalarınız için etiketli metin düğmeleri.</li>
+    <li><strong>Son Derece Özelleştirilebilir:</strong> Düzeni, yazı tiplerini, saat konumunu ve daha fazlasını ayarlayın.</li>
+    <li><strong>Hızlı Hareketler:</strong> Uygulamaları açmak, ekranı kilitlemek ve bildirimlere erişmek için dokunma, kaydırma ve uzun kaydırma hareketlerini kullanın.</li>
+    <li><strong>Güvenli:</strong> Ayarlar ve gizlilik için biyometrik kilit.</li>
+    <li><strong>Yaşlılar veya Sadelik Tutkunları için Harika:</strong> Okunması, kullanılması ve özelleştirilmesi kolay.</li>
+</ul>
 
-<b>Jestler şunları içerir:</b>
+<h2>Temel Özellikler:</h2>
+<ul>
+    <li>Özel Uygulama Adları: Uygulamaları düşündüğünüz şekilde yeniden adlandırın.</li>
+    <li>Esnek Düzenler: Uygulamaları sizin için mantıklı olacak şekilde düzenleyin.</li>
+    <li>Saat ve Tarih Özelleştirme: Widget'ları istediğiniz yere yerleştirin.</li>
+    <li>Uygulama Kullanım İçgörüleri: Her uygulamada ne kadar zaman harcadığınızı görün.</li>
+    <li>Hareket Kısayolları: Çift dokunuşlar, kaydırmalar ve daha fazlası için özel eylemler ayarlayın.</li>
+</ul>
 
-- Çift Dokunma: Önceden tanımlanmış bir eylemi tetiklemek için hızlıca iki kez dokunun.
-- Saat Dokunuşu: Ek özelliklere veya ayarlara erişmek için saate dokunun.
-- Tarih Dokunuşu: Takvime kolay erişim için tarihe dokunun.
-- Kullanım Dokunuşu: Sistem veya uygulama kullanım verilerini görüntülemek için toplam kullanıma dokunun.
-- Kısa Kaydırmalar: Farklı eylemleri gezinmek veya tetiklemek için yukarı, aşağı, sola veya sağa kaydırın.
-- Uzun Kaydırmalar: Ek hareket eylemleri için yukarı, aşağı, sola veya sağa kaydırın.
+<h2>Erişilebilirlik Özellikleri:</h2>
+<p>Bu uygulama <strong>AccessibilityService API'sini</strong> kullanarak şunları yapar:</p>
+<ul>
+    <li>Ekranı bir hareketle kilitle</li>
+    <li>Güç menüsünü aç</li>
+    <li>Bildirim çekmecesini aşağı çekin</li>
+</ul>
 
-<b>Olası Eylemler Şunları İçerir:</b>
+<p><em>Multi Launcher gizliliğinize saygı duyar. Bu özellikler kişisel verileri toplamaz veya paylaşmaz.</em></p>
 
-- Belirtilen Uygulamayı Aç: İstediğiniz herhangi bir uygulamayı bir hareketle anında açın.
-- Uygulama Listesini Görüntüle: Cihaza yüklenen uygulamaların tam listesini gösterir.
-- Kilit Ekranı: Güvenlik için cihazınızı kilitleyin.
-- Son Açılan Uygulamaları Göster: Hızlı çoklu görev için son kullanılan uygulamalara erişin.
-- Bildirim Çekmecesini Açın: Bildirim çekmecesini kaydırma veya dokunma hareketiyle etkinleştirin.
-- Hızlı Ayarları Açın: Hızlı ayarlara doğrudan ana ekrandan erişin.
-- Güç İletişim Kutusu: Kapatma, yeniden başlatma ve daha fazlası gibi güç seçeneklerini açın.
-- Ekran Görüntüsü Alın: İçeriğinizi kaydetmek veya paylaşmak için ekranı yakalayın.
-- Sayfa Değiştir: Ana ekran sayfaları arasında hızlı geçiş yapın.
-- Hareketleri Devre Dışı Bırak: Gerektiğinde belirli hareketleri devre dışı bırakın.
-
-<b>Çeviriler:</b>
-
-- Arapça
-- Hollandalı
-- İngilizce
-- Fransızca
-- Almanca
-- İbranice
-- İtalyan
-- Japonca
-- Korece
-- Litvanyaca
-- Lehçe
-- Portekizce
-- Rusça
-- Slovak
-- İspanyolca
-- Tayca
-- Türkçe
+<p>Gösterişli, karmaşık başlatıcılardan sıkıldıysanız ve sade, şık ve güçlendirici bir şey istiyorsanız, <strong>Çoklu Başlatıcı</strong> sizin için mükemmel ana ekran çözümüdür.</p>

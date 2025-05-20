@@ -1,1 +1,1 @@
-Abgezweigt von mLauncher, +Minimalisierung, +Anpassbarkeit
+Multi Launcher ‧ Startbildschirm, Wetter und minimaler UI-Launcher

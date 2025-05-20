@@ -1,1 +1,1 @@
-Forked from mLauncher, +minimisation, +personnalisation
+Lanceur multiple ‧ Écran d'accueil, météo et lanceur d'interface utilisateur minimal

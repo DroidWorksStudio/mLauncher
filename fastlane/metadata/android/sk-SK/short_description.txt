@@ -1,1 +1,1 @@
-Forked z mLauncher, +minimalizácia, +prispôsobiteľnosť
+Viaceré spúšťače ‧ Domovská obrazovka, spúšťač s počasím a minimalistickým používateľským rozhraním

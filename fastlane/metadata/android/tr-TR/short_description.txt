@@ -1,1 +1,1 @@
-mLauncher'dan türetilmiştir, +minimalizasyon, +özelleştirilebilirlik
+Çoklu Başlatıcı ‧ Ana Ekran, Hava Durumu ve Minimal UI Başlatıcı

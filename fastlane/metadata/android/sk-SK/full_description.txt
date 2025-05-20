@@ -1,60 +1,35 @@
-<p>Rozvetvený z <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>: Minimálny a čistý spúšťač s
-    vylepšené funkcie.</p>
+<h1>Multi Launcher: Čistý a jednoduchý spúšťač pre Android vytvorený pre čitateľnosť a ovládanie</h1>
 
-<h2>Rozvetvený s extra funkciami</h2>
+<p>Hľadáte launcher, ktorý sa zbaví neporiadku a zjednoduší prácu? <strong>Multi Launcher</strong> je výkonný, no minimalistický spúšťač pre Android, ktorý nahrádza drobné ikony jasnými a čitateľnými textovými tlačidlami, vďaka čomu sa v telefóne ľahšie orientuje.</p>
 
-<b>Vlastnosti:</b>
+<p>Či už chcete jednoduchú domovskú obrazovku, potrebujete veľký text pre lepšiu viditeľnosť alebo uprednostňujete rýchle akcie založené na gestách, Multi Launcher vám poskytuje plnú kontrolu bez toho, aby vás zahltil možnosťami.</p>
 
-- Prispôsobenie zásuvky aplikácií: Premenujte aplikácie v zásuvke aplikácií (premenovanie aplikácií na domovskej obrazovke je už podporované s dlhým
-kliknite).
-- Pokročilé gestá: Široká škála gest, vrátane klepnutí a potiahnutia, na spustenie rôznych akcií.
-- Prispôsobenie hodín: Umiestnite hodiny nezávisle od domácich aplikácií, čím získate väčšiu kontrolu nad svojou domovskou obrazovkou
-rozloženie.
-- Rozloženie zásuviek aplikácií: Zmeňte zarovnanie aplikácií v zásuvke aplikácií nezávisle od domovskej obrazovky.
-- Prispôsobenie veľkosti písma: Samostatne upravte veľkosť písma častí domovskej obrazovky.
-- Zamerané na súkromie: Odstránené povolenie na internet, čím sa zabezpečí, že vaše údaje zostanú súkromné.
-- Biometrické zabezpečenie: Uzamknutie nastavení za biometrickú autentifikáciu (možnosť prepínania).
-- Správy o zlyhaní: Schopnosť hlásiť zlyhania prostredníctvom e-mailu pre lepšie riešenie problémov.
-- Sledovanie používania aplikácie: Zobrazte si čas používania aplikácie priamo z domovskej obrazovky.
+<h2>Prečo si vybrať Multi Launcher?</h2>
+<ul>
+    <li><strong>Textový spúšťač:</strong> Žiadne mätúce ikony – len označené textové tlačidlá pre vaše aplikácie.</li>
+    <li><strong>Vysoko prispôsobiteľné:</strong> Upravte rozloženie, veľkosť písma, polohu hodín a ďalšie.</li>
+    <li><strong>Rýchle gestá:</strong> Na otváranie aplikácií, uzamknutie obrazovky a prístup k upozorneniam použite klepnutia, potiahnutia a dlhé potiahnutia.</li>
+    <li><strong>Bezpečné:</strong> Biometrický zámok pre nastavenia a súkromie.</li>
+    <li><strong>Skvelé pre seniorov alebo milovníkov jednoduchosti:</strong> Ľahko sa číta, používa a prispôsobuje.</li>
+</ul>
 
-<b>Gestá zahŕňajú:</b>
+<h2>Kľúčové vlastnosti:</h2>
+<ul>
+    <li>Vlastné názvy aplikácií: Premenujte aplikácie tak, aby zodpovedali vašej predstave.</li>
+    <li>Flexibilné rozloženia: Usporiadajte si aplikácie tak, ako vám to vyhovuje.</li>
+    <li>Prispôsobenie hodín a dátumu: Umiestnite widgety kamkoľvek chcete.</li>
+    <li>Štatistiky používania aplikácií: Pozrite sa, koľko času trávite v každej aplikácii.</li>
+    <li>Skratky gest: Nastavte si vlastné akcie pre dvojité ťuknutia, potiahnutia prstom a ďalšie.</li>
+</ul>
 
-- Dvojité klepnutie: Rýchlym dvojitým klepnutím spustíte preddefinovanú akciu.
-- Clock Tap: Klepnutím na hodiny získate prístup k ďalším funkciám alebo nastaveniam.
-- Date Tap: Klepnutím na dátum získate jednoduchý prístup ku kalendáru.
-- Použitie Tap: Klepnutím na celkové využitie zobrazíte údaje o používaní systému alebo aplikácie.
-- Krátke potiahnutie: Potiahnutím nahor, nadol, doľava alebo doprava môžete navigovať alebo spúšťať rôzne akcie.
-- Dlhé potiahnutie: Potiahnutím nahor, nadol, doľava alebo doprava získate ďalšie akcie gest.
+<h2>Funkcie prístupnosti:</h2>
+<p>Táto aplikácia používa rozhranie <strong>AccessibilityService API</strong> na:</p>
+<ul>
+    <li>Uzamknutie obrazovky gestom</li>
+    <li>Otvorte ponuku napájania</li>
+    <li>Potiahnite nadol panel s upozorneniami</li>
+</ul>
 
-<b>Možné akcie:</b>
+<p><em>Multi Launcher rešpektuje vaše súkromie. Tieto funkcie nezhromažďujú ani nezdieľajú osobné údaje.</em></p>
 
-- Otvorte špecifikovanú aplikáciu: Okamžite otvorte ľubovoľnú aplikáciu podľa vášho výberu gestom.
-- Zobraziť zoznam aplikácií: Zobrazí úplný zoznam aplikácií nainštalovaných v zariadení.
-- Uzamknúť obrazovku: Zamknite svoje zariadenie pre bezpečnosť.
-- Zobraziť nedávno otvorené aplikácie: Prístup k nedávno použitým aplikáciám pre rýchly multitasking.
-- Otvoriť zásuvku upozornení: Spustite zásuvku upozornení potiahnutím prstom alebo klepnutím.
-- Otvoriť Rýchle nastavenia: Prístup k rýchlym nastaveniam priamo z domovskej obrazovky.
-- Dialógové okno napájania: Otvorte možnosti napájania, ako je vypnutie, reštart a ďalšie.
-- Urobte snímku obrazovky: Zachyťte obrazovku a uložte alebo zdieľajte svoj obsah.
-- Prepnúť stránku: Rýchle prepínanie medzi stránkami domovskej obrazovky.
-- Vypnúť gestá: Podľa potreby zakážte konkrétne gestá.
-
-<b>Preklady:</b>
-
-- arabčina
-- holandský
-- anglicky
-- francúzsky
-- Nemčina
-- hebrejsky
-- taliansky
-- Japonec
-- kórejský
-- litovský
-- poľský
-- portugalčina
-- ruský
-- slovenský
-- španielčina
-- thajčina
-- turecký
+<p>Ak vás už nebavia okázalé a preplnené launchery a chcete niečo priamočiare, štýlové a výkonné, <strong>Multi Launcher</strong> je pre vás perfektným riešením pre domovskú obrazovku.</p>
