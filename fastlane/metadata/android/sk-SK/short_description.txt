@@ -1,1 +1,1 @@
-Forked z mLauncher, +minimalizácia, +prispôsobiteľnosť
+Forked from mLauncher, +minimalization, +customizability
