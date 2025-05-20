@@ -64,7 +64,8 @@
                         android:id="@+id/categoryDropdown"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:inputType="none"
+                        android:inputType="text"
+                        android:padding="6dp"
                         tools:ignore="LabelFor" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -81,6 +82,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:inputType="none"
+                        android:padding="6dp"
                         tools:ignore="LabelFor" />
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>

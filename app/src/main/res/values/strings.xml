@@ -45,6 +45,11 @@
     <string name="settings_exit_mlauncher_description">Switch to your default launcher temporarily.</string>
     <string name="settings_exit_mlauncher_dialog">Choose a launcher</string>
 
+
+    <string name="settings_donation_title">Donations</string>
+    <string name="settings_donation_description">Support our work by making a donation.</string>
+    <string name="settings_donation_dialog">Support Us</string>
+
     <!-- Strings used for features settings -->
     <string name="features_settings_title">Features</string>
 

@@ -6,7 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
@@ -61,7 +64,7 @@ class NotesFragment : Fragment() {
         dialogBuilder = DialogManager(requireContext(), requireActivity())
         prefs = Prefs(requireContext())
         val backgroundColor = getHexForOpacity(prefs)
-        binding.scrollView.setBackgroundColor(backgroundColor)
+        binding.settingsView.setBackgroundColor(backgroundColor)
         return binding.root
     }
 
@@ -99,7 +102,11 @@ class NotesFragment : Fragment() {
             (fs.value.value * 1.5).sp
         } else fs.value
 
-        Column {
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .verticalScroll(rememberScrollState())
+        ) {
             PageHeader(
                 iconRes = R.drawable.ic_back,
                 title = getLocalizedString(R.string.notes_settings_title),
@@ -143,7 +150,8 @@ class NotesFragment : Fragment() {
                 fontSize = titleFontSize,
             )
 
-            val hexBackgroundColor = String.format("#%06X", (0xFFFFFF and selectedNotesBackgroundColor))
+            val hexBackgroundColor =
+                String.format("#%06X", (0xFFFFFF and selectedNotesBackgroundColor))
             SettingsSelect(
                 title = getLocalizedString(R.string.notes_background_color),
                 option = hexBackgroundColor,
@@ -161,7 +169,8 @@ class NotesFragment : Fragment() {
                 }
             )
 
-            val hexBubbleBackgroundColor = String.format("#%06X", (0xFFFFFF and selectedBubbleBackgroundColor))
+            val hexBubbleBackgroundColor =
+                String.format("#%06X", (0xFFFFFF and selectedBubbleBackgroundColor))
             SettingsSelect(
                 title = getLocalizedString(R.string.bubble_background_color),
                 option = hexBubbleBackgroundColor,
@@ -179,7 +188,8 @@ class NotesFragment : Fragment() {
                 }
             )
 
-            val hexMessageTextColor = String.format("#%06X", (0xFFFFFF and selectedBubbleMessageTextColor))
+            val hexMessageTextColor =
+                String.format("#%06X", (0xFFFFFF and selectedBubbleMessageTextColor))
             SettingsSelect(
                 title = getLocalizedString(R.string.bubble_message_color),
                 option = hexMessageTextColor,
@@ -197,7 +207,8 @@ class NotesFragment : Fragment() {
                 }
             )
 
-            val hexBubbleTimeDateColor = String.format("#%06X", (0xFFFFFF and selectedBubbleTimeDateColor))
+            val hexBubbleTimeDateColor =
+                String.format("#%06X", (0xFFFFFF and selectedBubbleTimeDateColor))
             SettingsSelect(
                 title = getLocalizedString(R.string.bubble_date_time_color),
                 option = hexBubbleTimeDateColor,
@@ -215,7 +226,8 @@ class NotesFragment : Fragment() {
                 }
             )
 
-            val hexBubbleCategoryColor = String.format("#%06X", (0xFFFFFF and selectedBubbleCategoryColor))
+            val hexBubbleCategoryColor =
+                String.format("#%06X", (0xFFFFFF and selectedBubbleCategoryColor))
             SettingsSelect(
                 title = getLocalizedString(R.string.bubble_category_color),
                 option = hexBubbleCategoryColor,
@@ -238,7 +250,8 @@ class NotesFragment : Fragment() {
                 fontSize = titleFontSize,
             )
 
-            val hexBubbleInputMessageColor = String.format("#%06X", (0xFFFFFF and selectedInputMessageColor))
+            val hexBubbleInputMessageColor =
+                String.format("#%06X", (0xFFFFFF and selectedInputMessageColor))
             SettingsSelect(
                 title = getLocalizedString(R.string.message_input_color),
                 option = hexBubbleInputMessageColor,
@@ -256,7 +269,8 @@ class NotesFragment : Fragment() {
                 }
             )
 
-            val hexBubbleInputMessageHintColor = String.format("#%06X", (0xFFFFFF and selectedInputMessageHintColor))
+            val hexBubbleInputMessageHintColor =
+                String.format("#%06X", (0xFFFFFF and selectedInputMessageHintColor))
             SettingsSelect(
                 title = getLocalizedString(R.string.message_input_hint_color),
                 option = hexBubbleInputMessageHintColor,
@@ -292,7 +306,7 @@ class NotesFragment : Fragment() {
                 System -> isSystemInDarkMode(requireContext())
             }
 
-            setThemeMode(requireContext(), isDark, binding.scrollView)
+            setThemeMode(requireContext(), isDark, binding.settingsView)
             val settingsSize = (prefs.settingsSize - 3)
 
             SettingsTheme(isDark) {

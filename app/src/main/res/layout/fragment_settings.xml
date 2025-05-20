@@ -1,29 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/scrollView"
+<androidx.compose.ui.platform.ComposeView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/settingsView"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:animateLayoutChanges="true"
-    android:background="?attr/primaryShadeDarkColor"
-    android:clipChildren="false"
-    android:clipToPadding="false"
-    android:overScrollMode="never"
-    android:scrollbars="none">
-
-    <LinearLayout
-        android:id="@+id/scrollLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:clipChildren="false"
-        android:clipToPadding="false"
-        android:orientation="vertical"
-        android:paddingTop="20dp"
-        android:paddingBottom="10dp">
-
-        <androidx.compose.ui.platform.ComposeView
-            android:id="@+id/settingsView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-    </LinearLayout>
-</ScrollView>
+    android:layout_height="match_parent" />

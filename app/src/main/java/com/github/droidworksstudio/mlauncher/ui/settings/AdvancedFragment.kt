@@ -81,7 +81,7 @@ class AdvancedFragment : Fragment() {
         prefs = Prefs(requireContext())
         shareUtils = ShareUtils(requireContext(), requireActivity())
         val backgroundColor = getHexForOpacity(prefs)
-        binding.scrollView.setBackgroundColor(backgroundColor)
+        binding.settingsView.setBackgroundColor(backgroundColor)
         return binding.root
     }
 
@@ -133,11 +133,16 @@ class AdvancedFragment : Fragment() {
             )
 
             val versionName =
-                requireContext().packageManager.getPackageInfo(requireContext().packageName, 0).versionName
+                requireContext().packageManager.getPackageInfo(
+                    requireContext().packageName,
+                    0
+                ).versionName
 
             SettingsHomeItem(
                 title = getLocalizedString(R.string.advanced_settings_app_info_title),
-                description = getLocalizedString(R.string.advanced_settings_app_info_description).format(versionName),
+                description = getLocalizedString(R.string.advanced_settings_app_info_description).format(
+                    versionName
+                ),
                 imageVector = ImageVector.vectorResource(id = R.drawable.ic_app_info),
                 titleFontSize = titleFontSize,
                 descriptionFontSize = descriptionFontSize,
@@ -164,7 +169,9 @@ class AdvancedFragment : Fragment() {
 
             SettingsHomeItem(
                 title = getLocalizedString(R.string.advanced_settings_restart_title),
-                description = getLocalizedString(R.string.advanced_settings_restart_description).format(versionName),
+                description = getLocalizedString(R.string.advanced_settings_restart_description).format(
+                    versionName
+                ),
                 imageVector = ImageVector.vectorResource(id = R.drawable.ic_restart),
                 titleFontSize = titleFontSize,
                 descriptionFontSize = descriptionFontSize,
@@ -278,7 +285,7 @@ class AdvancedFragment : Fragment() {
                 System -> isSystemInDarkMode(requireContext())
             }
 
-            setThemeMode(requireContext(), isDark, binding.scrollView)
+            setThemeMode(requireContext(), isDark, binding.settingsView)
             val settingsSize = (prefs.settingsSize - 3)
 
             SettingsTheme(isDark) {
@@ -317,7 +324,8 @@ class AdvancedFragment : Fragment() {
             context.resources.displayMetrics
         ).toInt()
 
-        val adapter = object : ArrayAdapter<String>(context, android.R.layout.select_dialog_item, launcherLabels) {
+        val adapter = object :
+            ArrayAdapter<String>(context, android.R.layout.select_dialog_item, launcherLabels) {
             override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
                 val view = super.getView(position, convertView, parent)
                 val textView = view.findViewById<TextView>(android.R.id.text1)

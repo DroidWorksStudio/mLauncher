@@ -6,7 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -25,7 +28,9 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.github.droidworksstudio.common.DonationDialog
 import com.github.droidworksstudio.common.getLocalizedString
+import com.github.droidworksstudio.common.isGestureNavigationEnabled
 import com.github.droidworksstudio.mlauncher.MainViewModel
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.Constants.AppDrawerFlag
@@ -85,7 +90,7 @@ class SettingsFragment : Fragment() {
                 System -> isSystemInDarkMode(requireContext())
             }
 
-            setThemeMode(requireContext(), isDark, binding.scrollView)
+            setThemeMode(requireContext(), isDark, binding.settingsView)
             val settingsSize = (prefs.settingsSize - 3)
 
             SettingsTheme(isDark) {
@@ -117,7 +122,11 @@ class SettingsFragment : Fragment() {
             R.drawable.ic_unlock
         }
 
-        Column {
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .verticalScroll(rememberScrollState())
+        ) {
             Spacer(
                 modifier = Modifier
                     .height(16.dp)
@@ -177,7 +186,10 @@ class SettingsFragment : Fragment() {
             )
 
             if (PrivateSpaceManager(requireContext()).isPrivateSpaceSupported() &&
-                PrivateSpaceManager(requireContext()).isPrivateSpaceSetUp(showToast = false, launchSettings = false)
+                PrivateSpaceManager(requireContext()).isPrivateSpaceSetUp(
+                    showToast = false,
+                    launchSettings = false
+                )
             ) {
                 SettingsHomeItem(
                     title = getLocalizedString(R.string.private_space),
@@ -186,7 +198,10 @@ class SettingsFragment : Fragment() {
                     descriptionFontSize = descriptionFontSize,
                     iconSize = iconSize,
                     onClick = {
-                        PrivateSpaceManager(requireContext()).togglePrivateSpaceLock(showToast = true, launchSettings = true)
+                        PrivateSpaceManager(requireContext()).togglePrivateSpaceLock(
+                            showToast = true,
+                            launchSettings = true
+                        )
                         toggledPrivateSpaces = !toggledPrivateSpaces
                     }
                 )
@@ -224,6 +239,33 @@ class SettingsFragment : Fragment() {
                     showAdvancedSettings()
                 },
             )
+
+            // 👇 This spacer pushes the next item (donation) to the bottom
+            Spacer(modifier = Modifier.weight(1f))
+
+            SettingsHomeItem(
+                title = getLocalizedString(R.string.settings_donation_title),
+                description = getLocalizedString(R.string.settings_donation_description),
+                imageVector = ImageVector.vectorResource(id = R.drawable.ic_donation),
+                titleFontSize = titleFontSize,
+                descriptionFontSize = descriptionFontSize,
+                iconSize = iconSize,
+                onClick = {
+                    DonationDialog(requireContext()).show(getLocalizedString(R.string.settings_donation_dialog))
+                },
+            )
+
+            Spacer(
+                modifier = Modifier
+                    .height(16.dp)
+            )
+
+            if (!isGestureNavigationEnabled(requireContext())) {
+                Spacer(
+                    modifier = Modifier
+                        .height(52.dp)
+                )
+            }
         }
     }
 

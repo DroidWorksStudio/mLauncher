@@ -7,7 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
@@ -66,7 +69,7 @@ class LookFeelFragment : Fragment() {
         dialogBuilder = DialogManager(requireContext(), requireActivity())
         prefs = Prefs(requireContext())
         val backgroundColor = getHexForOpacity(prefs)
-        binding.scrollView.setBackgroundColor(backgroundColor)
+        binding.settingsView.setBackgroundColor(backgroundColor)
         return binding.root
     }
 
@@ -127,7 +130,11 @@ class LookFeelFragment : Fragment() {
             (fs.value.value * 1.5).sp
         } else fs.value
 
-        Column {
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .verticalScroll(rememberScrollState())
+        ) {
             PageHeader(
                 iconRes = R.drawable.ic_back,
                 title = getLocalizedString(R.string.look_feel_settings_title),
@@ -278,7 +285,8 @@ class LookFeelFragment : Fragment() {
                         currentValue = prefs.textPaddingSize,
                         onValueSelected = { newPaddingSize ->
                             selectedPaddingSize = newPaddingSize // Update state
-                            prefs.textPaddingSize = newPaddingSize // Persist selection in preferences
+                            prefs.textPaddingSize =
+                                newPaddingSize // Persist selection in preferences
                         }
                     )
                 }
@@ -301,7 +309,10 @@ class LookFeelFragment : Fragment() {
                 onCheckedChange = {
                     toggledHomeAlignmentBottom = !prefs.homeAlignmentBottom
                     prefs.homeAlignmentBottom = toggledHomeAlignmentBottom
-                    viewModel.updateHomeAppsAlignment(prefs.homeAlignment, prefs.homeAlignmentBottom)
+                    viewModel.updateHomeAppsAlignment(
+                        prefs.homeAlignment,
+                        prefs.homeAlignmentBottom
+                    )
                 }
             )
 
@@ -317,7 +328,9 @@ class LookFeelFragment : Fragment() {
                 onCheckedChange = {
                     toggledShowStatusBar = !prefs.showStatusBar
                     prefs.showStatusBar = toggledShowStatusBar
-                    if (toggledShowStatusBar) showStatusBar(requireActivity()) else hideStatusBar(requireActivity())
+                    if (toggledShowStatusBar) showStatusBar(requireActivity()) else hideStatusBar(
+                        requireActivity()
+                    )
                 }
             )
 
@@ -345,7 +358,8 @@ class LookFeelFragment : Fragment() {
                             currentValue = prefs.recentCounter,
                             onValueSelected = { newRecentCounter ->
                                 selectedRecentCounter = newRecentCounter // Update state
-                                prefs.recentCounter = newRecentCounter // Persist selection in preferences
+                                prefs.recentCounter =
+                                    newRecentCounter // Persist selection in preferences
                                 viewModel.recentCounter.value = newRecentCounter
                             }
                         )
@@ -378,9 +392,11 @@ class LookFeelFragment : Fragment() {
                         options = iconPacksOptions.map { it.toString() }.toTypedArray(),
                         titleResId = R.string.select_app_icons,
                         onItemSelected = { newAppIconsName ->
-                            val newIconPacksIndex = iconPacksOptions.indexOfFirst { it.toString() == newAppIconsName }
+                            val newIconPacksIndex =
+                                iconPacksOptions.indexOfFirst { it.toString() == newAppIconsName }
                             if (newIconPacksIndex != -1) {
-                                val newAppIcons = iconPacksEntries[newIconPacksIndex] // Get the selected FontFamily enum
+                                val newAppIcons =
+                                    iconPacksEntries[newIconPacksIndex] // Get the selected FontFamily enum
                                 if (newAppIcons == Constants.IconPacks.Custom) {
                                     openCustomIconSelectionDialog()
                                 } else {
@@ -498,7 +514,8 @@ class LookFeelFragment : Fragment() {
                         titleResId = R.string.daily_word_alignment,
                         onItemSelected = { newGravity ->
                             selectedDailyWordAlignment = newGravity // Update state
-                            prefs.dailyWordAlignment = newGravity // Persist selection in preferences
+                            prefs.dailyWordAlignment =
+                                newGravity // Persist selection in preferences
                             viewModel.updateDailyWordAlignment(newGravity)
                         }
                     )
@@ -517,7 +534,10 @@ class LookFeelFragment : Fragment() {
                         onItemSelected = { newGravity ->
                             selectedHomeAlignment = newGravity // Update state
                             prefs.homeAlignment = newGravity // Persist selection in preferences
-                            viewModel.updateHomeAppsAlignment(prefs.homeAlignment, prefs.homeAlignmentBottom)
+                            viewModel.updateHomeAppsAlignment(
+                                prefs.homeAlignment,
+                                prefs.homeAlignmentBottom
+                            )
                         }
                     )
                 }
@@ -682,7 +702,8 @@ class LookFeelFragment : Fragment() {
                 }
             )
 
-            val hexShortcutIconsColor = String.format("#%06X", (0xFFFFFF and selectedShortcutIconsColor))
+            val hexShortcutIconsColor =
+                String.format("#%06X", (0xFFFFFF and selectedShortcutIconsColor))
             SettingsSelect(
                 title = getLocalizedString(R.string.shortcuts_color),
                 option = hexShortcutIconsColor,
@@ -723,7 +744,7 @@ class LookFeelFragment : Fragment() {
                 System -> isSystemInDarkMode(requireContext())
             }
 
-            setThemeMode(requireContext(), isDark, binding.scrollView)
+            setThemeMode(requireContext(), isDark, binding.settingsView)
             val settingsSize = (prefs.settingsSize - 3)
 
             SettingsTheme(isDark) {

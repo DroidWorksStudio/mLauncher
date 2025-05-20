@@ -7,7 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
@@ -119,7 +122,11 @@ class FeaturesFragment : Fragment() {
             (fs.value.value * 1.5).sp
         } else fs.value
 
-        Column {
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .verticalScroll(rememberScrollState())
+        ) {
             PageHeader(
                 iconRes = R.drawable.ic_back,
                 title = getLocalizedString(R.string.features_settings_title),
@@ -156,7 +163,7 @@ class FeaturesFragment : Fragment() {
                                 Dark -> true
                                 System -> isSystemInDarkMode(requireContext())
                             }
-                            setThemeMode(requireContext(), isDark, binding.scrollView)
+                            setThemeMode(requireContext(), isDark, binding.settingsView)
                             requireActivity().recreate()
                         }
                     )
@@ -593,7 +600,7 @@ class FeaturesFragment : Fragment() {
                 System -> isSystemInDarkMode(requireContext())
             }
 
-            setThemeMode(requireContext(), isDark, binding.scrollView)
+            setThemeMode(requireContext(), isDark, binding.settingsView)
             val settingsSize = (prefs.settingsSize - 3)
 
             SettingsTheme(isDark) {

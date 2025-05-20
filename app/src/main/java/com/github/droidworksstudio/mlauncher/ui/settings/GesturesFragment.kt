@@ -6,7 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -60,7 +63,7 @@ class GesturesFragment : Fragment() {
         dialogBuilder = DialogManager(requireContext(), requireActivity())
         prefs = Prefs(requireContext())
         val backgroundColor = getHexForOpacity(prefs)
-        binding.scrollView.setBackgroundColor(backgroundColor)
+        binding.settingsView.setBackgroundColor(backgroundColor)
         return binding.root
     }
 
@@ -98,11 +101,12 @@ class GesturesFragment : Fragment() {
         val actions = Action.entries
 
         // Filter out 'TogglePrivateSpace' if private space is not supported
-        val filteredActions = if (!PrivateSpaceManager(requireContext()).isPrivateSpaceSupported()) {
-            actions.filter { it != Action.TogglePrivateSpace }
-        } else {
-            actions
-        }
+        val filteredActions =
+            if (!PrivateSpaceManager(requireContext()).isPrivateSpaceSupported()) {
+                actions.filter { it != Action.TogglePrivateSpace }
+            } else {
+                actions
+            }
 
         // Convert enums to their string representations
         val actionStrings = filteredActions.map { it.getString() }.toTypedArray()
@@ -113,7 +117,11 @@ class GesturesFragment : Fragment() {
             (fs.value.value * 1.5).sp
         } else fs.value
 
-        Column {
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .verticalScroll(rememberScrollState())
+        ) {
             PageHeader(
                 iconRes = R.drawable.ic_back,
                 title = getLocalizedString(R.string.gestures_settings_title),
@@ -174,7 +182,8 @@ class GesturesFragment : Fragment() {
                         options = actionStrings,
                         titleResId = R.string.clock_click_app,
                         onItemSelected = { newClickClock ->
-                            val selectedAction = actions.firstOrNull { it.getString() == newClickClock }
+                            val selectedAction =
+                                actions.firstOrNull { it.getString() == newClickClock }
                             if (selectedAction != null) {
                                 selectedClickClockAction = selectedAction // Store the enum itself
                                 setGesture(
@@ -202,7 +211,8 @@ class GesturesFragment : Fragment() {
                         options = actionStrings,
                         titleResId = R.string.date_click_app,
                         onItemSelected = { newClickDate ->
-                            val selectedAction = actions.firstOrNull { it.getString() == newClickDate }
+                            val selectedAction =
+                                actions.firstOrNull { it.getString() == newClickDate }
                             if (selectedAction != null) {
                                 selectedClickDateAction = selectedAction // Store the enum itself
                                 setGesture(
@@ -215,7 +225,8 @@ class GesturesFragment : Fragment() {
                 }
             )
 
-            val appLabelClickAppUsageAction = prefs.appClickUsage.activityLabel.ifEmpty { "Digital Wellbeing" }
+            val appLabelClickAppUsageAction =
+                prefs.appClickUsage.activityLabel.ifEmpty { "Digital Wellbeing" }
             SettingsSelect(
                 title = getLocalizedString(R.string.usage_click_app),
                 option = if (selectedClickAppUsageAction == Action.OpenApp) {
@@ -233,7 +244,8 @@ class GesturesFragment : Fragment() {
                             val selectedAction =
                                 actions.firstOrNull { it.getString() == newClickAppUsage }
                             if (selectedAction != null) {
-                                selectedClickAppUsageAction = selectedAction // Store the enum itself
+                                selectedClickAppUsageAction =
+                                    selectedAction // Store the enum itself
                                 setGesture(
                                     AppDrawerFlag.SetAppUsage,
                                     selectedAction
@@ -262,7 +274,8 @@ class GesturesFragment : Fragment() {
                             val selectedAction =
                                 actions.firstOrNull { it.getString() == newClickFloating }
                             if (selectedAction != null) {
-                                selectedClickFloatingAction = selectedAction // Store the enum itself
+                                selectedClickFloatingAction =
+                                    selectedAction // Store the enum itself
                                 setGesture(
                                     AppDrawerFlag.SetFloating,
                                     selectedAction
@@ -278,7 +291,8 @@ class GesturesFragment : Fragment() {
                 fontSize = titleFontSize,
             )
 
-            val appLabelShortSwipeUpAction = prefs.appShortSwipeUp.activityLabel.ifEmpty { "Settings" }
+            val appLabelShortSwipeUpAction =
+                prefs.appShortSwipeUp.activityLabel.ifEmpty { "Settings" }
             SettingsSelect(
                 title = getLocalizedString(R.string.short_swipe_up_app),
                 option = if (selectedShortSwipeUpAction == Action.OpenApp) {
@@ -308,7 +322,8 @@ class GesturesFragment : Fragment() {
                 }
             )
 
-            val appLabelShortSwipeDownAction = prefs.appShortSwipeDown.activityLabel.ifEmpty { "Phone" }
+            val appLabelShortSwipeDownAction =
+                prefs.appShortSwipeDown.activityLabel.ifEmpty { "Phone" }
             SettingsSelect(
                 title = getLocalizedString(R.string.short_swipe_down_app),
                 option = if (selectedShortSwipeDownAction == Action.OpenApp) {
@@ -326,7 +341,8 @@ class GesturesFragment : Fragment() {
                             val selectedAction =
                                 actions.firstOrNull { it.getString() == newShortSwipeDownAction }
                             if (selectedAction != null) {
-                                selectedShortSwipeDownAction = selectedAction // Store the enum itself
+                                selectedShortSwipeDownAction =
+                                    selectedAction // Store the enum itself
                                 setGesture(
                                     AppDrawerFlag.SetShortSwipeDown,
                                     selectedAction
@@ -337,7 +353,8 @@ class GesturesFragment : Fragment() {
                 }
             )
 
-            val appLabelShortSwipeLeftAction = prefs.appShortSwipeLeft.activityLabel.ifEmpty { "Settings" }
+            val appLabelShortSwipeLeftAction =
+                prefs.appShortSwipeLeft.activityLabel.ifEmpty { "Settings" }
             SettingsSelect(
                 title = getLocalizedString(R.string.short_swipe_left_app),
                 option = if (selectedShortSwipeLeftAction == Action.OpenApp) {
@@ -355,7 +372,8 @@ class GesturesFragment : Fragment() {
                             val selectedAction =
                                 actions.firstOrNull { it.getString() == newShortSwipeLeftAction }
                             if (selectedAction != null) {
-                                selectedShortSwipeLeftAction = selectedAction // Store the enum itself
+                                selectedShortSwipeLeftAction =
+                                    selectedAction // Store the enum itself
                                 setGesture(
                                     AppDrawerFlag.SetShortSwipeLeft,
                                     selectedAction
@@ -366,7 +384,8 @@ class GesturesFragment : Fragment() {
                 }
             )
 
-            val appLabelShortSwipeRightAction = prefs.appShortSwipeRight.activityLabel.ifEmpty { "Phone" }
+            val appLabelShortSwipeRightAction =
+                prefs.appShortSwipeRight.activityLabel.ifEmpty { "Phone" }
             SettingsSelect(
                 title = getLocalizedString(R.string.short_swipe_right_app),
                 option = if (selectedShortSwipeRightAction == Action.OpenApp) {
@@ -384,7 +403,8 @@ class GesturesFragment : Fragment() {
                             val selectedAction =
                                 actions.firstOrNull { it.getString() == newShortSwipeRightAction }
                             if (selectedAction != null) {
-                                selectedShortSwipeRightAction = selectedAction // Store the enum itself
+                                selectedShortSwipeRightAction =
+                                    selectedAction // Store the enum itself
                                 setGesture(
                                     AppDrawerFlag.SetShortSwipeRight,
                                     selectedAction
@@ -395,7 +415,8 @@ class GesturesFragment : Fragment() {
                 }
             )
 
-            val appLabelLongSwipeUpAction = prefs.appLongSwipeUp.activityLabel.ifEmpty { "Settings" }
+            val appLabelLongSwipeUpAction =
+                prefs.appLongSwipeUp.activityLabel.ifEmpty { "Settings" }
             SettingsSelect(
                 title = getLocalizedString(R.string.long_swipe_up_app),
                 option = if (selectedLongSwipeUpAction == Action.OpenApp) {
@@ -424,7 +445,8 @@ class GesturesFragment : Fragment() {
                 }
             )
 
-            val appLabelLongSwipeDownAction = prefs.appLongSwipeDown.activityLabel.ifEmpty { "Phone" }
+            val appLabelLongSwipeDownAction =
+                prefs.appLongSwipeDown.activityLabel.ifEmpty { "Phone" }
             SettingsSelect(
                 title = getLocalizedString(R.string.long_swipe_down_app),
                 option = if (selectedLongSwipeDownAction == Action.OpenApp) {
@@ -442,7 +464,8 @@ class GesturesFragment : Fragment() {
                             val selectedAction =
                                 actions.firstOrNull { it.getString() == newLongSwipeDownAction }
                             if (selectedAction != null) {
-                                selectedLongSwipeDownAction = selectedAction // Store the enum itself
+                                selectedLongSwipeDownAction =
+                                    selectedAction // Store the enum itself
                                 setGesture(
                                     AppDrawerFlag.SetLongSwipeDown,
                                     selectedAction
@@ -453,7 +476,8 @@ class GesturesFragment : Fragment() {
                 }
             )
 
-            val appLabelLongSwipeLeftAction = prefs.appLongSwipeLeft.activityLabel.ifEmpty { "Settings" }
+            val appLabelLongSwipeLeftAction =
+                prefs.appLongSwipeLeft.activityLabel.ifEmpty { "Settings" }
             SettingsSelect(
                 title = getLocalizedString(R.string.long_swipe_left_app),
                 option = if (selectedLongSwipeLeftAction == Action.OpenApp) {
@@ -471,7 +495,8 @@ class GesturesFragment : Fragment() {
                             val selectedAction =
                                 actions.firstOrNull { it.getString() == newLongSwipeLeftAction }
                             if (selectedAction != null) {
-                                selectedLongSwipeLeftAction = selectedAction // Store the enum itself
+                                selectedLongSwipeLeftAction =
+                                    selectedAction // Store the enum itself
                                 setGesture(
                                     AppDrawerFlag.SetLongSwipeLeft,
                                     selectedAction
@@ -482,7 +507,8 @@ class GesturesFragment : Fragment() {
                 }
             )
 
-            val appLabelLongSwipeRightAction = prefs.appLongSwipeRight.activityLabel.ifEmpty { "Phone" }
+            val appLabelLongSwipeRightAction =
+                prefs.appLongSwipeRight.activityLabel.ifEmpty { "Phone" }
             SettingsSelect(
                 title = getLocalizedString(R.string.long_swipe_right_app),
                 option = if (selectedLongSwipeRightAction == Action.OpenApp) {
@@ -500,7 +526,8 @@ class GesturesFragment : Fragment() {
                             val selectedAction =
                                 actions.firstOrNull { it.getString() == newLongSwipeRightAction }
                             if (selectedAction != null) {
-                                selectedLongSwipeRightAction = selectedAction // Store the enum itself
+                                selectedLongSwipeRightAction =
+                                    selectedAction // Store the enum itself
                                 setGesture(
                                     AppDrawerFlag.SetLongSwipeRight,
                                     selectedAction
@@ -529,7 +556,7 @@ class GesturesFragment : Fragment() {
                 System -> isSystemInDarkMode(requireContext())
             }
 
-            setThemeMode(requireContext(), isDark, binding.scrollView)
+            setThemeMode(requireContext(), isDark, binding.settingsView)
             val settingsSize = (prefs.settingsSize - 3)
 
             SettingsTheme(isDark) {
