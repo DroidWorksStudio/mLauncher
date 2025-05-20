@@ -1,60 +1,35 @@
-<p>Bifurcado de <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>: Um iniciador minimalista e limpo com
-    recursos aprimorados.</p>
+<h1>Multi Launcher: A Clean, Simple Android Launcher Built for Readability and Control</h1>
 
-<h2>Bifurcado com recursos extras</h2>
+<p>Looking for a launcher that ditches the clutter and keeps things easy? <strong>Multi Launcher</strong> is a powerful yet minimalist Android launcher that replaces tiny icons with clear, readable text buttons, making your phone easier to navigate.</p>
 
-<b>Características:</b>
+<p>Whether you want a simple home screen, need large text for visibility, or prefer quick gesture-based actions, Multi Launcher gives you full control without overwhelming you with options.</p>
 
-- Personalização da gaveta de aplicativos: renomeie aplicativos na gaveta de aplicativos (a renomeação de aplicativos da tela inicial já é compatível com um longo
-clique).
-- Gestos avançados: uma ampla variedade de gestos, incluindo toques e deslizamentos, para acionar diferentes ações.
-- Personalização do relógio: posicione o relógio independentemente dos aplicativos domésticos, dando mais controle sobre sua tela inicial
-layout.
-- Layout da gaveta de aplicativos: altere o alinhamento dos aplicativos na gaveta de aplicativos independentemente da tela inicial.
-- Personalização do tamanho da fonte: ajuste o tamanho da fonte das seções da tela inicial separadamente.
-- Foco na privacidade: permissão de internet removida, garantindo que seus dados permaneçam privados.
-- Segurança biométrica: bloqueie as configurações por meio de autenticação biométrica (alternar opção).
-- Relatórios de falhas: capacidade de relatar falhas por e-mail para melhor solução de problemas.
-- Rastreamento de uso do aplicativo: visualize o tempo de uso do aplicativo diretamente na tela inicial.
+<h2>Why Choose Multi Launcher?</h2>
+<ul>
+    <li><strong>Text-Based Launcher:</strong> No confusing icons — just labeled text buttons for your apps.</li>
+    <li><strong>Highly Customizable:</strong> Adjust layout, font sizes, clock position, and more.</li>
+    <li><strong>Quick Gestures:</strong> Use taps, swipes, and long swipes to open apps, lock the screen, and access notifications.</li>
+    <li><strong>Secure:</strong> Biometric lock for settings and privacy.</li>
+    <li><strong>Great for Seniors or Simplicity-Lovers:</strong> Easy to read, use, and customize.</li>
+</ul>
 
-<b>Gestos incluem:</b>
+<h2>Key Features:</h2>
+<ul>
+    <li>Custom App Names: Rename apps to match how you think of them.</li>
+    <li>Flexible Layouts: Organize apps in the way that makes sense for you.</li>
+    <li>Clock & Date Customization: Place widgets wherever you want.</li>
+    <li>App Usage Insights: See how much time you spend in each app.</li>
+    <li>Gesture Shortcuts: Set custom actions for double taps, swipes, and more.</li>
+</ul>
 
-- Toque duplo: toque rapidamente duas vezes para acionar uma ação predefinida.
-- Toque no relógio: toque no relógio para acessar recursos ou configurações adicionais.
-- Toque na data: toque na data para acessar facilmente o calendário.
-- Toque em Uso: toque no uso total para visualizar os dados de uso do sistema ou do aplicativo.
-- Deslizamentos curtos: deslize para cima, para baixo, para a esquerda ou para a direita para navegar ou acionar diferentes ações.
-- Deslizamentos longos: deslize para cima, para baixo, para a esquerda ou para a direita para obter ações de gestos adicionais.
+<h2>Accessibility Features:</h2>
+<p>This app uses the <strong>AccessibilityService API</strong> to:</p>
+<ul>
+    <li>Lock the screen with a gesture</li>
+    <li>Open the power menu</li>
+    <li>Pull down the notification drawer</li>
+</ul>
 
-<b>Ações possíveis incluem:</b>
+<p><em>Multi Launcher respects your privacy. These features do not collect or share personal data.</em></p>
 
-- Abrir aplicativo específico: abra instantaneamente qualquer aplicativo de sua escolha com um gesto.
-- Exibir lista de aplicativos: mostra a lista completa de aplicativos instalados no dispositivo.
-- Tela de bloqueio: bloqueie seu dispositivo por segurança.
-- Mostrar aplicativos abertos recentemente: acesse os aplicativos usados recentemente para realizar multitarefas rapidamente.
-- Abrir gaveta de notificações: acione a gaveta de notificações deslizando ou tocando.
-- Abra as configurações rápidas: acesse as configurações rápidas diretamente na tela inicial.
-- Caixa de diálogo de energia: abra opções de energia, como desligar, reiniciar e muito mais.
-- Faça uma captura de tela: capture a tela para salvar ou compartilhar seu conteúdo.
-- Alternar página: alterne rapidamente entre as páginas da tela inicial.
-- Desativar gestos: desative gestos específicos conforme necessário.
-
-<b>Traduções:</b>
-
-- Árabe
-- Holandês
-- Inglês
-- Francês
-- Alemão
-- Hebraico
-- Italian
-- Japonês
-- Coreano
-- Lituano
-- Polonês
-- Português
-- Russo
-- Eslovaco
-- Espanhol
-- Tailandês
-- Turco
+<p>If you’re tired of flashy, cluttered launchers and want something straightforward, stylish, and empowering, <strong>Multi Launcher</strong> is your perfect home screen solution.</p>
