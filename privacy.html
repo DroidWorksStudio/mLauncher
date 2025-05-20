@@ -4,27 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - mLauncher</title>
+    <meta name="description"
+        content="MultiLauncher is the best Android launcher, offering customization, performance, security, and advanced gestures for a smoother, personalized Android experience.">
+    <meta name="keywords"
+        content="MultiLauncher, Android launcher, customizable launcher, best Android launcher, fast launcher, secure launcher, gesture-based launcher, app list customization, privacy-focused launcher, lightweight Android launcher">
+    <meta name="author" content="DroidWorks Studio">
+    <meta property="og:title" content="MultiLauncher - Best Android Launcher">
+    <meta property="og:description"
+        content="Download MultiLauncher, the customizable Android launcher with advanced gestures, app list customization, and enhanced performance.">
+    <meta property="og:url" content="https://mLauncher.5646316.xyz">
+    <meta property="og:type" content="website">
+    <title>mLauncher - Best Android Launcher</title>
+    <link rel="stylesheet" href="css/index.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-
-        h1,
-        h2 {
-            color: #333;
-        }
-
-        p {
-            color: #555;
-        }
-
         .container {
-            background-color: #fff;
             padding: 20px;
             margin: 0 auto;
             max-width: 800px;
@@ -40,16 +33,43 @@
         .link:hover {
             text-decoration: underline;
         }
+
+        /* Remove bullets from the list */
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+            /* Optional: Remove default padding */
+        }
     </style>
 </head>
 
 <body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>mLauncher</h1>
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul id="nav-menu">
+                <li><a href="index.html#">Home</a></li>
+                <li><a href="index.html#download">Download</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#why-choose">Why Choose Us?</a></li>
+                <li><a href="index.html#image-gallery">Image Gallery</a></li>
+                <li><a href="privacy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="container">
+
+    <main class="container">
         <h1>Privacy Policy</h1>
-        <p>mLauncher app was built as an Open Source app by DroidWorksStudio. This SERVICE is provided by
-            DroidWorksStudio at no
-            cost and is intended for use as is.</p>
+        <p>MultiLauncher app was built by DroidWorksStudio. This SERVICE is provided by DroidWorksStudio at no cost and
+            is intended for use as is.</p>
 
         <p>This page is used to inform visitors regarding my policies with the collection, use, and disclosure of
             Personal Information if anyone decided to use my Service.</p>
@@ -59,7 +79,7 @@
             use or share your information with anyone except as described in this Privacy Policy.</p>
 
         <p>The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is
-            accessible at mLauncher unless otherwise defined in this Privacy Policy.</p>
+            accessible at MultiLauncher unless otherwise defined in this Privacy Policy.</p>
 
         <h2>Information Collection and Use</h2>
         <p>For a better experience, while using our Service, I may require you to provide us with certain personally
@@ -127,9 +147,20 @@
 
         <h2>Contact Us</h2>
         <p>If you have any questions or suggestions about my Privacy Policy, do not hesitate to contact me at <a
-                href="mailto:droidworksstudio@063240.xyz" class="link">droidworksstudio@063240.xyz</a>.</p>
-    </div>
+                href="mailto:wayne6324+DroidWorksStudio@gmail.com" class="link">wayne6324@gmail.com</a>.</p>
+    </main>
 
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 mLauncher | All rights reserved.</p>
+        </div>
+    </footer>
 </body>
+
+<script>
+    function toggleMenu() {
+        document.getElementById("nav-menu").classList.toggle("active");
+    }
+</script>
 
 </html>

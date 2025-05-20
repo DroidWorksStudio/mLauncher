@@ -1,0 +1,469 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #121212;
+    color: #f5f5f5;
+}
+
+.theme-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.wotd-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* Container for centering content */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: #1d1d1d;
+    padding: 20px 0;
+    color: white;
+}
+
+header .logo h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #1d1d1d;
+}
+
+/* Logo */
+.logo h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Desktop Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Navigation */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle div {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+/* Responsive Menu */
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #1d1d1d;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+/* Hero Section */
+.hero {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.cta-btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cta-btn:hover {
+    background-color: #45a049;
+}
+
+/* Why Choose Section */
+.why-choose {
+    padding: 50px 0;
+    background-color: #1f1f1f;
+    color: white;
+    text-align: center;
+}
+
+.why-choose h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+/* Flex container for reasons */
+.reason-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* Adds spacing between the items */
+}
+
+/* Individual reason items */
+.reason-item {
+    width: 22%;
+    background-color: #333;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Ensure spacing remains consistent on mobile */
+@media screen and (max-width: 768px) {
+    .reason-item {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .reason-item {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Download Section */
+.download {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.download h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.download p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.download-btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #008CBA;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.download-btn:hover {
+    background-color: #007bb5;
+}
+
+/* About Section */
+.about {
+    padding: 60px 0;
+    background-color: #222;
+    color: white;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.about p:last-child {
+    margin-bottom: 0;
+}
+
+/* Add subtle animation to paragraphs */
+.about p {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.about p:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.about p:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #1d1d1d;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 50px;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    /* Header */
+    header .logo h1 {
+        font-size: 28px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Hero Section */
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .cta-btn {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+
+    /* Why Choose Section */
+    .reason-list {
+        justify-content: center;
+    }
+
+    .reason-item {
+        width: 45%;
+        margin-bottom: 15px;
+    }
+
+    /* Download Section */
+    .download h2 {
+        font-size: 32px;
+    }
+
+    .download p {
+        font-size: 16px;
+    }
+
+    .download-btn {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+
+    /* About Section */
+    .about h2 {
+        font-size: 32px;
+    }
+
+    .about p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+}
+
+/* Small screen adjustments */
+@media screen and (max-width: 480px) {
+    header .logo h1 {
+        font-size: 24px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .cta-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .reason-item {
+        width: 90%;
+    }
+
+    .download h2 {
+        font-size: 28px;
+    }
+
+    .download-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .about h2 {
+        font-size: 28px;
+    }
+
+    .about p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+}
+
+/* Dark mode for Image Gallery ONLY */
+.image-gallery {
+    background-color: #121212;
+    /* Dark background */
+    color: #ffffff;
+    /* Light text */
+    padding: 40px 20px;
+}
+
+.image-gallery h2 {
+    color: #ffffff;
+    /* White text */
+}
+
+.image-gallery table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.image-gallery td {
+    padding: 10px;
+    text-align: center;
+}
+
+.image-gallery img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.2);
+    /* Soft glow effect */
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .image-gallery table {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .image-gallery td {
+        display: block;
+        width: 45%;
+        margin: 5px;
+    }
+
+    .image-gallery img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-gallery td {
+        width: 90%;
+    }
+}
