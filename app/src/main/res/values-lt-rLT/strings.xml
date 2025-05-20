@@ -3,17 +3,36 @@
     <!-- Base Settings -->
     <string name="select_app">Pasirinkite programą</string>
     <string name="show_apps">Visos programėlės</string>
+    <string name="welcome_to_launcher">Sveiki atvykę į %1$s</string>
+    <string name="continue_by_you_agree">Tęsdami sutinkate su %1$s</string>
+    <string name="usage_access_permission">Naudojimo prieigos leidimai</string>
+    <string name="location_access_permission">Vietos prieigos leidimai</string>
+    <string name="accessibility_access_permission">Prieinamumo leidimai</string>
+    <string name="grant_permission">Suteikite leidimą</string>
+    <string name="grant_usage_permission">Norėdami tęsti, suteikite naudojimo prieigos leidimą.</string>
+    <string name="reason_usage_permission">Šiai programai reikalinga naudojimo prieiga, kad būtų galima rodyti dažniausiai naudojamas programas, stebėti įrenginio naudojimo laiką ir pagerinti jūsų patirtį. Mes nerenkame ir nebendriname jokių asmeninių duomenų.</string>
+    <string name="grant_location_permission">Norėdami tęsti, suteikite vietos leidimą.</string>
+    <string name="reason_location_permission">Šiai programai reikalinga prieiga prie vietos, kad būtų galima teikti tikslius orų naujinius pagal jūsų dabartinę vietą. Mes nerenkame ir nesidaliname jokiais asmeniniais duomenimis.</string>
+    <string name="grant_accessibility_permission">Jei norite tęsti, suteikite pritaikymo neįgaliesiems leidimą.</string>
+    <string name="reason_accessibility_permission">„MultiLauncher“ reikalingas pritaikymo neįgaliesiems leidimas, kad galėtų teikti patobulintas funkcijas, pvz., užrakinti ekraną ir atidaryti sparčiuosius nustatymus. Šios funkcijos padeda pagerinti naudojimą. Mes nerenkame ir nesidaliname jokiais duomenimis.</string>
+    <string name="permission_granted">Leidimas suteiktas! Galite tęsti.</string>
+    <string name="this_can_be_disabled_later">* Šis leidimas vėliau gali būti išjungtas.</string>
     <!-- Strings used for settings menus -->
-    <string name="settings_name">mLauncher nustatymai</string>
+    <string name="settings_name">MultiLauncher nustatymai</string>
     <string name="settings_features_title">Savybės</string>
     <string name="settings_features_description">Pagerinkite savo produktyvumą.</string>
     <string name="settings_look_feel_title">Pažiūrėk &amp; Jausk</string>
     <string name="settings_look_feel_description">Suteikite savo pagrindiniam ekranui asmeniškumo.</string>
     <string name="settings_gestures_title">Gestai</string>
     <string name="settings_gestures_description">Tinkinkite gestus, kad galėtumėte greitai ir lengvai naršyti.</string>
+    <string name="settings_notes_title">Pastabos</string>
+    <string name="settings_notes_description">Suasmeninkite savo užrašus, kad jie atitiktų jūsų stilių.</string>
     <string name="settings_favorite_apps_title">Mėgstamiausios programos</string>
     <string name="settings_hidden_apps_title">Paslėptos programėlės</string>
     <string name="settings_advanced_title">Išplėstiniai nustatymai</string>
+    <string name="settings_exit_mlauncher_title">Išeikite iš „MultiLauncher“.</string>
+    <string name="settings_exit_mlauncher_description">Laikinai perjunkite į numatytąją paleidimo priemonę.</string>
+    <string name="settings_exit_mlauncher_dialog">Pasirinkite paleidimo priemonę</string>
     <!-- Strings used for features settings -->
     <string name="features_settings_title">Savybės</string>
     <string name="user_preferences">Vartotojo nuostatos</string>
@@ -22,10 +41,12 @@
     <string name="font_family">Šrifto šeima</string>
     <string name="settings_text_size">Nustatymai Teksto dydis</string>
     <string name="hide_search_view">Slėpti paieškos rodinį</string>
-    <string name="show_floating_button">Rodyti slankųjį mygtuką</string>
+    <string name="show_floating_button">Rodyti sparčiuosius mygtukus</string>
+    <string name="lock_orientation">Užrakto orientacija</string>
     <string name="search">Ieškoti</string>
     <string name="search_engine">Paieškos sistema</string>
     <string name="auto_show_keyboard">Automatiškai rodyti klaviatūrą</string>
+    <string name="show_az_sidebar">Rodyti AZ šoninę juostą</string>
     <string name="search_from_start">Programėlių paieška nuo pradžių.</string>
     <string name="home_management">Pagrindinis &amp; Programų valdymas</string>
     <string name="auto_open_apps">Automatiškai atidaryti programėlės</string>
@@ -43,6 +64,8 @@
     <string name="show_battery">Rodyti bateriją</string>
     <string name="show_battery_icon">Rodyti akumuliatoriaus piktogramą</string>
     <string name="show_total_screen_time">Rodyti bendrą ekrano laiką</string>
+    <string name="weather">Orai</string>
+    <string name="show_weather">Rodyti orą</string>
     <!-- Strings used for look & feel settings -->
     <string name="look_feel_settings_title">Pažiūrėk &amp; Jausk</string>
     <string name="text_size_adjustments">Tekstas &amp; Dydžio koregavimas</string>
@@ -62,8 +85,10 @@
     <string name="number_of_recents">Naujausiai atdarytų programėlių skaičius</string>
     <string name="show_app_usage_stats">Rodyti programos naudojimo statistiką</string>
     <string name="select_app_icons">Pasirinkite Programų piktogramos</string>
+    <string name="enable_filter_strength">Įjungti filtro stiprumą</string>
     <string name="filter_strength">Filtro stiprumas</string>
-    <string name="background_opacity">Fono permatomumas</string>
+    <string name="show_background">Rodyti foną</string>
+    <string name="background_opacity">Fono skaidrumas</string>
     <string name="element_alignment">Elementų lygiavimas</string>
     <string name="date_alignment">Data</string>
     <string name="clock_alignment">Laikrodis</string>
@@ -79,6 +104,8 @@
     <string name="alarm_color">Signalizacija</string>
     <string name="daily_word_color">Dienos žodis</string>
     <string name="battery_color">Baterija</string>
+    <string name="rainbow_shortcuts">Vaivorykštės spartieji klavišai</string>
+    <string name="shortcuts_color">Spartieji klavišai</string>
     <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">Gestai</string>
     <string name="tap_click_actions">Bakstelėkite / spustelėkite Veiksmai</string>
@@ -101,6 +128,7 @@
     <string name="private_space">Privačios erdvės</string>
     <string name="show_notifications">Rodyti pranešimą</string>
     <string name="show_app_list">Rodyti programėlių sąrašą</string>
+    <string name="show_notes_manager">Rodyti užrašų tvarkyklę</string>
     <string name="show_digital_wellbeing">Rodyti skaitmeninę gerovę</string>
     <string name="open_quick_settings">Greitieji nustatymai</string>
     <string name="show_recents">Rodyti naujausius</string>
@@ -108,6 +136,20 @@
     <string name="take_a_screenshot">Padaryti ekrano kopiją</string>
     <string name="left_page">Eiti į kairįjį puslapį</string>
     <string name="right_page">Eiti į dešinįjį puslapį</string>
+    <!-- Strings used for notes settings -->
+    <string name="notes_settings_title">Pastabos</string>
+    <string name="display_options">Ekrano parinktys</string>
+    <string name="auto_expand_notes">Automatiškai išplėsti pastabas</string>
+    <string name="click_to_edit_delete">Spustelėkite norėdami redaguoti / ištrinti</string>
+    <string name="notes_colors">Pastabos Spalvos</string>
+    <string name="notes_background_color">Pastabų fonas</string>
+    <string name="bubble_background_color">Burbulo fonas</string>
+    <string name="bubble_message_color">Burbulo pranešimas</string>
+    <string name="bubble_date_time_color">Burbulo data / laikas</string>
+    <string name="bubble_category_color">Burbulo kategorija</string>
+    <string name="input_colors">Įvesties spalvos</string>
+    <string name="message_input_color">Pranešimo įvedimas</string>
+    <string name="message_input_hint_color">Pranešimo įvesties patarimas</string>
     <!-- Strings used for advanced settings -->
     <string name="advanced_settings_title">Išplėstiniai nustatymai</string>
     <string name="advanced_settings_app_info_title">Programos informacija</string>
@@ -140,20 +182,30 @@
     <string name="hidden_apps">Paslėptos programėlės</string>
     <string name="favorite_apps">Mėgstamiausios programos</string>
     <!-- Accessibility/Help Strings -->
-    <string name="accessibility_service_name">mLauncher veiksmų tarnyba</string>
-    <string name="accessibility_service_description">Ši pritaikymo neįgaliesiems paslauga leidžia „mLauncher“ atlikti tam tikrus veiksmus, pvz., užrakinti ekraną arba atidaryti sparčiuosius nustatymus. Mūsų pritaikymo neįgaliesiems paslauga nerenka ir nebendrina jokių duomenų.</string>
+    <string name="accessibility_service_name">„MultiLauncher“ pritaikymas neįgaliesiems</string>
+    <string name="accessibility_service_why_we_need">Kodėl mums reikia prieigos leidimo</string>
+    <string name="accessibility_service_description">Ši pritaikymo neįgaliesiems paslauga leidžia MultiLauncher atlikti tam tikrus veiksmus, pvz., užrakinti ekraną arba atidaryti sparčiuosius nustatymus. Mūsų prieinamumo paslauga nerenka ir nebendrina jokių duomenų.</string>
+    <string name="accessibility_service_more_info">MultiLauncher reikalinga prieiga prie Prieinamumo paslaugos, kad galėtų įjungti tokias funkcijas kaip:
+
+• Ekrano užrakinimas gestu arba sparčiuoju klavišu
+• Greitas greitųjų nustatymų skydelio atidarymas
+
+Šis leidimas leidžia MultiLauncher atlikti šiuos veiksmus jūsų vardu, tačiau mes nerenkame, nesaugome ir nesidalijame jokiais asmeniniais ar jautriais duomenimis per šią paslaugą.
+
+Jūs bet kada galite išjungti šią prieigą savo įrenginio nustatymuose.</string>
     <string name="can_not_delete_system_apps">Nepavyksta ištrinti sistemos programų</string>
     <string name="please_select_app">Pasirinkite programėlę</string>
     <string name="drawer_list_empty_hint">Nerasta jokių programėlių</string>
     <string name="long_press_for_settings">Ilgai paspauskite bet kur, kad pamatytumėte nustatymus</string>
     <string name="long_press_to_select_app">Ilgai paspauskite, kad pasirinktumėte programą</string>
+    <string name="tap_button_for_notes">Norėdami gauti pastabų, bakstelėkite paleidimo priemonės logotipą</string>
     <string name="swipe_up_for_apps">Braukite aukštyn, kad pamatytumėte visas programėlės</string>
     <string name="app_drawer_tips">Patarimas: perbraukite žemyn, kad atsisakytumėte. Slinkite, kad paslėptumėte klaviatūrą.</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Autentifikavimo atšaukimas.</string>
     <string name="text_authentication_error">Autentifikavimo klaida:%1$s(kodas %2$d)</string>
     <string name="text_authentication_failed">Autentifikavimas nepavyko.</string>
-    <string name="text_biometric_login">Biometrinis prisijungimas prie mLauncher</string>
+    <string name="text_biometric_login">Biometrinio prisijungimo MultiLauncher nustatymai</string>
     <string name="text_biometric_login_app">Biometrinis prisijungimas %1$s</string>
     <string name="text_biometric_login_sub">Prisijunkite naudodami biometrinius kredencialus</string>
     <!-- Crash Strings -->
@@ -161,6 +213,14 @@
     <string name="acra_dialog_text">Atsiprašome, bet %1$s susidūrė su netikėta problema ir turi būti uždarytas. Padėkite mums tobulėti išsiųsdami strigčių ataskaitą.\n\n%1$s vertina jūsų privatumą, o surinkti duomenys naudojami tik programos stabilumui pagerinti. Jokia asmeninė informacija nerenkama. Dėkojame už palaikymą!</string>
     <string name="acra_send_report">Siųsti ataskaitą</string>
     <string name="acra_dont_send">Nesiųsti</string>
+    <!-- Share Strings -->
+    <string name="share_application">Bendrinti programą</string>
+    <string name="share_note">Bendrinti pastabą</string>
+    <!-- Icon Pack Strings -->
+    <string name="choose_icon_pack">Pasirinkite piktogramų paketą</string>
+    <string name="apply_icon_pack">Taikyti piktogramų paketą</string>
+    <string name="applying_icon_pack">Suteikite savo piktogramoms naują išvaizdą…</string>
+    <string name="apply_icon_pack_are_you_sure">Ar tikrai norite pritaikyti šį piktogramų paketą?\n\n%1$s</string>
     <!-- Settings Strings -->
     <string name="left">Kairė</string>
     <string name="right">Dešnė</string>
@@ -168,6 +228,8 @@
     <string name="dark">Tamsi</string>
     <string name="light">Šviesi</string>
     <string name="system_default">Sistema</string>
+    <string name="system_custom">Pasirinktinis</string>
+    <string name="system_custom_plus">Pasirinktinis (%1$s)</string>
     <string name="restart_launcher">Iš naujo paleiskite paleidimo priemonę</string>
     <string name="delete">Ištrinti</string>
     <string name="hide">Slėpti</string>
@@ -177,20 +239,64 @@
     <string name="rename">Pervadyti</string>
     <string name="info">Informacija</string>
     <string name="okay">Gerai</string>
+    <string name="apply">Taikyti</string>
     <string name="reset">Atstatyti</string>
     <string name="cancel">Atšaukti</string>
-    <string name="enabled">Įjungta</string>
+    <string name="save">Išsaugoti</string>
     <string name="disabled">Išjungtas</string>
     <string name="open">Atidaryti</string>
     <string name="close">Uždaryti</string>
+    <string name="next">Kitas</string>
+    <string name="start">Pradėti</string>
+    <string name="copy">Kopijuoti</string>
+    <string name="allow">Leisti</string>
+    <string name="deny">Neigti</string>
+    <string name="send">Siųsti</string>
+    <string name="message_hint">Įveskite žinutę…</string>
+    <string name="message_category">Kategorija: %1$s</string>
     <!-- Permissions Strings -->
     <string name="permission_required">Reikalingas leidimas</string>
     <string name="access_usage_data_permission">Norėdami tęsti, įrenginio nustatymuose įgalinkite leidimą pasiekti naudojimo duomenis.</string>
     <string name="goto_settings">Eikite į nustatymus</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">Šiai funkcijai reikalinga „Android 15“ arba naujesnė versija.</string>
-    <string name="toast_private_space_default_home_screen">„mLauncher“ turi būti numatytasis pagrindinis ekranas, kad būtų galima pasiekti privačią erdvę.</string>
+    <string name="toast_private_space_default_home_screen">Norint pasiekti privačią erdvę, MultiLauncher turi būti numatytasis pagrindinis ekranas.</string>
     <string name="toast_private_space_locked">Privati erdvė užrakinta</string>
     <string name="toast_private_space_unlocked">Privati erdvė atrakinta</string>
     <string name="toast_private_space_not_available">Privačios erdvės nėra</string>
+    <string name="notes_list_empty_hint">Pradėkite savo pirmąją pastabą žemiau.</string>
+    <string name="confirm_delete_title">Ištrinti pastabą</string>
+    <string name="confirm_delete_message">Ar tikrai norite ištrinti šį užrašą?</string>
+    <string name="edit_note">Redaguoti pastabą</string>
+    <string name="category">Kategorija</string>
+    <string name="priority">Pirmenybė</string>
+    <string-array name="priorities">
+        <item>Žemas</item>
+        <item>Vidutinis</item>
+        <item>Aukštas</item>
+    </string-array>
+    <string-array name="categories">
+        <item>Nėra</item>
+        <item>Jubiliejai</item>
+        <item>Paskyrimai</item>
+        <item>Gimtadienis</item>
+        <item>Darbai</item>
+        <item>Kūrybingas</item>
+        <item>Pramogos</item>
+        <item>Pavedimai</item>
+        <item>Finansai</item>
+        <item>Fitnesas</item>
+        <item>Tikslai</item>
+        <item>Sveikata</item>
+        <item>Pomėgiai</item>
+        <item>Pradžia</item>
+        <item>Mokymasis</item>
+        <item>Asmeninis</item>
+        <item>Projektai</item>
+        <item>Apsipirkimas</item>
+        <item>Socialinis</item>
+        <item>Studijuoti</item>
+        <item>Kelionės</item>
+        <item>Darbas</item>
+    </string-array>
 </resources>

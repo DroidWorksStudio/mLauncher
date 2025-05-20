@@ -3,17 +3,36 @@
     <!-- Base Settings -->
     <string name="select_app">حدد التطبيق</string>
     <string name="show_apps">جميع التطبيقات</string>
+    <string name="welcome_to_launcher">مرحباً بكم في %1$s</string>
+    <string name="continue_by_you_agree">من خلال الاستمرار فإنك توافق على %1$s</string>
+    <string name="usage_access_permission">أذونات الوصول للاستخدام</string>
+    <string name="location_access_permission">أذونات الوصول إلى الموقع</string>
+    <string name="accessibility_access_permission">أذونات إمكانية الوصول</string>
+    <string name="grant_permission">منح الإذن</string>
+    <string name="grant_usage_permission">للمتابعة، الرجاء منح إذن الوصول إلى الاستخدام.</string>
+    <string name="reason_usage_permission">يحتاج هذا التطبيق إلى الوصول إلى الاستخدام لإظهار التطبيقات الأكثر استخدامًا لديك، وتتبع وقت الشاشة، وتحسين تجربتك. نحن لا نجمع أو نشارك أي بيانات شخصية.</string>
+    <string name="grant_location_permission">للمتابعة، الرجاء منح إذن الموقع.</string>
+    <string name="reason_location_permission">يحتاج هذا التطبيق إلى الوصول إلى الموقع الجغرافي لتوفير تحديثات دقيقة للطقس بناءً على موقعك الحالي. لا نجمع أو نشارك أي بيانات شخصية.</string>
+    <string name="grant_accessibility_permission">للمتابعة، يرجى منح إذن إمكانية الوصول.</string>
+    <string name="reason_accessibility_permission">يحتاج MultiLauncher إلى إذن الوصول لتوفير ميزات مُحسّنة، مثل قفل الشاشة وفتح الإعدادات السريعة. تُحسّن هذه الميزات سهولة الاستخدام. لا نجمع أو نشارك أي بيانات.</string>
+    <string name="permission_granted">تم الموافقة! يمكنك الاستمرار.</string>
+    <string name="this_can_be_disabled_later">* قد يتم تعطيل هذا الإذن لاحقًا.</string>
     <!-- Strings used for settings menus -->
-    <string name="settings_name">إعدادات mLauncher</string>
+    <string name="settings_name">إعدادات MultiLauncher</string>
     <string name="settings_features_title">سمات</string>
     <string name="settings_features_description">تحسين إنتاجيتك.</string>
     <string name="settings_look_feel_title">انظر &amp; اشعر</string>
     <string name="settings_look_feel_description">قم بإضفاء لمسة شخصية على الشاشة الرئيسية الخاصة بك.</string>
     <string name="settings_gestures_title">إيماءات</string>
     <string name="settings_gestures_description">تخصيص الإيماءات للتنقل السريع والسهل.</string>
+    <string name="settings_notes_title">ملحوظات</string>
+    <string name="settings_notes_description">قم بتخصيص ملاحظاتك لتتناسب مع أسلوبك.</string>
     <string name="settings_favorite_apps_title">التطبيقات المفضلة</string>
     <string name="settings_hidden_apps_title">التطبيقات المخفية</string>
     <string name="settings_advanced_title">الإعدادات المتقدمة</string>
+    <string name="settings_exit_mlauncher_title">الخروج من MultiLauncher</string>
+    <string name="settings_exit_mlauncher_description">التبديل إلى المشغل الافتراضي الخاص بك مؤقتًا.</string>
+    <string name="settings_exit_mlauncher_dialog">اختر مشغلًا</string>
     <!-- Strings used for features settings -->
     <string name="features_settings_title">سمات</string>
     <string name="user_preferences">تفضيلات المستخدم</string>
@@ -22,10 +41,12 @@
     <string name="font_family">خط العائلة</string>
     <string name="settings_text_size">إعدادات حجم النص</string>
     <string name="hide_search_view">إخفاء عرض البحث</string>
-    <string name="show_floating_button">إظهار الزر العائم</string>
+    <string name="show_floating_button">إظهار أزرار الاختصار</string>
+    <string name="lock_orientation">اتجاه القفل</string>
     <string name="search">يبحث</string>
     <string name="search_engine">محرك البحث</string>
     <string name="auto_show_keyboard">Auto show keyboard</string>
+    <string name="show_az_sidebar">إظهار الشريط الجانبي AZ</string>
     <string name="search_from_start">البحث عن التطبيق من البداية</string>
     <string name="home_management">الصفحة الرئيسية &amp; إدارة التطبيقات</string>
     <string name="auto_open_apps">فتح التطبيقات تلقائياً</string>
@@ -43,6 +64,8 @@
     <string name="show_battery">عرض البطارية</string>
     <string name="show_battery_icon">إظهار أيقونة البطارية</string>
     <string name="show_total_screen_time">إظهار إجمالي وقت الشاشة</string>
+    <string name="weather">طقس</string>
+    <string name="show_weather">عرض الطقس</string>
     <!-- Strings used for look & feel settings -->
     <string name="look_feel_settings_title">انظر &amp; اشعر</string>
     <string name="text_size_adjustments">نص &amp; تعديلات الحجم</string>
@@ -62,7 +85,9 @@
     <string name="number_of_recents">عدد التطبيقات الحديثة</string>
     <string name="show_app_usage_stats">إظهار إحصائيات استخدام التطبيق</string>
     <string name="select_app_icons">حدد أيقونات التطبيق</string>
+    <string name="enable_filter_strength">تمكين قوة الفلتر</string>
     <string name="filter_strength">قوة التصفية</string>
+    <string name="show_background">إظهار الخلفية</string>
     <string name="background_opacity">شفافية الخلفية</string>
     <string name="element_alignment">محاذاة العناصر</string>
     <string name="date_alignment">تاريخ</string>
@@ -79,6 +104,8 @@
     <string name="alarm_color">إنذار</string>
     <string name="daily_word_color">الكلمة اليومية</string>
     <string name="battery_color">بطارية</string>
+    <string name="rainbow_shortcuts">اختصارات قوس قزح</string>
+    <string name="shortcuts_color">اختصارات</string>
     <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">إيماءات</string>
     <string name="tap_click_actions">إجراءات الضغط/النقر</string>
@@ -101,6 +128,7 @@
     <string name="private_space">المساحات الخاصة</string>
     <string name="show_notifications">إظهار الإشعارات</string>
     <string name="show_app_list">إظهار قائمة التطبيقات</string>
+    <string name="show_notes_manager">مدير ملاحظات العرض</string>
     <string name="show_digital_wellbeing">عرض الرفاهية الرقمية</string>
     <string name="open_quick_settings">الإعدادات السريعة</string>
     <string name="show_recents">Show Recents</string>
@@ -108,6 +136,20 @@
     <string name="take_a_screenshot">خذ لقطة شاشة</string>
     <string name="left_page">انتقل إلى الصفحة اليسرى</string>
     <string name="right_page">انتقل إلى الصفحة الصحيحة</string>
+    <!-- Strings used for notes settings -->
+    <string name="notes_settings_title">ملحوظات</string>
+    <string name="display_options">خيارات العرض</string>
+    <string name="auto_expand_notes">توسيع الملاحظات تلقائيًا</string>
+    <string name="click_to_edit_delete">انقر لتحرير/حذف</string>
+    <string name="notes_colors">ملاحظات الألوان</string>
+    <string name="notes_background_color">ملاحظات الخلفية</string>
+    <string name="bubble_background_color">خلفية الفقاعة</string>
+    <string name="bubble_message_color">رسالة الفقاعة</string>
+    <string name="bubble_date_time_color">تاريخ/وقت الفقاعة</string>
+    <string name="bubble_category_color">فئة الفقاعات</string>
+    <string name="input_colors">ألوان الإدخال</string>
+    <string name="message_input_color">إدخال الرسالة</string>
+    <string name="message_input_hint_color">تلميح إدخال الرسالة</string>
     <!-- Strings used for advanced settings -->
     <string name="advanced_settings_title">الإعدادات المتقدمة</string>
     <string name="advanced_settings_app_info_title">معلومات التطبيق</string>
@@ -140,20 +182,28 @@
     <string name="hidden_apps">التطبيقات المخفية</string>
     <string name="favorite_apps">التطبيقات المفضلة</string>
     <!-- Accessibility/Help Strings -->
-    <string name="accessibility_service_name">خدمة إجراءات mLauncher</string>
-    <string name="accessibility_service_description">تتيح خدمة إمكانية الوصول هذه لـ mLauncher القيام بإجراءات معينة مثل قفل الشاشة أو فتح الإعدادات السريعة. خدمة الوصول لدينا لا تجمع أو تشارك أي بيانات.</string>
+    <string name="accessibility_service_name">إمكانية الوصول إلى MultiLauncher</string>
+    <string name="accessibility_service_why_we_need">لماذا نحتاج إلى إذن إمكانية الوصول</string>
+    <string name="accessibility_service_description">تتيح خدمة إمكانية الوصول هذه لتطبيق MultiLauncher تنفيذ إجراءات معينة، مثل قفل الشاشة أو فتح الإعدادات السريعة. لا تجمع خدمة إمكانية الوصول لدينا أي بيانات أو تشاركها.</string>
+    <string name="accessibility_service_more_info">    يتطلب MultiLauncher الوصول إلى خدمة إمكانية الوصول لتمكين ميزات مثل:\n\n
+    • قفل الشاشة بإيماءة أو اختصار\n
+    • فتح لوحة الإعدادات السريعة بسرعة\n\n
+    يسمح هذا الإذن لـ MultiLauncher بتنفيذ هذه الإجراءات نيابةً عنك، ولكننا لا نجمع أو نخزن أو نشارك أي بيانات شخصية أو حساسة من خلال هذه الخدمة.\n\n
+    يمكنك تعطيل هذا الوصول في أي وقت من إعدادات جهازك.
+    </string>
     <string name="can_not_delete_system_apps">لا يمكن حذف تطبيقات النظام</string>
     <string name="please_select_app">الرجاء تحديد التطبيق</string>
     <string name="drawer_list_empty_hint">لم يتم العثور على تطبيقات</string>
     <string name="long_press_for_settings">اضغط مطولاً في أي مكان للإعدادات</string>
     <string name="long_press_to_select_app">اضغط لفترة طويلة لتحديد التطبيق</string>
+    <string name="tap_button_for_notes">اضغط على شعار المشغل للملاحظات</string>
     <string name="swipe_up_for_apps">مرر لأعلى لجميع التطبيقات</string>
     <string name="app_drawer_tips">نصيحة: مرر لأسفل للإغلاق. مرر لإخفاء لوحة المفاتيح.</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">إلغاء المصادقة.</string>
     <string name="text_authentication_error">خطأ في المصادقة:%1$s(الكود %2$d)</string>
     <string name="text_authentication_failed">المصادقة فشلت.</string>
-    <string name="text_biometric_login">تسجيل الدخول البيومتري لـ mLauncher</string>
+    <string name="text_biometric_login">إعدادات MultiLauncher لتسجيل الدخول البيومتري</string>
     <string name="text_biometric_login_app">تسجيل الدخول البيومتري لـ %1$s</string>
     <string name="text_biometric_login_sub">قم بتسجيل الدخول باستخدام بيانات الاعتماد البيومترية الخاصة بك</string>
     <!-- Crash Strings -->
@@ -161,6 +211,14 @@
     <string name="acra_dialog_text">عذرًا، ولكن %1$s واجه مشكلة غير متوقعة ويجب إغلاقه. الرجاء مساعدتنا على التحسين عن طريق إرسال تقرير الأعطال.\n\n%1$s يقدر خصوصيتك ويتم استخدام البيانات التي تم جمعها فقط لتحسين استقرار التطبيق. لا يتم جمع أي معلومات شخصية. شكرا لدعمكم!</string>
     <string name="acra_send_report">إرسال تقرير</string>
     <string name="acra_dont_send">لا ترسل</string>
+    <!-- Share Strings -->
+    <string name="share_application">مشاركة التطبيق</string>
+    <string name="share_note">مشاركة الملاحظة</string>
+    <!-- Icon Pack Strings -->
+    <string name="choose_icon_pack">اختر حزمة الأيقونات</string>
+    <string name="apply_icon_pack">تطبيق حزمة الأيقونات</string>
+    <string name="applying_icon_pack">إعطاء أيقوناتك مظهرًا جديدًا…</string>
+    <string name="apply_icon_pack_are_you_sure">هل أنت متأكد من أنك تريد تطبيق حزمة الأيقونات هذه؟\n\n%1$s</string>
     <!-- Settings Strings -->
     <string name="left">اليسار</string>
     <string name="right">يمين</string>
@@ -168,6 +226,8 @@
     <string name="dark">داكن</string>
     <string name="light">فاتح</string>
     <string name="system_default">النظام</string>
+    <string name="system_custom">مخصص</string>
+    <string name="system_custom_plus">مخصص (%1$s)</string>
     <string name="restart_launcher">إعادة تشغيل المشغل</string>
     <string name="delete">يمسح</string>
     <string name="hide">إخفاء</string>
@@ -177,20 +237,64 @@
     <string name="rename">إعادة تسمية</string>
     <string name="info">معلومات</string>
     <string name="okay">حسنًا</string>
+    <string name="apply">يتقدم</string>
     <string name="reset">Reset</string>
     <string name="cancel">إلغاء</string>
-    <string name="enabled">مُمَكَّن</string>
+    <string name="save">يحفظ</string>
     <string name="disabled">معطل</string>
     <string name="open">فتح</string>
     <string name="close">أغلق</string>
+    <string name="next">التالي</string>
+    <string name="start">يبدأ</string>
+    <string name="copy">ينسخ</string>
+    <string name="allow">يسمح</string>
+    <string name="deny">ينكر</string>
+    <string name="send">يرسل</string>
+    <string name="message_hint">أدخل رسالة…</string>
+    <string name="message_category">الفئة: %1$s</string>
     <!-- Permissions Strings -->
     <string name="permission_required">مطلوب إذن</string>
     <string name="access_usage_data_permission">للمتابعة، يرجى تمكين الإذن بالوصول إلى بيانات الاستخدام في إعدادات جهازك.</string>
     <string name="goto_settings">انتقل إلى الإعدادات</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">تتطلب هذه الوظيفة نظام Android 15 أو إصدارًا أحدث.</string>
-    <string name="toast_private_space_default_home_screen">يجب أن تكون mLauncher هي الشاشة الرئيسية الافتراضية للوصول إلى المساحة الخاصة.</string>
+    <string name="toast_private_space_default_home_screen">يجب أن تكون MultiLauncher هي الشاشة الرئيسية الافتراضية للوصول إلى المساحة الخاصة.</string>
     <string name="toast_private_space_locked">مساحة خاصة مغلقة</string>
     <string name="toast_private_space_unlocked">مساحة خاصة مفتوحة</string>
     <string name="toast_private_space_not_available">المساحة الخاصة غير متاحة</string>
+    <string name="notes_list_empty_hint">ابدأ ملاحظتك الأولى أدناه.</string>
+    <string name="confirm_delete_title">حذف الملاحظة</string>
+    <string name="confirm_delete_message">هل أنت متأكد أنك تريد حذف هذه الملاحظة؟</string>
+    <string name="edit_note">تعديل الملاحظة</string>
+    <string name="category">فئة</string>
+    <string name="priority">أولوية</string>
+    <string-array name="priorities">
+        <item>قليل</item>
+        <item>واسطة</item>
+        <item>عالي</item>
+    </string-array>
+    <string-array name="categories">
+        <item>لا أحد</item>
+        <item>الذكرى السنوية</item>
+        <item>المواعيد</item>
+        <item>عيد ميلاد</item>
+        <item>واجبات منزلية</item>
+        <item>مبدع</item>
+        <item>ترفيه</item>
+        <item>المهمات</item>
+        <item>تمويل</item>
+        <item>لياقة بدنية</item>
+        <item>الأهداف</item>
+        <item>صحة</item>
+        <item>هوايات</item>
+        <item>بيت</item>
+        <item>تعلُّم</item>
+        <item>شخصي</item>
+        <item>المشاريع</item>
+        <item>التسوق</item>
+        <item>اجتماعي</item>
+        <item>يذاكر</item>
+        <item>يسافر</item>
+        <item>عمل</item>
+    </string-array>
 </resources>

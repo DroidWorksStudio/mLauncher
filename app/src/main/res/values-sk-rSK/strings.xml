@@ -3,17 +3,36 @@
     <!-- Base Settings -->
     <string name="select_app">Vyberte App</string>
     <string name="show_apps">Všetky aplikácie</string>
+    <string name="welcome_to_launcher">Vitajte v %1$s</string>
+    <string name="continue_by_you_agree">Pokračovaním súhlasíte s %1$s</string>
+    <string name="usage_access_permission">Prístupové povolenia na používanie</string>
+    <string name="location_access_permission">Povolenia na prístup k polohe</string>
+    <string name="accessibility_access_permission">Povolenia na prístupnosť</string>
+    <string name="grant_permission">Udeliť povolenie</string>
+    <string name="grant_usage_permission">Ak chcete pokračovať, udeľte povolenie Prístup na používanie.</string>
+    <string name="reason_usage_permission">Táto aplikácia potrebuje prístup na používanie, aby mohla zobrazovať vaše najpoužívanejšie aplikácie, sledovať čas strávený na obrazovke a zlepšovať vaše skúsenosti. Nezhromažďujeme ani nezdieľame žiadne osobné údaje.</string>
+    <string name="grant_location_permission">Ak chcete pokračovať, udeľte povolenie na používanie polohy.</string>
+    <string name="reason_location_permission">Táto aplikácia potrebuje prístup k polohe, aby mohla poskytovať presné informácie o počasí na základe vašej aktuálnej polohy. Nezhromažďujeme ani nezdieľame žiadne osobné údaje.</string>
+    <string name="grant_accessibility_permission">Ak chcete pokračovať, udeľte povolenie na zjednodušenie ovládania.</string>
+    <string name="reason_accessibility_permission">MultiLauncher potrebuje povolenie na zjednodušenie ovládania, aby mohol poskytovať vylepšené funkcie, ako je uzamknutie obrazovky a otvorenie rýchlych nastavení. Tieto funkcie pomáhajú zlepšiť použiteľnosť. Nezhromažďujeme ani nezdieľame žiadne údaje.</string>
+    <string name="permission_granted">Povolenie udelené! Môžete pokračovať.</string>
+    <string name="this_can_be_disabled_later">* Toto povolenie môže byť neskôr zakázané.</string>
     <!-- Strings used for settings menus -->
-    <string name="settings_name">Nastavenia mlaunchera</string>
+    <string name="settings_name">Nastavenia MultiLauncher</string>
     <string name="settings_features_title">Vlastnosti</string>
     <string name="settings_features_description">Zlepšite svoju produktivitu.</string>
     <string name="settings_look_feel_title">Pozrite sa &amp; Cítite</string>
     <string name="settings_look_feel_description">Dodajte svojej domovskej obrazovke osobný nádych.</string>
     <string name="settings_gestures_title">Gestá</string>
     <string name="settings_gestures_description">Prispôsobte si gestá pre rýchlu a jednoduchú navigáciu.</string>
+    <string name="settings_notes_title">Poznámky</string>
+    <string name="settings_notes_description">Prispôsobte si poznámky tak, aby zodpovedali vášmu štýlu.</string>
     <string name="settings_favorite_apps_title">Obľúbené aplikácie</string>
     <string name="settings_hidden_apps_title">Skryté aplikácie</string>
     <string name="settings_advanced_title">Rozšírené nastavenia</string>
+    <string name="settings_exit_mlauncher_title">Ukončite MultiLauncher</string>
+    <string name="settings_exit_mlauncher_description">Dočasne prepnite na predvolený spúšťač.</string>
+    <string name="settings_exit_mlauncher_dialog">Vyberte spúšťač</string>
     <!-- Strings used for features settings -->
     <string name="features_settings_title">Vlastnosti</string>
     <string name="user_preferences">Používateľské preferencie</string>
@@ -22,10 +41,12 @@
     <string name="font_family">Rodina písiem</string>
     <string name="settings_text_size">Nastavenia Veľkosť textu</string>
     <string name="hide_search_view">Skryť zobrazenie vyhľadávania</string>
-    <string name="show_floating_button">Zobraziť plávajúce tlačidlo</string>
+    <string name="show_floating_button">Zobraziť tlačidlá skratiek</string>
+    <string name="lock_orientation">Zamknúť orientáciu</string>
     <string name="search">Hľadať</string>
     <string name="search_engine">Vyhľadávač</string>
     <string name="auto_show_keyboard">Automaticky zobraziť klávesnicu</string>
+    <string name="show_az_sidebar">Zobraziť bočný panel AZ</string>
     <string name="search_from_start">Vyhľadávanie aplikácií od začiatku.</string>
     <string name="home_management">Domov &amp; Správa aplikácií</string>
     <string name="auto_open_apps">Automatické otváranie aplikácií</string>
@@ -43,6 +64,8 @@
     <string name="show_battery">Zobraziť batériu</string>
     <string name="show_battery_icon">Zobraziť ikonu batérie</string>
     <string name="show_total_screen_time">Zobraziť celkový čas obrazovky</string>
+    <string name="weather">Počasie</string>
+    <string name="show_weather">Zobraziť Počasie</string>
     <!-- Strings used for look & feel settings -->
     <string name="look_feel_settings_title">Pozrite sa &amp; Cítite</string>
     <string name="text_size_adjustments">Text &amp; Úpravy veľkosti</string>
@@ -62,7 +85,9 @@
     <string name="number_of_recents">Počet nedávnych aplikácií</string>
     <string name="show_app_usage_stats">Zobraziť štatistiku používania aplikácie</string>
     <string name="select_app_icons">Vyberte položku Ikony aplikácií</string>
+    <string name="enable_filter_strength">Povoliť silu filtra</string>
     <string name="filter_strength">Sila filtrovania</string>
+    <string name="show_background">Zobraziť pozadie</string>
     <string name="background_opacity">Priehľadnosť pozadia</string>
     <string name="element_alignment">Zarovnanie prvkov</string>
     <string name="date_alignment">Dátum</string>
@@ -79,6 +104,8 @@
     <string name="alarm_color">Alarm</string>
     <string name="daily_word_color">Slovo na každý deň</string>
     <string name="battery_color">Batéria</string>
+    <string name="rainbow_shortcuts">Dúhové skratky</string>
+    <string name="shortcuts_color">Skratky</string>
     <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">Gestá</string>
     <string name="tap_click_actions">Klepnite/kliknite na Akcie</string>
@@ -101,6 +128,7 @@
     <string name="private_space">Súkromné priestory</string>
     <string name="show_notifications">Zobraziť notifikácie</string>
     <string name="show_app_list">Zobraziť zoznam aplikácií</string>
+    <string name="show_notes_manager">Zobraziť správcu poznámok</string>
     <string name="show_digital_wellbeing">Ukážte digitálnu pohodu</string>
     <string name="open_quick_settings">Rýchle nastavenia</string>
     <string name="show_recents">Zobraziť Nedávne</string>
@@ -108,6 +136,20 @@
     <string name="take_a_screenshot">Vytvoriť snímku obrazovky</string>
     <string name="left_page">Prejdite na ľavú stranu</string>
     <string name="right_page">Prejdite na Pravú stranu</string>
+    <!-- Strings used for notes settings -->
+    <string name="notes_settings_title">Poznámky</string>
+    <string name="display_options">Možnosti zobrazenia</string>
+    <string name="auto_expand_notes">Automatické rozbalenie poznámok</string>
+    <string name="click_to_edit_delete">Kliknite na položku Upraviť/Odstrániť</string>
+    <string name="notes_colors">Farby poznámok</string>
+    <string name="notes_background_color">Pozadie poznámok</string>
+    <string name="bubble_background_color">Pozadie bubliny</string>
+    <string name="bubble_message_color">Bublinová správa</string>
+    <string name="bubble_date_time_color">Dátum/čas bubliny</string>
+    <string name="bubble_category_color">Kategória bubliny</string>
+    <string name="input_colors">Vstupné farby</string>
+    <string name="message_input_color">Vstup správy</string>
+    <string name="message_input_hint_color">Tip na zadanie správy</string>
     <!-- Strings used for advanced settings -->
     <string name="advanced_settings_title">Rozšírené nastavenia</string>
     <string name="advanced_settings_app_info_title">Informácie o aplikácii</string>
@@ -140,20 +182,30 @@
     <string name="hidden_apps">Skryté aplikácie</string>
     <string name="favorite_apps">Obľúbené aplikácie</string>
     <!-- Accessibility/Help Strings -->
-    <string name="accessibility_service_name">Služba mlauncher Actions Service</string>
-    <string name="accessibility_service_description">Táto služba dostupnosti umožňuje mlauncheru vykonávať určité akcie, ako je uzamknutie obrazovky alebo otvorenie rýchlych nastavení. Naša služba dostupnosti nezhromažďuje ani nezdieľa žiadne údaje.</string>
+    <string name="accessibility_service_name">Dostupnosť viacerých spúšťačov</string>
+    <string name="accessibility_service_why_we_need">Prečo potrebujeme povolenie na prístupnosť</string>
+    <string name="accessibility_service_description">Táto služba prístupnosti umožňuje programu MultiLauncher vykonávať určité akcie, ako je uzamknutie obrazovky alebo otvorenie rýchlych nastavení. Naša služba dostupnosti nezhromažďuje ani nezdieľa žiadne údaje.</string>
+    <string name="accessibility_service_more_info">MultiLauncher vyžaduje prístup k Službe prístupnosti, aby mohol povoliť funkcie ako:
+
+• Zamknutie obrazovky gestom alebo skratkou  
+• Rýchle otvorenie panela rýchlych nastavení  
+
+Toto povolenie umožňuje aplikácii MultiLauncher vykonávať tieto akcie vo vašom mene, ale nezhromažďujeme, neukladáme ani nezdieľame žiadne osobné ani citlivé údaje prostredníctvom tejto služby.  
+
+Tento prístup môžete kedykoľvek vypnúť v nastaveniach zariadenia.</string>
     <string name="can_not_delete_system_apps">Systémové aplikácie sa nedajú odstrániť</string>
     <string name="please_select_app">Vyberte aplikáciu</string>
     <string name="drawer_list_empty_hint">Nenašli sa žiadne aplikácie</string>
     <string name="long_press_for_settings">Dlho podržte pre nastavenia</string>
     <string name="long_press_to_select_app">Dlhým stlačením vyberte aplikáciu</string>
+    <string name="tap_button_for_notes">Klepnutím na logo spúšťača zobrazíte poznámky</string>
     <string name="swipe_up_for_apps">Potiahnutím nahor zobrazíte všetky aplikácie</string>
     <string name="app_drawer_tips">Tip: Potiahnutím nadol zatvoríte. Posunutím skryjete klávesnicu.</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Zrušiť overenie.</string>
     <string name="text_authentication_error">Chyba overenia:%1$s(kód %2$d)</string>
     <string name="text_authentication_failed">Overenie zlyhalo</string>
-    <string name="text_biometric_login">Biometrické prihlásenie pre mLauncher</string>
+    <string name="text_biometric_login">Biometrické prihlásenie Nastavenia MultiLauncher</string>
     <string name="text_biometric_login_app">Biometrické prihlásenie pre %1$s</string>
     <string name="text_biometric_login_sub">Prihláste sa pomocou svojich biometrických údajov.</string>
     <!-- Crash Strings -->
@@ -161,6 +213,14 @@
     <string name="acra_dialog_text">Ľutujeme, ale %1$s sa vyskytol neočakávaný problém a je potrebné ho zavrieť. Pomôžte nám zlepšiť sa odoslaním správy o zlyhaní.\n\n%1$s si váži vaše súkromie a zhromaždené údaje sa používajú výlučne na zlepšenie stability aplikácie. Nezhromažďujú sa žiadne osobné údaje. Ďakujem za tvoju podporu!</string>
     <string name="acra_send_report">Odoslať správu</string>
     <string name="acra_dont_send">Neposielajte</string>
+    <!-- Share Strings -->
+    <string name="share_application">Zdieľať aplikáciu</string>
+    <string name="share_note">Zdieľať poznámku</string>
+    <!-- Icon Pack Strings -->
+    <string name="choose_icon_pack">Vyberte si balík ikon</string>
+    <string name="apply_icon_pack">Použiť balík ikon</string>
+    <string name="applying_icon_pack">Dodajte svojim ikonám svieži vzhľad…</string>
+    <string name="apply_icon_pack_are_you_sure">Naozaj chcete použiť tento balík ikon?\n\n%1$s</string>
     <!-- Settings Strings -->
     <string name="left">Vľavo</string>
     <string name="right">Vpravo</string>
@@ -168,6 +228,8 @@
     <string name="dark">Tmavý</string>
     <string name="light">Svetlý</string>
     <string name="system_default">Systém</string>
+    <string name="system_custom">Vlastné</string>
+    <string name="system_custom_plus">Vlastné (%1$s)</string>
     <string name="restart_launcher">Reštartujte spúšťač</string>
     <string name="delete">Odstrániť</string>
     <string name="hide">Skryť</string>
@@ -177,20 +239,64 @@
     <string name="rename">Premenovať</string>
     <string name="info">Informácie</string>
     <string name="okay">Ok</string>
+    <string name="apply">Použiť</string>
     <string name="reset">Obnoviť</string>
     <string name="cancel">Zrušiť</string>
-    <string name="enabled">Povolené</string>
+    <string name="save">Uložiť</string>
     <string name="disabled">Zakázané</string>
     <string name="open">Otvoriť</string>
     <string name="close">Zatvoriť</string>
+    <string name="next">Ďalej</string>
+    <string name="start">Štart</string>
+    <string name="copy">Kopírovať</string>
+    <string name="allow">Povoliť</string>
+    <string name="deny">Odmietnuť</string>
+    <string name="send">Odoslať</string>
+    <string name="message_hint">Zadajte správu…</string>
+    <string name="message_category">Kategória: %1$s</string>
     <!-- Permissions Strings -->
     <string name="permission_required">Vyžaduje sa povolenie</string>
     <string name="access_usage_data_permission">Ak chcete pokračovať, povoľte v nastaveniach zariadenia povolenie na prístup k údajom o používaní.</string>
     <string name="goto_settings">Prejdite do časti Nastavenia</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">Táto funkcia vyžaduje Android 15 alebo novší.</string>
-    <string name="toast_private_space_default_home_screen">Na prístup k súkromnému priestoru musí byť mLauncher predvolenou domovskou obrazovkou.</string>
+    <string name="toast_private_space_default_home_screen">MultiLauncher musí byť predvolenou domovskou obrazovkou na prístup k súkromnému priestoru.</string>
     <string name="toast_private_space_locked">Súkromný priestor je zamknutý</string>
     <string name="toast_private_space_unlocked">Súkromný priestor je odomknutý</string>
     <string name="toast_private_space_not_available">Súkromný priestor nie je k dispozícii</string>
+    <string name="notes_list_empty_hint">Začnite svoju prvú poznámku nižšie.</string>
+    <string name="confirm_delete_title">Odstrániť poznámku</string>
+    <string name="confirm_delete_message">Naozaj chcete odstrániť túto poznámku?</string>
+    <string name="edit_note">Upraviť poznámku</string>
+    <string name="category">Kategória</string>
+    <string name="priority">Priorita</string>
+    <string-array name="priorities">
+        <item>Nízka</item>
+        <item>Stredná</item>
+        <item>Vysoká</item>
+    </string-array>
+    <string-array name="categories">
+        <item>žiadne</item>
+        <item>výročia</item>
+        <item>Schôdzky</item>
+        <item>narodeniny</item>
+        <item>Úlohy</item>
+        <item>Kreatívne</item>
+        <item>Zábava</item>
+        <item>Pochôdzky</item>
+        <item>Financie</item>
+        <item>Fitness</item>
+        <item>Ciele</item>
+        <item>Zdravie</item>
+        <item>Záľuby</item>
+        <item>Domov</item>
+        <item>Učenie</item>
+        <item>Osobné</item>
+        <item>projekty</item>
+        <item>Nakupovanie</item>
+        <item>Sociálne</item>
+        <item>Štúdium</item>
+        <item>Cestovanie</item>
+        <item>Práca</item>
+    </string-array>
 </resources>

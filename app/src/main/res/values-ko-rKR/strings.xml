@@ -3,17 +3,36 @@
     <!-- Base Settings -->
     <string name="select_app">앱 선택</string>
     <string name="show_apps">All apps</string>
+    <string name="welcome_to_launcher">%1$s에 오신 것을 환영합니다</string>
+    <string name="continue_by_you_agree">계속하시면 %1$s에 동의하게 됩니다.</string>
+    <string name="usage_access_permission">사용 액세스 권한</string>
+    <string name="location_access_permission">위치 액세스 권한</string>
+    <string name="accessibility_access_permission">접근성 권한</string>
+    <string name="grant_permission">허가를 부여하다</string>
+    <string name="grant_usage_permission">계속하려면 사용 액세스 권한을 부여하세요.</string>
+    <string name="reason_usage_permission">이 앱에는 가장 많이 사용하는 앱을 표시하고, 화면 시간을 추적하고, 사용자 경험을 개선하기 위한 사용 권한 액세스가 필요합니다. 당사는 개인 데이터를 수집하거나 공유하지 않습니다.</string>
+    <string name="grant_location_permission">계속하려면 위치 권한을 부여하세요.</string>
+    <string name="reason_location_permission">이 앱은 현재 위치를 기반으로 정확한 날씨 업데이트를 제공하기 위해 위치 접근 권한이 필요합니다. 당사는 어떠한 개인 정보도 수집하거나 공유하지 않습니다.</string>
+    <string name="grant_accessibility_permission">계속하려면 접근성 권한을 부여하세요.</string>
+    <string name="reason_accessibility_permission">MultiLauncher는 화면 잠금 및 빠른 설정 열기와 같은 향상된 기능을 제공하기 위해 접근성 권한이 필요합니다. 이러한 기능은 사용성 향상에 도움이 됩니다. 당사는 어떠한 데이터도 수집하거나 공유하지 않습니다.</string>
+    <string name="permission_granted">허가되었습니다! 계속할 수 있습니다.</string>
+    <string name="this_can_be_disabled_later">* 이 권한은 나중에 비활성화될 수 있습니다.</string>
     <!-- Strings used for settings menus -->
-    <string name="settings_name">mLauncher 설정</string>
+    <string name="settings_name">멀티런처 설정</string>
     <string name="settings_features_title">특징</string>
     <string name="settings_features_description">생산성을 향상시키세요.</string>
     <string name="settings_look_feel_title">보세요 &amp; 느껴보세요</string>
     <string name="settings_look_feel_description">홈 화면에 개성을 더해보세요.</string>
     <string name="settings_gestures_title">Gestures</string>
     <string name="settings_gestures_description">빠르고 쉬운 탐색을 위해 제스처를 사용자 지정하세요.</string>
+    <string name="settings_notes_title">노트</string>
+    <string name="settings_notes_description">귀하의 스타일에 맞게 노트를 개인화하세요.</string>
     <string name="settings_favorite_apps_title">즐겨찾는 앱</string>
     <string name="settings_hidden_apps_title">Hidden apps</string>
     <string name="settings_advanced_title">고급 설정</string>
+    <string name="settings_exit_mlauncher_title">MultiLauncher 종료</string>
+    <string name="settings_exit_mlauncher_description">일시적으로 기본 런처로 전환합니다.</string>
+    <string name="settings_exit_mlauncher_dialog">런처를 선택하세요</string>
     <!-- Strings used for features settings -->
     <string name="features_settings_title">특징</string>
     <string name="user_preferences">사용자 환경 설정</string>
@@ -22,10 +41,12 @@
     <string name="font_family">글꼴군</string>
     <string name="settings_text_size">설정 텍스트 크기</string>
     <string name="hide_search_view">검색보기 숨기기</string>
-    <string name="show_floating_button">플로팅 버튼 표시</string>
+    <string name="show_floating_button">바로가기 버튼 표시</string>
+    <string name="lock_orientation">잠금 방향</string>
     <string name="search">찾다</string>
     <string name="search_engine">검색 엔진</string>
     <string name="auto_show_keyboard">Auto show keyboard</string>
+    <string name="show_az_sidebar">AZ 사이드바 표시</string>
     <string name="search_from_start">처음부터 앱 검색.</string>
     <string name="home_management">홈 &amp; 앱 관리</string>
     <string name="auto_open_apps">Auto open apps</string>
@@ -43,6 +64,8 @@
     <string name="show_battery">배터리 표시</string>
     <string name="show_battery_icon">배터리 아이콘 표시</string>
     <string name="show_total_screen_time">총 화면 시간 표시</string>
+    <string name="weather">날씨</string>
+    <string name="show_weather">날씨 표시</string>
     <!-- Strings used for look & feel settings -->
     <string name="look_feel_settings_title">보세요 &amp; 느껴보세요</string>
     <string name="text_size_adjustments">텍스트 &amp; 크기 조정</string>
@@ -62,8 +85,10 @@
     <string name="number_of_recents">최근 앱 수</string>
     <string name="show_app_usage_stats">앱 사용 통계 표시</string>
     <string name="select_app_icons">앱 아이콘 선택</string>
+    <string name="enable_filter_strength">필터 강도 활성화</string>
     <string name="filter_strength">필터 강도</string>
-    <string name="background_opacity">배경 불투명도</string>
+    <string name="show_background">배경보기</string>
+    <string name="background_opacity">배경 투명성</string>
     <string name="element_alignment">요소 정렬</string>
     <string name="date_alignment">날짜</string>
     <string name="clock_alignment">시계</string>
@@ -79,6 +104,8 @@
     <string name="alarm_color">경보</string>
     <string name="daily_word_color">데일리 워드</string>
     <string name="battery_color">배터리</string>
+    <string name="rainbow_shortcuts">레인보우 단축키</string>
+    <string name="shortcuts_color">단축키</string>
     <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">Gestures</string>
     <string name="tap_click_actions">탭/클릭 동작</string>
@@ -101,6 +128,7 @@
     <string name="private_space">개인 공간</string>
     <string name="show_notifications">Show Notification</string>
     <string name="show_app_list">Show App List</string>
+    <string name="show_notes_manager">쇼 노트 관리자</string>
     <string name="show_digital_wellbeing">디지털 웰빙을 보여주세요</string>
     <string name="open_quick_settings">Quick Settings</string>
     <string name="show_recents">Show Recents</string>
@@ -108,6 +136,20 @@
     <string name="take_a_screenshot">스크린샷 찍기</string>
     <string name="left_page">왼쪽 페이지로 이동</string>
     <string name="right_page">오른쪽 페이지로 이동</string>
+    <!-- Strings used for notes settings -->
+    <string name="notes_settings_title">노트</string>
+    <string name="display_options">표시 옵션</string>
+    <string name="auto_expand_notes">자동 확장 노트</string>
+    <string name="click_to_edit_delete">편집/삭제를 클릭하세요</string>
+    <string name="notes_colors">노트 색상</string>
+    <string name="notes_background_color">노트 배경</string>
+    <string name="bubble_background_color">거품 배경</string>
+    <string name="bubble_message_color">버블 메시지</string>
+    <string name="bubble_date_time_color">버블 날짜/시간</string>
+    <string name="bubble_category_color">버블 카테고리</string>
+    <string name="input_colors">입력 색상</string>
+    <string name="message_input_color">메시지 입력</string>
+    <string name="message_input_hint_color">메시지 입력 힌트</string>
     <!-- Strings used for advanced settings -->
     <string name="advanced_settings_title">고급 설정</string>
     <string name="advanced_settings_app_info_title">앱 정보</string>
@@ -140,20 +182,28 @@
     <string name="hidden_apps">Hidden apps</string>
     <string name="favorite_apps">즐겨찾는 앱</string>
     <!-- Accessibility/Help Strings -->
-    <string name="accessibility_service_name">mLauncher Actions Service</string>
-    <string name="accessibility_service_description">이 접근성 서비스를 통해 mLauncher는 화면 잠금 또는 빠른 설정 열기와 같은 특정 작업을 수행할 수 있습니다. 당사의 접근성 서비스는 데이터를 수집하거나 공유하지 않습니다.</string>
+    <string name="accessibility_service_name">MultiLauncher 접근성</string>
+    <string name="accessibility_service_why_we_need">접근성 허가가 필요한 이유</string>
+    <string name="accessibility_service_description">이 접근성 서비스를 통해 MultiLauncher는 화면 잠금이나 빠른 설정 열기와 같은 특정 작업을 수행할 수 있습니다. 당사의 접근성 서비스는 어떠한 데이터도 수집하거나 공유하지 않습니다.</string>
+    <string name="accessibility_service_more_info">    MultiLauncher는 다음과 같은 기능을 활성화하기 위해 접근성 서비스에 액세스해야 합니다.\n\n
+    • 제스처 또는 바로 가기로 화면 잠금\n
+    • 빠른 설정 패널을 빠르게 열기\n\n
+    이 권한을 통해 MultiLauncher는 사용자를 대신하여 이러한 작업을 수행할 수 있지만 이 서비스를 통해 개인 정보나 민감한 데이터를 수집, 저장 또는 공유하지 않습니다.\n\n
+    언제든지 기기 설정에서 이 액세스를 비활성화할 수 있습니다.
+    </string>
     <string name="can_not_delete_system_apps">시스템 앱을 삭제할 수 없습니다</string>
     <string name="please_select_app">앱을 선택하세요</string>
     <string name="drawer_list_empty_hint">No apps found</string>
     <string name="long_press_for_settings">Long press anywhere for settings</string>
     <string name="long_press_to_select_app">앱을 선택하려면 길게 누르세요</string>
+    <string name="tap_button_for_notes">메모를 위한 탭 런처 로고</string>
     <string name="swipe_up_for_apps">Swipe up for all apps</string>
     <string name="app_drawer_tips">Tip: Swipe down to dismiss. Scroll to hide keyboard.</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">인증 취소.</string>
     <string name="text_authentication_error">인증 오류:%1$s(코드 %2$d)</string>
     <string name="text_authentication_failed">인증 실패.</string>
-    <string name="text_biometric_login">mLauncher의 생체인식 로그인</string>
+    <string name="text_biometric_login">생체 인식 로그인 MultiLauncher 설정</string>
     <string name="text_biometric_login_app">%1$s에 대한 생체 인식 로그인</string>
     <string name="text_biometric_login_sub">생체 인식 자격 증명을 사용하여 로그인</string>
     <!-- Crash Strings -->
@@ -161,6 +211,14 @@
     <string name="acra_dialog_text">죄송합니다. %1$s 에 예상치 못한 문제가 발생하여 종료해야 합니다. 충돌 보고서를 보내 개선에 도움을 주세요.\n\n%1$s 은 귀하의 개인정보를 소중히 여기며, 수집된 데이터는 앱 안정성 향상을 위해서만 사용됩니다. 개인정보는 수집되지 않습니다. 귀하의 지원에 감사드립니다!</string>
     <string name="acra_send_report">보고서 보내기</string>
     <string name="acra_dont_send">보내지 마세요</string>
+    <!-- Share Strings -->
+    <string name="share_application">공유 응용 프로그램</string>
+    <string name="share_note">노트 공유</string>
+    <!-- Icon Pack Strings -->
+    <string name="choose_icon_pack">아이콘 팩을 선택하세요</string>
+    <string name="apply_icon_pack">아이콘 팩 적용</string>
+    <string name="applying_icon_pack">아이콘에 새로운 모습을 더해보세요…</string>
+    <string name="apply_icon_pack_are_you_sure">이 아이콘 팩을 적용하시겠습니까?\n\n%1$s</string>
     <!-- Settings Strings -->
     <string name="left">Left</string>
     <string name="right">Right</string>
@@ -168,6 +226,8 @@
     <string name="dark">Dark</string>
     <string name="light">Light</string>
     <string name="system_default">System</string>
+    <string name="system_custom">관습</string>
+    <string name="system_custom_plus">사용자 정의 (%1$s)</string>
     <string name="restart_launcher">런처 재시작</string>
     <string name="delete">삭제</string>
     <string name="hide">Hide</string>
@@ -177,20 +237,64 @@
     <string name="rename">Rename</string>
     <string name="info">정보</string>
     <string name="okay">Okay</string>
+    <string name="apply">적용하다</string>
     <string name="reset">Reset</string>
     <string name="cancel">Cancel</string>
-    <string name="enabled">활성화됨</string>
+    <string name="save">구하다</string>
     <string name="disabled">Disabled</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
+    <string name="next">다음</string>
+    <string name="start">시작</string>
+    <string name="copy">복사</string>
+    <string name="allow">허용하다</string>
+    <string name="deny">부인하다</string>
+    <string name="send">보내다</string>
+    <string name="message_hint">메시지를 입력하세요…</string>
+    <string name="message_category">카테고리: %1$s</string>
     <!-- Permissions Strings -->
     <string name="permission_required">허가 필요</string>
     <string name="access_usage_data_permission">계속하려면 기기 설정에서 사용 데이터에 액세스할 수 있는 권한을 허용하세요.</string>
     <string name="goto_settings">설정으로 이동</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">이 기능을 사용하려면 Android 15 이상이 필요합니다.</string>
-    <string name="toast_private_space_default_home_screen">개인 공간에 접근하려면 mLauncher가 기본 홈 화면이어야 합니다.</string>
+    <string name="toast_private_space_default_home_screen">개인 공간에 접근하려면 MultiLauncher를 기본 홈 화면으로 설정해야 합니다.</string>
     <string name="toast_private_space_locked">개인 공간 잠금</string>
     <string name="toast_private_space_unlocked">개인 공간 잠금 해제</string>
     <string name="toast_private_space_not_available">개인 공간이 제공되지 않습니다</string>
+    <string name="notes_list_empty_hint">아래에서 첫 번째 메모를 시작하세요.</string>
+    <string name="confirm_delete_title">메모 삭제</string>
+    <string name="confirm_delete_message">이 메모를 삭제하시겠습니까?</string>
+    <string name="edit_note">편집 노트</string>
+    <string name="category">범주</string>
+    <string name="priority">우선 사항</string>
+    <string-array name="priorities">
+        <item>낮은</item>
+        <item>중간</item>
+        <item>높은</item>
+    </string-array>
+    <string-array name="categories">
+        <item>없음</item>
+        <item>기념일</item>
+        <item>설비</item>
+        <item>생일</item>
+        <item>허드렛일</item>
+        <item>창의적인</item>
+        <item>오락</item>
+        <item>심부름</item>
+        <item>재원</item>
+        <item>적합</item>
+        <item>목표</item>
+        <item>건강</item>
+        <item>취미</item>
+        <item>집</item>
+        <item>학습</item>
+        <item>개인의</item>
+        <item>프로젝트</item>
+        <item>쇼핑</item>
+        <item>사회의</item>
+        <item>공부하다</item>
+        <item>여행하다</item>
+        <item>일하다</item>
+    </string-array>
 </resources>

@@ -3,17 +3,36 @@
     <!-- Base Settings -->
     <string name="select_app">Seleccionar aplicación</string>
     <string name="show_apps">Todas las aplicaciones</string>
+    <string name="welcome_to_launcher">Bienvenido a %1$s</string>
+    <string name="continue_by_you_agree">Al continuar, aceptas %1$s</string>
+    <string name="usage_access_permission">Permisos de acceso de uso</string>
+    <string name="location_access_permission">Permisos de acceso a la ubicación</string>
+    <string name="accessibility_access_permission">Permisos de accesibilidad</string>
+    <string name="grant_permission">Conceder permiso</string>
+    <string name="grant_usage_permission">Para continuar, conceda permiso de acceso de uso.</string>
+    <string name="reason_usage_permission">Esta aplicación necesita acceso de uso para mostrar las aplicaciones más utilizadas, realizar un seguimiento del tiempo de pantalla y mejorar su experiencia. No recopilamos ni compartimos ningún dato personal.</string>
+    <string name="grant_location_permission">Para continuar, otorgue permiso de ubicación.</string>
+    <string name="reason_location_permission">Esta aplicación requiere acceso a la ubicación para proporcionar actualizaciones meteorológicas precisas según tu ubicación actual. No recopilamos ni compartimos datos personales.</string>
+    <string name="grant_accessibility_permission">Para continuar, por favor otorga permiso de Accesibilidad.</string>
+    <string name="reason_accessibility_permission">MultiLauncher necesita el permiso de Accesibilidad para ofrecer funciones mejoradas, como bloquear la pantalla y abrir la configuración rápida. Estas funciones ayudan a mejorar la usabilidad. No recopilamos ni compartimos datos.</string>
+    <string name="permission_granted">¡Permiso concedido! Puedes continuar.</string>
+    <string name="this_can_be_disabled_later">*Este permiso puede ser deshabilitado más adelante.</string>
     <!-- Strings used for settings menus -->
-    <string name="settings_name">Configuración de mLauncher</string>
+    <string name="settings_name">Configuración de MultiLauncher</string>
     <string name="settings_features_title">Características</string>
     <string name="settings_features_description">Mejora tu productividad.</string>
     <string name="settings_look_feel_title">Mira &amp; Siente</string>
     <string name="settings_look_feel_description">Dale un toque personal a tu pantalla de inicio.</string>
     <string name="settings_gestures_title">Gestos</string>
     <string name="settings_gestures_description">Personaliza los gestos para una navegación rápida y sencilla.</string>
+    <string name="settings_notes_title">Notas</string>
+    <string name="settings_notes_description">Personaliza tus notas para que coincidan con tu estilo.</string>
     <string name="settings_favorite_apps_title">Aplicaciones favoritas</string>
     <string name="settings_hidden_apps_title">Aplicaciones ocultas</string>
     <string name="settings_advanced_title">Configuración avanzada</string>
+    <string name="settings_exit_mlauncher_title">Salir de MultiLauncher</string>
+    <string name="settings_exit_mlauncher_description">Cambie a su iniciador predeterminado temporalmente.</string>
+    <string name="settings_exit_mlauncher_dialog">Elige un lanzador</string>
     <!-- Strings used for features settings -->
     <string name="features_settings_title">Características</string>
     <string name="user_preferences">Preferencias del usuario</string>
@@ -22,10 +41,12 @@
     <string name="font_family">Familia tipográfica</string>
     <string name="settings_text_size">Texto en pantalla</string>
     <string name="hide_search_view">Ocultar vista de búsqueda</string>
-    <string name="show_floating_button">Mostrar botón flotante</string>
+    <string name="show_floating_button">Mostrar botones de acceso directo</string>
+    <string name="lock_orientation">Orientación de la cerradura</string>
     <string name="search">Buscar</string>
     <string name="search_engine">Buscador</string>
     <string name="auto_show_keyboard">Teclado automático</string>
+    <string name="show_az_sidebar">Mostrar la barra lateral de la A a la Z</string>
     <string name="search_from_start">Buscar aplicaciones desde el principio.</string>
     <string name="home_management">Inicio &amp; Gestión de aplicaciones</string>
     <string name="auto_open_apps">Abrir aplicaciones</string>
@@ -43,6 +64,8 @@
     <string name="show_battery">Mostrar nivel de batería</string>
     <string name="show_battery_icon">Mostrar icono de batería</string>
     <string name="show_total_screen_time">Mostrar el tiempo total de pantalla</string>
+    <string name="weather">Clima</string>
+    <string name="show_weather">Mostrar el tiempo</string>
     <!-- Strings used for look & feel settings -->
     <string name="look_feel_settings_title">Mira &amp; Siente</string>
     <string name="text_size_adjustments">Texto &amp; Ajustes de tamaño</string>
@@ -62,8 +85,10 @@
     <string name="number_of_recents">Número de aplicaciones recientes</string>
     <string name="show_app_usage_stats">Mostrar estadísticas de uso de la aplicación</string>
     <string name="select_app_icons">Seleccionar iconos de aplicaciones</string>
+    <string name="enable_filter_strength">Habilitar la intensidad del filtro</string>
     <string name="filter_strength">Fuerza del filtro</string>
-    <string name="background_opacity">Transparencia</string>
+    <string name="show_background">Mostrar antecedentes</string>
+    <string name="background_opacity">Transparencia de fondo</string>
     <string name="element_alignment">Alineación de elementos</string>
     <string name="date_alignment">Fecha</string>
     <string name="clock_alignment">Reloj</string>
@@ -79,6 +104,8 @@
     <string name="alarm_color">Alarma</string>
     <string name="daily_word_color">Palabra diaria</string>
     <string name="battery_color">Batería</string>
+    <string name="rainbow_shortcuts">Atajos de arcoíris</string>
+    <string name="shortcuts_color">Atajos</string>
     <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">Gestos</string>
     <string name="tap_click_actions">Acciones de tocar/hacer clic</string>
@@ -101,6 +128,7 @@
     <string name="private_space">Espacios privados</string>
     <string name="show_notifications">Mostrar notificación</string>
     <string name="show_app_list">Mostrar lista de aplicaciones</string>
+    <string name="show_notes_manager">Administrador de notas del programa</string>
     <string name="show_digital_wellbeing">Mostrar Bienestar Digital</string>
     <string name="open_quick_settings">Ajustes rápidos</string>
     <string name="show_recents">Mostrar Recientes</string>
@@ -108,6 +136,20 @@
     <string name="take_a_screenshot">Captura de pantalla</string>
     <string name="left_page">Ir a la página izquierda</string>
     <string name="right_page">Ir a la página derecha</string>
+    <!-- Strings used for notes settings -->
+    <string name="notes_settings_title">Notas</string>
+    <string name="display_options">Opciones de visualización</string>
+    <string name="auto_expand_notes">Notas de expansión automática</string>
+    <string name="click_to_edit_delete">Haga clic para editar/eliminar</string>
+    <string name="notes_colors">Notas Colores</string>
+    <string name="notes_background_color">Notas de fondo</string>
+    <string name="bubble_background_color">Fondo de burbuja</string>
+    <string name="bubble_message_color">Mensaje de burbuja</string>
+    <string name="bubble_date_time_color">Fecha/hora de la burbuja</string>
+    <string name="bubble_category_color">Categoría de burbuja</string>
+    <string name="input_colors">Colores de entrada</string>
+    <string name="message_input_color">Entrada de mensajes</string>
+    <string name="message_input_hint_color">Sugerencia de entrada de mensaje</string>
     <!-- Strings used for advanced settings -->
     <string name="advanced_settings_title">Configuración avanzada</string>
     <string name="advanced_settings_app_info_title">Información de la aplicación</string>
@@ -140,20 +182,28 @@
     <string name="hidden_apps">Aplicaciones ocultas</string>
     <string name="favorite_apps">Aplicaciones favoritas</string>
     <!-- Accessibility/Help Strings -->
-    <string name="accessibility_service_name">Acciones de mLauncher</string>
-    <string name="accessibility_service_description">Se requiere el permiso de accesibilidad para habilitar el bloqueo por doble toque o abrir la configuración rápida. Cualquier dato recopilado a través de este permiso no saldrá de su dispositivo.</string>
+    <string name="accessibility_service_name">Accesibilidad de MultiLauncher</string>
+    <string name="accessibility_service_why_we_need">¿Por qué necesitamos permiso de accesibilidad?</string>
+    <string name="accessibility_service_description">Este servicio de accesibilidad permite a MultiLauncher realizar ciertas acciones, como bloquear la pantalla o abrir la configuración rápida. Nuestro servicio de accesibilidad no recopila ni comparte datos.</string>
+    <string name="accessibility_service_more_info">    MultiLauncher requiere acceso al Servicio de Accesibilidad para habilitar funciones como:\n\n
+    • Bloquear la pantalla con un gesto o atajo\n
+    • Abrir el panel de Configuración rápida rápidamente\n\n
+    Este permiso le permite a MultiLauncher realizar estas acciones en su nombre, pero no recopilamos, almacenamos ni compartimos ningún dato personal o confidencial a través de este servicio.\n\n
+    Puede deshabilitar este acceso en cualquier momento desde la configuración de su dispositivo.
+    </string>
     <string name="can_not_delete_system_apps">No puedo eliminar aplicaciones del sistema</string>
     <string name="please_select_app">Por favor seleccione una aplicación</string>
     <string name="drawer_list_empty_hint">No hay aplicaciones</string>
     <string name="long_press_for_settings">Manten pulsado en cualquier lugar para la configuración</string>
     <string name="long_press_to_select_app">Mantenga pulsado para seleccionar la aplicación</string>
+    <string name="tap_button_for_notes">Toque el logotipo del iniciador para ver las notas</string>
     <string name="swipe_up_for_apps">Deslize hacia arriba para ver las aplicaciones</string>
     <string name="app_drawer_tips">Sugerencia: deslice hacia abajo para descartar. Desplace para ocultar el teclado.</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Cancelación de autenticación.</string>
     <string name="text_authentication_error">Error de autenticación:%1$s(código %2$d)</string>
     <string name="text_authentication_failed">La autenticación falló.</string>
-    <string name="text_biometric_login">Inicio de sesión biométrico para mLauncher</string>
+    <string name="text_biometric_login">Configuración de MultiLauncher para inicio de sesión biométrico</string>
     <string name="text_biometric_login_app">Inicio de sesión biométrico para %1$s</string>
     <string name="text_biometric_login_sub">Inicie sesión con su credencial biométrica</string>
     <!-- Crash Strings -->
@@ -161,6 +211,14 @@
     <string name="acra_dialog_text">Lo sentimos, pero %1$s ha encontrado un problema inesperado y necesita cerrarse. Ayúdenos a mejorar enviando un informe de fallos.\n\n%1$s valora su privacidad y los datos recopilados se utilizan únicamente para mejorar la estabilidad de la aplicación. No se recopila información personal. ¡Gracias por tu apoyo!</string>
     <string name="acra_send_report">Enviar reporte</string>
     <string name="acra_dont_send">No enviar</string>
+    <!-- Share Strings -->
+    <string name="share_application">Compartir aplicación</string>
+    <string name="share_note">Compartir nota</string>
+    <!-- Icon Pack Strings -->
+    <string name="choose_icon_pack">Elija el paquete de iconos</string>
+    <string name="apply_icon_pack">Aplicar paquete de iconos</string>
+    <string name="applying_icon_pack">Dándole a tus íconos una apariencia renovada…</string>
+    <string name="apply_icon_pack_are_you_sure">¿Estás seguro de que quieres aplicar este paquete de iconos?\n\n%1$s</string>
     <!-- Settings Strings -->
     <string name="left">Izquierda</string>
     <string name="right">Derecha</string>
@@ -168,6 +226,8 @@
     <string name="dark">Oscuro</string>
     <string name="light">Claro</string>
     <string name="system_default">Por defecto</string>
+    <string name="system_custom">Costumbre</string>
+    <string name="system_custom_plus">Personalizado (%1$s)</string>
     <string name="restart_launcher">Reiniciar el lanzador</string>
     <string name="delete">Borrar</string>
     <string name="hide">Ocultar</string>
@@ -177,20 +237,64 @@
     <string name="rename">Renombrar</string>
     <string name="info">Información</string>
     <string name="okay">OK</string>
+    <string name="apply">Aplicar</string>
     <string name="reset">Restablecer</string>
     <string name="cancel">Cancelar</string>
-    <string name="enabled">Activado</string>
+    <string name="save">Ahorrar</string>
     <string name="disabled">Desactivado</string>
     <string name="open">Abrir</string>
     <string name="close">Cerrar</string>
+    <string name="next">Próximo</string>
+    <string name="start">Comenzar</string>
+    <string name="copy">Copiar</string>
+    <string name="allow">Permitir</string>
+    <string name="deny">Denegar</string>
+    <string name="send">Enviar</string>
+    <string name="message_hint">Introduce un mensaje…</string>
+    <string name="message_category">Categoría: %1$s</string>
     <!-- Permissions Strings -->
     <string name="permission_required">Se requiere permiso</string>
     <string name="access_usage_data_permission">Para continuar, habilite el permiso para acceder a los datos de uso en la configuración de su dispositivo.</string>
     <string name="goto_settings">Ir a Configuración</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">Esta funcionalidad requiere Android 15 o posterior.</string>
-    <string name="toast_private_space_default_home_screen">mLauncher debe ser la pantalla de inicio predeterminada para acceder al espacio privado.</string>
+    <string name="toast_private_space_default_home_screen">MultiLauncher debe ser la pantalla de inicio predeterminada para acceder al espacio privado.</string>
     <string name="toast_private_space_locked">Espacio privado bloqueado</string>
     <string name="toast_private_space_unlocked">Espacio privado desbloqueado</string>
     <string name="toast_private_space_not_available">El espacio privado no está disponible</string>
+    <string name="notes_list_empty_hint">Comienza tu primera nota a continuación.</string>
+    <string name="confirm_delete_title">Eliminar nota</string>
+    <string name="confirm_delete_message">¿Estás seguro que deseas eliminar esta nota?</string>
+    <string name="edit_note">Editar nota</string>
+    <string name="category">Categoría</string>
+    <string name="priority">Prioridad</string>
+    <string-array name="priorities">
+        <item>Bajo</item>
+        <item>Medio</item>
+        <item>Alto</item>
+    </string-array>
+    <string-array name="categories">
+        <item>Ninguno</item>
+        <item>Aniversarios</item>
+        <item>Equipo</item>
+        <item>Cumpleaños</item>
+        <item>Quehaceres</item>
+        <item>Creativo</item>
+        <item>Entretenimiento</item>
+        <item>Mandados</item>
+        <item>Finanzas</item>
+        <item>Aptitud física</item>
+        <item>Objetivos</item>
+        <item>Salud</item>
+        <item>Aficiones</item>
+        <item>Hogar</item>
+        <item>Aprendiendo</item>
+        <item>Personal</item>
+        <item>Proyectos</item>
+        <item>Compras</item>
+        <item>Social</item>
+        <item>Estudiar</item>
+        <item>Viajar</item>
+        <item>Trabajar</item>
+    </string-array>
 </resources>

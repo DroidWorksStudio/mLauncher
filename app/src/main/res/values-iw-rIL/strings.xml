@@ -3,17 +3,36 @@
     <!-- Base Settings -->
     <string name="select_app">בחר יישום</string>
     <string name="show_apps">כל היישומים</string>
+    <string name="welcome_to_launcher">ברוך בואך אל %1$s</string>
+    <string name="continue_by_you_agree">על ידי המשך ניתנה הסכמתך ל %1$s</string>
+    <string name="usage_access_permission">הרשאות גישה לנתוני שימוש</string>
+    <string name="location_access_permission">הרשאות גישה למיקום</string>
+    <string name="accessibility_access_permission">הרשאות נגישות</string>
+    <string name="grant_permission">עליך לתת הרשאה</string>
+    <string name="grant_usage_permission">כדי להמשיך, אנא הענק הרשאת גישה לנתוני שימוש.</string>
+    <string name="reason_usage_permission">אפליקציה זו צריכה גישת שימוש כדי להציג את האפליקציות הנפוצות ביותר שלך, לעקוב אחר זמן המסך ולשפר את החוויה שלך. איננו אוספים או משתפים נתונים אישיים.</string>
+    <string name="grant_location_permission">כדי להמשיך, אנא הענק הרשאת מיקום.</string>
+    <string name="reason_location_permission">אפליקציה זו זקוקה לגישה למיקום כדי לספק עדכוני מזג אוויר מדויקים על סמך המיקום הנוכחי שלך. אנחנו לא אוספים או משתפים נתונים אישיים כלשהם.</string>
+    <string name="grant_accessibility_permission">כדי להמשיך, אנא הענק הרשאת נגישות.</string>
+    <string name="reason_accessibility_permission">MultiLauncher זקוק להרשאת נגישות כדי לספק תכונות משופרות, כגון נעילת המסך ופתיחת הגדרות מהירות. פונקציות אלו עוזרות לשפר את השימושיות. אנחנו לא אוספים או משתפים נתונים כלשהם.</string>
+    <string name="permission_granted">ניתנה רשות! אתה יכול להמשיך.</string>
+    <string name="this_can_be_disabled_later">* ייתכן שהרשאה זו תושבת מאוחר יותר.</string>
     <!-- Strings used for settings menus -->
-    <string name="settings_name">הגדרות mLauncher</string>
+    <string name="settings_name">הגדרות MultiLauncher</string>
     <string name="settings_features_title">תכונות</string>
     <string name="settings_features_description">הגדרות לשיפור היעילות שלך.</string>
     <string name="settings_look_feel_title">מראה &amp; תחושה</string>
     <string name="settings_look_feel_description">מתן מגע אישי למסך הבית שלך.</string>
     <string name="settings_gestures_title">מחוות</string>
     <string name="settings_gestures_description">התאמה אישית של מחוות לניווט מהיר וקל.</string>
+    <string name="settings_notes_title">הערות</string>
+    <string name="settings_notes_description">התאם אישית את ההערות שלך כך שיתאימו לסגנון שלך.</string>
     <string name="settings_favorite_apps_title">יישומים מועדפים</string>
     <string name="settings_hidden_apps_title">יישומים מוסתרים</string>
     <string name="settings_advanced_title">הגדרות מתקדמות</string>
+    <string name="settings_exit_mlauncher_title">צא מ-MultiLauncher</string>
+    <string name="settings_exit_mlauncher_description">עבור למפעיל ברירת המחדל שלך באופן זמני.</string>
+    <string name="settings_exit_mlauncher_dialog">בחר משגר</string>
     <!-- Strings used for features settings -->
     <string name="features_settings_title">תכונות</string>
     <string name="user_preferences">העדפות משתמש</string>
@@ -22,10 +41,12 @@
     <string name="font_family">משפחת גופן</string>
     <string name="settings_text_size">הגדרות גודל טקסט</string>
     <string name="hide_search_view">הסתר תצוגת חיפוש</string>
-    <string name="show_floating_button">הצג כפתור צף</string>
+    <string name="show_floating_button">הצג כפתורי קיצור</string>
+    <string name="lock_orientation">נעילת כיוון</string>
     <string name="search">חיפוש</string>
     <string name="search_engine">מנוע חיפוש</string>
     <string name="auto_show_keyboard">הצג מקלדת בחיפוש</string>
+    <string name="show_az_sidebar">הצג את סרגל הצד של AZ</string>
     <string name="search_from_start">חיפוש אפליקציה מההתחלה</string>
     <string name="home_management">דף הבית &amp; ניהול יישומים</string>
     <string name="auto_open_apps">פתיחה אוטומטית של יישומים</string>
@@ -43,6 +64,8 @@
     <string name="show_battery">הצג סוללה</string>
     <string name="show_battery_icon">הצגת סמליל סוללה</string>
     <string name="show_total_screen_time">הצג זמן מסך כולל</string>
+    <string name="weather">מֶזֶג אֲוִיר</string>
+    <string name="show_weather">הצג מזג אוויר</string>
     <!-- Strings used for look & feel settings -->
     <string name="look_feel_settings_title">מראה &amp; תחושה</string>
     <string name="text_size_adjustments">טקסט &amp; התאמות גודל</string>
@@ -62,8 +85,10 @@
     <string name="number_of_recents">מספר היישומים האחרונים</string>
     <string name="show_app_usage_stats">הצג סטטיסטיקות שימוש ביישומים</string>
     <string name="select_app_icons">בחר סימלוני אפליקציה</string>
+    <string name="enable_filter_strength">הפעל עוצמת סינון</string>
     <string name="filter_strength">חוזק מסנן</string>
-    <string name="background_opacity">אטימות רקע</string>
+    <string name="show_background">הצג רקע</string>
+    <string name="background_opacity">שקיפות רקע</string>
     <string name="element_alignment">יישור אלמנטים</string>
     <string name="date_alignment">תאריך</string>
     <string name="clock_alignment">שעון</string>
@@ -79,6 +104,8 @@
     <string name="alarm_color">שעון מעורר</string>
     <string name="daily_word_color">מסר יומי</string>
     <string name="battery_color">סוללה</string>
+    <string name="rainbow_shortcuts">קיצורי קשת בענן</string>
+    <string name="shortcuts_color">קיצורי דרך</string>
     <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">מחוות</string>
     <string name="tap_click_actions">פעולות הקשה/לחיצה</string>
@@ -101,6 +128,7 @@
     <string name="private_space">מרחבים פרטיים</string>
     <string name="show_notifications">הצגת התרעות</string>
     <string name="show_app_list">הצגת רשימת יישומים</string>
+    <string name="show_notes_manager">הצג את מנהל ההערות</string>
     <string name="show_digital_wellbeing">הצג שימוש חכם בדיגיטל</string>
     <string name="open_quick_settings">הגדרות מהירות</string>
     <string name="show_recents">הצגת האחרונים</string>
@@ -108,6 +136,20 @@
     <string name="take_a_screenshot">צלם מסך</string>
     <string name="left_page">מעבר לדף השמאלי</string>
     <string name="right_page">מעבר לדף הימני</string>
+    <!-- Strings used for notes settings -->
+    <string name="notes_settings_title">הערות</string>
+    <string name="display_options">אפשרויות תצוגה</string>
+    <string name="auto_expand_notes">הרחבת הערות אוטומטית</string>
+    <string name="click_to_edit_delete">לחץ כדי לערוך/למחוק</string>
+    <string name="notes_colors">הערות צבעים</string>
+    <string name="notes_background_color">רקע הערות</string>
+    <string name="bubble_background_color">רקע בועות</string>
+    <string name="bubble_message_color">הודעת בועה</string>
+    <string name="bubble_date_time_color">תאריך/שעה בועה</string>
+    <string name="bubble_category_color">קטגוריית בועות</string>
+    <string name="input_colors">קלט צבעים</string>
+    <string name="message_input_color">קלט הודעה</string>
+    <string name="message_input_hint_color">רמז להזנת הודעה</string>
     <!-- Strings used for advanced settings -->
     <string name="advanced_settings_title">מתקדם</string>
     <string name="advanced_settings_app_info_title">מידע על היישום</string>
@@ -140,20 +182,30 @@
     <string name="hidden_apps">יישומים מוסתרים</string>
     <string name="favorite_apps">יישומים מועדפים</string>
     <!-- Accessibility/Help Strings -->
-    <string name="accessibility_service_name"> שירות פעולות של mLauncher</string>
-    <string name="accessibility_service_description">שירות נגישות זה מאפשר ל-mLauncher לבצע פעולות מסוימות כמו נעילת המסך או פתיחת ההגדרות המהירות. שירות הנגישות שלנו אינו אוסף או משתף נתונים כלשהם.</string>
+    <string name="accessibility_service_name">נגישות רב-לאנצ\'ר</string>
+    <string name="accessibility_service_why_we_need">למה אנחנו צריכים אישור נגישות</string>
+    <string name="accessibility_service_description">שירות נגישות זה מאפשר ל-MultiLauncher לבצע פעולות מסוימות כמו נעילת המסך או פתיחת ההגדרות המהירות. שירות הנגישות שלנו אינו אוסף או משתף נתונים כלשהם.</string>
+    <string name="accessibility_service_more_info">MultiLauncher דורשת גישה לשירות הנגישות כדי לאפשר תכונות כגון:
+
+• נעילת המסך באמצעות מחווה או קיצור דרך
+• פתיחה מהירה של לוח ההגדרות המהירות
+
+הרשאה זו מאפשרת ל-MultiLauncher לבצע את הפעולות האלו עבורך, אך איננו אוספים, שומרים או משתפים מידע אישי או רגיש דרך שירות זה.
+
+תוכל להשבית גישה זו בכל עת מהגדרות המכשיר שלך.</string>
     <string name="can_not_delete_system_apps">לא ניתן למחוק יישומי מערכת</string>
     <string name="please_select_app">אנא בחר יישום</string>
     <string name="drawer_list_empty_hint">לא נמצאו יישומים</string>
     <string name="long_press_for_settings">לחץ לחיצה ארוכה בכל מקום להגדרות</string>
     <string name="long_press_to_select_app">לחץ לחיצה ארוכה כדי לבחור יישום</string>
+    <string name="tap_button_for_notes">הקש על לוגו המשגר להערות</string>
     <string name="swipe_up_for_apps">החלק למעלה לכל היישומים</string>
     <string name="app_drawer_tips">טיפ: החלק למטה בכדי לבטל. החלק להסתרת המקלדת.</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">ביטול האימות.</string>
     <string name="text_authentication_error">שגיאת אימות:%1$s(קוד %2$d)</string>
     <string name="text_authentication_failed">אימות נכשל.</string>
-    <string name="text_biometric_login">התחברות ביומטרית עבור mLauncher</string>
+    <string name="text_biometric_login">התחברות ביומטרית הגדרות MultiLauncher</string>
     <string name="text_biometric_login_app">התחברות ביומטרית עבור %1$s</string>
     <string name="text_biometric_login_sub">היכנס באמצעות האישור הביומטרי שלך</string>
     <!-- Crash Strings -->
@@ -161,6 +213,14 @@
     <string name="acra_dialog_text">אנו מצטערים, אבל %1$s נתקל בבעיה בלתי צפויה וצריך להיסגר. אנא עזור לנו להשתפר על ידי שליחת דוח קריסה.\n\n%1$s מעריך את הפרטיות שלך והנתונים שנאספים משמשים אך ורק לשיפור יציבות האפליקציה. לא נאסף מידע אישי. תודה על תמיכתך!</string>
     <string name="acra_send_report">שלח דו\"ח</string>
     <string name="acra_dont_send">אל תשלח</string>
+    <!-- Share Strings -->
+    <string name="share_application">שתף את האפליקציה</string>
+    <string name="share_note">שתף הערה</string>
+    <!-- Icon Pack Strings -->
+    <string name="choose_icon_pack">בחר חבילת אייקונים</string>
+    <string name="apply_icon_pack">החלת חבילת אייקונים</string>
+    <string name="applying_icon_pack">נותן לאייקונים שלך מראה רענן…</string>
+    <string name="apply_icon_pack_are_you_sure">האם אתה בטוח שברצונך להחיל את חבילת האייקונים הזו?\n\n%1$s</string>
     <!-- Settings Strings -->
     <string name="left">שמאל</string>
     <string name="right">ימין</string>
@@ -168,6 +228,8 @@
     <string name="dark">כהה</string>
     <string name="light">בהיר</string>
     <string name="system_default">מערכת</string>
+    <string name="system_custom">מִנְהָג</string>
+    <string name="system_custom_plus">מותאם אישית (%1$s)</string>
     <string name="restart_launcher">הפעל מחדש את המשגר</string>
     <string name="delete">למחוק</string>
     <string name="hide">הסתרה</string>
@@ -177,20 +239,64 @@
     <string name="rename">שינוי שם</string>
     <string name="info">מידע</string>
     <string name="okay">אוקיי</string>
+    <string name="apply">לִפְנוֹת</string>
     <string name="reset">אפס</string>
     <string name="cancel">בטל</string>
-    <string name="enabled">מופעל</string>
+    <string name="save">לְהַצִיל</string>
     <string name="disabled">מושבת</string>
     <string name="open">פתח</string>
     <string name="close">סגור</string>
+    <string name="next">הבא</string>
+    <string name="start">התחל</string>
+    <string name="copy">לְהַעְתִיק</string>
+    <string name="allow">לְהַתִיר</string>
+    <string name="deny">לְהַכּחִישׁ</string>
+    <string name="send">לִשְׁלוֹחַ</string>
+    <string name="message_hint">הזן הודעה…</string>
+    <string name="message_category">קטגוריה: %1$s</string>
     <!-- Permissions Strings -->
     <string name="permission_required">נדרשת הרשאה</string>
     <string name="access_usage_data_permission">כדי להמשיך, אפשר הרשאת גישה לנתוני שימוש בהגדרות המכשיר שלך.</string>
     <string name="goto_settings">עבור אל הגדרות</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">פונקציונליות זו דורשת אנדרואיד 15 ואילך.</string>
-    <string name="toast_private_space_default_home_screen">mLauncher צריך להיות מסך הבית המוגדר כברירת מחדל כדי לגשת למרחב פרטי.</string>
+    <string name="toast_private_space_default_home_screen">MultiLauncher צריך להיות מסך הבית המוגדר כברירת מחדל כדי לגשת למרחב פרטי.</string>
     <string name="toast_private_space_locked">מרחב פרטי נעול</string>
     <string name="toast_private_space_unlocked">מרחב פרטי לא נעול</string>
     <string name="toast_private_space_not_available">מרחב פרטי אינו זמין</string>
+    <string name="notes_list_empty_hint">התחל את ההערה הראשונה שלך למטה.</string>
+    <string name="confirm_delete_title">מחק הערה</string>
+    <string name="confirm_delete_message">האם אתה בטוח שברצונך למחוק הערה זו?</string>
+    <string name="edit_note">ערוך הערה</string>
+    <string name="category">קָטֵגוֹרִיָה</string>
+    <string name="priority">עֲדִיפוּת</string>
+    <string-array name="priorities">
+        <item>נָמוּך</item>
+        <item>בֵּינוֹנִי</item>
+        <item>גָבוֹהַ</item>
+    </string-array>
+    <string-array name="categories">
+        <item>אַף לֹא אֶחָד</item>
+        <item>ימי נישואין</item>
+        <item>פגישות</item>
+        <item>יוֹם הוּלֶדֶת</item>
+        <item>מטלות</item>
+        <item>יְצִירָתִי</item>
+        <item>בידור</item>
+        <item>סידורים</item>
+        <item>לְמַמֵן</item>
+        <item>הַתאָמָה</item>
+        <item>מטרות</item>
+        <item>בְּרִיאוּת</item>
+        <item>תחביבים</item>
+        <item>בַּיִת</item>
+        <item>לְמִידָה</item>
+        <item>אִישִׁי</item>
+        <item>פרויקטים</item>
+        <item>קניות</item>
+        <item>חֶברָתִי</item>
+        <item>לִלמוֹד</item>
+        <item>לִנְסוֹעַ</item>
+        <item>עֲבוֹדָה</item>
+    </string-array>
 </resources>

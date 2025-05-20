@@ -3,17 +3,36 @@
     <!-- Base Settings -->
     <string name="select_app">Uygulama Seçin</string>
     <string name="show_apps">Tüm uygulamalar</string>
+    <string name="welcome_to_launcher">%1$s\'a hoş geldiniz</string>
+    <string name="continue_by_you_agree">Devam ederek %1$s\'ı kabul etmiş olursunuz</string>
+    <string name="usage_access_permission">Kullanım Erişim İzinleri</string>
+    <string name="location_access_permission">Konum Erişim İzinleri</string>
+    <string name="accessibility_access_permission">Erişilebilirlik İzinleri</string>
+    <string name="grant_permission">İzin Vermek</string>
+    <string name="grant_usage_permission">Devam etmek için lütfen Kullanım Erişim iznini verin.</string>
+    <string name="reason_usage_permission">Bu uygulamanın en çok kullandığınız uygulamaları göstermesi, ekran süresini takip etmesi ve deneyiminizi iyileştirmesi için Kullanım Erişimine ihtiyacı vardır. Hiçbir kişisel veriyi toplamıyoruz veya paylaşmıyoruz.</string>
+    <string name="grant_location_permission">Devam etmek için lütfen Konum iznini verin.</string>
+    <string name="reason_location_permission">Bu uygulama, mevcut konumunuza göre doğru hava durumu güncellemeleri sağlamak için Konum Erişimine ihtiyaç duyar. Hiçbir kişisel veriyi toplamıyoruz veya paylaşmıyoruz.</string>
+    <string name="grant_accessibility_permission">Devam etmek için lütfen Erişilebilirlik iznini verin.</string>
+    <string name="reason_accessibility_permission">MultiLauncher\'ın ekranı kilitleme ve hızlı ayarları açma gibi gelişmiş özellikler sunması için Erişilebilirlik iznine ihtiyacı vardır. Bu işlevler kullanılabilirliği iyileştirmeye yardımcı olur. Hiçbir veri toplamıyoruz veya paylaşmıyoruz.</string>
+    <string name="permission_granted">İzin Verildi! Devam edebilirsiniz.</string>
+    <string name="this_can_be_disabled_later">* Bu izin daha sonra devre dışı bırakılabilir.</string>
     <!-- Strings used for settings menus -->
-    <string name="settings_name">mLauncher Ayarları</string>
+    <string name="settings_name">MultiLauncher Ayarları</string>
     <string name="settings_features_title">Özellikler</string>
     <string name="settings_features_description">Verimliliğinizi artırın.</string>
     <string name="settings_look_feel_title">Bak &amp; Hisset</string>
     <string name="settings_look_feel_description">Ana ekranınıza kişisel bir dokunuş katın.</string>
     <string name="settings_gestures_title">Jestler</string>
     <string name="settings_gestures_description">Hızlı ve kolay gezinme için hareketleri özelleştirin.</string>
+    <string name="settings_notes_title">Notlar</string>
+    <string name="settings_notes_description">Notlarınızı tarzınıza uyacak şekilde kişiselleştirin.</string>
     <string name="settings_favorite_apps_title">Favori Uygulamalar</string>
     <string name="settings_hidden_apps_title">Gizli uygulamalar</string>
     <string name="settings_advanced_title">Gelişmiş Ayarlar</string>
+    <string name="settings_exit_mlauncher_title">MultiLauncher\'dan çık</string>
+    <string name="settings_exit_mlauncher_description">Geçici olarak varsayılan başlatıcınıza geçin.</string>
+    <string name="settings_exit_mlauncher_dialog">Bir başlatıcı seçin</string>
     <!-- Strings used for features settings -->
     <string name="features_settings_title">Özellikler</string>
     <string name="user_preferences">Kullanıcı Tercihleri</string>
@@ -22,10 +41,12 @@
     <string name="font_family">Font ailesi</string>
     <string name="settings_text_size">Ayarlar Metin Boyutu</string>
     <string name="hide_search_view">Arama Görünümünü Gizle</string>
-    <string name="show_floating_button">Kayan Düğmeyi Göster</string>
+    <string name="show_floating_button">Kısayol Düğmelerini Göster</string>
+    <string name="lock_orientation">Kilit Yönlendirmesi</string>
     <string name="search">Aramak</string>
     <string name="search_engine">Arama motoru</string>
     <string name="auto_show_keyboard">Klavye\'yi otomatik göster</string>
+    <string name="show_az_sidebar">AZ Kenar Çubuğunu Göster</string>
     <string name="search_from_start">Uygulama isminin başından aramaya başla.</string>
     <string name="home_management">Ana Sayfa &amp; Uygulama Yönetimi</string>
     <string name="auto_open_apps">Uygulamaları otomatik aç</string>
@@ -43,6 +64,8 @@
     <string name="show_battery">Pil\'i göster</string>
     <string name="show_battery_icon">Pil Simgesini Göster</string>
     <string name="show_total_screen_time">Toplam Ekran Süresini Göster</string>
+    <string name="weather">Hava durumu</string>
+    <string name="show_weather">Hava Durumunu Göster</string>
     <!-- Strings used for look & feel settings -->
     <string name="look_feel_settings_title">Bak &amp; Hisset</string>
     <string name="text_size_adjustments">Metin &amp; Boyut Ayarlamaları</string>
@@ -62,8 +85,10 @@
     <string name="number_of_recents">Son Uygulama Sayısı</string>
     <string name="show_app_usage_stats">Uygulama Kullanım İstatistiklerini Göster</string>
     <string name="select_app_icons">Uygulama Simgelerini Seçin</string>
+    <string name="enable_filter_strength">Filtre Gücünü Etkinleştir</string>
     <string name="filter_strength">Filtre Gücü</string>
-    <string name="background_opacity">Arka Plan Opaklığı</string>
+    <string name="show_background">Arkaplanı Göster</string>
+    <string name="background_opacity">Arka Plan Şeffaflığı</string>
     <string name="element_alignment">Eleman Hizalaması</string>
     <string name="date_alignment">Tarih</string>
     <string name="clock_alignment">Saat</string>
@@ -79,6 +104,8 @@
     <string name="alarm_color">Alarm</string>
     <string name="daily_word_color">Günlük Sözcük</string>
     <string name="battery_color">Pil</string>
+    <string name="rainbow_shortcuts">Gökkuşağı Kısayolları</string>
+    <string name="shortcuts_color">Kısayollar</string>
     <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">Jestler</string>
     <string name="tap_click_actions">Dokunma/Tıklama Eylemleri</string>
@@ -101,6 +128,7 @@
     <string name="private_space">Özel Alanlar</string>
     <string name="show_notifications">Bildirimi Göster</string>
     <string name="show_app_list">Uygulama Listesini Göster</string>
+    <string name="show_notes_manager">Gösteri Notları Yöneticisi</string>
     <string name="show_digital_wellbeing">Dijital Refahı Göster</string>
     <string name="open_quick_settings">Hızlı Ayarlar</string>
     <string name="show_recents">Son Kullanılanları Göster</string>
@@ -108,6 +136,20 @@
     <string name="take_a_screenshot">Ekran görüntüsü al</string>
     <string name="left_page">Sol sayfaya git</string>
     <string name="right_page">Sağ sayfaya git</string>
+    <!-- Strings used for notes settings -->
+    <string name="notes_settings_title">Notlar</string>
+    <string name="display_options">Görüntüleme Seçenekleri</string>
+    <string name="auto_expand_notes">Otomatik Genişletme Notları</string>
+    <string name="click_to_edit_delete">Düzenlemek/Silmek için tıklayın</string>
+    <string name="notes_colors">Notlar Renkler</string>
+    <string name="notes_background_color">Notlar Arkaplan</string>
+    <string name="bubble_background_color">Kabarcık Arkaplanı</string>
+    <string name="bubble_message_color">Balon Mesajı</string>
+    <string name="bubble_date_time_color">Balon Tarih/Saat</string>
+    <string name="bubble_category_color">Balon Kategorisi</string>
+    <string name="input_colors">Giriş Renkleri</string>
+    <string name="message_input_color">Mesaj Girişi</string>
+    <string name="message_input_hint_color">Mesaj Giriş İpucu</string>
     <!-- Strings used for advanced settings -->
     <string name="advanced_settings_title">Gelişmiş Ayarlar</string>
     <string name="advanced_settings_app_info_title">Uygulama Bilgileri</string>
@@ -140,20 +182,28 @@
     <string name="hidden_apps">Gizli uygulamalar</string>
     <string name="favorite_apps">Favori Uygulamalar</string>
     <!-- Accessibility/Help Strings -->
-    <string name="accessibility_service_name">mLauncher Eylemler Hizmeti</string>
-    <string name="accessibility_service_description">Bu erişilebilirlik hizmeti, mLauncher\'ın ekranı kilitleme veya hızlı ayarları açma gibi belirli işlemleri yapmasını sağlar. Erişilebilirlik hizmetimiz herhangi bir veri toplamaz veya paylaşmaz.</string>
+    <string name="accessibility_service_name">MultiLauncher Erişilebilirliği</string>
+    <string name="accessibility_service_why_we_need">Erişilebilirlik İznine Neden İhtiyacımız Var?</string>
+    <string name="accessibility_service_description">Bu erişilebilirlik hizmeti MultiLauncher\'ın ekranı kilitleme veya hızlı ayarları açma gibi belirli eylemleri gerçekleştirmesine olanak tanır. Erişilebilirlik hizmetimiz hiçbir veri toplamaz veya paylaşmaz.</string>
+    <string name="accessibility_service_more_info">    MultiLauncher, aşağıdaki gibi özellikleri etkinleştirmek için Erişilebilirlik Hizmetine erişim gerektirir:\n\n
+    • Ekranı bir hareket veya kısayolla kilitleme\n
+    • Hızlı Ayarlar panelini hızla açma\n\n
+    Bu izin, MultiLauncher\'ın bu eylemleri sizin adınıza gerçekleştirmesine izin verir, ancak bu hizmet aracılığıyla hiçbir kişisel veya hassas veriyi toplamaz, saklamaz veya paylaşmayız.\n\n
+    Bu erişimi istediğiniz zaman cihaz ayarlarınızdan devre dışı bırakabilirsiniz.
+    </string>
     <string name="can_not_delete_system_apps">Sistem Uygulamaları Silinemiyor</string>
     <string name="please_select_app">Lütfen bir uygulama seçin</string>
     <string name="drawer_list_empty_hint">Herhangi bir uygulama bulunamadı</string>
     <string name="long_press_for_settings">Ayarlar için herhangi bir yere uzun bas</string>
     <string name="long_press_to_select_app">Uygulamayı seçmek için uzun basın</string>
+    <string name="tap_button_for_notes">Notlar için başlatıcı logosuna dokunun</string>
     <string name="swipe_up_for_apps">Tüm uygulamalar için yukarı kaydırın</string>
     <string name="app_drawer_tips">İpucu: Kapatmak için aşağı kaydırın. Klavyeyi gizlemek için kaydırın.</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Kimlik Doğrulama İptali.</string>
     <string name="text_authentication_error">Kimlik doğrulama hatası:%1$s(kod %2$d)</string>
     <string name="text_authentication_failed">Kimlik doğrulama başarısız oldu.</string>
-    <string name="text_biometric_login">mLauncher için biyometrik giriş</string>
+    <string name="text_biometric_login">Biyometrik giriş MultiLauncher Ayarları</string>
     <string name="text_biometric_login_app">%1$siçin biyometrik giriş</string>
     <string name="text_biometric_login_sub">Biyometrik kimlik bilgilerinizi kullanarak giriş yapın</string>
     <!-- Crash Strings -->
@@ -161,6 +211,14 @@
     <string name="acra_dialog_text">Üzgünüz ama %1$s beklenmedik bir sorunla karşılaştı ve kapatılması gerekiyor. Lütfen bir kilitlenme raporu göndererek iyileştirmemize yardımcı olun.\n\n%1$s gizliliğinize değer verir ve toplanan veriler yalnızca uygulama kararlılığını iyileştirmek için kullanılır. Hiçbir kişisel bilgi toplanmaz. Desteğin için teşekkürler!</string>
     <string name="acra_send_report">Rapor gönder</string>
     <string name="acra_dont_send">Gönderme</string>
+    <!-- Share Strings -->
+    <string name="share_application">Paylaşım Uygulaması</string>
+    <string name="share_note">Notu Paylaş</string>
+    <!-- Icon Pack Strings -->
+    <string name="choose_icon_pack">Simge Paketini Seçin</string>
+    <string name="apply_icon_pack">Simge Paketini Uygula</string>
+    <string name="applying_icon_pack">Simgelerinize yeni bir görünüm kazandırmak…</string>
+    <string name="apply_icon_pack_are_you_sure">Bu simge paketini uygulamak istediğinizden emin misiniz?\n\n%1$s</string>
     <!-- Settings Strings -->
     <string name="left">Sol</string>
     <string name="right">Sağ</string>
@@ -168,6 +226,8 @@
     <string name="dark">Karanlık</string>
     <string name="light">Aydınlık</string>
     <string name="system_default">Sistem</string>
+    <string name="system_custom">Gelenek</string>
+    <string name="system_custom_plus">Özel (%1$s)</string>
     <string name="restart_launcher">Başlatıcıyı yeniden başlat</string>
     <string name="delete">Silmek</string>
     <string name="hide">Gizle</string>
@@ -177,20 +237,64 @@
     <string name="rename">Yeniden Adlandır</string>
     <string name="info">Bilgi</string>
     <string name="okay">Tamam</string>
+    <string name="apply">Uygula</string>
     <string name="reset">Sıfırla</string>
     <string name="cancel">İptal Et</string>
-    <string name="enabled">Etkinleştirilmiş</string>
+    <string name="save">Kaydetmek</string>
     <string name="disabled">Devre Dışı</string>
     <string name="open">Aç</string>
     <string name="close">Kapat</string>
+    <string name="next">Sonraki</string>
+    <string name="start">Başlangıç</string>
+    <string name="copy">Kopyala</string>
+    <string name="allow">İzin vermek</string>
+    <string name="deny">Reddetmek</string>
+    <string name="send">Göndermek</string>
+    <string name="message_hint">Bir mesaj girin…</string>
+    <string name="message_category">Kategori: %1$s</string>
     <!-- Permissions Strings -->
     <string name="permission_required">İzin Gerekli</string>
     <string name="access_usage_data_permission">Devam etmek için lütfen cihaz ayarlarınızdan kullanım verilerine erişim iznini etkinleştirin.</string>
     <string name="goto_settings">Ayarlara git</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">Bu işlevsellik için Android 15 veya üzeri gerekir.</string>
-    <string name="toast_private_space_default_home_screen">Özel alana erişebilmek için mLauncher\'ın varsayılan ana ekran olması gerekir.</string>
+    <string name="toast_private_space_default_home_screen">Özel alana erişebilmek için MultiLauncher\'ın varsayılan ana ekran olması gerekiyor.</string>
     <string name="toast_private_space_locked">Özel alan kilitli</string>
     <string name="toast_private_space_unlocked">Özel alan açıldı</string>
     <string name="toast_private_space_not_available">Özel alan mevcut değil</string>
+    <string name="notes_list_empty_hint">İlk notunuzu aşağıdan yazmaya başlayın.</string>
+    <string name="confirm_delete_title">Notu Sil</string>
+    <string name="confirm_delete_message">Bu notu silmek istediğinizden emin misiniz?</string>
+    <string name="edit_note">Notu Düzenle</string>
+    <string name="category">Kategori</string>
+    <string name="priority">Öncelik</string>
+    <string-array name="priorities">
+        <item>Düşük</item>
+        <item>Orta</item>
+        <item>Yüksek</item>
+    </string-array>
+    <string-array name="categories">
+        <item>Hiçbiri</item>
+        <item>Yıldönümleri</item>
+        <item>Randevular</item>
+        <item>Doğum günü</item>
+        <item>Ev işleri</item>
+        <item>Yaratıcı</item>
+        <item>Eğlence</item>
+        <item>İşler</item>
+        <item>Finans</item>
+        <item>Uygunluk</item>
+        <item>Hedefler</item>
+        <item>Sağlık</item>
+        <item>Hobiler</item>
+        <item>Ev</item>
+        <item>Öğrenme</item>
+        <item>Kişisel</item>
+        <item>Projeler</item>
+        <item>Alışveriş</item>
+        <item>Sosyal</item>
+        <item>Çalışmak</item>
+        <item>Seyahat</item>
+        <item>İş</item>
+    </string-array>
 </resources>

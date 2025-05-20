@@ -3,17 +3,36 @@
     <!-- Base Settings -->
     <string name="select_app">Выбрать приложение</string>
     <string name="show_apps">Все приложения</string>
+    <string name="welcome_to_launcher">Добро пожаловать в %1$s</string>
+    <string name="continue_by_you_agree">Продолжая, вы соглашаетесь с %1$s</string>
+    <string name="usage_access_permission">Разрешения на использование доступа</string>
+    <string name="location_access_permission">Разрешения на доступ к местоположению</string>
+    <string name="accessibility_access_permission">Разрешения на доступ</string>
+    <string name="grant_permission">Предоставить разрешение</string>
+    <string name="grant_usage_permission">Чтобы продолжить, предоставьте разрешение на использование.</string>
+    <string name="reason_usage_permission">Этому приложению необходим доступ к данным об использовании, чтобы показывать наиболее часто используемые приложения, отслеживать время использования устройства и улучшать ваш опыт. Мы не собираем и не передаем никакие персональные данные.</string>
+    <string name="grant_location_permission">Чтобы продолжить, предоставьте разрешение на определение местоположения.</string>
+    <string name="reason_location_permission">Этому приложению требуется доступ к местоположению для предоставления точных обновлений погоды на основе вашего текущего местоположения. Мы не собираем и не передаем никакие персональные данные.</string>
+    <string name="grant_accessibility_permission">Чтобы продолжить, предоставьте разрешение на доступ.</string>
+    <string name="reason_accessibility_permission">MultiLauncher необходимо разрешение на доступ для предоставления расширенных функций, таких как блокировка экрана и открытие быстрых настроек. Эти функции помогают улучшить удобство использования. Мы не собираем и не передаем никакие данные.</string>
+    <string name="permission_granted">Разрешение получено! Вы можете продолжить.</string>
+    <string name="this_can_be_disabled_later">* Это разрешение может быть отключено позже.</string>
     <!-- Strings used for settings menus -->
-    <string name="settings_name">Настройки mlauncher</string>
+    <string name="settings_name">Настройки MultiLauncher</string>
     <string name="settings_features_title">Функции</string>
     <string name="settings_features_description">Повысьте свою производительность.</string>
     <string name="settings_look_feel_title">Смотри &amp; Чувствуй</string>
     <string name="settings_look_feel_description">Придайте индивидуальность вашему главному экрану.</string>
     <string name="settings_gestures_title">Жесты</string>
     <string name="settings_gestures_description">Настройте жесты для быстрой и легкой навигации.</string>
+    <string name="settings_notes_title">Примечания</string>
+    <string name="settings_notes_description">Персонализируйте свои заметки в соответствии со своим стилем.</string>
     <string name="settings_favorite_apps_title">Любимые приложения</string>
     <string name="settings_hidden_apps_title">Скрытые приложения</string>
     <string name="settings_advanced_title">Расширенные настройки</string>
+    <string name="settings_exit_mlauncher_title">Выйти из MultiLauncher</string>
+    <string name="settings_exit_mlauncher_description">Временно переключитесь на средство запуска по умолчанию.</string>
+    <string name="settings_exit_mlauncher_dialog">Выберите лаунчер</string>
     <!-- Strings used for features settings -->
     <string name="features_settings_title">Функции</string>
     <string name="user_preferences">Настройки пользователя</string>
@@ -22,10 +41,12 @@
     <string name="font_family">Семейство шрифтов</string>
     <string name="settings_text_size">Размер текста в настройках</string>
     <string name="hide_search_view">Скрыть Поиск Вид</string>
-    <string name="show_floating_button">Показать плавающую кнопку</string>
+    <string name="show_floating_button">Показать кнопки быстрого доступа</string>
+    <string name="lock_orientation">Блокировка ориентации</string>
     <string name="search">Поиск</string>
     <string name="search_engine">Поисковый движок</string>
     <string name="auto_show_keyboard">Auto show keyboard</string>
+    <string name="show_az_sidebar">Показать боковую панель AZ</string>
     <string name="search_from_start">Поиск приложений с самого начала.</string>
     <string name="home_management">Главная &amp; Управление приложениями</string>
     <string name="auto_open_apps">Автооткрытие приложений</string>
@@ -43,6 +64,8 @@
     <string name="show_battery">Показать батарею</string>
     <string name="show_battery_icon">Показать значок батареи</string>
     <string name="show_total_screen_time">Показать общее время экрана</string>
+    <string name="weather">Погода</string>
+    <string name="show_weather">Показать погоду</string>
     <!-- Strings used for look & feel settings -->
     <string name="look_feel_settings_title">Смотри &amp; Чувствуй</string>
     <string name="text_size_adjustments">Текст &amp; Регулировка размера</string>
@@ -62,8 +85,10 @@
     <string name="number_of_recents">Количество последних приложений</string>
     <string name="show_app_usage_stats">Показать статистику использования приложения</string>
     <string name="select_app_icons">Выберите значки приложений</string>
+    <string name="enable_filter_strength">Включить силу фильтра</string>
     <string name="filter_strength">Строгость фильтра</string>
-    <string name="background_opacity">Непрозрачность фона</string>
+    <string name="show_background">Показать фон</string>
+    <string name="background_opacity">Прозрачность фона</string>
     <string name="element_alignment">Выравнивание элементов</string>
     <string name="date_alignment">Дата</string>
     <string name="clock_alignment">Часы</string>
@@ -79,6 +104,8 @@
     <string name="alarm_color">Тревога</string>
     <string name="daily_word_color">Ежедневное слово</string>
     <string name="battery_color">Аккумулятор</string>
+    <string name="rainbow_shortcuts">Радужные ярлыки</string>
+    <string name="shortcuts_color">Ярлыки</string>
     <!-- Strings used for gestures settings -->
     <string name="gestures_settings_title">Жесты</string>
     <string name="tap_click_actions">Действия при нажатии/щелчке</string>
@@ -101,6 +128,7 @@
     <string name="private_space">Частные пространства</string>
     <string name="show_notifications">Показать уведомление</string>
     <string name="show_app_list">Показать список приложений</string>
+    <string name="show_notes_manager">Показать менеджер заметок</string>
     <string name="show_digital_wellbeing">Показать цифровое благополучие</string>
     <string name="open_quick_settings">Быстрые настройки</string>
     <string name="show_recents">Show Recents</string>
@@ -108,6 +136,20 @@
     <string name="take_a_screenshot">Сделать снимок экрана</string>
     <string name="left_page">Перейти на левую страницу</string>
     <string name="right_page">Перейти на правую страницу</string>
+    <!-- Strings used for notes settings -->
+    <string name="notes_settings_title">Примечания</string>
+    <string name="display_options">Параметры отображения</string>
+    <string name="auto_expand_notes">Автоматически расширять заметки</string>
+    <string name="click_to_edit_delete">Нажмите, чтобы изменить/удалить</string>
+    <string name="notes_colors">Примечания Цвета</string>
+    <string name="notes_background_color">Заметки Фон</string>
+    <string name="bubble_background_color">Фон с пузырьками</string>
+    <string name="bubble_message_color">Пузырьковое сообщение</string>
+    <string name="bubble_date_time_color">Дата/время пузыря</string>
+    <string name="bubble_category_color">Категория «Пузырь»</string>
+    <string name="input_colors">Цвета ввода</string>
+    <string name="message_input_color">Ввод сообщения</string>
+    <string name="message_input_hint_color">Подсказка по вводу сообщения</string>
     <!-- Strings used for advanced settings -->
     <string name="advanced_settings_title">Расширенные настройки</string>
     <string name="advanced_settings_app_info_title">Информация о приложении</string>
@@ -140,20 +182,28 @@
     <string name="hidden_apps">Скрытые приложения</string>
     <string name="favorite_apps">Любимые приложения</string>
     <!-- Accessibility/Help Strings -->
-    <string name="accessibility_service_name">mLauncher Служба действий</string>
-    <string name="accessibility_service_description">Эта служба специальных возможностей позволяет mLauncher выполнять определенные действия, такие как блокировка экрана или открытие быстрых настроек. Наша служба доступности не собирает и не передает какие-либо данные.</string>
+    <string name="accessibility_service_name">Доступность MultiLauncher</string>
+    <string name="accessibility_service_why_we_need">Зачем нам нужно разрешение на доступ</string>
+    <string name="accessibility_service_description">Эта служба доступности позволяет MultiLauncher выполнять определенные действия, такие как блокировка экрана или открытие быстрых настроек. Наша служба доступности не собирает и не передает никакие данные.</string>
+    <string name="accessibility_service_more_info">    MultiLauncher требует доступа к службе специальных возможностей для включения таких функций, как:\n\n
+    • Блокировка экрана жестом или сочетанием клавиш\n
+    • Быстрое открытие панели быстрых настроек\n\n
+    Это разрешение позволяет MultiLauncher выполнять эти действия от вашего имени, но мы не собираем, не храним и не передаем какие-либо личные или конфиденциальные данные через эту службу.\n\n
+    Вы можете отключить этот доступ в любое время в настройках вашего устройства.
+    </string>
     <string name="can_not_delete_system_apps">Не могу удалить системные приложения</string>
     <string name="please_select_app">Пожалуйста, выберите приложение</string>
     <string name="drawer_list_empty_hint">Не найдено приложений</string>
     <string name="long_press_for_settings">Долгое нажатие в любом месте для настроек</string>
     <string name="long_press_to_select_app">Длительное нажатие для выбора приложения</string>
+    <string name="tap_button_for_notes">Нажмите на логотип лаунчера, чтобы увидеть заметки</string>
     <string name="swipe_up_for_apps">Свайп вверх для всех приложений</string>
     <string name="app_drawer_tips">Совет: проведите пальцем вниз, чтобы уволить. Прокрутите для скрытия клавиатуры.</string>
     <!-- PinCode Strings -->
     <string name="text_authentication_cancel">Отмена аутентификации.</string>
     <string name="text_authentication_error">Ошибка аутентификации:%1$s(код %2$d)</string>
     <string name="text_authentication_failed">Аутентификация не удалась.</string>
-    <string name="text_biometric_login">Биометрический вход в mLauncher</string>
+    <string name="text_biometric_login">Биометрический вход Настройки MultiLauncher</string>
     <string name="text_biometric_login_app">Биометрический вход для %1$s</string>
     <string name="text_biometric_login_sub">Войдите в систему, используя свои биометрические учетные данные</string>
     <!-- Crash Strings -->
@@ -161,6 +211,14 @@
     <string name="acra_dialog_text">Сожалеем, но %1$s столкнулся с непредвиденной проблемой и должен закрыться. Пожалуйста, помогите нам стать лучше, отправив отчет о сбое.\n\n%1$s ценит вашу конфиденциальность, и собранные данные используются исключительно для повышения стабильности приложения. Никакая личная информация не собирается. Спасибо за Вашу поддержку!</string>
     <string name="acra_send_report">Отправить жалобу</string>
     <string name="acra_dont_send">Не отправлять</string>
+    <!-- Share Strings -->
+    <string name="share_application">Поделиться приложением</string>
+    <string name="share_note">Поделиться заметкой</string>
+    <!-- Icon Pack Strings -->
+    <string name="choose_icon_pack">Выбрать набор иконок</string>
+    <string name="apply_icon_pack">Применить пакет иконок</string>
+    <string name="applying_icon_pack">Придаем вашим иконкам свежий вид…</string>
+    <string name="apply_icon_pack_are_you_sure">Вы уверены, что хотите применить этот пакет иконок?\n\n%1$s</string>
     <!-- Settings Strings -->
     <string name="left">Слева</string>
     <string name="right">Справа</string>
@@ -168,6 +226,8 @@
     <string name="dark">Тёмная</string>
     <string name="light">Светлая</string>
     <string name="system_default">Система</string>
+    <string name="system_custom">Обычай</string>
+    <string name="system_custom_plus">Пользовательский (%1$s)</string>
     <string name="restart_launcher">Перезапустить лаунчер</string>
     <string name="delete">Удалить</string>
     <string name="hide">Скрыть</string>
@@ -177,20 +237,64 @@
     <string name="rename">Переименовать</string>
     <string name="info">Информация</string>
     <string name="okay">Окей</string>
+    <string name="apply">Применять</string>
     <string name="reset">Reset</string>
     <string name="cancel">Отмена</string>
-    <string name="enabled">Включено</string>
+    <string name="save">Сохранять</string>
     <string name="disabled">Отключено</string>
     <string name="open">Открыть</string>
     <string name="close">Закрыть</string>
+    <string name="next">Следующий</string>
+    <string name="start">Начинать</string>
+    <string name="copy">Копировать</string>
+    <string name="allow">Позволять</string>
+    <string name="deny">Отрицать</string>
+    <string name="send">Отправлять</string>
+    <string name="message_hint">Введите сообщение…</string>
+    <string name="message_category">Категория: %1$s</string>
     <!-- Permissions Strings -->
     <string name="permission_required">Требуется разрешение</string>
     <string name="access_usage_data_permission">Чтобы продолжить, включите разрешение на доступ к данным об использовании в настройках вашего устройства.</string>
     <string name="goto_settings">Перейти в настройки</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">Для этой функции требуется Android 15 или более поздняя версия.</string>
-    <string name="toast_private_space_default_home_screen">Для доступа к личному пространству mlauncher должен быть домашним экраном по умолчанию.</string>
+    <string name="toast_private_space_default_home_screen">Для доступа к личному пространству MultiLauncher должен быть главным экраном по умолчанию.</string>
     <string name="toast_private_space_locked">Личное пространство закрыто</string>
     <string name="toast_private_space_unlocked">Личное пространство разблокировано</string>
     <string name="toast_private_space_not_available">Личное пространство недоступно</string>
+    <string name="notes_list_empty_hint">Начните свою первую заметку ниже.</string>
+    <string name="confirm_delete_title">Удалить заметку</string>
+    <string name="confirm_delete_message">Вы уверены, что хотите удалить эту заметку?</string>
+    <string name="edit_note">Редактировать примечание</string>
+    <string name="category">Категория</string>
+    <string name="priority">Приоритет</string>
+    <string-array name="priorities">
+        <item>Низкий</item>
+        <item>Середина</item>
+        <item>Высокий</item>
+    </string-array>
+    <string-array name="categories">
+        <item>Никто</item>
+        <item>Годовщины</item>
+        <item>Назначения</item>
+        <item>День рождения</item>
+        <item>Работа по дому</item>
+        <item>Творческий</item>
+        <item>Развлечение</item>
+        <item>Поручения</item>
+        <item>Финансы</item>
+        <item>Фитнес</item>
+        <item>Цели</item>
+        <item>Здоровье</item>
+        <item>Увлечения</item>
+        <item>Дом</item>
+        <item>Обучение</item>
+        <item>Личный</item>
+        <item>Проекты</item>
+        <item>Покупки</item>
+        <item>Социальный</item>
+        <item>Изучать</item>
+        <item>Путешествовать</item>
+        <item>Работа</item>
+    </string-array>
 </resources>
