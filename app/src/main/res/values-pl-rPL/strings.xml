@@ -33,6 +33,9 @@
     <string name="settings_exit_mlauncher_title">Wyjdź z MultiLaunchera</string>
     <string name="settings_exit_mlauncher_description">Przełącz się tymczasowo na domyślny program uruchamiający.</string>
     <string name="settings_exit_mlauncher_dialog">Wybierz program uruchamiający</string>
+    <string name="settings_donation_title">Donations</string>
+    <string name="settings_donation_description">Support our work by making a donation.</string>
+    <string name="settings_donation_dialog">Support Us</string>
     <!-- Strings used for features settings -->
     <string name="features_settings_title">Cechy</string>
     <string name="user_preferences">Preferencje użytkownika</string>
