@@ -2,6 +2,23 @@
 
 This document lists known issues in the project and possible workarounds.
 
+## 1.10.3.2 - mLauncher [Release Notes](https://github.com/DroidWorksStudio/mLauncher/releases/tag/1.10.3.2) / 1.10.3.3 - mLauncher [Release Notes](https://github.com/DroidWorksStudio/mLauncher/releases/tag/1.10.3.3)
+
+### ⚠️ Icon Pack Compatibility Issue
+
+These versions have a known issue affecting icon pack functionality.
+
+To avoid problems during the update:
+
+1. **Before updating**, go to settings and **disable your icon pack**.
+2. Update to the new version.
+3. **After updating**, re-enable your icon pack.
+
+If you skip this step, icons may not load or apply correctly.
+
+We're aware of the issue and will aim to improve icon pack handling in future updates.
+
+
 ## 1.7.5 - mLauncher [Release Notes](https://github.com/DroidWorksStudio/mLauncher/releases/tag/1.7.5)
 
 ### 📱 Issue: Icons and Usage Problems
