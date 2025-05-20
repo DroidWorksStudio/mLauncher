@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Implemented Enhancements:
+
+- Add status bar padding and move handling - ([41b75e7](https://github.com/DroidWorksStudio/mLauncher/commit/41b75e78997a9e9738de0ecc5f47cfb0626eefd7))
+
 ### Releases:
 
 - Update build number from 3 to 4 - ([8e238f0](https://github.com/DroidWorksStudio/mLauncher/commit/8e238f0ac7908408cb7d4e1b024b3b3f377be20d))
