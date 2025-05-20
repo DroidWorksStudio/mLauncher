@@ -1,60 +1,35 @@
-<p>Forked da <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>: Un launcher minimale e pulito con
-    funzionalità migliorate.</p>
+<h1>Multi Launcher: A Clean, Simple Android Launcher Built for Readability and Control</h1>
 
-<h2>Biforcato con funzionalità extra</h2>
+<p>Looking for a launcher that ditches the clutter and keeps things easy? <strong>Multi Launcher</strong> is a powerful yet minimalist Android launcher that replaces tiny icons with clear, readable text buttons, making your phone easier to navigate.</p>
 
-<b>Caratteristiche:</b>
+<p>Whether you want a simple home screen, need large text for visibility, or prefer quick gesture-based actions, Multi Launcher gives you full control without overwhelming you with options.</p>
 
-- Personalizzazione del cassetto delle app: rinomina le app nel cassetto delle app (la rinominazione delle app nella schermata iniziale è già supportata con una lunga
-clic).
-- Gesti avanzati: un'ampia gamma di gesti, tra cui tocchi e scorrimenti, per attivare diverse azioni.
-- Personalizzazione dell'orologio: posiziona l'orologio indipendentemente dalle app home, offrendo un maggiore controllo sulla schermata home
-layout.
-- Layout del cassetto delle app: modifica l'allineamento delle app nel cassetto delle app indipendentemente dalla schermata iniziale.
-- Personalizzazione della dimensione del carattere: regola separatamente la dimensione del carattere delle sezioni della schermata iniziale.
-- Incentrato sulla privacy: è stata rimossa l'autorizzazione a usare Internet, garantendo la riservatezza dei dati.
-- Sicurezza biometrica: blocca le impostazioni dietro l'autenticazione biometrica (opzione di attivazione/disattivazione).
-- Segnalazioni di arresti anomali: possibilità di segnalare gli arresti anomali via e-mail per una migliore risoluzione dei problemi.
-- Monitoraggio dell'utilizzo delle app: visualizza il tempo di utilizzo delle app direttamente dalla schermata iniziale.
+<h2>Why Choose Multi Launcher?</h2>
+<ul>
+    <li><strong>Text-Based Launcher:</strong> No confusing icons — just labeled text buttons for your apps.</li>
+    <li><strong>Highly Customizable:</strong> Adjust layout, font sizes, clock position, and more.</li>
+    <li><strong>Quick Gestures:</strong> Use taps, swipes, and long swipes to open apps, lock the screen, and access notifications.</li>
+    <li><strong>Secure:</strong> Biometric lock for settings and privacy.</li>
+    <li><strong>Great for Seniors or Simplicity-Lovers:</strong> Easy to read, use, and customize.</li>
+</ul>
 
-<b>I gesti includono:</b>
+<h2>Key Features:</h2>
+<ul>
+    <li>Custom App Names: Rename apps to match how you think of them.</li>
+    <li>Flexible Layouts: Organize apps in the way that makes sense for you.</li>
+    <li>Clock & Date Customization: Place widgets wherever you want.</li>
+    <li>App Usage Insights: See how much time you spend in each app.</li>
+    <li>Gesture Shortcuts: Set custom actions for double taps, swipes, and more.</li>
+</ul>
 
-- Doppio tocco: tocca rapidamente due volte per attivare un'azione predefinita.
-- Tocca l'orologio: tocca l'orologio per accedere a funzioni o impostazioni aggiuntive.
-- Tocca la data: tocca la data per accedere facilmente al calendario.
-- Tocca Utilizzo: tocca l'utilizzo totale per visualizzare i dati sull'utilizzo del sistema o dell'app.
-- Scorrimenti brevi: scorri verso l'alto, verso il basso, verso sinistra o verso destra per navigare o attivare diverse azioni.
-- Scorrimenti lunghi: scorri verso l'alto, verso il basso, verso sinistra o verso destra per eseguire ulteriori azioni gestuali.
+<h2>Accessibility Features:</h2>
+<p>This app uses the <strong>AccessibilityService API</strong> to:</p>
+<ul>
+    <li>Lock the screen with a gesture</li>
+    <li>Open the power menu</li>
+    <li>Pull down the notification drawer</li>
+</ul>
 
-<b>Le azioni possibili includono:</b>
+<p><em>Multi Launcher respects your privacy. These features do not collect or share personal data.</em></p>
 
-- Apri app specificata: apri all'istante qualsiasi app di tua scelta con un gesto.
-- Visualizza elenco app: mostra l'elenco completo delle app installate sul dispositivo.
-- Schermata di blocco: blocca il dispositivo per motivi di sicurezza.
-- Mostra app aperte di recente: accedi alle app utilizzate di recente per un multitasking rapido.
-- Apri cassetto notifiche: attiva il cassetto notifiche con uno scorrimento o un tocco.
-- Apri Impostazioni rapide: accedi alle impostazioni rapide direttamente dalla schermata iniziale.
-- Finestra di dialogo di alimentazione: apre le opzioni di alimentazione come spegnimento, riavvio e altro.
-- Cattura uno screenshot: cattura lo schermo per salvare o condividere i tuoi contenuti.
-- Cambia pagina: passa rapidamente da una pagina all'altra della schermata iniziale.
-- Disattiva gesto: disattiva gesti specifici in base alle tue esigenze.
-
-<b>Traduzioni:</b>
-
-- Arabo
-- Olandese
-- Inglese
-- Francese
-- Tedesco
-- Ebraico
-- Italiano
-- Giapponese
-- coreano
-- Lituano
-- Polacco
-- portoghese
-- Russo
-- slovacco
-- Spagnolo
-- tailandese
-- Turco
+<p>If you’re tired of flashy, cluttered launchers and want something straightforward, stylish, and empowering, <strong>Multi Launcher</strong> is your perfect home screen solution.</p>
