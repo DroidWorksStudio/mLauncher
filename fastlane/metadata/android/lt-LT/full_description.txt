@@ -1,60 +1,60 @@
-<p>Šakė nuo <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>: minimali ir švari paleidimo priemonė su
-    patobulintos funkcijos.</p>
+<p>Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>: A minimal and clean launcher with
+    enhanced features.</p>
 
-<h2>Šakės su papildomomis funkcijomis</h2>
+<h2>Forked with Extra Features</h2>
 
-<b>Savybės:</b>
+<b>Features:</b>
 
-- Programų stalčiaus tinkinimas: pervardykite programas programų stalčiuje (pagrindinio ekrano programų pervadinimas jau palaikomas naudojant ilgą
-spustelėkite).
-- Išplėstiniai gestai: platus gestų spektras, įskaitant bakstelėjimus ir braukimus, skirtus įvairiems veiksmams suaktyvinti.
-- Laikrodžio pritaikymas: nustatykite laikrodį nepriklausomai nuo namų programų, kad galėtumėte geriau valdyti pagrindinį ekraną
-išdėstymas.
-- Programėlių stalčiaus išdėstymas: pakeiskite programų išdėstymą programų stalčiuje nepriklausomai nuo pagrindinio ekrano.
-- Šrifto dydžio tinkinimas: atskirai koreguokite pagrindinio ekrano skyrių šrifto dydį.
-- Privatumas sutelktas: pašalintas interneto leidimas, užtikrinant, kad jūsų duomenys išliktų privatūs.
-- Biometrinis saugumas: užrakinkite nustatymus pagal biometrinį autentifikavimą (perjungimo parinktis).
-- Strigčių ataskaitos: galimybė pranešti apie gedimus el. paštu, kad būtų galima geriau šalinti triktis.
-- Programos naudojimo stebėjimas: peržiūrėkite programos naudojimo laiką tiesiai iš pagrindinio ekrano.
+- App Drawer Customization: Rename apps in the app drawer (home screen app renaming is already supported with a long
+click).
+- Advanced Gestures: A wide range of gestures, including taps and swipes, to trigger different actions.
+- Clock Customization: Position the clock independently of the home apps, giving more control over your home screen
+layout.
+- App Drawer Layout: Change the alignment of apps in the app drawer independently of the home screen.
+- Font Size Customization: Adjust the font size of sections of the home screen separately.
+- Privacy Focused: Removed internet permission, ensuring your data remains private.
+- Biometric Security: Lock settings behind biometric authentication (toggle option).
+- Crash Reports: Ability to report crashes via email for better troubleshooting.
+- App Usage Tracking: View app usage time directly from the home screen.
 
-<b>Gestai apima:</b>
+<b>Gestures Include:</b>
 
-- Dukart bakstelėjimas: greitai bakstelėkite du kartus, kad suaktyvintumėte iš anksto nustatytą veiksmą.
-– Laikrodžio bakstelėjimas: bakstelėkite laikrodį, kad pasiektumėte papildomas funkcijas arba nustatymus.
-- Datos bakstelėjimas: palieskite datą, kad galėtumėte lengvai pasiekti kalendorių.
-- Naudojimo bakstelėjimas: bakstelėkite bendrą naudojimą, kad peržiūrėtumėte sistemos arba programos naudojimo duomenis.
-- Trumpi braukimai: braukite aukštyn, žemyn, kairėn arba dešinėn, kad naršytumėte arba suaktyvintumėte skirtingus veiksmus.
-- Ilgi braukimai: braukite aukštyn, žemyn, kairėn arba dešinėn, kad atliktumėte papildomus gestų veiksmus.
+- Double Tap: Quickly tap twice to trigger a predefined action.
+- Clock Tap: Tap the clock to access additional features or settings.
+- Date Tap: Tap the date for easy access to the calendar.
+- Usage Tap: Tap on the total usage to view system or app usage data.
+- Short Swipes: Swipe up, down, left, or right to navigate or trigger different actions.
+- Long Swipes: Swipe up, down, left, or right for additional gesture actions.
 
-<b>Galimi veiksmai:</b>
+<b>Possible Actions Include:</b>
 
-- Atidarykite nurodytą programą: akimirksniu atidarykite bet kurią pasirinktą programą gestu.
-- Rodyti programų sąrašą: rodyti visą įrenginyje įdiegtų programų sąrašą.
-- Užrakinti ekraną: užrakinkite įrenginį saugumo sumetimais.
-- Rodyti neseniai atidarytas programas: pasiekite neseniai naudotas programas, kad galėtumėte greitai atlikti kelias užduotis.
-- Atidarykite pranešimų stalčių: suaktyvinkite pranešimų stalčių braukdami arba bakstelėdami.
-- Atidarykite sparčiuosius nustatymus: pasiekite sparčiuosius nustatymus tiesiai iš pagrindinio ekrano.
-- Maitinimo dialogo langas: atidarykite maitinimo parinktis, pvz., išjungimą, paleidimą iš naujo ir kt.
-- Padarykite ekrano kopiją: užfiksuokite ekraną, kad išsaugotumėte arba bendrintumėte turinį.
-- Perjungti puslapį: greitai perjunkite pagrindinio ekrano puslapius.
-- Išjungti gestą: jei reikia, išjunkite konkrečius gestus.
+- Open Specified App: Instantly open any app of your choice with a gesture.
+- Display App List: Show the full list of apps installed on the device.
+- Lock Screen: Lock your device for security.
+- Show Recently Opened Apps: Access recently used apps for quick multitasking.
+- Open Notification Drawer: Trigger the notification drawer with a swipe or tap.
+- Open Quick Settings: Access quick settings directly from the home screen.
+- Power Dialog: Open power options like shutdown, restart, and more.
+- Take a Screenshot: Capture the screen to save or share your content.
+- Switch Page: Quickly switch between home screen pages.
+- Disable Gesture: Disable specific gestures as needed.
 
-<b>Vertimai:</b>
+<b>Translations:</b>
 
-– arabiškai
-– Olandų
-– Anglų kalba
-– prancūzų
-– Vokiečių
-– hebrajų
-– italų
-- Japonai
-- Korėjiečių
-- Lietuvių
-– lenkų
-– portugalų
-– Rusų
-– slovakas
-– ispanų
-– Tajų
-– turkų
+- Arabic
+- Dutch
+- English
+- French
+- German
+- Hebrew
+- Italian
+- Japanese
+- Korean
+- Lithuanian
+- Polish
+- Portuguese
+- Russian
+- Slovak
+- Spanish
+- Thai
+- Turkish
