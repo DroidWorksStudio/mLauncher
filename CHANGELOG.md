@@ -15,6 +15,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Update project name from mLauncher to MultiLauncher - ([3a309a7](https://github.com/DroidWorksStudio/mLauncher/commit/3a309a717637acb42cc96850d3e44004cf3431e6))
 
+### Language Support:
+
+- Updated Language Files. ([#746](https://github.com/DroidWorksStudio/mLauncher/issues/746)) - ([5b9268b](https://github.com/DroidWorksStudio/mLauncher/commit/5b9268b76ffd33b5dde2ac27c12c7616b30b7f0f))
+
 ### Documentation:
 
 - Update F-Droid metadata - ([73290d8](https://github.com/DroidWorksStudio/mLauncher/commit/73290d8ef97386f684316696564a3322508af664))
