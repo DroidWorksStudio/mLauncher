@@ -2,6 +2,7 @@
 <resources>
     <color name="colorPrimary">@android:color/white</color>
     <color name="colorPrimaryDark">@android:color/darker_gray</color>
+    <color name="colorPrimaryBackground">@color/background_bubble</color>
     <color name="transparent">#00000000</color>
     <color name="colorAccent">#FFEB3B</color>
     <!-- White -->
@@ -33,13 +34,39 @@
 
     <color name="background_light">#FFFFFFFF</color>
     <color name="background_dark">#FF121212</color>
+    <color name="background_bubble">#FFDEDEDE</color>
 
     <color name="fab_background">#FFFFFFFF</color>
     <color name="fab_border">#FFCCCCCC</color>
 
     <color name="hover_effect">#1AFFFFFF</color>
 
+    <color name="button_selected">#4CAF50</color> <!-- Green for selected -->
+    <color name="button_unselected">#555555</color> <!-- Dark gray for unselected -->
+
     <color name="green">#4CAF50</color>
     <color name="orange">#AF684C</color>
     <color name="red">#AF4C4C</color>
+
+    <color name="low">#a6da95</color>
+    <color name="medium">#f5a97f</color>
+    <color name="high">#ed8796</color>
+
+    <color name="light_gray_very_light">#D3D3D3</color>
+    <color name="light_gray_light">#B0B0B0</color>
+    <color name="light_gray_medium">#8C8C8C</color>
+    <color name="light_gray_dark">#6E6E6E</color>
+    <color name="light_gray_very_dark">#4F4F4F</color>
+
+    <color name="gray_very_light">#A1A1A1</color>
+    <color name="gray_light">#808080</color>
+    <color name="gray_medium">#6D6D6D</color>
+    <color name="gray_dark">#595959</color>
+    <color name="gray_very_dark">#404040</color>
+
+    <color name="dark_gray_very_light">#6F6F6F</color>
+    <color name="dark_gray_light">#4F4F4F</color>
+    <color name="dark_gray_medium">#333333</color>
+    <color name="dark_gray_dark">#1A1A1A</color>
+    <color name="dark_gray_very_dark">#000000</color>
 </resources>

@@ -10,6 +10,7 @@
     <attr name="primaryColorInverseTrans50" format="color" />
     <attr name="primaryShadeColor" format="color" />
     <attr name="primaryShadeDarkColor" format="color" />
+    <attr name="primaryColorBackground" format="color" />
 
     <declare-styleable name="ThemeAttributes">
         <attr name="backgroundLight" format="reference" />

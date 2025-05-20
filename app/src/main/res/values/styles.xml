@@ -1,11 +1,10 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
 
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Theme.mLauncher" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:fontFamily">@android:fontFamily/system_font</item>
 
-        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
-        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges
-        </item>
+        <item name="android:forceDarkAllowed">false</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:windowTranslucentNavigation">true</item>
         <item name="android:fitsSystemWindows">false</item>
@@ -13,16 +12,17 @@
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowFullscreen">false</item>
         <item name="android:windowLightStatusBar">true</item>
-        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
         <item name="android:colorBackgroundCacheHint">@null</item>
         <item name="android:statusBarColor">@color/blackInverseTrans50</item>
         <item name="android:navigationBarColor">@color/blackInverseTrans50</item>
         <!-- <item name="android:enforceStatusBarContrast">false</item> -->
-        <item name="android:enforceNavigationBarContrast" tools:targetApi="q">false</item>
+        <item name="android:enforceNavigationBarContrast">false</item>
         <!-- <item name="android:windowTranslucentStatus">false</item> -->
         <!-- <item name="android:windowTranslucentNavigation">true</item> -->
+        <item name="windowActionBar">false</item>
         <item name="colorPrimary">@color/black</item>
         <item name="colorPrimaryDark">@android:color/darker_gray</item>
         <item name="colorAccent">@color/black</item>
@@ -38,6 +38,7 @@
         <item name="primaryColorInverseTrans90">@color/blackInverseTrans90</item>
         <item name="primaryShadeColor">@color/blackInverseTrans10</item>
         <item name="primaryShadeDarkColor">@color/blackInverseTrans25</item>
+        <item name="primaryColorBackground">@color/background_bubble</item>
 
         <item name="backgroundLight">@color/background_light</item>
         <item name="backgroundDark">@color/background_dark</item>
@@ -100,6 +101,12 @@
 
     <style name="MaterialDialogTheme" parent="Theme.AppCompat.DayNight.Dialog">
         <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    </style>
+
+    <style name="AppTheme.MaterialDialog" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Optional: Override colors if needed -->
+        <item name="colorPrimary">?attr/primaryColor</item>
+        <item name="colorSurface">@color/background_light</item>
     </style>
 
     <style name="TextDefaultStyle" parent="@android:style/TextAppearance.Large">

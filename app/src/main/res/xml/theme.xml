@@ -7,4 +7,13 @@
     <color colorName="CLOCK_COLOR" />
     <color colorName="BATTERY_COLOR" />
     <color colorName="DAILY_WORD_COLOR" />
+
+    <color colorName="NOTES_BACKGROUND_COLOR" />
+    <color colorName="BUBBLE_BACKGROUND_COLOR" />
+    <color colorName="BUBBLE_MESSAGE_COLOR" />
+    <color colorName="BUBBLE_TIMEDATE_COLOR" />
+    <color colorName="BUBBLE_CATEGORY_COLOR" />
+
+    <color colorName="INPUT_MESSAGE_COLOR" />
+    <color colorName="INPUT_MESSAGEHINT_COLOR" />
 </theme>

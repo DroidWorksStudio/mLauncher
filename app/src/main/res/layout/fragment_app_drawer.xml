@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/searchContainer"
         android:layout_alignParentEnd="true"
-        android:paddingVertical="@dimen/app_padding_vertical"
+        android:paddingHorizontal="@dimen/app_padding_vertical"
         android:textAllCaps="true"
         android:visibility="gone" />
 
@@ -73,6 +73,21 @@
         android:clipToPadding="false"
         android:overScrollMode="never"
         android:paddingBottom="25dp" />
+
+    <FrameLayout
+        android:id="@+id/sidebar_container"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start|end"
+        android:layout_margin="8dp"
+        android:visibility="gone">
+
+        <com.github.droidworksstudio.mlauncher.ui.components.AZSidebarView
+            android:id="@+id/azSidebar"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical" />
+    </FrameLayout>
 
     <!-- List Empty Hint, center aligned -->
     <TextView
