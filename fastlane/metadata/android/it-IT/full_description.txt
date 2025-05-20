@@ -9,7 +9,7 @@
 clic).
 - Gesti avanzati: un'ampia gamma di gesti, tra cui tocchi e scorrimenti, per attivare diverse azioni.
 - Personalizzazione dell'orologio: posiziona l'orologio indipendentemente dalle app home, offrendo un maggiore controllo sulla schermata home
-disposizione.
+layout.
 - Layout del cassetto delle app: modifica l'allineamento delle app nel cassetto delle app indipendentemente dalla schermata iniziale.
 - Personalizzazione della dimensione del carattere: regola separatamente la dimensione del carattere delle sezioni della schermata iniziale.
 - Incentrato sulla privacy: è stata rimossa l'autorizzazione a usare Internet, garantendo la riservatezza dei dati.
