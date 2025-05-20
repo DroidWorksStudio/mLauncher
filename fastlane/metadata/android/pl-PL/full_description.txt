@@ -6,7 +6,7 @@
 <b>Cechy:</b>
 
 - Dostosowywanie szuflady aplikacji: Zmień nazwy aplikacji w szufladzie aplikacji (zmiana nazw aplikacji na ekranie głównym jest już obsługiwana przez długi czas)
-trzask).
+click).
 - Zaawansowane gesty: Szeroka gama gestów, w tym stuknięcia i przesunięcia, umożliwiających wykonywanie różnych akcji.
 - Dostosowywanie zegara: Ustaw zegar niezależnie od aplikacji domowych, co daje większą kontrolę nad ekranem głównym
 układ.
