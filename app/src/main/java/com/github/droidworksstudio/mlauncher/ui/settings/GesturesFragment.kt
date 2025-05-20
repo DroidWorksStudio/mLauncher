@@ -38,6 +38,7 @@ import com.github.droidworksstudio.mlauncher.databinding.FragmentSettingsBinding
 import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
 import com.github.droidworksstudio.mlauncher.helper.isSystemInDarkMode
 import com.github.droidworksstudio.mlauncher.helper.setThemeMode
+import com.github.droidworksstudio.mlauncher.helper.setTopPadding
 import com.github.droidworksstudio.mlauncher.helper.utils.PrivateSpaceManager
 import com.github.droidworksstudio.mlauncher.style.SettingsTheme
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.PageHeader
@@ -78,6 +79,8 @@ class GesturesFragment : Fragment() {
         viewModel.ismlauncherDefault()
 
         resetThemeColors()
+
+        setTopPadding(requireActivity(), binding.settingsView)
     }
 
     @Composable

@@ -54,6 +54,7 @@ import com.github.droidworksstudio.mlauncher.helper.isSystemInDarkMode
 import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
 import com.github.droidworksstudio.mlauncher.helper.openAppInfo
 import com.github.droidworksstudio.mlauncher.helper.setThemeMode
+import com.github.droidworksstudio.mlauncher.helper.setTopPadding
 import com.github.droidworksstudio.mlauncher.helper.utils.AppReloader
 import com.github.droidworksstudio.mlauncher.style.SettingsTheme
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.PageHeader
@@ -96,6 +97,8 @@ class AdvancedFragment : Fragment() {
         viewModel.ismlauncherDefault()
 
         resetThemeColors()
+
+        setTopPadding(requireActivity(), binding.settingsView)
     }
 
     @Composable

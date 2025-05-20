@@ -41,6 +41,7 @@ import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentSettingsBinding
 import com.github.droidworksstudio.mlauncher.helper.isSystemInDarkMode
 import com.github.droidworksstudio.mlauncher.helper.setThemeMode
+import com.github.droidworksstudio.mlauncher.helper.setTopPadding
 import com.github.droidworksstudio.mlauncher.helper.utils.PrivateSpaceManager
 import com.github.droidworksstudio.mlauncher.style.SettingsTheme
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsHomeItem
@@ -79,6 +80,8 @@ class SettingsFragment : Fragment() {
         viewModel.ismlauncherDefault()
 
         resetThemeColors()
+
+        setTopPadding(requireActivity(), binding.settingsView)
     }
 
     private fun resetThemeColors() {

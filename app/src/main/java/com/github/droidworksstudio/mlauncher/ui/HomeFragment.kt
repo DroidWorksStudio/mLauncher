@@ -58,7 +58,6 @@ import com.github.droidworksstudio.common.openDigitalWellbeing
 import com.github.droidworksstudio.common.openPhotosApp
 import com.github.droidworksstudio.common.openTextMessagesApp
 import com.github.droidworksstudio.common.openWebBrowser
-import com.github.droidworksstudio.common.requestLocationPermission
 import com.github.droidworksstudio.common.showShortToast
 import com.github.droidworksstudio.mlauncher.MainViewModel
 import com.github.droidworksstudio.mlauncher.R
@@ -1338,21 +1337,21 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         }
     }
 
-    @SuppressLint("MissingPermission")
     private fun getWeather() {
         val locationManager =
             requireContext().getSystemService(Context.LOCATION_SERVICE) as LocationManager
 
-        if (ActivityCompat.checkSelfPermission(
-                requireContext(),
-                Manifest.permission.ACCESS_FINE_LOCATION
-            ) != PackageManager.PERMISSION_GRANTED &&
-            ActivityCompat.checkSelfPermission(
-                requireContext(),
-                Manifest.permission.ACCESS_COARSE_LOCATION
-            ) != PackageManager.PERMISSION_GRANTED
-        ) {
-            requireContext().requestLocationPermission(Constants.ACCESS_FINE_LOCATION)
+        val fineLocationGranted = ActivityCompat.checkSelfPermission(
+            requireContext(), Manifest.permission.ACCESS_FINE_LOCATION
+        ) == PackageManager.PERMISSION_GRANTED
+
+        val coarseLocationGranted = ActivityCompat.checkSelfPermission(
+            requireContext(), Manifest.permission.ACCESS_COARSE_LOCATION
+        ) == PackageManager.PERMISSION_GRANTED
+
+        if (!fineLocationGranted && !coarseLocationGranted) {
+            // Exit early if permission is declined or not granted
+            Log.w("WeatherReceiver", "Location permission not granted. Aborting.")
             return
         }
 
@@ -1395,12 +1394,13 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             Looper.getMainLooper()
         )
 
-        // ⏱ Optional: timeout fallback in case no update happens
+        // ⏱ Optional: timeout fallback
         Handler(Looper.getMainLooper()).postDelayed({
             locationManager.removeUpdates(locationListener)
             Log.w("WeatherReceiver", "Location update timed out.")
         }, 10000) // 10 seconds
     }
+
 
     private fun handleLocation(location: Location) {
         val lat = location.latitude

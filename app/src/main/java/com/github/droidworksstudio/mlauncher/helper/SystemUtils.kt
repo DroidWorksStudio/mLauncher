@@ -699,3 +699,24 @@ fun getSystemIcons(context: Context, prefs: Prefs, nonNullDrawable: Drawable): D
         }
     }
 }
+
+fun setTopPadding(activity: Activity, view: View) {
+    activity.window.decorView.rootView.viewTreeObserver.addOnGlobalLayoutListener {
+        val insets = activity.window.decorView.rootWindowInsets
+        val cutout = insets?.displayCutout
+
+        if (cutout != null && cutout.boundingRects.isNotEmpty()) {
+            for (rect in cutout.boundingRects) {
+                if (rect != null) {
+                    val topInset = rect.height()
+                    view.setPadding(
+                        view.paddingLeft,
+                        topInset,
+                        view.paddingRight,
+                        view.paddingBottom
+                    )
+                }
+            }
+        }
+    }
+}

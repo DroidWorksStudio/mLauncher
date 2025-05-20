@@ -42,6 +42,7 @@ import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
 import com.github.droidworksstudio.mlauncher.helper.hideStatusBar
 import com.github.droidworksstudio.mlauncher.helper.isSystemInDarkMode
 import com.github.droidworksstudio.mlauncher.helper.setThemeMode
+import com.github.droidworksstudio.mlauncher.helper.setTopPadding
 import com.github.droidworksstudio.mlauncher.helper.showStatusBar
 import com.github.droidworksstudio.mlauncher.style.SettingsTheme
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.PageHeader
@@ -84,6 +85,8 @@ class LookFeelFragment : Fragment() {
         viewModel.ismlauncherDefault()
 
         resetThemeColors()
+
+        setTopPadding(requireActivity(), binding.settingsView)
     }
 
     @Composable
