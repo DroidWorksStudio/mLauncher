@@ -407,7 +407,6 @@ fun initActionService(context: Context): ActionService? {
     return null
 }
 
-
 fun showStatusBar(activity: Activity) {
     activity.window.insetsController?.show(WindowInsets.Type.statusBars())
 }

@@ -37,6 +37,8 @@ import androidx.biometric.BiometricPrompt
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.os.bundleOf
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.children
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
@@ -151,6 +153,12 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     override fun onStart() {
         super.onStart()
 
+        // Handle status bar once per view creation
+        if (prefs.showStatusBar) {
+            showStatusBar(requireActivity())
+            checkForStatusbar(binding.mainView)
+        } else hideStatusBar(requireActivity())
+
         // Register battery receiver
         batteryReceiver = BatteryReceiver()
         try {
@@ -179,7 +187,10 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         if (prefs.showWeather) getWeather() else binding.weather.visibility = View.GONE
 
         // Handle status bar once per view creation
-        if (prefs.showStatusBar) showStatusBar(requireActivity()) else hideStatusBar(requireActivity())
+        if (prefs.showStatusBar) {
+            showStatusBar(requireActivity())
+            checkForStatusbar(binding.mainView)
+        } else hideStatusBar(requireActivity())
 
         // Update only dynamic elements (not all UI prefs)
         updateTimeAndInfo()
@@ -194,6 +205,48 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             }
         } catch (e: Exception) {
             e.printStackTrace()
+        }
+    }
+
+    private fun checkForStatusbar(view: View) {
+        if (prefs.showStatusBar || isStatusBarVisible(view)) {
+            applyStatusBarPadding(view)
+        }
+    }
+
+    private fun isStatusBarVisible(view: View): Boolean {
+        val insets = ViewCompat.getRootWindowInsets(view)
+        return insets?.isVisible(WindowInsetsCompat.Type.statusBars()) == true
+    }
+
+    fun applyStatusBarPadding(view: View) {
+        val originalPaddingTop = view.paddingTop
+
+        ViewCompat.setOnApplyWindowInsetsListener(view) { v, insets ->
+            val statusBarHeight = getStatusBarIconAreaHeight(view)
+            v.setPadding(
+                v.paddingLeft,
+                originalPaddingTop + statusBarHeight,
+                v.paddingRight,
+                v.paddingBottom
+            )
+            insets
+        }
+    }
+
+    fun getStatusBarIconAreaHeight(view: View): Int {
+        val insets = ViewCompat.getRootWindowInsets(view) ?: return 0
+
+        val statusBarInset = insets.getInsets(WindowInsetsCompat.Type.statusBars()).top
+        val cutoutHeight = insets.displayCutout?.safeInsetTop ?: 0
+
+        // If there is a cutout, assume the icon area is below it and fixed ~24dp
+        return if (cutoutHeight > 0) {
+            val density = view.resources.displayMetrics.density
+            (24 * density).toInt()  // Approx. 24dp in pixels
+        } else {
+            // No notch, use full status bar height
+            statusBarInset
         }
     }
 
