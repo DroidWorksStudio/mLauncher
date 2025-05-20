@@ -1,60 +1,35 @@
-<p>Форк из <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>: Минимальный и чистый лаунчер с
-    улучшенные функции.</p>
+<h1>Multi Launcher: A Clean, Simple Android Launcher Built for Readability and Control</h1>
 
-<h2>Форк с дополнительными функциями</h2>
+<p>Looking for a launcher that ditches the clutter and keeps things easy? <strong>Multi Launcher</strong> is a powerful yet minimalist Android launcher that replaces tiny icons with clear, readable text buttons, making your phone easier to navigate.</p>
 
-<b>Особенности:</b>
+<p>Whether you want a simple home screen, need large text for visibility, or prefer quick gesture-based actions, Multi Launcher gives you full control without overwhelming you with options.</p>
 
-- Настройка панели приложений: переименование приложений в панели приложений (переименование приложений на главном экране уже поддерживается с помощью длинного имени)
-нажмите).
-- Расширенные жесты: широкий спектр жестов, включая нажатия и смахивания, для запуска различных действий.
-- Настройка часов: расположите часы независимо от домашних приложений, что даст вам больше контроля над домашним экраном.
-layout.
-- Макет панели приложений: изменение расположения приложений в панели приложений независимо от главного экрана.
-- Настройка размера шрифта: настройте размер шрифта разделов главного экрана по отдельности.
-- Конфиденциальность: удалено разрешение на доступ в Интернет, что гарантирует конфиденциальность ваших данных.
-- Биометрическая безопасность: блокировка настроек биометрической аутентификации (переключаемая опция).
-- Отчеты о сбоях: возможность сообщать о сбоях по электронной почте для более эффективного устранения неполадок.
-- Отслеживание использования приложений: просматривайте время использования приложений прямо с главного экрана.
+<h2>Why Choose Multi Launcher?</h2>
+<ul>
+    <li><strong>Text-Based Launcher:</strong> No confusing icons — just labeled text buttons for your apps.</li>
+    <li><strong>Highly Customizable:</strong> Adjust layout, font sizes, clock position, and more.</li>
+    <li><strong>Quick Gestures:</strong> Use taps, swipes, and long swipes to open apps, lock the screen, and access notifications.</li>
+    <li><strong>Secure:</strong> Biometric lock for settings and privacy.</li>
+    <li><strong>Great for Seniors or Simplicity-Lovers:</strong> Easy to read, use, and customize.</li>
+</ul>
 
-<b>Жесты включают:</b>
+<h2>Key Features:</h2>
+<ul>
+    <li>Custom App Names: Rename apps to match how you think of them.</li>
+    <li>Flexible Layouts: Organize apps in the way that makes sense for you.</li>
+    <li>Clock & Date Customization: Place widgets wherever you want.</li>
+    <li>App Usage Insights: See how much time you spend in each app.</li>
+    <li>Gesture Shortcuts: Set custom actions for double taps, swipes, and more.</li>
+</ul>
 
-- Двойное нажатие: быстро нажмите дважды, чтобы запустить предопределенное действие.
-- Нажатие на часы: нажмите на часы, чтобы получить доступ к дополнительным функциям или настройкам.
-- Выбор даты: нажмите на дату, чтобы легко получить доступ к календарю.
-- Нажмите на показатель использования: нажмите на общий показатель использования, чтобы просмотреть данные об использовании системы или приложений.
-- Короткие смахивания: проведите пальцем вверх, вниз, влево или вправо для навигации или запуска различных действий.
-- Длинные смахивания: проведите пальцем вверх, вниз, влево или вправо для дополнительных жестовых действий.
+<h2>Accessibility Features:</h2>
+<p>This app uses the <strong>AccessibilityService API</strong> to:</p>
+<ul>
+    <li>Lock the screen with a gesture</li>
+    <li>Open the power menu</li>
+    <li>Pull down the notification drawer</li>
+</ul>
 
-<b>Возможные действия включают:</b>
+<p><em>Multi Launcher respects your privacy. These features do not collect or share personal data.</em></p>
 
-- Открыть указанное приложение: мгновенно откройте любое приложение по вашему выбору с помощью жеста.
-- Отображение списка приложений: отображение полного списка приложений, установленных на устройстве.
-- Экран блокировки: заблокируйте устройство в целях безопасности.
-- Показать недавно открытые приложения: доступ к недавно использованным приложениям для быстрой многозадачности.
-- Открыть панель уведомлений: откройте панель уведомлений, проведя пальцем по экрану или коснувшись его.
-- Откройте быстрые настройки: получите доступ к быстрым настройкам прямо с главного экрана.
-- Диалоговое окно «Питание»: открытие параметров питания, таких как выключение, перезагрузка и т.
-- Сделайте снимок экрана: сделайте снимок экрана, чтобы сохранить или поделиться своим контентом.
-- Переключение страниц: быстрое переключение между страницами главного экрана.
-- Отключить жесты: отключите определенные жесты по мере необходимости.
-
-<b>Переводы:</b>
-
-- арабский
-- Голландский
-- Английский
-- Французский
-- немецкий
-- иврит
-- итальянский
-- Японский
-- корейский
-- литовский
-- Польский
-- португальский
-- Русский
-- словацкий
-- испанский
-- тайский
-- турецкий
+<p>If you’re tired of flashy, cluttered launchers and want something straightforward, stylish, and empowering, <strong>Multi Launcher</strong> is your perfect home screen solution.</p>
