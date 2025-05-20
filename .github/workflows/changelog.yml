@@ -10,7 +10,7 @@ on:
 
 jobs:
   changelog:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - name: Check out repository
         uses: actions/checkout@v4.2.2
@@ -34,21 +34,20 @@ jobs:
           git_user_signingkey: true
           git_commit_gpgsign: true
 
-      - name: Commit and push changes
+      - name: Check for changes and commit
+        env:
+          GIT_NAME: ${{ secrets.GIT_NAME }}
         run: |
-          if [[ `git status --porcelain` ]]; then
+          if [[ $(git status --porcelain) ]]; then
             COMMIT_AUTHOR=$(git log -1 --pretty=%an)
-            if [[ "$COMMIT_AUTHOR" != ${{ secrets.GIT_NAME }} ]]; then
-              git config --global user.name ${{ secrets.GIT_NAME }}
-              git config --global user.email ${{ secrets.GIT_EMAIL }}
-          
+
+            if [[ "$COMMIT_AUTHOR" != "$GIT_NAME" ]]; then
               git add -u
               git commit -m "chore(changelog): Update CHANGELOG.md"
               git push origin main
             else
-              echo "WARNING: $COMMIT_AUTHOR last committed."
+              echo "WARNING: Last commit was already made by $COMMIT_AUTHOR."
             fi
           else
-            echo "WARNING: No changes were detected."
+            echo "WARNING: No changes detected."
           fi
-        shell: bash

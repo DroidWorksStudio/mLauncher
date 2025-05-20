@@ -38,10 +38,3 @@ jobs:
 
       - name: Build with Gradle
         run: ./gradlew clean && ./gradlew assembleDebug
-
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v4.6.2
-        with:
-          name: Signed app apk
-          path: app/build/outputs/apk/debug/*.apk
-          retention-days: 3

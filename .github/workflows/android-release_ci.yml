@@ -55,7 +55,16 @@ jobs:
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ${{steps.sign_app_apk.outputs.signedFile}}
-          asset_name: mLauncher-${{ github.ref_name }}-Signed.apk
+          asset_name: MultiLauncher-${{ github.ref_name }}-Signed.apk
+          tag: ${{ github.ref }}
+          overwrite: true
+
+      - name: Upload ProGuard Mapping File
+        uses: svenstaro/upload-release-action@2.9.0
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: app/build/outputs/mapping/release/mapping.txt
+          asset_name: MultiLauncher-${{ github.ref_name }}-mapping.txt
           tag: ${{ github.ref }}
           overwrite: true
 
@@ -65,10 +74,10 @@ jobs:
         id: sign_app_aab
         with:
           releaseDir: app/build/outputs/bundle/release/
-          signingKey: ${{ secrets.AAB_SIGNINGKEY_BASE64 }}
-          keyAlias: ${{ secrets.AAB_KEY_ALIAS }}
-          keyStorePassword: ${{ secrets.AAB_KEY_STORE_PASSWORD }}
-          keyPassword: ${{ secrets.AAB_KEY_PASSWORD }}
+          signingKey: ${{ secrets.SIGNINGKEY_BASE64 }}
+          keyAlias: ${{ secrets.KEY_ALIAS }}
+          keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
+          keyPassword: ${{ secrets.KEY_PASSWORD }}
           buildToolsVersion: 35.0.0
 
       - name: Release to GitHub
@@ -76,15 +85,6 @@ jobs:
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ${{steps.sign_app_aab.outputs.signedFile}}
-          asset_name: mLauncher-${{ github.ref_name }}-Signed.aab
-          tag: ${{ github.ref }}
-          overwrite: true
-
-      - name: Upload ProGuard Mapping File
-        uses: svenstaro/upload-release-action@2.9.0
-        with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: app/build/outputs/mapping/release/mapping.txt
-          asset_name: mLauncher-${{ github.ref_name }}-mapping.txt
+          asset_name: MultiLauncher-${{ github.ref_name }}-Signed.aab
           tag: ${{ github.ref }}
           overwrite: true
