@@ -1,1 +1,1 @@
-متفرع من mLauncher، +التقليل، +إمكانية التخصيص
+Multi Launcher ‧ Home Screen, Weather & Minimal UI Launcher
