@@ -33,9 +33,9 @@
     <string name="settings_exit_mlauncher_title">Išeikite iš „MultiLauncher“.</string>
     <string name="settings_exit_mlauncher_description">Laikinai perjunkite į numatytąją paleidimo priemonę.</string>
     <string name="settings_exit_mlauncher_dialog">Pasirinkite paleidimo priemonę</string>
-    <string name="settings_donation_title">Donations</string>
-    <string name="settings_donation_description">Support our work by making a donation.</string>
-    <string name="settings_donation_dialog">Support Us</string>
+    <string name="settings_donation_title">Aukos</string>
+    <string name="settings_donation_description">Paremkite mūsų darbą paaukodami.</string>
+    <string name="settings_donation_dialog">Paremkite mus</string>
     <!-- Strings used for features settings -->
     <string name="features_settings_title">Savybės</string>
     <string name="user_preferences">Vartotojo nuostatos</string>
