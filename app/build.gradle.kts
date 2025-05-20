@@ -11,10 +11,13 @@ plugins {
 val major = 1
 val minor = 10
 val patch = 3
-val build = 2
+val build = 3
 
 val versionCodeInt =
-    (String.format("%02d", major) + String.format("%02d", minor) + String.format("%02d", patch) + String.format("%02d", build)).toInt()
+    (String.format("%02d", major) + String.format("%02d", minor) + String.format(
+        "%02d",
+        patch
+    ) + String.format("%02d", build)).toInt()
 val versionNameStr = "$major.$minor.$patch.$build"
 
 android {
@@ -34,6 +37,7 @@ android {
             isMinifyEnabled = false
             isShrinkResources = false
             isDebuggable = true
+            applicationIdSuffix = ".debug"
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
