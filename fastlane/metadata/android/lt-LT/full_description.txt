@@ -1,35 +1,35 @@
-<h1>Multi Launcher: A Clean, Simple Android Launcher Built for Readability and Control</h1>
+<h1>Kelių paleidimo priemonė: švari, paprasta „Android“ paleidimo priemonė, sukurta skaitomumui ir valdymui</h1>
 
-<p>Looking for a launcher that ditches the clutter and keeps things easy? <strong>Multi Launcher</strong> is a powerful yet minimalist Android launcher that replaces tiny icons with clear, readable text buttons, making your phone easier to navigate.</p>
+<p>Ieškote paleidimo priemonės, kuri pašalintų netvarką ir palengvintų darbą? <strong>„Multi Launcher“</strong> yra galinga, tačiau minimalistinė „Android“ paleidimo priemonė, kuri mažytes piktogramas pakeičia aiškiais, įskaitomais teksto mygtukais, todėl telefone lengviau naršyti.</p>
 
-<p>Whether you want a simple home screen, need large text for visibility, or prefer quick gesture-based actions, Multi Launcher gives you full control without overwhelming you with options.</p>
+<p>Nesvarbu, ar norite paprasto pagrindinio ekrano, ar didelio teksto, kad jis būtų matomas, ar teikiate pirmenybę greitiems gestais pagrįstiems veiksmams, „Multi Launcher“ suteikia jums visišką valdymą neapkraunant jūsų pasirinkimų gausa.</p>
 
-<h2>Why Choose Multi Launcher?</h2>
+<h2>Kodėl verta rinktis kelių paleidimo priemonių rinkinį?</h2>
 <ul>
-    <li><strong>Text-Based Launcher:</strong> No confusing icons — just labeled text buttons for your apps.</li>
-    <li><strong>Highly Customizable:</strong> Adjust layout, font sizes, clock position, and more.</li>
-    <li><strong>Quick Gestures:</strong> Use taps, swipes, and long swipes to open apps, lock the screen, and access notifications.</li>
-    <li><strong>Secure:</strong> Biometric lock for settings and privacy.</li>
-    <li><strong>Great for Seniors or Simplicity-Lovers:</strong> Easy to read, use, and customize.</li>
+    <li><strong>Tekstinis paleidimo įrenginys:</strong> Jokių painių piktogramų – tik pažymėti tekstiniai mygtukai jūsų programėlėms.</li>
+    <li><strong>Labai pritaikoma:</strong> Koreguokite išdėstymą, šrifto dydžius, laikrodžio padėtį ir kt.</li>
+    <li><strong>Greitieji gestai:</strong> Norėdami atidaryti programas, užrakinti ekraną ir pasiekti pranešimus, naudokite bakstelėjimus, braukimus ir ilgus braukimus.</li>
+    <li><strong>Saugu:</strong> Biometrinis užraktas nustatymams ir privatumui.</li>
+    <li><strong>Puikiai tinka senjorams arba paprastumo mėgėjams:</strong> Lengva skaityti, naudoti ir pritaikyti.</li>
 </ul>
 
-<h2>Key Features:</h2>
+<h2>Pagrindinės savybės:</h2>
 <ul>
-    <li>Custom App Names: Rename apps to match how you think of them.</li>
-    <li>Flexible Layouts: Organize apps in the way that makes sense for you.</li>
-    <li>Clock & Date Customization: Place widgets wherever you want.</li>
-    <li>App Usage Insights: See how much time you spend in each app.</li>
-    <li>Gesture Shortcuts: Set custom actions for double taps, swipes, and more.</li>
+    <li>Pasirinktiniai programėlių pavadinimai: pervadinkite programas pagal savo supratimą.</li>
+    <li>Lankstūs išdėstymai: tvarkykite programas taip, kaip jums patogu.</li>
+    <li>Laikrodžio ir datos pritaikymas: Valdiklius padėkite ten, kur norite.</li>
+    <li>Programėlių naudojimo įžvalgos: peržiūrėkite, kiek laiko praleidžiate kiekvienoje programėlėje.</li>
+    <li>Gestų spartieji klavišai: nustatykite pasirinktinius veiksmus dvigubiems bakstelėjimams, braukimams ir kt.</li>
 </ul>
 
-<h2>Accessibility Features:</h2>
-<p>This app uses the <strong>AccessibilityService API</strong> to:</p>
+<h2>Prieinamumo funkcijos:</h2>
+<p>Ši programėlė naudoja <strong>Prieinamumo paslaugų API</strong> , kad galėtų:</p>
 <ul>
-    <li>Lock the screen with a gesture</li>
-    <li>Open the power menu</li>
-    <li>Pull down the notification drawer</li>
+    <li>Užrakinti ekraną gestu</li>
+    <li>Atidaryti maitinimo meniu</li>
+    <li>Nuleiskite pranešimų skydelį</li>
 </ul>
 
-<p><em>Multi Launcher respects your privacy. These features do not collect or share personal data.</em></p>
+<p><em>„Multi Launcher“ gerbia jūsų privatumą. Šios funkcijos nerenka ir nebendrina asmens duomenų.</em></p>
 
-<p>If you’re tired of flashy, cluttered launchers and want something straightforward, stylish, and empowering, <strong>Multi Launcher</strong> is your perfect home screen solution.</p>
+<p>Jei pavargote nuo prašmatnių, netvarkingų paleidimo priemonių ir norite kažko paprasto, stilingo ir įgalinančio, <strong>Kelių funkcijų paleidimo priemonė</strong> yra puikus jūsų pagrindinio ekrano sprendimas.</p>
