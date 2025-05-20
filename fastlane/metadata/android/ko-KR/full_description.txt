@@ -1,35 +1,35 @@
-<h1>Multi Launcher: A Clean, Simple Android Launcher Built for Readability and Control</h1>
+<h1>멀티 런처: 가독성과 제어를 위해 제작된 깔끔하고 간단한 안드로이드 런처</h1>
 
-<p>Looking for a launcher that ditches the clutter and keeps things easy? <strong>Multi Launcher</strong> is a powerful yet minimalist Android launcher that replaces tiny icons with clear, readable text buttons, making your phone easier to navigate.</p>
+<p>복잡함을 없애고 간편하게 사용할 수 있는 런처를 찾고 계신가요? <strong>멀티 런처</strong> 는 작은 아이콘을 명확하고 읽기 쉬운 텍스트 버튼으로 대체하여 휴대전화를 더 쉽게 탐색할 수 있도록 하는 강력하면서도 미니멀한 안드로이드 런처입니다.</p>
 
-<p>Whether you want a simple home screen, need large text for visibility, or prefer quick gesture-based actions, Multi Launcher gives you full control without overwhelming you with options.</p>
+<p>간단한 홈 화면을 원하든, 눈에 잘 띄도록 큰 텍스트가 필요하든, 아니면 제스처 기반의 빠른 동작을 선호하든, Multi Launcher는 너무 많은 옵션 없이 완벽한 제어 기능을 제공합니다.</p>
 
-<h2>Why Choose Multi Launcher?</h2>
+<h2>왜 멀티 런처를 선택해야 하나요?</h2>
 <ul>
-    <li><strong>Text-Based Launcher:</strong> No confusing icons — just labeled text buttons for your apps.</li>
-    <li><strong>Highly Customizable:</strong> Adjust layout, font sizes, clock position, and more.</li>
-    <li><strong>Quick Gestures:</strong> Use taps, swipes, and long swipes to open apps, lock the screen, and access notifications.</li>
-    <li><strong>Secure:</strong> Biometric lock for settings and privacy.</li>
-    <li><strong>Great for Seniors or Simplicity-Lovers:</strong> Easy to read, use, and customize.</li>
+    <li><strong>텍스트 기반 런처:</strong> 헷갈리는 아이콘은 없습니다. 앱에 맞는 라벨이 붙은 텍스트 버튼만 있습니다.</li>
+    <li><strong>높은 수준의 사용자 정의 가능:</strong> 레이아웃, 글꼴 크기, 시계 위치 등을 조정합니다.</li>
+    <li><strong>빠른 제스처:</strong> 탭, 스와이프, 길게 스와이프를 사용하여 앱을 열고, 화면을 잠그고, 알림에 액세스하세요.</li>
+    <li><strong>보안:</strong> 설정 및 개인 정보 보호를 위한 생체 인식 잠금.</li>
+    <li><strong>노년층이나 단순함을 좋아하는 사람에게 적합:</strong> 읽기, 사용, 사용자 지정이 쉽습니다.</li>
 </ul>
 
-<h2>Key Features:</h2>
+<h2>주요 기능:</h2>
 <ul>
-    <li>Custom App Names: Rename apps to match how you think of them.</li>
-    <li>Flexible Layouts: Organize apps in the way that makes sense for you.</li>
-    <li>Clock & Date Customization: Place widgets wherever you want.</li>
-    <li>App Usage Insights: See how much time you spend in each app.</li>
-    <li>Gesture Shortcuts: Set custom actions for double taps, swipes, and more.</li>
+    <li>사용자 지정 앱 이름: 앱의 이름을 내가 생각하는 대로 변경하세요.</li>
+    <li>유연한 레이아웃: 사용자에게 맞는 방식으로 앱을 구성하세요.</li>
+    <li>시계 및 날짜 사용자 지정: 위젯을 원하는 곳에 배치하세요.</li>
+    <li>앱 사용 정보: 각 앱에서 얼마나 많은 시간을 사용하는지 확인하세요.</li>
+    <li>제스처 단축키: 두 번 탭, 스와이프 등에 대한 사용자 지정 동작을 설정합니다.</li>
 </ul>
 
-<h2>Accessibility Features:</h2>
-<p>This app uses the <strong>AccessibilityService API</strong> to:</p>
+<h2>접근성 기능:</h2>
+<p>이 앱은 <strong>AccessibilityService API</strong> 를 사용하여 다음을 수행합니다.</p>
 <ul>
-    <li>Lock the screen with a gesture</li>
-    <li>Open the power menu</li>
-    <li>Pull down the notification drawer</li>
+    <li>제스처로 화면 잠금</li>
+    <li>전원 메뉴를 엽니다</li>
+    <li>알림 서랍을 아래로 당기세요</li>
 </ul>
 
-<p><em>Multi Launcher respects your privacy. These features do not collect or share personal data.</em></p>
+<p><em>멀티 런처는 귀하의 개인정보를 존중합니다. 이러한 기능은 개인 데이터를 수집하거나 공유하지 않습니다.</em></p>
 
-<p>If you’re tired of flashy, cluttered launchers and want something straightforward, stylish, and empowering, <strong>Multi Launcher</strong> is your perfect home screen solution.</p>
+<p>화려하고 복잡한 런처에 지쳐 간단하고, 세련되고, 강력한 기능을 원하신다면 <strong>멀티 런처</strong> 가 완벽한 홈 화면 솔루션입니다.</p>
