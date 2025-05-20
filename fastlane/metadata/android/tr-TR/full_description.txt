@@ -1,35 +1,35 @@
-<h1>Multi Launcher: A Clean, Simple Android Launcher Built for Readability and Control</h1>
+<h1>Çoklu Başlatıcı: Okunabilirlik ve Kontrol için Oluşturulmuş Temiz, Basit Bir Android Başlatıcı</h1>
 
-<p>Looking for a launcher that ditches the clutter and keeps things easy? <strong>Multi Launcher</strong> is a powerful yet minimalist Android launcher that replaces tiny icons with clear, readable text buttons, making your phone easier to navigate.</p>
+<p>Karmaşıklığı ortadan kaldıran ve işleri kolaylaştıran bir başlatıcı mı arıyorsunuz? <strong>Çoklu Başlatıcı</strong> küçük ikonları net, okunabilir metin düğmeleriyle değiştiren, telefonunuzda gezinmeyi kolaylaştıran güçlü ancak minimalist bir Android başlatıcısıdır.</p>
 
-<p>Whether you want a simple home screen, need large text for visibility, or prefer quick gesture-based actions, Multi Launcher gives you full control without overwhelming you with options.</p>
+<p>Basit bir ana ekran istiyorsanız, görünürlük için büyük metne ihtiyacınız varsa veya hızlı hareket tabanlı eylemleri tercih ediyorsanız, Multi Launcher sizi seçeneklerle boğmadan tam kontrol sağlar.</p>
 
-<h2>Why Choose Multi Launcher?</h2>
+<h2>Neden Multi Launcher'ı Seçmelisiniz?</h2>
 <ul>
-    <li><strong>Text-Based Launcher:</strong> No confusing icons — just labeled text buttons for your apps.</li>
-    <li><strong>Highly Customizable:</strong> Adjust layout, font sizes, clock position, and more.</li>
-    <li><strong>Quick Gestures:</strong> Use taps, swipes, and long swipes to open apps, lock the screen, and access notifications.</li>
-    <li><strong>Secure:</strong> Biometric lock for settings and privacy.</li>
-    <li><strong>Great for Seniors or Simplicity-Lovers:</strong> Easy to read, use, and customize.</li>
+    <li><strong>Metin Tabanlı Başlatıcı:</strong> Kafa karıştırıcı simgeler yok — sadece uygulamalarınız için etiketli metin düğmeleri.</li>
+    <li><strong>Son Derece Özelleştirilebilir:</strong> Düzeni, yazı tiplerini, saat konumunu ve daha fazlasını ayarlayın.</li>
+    <li><strong>Hızlı Hareketler:</strong> Uygulamaları açmak, ekranı kilitlemek ve bildirimlere erişmek için dokunma, kaydırma ve uzun kaydırma hareketlerini kullanın.</li>
+    <li><strong>Güvenli:</strong> Ayarlar ve gizlilik için biyometrik kilit.</li>
+    <li><strong>Yaşlılar veya Sadelik Tutkunları için Harika:</strong> Okunması, kullanılması ve özelleştirilmesi kolay.</li>
 </ul>
 
-<h2>Key Features:</h2>
+<h2>Temel Özellikler:</h2>
 <ul>
-    <li>Custom App Names: Rename apps to match how you think of them.</li>
-    <li>Flexible Layouts: Organize apps in the way that makes sense for you.</li>
-    <li>Clock & Date Customization: Place widgets wherever you want.</li>
-    <li>App Usage Insights: See how much time you spend in each app.</li>
-    <li>Gesture Shortcuts: Set custom actions for double taps, swipes, and more.</li>
+    <li>Özel Uygulama Adları: Uygulamaları düşündüğünüz şekilde yeniden adlandırın.</li>
+    <li>Esnek Düzenler: Uygulamaları sizin için mantıklı olacak şekilde düzenleyin.</li>
+    <li>Saat ve Tarih Özelleştirme: Widget'ları istediğiniz yere yerleştirin.</li>
+    <li>Uygulama Kullanım İçgörüleri: Her uygulamada ne kadar zaman harcadığınızı görün.</li>
+    <li>Hareket Kısayolları: Çift dokunuşlar, kaydırmalar ve daha fazlası için özel eylemler ayarlayın.</li>
 </ul>
 
-<h2>Accessibility Features:</h2>
-<p>This app uses the <strong>AccessibilityService API</strong> to:</p>
+<h2>Erişilebilirlik Özellikleri:</h2>
+<p>Bu uygulama <strong>AccessibilityService API'sini</strong> kullanarak şunları yapar:</p>
 <ul>
-    <li>Lock the screen with a gesture</li>
-    <li>Open the power menu</li>
-    <li>Pull down the notification drawer</li>
+    <li>Ekranı bir hareketle kilitle</li>
+    <li>Güç menüsünü aç</li>
+    <li>Bildirim çekmecesini aşağı çekin</li>
 </ul>
 
-<p><em>Multi Launcher respects your privacy. These features do not collect or share personal data.</em></p>
+<p><em>Multi Launcher gizliliğinize saygı duyar. Bu özellikler kişisel verileri toplamaz veya paylaşmaz.</em></p>
 
-<p>If you’re tired of flashy, cluttered launchers and want something straightforward, stylish, and empowering, <strong>Multi Launcher</strong> is your perfect home screen solution.</p>
+<p>Gösterişli, karmaşık başlatıcılardan sıkıldıysanız ve sade, şık ve güçlendirici bir şey istiyorsanız, <strong>Çoklu Başlatıcı</strong> sizin için mükemmel ana ekran çözümüdür.</p>
