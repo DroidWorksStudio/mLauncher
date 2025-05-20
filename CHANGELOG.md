@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Refactoring:
+
+- Improve code formatting and remove redundant code - ([bc122be](https://github.com/DroidWorksStudio/mLauncher/commit/bc122be9812b2dc6a2a60b102990ba04ea0afb55))
+
+## [1.10.3.2](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.3.2) - (20, May 2025)
+
 ### Implemented Enhancements:
 
 - *(release)* Update app icon and add feature graphic - ([6faf286](https://github.com/DroidWorksStudio/mLauncher/commit/6faf28619f92be62e1232ed339f6abc34ac9d852))
