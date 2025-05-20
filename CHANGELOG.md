@@ -8,6 +8,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Improve code formatting and remove redundant code - ([bc122be](https://github.com/DroidWorksStudio/mLauncher/commit/bc122be9812b2dc6a2a60b102990ba04ea0afb55))
 
+### Releases:
+
+- Increment build number and add debug suffix - ([c6f4787](https://github.com/DroidWorksStudio/mLauncher/commit/c6f47870ef57cf5a2dc7cddcd2f3a9c7203f6d86))
+
 ## [1.10.3.2](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.3.2) - (20, May 2025)
 
 ### Implemented Enhancements:
