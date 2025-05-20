@@ -33,9 +33,9 @@
     <string name="settings_exit_mlauncher_title">الخروج من MultiLauncher</string>
     <string name="settings_exit_mlauncher_description">التبديل إلى المشغل الافتراضي الخاص بك مؤقتًا.</string>
     <string name="settings_exit_mlauncher_dialog">اختر مشغلًا</string>
-    <string name="settings_donation_title">Donations</string>
-    <string name="settings_donation_description">Support our work by making a donation.</string>
-    <string name="settings_donation_dialog">Support Us</string>
+    <string name="settings_donation_title">التبرعات</string>
+    <string name="settings_donation_description">ادعم عملنا عن طريق التبرع.</string>
+    <string name="settings_donation_dialog">ادعمنا</string>
     <!-- Strings used for features settings -->
     <string name="features_settings_title">سمات</string>
     <string name="user_preferences">تفضيلات المستخدم</string>
