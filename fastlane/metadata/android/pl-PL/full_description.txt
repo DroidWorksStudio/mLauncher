@@ -1,35 +1,35 @@
-<h1>Multi Launcher: A Clean, Simple Android Launcher Built for Readability and Control</h1>
+<h1>Multi Launcher: Czysty, prosty program uruchamiający Androida, stworzony z myślą o czytelności i kontroli</h1>
 
-<p>Looking for a launcher that ditches the clutter and keeps things easy? <strong>Multi Launcher</strong> is a powerful yet minimalist Android launcher that replaces tiny icons with clear, readable text buttons, making your phone easier to navigate.</p>
+<p>Szukasz launchera, który uporządkuje wszystko i ułatwi działanie? <strong>Multi Launcher</strong> to potężny, a zarazem minimalistyczny launcher Androida, który zastępuje małe ikony wyraźnymi, czytelnymi przyciskami tekstowymi, dzięki czemu nawigacja w telefonie jest łatwiejsza.</p>
 
-<p>Whether you want a simple home screen, need large text for visibility, or prefer quick gesture-based actions, Multi Launcher gives you full control without overwhelming you with options.</p>
+<p>Niezależnie od tego, czy chcesz mieć prosty ekran główny, potrzebujesz dużego tekstu dla lepszej widoczności, czy wolisz szybkie akcje oparte na gestach, Multi Launcher zapewnia pełną kontrolę bez przytłaczania Cię opcjami.</p>
 
-<h2>Why Choose Multi Launcher?</h2>
+<h2>Dlaczego warto wybrać Multi Launcher?</h2>
 <ul>
-    <li><strong>Text-Based Launcher:</strong> No confusing icons — just labeled text buttons for your apps.</li>
-    <li><strong>Highly Customizable:</strong> Adjust layout, font sizes, clock position, and more.</li>
-    <li><strong>Quick Gestures:</strong> Use taps, swipes, and long swipes to open apps, lock the screen, and access notifications.</li>
-    <li><strong>Secure:</strong> Biometric lock for settings and privacy.</li>
-    <li><strong>Great for Seniors or Simplicity-Lovers:</strong> Easy to read, use, and customize.</li>
+    <li><strong>Program uruchamiający oparty na tekście:</strong> Żadnych mylących ikon — tylko opisane przyciski tekstowe dla Twoich aplikacji.</li>
+    <li><strong>Wysoki poziom personalizacji:</strong> Dostosuj układ, rozmiary czcionek, położenie zegara i wiele więcej.</li>
+    <li><strong>Szybkie gesty:</strong> Użyj stuknięć, przesunięć i długich przesunięć, aby otwierać aplikacje, blokować ekran i uzyskiwać dostęp do powiadomień.</li>
+    <li><strong>Bezpieczne:</strong> Biometryczna blokada ustawień i prywatności.</li>
+    <li><strong>Idealne dla seniorów i miłośników prostoty:</strong> Łatwe do odczytania, użycia i dostosowania.</li>
 </ul>
 
-<h2>Key Features:</h2>
+<h2>Główne cechy:</h2>
 <ul>
-    <li>Custom App Names: Rename apps to match how you think of them.</li>
-    <li>Flexible Layouts: Organize apps in the way that makes sense for you.</li>
-    <li>Clock & Date Customization: Place widgets wherever you want.</li>
-    <li>App Usage Insights: See how much time you spend in each app.</li>
-    <li>Gesture Shortcuts: Set custom actions for double taps, swipes, and more.</li>
+    <li>Niestandardowe nazwy aplikacji: Zmień nazwy aplikacji tak, aby odpowiadały temu, jak o nich myślisz.</li>
+    <li>Elastyczne układy: Organizuj aplikacje w sposób, który ma dla Ciebie sens.</li>
+    <li>Dostosowywanie zegara i daty: Umieść widżety gdziekolwiek chcesz.</li>
+    <li>Wgląd w korzystanie z aplikacji: Zobacz, ile czasu spędzasz w każdej aplikacji.</li>
+    <li>Skróty gestów: Ustaw niestandardowe akcje dla dwukrotnego dotknięcia, przesunięcia i innych.</li>
 </ul>
 
-<h2>Accessibility Features:</h2>
-<p>This app uses the <strong>AccessibilityService API</strong> to:</p>
+<h2>Funkcje ułatwień dostępu:</h2>
+<p>Ta aplikacja używa <strong>interfejsu API usługi dostępności</strong> w celu:</p>
 <ul>
-    <li>Lock the screen with a gesture</li>
-    <li>Open the power menu</li>
-    <li>Pull down the notification drawer</li>
+    <li>Zablokuj ekran gestem</li>
+    <li>Otwórz menu zasilania</li>
+    <li>Rozwiń szufladkę powiadomień</li>
 </ul>
 
-<p><em>Multi Launcher respects your privacy. These features do not collect or share personal data.</em></p>
+<p><em>Multi Launcher szanuje Twoją prywatność. Funkcje te nie gromadzą ani nie udostępniają danych osobowych.</em></p>
 
-<p>If you’re tired of flashy, cluttered launchers and want something straightforward, stylish, and empowering, <strong>Multi Launcher</strong> is your perfect home screen solution.</p>
+<p>Jeśli masz dość efektownych, zagraconych launcherów i chcesz czegoś prostego, stylowego i wydajnego, <strong>Multi Launcher</strong> będzie dla Ciebie idealnym rozwiązaniem na ekran główny.</p>
