@@ -1,1 +1,1 @@
-mLauncher에서 포크됨, +최소화, +사용자 정의 가능
+Multi Launcher ‧ Home Screen, Weather & Minimal UI Launcher
