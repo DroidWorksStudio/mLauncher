@@ -4,8 +4,13 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Implemented Enhancements:
+
+- Add donation dialog and icons - ([10ce5fa](https://github.com/DroidWorksStudio/mLauncher/commit/10ce5faf343edb1f1fdd4b88d6a9607c1f07bca6))
+
 ### Refactoring:
 
+- Improve code readability in SystemUtils - ([f8c180b](https://github.com/DroidWorksStudio/mLauncher/commit/f8c180bdd4cc495dedb65e2dfec3306373983dc8))
 - Improve code formatting and remove redundant code - ([bc122be](https://github.com/DroidWorksStudio/mLauncher/commit/bc122be9812b2dc6a2a60b102990ba04ea0afb55))
 
 ### Releases:
