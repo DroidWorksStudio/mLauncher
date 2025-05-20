@@ -33,6 +33,9 @@
     <string name="settings_exit_mlauncher_title">Выйти из MultiLauncher</string>
     <string name="settings_exit_mlauncher_description">Временно переключитесь на средство запуска по умолчанию.</string>
     <string name="settings_exit_mlauncher_dialog">Выберите лаунчер</string>
+    <string name="settings_donation_title">Пожертвования</string>
+    <string name="settings_donation_description">Поддержите нашу работу, сделав пожертвование.</string>
+    <string name="settings_donation_dialog">Поддержите нас</string>
     <!-- Strings used for features settings -->
     <string name="features_settings_title">Функции</string>
     <string name="user_preferences">Настройки пользователя</string>

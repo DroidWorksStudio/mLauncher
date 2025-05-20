@@ -33,6 +33,9 @@
     <string name="settings_exit_mlauncher_title">Salir de MultiLauncher</string>
     <string name="settings_exit_mlauncher_description">Cambie a su iniciador predeterminado temporalmente.</string>
     <string name="settings_exit_mlauncher_dialog">Elige un lanzador</string>
+    <string name="settings_donation_title">Donaciones</string>
+    <string name="settings_donation_description">Apoye nuestro trabajo haciendo una donación.</string>
+    <string name="settings_donation_dialog">Apóyanos</string>
     <!-- Strings used for features settings -->
     <string name="features_settings_title">Características</string>
     <string name="user_preferences">Preferencias del usuario</string>

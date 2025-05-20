@@ -33,6 +33,9 @@
     <string name="settings_exit_mlauncher_title">MultiLauncher 종료</string>
     <string name="settings_exit_mlauncher_description">일시적으로 기본 런처로 전환합니다.</string>
     <string name="settings_exit_mlauncher_dialog">런처를 선택하세요</string>
+    <string name="settings_donation_title">기부금</string>
+    <string name="settings_donation_description">기부를 통해 우리의 활동을 지원해 주세요.</string>
+    <string name="settings_donation_dialog">우리를 지원해주세요</string>
     <!-- Strings used for features settings -->
     <string name="features_settings_title">특징</string>
     <string name="user_preferences">사용자 환경 설정</string>

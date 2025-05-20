@@ -33,6 +33,9 @@
     <string name="settings_exit_mlauncher_title">Ukončite MultiLauncher</string>
     <string name="settings_exit_mlauncher_description">Dočasne prepnite na predvolený spúšťač.</string>
     <string name="settings_exit_mlauncher_dialog">Vyberte spúšťač</string>
+    <string name="settings_donation_title">Dary</string>
+    <string name="settings_donation_description">Podporte našu prácu darom.</string>
+    <string name="settings_donation_dialog">Podporte nás</string>
     <!-- Strings used for features settings -->
     <string name="features_settings_title">Vlastnosti</string>
     <string name="user_preferences">Používateľské preferencie</string>
