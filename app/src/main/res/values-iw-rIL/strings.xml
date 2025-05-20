@@ -33,9 +33,9 @@
     <string name="settings_exit_mlauncher_title">צא מ-MultiLauncher</string>
     <string name="settings_exit_mlauncher_description">עבור למפעיל ברירת המחדל שלך באופן זמני.</string>
     <string name="settings_exit_mlauncher_dialog">בחר משגר</string>
-    <string name="settings_donation_title">Donations</string>
-    <string name="settings_donation_description">Support our work by making a donation.</string>
-    <string name="settings_donation_dialog">Support Us</string>
+    <string name="settings_donation_title">תרומות</string>
+    <string name="settings_donation_description">תמכו בפעילות שלנו על ידי תרומה.</string>
+    <string name="settings_donation_dialog">תמכו בנו</string>
     <!-- Strings used for features settings -->
     <string name="features_settings_title">תכונות</string>
     <string name="user_preferences">העדפות משתמש</string>
