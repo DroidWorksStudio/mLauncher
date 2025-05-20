@@ -152,7 +152,8 @@ suspend fun getAppsList(
             val hiddenApps = Prefs(context).hiddenApps
 
             val userManager = context.getSystemService(Context.USER_SERVICE) as UserManager
-            val launcherApps = context.getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps
+            val launcherApps =
+                context.getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps
 
             val prefs = Prefs(context)
 
@@ -278,7 +279,8 @@ fun getNextAlarm(context: Context, prefs: Prefs): CharSequence {
     val nextAlarmClock = alarmManager.nextAlarmClock ?: return "No alarm is set."
 
     val alarmTime = nextAlarmClock.triggerTime
-    val timezone = prefs.appLanguage.timezone()  // Assuming this returns a string like "America/New_York"
+    val timezone =
+        prefs.appLanguage.timezone()  // Assuming this returns a string like "America/New_York"
     val formattedDate = DateFormat.getBestDateTimePattern(timezone, "eeeddMMM")
     val best12 = DateFormat.getBestDateTimePattern(
         timezone,
@@ -288,7 +290,8 @@ fun getNextAlarm(context: Context, prefs: Prefs): CharSequence {
     }
     val best24 = DateFormat.getBestDateTimePattern(timezone, "HHmm")
     val formattedTime = if (is24HourFormat) best24 else best12
-    val formattedAlarm = SimpleDateFormat("$formattedDate $formattedTime", Locale.getDefault()).format(alarmTime)
+    val formattedAlarm =
+        SimpleDateFormat("$formattedDate $formattedTime", Locale.getDefault()).format(alarmTime)
 
     val drawable = AppCompatResources.getDrawable(context, R.drawable.ic_alarm_clock)
     val fontSize = TypedValue.applyDimension(
@@ -299,7 +302,8 @@ fun getNextAlarm(context: Context, prefs: Prefs): CharSequence {
 
     drawable?.apply {
         setBounds(0, 0, fontSize, fontSize)
-        val colorFilterColor: ColorFilter = PorterDuffColorFilter(prefs.alarmClockColor, PorterDuff.Mode.SRC_IN)
+        val colorFilterColor: ColorFilter =
+            PorterDuffColorFilter(prefs.alarmClockColor, PorterDuff.Mode.SRC_IN)
         drawable.colorFilter = colorFilterColor
     }
 
@@ -342,8 +346,10 @@ fun communitySupportButton(context: Context) {
 
 fun checkWhoInstalled(context: Context): String {
     val appName = getLocalizedString(R.string.app_name)
-    val descriptionTemplate = getLocalizedString(R.string.advanced_settings_share_application_description)
-    val descriptionTemplate2 = getLocalizedString(R.string.advanced_settings_share_application_description_addon)
+    val descriptionTemplate =
+        getLocalizedString(R.string.advanced_settings_share_application_description)
+    val descriptionTemplate2 =
+        getLocalizedString(R.string.advanced_settings_share_application_description_addon)
 
     val installSourceInfo = context.packageManager.getInstallSourceInfo(context.packageName)
     // Get the installer package name
@@ -441,7 +447,10 @@ fun loadWordList(context: Context, prefs: Prefs): List<String> {
 
 fun getHexForOpacity(prefs: Prefs): Int {
     // Convert the opacity percentage (0-100) to a reversed decimal (0.0-1.0)
-    val setOpacity = ((100 - prefs.opacityNum.coerceIn(0, 100)) / 100.0).toFloat() // Reverse the opacity, (0% = full opacity, 100% = transparent)
+    val setOpacity = ((100 - prefs.opacityNum.coerceIn(
+        0,
+        100
+    )) / 100.0).toFloat() // Reverse the opacity, (0% = full opacity, 100% = transparent)
 
     val backgroundColor = prefs.backgroundColor // This is already an Int
 
@@ -533,7 +542,10 @@ fun formatLongToCalendar(longTimestamp: Long): String {
     }
 
     // Format the calendar object to a readable string
-    val dateFormat = SimpleDateFormat("MMMM dd, yyyy, HH:mm:ss", Locale.getDefault()) // You can modify the format
+    val dateFormat = SimpleDateFormat(
+        "MMMM dd, yyyy, HH:mm:ss",
+        Locale.getDefault()
+    ) // You can modify the format
     return dateFormat.format(calendar.time) // Return the formatted date string
 }
 
@@ -570,7 +582,8 @@ fun logActivitiesFromPackage(context: Context, packageName: String) {
         val activities: Array<ActivityInfo>? = packageInfo.activities
 
         activities?.forEach { activityInfo ->
-            val componentInfoString = "ComponentInfo{${activityInfo.packageName}/${activityInfo.name}}"
+            val componentInfoString =
+                "ComponentInfo{${activityInfo.packageName}/${activityInfo.name}}"
             Log.d("ComponentInfoLog", componentInfoString)
         } ?: Log.d("ComponentInfoLog", "No activities found in package $packageName")
 
@@ -606,18 +619,38 @@ private fun getInstallSource(packageManager: PackageManager, packageName: String
     try {
         if (BuildConfig.DEBUG) return "Android Studio (ADB)"
 
-        val installer = packageManager.getInstallSourceInfo(packageName).installingPackageName ?: "Unknown"
+        val installer =
+            packageManager.getInstallSourceInfo(packageName).installingPackageName ?: "Unknown"
         return when (installer) {
             "com.android.vending" -> "Google Play Store"
             "org.fdroid.fdroid" -> "F-Droid"
             "com.obtanium.app" -> "Obtanium"
             "com.android.shell" -> "Android Studio (ADB)"
+
+            // Popular browsers
+            "com.android.chrome" -> "Chrome"
+            "org.mozilla.firefox" -> "Firefox"
+            "com.brave.browser" -> "Brave"
+            "com.microsoft.emmx" -> "Edge"
+            "com.opera.browser" -> "Opera"
+            "com.sec.android.app.sbrowser" -> "Samsung Internet"
+
+            // Popular file managers
+            "com.google.android.documentsui" -> "Files by Google"
+            "com.samsung.android.myfiles" -> "Samsung My Files"
+            "com.mi.android.globalFileexplorer" -> "Xiaomi File Manager"
+            "com.asus.filemanager" -> "ASUS File Manager"
+            "com.lonelycatgames.Xplore" -> "X-plore File Manager"
+            "nextapp.fx" -> "FX File Explorer"
+            "com.amazon.filemanager" -> "Amazon File Manager"
+
             else -> "Unknown"
         }
     } catch (_: Exception) {
         return "Unknown"
     }
 }
+
 
 fun getSystemIcons(context: Context, prefs: Prefs, nonNullDrawable: Drawable): Drawable? {
     return when (prefs.iconPack) {
