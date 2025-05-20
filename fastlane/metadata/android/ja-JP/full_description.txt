@@ -1,60 +1,35 @@
-<p> <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>からフォーク: 最小限でクリーンなランチャーで、
-    強化された機能。</p>
+<h1>Multi Launcher: A Clean, Simple Android Launcher Built for Readability and Control</h1>
 
-<h2>追加機能付きフォーク</h2>
+<p>Looking for a launcher that ditches the clutter and keeps things easy? <strong>Multi Launcher</strong> is a powerful yet minimalist Android launcher that replaces tiny icons with clear, readable text buttons, making your phone easier to navigate.</p>
 
-<b>特徴:</b>
+<p>Whether you want a simple home screen, need large text for visibility, or prefer quick gesture-based actions, Multi Launcher gives you full control without overwhelming you with options.</p>
 
-- アプリドロワーのカスタマイズ: アプリドロワー内のアプリの名前を変更(ホーム画面のアプリの名前変更は、すでに長い
-クリック）。
-- 高度なジェスチャー: タップやスワイプなど、さまざまなアクションをトリガーする幅広いジェスチャー。
-- 時計のカスタマイズ: ホームアプリとは独立して時計を配置し、ホーム画面をより細かく制御できます。
-レイアウト。
-- アプリ ドロワー レイアウト: ホーム画面とは別に、アプリ ドロワー内のアプリの配置を変更します。
-- フォント サイズのカスタマイズ: ホーム画面のセクションのフォント サイズを個別に調整します。
-- プライバシー重視: インターネットのアクセス許可を削除し、データのプライバシーを確保します。
-- 生体認証セキュリティ: 生体認証で設定をロックします (トグル オプション)。
-- クラッシュ レポート: より適切なトラブルシューティングを行うために、電子メールでクラッシュを報告する機能。
-- アプリの使用状況の追跡: ホーム画面から直接アプリの使用時間を表示します。
+<h2>Why Choose Multi Launcher?</h2>
+<ul>
+    <li><strong>Text-Based Launcher:</strong> No confusing icons — just labeled text buttons for your apps.</li>
+    <li><strong>Highly Customizable:</strong> Adjust layout, font sizes, clock position, and more.</li>
+    <li><strong>Quick Gestures:</strong> Use taps, swipes, and long swipes to open apps, lock the screen, and access notifications.</li>
+    <li><strong>Secure:</strong> Biometric lock for settings and privacy.</li>
+    <li><strong>Great for Seniors or Simplicity-Lovers:</strong> Easy to read, use, and customize.</li>
+</ul>
 
-<b>ジェスチャーには以下が含まれます:</b>
+<h2>Key Features:</h2>
+<ul>
+    <li>Custom App Names: Rename apps to match how you think of them.</li>
+    <li>Flexible Layouts: Organize apps in the way that makes sense for you.</li>
+    <li>Clock & Date Customization: Place widgets wherever you want.</li>
+    <li>App Usage Insights: See how much time you spend in each app.</li>
+    <li>Gesture Shortcuts: Set custom actions for double taps, swipes, and more.</li>
+</ul>
 
-- ダブルタップ: すばやく 2 回タップすると、定義済みのアクションがトリガーされます。
-- 時計タップ: 時計をタップすると、追加の機能や設定にアクセスできます。
-- 日付タップ: 日付をタップするとカレンダーに簡単にアクセスできます。
-- 使用状況タップ: 合計使用量をタップすると、システムまたはアプリの使用状況データが表示されます。
-- 短いスワイプ: 上、下、左、右にスワイプして、さまざまなアクションをナビゲートまたはトリガーします。
-- ロングスワイプ: 上、下、左、右にスワイプすると、追加のジェスチャアクションが実行されます。
+<h2>Accessibility Features:</h2>
+<p>This app uses the <strong>AccessibilityService API</strong> to:</p>
+<ul>
+    <li>Lock the screen with a gesture</li>
+    <li>Open the power menu</li>
+    <li>Pull down the notification drawer</li>
+</ul>
 
-<b>実行可能なアクションは次のとおりです:</b>
+<p><em>Multi Launcher respects your privacy. These features do not collect or share personal data.</em></p>
 
-- 指定したアプリを開く: ジェスチャで任意のアプリを即座に開きます。
-- アプリリストを表示: デバイスにインストールされているアプリの完全なリストを表示します。
-- 画面のロック: セキュリティのためにデバイスをロックします。
-- 最近開いたアプリを表示: 最近使用したアプリにアクセスして、マルチタスクをすばやく実行します。
-- 通知ドロワーを開く: スワイプまたはタップで通知ドロワーを起動します。
-- クイック設定を開く: ホーム画面から直接クイック設定にアクセスします。
-- 電源ダイアログ: シャットダウン、再起動などの電源オプションを開きます。
-- スクリーンショットを撮る: 画面をキャプチャしてコンテンツを保存または共有します。
-- ページの切り替え: ホーム画面のページをすばやく切り替えます。
-- ジェスチャを無効にする: 必要に応じて特定のジェスチャを無効にします。
-
-<b>翻訳:</b>
-
-- アラビア語
-- オランダ語
-- 英語
-- フランス語
-- ドイツ語
-- ヘブライ語
-- イタリア語
-- 日本語
-- 韓国語
-- リトアニア語
-- ポーランド語
-- ポルトガル語
-- ロシア語
-- スロバキア語
-- スペイン語
-- タイ語
-- トルコ語
+<p>If you’re tired of flashy, cluttered launchers and want something straightforward, stylish, and empowering, <strong>Multi Launcher</strong> is your perfect home screen solution.</p>
