@@ -7,16 +7,26 @@ plugins {
     id("kotlin-android")
 }
 
+// Top of build.gradle.kts
+val major = 1
+val minor = 10
+val patch = 3
+val build = 2
+
+val versionCodeInt =
+    (String.format("%02d", major) + String.format("%02d", minor) + String.format("%02d", patch) + String.format("%02d", build)).toInt()
+val versionNameStr = "$major.$minor.$patch.$build"
+
 android {
     namespace = "com.github.droidworksstudio.mlauncher"
     compileSdk = 36
 
     defaultConfig {
         applicationId = "app.mlauncher"
-        minSdk = 26
+        minSdk = 30
         targetSdk = 36
-        versionCode = 101001
-        versionName = "1.10.1"
+        versionCode = versionCodeInt
+        versionName = versionNameStr
     }
 
     buildTypes {
@@ -24,12 +34,10 @@ android {
             isMinifyEnabled = false
             isShrinkResources = false
             isDebuggable = true
-            applicationIdSuffix = ".debug"
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            resValue("string", "app_name", "mLauncher Debug")
         }
 
         getByName("release") {
@@ -39,7 +47,6 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            resValue("string", "app_name", "mLauncher")
         }
     }
 
@@ -102,7 +109,11 @@ dependencies {
     implementation(libs.core.ktx)
     implementation(libs.appcompat)
     implementation(libs.recyclerview)
+    implementation(libs.activity.ktx)
     implementation(libs.palette.ktx)
+    implementation(libs.material)
+    implementation(libs.viewpager2)
+    implementation(libs.activity)
 
     // Android Lifecycle
     implementation(libs.lifecycle.extensions)

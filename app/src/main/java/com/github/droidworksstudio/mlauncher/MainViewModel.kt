@@ -12,8 +12,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
 import com.github.droidworksstudio.common.CrashHandler
+import com.github.droidworksstudio.common.getLocalizedString
 import com.github.droidworksstudio.common.hideKeyboard
 import com.github.droidworksstudio.common.showShortToast
 import com.github.droidworksstudio.mlauncher.data.AppListItem
@@ -23,7 +23,7 @@ import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.helper.analytics.AppUsageMonitor
 import com.github.droidworksstudio.mlauncher.helper.getAppsList
 import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
-import com.github.droidworksstudio.mlauncher.helper.setDefaultHomeScreen
+import com.github.droidworksstudio.mlauncher.helper.logActivitiesFromPackage
 import com.github.droidworksstudio.mlauncher.helper.utils.BiometricHelper
 import kotlinx.coroutines.launch
 
@@ -45,7 +45,6 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     val showClock = MutableLiveData(prefs.showClock)
     val showAlarm = MutableLiveData(prefs.showAlarm)
     val showDailyWord = MutableLiveData(prefs.showDailyWord)
-    val showFloating = MutableLiveData(prefs.showFloating)
     val clockAlignment = MutableLiveData(prefs.clockAlignment)
     val dateAlignment = MutableLiveData(prefs.dateAlignment)
     val alarmAlignment = MutableLiveData(prefs.alarmAlignment)
@@ -56,21 +55,12 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     val opacityNum = MutableLiveData(prefs.opacityNum)
     val filterStrength = MutableLiveData(prefs.filterStrength)
     val recentCounter = MutableLiveData(prefs.recentCounter)
+    val customIconPack = MutableLiveData(prefs.customIconPack)
     val iconPack = MutableLiveData(prefs.iconPack)
 
     fun selectedApp(fragment: Fragment, app: AppListItem, flag: AppDrawerFlag, n: Int = 0) {
         when (flag) {
-            AppDrawerFlag.LaunchApp,
-            AppDrawerFlag.HiddenApps,
-            AppDrawerFlag.PrivateApps -> {
-                launchApp(app, fragment)
-            }
-
-            AppDrawerFlag.SetHomeApp -> {
-                prefs.setHomeAppModel(n, app)
-                findNavController(fragment).popBackStack()
-            }
-
+            AppDrawerFlag.SetHomeApp -> prefs.setHomeAppModel(n, app)
             AppDrawerFlag.SetShortSwipeUp -> prefs.appShortSwipeUp = app
             AppDrawerFlag.SetShortSwipeDown -> prefs.appShortSwipeDown = app
             AppDrawerFlag.SetShortSwipeLeft -> prefs.appShortSwipeLeft = app
@@ -84,6 +74,9 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             AppDrawerFlag.SetFloating -> prefs.appFloating = app
             AppDrawerFlag.SetClickDate -> prefs.appClickDate = app
             AppDrawerFlag.SetDoubleTap -> prefs.appDoubleTap = app
+            AppDrawerFlag.LaunchApp, AppDrawerFlag.HiddenApps, AppDrawerFlag.PrivateApps -> launchApp(app, fragment)
+
+            AppDrawerFlag.None -> {}
         }
     }
 
@@ -107,12 +100,9 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         showDailyWord.value = visibility
     }
 
-    fun setShowFloating(visibility: Boolean) {
-        showFloating.value = visibility
-    }
-
     fun setDefaultLauncher(visibility: Boolean) {
-        launcherDefault.value = visibility
+        val reverseValue = !visibility
+        launcherDefault.value = reverseValue
     }
 
     fun launchApp(appListItem: AppListItem, fragment: Fragment) {
@@ -120,6 +110,8 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
         val packageName = appListItem.activityPackage
         val currentLockedApps = prefs.lockedApps
+
+        logActivitiesFromPackage(appContext, packageName)
 
         if (currentLockedApps.contains(packageName)) {
             fragment.hideKeyboard()
@@ -130,23 +122,19 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
                 override fun onAuthenticationFailed() {
                     Log.e(
-                        "Authentication",
-                        appContext.getString(R.string.text_authentication_failed)
+                        "Authentication", getLocalizedString(R.string.text_authentication_failed)
                     )
                 }
 
                 override fun onAuthenticationError(errorCode: Int, errorMessage: CharSequence?) {
                     when (errorCode) {
                         BiometricPrompt.ERROR_USER_CANCELED -> Log.e(
-                            "Authentication",
-                            appContext.getString(R.string.text_authentication_cancel)
+                            "Authentication", getLocalizedString(R.string.text_authentication_cancel)
                         )
 
                         else -> Log.e(
-                            "Authentication",
-                            appContext.getString(R.string.text_authentication_error).format(
-                                errorMessage,
-                                errorCode
+                            "Authentication", getLocalizedString(R.string.text_authentication_error).format(
+                                errorMessage, errorCode
                             )
                         )
                     }
@@ -192,16 +180,15 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
-    fun getAppList(includeHiddenApps: Boolean = true) {
+    fun getAppList(includeHiddenApps: Boolean = true, flag: AppDrawerFlag = AppDrawerFlag.None) {
         viewModelScope.launch {
-            appList.value = getAppsList(appContext, includeRegularApps = true, includeHiddenApps)
+            appList.value = getAppsList(appContext, includeRegularApps = true, includeHiddenApps, flag = flag)
         }
     }
 
     fun getHiddenApps() {
         viewModelScope.launch {
-            hiddenApps.value =
-                getAppsList(appContext, includeRegularApps = false, includeHiddenApps = true)
+            hiddenApps.value = getAppsList(appContext, includeRegularApps = false, includeHiddenApps = true)
         }
     }
 
@@ -211,7 +198,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     fun resetDefaultLauncherApp(context: Context) {
-        setDefaultHomeScreen(context)
+        (context as MainActivity).setDefaultHomeScreen(context)
     }
 
     fun updateDrawerAlignment(gravity: Constants.Gravity) {
@@ -256,8 +243,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     fun loadAppOrder() {
-        val savedOrder = (0 until prefs.homeAppsNum)
-            .mapNotNull { prefs.getHomeAppModel(it) } // Ensure it doesn’t return null
+        val savedOrder = (0 until prefs.homeAppsNum).mapNotNull { prefs.getHomeAppModel(it) } // Ensure it doesn’t return null
         homeAppsOrder.postValue(savedOrder) // ✅ Now posts a valid list
     }
 }

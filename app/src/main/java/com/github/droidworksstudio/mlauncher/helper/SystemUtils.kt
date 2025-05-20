@@ -1,20 +1,24 @@
 package com.github.droidworksstudio.mlauncher.helper
 
+import android.Manifest
 import android.app.Activity
 import android.app.AlarmManager
-import android.app.AlertDialog
 import android.app.AppOpsManager
 import android.app.UiModeManager
 import android.app.role.RoleManager
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.content.pm.LauncherApps
+import android.content.pm.PackageInfo
+import android.content.pm.PackageManager
 import android.content.res.Resources
 import android.graphics.ColorFilter
 import android.graphics.PorterDuff
 import android.graphics.PorterDuffColorFilter
 import android.graphics.Typeface
+import android.graphics.drawable.Drawable
 import android.os.Build
 import android.os.Process
 import android.os.UserHandle
@@ -29,59 +33,90 @@ import android.util.TypedValue
 import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
-import androidx.annotation.RequiresApi
 import androidx.appcompat.content.res.AppCompatResources
+import androidx.core.content.ContextCompat
 import androidx.core.net.toUri
+import com.github.droidworksstudio.common.ColorIconsExtensions
+import com.github.droidworksstudio.common.CrashHandler
+import com.github.droidworksstudio.common.getLocalizedString
 import com.github.droidworksstudio.common.openAccessibilitySettings
 import com.github.droidworksstudio.common.showLongToast
 import com.github.droidworksstudio.mlauncher.BuildConfig
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.AppListItem
 import com.github.droidworksstudio.mlauncher.data.Constants
+import com.github.droidworksstudio.mlauncher.data.Constants.AppDrawerFlag
+import com.github.droidworksstudio.mlauncher.data.Message
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.helper.analytics.AppUsageMonitor
 import com.github.droidworksstudio.mlauncher.helper.utils.PrivateSpaceManager
+import com.github.droidworksstudio.mlauncher.helper.utils.packageNames
 import com.github.droidworksstudio.mlauncher.services.ActionService
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.xmlpull.v1.XmlPullParser
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.Calendar
-import java.util.Date
 import java.util.Locale
+import java.util.TimeZone
 import kotlin.math.pow
 import kotlin.math.sqrt
 
-fun hasUsagePermission(context: Context): Boolean {
+fun emptyString(): String {
+    return ""
+}
+
+val iconPackActions = listOf(
+    "app.mlauncher.THEME",
+    "org.adw.launcher.THEMES",
+    "com.gau.go.launcherex.theme",
+    "com.novalauncher.THEME",
+    "com.anddoes.launcher.THEME",
+    "com.teslacoilsw.launcher.THEME",
+    "app.lawnchair.icons.THEMED_ICON"
+)
+
+val iconPackBlacklist = listOf(
+    "ginlemon.iconpackstudio"
+)
+
+fun hasUsageAccessPermission(context: Context): Boolean {
     val appOpsManager = context.getSystemService(Context.APP_OPS_SERVICE) as AppOpsManager
-    val mode = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-        appOpsManager.unsafeCheckOpNoThrow(
-            AppOpsManager.OPSTR_GET_USAGE_STATS,
-            Process.myUid(),
-            context.packageName
-        )
-    } else {
-        @Suppress("DEPRECATION")
-        appOpsManager.checkOpNoThrow(
-            AppOpsManager.OPSTR_GET_USAGE_STATS,
-            Process.myUid(),
-            context.packageName
-        )
-    }
+    val mode = appOpsManager.checkOpNoThrow(
+        AppOpsManager.OPSTR_GET_USAGE_STATS,
+        Process.myUid(),
+        context.packageName
+    )
     return mode == AppOpsManager.MODE_ALLOWED
+}
+
+fun hasLocationPermission(context: Context): Boolean {
+    val fineLocationPermission = ContextCompat.checkSelfPermission(
+        context,
+        Manifest.permission.ACCESS_FINE_LOCATION
+    )
+    val coarseLocationPermission = ContextCompat.checkSelfPermission(
+        context,
+        Manifest.permission.ACCESS_COARSE_LOCATION
+    )
+
+    return fineLocationPermission == PackageManager.PERMISSION_GRANTED ||
+            coarseLocationPermission == PackageManager.PERMISSION_GRANTED
 }
 
 
 fun showPermissionDialog(context: Context) {
-    val builder = AlertDialog.Builder(context)
-    builder.setTitle(context.getString(R.string.permission_required))
-    builder.setMessage(context.getString(R.string.access_usage_data_permission))
-    builder.setPositiveButton(context.getString(R.string.goto_settings)) { dialogInterface: DialogInterface, _: Int ->
+    CrashHandler.logUserAction("Show Usage Permission Dialog")
+    val builder = MaterialAlertDialogBuilder(context)
+    builder.setTitle(getLocalizedString(R.string.permission_required))
+    builder.setMessage(getLocalizedString(R.string.access_usage_data_permission))
+    builder.setPositiveButton(getLocalizedString(R.string.goto_settings)) { dialogInterface: DialogInterface, _: Int ->
         dialogInterface.dismiss()
         requestUsagePermission(context)
     }
-    builder.setNegativeButton(context.getString(R.string.cancel)) { dialogInterface: DialogInterface, _: Int ->
+    builder.setNegativeButton(getLocalizedString(R.string.cancel)) { dialogInterface: DialogInterface, _: Int ->
         dialogInterface.dismiss()
     }
     val dialog = builder.create()
@@ -89,9 +124,15 @@ fun showPermissionDialog(context: Context) {
 }
 
 fun requestUsagePermission(context: Context) {
-    val intent = Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS)
-    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-    context.startActivity(intent)
+    CrashHandler.logUserAction("Requested Usage Permission")
+    try {
+        val intent = Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS).apply {
+            data = "package:${context.packageName}".toUri()  // Open settings for YOUR app only
+        }
+        context.startActivity(intent)
+    } catch (e: Exception) {
+        e.printStackTrace()
+    }
 }
 
 suspend fun getAppsList(
@@ -99,11 +140,13 @@ suspend fun getAppsList(
     includeRegularApps: Boolean = true,
     includeHiddenApps: Boolean = false,
     includeRecentApps: Boolean = true,
+    flag: AppDrawerFlag = AppDrawerFlag.None,
 ): MutableList<AppListItem> {
     return withContext(Dispatchers.Main) {
         val appList: MutableList<AppListItem> = mutableListOf()
         val appRecentList: MutableList<AppListItem> = mutableListOf()
         val combinedList: MutableList<AppListItem> = mutableListOf()
+        CrashHandler.logUserAction("Display App List")
 
         try {
             val hiddenApps = Prefs(context).hiddenApps
@@ -114,6 +157,22 @@ suspend fun getAppsList(
             val prefs = Prefs(context)
 
             for (profile in userManager.userProfiles) {
+                // Add a "Clear" option at the top of the list if homeApps is true
+                Log.d("homeApps", "$flag")
+                when (flag) {
+                    AppDrawerFlag.SetHomeApp -> {
+                        val clearApp = AppListItem(
+                            "Clear",
+                            emptyString(),
+                            emptyString(),
+                            user = profile, // No user associated with the "Clear" option
+                            customLabel = "Clear Current Home App",
+                        )
+                        combinedList.add(0, clearApp) // Add it at the top of the list
+                    }
+
+                    else -> {}
+                }
 
                 // Check if the profile is private space
                 val isProfilePrivate = PrivateSpaceManager(context).isPrivateSpaceProfile(profile)
@@ -187,10 +246,12 @@ suspend fun getAppsList(
                             }
                         }
                     }
+
                     // Add all recent apps to the combined list
                     combinedList.addAll(appRecentList)
                 }
             }
+
             // Add regular apps to the combined list
             combinedList.addAll(appList)
         } catch (e: Exception) {
@@ -211,7 +272,6 @@ fun getUserHandleFromString(context: Context, userHandleString: String): UserHan
     return Process.myUserHandle()
 }
 
-@RequiresApi(Build.VERSION_CODES.Q)
 fun getNextAlarm(context: Context, prefs: Prefs): CharSequence {
     val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
     val is24HourFormat = DateFormat.is24HourFormat(context)
@@ -264,94 +324,39 @@ fun wordOfTheDay(context: Context, prefs: Prefs): String {
 }
 
 fun ismlauncherDefault(context: Context): Boolean {
-    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-        val roleManager = context.getSystemService(RoleManager::class.java)
-        return roleManager.isRoleHeld(RoleManager.ROLE_HOME)
-    } else {
-        val testIntent = Intent(Intent.ACTION_MAIN)
-        testIntent.addCategory(Intent.CATEGORY_HOME)
-        val defaultHome = testIntent.resolveActivity(context.packageManager)?.packageName
-        return defaultHome == context.packageName
-    }
-}
-
-fun setDefaultHomeScreen(context: Context, checkDefault: Boolean = false) {
-    val isDefault = ismlauncherDefault(context)
-    if (checkDefault && isDefault) {
-        // Launcher is already the default home app
-        return
-    }
-
-    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q
-        && context is Activity
-        && !isDefault // using role manager only works when µLauncher is not already the default.
-    ) {
-        val roleManager = context.getSystemService(RoleManager::class.java)
-        context.startActivityForResult(
-            roleManager.createRequestRoleIntent(RoleManager.ROLE_HOME),
-            Constants.REQUEST_SET_DEFAULT_HOME
-        )
-        return
-    }
-
-    val intent = Intent(Settings.ACTION_HOME_SETTINGS)
-    context.startActivity(intent)
+    val roleManager = context.getSystemService(RoleManager::class.java)
+    return roleManager.isRoleHeld(RoleManager.ROLE_HOME)
 }
 
 fun helpFeedbackButton(context: Context) {
-    val uri = "https://github.com/DroidWorksStudio/mLauncher".toUri()
+    val uri = "https://github.com/DroidWorksStudio/mLauncher-Support".toUri()
     val intent = Intent(Intent.ACTION_VIEW, uri)
     context.startActivity(intent)
 }
 
 fun communitySupportButton(context: Context) {
-    val uri = "https://discord.gg/qG6hFuAzfu".toUri()
+    val uri = "https://discord.com/invite/qG6hFuAzfu/".toUri()
     val intent = Intent(Intent.ACTION_VIEW, uri)
     context.startActivity(intent)
 }
 
-@RequiresApi(Build.VERSION_CODES.R)
-fun shareApplicationButton(context: Context) {
-    val shareIntent = Intent(Intent.ACTION_SEND)
-
-    shareIntent.type = "text/plain"
-    shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Share Application")
-    shareIntent.putExtra(
-        Intent.EXTRA_TEXT,
-        checkWhoInstalled(context)
-    )
-    context.startActivity(Intent.createChooser(shareIntent, "Share Application"))
-}
-
-
-@Suppress("DEPRECATION")
 fun checkWhoInstalled(context: Context): String {
-    val appName = context.getString(R.string.app_name)
-    val descriptionTemplate = context.getString(R.string.advanced_settings_share_application_description)
-    val descriptionTemplate2 = context.getString(R.string.advanced_settings_share_application_description_addon)
+    val appName = getLocalizedString(R.string.app_name)
+    val descriptionTemplate = getLocalizedString(R.string.advanced_settings_share_application_description)
+    val descriptionTemplate2 = getLocalizedString(R.string.advanced_settings_share_application_description_addon)
 
+    val installSourceInfo = context.packageManager.getInstallSourceInfo(context.packageName)
     // Get the installer package name
-    val installer: String? = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-        // For Android 11 (API 30) and above
-        val installSourceInfo = context.packageManager.getInstallSourceInfo(context.packageName)
-        installSourceInfo.installingPackageName
-    } else {
-        // For older versions
-        context.packageManager.getInstallerPackageName(context.packageName)
-    }
+    val installer = installSourceInfo.installingPackageName
 
     // Handle null installer package name
     val installSource = when (installer) {
         "com.android.vending" -> "Google Play Store"
-        "org.fdroid.fdroid" -> "F-Droid"
-        null -> "GitHub" // In case installer is null
         else -> installer // Default to the installer package name
     }
 
     val installURL = when (installer) {
         "com.android.vending" -> "https://play.google.com/store/apps/details?id=app.mlauncher"
-        "org.fdroid.fdroid" -> "https://f-droid.org/packages/app.mlauncher"
-        null -> "https://github.com/DroidWorksStudio/mLauncher" // In case installer is null
         else -> "https://play.google.com/store/apps/details?id=app.mlauncher" // Default to the Google Play Store
     }
 
@@ -386,15 +391,11 @@ fun isTablet(context: Context): Boolean {
 }
 
 fun initActionService(context: Context): ActionService? {
-    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
-        val actionService = ActionService.instance()
-        if (actionService != null) {
-            return actionService
-        } else {
-            context.openAccessibilitySettings()
-        }
+    val actionService = ActionService.instance()
+    if (actionService != null) {
+        return actionService
     } else {
-        context.showLongToast("This action requires Android P (9) or higher")
+        context.openAccessibilitySettings()
     }
 
     return null
@@ -402,25 +403,11 @@ fun initActionService(context: Context): ActionService? {
 
 
 fun showStatusBar(activity: Activity) {
-    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R)
-        activity.window.insetsController?.show(WindowInsets.Type.statusBars())
-    else
-        @Suppress("DEPRECATION", "InlinedApi")
-        activity.window.decorView.apply {
-            systemUiVisibility =
-                View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-        }
+    activity.window.insetsController?.show(WindowInsets.Type.statusBars())
 }
 
 fun hideStatusBar(activity: Activity) {
-    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R)
-        activity.window.insetsController?.hide(WindowInsets.Type.statusBars())
-    else {
-        @Suppress("DEPRECATION")
-        activity.window.decorView.apply {
-            systemUiVisibility = View.SYSTEM_UI_FLAG_IMMERSIVE or View.SYSTEM_UI_FLAG_FULLSCREEN
-        }
-    }
+    activity.window.insetsController?.hide(WindowInsets.Type.statusBars())
 }
 
 fun dp2px(resources: Resources, dp: Int): Int {
@@ -431,71 +418,20 @@ fun dp2px(resources: Resources, dp: Int): Int {
     ).toInt()
 }
 
-fun storeFile(activity: Activity, backupType: Constants.BackupType) {
-    // Generate a unique filename with a timestamp
-    when (backupType) {
-        Constants.BackupType.FullSystem -> {
-            val timeStamp = SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(Date())
-            val fileName = "backup_$timeStamp.json"
-
-            val intent = Intent(Intent.ACTION_CREATE_DOCUMENT).apply {
-                addCategory(Intent.CATEGORY_OPENABLE)
-                type = "application/json"
-                putExtra(Intent.EXTRA_TITLE, fileName)
-            }
-            activity.startActivityForResult(intent, Constants.BACKUP_WRITE, null)
-        }
-
-        Constants.BackupType.Theme -> {
-            val timeStamp = SimpleDateFormat("yyyyMMdd", Locale.getDefault()).format(Date())
-            val fileName = "theme_$timeStamp.mtheme"
-
-            val intent = Intent(Intent.ACTION_CREATE_DOCUMENT).apply {
-                addCategory(Intent.CATEGORY_OPENABLE)
-                type = "application/octet-stream"
-                putExtra(Intent.EXTRA_TITLE, fileName)
-            }
-            activity.startActivityForResult(intent, Constants.THEME_BACKUP_WRITE, null)
-        }
-
-    }
-
+fun sp2px(resources: Resources, sp: Float): Float {
+    return TypedValue.applyDimension(
+        TypedValue.COMPLEX_UNIT_SP,
+        sp,
+        resources.displayMetrics
+    )
 }
 
-fun loadFile(activity: Activity, backupType: Constants.BackupType) {
-    when (backupType) {
-        Constants.BackupType.FullSystem -> {
-            val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
-                addCategory(Intent.CATEGORY_OPENABLE)
-                type = "application/json"
-            }
-            activity.startActivityForResult(intent, Constants.BACKUP_READ, null)
-        }
-
-        Constants.BackupType.Theme -> {
-            val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
-                addCategory(Intent.CATEGORY_OPENABLE)
-                type = "application/octet-stream"
-            }
-            activity.startActivityForResult(intent, Constants.THEME_BACKUP_READ, null)
-        }
-    }
-
-}
-
-fun importWordsOfTheDay(activity: Activity) {
-    val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
-        addCategory(Intent.CATEGORY_OPENABLE)
-        type = "application/json"
-    }
-    activity.startActivityForResult(intent, Constants.IMPORT_WORDS_OF_THE_DAY, null)
-}
 
 fun loadWordList(context: Context, prefs: Prefs): List<String> {
     val customWordListString = prefs.wordList
     // If the user has imported their own list, use it
-    return if (customWordListString != "") {
-        prefs.wordList.split(";")
+    return if (customWordListString != emptyString()) {
+        prefs.wordList.split("||")
     } else {
         // Fallback to the default list from resources
         context.resources.getStringArray(R.array.word_of_the_day).toList()
@@ -504,7 +440,9 @@ fun loadWordList(context: Context, prefs: Prefs): List<String> {
 
 
 fun getHexForOpacity(prefs: Prefs): Int {
-    val setOpacity = prefs.opacityNum.coerceIn(0, 255) // Ensure opacity is in the range (0-255)
+    // Convert the opacity percentage (0-100) to a reversed decimal (0.0-1.0)
+    val setOpacity = ((100 - prefs.opacityNum.coerceIn(0, 100)) / 100.0).toFloat() // Reverse the opacity, (0% = full opacity, 100% = transparent)
+
     val backgroundColor = prefs.backgroundColor // This is already an Int
 
     // Extract RGB from background color
@@ -513,7 +451,13 @@ fun getHexForOpacity(prefs: Prefs): Int {
     val blue = android.graphics.Color.blue(backgroundColor)
 
     // Combine opacity with RGB and return final color
-    return android.graphics.Color.argb(setOpacity, red, green, blue)
+    return if (prefs.showBackground) {
+        // Apply a minimum opacity constant for the background
+        android.graphics.Color.argb((Constants.MIN_OPACITY * 255), red, green, blue)
+    } else {
+        // Use the reversed opacity as a percentage (0-100%) converted to a float (0.0-1.0)
+        android.graphics.Color.argb((setOpacity * 255).toInt(), red, green, blue)
+    }
 }
 
 fun isSystemInDarkMode(context: Context): Boolean {
@@ -534,8 +478,6 @@ fun setThemeMode(context: Context, isDark: Boolean, view: View) {
 }
 
 fun parseBlacklistXML(context: Context): List<String> {
-    val packageNames = mutableListOf<String>()
-
     // Obtain an XmlPullParser for the blacklist.xml file
     context.resources.getXml(R.xml.blacklist).use { parser ->
         while (parser.eventType != XmlPullParser.END_DOCUMENT) {
@@ -570,6 +512,20 @@ fun getTrueSystemFont(): Typeface {
     return Typeface.DEFAULT
 }
 
+fun sortMessages(messages: List<Message>): List<Message> {
+    return messages.sortedWith(
+        compareBy<Message> {
+            when (it.priority) {
+                "High" -> 0
+                "Medium" -> 1
+                "Low" -> 2
+                else -> 3
+            }
+        }.thenByDescending { it.timestamp }
+    )
+}
+
+
 fun formatLongToCalendar(longTimestamp: Long): String {
     // Create a Calendar instance and set its time to the given timestamp (in milliseconds)
     val calendar = Calendar.getInstance().apply {
@@ -599,4 +555,114 @@ fun formatMillisToHMS(millis: Long, showSeconds: Boolean): String {
     }
 
     return formattedString.toString().trim()
+}
+
+
+fun logActivitiesFromPackage(context: Context, packageName: String) {
+    val packageManager = context.packageManager
+
+    try {
+        val packageInfo: PackageInfo = packageManager.getPackageInfo(
+            packageName,
+            PackageManager.GET_ACTIVITIES
+        )
+
+        val activities: Array<ActivityInfo>? = packageInfo.activities
+
+        activities?.forEach { activityInfo ->
+            val componentInfoString = "ComponentInfo{${activityInfo.packageName}/${activityInfo.name}}"
+            Log.d("ComponentInfoLog", componentInfoString)
+        } ?: Log.d("ComponentInfoLog", "No activities found in package $packageName")
+
+    } catch (e: PackageManager.NameNotFoundException) {
+        Log.e("ComponentInfoLog", "Package not found: $packageName", e)
+    }
+}
+
+fun getDeviceInfo(context: Context): String {
+    return try {
+        val packageManager = context.packageManager
+        val installSource = getInstallSource(packageManager, context.packageName)
+
+        """
+            Manufacturer: ${Build.MANUFACTURER}
+            Model: ${Build.MODEL}
+            Brand: ${Build.BRAND}
+            Device: ${Build.DEVICE}
+            Product: ${Build.PRODUCT}
+            Android Version: ${Build.VERSION.RELEASE} (SDK ${Build.VERSION.SDK_INT})
+            ABI: ${Build.SUPPORTED_ABIS.joinToString()}
+            App Version: ${BuildConfig.VERSION_NAME} (${BuildConfig.VERSION_CODE})
+            Locale: ${Locale.getDefault()}
+            Timezone: ${TimeZone.getDefault().id}
+            Installed From: $installSource
+            """.trimIndent()
+    } catch (e: Exception) {
+        "Device Info Unavailable: ${e.message}"
+    }
+}
+
+private fun getInstallSource(packageManager: PackageManager, packageName: String): String {
+    try {
+        if (BuildConfig.DEBUG) return "Android Studio (ADB)"
+
+        val installer = packageManager.getInstallSourceInfo(packageName).installingPackageName ?: "Unknown"
+        return when (installer) {
+            "com.android.vending" -> "Google Play Store"
+            "org.fdroid.fdroid" -> "F-Droid"
+            "com.obtanium.app" -> "Obtanium"
+            "com.android.shell" -> "Android Studio (ADB)"
+            else -> "Unknown"
+        }
+    } catch (_: Exception) {
+        return "Unknown"
+    }
+}
+
+fun getSystemIcons(context: Context, prefs: Prefs, nonNullDrawable: Drawable): Drawable? {
+    return when (prefs.iconPack) {
+        Constants.IconPacks.CloudDots -> {
+            val newIcon = ContextCompat.getDrawable(
+                context,
+                R.drawable.cloud_dots_icon
+            )!!
+            val bitmap = ColorIconsExtensions.drawableToBitmap(nonNullDrawable)
+            val dominantColor = ColorIconsExtensions.getDominantColor(bitmap)
+            ColorIconsExtensions.recolorDrawable(newIcon, dominantColor)
+        }
+
+        Constants.IconPacks.LauncherDots -> {
+            val newIcon = ContextCompat.getDrawable(
+                context,
+                R.drawable.launcher_dot_icon
+            )!!
+            val bitmap = ColorIconsExtensions.drawableToBitmap(nonNullDrawable)
+            val dominantColor = ColorIconsExtensions.getDominantColor(bitmap)
+            ColorIconsExtensions.recolorDrawable(newIcon, dominantColor)
+        }
+
+        Constants.IconPacks.NiagaraDots -> {
+            val newIcon = ContextCompat.getDrawable(
+                context,
+                R.drawable.niagara_dot_icon
+            )!!
+            val bitmap = ColorIconsExtensions.drawableToBitmap(nonNullDrawable)
+            val dominantColor = ColorIconsExtensions.getDominantColor(bitmap)
+            ColorIconsExtensions.recolorDrawable(newIcon, dominantColor)
+        }
+
+        Constants.IconPacks.SpinnerDots -> {
+            val newIcon = ContextCompat.getDrawable(
+                context,
+                R.drawable.spinner_dots_icon
+            )!!
+            val bitmap = ColorIconsExtensions.drawableToBitmap(nonNullDrawable)
+            val dominantColor = ColorIconsExtensions.getDominantColor(bitmap)
+            ColorIconsExtensions.recolorDrawable(newIcon, dominantColor)
+        }
+
+        else -> {
+            null
+        }
+    }
 }

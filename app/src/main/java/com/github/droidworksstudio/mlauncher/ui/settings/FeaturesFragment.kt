@@ -1,9 +1,7 @@
 package com.github.droidworksstudio.mlauncher.ui.settings
 
-import android.app.admin.DevicePolicyManager
-import android.content.ComponentName
-import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,7 +15,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.isSpecified
@@ -25,8 +22,10 @@ import androidx.compose.ui.unit.sp
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.github.droidworksstudio.common.getLocalizedString
 import com.github.droidworksstudio.common.isBiometricEnabled
 import com.github.droidworksstudio.common.isGestureNavigationEnabled
+import com.github.droidworksstudio.mlauncher.MainActivity
 import com.github.droidworksstudio.mlauncher.MainViewModel
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.Constants
@@ -39,7 +38,6 @@ import com.github.droidworksstudio.mlauncher.helper.getTrueSystemFont
 import com.github.droidworksstudio.mlauncher.helper.isSystemInDarkMode
 import com.github.droidworksstudio.mlauncher.helper.setThemeMode
 import com.github.droidworksstudio.mlauncher.helper.utils.AppReloader
-import com.github.droidworksstudio.mlauncher.listener.DeviceAdmin
 import com.github.droidworksstudio.mlauncher.style.SettingsTheme
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.PageHeader
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsSelect
@@ -47,15 +45,15 @@ import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.Setti
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsTitle
 import com.github.droidworksstudio.mlauncher.ui.dialogs.DialogManager
 
+
 class FeaturesFragment : Fragment() {
 
     private lateinit var prefs: Prefs
     private lateinit var viewModel: MainViewModel
-    private lateinit var deviceManager: DevicePolicyManager
-    private lateinit var componentName: ComponentName
     private lateinit var dialogBuilder: DialogManager
 
     private var _binding: FragmentSettingsBinding? = null
+
     private val binding get() = _binding!!
 
 
@@ -73,6 +71,12 @@ class FeaturesFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        viewModel = activity?.run {
+            ViewModelProvider(this)[MainViewModel::class.java]
+        } ?: throw Exception("Invalid Activity")
+
+        viewModel.ismlauncherDefault()
+
         resetThemeColors()
     }
 
@@ -84,10 +88,14 @@ class FeaturesFragment : Fragment() {
         var selectedSettingsSize by remember { mutableIntStateOf(prefs.settingsSize) }
         var toggledHideSearchView by remember { mutableStateOf(prefs.hideSearchView) }
         var toggledFloating by remember { mutableStateOf(prefs.showFloating) }
+        var toggledLockOrientation by remember { mutableStateOf(prefs.lockOrientation) }
 
         var selectedSearchEngine by remember { mutableStateOf(prefs.searchEngines) }
+        var toggledShowAZSidebar by remember { mutableStateOf(prefs.showAZSidebar) }
         var toggledAutoShowKeyboard by remember { mutableStateOf(prefs.autoShowKeyboard) }
         var toggledSearchFromStart by remember { mutableStateOf(prefs.searchFromStart) }
+        var toggledEnableFilterStrength by remember { mutableStateOf(prefs.enableFilterStrength) }
+        var selectedFilterStrength by remember { mutableIntStateOf(prefs.filterStrength) }
 
         var toggledAutoOpenApp by remember { mutableStateOf(prefs.autoOpenApp) }
         var toggledAppsLocked by remember { mutableStateOf(prefs.homeLocked) }
@@ -103,6 +111,7 @@ class FeaturesFragment : Fragment() {
         var toggledShowDailyWord by remember { mutableStateOf(prefs.showDailyWord) }
         var toggledShowBattery by remember { mutableStateOf(prefs.showBattery) }
         var toggledShowBatteryIcon by remember { mutableStateOf(prefs.showBatteryIcon) }
+        var toggledShowWeather by remember { mutableStateOf(prefs.showWeather) }
 
         val fs = remember { mutableStateOf(fontSize) }
 
@@ -113,7 +122,7 @@ class FeaturesFragment : Fragment() {
         Column {
             PageHeader(
                 iconRes = R.drawable.ic_back,
-                title = stringResource(R.string.features_settings_title),
+                title = getLocalizedString(R.string.features_settings_title),
                 onClick = {
                     goBackToLastFragment()
                 }
@@ -125,12 +134,12 @@ class FeaturesFragment : Fragment() {
             )
 
             SettingsTitle(
-                text = stringResource(R.string.user_preferences),
+                text = getLocalizedString(R.string.user_preferences),
                 fontSize = titleFontSize,
             )
 
             SettingsSelect(
-                title = stringResource(R.string.theme_mode),
+                title = getLocalizedString(R.string.theme_mode),
                 option = selectedTheme.string(),
                 fontSize = titleFontSize,
                 onClick = {
@@ -155,7 +164,7 @@ class FeaturesFragment : Fragment() {
             )
 
             SettingsSelect(
-                title = stringResource(R.string.app_language),
+                title = getLocalizedString(R.string.app_language),
                 option = selectedLanguage.string(),
                 fontSize = titleFontSize,
                 onClick = {
@@ -173,47 +182,51 @@ class FeaturesFragment : Fragment() {
             )
 
             SettingsSelect(
-                title = stringResource(R.string.font_family),
+                title = getLocalizedString(R.string.font_family),
                 option = selectedFontFamily.string(),
                 fontSize = titleFontSize,
                 onClick = {
+                    // Generate options and fonts
                     val fontFamilyEntries = Constants.FontFamily.entries
 
-                    val fontFamilyOptions = fontFamilyEntries.map {
-                        it.getString(requireContext())
-                    }
-
+                    val fontFamilyOptions = fontFamilyEntries.map { it.getString() }
                     val fontFamilyFonts = fontFamilyEntries.map {
                         it.getFont(requireContext()) ?: getTrueSystemFont()
                     }
+
                     dialogBuilder.showSingleChoiceDialog(
                         context = requireContext(),
-                        options = fontFamilyOptions.map { it.toString() }.toTypedArray(), // Display font names as strings
-                        fonts = fontFamilyFonts, // Actual font values (Typeface) for display
+                        options = fontFamilyOptions.toTypedArray(),
+                        fonts = fontFamilyFonts,
                         titleResId = R.string.font_family,
                         onItemSelected = { newFontFamilyName ->
-                            // Find the index of the selected font based on its name
-                            val newFontFamilyIndex = fontFamilyOptions.indexOfFirst { it.toString() == newFontFamilyName }
+                            val newFontFamilyIndex = fontFamilyOptions.indexOfFirst { it == newFontFamilyName }
                             if (newFontFamilyIndex != -1) {
-                                val newFontFamily = fontFamilyEntries[newFontFamilyIndex] // Get the selected FontFamily enum
-                                selectedFontFamily = newFontFamily // Update state
-                                prefs.fontFamily = newFontFamily // Persist selection in preferences
-                                AppReloader.restartApp(requireContext())
+                                val newFontFamily = fontFamilyEntries[newFontFamilyIndex]
+                                if (newFontFamily == Constants.FontFamily.Custom) {
+                                    // Show file picker and handle upload
+                                    launchFontPicker()
+                                } else {
+                                    selectedFontFamily = newFontFamily
+                                    prefs.fontFamily = newFontFamily
+                                    AppReloader.restartApp(requireContext())
+                                }
                             }
                         }
                     )
                 }
+
             )
 
 
             SettingsSelect(
-                title = stringResource(R.string.settings_text_size),
+                title = getLocalizedString(R.string.settings_text_size),
                 option = selectedSettingsSize.toString(),
                 fontSize = titleFontSize,
                 onClick = {
                     dialogBuilder.showSliderDialog(
                         context = requireContext(),
-                        title = getString(R.string.settings_text_size),
+                        title = getLocalizedString(R.string.settings_text_size),
                         minValue = Constants.MIN_TEXT_SIZE,
                         maxValue = Constants.MAX_TEXT_SIZE,
                         currentValue = prefs.settingsSize,
@@ -226,7 +239,7 @@ class FeaturesFragment : Fragment() {
             )
 
             SettingsSwitch(
-                text = stringResource(R.string.hide_search_view),
+                text = getLocalizedString(R.string.hide_search_view),
                 fontSize = titleFontSize,
                 defaultState = toggledHideSearchView,
                 onCheckedChange = {
@@ -241,38 +254,48 @@ class FeaturesFragment : Fragment() {
             )
 
             SettingsSwitch(
-                text = stringResource(R.string.show_floating_button),
+                text = getLocalizedString(R.string.show_floating_button),
                 fontSize = titleFontSize,
                 defaultState = toggledFloating,
                 onCheckedChange = {
                     toggledFloating = !prefs.showFloating
                     prefs.showFloating = toggledFloating
-                    viewModel.setShowFloating(prefs.showFloating)
+                }
+            )
+
+            SettingsSwitch(
+                text = getLocalizedString(R.string.lock_orientation),
+                fontSize = titleFontSize,
+                defaultState = toggledLockOrientation,
+                onCheckedChange = {
+                    toggledLockOrientation = !prefs.lockOrientation
+                    prefs.lockOrientation = toggledLockOrientation
+                    AppReloader.restartApp(requireContext())
                 }
             )
 
             SettingsTitle(
-                text = stringResource(R.string.search),
+                text = getLocalizedString(R.string.search),
                 fontSize = titleFontSize,
             )
 
             SettingsSelect(
-                title = stringResource(R.string.search_engine),
+                title = getLocalizedString(R.string.search_engine),
                 option = selectedSearchEngine.string(),
                 fontSize = titleFontSize,
                 onClick = {
                     val searchEnginesEntries = Constants.SearchEngines.entries
 
                     val searchEnginesOptions = searchEnginesEntries.map {
-                        it.getString(requireContext())
+                        it.getString()
                     }
 
                     dialogBuilder.showSingleChoiceDialog(
                         context = requireContext(),
-                        options = searchEnginesOptions.map { it.toString() }.toTypedArray(),
+                        options = searchEnginesOptions.map { it }.toTypedArray(),
                         titleResId = R.string.search_engine,
                         onItemSelected = { newSearchEngineName ->
-                            val newFontFamilyIndex = searchEnginesOptions.indexOfFirst { it.toString() == newSearchEngineName }
+                            val newFontFamilyIndex = searchEnginesOptions.indexOfFirst { it == newSearchEngineName }
                             if (newFontFamilyIndex != -1) {
                                 val newSearchEngine = searchEnginesEntries[newFontFamilyIndex] // Get the selected FontFamily enum
                                 selectedSearchEngine = newSearchEngine // Update state
@@ -285,7 +308,7 @@ class FeaturesFragment : Fragment() {
 
             if (!toggledHideSearchView) {
                 SettingsSwitch(
-                    text = stringResource(R.string.auto_show_keyboard),
+                    text = getLocalizedString(R.string.auto_show_keyboard),
                     fontSize = titleFontSize,
                     defaultState = toggledAutoShowKeyboard,
                     onCheckedChange = {
@@ -296,7 +319,17 @@ class FeaturesFragment : Fragment() {
             }
 
             SettingsSwitch(
-                text = stringResource(R.string.search_from_start),
+                text = getLocalizedString(R.string.show_az_sidebar),
+                fontSize = titleFontSize,
+                defaultState = toggledShowAZSidebar,
+                onCheckedChange = {
+                    toggledShowAZSidebar = !prefs.showAZSidebar
+                    prefs.showAZSidebar = toggledShowAZSidebar
+                }
+            )
+
+            SettingsSwitch(
+                text = getLocalizedString(R.string.search_from_start),
                 fontSize = titleFontSize,
                 defaultState = toggledSearchFromStart,
                 onCheckedChange = {
@@ -305,14 +338,46 @@ class FeaturesFragment : Fragment() {
                 }
             )
 
+            SettingsSwitch(
+                text = getLocalizedString(R.string.enable_filter_strength),
+                fontSize = titleFontSize,
+                defaultState = toggledEnableFilterStrength,
+                onCheckedChange = {
+                    toggledEnableFilterStrength = !prefs.enableFilterStrength
+                    prefs.enableFilterStrength = toggledEnableFilterStrength
+                }
+            )
+
+            if (toggledEnableFilterStrength) {
+                SettingsSelect(
+                    title = getLocalizedString(R.string.filter_strength),
+                    option = selectedFilterStrength.toString(),
+                    fontSize = titleFontSize,
+                    onClick = {
+                        dialogBuilder.showSliderDialog(
+                            context = requireContext(),
+                            title = getLocalizedString(R.string.filter_strength),
+                            minValue = Constants.MIN_FILTER_STRENGTH,
+                            maxValue = Constants.MAX_FILTER_STRENGTH,
+                            currentValue = prefs.filterStrength,
+                            onValueSelected = { newFilterStrength ->
+                                selectedFilterStrength = newFilterStrength // Update state
+                                prefs.filterStrength = newFilterStrength // Persist selection in preferences
+                                viewModel.filterStrength.value = newFilterStrength
+                            }
+                        )
+                    }
+                )
+            }
+
             SettingsTitle(
-                text = stringResource(R.string.home_management),
+                text = getLocalizedString(R.string.home_management),
                 fontSize = titleFontSize,
             )
 
 
             SettingsSwitch(
-                text = stringResource(R.string.auto_open_apps),
+                text = getLocalizedString(R.string.auto_open_apps),
                 fontSize = titleFontSize,
                 defaultState = toggledAutoOpenApp,
                 onCheckedChange = {
@@ -322,7 +387,7 @@ class FeaturesFragment : Fragment() {
             )
 
             SettingsSwitch(
-                text = stringResource(R.string.lock_home_apps),
+                text = getLocalizedString(R.string.lock_home_apps),
                 fontSize = titleFontSize,
                 defaultState = toggledAppsLocked,
                 onCheckedChange = {
@@ -333,9 +398,10 @@ class FeaturesFragment : Fragment() {
 
             if (requireContext().isBiometricEnabled()) {
                 SettingsSwitch(
-                    text = stringResource(R.string.lock_settings),
+                    text = getLocalizedString(R.string.lock_settings),
                     fontSize = titleFontSize,
                     defaultState = toggledSettingsLocked,
+
                     onCheckedChange = {
                         toggledSettingsLocked = !prefs.settingsLocked
                         prefs.settingsLocked = toggledSettingsLocked
@@ -344,13 +410,14 @@ class FeaturesFragment : Fragment() {
             }
 
             SettingsSelect(
-                title = stringResource(R.string.apps_on_home_screen),
+                title = getLocalizedString(R.string.apps_on_home_screen),
                 option = selectedHomeAppsNum.toString(),
                 fontSize = titleFontSize,
                 onClick = {
+                    Constants.updateMaxAppsBasedOnPages(requireContext())
                     dialogBuilder.showSliderDialog(
                         context = requireContext(),
-                        title = getString(R.string.apps_on_home_screen),
+                        title = getLocalizedString(R.string.apps_on_home_screen),
                         minValue = Constants.MIN_HOME_APPS,
                         maxValue = Constants.MAX_HOME_APPS,
                         currentValue = prefs.homeAppsNum,
@@ -371,14 +438,14 @@ class FeaturesFragment : Fragment() {
             )
 
             SettingsSelect(
-                title = stringResource(R.string.pages_on_home_screen),
+                title = getLocalizedString(R.string.pages_on_home_screen),
                 option = selectedHomePagesNum.toString(),
                 fontSize = titleFontSize,
                 onClick = {
                     Constants.updateMaxHomePages(requireContext())
                     dialogBuilder.showSliderDialog(
                         context = requireContext(),
-                        title = getString(R.string.pages_on_home_screen),
+                        title = getLocalizedString(R.string.pages_on_home_screen),
                         minValue = Constants.MIN_HOME_PAGES,
                         maxValue = Constants.MAX_HOME_PAGES,
                         currentValue = prefs.homePagesNum,
@@ -391,23 +458,25 @@ class FeaturesFragment : Fragment() {
                 }
             )
 
-            SettingsSwitch(
-                text = stringResource(R.string.enable_home_pager),
-                fontSize = titleFontSize,
-                defaultState = toggledHomePager,
-                onCheckedChange = {
-                    toggledHomePager = !prefs.homePager
-                    prefs.homePager = toggledHomePager
-                }
-            )
+            if (prefs.homePagesNum > 1) {
+                SettingsSwitch(
+                    text = getLocalizedString(R.string.enable_home_pager),
+                    fontSize = titleFontSize,
+                    defaultState = toggledHomePager,
+                    onCheckedChange = {
+                        toggledHomePager = !prefs.homePager
+                        prefs.homePager = toggledHomePager
+                    }
+                )
+            }
 
             SettingsTitle(
-                text = stringResource(R.string.battery_date_time),
+                text = getLocalizedString(R.string.battery_date_time),
                 fontSize = titleFontSize,
             )
 
             SettingsSwitch(
-                text = stringResource(R.string.show_date),
+                text = getLocalizedString(R.string.show_date),
                 fontSize = titleFontSize,
                 defaultState = toggledShowDate,
                 onCheckedChange = {
@@ -418,7 +487,7 @@ class FeaturesFragment : Fragment() {
             )
 
             SettingsSwitch(
-                text = stringResource(R.string.show_clock),
+                text = getLocalizedString(R.string.show_clock),
                 fontSize = titleFontSize,
                 defaultState = toggledShowClock,
                 onCheckedChange = {
@@ -429,7 +498,7 @@ class FeaturesFragment : Fragment() {
             )
 
             SettingsSwitch(
-                text = stringResource(R.string.show_clock_format),
+                text = getLocalizedString(R.string.show_clock_format),
                 fontSize = titleFontSize,
                 defaultState = toggledShowClockFormat,
                 onCheckedChange = {
@@ -439,7 +508,7 @@ class FeaturesFragment : Fragment() {
             )
 
             SettingsSwitch(
-                text = stringResource(R.string.show_alarm),
+                text = getLocalizedString(R.string.show_alarm),
                 fontSize = titleFontSize,
                 defaultState = toggledShowAlarm,
                 onCheckedChange = {
@@ -450,7 +519,7 @@ class FeaturesFragment : Fragment() {
             )
 
             SettingsSwitch(
-                text = stringResource(R.string.show_daily_word),
+                text = getLocalizedString(R.string.show_daily_word),
                 fontSize = titleFontSize,
                 defaultState = toggledShowDailyWord,
                 onCheckedChange = {
@@ -461,7 +530,7 @@ class FeaturesFragment : Fragment() {
             )
 
             SettingsSwitch(
-                text = stringResource(R.string.show_battery),
+                text = getLocalizedString(R.string.show_battery),
                 fontSize = titleFontSize,
                 defaultState = toggledShowBattery,
                 onCheckedChange = {
@@ -471,12 +540,37 @@ class FeaturesFragment : Fragment() {
             )
 
             SettingsSwitch(
-                text = stringResource(R.string.show_battery_icon),
+                text = getLocalizedString(R.string.show_battery_icon),
                 fontSize = titleFontSize,
                 defaultState = toggledShowBatteryIcon,
                 onCheckedChange = {
                     toggledShowBatteryIcon = !prefs.showBatteryIcon
                     prefs.showBatteryIcon = toggledShowBatteryIcon
+                }
+            )
+
+            SettingsSwitch(
+                text = getLocalizedString(R.string.show_battery_icon),
+                fontSize = titleFontSize,
+                defaultState = toggledShowBatteryIcon,
+                onCheckedChange = {
+                    toggledShowBatteryIcon = !prefs.showBatteryIcon
+                    prefs.showBatteryIcon = toggledShowBatteryIcon
+                }
+            )
+
+            SettingsTitle(
+                text = getLocalizedString(R.string.weather),
+                fontSize = titleFontSize,
+            )
+
+            SettingsSwitch(
+                text = getLocalizedString(R.string.show_weather),
+                fontSize = titleFontSize,
+                defaultState = toggledShowWeather,
+                onCheckedChange = {
+                    toggledShowWeather = !prefs.showWeather
+                    prefs.showWeather = toggledShowWeather
                 }
             )
 
@@ -488,6 +582,12 @@ class FeaturesFragment : Fragment() {
             }
         }
     }
+
+    fun launchFontPicker() {
+        Log.d("FontPicker", "Launching picker...")
+        (activity as MainActivity).pickCustomFont()
+    }
+
 
     private fun resetThemeColors() {
         binding.settingsView.setContent {
@@ -517,22 +617,6 @@ class FeaturesFragment : Fragment() {
         dialogBuilder.sliderDialog?.dismiss()
     }
 
-    @Deprecated("Deprecated in Java")
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        @Suppress("DEPRECATION")
-        super.onActivityCreated(savedInstanceState)
-        dialogBuilder = DialogManager(requireContext(), requireActivity())
-        prefs = Prefs(requireContext())
-        viewModel = activity?.run {
-            ViewModelProvider(this)[MainViewModel::class.java]
-        } ?: throw Exception("Invalid Activity")
-
-        viewModel.ismlauncherDefault()
-
-        deviceManager =
-            context?.getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
-        componentName = ComponentName(requireContext(), DeviceAdmin::class.java)
-    }
 
     override fun onDestroyView() {
         super.onDestroyView()

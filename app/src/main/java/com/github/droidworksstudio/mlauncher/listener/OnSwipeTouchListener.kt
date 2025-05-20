@@ -8,7 +8,7 @@ import android.view.MotionEvent
 import android.view.View
 import android.view.View.OnTouchListener
 import com.github.droidworksstudio.mlauncher.data.Constants
-import java.util.*
+import java.util.Timer
 import kotlin.concurrent.schedule
 import kotlin.math.abs
 
@@ -96,6 +96,7 @@ internal open class OnSwipeTouchListener(c: Context?) : OnTouchListener {
     open fun onLongClick() {}
     open fun onDoubleClick() {}
     open fun onTripleClick() {}
+
     init {
         gestureDetector = GestureDetector(c, GestureListener())
     }

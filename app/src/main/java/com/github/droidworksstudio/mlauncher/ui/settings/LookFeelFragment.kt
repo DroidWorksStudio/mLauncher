@@ -1,8 +1,6 @@
 package com.github.droidworksstudio.mlauncher.ui.settings
 
-import android.app.admin.DevicePolicyManager
-import android.content.ComponentName
-import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -18,7 +16,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.isSpecified
@@ -27,6 +24,7 @@ import androidx.core.graphics.toColorInt
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.github.droidworksstudio.common.getLocalizedString
 import com.github.droidworksstudio.common.isGestureNavigationEnabled
 import com.github.droidworksstudio.mlauncher.MainViewModel
 import com.github.droidworksstudio.mlauncher.R
@@ -36,30 +34,28 @@ import com.github.droidworksstudio.mlauncher.data.Constants.Theme.Light
 import com.github.droidworksstudio.mlauncher.data.Constants.Theme.System
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentSettingsBinding
+import com.github.droidworksstudio.mlauncher.helper.emptyString
 import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
 import com.github.droidworksstudio.mlauncher.helper.hideStatusBar
 import com.github.droidworksstudio.mlauncher.helper.isSystemInDarkMode
 import com.github.droidworksstudio.mlauncher.helper.setThemeMode
 import com.github.droidworksstudio.mlauncher.helper.showStatusBar
-import com.github.droidworksstudio.mlauncher.listener.DeviceAdmin
 import com.github.droidworksstudio.mlauncher.style.SettingsTheme
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.PageHeader
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsSelect
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsSwitch
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsTitle
 import com.github.droidworksstudio.mlauncher.ui.dialogs.DialogManager
+import com.github.droidworksstudio.mlauncher.ui.iconpack.CustomIconSelectionActivity
 
 class LookFeelFragment : Fragment() {
 
     private lateinit var prefs: Prefs
     private lateinit var viewModel: MainViewModel
-    private lateinit var deviceManager: DevicePolicyManager
-    private lateinit var componentName: ComponentName
     private lateinit var dialogBuilder: DialogManager
 
     private var _binding: FragmentSettingsBinding? = null
     private val binding get() = _binding!!
-
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -77,6 +73,12 @@ class LookFeelFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        viewModel = activity?.run {
+            ViewModelProvider(this)[MainViewModel::class.java]
+        } ?: throw Exception("Invalid Activity")
+
+        viewModel.ismlauncherDefault()
 
         resetThemeColors()
     }
@@ -99,7 +101,7 @@ class LookFeelFragment : Fragment() {
         var selectedRecentCounter by remember { mutableIntStateOf(prefs.recentCounter) }
         var toggledRecentAppUsageStats by remember { mutableStateOf(prefs.appUsageStats) }
         var selectedAppIcons by remember { mutableStateOf(prefs.iconPack) }
-        var selectedFilterStrength by remember { mutableIntStateOf(prefs.filterStrength) }
+        var toggledShowBackground by remember { mutableStateOf(prefs.showBackground) }
         var selectedBackgroundOpacity by remember { mutableIntStateOf(prefs.opacityNum) }
 
         var selectedHomeAlignment by remember { mutableStateOf(prefs.homeAlignment) }
@@ -116,9 +118,10 @@ class LookFeelFragment : Fragment() {
         var selectedAlarmColor by remember { mutableIntStateOf(prefs.alarmClockColor) }
         var selectedDailyWordColor by remember { mutableIntStateOf(prefs.dailyWordColor) }
         var selectedBatteryColor by remember { mutableIntStateOf(prefs.batteryColor) }
+        var toggledIconRainbowColors by remember { mutableStateOf(prefs.iconRainbowColors) }
+        var selectedShortcutIconsColor by remember { mutableIntStateOf(prefs.shortcutIconsColor) }
 
         val fs = remember { mutableStateOf(fontSize) }
-        Constants.updateMaxHomePages(requireContext())
 
         val titleFontSize = if (fs.value.isSpecified) {
             (fs.value.value * 1.5).sp
@@ -127,7 +130,7 @@ class LookFeelFragment : Fragment() {
         Column {
             PageHeader(
                 iconRes = R.drawable.ic_back,
-                title = stringResource(R.string.look_feel_settings_title),
+                title = getLocalizedString(R.string.look_feel_settings_title),
                 onClick = {
                     goBackToLastFragment()
                 }
@@ -139,18 +142,18 @@ class LookFeelFragment : Fragment() {
             )
 
             SettingsTitle(
-                text = stringResource(R.string.text_size_adjustments),
+                text = getLocalizedString(R.string.text_size_adjustments),
                 fontSize = titleFontSize,
             )
 
             SettingsSelect(
-                title = stringResource(R.string.app_text_size),
+                title = getLocalizedString(R.string.app_text_size),
                 option = selectedAppSize.toString(),
                 fontSize = titleFontSize,
                 onClick = {
                     dialogBuilder.showSliderDialog(
                         context = requireContext(),
-                        title = getString(R.string.app_text_size),
+                        title = getLocalizedString(R.string.app_text_size),
                         minValue = Constants.MIN_TEXT_SIZE,
                         maxValue = Constants.MAX_TEXT_SIZE,
                         currentValue = prefs.appSize,
@@ -163,13 +166,13 @@ class LookFeelFragment : Fragment() {
             )
 
             SettingsSelect(
-                title = stringResource(R.string.date_text_size),
+                title = getLocalizedString(R.string.date_text_size),
                 option = selectedDateSize.toString(),
                 fontSize = titleFontSize,
                 onClick = {
                     dialogBuilder.showSliderDialog(
                         context = requireContext(),
-                        title = getString(R.string.date_text_size),
+                        title = getLocalizedString(R.string.date_text_size),
                         minValue = Constants.MIN_CLOCK_DATE_SIZE,
                         maxValue = Constants.MAX_CLOCK_DATE_SIZE,
                         currentValue = prefs.dateSize,
@@ -182,13 +185,13 @@ class LookFeelFragment : Fragment() {
             )
 
             SettingsSelect(
-                title = stringResource(R.string.clock_text_size),
+                title = getLocalizedString(R.string.clock_text_size),
                 option = selectedClockSize.toString(),
                 fontSize = titleFontSize,
                 onClick = {
                     dialogBuilder.showSliderDialog(
                         context = requireContext(),
-                        title = getString(R.string.clock_text_size),
+                        title = getLocalizedString(R.string.clock_text_size),
                         minValue = Constants.MIN_CLOCK_DATE_SIZE,
                         maxValue = Constants.MAX_CLOCK_DATE_SIZE,
                         currentValue = prefs.clockSize,
@@ -201,13 +204,13 @@ class LookFeelFragment : Fragment() {
             )
 
             SettingsSelect(
-                title = stringResource(R.string.alarm_text_size),
+                title = getLocalizedString(R.string.alarm_text_size),
                 option = selectedAlarmSize.toString(),
                 fontSize = titleFontSize,
                 onClick = {
                     dialogBuilder.showSliderDialog(
                         context = requireContext(),
-                        title = getString(R.string.alarm_text_size),
+                        title = getLocalizedString(R.string.alarm_text_size),
                         minValue = Constants.MIN_ALARM_SIZE,
                         maxValue = Constants.MAX_ALARM_SIZE,
                         currentValue = prefs.alarmSize,
@@ -220,13 +223,13 @@ class LookFeelFragment : Fragment() {
             )
 
             SettingsSelect(
-                title = stringResource(R.string.daily_word_text_size),
+                title = getLocalizedString(R.string.daily_word_text_size),
                 option = selectedDailyWordSize.toString(),
                 fontSize = titleFontSize,
                 onClick = {
                     dialogBuilder.showSliderDialog(
                         context = requireContext(),
-                        title = getString(R.string.daily_word_text_size),
+                        title = getLocalizedString(R.string.daily_word_text_size),
                         minValue = Constants.MIN_DAILY_WORD_SIZE,
                         maxValue = Constants.MAX_DAILY_WORD_SIZE,
                         currentValue = prefs.dailyWordSize,
@@ -239,13 +242,13 @@ class LookFeelFragment : Fragment() {
             )
 
             SettingsSelect(
-                title = stringResource(R.string.battery_text_size),
+                title = getLocalizedString(R.string.battery_text_size),
                 option = selectedBatterySize.toString(),
                 fontSize = titleFontSize,
                 onClick = {
                     dialogBuilder.showSliderDialog(
                         context = requireContext(),
-                        title = getString(R.string.battery_text_size),
+                        title = getLocalizedString(R.string.battery_text_size),
                         minValue = Constants.MIN_BATTERY_SIZE,
                         maxValue = Constants.MAX_BATTERY_SIZE,
                         currentValue = prefs.batterySize,
@@ -258,18 +261,18 @@ class LookFeelFragment : Fragment() {
             )
 
             SettingsTitle(
-                text = stringResource(R.string.layout_positioning),
+                text = getLocalizedString(R.string.layout_positioning),
                 fontSize = titleFontSize,
             )
 
             SettingsSelect(
-                title = stringResource(R.string.app_padding_size),
+                title = getLocalizedString(R.string.app_padding_size),
                 option = selectedPaddingSize.toString(),
                 fontSize = titleFontSize,
                 onClick = {
                     dialogBuilder.showSliderDialog(
                         context = requireContext(),
-                        title = getString(R.string.app_padding_size),
+                        title = getLocalizedString(R.string.app_padding_size),
                         minValue = Constants.MIN_TEXT_PADDING,
                         maxValue = Constants.MAX_TEXT_PADDING,
                         currentValue = prefs.textPaddingSize,
@@ -282,7 +285,7 @@ class LookFeelFragment : Fragment() {
             )
 
             SettingsSwitch(
-                text = stringResource(R.string.extend_home_apps_area),
+                text = getLocalizedString(R.string.extend_home_apps_area),
                 fontSize = titleFontSize,
                 defaultState = toggledExtendHomeAppsArea,
                 onCheckedChange = {
@@ -292,7 +295,7 @@ class LookFeelFragment : Fragment() {
             )
 
             SettingsSwitch(
-                text = stringResource(R.string.alignment_to_bottom),
+                text = getLocalizedString(R.string.alignment_to_bottom),
                 fontSize = titleFontSize,
                 defaultState = toggledHomeAlignmentBottom,
                 onCheckedChange = {
@@ -303,12 +306,12 @@ class LookFeelFragment : Fragment() {
             )
 
             SettingsTitle(
-                text = stringResource(R.string.visibility_display),
+                text = getLocalizedString(R.string.visibility_display),
                 fontSize = titleFontSize,
             )
 
             SettingsSwitch(
-                text = stringResource(R.string.show_status_bar),
+                text = getLocalizedString(R.string.show_status_bar),
                 fontSize = titleFontSize,
                 defaultState = toggledShowStatusBar,
                 onCheckedChange = {
@@ -319,7 +322,7 @@ class LookFeelFragment : Fragment() {
             )
 
             SettingsSwitch(
-                text = stringResource(R.string.show_recent_apps),
+                text = getLocalizedString(R.string.show_recent_apps),
                 fontSize = titleFontSize,
                 defaultState = toggledRecentAppsDisplayed,
                 onCheckedChange = {
@@ -330,13 +333,13 @@ class LookFeelFragment : Fragment() {
 
             if (toggledRecentAppsDisplayed) {
                 SettingsSelect(
-                    title = stringResource(R.string.number_of_recents),
+                    title = getLocalizedString(R.string.number_of_recents),
                     option = selectedRecentCounter.toString(),
                     fontSize = titleFontSize,
                     onClick = {
                         dialogBuilder.showSliderDialog(
                             context = requireContext(),
-                            title = getString(R.string.number_of_recents),
+                            title = getLocalizedString(R.string.number_of_recents),
                             minValue = Constants.MIN_RECENT_COUNTER,
                             maxValue = Constants.MAX_RECENT_COUNTER,
                             currentValue = prefs.recentCounter,
@@ -351,7 +354,7 @@ class LookFeelFragment : Fragment() {
             }
 
             SettingsSwitch(
-                text = stringResource(R.string.show_app_usage_stats),
+                text = getLocalizedString(R.string.show_app_usage_stats),
                 fontSize = titleFontSize,
                 defaultState = toggledRecentAppUsageStats,
                 onCheckedChange = {
@@ -361,15 +364,14 @@ class LookFeelFragment : Fragment() {
             )
 
             SettingsSelect(
-                title = stringResource(R.string.select_app_icons),
+                title = getLocalizedString(R.string.select_app_icons),
                 option = selectedAppIcons.string(),
                 fontSize = titleFontSize,
                 onClick = {
+                    // Generate options and icons
                     val iconPacksEntries = Constants.IconPacks.entries
 
-                    val iconPacksOptions = iconPacksEntries.map {
-                        it.getString(requireContext())
-                    }
+                    val iconPacksOptions = iconPacksEntries.map { it.getString() }
 
                     dialogBuilder.showSingleChoiceDialog(
                         context = requireContext(),
@@ -379,62 +381,60 @@ class LookFeelFragment : Fragment() {
                             val newIconPacksIndex = iconPacksOptions.indexOfFirst { it.toString() == newAppIconsName }
                             if (newIconPacksIndex != -1) {
                                 val newAppIcons = iconPacksEntries[newIconPacksIndex] // Get the selected FontFamily enum
-                                selectedAppIcons = newAppIcons // Update state
-                                prefs.iconPack = newAppIcons // Persist selection in preferences
-                                viewModel.iconPack.value = newAppIcons
+                                if (newAppIcons == Constants.IconPacks.Custom) {
+                                    openCustomIconSelectionDialog()
+                                } else {
+                                    prefs.customIconPack = emptyString()
+                                    selectedAppIcons = newAppIcons // Update state
+                                    prefs.iconPack = newAppIcons // Persist selection in preferences
+                                    viewModel.iconPack.value = newAppIcons
+                                }
                             }
                         }
                     )
                 }
             )
 
-            SettingsSelect(
-                title = stringResource(R.string.filter_strength),
-                option = selectedFilterStrength.toString(),
+            SettingsSwitch(
+                text = getLocalizedString(R.string.show_background),
                 fontSize = titleFontSize,
-                onClick = {
-                    dialogBuilder.showSliderDialog(
-                        context = requireContext(),
-                        title = getString(R.string.filter_strength),
-                        minValue = Constants.MIN_FILTER_STRENGTH,
-                        maxValue = Constants.MAX_FILTER_STRENGTH,
-                        currentValue = prefs.filterStrength,
-                        onValueSelected = { newFilterStrength ->
-                            selectedFilterStrength = newFilterStrength // Update state
-                            prefs.filterStrength = newFilterStrength // Persist selection in preferences
-                            viewModel.filterStrength.value = newFilterStrength
-                        }
-                    )
+                defaultState = toggledShowBackground,
+                onCheckedChange = {
+                    toggledShowBackground = !prefs.showBackground
+                    prefs.showBackground = toggledShowBackground
                 }
             )
 
-            SettingsSelect(
-                title = stringResource(R.string.background_opacity),
-                option = selectedBackgroundOpacity.toString(),
-                fontSize = titleFontSize,
-                onClick = {
-                    dialogBuilder.showSliderDialog(
-                        context = requireContext(),
-                        title = getString(R.string.background_opacity),
-                        minValue = Constants.MIN_OPACITY,
-                        maxValue = Constants.MAX_OPACITY,
-                        currentValue = prefs.opacityNum,
-                        onValueSelected = { newBackgroundOpacity ->
-                            selectedBackgroundOpacity = newBackgroundOpacity // Update state
-                            prefs.opacityNum = newBackgroundOpacity // Persist selection in preferences
-                            viewModel.opacityNum.value = newBackgroundOpacity
-                        }
-                    )
-                }
-            )
+            if (!toggledShowBackground) {
+                SettingsSelect(
+                    title = getLocalizedString(R.string.background_opacity),
+                    option = selectedBackgroundOpacity.toString(),
+                    fontSize = titleFontSize,
+                    onClick = {
+                        dialogBuilder.showSliderDialog(
+                            context = requireContext(),
+                            title = getLocalizedString(R.string.background_opacity),
+                            minValue = Constants.MIN_OPACITY,
+                            maxValue = Constants.MAX_OPACITY,
+                            currentValue = prefs.opacityNum,
+                            onValueSelected = { newBackgroundOpacity ->
+                                selectedBackgroundOpacity = newBackgroundOpacity // Update state
+                                prefs.opacityNum =
+                                    newBackgroundOpacity // Persist selection in preferences
+                                viewModel.opacityNum.value = newBackgroundOpacity
+                            }
+                        )
+                    }
+                )
+            }
 
             SettingsTitle(
-                text = stringResource(R.string.element_alignment),
+                text = getLocalizedString(R.string.element_alignment),
                 fontSize = titleFontSize,
             )
 
             SettingsSelect(
-                title = stringResource(R.string.clock_alignment),
+                title = getLocalizedString(R.string.clock_alignment),
                 option = selectedClockAlignment.string(),
                 fontSize = titleFontSize,
                 onClick = {
@@ -452,7 +452,7 @@ class LookFeelFragment : Fragment() {
             )
 
             SettingsSelect(
-                title = stringResource(R.string.date_alignment),
+                title = getLocalizedString(R.string.date_alignment),
                 option = selectedDateAlignment.string(),
                 fontSize = titleFontSize,
                 onClick = {
@@ -470,7 +470,7 @@ class LookFeelFragment : Fragment() {
             )
 
             SettingsSelect(
-                title = stringResource(R.string.alarm_alignment),
+                title = getLocalizedString(R.string.alarm_alignment),
                 option = selectedAlarmAlignment.string(),
                 fontSize = titleFontSize,
                 onClick = {
@@ -488,7 +488,7 @@ class LookFeelFragment : Fragment() {
             )
 
             SettingsSelect(
-                title = stringResource(R.string.daily_word_alignment),
+                title = getLocalizedString(R.string.daily_word_alignment),
                 option = selectedDailyWordAlignment.string(),
                 fontSize = titleFontSize,
                 onClick = {
@@ -506,7 +506,7 @@ class LookFeelFragment : Fragment() {
             )
 
             SettingsSelect(
-                title = stringResource(R.string.home_alignment),
+                title = getLocalizedString(R.string.home_alignment),
                 option = selectedHomeAlignment.string(),
                 fontSize = titleFontSize,
                 onClick = {
@@ -524,7 +524,7 @@ class LookFeelFragment : Fragment() {
             )
 
             SettingsSelect(
-                title = stringResource(R.string.drawer_alignment),
+                title = getLocalizedString(R.string.drawer_alignment),
                 option = selectedDrawAlignment.string(),
                 fontSize = titleFontSize,
                 onClick = {
@@ -542,13 +542,13 @@ class LookFeelFragment : Fragment() {
             )
 
             SettingsTitle(
-                text = stringResource(R.string.element_colors),
+                text = getLocalizedString(R.string.element_colors),
                 fontSize = titleFontSize,
             )
 
             val hexBackgroundColor = String.format("#%06X", (0xFFFFFF and selectedBackgroundColor))
             SettingsSelect(
-                title = stringResource(R.string.background_color),
+                title = getLocalizedString(R.string.background_color),
                 option = hexBackgroundColor,
                 fontSize = titleFontSize,
                 fontColor = Color(hexBackgroundColor.toColorInt()),
@@ -566,7 +566,7 @@ class LookFeelFragment : Fragment() {
 
             val hexAppColor = String.format("#%06X", (0xFFFFFF and selectedAppColor))
             SettingsSelect(
-                title = stringResource(R.string.app_color),
+                title = getLocalizedString(R.string.app_color),
                 option = hexAppColor,
                 fontSize = titleFontSize,
                 fontColor = Color(hexAppColor.toColorInt()),
@@ -584,7 +584,7 @@ class LookFeelFragment : Fragment() {
 
             val hexDateColor = String.format("#%06X", (0xFFFFFF and selectedDateColor))
             SettingsSelect(
-                title = stringResource(R.string.date_color),
+                title = getLocalizedString(R.string.date_color),
                 option = hexDateColor,
                 fontSize = titleFontSize,
                 fontColor = Color(hexDateColor.toColorInt()),
@@ -602,7 +602,7 @@ class LookFeelFragment : Fragment() {
 
             val hexClockColor = String.format("#%06X", (0xFFFFFF and selectedClockColor))
             SettingsSelect(
-                title = stringResource(R.string.clock_color),
+                title = getLocalizedString(R.string.clock_color),
                 option = hexClockColor,
                 fontSize = titleFontSize,
                 fontColor = Color(hexClockColor.toColorInt()),
@@ -620,7 +620,7 @@ class LookFeelFragment : Fragment() {
 
             val hexAlarmColor = String.format("#%06X", (0xFFFFFF and selectedAlarmColor))
             SettingsSelect(
-                title = stringResource(R.string.alarm_color),
+                title = getLocalizedString(R.string.alarm_color),
                 option = hexAlarmColor,
                 fontSize = titleFontSize,
                 fontColor = Color(hexAlarmColor.toColorInt()),
@@ -638,7 +638,7 @@ class LookFeelFragment : Fragment() {
 
             val hexDailyWordColor = String.format("#%06X", (0xFFFFFF and selectedDailyWordColor))
             SettingsSelect(
-                title = stringResource(R.string.daily_word_color),
+                title = getLocalizedString(R.string.daily_word_color),
                 option = hexDailyWordColor,
                 fontSize = titleFontSize,
                 fontColor = Color(hexDailyWordColor.toColorInt()),
@@ -656,7 +656,7 @@ class LookFeelFragment : Fragment() {
 
             val hexBatteryColor = String.format("#%06X", (0xFFFFFF and selectedBatteryColor))
             SettingsSelect(
-                title = stringResource(R.string.battery_color),
+                title = getLocalizedString(R.string.battery_color),
                 option = hexBatteryColor,
                 fontSize = titleFontSize,
                 fontColor = Color(hexBatteryColor.toColorInt()),
@@ -672,6 +672,34 @@ class LookFeelFragment : Fragment() {
                 }
             )
 
+            SettingsSwitch(
+                text = getLocalizedString(R.string.rainbow_shortcuts),
+                fontSize = titleFontSize,
+                defaultState = toggledIconRainbowColors,
+                onCheckedChange = {
+                    toggledIconRainbowColors = !prefs.iconRainbowColors
+                    prefs.iconRainbowColors = toggledIconRainbowColors
+                }
+            )
+
+            val hexShortcutIconsColor = String.format("#%06X", (0xFFFFFF and selectedShortcutIconsColor))
+            SettingsSelect(
+                title = getLocalizedString(R.string.shortcuts_color),
+                option = hexShortcutIconsColor,
+                fontSize = titleFontSize,
+                fontColor = Color(hexShortcutIconsColor.toColorInt()),
+                onClick = {
+                    dialogBuilder.showColorPickerDialog(
+                        context = requireContext(),
+                        color = selectedShortcutIconsColor,
+                        titleResId = R.string.shortcuts_color,
+                        onItemSelected = { selectedColor ->
+                            selectedShortcutIconsColor = selectedColor
+                            prefs.shortcutIconsColor = selectedColor
+                        })
+                }
+            )
+
             if (!isGestureNavigationEnabled(requireContext())) {
                 Spacer(
                     modifier = Modifier
@@ -679,6 +707,11 @@ class LookFeelFragment : Fragment() {
                 )
             }
         }
+    }
+
+    private fun openCustomIconSelectionDialog() {
+        val intent = Intent(requireActivity(), CustomIconSelectionActivity::class.java)
+        startActivity(intent)
     }
 
     private fun resetThemeColors() {
@@ -707,23 +740,6 @@ class LookFeelFragment : Fragment() {
         dialogBuilder.colorPickerDialog?.dismiss()
         dialogBuilder.singleChoiceDialog?.dismiss()
         dialogBuilder.sliderDialog?.dismiss()
-    }
-
-    @Deprecated("Deprecated in Java")
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        @Suppress("DEPRECATION")
-        super.onActivityCreated(savedInstanceState)
-        dialogBuilder = DialogManager(requireContext(), requireActivity())
-        prefs = Prefs(requireContext())
-        viewModel = activity?.run {
-            ViewModelProvider(this)[MainViewModel::class.java]
-        } ?: throw Exception("Invalid Activity")
-
-        viewModel.ismlauncherDefault()
-
-        deviceManager =
-            context?.getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
-        componentName = ComponentName(requireContext(), DeviceAdmin::class.java)
     }
 
     override fun onDestroyView() {

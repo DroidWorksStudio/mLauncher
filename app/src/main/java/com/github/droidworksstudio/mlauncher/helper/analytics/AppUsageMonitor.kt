@@ -153,8 +153,9 @@ class AppUsageMonitor private constructor(context: Context) {
     }
 
     fun getLastTenAppsUsed(context: Context): List<Triple<String, String, String>> {
-        val recentApps = mutableSetOf<String>() // Set is to store unique package names
+        // Set is to store unique package names
         val result = mutableListOf<Triple<String, String, String>>() // List to store recent apps
+        val recentApps = mutableSetOf<String>()
 
         val usageStatsManager = context.getSystemService(Context.USAGE_STATS_SERVICE) as? UsageStatsManager
         val endTime = System.currentTimeMillis()
@@ -214,7 +215,7 @@ class AppUsageMonitor private constructor(context: Context) {
         return try {
             val appInfo = packageManager.getApplicationInfo(packageName, 0)
             packageManager.getApplicationLabel(appInfo).toString()
-        } catch (e: PackageManager.NameNotFoundException) {
+        } catch (_: PackageManager.NameNotFoundException) {
             null
         }
     }

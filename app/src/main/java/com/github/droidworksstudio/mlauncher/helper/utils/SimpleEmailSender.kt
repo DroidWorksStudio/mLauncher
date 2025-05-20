@@ -111,7 +111,6 @@ class SimpleEmailSender {
 
     private fun buildInitialIntents(pm: PackageManager, resolveIntent: Intent, emailIntent: Intent): List<Intent> {
         val resolveInfoList = pm.queryIntentActivities(resolveIntent, PackageManager.MATCH_DEFAULT_ONLY)
-        val initialIntents = mutableListOf<Intent>()
         for (info in resolveInfoList) {
             val packageSpecificIntent = Intent(emailIntent)
             packageSpecificIntent.setPackage(info.activityInfo.packageName)

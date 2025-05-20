@@ -4,6 +4,7 @@ import androidx.biometric.BiometricManager
 import androidx.biometric.BiometricPrompt
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import com.github.droidworksstudio.common.getLocalizedString
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.AppListItem
 
@@ -49,8 +50,8 @@ class BiometricHelper(private val fragment: Fragment) {
             BiometricManager.from(fragment.requireContext()).canAuthenticate(authenticators)
 
         val promptInfo = BiometricPrompt.PromptInfo.Builder()
-            .setTitle(fragment.getString(R.string.text_biometric_login))
-            .setSubtitle(fragment.getString(R.string.text_biometric_login_app, appListItem.activityLabel))
+            .setTitle(getLocalizedString(R.string.text_biometric_login))
+            .setSubtitle(getLocalizedString(R.string.text_biometric_login_app, appListItem.activityLabel))
             .setAllowedAuthenticators(authenticators)
             .setConfirmationRequired(false)
             .build()
@@ -86,8 +87,8 @@ class BiometricHelper(private val fragment: Fragment) {
             BiometricManager.from(fragment.requireContext()).canAuthenticate(authenticators)
 
         val promptInfo = BiometricPrompt.PromptInfo.Builder()
-            .setTitle(fragment.getString(R.string.text_biometric_login))
-            .setSubtitle(fragment.getString(R.string.text_biometric_login_sub))
+            .setTitle(getLocalizedString(R.string.text_biometric_login))
+            .setSubtitle(getLocalizedString(R.string.text_biometric_login_sub))
             .setAllowedAuthenticators(authenticators)
             .setConfirmationRequired(false)
             .build()

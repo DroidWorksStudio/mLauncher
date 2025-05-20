@@ -1,23 +1,26 @@
 # gradle/libs.versions.toml
 
 [versions]
-agp = "8.9.2"
+agp = "8.10.0"
 kotlin = "2.1.20"
+viewpager2 = "1.1.0"
 
 # AndroidX Core and AppCompat
 core-ktx = "1.16.0"
 appcompat = "1.7.0"
 recyclerview = "1.4.0"
 paletteKtx = "1.0.0"
+activityKtx = "1.10.1"
+material = "1.12.0"
 
 # Android Lifecycle
 lifecycle-extensions = "2.2.0"
-lifecycle-viewmodel-ktx = "2.8.7"
+lifecycle-viewmodel-ktx = "2.9.0"
 
 # Navigation
-navigation-fragment-ktx = "2.8.9"
-navigation-ui-ktx = "2.8.9"
-navigation-testing = "2.8.9"
+navigation-fragment-ktx = "2.9.0"
+navigation-ui-ktx = "2.9.0"
+navigation-testing = "2.9.0"
 
 # Work Manager
 work-runtime-ktx = "2.10.1"
@@ -28,12 +31,12 @@ constraintlayout-compose = "1.1.1"
 
 # Compose Versions
 activity-compose = "1.10.1"
-compose-android = "1.8.0"
-compose-material = "1.8.0"
-compose-animation = "1.8.0"
-compose-ui = "1.8.0"
-compose-foundation = "1.8.0"
-compose-ui-tooling = "1.8.0"
+compose-android = "1.8.1"
+compose-material = "1.8.1"
+compose-animation = "1.8.1"
+compose-ui = "1.8.1"
+compose-foundation = "1.8.1"
+compose-ui-tooling = "1.8.1"
 
 # Other Libraries
 commons-text = "1.13.1"
@@ -46,8 +49,9 @@ test-core-ktx = "1.6.1"
 test-runner = "1.6.2"
 test-rules = "1.6.1"
 fragment-testing = "1.8.6"
-ui-test-junit4 = "1.8.0"
-ui-test-manifest = "1.8.0"
+ui-test-junit4 = "1.8.1"
+ui-test-manifest = "1.8.1"
+activity = "1.10.1"
 
 [libraries]
 # Core Libraries
@@ -55,6 +59,10 @@ core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx
 appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 recyclerview = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "recyclerview" }
 palette-ktx = { group = "androidx.palette", name = "palette-ktx", version.ref = "paletteKtx" }
+activity-ktx = { group = "androidx.activity", name = "activity-ktx", version.ref = "activityKtx" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+viewpager2 = { group = "androidx.viewpager2", name = "viewpager2", version.ref = "viewpager2" }
+activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 
 # Android Lifecycle
 lifecycle-extensions = { group = "androidx.lifecycle", name = "lifecycle-extensions", version.ref = "lifecycle-extensions" }

@@ -14,6 +14,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.github.droidworksstudio.common.getLocalizedString
 import com.github.droidworksstudio.mlauncher.MainViewModel
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.Prefs
@@ -143,8 +144,8 @@ class FavoriteFragment : Fragment() {
         initObservers()
     }
 
-    override fun onStart() {
-        super.onStart()
+    override fun onResume() {
+        super.onResume()
         if (prefs.showStatusBar) showStatusBar(requireActivity()) else hideStatusBar(requireActivity())
 
         val backgroundColor = getHexForOpacity(prefs)
@@ -153,7 +154,7 @@ class FavoriteFragment : Fragment() {
 
     private fun initObservers() {
         binding.pageName.apply {
-            text = getString(R.string.favorite_apps)
+            text = getLocalizedString(R.string.favorite_apps)
             textSize = prefs.appSize * 1.1f
             setTextColor(prefs.appColor)
         }

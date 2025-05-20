@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.mLauncher" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:fontFamily">@android:fontFamily/system_font</item>
+        <item name="android:windowSplashScreenBrandingImage">@drawable/branding_image</item>
+
+        <item name="android:forceDarkAllowed">false</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:fitsSystemWindows">false</item>
+        <item name="android:windowShowWallpaper">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:statusBarColor">@color/blackInverseTrans50</item>
+        <item name="android:navigationBarColor">@color/blackInverseTrans50</item>
+        <!-- <item name="android:enforceStatusBarContrast">false</item> -->
+        <item name="android:enforceNavigationBarContrast">false</item>
+        <!-- <item name="android:windowTranslucentStatus">false</item> -->
+        <!-- <item name="android:windowTranslucentNavigation">true</item> -->
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryDark">@android:color/darker_gray</item>
+        <item name="colorAccent">@color/black</item>
+        <item name="colorSurface">@color/background_light</item>
+        <item name="colorOnSurface">@color/background_dark</item>
+        <item name="primaryColor">@color/black</item>
+        <item name="primaryInverseColor">@color/blackInverse</item>
+        <item name="primaryTextShadowColor">@color/blackInverseTrans50</item>
+        <item name="primaryColorTrans50">@color/blackTrans50</item>
+        <item name="primaryColorTrans80">@color/blackTrans80</item>
+        <item name="primaryColorInverseTrans50">@color/blackInverseTrans50</item>
+        <item name="primaryColorInverseTrans80">@color/blackInverseTrans80</item>
+        <item name="primaryColorInverseTrans90">@color/blackInverseTrans90</item>
+        <item name="primaryShadeColor">@color/blackInverseTrans10</item>
+        <item name="primaryShadeDarkColor">@color/blackInverseTrans25</item>
+        <item name="primaryColorBackground">@color/background_bubble</item>
+
+        <item name="backgroundLight">@color/background_light</item>
+        <item name="backgroundDark">@color/background_dark</item>
+    </style>
+</resources>

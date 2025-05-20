@@ -1,0 +1,36 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#00000000"
+        android:fillType="evenOdd"
+        android:pathData="m6.5,14c-1.4,0 -2.5,-1.1 -2.5,-2.5 0,-1.4 1.1,-2.5 2.5,-2.5 1.4,0 2.5,1.1 2.5,2.5 0,1.4 -1.1,2.5 -2.5,2.5z"
+        android:strokeWidth="1.5"
+        android:strokeColor="?attr/primaryColor" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="m14.3,16.8l-5.3,-3.5"
+        android:strokeWidth="1.6"
+        android:strokeColor="?attr/primaryColor"
+        android:strokeLineCap="round" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="m14.4,6.8l-5.3,3.6"
+        android:strokeWidth="1.5"
+        android:strokeColor="?attr/primaryColor"
+        android:strokeLineCap="round" />
+    <path
+        android:fillColor="#00000000"
+        android:fillType="evenOdd"
+        android:pathData="m16.5,21c-1.4,0 -2.5,-1.1 -2.5,-2.5 0,-1.4 1.1,-2.5 2.5,-2.5 1.4,0 2.5,1.1 2.5,2.5 0,1.4 -1.1,2.5 -2.5,2.5z"
+        android:strokeWidth="1.6"
+        android:strokeColor="?attr/primaryColor" />
+    <path
+        android:fillColor="#00000000"
+        android:fillType="evenOdd"
+        android:pathData="m16.5,8c-1.4,0 -2.5,-1.1 -2.5,-2.5 0,-1.4 1.1,-2.5 2.5,-2.5 1.4,0 2.5,1.1 2.5,2.5 0,1.4 -1.1,2.5 -2.5,2.5z"
+        android:strokeWidth="1.6"
+        android:strokeColor="?attr/primaryColor" />
+</vector>

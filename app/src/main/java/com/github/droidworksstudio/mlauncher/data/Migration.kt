@@ -29,6 +29,9 @@ class Migration(val context: Context) {
                 "SHOW_EDGE_PANEL",
                 "EDGE_APPS_NUM"
             ),
+            10812 to listOf(
+                "LOCK_MODE"
+            ),
             // Add more versions and preferences to remove here
         )
 

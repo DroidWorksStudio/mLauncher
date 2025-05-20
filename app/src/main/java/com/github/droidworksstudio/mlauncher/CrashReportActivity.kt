@@ -1,34 +1,37 @@
 package com.github.droidworksstudio.mlauncher
 
-import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.github.droidworksstudio.common.CrashHandler
+import com.github.droidworksstudio.common.getLocalizedString
+import com.github.droidworksstudio.mlauncher.helper.emptyString
+import com.github.droidworksstudio.mlauncher.helper.getDeviceInfo
 import com.github.droidworksstudio.mlauncher.helper.utils.SimpleEmailSender
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class CrashReportActivity : AppCompatActivity() {
-    private var pkgName: String = ""
-    private var pkgVersion: String = ""
+    private var pkgName: String = emptyString()
+    private var pkgVersion: String = emptyString()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        pkgName = getString(R.string.app_name)
+        pkgName = getLocalizedString(R.string.app_name)
         pkgVersion = this.packageManager.getPackageInfo(
             this.packageName,
             0
         ).versionName.toString()
 
         // Show a dialog to ask if the user wants to report the crash
-        AlertDialog.Builder(this)
-            .setTitle(getString(R.string.acra_crash))
-            .setMessage(getString(R.string.acra_dialog_text).format(pkgName))
-            .setPositiveButton(getString(R.string.acra_send_report)) { _, _ ->
+        MaterialAlertDialogBuilder(this)
+            .setTitle(getLocalizedString(R.string.acra_crash))
+            .setMessage(getLocalizedString(R.string.acra_dialog_text).format(pkgName))
+            .setPositiveButton(getLocalizedString(R.string.acra_send_report)) { _, _ ->
                 sendCrashReport(this)
             }
-            .setNegativeButton(getString(R.string.acra_dont_send)) { _, _ ->
+            .setNegativeButton(getLocalizedString(R.string.acra_dont_send)) { _, _ ->
                 restartApp()
             }
             .setCancelable(false)
@@ -40,9 +43,10 @@ class CrashReportActivity : AppCompatActivity() {
         val crashFileUris: List<Uri> = crashFileUri?.let { listOf(it) } ?: emptyList()
 
         val emailSender = SimpleEmailSender() // Create an instance
-        val crashReportContent = getString(R.string.acra_mail_body)
+        val deviceInfo = getDeviceInfo(context)
+        val crashReportContent = getLocalizedString(R.string.acra_mail_body, deviceInfo)
         val subject = String.format("Crash Report %s - %s", pkgName, pkgVersion)
-        val recipient = getString(R.string.acra_email) // Replace with your email
+        val recipient = getLocalizedString(R.string.acra_email) // Replace with your email
 
         emailSender.sendCrashReport(context, crashReportContent, crashFileUris, subject, recipient)
     }

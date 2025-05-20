@@ -19,12 +19,12 @@ import android.widget.SeekBar
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.core.graphics.toColorInt
+import com.github.droidworksstudio.common.getLocalizedString
+import com.github.droidworksstudio.mlauncher.MainActivity
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.helper.getTrueSystemFont
-import com.github.droidworksstudio.mlauncher.helper.loadFile
-import com.github.droidworksstudio.mlauncher.helper.storeFile
 import com.github.droidworksstudio.mlauncher.helper.utils.AppReloader
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
@@ -40,17 +40,17 @@ class DialogManager(val context: Context, val activity: Activity) {
 
         // Define the items for the dialog (Backup, Restore, Clear Data)
         val items = arrayOf(
-            context.getString(R.string.advanced_settings_backup_restore_backup),
-            context.getString(R.string.advanced_settings_backup_restore_restore),
-            context.getString(R.string.advanced_settings_backup_restore_clear)
+            getLocalizedString(R.string.advanced_settings_backup_restore_backup),
+            getLocalizedString(R.string.advanced_settings_backup_restore_restore),
+            getLocalizedString(R.string.advanced_settings_backup_restore_clear)
         )
 
         val dialogBuilder = MaterialAlertDialogBuilder(context)
-        dialogBuilder.setTitle(context.getString(R.string.advanced_settings_backup_restore_title))
+        dialogBuilder.setTitle(getLocalizedString(R.string.advanced_settings_backup_restore_title))
         dialogBuilder.setItems(items) { _, which ->
             when (which) {
-                0 -> storeFile(activity, Constants.BackupType.FullSystem)
-                1 -> loadFile(activity, Constants.BackupType.FullSystem)
+                0 -> (activity as MainActivity).createFullBackup()
+                1 -> (activity as MainActivity).restoreFullBackup()
                 2 -> confirmClearData()
             }
         }
@@ -68,16 +68,16 @@ class DialogManager(val context: Context, val activity: Activity) {
 
         // Define the items for the dialog (Export, Import)
         val items = arrayOf(
-            context.getString(R.string.advanced_settings_theme_export),
-            context.getString(R.string.advanced_settings_theme_import),
+            getLocalizedString(R.string.advanced_settings_theme_export),
+            getLocalizedString(R.string.advanced_settings_theme_import),
         )
 
         val dialogBuilder = MaterialAlertDialogBuilder(context)
-        dialogBuilder.setTitle(context.getString(R.string.advanced_settings_theme_title))
+        dialogBuilder.setTitle(getLocalizedString(R.string.advanced_settings_theme_title))
         dialogBuilder.setItems(items) { _, which ->
             when (which) {
-                0 -> storeFile(activity, Constants.BackupType.Theme)
-                1 -> loadFile(activity, Constants.BackupType.Theme)
+                0 -> (activity as MainActivity).createThemeBackup()
+                1 -> (activity as MainActivity).restoreThemeBackup()
             }
         }
 
@@ -90,12 +90,12 @@ class DialogManager(val context: Context, val activity: Activity) {
     // Function to handle the Clear Data action, with a confirmation dialog
     private fun confirmClearData() {
         MaterialAlertDialogBuilder(context)
-            .setTitle(context.getString(R.string.advanced_settings_backup_restore_clear_title))
-            .setMessage(context.getString(R.string.advanced_settings_backup_restore_clear_description))
-            .setPositiveButton(context.getString(R.string.advanced_settings_backup_restore_clear_yes)) { _, _ ->
+            .setTitle(getLocalizedString(R.string.advanced_settings_backup_restore_clear_title))
+            .setMessage(getLocalizedString(R.string.advanced_settings_backup_restore_clear_description))
+            .setPositiveButton(getLocalizedString(R.string.advanced_settings_backup_restore_clear_yes)) { _, _ ->
                 clearData()
             }
-            .setNegativeButton(context.getString(R.string.advanced_settings_backup_restore_clear_no), null)
+            .setNegativeButton(getLocalizedString(R.string.advanced_settings_backup_restore_clear_no), null)
             .show()
     }
 
@@ -191,7 +191,7 @@ class DialogManager(val context: Context, val activity: Activity) {
 
         val itemStrings = options.map { option ->
             when (option) {
-                is Constants.Language -> option.getString(context) // Use getString() if it's a Language enum
+                is Constants.Language -> option.getString() // Use getString() if it's a Language enum
                 is Enum<*> -> option.name // Fallback for other Enums
                 else -> option.toString() // Generic fallback
             }

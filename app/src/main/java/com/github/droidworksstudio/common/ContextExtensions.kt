@@ -1,36 +1,42 @@
 package com.github.droidworksstudio.common
 
 import android.Manifest
+import android.app.Activity
 import android.app.SearchManager
 import android.content.ActivityNotFoundException
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.content.pm.ApplicationInfo
-import android.content.pm.LauncherApps
-import android.content.pm.PackageManager
 import android.content.res.Configuration
 import android.net.Uri
 import android.os.Bundle
-import android.os.UserHandle
 import android.provider.AlarmClock
 import android.provider.CalendarContract
 import android.provider.MediaStore
 import android.provider.Settings
+import android.text.format.DateFormat
+import android.util.Log
 import android.util.Log.d
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
+import androidx.annotation.ArrayRes
+import androidx.annotation.StringRes
 import androidx.biometric.BiometricManager
-import androidx.core.content.ContextCompat
+import androidx.core.app.ActivityCompat
 import androidx.core.net.toUri
+import com.github.droidworksstudio.mlauncher.Mlauncher
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Prefs
+import com.github.droidworksstudio.mlauncher.helper.emptyString
 import com.github.droidworksstudio.mlauncher.services.ActionService
+import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
+import java.util.Locale
 
 fun Context.inflate(resource: Int, root: ViewGroup? = null, attachToRoot: Boolean = false): View {
     return LayoutInflater.from(this).inflate(resource, root, attachToRoot)
@@ -54,7 +60,7 @@ fun Context.hasSoftKeyboard(): Boolean {
 
 fun Context.openSearch(query: String? = null) {
     val intent = Intent(Intent.ACTION_WEB_SEARCH)
-    intent.putExtra(SearchManager.QUERY, query ?: "")
+    intent.putExtra(SearchManager.QUERY, query ?: emptyString())
     startActivity(intent)
 }
 
@@ -111,6 +117,19 @@ fun Context.openDialerApp() {
     CrashHandler.logUserAction("Dialer App Launched")
 }
 
+fun Context.openTextMessagesApp() {
+    try {
+        val intent = Intent(Intent.ACTION_MAIN).apply {
+            addCategory(Intent.CATEGORY_APP_MESSAGING)
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK
+        }
+        this.startActivity(intent)
+    } catch (e: Exception) {
+        d("openTextMessagesApp", e.toString())
+    }
+    CrashHandler.logUserAction("Text Messages App Launched")
+}
+
 fun Context.openAlarmApp() {
     try {
         val intent = Intent(AlarmClock.ACTION_SHOW_ALARMS)
@@ -131,6 +150,43 @@ fun Context.openCameraApp() {
     CrashHandler.logUserAction("Camera App Launched")
 }
 
+fun Context.openPhotosApp() {
+    try {
+        val intent = Intent(Intent.ACTION_VIEW).apply {
+            type = "image/*"
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK
+        }
+        this.startActivity(intent)
+    } catch (e: Exception) {
+        d("openPhotosApp", e.toString())
+    }
+    CrashHandler.logUserAction("Photos App Launched")
+}
+
+fun Context.openDeviceSettings() {
+    try {
+        val intent = Intent(Settings.ACTION_SETTINGS).apply {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK
+        }
+        this.startActivity(intent)
+    } catch (e: Exception) {
+        d("openDeviceSettings", e.toString())
+    }
+    CrashHandler.logUserAction("Device Settings Opened")
+}
+
+fun Context.openWebBrowser() {
+    try {
+        val intent = Intent(Intent.ACTION_VIEW, "http://".toUri()).apply {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK
+        }
+        this.startActivity(intent)
+    } catch (e: Exception) {
+        d("openWebBrowser", e.toString())
+    }
+    CrashHandler.logUserAction("Web Browser Launched")
+}
+
 fun Context.openBatteryManager() {
     try {
         val intent = Intent(Intent.ACTION_POWER_USAGE_SUMMARY)
@@ -142,21 +198,33 @@ fun Context.openBatteryManager() {
 }
 
 fun Context.openDigitalWellbeing() {
-    val packageName = "com.google.android.apps.wellbeing"
-    val className = "com.google.android.apps.wellbeing.settings.TopLevelSettingsActivity"
+    // Known Digital Wellbeing packages and their main activity
+    val wellbeingMap = mapOf(
+        "com.google.android.apps.wellbeing" to "com.google.android.apps.wellbeing.settings.TopLevelSettingsActivity",
+        "com.samsung.android.forest" to "com.samsung.android.forest.settings.MainActivity",
+        "com.samsung.android.wellbeing" to "com.samsung.android.wellbeing.SamsungWellbeingSettingsActivity"
+    )
 
-    val intent = Intent()
-    intent.component = ComponentName(packageName, className)
-    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+    val installedPackages = packageManager.getInstalledPackages(0).map { it.packageName }
 
-    try {
-        this.startActivity(intent)
-    } catch (_: ActivityNotFoundException) {
-        // Digital Wellbeing app is not installed or cannot be opened
-        // Handle this case as needed
-        this.showLongToast("Digital Wellbeing is not available on this device.")
+    val wellbeingEntry = wellbeingMap.entries.firstOrNull { it.key in installedPackages }
+
+    if (wellbeingEntry != null) {
+        val (pkg, cls) = wellbeingEntry
+        val intent = Intent().apply {
+            component = ComponentName(pkg, cls)
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK
+        }
+
+        try {
+            startActivity(intent)
+            CrashHandler.logUserAction("Digital Wellbeing Launched")
+        } catch (_: ActivityNotFoundException) {
+            showLongToast("Unable to launch Digital Wellbeing.")
+        }
+    } else {
+        showLongToast("Digital Wellbeing is not available on this device.")
     }
-    CrashHandler.logUserAction("Digital Wellbeing Launched")
 }
 
 fun Context.searchOnPlayStore(query: String? = null): Boolean {
@@ -219,32 +287,6 @@ fun Context.searchCustomSearchEngine(searchQuery: String? = null, prefs: Prefs):
     return true
 }
 
-fun Context.hasInternetPermission(): Boolean {
-    val permission = Manifest.permission.INTERNET
-    val result = ContextCompat.checkSelfPermission(this, permission)
-    return result == PackageManager.PERMISSION_GRANTED
-}
-
-fun Context.isPackageInstalled(
-    packageName: String,
-    userHandle: UserHandle = android.os.Process.myUserHandle()
-): Boolean {
-    val launcher = getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps
-    val activityInfo = launcher.getActivityList(packageName, userHandle)
-    return activityInfo.isNotEmpty()
-}
-
-fun Context.getAppNameFromPackageName(packageName: String): String? {
-    val packageManager = this.packageManager
-    return try {
-        val appInfo = packageManager.getApplicationInfo(packageName, 0)
-        packageManager.getApplicationLabel(appInfo) as String
-    } catch (e: PackageManager.NameNotFoundException) {
-        e.printStackTrace()
-        null
-    }
-}
-
 fun Context.isSystemApp(packageName: String): Boolean {
     if (packageName.isBlank()) return true
     return try {
@@ -266,6 +308,39 @@ fun Context.isBiometricEnabled(): Boolean {
     }
 }
 
+fun getLocalizedString(@StringRes stringResId: Int, vararg args: Any): String {
+    // Get the context from Mlauncher. It's guaranteed to never be null
+    val context = Mlauncher.getContext()
+    // Set the language on the context
+    val updatedContext = context.setLanguage()
+    // Return the localized string with or without arguments
+    return if (args.isEmpty()) {
+        updatedContext.getString(stringResId)  // No arguments, use only the string resource
+    } else {
+        updatedContext.getString(stringResId, *args)  // Pass arguments to getString()
+    }
+}
+
+fun getLocalizedStringArray(@ArrayRes arrayResId: Int): Array<String> {
+    // Get the context from Mlauncher. It's guaranteed to never be null
+    val context = Mlauncher.getContext()
+    // Set the language on the context
+    val updatedContext = context.setLanguage()
+    // Return the localized string array
+    return updatedContext.resources.getStringArray(arrayResId)
+}
+
+
+private fun Context.setLanguage(): Context {
+    val prefs = Prefs(this)
+    val locale = prefs.appLanguage.locale() // Get the desired locale from preferences
+    val config = Configuration(this.resources.configuration).apply {
+        setLocale(locale) // Override the locale in the configuration
+    }
+
+    // Return a new Context with the adjusted configuration
+    return this.createConfigurationContext(config)
+}
 
 fun Context.openAccessibilitySettings() {
     val intent = Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS)
@@ -279,4 +354,47 @@ fun Context.openAccessibilitySettings() {
     }
     this.startActivity(intent)
     CrashHandler.logUserAction("Accessibility Settings Opened")
+}
+
+fun Context.requestUsagePermission() {
+    try {
+        val context: Context = this
+        val intent = Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS).apply {
+            data = "package:${context.packageName}".toUri()  // Open settings for YOUR app only
+        }
+        context.startActivity(intent)
+        CrashHandler.logUserAction("Usage Permission Settings Opened")
+    } catch (e: Exception) {
+        e.printStackTrace()
+    }
+}
+
+fun Context.requestLocationPermission(requestCode: Int) {
+    if (this is Activity) {
+        ActivityCompat.requestPermissions(
+            this,
+            arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
+            requestCode
+        )
+        CrashHandler.logUserAction("Location Permission Requested")
+    } else {
+        Log.e("Permission", "Context is not an Activity. Cannot request permissions.")
+    }
+}
+
+
+fun Context.getCurrentTimestamp(prefs: Prefs): String {
+    val timezone = prefs.appLanguage.timezone()
+    val is24HourFormat = DateFormat.is24HourFormat(this)
+    val best12 = DateFormat.getBestDateTimePattern(
+        timezone,
+        if (prefs.showClockFormat) "hhmma" else "hhmm"
+    ).let {
+        if (!prefs.showClockFormat) it.removeSuffix(" a") else it
+    }
+    val best24 = DateFormat.getBestDateTimePattern(timezone, "HHmm")
+    val timePattern = if (is24HourFormat) best24 else best12
+    val datePattern = DateFormat.getBestDateTimePattern(timezone, "eeeddMMM")
+
+    return SimpleDateFormat("$datePattern - $timePattern", Locale.getDefault()).format(Date())
 }

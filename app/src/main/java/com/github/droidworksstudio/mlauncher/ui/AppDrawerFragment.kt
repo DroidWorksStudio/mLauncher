@@ -28,6 +28,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.github.droidworksstudio.common.getLocalizedString
 import com.github.droidworksstudio.common.hasSoftKeyboard
 import com.github.droidworksstudio.common.isSystemApp
 import com.github.droidworksstudio.common.openSearch
@@ -43,6 +44,7 @@ import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentAppDrawerBinding
 import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
 import com.github.droidworksstudio.mlauncher.helper.openAppInfo
+import com.github.droidworksstudio.mlauncher.ui.components.AZSidebarView
 
 class AppDrawerFragment : Fragment() {
 
@@ -88,14 +90,20 @@ class AppDrawerFragment : Fragment() {
         val n = arguments?.getInt("n", 0) ?: 0
 
         when (flag) {
+            AppDrawerFlag.SetDoubleTap,
             AppDrawerFlag.SetHomeApp,
             AppDrawerFlag.SetShortSwipeRight,
             AppDrawerFlag.SetShortSwipeLeft,
             AppDrawerFlag.SetShortSwipeUp,
             AppDrawerFlag.SetShortSwipeDown,
+            AppDrawerFlag.SetLongSwipeRight,
+            AppDrawerFlag.SetLongSwipeLeft,
+            AppDrawerFlag.SetLongSwipeUp,
+            AppDrawerFlag.SetLongSwipeDown,
             AppDrawerFlag.SetClickClock,
             AppDrawerFlag.SetAppUsage,
-            AppDrawerFlag.SetClickDate -> {
+            AppDrawerFlag.SetClickDate,
+            AppDrawerFlag.SetFloating -> {
                 binding.drawerButton.setOnClickListener {
                     findNavController().popBackStack()
                 }
@@ -115,16 +123,19 @@ class AppDrawerFragment : Fragment() {
         }
 
         val appAdapter = context?.let {
-            AppDrawerAdapter(
-                it,
-                flag,
-                gravity,
-                appClickListener(viewModel, flag, n),
-                appDeleteListener(),
-                this.appRenameListener(),
-                appShowHideListener(),
-                appInfoListener()
-            )
+            parentFragment?.let { fragment ->
+                AppDrawerAdapter(
+                    it,
+                    fragment,
+                    flag,
+                    gravity,
+                    appClickListener(viewModel, flag, n),
+                    appDeleteListener(),
+                    this.appRenameListener(),
+                    appShowHideListener(),
+                    appInfoListener()
+                )
+            }
         }
 
         if (appAdapter != null) {
@@ -141,28 +152,37 @@ class AppDrawerFragment : Fragment() {
             initViewModel(flag, viewModel, appAdapter)
         }
 
+        val azSidebar = binding.azSidebar
+        azSidebar.onLetterSelected = { letter ->
+            val position = adapter.getIndexForLetter(letter)
+            if (position != -1) {
+                (binding.recyclerView.layoutManager as LinearLayoutManager)
+                    .scrollToPositionWithOffset(position, 0)
+            }
+        }
+
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
         binding.recyclerView.adapter = appAdapter
-        binding.recyclerView.addOnScrollListener(getRecyclerViewOnScrollListener())
+        binding.recyclerView.addOnScrollListener(getRecyclerViewOnScrollListener(azSidebar))
 
         if (prefs.hideSearchView) {
             binding.search.visibility = View.GONE
         } else {
             when (flag) {
                 AppDrawerFlag.LaunchApp -> binding.search.queryHint =
-                    applyTextColor(getString(R.string.show_apps), prefs.appColor)
+                    applyTextColor(getLocalizedString(R.string.show_apps), prefs.appColor)
 
                 AppDrawerFlag.HiddenApps -> binding.search.queryHint =
-                    applyTextColor(getString(R.string.hidden_apps), prefs.appColor)
+                    applyTextColor(getLocalizedString(R.string.hidden_apps), prefs.appColor)
 
                 AppDrawerFlag.SetHomeApp -> binding.search.queryHint =
-                    applyTextColor(getString(R.string.please_select_app), prefs.appColor)
+                    applyTextColor(getLocalizedString(R.string.please_select_app), prefs.appColor)
 
                 else -> {}
             }
         }
 
-        binding.listEmptyHint.text = applyTextColor(getString(R.string.drawer_list_empty_hint), prefs.appColor)
+        binding.listEmptyHint.text = applyTextColor(getLocalizedString(R.string.drawer_list_empty_hint), prefs.appColor)
 
         binding.search.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
@@ -171,16 +191,16 @@ class AppDrawerFragment : Fragment() {
                 if (!searchQuery.isNullOrEmpty()) {
                     when {
                         searchQuery.startsWith("!") -> {
-                            searchQuery = query.substringAfter("!")
+                            searchQuery = searchQuery.substringAfter("!")
                             requireContext().searchCustomSearchEngine(searchQuery, prefs)
                         }
 
                         else -> {
                             // Handle unsupported search engines or invalid queries
-                            if (adapter.itemCount == 0 && requireContext().searchOnPlayStore(query.trim())
+                            if (adapter.itemCount == 0 && requireContext().searchOnPlayStore(searchQuery.trim())
                                     .not()
                             ) {
-                                requireContext().openSearch(query.trim())
+                                requireContext().openSearch(searchQuery.trim())
                             } else {
                                 adapter.launchFirstInList()
                             }
@@ -195,7 +215,7 @@ class AppDrawerFragment : Fragment() {
                 if (flag == AppDrawerFlag.SetHomeApp) {
                     binding.drawerButton.apply {
                         isVisible = !newText.isNullOrEmpty()
-                        text = if (isVisible) getString(R.string.rename) else null
+                        text = if (isVisible) getLocalizedString(R.string.rename) else null
                         setOnClickListener { if (isVisible) renameListener(flag, n) }
                     }
                 }
@@ -270,8 +290,8 @@ class AppDrawerFragment : Fragment() {
             if (flag == AppDrawerFlag.HiddenApps) return@Observer
             if (it == appAdapter.appsList) return@Observer
             it?.let { appList ->
-                binding.listEmptyHint.visibility =
-                    if (appList.isEmpty()) View.VISIBLE else View.GONE
+                binding.listEmptyHint.visibility = if (appList.isEmpty()) View.VISIBLE else View.GONE
+                binding.sidebarContainer.visibility = if (prefs.showAZSidebar) View.VISIBLE else View.GONE
                 populateAppList(appList, appAdapter)
             }
         })
@@ -281,8 +301,8 @@ class AppDrawerFragment : Fragment() {
         }
     }
 
-    override fun onStart() {
-        super.onStart()
+    override fun onResume() {
+        super.onResume()
         if (requireContext().hasSoftKeyboard()) {
             binding.search.showKeyboard()
         }
@@ -332,12 +352,16 @@ class AppDrawerFragment : Fragment() {
     ): (appListItem: AppListItem) -> Unit =
         { appModel ->
             viewModel.selectedApp(this, appModel, flag, n)
+            if (flag == AppDrawerFlag.LaunchApp || flag == AppDrawerFlag.HiddenApps)
+                findNavController().popBackStack(R.id.mainFragment, false)
+            else
+                findNavController().popBackStack()
         }
 
     private fun appDeleteListener(): (appListItem: AppListItem) -> Unit =
         { appModel ->
             if (requireContext().isSystemApp(appModel.activityPackage))
-                showShortToast(getString(R.string.can_not_delete_system_apps))
+                showShortToast(getLocalizedString(R.string.can_not_delete_system_apps))
             else {
                 val appPackage = appModel.activityPackage
                 val intent = Intent(Intent.ACTION_DELETE)
@@ -373,7 +397,9 @@ class AppDrawerFragment : Fragment() {
             if (flag == AppDrawerFlag.HiddenApps) {
                 newSet.remove(appModel.activityPackage) // for backward compatibility
                 newSet.remove(appModel.activityPackage + "|" + appModel.user.toString())
-            } else newSet.add(appModel.activityPackage + "|" + appModel.user.toString())
+            } else {
+                newSet.add(appModel.activityPackage + "|" + appModel.user.toString())
+            }
 
             prefs.hiddenApps = newSet
 
@@ -390,7 +416,7 @@ class AppDrawerFragment : Fragment() {
             findNavController().popBackStack(R.id.mainFragment, false)
         }
 
-    private fun getRecyclerViewOnScrollListener(): RecyclerView.OnScrollListener {
+    private fun getRecyclerViewOnScrollListener(azSidebar: AZSidebarView): RecyclerView.OnScrollListener {
         return object : RecyclerView.OnScrollListener() {
 
             var onTop = false
@@ -424,6 +450,23 @@ class AppDrawerFragment : Fragment() {
                             }
                         }
                     }
+                }
+            }
+
+            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                super.onScrolled(recyclerView, dx, dy)
+
+                // Find the first visible item position
+                val layoutManager = recyclerView.layoutManager as? LinearLayoutManager ?: return
+                val firstVisible = layoutManager.findFirstVisibleItemPosition()
+
+                if (firstVisible != RecyclerView.NO_POSITION) {
+                    // Assuming adapter has a filtered list and you want to get the first character of the app label
+                    val app = adapter.appFilteredList[firstVisible]
+                    val letter = app.label.firstOrNull()?.uppercaseChar() ?: return
+
+                    // Update the AZSidebar view with the selected letter
+                    azSidebar.setSelectedLetter(letter)
                 }
             }
         }

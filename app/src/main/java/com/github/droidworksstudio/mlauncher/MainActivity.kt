@@ -1,34 +1,47 @@
 package com.github.droidworksstudio.mlauncher
 
-// import android.content.pm.PackageManager
-import android.annotation.SuppressLint
+import android.app.Activity
+import android.app.role.RoleManager
+import android.content.Context
 import android.content.Intent
-import android.content.pm.ActivityInfo
 import android.content.res.Configuration
-import android.os.Build
+import android.net.Uri
 import android.os.Bundle
+import android.provider.OpenableColumns
+import android.provider.Settings
 import android.view.KeyEvent
 import android.view.WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
+import androidx.activity.OnBackPressedCallback
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.view.WindowCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import com.github.droidworksstudio.common.CrashHandler
+import com.github.droidworksstudio.common.showLongToast
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Migration
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.ActivityMainBinding
-import com.github.droidworksstudio.mlauncher.helper.isTablet
+import com.github.droidworksstudio.mlauncher.helper.emptyString
 import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
 import com.github.droidworksstudio.mlauncher.helper.utils.AppReloader
+import com.github.droidworksstudio.mlauncher.helper.utils.words
+import com.github.droidworksstudio.mlauncher.ui.onboarding.OnboardingActivity
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import org.xmlpull.v1.XmlPullParser
 import java.io.BufferedReader
+import java.io.File
 import java.io.FileOutputStream
 import java.io.InputStream
 import java.io.InputStreamReader
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
 
@@ -37,14 +50,18 @@ class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController
     private lateinit var viewModel: MainViewModel
     private lateinit var binding: ActivityMainBinding
-    // private lateinit var pm: PackageManager
 
-    @Deprecated("Deprecated in Java")
-    override fun onBackPressed() {
-        @Suppress("DEPRECATION")
-        if (navController.currentDestination?.id != R.id.mainFragment)
-            super.onBackPressed()
-    }
+    private lateinit var performFullBackup: ActivityResultLauncher<Intent>
+    private lateinit var performFullRestore: ActivityResultLauncher<Intent>
+
+    private lateinit var performThemeBackup: ActivityResultLauncher<Intent>
+    private lateinit var performThemeRestore: ActivityResultLauncher<Intent>
+
+    private lateinit var performWordsRestore: ActivityResultLauncher<Intent>
+
+    private lateinit var pickCustomFont: ActivityResultLauncher<Array<String>>
+
+    private lateinit var setDefaultHomeScreenLauncher: ActivityResultLauncher<Intent>
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
         return when (keyCode) {
@@ -97,11 +114,31 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        // Enables edge-to-edge mode
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+
+        val callback = object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                if (navController.currentDestination?.id != R.id.mainFragment) {
+                    isEnabled = false // Temporarily disable callback
+                    onBackPressedDispatcher.onBackPressed() // Perform default back action
+                }
+            }
+        }
+
+        onBackPressedDispatcher.addCallback(this, callback)
+
         prefs = Prefs(this)
         migration = Migration(this)
 
         // Initialize com.github.droidworksstudio.common.CrashHandler to catch uncaught exceptions
         Thread.setDefaultUncaughtExceptionHandler(CrashHandler(applicationContext))
+
+        if (!prefs.isOnboardingCompleted()) {
+            startActivity(Intent(this, OnboardingActivity::class.java))
+            finish() // Finish MainActivity so that user can't return to it until onboarding is completed
+        }
 
         val themeMode = when (prefs.appTheme) {
             Constants.Theme.Light -> AppCompatDelegate.MODE_NIGHT_NO
@@ -112,7 +149,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-        setLanguage()
+
         migration.migratePreferencesOnVersionUpdate(prefs)
 
         navController = this.findNavController(R.id.nav_host_fragment)
@@ -123,33 +160,26 @@ class MainActivity : AppCompatActivity() {
         }
 
         viewModel.getAppList(includeHiddenApps = true)
-        setupOrientation()
 
         window.addFlags(FLAG_LAYOUT_NO_LIMITS)
 
-        // Get the version and info of any app by passing app name. (maybe later used for Pro features if I want top release them for the play store)
-        // pm = packageManager
-        // val getAppVersionAndHash = AppDetailsHelper.getAppVersionAndHash(this, "app.mlauncher.debug", pm)
-        // Log.d("isPremiumInstalled", getAppVersionAndHash.toString())
-    }
-
-    @Deprecated("Deprecated in Java")
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        when (requestCode) {
-
-            Constants.REQUEST_SET_DEFAULT_HOME -> {
-                val isDefault = ismlauncherDefault(this) // Check again if the app is now default
-
-                if (isDefault) {
-                    viewModel.setDefaultLauncher(false)
-                } else {
-                    viewModel.setDefaultLauncher(true)
+        performFullBackup = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            if (result.resultCode == RESULT_OK) {
+                result.data?.data?.let { uri ->
+                    applicationContext.contentResolver.openFileDescriptor(uri, "w")?.use { file ->
+                        FileOutputStream(file.fileDescriptor).use { stream ->
+                            val prefs = Prefs(applicationContext).saveToString()
+                            stream.channel.truncate(0)
+                            stream.write(prefs.toByteArray())
+                        }
+                    }
                 }
             }
+        }
 
-            Constants.BACKUP_READ -> {
-                data?.data?.also { uri ->
+        performFullRestore = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            if (result.resultCode == RESULT_OK) {
+                result.data?.data?.let { uri ->
                     applicationContext.contentResolver.openInputStream(uri).use { inputStream ->
                         val stringBuilder = StringBuilder()
                         BufferedReader(InputStreamReader(inputStream)).use { reader ->
@@ -164,25 +194,63 @@ class MainActivity : AppCompatActivity() {
                         val prefs = Prefs(applicationContext)
                         prefs.clear()
                         prefs.loadFromString(string)
+                        AppReloader.restartApp(applicationContext)
                     }
                 }
-                startActivity(Intent.makeRestartActivityTask(this.intent?.component))
             }
+        }
 
-            Constants.BACKUP_WRITE -> {
-                data?.data?.also { uri ->
+        performThemeBackup = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            if (result.resultCode == RESULT_OK) {
+                // Step 1: Read the color names from theme.xml
+                val colorNames = mutableListOf<String>()
+
+                // Obtain an XmlPullParser for the theme.xml file
+                applicationContext.resources.getXml(R.xml.theme).use { parser ->
+                    while (parser.eventType != XmlPullParser.END_DOCUMENT) {
+                        if (parser.eventType == XmlPullParser.START_TAG && parser.name == "color") {
+                            val colorName = parser.getAttributeValue(null, "colorName")
+                            colorNames.add(colorName)
+                        }
+                        parser.next()
+                    }
+                }
+
+                result.data?.data?.let { uri ->
                     applicationContext.contentResolver.openFileDescriptor(uri, "w")?.use { file ->
                         FileOutputStream(file.fileDescriptor).use { stream ->
-                            val prefs = Prefs(applicationContext).saveToString()
+                            // Get the filtered preferences (only those in the colorNames list)
+                            val prefs = Prefs(applicationContext).saveToTheme(colorNames)
                             stream.channel.truncate(0)
                             stream.write(prefs.toByteArray())
                         }
                     }
                 }
             }
+        }
 
-            Constants.THEME_BACKUP_READ -> {
-                data?.data?.also { uri ->
+        // Correct usage: Register in onAttach() to ensure it's done before the fragment's view is created
+        pickCustomFont = registerForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
+            uri?.let { handleFontSelected(it) }
+        }
+
+        performThemeRestore = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            if (result.resultCode == RESULT_OK) {
+                // Step 1: Read the color names from theme.xml
+                val colorNames = mutableListOf<String>()
+
+                // Obtain an XmlPullParser for the theme.xml file
+                applicationContext.resources.getXml(R.xml.theme).use { parser ->
+                    while (parser.eventType != XmlPullParser.END_DOCUMENT) {
+                        if (parser.eventType == XmlPullParser.START_TAG && parser.name == "color") {
+                            val colorName = parser.getAttributeValue(null, "colorName")
+                            colorNames.add(colorName)
+                        }
+                        parser.next()
+                    }
+                }
+
+                result.data?.data?.let { uri ->
                     applicationContext.contentResolver.openInputStream(uri).use { inputStream ->
                         val stringBuilder = StringBuilder()
                         BufferedReader(InputStreamReader(inputStream)).use { reader ->
@@ -198,40 +266,12 @@ class MainActivity : AppCompatActivity() {
                         prefs.loadFromTheme(string)
                     }
                 }
-                startActivity(Intent.makeRestartActivityTask(this.intent?.component))
             }
+        }
 
-
-            Constants.THEME_BACKUP_WRITE -> {
-                // Step 1: Read the color names from theme.xml
-                val colorNames = mutableListOf<String>()
-
-                // Obtain an XmlPullParser for the theme.xml file
-                applicationContext.resources.getXml(R.xml.theme).use { parser ->
-                    while (parser.eventType != XmlPullParser.END_DOCUMENT) {
-                        if (parser.eventType == XmlPullParser.START_TAG && parser.name == "color") {
-                            val colorName = parser.getAttributeValue(null, "colorName")
-                            colorNames.add(colorName)
-                        }
-                        parser.next()
-                    }
-                }
-
-                // Step 2: Back up the relevant preferences based on the extracted colorNames
-                data?.data?.also { uri ->
-                    applicationContext.contentResolver.openFileDescriptor(uri, "w")?.use { file ->
-                        FileOutputStream(file.fileDescriptor).use { stream ->
-                            // Get the filtered preferences (only those in the colorNames list)
-                            val prefs = Prefs(applicationContext).saveToTheme(colorNames)
-                            stream.channel.truncate(0)
-                            stream.write(prefs.toByteArray())
-                        }
-                    }
-                }
-            }
-
-            Constants.IMPORT_WORDS_OF_THE_DAY -> {
-                data?.data?.let { uri ->
+        performWordsRestore = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            if (result.resultCode == RESULT_OK) {
+                result.data?.data?.let { uri ->
                     // Handle the imported file
                     val inputStream = contentResolver.openInputStream(uri)
                     val importedWords = readWordsFromFile(inputStream)
@@ -240,11 +280,146 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+
+        setDefaultHomeScreenLauncher =
+            registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { _ ->
+                val isDefault = ismlauncherDefault(this) // Check again if the app is now default
+
+                if (isDefault) {
+                    viewModel.setDefaultLauncher(true)
+                } else {
+                    viewModel.setDefaultLauncher(false)
+                }
+            }
+    }
+
+    private fun handleFontSelected(uri: Uri?) {
+        if (uri == null) return
+
+        val fileName = getFileNameFromUri(this, uri)
+
+        if (!fileName.endsWith(".ttf", ignoreCase = true)) {
+            this.showLongToast("Only .ttf fonts are supported.")
+            return
+        }
+
+        this.contentResolver.takePersistableUriPermission(uri, Intent.FLAG_GRANT_READ_URI_PERMISSION)
+
+        deleteOldFont(this)
+
+        val savedFile = saveFontToInternalStorage(this, uri)
+        if (savedFile != null && savedFile.exists()) {
+            prefs.fontFamily = Constants.FontFamily.Custom
+            AppReloader.restartApp(this)
+        } else {
+            this.showLongToast("Could not save font.")
+        }
+    }
+
+
+    private fun getFileNameFromUri(context: Context, uri: Uri): String {
+        context.contentResolver.query(uri, null, null, null, null)?.use { cursor ->
+            val nameIndex = cursor.getColumnIndex(OpenableColumns.DISPLAY_NAME)
+            if (nameIndex != -1) {
+                cursor.moveToFirst()
+                return cursor.getString(nameIndex)
+            }
+        }
+        return emptyString()
+    }
+
+    private fun deleteOldFont(context: Context) {
+        val file = File(context.filesDir, "CustomFont.ttf")
+        if (file.exists()) {
+            file.delete()
+        }
+    }
+
+    private fun saveFontToInternalStorage(context: Context, fontUri: Uri): File? {
+        val file = File(context.filesDir, "CustomFont.ttf")
+        return try {
+            context.contentResolver.openInputStream(fontUri)?.use { input ->
+                FileOutputStream(file).use { output ->
+                    input.copyTo(output)
+                }
+            }
+            file
+        } catch (e: Exception) {
+            e.printStackTrace()
+            null
+        }
+    }
+
+    fun createFullBackup() {
+        val timeStamp = SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(Date())
+        val fileName = "backup_$timeStamp.json"
+
+        val createFileIntent = Intent(Intent.ACTION_CREATE_DOCUMENT).apply {
+            addCategory(Intent.CATEGORY_OPENABLE)
+            type = "application/json"
+            putExtra(Intent.EXTRA_TITLE, fileName)
+        }
+        performFullBackup.launch(createFileIntent)
+    }
+
+    fun restoreFullBackup() {
+        val openFileIntent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
+            addCategory(Intent.CATEGORY_OPENABLE)
+            type = "application/json"
+        }
+        performFullRestore.launch(openFileIntent)
+    }
+
+    fun createThemeBackup() {
+        val timeStamp = SimpleDateFormat("yyyyMMdd", Locale.getDefault()).format(Date())
+        val fileName = "theme_$timeStamp.mtheme"
+
+        val createFileIntent = Intent(Intent.ACTION_CREATE_DOCUMENT).apply {
+            addCategory(Intent.CATEGORY_OPENABLE)
+            type = "application/octet-stream"
+            putExtra(Intent.EXTRA_TITLE, fileName)
+        }
+        performThemeBackup.launch(createFileIntent)
+    }
+
+    fun restoreThemeBackup() {
+        val openFileIntent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
+            addCategory(Intent.CATEGORY_OPENABLE)
+            type = "application/octet-stream"
+        }
+        performThemeRestore.launch(openFileIntent)
+    }
+
+    fun pickCustomFont() {
+        pickCustomFont.launch(arrayOf("*/*"))
+    }
+
+    fun setDefaultHomeScreen(context: Context, checkDefault: Boolean = false) {
+        val isDefault = ismlauncherDefault(context)
+        if (checkDefault && isDefault) {
+            return // Launcher is already the default home app
+        }
+
+        if (context is Activity && !isDefault) {
+            val roleManager = context.getSystemService(RoleManager::class.java)
+            val intent = roleManager.createRequestRoleIntent(RoleManager.ROLE_HOME)
+            setDefaultHomeScreenLauncher.launch(intent)
+            return
+        }
+
+        val intent = Intent(Settings.ACTION_HOME_SETTINGS)
+        setDefaultHomeScreenLauncher.launch(intent)
+    }
+
+    fun restoreWordsBackup() {
+        val openFileIntent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
+            addCategory(Intent.CATEGORY_OPENABLE)
+            type = "application/json"
+        }
+        performWordsRestore.launch(openFileIntent)
     }
 
     private fun readWordsFromFile(inputStream: InputStream?): List<String> {
-        val words = mutableListOf<String>()
-
         // Make sure the input stream is not null
         inputStream?.let {
             // Read the input stream into a string
@@ -269,7 +444,7 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun saveCustomWordList(words: List<String>) {
-        val wordList = words.joinToString(";")
+        val wordList = words.joinToString("||")
         prefs.wordList = wordList
     }
 
@@ -278,36 +453,19 @@ class MainActivity : AppCompatActivity() {
         super.onStop()
     }
 
-    override fun onUserLeaveHint() {
-        backToHomeScreen()
-        super.onUserLeaveHint()
-    }
-
     override fun onResume() {
         backToHomeScreen()
         super.onResume()
     }
 
+    override fun onUserLeaveHint() {
+        backToHomeScreen()
+        super.onUserLeaveHint()
+    }
+
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
         recreate()
-    }
-
-
-    @Suppress("DEPRECATION")
-    private fun setLanguage() {
-        val locale = prefs.appLanguage.locale()
-        val config = resources.configuration
-        config.locale = locale
-        resources.updateConfiguration(config, resources.displayMetrics)
-    }
-
-    @SuppressLint("SourceLockedOrientationActivity")
-    private fun setupOrientation() {
-        if (isTablet(this)) return
-        // In Android 8.0, windowIsTranslucent cannot be used with screenOrientation=portrait
-        if (Build.VERSION.SDK_INT != Build.VERSION_CODES.O)
-            requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
     }
 
     private fun backToHomeScreen() {

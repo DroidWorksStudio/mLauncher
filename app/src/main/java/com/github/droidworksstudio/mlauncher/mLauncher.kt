@@ -1,25 +1,67 @@
 package com.github.droidworksstudio.mlauncher
 
+import android.app.Activity
 import android.app.Application
 import android.content.Context
+import android.content.pm.ActivityInfo
 import android.graphics.Typeface
+import android.os.Bundle
 import android.util.Log
 import com.github.droidworksstudio.common.CrashHandler
+import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Prefs
+import com.github.droidworksstudio.mlauncher.helper.IconPackHelper
+import java.io.File
 
 class Mlauncher : Application() {
     private lateinit var prefs: Prefs
 
+    companion object {
+        // Directly store the application context
+        private var appContext: Context? = null
+
+        // Access the context directly without WeakReference
+        fun getContext(): Context {
+            return appContext ?: throw IllegalStateException("Context is not initialized.")
+        }
+    }
+
     override fun onCreate() {
         super.onCreate()
 
-        // Initialize com.github.droidworksstudio.common.CrashHandler to catch uncaught exceptions
-        Thread.setDefaultUncaughtExceptionHandler(CrashHandler(applicationContext))
+        // Initialize appContext here
+        appContext = applicationContext
 
         // Initialize prefs here
         prefs = Prefs(applicationContext)
 
+        if (prefs.iconPack == Constants.IconPacks.Custom) {
+            IconPackHelper.preloadIcons(this, prefs.customIconPack)
+        }
+
+        // Initialize com.github.droidworksstudio.common.CrashHandler to catch uncaught exceptions
+        Thread.setDefaultUncaughtExceptionHandler(CrashHandler(applicationContext))
+
         setCustomFont(applicationContext)
+
+        registerActivityLifecycleCallbacks(object : ActivityLifecycleCallbacks {
+            override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {
+                val isLocked = prefs.lockOrientation
+
+                activity.requestedOrientation = if (isLocked) {
+                    ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+                } else {
+                    ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
+                }
+            }
+
+            override fun onActivityStarted(activity: Activity) {}
+            override fun onActivityResumed(activity: Activity) {}
+            override fun onActivityPaused(activity: Activity) {}
+            override fun onActivityStopped(activity: Activity) {}
+            override fun onActivitySaveInstanceState(activity: Activity, outState: Bundle) {}
+            override fun onActivityDestroyed(activity: Activity) {}
+        })
 
         // Log app launch
         CrashHandler.logUserAction("App Launched")
@@ -27,6 +69,11 @@ class Mlauncher : Application() {
 
 
     private fun setCustomFont(context: Context) {
+        val customFontFile = File(context.filesDir, "CustomFont.ttf")
+        if (!customFontFile.exists()) {
+            prefs.fontFamily = Constants.FontFamily.System
+        }
+
         // Load the custom font from resources
         val customFont = prefs.fontFamily.getFont(context)
 

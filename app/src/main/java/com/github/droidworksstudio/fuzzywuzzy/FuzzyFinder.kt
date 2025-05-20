@@ -1,36 +1,44 @@
 package com.github.droidworksstudio.fuzzywuzzy
 
 import com.github.droidworksstudio.mlauncher.data.AppListItem
+import com.github.droidworksstudio.mlauncher.helper.emptyString
 import java.text.Normalizer
-import java.util.*
+import java.util.Locale
 
 object FuzzyFinder {
+
     fun scoreApp(app: AppListItem, searchChars: String, topScore: Int): Int {
-        val appChars = app.label
+        val appLabel = app.label
+        val normalizedAppLabel = normalizeString(appLabel)
+        val normalizedSearchChars = normalizeString(searchChars)
 
-        val fuzzyScore = calculateFuzzyScore(
-            normalizeString(appChars),
-            normalizeString(searchChars)
-        )
-
+        val fuzzyScore = calculateFuzzyScore(normalizedAppLabel, normalizedSearchChars)
         return (fuzzyScore * topScore).toInt()
     }
 
-    fun normalizeString(appLabel: String, searchChars: String): Boolean {
-        return (appLabel.contains(searchChars, true) or
-                Normalizer.normalize(appLabel, Normalizer.Form.NFD)
-                    .replace(Regex("\\p{InCombiningDiacriticalMarks}+"), "")
-                    .replace(Regex("[-_+,. ]"), "")
-                    .contains(searchChars, true))
-    }
-
+    // Simplified normalization for app label and search string
     private fun normalizeString(input: String): String {
-        // Remove diacritical marks and special characters, and convert to uppercase
         return input
             .uppercase(Locale.getDefault())
-            .replace(Regex("[\\p{InCombiningDiacriticalMarks}-_+,.]"), "")
+            .let { normalizeDiacritics(it) }
+            .replace(Regex("[-_+,. ]"), emptyString())
     }
 
+    // Remove diacritics from a string
+    private fun normalizeDiacritics(input: String): String {
+        return Normalizer.normalize(input, Normalizer.Form.NFD)
+            .replace(Regex("\\p{InCombiningDiacriticalMarks}+"), emptyString())
+    }
+
+    // Function to check if normalized strings match
+    fun isMatch(appLabel: String, searchChars: String): Boolean {
+        val normalizedAppLabel = normalizeString(appLabel)
+        val normalizedSearchChars = normalizeString(searchChars)
+
+        return normalizedAppLabel.contains(normalizedSearchChars, ignoreCase = true)
+    }
+
+    // Fuzzy matching logic (kept as it is)
     private fun calculateFuzzyScore(s1: String, s2: String): Float {
         val m = s1.length
         val n = s2.length
@@ -45,22 +53,18 @@ object FuzzyFinder {
             for (j in s1Index until m) {
                 if (s1[j] == c2) {
                     found = true
-                    // Update s1Index to the next position for the next iteration
-                    s1Index = j + 1
+                    s1Index = j + 1  // Move to the next position in s1
                     break
                 }
             }
 
             // If the current character in s2 is not found in s1, return a score of 0
-            if (!found) {
-                return 0f
-            }
+            if (!found) return 0f
 
-            // Increment the match count
             matchCount++
         }
 
-        // Calculate the score as the ratio of matched characters to the longer string length
+        // Return score based on the ratio of matched characters to the longer string length
         return matchCount.toFloat() / maxOf(m, n)
     }
 }

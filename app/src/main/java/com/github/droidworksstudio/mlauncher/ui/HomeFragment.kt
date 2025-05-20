@@ -1,5 +1,6 @@
 package com.github.droidworksstudio.mlauncher.ui
 
+import android.Manifest
 import android.annotation.SuppressLint
 import android.app.admin.DevicePolicyManager
 import android.content.Context
@@ -11,7 +12,8 @@ import android.graphics.ColorFilter
 import android.graphics.PorterDuff
 import android.graphics.PorterDuffColorFilter
 import android.graphics.drawable.Drawable
-import android.os.Build
+import android.location.Location
+import android.location.LocationManager
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -30,8 +32,8 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.Space
 import android.widget.TextView
-import androidx.annotation.RequiresApi
 import androidx.biometric.BiometricPrompt
+import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.os.bundleOf
 import androidx.core.view.children
@@ -40,17 +42,22 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
-import com.github.droidworksstudio.common.ColorIconsExtensions
+import com.github.droidworksstudio.common.ColorManager
 import com.github.droidworksstudio.common.CrashHandler
+import com.github.droidworksstudio.common.getLocalizedString
 import com.github.droidworksstudio.common.isGestureNavigationEnabled
 import com.github.droidworksstudio.common.launchCalendar
 import com.github.droidworksstudio.common.openAccessibilitySettings
 import com.github.droidworksstudio.common.openAlarmApp
 import com.github.droidworksstudio.common.openBatteryManager
 import com.github.droidworksstudio.common.openCameraApp
+import com.github.droidworksstudio.common.openDeviceSettings
 import com.github.droidworksstudio.common.openDialerApp
 import com.github.droidworksstudio.common.openDigitalWellbeing
-import com.github.droidworksstudio.common.showLongToast
+import com.github.droidworksstudio.common.openPhotosApp
+import com.github.droidworksstudio.common.openTextMessagesApp
+import com.github.droidworksstudio.common.openWebBrowser
+import com.github.droidworksstudio.common.requestLocationPermission
 import com.github.droidworksstudio.common.showShortToast
 import com.github.droidworksstudio.mlauncher.MainViewModel
 import com.github.droidworksstudio.mlauncher.R
@@ -59,16 +66,19 @@ import com.github.droidworksstudio.mlauncher.data.Constants.Action
 import com.github.droidworksstudio.mlauncher.data.Constants.AppDrawerFlag
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentHomeBinding
+import com.github.droidworksstudio.mlauncher.helper.IconPackHelper
 import com.github.droidworksstudio.mlauncher.helper.analytics.AppUsageMonitor
 import com.github.droidworksstudio.mlauncher.helper.formatMillisToHMS
 import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
 import com.github.droidworksstudio.mlauncher.helper.getNextAlarm
-import com.github.droidworksstudio.mlauncher.helper.hasUsagePermission
+import com.github.droidworksstudio.mlauncher.helper.getSystemIcons
+import com.github.droidworksstudio.mlauncher.helper.hasUsageAccessPermission
 import com.github.droidworksstudio.mlauncher.helper.hideStatusBar
 import com.github.droidworksstudio.mlauncher.helper.initActionService
 import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
 import com.github.droidworksstudio.mlauncher.helper.receivers.BatteryReceiver
 import com.github.droidworksstudio.mlauncher.helper.receivers.PrivateSpaceReceiver
+import com.github.droidworksstudio.mlauncher.helper.receivers.WeatherReceiver
 import com.github.droidworksstudio.mlauncher.helper.showPermissionDialog
 import com.github.droidworksstudio.mlauncher.helper.showStatusBar
 import com.github.droidworksstudio.mlauncher.helper.utils.AppReloader
@@ -106,7 +116,9 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         val view = binding.root
         prefs = Prefs(requireContext())
         batteryReceiver = BatteryReceiver()
-        privateSpaceReceiver = PrivateSpaceReceiver()
+        if (PrivateSpaceManager(requireContext()).isPrivateSpaceSupported()) {
+            privateSpaceReceiver = PrivateSpaceReceiver()
+        }
 
         return view
     }
@@ -126,20 +138,21 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         @Suppress("DEPRECATION")
         vibrator = context?.getSystemService(VIBRATOR_SERVICE) as Vibrator
 
-        initObservers()
+        initAppObservers()
         initClickListeners()
         initPermissionCheck()
         initSwipeTouchListener()
+        initObservers()
+
+        // Update view appearance/settings based on prefs
+        updateUIFromPreferences()
     }
 
-
-    @RequiresApi(Build.VERSION_CODES.Q)
     override fun onStart() {
         super.onStart()
-        if (prefs.showStatusBar) showStatusBar(requireActivity()) else hideStatusBar(requireActivity())
 
+        // Register battery receiver
         batteryReceiver = BatteryReceiver()
-        /* register battery changes */
         try {
             val filter = IntentFilter(Intent.ACTION_BATTERY_CHANGED)
             requireContext().registerReceiver(batteryReceiver, filter)
@@ -147,19 +160,47 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             e.printStackTrace()
         }
 
-        privateSpaceReceiver = PrivateSpaceReceiver()
-        /* register private Space changes */
-        try {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.VANILLA_ICE_CREAM) {
+        // Register private space receiver if supported
+        if (PrivateSpaceManager(requireContext()).isPrivateSpaceSupported()) {
+            privateSpaceReceiver = PrivateSpaceReceiver()
+            try {
                 val filter = IntentFilter(Intent.ACTION_PROFILE_AVAILABLE)
                 requireContext().registerReceiver(privateSpaceReceiver, filter)
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        // Weather: may change frequently
+        if (prefs.showWeather) getWeather() else binding.weather.visibility = View.GONE
+
+        // Handle status bar once per view creation
+        if (prefs.showStatusBar) showStatusBar(requireActivity()) else hideStatusBar(requireActivity())
+
+        // Update only dynamic elements (not all UI prefs)
+        updateTimeAndInfo()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        try {
+            requireContext().unregisterReceiver(batteryReceiver)
+            if (PrivateSpaceManager(requireContext()).isPrivateSpaceSupported()) {
+                requireContext().unregisterReceiver(privateSpaceReceiver)
             }
         } catch (e: Exception) {
             e.printStackTrace()
         }
+    }
 
+    private fun updateUIFromPreferences() {
         val timezone = prefs.appLanguage.timezone()
         val is24HourFormat = DateFormat.is24HourFormat(requireContext())
+
         binding.apply {
             val best12 = DateFormat.getBestDateTimePattern(
                 timezone,
@@ -176,9 +217,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             date.format12Hour = datePattern
             date.format24Hour = datePattern
 
-            alarm.text = getNextAlarm(requireContext(), prefs)
-            dailyWord.text = wordOfTheDay(requireContext(), prefs)
-
+            // Static UI setup
             date.textSize = prefs.dateSize.toFloat()
             clock.textSize = prefs.clockSize.toFloat()
             alarm.textSize = prefs.alarmSize.toFloat()
@@ -187,8 +226,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             homeScreenPager.textSize = prefs.appSize.toFloat()
 
             battery.visibility = if (prefs.showBattery) View.VISIBLE else View.GONE
-            val backgroundColor = getHexForOpacity(prefs)
-            mainLayout.setBackgroundColor(backgroundColor)
+            mainLayout.setBackgroundColor(getHexForOpacity(prefs))
 
             date.setTextColor(prefs.dateColor)
             clock.setTextColor(prefs.clockColor)
@@ -197,19 +235,22 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             battery.setTextColor(prefs.batteryColor)
             totalScreenTime.setTextColor(prefs.appColor)
             setDefaultLauncher.setTextColor(prefs.appColor)
+
+            val fabList = listOf(fabPhone, fabMessages, fabCamera, fabPhotos, fabBrowser, fabSettings)
+            val colors = ColorManager.getRandomHueColors(prefs.shortcutIconsColor, fabList.size)
+            fabList.zip(colors).forEach { (fab, color) ->
+                fab.setColorFilter(if (prefs.iconRainbowColors) color else prefs.shortcutIconsColor)
+            }
         }
     }
 
-    override fun onStop() {
-        super.onStop()
-        try {
-            /* unregister battery changes if the receiver is registered */
-            requireContext().unregisterReceiver(batteryReceiver)
-            requireContext().unregisterReceiver(privateSpaceReceiver)
-        } catch (e: Exception) {
-            e.printStackTrace()
+    private fun updateTimeAndInfo() {
+        binding.apply {
+            alarm.text = getNextAlarm(requireContext(), prefs)
+            dailyWord.text = wordOfTheDay(requireContext(), prefs)
         }
     }
+
 
     override fun onClick(view: View) {
         when (view.id) {
@@ -247,12 +288,42 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 CrashHandler.logUserAction("Battery Clicked")
             }
 
-            R.id.floatingActionButton -> {
+            R.id.fabPhone -> {
+                context?.openDialerApp()
+                CrashHandler.logUserAction("fabPhone Clicked")
+            }
+
+            R.id.fabMessages -> {
+                context?.openTextMessagesApp()
+                CrashHandler.logUserAction("fabMessages Clicked")
+            }
+
+            R.id.fabCamera -> {
+                context?.openCameraApp()
+                CrashHandler.logUserAction("fabCamera Clicked")
+            }
+
+            R.id.fabPhotos -> {
+                context?.openPhotosApp()
+                CrashHandler.logUserAction("fabPhotos Clicked")
+            }
+
+            R.id.fabBrowser -> {
+                context?.openWebBrowser()
+                CrashHandler.logUserAction("fabBrowser Clicked")
+            }
+
+            R.id.fabSettings -> {
+                trySettings()
+                CrashHandler.logUserAction("fabSettings Clicked")
+            }
+
+            R.id.fabAction -> {
                 when (val action = prefs.clickFloatingAction) {
-                    Action.OpenApp -> openFloatingActionApp()
+                    Action.OpenApp -> openFabActionApp()
                     else -> handleOtherAction(action)
                 }
-                CrashHandler.logUserAction("FloatingActionButton Clicked")
+                CrashHandler.logUserAction("fabAction Clicked")
             }
 
             else -> {
@@ -285,7 +356,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         val context = requireContext()
         if (prefs.recentAppsDisplayed || prefs.appUsageStats) {
             // Check if the usage permission is not granted
-            if (!hasUsagePermission(context)) {
+            if (!hasUsageAccessPermission(context)) {
                 // Postpone showing the dialog until the activity is running
                 Handler(Looper.getMainLooper()).post {
                     // Instantiate MainActivity and pass it to showPermissionDialog
@@ -302,11 +373,19 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             totalScreenTime.setOnClickListener(this@HomeFragment)
             setDefaultLauncher.setOnClickListener(this@HomeFragment)
             battery.setOnClickListener(this@HomeFragment)
-            floatingActionButton.setOnClickListener(this@HomeFragment)
+
+            fabPhone.setOnClickListener(this@HomeFragment)
+            fabMessages.setOnClickListener(this@HomeFragment)
+            fabCamera.setOnClickListener(this@HomeFragment)
+            fabPhotos.setOnClickListener(this@HomeFragment)
+            fabBrowser.setOnClickListener(this@HomeFragment)
+            fabAction.setOnClickListener(this@HomeFragment)
+            fabSettings.setOnClickListener(this@HomeFragment)
         }
     }
 
-    private fun initObservers() {
+
+    private fun initAppObservers() {
         binding.apply {
             if (prefs.firstSettingsOpen) firstRunTips.visibility = View.VISIBLE
             else firstRunTips.visibility = View.GONE
@@ -316,6 +395,33 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         }
 
         with(viewModel) {
+            homeAppsNum.observe(viewLifecycleOwner) {
+                if (prefs.appUsageStats) {
+                    updateAppCountWithUsageStats(it)
+                } else {
+                    updateAppCount(it)
+                }
+            }
+            launcherDefault.observe(viewLifecycleOwner) {
+                binding.setDefaultLauncher.visibility = if (it) View.VISIBLE else View.GONE
+            }
+        }
+    }
+
+    private fun initObservers() {
+        with(viewModel) {
+            showDate.observe(viewLifecycleOwner) {
+                binding.date.visibility = if (it) View.VISIBLE else View.GONE
+            }
+            showClock.observe(viewLifecycleOwner) {
+                binding.clock.visibility = if (it) View.VISIBLE else View.GONE
+            }
+            showAlarm.observe(viewLifecycleOwner) {
+                binding.alarm.visibility = if (it) View.VISIBLE else View.GONE
+            }
+            showDailyWord.observe(viewLifecycleOwner) {
+                binding.dailyWord.visibility = if (it) View.VISIBLE else View.GONE
+            }
 
             clockAlignment.observe(viewLifecycleOwner) { clockGravity ->
                 binding.clock.gravity = clockGravity.value()
@@ -358,44 +464,24 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 binding.homeAppsLayout.gravity = homeAppsGravity.value() or horizontalAlignment
 
                 binding.homeAppsLayout.children.forEach { view ->
-                    (view as TextView).gravity = homeAppsGravity.value()
+                    if (prefs.appUsageStats) {
+                        (view as LinearLayout).gravity = homeAppsGravity.value()
+                    } else {
+                        (view as TextView).gravity = homeAppsGravity.value()
+                    }
                 }
-            }
-            homeAppsNum.observe(viewLifecycleOwner) {
-                if (prefs.appUsageStats) {
-                    updateAppCountWithUsageStats(it)
-                } else {
-                    updateAppCount(it)
-                }
-            }
-            showDate.observe(viewLifecycleOwner) {
-                binding.date.visibility = if (it) View.VISIBLE else View.GONE
-            }
-            showClock.observe(viewLifecycleOwner) {
-                binding.clock.visibility = if (it) View.VISIBLE else View.GONE
-            }
-            showAlarm.observe(viewLifecycleOwner) {
-                binding.alarm.visibility = if (it) View.VISIBLE else View.GONE
-            }
-            showDailyWord.observe(viewLifecycleOwner) {
-                binding.dailyWord.visibility = if (it) View.VISIBLE else View.GONE
-            }
-            showFloating.observe(viewLifecycleOwner) {
-                binding.floatingActionButton.visibility = if (it) View.VISIBLE else View.GONE
-            }
-            launcherDefault.observe(viewLifecycleOwner) {
-                binding.setDefaultLauncher.visibility = if (it) View.VISIBLE else View.GONE
             }
         }
     }
 
     private fun homeAppClicked(location: Int) {
+        CrashHandler.logUserAction("Clicked Home App: $location")
         if (prefs.getAppName(location).isEmpty()) showLongPressToast()
         else viewModel.launchApp(prefs.getHomeAppModel(location), this)
     }
 
     private fun showAppList(flag: AppDrawerFlag, includeHiddenApps: Boolean = false, n: Int = 0) {
-        viewModel.getAppList(includeHiddenApps)
+        viewModel.getAppList(includeHiddenApps, flag)
         try {
             if (findNavController().currentDestination?.id == R.id.mainFragment) {
                 findNavController().navigate(
@@ -404,54 +490,57 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 )
             }
         } catch (e: Exception) {
-            if (findNavController().currentDestination?.id == R.id.mainFragment) {
-                findNavController().navigate(
-                    R.id.appListFragment,
-                    bundleOf("flag" to flag.toString())
-                )
-            }
             e.printStackTrace()
         }
     }
 
-    @SuppressLint("WrongConstant", "PrivateApi")
+    private fun showNotesManager() {
+        CrashHandler.logUserAction("Display Notes Manager")
+        try {
+            if (findNavController().currentDestination?.id == R.id.mainFragment) {
+                findNavController().navigate(R.id.action_mainFragment_to_notesManagerFragment)
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
+    @SuppressLint("PrivateApi")
     private fun expandNotificationDrawer(context: Context) {
         try {
             Class.forName("android.app.StatusBarManager")
                 .getMethod("expandNotificationsPanel")
                 .invoke(context.getSystemService("statusbar"))
         } catch (exception: Exception) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
-                initActionService(requireContext())?.openNotifications()
-            }
+            initActionService(requireContext())?.openNotifications()
             exception.printStackTrace()
         }
         CrashHandler.logUserAction("Expand Notification Drawer")
     }
 
-    @SuppressLint("WrongConstant", "PrivateApi")
+    @SuppressLint("PrivateApi")
     private fun expandQuickSettings(context: Context) {
         try {
             Class.forName("android.app.StatusBarManager")
                 .getMethod("expandSettingsPanel")
                 .invoke(context.getSystemService("statusbar"))
         } catch (exception: Exception) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
-                initActionService(requireContext())?.openQuickSettings()
-            }
+            initActionService(requireContext())?.openQuickSettings()
             exception.printStackTrace()
         }
         CrashHandler.logUserAction("Expand Quick Settings")
     }
 
     private fun openSwipeUpApp() {
+        CrashHandler.logUserAction("Open Swipe Up App")
         if (prefs.appShortSwipeUp.activityPackage.isNotEmpty())
             viewModel.launchApp(prefs.appShortSwipeUp, this)
         else
-            requireContext().openCameraApp()
+            requireContext().openDeviceSettings()
     }
 
     private fun openSwipeDownApp() {
+        CrashHandler.logUserAction("Open Swipe Down App")
         if (prefs.appShortSwipeDown.activityPackage.isNotEmpty())
             viewModel.launchApp(prefs.appShortSwipeDown, this)
         else
@@ -459,13 +548,15 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     }
 
     private fun openSwipeLeftApp() {
+        CrashHandler.logUserAction("Open Swipe Left App")
         if (prefs.appShortSwipeLeft.activityPackage.isNotEmpty())
             viewModel.launchApp(prefs.appShortSwipeLeft, this)
         else
-            requireContext().openCameraApp()
+            requireContext().openDeviceSettings()
     }
 
     private fun openSwipeRightApp() {
+        CrashHandler.logUserAction("Open Swipe Right App")
         if (prefs.appShortSwipeRight.activityPackage.isNotEmpty())
             viewModel.launchApp(prefs.appShortSwipeRight, this)
         else
@@ -473,13 +564,15 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     }
 
     private fun openLongSwipeUpApp() {
+        CrashHandler.logUserAction("Open Swipe Long Up App")
         if (prefs.appLongSwipeUp.activityPackage.isNotEmpty())
             viewModel.launchApp(prefs.appLongSwipeUp, this)
         else
-            requireContext().openCameraApp()
+            requireContext().openDeviceSettings()
     }
 
     private fun openLongSwipeDownApp() {
+        CrashHandler.logUserAction("Open Swipe Long Down App")
         if (prefs.appLongSwipeDown.activityPackage.isNotEmpty())
             viewModel.launchApp(prefs.appLongSwipeDown, this)
         else
@@ -487,13 +580,15 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     }
 
     private fun openLongSwipeLeftApp() {
+        CrashHandler.logUserAction("Open Swipe Long Left App")
         if (prefs.appLongSwipeLeft.activityPackage.isNotEmpty())
             viewModel.launchApp(prefs.appLongSwipeLeft, this)
         else
-            requireContext().openCameraApp()
+            requireContext().openDeviceSettings()
     }
 
     private fun openLongSwipeRightApp() {
+        CrashHandler.logUserAction("Open Swipe Long Right App")
         if (prefs.appLongSwipeRight.activityPackage.isNotEmpty())
             viewModel.launchApp(prefs.appLongSwipeRight, this)
         else
@@ -501,6 +596,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     }
 
     private fun openClickClockApp() {
+        CrashHandler.logUserAction("Open Clock App")
         if (prefs.appClickClock.activityPackage.isNotEmpty())
             viewModel.launchApp(prefs.appClickClock, this)
         else
@@ -508,20 +604,15 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     }
 
     private fun openClickUsageApp() {
+        CrashHandler.logUserAction("Open Usage App")
         if (prefs.appClickUsage.activityPackage.isNotEmpty())
             viewModel.launchApp(prefs.appClickUsage, this)
         else
             requireContext().openDigitalWellbeing()
     }
 
-    private fun openFloatingActionApp() {
-        if (prefs.appFloating.activityPackage.isNotEmpty())
-            viewModel.launchApp(prefs.appFloating, this)
-        else
-            requireContext().openBatteryManager()
-    }
-
     private fun openClickDateApp() {
+        CrashHandler.logUserAction("Open Date App")
         if (prefs.appClickDate.activityPackage.isNotEmpty())
             viewModel.launchApp(prefs.appClickDate, this)
         else
@@ -529,10 +620,19 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     }
 
     private fun openDoubleTapApp() {
+        CrashHandler.logUserAction("Open Double Tap App")
         if (prefs.appDoubleTap.activityPackage.isNotEmpty())
             viewModel.launchApp(prefs.appDoubleTap, this)
         else
             AppReloader.restartApp(requireContext())
+    }
+
+    private fun openFabActionApp() {
+        CrashHandler.logUserAction("Open Fab App")
+        if (prefs.appFloating.activityPackage.isNotEmpty())
+            viewModel.launchApp(prefs.appFloating, this)
+        else
+            findNavController().navigate(R.id.action_mainFragment_to_notesManagerFragment)
     }
 
     // This function handles all swipe actions that a independent of the actual swipe direction
@@ -543,6 +643,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             Action.LockScreen -> lockPhone()
             Action.TogglePrivateSpace -> PrivateSpaceManager(requireContext()).togglePrivateSpaceLock(showToast = true, launchSettings = true)
             Action.ShowAppList -> showAppList(AppDrawerFlag.LaunchApp, includeHiddenApps = false)
+            Action.ShowNotesManager -> showNotesManager()
             Action.ShowDigitalWellbeing -> requireContext().openDigitalWellbeing()
             Action.OpenApp -> {} // this should be handled in the respective onSwipe[Up,Down,Right,Left] functions
             Action.OpenQuickSettings -> expandQuickSettings(requireContext())
@@ -553,36 +654,20 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             Action.RightPage -> handleSwipeRight(prefs.homePagesNum)
             Action.RestartApp -> AppReloader.restartApp(requireContext())
             Action.Disabled -> {}
+
         }
     }
 
     private fun lockPhone() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
-            val actionService = ActionService.instance()
-            if (actionService != null) {
-                actionService.lockScreen()
-            } else {
-                requireContext().openAccessibilitySettings()
-            }
+        val actionService = ActionService.instance()
+        if (actionService != null) {
+            actionService.lockScreen()
         } else {
-            requireActivity().runOnUiThread {
-                try {
-                    deviceManager.lockNow()
-                } catch (_: SecurityException) {
-                    showLongToast(
-                        "App does not have the permission to lock the device"
-                    )
-                } catch (_: Exception) {
-                    showLongToast(
-                        "mLauncher failed to lock device.\nPlease check your app settings."
-                    )
-                    prefs.lockModeOn = false
-                }
-            }
+            requireContext().openAccessibilitySettings()
         }
     }
 
-    private fun showLongPressToast() = showShortToast(getString(R.string.long_press_to_select_app))
+    private fun showLongPressToast() = showShortToast(getLocalizedString(R.string.long_press_to_select_app))
 
     private fun textOnClick(view: View) = onClick(view)
 
@@ -905,7 +990,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         }
 
         // Create a new TextView instance
-        val totalText = getString(R.string.show_total_screen_time)
+        val totalText = getLocalizedString(R.string.show_total_screen_time)
         val totalTime = appUsageMonitor.getTotalScreenTime(requireContext())
         val totalScreenTime = formatMillisToHMS(totalTime, true)
         Log.d("totalScreenTime", totalScreenTime)
@@ -929,17 +1014,22 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             val homeScreenPager = homeScreenPager
             val totalScreenTime = totalScreenTime
             val setDefaultLauncher = setDefaultLauncher
+            val fabLayout = fabLayout
 
-            val views = listOf(setDefaultLauncher, totalScreenTime, homeScreenPager, homeAppsLayout)
+            val views = listOf(setDefaultLauncher, totalScreenTime, homeScreenPager, fabLayout, homeAppsLayout)
 
             // Check if device is using gesture navigation or 3-button navigation
             val isGestureNav = isGestureNavigationEnabled(requireContext())
 
+            val numOfElements = 5
+            val incrementBy = 35
             // Set margins based on navigation mode
             val margins = if (isGestureNav) {
-                listOf(100, 150, 200, 250) // Adjusted margins for gesture navigation
+                val startAt = 50
+                List(numOfElements) { index -> startAt + (index * incrementBy) } // Adjusted margins for gesture navigation
             } else {
-                listOf(150, 200, 250, 300) // Adjusted margins for 3-button navigation
+                val startAt = 100
+                List(numOfElements) { index -> startAt + (index * incrementBy) } // Adjusted margins for 3-button navigation
             }
 
             val visibleViews = views.filter { it.isVisible }
@@ -955,15 +1045,29 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             // Apply correct spacing for visible views
             visibleViews.forEachIndexed { index, view ->
                 val params = view.layoutParams as ViewGroup.MarginLayoutParams
-                params.bottomMargin = visibleMargins.getOrElse(index) { 0 } // Ensure the margin list doesn't go out of bounds
+                var bottomMargin = visibleMargins.getOrElse(index) { 0 }
+
+                // Add extra space above fabLayout if it's visible
+                if (prefs.homeAlignmentBottom) {
+                    if (visibleViews.contains(fabLayout)) {
+                        if (view == homeAppsLayout) {
+                            bottomMargin += 65
+                        }
+                    }
+                }
+
+                if (view == homeScreenPager) {
+                    bottomMargin += 10
+                }
+
+                params.bottomMargin = bottomMargin
                 view.layoutParams = params
-                Log.d("layoutParams", "${view.layoutParams}")
             }
         }
     }
 
 
-    @SuppressLint("InflateParams")
+    @SuppressLint("InflateParams", "DiscouragedApi", "UseCompatLoadingForDrawables")
     private fun updateAppCount(newAppsNum: Int) {
         val oldAppsNum = binding.homeAppsLayout.childCount // current number of apps
         val diff = newAppsNum - oldAppsNum
@@ -998,43 +1102,34 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     val packageManager = context.packageManager
 
                     if (packageName.isNotBlank() && prefs.iconPack != Constants.IconPacks.Disabled) {
+                        val iconPackPackage = prefs.customIconPack
                         // Get app icon or fallback drawable
                         val icon: Drawable? = try {
+                            if (iconPackPackage.isNotEmpty() && prefs.iconPack == Constants.IconPacks.Custom) {
+                                if (IconPackHelper.isReady()) {
+                                    IconPackHelper.getCachedIcon(context, packageName)
+                                    // Use the icon if not null
+                                } else {
+                                    packageManager.getApplicationIcon(packageName)
+                                }
+                            } else {
+                                packageManager.getApplicationIcon(packageName)
+                            }
+                        } catch (e: PackageManager.NameNotFoundException) {
+                            e.printStackTrace()
+                            // Handle exception gracefully, fall back to the system icon
                             packageManager.getApplicationIcon(packageName)
-                        } catch (_: PackageManager.NameNotFoundException) {
-                            null
+                        } catch (e: Exception) {
+                            e.printStackTrace()
+                            // Handle any other exceptions gracefully, fallback to the system icon
+                            packageManager.getApplicationIcon(packageName)
                         }
 
-                        val defaultIcon = ContextCompat.getDrawable(context, R.drawable.launcher_dot_icon)
-                        val nonNullDrawable: Drawable = icon ?: defaultIcon!!
+                        val defaultIcon = packageManager.getApplicationIcon(packageName)
+                        val nonNullDrawable: Drawable = icon ?: defaultIcon
 
                         // Recolor the icon with the dominant color
-                        val appNewIcon: Drawable? =
-                            when (prefs.iconPack) {
-                                Constants.IconPacks.EasyDots -> {
-                                    val newIcon = ContextCompat.getDrawable(
-                                        context,
-                                        R.drawable.launcher_dot_icon
-                                    )!!
-                                    val bitmap = ColorIconsExtensions.drawableToBitmap(nonNullDrawable)
-                                    val dominantColor = ColorIconsExtensions.getDominantColor(bitmap)
-                                    ColorIconsExtensions.recolorDrawable(newIcon, dominantColor)
-                                }
-
-                                Constants.IconPacks.NiagaraDots -> {
-                                    val newIcon = ContextCompat.getDrawable(
-                                        context,
-                                        R.drawable.niagara_dot_icon
-                                    )!!
-                                    val bitmap = ColorIconsExtensions.drawableToBitmap(nonNullDrawable)
-                                    val dominantColor = ColorIconsExtensions.getDominantColor(bitmap)
-                                    ColorIconsExtensions.recolorDrawable(newIcon, dominantColor)
-                                }
-
-                                else -> {
-                                    null
-                                }
-                            }
+                        val appNewIcon: Drawable? = getSystemIcons(context, prefs, nonNullDrawable)
 
                         // Set the icon size to match text size and add padding
                         val iconSize = (prefs.appSize * 1.4).toInt()  // Base size from preferences
@@ -1045,14 +1140,19 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
                         // Set drawable position based on alignment
                         when (prefs.homeAlignment) {
-                            Constants.Gravity.Left -> setCompoundDrawables(appNewIcon ?: nonNullDrawable, null, null, null)
-                            Constants.Gravity.Right -> setCompoundDrawables(null, null, appNewIcon ?: nonNullDrawable, null)
-                            else -> setCompoundDrawables(null, null, null, null)
-                        }
+                            Constants.Gravity.Left -> {
+                                setCompoundDrawables(appNewIcon ?: nonNullDrawable, null, null, null)
+                                // Add padding between text and icon if an icon is set
+                                compoundDrawablePadding = iconPadding
+                            }
 
-                        // Add padding between text and icon if an icon is set
-                        if (prefs.homeAlignment == Constants.Gravity.Left || prefs.homeAlignment == Constants.Gravity.Right) {
-                            compoundDrawablePadding = iconPadding
+                            Constants.Gravity.Right -> {
+                                setCompoundDrawables(null, null, appNewIcon ?: nonNullDrawable, null)
+                                // Add padding between text and icon if an icon is set
+                                compoundDrawablePadding = iconPadding
+                            }
+
+                            else -> setCompoundDrawables(null, null, null, null)
                         }
                     }
                 }
@@ -1118,8 +1218,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
         // Set the text for the page selector corresponding to each page
         binding.homeScreenPager.text = spannable
-        if (prefs.homePagesNum > 1 && prefs.homePager) binding.homeScreenPager.visibility =
-            View.VISIBLE
+        if (prefs.homePagesNum > 1 && prefs.homePager) binding.homeScreenPager.visibility = View.VISIBLE
+        if (prefs.showFloating) binding.fabLayout.visibility = View.VISIBLE
     }
 
     private fun handleSwipeLeft(totalPages: Int) {
@@ -1162,7 +1262,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     override fun onAuthenticationFailed() {
                         Log.e(
                             "Authentication",
-                            getString(R.string.text_authentication_failed)
+                            getLocalizedString(R.string.text_authentication_failed)
                         )
                     }
 
@@ -1170,13 +1270,13 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                         when (errorCode) {
                             BiometricPrompt.ERROR_USER_CANCELED -> Log.e(
                                 "Authentication",
-                                getString(R.string.text_authentication_cancel)
+                                getLocalizedString(R.string.text_authentication_cancel)
                             )
 
                             else ->
                                 Log.e(
                                     "Authentication",
-                                    getString(R.string.text_authentication_error).format(
+                                    getLocalizedString(R.string.text_authentication_error).format(
                                         errorMessage,
                                         errorCode
                                     )
@@ -1198,4 +1298,63 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             Log.d("onLongClick", e.toString())
         }
     }
+
+    @SuppressLint("MissingPermission")
+    private fun getWeather() {
+        val locationManager = requireContext().getSystemService(Context.LOCATION_SERVICE) as LocationManager
+
+        if (ActivityCompat.checkSelfPermission(
+                requireContext(),
+                Manifest.permission.ACCESS_FINE_LOCATION
+            ) != PackageManager.PERMISSION_GRANTED &&
+            ActivityCompat.checkSelfPermission(
+                requireContext(),
+                Manifest.permission.ACCESS_COARSE_LOCATION
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
+            requireContext().requestLocationPermission(Constants.ACCESS_FINE_LOCATION)
+            return
+        }
+
+        val provider = when {
+            locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER) -> LocationManager.GPS_PROVIDER
+            locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER) -> LocationManager.NETWORK_PROVIDER
+            else -> {
+                Log.e("WeatherReceiver", "No location provider enabled.")
+                return
+            }
+        }
+
+        locationManager.getCurrentLocation(provider, null, requireContext().mainExecutor) { location ->
+            if (location != null) {
+                handleLocation(location)
+            } else {
+                Log.e("WeatherReceiver", "Location unavailable.")
+            }
+        }
+    }
+
+    private fun handleLocation(location: Location) {
+        val lat = location.latitude
+        val lon = location.longitude
+        Log.d("WeatherReceiver", "Location: $lat, $lon")
+
+        val receiver = WeatherReceiver()
+        viewLifecycleOwner.lifecycleScope.launch {
+            val weatherReceiver = receiver.getCurrentWeather(lat, lon)
+            val weatherType = receiver.getWeatherEmoji(weatherReceiver?.currentWeather?.weatherCode ?: -1)
+            binding.apply {
+                if (weatherReceiver != null) {
+                    weather.textSize = prefs.batterySize.toFloat()
+                    weather.setTextColor(prefs.batteryColor)
+                    weather.text = String.format(
+                        "%s %s%s", weatherType, weatherReceiver.currentWeather.temperature, weatherReceiver
+                            .currentUnits.temperatureUnit
+                    )
+                    weather.visibility = View.VISIBLE
+                }
+            }
+        }
+    }
+
 }

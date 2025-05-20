@@ -113,12 +113,15 @@ object SettingsComposable {
         onClick: () -> Unit = {},
         titleFontSize: TextUnit = TextUnit.Unspecified,
         descriptionFontSize: TextUnit = TextUnit.Unspecified,
+        fontColor: Color = SettingsTheme.typography.title.color,
         iconSize: Dp = 18.dp,
     ) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .clickable(onClick = onClick)
+                .clickable {
+                    onClick()
+                }
                 .padding(
                     vertical = 16.dp,
                     horizontal = 16.dp
@@ -142,13 +145,15 @@ object SettingsComposable {
                 Text(
                     text = title,
                     style = SettingsTheme.typography.title,
-                    fontSize = titleFontSize
+                    fontSize = titleFontSize,
+                    color = fontColor,
                 )
                 description?.let {
                     Text(
                         text = it,
                         style = SettingsTheme.typography.title,
-                        fontSize = descriptionFontSize
+                        fontSize = descriptionFontSize,
+                        color = fontColor,
                     )
                 }
             }
@@ -206,7 +211,7 @@ object SettingsComposable {
                 colors = SwitchDefaults.colors(
                     checkedThumbColor = Color.White,
                     checkedTrackColor = Color.Green,
-                    uncheckedThumbColor = Color.Gray,
+                    uncheckedThumbColor = Color.White,
                     uncheckedTrackColor = Color.LightGray
                 )
             )
@@ -217,7 +222,7 @@ object SettingsComposable {
     fun SettingsSelect(
         title: String,
         option: String,
-        fontSize: TextUnit = 24.sp, // Default font size for the title
+        fontSize: TextUnit = 24.sp,
         fontColor: Color = SettingsTheme.typography.title.color,
         onClick: () -> Unit = {},
     ) {
@@ -232,8 +237,7 @@ object SettingsComposable {
                 text = title,
                 style = SettingsTheme.typography.title,
                 fontSize = fontSize,
-                modifier = Modifier
-                    .weight(1f)
+                modifier = Modifier.weight(1f)
             )
 
             Text(
@@ -242,8 +246,9 @@ object SettingsComposable {
                 fontSize = fontSize,
                 color = fontColor,
                 modifier = Modifier
-                    .clickable(onClick = onClick)
-
+                    .clickable {
+                        onClick()
+                    }
             )
         }
     }
