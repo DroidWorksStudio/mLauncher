@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Releases:
+
+- Update build number from 3 to 4 - ([8e238f0](https://github.com/DroidWorksStudio/mLauncher/commit/8e238f0ac7908408cb7d4e1b024b3b3f377be20d))
+
+## [1.10.3.3](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.3.3) - (20, May 2025)
+
 ### Implemented Enhancements:
 
 - Add donation dialog and icons - ([10ce5fa](https://github.com/DroidWorksStudio/mLauncher/commit/10ce5faf343edb1f1fdd4b88d6a9607c1f07bca6))
