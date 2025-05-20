@@ -1,1 +1,1 @@
-mLauncher'dan türetilmiştir, +minimalizasyon, +özelleştirilebilirlik
+Multi Launcher ‧ Home Screen, Weather & Minimal UI Launcher
