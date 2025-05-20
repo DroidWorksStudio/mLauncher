@@ -1,1 +1,1 @@
-התפצלות מ-mLauncher, +מזעור, +התאמה אישית
+Forked from mLauncher, +minimalization, +customizability
