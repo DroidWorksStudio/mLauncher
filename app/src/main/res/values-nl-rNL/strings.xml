@@ -33,6 +33,9 @@
     <string name="settings_exit_mlauncher_title">MultiLauncher verlaten</string>
     <string name="settings_exit_mlauncher_description">Schakel tijdelijk over naar uw standaard launcher.</string>
     <string name="settings_exit_mlauncher_dialog">Kies een launcher</string>
+    <string name="settings_donation_title">Donations</string>
+    <string name="settings_donation_description">Support our work by making a donation.</string>
+    <string name="settings_donation_dialog">Support Us</string>
     <!-- Strings used for features settings -->
     <string name="features_settings_title">Functies</string>
     <string name="user_preferences">Gebruikersvoorkeuren</string>
