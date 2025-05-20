@@ -1,60 +1,35 @@
-<p>Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>: A minimal and clean launcher with
-    enhanced features.</p>
+<h1>Multi Launcher: A Clean, Simple Android Launcher Built for Readability and Control</h1>
 
-<h2>Forked with Extra Features</h2>
+<p>Looking for a launcher that ditches the clutter and keeps things easy? <strong>Multi Launcher</strong> is a powerful yet minimalist Android launcher that replaces tiny icons with clear, readable text buttons, making your phone easier to navigate.</p>
 
-<b>Features:</b>
+<p>Whether you want a simple home screen, need large text for visibility, or prefer quick gesture-based actions, Multi Launcher gives you full control without overwhelming you with options.</p>
 
-- App Drawer Customization: Rename apps in the app drawer (home screen app renaming is already supported with a long
-click).
-- Advanced Gestures: A wide range of gestures, including taps and swipes, to trigger different actions.
-- Clock Customization: Position the clock independently of the home apps, giving more control over your home screen
-layout.
-- App Drawer Layout: Change the alignment of apps in the app drawer independently of the home screen.
-- Font Size Customization: Adjust the font size of sections of the home screen separately.
-- Privacy Focused: Removed internet permission, ensuring your data remains private.
-- Biometric Security: Lock settings behind biometric authentication (toggle option).
-- Crash Reports: Ability to report crashes via email for better troubleshooting.
-- App Usage Tracking: View app usage time directly from the home screen.
+<h2>Why Choose Multi Launcher?</h2>
+<ul>
+    <li><strong>Text-Based Launcher:</strong> No confusing icons — just labeled text buttons for your apps.</li>
+    <li><strong>Highly Customizable:</strong> Adjust layout, font sizes, clock position, and more.</li>
+    <li><strong>Quick Gestures:</strong> Use taps, swipes, and long swipes to open apps, lock the screen, and access notifications.</li>
+    <li><strong>Secure:</strong> Biometric lock for settings and privacy.</li>
+    <li><strong>Great for Seniors or Simplicity-Lovers:</strong> Easy to read, use, and customize.</li>
+</ul>
 
-<b>Gestures Include:</b>
+<h2>Key Features:</h2>
+<ul>
+    <li>Custom App Names: Rename apps to match how you think of them.</li>
+    <li>Flexible Layouts: Organize apps in the way that makes sense for you.</li>
+    <li>Clock & Date Customization: Place widgets wherever you want.</li>
+    <li>App Usage Insights: See how much time you spend in each app.</li>
+    <li>Gesture Shortcuts: Set custom actions for double taps, swipes, and more.</li>
+</ul>
 
-- Double Tap: Quickly tap twice to trigger a predefined action.
-- Clock Tap: Tap the clock to access additional features or settings.
-- Date Tap: Tap the date for easy access to the calendar.
-- Usage Tap: Tap on the total usage to view system or app usage data.
-- Short Swipes: Swipe up, down, left, or right to navigate or trigger different actions.
-- Long Swipes: Swipe up, down, left, or right for additional gesture actions.
+<h2>Accessibility Features:</h2>
+<p>This app uses the <strong>AccessibilityService API</strong> to:</p>
+<ul>
+    <li>Lock the screen with a gesture</li>
+    <li>Open the power menu</li>
+    <li>Pull down the notification drawer</li>
+</ul>
 
-<b>Possible Actions Include:</b>
+<p><em>Multi Launcher respects your privacy. These features do not collect or share personal data.</em></p>
 
-- Open Specified App: Instantly open any app of your choice with a gesture.
-- Display App List: Show the full list of apps installed on the device.
-- Lock Screen: Lock your device for security.
-- Show Recently Opened Apps: Access recently used apps for quick multitasking.
-- Open Notification Drawer: Trigger the notification drawer with a swipe or tap.
-- Open Quick Settings: Access quick settings directly from the home screen.
-- Power Dialog: Open power options like shutdown, restart, and more.
-- Take a Screenshot: Capture the screen to save or share your content.
-- Switch Page: Quickly switch between home screen pages.
-- Disable Gesture: Disable specific gestures as needed.
-
-<b>Translations:</b>
-
-- Arabic
-- Dutch
-- English
-- French
-- German
-- Hebrew
-- Italian
-- Japanese
-- Korean
-- Lithuanian
-- Polish
-- Portuguese
-- Russian
-- Slovak
-- Spanish
-- Thai
-- Turkish
+<p>If you’re tired of flashy, cluttered launchers and want something straightforward, stylish, and empowering, <strong>Multi Launcher</strong> is your perfect home screen solution.</p>
