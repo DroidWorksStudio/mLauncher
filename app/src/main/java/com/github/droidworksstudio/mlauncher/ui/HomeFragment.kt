@@ -13,6 +13,7 @@ import android.graphics.PorterDuff
 import android.graphics.PorterDuffColorFilter
 import android.graphics.drawable.Drawable
 import android.location.Location
+import android.location.LocationListener
 import android.location.LocationManager
 import android.os.Bundle
 import android.os.Handler
@@ -236,7 +237,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             totalScreenTime.setTextColor(prefs.appColor)
             setDefaultLauncher.setTextColor(prefs.appColor)
 
-            val fabList = listOf(fabPhone, fabMessages, fabCamera, fabPhotos, fabBrowser, fabSettings)
+            val fabList =
+                listOf(fabPhone, fabMessages, fabCamera, fabPhotos, fabBrowser, fabSettings)
             val colors = ColorManager.getRandomHueColors(prefs.shortcutIconsColor, fabList.size)
             fabList.zip(colors).forEach { (fab, color) ->
                 fab.setColorFilter(if (prefs.iconRainbowColors) color else prefs.shortcutIconsColor)
@@ -427,36 +429,40 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 binding.clock.gravity = clockGravity.value()
 
                 // Set layout_gravity to align the TextClock (clock) within the parent (LinearLayout)
-                binding.clock.layoutParams = (binding.clock.layoutParams as LinearLayout.LayoutParams).apply {
-                    gravity = clockGravity.value()
-                }
+                binding.clock.layoutParams =
+                    (binding.clock.layoutParams as LinearLayout.LayoutParams).apply {
+                        gravity = clockGravity.value()
+                    }
             }
 
             dateAlignment.observe(viewLifecycleOwner) { dateGravity ->
                 binding.date.gravity = dateGravity.value()
 
                 // Set layout_gravity to align the TextClock (date) within the parent (LinearLayout)
-                binding.date.layoutParams = (binding.date.layoutParams as LinearLayout.LayoutParams).apply {
-                    gravity = dateGravity.value()
-                }
+                binding.date.layoutParams =
+                    (binding.date.layoutParams as LinearLayout.LayoutParams).apply {
+                        gravity = dateGravity.value()
+                    }
             }
 
             alarmAlignment.observe(viewLifecycleOwner) { alarmGravity ->
                 binding.alarm.gravity = alarmGravity.value()
 
                 // Set layout_gravity to align the TextView (alarm) within the parent (LinearLayout)
-                binding.alarm.layoutParams = (binding.alarm.layoutParams as LinearLayout.LayoutParams).apply {
-                    gravity = alarmGravity.value()
-                }
+                binding.alarm.layoutParams =
+                    (binding.alarm.layoutParams as LinearLayout.LayoutParams).apply {
+                        gravity = alarmGravity.value()
+                    }
             }
 
             dailyWordAlignment.observe(viewLifecycleOwner) { dailyWordGravity ->
                 binding.dailyWord.gravity = dailyWordGravity.value()
 
                 // Set layout_gravity to align the TextView (alarm) within the parent (LinearLayout)
-                binding.dailyWord.layoutParams = (binding.dailyWord.layoutParams as LinearLayout.LayoutParams).apply {
-                    gravity = dailyWordGravity.value()
-                }
+                binding.dailyWord.layoutParams =
+                    (binding.dailyWord.layoutParams as LinearLayout.LayoutParams).apply {
+                        gravity = dailyWordGravity.value()
+                    }
             }
 
             homeAppsAlignment.observe(viewLifecycleOwner) { (homeAppsGravity, onBottom) ->
@@ -641,7 +647,11 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         when (action) {
             Action.ShowNotification -> expandNotificationDrawer(requireContext())
             Action.LockScreen -> lockPhone()
-            Action.TogglePrivateSpace -> PrivateSpaceManager(requireContext()).togglePrivateSpaceLock(showToast = true, launchSettings = true)
+            Action.TogglePrivateSpace -> PrivateSpaceManager(requireContext()).togglePrivateSpaceLock(
+                showToast = true,
+                launchSettings = true
+            )
+
             Action.ShowAppList -> showAppList(AppDrawerFlag.LaunchApp, includeHiddenApps = false)
             Action.ShowNotesManager -> showNotesManager()
             Action.ShowDigitalWellbeing -> requireContext().openDigitalWellbeing()
@@ -667,7 +677,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         }
     }
 
-    private fun showLongPressToast() = showShortToast(getLocalizedString(R.string.long_press_to_select_app))
+    private fun showLongPressToast() =
+        showShortToast(getLocalizedString(R.string.long_press_to_select_app))
 
     private fun textOnClick(view: View) = onClick(view)
 
@@ -1016,7 +1027,13 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             val setDefaultLauncher = setDefaultLauncher
             val fabLayout = fabLayout
 
-            val views = listOf(setDefaultLauncher, totalScreenTime, homeScreenPager, fabLayout, homeAppsLayout)
+            val views = listOf(
+                setDefaultLauncher,
+                totalScreenTime,
+                homeScreenPager,
+                fabLayout,
+                homeAppsLayout
+            )
 
             // Check if device is using gesture navigation or 3-button navigation
             val isGestureNav = isGestureNavigationEnabled(requireContext())
@@ -1033,7 +1050,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             }
 
             val visibleViews = views.filter { it.isVisible }
-            val visibleMargins = margins.take(visibleViews.size) // Trim margins list to match visible views
+            val visibleMargins =
+                margins.take(visibleViews.size) // Trim margins list to match visible views
 
             // Reset margins for all views
             views.forEach { view ->
@@ -1136,18 +1154,33 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                         val iconPadding = (iconSize / 1.2).toInt() //
 
                         appNewIcon?.setBounds(0, 0, iconSize, iconSize)
-                        nonNullDrawable.setBounds(0, 0, ((iconSize * 1.8).toInt()), ((iconSize * 1.8).toInt()))
+                        nonNullDrawable.setBounds(
+                            0,
+                            0,
+                            ((iconSize * 1.8).toInt()),
+                            ((iconSize * 1.8).toInt())
+                        )
 
                         // Set drawable position based on alignment
                         when (prefs.homeAlignment) {
                             Constants.Gravity.Left -> {
-                                setCompoundDrawables(appNewIcon ?: nonNullDrawable, null, null, null)
+                                setCompoundDrawables(
+                                    appNewIcon ?: nonNullDrawable,
+                                    null,
+                                    null,
+                                    null
+                                )
                                 // Add padding between text and icon if an icon is set
                                 compoundDrawablePadding = iconPadding
                             }
 
                             Constants.Gravity.Right -> {
-                                setCompoundDrawables(null, null, appNewIcon ?: nonNullDrawable, null)
+                                setCompoundDrawables(
+                                    null,
+                                    null,
+                                    appNewIcon ?: nonNullDrawable,
+                                    null
+                                )
                                 // Add padding between text and icon if an icon is set
                                 compoundDrawablePadding = iconPadding
                             }
@@ -1204,7 +1237,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         pageSelectorIcons.forEach { drawableRes ->
             val drawable = ContextCompat.getDrawable(requireContext(), drawableRes)?.apply {
                 setBounds(0, 0, intrinsicWidth, intrinsicHeight)
-                val colorFilterColor: ColorFilter = PorterDuffColorFilter(prefs.appColor, PorterDuff.Mode.SRC_IN)
+                val colorFilterColor: ColorFilter =
+                    PorterDuffColorFilter(prefs.appColor, PorterDuff.Mode.SRC_IN)
                 colorFilter = colorFilterColor
             }
             val imageSpan = drawable?.let { ImageSpan(it, ImageSpan.ALIGN_BASELINE) }
@@ -1218,7 +1252,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
         // Set the text for the page selector corresponding to each page
         binding.homeScreenPager.text = spannable
-        if (prefs.homePagesNum > 1 && prefs.homePager) binding.homeScreenPager.visibility = View.VISIBLE
+        if (prefs.homePagesNum > 1 && prefs.homePager) binding.homeScreenPager.visibility =
+            View.VISIBLE
         if (prefs.showFloating) binding.fabLayout.visibility = View.VISIBLE
     }
 
@@ -1254,7 +1289,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     private fun trySettings() {
         lifecycleScope.launch(Dispatchers.Main) {
             if (prefs.settingsLocked) {
-                biometricHelper.startBiometricSettingsAuth(object : BiometricHelper.CallbackSettings {
+                biometricHelper.startBiometricSettingsAuth(object :
+                    BiometricHelper.CallbackSettings {
                     override fun onAuthenticationSucceeded() {
                         sendToSettingFragment()
                     }
@@ -1266,7 +1302,10 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                         )
                     }
 
-                    override fun onAuthenticationError(errorCode: Int, errorMessage: CharSequence?) {
+                    override fun onAuthenticationError(
+                        errorCode: Int,
+                        errorMessage: CharSequence?
+                    ) {
                         when (errorCode) {
                             BiometricPrompt.ERROR_USER_CANCELED -> Log.e(
                                 "Authentication",
@@ -1301,7 +1340,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
     @SuppressLint("MissingPermission")
     private fun getWeather() {
-        val locationManager = requireContext().getSystemService(Context.LOCATION_SERVICE) as LocationManager
+        val locationManager =
+            requireContext().getSystemService(Context.LOCATION_SERVICE) as LocationManager
 
         if (ActivityCompat.checkSelfPermission(
                 requireContext(),
@@ -1325,13 +1365,41 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             }
         }
 
-        locationManager.getCurrentLocation(provider, null, requireContext().mainExecutor) { location ->
-            if (location != null) {
+        // ✅ Try last known location first
+        val lastKnown = locationManager.getLastKnownLocation(provider)
+        if (lastKnown != null) {
+            handleLocation(lastKnown)
+            return
+        }
+
+        // 🔁 Fallback: wait for real-time update
+        val locationListener = object : LocationListener {
+            override fun onLocationChanged(location: Location) {
+                locationManager.removeUpdates(this)
                 handleLocation(location)
-            } else {
-                Log.e("WeatherReceiver", "Location unavailable.")
+            }
+
+            override fun onProviderDisabled(provider: String) {}
+            override fun onProviderEnabled(provider: String) {}
+
+            @Deprecated("Deprecated in Java")
+            override fun onStatusChanged(provider: String?, status: Int, extras: Bundle?) {
             }
         }
+
+        locationManager.requestLocationUpdates(
+            provider,
+            0L,
+            0f,
+            locationListener,
+            Looper.getMainLooper()
+        )
+
+        // ⏱ Optional: timeout fallback in case no update happens
+        Handler(Looper.getMainLooper()).postDelayed({
+            locationManager.removeUpdates(locationListener)
+            Log.w("WeatherReceiver", "Location update timed out.")
+        }, 10000) // 10 seconds
     }
 
     private fun handleLocation(location: Location) {
@@ -1342,14 +1410,18 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         val receiver = WeatherReceiver()
         viewLifecycleOwner.lifecycleScope.launch {
             val weatherReceiver = receiver.getCurrentWeather(lat, lon)
-            val weatherType = receiver.getWeatherEmoji(weatherReceiver?.currentWeather?.weatherCode ?: -1)
+            val weatherType =
+                receiver.getWeatherEmoji(weatherReceiver?.currentWeather?.weatherCode ?: -1)
+
             binding.apply {
                 if (weatherReceiver != null) {
                     weather.textSize = prefs.batterySize.toFloat()
                     weather.setTextColor(prefs.batteryColor)
                     weather.text = String.format(
-                        "%s %s%s", weatherType, weatherReceiver.currentWeather.temperature, weatherReceiver
-                            .currentUnits.temperatureUnit
+                        "%s %s%s",
+                        weatherType,
+                        weatherReceiver.currentWeather.temperature,
+                        weatherReceiver.currentUnits.temperatureUnit
                     )
                     weather.visibility = View.VISIBLE
                 }

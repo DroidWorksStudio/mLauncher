@@ -200,7 +200,8 @@ class FeaturesFragment : Fragment() {
                         fonts = fontFamilyFonts,
                         titleResId = R.string.font_family,
                         onItemSelected = { newFontFamilyName ->
-                            val newFontFamilyIndex = fontFamilyOptions.indexOfFirst { it == newFontFamilyName }
+                            val newFontFamilyIndex =
+                                fontFamilyOptions.indexOfFirst { it == newFontFamilyName }
                             if (newFontFamilyIndex != -1) {
                                 val newFontFamily = fontFamilyEntries[newFontFamilyIndex]
                                 if (newFontFamily == Constants.FontFamily.Custom) {
@@ -295,11 +296,14 @@ class FeaturesFragment : Fragment() {
                         options = searchEnginesOptions.map { it }.toTypedArray(),
                         titleResId = R.string.search_engine,
                         onItemSelected = { newSearchEngineName ->
-                            val newFontFamilyIndex = searchEnginesOptions.indexOfFirst { it == newSearchEngineName }
+                            val newFontFamilyIndex =
+                                searchEnginesOptions.indexOfFirst { it == newSearchEngineName }
                             if (newFontFamilyIndex != -1) {
-                                val newSearchEngine = searchEnginesEntries[newFontFamilyIndex] // Get the selected FontFamily enum
+                                val newSearchEngine =
+                                    searchEnginesEntries[newFontFamilyIndex] // Get the selected FontFamily enum
                                 selectedSearchEngine = newSearchEngine // Update state
-                                prefs.searchEngines = newSearchEngine // Persist selection in preferences
+                                prefs.searchEngines =
+                                    newSearchEngine // Persist selection in preferences
                             }
                         }
                     )
@@ -362,7 +366,8 @@ class FeaturesFragment : Fragment() {
                             currentValue = prefs.filterStrength,
                             onValueSelected = { newFilterStrength ->
                                 selectedFilterStrength = newFilterStrength // Update state
-                                prefs.filterStrength = newFilterStrength // Persist selection in preferences
+                                prefs.filterStrength =
+                                    newFilterStrength // Persist selection in preferences
                                 viewModel.filterStrength.value = newFilterStrength
                             }
                         )
@@ -536,16 +541,6 @@ class FeaturesFragment : Fragment() {
                 onCheckedChange = {
                     toggledShowBattery = !prefs.showBattery
                     prefs.showBattery = toggledShowBattery
-                }
-            )
-
-            SettingsSwitch(
-                text = getLocalizedString(R.string.show_battery_icon),
-                fontSize = titleFontSize,
-                defaultState = toggledShowBatteryIcon,
-                onCheckedChange = {
-                    toggledShowBatteryIcon = !prefs.showBatteryIcon
-                    prefs.showBatteryIcon = toggledShowBatteryIcon
                 }
             )
 
