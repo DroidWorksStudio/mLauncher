@@ -1,1 +1,1 @@
-Forked from mLauncher, +minimalization, +customizability
+Multi Launcher ‧ Home Screen, Weather & Minimal UI Launcher
