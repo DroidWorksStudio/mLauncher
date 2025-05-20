@@ -14,6 +14,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Apply display cutout padding and improve weather location handling - ([be441d0](https://github.com/DroidWorksStudio/mLauncher/commit/be441d06554331a00a6237bca525400457a615d3))
 - Improve code readability in SystemUtils - ([f8c180b](https://github.com/DroidWorksStudio/mLauncher/commit/f8c180bdd4cc495dedb65e2dfec3306373983dc8))
 - Improve code formatting and remove redundant code - ([bc122be](https://github.com/DroidWorksStudio/mLauncher/commit/bc122be9812b2dc6a2a60b102990ba04ea0afb55))
 
