@@ -9,7 +9,7 @@
 hacer clic).
 - Gestos avanzados: una amplia gama de gestos, incluidos toques y deslizamientos, para activar diferentes acciones.
 - Personalización del reloj: coloca el reloj independientemente de las aplicaciones de inicio, lo que te brinda más control sobre tu pantalla de inicio.
-disposición.
+layout.
 - Diseño del cajón de aplicaciones: cambia la alineación de las aplicaciones en el cajón de aplicaciones independientemente de la pantalla de inicio.
 - Personalización del tamaño de fuente: ajuste el tamaño de fuente de las secciones de la pantalla de inicio por separado.
 - Centrado en la privacidad: se eliminó el permiso de Internet, lo que garantiza que sus datos permanezcan privados.
