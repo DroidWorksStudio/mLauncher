@@ -9,7 +9,7 @@
 clique).
 - Gestos avançados: uma ampla variedade de gestos, incluindo toques e deslizamentos, para acionar diferentes ações.
 - Personalização do relógio: posicione o relógio independentemente dos aplicativos domésticos, dando mais controle sobre sua tela inicial
-disposição.
+layout.
 - Layout da gaveta de aplicativos: altere o alinhamento dos aplicativos na gaveta de aplicativos independentemente da tela inicial.
 - Personalização do tamanho da fonte: ajuste o tamanho da fonte das seções da tela inicial separadamente.
 - Foco na privacidade: permissão de internet removida, garantindo que seus dados permaneçam privados.
