@@ -1,1 +1,1 @@
-Форк от mlauncher, +минимизация, +настраиваемость
+Multi Launcher ‧ Home Screen, Weather & Minimal UI Launcher
