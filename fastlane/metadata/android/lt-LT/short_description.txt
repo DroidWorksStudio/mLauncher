@@ -1,1 +1,1 @@
-Šakė iš mLauncher, +minimalizavimas, +pritaikymas
+Forked from mLauncher, +minimalization, +customizability
