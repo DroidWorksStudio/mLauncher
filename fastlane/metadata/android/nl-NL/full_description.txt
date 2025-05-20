@@ -1,60 +1,35 @@
-<p>Gevorkt van <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>: Een minimale en schone launcher met
-    verbeterde functies.</p>
+<h1>Multi Launcher: A Clean, Simple Android Launcher Built for Readability and Control</h1>
 
-<h2>Gevorkt met extra functies</h2>
+<p>Looking for a launcher that ditches the clutter and keeps things easy? <strong>Multi Launcher</strong> is a powerful yet minimalist Android launcher that replaces tiny icons with clear, readable text buttons, making your phone easier to navigate.</p>
 
-<b>Kenmerken:</b>
+<p>Whether you want a simple home screen, need large text for visibility, or prefer quick gesture-based actions, Multi Launcher gives you full control without overwhelming you with options.</p>
 
-- Aanpassing van de app-lade: hernoem apps in de app-lade (het hernoemen van apps op het startscherm wordt al ondersteund met een lange
-(klikken).
-- Geavanceerde gebaren: een breed scala aan gebaren, waaronder tikken en vegen, om verschillende acties te activeren.
-- Klok aanpassen: plaats de klok onafhankelijk van de home-apps, zodat u meer controle hebt over uw startscherm
-indeling.
-- Lay-out van de app-lade: wijzig de uitlijning van apps in de app-lade, onafhankelijk van het startscherm.
-- Aanpassing van de lettergrootte: pas de lettergrootte van delen van het startscherm afzonderlijk aan.
-- Gericht op privacy: internetmachtigingen zijn verwijderd, zodat uw gegevens privé blijven.
-- Biometrische beveiliging: vergrendel instellingen achter biometrische authenticatie (schakeloptie).
-- Crashrapporten: u kunt crashes via e-mail melden voor betere probleemoplossing.
-- App-gebruik bijhouden: Bekijk de gebruikstijd van de app rechtstreeks vanaf het startscherm.
+<h2>Why Choose Multi Launcher?</h2>
+<ul>
+    <li><strong>Text-Based Launcher:</strong> No confusing icons — just labeled text buttons for your apps.</li>
+    <li><strong>Highly Customizable:</strong> Adjust layout, font sizes, clock position, and more.</li>
+    <li><strong>Quick Gestures:</strong> Use taps, swipes, and long swipes to open apps, lock the screen, and access notifications.</li>
+    <li><strong>Secure:</strong> Biometric lock for settings and privacy.</li>
+    <li><strong>Great for Seniors or Simplicity-Lovers:</strong> Easy to read, use, and customize.</li>
+</ul>
 
-<b>Gebaren omvatten:</b>
+<h2>Key Features:</h2>
+<ul>
+    <li>Custom App Names: Rename apps to match how you think of them.</li>
+    <li>Flexible Layouts: Organize apps in the way that makes sense for you.</li>
+    <li>Clock & Date Customization: Place widgets wherever you want.</li>
+    <li>App Usage Insights: See how much time you spend in each app.</li>
+    <li>Gesture Shortcuts: Set custom actions for double taps, swipes, and more.</li>
+</ul>
 
-- Dubbeltikken: Tik snel twee keer om een vooraf gedefinieerde actie te activeren.
-- Tik op de klok: Tik op de klok om toegang te krijgen tot extra functies of instellingen.
-- Datum tikken: Tik op de datum voor eenvoudige toegang tot de kalender.
-- Gebruikstip: Tik op het totale gebruik om gegevens over het systeem- of app-gebruik te bekijken.
-- Korte veegbewegingen: veeg omhoog, omlaag, naar links of naar rechts om te navigeren of verschillende acties te activeren.
-- Lange veegbewegingen: veeg omhoog, omlaag, naar links of naar rechts voor extra gebaaracties.
+<h2>Accessibility Features:</h2>
+<p>This app uses the <strong>AccessibilityService API</strong> to:</p>
+<ul>
+    <li>Lock the screen with a gesture</li>
+    <li>Open the power menu</li>
+    <li>Pull down the notification drawer</li>
+</ul>
 
-<b>Mogelijke acties zijn onder meer:</b>
+<p><em>Multi Launcher respects your privacy. These features do not collect or share personal data.</em></p>
 
-- Gespecificeerde app openen: open direct een app naar keuze met een gebaar.
-- App-lijst weergeven: Toon de volledige lijst met apps die op het apparaat zijn geïnstalleerd.
-- Vergrendelscherm: vergrendel uw apparaat voor de veiligheid.
-- Toon recent geopende apps: Krijg toegang tot recent gebruikte apps voor snelle multitasking.
-- Meldingenlade openen: Activeer de meldingenlade door te vegen of tikken.
-- Snelle instellingen openen: krijg rechtstreeks vanaf het startscherm toegang tot snelle instellingen.
-- Energiedialoog: open energieopties zoals afsluiten, opnieuw opstarten en meer.
-- Maak een schermafbeelding: leg het scherm vast om uw inhoud op te slaan of te delen.
-- Pagina wisselen: snel schakelen tussen startschermpagina's.
-- Gebaren uitschakelen: Schakel specifieke gebaren uit indien nodig.
-
-<b>Vertalingen:</b>
-
-- Arabisch
-- Nederlands
-- Engels
-- Frans
-- Duits
-- Hebreeuws
-- Italiaans
-- Japans
-- Koreaans
-- Litouws
-- Pools
-- Portugees
-- Russisch
-- Slowaaks
-- Spaans
-- Thai
-- Turks
+<p>If you’re tired of flashy, cluttered launchers and want something straightforward, stylish, and empowering, <strong>Multi Launcher</strong> is your perfect home screen solution.</p>
