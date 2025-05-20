@@ -1,35 +1,35 @@
-<h1>Multi Launcher: A Clean, Simple Android Launcher Built for Readability and Control</h1>
+<h1>Multi Launcher: Čistý a jednoduchý spúšťač pre Android vytvorený pre čitateľnosť a ovládanie</h1>
 
-<p>Looking for a launcher that ditches the clutter and keeps things easy? <strong>Multi Launcher</strong> is a powerful yet minimalist Android launcher that replaces tiny icons with clear, readable text buttons, making your phone easier to navigate.</p>
+<p>Hľadáte launcher, ktorý sa zbaví neporiadku a zjednoduší prácu? <strong>Multi Launcher</strong> je výkonný, no minimalistický spúšťač pre Android, ktorý nahrádza drobné ikony jasnými a čitateľnými textovými tlačidlami, vďaka čomu sa v telefóne ľahšie orientuje.</p>
 
-<p>Whether you want a simple home screen, need large text for visibility, or prefer quick gesture-based actions, Multi Launcher gives you full control without overwhelming you with options.</p>
+<p>Či už chcete jednoduchú domovskú obrazovku, potrebujete veľký text pre lepšiu viditeľnosť alebo uprednostňujete rýchle akcie založené na gestách, Multi Launcher vám poskytuje plnú kontrolu bez toho, aby vás zahltil možnosťami.</p>
 
-<h2>Why Choose Multi Launcher?</h2>
+<h2>Prečo si vybrať Multi Launcher?</h2>
 <ul>
-    <li><strong>Text-Based Launcher:</strong> No confusing icons — just labeled text buttons for your apps.</li>
-    <li><strong>Highly Customizable:</strong> Adjust layout, font sizes, clock position, and more.</li>
-    <li><strong>Quick Gestures:</strong> Use taps, swipes, and long swipes to open apps, lock the screen, and access notifications.</li>
-    <li><strong>Secure:</strong> Biometric lock for settings and privacy.</li>
-    <li><strong>Great for Seniors or Simplicity-Lovers:</strong> Easy to read, use, and customize.</li>
+    <li><strong>Textový spúšťač:</strong> Žiadne mätúce ikony – len označené textové tlačidlá pre vaše aplikácie.</li>
+    <li><strong>Vysoko prispôsobiteľné:</strong> Upravte rozloženie, veľkosť písma, polohu hodín a ďalšie.</li>
+    <li><strong>Rýchle gestá:</strong> Na otváranie aplikácií, uzamknutie obrazovky a prístup k upozorneniam použite klepnutia, potiahnutia a dlhé potiahnutia.</li>
+    <li><strong>Bezpečné:</strong> Biometrický zámok pre nastavenia a súkromie.</li>
+    <li><strong>Skvelé pre seniorov alebo milovníkov jednoduchosti:</strong> Ľahko sa číta, používa a prispôsobuje.</li>
 </ul>
 
-<h2>Key Features:</h2>
+<h2>Kľúčové vlastnosti:</h2>
 <ul>
-    <li>Custom App Names: Rename apps to match how you think of them.</li>
-    <li>Flexible Layouts: Organize apps in the way that makes sense for you.</li>
-    <li>Clock & Date Customization: Place widgets wherever you want.</li>
-    <li>App Usage Insights: See how much time you spend in each app.</li>
-    <li>Gesture Shortcuts: Set custom actions for double taps, swipes, and more.</li>
+    <li>Vlastné názvy aplikácií: Premenujte aplikácie tak, aby zodpovedali vašej predstave.</li>
+    <li>Flexibilné rozloženia: Usporiadajte si aplikácie tak, ako vám to vyhovuje.</li>
+    <li>Prispôsobenie hodín a dátumu: Umiestnite widgety kamkoľvek chcete.</li>
+    <li>Štatistiky používania aplikácií: Pozrite sa, koľko času trávite v každej aplikácii.</li>
+    <li>Skratky gest: Nastavte si vlastné akcie pre dvojité ťuknutia, potiahnutia prstom a ďalšie.</li>
 </ul>
 
-<h2>Accessibility Features:</h2>
-<p>This app uses the <strong>AccessibilityService API</strong> to:</p>
+<h2>Funkcie prístupnosti:</h2>
+<p>Táto aplikácia používa rozhranie <strong>AccessibilityService API</strong> na:</p>
 <ul>
-    <li>Lock the screen with a gesture</li>
-    <li>Open the power menu</li>
-    <li>Pull down the notification drawer</li>
+    <li>Uzamknutie obrazovky gestom</li>
+    <li>Otvorte ponuku napájania</li>
+    <li>Potiahnite nadol panel s upozorneniami</li>
 </ul>
 
-<p><em>Multi Launcher respects your privacy. These features do not collect or share personal data.</em></p>
+<p><em>Multi Launcher rešpektuje vaše súkromie. Tieto funkcie nezhromažďujú ani nezdieľajú osobné údaje.</em></p>
 
-<p>If you’re tired of flashy, cluttered launchers and want something straightforward, stylish, and empowering, <strong>Multi Launcher</strong> is your perfect home screen solution.</p>
+<p>Ak vás už nebavia okázalé a preplnené launchery a chcete niečo priamočiare, štýlové a výkonné, <strong>Multi Launcher</strong> je pre vás perfektným riešením pre domovskú obrazovku.</p>
