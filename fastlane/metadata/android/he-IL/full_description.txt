@@ -1,35 +1,35 @@
-<h1>Multi Launcher: A Clean, Simple Android Launcher Built for Readability and Control</h1>
+<h1>משגר מרובה: משגר אנדרואיד נקי ופשוט שנבנה לקריאה ובקרה</h1>
 
-<p>Looking for a launcher that ditches the clutter and keeps things easy? <strong>Multi Launcher</strong> is a powerful yet minimalist Android launcher that replaces tiny icons with clear, readable text buttons, making your phone easier to navigate.</p>
+<p>Looking for a launcher that ditches the clutter and keeps things easy? <strong>משגר מרובה</strong> הוא משגר אנדרואיד עוצמתי אך מינימליסטי המחליף סמלים זעירים בכפתורי טקסט ברורים וקריא, מה שהופך את הניווט בטלפון לקל יותר.</p>
 
-<p>Whether you want a simple home screen, need large text for visibility, or prefer quick gesture-based actions, Multi Launcher gives you full control without overwhelming you with options.</p>
+<p>בין אם אתם רוצים מסך בית פשוט, זקוקים לטקסט גדול לצורך נראות, או מעדיפים פעולות מהירות מבוססות מחוות, Multi Launcher מעניק לכם שליטה מלאה מבלי להעמיס עליכם אפשרויות.</p>
 
-<h2>Why Choose Multi Launcher?</h2>
+<h2>למה לבחור משגר מרובה?</h2>
 <ul>
-    <li><strong>Text-Based Launcher:</strong> No confusing icons — just labeled text buttons for your apps.</li>
-    <li><strong>Highly Customizable:</strong> Adjust layout, font sizes, clock position, and more.</li>
-    <li><strong>Quick Gestures:</strong> Use taps, swipes, and long swipes to open apps, lock the screen, and access notifications.</li>
-    <li><strong>Secure:</strong> Biometric lock for settings and privacy.</li>
-    <li><strong>Great for Seniors or Simplicity-Lovers:</strong> Easy to read, use, and customize.</li>
+    <li><strong>משגר מבוסס טקסט:</strong> ללא סמלים מבלבלים - רק כפתורי טקסט עם תווית עבור האפליקציות שלך.</li>
+    <li><strong>ניתן להתאמה אישית רבה:</strong> התאמת פריסה, גדלי גופנים, מיקום שעון ועוד.</li>
+    <li><strong>מחוות מהירות:</strong> השתמשו בהקשה, החלקה והחלקה ארוכה כדי לפתוח אפליקציות, לנעול את המסך ולגשת להתראות.</li>
+    <li><strong>אבטחה:</strong> נעילה ביומטרית להגדרות ופרטיות.</li>
+    <li><strong>מעולה לקשישים או לאוהבי פשטות:</strong> קל לקריאה, שימוש והתאמה אישית.</li>
 </ul>
 
-<h2>Key Features:</h2>
+<h2>תכונות עיקריות:</h2>
 <ul>
-    <li>Custom App Names: Rename apps to match how you think of them.</li>
-    <li>Flexible Layouts: Organize apps in the way that makes sense for you.</li>
-    <li>Clock & Date Customization: Place widgets wherever you want.</li>
-    <li>App Usage Insights: See how much time you spend in each app.</li>
-    <li>Gesture Shortcuts: Set custom actions for double taps, swipes, and more.</li>
+    <li>שמות אפליקציות מותאמים אישית: שנה שמות של אפליקציות בהתאם למה שאתה חושב עליהן.</li>
+    <li>פריסות גמישות: ארגנו אפליקציות בצורה שנראית לכם הגיונית.</li>
+    <li>התאמה אישית של שעון ותאריך: מקמו ווידג'טים בכל מקום שתרצו.</li>
+    <li>תובנות שימוש באפליקציות: ראה כמה זמן אתה מבלה בכל אפליקציה.</li>
+    <li>קיצורי דרך לתנועות: הגדר פעולות מותאמות אישית עבור לחיצות כפולות, החלקות ועוד.</li>
 </ul>
 
-<h2>Accessibility Features:</h2>
-<p>This app uses the <strong>AccessibilityService API</strong> to:</p>
+<h2>תכונות נגישות:</h2>
+<p>אפליקציה זו משתמשת ב-API של <strong>AccessibilityService</strong> כדי:</p>
 <ul>
-    <li>Lock the screen with a gesture</li>
-    <li>Open the power menu</li>
-    <li>Pull down the notification drawer</li>
+    <li>נעל את המסך באמצעות תנועה</li>
+    <li>פתח את תפריט ההפעלה</li>
+    <li>משוך את מגירת ההתראות למטה</li>
 </ul>
 
-<p><em>Multi Launcher respects your privacy. These features do not collect or share personal data.</em></p>
+<p><em>משגר מרובה מכבד את פרטיותך. תכונות אלה אינן אוספות או משתפות נתונים אישיים.</em></p>
 
-<p>If you’re tired of flashy, cluttered launchers and want something straightforward, stylish, and empowering, <strong>Multi Launcher</strong> is your perfect home screen solution.</p>
+<p>אם נמאס לכם ממשגרים נוצצים ועמוסים ורוצים משהו פשוט, מסוגנן ומעצים, <strong>משגר מרובה</strong> הוא פתרון מסך הבית המושלם שלכם.</p>
