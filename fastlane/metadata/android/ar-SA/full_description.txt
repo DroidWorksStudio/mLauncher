@@ -1,35 +1,35 @@
-<h1>Multi Launcher: A Clean, Simple Android Launcher Built for Readability and Control</h1>
+<h1>مشغل متعدد: مشغل أندرويد بسيط ونظيف مصمم لسهولة القراءة والتحكم</h1>
 
-<p>Looking for a launcher that ditches the clutter and keeps things easy? <strong>Multi Launcher</strong> is a powerful yet minimalist Android launcher that replaces tiny icons with clear, readable text buttons, making your phone easier to navigate.</p>
+<p>هل تبحث عن مشغل يتخلص من الفوضى ويجعل الأمور سهلة؟ <strong>Multi Launcher</strong> هو مشغل Android قوي وبسيط يستبدل الأيقونات الصغيرة بأزرار نصية واضحة وقابلة للقراءة، مما يجعل التنقل في هاتفك أسهل.</p>
 
-<p>Whether you want a simple home screen, need large text for visibility, or prefer quick gesture-based actions, Multi Launcher gives you full control without overwhelming you with options.</p>
+<p>سواء كنت تريد شاشة رئيسية بسيطة، أو تحتاج إلى نص كبير للرؤية، أو تفضل الإجراءات السريعة القائمة على الإيماءات، فإن Multi Launcher يمنحك التحكم الكامل دون أن يغمرك بالخيارات.</p>
 
-<h2>Why Choose Multi Launcher?</h2>
+<h2>لماذا تختار مُشغّل متعدد؟</h2>
 <ul>
-    <li><strong>Text-Based Launcher:</strong> No confusing icons — just labeled text buttons for your apps.</li>
-    <li><strong>Highly Customizable:</strong> Adjust layout, font sizes, clock position, and more.</li>
-    <li><strong>Quick Gestures:</strong> Use taps, swipes, and long swipes to open apps, lock the screen, and access notifications.</li>
-    <li><strong>Secure:</strong> Biometric lock for settings and privacy.</li>
-    <li><strong>Great for Seniors or Simplicity-Lovers:</strong> Easy to read, use, and customize.</li>
+    <li><strong>مشغل نصي:</strong> لا توجد أيقونات مربكة — فقط أزرار نصية مُسمّاة لتطبيقاتك.</li>
+    <li><strong>قابلة للتخصيص بدرجة عالية:</strong> اضبط التخطيط، وأحجام الخطوط، وموضع الساعة، والمزيد.</li>
+    <li><strong>الإيماءات السريعة:</strong> استخدم النقرات والتمريرات السريعة والتمريرات الطويلة لفتح التطبيقات وقفل الشاشة والوصول إلى الإشعارات.</li>
+    <li><strong>آمن:</strong> قفل بيومتري للإعدادات والخصوصية.</li>
+    <li><strong>رائع لكبار السن أو محبي البساطة:</strong> سهل القراءة والاستخدام والتخصيص.</li>
 </ul>
 
-<h2>Key Features:</h2>
+<h2>الميزات الرئيسية:</h2>
 <ul>
-    <li>Custom App Names: Rename apps to match how you think of them.</li>
-    <li>Flexible Layouts: Organize apps in the way that makes sense for you.</li>
-    <li>Clock & Date Customization: Place widgets wherever you want.</li>
-    <li>App Usage Insights: See how much time you spend in each app.</li>
-    <li>Gesture Shortcuts: Set custom actions for double taps, swipes, and more.</li>
+    <li>أسماء التطبيقات المخصصة: قم بإعادة تسمية التطبيقات لتتناسب مع رأيك فيها.</li>
+    <li>تخطيطات مرنة: قم بتنظيم التطبيقات بالطريقة التي تناسبك.</li>
+    <li>تخصيص الساعة والتاريخ: ضع الأدوات في أي مكان تريده.</li>
+    <li>رؤى استخدام التطبيق: تعرف على مقدار الوقت الذي تقضيه في كل تطبيق.</li>
+    <li>اختصارات الإيماءات: تعيين إجراءات مخصصة للنقر المزدوج والتمرير السريع والمزيد.</li>
 </ul>
 
-<h2>Accessibility Features:</h2>
-<p>This app uses the <strong>AccessibilityService API</strong> to:</p>
+<h2>ميزات إمكانية الوصول:</h2>
+<p>يستخدم هذا التطبيق واجهة برمجة تطبيقات AccessibilityService <strong></strong> لـ:</p>
 <ul>
-    <li>Lock the screen with a gesture</li>
-    <li>Open the power menu</li>
-    <li>Pull down the notification drawer</li>
+    <li>قفل الشاشة بإيماءة</li>
+    <li>افتح قائمة الطاقة</li>
+    <li>اسحب درج الإشعارات لأسفل</li>
 </ul>
 
-<p><em>Multi Launcher respects your privacy. These features do not collect or share personal data.</em></p>
+<p><em>يحترم Multi Launcher خصوصيتك. لا تقوم هذه الميزات بجمع أو مشاركة البيانات الشخصية.</em></p>
 
-<p>If you’re tired of flashy, cluttered launchers and want something straightforward, stylish, and empowering, <strong>Multi Launcher</strong> is your perfect home screen solution.</p>
+<p>إذا كنت قد سئمت من برامج التشغيل المبهرجة والمزدحمة وتريد شيئًا بسيطًا وأنيقًا ومُمكّنًا، فإن <strong>Multi Launcher</strong> هو الحل الأمثل لشاشتك الرئيسية.</p>
