@@ -1,60 +1,35 @@
-<p>Forked from <a href="https://github.com/tanujnotes/Olauncher">Olauncher</a>: ตัวเรียกใช้งานที่เรียบง่ายและสะอาดพร้อมด้วย
-    คุณสมบัติขั้นสูง</p>
+<h1>Multi Launcher: A Clean, Simple Android Launcher Built for Readability and Control</h1>
 
-<h2>แยกสาขาด้วยคุณสมบัติพิเศษ</h2>
+<p>Looking for a launcher that ditches the clutter and keeps things easy? <strong>Multi Launcher</strong> is a powerful yet minimalist Android launcher that replaces tiny icons with clear, readable text buttons, making your phone easier to navigate.</p>
 
-<b>คุณสมบัติ:</b>
+<p>Whether you want a simple home screen, need large text for visibility, or prefer quick gesture-based actions, Multi Launcher gives you full control without overwhelming you with options.</p>
 
-- การปรับแต่งลิ้นชักแอป: เปลี่ยนชื่อแอปในลิ้นชักแอป (การเปลี่ยนชื่อแอปบนหน้าจอหลักได้รับการสนับสนุนแล้วด้วยระยะเวลาอันยาวนาน
-คลิก).
-- ท่าทางขั้นสูง: ท่าทางต่างๆ มากมาย รวมถึงการแตะและปัด เพื่อเรียกใช้การดำเนินการที่แตกต่างกัน
-- การปรับแต่งนาฬิกา: วางนาฬิกาแยกจากแอพหลัก ทำให้ควบคุมหน้าจอหลักได้มากขึ้น
-เค้าโครง
-- เค้าโครงลิ้นชักแอพ: เปลี่ยนการจัดตำแหน่งของแอพในลิ้นชักแอพแยกจากหน้าจอหลัก
-- การปรับแต่งขนาดตัวอักษร: ปรับขนาดตัวอักษรของส่วนต่างๆ ของหน้าจอหลักแยกกัน
-- เน้นความเป็นส่วนตัว: ยกเลิกการอนุญาตการเข้าถึงอินเทอร์เน็ต ทำให้แน่ใจว่าข้อมูลของคุณยังคงเป็นส่วนตัว
-- ความปลอดภัยทางชีวมาตร: ล็อคการตั้งค่าเบื้องหลังการตรวจสอบชีวมาตร (ตัวเลือกสลับ)
-- รายงานความผิดพลาด: ความสามารถในการรายงานความผิดพลาดผ่านทางอีเมลเพื่อการแก้ไขปัญหาที่ดีขึ้น
-- การติดตามการใช้แอป: ดูเวลาการใช้แอปโดยตรงจากหน้าจอหลัก
+<h2>Why Choose Multi Launcher?</h2>
+<ul>
+    <li><strong>Text-Based Launcher:</strong> No confusing icons — just labeled text buttons for your apps.</li>
+    <li><strong>Highly Customizable:</strong> Adjust layout, font sizes, clock position, and more.</li>
+    <li><strong>Quick Gestures:</strong> Use taps, swipes, and long swipes to open apps, lock the screen, and access notifications.</li>
+    <li><strong>Secure:</strong> Biometric lock for settings and privacy.</li>
+    <li><strong>Great for Seniors or Simplicity-Lovers:</strong> Easy to read, use, and customize.</li>
+</ul>
 
-<b>ท่าทางประกอบด้วย:</b>
+<h2>Key Features:</h2>
+<ul>
+    <li>Custom App Names: Rename apps to match how you think of them.</li>
+    <li>Flexible Layouts: Organize apps in the way that makes sense for you.</li>
+    <li>Clock & Date Customization: Place widgets wherever you want.</li>
+    <li>App Usage Insights: See how much time you spend in each app.</li>
+    <li>Gesture Shortcuts: Set custom actions for double taps, swipes, and more.</li>
+</ul>
 
-- แตะสองครั้ง: แตะสองครั้งอย่างรวดเร็วเพื่อกระตุ้นการดำเนินการที่กำหนดไว้ล่วงหน้า
-- แตะนาฬิกา: แตะนาฬิกาเพื่อเข้าถึงคุณลักษณะหรือการตั้งค่าเพิ่มเติม
-- แตะวันที่: แตะวันที่เพื่อเข้าถึงปฏิทินได้อย่างง่ายดาย
-- แตะการใช้งาน: แตะที่การใช้งานทั้งหมดเพื่อดูข้อมูลการใช้งานระบบหรือแอป
-- การปัดสั้น: ปัดขึ้น ลง ซ้าย หรือขวา เพื่อนำทางหรือเรียกใช้การดำเนินการที่แตกต่างกัน
-- การปัดยาว: ปัดขึ้น ลง ซ้าย หรือขวา สำหรับการดำเนินการท่าทางเพิ่มเติม
+<h2>Accessibility Features:</h2>
+<p>This app uses the <strong>AccessibilityService API</strong> to:</p>
+<ul>
+    <li>Lock the screen with a gesture</li>
+    <li>Open the power menu</li>
+    <li>Pull down the notification drawer</li>
+</ul>
 
-<b>การดำเนินการที่เป็นไปได้ ได้แก่:</b>
+<p><em>Multi Launcher respects your privacy. These features do not collect or share personal data.</em></p>
 
-- เปิดแอปที่ระบุ: เปิดแอปใด ๆ ที่คุณเลือกทันทีด้วยท่าทาง
-- แสดงรายการแอป: แสดงรายการแอปทั้งหมดที่ติดตั้งบนอุปกรณ์
-- ล็อคหน้าจอ: ล็อคอุปกรณ์ของคุณเพื่อความปลอดภัย
-- แสดงแอพที่เปิดล่าสุด: เข้าถึงแอพที่ใช้ล่าสุดเพื่อการทำงานมัลติทาสก์อย่างรวดเร็ว
-- เปิดลิ้นชักการแจ้งเตือน: เปิดลิ้นชักการแจ้งเตือนด้วยการปัดหรือแตะ
-- เปิดการตั้งค่าด่วน: เข้าถึงการตั้งค่าด่วนโดยตรงจากหน้าจอหลัก
-- กล่องโต้ตอบพลังงาน: เปิดตัวเลือกพลังงาน เช่น ปิดเครื่อง รีสตาร์ท และอื่นๆ
-- ถ่ายภาพหน้าจอ: จับภาพหน้าจอเพื่อบันทึกหรือแชร์เนื้อหาของคุณ
-- สลับหน้า: สลับระหว่างหน้าจอหลักได้อย่างรวดเร็ว
-- ปิดใช้งานท่าทาง: ปิดใช้งานท่าทางเฉพาะตามต้องการ
-
-<b>คำแปล:</b>
-
-- อาหรับ
-- ดัตช์
-- ภาษาอังกฤษ
-- ภาษาฝรั่งเศส
-- เยอรมัน
-- ภาษาฮีบรู
-- อิตาลี
-- ภาษาญี่ปุ่น
-- ภาษาเกาหลี
-- ลิทัวเนีย
-- โปแลนด์
-- โปรตุเกส
-- รัสเซีย
-- สโลวัก
-- สเปน
-- แบบไทย
-- ตุรกี
+<p>If you’re tired of flashy, cluttered launchers and want something straightforward, stylish, and empowering, <strong>Multi Launcher</strong> is your perfect home screen solution.</p>
