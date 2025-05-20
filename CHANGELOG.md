@@ -7,6 +7,16 @@ All notable changes to this project will be documented in this file. See [conven
 ### Implemented Enhancements:
 
 - *(settings)* Add 'Exit mLauncher' option to switch to default launcher temporarily ([#719](https://github.com/DroidWorksStudio/mLauncher/issues/719)) - ([794348a](https://github.com/DroidWorksStudio/mLauncher/commit/794348a514b845967079ebdfbb0a3e6444e0cff0))
+- *(ui)* Enhance home screen with quick access bar, notes, and weather - ([6310e0f](https://github.com/DroidWorksStudio/mLauncher/commit/6310e0f7e56dee54621c47d3170dd3db077a8866))
+- Add default_bottom_spacer dimension - ([76f7860](https://github.com/DroidWorksStudio/mLauncher/commit/76f786010beb18e0bef7d7352abf3e74999de228))
+
+### Chore:
+
+- Update project name from mLauncher to MultiLauncher - ([3a309a7](https://github.com/DroidWorksStudio/mLauncher/commit/3a309a717637acb42cc96850d3e44004cf3431e6))
+
+### Refactoring:
+
+- Remove unused files and resources - ([930bac0](https://github.com/DroidWorksStudio/mLauncher/commit/930bac00c43ad076b00d9ffd592667d912303739))
 
 ## [1.8.9](https://github.com/DroidWorksStudio/mLauncher/tree/1.8.9) - (11, March 2025)
 
