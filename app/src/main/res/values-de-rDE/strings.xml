@@ -33,6 +33,9 @@
     <string name="settings_exit_mlauncher_title">MultiLauncher beenden</string>
     <string name="settings_exit_mlauncher_description">Wechseln Sie vorübergehend zu Ihrem Standard-Launcher.</string>
     <string name="settings_exit_mlauncher_dialog">Wählen Sie einen Launcher</string>
+    <string name="settings_donation_title">Donations</string>
+    <string name="settings_donation_description">Support our work by making a donation.</string>
+    <string name="settings_donation_dialog">Support Us</string>
     <!-- Strings used for features settings -->
     <string name="features_settings_title">Merkmale</string>
     <string name="user_preferences">Benutzereinstellungen</string>
