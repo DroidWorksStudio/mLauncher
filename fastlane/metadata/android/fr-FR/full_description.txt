@@ -9,7 +9,7 @@
 cliquez).
 - Gestes avancés : une large gamme de gestes, notamment des appuis et des balayages, pour déclencher différentes actions.
 - Personnalisation de l'horloge : positionnez l'horloge indépendamment des applications d'accueil, ce qui vous donne plus de contrôle sur votre écran d'accueil
-mise en page.
+layout.
 - Disposition du tiroir d'applications : modifiez l'alignement des applications dans le tiroir d'applications indépendamment de l'écran d'accueil.
 - Personnalisation de la taille de la police : ajustez la taille de la police des sections de l'écran d'accueil séparément.
 - Axé sur la confidentialité : suppression de l'autorisation Internet, garantissant que vos données restent privées.
