@@ -10,6 +10,7 @@ import android.util.Log
 import com.github.droidworksstudio.common.CrashHandler
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Prefs
+import com.github.droidworksstudio.mlauncher.helper.IconCacheTarget
 import com.github.droidworksstudio.mlauncher.helper.IconPackHelper
 import java.io.File
 
@@ -35,8 +36,12 @@ class Mlauncher : Application() {
         // Initialize prefs here
         prefs = Prefs(applicationContext)
 
-        if (prefs.iconPack == Constants.IconPacks.Custom) {
-            IconPackHelper.preloadIcons(this, prefs.customIconPack)
+        if (prefs.iconPackHome == Constants.IconPacks.Custom) {
+            IconPackHelper.preloadIcons(this, prefs.customIconPackHome, IconCacheTarget.HOME)
+        }
+
+        if (prefs.iconPackAppList == Constants.IconPacks.Custom) {
+            IconPackHelper.preloadIcons(this, prefs.customIconPackAppList, IconCacheTarget.APP_LIST)
         }
 
         // Initialize com.github.droidworksstudio.common.CrashHandler to catch uncaught exceptions

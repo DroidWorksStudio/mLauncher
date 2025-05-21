@@ -59,8 +59,10 @@ private const val SHOW_CLOCK_FORMAT = "SHOW_CLOCK_FORMAT"
 private const val SHOW_ALARM = "SHOW_ALARM"
 private const val SHOW_DAILY_WORD = "SHOW_DAILY_WORD"
 private const val SHOW_FLOATING = "SHOW_FLOATING"
-private const val ICON_PACK = "ICON_PACK"
-private const val CUSTOM_ICON_PACK = "CUSTOM_ICON_PACK"
+private const val ICON_PACK_HOME = "ICON_PACK_HOME"
+private const val CUSTOM_ICON_PACK_HOME = "CUSTOM_ICON_PACK_HOME"
+private const val ICON_PACK_APP_LIST = "ICON_PACK_APP_LIST"
+private const val CUSTOM_ICON_PACK_APP_LIST = "CUSTOM_ICON_PACK_APP_LIST"
 private const val WORD_LIST = "WORD_LIST"
 private const val SEARCH_START = "SEARCH_START"
 private const val SWIPE_UP_ACTION = "SWIPE_UP_ACTION"
@@ -138,7 +140,8 @@ private const val ONBOARDING_COMPLETED = "ONBOARDING_COMPLETED"
 class Prefs(val context: Context) {
 
     private val prefsNormal: SharedPreferences = context.getSharedPreferences(PREFS_FILENAME, 0)
-    private val prefsOnboarding: SharedPreferences = context.getSharedPreferences(PREFS_ONBOARDING_FILENAME, 0)
+    private val prefsOnboarding: SharedPreferences =
+        context.getSharedPreferences(PREFS_ONBOARDING_FILENAME, 0)
 
     fun saveToString(): String {
         val allPreferences = HashMap<String, Any?>(prefsNormal.all)
@@ -182,7 +185,8 @@ class Prefs(val context: Context) {
             if (allPrefs.containsKey(colorName)) {
                 val colorInt = allPrefs[colorName] as? Int
                 if (colorInt != null) {
-                    val hexColor = String.format("#%08X", colorInt) // Converts ARGB int to #AARRGGBB
+                    val hexColor =
+                        String.format("#%08X", colorInt) // Converts ARGB int to #AARRGGBB
                     filteredPrefs[colorName] = hexColor
                 }
             }
@@ -207,7 +211,11 @@ class Prefs(val context: Context) {
                                     putInt(key, value.toColorInt())
                                 } catch (e: IllegalArgumentException) {
                                     context.showLongToast("Invalid color format for key: $key, value: $value")
-                                    Log.e("Theme Import", "Invalid color format for key: $key, value: $value", e)
+                                    Log.e(
+                                        "Theme Import",
+                                        "Invalid color format for key: $key, value: $value",
+                                        e
+                                    )
                                     continue
                                 }
                             } else {
@@ -224,7 +232,10 @@ class Prefs(val context: Context) {
 
                         else -> {
                             context.showLongToast("Unsupported value type for key: $key, value: $value")
-                            Log.e("Theme Import", "Unsupported value type for key: $key, value: $value")
+                            Log.e(
+                                "Theme Import",
+                                "Unsupported value type for key: $key, value: $value"
+                            )
                             continue
                         }
                     }
@@ -334,15 +345,24 @@ class Prefs(val context: Context) {
         set(value) = prefsNormal.edit { putInt(BUBBLE_BACKGROUND_COLOR, value) }
 
     var bubbleMessageTextColor: Int
-        get() = getSetting(BUBBLE_MESSAGE_COLOR, getColor(context, getColorInt("bg_bubble_message")))
+        get() = getSetting(
+            BUBBLE_MESSAGE_COLOR,
+            getColor(context, getColorInt("bg_bubble_message"))
+        )
         set(value) = prefsNormal.edit { putInt(BUBBLE_MESSAGE_COLOR, value) }
 
     var bubbleTimeDateColor: Int
-        get() = getSetting(BUBBLE_TIMEDATE_COLOR, getColor(context, getColorInt("bg_bubble_time_date")))
+        get() = getSetting(
+            BUBBLE_TIMEDATE_COLOR,
+            getColor(context, getColorInt("bg_bubble_time_date"))
+        )
         set(value) = prefsNormal.edit { putInt(BUBBLE_TIMEDATE_COLOR, value) }
 
     var bubbleCategoryColor: Int
-        get() = getSetting(BUBBLE_CATEGORY_COLOR, getColor(context, getColorInt("bg_bubble_category")))
+        get() = getSetting(
+            BUBBLE_CATEGORY_COLOR,
+            getColor(context, getColorInt("bg_bubble_category"))
+        )
         set(value) = prefsNormal.edit { putInt(BUBBLE_CATEGORY_COLOR, value) }
 
     var inputMessageColor: Int
@@ -350,7 +370,10 @@ class Prefs(val context: Context) {
         set(value) = prefsNormal.edit { putInt(INPUT_MESSAGE_COLOR, value) }
 
     var inputMessageHintColor: Int
-        get() = getSetting(INPUT_MESSAGEHINT_COLOR, getColor(context, getColorInt("input_text_hint")))
+        get() = getSetting(
+            INPUT_MESSAGEHINT_COLOR,
+            getColor(context, getColorInt("input_text_hint"))
+        )
         set(value) = prefsNormal.edit { putInt(INPUT_MESSAGEHINT_COLOR, value) }
 
     var opacityNum: Int
@@ -457,15 +480,25 @@ class Prefs(val context: Context) {
         get() = getSetting(LOCK_ORIENTATION, true)
         set(value) = prefsNormal.edit { putBoolean(LOCK_ORIENTATION, value) }
 
-    var iconPack: Constants.IconPacks
+    var iconPackHome: Constants.IconPacks
         get() {
-            return getEnumSetting(ICON_PACK, Constants.IconPacks.System)
+            return getEnumSetting(ICON_PACK_HOME, Constants.IconPacks.Disabled)
         }
-        set(value) = prefsNormal.edit { putString(ICON_PACK, value.name) }
+        set(value) = prefsNormal.edit { putString(ICON_PACK_HOME, value.name) }
 
-    var customIconPack: String
-        get() = prefsNormal.getString(CUSTOM_ICON_PACK, emptyString()).toString()
-        set(value) = prefsNormal.edit { putString(CUSTOM_ICON_PACK, value) }
+    var customIconPackHome: String
+        get() = prefsNormal.getString(CUSTOM_ICON_PACK_HOME, emptyString()).toString()
+        set(value) = prefsNormal.edit { putString(CUSTOM_ICON_PACK_HOME, value) }
+
+    var iconPackAppList: Constants.IconPacks
+        get() {
+            return getEnumSetting(ICON_PACK_APP_LIST, Constants.IconPacks.Disabled)
+        }
+        set(value) = prefsNormal.edit { putString(ICON_PACK_APP_LIST, value.name) }
+
+    var customIconPackAppList: String
+        get() = prefsNormal.getString(CUSTOM_ICON_PACK_APP_LIST, emptyString()).toString()
+        set(value) = prefsNormal.edit { putString(CUSTOM_ICON_PACK_APP_LIST, value) }
 
     var wordList: String
         get() = prefsNormal.getString(WORD_LIST, emptyString()).toString()

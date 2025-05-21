@@ -55,8 +55,10 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     val opacityNum = MutableLiveData(prefs.opacityNum)
     val filterStrength = MutableLiveData(prefs.filterStrength)
     val recentCounter = MutableLiveData(prefs.recentCounter)
-    val customIconPack = MutableLiveData(prefs.customIconPack)
-    val iconPack = MutableLiveData(prefs.iconPack)
+    val customIconPackHome = MutableLiveData(prefs.customIconPackHome)
+    val iconPackHome = MutableLiveData(prefs.iconPackHome)
+    val customIconPackAppList = MutableLiveData(prefs.customIconPackAppList)
+    val iconPackAppList = MutableLiveData(prefs.iconPackAppList)
 
     fun selectedApp(fragment: Fragment, app: AppListItem, flag: AppDrawerFlag, n: Int = 0) {
         when (flag) {
@@ -74,7 +76,10 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             AppDrawerFlag.SetFloating -> prefs.appFloating = app
             AppDrawerFlag.SetClickDate -> prefs.appClickDate = app
             AppDrawerFlag.SetDoubleTap -> prefs.appDoubleTap = app
-            AppDrawerFlag.LaunchApp, AppDrawerFlag.HiddenApps, AppDrawerFlag.PrivateApps -> launchApp(app, fragment)
+            AppDrawerFlag.LaunchApp, AppDrawerFlag.HiddenApps, AppDrawerFlag.PrivateApps -> launchApp(
+                app,
+                fragment
+            )
 
             AppDrawerFlag.None -> {}
         }
@@ -129,11 +134,13 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 override fun onAuthenticationError(errorCode: Int, errorMessage: CharSequence?) {
                     when (errorCode) {
                         BiometricPrompt.ERROR_USER_CANCELED -> Log.e(
-                            "Authentication", getLocalizedString(R.string.text_authentication_cancel)
+                            "Authentication",
+                            getLocalizedString(R.string.text_authentication_cancel)
                         )
 
                         else -> Log.e(
-                            "Authentication", getLocalizedString(R.string.text_authentication_error).format(
+                            "Authentication",
+                            getLocalizedString(R.string.text_authentication_error).format(
                                 errorMessage, errorCode
                             )
                         )
@@ -160,7 +167,12 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     }
 
 
-    private fun launchAppWithPermissionCheck(component: ComponentName, packageName: String, userHandle: UserHandle, launcher: LauncherApps) {
+    private fun launchAppWithPermissionCheck(
+        component: ComponentName,
+        packageName: String,
+        userHandle: UserHandle,
+        launcher: LauncherApps
+    ) {
         try {
             val appUsageTracker = AppUsageMonitor.createInstance(appContext)
             appUsageTracker.updateLastUsedTimestamp(packageName)
@@ -182,13 +194,15 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     fun getAppList(includeHiddenApps: Boolean = true, flag: AppDrawerFlag = AppDrawerFlag.None) {
         viewModelScope.launch {
-            appList.value = getAppsList(appContext, includeRegularApps = true, includeHiddenApps, flag = flag)
+            appList.value =
+                getAppsList(appContext, includeRegularApps = true, includeHiddenApps, flag = flag)
         }
     }
 
     fun getHiddenApps() {
         viewModelScope.launch {
-            hiddenApps.value = getAppsList(appContext, includeRegularApps = false, includeHiddenApps = true)
+            hiddenApps.value =
+                getAppsList(appContext, includeRegularApps = false, includeHiddenApps = true)
         }
     }
 
@@ -243,7 +257,8 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     fun loadAppOrder() {
-        val savedOrder = (0 until prefs.homeAppsNum).mapNotNull { prefs.getHomeAppModel(it) } // Ensure it doesn’t return null
+        val savedOrder =
+            (0 until prefs.homeAppsNum).mapNotNull { prefs.getHomeAppModel(it) } // Ensure it doesn’t return null
         homeAppsOrder.postValue(savedOrder) // ✅ Now posts a valid list
     }
 }

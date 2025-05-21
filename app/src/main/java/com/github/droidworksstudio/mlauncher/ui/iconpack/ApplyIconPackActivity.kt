@@ -1,12 +1,15 @@
 package com.github.droidworksstudio.mlauncher.ui.iconpack
 
 import android.os.Bundle
+import android.widget.CheckBox
+import android.widget.LinearLayout
 import androidx.lifecycle.ViewModelProvider
 import com.github.droidworksstudio.common.getLocalizedString
 import com.github.droidworksstudio.mlauncher.MainViewModel
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Prefs
+import com.github.droidworksstudio.mlauncher.helper.IconCacheTarget
 import com.github.droidworksstudio.mlauncher.helper.IconPackHelper
 import com.github.droidworksstudio.mlauncher.helper.utils.AppReloader
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -23,20 +26,51 @@ class ApplyIconPackActivity : androidx.appcompat.app.AppCompatActivity() {
         val packageName = intent.getStringExtra("packageName").toString()
         val packageClass = intent.getStringExtra("packageClass").toString()
         if (packageClass.isNotEmpty()) {
+            // Create a vertical LinearLayout programmatically
+            val layout = LinearLayout(this).apply {
+                orientation = LinearLayout.VERTICAL
+                setPadding(50, 40, 50, 10)
+            }
+
+            // Create the CheckBoxes
+            val checkBoxHome = CheckBox(this).apply {
+                text = getLocalizedString(R.string.apply_to_home) // e.g., "Apply to Home"
+                isChecked = true // default value
+            }
+
+            val checkBoxAppList = CheckBox(this).apply {
+                text = getLocalizedString(R.string.apply_to_app_list) // e.g., "Apply to App List"
+                isChecked = true // default value
+            }
+
+            // Add the CheckBoxes to the layout
+            layout.addView(checkBoxHome)
+            layout.addView(checkBoxAppList)
+
             MaterialAlertDialogBuilder(this)
                 .setTitle(getLocalizedString(R.string.apply_icon_pack))
                 .setMessage(getLocalizedString(R.string.apply_icon_pack_are_you_sure, packageName))
+                .setView(layout)
                 .setPositiveButton(getLocalizedString(R.string.apply)) { _, _ ->
 
                     val iconPackType = Constants.IconPacks.Custom
                     val customIconPackType = packageClass
 
-                    IconPackHelper.preloadIcons(this, customIconPackType)
+                    if (checkBoxHome.isChecked) {
+                        IconPackHelper.preloadIcons(this, customIconPackType, IconCacheTarget.HOME)
+                        prefs.iconPackHome = iconPackType
+                        viewModel.iconPackHome.value = iconPackType
+                        prefs.customIconPackHome = customIconPackType
+                        viewModel.customIconPackHome.value = customIconPackType
+                    }
 
-                    prefs.iconPack = iconPackType
-                    viewModel.iconPack.value = iconPackType
-                    prefs.customIconPack = customIconPackType
-                    viewModel.customIconPack.value = customIconPackType
+                    if (checkBoxAppList.isChecked) {
+                        IconPackHelper.preloadIcons(this, customIconPackType, IconCacheTarget.APP_LIST)
+                        prefs.iconPackAppList = iconPackType
+                        viewModel.iconPackAppList.value = iconPackType
+                        prefs.customIconPackAppList = customIconPackType
+                        viewModel.customIconPackAppList.value = customIconPackType
+                    }
 
                     AppReloader.restartApp(this)
                 }
@@ -45,6 +79,7 @@ class ApplyIconPackActivity : androidx.appcompat.app.AppCompatActivity() {
                 }
                 .setCancelable(false)
                 .show()
+
         } else {
             finish()
         }

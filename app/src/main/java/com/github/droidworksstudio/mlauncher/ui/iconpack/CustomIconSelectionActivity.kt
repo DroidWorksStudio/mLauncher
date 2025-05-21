@@ -1,10 +1,12 @@
 package com.github.droidworksstudio.mlauncher.ui.iconpack
 
+
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.drawable.Drawable
 import android.os.Bundle
+import android.util.Log
 import android.view.Gravity
 import android.view.View
 import android.widget.CheckBox
@@ -19,6 +21,7 @@ import com.github.droidworksstudio.mlauncher.MainViewModel
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Prefs
+import com.github.droidworksstudio.mlauncher.helper.IconCacheTarget
 import com.github.droidworksstudio.mlauncher.helper.IconPackHelper
 import com.github.droidworksstudio.mlauncher.helper.emptyString
 import com.github.droidworksstudio.mlauncher.helper.iconPackActions
@@ -37,7 +40,10 @@ class CustomIconSelectionActivity : androidx.appcompat.app.AppCompatActivity() {
         viewModel = ViewModelProvider(this)[MainViewModel::class.java]
 
         val installedIconPacks = findInstalledIconPacks()
-        val currentSelected = prefs.customIconPack
+        val currentSelected = prefs.customIconPackHome
+        val iconCacheTarget = intent.getStringExtra("IconCacheTarget")
+
+        Log.d("iconCacheTarget", "$iconCacheTarget")
 
         showIconPackSelectionDialog(
             context = this,
@@ -46,17 +52,31 @@ class CustomIconSelectionActivity : androidx.appcompat.app.AppCompatActivity() {
         ) { selectedPack ->
             val isDefault = selectedPack.packageName == defaultPackage
 
-            val iconPackType = if (isDefault) Constants.IconPacks.System else Constants.IconPacks.Custom
-            val customIconPackType = if (iconPackType == Constants.IconPacks.Custom) selectedPack.packageName else emptyString()
+            val iconPackType =
+                if (isDefault) Constants.IconPacks.System else Constants.IconPacks.Custom
+            val customIconPackType =
+                if (iconPackType == Constants.IconPacks.Custom) selectedPack.packageName else emptyString()
 
             if (iconPackType == Constants.IconPacks.Custom) {
-                IconPackHelper.preloadIcons(this, customIconPackType)
+                IconPackHelper.preloadIcons(this, customIconPackType, IconCacheTarget.HOME)
+                IconPackHelper.preloadIcons(this, customIconPackType, IconCacheTarget.APP_LIST)
             }
 
-            prefs.iconPack = iconPackType
-            viewModel.iconPack.value = iconPackType
-            prefs.customIconPack = customIconPackType
-            viewModel.customIconPack.value = customIconPackType
+            when (iconCacheTarget) {
+                IconCacheTarget.HOME.name -> {
+                    prefs.iconPackHome = iconPackType
+                    viewModel.iconPackHome.value = iconPackType
+                    prefs.customIconPackHome = customIconPackType
+                    viewModel.customIconPackHome.value = customIconPackType
+                }
+
+                IconCacheTarget.APP_LIST.name -> {
+                    prefs.iconPackAppList = iconPackType
+                    viewModel.iconPackAppList.value = iconPackType
+                    prefs.customIconPackAppList = customIconPackType
+                    viewModel.customIconPackAppList.value = customIconPackType
+                }
+            }
 
             AppReloader.restartApp(this)
         }
@@ -68,7 +88,8 @@ class CustomIconSelectionActivity : androidx.appcompat.app.AppCompatActivity() {
         currentPackage: String?,
         onSelected: (IconPackInfo) -> Unit
     ) {
-        var selectedIndex = iconPacks.indexOfFirst { it.packageName == currentPackage }.coerceAtLeast(0)
+        var selectedIndex =
+            iconPacks.indexOfFirst { it.packageName == currentPackage }.coerceAtLeast(0)
 
         val container = LinearLayout(context).apply {
             orientation = LinearLayout.VERTICAL
@@ -100,7 +121,8 @@ class CustomIconSelectionActivity : androidx.appcompat.app.AppCompatActivity() {
             val label = TextView(context).apply {
                 text = iconPack.name
                 textSize = 16f
-                layoutParams = LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f)
+                layoutParams =
+                    LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f)
             }
 
             val checkBox = CheckBox(context).apply {
@@ -176,7 +198,8 @@ class CustomIconSelectionActivity : androidx.appcompat.app.AppCompatActivity() {
 
         for (action in iconPackActions) {
             val intent = Intent(action)
-            val resolveInfos = packageManager.queryIntentActivities(intent, PackageManager.GET_META_DATA)
+            val resolveInfos =
+                packageManager.queryIntentActivities(intent, PackageManager.GET_META_DATA)
             for (resolveInfo in resolveInfos) {
                 val packageName = resolveInfo.activityInfo.packageName
 

@@ -68,6 +68,7 @@ import com.github.droidworksstudio.mlauncher.data.Constants.Action
 import com.github.droidworksstudio.mlauncher.data.Constants.AppDrawerFlag
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentHomeBinding
+import com.github.droidworksstudio.mlauncher.helper.IconCacheTarget
 import com.github.droidworksstudio.mlauncher.helper.IconPackHelper
 import com.github.droidworksstudio.mlauncher.helper.analytics.AppUsageMonitor
 import com.github.droidworksstudio.mlauncher.helper.formatMillisToHMS
@@ -1171,13 +1172,17 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     val packageName = prefs.getHomeAppModel(i).activityPackage
                     val packageManager = context.packageManager
 
-                    if (packageName.isNotBlank() && prefs.iconPack != Constants.IconPacks.Disabled) {
-                        val iconPackPackage = prefs.customIconPack
+                    if (packageName.isNotBlank() && prefs.iconPackHome != Constants.IconPacks.Disabled) {
+                        val iconPackPackage = prefs.customIconPackHome
                         // Get app icon or fallback drawable
                         val icon: Drawable? = try {
-                            if (iconPackPackage.isNotEmpty() && prefs.iconPack == Constants.IconPacks.Custom) {
+                            if (iconPackPackage.isNotEmpty() && prefs.iconPackHome == Constants.IconPacks.Custom) {
                                 if (IconPackHelper.isReady()) {
-                                    IconPackHelper.getCachedIcon(context, packageName)
+                                    IconPackHelper.getCachedIcon(
+                                        context,
+                                        packageName,
+                                        IconCacheTarget.HOME
+                                    )
                                     // Use the icon if not null
                                 } else {
                                     packageManager.getApplicationIcon(packageName)
@@ -1199,7 +1204,13 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                         val nonNullDrawable: Drawable = icon ?: defaultIcon
 
                         // Recolor the icon with the dominant color
-                        val appNewIcon: Drawable? = getSystemIcons(context, prefs, nonNullDrawable)
+                        val appNewIcon: Drawable? = getSystemIcons(
+                            context,
+                            prefs,
+                            IconCacheTarget.HOME,
+                            nonNullDrawable
+                        )
+
 
                         // Set the icon size to match text size and add padding
                         val iconSize = (prefs.appSize * 1.4).toInt()  // Base size from preferences

@@ -9,15 +9,21 @@ import androidx.core.content.res.ResourcesCompat
 import org.xmlpull.v1.XmlPullParser
 import java.io.FileNotFoundException
 
+enum class IconCacheTarget {
+    APP_LIST,
+    HOME
+}
+
 object IconPackHelper {
-    private val iconCache = mutableMapOf<String, Drawable>()
+    private val appListIconCache = mutableMapOf<String, Drawable>()
+    private val homeIconCache = mutableMapOf<String, Drawable>()
     private val nameCache = mutableMapOf<String, String>()
     private var isInitialized = false
 
     @SuppressLint("DiscouragedApi")
-    fun preloadIcons(context: Context, iconPackPackage: String) {
+    fun preloadIcons(context: Context, iconPackPackage: String, target: IconCacheTarget) {
         try {
-            Log.d("IconPackLoader", "Starting preload for: $iconPackPackage")
+            Log.d("IconPackLoader", "Starting preload for: $iconPackPackage, target=$target")
 
             val pm = context.packageManager
             val installedPackages = pm.getInstalledApplications(0).map { it.packageName }.toSet()
@@ -27,7 +33,6 @@ object IconPackHelper {
 
             val possibleAssetNames = listOf("appfilter.xml", "appmap.xml", "drawable.xml")
 
-            // Try to open the first valid XML file
             val inputStream = possibleAssetNames
                 .firstNotNullOfOrNull { fileName ->
                     try {
@@ -52,7 +57,10 @@ object IconPackHelper {
                     val component = parser.getAttributeValue(null, "component")
                     var drawable = parser.getAttributeValue(null, "drawable")
 
-                    Log.d("IconPackLoader", "Parsing item: component=$component, drawable=$drawable")
+                    Log.d(
+                        "IconPackLoader",
+                        "Parsing item: component=$component, drawable=$drawable"
+                    )
 
                     val match = regex.find(component ?: "")
                     val pkgName = match?.groupValues?.get(1)
@@ -70,13 +78,27 @@ object IconPackHelper {
                         Log.d("IconPackLoader", "Mapping found: $pkgName -> $drawable")
                         nameCache[pkgName] = drawable
 
-                        val resId = iconPackContext.resources.getIdentifier(drawable, "drawable", iconPackPackage)
+                        val resId = iconPackContext.resources.getIdentifier(
+                            drawable,
+                            "drawable",
+                            iconPackPackage
+                        )
                         if (resId != 0) {
-                            ResourcesCompat.getDrawable(iconPackContext.resources, resId, iconPackContext.theme)?.let {
-                                iconCache[pkgName] = it
+                            ResourcesCompat.getDrawable(
+                                iconPackContext.resources,
+                                resId,
+                                iconPackContext.theme
+                            )?.let {
+                                when (target) {
+                                    IconCacheTarget.APP_LIST -> appListIconCache[pkgName] = it
+                                    IconCacheTarget.HOME -> homeIconCache[pkgName] = it
+                                }
                                 loadedCount++
                                 Log.d("IconPackLoader", "Icon cached: $pkgName (resId=$resId)")
-                            } ?: Log.w("IconPackLoader", "Drawable is null for resource: $drawable (resId=$resId)")
+                            } ?: Log.w(
+                                "IconPackLoader",
+                                "Drawable is null for resource: $drawable (resId=$resId)"
+                            )
                         } else {
                             skippedCount++
                             Log.w("IconPackLoader", "Drawable resource not found: $drawable")
@@ -92,27 +114,29 @@ object IconPackHelper {
             inputStream.close()
             isInitialized = true
 
-            Log.d("IconPackLoader", "Preload finished. Loaded: $loadedCount, Skipped: $skippedCount")
+            Log.d(
+                "IconPackLoader",
+                "Preload finished. Loaded: $loadedCount, Skipped: $skippedCount"
+            )
 
         } catch (e: Exception) {
             Log.e("IconPackLoader", "Error while preloading icon pack: ${e.message}", e)
         }
     }
 
+    fun getCachedIcon(context: Context, packageName: String, target: IconCacheTarget): Drawable? {
+        val cachedIcon = when (target) {
+            IconCacheTarget.APP_LIST -> appListIconCache[packageName]
+            IconCacheTarget.HOME -> homeIconCache[packageName]
+        }
 
-    fun getCachedIcon(context: Context, packageName: String): Drawable? {
-        // First, check if the icon is cached from the icon pack
-        val cachedIcon = iconCache[packageName]
-
-        return cachedIcon ?: // If not cached, fall back to the system icon
-        try {
+        return cachedIcon ?: try {
             context.packageManager.getApplicationIcon(packageName)
         } catch (e: Exception) {
             e.printStackTrace()
             null
         }
     }
-
 
     fun isReady(): Boolean = isInitialized
 }

@@ -9,6 +9,7 @@ import androidx.core.content.res.ResourcesCompat
 import com.github.droidworksstudio.common.getLocalizedString
 import com.github.droidworksstudio.mlauncher.Mlauncher
 import com.github.droidworksstudio.mlauncher.R
+import com.github.droidworksstudio.mlauncher.helper.IconCacheTarget
 import com.github.droidworksstudio.mlauncher.helper.getTrueSystemFont
 import java.io.File
 import java.util.Locale
@@ -273,18 +274,39 @@ object Constants {
         }
     }
 
-    fun getCustomIconPackName(): String {
-        val customPackageName = Prefs(Mlauncher.getContext()).customIconPack
-        if (customPackageName.isEmpty()) {
-            return getLocalizedString(R.string.system_custom)
-        }
-        return try {
-            val pm = Mlauncher.getContext().packageManager
-            val appInfo = pm.getApplicationInfo(customPackageName, 0)
-            val customName = pm.getApplicationLabel(appInfo).toString()
-            getLocalizedString(R.string.system_custom_plus, customName)
-        } catch (_: NameNotFoundException) {
-            getLocalizedString(R.string.system_custom)
+    fun getCustomIconPackName(target: String): String {
+        return when (target) {
+            IconCacheTarget.APP_LIST.name -> {
+                val customPackageName = Prefs(Mlauncher.getContext()).customIconPackAppList
+                if (customPackageName.isEmpty()) {
+                    getLocalizedString(R.string.system_custom)
+                }
+                try {
+                    val pm = Mlauncher.getContext().packageManager
+                    val appInfo = pm.getApplicationInfo(customPackageName, 0)
+                    val customName = pm.getApplicationLabel(appInfo).toString()
+                    getLocalizedString(R.string.system_custom_plus, customName)
+                } catch (_: NameNotFoundException) {
+                    getLocalizedString(R.string.system_custom)
+                }
+            }
+
+            IconCacheTarget.HOME.name -> {
+                val customPackageName = Prefs(Mlauncher.getContext()).customIconPackHome
+                if (customPackageName.isEmpty()) {
+                    getLocalizedString(R.string.system_custom)
+                }
+                try {
+                    val pm = Mlauncher.getContext().packageManager
+                    val appInfo = pm.getApplicationInfo(customPackageName, 0)
+                    val customName = pm.getApplicationLabel(appInfo).toString()
+                    getLocalizedString(R.string.system_custom_plus, customName)
+                } catch (_: NameNotFoundException) {
+                    getLocalizedString(R.string.system_custom)
+                }
+            }
+
+            else -> getLocalizedString(R.string.system_custom)
         }
     }
 
@@ -297,10 +319,10 @@ object Constants {
         SpinnerDots,
         Disabled;
 
-        fun getString(): String {
+        fun getString(target: String): String {
             return when (this) {
                 System -> getLocalizedString(R.string.system_default)
-                Custom -> getLocalizedString(R.string.system_custom)
+                Custom -> getCustomIconPackName(target)
                 CloudDots -> getLocalizedString(R.string.app_icons_cloud_dots)
                 LauncherDots -> getLocalizedString(R.string.app_icons_launcher_dots)
                 NiagaraDots -> getLocalizedString(R.string.app_icons_niagara_dots)
@@ -313,7 +335,7 @@ object Constants {
         override fun string(): String {
             return when (this) {
                 System -> getLocalizedString(R.string.system_default)
-                Custom -> getCustomIconPackName()
+                Custom -> getLocalizedString(R.string.system_custom)
                 CloudDots -> getLocalizedString(R.string.app_icons_cloud_dots)
                 LauncherDots -> getLocalizedString(R.string.app_icons_launcher_dots)
                 NiagaraDots -> getLocalizedString(R.string.app_icons_niagara_dots)

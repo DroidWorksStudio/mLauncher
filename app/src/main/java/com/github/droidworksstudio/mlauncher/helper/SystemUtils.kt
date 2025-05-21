@@ -651,8 +651,68 @@ private fun getInstallSource(packageManager: PackageManager, packageName: String
 }
 
 
-fun getSystemIcons(context: Context, prefs: Prefs, nonNullDrawable: Drawable): Drawable? {
-    return when (prefs.iconPack) {
+fun getSystemIcons(
+    context: Context,
+    prefs: Prefs,
+    target: IconCacheTarget,
+    nonNullDrawable: Drawable
+): Drawable? {
+    return when (target) {
+        IconCacheTarget.APP_LIST -> getAppListIcons(context, prefs, nonNullDrawable)
+        IconCacheTarget.HOME -> getHomeIcons(context, prefs, nonNullDrawable)
+    }
+}
+
+private fun getAppListIcons(context: Context, prefs: Prefs, nonNullDrawable: Drawable): Drawable? {
+    return when (prefs.iconPackAppList) {
+        Constants.IconPacks.CloudDots -> {
+            val newIcon = ContextCompat.getDrawable(
+                context,
+                R.drawable.cloud_dots_icon
+            )!!
+            val bitmap = ColorIconsExtensions.drawableToBitmap(nonNullDrawable)
+            val dominantColor = ColorIconsExtensions.getDominantColor(bitmap)
+            ColorIconsExtensions.recolorDrawable(newIcon, dominantColor)
+        }
+
+        Constants.IconPacks.LauncherDots -> {
+            val newIcon = ContextCompat.getDrawable(
+                context,
+                R.drawable.launcher_dot_icon
+            )!!
+            val bitmap = ColorIconsExtensions.drawableToBitmap(nonNullDrawable)
+            val dominantColor = ColorIconsExtensions.getDominantColor(bitmap)
+            ColorIconsExtensions.recolorDrawable(newIcon, dominantColor)
+        }
+
+        Constants.IconPacks.NiagaraDots -> {
+            val newIcon = ContextCompat.getDrawable(
+                context,
+                R.drawable.niagara_dot_icon
+            )!!
+            val bitmap = ColorIconsExtensions.drawableToBitmap(nonNullDrawable)
+            val dominantColor = ColorIconsExtensions.getDominantColor(bitmap)
+            ColorIconsExtensions.recolorDrawable(newIcon, dominantColor)
+        }
+
+        Constants.IconPacks.SpinnerDots -> {
+            val newIcon = ContextCompat.getDrawable(
+                context,
+                R.drawable.spinner_dots_icon
+            )!!
+            val bitmap = ColorIconsExtensions.drawableToBitmap(nonNullDrawable)
+            val dominantColor = ColorIconsExtensions.getDominantColor(bitmap)
+            ColorIconsExtensions.recolorDrawable(newIcon, dominantColor)
+        }
+
+        else -> {
+            null
+        }
+    }
+}
+
+private fun getHomeIcons(context: Context, prefs: Prefs, nonNullDrawable: Drawable): Drawable? {
+    return when (prefs.iconPackHome) {
         Constants.IconPacks.CloudDots -> {
             val newIcon = ContextCompat.getDrawable(
                 context,

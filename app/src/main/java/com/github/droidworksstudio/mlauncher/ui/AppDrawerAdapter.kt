@@ -41,6 +41,7 @@ import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Constants.AppDrawerFlag
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.AdapterAppDrawerBinding
+import com.github.droidworksstudio.mlauncher.helper.IconCacheTarget
 import com.github.droidworksstudio.mlauncher.helper.IconPackHelper
 import com.github.droidworksstudio.mlauncher.helper.dp2px
 import com.github.droidworksstudio.mlauncher.helper.getSystemIcons
@@ -124,7 +125,10 @@ class AppDrawerAdapter(
                         )
                     }
 
-                    override fun onAuthenticationError(errorCode: Int, errorMessage: CharSequence?) {
+                    override fun onAuthenticationError(
+                        errorCode: Int,
+                        errorMessage: CharSequence?
+                    ) {
                         when (errorCode) {
                             BiometricPrompt.ERROR_USER_CANCELED -> Log.e(
                                 "Authentication",
@@ -180,7 +184,8 @@ class AppDrawerAdapter(
                     // Only apply FuzzyFinder scoring logic when filter strength is enabled
                     val scoredApps = mutableMapOf<AppListItem, Int>()
                     for (app in appsList) {
-                        scoredApps[app] = FuzzyFinder.scoreApp(app, searchChars, Constants.MAX_FILTER_STRENGTH)
+                        scoredApps[app] =
+                            FuzzyFinder.scoreApp(app, searchChars, Constants.MAX_FILTER_STRENGTH)
                     }
 
                     filteredApps = if (searchChars.isNotEmpty()) {
@@ -372,13 +377,16 @@ class AppDrawerAdapter(
                 appTitle.layoutParams = params
 
                 // add icon next to app name to indicate that this app is installed on another profile
-                val launcherApps = context.getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps
-                val isPrivateSpace = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.VANILLA_ICE_CREAM) {
-                    launcherApps.getLauncherUserInfo(appListItem.user)?.userType == UserManager.USER_TYPE_PROFILE_PRIVATE
-                } else {
-                    PrivateSpaceManager(context).isPrivateSpaceSupported()
-                }
-                val isWorkProfile = appListItem.user != android.os.Process.myUserHandle() && !isPrivateSpace
+                val launcherApps =
+                    context.getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps
+                val isPrivateSpace =
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.VANILLA_ICE_CREAM) {
+                        launcherApps.getLauncherUserInfo(appListItem.user)?.userType == UserManager.USER_TYPE_PROFILE_PRIVATE
+                    } else {
+                        PrivateSpaceManager(context).isPrivateSpaceSupported()
+                    }
+                val isWorkProfile =
+                    appListItem.user != android.os.Process.myUserHandle() && !isPrivateSpace
 
                 val packageName = appListItem.activityPackage
                 val packageManager = context.packageManager
@@ -404,13 +412,17 @@ class AppDrawerAdapter(
                     }
                     appTitle.compoundDrawablePadding = 20
                 } else {
-                    if (packageName.isNotBlank() && prefs.iconPack != Constants.IconPacks.Disabled) {
-                        val iconPackPackage = prefs.customIconPack
+                    if (packageName.isNotBlank() && prefs.iconPackAppList != Constants.IconPacks.Disabled) {
+                        val iconPackPackage = prefs.customIconPackAppList
                         // Get app icon or fallback drawable
                         val icon: Drawable? = try {
-                            if (iconPackPackage.isNotEmpty() && prefs.iconPack == Constants.IconPacks.Custom) {
+                            if (iconPackPackage.isNotEmpty() && prefs.iconPackAppList == Constants.IconPacks.Custom) {
                                 if (IconPackHelper.isReady()) {
-                                    IconPackHelper.getCachedIcon(context, packageName)
+                                    IconPackHelper.getCachedIcon(
+                                        context,
+                                        packageName,
+                                        IconCacheTarget.APP_LIST
+                                    )
                                     // Use the icon if not null
                                 } else {
                                     packageManager.getApplicationIcon(packageName)
@@ -432,24 +444,44 @@ class AppDrawerAdapter(
                         val nonNullDrawable: Drawable = icon ?: defaultIcon
 
                         // Recolor the icon with the dominant color
-                        val appNewIcon: Drawable? = getSystemIcons(context, prefs, nonNullDrawable)
+                        val appNewIcon: Drawable? = getSystemIcons(
+                            context,
+                            prefs,
+                            IconCacheTarget.APP_LIST,
+                            nonNullDrawable
+                        )
 
                         // Set the icon size to match text size and add padding
                         val iconSize = (prefs.appSize * 1.4).toInt()  // Base size from preferences
                         val iconPadding = (iconSize / 1.2).toInt() //
 
                         appNewIcon?.setBounds(0, 0, iconSize, iconSize)
-                        nonNullDrawable.setBounds(0, 0, ((iconSize * 1.8).toInt()), ((iconSize * 1.8).toInt()))
+                        nonNullDrawable.setBounds(
+                            0,
+                            0,
+                            ((iconSize * 1.8).toInt()),
+                            ((iconSize * 1.8).toInt())
+                        )
 
                         // Set drawable position based on alignment
                         when (prefs.drawerAlignment) {
                             Constants.Gravity.Left -> {
-                                appTitle.setCompoundDrawables(appNewIcon ?: nonNullDrawable, null, null, null)
+                                appTitle.setCompoundDrawables(
+                                    appNewIcon ?: nonNullDrawable,
+                                    null,
+                                    null,
+                                    null
+                                )
                                 appTitle.compoundDrawablePadding = iconPadding
                             }
 
                             Constants.Gravity.Right -> {
-                                appTitle.setCompoundDrawables(null, null, appNewIcon ?: nonNullDrawable, null)
+                                appTitle.setCompoundDrawables(
+                                    null,
+                                    null,
+                                    appNewIcon ?: nonNullDrawable,
+                                    null
+                                )
                                 appTitle.compoundDrawablePadding = iconPadding
                             }
 
@@ -463,7 +495,8 @@ class AppDrawerAdapter(
                 val padding = dp2px(resources, 24)
                 appTitle.updatePadding(left = padding, right = padding)
 
-                val sidebarContainer = (context as? Activity)?.findViewById<View>(R.id.sidebar_container)!!
+                val sidebarContainer =
+                    (context as? Activity)?.findViewById<View>(R.id.sidebar_container)!!
 
                 appTitleFrame.apply {
                     setOnClickListener {

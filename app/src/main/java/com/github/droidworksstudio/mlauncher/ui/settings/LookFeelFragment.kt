@@ -37,6 +37,7 @@ import com.github.droidworksstudio.mlauncher.data.Constants.Theme.Light
 import com.github.droidworksstudio.mlauncher.data.Constants.Theme.System
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentSettingsBinding
+import com.github.droidworksstudio.mlauncher.helper.IconCacheTarget
 import com.github.droidworksstudio.mlauncher.helper.emptyString
 import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
 import com.github.droidworksstudio.mlauncher.helper.hideStatusBar
@@ -106,7 +107,8 @@ class LookFeelFragment : Fragment() {
         var toggledRecentAppsDisplayed by remember { mutableStateOf(prefs.recentAppsDisplayed) }
         var selectedRecentCounter by remember { mutableIntStateOf(prefs.recentCounter) }
         var toggledRecentAppUsageStats by remember { mutableStateOf(prefs.appUsageStats) }
-        var selectedAppIcons by remember { mutableStateOf(prefs.iconPack) }
+        var selectedIconPackHome by remember { mutableStateOf(prefs.iconPackHome) }
+        var selectedIconPackAppList by remember { mutableStateOf(prefs.iconPackAppList) }
         var toggledShowBackground by remember { mutableStateOf(prefs.showBackground) }
         var selectedBackgroundOpacity by remember { mutableIntStateOf(prefs.opacityNum) }
 
@@ -381,19 +383,20 @@ class LookFeelFragment : Fragment() {
             )
 
             SettingsSelect(
-                title = getLocalizedString(R.string.select_app_icons),
-                option = selectedAppIcons.string(),
+                title = getLocalizedString(R.string.select_home_icons),
+                option = selectedIconPackHome.getString(IconCacheTarget.HOME.name),
                 fontSize = titleFontSize,
                 onClick = {
                     // Generate options and icons
                     val iconPacksEntries = Constants.IconPacks.entries
 
-                    val iconPacksOptions = iconPacksEntries.map { it.getString() }
+                    val iconPacksOptions =
+                        iconPacksEntries.map { it.getString(emptyString()) }
 
                     dialogBuilder.showSingleChoiceDialog(
                         context = requireContext(),
                         options = iconPacksOptions.map { it.toString() }.toTypedArray(),
-                        titleResId = R.string.select_app_icons,
+                        titleResId = R.string.select_home_icons,
                         onItemSelected = { newAppIconsName ->
                             val newIconPacksIndex =
                                 iconPacksOptions.indexOfFirst { it.toString() == newAppIconsName }
@@ -401,12 +404,49 @@ class LookFeelFragment : Fragment() {
                                 val newAppIcons =
                                     iconPacksEntries[newIconPacksIndex] // Get the selected FontFamily enum
                                 if (newAppIcons == Constants.IconPacks.Custom) {
-                                    openCustomIconSelectionDialog()
+                                    openCustomIconSelectionDialog(IconCacheTarget.HOME)
                                 } else {
-                                    prefs.customIconPack = emptyString()
-                                    selectedAppIcons = newAppIcons // Update state
-                                    prefs.iconPack = newAppIcons // Persist selection in preferences
-                                    viewModel.iconPack.value = newAppIcons
+                                    prefs.customIconPackHome = emptyString()
+                                    selectedIconPackHome = newAppIcons // Update state
+                                    prefs.iconPackHome =
+                                        newAppIcons // Persist selection in preferences
+                                    viewModel.iconPackHome.value = newAppIcons
+                                }
+                            }
+                        }
+                    )
+                }
+            )
+
+            SettingsSelect(
+                title = getLocalizedString(R.string.select_app_list_icons),
+                option = selectedIconPackAppList.getString(IconCacheTarget.APP_LIST.name),
+                fontSize = titleFontSize,
+                onClick = {
+                    // Generate options and icons
+                    val iconPacksEntries = Constants.IconPacks.entries
+
+                    val iconPacksOptions =
+                        iconPacksEntries.map { it.getString(emptyString()) }
+
+                    dialogBuilder.showSingleChoiceDialog(
+                        context = requireContext(),
+                        options = iconPacksOptions.map { it.toString() }.toTypedArray(),
+                        titleResId = R.string.select_app_list_icons,
+                        onItemSelected = { newAppIconsName ->
+                            val newIconPacksIndex =
+                                iconPacksOptions.indexOfFirst { it.toString() == newAppIconsName }
+                            if (newIconPacksIndex != -1) {
+                                val newAppIcons =
+                                    iconPacksEntries[newIconPacksIndex] // Get the selected FontFamily enum
+                                if (newAppIcons == Constants.IconPacks.Custom) {
+                                    openCustomIconSelectionDialog(IconCacheTarget.APP_LIST)
+                                } else {
+                                    prefs.customIconPackAppList = emptyString()
+                                    selectedIconPackAppList = newAppIcons // Update state
+                                    prefs.iconPackAppList =
+                                        newAppIcons // Persist selection in preferences
+                                    viewModel.iconPackAppList.value = newAppIcons
                                 }
                             }
                         }
@@ -733,8 +773,10 @@ class LookFeelFragment : Fragment() {
         }
     }
 
-    private fun openCustomIconSelectionDialog() {
-        val intent = Intent(requireActivity(), CustomIconSelectionActivity::class.java)
+    private fun openCustomIconSelectionDialog(target: IconCacheTarget) {
+        val intent = Intent(requireActivity(), CustomIconSelectionActivity::class.java).apply {
+            putExtra("IconCacheTarget", "$target")
+        }
         startActivity(intent)
     }
 
