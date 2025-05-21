@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Implemented Enhancements:
 
+- Clear icon cache on icon pack change - ([027d9c0](https://github.com/DroidWorksStudio/mLauncher/commit/027d9c058a78c05ed4453c519b521ffea9299539))
 - Separate icon pack settings for Home and App List - ([20c6af2](https://github.com/DroidWorksStudio/mLauncher/commit/20c6af2dad89d26ffacb518163e54b9c6276f405))
 - Add status bar padding and move handling - ([41b75e7](https://github.com/DroidWorksStudio/mLauncher/commit/41b75e78997a9e9738de0ecc5f47cfb0626eefd7))
 
