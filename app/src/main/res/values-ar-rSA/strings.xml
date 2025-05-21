@@ -87,7 +87,8 @@
     <string name="show_recent_apps">إظهار التطبيقات الأخيرة</string>
     <string name="number_of_recents">عدد التطبيقات الحديثة</string>
     <string name="show_app_usage_stats">إظهار إحصائيات استخدام التطبيق</string>
-    <string name="select_app_icons">حدد أيقونات التطبيق</string>
+    <string name="select_home_icons">حدد حزمة أيقونات الصفحة الرئيسية</string>
+    <string name="select_app_list_icons">حدد حزمة أيقونات قائمة التطبيقات</string>
     <string name="enable_filter_strength">تمكين قوة الفلتر</string>
     <string name="filter_strength">قوة التصفية</string>
     <string name="show_background">إظهار الخلفية</string>
@@ -222,6 +223,8 @@
     <string name="apply_icon_pack">تطبيق حزمة الأيقونات</string>
     <string name="applying_icon_pack">إعطاء أيقوناتك مظهرًا جديدًا…</string>
     <string name="apply_icon_pack_are_you_sure">هل أنت متأكد من أنك تريد تطبيق حزمة الأيقونات هذه؟\n\n%1$s</string>
+    <string name="apply_to_home">التقدم إلى الصفحة الرئيسية</string>
+    <string name="apply_to_app_list">التقدم إلى قائمة التطبيقات</string>
     <!-- Settings Strings -->
     <string name="left">اليسار</string>
     <string name="right">يمين</string>

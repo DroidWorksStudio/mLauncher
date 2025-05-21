@@ -87,7 +87,8 @@
     <string name="show_recent_apps">Pokaż ostatnie aplikacje</string>
     <string name="number_of_recents">Liczba najnowszych aplikacji</string>
     <string name="show_app_usage_stats">Pokaż statystyki użytkowania aplikacji</string>
-    <string name="select_app_icons">Wybierz ikony aplikacji</string>
+    <string name="select_home_icons">Wybierz pakiet ikon domowych</string>
+    <string name="select_app_list_icons">Wybierz pakiet ikon listy aplikacji</string>
     <string name="enable_filter_strength">Włącz siłę filtra</string>
     <string name="filter_strength">Siła filtra</string>
     <string name="show_background">Pokaż tło</string>
@@ -222,6 +223,8 @@
     <string name="apply_icon_pack">Zastosuj pakiet ikon</string>
     <string name="applying_icon_pack">Nadanie Twoim ikonom świeżego wyglądu…</string>
     <string name="apply_icon_pack_are_you_sure">Czy na pewno chcesz zastosować ten pakiet ikon?\n\n%1$s</string>
+    <string name="apply_to_home">Zastosuj do strony głównej</string>
+    <string name="apply_to_app_list">Zastosuj do listy aplikacji</string>
     <!-- Settings Strings -->
     <string name="left">W lewo</string>
     <string name="right">Prawy</string>

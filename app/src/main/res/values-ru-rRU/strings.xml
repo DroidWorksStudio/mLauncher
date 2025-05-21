@@ -87,7 +87,8 @@
     <string name="show_recent_apps">Показать последние приложения</string>
     <string name="number_of_recents">Количество последних приложений</string>
     <string name="show_app_usage_stats">Показать статистику использования приложения</string>
-    <string name="select_app_icons">Выберите значки приложений</string>
+    <string name="select_home_icons">Выбрать набор иконок для дома</string>
+    <string name="select_app_list_icons">Выберите набор иконок из списка приложений</string>
     <string name="enable_filter_strength">Включить силу фильтра</string>
     <string name="filter_strength">Строгость фильтра</string>
     <string name="show_background">Показать фон</string>
@@ -222,6 +223,8 @@
     <string name="apply_icon_pack">Применить пакет иконок</string>
     <string name="applying_icon_pack">Придаем вашим иконкам свежий вид…</string>
     <string name="apply_icon_pack_are_you_sure">Вы уверены, что хотите применить этот пакет иконок?\n\n%1$s</string>
+    <string name="apply_to_home">Применить к домашней странице</string>
+    <string name="apply_to_app_list">Применить к списку приложений</string>
     <!-- Settings Strings -->
     <string name="left">Слева</string>
     <string name="right">Справа</string>
