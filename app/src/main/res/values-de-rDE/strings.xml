@@ -87,8 +87,8 @@
     <string name="show_recent_apps">Zuletzt verwendete Apps anzeigen</string>
     <string name="number_of_recents">Anzahl der letzten Apps</string>
     <string name="show_app_usage_stats">App-Nutzungsstatistiken anzeigen</string>
-    <string name="select_home_icons">Select Home Icon Pack</string>
-    <string name="select_app_list_icons">Select App List Icon Pack</string>
+    <string name="select_home_icons">Wählen Sie Home Icon Pack</string>
+    <string name="select_app_list_icons">App-Listensymbolpaket auswählen</string>
     <string name="enable_filter_strength">Filterstärke aktivieren</string>
     <string name="filter_strength">Filterstärke</string>
     <string name="show_background">Hintergrund anzeigen</string>
@@ -223,8 +223,8 @@
     <string name="apply_icon_pack">Icon Pack anwenden</string>
     <string name="applying_icon_pack">Verleihen Sie Ihren Symbolen ein frisches Aussehen…</string>
     <string name="apply_icon_pack_are_you_sure">Möchten Sie dieses Symbolpaket wirklich anwenden?\n\n%1$s</string>
-    <string name="apply_to_home">Apply To Home</string>
-    <string name="apply_to_app_list">Apply To App List</string>
+    <string name="apply_to_home">Auf Startseite anwenden</string>
+    <string name="apply_to_app_list">Auf App-Liste anwenden</string>
     <!-- Settings Strings -->
     <string name="left">Links</string>
     <string name="right">Rechts</string>
