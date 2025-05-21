@@ -87,8 +87,8 @@
     <string name="show_recent_apps">Zobraziť nedávne aplikácie</string>
     <string name="number_of_recents">Počet nedávnych aplikácií</string>
     <string name="show_app_usage_stats">Zobraziť štatistiku používania aplikácie</string>
-    <string name="select_home_icons">Select Home Icon Pack</string>
-    <string name="select_app_list_icons">Select App List Icon Pack</string>
+    <string name="select_home_icons">Vyberte balík ikon Domov</string>
+    <string name="select_app_list_icons">Vyberte balík ikon zoznamu aplikácií</string>
     <string name="enable_filter_strength">Povoliť silu filtra</string>
     <string name="filter_strength">Sila filtrovania</string>
     <string name="show_background">Zobraziť pozadie</string>
@@ -225,8 +225,8 @@ Tento prístup môžete kedykoľvek vypnúť v nastaveniach zariadenia.</string>
     <string name="apply_icon_pack">Použiť balík ikon</string>
     <string name="applying_icon_pack">Dodajte svojim ikonám svieži vzhľad…</string>
     <string name="apply_icon_pack_are_you_sure">Naozaj chcete použiť tento balík ikon?\n\n%1$s</string>
-    <string name="apply_to_home">Apply To Home</string>
-    <string name="apply_to_app_list">Apply To App List</string>
+    <string name="apply_to_home">Použiť na domovskú stránku</string>
+    <string name="apply_to_app_list">Použiť na zoznam aplikácií</string>
     <!-- Settings Strings -->
     <string name="left">Vľavo</string>
     <string name="right">Vpravo</string>
