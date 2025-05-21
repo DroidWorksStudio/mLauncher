@@ -6,7 +6,6 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.drawable.Drawable
 import android.os.Bundle
-import android.util.Log
 import android.view.Gravity
 import android.view.View
 import android.widget.CheckBox
@@ -40,10 +39,12 @@ class CustomIconSelectionActivity : androidx.appcompat.app.AppCompatActivity() {
         viewModel = ViewModelProvider(this)[MainViewModel::class.java]
 
         val installedIconPacks = findInstalledIconPacks()
-        val currentSelected = prefs.customIconPackHome
         val iconCacheTarget = intent.getStringExtra("IconCacheTarget")
-
-        Log.d("iconCacheTarget", "$iconCacheTarget")
+        val currentSelected = when (iconCacheTarget) {
+            IconCacheTarget.HOME.name -> prefs.customIconPackHome
+            IconCacheTarget.APP_LIST.name -> prefs.customIconPackAppList
+            else -> throw IllegalArgumentException("Invalid IconCacheTarget")
+        }
 
         showIconPackSelectionDialog(
             context = this,

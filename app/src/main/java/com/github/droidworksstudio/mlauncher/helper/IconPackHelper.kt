@@ -23,6 +23,11 @@ object IconPackHelper {
     @SuppressLint("DiscouragedApi")
     fun preloadIcons(context: Context, iconPackPackage: String, target: IconCacheTarget) {
         try {
+            when (target) {
+                IconCacheTarget.APP_LIST -> appListIconCache.clear()
+                IconCacheTarget.HOME -> homeIconCache.clear()
+            }
+
             Log.d("IconPackLoader", "Starting preload for: $iconPackPackage, target=$target")
 
             val pm = context.packageManager
