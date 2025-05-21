@@ -16,6 +16,7 @@ jobs:
         with:
           # [Required] Access token with `workflow` scope.
           token: ${{ secrets.GIT_BOT_TOKEN }}
+          ref: main
 
       - name: Run GitHub Actions Version Updater
         uses: saadmk11/github-actions-version-updater@v0.8.1
