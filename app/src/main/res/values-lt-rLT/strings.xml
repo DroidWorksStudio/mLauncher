@@ -87,8 +87,8 @@
     <string name="show_recent_apps">Rodyti naujausias programas</string>
     <string name="number_of_recents">Naujausiai atdarytų programėlių skaičius</string>
     <string name="show_app_usage_stats">Rodyti programos naudojimo statistiką</string>
-    <string name="select_home_icons">Select Home Icon Pack</string>
-    <string name="select_app_list_icons">Select App List Icon Pack</string>
+    <string name="select_home_icons">Pasirinkite „Pagrindinis“ piktogramų paketą</string>
+    <string name="select_app_list_icons">Pasirinkti programų sąrašo piktogramų paketą</string>
     <string name="enable_filter_strength">Įjungti filtro stiprumą</string>
     <string name="filter_strength">Filtro stiprumas</string>
     <string name="show_background">Rodyti foną</string>
@@ -225,8 +225,8 @@ Jūs bet kada galite išjungti šią prieigą savo įrenginio nustatymuose.</str
     <string name="apply_icon_pack">Taikyti piktogramų paketą</string>
     <string name="applying_icon_pack">Suteikite savo piktogramoms naują išvaizdą…</string>
     <string name="apply_icon_pack_are_you_sure">Ar tikrai norite pritaikyti šį piktogramų paketą?\n\n%1$s</string>
-    <string name="apply_to_home">Apply To Home</string>
-    <string name="apply_to_app_list">Apply To App List</string>
+    <string name="apply_to_home">Taikyti pagrindiniams puslapiams</string>
+    <string name="apply_to_app_list">Taikyti programų sąrašui</string>
     <!-- Settings Strings -->
     <string name="left">Kairė</string>
     <string name="right">Dešnė</string>
