@@ -9,6 +9,10 @@ All notable changes to this project will be documented in this file. See [conven
 - Separate icon pack settings for Home and App List - ([20c6af2](https://github.com/DroidWorksStudio/mLauncher/commit/20c6af2dad89d26ffacb518163e54b9c6276f405))
 - Add status bar padding and move handling - ([41b75e7](https://github.com/DroidWorksStudio/mLauncher/commit/41b75e78997a9e9738de0ecc5f47cfb0626eefd7))
 
+### Language Support:
+
+- Updated Language Files. ([#752](https://github.com/DroidWorksStudio/mLauncher/issues/752)) - ([746c089](https://github.com/DroidWorksStudio/mLauncher/commit/746c0896993d43e63ceb451ebad3f00c9e6523d5))
+
 ### Releases:
 
 - Update build number from 3 to 4 - ([8e238f0](https://github.com/DroidWorksStudio/mLauncher/commit/8e238f0ac7908408cb7d4e1b024b3b3f377be20d))
