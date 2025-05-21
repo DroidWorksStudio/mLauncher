@@ -13,6 +13,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Updated Language Files. ([#752](https://github.com/DroidWorksStudio/mLauncher/issues/752)) - ([746c089](https://github.com/DroidWorksStudio/mLauncher/commit/746c0896993d43e63ceb451ebad3f00c9e6523d5))
 
+### Refactoring:
+
+- Improve app restarting logic - ([070d902](https://github.com/DroidWorksStudio/mLauncher/commit/070d9026b16a99ea07d4aafffca722f07b369082))
+
 ### Releases:
 
 - Update build number from 3 to 4 - ([8e238f0](https://github.com/DroidWorksStudio/mLauncher/commit/8e238f0ac7908408cb7d4e1b024b3b3f377be20d))
