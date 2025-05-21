@@ -87,7 +87,8 @@
     <string name="show_recent_apps">최근 앱 표시</string>
     <string name="number_of_recents">최근 앱 수</string>
     <string name="show_app_usage_stats">앱 사용 통계 표시</string>
-    <string name="select_app_icons">앱 아이콘 선택</string>
+    <string name="select_home_icons">Select Home Icon Pack</string>
+    <string name="select_app_list_icons">Select App List Icon Pack</string>
     <string name="enable_filter_strength">필터 강도 활성화</string>
     <string name="filter_strength">필터 강도</string>
     <string name="show_background">배경보기</string>
@@ -222,6 +223,8 @@
     <string name="apply_icon_pack">아이콘 팩 적용</string>
     <string name="applying_icon_pack">아이콘에 새로운 모습을 더해보세요…</string>
     <string name="apply_icon_pack_are_you_sure">이 아이콘 팩을 적용하시겠습니까?\n\n%1$s</string>
+    <string name="apply_to_home">Apply To Home</string>
+    <string name="apply_to_app_list">Apply To App List</string>
     <!-- Settings Strings -->
     <string name="left">Left</string>
     <string name="right">Right</string>
