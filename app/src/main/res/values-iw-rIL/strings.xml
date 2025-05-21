@@ -87,7 +87,8 @@
     <string name="show_recent_apps">הצג יישומים אחרונים</string>
     <string name="number_of_recents">מספר היישומים האחרונים</string>
     <string name="show_app_usage_stats">הצג סטטיסטיקות שימוש ביישומים</string>
-    <string name="select_app_icons">בחר סימלוני אפליקציה</string>
+    <string name="select_home_icons">Select Home Icon Pack</string>
+    <string name="select_app_list_icons">Select App List Icon Pack</string>
     <string name="enable_filter_strength">הפעל עוצמת סינון</string>
     <string name="filter_strength">חוזק מסנן</string>
     <string name="show_background">הצג רקע</string>
@@ -224,6 +225,8 @@
     <string name="apply_icon_pack">החלת חבילת אייקונים</string>
     <string name="applying_icon_pack">נותן לאייקונים שלך מראה רענן…</string>
     <string name="apply_icon_pack_are_you_sure">האם אתה בטוח שברצונך להחיל את חבילת האייקונים הזו?\n\n%1$s</string>
+    <string name="apply_to_home">Apply To Home</string>
+    <string name="apply_to_app_list">Apply To App List</string>
     <!-- Settings Strings -->
     <string name="left">שמאל</string>
     <string name="right">ימין</string>
