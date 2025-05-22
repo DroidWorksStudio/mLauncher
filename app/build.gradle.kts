@@ -1,5 +1,3 @@
-@file:Suppress("UnstableApiUsage")
-
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -79,10 +77,6 @@ android {
         compose = true
         viewBinding = true
         buildConfig = true
-    }
-
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.3"
     }
 
     compileOptions {
