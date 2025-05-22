@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
+## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
+
+### Refactoring:
+
+- Use ContentProvider for early app initialization - ([2dbc13f](https://github.com/DroidWorksStudio/mLauncher/commit/2dbc13f415518ef2abb4a2e6116e7d254051e47a))
+
 ## [1.10.3.4](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.3.4) - (21, May 2025)
 
 ### Implemented Enhancements:
