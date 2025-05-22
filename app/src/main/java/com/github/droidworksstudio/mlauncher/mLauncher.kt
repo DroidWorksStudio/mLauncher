@@ -1,11 +1,8 @@
 package com.github.droidworksstudio.mlauncher
 
-import android.app.Activity
 import android.app.Application
 import android.content.Context
-import android.content.pm.ActivityInfo
 import android.graphics.Typeface
-import android.os.Bundle
 import android.util.Log
 import com.github.droidworksstudio.common.CrashHandler
 import com.github.droidworksstudio.mlauncher.data.Constants
@@ -15,79 +12,50 @@ import com.github.droidworksstudio.mlauncher.helper.IconPackHelper
 import java.io.File
 
 class Mlauncher : Application() {
-    private lateinit var prefs: Prefs
-
     companion object {
-        // Directly store the application context
         private var appContext: Context? = null
 
-        // Access the context directly without WeakReference
         fun getContext(): Context {
-            return appContext ?: throw IllegalStateException("Context is not initialized.")
-        }
-    }
-
-    override fun onCreate() {
-        super.onCreate()
-
-        // Initialize appContext here
-        appContext = applicationContext
-
-        // Initialize prefs here
-        prefs = Prefs(applicationContext)
-
-        if (prefs.iconPackHome == Constants.IconPacks.Custom) {
-            IconPackHelper.preloadIcons(this, prefs.customIconPackHome, IconCacheTarget.HOME)
+            return appContext ?: throw IllegalStateException(
+                "Mlauncher not initialized. Ensure Mlauncher.initialize(context) is called early."
+            )
         }
 
-        if (prefs.iconPackAppList == Constants.IconPacks.Custom) {
-            IconPackHelper.preloadIcons(this, prefs.customIconPackAppList, IconCacheTarget.APP_LIST)
-        }
+        fun initialize(context: Context) {
+            if (appContext != null) return // already initialized
+            appContext = context.applicationContext
 
-        // Initialize com.github.droidworksstudio.common.CrashHandler to catch uncaught exceptions
-        Thread.setDefaultUncaughtExceptionHandler(CrashHandler(applicationContext))
-
-        setCustomFont(applicationContext)
-
-        registerActivityLifecycleCallbacks(object : ActivityLifecycleCallbacks {
-            override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {
-                val isLocked = prefs.lockOrientation
-
-                activity.requestedOrientation = if (isLocked) {
-                    ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
-                } else {
-                    ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
-                }
+            // Optional: preload icons, init crash handler, etc. if needed
+            val prefs = Prefs(appContext!!)
+            if (prefs.iconPackHome == Constants.IconPacks.Custom) {
+                IconPackHelper.preloadIcons(appContext!!, prefs.customIconPackHome, IconCacheTarget.HOME)
             }
 
-            override fun onActivityStarted(activity: Activity) {}
-            override fun onActivityResumed(activity: Activity) {}
-            override fun onActivityPaused(activity: Activity) {}
-            override fun onActivityStopped(activity: Activity) {}
-            override fun onActivitySaveInstanceState(activity: Activity, outState: Bundle) {}
-            override fun onActivityDestroyed(activity: Activity) {}
-        })
+            if (prefs.iconPackAppList == Constants.IconPacks.Custom) {
+                IconPackHelper.preloadIcons(appContext!!, prefs.customIconPackAppList, IconCacheTarget.APP_LIST)
+            }
 
-        // Log app launch
-        CrashHandler.logUserAction("App Launched")
-    }
+            Thread.setDefaultUncaughtExceptionHandler(CrashHandler(appContext!!))
 
+            setCustomFont(appContext!!)
 
-    private fun setCustomFont(context: Context) {
-        val customFontFile = File(context.filesDir, "CustomFont.ttf")
-        if (!customFontFile.exists()) {
-            prefs.fontFamily = Constants.FontFamily.System
+            CrashHandler.logUserAction("App Launched")
         }
 
-        // Load the custom font from resources
-        val customFont = prefs.fontFamily.getFont(context)
+        private fun setCustomFont(context: Context) {
+            val prefs = Prefs(context)
+            val customFontFile = File(context.filesDir, "CustomFont.ttf")
+            if (!customFontFile.exists()) {
+                prefs.fontFamily = Constants.FontFamily.System
+            }
 
-        // Apply the custom font to different font families
-        if (customFont != null) {
-            TypefaceUtil.setDefaultFont("DEFAULT", customFont)
-            TypefaceUtil.setDefaultFont("MONOSPACE", customFont)
-            TypefaceUtil.setDefaultFont("SERIF", customFont)
-            TypefaceUtil.setDefaultFont("SANS_SERIF", customFont)
+            val customFont = prefs.fontFamily.getFont(context)
+            if (customFont != null) {
+                TypefaceUtil.setDefaultFont("DEFAULT", customFont)
+                TypefaceUtil.setDefaultFont("MONOSPACE", customFont)
+                TypefaceUtil.setDefaultFont("SERIF", customFont)
+                TypefaceUtil.setDefaultFont("SANS_SERIF", customFont)
+            }
         }
     }
 }

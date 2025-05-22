@@ -44,6 +44,11 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
+        <provider
+            android:name="com.github.droidworksstudio.mlauncher.init.MlauncherInitProvider"
+            android:authorities="${applicationId}.mlauncher.initprovider"
+            android:exported="false"
+            android:initOrder="100" />
 
         <activity
             android:name=".MainActivity"
