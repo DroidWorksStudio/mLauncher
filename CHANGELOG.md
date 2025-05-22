@@ -4,8 +4,18 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Chore:
+
+- Configure git user for changelog workflow - ([b8e2813](https://github.com/DroidWorksStudio/mLauncher/commit/b8e281302fc65cad3d8234d78425b2b44127ba84))
+
+### Feature Removal:
+
+- Remove unused composeOptions and file suppression - ([8b3b59b](https://github.com/DroidWorksStudio/mLauncher/commit/8b3b59b2feffd25aa19551092b963a2bd41636dc))
+
 ### Refactoring:
 
+- Remove GPG signing from changelog workflow - ([12d272f](https://github.com/DroidWorksStudio/mLauncher/commit/12d272f061afaec2a518968630ab30c2cfb42772))
+- Remove unused composeOptions and file suppression - ([8b3b59b](https://github.com/DroidWorksStudio/mLauncher/commit/8b3b59b2feffd25aa19551092b963a2bd41636dc))
 - Use ContentProvider for early app initialization - ([2dbc13f](https://github.com/DroidWorksStudio/mLauncher/commit/2dbc13f415518ef2abb4a2e6116e7d254051e47a))
 
 ## [1.10.3.4](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.3.4) - (21, May 2025)
