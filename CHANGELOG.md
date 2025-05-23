@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Implemented Enhancements:
+
+- *(themes)* Add notes theming and new themes - ([dcb89ba](https://github.com/DroidWorksStudio/mLauncher/commit/dcb89bad1193defc6c69c7fc80858a42fcb9d2fb))
+
 ### Chore:
 
 - Configure git user for changelog workflow - ([b8e2813](https://github.com/DroidWorksStudio/mLauncher/commit/b8e281302fc65cad3d8234d78425b2b44127ba84))
