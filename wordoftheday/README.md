@@ -1,11 +1,12 @@
 # WordOfTheDay Folder
 
-This folder contains exported WordOfTheDay for the mLauncher. WordOfTheDay are stored as `.json` files, which are JSON-based and contain the WordOfTheDay related
+This folder contains exported WordOfTheDay for the MultiLauncher. WordOfTheDay are stored as `.json` files, which are JSON-based and contain the
+WordOfTheDay related
 `SharedPreferences` settings.
 
 ## Importing a WordOfTheDay
 
-1. Open the mLauncher settings.
+1. Open the MultiLauncher settings.
 2. Navigate to the advanced section.
 3. Click `Word of The Day` to Import.
 4. Select an `.json` file from your device.
@@ -20,7 +21,6 @@ This folder contains exported WordOfTheDay for the mLauncher. WordOfTheDay are s
     - [Download fortune_cookies WordOfTheDay](fortune_cookies.json)
     - [Download random_facts WordOfTheDay](random_facts.json)
     - [Download stoic WordOfTheDay](stoic.json)
-
 
 ## Notes
 
