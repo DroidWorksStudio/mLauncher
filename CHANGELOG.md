@@ -23,6 +23,10 @@ All notable changes to this project will be documented in this file. See [conven
 - Remove unused composeOptions and file suppression - ([8b3b59b](https://github.com/DroidWorksStudio/mLauncher/commit/8b3b59b2feffd25aa19551092b963a2bd41636dc))
 - Use ContentProvider for early app initialization - ([2dbc13f](https://github.com/DroidWorksStudio/mLauncher/commit/2dbc13f415518ef2abb4a2e6116e7d254051e47a))
 
+### Releases:
+
+- Bump version to 1.10.4 - ([7dc5c45](https://github.com/DroidWorksStudio/mLauncher/commit/7dc5c4532a3a63722d65a82957f62919ff41dd87))
+
 ## [1.10.3.4](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.3.4) - (21, May 2025)
 
 ### Implemented Enhancements:
