@@ -238,16 +238,15 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     fun getStatusBarIconAreaHeight(view: View): Int {
         val insets = ViewCompat.getRootWindowInsets(view) ?: return 0
 
-        val statusBarInset = insets.getInsets(WindowInsetsCompat.Type.statusBars()).top
         val cutoutHeight = insets.displayCutout?.safeInsetTop ?: 0
+        val density = view.resources.displayMetrics.density
 
         // If there is a cutout, assume the icon area is below it and fixed ~24dp
         return if (cutoutHeight > 0) {
-            val density = view.resources.displayMetrics.density
             (24 * density).toInt()  // Approx. 24dp in pixels
         } else {
             // No notch, use full status bar height
-            statusBarInset
+            (density).toInt()
         }
     }
 

@@ -26,6 +26,8 @@ import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Migration
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.ActivityMainBinding
+import com.github.droidworksstudio.mlauncher.helper.IconCacheTarget
+import com.github.droidworksstudio.mlauncher.helper.IconPackHelper
 import com.github.droidworksstudio.mlauncher.helper.emptyString
 import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
 import com.github.droidworksstudio.mlauncher.helper.utils.AppReloader
@@ -134,6 +136,14 @@ class MainActivity : AppCompatActivity() {
 
         // Initialize com.github.droidworksstudio.common.CrashHandler to catch uncaught exceptions
         Thread.setDefaultUncaughtExceptionHandler(CrashHandler(applicationContext))
+
+        if (prefs.iconPackHome == Constants.IconPacks.Custom) {
+            IconPackHelper.preloadIcons(applicationContext, prefs.customIconPackHome, IconCacheTarget.HOME)
+        }
+
+        if (prefs.iconPackAppList == Constants.IconPacks.Custom) {
+            IconPackHelper.preloadIcons(applicationContext, prefs.customIconPackAppList, IconCacheTarget.APP_LIST)
+        }
 
         if (!prefs.isOnboardingCompleted()) {
             startActivity(Intent(this, OnboardingActivity::class.java))
