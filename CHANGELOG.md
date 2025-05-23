@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file. See [conven
 ### Implemented Enhancements:
 
 - *(themes)* Add notes theming and new themes - ([dcb89ba](https://github.com/DroidWorksStudio/mLauncher/commit/dcb89bad1193defc6c69c7fc80858a42fcb9d2fb))
+- Preload custom icon packs on app startup - ([4c863b7](https://github.com/DroidWorksStudio/mLauncher/commit/4c863b7b0c4bcf5c51dec35d07585d6454bf0a68))
 
 ### Chore:
 
