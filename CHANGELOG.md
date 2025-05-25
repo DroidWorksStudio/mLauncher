@@ -8,6 +8,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Implement migration for malformed Message objects - ([a93e4ad](https://github.com/DroidWorksStudio/mLauncher/commit/a93e4ad9f06d306ed12eef49af192c1f3249795b))
 
+### Refactoring:
+
+- Move migration logic into a separate function - ([0e3446c](https://github.com/DroidWorksStudio/mLauncher/commit/0e3446c02d24813c98e14f915f061f036ac2af55))
+
 ## [1.10.4.1](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.4.1) - (25, May 2025)
 
 ### Language Support:
