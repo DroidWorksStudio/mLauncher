@@ -1,6 +1,7 @@
 package com.github.droidworksstudio.mlauncher.data
 
 import android.content.Context
+import android.util.Log
 import com.github.droidworksstudio.mlauncher.BuildConfig
 
 class Migration(val context: Context) {
@@ -48,5 +49,34 @@ class Migration(val context: Context) {
 
         // Update the stored version code after cleanup
         prefs.appVersion = currentVersionCode
+    }
+
+    fun migrateMessages(prefs: Prefs) {
+        try {
+            // Try to parse as the new format
+            val messages = prefs.loadMessages()
+            if (messages.isNotEmpty()) {
+                // Already in correct format — no need to migrate
+                return
+            }
+        } catch (_: Exception) {
+            // If loading as new format fails, try migrating from the old format
+            try {
+                val wrongMessages = prefs.loadMessagesWrong()
+                val correctedMessages = wrongMessages.map { wrong ->
+                    Message(
+                        text = wrong.a,
+                        timestamp = wrong.b,
+                        category = wrong.c,
+                        priority = wrong.d
+                    )
+                }
+                prefs.saveMessages(correctedMessages)
+                Log.d("Migration", "Migration passed")
+            } catch (e: Exception) {
+                // Log or handle if even legacy format is broken
+                Log.e("Migration", "Migration failed", e)
+            }
+        }
     }
 }

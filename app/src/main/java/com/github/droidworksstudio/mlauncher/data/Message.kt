@@ -9,3 +9,12 @@ data class Message(
     var category: String,
     var priority: String
 )
+
+@JsonClass(generateAdapter = true)
+data class MessageWrong(
+    var a: String,
+    var b: String,
+    var c: String,
+    var d: String
+)
+

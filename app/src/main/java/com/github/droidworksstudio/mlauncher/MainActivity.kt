@@ -160,6 +160,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(view)
 
         migration.migratePreferencesOnVersionUpdate(prefs)
+        migration.migrateMessages(prefs)
 
         navController = this.findNavController(R.id.nav_host_fragment)
         viewModel = ViewModelProvider(this)[MainViewModel::class.java]

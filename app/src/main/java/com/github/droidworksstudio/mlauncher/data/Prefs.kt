@@ -145,6 +145,8 @@ class Prefs(val context: Context) {
     // Define the type for List<Message>
     val messageListType: ParameterizedType = Types.newParameterizedType(List::class.java, Message::class.java)
     val messageAdapter: JsonAdapter<List<Message>> = moshi.adapter(messageListType)
+    val messageWrongListType: ParameterizedType = Types.newParameterizedType(List::class.java, MessageWrong::class.java)
+    val messageWrongAdapter: JsonAdapter<List<MessageWrong>> = moshi.adapter(messageWrongListType)
 
     private val prefsNormal: SharedPreferences = context.getSharedPreferences(PREFS_FILENAME, 0)
     private val prefsOnboarding: SharedPreferences =
@@ -900,10 +902,16 @@ class Prefs(val context: Context) {
         }
     }
 
+    fun loadMessagesWrong(): List<MessageWrong> {
+        val json = prefsNormal.getString(NOTES_MESSAGES, "[]") ?: return emptyList()
+        return messageWrongAdapter.fromJson(json) ?: emptyList()
+    }
+
     fun loadMessages(): List<Message> {
         val json = prefsNormal.getString(NOTES_MESSAGES, "[]") ?: return emptyList()
         return messageAdapter.fromJson(json) ?: emptyList()
     }
+
 
     fun saveSettings(category: String, priority: String) {
         prefsNormal.edit {
