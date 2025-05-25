@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Refactoring:
+
+- Move "Clear Home App" logic to AppDrawerFragment - ([1639b35](https://github.com/DroidWorksStudio/mLauncher/commit/1639b35724164eeab72a38deedc8d6e6fec2a873))
+
+## [1.10.4.0](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.4.0) - (23, May 2025)
+
 ### Implemented Enhancements:
 
 - *(themes)* Add notes theming and new themes - ([dcb89ba](https://github.com/DroidWorksStudio/mLauncher/commit/dcb89bad1193defc6c69c7fc80858a42fcb9d2fb))
