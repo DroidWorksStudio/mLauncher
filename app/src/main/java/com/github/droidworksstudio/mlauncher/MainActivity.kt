@@ -159,8 +159,7 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        migration.migratePreferencesOnVersionUpdate(prefs)
-        migration.migrateMessages(prefs)
+        migration()
 
         navController = this.findNavController(R.id.nav_host_fragment)
         viewModel = ViewModelProvider(this)[MainViewModel::class.java]
@@ -499,5 +498,9 @@ class MainActivity : AppCompatActivity() {
         super.attachBaseContext(localizedContext)
     }
 
+    private fun migration() {
+        migration.migratePreferencesOnVersionUpdate(prefs)
+        migration.migrateMessages(prefs)
+    }
 
 }
