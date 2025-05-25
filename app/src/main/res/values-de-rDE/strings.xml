@@ -185,6 +185,7 @@
     <!-- App Page Strings -->
     <string name="hidden_apps">Versteckte Apps</string>
     <string name="favorite_apps">Lieblings-Apps</string>
+    <string name="clear_home_app">Clear Home App</string>
     <!-- Accessibility/Help Strings -->
     <string name="accessibility_service_name">MultiLauncher-Zugänglichkeit</string>
     <string name="accessibility_service_why_we_need">Warum wir eine Barrierefreiheitsberechtigung benötigen</string>
