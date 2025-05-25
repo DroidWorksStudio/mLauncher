@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Improve search bar UX and layout - ([ed8b13c](https://github.com/DroidWorksStudio/mLauncher/commit/ed8b13c013d7b96efe893a98e7764f15e2a367d0))
 - Replace Gson with Moshi for JSON serialization/deserialization - ([031d2e9](https://github.com/DroidWorksStudio/mLauncher/commit/031d2e937249ef326b8dc7c5edfcc50dbfd9fada))
 - Move "Clear Home App" logic to AppDrawerFragment - ([1639b35](https://github.com/DroidWorksStudio/mLauncher/commit/1639b35724164eeab72a38deedc8d6e6fec2a873))
 
