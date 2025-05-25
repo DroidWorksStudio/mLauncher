@@ -31,12 +31,12 @@ constraintlayout-compose = "1.1.1"
 
 # Compose Versions
 activity-compose = "1.10.1"
-compose-android = "1.8.1"
-compose-material = "1.8.1"
-compose-animation = "1.8.1"
-compose-ui = "1.8.1"
-compose-foundation = "1.8.1"
-compose-ui-tooling = "1.8.1"
+compose-android = "1.8.2"
+compose-material = "1.8.2"
+compose-animation = "1.8.2"
+compose-ui = "1.8.2"
+compose-foundation = "1.8.2"
+compose-ui-tooling = "1.8.2"
 
 # Other Libraries
 commons-text = "1.13.1"
@@ -48,9 +48,9 @@ espresso = "3.6.1"
 test-core-ktx = "1.6.1"
 test-runner = "1.6.2"
 test-rules = "1.6.1"
-fragment-testing = "1.8.6"
-ui-test-junit4 = "1.8.1"
-ui-test-manifest = "1.8.1"
+fragment-testing = "1.8.7"
+ui-test-junit4 = "1.8.2"
+ui-test-manifest = "1.8.2"
 activity = "1.10.1"
 
 [libraries]
