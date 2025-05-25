@@ -185,7 +185,7 @@
     <!-- App Page Strings -->
     <string name="hidden_apps">Hidden apps</string>
     <string name="favorite_apps">즐겨찾는 앱</string>
-    <string name="clear_home_app">Clear Home App</string>
+    <string name="clear_home_app">클리어 홈 앱</string>
     <!-- Accessibility/Help Strings -->
     <string name="accessibility_service_name">MultiLauncher 접근성</string>
     <string name="accessibility_service_why_we_need">접근성 허가가 필요한 이유</string>
