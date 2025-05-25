@@ -185,6 +185,7 @@
     <!-- App Page Strings -->
     <string name="hidden_apps">非表示のアプリ</string>
     <string name="favorite_apps">お気に入りのアプリ</string>
+    <string name="clear_home_app">Clear Homeアプリ</string>
     <!-- Accessibility/Help Strings -->
     <string name="accessibility_service_name">マルチランチャーのアクセシビリティ</string>
     <string name="accessibility_service_why_we_need">アクセシビリティ許可が必要な理由</string>

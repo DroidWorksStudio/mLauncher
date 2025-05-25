@@ -185,6 +185,7 @@
     <!-- App Page Strings -->
     <string name="hidden_apps">יישומים מוסתרים</string>
     <string name="favorite_apps">יישומים מועדפים</string>
+    <string name="clear_home_app">נקה את אפליקציית הבית</string>
     <!-- Accessibility/Help Strings -->
     <string name="accessibility_service_name">נגישות רב-לאנצ\'ר</string>
     <string name="accessibility_service_why_we_need">למה אנחנו צריכים אישור נגישות</string>
