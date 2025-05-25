@@ -62,17 +62,14 @@ object IconPackHelper {
                     val component = parser.getAttributeValue(null, "component")
                     var drawable = parser.getAttributeValue(null, "drawable")
 
-                    Log.d(
-                        "IconPackLoader",
-                        "Parsing item: component=$component, drawable=$drawable"
-                    )
+//                    Log.d("IconPackLoader", "Parsing item: component=$component, drawable=$drawable")
 
                     val match = regex.find(component ?: "")
                     val pkgName = match?.groupValues?.get(1)
 
                     if (pkgName != null && drawable != null) {
                         if (!installedPackages.contains(pkgName)) {
-                            Log.w("IconPackLoader", "Skipping $pkgName (not installed)")
+//                            Log.w("IconPackLoader", "Skipping $pkgName (not installed)")
                             skippedCount++
                             eventType = parser.next()
                             continue
@@ -80,7 +77,7 @@ object IconPackHelper {
 
                         drawable = drawable.removePrefix("@drawable/").removePrefix("drawable/")
 
-                        Log.d("IconPackLoader", "Mapping found: $pkgName -> $drawable")
+//                        Log.d("IconPackLoader", "Mapping found: $pkgName -> $drawable")
                         nameCache[pkgName] = drawable
 
                         val resId = iconPackContext.resources.getIdentifier(
@@ -99,18 +96,15 @@ object IconPackHelper {
                                     IconCacheTarget.HOME -> homeIconCache[pkgName] = it
                                 }
                                 loadedCount++
-                                Log.d("IconPackLoader", "Icon cached: $pkgName (resId=$resId)")
-                            } ?: Log.w(
-                                "IconPackLoader",
-                                "Drawable is null for resource: $drawable (resId=$resId)"
-                            )
+//                                Log.d("IconPackLoader", "Icon cached: $pkgName (resId=$resId)")
+                            } ?: Log.w("IconPackLoader", "Drawable is null for resource: $drawable (resId=$resId)")
                         } else {
                             skippedCount++
-                            Log.w("IconPackLoader", "Drawable resource not found: $drawable")
+//                            Log.w("IconPackLoader", "Drawable resource not found: $drawable")
                         }
                     } else {
                         skippedCount++
-                        Log.w("IconPackLoader", "Invalid mapping. Component or drawable is null.")
+//                        Log.w("IconPackLoader", "Invalid mapping. Component or drawable is null.")
                     }
                 }
                 eventType = parser.next()
@@ -119,10 +113,7 @@ object IconPackHelper {
             inputStream.close()
             isInitialized = true
 
-            Log.d(
-                "IconPackLoader",
-                "Preload finished. Loaded: $loadedCount, Skipped: $skippedCount"
-            )
+//            Log.d("IconPackLoader", "Preload finished. Loaded: $loadedCount, Skipped: $skippedCount")
 
         } catch (e: Exception) {
             Log.e("IconPackLoader", "Error while preloading icon pack: ${e.message}", e)

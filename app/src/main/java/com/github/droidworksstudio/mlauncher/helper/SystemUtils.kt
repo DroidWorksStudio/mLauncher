@@ -39,6 +39,7 @@ import androidx.core.net.toUri
 import com.github.droidworksstudio.common.ColorIconsExtensions
 import com.github.droidworksstudio.common.CrashHandler
 import com.github.droidworksstudio.common.getLocalizedString
+import com.github.droidworksstudio.common.getLocalizedStringArray
 import com.github.droidworksstudio.common.openAccessibilitySettings
 import com.github.droidworksstudio.common.showLongToast
 import com.github.droidworksstudio.mlauncher.BuildConfig
@@ -300,8 +301,8 @@ fun getNextAlarm(context: Context, prefs: Prefs): CharSequence {
     }
 }
 
-fun wordOfTheDay(context: Context, prefs: Prefs): String {
-    val dailyWordsArray = loadWordList(context, prefs)
+fun wordOfTheDay(prefs: Prefs): String {
+    val dailyWordsArray = loadWordList(prefs)
     val dayOfYear = Calendar.getInstance().get(Calendar.DAY_OF_YEAR)
     val wordIndex =
         (dayOfYear - 1) % dailyWordsArray.size // Subtracting 1 to align with array indexing
@@ -413,14 +414,13 @@ fun sp2px(resources: Resources, sp: Float): Float {
 }
 
 
-fun loadWordList(context: Context, prefs: Prefs): List<String> {
+fun loadWordList(prefs: Prefs): List<String> {
     val customWordListString = prefs.wordList
     // If the user has imported their own list, use it
     return if (customWordListString != emptyString()) {
         prefs.wordList.split("||")
     } else {
-        // Fallback to the default list from resources
-        context.resources.getStringArray(R.array.word_of_the_day).toList()
+        getLocalizedStringArray(R.array.word_of_the_day).toList()
     }
 }
 

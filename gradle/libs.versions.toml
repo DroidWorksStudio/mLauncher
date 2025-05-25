@@ -2,7 +2,7 @@
 
 [versions]
 agp = "8.10.0"
-kotlin = "2.1.20"
+kotlin = "2.1.0"
 viewpager2 = "1.1.0"
 
 # AndroidX Core and AppCompat
@@ -40,7 +40,6 @@ compose-ui-tooling = "1.8.2"
 
 # Other Libraries
 commons-text = "1.13.1"
-gson = "2.13.1"
 biometric-ktx = "1.4.0-alpha02"
 
 # AndroidX Test Libraries
@@ -52,6 +51,10 @@ fragment-testing = "1.8.7"
 ui-test-junit4 = "1.8.2"
 ui-test-manifest = "1.8.2"
 activity = "1.10.1"
+
+# Database
+moshi = "1.15.0"
+ksp = "2.1.0-1.0.29"
 
 [libraries]
 # Core Libraries
@@ -91,8 +94,13 @@ compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling", versi
 
 # Miscellaneous Libraries
 commons-text = { group = "org.apache.commons", name = "commons-text", version.ref = "commons-text" }
-gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
 biometric-ktx = { group = "androidx.biometric", name = "biometric-ktx", version.ref = "biometric-ktx" }
+
+# Database
+
+moshi = { module = "com.squareup.moshi:moshi", version.ref = "moshi" }
+moshi-kotlin = { module = "com.squareup.moshi:moshi-kotlin", version.ref = "moshi" }
+moshi-codegen = { module = "com.squareup.moshi:moshi-kotlin-codegen", version.ref = "moshi" }
 
 # Testing Libraries
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso" }
@@ -110,3 +118,4 @@ android-application = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }

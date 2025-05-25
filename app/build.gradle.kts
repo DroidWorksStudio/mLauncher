@@ -3,13 +3,14 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("org.jetbrains.kotlin.plugin.compose")
     id("kotlin-android")
+    alias(libs.plugins.ksp)
 }
 
 // Top of build.gradle.kts
 val major = 1
 val minor = 10
 val patch = 4
-val build = 0
+val build = 1
 
 val versionCodeInt =
     (String.format("%02d", major) + String.format("%02d", minor) + String.format(
@@ -112,6 +113,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.viewpager2)
     implementation(libs.activity)
+    implementation(libs.commons.text)
 
     // Android Lifecycle
     implementation(libs.lifecycle.extensions)
@@ -137,12 +139,13 @@ dependencies {
     implementation(libs.compose.foundation) // Foundation library
     implementation(libs.compose.ui.tooling) // UI tooling for previews
 
-    // Text similarity and JSON handling
-    implementation(libs.commons.text)
-    implementation(libs.gson)
-
     // Biometric support
     implementation(libs.biometric.ktx)
+
+    // Database
+    implementation(libs.moshi)
+    implementation(libs.moshi.kotlin)
+    ksp(libs.moshi.codegen)
 
     // AndroidX Test - Espresso
     androidTestImplementation(libs.espresso.core)

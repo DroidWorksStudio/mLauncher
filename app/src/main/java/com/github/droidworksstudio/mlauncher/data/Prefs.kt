@@ -13,9 +13,10 @@ import com.github.droidworksstudio.mlauncher.data.Constants.Gravity
 import com.github.droidworksstudio.mlauncher.helper.emptyString
 import com.github.droidworksstudio.mlauncher.helper.getUserHandleFromString
 import com.github.droidworksstudio.mlauncher.helper.isSystemInDarkMode
-import com.google.gson.Gson
-import com.google.gson.GsonBuilder
-import com.google.gson.reflect.TypeToken
+import com.squareup.moshi.JsonAdapter
+import com.squareup.moshi.Moshi
+import com.squareup.moshi.Types
+import java.lang.reflect.ParameterizedType
 
 private const val PREFS_FILENAME = "app.mlauncher.prefs"
 private const val PREFS_ONBOARDING_FILENAME = "app.mlauncher.prefs.onboarding"
@@ -138,6 +139,12 @@ private const val NOTES_PRIORITY = "NOTES_PRIORITY"
 private const val ONBOARDING_COMPLETED = "ONBOARDING_COMPLETED"
 
 class Prefs(val context: Context) {
+    // Build Moshi instance once (ideally a singleton)
+    val moshi: Moshi = Moshi.Builder().build()
+
+    // Define the type for List<Message>
+    val messageListType: ParameterizedType = Types.newParameterizedType(List::class.java, Message::class.java)
+    val messageAdapter: JsonAdapter<List<Message>> = moshi.adapter(messageListType)
 
     private val prefsNormal: SharedPreferences = context.getSharedPreferences(PREFS_FILENAME, 0)
     private val prefsOnboarding: SharedPreferences =
@@ -145,32 +152,54 @@ class Prefs(val context: Context) {
 
     fun saveToString(): String {
         val allPreferences = HashMap<String, Any?>(prefsNormal.all)
-        return GsonBuilder().setPrettyPrinting().create().toJson(allPreferences)
+
+        val moshi = Moshi.Builder().build()
+
+        val type = Types.newParameterizedType(
+            Map::class.java,
+            String::class.java,
+            Any::class.java
+        )
+
+        val adapter = moshi.adapter<Map<String, Any?>>(type).indent("  ") // Pretty-print
+
+        return adapter.toJson(allPreferences)
     }
 
     fun loadFromString(json: String) {
+        val moshi = Moshi.Builder().build()
+
+        val type = Types.newParameterizedType(
+            Map::class.java,
+            String::class.java,
+            Any::class.java
+        )
+
+        val adapter = moshi.adapter<Map<String, Any?>>(type)
+
+        val all = adapter.fromJson(json) ?: emptyMap()
+
         prefsNormal.edit {
-            val all: HashMap<String, Any?> =
-                Gson().fromJson(json, object : TypeToken<HashMap<String, Any?>>() {}.type)
             for ((key, value) in all) {
                 when (value) {
                     is String -> putString(key, value)
                     is Boolean -> putBoolean(key, value)
-                    is Number -> {
-                        if (value.toDouble() == value.toInt().toDouble()) {
+                    is Double -> {
+                        if (value % 1 == 0.0) {
                             putInt(key, value.toInt())
                         } else {
                             putFloat(key, value.toFloat())
                         }
                     }
 
-                    is MutableSet<*> -> {
-                        val list = value.filterIsInstance<String>().toSet()
-                        putStringSet(key, list)
+                    is List<*> -> {
+                        // Moshi deserializes sets as lists
+                        val stringSet = value.filterIsInstance<String>().toSet()
+                        putStringSet(key, stringSet)
                     }
 
                     else -> {
-                        Log.d("backup error", "$value")
+                        Log.d("backup error", "Unsupported type for key '$key': $value")
                     }
                 }
             }
@@ -185,42 +214,59 @@ class Prefs(val context: Context) {
             if (allPrefs.containsKey(colorName)) {
                 val colorInt = allPrefs[colorName] as? Int
                 if (colorInt != null) {
-                    val hexColor =
-                        String.format("#%08X", colorInt) // Converts ARGB int to #AARRGGBB
+                    val hexColor = String.format("#%08X", colorInt)
                     filteredPrefs[colorName] = hexColor
                 }
             }
         }
 
-        val gson = GsonBuilder().setPrettyPrinting().create()
-        return gson.toJson(filteredPrefs)
+        val moshi = Moshi.Builder().build()
+
+        val type = Types.newParameterizedType(
+            Map::class.java,
+            String::class.java,
+            String::class.java
+        )
+        val adapter = moshi.adapter<Map<String, String>>(type).indent("  ") // pretty-print
+
+        return adapter.toJson(filteredPrefs)
     }
 
     fun loadFromTheme(json: String) {
-        prefsNormal.edit {
-            val all: HashMap<String, Any?> =
-                Gson().fromJson(json, object : TypeToken<HashMap<String, Any?>>() {}.type)
+        val moshi = Moshi.Builder().build()
 
+        val type = Types.newParameterizedType(
+            Map::class.java,
+            String::class.java,
+            Any::class.java
+        )
+
+        val adapter = moshi.adapter<Map<String, Any?>>(type)
+
+        val all = try {
+            adapter.fromJson(json)
+        } catch (e: Exception) {
+            Log.e("Theme Import", "Failed to parse JSON", e)
+            context.showLongToast("Failed to parse theme JSON.")
+            return
+        } ?: emptyMap()
+
+        prefsNormal.edit {
             for ((key, value) in all) {
                 try {
                     when (value) {
                         is String -> {
                             if (value.matches(Regex("^#([A-Fa-f0-9]{8})$"))) {
-                                // Convert HEX color (#AARRGGBB) to Int safely
                                 try {
                                     putInt(key, value.toColorInt())
                                 } catch (e: IllegalArgumentException) {
                                     context.showLongToast("Invalid color format for key: $key, value: $value")
-                                    Log.e(
-                                        "Theme Import",
-                                        "Invalid color format for key: $key, value: $value",
-                                        e
-                                    )
+                                    Log.e("Theme Import", "Invalid color format for key: $key, value: $value", e)
                                     continue
                                 }
                             } else {
-                                context.showLongToast("Unsupported value type for key: $key, value: $value")
-                                Log.e("Theme Import", "Null value found for key: $key")
+                                context.showLongToast("Unsupported HEX format for key: $key, value: $value")
+                                Log.e("Theme Import", "Unsupported HEX format for key: $key, value: $value")
                             }
                         }
 
@@ -232,10 +278,7 @@ class Prefs(val context: Context) {
 
                         else -> {
                             context.showLongToast("Unsupported value type for key: $key, value: $value")
-                            Log.e(
-                                "Theme Import",
-                                "Unsupported value type for key: $key, value: $value"
-                            )
+                            Log.e("Theme Import", "Unsupported value type for key: $key, value: $value")
                             continue
                         }
                     }
@@ -246,7 +289,6 @@ class Prefs(val context: Context) {
             }
         }
     }
-
 
     var appVersion: Int
         get() = prefsNormal.getInt(APP_VERSION, -1)
@@ -853,15 +895,14 @@ class Prefs(val context: Context) {
 
     fun saveMessages(messages: List<Message>) {
         prefsNormal.edit {
-            val json = Gson().toJson(messages)
+            val json = messageAdapter.toJson(messages)
             putString(NOTES_MESSAGES, json)
         }
     }
 
     fun loadMessages(): List<Message> {
         val json = prefsNormal.getString(NOTES_MESSAGES, "[]") ?: return emptyList()
-        val type = object : TypeToken<List<Message>>() {}.type
-        return Gson().fromJson(json, type)
+        return messageAdapter.fromJson(json) ?: emptyList()
     }
 
     fun saveSettings(category: String, priority: String) {

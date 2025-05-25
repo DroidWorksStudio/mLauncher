@@ -301,7 +301,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     private fun updateTimeAndInfo() {
         binding.apply {
             alarm.text = getNextAlarm(requireContext(), prefs)
-            dailyWord.text = wordOfTheDay(requireContext(), prefs)
+            dailyWord.text = wordOfTheDay(prefs)
         }
     }
 
@@ -444,8 +444,9 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             if (prefs.firstSettingsOpen) firstRunTips.visibility = View.VISIBLE
             else firstRunTips.visibility = View.GONE
 
-            if (!ismlauncherDefault(requireContext())) setDefaultLauncher.visibility = View.VISIBLE
-            else setDefaultLauncher.visibility = View.GONE
+            if (!ismlauncherDefault(requireContext())) {
+                setDefaultLauncher.visibility = View.VISIBLE
+            } else setDefaultLauncher.visibility = View.GONE
         }
 
         with(viewModel) {

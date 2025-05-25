@@ -31,10 +31,9 @@ import com.github.droidworksstudio.mlauncher.helper.IconPackHelper
 import com.github.droidworksstudio.mlauncher.helper.emptyString
 import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
 import com.github.droidworksstudio.mlauncher.helper.utils.AppReloader
-import com.github.droidworksstudio.mlauncher.helper.utils.words
 import com.github.droidworksstudio.mlauncher.ui.onboarding.OnboardingActivity
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
+import com.squareup.moshi.Moshi
+import com.squareup.moshi.Types
 import org.xmlpull.v1.XmlPullParser
 import java.io.BufferedReader
 import java.io.File
@@ -430,22 +429,27 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun readWordsFromFile(inputStream: InputStream?): List<String> {
-        // Make sure the input stream is not null
+        val words = mutableListOf<String>()
+
         inputStream?.let {
-            // Read the input stream into a string
-            val reader = InputStreamReader(it)
-
-            // Use Gson to parse the JSON
-            val gson = Gson()
             try {
-                // Use TypeToken to specify the expected type (a list of strings)
-                val type = object : TypeToken<Map<String, List<String>>>() {}.type
-                val jsonMap: Map<String, List<String>> = gson.fromJson(reader, type)
+                val json = it.bufferedReader().use { reader -> reader.readText() }
 
-                // Get the list of words from the "word_of_the_day" key
-                words.addAll(jsonMap["word_of_the_day"] ?: emptyList())
+                val moshi = Moshi.Builder().build()
+
+                val type = Types.newParameterizedType(
+                    Map::class.java,
+                    String::class.java,
+                    Types.newParameterizedType(List::class.java, String::class.java)
+                )
+                val adapter = moshi.adapter<Map<String, List<String>>>(type)
+
+                val jsonMap = adapter.fromJson(json) // ✅ Now passing a String
+
+                words.addAll(jsonMap?.get("word_of_the_day") ?: emptyList())
+
             } catch (e: Exception) {
-                e.printStackTrace() // Handle the error (e.g., logging)
+                e.printStackTrace()
             }
         }
 
@@ -484,4 +488,15 @@ class MainActivity : AppCompatActivity() {
         if (navController.currentDestination?.id != R.id.mainFragment)
             navController.popBackStack(R.id.mainFragment, false)
     }
+
+    override fun attachBaseContext(base: Context) {
+        val localPrefs = Prefs(base)
+        val locale = Locale.forLanguageTag(localPrefs.appLanguage.locale().toString())
+        val config = Configuration(base.resources.configuration)
+        config.setLocale(locale)
+        val localizedContext = base.createConfigurationContext(config)
+        super.attachBaseContext(localizedContext)
+    }
+
+
 }

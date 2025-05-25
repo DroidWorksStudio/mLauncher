@@ -311,35 +311,32 @@ fun Context.isBiometricEnabled(): Boolean {
 fun getLocalizedString(@StringRes stringResId: Int, vararg args: Any): String {
     // Get the context from Mlauncher. It's guaranteed to never be null
     val context = Mlauncher.getContext()
-    // Set the language on the context
-    val updatedContext = context.setLanguage()
+
+    val localPrefs = Prefs(context)
+    val locale = Locale.forLanguageTag(localPrefs.appLanguage.locale().toString())
+    val config = Configuration(context.resources.configuration)
+    config.setLocale(locale)
+    val localizedContext = context.createConfigurationContext(config)
+
     // Return the localized string with or without arguments
     return if (args.isEmpty()) {
-        updatedContext.getString(stringResId)  // No arguments, use only the string resource
+        localizedContext.getString(stringResId)  // No arguments, use only the string resource
     } else {
-        updatedContext.getString(stringResId, *args)  // Pass arguments to getString()
+        localizedContext.getString(stringResId, *args)  // Pass arguments to getString()
     }
 }
 
 fun getLocalizedStringArray(@ArrayRes arrayResId: Int): Array<String> {
     // Get the context from Mlauncher. It's guaranteed to never be null
     val context = Mlauncher.getContext()
-    // Set the language on the context
-    val updatedContext = context.setLanguage()
+
+    val localPrefs = Prefs(context)
+    val locale = Locale.forLanguageTag(localPrefs.appLanguage.locale().toString())
+    val config = Configuration(context.resources.configuration)
+    config.setLocale(locale)
+    val localizedContext = context.createConfigurationContext(config)
     // Return the localized string array
-    return updatedContext.resources.getStringArray(arrayResId)
-}
-
-
-private fun Context.setLanguage(): Context {
-    val prefs = Prefs(this)
-    val locale = prefs.appLanguage.locale() // Get the desired locale from preferences
-    val config = Configuration(this.resources.configuration).apply {
-        setLocale(locale) // Override the locale in the configuration
-    }
-
-    // Return a new Context with the adjusted configuration
-    return this.createConfigurationContext(config)
+    return localizedContext.resources.getStringArray(arrayResId)
 }
 
 fun Context.openAccessibilitySettings() {

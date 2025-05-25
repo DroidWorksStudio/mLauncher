@@ -1,16 +1,21 @@
 package com.github.droidworksstudio.mlauncher.helper.receivers
 
-import com.google.gson.Gson
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
+import com.squareup.moshi.Moshi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.net.URL
 
 class WeatherReceiver {
 
-    private val gson = Gson()
+    // Create Moshi instance once
+    private val moshi = Moshi.Builder().build()
 
-    // Simple in-memory cache (replace with more robust caching if needed)
+    // Adapter for your WeatherResponse class
+    private val weatherAdapter = moshi.adapter(WeatherResponse::class.java)
+
+    // Simple in-memory cache
     private var cachedWeather: WeatherResponse? = null
 
     suspend fun getCurrentWeather(latitude: Double, longitude: Double): WeatherResponse? {
@@ -19,7 +24,7 @@ class WeatherReceiver {
                 val urlStr =
                     "https://api.open-meteo.com/v1/forecast?latitude=$latitude&longitude=$longitude&current=weather_code,temperature_2m"
                 val response = URL(urlStr).readText()
-                val weather = gson.fromJson(response, WeatherResponse::class.java)
+                val weather = weatherAdapter.fromJson(response)
                 cachedWeather = weather // update cache
             } catch (e: Exception) {
                 e.printStackTrace()
@@ -49,26 +54,29 @@ class WeatherReceiver {
 }
 
 // 🔧 Full response wrapper
+@JsonClass(generateAdapter = true)
 data class WeatherResponse(
-    @SerializedName("current")
+    @Json(name = "current")
     val currentWeather: CurrentWeather,
 
-    @SerializedName("current_units")
+    @Json(name = "current_units")
     val currentUnits: CurrentUnits
 )
 
+@JsonClass(generateAdapter = true)
 data class CurrentWeather(
-    @SerializedName("temperature_2m")
+    @Json(name = "temperature_2m")
     val temperature: Double,
 
-    @SerializedName("weather_code")
+    @Json(name = "weather_code")
     val weatherCode: Int,
 )
 
+@JsonClass(generateAdapter = true)
 data class CurrentUnits(
-    @SerializedName("temperature_2m")
+    @Json(name = "temperature_2m")
     val temperatureUnit: String,
 
-    @SerializedName("weather_code")
+    @Json(name = "weather_code")
     val weatherCodeUnit: String,
 )
