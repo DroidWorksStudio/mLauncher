@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Bug Fixes:
+
+- Implement migration for malformed Message objects - ([a93e4ad](https://github.com/DroidWorksStudio/mLauncher/commit/a93e4ad9f06d306ed12eef49af192c1f3249795b))
+
+## [1.10.4.1](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.4.1) - (25, May 2025)
+
 ### Language Support:
 
 - Updated Language Files. ([#756](https://github.com/DroidWorksStudio/mLauncher/issues/756)) - ([961aedc](https://github.com/DroidWorksStudio/mLauncher/commit/961aedc489d908d4ddb194d755026b28f63d666d))
