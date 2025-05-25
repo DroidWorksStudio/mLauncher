@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Replace Gson with Moshi for JSON serialization/deserialization - ([031d2e9](https://github.com/DroidWorksStudio/mLauncher/commit/031d2e937249ef326b8dc7c5edfcc50dbfd9fada))
 - Move "Clear Home App" logic to AppDrawerFragment - ([1639b35](https://github.com/DroidWorksStudio/mLauncher/commit/1639b35724164eeab72a38deedc8d6e6fec2a873))
 
 ## [1.10.4.0](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.4.0) - (23, May 2025)
