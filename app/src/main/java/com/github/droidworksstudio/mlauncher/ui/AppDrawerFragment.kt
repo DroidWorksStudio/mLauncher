@@ -129,7 +129,7 @@ class AppDrawerFragment : Fragment() {
                 binding.clearHomeButton.apply {
                     val currentApp = prefs.getHomeAppModel(n)
                     if (currentApp.activityPackage.isNotEmpty() && currentApp.activityClass.isNotEmpty()) {
-                        visibility = View.VISIBLE
+                        isVisible = true
                         text = getLocalizedString(R.string.clear_home_app)
                         setTextColor(prefs.appColor)
                         setOnClickListener {
@@ -249,6 +249,9 @@ class AppDrawerFragment : Fragment() {
                         isVisible = !newText.isNullOrEmpty()
                         text = if (isVisible) getLocalizedString(R.string.rename) else null
                         setOnClickListener { if (isVisible) renameListener(flag, n) }
+                    }
+                    binding.clearHomeButton.apply {
+                        isVisible = newText.isNullOrEmpty()
                     }
                 }
                 newText?.let {
