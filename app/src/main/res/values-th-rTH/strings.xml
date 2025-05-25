@@ -185,6 +185,7 @@
     <!-- App Page Strings -->
     <string name="hidden_apps">แอพที่ซ่อนอยู่</string>
     <string name="favorite_apps">แอปพลิเคชั่นที่ชื่นชอบ</string>
+    <string name="clear_home_app">Clear Home App</string>
     <!-- Accessibility/Help Strings -->
     <string name="accessibility_service_name">การเข้าถึง MultiLauncher</string>
     <string name="accessibility_service_why_we_need">เหตุใดเราจึงต้องได้รับอนุญาตการเข้าถึง</string>
