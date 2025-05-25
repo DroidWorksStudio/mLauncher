@@ -597,7 +597,7 @@ class GesturesFragment : Fragment() {
 
         when (action) {
             Action.OpenApp -> {
-                viewModel.getAppList(true, AppDrawerFlag.None)
+                viewModel.getAppList(true)
                 findNavController().navigate(
                     R.id.action_gesturesFragment_to_appListFragment,
                     bundleOf("flag" to flag.toString())

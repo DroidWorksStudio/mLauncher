@@ -192,10 +192,10 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
-    fun getAppList(includeHiddenApps: Boolean = true, flag: AppDrawerFlag = AppDrawerFlag.None) {
+    fun getAppList(includeHiddenApps: Boolean = true) {
         viewModelScope.launch {
             appList.value =
-                getAppsList(appContext, includeRegularApps = true, includeHiddenApps, flag = flag)
+                getAppsList(appContext, includeRegularApps = true, includeHiddenApps)
         }
     }
 

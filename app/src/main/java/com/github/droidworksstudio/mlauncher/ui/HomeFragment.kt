@@ -539,7 +539,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     }
 
     private fun showAppList(flag: AppDrawerFlag, includeHiddenApps: Boolean = false, n: Int = 0) {
-        viewModel.getAppList(includeHiddenApps, flag)
+        viewModel.getAppList(includeHiddenApps)
         try {
             if (findNavController().currentDestination?.id == R.id.mainFragment) {
                 findNavController().navigate(

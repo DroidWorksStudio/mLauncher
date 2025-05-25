@@ -8,6 +8,7 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.os.UserManager
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
@@ -42,6 +43,7 @@ import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Constants.AppDrawerFlag
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentAppDrawerBinding
+import com.github.droidworksstudio.mlauncher.helper.emptyString
 import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
 import com.github.droidworksstudio.mlauncher.helper.openAppInfo
 import com.github.droidworksstudio.mlauncher.ui.components.AZSidebarView
@@ -91,7 +93,6 @@ class AppDrawerFragment : Fragment() {
 
         when (flag) {
             AppDrawerFlag.SetDoubleTap,
-            AppDrawerFlag.SetHomeApp,
             AppDrawerFlag.SetShortSwipeRight,
             AppDrawerFlag.SetShortSwipeLeft,
             AppDrawerFlag.SetShortSwipeUp,
@@ -108,6 +109,37 @@ class AppDrawerFragment : Fragment() {
                     findNavController().popBackStack()
                 }
             }
+
+            AppDrawerFlag.SetHomeApp -> {
+                // Get UserManager
+                val userManager = requireContext().getSystemService(Context.USER_SERVICE) as UserManager
+
+                val clearApp = AppListItem(
+                    "Clear",
+                    emptyString(),
+                    emptyString(),
+                    user = userManager.userProfiles[0], // No user associated with the "Clear" option
+                    customLabel = "Clear",
+                )
+
+                binding.drawerButton.setOnClickListener {
+                    findNavController().popBackStack()
+                }
+
+                binding.clearHomeButton.apply {
+                    val currentApp = prefs.getHomeAppModel(n)
+                    if (currentApp.activityPackage.isNotEmpty() && currentApp.activityClass.isNotEmpty()) {
+                        visibility = View.VISIBLE
+                        text = getLocalizedString(R.string.clear_home_app)
+                        setTextColor(prefs.appColor)
+                        setOnClickListener {
+                            prefs.setHomeAppModel(n, clearApp)
+                            findNavController().popBackStack()
+                        }
+                    }
+                }
+            }
+
 
             else -> {}
         }

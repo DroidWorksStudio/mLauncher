@@ -45,7 +45,6 @@ import com.github.droidworksstudio.mlauncher.BuildConfig
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.AppListItem
 import com.github.droidworksstudio.mlauncher.data.Constants
-import com.github.droidworksstudio.mlauncher.data.Constants.AppDrawerFlag
 import com.github.droidworksstudio.mlauncher.data.Message
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.helper.analytics.AppUsageMonitor
@@ -139,8 +138,7 @@ suspend fun getAppsList(
     context: Context,
     includeRegularApps: Boolean = true,
     includeHiddenApps: Boolean = false,
-    includeRecentApps: Boolean = true,
-    flag: AppDrawerFlag = AppDrawerFlag.None,
+    includeRecentApps: Boolean = true
 ): MutableList<AppListItem> {
     return withContext(Dispatchers.Main) {
         val appList: MutableList<AppListItem> = mutableListOf()
@@ -158,23 +156,6 @@ suspend fun getAppsList(
             val prefs = Prefs(context)
 
             for (profile in userManager.userProfiles) {
-                // Add a "Clear" option at the top of the list if homeApps is true
-                Log.d("homeApps", "$flag")
-                when (flag) {
-                    AppDrawerFlag.SetHomeApp -> {
-                        val clearApp = AppListItem(
-                            "Clear",
-                            emptyString(),
-                            emptyString(),
-                            user = profile, // No user associated with the "Clear" option
-                            customLabel = "Clear Current Home App",
-                        )
-                        combinedList.add(0, clearApp) // Add it at the top of the list
-                    }
-
-                    else -> {}
-                }
-
                 // Check if the profile is private space
                 val isProfilePrivate = PrivateSpaceManager(context).isPrivateSpaceProfile(profile)
 

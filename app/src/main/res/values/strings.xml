@@ -246,6 +246,7 @@
     <!-- App Page Strings -->
     <string name="hidden_apps">Hidden Apps</string>
     <string name="favorite_apps">Favorite Apps</string>
+    <string name="clear_home_app">Clear Home App</string>
 
     <!-- Accessibility/Help Strings -->
     <string name="accessibility_service_name">MultiLauncher Accessibility</string>

@@ -52,7 +52,7 @@ import com.github.droidworksstudio.mlauncher.helper.utils.visibleHideLayouts
 class AppDrawerAdapter(
     private val context: Context,
     private val fragment: Fragment,
-    private var flag: AppDrawerFlag,
+    internal var flag: AppDrawerFlag,
     private val gravity: Int,
     private val appClickListener: (AppListItem) -> Unit,
     private val appDeleteListener: (AppListItem) -> Unit,

@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="22dp"
         android:orientation="horizontal">
 
         <androidx.appcompat.widget.SearchView
@@ -34,13 +34,24 @@
             app:theme="@style/AppSearchText" />
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/clearHomeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchContainer"
+        android:layout_alignParentEnd="true"
+        android:paddingHorizontal="18dp"
+        android:paddingVertical="4dp"
+        android:visibility="gone"
+        app:theme="@style/AppSearchText" />
+
     <!-- Drawer button and tip, positioned below search container -->
     <TextView
         android:id="@+id/drawerButton"
         style="@style/TextSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/searchContainer"
+        android:layout_below="@id/clearHomeButton"
         android:layout_alignParentEnd="true"
         android:paddingHorizontal="@dimen/app_padding_vertical"
         android:textAllCaps="true"
@@ -66,7 +77,7 @@
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_below="@id/appDrawerTip"
+        android:layout_below="@id/clearHomeButton"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="25dp"
         android:clipChildren="false"
