@@ -185,6 +185,7 @@
     <!-- App Page Strings -->
     <string name="hidden_apps">Paslėptos programėlės</string>
     <string name="favorite_apps">Mėgstamiausios programos</string>
+    <string name="clear_home_app">Clear Home App</string>
     <!-- Accessibility/Help Strings -->
     <string name="accessibility_service_name">„MultiLauncher“ pritaikymas neįgaliesiems</string>
     <string name="accessibility_service_why_we_need">Kodėl mums reikia prieigos leidimo</string>
