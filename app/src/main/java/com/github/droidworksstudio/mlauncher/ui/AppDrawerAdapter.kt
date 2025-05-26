@@ -76,6 +76,7 @@ class AppDrawerAdapter(
         prefs = Prefs(parent.context)
         val fontColor = prefs.appColor
         binding.appTitle.setTextColor(fontColor)
+        sortApps()
 
         binding.appTitle.textSize = prefs.appSize.toFloat()
         val padding: Int = prefs.textPaddingSize
@@ -87,7 +88,6 @@ class AppDrawerAdapter(
     @SuppressLint("RecyclerView", "NotifyDataSetChanged")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         if (appFilteredList.isEmpty()) return
-        sortApps()
         val appModel = appFilteredList[holder.absoluteAdapterPosition]
         holder.bind(flag, gravity, appModel, appClickListener, appInfoListener, appDeleteListener)
 
@@ -225,6 +225,7 @@ class AppDrawerAdapter(
                                 .toMutableList()
                         }
                     } else {
+                        sortApps()
                         appsList.toMutableList() // No search term, return all apps
                     }
                 } else {
