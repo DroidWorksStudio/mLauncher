@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Implemented Enhancements:
 
+- Add pin/unpin functionality to app drawer - ([2131d87](https://github.com/DroidWorksStudio/mLauncher/commit/2131d87b1c6f3d419ec4f1a3aefd8215317a1d02))
 - Display private space lock status - ([b0dd1ca](https://github.com/DroidWorksStudio/mLauncher/commit/b0dd1caa82f3dde61ecc24697746c372712e46b9))
 
 ### Bug Fixes:
