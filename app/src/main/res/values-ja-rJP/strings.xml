@@ -129,7 +129,7 @@
     <string name="long_swipe_right_app">長押し 右にスワイプ</string>
     <string name="open_app">アプリを開く</string>
     <string name="lock_screen">ロック画面</string>
-    <string name="private_space">Private Spaces (%1$s)</string>
+    <string name="private_space">プライベートスペース (%1$s)</string>
     <string name="show_notifications">通知を表示</string>
     <string name="show_app_list">アプリ一覧を表示</string>
     <string name="show_notes_manager">ショーノートマネージャー</string>
@@ -241,8 +241,8 @@
     <string name="show">表示</string>
     <string name="lock">ロック</string>
     <string name="unlock">ロック解除</string>
-    <string name="locked">Locked</string>
-    <string name="unlocked">Unlocked</string>
+    <string name="locked">ロックされています</string>
+    <string name="unlocked">ロック解除</string>
     <string name="rename">名前の変更</string>
     <string name="info">情報</string>
     <string name="okay">OK</string>
