@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Bug Fixes:
 
+- Correct paths for Gradle Wrapper validation workflow - ([db4068b](https://github.com/DroidWorksStudio/mLauncher/commit/db4068bd2c340d480bce34810d9bab90dc0f6236))
 - Implement migration for malformed Message objects - ([a93e4ad](https://github.com/DroidWorksStudio/mLauncher/commit/a93e4ad9f06d306ed12eef49af192c1f3249795b))
 
 ### Refactoring:
