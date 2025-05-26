@@ -129,7 +129,7 @@
     <string name="long_swipe_right_app">길게 누르기 오른쪽으로 스와이프</string>
     <string name="open_app">Open App</string>
     <string name="lock_screen">Lock Screen</string>
-    <string name="private_space">개인 공간</string>
+    <string name="private_space">Private Spaces (%1$s)</string>
     <string name="show_notifications">Show Notification</string>
     <string name="show_app_list">Show App List</string>
     <string name="show_notes_manager">쇼 노트 관리자</string>
@@ -241,6 +241,8 @@
     <string name="show">Show</string>
     <string name="lock">잠그다</string>
     <string name="unlock">터놓다</string>
+    <string name="locked">Locked</string>
+    <string name="unlocked">Unlocked</string>
     <string name="rename">Rename</string>
     <string name="info">정보</string>
     <string name="okay">Okay</string>
