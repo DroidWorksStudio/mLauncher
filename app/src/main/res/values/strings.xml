@@ -170,7 +170,7 @@
 
     <string name="open_app">Open App</string>
     <string name="lock_screen">Lock Screen</string>
-    <string name="private_space">Private Spaces</string>
+    <string name="private_space">Private Spaces (%1$s)</string>
     <string name="show_notifications">Show Notification</string>
     <string name="show_app_list">Show App List</string>
     <string name="show_notes_manager">Show Notes Manager</string>
@@ -309,6 +309,8 @@
     <string name="show">Show</string>
     <string name="lock">Lock</string>
     <string name="unlock">Unlock</string>
+    <string name="locked">Locked</string>
+    <string name="unlocked">Unlocked</string>
     <string name="rename">Rename</string>
     <string name="info">Info</string>
     <string name="okay">Okay</string>

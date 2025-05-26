@@ -119,10 +119,10 @@ class SettingsFragment : Fragment() {
             tuToDp((fs.value * 0.8))
         } else tuToDp(fs.value)
 
-        val setPrivateSpaces = if (toggledPrivateSpaces) {
-            R.drawable.ic_lock
+        val (setPrivateSpacesIcon, setPrivateSpacesStatus) = if (toggledPrivateSpaces) {
+            R.drawable.ic_lock to R.string.locked
         } else {
-            R.drawable.ic_unlock
+            R.drawable.ic_unlock to R.string.unlocked
         }
 
         Column(
@@ -195,8 +195,8 @@ class SettingsFragment : Fragment() {
                 )
             ) {
                 SettingsHomeItem(
-                    title = getLocalizedString(R.string.private_space),
-                    imageVector = ImageVector.vectorResource(id = setPrivateSpaces),
+                    title = getLocalizedString(R.string.private_space, getLocalizedString(setPrivateSpacesStatus)),
+                    imageVector = ImageVector.vectorResource(id = setPrivateSpacesIcon),
                     titleFontSize = titleFontSize,
                     descriptionFontSize = descriptionFontSize,
                     iconSize = iconSize,
