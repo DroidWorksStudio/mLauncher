@@ -129,7 +129,7 @@
     <string name="long_swipe_right_app">לחץ לחיצה ארוכה החלק ימינה</string>
     <string name="open_app">הפעלת יישום</string>
     <string name="lock_screen">נעילת מסך</string>
-    <string name="private_space">מרחבים פרטיים</string>
+    <string name="private_space">Private Spaces (%1$s)</string>
     <string name="show_notifications">הצגת התרעות</string>
     <string name="show_app_list">הצגת רשימת יישומים</string>
     <string name="show_notes_manager">הצג את מנהל ההערות</string>
@@ -243,6 +243,8 @@
     <string name="show">הצג</string>
     <string name="lock">נעל</string>
     <string name="unlock">ביטול נעילה</string>
+    <string name="locked">Locked</string>
+    <string name="unlocked">Unlocked</string>
     <string name="rename">שינוי שם</string>
     <string name="info">מידע</string>
     <string name="okay">אוקיי</string>
