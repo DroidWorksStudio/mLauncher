@@ -129,7 +129,7 @@
     <string name="long_swipe_right_app">Uzun Bas Sağa kaydır</string>
     <string name="open_app">Uygulama\'yı Aç</string>
     <string name="lock_screen">Ekranı Kilitle</string>
-    <string name="private_space">Özel Alanlar</string>
+    <string name="private_space">Private Spaces (%1$s)</string>
     <string name="show_notifications">Bildirimi Göster</string>
     <string name="show_app_list">Uygulama Listesini Göster</string>
     <string name="show_notes_manager">Gösteri Notları Yöneticisi</string>
@@ -241,6 +241,8 @@
     <string name="show">Göster</string>
     <string name="lock">Kilit</string>
     <string name="unlock">Kilidini aç</string>
+    <string name="locked">Locked</string>
+    <string name="unlocked">Unlocked</string>
     <string name="rename">Yeniden Adlandır</string>
     <string name="info">Bilgi</string>
     <string name="okay">Tamam</string>
