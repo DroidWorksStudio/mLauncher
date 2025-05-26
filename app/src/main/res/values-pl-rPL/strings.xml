@@ -129,7 +129,7 @@
     <string name="long_swipe_right_app">Długie naciśnięcie Przesuń w prawo</string>
     <string name="open_app">Otwórz aplikację</string>
     <string name="lock_screen">Ekran blokady</string>
-    <string name="private_space">Private Spaces (%1$s)</string>
+    <string name="private_space">Prywatne przestrzenie (%1$s)</string>
     <string name="show_notifications">Pokaż powiadomienie</string>
     <string name="show_app_list">Pokaż listę aplikacji</string>
     <string name="show_notes_manager">Pokaż Menedżera Notatek</string>
@@ -241,8 +241,8 @@
     <string name="show">Pokaż</string>
     <string name="lock">Zamek</string>
     <string name="unlock">Odblokować</string>
-    <string name="locked">Locked</string>
-    <string name="unlocked">Unlocked</string>
+    <string name="locked">Zamknięty</string>
+    <string name="unlocked">Odblokowany</string>
     <string name="rename">Zmień nazwę</string>
     <string name="info">Informacje</string>
     <string name="okay">OK</string>
