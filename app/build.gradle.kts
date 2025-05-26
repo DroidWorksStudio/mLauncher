@@ -12,12 +12,21 @@ val minor = 10
 val patch = 4
 val build = 2
 
+val type = 0 // 1=beta, 2=alpha else=null
+
+val baseVersionName = "$major.$minor.$patch.$build"
+
 val versionCodeInt =
     (String.format("%02d", major) + String.format("%02d", minor) + String.format(
         "%02d",
         patch
     ) + String.format("%02d", build)).toInt()
-val versionNameStr = "$major.$minor.$patch.$build"
+
+val versionNameStr = when (type) {
+    1 -> "$baseVersionName-beta"
+    2 -> "$baseVersionName-alpha"
+    else -> baseVersionName
+}
 
 android {
     namespace = "com.github.droidworksstudio.mlauncher"
