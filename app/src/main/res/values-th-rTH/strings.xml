@@ -129,7 +129,7 @@
     <string name="long_swipe_right_app">กดค้าง ปัดไปทางขวา</string>
     <string name="open_app">เปิดแอพ</string>
     <string name="lock_screen">ล็อกหน้าจอ</string>
-    <string name="private_space">Private Spaces (%1$s)</string>
+    <string name="private_space">พื้นที่ส่วนตัว (%1$s)</string>
     <string name="show_notifications">แสดงการแจ้งเตือน</string>
     <string name="show_app_list">แสดงรายการแอพ</string>
     <string name="show_notes_manager">ผู้จัดการแสดงบันทึก</string>
@@ -241,8 +241,8 @@
     <string name="show">แสดง</string>
     <string name="lock">ล็อค</string>
     <string name="unlock">ปลดล็อค</string>
-    <string name="locked">Locked</string>
-    <string name="unlocked">Unlocked</string>
+    <string name="locked">ล็อค</string>
+    <string name="unlocked">ปลดล็อคแล้ว</string>
     <string name="rename">เปลี่ยนชื่อ</string>
     <string name="info">ข้อมูล</string>
     <string name="okay">ตกลง</string>
