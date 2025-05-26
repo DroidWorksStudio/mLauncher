@@ -311,6 +311,8 @@
     <string name="unlock">Unlock</string>
     <string name="locked">Locked</string>
     <string name="unlocked">Unlocked</string>
+    <string name="pin">Pin</string>
+    <string name="unpin">Unpin</string>
     <string name="rename">Rename</string>
     <string name="info">Info</string>
     <string name="okay">Okay</string>

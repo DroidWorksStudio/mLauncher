@@ -83,9 +83,11 @@ class AppDrawerAdapter(
         return ViewHolder(binding)
     }
 
-    @SuppressLint("RecyclerView")
+
+    @SuppressLint("RecyclerView", "NotifyDataSetChanged")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         if (appFilteredList.isEmpty()) return
+        sortApps()
         val appModel = appFilteredList[holder.absoluteAdapterPosition]
         holder.bind(flag, gravity, appModel, appClickListener, appInfoListener, appDeleteListener)
 
@@ -94,6 +96,27 @@ class AppDrawerAdapter(
             appsList.remove(appModel)
             notifyItemRemoved(holder.absoluteAdapterPosition)
             appHideListener(flag, appModel)
+        }
+
+        holder.appPin.setOnClickListener {
+            val appName = appModel.activityPackage
+            val updatedPinnedApps = prefs.pinnedApps.toMutableSet() // Make a copy
+
+            val isPinned = updatedPinnedApps.contains(appName)
+            if (isPinned) {
+                updatedPinnedApps.remove(appName)
+                holder.appPin.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.pin_off, 0, 0)
+                holder.appPin.text = getLocalizedString(R.string.pin)
+            } else {
+                updatedPinnedApps.add(appName)
+                holder.appPin.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.pin, 0, 0)
+                holder.appPin.text = getLocalizedString(R.string.unpin)
+            }
+
+            prefs.pinnedApps = updatedPinnedApps.toSet()
+
+            sortApps()
+            notifyDataSetChanged()
         }
 
 
@@ -270,7 +293,9 @@ class AppDrawerAdapter(
     }
 
     class ViewHolder(itemView: AdapterAppDrawerBinding) : RecyclerView.ViewHolder(itemView.root) {
+
         val appHide: TextView = itemView.appHide
+        val appPin: TextView = itemView.appPin
         val appLock: TextView = itemView.appLock
         val appRenameEdit: EditText = itemView.appRenameEdit
         val appSaveRename: TextView = itemView.appSaveRename
@@ -320,13 +345,18 @@ class AppDrawerAdapter(
                     appLock.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.padlock, 0, 0)
                     appLock.text = getLocalizedString(R.string.unlock)
                 } else {
-                    appLock.setCompoundDrawablesWithIntrinsicBounds(
-                        0,
-                        R.drawable.padlock_off,
-                        0,
-                        0
-                    )
+                    appLock.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.padlock_off, 0, 0)
                     appLock.text = getLocalizedString(R.string.lock)
+                }
+
+                val currentPinnedApps = prefs.pinnedApps
+
+                if (currentPinnedApps.contains(appName)) {
+                    appPin.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.pin, 0, 0)
+                    appPin.text = getLocalizedString(R.string.unpin)
+                } else {
+                    appPin.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.pin_off, 0, 0)
+                    appPin.text = getLocalizedString(R.string.pin)
                 }
 
                 appRename.apply {
@@ -561,4 +591,18 @@ class AppDrawerAdapter(
             it.activityLabel.firstOrNull()?.uppercaseChar() == letter
         }
     }
+
+    private fun sortApps() {
+        val pinnedApps = prefs.pinnedApps
+
+        // Ensure you're sorting the full list
+        appFilteredList = appsList.toMutableList()
+
+        appFilteredList.sortWith(
+            compareByDescending<AppListItem> {
+                pinnedApps.contains(it.activityPackage)
+            }.thenBy { it.customLabel.lowercase() }
+        )
+    }
+
 }
