@@ -243,8 +243,8 @@
     <string name="unlock">Ouvrir</string>
     <string name="locked">Fermé</string>
     <string name="unlocked">Débloqué</string>
-    <string name="pin">Pin</string>
-    <string name="unpin">Unpin</string>
+    <string name="pin">Épingle</string>
+    <string name="unpin">Détacher</string>
     <string name="rename">Renommer</string>
     <string name="info">Info</string>
     <string name="okay">Ok</string>
