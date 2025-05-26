@@ -129,7 +129,7 @@
     <string name="long_swipe_right_app">Lang indrukken naar rechts vegen</string>
     <string name="open_app">App openen</string>
     <string name="lock_screen">Vergrendel scherm</string>
-    <string name="private_space">Private Spaces (%1$s)</string>
+    <string name="private_space">Privéruimtes (%1$s)</string>
     <string name="show_notifications">Toon melding</string>
     <string name="show_app_list">Toon App Lijst</string>
     <string name="show_notes_manager">Toon notitiesbeheerder</string>
@@ -241,8 +241,8 @@
     <string name="show">Weergeven</string>
     <string name="lock">Vergrendel</string>
     <string name="unlock">Ontgrendel</string>
-    <string name="locked">Locked</string>
-    <string name="unlocked">Unlocked</string>
+    <string name="locked">Vergrendeld</string>
+    <string name="unlocked">Ontgrendeld</string>
     <string name="rename">Hernoem</string>
     <string name="info">Info</string>
     <string name="okay">OK</string>
