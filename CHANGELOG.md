@@ -12,6 +12,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Bug Fixes:
 
+- Ensure AppDrawer is sorted on initial display - ([7ce257c](https://github.com/DroidWorksStudio/mLauncher/commit/7ce257c23fb505a1b7b6f3ff84f04354a65e7b39))
 - Display app icons alongside work profile/private space indicators - ([98797b6](https://github.com/DroidWorksStudio/mLauncher/commit/98797b607ac6dd25a33750a8d9c8a53f9b3d701f))
 - Correct paths for Gradle Wrapper validation workflow - ([db4068b](https://github.com/DroidWorksStudio/mLauncher/commit/db4068bd2c340d480bce34810d9bab90dc0f6236))
 - Implement migration for malformed Message objects - ([a93e4ad](https://github.com/DroidWorksStudio/mLauncher/commit/a93e4ad9f06d306ed12eef49af192c1f3249795b))
