@@ -129,7 +129,7 @@
     <string name="long_swipe_right_app">Dlhé potiahnutie prstom doprava</string>
     <string name="open_app">Otvoriť aplikáciu</string>
     <string name="lock_screen">Zamykacia obrazovka</string>
-    <string name="private_space">Súkromné priestory</string>
+    <string name="private_space">Private Spaces (%1$s)</string>
     <string name="show_notifications">Zobraziť notifikácie</string>
     <string name="show_app_list">Zobraziť zoznam aplikácií</string>
     <string name="show_notes_manager">Zobraziť správcu poznámok</string>
@@ -243,6 +243,8 @@ Tento prístup môžete kedykoľvek vypnúť v nastaveniach zariadenia.</string>
     <string name="show">Zobraziť</string>
     <string name="lock">Zámok</string>
     <string name="unlock">Odomknúť</string>
+    <string name="locked">Locked</string>
+    <string name="unlocked">Unlocked</string>
     <string name="rename">Premenovať</string>
     <string name="info">Informácie</string>
     <string name="okay">Ok</string>
