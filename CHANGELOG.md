@@ -4,8 +4,13 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Implemented Enhancements:
+
+- Display private space lock status - ([b0dd1ca](https://github.com/DroidWorksStudio/mLauncher/commit/b0dd1caa82f3dde61ecc24697746c372712e46b9))
+
 ### Bug Fixes:
 
+- Display app icons alongside work profile/private space indicators - ([98797b6](https://github.com/DroidWorksStudio/mLauncher/commit/98797b607ac6dd25a33750a8d9c8a53f9b3d701f))
 - Correct paths for Gradle Wrapper validation workflow - ([db4068b](https://github.com/DroidWorksStudio/mLauncher/commit/db4068bd2c340d480bce34810d9bab90dc0f6236))
 - Implement migration for malformed Message objects - ([a93e4ad](https://github.com/DroidWorksStudio/mLauncher/commit/a93e4ad9f06d306ed12eef49af192c1f3249795b))
 
