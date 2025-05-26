@@ -243,8 +243,8 @@
     <string name="unlock">Odblokować</string>
     <string name="locked">Zamknięty</string>
     <string name="unlocked">Odblokowany</string>
-    <string name="pin">Pin</string>
-    <string name="unpin">Unpin</string>
+    <string name="pin">Szpilka</string>
+    <string name="unpin">Odpiąć</string>
     <string name="rename">Zmień nazwę</string>
     <string name="info">Informacje</string>
     <string name="okay">OK</string>
