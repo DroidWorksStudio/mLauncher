@@ -129,7 +129,7 @@
     <string name="long_swipe_right_app">Premere a lungo scorrendo verso destra</string>
     <string name="open_app">Apri App</string>
     <string name="lock_screen">Schermata Di Blocco</string>
-    <string name="private_space">Spazi privati</string>
+    <string name="private_space">Private Spaces (%1$s)</string>
     <string name="show_notifications">Mostra Notifiche</string>
     <string name="show_app_list">Mostra Elenco App</string>
     <string name="show_notes_manager">Mostra gestore note</string>
@@ -241,6 +241,8 @@
     <string name="show">Mostra</string>
     <string name="lock">Serratura</string>
     <string name="unlock">Sbloccare</string>
+    <string name="locked">Locked</string>
+    <string name="unlocked">Unlocked</string>
     <string name="rename">Rinomina</string>
     <string name="info">Informazioni</string>
     <string name="okay">Ok</string>
