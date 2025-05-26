@@ -10,7 +10,7 @@ plugins {
 val major = 1
 val minor = 10
 val patch = 4
-val build = 1
+val build = 2
 
 val versionCodeInt =
     (String.format("%02d", major) + String.format("%02d", minor) + String.format(
