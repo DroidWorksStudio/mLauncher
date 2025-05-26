@@ -129,7 +129,7 @@
     <string name="long_swipe_right_app">Ilgai braukti dešinėn</string>
     <string name="open_app">Atidaryti programėlę</string>
     <string name="lock_screen">Užrakinti ekraną</string>
-    <string name="private_space">Privačios erdvės</string>
+    <string name="private_space">Privačios erdvės (%1$s)</string>
     <string name="show_notifications">Rodyti pranešimą</string>
     <string name="show_app_list">Rodyti programėlių sąrašą</string>
     <string name="show_notes_manager">Rodyti užrašų tvarkyklę</string>
@@ -243,6 +243,8 @@ Jūs bet kada galite išjungti šią prieigą savo įrenginio nustatymuose.</str
     <string name="show">Rodyti</string>
     <string name="lock">Užraktas</string>
     <string name="unlock">Atrakinti</string>
+    <string name="locked">Užrakinta</string>
+    <string name="unlocked">Atrakinta</string>
     <string name="rename">Pervadyti</string>
     <string name="info">Informacija</string>
     <string name="okay">Gerai</string>

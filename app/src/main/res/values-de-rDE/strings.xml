@@ -129,7 +129,7 @@
     <string name="long_swipe_right_app">Langes Drücken. Wischen Sie nach rechts</string>
     <string name="open_app">App öffnen</string>
     <string name="lock_screen">Sperrbildschirm</string>
-    <string name="private_space">Private Räume</string>
+    <string name="private_space">Private Räume (%1$s)</string>
     <string name="show_notifications">Benachrichtigung anzeigen</string>
     <string name="show_app_list">App-Liste anzeigen</string>
     <string name="show_notes_manager">Notizen-Manager anzeigen</string>
@@ -241,6 +241,8 @@
     <string name="show">Zeigen</string>
     <string name="lock">Sperren</string>
     <string name="unlock">Freischalten</string>
+    <string name="locked">Gesperrt</string>
+    <string name="unlocked">Entsperrt</string>
     <string name="rename">Umbenennen</string>
     <string name="info">Die Info</string>
     <string name="okay">Okay</string>

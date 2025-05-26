@@ -129,7 +129,7 @@
     <string name="long_swipe_right_app">Pressione longamente e deslize para a direita</string>
     <string name="open_app">Aplicação aberta</string>
     <string name="lock_screen">Ecrã de bloqueio</string>
-    <string name="private_space">Espaços Privados</string>
+    <string name="private_space">Espaços Privados (%1$s)</string>
     <string name="show_notifications">Mostrar Notificação</string>
     <string name="show_app_list">Mostrar lista de aplicações</string>
     <string name="show_notes_manager">Gerenciador de notas de exibição</string>
@@ -241,6 +241,8 @@
     <string name="show">Mostrar</string>
     <string name="lock">Trancar</string>
     <string name="unlock">Desbloquear</string>
+    <string name="locked">Trancado</string>
+    <string name="unlocked">Desbloqueado</string>
     <string name="rename">Renomear</string>
     <string name="info">Informações</string>
     <string name="okay">Está bem</string>

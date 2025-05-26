@@ -129,7 +129,7 @@
     <string name="long_swipe_right_app">Pulsación larga Deslizar hacia la derecha</string>
     <string name="open_app">Abrir aplicación</string>
     <string name="lock_screen">Bloquear pantalla</string>
-    <string name="private_space">Espacios privados</string>
+    <string name="private_space">Espacios privados (%1$s)</string>
     <string name="show_notifications">Mostrar notificación</string>
     <string name="show_app_list">Mostrar lista de aplicaciones</string>
     <string name="show_notes_manager">Administrador de notas del programa</string>
@@ -241,6 +241,8 @@
     <string name="show">Mostrar</string>
     <string name="lock">Cerrar</string>
     <string name="unlock">Descubrir</string>
+    <string name="locked">Bloqueado</string>
+    <string name="unlocked">Desbloqueado</string>
     <string name="rename">Renombrar</string>
     <string name="info">Información</string>
     <string name="okay">OK</string>
