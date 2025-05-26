@@ -391,14 +391,101 @@ class AppDrawerAdapter(
                 val packageName = appListItem.activityPackage
                 val packageManager = context.packageManager
 
+                var hasIconEnabled = false
+                var myIcon: Drawable? = null
+
+                if (packageName.isNotBlank() && prefs.iconPackAppList != Constants.IconPacks.Disabled) {
+                    val iconPackPackage = prefs.customIconPackAppList
+                    // Get app icon or fallback drawable
+                    val icon: Drawable? = try {
+                        if (iconPackPackage.isNotEmpty() && prefs.iconPackAppList == Constants.IconPacks.Custom) {
+                            if (IconPackHelper.isReady()) {
+                                IconPackHelper.getCachedIcon(
+                                    context,
+                                    packageName,
+                                    IconCacheTarget.APP_LIST
+                                )
+                                // Use the icon if not null
+                            } else {
+                                packageManager.getApplicationIcon(packageName)
+                            }
+                        } else {
+                            packageManager.getApplicationIcon(packageName)
+                        }
+                    } catch (e: PackageManager.NameNotFoundException) {
+                        e.printStackTrace()
+                        // Handle exception gracefully, fall back to the system icon
+                        packageManager.getApplicationIcon(packageName)
+                    } catch (e: Exception) {
+                        e.printStackTrace()
+                        // Handle any other exceptions gracefully, fallback to the system icon
+                        packageManager.getApplicationIcon(packageName)
+                    }
+
+                    val defaultIcon = packageManager.getApplicationIcon(packageName)
+                    val nonNullDrawable: Drawable = icon ?: defaultIcon
+
+                    // Recolor the icon with the dominant color
+                    val appNewIcon: Drawable? = getSystemIcons(
+                        context,
+                        prefs,
+                        IconCacheTarget.APP_LIST,
+                        nonNullDrawable
+                    )
+
+                    // Set the icon size to match text size and add padding
+                    val iconSize = (prefs.appSize * 1.4).toInt()  // Base size from preferences
+                    val iconPadding = (iconSize / 1.2).toInt() //
+
+                    appNewIcon?.setBounds(0, 0, iconSize, iconSize)
+                    nonNullDrawable.setBounds(
+                        0,
+                        0,
+                        ((iconSize * 1.8).toInt()),
+                        ((iconSize * 1.8).toInt())
+                    )
+
+                    // Set drawable position based on alignment
+                    when (prefs.drawerAlignment) {
+                        Constants.Gravity.Left -> {
+                            appTitle.setCompoundDrawables(
+                                appNewIcon ?: nonNullDrawable,
+                                null,
+                                null,
+                                null
+                            )
+                            appTitle.compoundDrawablePadding = iconPadding
+                            hasIconEnabled = true
+                            myIcon = appNewIcon ?: nonNullDrawable
+                        }
+
+                        Constants.Gravity.Right -> {
+                            appTitle.setCompoundDrawables(
+                                null,
+                                null,
+                                appNewIcon ?: nonNullDrawable,
+                                null
+                            )
+                            appTitle.compoundDrawablePadding = iconPadding
+                            hasIconEnabled = true
+                            myIcon = appNewIcon ?: nonNullDrawable
+                        }
+
+                        else -> appTitle.setCompoundDrawables(null, null, null, null)
+                    }
+                } else {
+                    appTitle.setCompoundDrawables(null, null, null, null)
+                }
                 if (isWorkProfile) {
                     val icon = AppCompatResources.getDrawable(context, R.drawable.work_profile)
                     val px = dp2px(resources, prefs.appSize)
                     icon?.setBounds(0, 0, px, px)
                     if (appLabelGravity == LEFT) {
-                        appTitle.setCompoundDrawables(null, null, icon, null)
+                        if (hasIconEnabled) appTitle.setCompoundDrawables(myIcon, null, icon, null)
+                        else appTitle.setCompoundDrawables(null, null, icon, null)
                     } else {
-                        appTitle.setCompoundDrawables(icon, null, null, null)
+                        if (hasIconEnabled) appTitle.setCompoundDrawables(icon, null, myIcon, null)
+                        else appTitle.setCompoundDrawables(icon, null, null, null)
                     }
                     appTitle.compoundDrawablePadding = 20
                 } else if (isPrivateSpace) {
@@ -406,91 +493,15 @@ class AppDrawerAdapter(
                     val px = dp2px(resources, prefs.appSize)
                     icon?.setBounds(0, 0, px, px)
                     if (appLabelGravity == LEFT) {
-                        appTitle.setCompoundDrawables(null, null, icon, null)
+                        if (hasIconEnabled) appTitle.setCompoundDrawables(myIcon, null, icon, null)
+                        else appTitle.setCompoundDrawables(null, null, icon, null)
                     } else {
-                        appTitle.setCompoundDrawables(icon, null, null, null)
+                        if (hasIconEnabled) appTitle.setCompoundDrawables(icon, null, myIcon, null)
+                        else appTitle.setCompoundDrawables(icon, null, null, null)
                     }
                     appTitle.compoundDrawablePadding = 20
-                } else {
-                    if (packageName.isNotBlank() && prefs.iconPackAppList != Constants.IconPacks.Disabled) {
-                        val iconPackPackage = prefs.customIconPackAppList
-                        // Get app icon or fallback drawable
-                        val icon: Drawable? = try {
-                            if (iconPackPackage.isNotEmpty() && prefs.iconPackAppList == Constants.IconPacks.Custom) {
-                                if (IconPackHelper.isReady()) {
-                                    IconPackHelper.getCachedIcon(
-                                        context,
-                                        packageName,
-                                        IconCacheTarget.APP_LIST
-                                    )
-                                    // Use the icon if not null
-                                } else {
-                                    packageManager.getApplicationIcon(packageName)
-                                }
-                            } else {
-                                packageManager.getApplicationIcon(packageName)
-                            }
-                        } catch (e: PackageManager.NameNotFoundException) {
-                            e.printStackTrace()
-                            // Handle exception gracefully, fall back to the system icon
-                            packageManager.getApplicationIcon(packageName)
-                        } catch (e: Exception) {
-                            e.printStackTrace()
-                            // Handle any other exceptions gracefully, fallback to the system icon
-                            packageManager.getApplicationIcon(packageName)
-                        }
-
-                        val defaultIcon = packageManager.getApplicationIcon(packageName)
-                        val nonNullDrawable: Drawable = icon ?: defaultIcon
-
-                        // Recolor the icon with the dominant color
-                        val appNewIcon: Drawable? = getSystemIcons(
-                            context,
-                            prefs,
-                            IconCacheTarget.APP_LIST,
-                            nonNullDrawable
-                        )
-
-                        // Set the icon size to match text size and add padding
-                        val iconSize = (prefs.appSize * 1.4).toInt()  // Base size from preferences
-                        val iconPadding = (iconSize / 1.2).toInt() //
-
-                        appNewIcon?.setBounds(0, 0, iconSize, iconSize)
-                        nonNullDrawable.setBounds(
-                            0,
-                            0,
-                            ((iconSize * 1.8).toInt()),
-                            ((iconSize * 1.8).toInt())
-                        )
-
-                        // Set drawable position based on alignment
-                        when (prefs.drawerAlignment) {
-                            Constants.Gravity.Left -> {
-                                appTitle.setCompoundDrawables(
-                                    appNewIcon ?: nonNullDrawable,
-                                    null,
-                                    null,
-                                    null
-                                )
-                                appTitle.compoundDrawablePadding = iconPadding
-                            }
-
-                            Constants.Gravity.Right -> {
-                                appTitle.setCompoundDrawables(
-                                    null,
-                                    null,
-                                    appNewIcon ?: nonNullDrawable,
-                                    null
-                                )
-                                appTitle.compoundDrawablePadding = iconPadding
-                            }
-
-                            else -> appTitle.setCompoundDrawables(null, null, null, null)
-                        }
-                    } else {
-                        appTitle.setCompoundDrawables(null, null, null, null)
-                    }
                 }
+
 
                 val padding = dp2px(resources, 24)
                 appTitle.updatePadding(left = padding, right = padding)
