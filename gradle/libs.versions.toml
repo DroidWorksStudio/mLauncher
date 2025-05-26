@@ -53,7 +53,7 @@ ui-test-manifest = "1.8.2"
 activity = "1.10.1"
 
 # Database
-moshi = "1.15.0"
+moshi = "1.15.2"
 ksp = "2.1.21-2.0.1"
 
 [libraries]
