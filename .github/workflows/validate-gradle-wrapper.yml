@@ -2,20 +2,24 @@ name: Validate Gradle Wrapper
 
 on:
   push:
-    branches:
-      - '*'
-      - '!translate_main'
+    paths:
+      - '**/gradle/wrapper/**'
+      - '**/gradlew'
+      - '**/gradlew.bat'
   pull_request:
-    branches:
-      - 'main'
+    paths:
+      - '**/gradle/wrapper/**'
+      - '**/gradlew'
+      - '**/gradlew.bat'
 
 jobs:
-  validation:
-    name: Validation
+  validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4.2.2
         with:
           token: ${{ secrets.GIT_BOT_TOKEN }}
           ref: main
-      - uses: gradle/wrapper-validation-action@v3.5.0
+
+      - name: Validate Gradle Wrapper JAR
+        uses: gradle/wrapper-validation-action@v3.5.0
