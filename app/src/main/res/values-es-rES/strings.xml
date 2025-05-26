@@ -243,6 +243,8 @@
     <string name="unlock">Descubrir</string>
     <string name="locked">Bloqueado</string>
     <string name="unlocked">Desbloqueado</string>
+    <string name="pin">Alfiler</string>
+    <string name="unpin">Desprender</string>
     <string name="rename">Renombrar</string>
     <string name="info">Información</string>
     <string name="okay">OK</string>

@@ -243,6 +243,8 @@
     <string name="unlock">Разблокировать</string>
     <string name="locked">Заблокировано</string>
     <string name="unlocked">Разблокирован</string>
+    <string name="pin">Приколоть</string>
+    <string name="unpin">Открепить</string>
     <string name="rename">Переименовать</string>
     <string name="info">Информация</string>
     <string name="okay">Окей</string>

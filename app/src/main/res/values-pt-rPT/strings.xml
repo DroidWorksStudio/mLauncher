@@ -243,6 +243,8 @@
     <string name="unlock">Desbloquear</string>
     <string name="locked">Trancado</string>
     <string name="unlocked">Desbloqueado</string>
+    <string name="pin">Pino</string>
+    <string name="unpin">Desafixar</string>
     <string name="rename">Renomear</string>
     <string name="info">Informações</string>
     <string name="okay">Está bem</string>

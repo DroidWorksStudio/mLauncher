@@ -243,6 +243,8 @@
     <string name="unlock">Ontgrendel</string>
     <string name="locked">Vergrendeld</string>
     <string name="unlocked">Ontgrendeld</string>
+    <string name="pin">Pin</string>
+    <string name="unpin">Losmaken</string>
     <string name="rename">Hernoem</string>
     <string name="info">Info</string>
     <string name="okay">OK</string>

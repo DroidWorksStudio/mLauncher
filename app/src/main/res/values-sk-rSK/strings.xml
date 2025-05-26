@@ -245,6 +245,8 @@ Tento prístup môžete kedykoľvek vypnúť v nastaveniach zariadenia.</string>
     <string name="unlock">Odomknúť</string>
     <string name="locked">Zamknuté</string>
     <string name="unlocked">Odomknuté</string>
+    <string name="pin">Pripnúť</string>
+    <string name="unpin">Odopnúť</string>
     <string name="rename">Premenovať</string>
     <string name="info">Informácie</string>
     <string name="okay">Ok</string>

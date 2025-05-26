@@ -243,6 +243,8 @@
     <string name="unlock">Freischalten</string>
     <string name="locked">Gesperrt</string>
     <string name="unlocked">Entsperrt</string>
+    <string name="pin">Stift</string>
+    <string name="unpin">Lösen</string>
     <string name="rename">Umbenennen</string>
     <string name="info">Die Info</string>
     <string name="okay">Okay</string>
