@@ -245,6 +245,8 @@ Jūs bet kada galite išjungti šią prieigą savo įrenginio nustatymuose.</str
     <string name="unlock">Atrakinti</string>
     <string name="locked">Užrakinta</string>
     <string name="unlocked">Atrakinta</string>
+    <string name="pin">Pin</string>
+    <string name="unpin">Unpin</string>
     <string name="rename">Pervadyti</string>
     <string name="info">Informacija</string>
     <string name="okay">Gerai</string>
