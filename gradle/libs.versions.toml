@@ -54,7 +54,7 @@ activity = "1.10.1"
 
 # Database
 moshi = "1.15.0"
-ksp = "2.1.0-1.0.29"
+ksp = "2.1.21-2.0.1"
 
 [libraries]
 # Core Libraries
