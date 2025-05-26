@@ -243,8 +243,8 @@
     <string name="unlock">터놓다</string>
     <string name="locked">잠김</string>
     <string name="unlocked">잠금 해제됨</string>
-    <string name="pin">Pin</string>
-    <string name="unpin">Unpin</string>
+    <string name="pin">핀</string>
+    <string name="unpin">고정 해제</string>
     <string name="rename">Rename</string>
     <string name="info">정보</string>
     <string name="okay">Okay</string>
