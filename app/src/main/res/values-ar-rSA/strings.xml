@@ -243,8 +243,8 @@
     <string name="unlock">فتح</string>
     <string name="locked">مغلق</string>
     <string name="unlocked">مفتوح</string>
-    <string name="pin">Pin</string>
-    <string name="unpin">Unpin</string>
+    <string name="pin">دبوس</string>
+    <string name="unpin">إزالة التثبيت</string>
     <string name="rename">إعادة تسمية</string>
     <string name="info">معلومات</string>
     <string name="okay">حسنًا</string>
