@@ -243,6 +243,8 @@
     <string name="unlock">ロック解除</string>
     <string name="locked">ロックされています</string>
     <string name="unlocked">ロック解除</string>
+    <string name="pin">Pin</string>
+    <string name="unpin">Unpin</string>
     <string name="rename">名前の変更</string>
     <string name="info">情報</string>
     <string name="okay">OK</string>
