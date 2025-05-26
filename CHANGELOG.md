@@ -13,6 +13,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Move migration logic into a separate function - ([0e3446c](https://github.com/DroidWorksStudio/mLauncher/commit/0e3446c02d24813c98e14f915f061f036ac2af55))
 
+### Releases:
+
+- Increment build number - ([4d2c2a9](https://github.com/DroidWorksStudio/mLauncher/commit/4d2c2a9678f9a541c75df991523c590b0bbcd702))
+
 ## [1.10.4.1](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.4.1) - (25, May 2025)
 
 ### Language Support:
