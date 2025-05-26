@@ -129,7 +129,7 @@
     <string name="long_swipe_right_app">Длительное нажатие Проведите пальцем вправо</string>
     <string name="open_app">Открыть приложение</string>
     <string name="lock_screen">Экран блокировки</string>
-    <string name="private_space">Частные пространства</string>
+    <string name="private_space">Private Spaces (%1$s)</string>
     <string name="show_notifications">Показать уведомление</string>
     <string name="show_app_list">Показать список приложений</string>
     <string name="show_notes_manager">Показать менеджер заметок</string>
@@ -241,6 +241,8 @@
     <string name="show">Показать</string>
     <string name="lock">Замок</string>
     <string name="unlock">Разблокировать</string>
+    <string name="locked">Locked</string>
+    <string name="unlocked">Unlocked</string>
     <string name="rename">Переименовать</string>
     <string name="info">Информация</string>
     <string name="okay">Окей</string>
