@@ -244,7 +244,7 @@
     <string name="locked">Kilitli</string>
     <string name="unlocked">Kilidi Açıldı</string>
     <string name="pin">Pin</string>
-    <string name="unpin">Unpin</string>
+    <string name="unpin">Sabitlemeyi kaldır</string>
     <string name="rename">Yeniden Adlandır</string>
     <string name="info">Bilgi</string>
     <string name="okay">Tamam</string>
