@@ -10,9 +10,9 @@ plugins {
 val major = 1
 val minor = 10
 val patch = 4
-val build = 2
+val build = 3
 
-val type = 0 // 1=beta, 2=alpha else=null
+val type = 0 // 1=beta, 2=alpha else=production
 
 val baseVersionName = "$major.$minor.$patch.$build"
 
@@ -27,6 +27,7 @@ val versionNameStr = when (type) {
     2 -> "$baseVersionName-alpha"
     else -> baseVersionName
 }
+
 
 android {
     namespace = "com.github.droidworksstudio.mlauncher"
