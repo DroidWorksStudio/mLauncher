@@ -245,6 +245,8 @@
     <string name="unlock">ביטול נעילה</string>
     <string name="locked">נָעוּל</string>
     <string name="unlocked">לא נעול</string>
+    <string name="pin">Pin</string>
+    <string name="unpin">Unpin</string>
     <string name="rename">שינוי שם</string>
     <string name="info">מידע</string>
     <string name="okay">אוקיי</string>
