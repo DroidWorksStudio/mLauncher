@@ -489,15 +489,6 @@ class MainActivity : AppCompatActivity() {
             navController.popBackStack(R.id.mainFragment, false)
     }
 
-    override fun attachBaseContext(base: Context) {
-        val localPrefs = Prefs(base)
-        val locale = Locale.forLanguageTag(localPrefs.appLanguage.locale().toString())
-        val config = Configuration(base.resources.configuration)
-        config.setLocale(locale)
-        val localizedContext = base.createConfigurationContext(config)
-        super.attachBaseContext(localizedContext)
-    }
-
     private fun migration() {
         migration.migratePreferencesOnVersionUpdate(prefs)
         migration.migrateMessages(prefs)

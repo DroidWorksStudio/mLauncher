@@ -444,9 +444,16 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             if (prefs.firstSettingsOpen) firstRunTips.visibility = View.VISIBLE
             else firstRunTips.visibility = View.GONE
 
-            if (!ismlauncherDefault(requireContext())) {
-                setDefaultLauncher.visibility = View.VISIBLE
-            } else setDefaultLauncher.visibility = View.GONE
+            if (!ismlauncherDefault(requireContext())) setDefaultLauncher.visibility = View.VISIBLE
+            else setDefaultLauncher.visibility = View.GONE
+
+            val changeLauncherText = if (ismlauncherDefault(requireContext())) {
+                R.string.advanced_settings_change_default_launcher
+            } else {
+                R.string.advanced_settings_set_as_default_launcher
+            }
+
+            setDefaultLauncher.text = getLocalizedString(changeLauncherText)
         }
 
         with(viewModel) {
