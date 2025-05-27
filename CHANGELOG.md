@@ -12,6 +12,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Bug Fixes:
 
+- Correct default launcher text display - ([b4d6aac](https://github.com/DroidWorksStudio/mLauncher/commit/b4d6aacdf77c8c8dd88997b7e5bc27383084bbcf))
 - Improve app list sorting and pinning - ([c395652](https://github.com/DroidWorksStudio/mLauncher/commit/c395652290c2d3066a3c5b0b144f85032bc9c123))
 - Ensure AppDrawer is sorted on initial display - ([7ce257c](https://github.com/DroidWorksStudio/mLauncher/commit/7ce257c23fb505a1b7b6f3ff84f04354a65e7b39))
 - Display app icons alongside work profile/private space indicators - ([98797b6](https://github.com/DroidWorksStudio/mLauncher/commit/98797b607ac6dd25a33750a8d9c8a53f9b3d701f))
