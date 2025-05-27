@@ -149,7 +149,8 @@ class Prefs(val context: Context) {
     val messageWrongListType: ParameterizedType = Types.newParameterizedType(List::class.java, MessageWrong::class.java)
     val messageWrongAdapter: JsonAdapter<List<MessageWrong>> = moshi.adapter(messageWrongListType)
 
-    private val prefsNormal: SharedPreferences = context.getSharedPreferences(PREFS_FILENAME, 0)
+    internal val prefsNormal: SharedPreferences = context.getSharedPreferences(PREFS_FILENAME, 0)
+    internal val pinnedAppsKey = PINNED_APPS
     private val prefsOnboarding: SharedPreferences =
         context.getSharedPreferences(PREFS_ONBOARDING_FILENAME, 0)
 

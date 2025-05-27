@@ -44,6 +44,7 @@ import com.github.droidworksstudio.common.openAccessibilitySettings
 import com.github.droidworksstudio.common.showLongToast
 import com.github.droidworksstudio.mlauncher.BuildConfig
 import com.github.droidworksstudio.mlauncher.R
+import com.github.droidworksstudio.mlauncher.data.AppCategory
 import com.github.droidworksstudio.mlauncher.data.AppListItem
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Message
@@ -140,110 +141,117 @@ suspend fun getAppsList(
     includeRegularApps: Boolean = true,
     includeHiddenApps: Boolean = false,
     includeRecentApps: Boolean = true
-): MutableList<AppListItem> {
-    return withContext(Dispatchers.Main) {
-        val appList: MutableList<AppListItem> = mutableListOf()
-        val appRecentList: MutableList<AppListItem> = mutableListOf()
-        val combinedList: MutableList<AppListItem> = mutableListOf()
-        CrashHandler.logUserAction("Display App List")
+): MutableList<AppListItem> = withContext(Dispatchers.Main) {
 
-        try {
-            val hiddenApps = Prefs(context).hiddenApps
+    val fullList: MutableList<AppListItem> = mutableListOf()
 
-            val userManager = context.getSystemService(Context.USER_SERVICE) as UserManager
-            val launcherApps =
-                context.getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps
+    Log.d(
+        "AppListDebug",
+        "🔄 getAppsList called with: includeRegular=$includeRegularApps, includeHidden=$includeHiddenApps, includeRecent=$includeRecentApps"
+    )
 
-            val prefs = Prefs(context)
+    CrashHandler.logUserAction("Display App List")
 
-            for (profile in userManager.userProfiles) {
-                // Check if the profile is private space
-                val isProfilePrivate = PrivateSpaceManager(context).isPrivateSpaceProfile(profile)
+    try {
+        val prefs = Prefs(context)
+        val hiddenApps = prefs.hiddenApps
+        val pinnedPackages = prefs.pinnedApps.toSet()
 
-                // Skip the private space if it's locked and we don't want to include private space apps
-                if (isProfilePrivate && PrivateSpaceManager(context).isPrivateSpaceLocked()) {
-                    continue
-                }
+        val userManager = context.getSystemService(Context.USER_SERVICE) as UserManager
+        val launcherApps = context.getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps
 
-                for (activity in launcherApps.getActivityList(null, profile)) {
+        val seenPackages = mutableSetOf<String>() // Avoid duplicates
 
-                    val appAlias = prefs.getAppAlias(activity.applicationInfo.packageName).ifEmpty {
-                        prefs.getAppAlias(activity.label.toString())
-                    }
+        for (profile in userManager.userProfiles) {
 
-                    val app = AppListItem(
-                        activity.label.toString(),
-                        activity.applicationInfo.packageName,
-                        activity.componentName.className,
-                        user = profile,
-                        appAlias,
-                    )
+            Log.d("AppListDebug", "👤 Processing user profile: $profile")
 
-                    // Filter out mLauncher
-                    if (activity.applicationInfo.packageName != BuildConfig.APPLICATION_ID) {
-                        // Check if it's a hidden app
-                        if (hiddenApps.contains(activity.applicationInfo.packageName + "|" + profile.toString())) {
-                            if (includeHiddenApps) {
-                                appList.add(app)
-                            }
-                        } else {
-                            // Regular app
-                            if (includeRegularApps) {
-                                appList.add(app)
-                            }
-                        }
-                    }
+            val isPrivate = PrivateSpaceManager(context).isPrivateSpaceProfile(profile)
+            if (isPrivate && PrivateSpaceManager(context).isPrivateSpaceLocked()) {
+                Log.d("AppListDebug", "🔒 Skipping locked private space for profile: $profile")
+                continue
+            }
 
-                }
+            // Recent apps (once)
+            if (prefs.recentAppsDisplayed && includeRecentApps && fullList.none { it.category == AppCategory.RECENT }) {
+                val tracker = AppUsageMonitor.createInstance(context)
+                val recentApps = tracker.getLastTenAppsUsed(context)
 
-                appList.sort()
+                Log.d("AppListDebug", "🕓 Adding ${recentApps.size} recent apps")
 
-                // Handle recent apps
-                if (prefs.recentAppsDisplayed) {
-                    val appUsageTracker = AppUsageMonitor.createInstance(context)
-                    val lastTenUsedApps = appUsageTracker.getLastTenAppsUsed(context)
+                for ((packageName, appName, activityName) in recentApps) {
+                    if (seenPackages.contains(packageName)) continue
 
-                    for ((packageName, appName, appActivityName) in lastTenUsedApps) {
-                        val appAlias = prefs.getAppAlias(packageName).ifEmpty {
-                            appName
-                        }
+                    val alias = prefs.getAppAlias(packageName).ifEmpty { appName }
 
-                        val app = AppListItem(
+                    fullList.add(
+                        AppListItem(
                             appName,
                             packageName,
-                            appActivityName,
+                            activityName,
                             profile,
-                            appAlias,
+                            alias,
+                            AppCategory.RECENT
                         )
-
-                        if (includeRecentApps) {
-                            appRecentList.add(app)
-
-                            // Remove the app from appList if its packageName matches
-                            val iterator = appList.iterator()
-                            while (iterator.hasNext()) {
-                                val model = iterator.next()
-                                if (model.activityPackage == packageName) {
-                                    iterator.remove()
-                                }
-                            }
-                        }
-                    }
-
-                    // Add all recent apps to the combined list
-                    combinedList.addAll(appRecentList)
+                    )
+                    seenPackages.add(packageName)
                 }
             }
 
-            // Add regular apps to the combined list
-            combinedList.addAll(appList)
-        } catch (e: Exception) {
-            Log.d("appList", e.toString())
+            // Launcher apps (all remaining)
+            val launcherAppList = launcherApps.getActivityList(null, profile)
+            Log.d("AppListDebug", "📦 Found ${launcherAppList.size} launcher apps for profile: $profile")
+
+            for (activity in launcherAppList) {
+                val packageName = activity.applicationInfo.packageName
+                val className = activity.componentName.className
+                val label = activity.label.toString()
+
+                if (packageName == BuildConfig.APPLICATION_ID) continue
+                if (seenPackages.contains(packageName)) continue
+
+                val isHidden = hiddenApps.contains("$packageName|$profile")
+                if ((isHidden && !includeHiddenApps) || (!isHidden && !includeRegularApps)) continue
+
+                val alias = prefs.getAppAlias(packageName).ifEmpty {
+                    prefs.getAppAlias(label)
+                }
+
+                val category = when {
+                    pinnedPackages.contains(packageName) -> AppCategory.PINNED
+                    else -> AppCategory.REGULAR
+                }
+
+                fullList.add(
+                    AppListItem(
+                        label,
+                        packageName,
+                        className,
+                        profile,
+                        alias,
+                        category
+                    )
+                )
+
+                seenPackages.add(packageName)
+            }
         }
 
-        combinedList
+        // Final sort
+        fullList.sortWith(
+            compareBy<AppListItem> { it.category.ordinal }
+                .thenBy { it.activityLabel.lowercase() }
+        )
+
+        Log.d("AppListDebug", "✅ App list built with ${fullList.size} items")
+
+    } catch (e: Exception) {
+        Log.e("AppListDebug", "❌ Error building app list: ${e.message}", e)
     }
+
+    fullList
 }
+
 
 fun getUserHandleFromString(context: Context, userHandleString: String): UserHandle {
     val userManager = context.getSystemService(Context.USER_SERVICE) as UserManager

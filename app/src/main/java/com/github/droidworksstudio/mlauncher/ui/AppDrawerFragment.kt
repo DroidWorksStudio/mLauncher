@@ -132,6 +132,7 @@ class AppDrawerFragment : Fragment() {
                         isVisible = true
                         text = getLocalizedString(R.string.clear_home_app)
                         setTextColor(prefs.appColor)
+                        textSize = prefs.appSize.toFloat()
                         setOnClickListener {
                             prefs.setHomeAppModel(n, clearApp)
                             findNavController().popBackStack()
@@ -498,10 +499,12 @@ class AppDrawerFragment : Fragment() {
                 if (firstVisible != RecyclerView.NO_POSITION) {
                     // Assuming adapter has a filtered list and you want to get the first character of the app label
                     val app = adapter.appFilteredList[firstVisible]
-                    val letter = app.label.firstOrNull()?.uppercaseChar() ?: return
+                    if (!prefs.pinnedApps.contains(app.activityPackage)) {
+                        val letter = app.label.firstOrNull()?.uppercaseChar() ?: return
 
-                    // Update the AZSidebar view with the selected letter
-                    azSidebar.setSelectedLetter(letter)
+                        // Update the AZSidebar view with the selected letter
+                        azSidebar.setSelectedLetter(letter)
+                    }
                 }
             }
         }

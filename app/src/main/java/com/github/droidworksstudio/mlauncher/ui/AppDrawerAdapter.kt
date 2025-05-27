@@ -76,7 +76,6 @@ class AppDrawerAdapter(
         prefs = Prefs(parent.context)
         val fontColor = prefs.appColor
         binding.appTitle.setTextColor(fontColor)
-        sortApps()
 
         binding.appTitle.textSize = prefs.appSize.toFloat()
         val padding: Int = prefs.textPaddingSize
@@ -85,44 +84,31 @@ class AppDrawerAdapter(
     }
 
 
-    @SuppressLint("RecyclerView", "NotifyDataSetChanged")
+    @SuppressLint("RecyclerView")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        if (appFilteredList.isEmpty()) return
+        if (appFilteredList.isEmpty()) {
+            Log.d("AppListDebug", "⚠️ onBindViewHolder called but appFilteredList is empty")
+            return
+        }
+
         val appModel = appFilteredList[holder.absoluteAdapterPosition]
+        Log.d("AppListDebug", "🔧 Binding position=$position, label=${appModel.label}, package=${appModel.activityPackage}")
+
         holder.bind(flag, gravity, appModel, appClickListener, appInfoListener, appDeleteListener)
 
         holder.appHide.setOnClickListener {
+            Log.d("AppListDebug", "❌ Hide clicked for ${appModel.label} (${appModel.activityPackage})")
+
             appFilteredList.removeAt(holder.absoluteAdapterPosition)
             appsList.remove(appModel)
             notifyItemRemoved(holder.absoluteAdapterPosition)
+
+            Log.d("AppListDebug", "📤 notifyItemRemoved at ${holder.absoluteAdapterPosition}")
             appHideListener(flag, appModel)
         }
 
-        holder.appPin.setOnClickListener {
-            val appName = appModel.activityPackage
-            val updatedPinnedApps = prefs.pinnedApps.toMutableSet() // Make a copy
-
-            val isPinned = updatedPinnedApps.contains(appName)
-            if (isPinned) {
-                updatedPinnedApps.remove(appName)
-                holder.appPin.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.pin_off, 0, 0)
-                holder.appPin.text = getLocalizedString(R.string.pin)
-            } else {
-                updatedPinnedApps.add(appName)
-                holder.appPin.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.pin, 0, 0)
-                holder.appPin.text = getLocalizedString(R.string.unpin)
-            }
-
-            prefs.pinnedApps = updatedPinnedApps.toSet()
-
-            sortApps()
-            notifyDataSetChanged()
-        }
-
-
         holder.appLock.setOnClickListener {
             val appName = appModel.activityPackage
-            // Access the current locked apps set
             val currentLockedApps = prefs.lockedApps
 
             if (currentLockedApps.contains(appName)) {
@@ -130,60 +116,42 @@ class AppDrawerAdapter(
 
                 biometricHelper.startBiometricAuth(appModel, object : BiometricHelper.CallbackApp {
                     override fun onAuthenticationSucceeded(appListItem: AppListItem) {
-                        holder.appLock.setCompoundDrawablesWithIntrinsicBounds(
-                            0,
-                            R.drawable.padlock_off,
-                            0,
-                            0
-                        )
+                        Log.d("AppListDebug", "🔓 Auth succeeded for $appName - unlocking")
+                        holder.appLock.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.padlock_off, 0, 0)
                         holder.appLock.text = getLocalizedString(R.string.lock)
-                        // If appName is already in the set, remove it
                         currentLockedApps.remove(appName)
+                        prefs.lockedApps = currentLockedApps
+                        Log.d("AppListDebug", "🔐 Updated lockedApps: $currentLockedApps")
                     }
 
                     override fun onAuthenticationFailed() {
-                        Log.e(
-                            "Authentication",
-                            getLocalizedString(R.string.text_authentication_failed)
-                        )
+                        Log.e("Authentication", getLocalizedString(R.string.text_authentication_failed))
                     }
 
-                    override fun onAuthenticationError(
-                        errorCode: Int,
-                        errorMessage: CharSequence?
-                    ) {
-                        when (errorCode) {
-                            BiometricPrompt.ERROR_USER_CANCELED -> Log.e(
-                                "Authentication",
-                                getLocalizedString(R.string.text_authentication_cancel)
-                            )
-
-                            else -> Log.e(
-                                "Authentication",
-                                getLocalizedString(R.string.text_authentication_error).format(
-                                    errorMessage,
-                                    errorCode
-                                )
-                            )
+                    override fun onAuthenticationError(errorCode: Int, errorMessage: CharSequence?) {
+                        val msg = when (errorCode) {
+                            BiometricPrompt.ERROR_USER_CANCELED -> getLocalizedString(R.string.text_authentication_cancel)
+                            else -> getLocalizedString(R.string.text_authentication_error).format(errorMessage, errorCode)
                         }
+                        Log.e("Authentication", msg)
                     }
                 })
             } else {
+                Log.d("AppListDebug", "🔒 Locking $appName")
                 holder.appLock.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.padlock, 0, 0)
                 holder.appLock.text = getLocalizedString(R.string.unlock)
-                // If appName is not in the set, add it
                 currentLockedApps.add(appName)
+                prefs.lockedApps = currentLockedApps
+                Log.d("AppListDebug", "🔐 Updated lockedApps: $currentLockedApps")
             }
-
-            // Update the lockedApps value (save the updated set back to prefs)
-            prefs.lockedApps = currentLockedApps
-            Log.d("lockedApps", prefs.lockedApps.toString())
         }
 
         holder.appSaveRename.setOnClickListener {
             val name = holder.appRenameEdit.text.toString().trim()
+            Log.d("AppListDebug", "✏️ Renaming ${appModel.activityPackage} to $name")
             appModel.customLabel = name
             notifyItemChanged(holder.absoluteAdapterPosition)
+            Log.d("AppListDebug", "🔁 notifyItemChanged at ${holder.absoluteAdapterPosition}")
             appRenameListener(appModel.activityPackage, appModel.customLabel)
         }
 
@@ -225,7 +193,6 @@ class AppDrawerAdapter(
                                 .toMutableList()
                         }
                     } else {
-                        sortApps()
                         appsList.toMutableList() // No search term, return all apps
                     }
                 } else {
@@ -254,12 +221,10 @@ class AppDrawerAdapter(
             }
 
 
-            @SuppressLint("NotifyDataSetChanged")
             @Suppress("UNCHECKED_CAST")
             override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
                 if (results?.values is MutableList<*>) {
                     appFilteredList = results.values as MutableList<AppListItem>
-                    notifyDataSetChanged()
                 } else {
                     return
                 }
@@ -281,11 +246,9 @@ class AppDrawerAdapter(
         }
     }
 
-    @SuppressLint("NotifyDataSetChanged")
     fun setAppList(appsList: MutableList<AppListItem>) {
         this.appsList = appsList
         this.appFilteredList = appsList
-        notifyDataSetChanged()
     }
 
     fun launchFirstInList() {
@@ -584,6 +547,29 @@ class AppDrawerAdapter(
                         }
                     }
                 }
+
+                appPin.apply {
+                    setOnClickListener {
+                        val appName = appListItem.activityPackage
+                        val updatedPinnedApps = prefs.pinnedApps.toMutableSet()
+
+                        val isPinned = updatedPinnedApps.contains(appName)
+                        Log.d("AppListDebug", if (isPinned) "📌 Unpinning $appName" else "📌 Pinning $appName")
+
+                        if (isPinned) {
+                            updatedPinnedApps.remove(appName)
+                            appPin.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.pin_off, 0, 0)
+                            appPin.text = getLocalizedString(R.string.pin)
+                        } else {
+                            updatedPinnedApps.add(appName)
+                            appPin.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.pin, 0, 0)
+                            appPin.text = getLocalizedString(R.string.unpin)
+                        }
+
+                        prefs.pinnedApps = updatedPinnedApps.toSet()
+                        Log.d("AppListDebug", "✅ Updated pinnedApps: ${prefs.pinnedApps}")
+                    }
+                }
             }
     }
 
@@ -591,19 +577,6 @@ class AppDrawerAdapter(
         return appsList.indexOfFirst {
             it.activityLabel.firstOrNull()?.uppercaseChar() == letter
         }
-    }
-
-    private fun sortApps() {
-        val pinnedApps = prefs.pinnedApps
-
-        // Ensure you're sorting the full list
-        appFilteredList = appsList.toMutableList()
-
-        appFilteredList.sortWith(
-            compareByDescending<AppListItem> {
-                pinnedApps.contains(it.activityPackage)
-            }.thenBy { it.customLabel.lowercase() }
-        )
     }
 
 }

@@ -395,7 +395,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         if (prefs.homeLocked) return true
 
         val n = view.id
-        showAppList(AppDrawerFlag.SetHomeApp, includeHiddenApps = true, n)
+        showAppList(AppDrawerFlag.SetHomeApp, includeHiddenApps = true, includeRecentApps = false, n)
         CrashHandler.logUserAction("Show App List")
         return true
     }
@@ -539,8 +539,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         else viewModel.launchApp(prefs.getHomeAppModel(location), this)
     }
 
-    private fun showAppList(flag: AppDrawerFlag, includeHiddenApps: Boolean = false, n: Int = 0) {
-        viewModel.getAppList(includeHiddenApps)
+    private fun showAppList(flag: AppDrawerFlag, includeHiddenApps: Boolean = false, includeRecentApps: Boolean = true, n: Int = 0) {
+        viewModel.getAppList(includeHiddenApps, includeRecentApps)
         try {
             if (findNavController().currentDestination?.id == R.id.mainFragment) {
                 findNavController().navigate(
