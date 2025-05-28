@@ -5,9 +5,9 @@ import android.content.Context
 import android.content.pm.PackageManager
 import android.location.Location
 import android.location.LocationManager
-import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.github.droidworksstudio.launcher.MainActivity
+import com.github.droidworksstudio.launcher.R
 import com.github.droidworksstudio.launcher.settings.SharedPreferenceManager
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -21,34 +21,48 @@ class WeatherSystem(private val context: Context) {
     private val sharedPreferenceManager = SharedPreferenceManager(context)
     private val stringUtils = StringUtils()
 
-    suspend fun setGpsLocation(activity: MainActivity) {
+    fun setGpsLocation(activity: MainActivity) {
+
         val locationManager = context.getSystemService(Context.LOCATION_SERVICE) as LocationManager
 
         if (ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(
-                activity,
-                arrayOf(Manifest.permission.ACCESS_COARSE_LOCATION),
-                1
-            )
             return
         }
 
-        locationManager.getCurrentLocation(
-            LocationManager.GPS_PROVIDER, // Only GPS provider functions on my phone with CalyxOS, so that's what you get.
-            null,
-            ContextCompat.getMainExecutor(context)
-        )
-        { location: Location? ->
-            if (location != null) {
-                CoroutineScope(Dispatchers.IO).launch {
-                    val latitude = location.latitude
-                    val longitude = location.longitude
-                    sharedPreferenceManager.setWeatherLocation("latitude=${latitude}&longitude=${longitude}", "Latest GPS location")
-                    activity.updateWeatherText()
+        try {
+            val provider = if (locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)) {
+                LocationManager.NETWORK_PROVIDER
+            } else {
+                LocationManager.GPS_PROVIDER
+            }
+
+            locationManager.getCurrentLocation(
+                provider,
+                null,
+                ContextCompat.getMainExecutor(context)
+            )
+
+            { location: Location? ->
+                if (location != null) {
+                    CoroutineScope(Dispatchers.IO).launch {
+                        val latitude = location.latitude
+                        val longitude = location.longitude
+                        sharedPreferenceManager.setWeatherLocation(
+                            "latitude=${latitude}&longitude=${longitude}",
+                            context.getString(R.string.latest_location)
+                        )
+                        activity.updateWeatherText()
+                    }
+
+                } else {
+                    CoroutineScope(Dispatchers.IO).launch {
+                        activity.updateWeatherText()
+                    }
                 }
             }
+        } catch (_: Exception) {
+            return
         }
-
     }
 
     // Run within Dispatchers.IO from the outside (doesn't seem to refresh properly otherwise)
