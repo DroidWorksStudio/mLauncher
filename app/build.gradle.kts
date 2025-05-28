@@ -54,7 +54,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            resValue("string", "app_name", "Launcher Dev")
+            resValue("string", "app_name", "Multi Launcher Dev")
             resValue("string", "empty", "")
         }
 
@@ -65,7 +65,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            resValue("string", "app_name", "Launcher")
+            resValue("string", "app_name", "Multi Launcher")
             resValue("string", "empty", "")
         }
     }
