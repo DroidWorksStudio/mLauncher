@@ -1,0 +1,91 @@
+# Builds the project
+name: Android Release CI
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  build:
+    name: Build, Sign & Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout project
+        uses: actions/checkout@v4.2.2
+        with:
+          token: ${{ secrets.GIT_BOT_TOKEN }}
+          ref: main
+
+      - name: set up JDK 17
+        uses: actions/setup-java@v4.7.1
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: gradle
+
+      - uses: actions/cache@v4.2.3
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
+      - name: Build
+        run: ./gradlew clean && ./gradlew assembleRelease && ./gradlew bundleRelease
+
+      - name: Sign APK
+        uses: ilharp/sign-android-release@v2.0.0
+        # ID used to access action output
+        id: sign_app_apk
+        with:
+          releaseDir: app/build/outputs/apk/release
+          signingKey: ${{ secrets.SIGNINGKEY_BASE64 }}
+          keyAlias: ${{ secrets.KEY_ALIAS }}
+          keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
+          keyPassword: ${{ secrets.KEY_PASSWORD }}
+          buildToolsVersion: 35.0.0
+
+      - name: Release to GitHub
+        uses: svenstaro/upload-release-action@2.9.0
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: ${{steps.sign_app_apk.outputs.signedFile}}
+          asset_name: MultiLauncher-${{ github.ref_name }}-Signed.apk
+          tag: ${{ github.ref }}
+          overwrite: true
+
+      - name: Upload ProGuard Mapping File
+        uses: svenstaro/upload-release-action@2.9.0
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: app/build/outputs/mapping/release/mapping.txt
+          asset_name: MultiLauncher-${{ github.ref_name }}-mapping.txt
+          tag: ${{ github.ref }}
+          overwrite: true
+
+      - name: Sign AAB
+        uses: ilharp/sign-android-release@v2.0.0
+        # ID used to access action output
+        id: sign_app_aab
+        with:
+          releaseDir: app/build/outputs/bundle/release/
+          signingKey: ${{ secrets.SIGNINGKEY_BASE64 }}
+          keyAlias: ${{ secrets.KEY_ALIAS }}
+          keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
+          keyPassword: ${{ secrets.KEY_PASSWORD }}
+          buildToolsVersion: 35.0.0
+
+      - name: Release to GitHub
+        uses: svenstaro/upload-release-action@2.9.0
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: ${{steps.sign_app_aab.outputs.signedFile}}
+          asset_name: MultiLauncher-${{ github.ref_name }}-Signed.aab
+          tag: ${{ github.ref }}
+          overwrite: true

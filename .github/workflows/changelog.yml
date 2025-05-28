@@ -1,0 +1,51 @@
+name: Update CHANGELOG.md
+
+on:
+  push:
+    tags:
+      - '*'
+    branches:
+      - 'main'
+  workflow_dispatch:
+
+jobs:
+  changelog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4.2.2
+        with:
+          token: ${{ secrets.GIT_BOT_TOKEN }}
+          fetch-depth: 0
+          ref: main
+
+      - name: Generate a changelog
+        uses: orhun/git-cliff-action@v4.4.2
+        with:
+          config: cliff.toml
+          args: --verbose
+        env:
+          OUTPUT: CHANGELOG.md
+
+      - name: Configure git
+        run: |
+          git config user.name "${{ secrets.GIT_NAME }}"
+          git config user.email "${{ secrets.GIT_EMAIL }}"
+
+      - name: Check for changes and commit
+        env:
+          GIT_NAME: ${{ secrets.GIT_NAME }}
+        run: |
+          if [[ $(git status --porcelain) ]]; then
+            COMMIT_AUTHOR=$(git log -1 --pretty=%an)
+
+            if [[ "$COMMIT_AUTHOR" != "$GIT_NAME" ]]; then
+              git add -u
+              git commit -m "chore(changelog): Update CHANGELOG.md"
+              git push origin main
+            else
+              echo "WARNING: Last commit was already made by $COMMIT_AUTHOR."
+            fi
+          else
+            echo "WARNING: No changes detected."
+          fi
