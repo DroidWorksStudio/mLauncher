@@ -22,7 +22,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class LocationFragment : Fragment(), LocationListAdapter.OnItemClickListener {
+class LocationFragment : Fragment(), LocationListAdapter.OnItemClickListener, TitleProvider {
 
     private var adapter: LocationListAdapter? = null
     private lateinit var weatherSystem: WeatherSystem
@@ -58,7 +58,6 @@ class LocationFragment : Fragment(), LocationListAdapter.OnItemClickListener {
         adapter = LocationListAdapter(requireContext(), locationList, this)
         val recyclerView = view.findViewById<RecyclerView>(R.id.locationRecycler)
         val appMenuEdgeFactory = AppMenuEdgeFactory(requireActivity())
-        uiUtils.setMenuTitleAlignment(view.findViewById(R.id.locationMenuTitle))
         uiUtils.setSearchAlignment(searchView)
         uiUtils.setSearchSize(searchView)
 
@@ -106,22 +105,22 @@ class LocationFragment : Fragment(), LocationListAdapter.OnItemClickListener {
         }
     }
 
-    private fun showConfirmationDialog(appName: String?, latitude: String?, longitude: String?) {
+    private fun showConfirmationDialog(locationName: String?, latitude: String?, longitude: String?) {
         AlertDialog.Builder(requireContext()).apply {
-            setTitle("Confirmation")
-            setMessage("Are you sure you want to select $appName?")
-            setPositiveButton("Yes") { _, _ ->
-                performConfirmedAction(appName, latitude, longitude)
+            setTitle(getString(R.string.confirm_title))
+            setMessage("${getString(R.string.app_confirm_text)} $locationName?")
+            setPositiveButton(getString(R.string.confirm_yes)) { _, _ ->
+                performConfirmedAction(locationName, latitude, longitude)
             }
-            setNegativeButton("Cancel") { _, _ ->
+            setNegativeButton(R.string.confirm_no) { _, _ ->
 
             }
 
         }.create().show()
     }
 
-    private fun performConfirmedAction(appName: String?, latitude: String?, longitude: String?) {
-        sharedPreferenceManager.setWeatherLocation("latitude=${latitude}&longitude=${longitude}", appName)
+    private fun performConfirmedAction(locationName: String?, latitude: String?, longitude: String?) {
+        sharedPreferenceManager.setWeatherLocation("latitude=${latitude}&longitude=${longitude}", locationName)
         requireActivity().supportFragmentManager.popBackStack()
     }
 
@@ -129,4 +128,9 @@ class LocationFragment : Fragment(), LocationListAdapter.OnItemClickListener {
     override fun onItemClick(name: String?, latitude: String?, longitude: String?) {
         showConfirmationDialog(name, latitude, longitude)
     }
+
+    override fun getTitle(): String {
+        return getString(R.string.find_your_city)
+    }
+
 }
