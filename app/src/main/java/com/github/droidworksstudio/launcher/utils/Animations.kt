@@ -6,14 +6,15 @@ import android.animation.ArgbEvaluator
 import android.animation.ValueAnimator
 import android.app.Activity
 import android.content.Context
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.view.View
+import androidx.core.graphics.toColorInt
+import androidx.core.view.isVisible
 import com.github.droidworksstudio.launcher.settings.SharedPreferenceManager
 
 class Animations(context: Context) {
 
     private val sharedPreferenceManager = SharedPreferenceManager(context)
+    var isInAnim = false
 
     // fadeViewIn and fadeViewOut are for smaller item transitions, such as the action menu
 
@@ -25,9 +26,9 @@ class Animations(context: Context) {
         view.fadeOut()
     }
 
-    fun showHome(homeView: View, appView: View) {
-        appView.slideOutToBottom()
-        homeView.fadeIn()
+    fun showHome(homeView: View, appView: View, duration: Long) {
+        appView.slideOutToBottom(duration)
+        homeView.fadeIn(duration)
     }
 
     fun showApps(homeView: View, appView: View) {
@@ -39,14 +40,12 @@ class Animations(context: Context) {
         val originalColor = sharedPreferenceManager.getBgColor()
 
         // Only animate darkness onto the transparent background
-        if (originalColor == Color.parseColor("#00000000")) {
-            val newColor = Color.parseColor("#3F000000")
-            val colorDrawable = ColorDrawable(originalColor)
-            activity.window.setBackgroundDrawable(colorDrawable)
+        if (originalColor == "#00000000".toColorInt()) {
+            val newColor = "#3F000000".toColorInt()
 
             val backgroundColorAnimator = ValueAnimator.ofObject(ArgbEvaluator(), originalColor, newColor)
             backgroundColorAnimator.addUpdateListener { animator ->
-                colorDrawable.color = animator.animatedValue as Int
+                activity.window.decorView.setBackgroundColor(animator.animatedValue as Int)
             }
 
             val duration = sharedPreferenceManager.getAnimationSpeed()
@@ -58,21 +57,18 @@ class Animations(context: Context) {
         }
     }
 
-    fun backgroundOut(activity: Activity) {
+    fun backgroundOut(activity: Activity, duration: Long) {
         val newColor = sharedPreferenceManager.getBgColor()
 
         // Only animate darkness onto the transparent background
-        if (newColor == Color.parseColor("#00000000")) {
-            val originalColor = Color.parseColor("#3F000000")
-            val colorDrawable = ColorDrawable(originalColor)
-            activity.window.setBackgroundDrawable(colorDrawable)
+        if (newColor == "#00000000".toColorInt()) {
+            val originalColor = "#3F000000".toColorInt()
 
             val backgroundColorAnimator = ValueAnimator.ofObject(ArgbEvaluator(), originalColor, newColor)
             backgroundColorAnimator.addUpdateListener { animator ->
-                colorDrawable.color = animator.animatedValue as Int
+                activity.window.decorView.setBackgroundColor(animator.animatedValue as Int)
             }
 
-            val duration = sharedPreferenceManager.getAnimationSpeed()
             backgroundColorAnimator.duration = duration
 
             backgroundColorAnimator.start()
@@ -98,10 +94,9 @@ class Animations(context: Context) {
         }
     }
 
-    private fun View.slideOutToBottom() {
-        if (visibility == View.VISIBLE) {
-            val duration = sharedPreferenceManager.getAnimationSpeed()
-
+    private fun View.slideOutToBottom(duration: Long) {
+        if (isVisible) {
+            isInAnim = true
             animate()
                 .translationY(height.toFloat() / 5)
                 .scaleY(1.2f)
@@ -109,30 +104,37 @@ class Animations(context: Context) {
                 .setDuration(duration / 2)
                 .setListener(object : AnimatorListenerAdapter() {
                     override fun onAnimationEnd(animation: Animator) {
+                        super.onAnimationEnd(animation)
                         visibility = View.INVISIBLE
+                        isInAnim = false
+                    }
+
+                    override fun onAnimationCancel(animation: Animator) {
+                        super.onAnimationCancel(animation)
+                        visibility = View.INVISIBLE
+                        isInAnim = false
                     }
                 })
         }
     }
 
-    private fun View.fadeIn() {
+    private fun View.fadeIn(duration: Long = sharedPreferenceManager.getAnimationSpeed()) {
         if (visibility != View.VISIBLE) {
             alpha = 0f
             translationY = -height.toFloat() / 100
             visibility = View.VISIBLE
-            val duration = sharedPreferenceManager.getAnimationSpeed()
 
             animate()
                 .alpha(1f)
                 .translationY(0f)
                 .setDuration(duration)
                 .setListener(null)
-
         }
     }
 
     private fun View.fadeOut() {
-        if (visibility == View.VISIBLE) {
+        if (isVisible) {
+            isInAnim = true
             val duration = sharedPreferenceManager.getAnimationSpeed()
 
             animate()
@@ -141,7 +143,15 @@ class Animations(context: Context) {
                 .setDuration(duration / 2)
                 .setListener(object : AnimatorListenerAdapter() {
                     override fun onAnimationEnd(animation: Animator) {
-                        visibility = View.GONE
+                        super.onAnimationEnd(animation)
+                        visibility = View.INVISIBLE
+                        isInAnim = false
+                    }
+
+                    override fun onAnimationCancel(animation: Animator) {
+                        super.onAnimationCancel(animation)
+                        visibility = View.INVISIBLE
+                        isInAnim = false
                     }
                 })
 
