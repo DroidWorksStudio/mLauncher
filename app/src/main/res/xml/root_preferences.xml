@@ -13,6 +13,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:allowDividerAbove="false"
+        app:title="@string/about">
+        <Preference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:key="aboutPage"
+            app:selectable="true"
+            app:title="@string/about_title" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:allowDividerAbove="false"
         app:title="@string/customization">
         <Preference
             android:layout_width="wrap_content"
@@ -68,18 +80,6 @@
             app:selectable="true"
             app:summary="@string/restore_summary"
             app:title="@string/restore" />
-    </PreferenceCategory>
-    <PreferenceCategory
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:allowDividerAbove="false"
-        app:title="@string/about">
-        <Preference
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:key="aboutPage"
-            app:selectable="true"
-            app:title="@string/about_title" />
     </PreferenceCategory>
     <PreferenceCategory
         android:layout_width="wrap_content"

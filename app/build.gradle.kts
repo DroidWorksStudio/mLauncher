@@ -62,6 +62,7 @@ android {
         getByName("release") {
             isMinifyEnabled = true
             isShrinkResources = true
+            applicationIdSuffix = ".beta"
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
