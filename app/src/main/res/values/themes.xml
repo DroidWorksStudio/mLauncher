@@ -11,10 +11,10 @@
         <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
         <item name="android:enforceNavigationBarContrast">false</item>
         <item name="android:enforceStatusBarContrast">false</item>
-
+        <item name="colorAccent">#FF80CBC4</item>
     </style>
 
-    <style name="SettingsTheme" parent="Theme.AppCompat.NoActionBar">
+    <style name="SettingsTheme" parent="Theme.AppCompat">
         <item name="android:windowBackground">@color/settings_bg</item>
         <item name="android:windowShowWallpaper">false</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
@@ -24,17 +24,12 @@
         <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
         <item name="android:enforceNavigationBarContrast">false</item>
         <item name="android:enforceStatusBarContrast">false</item>
+        <item name="actionBarStyle">@style/TransparentActionBar</item>
     </style>
 
-    <style name="AppSearchView" parent="Widget.AppCompat.SearchView">
-        <item name="android:textSize">25sp</item>
-        <item name="android:editTextColor">#f3f3f3</item>
-        <item name="android:cursorVisible">true</item>
-    </style>
-
-    <style name="AppTextAppearance" parent="Widget.AppCompat.SearchView">
-        <item name="android:textAppearance">@android:style/TextAppearance.DeviceDefault</item>
-
+    <style name="TransparentActionBar" parent="Widget.AppCompat.ActionBar">
+        <!-- Transparent background for ActionBar -->
+        <item name="background">@android:color/transparent</item>
     </style>
 
     <style name="Theme.Launcher" parent="Base.Theme.Launcher" />

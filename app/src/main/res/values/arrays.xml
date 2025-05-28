@@ -7,16 +7,6 @@
         <item>Grey</item>
         <item>White</item>
         <item>Material</item>
-
-    </string-array>
-
-    <string-array name="bg_values">
-        <item>#00000000</item>
-        <item>#FF000000</item>
-        <item>#FF1B1B1B</item>
-        <item>#FFD6D6D6</item>
-        <item>material</item>
-
     </string-array>
 
     <string-array name="color_options">
@@ -25,87 +15,80 @@
         <item>Material</item>
     </string-array>
 
-    <string-array name="color_values">
-        <item>#FFF3F3F3</item>
-        <item>#FF0C0C0C</item>
-        <item>material</item>
+    <string-array name="font_options">
+        <item>System</item>
+        <item>Arbutus</item>
+        <item>Casual</item>
+        <item>Cursive</item>
+        <item>Monospace</item>
+        <item>Sans Serif</item>
+        <item>Sans Serif Light</item>
+        <item>Sans Serif Thin</item>
+        <item>Sans Serif Condensed</item>
+        <item>Sans Serif Condensed Light</item>
+        <item>Sans Serif Smallcaps</item>
+        <item>Serif</item>
+        <item>Ubuntu</item>
+        <item>Ubuntu Light</item>
+        <item>Ubuntu Condensed Regular</item>
+        <item>Workbench</item>
     </string-array>
 
-    <string-array name="animation_options">
-        <item>0.25x</item>
-        <item>0.5x</item>
-        <item>1x</item>
-        <item>2x</item>
-        <item>4x</item>
-    </string-array>
-
-    <string-array name="animation_values">
-        <item>800</item>
-        <item>400</item>
-        <item>200</item>
-        <item>100</item>
-        <item>50</item>
+    <string-array name="style_options">
+        <item>Normal</item>
+        <item>Bold</item>
+        <item>Italic</item>
+        <item>Bold-Italic</item>
     </string-array>
 
     <!--Home and App Menu-->
-    <string-array name="shortcut_options">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-    </string-array>
-
     <string-array name="h_alignment_options">
         <item>Left</item>
         <item>Center</item>
         <item>Right</item>
     </string-array>
 
-    <string-array name="h_alignment_values">
-        <item>left</item>
-        <item>center</item>
-        <item>right</item>
+    <string-array name="v_alignment_options">
+        <item>Top</item>
+        <item>Center</item>
+        <item>Bottom</item>
     </string-array>
 
     <string-array name="size_options">
-        <item>Small</item>
-        <item>Medium</item>
-        <item>Large</item>
-    </string-array>
-
-    <string-array name="size_values">
-        <item>small</item>
-        <item>medium</item>
-        <item>large</item>
-    </string-array>
-
-    <string-array name="shortcut_size_options">
+        <item>Tiny</item>
         <item>Small</item>
         <item>Medium</item>
         <item>Large</item>
         <item>Extra Large</item>
+        <item>Huge</item>
     </string-array>
 
-    <string-array name="shortcut_size_values">
-        <item>small</item>
-        <item>medium</item>
-        <item>large</item>
-        <item>extra</item>
+    <string-array name="shortcut_spacing_options">
+        <item>Tiny</item>
+        <item>Small</item>
+        <item>Medium</item>
+        <item>Large</item>
+        <item>Extra Large</item>
+        <item>Huge</item>
+        <item>Extra Huge</item>
     </string-array>
 
-    <!--Weather-->
-    <string-array name="temp_units">
-        <item>°C</item>
-        <item>°F</item>
+    <string-array name="app_spacing_options">
+        <item>Tiny</item>
+        <item>Small</item>
+        <item>Medium</item>
+        <item>Large</item>
+        <item>Extra Large</item>
+        <item>Huge</item>
+    </string-array>
+    <!-- Reply Preference -->
+    <string-array name="reply_entries">
+        <item>Reply</item>
+        <item>Reply to all</item>
     </string-array>
 
-    <string-array name="unit_values">
-        <item>celsius</item>
-        <item>fahrenheit</item>
+    <string-array name="reply_values">
+        <item>reply</item>
+        <item>reply_all</item>
     </string-array>
 </resources>

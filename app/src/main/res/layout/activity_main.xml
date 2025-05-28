@@ -21,52 +21,128 @@
             android:layout_width="match_parent"
             android:layout_height="60dp" />
 
-        <TextView
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/menuTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
             android:clickable="false"
             android:gravity="start"
             android:paddingLeft="40dp"
             android:paddingTop="20dp"
             android:paddingRight="40dp"
             android:paddingBottom="20dp"
-            android:text="@string/select_an_app"
+            android:singleLine="true"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault"
             android:textColor="#C1F3F3F3"
-            android:textSize="36sp" />
+            android:textSize="36sp"
+            app:drawableStartCompat="@drawable/edit" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
+        <ViewSwitcher
+            android:id="@+id/menuView"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
-            android:clipToPadding="false"
-            android:fadingEdgeLength="20dp"
-            android:padding="0dp"
-            android:requiresFadingEdge="vertical"
-            android:scrollbars="none">
+            android:layout_weight="1.1"
+            android:clipToPadding="false">
 
-        </androidx.recyclerview.widget.RecyclerView>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/appRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:fadingEdgeLength="20dp"
+                android:padding="0dp"
+                android:requiresFadingEdge="vertical"
+                android:scrollbars="none">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/searchView"
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/contactRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:fadingEdgeLength="20dp"
+                android:padding="0dp"
+                android:requiresFadingEdge="vertical"
+                android:scrollbars="none">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </ViewSwitcher>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/searchLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="32dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="10dp"
             android:layout_weight="0.1"
-            android:background="@android:color/transparent"
-            android:cursorVisible="true"
-            android:drawableStart="@android:drawable/ic_menu_search"
-            android:drawablePadding="8dp"
-            android:editTextColor="#f3f3f3"
-            android:hint="@string/search"
-            android:singleLine="true"
-            android:textAlignment="viewStart"
-            android:textAppearance="@android:style/TextAppearance.DeviceDefault"
-            android:textSize="25sp" />
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@+id/searchSwitcher"
+            app:layout_constraintStart_toStartOf="@+id/searchSwitcher">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/searchView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:cursorVisible="true"
+                android:drawableStart="@drawable/search"
+                android:drawablePadding="8dp"
+                android:editTextColor="#f3f3f3"
+                android:hint="@string/search"
+                android:singleLine="true"
+                android:textAlignment="viewStart"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+                android:textColorHighlight="#5F33B5E5"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/internetSearch"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_conversion_absoluteHeight="0dp"
+                tools:layout_conversion_absoluteWidth="0dp" />
+
+            <ImageView
+                android:id="@+id/internetSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/switch_to_contacts"
+                android:padding="6dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="@+id/searchView"
+                app:layout_constraintEnd_toStartOf="@+id/searchSwitcher"
+                app:layout_constraintTop_toTopOf="@+id/searchView"
+                app:srcCompat="@drawable/travel_explore"
+                tools:layout_conversion_absoluteHeight="0dp"
+                tools:layout_conversion_absoluteWidth="0dp" />
+
+            <ImageView
+                android:id="@+id/searchSwitcher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/switch_to_contacts"
+                android:padding="6dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="@+id/searchView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/searchView"
+                app:srcCompat="@drawable/apps"
+                tools:layout_conversion_absoluteHeight="0dp"
+                tools:layout_conversion_absoluteWidth="0dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Space
+            android:id="@+id/searchReplacement"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:visibility="gone" />
 
     </LinearLayout>
 
@@ -91,7 +167,6 @@
                 android:layout_marginHorizontal="32dp"
                 android:layout_marginTop="45dp"
                 android:layout_marginBottom="27dp"
-                android:fontFamily="@null"
                 android:format12Hour="hh:mm"
                 android:format24Hour="HH:mm"
                 android:textAlignment="textStart"
@@ -107,7 +182,6 @@
                 android:id="@+id/textDate"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:fontFamily="@null"
                 android:format12Hour="dd MMM yyyy"
                 android:format24Hour="dd MMM yyyy"
                 android:lineSpacingExtra="8sp"
@@ -116,6 +190,7 @@
                 android:textAppearance="@android:style/TextAppearance.DeviceDefault"
                 android:textColor="#F3F3F3"
                 android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/textClock"
                 app:layout_constraintStart_toStartOf="@+id/textClock"
                 app:layout_constraintTop_toBottomOf="@+id/textClock" />
@@ -123,6 +198,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <Space
+            android:id="@+id/topSpace"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.22" />
@@ -136,8 +212,9 @@
             android:clickable="false"
             android:drawablePadding="3dp"
             android:gravity="center_vertical"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
+            android:paddingHorizontal="20dp"
+            android:shadowColor="#00FFFFFF"
+            android:shadowRadius="10"
             android:text="@string/shortcut_default"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault"
             android:textColor="#F3F3F3"
@@ -152,8 +229,9 @@
             android:clickable="false"
             android:drawablePadding="3dp"
             android:gravity="center_vertical"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
+            android:paddingHorizontal="20dp"
+            android:shadowColor="#00FFFFFF"
+            android:shadowRadius="10"
             android:text="@string/shortcut_default"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault"
             android:textColor="#F3F3F3"
@@ -168,8 +246,9 @@
             android:clickable="false"
             android:drawablePadding="3dp"
             android:gravity="center_vertical"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
+            android:paddingHorizontal="20dp"
+            android:shadowColor="#00FFFFFF"
+            android:shadowRadius="10"
             android:text="@string/shortcut_default"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault"
             android:textColor="#F3F3F3"
@@ -180,13 +259,13 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.09"
-            android:autoSizeMaxTextSize="32sp"
             android:autoSizeTextType="uniform"
             android:clickable="false"
             android:drawablePadding="3dp"
             android:gravity="center_vertical"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
+            android:paddingHorizontal="20dp"
+            android:shadowColor="#00FFFFFF"
+            android:shadowRadius="10"
             android:text="@string/shortcut_default"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault"
             android:textColor="#F3F3F3"
@@ -201,12 +280,12 @@
             android:clickable="false"
             android:drawablePadding="3dp"
             android:gravity="center_vertical"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
+            android:paddingHorizontal="20dp"
+            android:shadowColor="#00FFFFFF"
+            android:shadowRadius="10"
             android:text="@string/shortcut_default"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault"
             android:textColor="#F3F3F3"
-            android:textSize="28sp"
             android:visibility="gone" />
 
         <TextView
@@ -218,12 +297,12 @@
             android:clickable="false"
             android:drawablePadding="3dp"
             android:gravity="center_vertical"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
+            android:paddingHorizontal="20dp"
+            android:shadowColor="#00FFFFFF"
+            android:shadowRadius="10"
             android:text="@string/shortcut_default"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault"
             android:textColor="#F3F3F3"
-            android:textSize="28sp"
             android:visibility="gone" />
 
         <TextView
@@ -235,12 +314,12 @@
             android:clickable="false"
             android:drawablePadding="3dp"
             android:gravity="center_vertical"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
+            android:paddingHorizontal="20dp"
+            android:shadowColor="#00FFFFFF"
+            android:shadowRadius="10"
             android:text="@string/shortcut_default"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault"
             android:textColor="#F3F3F3"
-            android:textSize="28sp"
             android:visibility="gone" />
 
         <TextView
@@ -252,19 +331,138 @@
             android:clickable="false"
             android:drawablePadding="3dp"
             android:gravity="center_vertical"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
+            android:paddingHorizontal="20dp"
+            android:shadowColor="#00FFFFFF"
+            android:shadowRadius="10"
             android:text="@string/shortcut_default"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault"
             android:textColor="#F3F3F3"
-            android:textSize="28sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/app9"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.09"
+            android:autoSizeTextType="uniform"
+            android:clickable="false"
+            android:drawablePadding="3dp"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="20dp"
+            android:shadowColor="#00FFFFFF"
+            android:shadowRadius="10"
+            android:text="@string/shortcut_default"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+            android:textColor="#F3F3F3"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/app10"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.09"
+            android:autoSizeTextType="uniform"
+            android:clickable="false"
+            android:drawablePadding="3dp"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="20dp"
+            android:shadowColor="#00FFFFFF"
+            android:shadowRadius="10"
+            android:text="@string/shortcut_default"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+            android:textColor="#F3F3F3"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/app11"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.09"
+            android:autoSizeTextType="uniform"
+            android:clickable="false"
+            android:drawablePadding="3dp"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="20dp"
+            android:shadowColor="#00FFFFFF"
+            android:shadowRadius="10"
+            android:text="@string/shortcut_default"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+            android:textColor="#F3F3F3"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/app12"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.09"
+            android:autoSizeTextType="uniform"
+            android:clickable="false"
+            android:drawablePadding="3dp"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="20dp"
+            android:shadowColor="#00FFFFFF"
+            android:shadowRadius="10"
+            android:text="@string/shortcut_default"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+            android:textColor="#F3F3F3"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/app13"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.09"
+            android:autoSizeTextType="uniform"
+            android:clickable="false"
+            android:drawablePadding="3dp"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="20dp"
+            android:shadowColor="#00FFFFFF"
+            android:shadowRadius="10"
+            android:text="@string/shortcut_default"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+            android:textColor="#F3F3F3"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/app14"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.09"
+            android:autoSizeTextType="uniform"
+            android:clickable="false"
+            android:drawablePadding="3dp"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="20dp"
+            android:shadowColor="#00FFFFFF"
+            android:shadowRadius="10"
+            android:text="@string/shortcut_default"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+            android:textColor="#F3F3F3"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/app15"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.09"
+            android:autoSizeTextType="uniform"
+            android:clickable="false"
+            android:drawablePadding="3dp"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="20dp"
+            android:shadowColor="#00FFFFFF"
+            android:shadowRadius="10"
+            android:text="@string/shortcut_default"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+            android:textColor="#F3F3F3"
             android:visibility="gone" />
 
         <Space
+            android:id="@+id/bottomSpace"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.3"
-            android:visibility="visible" />
+            android:layout_weight="0.3" />
 
     </LinearLayout>
 

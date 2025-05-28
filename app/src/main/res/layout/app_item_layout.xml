@@ -10,27 +10,35 @@
     <LinearLayout
         android:id="@+id/renameView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingVertical="10dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:paddingVertical="5dp"
         android:visibility="invisible">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/appNameEdit"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
             android:layout_weight="1"
             android:background="#A7000000"
             android:clickable="true"
             android:elegantTextHeight="false"
+            android:gravity="center_vertical"
             android:imeOptions="actionDone"
             android:includeFontPadding="true"
             android:paddingLeft="20dp"
-            android:paddingTop="10dp"
+            android:paddingTop="0dp"
             android:paddingRight="20dp"
-            android:paddingBottom="10dp"
+            android:paddingBottom="0dp"
             android:selectAllOnFocus="true"
+            android:shadowColor="#00FFFFFF"
+            android:shadowRadius="10"
             android:singleLine="true"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+            android:textColor="#FFF3F3F3"
+            android:textColorHighlight="#5F33B5E5"
             android:textSize="28sp" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -52,90 +60,112 @@
         android:id="@+id/appName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
         android:clickable="false"
         android:drawablePadding="3dp"
-        android:gravity="start"
+        android:gravity="start|center_vertical"
         android:paddingLeft="20dp"
         android:paddingTop="20dp"
         android:paddingRight="20dp"
         android:paddingBottom="20dp"
+        android:shadowColor="#00FFFFFF"
+        android:shadowRadius="10"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault"
         android:textColor="#F3F3F3"
         android:textSize="28sp"
-        android:visibility="visible"
-        app:drawableLeftCompat="@drawable/ic_work_app" />
+        android:visibility="visible" />
 
     <LinearLayout
         android:id="@+id/actionMenu"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
         android:gravity="center"
         android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/pin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/app_action_background"
+            android:paddingVertical="5dp"
+            android:singleLine="true"
+            android:text="@string/pin"
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+            android:textColor="#E3F3F3F3"
+            app:drawableTopCompat="@drawable/pin" />
 
         <TextView
             android:id="@+id/info"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#A7000000"
-            android:foreground="@drawable/app_action_foreground"
+            android:background="@drawable/app_action_background"
+            android:paddingVertical="5dp"
+            android:singleLine="true"
             android:text="@string/info"
             android:textAlignment="center"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault"
-            android:textColor="#F3F3F3FF"
-            app:drawableTopCompat="@android:drawable/ic_menu_info_details" />
+            android:textColor="#E3F3F3F3"
+            app:drawableTopCompat="@drawable/info" />
 
         <TextView
             android:id="@+id/uninstall"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#A7000000"
-            android:foreground="@drawable/app_action_foreground"
+            android:background="@drawable/app_action_background"
+            android:paddingVertical="5dp"
+            android:singleLine="true"
             android:text="@string/uninstall"
             android:textAlignment="center"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault"
-            android:textColor="#F3F3F3FF"
-            app:drawableTopCompat="@android:drawable/ic_menu_delete" />
+            android:textColor="#E3F3F3F3"
+            app:drawableTopCompat="@drawable/delete" />
 
         <TextView
             android:id="@+id/rename"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#A7000000"
-            android:foreground="@drawable/app_action_foreground"
+            android:background="@drawable/app_action_background"
+            android:paddingVertical="5dp"
+            android:singleLine="true"
             android:text="@string/rename"
             android:textAlignment="center"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault"
-            android:textColor="#F3F3F3FF"
-            app:drawableTopCompat="@android:drawable/ic_menu_edit" />
+            android:textColor="#E3F3F3F3"
+            app:drawableTopCompat="@drawable/edit" />
 
         <TextView
             android:id="@+id/hide"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#A7000000"
-            android:foreground="@drawable/app_action_foreground"
+            android:background="@drawable/app_action_background"
+            android:paddingVertical="5dp"
+            android:singleLine="true"
             android:text="@string/hide"
             android:textAlignment="center"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault"
-            android:textColor="#F3F3F3FF"
-            app:drawableTopCompat="@android:drawable/ic_menu_view" />
+            android:textColor="#E3F3F3F3"
+            app:drawableTopCompat="@drawable/visibility_off" />
 
         <TextView
             android:id="@+id/close"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#A7000000"
-            android:foreground="@drawable/app_action_foreground"
+            android:background="@drawable/app_action_background"
+            android:paddingVertical="5dp"
+            android:singleLine="true"
             android:text="@string/close"
             android:textAlignment="center"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault"
-            android:textColor="#F3F3F3FF"
-            app:drawableTopCompat="@android:drawable/ic_menu_close_clear_cancel" />
+            android:textColor="#E3F3F3F3"
+            app:drawableTopCompat="@drawable/close" />
 
     </LinearLayout>
 

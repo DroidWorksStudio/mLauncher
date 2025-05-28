@@ -1,269 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
 
     <Preference
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:key="defaultHome"
         app:selectable="true"
-        app:title="Set Default Home" />
+        app:title="@string/default_home" />
 
     <PreferenceCategory
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:allowDividerAbove="false"
-        app:title="General UI">
-        <ListPreference
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:defaultValue="#00000000"
-            app:entries="@array/bg_options"
-            app:entryValues="@array/bg_values"
-            app:key="bgColor"
-            app:title="Background Color"
-            app:useSimpleSummaryProvider="true" />
-        <ListPreference
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:defaultValue="#FFF3F3F3"
-            app:entries="@array/color_options"
-            app:entryValues="@array/color_values"
-            app:key="textColor"
-            app:title="Text Color"
-            app:useSimpleSummaryProvider="true" />
-        <SwitchPreference
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:defaultValue="false"
-            android:title="Show Status Bar"
-            app:key="barVisibility" />
-        <ListPreference
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:defaultValue="200"
-            app:entries="@array/animation_options"
-            app:entryValues="@array/animation_values"
-            app:key="animationSpeed"
-            app:title="Animation Speed"
-            app:useSimpleSummaryProvider="true" />
-    </PreferenceCategory>
-    <PreferenceCategory
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:allowDividerAbove="false"
-        app:title="Home Screen">
-        <ListPreference
-            app:defaultValue="left"
-            app:entries="@array/h_alignment_options"
-            app:entryValues="@array/h_alignment_values"
-            app:key="clockAlignment"
-            app:title="Clock Alignment"
-            app:useSimpleSummaryProvider="true" />
-        <ListPreference
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:defaultValue="medium"
-            app:entries="@array/size_options"
-            app:entryValues="@array/size_values"
-            app:key="clockSize"
-            app:title="Clock Size"
-            app:useSimpleSummaryProvider="true" />
-        <ListPreference
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:defaultValue="medium"
-            app:entries="@array/size_options"
-            app:entryValues="@array/size_values"
-            app:key="dateSize"
-            app:title="Date Size"
-            app:useSimpleSummaryProvider="true" />
-        <ListPreference
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:defaultValue="4"
-            app:entries="@array/shortcut_options"
-            app:entryValues="@array/shortcut_options"
-            app:key="shortcutNo"
-            app:title="Number of Shortcuts"
-            app:useSimpleSummaryProvider="true" />
-        <ListPreference
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:defaultValue="left"
-            app:entries="@array/h_alignment_options"
-            app:entryValues="@array/h_alignment_values"
-            app:key="shortcutAlignment"
-            app:title="Shortcut Alignment"
-            app:useSimpleSummaryProvider="true" />
-        <ListPreference
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:defaultValue="medium"
-            app:entries="@array/shortcut_size_options"
-            app:entryValues="@array/shortcut_size_values"
-            app:key="shortcutSize"
-            app:title="Shortcut Size"
-            app:useSimpleSummaryProvider="true" />
-        <SwitchPreference
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:defaultValue="false"
-            android:title="Battery Indicator"
-            app:key="batteryEnabled" />
-    </PreferenceCategory>
-    <PreferenceCategory
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:allowDividerAbove="false"
-        app:title="Weather">
-        <SwitchPreference
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:defaultValue="false"
-            android:title="Weather"
-            app:key="weatherEnabled" />
-        <SwitchPreference
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:defaultValue="false"
-            android:title="GPS Location"
-            app:dependency="weatherEnabled"
-            app:key="gpsLocation" />
+        app:title="@string/customization">
         <Preference
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:dependency="weatherEnabled"
-            app:key="manualLocation"
+            app:key="uiSettings"
             app:selectable="true"
-            app:title="Set Manual Location" />
-        <ListPreference
+            app:summary="@string/ui_settings_summary"
+            app:title="@string/ui_settings_text" />
+        <Preference
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:defaultValue="celsius"
-            app:dependency="weatherEnabled"
-            app:entries="@array/temp_units"
-            app:entryValues="@array/unit_values"
-            app:key="tempUnits"
-            app:title="Units"
-            app:useSimpleSummaryProvider="true" />
+            app:key="homeSettings"
+            app:selectable="true"
+            app:summary="@string/home_settings_summary"
+            app:title="@string/home_settings_text" />
+        <Preference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:key="appMenuSettings"
+            app:selectable="true"
+            app:summary="@string/app_settings_summary"
+            app:title="@string/app_settings_text" />
     </PreferenceCategory>
     <PreferenceCategory
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:allowDividerAbove="false"
-        app:title="Gestures">
-        <SwitchPreference
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:defaultValue="true"
-            android:title="Clicking Time Opens Clock"
-            app:key="clockClick" />
-        <SwitchPreference
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:defaultValue="false"
-            android:title="Swipe Left"
-            app:key="leftSwipe" />
-        <Preference
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:dependency="leftSwipe"
-            app:key="leftSwipeApp"
-            app:selectable="true"
-            app:title="Left Swipe App" />
-        <SwitchPreference
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:defaultValue="false"
-            android:title="Swipe Right"
-            app:key="rightSwipe" />
-        <Preference
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:dependency="rightSwipe"
-            app:key="rightSwipeApp"
-            app:selectable="true"
-            app:title="Right Swipe App" />
-        <SwitchPreference
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:defaultValue="false"
-            android:title="Double Tap to Lock Screen"
-            app:key="doubleTap" />
-    </PreferenceCategory>
-    <PreferenceCategory
-        app:allowDividerAbove="false"
-        app:title="Application Menu">
-
-        <ListPreference
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:defaultValue="left"
-            app:entries="@array/h_alignment_options"
-            app:entryValues="@array/h_alignment_values"
-            app:key="appMenuAlignment"
-            app:title="App Menu Alignment"
-            app:useSimpleSummaryProvider="true" />
-        <ListPreference
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:defaultValue="medium"
-            app:entries="@array/size_options"
-            app:entryValues="@array/size_values"
-            app:key="appMenuSize"
-            app:title="App Menu Size"
-            app:useSimpleSummaryProvider="true" />
-        <ListPreference
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:defaultValue="left"
-            app:entries="@array/h_alignment_options"
-            app:entryValues="@array/h_alignment_values"
-            app:key="searchAlignment"
-            app:title="Search Alignment"
-            app:useSimpleSummaryProvider="true" />
-        <ListPreference
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:defaultValue="medium"
-            app:entries="@array/size_options"
-            app:entryValues="@array/size_values"
-            app:key="searchSize"
-            app:title="Search Size"
-            app:useSimpleSummaryProvider="true" />
-        <SwitchPreference
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:defaultValue="false"
-            android:title="Automatically Open Keyboard"
-            app:key="autoKeyboard" />
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:allowDividerAbove="false"
-        app:title="Hidden Apps">
+        app:title="@string/hidden_apps_title">
         <Preference
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:key="hiddenApps"
             app:selectable="true"
-            app:title="Manage Hidden Apps" />
+            app:summary="@string/hidden_apps_summary"
+            app:title="@string/hidden_apps_text" />
     </PreferenceCategory>
     <PreferenceCategory
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:allowDividerAbove="false"
-        app:title="About">
+        app:title="@string/backup_restore">
+        <Preference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:key="backup"
+            app:selectable="true"
+            app:summary="@string/backup_summary"
+            app:title="@string/backup" />
+        <Preference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:key="restore"
+            app:selectable="true"
+            app:summary="@string/restore_summary"
+            app:title="@string/restore" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:allowDividerAbove="false"
+        app:title="@string/about">
         <Preference
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:key="aboutPage"
             app:selectable="true"
-            app:title="About Multi Launcher" />
+            app:title="@string/about_title" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:allowDividerAbove="false"
+        app:title="@string/reset">
+        <Preference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:key="restartLauncher"
+            app:selectable="true"
+            app:title="@string/restart_text" />
+        <Preference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:key="resetAll"
+            app:selectable="true"
+            app:title="@string/reset_text" />
     </PreferenceCategory>
 
 </PreferenceScreen>

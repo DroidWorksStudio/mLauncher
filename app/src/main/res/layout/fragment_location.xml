@@ -9,25 +9,6 @@
     android:orientation="vertical"
     android:visibility="visible">
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="60dp" />
-
-    <TextView
-        android:id="@+id/locationMenuTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:clickable="false"
-        android:gravity="start"
-        android:paddingLeft="40dp"
-        android:paddingTop="20dp"
-        android:paddingRight="40dp"
-        android:paddingBottom="20dp"
-        android:text="@string/find_your_city"
-        android:textAppearance="@android:style/TextAppearance.DeviceDefault"
-        android:textColor="#C1F3F3F3"
-        android:textSize="36sp" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/locationRecycler"
         android:layout_width="match_parent"

@@ -1,22 +1,160 @@
 <resources>
+    <!--Home Screen-->
     <string name="shortcut_default">App</string>
 
-    <!--App Menu Titles-->
+    <string name="shortcut_default_click">Long click to select an app</string>
+
+    <string name="accessibility_set_shortcut">Set Shortcut App</string>
+
+    <string name="open_app_menu">Open App Menu</string>
+
+    <string name="no_calendar_app">No Calendar app found</string>
+
+    <!--App Menu-->
     <string name="select_an_app">Select an app</string>
-    <string name="unhide_an_app">Unhide an app</string>
-    <string name="find_your_city">Find your city</string>
 
     <string name="search">Search…</string>
 
+    <string name="switch_to_contacts">Switch to Contacts</string>
+    <string name="switch_to_apps">Switch to Apps</string>
+
+    <string name="confirm_title">Confirmation</string>
+    <string name="app_confirm_text">Are you sure you want to choose</string>
+    <string name="confirm_yes">Yes</string>
+    <string name="confirm_no">Cancel</string>
+
+    <string name="removing">Removing…</string>
+
+    <string name="close_app_menu">Close App Menu</string>
+
+    <string name="launch_error">Cannot launch app</string>
+
+    <string name="empty_rename">Name cannot be empty</string>
+
     <!--Action Menu Items-->
-    <string name="reset">Reset</string>
+    <string name="pin">Pin</string>
     <string name="info">Info</string>
     <string name="uninstall">Uninstall</string>
     <string name="rename">Rename</string>
     <string name="hide">Hide</string>
     <string name="close">Close</string>
+    <string name="accessibility_pin">Pin app</string>
+    <string name="accessibility_info">App info</string>
+    <string name="accessibility_uninstall">Uninstall app</string>
+    <string name="accessibility_rename">Rename app</string>
+    <string name="accessibility_hide">Hide app</string>
+
+    <!--Settings Page-->
+    <string name="settings_title">Launcher Settings</string>
+
+    <string name="default_home">Set Default Home</string>
+    <string name="unable_to_launch_settings">Unable to launch settings</string>
+
+    <string name="customization">Customization</string>
+
+    <string name="ui_settings_title">General UI Settings</string>
+    <string name="ui_settings_text">General UI</string>
+    <string name="ui_settings_summary">Configure the overall look</string>
+
+    <string name="appearance">Appearance</string>
+    <string name="background_color">Background Color</string>
+    <string name="text_color">Text Color</string>
+    <string name="text_font">Text Font</string>
+    <string name="text_style">Text Style</string>
+
+    <string name="operation">Operation</string>
+    <string name="animation_speed">Animation Speed</string>
+    <string name="swipe_threshold">Swipe Threshold</string>
+    <string name="swipe_velocity_threshold">Swipe Velocity Threshold</string>
+    <string name="show_status_bar">Show Status Bar</string>
+    <string name="enable_confirmation">App Confirmation Dialog</string>
+    <string name="launch_confirmation_text">Are you sure you want to launch this app?</string>
+
+    <string name="home_settings_title">Home Screen Settings</string>
+    <string name="home_settings_text">Home Screen</string>
+    <string name="home_settings_summary">Configure the home screen</string>
+
+    <string name="clock">Clock</string>
+    <string name="show_clock">Show Clock</string>
+    <string name="clock_alignment">Clock Alignment</string>
+    <string name="clock_size">Clock Size</string>
+    <string name="clicking_time_opens_clock">Clicking Time Opens Clock</string>
+    <string name="custom_clock_gesture">Custom Clock</string>
+    <string name="set_clock_app">Set Clock App</string>
+
+    <string name="date">Date</string>
+    <string name="show_date">Show Date</string>
+    <string name="date_size">Date Size</string>
+    <string name="battery_indicator">Battery Indicator</string>
+    <string name="clicking_date_opens_calendar">Clicking Date Opens Calendar</string>
+    <string name="custom_date_gesture">Custom Calendar</string>
+    <string name="set_calendar_app">Set Calendar App</string>
+
+    <string name="weather">Weather</string>
+    <string name="gps_location">GPS Location</string>
+    <string name="latest_location">Latest GPS location</string>
+    <string name="set_manual_location">Set Manual Location</string>
+    <string name="find_your_city">"Search for Your City"</string>
+    <string name="units">Units</string>
+
+    <string name="shortcuts">Shortcuts</string>
+    <string name="number_of_shortcuts">Number of Shortcuts</string>
+    <string name="horizontal_alignment">Horizontal Alignment</string>
+    <string name="vertical_alignment">Vertical Alignment</string>
+    <string name="shortcut_size">Shortcut Size</string>
+    <string name="shortcut_spacing">Shortcut Spacing</string>
+    <string name="lock_shortcuts">Lock Shortcuts</string>
+    <string name="hidden_shortcut_title">Hidden Apps</string>
+    <string name="hidden_shortcuts">Show Hidden Apps in Shortcut Selection</string>
+
+    <string name="gestures">Gestures</string>
+    <string name="swipe_left">Swipe Left</string>
+    <string name="left_swipe_app">Left Swipe App</string>
+    <string name="swipe_right">Swipe Right</string>
+    <string name="right_swipe_app">Right Swipe App</string>
+    <string name="double_tap_to_lock_screen">Double Tap to Lock Screen</string>
+
+    <string name="app_settings_title">App Menu Settings</string>
+    <string name="app_settings_text">App Menu</string>
+    <string name="app_settings_summary">Configure the application menu</string>
+
+    <string name="apps">Apps</string>
+    <string name="app_alignment">App Alignment</string>
+    <string name="app_size">App Size</string>
+    <string name="app_spacing">App Spacing</string>
+    <string name="contacts_menu">Contacts Menu</string>
+    <string name="permission_denied">Permission Denied</string>
+    <string name="internet_search">Web Search Button</string>
+
+    <string name="context_menu_settings_title">Context Menu Settings</string>
+    <string name="context_menu_settings_text">Context Menu</string>
+    <string name="context_menu_settings_summary">Enable/disable context menu items</string>
+
+    <string name="enable_pin">Pin App</string>
+    <string name="enable_info">App Info</string>
+    <string name="enable_uninstall">Uninstall App</string>
+    <string name="enable_rename">Rename App</string>
+    <string name="enable_hide">Hide App</string>
+    <string name="enable_close">Close Menu</string>
+
+    <string name="search_text">Search</string>
+    <string name="enable_search">Enable Search</string>
+    <string name="search_alignment">Search Alignment</string>
+    <string name="search_size">Search Size</string>
+    <string name="enable_fuzzy_search">Fuzzy Search</string>
+    <string name="automatically_open_keyboard">Automatically Open Keyboard</string>
+    <string name="automatic_app_opening">Automatic App Opening</string>
+    <string name="auto_launch_summary">Automatically launch an app when it\'s the last search result</string>
+
+    <string name="hidden_apps_title">Hidden Apps</string>
+    <string name="hidden_apps_text">Manage Hidden Apps</string>
+    <string name="hidden_apps_summary">Unhide Apps</string>
+    <string name="hidden_confirm_text">Are you sure you want to unhide</string>
+
+    <string name="about">About</string>
 
     <!--About Page Items-->
+    <string name="about_title">About Multi Launcher</string>
     <string name="app_icon">App Icon</string>
     <string name="creditName">By DroidWorksStudio</string>
     <string name="source_code">Source Code</string>
@@ -35,9 +173,28 @@
     <string name="buymeacoffee_link"><![CDATA[<a href="https://buymeacoffee.com/CreativeCodeCat">BuyMeACoffee</a>]]></string>
     <string name="weather_link"><![CDATA[Weather data by <a href="https://open-meteo.com/">Open-Meteo.com</a><br>(<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>)]]></string>
 
+    <string name="reset">Reset</string>
+    <string name="restart_text">Restart Multi Launcher</string>
+    <string name="reset_text">Reset All Settings</string>
+    <string name="reset_confirm_text">You will lose ALL changes that you have made to the launcher settings, shortcuts, hidden apps, etc.\n\nAre you sure?</string>
+
+    <string name="backup_restore">Backup and Restore</string>
+    <string name="backup">Backup</string>
+    <string name="backup_summary">Backup your settings</string>
+    <string name="restore">Restore</string>
+    <string name="restore_summary">Restore a backup</string>
+    <string name="backup_success">Backup successful :)</string>
+    <string name="backup_fail">Backup failed :(</string>
+    <string name="restore_success">Restore successful :)</string>
+    <string name="restore_fail">Restore failed :( (corrupt file?)</string>
+    <string name="restore_wrong_app">Not a Multi Launcher backup</string>
+    <string name="restore_error">Failed to read file</string>
+
     <!--Location Selector Items-->
     <string name="location_link"><![CDATA[Location data by <a href="https://open-meteo.com/">Open-Meteo.com</a> (<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>)]]></string>
     <string name="region_text">%1$s%2$s</string>
 
+    <!--Double tap to lock-->
+    <string name="screenlock_confirmation">To lock with double tap, enable Multi Launcher in accessibility settings.</string>
     <string name="accessibility_service_description">The permission is required for double tap to work for locking the screen.\n\nIt is only needed if you want to use the double tap to lock screen feature in Multi Launcher.</string>
 </resources>
