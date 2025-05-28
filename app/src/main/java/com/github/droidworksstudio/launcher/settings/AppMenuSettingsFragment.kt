@@ -13,6 +13,7 @@ class AppMenuSettingsFragment : PreferenceFragmentCompat(), TitleProvider {
     private val permissionUtils = PermissionUtils()
     private var contactPref: SwitchPreference? = null
     private var webSearchPref: SwitchPreference? = null
+    private var googlePlaySearchPref: SwitchPreference? = null
     private var autoLaunchPref: SwitchPreference? = null
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
@@ -23,6 +24,7 @@ class AppMenuSettingsFragment : PreferenceFragmentCompat(), TitleProvider {
 
         contactPref = findPreference("contactsEnabled")
         webSearchPref = findPreference("webSearchEnabled")
+        googlePlaySearchPref = findPreference("googlePlaySearchEnabled")
         autoLaunchPref = findPreference("autoLaunch")
 
         contactPref?.onPreferenceChangeListener = Preference.OnPreferenceChangeListener { _, newValue ->
@@ -44,6 +46,19 @@ class AppMenuSettingsFragment : PreferenceFragmentCompat(), TitleProvider {
             }
             autoLaunchPref?.onPreferenceChangeListener = Preference.OnPreferenceChangeListener { _, newValue ->
                 webSearchPref?.isEnabled = !(newValue as Boolean)
+                return@OnPreferenceChangeListener true
+            }
+        }
+
+        if (googlePlaySearchPref != null && autoLaunchPref != null) {
+            googlePlaySearchPref?.isEnabled = (autoLaunchPref?.isChecked == false)
+            autoLaunchPref?.isEnabled = (googlePlaySearchPref?.isChecked == false)
+            googlePlaySearchPref?.onPreferenceChangeListener = Preference.OnPreferenceChangeListener { _, newValue ->
+                autoLaunchPref?.isEnabled = !(newValue as Boolean)
+                return@OnPreferenceChangeListener true
+            }
+            autoLaunchPref?.onPreferenceChangeListener = Preference.OnPreferenceChangeListener { _, newValue ->
+                googlePlaySearchPref?.isEnabled = !(newValue as Boolean)
                 return@OnPreferenceChangeListener true
             }
         }

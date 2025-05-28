@@ -1,9 +1,13 @@
 package com.github.droidworksstudio.launcher.settings
 
+import android.app.Activity
+import android.app.role.RoleManager
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.provider.Settings
-import android.widget.Toast
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.github.droidworksstudio.launcher.R
@@ -12,6 +16,7 @@ import com.github.droidworksstudio.launcher.utils.UIUtils
 class SettingsFragment : PreferenceFragmentCompat(), TitleProvider {
 
     private lateinit var sharedPreferenceManager: SharedPreferenceManager
+    private lateinit var setDefaultHomeScreenLauncher: ActivityResultLauncher<Intent>
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.root_preferences, rootKey)
@@ -35,15 +40,7 @@ class SettingsFragment : PreferenceFragmentCompat(), TitleProvider {
 
         homePref?.onPreferenceClickListener =
             Preference.OnPreferenceClickListener {
-                val intent = Intent(Settings.ACTION_HOME_SETTINGS)
-                if (intent.resolveActivity(requireContext().packageManager) != null) {
-                    startActivity(intent)
-                } else {
-                    Toast.makeText(
-                        requireContext(),
-                        getString(R.string.unable_to_launch_settings), Toast.LENGTH_SHORT
-                    ).show()
-                }
+                setDefaultHomeScreen(requireContext())
                 true
             }
 
@@ -100,11 +97,33 @@ class SettingsFragment : PreferenceFragmentCompat(), TitleProvider {
                 sharedPreferenceManager.resetAllPreferences()
                 true
             }
+
+        setDefaultHomeScreenLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { _ -> ismlauncherDefault(requireContext()) }
     }
 
     override fun getTitle(): String {
         return getString(R.string.settings_title)
     }
 
+    fun setDefaultHomeScreen(context: Context, checkDefault: Boolean = false) {
+        val isDefault = ismlauncherDefault(context)
+        if (checkDefault && isDefault) {
+            return // Launcher is already the default home app
+        }
 
+        if (context is Activity && !isDefault) {
+            val roleManager = context.getSystemService(RoleManager::class.java)
+            val intent = roleManager.createRequestRoleIntent(RoleManager.ROLE_HOME)
+            setDefaultHomeScreenLauncher.launch(intent)
+            return
+        }
+
+        val intent = Intent(Settings.ACTION_HOME_SETTINGS)
+        setDefaultHomeScreenLauncher.launch(intent)
+    }
+
+    fun ismlauncherDefault(context: Context): Boolean {
+        val roleManager = context.getSystemService(RoleManager::class.java)
+        return roleManager.isRoleHeld(RoleManager.ROLE_HOME)
+    }
 }

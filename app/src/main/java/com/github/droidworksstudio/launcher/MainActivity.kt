@@ -40,6 +40,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.edit
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.database.getStringOrNull
+import androidx.core.net.toUri
 import androidx.core.view.ViewCompat
 import androidx.core.view.isVisible
 import androidx.core.view.marginLeft
@@ -100,6 +101,7 @@ class MainActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferenceCh
     private lateinit var contactRecycler: RecyclerView
     private lateinit var searchSwitcher: ImageView
     private lateinit var internetSearch: ImageView
+    private lateinit var googlePlaySearch: ImageView
     private lateinit var searchView: TextInputEditText
     private var appAdapter: AppMenuAdapter? = null
     private var contactAdapter: ContactsAdapter? = null
@@ -194,6 +196,7 @@ class MainActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferenceCh
         searchView = binding.searchView
         searchSwitcher = binding.searchSwitcher
         internetSearch = binding.internetSearch
+        googlePlaySearch = binding.googlePlaySearch
 
         preferences = PreferenceManager.getDefaultSharedPreferences(this)
     }
@@ -273,6 +276,7 @@ class MainActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferenceCh
             contactAdapter?.shortcutIndex = index
             contactAdapter?.shortcutTextView = textView
             internetSearch.visibility = View.GONE
+            googlePlaySearch.visibility = View.GONE
 
             if (sharedPreferenceManager.showHiddenShortcuts()) {
                 lifecycleScope.launch(Dispatchers.Default) {
@@ -546,6 +550,7 @@ class MainActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferenceCh
         contactAdapter?.shortcutTextView = null
         menuTitle.visibility = View.GONE
         uiUtils.setWebSearchVisibility(internetSearch)
+        uiUtils.setGooglePlaySearchVisibility(googlePlaySearch)
         toAppMenu()
     }
 
@@ -564,6 +569,7 @@ class MainActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferenceCh
                     uiUtils.setMenuItemColors(menuTitle, "A9")
                     uiUtils.setImageColor(searchSwitcher)
                     uiUtils.setImageColor(internetSearch)
+                    uiUtils.setImageColor(googlePlaySearch)
                 }
 
                 "textFont" -> {
@@ -818,23 +824,55 @@ class MainActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferenceCh
             }
 
             setupInternetSearch()
+            setupGooglePlaySearch()
         }
     }
 
     private fun setupInternetSearch() {
         uiUtils.setImageColor(internetSearch)
         internetSearch.setOnClickListener {
-            val intent = Intent(Intent.ACTION_WEB_SEARCH).apply {
-                putExtra(SearchManager.QUERY, searchView.text.toString())
-            }
+            val query = searchView.text.toString().trim()
+            if (query.isNotEmpty()) {
+                val intent = Intent(Intent.ACTION_WEB_SEARCH).apply {
+                    putExtra(SearchManager.QUERY, searchView.text.toString())
+                }
 
-            if (intent.resolveActivity(packageManager) != null) {
-                startActivity(intent)
+                if (intent.resolveActivity(packageManager) != null) {
+                    startActivity(intent)
+                } else {
+                    Toast.makeText(this@MainActivity, "No browser app found.", Toast.LENGTH_SHORT).show()
+                }
             } else {
-                Toast.makeText(this@MainActivity, "No browser app found.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@MainActivity, "Enter a search term.", Toast.LENGTH_SHORT).show()
             }
         }
     }
+
+    private fun setupGooglePlaySearch() {
+        uiUtils.setImageColor(googlePlaySearch)
+        googlePlaySearch.setOnClickListener {
+            val query = searchView.text.toString().trim()
+            if (query.isNotEmpty()) {
+                try {
+                    // Try opening the Play Store app
+                    val intent = Intent(Intent.ACTION_VIEW).apply {
+                        data = "market://search?q=$query&c=apps".toUri()
+                        setPackage("com.android.vending")
+                    }
+                    startActivity(intent)
+                } catch (_: ActivityNotFoundException) {
+                    // If Play Store is not available, fallback to browser
+                    val browserIntent = Intent(Intent.ACTION_VIEW).apply {
+                        data = "https://play.google.com/store/search?q=$query&c=apps".toUri()
+                    }
+                    startActivity(browserIntent)
+                }
+            } else {
+                Toast.makeText(this@MainActivity, "Enter a search term.", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
 
     private suspend fun setupAppRecycler(newApps: MutableList<Triple<LauncherActivityInfo, UserHandle, Int>>) {
         appAdapter = AppMenuAdapter(this@MainActivity, binding, newApps, this@MainActivity, this@MainActivity, this@MainActivity, launcherApps)

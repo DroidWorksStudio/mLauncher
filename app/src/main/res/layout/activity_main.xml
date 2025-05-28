@@ -106,11 +106,26 @@
                 tools:layout_conversion_absoluteWidth="0dp" />
 
             <ImageView
+                android:id="@+id/googlePlaySearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/search_the_web"
+                android:padding="6dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="@+id/searchView"
+                app:layout_constraintEnd_toStartOf="@+id/internetSearch"
+                app:layout_constraintTop_toTopOf="@+id/searchView"
+                app:srcCompat="@drawable/play_store"
+                tools:layout_conversion_absoluteHeight="0dp"
+                tools:layout_conversion_absoluteWidth="0dp" />
+
+            <ImageView
                 android:id="@+id/internetSearch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
-                android:contentDescription="@string/switch_to_contacts"
+                android:contentDescription="@string/search_the_web"
                 android:padding="6dp"
                 android:scaleType="fitCenter"
                 app:layout_constraintBottom_toBottomOf="@+id/searchView"

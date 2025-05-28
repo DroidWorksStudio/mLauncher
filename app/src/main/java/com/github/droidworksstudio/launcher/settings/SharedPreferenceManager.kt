@@ -320,6 +320,10 @@ class SharedPreferenceManager(private val context: Context) {
         return preferences.getBoolean("webSearchEnabled", false) && isSearchEnabled() && !isAutoLaunchEnabled()
     }
 
+    fun isGooglePlaySearchEnabled(): Boolean {
+        return preferences.getBoolean("googlePlaySearchEnabled", false) && isSearchEnabled() && !isAutoLaunchEnabled()
+    }
+
     // Hidden Apps
     fun setAppHidden(componentName: String, profile: Int, hidden: Boolean) {
         preferences.edit {

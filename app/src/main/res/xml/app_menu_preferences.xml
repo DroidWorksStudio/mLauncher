@@ -45,6 +45,13 @@
             android:title="@string/internet_search"
             app:dependency="searchEnabled"
             app:key="webSearchEnabled" />
+        <SwitchPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="false"
+            android:title="@string/google_play_search"
+            app:dependency="searchEnabled"
+            app:key="googlePlaySearchEnabled" />
 
         <Preference
             android:layout_width="wrap_content"

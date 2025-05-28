@@ -214,6 +214,14 @@ class UIUtils(private val context: Context) {
         }
     }
 
+    fun setGooglePlaySearchVisibility(googlePlaySearch: View) {
+        if (sharedPreferenceManager.isGooglePlaySearchEnabled()) {
+            googlePlaySearch.visibility = View.VISIBLE
+        } else {
+            googlePlaySearch.visibility = View.GONE
+        }
+    }
+
     private fun setSearchLayoutVisibility(searchLayout: View, replacementView: View) {
         if (!sharedPreferenceManager.isSearchEnabled() && !sharedPreferenceManager.areContactsEnabled()) {
             searchLayout.visibility = View.GONE
