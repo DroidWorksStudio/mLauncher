@@ -183,19 +183,15 @@ class MainActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferenceCh
         shortcutGestureDetector = GestureDetector(this, TextGestureListener())
 
         clock = binding.textClock
-
         clockMargin = clock.marginLeft
 
         dateText = binding.textDate
-
         dateElements = mutableListOf(dateText.format12Hour.toString(), dateText.format24Hour.toString(), "", "")
 
         menuTitle = binding.menuTitle
-
-        searchView = binding.searchView
-
         menuView = binding.menuView
 
+        searchView = binding.searchView
         searchSwitcher = binding.searchSwitcher
         internetSearch = binding.internetSearch
 

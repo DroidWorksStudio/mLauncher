@@ -5,9 +5,9 @@ plugins {
 
 // Top of build.gradle.kts
 val major = 1
-val minor = 10
-val patch = 4
-val build = 3
+val minor = 11
+val patch = 0
+val build = 0
 
 val type = 0 // 1=beta, 2=alpha else=production
 
@@ -30,7 +30,7 @@ android {
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.github.droidworksstudio.launcher"
+        applicationId = "app.mlauncher"
         minSdk = 30
         targetSdk = 36
         versionCode = versionCodeInt
