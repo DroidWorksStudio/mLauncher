@@ -23,4 +23,19 @@ class StringUtils {
         view.movementMethod = LinkMovementMethod.getInstance()
     }
 
+    /** Create a Regex pattern for simple Fuzzy search
+     *
+     * Example:
+     * 'cl' will create 'c.*l' which matches 'Clock', 'Calendar'
+     * 'msg' will create 'm.*s.*g' which matches 'Messages'
+     * 'cmr' will create 'c.*m.*r' which matches 'Camera'
+     */
+    fun getFuzzyPattern(query: String): Regex {
+        val pattern = query
+            .flatMap { char -> listOf(char.toString(), ".*") }
+            // remove the last unnecessary .* since the char itself is sufficient
+            .dropLast(1)
+            .joinToString(separator = "")
+        return Regex(pattern, RegexOption.IGNORE_CASE)
+    }
 }
