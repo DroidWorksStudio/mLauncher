@@ -23,7 +23,7 @@ import com.github.droidworksstudio.launcher.utils.UIUtils
 import com.google.android.material.textfield.TextInputEditText
 import kotlinx.coroutines.launch
 
-class HiddenAppsFragment : Fragment(), HiddenAppsAdapter.OnItemClickListener {
+class HiddenAppsFragment : Fragment(), HiddenAppsAdapter.OnItemClickListener, TitleProvider {
 
     private lateinit var sharedPreferenceManager: SharedPreferenceManager
     private var adapter: HiddenAppsAdapter? = null
@@ -62,7 +62,6 @@ class HiddenAppsFragment : Fragment(), HiddenAppsAdapter.OnItemClickListener {
 
             val searchView = view.findViewById<TextInputEditText>(R.id.hiddenAppSearch)
 
-            uiUtils.setMenuTitleAlignment(view.findViewById(R.id.hiddenMenuTitle))
             uiUtils.setSearchAlignment(searchView)
             uiUtils.setSearchSize(searchView)
 
@@ -115,16 +114,24 @@ class HiddenAppsFragment : Fragment(), HiddenAppsAdapter.OnItemClickListener {
         if (cleanQuery.isNullOrEmpty()) {
             newFilteredApps.addAll(updatedApps)
         } else {
+            val fuzzyPattern = if (sharedPreferenceManager.isFuzzySearchEnabled()) {
+                stringUtils.getFuzzyPattern(cleanQuery)
+            } else {
+                null
+            }
             updatedApps.forEach {
                 val cleanItemText = stringUtils.cleanString(
                     sharedPreferenceManager.getAppName(
-                        it.first.applicationInfo.packageName,
+                        it.first.componentName.flattenToString(),
                         it.third,
-                        requireContext().packageManager.getApplicationLabel(it.first.applicationInfo)
+                        it.first.label
                     ).toString()
                 )
                 if (cleanItemText != null) {
-                    if (cleanItemText.contains(cleanQuery, ignoreCase = true)) {
+                    if (
+                        (fuzzyPattern != null && cleanItemText.contains(fuzzyPattern)) ||
+                        (cleanItemText.contains(cleanQuery, ignoreCase = true))
+                    ) {
                         newFilteredApps.add(it)
                     }
                 }
@@ -138,32 +145,36 @@ class HiddenAppsFragment : Fragment(), HiddenAppsAdapter.OnItemClickListener {
 
     private fun showConfirmationDialog(appInfo: LauncherActivityInfo, appName: String, profile: Int) {
         AlertDialog.Builder(requireContext()).apply {
-            setTitle("Confirmation")
-            setMessage("Are you sure you want to unhide $appName?")
-            setPositiveButton("Yes") { _, _ ->
+            setTitle(getString(R.string.confirm_title))
+            setMessage("${getString(R.string.hidden_confirm_text)} $appName?")
+            setPositiveButton(getString(R.string.confirm_yes)) { _, _ ->
                 lifecycleScope.launch {
                     performConfirmedAction(appInfo, profile)
                 }
             }
 
-            setNegativeButton("Cancel") { _, _ ->
+            setNegativeButton(getString(R.string.confirm_no)) { _, _ ->
             }
         }.create().show()
     }
 
     private suspend fun performConfirmedAction(appInfo: LauncherActivityInfo, profile: Int) {
-        sharedPreferenceManager.setAppVisible(appInfo.applicationInfo.packageName, profile)
+        sharedPreferenceManager.setAppVisible(appInfo.componentName.flattenToString(), profile)
         adapter?.updateApps(appUtils.getHiddenApps())
     }
 
     override fun onItemClick(appInfo: LauncherActivityInfo, profile: Int) {
         showConfirmationDialog(
             appInfo, sharedPreferenceManager.getAppName(
-                appInfo.applicationInfo.packageName,
+                appInfo.componentName.flattenToString(),
                 profile,
-                requireContext().packageManager.getApplicationLabel(appInfo.applicationInfo)
+                appInfo.label
             ).toString(), profile
         )
+    }
+
+    override fun getTitle(): String {
+        return getString(R.string.hidden_apps_title)
     }
 
 }
