@@ -91,13 +91,15 @@
             android:layout_height="wrap_content"
             app:key="restartLauncher"
             app:selectable="true"
-            app:title="@string/restart_text" />
+            app:summary="@string/restart_summary"
+            app:title="@string/restart" />
         <Preference
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:key="resetAll"
             app:selectable="true"
-            app:title="@string/reset_text" />
+            app:summary="@string/reset_setting_summary"
+            app:title="@string/reset_setting" />
     </PreferenceCategory>
 
 </PreferenceScreen>

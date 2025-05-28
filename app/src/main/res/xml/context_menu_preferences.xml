@@ -11,15 +11,9 @@
     <SwitchPreference
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:defaultValue="false"
-        android:title="@string/enable_info"
-        app:key="infoEnabled" />
-    <SwitchPreference
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:defaultValue="true"
-        android:title="@string/enable_uninstall"
-        app:key="uninstallEnabled" />
+        android:title="@string/enable_hide"
+        app:key="hideEnabled" />
     <SwitchPreference
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -29,9 +23,15 @@
     <SwitchPreference
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:defaultValue="false"
+        android:title="@string/enable_info"
+        app:key="infoEnabled" />
+    <SwitchPreference
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:defaultValue="true"
-        android:title="@string/enable_hide"
-        app:key="hideEnabled" />
+        android:title="@string/enable_uninstall"
+        app:key="uninstallEnabled" />
     <SwitchPreference
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

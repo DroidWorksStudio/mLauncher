@@ -176,9 +176,11 @@
     <string name="weather_link"><![CDATA[Weather data by <a href="https://open-meteo.com/">Open-Meteo.com</a><br>(<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>)]]></string>
 
     <string name="reset">Reset</string>
-    <string name="restart_text">Restart Multi Launcher</string>
-    <string name="reset_text">Reset All Settings</string>
-    <string name="reset_confirm_text">You will lose ALL changes that you have made to the launcher settings, shortcuts, hidden apps, etc.\n\nAre you sure?</string>
+    <string name="restart">Restart Multi Launcher</string>
+    <string name="restart_summary">Have you tried turning it on and off?</string>
+    <string name="reset_setting">Reset All Settings</string>
+    <string name="reset_setting_summary">Restore all preferences to their default values</string>
+    <string name="reset_setting_confirm">You will lose ALL changes that you have made to the launcher settings, shortcuts, hidden apps, etc.\n\nAre you sure?</string>
 
     <string name="backup_restore">Backup and Restore</string>
     <string name="backup">Backup</string>

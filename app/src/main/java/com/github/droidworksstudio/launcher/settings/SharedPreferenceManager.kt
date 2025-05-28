@@ -361,7 +361,7 @@ class SharedPreferenceManager(private val context: Context) {
     fun resetAllPreferences() {
         AlertDialog.Builder(context).apply {
             setTitle(context.getString(R.string.confirm_title))
-            setMessage(context.getString(R.string.reset_confirm_text))
+            setMessage(context.getString(R.string.reset_setting_confirm))
             setPositiveButton(context.getString(R.string.confirm_yes)) { _, _ ->
                 performReset()
             }
