@@ -1,0 +1,139 @@
+<resources>
+
+    <!--General UI-->
+    <string-array name="bg_values" translatable="false">
+        <item>#00000000</item>
+        <item>#FF000000</item>
+        <item>#FF1B1B1B</item>
+        <item>#FFD6D6D6</item>
+        <item>material</item>
+
+    </string-array>
+
+    <string-array name="color_values" translatable="false">
+        <item>#FFF3F3F3</item>
+        <item>#FF0C0C0C</item>
+        <item>material</item>
+    </string-array>
+
+    <string-array name="font_values" translatable="false">
+        <item>system</item>
+        <item>arbutus</item>
+        <item>casual</item>
+        <item>cursive</item>
+        <item>monospace</item>
+        <item>sans-serif</item>
+        <item>sans-serif-light</item>
+        <item>sans-serif-thin</item>
+        <item>sans-serif-condensed</item>
+        <item>sans-serif-condensed-light</item>
+        <item>sans-serif-smallcaps</item>
+        <item>serif</item>
+        <item>ubuntu</item>
+        <item>ubuntu_light</item>
+        <item>ubuntu_condensed_regular</item>
+        <item>workbench</item>
+    </string-array>
+
+    <string-array name="style_values" translatable="false">
+        <item>normal</item>
+        <item>bold</item>
+        <item>italic</item>
+        <item>bold-italic</item>
+    </string-array>
+
+    <string-array name="animation_options" translatable="false">
+        <item>0.25x</item>
+        <item>0.5x</item>
+        <item>1x</item>
+        <item>2x</item>
+        <item>4x</item>
+    </string-array>
+
+    <string-array name="animation_values" translatable="false">
+        <item>800</item>
+        <item>400</item>
+        <item>200</item>
+        <item>100</item>
+        <item>50</item>
+    </string-array>
+
+    <string-array name="swipe_values" translatable="false">
+        <item>25</item>
+        <item>50</item>
+        <item>100</item>
+        <item>200</item>
+        <item>400</item>
+    </string-array>
+
+    <!--Home and App Menu-->
+    <string-array name="shortcut_options" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+    </string-array>
+
+    <string-array name="h_alignment_values" translatable="false">
+        <item>left</item>
+        <item>center</item>
+        <item>right</item>
+    </string-array>
+
+    <string-array name="v_alignment_values" translatable="false">
+        <item>top</item>
+        <item>center</item>
+        <item>bottom</item>
+    </string-array>
+
+    <string-array name="size_values" translatable="false">
+        <item>tiny</item>
+        <item>small</item>
+        <item>medium</item>
+        <item>large</item>
+        <item>extra</item>
+        <item>huge</item>
+    </string-array>
+
+    <string-array name="shortcut_spacing_values" translatable="false">
+        <item>0.06</item>
+        <item>0.09</item>
+        <item>0.11</item>
+        <item>0.14</item>
+        <item>0.18</item>
+        <item>0.21</item>
+        <item>0.56</item>
+    </string-array>
+
+    <string-array name="app_spacing_values" translatable="false">
+        <item>0</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>35</item>
+    </string-array>
+
+    <!--Weather-->
+    <string-array name="temp_units" translatable="false">
+        <item>°C</item>
+        <item>°F</item>
+    </string-array>
+
+    <string-array name="unit_values" translatable="false">
+        <item>celsius</item>
+        <item>fahrenheit</item>
+    </string-array>
+</resources>

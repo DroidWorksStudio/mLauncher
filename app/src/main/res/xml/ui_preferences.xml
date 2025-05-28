@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="@string/appearance"
+        app:allowDividerAbove="false">
+        <com.github.droidworksstudio.launcher.settings.SpinnerPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="#00000000"
+            android:entries="@array/bg_options"
+            android:entryValues="@array/bg_values"
+            app:key="bgColor"
+            app:title="@string/background_color"
+            app:useSimpleSummaryProvider="true" />
+        <com.github.droidworksstudio.launcher.settings.SpinnerPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="#FFF3F3F3"
+            android:entries="@array/color_options"
+            android:entryValues="@array/color_values"
+            app:key="textColor"
+            app:title="@string/text_color"
+            app:useSimpleSummaryProvider="true" />
+        <com.github.droidworksstudio.launcher.settings.SpinnerPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="system"
+            android:entries="@array/font_options"
+            android:entryValues="@array/font_values"
+            app:key="textFont"
+            app:title="@string/text_font"
+            app:useSimpleSummaryProvider="true" />
+
+        <com.github.droidworksstudio.launcher.settings.SpinnerPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="normal"
+            android:entries="@array/style_options"
+            android:entryValues="@array/style_values"
+            app:key="textStyle"
+            app:title="@string/text_style"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/operation"
+        app:allowDividerAbove="false">
+        <com.github.droidworksstudio.launcher.settings.SpinnerPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="200"
+            android:entries="@array/animation_options"
+            android:entryValues="@array/animation_values"
+            app:key="animationSpeed"
+            app:title="@string/animation_speed"
+            app:useSimpleSummaryProvider="true" />
+        <com.github.droidworksstudio.launcher.settings.SpinnerPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="100"
+            android:entries="@array/animation_options"
+            android:entryValues="@array/swipe_values"
+            app:key="swipeThreshold"
+            app:title="@string/swipe_threshold"
+            app:useSimpleSummaryProvider="true" />
+        <com.github.droidworksstudio.launcher.settings.SpinnerPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="100"
+            android:entries="@array/animation_options"
+            android:entryValues="@array/swipe_values"
+            app:key="swipeVelocity"
+            app:title="@string/swipe_velocity_threshold"
+            app:useSimpleSummaryProvider="true" />
+        <SwitchPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="false"
+            android:title="@string/show_status_bar"
+            app:key="barVisibility" />
+        <SwitchPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="false"
+            android:title="@string/enable_confirmation"
+            app:key="enableConfirmation" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

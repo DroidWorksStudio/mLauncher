@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:title="@string/clock"
+        app:allowDividerAbove="false"
+        app:allowDividerBelow="false">
+
+        <SwitchPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="true"
+            android:title="@string/show_clock"
+            app:key="clockEnabled" />
+        <com.github.droidworksstudio.launcher.settings.SpinnerPreference
+            android:defaultValue="left"
+            android:entries="@array/h_alignment_options"
+            android:entryValues="@array/h_alignment_values"
+            app:dependency="clockEnabled"
+            app:key="clockAlignment"
+            app:title="@string/clock_alignment"
+            app:useSimpleSummaryProvider="true" />
+        <com.github.droidworksstudio.launcher.settings.SpinnerPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="medium"
+            android:entries="@array/size_options"
+            android:entryValues="@array/size_values"
+            app:dependency="clockEnabled"
+            app:key="clockSize"
+            app:title="@string/clock_size"
+            app:useSimpleSummaryProvider="true" />
+        <SwitchPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="true"
+            android:title="@string/clicking_time_opens_clock"
+            app:dependency="clockEnabled"
+            app:key="clockClick" />
+        <SwitchPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="false"
+            android:title="@string/custom_clock_gesture"
+            app:dependency="clockClick"
+            app:key="clockSwipe" />
+        <Preference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:dependency="clockSwipe"
+            app:key="clockSwipeApp"
+            app:selectable="true"
+            app:title="@string/set_clock_app" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/date"
+        app:allowDividerAbove="false"
+        app:allowDividerBelow="false">
+
+        <SwitchPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="true"
+            android:title="@string/show_date"
+            app:key="dateEnabled" />
+        <com.github.droidworksstudio.launcher.settings.SpinnerPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="medium"
+            android:entries="@array/size_options"
+            android:entryValues="@array/size_values"
+            app:dependency="dateEnabled"
+            app:key="dateSize"
+            app:title="@string/date_size"
+            app:useSimpleSummaryProvider="true" />
+        <SwitchPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="false"
+            android:title="@string/battery_indicator"
+            app:dependency="dateEnabled"
+            app:key="batteryEnabled" />
+        <SwitchPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="true"
+            android:title="@string/clicking_date_opens_calendar"
+            app:dependency="dateEnabled"
+            app:key="dateClick" />
+        <SwitchPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="false"
+            android:title="@string/custom_date_gesture"
+            app:dependency="dateClick"
+            app:key="dateSwipe" />
+        <Preference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:dependency="dateSwipe"
+            app:key="dateSwipeApp"
+            app:selectable="true"
+            app:title="@string/set_calendar_app" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:allowDividerAbove="false"
+        app:allowDividerBelow="false"
+        app:title="@string/weather">
+        <SwitchPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="false"
+            android:title="@string/weather"
+            app:dependency="dateEnabled"
+            app:key="weatherEnabled" />
+        <SwitchPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="false"
+            android:title="@string/gps_location"
+            app:dependency="weatherEnabled"
+            app:key="gpsLocation" />
+        <Preference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:dependency="weatherEnabled"
+            app:key="manualLocation"
+            app:selectable="true"
+            app:title="@string/set_manual_location" />
+        <com.github.droidworksstudio.launcher.settings.SpinnerPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="celsius"
+            android:entries="@array/temp_units"
+            android:entryValues="@array/unit_values"
+            app:dependency="weatherEnabled"
+            app:key="tempUnits"
+            app:title="@string/units"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:allowDividerAbove="false"
+        app:allowDividerBelow="false"
+        app:title="@string/shortcuts">
+        <com.github.droidworksstudio.launcher.settings.SpinnerPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="4"
+            android:entries="@array/shortcut_options"
+            android:entryValues="@array/shortcut_options"
+            app:key="shortcutNo"
+            app:title="@string/number_of_shortcuts"
+            app:useSimpleSummaryProvider="true" />
+        <com.github.droidworksstudio.launcher.settings.SpinnerPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="left"
+            android:entries="@array/h_alignment_options"
+            android:entryValues="@array/h_alignment_values"
+            app:key="shortcutAlignment"
+            app:title="@string/horizontal_alignment"
+            app:useSimpleSummaryProvider="true" />
+        <com.github.droidworksstudio.launcher.settings.SpinnerPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="center"
+            android:entries="@array/v_alignment_options"
+            android:entryValues="@array/v_alignment_values"
+            app:key="shortcutVAlignment"
+            app:title="@string/vertical_alignment"
+            app:useSimpleSummaryProvider="true" />
+        <com.github.droidworksstudio.launcher.settings.SpinnerPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="medium"
+            android:entries="@array/size_options"
+            android:entryValues="@array/size_values"
+            app:key="shortcutSize"
+            app:title="@string/shortcut_size"
+            app:useSimpleSummaryProvider="true" />
+        <com.github.droidworksstudio.launcher.settings.SpinnerPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="0.11"
+            android:entries="@array/shortcut_spacing_options"
+            android:entryValues="@array/shortcut_spacing_values"
+            app:key="shortcutWeight"
+            app:title="@string/shortcut_spacing"
+            app:useSimpleSummaryProvider="true" />
+        <SwitchPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="false"
+            android:title="@string/lock_shortcuts"
+            app:key="lockShortcuts" />
+        <SwitchPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="true"
+            android:summary="@string/hidden_shortcuts"
+            android:title="@string/hidden_shortcut_title"
+            app:key="showHiddenShortcuts" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:allowDividerAbove="false"
+        app:allowDividerBelow="false"
+        app:title="@string/gestures">
+        <SwitchPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="false"
+            android:title="@string/swipe_left"
+            app:key="leftSwipe" />
+        <Preference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:dependency="leftSwipe"
+            app:key="leftSwipeApp"
+            app:selectable="true"
+            app:title="@string/left_swipe_app" />
+        <SwitchPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="false"
+            android:title="@string/swipe_right"
+            app:key="rightSwipe" />
+        <Preference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:dependency="rightSwipe"
+            app:key="rightSwipeApp"
+            app:selectable="true"
+            app:title="@string/right_swipe_app" />
+        <SwitchPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="false"
+            android:title="@string/double_tap_to_lock_screen"
+            app:key="doubleTap" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

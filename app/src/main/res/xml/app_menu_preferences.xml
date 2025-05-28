@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        app:allowDividerAbove="false"
+        app:title="@string/apps">
+        <com.github.droidworksstudio.launcher.settings.SpinnerPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="left"
+            android:entries="@array/h_alignment_options"
+            android:entryValues="@array/h_alignment_values"
+            app:key="appMenuAlignment"
+            app:title="@string/app_alignment"
+            app:useSimpleSummaryProvider="true" />
+        <com.github.droidworksstudio.launcher.settings.SpinnerPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="medium"
+            android:entries="@array/size_options"
+            android:entryValues="@array/size_values"
+            app:key="appMenuSize"
+            app:title="@string/app_size"
+            app:useSimpleSummaryProvider="true" />
+        <com.github.droidworksstudio.launcher.settings.SpinnerPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="20"
+            android:entries="@array/app_spacing_options"
+            android:entryValues="@array/app_spacing_values"
+            app:key="appSpacing"
+            app:title="@string/app_spacing"
+            app:useSimpleSummaryProvider="true" />
+        <SwitchPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="false"
+            android:title="@string/contacts_menu"
+            app:key="contactsEnabled" />
+        <SwitchPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="false"
+            android:title="@string/internet_search"
+            app:dependency="searchEnabled"
+            app:key="webSearchEnabled" />
+
+        <Preference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:key="contextMenuSettings"
+            app:selectable="true"
+            app:summary="@string/context_menu_settings_summary"
+            app:title="@string/context_menu_settings_text" />
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        app:allowDividerAbove="false"
+        app:title="@string/search_text">
+
+        <SwitchPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="true"
+            android:title="@string/enable_search"
+            app:key="searchEnabled" />
+        <com.github.droidworksstudio.launcher.settings.SpinnerPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="left"
+            android:entries="@array/h_alignment_options"
+            android:entryValues="@array/h_alignment_values"
+            app:dependency="searchEnabled"
+            app:key="searchAlignment"
+            app:title="@string/search_alignment"
+            app:useSimpleSummaryProvider="true" />
+        <com.github.droidworksstudio.launcher.settings.SpinnerPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="medium"
+            android:entries="@array/size_options"
+            android:entryValues="@array/size_values"
+            app:dependency="searchEnabled"
+            app:key="searchSize"
+            app:title="@string/search_size"
+            app:useSimpleSummaryProvider="true" />
+        <SwitchPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="false"
+            android:title="@string/enable_fuzzy_search"
+            app:dependency="searchEnabled"
+            app:key="fuzzySearchEnabled" />
+        <SwitchPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="false"
+            android:title="@string/automatically_open_keyboard"
+            app:dependency="searchEnabled"
+            app:key="autoKeyboard" />
+        <SwitchPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="false"
+            android:title="@string/automatic_app_opening"
+            app:dependency="searchEnabled"
+            app:key="autoLaunch"
+            app:summary="@string/auto_launch_summary" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
