@@ -3,6 +3,7 @@ package com.github.droidworksstudio.launcher.utils
 import android.accessibilityservice.AccessibilityService
 import android.accessibilityservice.AccessibilityServiceInfo
 import android.app.AlertDialog
+import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.content.pm.LauncherActivityInfo
@@ -11,6 +12,7 @@ import android.content.pm.ServiceInfo
 import android.provider.Settings
 import android.view.accessibility.AccessibilityManager
 import androidx.appcompat.app.AppCompatActivity.ACCESSIBILITY_SERVICE
+import com.github.droidworksstudio.launcher.R
 import com.github.droidworksstudio.launcher.settings.SharedPreferenceManager
 
 class GestureUtils(private val context: Context) {
@@ -19,15 +21,19 @@ class GestureUtils(private val context: Context) {
 
     fun getSwipeInfo(launcherApps: LauncherApps, direction: String): Pair<LauncherActivityInfo?, Int?> {
         val app = sharedPreferenceManager.getGestureInfo(direction)
-
+        println(app)
         if (app != null) {
-            if (app.size >= 3)
-                return Pair(
-                    launcherApps.getActivityList(
-                        app[1], launcherApps.profiles[app[2]
-                            .toInt()]
-                    ).firstOrNull(), app[2].toInt()
-                )
+            if (app.size >= 3) {
+                val componentName = ComponentName.unflattenFromString(app[1])
+                if (componentName != null) {
+                    return Pair(
+                        launcherApps.resolveActivity(
+                            Intent().setComponent(componentName), launcherApps.profiles[app[2]
+                                .toInt()]
+                        ), app[2].toInt()
+                    )
+                }
+            }
         }
         return Pair(null, null)
     }
@@ -50,15 +56,15 @@ class GestureUtils(private val context: Context) {
 
     fun promptEnableAccessibility() {
         AlertDialog.Builder(context).apply {
-            setTitle("Confirmation")
-            setMessage("To lock with double tap, enable Launcher in accessibility settings.")
-            setPositiveButton("Yes") { _, _ ->
+            setTitle(context.getString(R.string.confirm_title))
+            setMessage(context.getString(R.string.screenlock_confirmation))
+            setPositiveButton(context.getString(R.string.confirm_yes)) { _, _ ->
                 // Perform action on confirmation
                 val intent = Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS)
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
                 context.startActivity(intent)
             }
-            setNegativeButton("Cancel") { _, _ ->
+            setNegativeButton(context.getString(R.string.confirm_no)) { _, _ ->
 
             }
 
