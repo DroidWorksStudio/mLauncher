@@ -1,0 +1,41 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Launcher" parent="Theme.Material3.DynamicColors.DayNight.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@android:color/transparent</item>
+        <item name="android:windowShowWallpaper">true</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">?attr/isLightTheme</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+        <item name="android:enforceNavigationBarContrast">false</item>
+        <item name="android:enforceStatusBarContrast">false</item>
+
+    </style>
+
+    <style name="SettingsTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@color/settings_bg</item>
+        <item name="android:windowShowWallpaper">false</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">?attr/isLightTheme</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+        <item name="android:enforceNavigationBarContrast">false</item>
+        <item name="android:enforceStatusBarContrast">false</item>
+    </style>
+
+    <style name="AppSearchView" parent="Widget.AppCompat.SearchView">
+        <item name="android:textSize">25sp</item>
+        <item name="android:editTextColor">#f3f3f3</item>
+        <item name="android:cursorVisible">true</item>
+    </style>
+
+    <style name="AppTextAppearance" parent="Widget.AppCompat.SearchView">
+        <item name="android:textAppearance">@android:style/TextAppearance.DeviceDefault</item>
+
+    </style>
+
+    <style name="Theme.Launcher" parent="Base.Theme.Launcher" />
+</resources>

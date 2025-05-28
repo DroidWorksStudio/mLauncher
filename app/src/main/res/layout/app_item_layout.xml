@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/listItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="0dp">
+
+    <LinearLayout
+        android:id="@+id/renameView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="10dp"
+        android:visibility="invisible">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/appNameEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#A7000000"
+            android:clickable="true"
+            android:elegantTextHeight="false"
+            android:imeOptions="actionDone"
+            android:includeFontPadding="true"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+            android:textSize="28sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/reset"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="0.3"
+            android:background="#C3000000"
+            android:gravity="center"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/reset"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+            android:textColor="#F3F3F3" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:drawablePadding="3dp"
+        android:gravity="start"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="20dp"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+        android:textColor="#F3F3F3"
+        android:textSize="28sp"
+        android:visibility="visible"
+        app:drawableLeftCompat="@drawable/ic_work_app" />
+
+    <LinearLayout
+        android:id="@+id/actionMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#A7000000"
+            android:foreground="@drawable/app_action_foreground"
+            android:text="@string/info"
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+            android:textColor="#F3F3F3FF"
+            app:drawableTopCompat="@android:drawable/ic_menu_info_details" />
+
+        <TextView
+            android:id="@+id/uninstall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#A7000000"
+            android:foreground="@drawable/app_action_foreground"
+            android:text="@string/uninstall"
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+            android:textColor="#F3F3F3FF"
+            app:drawableTopCompat="@android:drawable/ic_menu_delete" />
+
+        <TextView
+            android:id="@+id/rename"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#A7000000"
+            android:foreground="@drawable/app_action_foreground"
+            android:text="@string/rename"
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+            android:textColor="#F3F3F3FF"
+            app:drawableTopCompat="@android:drawable/ic_menu_edit" />
+
+        <TextView
+            android:id="@+id/hide"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#A7000000"
+            android:foreground="@drawable/app_action_foreground"
+            android:text="@string/hide"
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+            android:textColor="#F3F3F3FF"
+            app:drawableTopCompat="@android:drawable/ic_menu_view" />
+
+        <TextView
+            android:id="@+id/close"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#A7000000"
+            android:foreground="@drawable/app_action_foreground"
+            android:text="@string/close"
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+            android:textColor="#F3F3F3FF"
+            app:drawableTopCompat="@android:drawable/ic_menu_close_clear_cancel" />
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,42 @@
+# gradle/libs.versions.toml
+
+[versions]
+agp = "8.10.0"
+kotlin = "2.1.21"
+
+# AndroidX Core and AppCompat
+core-ktx = "1.16.0"
+appcompat = "1.7.0"
+material = "1.12.0"
+preferenceKtx = "1.2.1"
+recyclerview = "1.4.0"
+
+# ConstraintLayout
+constraintlayout = "2.2.1"
+
+# Compose Versions
+activity-compose = "1.10.1"
+
+# Other Libraries
+biometric-ktx = "1.4.0-alpha02"
+
+
+[libraries]
+# Core Libraries
+activity-ktx = { module = "androidx.activity:activity-ktx", version.ref = "activity-compose" }
+core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { module = "com.google.android.material:material", version.ref = "material" }
+preference-ktx = { module = "androidx.preference:preference-ktx", version.ref = "preferenceKtx" }
+recyclerview = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "recyclerview" }
+
+# ConstraintLayout
+constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+
+# Biometric
+biometric-ktx = { group = "androidx.biometric", name = "biometric-ktx", version.ref = "biometric-ktx" }
+
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+jetbrains-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/manualLocationView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+
+    <TextView
+        android:id="@+id/locationMenuTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:gravity="start"
+        android:paddingLeft="40dp"
+        android:paddingTop="20dp"
+        android:paddingRight="40dp"
+        android:paddingBottom="20dp"
+        android:text="@string/find_your_city"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+        android:textColor="#C1F3F3F3"
+        android:textSize="36sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/locationRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:fadingEdgeLength="20dp"
+        android:padding="0dp"
+        android:requiresFadingEdge="vertical"
+        android:scrollbars="none"
+        app:layoutManager="LinearLayoutManager">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/locationSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="0dp"
+        android:layout_weight="0.1"
+        android:background="@android:color/transparent"
+        android:cursorVisible="true"
+        android:drawableStart="@android:drawable/ic_menu_search"
+        android:drawablePadding="8dp"
+        android:editTextColor="#f3f3f3"
+        android:hint="@string/search"
+        android:singleLine="true"
+        android:textAlignment="viewStart"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+        android:textSize="25sp"
+        tools:ignore="RtlCompat" />
+
+    <TextView
+        android:id="@+id/locationLink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="15dp"
+        android:linksClickable="true"
+        android:text="@string/weather_data_credit"
+        android:textAlignment="center"
+        android:textColor="#B3A5A5A5"
+        android:textColorLink="#7F80CBC4"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</LinearLayout>

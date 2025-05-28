@@ -1,0 +1,43 @@
+<resources>
+    <string name="shortcut_default">App</string>
+
+    <!--App Menu Titles-->
+    <string name="select_an_app">Select an app</string>
+    <string name="unhide_an_app">Unhide an app</string>
+    <string name="find_your_city">Find your city</string>
+
+    <string name="search">Search…</string>
+
+    <!--Action Menu Items-->
+    <string name="reset">Reset</string>
+    <string name="info">Info</string>
+    <string name="uninstall">Uninstall</string>
+    <string name="rename">Rename</string>
+    <string name="hide">Hide</string>
+    <string name="close">Close</string>
+
+    <!--About Page Items-->
+    <string name="app_icon">App Icon</string>
+    <string name="creditName">By DroidWorksStudio</string>
+    <string name="source_code">Source Code</string>
+    <string name="gitlab">GitLab</string>
+    <string name="github">GitHub</string>
+    <string name="donate">Donate</string>
+    <string name="buymeacoffee">BuyMeACoffee</string>
+    <string name="liberapay">Liberapay</string>
+    <string name="weather_data_credit">Weather data by Open-Meteo.com\n(CC BY 4.0)</string>
+
+    <!--About page links-->
+    <string name="my_website_link"><![CDATA[by <a href="https://mlauncher.5646316.xyz/">DroidWorksStudio</a>]]></string>
+    <string name="gitlab_link"><![CDATA[<a href="https://gitlab.com/DroidWorksStudio/mlauncher">GitLab</a>]]></string>
+    <string name="github_link"><![CDATA[<a href="https://github.com/DroidWorksStudio/mlauncher">GitHub</a>]]></string>
+    <string name="libera_link"><![CDATA[<a href="https://liberapay.com/CreativeCodeCat/donate">Liberapay</a>]]></string>
+    <string name="buymeacoffee_link"><![CDATA[<a href="https://buymeacoffee.com/CreativeCodeCat">BuyMeACoffee</a>]]></string>
+    <string name="weather_link"><![CDATA[Weather data by <a href="https://open-meteo.com/">Open-Meteo.com</a><br>(<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>)]]></string>
+
+    <!--Location Selector Items-->
+    <string name="location_link"><![CDATA[Location data by <a href="https://open-meteo.com/">Open-Meteo.com</a> (<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>)]]></string>
+    <string name="region_text">%1$s%2$s</string>
+
+    <string name="accessibility_service_description">The permission is required for double tap to work for locking the screen.\n\nIt is only needed if you want to use the double tap to lock screen feature in Multi Launcher.</string>
+</resources>

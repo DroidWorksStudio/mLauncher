@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/locationPlace"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/locationName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:drawablePadding="3dp"
+        android:gravity="start"
+        android:paddingLeft="35dp"
+        android:paddingTop="20dp"
+        android:paddingRight="35dp"
+        android:paddingBottom="00dp"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+        android:textColor="#F3F3F3"
+        android:textSize="28sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/regionName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:drawablePadding="3dp"
+        android:gravity="start"
+        android:paddingLeft="35dp"
+        android:paddingTop="0dp"
+        android:paddingRight="35dp"
+        android:paddingBottom="20dp"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+        android:textColor="#C3C3C3"
+        android:textSize="14sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/locationName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/locationName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
