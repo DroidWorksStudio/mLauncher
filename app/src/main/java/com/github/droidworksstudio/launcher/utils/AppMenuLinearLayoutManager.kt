@@ -8,6 +8,16 @@ class AppMenuLinearLayoutManager(private val activity: MainActivity) : LinearLay
 
     private var firstVisibleItemPosition = 0
     private var scrollStarted = false
+    private var isScrollEnabled: Boolean = true
+
+    fun setScrollEnabled(enabled: Boolean) {
+        isScrollEnabled = enabled
+    }
+
+    override fun canScrollVertically(): Boolean {
+        // Control vertical scrolling based on the flag
+        return isScrollEnabled && super.canScrollVertically()
+    }
 
     fun setScrollInfo() {
         firstVisibleItemPosition = findFirstCompletelyVisibleItemPosition()
@@ -29,5 +39,4 @@ class AppMenuLinearLayoutManager(private val activity: MainActivity) : LinearLay
 
         return scrollRange
     }
-
 }
