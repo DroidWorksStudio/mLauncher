@@ -122,8 +122,7 @@ class AppMenuAdapter(
         // Set initial drawables
         else if (app.third != 0) {
             holder.textView.setCompoundDrawablesWithIntrinsicBounds(ResourcesCompat.getDrawable(activity.resources, R.drawable.ic_work_app, null), null, ResourcesCompat.getDrawable(activity.resources, R.drawable.ic_empty, null), null)
-            holder.textView.compoundDrawables[0].colorFilter =
-                BlendModeColorFilter(sharedPreferenceManager.getTextColor(), BlendMode.SRC_ATOP)
+            holder.textView.compoundDrawables[0].colorFilter = BlendModeColorFilter(sharedPreferenceManager.getTextColor(), BlendMode.SRC_ATOP)
         } else {
             holder.textView.setCompoundDrawablesWithIntrinsicBounds(ResourcesCompat.getDrawable(activity.resources, R.drawable.ic_empty, null), null, ResourcesCompat.getDrawable(activity.resources, R.drawable.ic_empty, null), null)
         }

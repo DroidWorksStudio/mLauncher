@@ -95,13 +95,13 @@ class SharedPreferenceManager(private val context: Context) {
 
     fun setShortcut(index: Int, text: CharSequence, componentName: String, profile: Int, isContact: Boolean = false) {
         preferences.edit {
-            putString("shortcut${index}", "$componentName§splitter§$profile§splitter§${text}§splitter§${isContact}")
+            putString("shortcut${index}", "$componentName:::split:::$profile:::split:::${text}:::split:::${isContact}")
         }
     }
 
     fun getShortcut(index: Int): List<String>? {
-        val value = preferences.getString("shortcut${index}", "e§splitter§e§splitter§e§splitter§e")
-        return value?.split("§splitter§")
+        val value = preferences.getString("shortcut${index}", "e:::split:::e:::split:::e:::split:::e")
+        return value?.split(":::split:::")
     }
 
     fun getShortcutNumber(): Int? {
@@ -138,11 +138,11 @@ class SharedPreferenceManager(private val context: Context) {
 
             val pinnedAppString = when (isAppPinned(componentName, profile)) {
                 true -> {
-                    getPinnedAppString()?.replace("§section§$componentName§splitter§$profile", "")
+                    getPinnedAppString()?.replace(":::section:::$componentName:::split:::$profile", "")
                 }
 
                 false -> {
-                    "${getPinnedAppString()}§section§$componentName§splitter§$profile"
+                    "${getPinnedAppString()}:::section:::$componentName:::split:::$profile"
                 }
             }
 
@@ -159,10 +159,10 @@ class SharedPreferenceManager(private val context: Context) {
 
     private fun getPinnedApps(): List<Pair<String, Int?>> {
         val pinnedApps = mutableListOf<Pair<String, Int?>>()
-        val pinnedAppList = getPinnedAppString()?.split("§section§")
+        val pinnedAppList = getPinnedAppString()?.split(":::section:::")
 
         pinnedAppList?.forEach {
-            val app = it.split("§splitter§")
+            val app = it.split(":::split:::")
             if (app.size > 1) {
                 pinnedApps.add(Pair(app[0], app[1].toIntOrNull()))
             }
@@ -229,12 +229,12 @@ class SharedPreferenceManager(private val context: Context) {
     }
 
     fun getGestureName(direction: String): String? {
-        val name = preferences.getString("${direction}SwipeApp", "")?.split("§splitter§")
+        val name = preferences.getString("${direction}SwipeApp", "")?.split(":::split:::")
         return name?.get(0)
     }
 
     fun getGestureInfo(direction: String): List<String>? {
-        return preferences.getString("${direction}SwipeApp", "")?.split("§splitter§")
+        return preferences.getString("${direction}SwipeApp", "")?.split(":::split:::")
     }
 
     fun isGestureEnabled(direction: String): Boolean {

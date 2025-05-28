@@ -26,6 +26,16 @@
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/appVersionView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/app_version"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
         android:id="@+id/creditText"
         android:layout_width="match_parent"
         android:layout_height="0dp"

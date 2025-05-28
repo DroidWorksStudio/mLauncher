@@ -160,7 +160,7 @@ class GestureAppsFragment(private val direction: String) : Fragment(),
 
     private fun performConfirmedAction(appInfo: LauncherActivityInfo, appName: String, profile: Int) {
         sharedPreferenceManager.setGestures(
-            direction, "$appName§splitter§${appInfo.componentName.flattenToString()}§splitter§$profile"
+            direction, "$appName:::split:::${appInfo.componentName.flattenToString()}:::split:::$profile"
         )
         requireActivity().supportFragmentManager.popBackStack()
     }

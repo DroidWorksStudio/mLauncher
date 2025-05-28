@@ -2,18 +2,29 @@
 
     <!--General UI-->
     <string-array name="bg_values" translatable="false">
-        <item>#00000000</item>
-        <item>#FF000000</item>
-        <item>#FF1B1B1B</item>
-        <item>#FFD6D6D6</item>
-        <item>material</item>
-
+        <item>#00000000</item> <!-- Transparent -->
+        <item>#FF000000</item> <!-- Black -->
+        <item>#FF1B1B1B</item> <!-- Grey -->
+        <item>#FFD6D6D6</item> <!-- White -->
+        <item>material</item>  <!-- Material (dynamic/theme-based) -->
+        <item>#FFFF5252</item> <!-- Red -->
+        <item>#FF448AFF</item> <!-- Blue -->
+        <item>#FF4CAF50</item> <!-- Green -->
+        <item>#FFFFEB3B</item> <!-- Yellow -->
+        <item>#FF9C27B0</item> <!-- Purple -->
+        <item>#FF009688</item> <!-- Teal -->
+        <item>#FFFF9800</item> <!-- Orange -->
+        <item>#FF3F51B5</item> <!-- Indigo -->
+        <item>#FFE91E63</item> <!-- Pink -->
     </string-array>
 
     <string-array name="color_values" translatable="false">
-        <item>#FFF3F3F3</item>
-        <item>#FF0C0C0C</item>
-        <item>material</item>
+        <item>#FFF3F3F3</item> <!-- Light -->
+        <item>#FF0C0C0C</item> <!-- Dark -->
+        <item>material</item> <!-- Material -->
+        <item>#FF000000</item> <!-- OLED Black -->
+        <item>#FF704214</item> <!-- Sepia -->
+        <item>#FFFFF0F5</item> <!-- Pastel (light pink/lavender) -->
     </string-array>
 
     <string-array name="font_values" translatable="false">

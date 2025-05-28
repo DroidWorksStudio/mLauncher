@@ -9,7 +9,7 @@ val minor = 11
 val patch = 0
 val build = 0
 
-val type = 0 // 1=beta, 2=alpha else=production
+val type = 1 // 1=beta, 2=alpha else=production
 
 val baseVersionName = "$major.$minor.$patch.$build"
 
@@ -55,6 +55,7 @@ android {
                 "proguard-rules.pro"
             )
             resValue("string", "app_name", "Multi Launcher Dev")
+            resValue("string", "app_version", versionNameStr)
             resValue("string", "empty", "")
         }
 
@@ -66,6 +67,7 @@ android {
                 "proguard-rules.pro"
             )
             resValue("string", "app_name", "Multi Launcher")
+            resValue("string", "app_version", versionNameStr)
             resValue("string", "empty", "")
         }
     }

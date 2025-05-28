@@ -7,12 +7,24 @@
         <item>Grey</item>
         <item>White</item>
         <item>Material</item>
+        <item>Red</item>
+        <item>Blue</item>
+        <item>Green</item>
+        <item>Yellow</item>
+        <item>Purple</item>
+        <item>Teal</item>
+        <item>Orange</item>
+        <item>Indigo</item>
+        <item>Pink</item>
     </string-array>
 
     <string-array name="color_options">
         <item>Light</item>
         <item>Dark</item>
         <item>Material</item>
+        <item>OLED Black</item>
+        <item>Sepia</item>
+        <item>Pastel</item>
     </string-array>
 
     <string-array name="font_options">
@@ -82,15 +94,5 @@
         <item>Large</item>
         <item>Extra Large</item>
         <item>Huge</item>
-    </string-array>
-    <!-- Reply Preference -->
-    <string-array name="reply_entries">
-        <item>Reply</item>
-        <item>Reply to all</item>
-    </string-array>
-
-    <string-array name="reply_values">
-        <item>reply</item>
-        <item>reply_all</item>
     </string-array>
 </resources>
