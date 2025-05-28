@@ -1,0 +1,35 @@
+<h1>Multi Launcher: Čistý a jednoduchý spúšťač pre Android vytvorený pre čitateľnosť a ovládanie</h1>
+
+<p>Hľadáte launcher, ktorý sa zbaví neporiadku a zjednoduší prácu? <strong>Multi Launcher</strong> je výkonný, no minimalistický spúšťač pre Android, ktorý nahrádza drobné ikony jasnými a čitateľnými textovými tlačidlami, vďaka čomu sa v telefóne ľahšie orientuje.</p>
+
+<p>Či už chcete jednoduchú domovskú obrazovku, potrebujete veľký text pre lepšiu viditeľnosť alebo uprednostňujete rýchle akcie založené na gestách, Multi Launcher vám poskytuje plnú kontrolu bez toho, aby vás zahltil možnosťami.</p>
+
+<h2>Prečo si vybrať Multi Launcher?</h2>
+<ul>
+    <li><strong>Textový spúšťač:</strong> Žiadne mätúce ikony – len označené textové tlačidlá pre vaše aplikácie.</li>
+    <li><strong>Vysoko prispôsobiteľné:</strong> Upravte rozloženie, veľkosť písma, polohu hodín a ďalšie.</li>
+    <li><strong>Rýchle gestá:</strong> Na otváranie aplikácií, uzamknutie obrazovky a prístup k upozorneniam použite klepnutia, potiahnutia a dlhé potiahnutia.</li>
+    <li><strong>Bezpečné:</strong> Biometrický zámok pre nastavenia a súkromie.</li>
+    <li><strong>Skvelé pre seniorov alebo milovníkov jednoduchosti:</strong> Ľahko sa číta, používa a prispôsobuje.</li>
+</ul>
+
+<h2>Kľúčové vlastnosti:</h2>
+<ul>
+    <li>Vlastné názvy aplikácií: Premenujte aplikácie tak, aby zodpovedali vašej predstave.</li>
+    <li>Flexibilné rozloženia: Usporiadajte si aplikácie tak, ako vám to vyhovuje.</li>
+    <li>Prispôsobenie hodín a dátumu: Umiestnite widgety kamkoľvek chcete.</li>
+    <li>Štatistiky používania aplikácií: Pozrite sa, koľko času trávite v každej aplikácii.</li>
+    <li>Skratky gest: Nastavte si vlastné akcie pre dvojité ťuknutia, potiahnutia prstom a ďalšie.</li>
+</ul>
+
+<h2>Funkcie prístupnosti:</h2>
+<p>Táto aplikácia používa rozhranie <strong>AccessibilityService API</strong> na:</p>
+<ul>
+    <li>Uzamknutie obrazovky gestom</li>
+    <li>Otvorte ponuku napájania</li>
+    <li>Potiahnite nadol panel s upozorneniami</li>
+</ul>
+
+<p><em>Multi Launcher rešpektuje vaše súkromie. Tieto funkcie nezhromažďujú ani nezdieľajú osobné údaje.</em></p>
+
+<p>Ak vás už nebavia okázalé a preplnené launchery a chcete niečo priamočiare, štýlové a výkonné, <strong>Multi Launcher</strong> je pre vás perfektným riešením pre domovskú obrazovku.</p>
