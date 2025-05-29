@@ -83,32 +83,23 @@ class AppDrawerAdapter(
         return ViewHolder(binding)
     }
 
-
     @SuppressLint("RecyclerView")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        if (appFilteredList.isEmpty()) {
-            Log.d("AppListDebug", "⚠️ onBindViewHolder called but appFilteredList is empty")
-            return
-        }
-
+        if (appFilteredList.isEmpty()) return
         val appModel = appFilteredList[holder.absoluteAdapterPosition]
-        Log.d("AppListDebug", "🔧 Binding position=$position, label=${appModel.label}, package=${appModel.activityPackage}")
-
         holder.bind(flag, gravity, appModel, appClickListener, appInfoListener, appDeleteListener)
 
         holder.appHide.setOnClickListener {
-            Log.d("AppListDebug", "❌ Hide clicked for ${appModel.label} (${appModel.activityPackage})")
-
             appFilteredList.removeAt(holder.absoluteAdapterPosition)
             appsList.remove(appModel)
             notifyItemRemoved(holder.absoluteAdapterPosition)
-
-            Log.d("AppListDebug", "📤 notifyItemRemoved at ${holder.absoluteAdapterPosition}")
             appHideListener(flag, appModel)
         }
 
+
         holder.appLock.setOnClickListener {
             val appName = appModel.activityPackage
+            // Access the current locked apps set
             val currentLockedApps = prefs.lockedApps
 
             if (currentLockedApps.contains(appName)) {
@@ -116,42 +107,60 @@ class AppDrawerAdapter(
 
                 biometricHelper.startBiometricAuth(appModel, object : BiometricHelper.CallbackApp {
                     override fun onAuthenticationSucceeded(appListItem: AppListItem) {
-                        Log.d("AppListDebug", "🔓 Auth succeeded for $appName - unlocking")
-                        holder.appLock.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.padlock_off, 0, 0)
+                        holder.appLock.setCompoundDrawablesWithIntrinsicBounds(
+                            0,
+                            R.drawable.padlock_off,
+                            0,
+                            0
+                        )
                         holder.appLock.text = getLocalizedString(R.string.lock)
+                        // If appName is already in the set, remove it
                         currentLockedApps.remove(appName)
-                        prefs.lockedApps = currentLockedApps
-                        Log.d("AppListDebug", "🔐 Updated lockedApps: $currentLockedApps")
                     }
 
                     override fun onAuthenticationFailed() {
-                        Log.e("Authentication", getLocalizedString(R.string.text_authentication_failed))
+                        Log.e(
+                            "Authentication",
+                            getLocalizedString(R.string.text_authentication_failed)
+                        )
                     }
 
-                    override fun onAuthenticationError(errorCode: Int, errorMessage: CharSequence?) {
-                        val msg = when (errorCode) {
-                            BiometricPrompt.ERROR_USER_CANCELED -> getLocalizedString(R.string.text_authentication_cancel)
-                            else -> getLocalizedString(R.string.text_authentication_error).format(errorMessage, errorCode)
+                    override fun onAuthenticationError(
+                        errorCode: Int,
+                        errorMessage: CharSequence?
+                    ) {
+                        when (errorCode) {
+                            BiometricPrompt.ERROR_USER_CANCELED -> Log.e(
+                                "Authentication",
+                                getLocalizedString(R.string.text_authentication_cancel)
+                            )
+
+                            else -> Log.e(
+                                "Authentication",
+                                getLocalizedString(R.string.text_authentication_error).format(
+                                    errorMessage,
+                                    errorCode
+                                )
+                            )
                         }
-                        Log.e("Authentication", msg)
                     }
                 })
             } else {
-                Log.d("AppListDebug", "🔒 Locking $appName")
                 holder.appLock.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.padlock, 0, 0)
                 holder.appLock.text = getLocalizedString(R.string.unlock)
+                // If appName is not in the set, add it
                 currentLockedApps.add(appName)
-                prefs.lockedApps = currentLockedApps
-                Log.d("AppListDebug", "🔐 Updated lockedApps: $currentLockedApps")
             }
+
+            // Update the lockedApps value (save the updated set back to prefs)
+            prefs.lockedApps = currentLockedApps
+            Log.d("lockedApps", prefs.lockedApps.toString())
         }
 
         holder.appSaveRename.setOnClickListener {
             val name = holder.appRenameEdit.text.toString().trim()
-            Log.d("AppListDebug", "✏️ Renaming ${appModel.activityPackage} to $name")
             appModel.customLabel = name
             notifyItemChanged(holder.absoluteAdapterPosition)
-            Log.d("AppListDebug", "🔁 notifyItemChanged at ${holder.absoluteAdapterPosition}")
             appRenameListener(appModel.activityPackage, appModel.customLabel)
         }
 
@@ -221,10 +230,12 @@ class AppDrawerAdapter(
             }
 
 
+            @SuppressLint("NotifyDataSetChanged")
             @Suppress("UNCHECKED_CAST")
             override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
                 if (results?.values is MutableList<*>) {
                     appFilteredList = results.values as MutableList<AppListItem>
+                    notifyDataSetChanged()
                 } else {
                     return
                 }
@@ -246,9 +257,11 @@ class AppDrawerAdapter(
         }
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     fun setAppList(appsList: MutableList<AppListItem>) {
         this.appsList = appsList
         this.appFilteredList = appsList
+        notifyDataSetChanged()
     }
 
     fun launchFirstInList() {
@@ -257,9 +270,7 @@ class AppDrawerAdapter(
     }
 
     class ViewHolder(itemView: AdapterAppDrawerBinding) : RecyclerView.ViewHolder(itemView.root) {
-
         val appHide: TextView = itemView.appHide
-        val appPin: TextView = itemView.appPin
         val appLock: TextView = itemView.appLock
         val appRenameEdit: EditText = itemView.appRenameEdit
         val appSaveRename: TextView = itemView.appSaveRename
@@ -309,18 +320,13 @@ class AppDrawerAdapter(
                     appLock.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.padlock, 0, 0)
                     appLock.text = getLocalizedString(R.string.unlock)
                 } else {
-                    appLock.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.padlock_off, 0, 0)
+                    appLock.setCompoundDrawablesWithIntrinsicBounds(
+                        0,
+                        R.drawable.padlock_off,
+                        0,
+                        0
+                    )
                     appLock.text = getLocalizedString(R.string.lock)
-                }
-
-                val currentPinnedApps = prefs.pinnedApps
-
-                if (currentPinnedApps.contains(appName)) {
-                    appPin.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.pin, 0, 0)
-                    appPin.text = getLocalizedString(R.string.unpin)
-                } else {
-                    appPin.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.pin_off, 0, 0)
-                    appPin.text = getLocalizedString(R.string.pin)
                 }
 
                 appRename.apply {
@@ -385,101 +391,14 @@ class AppDrawerAdapter(
                 val packageName = appListItem.activityPackage
                 val packageManager = context.packageManager
 
-                var hasIconEnabled = false
-                var myIcon: Drawable? = null
-
-                if (packageName.isNotBlank() && prefs.iconPackAppList != Constants.IconPacks.Disabled) {
-                    val iconPackPackage = prefs.customIconPackAppList
-                    // Get app icon or fallback drawable
-                    val icon: Drawable? = try {
-                        if (iconPackPackage.isNotEmpty() && prefs.iconPackAppList == Constants.IconPacks.Custom) {
-                            if (IconPackHelper.isReady()) {
-                                IconPackHelper.getCachedIcon(
-                                    context,
-                                    packageName,
-                                    IconCacheTarget.APP_LIST
-                                )
-                                // Use the icon if not null
-                            } else {
-                                packageManager.getApplicationIcon(packageName)
-                            }
-                        } else {
-                            packageManager.getApplicationIcon(packageName)
-                        }
-                    } catch (e: PackageManager.NameNotFoundException) {
-                        e.printStackTrace()
-                        // Handle exception gracefully, fall back to the system icon
-                        packageManager.getApplicationIcon(packageName)
-                    } catch (e: Exception) {
-                        e.printStackTrace()
-                        // Handle any other exceptions gracefully, fallback to the system icon
-                        packageManager.getApplicationIcon(packageName)
-                    }
-
-                    val defaultIcon = packageManager.getApplicationIcon(packageName)
-                    val nonNullDrawable: Drawable = icon ?: defaultIcon
-
-                    // Recolor the icon with the dominant color
-                    val appNewIcon: Drawable? = getSystemIcons(
-                        context,
-                        prefs,
-                        IconCacheTarget.APP_LIST,
-                        nonNullDrawable
-                    )
-
-                    // Set the icon size to match text size and add padding
-                    val iconSize = (prefs.appSize * 1.4).toInt()  // Base size from preferences
-                    val iconPadding = (iconSize / 1.2).toInt() //
-
-                    appNewIcon?.setBounds(0, 0, iconSize, iconSize)
-                    nonNullDrawable.setBounds(
-                        0,
-                        0,
-                        ((iconSize * 1.8).toInt()),
-                        ((iconSize * 1.8).toInt())
-                    )
-
-                    // Set drawable position based on alignment
-                    when (prefs.drawerAlignment) {
-                        Constants.Gravity.Left -> {
-                            appTitle.setCompoundDrawables(
-                                appNewIcon ?: nonNullDrawable,
-                                null,
-                                null,
-                                null
-                            )
-                            appTitle.compoundDrawablePadding = iconPadding
-                            hasIconEnabled = true
-                            myIcon = appNewIcon ?: nonNullDrawable
-                        }
-
-                        Constants.Gravity.Right -> {
-                            appTitle.setCompoundDrawables(
-                                null,
-                                null,
-                                appNewIcon ?: nonNullDrawable,
-                                null
-                            )
-                            appTitle.compoundDrawablePadding = iconPadding
-                            hasIconEnabled = true
-                            myIcon = appNewIcon ?: nonNullDrawable
-                        }
-
-                        else -> appTitle.setCompoundDrawables(null, null, null, null)
-                    }
-                } else {
-                    appTitle.setCompoundDrawables(null, null, null, null)
-                }
                 if (isWorkProfile) {
                     val icon = AppCompatResources.getDrawable(context, R.drawable.work_profile)
                     val px = dp2px(resources, prefs.appSize)
                     icon?.setBounds(0, 0, px, px)
                     if (appLabelGravity == LEFT) {
-                        if (hasIconEnabled) appTitle.setCompoundDrawables(myIcon, null, icon, null)
-                        else appTitle.setCompoundDrawables(null, null, icon, null)
+                        appTitle.setCompoundDrawables(null, null, icon, null)
                     } else {
-                        if (hasIconEnabled) appTitle.setCompoundDrawables(icon, null, myIcon, null)
-                        else appTitle.setCompoundDrawables(icon, null, null, null)
+                        appTitle.setCompoundDrawables(icon, null, null, null)
                     }
                     appTitle.compoundDrawablePadding = 20
                 } else if (isPrivateSpace) {
@@ -487,15 +406,91 @@ class AppDrawerAdapter(
                     val px = dp2px(resources, prefs.appSize)
                     icon?.setBounds(0, 0, px, px)
                     if (appLabelGravity == LEFT) {
-                        if (hasIconEnabled) appTitle.setCompoundDrawables(myIcon, null, icon, null)
-                        else appTitle.setCompoundDrawables(null, null, icon, null)
+                        appTitle.setCompoundDrawables(null, null, icon, null)
                     } else {
-                        if (hasIconEnabled) appTitle.setCompoundDrawables(icon, null, myIcon, null)
-                        else appTitle.setCompoundDrawables(icon, null, null, null)
+                        appTitle.setCompoundDrawables(icon, null, null, null)
                     }
                     appTitle.compoundDrawablePadding = 20
-                }
+                } else {
+                    if (packageName.isNotBlank() && prefs.iconPackAppList != Constants.IconPacks.Disabled) {
+                        val iconPackPackage = prefs.customIconPackAppList
+                        // Get app icon or fallback drawable
+                        val icon: Drawable? = try {
+                            if (iconPackPackage.isNotEmpty() && prefs.iconPackAppList == Constants.IconPacks.Custom) {
+                                if (IconPackHelper.isReady()) {
+                                    IconPackHelper.getCachedIcon(
+                                        context,
+                                        packageName,
+                                        IconCacheTarget.APP_LIST
+                                    )
+                                    // Use the icon if not null
+                                } else {
+                                    packageManager.getApplicationIcon(packageName)
+                                }
+                            } else {
+                                packageManager.getApplicationIcon(packageName)
+                            }
+                        } catch (e: PackageManager.NameNotFoundException) {
+                            e.printStackTrace()
+                            // Handle exception gracefully, fall back to the system icon
+                            packageManager.getApplicationIcon(packageName)
+                        } catch (e: Exception) {
+                            e.printStackTrace()
+                            // Handle any other exceptions gracefully, fallback to the system icon
+                            packageManager.getApplicationIcon(packageName)
+                        }
 
+                        val defaultIcon = packageManager.getApplicationIcon(packageName)
+                        val nonNullDrawable: Drawable = icon ?: defaultIcon
+
+                        // Recolor the icon with the dominant color
+                        val appNewIcon: Drawable? = getSystemIcons(
+                            context,
+                            prefs,
+                            IconCacheTarget.APP_LIST,
+                            nonNullDrawable
+                        )
+
+                        // Set the icon size to match text size and add padding
+                        val iconSize = (prefs.appSize * 1.4).toInt()  // Base size from preferences
+                        val iconPadding = (iconSize / 1.2).toInt() //
+
+                        appNewIcon?.setBounds(0, 0, iconSize, iconSize)
+                        nonNullDrawable.setBounds(
+                            0,
+                            0,
+                            ((iconSize * 1.8).toInt()),
+                            ((iconSize * 1.8).toInt())
+                        )
+
+                        // Set drawable position based on alignment
+                        when (prefs.drawerAlignment) {
+                            Constants.Gravity.Left -> {
+                                appTitle.setCompoundDrawables(
+                                    appNewIcon ?: nonNullDrawable,
+                                    null,
+                                    null,
+                                    null
+                                )
+                                appTitle.compoundDrawablePadding = iconPadding
+                            }
+
+                            Constants.Gravity.Right -> {
+                                appTitle.setCompoundDrawables(
+                                    null,
+                                    null,
+                                    appNewIcon ?: nonNullDrawable,
+                                    null
+                                )
+                                appTitle.compoundDrawablePadding = iconPadding
+                            }
+
+                            else -> appTitle.setCompoundDrawables(null, null, null, null)
+                        }
+                    } else {
+                        appTitle.setCompoundDrawables(null, null, null, null)
+                    }
+                }
 
                 val padding = dp2px(resources, 24)
                 appTitle.updatePadding(left = padding, right = padding)
@@ -547,29 +542,6 @@ class AppDrawerAdapter(
                         }
                     }
                 }
-
-                appPin.apply {
-                    setOnClickListener {
-                        val appName = appListItem.activityPackage
-                        val updatedPinnedApps = prefs.pinnedApps.toMutableSet()
-
-                        val isPinned = updatedPinnedApps.contains(appName)
-                        Log.d("AppListDebug", if (isPinned) "📌 Unpinning $appName" else "📌 Pinning $appName")
-
-                        if (isPinned) {
-                            updatedPinnedApps.remove(appName)
-                            appPin.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.pin_off, 0, 0)
-                            appPin.text = getLocalizedString(R.string.pin)
-                        } else {
-                            updatedPinnedApps.add(appName)
-                            appPin.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.pin, 0, 0)
-                            appPin.text = getLocalizedString(R.string.unpin)
-                        }
-
-                        prefs.pinnedApps = updatedPinnedApps.toSet()
-                        Log.d("AppListDebug", "✅ Updated pinnedApps: ${prefs.pinnedApps}")
-                    }
-                }
             }
     }
 
@@ -578,5 +550,4 @@ class AppDrawerAdapter(
             it.activityLabel.firstOrNull()?.uppercaseChar() == letter
         }
     }
-
 }
