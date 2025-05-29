@@ -26,6 +26,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- *(AppDrawerAdapter)* Improve app locking and filtering logic - ([1686618](https://github.com/DroidWorksStudio/mLauncher/commit/16866181f7bd3aea174f29ebbc0b588e125f5fef))
 - *(AppDrawerAdapter)* Improve app locking and filtering logic - ([d105de5](https://github.com/DroidWorksStudio/mLauncher/commit/d105de5ceb52d32feabae55c5cdef70c36f39034))
 - Move migration logic into a separate function - ([0e3446c](https://github.com/DroidWorksStudio/mLauncher/commit/0e3446c02d24813c98e14f915f061f036ac2af55))
 
