@@ -157,7 +157,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         // Handle status bar once per view creation
         if (prefs.showStatusBar) {
             showStatusBar(requireActivity())
-            checkForStatusbar(binding.mainView)
+            checkForStatusbar(binding.mainLayout)
         } else hideStatusBar(requireActivity())
 
         // Register battery receiver
@@ -190,7 +190,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         // Handle status bar once per view creation
         if (prefs.showStatusBar) {
             showStatusBar(requireActivity())
-            checkForStatusbar(binding.mainView)
+            checkForStatusbar(binding.mainLayout)
         } else hideStatusBar(requireActivity())
 
         // Update only dynamic elements (not all UI prefs)
@@ -221,14 +221,11 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     }
 
     fun applyStatusBarPadding(view: View) {
-        return
-        val originalPaddingTop = view.paddingTop
-
         ViewCompat.setOnApplyWindowInsetsListener(view) { v, insets ->
             val statusBarHeight = getStatusBarIconAreaHeight(view)
             v.setPadding(
                 v.paddingLeft,
-                originalPaddingTop + statusBarHeight,
+                statusBarHeight,
                 v.paddingRight,
                 v.paddingBottom
             )
