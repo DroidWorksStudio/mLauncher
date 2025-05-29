@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Use mainLayout for status bar padding - ([7d9e8d8](https://github.com/DroidWorksStudio/mLauncher/commit/7d9e8d80b9c5fce39fcb9731d132614d15f211c8))
 - Replace View.visibility with isVisible - ([063b812](https://github.com/DroidWorksStudio/mLauncher/commit/063b8124a7a671a32b13adedb4eba81e57160c75))
 
 ## [1.10.5.0](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.5.0) - (29, May 2025)
