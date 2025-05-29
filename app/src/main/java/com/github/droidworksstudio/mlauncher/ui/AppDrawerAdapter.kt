@@ -28,6 +28,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.biometric.BiometricPrompt
+import androidx.core.view.isVisible
 import androidx.core.view.updatePadding
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
@@ -289,8 +290,8 @@ class AppDrawerAdapter(
         ) =
             with(itemView) {
                 val prefs = Prefs(context)
-                appHideLayout.visibility = View.GONE
-                appRenameLayout.visibility = View.GONE
+                appHideLayout.isVisible = false
+                appRenameLayout.isVisible = false
 
                 // set show/hide icon
                 if (flag == AppDrawerFlag.HiddenApps) {
@@ -332,8 +333,8 @@ class AppDrawerAdapter(
                     setOnClickListener {
                         if (appListItem.activityPackage.isNotEmpty()) {
                             appRenameEdit.hint = appListItem.activityLabel
-                            appRenameLayout.visibility = View.VISIBLE
-                            appHideLayout.visibility = View.GONE
+                            appRenameLayout.isVisible = true
+                            appHideLayout.isVisible = false
                             appRenameEdit.showKeyboard()
                             appRenameEdit.imeOptions = EditorInfo.IME_ACTION_DONE
                         }
@@ -519,8 +520,8 @@ class AppDrawerAdapter(
                             try {
                                 appDelete.alpha =
                                     if (context.isSystemApp(appListItem.activityPackage)) 0.3f else 1.0f
-                                appHideLayout.visibility = View.VISIBLE
-                                sidebarContainer.visibility = View.GONE
+                                appHideLayout.isVisible = true
+                                sidebarContainer.isVisible = false
                                 visibleHideLayouts.add(absoluteAdapterPosition)
                             } catch (e: Exception) {
                                 e.printStackTrace()
@@ -544,11 +545,11 @@ class AppDrawerAdapter(
 
                 appClose.apply {
                     setOnClickListener {
-                        appHideLayout.visibility = View.GONE
+                        appHideLayout.isVisible = false
 
                         visibleHideLayouts.remove(absoluteAdapterPosition)
                         if (visibleHideLayouts.isEmpty()) {
-                            sidebarContainer.visibility = View.VISIBLE
+                            sidebarContainer.isVisible = prefs.showAZSidebar
                         }
                     }
                 }
@@ -580,7 +581,7 @@ class AppDrawerAdapter(
 
     fun getIndexForLetter(letter: Char): Int {
         return appsList.indexOfFirst {
-            it.activityLabel.firstOrNull()?.uppercaseChar() == letter
+            it.label.firstOrNull()?.uppercaseChar() == letter
         }
     }
 

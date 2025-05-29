@@ -199,7 +199,7 @@ class AppDrawerFragment : Fragment() {
         binding.recyclerView.addOnScrollListener(getRecyclerViewOnScrollListener(azSidebar))
 
         if (prefs.hideSearchView) {
-            binding.search.visibility = View.GONE
+            binding.search.isVisible = false
         } else {
             when (flag) {
                 AppDrawerFlag.LaunchApp -> binding.search.queryHint =
@@ -316,8 +316,7 @@ class AppDrawerFragment : Fragment() {
         viewModel.hiddenApps.observe(viewLifecycleOwner, Observer {
             if (flag != AppDrawerFlag.HiddenApps) return@Observer
             it?.let { appList ->
-                binding.listEmptyHint.visibility =
-                    if (appList.isEmpty()) View.VISIBLE else View.GONE
+                binding.listEmptyHint.isVisible = appList.isEmpty()
                 populateAppList(appList, appAdapter)
             }
         })
@@ -326,14 +325,14 @@ class AppDrawerFragment : Fragment() {
             if (flag == AppDrawerFlag.HiddenApps) return@Observer
             if (it == appAdapter.appsList) return@Observer
             it?.let { appList ->
-                binding.listEmptyHint.visibility = if (appList.isEmpty()) View.VISIBLE else View.GONE
-                binding.sidebarContainer.visibility = if (prefs.showAZSidebar) View.VISIBLE else View.GONE
+                binding.listEmptyHint.isVisible = appList.isEmpty()
+                binding.sidebarContainer.isVisible = prefs.showAZSidebar
                 populateAppList(appList, appAdapter)
             }
         })
 
         viewModel.firstOpen.observe(viewLifecycleOwner) {
-            if (it) binding.appDrawerTip.visibility = View.VISIBLE
+            if (it) binding.appDrawerTip.isVisible = true
         }
     }
 

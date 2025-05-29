@@ -18,6 +18,7 @@ import android.widget.TextView
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.net.toUri
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager2.widget.ViewPager2
@@ -250,8 +251,8 @@ class OnboardingPageFragment : Fragment() {
             if (hasUsageAccessPermission(requireContext())) {
                 permissionText.text = getLocalizedString(R.string.permission_granted)
                 nextButton.isEnabled = true
-                permissionRemovedText.visibility = View.GONE
-                permissionReviewText.visibility = View.GONE
+                permissionRemovedText.isVisible = false
+                permissionReviewText.isVisible = false
                 permissionButton.isEnabled = false
             } else {
                 permissionText.text = getLocalizedString(R.string.grant_usage_permission)
@@ -267,8 +268,8 @@ class OnboardingPageFragment : Fragment() {
             if (hasLocationPermission(requireContext())) {
                 permissionText.text = getLocalizedString(R.string.permission_granted)
                 nextButton.isEnabled = true
-                permissionRemovedText.visibility = View.GONE
-                permissionReviewText.visibility = View.GONE
+                permissionRemovedText.isVisible = false
+                permissionReviewText.isVisible = false
                 permissionButton.isEnabled = false
             } else {
                 permissionText.text = getLocalizedString(R.string.grant_location_permission)

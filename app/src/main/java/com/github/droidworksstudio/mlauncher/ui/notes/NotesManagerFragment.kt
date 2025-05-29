@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter
 import androidx.activity.OnBackPressedCallback
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -177,14 +178,14 @@ class NotesManagerFragment : Fragment() {
                 if (imeVisible) {
                     spacerParams.height = imeHeight
                     bottomSpacer.layoutParams = spacerParams
-                    bottomSpacer.visibility = View.VISIBLE
+                    bottomSpacer.isVisible = true
                 } else {
                     if (!isGestureNavigationEnabled(requireContext())) {
                         spacerParams.height = resources.getDimensionPixelSize(R.dimen.default_bottom_spacer)
                         bottomSpacer.layoutParams = spacerParams
-                        bottomSpacer.visibility = View.VISIBLE
+                        bottomSpacer.isVisible = true
                     } else {
-                        bottomSpacer.visibility = View.GONE
+                        bottomSpacer.isVisible = false
                     }
                 }
                 insets
@@ -225,7 +226,7 @@ class NotesManagerFragment : Fragment() {
     }
 
     private fun updateEmptyHintVisibility() {
-        binding.listEmptyHint.visibility = if (messages.isEmpty()) View.VISIBLE else View.GONE
+        binding.listEmptyHint.isVisible = messages.isEmpty()
     }
 
     private fun hideButtons() {
@@ -236,7 +237,7 @@ class NotesManagerFragment : Fragment() {
         for (i in first..last) {
             val holder = binding.recyclerView.findViewHolderForAdapterPosition(i)
             if (holder is NotesManagerAdapter.MessageViewHolder) {
-                holder.actionButtonsLayout.visibility = View.GONE
+                holder.actionButtonsLayout.isVisible = false
             }
         }
     }

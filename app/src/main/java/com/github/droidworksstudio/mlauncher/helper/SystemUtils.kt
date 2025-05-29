@@ -240,7 +240,7 @@ suspend fun getAppsList(
         // Final sort
         fullList.sortWith(
             compareBy<AppListItem> { it.category.ordinal }
-                .thenBy { it.activityLabel.lowercase() }
+                .thenBy { it.label.lowercase() }
         )
 
         Log.d("AppListDebug", "✅ App list built with ${fullList.size} items")

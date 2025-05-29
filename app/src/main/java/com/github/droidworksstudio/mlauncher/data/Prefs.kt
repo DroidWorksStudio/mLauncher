@@ -882,7 +882,7 @@ class Prefs(val context: Context) {
 
     // return app label
     fun getAppName(location: Int): String {
-        return getHomeAppModel(location).activityLabel
+        return getHomeAppModel(location).label
     }
 
     fun getAppAlias(appName: String): String {
