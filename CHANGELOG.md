@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Versioning:
+
+- Bump app version to 1.10.5 build 3 - ([a66368a](https://github.com/DroidWorksStudio/mLauncher/commit/a66368afa3d40e4a8766ecc7fbab15a75e52ca1a))
+
+## [1.10.5.1](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.5.1) - (30, May 2025)
+
 ### Implemented Enhancements:
 
 - Lock orientation when requested - ([66396ef](https://github.com/DroidWorksStudio/mLauncher/commit/66396ef57352cdacbd22c21dfc73d7126fa73665))
