@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Bug Fixes:
+
+- Use resValue for app name and version - ([bc236cc](https://github.com/DroidWorksStudio/mLauncher/commit/bc236cc2a9d54be872f468e412be2632db3be8fa))
+
 ### Refactoring:
 
 - Use mainLayout for status bar padding - ([7d9e8d8](https://github.com/DroidWorksStudio/mLauncher/commit/7d9e8d80b9c5fce39fcb9731d132614d15f211c8))
