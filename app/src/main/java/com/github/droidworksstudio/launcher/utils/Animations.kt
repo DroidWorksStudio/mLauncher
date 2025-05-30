@@ -105,13 +105,13 @@ class Animations(context: Context) {
                 .setListener(object : AnimatorListenerAdapter() {
                     override fun onAnimationEnd(animation: Animator) {
                         super.onAnimationEnd(animation)
-                        visibility = View.INVISIBLE
+                        visibility = View.GONE
                         isInAnim = false
                     }
 
                     override fun onAnimationCancel(animation: Animator) {
                         super.onAnimationCancel(animation)
-                        visibility = View.INVISIBLE
+                        visibility = View.GONE
                         isInAnim = false
                     }
                 })
@@ -144,13 +144,13 @@ class Animations(context: Context) {
                 .setListener(object : AnimatorListenerAdapter() {
                     override fun onAnimationEnd(animation: Animator) {
                         super.onAnimationEnd(animation)
-                        visibility = View.INVISIBLE
+                        visibility = View.GONE
                         isInAnim = false
                     }
 
                     override fun onAnimationCancel(animation: Animator) {
                         super.onAnimationCancel(animation)
-                        visibility = View.INVISIBLE
+                        visibility = View.GONE
                         isInAnim = false
                     }
                 })

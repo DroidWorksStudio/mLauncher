@@ -5,9 +5,9 @@ plugins {
 
 // Top of build.gradle.kts
 val major = 1
-val minor = 11
-val patch = 0
-val build = 0
+val minor = 10
+val patch = 5
+val build = 1
 
 val type = 1 // 1=beta, 2=alpha else=production
 

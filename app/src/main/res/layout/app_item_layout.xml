@@ -14,7 +14,7 @@
         android:layout_gravity="center_vertical"
         android:gravity="center_vertical"
         android:paddingVertical="5dp"
-        android:visibility="invisible">
+        android:visibility="gone">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/appNameEdit"
@@ -81,7 +81,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="center_vertical"
         android:gravity="center"
-        android:visibility="invisible">
+        android:visibility="gone">
 
         <TextView
             android:id="@+id/pin"

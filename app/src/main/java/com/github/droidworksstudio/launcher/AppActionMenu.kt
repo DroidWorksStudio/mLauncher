@@ -209,7 +209,7 @@ class AppActionMenu(private val activity: MainActivity, private val binding: Act
 
     private fun renameApp(textView: TextView, editLayout: LinearLayout, actionMenu: View, appActivity: LauncherActivityInfo, userHandle: UserHandle, workProfile: Int) {
         activity.disableAppMenuScroll()
-        textView.visibility = View.INVISIBLE
+        textView.visibility = View.GONE
         animations.fadeViewIn(editLayout)
         animations.fadeViewOut(actionMenu)
         val editText = editLayout.findViewById<EditText>(R.id.appNameEdit)
@@ -220,7 +220,7 @@ class AppActionMenu(private val activity: MainActivity, private val binding: Act
         val searchEnabled = sharedPreferenceManager.isSearchEnabled()
 
         if (searchEnabled) {
-            searchView.visibility = View.INVISIBLE
+            searchView.visibility = View.GONE
         } else {
             searchView.visibility = View.GONE
         }

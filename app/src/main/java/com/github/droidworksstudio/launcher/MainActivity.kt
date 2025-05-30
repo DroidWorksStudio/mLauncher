@@ -1184,7 +1184,7 @@ class MainActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferenceCh
         textView: TextView,
         actionMenuLayout: LinearLayout,
     ) {
-        textView.visibility = View.INVISIBLE
+        textView.visibility = View.GONE
         animations.fadeViewIn(actionMenuLayout)
     }
 

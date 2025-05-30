@@ -107,8 +107,8 @@ class AppMenuAdapter(
     }
 
     override fun onBindViewHolder(holder: AppViewHolder, position: Int) {
-        holder.actionMenuLayout.visibility = View.INVISIBLE
-        holder.editView.visibility = View.INVISIBLE
+        holder.actionMenuLayout.visibility = View.GONE
+        holder.editView.visibility = View.GONE
         val app = apps[position]
 
         if (sharedPreferenceManager.isAppPinned(app.first.componentName.flattenToString(), app.third)) {
