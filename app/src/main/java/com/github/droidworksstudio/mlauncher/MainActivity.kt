@@ -7,6 +7,7 @@ import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.content.res.Configuration
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.provider.OpenableColumns
 import android.provider.Settings
@@ -417,14 +418,31 @@ class MainActivity : AppCompatActivity() {
         }
 
         if (context is Activity && !isDefault) {
-            val roleManager = context.getSystemService(RoleManager::class.java)
-            val intent = roleManager.createRequestRoleIntent(RoleManager.ROLE_HOME)
-            setDefaultHomeScreenLauncher.launch(intent)
-            return
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                val roleManager = context.getSystemService(RoleManager::class.java)
+                if (roleManager.isRoleAvailable(RoleManager.ROLE_HOME) &&
+                    !roleManager.isRoleHeld(RoleManager.ROLE_HOME)
+                ) {
+                    val intent = roleManager.createRequestRoleIntent(RoleManager.ROLE_HOME)
+                    setDefaultHomeScreenLauncher.launch(intent)
+                    return
+                }
+            } else {
+                // For devices below API level 29, prompt the user to set the default launcher manually
+                val intent = Intent(Settings.ACTION_HOME_SETTINGS)
+                if (intent.resolveActivity(context.packageManager) != null) {
+                    context.startActivity(intent)
+                } else {
+                    // Fallback: Open general settings if HOME_SETTINGS is unavailable
+                    val fallbackIntent = Intent(Settings.ACTION_SETTINGS)
+                    if (fallbackIntent.resolveActivity(context.packageManager) != null) {
+                        context.startActivity(fallbackIntent)
+                    } else {
+                        showLongToast("Unable to open settings to set default launcher.")
+                    }
+                }
+            }
         }
-
-        val intent = Intent(Settings.ACTION_HOME_SETTINGS)
-        setDefaultHomeScreenLauncher.launch(intent)
     }
 
     fun restoreWordsBackup() {

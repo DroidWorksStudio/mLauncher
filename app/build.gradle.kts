@@ -35,7 +35,7 @@ android {
 
     defaultConfig {
         applicationId = "app.mlauncher"
-        minSdk = 30
+        minSdk = 28
         targetSdk = 36
         versionCode = versionCodeInt
         versionName = versionNameStr

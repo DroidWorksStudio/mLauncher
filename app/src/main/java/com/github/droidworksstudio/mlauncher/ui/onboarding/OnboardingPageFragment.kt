@@ -3,9 +3,11 @@ package com.github.droidworksstudio.mlauncher.ui.onboarding
 import android.app.role.RoleManager
 import android.content.Context
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.provider.Settings
 import android.text.SpannableString
 import android.text.Spanned
 import android.text.method.LinkMovementMethod
@@ -26,6 +28,7 @@ import com.github.droidworksstudio.common.getLocalizedString
 import com.github.droidworksstudio.common.openAccessibilitySettings
 import com.github.droidworksstudio.common.requestLocationPermission
 import com.github.droidworksstudio.common.requestUsagePermission
+import com.github.droidworksstudio.common.showLongToast
 import com.github.droidworksstudio.mlauncher.MainActivity
 import com.github.droidworksstudio.mlauncher.MainViewModel
 import com.github.droidworksstudio.mlauncher.R
@@ -288,17 +291,30 @@ class OnboardingPageFragment : Fragment() {
     }
 
     private fun setDefaultHomeScreen() {
-        // Get the RoleManager system service
-        val roleManager = requireContext().getSystemService(Context.ROLE_SERVICE) as RoleManager
-
-        if (roleManager.isRoleAvailable(RoleManager.ROLE_HOME)) {
-            // Check if this app does not have the ROLE_HOME
-            if (!roleManager.isRoleHeld(RoleManager.ROLE_HOME)) {
-                // Request to set this app as the default home screen
-                val intent = roleManager.createRequestRoleIntent(RoleManager.ROLE_HOME)
-                roleRequestLauncher.launch(intent) // Launch the intent to request the role
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            val roleManager = requireContext().getSystemService(Context.ROLE_SERVICE) as RoleManager
+            if (roleManager.isRoleAvailable(RoleManager.ROLE_HOME)) {
+                if (!roleManager.isRoleHeld(RoleManager.ROLE_HOME)) {
+                    val intent = roleManager.createRequestRoleIntent(RoleManager.ROLE_HOME)
+                    roleRequestLauncher.launch(intent)
+                }
+            }
+        } else {
+            // For devices below API level 29, prompt the user to set the default launcher manually
+            val intent = Intent(Settings.ACTION_HOME_SETTINGS)
+            if (intent.resolveActivity(requireContext().packageManager) != null) {
+                startActivity(intent)
+            } else {
+                // Fallback: Open general settings if HOME_SETTINGS is unavailable
+                val fallbackIntent = Intent(Settings.ACTION_SETTINGS)
+                if (fallbackIntent.resolveActivity(requireContext().packageManager) != null) {
+                    startActivity(fallbackIntent)
+                } else {
+                    showLongToast("Unable to open settings to set default launcher.")
+                }
             }
         }
     }
+
 }
 

@@ -14,7 +14,9 @@ import android.content.pm.LauncherApps
 import android.content.pm.PackageInfo
 import android.content.pm.PackageManager
 import android.content.res.Resources
+import android.graphics.Canvas
 import android.graphics.ColorFilter
+import android.graphics.Paint
 import android.graphics.PorterDuff
 import android.graphics.PorterDuffColorFilter
 import android.graphics.Typeface
@@ -24,6 +26,7 @@ import android.os.Process
 import android.os.UserHandle
 import android.os.UserManager
 import android.provider.Settings
+import android.text.Spannable
 import android.text.SpannableStringBuilder
 import android.text.format.DateFormat
 import android.text.style.ImageSpan
@@ -31,11 +34,16 @@ import android.util.DisplayMetrics
 import android.util.Log
 import android.util.TypedValue
 import android.view.View
-import android.view.WindowInsets
 import android.view.WindowManager
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.content.ContextCompat
+import androidx.core.graphics.withSave
 import androidx.core.net.toUri
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsControllerCompat
+import androidx.core.view.updatePadding
 import com.github.droidworksstudio.common.ColorIconsExtensions
 import com.github.droidworksstudio.common.CrashHandler
 import com.github.droidworksstudio.common.getLocalizedString
@@ -297,14 +305,18 @@ fun getNextAlarm(context: Context, prefs: Prefs): CharSequence {
         drawable.colorFilter = colorFilterColor
     }
 
+    val imageSpan = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+        ImageSpan(drawable!!, ImageSpan.ALIGN_CENTER)
+    } else {
+        CenteredImageSpan(drawable!!)
+    }
+
     return SpannableStringBuilder(" ").apply {
-        drawable?.let {
-            setSpan(
-                ImageSpan(it, ImageSpan.ALIGN_CENTER),
-                0, 1,
-                SpannableStringBuilder.SPAN_EXCLUSIVE_EXCLUSIVE
-            )
-        }
+        setSpan(
+            imageSpan,
+            0, 1,
+            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+        )
         append(" $formattedAlarm")
     }
 }
@@ -318,8 +330,17 @@ fun wordOfTheDay(prefs: Prefs): String {
 }
 
 fun ismlauncherDefault(context: Context): Boolean {
-    val roleManager = context.getSystemService(RoleManager::class.java)
-    return roleManager.isRoleHeld(RoleManager.ROLE_HOME)
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+        val roleManager = context.getSystemService(RoleManager::class.java)
+        return roleManager.isRoleHeld(RoleManager.ROLE_HOME)
+    } else {
+        val intent = Intent(Intent.ACTION_MAIN).apply {
+            addCategory(Intent.CATEGORY_HOME)
+        }
+        val resolveInfo = context.packageManager.resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY)
+        val defaultLauncherPackage = resolveInfo?.activityInfo?.packageName
+        return context.packageName == defaultLauncherPackage
+    }
 }
 
 fun helpFeedbackButton(context: Context) {
@@ -341,17 +362,23 @@ fun checkWhoInstalled(context: Context): String {
     val descriptionTemplate2 =
         getLocalizedString(R.string.advanced_settings_share_application_description_addon)
 
-    val installSourceInfo = context.packageManager.getInstallSourceInfo(context.packageName)
-    // Get the installer package name
-    val installer = installSourceInfo.installingPackageName
-
-    // Handle null installer package name
-    val installSource = when (installer) {
-        "com.android.vending" -> "Google Play Store"
-        else -> installer // Default to the installer package name
+    val installerPackageName: String? = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+        // For API level 30 and above
+        val installSourceInfo = context.packageManager.getInstallSourceInfo(context.packageName)
+        installSourceInfo.installingPackageName
+    } else {
+        // For below API level 30
+        @Suppress("DEPRECATION")
+        context.packageManager.getInstallerPackageName(context.packageName)
     }
 
-    val installURL = when (installer) {
+    // Handle null installer package name
+    val installSource = when (installerPackageName) {
+        "com.android.vending" -> "Google Play Store"
+        else -> installerPackageName // Default to the installer package name
+    }
+
+    val installURL = when (installerPackageName) {
         "com.android.vending" -> "https://play.google.com/store/apps/details?id=app.mlauncher"
         else -> "https://play.google.com/store/apps/details?id=app.mlauncher" // Default to the Google Play Store
     }
@@ -397,12 +424,21 @@ fun initActionService(context: Context): ActionService? {
     return null
 }
 
-fun showStatusBar(activity: Activity) {
-    activity.window.insetsController?.show(WindowInsets.Type.statusBars())
+fun hideStatusBar(activity: Activity) {
+    // Ensure that the content draws behind the system bars
+    WindowCompat.setDecorFitsSystemWindows(activity.window, false)
+
+    val insetsController = WindowInsetsControllerCompat(activity.window, activity.window.decorView)
+    insetsController.systemBarsBehavior = WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
+    insetsController.hide(WindowInsetsCompat.Type.statusBars())
 }
 
-fun hideStatusBar(activity: Activity) {
-    activity.window.insetsController?.hide(WindowInsets.Type.statusBars())
+fun showStatusBar(activity: Activity) {
+    // Restore the default behavior where content does not draw behind system bars
+    WindowCompat.setDecorFitsSystemWindows(activity.window, true)
+
+    val insetsController = WindowInsetsControllerCompat(activity.window, activity.window.decorView)
+    insetsController.show(WindowInsetsCompat.Type.statusBars())
 }
 
 fun dp2px(resources: Resources, dp: Int): Int {
@@ -607,8 +643,15 @@ private fun getInstallSource(packageManager: PackageManager, packageName: String
     try {
         if (BuildConfig.DEBUG) return "Android Studio (ADB)"
 
-        val installer =
+        val installer = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            // For API level 30 and above
             packageManager.getInstallSourceInfo(packageName).installingPackageName ?: "Unknown"
+        } else {
+            // For below API level 30
+            @Suppress("DEPRECATION")
+            packageManager.getInstallerPackageName(packageName) ?: "Unknown"
+        }
+
         return when (installer) {
             "com.android.vending" -> "Google Play Store"
             "org.fdroid.fdroid" -> "F-Droid"
@@ -748,23 +791,42 @@ private fun getHomeIcons(context: Context, prefs: Prefs, nonNullDrawable: Drawab
     }
 }
 
-fun setTopPadding(activity: Activity, view: View) {
-    activity.window.decorView.rootView.viewTreeObserver.addOnGlobalLayoutListener {
-        val insets = activity.window.decorView.rootWindowInsets
-        val cutout = insets?.displayCutout
+fun setTopPadding(view: View) {
+    // Store the original top padding to avoid accumulating insets
+    val initialTopPadding = view.paddingTop
 
-        if (cutout != null && cutout.boundingRects.isNotEmpty()) {
-            for (rect in cutout.boundingRects) {
-                if (rect != null) {
-                    val topInset = rect.height()
-                    view.setPadding(
-                        view.paddingLeft,
-                        topInset,
-                        view.paddingRight,
-                        view.paddingBottom
-                    )
-                }
-            }
+    ViewCompat.setOnApplyWindowInsetsListener(view) { v, insets ->
+        // Retrieve the top inset, which includes the status bar and display cutout
+        val topInset = insets.getInsets(WindowInsetsCompat.Type.systemBars()).top
+
+        // Apply the combined padding
+        v.updatePadding(top = initialTopPadding + topInset)
+
+        // Return the insets to allow further propagation if needed
+        insets
+    }
+
+    // Request the insets to be applied
+    ViewCompat.requestApplyInsets(view)
+}
+
+class CenteredImageSpan(drawable: Drawable) : ImageSpan(drawable) {
+    override fun draw(
+        canvas: Canvas,
+        text: CharSequence,
+        start: Int,
+        end: Int,
+        x: Float,
+        top: Int,
+        y: Int,
+        bottom: Int,
+        paint: Paint
+    ) {
+        val drawable = drawable
+        canvas.withSave {
+            val transY = top + ((bottom - top) - drawable.bounds.height()) / 2
+            translate(x, transY.toFloat())
+            drawable.draw(this)
         }
     }
 }

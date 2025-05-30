@@ -87,7 +87,7 @@ class FeaturesFragment : Fragment() {
 
         resetThemeColors()
 
-        setTopPadding(requireActivity(), binding.settingsView)
+        setTopPadding(binding.settingsView)
     }
 
     @Composable
