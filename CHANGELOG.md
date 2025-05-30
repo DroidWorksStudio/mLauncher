@@ -8,6 +8,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Bump app version to 1.10.5 build 3 - ([a66368a](https://github.com/DroidWorksStudio/mLauncher/commit/a66368afa3d40e4a8766ecc7fbab15a75e52ca1a))
 
+### Refactoring:
+
+- Update minSdk to 28 and related API changes - ([f038ccb](https://github.com/DroidWorksStudio/mLauncher/commit/f038ccbb4e2e41161d6339d9b6e38c9c0cbe4b36))
+
 ## [1.10.5.1](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.5.1) - (30, May 2025)
 
 ### Implemented Enhancements:
