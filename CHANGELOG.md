@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Implemented Enhancements:
+
+- Lock orientation when requested - ([66396ef](https://github.com/DroidWorksStudio/mLauncher/commit/66396ef57352cdacbd22c21dfc73d7126fa73665))
+
 ### Bug Fixes:
 
 - Use resValue for app name and version - ([bc236cc](https://github.com/DroidWorksStudio/mLauncher/commit/bc236cc2a9d54be872f468e412be2632db3be8fa))
