@@ -12,7 +12,7 @@ val minor = 10
 val patch = 5
 val build = 1
 
-val type = 1 // 1=beta, 2=alpha else=production
+val type = 0 // 1=beta, 2=alpha else=production
 
 val baseVersionName = "$major.$minor.$patch.$build"
 
