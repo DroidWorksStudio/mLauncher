@@ -175,6 +175,48 @@ class SharedPreferenceManager(private val context: Context) {
         return getPinnedApps().contains(Pair(componentName, profile))
     }
 
+    fun setLockedApp(componentName: String, profile: Int) {
+        preferences.edit {
+
+            val lockedAppString = when (isAppLocked(componentName, profile)) {
+                true -> {
+                    getLockedAppString()?.replace(":::section:::$componentName:::split:::$profile", "")
+                }
+
+                false -> {
+                    "${getLockedAppString()}:::section:::$componentName:::split:::$profile"
+                }
+            }
+
+            putString(
+                "lockedApps",
+                lockedAppString
+            )
+        }
+    }
+
+    private fun getLockedAppString(): String? {
+        return preferences.getString("lockedApps", "")
+    }
+
+    private fun getLockedApps(): List<Pair<String, Int?>> {
+        val lockedApps = mutableListOf<Pair<String, Int?>>()
+        val lockedAppList = getLockedAppString()?.split(":::section:::")
+
+        lockedAppList?.forEach {
+            val app = it.split(":::split:::")
+            if (app.size > 1) {
+                lockedApps.add(Pair(app[0], app[1].toIntOrNull()))
+            }
+        }
+
+        return lockedApps
+    }
+
+    fun isAppLocked(componentName: String, profile: Int): Boolean {
+        return getLockedApps().contains(Pair(componentName, profile))
+    }
+
     fun isBatteryEnabled(): Boolean {
         return preferences.getBoolean("batteryEnabled", false)
     }
@@ -258,20 +300,24 @@ class SharedPreferenceManager(private val context: Context) {
         return preferences.getBoolean("pinEnabled", true)
     }
 
-    fun isInfoEnabled(): Boolean {
-        return preferences.getBoolean("infoEnabled", false)
+    fun isHideEnabled(): Boolean {
+        return preferences.getBoolean("hideEnabled", true)
     }
 
-    fun isUninstallEnabled(): Boolean {
-        return preferences.getBoolean("uninstallEnabled", true)
+    fun isLockEnabled(): Boolean {
+        return preferences.getBoolean("lockEnabled", true)
     }
 
     fun isRenameEnabled(): Boolean {
         return preferences.getBoolean("renameEnabled", true)
     }
 
-    fun isHideEnabled(): Boolean {
-        return preferences.getBoolean("hideEnabled", true)
+    fun isInfoEnabled(): Boolean {
+        return preferences.getBoolean("infoEnabled", false)
+    }
+
+    fun isUninstallEnabled(): Boolean {
+        return preferences.getBoolean("uninstallEnabled", true)
     }
 
     fun isCloseEnabled(): Boolean {
@@ -327,17 +373,18 @@ class SharedPreferenceManager(private val context: Context) {
     // Hidden Apps
     fun setAppHidden(componentName: String, profile: Int, hidden: Boolean) {
         preferences.edit {
-            putBoolean("hidden$componentName-$profile", hidden)
+            putBoolean("hidden-$componentName-$profile", hidden)
         }
     }
 
     fun isAppHidden(componentName: String, profile: Int): Boolean {
-        return preferences.getBoolean("hidden$componentName-$profile", false) // Default to false (visible)
+        return preferences.getBoolean("hidden-$componentName-$profile", false) // Default to false (visible)
     }
+
 
     fun setAppVisible(componentName: String, profile: Int) {
         preferences.edit {
-            remove("hidden$componentName-$profile")
+            remove("hidden-$componentName-$profile")
         }
     }
 

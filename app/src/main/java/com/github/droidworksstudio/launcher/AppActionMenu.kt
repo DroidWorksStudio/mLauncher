@@ -39,17 +39,19 @@ class AppActionMenu(private val activity: MainActivity, private val binding: Act
         workProfile: Int
     ) {
         val pinButton = actionMenu.findViewById<TextView>(R.id.pin)
+        val hideButton = actionMenu.findViewById<TextView>(R.id.hide)
+        val lockButton = actionMenu.findViewById<TextView>(R.id.lock)
+        val renameButton = actionMenu.findViewById<TextView>(R.id.rename)
         val infoButton = actionMenu.findViewById<TextView>(R.id.info)
         val uninstallButton = actionMenu.findViewById<TextView>(R.id.uninstall)
-        val renameButton = actionMenu.findViewById<TextView>(R.id.rename)
-        val hideButton = actionMenu.findViewById<TextView>(R.id.hide)
         val closeButton = actionMenu.findViewById<TextView>(R.id.close)
 
         val enablePin = sharedPreferenceManager.isPinEnabled()
+        val enableHide = sharedPreferenceManager.isHideEnabled()
+        val enableLock = sharedPreferenceManager.isLockEnabled()
+        val enableRename = sharedPreferenceManager.isRenameEnabled()
         val enableInfo = sharedPreferenceManager.isInfoEnabled()
         val enableUninstall = sharedPreferenceManager.isUninstallEnabled()
-        val enableRename = sharedPreferenceManager.isRenameEnabled()
-        val enableHide = sharedPreferenceManager.isHideEnabled()
         val enableClose = sharedPreferenceManager.isCloseEnabled()
 
         if (enablePin) {
@@ -71,6 +73,62 @@ class AppActionMenu(private val activity: MainActivity, private val binding: Act
             }
         } else {
             pinButton.visibility = View.GONE
+        }
+
+        if (enableHide) {
+            hideButton.visibility = View.VISIBLE
+
+            ViewCompat.addAccessibilityAction(
+                textView,
+                activity.getString(R.string.accessibility_hide)
+            ) { _, _ ->
+                hideApp(editLayout, textView, actionMenu, appActivity, workProfile)
+                true
+            }
+
+            hideButton.setOnClickListener {
+                hideApp(editLayout, textView, actionMenu, appActivity, workProfile)
+            }
+        } else {
+            hideButton.visibility = View.GONE
+        }
+
+        if (enableLock) {
+            lockButton.visibility = View.VISIBLE
+            setLockState(lockButton, appActivity, workProfile)
+
+            ViewCompat.addAccessibilityAction(
+                textView,
+                activity.getString(R.string.accessibility_lock)
+            ) { _, _ ->
+                lockApp(actionMenu, appActivity, workProfile)
+                true
+            }
+
+            lockButton.setOnClickListener {
+                lockApp(actionMenu, appActivity, workProfile)
+                textView.visibility = View.VISIBLE
+            }
+        } else {
+            lockButton.visibility = View.GONE
+        }
+
+        if (enableRename) {
+            renameButton.visibility = View.VISIBLE
+
+            ViewCompat.addAccessibilityAction(
+                textView,
+                activity.getString(R.string.accessibility_rename)
+            ) { _, _ ->
+                renameApp(textView, editLayout, actionMenu, appActivity, userHandle, workProfile)
+                true
+            }
+
+            renameButton.setOnClickListener {
+                renameApp(textView, editLayout, actionMenu, appActivity, userHandle, workProfile)
+            }
+        } else {
+            renameButton.visibility = View.GONE
         }
 
         if (enableInfo) {
@@ -115,42 +173,6 @@ class AppActionMenu(private val activity: MainActivity, private val binding: Act
             uninstallButton.visibility = View.GONE
         }
 
-        if (enableRename) {
-            renameButton.visibility = View.VISIBLE
-
-            ViewCompat.addAccessibilityAction(
-                textView,
-                activity.getString(R.string.accessibility_rename)
-            ) { _, _ ->
-                renameApp(textView, editLayout, actionMenu, appActivity, userHandle, workProfile)
-                true
-            }
-
-            renameButton.setOnClickListener {
-                renameApp(textView, editLayout, actionMenu, appActivity, userHandle, workProfile)
-            }
-        } else {
-            renameButton.visibility = View.GONE
-        }
-
-        if (enableHide) {
-            hideButton.visibility = View.VISIBLE
-
-            ViewCompat.addAccessibilityAction(
-                textView,
-                activity.getString(R.string.accessibility_hide)
-            ) { _, _ ->
-                hideApp(editLayout, textView, actionMenu, appActivity, workProfile)
-                true
-            }
-
-            hideButton.setOnClickListener {
-                hideApp(editLayout, textView, actionMenu, appActivity, workProfile)
-            }
-        } else {
-            hideButton.visibility = View.GONE
-        }
-
         if (enableClose) {
             closeButton.visibility = View.VISIBLE
 
@@ -184,27 +206,36 @@ class AppActionMenu(private val activity: MainActivity, private val binding: Act
         sharedPreferenceManager.setPinnedApp(appActivity.componentName.flattenToString(), workProfile)
     }
 
-    private fun appInfo(
-        appActivity: LauncherActivityInfo?,
-        userHandle: UserHandle
-    ) {
-        // Launch app info in phone settings
-        if (appActivity != null) {
-            launcherApps.startAppDetailsActivity(
-                appActivity.componentName,
-                userHandle,
-                null,
-                null
-            )
+    private fun hideApp(editLayout: LinearLayout, textView: TextView, actionMenu: View, appActivity: LauncherActivityInfo, workProfile: Int) {
+        editLayout.visibility = View.GONE
+        textView.visibility = View.GONE
+        actionMenu.visibility = View.GONE
+        activity.lifecycleScope.launch {
+            sharedPreferenceManager.setAppHidden(appActivity.componentName.flattenToString(), workProfile, true)
+            activity.refreshAppMenu()
         }
     }
 
-    private fun uninstallApp(appInfo: ApplicationInfo, userHandle: UserHandle) {
-        val intent = Intent(Intent.ACTION_DELETE)
-        intent.data = "package:${appInfo.packageName}".toUri()
-        intent.putExtra(Intent.EXTRA_USER, userHandle)
-        activity.startActivity(intent)
-        activity.returnAllowed = false
+    private fun setLockState(button: TextView, appActivity: LauncherActivityInfo, workProfile: Int) {
+        val isLocked = sharedPreferenceManager.isAppLocked(appActivity.componentName.flattenToString(), workProfile)
+        val topDrawable = when (isLocked) {
+            true -> getDrawable(activity, R.drawable.padlock_off)
+            false -> getDrawable(activity, R.drawable.padlock)
+        }
+
+        button.setCompoundDrawablesWithIntrinsicBounds(null, topDrawable, null, null)
+
+        val pinLabel = when (isLocked) {
+            true -> "Unlock"
+            false -> "Lock"
+        }
+
+        button.text = pinLabel
+    }
+
+    private fun lockApp(actionMenu: View, appActivity: LauncherActivityInfo, workProfile: Int) {
+        sharedPreferenceManager.setLockedApp(appActivity.componentName.flattenToString(), workProfile)
+        actionMenu.visibility = View.GONE
     }
 
     private fun renameApp(textView: TextView, editLayout: LinearLayout, actionMenu: View, appActivity: LauncherActivityInfo, userHandle: UserHandle, workProfile: Int) {
@@ -295,13 +326,26 @@ class AppActionMenu(private val activity: MainActivity, private val binding: Act
         }
     }
 
-    private fun hideApp(editLayout: LinearLayout, textView: TextView, actionMenu: View, appActivity: LauncherActivityInfo, workProfile: Int) {
-        editLayout.visibility = View.GONE
-        textView.visibility = View.GONE
-        actionMenu.visibility = View.GONE
-        activity.lifecycleScope.launch {
-            sharedPreferenceManager.setAppHidden(appActivity.componentName.flattenToString(), workProfile, true)
-            activity.refreshAppMenu()
+    private fun appInfo(
+        appActivity: LauncherActivityInfo?,
+        userHandle: UserHandle
+    ) {
+        // Launch app info in phone settings
+        if (appActivity != null) {
+            launcherApps.startAppDetailsActivity(
+                appActivity.componentName,
+                userHandle,
+                null,
+                null
+            )
         }
+    }
+
+    private fun uninstallApp(appInfo: ApplicationInfo, userHandle: UserHandle) {
+        val intent = Intent(Intent.ACTION_DELETE)
+        intent.data = "package:${appInfo.packageName}".toUri()
+        intent.putExtra(Intent.EXTRA_USER, userHandle)
+        activity.startActivity(intent)
+        activity.returnAllowed = false
     }
 }

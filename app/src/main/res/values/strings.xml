@@ -34,16 +34,18 @@
 
     <!--Action Menu Items-->
     <string name="pin">Pin</string>
+    <string name="lock">Lock</string>
+    <string name="hide">Hide</string>
+    <string name="rename">Rename</string>
     <string name="info">Info</string>
     <string name="uninstall">Uninstall</string>
-    <string name="rename">Rename</string>
-    <string name="hide">Hide</string>
     <string name="close">Close</string>
     <string name="accessibility_pin">Pin app</string>
+    <string name="accessibility_lock">Lock app</string>
+    <string name="accessibility_hide">Hide app</string>
+    <string name="accessibility_rename">Rename app</string>
     <string name="accessibility_info">App info</string>
     <string name="accessibility_uninstall">Uninstall app</string>
-    <string name="accessibility_rename">Rename app</string>
-    <string name="accessibility_hide">Hide app</string>
 
     <!--Settings Page-->
     <string name="settings_title">Launcher Settings</string>
@@ -137,6 +139,7 @@
     <string name="enable_uninstall">Uninstall App</string>
     <string name="enable_rename">Rename App</string>
     <string name="enable_hide">Hide App</string>
+    <string name="enable_lock">Lock App</string>
     <string name="enable_close">Close Menu</string>
 
     <string name="search_text">Search</string>

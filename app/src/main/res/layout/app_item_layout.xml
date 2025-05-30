@@ -98,6 +98,48 @@
             app:drawableTopCompat="@drawable/pin" />
 
         <TextView
+            android:id="@+id/hide"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/app_action_background"
+            android:paddingVertical="5dp"
+            android:singleLine="true"
+            android:text="@string/hide"
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+            android:textColor="#E3F3F3F3"
+            app:drawableTopCompat="@drawable/visibility_off" />
+
+        <TextView
+            android:id="@+id/lock"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/app_action_background"
+            android:paddingVertical="5dp"
+            android:singleLine="true"
+            android:text="@string/lock"
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+            android:textColor="#E3F3F3F3"
+            app:drawableTopCompat="@drawable/padlock_off" />
+
+        <TextView
+            android:id="@+id/rename"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/app_action_background"
+            android:paddingVertical="5dp"
+            android:singleLine="true"
+            android:text="@string/rename"
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+            android:textColor="#E3F3F3F3"
+            app:drawableTopCompat="@drawable/edit" />
+
+        <TextView
             android:id="@+id/info"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -124,34 +166,6 @@
             android:textAppearance="@android:style/TextAppearance.DeviceDefault"
             android:textColor="#E3F3F3F3"
             app:drawableTopCompat="@drawable/delete" />
-
-        <TextView
-            android:id="@+id/rename"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/app_action_background"
-            android:paddingVertical="5dp"
-            android:singleLine="true"
-            android:text="@string/rename"
-            android:textAlignment="center"
-            android:textAppearance="@android:style/TextAppearance.DeviceDefault"
-            android:textColor="#E3F3F3F3"
-            app:drawableTopCompat="@drawable/edit" />
-
-        <TextView
-            android:id="@+id/hide"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/app_action_background"
-            android:paddingVertical="5dp"
-            android:singleLine="true"
-            android:text="@string/hide"
-            android:textAlignment="center"
-            android:textAppearance="@android:style/TextAppearance.DeviceDefault"
-            android:textColor="#E3F3F3F3"
-            app:drawableTopCompat="@drawable/visibility_off" />
 
         <TextView
             android:id="@+id/close"
