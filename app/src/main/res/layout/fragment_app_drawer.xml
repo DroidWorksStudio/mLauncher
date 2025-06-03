@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="34dp"
         android:orientation="horizontal">
 
         <androidx.appcompat.widget.SearchView
@@ -63,7 +63,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/drawerButton"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="4dp"
         android:ellipsize="end"
