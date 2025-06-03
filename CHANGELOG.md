@@ -16,6 +16,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Update build version - ([3505161](https://github.com/DroidWorksStudio/mLauncher/commit/35051613b98a3e3192ec78b9b2cfc0328e55f678))
 
+### Refactoring:
+
+- Adjust top margin for search bar in App Drawer - ([bd532c4](https://github.com/DroidWorksStudio/mLauncher/commit/bd532c427a1784f2bbdfb7655f42ec85914748a5))
+
 ## [1.10.5.4](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.5.4) - (03, June 2025)
 
 ### Versioning:
