@@ -9,6 +9,10 @@ All notable changes to this project will be documented in this file. See [conven
 - Revert build number to previous value - ([51d2882](https://github.com/DroidWorksStudio/mLauncher/commit/51d2882edab8684986014b94b33468f730ae7beb))
 - Bump app version to 1.10.5 build 3 - ([a66368a](https://github.com/DroidWorksStudio/mLauncher/commit/a66368afa3d40e4a8766ecc7fbab15a75e52ca1a))
 
+### Feature Removal:
+
+- Remove AZSidebar - ([63b17f0](https://github.com/DroidWorksStudio/mLauncher/commit/63b17f0933fcad3471b0f8b1deec884da76c05d5))
+
 ### Refactoring:
 
 - Update minSdk to 28 and related API changes - ([f038ccb](https://github.com/DroidWorksStudio/mLauncher/commit/f038ccbb4e2e41161d6339d9b6e38c9c0cbe4b36))
@@ -16,6 +20,10 @@ All notable changes to this project will be documented in this file. See [conven
 ### Reverts:
 
 - Revert build number to previous value - ([51d2882](https://github.com/DroidWorksStudio/mLauncher/commit/51d2882edab8684986014b94b33468f730ae7beb))
+
+### Releases:
+
+- Bump version to 1.10.5.4 - ([1e32ea7](https://github.com/DroidWorksStudio/mLauncher/commit/1e32ea7547d5a0c75f38067c49c20f3ac81d4c32))
 
 ## [1.10.5.1](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.5.1) - (30, May 2025)
 
