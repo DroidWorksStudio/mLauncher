@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Implemented Enhancements:
 
+- *(performance)* Use background thread for icon preloading - ([5f4882f](https://github.com/DroidWorksStudio/mLauncher/commit/5f4882fbf1d42f5a8565e1ba0c581b6d274431f6))
 - Implement A-Z sidebar for app drawer - ([a7337d5](https://github.com/DroidWorksStudio/mLauncher/commit/a7337d5844c7d12971847486f53962c5316b7fb5))
 
 ### Bug Fixes:
