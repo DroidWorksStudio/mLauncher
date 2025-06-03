@@ -5,7 +5,6 @@
 package com.github.droidworksstudio.mlauncher.ui
 
 import android.annotation.SuppressLint
-import android.app.Activity
 import android.content.Context
 import android.content.pm.LauncherApps
 import android.content.pm.PackageManager
@@ -17,7 +16,6 @@ import android.text.TextWatcher
 import android.util.Log
 import android.view.Gravity.LEFT
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.widget.EditText
@@ -28,6 +26,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.biometric.BiometricPrompt
+import androidx.core.view.isVisible
 import androidx.core.view.updatePadding
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
@@ -84,45 +83,31 @@ class AppDrawerAdapter(
     }
 
 
-    @SuppressLint("RecyclerView", "NotifyDataSetChanged")
+    @SuppressLint("RecyclerView")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        if (appFilteredList.isEmpty()) return
-        sortApps()
+        if (appFilteredList.isEmpty()) {
+            Log.d("AppListDebug", "⚠️ onBindViewHolder called but appFilteredList is empty")
+            return
+        }
+
         val appModel = appFilteredList[holder.absoluteAdapterPosition]
+        Log.d("AppListDebug", "🔧 Binding position=$position, label=${appModel.label}, package=${appModel.activityPackage}")
+
         holder.bind(flag, gravity, appModel, appClickListener, appInfoListener, appDeleteListener)
 
         holder.appHide.setOnClickListener {
+            Log.d("AppListDebug", "❌ Hide clicked for ${appModel.label} (${appModel.activityPackage})")
+
             appFilteredList.removeAt(holder.absoluteAdapterPosition)
             appsList.remove(appModel)
             notifyItemRemoved(holder.absoluteAdapterPosition)
+
+            Log.d("AppListDebug", "📤 notifyItemRemoved at ${holder.absoluteAdapterPosition}")
             appHideListener(flag, appModel)
         }
 
-        holder.appPin.setOnClickListener {
-            val appName = appModel.activityPackage
-            val updatedPinnedApps = prefs.pinnedApps.toMutableSet() // Make a copy
-
-            val isPinned = updatedPinnedApps.contains(appName)
-            if (isPinned) {
-                updatedPinnedApps.remove(appName)
-                holder.appPin.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.pin_off, 0, 0)
-                holder.appPin.text = getLocalizedString(R.string.pin)
-            } else {
-                updatedPinnedApps.add(appName)
-                holder.appPin.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.pin, 0, 0)
-                holder.appPin.text = getLocalizedString(R.string.unpin)
-            }
-
-            prefs.pinnedApps = updatedPinnedApps.toSet()
-
-            sortApps()
-            notifyDataSetChanged()
-        }
-
-
         holder.appLock.setOnClickListener {
             val appName = appModel.activityPackage
-            // Access the current locked apps set
             val currentLockedApps = prefs.lockedApps
 
             if (currentLockedApps.contains(appName)) {
@@ -130,48 +115,30 @@ class AppDrawerAdapter(
 
                 biometricHelper.startBiometricAuth(appModel, object : BiometricHelper.CallbackApp {
                     override fun onAuthenticationSucceeded(appListItem: AppListItem) {
-                        holder.appLock.setCompoundDrawablesWithIntrinsicBounds(
-                            0,
-                            R.drawable.padlock_off,
-                            0,
-                            0
-                        )
+                        Log.d("AppListDebug", "🔓 Auth succeeded for $appName - unlocking")
+                        holder.appLock.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.padlock_off, 0, 0)
                         holder.appLock.text = getLocalizedString(R.string.lock)
-                        // If appName is already in the set, remove it
                         currentLockedApps.remove(appName)
+                        prefs.lockedApps = currentLockedApps
+                        Log.d("AppListDebug", "🔐 Updated lockedApps: $currentLockedApps")
                     }
 
                     override fun onAuthenticationFailed() {
-                        Log.e(
-                            "Authentication",
-                            getLocalizedString(R.string.text_authentication_failed)
-                        )
+                        Log.e("Authentication", getLocalizedString(R.string.text_authentication_failed))
                     }
 
-                    override fun onAuthenticationError(
-                        errorCode: Int,
-                        errorMessage: CharSequence?
-                    ) {
-                        when (errorCode) {
-                            BiometricPrompt.ERROR_USER_CANCELED -> Log.e(
-                                "Authentication",
-                                getLocalizedString(R.string.text_authentication_cancel)
-                            )
-
-                            else -> Log.e(
-                                "Authentication",
-                                getLocalizedString(R.string.text_authentication_error).format(
-                                    errorMessage,
-                                    errorCode
-                                )
-                            )
+                    override fun onAuthenticationError(errorCode: Int, errorMessage: CharSequence?) {
+                        val msg = when (errorCode) {
+                            BiometricPrompt.ERROR_USER_CANCELED -> getLocalizedString(R.string.text_authentication_cancel)
+                            else -> getLocalizedString(R.string.text_authentication_error).format(errorMessage, errorCode)
                         }
+                        Log.e("Authentication", msg)
                     }
                 })
             } else {
+                Log.d("AppListDebug", "🔒 Locking $appName")
                 holder.appLock.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.padlock, 0, 0)
                 holder.appLock.text = getLocalizedString(R.string.unlock)
-                // If appName is not in the set, add it
                 currentLockedApps.add(appName)
             }
 
@@ -182,8 +149,10 @@ class AppDrawerAdapter(
 
         holder.appSaveRename.setOnClickListener {
             val name = holder.appRenameEdit.text.toString().trim()
+            Log.d("AppListDebug", "✏️ Renaming ${appModel.activityPackage} to $name")
             appModel.customLabel = name
             notifyItemChanged(holder.absoluteAdapterPosition)
+            Log.d("AppListDebug", "🔁 notifyItemChanged at ${holder.absoluteAdapterPosition}")
             appRenameListener(appModel.activityPackage, appModel.customLabel)
         }
 
@@ -293,7 +262,6 @@ class AppDrawerAdapter(
     }
 
     class ViewHolder(itemView: AdapterAppDrawerBinding) : RecyclerView.ViewHolder(itemView.root) {
-
         val appHide: TextView = itemView.appHide
         val appPin: TextView = itemView.appPin
         val appLock: TextView = itemView.appLock
@@ -320,8 +288,8 @@ class AppDrawerAdapter(
         ) =
             with(itemView) {
                 val prefs = Prefs(context)
-                appHideLayout.visibility = View.GONE
-                appRenameLayout.visibility = View.GONE
+                appHideLayout.isVisible = false
+                appRenameLayout.isVisible = false
 
                 // set show/hide icon
                 if (flag == AppDrawerFlag.HiddenApps) {
@@ -363,8 +331,8 @@ class AppDrawerAdapter(
                     setOnClickListener {
                         if (appListItem.activityPackage.isNotEmpty()) {
                             appRenameEdit.hint = appListItem.activityLabel
-                            appRenameLayout.visibility = View.VISIBLE
-                            appHideLayout.visibility = View.GONE
+                            appRenameLayout.isVisible = true
+                            appHideLayout.isVisible = false
                             appRenameEdit.showKeyboard()
                             appRenameEdit.imeOptions = EditorInfo.IME_ACTION_DONE
                         }
@@ -536,9 +504,6 @@ class AppDrawerAdapter(
                 val padding = dp2px(resources, 24)
                 appTitle.updatePadding(left = padding, right = padding)
 
-                val sidebarContainer =
-                    (context as? Activity)?.findViewById<View>(R.id.sidebar_container)!!
-
                 appTitleFrame.apply {
                     setOnClickListener {
                         appClickListener(appListItem)
@@ -550,8 +515,7 @@ class AppDrawerAdapter(
                             try {
                                 appDelete.alpha =
                                     if (context.isSystemApp(appListItem.activityPackage)) 0.3f else 1.0f
-                                appHideLayout.visibility = View.VISIBLE
-                                sidebarContainer.visibility = View.GONE
+                                appHideLayout.isVisible = true
                                 visibleHideLayouts.add(absoluteAdapterPosition)
                             } catch (e: Exception) {
                                 e.printStackTrace()
@@ -575,34 +539,34 @@ class AppDrawerAdapter(
 
                 appClose.apply {
                     setOnClickListener {
-                        appHideLayout.visibility = View.GONE
+                        appHideLayout.isVisible = false
 
                         visibleHideLayouts.remove(absoluteAdapterPosition)
-                        if (visibleHideLayouts.isEmpty()) {
-                            sidebarContainer.visibility = View.VISIBLE
+                    }
+                }
+
+                appPin.apply {
+                    setOnClickListener {
+                        val appName = appListItem.activityPackage
+                        val updatedPinnedApps = prefs.pinnedApps.toMutableSet()
+
+                        val isPinned = updatedPinnedApps.contains(appName)
+                        Log.d("AppListDebug", if (isPinned) "📌 Unpinning $appName" else "📌 Pinning $appName")
+
+                        if (isPinned) {
+                            updatedPinnedApps.remove(appName)
+                            appPin.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.pin_off, 0, 0)
+                            appPin.text = getLocalizedString(R.string.pin)
+                        } else {
+                            updatedPinnedApps.add(appName)
+                            appPin.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.pin, 0, 0)
+                            appPin.text = getLocalizedString(R.string.unpin)
                         }
+
+                        prefs.pinnedApps = updatedPinnedApps.toSet()
+                        Log.d("AppListDebug", "✅ Updated pinnedApps: ${prefs.pinnedApps}")
                     }
                 }
             }
     }
-
-    fun getIndexForLetter(letter: Char): Int {
-        return appsList.indexOfFirst {
-            it.activityLabel.firstOrNull()?.uppercaseChar() == letter
-        }
-    }
-
-    private fun sortApps() {
-        val pinnedApps = prefs.pinnedApps
-
-        // Ensure you're sorting the full list
-        appFilteredList = appsList.toMutableList()
-
-        appFilteredList.sortWith(
-            compareByDescending<AppListItem> {
-                pinnedApps.contains(it.activityPackage)
-            }.thenBy { it.customLabel.lowercase() }
-        )
-    }
-
 }

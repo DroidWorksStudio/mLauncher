@@ -7,13 +7,13 @@ import android.content.pm.PackageManager
 import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.Gravity
-import android.view.View
 import android.widget.CheckBox
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
+import androidx.core.view.isVisible
 import androidx.lifecycle.ViewModelProvider
 import com.github.droidworksstudio.common.getLocalizedString
 import com.github.droidworksstudio.mlauncher.MainViewModel
@@ -154,7 +154,7 @@ class CustomIconSelectionActivity : androidx.appcompat.app.AppCompatActivity() {
         // Add status message view at the bottom, initially hidden and right-aligned
         val statusTextView = TextView(context).apply {
             text = getLocalizedString(R.string.applying_icon_pack)
-            visibility = View.GONE
+            isVisible = false
             textSize = 14f
             gravity = Gravity.END // Align text to the right
             layoutParams = LinearLayout.LayoutParams(
@@ -179,7 +179,7 @@ class CustomIconSelectionActivity : androidx.appcompat.app.AppCompatActivity() {
             val positiveButton = dialog.getButton(AlertDialog.BUTTON_POSITIVE)
             positiveButton.setOnClickListener {
                 // Make the status visible immediately
-                statusTextView.visibility = View.VISIBLE
+                statusTextView.isVisible = true
 
                 // Delay heavy logic to let UI update first
                 statusTextView.post {

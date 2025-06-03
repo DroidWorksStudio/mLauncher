@@ -28,7 +28,6 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.github.droidworksstudio.common.getLocalizedString
 import com.github.droidworksstudio.common.hasSoftKeyboard
 import com.github.droidworksstudio.common.isSystemApp
@@ -46,7 +45,6 @@ import com.github.droidworksstudio.mlauncher.databinding.FragmentAppDrawerBindin
 import com.github.droidworksstudio.mlauncher.helper.emptyString
 import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
 import com.github.droidworksstudio.mlauncher.helper.openAppInfo
-import com.github.droidworksstudio.mlauncher.ui.components.AZSidebarView
 
 class AppDrawerFragment : Fragment() {
 
@@ -132,6 +130,7 @@ class AppDrawerFragment : Fragment() {
                         isVisible = true
                         text = getLocalizedString(R.string.clear_home_app)
                         setTextColor(prefs.appColor)
+                        textSize = prefs.appSize.toFloat()
                         setOnClickListener {
                             prefs.setHomeAppModel(n, clearApp)
                             findNavController().popBackStack()
@@ -184,21 +183,11 @@ class AppDrawerFragment : Fragment() {
             initViewModel(flag, viewModel, appAdapter)
         }
 
-        val azSidebar = binding.azSidebar
-        azSidebar.onLetterSelected = { letter ->
-            val position = adapter.getIndexForLetter(letter)
-            if (position != -1) {
-                (binding.recyclerView.layoutManager as LinearLayoutManager)
-                    .scrollToPositionWithOffset(position, 0)
-            }
-        }
-
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
         binding.recyclerView.adapter = appAdapter
-        binding.recyclerView.addOnScrollListener(getRecyclerViewOnScrollListener(azSidebar))
 
         if (prefs.hideSearchView) {
-            binding.search.visibility = View.GONE
+            binding.search.isVisible = false
         } else {
             when (flag) {
                 AppDrawerFlag.LaunchApp -> binding.search.queryHint =
@@ -315,8 +304,7 @@ class AppDrawerFragment : Fragment() {
         viewModel.hiddenApps.observe(viewLifecycleOwner, Observer {
             if (flag != AppDrawerFlag.HiddenApps) return@Observer
             it?.let { appList ->
-                binding.listEmptyHint.visibility =
-                    if (appList.isEmpty()) View.VISIBLE else View.GONE
+                binding.listEmptyHint.isVisible = appList.isEmpty()
                 populateAppList(appList, appAdapter)
             }
         })
@@ -325,14 +313,13 @@ class AppDrawerFragment : Fragment() {
             if (flag == AppDrawerFlag.HiddenApps) return@Observer
             if (it == appAdapter.appsList) return@Observer
             it?.let { appList ->
-                binding.listEmptyHint.visibility = if (appList.isEmpty()) View.VISIBLE else View.GONE
-                binding.sidebarContainer.visibility = if (prefs.showAZSidebar) View.VISIBLE else View.GONE
+                binding.listEmptyHint.isVisible = appList.isEmpty()
                 populateAppList(appList, appAdapter)
             }
         })
 
         viewModel.firstOpen.observe(viewLifecycleOwner) {
-            if (it) binding.appDrawerTip.visibility = View.VISIBLE
+            if (it) binding.appDrawerTip.isVisible = true
         }
     }
 
@@ -450,60 +437,4 @@ class AppDrawerFragment : Fragment() {
             )
             findNavController().popBackStack(R.id.mainFragment, false)
         }
-
-    private fun getRecyclerViewOnScrollListener(azSidebar: AZSidebarView): RecyclerView.OnScrollListener {
-        return object : RecyclerView.OnScrollListener() {
-
-            var onTop = false
-
-            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
-                super.onScrollStateChanged(recyclerView, newState)
-                when (newState) {
-
-                    RecyclerView.SCROLL_STATE_DRAGGING -> {
-                        onTop = !recyclerView.canScrollVertically(-1)
-                        if (onTop) {
-                            if (requireContext().hasSoftKeyboard()) {
-                                binding.search.hideKeyboard()
-                            }
-                        }
-                        if (onTop && !recyclerView.canScrollVertically(1)) {
-                            findNavController().popBackStack()
-                        }
-                    }
-
-                    RecyclerView.SCROLL_STATE_IDLE -> {
-                        if (!recyclerView.canScrollVertically(1)) {
-                            binding.search.hideKeyboard()
-                        } else if (!recyclerView.canScrollVertically(-1)) {
-                            if (onTop) {
-                                findNavController().popBackStack()
-                            } else {
-                                if (requireContext().hasSoftKeyboard()) {
-                                    binding.search.showKeyboard()
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
-                super.onScrolled(recyclerView, dx, dy)
-
-                // Find the first visible item position
-                val layoutManager = recyclerView.layoutManager as? LinearLayoutManager ?: return
-                val firstVisible = layoutManager.findFirstVisibleItemPosition()
-
-                if (firstVisible != RecyclerView.NO_POSITION) {
-                    // Assuming adapter has a filtered list and you want to get the first character of the app label
-                    val app = adapter.appFilteredList[firstVisible]
-                    val letter = app.label.firstOrNull()?.uppercaseChar() ?: return
-
-                    // Update the AZSidebar view with the selected letter
-                    azSidebar.setSelectedLetter(letter)
-                }
-            }
-        }
-    }
 }

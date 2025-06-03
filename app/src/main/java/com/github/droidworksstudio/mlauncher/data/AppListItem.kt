@@ -31,14 +31,15 @@ val collator: Collator = Collator.getInstance()
  * Use this property to render the list item.
  * It's either the original activity label (`activityLabel`) or a user-defined label (`definedLabel`).
  */
-
 data class AppListItem(
     val activityLabel: String,
     val activityPackage: String,
     val activityClass: String,
     val user: UserHandle,
     var customLabel: String, // TODO make immutable by refining data flow
+    var category: AppCategory = AppCategory.REGULAR
 ) : Comparable<AppListItem> {
+
     val label = customLabel.ifEmpty { activityLabel }
 
     /** Speed up sort and search */
@@ -46,4 +47,8 @@ data class AppListItem(
 
     override fun compareTo(other: AppListItem): Int =
         collationKey.compareTo(other.collationKey)
+}
+
+enum class AppCategory {
+    RECENT, PINNED, REGULAR
 }

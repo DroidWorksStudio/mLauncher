@@ -81,7 +81,7 @@ class SettingsFragment : Fragment() {
 
         resetThemeColors()
 
-        setTopPadding(requireActivity(), binding.settingsView)
+        setTopPadding(binding.settingsView)
     }
 
     private fun resetThemeColors() {

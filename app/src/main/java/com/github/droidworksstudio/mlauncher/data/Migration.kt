@@ -33,6 +33,9 @@ class Migration(val context: Context) {
             10812 to listOf(
                 "LOCK_MODE"
             ),
+            1100504 to listOf(
+                "SHOW_AZSIDEBAR"
+            )
             // Add more versions and preferences to remove here
         )
 

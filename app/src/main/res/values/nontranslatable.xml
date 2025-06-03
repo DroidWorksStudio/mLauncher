@@ -1,6 +1,4 @@
 <resources>
-    <string name="app_name" translatable="false">MultiLauncher</string>
-
     <string name="acra_email" translatable="false">wayne6324@gmail.com</string>
     <string name="acra_mail_body" translatable="false">A crash has occurred in the application.\n\nBelow are the details of the device. The error
         log has been attached as a file for your reference. We would appreciate your assistance in resolving this issue.\n\nDevice

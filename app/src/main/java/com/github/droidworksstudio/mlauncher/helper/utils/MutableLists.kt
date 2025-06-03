@@ -11,4 +11,3 @@ val messages = mutableListOf<Message>()
 val packageNames = mutableListOf<String>()
 
 val visibleHideLayouts = mutableListOf<Int>()
-val words = mutableListOf<String>()

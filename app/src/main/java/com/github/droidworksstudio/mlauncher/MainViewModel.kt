@@ -3,6 +3,7 @@ package com.github.droidworksstudio.mlauncher
 import android.app.Application
 import android.content.ComponentName
 import android.content.Context
+import android.content.SharedPreferences
 import android.content.pm.LauncherApps
 import android.os.Process
 import android.os.UserHandle
@@ -59,6 +60,21 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     val iconPackHome = MutableLiveData(prefs.iconPackHome)
     val customIconPackAppList = MutableLiveData(prefs.customIconPackAppList)
     val iconPackAppList = MutableLiveData(prefs.iconPackAppList)
+
+    private val prefsNormal = prefs.prefsNormal
+    private val pinnedAppsKey = prefs.pinnedAppsKey
+
+    private val pinnedAppsListener = SharedPreferences.OnSharedPreferenceChangeListener { _, key ->
+        if (key == pinnedAppsKey) {
+            Log.d("MainViewModel", "Pinned apps changed")
+            getAppList()
+        }
+    }
+
+    init {
+        prefsNormal.registerOnSharedPreferenceChangeListener(pinnedAppsListener)
+        getAppList()
+    }
 
     fun selectedApp(fragment: Fragment, app: AppListItem, flag: AppDrawerFlag, n: Int = 0) {
         when (flag) {
@@ -192,10 +208,10 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
-    fun getAppList(includeHiddenApps: Boolean = true) {
+    fun getAppList(includeHiddenApps: Boolean = true, includeRecentApps: Boolean = true) {
         viewModelScope.launch {
             appList.value =
-                getAppsList(appContext, includeRegularApps = true, includeHiddenApps)
+                getAppsList(appContext, includeRegularApps = true, includeHiddenApps, includeRecentApps)
         }
     }
 
@@ -260,5 +276,11 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         val savedOrder =
             (0 until prefs.homeAppsNum).mapNotNull { prefs.getHomeAppModel(it) } // Ensure it doesn’t return null
         homeAppsOrder.postValue(savedOrder) // ✅ Now posts a valid list
+    }
+
+    // Clean up listener to prevent memory leaks
+    override fun onCleared() {
+        super.onCleared()
+        prefsNormal.unregisterOnSharedPreferenceChangeListener(pinnedAppsListener)
     }
 }

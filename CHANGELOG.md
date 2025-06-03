@@ -4,6 +4,56 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Versioning:
+
+- Revert build number to previous value - ([51d2882](https://github.com/DroidWorksStudio/mLauncher/commit/51d2882edab8684986014b94b33468f730ae7beb))
+- Bump app version to 1.10.5 build 3 - ([a66368a](https://github.com/DroidWorksStudio/mLauncher/commit/a66368afa3d40e4a8766ecc7fbab15a75e52ca1a))
+
+### Feature Removal:
+
+- Remove AZSidebar - ([63b17f0](https://github.com/DroidWorksStudio/mLauncher/commit/63b17f0933fcad3471b0f8b1deec884da76c05d5))
+
+### Refactoring:
+
+- Remove Show A-Z Sidebar string - ([fd15077](https://github.com/DroidWorksStudio/mLauncher/commit/fd15077ffc70a60c96d49b0f107d8385f1cba094))
+- Update minSdk to 28 and related API changes - ([f038ccb](https://github.com/DroidWorksStudio/mLauncher/commit/f038ccbb4e2e41161d6339d9b6e38c9c0cbe4b36))
+
+### Reverts:
+
+- Revert build number to previous value - ([51d2882](https://github.com/DroidWorksStudio/mLauncher/commit/51d2882edab8684986014b94b33468f730ae7beb))
+
+### Releases:
+
+- Bump version to 1.10.5.4 - ([1e32ea7](https://github.com/DroidWorksStudio/mLauncher/commit/1e32ea7547d5a0c75f38067c49c20f3ac81d4c32))
+
+## [1.10.5.1](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.5.1) - (30, May 2025)
+
+### Implemented Enhancements:
+
+- Lock orientation when requested - ([66396ef](https://github.com/DroidWorksStudio/mLauncher/commit/66396ef57352cdacbd22c21dfc73d7126fa73665))
+
+### Bug Fixes:
+
+- Use resValue for app name and version - ([bc236cc](https://github.com/DroidWorksStudio/mLauncher/commit/bc236cc2a9d54be872f468e412be2632db3be8fa))
+
+### Refactoring:
+
+- Change version type to production - ([d4f123e](https://github.com/DroidWorksStudio/mLauncher/commit/d4f123e68813a45a46c05343612ce56d393f1961))
+- Use mainLayout for status bar padding - ([7d9e8d8](https://github.com/DroidWorksStudio/mLauncher/commit/7d9e8d80b9c5fce39fcb9731d132614d15f211c8))
+- Replace View.visibility with isVisible - ([063b812](https://github.com/DroidWorksStudio/mLauncher/commit/063b8124a7a671a32b13adedb4eba81e57160c75))
+
+### Releases:
+
+- Increment build number - ([f18aea2](https://github.com/DroidWorksStudio/mLauncher/commit/f18aea2ba3f2ea80ad410edf53ffd3db6008cade))
+
+## [1.10.5.0](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.5.0) - (29, May 2025)
+
+### Implemented Enhancements:
+
+- *(app)* Implement app pinning and refactor app list UI - ([ba877ea](https://github.com/DroidWorksStudio/mLauncher/commit/ba877ea3b4f134b62a4d89826db91b66c83e4610))
+
+## [1.10.4.4](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.4.4) - (29, May 2025)
+
 ### Implemented Enhancements:
 
 - Add support for alpha/beta version suffixes (Google Play) - ([f77b38e](https://github.com/DroidWorksStudio/mLauncher/commit/f77b38e781079e72e1661f9d12dec62f28b84512))
@@ -12,6 +62,9 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Bug Fixes:
 
+- Correct default launcher text display - ([b4d6aac](https://github.com/DroidWorksStudio/mLauncher/commit/b4d6aacdf77c8c8dd88997b7e5bc27383084bbcf))
+- Improve app list sorting and pinning - ([c395652](https://github.com/DroidWorksStudio/mLauncher/commit/c395652290c2d3066a3c5b0b144f85032bc9c123))
+- Ensure AppDrawer is sorted on initial display - ([7ce257c](https://github.com/DroidWorksStudio/mLauncher/commit/7ce257c23fb505a1b7b6f3ff84f04354a65e7b39))
 - Display app icons alongside work profile/private space indicators - ([98797b6](https://github.com/DroidWorksStudio/mLauncher/commit/98797b607ac6dd25a33750a8d9c8a53f9b3d701f))
 - Correct paths for Gradle Wrapper validation workflow - ([db4068b](https://github.com/DroidWorksStudio/mLauncher/commit/db4068bd2c340d480bce34810d9bab90dc0f6236))
 - Implement migration for malformed Message objects - ([a93e4ad](https://github.com/DroidWorksStudio/mLauncher/commit/a93e4ad9f06d306ed12eef49af192c1f3249795b))
@@ -23,6 +76,8 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- *(AppDrawerAdapter)* Improve app locking and filtering logic - ([1686618](https://github.com/DroidWorksStudio/mLauncher/commit/16866181f7bd3aea174f29ebbc0b588e125f5fef))
+- *(AppDrawerAdapter)* Improve app locking and filtering logic - ([d105de5](https://github.com/DroidWorksStudio/mLauncher/commit/d105de5ceb52d32feabae55c5cdef70c36f39034))
 - Move migration logic into a separate function - ([0e3446c](https://github.com/DroidWorksStudio/mLauncher/commit/0e3446c02d24813c98e14f915f061f036ac2af55))
 
 ### Releases:

@@ -48,7 +48,6 @@ private const val STATUS_BAR = "STATUS_BAR"
 private const val SHOW_BATTERY = "SHOW_BATTERY"
 private const val SHOW_BATTERY_ICON = "SHOW_BATTERY_ICON"
 private const val SHOW_WEATHER = "SHOW_WEATHER"
-private const val SHOW_AZSIDEBAR = "SHOW_AZSIDEBAR"
 private const val SHOW_DATE = "SHOW_DATE"
 private const val HOME_LOCKED = "HOME_LOCKED"
 private const val SETTINGS_LOCKED = "SETTINGS_LOCKED"
@@ -149,7 +148,8 @@ class Prefs(val context: Context) {
     val messageWrongListType: ParameterizedType = Types.newParameterizedType(List::class.java, MessageWrong::class.java)
     val messageWrongAdapter: JsonAdapter<List<MessageWrong>> = moshi.adapter(messageWrongListType)
 
-    private val prefsNormal: SharedPreferences = context.getSharedPreferences(PREFS_FILENAME, 0)
+    internal val prefsNormal: SharedPreferences = context.getSharedPreferences(PREFS_FILENAME, 0)
+    internal val pinnedAppsKey = PINNED_APPS
     private val prefsOnboarding: SharedPreferences =
         context.getSharedPreferences(PREFS_ONBOARDING_FILENAME, 0)
 
@@ -517,10 +517,6 @@ class Prefs(val context: Context) {
         get() = getSetting(SHOW_BATTERY_ICON, true)
         set(value) = prefsNormal.edit { putBoolean(SHOW_BATTERY_ICON, value) }
 
-    var showAZSidebar: Boolean
-        get() = getSetting(SHOW_AZSIDEBAR, false)
-        set(value) = prefsNormal.edit { putBoolean(SHOW_AZSIDEBAR, value) }
-
     var lockOrientation: Boolean
         get() = getSetting(LOCK_ORIENTATION, true)
         set(value) = prefsNormal.edit { putBoolean(LOCK_ORIENTATION, value) }
@@ -881,7 +877,7 @@ class Prefs(val context: Context) {
 
     // return app label
     fun getAppName(location: Int): String {
-        return getHomeAppModel(location).activityLabel
+        return getHomeAppModel(location).label
     }
 
     fun getAppAlias(appName: String): String {

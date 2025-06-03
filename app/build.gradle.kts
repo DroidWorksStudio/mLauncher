@@ -9,8 +9,8 @@ plugins {
 // Top of build.gradle.kts
 val major = 1
 val minor = 10
-val patch = 4
-val build = 3
+val patch = 5
+val build = 4
 
 val type = 0 // 1=beta, 2=alpha else=production
 
@@ -35,7 +35,7 @@ android {
 
     defaultConfig {
         applicationId = "app.mlauncher"
-        minSdk = 30
+        minSdk = 28
         targetSdk = 36
         versionCode = versionCodeInt
         versionName = versionNameStr
@@ -51,6 +51,9 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            resValue("string", "app_name", "Multi Launcher Dev")
+            resValue("string", "app_version", versionNameStr)
+            resValue("string", "empty", "")
         }
 
         getByName("release") {
@@ -60,6 +63,9 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            resValue("string", "app_name", "Multi Launcher")
+            resValue("string", "app_version", versionNameStr)
+            resValue("string", "empty", "")
         }
     }
 

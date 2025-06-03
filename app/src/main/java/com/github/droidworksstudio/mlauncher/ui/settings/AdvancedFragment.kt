@@ -98,7 +98,7 @@ class AdvancedFragment : Fragment() {
 
         resetThemeColors()
 
-        setTopPadding(requireActivity(), binding.settingsView)
+        setTopPadding(binding.settingsView)
     }
 
     @Composable
@@ -118,9 +118,9 @@ class AdvancedFragment : Fragment() {
         } else tuToDp(fs.value)
 
         val changeLauncherText = if (ismlauncherDefault(requireContext())) {
-            R.string.advanced_settings_set_as_default_launcher
-        } else {
             R.string.advanced_settings_change_default_launcher
+        } else {
+            R.string.advanced_settings_set_as_default_launcher
         }
 
         Column {

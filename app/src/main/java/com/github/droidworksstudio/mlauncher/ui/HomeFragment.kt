@@ -157,7 +157,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         // Handle status bar once per view creation
         if (prefs.showStatusBar) {
             showStatusBar(requireActivity())
-            checkForStatusbar(binding.mainView)
+            checkForStatusbar(binding.mainLayout)
         } else hideStatusBar(requireActivity())
 
         // Register battery receiver
@@ -185,12 +185,12 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         super.onResume()
 
         // Weather: may change frequently
-        if (prefs.showWeather) getWeather() else binding.weather.visibility = View.GONE
+        if (prefs.showWeather) getWeather() else binding.weather.isVisible = false
 
         // Handle status bar once per view creation
         if (prefs.showStatusBar) {
             showStatusBar(requireActivity())
-            checkForStatusbar(binding.mainView)
+            checkForStatusbar(binding.mainLayout)
         } else hideStatusBar(requireActivity())
 
         // Update only dynamic elements (not all UI prefs)
@@ -221,13 +221,11 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     }
 
     fun applyStatusBarPadding(view: View) {
-        val originalPaddingTop = view.paddingTop
-
         ViewCompat.setOnApplyWindowInsetsListener(view) { v, insets ->
             val statusBarHeight = getStatusBarIconAreaHeight(view)
             v.setPadding(
                 v.paddingLeft,
-                originalPaddingTop + statusBarHeight,
+                statusBarHeight,
                 v.paddingRight,
                 v.paddingBottom
             )
@@ -278,7 +276,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             battery.textSize = prefs.batterySize.toFloat()
             homeScreenPager.textSize = prefs.appSize.toFloat()
 
-            battery.visibility = if (prefs.showBattery) View.VISIBLE else View.GONE
+            battery.isVisible = prefs.showBattery
             mainLayout.setBackgroundColor(getHexForOpacity(prefs))
 
             date.setTextColor(prefs.dateColor)
@@ -395,7 +393,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         if (prefs.homeLocked) return true
 
         val n = view.id
-        showAppList(AppDrawerFlag.SetHomeApp, includeHiddenApps = true, n)
+        showAppList(AppDrawerFlag.SetHomeApp, includeHiddenApps = true, includeRecentApps = false, n)
         CrashHandler.logUserAction("Show App List")
         return true
     }
@@ -441,12 +439,17 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
     private fun initAppObservers() {
         binding.apply {
-            if (prefs.firstSettingsOpen) firstRunTips.visibility = View.VISIBLE
-            else firstRunTips.visibility = View.GONE
+            firstRunTips.isVisible = prefs.firstSettingsOpen
 
-            if (!ismlauncherDefault(requireContext())) {
-                setDefaultLauncher.visibility = View.VISIBLE
-            } else setDefaultLauncher.visibility = View.GONE
+            setDefaultLauncher.isVisible = !ismlauncherDefault(requireContext())
+
+            val changeLauncherText = if (ismlauncherDefault(requireContext())) {
+                R.string.advanced_settings_change_default_launcher
+            } else {
+                R.string.advanced_settings_set_as_default_launcher
+            }
+
+            setDefaultLauncher.text = getLocalizedString(changeLauncherText)
         }
 
         with(viewModel) {
@@ -458,7 +461,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 }
             }
             launcherDefault.observe(viewLifecycleOwner) {
-                binding.setDefaultLauncher.visibility = if (it) View.VISIBLE else View.GONE
+                binding.setDefaultLauncher.isVisible = it
             }
         }
     }
@@ -466,16 +469,16 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     private fun initObservers() {
         with(viewModel) {
             showDate.observe(viewLifecycleOwner) {
-                binding.date.visibility = if (it) View.VISIBLE else View.GONE
+                binding.date.isVisible = it
             }
             showClock.observe(viewLifecycleOwner) {
-                binding.clock.visibility = if (it) View.VISIBLE else View.GONE
+                binding.clock.isVisible = it
             }
             showAlarm.observe(viewLifecycleOwner) {
-                binding.alarm.visibility = if (it) View.VISIBLE else View.GONE
+                binding.alarm.isVisible = it
             }
             showDailyWord.observe(viewLifecycleOwner) {
-                binding.dailyWord.visibility = if (it) View.VISIBLE else View.GONE
+                binding.dailyWord.isVisible = it
             }
 
             clockAlignment.observe(viewLifecycleOwner) { clockGravity ->
@@ -539,8 +542,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         else viewModel.launchApp(prefs.getHomeAppModel(location), this)
     }
 
-    private fun showAppList(flag: AppDrawerFlag, includeHiddenApps: Boolean = false, n: Int = 0) {
-        viewModel.getAppList(includeHiddenApps)
+    private fun showAppList(flag: AppDrawerFlag, includeHiddenApps: Boolean = false, includeRecentApps: Boolean = true, n: Int = 0) {
+        viewModel.getAppList(includeHiddenApps, includeRecentApps)
         try {
             if (findNavController().currentDestination?.id == R.id.mainFragment) {
                 findNavController().navigate(
@@ -1063,7 +1066,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         binding.totalScreenTime.apply {
             text = totalScreenTimeJoin
             if (totalTime > 300L) { // Checking if totalTime is greater than 5 minutes (300,000 milliseconds)
-                visibility = View.VISIBLE
+                isVisible = true
             }
         }
 
@@ -1289,7 +1292,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
         for (i in 0 until getTotalAppsCount()) {
             val view = binding.homeAppsLayout.getChildAt(i)
-            view.visibility = if (i in startIdx until endIdx) View.VISIBLE else View.GONE
+            view.isVisible = (i in startIdx until endIdx)
         }
 
         val pageSelectorIcons = MutableList(totalPages) { _ -> R.drawable.ic_new_page }
@@ -1315,9 +1318,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
         // Set the text for the page selector corresponding to each page
         binding.homeScreenPager.text = spannable
-        if (prefs.homePagesNum > 1 && prefs.homePager) binding.homeScreenPager.visibility =
-            View.VISIBLE
-        if (prefs.showFloating) binding.fabLayout.visibility = View.VISIBLE
+        if (prefs.homePagesNum > 1 && prefs.homePager) binding.homeScreenPager.isVisible = true
+        if (prefs.showFloating) binding.fabLayout.isVisible = true
     }
 
     private fun handleSwipeLeft(totalPages: Int) {
@@ -1487,7 +1489,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                         weatherReceiver.currentWeather.temperature,
                         weatherReceiver.currentUnits.temperatureUnit
                     )
-                    weather.visibility = View.VISIBLE
+                    weather.isVisible = true
                 }
             }
         }

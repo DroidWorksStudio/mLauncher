@@ -17,6 +17,7 @@ import android.widget.Spinner
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatImageButton
 import androidx.core.content.ContextCompat
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import com.github.droidworksstudio.common.CrashHandler
 import com.github.droidworksstudio.common.getCurrentTimestamp
@@ -137,9 +138,7 @@ class NotesManagerAdapter(
         val isUserCollapsed = collapsedByUser.contains(position)
 
         // Handle root visibility
-        holder.itemRootLayout.visibility =
-            if (expandedPosition != null && !isExpanded) View.GONE
-            else View.VISIBLE
+        holder.itemRootLayout.isVisible = !(expandedPosition != null && !isExpanded)
 
         // Final message text expansion logic
         holder.messageText.maxLines = when {
@@ -149,9 +148,7 @@ class NotesManagerAdapter(
         }
 
         // Show/hide action buttons only on single-click
-        holder.actionButtonsLayout.visibility =
-            if (prefs.clickToEditDelete && isExpanded) View.VISIBLE
-            else View.GONE
+        holder.actionButtonsLayout.isVisible = (prefs.clickToEditDelete && isExpanded)
 
         // Click listener with double-click detection
         holder.itemView.setOnClickListener {

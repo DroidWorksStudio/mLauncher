@@ -1,6 +1,8 @@
 package com.github.droidworksstudio.mlauncher.ui.settings
 
+import android.content.Context
 import android.os.Bundle
+import android.os.UserManager
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -31,12 +33,14 @@ import com.github.droidworksstudio.common.isGestureNavigationEnabled
 import com.github.droidworksstudio.mlauncher.MainActivity
 import com.github.droidworksstudio.mlauncher.MainViewModel
 import com.github.droidworksstudio.mlauncher.R
+import com.github.droidworksstudio.mlauncher.data.AppListItem
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Constants.Theme.Dark
 import com.github.droidworksstudio.mlauncher.data.Constants.Theme.Light
 import com.github.droidworksstudio.mlauncher.data.Constants.Theme.System
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentSettingsBinding
+import com.github.droidworksstudio.mlauncher.helper.emptyString
 import com.github.droidworksstudio.mlauncher.helper.getTrueSystemFont
 import com.github.droidworksstudio.mlauncher.helper.isSystemInDarkMode
 import com.github.droidworksstudio.mlauncher.helper.setThemeMode
@@ -83,7 +87,7 @@ class FeaturesFragment : Fragment() {
 
         resetThemeColors()
 
-        setTopPadding(requireActivity(), binding.settingsView)
+        setTopPadding(binding.settingsView)
     }
 
     @Composable
@@ -97,7 +101,6 @@ class FeaturesFragment : Fragment() {
         var toggledLockOrientation by remember { mutableStateOf(prefs.lockOrientation) }
 
         var selectedSearchEngine by remember { mutableStateOf(prefs.searchEngines) }
-        var toggledShowAZSidebar by remember { mutableStateOf(prefs.showAZSidebar) }
         var toggledAutoShowKeyboard by remember { mutableStateOf(prefs.autoShowKeyboard) }
         var toggledSearchFromStart by remember { mutableStateOf(prefs.searchFromStart) }
         var toggledEnableFilterStrength by remember { mutableStateOf(prefs.enableFilterStrength) }
@@ -333,16 +336,6 @@ class FeaturesFragment : Fragment() {
             }
 
             SettingsSwitch(
-                text = getLocalizedString(R.string.show_az_sidebar),
-                fontSize = titleFontSize,
-                defaultState = toggledShowAZSidebar,
-                onCheckedChange = {
-                    toggledShowAZSidebar = !prefs.showAZSidebar
-                    prefs.showAZSidebar = toggledShowAZSidebar
-                }
-            )
-
-            SettingsSwitch(
                 text = getLocalizedString(R.string.search_from_start),
                 fontSize = titleFontSize,
                 defaultState = toggledSearchFromStart,
@@ -430,6 +423,7 @@ class FeaturesFragment : Fragment() {
                 fontSize = titleFontSize,
                 onClick = {
                     Constants.updateMaxAppsBasedOnPages(requireContext())
+                    val oldHomeAppsNum = selectedHomeAppsNum + 1
                     dialogBuilder.showSliderDialog(
                         context = requireContext(),
                         title = getLocalizedString(R.string.apps_on_home_screen),
@@ -446,6 +440,22 @@ class FeaturesFragment : Fragment() {
                                 selectedHomePagesNum = newHomeAppsNum
                                 prefs.homePagesNum = newHomeAppsNum // Persist the new homePagesNum
                                 viewModel.homePagesNum.value = newHomeAppsNum
+                            }
+
+                            val userManager = requireContext().getSystemService(Context.USER_SERVICE) as UserManager
+
+                            val clearApp = AppListItem(
+                                "NoApp",
+                                emptyString(),
+                                emptyString(),
+                                user = userManager.userProfiles[0], // No user associated with the "NoApp" option
+                                customLabel = "NoApp",
+                            )
+
+                            for (n in newHomeAppsNum..oldHomeAppsNum) {
+                                // i is outside the range between oldHomeAppsNum and newHomeAppsNum
+                                // Do something with i
+                                prefs.setHomeAppModel(n, clearApp)
                             }
                         }
                     )
