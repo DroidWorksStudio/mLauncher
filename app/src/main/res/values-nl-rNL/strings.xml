@@ -48,6 +48,7 @@
     <string name="lock_orientation">Vergrendelingsoriëntatie</string>
     <string name="search">Zoek</string>
     <string name="search_engine">Zoekmachine</string>
+    <string name="show_az_sidebar">Show A-Z Sidebar</string>
     <string name="auto_show_keyboard">Toetsenbord automatisch tonen</string>
     <string name="search_from_start">App zoeken vanaf het begin</string>
     <string name="home_management">Home &amp; App-beheer</string>
