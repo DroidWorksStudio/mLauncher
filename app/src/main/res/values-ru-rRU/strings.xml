@@ -48,7 +48,7 @@
     <string name="lock_orientation">Блокировка ориентации</string>
     <string name="search">Поиск</string>
     <string name="search_engine">Поисковый движок</string>
-    <string name="show_az_sidebar">Show A-Z Sidebar</string>
+    <string name="show_az_sidebar">Показать боковую панель AZ</string>
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="search_from_start">Поиск приложений с самого начала.</string>
     <string name="home_management">Главная &amp; Управление приложениями</string>
