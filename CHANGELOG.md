@@ -15,6 +15,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Remove Show A-Z Sidebar string - ([fd15077](https://github.com/DroidWorksStudio/mLauncher/commit/fd15077ffc70a60c96d49b0f107d8385f1cba094))
 - Update minSdk to 28 and related API changes - ([f038ccb](https://github.com/DroidWorksStudio/mLauncher/commit/f038ccbb4e2e41161d6339d9b6e38c9c0cbe4b36))
 
 ### Reverts:
