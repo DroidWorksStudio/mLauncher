@@ -48,7 +48,7 @@
     <string name="lock_orientation">Užrakto orientacija</string>
     <string name="search">Ieškoti</string>
     <string name="search_engine">Paieškos sistema</string>
-    <string name="show_az_sidebar">Show A-Z Sidebar</string>
+    <string name="show_az_sidebar">Rodyti AZ šoninę juostą</string>
     <string name="auto_show_keyboard">Automatiškai rodyti klaviatūrą</string>
     <string name="search_from_start">Programėlių paieška nuo pradžių.</string>
     <string name="home_management">Pagrindinis &amp; Programų valdymas</string>
