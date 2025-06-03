@@ -48,6 +48,7 @@
     <string name="lock_orientation">Orientation du verrou</string>
     <string name="search">Recherche</string>
     <string name="search_engine">Moteur de recherche</string>
+    <string name="show_az_sidebar">Show A-Z Sidebar</string>
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="search_from_start">Recherche d\'applications depuis le début.</string>
     <string name="home_management">Accueil &amp; Gestion des applications</string>
