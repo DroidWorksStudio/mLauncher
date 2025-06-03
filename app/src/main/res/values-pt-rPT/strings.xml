@@ -48,7 +48,7 @@
     <string name="lock_orientation">Orientação do bloqueio</string>
     <string name="search">Procurar</string>
     <string name="search_engine">Mecanismo de busca</string>
-    <string name="show_az_sidebar">Show A-Z Sidebar</string>
+    <string name="show_az_sidebar">Mostrar barra lateral de A a Z</string>
     <string name="auto_show_keyboard">Teclado de exposição automática</string>
     <string name="search_from_start">Pesquisa de aplicativos desde o início.</string>
     <string name="home_management">Início &amp; Gerenciamento de aplicativos</string>
