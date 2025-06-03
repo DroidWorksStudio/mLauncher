@@ -5,7 +5,6 @@
 package com.github.droidworksstudio.mlauncher.ui
 
 import android.annotation.SuppressLint
-import android.app.Activity
 import android.content.Context
 import android.content.pm.LauncherApps
 import android.content.pm.PackageManager
@@ -17,7 +16,6 @@ import android.text.TextWatcher
 import android.util.Log
 import android.view.Gravity.LEFT
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.widget.EditText
@@ -506,9 +504,6 @@ class AppDrawerAdapter(
                 val padding = dp2px(resources, 24)
                 appTitle.updatePadding(left = padding, right = padding)
 
-                val sidebarContainer =
-                    (context as? Activity)?.findViewById<View>(R.id.sidebar_container)!!
-
                 appTitleFrame.apply {
                     setOnClickListener {
                         appClickListener(appListItem)
@@ -521,7 +516,6 @@ class AppDrawerAdapter(
                                 appDelete.alpha =
                                     if (context.isSystemApp(appListItem.activityPackage)) 0.3f else 1.0f
                                 appHideLayout.isVisible = true
-                                sidebarContainer.isVisible = false
                                 visibleHideLayouts.add(absoluteAdapterPosition)
                             } catch (e: Exception) {
                                 e.printStackTrace()
@@ -548,9 +542,6 @@ class AppDrawerAdapter(
                         appHideLayout.isVisible = false
 
                         visibleHideLayouts.remove(absoluteAdapterPosition)
-                        if (visibleHideLayouts.isEmpty()) {
-                            sidebarContainer.isVisible = prefs.showAZSidebar
-                        }
                     }
                 }
 
@@ -578,11 +569,4 @@ class AppDrawerAdapter(
                 }
             }
     }
-
-    fun getIndexForLetter(letter: Char): Int {
-        return appsList.indexOfFirst {
-            it.label.firstOrNull()?.uppercaseChar() == letter
-        }
-    }
-
 }

@@ -86,21 +86,6 @@
         android:overScrollMode="never"
         android:paddingBottom="25dp" />
 
-    <FrameLayout
-        android:id="@+id/sidebar_container"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start|end"
-        android:layout_margin="8dp"
-        android:visibility="gone">
-
-        <com.github.droidworksstudio.mlauncher.ui.components.AZSidebarView
-            android:id="@+id/azSidebar"
-            android:layout_width="40dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_vertical" />
-    </FrameLayout>
-
     <!-- List Empty Hint, center aligned -->
     <TextView
         android:id="@+id/listEmptyHint"

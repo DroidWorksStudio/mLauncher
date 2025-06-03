@@ -152,26 +152,23 @@ suspend fun getAppsList(
 ): MutableList<AppListItem> = withContext(Dispatchers.Main) {
 
     val fullList: MutableList<AppListItem> = mutableListOf()
+    val scrollIndexMap = mutableMapOf<Char, Int>()
 
     Log.d(
         "AppListDebug",
         "🔄 getAppsList called with: includeRegular=$includeRegularApps, includeHidden=$includeHiddenApps, includeRecent=$includeRecentApps"
     )
-
     CrashHandler.logUserAction("Display App List")
 
     try {
         val prefs = Prefs(context)
         val hiddenApps = prefs.hiddenApps
         val pinnedPackages = prefs.pinnedApps.toSet()
-
         val userManager = context.getSystemService(Context.USER_SERVICE) as UserManager
         val launcherApps = context.getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps
-
-        val seenPackages = mutableSetOf<String>() // Avoid duplicates
+        val seenPackages = mutableSetOf<String>()
 
         for (profile in userManager.userProfiles) {
-
             Log.d("AppListDebug", "👤 Processing user profile: $profile")
 
             val isPrivate = PrivateSpaceManager(context).isPrivateSpaceProfile(profile)
@@ -180,7 +177,7 @@ suspend fun getAppsList(
                 continue
             }
 
-            // Recent apps (once)
+            // Recent Apps
             if (prefs.recentAppsDisplayed && includeRecentApps && fullList.none { it.category == AppCategory.RECENT }) {
                 val tracker = AppUsageMonitor.createInstance(context)
                 val recentApps = tracker.getLastTenAppsUsed(context)
@@ -189,24 +186,16 @@ suspend fun getAppsList(
 
                 for ((packageName, appName, activityName) in recentApps) {
                     if (seenPackages.contains(packageName)) continue
-
                     val alias = prefs.getAppAlias(packageName).ifEmpty { appName }
 
                     fullList.add(
-                        AppListItem(
-                            appName,
-                            packageName,
-                            activityName,
-                            profile,
-                            alias,
-                            AppCategory.RECENT
-                        )
+                        AppListItem(appName, packageName, activityName, profile, alias, AppCategory.RECENT)
                     )
                     seenPackages.add(packageName)
                 }
             }
 
-            // Launcher apps (all remaining)
+            // Launcher Apps
             val launcherAppList = launcherApps.getActivityList(null, profile)
             Log.d("AppListDebug", "📦 Found ${launcherAppList.size} launcher apps for profile: $profile")
 
@@ -231,25 +220,25 @@ suspend fun getAppsList(
                 }
 
                 fullList.add(
-                    AppListItem(
-                        label,
-                        packageName,
-                        className,
-                        profile,
-                        alias,
-                        category
-                    )
+                    AppListItem(label, packageName, className, profile, alias, category)
                 )
 
                 seenPackages.add(packageName)
             }
         }
 
-        // Final sort
+        // Sort the list: Pinned → Regular → Recent; then alphabetical within category
         fullList.sortWith(
             compareBy<AppListItem> { it.category.ordinal }
                 .thenBy { it.label.lowercase() }
         )
+
+        // Build scroll index (excluding pinned apps)
+        for ((index, item) in fullList.withIndex()) {
+            if (item.category == AppCategory.PINNED) continue
+            val firstChar = item.label.firstOrNull()?.uppercaseChar() ?: continue
+            scrollIndexMap.putIfAbsent(firstChar, index)
+        }
 
         Log.d("AppListDebug", "✅ App list built with ${fullList.size} items")
 

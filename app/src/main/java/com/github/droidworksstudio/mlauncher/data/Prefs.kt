@@ -48,7 +48,6 @@ private const val STATUS_BAR = "STATUS_BAR"
 private const val SHOW_BATTERY = "SHOW_BATTERY"
 private const val SHOW_BATTERY_ICON = "SHOW_BATTERY_ICON"
 private const val SHOW_WEATHER = "SHOW_WEATHER"
-private const val SHOW_AZSIDEBAR = "SHOW_AZSIDEBAR"
 private const val SHOW_DATE = "SHOW_DATE"
 private const val HOME_LOCKED = "HOME_LOCKED"
 private const val SETTINGS_LOCKED = "SETTINGS_LOCKED"
@@ -517,10 +516,6 @@ class Prefs(val context: Context) {
     var showBatteryIcon: Boolean
         get() = getSetting(SHOW_BATTERY_ICON, true)
         set(value) = prefsNormal.edit { putBoolean(SHOW_BATTERY_ICON, value) }
-
-    var showAZSidebar: Boolean
-        get() = getSetting(SHOW_AZSIDEBAR, false)
-        set(value) = prefsNormal.edit { putBoolean(SHOW_AZSIDEBAR, value) }
 
     var lockOrientation: Boolean
         get() = getSetting(LOCK_ORIENTATION, true)
