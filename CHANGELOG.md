@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Bug Fixes:
+
+- Make "Set as Default Launcher" work on all devices - ([2ba9528](https://github.com/DroidWorksStudio/mLauncher/commit/2ba9528f815b100850de4552e5fd7baf55b4375a))
+
+## [1.10.5.4](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.5.4) - (03, June 2025)
+
 ### Versioning:
 
 - Revert build number to previous value - ([51d2882](https://github.com/DroidWorksStudio/mLauncher/commit/51d2882edab8684986014b94b33468f730ae7beb))
