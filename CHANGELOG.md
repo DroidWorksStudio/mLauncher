@@ -8,6 +8,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Make "Set as Default Launcher" work on all devices - ([2ba9528](https://github.com/DroidWorksStudio/mLauncher/commit/2ba9528f815b100850de4552e5fd7baf55b4375a))
 
+### Versioning:
+
+- Update build version - ([3505161](https://github.com/DroidWorksStudio/mLauncher/commit/35051613b98a3e3192ec78b9b2cfc0328e55f678))
+
 ## [1.10.5.4](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.5.4) - (03, June 2025)
 
 ### Versioning:
