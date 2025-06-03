@@ -45,6 +45,7 @@ import java.io.InputStreamReader
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
+import java.util.concurrent.Executors
 
 class MainActivity : AppCompatActivity() {
 
@@ -145,11 +146,17 @@ class MainActivity : AppCompatActivity() {
         }
 
         if (prefs.iconPackHome == Constants.IconPacks.Custom) {
-            IconPackHelper.preloadIcons(applicationContext, prefs.customIconPackHome, IconCacheTarget.HOME)
+            val executor = Executors.newSingleThreadExecutor()
+            executor.execute {
+                IconPackHelper.preloadIcons(applicationContext, prefs.customIconPackHome, IconCacheTarget.HOME)
+            }
         }
 
         if (prefs.iconPackAppList == Constants.IconPacks.Custom) {
-            IconPackHelper.preloadIcons(applicationContext, prefs.customIconPackAppList, IconCacheTarget.APP_LIST)
+            val executor = Executors.newSingleThreadExecutor()
+            executor.execute {
+                IconPackHelper.preloadIcons(applicationContext, prefs.customIconPackAppList, IconCacheTarget.APP_LIST)
+            }
         }
 
         if (!prefs.isOnboardingCompleted()) {

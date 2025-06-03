@@ -13,6 +13,7 @@ import com.github.droidworksstudio.mlauncher.helper.IconCacheTarget
 import com.github.droidworksstudio.mlauncher.helper.IconPackHelper
 import com.github.droidworksstudio.mlauncher.helper.utils.AppReloader
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import java.util.concurrent.Executors
 
 class ApplyIconPackActivity : androidx.appcompat.app.AppCompatActivity() {
     private lateinit var prefs: Prefs
@@ -57,7 +58,10 @@ class ApplyIconPackActivity : androidx.appcompat.app.AppCompatActivity() {
                     val customIconPackType = packageClass
 
                     if (checkBoxHome.isChecked) {
-                        IconPackHelper.preloadIcons(this, customIconPackType, IconCacheTarget.HOME)
+                        val executor = Executors.newSingleThreadExecutor()
+                        executor.execute {
+                            IconPackHelper.preloadIcons(this, customIconPackType, IconCacheTarget.HOME)
+                        }
                         prefs.iconPackHome = iconPackType
                         viewModel.iconPackHome.value = iconPackType
                         prefs.customIconPackHome = customIconPackType
@@ -65,7 +69,10 @@ class ApplyIconPackActivity : androidx.appcompat.app.AppCompatActivity() {
                     }
 
                     if (checkBoxAppList.isChecked) {
-                        IconPackHelper.preloadIcons(this, customIconPackType, IconCacheTarget.APP_LIST)
+                        val executor = Executors.newSingleThreadExecutor()
+                        executor.execute {
+                            IconPackHelper.preloadIcons(this, customIconPackType, IconCacheTarget.APP_LIST)
+                        }
                         prefs.iconPackAppList = iconPackType
                         viewModel.iconPackAppList.value = iconPackType
                         prefs.customIconPackAppList = customIconPackType
