@@ -48,6 +48,7 @@
     <string name="lock_orientation">잠금 방향</string>
     <string name="search">찾다</string>
     <string name="search_engine">검색 엔진</string>
+    <string name="show_az_sidebar">Show A-Z Sidebar</string>
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="search_from_start">처음부터 앱 검색.</string>
     <string name="home_management">홈 &amp; 앱 관리</string>
