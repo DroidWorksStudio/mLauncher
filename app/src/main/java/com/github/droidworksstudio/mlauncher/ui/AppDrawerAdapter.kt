@@ -5,6 +5,7 @@
 package com.github.droidworksstudio.mlauncher.ui
 
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.content.Context
 import android.content.pm.LauncherApps
 import android.content.pm.PackageManager
@@ -16,6 +17,7 @@ import android.text.TextWatcher
 import android.util.Log
 import android.view.Gravity.LEFT
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.widget.EditText
@@ -82,6 +84,9 @@ class AppDrawerAdapter(
         return ViewHolder(binding)
     }
 
+    fun getItemAt(position: Int): AppListItem? {
+        return if (position in appsList.indices) appsList[position] else null
+    }
 
     @SuppressLint("RecyclerView")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -504,6 +509,8 @@ class AppDrawerAdapter(
                 val padding = dp2px(resources, 24)
                 appTitle.updatePadding(left = padding, right = padding)
 
+                val sidebarContainer = (context as? Activity)?.findViewById<View>(R.id.sidebar_container)!!
+
                 appTitleFrame.apply {
                     setOnClickListener {
                         appClickListener(appListItem)
@@ -516,6 +523,7 @@ class AppDrawerAdapter(
                                 appDelete.alpha =
                                     if (context.isSystemApp(appListItem.activityPackage)) 0.3f else 1.0f
                                 appHideLayout.isVisible = true
+                                sidebarContainer.isVisible = false
                                 visibleHideLayouts.add(absoluteAdapterPosition)
                             } catch (e: Exception) {
                                 e.printStackTrace()
@@ -540,8 +548,10 @@ class AppDrawerAdapter(
                 appClose.apply {
                     setOnClickListener {
                         appHideLayout.isVisible = false
-
                         visibleHideLayouts.remove(absoluteAdapterPosition)
+                        if (visibleHideLayouts.isEmpty()) {
+                            sidebarContainer.isVisible = prefs.showAZSidebar
+                        }
                     }
                 }
 

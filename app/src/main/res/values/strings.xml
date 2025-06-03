@@ -66,6 +66,7 @@
     <string name="search">Search</string>
 
     <string name="search_engine">Search Engine</string>
+    <string name="show_az_sidebar">Show A-Z Sidebar</string>
     <string name="auto_show_keyboard">Auto Show Keyboard</string>
     <string name="search_from_start">Search from Start</string>
 

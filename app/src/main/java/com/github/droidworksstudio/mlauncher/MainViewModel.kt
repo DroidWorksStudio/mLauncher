@@ -7,28 +7,36 @@ import android.content.SharedPreferences
 import android.content.pm.LauncherApps
 import android.os.Process
 import android.os.UserHandle
+import android.os.UserManager
 import android.util.Log
 import androidx.biometric.BiometricPrompt
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.github.droidworksstudio.common.CrashHandler
 import com.github.droidworksstudio.common.getLocalizedString
 import com.github.droidworksstudio.common.hideKeyboard
 import com.github.droidworksstudio.common.showShortToast
+import com.github.droidworksstudio.mlauncher.data.AppCategory
 import com.github.droidworksstudio.mlauncher.data.AppListItem
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Constants.AppDrawerFlag
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.helper.analytics.AppUsageMonitor
-import com.github.droidworksstudio.mlauncher.helper.getAppsList
 import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
 import com.github.droidworksstudio.mlauncher.helper.logActivitiesFromPackage
 import com.github.droidworksstudio.mlauncher.helper.utils.BiometricHelper
+import com.github.droidworksstudio.mlauncher.helper.utils.PrivateSpaceManager
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class MainViewModel(application: Application) : AndroidViewModel(application) {
+    private val _appScrollMap = MutableLiveData<Map<String, Int>>()
+    val appScrollMap: LiveData<Map<String, Int>> = _appScrollMap
+
     private lateinit var biometricHelper: BiometricHelper
 
     private val appContext by lazy { application.applicationContext }
@@ -282,5 +290,125 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     override fun onCleared() {
         super.onCleared()
         prefsNormal.unregisterOnSharedPreferenceChangeListener(pinnedAppsListener)
+    }
+
+    suspend fun getAppsList(
+        context: Context,
+        includeRegularApps: Boolean = true,
+        includeHiddenApps: Boolean = false,
+        includeRecentApps: Boolean = true
+    ): MutableList<AppListItem> = withContext(Dispatchers.Main) {
+
+        val fullList: MutableList<AppListItem> = mutableListOf()
+        val scrollIndexMap = mutableMapOf<Char, Int>()
+
+        Log.d(
+            "AppListDebug",
+            "🔄 getAppsList called with: includeRegular=$includeRegularApps, includeHidden=$includeHiddenApps, includeRecent=$includeRecentApps"
+        )
+        CrashHandler.logUserAction("Display App List")
+
+        try {
+            val prefs = Prefs(context)
+            val hiddenApps = prefs.hiddenApps
+            val pinnedPackages = prefs.pinnedApps.toSet()
+            val userManager = context.getSystemService(Context.USER_SERVICE) as UserManager
+            val launcherApps = context.getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps
+            val seenPackages = mutableSetOf<String>()
+
+            for (profile in userManager.userProfiles) {
+                Log.d("AppListDebug", "👤 Processing user profile: $profile")
+
+                val isPrivate = PrivateSpaceManager(context).isPrivateSpaceProfile(profile)
+                if (isPrivate && PrivateSpaceManager(context).isPrivateSpaceLocked()) {
+                    Log.d("AppListDebug", "🔒 Skipping locked private space for profile: $profile")
+                    continue
+                }
+
+                // Recent Apps
+                if (prefs.recentAppsDisplayed && includeRecentApps && fullList.none { it.category == AppCategory.RECENT }) {
+                    val tracker = AppUsageMonitor.createInstance(context)
+                    val recentApps = tracker.getLastTenAppsUsed(context)
+
+                    Log.d("AppListDebug", "🕓 Adding ${recentApps.size} recent apps")
+
+                    for ((packageName, appName, activityName) in recentApps) {
+                        if (seenPackages.contains(packageName)) continue
+                        val alias = prefs.getAppAlias(packageName).ifEmpty { appName }
+
+                        fullList.add(
+                            AppListItem(appName, packageName, activityName, profile, alias, AppCategory.RECENT)
+                        )
+                        seenPackages.add(packageName)
+                    }
+                }
+
+                // Launcher Apps
+                val launcherAppList = launcherApps.getActivityList(null, profile)
+                Log.d("AppListDebug", "📦 Found ${launcherAppList.size} launcher apps for profile: $profile")
+
+                for (activity in launcherAppList) {
+                    val packageName = activity.applicationInfo.packageName
+                    val className = activity.componentName.className
+                    val label = activity.label.toString()
+
+                    if (packageName == BuildConfig.APPLICATION_ID) continue
+                    if (seenPackages.contains(packageName)) continue
+
+                    val isHidden = hiddenApps.contains("$packageName|$profile")
+                    if ((isHidden && !includeHiddenApps) || (!isHidden && !includeRegularApps)) continue
+
+                    val alias = prefs.getAppAlias(packageName).ifEmpty {
+                        prefs.getAppAlias(label)
+                    }
+
+                    val category = when {
+                        pinnedPackages.contains(packageName) -> AppCategory.PINNED
+                        else -> AppCategory.REGULAR
+                    }
+
+                    fullList.add(
+                        AppListItem(label, packageName, className, profile, alias, category)
+                    )
+
+                    seenPackages.add(packageName)
+                }
+            }
+
+            // Sort the list: Pinned → Regular → Recent; then alphabetical within category
+            fullList.sortWith(
+                compareBy<AppListItem> { it.category.ordinal }
+                    .thenBy { it.label.lowercase() }
+            )
+
+            // Build scroll index (excluding pinned apps)
+            for ((index, item) in fullList.withIndex()) {
+                if (item.category == AppCategory.PINNED) continue
+                val firstChar = item.label.firstOrNull()?.uppercaseChar() ?: continue
+                scrollIndexMap.putIfAbsent(firstChar, index)
+            }
+
+            Log.d("AppListDebug", "✅ App list built with ${fullList.size} items")
+
+            val scrollIndexMap = mutableMapOf<String, Int>()
+
+            fullList.forEachIndexed { index, item ->
+                val key = when (item.category) {
+                    AppCategory.PINNED -> "★"
+                    else -> item.label.firstOrNull()?.uppercaseChar()?.toString() ?: "#"
+                }
+
+                if (!scrollIndexMap.containsKey(key)) {
+                    scrollIndexMap[key] = index
+                }
+            }
+
+            _appScrollMap.postValue(scrollIndexMap)  // ✅ Post the map to LiveData
+
+        } catch (e: Exception) {
+            Log.e("AppListDebug", "❌ Error building app list: ${e.message}", e)
+        }
+
+        fullList
     }
 }

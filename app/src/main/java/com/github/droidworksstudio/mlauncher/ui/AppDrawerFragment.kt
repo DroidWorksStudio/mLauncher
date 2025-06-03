@@ -19,6 +19,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import android.view.inputmethod.InputMethodManager
+import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.appcompat.widget.SearchView
 import androidx.core.net.toUri
@@ -28,6 +29,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.github.droidworksstudio.common.getLocalizedString
 import com.github.droidworksstudio.common.hasSoftKeyboard
 import com.github.droidworksstudio.common.isSystemApp
@@ -37,6 +39,7 @@ import com.github.droidworksstudio.common.searchOnPlayStore
 import com.github.droidworksstudio.common.showShortToast
 import com.github.droidworksstudio.mlauncher.MainViewModel
 import com.github.droidworksstudio.mlauncher.R
+import com.github.droidworksstudio.mlauncher.data.AppCategory
 import com.github.droidworksstudio.mlauncher.data.AppListItem
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Constants.AppDrawerFlag
@@ -71,6 +74,23 @@ class AppDrawerFragment : Fragment() {
 
         if (prefs.firstSettingsOpen) {
             prefs.firstSettingsOpen = false
+        }
+
+        binding.apply {
+            val layoutParams = sidebarContainer.layoutParams as RelativeLayout.LayoutParams
+
+            // Clear old alignment rules
+            layoutParams.removeRule(RelativeLayout.ALIGN_PARENT_START)
+            layoutParams.removeRule(RelativeLayout.ALIGN_PARENT_END)
+
+            // Apply new alignment based on prefs
+            when (prefs.drawerAlignment) {
+                Constants.Gravity.Left -> layoutParams.addRule(RelativeLayout.ALIGN_PARENT_END)
+                Constants.Gravity.Center,
+                Constants.Gravity.Right -> layoutParams.addRule(RelativeLayout.ALIGN_PARENT_START)
+            }
+
+            sidebarContainer.layoutParams = layoutParams
         }
 
         // Retrieve the letter key code from arguments
@@ -147,6 +167,14 @@ class AppDrawerFragment : Fragment() {
             ViewModelProvider(this)[MainViewModel::class.java]
         } ?: throw Exception("Invalid Activity")
 
+        viewModel.appScrollMap.observe(viewLifecycleOwner) { map ->
+            binding.azSidebar.onLetterSelected = { section ->
+                map[section]?.let { index ->
+                    binding.recyclerView.smoothScrollToPosition(index)
+                }
+            }
+        }
+
         val gravity = when (Prefs(requireContext()).drawerAlignment) {
             Constants.Gravity.Left -> Gravity.LEFT
             Constants.Gravity.Center -> Gravity.CENTER
@@ -185,6 +213,39 @@ class AppDrawerFragment : Fragment() {
 
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
         binding.recyclerView.adapter = appAdapter
+
+        var lastSectionLetter: String? = null
+
+        binding.recyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                val layoutManager = recyclerView.layoutManager as? LinearLayoutManager ?: return
+                val itemCount = layoutManager.itemCount
+                if (itemCount == 0) return
+
+                val firstVisible = layoutManager.findFirstVisibleItemPosition()
+                val lastVisible = layoutManager.findLastVisibleItemPosition()
+                if (firstVisible == RecyclerView.NO_POSITION || lastVisible == RecyclerView.NO_POSITION) return
+
+                val position = when {
+                    firstVisible <= 1 -> firstVisible
+                    lastVisible >= itemCount - 2 -> lastVisible
+                    else -> (firstVisible + lastVisible) / 2
+                }.coerceIn(0, itemCount - 1)
+
+                val item = appAdapter?.getItemAt(position) ?: return
+
+                val sectionLetter = when (item.category) {
+                    AppCategory.PINNED -> "★"
+                    else -> item.label.firstOrNull()?.uppercaseChar()?.toString() ?: return
+                }
+
+                // ✅ Skip redundant updates
+                if (sectionLetter == lastSectionLetter) return
+                lastSectionLetter = sectionLetter
+
+                binding.azSidebar.setSelectedLetter(sectionLetter)
+            }
+        })
 
         if (prefs.hideSearchView) {
             binding.search.isVisible = false
@@ -250,7 +311,6 @@ class AppDrawerFragment : Fragment() {
             }
 
         })
-
     }
 
     private fun applyTextColor(text: String, color: Int): SpannableString {
@@ -314,6 +374,7 @@ class AppDrawerFragment : Fragment() {
             if (it == appAdapter.appsList) return@Observer
             it?.let { appList ->
                 binding.listEmptyHint.isVisible = appList.isEmpty()
+                binding.sidebarContainer.isVisible = prefs.showAZSidebar
                 populateAppList(appList, appAdapter)
             }
         })

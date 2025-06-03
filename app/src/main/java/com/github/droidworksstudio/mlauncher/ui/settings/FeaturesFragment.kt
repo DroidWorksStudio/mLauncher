@@ -101,6 +101,7 @@ class FeaturesFragment : Fragment() {
         var toggledLockOrientation by remember { mutableStateOf(prefs.lockOrientation) }
 
         var selectedSearchEngine by remember { mutableStateOf(prefs.searchEngines) }
+        var toggledShowAZSidebar by remember { mutableStateOf(prefs.showAZSidebar) }
         var toggledAutoShowKeyboard by remember { mutableStateOf(prefs.autoShowKeyboard) }
         var toggledSearchFromStart by remember { mutableStateOf(prefs.searchFromStart) }
         var toggledEnableFilterStrength by remember { mutableStateOf(prefs.enableFilterStrength) }
@@ -320,6 +321,16 @@ class FeaturesFragment : Fragment() {
                             }
                         }
                     )
+                }
+            )
+
+            SettingsSwitch(
+                text = getLocalizedString(R.string.show_az_sidebar),
+                fontSize = titleFontSize,
+                defaultState = toggledShowAZSidebar,
+                onCheckedChange = {
+                    toggledShowAZSidebar = !prefs.showAZSidebar
+                    prefs.showAZSidebar = toggledShowAZSidebar
                 }
             )
 
