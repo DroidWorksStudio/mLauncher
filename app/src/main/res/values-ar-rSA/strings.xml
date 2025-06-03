@@ -48,6 +48,7 @@
     <string name="lock_orientation">اتجاه القفل</string>
     <string name="search">يبحث</string>
     <string name="search_engine">محرك البحث</string>
+    <string name="show_az_sidebar">إظهار الشريط الجانبي AZ</string>
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="search_from_start">البحث عن التطبيق من البداية</string>
     <string name="home_management">الصفحة الرئيسية &amp; إدارة التطبيقات</string>

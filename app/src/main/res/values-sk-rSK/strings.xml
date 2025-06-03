@@ -48,6 +48,7 @@
     <string name="lock_orientation">Zamknúť orientáciu</string>
     <string name="search">Hľadať</string>
     <string name="search_engine">Vyhľadávač</string>
+    <string name="show_az_sidebar">Zobraziť bočný panel AZ</string>
     <string name="auto_show_keyboard">Automaticky zobraziť klávesnicu</string>
     <string name="search_from_start">Vyhľadávanie aplikácií od začiatku.</string>
     <string name="home_management">Domov &amp; Správa aplikácií</string>

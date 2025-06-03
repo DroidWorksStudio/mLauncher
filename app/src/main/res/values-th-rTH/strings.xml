@@ -48,6 +48,7 @@
     <string name="lock_orientation">ทิศทางการล็อค</string>
     <string name="search">ค้นหา</string>
     <string name="search_engine">เครื่องมือค้นหา</string>
+    <string name="show_az_sidebar">แสดงแถบด้านข้าง AZ</string>
     <string name="auto_show_keyboard">แป้นพิมพ์แสดงอัตโนมัติ</string>
     <string name="search_from_start">ค้นหาแอปตั้งแต่เริ่มต้น</string>
     <string name="home_management">หน้าแรก &amp; การจัดการแอพ</string>
