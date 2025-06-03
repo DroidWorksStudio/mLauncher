@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Implemented Enhancements:
+
+- Implement A-Z sidebar for app drawer - ([a7337d5](https://github.com/DroidWorksStudio/mLauncher/commit/a7337d5844c7d12971847486f53962c5316b7fb5))
+
 ### Bug Fixes:
 
 - Make "Set as Default Launcher" work on all devices - ([2ba9528](https://github.com/DroidWorksStudio/mLauncher/commit/2ba9528f815b100850de4552e5fd7baf55b4375a))
