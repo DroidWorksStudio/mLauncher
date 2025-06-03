@@ -48,7 +48,7 @@
     <string name="lock_orientation">方向をロック</string>
     <string name="search">検索</string>
     <string name="search_engine">検索エンジン</string>
-    <string name="show_az_sidebar">Show A-Z Sidebar</string>
+    <string name="show_az_sidebar">AZサイドバーを表示</string>
     <string name="auto_show_keyboard">Auto show keyboard</string>
     <string name="search_from_start">最初からアプリ検索。</string>
     <string name="home_management">ホーム &amp; アプリ管理</string>
