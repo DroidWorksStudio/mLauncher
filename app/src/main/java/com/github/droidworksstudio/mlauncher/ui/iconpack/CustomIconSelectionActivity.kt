@@ -27,6 +27,7 @@ import com.github.droidworksstudio.mlauncher.helper.iconPackActions
 import com.github.droidworksstudio.mlauncher.helper.iconPackBlacklist
 import com.github.droidworksstudio.mlauncher.helper.utils.AppReloader
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import java.util.concurrent.Executors
 
 class CustomIconSelectionActivity : androidx.appcompat.app.AppCompatActivity() {
     private lateinit var prefs: Prefs
@@ -59,8 +60,11 @@ class CustomIconSelectionActivity : androidx.appcompat.app.AppCompatActivity() {
                 if (iconPackType == Constants.IconPacks.Custom) selectedPack.packageName else emptyString()
 
             if (iconPackType == Constants.IconPacks.Custom) {
-                IconPackHelper.preloadIcons(this, customIconPackType, IconCacheTarget.HOME)
-                IconPackHelper.preloadIcons(this, customIconPackType, IconCacheTarget.APP_LIST)
+                val executor = Executors.newSingleThreadExecutor()
+                executor.execute {
+                    IconPackHelper.preloadIcons(this, customIconPackType, IconCacheTarget.HOME)
+                    IconPackHelper.preloadIcons(this, customIconPackType, IconCacheTarget.APP_LIST)
+                }
             }
 
             when (iconCacheTarget) {
