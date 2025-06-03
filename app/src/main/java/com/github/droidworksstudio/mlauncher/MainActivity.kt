@@ -420,13 +420,9 @@ class MainActivity : AppCompatActivity() {
         if (context is Activity && !isDefault) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
                 val roleManager = context.getSystemService(RoleManager::class.java)
-                if (roleManager.isRoleAvailable(RoleManager.ROLE_HOME) &&
-                    !roleManager.isRoleHeld(RoleManager.ROLE_HOME)
-                ) {
-                    val intent = roleManager.createRequestRoleIntent(RoleManager.ROLE_HOME)
-                    setDefaultHomeScreenLauncher.launch(intent)
-                    return
-                }
+                val intent = roleManager.createRequestRoleIntent(RoleManager.ROLE_HOME)
+                setDefaultHomeScreenLauncher.launch(intent)
+                return
             } else {
                 // For devices below API level 29, prompt the user to set the default launcher manually
                 val intent = Intent(Settings.ACTION_HOME_SETTINGS)
@@ -443,6 +439,10 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+
+        val intent = Intent(Settings.ACTION_HOME_SETTINGS)
+        setDefaultHomeScreenLauncher.launch(intent)
+
     }
 
     fun restoreWordsBackup() {
