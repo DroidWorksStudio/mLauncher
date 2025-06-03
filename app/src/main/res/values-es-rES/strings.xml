@@ -48,7 +48,7 @@
     <string name="lock_orientation">Orientación de la cerradura</string>
     <string name="search">Buscar</string>
     <string name="search_engine">Buscador</string>
-    <string name="show_az_sidebar">Show A-Z Sidebar</string>
+    <string name="show_az_sidebar">Mostrar la barra lateral de la A a la Z</string>
     <string name="auto_show_keyboard">Teclado automático</string>
     <string name="search_from_start">Buscar aplicaciones desde el principio.</string>
     <string name="home_management">Inicio &amp; Gestión de aplicaciones</string>
