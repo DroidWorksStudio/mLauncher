@@ -29,12 +29,12 @@
     <string name="settings_notes_description">Personalisieren Sie Ihre Notizen, damit sie zu Ihrem Stil passen.</string>
     <!-- Favorite Apps -->
     <string name="settings_favorite_apps_title">Lieblings-Apps</string>
-    <string name="settings_favorite_apps_description">Select the apps you want quick access to from the home screen.</string>
+    <string name="settings_favorite_apps_description">Wählen Sie vom Startbildschirm aus die Apps aus, auf die Sie schnell zugreifen möchten.</string>
     <!-- Hidden Apps -->
     <string name="settings_hidden_apps_title">Versteckte Apps</string>
-    <string name="settings_hidden_apps_description">Hide specific apps from the app drawer to reduce clutter or enhance privacy.</string>
+    <string name="settings_hidden_apps_description">Blenden Sie bestimmte Apps aus der App-Schublade aus, um Unordnung zu vermeiden oder die Privatsphäre zu verbessern.</string>
     <string name="settings_advanced_title">Erweiterte Einstellungen</string>
-    <string name="settings_advanced_description">Access app info, default launcher , backup tools and more.</string>
+    <string name="settings_advanced_description">Greifen Sie auf App-Informationen, Standard-Launcher, Backup-Tools und mehr zu.</string>
     <string name="settings_exit_mlauncher_title">MultiLauncher beenden</string>
     <string name="settings_exit_mlauncher_description">Wechseln Sie vorübergehend zu Ihrem Standard-Launcher.</string>
     <string name="settings_exit_mlauncher_dialog">Wählen Sie einen Launcher</string>
