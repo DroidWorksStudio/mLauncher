@@ -27,9 +27,14 @@
     <string name="settings_gestures_description">تخصيص الإيماءات للتنقل السريع والسهل.</string>
     <string name="settings_notes_title">ملحوظات</string>
     <string name="settings_notes_description">قم بتخصيص ملاحظاتك لتتناسب مع أسلوبك.</string>
+    <!-- Favorite Apps -->
     <string name="settings_favorite_apps_title">التطبيقات المفضلة</string>
+    <string name="settings_favorite_apps_description">حدد التطبيقات التي تريد الوصول إليها بسرعة من الشاشة الرئيسية.</string>
+    <!-- Hidden Apps -->
     <string name="settings_hidden_apps_title">التطبيقات المخفية</string>
+    <string name="settings_hidden_apps_description">قم بإخفاء تطبيقات محددة من درج التطبيقات لتقليل الفوضى أو تعزيز الخصوصية.</string>
     <string name="settings_advanced_title">الإعدادات المتقدمة</string>
+    <string name="settings_advanced_description">الوصول إلى معلومات التطبيق، والمشغل الافتراضي، وأدوات النسخ الاحتياطي والمزيد.</string>
     <string name="settings_exit_mlauncher_title">الخروج من MultiLauncher</string>
     <string name="settings_exit_mlauncher_description">التبديل إلى المشغل الافتراضي الخاص بك مؤقتًا.</string>
     <string name="settings_exit_mlauncher_dialog">اختر مشغلًا</string>

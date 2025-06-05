@@ -27,9 +27,14 @@
     <string name="settings_gestures_description">빠르고 쉬운 탐색을 위해 제스처를 사용자 지정하세요.</string>
     <string name="settings_notes_title">노트</string>
     <string name="settings_notes_description">귀하의 스타일에 맞게 노트를 개인화하세요.</string>
+    <!-- Favorite Apps -->
     <string name="settings_favorite_apps_title">즐겨찾는 앱</string>
+    <string name="settings_favorite_apps_description">홈 화면에서 빠르게 액세스하려는 앱을 선택하세요.</string>
+    <!-- Hidden Apps -->
     <string name="settings_hidden_apps_title">Hidden apps</string>
+    <string name="settings_hidden_apps_description">앱 서랍에서 특정 앱을 숨겨서 불필요한 부분을 줄이거나 개인정보 보호를 강화하세요.</string>
     <string name="settings_advanced_title">고급 설정</string>
+    <string name="settings_advanced_description">앱 정보, 기본 실행기, 백업 도구 등에 액세스하세요.</string>
     <string name="settings_exit_mlauncher_title">MultiLauncher 종료</string>
     <string name="settings_exit_mlauncher_description">일시적으로 기본 런처로 전환합니다.</string>
     <string name="settings_exit_mlauncher_dialog">런처를 선택하세요</string>

@@ -27,9 +27,14 @@
     <string name="settings_gestures_description">Personaliza los gestos para una navegación rápida y sencilla.</string>
     <string name="settings_notes_title">Notas</string>
     <string name="settings_notes_description">Personaliza tus notas para que coincidan con tu estilo.</string>
+    <!-- Favorite Apps -->
     <string name="settings_favorite_apps_title">Aplicaciones favoritas</string>
+    <string name="settings_favorite_apps_description">Seleccione las aplicaciones a las que desea acceder rápidamente desde la pantalla de inicio.</string>
+    <!-- Hidden Apps -->
     <string name="settings_hidden_apps_title">Aplicaciones ocultas</string>
+    <string name="settings_hidden_apps_description">Oculte aplicaciones específicas del cajón de aplicaciones para reducir el desorden o mejorar la privacidad.</string>
     <string name="settings_advanced_title">Configuración avanzada</string>
+    <string name="settings_advanced_description">Acceda a la información de la aplicación, al iniciador predeterminado, a las herramientas de respaldo y más.</string>
     <string name="settings_exit_mlauncher_title">Salir de MultiLauncher</string>
     <string name="settings_exit_mlauncher_description">Cambie a su iniciador predeterminado temporalmente.</string>
     <string name="settings_exit_mlauncher_dialog">Elige un lanzador</string>

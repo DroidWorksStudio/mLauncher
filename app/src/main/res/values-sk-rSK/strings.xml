@@ -27,9 +27,14 @@
     <string name="settings_gestures_description">Prispôsobte si gestá pre rýchlu a jednoduchú navigáciu.</string>
     <string name="settings_notes_title">Poznámky</string>
     <string name="settings_notes_description">Prispôsobte si poznámky tak, aby zodpovedali vášmu štýlu.</string>
+    <!-- Favorite Apps -->
     <string name="settings_favorite_apps_title">Obľúbené aplikácie</string>
+    <string name="settings_favorite_apps_description">Vyberte aplikácie, ku ktorým chcete mať rýchly prístup z domovskej obrazovky.</string>
+    <!-- Hidden Apps -->
     <string name="settings_hidden_apps_title">Skryté aplikácie</string>
+    <string name="settings_hidden_apps_description">Skryte konkrétne aplikácie zo zásuvky aplikácií, aby ste znížili neporiadok alebo zvýšili súkromie.</string>
     <string name="settings_advanced_title">Rozšírené nastavenia</string>
+    <string name="settings_advanced_description">Prístup k informáciám o aplikácii, predvolenému spúšťaču, nástrojom na zálohovanie a ďalším funkciám.</string>
     <string name="settings_exit_mlauncher_title">Ukončite MultiLauncher</string>
     <string name="settings_exit_mlauncher_description">Dočasne prepnite na predvolený spúšťač.</string>
     <string name="settings_exit_mlauncher_dialog">Vyberte spúšťač</string>
