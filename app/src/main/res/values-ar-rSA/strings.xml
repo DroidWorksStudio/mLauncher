@@ -35,8 +35,8 @@
     <string name="settings_hidden_apps_description">قم بإخفاء تطبيقات محددة من درج التطبيقات لتقليل الفوضى أو تعزيز الخصوصية.</string>
     <string name="settings_advanced_title">الإعدادات المتقدمة</string>
     <string name="settings_advanced_description">الوصول إلى معلومات التطبيق، والمشغل الافتراضي، وأدوات النسخ الاحتياطي والمزيد.</string>
-    <string name="settings_experimental_title">Experimental</string>
-    <string name="settings_experimental_description">Unlock hidden options, and advanced tweaks.</string>
+    <string name="settings_experimental_title">تجريبي</string>
+    <string name="settings_experimental_description">افتح الخيارات المخفية والتعديلات المتقدمة.</string>
     <string name="settings_exit_mlauncher_title">الخروج من MultiLauncher</string>
     <string name="settings_exit_mlauncher_description">التبديل إلى المشغل الافتراضي الخاص بك مؤقتًا.</string>
     <string name="settings_exit_mlauncher_dialog">اختر مشغلًا</string>
@@ -189,9 +189,9 @@
     <string name="advanced_settings_share_application_title">مشاركة التطبيق</string>
     <string name="advanced_settings_share_application_description">قم بترقية تجربتك مع %1$s!</string>
     <string name="advanced_settings_share_application_description_addon">احصل عليه الآن على %1$s وشاهد ما يتحدث عنه الجميع! %2$s\n</string>
-    <string name="experimental_settings_title">Experimental</string>
-    <string name="experimental_options_unlocked">Experimental Options Unlocked!</string>
-    <string name="experimental_options_tap_hint">%1$d more taps to unlock</string>
+    <string name="experimental_settings_title">تجريبي</string>
+    <string name="experimental_options_unlocked">تم فتح الخيارات التجريبية!</string>
+    <string name="experimental_options_tap_hint">%1$d المزيد من النقرات لفتح القفل</string>
     <!-- App Page Strings -->
     <string name="hidden_apps">التطبيقات المخفية</string>
     <string name="favorite_apps">التطبيقات المفضلة</string>
