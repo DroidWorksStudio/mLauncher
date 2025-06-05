@@ -20,10 +20,12 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Versioning:
 
+- Increment build number - ([7ea8525](https://github.com/DroidWorksStudio/mLauncher/commit/7ea852506f53b8435496bd068ec1d45c259a7c0e))
 - Update build version - ([3505161](https://github.com/DroidWorksStudio/mLauncher/commit/35051613b98a3e3192ec78b9b2cfc0328e55f678))
 
 ### Language Support:
 
+- Updated Language Files. ([#777](https://github.com/DroidWorksStudio/mLauncher/issues/777)) - ([fef9c82](https://github.com/DroidWorksStudio/mLauncher/commit/fef9c828158074ab0cc8ba02cecd180b4b60458c))
 - Updated Language Files. ([#776](https://github.com/DroidWorksStudio/mLauncher/issues/776)) - ([bb49ca7](https://github.com/DroidWorksStudio/mLauncher/commit/bb49ca7ad606da0026792c65ac4b6ca3a4e093a9))
 - Updated Language Files. ([#772](https://github.com/DroidWorksStudio/mLauncher/issues/772)) - ([214731e](https://github.com/DroidWorksStudio/mLauncher/commit/214731e37bd0afd7fec47e209e6f983d4986bc57))
 
