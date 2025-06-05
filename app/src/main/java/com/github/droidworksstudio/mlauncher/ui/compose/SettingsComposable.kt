@@ -15,8 +15,11 @@ import androidx.compose.material.SwitchDefaults
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -31,6 +34,9 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.github.droidworksstudio.mlauncher.style.SettingsTheme
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 object SettingsComposable {
 
@@ -111,49 +117,79 @@ object SettingsComposable {
         description: String? = null,
         imageVector: ImageVector,
         onClick: () -> Unit = {},
+        onMultiClick: (Int) -> Unit = {}, // now takes tap count
+        enableMultiClick: Boolean = false,
         titleFontSize: TextUnit = TextUnit.Unspecified,
         descriptionFontSize: TextUnit = TextUnit.Unspecified,
         fontColor: Color = SettingsTheme.typography.title.color,
         iconSize: Dp = 18.dp,
+        multiClickCount: Int = 5,
+        multiClickInterval: Long = 2000L
     ) {
+        var tapCount by remember { mutableIntStateOf(0) }
+        var lastTapTime by remember { mutableLongStateOf(0L) }
+
+        val scope = rememberCoroutineScope()
+        var clickJob by remember { mutableStateOf<Job?>(null) }
+
         Row(
             modifier = Modifier
                 .fillMaxWidth()
                 .clickable {
-                    onClick()
+                    if (!enableMultiClick) {
+                        onClick()
+                        return@clickable
+                    }
+
+                    val currentTime = System.currentTimeMillis()
+                    if (currentTime - lastTapTime > multiClickInterval) {
+                        tapCount = 0
+                    }
+
+                    tapCount++
+                    lastTapTime = currentTime
+                    clickJob?.cancel()
+
+                    if (tapCount >= multiClickCount) {
+                        tapCount = 0
+                        onMultiClick(multiClickCount)
+                    } else {
+                        onMultiClick(tapCount)
+                        clickJob = scope.launch {
+                            delay(multiClickInterval)
+                            if (tapCount == 1) {
+                                onClick()
+                            }
+                            tapCount = 0
+                        }
+                    }
                 }
-                .padding(
-                    vertical = 16.dp,
-                    horizontal = 16.dp
-                ),
+
+                .padding(vertical = 16.dp, horizontal = 16.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
             Image(
-                imageVector,
+                imageVector = imageVector,
                 contentDescription = title,
                 colorFilter = ColorFilter.tint(SettingsTheme.color.image),
-                modifier = Modifier
-                    .size(iconSize)
+                modifier = Modifier.size(iconSize)
             )
 
-            Spacer(
-                modifier = Modifier
-                    .width(16.dp)
-            )
+            Spacer(modifier = Modifier.width(16.dp))
 
             Column {
                 Text(
                     text = title,
                     style = SettingsTheme.typography.title,
                     fontSize = titleFontSize,
-                    color = fontColor,
+                    color = fontColor
                 )
                 description?.let {
                     Text(
                         text = it,
                         style = SettingsTheme.typography.title,
                         fontSize = descriptionFontSize,
-                        color = fontColor,
+                        color = fontColor
                     )
                 }
             }

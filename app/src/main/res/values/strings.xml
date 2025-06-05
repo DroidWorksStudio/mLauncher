@@ -47,6 +47,10 @@
     <string name="settings_advanced_title">Advanced</string>
     <string name="settings_advanced_description">Access app info, default launcher , backup tools and more.</string>
 
+    <string name="settings_experimental_title">Experimental</string>
+    <string name="settings_experimental_description">Unlock hidden options, and advanced tweaks.</string>
+
+
     <string name="settings_exit_mlauncher_title">Exit MultiLauncher</string>
     <string name="settings_exit_mlauncher_description">Switch to your default launcher temporarily.</string>
     <string name="settings_exit_mlauncher_dialog">Choose a launcher</string>
@@ -248,6 +252,11 @@
     <string name="advanced_settings_share_application_title">Share Application</string>
     <string name="advanced_settings_share_application_description">Elevate your experience with %1$s!</string>
     <string name="advanced_settings_share_application_description_addon">Get it now on %1$s and see what everyone is talking about! %2$s\n</string>
+
+    <string name="experimental_settings_title">Experimental</string>
+
+    <string name="experimental_options_unlocked">Experimental Options Unlocked!</string>
+    <string name="experimental_options_tap_hint">%1$d more taps to unlock</string>
 
     <!-- App Page Strings -->
     <string name="hidden_apps">Hidden Apps</string>

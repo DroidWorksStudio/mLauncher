@@ -36,6 +36,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.github.droidworksstudio.common.getLocalizedString
 import com.github.droidworksstudio.common.share.ShareUtils
+import com.github.droidworksstudio.common.showInstantToast
 import com.github.droidworksstudio.common.showShortToast
 import com.github.droidworksstudio.mlauncher.BuildConfig
 import com.github.droidworksstudio.mlauncher.MainActivity
@@ -157,6 +158,17 @@ class AdvancedFragment : Fragment() {
                         BuildConfig.APPLICATION_ID
                     )
                 },
+                enableMultiClick = true,
+                onMultiClick = { count ->
+                    if (!prefs.enableExperimentalOptions) {
+                        if (count in 2..4) {
+                            showInstantToast(getLocalizedString(R.string.experimental_options_tap_hint, count))
+                        } else if (count == 5) {
+                            showInstantToast(getLocalizedString(R.string.experimental_options_unlocked))
+                            prefs.enableExperimentalOptions = !prefs.enableExperimentalOptions
+                        }
+                    }
+                }
             )
 
             SettingsHomeItem(

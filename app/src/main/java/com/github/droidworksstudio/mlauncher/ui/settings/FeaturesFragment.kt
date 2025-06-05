@@ -95,7 +95,6 @@ class FeaturesFragment : Fragment() {
         var selectedTheme by remember { mutableStateOf(prefs.appTheme) }
         var selectedLanguage by remember { mutableStateOf(prefs.appLanguage) }
         var selectedFontFamily by remember { mutableStateOf(prefs.fontFamily) }
-        var selectedSettingsSize by remember { mutableIntStateOf(prefs.settingsSize) }
         var toggledHideSearchView by remember { mutableStateOf(prefs.hideSearchView) }
         var toggledFloating by remember { mutableStateOf(prefs.showFloating) }
         var toggledLockOrientation by remember { mutableStateOf(prefs.lockOrientation) }
@@ -231,26 +230,6 @@ class FeaturesFragment : Fragment() {
                     )
                 }
 
-            )
-
-
-            SettingsSelect(
-                title = getLocalizedString(R.string.settings_text_size),
-                option = selectedSettingsSize.toString(),
-                fontSize = titleFontSize,
-                onClick = {
-                    dialogBuilder.showSliderDialog(
-                        context = requireContext(),
-                        title = getLocalizedString(R.string.settings_text_size),
-                        minValue = Constants.MIN_TEXT_SIZE,
-                        maxValue = Constants.MAX_TEXT_SIZE,
-                        currentValue = prefs.settingsSize,
-                        onValueSelected = { newSettingsSize ->
-                            selectedSettingsSize = newSettingsSize // Update state
-                            prefs.settingsSize = newSettingsSize // Persist selection in preferences
-                        }
-                    )
-                }
             )
 
             SettingsSwitch(

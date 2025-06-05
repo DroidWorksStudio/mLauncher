@@ -246,6 +246,20 @@ class SettingsFragment : Fragment() {
                 },
             )
 
+            if (prefs.enableExperimentalOptions) {
+                SettingsHomeItem(
+                    title = getLocalizedString(R.string.settings_experimental_title),
+                    description = getLocalizedString(R.string.settings_experimental_description),
+                    imageVector = ImageVector.vectorResource(id = R.drawable.ic_experimental),
+                    titleFontSize = titleFontSize,
+                    descriptionFontSize = descriptionFontSize,
+                    iconSize = iconSize,
+                    onClick = {
+                        showExperimentalSettings()
+                    },
+                )
+            }
+
             // 👇 This spacer pushes the next item (donation) to the bottom
             Spacer(modifier = Modifier.weight(1f))
 
@@ -330,6 +344,12 @@ class SettingsFragment : Fragment() {
     private fun showAdvancedSettings() {
         findNavController().navigate(
             R.id.action_settingsFragment_to_settingsAdvancedFragment,
+        )
+    }
+
+    private fun showExperimentalSettings() {
+        findNavController().navigate(
+            R.id.action_settingsFragment_to_settingsExperimentalFragment,
         )
     }
 }

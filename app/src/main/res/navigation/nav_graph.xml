@@ -121,6 +121,14 @@
             app:exitAnim="@anim/nav_default_exit_anim"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+        <action
+            android:id="@+id/action_settingsFragment_to_settingsExperimentalFragment"
+            app:destination="@id/settingsExperimentalFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
     </fragment>
 
     <fragment
@@ -160,5 +168,11 @@
         android:id="@+id/settingsAdvancedFragment"
         android:name="com.github.droidworksstudio.mlauncher.ui.settings.AdvancedFragment"
         android:label="settingsAdvancedFragment"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/settingsExperimentalFragment"
+        android:name="com.github.droidworksstudio.mlauncher.ui.settings.ExperimentalFragment"
+        android:label="settingsExperimentalFragment"
         tools:layout="@layout/fragment_settings" />
 </navigation>
