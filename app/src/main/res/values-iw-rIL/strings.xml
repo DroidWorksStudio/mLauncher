@@ -27,9 +27,14 @@
     <string name="settings_gestures_description">התאמה אישית של מחוות לניווט מהיר וקל.</string>
     <string name="settings_notes_title">הערות</string>
     <string name="settings_notes_description">התאם אישית את ההערות שלך כך שיתאימו לסגנון שלך.</string>
+    <!-- Favorite Apps -->
     <string name="settings_favorite_apps_title">יישומים מועדפים</string>
+    <string name="settings_favorite_apps_description">Select the apps you want quick access to from the home screen.</string>
+    <!-- Hidden Apps -->
     <string name="settings_hidden_apps_title">יישומים מוסתרים</string>
+    <string name="settings_hidden_apps_description">Hide specific apps from the app drawer to reduce clutter or enhance privacy.</string>
     <string name="settings_advanced_title">הגדרות מתקדמות</string>
+    <string name="settings_advanced_description">Access app info, default launcher , backup tools and more.</string>
     <string name="settings_exit_mlauncher_title">צא מ-MultiLauncher</string>
     <string name="settings_exit_mlauncher_description">עבור למפעיל ברירת המחדל שלך באופן זמני.</string>
     <string name="settings_exit_mlauncher_dialog">בחר משגר</string>
