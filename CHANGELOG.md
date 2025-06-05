@@ -12,6 +12,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Bug Fixes:
 
+- Use locale for date/time formatting - ([a2ea3c1](https://github.com/DroidWorksStudio/mLauncher/commit/a2ea3c1ff6fe88ac3537846b5aeee3002642db2b))
 - Lock to current orientation when lock is enabled - ([8710930](https://github.com/DroidWorksStudio/mLauncher/commit/87109302135a8686472de1a38f0819e44ed31a6c))
 - Make "Set as Default Launcher" work on all devices - ([2ba9528](https://github.com/DroidWorksStudio/mLauncher/commit/2ba9528f815b100850de4552e5fd7baf55b4375a))
 
