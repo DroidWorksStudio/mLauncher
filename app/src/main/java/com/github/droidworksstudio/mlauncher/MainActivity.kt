@@ -139,8 +139,13 @@ class MainActivity : AppCompatActivity() {
         // Initialize com.github.droidworksstudio.common.CrashHandler to catch uncaught exceptions
         Thread.setDefaultUncaughtExceptionHandler(CrashHandler(applicationContext))
 
+        val currentOrientation = resources.configuration.orientation
         requestedOrientation = if (prefs.lockOrientation) {
-            ActivityInfo.SCREEN_ORIENTATION_LOCKED
+            if (currentOrientation == Configuration.ORIENTATION_LANDSCAPE) {
+                ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
+            } else {
+                ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+            }
         } else {
             ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
         }
