@@ -212,6 +212,7 @@ class SettingsFragment : Fragment() {
 
             SettingsHomeItem(
                 title = getLocalizedString(R.string.settings_favorite_apps_title),
+                description = getLocalizedString(R.string.settings_favorite_apps_description),
                 imageVector = ImageVector.vectorResource(id = R.drawable.ic_favorite),
                 titleFontSize = titleFontSize,
                 descriptionFontSize = descriptionFontSize,
@@ -223,6 +224,7 @@ class SettingsFragment : Fragment() {
 
             SettingsHomeItem(
                 title = getLocalizedString(R.string.settings_hidden_apps_title),
+                description = getLocalizedString(R.string.settings_hidden_apps_description),
                 imageVector = ImageVector.vectorResource(id = R.drawable.ic_hidden),
                 titleFontSize = titleFontSize,
                 descriptionFontSize = descriptionFontSize,
@@ -234,6 +236,7 @@ class SettingsFragment : Fragment() {
 
             SettingsHomeItem(
                 title = getLocalizedString(R.string.settings_advanced_title),
+                description = getLocalizedString(R.string.settings_advanced_description),
                 imageVector = ImageVector.vectorResource(id = R.drawable.ic_advanced),
                 titleFontSize = titleFontSize,
                 descriptionFontSize = descriptionFontSize,
