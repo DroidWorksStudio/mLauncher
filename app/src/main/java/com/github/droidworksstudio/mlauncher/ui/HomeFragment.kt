@@ -249,22 +249,26 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     }
 
     private fun updateUIFromPreferences() {
-        val timezone = prefs.appLanguage.timezone()
+        val locale = prefs.appLanguage.locale()
         val is24HourFormat = DateFormat.is24HourFormat(requireContext())
 
         binding.apply {
-            val best12 = DateFormat.getBestDateTimePattern(
-                timezone,
-                if (prefs.showClockFormat) "hhmma" else "hhmm"
-            ).let {
-                if (!prefs.showClockFormat) it.removeSuffix(" a") else it
+            val best12Raw = DateFormat.getBestDateTimePattern(locale, "hm") // 12-hour with AM/PM
+            val best12 = if (prefs.showClockFormat) {
+                best12Raw // keep AM/PM
+            } else {
+                best12Raw.replace("a", "").trim() // strip AM/PM
             }
-            val best24 = DateFormat.getBestDateTimePattern(timezone, "HHmm")
+
+            val best24 = DateFormat.getBestDateTimePattern(locale, "Hm") // 24-hour
+
             val timePattern = if (is24HourFormat) best24 else best12
+
             clock.format12Hour = timePattern
             clock.format24Hour = timePattern
 
-            val datePattern = DateFormat.getBestDateTimePattern(timezone, "eeeddMMM")
+            // Date format
+            val datePattern = DateFormat.getBestDateTimePattern(locale, "EEEddMMM")
             date.format12Hour = datePattern
             date.format24Hour = datePattern
 
@@ -297,7 +301,30 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     }
 
     private fun updateTimeAndInfo() {
+        val locale = prefs.appLanguage.locale()
+        val is24HourFormat = DateFormat.is24HourFormat(requireContext())
+
         binding.apply {
+
+            val best12Raw = DateFormat.getBestDateTimePattern(locale, "hm") // 12-hour with AM/PM
+            val best12 = if (prefs.showClockFormat) {
+                best12Raw // keep AM/PM
+            } else {
+                best12Raw.replace("a", "").trim() // strip AM/PM
+            }
+
+            val best24 = DateFormat.getBestDateTimePattern(locale, "Hm") // 24-hour
+
+            val timePattern = if (is24HourFormat) best24 else best12
+
+            clock.format12Hour = timePattern
+            clock.format24Hour = timePattern
+
+            // Date format
+            val datePattern = DateFormat.getBestDateTimePattern(locale, "EEEddMMM")
+            date.format12Hour = datePattern
+            date.format24Hour = datePattern
+
             alarm.text = getNextAlarm(requireContext(), prefs)
             dailyWord.text = wordOfTheDay(prefs)
         }
