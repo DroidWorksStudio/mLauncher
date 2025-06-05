@@ -35,6 +35,8 @@
     <string name="settings_hidden_apps_description">Blenden Sie bestimmte Apps aus der App-Schublade aus, um Unordnung zu vermeiden oder die Privatsphäre zu verbessern.</string>
     <string name="settings_advanced_title">Erweiterte Einstellungen</string>
     <string name="settings_advanced_description">Greifen Sie auf App-Informationen, Standard-Launcher, Backup-Tools und mehr zu.</string>
+    <string name="settings_experimental_title">Experimental</string>
+    <string name="settings_experimental_description">Unlock hidden options, and advanced tweaks.</string>
     <string name="settings_exit_mlauncher_title">MultiLauncher beenden</string>
     <string name="settings_exit_mlauncher_description">Wechseln Sie vorübergehend zu Ihrem Standard-Launcher.</string>
     <string name="settings_exit_mlauncher_dialog">Wählen Sie einen Launcher</string>
@@ -187,6 +189,9 @@
     <string name="advanced_settings_share_application_title">Anwendung teilen</string>
     <string name="advanced_settings_share_application_description">Erweitern Sie Ihr Erlebnis mit %1$s!</string>
     <string name="advanced_settings_share_application_description_addon">Hol es dir jetzt auf %1$s und sieh, worüber alle reden! %2$s\n</string>
+    <string name="experimental_settings_title">Experimental</string>
+    <string name="experimental_options_unlocked">Experimental Options Unlocked!</string>
+    <string name="experimental_options_tap_hint">%1$d more taps to unlock</string>
     <!-- App Page Strings -->
     <string name="hidden_apps">Versteckte Apps</string>
     <string name="favorite_apps">Lieblings-Apps</string>
