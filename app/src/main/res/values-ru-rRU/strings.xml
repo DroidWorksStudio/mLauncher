@@ -27,9 +27,14 @@
     <string name="settings_gestures_description">Настройте жесты для быстрой и легкой навигации.</string>
     <string name="settings_notes_title">Примечания</string>
     <string name="settings_notes_description">Персонализируйте свои заметки в соответствии со своим стилем.</string>
+    <!-- Favorite Apps -->
     <string name="settings_favorite_apps_title">Любимые приложения</string>
+    <string name="settings_favorite_apps_description">Выберите приложения, к которым вы хотите получить быстрый доступ с главного экрана.</string>
+    <!-- Hidden Apps -->
     <string name="settings_hidden_apps_title">Скрытые приложения</string>
+    <string name="settings_hidden_apps_description">Скройте определенные приложения из панели приложений, чтобы уменьшить беспорядок или повысить конфиденциальность.</string>
     <string name="settings_advanced_title">Расширенные настройки</string>
+    <string name="settings_advanced_description">Доступ к информации о приложении, средству запуска по умолчанию, инструментам резервного копирования и многому другому.</string>
     <string name="settings_exit_mlauncher_title">Выйти из MultiLauncher</string>
     <string name="settings_exit_mlauncher_description">Временно переключитесь на средство запуска по умолчанию.</string>
     <string name="settings_exit_mlauncher_dialog">Выберите лаунчер</string>

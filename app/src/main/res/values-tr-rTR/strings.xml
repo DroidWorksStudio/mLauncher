@@ -27,9 +27,14 @@
     <string name="settings_gestures_description">Hızlı ve kolay gezinme için hareketleri özelleştirin.</string>
     <string name="settings_notes_title">Notlar</string>
     <string name="settings_notes_description">Notlarınızı tarzınıza uyacak şekilde kişiselleştirin.</string>
+    <!-- Favorite Apps -->
     <string name="settings_favorite_apps_title">Favori Uygulamalar</string>
+    <string name="settings_favorite_apps_description">Ana ekrandan hızlı erişim sağlamak istediğiniz uygulamaları seçin.</string>
+    <!-- Hidden Apps -->
     <string name="settings_hidden_apps_title">Gizli uygulamalar</string>
+    <string name="settings_hidden_apps_description">Dağınıklığı azaltmak veya gizliliği artırmak için uygulama çekmecesinden belirli uygulamaları gizleyin.</string>
     <string name="settings_advanced_title">Gelişmiş Ayarlar</string>
+    <string name="settings_advanced_description">Uygulama bilgilerine, varsayılan başlatıcıya, yedekleme araçlarına ve daha fazlasına erişin.</string>
     <string name="settings_exit_mlauncher_title">MultiLauncher\'dan çık</string>
     <string name="settings_exit_mlauncher_description">Geçici olarak varsayılan başlatıcınıza geçin.</string>
     <string name="settings_exit_mlauncher_dialog">Bir başlatıcı seçin</string>
