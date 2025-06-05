@@ -7,6 +7,8 @@ All notable changes to this project will be documented in this file. See [conven
 ### Implemented Enhancements:
 
 - *(performance)* Use background thread for icon preloading - ([5f4882f](https://github.com/DroidWorksStudio/mLauncher/commit/5f4882fbf1d42f5a8565e1ba0c581b6d274431f6))
+- Added experimental options - ([e2cb436](https://github.com/DroidWorksStudio/mLauncher/commit/e2cb436762fb587cc986dc9672c473b2f0870d0e))
+- Implement custom toast notifications - ([18f1dc5](https://github.com/DroidWorksStudio/mLauncher/commit/18f1dc5d68e67c4a23b7de4d9627f2492b87d8bc))
 - Add descriptions to settings items - ([2817236](https://github.com/DroidWorksStudio/mLauncher/commit/28172361ed87f2fb8a48286c2d41740ad0016c9c))
 - Implement A-Z sidebar for app drawer - ([a7337d5](https://github.com/DroidWorksStudio/mLauncher/commit/a7337d5844c7d12971847486f53962c5316b7fb5))
 
