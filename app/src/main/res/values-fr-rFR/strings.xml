@@ -35,6 +35,8 @@
     <string name="settings_hidden_apps_description">Masquez des applications spécifiques du tiroir d\'applications pour réduire l\'encombrement ou améliorer la confidentialité.</string>
     <string name="settings_advanced_title">Paramètres avancés</string>
     <string name="settings_advanced_description">Accédez aux informations de l\'application, au lanceur par défaut, aux outils de sauvegarde et plus encore.</string>
+    <string name="settings_experimental_title">Expérimental</string>
+    <string name="settings_experimental_description">Débloquez des options cachées et des réglages avancés.</string>
     <string name="settings_exit_mlauncher_title">Quitter MultiLauncher</string>
     <string name="settings_exit_mlauncher_description">Basculez temporairement vers votre lanceur par défaut.</string>
     <string name="settings_exit_mlauncher_dialog">Choisissez un lanceur</string>
@@ -187,6 +189,9 @@
     <string name="advanced_settings_share_application_title">Demande de partage</string>
     <string name="advanced_settings_share_application_description">Améliorez votre expérience avec %1$s!</string>
     <string name="advanced_settings_share_application_description_addon">Obtenez-le maintenant sur %1$s et voyez de quoi tout le monde parle ! %2$s\n</string>
+    <string name="experimental_settings_title">Expérimental</string>
+    <string name="experimental_options_unlocked">Options expérimentales débloquées !</string>
+    <string name="experimental_options_tap_hint">%1$d plus de clics pour déverrouiller</string>
     <!-- App Page Strings -->
     <string name="hidden_apps">Applications masquées</string>
     <string name="favorite_apps">Applications préférées</string>

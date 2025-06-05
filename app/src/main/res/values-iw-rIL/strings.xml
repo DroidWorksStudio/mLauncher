@@ -35,6 +35,8 @@
     <string name="settings_hidden_apps_description">הסתר אפליקציות ספציפיות ממגירת האפליקציות כדי להפחית עומס או לשפר את הפרטיות.</string>
     <string name="settings_advanced_title">הגדרות מתקדמות</string>
     <string name="settings_advanced_description">גישה למידע על אפליקציות, מפעיל ברירת מחדל, כלי גיבוי ועוד.</string>
+    <string name="settings_experimental_title">נִסיוֹנִי</string>
+    <string name="settings_experimental_description">פתח אפשרויות נסתרות ושיפורים מתקדמים.</string>
     <string name="settings_exit_mlauncher_title">צא מ-MultiLauncher</string>
     <string name="settings_exit_mlauncher_description">עבור למפעיל ברירת המחדל שלך באופן זמני.</string>
     <string name="settings_exit_mlauncher_dialog">בחר משגר</string>
@@ -187,6 +189,9 @@
     <string name="advanced_settings_share_application_title">שתף את היישום</string>
     <string name="advanced_settings_share_application_description">שפר את החוויה שלך עם %1$s!</string>
     <string name="advanced_settings_share_application_description_addon">השג אותו עכשיו ב- %1$s וראה על מה כולם מדברים! %2$s\n</string>
+    <string name="experimental_settings_title">נִסיוֹנִי</string>
+    <string name="experimental_options_unlocked">אפשרויות ניסיוניות פתוחות!</string>
+    <string name="experimental_options_tap_hint">%1$d עוד נגיעות לפתיחה</string>
     <!-- App Page Strings -->
     <string name="hidden_apps">יישומים מוסתרים</string>
     <string name="favorite_apps">יישומים מועדפים</string>
