@@ -253,7 +253,11 @@
     <string name="advanced_settings_share_application_description">Elevate your experience with %1$s!</string>
     <string name="advanced_settings_share_application_description_addon">Get it now on %1$s and see what everyone is talking about! %2$s\n</string>
 
+
+    <!-- Strings used for experimental settings -->
     <string name="experimental_settings_title">Experimental</string>
+
+    <string name="experimental_options_display">Show Experimental Options</string>
 
     <string name="experimental_options_unlocked">Experimental Options Unlocked!</string>
     <string name="experimental_options_tap_hint">%1$d more taps to unlock</string>
