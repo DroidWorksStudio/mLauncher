@@ -1,31 +1,31 @@
-name: Bug report
-description: Create a bug report
-labels: [ "Type: Bug Report" ]
-title: "[Bug Report] add text here"
+name: Crash Report
+description: Create a report with a generated crash log attached (if possible) to help MultiLauncher improve
+labels: [ "Type: Crash Report" ]
+title: "[Crash Report] add text here"
 assignees: [ "CreativeCodeCat" ]
 body:
   - type: markdown
     attributes:
       value: |
-        Thank you for helping we to make MultiLauncher better by reporting a bug. :hugs:
-        Please fill in as much information as possible about your bug so that we can fix it faster.
+        Thank you for helping me to make MultiLauncher better by reporting a crash. :hugs:
+        Please fill in as much information as possible about your crash so that I can fix it immediately.
 
   - type: checkboxes
     id: checklist
     attributes:
       label: "Checklist"
       options:
-        - label: "I will make sure to have the issue written in English with an English title."
+        - label: "I have written the crash report in English with a clear and descriptive title."
           required: true
-        - label: "I made sure that there are **no existing issues** - [open](https://github.com/DroidWorksStudio/mLauncher/issues) or [closed](https://github.com/DroidWorksStudio/mLauncher/issues?q=is%3Aissue+is%3Aclosed) - which I could contribute my information to."
+        - label: "I have tested the latest release from GitHub to confirm that the issue still exists."
           required: true
-        - label: "Yes, I have reviewed the [Known Issues](https://github.com/DroidWorksStudio/mLauncher/blob/main/KnownIssues.md) and my issue is not listed."
+        - label: "I have checked the [changelogs](https://github.com/DroidWorksStudio/mLauncher/blob/main/CHANGELOG.md) to ensure this crash hasn't already been addressed."
           required: true
-        - label: "I've verified that this issue hasn't been addressed in the [changelogs](https://github.com/DroidWorksStudio/mLauncher/blob/main/CHANGELOG.md)."
+        - label: "I have provided clear steps to reproduce the crash, if possible."
           required: true
-        - label: "I have taken the time to fill in all the required details. I understand that the bug report will be dismissed otherwise."
+        - label: "I have included logs, screenshots, or crash dumps where relevant."
           required: true
-        - label: "This issue contains only one bug."
+        - label: "I have created a title that clearly summarizes the crash or its trigger condition."
           required: true
         - label: "I optionally [donated](https://www.buymeacoffee.com/CreativeCodeCat) to support the MultiLauncher mission."
           required: false
@@ -34,7 +34,7 @@ body:
     id: app-version
     attributes:
       label: App version
-      description: "In which version did you encounter the bug?"
+      description: "In which version did you encounter the crash?"
       placeholder: "xx.xx - Can be seen in the app from the 'Settings' section"
     validations:
       required: true
@@ -44,7 +44,7 @@ body:
     attributes:
       label: Android version
       description: |
-        With what operating system (+ version) did you encounter the bug?
+        With what operating system (+ version) did you encounter the crash?
       placeholder: "Example: Android 10"
     validations:
       required: true
@@ -63,11 +63,11 @@ body:
       required: true
 
   - type: textarea
-    id: bug-description
+    id: crash-description
     attributes:
-      label: Bug description
+      label: Crash description
       description: |
-        Please give us a description of what the bug is about.
+        Please give us a description of what the crash is about.
       placeholder: |
         When I try to set the language to english, the app crashes.
     validations:
@@ -76,10 +76,10 @@ body:
   - type: textarea
     id: steps-to-reproduce
     attributes:
-      label: Steps to reproduce the bug
+      label: Steps to reproduce the crash
       description: |
-        What did you do for the bug to show up?
-        If you can't cause the bug to show up again reliably (and hence don't have a proper set of steps to give us), please still try to give as many details as possible on how you think you encountered the bug.
+        What did you do for the crash to show up?
+        If you can't cause the crash to show up again reliably (and hence don't have a proper set of steps to give us), please still try to give as many details as possible on how you think you encountered the crash.
       placeholder: |
         1. Go to '...'
         2. Press on '....'
@@ -115,7 +115,7 @@ body:
     attributes:
       label: Logs
       description: |
-        If you could catch the log of the bug, don't forget to share it. This is the best way to point out any bug.
+        If you could catch the log of the crash, don't forget to share it. This is the best way to point out any crash.
 
   - type: textarea
     id: additional-information

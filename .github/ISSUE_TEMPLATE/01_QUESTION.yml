@@ -14,15 +14,15 @@ body:
     attributes:
       label: "Checklist"
       options:
-        - label: "I will make sure to have the issue written in English with an English title."
+        - label: "I have clearly stated my question in English with a descriptive title."
           required: true
-        - label: "I made sure that there are **no existing issues** - [open](https://github.com/DroidWorksStudio/mLauncher/issues) or [closed](https://github.com/DroidWorksStudio/mLauncher/issues?q=is%3Aissue+is%3Aclosed) - which I could contribute my information to."
+        - label: "I have searched the [open](https://github.com/DroidWorksStudio/mLauncher/issues) and [closed](https://github.com/DroidWorksStudio/mLauncher/issues?q=is%3Aissue+is%3Aclosed) issues to ensure this question hasn’t already been answered."
           required: true
-        - label: "I have already checked the [WIKI](https://github.com/DroidWorksStudio/mLauncher/wiki) pages."
+        - label: "I have read through the [WIKI](https://github.com/DroidWorksStudio/mLauncher/wiki) for existing documentation."
           required: true
-        - label: "I've verified that this issue hasn't been addressed in the [changelogs](https://github.com/DroidWorksStudio/mLauncher/blob/main/CHANGELOG.md)."
+        - label: "I have provided enough context and background for others to understand my question."
           required: true
-        - label: "I have taken the time to fill in all the required details. I understand that the question will be dismissed otherwise."
+        - label: "I understand that incomplete or vague questions may be closed without an answer."
           required: true
         - label: "I optionally [donated](https://www.buymeacoffee.com/CreativeCodeCat) to support the MultiLauncher mission."
           required: false
@@ -45,7 +45,7 @@ body:
     attributes:
       label: "Terms and Conditions"
       options:
-        - label: "I have read all the rules above and filled in the requiered fields to the best of my ability."
+        - label: "I have read all the rules above and filled in the required fields to the best of my ability."
           required: true
         - label: "I accept that if I fail to follow the rules listed above that i will be blocked from interactions with this project."
           required: true

@@ -1,11 +1,11 @@
 blank_issues_enabled: false
 contact_links:
-  - name: Organization Discussions
+  - name: GitHub Community Support
+    url: https://github.com/orgs/community/discussions
+    about: Please ask and answer questions here.
+  - name: Organization Wide Discussions
     url: https://github.com/orgs/DroidWorksStudio/discussions
-    about: For questions, feedback, or community conversations.
+    about: For any discussion within our community
   - name: GitHub Security Bug Bounty
     url: https://bounty.github.com/
     about: Please report security vulnerabilities here.
-  - name: Email Me
-    url: mailto:wayne6324@gmail.com
-    about: Contact me directly via email.
