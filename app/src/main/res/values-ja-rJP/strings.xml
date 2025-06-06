@@ -189,7 +189,9 @@
     <string name="advanced_settings_share_application_title">アプリケーションを共有する</string>
     <string name="advanced_settings_share_application_description">%1$sで体験を向上させましょう!</string>
     <string name="advanced_settings_share_application_description_addon">今すぐ %1$s で入手して、みんなが何を話しているか見てみましょう! %2$s\n</string>
+    <!-- Strings used for experimental settings -->
     <string name="experimental_settings_title">実験的</string>
+    <string name="experimental_options_display">Show Experimental Options</string>
     <string name="experimental_options_unlocked">実験的なオプションがロック解除されました!</string>
     <string name="experimental_options_tap_hint">%1$d あとタップでロック解除</string>
     <!-- App Page Strings -->
