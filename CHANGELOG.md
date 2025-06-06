@@ -20,6 +20,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Versioning:
 
+- Increment build number - ([ed99029](https://github.com/DroidWorksStudio/mLauncher/commit/ed9902946f45a93d9ec2a0e1f76be1458f82b779))
 - Increment build number - ([7ea8525](https://github.com/DroidWorksStudio/mLauncher/commit/7ea852506f53b8435496bd068ec1d45c259a7c0e))
 - Update build version - ([3505161](https://github.com/DroidWorksStudio/mLauncher/commit/35051613b98a3e3192ec78b9b2cfc0328e55f678))
 
