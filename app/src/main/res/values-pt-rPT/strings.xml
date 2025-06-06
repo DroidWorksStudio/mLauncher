@@ -191,7 +191,7 @@
     <string name="advanced_settings_share_application_description_addon">Baixe agora em %1$s e veja o que todo mundo está falando! %2$s\n</string>
     <!-- Strings used for experimental settings -->
     <string name="experimental_settings_title">Experimental</string>
-    <string name="experimental_options_display">Show Experimental Options</string>
+    <string name="experimental_options_display">Mostrar opções experimentais</string>
     <string name="experimental_options_unlocked">Opções experimentais desbloqueadas!</string>
     <string name="experimental_options_tap_hint">%1$d mais toques para desbloquear</string>
     <!-- App Page Strings -->
