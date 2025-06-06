@@ -40,6 +40,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Migrate dialogs to Material Bottom Sheets - ([407f48e](https://github.com/DroidWorksStudio/mLauncher/commit/407f48e81276845ce0939200fb01d6367230f1a7))
 - Adjust header text colors for light and dark themes - ([c393add](https://github.com/DroidWorksStudio/mLauncher/commit/c393adde8f837efc8a85d2ed2340151060830956))
 - Adjust top margin for search bar in App Drawer - ([bd532c4](https://github.com/DroidWorksStudio/mLauncher/commit/bd532c427a1784f2bbdfb7655f42ec85914748a5))
 
