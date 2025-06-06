@@ -8,82 +8,119 @@ import android.text.Editable
 import android.text.InputType
 import android.text.TextWatcher
 import android.view.Gravity
-import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AbsListView
 import android.widget.ArrayAdapter
 import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.ListView
 import android.widget.SeekBar
 import android.widget.TextView
-import androidx.appcompat.app.AlertDialog
 import androidx.core.graphics.toColorInt
 import com.github.droidworksstudio.common.getLocalizedString
 import com.github.droidworksstudio.mlauncher.MainActivity
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Prefs
-import com.github.droidworksstudio.mlauncher.helper.getTrueSystemFont
 import com.github.droidworksstudio.mlauncher.helper.utils.AppReloader
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class DialogManager(val context: Context, val activity: Activity) {
 
     private lateinit var prefs: Prefs
 
-    var backupRestoreDialog: AlertDialog? = null
+    var backupRestoreBottomSheet: BottomSheetDialog? = null
 
-    fun showBackupRestoreDialog() {
-        // Dismiss any existing dialog to prevent multiple dialogs open simultaneously
-        backupRestoreDialog?.dismiss()
+    fun showBackupRestoreBottomSheet() {
+        // Dismiss existing bottom sheet if it's showing
+        backupRestoreBottomSheet?.dismiss()
 
-        // Define the items for the dialog (Backup, Restore, Clear Data)
-        val items = arrayOf(
-            getLocalizedString(R.string.advanced_settings_backup_restore_backup),
-            getLocalizedString(R.string.advanced_settings_backup_restore_restore),
-            getLocalizedString(R.string.advanced_settings_backup_restore_clear)
-        )
+        // Create layout programmatically
+        val layout = LinearLayout(context).apply {
+            orientation = LinearLayout.VERTICAL
+            setPadding(48, 24, 48, 24)
+            gravity = Gravity.CENTER_HORIZONTAL
+        }
 
-        val dialogBuilder = MaterialAlertDialogBuilder(context)
-        dialogBuilder.setTitle(getLocalizedString(R.string.advanced_settings_backup_restore_title))
-        dialogBuilder.setItems(items) { _, which ->
-            when (which) {
-                0 -> (activity as MainActivity).createFullBackup()
-                1 -> (activity as MainActivity).restoreFullBackup()
-                2 -> confirmClearData()
+        // Utility function to create a clickable item
+        fun createItem(text: String, onClick: () -> Unit): TextView {
+            return TextView(context).apply {
+                this.text = text
+                textSize = 16f
+                setPadding(0, 32, 0, 32)
+                isClickable = true
+                isFocusable = true
+                setOnClickListener {
+                    onClick()
+                    backupRestoreBottomSheet?.dismiss()
+                }
             }
         }
 
-        // Assign the created dialog to backupRestoreDialog
-        backupRestoreDialog = dialogBuilder.create()
-        backupRestoreDialog?.show()
+        // Add the three items
+        layout.addView(createItem(getLocalizedString(R.string.advanced_settings_backup_restore_backup)) {
+            (activity as MainActivity).createFullBackup()
+        })
+
+        layout.addView(createItem(getLocalizedString(R.string.advanced_settings_backup_restore_restore)) {
+            (activity as MainActivity).restoreFullBackup()
+        })
+
+        layout.addView(createItem(getLocalizedString(R.string.advanced_settings_backup_restore_clear)) {
+            confirmClearData()
+        })
+
+        // Create and show the bottom sheet
+        backupRestoreBottomSheet = BottomSheetDialog(context).apply {
+            setContentView(layout)
+        }
+        backupRestoreBottomSheet?.show() // ✅ Correct method call
     }
 
-    var saveLoadThemeDialog: AlertDialog? = null
+    var saveLoadThemeBottomSheet: BottomSheetDialog? = null
 
-    fun saveLoadThemeDialogDialog() {
-        // Dismiss any existing dialog to prevent multiple dialogs open simultaneously
-        saveLoadThemeDialog?.dismiss()
+    fun showSaveLoadThemeBottomSheet() {
+        // Dismiss any existing bottom sheet
+        saveLoadThemeBottomSheet?.dismiss()
 
-        // Define the items for the dialog (Export, Import)
-        val items = arrayOf(
-            getLocalizedString(R.string.advanced_settings_theme_export),
-            getLocalizedString(R.string.advanced_settings_theme_import),
-        )
+        // Create vertical layout
+        val layout = LinearLayout(context).apply {
+            orientation = LinearLayout.VERTICAL
+            setPadding(48, 24, 48, 24)
+            gravity = Gravity.CENTER_HORIZONTAL
+        }
 
-        val dialogBuilder = MaterialAlertDialogBuilder(context)
-        dialogBuilder.setTitle(getLocalizedString(R.string.advanced_settings_theme_title))
-        dialogBuilder.setItems(items) { _, which ->
-            when (which) {
-                0 -> (activity as MainActivity).createThemeBackup()
-                1 -> (activity as MainActivity).restoreThemeBackup()
+        // Utility function to create clickable items
+        fun createItem(text: String, onClick: () -> Unit): TextView {
+            return TextView(context).apply {
+                this.text = text
+                textSize = 16f
+                setPadding(0, 32, 0, 32)
+                isClickable = true
+                isFocusable = true
+                setOnClickListener {
+                    onClick()
+                    saveLoadThemeBottomSheet?.dismiss()
+                }
             }
         }
 
-        // Assign the created dialog to backupRestoreDialog
-        saveLoadThemeDialog = dialogBuilder.create()
-        saveLoadThemeDialog?.show()
+        // Add Export and Import options
+        layout.addView(createItem(getLocalizedString(R.string.advanced_settings_theme_export)) {
+            (activity as MainActivity).createThemeBackup()
+        })
+
+        layout.addView(createItem(getLocalizedString(R.string.advanced_settings_theme_import)) {
+            (activity as MainActivity).restoreThemeBackup()
+        })
+
+        // Create and show the BottomSheetDialog
+        saveLoadThemeBottomSheet = BottomSheetDialog(context).apply {
+            setContentView(layout)
+        }
+        saveLoadThemeBottomSheet?.show()
     }
 
 
@@ -106,238 +143,277 @@ class DialogManager(val context: Context, val activity: Activity) {
         AppReloader.restartApp(context)
     }
 
-    var sliderDialog: AlertDialog? = null
+    var sliderBottomSheet: BottomSheetDialog? = null
 
-    fun showSliderDialog(
+    fun showSliderBottomSheet(
         context: Context,
         title: String,
         minValue: Int,
         maxValue: Int,
         currentValue: Int,
-        onValueSelected: (Int) -> Unit // Callback for when the user selects a value
+        onValueSelected: (Int) -> Unit
     ) {
-        // Dismiss any existing dialog to prevent multiple dialogs from being open simultaneously
-        sliderDialog?.dismiss()
+        // Dismiss any existing sheet
+        sliderBottomSheet?.dismiss()
 
-        var seekBar: SeekBar
-
-        // Create a layout to hold the SeekBar and the value display
-        val seekBarLayout = LinearLayout(context).apply {
+        // Outer layout
+        val container = LinearLayout(context).apply {
             orientation = LinearLayout.VERTICAL
+            setPadding(48, 24, 48, 24)
+            layoutParams = ViewGroup.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+            )
+        }
+
+        // Title
+        val titleText = TextView(context).apply {
+            text = title
+            textSize = 18f
+            setPadding(0, 0, 0, 32)
             gravity = Gravity.CENTER
-            setPadding(16, 16, 16, 16)
-
-            // TextView to display the current value
-            val valueText = TextView(context).apply {
-                text = "$currentValue"
-                textSize = 16f
-                gravity = Gravity.CENTER
-            }
-
-            // Declare the seekBar outside the layout block so we can access it later
-            seekBar = SeekBar(context).apply {
-                min = minValue // Minimum value
-                max = maxValue // Maximum value
-                progress = currentValue // Default value
-                setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
-                    override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
-                        valueText.text = "$progress"
-                    }
-
-                    override fun onStartTrackingTouch(seekBar: SeekBar) {
-                        // Not used
-                    }
-
-                    override fun onStopTrackingTouch(seekBar: SeekBar) {
-                        // Not used
-                    }
-                })
-            }
-
-            // Add TextView and SeekBar to the layout
-            addView(valueText)
-            addView(seekBar)
         }
 
-        // Create the dialog
-        val dialogBuilder = MaterialAlertDialogBuilder(context).apply {
-            setTitle(title)
-            setView(seekBarLayout) // Add the slider directly to the dialog
-            setPositiveButton(context.getString(R.string.okay)) { _, _ ->
-                // Get the progress from the seekBar now that it's accessible
-                val finalValue = seekBar.progress
-                onValueSelected(finalValue) // Trigger the callback with the selected value
-            }
-            setNegativeButton(context.getString(R.string.cancel), null)
+        // Value display
+        val valueText = TextView(context).apply {
+            text = currentValue.toString()
+            textSize = 16f
+            gravity = Gravity.CENTER
+            setPadding(0, 0, 0, 16)
         }
 
-        // Assign the created dialog to sliderDialog and show it
-        sliderDialog = dialogBuilder.create()
-        sliderDialog?.show()
+        // SeekBar with callback on stop
+        val seekBar = SeekBar(context).apply {
+            min = minValue
+            max = maxValue
+            progress = currentValue
+            setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+                override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+                    valueText.text = progress.toString()
+                }
+
+                override fun onStartTrackingTouch(seekBar: SeekBar?) {}
+
+                override fun onStopTrackingTouch(seekBar: SeekBar?) {
+                    onValueSelected(seekBar?.progress ?: currentValue)
+                }
+            })
+        }
+
+        // Build and show layout
+        container.addView(titleText)
+        container.addView(valueText)
+        container.addView(seekBar)
+
+        sliderBottomSheet = BottomSheetDialog(context).apply {
+            setContentView(container)
+            show()
+        }
     }
 
-    var singleChoiceDialog: AlertDialog? = null
+    var singleChoiceBottomSheet: BottomSheetDialog? = null
 
-    fun <T> showSingleChoiceDialog(
+    fun <T> showSingleChoiceBottomSheet(
         context: Context,
         options: Array<T>,
         titleResId: Int,
-        fonts: List<Typeface>? = null, // Optional fonts
-        fontSize: Float = 18f, // Default font size
+        fonts: List<Typeface>? = null,
+        fontSize: Float = 18f,
         onItemSelected: (T) -> Unit
     ) {
-        // Dismiss any existing dialog to prevent multiple dialogs from being open simultaneously
-        singleChoiceDialog?.dismiss()
+        // Dismiss any existing sheet
+        singleChoiceBottomSheet?.dismiss()
 
-        val itemStrings = options.map { option ->
-            when (option) {
-                is Constants.Language -> option.getString() // Use getString() if it's a Language enum
-                is Enum<*> -> option.name // Fallback for other Enums
-                else -> option.toString() // Generic fallback
+        // Convert options to display strings
+        val itemStrings = options.map {
+            when (it) {
+                is Constants.Language -> it.getString()
+                is Enum<*> -> it.name
+                else -> it.toString()
             }
         }
 
-        // Inflate the custom dialog layout
-        val dialogView = LayoutInflater.from(context).inflate(R.layout.dialog_single_choice, null)
-        val listView = dialogView.findViewById<ListView>(R.id.dialogListView)
-        val titleView = dialogView.findViewById<TextView>(R.id.dialogTitle)
+        // Create root container
+        val container = LinearLayout(context).apply {
+            orientation = LinearLayout.VERTICAL
+            setPadding(48, 24, 48, 24)
+            layoutParams = ViewGroup.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+            )
+        }
 
-        // Set title text
-        titleView.text = context.getString(titleResId)
+        // Title
+        val titleView = TextView(context).apply {
+            text = context.getString(titleResId)
+            textSize = 20f
+            setPadding(0, 0, 0, 32)
+            gravity = Gravity.CENTER
+        }
 
-        // Setup adapter for the ListView
-        val adapter = object : ArrayAdapter<String>(context, R.layout.item_single_choice, itemStrings) {
+        // ListView
+        val listView = ListView(context).apply {
+            divider = null
+            isVerticalScrollBarEnabled = false
+            layoutParams = LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+            )
+        }
+
+        // Custom adapter with font support
+        val adapter = object : ArrayAdapter<String>(context, android.R.layout.simple_list_item_1, itemStrings) {
             override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-                val view =
-                    convertView ?: LayoutInflater.from(context).inflate(R.layout.item_single_choice, parent, false)
-                val textView = view.findViewById<TextView>(R.id.text_item)
+                val view = convertView ?: TextView(context).apply {
+                    setPadding(32, 24, 32, 24)
+                    layoutParams = AbsListView.LayoutParams(
+                        ViewGroup.LayoutParams.MATCH_PARENT,
+                        ViewGroup.LayoutParams.WRAP_CONTENT
+                    )
+                }
 
-                // Set text, font, and size
-                textView.text = itemStrings[position]
-                textView.typeface = fonts?.getOrNull(position) ?: getTrueSystemFont()
-                textView.textSize = fontSize
+                (view as TextView).apply {
+                    text = itemStrings[position]
+                    typeface = fonts?.getOrNull(position) ?: Typeface.DEFAULT
+                    textSize = fontSize
+                }
 
                 return view
             }
         }
+
         listView.adapter = adapter
 
-        // Create the dialog
-        val dialogBuilder = MaterialAlertDialogBuilder(context)
-            .setView(dialogView)
+        // Add title and list to layout
+        container.addView(titleView)
+        container.addView(listView)
 
-        // Assign the created dialog to sliderDialog and show it
-        singleChoiceDialog = dialogBuilder.create()
-        singleChoiceDialog?.show()
-
-        // Handle item selection (auto-close dialog)
-        listView.setOnItemClickListener { _, _, position, _ ->
-            onItemSelected(options[position]) // Callback with selected item
-            singleChoiceDialog!!.dismiss() // Close dialog immediately
+        // Create and show BottomSheetDialog
+        singleChoiceBottomSheet = BottomSheetDialog(context).apply {
+            setContentView(container)
+            show()
         }
 
-        // Ensure the dialog width remains WRAP_CONTENT
-        singleChoiceDialog!!.window?.setLayout(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+        // Item click handling
+        listView.setOnItemClickListener { _, _, position, _ ->
+            onItemSelected(options[position])
+            singleChoiceBottomSheet?.dismiss()
+        }
 
-        // Enforce max height (7 items max)
+        // Limit visible height to 7 items
         listView.post {
-            val itemHeight = listView.getChildAt(0)?.height ?: return@post
-            val maxHeight = itemHeight * 7 // Max height for 7 items
-            listView.layoutParams.height = maxHeight.coerceAtMost(itemHeight * options.size)
-            listView.requestLayout()
+            val itemHeight = listView.getChildAt(0)?.height ?: 0
+            if (itemHeight > 0) {
+                val maxHeight = itemHeight * 7
+                listView.layoutParams.height = minOf(maxHeight, itemHeight * options.size)
+                listView.requestLayout()
+            }
         }
     }
 
-    var colorPickerDialog: AlertDialog? = null
+    var colorPickerBottomSheet: BottomSheetDialog? = null
 
-    fun showColorPickerDialog(
+    fun showColorPickerBottomSheet(
         context: Context,
         titleResId: Int,
         color: Int,
-        onItemSelected: (Int) -> Unit // Callback to handle the selected color
+        onItemSelected: (Int) -> Unit
     ) {
+        colorPickerBottomSheet?.dismiss()
+
         val red = Color.red(color)
         val green = Color.green(color)
         val blue = Color.blue(color)
 
         var isUpdatingText = false
 
-        val dialogBuilder = MaterialAlertDialogBuilder(context)
-            .setTitle(context.getString(titleResId))
+        // Title
+        val titleTextView = TextView(context).apply {
+            text = context.getString(titleResId)
+            textSize = 20f
+            gravity = Gravity.CENTER
+            setPadding(32, 32, 32, 16)
+        }
 
-        // Create SeekBars for Red, Green, and Blue
+        // SeekBars
         val redSeekBar = createColorSeekBar(context, red)
         val greenSeekBar = createColorSeekBar(context, green)
         val blueSeekBar = createColorSeekBar(context, blue)
 
-        // Create color preview box and RGB Hex input field
+        // Color preview
         val colorPreviewBox = createColorPreviewBox(context, color)
+
+        // Hex input
         val rgbText = createRgbTextField(context, red, green, blue)
 
-        // Layout with SeekBars, Color Preview, and RGB Hex Text Input
+        // Layout
         val layout = LinearLayout(context).apply {
             orientation = LinearLayout.VERTICAL
-
-            // Create a horizontal layout for the text box and color preview
-            val horizontalLayout = LinearLayout(context).apply {
-                orientation = LinearLayout.HORIZONTAL
-                gravity = Gravity.CENTER_VERTICAL // Vertically center the views
-
-                // RGB Text field
-                val rgbParams = LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f).apply {
-                    marginStart = 32 // Optional: Add margin between the text and the color box
-                }
-                rgbText.layoutParams = rgbParams
-                addView(rgbText)
-
-                // Color preview box
-                val colorParams = LinearLayout.LayoutParams(150, 50).apply {
-                    marginEnd = 32 // Optional: Add margin between the text and the color box
-                }
-                colorPreviewBox.layoutParams = colorParams
-                addView(colorPreviewBox)
-            }
-
-            addView(redSeekBar)
-            addView(greenSeekBar)
-            addView(blueSeekBar)
-            addView(horizontalLayout)
+            setPadding(32, 32, 32, 32)
+            layoutParams = ViewGroup.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+            )
         }
 
-        // Update color preview and text input when SeekBars are adjusted
-        val updateColorPreview = {
-            val updatedColor = Color.rgb(
-                redSeekBar.progress, greenSeekBar.progress, blueSeekBar.progress
-            )
+        // Horizontal layout for text and preview
+        val horizontalLayout = LinearLayout(context).apply {
+            orientation = LinearLayout.HORIZONTAL
+            gravity = Gravity.CENTER_VERTICAL
+            setPadding(0, 16, 0, 32)
+
+            val rgbParams = LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f).apply {
+                marginEnd = 16
+            }
+            rgbText.layoutParams = rgbParams
+            addView(rgbText)
+
+            val previewParams = LinearLayout.LayoutParams(150, 50)
+            colorPreviewBox.layoutParams = previewParams
+            addView(colorPreviewBox)
+        }
+
+        // Add all views to layout
+        layout.addView(titleTextView)
+        layout.addView(redSeekBar)
+        layout.addView(greenSeekBar)
+        layout.addView(blueSeekBar)
+        layout.addView(horizontalLayout)
+
+        // Shared update function
+        val updateColor = {
+            val updatedColor = Color.rgb(redSeekBar.progress, greenSeekBar.progress, blueSeekBar.progress)
             colorPreviewBox.setBackgroundColor(updatedColor)
 
             if (!isUpdatingText) {
                 isUpdatingText = true
-                rgbText.setText(
-                    String.format(
-                        "#%02X%02X%02X",
-                        redSeekBar.progress, greenSeekBar.progress, blueSeekBar.progress
-                    )
-                )
+                rgbText.setText(String.format("#%02X%02X%02X", redSeekBar.progress, greenSeekBar.progress, blueSeekBar.progress))
                 isUpdatingText = false
             }
+
+            // Auto-save
+            onItemSelected(updatedColor)
         }
 
-        // Listeners to update color preview when sliders are adjusted
-        redSeekBar.setOnSeekBarChangeListener(createSeekBarChangeListener(updateColorPreview))
-        greenSeekBar.setOnSeekBarChangeListener(createSeekBarChangeListener(updateColorPreview))
-        blueSeekBar.setOnSeekBarChangeListener(createSeekBarChangeListener(updateColorPreview))
+        // Listeners
+        redSeekBar.setOnSeekBarChangeListener(createSeekBarChangeListener(updateColor))
+        greenSeekBar.setOnSeekBarChangeListener(createSeekBarChangeListener(updateColor))
+        blueSeekBar.setOnSeekBarChangeListener(createSeekBarChangeListener(updateColor))
 
-        // Listen for text input and update sliders and preview
         rgbText.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
+                if (isUpdatingText) return
                 s?.toString()?.trim()?.let { colorString ->
                     if (colorString.matches(Regex("^#[0-9A-Fa-f]{6}$"))) {
-                        val hexColor = colorString.toColorInt()
+                        val hexColor = try {
+                            colorString.toColorInt()
+                        } catch (_: Exception) {
+                            return
+                        }
                         redSeekBar.progress = Color.red(hexColor)
                         greenSeekBar.progress = Color.green(hexColor)
                         blueSeekBar.progress = Color.blue(hexColor)
-                        updateColorPreview()
+                        updateColor()
                     }
                 }
             }
@@ -346,18 +422,11 @@ class DialogManager(val context: Context, val activity: Activity) {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
         })
 
-        // Set up the dialog view and buttons
-        dialogBuilder.setView(layout)
-        dialogBuilder.setPositiveButton("OK") { _, _ ->
-            val pickedColor = Color.rgb(
-                redSeekBar.progress, greenSeekBar.progress, blueSeekBar.progress
-            )
-            onItemSelected(pickedColor)
+        // Show bottom sheet
+        colorPickerBottomSheet = BottomSheetDialog(context).apply {
+            setContentView(layout)
+            show()
         }
-        dialogBuilder.setNegativeButton("Cancel", null)
-
-        // Show the dialog
-        dialogBuilder.create().show()
     }
 
     private fun createColorSeekBar(context: Context, initialValue: Int): SeekBar {

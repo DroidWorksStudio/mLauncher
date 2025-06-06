@@ -466,7 +466,7 @@ class SettingsFragment : Fragment() {
                         option = selectedTheme.string(),
                         fontSize = titleFontSize,
                         onClick = {
-                            dialogBuilder.showSingleChoiceDialog(
+                            dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = Constants.Theme.entries.toTypedArray(),
                                 titleResId = R.string.theme_mode,
@@ -491,7 +491,7 @@ class SettingsFragment : Fragment() {
                         option = selectedLanguage.string(),
                         fontSize = titleFontSize,
                         onClick = {
-                            dialogBuilder.showSingleChoiceDialog(
+                            dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = Constants.Language.entries.toTypedArray(),
                                 titleResId = R.string.app_language,
@@ -517,7 +517,7 @@ class SettingsFragment : Fragment() {
                                 it.getFont(requireContext()) ?: getTrueSystemFont()
                             }
 
-                            dialogBuilder.showSingleChoiceDialog(
+                            dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = fontFamilyOptions.toTypedArray(),
                                 fonts = fontFamilyFonts,
@@ -594,7 +594,7 @@ class SettingsFragment : Fragment() {
                                 it.getString()
                             }
 
-                            dialogBuilder.showSingleChoiceDialog(
+                            dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = searchEnginesOptions.map { it }.toTypedArray(),
                                 titleResId = R.string.search_engine,
@@ -661,7 +661,7 @@ class SettingsFragment : Fragment() {
                             option = selectedFilterStrength.toString(),
                             fontSize = titleFontSize,
                             onClick = {
-                                dialogBuilder.showSliderDialog(
+                                dialogBuilder.showSliderBottomSheet(
                                     context = requireContext(),
                                     title = getLocalizedString(R.string.filter_strength),
                                     minValue = Constants.MIN_FILTER_STRENGTH,
@@ -724,7 +724,7 @@ class SettingsFragment : Fragment() {
                         onClick = {
                             Constants.updateMaxAppsBasedOnPages(requireContext())
                             val oldHomeAppsNum = selectedHomeAppsNum + 1
-                            dialogBuilder.showSliderDialog(
+                            dialogBuilder.showSliderBottomSheet(
                                 context = requireContext(),
                                 title = getLocalizedString(R.string.apps_on_home_screen),
                                 minValue = Constants.MIN_HOME_APPS,
@@ -768,7 +768,7 @@ class SettingsFragment : Fragment() {
                         fontSize = titleFontSize,
                         onClick = {
                             Constants.updateMaxHomePages(requireContext())
-                            dialogBuilder.showSliderDialog(
+                            dialogBuilder.showSliderBottomSheet(
                                 context = requireContext(),
                                 title = getLocalizedString(R.string.pages_on_home_screen),
                                 minValue = Constants.MIN_HOME_PAGES,
@@ -919,7 +919,7 @@ class SettingsFragment : Fragment() {
                         option = selectedAppSize.toString(),
                         fontSize = titleFontSize,
                         onClick = {
-                            dialogBuilder.showSliderDialog(
+                            dialogBuilder.showSliderBottomSheet(
                                 context = requireContext(),
                                 title = getLocalizedString(R.string.app_text_size),
                                 minValue = Constants.MIN_TEXT_SIZE,
@@ -938,7 +938,7 @@ class SettingsFragment : Fragment() {
                         option = selectedDateSize.toString(),
                         fontSize = titleFontSize,
                         onClick = {
-                            dialogBuilder.showSliderDialog(
+                            dialogBuilder.showSliderBottomSheet(
                                 context = requireContext(),
                                 title = getLocalizedString(R.string.date_text_size),
                                 minValue = Constants.MIN_CLOCK_DATE_SIZE,
@@ -957,7 +957,7 @@ class SettingsFragment : Fragment() {
                         option = selectedClockSize.toString(),
                         fontSize = titleFontSize,
                         onClick = {
-                            dialogBuilder.showSliderDialog(
+                            dialogBuilder.showSliderBottomSheet(
                                 context = requireContext(),
                                 title = getLocalizedString(R.string.clock_text_size),
                                 minValue = Constants.MIN_CLOCK_DATE_SIZE,
@@ -976,7 +976,7 @@ class SettingsFragment : Fragment() {
                         option = selectedAlarmSize.toString(),
                         fontSize = titleFontSize,
                         onClick = {
-                            dialogBuilder.showSliderDialog(
+                            dialogBuilder.showSliderBottomSheet(
                                 context = requireContext(),
                                 title = getLocalizedString(R.string.alarm_text_size),
                                 minValue = Constants.MIN_ALARM_SIZE,
@@ -995,7 +995,7 @@ class SettingsFragment : Fragment() {
                         option = selectedDailyWordSize.toString(),
                         fontSize = titleFontSize,
                         onClick = {
-                            dialogBuilder.showSliderDialog(
+                            dialogBuilder.showSliderBottomSheet(
                                 context = requireContext(),
                                 title = getLocalizedString(R.string.daily_word_text_size),
                                 minValue = Constants.MIN_DAILY_WORD_SIZE,
@@ -1014,7 +1014,7 @@ class SettingsFragment : Fragment() {
                         option = selectedBatterySize.toString(),
                         fontSize = titleFontSize,
                         onClick = {
-                            dialogBuilder.showSliderDialog(
+                            dialogBuilder.showSliderBottomSheet(
                                 context = requireContext(),
                                 title = getLocalizedString(R.string.battery_text_size),
                                 minValue = Constants.MIN_BATTERY_SIZE,
@@ -1038,7 +1038,7 @@ class SettingsFragment : Fragment() {
                         option = selectedPaddingSize.toString(),
                         fontSize = titleFontSize,
                         onClick = {
-                            dialogBuilder.showSliderDialog(
+                            dialogBuilder.showSliderBottomSheet(
                                 context = requireContext(),
                                 title = getLocalizedString(R.string.app_padding_size),
                                 minValue = Constants.MIN_TEXT_PADDING,
@@ -1111,7 +1111,7 @@ class SettingsFragment : Fragment() {
                             option = selectedRecentCounter.toString(),
                             fontSize = titleFontSize,
                             onClick = {
-                                dialogBuilder.showSliderDialog(
+                                dialogBuilder.showSliderBottomSheet(
                                     context = requireContext(),
                                     title = getLocalizedString(R.string.number_of_recents),
                                     minValue = Constants.MIN_RECENT_COUNTER,
@@ -1149,7 +1149,7 @@ class SettingsFragment : Fragment() {
                             val iconPacksOptions =
                                 iconPacksEntries.map { it.getString(emptyString()) }
 
-                            dialogBuilder.showSingleChoiceDialog(
+                            dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = iconPacksOptions.map { it.toString() }.toTypedArray(),
                                 titleResId = R.string.select_home_icons,
@@ -1185,7 +1185,7 @@ class SettingsFragment : Fragment() {
                             val iconPacksOptions =
                                 iconPacksEntries.map { it.getString(emptyString()) }
 
-                            dialogBuilder.showSingleChoiceDialog(
+                            dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = iconPacksOptions.map { it.toString() }.toTypedArray(),
                                 titleResId = R.string.select_app_list_icons,
@@ -1226,7 +1226,7 @@ class SettingsFragment : Fragment() {
                             option = selectedBackgroundOpacity.toString(),
                             fontSize = titleFontSize,
                             onClick = {
-                                dialogBuilder.showSliderDialog(
+                                dialogBuilder.showSliderBottomSheet(
                                     context = requireContext(),
                                     title = getLocalizedString(R.string.background_opacity),
                                     minValue = Constants.MIN_OPACITY,
@@ -1253,7 +1253,7 @@ class SettingsFragment : Fragment() {
                         option = selectedClockAlignment.string(),
                         fontSize = titleFontSize,
                         onClick = {
-                            dialogBuilder.showSingleChoiceDialog(
+                            dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = Constants.Gravity.entries.toTypedArray(),
                                 titleResId = R.string.clock_alignment,
@@ -1271,7 +1271,7 @@ class SettingsFragment : Fragment() {
                         option = selectedDateAlignment.string(),
                         fontSize = titleFontSize,
                         onClick = {
-                            dialogBuilder.showSingleChoiceDialog(
+                            dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = Constants.Gravity.entries.toTypedArray(),
                                 titleResId = R.string.date_alignment,
@@ -1289,7 +1289,7 @@ class SettingsFragment : Fragment() {
                         option = selectedAlarmAlignment.string(),
                         fontSize = titleFontSize,
                         onClick = {
-                            dialogBuilder.showSingleChoiceDialog(
+                            dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = Constants.Gravity.entries.toTypedArray(),
                                 titleResId = R.string.alarm_alignment,
@@ -1307,7 +1307,7 @@ class SettingsFragment : Fragment() {
                         option = selectedDailyWordAlignment.string(),
                         fontSize = titleFontSize,
                         onClick = {
-                            dialogBuilder.showSingleChoiceDialog(
+                            dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = Constants.Gravity.entries.toTypedArray(),
                                 titleResId = R.string.daily_word_alignment,
@@ -1326,7 +1326,7 @@ class SettingsFragment : Fragment() {
                         option = selectedHomeAlignment.string(),
                         fontSize = titleFontSize,
                         onClick = {
-                            dialogBuilder.showSingleChoiceDialog(
+                            dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = Constants.Gravity.entries.toTypedArray(),
                                 titleResId = R.string.home_alignment,
@@ -1347,7 +1347,7 @@ class SettingsFragment : Fragment() {
                         option = selectedDrawAlignment.string(),
                         fontSize = titleFontSize,
                         onClick = {
-                            dialogBuilder.showSingleChoiceDialog(
+                            dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = Constants.Gravity.entries.toTypedArray(),
                                 titleResId = R.string.drawer_alignment,
@@ -1372,7 +1372,7 @@ class SettingsFragment : Fragment() {
                         fontSize = titleFontSize,
                         fontColor = Color(hexBackgroundColor.toColorInt()),
                         onClick = {
-                            dialogBuilder.showColorPickerDialog(
+                            dialogBuilder.showColorPickerBottomSheet(
                                 context = requireContext(),
                                 color = selectedBackgroundColor,
                                 titleResId = R.string.background_color,
@@ -1390,7 +1390,7 @@ class SettingsFragment : Fragment() {
                         fontSize = titleFontSize,
                         fontColor = Color(hexAppColor.toColorInt()),
                         onClick = {
-                            dialogBuilder.showColorPickerDialog(
+                            dialogBuilder.showColorPickerBottomSheet(
                                 context = requireContext(),
                                 color = selectedAppColor,
                                 titleResId = R.string.app_color,
@@ -1408,7 +1408,7 @@ class SettingsFragment : Fragment() {
                         fontSize = titleFontSize,
                         fontColor = Color(hexDateColor.toColorInt()),
                         onClick = {
-                            dialogBuilder.showColorPickerDialog(
+                            dialogBuilder.showColorPickerBottomSheet(
                                 context = requireContext(),
                                 color = selectedDateColor,
                                 titleResId = R.string.date_color,
@@ -1426,7 +1426,7 @@ class SettingsFragment : Fragment() {
                         fontSize = titleFontSize,
                         fontColor = Color(hexClockColor.toColorInt()),
                         onClick = {
-                            dialogBuilder.showColorPickerDialog(
+                            dialogBuilder.showColorPickerBottomSheet(
                                 context = requireContext(),
                                 color = selectedClockColor,
                                 titleResId = R.string.clock_color,
@@ -1444,7 +1444,7 @@ class SettingsFragment : Fragment() {
                         fontSize = titleFontSize,
                         fontColor = Color(hexAlarmColor.toColorInt()),
                         onClick = {
-                            dialogBuilder.showColorPickerDialog(
+                            dialogBuilder.showColorPickerBottomSheet(
                                 context = requireContext(),
                                 color = selectedAlarmColor,
                                 titleResId = R.string.alarm_color,
@@ -1462,7 +1462,7 @@ class SettingsFragment : Fragment() {
                         fontSize = titleFontSize,
                         fontColor = Color(hexDailyWordColor.toColorInt()),
                         onClick = {
-                            dialogBuilder.showColorPickerDialog(
+                            dialogBuilder.showColorPickerBottomSheet(
                                 context = requireContext(),
                                 color = selectedDailyWordColor,
                                 titleResId = R.string.daily_word_color,
@@ -1480,7 +1480,7 @@ class SettingsFragment : Fragment() {
                         fontSize = titleFontSize,
                         fontColor = Color(hexBatteryColor.toColorInt()),
                         onClick = {
-                            dialogBuilder.showColorPickerDialog(
+                            dialogBuilder.showColorPickerBottomSheet(
                                 context = requireContext(),
                                 color = selectedBatteryColor,
                                 titleResId = R.string.battery_color,
@@ -1509,7 +1509,7 @@ class SettingsFragment : Fragment() {
                         fontSize = titleFontSize,
                         fontColor = Color(hexShortcutIconsColor.toColorInt()),
                         onClick = {
-                            dialogBuilder.showColorPickerDialog(
+                            dialogBuilder.showColorPickerBottomSheet(
                                 context = requireContext(),
                                 color = selectedShortcutIconsColor,
                                 titleResId = R.string.shortcuts_color,
@@ -1555,7 +1555,7 @@ class SettingsFragment : Fragment() {
                         },
                         fontSize = titleFontSize,
                         onClick = {
-                            dialogBuilder.showSingleChoiceDialog(
+                            dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = actionStrings,
                                 titleResId = R.string.double_tap,
@@ -1584,7 +1584,7 @@ class SettingsFragment : Fragment() {
                         },
                         fontSize = titleFontSize,
                         onClick = {
-                            dialogBuilder.showSingleChoiceDialog(
+                            dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = actionStrings,
                                 titleResId = R.string.clock_click_app,
@@ -1613,7 +1613,7 @@ class SettingsFragment : Fragment() {
                         },
                         fontSize = titleFontSize,
                         onClick = {
-                            dialogBuilder.showSingleChoiceDialog(
+                            dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = actionStrings,
                                 titleResId = R.string.date_click_app,
@@ -1643,7 +1643,7 @@ class SettingsFragment : Fragment() {
                         },
                         fontSize = titleFontSize,
                         onClick = {
-                            dialogBuilder.showSingleChoiceDialog(
+                            dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = actionStrings,
                                 titleResId = R.string.usage_click_app,
@@ -1673,7 +1673,7 @@ class SettingsFragment : Fragment() {
                         },
                         fontSize = titleFontSize,
                         onClick = {
-                            dialogBuilder.showSingleChoiceDialog(
+                            dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = actionStrings,
                                 titleResId = R.string.floating_click_app,
@@ -1709,7 +1709,7 @@ class SettingsFragment : Fragment() {
                         },
                         fontSize = titleFontSize,
                         onClick = {
-                            dialogBuilder.showSingleChoiceDialog(
+                            dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = actionStrings,
                                 titleResId = R.string.short_swipe_up_app,
@@ -1740,7 +1740,7 @@ class SettingsFragment : Fragment() {
                         },
                         fontSize = titleFontSize,
                         onClick = {
-                            dialogBuilder.showSingleChoiceDialog(
+                            dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = actionStrings,
                                 titleResId = R.string.short_swipe_down_app,
@@ -1771,7 +1771,7 @@ class SettingsFragment : Fragment() {
                         },
                         fontSize = titleFontSize,
                         onClick = {
-                            dialogBuilder.showSingleChoiceDialog(
+                            dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = actionStrings,
                                 titleResId = R.string.short_swipe_left_app,
@@ -1802,7 +1802,7 @@ class SettingsFragment : Fragment() {
                         },
                         fontSize = titleFontSize,
                         onClick = {
-                            dialogBuilder.showSingleChoiceDialog(
+                            dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = actionStrings,
                                 titleResId = R.string.short_swipe_right_app,
@@ -1833,7 +1833,7 @@ class SettingsFragment : Fragment() {
                         },
                         fontSize = titleFontSize,
                         onClick = {
-                            dialogBuilder.showSingleChoiceDialog(
+                            dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = actionStrings,
                                 titleResId = R.string.long_swipe_up_app,
@@ -1863,7 +1863,7 @@ class SettingsFragment : Fragment() {
                         },
                         fontSize = titleFontSize,
                         onClick = {
-                            dialogBuilder.showSingleChoiceDialog(
+                            dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = actionStrings,
                                 titleResId = R.string.long_swipe_down_app,
@@ -1894,7 +1894,7 @@ class SettingsFragment : Fragment() {
                         },
                         fontSize = titleFontSize,
                         onClick = {
-                            dialogBuilder.showSingleChoiceDialog(
+                            dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = actionStrings, // Pass the list of localized strings
                                 titleResId = R.string.long_swipe_left_app,
@@ -1925,7 +1925,7 @@ class SettingsFragment : Fragment() {
                         },
                         fontSize = titleFontSize,
                         onClick = {
-                            dialogBuilder.showSingleChoiceDialog(
+                            dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = actionStrings,
                                 titleResId = R.string.long_swipe_right_app,
@@ -2003,7 +2003,7 @@ class SettingsFragment : Fragment() {
                         fontSize = titleFontSize,
                         fontColor = Color(hexBackgroundColor.toColorInt()),
                         onClick = {
-                            dialogBuilder.showColorPickerDialog(
+                            dialogBuilder.showColorPickerBottomSheet(
                                 context = requireContext(),
                                 color = selectedNotesBackgroundColor,
                                 titleResId = R.string.notes_background_color,
@@ -2022,7 +2022,7 @@ class SettingsFragment : Fragment() {
                         fontSize = titleFontSize,
                         fontColor = Color(hexBubbleBackgroundColor.toColorInt()),
                         onClick = {
-                            dialogBuilder.showColorPickerDialog(
+                            dialogBuilder.showColorPickerBottomSheet(
                                 context = requireContext(),
                                 color = selectedBubbleBackgroundColor,
                                 titleResId = R.string.bubble_background_color,
@@ -2041,7 +2041,7 @@ class SettingsFragment : Fragment() {
                         fontSize = titleFontSize,
                         fontColor = Color(hexMessageTextColor.toColorInt()),
                         onClick = {
-                            dialogBuilder.showColorPickerDialog(
+                            dialogBuilder.showColorPickerBottomSheet(
                                 context = requireContext(),
                                 color = selectedBubbleMessageTextColor,
                                 titleResId = R.string.bubble_message_color,
@@ -2060,7 +2060,7 @@ class SettingsFragment : Fragment() {
                         fontSize = titleFontSize,
                         fontColor = Color(hexBubbleTimeDateColor.toColorInt()),
                         onClick = {
-                            dialogBuilder.showColorPickerDialog(
+                            dialogBuilder.showColorPickerBottomSheet(
                                 context = requireContext(),
                                 color = selectedBubbleTimeDateColor,
                                 titleResId = R.string.bubble_date_time_color,
@@ -2079,7 +2079,7 @@ class SettingsFragment : Fragment() {
                         fontSize = titleFontSize,
                         fontColor = Color(hexBubbleCategoryColor.toColorInt()),
                         onClick = {
-                            dialogBuilder.showColorPickerDialog(
+                            dialogBuilder.showColorPickerBottomSheet(
                                 context = requireContext(),
                                 color = selectedBubbleCategoryColor,
                                 titleResId = R.string.bubble_category_color,
@@ -2103,7 +2103,7 @@ class SettingsFragment : Fragment() {
                         fontSize = titleFontSize,
                         fontColor = Color(hexBubbleInputMessageColor.toColorInt()),
                         onClick = {
-                            dialogBuilder.showColorPickerDialog(
+                            dialogBuilder.showColorPickerBottomSheet(
                                 context = requireContext(),
                                 color = selectedInputMessageColor,
                                 titleResId = R.string.message_input_color,
@@ -2122,7 +2122,7 @@ class SettingsFragment : Fragment() {
                         fontSize = titleFontSize,
                         fontColor = Color(hexBubbleInputMessageHintColor.toColorInt()),
                         onClick = {
-                            dialogBuilder.showColorPickerDialog(
+                            dialogBuilder.showColorPickerBottomSheet(
                                 context = requireContext(),
                                 color = selectedInputMessageHintColor,
                                 titleResId = R.string.message_input_hint_color,
@@ -2234,7 +2234,7 @@ class SettingsFragment : Fragment() {
                         descriptionFontSize = descriptionFontSize,
                         iconSize = iconSize,
                         onClick = {
-                            dialogBuilder.showBackupRestoreDialog()
+                            dialogBuilder.showBackupRestoreBottomSheet()
                         }
                     )
 
@@ -2246,7 +2246,7 @@ class SettingsFragment : Fragment() {
                         descriptionFontSize = descriptionFontSize,
                         iconSize = iconSize,
                         onClick = {
-                            dialogBuilder.saveLoadThemeDialogDialog()
+                            dialogBuilder.showSaveLoadThemeBottomSheet()
                         }
                     )
 
@@ -2340,7 +2340,7 @@ class SettingsFragment : Fragment() {
                         option = selectedSettingsSize.toString(),
                         fontSize = titleFontSize,
                         onClick = {
-                            dialogBuilder.showSliderDialog(
+                            dialogBuilder.showSliderBottomSheet(
                                 context = context,
                                 title = getLocalizedString(R.string.settings_text_size),
                                 minValue = Constants.MIN_TEXT_SIZE,
@@ -2371,9 +2371,11 @@ class SettingsFragment : Fragment() {
     }
 
     private fun dismissDialogs() {
-        dialogBuilder.singleChoiceDialog?.dismiss()
-        dialogBuilder.colorPickerDialog?.dismiss()
-        dialogBuilder.sliderDialog?.dismiss()
+        dialogBuilder.backupRestoreBottomSheet?.dismiss()
+        dialogBuilder.saveLoadThemeBottomSheet?.dismiss()
+        dialogBuilder.singleChoiceBottomSheet?.dismiss()
+        dialogBuilder.colorPickerBottomSheet?.dismiss()
+        dialogBuilder.sliderBottomSheet?.dismiss()
     }
 
     override fun onDestroyView() {
