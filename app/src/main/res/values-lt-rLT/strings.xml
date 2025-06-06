@@ -189,7 +189,9 @@
     <string name="advanced_settings_share_application_title">Dalintis programa</string>
     <string name="advanced_settings_share_application_description">Padidinkite savo patirtį naudodami %1$s!</string>
     <string name="advanced_settings_share_application_description_addon">Gaukite jį dabar %1$s ir pažiūrėkite, apie ką visi kalba! %2$s\n</string>
+    <!-- Strings used for experimental settings -->
     <string name="experimental_settings_title">Eksperimentinis</string>
+    <string name="experimental_options_display">Rodyti eksperimentines parinktis</string>
     <string name="experimental_options_unlocked">Eksperimentinės parinktys atrakintos!</string>
     <string name="experimental_options_tap_hint">%1$d dar bakstelėjimai, kad atrakintumėte</string>
     <!-- App Page Strings -->

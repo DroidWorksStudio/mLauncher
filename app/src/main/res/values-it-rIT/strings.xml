@@ -189,7 +189,9 @@
     <string name="advanced_settings_share_application_title">Condividi applicazione</string>
     <string name="advanced_settings_share_application_description">Migliora la tua esperienza con %1$s!</string>
     <string name="advanced_settings_share_application_description_addon">Scaricalo ora su %1$s e scopri di cosa parlano tutti! %2$s\n</string>
+    <!-- Strings used for experimental settings -->
     <string name="experimental_settings_title">Sperimentale</string>
+    <string name="experimental_options_display">Mostra opzioni sperimentali</string>
     <string name="experimental_options_unlocked">Opzioni sperimentali sbloccate!</string>
     <string name="experimental_options_tap_hint">%1$d altri tocchi per sbloccare</string>
     <!-- App Page Strings -->

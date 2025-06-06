@@ -189,7 +189,9 @@
     <string name="advanced_settings_share_application_title">Поделиться приложением</string>
     <string name="advanced_settings_share_application_description">Повысьте свой уровень опыта с %1$s!</string>
     <string name="advanced_settings_share_application_description_addon">Получите его сейчас на %1$s и посмотрите, о чем все говорят! %2$s\n</string>
+    <!-- Strings used for experimental settings -->
     <string name="experimental_settings_title">Экспериментальный</string>
+    <string name="experimental_options_display">Показать экспериментальные параметры</string>
     <string name="experimental_options_unlocked">Экспериментальные возможности разблокированы!</string>
     <string name="experimental_options_tap_hint">%1$d еще несколько нажатий для разблокировки</string>
     <!-- App Page Strings -->

@@ -189,7 +189,9 @@
     <string name="advanced_settings_share_application_title">공유 응용 프로그램</string>
     <string name="advanced_settings_share_application_description">%1$s로 더욱 향상된 경험을 느껴보세요!</string>
     <string name="advanced_settings_share_application_description_addon">지금 %1$s 에서 받아보시고 모두가 무슨 이야기를 하는지 확인해보세요! %2$s\n</string>
+    <!-- Strings used for experimental settings -->
     <string name="experimental_settings_title">실험적</string>
+    <string name="experimental_options_display">실험 옵션 표시</string>
     <string name="experimental_options_unlocked">실험적 옵션이 공개되었습니다!</string>
     <string name="experimental_options_tap_hint">%1$d 잠금 해제를 위해 더 많은 탭을 하세요</string>
     <!-- App Page Strings -->
