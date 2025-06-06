@@ -191,7 +191,7 @@
     <string name="advanced_settings_share_application_description_addon">احصل عليه الآن على %1$s وشاهد ما يتحدث عنه الجميع! %2$s\n</string>
     <!-- Strings used for experimental settings -->
     <string name="experimental_settings_title">تجريبي</string>
-    <string name="experimental_options_display">Show Experimental Options</string>
+    <string name="experimental_options_display">إظهار الخيارات التجريبية</string>
     <string name="experimental_options_unlocked">تم فتح الخيارات التجريبية!</string>
     <string name="experimental_options_tap_hint">%1$d المزيد من النقرات لفتح القفل</string>
     <!-- App Page Strings -->
