@@ -191,7 +191,7 @@
     <string name="advanced_settings_share_application_description_addon">השג אותו עכשיו ב- %1$s וראה על מה כולם מדברים! %2$s\n</string>
     <!-- Strings used for experimental settings -->
     <string name="experimental_settings_title">נִסיוֹנִי</string>
-    <string name="experimental_options_display">Show Experimental Options</string>
+    <string name="experimental_options_display">הצג אפשרויות ניסיוניות</string>
     <string name="experimental_options_unlocked">אפשרויות ניסיוניות פתוחות!</string>
     <string name="experimental_options_tap_hint">%1$d עוד נגיעות לפתיחה</string>
     <!-- App Page Strings -->
