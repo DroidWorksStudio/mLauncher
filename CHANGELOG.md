@@ -40,6 +40,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Adjust header text colors for light and dark themes - ([c393add](https://github.com/DroidWorksStudio/mLauncher/commit/c393adde8f837efc8a85d2ed2340151060830956))
 - Adjust top margin for search bar in App Drawer - ([bd532c4](https://github.com/DroidWorksStudio/mLauncher/commit/bd532c427a1784f2bbdfb7655f42ec85914748a5))
 
 ## [1.10.5.4](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.5.4) - (03, June 2025)
