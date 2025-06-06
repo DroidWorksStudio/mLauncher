@@ -6,28 +6,29 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Implemented Enhancements:
 
-- *(performance)* Use background thread for icon preloading - ([5f4882f](https://github.com/DroidWorksStudio/mLauncher/commit/5f4882fbf1d42f5a8565e1ba0c581b6d274431f6))
-- Added experimental options - ([e2cb436](https://github.com/DroidWorksStudio/mLauncher/commit/e2cb436762fb587cc986dc9672c473b2f0870d0e))
-- Implement custom toast notifications - ([18f1dc5](https://github.com/DroidWorksStudio/mLauncher/commit/18f1dc5d68e67c4a23b7de4d9627f2492b87d8bc))
-- Add descriptions to settings items - ([2817236](https://github.com/DroidWorksStudio/mLauncher/commit/28172361ed87f2fb8a48286c2d41740ad0016c9c))
+- *(Performance)* Use background thread for icon preloading - ([0a6b752](https://github.com/DroidWorksStudio/mLauncher/commit/0a6b752e495f95c0ed7de20a1e3e06791e9cdfcf))
+- *(Settings)* Consolidate settings fragments into a single Compose screen - ([2ec390a](https://github.com/DroidWorksStudio/mLauncher/commit/2ec390a05bd9ddc58cc019ce36799468cb43cd96))
+- Added experimental options - ([a3bb9e7](https://github.com/DroidWorksStudio/mLauncher/commit/a3bb9e73a2e326474980b000e410d5e3daada027))
+- Implement custom toast notifications - ([55a79b8](https://github.com/DroidWorksStudio/mLauncher/commit/55a79b824880d1d065b5d778eb6f3a54b1d412af))
+- Add descriptions to settings items - ([d6d00e4](https://github.com/DroidWorksStudio/mLauncher/commit/d6d00e4129c5934472928a657822356e0ffe32a1))
 - Implement A-Z sidebar for app drawer - ([a7337d5](https://github.com/DroidWorksStudio/mLauncher/commit/a7337d5844c7d12971847486f53962c5316b7fb5))
 
 ### Bug Fixes:
 
-- Use locale for date/time formatting - ([a2ea3c1](https://github.com/DroidWorksStudio/mLauncher/commit/a2ea3c1ff6fe88ac3537846b5aeee3002642db2b))
-- Lock to current orientation when lock is enabled - ([8710930](https://github.com/DroidWorksStudio/mLauncher/commit/87109302135a8686472de1a38f0819e44ed31a6c))
+- Use locale for date/time formatting - ([42c2402](https://github.com/DroidWorksStudio/mLauncher/commit/42c2402f624d17347c73dc34f3a75cc362de9dc3))
+- Lock to current orientation when lock is enabled - ([74388bc](https://github.com/DroidWorksStudio/mLauncher/commit/74388bca8ca35fe8ecd162b593e0c02f3b850385))
 - Make "Set as Default Launcher" work on all devices - ([2ba9528](https://github.com/DroidWorksStudio/mLauncher/commit/2ba9528f815b100850de4552e5fd7baf55b4375a))
 
 ### Versioning:
 
-- Increment build number - ([ed99029](https://github.com/DroidWorksStudio/mLauncher/commit/ed9902946f45a93d9ec2a0e1f76be1458f82b779))
-- Increment build number - ([7ea8525](https://github.com/DroidWorksStudio/mLauncher/commit/7ea852506f53b8435496bd068ec1d45c259a7c0e))
+- Increment build number - ([834db41](https://github.com/DroidWorksStudio/mLauncher/commit/834db410f64700c7c37ae26ff097bb091643eb6d))
+- Increment build number - ([ee75aa2](https://github.com/DroidWorksStudio/mLauncher/commit/ee75aa24ea92f7f6758a5cd23795533e0e1cd65b))
 - Update build version - ([3505161](https://github.com/DroidWorksStudio/mLauncher/commit/35051613b98a3e3192ec78b9b2cfc0328e55f678))
 
 ### Language Support:
 
-- Updated Language Files. ([#777](https://github.com/DroidWorksStudio/mLauncher/issues/777)) - ([fef9c82](https://github.com/DroidWorksStudio/mLauncher/commit/fef9c828158074ab0cc8ba02cecd180b4b60458c))
-- Updated Language Files. ([#776](https://github.com/DroidWorksStudio/mLauncher/issues/776)) - ([bb49ca7](https://github.com/DroidWorksStudio/mLauncher/commit/bb49ca7ad606da0026792c65ac4b6ca3a4e093a9))
+- Updated Language Files. ([#777](https://github.com/DroidWorksStudio/mLauncher/issues/777)) - ([6cd797f](https://github.com/DroidWorksStudio/mLauncher/commit/6cd797fd63036511ba5f20e7d5bed6e2708fc1f0))
+- Updated Language Files. ([#776](https://github.com/DroidWorksStudio/mLauncher/issues/776)) - ([dbfa038](https://github.com/DroidWorksStudio/mLauncher/commit/dbfa03827b2fbf3255faf84fcbe837b862b7d340))
 - Updated Language Files. ([#772](https://github.com/DroidWorksStudio/mLauncher/issues/772)) - ([214731e](https://github.com/DroidWorksStudio/mLauncher/commit/214731e37bd0afd7fec47e209e6f983d4986bc57))
 
 ### Refactoring:
