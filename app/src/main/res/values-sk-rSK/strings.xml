@@ -191,7 +191,7 @@
     <string name="advanced_settings_share_application_description_addon">Získajte to teraz na %1$s a uvidíte, o čom všetci hovoria! %2$s\n</string>
     <!-- Strings used for experimental settings -->
     <string name="experimental_settings_title">Experimentálne</string>
-    <string name="experimental_options_display">Show Experimental Options</string>
+    <string name="experimental_options_display">Zobraziť experimentálne možnosti</string>
     <string name="experimental_options_unlocked">Experimentálne možnosti odomknuté!</string>
     <string name="experimental_options_tap_hint">%1$d viac klepnutí na odomknutie</string>
     <!-- App Page Strings -->
