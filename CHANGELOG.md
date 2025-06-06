@@ -35,6 +35,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Documentation:
 
+- Update PULL_REQUEST_TEMPLATE.md - ([4f09aa2](https://github.com/DroidWorksStudio/mLauncher/commit/4f09aa2314865b9a9acba97454f0b7441a04e8ef))
 - Update issue template configuration - ([410ef3a](https://github.com/DroidWorksStudio/mLauncher/commit/410ef3a613e2233fa15b8c5d63a5b42531e257e3))
 
 ### Refactoring:
