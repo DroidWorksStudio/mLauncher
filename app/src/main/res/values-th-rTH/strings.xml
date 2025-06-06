@@ -191,7 +191,7 @@
     <string name="advanced_settings_share_application_description_addon">รับเลยตอนนี้ที่ %1$s และดูว่าทุกคนกำลังพูดถึงอะไร! %2$s\n</string>
     <!-- Strings used for experimental settings -->
     <string name="experimental_settings_title">การทดลอง</string>
-    <string name="experimental_options_display">Show Experimental Options</string>
+    <string name="experimental_options_display">แสดงตัวเลือกการทดลอง</string>
     <string name="experimental_options_unlocked">ปลดล็อคตัวเลือกการทดลองแล้ว!</string>
     <string name="experimental_options_tap_hint">%1$d แตะอีกครั้งเพื่อปลดล็อค</string>
     <!-- App Page Strings -->
