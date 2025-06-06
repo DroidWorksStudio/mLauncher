@@ -221,7 +221,7 @@ fun ismlauncherDefault(context: Context): Boolean {
 }
 
 fun helpFeedbackButton(context: Context) {
-    val uri = "https://github.com/DroidWorksStudio/mLauncher-Support".toUri()
+    val uri = "https://github.com/DroidWorksStudio/mLauncher".toUri()
     val intent = Intent(Intent.ACTION_VIEW, uri)
     context.startActivity(intent)
 }
