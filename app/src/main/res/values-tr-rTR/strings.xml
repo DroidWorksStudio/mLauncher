@@ -189,7 +189,9 @@
     <string name="advanced_settings_share_application_title">Paylaşım Uygulaması</string>
     <string name="advanced_settings_share_application_description">%1$sile deneyiminizi bir üst seviyeye taşıyın!</string>
     <string name="advanced_settings_share_application_description_addon">Hemen %1$s adresinden edinin ve herkesin ne hakkında konuştuğunu görün! %2$s\n</string>
+    <!-- Strings used for experimental settings -->
     <string name="experimental_settings_title">Deneysel</string>
+    <string name="experimental_options_display">Show Experimental Options</string>
     <string name="experimental_options_unlocked">Deneysel Seçenekler Açıldı!</string>
     <string name="experimental_options_tap_hint">%1$d kilidini açmak için daha fazla dokunuş</string>
     <!-- App Page Strings -->
