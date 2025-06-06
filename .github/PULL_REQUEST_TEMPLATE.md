@@ -1,52 +1,59 @@
 ### Type of Change <!-- Required -->
 
-<!-- Select the applicable option(s) by placing an 'X' inside the square brackets, and remove any options that are not relevant. -->
+<!-- Select one type by placing an 'X' inside the appropriate box, and delete all others. -->
 
-- [ ] Bug Fix (user-facing) <!-- Non-breaking change which fixes an issue -->
-- [ ] Feature Request (user-facing) <!-- Non-breaking change which adds functionality -->
-- [ ] Codebase Improvement (developer-facing) <!-- Non-breaking change which refines the codebase -->
-- [ ] Breaking Change (developer/user-facing) <!-- Fix or feature that would cause existing functionality to not work as expected -->
-- [ ] Release (user-facing) <!-- New release for MultiLauncher -->
-- [ ] This change requires a documentation update
+- [ ] Bug Fix <!-- Fixes a user-facing issue -->
+- [ ] Feature <!-- Adds new user-facing functionality -->
+- [ ] Codebase Cleanup <!-- Developer-facing refactor or internal improvements -->
+- [ ] Performance Improvement <!-- Optimizes speed, memory, or efficiency -->
+- [ ] UI/UX Update <!-- Visual or interactive design changes -->
+- [ ] Test Improvement <!-- Adds or updates automated tests -->
+- [ ] Security Fix <!-- Fixes a vulnerability or improves security -->
+- [ ] CI/CD or Build Config <!-- Updates to GitHub Actions, pipelines, or build tools -->
+- [ ] Breaking Change <!-- Existing functionality will no longer work as expected -->
+- [ ] Release <!-- Prepares a new MultiLauncher release -->
+- [ ] Documentation Update Required <!-- Documentation needs updating -->
 
-### All Submissions <!-- Check all applicable options -->
+---
 
-- [ ] Checked for existing [Pull Requests](../../../pulls) for the same update/change <!-- Required -->
-- [ ] Descriptive commit message with a short title <!-- Required -->
-- [ ] Self-reviewed code <!-- Required -->
-- [ ] Code comments, especially in complex areas <!-- Required -->
-- [ ] No new warnings or errors introduced <!-- Required -->
-- [ ] Changes made in a separate branch <!-- Required -->
-- [ ] Branch named with appropriate prefix (e.g., 'bug/', 'feat/', 'clean/', 'release/') <!-- Required -->
+### Pre-Submission Checklist <!-- Required -->
 
-<!-- Examples: 'bug/signin-issue', 'feat/issue-templates', 'clean/code-change-to-app-draw'. -->
+- [ ] No existing [Pull Request](../../../pulls) for this change
+- [ ] Descriptive commit message
+- [ ] Self-reviewed the code
+- [ ] Comments added where necessary
+- [ ] No new warnings or errors introduced
+- [ ] Changes made in a separate branch
+- [ ] Branch named using prefix (e.g., `bug/`, `feat/`, `clean/`, `release/`)
+- [ ] All user-facing text supports localization (if applicable)
+- [ ] Updated documentation or relevant README sections (if applicable)
+- [ ] Added screenshots or demo for UI changes (if applicable)
 
-### Before Opening Pull Request
+---
 
-- [ ] Descriptive title for your PR <!-- Required -->
-- [ ] Detailed description of changes <!-- Required -->
-- [ ] Include 'closes/fixes #XXXX' in the comment to auto-close relevant issues <!-- Delete if not relevant -->
+### Before Submitting Your Pull Request
 
-### Description of Changes
+- [ ] Clear and descriptive PR title <!-- Required -->
+- [ ] Detailed summary of the changes made <!-- Required -->
+- [ ] Linked relevant issue(s) using `Closes #XXXX` or `Fixes #XXXX` (if applicable)
 
-<!-- 
-Include a summary of changes, related issues, motivation, context, and dependencies.
--->
+---
 
-#### Changes Description <!-- Provide a brief description of each new feature or issue fix. -->
+### Summary of Changes
+
+<!-- Provide a clear, concise overview of the changes in this PR, including context, motivation, and any dependencies. -->
+
+#### Key Changes
 
 1.
 2.
 3.
 
-### Test Device: <!-- Required -->
+---
 
-- MultiLauncher version:
-- Device name:
-- Android version:
-- Other information:
+### Test Information <!-- Required -->
 
-<!-- 
-Please ensure compliance with these guidelines to facilitate smoother handling of your submission. 
-Non-compliance may result in delays or rejection of your pull request.
--->
+- **MultiLauncher Version:**
+- **Device Name:**
+- **Android Version:**
+- **Other Notes:**
