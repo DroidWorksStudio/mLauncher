@@ -33,6 +33,10 @@ All notable changes to this project will be documented in this file. See [conven
 - Updated Language Files. ([#776](https://github.com/DroidWorksStudio/mLauncher/issues/776)) - ([dbfa038](https://github.com/DroidWorksStudio/mLauncher/commit/dbfa03827b2fbf3255faf84fcbe837b862b7d340))
 - Updated Language Files. ([#772](https://github.com/DroidWorksStudio/mLauncher/issues/772)) - ([214731e](https://github.com/DroidWorksStudio/mLauncher/commit/214731e37bd0afd7fec47e209e6f983d4986bc57))
 
+### Documentation:
+
+- Update issue template configuration - ([410ef3a](https://github.com/DroidWorksStudio/mLauncher/commit/410ef3a613e2233fa15b8c5d63a5b42531e257e3))
+
 ### Refactoring:
 
 - Adjust top margin for search bar in App Drawer - ([bd532c4](https://github.com/DroidWorksStudio/mLauncher/commit/bd532c427a1784f2bbdfb7655f42ec85914748a5))
