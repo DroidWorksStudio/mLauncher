@@ -41,6 +41,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Add migration for experimental options - ([9e27337](https://github.com/DroidWorksStudio/mLauncher/commit/9e27337587cf1195a6c3fda6bc23dd6853a4e035))
 - Rename Experimental to Expert Settings - ([9a3cb0d](https://github.com/DroidWorksStudio/mLauncher/commit/9a3cb0d0f3d1256e072f09950211665c2e9f6ef0))
 - Move "Lock orientation" and "Lock settings" to experimental - ([6c43778](https://github.com/DroidWorksStudio/mLauncher/commit/6c4377853349ce25166dee08481d50168a26d744))
 - Migrate dialogs to Material Bottom Sheets - ([407f48e](https://github.com/DroidWorksStudio/mLauncher/commit/407f48e81276845ce0939200fb01d6367230f1a7))
