@@ -180,7 +180,6 @@ class SettingsFragment : Fragment() {
         var selectedFontFamily by remember { mutableStateOf(prefs.fontFamily) }
         var toggledHideSearchView by remember { mutableStateOf(prefs.hideSearchView) }
         var toggledFloating by remember { mutableStateOf(prefs.showFloating) }
-        var toggledLockOrientation by remember { mutableStateOf(prefs.lockOrientation) }
 
         var selectedSearchEngine by remember { mutableStateOf(prefs.searchEngines) }
         var toggledShowAZSidebar by remember { mutableStateOf(prefs.showAZSidebar) }
@@ -191,7 +190,6 @@ class SettingsFragment : Fragment() {
 
         var toggledAutoOpenApp by remember { mutableStateOf(prefs.autoOpenApp) }
         var toggledAppsLocked by remember { mutableStateOf(prefs.homeLocked) }
-        var toggledSettingsLocked by remember { mutableStateOf(prefs.settingsLocked) }
         var selectedHomeAppsNum by remember { mutableIntStateOf(prefs.homeAppsNum) }
         var selectedHomePagesNum by remember { mutableIntStateOf(prefs.homePagesNum) }
         var toggledHomePager by remember { mutableStateOf(prefs.homePager) }
@@ -303,6 +301,8 @@ class SettingsFragment : Fragment() {
         // Experimental Settings
         var toggledExperimentalOptions by remember { mutableStateOf(prefs.enableExperimentalOptions) }
         var selectedSettingsSize by remember { mutableIntStateOf(prefs.settingsSize) }
+        var toggledSettingsLocked by remember { mutableStateOf(prefs.settingsLocked) }
+        var toggledLockOrientation by remember { mutableStateOf(prefs.lockOrientation) }
 
         Column(
             modifier = Modifier
@@ -567,17 +567,6 @@ class SettingsFragment : Fragment() {
                         }
                     )
 
-                    SettingsSwitch(
-                        text = getLocalizedString(R.string.lock_orientation),
-                        fontSize = titleFontSize,
-                        defaultState = toggledLockOrientation,
-                        onCheckedChange = {
-                            toggledLockOrientation = !prefs.lockOrientation
-                            prefs.lockOrientation = toggledLockOrientation
-                            AppReloader.restartApp(requireContext())
-                        }
-                    )
-
                     SettingsTitle(
                         text = getLocalizedString(R.string.search),
                         fontSize = titleFontSize,
@@ -703,19 +692,6 @@ class SettingsFragment : Fragment() {
                             prefs.homeLocked = toggledAppsLocked
                         }
                     )
-
-                    if (requireContext().isBiometricEnabled()) {
-                        SettingsSwitch(
-                            text = getLocalizedString(R.string.lock_settings),
-                            fontSize = titleFontSize,
-                            defaultState = toggledSettingsLocked,
-
-                            onCheckedChange = {
-                                toggledSettingsLocked = !prefs.settingsLocked
-                                prefs.settingsLocked = toggledSettingsLocked
-                            }
-                        )
-                    }
 
                     SettingsSelect(
                         title = getLocalizedString(R.string.apps_on_home_screen),
@@ -2353,6 +2329,30 @@ class SettingsFragment : Fragment() {
                             )
                         }
                     )
+
+                    SettingsSwitch(
+                        text = getLocalizedString(R.string.lock_orientation),
+                        fontSize = titleFontSize,
+                        defaultState = toggledLockOrientation,
+                        onCheckedChange = {
+                            toggledLockOrientation = !prefs.lockOrientation
+                            prefs.lockOrientation = toggledLockOrientation
+                            AppReloader.restartApp(requireContext())
+                        }
+                    )
+
+                    if (requireContext().isBiometricEnabled()) {
+                        SettingsSwitch(
+                            text = getLocalizedString(R.string.lock_settings),
+                            fontSize = titleFontSize,
+                            defaultState = toggledSettingsLocked,
+
+                            onCheckedChange = {
+                                toggledSettingsLocked = !prefs.settingsLocked
+                                prefs.settingsLocked = toggledSettingsLocked
+                            }
+                        )
+                    }
 
                     if (!isGestureNavigationEnabled(context)) {
                         Spacer(modifier = Modifier.height(52.dp))
