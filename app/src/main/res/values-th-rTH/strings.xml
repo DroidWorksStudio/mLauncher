@@ -30,14 +30,14 @@
     <!-- Favorite Apps -->
     <!-- Favorite Apps -->
     <string name="settings_favorite_apps_title">แอปพลิเคชั่นที่ชื่นชอบ</string>
-    <string name="settings_favorite_apps_description">Reorder your favorite apps for quick access from the home screen.</string>
+    <string name="settings_favorite_apps_description">เรียงลำดับแอปที่คุณชื่นชอบใหม่เพื่อการเข้าถึงอย่างรวดเร็วจากหน้าจอหลัก</string>
     <!-- Hidden Apps -->
     <string name="settings_hidden_apps_title">แอพที่ซ่อนอยู่</string>
-    <string name="settings_hidden_apps_description">Manage hidden apps — unhide any app from this list when needed.</string>
+    <string name="settings_hidden_apps_description">จัดการแอพที่ซ่อนไว้ — ยกเลิกการซ่อนแอพใดๆ จากรายการนี้เมื่อจำเป็น</string>
     <string name="settings_advanced_title">การตั้งค่าขั้นสูง</string>
     <string name="settings_advanced_description">เข้าถึงข้อมูลแอป ตัวเปิดใช้เริ่มต้น เครื่องมือสำรองข้อมูล และอื่นๆ อีกมากมาย</string>
-    <string name="settings_expert_title">Expert</string>
-    <string name="settings_expert_description">Unlock hidden options, and advanced tweaks.</string>
+    <string name="settings_expert_title">ผู้เชี่ยวชาญ</string>
+    <string name="settings_expert_description">ปลดล็อคตัวเลือกที่ซ่อนอยู่และการปรับแต่งขั้นสูง</string>
     <string name="settings_exit_mlauncher_title">ออกจาก MultiLauncher</string>
     <string name="settings_exit_mlauncher_description">สลับไปใช้ตัวเปิดใช้เริ่มต้นของคุณชั่วคราว</string>
     <string name="settings_exit_mlauncher_dialog">เลือกตัวเรียกใช้งาน</string>
@@ -191,10 +191,10 @@
     <string name="advanced_settings_share_application_description">ยกระดับประสบการณ์ของคุณด้วย %1$s!</string>
     <string name="advanced_settings_share_application_description_addon">รับเลยตอนนี้ที่ %1$s และดูว่าทุกคนกำลังพูดถึงอะไร! %2$s\n</string>
     <!-- Strings used for expert settings -->
-    <string name="expert_settings_title">Expert</string>
-    <string name="expert_options_display">Show Expert Options</string>
-    <string name="expert_options_unlocked">Expert Options Unlocked!</string>
-    <string name="expert_options_tap_hint">%1$d more taps to unlock</string>
+    <string name="expert_settings_title">ผู้เชี่ยวชาญ</string>
+    <string name="expert_options_display">แสดงตัวเลือกผู้เชี่ยวชาญ</string>
+    <string name="expert_options_unlocked">ปลดล็อคตัวเลือกผู้เชี่ยวชาญ!</string>
+    <string name="expert_options_tap_hint">%1$d แตะอีกครั้งเพื่อปลดล็อค</string>
     <!-- App Page Strings -->
     <string name="hidden_apps">แอพที่ซ่อนอยู่</string>
     <string name="favorite_apps">แอปพลิเคชั่นที่ชื่นชอบ</string>
