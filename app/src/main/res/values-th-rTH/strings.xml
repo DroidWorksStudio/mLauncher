@@ -179,11 +179,11 @@
     <string name="advanced_settings_theme_description">ปรับแต่งธีมให้เหมาะกับคุณ</string>
     <string name="advanced_settings_wotd_title">คำศัพท์แห่งวัน</string>
     <string name="advanced_settings_wotd_description">นำเข้ารายการคำศัพท์แห่งวันที่กำหนดเอง</string>
-    <string name="advanced_settings_theme_download">Download</string>
+    <string name="advanced_settings_theme_download">ดาวน์โหลด</string>
     <string name="advanced_settings_theme_export">ส่งออก</string>
     <string name="advanced_settings_theme_import">การนำเข้า</string>
-    <string name="advanced_settings_wotd_download">Download</string>
-    <string name="advanced_settings_wotd_import">Import</string>
+    <string name="advanced_settings_wotd_download">ดาวน์โหลด</string>
+    <string name="advanced_settings_wotd_import">การนำเข้า</string>
     <string name="advanced_settings_backup_restore_clear_title">ล้างการตั้งค่า</string>
     <string name="advanced_settings_backup_restore_clear_description">คุณแน่ใจว่าต้องการทำเช่นนี้หรือไม่?</string>
     <string name="advanced_settings_backup_restore_clear_yes">ใช่</string>
