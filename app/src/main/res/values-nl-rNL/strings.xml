@@ -30,14 +30,14 @@
     <!-- Favorite Apps -->
     <!-- Favorite Apps -->
     <string name="settings_favorite_apps_title">Favoriete apps</string>
-    <string name="settings_favorite_apps_description">Reorder your favorite apps for quick access from the home screen.</string>
+    <string name="settings_favorite_apps_description">Orden uw favoriete apps opnieuw voor snelle toegang vanaf het startscherm.</string>
     <!-- Hidden Apps -->
     <string name="settings_hidden_apps_title">Verborgen apps</string>
-    <string name="settings_hidden_apps_description">Manage hidden apps — unhide any app from this list when needed.</string>
+    <string name="settings_hidden_apps_description">Beheer verborgen apps: maak indien nodig een app uit deze lijst zichtbaar.</string>
     <string name="settings_advanced_title">Geavanceerd</string>
     <string name="settings_advanced_description">Krijg toegang tot app-info, standaard launcher, back-uptools en meer.</string>
-    <string name="settings_expert_title">Expert</string>
-    <string name="settings_expert_description">Unlock hidden options, and advanced tweaks.</string>
+    <string name="settings_expert_title">Deskundige</string>
+    <string name="settings_expert_description">Ontgrendel verborgen opties en geavanceerde aanpassingen.</string>
     <string name="settings_exit_mlauncher_title">MultiLauncher verlaten</string>
     <string name="settings_exit_mlauncher_description">Schakel tijdelijk over naar uw standaard launcher.</string>
     <string name="settings_exit_mlauncher_dialog">Kies een launcher</string>
@@ -191,10 +191,10 @@
     <string name="advanced_settings_share_application_description">Verbeter uw ervaring met %1$s!</string>
     <string name="advanced_settings_share_application_description_addon">Download het nu op %1$s en zie waar iedereen het over heeft! %2$s\n</string>
     <!-- Strings used for expert settings -->
-    <string name="expert_settings_title">Expert</string>
-    <string name="expert_options_display">Show Expert Options</string>
-    <string name="expert_options_unlocked">Expert Options Unlocked!</string>
-    <string name="expert_options_tap_hint">%1$d more taps to unlock</string>
+    <string name="expert_settings_title">Deskundige</string>
+    <string name="expert_options_display">Toon deskundige opties</string>
+    <string name="expert_options_unlocked">Opties voor experts ontgrendeld!</string>
+    <string name="expert_options_tap_hint">%1$d meer tikken om te ontgrendelen</string>
     <!-- App Page Strings -->
     <string name="hidden_apps">Verborgen apps</string>
     <string name="favorite_apps">Favoriete apps</string>
