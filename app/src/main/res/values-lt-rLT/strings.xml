@@ -179,8 +179,11 @@
     <string name="advanced_settings_theme_description">Tinkinkite jums tinkančias temas.</string>
     <string name="advanced_settings_wotd_title">Dienos žodis</string>
     <string name="advanced_settings_wotd_description">Importuokite pasirinktinį dienos žodžio sąrašą.</string>
+    <string name="advanced_settings_theme_download">Download</string>
     <string name="advanced_settings_theme_export">Eksportuoti</string>
     <string name="advanced_settings_theme_import">Importuoti</string>
+    <string name="advanced_settings_wotd_download">Download</string>
+    <string name="advanced_settings_wotd_import">Import</string>
     <string name="advanced_settings_backup_restore_clear_title">Išvalyti nuostatas</string>
     <string name="advanced_settings_backup_restore_clear_description">Ar tikrai norite tai padaryti?</string>
     <string name="advanced_settings_backup_restore_clear_yes">Taip</string>
