@@ -16,6 +16,7 @@ All notable changes to this project will be documented in this file. See [conven
 ### Bug Fixes:
 
 - *(Issue Template)* Remove extra slash from mailto link - ([b68756b](https://github.com/DroidWorksStudio/mLauncher/commit/b68756bf1964dd2b2aae693c77ed32095ab1f4c7))
+- Prevent app crash when custom font file is missing - ([628e0f2](https://github.com/DroidWorksStudio/mLauncher/commit/628e0f26d2a1d53456415aabc5686c21c6c4603b))
 - Use locale for date/time formatting - ([42c2402](https://github.com/DroidWorksStudio/mLauncher/commit/42c2402f624d17347c73dc34f3a75cc362de9dc3))
 - Lock to current orientation when lock is enabled - ([74388bc](https://github.com/DroidWorksStudio/mLauncher/commit/74388bca8ca35fe8ecd162b593e0c02f3b850385))
 - Make "Set as Default Launcher" work on all devices - ([2ba9528](https://github.com/DroidWorksStudio/mLauncher/commit/2ba9528f815b100850de4552e5fd7baf55b4375a))
