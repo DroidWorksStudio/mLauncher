@@ -28,15 +28,16 @@
     <string name="settings_notes_title">Примечания</string>
     <string name="settings_notes_description">Персонализируйте свои заметки в соответствии со своим стилем.</string>
     <!-- Favorite Apps -->
+    <!-- Favorite Apps -->
     <string name="settings_favorite_apps_title">Любимые приложения</string>
-    <string name="settings_favorite_apps_description">Выберите приложения, к которым вы хотите получить быстрый доступ с главного экрана.</string>
+    <string name="settings_favorite_apps_description">Reorder your favorite apps for quick access from the home screen.</string>
     <!-- Hidden Apps -->
     <string name="settings_hidden_apps_title">Скрытые приложения</string>
-    <string name="settings_hidden_apps_description">Скройте определенные приложения из панели приложений, чтобы уменьшить беспорядок или повысить конфиденциальность.</string>
+    <string name="settings_hidden_apps_description">Manage hidden apps — unhide any app from this list when needed.</string>
     <string name="settings_advanced_title">Расширенные настройки</string>
     <string name="settings_advanced_description">Доступ к информации о приложении, средству запуска по умолчанию, инструментам резервного копирования и многому другому.</string>
-    <string name="settings_experimental_title">Экспериментальный</string>
-    <string name="settings_experimental_description">Разблокируйте скрытые опции и расширенные настройки.</string>
+    <string name="settings_expert_title">Expert</string>
+    <string name="settings_expert_description">Unlock hidden options, and advanced tweaks.</string>
     <string name="settings_exit_mlauncher_title">Выйти из MultiLauncher</string>
     <string name="settings_exit_mlauncher_description">Временно переключитесь на средство запуска по умолчанию.</string>
     <string name="settings_exit_mlauncher_dialog">Выберите лаунчер</string>
@@ -189,11 +190,11 @@
     <string name="advanced_settings_share_application_title">Поделиться приложением</string>
     <string name="advanced_settings_share_application_description">Повысьте свой уровень опыта с %1$s!</string>
     <string name="advanced_settings_share_application_description_addon">Получите его сейчас на %1$s и посмотрите, о чем все говорят! %2$s\n</string>
-    <!-- Strings used for experimental settings -->
-    <string name="experimental_settings_title">Экспериментальный</string>
-    <string name="experimental_options_display">Показать экспериментальные параметры</string>
-    <string name="experimental_options_unlocked">Экспериментальные возможности разблокированы!</string>
-    <string name="experimental_options_tap_hint">%1$d еще несколько нажатий для разблокировки</string>
+    <!-- Strings used for expert settings -->
+    <string name="expert_settings_title">Expert</string>
+    <string name="expert_options_display">Show Expert Options</string>
+    <string name="expert_options_unlocked">Expert Options Unlocked!</string>
+    <string name="expert_options_tap_hint">%1$d more taps to unlock</string>
     <!-- App Page Strings -->
     <string name="hidden_apps">Скрытые приложения</string>
     <string name="favorite_apps">Любимые приложения</string>
