@@ -28,15 +28,16 @@
     <string name="settings_notes_title">Notlar</string>
     <string name="settings_notes_description">Notlarınızı tarzınıza uyacak şekilde kişiselleştirin.</string>
     <!-- Favorite Apps -->
+    <!-- Favorite Apps -->
     <string name="settings_favorite_apps_title">Favori Uygulamalar</string>
-    <string name="settings_favorite_apps_description">Ana ekrandan hızlı erişim sağlamak istediğiniz uygulamaları seçin.</string>
+    <string name="settings_favorite_apps_description">Reorder your favorite apps for quick access from the home screen.</string>
     <!-- Hidden Apps -->
     <string name="settings_hidden_apps_title">Gizli uygulamalar</string>
-    <string name="settings_hidden_apps_description">Dağınıklığı azaltmak veya gizliliği artırmak için uygulama çekmecesinden belirli uygulamaları gizleyin.</string>
+    <string name="settings_hidden_apps_description">Manage hidden apps — unhide any app from this list when needed.</string>
     <string name="settings_advanced_title">Gelişmiş Ayarlar</string>
     <string name="settings_advanced_description">Uygulama bilgilerine, varsayılan başlatıcıya, yedekleme araçlarına ve daha fazlasına erişin.</string>
-    <string name="settings_experimental_title">Deneysel</string>
-    <string name="settings_experimental_description">Gizli seçenekleri ve gelişmiş ayarları açın.</string>
+    <string name="settings_expert_title">Expert</string>
+    <string name="settings_expert_description">Unlock hidden options, and advanced tweaks.</string>
     <string name="settings_exit_mlauncher_title">MultiLauncher\'dan çık</string>
     <string name="settings_exit_mlauncher_description">Geçici olarak varsayılan başlatıcınıza geçin.</string>
     <string name="settings_exit_mlauncher_dialog">Bir başlatıcı seçin</string>
@@ -189,11 +190,11 @@
     <string name="advanced_settings_share_application_title">Paylaşım Uygulaması</string>
     <string name="advanced_settings_share_application_description">%1$sile deneyiminizi bir üst seviyeye taşıyın!</string>
     <string name="advanced_settings_share_application_description_addon">Hemen %1$s adresinden edinin ve herkesin ne hakkında konuştuğunu görün! %2$s\n</string>
-    <!-- Strings used for experimental settings -->
-    <string name="experimental_settings_title">Deneysel</string>
-    <string name="experimental_options_display">Deneysel Seçenekleri Göster</string>
-    <string name="experimental_options_unlocked">Deneysel Seçenekler Açıldı!</string>
-    <string name="experimental_options_tap_hint">%1$d kilidini açmak için daha fazla dokunuş</string>
+    <!-- Strings used for expert settings -->
+    <string name="expert_settings_title">Expert</string>
+    <string name="expert_options_display">Show Expert Options</string>
+    <string name="expert_options_unlocked">Expert Options Unlocked!</string>
+    <string name="expert_options_tap_hint">%1$d more taps to unlock</string>
     <!-- App Page Strings -->
     <string name="hidden_apps">Gizli uygulamalar</string>
     <string name="favorite_apps">Favori Uygulamalar</string>
