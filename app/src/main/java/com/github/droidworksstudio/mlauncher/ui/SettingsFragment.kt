@@ -299,7 +299,7 @@ class SettingsFragment : Fragment() {
         }
 
         // Experimental Settings
-        var toggledExperimentalOptions by remember { mutableStateOf(prefs.enableExperimentalOptions) }
+        var toggledExpertOptions by remember { mutableStateOf(prefs.enableExpertOptions) }
         var selectedSettingsSize by remember { mutableIntStateOf(prefs.settingsSize) }
         var toggledSettingsLocked by remember { mutableStateOf(prefs.settingsLocked) }
         var toggledLockOrientation by remember { mutableStateOf(prefs.lockOrientation) }
@@ -408,15 +408,15 @@ class SettingsFragment : Fragment() {
                         onClick = { currentScreen = "advanced" },
                     )
 
-                    if (prefs.enableExperimentalOptions) {
+                    if (prefs.enableExpertOptions) {
                         SettingsHomeItem(
-                            title = getLocalizedString(R.string.settings_experimental_title),
-                            description = getLocalizedString(R.string.settings_experimental_description),
+                            title = getLocalizedString(R.string.settings_expert_title),
+                            description = getLocalizedString(R.string.settings_expert_description),
                             imageVector = ImageVector.vectorResource(id = R.drawable.ic_experimental),
                             titleFontSize = titleFontSize,
                             descriptionFontSize = descriptionFontSize,
                             iconSize = iconSize,
-                            onClick = { currentScreen = "experimental" },
+                            onClick = { currentScreen = "expert" },
                         )
                     }
 
@@ -2153,13 +2153,13 @@ class SettingsFragment : Fragment() {
                         },
                         enableMultiClick = true,
                         onMultiClick = { count ->
-                            if (!prefs.enableExperimentalOptions) {
+                            if (!prefs.enableExpertOptions) {
                                 if (count in 2..4) {
-                                    showInstantToast(getLocalizedString(R.string.experimental_options_tap_hint, count))
+                                    showInstantToast(getLocalizedString(R.string.expert_options_tap_hint, count))
                                 } else if (count == 5) {
-                                    showInstantToast(getLocalizedString(R.string.experimental_options_unlocked))
-                                    toggledExperimentalOptions = !prefs.enableExperimentalOptions
-                                    prefs.enableExperimentalOptions = toggledExperimentalOptions
+                                    showInstantToast(getLocalizedString(R.string.expert_options_unlocked))
+                                    toggledExpertOptions = !prefs.enableExpertOptions
+                                    prefs.enableExpertOptions = toggledExpertOptions
                                 }
                             }
                         }
@@ -2280,14 +2280,14 @@ class SettingsFragment : Fragment() {
                     }
                 }
 
-                "experimental" -> {
+                "expert" -> {
                     BackHandler {
                         currentScreen = "main"
                     }
 
                     PageHeader(
                         iconRes = R.drawable.ic_back,
-                        title = getLocalizedString(R.string.experimental_settings_title),
+                        title = getLocalizedString(R.string.expert_settings_title),
                         onClick = {
                             currentScreen = "main"
                         }
@@ -2296,12 +2296,12 @@ class SettingsFragment : Fragment() {
                     Spacer(modifier = Modifier.height(16.dp))
 
                     SettingsSwitch(
-                        text = getLocalizedString(R.string.experimental_options_display),
+                        text = getLocalizedString(R.string.expert_options_display),
                         fontSize = titleFontSize,
-                        defaultState = toggledExperimentalOptions,
+                        defaultState = toggledExpertOptions,
                         onCheckedChange = {
-                            toggledExperimentalOptions = !prefs.enableExperimentalOptions
-                            prefs.enableExperimentalOptions = toggledExperimentalOptions
+                            toggledExpertOptions = !prefs.enableExpertOptions
+                            prefs.enableExpertOptions = toggledExpertOptions
                             currentScreen = "main"
                         }
                     )

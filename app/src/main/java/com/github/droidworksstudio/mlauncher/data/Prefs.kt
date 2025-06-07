@@ -138,7 +138,7 @@ private const val NOTES_CATEGORY = "NOTES_CATEGORY"
 private const val NOTES_PRIORITY = "NOTES_PRIORITY"
 
 private const val ONBOARDING_COMPLETED = "ONBOARDING_COMPLETED"
-private const val EXPERIMENTAL_OPTIONS = "EXPERIMENTAL_OPTIONS"
+private const val EXPERT_OPTIONS = "EXPERT_OPTIONS"
 
 class Prefs(val context: Context) {
     // Build Moshi instance once (ideally a singleton)
@@ -685,9 +685,9 @@ class Prefs(val context: Context) {
         get() = prefsNormal.getStringSet(PINNED_APPS, emptySet()) as Set<String>
         set(value) = prefsNormal.edit { putStringSet(PINNED_APPS, value) }
 
-    var enableExperimentalOptions: Boolean
-        get() = getSetting(EXPERIMENTAL_OPTIONS, false)
-        set(value) = prefsNormal.edit { putBoolean(EXPERIMENTAL_OPTIONS, value) }
+    var enableExpertOptions: Boolean
+        get() = getSetting(EXPERT_OPTIONS, false)
+        set(value) = prefsNormal.edit { putBoolean(EXPERT_OPTIONS, value) }
 
     /**
      * By the number in home app list, get the list item.
