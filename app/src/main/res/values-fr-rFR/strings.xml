@@ -179,8 +179,11 @@
     <string name="advanced_settings_theme_description">Personnalisez les thèmes selon vos besoins.</string>
     <string name="advanced_settings_wotd_title">Mot du jour</string>
     <string name="advanced_settings_wotd_description">Importez une liste personnalisée de mots du jour.</string>
+    <string name="advanced_settings_theme_download">Download</string>
     <string name="advanced_settings_theme_export">Exporter</string>
     <string name="advanced_settings_theme_import">Importer</string>
+    <string name="advanced_settings_wotd_download">Download</string>
+    <string name="advanced_settings_wotd_import">Import</string>
     <string name="advanced_settings_backup_restore_clear_title">Effacer les préférences</string>
     <string name="advanced_settings_backup_restore_clear_description">Etes-vous sûr de vouloir faire cela ?</string>
     <string name="advanced_settings_backup_restore_clear_yes">Oui</string>
