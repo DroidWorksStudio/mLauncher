@@ -30,14 +30,14 @@
     <!-- Favorite Apps -->
     <!-- Favorite Apps -->
     <string name="settings_favorite_apps_title">お気に入りのアプリ</string>
-    <string name="settings_favorite_apps_description">Reorder your favorite apps for quick access from the home screen.</string>
+    <string name="settings_favorite_apps_description">ホーム画面からすばやくアクセスできるように、お気に入りのアプリを並べ替えます。</string>
     <!-- Hidden Apps -->
     <string name="settings_hidden_apps_title">非表示のアプリ</string>
-    <string name="settings_hidden_apps_description">Manage hidden apps — unhide any app from this list when needed.</string>
+    <string name="settings_hidden_apps_description">非表示のアプリを管理します - 必要に応じてこのリストから任意のアプリを表示します。</string>
     <string name="settings_advanced_title">詳細設定</string>
     <string name="settings_advanced_description">アプリ情報、デフォルトのランチャー、バックアップ ツールなどにアクセスします。</string>
-    <string name="settings_expert_title">Expert</string>
-    <string name="settings_expert_description">Unlock hidden options, and advanced tweaks.</string>
+    <string name="settings_expert_title">専門家</string>
+    <string name="settings_expert_description">隠されたオプションや高度な調整をアンロックします。</string>
     <string name="settings_exit_mlauncher_title">マルチランチャーを終了する</string>
     <string name="settings_exit_mlauncher_description">一時的にデフォルトのランチャーに切り替えます。</string>
     <string name="settings_exit_mlauncher_dialog">ランチャーを選択</string>
@@ -191,10 +191,10 @@
     <string name="advanced_settings_share_application_description">%1$sで体験を向上させましょう!</string>
     <string name="advanced_settings_share_application_description_addon">今すぐ %1$s で入手して、みんなが何を話しているか見てみましょう! %2$s\n</string>
     <!-- Strings used for expert settings -->
-    <string name="expert_settings_title">Expert</string>
-    <string name="expert_options_display">Show Expert Options</string>
-    <string name="expert_options_unlocked">Expert Options Unlocked!</string>
-    <string name="expert_options_tap_hint">%1$d more taps to unlock</string>
+    <string name="expert_settings_title">専門家</string>
+    <string name="expert_options_display">エキスパートオプションを表示</string>
+    <string name="expert_options_unlocked">エキスパートオプションがロック解除されました!</string>
+    <string name="expert_options_tap_hint">%1$d あとタップでロック解除</string>
     <!-- App Page Strings -->
     <string name="hidden_apps">非表示のアプリ</string>
     <string name="favorite_apps">お気に入りのアプリ</string>
