@@ -2234,7 +2234,7 @@ class SettingsFragment : Fragment() {
                         descriptionFontSize = descriptionFontSize,
                         iconSize = iconSize,
                         onClick = {
-                            (activity as MainActivity).restoreWordsBackup()
+                            dialogBuilder.showSaveDownloadWOTDBottomSheet()
                         }
                     )
 
@@ -2373,6 +2373,7 @@ class SettingsFragment : Fragment() {
     private fun dismissDialogs() {
         dialogBuilder.backupRestoreBottomSheet?.dismiss()
         dialogBuilder.saveLoadThemeBottomSheet?.dismiss()
+        dialogBuilder.saveDownloadWOTDBottomSheet?.dismiss()
         dialogBuilder.singleChoiceBottomSheet?.dismiss()
         dialogBuilder.colorPickerBottomSheet?.dismiss()
         dialogBuilder.sliderBottomSheet?.dismiss()

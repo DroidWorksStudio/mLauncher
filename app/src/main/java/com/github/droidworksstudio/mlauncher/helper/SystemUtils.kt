@@ -226,6 +226,18 @@ fun helpFeedbackButton(context: Context) {
     context.startActivity(intent)
 }
 
+fun themeDownloadButton(context: Context) {
+    val uri = "https://github.com/DroidWorksStudio/mLauncher/tree/main/themes".toUri()
+    val intent = Intent(Intent.ACTION_VIEW, uri)
+    context.startActivity(intent)
+}
+
+fun wordofthedayDownloadButton(context: Context) {
+    val uri = "https://github.com/DroidWorksStudio/mLauncher/tree/main/wordoftheday".toUri()
+    val intent = Intent(Intent.ACTION_VIEW, uri)
+    context.startActivity(intent)
+}
+
 fun communitySupportButton(context: Context) {
     val uri = "https://discord.com/invite/qG6hFuAzfu/".toUri()
     val intent = Intent(Intent.ACTION_VIEW, uri)

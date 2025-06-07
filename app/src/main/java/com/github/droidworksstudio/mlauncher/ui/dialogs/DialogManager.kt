@@ -23,7 +23,9 @@ import com.github.droidworksstudio.mlauncher.MainActivity
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Prefs
+import com.github.droidworksstudio.mlauncher.helper.themeDownloadButton
 import com.github.droidworksstudio.mlauncher.helper.utils.AppReloader
+import com.github.droidworksstudio.mlauncher.helper.wordofthedayDownloadButton
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
@@ -107,6 +109,11 @@ class DialogManager(val context: Context, val activity: Activity) {
             }
         }
 
+        // Add Download Option
+        layout.addView(createItem(getLocalizedString(R.string.advanced_settings_theme_download)) {
+            themeDownloadButton(context)
+        })
+
         // Add Export and Import options
         layout.addView(createItem(getLocalizedString(R.string.advanced_settings_theme_export)) {
             (activity as MainActivity).createThemeBackup()
@@ -121,6 +128,51 @@ class DialogManager(val context: Context, val activity: Activity) {
             setContentView(layout)
         }
         saveLoadThemeBottomSheet?.show()
+    }
+
+    var saveDownloadWOTDBottomSheet: BottomSheetDialog? = null
+
+    fun showSaveDownloadWOTDBottomSheet() {
+        // Dismiss any existing bottom sheet
+        saveDownloadWOTDBottomSheet?.dismiss()
+
+        // Create vertical layout
+        val layout = LinearLayout(context).apply {
+            orientation = LinearLayout.VERTICAL
+            setPadding(48, 24, 48, 24)
+            gravity = Gravity.CENTER_HORIZONTAL
+        }
+
+        // Utility function to create clickable items
+        fun createItem(text: String, onClick: () -> Unit): TextView {
+            return TextView(context).apply {
+                this.text = text
+                textSize = 16f
+                setPadding(0, 32, 0, 32)
+                isClickable = true
+                isFocusable = true
+                setOnClickListener {
+                    onClick()
+                    saveDownloadWOTDBottomSheet?.dismiss()
+                }
+            }
+        }
+
+        // Add Download Option
+        layout.addView(createItem(getLocalizedString(R.string.advanced_settings_wotd_download)) {
+            wordofthedayDownloadButton(context)
+        })
+
+        // Add Import options
+        layout.addView(createItem(getLocalizedString(R.string.advanced_settings_wotd_import)) {
+            (activity as MainActivity).restoreWordsBackup()
+        })
+
+        // Create and show the BottomSheetDialog
+        saveDownloadWOTDBottomSheet = BottomSheetDialog(context).apply {
+            setContentView(layout)
+        }
+        saveDownloadWOTDBottomSheet?.show()
     }
 
 

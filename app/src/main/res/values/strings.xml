@@ -240,8 +240,12 @@
     <string name="advanced_settings_wotd_title">Word of the Day</string>
     <string name="advanced_settings_wotd_description">Import custom Word of the Day list.</string>
 
+    <string name="advanced_settings_theme_download">Download</string>
     <string name="advanced_settings_theme_export">Export</string>
     <string name="advanced_settings_theme_import">Import</string>
+
+    <string name="advanced_settings_wotd_download">Download</string>
+    <string name="advanced_settings_wotd_import">Import</string>
 
     <string name="advanced_settings_backup_restore_clear_title">Clear Preferences</string>
     <string name="advanced_settings_backup_restore_clear_description">Are you sure you want to do this?</string>
