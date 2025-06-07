@@ -179,11 +179,11 @@
     <string name="advanced_settings_theme_description">התאם אישית ערכות נושא שיתאימו לך.</string>
     <string name="advanced_settings_wotd_title">מסר יומי</string>
     <string name="advanced_settings_wotd_description">ייבוא רשימת מסרים יומיים מותאמת אישית.</string>
-    <string name="advanced_settings_theme_download">Download</string>
+    <string name="advanced_settings_theme_download">הורדה</string>
     <string name="advanced_settings_theme_export">ייצוא</string>
     <string name="advanced_settings_theme_import">ייבוא</string>
-    <string name="advanced_settings_wotd_download">Download</string>
-    <string name="advanced_settings_wotd_import">Import</string>
+    <string name="advanced_settings_wotd_download">הורדה</string>
+    <string name="advanced_settings_wotd_import">יְבוּא</string>
     <string name="advanced_settings_backup_restore_clear_title">אפס העדפות</string>
     <string name="advanced_settings_backup_restore_clear_description">האם אתה בטוח שאתה רוצה לעשות זאת?</string>
     <string name="advanced_settings_backup_restore_clear_yes">כן</string>
