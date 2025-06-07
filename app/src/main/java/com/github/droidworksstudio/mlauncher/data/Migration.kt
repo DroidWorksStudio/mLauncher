@@ -35,6 +35,9 @@ class Migration(val context: Context) {
             ),
             1100504 to listOf(
                 "SHOW_AZSIDEBAR"
+            ),
+            1100508 to listOf(
+                "EXPERIMENTAL_OPTIONS"
             )
             // Add more versions and preferences to remove here
         )
