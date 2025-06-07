@@ -28,15 +28,16 @@
     <string name="settings_notes_title">Notities</string>
     <string name="settings_notes_description">Personaliseer uw notities zodat ze bij uw eigen stijl passen.</string>
     <!-- Favorite Apps -->
+    <!-- Favorite Apps -->
     <string name="settings_favorite_apps_title">Favoriete apps</string>
-    <string name="settings_favorite_apps_description">Selecteer de apps waartoe u snel toegang wilt hebben vanaf het startscherm.</string>
+    <string name="settings_favorite_apps_description">Reorder your favorite apps for quick access from the home screen.</string>
     <!-- Hidden Apps -->
     <string name="settings_hidden_apps_title">Verborgen apps</string>
-    <string name="settings_hidden_apps_description">Verberg specifieke apps in de app-lade om rommel te verminderen of uw privacy te verbeteren.</string>
+    <string name="settings_hidden_apps_description">Manage hidden apps — unhide any app from this list when needed.</string>
     <string name="settings_advanced_title">Geavanceerd</string>
     <string name="settings_advanced_description">Krijg toegang tot app-info, standaard launcher, back-uptools en meer.</string>
-    <string name="settings_experimental_title">Experimenteel</string>
-    <string name="settings_experimental_description">Ontgrendel verborgen opties en geavanceerde aanpassingen.</string>
+    <string name="settings_expert_title">Expert</string>
+    <string name="settings_expert_description">Unlock hidden options, and advanced tweaks.</string>
     <string name="settings_exit_mlauncher_title">MultiLauncher verlaten</string>
     <string name="settings_exit_mlauncher_description">Schakel tijdelijk over naar uw standaard launcher.</string>
     <string name="settings_exit_mlauncher_dialog">Kies een launcher</string>
@@ -189,11 +190,11 @@
     <string name="advanced_settings_share_application_title">Deel applicatie</string>
     <string name="advanced_settings_share_application_description">Verbeter uw ervaring met %1$s!</string>
     <string name="advanced_settings_share_application_description_addon">Download het nu op %1$s en zie waar iedereen het over heeft! %2$s\n</string>
-    <!-- Strings used for experimental settings -->
-    <string name="experimental_settings_title">Experimenteel</string>
-    <string name="experimental_options_display">Experimentele opties weergeven</string>
-    <string name="experimental_options_unlocked">Experimentele opties ontgrendeld!</string>
-    <string name="experimental_options_tap_hint">%1$d meer tikken om te ontgrendelen</string>
+    <!-- Strings used for expert settings -->
+    <string name="expert_settings_title">Expert</string>
+    <string name="expert_options_display">Show Expert Options</string>
+    <string name="expert_options_unlocked">Expert Options Unlocked!</string>
+    <string name="expert_options_tap_hint">%1$d more taps to unlock</string>
     <!-- App Page Strings -->
     <string name="hidden_apps">Verborgen apps</string>
     <string name="favorite_apps">Favoriete apps</string>
