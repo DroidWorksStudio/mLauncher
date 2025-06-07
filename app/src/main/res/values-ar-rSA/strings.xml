@@ -28,15 +28,16 @@
     <string name="settings_notes_title">ملحوظات</string>
     <string name="settings_notes_description">قم بتخصيص ملاحظاتك لتتناسب مع أسلوبك.</string>
     <!-- Favorite Apps -->
+    <!-- Favorite Apps -->
     <string name="settings_favorite_apps_title">التطبيقات المفضلة</string>
-    <string name="settings_favorite_apps_description">حدد التطبيقات التي تريد الوصول إليها بسرعة من الشاشة الرئيسية.</string>
+    <string name="settings_favorite_apps_description">قم بإعادة ترتيب تطبيقاتك المفضلة للوصول إليها بسرعة من الشاشة الرئيسية.</string>
     <!-- Hidden Apps -->
     <string name="settings_hidden_apps_title">التطبيقات المخفية</string>
-    <string name="settings_hidden_apps_description">قم بإخفاء تطبيقات محددة من درج التطبيقات لتقليل الفوضى أو تعزيز الخصوصية.</string>
+    <string name="settings_hidden_apps_description">إدارة التطبيقات المخفية - إظهار أي تطبيق مخفي من هذه القائمة عند الحاجة إلى ذلك.</string>
     <string name="settings_advanced_title">الإعدادات المتقدمة</string>
     <string name="settings_advanced_description">الوصول إلى معلومات التطبيق، والمشغل الافتراضي، وأدوات النسخ الاحتياطي والمزيد.</string>
-    <string name="settings_experimental_title">تجريبي</string>
-    <string name="settings_experimental_description">افتح الخيارات المخفية والتعديلات المتقدمة.</string>
+    <string name="settings_expert_title">خبير</string>
+    <string name="settings_expert_description">افتح الخيارات المخفية والتعديلات المتقدمة.</string>
     <string name="settings_exit_mlauncher_title">الخروج من MultiLauncher</string>
     <string name="settings_exit_mlauncher_description">التبديل إلى المشغل الافتراضي الخاص بك مؤقتًا.</string>
     <string name="settings_exit_mlauncher_dialog">اختر مشغلًا</string>
@@ -189,11 +190,11 @@
     <string name="advanced_settings_share_application_title">مشاركة التطبيق</string>
     <string name="advanced_settings_share_application_description">قم بترقية تجربتك مع %1$s!</string>
     <string name="advanced_settings_share_application_description_addon">احصل عليه الآن على %1$s وشاهد ما يتحدث عنه الجميع! %2$s\n</string>
-    <!-- Strings used for experimental settings -->
-    <string name="experimental_settings_title">تجريبي</string>
-    <string name="experimental_options_display">إظهار الخيارات التجريبية</string>
-    <string name="experimental_options_unlocked">تم فتح الخيارات التجريبية!</string>
-    <string name="experimental_options_tap_hint">%1$d المزيد من النقرات لفتح القفل</string>
+    <!-- Strings used for expert settings -->
+    <string name="expert_settings_title">خبير</string>
+    <string name="expert_options_display">إظهار خيارات الخبراء</string>
+    <string name="expert_options_unlocked">خيارات الخبراء متاحة الآن!</string>
+    <string name="expert_options_tap_hint">%1$d المزيد من النقرات لفتح القفل</string>
     <!-- App Page Strings -->
     <string name="hidden_apps">التطبيقات المخفية</string>
     <string name="favorite_apps">التطبيقات المفضلة</string>

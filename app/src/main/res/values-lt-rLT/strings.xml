@@ -28,15 +28,16 @@
     <string name="settings_notes_title">Pastabos</string>
     <string name="settings_notes_description">Suasmeninkite savo užrašus, kad jie atitiktų jūsų stilių.</string>
     <!-- Favorite Apps -->
+    <!-- Favorite Apps -->
     <string name="settings_favorite_apps_title">Mėgstamiausios programos</string>
-    <string name="settings_favorite_apps_description">Pasirinkite programas, kurias norite greitai pasiekti iš pagrindinio ekrano.</string>
+    <string name="settings_favorite_apps_description">Pertvarkykite mėgstamiausias programas, kad galėtumėte jas greitai pasiekti iš pagrindinio ekrano.</string>
     <!-- Hidden Apps -->
     <string name="settings_hidden_apps_title">Paslėptos programėlės</string>
-    <string name="settings_hidden_apps_description">Paslėpkite konkrečias programas programų stalčiuje, kad sumažintumėte netvarką arba padidintumėte privatumą.</string>
+    <string name="settings_hidden_apps_description">Tvarkykite paslėptas programas – prireikus parodykite bet kurią šiame sąraše esančią programą.</string>
     <string name="settings_advanced_title">Išplėstiniai nustatymai</string>
     <string name="settings_advanced_description">Pasiekite programos informaciją, numatytąją paleidimo priemonę, atsarginių kopijų kūrimo įrankius ir kt.</string>
-    <string name="settings_experimental_title">Eksperimentinis</string>
-    <string name="settings_experimental_description">Atrakinkite paslėptas parinktis ir išplėstinius pakeitimus.</string>
+    <string name="settings_expert_title">Ekspertas</string>
+    <string name="settings_expert_description">Atrakinkite paslėptas parinktis ir išplėstinius pakeitimus.</string>
     <string name="settings_exit_mlauncher_title">Išeikite iš „MultiLauncher“.</string>
     <string name="settings_exit_mlauncher_description">Laikinai perjunkite į numatytąją paleidimo priemonę.</string>
     <string name="settings_exit_mlauncher_dialog">Pasirinkite paleidimo priemonę</string>
@@ -189,11 +190,11 @@
     <string name="advanced_settings_share_application_title">Dalintis programa</string>
     <string name="advanced_settings_share_application_description">Padidinkite savo patirtį naudodami %1$s!</string>
     <string name="advanced_settings_share_application_description_addon">Gaukite jį dabar %1$s ir pažiūrėkite, apie ką visi kalba! %2$s\n</string>
-    <!-- Strings used for experimental settings -->
-    <string name="experimental_settings_title">Eksperimentinis</string>
-    <string name="experimental_options_display">Rodyti eksperimentines parinktis</string>
-    <string name="experimental_options_unlocked">Eksperimentinės parinktys atrakintos!</string>
-    <string name="experimental_options_tap_hint">%1$d dar bakstelėjimai, kad atrakintumėte</string>
+    <!-- Strings used for expert settings -->
+    <string name="expert_settings_title">Ekspertas</string>
+    <string name="expert_options_display">Rodyti eksperto parinktis</string>
+    <string name="expert_options_unlocked">Ekspertų parinktys atrakintos!</string>
+    <string name="expert_options_tap_hint">%1$d dar bakstelėjimai, kad atrakintumėte</string>
     <!-- App Page Strings -->
     <string name="hidden_apps">Paslėptos programėlės</string>
     <string name="favorite_apps">Mėgstamiausios programos</string>

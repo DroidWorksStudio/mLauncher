@@ -28,15 +28,16 @@
     <string name="settings_notes_title">노트</string>
     <string name="settings_notes_description">귀하의 스타일에 맞게 노트를 개인화하세요.</string>
     <!-- Favorite Apps -->
+    <!-- Favorite Apps -->
     <string name="settings_favorite_apps_title">즐겨찾는 앱</string>
-    <string name="settings_favorite_apps_description">홈 화면에서 빠르게 액세스하려는 앱을 선택하세요.</string>
+    <string name="settings_favorite_apps_description">홈 화면에서 자주 사용하는 앱을 빠르게 액세스할 수 있도록 순서를 변경하세요.</string>
     <!-- Hidden Apps -->
     <string name="settings_hidden_apps_title">Hidden apps</string>
-    <string name="settings_hidden_apps_description">앱 서랍에서 특정 앱을 숨겨서 불필요한 부분을 줄이거나 개인정보 보호를 강화하세요.</string>
+    <string name="settings_hidden_apps_description">숨겨진 앱 관리 - 필요할 때 이 목록에서 모든 앱을 숨겨진 상태로 유지합니다.</string>
     <string name="settings_advanced_title">고급 설정</string>
     <string name="settings_advanced_description">앱 정보, 기본 실행기, 백업 도구 등에 액세스하세요.</string>
-    <string name="settings_experimental_title">실험적</string>
-    <string name="settings_experimental_description">숨겨진 옵션과 고급 조정 기능을 잠금 해제하세요.</string>
+    <string name="settings_expert_title">전문가</string>
+    <string name="settings_expert_description">숨겨진 옵션과 고급 조정 기능을 잠금 해제하세요.</string>
     <string name="settings_exit_mlauncher_title">MultiLauncher 종료</string>
     <string name="settings_exit_mlauncher_description">일시적으로 기본 런처로 전환합니다.</string>
     <string name="settings_exit_mlauncher_dialog">런처를 선택하세요</string>
@@ -189,11 +190,11 @@
     <string name="advanced_settings_share_application_title">공유 응용 프로그램</string>
     <string name="advanced_settings_share_application_description">%1$s로 더욱 향상된 경험을 느껴보세요!</string>
     <string name="advanced_settings_share_application_description_addon">지금 %1$s 에서 받아보시고 모두가 무슨 이야기를 하는지 확인해보세요! %2$s\n</string>
-    <!-- Strings used for experimental settings -->
-    <string name="experimental_settings_title">실험적</string>
-    <string name="experimental_options_display">실험 옵션 표시</string>
-    <string name="experimental_options_unlocked">실험적 옵션이 공개되었습니다!</string>
-    <string name="experimental_options_tap_hint">%1$d 잠금 해제를 위해 더 많은 탭을 하세요</string>
+    <!-- Strings used for expert settings -->
+    <string name="expert_settings_title">전문가</string>
+    <string name="expert_options_display">전문가 옵션 표시</string>
+    <string name="expert_options_unlocked">전문가 옵션 잠금 해제!</string>
+    <string name="expert_options_tap_hint">%1$d 잠금 해제를 위해 더 많은 탭을 하세요</string>
     <!-- App Page Strings -->
     <string name="hidden_apps">Hidden apps</string>
     <string name="favorite_apps">즐겨찾는 앱</string>
