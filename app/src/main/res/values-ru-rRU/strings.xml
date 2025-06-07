@@ -179,8 +179,11 @@
     <string name="advanced_settings_theme_description">Настройте темы по своему вкусу.</string>
     <string name="advanced_settings_wotd_title">Слово дня</string>
     <string name="advanced_settings_wotd_description">Импортируйте пользовательский список «Слово дня».</string>
+    <string name="advanced_settings_theme_download">Download</string>
     <string name="advanced_settings_theme_export">Экспорт</string>
     <string name="advanced_settings_theme_import">Импорт</string>
+    <string name="advanced_settings_wotd_download">Download</string>
+    <string name="advanced_settings_wotd_import">Import</string>
     <string name="advanced_settings_backup_restore_clear_title">Очистить настройки</string>
     <string name="advanced_settings_backup_restore_clear_description">Вы уверены, что хотите это сделать?</string>
     <string name="advanced_settings_backup_restore_clear_yes">Да</string>
