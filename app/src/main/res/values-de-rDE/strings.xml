@@ -28,15 +28,16 @@
     <string name="settings_notes_title">Hinweise</string>
     <string name="settings_notes_description">Personalisieren Sie Ihre Notizen, damit sie zu Ihrem Stil passen.</string>
     <!-- Favorite Apps -->
+    <!-- Favorite Apps -->
     <string name="settings_favorite_apps_title">Lieblings-Apps</string>
-    <string name="settings_favorite_apps_description">Wählen Sie vom Startbildschirm aus die Apps aus, auf die Sie schnell zugreifen möchten.</string>
+    <string name="settings_favorite_apps_description">Reorder your favorite apps for quick access from the home screen.</string>
     <!-- Hidden Apps -->
     <string name="settings_hidden_apps_title">Versteckte Apps</string>
-    <string name="settings_hidden_apps_description">Blenden Sie bestimmte Apps aus der App-Schublade aus, um Unordnung zu vermeiden oder die Privatsphäre zu verbessern.</string>
+    <string name="settings_hidden_apps_description">Manage hidden apps — unhide any app from this list when needed.</string>
     <string name="settings_advanced_title">Erweiterte Einstellungen</string>
     <string name="settings_advanced_description">Greifen Sie auf App-Informationen, Standard-Launcher, Backup-Tools und mehr zu.</string>
-    <string name="settings_experimental_title">Experimental</string>
-    <string name="settings_experimental_description">Schalten Sie versteckte Optionen und erweiterte Optimierungen frei.</string>
+    <string name="settings_expert_title">Expert</string>
+    <string name="settings_expert_description">Unlock hidden options, and advanced tweaks.</string>
     <string name="settings_exit_mlauncher_title">MultiLauncher beenden</string>
     <string name="settings_exit_mlauncher_description">Wechseln Sie vorübergehend zu Ihrem Standard-Launcher.</string>
     <string name="settings_exit_mlauncher_dialog">Wählen Sie einen Launcher</string>
@@ -189,11 +190,11 @@
     <string name="advanced_settings_share_application_title">Anwendung teilen</string>
     <string name="advanced_settings_share_application_description">Erweitern Sie Ihr Erlebnis mit %1$s!</string>
     <string name="advanced_settings_share_application_description_addon">Hol es dir jetzt auf %1$s und sieh, worüber alle reden! %2$s\n</string>
-    <!-- Strings used for experimental settings -->
-    <string name="experimental_settings_title">Experimental</string>
-    <string name="experimental_options_display">Experimentelle Optionen anzeigen</string>
-    <string name="experimental_options_unlocked">Experimentelle Optionen freigeschaltet!</string>
-    <string name="experimental_options_tap_hint">%1$d weitere Klicks zum Entsperren</string>
+    <!-- Strings used for expert settings -->
+    <string name="expert_settings_title">Expert</string>
+    <string name="expert_options_display">Show Expert Options</string>
+    <string name="expert_options_unlocked">Expert Options Unlocked!</string>
+    <string name="expert_options_tap_hint">%1$d more taps to unlock</string>
     <!-- App Page Strings -->
     <string name="hidden_apps">Versteckte Apps</string>
     <string name="favorite_apps">Lieblings-Apps</string>
