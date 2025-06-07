@@ -30,14 +30,14 @@
     <!-- Favorite Apps -->
     <!-- Favorite Apps -->
     <string name="settings_favorite_apps_title">Obľúbené aplikácie</string>
-    <string name="settings_favorite_apps_description">Reorder your favorite apps for quick access from the home screen.</string>
+    <string name="settings_favorite_apps_description">Zmeňte poradie svojich obľúbených aplikácií pre rýchly prístup z domovskej obrazovky.</string>
     <!-- Hidden Apps -->
     <string name="settings_hidden_apps_title">Skryté aplikácie</string>
-    <string name="settings_hidden_apps_description">Manage hidden apps — unhide any app from this list when needed.</string>
+    <string name="settings_hidden_apps_description">Spravovať skryté aplikácie – v prípade potreby odkryte ľubovoľnú aplikáciu z tohto zoznamu.</string>
     <string name="settings_advanced_title">Rozšírené nastavenia</string>
     <string name="settings_advanced_description">Prístup k informáciám o aplikácii, predvolenému spúšťaču, nástrojom na zálohovanie a ďalším funkciám.</string>
     <string name="settings_expert_title">Expert</string>
-    <string name="settings_expert_description">Unlock hidden options, and advanced tweaks.</string>
+    <string name="settings_expert_description">Odomknite skryté možnosti a pokročilé vylepšenia.</string>
     <string name="settings_exit_mlauncher_title">Ukončite MultiLauncher</string>
     <string name="settings_exit_mlauncher_description">Dočasne prepnite na predvolený spúšťač.</string>
     <string name="settings_exit_mlauncher_dialog">Vyberte spúšťač</string>
@@ -192,9 +192,9 @@
     <string name="advanced_settings_share_application_description_addon">Získajte to teraz na %1$s a uvidíte, o čom všetci hovoria! %2$s\n</string>
     <!-- Strings used for expert settings -->
     <string name="expert_settings_title">Expert</string>
-    <string name="expert_options_display">Show Expert Options</string>
-    <string name="expert_options_unlocked">Expert Options Unlocked!</string>
-    <string name="expert_options_tap_hint">%1$d more taps to unlock</string>
+    <string name="expert_options_display">Zobraziť možnosti pre expertov</string>
+    <string name="expert_options_unlocked">Možnosti pre expertov sú odomknuté!</string>
+    <string name="expert_options_tap_hint">%1$d viac klepnutí na odomknutie</string>
     <!-- App Page Strings -->
     <string name="hidden_apps">Skryté aplikácie</string>
     <string name="favorite_apps">Obľúbené aplikácie</string>
