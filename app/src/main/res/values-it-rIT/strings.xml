@@ -179,8 +179,11 @@
     <string name="advanced_settings_theme_description">Personalizza i temi in base alle tue esigenze.</string>
     <string name="advanced_settings_wotd_title">Parola del giorno</string>
     <string name="advanced_settings_wotd_description">Importa l\'elenco personalizzato delle parole del giorno.</string>
+    <string name="advanced_settings_theme_download">Scaricamento</string>
     <string name="advanced_settings_theme_export">Esportare</string>
     <string name="advanced_settings_theme_import">Importare</string>
+    <string name="advanced_settings_wotd_download">Scaricamento</string>
+    <string name="advanced_settings_wotd_import">Importare</string>
     <string name="advanced_settings_backup_restore_clear_title">Cancella preferenze</string>
     <string name="advanced_settings_backup_restore_clear_description">Sei sicuro di volerlo fare?</string>
     <string name="advanced_settings_backup_restore_clear_yes">SÌ</string>

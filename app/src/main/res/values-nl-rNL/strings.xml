@@ -179,8 +179,11 @@
     <string name="advanced_settings_theme_description">Pas thema\'s aan uw wensen aan.</string>
     <string name="advanced_settings_wotd_title">Woord van de dag</string>
     <string name="advanced_settings_wotd_description">Importeer een aangepaste lijst met het Woord van de Dag.</string>
+    <string name="advanced_settings_theme_download">Download</string>
     <string name="advanced_settings_theme_export">Exporteren</string>
     <string name="advanced_settings_theme_import">Importeren</string>
+    <string name="advanced_settings_wotd_download">Download</string>
+    <string name="advanced_settings_wotd_import">Importeren</string>
     <string name="advanced_settings_backup_restore_clear_title">Voorkeuren wissen</string>
     <string name="advanced_settings_backup_restore_clear_description">Weet u zeker dat u dit wilt doen?</string>
     <string name="advanced_settings_backup_restore_clear_yes">Ja</string>

@@ -179,8 +179,11 @@
     <string name="advanced_settings_theme_description">Prispôsobte si témy tak, aby vám vyhovovali.</string>
     <string name="advanced_settings_wotd_title">Slovo dňa</string>
     <string name="advanced_settings_wotd_description">Importujte vlastný zoznam Slov dňa.</string>
+    <string name="advanced_settings_theme_download">Stiahnuť</string>
     <string name="advanced_settings_theme_export">Exportovať</string>
     <string name="advanced_settings_theme_import">Importovať</string>
+    <string name="advanced_settings_wotd_download">Stiahnuť</string>
+    <string name="advanced_settings_wotd_import">Importovať</string>
     <string name="advanced_settings_backup_restore_clear_title">Vymazať predvoľby</string>
     <string name="advanced_settings_backup_restore_clear_description">Naozaj to chcete urobiť?</string>
     <string name="advanced_settings_backup_restore_clear_yes">áno</string>
