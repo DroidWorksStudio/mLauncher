@@ -48,17 +48,20 @@ class Mlauncher : Application() {
 
         private fun setCustomFont(context: Context) {
             val prefs = Prefs(context)
-            val customFontFile = File(context.filesDir, "CustomFont.ttf")
-            if (!customFontFile.exists()) {
-                prefs.fontFamily = Constants.FontFamily.System
+            val fontFamily = prefs.fontFamily
+
+            // If custom is selected but file is missing, skip setting
+            if (fontFamily == Constants.FontFamily.Custom) {
+                val customFontFile = File(context.filesDir, "CustomFont.ttf")
+                if (!customFontFile.exists()) return
             }
 
-            val customFont = prefs.fontFamily.getFont(context)
-            if (customFont != null) {
-                TypefaceUtil.setDefaultFont("DEFAULT", customFont)
-                TypefaceUtil.setDefaultFont("MONOSPACE", customFont)
-                TypefaceUtil.setDefaultFont("SERIF", customFont)
-                TypefaceUtil.setDefaultFont("SANS_SERIF", customFont)
+            val typeface = fontFamily.getFont(context)
+            if (typeface != null) {
+                TypefaceUtil.setDefaultFont("DEFAULT", typeface)
+                TypefaceUtil.setDefaultFont("MONOSPACE", typeface)
+                TypefaceUtil.setDefaultFont("SERIF", typeface)
+                TypefaceUtil.setDefaultFont("SANS_SERIF", typeface)
             }
         }
     }
