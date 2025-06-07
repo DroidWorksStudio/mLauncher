@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Implemented Enhancements:
+
+- *(Settings)* Add download option for themes and wotd - ([8b06fc4](https://github.com/DroidWorksStudio/mLauncher/commit/8b06fc42e600aa0d5c56afe5aaaba3ad859ad225))
+
 ### Language Support:
 
 - Updated Language Files. ([#781](https://github.com/DroidWorksStudio/mLauncher/issues/781)) - ([f9591cc](https://github.com/DroidWorksStudio/mLauncher/commit/f9591cc36a0b799bb93fd69326e65d7ccb98087d))
