@@ -12,6 +12,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Updated Language Files. ([#781](https://github.com/DroidWorksStudio/mLauncher/issues/781)) - ([f9591cc](https://github.com/DroidWorksStudio/mLauncher/commit/f9591cc36a0b799bb93fd69326e65d7ccb98087d))
 
+### Refactoring:
+
+- Update URLs for theme and word of the day downloads - ([eb54eeb](https://github.com/DroidWorksStudio/mLauncher/commit/eb54eeb032dc1688bdfb64885179f2f3377dc6d6))
+
 ## [1.10.5.8](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.5.8) - (07, June 2025)
 
 ### Implemented Enhancements:
