@@ -28,15 +28,16 @@
     <string name="settings_notes_title">Poznámky</string>
     <string name="settings_notes_description">Prispôsobte si poznámky tak, aby zodpovedali vášmu štýlu.</string>
     <!-- Favorite Apps -->
+    <!-- Favorite Apps -->
     <string name="settings_favorite_apps_title">Obľúbené aplikácie</string>
-    <string name="settings_favorite_apps_description">Vyberte aplikácie, ku ktorým chcete mať rýchly prístup z domovskej obrazovky.</string>
+    <string name="settings_favorite_apps_description">Reorder your favorite apps for quick access from the home screen.</string>
     <!-- Hidden Apps -->
     <string name="settings_hidden_apps_title">Skryté aplikácie</string>
-    <string name="settings_hidden_apps_description">Skryte konkrétne aplikácie zo zásuvky aplikácií, aby ste znížili neporiadok alebo zvýšili súkromie.</string>
+    <string name="settings_hidden_apps_description">Manage hidden apps — unhide any app from this list when needed.</string>
     <string name="settings_advanced_title">Rozšírené nastavenia</string>
     <string name="settings_advanced_description">Prístup k informáciám o aplikácii, predvolenému spúšťaču, nástrojom na zálohovanie a ďalším funkciám.</string>
-    <string name="settings_experimental_title">Experimentálne</string>
-    <string name="settings_experimental_description">Odomknite skryté možnosti a pokročilé vylepšenia.</string>
+    <string name="settings_expert_title">Expert</string>
+    <string name="settings_expert_description">Unlock hidden options, and advanced tweaks.</string>
     <string name="settings_exit_mlauncher_title">Ukončite MultiLauncher</string>
     <string name="settings_exit_mlauncher_description">Dočasne prepnite na predvolený spúšťač.</string>
     <string name="settings_exit_mlauncher_dialog">Vyberte spúšťač</string>
@@ -189,11 +190,11 @@
     <string name="advanced_settings_share_application_title">Zdieľať aplikáciu</string>
     <string name="advanced_settings_share_application_description">Zvýšte svoje skúsenosti s %1$s!</string>
     <string name="advanced_settings_share_application_description_addon">Získajte to teraz na %1$s a uvidíte, o čom všetci hovoria! %2$s\n</string>
-    <!-- Strings used for experimental settings -->
-    <string name="experimental_settings_title">Experimentálne</string>
-    <string name="experimental_options_display">Zobraziť experimentálne možnosti</string>
-    <string name="experimental_options_unlocked">Experimentálne možnosti odomknuté!</string>
-    <string name="experimental_options_tap_hint">%1$d viac klepnutí na odomknutie</string>
+    <!-- Strings used for expert settings -->
+    <string name="expert_settings_title">Expert</string>
+    <string name="expert_options_display">Show Expert Options</string>
+    <string name="expert_options_unlocked">Expert Options Unlocked!</string>
+    <string name="expert_options_tap_hint">%1$d more taps to unlock</string>
     <!-- App Page Strings -->
     <string name="hidden_apps">Skryté aplikácie</string>
     <string name="favorite_apps">Obľúbené aplikácie</string>
