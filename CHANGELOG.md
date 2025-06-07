@@ -16,6 +16,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Update URLs for theme and word of the day downloads - ([eb54eeb](https://github.com/DroidWorksStudio/mLauncher/commit/eb54eeb032dc1688bdfb64885179f2f3377dc6d6))
 
+### Releases:
+
+- Increment build number - ([d1bb86b](https://github.com/DroidWorksStudio/mLauncher/commit/d1bb86bb55a1083ea111808a0c9318af1f5fc177))
+
 ## [1.10.5.8](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.5.8) - (07, June 2025)
 
 ### Implemented Enhancements:
