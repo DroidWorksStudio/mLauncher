@@ -179,11 +179,11 @@
     <string name="advanced_settings_theme_description">나에게 맞는 테마를 설정하세요.</string>
     <string name="advanced_settings_wotd_title">오늘의 단어</string>
     <string name="advanced_settings_wotd_description">사용자 정의 단어 목록을 가져옵니다.</string>
-    <string name="advanced_settings_theme_download">Download</string>
+    <string name="advanced_settings_theme_download">다운로드</string>
     <string name="advanced_settings_theme_export">내보내다</string>
     <string name="advanced_settings_theme_import">수입</string>
-    <string name="advanced_settings_wotd_download">Download</string>
-    <string name="advanced_settings_wotd_import">Import</string>
+    <string name="advanced_settings_wotd_download">다운로드</string>
+    <string name="advanced_settings_wotd_import">수입</string>
     <string name="advanced_settings_backup_restore_clear_title">환경 설정 지우기</string>
     <string name="advanced_settings_backup_restore_clear_description">정말로 이 작업을 수행하시겠습니까?</string>
     <string name="advanced_settings_backup_restore_clear_yes">예</string>
