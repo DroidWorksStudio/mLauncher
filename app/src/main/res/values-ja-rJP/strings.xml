@@ -179,8 +179,11 @@
     <string name="advanced_settings_theme_description">自分に合ったテーマをカスタマイズします。</string>
     <string name="advanced_settings_wotd_title">今日の言葉</string>
     <string name="advanced_settings_wotd_description">カスタムの今日の単語リストをインポートします。</string>
+    <string name="advanced_settings_theme_download">Download</string>
     <string name="advanced_settings_theme_export">輸出</string>
     <string name="advanced_settings_theme_import">輸入</string>
+    <string name="advanced_settings_wotd_download">Download</string>
+    <string name="advanced_settings_wotd_import">Import</string>
     <string name="advanced_settings_backup_restore_clear_title">設定をクリア</string>
     <string name="advanced_settings_backup_restore_clear_description">本当にこれを実行しますか?</string>
     <string name="advanced_settings_backup_restore_clear_yes">はい</string>
