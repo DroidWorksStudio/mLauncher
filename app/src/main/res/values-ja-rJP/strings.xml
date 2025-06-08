@@ -295,6 +295,8 @@
     <string name="edit_note">メモを編集</string>
     <string name="category">カテゴリ</string>
     <string name="priority">優先度</string>
+    <string name="settings_context_menu_title">Context Menu</string>
+    <string name="settings_context_menu_option">Customize visible items</string>
     <string-array name="priorities">
         <item>低い</item>
         <item>中くらい</item>
