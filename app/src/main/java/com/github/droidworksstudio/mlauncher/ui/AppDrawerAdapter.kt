@@ -293,12 +293,12 @@ class AppDrawerAdapter(
         ) =
             with(itemView) {
                 val prefs = Prefs(context)
-                val flags = prefs.getMenuFlags("CONTEXT_MENU_FLAGS")
+                val contextMenuFlags = prefs.getMenuFlags("CONTEXT_MENU_FLAGS")
                 appHideLayout.isVisible = false
                 appRenameLayout.isVisible = false
 
                 appHide.apply {
-                    isVisible = flags[2]
+                    isVisible = contextMenuFlags[2]
                     // set show/hide icon
                     if (flag == AppDrawerFlag.HiddenApps) {
                         setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.visibility, 0, 0)
@@ -314,7 +314,7 @@ class AppDrawerAdapter(
                 val currentLockedApps = prefs.lockedApps
 
                 appLock.apply {
-                    isVisible = flags[1]
+                    isVisible = contextMenuFlags[1]
                     if (currentLockedApps.contains(appName)) {
                         setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.padlock, 0, 0)
                         text = getLocalizedString(R.string.unlock)
@@ -327,7 +327,7 @@ class AppDrawerAdapter(
                 val currentPinnedApps = prefs.pinnedApps
 
                 appPin.apply {
-                    isVisible = flags[0]
+                    isVisible = contextMenuFlags[0]
                     if (currentPinnedApps.contains(appName)) {
                         setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.pin, 0, 0)
                         text = getLocalizedString(R.string.unpin)
@@ -338,7 +338,7 @@ class AppDrawerAdapter(
                 }
 
                 appRename.apply {
-                    isVisible = flags[3]
+                    isVisible = contextMenuFlags[3]
                     setOnClickListener {
                         if (appListItem.activityPackage.isNotEmpty()) {
                             appRenameEdit.hint = appListItem.activityLabel
@@ -540,14 +540,14 @@ class AppDrawerAdapter(
                 }
 
                 appInfo.apply {
-                    isVisible = flags[4]
+                    isVisible = contextMenuFlags[4]
                     setOnClickListener {
                         appInfoListener(appListItem)
                     }
                 }
 
                 appDelete.apply {
-                    isVisible = flags[5]
+                    isVisible = contextMenuFlags[5]
                     setOnClickListener {
                         appDeleteListener(appListItem)
                     }
