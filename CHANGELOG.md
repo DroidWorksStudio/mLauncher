@@ -17,6 +17,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Rename flagOptionLabels to contextMenuOptionLabels - ([8186cf4](https://github.com/DroidWorksStudio/mLauncher/commit/8186cf420ba6f5b44c640da0e99a1e5e23b60c7d))
 - Update URLs for theme and word of the day downloads - ([eb54eeb](https://github.com/DroidWorksStudio/mLauncher/commit/eb54eeb032dc1688bdfb64885179f2f3377dc6d6))
 
 ### Releases:
