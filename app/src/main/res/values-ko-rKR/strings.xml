@@ -295,6 +295,8 @@
     <string name="edit_note">편집 노트</string>
     <string name="category">범주</string>
     <string name="priority">우선 사항</string>
+    <string name="settings_context_menu_title">Context Menu</string>
+    <string name="settings_context_menu_option">Customize visible items</string>
     <string-array name="priorities">
         <item>낮은</item>
         <item>중간</item>
