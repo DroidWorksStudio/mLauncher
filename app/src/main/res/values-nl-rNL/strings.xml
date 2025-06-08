@@ -295,6 +295,8 @@
     <string name="edit_note">Notitie bewerken</string>
     <string name="category">Categorie</string>
     <string name="priority">Prioriteit</string>
+    <string name="settings_context_menu_title">Context Menu</string>
+    <string name="settings_context_menu_option">Customize visible items</string>
     <string-array name="priorities">
         <item>Laag</item>
         <item>Medium</item>
