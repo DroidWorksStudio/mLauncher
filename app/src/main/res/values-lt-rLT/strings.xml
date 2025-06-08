@@ -297,6 +297,8 @@ Jūs bet kada galite išjungti šią prieigą savo įrenginio nustatymuose.</str
     <string name="edit_note">Redaguoti pastabą</string>
     <string name="category">Kategorija</string>
     <string name="priority">Pirmenybė</string>
+    <string name="settings_context_menu_title">Context Menu</string>
+    <string name="settings_context_menu_option">Customize visible items</string>
     <string-array name="priorities">
         <item>Žemas</item>
         <item>Vidutinis</item>
