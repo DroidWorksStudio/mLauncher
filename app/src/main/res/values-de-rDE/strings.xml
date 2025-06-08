@@ -274,12 +274,12 @@
     <string name="next">Nächste</string>
     <string name="start">Start</string>
     <string name="copy">Kopie</string>
-    <string name="home_button_phone">Phone</string>
-    <string name="home_button_messages">Messages</string>
-    <string name="home_button_camera">Camera</string>
-    <string name="home_button_photos">Photos</string>
+    <string name="home_button_phone">Telefon</string>
+    <string name="home_button_messages">Nachrichten</string>
+    <string name="home_button_camera">Kamera</string>
+    <string name="home_button_photos">Fotos</string>
     <string name="home_button_web">Web</string>
-    <string name="home_button_settings">Settings</string>
+    <string name="home_button_settings">Einstellungen</string>
     <string name="home_button_logo">Logo</string>
     <string name="allow">Erlauben</string>
     <string name="deny">Leugnen</string>
@@ -302,10 +302,10 @@
     <string name="edit_note">Notiz bearbeiten</string>
     <string name="category">Kategorie</string>
     <string name="priority">Priorität</string>
-    <string name="settings_context_menu_title">Context Menu</string>
-    <string name="settings_context_menu_option">Customize visible items</string>
-    <string name="settings_home_buttons_title">Home Buttons</string>
-    <string name="settings_home_buttons_option">Customize visible items</string>
+    <string name="settings_context_menu_title">Kontextmenü</string>
+    <string name="settings_context_menu_option">Sichtbare Elemente anpassen</string>
+    <string name="settings_home_buttons_title">Home-Schaltflächen</string>
+    <string name="settings_home_buttons_option">Sichtbare Elemente anpassen</string>
     <string-array name="priorities">
         <item>Niedrig</item>
         <item>Medium</item>
