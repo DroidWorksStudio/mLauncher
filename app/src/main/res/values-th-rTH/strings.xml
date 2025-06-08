@@ -295,6 +295,8 @@
     <string name="edit_note">แก้ไขหมายเหตุ</string>
     <string name="category">หมวดหมู่</string>
     <string name="priority">ลำดับความสำคัญ</string>
+    <string name="settings_context_menu_title">Context Menu</string>
+    <string name="settings_context_menu_option">Customize visible items</string>
     <string-array name="priorities">
         <item>ต่ำ</item>
         <item>ปานกลาง</item>
