@@ -304,6 +304,15 @@ class SettingsFragment : Fragment() {
         var toggledSettingsLocked by remember { mutableStateOf(prefs.settingsLocked) }
         var toggledLockOrientation by remember { mutableStateOf(prefs.lockOrientation) }
 
+        val flagOptionLabels = listOf(
+            getLocalizedString(R.string.pin),
+            getLocalizedString(R.string.lock),
+            getLocalizedString(R.string.hide),
+            getLocalizedString(R.string.rename),
+            getLocalizedString(R.string.info),
+            getLocalizedString(R.string.delete)
+        )
+
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -2354,6 +2363,16 @@ class SettingsFragment : Fragment() {
                         )
                     }
 
+                    SettingsSelect(
+                        title = getLocalizedString(R.string.settings_context_menu_title),
+                        option = getLocalizedString(R.string.settings_context_menu_option),
+                        fontSize = titleFontSize,
+                        onClick = {
+                            dialogBuilder.showFlagSettingsBottomSheet(context, flagOptionLabels, "CONTEXT_MENU_FLAGS", "001111")
+                        }
+                    )
+
+
                     if (!isGestureNavigationEnabled(context)) {
                         Spacer(modifier = Modifier.height(52.dp))
                     }
@@ -2377,6 +2396,7 @@ class SettingsFragment : Fragment() {
         dialogBuilder.singleChoiceBottomSheet?.dismiss()
         dialogBuilder.colorPickerBottomSheet?.dismiss()
         dialogBuilder.sliderBottomSheet?.dismiss()
+        dialogBuilder.flagSettingsBottomSheet?.dismiss()
     }
 
     override fun onDestroyView() {

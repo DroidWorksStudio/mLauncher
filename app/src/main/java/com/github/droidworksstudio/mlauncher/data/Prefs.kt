@@ -845,6 +845,18 @@ class Prefs(val context: Context) {
         }
         set(value) = prefsNormal.edit { putInt(TEXT_PADDING_SIZE, value) }
 
+    // Save flags as a string of 6 bits
+    fun saveMenuFlags(settingFlags: String, flags: List<Boolean>) {
+        val flagString = flags.joinToString("") { if (it) "1" else "0" }
+        prefsNormal.edit { putString(settingFlags, flagString) }
+    }
+
+    // Get flags as list of booleans
+    fun getMenuFlags(settingFlags: String, default: String = "0"): List<Boolean> {
+        val flagString = prefsNormal.getString(settingFlags, default) ?: default
+        return flagString.map { it == '1' }
+    }
+
     private fun getColorInt(type: String): Int {
         val isDarkMode = isSystemInDarkMode(context)
 
@@ -883,7 +895,6 @@ class Prefs(val context: Context) {
             Constants.Theme.Light -> lightModeColors[type] ?: defaultLight
         }
     }
-
 
     // return app label
     fun getAppName(location: Int): String {

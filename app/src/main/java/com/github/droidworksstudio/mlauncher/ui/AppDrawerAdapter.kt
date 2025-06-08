@@ -293,46 +293,52 @@ class AppDrawerAdapter(
         ) =
             with(itemView) {
                 val prefs = Prefs(context)
+                val flags = prefs.getMenuFlags("CONTEXT_MENU_FLAGS")
                 appHideLayout.isVisible = false
                 appRenameLayout.isVisible = false
 
-                // set show/hide icon
-                if (flag == AppDrawerFlag.HiddenApps) {
-                    appHide.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.visibility, 0, 0)
-                    appHide.text = getLocalizedString(R.string.show)
-                } else {
-                    appHide.setCompoundDrawablesWithIntrinsicBounds(
-                        0,
-                        R.drawable.visibility_off,
-                        0,
-                        0
-                    )
-                    appHide.text = getLocalizedString(R.string.hide)
+                appHide.apply {
+                    isVisible = flags[2]
+                    // set show/hide icon
+                    if (flag == AppDrawerFlag.HiddenApps) {
+                        setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.visibility, 0, 0)
+                        text = getLocalizedString(R.string.show)
+                    } else {
+                        setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.visibility_off, 0, 0)
+                        text = getLocalizedString(R.string.hide)
+                    }
                 }
 
                 val appName = appListItem.activityPackage
                 // Access the current locked apps set
                 val currentLockedApps = prefs.lockedApps
 
-                if (currentLockedApps.contains(appName)) {
-                    appLock.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.padlock, 0, 0)
-                    appLock.text = getLocalizedString(R.string.unlock)
-                } else {
-                    appLock.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.padlock_off, 0, 0)
-                    appLock.text = getLocalizedString(R.string.lock)
+                appLock.apply {
+                    isVisible = flags[1]
+                    if (currentLockedApps.contains(appName)) {
+                        setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.padlock, 0, 0)
+                        text = getLocalizedString(R.string.unlock)
+                    } else {
+                        setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.padlock_off, 0, 0)
+                        text = getLocalizedString(R.string.lock)
+                    }
                 }
 
                 val currentPinnedApps = prefs.pinnedApps
 
-                if (currentPinnedApps.contains(appName)) {
-                    appPin.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.pin, 0, 0)
-                    appPin.text = getLocalizedString(R.string.unpin)
-                } else {
-                    appPin.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.pin_off, 0, 0)
-                    appPin.text = getLocalizedString(R.string.pin)
+                appPin.apply {
+                    isVisible = flags[0]
+                    if (currentPinnedApps.contains(appName)) {
+                        setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.pin, 0, 0)
+                        text = getLocalizedString(R.string.unpin)
+                    } else {
+                        setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.pin_off, 0, 0)
+                        text = getLocalizedString(R.string.pin)
+                    }
                 }
 
                 appRename.apply {
+                    isVisible = flags[3]
                     setOnClickListener {
                         if (appListItem.activityPackage.isNotEmpty()) {
                             appRenameEdit.hint = appListItem.activityLabel
@@ -534,12 +540,14 @@ class AppDrawerAdapter(
                 }
 
                 appInfo.apply {
+                    isVisible = flags[4]
                     setOnClickListener {
                         appInfoListener(appListItem)
                     }
                 }
 
                 appDelete.apply {
+                    isVisible = flags[5]
                     setOnClickListener {
                         appDeleteListener(appListItem)
                     }

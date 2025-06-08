@@ -12,6 +12,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AbsListView
 import android.widget.ArrayAdapter
+import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.ListView
@@ -361,6 +362,46 @@ class DialogManager(val context: Context, val activity: Activity) {
             }
         }
     }
+
+    var flagSettingsBottomSheet: LockedBottomSheetDialog? = null
+
+    fun showFlagSettingsBottomSheet(context: Context, optionLabels: List<String>, settingFlags: String, default: String = "0") {
+        flagSettingsBottomSheet?.dismiss()
+
+        val prefs = Prefs(context)
+        val currentFlags = prefs.getMenuFlags(settingFlags, default).toMutableList()
+
+        val layout = LinearLayout(context).apply {
+            orientation = LinearLayout.VERTICAL
+            setPadding(48, 24, 48, 24)
+        }
+
+        optionLabels.forEachIndexed { index, label ->
+            val checkBox = CheckBox(context).apply {
+                text = label
+                isChecked = currentFlags.getOrElse(index) { false }
+                setOnCheckedChangeListener { _, isChecked ->
+                    if (index < currentFlags.size) {
+                        currentFlags[index] = isChecked
+                        prefs.saveMenuFlags(settingFlags, currentFlags)
+                    }
+                }
+                layoutParams = LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT
+                ).apply {
+                    topMargin = 16
+                }
+            }
+            layout.addView(checkBox)
+        }
+
+        flagSettingsBottomSheet = LockedBottomSheetDialog(context).apply {
+            setContentView(layout)
+        }
+        flagSettingsBottomSheet?.show()
+    }
+
 
     var colorPickerBottomSheet: LockedBottomSheetDialog? = null
 
