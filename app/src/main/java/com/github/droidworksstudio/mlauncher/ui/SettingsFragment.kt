@@ -304,7 +304,7 @@ class SettingsFragment : Fragment() {
         var toggledSettingsLocked by remember { mutableStateOf(prefs.settingsLocked) }
         var toggledLockOrientation by remember { mutableStateOf(prefs.lockOrientation) }
 
-        val flagOptionLabels = listOf(
+        val contextMenuOptionLabels = listOf(
             getLocalizedString(R.string.pin),
             getLocalizedString(R.string.lock),
             getLocalizedString(R.string.hide),
@@ -2368,7 +2368,7 @@ class SettingsFragment : Fragment() {
                         option = getLocalizedString(R.string.settings_context_menu_option),
                         fontSize = titleFontSize,
                         onClick = {
-                            dialogBuilder.showFlagSettingsBottomSheet(context, flagOptionLabels, "CONTEXT_MENU_FLAGS", "001111")
+                            dialogBuilder.showFlagSettingsBottomSheet(context, contextMenuOptionLabels, "CONTEXT_MENU_FLAGS", "001111")
                         }
                     )
 
