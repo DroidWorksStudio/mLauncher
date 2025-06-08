@@ -297,6 +297,8 @@ Tento prístup môžete kedykoľvek vypnúť v nastaveniach zariadenia.</string>
     <string name="edit_note">Upraviť poznámku</string>
     <string name="category">Kategória</string>
     <string name="priority">Priorita</string>
+    <string name="settings_context_menu_title">Context Menu</string>
+    <string name="settings_context_menu_option">Customize visible items</string>
     <string-array name="priorities">
         <item>Nízka</item>
         <item>Stredná</item>
