@@ -295,6 +295,8 @@
     <string name="edit_note">Редактировать примечание</string>
     <string name="category">Категория</string>
     <string name="priority">Приоритет</string>
+    <string name="settings_context_menu_title">Context Menu</string>
+    <string name="settings_context_menu_option">Customize visible items</string>
     <string-array name="priorities">
         <item>Низкий</item>
         <item>Середина</item>
