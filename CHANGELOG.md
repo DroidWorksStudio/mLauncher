@@ -12,6 +12,10 @@ All notable changes to this project will be documented in this file. See [conven
 - *(UI)* Add action FAB to HomeFragment - ([d563b02](https://github.com/DroidWorksStudio/mLauncher/commit/d563b02d40103287ea402bb8daa78d88fdb19ef1))
 - Use LockedBottomSheetDialog for improved stability - ([e79657d](https://github.com/DroidWorksStudio/mLauncher/commit/e79657d0a4fe6b3851d3038d8bb2bbe59c9ac4e3))
 
+### Bug Fixes:
+
+- *(Home)* Preserve color of action FAB - ([e5ec7e9](https://github.com/DroidWorksStudio/mLauncher/commit/e5ec7e968bfc92bf8a4eef2e452d81532c18a7ae))
+
 ### Versioning:
 
 - Increment version to 1.10.6 - ([e6f521d](https://github.com/DroidWorksStudio/mLauncher/commit/e6f521d38fde7b3024d2f10386e733a5c2b12758))
