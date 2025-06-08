@@ -274,6 +274,13 @@
     <string name="next">Próximo</string>
     <string name="start">Começar</string>
     <string name="copy">Cópia</string>
+    <string name="home_button_phone">Telefone</string>
+    <string name="home_button_messages">Mensagens</string>
+    <string name="home_button_camera">Câmera</string>
+    <string name="home_button_photos">Fotos</string>
+    <string name="home_button_web">Rede</string>
+    <string name="home_button_settings">Configurações</string>
+    <string name="home_button_logo">Logotipo</string>
     <string name="allow">Permitir</string>
     <string name="deny">Negar</string>
     <string name="send">Enviar</string>
@@ -295,6 +302,10 @@
     <string name="edit_note">Editar Nota</string>
     <string name="category">Categoria</string>
     <string name="priority">Prioridade</string>
+    <string name="settings_context_menu_title">Menu de contexto</string>
+    <string name="settings_context_menu_option">Personalizar os itens visíveis</string>
+    <string name="settings_home_buttons_title">Botões Home</string>
+    <string name="settings_home_buttons_option">Personalizar os itens visíveis</string>
     <string-array name="priorities">
         <item>Baixo</item>
         <item>Médio</item>

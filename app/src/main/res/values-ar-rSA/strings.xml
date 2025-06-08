@@ -274,6 +274,13 @@
     <string name="next">التالي</string>
     <string name="start">يبدأ</string>
     <string name="copy">ينسخ</string>
+    <string name="home_button_phone">هاتف</string>
+    <string name="home_button_messages">رسائل</string>
+    <string name="home_button_camera">آلة تصوير</string>
+    <string name="home_button_photos">الصور</string>
+    <string name="home_button_web">الويب</string>
+    <string name="home_button_settings">إعدادات</string>
+    <string name="home_button_logo">الشعار</string>
     <string name="allow">يسمح</string>
     <string name="deny">ينكر</string>
     <string name="send">يرسل</string>
@@ -295,6 +302,10 @@
     <string name="edit_note">تعديل الملاحظة</string>
     <string name="category">فئة</string>
     <string name="priority">أولوية</string>
+    <string name="settings_context_menu_title">قائمة السياق</string>
+    <string name="settings_context_menu_option">تخصيص العناصر المرئية</string>
+    <string name="settings_home_buttons_title">أزرار الصفحة الرئيسية</string>
+    <string name="settings_home_buttons_option">تخصيص العناصر المرئية</string>
     <string-array name="priorities">
         <item>قليل</item>
         <item>واسطة</item>
