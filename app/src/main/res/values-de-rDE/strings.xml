@@ -295,6 +295,8 @@
     <string name="edit_note">Notiz bearbeiten</string>
     <string name="category">Kategorie</string>
     <string name="priority">Priorität</string>
+    <string name="settings_context_menu_title">Context Menu</string>
+    <string name="settings_context_menu_option">Customize visible items</string>
     <string-array name="priorities">
         <item>Niedrig</item>
         <item>Medium</item>
