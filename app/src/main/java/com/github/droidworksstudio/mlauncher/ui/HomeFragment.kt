@@ -291,7 +291,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             totalScreenTime.setTextColor(prefs.appColor)
             setDefaultLauncher.setTextColor(prefs.appColor)
 
-            val fabList = listOf(fabPhone, fabMessages, fabCamera, fabPhotos, fabBrowser, fabSettings)
+            val fabList = listOf(fabPhone, fabMessages, fabCamera, fabPhotos, fabBrowser, fabSettings, fabAction)
             val fabFlags = prefs.getMenuFlags("HOME_BUTTON_FLAGS")
 
             val colors = ColorManager.getRandomHueColors(prefs.shortcutIconsColor, fabList.size)
