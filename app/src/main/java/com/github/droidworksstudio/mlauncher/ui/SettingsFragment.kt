@@ -313,6 +313,16 @@ class SettingsFragment : Fragment() {
             getLocalizedString(R.string.delete)
         )
 
+        val homeButtonOptionLabels = listOf(
+            getLocalizedString(R.string.home_button_phone),
+            getLocalizedString(R.string.home_button_messages),
+            getLocalizedString(R.string.home_button_camera),
+            getLocalizedString(R.string.home_button_photos),
+            getLocalizedString(R.string.home_button_web),
+            getLocalizedString(R.string.home_button_settings),
+            getLocalizedString(R.string.home_button_logo)
+        )
+
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -2369,6 +2379,15 @@ class SettingsFragment : Fragment() {
                         fontSize = titleFontSize,
                         onClick = {
                             dialogBuilder.showFlagSettingsBottomSheet(context, contextMenuOptionLabels, "CONTEXT_MENU_FLAGS", "001111")
+                        }
+                    )
+
+                    SettingsSelect(
+                        title = getLocalizedString(R.string.settings_home_buttons_title),
+                        option = getLocalizedString(R.string.settings_home_buttons_option),
+                        fontSize = titleFontSize,
+                        onClick = {
+                            dialogBuilder.showFlagSettingsBottomSheet(context, homeButtonOptionLabels, "HOME_BUTTON_FLAGS", "0000011")
                         }
                     )
 
