@@ -292,8 +292,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             setDefaultLauncher.setTextColor(prefs.appColor)
 
             val fabList = listOf(fabPhone, fabMessages, fabCamera, fabPhotos, fabBrowser, fabSettings, fabAction)
-            val fabFlags = prefs.getMenuFlags("HOME_BUTTON_FLAGS")
-
+            val fabFlags = prefs.getMenuFlags("HOME_BUTTON_FLAGS") // Should return List<Boolean>
             val colors = ColorManager.getRandomHueColors(prefs.shortcutIconsColor, fabList.size)
 
             for (i in fabList.indices) {
@@ -302,7 +301,11 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 val color = colors[i]
 
                 fab.isVisible = isVisible
-                fab.setColorFilter(if (prefs.iconRainbowColors) color else prefs.shortcutIconsColor)
+
+                // Skip recoloring for fabAction
+                if (fab != fabAction) {
+                    fab.setColorFilter(if (prefs.iconRainbowColors) color else prefs.shortcutIconsColor)
+                }
             }
         }
     }
