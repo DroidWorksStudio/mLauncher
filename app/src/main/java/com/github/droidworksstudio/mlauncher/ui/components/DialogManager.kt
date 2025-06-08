@@ -1,4 +1,4 @@
-package com.github.droidworksstudio.mlauncher.ui.dialogs
+package com.github.droidworksstudio.mlauncher.ui.components
 
 import android.app.Activity
 import android.content.Context
@@ -26,14 +26,13 @@ import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.helper.themeDownloadButton
 import com.github.droidworksstudio.mlauncher.helper.utils.AppReloader
 import com.github.droidworksstudio.mlauncher.helper.wordofthedayDownloadButton
-import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class DialogManager(val context: Context, val activity: Activity) {
 
     private lateinit var prefs: Prefs
 
-    var backupRestoreBottomSheet: BottomSheetDialog? = null
+    var backupRestoreBottomSheet: LockedBottomSheetDialog? = null
 
     fun showBackupRestoreBottomSheet() {
         // Dismiss existing bottom sheet if it's showing
@@ -75,13 +74,13 @@ class DialogManager(val context: Context, val activity: Activity) {
         })
 
         // Create and show the bottom sheet
-        backupRestoreBottomSheet = BottomSheetDialog(context).apply {
+        backupRestoreBottomSheet = LockedBottomSheetDialog(context).apply {
             setContentView(layout)
         }
         backupRestoreBottomSheet?.show() // ✅ Correct method call
     }
 
-    var saveLoadThemeBottomSheet: BottomSheetDialog? = null
+    var saveLoadThemeBottomSheet: LockedBottomSheetDialog? = null
 
     fun showSaveLoadThemeBottomSheet() {
         // Dismiss any existing bottom sheet
@@ -123,14 +122,14 @@ class DialogManager(val context: Context, val activity: Activity) {
             (activity as MainActivity).restoreThemeBackup()
         })
 
-        // Create and show the BottomSheetDialog
-        saveLoadThemeBottomSheet = BottomSheetDialog(context).apply {
+        // Create and show the LockedBottomSheetDialog
+        saveLoadThemeBottomSheet = LockedBottomSheetDialog(context).apply {
             setContentView(layout)
         }
         saveLoadThemeBottomSheet?.show()
     }
 
-    var saveDownloadWOTDBottomSheet: BottomSheetDialog? = null
+    var saveDownloadWOTDBottomSheet: LockedBottomSheetDialog? = null
 
     fun showSaveDownloadWOTDBottomSheet() {
         // Dismiss any existing bottom sheet
@@ -168,8 +167,8 @@ class DialogManager(val context: Context, val activity: Activity) {
             (activity as MainActivity).restoreWordsBackup()
         })
 
-        // Create and show the BottomSheetDialog
-        saveDownloadWOTDBottomSheet = BottomSheetDialog(context).apply {
+        // Create and show the LockedBottomSheetDialog
+        saveDownloadWOTDBottomSheet = LockedBottomSheetDialog(context).apply {
             setContentView(layout)
         }
         saveDownloadWOTDBottomSheet?.show()
@@ -195,7 +194,7 @@ class DialogManager(val context: Context, val activity: Activity) {
         AppReloader.restartApp(context)
     }
 
-    var sliderBottomSheet: BottomSheetDialog? = null
+    var sliderBottomSheet: LockedBottomSheetDialog? = null
 
     fun showSliderBottomSheet(
         context: Context,
@@ -257,13 +256,13 @@ class DialogManager(val context: Context, val activity: Activity) {
         container.addView(valueText)
         container.addView(seekBar)
 
-        sliderBottomSheet = BottomSheetDialog(context).apply {
+        sliderBottomSheet = LockedBottomSheetDialog(context).apply {
             setContentView(container)
             show()
         }
     }
 
-    var singleChoiceBottomSheet: BottomSheetDialog? = null
+    var singleChoiceBottomSheet: LockedBottomSheetDialog? = null
 
     fun <T> showSingleChoiceBottomSheet(
         context: Context,
@@ -340,8 +339,8 @@ class DialogManager(val context: Context, val activity: Activity) {
         container.addView(titleView)
         container.addView(listView)
 
-        // Create and show BottomSheetDialog
-        singleChoiceBottomSheet = BottomSheetDialog(context).apply {
+        // Create and show LockedBottomSheetDialog
+        singleChoiceBottomSheet = LockedBottomSheetDialog(context).apply {
             setContentView(container)
             show()
         }
@@ -363,7 +362,7 @@ class DialogManager(val context: Context, val activity: Activity) {
         }
     }
 
-    var colorPickerBottomSheet: BottomSheetDialog? = null
+    var colorPickerBottomSheet: LockedBottomSheetDialog? = null
 
     fun showColorPickerBottomSheet(
         context: Context,
@@ -475,7 +474,7 @@ class DialogManager(val context: Context, val activity: Activity) {
         })
 
         // Show bottom sheet
-        colorPickerBottomSheet = BottomSheetDialog(context).apply {
+        colorPickerBottomSheet = LockedBottomSheetDialog(context).apply {
             setContentView(layout)
             show()
         }

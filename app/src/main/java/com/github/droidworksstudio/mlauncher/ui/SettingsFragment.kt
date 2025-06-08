@@ -83,13 +83,13 @@ import com.github.droidworksstudio.mlauncher.helper.showStatusBar
 import com.github.droidworksstudio.mlauncher.helper.utils.AppReloader
 import com.github.droidworksstudio.mlauncher.helper.utils.PrivateSpaceManager
 import com.github.droidworksstudio.mlauncher.style.SettingsTheme
+import com.github.droidworksstudio.mlauncher.ui.components.DialogManager
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.PageHeader
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsHomeItem
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsSelect
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsSwitch
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.SettingsTitle
 import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.TopMainHeader
-import com.github.droidworksstudio.mlauncher.ui.dialogs.DialogManager
 import com.github.droidworksstudio.mlauncher.ui.iconpack.CustomIconSelectionActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
