@@ -11,6 +11,10 @@ All notable changes to this project will be documented in this file. See [conven
 - *(Settings)* Add download option for themes and wotd - ([8b06fc4](https://github.com/DroidWorksStudio/mLauncher/commit/8b06fc42e600aa0d5c56afe5aaaba3ad859ad225))
 - Use LockedBottomSheetDialog for improved stability - ([e79657d](https://github.com/DroidWorksStudio/mLauncher/commit/e79657d0a4fe6b3851d3038d8bb2bbe59c9ac4e3))
 
+### Versioning:
+
+- Increment version to 1.10.6 - ([e6f521d](https://github.com/DroidWorksStudio/mLauncher/commit/e6f521d38fde7b3024d2f10386e733a5c2b12758))
+
 ### Language Support:
 
 - Updated Language Files. ([#785](https://github.com/DroidWorksStudio/mLauncher/issues/785)) - ([8d02d01](https://github.com/DroidWorksStudio/mLauncher/commit/8d02d01c1ec76eade7ce2f0379590d458281b968))
