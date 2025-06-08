@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file. See [conven
 - *(Settings)* Add Home Buttons customization - ([d855813](https://github.com/DroidWorksStudio/mLauncher/commit/d855813af9e9aab266570ffd8cceec2317789a05))
 - *(Settings)* Add context menu customization - ([a7180c4](https://github.com/DroidWorksStudio/mLauncher/commit/a7180c41271bc8d8ee10d73a8093277c54fdc3fd))
 - *(Settings)* Add download option for themes and wotd - ([8b06fc4](https://github.com/DroidWorksStudio/mLauncher/commit/8b06fc42e600aa0d5c56afe5aaaba3ad859ad225))
+- *(UI)* Add action FAB to HomeFragment - ([d563b02](https://github.com/DroidWorksStudio/mLauncher/commit/d563b02d40103287ea402bb8daa78d88fdb19ef1))
 - Use LockedBottomSheetDialog for improved stability - ([e79657d](https://github.com/DroidWorksStudio/mLauncher/commit/e79657d0a4fe6b3851d3038d8bb2bbe59c9ac4e3))
 
 ### Versioning:
