@@ -295,6 +295,8 @@
     <string name="edit_note">تعديل الملاحظة</string>
     <string name="category">فئة</string>
     <string name="priority">أولوية</string>
+    <string name="settings_context_menu_title">Context Menu</string>
+    <string name="settings_context_menu_option">Customize visible items</string>
     <string-array name="priorities">
         <item>قليل</item>
         <item>واسطة</item>
