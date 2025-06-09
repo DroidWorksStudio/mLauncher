@@ -7,7 +7,7 @@ viewpager2 = "1.1.0"
 
 # AndroidX Core and AppCompat
 core-ktx = "1.16.0"
-appcompat = "1.7.0"
+appcompat = "1.7.1"
 recyclerview = "1.4.0"
 paletteKtx = "1.0.0"
 activityKtx = "1.10.1"
@@ -15,7 +15,7 @@ material = "1.12.0"
 
 # Android Lifecycle
 lifecycle-extensions = "2.2.0"
-lifecycle-viewmodel-ktx = "2.9.0"
+lifecycle-viewmodel-ktx = "2.9.1"
 
 # Navigation
 navigation-fragment-ktx = "2.9.0"
@@ -47,7 +47,7 @@ espresso = "3.6.1"
 test-core-ktx = "1.6.1"
 test-runner = "1.6.2"
 test-rules = "1.6.1"
-fragment-testing = "1.8.7"
+fragment-testing = "1.8.8"
 ui-test-junit4 = "1.8.2"
 ui-test-manifest = "1.8.2"
 activity = "1.10.1"
