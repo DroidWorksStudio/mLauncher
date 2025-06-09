@@ -15,6 +15,7 @@ All notable changes to this project will be documented in this file. See [conven
 ### Bug Fixes:
 
 - *(Home)* Preserve color of action FAB - ([e5ec7e9](https://github.com/DroidWorksStudio/mLauncher/commit/e5ec7e968bfc92bf8a4eef2e452d81532c18a7ae))
+- *(UI)* Prevent app crash on opening if prefs have corrupted flags - ([ac91b9f](https://github.com/DroidWorksStudio/mLauncher/commit/ac91b9f0f2c09d5665f88b4bbf004f05335a923b))
 
 ### Versioning:
 
