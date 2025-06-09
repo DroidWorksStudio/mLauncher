@@ -1,5 +1,6 @@
 package com.github.droidworksstudio.mlauncher.ui.compose
 
+import android.util.TypedValue
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
@@ -7,12 +8,14 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.wrapContentHeight
+import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.material.Switch
 import androidx.compose.material.SwitchDefaults
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
@@ -26,14 +29,16 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.viewinterop.AndroidView
 import com.github.droidworksstudio.mlauncher.style.SettingsTheme
+import com.github.droidworksstudio.mlauncher.ui.views.FontAppCompatTextView
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -44,18 +49,16 @@ object SettingsComposable {
     fun PageHeader(
         @DrawableRes iconRes: Int,
         title: String,
-        iconSize: Dp = 24.dp, // Default size for the icon
-        fontSize: TextUnit = 24.sp, // Default font size for the title
         onClick: () -> Unit = {},
+        iconSize: Dp = 24.dp,
+        fontSizeSp: Float = 24f
     ) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(top = 16.dp)
-                .padding(horizontal = 16.dp),
+                .padding(top = 16.dp, start = 16.dp, end = 16.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            // Image Icon
             Image(
                 painter = painterResource(id = iconRes),
                 contentDescription = title,
@@ -65,16 +68,20 @@ object SettingsComposable {
                     .size(iconSize)
             )
 
-            Spacer(modifier = Modifier.weight(1f)) // Pushes the text to center
+            Spacer(modifier = Modifier.weight(1f))
 
-            // Title Text
-            Text(
-                text = title,
-                style = SettingsTheme.typography.title,
-                fontSize = fontSize
+            AndroidView(
+                factory = {
+                    FontAppCompatTextView(it).apply {
+                        text = title
+                        textSize = fontSizeSp
+                        setTextColor(android.graphics.Color.WHITE) // Optional
+                    }
+                },
+                modifier = Modifier.wrapContentSize()
             )
 
-            Spacer(modifier = Modifier.weight(1f)) // Balances spacing on the right
+            Spacer(modifier = Modifier.weight(1f))
         }
     }
 
@@ -82,13 +89,15 @@ object SettingsComposable {
     fun TopMainHeader(
         @DrawableRes iconRes: Int,
         title: String,
-        iconSize: Dp = 96.dp, // Default size for the icon
-        fontSize: TextUnit = 24.sp, // Default font size for the title
+        iconSize: Dp = 96.dp,
+        fontSize: TextUnit = 24.sp,
     ) {
+        val fontSizeSp = fontSize.value
+
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(horizontal = 16.dp), // Optional horizontal padding
+                .padding(horizontal = 16.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             // Image Icon
@@ -97,16 +106,20 @@ object SettingsComposable {
                 contentDescription = title,
                 modifier = Modifier
                     .size(iconSize)
-                    .padding(bottom = 16.dp) // Bottom margin like in XML
+                    .padding(bottom = 16.dp)
             )
 
-            // Title Text
-            Text(
-                text = title,
-                style = SettingsTheme.typography.title,
-                fontSize = fontSize,
-                modifier = Modifier
-                    .padding(bottom = 24.dp)
+            // FontAppCompatTextView instead of Text
+            AndroidView(
+                factory = { context ->
+                    FontAppCompatTextView(context).apply {
+                        text = title
+                        textSize = fontSizeSp
+                        setTextColor(android.graphics.Color.WHITE) // Or use a themed color
+                        setPadding(0, 0, 0, 24) // Equivalent to Modifier.padding(bottom = 24.dp)
+                    }
+                },
+                modifier = Modifier.wrapContentSize()
             )
         }
     }
@@ -164,7 +177,6 @@ object SettingsComposable {
                         }
                     }
                 }
-
                 .padding(vertical = 16.dp, horizontal = 16.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
@@ -178,18 +190,34 @@ object SettingsComposable {
             Spacer(modifier = Modifier.width(16.dp))
 
             Column {
-                Text(
-                    text = title,
-                    style = SettingsTheme.typography.title,
-                    fontSize = titleFontSize,
-                    color = fontColor
+                AndroidView(
+                    factory = { context ->
+                        FontAppCompatTextView(context).apply {
+                            text = title
+                            setTextColor(fontColor.toArgb())
+                            setTextSize(
+                                TypedValue.COMPLEX_UNIT_SP,
+                                if (titleFontSize != TextUnit.Unspecified) titleFontSize.value else 16f
+                            )
+                        }
+                    },
+                    modifier = Modifier.wrapContentHeight()
                 )
+
                 description?.let {
-                    Text(
-                        text = it,
-                        style = SettingsTheme.typography.title,
-                        fontSize = descriptionFontSize,
-                        color = fontColor
+                    Spacer(modifier = Modifier.height(4.dp))
+                    AndroidView(
+                        factory = { context ->
+                            FontAppCompatTextView(context).apply {
+                                text = it
+                                setTextColor(fontColor.toArgb())
+                                setTextSize(
+                                    TypedValue.COMPLEX_UNIT_SP,
+                                    if (descriptionFontSize != TextUnit.Unspecified) descriptionFontSize.value else 14f
+                                )
+                            }
+                        },
+                        modifier = Modifier.wrapContentHeight()
                     )
                 }
             }
@@ -202,14 +230,21 @@ object SettingsComposable {
         modifier: Modifier = Modifier,
         fontSize: TextUnit = TextUnit.Unspecified
     ) {
-        // Text
-        Text(
-            text = text,
-            style = SettingsTheme.typography.header,
-            fontSize = fontSize,
+        // Safely get font size and color within composable scope
+        val resolvedFontSizeSp = if (fontSize != TextUnit.Unspecified) fontSize.value else 20f
+        val fontColor = SettingsTheme.typography.header.color
+
+        AndroidView(
+            factory = { context ->
+                FontAppCompatTextView(context).apply {
+                    this.text = text
+                    setTextSize(TypedValue.COMPLEX_UNIT_SP, resolvedFontSizeSp)
+                    setTextColor(fontColor.toArgb()) // Convert Compose color to Android color
+                }
+            },
             modifier = modifier
-                .padding(start = 16.dp)
-                .padding(top = 16.dp)
+                .padding(start = 16.dp, top = 16.dp)
+                .wrapContentSize()
         )
     }
 
@@ -223,27 +258,38 @@ object SettingsComposable {
     ) {
         var isChecked by remember { mutableStateOf(defaultState) }
 
+        // Extract font size and color from theme safely in composable scope
+        val resolvedFontSizeSp = if (fontSize != TextUnit.Unspecified) fontSize.value else 16f
+        val fontColor = SettingsTheme.typography.title.color
+
         Row(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(start = 16.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Text(
-                text = text,
-                style = SettingsTheme.typography.title,
-                fontSize = fontSize,
-                textAlign = TextAlign.Start,
-                modifier = Modifier.weight(1f)
+            // Custom font AndroidView
+            AndroidView(
+                factory = { context ->
+                    FontAppCompatTextView(context).apply {
+                        this.text = text
+                        setTextSize(TypedValue.COMPLEX_UNIT_SP, resolvedFontSizeSp)
+                        setTextColor(fontColor.toArgb())
+                        textAlignment = android.view.View.TEXT_ALIGNMENT_VIEW_START
+                    }
+                },
+                modifier = Modifier
+                    .weight(1f)
+                    .wrapContentHeight()
             )
 
             Switch(
                 checked = isChecked,
                 onCheckedChange = {
                     isChecked = it
-                    onCheckedChange(it) // Notify parent
+                    onCheckedChange(it)
                 },
-                modifier = Modifier.scale(0.7f), // Mimic XML scaling
+                modifier = Modifier.scale(0.7f),
                 colors = SwitchDefaults.colors(
                     checkedThumbColor = Color.White,
                     checkedTrackColor = Color.Green,
@@ -262,29 +308,38 @@ object SettingsComposable {
         fontColor: Color = SettingsTheme.typography.title.color,
         onClick: () -> Unit = {},
     ) {
+        val fontSizeSp = fontSize.value
+        val fontColorInt = fontColor.toArgb()
+
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(vertical = 12.dp)
-                .padding(horizontal = 16.dp),
+                .padding(vertical = 12.dp, horizontal = 16.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Text(
-                text = title,
-                style = SettingsTheme.typography.title,
-                fontSize = fontSize,
-                modifier = Modifier.weight(1f)
+            AndroidView(
+                factory = { context ->
+                    FontAppCompatTextView(context).apply {
+                        text = title
+                        setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSizeSp)
+                        setTextColor(fontColorInt)
+                    }
+                },
+                modifier = Modifier
+                    .weight(1f)
+                    .wrapContentHeight()
             )
 
-            Text(
-                text = option,
-                style = SettingsTheme.typography.title,
-                fontSize = fontSize,
-                color = fontColor,
-                modifier = Modifier
-                    .clickable {
-                        onClick()
+            AndroidView(
+                factory = { context ->
+                    FontAppCompatTextView(context).apply {
+                        text = option
+                        setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSizeSp)
+                        setTextColor(fontColorInt)
+                        setOnClickListener { onClick() }
                     }
+                },
+                modifier = Modifier.wrapContentSize()
             )
         }
     }

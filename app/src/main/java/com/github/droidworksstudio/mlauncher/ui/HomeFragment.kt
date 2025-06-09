@@ -68,6 +68,7 @@ import com.github.droidworksstudio.mlauncher.data.Constants.Action
 import com.github.droidworksstudio.mlauncher.data.Constants.AppDrawerFlag
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentHomeBinding
+import com.github.droidworksstudio.mlauncher.helper.FontManager
 import com.github.droidworksstudio.mlauncher.helper.IconCacheTarget
 import com.github.droidworksstudio.mlauncher.helper.IconPackHelper
 import com.github.droidworksstudio.mlauncher.helper.analytics.AppUsageMonitor
@@ -140,6 +141,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             context?.getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
         @Suppress("DEPRECATION")
         vibrator = context?.getSystemService(VIBRATOR_SERVICE) as Vibrator
+
+        FontManager.reloadFont(requireContext())
 
         initAppObservers()
         initClickListeners()

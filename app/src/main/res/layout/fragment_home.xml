@@ -34,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <androidx.appcompat.widget.AppCompatTextView
+                <com.github.droidworksstudio.mlauncher.ui.views.FontAppCompatTextView
                     android:id="@+id/weather"
                     style="@style/TextDefaultStyle"
                     android:layout_width="wrap_content"
@@ -47,7 +47,7 @@
                     android:layout_height="0dp"
                     android:layout_weight="1" />
 
-                <androidx.appcompat.widget.AppCompatTextView
+                <com.github.droidworksstudio.mlauncher.ui.views.FontAppCompatTextView
                     android:id="@+id/battery"
                     style="@style/TextDefaultStyle"
                     android:layout_width="wrap_content"
@@ -63,7 +63,7 @@
                 android:orientation="vertical"
                 tools:visibility="visible">
 
-                <TextClock
+                <com.github.droidworksstudio.mlauncher.ui.views.FontTextClock
                     android:id="@+id/clock"
                     style="@style/TextDefaultStyle"
                     android:layout_width="wrap_content"
@@ -72,7 +72,7 @@
                     tools:text="02:34" />
 
 
-                <TextClock
+                <com.github.droidworksstudio.mlauncher.ui.views.FontTextClock
                     android:id="@+id/date"
                     style="@style/TextDefaultStyle"
                     android:layout_width="wrap_content"
@@ -81,14 +81,14 @@
                     android:textSize="@dimen/date_size"
                     tools:text="Thu, 30 Dec" />
 
-                <TextView
+                <com.github.droidworksstudio.mlauncher.ui.views.FontAppCompatTextView
                     android:id="@+id/alarm"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/alarm_size"
                     android:visibility="gone" />
 
-                <TextView
+                <com.github.droidworksstudio.mlauncher.ui.views.FontAppCompatTextView
                     android:id="@+id/daily_word"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -111,19 +111,19 @@
             android:visibility="gone"
             tools:visibility="visible">
 
-            <TextView
+            <com.github.droidworksstudio.mlauncher.ui.views.FontAppCompatTextView
                 style="@style/TextSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tap_button_for_notes" />
 
-            <TextView
+            <com.github.droidworksstudio.mlauncher.ui.views.FontAppCompatTextView
                 style="@style/TextSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/swipe_up_for_apps" />
 
-            <TextView
+            <com.github.droidworksstudio.mlauncher.ui.views.FontAppCompatTextView
                 style="@style/TextSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -144,7 +144,7 @@
         android:paddingTop="100dp"
         android:paddingBottom="30dp" />
 
-    <TextView
+    <com.github.droidworksstudio.mlauncher.ui.views.FontAppCompatTextView
         android:id="@+id/homeScreenPager"
         style="@style/TextSmall"
         android:layout_width="wrap_content"
@@ -154,7 +154,7 @@
         android:layout_marginEnd="24dp"
         android:visibility="gone" />
 
-    <TextView
+    <com.github.droidworksstudio.mlauncher.ui.views.FontAppCompatTextView
         android:id="@+id/totalScreenTime"
         style="@style/TextSmall"
         android:layout_width="wrap_content"
@@ -166,7 +166,7 @@
         android:visibility="gone" />
 
     <!-- Set default launcher -->
-    <TextView
+    <com.github.droidworksstudio.mlauncher.ui.views.FontAppCompatTextView
         android:id="@+id/setDefaultLauncher"
         style="@style/TextSmall"
         android:layout_width="wrap_content"

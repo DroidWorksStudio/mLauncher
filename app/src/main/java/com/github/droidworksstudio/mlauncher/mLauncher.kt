@@ -2,14 +2,12 @@ package com.github.droidworksstudio.mlauncher
 
 import android.app.Application
 import android.content.Context
-import android.graphics.Typeface
-import android.util.Log
 import com.github.droidworksstudio.common.CrashHandler
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Prefs
+import com.github.droidworksstudio.mlauncher.helper.FontManager
 import com.github.droidworksstudio.mlauncher.helper.IconCacheTarget
 import com.github.droidworksstudio.mlauncher.helper.IconPackHelper
-import java.io.File
 import java.util.concurrent.Executors
 
 class Mlauncher : Application() {
@@ -41,42 +39,9 @@ class Mlauncher : Application() {
 
             Thread.setDefaultUncaughtExceptionHandler(CrashHandler(appContext!!))
 
-            setCustomFont(appContext!!)
-
             CrashHandler.logUserAction("App Launched")
-        }
 
-        private fun setCustomFont(context: Context) {
-            val prefs = Prefs(context)
-            val fontFamily = prefs.fontFamily
-
-            // If custom is selected but file is missing, skip setting
-            if (fontFamily == Constants.FontFamily.Custom) {
-                val customFontFile = File(context.filesDir, "CustomFont.ttf")
-                if (!customFontFile.exists()) return
-            }
-
-            val typeface = fontFamily.getFont(context)
-            if (typeface != null) {
-                TypefaceUtil.setDefaultFont("DEFAULT", typeface)
-                TypefaceUtil.setDefaultFont("MONOSPACE", typeface)
-                TypefaceUtil.setDefaultFont("SERIF", typeface)
-                TypefaceUtil.setDefaultFont("SANS_SERIF", typeface)
-            }
-        }
-    }
-}
-
-object TypefaceUtil {
-
-    fun setDefaultFont(staticTypefaceFieldName: String, fontAssetName: Typeface) {
-        Log.e("setDefaultFont", "$staticTypefaceFieldName | $fontAssetName")
-        try {
-            val staticField = Typeface::class.java.getDeclaredField(staticTypefaceFieldName)
-            staticField.isAccessible = true
-            staticField.set(null, fontAssetName)
-        } catch (e: Exception) {
-            e.printStackTrace()
+            FontManager.reloadFont(context)
         }
     }
 }

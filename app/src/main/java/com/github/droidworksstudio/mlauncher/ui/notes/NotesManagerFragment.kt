@@ -192,7 +192,7 @@ class NotesManagerFragment : Fragment() {
             }
 
             sendButton.setOnClickListener {
-                val messageText = inputMessage.text
+                val messageText = inputMessage.text?.toString() ?: ""
                 if (messageText.isNotBlank()) {
                     val timestamp = requireContext().getCurrentTimestamp(prefs)
                     val category = categoryDropdown.text.ifBlank { "None" }
@@ -213,7 +213,7 @@ class NotesManagerFragment : Fragment() {
                     prefs.saveMessages(messages)
                     prefs.saveSettings(category.toString(), priority.toString())
 
-                    inputMessage.text.clear()
+                    inputMessage.text?.clear()
                     updateEmptyHintVisibility()
 
                     Handler(Looper.getMainLooper()).postDelayed({

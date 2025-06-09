@@ -1,0 +1,35 @@
+package com.github.droidworksstudio.mlauncher.ui.views
+
+import android.content.Context
+import android.graphics.Typeface
+import android.util.AttributeSet
+import android.util.Log
+import androidx.appcompat.widget.AppCompatAutoCompleteTextView
+import com.github.droidworksstudio.mlauncher.helper.CustomFontView
+import com.github.droidworksstudio.mlauncher.helper.FontManager
+
+class FontAutoCompleteTextView @JvmOverloads constructor(
+    context: Context,
+    attrs: AttributeSet? = null,
+    defStyleAttr: Int = android.R.attr.autoCompleteTextViewStyle
+) : AppCompatAutoCompleteTextView(context, attrs, defStyleAttr), CustomFontView {
+
+    init {
+        try {
+            FontManager.register(this)
+            applyFont(FontManager.getTypeface(context))
+        } catch (e: Exception) {
+            Log.e("FontAutoCompleteTextView", "Font application failed", e)
+        }
+    }
+
+    override fun applyFont(typeface: Typeface?) {
+        try {
+            if (typeface != null) {
+                setTypeface(typeface, Typeface.NORMAL)
+            }
+        } catch (e: Exception) {
+            Log.e("FontAutoCompleteTextView", "Failed to apply typeface", e)
+        }
+    }
+}

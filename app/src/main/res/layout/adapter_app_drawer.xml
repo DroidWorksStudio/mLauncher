@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
+        <com.github.droidworksstudio.mlauncher.ui.views.FontAppCompatTextView
             android:id="@+id/appTitle"
             style="@style/TextLarge"
             android:layout_width="wrap_content"
@@ -37,7 +37,7 @@
         tools:visibility="visible">
 
         <!-- 1. Pin/Unpin -->
-        <TextView
+        <com.github.droidworksstudio.mlauncher.ui.views.FontAppCompatTextView
             android:id="@+id/appPin"
             style="@style/TextSmall"
             android:layout_width="0dp"
@@ -53,7 +53,7 @@
             app:drawableTopCompat="@drawable/pin_off" />
 
         <!-- 2. Lock/Unlock -->
-        <TextView
+        <com.github.droidworksstudio.mlauncher.ui.views.FontAppCompatTextView
             android:id="@+id/appLock"
             style="@style/TextSmall"
             android:layout_width="0dp"
@@ -69,7 +69,7 @@
             app:drawableTopCompat="@drawable/padlock_off" />
 
         <!-- 3. Hide/Show -->
-        <TextView
+        <com.github.droidworksstudio.mlauncher.ui.views.FontAppCompatTextView
             android:id="@+id/appHide"
             style="@style/TextSmall"
             android:layout_width="0dp"
@@ -85,7 +85,7 @@
             app:drawableTopCompat="@drawable/visibility_off" />
 
         <!-- 4. Rename -->
-        <TextView
+        <com.github.droidworksstudio.mlauncher.ui.views.FontAppCompatTextView
             android:id="@+id/appRename"
             style="@style/TextSmall"
             android:layout_width="0dp"
@@ -101,7 +101,7 @@
             app:drawableTopCompat="@drawable/ic_rename" />
 
         <!-- 5. Info -->
-        <TextView
+        <com.github.droidworksstudio.mlauncher.ui.views.FontAppCompatTextView
             android:id="@+id/appInfo"
             style="@style/TextSmall"
             android:layout_width="0dp"
@@ -117,7 +117,7 @@
             app:drawableTopCompat="@drawable/ic_info" />
 
         <!-- 6. Delete -->
-        <TextView
+        <com.github.droidworksstudio.mlauncher.ui.views.FontAppCompatTextView
             android:id="@+id/appDelete"
             style="@style/TextSmall"
             android:layout_width="0dp"
@@ -133,7 +133,7 @@
             app:drawableTopCompat="@drawable/ic_delete" />
 
         <!-- 7. Close -->
-        <TextView
+        <com.github.droidworksstudio.mlauncher.ui.views.FontAppCompatTextView
             android:id="@+id/appClose"
             style="@style/TextSmall"
             android:layout_width="0dp"
@@ -162,7 +162,7 @@
         android:visibility="gone"
         tools:visibility="gone">
 
-        <EditText
+        <com.github.droidworksstudio.mlauncher.ui.views.FontEditText
             android:id="@+id/appRenameEdit"
             style="@style/TextLarge"
             android:layout_width="0dp"
@@ -179,7 +179,7 @@
             android:textColorHint="?attr/primaryColorTrans50"
             tools:ignore="LabelFor" />
 
-        <TextView
+        <com.github.droidworksstudio.mlauncher.ui.views.FontAppCompatTextView
             android:id="@+id/appSaveRename"
             style="@style/TextSmallBold"
             android:layout_width="wrap_content"

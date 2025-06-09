@@ -5,10 +5,10 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.os.BatteryManager
-import androidx.appcompat.widget.AppCompatTextView
 import androidx.core.content.ContextCompat
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.Prefs
+import com.github.droidworksstudio.mlauncher.ui.views.FontAppCompatTextView
 
 class BatteryReceiver : BroadcastReceiver() {
 
@@ -20,7 +20,7 @@ class BatteryReceiver : BroadcastReceiver() {
         val scale: Int = intent.getIntExtra(BatteryManager.EXTRA_SCALE, -1)
 
         val contextBattery = context as? Activity
-        val batteryTextView = (contextBattery)?.findViewById<AppCompatTextView>(R.id.battery)
+        val batteryTextView = (contextBattery)?.findViewById<FontAppCompatTextView>(R.id.battery)
 
         val batteryLevel = level * 100 / scale.toFloat()
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.github.droidworksstudio.mlauncher.ui.views.FontAppCompatTextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/homeAppLabel"
     style="@style/TextLarge"
     android:layout_width="match_parent"
@@ -8,4 +8,4 @@
     android:paddingVertical="@dimen/home_app_padding_vertical"
     android:tag="1">
 
-</TextView>
+</com.github.droidworksstudio.mlauncher.ui.views.FontAppCompatTextView>
