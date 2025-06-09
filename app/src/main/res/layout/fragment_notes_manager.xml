@@ -10,7 +10,7 @@
     tools:context=".ui.notes.NotesManagerFragment">
 
     <!-- List Empty Hint, center aligned -->
-    <com.github.droidworksstudio.mlauncher.ui.views.FontAppCompatTextView
+    <com.github.creativecodecat.components.views.FontAppCompatTextView
         android:id="@+id/listEmptyHint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -26,7 +26,7 @@
         android:layout_marginVertical="20dp"
         android:orientation="vertical">
 
-        <com.github.droidworksstudio.mlauncher.ui.views.FontRecyclerView
+        <com.github.creativecodecat.components.views.FontRecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -60,7 +60,7 @@
                     android:layout_marginEnd="8dp"
                     app:boxBackgroundMode="outline">
 
-                    <com.github.droidworksstudio.mlauncher.ui.views.FontAutoCompleteTextView
+                    <com.github.creativecodecat.components.views.FontAutoCompleteTextView
                         android:id="@+id/categoryDropdown"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -77,7 +77,7 @@
                     android:layout_marginEnd="8dp"
                     app:boxBackgroundMode="outline">
 
-                    <com.github.droidworksstudio.mlauncher.ui.views.FontAutoCompleteTextView
+                    <com.github.creativecodecat.components.views.FontAutoCompleteTextView
                         android:id="@+id/priorityDropdown"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -95,7 +95,7 @@
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
-                <com.github.droidworksstudio.mlauncher.ui.views.FontEditText
+                <com.github.creativecodecat.components.views.FontEditText
                     android:id="@+id/inputMessage"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"

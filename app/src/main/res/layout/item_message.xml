@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <!-- All text info inside vertical layout -->
-                <com.github.droidworksstudio.mlauncher.ui.views.FontAppCompatTextView
+                <com.github.creativecodecat.components.views.FontAppCompatTextView
                     android:id="@+id/messageTimestamp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -55,13 +55,13 @@
                     tools:ignore="ContentDescription" />
             </LinearLayout>
 
-            <com.github.droidworksstudio.mlauncher.ui.views.FontAppCompatTextView
+            <com.github.creativecodecat.components.views.FontAppCompatTextView
                 android:id="@+id/messageCategory"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="14sp" />
 
-            <com.github.droidworksstudio.mlauncher.ui.views.FontAppCompatTextView
+            <com.github.creativecodecat.components.views.FontAppCompatTextView
                 android:id="@+id/messageText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

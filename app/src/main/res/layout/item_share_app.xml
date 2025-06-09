@@ -14,7 +14,7 @@
         android:layout_height="48dp"
         android:contentDescription="@string/app_name" />
 
-    <com.github.droidworksstudio.mlauncher.ui.views.FontAppCompatTextView
+    <com.github.creativecodecat.components.views.FontAppCompatTextView
         android:id="@+id/app_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

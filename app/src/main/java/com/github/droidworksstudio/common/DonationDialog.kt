@@ -5,8 +5,10 @@ import android.content.Intent
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.core.net.toUri
 import com.github.droidworksstudio.mlauncher.R
+import com.github.droidworksstudio.mlauncher.helper.FontManager
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import org.xmlpull.v1.XmlPullParser
 
@@ -18,7 +20,6 @@ class DonationDialog(private val context: Context) {
         val iconName: String
     )
 
-    // Avoid reflection: manually map icon names to R.drawable IDs
     private val iconMap = mapOf(
         "github" to R.drawable.ic_donation_github,
         "buymeacoffee" to R.drawable.ic_donation_buymeacoffee,
@@ -45,6 +46,7 @@ class DonationDialog(private val context: Context) {
 
     fun show(title: String) {
         val donations = parseDonations()
+        val typeface = FontManager.getTypeface(context)
 
         val layout = LinearLayout(context).apply {
             orientation = LinearLayout.VERTICAL
@@ -61,6 +63,7 @@ class DonationDialog(private val context: Context) {
 
             val button = Button(context).apply {
                 text = donation.name
+                setTypeface(typeface) // ✅ apply custom font
                 setCompoundDrawablesWithIntrinsicBounds(iconResId, 0, 0, 0)
                 compoundDrawablePadding = (8 * context.resources.displayMetrics.density).toInt()
                 setOnClickListener {
@@ -74,10 +77,29 @@ class DonationDialog(private val context: Context) {
             layout.addView(button)
         }
 
-        MaterialAlertDialogBuilder(context)
+        val titleView = TextView(context).apply {
+            text = title
+            setTypeface(FontManager.getTypeface(context))
+            textSize = 20f
+            setPadding(32, 32, 32, 16)
+        }
+
+        // Build and show dialog with standard MaterialAlertDialogBuilder
+        val dialog = MaterialAlertDialogBuilder(context)
+            .setCustomTitle(titleView)
             .setTitle(title)
             .setView(layout)
-            .setNegativeButton("Close", null)
-            .show()
+            .setNegativeButton(R.string.close, null)
+            .create()
+
+        // ✅ Apply font manually to the dialog title and buttons after it's created
+        dialog.setOnShowListener {
+            // Buttons
+            dialog.getButton(android.app.AlertDialog.BUTTON_NEGATIVE)?.typeface = typeface
+            dialog.getButton(android.app.AlertDialog.BUTTON_POSITIVE)?.typeface = typeface
+            dialog.getButton(android.app.AlertDialog.BUTTON_NEUTRAL)?.typeface = typeface
+        }
+
+        dialog.show()
     }
 }

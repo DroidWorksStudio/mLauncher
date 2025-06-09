@@ -16,7 +16,7 @@
         android:layout_marginTop="34dp"
         android:orientation="horizontal">
 
-        <com.github.droidworksstudio.mlauncher.ui.views.FontSearchView
+        <com.github.creativecodecat.components.views.FontSearchView
             android:id="@+id/search"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -34,7 +34,7 @@
             app:theme="@style/AppSearchText" />
     </LinearLayout>
 
-    <com.github.droidworksstudio.mlauncher.ui.views.FontAppCompatTextView
+    <com.github.creativecodecat.components.views.FontAppCompatTextView
         android:id="@+id/clearHomeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -47,7 +47,7 @@
         app:theme="@style/AppSearchText" />
 
     <!-- Drawer button and tip, positioned below search container -->
-    <com.github.droidworksstudio.mlauncher.ui.views.FontAppCompatTextView
+    <com.github.creativecodecat.components.views.FontAppCompatTextView
         android:id="@+id/drawerButton"
         style="@style/TextSmall"
         android:layout_width="wrap_content"
@@ -58,7 +58,7 @@
         android:textAllCaps="true"
         android:visibility="gone" />
 
-    <com.github.droidworksstudio.mlauncher.ui.views.FontAppCompatTextView
+    <com.github.creativecodecat.components.views.FontAppCompatTextView
         android:id="@+id/appDrawerTip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -73,7 +73,7 @@
         android:visibility="gone" />
 
     <!-- RecyclerView positioned below the Drawer TextViews -->
-    <com.github.droidworksstudio.mlauncher.ui.views.FontRecyclerView
+    <com.github.creativecodecat.components.views.FontRecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -100,7 +100,7 @@
 
 
     <!-- List Empty Hint, center aligned -->
-    <com.github.droidworksstudio.mlauncher.ui.views.FontAppCompatTextView
+    <com.github.creativecodecat.components.views.FontAppCompatTextView
         android:id="@+id/listEmptyHint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

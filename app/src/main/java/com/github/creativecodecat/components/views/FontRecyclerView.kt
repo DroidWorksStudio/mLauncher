@@ -1,4 +1,4 @@
-package com.github.droidworksstudio.mlauncher.ui.views
+package com.github.creativecodecat.components.views
 
 import android.content.Context
 import android.graphics.Typeface

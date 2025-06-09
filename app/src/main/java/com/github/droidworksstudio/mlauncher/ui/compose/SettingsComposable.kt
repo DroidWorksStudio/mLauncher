@@ -37,8 +37,8 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.viewinterop.AndroidView
+import com.github.creativecodecat.components.views.FontAppCompatTextView
 import com.github.droidworksstudio.mlauncher.style.SettingsTheme
-import com.github.droidworksstudio.mlauncher.ui.views.FontAppCompatTextView
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch

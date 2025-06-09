@@ -67,6 +67,7 @@ import com.github.droidworksstudio.mlauncher.data.Constants.Theme.Light
 import com.github.droidworksstudio.mlauncher.data.Constants.Theme.System
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentSettingsBinding
+import com.github.droidworksstudio.mlauncher.helper.FontManager
 import com.github.droidworksstudio.mlauncher.helper.IconCacheTarget
 import com.github.droidworksstudio.mlauncher.helper.checkWhoInstalled
 import com.github.droidworksstudio.mlauncher.helper.communitySupportButton
@@ -2495,16 +2496,12 @@ class SettingsFragment : Fragment() {
     private fun exitLauncher(context: Context) {
         val pm = context.packageManager
 
-        // Query for all apps that can handle the home intent
-        val intent = Intent(Intent.ACTION_MAIN).apply {
-            addCategory(Intent.CATEGORY_HOME)
-        }
-
+        // Query all launchers (excluding Settings)
+        val intent = Intent(Intent.ACTION_MAIN).apply { addCategory(Intent.CATEGORY_HOME) }
         val resolveInfos = pm.queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY)
             .filter {
-                val pkgName = it.activityInfo.packageName
-                val isLauncher = !pkgName.contains("settings", ignoreCase = true)
-                it.activityInfo.enabled && isLauncher
+                val pkg = it.activityInfo.packageName
+                it.activityInfo.enabled && !pkg.contains("settings", ignoreCase = true)
             }
 
         if (resolveInfos.isEmpty()) {
@@ -2512,50 +2509,62 @@ class SettingsFragment : Fragment() {
             return
         }
 
-        // Create a list of app names and icons
-        val launcherLabels = resolveInfos.map { it.loadLabel(pm).toString() }
-        val launcherIcons = resolveInfos.map { it.loadIcon(pm) }
-
+        val labels = resolveInfos.map { it.loadLabel(pm).toString() }
+        val icons = resolveInfos.map { it.loadIcon(pm) }
         val iconSizePx = TypedValue.applyDimension(
-            TypedValue.COMPLEX_UNIT_DIP,
-            24f,
-            context.resources.displayMetrics
+            TypedValue.COMPLEX_UNIT_DIP, 24f, context.resources.displayMetrics
         ).toInt()
 
-        val adapter = object :
-            ArrayAdapter<String>(context, android.R.layout.select_dialog_item, launcherLabels) {
+        val font = FontManager.getTypeface(context)
+
+        val adapter = object : ArrayAdapter<String>(context, android.R.layout.select_dialog_item, labels) {
             override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
                 val view = super.getView(position, convertView, parent)
-                val textView = view.findViewById<TextView>(android.R.id.text1)
+                val tv = view.findViewById<TextView>(android.R.id.text1)
+                font?.let { tv.typeface = it }
 
-                val originalDrawable = launcherIcons[position]
-                val resizedBitmap = drawableToBitmap(originalDrawable, iconSizePx)
-                val resizedDrawable = resizedBitmap.toDrawable(context.resources)
+                val origDrawable = icons[position]
+                val bmp = drawableToBitmap(origDrawable, iconSizePx)
+                val drw = bmp.toDrawable(context.resources)
 
-                textView.setCompoundDrawablesWithIntrinsicBounds(resizedDrawable, null, null, null)
-                textView.compoundDrawablePadding = 16
+                tv.setCompoundDrawablesWithIntrinsicBounds(drw, null, null, null)
+                tv.compoundDrawablePadding = 16
                 return view
             }
         }
 
+        val titleView = TextView(context).apply {
+            text = getLocalizedString(R.string.settings_exit_mlauncher_dialog)
+            setTypeface(FontManager.getTypeface(context))
+            textSize = 20f
+            setPadding(32, 32, 32, 16)
+        }
 
-        // Show the dialog
-        MaterialAlertDialogBuilder(context)
+        val dialog = MaterialAlertDialogBuilder(context)
+            .setCustomTitle(titleView)
             .setTitle(getLocalizedString(R.string.settings_exit_mlauncher_dialog))
             .setAdapter(adapter) { _, which ->
-                val selectedInfo = resolveInfos[which]
+                val info = resolveInfos[which]
                 val launchIntent = Intent(Intent.ACTION_MAIN).apply {
                     addCategory(Intent.CATEGORY_HOME)
-                    component = ComponentName(
-                        selectedInfo.activityInfo.packageName,
-                        selectedInfo.activityInfo.name
-                    )
+                    component = ComponentName(info.activityInfo.packageName, info.activityInfo.name)
                     flags = Intent.FLAG_ACTIVITY_NEW_TASK
                 }
                 context.startActivity(launchIntent)
             }
             .setNegativeButton(android.R.string.cancel, null)
-            .show()
+            .create()
+
+        dialog.setOnShowListener {
+            font?.let { tf ->
+                // Buttons
+                dialog.getButton(androidx.appcompat.app.AlertDialog.BUTTON_NEGATIVE)?.typeface = tf
+                dialog.getButton(androidx.appcompat.app.AlertDialog.BUTTON_POSITIVE)?.typeface = tf
+                dialog.getButton(androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL)?.typeface = tf
+            }
+        }
+
+        dialog.show()
     }
 
     fun drawableToBitmap(drawable: Drawable, size: Int): Bitmap {

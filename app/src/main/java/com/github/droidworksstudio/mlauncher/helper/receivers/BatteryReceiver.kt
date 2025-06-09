@@ -6,9 +6,9 @@ import android.content.Context
 import android.content.Intent
 import android.os.BatteryManager
 import androidx.core.content.ContextCompat
+import com.github.creativecodecat.components.views.FontAppCompatTextView
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.Prefs
-import com.github.droidworksstudio.mlauncher.ui.views.FontAppCompatTextView
 
 class BatteryReceiver : BroadcastReceiver() {
 
