@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Implemented Enhancements:
 
+- *(Fonts)* Implement global font management and apply to all text views - ([988408e](https://github.com/DroidWorksStudio/mLauncher/commit/988408e098c06bba216e89b414f7eca9f573fa59))
 - *(Settings)* Add Home Buttons customization - ([d855813](https://github.com/DroidWorksStudio/mLauncher/commit/d855813af9e9aab266570ffd8cceec2317789a05))
 - *(Settings)* Add context menu customization - ([a7180c4](https://github.com/DroidWorksStudio/mLauncher/commit/a7180c41271bc8d8ee10d73a8093277c54fdc3fd))
 - *(Settings)* Add download option for themes and wotd - ([8b06fc4](https://github.com/DroidWorksStudio/mLauncher/commit/8b06fc42e600aa0d5c56afe5aaaba3ad859ad225))
