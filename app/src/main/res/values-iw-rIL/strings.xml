@@ -264,6 +264,7 @@
     <string name="pin">פִּין</string>
     <string name="unpin">לְהוֹצִיא סִיכָּה</string>
     <string name="rename">שינוי שם</string>
+    <string name="tag">Tag</string>
     <string name="info">מידע</string>
     <string name="okay">אוקיי</string>
     <string name="apply">לִפְנוֹת</string>
