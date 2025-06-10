@@ -310,6 +310,7 @@ class SettingsFragment : Fragment() {
             getLocalizedString(R.string.lock),
             getLocalizedString(R.string.hide),
             getLocalizedString(R.string.rename),
+            getLocalizedString(R.string.tag),
             getLocalizedString(R.string.info),
             getLocalizedString(R.string.delete)
         )
@@ -2380,7 +2381,7 @@ class SettingsFragment : Fragment() {
                         option = getLocalizedString(R.string.settings_context_menu_option),
                         fontSize = titleFontSize,
                         onClick = {
-                            dialogBuilder.showFlagSettingsBottomSheet(context, contextMenuOptionLabels, "CONTEXT_MENU_FLAGS", "001111")
+                            dialogBuilder.showFlagSettingsBottomSheet(context, contextMenuOptionLabels, "CONTEXT_MENU_FLAGS", "0011111")
                         }
                     )
 
