@@ -262,6 +262,7 @@
     <string name="pin">Alfiler</string>
     <string name="unpin">Desprender</string>
     <string name="rename">Renombrar</string>
+    <string name="tag">Etiqueta</string>
     <string name="info">Información</string>
     <string name="okay">OK</string>
     <string name="apply">Aplicar</string>

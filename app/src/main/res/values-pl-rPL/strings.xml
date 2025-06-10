@@ -262,6 +262,7 @@
     <string name="pin">Szpilka</string>
     <string name="unpin">Odpiąć</string>
     <string name="rename">Zmień nazwę</string>
+    <string name="tag">Etykietka</string>
     <string name="info">Informacje</string>
     <string name="okay">OK</string>
     <string name="apply">Stosować</string>

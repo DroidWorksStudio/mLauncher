@@ -262,6 +262,7 @@
     <string name="pin">Épingle</string>
     <string name="unpin">Détacher</string>
     <string name="rename">Renommer</string>
+    <string name="tag">Étiqueter</string>
     <string name="info">Info</string>
     <string name="okay">Ok</string>
     <string name="apply">Appliquer</string>

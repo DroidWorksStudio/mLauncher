@@ -262,6 +262,7 @@
     <string name="pin">เข็มหมุด</string>
     <string name="unpin">ปลดหมุด</string>
     <string name="rename">เปลี่ยนชื่อ</string>
+    <string name="tag">แท็ก</string>
     <string name="info">ข้อมูล</string>
     <string name="okay">ตกลง</string>
     <string name="apply">นำมาใช้</string>
