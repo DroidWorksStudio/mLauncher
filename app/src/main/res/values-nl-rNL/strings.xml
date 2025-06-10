@@ -262,6 +262,7 @@
     <string name="pin">Pin</string>
     <string name="unpin">Losmaken</string>
     <string name="rename">Hernoem</string>
+    <string name="tag">Tag</string>
     <string name="info">Info</string>
     <string name="okay">OK</string>
     <string name="apply">Toepassen</string>
