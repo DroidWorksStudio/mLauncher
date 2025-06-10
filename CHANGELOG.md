@@ -32,6 +32,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Adjust context menu flag indices - ([f613906](https://github.com/DroidWorksStudio/mLauncher/commit/f6139060ee5df5d1c21e63fb2020134e9e9e9ee7))
 - Move Font UI views to common component package - ([5f8e62c](https://github.com/DroidWorksStudio/mLauncher/commit/5f8e62c876fcf4db668c8fc70a52c4b3cede8222))
 - Rename variable `flags` to `contextMenuFlags` - ([2c7f8da](https://github.com/DroidWorksStudio/mLauncher/commit/2c7f8da90ef6d4de4889577b3d7bd7f9119f9772))
 - Rename flagOptionLabels to contextMenuOptionLabels - ([8186cf4](https://github.com/DroidWorksStudio/mLauncher/commit/8186cf420ba6f5b44c640da0e99a1e5e23b60c7d))
