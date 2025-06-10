@@ -376,15 +376,20 @@ class DialogManager(val context: Context, val activity: Activity) {
             setPadding(48, 24, 48, 24)
         }
 
+        // Adjust the size of currentFlags to match optionLabels
+        if (currentFlags.size < optionLabels.size) {
+            currentFlags.addAll(List(optionLabels.size - currentFlags.size) { false })
+        } else if (currentFlags.size > optionLabels.size) {
+            currentFlags.subList(optionLabels.size, currentFlags.size).clear()
+        }
+
         optionLabels.forEachIndexed { index, label ->
             val checkBox = CheckBox(context).apply {
                 text = label
-                isChecked = currentFlags.getOrElse(index) { false }
+                isChecked = currentFlags[index]
                 setOnCheckedChangeListener { _, isChecked ->
-                    if (index < currentFlags.size) {
-                        currentFlags[index] = isChecked
-                        prefs.saveMenuFlags(settingFlags, currentFlags)
-                    }
+                    currentFlags[index] = isChecked
+                    prefs.saveMenuFlags(settingFlags, currentFlags)
                 }
                 layoutParams = LinearLayout.LayoutParams(
                     LinearLayout.LayoutParams.MATCH_PARENT,
@@ -395,6 +400,7 @@ class DialogManager(val context: Context, val activity: Activity) {
             }
             layout.addView(checkBox)
         }
+
 
         flagSettingsBottomSheet = LockedBottomSheetDialog(context).apply {
             setContentView(layout)
