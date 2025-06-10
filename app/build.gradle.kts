@@ -28,7 +28,6 @@ val versionNameStr = when (type) {
     else -> baseVersionName
 }
 
-
 android {
     namespace = "com.github.droidworksstudio.mlauncher"
     compileSdk = 36

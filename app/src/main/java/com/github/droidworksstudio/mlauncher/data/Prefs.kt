@@ -773,6 +773,7 @@ class Prefs(val context: Context) {
             activityLabel = appName,
             activityPackage = appPackage,
             customLabel = appAlias,
+            customTag = emptyString(),
             activityClass = appActivityName,
             user = userHandle,
         )
@@ -901,12 +902,20 @@ class Prefs(val context: Context) {
         return getHomeAppModel(location).label
     }
 
-    fun getAppAlias(appName: String): String {
-        return prefsNormal.getString(appName, emptyString()).toString()
+    fun getAppAlias(appPackage: String): String {
+        return prefsNormal.getString("${appPackage}_ALIAS", emptyString()).toString()
     }
 
     fun setAppAlias(appPackage: String, appAlias: String) {
-        prefsNormal.edit { putString(appPackage, appAlias) }
+        prefsNormal.edit { putString("${appPackage}_ALIAS", appAlias) }
+    }
+
+    fun getAppTag(appPackage: String): String {
+        return prefsNormal.getString("${appPackage}_TAG", emptyString()).toString()
+    }
+
+    fun setAppTag(appPackage: String, appTag: String) {
+        prefsNormal.edit { putString("${appPackage}_TAG", appTag) }
     }
 
     fun remove(prefName: String) {

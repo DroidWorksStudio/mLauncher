@@ -335,9 +335,10 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                     for ((packageName, appName, activityName) in recentApps) {
                         if (seenPackages.contains(packageName)) continue
                         val alias = prefs.getAppAlias(packageName).ifEmpty { appName }
+                        val tag = prefs.getAppTag(packageName)
 
                         fullList.add(
-                            AppListItem(appName, packageName, activityName, profile, alias, AppCategory.RECENT)
+                            AppListItem(appName, packageName, activityName, profile, alias, tag, AppCategory.RECENT)
                         )
                         seenPackages.add(packageName)
                     }
@@ -358,9 +359,8 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                     val isHidden = hiddenApps.contains("$packageName|$profile")
                     if ((isHidden && !includeHiddenApps) || (!isHidden && !includeRegularApps)) continue
 
-                    val alias = prefs.getAppAlias(packageName).ifEmpty {
-                        prefs.getAppAlias(label)
-                    }
+                    val alias = prefs.getAppAlias(packageName)
+                    val tag = prefs.getAppTag(packageName)
 
                     val category = when {
                         pinnedPackages.contains(packageName) -> AppCategory.PINNED
@@ -368,7 +368,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                     }
 
                     fullList.add(
-                        AppListItem(label, packageName, className, profile, alias, category)
+                        AppListItem(label, packageName, className, profile, alias, tag, category)
                     )
 
                     seenPackages.add(packageName)

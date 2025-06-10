@@ -100,7 +100,23 @@
             android:textSize="12sp"
             app:drawableTopCompat="@drawable/ic_rename" />
 
-        <!-- 5. Info -->
+        <!-- 5. Tag -->
+        <com.github.creativecodecat.components.views.FontAppCompatTextView
+            android:id="@+id/appTag"
+            style="@style/TextSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="2dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingHorizontal="8dp"
+            android:text="@string/tag"
+            android:textSize="12sp"
+            app:drawableTopCompat="@drawable/ic_tag" />
+
+        <!-- 6. Info -->
         <com.github.creativecodecat.components.views.FontAppCompatTextView
             android:id="@+id/appInfo"
             style="@style/TextSmall"
@@ -116,7 +132,7 @@
             android:textSize="12sp"
             app:drawableTopCompat="@drawable/ic_info" />
 
-        <!-- 6. Delete -->
+        <!-- 7. Delete -->
         <com.github.creativecodecat.components.views.FontAppCompatTextView
             android:id="@+id/appDelete"
             style="@style/TextSmall"
@@ -132,7 +148,7 @@
             android:textSize="12sp"
             app:drawableTopCompat="@drawable/ic_delete" />
 
-        <!-- 7. Close -->
+        <!-- 8. Close -->
         <com.github.creativecodecat.components.views.FontAppCompatTextView
             android:id="@+id/appClose"
             style="@style/TextSmall"
@@ -187,6 +203,48 @@
             android:gravity="center"
             android:paddingHorizontal="20dp"
             android:text="@string/rename"
+            android:textAllCaps="true" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/appTagLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="?attr/primaryColorInverseTrans80"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="end|center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        tools:visibility="gone">
+
+        <com.github.creativecodecat.components.views.FontEditText
+            android:id="@+id/appTagEdit"
+            style="@style/TextLarge"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:autofillHints="name"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:inputType="textCapWords"
+            android:maxLength="30"
+            android:maxLines="1"
+            android:paddingVertical="@dimen/app_padding_vertical"
+            android:textColorHint="?attr/primaryColorTrans50"
+            tools:ignore="LabelFor" />
+
+        <com.github.creativecodecat.components.views.FontAppCompatTextView
+            android:id="@+id/appSaveTag"
+            style="@style/TextSmallBold"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingHorizontal="20dp"
+            android:text="@string/tag"
             android:textAllCaps="true" />
 
     </LinearLayout>

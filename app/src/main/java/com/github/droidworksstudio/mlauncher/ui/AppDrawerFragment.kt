@@ -138,6 +138,7 @@ class AppDrawerFragment : Fragment() {
                     emptyString(),
                     user = userManager.userProfiles[0], // No user associated with the "Clear" option
                     customLabel = "Clear",
+                    emptyString(),
                 )
 
                 binding.drawerButton.setOnClickListener {
@@ -191,6 +192,7 @@ class AppDrawerFragment : Fragment() {
                     appClickListener(viewModel, flag, n),
                     appDeleteListener(),
                     this.appRenameListener(),
+                    this.appTagListener(),
                     appShowHideListener(),
                     appInfoListener()
                 )
@@ -217,6 +219,8 @@ class AppDrawerFragment : Fragment() {
         var lastSectionLetter: String? = null
 
         binding.recyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            var onTop = false
+
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
                 val layoutManager = recyclerView.layoutManager as? LinearLayoutManager ?: return
                 val itemCount = layoutManager.itemCount
@@ -239,11 +243,43 @@ class AppDrawerFragment : Fragment() {
                     else -> item.label.firstOrNull()?.uppercaseChar()?.toString() ?: return
                 }
 
-                // ✅ Skip redundant updates
+                // Skip redundant updates
                 if (sectionLetter == lastSectionLetter) return
                 lastSectionLetter = sectionLetter
 
                 binding.azSidebar.setSelectedLetter(sectionLetter)
+            }
+
+            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+                super.onScrollStateChanged(recyclerView, newState)
+                when (newState) {
+
+                    RecyclerView.SCROLL_STATE_DRAGGING -> {
+                        onTop = !recyclerView.canScrollVertically(-1)
+                        if (onTop) {
+                            if (requireContext().hasSoftKeyboard()) {
+                                binding.search.hideKeyboard()
+                            }
+                        }
+                        if (onTop && !recyclerView.canScrollVertically(1)) {
+                            findNavController().popBackStack()
+                        }
+                    }
+
+                    RecyclerView.SCROLL_STATE_IDLE -> {
+                        if (!recyclerView.canScrollVertically(1)) {
+                            binding.search.hideKeyboard()
+                        } else if (!recyclerView.canScrollVertically(-1)) {
+                            if (onTop) {
+                                findNavController().popBackStack()
+                            } else {
+                                if (requireContext().hasSoftKeyboard()) {
+                                    binding.search.showKeyboard()
+                                }
+                            }
+                        }
+                    }
+                }
             }
         })
 
@@ -274,17 +310,20 @@ class AppDrawerFragment : Fragment() {
                     when {
                         searchQuery.startsWith("!") -> {
                             searchQuery = searchQuery.substringAfter("!")
-                            requireContext().searchCustomSearchEngine(searchQuery, prefs)
+                            requireContext().searchCustomSearchEngine(searchQuery.trim(), prefs)
                         }
 
                         else -> {
                             // Handle unsupported search engines or invalid queries
-                            if (adapter.itemCount == 0 && requireContext().searchOnPlayStore(searchQuery.trim())
-                                    .not()
+                            if (adapter.itemCount == 0 && requireContext().searchOnPlayStore(searchQuery.trim()).not()
                             ) {
                                 requireContext().openSearch(searchQuery.trim())
-                            } else {
+                            } else if (
+                                adapter.itemCount == 1 && adapter.getItemAt(0).toString().equals(searchQuery.trim(), ignoreCase = true)
+                            ) {
                                 adapter.launchFirstInList()
+                            } else {
+                                requireContext().searchOnPlayStore(searchQuery.trim())
                             }
                             return true // Exit the function
                         }
@@ -458,6 +497,13 @@ class AppDrawerFragment : Fragment() {
         { appPackage, appAlias ->
             val prefs = Prefs(requireContext())
             prefs.setAppAlias(appPackage, appAlias)
+            findNavController().popBackStack()
+        }
+
+    private fun appTagListener(): (appPackage: String, appTag: String) -> Unit =
+        { appPackage, appTag ->
+            val prefs = Prefs(requireContext())
+            prefs.setAppTag(appPackage, appTag)
             findNavController().popBackStack()
         }
 

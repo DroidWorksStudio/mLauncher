@@ -741,11 +741,12 @@ class SettingsFragment : Fragment() {
                                     val userManager = requireContext().getSystemService(Context.USER_SERVICE) as UserManager
 
                                     val clearApp = AppListItem(
-                                        "NoApp",
+                                        "Clear",
                                         emptyString(),
                                         emptyString(),
-                                        user = userManager.userProfiles[0], // No user associated with the "NoApp" option
-                                        customLabel = "NoApp",
+                                        user = userManager.userProfiles[0], // No user associated with the "Clear" option
+                                        customLabel = "Clear",
+                                        emptyString(),
                                     )
 
                                     for (n in newHomeAppsNum..oldHomeAppsNum) {

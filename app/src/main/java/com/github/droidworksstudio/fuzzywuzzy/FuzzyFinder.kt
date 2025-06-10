@@ -16,6 +16,14 @@ object FuzzyFinder {
         return (fuzzyScore * topScore).toInt()
     }
 
+    fun scoreString(appLabel: String, searchChars: String, topScore: Int): Int {
+        val normalizedAppLabel = normalizeString(appLabel)
+        val normalizedSearchChars = normalizeString(searchChars)
+
+        val fuzzyScore = calculateFuzzyScore(normalizedAppLabel, normalizedSearchChars)
+        return (fuzzyScore * topScore).toInt()
+    }
+
     // Simplified normalization for app label and search string
     private fun normalizeString(input: String): String {
         return input

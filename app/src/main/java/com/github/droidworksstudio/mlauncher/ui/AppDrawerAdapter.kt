@@ -58,6 +58,7 @@ class AppDrawerAdapter(
     private val appClickListener: (AppListItem) -> Unit,
     private val appDeleteListener: (AppListItem) -> Unit,
     private val appRenameListener: (String, String) -> Unit,
+    private val appTagListener: (String, String) -> Unit,
     private val appHideListener: (AppDrawerFlag, AppListItem) -> Unit,
     private val appInfoListener: (AppListItem) -> Unit
 ) : RecyclerView.Adapter<AppDrawerAdapter.ViewHolder>(), Filterable {
@@ -161,6 +162,15 @@ class AppDrawerAdapter(
             appRenameListener(appModel.activityPackage, appModel.customLabel)
         }
 
+        holder.appSaveTag.setOnClickListener {
+            val name = holder.appTagEdit.text.toString().trim()
+            Log.d("AppListDebug", "✏️ Tagging ${appModel.activityPackage} to $name")
+            appModel.customTag = name
+            notifyItemChanged(holder.absoluteAdapterPosition)
+            Log.d("AppListDebug", "🔁 notifyItemChanged at ${holder.absoluteAdapterPosition}")
+            appTagListener(appModel.activityPackage, appModel.customTag)
+        }
+
         autoLaunch(position)
     }
 
@@ -171,7 +181,7 @@ class AppDrawerAdapter(
     private fun createAppFilter(): Filter {
         return object : Filter() {
             override fun performFiltering(charSearch: CharSequence?): FilterResults {
-                isBangSearch = charSearch?.startsWith("!") == true
+                isBangSearch = listOf("!", "#").any { prefix -> charSearch?.startsWith(prefix) == true }
                 prefs = Prefs(context)
 
                 val searchChars = charSearch.toString()
@@ -180,23 +190,51 @@ class AppDrawerAdapter(
                 if (prefs.enableFilterStrength) {
                     // Only apply FuzzyFinder scoring logic when filter strength is enabled
                     val scoredApps = mutableMapOf<AppListItem, Int>()
-                    for (app in appsList) {
-                        scoredApps[app] =
-                            FuzzyFinder.scoreApp(app, searchChars, Constants.MAX_FILTER_STRENGTH)
+                    if (searchChars.startsWith("#")) {
+                        val tagQuery = searchChars.substringAfter("#")
+                        for (app in appsList) {
+                            scoredApps[app] =
+                                FuzzyFinder.scoreString(app.tag, tagQuery, Constants.MAX_FILTER_STRENGTH)
+                        }
+                    } else {
+                        for (app in appsList) {
+                            scoredApps[app] =
+                                FuzzyFinder.scoreApp(app, searchChars, Constants.MAX_FILTER_STRENGTH)
+                        }
                     }
 
                     filteredApps = if (searchChars.isNotEmpty()) {
-                        if (prefs.searchFromStart) {
-                            scoredApps.filter { (app, _) ->
-                                app.label.startsWith(searchChars, ignoreCase = true)
+                        if (searchChars.startsWith("#")) {
+                            val tagQuery = searchChars.substringAfter("#")
+                            if (prefs.searchFromStart) {
+                                Log.d("searchQuery", tagQuery)
+                                scoredApps.filter { (app, _) ->
+                                    app.tag.startsWith(tagQuery, ignoreCase = true)
+                                }
+                                    .filter { (_, score) -> score > prefs.filterStrength }
+                                    .map { it.key }
+                                    .toMutableList()
+                            } else {
+                                Log.d("searchQuery", tagQuery)
+                                scoredApps.filter { (app, score) ->
+                                    app.tag.contains(tagQuery, ignoreCase = true) && score > prefs.filterStrength
+                                }
+                                    .map { it.key }
+                                    .toMutableList()
                             }
-                                .filter { (_, score) -> score > prefs.filterStrength }
-                                .map { it.key }
-                                .toMutableList()
                         } else {
-                            scoredApps.filterValues { it > prefs.filterStrength }
-                                .keys
-                                .toMutableList()
+                            if (prefs.searchFromStart) {
+                                scoredApps.filter { (app, _) ->
+                                    app.label.startsWith(searchChars, ignoreCase = true)
+                                }
+                                    .filter { (_, score) -> score > prefs.filterStrength }
+                                    .map { it.key }
+                                    .toMutableList()
+                            } else {
+                                scoredApps.filterValues { it > prefs.filterStrength }
+                                    .keys
+                                    .toMutableList()
+                            }
                         }
                     } else {
                         appsList.toMutableList() // No search term, return all apps
@@ -207,14 +245,32 @@ class AppDrawerAdapter(
                         appsList.toMutableList() // No search term, return all apps
                     } else {
                         val filteredAppsList = if (prefs.searchFromStart) {
-                            // Apply search from start logic if searchChars is not empty
-                            appsList.filter { app ->
-                                app.label.startsWith(searchChars, ignoreCase = true)
+                            Log.d("searchQuery", searchChars)
+                            if (searchChars.startsWith("#")) {
+                                val searchQuery = searchChars.substringAfter("#")
+                                appsList.filter { app ->
+                                    app.tag.startsWith(searchQuery, ignoreCase = true)
+                                }
+                            } else {
+                                // Apply search from start logic if searchChars is not empty
+                                appsList.filter { app ->
+                                    app.label.startsWith(searchChars, ignoreCase = true)
+                                }
                             }
                         } else {
-                            // Apply fuzzy matching when searchFromStart is false
-                            appsList.filter { app ->
-                                FuzzyFinder.isMatch(app.label, searchChars)
+                            Log.d("searchQuery", searchChars)
+                            if (searchChars.startsWith("#")) {
+                                val searchQuery = searchChars.substringAfter("#")
+
+                                // Apply fuzzy matching when searchFromStart is false
+                                appsList.filter { app ->
+                                    FuzzyFinder.isMatch(app.tag, searchQuery)
+                                }
+                            } else {
+                                // Apply fuzzy matching when searchFromStart is false
+                                appsList.filter { app ->
+                                    FuzzyFinder.isMatch(app.label, searchChars)
+                                }
                             }
                         }
                         filteredAppsList.toMutableList() // Convert to MutableList
@@ -246,8 +302,7 @@ class AppDrawerAdapter(
         val autoOpenApp = prefs.autoOpenApp
         if (lastMatch && openApp && autoOpenApp) {
             try { // Automatically open the app when there's only one search result
-                if (isBangSearch.not())
-                    appClickListener(appFilteredList[position])
+                if (isBangSearch.not()) appClickListener(appFilteredList[position])
             } catch (e: Exception) {
                 e.printStackTrace()
             }
@@ -272,10 +327,14 @@ class AppDrawerAdapter(
         val appLock: TextView = itemView.appLock
         val appRenameEdit: EditText = itemView.appRenameEdit
         val appSaveRename: TextView = itemView.appSaveRename
+        val appTagEdit: EditText = itemView.appTagEdit
+        val appSaveTag: TextView = itemView.appSaveTag
 
         private val appHideLayout: LinearLayout = itemView.appHideLayout
         private val appRenameLayout: LinearLayout = itemView.appRenameLayout
+        private val appTagLayout: LinearLayout = itemView.appTagLayout
         private val appRename: TextView = itemView.appRename
+        private val appTag: TextView = itemView.appTag
         private val appTitle: TextView = itemView.appTitle
         private val appTitleFrame: FrameLayout = itemView.appTitleFrame
         private val appClose: TextView = itemView.appClose
@@ -296,6 +355,7 @@ class AppDrawerAdapter(
                 val contextMenuFlags = prefs.getMenuFlags("CONTEXT_MENU_FLAGS", "001111")
                 appHideLayout.isVisible = false
                 appRenameLayout.isVisible = false
+                appTagLayout.isVisible = false
 
                 appHide.apply {
                     isVisible = contextMenuFlags[2]
@@ -350,6 +410,19 @@ class AppDrawerAdapter(
                     }
                 }
 
+                appTag.apply {
+                    isVisible = contextMenuFlags[3]
+                    setOnClickListener {
+                        if (appListItem.activityPackage.isNotEmpty()) {
+                            appTagEdit.hint = appListItem.activityLabel
+                            appTagLayout.isVisible = true
+                            appHideLayout.isVisible = false
+                            appTagEdit.showKeyboard()
+                            appTagEdit.imeOptions = EditorInfo.IME_ACTION_DONE
+                        }
+                    }
+                }
+
                 appRenameEdit.apply {
                     addTextChangedListener(object : TextWatcher {
 
@@ -376,6 +449,32 @@ class AppDrawerAdapter(
                     })
                     // set current name as default text in EditText
                     text = Editable.Factory.getInstance().newEditable(appListItem.label)
+                }
+
+                appTagEdit.apply {
+                    addTextChangedListener(object : TextWatcher {
+
+                        override fun afterTextChanged(s: Editable) {}
+
+                        override fun beforeTextChanged(
+                            s: CharSequence, start: Int,
+                            count: Int, after: Int
+                        ) {
+                        }
+
+                        override fun onTextChanged(
+                            s: CharSequence, start: Int,
+                            before: Int, count: Int
+                        ) {
+                            if (appTagEdit.text.toString() == appListItem.customTag) {
+                                appSaveTag.text = getLocalizedString(R.string.cancel)
+                            } else {
+                                appSaveTag.text = getLocalizedString(R.string.tag)
+                            }
+                        }
+                    })
+                    // set current name as default text in EditText
+                    text = Editable.Factory.getInstance().newEditable(appListItem.customTag)
                 }
 
                 appTitle.text = appListItem.label

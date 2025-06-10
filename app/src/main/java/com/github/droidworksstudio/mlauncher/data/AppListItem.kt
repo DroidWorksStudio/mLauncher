@@ -1,6 +1,7 @@
 package com.github.droidworksstudio.mlauncher.data
 
 import android.os.UserHandle
+import com.github.droidworksstudio.mlauncher.helper.emptyString
 import java.text.Collator
 
 val collator: Collator = Collator.getInstance()
@@ -36,11 +37,13 @@ data class AppListItem(
     val activityPackage: String,
     val activityClass: String,
     val user: UserHandle,
-    var customLabel: String, // TODO make immutable by refining data flow
+    var customLabel: String,
+    var customTag: String,
     var category: AppCategory = AppCategory.REGULAR
 ) : Comparable<AppListItem> {
 
     val label = customLabel.ifEmpty { activityLabel }
+    val tag = customTag.ifEmpty { emptyString() }
 
     /** Speed up sort and search */
     private val collationKey = collator.getCollationKey(label)

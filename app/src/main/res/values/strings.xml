@@ -339,6 +339,7 @@
     <string name="pin">Pin</string>
     <string name="unpin">Unpin</string>
     <string name="rename">Rename</string>
+    <string name="tag">Tag</string>
     <string name="info">Info</string>
     <string name="okay">Okay</string>
     <string name="apply">Apply</string>
