@@ -262,6 +262,7 @@
     <string name="pin">ピン</string>
     <string name="unpin">ピンを外す</string>
     <string name="rename">名前の変更</string>
+    <string name="tag">Tag</string>
     <string name="info">情報</string>
     <string name="okay">OK</string>
     <string name="apply">適用する</string>
