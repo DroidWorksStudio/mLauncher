@@ -262,6 +262,7 @@
     <string name="pin">Приколоть</string>
     <string name="unpin">Открепить</string>
     <string name="rename">Переименовать</string>
+    <string name="tag">Tag</string>
     <string name="info">Информация</string>
     <string name="okay">Окей</string>
     <string name="apply">Применять</string>
