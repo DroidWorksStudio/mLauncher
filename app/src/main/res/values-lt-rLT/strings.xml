@@ -264,6 +264,7 @@ Jūs bet kada galite išjungti šią prieigą savo įrenginio nustatymuose.</str
     <string name="pin">Prisegti</string>
     <string name="unpin">Atsegti</string>
     <string name="rename">Pervadyti</string>
+    <string name="tag">Tag</string>
     <string name="info">Informacija</string>
     <string name="okay">Gerai</string>
     <string name="apply">Taikyti</string>
