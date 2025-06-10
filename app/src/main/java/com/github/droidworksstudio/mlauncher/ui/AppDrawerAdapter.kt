@@ -323,7 +323,6 @@ class AppDrawerAdapter(
 
     class ViewHolder(itemView: AdapterAppDrawerBinding) : RecyclerView.ViewHolder(itemView.root) {
         val appHide: TextView = itemView.appHide
-        val appPin: TextView = itemView.appPin
         val appLock: TextView = itemView.appLock
         val appRenameEdit: EditText = itemView.appRenameEdit
         val appSaveRename: TextView = itemView.appSaveRename
@@ -335,6 +334,7 @@ class AppDrawerAdapter(
         private val appTagLayout: LinearLayout = itemView.appTagLayout
         private val appRename: TextView = itemView.appRename
         private val appTag: TextView = itemView.appTag
+        private val appPin: TextView = itemView.appPin
         private val appTitle: TextView = itemView.appTitle
         private val appTitleFrame: FrameLayout = itemView.appTitleFrame
         private val appClose: TextView = itemView.appClose
@@ -411,7 +411,7 @@ class AppDrawerAdapter(
                 }
 
                 appTag.apply {
-                    isVisible = contextMenuFlags[3]
+                    isVisible = contextMenuFlags[4]
                     setOnClickListener {
                         if (appListItem.activityPackage.isNotEmpty()) {
                             appTagEdit.hint = appListItem.activityLabel
@@ -639,14 +639,14 @@ class AppDrawerAdapter(
                 }
 
                 appInfo.apply {
-                    isVisible = contextMenuFlags[4]
+                    isVisible = contextMenuFlags[5]
                     setOnClickListener {
                         appInfoListener(appListItem)
                     }
                 }
 
                 appDelete.apply {
-                    isVisible = contextMenuFlags[5]
+                    isVisible = contextMenuFlags[6]
                     setOnClickListener {
                         appDeleteListener(appListItem)
                     }
