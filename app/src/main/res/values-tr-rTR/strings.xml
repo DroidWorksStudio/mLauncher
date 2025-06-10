@@ -262,6 +262,7 @@
     <string name="pin">Pin</string>
     <string name="unpin">Sabitlemeyi kaldır</string>
     <string name="rename">Yeniden Adlandır</string>
+    <string name="tag">Tag</string>
     <string name="info">Bilgi</string>
     <string name="okay">Tamam</string>
     <string name="apply">Uygula</string>
