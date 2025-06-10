@@ -262,6 +262,7 @@
     <string name="pin">Stift</string>
     <string name="unpin">Lösen</string>
     <string name="rename">Umbenennen</string>
+    <string name="tag">Tag</string>
     <string name="info">Die Info</string>
     <string name="okay">Okay</string>
     <string name="apply">Anwenden</string>
