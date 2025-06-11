@@ -12,6 +12,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Remove unused onSingleTap gesture - ([7649d89](https://github.com/DroidWorksStudio/mLauncher/commit/7649d89915244a250fbf6e0d5e463bd41117c56d))
 - Use color resources for selected item color - ([512a6b6](https://github.com/DroidWorksStudio/mLauncher/commit/512a6b63288ea632cc5fd4e39957184ea3abd8de))
 
 ## [1.10.6.6](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.6.6) - (11, June 2025)
