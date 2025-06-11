@@ -228,9 +228,9 @@ object SettingsComposable {
     fun SettingsTitle(
         text: String,
         modifier: Modifier = Modifier,
-        fontSize: TextUnit = TextUnit.Unspecified
+        fontSize: TextUnit = TextUnit.Unspecified,
+        onClick: () -> Unit = {}
     ) {
-        // Safely get font size and color within composable scope
         val resolvedFontSizeSp = if (fontSize != TextUnit.Unspecified) fontSize.value else 20f
         val fontColor = SettingsTheme.typography.header.color
 
@@ -239,7 +239,18 @@ object SettingsComposable {
                 FontAppCompatTextView(context).apply {
                     this.text = text
                     setTextSize(TypedValue.COMPLEX_UNIT_SP, resolvedFontSizeSp)
-                    setTextColor(fontColor.toArgb()) // Convert Compose color to Android color
+                    setTextColor(fontColor.toArgb())
+
+                    isClickable = true
+                    isFocusable = true
+                    setOnClickListener { onClick() }
+
+                    // Optional: touch ripple effect
+                    val typedValue = TypedValue()
+                    context.theme.resolveAttribute(
+                        android.R.attr.selectableItemBackground, typedValue, true
+                    )
+                    setBackgroundResource(typedValue.resourceId)
                 }
             },
             modifier = modifier
@@ -247,7 +258,6 @@ object SettingsComposable {
                 .wrapContentSize()
         )
     }
-
 
     @Composable
     fun SettingsSwitch(

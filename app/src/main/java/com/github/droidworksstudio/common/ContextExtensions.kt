@@ -2,15 +2,21 @@ package com.github.droidworksstudio.common
 
 import android.Manifest
 import android.app.Activity
+import android.app.ActivityManager
 import android.app.SearchManager
 import android.content.ActivityNotFoundException
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
+import android.content.IntentFilter
 import android.content.pm.ApplicationInfo
 import android.content.res.Configuration
 import android.net.Uri
+import android.os.BatteryManager
 import android.os.Bundle
+import android.os.Environment
+import android.os.StatFs
+import android.os.SystemClock
 import android.provider.AlarmClock
 import android.provider.CalendarContract
 import android.provider.MediaStore
@@ -27,12 +33,14 @@ import androidx.annotation.ArrayRes
 import androidx.annotation.StringRes
 import androidx.biometric.BiometricManager
 import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.core.net.toUri
 import com.github.droidworksstudio.mlauncher.Mlauncher
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.helper.emptyString
 import com.github.droidworksstudio.mlauncher.services.ActionService
+import java.io.File
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
@@ -395,3 +403,86 @@ fun Context.getCurrentTimestamp(prefs: Prefs): String {
 
     return SimpleDateFormat("$datePattern - $timePattern", Locale.getDefault()).format(Date())
 }
+
+fun Context.getRamInfo(): String {
+    val activityManager = this.getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
+    val memoryInfo = ActivityManager.MemoryInfo()
+    activityManager.getMemoryInfo(memoryInfo)
+
+    val total = memoryInfo.totalMem / (1024 * 1024 * 1024f)
+    val avail = memoryInfo.availMem / (1024 * 1024 * 1024f)
+    val used = total - avail
+    val threshold = memoryInfo.threshold / (1024 * 1024 * 1024f)
+    val uptime = SystemClock.elapsedRealtime()
+
+    val uptimeHours = uptime / (1000 * 60 * 60)
+    val uptimeMinutes = (uptime / (1000 * 60)) % 60
+    val uptimeSeconds = (uptime / 1000) % 60
+
+    return """
+        Total: %.3f GB
+        Used: %.3f GB
+        Available: %.3f GB
+        Threshold: %.3f GB
+        System Uptime: %02d:%02d:%02d
+    """.trimIndent().format(total, used, avail, threshold, uptimeHours, uptimeMinutes, uptimeSeconds)
+}
+
+fun Context.getCpuBatteryInfo(): String {
+    val batteryStatus = this.registerReceiver(null, IntentFilter(Intent.ACTION_BATTERY_CHANGED))
+    val level = batteryStatus?.getIntExtra(BatteryManager.EXTRA_LEVEL, -1) ?: 0
+    val voltage = batteryStatus?.getIntExtra(BatteryManager.EXTRA_VOLTAGE, 0) ?: 0
+    val temp = (batteryStatus?.getIntExtra(BatteryManager.EXTRA_TEMPERATURE, 0) ?: 0) / 10f
+
+    val freqMin = File("/sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_min_freq").readText().trim().toIntOrNull()
+    val freqMax = File("/sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq").readText().trim().toIntOrNull()
+
+    return """
+        Cpu Temp: ${temp}°C
+        Usage: $level%
+        Freq: ${freqMin?.div(1000f)} - ${freqMax?.div(1000f)} GHz
+        Battery Temp: ${temp}°C
+        Voltage: ${voltage / 1000f} V
+    """.trimIndent()
+}
+
+fun Context.getStorageInfo(): String {
+    val stat = StatFs(Environment.getDataDirectory().path)
+    val total = stat.blockCountLong * stat.blockSizeLong
+    val avail = stat.availableBlocksLong * stat.blockSizeLong
+    val used = total - avail
+
+    return """
+        Total: %.3f GB
+        Used: %.3f GB
+        Free: %.3f GB
+        Root: / (internal)
+    """.trimIndent().format(
+        total / 1e9,
+        used / 1e9,
+        avail / 1e9
+    )
+}
+
+@Suppress("DEPRECATION")
+fun Context.getSdCardInfo(): String {
+    val extStorage = ContextCompat.getExternalFilesDirs(this, null).lastOrNull()
+    if (extStorage == null || Environment.isExternalStorageEmulated(extStorage)) return "No SD card"
+
+    val stat = StatFs(extStorage.path)
+    val total = stat.blockCountLong * stat.blockSizeLong
+    val avail = stat.availableBlocksLong * stat.blockSizeLong
+    val used = total - avail
+
+    return """
+        Total: %.3f GB
+        Used: %.3f GB
+        Free: %.3f GB
+        Path: ${extStorage.path}
+    """.trimIndent().format(
+        total / 1e9,
+        used / 1e9,
+        avail / 1e9
+    )
+}
+

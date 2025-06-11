@@ -22,7 +22,11 @@ import android.widget.SeekBar
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.toColorInt
+import com.github.droidworksstudio.common.getCpuBatteryInfo
 import com.github.droidworksstudio.common.getLocalizedString
+import com.github.droidworksstudio.common.getRamInfo
+import com.github.droidworksstudio.common.getSdCardInfo
+import com.github.droidworksstudio.common.getStorageInfo
 import com.github.droidworksstudio.mlauncher.MainActivity
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.Constants
@@ -674,5 +678,75 @@ class DialogManager(val context: Context, val activity: Activity) {
             override fun onStartTrackingTouch(seekBar: SeekBar?) {}
             override fun onStopTrackingTouch(seekBar: SeekBar?) {}
         }
+    }
+
+    fun showDeviceStatsBottomSheet(context: Context) {
+        val bottomSheet = LockedBottomSheetDialog(context)
+        val rootLayout = LinearLayout(context).apply {
+            orientation = LinearLayout.VERTICAL
+            setPadding(32, 32, 32, 32)
+        }
+
+        val infoCards = listOf(
+            "RAM" to context.getRamInfo(),
+            "CPU & Battery" to context.getCpuBatteryInfo(),
+            "Storage" to context.getStorageInfo(),
+            "SD Card" to context.getSdCardInfo()
+        )
+
+        // Group into rows of two cards
+        infoCards.chunked(2).forEach { rowItems ->
+            val row = LinearLayout(context).apply {
+                orientation = LinearLayout.HORIZONTAL
+                layoutParams = LinearLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT
+                ).apply {
+                    bottomMargin = 24
+                }
+            }
+
+            rowItems.forEach { (title, details) ->
+                val card = LinearLayout(context).apply {
+                    orientation = LinearLayout.VERTICAL
+                    setPadding(24, 24, 24, 24)
+                    layoutParams = LinearLayout.LayoutParams(
+                        0,
+                        ViewGroup.LayoutParams.WRAP_CONTENT,
+                        1f // equal weight for side-by-side layout
+                    ).apply {
+                        rightMargin = 16
+                    }
+                }
+
+                val titleView = TextView(context).apply {
+                    text = title
+                    setTextColor(Color.WHITE)
+                    setTypeface(null, Typeface.BOLD)
+                    textSize = 18f
+                }
+
+                val detailView = TextView(context).apply {
+                    text = details
+                    setTextColor(Color.LTGRAY)
+                    textSize = 14f
+                    setPadding(0, 8, 0, 0)
+                }
+
+                card.addView(titleView)
+                card.addView(detailView)
+                row.addView(card)
+            }
+
+            // Remove right margin from the last card in each row
+            if (row.childCount == 2) {
+                (row.getChildAt(1).layoutParams as LinearLayout.LayoutParams).rightMargin = 0
+            }
+
+            rootLayout.addView(row)
+        }
+
+        bottomSheet.setContentView(rootLayout)
+        bottomSheet.show()
     }
 }
