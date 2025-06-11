@@ -4,7 +4,7 @@
     <color name="colorPrimaryDark">@android:color/darker_gray</color>
     <color name="colorPrimaryBackground">@color/background_bubble</color>
     <color name="transparent">#00000000</color>
-    <color name="colorAccent">#FFEB3B</color>
+    <color name="colorAccent">#888888</color>
     <!-- White -->
     <color name="white">#FFFFFF</color>
     <color name="whiteTrans90">#E6FFFFFF</color>

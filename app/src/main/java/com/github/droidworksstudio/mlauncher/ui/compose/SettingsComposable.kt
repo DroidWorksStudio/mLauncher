@@ -320,27 +320,32 @@ object SettingsComposable {
             AndroidView(
                 factory = { context ->
                     FontAppCompatTextView(context).apply {
-                        text = title
                         setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSizeSp)
                         setTextColor(fontColorInt)
                     }
                 },
                 modifier = Modifier
                     .weight(1f)
-                    .wrapContentHeight()
+                    .wrapContentHeight(),
+                update = { textView ->
+                    textView.text = title
+                }
             )
 
             AndroidView(
                 factory = { context ->
                     FontAppCompatTextView(context).apply {
-                        text = option
                         setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSizeSp)
                         setTextColor(fontColorInt)
                         setOnClickListener { onClick() }
                     }
                 },
-                modifier = Modifier.wrapContentSize()
+                modifier = Modifier.wrapContentSize(),
+                update = { textView ->
+                    textView.text = option  // update text on recomposition
+                }
             )
+
         }
     }
 }

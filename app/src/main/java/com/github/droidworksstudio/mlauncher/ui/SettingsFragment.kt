@@ -487,10 +487,15 @@ class SettingsFragment : Fragment() {
                         option = selectedTheme.string(),
                         fontSize = titleFontSize,
                         onClick = {
-                            dialogBuilder.showSingleChoiceBottomSheet(
+
+                            val gravityOptions = Constants.Theme.entries.toTypedArray()
+                            val selectedIndex = gravityOptions.indexOf(prefs.appTheme).takeIf { it >= 0 } ?: 1
+
+                            dialogBuilder.showSingleChoiceBottomSheetPill(
                                 context = requireContext(),
                                 options = Constants.Theme.entries.toTypedArray(),
                                 titleResId = R.string.theme_mode,
+                                selectedIndex = selectedIndex,
                                 onItemSelected = { newTheme ->
                                     selectedTheme = newTheme // Update state
                                     prefs.appTheme = newTheme // Persist selection in preferences
@@ -512,10 +517,16 @@ class SettingsFragment : Fragment() {
                         option = selectedLanguage.string(),
                         fontSize = titleFontSize,
                         onClick = {
+                            val languageEntries = Constants.Language.entries
+
+                            // Determine selected index based on current prefs value
+                            val selectedIndex = languageEntries.indexOf(selectedLanguage).takeIf { it >= 0 } ?: 1
+
                             dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = Constants.Language.entries.toTypedArray(),
                                 titleResId = R.string.app_language,
+                                selectedIndex = selectedIndex,
                                 onItemSelected = { newLanguage ->
                                     selectedLanguage = newLanguage // Update state
                                     prefs.appLanguage = newLanguage // Persist selection in preferences
@@ -538,11 +549,15 @@ class SettingsFragment : Fragment() {
                                 it.getFont(requireContext()) ?: getTrueSystemFont()
                             }
 
+                            // Determine selected index based on current prefs value
+                            val selectedIndex = fontFamilyEntries.indexOf(selectedFontFamily).takeIf { it >= 0 } ?: 1
+
                             dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = fontFamilyOptions.toTypedArray(),
                                 fonts = fontFamilyFonts,
                                 titleResId = R.string.font_family,
+                                selectedIndex = selectedIndex,
                                 onItemSelected = { newFontFamilyName ->
                                     val newFontFamilyIndex =
                                         fontFamilyOptions.indexOfFirst { it == newFontFamilyName }
@@ -600,14 +615,16 @@ class SettingsFragment : Fragment() {
                         onClick = {
                             val searchEnginesEntries = Constants.SearchEngines.entries
 
-                            val searchEnginesOptions = searchEnginesEntries.map {
-                                it.getString()
-                            }
+                            val searchEnginesOptions = searchEnginesEntries.map { it.getString() }
+
+                            // Determine selected index based on current prefs value
+                            val selectedIndex = searchEnginesEntries.indexOf(selectedSearchEngine).takeIf { it >= 0 } ?: 1
 
                             dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = searchEnginesOptions.map { it }.toTypedArray(),
                                 titleResId = R.string.search_engine,
+                                selectedIndex = selectedIndex,
                                 onItemSelected = { newSearchEngineName ->
                                     val newFontFamilyIndex =
                                         searchEnginesOptions.indexOfFirst { it == newSearchEngineName }
@@ -1144,13 +1161,16 @@ class SettingsFragment : Fragment() {
                             // Generate options and icons
                             val iconPacksEntries = Constants.IconPacks.entries
 
-                            val iconPacksOptions =
-                                iconPacksEntries.map { it.getString(emptyString()) }
+                            val iconPacksOptions = iconPacksEntries.map { it.getString(emptyString()) }
+
+                            // Determine selected index based on current prefs value
+                            val selectedIndex = iconPacksEntries.indexOf(selectedIconPackHome).takeIf { it >= 0 } ?: 1
 
                             dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = iconPacksOptions.map { it.toString() }.toTypedArray(),
                                 titleResId = R.string.select_home_icons,
+                                selectedIndex = selectedIndex,
                                 onItemSelected = { newAppIconsName ->
                                     val newIconPacksIndex =
                                         iconPacksOptions.indexOfFirst { it.toString() == newAppIconsName }
@@ -1180,13 +1200,16 @@ class SettingsFragment : Fragment() {
                             // Generate options and icons
                             val iconPacksEntries = Constants.IconPacks.entries
 
-                            val iconPacksOptions =
-                                iconPacksEntries.map { it.getString(emptyString()) }
+                            val iconPacksOptions = iconPacksEntries.map { it.getString(emptyString()) }
+
+                            // Determine selected index based on current prefs value
+                            val selectedIndex = iconPacksEntries.indexOf(selectedIconPackAppList).takeIf { it >= 0 } ?: 1
 
                             dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = iconPacksOptions.map { it.toString() }.toTypedArray(),
                                 titleResId = R.string.select_app_list_icons,
+                                selectedIndex = selectedIndex,
                                 onItemSelected = { newAppIconsName ->
                                     val newIconPacksIndex =
                                         iconPacksOptions.indexOfFirst { it.toString() == newAppIconsName }
@@ -1251,10 +1274,14 @@ class SettingsFragment : Fragment() {
                         option = selectedClockAlignment.string(),
                         fontSize = titleFontSize,
                         onClick = {
-                            dialogBuilder.showSingleChoiceBottomSheet(
+                            val gravityOptions = Constants.Gravity.entries.toTypedArray()
+                            val selectedIndex = gravityOptions.indexOf(selectedClockAlignment).takeIf { it >= 0 } ?: 1
+
+                            dialogBuilder.showSingleChoiceBottomSheetPill(
                                 context = requireContext(),
-                                options = Constants.Gravity.entries.toTypedArray(),
+                                options = gravityOptions,
                                 titleResId = R.string.clock_alignment,
+                                selectedIndex = selectedIndex,
                                 onItemSelected = { newGravity ->
                                     selectedClockAlignment = newGravity // Update state
                                     prefs.clockAlignment = newGravity // Persist selection in preferences
@@ -1269,10 +1296,14 @@ class SettingsFragment : Fragment() {
                         option = selectedDateAlignment.string(),
                         fontSize = titleFontSize,
                         onClick = {
-                            dialogBuilder.showSingleChoiceBottomSheet(
+                            val gravityOptions = Constants.Gravity.entries.toTypedArray()
+                            val selectedIndex = gravityOptions.indexOf(selectedDateAlignment).takeIf { it >= 0 } ?: 1
+
+                            dialogBuilder.showSingleChoiceBottomSheetPill(
                                 context = requireContext(),
-                                options = Constants.Gravity.entries.toTypedArray(),
+                                options = gravityOptions,
                                 titleResId = R.string.date_alignment,
+                                selectedIndex = selectedIndex,
                                 onItemSelected = { newGravity ->
                                     selectedDateAlignment = newGravity // Update state
                                     prefs.dateAlignment = newGravity // Persist selection in preferences
@@ -1287,10 +1318,14 @@ class SettingsFragment : Fragment() {
                         option = selectedAlarmAlignment.string(),
                         fontSize = titleFontSize,
                         onClick = {
-                            dialogBuilder.showSingleChoiceBottomSheet(
+                            val gravityOptions = Constants.Gravity.entries.toTypedArray()
+                            val selectedIndex = gravityOptions.indexOf(selectedAlarmAlignment).takeIf { it >= 0 } ?: 1
+
+                            dialogBuilder.showSingleChoiceBottomSheetPill(
                                 context = requireContext(),
                                 options = Constants.Gravity.entries.toTypedArray(),
                                 titleResId = R.string.alarm_alignment,
+                                selectedIndex = selectedIndex,
                                 onItemSelected = { newGravity ->
                                     selectedAlarmAlignment = newGravity // Update state
                                     prefs.alarmAlignment = newGravity // Persist selection in preferences
@@ -1305,14 +1340,17 @@ class SettingsFragment : Fragment() {
                         option = selectedDailyWordAlignment.string(),
                         fontSize = titleFontSize,
                         onClick = {
-                            dialogBuilder.showSingleChoiceBottomSheet(
+                            val gravityOptions = Constants.Gravity.entries.toTypedArray()
+                            val selectedIndex = gravityOptions.indexOf(selectedDailyWordAlignment).takeIf { it >= 0 } ?: 1
+
+                            dialogBuilder.showSingleChoiceBottomSheetPill(
                                 context = requireContext(),
                                 options = Constants.Gravity.entries.toTypedArray(),
                                 titleResId = R.string.daily_word_alignment,
+                                selectedIndex = selectedIndex,
                                 onItemSelected = { newGravity ->
                                     selectedDailyWordAlignment = newGravity // Update state
-                                    prefs.dailyWordAlignment =
-                                        newGravity // Persist selection in preferences
+                                    prefs.dailyWordAlignment = newGravity // Persist selection in preferences
                                     viewModel.updateDailyWordAlignment(newGravity)
                                 }
                             )
@@ -1324,10 +1362,14 @@ class SettingsFragment : Fragment() {
                         option = selectedHomeAlignment.string(),
                         fontSize = titleFontSize,
                         onClick = {
-                            dialogBuilder.showSingleChoiceBottomSheet(
+                            val gravityOptions = Constants.Gravity.entries.toTypedArray()
+                            val selectedIndex = gravityOptions.indexOf(selectedHomeAlignment).takeIf { it >= 0 } ?: 1
+
+                            dialogBuilder.showSingleChoiceBottomSheetPill(
                                 context = requireContext(),
                                 options = Constants.Gravity.entries.toTypedArray(),
                                 titleResId = R.string.home_alignment,
+                                selectedIndex = selectedIndex,
                                 onItemSelected = { newGravity ->
                                     selectedHomeAlignment = newGravity // Update state
                                     prefs.homeAlignment = newGravity // Persist selection in preferences
@@ -1345,10 +1387,14 @@ class SettingsFragment : Fragment() {
                         option = selectedDrawAlignment.string(),
                         fontSize = titleFontSize,
                         onClick = {
-                            dialogBuilder.showSingleChoiceBottomSheet(
+                            val gravityOptions = Constants.Gravity.entries.toTypedArray()
+                            val selectedIndex = gravityOptions.indexOf(selectedDrawAlignment).takeIf { it >= 0 } ?: 1
+
+                            dialogBuilder.showSingleChoiceBottomSheetPill(
                                 context = requireContext(),
                                 options = Constants.Gravity.entries.toTypedArray(),
                                 titleResId = R.string.drawer_alignment,
+                                selectedIndex = selectedIndex,
                                 onItemSelected = { newGravity ->
                                     selectedDrawAlignment = newGravity // Update state
                                     prefs.drawerAlignment = newGravity // Persist selection in preferences
@@ -2415,6 +2461,7 @@ class SettingsFragment : Fragment() {
         dialogBuilder.backupRestoreBottomSheet?.dismiss()
         dialogBuilder.saveLoadThemeBottomSheet?.dismiss()
         dialogBuilder.saveDownloadWOTDBottomSheet?.dismiss()
+        dialogBuilder.singleChoiceBottomSheetPill?.dismiss()
         dialogBuilder.singleChoiceBottomSheet?.dismiss()
         dialogBuilder.colorPickerBottomSheet?.dismiss()
         dialogBuilder.sliderBottomSheet?.dismiss()

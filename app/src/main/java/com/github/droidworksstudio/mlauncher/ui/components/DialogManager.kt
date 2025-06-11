@@ -4,9 +4,11 @@ import android.app.Activity
 import android.content.Context
 import android.graphics.Color
 import android.graphics.Typeface
+import android.graphics.drawable.GradientDrawable
 import android.text.Editable
 import android.text.InputType
 import android.text.TextWatcher
+import android.util.TypedValue
 import android.view.Gravity
 import android.view.View
 import android.view.ViewGroup
@@ -18,6 +20,7 @@ import android.widget.LinearLayout
 import android.widget.ListView
 import android.widget.SeekBar
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.core.graphics.toColorInt
 import com.github.droidworksstudio.common.getLocalizedString
 import com.github.droidworksstudio.mlauncher.MainActivity
@@ -32,6 +35,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 class DialogManager(val context: Context, val activity: Activity) {
 
     private lateinit var prefs: Prefs
+    val selectedColor = "#7C4DFF".toColorInt()
 
     var backupRestoreBottomSheet: LockedBottomSheetDialog? = null
 
@@ -271,12 +275,11 @@ class DialogManager(val context: Context, val activity: Activity) {
         titleResId: Int,
         fonts: List<Typeface>? = null,
         fontSize: Float = 18f,
+        selectedIndex: Int = -1,            // <- NEW
         onItemSelected: (T) -> Unit
     ) {
-        // Dismiss any existing sheet
         singleChoiceBottomSheet?.dismiss()
 
-        // Convert options to display strings
         val itemStrings = options.map {
             when (it) {
                 is Constants.Language -> it.getString()
@@ -285,7 +288,6 @@ class DialogManager(val context: Context, val activity: Activity) {
             }
         }
 
-        // Create root container
         val container = LinearLayout(context).apply {
             orientation = LinearLayout.VERTICAL
             setPadding(48, 24, 48, 24)
@@ -295,7 +297,6 @@ class DialogManager(val context: Context, val activity: Activity) {
             )
         }
 
-        // Title
         val titleView = TextView(context).apply {
             text = context.getString(titleResId)
             textSize = 20f
@@ -303,7 +304,6 @@ class DialogManager(val context: Context, val activity: Activity) {
             gravity = Gravity.CENTER
         }
 
-        // ListView
         val listView = ListView(context).apply {
             divider = null
             isVerticalScrollBarEnabled = false
@@ -311,9 +311,16 @@ class DialogManager(val context: Context, val activity: Activity) {
                 ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT
             )
+            choiceMode = ListView.CHOICE_MODE_SINGLE
         }
 
-        // Custom adapter with font support
+        // Mutable var so we can update highlight after a tap (even though we dismiss right away)
+        var currentSelected = selectedIndex
+        val defaultColor = TypedValue().let { value ->
+            context.theme.resolveAttribute(android.R.attr.textColorPrimary, value, true)
+            ContextCompat.getColor(context, value.resourceId)
+        }
+
         val adapter = object : ArrayAdapter<String>(context, android.R.layout.simple_list_item_1, itemStrings) {
             override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
                 val view = convertView ?: TextView(context).apply {
@@ -328,28 +335,28 @@ class DialogManager(val context: Context, val activity: Activity) {
                     text = itemStrings[position]
                     typeface = fonts?.getOrNull(position) ?: Typeface.DEFAULT
                     textSize = fontSize
+                    setTextColor(if (position == currentSelected) selectedColor else defaultColor)
                 }
-
                 return view
             }
         }
 
         listView.adapter = adapter
+        if (currentSelected in itemStrings.indices) listView.setItemChecked(currentSelected, true)
 
-        // Add title and list to layout
         container.addView(titleView)
         container.addView(listView)
 
-        // Create and show LockedBottomSheetDialog
         singleChoiceBottomSheet = LockedBottomSheetDialog(context).apply {
             setContentView(container)
             show()
         }
 
-        // Item click handling
         listView.setOnItemClickListener { _, _, position, _ ->
-            onItemSelected(options[position])
-            singleChoiceBottomSheet?.dismiss()
+            currentSelected = position          // update highlight if you keep dialog open
+            adapter.notifyDataSetChanged()
+            onItemSelected(options[position])   // callback
+            singleChoiceBottomSheet?.dismiss()  // close sheet
         }
 
         // Limit visible height to 7 items
@@ -360,6 +367,114 @@ class DialogManager(val context: Context, val activity: Activity) {
                 listView.layoutParams.height = minOf(maxHeight, itemHeight * options.size)
                 listView.requestLayout()
             }
+        }
+    }
+
+    var singleChoiceBottomSheetPill: LockedBottomSheetDialog? = null
+
+    fun <T> showSingleChoiceBottomSheetPill(
+        context: Context,
+        options: Array<T>,
+        titleResId: Int,
+        fonts: List<Typeface>? = null,
+        fontSize: Float = 18f,
+        selectedIndex: Int = -1, // None selected
+        onItemSelected: (T) -> Unit
+    ) {
+        singleChoiceBottomSheetPill?.dismiss()
+
+        val itemStrings = options.map {
+            when (it) {
+                is Constants.Language -> it.getString()
+                is Enum<*> -> it.name
+                else -> it.toString()
+            }
+        }
+
+        var selected = selectedIndex
+
+        val container = LinearLayout(context).apply {
+            orientation = LinearLayout.VERTICAL
+            setPadding(48, 24, 48, 24)
+            layoutParams = ViewGroup.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+            )
+        }
+
+        val titleView = TextView(context).apply {
+            text = context.getString(titleResId)
+            textSize = 20f
+            setPadding(0, 0, 0, 32)
+            gravity = Gravity.CENTER
+        }
+
+        val pillGroup = LinearLayout(context).apply {
+            orientation = LinearLayout.HORIZONTAL
+            gravity = Gravity.CENTER
+            layoutParams = LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,  // changed here
+                ViewGroup.LayoutParams.WRAP_CONTENT
+            )
+        }
+
+        val strokeColor = R.color.colorAccent
+        val textColor = Color.WHITE
+
+        val updateStyles: () -> Unit = {
+            for (i in 0 until pillGroup.childCount) {
+                val pill = pillGroup.getChildAt(i) as TextView
+                val isSelected = i == selected
+                pill.setTextColor(if (isSelected) textColor else context.resources.getColor(strokeColor, null))
+
+                val drawable = GradientDrawable().apply {
+                    shape = GradientDrawable.RECTANGLE
+                    cornerRadii = when (i) {
+                        0 -> floatArrayOf(48f, 48f, 0f, 0f, 0f, 0f, 48f, 48f)
+                        itemStrings.lastIndex -> floatArrayOf(0f, 0f, 48f, 48f, 48f, 48f, 0f, 0f)
+                        else -> floatArrayOf(0f, 0f, 0f, 0f, 0f, 0f, 0f, 0f)
+                    }
+                    setColor(if (isSelected) selectedColor else Color.TRANSPARENT)
+                    setStroke(3, context.resources.getColor(strokeColor, null))
+                }
+
+                pill.background = drawable
+            }
+        }
+
+        itemStrings.forEachIndexed { index, item ->
+            val pill = TextView(context).apply {
+                text = item
+                textSize = fontSize
+                gravity = Gravity.CENTER
+                typeface = fonts?.getOrNull(index) ?: Typeface.DEFAULT
+                setPadding(48, 24, 48, 24)
+                layoutParams = LinearLayout.LayoutParams(
+                    ViewGroup.LayoutParams.WRAP_CONTENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT
+                ).apply {
+                    if (index != 0) setMargins(-3, 0, 0, 0) // eliminate gap between borders
+                }
+
+                setOnClickListener {
+                    selected = index
+                    updateStyles()
+                    onItemSelected(options[index])
+                    singleChoiceBottomSheetPill?.dismiss()
+                }
+            }
+
+            pillGroup.addView(pill)
+        }
+
+        updateStyles() // Set initial styles
+
+        container.addView(titleView)
+        container.addView(pillGroup)
+
+        singleChoiceBottomSheetPill = LockedBottomSheetDialog(context).apply {
+            setContentView(container)
+            show()
         }
     }
 
