@@ -35,7 +35,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 class DialogManager(val context: Context, val activity: Activity) {
 
     private lateinit var prefs: Prefs
-    val selectedColor = "#7C4DFF".toColorInt()
+    val selectedColor: Int = ContextCompat.getColor(context, R.color.colorSelected)
 
     var backupRestoreBottomSheet: LockedBottomSheetDialog? = null
 
