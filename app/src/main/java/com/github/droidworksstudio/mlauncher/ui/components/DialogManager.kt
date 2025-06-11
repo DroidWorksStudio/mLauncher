@@ -31,6 +31,7 @@ import com.github.droidworksstudio.mlauncher.MainActivity
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Prefs
+import com.github.droidworksstudio.mlauncher.helper.getDeviceInfo
 import com.github.droidworksstudio.mlauncher.helper.themeDownloadButton
 import com.github.droidworksstudio.mlauncher.helper.utils.AppReloader
 import com.github.droidworksstudio.mlauncher.helper.wordofthedayDownloadButton
@@ -688,62 +689,166 @@ class DialogManager(val context: Context, val activity: Activity) {
         }
 
         val infoCards = listOf(
+            "Device Info" to getDeviceInfo(context),
+            "Storage" to context.getStorageInfo(),
             "RAM" to context.getRamInfo(),
             "CPU & Battery" to context.getCpuBatteryInfo(),
-            "Storage" to context.getStorageInfo(),
             "SD Card" to context.getSdCardInfo()
         )
 
-        // Group into rows of two cards
-        infoCards.chunked(2).forEach { rowItems ->
-            val row = LinearLayout(context).apply {
-                orientation = LinearLayout.HORIZONTAL
-                layoutParams = LinearLayout.LayoutParams(
-                    ViewGroup.LayoutParams.MATCH_PARENT,
-                    ViewGroup.LayoutParams.WRAP_CONTENT
-                ).apply {
-                    bottomMargin = 24
-                }
-            }
+        var i = 0
+        while (i < infoCards.size) {
+            val remaining = infoCards.size - i
 
-            rowItems.forEach { (title, details) ->
-                val card = LinearLayout(context).apply {
+            if (remaining >= 3) {
+                val row = LinearLayout(context).apply {
+                    orientation = LinearLayout.HORIZONTAL
+                    layoutParams = LinearLayout.LayoutParams(
+                        ViewGroup.LayoutParams.MATCH_PARENT,
+                        ViewGroup.LayoutParams.WRAP_CONTENT
+                    ).apply {
+                        bottomMargin = 24
+                    }
+                }
+
+                // Left big card container
+                val leftContainer = LinearLayout(context).apply {
                     orientation = LinearLayout.VERTICAL
                     setPadding(24, 24, 24, 24)
                     layoutParams = LinearLayout.LayoutParams(
                         0,
                         ViewGroup.LayoutParams.WRAP_CONTENT,
-                        1f // equal weight for side-by-side layout
+                        1f
                     ).apply {
                         rightMargin = 16
                     }
                 }
-
-                val titleView = TextView(context).apply {
-                    text = title
+                val (leftTitle, leftDetails) = infoCards[i]
+                leftContainer.addView(TextView(context).apply {
+                    text = leftTitle
                     setTextColor(Color.WHITE)
                     setTypeface(null, Typeface.BOLD)
                     textSize = 18f
-                }
-
-                val detailView = TextView(context).apply {
-                    text = details
+                })
+                leftContainer.addView(TextView(context).apply {
+                    text = leftDetails
                     setTextColor(Color.LTGRAY)
                     textSize = 14f
                     setPadding(0, 8, 0, 0)
+                })
+
+                // Right stacked cards container
+                val rightContainer = LinearLayout(context).apply {
+                    orientation = LinearLayout.VERTICAL
+                    layoutParams = LinearLayout.LayoutParams(
+                        0,
+                        ViewGroup.LayoutParams.WRAP_CONTENT,
+                        1f
+                    )
+                }
+                for (j in 1..2) {
+                    val (title, details) = infoCards[i + j]
+                    val card = LinearLayout(context).apply {
+                        orientation = LinearLayout.VERTICAL
+                        setPadding(24, 24, 24, 24)
+                        layoutParams = LinearLayout.LayoutParams(
+                            ViewGroup.LayoutParams.MATCH_PARENT,
+                            ViewGroup.LayoutParams.WRAP_CONTENT
+                        ).apply {
+                            if (j == 1) bottomMargin = 16
+                        }
+                    }
+                    card.addView(TextView(context).apply {
+                        text = title
+                        setTextColor(Color.WHITE)
+                        setTypeface(null, Typeface.BOLD)
+                        textSize = 18f
+                    })
+                    card.addView(TextView(context).apply {
+                        text = details
+                        setTextColor(Color.LTGRAY)
+                        textSize = 14f
+                        setPadding(0, 8, 0, 0)
+                    })
+
+                    rightContainer.addView(card)
                 }
 
-                card.addView(titleView)
-                card.addView(detailView)
-                row.addView(card)
-            }
+                row.addView(leftContainer)
+                row.addView(rightContainer)
+                rootLayout.addView(row)
 
-            // Remove right margin from the last card in each row
-            if (row.childCount == 2) {
-                (row.getChildAt(1).layoutParams as LinearLayout.LayoutParams).rightMargin = 0
-            }
+                // Equalize heights of left and right containers
+                row.post {
+                    val leftHeight = leftContainer.height
+                    val rightHeight = rightContainer.height
+                    val maxHeight = maxOf(leftHeight, rightHeight)
 
-            rootLayout.addView(row)
+                    if (leftHeight != maxHeight || rightHeight != maxHeight) {
+                        leftContainer.layoutParams.height = maxHeight
+                        rightContainer.layoutParams.height = maxHeight
+                        row.requestLayout()
+                    }
+                }
+
+                i += 3
+            } else {
+                // Handle fewer than 3 cards normally
+                val rowItems = infoCards.subList(i, infoCards.size)
+                val row = LinearLayout(context).apply {
+                    orientation = LinearLayout.HORIZONTAL
+                    layoutParams = LinearLayout.LayoutParams(
+                        ViewGroup.LayoutParams.MATCH_PARENT,
+                        ViewGroup.LayoutParams.WRAP_CONTENT
+                    ).apply {
+                        bottomMargin = 24
+                    }
+                }
+
+                rowItems.forEachIndexed { index, (title, details) ->
+                    val isSingleCard = rowItems.size == 1
+
+                    val cardLayoutParams = if (isSingleCard) {
+                        LinearLayout.LayoutParams(
+                            ViewGroup.LayoutParams.MATCH_PARENT,
+                            ViewGroup.LayoutParams.WRAP_CONTENT
+                        )
+                    } else {
+                        LinearLayout.LayoutParams(
+                            0,
+                            ViewGroup.LayoutParams.WRAP_CONTENT,
+                            1f
+                        ).apply {
+                            if (index == 0) rightMargin = 16
+                        }
+                    }
+
+                    val card = LinearLayout(context).apply {
+                        orientation = LinearLayout.VERTICAL
+                        setPadding(24, 24, 24, 24)
+                        layoutParams = cardLayoutParams
+                    }
+
+                    card.addView(TextView(context).apply {
+                        text = title
+                        setTextColor(Color.WHITE)
+                        setTypeface(null, Typeface.BOLD)
+                        textSize = 18f
+                    })
+
+                    card.addView(TextView(context).apply {
+                        text = details
+                        setTextColor(Color.LTGRAY)
+                        textSize = 14f
+                        setPadding(0, 8, 0, 0)
+                    })
+
+                    row.addView(card)
+                }
+
+                rootLayout.addView(row)
+                break
+            }
         }
 
         bottomSheet.setContentView(rootLayout)

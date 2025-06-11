@@ -306,7 +306,6 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             "AppListDebug",
             "🔄 getAppsList called with: includeRegular=$includeRegularApps, includeHidden=$includeHiddenApps, includeRecent=$includeRecentApps"
         )
-        CrashHandler.logUserAction("Display App List")
 
         try {
             val prefs = Prefs(context)

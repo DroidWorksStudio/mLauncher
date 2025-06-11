@@ -55,8 +55,9 @@ object Constants {
     const val MIN_OPACITY = 0
     const val MAX_OPACITY = 100
 
-    const val HOLD_DURATION_THRESHOLD = 1000L // Adjust as needed
-    const val DOUBLE_CLICK_TIME_DELTA = 300L
+    const val HOLD_DURATION_THRESHOLD = 250L // Adjust as needed
+    const val DOUBLE_CLICK_TIME_DELTA = 300L // Adjust as needed
+    const val SWIPE_VELOCITY_THRESHOLD = 450f // Adjust as needed
 
     // Update SWIPE_DISTANCE_THRESHOLD dynamically based on screen dimensions
     var SWIPE_DISTANCE_THRESHOLD = 0f
@@ -89,19 +90,13 @@ object Constants {
 
 
     fun updateSwipeDistanceThreshold(context: Context, direction: String) {
-        val displayMetrics = context.resources.displayMetrics
-
-        // Obtain screen dimensions from displayMetrics
-        val screenWidth = displayMetrics.widthPixels.toFloat()
-        val screenHeight = displayMetrics.heightPixels.toFloat()
-
-        // Ensure display metrics are valid
-        if (screenWidth > 0 && screenHeight > 0) {
-            SWIPE_DISTANCE_THRESHOLD = if (direction == "left" || direction == "right") {
-                0.50f * screenWidth // Use 50% of screen width for left/right swipe
-            } else {
-                0.30f * screenHeight // Use 30% of screen height for up/down swipe
-            }
+        val density = context.resources.displayMetrics.density
+        val horizontalDpThreshold = 50f  // instead of 160f
+        val verticalDpThreshold = 75f    // instead of 120f
+        SWIPE_DISTANCE_THRESHOLD = if (direction.equals("left", true) || direction.equals("right", true)) {
+            horizontalDpThreshold * density
+        } else {
+            verticalDpThreshold * density
         }
     }
 

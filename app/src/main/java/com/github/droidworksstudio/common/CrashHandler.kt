@@ -26,9 +26,30 @@ class CrashHandler(private val context: Context) : Thread.UncaughtExceptionHandl
         private val userActions = LinkedBlockingQueue<String>(50) // Stores last 50 user actions
 
         fun logUserAction(action: String) {
-            val timeStamp = SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(Date())
+            val timeStamp = formatCustomDate(Date())
             userActions.offer("$timeStamp - $action")
             if (userActions.size > 50) userActions.poll() // Remove oldest if over limit
+        }
+
+        fun formatCustomDate(date: Date): String {
+            val dayOfWeek = SimpleDateFormat("EEE", Locale.getDefault()).format(date) // e.g. Fri
+            val day = SimpleDateFormat("d", Locale.getDefault()).format(date).toInt() // e.g. 13
+            val monthYear = SimpleDateFormat("MMMM yyyy", Locale.getDefault()).format(date) // e.g. June 2025
+            val time = SimpleDateFormat("hh:mm a", Locale.getDefault()).format(date) // e.g. 12:32 AM
+
+            val ordinal = getDayOrdinal(day)
+
+            return "$dayOfWeek ${day}$ordinal $monthYear - $time"
+        }
+
+        fun getDayOrdinal(day: Int): String {
+            return when {
+                day in 11..13 -> "th"
+                day % 10 == 1 -> "st"
+                day % 10 == 2 -> "nd"
+                day % 10 == 3 -> "rd"
+                else -> "th"
+            }
         }
 
         fun customReportSender(context: Context): Uri? {

@@ -91,6 +91,7 @@ object SettingsComposable {
         title: String,
         iconSize: Dp = 96.dp,
         fontSize: TextUnit = 24.sp,
+        onIconClick: (() -> Unit)? = null // Optional click callback
     ) {
         val fontSizeSp = fontSize.value
 
@@ -100,13 +101,14 @@ object SettingsComposable {
                 .padding(horizontal = 16.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            // Image Icon
+            // Clickable Image
             Image(
                 painter = painterResource(id = iconRes),
                 contentDescription = title,
                 modifier = Modifier
                     .size(iconSize)
                     .padding(bottom = 16.dp)
+                    .let { if (onIconClick != null) it.clickable { onIconClick() } else it }
             )
 
             // FontAppCompatTextView instead of Text
@@ -115,8 +117,8 @@ object SettingsComposable {
                     FontAppCompatTextView(context).apply {
                         text = title
                         textSize = fontSizeSp
-                        setTextColor(android.graphics.Color.WHITE) // Or use a themed color
-                        setPadding(0, 0, 0, 24) // Equivalent to Modifier.padding(bottom = 24.dp)
+                        setTextColor(android.graphics.Color.WHITE)
+                        setPadding(0, 0, 0, 24)
                     }
                 },
                 modifier = Modifier.wrapContentSize()

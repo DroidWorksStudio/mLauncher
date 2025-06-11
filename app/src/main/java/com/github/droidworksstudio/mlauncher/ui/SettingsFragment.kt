@@ -336,7 +336,12 @@ class SettingsFragment : Fragment() {
 
                     TopMainHeader(
                         iconRes = R.drawable.app_launcher,
-                        title = getLocalizedString(R.string.settings_name)
+                        title = getLocalizedString(R.string.settings_name),
+                        onIconClick = {
+                            dialogBuilder.showDeviceStatsBottomSheet(
+                                context = context,
+                            )
+                        }
                     )
 
                     SettingsHomeItem(
