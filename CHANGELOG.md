@@ -6,6 +6,12 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Implemented Enhancements:
 
+- *(UI)* Enhance settings selection with visual feedback and pill dialog - ([36981d3](https://github.com/DroidWorksStudio/mLauncher/commit/36981d3d185836a81caa7df3773a8ed464e7ab6d))
+
+## [1.10.6.6](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.6.6) - (11, June 2025)
+
+### Implemented Enhancements:
+
 - *(App)* Add app tagging functionality - ([ef356d6](https://github.com/DroidWorksStudio/mLauncher/commit/ef356d6cb67f33239abf5e76f458a78ad89c4ed0))
 - *(Fonts)* Implement global font management and apply to all text views - ([988408e](https://github.com/DroidWorksStudio/mLauncher/commit/988408e098c06bba216e89b414f7eca9f573fa59))
 - *(Settings)* Add "tag" option to context menu settings - ([32b3a69](https://github.com/DroidWorksStudio/mLauncher/commit/32b3a69c24e13a3535c1694d6b965dab642a910e))
