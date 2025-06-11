@@ -1387,10 +1387,6 @@ class HomeFragment : Fragment(), GestureListener, View.OnClickListener, View.OnL
         trySettings()
     }
 
-    override fun onSingleTap() {
-        CrashHandler.logUserAction("SingleTap Gesture")
-    }
-
     override fun onDoubleTap() {
         when (val action = prefs.doubleTapAction) {
             Action.OpenApp -> openDoubleTapApp()

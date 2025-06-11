@@ -29,7 +29,6 @@ class GestureManager(
         fun onShortSwipeDown()
         fun onLongSwipeDown()
         fun onLongPress()
-        fun onSingleTap()
         fun onDoubleTap()
     }
 
@@ -40,12 +39,6 @@ class GestureManager(
     override fun onDown(event: MotionEvent): Boolean {
         downTime = System.currentTimeMillis()
         Log.d(TAG, "onDown - downTime set to $downTime")
-        return true
-    }
-
-    override fun onSingleTapConfirmed(e: MotionEvent): Boolean {
-        Log.d(TAG, "onSingleTapConfirmed")
-        listener.onSingleTap()
         return true
     }
 
