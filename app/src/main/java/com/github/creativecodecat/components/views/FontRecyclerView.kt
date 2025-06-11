@@ -3,10 +3,10 @@ package com.github.creativecodecat.components.views
 import android.content.Context
 import android.graphics.Typeface
 import android.util.AttributeSet
-import android.util.Log
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.github.droidworksstudio.common.AppLogger
 import com.github.droidworksstudio.mlauncher.helper.CustomFontView
 import com.github.droidworksstudio.mlauncher.helper.FontManager
 
@@ -20,7 +20,7 @@ class FontRecyclerView @JvmOverloads constructor(
             FontManager.register(this)
             applyFont(FontManager.getTypeface(context)) // Apply initial font
         } catch (e: Exception) {
-            Log.e("FontRecyclerView", "Initialization failed", e)
+            AppLogger.e("FontRecyclerView", "Initialization failed", e)
         }
     }
 
@@ -32,7 +32,7 @@ class FontRecyclerView @JvmOverloads constructor(
                 applyFontRecursively(holder, typeface)
             }
         } catch (e: Exception) {
-            Log.e("FontRecyclerView", "Font application failed", e)
+            AppLogger.e("FontRecyclerView", "Font application failed", e)
         }
     }
 

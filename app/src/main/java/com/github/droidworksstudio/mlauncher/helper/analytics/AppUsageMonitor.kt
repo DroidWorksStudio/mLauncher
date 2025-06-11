@@ -5,7 +5,7 @@ import android.app.usage.UsageStatsManager
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.util.Log
+import com.github.droidworksstudio.common.AppLogger
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.helper.formatLongToCalendar
 import com.github.droidworksstudio.mlauncher.helper.formatMillisToHMS
@@ -78,7 +78,7 @@ class AppUsageMonitor private constructor(context: Context) {
                         startOfToday <= usageStats.lastTimeUsed  // Ensure usage happened today
                 // Log the valid app's stats if it's valid
                 if (isValid) {
-                    Log.d(
+                    AppLogger.d(
                         "getUsageStats",
                         "${usageStats.packageName} : ${formatMillisToHMS(usageStats.totalTimeInForeground, true)} " +
                                 "${formatLongToCalendar(startOfToday)} ${formatLongToCalendar(usageStats.lastTimeUsed)}"
@@ -132,7 +132,7 @@ class AppUsageMonitor private constructor(context: Context) {
                         // Ensure usage happened today
                         startOfToday <= usageStats.lastTimeUsed
                 if (isValid) {
-                    Log.d(
+                    AppLogger.d(
                         "getTotalScreenTime",
                         "${usageStats.packageName} : ${formatMillisToHMS(usageStats.totalTimeVisible, true)} ${formatLongToCalendar(startOfToday)} ${
                             formatLongToCalendar(
@@ -174,7 +174,7 @@ class AppUsageMonitor private constructor(context: Context) {
                     val appName = getAppNameFromPackage(packageName)
                     val className = getComponentNameFromPackage(context, packageName)
                     val appActivityName = className.toString()
-                    Log.d("appActivityName", appActivityName)
+                    AppLogger.d("appActivityName", appActivityName)
                     if (appName != null) {
                         recentApps.add(packageName)
                         result.add(Triple(packageName, appName, appActivityName))

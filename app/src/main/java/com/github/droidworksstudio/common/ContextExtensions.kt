@@ -22,7 +22,6 @@ import android.provider.CalendarContract
 import android.provider.MediaStore
 import android.provider.Settings
 import android.text.format.DateFormat
-import android.util.Log
 import android.util.Log.d
 import android.view.LayoutInflater
 import android.view.View
@@ -383,7 +382,7 @@ fun Context.requestLocationPermission(requestCode: Int) {
         )
         CrashHandler.logUserAction("Location Permission Requested")
     } else {
-        Log.e("Permission", "Context is not an Activity. Cannot request permissions.")
+        AppLogger.e("Permission", "Context is not an Activity. Cannot request permissions.")
     }
 }
 

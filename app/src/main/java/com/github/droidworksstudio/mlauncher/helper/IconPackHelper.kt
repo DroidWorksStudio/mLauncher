@@ -3,9 +3,9 @@ package com.github.droidworksstudio.mlauncher.helper
 import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.drawable.Drawable
-import android.util.Log
 import android.util.Xml
 import androidx.core.content.res.ResourcesCompat
+import com.github.droidworksstudio.common.AppLogger
 import org.xmlpull.v1.XmlPullParser
 import java.io.FileNotFoundException
 
@@ -28,7 +28,7 @@ object IconPackHelper {
                 IconCacheTarget.HOME -> homeIconCache.clear()
             }
 
-            Log.d("IconPackLoader", "Starting preload for: $iconPackPackage, target=$target")
+            AppLogger.d("IconPackLoader", "Starting preload for: $iconPackPackage, target=$target")
 
             val pm = context.packageManager
             val installedPackages = pm.getInstalledApplications(0).map { it.packageName }.toSet()
@@ -41,7 +41,7 @@ object IconPackHelper {
             val inputStream = possibleAssetNames
                 .firstNotNullOfOrNull { fileName ->
                     try {
-                        Log.d("IconPackLoader", "Trying to open $fileName")
+                        AppLogger.d("IconPackLoader", "Trying to open $fileName")
                         assetManager.open(fileName)
                     } catch (_: Exception) {
                         null
@@ -62,14 +62,14 @@ object IconPackHelper {
                     val component = parser.getAttributeValue(null, "component")
                     var drawable = parser.getAttributeValue(null, "drawable")
 
-//                    Log.d("IconPackLoader", "Parsing item: component=$component, drawable=$drawable")
+//                    AppLogger.d("IconPackLoader", "Parsing item: component=$component, drawable=$drawable")
 
                     val match = regex.find(component ?: "")
                     val pkgName = match?.groupValues?.get(1)
 
                     if (pkgName != null && drawable != null) {
                         if (!installedPackages.contains(pkgName)) {
-//                            Log.w("IconPackLoader", "Skipping $pkgName (not installed)")
+//                            AppLogger.w("IconPackLoader", "Skipping $pkgName (not installed)")
                             skippedCount++
                             eventType = parser.next()
                             continue
@@ -77,7 +77,7 @@ object IconPackHelper {
 
                         drawable = drawable.removePrefix("@drawable/").removePrefix("drawable/")
 
-//                        Log.d("IconPackLoader", "Mapping found: $pkgName -> $drawable")
+//                        AppLogger.d("IconPackLoader", "Mapping found: $pkgName -> $drawable")
                         nameCache[pkgName] = drawable
 
                         val resId = iconPackContext.resources.getIdentifier(
@@ -96,15 +96,15 @@ object IconPackHelper {
                                     IconCacheTarget.HOME -> homeIconCache[pkgName] = it
                                 }
                                 loadedCount++
-//                                Log.d("IconPackLoader", "Icon cached: $pkgName (resId=$resId)")
-                            } ?: Log.w("IconPackLoader", "Drawable is null for resource: $drawable (resId=$resId)")
+//                                AppLogger.d("IconPackLoader", "Icon cached: $pkgName (resId=$resId)")
+                            } ?: AppLogger.w("IconPackLoader", "Drawable is null for resource: $drawable (resId=$resId)")
                         } else {
                             skippedCount++
-//                            Log.w("IconPackLoader", "Drawable resource not found: $drawable")
+//                            AppLogger.w("IconPackLoader", "Drawable resource not found: $drawable")
                         }
                     } else {
                         skippedCount++
-//                        Log.w("IconPackLoader", "Invalid mapping. Component or drawable is null.")
+//                        AppLogger.w("IconPackLoader", "Invalid mapping. Component or drawable is null.")
                     }
                 }
                 eventType = parser.next()
@@ -113,10 +113,10 @@ object IconPackHelper {
             inputStream.close()
             isInitialized = true
 
-//            Log.d("IconPackLoader", "Preload finished. Loaded: $loadedCount, Skipped: $skippedCount")
+//            AppLogger.d("IconPackLoader", "Preload finished. Loaded: $loadedCount, Skipped: $skippedCount")
 
         } catch (e: Exception) {
-            Log.e("IconPackLoader", "Error while preloading icon pack: ${e.message}", e)
+            AppLogger.e("IconPackLoader", "Error while preloading icon pack: ${e.message}", e)
         }
     }
 

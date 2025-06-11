@@ -4,7 +4,6 @@ import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageInfo
 import android.net.Uri
-import android.util.Log
 import androidx.core.content.FileProvider
 import com.github.droidworksstudio.mlauncher.CrashReportActivity
 import com.github.droidworksstudio.mlauncher.helper.getDeviceInfo
@@ -74,14 +73,14 @@ class CrashHandler(private val context: Context) : Thread.UncaughtExceptionHandl
                     inputStreamReader.forEachLine { stringBuilder.append(it).append("\n") }
 
                     // Log the content of the crash report file
-                    Log.d("CrashHandler", "Crash Report Content:\n${stringBuilder}")
+                    AppLogger.d("CrashHandler", "Crash Report Content:\n${stringBuilder}")
                 } else {
-                    Log.e("CrashHandler", "Crash report file does not exist.")
+                    AppLogger.e("CrashHandler", "Crash report file does not exist.")
                 }
 
                 File(crashDir, "${packageInfo.packageName}-crash-report.txt")
             } catch (e: Exception) {
-                Log.e("CrashHandler", "Error determining crash log file location: ${e.message}")
+                AppLogger.e("CrashHandler", "Error determining crash log file location: ${e.message}")
                 return null // Return null if something goes wrong
             }
 
@@ -96,7 +95,7 @@ class CrashHandler(private val context: Context) : Thread.UncaughtExceptionHandl
     }
 
     override fun uncaughtException(thread: Thread, exception: Throwable) {
-        Log.e("CrashHandler", "Caught exception: ${exception.message}", exception)
+        AppLogger.e("CrashHandler", "Caught exception: ${exception.message}", exception)
 
         // Step 1: Save custom crash log
         saveCrashLog(exception)
@@ -123,7 +122,7 @@ class CrashHandler(private val context: Context) : Thread.UncaughtExceptionHandl
 
             File(crashDir, "${packageInfo.packageName}-crash-report.txt")
         } catch (e: Exception) {
-            Log.e("CrashHandler", "Error determining crash log file location: ${e.message}")
+            AppLogger.e("CrashHandler", "Error determining crash log file location: ${e.message}")
             // In case of error, use a default file name
             File(context.filesDir, "default-crash-report.txt")
         }
@@ -159,7 +158,7 @@ class CrashHandler(private val context: Context) : Thread.UncaughtExceptionHandl
                 }
             }
         } catch (e: Exception) {
-            Log.e("CrashHandler", "Error writing crash log: ${e.message}")
+            AppLogger.e("CrashHandler", "Error writing crash log: ${e.message}")
         }
         return logFile
     }

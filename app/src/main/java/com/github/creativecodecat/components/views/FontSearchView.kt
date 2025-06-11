@@ -3,9 +3,9 @@ package com.github.creativecodecat.components.views
 import android.content.Context
 import android.graphics.Typeface
 import android.util.AttributeSet
-import android.util.Log
 import android.widget.EditText
 import androidx.appcompat.widget.SearchView
+import com.github.droidworksstudio.common.AppLogger
 import com.github.droidworksstudio.mlauncher.helper.CustomFontView
 import com.github.droidworksstudio.mlauncher.helper.FontManager
 
@@ -23,7 +23,7 @@ class FontSearchView @JvmOverloads constructor(
             FontManager.register(this) // Register for global font updates
             applyFont(FontManager.getTypeface(context)) // Apply font on init
         } catch (e: Exception) {
-            Log.e("FontSearchView", "Font init error", e)
+            AppLogger.e("FontSearchView", "Font init error", e)
         }
     }
 
@@ -31,7 +31,7 @@ class FontSearchView @JvmOverloads constructor(
         try {
             searchEditText?.typeface = typeface
         } catch (e: Exception) {
-            Log.e("FontSearchView", "Failed to apply font", e)
+            AppLogger.e("FontSearchView", "Failed to apply font", e)
         }
     }
 }

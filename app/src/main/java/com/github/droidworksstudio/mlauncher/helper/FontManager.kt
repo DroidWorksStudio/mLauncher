@@ -2,7 +2,7 @@ package com.github.droidworksstudio.mlauncher.helper
 
 import android.content.Context
 import android.graphics.Typeface
-import android.util.Log
+import com.github.droidworksstudio.common.AppLogger
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import java.io.File
@@ -35,7 +35,7 @@ object FontManager {
 
             cachedTypeface
         } catch (e: Exception) {
-            Log.e("FontManager", "Error loading typeface", e)
+            AppLogger.e("FontManager", "Error loading typeface", e)
             null
         }
     }
@@ -48,7 +48,7 @@ object FontManager {
     fun reloadFont(context: Context) {
         cachedTypeface = null
         cachedTypeface = getTypeface(context)
-        Log.i("FontManager", "Reloading font and notifying views")
+        AppLogger.i("FontManager", "Reloading font and notifying views")
 
         val iterator = registeredViews.iterator()
         while (iterator.hasNext()) {

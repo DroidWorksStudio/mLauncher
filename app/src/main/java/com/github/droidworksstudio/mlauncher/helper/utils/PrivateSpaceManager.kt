@@ -7,7 +7,7 @@ import android.os.Handler
 import android.os.Looper
 import android.os.UserHandle
 import android.os.UserManager
-import android.util.Log
+import com.github.droidworksstudio.common.AppLogger
 import com.github.droidworksstudio.common.getLocalizedString
 import com.github.droidworksstudio.common.showLongToast
 import com.github.droidworksstudio.mlauncher.MainActivity
@@ -50,7 +50,7 @@ class PrivateSpaceManager(private val context: Context) {
             val userType = launcherApps.getLauncherUserInfo(userHandle)?.userType
             return userType == UserManager.USER_TYPE_PROFILE_PRIVATE
         } catch (e: Exception) {
-            Log.e("PrivateSpace", "Failed to retrieve launcher user info", e)
+            AppLogger.e("PrivateSpace", "Failed to retrieve launcher user info", e)
             return false
         }
     }

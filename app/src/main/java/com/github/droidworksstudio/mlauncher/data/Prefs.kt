@@ -3,10 +3,10 @@ package com.github.droidworksstudio.mlauncher.data
 import android.content.Context
 import android.content.SharedPreferences
 import android.os.UserHandle
-import android.util.Log
 import androidx.core.content.ContextCompat.getColor
 import androidx.core.content.edit
 import androidx.core.graphics.toColorInt
+import com.github.droidworksstudio.common.AppLogger
 import com.github.droidworksstudio.common.showLongToast
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.Constants.Gravity
@@ -204,7 +204,7 @@ class Prefs(val context: Context) {
                     }
 
                     else -> {
-                        Log.d("backup error", "Unsupported type for key '$key': $value")
+                        AppLogger.d("backup error", "Unsupported type for key '$key': $value")
                     }
                 }
             }
@@ -251,7 +251,7 @@ class Prefs(val context: Context) {
         val all = try {
             adapter.fromJson(json)
         } catch (e: Exception) {
-            Log.e("Theme Import", "Failed to parse JSON", e)
+            AppLogger.e("Theme Import", "Failed to parse JSON", e)
             context.showLongToast("Failed to parse theme JSON.")
             return
         } ?: emptyMap()
@@ -266,30 +266,30 @@ class Prefs(val context: Context) {
                                     putInt(key, value.toColorInt())
                                 } catch (e: IllegalArgumentException) {
                                     context.showLongToast("Invalid color format for key: $key, value: $value")
-                                    Log.e("Theme Import", "Invalid color format for key: $key, value: $value", e)
+                                    AppLogger.e("Theme Import", "Invalid color format for key: $key, value: $value", e)
                                     continue
                                 }
                             } else {
                                 context.showLongToast("Unsupported HEX format for key: $key, value: $value")
-                                Log.e("Theme Import", "Unsupported HEX format for key: $key, value: $value")
+                                AppLogger.e("Theme Import", "Unsupported HEX format for key: $key, value: $value")
                             }
                         }
 
                         null -> {
                             context.showLongToast("Null value found for key: $key")
-                            Log.e("Theme Import", "Null value found for key: $key")
+                            AppLogger.e("Theme Import", "Null value found for key: $key")
                             continue
                         }
 
                         else -> {
                             context.showLongToast("Unsupported value type for key: $key, value: $value")
-                            Log.e("Theme Import", "Unsupported value type for key: $key, value: $value")
+                            AppLogger.e("Theme Import", "Unsupported value type for key: $key, value: $value")
                             continue
                         }
                     }
                 } catch (e: Exception) {
                     context.showLongToast("Error processing key: $key, value: $value")
-                    Log.e("Theme Import", "Error processing key: $key, value: $value", e)
+                    AppLogger.e("Theme Import", "Error processing key: $key, value: $value", e)
                 }
             }
         }

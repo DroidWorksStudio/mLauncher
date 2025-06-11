@@ -8,13 +8,13 @@ import android.content.pm.LauncherApps
 import android.os.Process
 import android.os.UserHandle
 import android.os.UserManager
-import android.util.Log
 import androidx.biometric.BiometricPrompt
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import com.github.droidworksstudio.common.AppLogger
 import com.github.droidworksstudio.common.CrashHandler
 import com.github.droidworksstudio.common.getLocalizedString
 import com.github.droidworksstudio.common.hideKeyboard
@@ -74,7 +74,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     private val pinnedAppsListener = SharedPreferences.OnSharedPreferenceChangeListener { _, key ->
         if (key == pinnedAppsKey) {
-            Log.d("MainViewModel", "Pinned apps changed")
+            AppLogger.d("MainViewModel", "Pinned apps changed")
             getAppList()
         }
     }
@@ -150,19 +150,20 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 }
 
                 override fun onAuthenticationFailed() {
-                    Log.e(
-                        "Authentication", getLocalizedString(R.string.text_authentication_failed)
+                    AppLogger.e(
+                        "Authentication",
+                        getLocalizedString(R.string.text_authentication_failed)
                     )
                 }
 
                 override fun onAuthenticationError(errorCode: Int, errorMessage: CharSequence?) {
                     when (errorCode) {
-                        BiometricPrompt.ERROR_USER_CANCELED -> Log.e(
+                        BiometricPrompt.ERROR_USER_CANCELED -> AppLogger.e(
                             "Authentication",
                             getLocalizedString(R.string.text_authentication_cancel)
                         )
 
-                        else -> Log.e(
+                        else -> AppLogger.e(
                             "Authentication",
                             getLocalizedString(R.string.text_authentication_error).format(
                                 errorMessage, errorCode
@@ -302,7 +303,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         val fullList: MutableList<AppListItem> = mutableListOf()
         val scrollIndexMap = mutableMapOf<Char, Int>()
 
-        Log.d(
+        AppLogger.d(
             "AppListDebug",
             "🔄 getAppsList called with: includeRegular=$includeRegularApps, includeHidden=$includeHiddenApps, includeRecent=$includeRecentApps"
         )
@@ -316,11 +317,11 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             val seenPackages = mutableSetOf<String>()
 
             for (profile in userManager.userProfiles) {
-                Log.d("AppListDebug", "👤 Processing user profile: $profile")
+                AppLogger.d("AppListDebug", "👤 Processing user profile: $profile")
 
                 val isPrivate = PrivateSpaceManager(context).isPrivateSpaceProfile(profile)
                 if (isPrivate && PrivateSpaceManager(context).isPrivateSpaceLocked()) {
-                    Log.d("AppListDebug", "🔒 Skipping locked private space for profile: $profile")
+                    AppLogger.d("AppListDebug", "🔒 Skipping locked private space for profile: $profile")
                     continue
                 }
 
@@ -329,7 +330,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                     val tracker = AppUsageMonitor.createInstance(context)
                     val recentApps = tracker.getLastTenAppsUsed(context)
 
-                    Log.d("AppListDebug", "🕓 Adding ${recentApps.size} recent apps")
+                    AppLogger.d("AppListDebug", "🕓 Adding ${recentApps.size} recent apps")
 
                     for ((packageName, appName, activityName) in recentApps) {
                         if (seenPackages.contains(packageName)) continue
@@ -345,7 +346,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
                 // Launcher Apps
                 val launcherAppList = launcherApps.getActivityList(null, profile)
-                Log.d("AppListDebug", "📦 Found ${launcherAppList.size} launcher apps for profile: $profile")
+                AppLogger.d("AppListDebug", "📦 Found ${launcherAppList.size} launcher apps for profile: $profile")
 
                 for (activity in launcherAppList) {
                     val packageName = activity.applicationInfo.packageName
@@ -387,7 +388,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 scrollIndexMap.putIfAbsent(firstChar, index)
             }
 
-            Log.d("AppListDebug", "✅ App list built with ${fullList.size} items")
+            AppLogger.d("AppListDebug", "✅ App list built with ${fullList.size} items")
 
             val scrollIndexMap = mutableMapOf<String, Int>()
 
@@ -405,7 +406,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             _appScrollMap.postValue(scrollIndexMap)  // ✅ Post the map to LiveData
 
         } catch (e: Exception) {
-            Log.e("AppListDebug", "❌ Error building app list: ${e.message}", e)
+            AppLogger.e("AppListDebug", "❌ Error building app list: ${e.message}", e)
         }
 
         fullList

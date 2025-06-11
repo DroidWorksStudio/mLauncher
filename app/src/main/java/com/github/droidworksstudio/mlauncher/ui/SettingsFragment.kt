@@ -9,7 +9,6 @@ import android.graphics.Canvas
 import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.os.UserManager
-import android.util.Log
 import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
@@ -47,6 +46,7 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.github.droidworksstudio.common.AppLogger
 import com.github.droidworksstudio.common.DonationDialog
 import com.github.droidworksstudio.common.getLocalizedString
 import com.github.droidworksstudio.common.isBiometricEnabled
@@ -2499,7 +2499,7 @@ class SettingsFragment : Fragment() {
     }
 
     private fun launchFontPicker() {
-        Log.d("FontPicker", "Launching picker...")
+        AppLogger.d("FontPicker", "Launching picker...")
         (activity as MainActivity).pickCustomFont()
     }
 

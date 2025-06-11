@@ -14,7 +14,6 @@ import android.os.Build
 import android.os.UserManager
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
 import android.view.Gravity.LEFT
 import android.view.LayoutInflater
 import android.view.View
@@ -32,6 +31,7 @@ import androidx.core.view.isVisible
 import androidx.core.view.updatePadding
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
+import com.github.droidworksstudio.common.AppLogger
 import com.github.droidworksstudio.common.getLocalizedString
 import com.github.droidworksstudio.common.isSystemApp
 import com.github.droidworksstudio.common.showKeyboard
@@ -92,23 +92,23 @@ class AppDrawerAdapter(
     @SuppressLint("RecyclerView")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         if (appFilteredList.isEmpty()) {
-            Log.d("AppListDebug", "⚠️ onBindViewHolder called but appFilteredList is empty")
+            AppLogger.d("AppListDebug", "⚠️ onBindViewHolder called but appFilteredList is empty")
             return
         }
 
         val appModel = appFilteredList[holder.absoluteAdapterPosition]
-        Log.d("AppListDebug", "🔧 Binding position=$position, label=${appModel.label}, package=${appModel.activityPackage}")
+        AppLogger.d("AppListDebug", "🔧 Binding position=$position, label=${appModel.label}, package=${appModel.activityPackage}")
 
         holder.bind(flag, gravity, appModel, appClickListener, appInfoListener, appDeleteListener)
 
         holder.appHide.setOnClickListener {
-            Log.d("AppListDebug", "❌ Hide clicked for ${appModel.label} (${appModel.activityPackage})")
+            AppLogger.d("AppListDebug", "❌ Hide clicked for ${appModel.label} (${appModel.activityPackage})")
 
             appFilteredList.removeAt(holder.absoluteAdapterPosition)
             appsList.remove(appModel)
             notifyItemRemoved(holder.absoluteAdapterPosition)
 
-            Log.d("AppListDebug", "📤 notifyItemRemoved at ${holder.absoluteAdapterPosition}")
+            AppLogger.d("AppListDebug", "📤 notifyItemRemoved at ${holder.absoluteAdapterPosition}")
             appHideListener(flag, appModel)
         }
 
@@ -121,16 +121,16 @@ class AppDrawerAdapter(
 
                 biometricHelper.startBiometricAuth(appModel, object : BiometricHelper.CallbackApp {
                     override fun onAuthenticationSucceeded(appListItem: AppListItem) {
-                        Log.d("AppListDebug", "🔓 Auth succeeded for $appName - unlocking")
+                        AppLogger.d("AppListDebug", "🔓 Auth succeeded for $appName - unlocking")
                         holder.appLock.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.padlock_off, 0, 0)
                         holder.appLock.text = getLocalizedString(R.string.lock)
                         currentLockedApps.remove(appName)
                         prefs.lockedApps = currentLockedApps
-                        Log.d("AppListDebug", "🔐 Updated lockedApps: $currentLockedApps")
+                        AppLogger.d("AppListDebug", "🔐 Updated lockedApps: $currentLockedApps")
                     }
 
                     override fun onAuthenticationFailed() {
-                        Log.e("Authentication", getLocalizedString(R.string.text_authentication_failed))
+                        AppLogger.e("Authentication", getLocalizedString(R.string.text_authentication_failed))
                     }
 
                     override fun onAuthenticationError(errorCode: Int, errorMessage: CharSequence?) {
@@ -138,11 +138,11 @@ class AppDrawerAdapter(
                             BiometricPrompt.ERROR_USER_CANCELED -> getLocalizedString(R.string.text_authentication_cancel)
                             else -> getLocalizedString(R.string.text_authentication_error).format(errorMessage, errorCode)
                         }
-                        Log.e("Authentication", msg)
+                        AppLogger.e("Authentication", msg)
                     }
                 })
             } else {
-                Log.d("AppListDebug", "🔒 Locking $appName")
+                AppLogger.d("AppListDebug", "🔒 Locking $appName")
                 holder.appLock.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.padlock, 0, 0)
                 holder.appLock.text = getLocalizedString(R.string.unlock)
                 currentLockedApps.add(appName)
@@ -150,24 +150,24 @@ class AppDrawerAdapter(
 
             // Update the lockedApps value (save the updated set back to prefs)
             prefs.lockedApps = currentLockedApps
-            Log.d("lockedApps", prefs.lockedApps.toString())
+            AppLogger.d("lockedApps", prefs.lockedApps.toString())
         }
 
         holder.appSaveRename.setOnClickListener {
             val name = holder.appRenameEdit.text.toString().trim()
-            Log.d("AppListDebug", "✏️ Renaming ${appModel.activityPackage} to $name")
+            AppLogger.d("AppListDebug", "✏️ Renaming ${appModel.activityPackage} to $name")
             appModel.customLabel = name
             notifyItemChanged(holder.absoluteAdapterPosition)
-            Log.d("AppListDebug", "🔁 notifyItemChanged at ${holder.absoluteAdapterPosition}")
+            AppLogger.d("AppListDebug", "🔁 notifyItemChanged at ${holder.absoluteAdapterPosition}")
             appRenameListener(appModel.activityPackage, appModel.customLabel)
         }
 
         holder.appSaveTag.setOnClickListener {
             val name = holder.appTagEdit.text.toString().trim()
-            Log.d("AppListDebug", "✏️ Tagging ${appModel.activityPackage} to $name")
+            AppLogger.d("AppListDebug", "✏️ Tagging ${appModel.activityPackage} to $name")
             appModel.customTag = name
             notifyItemChanged(holder.absoluteAdapterPosition)
-            Log.d("AppListDebug", "🔁 notifyItemChanged at ${holder.absoluteAdapterPosition}")
+            AppLogger.d("AppListDebug", "🔁 notifyItemChanged at ${holder.absoluteAdapterPosition}")
             appTagListener(appModel.activityPackage, appModel.customTag)
         }
 
@@ -207,7 +207,7 @@ class AppDrawerAdapter(
                         if (searchChars.startsWith("#")) {
                             val tagQuery = searchChars.substringAfter("#")
                             if (prefs.searchFromStart) {
-                                Log.d("searchQuery", tagQuery)
+                                AppLogger.d("searchQuery", tagQuery)
                                 scoredApps.filter { (app, _) ->
                                     app.tag.startsWith(tagQuery, ignoreCase = true)
                                 }
@@ -215,7 +215,7 @@ class AppDrawerAdapter(
                                     .map { it.key }
                                     .toMutableList()
                             } else {
-                                Log.d("searchQuery", tagQuery)
+                                AppLogger.d("searchQuery", tagQuery)
                                 scoredApps.filter { (app, score) ->
                                     app.tag.contains(tagQuery, ignoreCase = true) && score > prefs.filterStrength
                                 }
@@ -245,7 +245,7 @@ class AppDrawerAdapter(
                         appsList.toMutableList() // No search term, return all apps
                     } else {
                         val filteredAppsList = if (prefs.searchFromStart) {
-                            Log.d("searchQuery", searchChars)
+                            AppLogger.d("searchQuery", searchChars)
                             if (searchChars.startsWith("#")) {
                                 val searchQuery = searchChars.substringAfter("#")
                                 appsList.filter { app ->
@@ -258,7 +258,7 @@ class AppDrawerAdapter(
                                 }
                             }
                         } else {
-                            Log.d("searchQuery", searchChars)
+                            AppLogger.d("searchQuery", searchChars)
                             if (searchChars.startsWith("#")) {
                                 val searchQuery = searchChars.substringAfter("#")
 
@@ -668,7 +668,7 @@ class AppDrawerAdapter(
                         val updatedPinnedApps = prefs.pinnedApps.toMutableSet()
 
                         val isPinned = updatedPinnedApps.contains(appName)
-                        Log.d("AppListDebug", if (isPinned) "📌 Unpinning $appName" else "📌 Pinning $appName")
+                        AppLogger.d("AppListDebug", if (isPinned) "📌 Unpinning $appName" else "📌 Pinning $appName")
 
                         if (isPinned) {
                             updatedPinnedApps.remove(appName)
@@ -681,7 +681,7 @@ class AppDrawerAdapter(
                         }
 
                         prefs.pinnedApps = updatedPinnedApps.toSet()
-                        Log.d("AppListDebug", "✅ Updated pinnedApps: ${prefs.pinnedApps}")
+                        AppLogger.d("AppListDebug", "✅ Updated pinnedApps: ${prefs.pinnedApps}")
                     }
                 }
             }

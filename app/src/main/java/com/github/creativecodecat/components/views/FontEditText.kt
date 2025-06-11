@@ -3,8 +3,8 @@ package com.github.creativecodecat.components.views
 import android.content.Context
 import android.graphics.Typeface
 import android.util.AttributeSet
-import android.util.Log
 import androidx.appcompat.widget.AppCompatEditText
+import com.github.droidworksstudio.common.AppLogger
 import com.github.droidworksstudio.mlauncher.helper.CustomFontView
 import com.github.droidworksstudio.mlauncher.helper.FontManager
 
@@ -18,7 +18,7 @@ class FontEditText @JvmOverloads constructor(
             FontManager.register(this)
             applyFont(FontManager.getTypeface(context))
         } catch (e: Exception) {
-            Log.e("FontEditText", "Font init failed", e)
+            AppLogger.e("FontEditText", "Font init failed", e)
         }
     }
 
@@ -28,7 +28,7 @@ class FontEditText @JvmOverloads constructor(
                 setTypeface(typeface, Typeface.NORMAL)
             }
         } catch (e: Exception) {
-            Log.e("FontEditText", "applyFont failed", e)
+            AppLogger.e("FontEditText", "applyFont failed", e)
         }
     }
 }

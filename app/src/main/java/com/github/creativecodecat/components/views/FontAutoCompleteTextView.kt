@@ -3,8 +3,8 @@ package com.github.creativecodecat.components.views
 import android.content.Context
 import android.graphics.Typeface
 import android.util.AttributeSet
-import android.util.Log
 import androidx.appcompat.widget.AppCompatAutoCompleteTextView
+import com.github.droidworksstudio.common.AppLogger
 import com.github.droidworksstudio.mlauncher.helper.CustomFontView
 import com.github.droidworksstudio.mlauncher.helper.FontManager
 
@@ -19,7 +19,7 @@ class FontAutoCompleteTextView @JvmOverloads constructor(
             FontManager.register(this)
             applyFont(FontManager.getTypeface(context))
         } catch (e: Exception) {
-            Log.e("FontAutoCompleteTextView", "Font application failed", e)
+            AppLogger.e("FontAutoCompleteTextView", "Font application failed", e)
         }
     }
 
@@ -29,7 +29,7 @@ class FontAutoCompleteTextView @JvmOverloads constructor(
                 setTypeface(typeface, Typeface.NORMAL)
             }
         } catch (e: Exception) {
-            Log.e("FontAutoCompleteTextView", "Failed to apply typeface", e)
+            AppLogger.e("FontAutoCompleteTextView", "Failed to apply typeface", e)
         }
     }
 }

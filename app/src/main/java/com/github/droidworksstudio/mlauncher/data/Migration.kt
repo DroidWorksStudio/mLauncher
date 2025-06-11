@@ -1,7 +1,7 @@
 package com.github.droidworksstudio.mlauncher.data
 
 import android.content.Context
-import android.util.Log
+import com.github.droidworksstudio.common.AppLogger
 import com.github.droidworksstudio.mlauncher.BuildConfig
 
 class Migration(val context: Context) {
@@ -78,10 +78,10 @@ class Migration(val context: Context) {
                     )
                 }
                 prefs.saveMessages(correctedMessages)
-                Log.d("Migration", "Migration passed")
+                AppLogger.d("Migration", "Migration passed")
             } catch (e: Exception) {
                 // Log or handle if even legacy format is broken
-                Log.e("Migration", "Migration failed", e)
+                AppLogger.e("Migration", "Migration failed", e)
             }
         }
     }

@@ -31,7 +31,6 @@ import android.text.SpannableStringBuilder
 import android.text.format.DateFormat
 import android.text.style.ImageSpan
 import android.util.DisplayMetrics
-import android.util.Log
 import android.util.TypedValue
 import android.view.View
 import android.view.WindowManager
@@ -44,6 +43,7 @@ import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.core.view.updatePadding
+import com.github.droidworksstudio.common.AppLogger
 import com.github.droidworksstudio.common.ColorIconsExtensions
 import com.github.droidworksstudio.common.CrashHandler
 import com.github.droidworksstudio.common.getLocalizedString
@@ -497,11 +497,11 @@ fun logActivitiesFromPackage(context: Context, packageName: String) {
         activities?.forEach { activityInfo ->
             val componentInfoString =
                 "ComponentInfo{${activityInfo.packageName}/${activityInfo.name}}"
-            Log.d("ComponentInfoLog", componentInfoString)
-        } ?: Log.d("ComponentInfoLog", "No activities found in package $packageName")
+            AppLogger.d("ComponentInfoLog", componentInfoString)
+        } ?: AppLogger.d("ComponentInfoLog", "No activities found in package $packageName")
 
     } catch (e: PackageManager.NameNotFoundException) {
-        Log.e("ComponentInfoLog", "Package not found: $packageName", e)
+        AppLogger.e("ComponentInfoLog", "Package not found: $packageName", e)
     }
 }
 
