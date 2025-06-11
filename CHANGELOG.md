@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file. See [conven
 ### Implemented Enhancements:
 
 - *(UI)* Enhance settings selection with visual feedback and pill dialog - ([36981d3](https://github.com/DroidWorksStudio/mLauncher/commit/36981d3d185836a81caa7df3773a8ed464e7ab6d))
+- Implement Device Stats Bottom Sheet - ([47e891b](https://github.com/DroidWorksStudio/mLauncher/commit/47e891b9cbc911580744c1808a85a9db2f8eb8a5))
 
 ### Refactoring:
 
