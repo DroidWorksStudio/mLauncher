@@ -24,7 +24,6 @@ import android.text.SpannableString
 import android.text.SpannableStringBuilder
 import android.text.format.DateFormat
 import android.text.style.ImageSpan
-import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -44,6 +43,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import com.github.droidworksstudio.common.AppLogger
 import com.github.droidworksstudio.common.ColorManager
 import com.github.droidworksstudio.common.CrashHandler
 import com.github.droidworksstudio.common.getLocalizedString
@@ -880,7 +880,7 @@ class HomeFragment : Fragment(), GestureListener, View.OnClickListener, View.OnL
         val totalText = getLocalizedString(R.string.show_total_screen_time)
         val totalTime = appUsageMonitor.getTotalScreenTime(requireContext())
         val totalScreenTime = formatMillisToHMS(totalTime, true)
-        Log.d("totalScreenTime", totalScreenTime)
+        AppLogger.d("totalScreenTime", totalScreenTime)
         val totalScreenTimeJoin = "$totalText: $totalScreenTime"
         // Set properties for the TextView (optional)
         binding.totalScreenTime.apply {
@@ -1184,7 +1184,7 @@ class HomeFragment : Fragment(), GestureListener, View.OnClickListener, View.OnL
                     }
 
                     override fun onAuthenticationFailed() {
-                        Log.e(
+                        AppLogger.e(
                             "Authentication",
                             getLocalizedString(R.string.text_authentication_failed)
                         )
@@ -1195,13 +1195,13 @@ class HomeFragment : Fragment(), GestureListener, View.OnClickListener, View.OnL
                         errorMessage: CharSequence?
                     ) {
                         when (errorCode) {
-                            BiometricPrompt.ERROR_USER_CANCELED -> Log.e(
+                            BiometricPrompt.ERROR_USER_CANCELED -> AppLogger.e(
                                 "Authentication",
                                 getLocalizedString(R.string.text_authentication_cancel)
                             )
 
                             else ->
-                                Log.e(
+                                AppLogger.e(
                                     "Authentication",
                                     getLocalizedString(R.string.text_authentication_error).format(
                                         errorMessage,
@@ -1222,7 +1222,7 @@ class HomeFragment : Fragment(), GestureListener, View.OnClickListener, View.OnL
             findNavController().navigate(R.id.action_mainFragment_to_settingsFragment)
             viewModel.firstOpen(false)
         } catch (e: java.lang.Exception) {
-            Log.d("onLongClick", e.toString())
+            AppLogger.d("onLongClick", e.toString())
         }
     }
 
@@ -1240,7 +1240,7 @@ class HomeFragment : Fragment(), GestureListener, View.OnClickListener, View.OnL
 
         if (!fineLocationGranted && !coarseLocationGranted) {
             // Exit early if permission is declined or not granted
-            Log.w("WeatherReceiver", "Location permission not granted. Aborting.")
+            AppLogger.w("WeatherReceiver", "Location permission not granted. Aborting.")
             return
         }
 
@@ -1248,7 +1248,7 @@ class HomeFragment : Fragment(), GestureListener, View.OnClickListener, View.OnL
             locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER) -> LocationManager.GPS_PROVIDER
             locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER) -> LocationManager.NETWORK_PROVIDER
             else -> {
-                Log.e("WeatherReceiver", "No location provider enabled.")
+                AppLogger.e("WeatherReceiver", "No location provider enabled.")
                 return
             }
         }
@@ -1286,7 +1286,7 @@ class HomeFragment : Fragment(), GestureListener, View.OnClickListener, View.OnL
         // ⏱ Optional: timeout fallback
         Handler(Looper.getMainLooper()).postDelayed({
             locationManager.removeUpdates(locationListener)
-            Log.w("WeatherReceiver", "Location update timed out.")
+            AppLogger.w("WeatherReceiver", "Location update timed out.")
         }, 10000) // 10 seconds
     }
 
@@ -1294,7 +1294,7 @@ class HomeFragment : Fragment(), GestureListener, View.OnClickListener, View.OnL
     private fun handleLocation(location: Location) {
         val lat = location.latitude
         val lon = location.longitude
-        Log.d("WeatherReceiver", "Location: $lat, $lon")
+        AppLogger.d("WeatherReceiver", "Location: $lat, $lon")
 
         val receiver = WeatherReceiver()
         viewLifecycleOwner.lifecycleScope.launch {
@@ -1394,5 +1394,4 @@ class HomeFragment : Fragment(), GestureListener, View.OnClickListener, View.OnL
         }
         CrashHandler.logUserAction("DoubleTap Gesture")
     }
-
 }

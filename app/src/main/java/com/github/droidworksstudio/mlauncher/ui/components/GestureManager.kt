@@ -1,19 +1,35 @@
 package com.github.droidworksstudio.mlauncher.ui.components
 
 import android.content.Context
-import android.util.Log
-import android.view.GestureDetector
+import android.os.Handler
+import android.os.Looper
 import android.view.MotionEvent
+import com.github.droidworksstudio.common.AppLogger
 import com.github.droidworksstudio.mlauncher.data.Constants
 import kotlin.math.abs
 
 class GestureManager(
     private val context: Context,
     private val listener: GestureListener
-) : GestureDetector.SimpleOnGestureListener() {
+) {
 
-    private val gestureDetector = GestureDetector(context, this)
     private var downTime: Long = 0
+    private var initialX: Float = 0f
+    private var initialY: Float = 0f
+    private var isDragging = false
+
+    // Double tap detection
+    private var lastTapTime = 0L
+    private var lastTapX = 0f
+    private var lastTapY = 0f
+    private val doubleTapTimeout = 300L
+    private val doubleTapSlop = 100f
+
+    // Long press detection
+    private val longPressTimeout = 500L
+    private val longPressHandler = Handler(Looper.getMainLooper())
+    private var longPressRunnable: Runnable? = null
+    private var longPressTriggered = false
 
     companion object {
         private const val TAG = "GestureManager"
@@ -33,98 +49,140 @@ class GestureManager(
     }
 
     fun onTouchEvent(event: MotionEvent): Boolean {
-        return gestureDetector.onTouchEvent(event)
-    }
+        var handled = false
 
-    override fun onDown(event: MotionEvent): Boolean {
-        downTime = System.currentTimeMillis()
-        Log.d(TAG, "onDown - downTime set to $downTime")
-        return true
-    }
+        when (event.actionMasked) {
+            MotionEvent.ACTION_DOWN -> {
+                initialX = event.x
+                initialY = event.y
+                downTime = System.currentTimeMillis()
+                isDragging = true
+                longPressTriggered = false
 
-    override fun onDoubleTap(e: MotionEvent): Boolean {
-        Log.d(TAG, "onDoubleTap")
-        listener.onDoubleTap()
-        return true
-    }
-
-    override fun onLongPress(e: MotionEvent) {
-        Log.d(TAG, "onLongPress")
-        listener.onLongPress()
-    }
-
-    override fun onFling(
-        e1: MotionEvent?,
-        e2: MotionEvent,
-        velocityX: Float,
-        velocityY: Float
-    ): Boolean {
-        if (e1 == null) {
-            Log.d(TAG, "onFling - e1 is null, returning false")
-            return false
-        }
-
-        val diffX = e2.x - e1.x
-        val diffY = e2.y - e1.y
-        val duration = System.currentTimeMillis() - downTime
-
-        val isHorizontalSwipe = abs(diffX) > abs(diffY)
-
-        val direction = if (isHorizontalSwipe) {
-            if (diffX > 0) "RIGHT" else "LEFT"
-        } else {
-            if (diffY > 0) "DOWN" else "UP"
-        }
-
-        Constants.updateSwipeDistanceThreshold(context, direction)
-
-        val density = context.resources.displayMetrics.density
-        val swipeDistanceThresholdPx = Constants.SWIPE_DISTANCE_THRESHOLD * density
-        val swipeVelocityThreshold = Constants.SWIPE_VELOCITY_THRESHOLD
-        val holdDurationThreshold = Constants.HOLD_DURATION_THRESHOLD
-
-        Log.d(
-            TAG, "onFling - direction: $direction, duration: $duration, " +
-                    "distanceThreshold(px): $swipeDistanceThresholdPx, velocityThreshold: $swipeVelocityThreshold"
-        )
-
-        if (isHorizontalSwipe) {
-            val distance = abs(diffX)
-            val velocity = abs(velocityX)
-
-            Log.d(TAG, "Horizontal fling - distance: $distance, velocity: $velocity")
-
-            if (distance > swipeDistanceThresholdPx && velocity > swipeVelocityThreshold) {
-                val isLong = duration > holdDurationThreshold
-                Log.d(TAG, "Horizontal fling isLong: $isLong")
-
-                if (diffX > 0) {
-                    if (isLong) listener.onLongSwipeRight() else listener.onShortSwipeRight()
-                } else {
-                    if (isLong) listener.onLongSwipeLeft() else listener.onShortSwipeLeft()
+                longPressRunnable = Runnable {
+                    longPressTriggered = true
+                    AppLogger.d(TAG, "Detected Long Press")
+                    listener.onLongPress()
                 }
-                return true
+                longPressHandler.postDelayed(longPressRunnable!!, longPressTimeout)
+
+                AppLogger.d(TAG, "ACTION_DOWN - InitialX: $initialX, InitialY: $initialY, downTime: $downTime")
             }
-        } else {
-            val distance = abs(diffY)
-            val velocity = abs(velocityY)
 
-            Log.d(TAG, "Vertical fling - distance: $distance, velocity: $velocity")
-
-            if (distance > swipeDistanceThresholdPx && velocity > swipeVelocityThreshold) {
-                val isLong = duration > holdDurationThreshold
-                Log.d(TAG, "Vertical fling isLong: $isLong")
-
-                if (diffY > 0) {
-                    if (isLong) listener.onLongSwipeDown() else listener.onShortSwipeDown()
-                } else {
-                    if (isLong) listener.onLongSwipeUp() else listener.onShortSwipeUp()
+            MotionEvent.ACTION_MOVE -> {
+                val dx = abs(event.x - initialX)
+                val dy = abs(event.y - initialY)
+                if (dx > doubleTapSlop || dy > doubleTapSlop) {
+                    longPressHandler.removeCallbacks(longPressRunnable!!)
                 }
-                return true
+            }
+
+            MotionEvent.ACTION_UP -> {
+                longPressHandler.removeCallbacks(longPressRunnable!!)
+
+                if (longPressTriggered) {
+                    isDragging = false
+                    handled = true
+                }
+
+                val diffX = event.x - initialX
+                val diffY = event.y - initialY
+                val absDiffX = abs(diffX)
+                val absDiffY = abs(diffY)
+
+                // Double-tap detection
+                val currentTime = System.currentTimeMillis()
+                val timeSinceLastTap = currentTime - lastTapTime
+                val dxTap = abs(event.x - lastTapX)
+                val dyTap = abs(event.y - lastTapY)
+
+                if (timeSinceLastTap <= doubleTapTimeout && dxTap <= doubleTapSlop && dyTap <= doubleTapSlop) {
+                    AppLogger.d(TAG, "Detected Double Tap")
+                    listener.onDoubleTap()
+                    lastTapTime = 0
+                    handled = true
+                    isDragging = false
+                } else {
+                    lastTapTime = currentTime
+                    lastTapX = event.x
+                    lastTapY = event.y
+                }
+
+                // 🛑 Ignore tiny taps (after double-tap check)
+                if (absDiffX < 1f && absDiffY < 1f) {
+                    AppLogger.d(TAG, "Ignored tap with no movement")
+                    isDragging = false
+                }
+
+                if (isDragging) {
+                    val direction = when {
+                        absDiffX > absDiffY && diffX > 0 -> "RIGHT"
+                        absDiffX > absDiffY && diffX < 0 -> "LEFT"
+                        absDiffY > absDiffX && diffY > 0 -> "DOWN"
+                        absDiffY > absDiffX && diffY < 0 -> "UP"
+                        else -> "UNKNOWN"
+                    }
+
+                    if (direction != "UNKNOWN") {
+                        Constants.updateSwipeDistanceThreshold(context, direction)
+                        AppLogger.d(TAG, "Swipe detected - Direction: $direction")
+                    }
+
+                    val swipeDistanceThresholdPx = Constants.SWIPE_DISTANCE_THRESHOLD
+                    AppLogger.d(TAG, "ACTION_UP - diffX: $diffX, diffY: $diffY")
+                    AppLogger.d(TAG, "Threshold - Distance: $swipeDistanceThresholdPx px")
+
+                    if (absDiffX > absDiffY) {
+                        val isLong = absDiffX >= swipeDistanceThresholdPx
+                        if (diffX > 0) {
+                            if (isLong) {
+                                AppLogger.d(TAG, "Detected Long Swipe RIGHT")
+                                listener.onLongSwipeRight()
+                            } else {
+                                AppLogger.d(TAG, "Detected Short Swipe RIGHT")
+                                listener.onShortSwipeRight()
+                            }
+                        } else {
+                            if (isLong) {
+                                AppLogger.d(TAG, "Detected Long Swipe LEFT")
+                                listener.onLongSwipeLeft()
+                            } else {
+                                AppLogger.d(TAG, "Detected Short Swipe LEFT")
+                                listener.onShortSwipeLeft()
+                            }
+                        }
+                    } else {
+                        val isLong = absDiffY >= swipeDistanceThresholdPx
+                        if (diffY > 0) {
+                            if (isLong) {
+                                AppLogger.d(TAG, "Detected Long Swipe DOWN")
+                                listener.onLongSwipeDown()
+                            } else {
+                                AppLogger.d(TAG, "Detected Short Swipe DOWN")
+                                listener.onShortSwipeDown()
+                            }
+                        } else {
+                            if (isLong) {
+                                AppLogger.d(TAG, "Detected Long Swipe UP")
+                                listener.onLongSwipeUp()
+                            } else {
+                                AppLogger.d(TAG, "Detected Short Swipe UP")
+                                listener.onShortSwipeUp()
+                            }
+                        }
+                    }
+
+                    handled = true
+                    isDragging = false
+                }
+            }
+
+            MotionEvent.ACTION_CANCEL -> {
+                longPressHandler.removeCallbacks(longPressRunnable!!)
+                isDragging = false
             }
         }
 
-        Log.d(TAG, "onFling - No swipe detected")
-        return false
+        return handled
     }
 }
