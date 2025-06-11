@@ -352,7 +352,7 @@ class AppDrawerAdapter(
         ) =
             with(itemView) {
                 val prefs = Prefs(context)
-                val contextMenuFlags = prefs.getMenuFlags("CONTEXT_MENU_FLAGS", "001111")
+                val contextMenuFlags = prefs.getMenuFlags("CONTEXT_MENU_FLAGS", "0011111")
                 appHideLayout.isVisible = false
                 appRenameLayout.isVisible = false
                 appTagLayout.isVisible = false
