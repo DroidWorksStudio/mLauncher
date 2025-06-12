@@ -73,9 +73,9 @@ class AppDrawerAdapter(
     private var isBangSearch = false
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        binding =
-            AdapterAppDrawerBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        binding = AdapterAppDrawerBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         prefs = Prefs(parent.context)
+        biometricHelper = BiometricHelper(fragment)
         val fontColor = prefs.appColor
         binding.appTitle.setTextColor(fontColor)
 
@@ -91,8 +91,8 @@ class AppDrawerAdapter(
 
     @SuppressLint("RecyclerView")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        if (appFilteredList.isEmpty()) {
-            AppLogger.d("AppListDebug", "⚠️ onBindViewHolder called but appFilteredList is empty")
+        if (appFilteredList.isEmpty() || position !in appFilteredList.indices) {
+            AppLogger.d("AppListDebug", "⚠️ onBindViewHolder called but appFilteredList is empty or position out of bounds")
             return
         }
 
@@ -117,8 +117,6 @@ class AppDrawerAdapter(
             val currentLockedApps = prefs.lockedApps
 
             if (currentLockedApps.contains(appName)) {
-                biometricHelper = BiometricHelper(fragment)
-
                 biometricHelper.startBiometricAuth(appModel, object : BiometricHelper.CallbackApp {
                     override fun onAuthenticationSucceeded(appListItem: AppListItem) {
                         AppLogger.d("AppListDebug", "🔓 Auth succeeded for $appName - unlocking")
