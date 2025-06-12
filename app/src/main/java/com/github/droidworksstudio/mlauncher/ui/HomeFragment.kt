@@ -31,6 +31,7 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.Space
 import android.widget.TextView
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.biometric.BiometricPrompt
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -1019,11 +1020,11 @@ class HomeFragment : Fragment(), GestureListener, View.OnClickListener, View.OnL
                         } catch (e: PackageManager.NameNotFoundException) {
                             e.printStackTrace()
                             // Handle exception gracefully, fall back to the system icon
-                            packageManager.getApplicationIcon(packageName)
+                            AppCompatResources.getDrawable(context, R.drawable.ic_default_app)
                         } catch (e: Exception) {
                             e.printStackTrace()
                             // Handle any other exceptions gracefully, fallback to the system icon
-                            packageManager.getApplicationIcon(packageName)
+                            AppCompatResources.getDrawable(context, R.drawable.ic_default_app)
                         }
 
                         val defaultIcon = packageManager.getApplicationIcon(packageName)

@@ -1,0 +1,34 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="128dp"
+    android:height="128dp"
+    android:viewportWidth="128"
+    android:viewportHeight="128">
+    <!-- Top-left quadrant -->
+    <path
+        android:fillColor="#FF5E97F6"
+        android:pathData="M16,16h48v48H16z" />
+    <!-- Top-right quadrant -->
+    <path
+        android:fillColor="#FF43D6B0"
+        android:pathData="M64,16h48v48H64z" />
+    <!-- Bottom-left quadrant -->
+    <path
+        android:fillColor="#FFF9C851"
+        android:pathData="M16,64h48v48H16z" />
+    <!-- Bottom-right quadrant -->
+    <path
+        android:fillColor="#FFFF6F60"
+        android:pathData="M64,64h48v48H64z" />
+    <!-- Central off-white waiting ring -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M64,40
+                          a24,24 0 1,1 -0.01,0"
+        android:strokeWidth="6"
+        android:strokeColor="#FFF5F5F5"
+        android:strokeLineCap="round" />
+    <!-- Optional: Add a small off-white dot to suggest progress -->
+    <path
+        android:fillColor="#FFF5F5F5"
+        android:pathData="M64,32a4,4 0 1,0 0.01,0" />
+</vector>
