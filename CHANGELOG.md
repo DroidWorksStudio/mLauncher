@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file. See [conven
 - *(Gestures)* Implement GestureManager for consistent gesture handling - ([161ccdc](https://github.com/DroidWorksStudio/mLauncher/commit/161ccdcdde47d9b878de7f9333262f8d51b081b9))
 - *(Icons)* Add custom default app icon - ([5c17818](https://github.com/DroidWorksStudio/mLauncher/commit/5c17818e72697adfae18cf6e6b6768ed9aa33edf))
 - *(UI)* Enhance settings selection with visual feedback and pill dialog - ([36981d3](https://github.com/DroidWorksStudio/mLauncher/commit/36981d3d185836a81caa7df3773a8ed464e7ab6d))
+- *(gestures)* Enhance gesture handling and flexibility - ([44487ac](https://github.com/DroidWorksStudio/mLauncher/commit/44487acb696cb948313069dc3e1252f3be944929))
 - Implement Device Stats Bottom Sheet - ([47e891b](https://github.com/DroidWorksStudio/mLauncher/commit/47e891b9cbc911580744c1808a85a9db2f8eb8a5))
 
 ### Bug Fixes:
