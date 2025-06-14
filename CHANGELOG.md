@@ -15,6 +15,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - *(ui)* Prevent index out of bounds in AppDrawerAdapter - ([7b85d33](https://github.com/DroidWorksStudio/mLauncher/commit/7b85d33a7fbffac6805c30976f97a6e490d75e4f))
 
+### Versioning:
+
+- Increment build number - ([2552dc2](https://github.com/DroidWorksStudio/mLauncher/commit/2552dc27643af4e81b093188fd99899ae9819698))
+
 ### Refactoring:
 
 - Improve Gesture Handling and Logging - ([1552eeb](https://github.com/DroidWorksStudio/mLauncher/commit/1552eeb55395de536ebd45760493e74543658396))
