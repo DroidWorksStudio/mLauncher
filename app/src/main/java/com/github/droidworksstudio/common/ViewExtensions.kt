@@ -1,8 +1,10 @@
 package com.github.droidworksstudio.common
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.view.View
 import android.view.inputmethod.InputMethodManager
+import com.github.droidworksstudio.mlauncher.ui.components.GestureManager
 
 
 fun View.showKeyboard() {
@@ -18,4 +20,10 @@ fun View.hideKeyboard() {
         context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager?
     imm?.hideSoftInputFromWindow(windowToken, 0)
     this.clearFocus()
+}
+
+@SuppressLint("ClickableViewAccessibility")
+fun View.attachGestureManager(context: Context, listener: GestureManager.GestureListener) {
+    val gestureManager = GestureManager(context, listener)
+    this.setOnTouchListener { _, event -> gestureManager.onTouchEvent(event) }
 }

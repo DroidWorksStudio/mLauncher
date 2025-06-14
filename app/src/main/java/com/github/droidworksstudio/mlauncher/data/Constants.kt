@@ -6,6 +6,7 @@ import android.content.pm.PackageManager.NameNotFoundException
 import android.graphics.Typeface
 import androidx.compose.runtime.Composable
 import androidx.core.content.res.ResourcesCompat
+import com.github.droidworksstudio.common.AppLogger
 import com.github.droidworksstudio.common.getLocalizedString
 import com.github.droidworksstudio.mlauncher.Mlauncher
 import com.github.droidworksstudio.mlauncher.R
@@ -58,7 +59,9 @@ object Constants {
     const val DOUBLE_CLICK_TIME_DELTA = 300L // Adjust as needed
 
     // Update SWIPE_DISTANCE_THRESHOLD dynamically based on screen dimensions
-    var SWIPE_DISTANCE_THRESHOLD = 0f
+    var SHORT_SWIPE_THRESHOLD = 0f  // pixels
+    var LONG_SWIPE_THRESHOLD = 0f // pixels
+
 
     // Update MAX_HOME_PAGES dynamically based on MAX_HOME_APPS
     var MAX_HOME_APPS = 20
@@ -92,13 +95,17 @@ object Constants {
         val screenWidth = metrics.widthPixels.toFloat()
         val screenHeight = metrics.heightPixels.toFloat()
 
-        SWIPE_DISTANCE_THRESHOLD = if (direction.equals("left", true) || direction.equals("right", true)) {
-            // 30% of screen width
-            screenWidth * 0.3f
+        if (direction.equals("left", true) || direction.equals("right", true)) {
+            // Horizontal swipe
+            LONG_SWIPE_THRESHOLD = screenWidth * 0.5f    // 50% of screen width
+            SHORT_SWIPE_THRESHOLD = screenWidth * 0.3f   // 30% of screen width
         } else {
-            // 50% of screen height
-            screenHeight * 0.5f
+            // Vertical swipe
+            LONG_SWIPE_THRESHOLD = screenHeight * 0.8f   // 80% of screen height
+            SHORT_SWIPE_THRESHOLD = screenHeight * 0.4f // 40% of screen height
         }
+
+        AppLogger.d("GestureThresholds", "Updated thresholds for $direction: SHORT = $SHORT_SWIPE_THRESHOLD px, LONG = $LONG_SWIPE_THRESHOLD px")
     }
 
     enum class AppDrawerFlag {

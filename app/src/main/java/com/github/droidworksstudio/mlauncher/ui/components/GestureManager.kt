@@ -46,6 +46,7 @@ class GestureManager(
         fun onLongSwipeDown()
         fun onLongPress()
         fun onDoubleTap()
+        fun onSingleTap()
     }
 
     fun onTouchEvent(event: MotionEvent): Boolean {
@@ -80,40 +81,46 @@ class GestureManager(
             MotionEvent.ACTION_UP -> {
                 longPressHandler.removeCallbacks(longPressRunnable!!)
 
-                if (longPressTriggered) {
-                    isDragging = false
-                    handled = true
-                }
-
                 val diffX = event.x - initialX
                 val diffY = event.y - initialY
                 val absDiffX = abs(diffX)
                 val absDiffY = abs(diffY)
 
-                // Double-tap detection
                 val currentTime = System.currentTimeMillis()
                 val timeSinceLastTap = currentTime - lastTapTime
                 val dxTap = abs(event.x - lastTapX)
                 val dyTap = abs(event.y - lastTapY)
 
+                if (longPressTriggered) {
+                    isDragging = false
+                    handled = true
+                    return true
+                }
+
+                // ✅ Double Tap
                 if (timeSinceLastTap <= doubleTapTimeout && dxTap <= doubleTapSlop && dyTap <= doubleTapSlop) {
                     AppLogger.d(TAG, "Detected Double Tap")
                     listener.onDoubleTap()
                     lastTapTime = 0
-                    handled = true
                     isDragging = false
+                    handled = true
+                    return true
                 } else {
                     lastTapTime = currentTime
                     lastTapX = event.x
                     lastTapY = event.y
                 }
 
-                // 🛑 Ignore tiny taps (after double-tap check)
-                if (absDiffX < 1f && absDiffY < 1f) {
-                    AppLogger.d(TAG, "Ignored tap with no movement")
+                // ✅ Add Single Tap logic
+                if (absDiffX < 10f && absDiffY < 10f) {
+                    AppLogger.d(TAG, "Detected Single Tap")
+                    listener.onSingleTap()
+                    handled = true
                     isDragging = false
+                    return true
                 }
 
+                // 🛑 Continue with swipe logic...
                 if (isDragging) {
                     val direction = when {
                         absDiffX > absDiffY && diffX > 0 -> "RIGHT"
@@ -128,47 +135,39 @@ class GestureManager(
                         AppLogger.d(TAG, "Swipe detected - Direction: $direction")
                     }
 
-                    val swipeDistanceThresholdPx = Constants.SWIPE_DISTANCE_THRESHOLD
+                    val longThreshold = Constants.LONG_SWIPE_THRESHOLD
+                    val shortThreshold = Constants.SHORT_SWIPE_THRESHOLD
+
                     AppLogger.d(TAG, "ACTION_UP - diffX: $diffX, diffY: $diffY")
-                    AppLogger.d(TAG, "Threshold - Distance: $swipeDistanceThresholdPx px")
+                    AppLogger.d(TAG, "Short Threshold: $shortThreshold px, Long Threshold: $longThreshold px")
 
                     if (absDiffX > absDiffY) {
-                        val isLong = absDiffX >= swipeDistanceThresholdPx
-                        if (diffX > 0) {
-                            if (isLong) {
-                                AppLogger.d(TAG, "Detected Long Swipe RIGHT")
-                                listener.onLongSwipeRight()
-                            } else {
-                                AppLogger.d(TAG, "Detected Short Swipe RIGHT")
-                                listener.onShortSwipeRight()
+                        when {
+                            absDiffX >= longThreshold -> {
+                                if (diffX > 0) listener.onLongSwipeRight()
+                                else listener.onLongSwipeLeft()
                             }
-                        } else {
-                            if (isLong) {
-                                AppLogger.d(TAG, "Detected Long Swipe LEFT")
-                                listener.onLongSwipeLeft()
-                            } else {
-                                AppLogger.d(TAG, "Detected Short Swipe LEFT")
-                                listener.onShortSwipeLeft()
+
+                            absDiffX >= shortThreshold -> {
+                                if (diffX > 0) listener.onShortSwipeRight()
+                                else listener.onShortSwipeLeft()
                             }
+
+                            else -> AppLogger.d(TAG, "Swipe too short — ignored")
                         }
                     } else {
-                        val isLong = absDiffY >= swipeDistanceThresholdPx
-                        if (diffY > 0) {
-                            if (isLong) {
-                                AppLogger.d(TAG, "Detected Long Swipe DOWN")
-                                listener.onLongSwipeDown()
-                            } else {
-                                AppLogger.d(TAG, "Detected Short Swipe DOWN")
-                                listener.onShortSwipeDown()
+                        when {
+                            absDiffY >= longThreshold -> {
+                                if (diffY > 0) listener.onLongSwipeDown()
+                                else listener.onLongSwipeUp()
                             }
-                        } else {
-                            if (isLong) {
-                                AppLogger.d(TAG, "Detected Long Swipe UP")
-                                listener.onLongSwipeUp()
-                            } else {
-                                AppLogger.d(TAG, "Detected Short Swipe UP")
-                                listener.onShortSwipeUp()
+
+                            absDiffY >= shortThreshold -> {
+                                if (diffY > 0) listener.onShortSwipeDown()
+                                else listener.onShortSwipeUp()
                             }
+
+                            else -> AppLogger.d(TAG, "Swipe too short — ignored")
                         }
                     }
 

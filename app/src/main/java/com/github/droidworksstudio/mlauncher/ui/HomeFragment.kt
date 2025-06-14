@@ -47,6 +47,7 @@ import androidx.navigation.fragment.findNavController
 import com.github.droidworksstudio.common.AppLogger
 import com.github.droidworksstudio.common.ColorManager
 import com.github.droidworksstudio.common.CrashHandler
+import com.github.droidworksstudio.common.attachGestureManager
 import com.github.droidworksstudio.common.getLocalizedString
 import com.github.droidworksstudio.common.isGestureNavigationEnabled
 import com.github.droidworksstudio.common.launchCalendar
@@ -90,12 +91,11 @@ import com.github.droidworksstudio.mlauncher.helper.utils.BiometricHelper
 import com.github.droidworksstudio.mlauncher.helper.utils.PrivateSpaceManager
 import com.github.droidworksstudio.mlauncher.helper.wordOfTheDay
 import com.github.droidworksstudio.mlauncher.services.ActionService
-import com.github.droidworksstudio.mlauncher.ui.components.GestureManager
-import com.github.droidworksstudio.mlauncher.ui.components.GestureManager.GestureListener
+import com.github.droidworksstudio.mlauncher.ui.components.GestureAdapter
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class HomeFragment : Fragment(), GestureListener, View.OnClickListener, View.OnLongClickListener {
+class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener {
 
     private lateinit var prefs: Prefs
     private lateinit var viewModel: MainViewModel
@@ -103,7 +103,6 @@ class HomeFragment : Fragment(), GestureListener, View.OnClickListener, View.OnL
     private lateinit var batteryReceiver: BatteryReceiver
     private lateinit var biometricHelper: BiometricHelper
     private lateinit var privateSpaceReceiver: PrivateSpaceReceiver
-    private lateinit var gestureManager: GestureManager
     private lateinit var vibrator: Vibrator
 
     private var _binding: FragmentHomeBinding? = null
@@ -140,8 +139,6 @@ class HomeFragment : Fragment(), GestureListener, View.OnClickListener, View.OnL
             context?.getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
         @Suppress("DEPRECATION")
         vibrator = context?.getSystemService(VIBRATOR_SERVICE) as Vibrator
-
-        gestureManager = GestureManager(requireContext(), this)
 
         FontManager.reloadFont(requireContext())
 
@@ -444,10 +441,7 @@ class HomeFragment : Fragment(), GestureListener, View.OnClickListener, View.OnL
 
     @SuppressLint("ClickableViewAccessibility")
     private fun initSwipeTouchListener() {
-        binding.touchArea.setOnTouchListener { _, event ->
-            gestureManager.onTouchEvent(event)
-            true
-        }
+        binding.touchArea.getHomeScreenGestureListener()
     }
 
     private fun initPermissionCheck() {
@@ -782,6 +776,10 @@ class HomeFragment : Fragment(), GestureListener, View.OnClickListener, View.OnL
 
     private fun showLongPressToast() = showShortToast(getLocalizedString(R.string.long_press_to_select_app))
 
+    private fun textOnClick(view: View) = onClick(view)
+
+    private fun textOnLongClick(view: View) = onLongClick(view)
+
 
     @SuppressLint("InflateParams", "ClickableViewAccessibility")
     private fun updateAppCountWithUsageStats(newAppsNum: Int) {
@@ -811,10 +809,7 @@ class HomeFragment : Fragment(), GestureListener, View.OnClickListener, View.OnL
                     textSize = prefs.appSize.toFloat()
                     id = i
                     text = prefs.getHomeAppModel(i).activityLabel
-                    setOnTouchListener { _, event ->
-                        gestureManager.onTouchEvent(event)
-                        false
-                    }
+                    getHomeAppsGestureListener()
                     setOnClickListener(this@HomeFragment)
                     if (!prefs.extendHomeAppsArea) {
                         layoutParams = ViewGroup.LayoutParams(
@@ -839,10 +834,7 @@ class HomeFragment : Fragment(), GestureListener, View.OnClickListener, View.OnL
                             prefs.getHomeAppModel(i).activityPackage
                         ), false
                     )
-                    setOnTouchListener { _, event ->
-                        gestureManager.onTouchEvent(event)
-                        false
-                    }
+                    getHomeAppsGestureListener()
                     setOnClickListener(this@HomeFragment)
                     if (!prefs.extendHomeAppsArea) {
                         layoutParams = ViewGroup.LayoutParams(
@@ -975,10 +967,7 @@ class HomeFragment : Fragment(), GestureListener, View.OnClickListener, View.OnL
                     textSize = prefs.appSize.toFloat()
                     id = i
                     text = prefs.getHomeAppModel(i).activityLabel
-                    setOnTouchListener { _, event ->
-                        gestureManager.onTouchEvent(event)
-                        false
-                    }
+                    getHomeAppsGestureListener()
                     setOnClickListener(this@HomeFragment)
 
                     if (!prefs.extendHomeAppsArea) {
@@ -1319,80 +1308,161 @@ class HomeFragment : Fragment(), GestureListener, View.OnClickListener, View.OnL
         }
     }
 
-    override fun onShortSwipeLeft() {
-        when (val action = prefs.shortSwipeLeftAction) {
-            Action.OpenApp -> openSwipeLeftApp()
-            else -> handleOtherAction(action)
-        }
-        CrashHandler.logUserAction("SwipeLeft Short Gesture")
+    private fun View.getHomeScreenGestureListener() {
+        this.attachGestureManager(requireContext(), object : GestureAdapter() {
+            override fun onShortSwipeLeft() {
+                when (val action = prefs.shortSwipeLeftAction) {
+                    Action.OpenApp -> openSwipeLeftApp()
+                    else -> handleOtherAction(action)
+                }
+                CrashHandler.logUserAction("SwipeLeft Short Gesture")
+            }
+
+            override fun onLongSwipeLeft() {
+                when (val action = prefs.longSwipeLeftAction) {
+                    Action.OpenApp -> openLongSwipeLeftApp()
+                    else -> handleOtherAction(action)
+                }
+                CrashHandler.logUserAction("SwipeLeft Long Gesture")
+            }
+
+            override fun onShortSwipeRight() {
+                when (val action = prefs.shortSwipeRightAction) {
+                    Action.OpenApp -> openSwipeRightApp()
+                    else -> handleOtherAction(action)
+                }
+                CrashHandler.logUserAction("SwipeRight Short Gesture")
+            }
+
+            override fun onLongSwipeRight() {
+                when (val action = prefs.longSwipeRightAction) {
+                    Action.OpenApp -> openLongSwipeRightApp()
+                    else -> handleOtherAction(action)
+                }
+                CrashHandler.logUserAction("SwipeRight Long Gesture")
+            }
+
+            override fun onShortSwipeUp() {
+                when (val action = prefs.shortSwipeUpAction) {
+                    Action.OpenApp -> openSwipeUpApp()
+                    else -> handleOtherAction(action)
+                }
+                CrashHandler.logUserAction("SwipeUp Short Gesture")
+            }
+
+            override fun onLongSwipeUp() {
+                when (val action = prefs.longSwipeUpAction) {
+                    Action.OpenApp -> openLongSwipeUpApp()
+                    else -> handleOtherAction(action)
+                }
+                CrashHandler.logUserAction("SwipeUp Long Gesture")
+            }
+
+            override fun onShortSwipeDown() {
+                when (val action = prefs.shortSwipeDownAction) {
+                    Action.OpenApp -> openSwipeDownApp()
+                    else -> handleOtherAction(action)
+                }
+                CrashHandler.logUserAction("SwipeDown Short Gesture")
+            }
+
+            override fun onLongSwipeDown() {
+                when (val action = prefs.longSwipeDownAction) {
+                    Action.OpenApp -> openLongSwipeDownApp()
+                    else -> handleOtherAction(action)
+                }
+                CrashHandler.logUserAction("SwipeDown Long Gesture")
+            }
+
+            override fun onLongPress() {
+                CrashHandler.logUserAction("LongPress Gesture")
+                trySettings()
+            }
+
+            override fun onDoubleTap() {
+                when (val action = prefs.doubleTapAction) {
+                    Action.OpenApp -> openDoubleTapApp()
+                    else -> handleOtherAction(action)
+                }
+                CrashHandler.logUserAction("DoubleTap Gesture")
+            }
+        })
     }
 
-    override fun onLongSwipeLeft() {
-        when (val action = prefs.longSwipeLeftAction) {
-            Action.OpenApp -> openLongSwipeLeftApp()
-            else -> handleOtherAction(action)
-        }
-        CrashHandler.logUserAction("SwipeLeft Long Gesture")
-    }
+    private fun View.getHomeAppsGestureListener() {
+        this.attachGestureManager(requireContext(), object : GestureAdapter() {
 
-    override fun onShortSwipeRight() {
-        when (val action = prefs.shortSwipeRightAction) {
-            Action.OpenApp -> openSwipeRightApp()
-            else -> handleOtherAction(action)
-        }
-        CrashHandler.logUserAction("SwipeRight Short Gesture")
-    }
+            override fun onLongPress() {
+                textOnLongClick(this@getHomeAppsGestureListener)
+            }
 
-    override fun onLongSwipeRight() {
-        when (val action = prefs.longSwipeRightAction) {
-            Action.OpenApp -> openLongSwipeRightApp()
-            else -> handleOtherAction(action)
-        }
-        CrashHandler.logUserAction("SwipeRight Long Gesture")
-    }
+            override fun onSingleTap() {
+                textOnClick(this@getHomeAppsGestureListener)
+            }
 
-    override fun onShortSwipeUp() {
-        when (val action = prefs.shortSwipeUpAction) {
-            Action.OpenApp -> openSwipeUpApp()
-            else -> handleOtherAction(action)
-        }
-        CrashHandler.logUserAction("SwipeUp Short Gesture")
-    }
+            override fun onShortSwipeLeft() {
+                when (val action = prefs.shortSwipeLeftAction) {
+                    Action.OpenApp -> openSwipeLeftApp()
+                    else -> handleOtherAction(action)
+                }
+                CrashHandler.logUserAction("SwipeLeft Short Gesture")
+            }
 
-    override fun onLongSwipeUp() {
-        when (val action = prefs.longSwipeUpAction) {
-            Action.OpenApp -> openLongSwipeUpApp()
-            else -> handleOtherAction(action)
-        }
-        CrashHandler.logUserAction("SwipeUp Long Gesture")
-    }
+            override fun onLongSwipeLeft() {
+                when (val action = prefs.longSwipeLeftAction) {
+                    Action.OpenApp -> openLongSwipeLeftApp()
+                    else -> handleOtherAction(action)
+                }
+                CrashHandler.logUserAction("SwipeLeft Long Gesture")
+            }
 
-    override fun onShortSwipeDown() {
-        when (val action = prefs.shortSwipeDownAction) {
-            Action.OpenApp -> openSwipeDownApp()
-            else -> handleOtherAction(action)
-        }
-        CrashHandler.logUserAction("SwipeDown Short Gesture")
-    }
+            override fun onShortSwipeRight() {
+                when (val action = prefs.shortSwipeRightAction) {
+                    Action.OpenApp -> openSwipeRightApp()
+                    else -> handleOtherAction(action)
+                }
+                CrashHandler.logUserAction("SwipeRight Short Gesture")
+            }
 
-    override fun onLongSwipeDown() {
-        when (val action = prefs.longSwipeDownAction) {
-            Action.OpenApp -> openLongSwipeDownApp()
-            else -> handleOtherAction(action)
-        }
-        CrashHandler.logUserAction("SwipeDown Long Gesture")
-    }
+            override fun onLongSwipeRight() {
+                when (val action = prefs.longSwipeRightAction) {
+                    Action.OpenApp -> openLongSwipeRightApp()
+                    else -> handleOtherAction(action)
+                }
+                CrashHandler.logUserAction("SwipeRight Long Gesture")
+            }
 
-    override fun onLongPress() {
-        CrashHandler.logUserAction("LongPress Gesture")
-        trySettings()
-    }
+            override fun onShortSwipeUp() {
+                when (val action = prefs.shortSwipeUpAction) {
+                    Action.OpenApp -> openSwipeUpApp()
+                    else -> handleOtherAction(action)
+                }
+                CrashHandler.logUserAction("SwipeUp Short Gesture")
+            }
 
-    override fun onDoubleTap() {
-        when (val action = prefs.doubleTapAction) {
-            Action.OpenApp -> openDoubleTapApp()
-            else -> handleOtherAction(action)
-        }
-        CrashHandler.logUserAction("DoubleTap Gesture")
+            override fun onLongSwipeUp() {
+                when (val action = prefs.longSwipeUpAction) {
+                    Action.OpenApp -> openLongSwipeUpApp()
+                    else -> handleOtherAction(action)
+                }
+                CrashHandler.logUserAction("SwipeUp Long Gesture")
+            }
+
+            override fun onShortSwipeDown() {
+                when (val action = prefs.shortSwipeDownAction) {
+                    Action.OpenApp -> openSwipeDownApp()
+                    else -> handleOtherAction(action)
+                }
+                CrashHandler.logUserAction("SwipeDown Short Gesture")
+            }
+
+            override fun onLongSwipeDown() {
+                when (val action = prefs.longSwipeDownAction) {
+                    Action.OpenApp -> openLongSwipeDownApp()
+                    else -> handleOtherAction(action)
+                }
+                CrashHandler.logUserAction("SwipeDown Long Gesture")
+            }
+        })
     }
 }
