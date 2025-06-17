@@ -486,7 +486,7 @@ object Constants {
                 Bitter -> ResourcesCompat.getFont(context, R.font.bitter)
                 Doto -> ResourcesCompat.getFont(context, R.font.doto)
                 FiraCode -> ResourcesCompat.getFont(context, R.font.fira_code)
-                DroidSans -> ResourcesCompat.getFont(context, R.font.open_sans)
+                DroidSans -> ResourcesCompat.getFont(context, R.font.droid_sans)
                 GreatVibes -> ResourcesCompat.getFont(context, R.font.great_vibes)
                 Hack -> ResourcesCompat.getFont(context, R.font.hack)
                 Lato -> ResourcesCompat.getFont(context, R.font.lato)
