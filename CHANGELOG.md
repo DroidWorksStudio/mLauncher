@@ -25,6 +25,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Remove redundant font options - ([5d09efb](https://github.com/DroidWorksStudio/mLauncher/commit/5d09efb5f7999f7e134a58a216b9fbdd14d1411e))
 - Simplify gesture handling using GestureDetector - ([74ba5a2](https://github.com/DroidWorksStudio/mLauncher/commit/74ba5a2ec257bac82cb55513550db72e883c9b5e))
 - Improve Gesture Handling and Logging - ([1552eeb](https://github.com/DroidWorksStudio/mLauncher/commit/1552eeb55395de536ebd45760493e74543658396))
 - Replace android.util.Log with AppLogger - ([e443e6b](https://github.com/DroidWorksStudio/mLauncher/commit/e443e6bfb2b8195389c3d7b7b740b94ffb1c3859))
