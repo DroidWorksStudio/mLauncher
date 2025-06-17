@@ -301,7 +301,6 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     ): MutableList<AppListItem> = withContext(Dispatchers.Main) {
 
         val fullList: MutableList<AppListItem> = mutableListOf()
-        val scrollIndexMap = mutableMapOf<Char, Int>()
 
         AppLogger.d(
             "AppListDebug",
@@ -314,7 +313,8 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             val pinnedPackages = prefs.pinnedApps.toSet()
             val userManager = context.getSystemService(Context.USER_SERVICE) as UserManager
             val launcherApps = context.getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps
-            val seenPackages = mutableSetOf<String>()
+            val seenAppKeys = mutableSetOf<String>()  // packageName|userId
+            val scrollIndexMap = mutableMapOf<String, Int>()
 
             for (profile in userManager.userProfiles) {
                 AppLogger.d("AppListDebug", "👤 Processing user profile: $profile")
@@ -333,14 +333,19 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                     AppLogger.d("AppListDebug", "🕓 Adding ${recentApps.size} recent apps")
 
                     for ((packageName, appName, activityName) in recentApps) {
-                        if (seenPackages.contains(packageName)) continue
+                        val appKey = "$packageName|${profile.hashCode()}"
+                        if (seenAppKeys.contains(appKey)) {
+                            AppLogger.d("AppListDebug", "⚠️ Skipping duplicate recent app: $appKey")
+                            continue
+                        }
+
                         val alias = prefs.getAppAlias(packageName).ifEmpty { appName }
                         val tag = prefs.getAppTag(packageName)
 
                         fullList.add(
                             AppListItem(appName, packageName, activityName, profile, alias, tag, AppCategory.RECENT)
                         )
-                        seenPackages.add(packageName)
+                        seenAppKeys.add(appKey)
                     }
                 }
 
@@ -354,10 +359,18 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                     val label = activity.label.toString()
 
                     if (packageName == BuildConfig.APPLICATION_ID) continue
-                    if (seenPackages.contains(packageName)) continue
 
-                    val isHidden = hiddenApps.contains("$packageName|$profile")
-                    if ((isHidden && !includeHiddenApps) || (!isHidden && !includeRegularApps)) continue
+                    val appKey = "$packageName|${profile.hashCode()}"
+                    if (seenAppKeys.contains(appKey)) {
+                        AppLogger.d("AppListDebug", "⚠️ Skipping duplicate launcher app: $appKey")
+                        continue
+                    }
+
+                    val isHidden = hiddenApps.contains(appKey)
+                    if ((isHidden && !includeHiddenApps) || (!isHidden && !includeRegularApps)) {
+                        AppLogger.d("AppListDebug", "🚫 Skipping app due to filter: $appKey (hidden=$isHidden)")
+                        continue
+                    }
 
                     val alias = prefs.getAppAlias(packageName)
                     val tag = prefs.getAppTag(packageName)
@@ -370,8 +383,8 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                     fullList.add(
                         AppListItem(label, packageName, className, profile, alias, tag, category)
                     )
-
-                    seenPackages.add(packageName)
+                    AppLogger.d("AppListDebug", "✅ Added app: $label ($packageName) from profile: $profile")
+                    seenAppKeys.add(appKey)
                 }
             }
 
@@ -384,14 +397,11 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             // Build scroll index (excluding pinned apps)
             for ((index, item) in fullList.withIndex()) {
                 if (item.category == AppCategory.PINNED) continue
-                val firstChar = item.label.firstOrNull()?.uppercaseChar() ?: continue
-                scrollIndexMap.putIfAbsent(firstChar, index)
+                val key = item.label.firstOrNull()?.uppercaseChar()?.toString() ?: "#"
+                scrollIndexMap.putIfAbsent(key, index)
             }
 
-            AppLogger.d("AppListDebug", "✅ App list built with ${fullList.size} items")
-
-            val scrollIndexMap = mutableMapOf<String, Int>()
-
+            // Include scroll index for pinned apps under '★'
             fullList.forEachIndexed { index, item ->
                 val key = when (item.category) {
                     AppCategory.PINNED -> "★"
@@ -403,7 +413,8 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 }
             }
 
-            _appScrollMap.postValue(scrollIndexMap)  // ✅ Post the map to LiveData
+            AppLogger.d("AppListDebug", "✅ App list built with ${fullList.size} items")
+            _appScrollMap.postValue(scrollIndexMap)
 
         } catch (e: Exception) {
             AppLogger.e("AppListDebug", "❌ Error building app list: ${e.message}", e)

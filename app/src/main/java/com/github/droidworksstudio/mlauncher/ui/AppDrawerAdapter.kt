@@ -14,6 +14,7 @@ import android.os.Build
 import android.os.UserManager
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.Gravity.LEFT
 import android.view.LayoutInflater
 import android.view.View
@@ -485,14 +486,20 @@ class AppDrawerAdapter(
                 // add icon next to app name to indicate that this app is installed on another profile
                 val launcherApps =
                     context.getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps
-                val isPrivateSpace =
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.VANILLA_ICE_CREAM) {
-                        launcherApps.getLauncherUserInfo(appListItem.user)?.userType == UserManager.USER_TYPE_PROFILE_PRIVATE
-                    } else {
-                        PrivateSpaceManager(context).isPrivateSpaceSupported()
-                    }
-                val isWorkProfile =
-                    appListItem.user != android.os.Process.myUserHandle() && !isPrivateSpace
+                val isPrivateSpace = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.VANILLA_ICE_CREAM) {
+                    val userInfo = launcherApps.getLauncherUserInfo(appListItem.user)
+                    val isPrivate = userInfo?.userType == UserManager.USER_TYPE_PROFILE_PRIVATE
+                    isPrivate
+                } else {
+                    val supported = PrivateSpaceManager(context).isPrivateSpaceSupported()
+                    supported
+                }
+
+                val isWorkProfile = appListItem.user != android.os.Process.myUserHandle() && !isPrivateSpace
+                Log.d(
+                    "ProfileCheck",
+                    "isWorkProfile: $isWorkProfile, isPrivateSpace: $isPrivateSpace, appUser: ${appListItem.user}, appLabel:  ${appListItem.label}"
+                )
 
                 val packageName = appListItem.activityPackage
                 val packageManager = context.packageManager
