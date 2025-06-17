@@ -464,14 +464,11 @@ object Constants {
         Custom,
         Bitter,
         Doto,
-        DroidSans,
         FiraCode,
         Hack,
         Lato,
         Merriweather,
         Montserrat,
-        NotoSans,
-        OpenSans,
         Quicksand,
         Raleway,
         Roboto,
@@ -483,13 +480,10 @@ object Constants {
                 Bitter -> ResourcesCompat.getFont(context, R.font.bitter)
                 Doto -> ResourcesCompat.getFont(context, R.font.doto)
                 FiraCode -> ResourcesCompat.getFont(context, R.font.fira_code)
-                DroidSans -> ResourcesCompat.getFont(context, R.font.droid_sans)
                 Hack -> ResourcesCompat.getFont(context, R.font.hack)
                 Lato -> ResourcesCompat.getFont(context, R.font.lato)
                 Merriweather -> ResourcesCompat.getFont(context, R.font.merriweather)
                 Montserrat -> ResourcesCompat.getFont(context, R.font.montserrat)
-                NotoSans -> ResourcesCompat.getFont(context, R.font.noto_sans)
-                OpenSans -> ResourcesCompat.getFont(context, R.font.open_sans)
                 Quicksand -> ResourcesCompat.getFont(context, R.font.quicksand)
                 Raleway -> ResourcesCompat.getFont(context, R.font.raleway)
                 Roboto -> ResourcesCompat.getFont(context, R.font.roboto)
@@ -513,14 +507,11 @@ object Constants {
                 System -> getLocalizedString(R.string.system_default)
                 Bitter -> getLocalizedString(R.string.settings_font_bitter)
                 Doto -> getLocalizedString(R.string.settings_font_doto)
-                DroidSans -> getLocalizedString(R.string.settings_font_droidsans)
                 FiraCode -> getLocalizedString(R.string.settings_font_firacode)
                 Hack -> getLocalizedString(R.string.settings_font_hack)
                 Lato -> getLocalizedString(R.string.settings_font_lato)
                 Merriweather -> getLocalizedString(R.string.settings_font_merriweather)
                 Montserrat -> getLocalizedString(R.string.settings_font_montserrat)
-                NotoSans -> getLocalizedString(R.string.settings_font_notosans)
-                OpenSans -> getLocalizedString(R.string.settings_font_opensans)
                 Quicksand -> getLocalizedString(R.string.settings_font_quicksand)
                 Raleway -> getLocalizedString(R.string.settings_font_raleway)
                 Roboto -> getLocalizedString(R.string.settings_font_roboto)
@@ -535,14 +526,11 @@ object Constants {
                 System -> getLocalizedString(R.string.system_default)
                 Bitter -> getLocalizedString(R.string.settings_font_bitter)
                 Doto -> getLocalizedString(R.string.settings_font_doto)
-                DroidSans -> getLocalizedString(R.string.settings_font_droidsans)
                 FiraCode -> getLocalizedString(R.string.settings_font_firacode)
                 Hack -> getLocalizedString(R.string.settings_font_hack)
                 Lato -> getLocalizedString(R.string.settings_font_lato)
                 Merriweather -> getLocalizedString(R.string.settings_font_merriweather)
                 Montserrat -> getLocalizedString(R.string.settings_font_montserrat)
-                NotoSans -> getLocalizedString(R.string.settings_font_notosans)
-                OpenSans -> getLocalizedString(R.string.settings_font_opensans)
                 Quicksand -> getLocalizedString(R.string.settings_font_quicksand)
                 Raleway -> getLocalizedString(R.string.settings_font_raleway)
                 Roboto -> getLocalizedString(R.string.settings_font_roboto)
