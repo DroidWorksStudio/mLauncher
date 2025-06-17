@@ -15,6 +15,7 @@ All notable changes to this project will be documented in this file. See [conven
 ### Bug Fixes:
 
 - *(ui)* Prevent index out of bounds in AppDrawerAdapter - ([7b85d33](https://github.com/DroidWorksStudio/mLauncher/commit/7b85d33a7fbffac6805c30976f97a6e490d75e4f))
+- Correct DroidSans font mapping - ([227ac7c](https://github.com/DroidWorksStudio/mLauncher/commit/227ac7cd7854bd0aaff1c6cd7f9573c923f5ae9b))
 
 ### Versioning:
 
