@@ -8,21 +8,16 @@
     <string name="privacy_policy_url" translatable="false">https://mlauncher.5646316.xyz/privacy.html</string>
 
     <!-- Font Stings -->
-    <string name="settings_font_bank_gothic" translatable="false">Bank Gothic</string>
     <string name="settings_font_bitter" translatable="false">Bitter</string>
     <string name="settings_font_doto" translatable="false">Doto</string>
     <string name="settings_font_droidsans" translatable="false">Droid Sans</string>
     <string name="settings_font_firacode" translatable="false">Fira Code</string>
-    <string name="settings_font_greatvibes" translatable="false">Great Vibes</string>
     <string name="settings_font_hack" translatable="false">Hack</string>
     <string name="settings_font_lato" translatable="false">Lato</string>
-    <string name="settings_font_lobster" translatable="false">Lobster</string>
     <string name="settings_font_merriweather" translatable="false">Merriweather</string>
-    <string name="settings_font_misans" translatable="false">Mi Sans</string>
     <string name="settings_font_montserrat" translatable="false">Montserrat</string>
     <string name="settings_font_notosans" translatable="false">Noto Sans</string>
     <string name="settings_font_opensans" translatable="false">Open Sans</string>
-    <string name="settings_font_pacifico" translatable="false">Pacifico</string>
     <string name="settings_font_quicksand" translatable="false">Quicksand</string>
     <string name="settings_font_raleway" translatable="false">Raleway</string>
     <string name="settings_font_roboto" translatable="false">Roboto</string>
