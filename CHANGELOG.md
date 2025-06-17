@@ -23,6 +23,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Simplify gesture handling using GestureDetector - ([74ba5a2](https://github.com/DroidWorksStudio/mLauncher/commit/74ba5a2ec257bac82cb55513550db72e883c9b5e))
 - Improve Gesture Handling and Logging - ([1552eeb](https://github.com/DroidWorksStudio/mLauncher/commit/1552eeb55395de536ebd45760493e74543658396))
 - Replace android.util.Log with AppLogger - ([e443e6b](https://github.com/DroidWorksStudio/mLauncher/commit/e443e6bfb2b8195389c3d7b7b740b94ffb1c3859))
 - Remove unused onSingleTap gesture - ([7649d89](https://github.com/DroidWorksStudio/mLauncher/commit/7649d89915244a250fbf6e0d5e463bd41117c56d))
