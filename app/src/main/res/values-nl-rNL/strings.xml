@@ -198,8 +198,8 @@
     <string name="expert_options_unlocked">Opties voor experts ontgrendeld!</string>
     <string name="expert_options_tap_hint">%1$d meer tikken om te ontgrendelen</string>
     <string name="settings_text_size">Instellingen Tekstgrootte</string>
-    <string name="settings_short_threshold">Short Swipe Threshold</string>
-    <string name="settings_long_threshold">Long Swipe Threshold</string>
+    <string name="settings_short_threshold">Korte veegdrempel</string>
+    <string name="settings_long_threshold">Lange veegdrempel</string>
     <!-- App Page Strings -->
     <string name="hidden_apps">Verborgen apps</string>
     <string name="favorite_apps">Favoriete apps</string>
