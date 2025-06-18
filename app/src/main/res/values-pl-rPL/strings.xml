@@ -50,7 +50,6 @@
     <string name="theme_mode">Tryb motywu</string>
     <string name="app_language">Język interfejsu</string>
     <string name="font_family">Rodzina czcionek</string>
-    <string name="settings_text_size">Ustawienia Rozmiar tekstu</string>
     <string name="hide_search_view">Ukryj widok wyszukiwania</string>
     <string name="show_floating_button">Pokaż przyciski skrótów</string>
     <string name="lock_orientation">Zablokuj orientację</string>
@@ -198,6 +197,9 @@
     <string name="expert_options_display">Pokaż opcje eksperta</string>
     <string name="expert_options_unlocked">Odblokowano opcje eksperckie!</string>
     <string name="expert_options_tap_hint">%1$d więcej stuknięć do odblokowania</string>
+    <string name="settings_text_size">Ustawienia Rozmiar tekstu</string>
+    <string name="settings_short_threshold">Short Swipe Threshold</string>
+    <string name="settings_long_threshold">Long Swipe Threshold</string>
     <!-- App Page Strings -->
     <string name="hidden_apps">Ukryte aplikacje</string>
     <string name="favorite_apps">Ulubione aplikacje</string>
