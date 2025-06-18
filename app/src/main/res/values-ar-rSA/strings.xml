@@ -50,7 +50,6 @@
     <string name="theme_mode">وضع السمة</string>
     <string name="app_language">لغة الواجهة</string>
     <string name="font_family">خط العائلة</string>
-    <string name="settings_text_size">إعدادات حجم النص</string>
     <string name="hide_search_view">إخفاء عرض البحث</string>
     <string name="show_floating_button">إظهار أزرار الاختصار</string>
     <string name="lock_orientation">اتجاه القفل</string>
@@ -198,6 +197,9 @@
     <string name="expert_options_display">إظهار خيارات الخبراء</string>
     <string name="expert_options_unlocked">خيارات الخبراء متاحة الآن!</string>
     <string name="expert_options_tap_hint">%1$d المزيد من النقرات لفتح القفل</string>
+    <string name="settings_text_size">إعدادات حجم النص</string>
+    <string name="settings_short_threshold">Short Swipe Threshold</string>
+    <string name="settings_long_threshold">Long Swipe Threshold</string>
     <!-- App Page Strings -->
     <string name="hidden_apps">التطبيقات المخفية</string>
     <string name="favorite_apps">التطبيقات المفضلة</string>
