@@ -50,7 +50,6 @@
     <string name="theme_mode">Tema modu</string>
     <string name="app_language">Arayüz Dili</string>
     <string name="font_family">Font ailesi</string>
-    <string name="settings_text_size">Ayarlar Metin Boyutu</string>
     <string name="hide_search_view">Arama Görünümünü Gizle</string>
     <string name="show_floating_button">Kısayol Düğmelerini Göster</string>
     <string name="lock_orientation">Kilit Yönlendirmesi</string>
@@ -198,6 +197,9 @@
     <string name="expert_options_display">Uzman Seçeneklerini Göster</string>
     <string name="expert_options_unlocked">Uzman Seçenekleri Açıldı!</string>
     <string name="expert_options_tap_hint">%1$d kilidini açmak için daha fazla dokunuş</string>
+    <string name="settings_text_size">Ayarlar Metin Boyutu</string>
+    <string name="settings_short_threshold">Short Swipe Threshold</string>
+    <string name="settings_long_threshold">Long Swipe Threshold</string>
     <!-- App Page Strings -->
     <string name="hidden_apps">Gizli uygulamalar</string>
     <string name="favorite_apps">Favori Uygulamalar</string>
