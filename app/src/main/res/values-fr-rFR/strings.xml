@@ -198,8 +198,8 @@
     <string name="expert_options_unlocked">Options expertes débloquées !</string>
     <string name="expert_options_tap_hint">%1$d plus de clics pour déverrouiller</string>
     <string name="settings_text_size">Taille du texte des paramètres</string>
-    <string name="settings_short_threshold">Short Swipe Threshold</string>
-    <string name="settings_long_threshold">Long Swipe Threshold</string>
+    <string name="settings_short_threshold">Seuil de balayage court</string>
+    <string name="settings_long_threshold">Seuil de balayage long</string>
     <!-- App Page Strings -->
     <string name="hidden_apps">Applications masquées</string>
     <string name="favorite_apps">Applications préférées</string>
