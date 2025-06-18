@@ -62,6 +62,8 @@ object Constants {
     const val SWIPE_VELOCITY_THRESHOLD = 450f // Adjust as needed
 
     // Update SWIPE_DISTANCE_THRESHOLD dynamically based on screen dimensions
+    const val MIN_THRESHOLD = 0f // pixels
+    const val MAX_THRESHOLD = 1f // pixels
     var SHORT_SWIPE_THRESHOLD = 0f  // pixels
     var LONG_SWIPE_THRESHOLD = 0f // pixels
 
@@ -94,18 +96,20 @@ object Constants {
 
 
     fun updateSwipeDistanceThreshold(context: Context, direction: String) {
+        val prefs = Prefs(context)
+
         val metrics = context.resources.displayMetrics
         val screenWidth = metrics.widthPixels.toFloat()
         val screenHeight = metrics.heightPixels.toFloat()
 
         if (direction.equals("left", true) || direction.equals("right", true)) {
             // Horizontal swipe
-            LONG_SWIPE_THRESHOLD = screenWidth * 0.5f    // 50% of screen width
-            SHORT_SWIPE_THRESHOLD = screenWidth * 0.3f   // 30% of screen width
+            LONG_SWIPE_THRESHOLD = screenWidth * prefs.longSwipeThreshold
+            SHORT_SWIPE_THRESHOLD = screenWidth * prefs.shortSwipeThreshold
         } else {
             // Vertical swipe
-            LONG_SWIPE_THRESHOLD = screenHeight * 0.8f   // 80% of screen height
-            SHORT_SWIPE_THRESHOLD = screenHeight * 0.4f // 40% of screen height
+            LONG_SWIPE_THRESHOLD = screenHeight * prefs.longSwipeThreshold
+            SHORT_SWIPE_THRESHOLD = screenHeight * prefs.shortSwipeThreshold
         }
 
         AppLogger.d("GestureThresholds", "Updated thresholds for $direction: SHORT = $SHORT_SWIPE_THRESHOLD px, LONG = $LONG_SWIPE_THRESHOLD px")

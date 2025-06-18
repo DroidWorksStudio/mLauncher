@@ -209,13 +209,22 @@ class DialogManager(val context: Context, val activity: Activity) {
     fun showSliderBottomSheet(
         context: Context,
         title: String,
-        minValue: Int,
-        maxValue: Int,
-        currentValue: Int,
-        onValueSelected: (Int) -> Unit
+        minValue: Number,
+        maxValue: Number,
+        currentValue: Number,
+        steps: Int = 100,
+        onValueSelected: (Number) -> Unit
     ) {
         // Dismiss any existing sheet
         sliderBottomSheet?.dismiss()
+
+        // Determine if float mode is needed
+        val isFloat = minValue is Float || maxValue is Float || currentValue is Float
+
+        val scaleFactor = if (isFloat) steps else 1
+        val scaledMin = (minValue.toFloat() * scaleFactor).toInt()
+        val scaledMax = (maxValue.toFloat() * scaleFactor).toInt()
+        val scaledCurrent = (currentValue.toFloat() * scaleFactor).toInt()
 
         // Outer layout
         val container = LinearLayout(context).apply {
@@ -243,20 +252,30 @@ class DialogManager(val context: Context, val activity: Activity) {
             setPadding(0, 0, 0, 16)
         }
 
-        // SeekBar with callback on stop
+        // SeekBar
         val seekBar = SeekBar(context).apply {
-            min = minValue
-            max = maxValue
-            progress = currentValue
+            min = scaledMin
+            max = scaledMax
+            progress = scaledCurrent
             setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
                 override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-                    valueText.text = progress.toString()
+                    val value = if (isFloat) {
+                        (progress.toFloat() / scaleFactor)
+                    } else {
+                        progress
+                    }
+                    valueText.text = value.toString()
                 }
 
                 override fun onStartTrackingTouch(seekBar: SeekBar?) {}
 
                 override fun onStopTrackingTouch(seekBar: SeekBar?) {
-                    onValueSelected(seekBar?.progress ?: currentValue)
+                    val value = if (isFloat) {
+                        (seekBar?.progress?.toFloat() ?: 0f) / scaleFactor
+                    } else {
+                        seekBar?.progress ?: 0
+                    }
+                    onValueSelected(value)
                 }
             })
         }

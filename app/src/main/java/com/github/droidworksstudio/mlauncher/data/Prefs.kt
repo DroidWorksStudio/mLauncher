@@ -34,6 +34,8 @@ private const val RECENT_APPS_DISPLAYED = "RECENT_APPS_DISPLAYED"
 private const val ICON_RAINBOW_COLORS = "ICON_RAINBOW_COLORS"
 private const val RECENT_COUNTER = "RECENT_COUNTER"
 private const val FILTER_STRENGTH = "FILTER_STRENGTH"
+private const val SHORT_SWIPE_THRESHOLD = "SHORT_SWIPE_THRESHOLD"
+private const val LONG_SWIPE_THRESHOLD = "LONG_SWIPE_THRESHOLD"
 private const val ENABLE_FILTER_STRENGTH = "ENABLE_FILTER_STRENGTH"
 private const val HOME_ALIGNMENT = "HOME_ALIGNMENT"
 private const val HOME_ALIGNMENT_BOTTOM = "HOME_ALIGNMENT_BOTTOM"
@@ -334,6 +336,14 @@ class Prefs(val context: Context) {
     var filterStrength: Int
         get() = getSetting(FILTER_STRENGTH, 25)
         set(value) = prefsNormal.edit { putInt(FILTER_STRENGTH, value) }
+
+    var shortSwipeThreshold: Float
+        get() = getSetting(SHORT_SWIPE_THRESHOLD, 0.5f)
+        set(value) = prefsNormal.edit { putFloat(SHORT_SWIPE_THRESHOLD, value) }
+
+    var longSwipeThreshold: Float
+        get() = getSetting(LONG_SWIPE_THRESHOLD, 0.5f)
+        set(value) = prefsNormal.edit { putFloat(LONG_SWIPE_THRESHOLD, value) }
 
     var searchFromStart: Boolean
         get() = getSetting(SEARCH_START, false)
@@ -967,18 +977,19 @@ class Prefs(val context: Context) {
         }
     }
 
-
     private inline fun <reified T> getSetting(key: String, defaultValue: T): T {
         // Otherwise, fetch from SharedPreferences
         val result = when (defaultValue) {
             is Int -> prefsNormal.getInt(key, defaultValue)
             is Boolean -> prefsNormal.getBoolean(key, defaultValue)
             is String -> prefsNormal.getString(key, defaultValue) ?: defaultValue
+            is Float -> prefsNormal.getFloat(key, defaultValue)
             else -> throw IllegalArgumentException("Unsupported type")
         }
 
         return result as T
     }
+
 
     fun isOnboardingCompleted(): Boolean {
         return prefsOnboarding.getBoolean(ONBOARDING_COMPLETED, false)

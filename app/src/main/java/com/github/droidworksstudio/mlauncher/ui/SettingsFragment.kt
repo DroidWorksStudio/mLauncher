@@ -24,6 +24,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -304,6 +305,9 @@ class SettingsFragment : Fragment() {
         var selectedSettingsSize by remember { mutableIntStateOf(prefs.settingsSize) }
         var toggledSettingsLocked by remember { mutableStateOf(prefs.settingsLocked) }
         var toggledLockOrientation by remember { mutableStateOf(prefs.lockOrientation) }
+
+        var selectedShortSwipeThreshold by remember { mutableFloatStateOf(prefs.shortSwipeThreshold) }
+        var selectedLongSwipeThreshold by remember { mutableFloatStateOf(prefs.longSwipeThreshold) }
 
         val contextMenuOptionLabels = listOf(
             getLocalizedString(R.string.pin),
@@ -700,10 +704,9 @@ class SettingsFragment : Fragment() {
                                     maxValue = Constants.MAX_FILTER_STRENGTH,
                                     currentValue = prefs.filterStrength,
                                     onValueSelected = { newFilterStrength ->
-                                        selectedFilterStrength = newFilterStrength // Update state
-                                        prefs.filterStrength =
-                                            newFilterStrength // Persist selection in preferences
-                                        viewModel.filterStrength.value = newFilterStrength
+                                        selectedFilterStrength = newFilterStrength.toInt() // Update state
+                                        prefs.filterStrength = newFilterStrength.toInt() // Persist selection in preferences
+                                        viewModel.filterStrength.value = newFilterStrength.toInt()
                                     }
                                 )
                             }
@@ -750,15 +753,15 @@ class SettingsFragment : Fragment() {
                                 maxValue = Constants.MAX_HOME_APPS,
                                 currentValue = prefs.homeAppsNum,
                                 onValueSelected = { newHomeAppsNum ->
-                                    selectedHomeAppsNum = newHomeAppsNum // Update state
-                                    prefs.homeAppsNum = newHomeAppsNum // Persist selection in preferences
-                                    viewModel.homeAppsNum.value = newHomeAppsNum
+                                    selectedHomeAppsNum = newHomeAppsNum.toInt() // Update state
+                                    prefs.homeAppsNum = newHomeAppsNum.toInt() // Persist selection in preferences
+                                    viewModel.homeAppsNum.value = newHomeAppsNum.toInt()
 
                                     // Check if homeAppsNum is less than homePagesNum and update homePagesNum accordingly
                                     if (newHomeAppsNum in 1..<selectedHomePagesNum) {
-                                        selectedHomePagesNum = newHomeAppsNum
-                                        prefs.homePagesNum = newHomeAppsNum // Persist the new homePagesNum
-                                        viewModel.homePagesNum.value = newHomeAppsNum
+                                        selectedHomePagesNum = newHomeAppsNum.toInt()
+                                        prefs.homePagesNum = newHomeAppsNum.toInt() // Persist the new homePagesNum
+                                        viewModel.homePagesNum.value = newHomeAppsNum.toInt()
                                     }
 
                                     val userManager = requireContext().getSystemService(Context.USER_SERVICE) as UserManager
@@ -772,7 +775,7 @@ class SettingsFragment : Fragment() {
                                         emptyString(),
                                     )
 
-                                    for (n in newHomeAppsNum..oldHomeAppsNum) {
+                                    for (n in newHomeAppsNum.toInt()..oldHomeAppsNum) {
                                         // i is outside the range between oldHomeAppsNum and newHomeAppsNum
                                         // Do something with i
                                         prefs.setHomeAppModel(n, clearApp)
@@ -795,9 +798,9 @@ class SettingsFragment : Fragment() {
                                 maxValue = Constants.MAX_HOME_PAGES,
                                 currentValue = prefs.homePagesNum,
                                 onValueSelected = { newHomePagesNum ->
-                                    selectedHomePagesNum = newHomePagesNum // Update state
-                                    prefs.homePagesNum = newHomePagesNum // Persist selection in preferences
-                                    viewModel.homePagesNum.value = newHomePagesNum
+                                    selectedHomePagesNum = newHomePagesNum.toInt() // Update state
+                                    prefs.homePagesNum = newHomePagesNum.toInt() // Persist selection in preferences
+                                    viewModel.homePagesNum.value = newHomePagesNum.toInt()
                                 }
                             )
                         }
@@ -946,8 +949,8 @@ class SettingsFragment : Fragment() {
                                 maxValue = Constants.MAX_TEXT_SIZE,
                                 currentValue = prefs.appSize,
                                 onValueSelected = { newAppSize ->
-                                    selectedAppSize = newAppSize // Update state
-                                    prefs.appSize = newAppSize // Persist selection in preferences
+                                    selectedAppSize = newAppSize.toInt() // Update state
+                                    prefs.appSize = newAppSize.toInt() // Persist selection in preferences
                                 }
                             )
                         }
@@ -965,8 +968,8 @@ class SettingsFragment : Fragment() {
                                 maxValue = Constants.MAX_CLOCK_DATE_SIZE,
                                 currentValue = prefs.dateSize,
                                 onValueSelected = { newDateSize ->
-                                    selectedDateSize = newDateSize // Update state
-                                    prefs.dateSize = newDateSize // Persist selection in preferences
+                                    selectedDateSize = newDateSize.toInt() // Update state
+                                    prefs.dateSize = newDateSize.toInt() // Persist selection in preferences
                                 }
                             )
                         }
@@ -984,8 +987,8 @@ class SettingsFragment : Fragment() {
                                 maxValue = Constants.MAX_CLOCK_DATE_SIZE,
                                 currentValue = prefs.clockSize,
                                 onValueSelected = { newClockSize ->
-                                    selectedClockSize = newClockSize // Update state
-                                    prefs.clockSize = newClockSize // Persist selection in preferences
+                                    selectedClockSize = newClockSize.toInt() // Update state
+                                    prefs.clockSize = newClockSize.toInt() // Persist selection in preferences
                                 }
                             )
                         }
@@ -1003,8 +1006,8 @@ class SettingsFragment : Fragment() {
                                 maxValue = Constants.MAX_ALARM_SIZE,
                                 currentValue = prefs.alarmSize,
                                 onValueSelected = { newDateSize ->
-                                    selectedAlarmSize = newDateSize // Update state
-                                    prefs.alarmSize = newDateSize // Persist selection in preferences
+                                    selectedAlarmSize = newDateSize.toInt() // Update state
+                                    prefs.alarmSize = newDateSize.toInt() // Persist selection in preferences
                                 }
                             )
                         }
@@ -1022,8 +1025,8 @@ class SettingsFragment : Fragment() {
                                 maxValue = Constants.MAX_DAILY_WORD_SIZE,
                                 currentValue = prefs.dailyWordSize,
                                 onValueSelected = { newDateSize ->
-                                    selectedDailyWordSize = newDateSize // Update state
-                                    prefs.dailyWordSize = newDateSize // Persist selection in preferences
+                                    selectedDailyWordSize = newDateSize.toInt() // Update state
+                                    prefs.dailyWordSize = newDateSize.toInt() // Persist selection in preferences
                                 }
                             )
                         }
@@ -1041,8 +1044,8 @@ class SettingsFragment : Fragment() {
                                 maxValue = Constants.MAX_BATTERY_SIZE,
                                 currentValue = prefs.batterySize,
                                 onValueSelected = { newBatterySize ->
-                                    selectedBatterySize = newBatterySize // Update state
-                                    prefs.batterySize = newBatterySize // Persist selection in preferences
+                                    selectedBatterySize = newBatterySize.toInt() // Update state
+                                    prefs.batterySize = newBatterySize.toInt() // Persist selection in preferences
                                 }
                             )
                         }
@@ -1065,9 +1068,8 @@ class SettingsFragment : Fragment() {
                                 maxValue = Constants.MAX_TEXT_PADDING,
                                 currentValue = prefs.textPaddingSize,
                                 onValueSelected = { newPaddingSize ->
-                                    selectedPaddingSize = newPaddingSize // Update state
-                                    prefs.textPaddingSize =
-                                        newPaddingSize // Persist selection in preferences
+                                    selectedPaddingSize = newPaddingSize.toInt() // Update state
+                                    prefs.textPaddingSize = newPaddingSize.toInt() // Persist selection in preferences
                                 }
                             )
                         }
@@ -1138,10 +1140,9 @@ class SettingsFragment : Fragment() {
                                     maxValue = Constants.MAX_RECENT_COUNTER,
                                     currentValue = prefs.recentCounter,
                                     onValueSelected = { newRecentCounter ->
-                                        selectedRecentCounter = newRecentCounter // Update state
-                                        prefs.recentCounter =
-                                            newRecentCounter // Persist selection in preferences
-                                        viewModel.recentCounter.value = newRecentCounter
+                                        selectedRecentCounter = newRecentCounter.toInt() // Update state
+                                        prefs.recentCounter = newRecentCounter.toInt() // Persist selection in preferences
+                                        viewModel.recentCounter.value = newRecentCounter.toInt()
                                     }
                                 )
                             }
@@ -1259,10 +1260,9 @@ class SettingsFragment : Fragment() {
                                     maxValue = Constants.MAX_OPACITY,
                                     currentValue = prefs.opacityNum,
                                     onValueSelected = { newBackgroundOpacity ->
-                                        selectedBackgroundOpacity = newBackgroundOpacity // Update state
-                                        prefs.opacityNum =
-                                            newBackgroundOpacity // Persist selection in preferences
-                                        viewModel.opacityNum.value = newBackgroundOpacity
+                                        selectedBackgroundOpacity = newBackgroundOpacity.toInt() // Update state
+                                        prefs.opacityNum = newBackgroundOpacity.toInt() // Persist selection in preferences
+                                        viewModel.opacityNum.value = newBackgroundOpacity.toInt()
                                     }
                                 )
                             }
@@ -2396,8 +2396,8 @@ class SettingsFragment : Fragment() {
                                 maxValue = Constants.MAX_TEXT_SIZE,
                                 currentValue = prefs.settingsSize,
                                 onValueSelected = { newSettingsSize ->
-                                    selectedSettingsSize = newSettingsSize
-                                    prefs.settingsSize = newSettingsSize
+                                    selectedSettingsSize = newSettingsSize.toInt()
+                                    prefs.settingsSize = newSettingsSize.toInt()
                                 }
                             )
                         }
@@ -2445,6 +2445,43 @@ class SettingsFragment : Fragment() {
                         }
                     )
 
+                    SettingsSelect(
+                        title = getLocalizedString(R.string.settings_short_threshold),
+                        option = selectedShortSwipeThreshold.toString(),
+                        fontSize = titleFontSize,
+                        onClick = {
+                            dialogBuilder.showSliderBottomSheet(
+                                context = context,
+                                title = getLocalizedString(R.string.settings_text_size),
+                                minValue = Constants.MIN_THRESHOLD,
+                                maxValue = Constants.MAX_THRESHOLD,
+                                currentValue = prefs.shortSwipeThreshold,
+                                onValueSelected = { newSettingsSize ->
+                                    selectedShortSwipeThreshold = newSettingsSize.toFloat()
+                                    prefs.shortSwipeThreshold = newSettingsSize.toFloat()
+                                }
+                            )
+                        }
+                    )
+
+                    SettingsSelect(
+                        title = getLocalizedString(R.string.settings_long_threshold),
+                        option = selectedLongSwipeThreshold.toString(),
+                        fontSize = titleFontSize,
+                        onClick = {
+                            dialogBuilder.showSliderBottomSheet(
+                                context = context,
+                                title = getLocalizedString(R.string.settings_text_size),
+                                minValue = Constants.MIN_THRESHOLD,
+                                maxValue = Constants.MAX_THRESHOLD,
+                                currentValue = prefs.longSwipeThreshold,
+                                onValueSelected = { newSettingsSize ->
+                                    selectedLongSwipeThreshold = newSettingsSize.toFloat()
+                                    prefs.longSwipeThreshold = newSettingsSize.toFloat()
+                                }
+                            )
+                        }
+                    )
 
                     if (!isGestureNavigationEnabled(context)) {
                         Spacer(modifier = Modifier.height(52.dp))
