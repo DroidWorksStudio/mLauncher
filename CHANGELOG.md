@@ -8,6 +8,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - *(Settings)* Add swipe threshold settings and float support for slider - ([d8f710b](https://github.com/DroidWorksStudio/mLauncher/commit/d8f710bcd898bf778278835c594580b622c18e10))
 
+### Language Support:
+
+- Updated Language Files. ([#798](https://github.com/DroidWorksStudio/mLauncher/issues/798)) - ([6375353](https://github.com/DroidWorksStudio/mLauncher/commit/6375353d2590ae1c8113ecb94f8ef52cdfebf417))
+
 ## [1.10.7.2](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.7.2) - (17, June 2025)
 
 ### Implemented Enhancements:
