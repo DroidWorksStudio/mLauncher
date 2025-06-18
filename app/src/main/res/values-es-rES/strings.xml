@@ -198,8 +198,8 @@
     <string name="expert_options_unlocked">¡Opciones expertas desbloqueadas!</string>
     <string name="expert_options_tap_hint">%1$d toques más para desbloquear</string>
     <string name="settings_text_size">Texto en pantalla</string>
-    <string name="settings_short_threshold">Short Swipe Threshold</string>
-    <string name="settings_long_threshold">Long Swipe Threshold</string>
+    <string name="settings_short_threshold">Umbral de deslizamiento corto</string>
+    <string name="settings_long_threshold">Umbral de deslizamiento largo</string>
     <!-- App Page Strings -->
     <string name="hidden_apps">Aplicaciones ocultas</string>
     <string name="favorite_apps">Aplicaciones favoritas</string>
