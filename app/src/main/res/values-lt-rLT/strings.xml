@@ -50,7 +50,6 @@
     <string name="theme_mode">Temavimo režimas</string>
     <string name="app_language">Sąsajos kalba</string>
     <string name="font_family">Šrifto šeima</string>
-    <string name="settings_text_size">Nustatymai Teksto dydis</string>
     <string name="hide_search_view">Slėpti paieškos rodinį</string>
     <string name="show_floating_button">Rodyti sparčiuosius mygtukus</string>
     <string name="lock_orientation">Užrakto orientacija</string>
@@ -198,6 +197,9 @@
     <string name="expert_options_display">Rodyti eksperto parinktis</string>
     <string name="expert_options_unlocked">Ekspertų parinktys atrakintos!</string>
     <string name="expert_options_tap_hint">%1$d dar bakstelėjimai, kad atrakintumėte</string>
+    <string name="settings_text_size">Nustatymai Teksto dydis</string>
+    <string name="settings_short_threshold">Trumpas braukimo slenkstis</string>
+    <string name="settings_long_threshold">Ilgo braukimo slenkstis</string>
     <!-- App Page Strings -->
     <string name="hidden_apps">Paslėptos programėlės</string>
     <string name="favorite_apps">Mėgstamiausios programos</string>

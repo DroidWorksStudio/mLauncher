@@ -50,7 +50,6 @@
     <string name="theme_mode">Tema</string>
     <string name="app_language">Idioma</string>
     <string name="font_family">Familia tipográfica</string>
-    <string name="settings_text_size">Texto en pantalla</string>
     <string name="hide_search_view">Ocultar vista de búsqueda</string>
     <string name="show_floating_button">Mostrar botones de acceso directo</string>
     <string name="lock_orientation">Orientación de la cerradura</string>
@@ -198,6 +197,9 @@
     <string name="expert_options_display">Mostrar opciones de experto</string>
     <string name="expert_options_unlocked">¡Opciones expertas desbloqueadas!</string>
     <string name="expert_options_tap_hint">%1$d toques más para desbloquear</string>
+    <string name="settings_text_size">Texto en pantalla</string>
+    <string name="settings_short_threshold">Umbral de deslizamiento corto</string>
+    <string name="settings_long_threshold">Umbral de deslizamiento largo</string>
     <!-- App Page Strings -->
     <string name="hidden_apps">Aplicaciones ocultas</string>
     <string name="favorite_apps">Aplicaciones favoritas</string>

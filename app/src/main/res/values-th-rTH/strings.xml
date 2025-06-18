@@ -50,7 +50,6 @@
     <string name="theme_mode">โหมดธีม</string>
     <string name="app_language">ภาษาอินเทอร์เฟซ</string>
     <string name="font_family">ครอบครัวแบบอักษร</string>
-    <string name="settings_text_size">ขนาดตัวอักษรการตั้งค่า</string>
     <string name="hide_search_view">ซ่อนมุมมองการค้นหา</string>
     <string name="show_floating_button">แสดงปุ่มทางลัด</string>
     <string name="lock_orientation">ทิศทางการล็อค</string>
@@ -198,6 +197,9 @@
     <string name="expert_options_display">แสดงตัวเลือกผู้เชี่ยวชาญ</string>
     <string name="expert_options_unlocked">ปลดล็อคตัวเลือกผู้เชี่ยวชาญ!</string>
     <string name="expert_options_tap_hint">%1$d แตะอีกครั้งเพื่อปลดล็อค</string>
+    <string name="settings_text_size">ขนาดตัวอักษรการตั้งค่า</string>
+    <string name="settings_short_threshold">เกณฑ์การปัดสั้น</string>
+    <string name="settings_long_threshold">เกณฑ์การปัดยาว</string>
     <!-- App Page Strings -->
     <string name="hidden_apps">แอพที่ซ่อนอยู่</string>
     <string name="favorite_apps">แอปพลิเคชั่นที่ชื่นชอบ</string>

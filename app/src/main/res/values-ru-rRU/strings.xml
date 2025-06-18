@@ -50,7 +50,6 @@
     <string name="theme_mode">Режим темы</string>
     <string name="app_language">Язык интерфейса</string>
     <string name="font_family">Семейство шрифтов</string>
-    <string name="settings_text_size">Размер текста в настройках</string>
     <string name="hide_search_view">Скрыть Поиск Вид</string>
     <string name="show_floating_button">Показать кнопки быстрого доступа</string>
     <string name="lock_orientation">Блокировка ориентации</string>
@@ -198,6 +197,9 @@
     <string name="expert_options_display">Показать экспертные параметры</string>
     <string name="expert_options_unlocked">Разблокированы возможности эксперта!</string>
     <string name="expert_options_tap_hint">%1$d еще несколько нажатий для разблокировки</string>
+    <string name="settings_text_size">Размер текста в настройках</string>
+    <string name="settings_short_threshold">Порог короткого считывания</string>
+    <string name="settings_long_threshold">Длинный порог смахивания</string>
     <!-- App Page Strings -->
     <string name="hidden_apps">Скрытые приложения</string>
     <string name="favorite_apps">Любимые приложения</string>

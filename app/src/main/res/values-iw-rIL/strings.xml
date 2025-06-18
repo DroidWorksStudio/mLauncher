@@ -50,7 +50,6 @@
     <string name="theme_mode">סגנון רקע</string>
     <string name="app_language">שפת ממשק</string>
     <string name="font_family">משפחת גופן</string>
-    <string name="settings_text_size">הגדרות גודל טקסט</string>
     <string name="hide_search_view">הסתר תצוגת חיפוש</string>
     <string name="show_floating_button">הצג כפתורי קיצור</string>
     <string name="lock_orientation">נעילת כיוון</string>
@@ -198,6 +197,9 @@
     <string name="expert_options_display">הצג אפשרויות מומחים</string>
     <string name="expert_options_unlocked">אפשרויות מומחים פתוחות!</string>
     <string name="expert_options_tap_hint">%1$d עוד נגיעות לפתיחה</string>
+    <string name="settings_text_size">הגדרות גודל טקסט</string>
+    <string name="settings_short_threshold">סף החלקה קצר</string>
+    <string name="settings_long_threshold">סף החלקה ארוכה</string>
     <!-- App Page Strings -->
     <string name="hidden_apps">יישומים מוסתרים</string>
     <string name="favorite_apps">יישומים מועדפים</string>

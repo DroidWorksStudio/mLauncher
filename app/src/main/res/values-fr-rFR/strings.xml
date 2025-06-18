@@ -50,7 +50,6 @@
     <string name="theme_mode">Mode thème</string>
     <string name="app_language">Langue de l\'interface</string>
     <string name="font_family">Famille de polices</string>
-    <string name="settings_text_size">Taille du texte des paramètres</string>
     <string name="hide_search_view">Masquer la vue de recherche</string>
     <string name="show_floating_button">Afficher les boutons de raccourci</string>
     <string name="lock_orientation">Orientation du verrou</string>
@@ -198,6 +197,9 @@
     <string name="expert_options_display">Afficher les options d\'experts</string>
     <string name="expert_options_unlocked">Options expertes débloquées !</string>
     <string name="expert_options_tap_hint">%1$d plus de clics pour déverrouiller</string>
+    <string name="settings_text_size">Taille du texte des paramètres</string>
+    <string name="settings_short_threshold">Seuil de balayage court</string>
+    <string name="settings_long_threshold">Seuil de balayage long</string>
     <!-- App Page Strings -->
     <string name="hidden_apps">Applications masquées</string>
     <string name="favorite_apps">Applications préférées</string>

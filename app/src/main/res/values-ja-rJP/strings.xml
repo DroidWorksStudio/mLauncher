@@ -50,7 +50,6 @@
     <string name="theme_mode">テーマモード</string>
     <string name="app_language">インターフェース言語</string>
     <string name="font_family">フォントファミリー</string>
-    <string name="settings_text_size">設定文字サイズ</string>
     <string name="hide_search_view">検索ビューを非表示</string>
     <string name="show_floating_button">ショートカットボタンを表示</string>
     <string name="lock_orientation">方向をロック</string>
@@ -198,6 +197,9 @@
     <string name="expert_options_display">エキスパートオプションを表示</string>
     <string name="expert_options_unlocked">エキスパートオプションがロック解除されました!</string>
     <string name="expert_options_tap_hint">%1$d あとタップでロック解除</string>
+    <string name="settings_text_size">設定文字サイズ</string>
+    <string name="settings_short_threshold">ショートスワイプしきい値</string>
+    <string name="settings_long_threshold">ロングスワイプしきい値</string>
     <!-- App Page Strings -->
     <string name="hidden_apps">非表示のアプリ</string>
     <string name="favorite_apps">お気に入りのアプリ</string>
