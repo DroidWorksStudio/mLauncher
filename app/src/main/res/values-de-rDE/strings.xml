@@ -50,7 +50,6 @@
     <string name="theme_mode">Theme-Modus</string>
     <string name="app_language">Schnittstellensprache</string>
     <string name="font_family">Schriftfamilie</string>
-    <string name="settings_text_size">Einstellungen Textgröße</string>
     <string name="hide_search_view">Suchansicht ausblenden</string>
     <string name="show_floating_button">Verknüpfungsschaltflächen anzeigen</string>
     <string name="lock_orientation">Ausrichtung sperren</string>
@@ -198,6 +197,9 @@
     <string name="expert_options_display">Expertenoptionen anzeigen</string>
     <string name="expert_options_unlocked">Expertenoptionen freigeschaltet!</string>
     <string name="expert_options_tap_hint">%1$d weitere Klicks zum Entsperren</string>
+    <string name="settings_text_size">Einstellungen Textgröße</string>
+    <string name="settings_short_threshold">Short Swipe Threshold</string>
+    <string name="settings_long_threshold">Long Swipe Threshold</string>
     <!-- App Page Strings -->
     <string name="hidden_apps">Versteckte Apps</string>
     <string name="favorite_apps">Lieblings-Apps</string>
