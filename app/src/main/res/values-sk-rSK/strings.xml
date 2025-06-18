@@ -50,7 +50,6 @@
     <string name="theme_mode">Režim témy</string>
     <string name="app_language">Jazyk rozhrania</string>
     <string name="font_family">Rodina písiem</string>
-    <string name="settings_text_size">Nastavenia Veľkosť textu</string>
     <string name="hide_search_view">Skryť zobrazenie vyhľadávania</string>
     <string name="show_floating_button">Zobraziť tlačidlá skratiek</string>
     <string name="lock_orientation">Zamknúť orientáciu</string>
@@ -198,6 +197,9 @@
     <string name="expert_options_display">Zobraziť možnosti pre expertov</string>
     <string name="expert_options_unlocked">Možnosti pre expertov sú odomknuté!</string>
     <string name="expert_options_tap_hint">%1$d viac klepnutí na odomknutie</string>
+    <string name="settings_text_size">Nastavenia Veľkosť textu</string>
+    <string name="settings_short_threshold">Short Swipe Threshold</string>
+    <string name="settings_long_threshold">Long Swipe Threshold</string>
     <!-- App Page Strings -->
     <string name="hidden_apps">Skryté aplikácie</string>
     <string name="favorite_apps">Obľúbené aplikácie</string>
