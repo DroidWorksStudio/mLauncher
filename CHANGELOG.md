@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Bug Fixes:
+
+- *(Settings)* Correct titles and ranges for swipe threshold sliders - ([f82c58a](https://github.com/DroidWorksStudio/mLauncher/commit/f82c58a07eba5e8d95d24ea150aac95f994f53f1))
+
 ### Refactoring:
 
 - Adjust default swipe gesture thresholds - ([43d28a0](https://github.com/DroidWorksStudio/mLauncher/commit/43d28a0673ad108961fe51385ce5953dfa96fadd))
