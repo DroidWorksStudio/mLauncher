@@ -46,10 +46,11 @@
     <string name="settings_donation_dialog">Wesprzyj nas</string>
     <!-- Strings used for features settings -->
     <string name="features_settings_title">Cechy</string>
-    <string name="user_preferences">Preferencje użytkownika</string>
+    <string name="personalization">Personalizacja</string>
     <string name="theme_mode">Tryb motywu</string>
     <string name="app_language">Język interfejsu</string>
     <string name="font_family">Rodzina czcionek</string>
+    <string name="search_and_app_list">Wyszukaj &amp; Lista aplikacji</string>
     <string name="hide_search_view">Ukryj widok wyszukiwania</string>
     <string name="show_floating_button">Pokaż przyciski skrótów</string>
     <string name="lock_orientation">Zablokuj orientację</string>
@@ -65,7 +66,7 @@
     <string name="apps_on_home_screen">Liczba aplikacji domowych</string>
     <string name="pages_on_home_screen">Numer stron</string>
     <string name="enable_home_pager">Włącz pager główny</string>
-    <string name="battery_date_time">Bateria &amp; Data/Godzina</string>
+    <string name="info_tiles">Kafelki informacyjne</string>
     <string name="show_clock">Pokaż zegar</string>
     <string name="show_clock_format">Format pokazu (AM/PM)</string>
     <string name="show_date">Pokaż datę</string>
@@ -194,6 +195,8 @@
     <string name="advanced_settings_share_application_description_addon">Pobierz teraz na %1$s i zobacz, o czym wszyscy mówią! %2$s\n</string>
     <!-- Strings used for expert settings -->
     <string name="expert_settings_title">Ekspert</string>
+    <string name="toggleable_items">Elementy przełączalne</string>
+    <string name="threshold">Próg</string>
     <string name="expert_options_display">Pokaż opcje eksperta</string>
     <string name="expert_options_unlocked">Odblokowano opcje eksperckie!</string>
     <string name="expert_options_tap_hint">%1$d więcej stuknięć do odblokowania</string>
@@ -306,9 +309,9 @@
     <string name="category">Kategoria</string>
     <string name="priority">Priorytet</string>
     <string name="settings_context_menu_title">Menu kontekstowe</string>
-    <string name="settings_context_menu_option">Dostosuj widoczne elementy</string>
+    <string name="settings_context_menu_option">Wybierz elementy do wyświetlenia</string>
     <string name="settings_home_buttons_title">Przyciski główne</string>
-    <string name="settings_home_buttons_option">Dostosuj widoczne elementy</string>
+    <string name="settings_home_buttons_option">Wybierz elementy do wyświetlenia</string>
     <string-array name="priorities">
         <item>Niski</item>
         <item>Średni</item>
