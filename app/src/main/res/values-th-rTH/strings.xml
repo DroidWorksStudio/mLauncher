@@ -46,10 +46,11 @@
     <string name="settings_donation_dialog">สนับสนุนเรา</string>
     <!-- Strings used for features settings -->
     <string name="features_settings_title">คุณสมบัติ</string>
-    <string name="user_preferences">การตั้งค่าผู้ใช้</string>
+    <string name="personalization">การปรับแต่งส่วนบุคคล</string>
     <string name="theme_mode">โหมดธีม</string>
     <string name="app_language">ภาษาอินเทอร์เฟซ</string>
     <string name="font_family">ครอบครัวแบบอักษร</string>
+    <string name="search_and_app_list">ค้นหา &amp; รายการแอป</string>
     <string name="hide_search_view">ซ่อนมุมมองการค้นหา</string>
     <string name="show_floating_button">แสดงปุ่มทางลัด</string>
     <string name="lock_orientation">ทิศทางการล็อค</string>
@@ -65,7 +66,7 @@
     <string name="apps_on_home_screen">จำนวนแอปพลิเคชั่นภายในบ้าน</string>
     <string name="pages_on_home_screen">เลขหน้า</string>
     <string name="enable_home_pager">เปิดใช้งานโฮมเพจเจอร์</string>
-    <string name="battery_date_time">แบตเตอรี่ &amp; วันที่/เวลา</string>
+    <string name="info_tiles">กระเบื้องข้อมูล</string>
     <string name="show_clock">แสดงนาฬิกา</string>
     <string name="show_clock_format">รูปแบบการแสดง (AM/PM)</string>
     <string name="show_date">แสดงวันที่</string>
@@ -194,6 +195,8 @@
     <string name="advanced_settings_share_application_description_addon">รับเลยตอนนี้ที่ %1$s และดูว่าทุกคนกำลังพูดถึงอะไร! %2$s\n</string>
     <!-- Strings used for expert settings -->
     <string name="expert_settings_title">ผู้เชี่ยวชาญ</string>
+    <string name="toggleable_items">รายการที่สามารถสลับได้</string>
+    <string name="threshold">เกณฑ์</string>
     <string name="expert_options_display">แสดงตัวเลือกผู้เชี่ยวชาญ</string>
     <string name="expert_options_unlocked">ปลดล็อคตัวเลือกผู้เชี่ยวชาญ!</string>
     <string name="expert_options_tap_hint">%1$d แตะอีกครั้งเพื่อปลดล็อค</string>
@@ -306,9 +309,9 @@
     <string name="category">หมวดหมู่</string>
     <string name="priority">ลำดับความสำคัญ</string>
     <string name="settings_context_menu_title">เมนูบริบท</string>
-    <string name="settings_context_menu_option">ปรับแต่งรายการที่มองเห็นได้</string>
+    <string name="settings_context_menu_option">เลือกสินค้าที่จะแสดง</string>
     <string name="settings_home_buttons_title">ปุ่มโฮม</string>
-    <string name="settings_home_buttons_option">ปรับแต่งรายการที่มองเห็นได้</string>
+    <string name="settings_home_buttons_option">เลือกสินค้าที่จะแสดง</string>
     <string-array name="priorities">
         <item>ต่ำ</item>
         <item>ปานกลาง</item>
