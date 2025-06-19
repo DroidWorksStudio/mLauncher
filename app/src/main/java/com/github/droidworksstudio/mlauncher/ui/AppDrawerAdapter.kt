@@ -320,6 +320,12 @@ class AppDrawerAdapter(
             appClickListener(appFilteredList[0])
     }
 
+    fun getFirstInList(): String? {
+        if (appFilteredList.isNotEmpty())
+            return appFilteredList[0].label
+        return null
+    }
+
     class ViewHolder(itemView: AdapterAppDrawerBinding) : RecyclerView.ViewHolder(itemView.root) {
         val appHide: TextView = itemView.appHide
         val appLock: TextView = itemView.appLock

@@ -307,27 +307,41 @@ class AppDrawerFragment : Fragment() {
                 var searchQuery = query
 
                 if (!searchQuery.isNullOrEmpty()) {
+                    val trimmedQuery = searchQuery.trim()
+
                     when {
-                        searchQuery.startsWith("!") -> {
-                            searchQuery = searchQuery.substringAfter("!")
-                            requireContext().searchCustomSearchEngine(searchQuery.trim(), prefs)
+                        trimmedQuery.startsWith("!") -> {
+                            val customQuery = trimmedQuery.substringAfter("!")
+                            requireContext().searchCustomSearchEngine(customQuery, prefs)
+                        }
+
+                        adapter.itemCount == 1 -> {
+                            val firstItem = adapter.getFirstInList().toString()
+                            if (firstItem.equals(trimmedQuery, ignoreCase = true)) {
+                                adapter.launchFirstInList()
+                            } else {
+                                requireContext().searchOnPlayStore(trimmedQuery)
+                            }
+                        }
+
+                        adapter.itemCount == 0 -> {
+                            val playStoreHandled = requireContext().searchOnPlayStore(trimmedQuery)
+                            if (!playStoreHandled) {
+                                requireContext().openSearch(trimmedQuery)
+                            }
+                        }
+
+                        trimmedQuery.startsWith("#") -> {
+                            return true
                         }
 
                         else -> {
-                            // Handle unsupported search engines or invalid queries
-                            if (adapter.itemCount == 0 && requireContext().searchOnPlayStore(searchQuery.trim()).not()
-                            ) {
-                                requireContext().openSearch(searchQuery.trim())
-                            } else if (
-                                adapter.itemCount == 1 && adapter.getItemAt(0).toString().equals(searchQuery.trim(), ignoreCase = true)
-                            ) {
-                                adapter.launchFirstInList()
-                            } else {
-                                requireContext().searchOnPlayStore(searchQuery.trim())
-                            }
-                            return true // Exit the function
+                            requireContext().searchOnPlayStore(trimmedQuery)
                         }
                     }
+
+                    return true
+
                 }
                 return true
             }
