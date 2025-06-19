@@ -29,7 +29,7 @@
             <a href='https://github.com/DroidWorksStudio/mLauncher/releases/latest'><img src='https://img.shields.io/github/downloads/DroidWorksStudio/mLauncher/total?color=50FA7B&style=flat-square' alt="releases"></a>
             <a href='https://github.com/DroidWorksStudio/mLauncher/releases/latest'><img src="https://img.shields.io/github/downloads/DroidWorksStudio/mLauncher/latest/total?color=50FA7B&style=flat-square" alt="GitHub Downloads (all assets, latest release)"></a>
             <br>
-	    <a href='https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/app.mlauncher.yml'><img alt="F-Droid (including pre-releases)" src="https://img.shields.io/endpoint?url=https://apt.izzysoft.de/fdroid/api/v1/shield/app.mlauncher&color=FFB86C&style=flat-square"></a>
+	    <a href='https://apt.izzysoft.de/fdroid/index/apk/app.mlauncher'><img alt="IzzyOnDroid (including pre-releases)" src="https://img.shields.io/endpoint?url=https://apt.izzysoft.de/fdroid/api/v1/shield/app.mlauncher&color=FFB86C&style=flat-square"></a>
             <a href='https://github.com/DroidWorksStudio/mLauncher/releases/latest'><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/DroidWorksStudio/mLauncher?color=FFB86C&style=flat-square"></a>
 	    <br>
             <a href='https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/app.mlauncher.yml'><img alt="F-Droid (including pre-releases)" src="https://img.shields.io/f-droid/v/app.mlauncher?color=FFB86C&style=flat-square"></a>
