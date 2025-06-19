@@ -2452,9 +2452,9 @@ class SettingsFragment : Fragment() {
                         onClick = {
                             dialogBuilder.showSliderBottomSheet(
                                 context = context,
-                                title = getLocalizedString(R.string.settings_text_size),
+                                title = getLocalizedString(R.string.settings_short_threshold),
                                 minValue = Constants.MIN_THRESHOLD,
-                                maxValue = Constants.MAX_THRESHOLD,
+                                maxValue = selectedLongSwipeThreshold,
                                 currentValue = prefs.shortSwipeThreshold,
                                 onValueSelected = { newSettingsSize ->
                                     selectedShortSwipeThreshold = newSettingsSize.toFloat()
@@ -2471,8 +2471,8 @@ class SettingsFragment : Fragment() {
                         onClick = {
                             dialogBuilder.showSliderBottomSheet(
                                 context = context,
-                                title = getLocalizedString(R.string.settings_text_size),
-                                minValue = Constants.MIN_THRESHOLD,
+                                title = getLocalizedString(R.string.settings_long_threshold),
+                                minValue = selectedShortSwipeThreshold,
                                 maxValue = Constants.MAX_THRESHOLD,
                                 currentValue = prefs.longSwipeThreshold,
                                 onValueSelected = { newSettingsSize ->
