@@ -525,9 +525,9 @@ class AppDrawerFragment : Fragment() {
 
             if (flag == AppDrawerFlag.HiddenApps) {
                 newSet.remove(appModel.activityPackage) // for backward compatibility
-                newSet.remove(appModel.activityPackage + "|" + appModel.user.toString())
+                newSet.remove(appModel.activityPackage + "|" + appModel.user.hashCode())
             } else {
-                newSet.add(appModel.activityPackage + "|" + appModel.user.toString())
+                newSet.add(appModel.activityPackage + "|" + appModel.user.hashCode())
             }
 
             prefs.hiddenApps = newSet
