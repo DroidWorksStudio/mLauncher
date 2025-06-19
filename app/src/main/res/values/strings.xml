@@ -65,11 +65,14 @@
     <!-- Strings used for features settings -->
     <string name="features_settings_title">Features</string>
 
-    <string name="user_preferences">User Preferences</string>
+    <string name="personalization">Personalization</string>
 
     <string name="theme_mode">Theme mode</string>
     <string name="app_language">Interface Language</string>
     <string name="font_family">Font Family</string>
+
+    <string name="search_and_app_list">Search &amp; App List</string>
+
     <string name="hide_search_view">Hide Search View</string>
     <string name="show_floating_button">Show Shortcut Buttons</string>
     <string name="lock_orientation">Lock Orientation</string>
@@ -90,7 +93,7 @@
     <string name="pages_on_home_screen">Number of Pages</string>
     <string name="enable_home_pager">Enable Home Pager</string>
 
-    <string name="battery_date_time">Battery &amp; Date/Time</string>
+    <string name="info_tiles">Info Tiles</string>
 
     <string name="show_clock">Show Clock</string>
     <string name="show_clock_format">Show Format (AM/PM)</string>
@@ -262,6 +265,9 @@
     <!-- Strings used for expert settings -->
     <string name="expert_settings_title">Expert</string>
 
+    <string name="toggleable_items">Toggleable Items</string>
+    <string name="threshold">Threshold</string>
+
     <string name="expert_options_display">Show Expert Options</string>
 
     <string name="expert_options_unlocked">Expert Options Unlocked!</string>
@@ -392,10 +398,10 @@
     <string name="priority">Priority</string>
 
     <string name="settings_context_menu_title">Context Menu</string>
-    <string name="settings_context_menu_option">Customize visible items</string>
+    <string name="settings_context_menu_option">Select items to display</string>
 
     <string name="settings_home_buttons_title">Home Buttons</string>
-    <string name="settings_home_buttons_option">Customize visible items</string>
+    <string name="settings_home_buttons_option">Select items to display</string>
 
     <string-array name="priorities">
         <item>Low</item>
