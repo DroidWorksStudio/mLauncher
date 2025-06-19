@@ -10,6 +10,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.content.pm.ApplicationInfo
+import android.content.pm.PackageManager
 import android.content.res.Configuration
 import android.net.Uri
 import android.os.BatteryManager
@@ -184,15 +185,31 @@ fun Context.openDeviceSettings() {
 
 fun Context.openWebBrowser() {
     try {
-        val intent = Intent(Intent.ACTION_VIEW, "http://".toUri()).apply {
-            flags = Intent.FLAG_ACTIVITY_NEW_TASK
+        val defaultBrowserPackage = getDefaultBrowserPackageName()
+        if (defaultBrowserPackage != null) {
+            val launchIntent = packageManager.getLaunchIntentForPackage(defaultBrowserPackage)
+            if (launchIntent != null) {
+                launchIntent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                startActivity(launchIntent)
+            } else {
+                d("openDefaultBrowserApp", "No launch intent for package $defaultBrowserPackage")
+            }
+        } else {
+            d("openDefaultBrowserApp", "No default browser package found")
         }
-        this.startActivity(intent)
     } catch (e: Exception) {
-        d("openWebBrowser", e.toString())
+        d("openDefaultBrowserApp", e.toString())
     }
-    CrashHandler.logUserAction("Web Browser Launched")
+    CrashHandler.logUserAction("Default Browser App Launched")
 }
+
+
+fun Context.getDefaultBrowserPackageName(): String? {
+    val intent = Intent(Intent.ACTION_VIEW, "https://".toUri())
+    val resolveInfo = packageManager.resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY)
+    return resolveInfo?.activityInfo?.packageName
+}
+
 
 fun Context.openBatteryManager() {
     try {
