@@ -11,6 +11,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Simplify search query handling in AppDrawerFragment - ([2f9fd67](https://github.com/DroidWorksStudio/mLauncher/commit/2f9fd6799d3bad8e2e7de2ff1066896460691cdc))
 - Adjust default swipe gesture thresholds - ([43d28a0](https://github.com/DroidWorksStudio/mLauncher/commit/43d28a0673ad108961fe51385ce5953dfa96fadd))
 
 ## [1.10.7.3](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.7.3) - (18, June 2025)
