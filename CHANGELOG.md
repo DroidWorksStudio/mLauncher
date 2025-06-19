@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file. See [conven
 ### Bug Fixes:
 
 - *(Settings)* Correct titles and ranges for swipe threshold sliders - ([f82c58a](https://github.com/DroidWorksStudio/mLauncher/commit/f82c58a07eba5e8d95d24ea150aac95f994f53f1))
+- Use UserHandle.hashCode() for hidden app identification - ([456f44b](https://github.com/DroidWorksStudio/mLauncher/commit/456f44bc69cfd0fe6ad4031c6ddab7d9146de4f2))
 
 ### Refactoring:
 
