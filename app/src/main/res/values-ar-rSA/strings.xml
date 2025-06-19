@@ -46,10 +46,11 @@
     <string name="settings_donation_dialog">ادعمنا</string>
     <!-- Strings used for features settings -->
     <string name="features_settings_title">سمات</string>
-    <string name="user_preferences">تفضيلات المستخدم</string>
+    <string name="personalization">التخصيص</string>
     <string name="theme_mode">وضع السمة</string>
     <string name="app_language">لغة الواجهة</string>
     <string name="font_family">خط العائلة</string>
+    <string name="search_and_app_list">بحث &amp; قائمة التطبيقات</string>
     <string name="hide_search_view">إخفاء عرض البحث</string>
     <string name="show_floating_button">إظهار أزرار الاختصار</string>
     <string name="lock_orientation">اتجاه القفل</string>
@@ -65,7 +66,7 @@
     <string name="apps_on_home_screen">عدد التطبيقات المنزلية</string>
     <string name="pages_on_home_screen">عدد الصفحات</string>
     <string name="enable_home_pager">تمكين جهاز النداء الرئيسي</string>
-    <string name="battery_date_time">البطارية &amp; التاريخ/الوقت</string>
+    <string name="info_tiles">بلاط المعلومات</string>
     <string name="show_clock">عرض الساعة</string>
     <string name="show_clock_format">تنسيق العرض (صباحًا/مساءً)</string>
     <string name="show_date">إظهار التاريخ</string>
@@ -194,6 +195,8 @@
     <string name="advanced_settings_share_application_description_addon">احصل عليه الآن على %1$s وشاهد ما يتحدث عنه الجميع! %2$s\n</string>
     <!-- Strings used for expert settings -->
     <string name="expert_settings_title">خبير</string>
+    <string name="toggleable_items">العناصر القابلة للتبديل</string>
+    <string name="threshold">عتبة</string>
     <string name="expert_options_display">إظهار خيارات الخبراء</string>
     <string name="expert_options_unlocked">خيارات الخبراء متاحة الآن!</string>
     <string name="expert_options_tap_hint">%1$d المزيد من النقرات لفتح القفل</string>
@@ -306,9 +309,9 @@
     <string name="category">فئة</string>
     <string name="priority">أولوية</string>
     <string name="settings_context_menu_title">قائمة السياق</string>
-    <string name="settings_context_menu_option">تخصيص العناصر المرئية</string>
+    <string name="settings_context_menu_option">حدد العناصر المراد عرضها</string>
     <string name="settings_home_buttons_title">أزرار الصفحة الرئيسية</string>
-    <string name="settings_home_buttons_option">تخصيص العناصر المرئية</string>
+    <string name="settings_home_buttons_option">حدد العناصر المراد عرضها</string>
     <string-array name="priorities">
         <item>قليل</item>
         <item>واسطة</item>
