@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
+## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
+
+### Refactoring:
+
+- Adjust default swipe gesture thresholds - ([43d28a0](https://github.com/DroidWorksStudio/mLauncher/commit/43d28a0673ad108961fe51385ce5953dfa96fadd))
+
 ## [1.10.7.3](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.7.3) - (18, June 2025)
 
 ### Implemented Enhancements:
