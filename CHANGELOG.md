@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 - *(Context)* Open default browser app - ([5e74bb7](https://github.com/DroidWorksStudio/mLauncher/commit/5e74bb730969ce8e122c03e00073dd2d18c36965))
 - *(Settings)* Correct titles and ranges for swipe threshold sliders - ([f82c58a](https://github.com/DroidWorksStudio/mLauncher/commit/f82c58a07eba5e8d95d24ea150aac95f994f53f1))
+- Remove unused SYSTEM_ALERT_WINDOW permission - ([3732265](https://github.com/DroidWorksStudio/mLauncher/commit/3732265bbdcb2bc0ecf86a3fa26a7ba036462b24))
 - Use UserHandle.hashCode() for hidden app identification - ([456f44b](https://github.com/DroidWorksStudio/mLauncher/commit/456f44bc69cfd0fe6ad4031c6ddab7d9146de4f2))
 
 ### Language Support:
