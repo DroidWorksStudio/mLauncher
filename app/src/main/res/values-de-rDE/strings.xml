@@ -46,10 +46,11 @@
     <string name="settings_donation_dialog">Unterstützen Sie uns</string>
     <!-- Strings used for features settings -->
     <string name="features_settings_title">Merkmale</string>
-    <string name="user_preferences">Benutzereinstellungen</string>
+    <string name="personalization">Personalisierung</string>
     <string name="theme_mode">Theme-Modus</string>
     <string name="app_language">Schnittstellensprache</string>
     <string name="font_family">Schriftfamilie</string>
+    <string name="search_and_app_list">Suche &amp; App-Liste</string>
     <string name="hide_search_view">Suchansicht ausblenden</string>
     <string name="show_floating_button">Verknüpfungsschaltflächen anzeigen</string>
     <string name="lock_orientation">Ausrichtung sperren</string>
@@ -65,7 +66,7 @@
     <string name="apps_on_home_screen">Anzahl der Home-Apps</string>
     <string name="pages_on_home_screen">Seitenzahl</string>
     <string name="enable_home_pager">Aktivieren Sie den Home Pager</string>
-    <string name="battery_date_time">Batterie &amp; Datum/Uhrzeit</string>
+    <string name="info_tiles">Infokacheln</string>
     <string name="show_clock">Uhr anzeigen</string>
     <string name="show_clock_format">Format anzeigen (AM/PM)</string>
     <string name="show_date">Datum anzeigen</string>
@@ -194,6 +195,8 @@
     <string name="advanced_settings_share_application_description_addon">Hol es dir jetzt auf %1$s und sieh, worüber alle reden! %2$s\n</string>
     <!-- Strings used for expert settings -->
     <string name="expert_settings_title">Experte</string>
+    <string name="toggleable_items">Umschaltbare Elemente</string>
+    <string name="threshold">Schwelle</string>
     <string name="expert_options_display">Expertenoptionen anzeigen</string>
     <string name="expert_options_unlocked">Expertenoptionen freigeschaltet!</string>
     <string name="expert_options_tap_hint">%1$d weitere Klicks zum Entsperren</string>
@@ -306,9 +309,9 @@
     <string name="category">Kategorie</string>
     <string name="priority">Priorität</string>
     <string name="settings_context_menu_title">Kontextmenü</string>
-    <string name="settings_context_menu_option">Sichtbare Elemente anpassen</string>
+    <string name="settings_context_menu_option">Auswählen der anzuzeigenden Elemente</string>
     <string name="settings_home_buttons_title">Home-Schaltflächen</string>
-    <string name="settings_home_buttons_option">Sichtbare Elemente anpassen</string>
+    <string name="settings_home_buttons_option">Auswählen der anzuzeigenden Elemente</string>
     <string-array name="priorities">
         <item>Niedrig</item>
         <item>Medium</item>

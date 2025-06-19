@@ -46,10 +46,11 @@
     <string name="settings_donation_dialog">Sostienici</string>
     <!-- Strings used for features settings -->
     <string name="features_settings_title">Caratteristiche</string>
-    <string name="user_preferences">Preferenze utente</string>
+    <string name="personalization">Personalizzazione</string>
     <string name="theme_mode">Modalità tema</string>
     <string name="app_language">Lingua Dell\'Interfaccia</string>
     <string name="font_family">Famiglia di font</string>
+    <string name="search_and_app_list">Cerca &amp; Elenco app</string>
     <string name="hide_search_view">Nascondi la vista di ricerca</string>
     <string name="show_floating_button">Mostra pulsanti di scelta rapida</string>
     <string name="lock_orientation">Orientamento del blocco</string>
@@ -65,7 +66,7 @@
     <string name="apps_on_home_screen">Numero di app per la casa</string>
     <string name="pages_on_home_screen">Numero di pagine</string>
     <string name="enable_home_pager">Abilita l\'Home Pager iniziale</string>
-    <string name="battery_date_time">Batteria &amp; Data/Ora</string>
+    <string name="info_tiles">Riquadri informativi</string>
     <string name="show_clock">Mostra orologio</string>
     <string name="show_clock_format">Mostra formato (AM/PM)</string>
     <string name="show_date">Mostra data</string>
@@ -194,6 +195,8 @@
     <string name="advanced_settings_share_application_description_addon">Scaricalo ora su %1$s e scopri di cosa parlano tutti! %2$s\n</string>
     <!-- Strings used for expert settings -->
     <string name="expert_settings_title">Esperto</string>
+    <string name="toggleable_items">Elementi attivabili/disattivabili</string>
+    <string name="threshold">Soglia</string>
     <string name="expert_options_display">Mostra opzioni esperte</string>
     <string name="expert_options_unlocked">Opzioni esperte sbloccate!</string>
     <string name="expert_options_tap_hint">%1$d altri tocchi per sbloccare</string>
@@ -306,9 +309,9 @@
     <string name="category">Categoria</string>
     <string name="priority">Priorità</string>
     <string name="settings_context_menu_title">Menu contestuale</string>
-    <string name="settings_context_menu_option">Personalizza gli elementi visibili</string>
+    <string name="settings_context_menu_option">Seleziona gli elementi da visualizzare</string>
     <string name="settings_home_buttons_title">Pulsanti Home</string>
-    <string name="settings_home_buttons_option">Personalizza gli elementi visibili</string>
+    <string name="settings_home_buttons_option">Seleziona gli elementi da visualizzare</string>
     <string-array name="priorities">
         <item>Basso</item>
         <item>Medio</item>

@@ -46,10 +46,11 @@
     <string name="settings_donation_dialog">Bizi Destekleyin</string>
     <!-- Strings used for features settings -->
     <string name="features_settings_title">Özellikler</string>
-    <string name="user_preferences">Kullanıcı Tercihleri</string>
+    <string name="personalization">Kişiselleştirme</string>
     <string name="theme_mode">Tema modu</string>
     <string name="app_language">Arayüz Dili</string>
     <string name="font_family">Font ailesi</string>
+    <string name="search_and_app_list">Ara &amp; Uygulama Listesi</string>
     <string name="hide_search_view">Arama Görünümünü Gizle</string>
     <string name="show_floating_button">Kısayol Düğmelerini Göster</string>
     <string name="lock_orientation">Kilit Yönlendirmesi</string>
@@ -65,7 +66,7 @@
     <string name="apps_on_home_screen">Ev Uygulamalarının Sayısı</string>
     <string name="pages_on_home_screen">Sayfa sayısı</string>
     <string name="enable_home_pager">Ana Sayfa Cihazını Etkinleştir</string>
-    <string name="battery_date_time">Pil &amp; Tarih/Saat</string>
+    <string name="info_tiles">Bilgi Kutucukları</string>
     <string name="show_clock">Saati göster</string>
     <string name="show_clock_format">Gösteri Formatı (AM/PM)</string>
     <string name="show_date">Tarih\'i göster</string>
@@ -194,6 +195,8 @@
     <string name="advanced_settings_share_application_description_addon">Hemen %1$s adresinden edinin ve herkesin ne hakkında konuştuğunu görün! %2$s\n</string>
     <!-- Strings used for expert settings -->
     <string name="expert_settings_title">Uzman</string>
+    <string name="toggleable_items">Değiştirilebilir Öğeler</string>
+    <string name="threshold">Eşik</string>
     <string name="expert_options_display">Uzman Seçeneklerini Göster</string>
     <string name="expert_options_unlocked">Uzman Seçenekleri Açıldı!</string>
     <string name="expert_options_tap_hint">%1$d kilidini açmak için daha fazla dokunuş</string>
@@ -306,9 +309,9 @@
     <string name="category">Kategori</string>
     <string name="priority">Öncelik</string>
     <string name="settings_context_menu_title">Bağlam Menüsü</string>
-    <string name="settings_context_menu_option">Görünür öğeleri özelleştir</string>
+    <string name="settings_context_menu_option">Görüntülenecek öğeleri seçin</string>
     <string name="settings_home_buttons_title">Ana Sayfa Düğmeleri</string>
-    <string name="settings_home_buttons_option">Görünür öğeleri özelleştir</string>
+    <string name="settings_home_buttons_option">Görüntülenecek öğeleri seçin</string>
     <string-array name="priorities">
         <item>Düşük</item>
         <item>Orta</item>

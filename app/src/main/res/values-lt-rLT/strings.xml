@@ -46,10 +46,11 @@
     <string name="settings_donation_dialog">Paremkite mus</string>
     <!-- Strings used for features settings -->
     <string name="features_settings_title">Savybės</string>
-    <string name="user_preferences">Vartotojo nuostatos</string>
+    <string name="personalization">Personalizavimas</string>
     <string name="theme_mode">Temavimo režimas</string>
     <string name="app_language">Sąsajos kalba</string>
     <string name="font_family">Šrifto šeima</string>
+    <string name="search_and_app_list">Paieška &amp; Programų sąrašas</string>
     <string name="hide_search_view">Slėpti paieškos rodinį</string>
     <string name="show_floating_button">Rodyti sparčiuosius mygtukus</string>
     <string name="lock_orientation">Užrakto orientacija</string>
@@ -65,7 +66,7 @@
     <string name="apps_on_home_screen">Namų programų skaičius</string>
     <string name="pages_on_home_screen">Puslapių skaičius</string>
     <string name="enable_home_pager">Įjungti pradžios puslapį</string>
-    <string name="battery_date_time">Baterija &amp; Data/Laikas</string>
+    <string name="info_tiles">Informacijos plytelės</string>
     <string name="show_clock">Rodyti laikrodį</string>
     <string name="show_clock_format">Rodyti formatą (AM/PM)</string>
     <string name="show_date">Rodyti datą</string>
@@ -194,6 +195,8 @@
     <string name="advanced_settings_share_application_description_addon">Gaukite jį dabar %1$s ir pažiūrėkite, apie ką visi kalba! %2$s\n</string>
     <!-- Strings used for expert settings -->
     <string name="expert_settings_title">Ekspertas</string>
+    <string name="toggleable_items">Perjungiami elementai</string>
+    <string name="threshold">Slenkstis</string>
     <string name="expert_options_display">Rodyti eksperto parinktis</string>
     <string name="expert_options_unlocked">Ekspertų parinktys atrakintos!</string>
     <string name="expert_options_tap_hint">%1$d dar bakstelėjimai, kad atrakintumėte</string>
@@ -308,9 +311,9 @@ Jūs bet kada galite išjungti šią prieigą savo įrenginio nustatymuose.</str
     <string name="category">Kategorija</string>
     <string name="priority">Pirmenybė</string>
     <string name="settings_context_menu_title">Kontekstinis meniu</string>
-    <string name="settings_context_menu_option">Tinkinti matomus elementus</string>
+    <string name="settings_context_menu_option">Pasirinkite elementus, kuriuos norite rodyti</string>
     <string name="settings_home_buttons_title">Namų mygtukai</string>
-    <string name="settings_home_buttons_option">Tinkinti matomus elementus</string>
+    <string name="settings_home_buttons_option">Pasirinkite elementus, kuriuos norite rodyti</string>
     <string-array name="priorities">
         <item>Žemas</item>
         <item>Vidutinis</item>

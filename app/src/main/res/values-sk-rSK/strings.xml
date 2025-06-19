@@ -46,10 +46,11 @@
     <string name="settings_donation_dialog">Podporte nás</string>
     <!-- Strings used for features settings -->
     <string name="features_settings_title">Vlastnosti</string>
-    <string name="user_preferences">Používateľské preferencie</string>
+    <string name="personalization">Personalizácia</string>
     <string name="theme_mode">Režim témy</string>
     <string name="app_language">Jazyk rozhrania</string>
     <string name="font_family">Rodina písiem</string>
+    <string name="search_and_app_list">Vyhľadávanie &amp; Zoznam aplikácií</string>
     <string name="hide_search_view">Skryť zobrazenie vyhľadávania</string>
     <string name="show_floating_button">Zobraziť tlačidlá skratiek</string>
     <string name="lock_orientation">Zamknúť orientáciu</string>
@@ -65,7 +66,7 @@
     <string name="apps_on_home_screen">Počet domácich aplikácií</string>
     <string name="pages_on_home_screen">Počet strán</string>
     <string name="enable_home_pager">Povoliť domovskú stránku</string>
-    <string name="battery_date_time">Batéria &amp; Dátum/čas</string>
+    <string name="info_tiles">Informačné dlaždice</string>
     <string name="show_clock">Zobraziť hodiny</string>
     <string name="show_clock_format">Zobraziť formát (AM/PM)</string>
     <string name="show_date">Zobraziť dátum</string>
@@ -194,6 +195,8 @@
     <string name="advanced_settings_share_application_description_addon">Získajte to teraz na %1$s a uvidíte, o čom všetci hovoria! %2$s\n</string>
     <!-- Strings used for expert settings -->
     <string name="expert_settings_title">Expert</string>
+    <string name="toggleable_items">Prepínateľné položky</string>
+    <string name="threshold">Prahová hodnota</string>
     <string name="expert_options_display">Zobraziť možnosti pre expertov</string>
     <string name="expert_options_unlocked">Možnosti pre expertov sú odomknuté!</string>
     <string name="expert_options_tap_hint">%1$d viac klepnutí na odomknutie</string>
@@ -308,9 +311,9 @@ Tento prístup môžete kedykoľvek vypnúť v nastaveniach zariadenia.</string>
     <string name="category">Kategória</string>
     <string name="priority">Priorita</string>
     <string name="settings_context_menu_title">Kontextové menu</string>
-    <string name="settings_context_menu_option">Prispôsobiť viditeľné položky</string>
+    <string name="settings_context_menu_option">Vyberte položky, ktoré chcete zobraziť</string>
     <string name="settings_home_buttons_title">Tlačidlá Domov</string>
-    <string name="settings_home_buttons_option">Prispôsobiť viditeľné položky</string>
+    <string name="settings_home_buttons_option">Vyberte položky, ktoré chcete zobraziť</string>
     <string-array name="priorities">
         <item>Nízka</item>
         <item>Stredná</item>

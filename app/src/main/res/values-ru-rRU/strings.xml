@@ -46,10 +46,11 @@
     <string name="settings_donation_dialog">Поддержите нас</string>
     <!-- Strings used for features settings -->
     <string name="features_settings_title">Функции</string>
-    <string name="user_preferences">Настройки пользователя</string>
+    <string name="personalization">Персонализация</string>
     <string name="theme_mode">Режим темы</string>
     <string name="app_language">Язык интерфейса</string>
     <string name="font_family">Семейство шрифтов</string>
+    <string name="search_and_app_list">Поиск &amp; Список приложений</string>
     <string name="hide_search_view">Скрыть Поиск Вид</string>
     <string name="show_floating_button">Показать кнопки быстрого доступа</string>
     <string name="lock_orientation">Блокировка ориентации</string>
@@ -65,7 +66,7 @@
     <string name="apps_on_home_screen">Количество домашних приложений</string>
     <string name="pages_on_home_screen">Количество страниц</string>
     <string name="enable_home_pager">Включить домашний пейджер</string>
-    <string name="battery_date_time">Батарея &amp; Дата/Время</string>
+    <string name="info_tiles">Информационные плитки</string>
     <string name="show_clock">Показать часы</string>
     <string name="show_clock_format">Формат показа (AM/PM)</string>
     <string name="show_date">Показать дату</string>
@@ -194,6 +195,8 @@
     <string name="advanced_settings_share_application_description_addon">Получите его сейчас на %1$s и посмотрите, о чем все говорят! %2$s\n</string>
     <!-- Strings used for expert settings -->
     <string name="expert_settings_title">Эксперт</string>
+    <string name="toggleable_items">Переключаемые элементы</string>
+    <string name="threshold">Порог</string>
     <string name="expert_options_display">Показать экспертные параметры</string>
     <string name="expert_options_unlocked">Разблокированы возможности эксперта!</string>
     <string name="expert_options_tap_hint">%1$d еще несколько нажатий для разблокировки</string>
@@ -306,9 +309,9 @@
     <string name="category">Категория</string>
     <string name="priority">Приоритет</string>
     <string name="settings_context_menu_title">Контекстное меню</string>
-    <string name="settings_context_menu_option">Настроить видимые элементы</string>
+    <string name="settings_context_menu_option">Выберите элементы для отображения</string>
     <string name="settings_home_buttons_title">Кнопки «Домой»</string>
-    <string name="settings_home_buttons_option">Настроить видимые элементы</string>
+    <string name="settings_home_buttons_option">Выберите элементы для отображения</string>
     <string-array name="priorities">
         <item>Низкий</item>
         <item>Середина</item>

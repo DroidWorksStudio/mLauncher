@@ -46,10 +46,11 @@
     <string name="settings_donation_dialog">私たちをサポートしてください</string>
     <!-- Strings used for features settings -->
     <string name="features_settings_title">特徴</string>
-    <string name="user_preferences">ユーザー設定</string>
+    <string name="personalization">パーソナライゼーション</string>
     <string name="theme_mode">テーマモード</string>
     <string name="app_language">インターフェース言語</string>
     <string name="font_family">フォントファミリー</string>
+    <string name="search_and_app_list">&amp; アプリリストを検索</string>
     <string name="hide_search_view">検索ビューを非表示</string>
     <string name="show_floating_button">ショートカットボタンを表示</string>
     <string name="lock_orientation">方向をロック</string>
@@ -65,7 +66,7 @@
     <string name="apps_on_home_screen">ホームアプリの数</string>
     <string name="pages_on_home_screen">ページ数</string>
     <string name="enable_home_pager">ホーム ページャーを有効にする</string>
-    <string name="battery_date_time">バッテリー &amp; 日付/時刻</string>
+    <string name="info_tiles">情報タイル</string>
     <string name="show_clock">時計を表示</string>
     <string name="show_clock_format">表示形式 (AM/PM)</string>
     <string name="show_date">日付を表示</string>
@@ -194,6 +195,8 @@
     <string name="advanced_settings_share_application_description_addon">今すぐ %1$s で入手して、みんなが何を話しているか見てみましょう! %2$s\n</string>
     <!-- Strings used for expert settings -->
     <string name="expert_settings_title">専門家</string>
+    <string name="toggleable_items">切り替え可能なアイテム</string>
+    <string name="threshold">しきい値</string>
     <string name="expert_options_display">エキスパートオプションを表示</string>
     <string name="expert_options_unlocked">エキスパートオプションがロック解除されました!</string>
     <string name="expert_options_tap_hint">%1$d あとタップでロック解除</string>
@@ -306,9 +309,9 @@
     <string name="category">カテゴリ</string>
     <string name="priority">優先度</string>
     <string name="settings_context_menu_title">コンテキストメニュー</string>
-    <string name="settings_context_menu_option">表示項目をカスタマイズする</string>
+    <string name="settings_context_menu_option">表示する項目を選択</string>
     <string name="settings_home_buttons_title">ホームボタン</string>
-    <string name="settings_home_buttons_option">表示項目をカスタマイズする</string>
+    <string name="settings_home_buttons_option">表示する項目を選択</string>
     <string-array name="priorities">
         <item>低い</item>
         <item>中くらい</item>

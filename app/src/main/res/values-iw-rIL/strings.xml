@@ -46,10 +46,11 @@
     <string name="settings_donation_dialog">תמכו בנו</string>
     <!-- Strings used for features settings -->
     <string name="features_settings_title">תכונות</string>
-    <string name="user_preferences">העדפות משתמש</string>
+    <string name="personalization">התאמה אישית</string>
     <string name="theme_mode">סגנון רקע</string>
     <string name="app_language">שפת ממשק</string>
     <string name="font_family">משפחת גופן</string>
+    <string name="search_and_app_list">חיפוש &amp; רשימת אפליקציות</string>
     <string name="hide_search_view">הסתר תצוגת חיפוש</string>
     <string name="show_floating_button">הצג כפתורי קיצור</string>
     <string name="lock_orientation">נעילת כיוון</string>
@@ -65,7 +66,7 @@
     <string name="apps_on_home_screen">מספר יישומים בדף הבית</string>
     <string name="pages_on_home_screen">מספר דפים</string>
     <string name="enable_home_pager">הפעל דיפדוף בדף הבית</string>
-    <string name="battery_date_time">סוללה &amp; תאריך/שעה</string>
+    <string name="info_tiles">אריחי מידע</string>
     <string name="show_clock">הצג שעון</string>
     <string name="show_clock_format">תצוגת זמן (AM/PM)</string>
     <string name="show_date">הצג תאריך</string>
@@ -194,6 +195,8 @@
     <string name="advanced_settings_share_application_description_addon">השג אותו עכשיו ב- %1$s וראה על מה כולם מדברים! %2$s\n</string>
     <!-- Strings used for expert settings -->
     <string name="expert_settings_title">מוּמחֶה</string>
+    <string name="toggleable_items">פריטים הניתנים להחלפה</string>
+    <string name="threshold">סַף</string>
     <string name="expert_options_display">הצג אפשרויות מומחים</string>
     <string name="expert_options_unlocked">אפשרויות מומחים פתוחות!</string>
     <string name="expert_options_tap_hint">%1$d עוד נגיעות לפתיחה</string>
@@ -308,9 +311,9 @@
     <string name="category">קָטֵגוֹרִיָה</string>
     <string name="priority">עֲדִיפוּת</string>
     <string name="settings_context_menu_title">תפריט ההקשר</string>
-    <string name="settings_context_menu_option">התאמה אישית של פריטים גלויים</string>
+    <string name="settings_context_menu_option">בחירת פריטים להצגה</string>
     <string name="settings_home_buttons_title">כפתורי בית</string>
-    <string name="settings_home_buttons_option">התאמה אישית של פריטים גלויים</string>
+    <string name="settings_home_buttons_option">בחירת פריטים להצגה</string>
     <string-array name="priorities">
         <item>נָמוּך</item>
         <item>בֵּינוֹנִי</item>

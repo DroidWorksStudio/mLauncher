@@ -46,10 +46,11 @@
     <string name="settings_donation_dialog">Apóyanos</string>
     <!-- Strings used for features settings -->
     <string name="features_settings_title">Características</string>
-    <string name="user_preferences">Preferencias del usuario</string>
+    <string name="personalization">Personalización</string>
     <string name="theme_mode">Tema</string>
     <string name="app_language">Idioma</string>
     <string name="font_family">Familia tipográfica</string>
+    <string name="search_and_app_list">Buscar &amp; Lista de aplicaciones</string>
     <string name="hide_search_view">Ocultar vista de búsqueda</string>
     <string name="show_floating_button">Mostrar botones de acceso directo</string>
     <string name="lock_orientation">Orientación de la cerradura</string>
@@ -65,7 +66,7 @@
     <string name="apps_on_home_screen">Número de aplicaciones para el hogar</string>
     <string name="pages_on_home_screen">Número de páginas</string>
     <string name="enable_home_pager">Habilitar buscapersonas de inicio</string>
-    <string name="battery_date_time">Batería &amp; Fecha/Hora</string>
+    <string name="info_tiles">Mosaicos de información</string>
     <string name="show_clock">Mostrar reloj</string>
     <string name="show_clock_format">Formato del programa (AM/PM)</string>
     <string name="show_date">Mostrar fecha</string>
@@ -194,6 +195,8 @@
     <string name="advanced_settings_share_application_description_addon">¡Consíguelo ahora en %1$s y descubre de qué habla todo el mundo! %2$s\n</string>
     <!-- Strings used for expert settings -->
     <string name="expert_settings_title">Experto</string>
+    <string name="toggleable_items">Elementos alternables</string>
+    <string name="threshold">Límite</string>
     <string name="expert_options_display">Mostrar opciones de experto</string>
     <string name="expert_options_unlocked">¡Opciones expertas desbloqueadas!</string>
     <string name="expert_options_tap_hint">%1$d toques más para desbloquear</string>
@@ -306,9 +309,9 @@
     <string name="category">Categoría</string>
     <string name="priority">Prioridad</string>
     <string name="settings_context_menu_title">Menú contextual</string>
-    <string name="settings_context_menu_option">Personalizar elementos visibles</string>
+    <string name="settings_context_menu_option">Seleccionar elementos para mostrar</string>
     <string name="settings_home_buttons_title">Botones de inicio</string>
-    <string name="settings_home_buttons_option">Personalizar elementos visibles</string>
+    <string name="settings_home_buttons_option">Seleccionar elementos para mostrar</string>
     <string-array name="priorities">
         <item>Bajo</item>
         <item>Medio</item>
