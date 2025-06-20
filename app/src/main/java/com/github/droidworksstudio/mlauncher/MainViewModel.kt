@@ -150,8 +150,16 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
         dialogBuilder = DialogManager(appContext, fragment.requireActivity())
 
+        val bypassTimerApps = setOf(
+            "com.android.settings",
+            "app.mlauncher"
+        )
+
         val proceedToLaunch: () -> Unit = {
-            if (isTimerEnabled) {
+            if (packageName in bypassTimerApps) {
+                // Bypass timer for these apps, launch immediately
+                launchUnlockedApp(appListItem)
+            } else if (isTimerEnabled) {
                 val savedTargetTime = prefs.getSavedTimer(packageName)
                 if (savedTargetTime > System.currentTimeMillis()) {
                     // Timer still valid, launch and start timer with remaining time
