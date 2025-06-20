@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file. See [conven
 ### Implemented Enhancements:
 
 - *(App Timer)* Add app usage timer functionality - ([bc7da7e](https://github.com/DroidWorksStudio/mLauncher/commit/bc7da7eee7fcad772e0e8f533cf91b97e2feabf3))
+- *(i18n)* Localize app timer strings - ([4e747c0](https://github.com/DroidWorksStudio/mLauncher/commit/4e747c0f28cf7aa50cd30b0c8c76e0e947ef4f53))
 
 ### Language Support:
 
