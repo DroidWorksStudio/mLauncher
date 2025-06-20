@@ -36,6 +36,7 @@ import com.github.droidworksstudio.mlauncher.ui.components.DialogManager
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import org.xmlpull.v1.XmlPullParser
 
 class MainViewModel(application: Application) : AndroidViewModel(application) {
     private val _appScrollMap = MutableLiveData<Map<String, Int>>()
@@ -150,10 +151,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
         dialogBuilder = DialogManager(appContext, fragment.requireActivity())
 
-        val bypassTimerApps = setOf(
-            "com.android.settings",
-            "app.mlauncher"
-        )
+        val bypassTimerApps = loadBypassTimerApps(appContext)
 
         val proceedToLaunch: () -> Unit = {
             if (packageName in bypassTimerApps) {
@@ -213,6 +211,31 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             proceedToLaunch()
         }
     }
+
+    fun loadBypassTimerApps(context: Context): Set<String> {
+        val bypassApps = mutableSetOf<String>()
+        val parser = context.resources.getXml(R.xml.bypass_timer_apps)
+
+        try {
+            var eventType = parser.eventType
+            while (eventType != XmlPullParser.END_DOCUMENT) {
+                if (eventType == XmlPullParser.START_TAG && parser.name == "app") {
+                    val pkgName = parser.getAttributeValue(null, "packageName")
+                    if (!pkgName.isNullOrEmpty()) {
+                        bypassApps.add(pkgName)
+                    }
+                }
+                eventType = parser.next()
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+        } finally {
+            parser.close()
+        }
+
+        return bypassApps
+    }
+
 
     private fun startAppCloseTimer(packageName: String, targetTimeMillis: Long) {
         val delay = targetTimeMillis - System.currentTimeMillis()
