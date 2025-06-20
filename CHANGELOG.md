@@ -6,6 +6,12 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Bug Fixes:
 
+- *(AppDrawerAdapter)* Handle potential null icon from Iconify - ([9f27927](https://github.com/DroidWorksStudio/mLauncher/commit/9f279279c76ae66bb57c0a23c34b6b32e8736e96))
+
+## [1.10.7.4](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.7.4) - (19, June 2025)
+
+### Bug Fixes:
+
 - *(Context)* Open default browser app - ([5e74bb7](https://github.com/DroidWorksStudio/mLauncher/commit/5e74bb730969ce8e122c03e00073dd2d18c36965))
 - *(Settings)* Correct titles and ranges for swipe threshold sliders - ([f82c58a](https://github.com/DroidWorksStudio/mLauncher/commit/f82c58a07eba5e8d95d24ea150aac95f994f53f1))
 - Remove unused SYSTEM_ALERT_WINDOW permission - ([3732265](https://github.com/DroidWorksStudio/mLauncher/commit/3732265bbdcb2bc0ecf86a3fa26a7ba036462b24))
