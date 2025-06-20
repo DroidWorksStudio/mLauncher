@@ -532,14 +532,16 @@ class AppDrawerAdapter(
                             packageManager.getApplicationIcon(packageName)
                         }
                     } catch (e: PackageManager.NameNotFoundException) {
-                        e.printStackTrace()
                         // Handle exception gracefully, fall back to the system icon
                         AppCompatResources.getDrawable(context, R.drawable.ic_default_app)
-                    } catch (e: Exception) {
+
                         e.printStackTrace()
+                    } catch (e: Exception) {
                         // Handle any other exceptions gracefully, fallback to the system icon
                         AppCompatResources.getDrawable(context, R.drawable.ic_default_app)
-                    }
+
+                        e.printStackTrace()
+                    } as Drawable?
 
                     val defaultIcon = packageManager.getApplicationIcon(packageName)
                     val nonNullDrawable: Drawable = icon ?: defaultIcon
