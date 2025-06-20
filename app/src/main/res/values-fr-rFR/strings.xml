@@ -66,6 +66,7 @@
     <string name="apps_on_home_screen">Nombre d\'applications domestiques</string>
     <string name="pages_on_home_screen">Nombre de pages</string>
     <string name="enable_home_pager">Activer la page d\'accueil</string>
+    <string name="enable_app_timer">Activer la minuterie de l\'application</string>
     <string name="info_tiles">Tuiles d\'information</string>
     <string name="show_clock">Afficher l\'horloge</string>
     <string name="show_clock_format">Format de l\'émission (AM/PM)</string>
