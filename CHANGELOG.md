@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
+## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
+
+### Implemented Enhancements:
+
+- *(App Timer)* Add app usage timer functionality - ([bc7da7e](https://github.com/DroidWorksStudio/mLauncher/commit/bc7da7eee7fcad772e0e8f533cf91b97e2feabf3))
+
 ## [1.10.7.5](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.7.5) - (20, June 2025)
 
 ### Bug Fixes:
