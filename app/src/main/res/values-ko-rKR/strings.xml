@@ -66,6 +66,7 @@
     <string name="apps_on_home_screen">홈 앱 수</string>
     <string name="pages_on_home_screen">페이지 수</string>
     <string name="enable_home_pager">홈 호출기 활성화</string>
+    <string name="enable_app_timer">앱 타이머 활성화</string>
     <string name="info_tiles">정보 타일</string>
     <string name="show_clock">시계 표시</string>
     <string name="show_clock_format">쇼 형식(오전/오후)</string>
