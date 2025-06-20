@@ -627,7 +627,7 @@ class AppDrawerAdapter(
                 val padding = dp2px(resources, 24)
                 appTitle.updatePadding(left = padding, right = padding)
 
-                val sidebarContainer = (context as? Activity)?.findViewById<View>(R.id.sidebar_container)!!
+                val sidebarContainer = (context as Activity).findViewById<View>(R.id.sidebar_container)
 
                 appTitleFrame.apply {
                     setOnClickListener {
