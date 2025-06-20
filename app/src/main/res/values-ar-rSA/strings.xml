@@ -66,6 +66,7 @@
     <string name="apps_on_home_screen">عدد التطبيقات المنزلية</string>
     <string name="pages_on_home_screen">عدد الصفحات</string>
     <string name="enable_home_pager">تمكين جهاز النداء الرئيسي</string>
+    <string name="enable_app_timer">تمكين مؤقت التطبيق</string>
     <string name="info_tiles">بلاط المعلومات</string>
     <string name="show_clock">عرض الساعة</string>
     <string name="show_clock_format">تنسيق العرض (صباحًا/مساءً)</string>
