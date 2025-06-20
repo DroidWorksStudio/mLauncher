@@ -1,6 +1,8 @@
 package com.github.droidworksstudio.mlauncher.ui.components
 
 import android.app.Activity
+import android.app.DatePickerDialog
+import android.app.TimePickerDialog
 import android.content.Context
 import android.graphics.Color
 import android.graphics.Typeface
@@ -14,6 +16,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AbsListView
 import android.widget.ArrayAdapter
+import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.LinearLayout
@@ -22,11 +25,13 @@ import android.widget.SeekBar
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.toColorInt
+import com.github.creativecodecat.components.views.FontAppCompatTextView
 import com.github.droidworksstudio.common.getCpuBatteryInfo
 import com.github.droidworksstudio.common.getLocalizedString
 import com.github.droidworksstudio.common.getRamInfo
 import com.github.droidworksstudio.common.getSdCardInfo
 import com.github.droidworksstudio.common.getStorageInfo
+import com.github.droidworksstudio.common.showLongToast
 import com.github.droidworksstudio.mlauncher.MainActivity
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.Constants
@@ -36,6 +41,7 @@ import com.github.droidworksstudio.mlauncher.helper.themeDownloadButton
 import com.github.droidworksstudio.mlauncher.helper.utils.AppReloader
 import com.github.droidworksstudio.mlauncher.helper.wordofthedayDownloadButton
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import java.util.Calendar
 
 class DialogManager(val context: Context, val activity: Activity) {
 
@@ -873,4 +879,97 @@ class DialogManager(val context: Context, val activity: Activity) {
         bottomSheet.setContentView(rootLayout)
         bottomSheet.show()
     }
+
+    var timerBottomSheet: LockedBottomSheetDialog? = null
+
+    fun showTimerBottomSheet(
+        context: Context,
+        onTimeSelected: (targetTimestampMillis: Long) -> Unit
+    ) {
+        timerBottomSheet?.dismiss()
+        timerBottomSheet = LockedBottomSheetDialog(context)
+
+        val container = LinearLayout(context).apply {
+            orientation = LinearLayout.VERTICAL
+            setPadding(40, 40, 40, 40)
+        }
+
+        val title = FontAppCompatTextView(context).apply {
+            text = "Set usage timer (date & time)"
+            textSize = 18f
+            setPadding(0, 0, 0, 20)
+        }
+
+        // Button to open Date & Time picker
+        val dateTimeBtn = Button(context).apply {
+            text = "Pick Date & Time"
+        }
+
+        // TextView to show selected date & time
+        val selectedDateTimeText = TextView(context).apply {
+            text = "No date/time selected"
+            setPadding(0, 20, 0, 20)
+        }
+
+        var pickedCalendar = Calendar.getInstance()
+
+        dateTimeBtn.setOnClickListener {
+            // Step 1: Show DatePickerDialog
+            val now = Calendar.getInstance()
+            DatePickerDialog(
+                context,
+                { _, year, month, dayOfMonth ->
+                    pickedCalendar.set(year, month, dayOfMonth)
+
+                    // Step 2: Show TimePickerDialog after date picked
+                    TimePickerDialog(
+                        context,
+                        { _, hourOfDay, minute ->
+                            pickedCalendar.set(Calendar.HOUR_OF_DAY, hourOfDay)
+                            pickedCalendar.set(Calendar.MINUTE, minute)
+                            pickedCalendar.set(Calendar.SECOND, 0)
+                            pickedCalendar.set(Calendar.MILLISECOND, 0)
+
+                            // Update text view with selected date & time
+                            val formatted = android.text.format.DateFormat.format(
+                                "yyyy-MM-dd HH:mm",
+                                pickedCalendar
+                            )
+                            selectedDateTimeText.text = "Selected: $formatted"
+                        },
+                        now.get(Calendar.HOUR_OF_DAY),
+                        now.get(Calendar.MINUTE),
+                        true
+                    ).show()
+
+                },
+                now.get(Calendar.YEAR),
+                now.get(Calendar.MONTH),
+                now.get(Calendar.DAY_OF_MONTH)
+            ).show()
+        }
+
+        val confirmBtn = Button(context).apply {
+            text = "Start Timer"
+            setOnClickListener {
+                val now = Calendar.getInstance()
+                if (pickedCalendar.timeInMillis <= now.timeInMillis) {
+                    // If picked time is in the past, warn user or ignore
+                    context.showLongToast("Please pick a future date/time")
+                    return@setOnClickListener
+                }
+                timerBottomSheet?.dismiss()
+                onTimeSelected(pickedCalendar.timeInMillis)
+            }
+        }
+
+        container.addView(title)
+        container.addView(dateTimeBtn)
+        container.addView(selectedDateTimeText)
+        container.addView(confirmBtn)
+
+        timerBottomSheet?.setContentView(container)
+        timerBottomSheet?.show()
+    }
+
 }

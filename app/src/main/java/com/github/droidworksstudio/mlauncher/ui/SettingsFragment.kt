@@ -195,6 +195,7 @@ class SettingsFragment : Fragment() {
         var selectedHomeAppsNum by remember { mutableIntStateOf(prefs.homeAppsNum) }
         var selectedHomePagesNum by remember { mutableIntStateOf(prefs.homePagesNum) }
         var toggledHomePager by remember { mutableStateOf(prefs.homePager) }
+        var toggledAppTimer by remember { mutableStateOf(prefs.enableAppTimer) }
 
         var toggledShowDate by remember { mutableStateOf(prefs.showDate) }
         var toggledShowClock by remember { mutableStateOf(prefs.showClock) }
@@ -822,6 +823,16 @@ class SettingsFragment : Fragment() {
                             }
                         )
                     }
+
+                    SettingsSwitch(
+                        text = getLocalizedString(R.string.enable_app_timer),
+                        fontSize = titleFontSize,
+                        defaultState = toggledAppTimer,
+                        onCheckedChange = {
+                            toggledAppTimer = !prefs.enableAppTimer
+                            prefs.enableAppTimer = toggledAppTimer
+                        }
+                    )
 
                     Spacer(modifier = Modifier.height(14.dp))
 

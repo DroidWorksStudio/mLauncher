@@ -3,8 +3,11 @@ package com.github.droidworksstudio.mlauncher
 import android.app.Application
 import android.content.ComponentName
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import android.content.pm.LauncherApps
+import android.os.Handler
+import android.os.Looper
 import android.os.Process
 import android.os.UserHandle
 import android.os.UserManager
@@ -29,6 +32,7 @@ import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
 import com.github.droidworksstudio.mlauncher.helper.logActivitiesFromPackage
 import com.github.droidworksstudio.mlauncher.helper.utils.BiometricHelper
 import com.github.droidworksstudio.mlauncher.helper.utils.PrivateSpaceManager
+import com.github.droidworksstudio.mlauncher.ui.components.DialogManager
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -38,6 +42,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     val appScrollMap: LiveData<Map<String, Int>> = _appScrollMap
 
     private lateinit var biometricHelper: BiometricHelper
+    private lateinit var dialogBuilder: DialogManager
 
     private val appContext by lazy { application.applicationContext }
     private val prefs = Prefs(appContext)
@@ -138,15 +143,39 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         biometricHelper = BiometricHelper(fragment)
 
         val packageName = appListItem.activityPackage
+        val isTimerEnabled = prefs.enableAppTimer
         val currentLockedApps = prefs.lockedApps
 
         logActivitiesFromPackage(appContext, packageName)
+
+        dialogBuilder = DialogManager(appContext, fragment.requireActivity())
+
+        val proceedToLaunch: () -> Unit = {
+            if (isTimerEnabled) {
+                val savedTargetTime = prefs.getSavedTimer(packageName)
+                if (savedTargetTime > System.currentTimeMillis()) {
+                    // Timer still valid, launch and start timer with remaining time
+                    launchUnlockedApp(appListItem)
+                    startAppCloseTimer(packageName, savedTargetTime)
+                } else {
+                    prefs.clearTimer(packageName)
+                    // No valid timer or expired, ask user with date/time picker
+                    dialogBuilder.showTimerBottomSheet(fragment.requireContext()) { targetTimeMillis ->
+                        prefs.saveTimer(packageName, targetTimeMillis)
+                        launchUnlockedApp(appListItem)
+                        startAppCloseTimer(packageName, targetTimeMillis)
+                    }
+                }
+            } else {
+                launchUnlockedApp(appListItem)
+            }
+        }
 
         if (currentLockedApps.contains(packageName)) {
             fragment.hideKeyboard()
             biometricHelper.startBiometricAuth(appListItem, object : BiometricHelper.CallbackApp {
                 override fun onAuthenticationSucceeded(appListItem: AppListItem) {
-                    launchUnlockedApp(appListItem)
+                    proceedToLaunch()
                 }
 
                 override fun onAuthenticationFailed() {
@@ -173,9 +202,36 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 }
             })
         } else {
-            launchUnlockedApp(appListItem)
+            proceedToLaunch()
         }
     }
+
+    private fun startAppCloseTimer(packageName: String, targetTimeMillis: Long) {
+        val delay = targetTimeMillis - System.currentTimeMillis()
+        if (delay <= 0) {
+            // Time already passed, close immediately
+            closeAppSession(packageName)
+            return
+        }
+
+        Handler(Looper.getMainLooper()).postDelayed({
+            closeAppSession(packageName)
+        }, delay)
+    }
+
+    private fun closeAppSession(packageName: String) {
+        val homeIntent = Intent(Intent.ACTION_MAIN).apply {
+            addCategory(Intent.CATEGORY_HOME)
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK
+        }
+        appContext.startActivity(homeIntent)
+
+        // Clear saved timer for this app now that the session ended
+        prefs.clearTimer(packageName)
+
+        appContext.showShortToast("$packageName session ended")
+    }
+
 
     private fun launchUnlockedApp(appListItem: AppListItem) {
         val packageName = appListItem.activityPackage

@@ -116,6 +116,7 @@ private const val DAILY_WORD_SIZE_TEXT = "DAILY_WORD_SIZE_TEXT"
 private const val BATTERY_SIZE_TEXT = "BATTERY_SIZE_TEXT"
 private const val TEXT_SIZE_SETTINGS = "TEXT_SIZE_SETTINGS"
 private const val TEXT_PADDING_SIZE = "TEXT_PADDING_SIZE"
+private const val APP_TIMER = "APP_TIMER"
 
 private const val BACKGROUND_COLOR = "BACKGROUND_COLOR"
 private const val APP_COLOR = "APP_COLOR"
@@ -698,6 +699,23 @@ class Prefs(val context: Context) {
     var enableExpertOptions: Boolean
         get() = getSetting(EXPERT_OPTIONS, false)
         set(value) = prefsNormal.edit { putBoolean(EXPERT_OPTIONS, value) }
+
+    var enableAppTimer: Boolean
+        get() = getSetting(APP_TIMER, false)
+        set(value) = prefsNormal.edit { putBoolean(APP_TIMER, value) }
+
+    fun getSavedTimer(packageName: String): Long {
+        // default 0 means no timer saved
+        return prefsNormal.getLong("${APP_TIMER}_${packageName}", 0)
+    }
+
+    fun saveTimer(packageName: String, targetTimeMillis: Long) {
+        prefsNormal.edit { putLong("${APP_TIMER}_${packageName}", targetTimeMillis) }
+    }
+
+    fun clearTimer(packageName: String) {
+        prefsNormal.edit { remove("${APP_TIMER}_${packageName}") }
+    }
 
     /**
      * By the number in home app list, get the list item.
