@@ -8,6 +8,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - *(App Timer)* Add app usage timer functionality - ([bc7da7e](https://github.com/DroidWorksStudio/mLauncher/commit/bc7da7eee7fcad772e0e8f533cf91b97e2feabf3))
 
+### Refactoring:
+
+- Improve null safety in AppDrawerAdapter - ([9a21301](https://github.com/DroidWorksStudio/mLauncher/commit/9a213012f2dfa5559092f3c169f1c09724b2a7a0))
+
 ## [1.10.7.5](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.7.5) - (20, June 2025)
 
 ### Bug Fixes:
