@@ -313,6 +313,12 @@
     <string name="settings_context_menu_option">Seleziona gli elementi da visualizzare</string>
     <string name="settings_home_buttons_title">Pulsanti Home</string>
     <string name="settings_home_buttons_option">Seleziona gli elementi da visualizzare</string>
+    <string name="app_timer_set_timer_date_time">Set usage timer (date &amp; time)</string>
+    <string name="app_timer_pick_time_date">Pick Date &amp; Time</string>
+    <string name="app_timer_no_time_date_set">No date/time selected</string>
+    <string name="app_timer_selected_timer">"Selected: %1$s"</string>
+    <string name="app_timer_start_timer">Start Timer</string>
+    <string name="app_timer_future_time_date">Please pick a future date/time</string>
     <string-array name="priorities">
         <item>Basso</item>
         <item>Medio</item>
