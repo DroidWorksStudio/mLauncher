@@ -1,26 +1,41 @@
 package com.github.droidworksstudio.mlauncher
 
+import android.annotation.SuppressLint
 import android.app.Application
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.content.pm.LauncherApps
+import android.content.res.ColorStateList
+import android.graphics.PixelFormat
 import android.os.Handler
 import android.os.Looper
 import android.os.Process
 import android.os.UserHandle
 import android.os.UserManager
+import android.provider.Settings
+import android.text.InputType
+import android.view.Gravity
+import android.view.WindowManager
+import android.widget.LinearLayout
+import androidx.appcompat.view.ContextThemeWrapper
+import androidx.appcompat.widget.AppCompatButton
+import androidx.appcompat.widget.AppCompatEditText
+import androidx.appcompat.widget.AppCompatTextView
 import androidx.biometric.BiometricPrompt
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import com.github.creativecodecat.components.views.FontAppCompatTextView
 import com.github.droidworksstudio.common.AppLogger
 import com.github.droidworksstudio.common.CrashHandler
 import com.github.droidworksstudio.common.getLocalizedString
 import com.github.droidworksstudio.common.hideKeyboard
+import com.github.droidworksstudio.common.showLongToast
 import com.github.droidworksstudio.common.showShortToast
 import com.github.droidworksstudio.mlauncher.data.AppCategory
 import com.github.droidworksstudio.mlauncher.data.AppListItem
@@ -29,7 +44,6 @@ import com.github.droidworksstudio.mlauncher.data.Constants.AppDrawerFlag
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.helper.analytics.AppUsageMonitor
 import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
-import com.github.droidworksstudio.mlauncher.helper.logActivitiesFromPackage
 import com.github.droidworksstudio.mlauncher.helper.utils.BiometricHelper
 import com.github.droidworksstudio.mlauncher.helper.utils.PrivateSpaceManager
 import com.github.droidworksstudio.mlauncher.ui.components.DialogManager
@@ -147,13 +161,14 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         val isTimerEnabled = prefs.enableAppTimer
         val currentLockedApps = prefs.lockedApps
 
-        logActivitiesFromPackage(appContext, packageName)
+//        logActivitiesFromPackage(appContext, packageName)
 
         dialogBuilder = DialogManager(appContext, fragment.requireActivity())
 
         val bypassTimerApps = loadBypassTimerApps(appContext)
 
         val proceedToLaunch: () -> Unit = {
+            prefs.clearTimer(packageName)
             if (packageName in bypassTimerApps) {
                 // Bypass timer for these apps, launch immediately
                 launchUnlockedApp(appListItem)
@@ -162,14 +177,14 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 if (savedTargetTime > System.currentTimeMillis()) {
                     // Timer still valid, launch and start timer with remaining time
                     launchUnlockedApp(appListItem)
-                    startAppCloseTimer(packageName, savedTargetTime)
+                    startAppCloseTimer(appListItem, savedTargetTime)
                 } else {
                     prefs.clearTimer(packageName)
                     // No valid timer or expired, ask user with date/time picker
                     dialogBuilder.showTimerBottomSheet(fragment.requireContext()) { targetTimeMillis ->
                         prefs.saveTimer(packageName, targetTimeMillis)
                         launchUnlockedApp(appListItem)
-                        startAppCloseTimer(packageName, targetTimeMillis)
+                        startAppCloseTimer(appListItem, targetTimeMillis)
                     }
                 }
             } else {
@@ -214,55 +229,189 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     fun loadBypassTimerApps(context: Context): Set<String> {
         val bypassApps = mutableSetOf<String>()
-        val parser = context.resources.getXml(R.xml.bypass_timer_apps)
-
-        try {
-            var eventType = parser.eventType
-            while (eventType != XmlPullParser.END_DOCUMENT) {
-                if (eventType == XmlPullParser.START_TAG && parser.name == "app") {
-                    val pkgName = parser.getAttributeValue(null, "packageName")
-                    if (!pkgName.isNullOrEmpty()) {
-                        bypassApps.add(pkgName)
-                    }
+        // Obtain an XmlPullParser for the bypass_timer_apps.xml file
+        context.resources.getXml(R.xml.bypass_timer_apps).use { parser ->
+            while (parser.eventType != XmlPullParser.END_DOCUMENT) {
+                if (parser.eventType == XmlPullParser.START_TAG && parser.name == "app") {
+                    val packageName = parser.getAttributeValue(null, "packageName")
+                    bypassApps.add(packageName)
                 }
-                eventType = parser.next()
+                parser.next()
             }
-        } catch (e: Exception) {
-            e.printStackTrace()
-        } finally {
-            parser.close()
         }
 
         return bypassApps
     }
 
 
-    private fun startAppCloseTimer(packageName: String, targetTimeMillis: Long) {
+    private fun startAppCloseTimer(appListItem: AppListItem, targetTimeMillis: Long) {
+        val packageName = appListItem.activityPackage
         val delay = targetTimeMillis - System.currentTimeMillis()
+
         if (delay <= 0) {
             // Time already passed, close immediately
-            closeAppSession(packageName)
+            closeAppSession(packageName) { minutes ->
+                val newTargetTime = System.currentTimeMillis() + minutes * 60_000
+                prefs.saveTimer(packageName, newTargetTime)
+                appContext.showShortToast("Extended by $minutes minutes")
+                launchUnlockedApp(appListItem)
+            }
             return
         }
 
         Handler(Looper.getMainLooper()).postDelayed({
-            closeAppSession(packageName)
+            closeAppSession(packageName) { minutes ->
+                val newTargetTime = System.currentTimeMillis() + minutes * 60_000
+                prefs.saveTimer(packageName, newTargetTime)
+                appContext.showShortToast("Extended by $minutes minutes")
+                launchUnlockedApp(appListItem)
+            }
         }, delay)
     }
 
-    private fun closeAppSession(packageName: String) {
-        val homeIntent = Intent(Intent.ACTION_MAIN).apply {
-            addCategory(Intent.CATEGORY_HOME)
-            flags = Intent.FLAG_ACTIVITY_NEW_TASK
+    @SuppressLint("ServiceCast")
+    private fun closeAppSession(
+        packageName: String,
+        onExtend: (minutes: Int) -> Unit
+    ) {
+        val packageManager = appContext.packageManager
+        val applicationInfo = packageManager.getApplicationInfo(packageName, 0)
+        val appName = packageManager.getApplicationLabel(applicationInfo).toString()
+
+        if (Settings.canDrawOverlays(appContext)) {
+            val themedContext = ContextThemeWrapper(appContext, R.style.Theme_mLauncher)
+            val windowManager = appContext.getSystemService(Context.WINDOW_SERVICE) as WindowManager
+
+            // Helper to convert dp to px
+            fun dpToPx(dp: Int): Int =
+                (dp * appContext.resources.displayMetrics.density).toInt()
+
+            val overlayView = LinearLayout(themedContext).apply {
+                orientation = LinearLayout.VERTICAL
+                setBackgroundColor(ContextCompat.getColor(context, R.color.colorPrimaryBackground))
+                setPadding(60, 60, 60, 60)
+                elevation = 10f
+            }
+
+            val title = FontAppCompatTextView(themedContext).apply {
+                text = getLocalizedString(R.string.app_timer_extend_or_close)
+                textSize = 18f
+                setTextColor(ContextCompat.getColor(context, R.color.colorPrimary))
+                setPadding(0, 0, 0, 30)
+            }
+
+            overlayView.addView(title)
+
+            val extendOptions = listOf(
+                5 to getLocalizedString(R.string.app_timer_extend_5),
+                10 to getLocalizedString(R.string.app_timer_extend_10)
+            )
+
+            extendOptions.forEach { (minutes, label) ->
+                val button = AppCompatButton(themedContext).apply {
+                    text = label
+                    setTextColor(ContextCompat.getColor(context, R.color.buttonTextPrimary))
+                    backgroundTintList = ColorStateList.valueOf(
+                        ContextCompat.getColor(context, R.color.buttonBackgroundPrimary)
+                    )
+                    setOnClickListener {
+                        windowManager.removeView(overlayView)
+                        onExtend(minutes)
+                    }
+                }
+                overlayView.addView(button)
+            }
+
+            // Custom timer input
+            val customInputLabel = AppCompatTextView(themedContext).apply {
+                text = getLocalizedString(R.string.app_timer_custom_minutes_label)
+                setTextColor(ContextCompat.getColor(context, R.color.colorPrimary))
+                setPadding(0, dpToPx(24), 0, dpToPx(8))
+            }
+
+            val customInput = AppCompatEditText(themedContext).apply {
+                hint = getLocalizedString(R.string.app_timer_custom_minutes_hint)
+                inputType = InputType.TYPE_CLASS_NUMBER
+                backgroundTintList = ColorStateList.valueOf(
+                    ContextCompat.getColor(context, R.color.buttonBackgroundPrimary)
+                )
+                setTextColor(ContextCompat.getColor(context, R.color.colorPrimary))
+                setPadding(dpToPx(12), dpToPx(12), dpToPx(12), dpToPx(12))
+            }
+
+            val customStartBtn = AppCompatButton(themedContext).apply {
+                text = getLocalizedString(R.string.app_timer_start_custom)
+                setTextColor(ContextCompat.getColor(context, R.color.buttonTextPrimary))
+                backgroundTintList = ColorStateList.valueOf(
+                    ContextCompat.getColor(context, R.color.buttonBackgroundPrimary)
+                )
+                setOnClickListener {
+                    val inputText = customInput.text.toString()
+                    val customMinutes = inputText.toIntOrNull()
+
+                    if (customMinutes == null || customMinutes <= 0) {
+                        appContext.showLongToast(getLocalizedString(R.string.app_timer_invalid_minutes))
+                        return@setOnClickListener
+                    }
+
+                    windowManager.removeView(overlayView)
+                    onExtend(customMinutes)
+                }
+            }
+
+            overlayView.apply {
+                addView(customInputLabel)
+                addView(customInput)
+                addView(customStartBtn)
+            }
+
+            val closeButton = AppCompatButton(themedContext).apply {
+                text = getLocalizedString(R.string.app_timer_close_app)
+                setTextColor(ContextCompat.getColor(context, R.color.buttonTextPrimary))
+                backgroundTintList = ColorStateList.valueOf(
+                    ContextCompat.getColor(context, R.color.buttonBackgroundError)
+                )
+                setOnClickListener {
+                    windowManager.removeView(overlayView)
+
+                    val homeIntent = Intent(Intent.ACTION_MAIN).apply {
+                        addCategory(Intent.CATEGORY_HOME)
+                        flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                    }
+                    appContext.startActivity(homeIntent)
+
+                    prefs.clearTimer(packageName)
+                    appContext.showShortToast("$appName session ended")
+                }
+            }
+
+            overlayView.addView(closeButton)
+
+            // ✅ This is the ONLY layoutParams that matters for WindowManager
+            val layoutParams = WindowManager.LayoutParams(
+                dpToPx(400), // set desired fixed width in dp
+                WindowManager.LayoutParams.WRAP_CONTENT,
+                WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY,
+                WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL or
+                        WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN or
+                        WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON,
+                PixelFormat.TRANSLUCENT
+            ).apply {
+                gravity = Gravity.CENTER
+            }
+
+            windowManager.addView(overlayView, layoutParams)
+        } else {
+            val homeIntent = Intent(Intent.ACTION_MAIN).apply {
+                addCategory(Intent.CATEGORY_HOME)
+                flags = Intent.FLAG_ACTIVITY_NEW_TASK
+            }
+            appContext.startActivity(homeIntent)
+
+            prefs.clearTimer(packageName)
+            appContext.showShortToast("$appName session ended")
         }
-        appContext.startActivity(homeIntent)
-
-        // Clear saved timer for this app now that the session ended
-        prefs.clearTimer(packageName)
-
-        appContext.showShortToast("$packageName session ended")
     }
-
 
     private fun launchUnlockedApp(appListItem: AppListItem) {
         val packageName = appListItem.activityPackage

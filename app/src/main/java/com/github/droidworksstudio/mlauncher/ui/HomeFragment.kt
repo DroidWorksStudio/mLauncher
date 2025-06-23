@@ -19,6 +19,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.os.Vibrator
+import android.provider.Settings
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.SpannableStringBuilder
@@ -35,6 +36,7 @@ import androidx.appcompat.content.res.AppCompatResources
 import androidx.biometric.BiometricPrompt
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.core.net.toUri
 import androidx.core.os.bundleOf
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -91,6 +93,7 @@ import com.github.droidworksstudio.mlauncher.helper.utils.BiometricHelper
 import com.github.droidworksstudio.mlauncher.helper.utils.PrivateSpaceManager
 import com.github.droidworksstudio.mlauncher.helper.wordOfTheDay
 import com.github.droidworksstudio.mlauncher.services.ActionService
+import com.github.droidworksstudio.mlauncher.ui.components.DialogManager
 import com.github.droidworksstudio.mlauncher.ui.components.GestureAdapter
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -99,6 +102,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
     private lateinit var prefs: Prefs
     private lateinit var viewModel: MainViewModel
+    private lateinit var dialogBuilder: DialogManager
     private lateinit var deviceManager: DevicePolicyManager
     private lateinit var batteryReceiver: BatteryReceiver
     private lateinit var biometricHelper: BiometricHelper
@@ -118,6 +122,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         val view = binding.root
         prefs = Prefs(requireContext())
         batteryReceiver = BatteryReceiver()
+        dialogBuilder = DialogManager(requireContext(), requireActivity())
         if (PrivateSpaceManager(requireContext()).isPrivateSpaceSupported()) {
             privateSpaceReceiver = PrivateSpaceReceiver()
         }
@@ -208,6 +213,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         } catch (e: Exception) {
             e.printStackTrace()
         }
+        dismissDialogs()
     }
 
     private fun checkForStatusbar(view: View) {
@@ -454,6 +460,15 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     // Instantiate MainActivity and pass it to showPermissionDialog
                     showPermissionDialog(context)
                 }
+            }
+        }
+
+        if (prefs.enableAppTimer) {
+            if (!Settings.canDrawOverlays(context)) {
+                val intent = Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION).apply {
+                    data = ("package:" + context.applicationContext.packageName).toUri()
+                }
+                startActivity(intent)
             }
         }
     }
@@ -1464,5 +1479,17 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                 CrashHandler.logUserAction("SwipeDown Long Gesture")
             }
         })
+    }
+
+    private fun dismissDialogs() {
+        dialogBuilder.backupRestoreBottomSheet?.dismiss()
+        dialogBuilder.saveLoadThemeBottomSheet?.dismiss()
+        dialogBuilder.saveDownloadWOTDBottomSheet?.dismiss()
+        dialogBuilder.singleChoiceBottomSheetPill?.dismiss()
+        dialogBuilder.singleChoiceBottomSheet?.dismiss()
+        dialogBuilder.colorPickerBottomSheet?.dismiss()
+        dialogBuilder.sliderBottomSheet?.dismiss()
+        dialogBuilder.timerBottomSheet?.dismiss()
+        dialogBuilder.flagSettingsBottomSheet?.dismiss()
     }
 }

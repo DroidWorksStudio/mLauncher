@@ -5,7 +5,11 @@
     <color name="colorPrimaryBackground">@color/background_bubble</color>
     <color name="transparent">#00000000</color>
     <color name="colorAccent">#888888</color>
-    <color name="colorSelected">#651FFF</color>
+    <color name="colorSelected">#B388FF</color>
+
+    <color name="buttonTextPrimary">#222222</color>
+    <color name="buttonBackgroundPrimary">#a6da95</color>
+    <color name="buttonBackgroundError">#ed8796</color>
     <!-- White -->
     <color name="white">#FFFFFF</color>
     <color name="whiteTrans90">#E6FFFFFF</color>

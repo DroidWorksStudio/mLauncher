@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file. See [conven
 ### Implemented Enhancements:
 
 - *(App Timer)* Add app usage timer functionality - ([bc7da7e](https://github.com/DroidWorksStudio/mLauncher/commit/bc7da7eee7fcad772e0e8f533cf91b97e2feabf3))
+- *(Timer)* Enhance app timer functionality - ([19a881d](https://github.com/DroidWorksStudio/mLauncher/commit/19a881dc7ed0114385b1ead2291934da2f5ae6fe))
 - *(i18n)* Localize app timer strings - ([4e747c0](https://github.com/DroidWorksStudio/mLauncher/commit/4e747c0f28cf7aa50cd30b0c8c76e0e947ef4f53))
 - Implement XML configuration for app timer bypass list - ([1dc6892](https://github.com/DroidWorksStudio/mLauncher/commit/1dc6892118882b3e76763f49e7c74d41e7f0b3f6))
 - Bypass timer for specific apps - ([e1b3e05](https://github.com/DroidWorksStudio/mLauncher/commit/e1b3e05e590949cbbf75cfb0baaa8981ce238142))
@@ -17,6 +18,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Adjust swipe thresholds - ([2526d24](https://github.com/DroidWorksStudio/mLauncher/commit/2526d24c7858295383e9143610710e56df5cead2))
 - Improve null safety in AppDrawerAdapter - ([9a21301](https://github.com/DroidWorksStudio/mLauncher/commit/9a213012f2dfa5559092f3c169f1c09724b2a7a0))
 
 ## [1.10.7.5](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.7.5) - (20, June 2025)
