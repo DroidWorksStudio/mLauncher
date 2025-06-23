@@ -313,12 +313,19 @@
     <string name="settings_context_menu_option">Выберите элементы для отображения</string>
     <string name="settings_home_buttons_title">Кнопки «Домой»</string>
     <string name="settings_home_buttons_option">Выберите элементы для отображения</string>
-    <string name="app_timer_set_timer_date_time">Set usage timer (date &amp; time)</string>
-    <string name="app_timer_pick_time_date">Pick Date &amp; Time</string>
-    <string name="app_timer_no_time_date_set">No date/time selected</string>
-    <string name="app_timer_selected_timer">"Selected: %1$s"</string>
-    <string name="app_timer_start_timer">Start Timer</string>
-    <string name="app_timer_future_time_date">Please pick a future date/time</string>
+    <string name="app_timer_set_timer_duration">Set Timer Duration</string>
+    <string name="app_timer_5_minutes">5 minutes</string>
+    <string name="app_timer_10_minutes">10 minutes</string>
+    <string name="app_timer_30_minutes">30 minutes</string>
+    <string name="app_timer_60_minutes">60 minutes</string>
+    <string name="app_timer_custom_minutes_label">Or enter custom duration (in minutes):</string>
+    <string name="app_timer_custom_minutes_hint">e.g. 15</string>
+    <string name="app_timer_start_custom">Start Custom Timer</string>
+    <string name="app_timer_invalid_minutes">Please enter a valid number of minutes.</string>
+    <string name="app_timer_extend_or_close">Time’s up! Extend session or close the app?</string>
+    <string name="app_timer_extend_5">Extend 5 minutes</string>
+    <string name="app_timer_extend_10">Extend 10 minutes</string>
+    <string name="app_timer_close_app">Close App</string>
     <string-array name="priorities">
         <item>Низкий</item>
         <item>Середина</item>
