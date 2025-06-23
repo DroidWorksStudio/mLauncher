@@ -18,6 +18,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Adjust swipe thresholds - ([2526d24](https://github.com/DroidWorksStudio/mLauncher/commit/2526d24c7858295383e9143610710e56df5cead2))
 - Improve null safety in AppDrawerAdapter - ([9a21301](https://github.com/DroidWorksStudio/mLauncher/commit/9a213012f2dfa5559092f3c169f1c09724b2a7a0))
 
 ## [1.10.7.5](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.7.5) - (20, June 2025)
