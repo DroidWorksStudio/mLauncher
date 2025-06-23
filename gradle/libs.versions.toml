@@ -23,7 +23,7 @@ navigation-ui-ktx = "2.9.0"
 navigation-testing = "2.9.0"
 
 # Work Manager
-work-runtime-ktx = "2.10.1"
+work-runtime-ktx = "2.10.2"
 
 # ConstraintLayout
 constraintlayout = "2.2.1"
@@ -31,12 +31,12 @@ constraintlayout-compose = "1.1.1"
 
 # Compose Versions
 activity-compose = "1.10.1"
-compose-android = "1.8.2"
-compose-material = "1.8.2"
-compose-animation = "1.8.2"
-compose-ui = "1.8.2"
-compose-foundation = "1.8.2"
-compose-ui-tooling = "1.8.2"
+compose-android = "1.8.3"
+compose-material = "1.8.3"
+compose-animation = "1.8.3"
+compose-ui = "1.8.3"
+compose-foundation = "1.8.3"
+compose-ui-tooling = "1.8.3"
 
 # Other Libraries
 commons-text = "1.13.1"
@@ -48,8 +48,8 @@ test-core-ktx = "1.6.1"
 test-runner = "1.6.2"
 test-rules = "1.6.1"
 fragment-testing = "1.8.8"
-ui-test-junit4 = "1.8.2"
-ui-test-manifest = "1.8.2"
+ui-test-junit4 = "1.8.3"
+ui-test-manifest = "1.8.3"
 activity = "1.10.1"
 
 # Database
