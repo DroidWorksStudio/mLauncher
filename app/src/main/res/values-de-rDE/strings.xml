@@ -313,19 +313,19 @@
     <string name="settings_context_menu_option">Auswählen der anzuzeigenden Elemente</string>
     <string name="settings_home_buttons_title">Home-Schaltflächen</string>
     <string name="settings_home_buttons_option">Auswählen der anzuzeigenden Elemente</string>
-    <string name="app_timer_set_timer_duration">Set Timer Duration</string>
-    <string name="app_timer_5_minutes">5 minutes</string>
-    <string name="app_timer_10_minutes">10 minutes</string>
-    <string name="app_timer_30_minutes">30 minutes</string>
-    <string name="app_timer_60_minutes">60 minutes</string>
-    <string name="app_timer_custom_minutes_label">Or enter custom duration (in minutes):</string>
-    <string name="app_timer_custom_minutes_hint">e.g. 15</string>
-    <string name="app_timer_start_custom">Start Custom Timer</string>
-    <string name="app_timer_invalid_minutes">Please enter a valid number of minutes.</string>
-    <string name="app_timer_extend_or_close">Time’s up! Extend session or close the app?</string>
-    <string name="app_timer_extend_5">Extend 5 minutes</string>
-    <string name="app_timer_extend_10">Extend 10 minutes</string>
-    <string name="app_timer_close_app">Close App</string>
+    <string name="app_timer_set_timer_duration">Timerdauer einstellen</string>
+    <string name="app_timer_5_minutes">5 Minuten</string>
+    <string name="app_timer_10_minutes">10 Minuten</string>
+    <string name="app_timer_30_minutes">30 Minuten</string>
+    <string name="app_timer_60_minutes">60 Minuten</string>
+    <string name="app_timer_custom_minutes_label">Oder geben Sie eine benutzerdefinierte Dauer (in Minuten) ein:</string>
+    <string name="app_timer_custom_minutes_hint">zB 15</string>
+    <string name="app_timer_start_custom">Benutzerdefinierten Timer starten</string>
+    <string name="app_timer_invalid_minutes">Bitte geben Sie eine gültige Minutenanzahl ein.</string>
+    <string name="app_timer_extend_or_close">Die Zeit ist abgelaufen! Sitzung verlängern oder App schließen?</string>
+    <string name="app_timer_extend_5">5 Minuten verlängern</string>
+    <string name="app_timer_extend_10">10 Minuten verlängern</string>
+    <string name="app_timer_close_app">App schließen</string>
     <string-array name="priorities">
         <item>Niedrig</item>
         <item>Medium</item>
