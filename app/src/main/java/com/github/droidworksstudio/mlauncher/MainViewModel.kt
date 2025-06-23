@@ -168,7 +168,6 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         val bypassTimerApps = loadBypassTimerApps(appContext)
 
         val proceedToLaunch: () -> Unit = {
-            prefs.clearTimer(packageName)
             if (packageName in bypassTimerApps) {
                 // Bypass timer for these apps, launch immediately
                 launchUnlockedApp(appListItem)
