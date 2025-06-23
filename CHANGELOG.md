@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Bug Fixes:
+
+- App launch no longer removes the timer and will continue if the timer never ended. - ([69a1911](https://github.com/DroidWorksStudio/mLauncher/commit/69a19115611202abb3074b40d72ebdad5939f248))
+
+## [1.10.7.6](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.7.6) - (23, June 2025)
+
 ### Implemented Enhancements:
 
 - *(App Timer)* Add app usage timer functionality - ([bc7da7e](https://github.com/DroidWorksStudio/mLauncher/commit/bc7da7eee7fcad772e0e8f533cf91b97e2feabf3))
