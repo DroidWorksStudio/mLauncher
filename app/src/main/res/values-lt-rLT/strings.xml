@@ -315,19 +315,19 @@ Jūs bet kada galite išjungti šią prieigą savo įrenginio nustatymuose.</str
     <string name="settings_context_menu_option">Pasirinkite elementus, kuriuos norite rodyti</string>
     <string name="settings_home_buttons_title">Namų mygtukai</string>
     <string name="settings_home_buttons_option">Pasirinkite elementus, kuriuos norite rodyti</string>
-    <string name="app_timer_set_timer_duration">Set Timer Duration</string>
-    <string name="app_timer_5_minutes">5 minutes</string>
-    <string name="app_timer_10_minutes">10 minutes</string>
-    <string name="app_timer_30_minutes">30 minutes</string>
-    <string name="app_timer_60_minutes">60 minutes</string>
-    <string name="app_timer_custom_minutes_label">Or enter custom duration (in minutes):</string>
-    <string name="app_timer_custom_minutes_hint">e.g. 15</string>
-    <string name="app_timer_start_custom">Start Custom Timer</string>
-    <string name="app_timer_invalid_minutes">Please enter a valid number of minutes.</string>
-    <string name="app_timer_extend_or_close">Time’s up! Extend session or close the app?</string>
-    <string name="app_timer_extend_5">Extend 5 minutes</string>
-    <string name="app_timer_extend_10">Extend 10 minutes</string>
-    <string name="app_timer_close_app">Close App</string>
+    <string name="app_timer_set_timer_duration">Nustatyti laikmačio trukmę</string>
+    <string name="app_timer_5_minutes">5 minutės</string>
+    <string name="app_timer_10_minutes">10 minučių</string>
+    <string name="app_timer_30_minutes">30 minučių</string>
+    <string name="app_timer_60_minutes">60 minučių</string>
+    <string name="app_timer_custom_minutes_label">Arba įveskite pasirinktinę trukmę (minutėmis):</string>
+    <string name="app_timer_custom_minutes_hint">pvz., 15</string>
+    <string name="app_timer_start_custom">Paleisti pasirinktinį laikmatį</string>
+    <string name="app_timer_invalid_minutes">Įveskite galiojantį minučių skaičių.</string>
+    <string name="app_timer_extend_or_close">Laikas baigėsi! Pratęsti sesiją ar uždaryti programėlę?</string>
+    <string name="app_timer_extend_5">Pratęskite 5 minutes</string>
+    <string name="app_timer_extend_10">Pratęskite 10 minučių</string>
+    <string name="app_timer_close_app">Uždaryti programėlę</string>
     <string-array name="priorities">
         <item>Žemas</item>
         <item>Vidutinis</item>
