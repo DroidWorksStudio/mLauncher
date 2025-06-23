@@ -1,17 +1,14 @@
 package com.github.droidworksstudio.mlauncher.ui.components
 
 import android.app.Activity
-import android.app.DatePickerDialog
-import android.app.TimePickerDialog
 import android.content.Context
+import android.content.res.ColorStateList
 import android.graphics.Color
 import android.graphics.Typeface
 import android.graphics.drawable.GradientDrawable
 import android.text.Editable
 import android.text.InputType
 import android.text.TextWatcher
-import android.text.format.DateFormat
-import android.text.format.DateFormat.is24HourFormat
 import android.util.TypedValue
 import android.view.Gravity
 import android.view.View
@@ -43,9 +40,6 @@ import com.github.droidworksstudio.mlauncher.helper.themeDownloadButton
 import com.github.droidworksstudio.mlauncher.helper.utils.AppReloader
 import com.github.droidworksstudio.mlauncher.helper.wordofthedayDownloadButton
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import java.time.ZoneId
-import java.time.format.DateTimeFormatter
-import java.util.Calendar
 
 class DialogManager(val context: Context, val activity: Activity) {
 
@@ -895,95 +889,85 @@ class DialogManager(val context: Context, val activity: Activity) {
 
         val container = LinearLayout(context).apply {
             orientation = LinearLayout.VERTICAL
+            setBackgroundColor(ContextCompat.getColor(context, R.color.colorPrimaryBackground))
             setPadding(40, 40, 40, 40)
         }
 
+        val buttons = LinearLayout(context).apply {
+            orientation = LinearLayout.HORIZONTAL
+            setPadding(16, 16, 16, 16)
+        }
+
         val title = FontAppCompatTextView(context).apply {
-            text = getLocalizedString(R.string.app_timer_set_timer_date_time)
+            text = getLocalizedString(R.string.app_timer_set_timer_duration)
+            setTextColor(ContextCompat.getColor(context, R.color.colorPrimary))
             textSize = 18f
             setPadding(0, 0, 0, 20)
         }
 
-        // Button to open Date & Time picker
-        val dateTimeBtn = Button(context).apply {
-            text = getLocalizedString(R.string.app_timer_pick_time_date)
+        val durations = listOf(
+            5 to getLocalizedString(R.string.app_timer_5_minutes),
+            10 to getLocalizedString(R.string.app_timer_10_minutes),
+            30 to getLocalizedString(R.string.app_timer_30_minutes),
+            60 to getLocalizedString(R.string.app_timer_60_minutes)
+        )
+
+        container.addView(title)
+
+        // Preset buttons
+        durations.forEach { (minutes, label) ->
+            val button = Button(context).apply {
+                text = label
+                setTextColor(ContextCompat.getColor(context, R.color.buttonTextPrimary))
+                backgroundTintList = ColorStateList.valueOf(
+                    ContextCompat.getColor(context, R.color.buttonBackgroundPrimary)
+                )
+                setOnClickListener {
+                    val targetTimeMillis = System.currentTimeMillis() + minutes * 60_000
+                    timerBottomSheet?.dismiss()
+                    onTimeSelected(targetTimeMillis)
+                }
+            }
+            buttons.addView(button)
         }
 
-        // TextView to show selected date & time
-        val selectedDateTimeText = TextView(context).apply {
-            text = getLocalizedString(R.string.app_timer_no_time_date_set)
-            setPadding(0, 20, 0, 20)
+        container.addView(buttons)
+
+        // Custom timer input
+        val customInputLabel = TextView(context).apply {
+            text = getLocalizedString(R.string.app_timer_custom_minutes_label)
+            setPadding(0, 30, 0, 10)
         }
 
-        var pickedCalendar = Calendar.getInstance()
-
-        dateTimeBtn.setOnClickListener {
-            // Step 1: Show DatePickerDialog
-            val now = Calendar.getInstance()
-            DatePickerDialog(
-                context,
-                { _, year, month, dayOfMonth ->
-                    pickedCalendar.set(year, month, dayOfMonth)
-
-                    // Step 2: Show TimePickerDialog after date picked
-                    TimePickerDialog(
-                        context,
-                        { _, hourOfDay, minute ->
-                            val prefs = Prefs(context)
-                            val locale = prefs.appLanguage.locale()
-                            val datePattern = DateFormat.getBestDateTimePattern(locale, "EEEddMMM") // localized date pattern
-                            // Detect 12h or 24h format and choose the right time pattern accordingly
-                            val timePattern = if (is24HourFormat(context)) {
-                                DateFormat.getBestDateTimePattern(locale, "Hm")  // 24-hour format, e.g. 13:45
-                            } else {
-                                DateFormat.getBestDateTimePattern(locale, "hm")  // 12-hour format, e.g. 1:45 PM
-                            }
-
-                            val fullPattern = "$datePattern $timePattern"
-                            val formatter = DateTimeFormatter.ofPattern(fullPattern, locale)
-
-                            pickedCalendar.set(Calendar.HOUR_OF_DAY, hourOfDay)
-                            pickedCalendar.set(Calendar.MINUTE, minute)
-                            pickedCalendar.set(Calendar.SECOND, 0)
-                            pickedCalendar.set(Calendar.MILLISECOND, 0)
-
-                            val instant = pickedCalendar.toInstant()
-                            val localDateTime = instant.atZone(ZoneId.systemDefault()).toLocalDateTime()
-
-                            val formatted = localDateTime.format(formatter)
-
-                            selectedDateTimeText.text = getLocalizedString(R.string.app_timer_selected_timer, formatted)
-                        },
-                        now.get(Calendar.HOUR_OF_DAY),
-                        now.get(Calendar.MINUTE),
-                        true
-                    ).show()
-
-                },
-                now.get(Calendar.YEAR),
-                now.get(Calendar.MONTH),
-                now.get(Calendar.DAY_OF_MONTH)
-            ).show()
+        val customInput = EditText(context).apply {
+            hint = getLocalizedString(R.string.app_timer_custom_minutes_hint)
+            inputType = InputType.TYPE_CLASS_NUMBER
         }
 
-        val confirmBtn = Button(context).apply {
-            text = getLocalizedString(R.string.app_timer_start_timer)
+        val customStartBtn = Button(context).apply {
+            text = getLocalizedString(R.string.app_timer_start_custom)
+            setTextColor(ContextCompat.getColor(context, R.color.buttonTextPrimary))
+            backgroundTintList = ColorStateList.valueOf(
+                ContextCompat.getColor(context, R.color.buttonBackgroundError)
+            )
             setOnClickListener {
-                val now = Calendar.getInstance()
-                if (pickedCalendar.timeInMillis <= now.timeInMillis) {
-                    // If picked time is in the past, warn user or ignore
-                    context.showLongToast(getLocalizedString(R.string.app_timer_future_time_date))
+                val inputText = customInput.text.toString()
+                val customMinutes = inputText.toIntOrNull()
+
+                if (customMinutes == null || customMinutes <= 0) {
+                    context.showLongToast(getLocalizedString(R.string.app_timer_invalid_minutes))
                     return@setOnClickListener
                 }
+
+                val targetTimeMillis = System.currentTimeMillis() + customMinutes * 60_000
                 timerBottomSheet?.dismiss()
-                onTimeSelected(pickedCalendar.timeInMillis)
+                onTimeSelected(targetTimeMillis)
             }
         }
 
-        container.addView(title)
-        container.addView(dateTimeBtn)
-        container.addView(selectedDateTimeText)
-        container.addView(confirmBtn)
+        container.addView(customInputLabel)
+        container.addView(customInput)
+        container.addView(customStartBtn)
 
         timerBottomSheet?.setContentView(container)
         timerBottomSheet?.show()
