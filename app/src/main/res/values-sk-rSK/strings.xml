@@ -315,19 +315,19 @@ Tento prístup môžete kedykoľvek vypnúť v nastaveniach zariadenia.</string>
     <string name="settings_context_menu_option">Vyberte položky, ktoré chcete zobraziť</string>
     <string name="settings_home_buttons_title">Tlačidlá Domov</string>
     <string name="settings_home_buttons_option">Vyberte položky, ktoré chcete zobraziť</string>
-    <string name="app_timer_set_timer_duration">Set Timer Duration</string>
-    <string name="app_timer_5_minutes">5 minutes</string>
-    <string name="app_timer_10_minutes">10 minutes</string>
-    <string name="app_timer_30_minutes">30 minutes</string>
-    <string name="app_timer_60_minutes">60 minutes</string>
-    <string name="app_timer_custom_minutes_label">Or enter custom duration (in minutes):</string>
-    <string name="app_timer_custom_minutes_hint">e.g. 15</string>
-    <string name="app_timer_start_custom">Start Custom Timer</string>
-    <string name="app_timer_invalid_minutes">Please enter a valid number of minutes.</string>
-    <string name="app_timer_extend_or_close">Time’s up! Extend session or close the app?</string>
-    <string name="app_timer_extend_5">Extend 5 minutes</string>
-    <string name="app_timer_extend_10">Extend 10 minutes</string>
-    <string name="app_timer_close_app">Close App</string>
+    <string name="app_timer_set_timer_duration">Nastavenie trvania časovača</string>
+    <string name="app_timer_5_minutes">5 minút</string>
+    <string name="app_timer_10_minutes">10 minút</string>
+    <string name="app_timer_30_minutes">30 minút</string>
+    <string name="app_timer_60_minutes">60 minút</string>
+    <string name="app_timer_custom_minutes_label">Alebo zadajte vlastné trvanie (v minútach):</string>
+    <string name="app_timer_custom_minutes_hint">napr. 15</string>
+    <string name="app_timer_start_custom">Spustiť vlastný časovač</string>
+    <string name="app_timer_invalid_minutes">Zadajte platný počet minút.</string>
+    <string name="app_timer_extend_or_close">Čas vypršal! Predĺžiť reláciu alebo zatvoriť aplikáciu?</string>
+    <string name="app_timer_extend_5">Predĺžiť o 5 minút</string>
+    <string name="app_timer_extend_10">Predĺžiť o 10 minút</string>
+    <string name="app_timer_close_app">Zatvoriť aplikáciu</string>
     <string-array name="priorities">
         <item>Nízka</item>
         <item>Stredná</item>
