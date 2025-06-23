@@ -313,6 +313,19 @@
     <string name="settings_context_menu_option">Wybierz elementy do wyświetlenia</string>
     <string name="settings_home_buttons_title">Przyciski główne</string>
     <string name="settings_home_buttons_option">Wybierz elementy do wyświetlenia</string>
+    <string name="app_timer_set_timer_duration">Ustaw czas trwania timera</string>
+    <string name="app_timer_5_minutes">5 minut</string>
+    <string name="app_timer_10_minutes">10 minut</string>
+    <string name="app_timer_30_minutes">30 minut</string>
+    <string name="app_timer_60_minutes">60 minut</string>
+    <string name="app_timer_custom_minutes_label">Lub wprowadź niestandardowy czas trwania (w minutach):</string>
+    <string name="app_timer_custom_minutes_hint">np. 15</string>
+    <string name="app_timer_start_custom">Uruchom niestandardowy timer</string>
+    <string name="app_timer_invalid_minutes">Proszę wprowadzić prawidłową liczbę minut.</string>
+    <string name="app_timer_extend_or_close">Czas się skończył! Przedłużyć sesję czy zamknąć aplikację?</string>
+    <string name="app_timer_extend_5">Przedłuż o 5 minut</string>
+    <string name="app_timer_extend_10">Wydłuż o 10 minut</string>
+    <string name="app_timer_close_app">Zamknij aplikację</string>
     <string-array name="priorities">
         <item>Niski</item>
         <item>Średni</item>

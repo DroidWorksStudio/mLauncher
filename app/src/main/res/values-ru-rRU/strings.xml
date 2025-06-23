@@ -313,6 +313,19 @@
     <string name="settings_context_menu_option">Выберите элементы для отображения</string>
     <string name="settings_home_buttons_title">Кнопки «Домой»</string>
     <string name="settings_home_buttons_option">Выберите элементы для отображения</string>
+    <string name="app_timer_set_timer_duration">Установить длительность таймера</string>
+    <string name="app_timer_5_minutes">5 минут</string>
+    <string name="app_timer_10_minutes">10 минут</string>
+    <string name="app_timer_30_minutes">30 минут</string>
+    <string name="app_timer_60_minutes">60 минут</string>
+    <string name="app_timer_custom_minutes_label">Или введите произвольную продолжительность (в минутах):</string>
+    <string name="app_timer_custom_minutes_hint">например 15</string>
+    <string name="app_timer_start_custom">Запустить пользовательский таймер</string>
+    <string name="app_timer_invalid_minutes">Введите допустимое количество минут.</string>
+    <string name="app_timer_extend_or_close">Время вышло! Продлить сеанс или закрыть приложение?</string>
+    <string name="app_timer_extend_5">Продлить на 5 минут</string>
+    <string name="app_timer_extend_10">Продлить на 10 минут</string>
+    <string name="app_timer_close_app">Закрыть приложение</string>
     <string-array name="priorities">
         <item>Низкий</item>
         <item>Середина</item>

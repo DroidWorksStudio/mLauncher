@@ -313,6 +313,19 @@
     <string name="settings_context_menu_option">表示する項目を選択</string>
     <string name="settings_home_buttons_title">ホームボタン</string>
     <string name="settings_home_buttons_option">表示する項目を選択</string>
+    <string name="app_timer_set_timer_duration">タイマー時間の設定</string>
+    <string name="app_timer_5_minutes">5分</string>
+    <string name="app_timer_10_minutes">10分</string>
+    <string name="app_timer_30_minutes">30分</string>
+    <string name="app_timer_60_minutes">60分</string>
+    <string name="app_timer_custom_minutes_label">または、カスタム期間（分単位）を入力します。</string>
+    <string name="app_timer_custom_minutes_hint">例：15</string>
+    <string name="app_timer_start_custom">カスタムタイマーを開始</string>
+    <string name="app_timer_invalid_minutes">有効な分数を入力してください。</string>
+    <string name="app_timer_extend_or_close">時間切れです! セッションを延長しますか、それともアプリを閉じますか?</string>
+    <string name="app_timer_extend_5">5分延長</string>
+    <string name="app_timer_extend_10">10分延長</string>
+    <string name="app_timer_close_app">アプリを閉じる</string>
     <string-array name="priorities">
         <item>低い</item>
         <item>中くらい</item>

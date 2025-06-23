@@ -313,6 +313,19 @@
     <string name="settings_context_menu_option">Seleccionar elementos para mostrar</string>
     <string name="settings_home_buttons_title">Botones de inicio</string>
     <string name="settings_home_buttons_option">Seleccionar elementos para mostrar</string>
+    <string name="app_timer_set_timer_duration">Establecer la duración del temporizador</string>
+    <string name="app_timer_5_minutes">5 minutos</string>
+    <string name="app_timer_10_minutes">10 minutos</string>
+    <string name="app_timer_30_minutes">30 minutos</string>
+    <string name="app_timer_60_minutes">60 minutos</string>
+    <string name="app_timer_custom_minutes_label">O ingrese una duración personalizada (en minutos):</string>
+    <string name="app_timer_custom_minutes_hint">p. ej. 15</string>
+    <string name="app_timer_start_custom">Iniciar temporizador personalizado</string>
+    <string name="app_timer_invalid_minutes">Ingrese un número válido de minutos.</string>
+    <string name="app_timer_extend_or_close">¡Se acabó el tiempo! ¿Quieres extender la sesión o cerrar la aplicación?</string>
+    <string name="app_timer_extend_5">Extender 5 minutos</string>
+    <string name="app_timer_extend_10">Extender 10 minutos</string>
+    <string name="app_timer_close_app">Cerrar aplicación</string>
     <string-array name="priorities">
         <item>Bajo</item>
         <item>Medio</item>

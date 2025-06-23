@@ -313,6 +313,19 @@
     <string name="settings_context_menu_option">Seleziona gli elementi da visualizzare</string>
     <string name="settings_home_buttons_title">Pulsanti Home</string>
     <string name="settings_home_buttons_option">Seleziona gli elementi da visualizzare</string>
+    <string name="app_timer_set_timer_duration">Imposta la durata del timer</string>
+    <string name="app_timer_5_minutes">5 minuti</string>
+    <string name="app_timer_10_minutes">10 minuti</string>
+    <string name="app_timer_30_minutes">30 minuti</string>
+    <string name="app_timer_60_minutes">60 minuti</string>
+    <string name="app_timer_custom_minutes_label">Oppure inserisci una durata personalizzata (in minuti):</string>
+    <string name="app_timer_custom_minutes_hint">ad esempio 15</string>
+    <string name="app_timer_start_custom">Avvia timer personalizzato</string>
+    <string name="app_timer_invalid_minutes">Inserisci un numero valido di minuti.</string>
+    <string name="app_timer_extend_or_close">Tempo scaduto! Vuoi prolungare la sessione o chiudere l\'app?</string>
+    <string name="app_timer_extend_5">Prolungare di 5 minuti</string>
+    <string name="app_timer_extend_10">Prolungare di 10 minuti</string>
+    <string name="app_timer_close_app">Chiudi l\'app</string>
     <string-array name="priorities">
         <item>Basso</item>
         <item>Medio</item>

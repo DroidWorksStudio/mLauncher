@@ -313,6 +313,19 @@
     <string name="settings_context_menu_option">표시할 항목을 선택하세요</string>
     <string name="settings_home_buttons_title">홈 버튼</string>
     <string name="settings_home_buttons_option">표시할 항목을 선택하세요</string>
+    <string name="app_timer_set_timer_duration">타이머 지속 시간 설정</string>
+    <string name="app_timer_5_minutes">5분</string>
+    <string name="app_timer_10_minutes">10분</string>
+    <string name="app_timer_30_minutes">30분</string>
+    <string name="app_timer_60_minutes">60분</string>
+    <string name="app_timer_custom_minutes_label">또는 사용자 지정 기간(분)을 입력하세요.</string>
+    <string name="app_timer_custom_minutes_hint">예를 들어 15</string>
+    <string name="app_timer_start_custom">사용자 정의 타이머 시작</string>
+    <string name="app_timer_invalid_minutes">유효한 분을 입력하세요.</string>
+    <string name="app_timer_extend_or_close">시간이 다 되었습니다! 세션을 연장할까요, 아니면 앱을 닫을까요?</string>
+    <string name="app_timer_extend_5">5분 연장</string>
+    <string name="app_timer_extend_10">10분 연장</string>
+    <string name="app_timer_close_app">앱 닫기</string>
     <string-array name="priorities">
         <item>낮은</item>
         <item>중간</item>
