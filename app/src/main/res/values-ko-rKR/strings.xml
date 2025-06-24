@@ -78,6 +78,7 @@
     <string name="show_total_screen_time">총 화면 시간 표시</string>
     <string name="weather">날씨</string>
     <string name="show_weather">날씨 표시</string>
+    <string name="icon_packs">Icon Packs</string>
     <!-- Strings used for look & feel settings -->
     <string name="look_feel_settings_title">보세요 &amp; 느껴보세요</string>
     <string name="text_size_adjustments">텍스트 &amp; 크기 조정</string>
