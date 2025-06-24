@@ -11,6 +11,7 @@ All notable changes to this project will be documented in this file. See [conven
 ### Refactoring:
 
 - *(Gesture)* Enhance swipe detection and handling - ([82979a7](https://github.com/DroidWorksStudio/mLauncher/commit/82979a779f6333790e7c0e4d5e2443349d115c73))
+- Adjust swipe threshold calculation to use inches - ([89702aa](https://github.com/DroidWorksStudio/mLauncher/commit/89702aa0d2d25105fa0aeefbb7b8ceb98cdad127))
 - Move gesture-related classes to listener package - ([9380bd5](https://github.com/DroidWorksStudio/mLauncher/commit/9380bd5da338337e4401ce4590f28b97ff3b2d34))
 - Only show app timer if enabled in settings - ([4cf02b9](https://github.com/DroidWorksStudio/mLauncher/commit/4cf02b99085d9f95d1a9fc5b3b69f65dd74bb448))
 - Log activities from package in MainViewModel - ([8a917e4](https://github.com/DroidWorksStudio/mLauncher/commit/8a917e4f7eb72c5522c11f19c319728e69838420))
