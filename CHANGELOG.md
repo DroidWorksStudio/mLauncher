@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Move gesture-related classes to listener package - ([9380bd5](https://github.com/DroidWorksStudio/mLauncher/commit/9380bd5da338337e4401ce4590f28b97ff3b2d34))
 - Only show app timer if enabled in settings - ([4cf02b9](https://github.com/DroidWorksStudio/mLauncher/commit/4cf02b99085d9f95d1a9fc5b3b69f65dd74bb448))
 - Log activities from package in MainViewModel - ([8a917e4](https://github.com/DroidWorksStudio/mLauncher/commit/8a917e4f7eb72c5522c11f19c319728e69838420))
 
