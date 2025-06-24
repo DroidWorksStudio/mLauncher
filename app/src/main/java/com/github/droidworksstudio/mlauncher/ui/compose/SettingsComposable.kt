@@ -14,8 +14,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentSize
-import androidx.compose.material.Switch
-import androidx.compose.material.SwitchDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
@@ -26,7 +24,6 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.toArgb
@@ -37,7 +34,9 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.viewinterop.AndroidView
+import androidx.core.content.ContextCompat
 import com.github.creativecodecat.components.views.FontAppCompatTextView
+import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.style.SettingsTheme
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
@@ -295,19 +294,21 @@ object SettingsComposable {
                     .wrapContentHeight()
             )
 
-            Switch(
-                checked = isChecked,
-                onCheckedChange = {
-                    isChecked = it
-                    onCheckedChange(it)
+            AndroidView(
+                factory = { context ->
+                    androidx.appcompat.widget.SwitchCompat(context).apply {
+                        scaleX = 0.7f
+                        scaleY = 0.7f
+                        thumbDrawable = ContextCompat.getDrawable(context, R.drawable.shape_switch_thumb)
+                        trackDrawable = ContextCompat.getDrawable(context, R.drawable.selector_switch)
+                        this.isChecked = isChecked
+                        setOnCheckedChangeListener { _, checked ->
+                            isChecked = checked
+                            onCheckedChange(checked)
+                        }
+                    }
                 },
-                modifier = Modifier.scale(0.7f),
-                colors = SwitchDefaults.colors(
-                    checkedThumbColor = Color.White,
-                    checkedTrackColor = Color.Green,
-                    uncheckedThumbColor = Color.White,
-                    uncheckedTrackColor = Color.LightGray
-                )
+                modifier = Modifier.padding(end = 16.dp)
             )
         }
     }
