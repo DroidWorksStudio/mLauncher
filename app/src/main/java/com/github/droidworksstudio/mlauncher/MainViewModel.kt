@@ -1,6 +1,5 @@
 package com.github.droidworksstudio.mlauncher
 
-import android.annotation.SuppressLint
 import android.app.Application
 import android.content.ComponentName
 import android.content.Context
@@ -269,7 +268,6 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         }, delay)
     }
 
-    @SuppressLint("ServiceCast")
     private fun closeAppSession(
         packageName: String,
         onExtend: (minutes: Int) -> Unit
@@ -277,7 +275,9 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         val packageManager = appContext.packageManager
         val applicationInfo = packageManager.getApplicationInfo(packageName, 0)
         val appName = packageManager.getApplicationLabel(applicationInfo).toString()
+        val isTimerEnabled = prefs.enableAppTimer
 
+        if (!isTimerEnabled) return
         if (Settings.canDrawOverlays(appContext)) {
             val themedContext = ContextThemeWrapper(appContext, R.style.Theme_mLauncher)
             val windowManager = appContext.getSystemService(Context.WINDOW_SERVICE) as WindowManager
