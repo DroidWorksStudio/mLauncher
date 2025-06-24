@@ -44,6 +44,7 @@ import com.github.droidworksstudio.mlauncher.data.Constants.AppDrawerFlag
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.helper.analytics.AppUsageMonitor
 import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
+import com.github.droidworksstudio.mlauncher.helper.logActivitiesFromPackage
 import com.github.droidworksstudio.mlauncher.helper.utils.BiometricHelper
 import com.github.droidworksstudio.mlauncher.helper.utils.PrivateSpaceManager
 import com.github.droidworksstudio.mlauncher.ui.components.DialogManager
@@ -161,7 +162,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         val isTimerEnabled = prefs.enableAppTimer
         val currentLockedApps = prefs.lockedApps
 
-//        logActivitiesFromPackage(appContext, packageName)
+        logActivitiesFromPackage(appContext, packageName)
 
         dialogBuilder = DialogManager(appContext, fragment.requireActivity())
 
