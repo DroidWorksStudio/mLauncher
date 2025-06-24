@@ -14,6 +14,8 @@ class GestureManager(
 
     private val gestureDetector = GestureDetector(context, this)
     private var downTime: Long = 0
+    private var isScrolling = false
+    private var initialEvent: MotionEvent? = null
 
     companion object {
         private const val TAG = "GestureManager"
@@ -34,6 +36,23 @@ class GestureManager(
     }
 
     fun onTouchEvent(event: MotionEvent): Boolean {
+        when (event.actionMasked) {
+            MotionEvent.ACTION_DOWN -> {
+                downTime = System.currentTimeMillis()
+                isScrolling = false
+                initialEvent?.recycle()
+                initialEvent = MotionEvent.obtain(event)
+            }
+
+            MotionEvent.ACTION_UP -> {
+                if (isScrolling && initialEvent != null) {
+                    handleScrollFinished(initialEvent!!, event)
+                    isScrolling = false
+                    initialEvent?.recycle()
+                    initialEvent = null
+                }
+            }
+        }
         return gestureDetector.onTouchEvent(event)
     }
 
@@ -60,6 +79,16 @@ class GestureManager(
         listener.onLongPress()
     }
 
+    override fun onScroll(
+        e1: MotionEvent?,
+        e2: MotionEvent,
+        distanceX: Float,
+        distanceY: Float
+    ): Boolean {
+        isScrolling = true
+        return true
+    }
+
     override fun onFling(
         e1: MotionEvent?,
         e2: MotionEvent,
@@ -71,10 +100,26 @@ class GestureManager(
             return false
         }
 
-        val diffX = e2.x - e1.x
-        val diffY = e2.y - e1.y
         val duration = System.currentTimeMillis() - downTime
+        val isHorizontal = abs(e2.x - e1.x) > abs(e2.y - e1.y)
+        val velocity = if (isHorizontal) abs(velocityX) else abs(velocityY)
 
+        return detectSwipeGesture(e1, e2, duration, velocity)
+    }
+
+    private fun handleScrollFinished(e1: MotionEvent, e2: MotionEvent) {
+        val duration = System.currentTimeMillis() - downTime
+        detectSwipeGesture(e1, e2, duration)
+    }
+
+    private fun detectSwipeGesture(
+        startEvent: MotionEvent,
+        endEvent: MotionEvent,
+        duration: Long,
+        velocity: Float? = null
+    ): Boolean {
+        val diffX = endEvent.x - startEvent.x
+        val diffY = endEvent.y - startEvent.y
         val isHorizontalSwipe = abs(diffX) > abs(diffY)
 
         val direction = if (isHorizontalSwipe) {
@@ -83,52 +128,45 @@ class GestureManager(
             if (diffY > 0) "DOWN" else "UP"
         }
 
-        // Update swipe thresholds based on current context/screen
         Constants.updateSwipeDistanceThreshold(context, direction)
 
+        val shortThreshold = Constants.SHORT_SWIPE_THRESHOLD
+        val longThreshold = Constants.LONG_SWIPE_THRESHOLD
         val velocityThreshold = Constants.SWIPE_VELOCITY_THRESHOLD
-        val holdDurationThreshold = Constants.HOLD_DURATION_THRESHOLD
-
-        Log.d(
-            TAG, "onFling - direction: $direction, duration: $duration, " +
-                    "SHORT threshold: ${Constants.SHORT_SWIPE_THRESHOLD}, LONG threshold: ${Constants.LONG_SWIPE_THRESHOLD}, velocityThreshold: $velocityThreshold"
-        )
 
         val distance = if (isHorizontalSwipe) abs(diffX) else abs(diffY)
-        val velocity = if (isHorizontalSwipe) abs(velocityX) else abs(velocityY)
+        val isLongSwipe = distance > longThreshold
+        val isShortSwipe = distance in (shortThreshold + 1)..longThreshold
 
-        Log.d(TAG, "Fling - distance: $distance, velocity: $velocity")
 
-        // Check if velocity is sufficient
-        if (velocity < velocityThreshold) {
-            Log.d(TAG, "Fling velocity below threshold, ignoring fling")
+        Log.d(
+            TAG, "detectSwipeGesture - direction: $direction, distance: $distance, duration: $duration, " +
+                    "velocity: $velocity, shortThreshold: $shortThreshold, longThreshold: $longThreshold"
+        )
+
+        if (velocity != null && velocity < velocityThreshold) {
+            Log.d(TAG, "Velocity too low for fling, ignoring gesture.")
             return false
         }
 
-        val isLongSwipe = distance > Constants.LONG_SWIPE_THRESHOLD
-        val isShortSwipe = distance > Constants.SHORT_SWIPE_THRESHOLD && distance <= Constants.LONG_SWIPE_THRESHOLD
-
-        if (isLongSwipe || isShortSwipe) {
-            val isLongDuration = duration > holdDurationThreshold
-            Log.d(TAG, "Swipe detected - isLongSwipe: $isLongSwipe, isShortSwipe: $isShortSwipe, durationLongEnough: $isLongDuration")
-
-            if (isHorizontalSwipe) {
-                if (diffX > 0) {
+        if (isShortSwipe || isLongSwipe) {
+            when {
+                isHorizontalSwipe && diffX > 0 ->
                     if (isLongSwipe) listener.onLongSwipeRight() else listener.onShortSwipeRight()
-                } else {
+
+                isHorizontalSwipe && diffX < 0 ->
                     if (isLongSwipe) listener.onLongSwipeLeft() else listener.onShortSwipeLeft()
-                }
-            } else {
-                if (diffY > 0) {
+
+                !isHorizontalSwipe && diffY > 0 ->
                     if (isLongSwipe) listener.onLongSwipeDown() else listener.onShortSwipeDown()
-                } else {
+
+                !isHorizontalSwipe && diffY < 0 ->
                     if (isLongSwipe) listener.onLongSwipeUp() else listener.onShortSwipeUp()
-                }
             }
             return true
         }
 
-        Log.d(TAG, "onFling - No swipe detected")
+        Log.d(TAG, "detectSwipeGesture - No swipe detected.")
         return false
     }
 }

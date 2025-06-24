@@ -57,8 +57,6 @@ object Constants {
     const val MAX_OPACITY = 100
 
     const val DOUBLE_CLICK_TIME_DELTA = 300L // Adjust as needed
-
-    const val HOLD_DURATION_THRESHOLD = 250L // Adjust as needed
     const val SWIPE_VELOCITY_THRESHOLD = 450f // Adjust as needed
 
     // Update SWIPE_DISTANCE_THRESHOLD dynamically based on screen dimensions
