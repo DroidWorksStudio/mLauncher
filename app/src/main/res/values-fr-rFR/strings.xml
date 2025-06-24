@@ -78,6 +78,7 @@
     <string name="show_total_screen_time">Afficher le temps total d\'écran</string>
     <string name="weather">Météo</string>
     <string name="show_weather">Afficher la météo</string>
+    <string name="icon_packs">Icon Packs</string>
     <!-- Strings used for look & feel settings -->
     <string name="look_feel_settings_title">Regarder &amp; Ressentir</string>
     <string name="text_size_adjustments">Texte &amp; Ajustements de taille</string>
