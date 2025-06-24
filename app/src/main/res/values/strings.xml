@@ -108,6 +108,7 @@
     <string name="weather">Weather</string>
     <string name="show_weather">Show Weather</string>
 
+    <string name="icon_packs">Icon Packs</string>
 
     <!-- Strings used for look & feel settings -->
     <string name="look_feel_settings_title">Look &amp; Feel</string>

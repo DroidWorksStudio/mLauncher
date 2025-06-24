@@ -836,6 +836,32 @@ class SettingsFragment : Fragment() {
 
                     Spacer(modifier = Modifier.height(14.dp))
 
+                    // Toggles
+                    SettingsTitle(
+                        text = getLocalizedString(R.string.toggleable_items),
+                        fontSize = titleFontSize
+                    )
+
+                    SettingsSelect(
+                        title = getLocalizedString(R.string.settings_context_menu_title),
+                        option = getLocalizedString(R.string.settings_context_menu_option),
+                        fontSize = titleFontSize,
+                        onClick = {
+                            dialogBuilder.showFlagSettingsBottomSheet(context, contextMenuOptionLabels, "CONTEXT_MENU_FLAGS", "0011111")
+                        }
+                    )
+
+                    SettingsSelect(
+                        title = getLocalizedString(R.string.settings_home_buttons_title),
+                        option = getLocalizedString(R.string.settings_home_buttons_option),
+                        fontSize = titleFontSize,
+                        onClick = {
+                            dialogBuilder.showFlagSettingsBottomSheet(context, homeButtonOptionLabels, "HOME_BUTTON_FLAGS", "0000011")
+                        }
+                    )
+
+                    Spacer(modifier = Modifier.height(14.dp))
+
                     // Info Tiles
                     SettingsTitle(
                         text = getLocalizedString(R.string.info_tiles),
@@ -957,7 +983,10 @@ class SettingsFragment : Fragment() {
                     Spacer(modifier = Modifier.height(16.dp))
 
                     // Layout & Density
-                    SettingsTitle(text = getLocalizedString(R.string.layout_positioning), fontSize = titleFontSize)
+                    SettingsTitle(
+                        text = getLocalizedString(R.string.layout_positioning),
+                        fontSize = titleFontSize
+                    )
                     SettingsSelect(
                         title = getLocalizedString(R.string.app_padding_size),
                         option = selectedPaddingSize.toString(),
@@ -1098,7 +1127,11 @@ class SettingsFragment : Fragment() {
                     Spacer(modifier = Modifier.height(14.dp))
 
                     // Alignment
-                    SettingsTitle(text = getLocalizedString(R.string.element_alignment), fontSize = titleFontSize)
+                    SettingsTitle(
+                        text = getLocalizedString(R.string.element_alignment),
+                        fontSize = titleFontSize
+                    )
+
                     SettingsSelect(
                         title = getLocalizedString(R.string.clock_alignment),
                         option = selectedClockAlignment.string(),
@@ -1237,7 +1270,10 @@ class SettingsFragment : Fragment() {
                     Spacer(modifier = Modifier.height(14.dp))
 
                     // Colors
-                    SettingsTitle(text = getLocalizedString(R.string.element_colors), fontSize = titleFontSize)
+                    SettingsTitle(
+                        text = getLocalizedString(R.string.element_colors),
+                        fontSize = titleFontSize
+                    )
 
                     val hexBackgroundColor = String.format("#%06X", (0xFFFFFF and selectedBackgroundColor))
                     SettingsSelect(
@@ -1365,10 +1401,40 @@ class SettingsFragment : Fragment() {
                         }
                     )
 
+                    SettingsSwitch(
+                        text = getLocalizedString(R.string.rainbow_shortcuts),
+                        fontSize = titleFontSize,
+                        defaultState = toggledIconRainbowColors,
+                        onCheckedChange = {
+                            toggledIconRainbowColors = !prefs.iconRainbowColors
+                            prefs.iconRainbowColors = toggledIconRainbowColors
+                        }
+                    )
+                    SettingsSelect(
+                        title = getLocalizedString(R.string.shortcuts_color),
+                        option = String.format("#%06X", (0xFFFFFF and selectedShortcutIconsColor)),
+                        fontSize = titleFontSize,
+                        fontColor = Color(String.format("#%06X", (0xFFFFFF and selectedShortcutIconsColor)).toColorInt()),
+                        onClick = {
+                            dialogBuilder.showColorPickerBottomSheet(
+                                context = requireContext(),
+                                color = selectedShortcutIconsColor,
+                                titleResId = R.string.shortcuts_color,
+                                onItemSelected = { selectedColor ->
+                                    selectedShortcutIconsColor = selectedColor
+                                    prefs.shortcutIconsColor = selectedColor
+                                })
+                        }
+                    )
+
                     Spacer(modifier = Modifier.height(14.dp))
 
                     // Icon Packs
-//                    SettingsTitle(text = getLocalizedString(R.string.icon_packs), fontSize = titleFontSize)
+                    SettingsTitle(
+                        text = getLocalizedString(R.string.icon_packs),
+                        fontSize = titleFontSize
+                    )
+
                     SettingsSelect(
                         title = getLocalizedString(R.string.select_home_icons),
                         option = selectedIconPackHome.getString(IconCacheTarget.HOME.name),
@@ -1447,35 +1513,14 @@ class SettingsFragment : Fragment() {
                         }
                     )
 
-                    SettingsSwitch(
-                        text = getLocalizedString(R.string.rainbow_shortcuts),
-                        fontSize = titleFontSize,
-                        defaultState = toggledIconRainbowColors,
-                        onCheckedChange = {
-                            toggledIconRainbowColors = !prefs.iconRainbowColors
-                            prefs.iconRainbowColors = toggledIconRainbowColors
-                        }
-                    )
-                    SettingsSelect(
-                        title = getLocalizedString(R.string.shortcuts_color),
-                        option = String.format("#%06X", (0xFFFFFF and selectedShortcutIconsColor)),
-                        fontSize = titleFontSize,
-                        fontColor = Color(String.format("#%06X", (0xFFFFFF and selectedShortcutIconsColor)).toColorInt()),
-                        onClick = {
-                            dialogBuilder.showColorPickerBottomSheet(
-                                context = requireContext(),
-                                color = selectedShortcutIconsColor,
-                                titleResId = R.string.shortcuts_color,
-                                onItemSelected = { selectedColor ->
-                                    selectedShortcutIconsColor = selectedColor
-                                    prefs.shortcutIconsColor = selectedColor
-                                })
-                        }
-                    )
+                    Spacer(modifier = Modifier.height(14.dp))
 
                     // Text Size (moved to bottom for advanced users)
-                    Spacer(modifier = Modifier.height(14.dp))
-                    SettingsTitle(text = getLocalizedString(R.string.text_size_adjustments), fontSize = titleFontSize)
+                    SettingsTitle(
+                        text = getLocalizedString(R.string.text_size_adjustments),
+                        fontSize = titleFontSize
+                    )
+
                     SettingsSelect(
                         title = getLocalizedString(R.string.app_text_size),
                         option = selectedAppSize.toString(),
@@ -1607,7 +1652,10 @@ class SettingsFragment : Fragment() {
                     Spacer(modifier = Modifier.height(16.dp))
 
                     // Tap & Click Actions
-                    SettingsTitle(text = getLocalizedString(R.string.tap_click_actions), fontSize = titleFontSize)
+                    SettingsTitle(
+                        text = getLocalizedString(R.string.tap_click_actions),
+                        fontSize = titleFontSize
+                    )
 
                     val appLabelDoubleTapAction = prefs.appDoubleTap.activityLabel
                     SettingsSelect(
@@ -2012,6 +2060,52 @@ class SettingsFragment : Fragment() {
                         }
                     )
 
+                    Spacer(modifier = Modifier.height(14.dp))
+
+                    // Thresholds
+                    SettingsTitle(
+                        text = getLocalizedString(R.string.threshold),
+                        fontSize = titleFontSize
+                    )
+
+                    SettingsSelect(
+                        title = getLocalizedString(R.string.settings_short_threshold),
+                        option = selectedShortSwipeThreshold.toString(),
+                        fontSize = titleFontSize,
+                        onClick = {
+                            dialogBuilder.showSliderBottomSheet(
+                                context = context,
+                                title = getLocalizedString(R.string.settings_short_threshold),
+                                minValue = Constants.MIN_THRESHOLD,
+                                maxValue = selectedLongSwipeThreshold,
+                                currentValue = prefs.shortSwipeThreshold,
+                                onValueSelected = { newSettingsSize ->
+                                    selectedShortSwipeThreshold = newSettingsSize.toFloat()
+                                    prefs.shortSwipeThreshold = newSettingsSize.toFloat()
+                                }
+                            )
+                        }
+                    )
+
+                    SettingsSelect(
+                        title = getLocalizedString(R.string.settings_long_threshold),
+                        option = selectedLongSwipeThreshold.toString(),
+                        fontSize = titleFontSize,
+                        onClick = {
+                            dialogBuilder.showSliderBottomSheet(
+                                context = context,
+                                title = getLocalizedString(R.string.settings_long_threshold),
+                                minValue = selectedShortSwipeThreshold,
+                                maxValue = Constants.MAX_THRESHOLD,
+                                currentValue = prefs.longSwipeThreshold,
+                                onValueSelected = { newSettingsSize ->
+                                    selectedLongSwipeThreshold = newSettingsSize.toFloat()
+                                    prefs.longSwipeThreshold = newSettingsSize.toFloat()
+                                }
+                            )
+                        }
+                    )
+
                     if (!isGestureNavigationEnabled(context)) {
                         Spacer(modifier = Modifier.height(52.dp))
                     } else {
@@ -2029,7 +2123,11 @@ class SettingsFragment : Fragment() {
                     Spacer(modifier = Modifier.height(16.dp))
 
                     // Display
-                    SettingsTitle(text = getLocalizedString(R.string.display_options), fontSize = titleFontSize)
+                    SettingsTitle(
+                        text = getLocalizedString(R.string.display_options),
+                        fontSize = titleFontSize
+                    )
+
                     SettingsSwitch(
                         text = getLocalizedString(R.string.auto_expand_notes),
                         fontSize = titleFontSize,
@@ -2053,7 +2151,10 @@ class SettingsFragment : Fragment() {
                     Spacer(modifier = Modifier.height(14.dp))
 
                     // Notes Colors
-                    SettingsTitle(text = getLocalizedString(R.string.notes_colors), fontSize = titleFontSize)
+                    SettingsTitle(
+                        text = getLocalizedString(R.string.notes_colors),
+                        fontSize = titleFontSize
+                    )
 
                     val hexBackgroundColor =
                         String.format("#%06X", (0xFFFFFF and selectedNotesBackgroundColor))
@@ -2153,7 +2254,10 @@ class SettingsFragment : Fragment() {
                     Spacer(modifier = Modifier.height(14.dp))
 
                     // Input Colors
-                    SettingsTitle(text = getLocalizedString(R.string.input_colors), fontSize = titleFontSize)
+                    SettingsTitle(
+                        text = getLocalizedString(R.string.input_colors),
+                        fontSize = titleFontSize
+                    )
 
                     val hexBubbleInputMessageColor =
                         String.format("#%06X", (0xFFFFFF and selectedInputMessageColor))
@@ -2438,70 +2542,6 @@ class SettingsFragment : Fragment() {
                             }
                         )
                     }
-
-                    Spacer(modifier = Modifier.height(14.dp))
-
-                    // Toggles
-                    SettingsTitle(text = getLocalizedString(R.string.toggleable_items), fontSize = titleFontSize)
-                    SettingsSelect(
-                        title = getLocalizedString(R.string.settings_context_menu_title),
-                        option = getLocalizedString(R.string.settings_context_menu_option),
-                        fontSize = titleFontSize,
-                        onClick = {
-                            dialogBuilder.showFlagSettingsBottomSheet(context, contextMenuOptionLabels, "CONTEXT_MENU_FLAGS", "0011111")
-                        }
-                    )
-
-                    SettingsSelect(
-                        title = getLocalizedString(R.string.settings_home_buttons_title),
-                        option = getLocalizedString(R.string.settings_home_buttons_option),
-                        fontSize = titleFontSize,
-                        onClick = {
-                            dialogBuilder.showFlagSettingsBottomSheet(context, homeButtonOptionLabels, "HOME_BUTTON_FLAGS", "0000011")
-                        }
-                    )
-
-                    Spacer(modifier = Modifier.height(14.dp))
-
-                    // Thresholds
-                    SettingsTitle(text = getLocalizedString(R.string.threshold), fontSize = titleFontSize)
-                    SettingsSelect(
-                        title = getLocalizedString(R.string.settings_short_threshold),
-                        option = selectedShortSwipeThreshold.toString(),
-                        fontSize = titleFontSize,
-                        onClick = {
-                            dialogBuilder.showSliderBottomSheet(
-                                context = context,
-                                title = getLocalizedString(R.string.settings_short_threshold),
-                                minValue = Constants.MIN_THRESHOLD,
-                                maxValue = selectedLongSwipeThreshold,
-                                currentValue = prefs.shortSwipeThreshold,
-                                onValueSelected = { newSettingsSize ->
-                                    selectedShortSwipeThreshold = newSettingsSize.toFloat()
-                                    prefs.shortSwipeThreshold = newSettingsSize.toFloat()
-                                }
-                            )
-                        }
-                    )
-
-                    SettingsSelect(
-                        title = getLocalizedString(R.string.settings_long_threshold),
-                        option = selectedLongSwipeThreshold.toString(),
-                        fontSize = titleFontSize,
-                        onClick = {
-                            dialogBuilder.showSliderBottomSheet(
-                                context = context,
-                                title = getLocalizedString(R.string.settings_long_threshold),
-                                minValue = selectedShortSwipeThreshold,
-                                maxValue = Constants.MAX_THRESHOLD,
-                                currentValue = prefs.longSwipeThreshold,
-                                onValueSelected = { newSettingsSize ->
-                                    selectedLongSwipeThreshold = newSettingsSize.toFloat()
-                                    prefs.longSwipeThreshold = newSettingsSize.toFloat()
-                                }
-                            )
-                        }
-                    )
 
                     if (!isGestureNavigationEnabled(context)) {
                         Spacer(modifier = Modifier.height(52.dp))
