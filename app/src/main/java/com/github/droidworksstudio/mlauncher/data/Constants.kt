@@ -22,9 +22,6 @@ interface EnumOption {
 
 
 object Constants {
-    const val TRIPLE_TAP_DELAY_MS = 300
-    const val LONG_PRESS_DELAY_MS = 500
-
     const val MIN_HOME_APPS = 0
 
     const val MIN_HOME_PAGES = 1
@@ -95,22 +92,23 @@ object Constants {
 
     fun updateSwipeDistanceThreshold(context: Context, direction: String) {
         val prefs = Prefs(context)
-
         val metrics = context.resources.displayMetrics
-        val screenWidth = metrics.widthPixels.toFloat()
-        val screenHeight = metrics.heightPixels.toFloat()
+
+        val screenWidthInches = metrics.widthPixels / metrics.xdpi
+        val screenHeightInches = metrics.heightPixels / metrics.ydpi
 
         if (direction.equals("left", true) || direction.equals("right", true)) {
-            // Horizontal swipe
-            LONG_SWIPE_THRESHOLD = screenWidth * prefs.longSwipeThreshold
-            SHORT_SWIPE_THRESHOLD = screenWidth * prefs.shortSwipeThreshold
+            LONG_SWIPE_THRESHOLD = screenWidthInches * prefs.longSwipeThreshold
+            SHORT_SWIPE_THRESHOLD = screenWidthInches * prefs.shortSwipeThreshold
         } else {
-            // Vertical swipe
-            LONG_SWIPE_THRESHOLD = screenHeight * prefs.longSwipeThreshold
-            SHORT_SWIPE_THRESHOLD = screenHeight * prefs.shortSwipeThreshold
+            LONG_SWIPE_THRESHOLD = screenHeightInches * prefs.longSwipeThreshold
+            SHORT_SWIPE_THRESHOLD = screenHeightInches * prefs.shortSwipeThreshold
         }
 
-        AppLogger.d("GestureThresholds", "Updated thresholds for $direction: SHORT = $SHORT_SWIPE_THRESHOLD px, LONG = $LONG_SWIPE_THRESHOLD px")
+        AppLogger.d(
+            "GestureThresholds",
+            "Updated thresholds for $direction: SHORT = $SHORT_SWIPE_THRESHOLD inches, LONG = $LONG_SWIPE_THRESHOLD inches"
+        )
     }
 
     enum class AppDrawerFlag {
