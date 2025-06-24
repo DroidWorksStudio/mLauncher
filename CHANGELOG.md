@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Implemented Enhancements:
+
+- *(Settings)* Customize switch appearance - ([3eafe09](https://github.com/DroidWorksStudio/mLauncher/commit/3eafe093cf13d03079e45cd3c2e7911845e41acd))
+
+## [1.10.7.7](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.7.7) - (24, June 2025)
+
 ### Bug Fixes:
 
 - App launch no longer removes the timer and will continue if the timer never ended. - ([69a1911](https://github.com/DroidWorksStudio/mLauncher/commit/69a19115611202abb3074b40d72ebdad5939f248))
