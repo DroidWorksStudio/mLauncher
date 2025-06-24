@@ -8,6 +8,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - App launch no longer removes the timer and will continue if the timer never ended. - ([69a1911](https://github.com/DroidWorksStudio/mLauncher/commit/69a19115611202abb3074b40d72ebdad5939f248))
 
+### Refactoring:
+
+- Log activities from package in MainViewModel - ([8a917e4](https://github.com/DroidWorksStudio/mLauncher/commit/8a917e4f7eb72c5522c11f19c319728e69838420))
+
 ## [1.10.7.6](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.7.6) - (23, June 2025)
 
 ### Implemented Enhancements:
