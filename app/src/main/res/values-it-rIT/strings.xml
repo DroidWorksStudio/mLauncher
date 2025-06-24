@@ -78,6 +78,7 @@
     <string name="show_total_screen_time">Mostra tempo totale di utilizzo dello schermo</string>
     <string name="weather">Tempo atmosferico</string>
     <string name="show_weather">Mostra meteo</string>
+    <string name="icon_packs">Icon Packs</string>
     <!-- Strings used for look & feel settings -->
     <string name="look_feel_settings_title">Guarda &amp; Senti</string>
     <string name="text_size_adjustments">Testo &amp; Regolazioni delle dimensioni</string>
