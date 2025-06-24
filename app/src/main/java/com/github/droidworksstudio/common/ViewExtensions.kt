@@ -4,7 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.view.View
 import android.view.inputmethod.InputMethodManager
-import com.github.droidworksstudio.mlauncher.ui.components.GestureManager
+import com.github.droidworksstudio.mlauncher.listener.GestureManager
 
 
 fun View.showKeyboard() {

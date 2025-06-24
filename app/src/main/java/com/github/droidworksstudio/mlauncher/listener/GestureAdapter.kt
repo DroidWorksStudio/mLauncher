@@ -1,4 +1,4 @@
-package com.github.droidworksstudio.mlauncher.ui.components
+package com.github.droidworksstudio.mlauncher.listener
 
 /**
  * GestureAdapter provides empty implementations for all GestureListener methods.

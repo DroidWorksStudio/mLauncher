@@ -92,9 +92,9 @@ import com.github.droidworksstudio.mlauncher.helper.utils.AppReloader
 import com.github.droidworksstudio.mlauncher.helper.utils.BiometricHelper
 import com.github.droidworksstudio.mlauncher.helper.utils.PrivateSpaceManager
 import com.github.droidworksstudio.mlauncher.helper.wordOfTheDay
+import com.github.droidworksstudio.mlauncher.listener.GestureAdapter
 import com.github.droidworksstudio.mlauncher.services.ActionService
 import com.github.droidworksstudio.mlauncher.ui.components.DialogManager
-import com.github.droidworksstudio.mlauncher.ui.components.GestureAdapter
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
