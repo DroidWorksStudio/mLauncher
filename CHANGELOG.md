@@ -8,6 +8,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - *(Settings)* Customize switch appearance - ([3eafe09](https://github.com/DroidWorksStudio/mLauncher/commit/3eafe093cf13d03079e45cd3c2e7911845e41acd))
 
+### Language Support:
+
+- Updated Language Files. ([#815](https://github.com/DroidWorksStudio/mLauncher/issues/815)) - ([017aa03](https://github.com/DroidWorksStudio/mLauncher/commit/017aa0310744fd1374b7e7f9537a8e72bb5703fd))
+
 ## [1.10.7.7](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.7.7) - (24, June 2025)
 
 ### Bug Fixes:
