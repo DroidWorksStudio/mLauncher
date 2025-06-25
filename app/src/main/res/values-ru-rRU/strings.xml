@@ -78,6 +78,7 @@
     <string name="show_total_screen_time">Показать общее время экрана</string>
     <string name="weather">Погода</string>
     <string name="show_weather">Показать погоду</string>
+    <string name="icon_packs">Наборы иконок</string>
     <!-- Strings used for look & feel settings -->
     <string name="look_feel_settings_title">Смотри &amp; Чувствуй</string>
     <string name="text_size_adjustments">Текст &amp; Регулировка размера</string>

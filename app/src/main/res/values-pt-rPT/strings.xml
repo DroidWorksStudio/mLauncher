@@ -78,6 +78,7 @@
     <string name="show_total_screen_time">Mostrar tempo total de tela</string>
     <string name="weather">Clima</string>
     <string name="show_weather">Mostrar clima</string>
+    <string name="icon_packs">Pacotes de ícones</string>
     <!-- Strings used for look & feel settings -->
     <string name="look_feel_settings_title">Olhar &amp; Sentir</string>
     <string name="text_size_adjustments">Ajustes de tamanho do texto &amp;</string>
