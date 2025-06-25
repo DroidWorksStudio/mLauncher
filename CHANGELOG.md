@@ -11,6 +11,7 @@ All notable changes to this project will be documented in this file. See [conven
 ### Bug Fixes:
 
 - *(AppList)* Correctly identify and add all launchable activities - ([0cdaa9b](https://github.com/DroidWorksStudio/mLauncher/commit/0cdaa9b1c0e2a02b6295edf896ae5690cb6961a1))
+- *(Apps)* Ensure correct app hiding with duplicate app names - ([8cb22e6](https://github.com/DroidWorksStudio/mLauncher/commit/8cb22e6a7a1a8a1103b26dc306e7911bba3a86de))
 
 ### Language Support:
 
