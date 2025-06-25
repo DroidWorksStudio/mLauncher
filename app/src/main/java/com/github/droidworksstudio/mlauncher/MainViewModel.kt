@@ -549,8 +549,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             val hiddenApps = prefs.hiddenApps
             val pinnedPackages = prefs.pinnedApps.toSet()
             val userManager = context.getSystemService(Context.USER_SERVICE) as UserManager
-            val launcherApps = context.getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps
-            val seenAppKeys = mutableSetOf<String>()  // packageName|userId
+            val seenAppKeys = mutableSetOf<String>()  // packageName|activityName|userId
             val scrollIndexMap = mutableMapOf<String, Int>()
 
             for (profile in userManager.userProfiles) {
@@ -570,7 +569,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                     AppLogger.d("AppListDebug", "🕓 Adding ${recentApps.size} recent apps")
 
                     for ((packageName, appName, activityName) in recentApps) {
-                        val appKey = "$packageName|${profile.hashCode()}"
+                        val appKey = "$packageName|$activityName|${profile.hashCode()}"
                         if (seenAppKeys.contains(appKey)) {
                             AppLogger.d("AppListDebug", "⚠️ Skipping duplicate recent app: $appKey")
                             continue
@@ -603,13 +602,13 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                     if (packageName == BuildConfig.APPLICATION_ID) continue
 
                     // ✅ Deduplicate based on activity, not just package
-                    val appKey = "$packageName/$className|${profile.hashCode()}"
+                    val appKey = "$packageName|$className|${profile.hashCode()}"
                     if (seenAppKeys.contains(appKey)) {
                         AppLogger.d("AppListDebug", "⚠️ Skipping duplicate launcher activity: $appKey")
                         continue
                     }
 
-                    val isHidden = hiddenApps.contains(appKey)
+                    val isHidden = listOf(packageName, appKey, "$packageName|${profile.hashCode()}").any { it in hiddenApps }
                     if ((isHidden && !includeHiddenApps) || (!isHidden && !includeRegularApps)) {
                         AppLogger.d("AppListDebug", "🚫 Skipping app due to filter: $appKey (hidden=$isHidden)")
                         continue
