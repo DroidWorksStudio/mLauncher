@@ -1,9 +1,9 @@
 package com.github.droidworksstudio.mlauncher.listener
 
 import android.content.Context
-import android.util.Log
 import android.view.GestureDetector
 import android.view.MotionEvent
+import com.github.droidworksstudio.common.AppLogger
 import com.github.droidworksstudio.mlauncher.data.Constants
 import kotlin.math.abs
 
@@ -58,24 +58,24 @@ class GestureManager(
 
     override fun onDown(event: MotionEvent): Boolean {
         downTime = System.currentTimeMillis()
-        Log.d(TAG, "onDown - downTime set to $downTime")
+        AppLogger.d(TAG, "onDown - downTime set to $downTime")
         return true
     }
 
     override fun onSingleTapConfirmed(e: MotionEvent): Boolean {
-        Log.d(TAG, "onSingleTapConfirmed")
+        AppLogger.d(TAG, "onSingleTapConfirmed")
         listener.onSingleTap()
         return true
     }
 
     override fun onDoubleTap(e: MotionEvent): Boolean {
-        Log.d(TAG, "onDoubleTap")
+        AppLogger.d(TAG, "onDoubleTap")
         listener.onDoubleTap()
         return true
     }
 
     override fun onLongPress(e: MotionEvent) {
-        Log.d(TAG, "onLongPress")
+        AppLogger.d(TAG, "onLongPress")
         listener.onLongPress()
     }
 
@@ -96,7 +96,7 @@ class GestureManager(
         velocityY: Float
     ): Boolean {
         if (e1 == null) {
-            Log.d(TAG, "onFling - e1 is null, returning false")
+            AppLogger.d(TAG, "onFling - e1 is null, returning false")
             return false
         }
 
@@ -139,13 +139,19 @@ class GestureManager(
         val isShortSwipe = distance in (shortThreshold + 1)..longThreshold
 
 
-        Log.d(
+        AppLogger.d(
             TAG, "detectSwipeGesture - direction: $direction, distance: $distance, duration: $duration, " +
                     "velocity: $velocity, shortThreshold: $shortThreshold, longThreshold: $longThreshold"
         )
 
+        when {
+            isLongSwipe -> AppLogger.d(TAG, "Swipe type: Long swipe")
+            isShortSwipe -> AppLogger.d(TAG, "Swipe type: Short swipe")
+            else -> AppLogger.d(TAG, "Swipe type: Too short to classify")
+        }
+
         if (velocity != null && velocity < velocityThreshold) {
-            Log.d(TAG, "Velocity too low for fling, ignoring gesture.")
+            AppLogger.d(TAG, "Velocity too low for fling, ignoring gesture.")
             return false
         }
 
@@ -166,7 +172,7 @@ class GestureManager(
             return true
         }
 
-        Log.d(TAG, "detectSwipeGesture - No swipe detected.")
+        AppLogger.d(TAG, "detectSwipeGesture - No swipe detected.")
         return false
     }
 }

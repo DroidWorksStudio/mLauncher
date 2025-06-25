@@ -15,29 +15,33 @@ class Migration(val context: Context) {
                 "APP_DARK_COLORS",
                 "APP_LIGHT_COLORS",
                 "HOME_FOLLOW_ACCENT",
-                "ALL_APPS_TEXT"
+                "ALL_APPS_TEXT",
             ),
             172 to listOf(
                 "TIME_ALIGNMENT",
                 "SHOW_TIME",
                 "SHOW_TIME_FORMAT",
-                "TIME_COLOR"
+                "TIME_COLOR",
             ),
             175 to listOf(
-                "CLICK_APP_USAGE"
+                "CLICK_APP_USAGE",
             ),
             10803 to listOf(
                 "SHOW_EDGE_PANEL",
-                "EDGE_APPS_NUM"
+                "EDGE_APPS_NUM",
             ),
             10812 to listOf(
-                "LOCK_MODE"
+                "LOCK_MODE",
             ),
             1100504 to listOf(
-                "SHOW_AZSIDEBAR"
+                "SHOW_AZSIDEBAR",
             ),
             1100508 to listOf(
-                "EXPERIMENTAL_OPTIONS"
+                "EXPERIMENTAL_OPTIONS",
+            ),
+            1100708 to listOf(
+                "SHORT_SWIPE_THRESHOLD",
+                "LONG_SWIPE_THRESHOLD",
             )
             // Add more versions and preferences to remove here
         )

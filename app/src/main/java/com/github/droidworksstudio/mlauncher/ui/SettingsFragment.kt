@@ -24,7 +24,6 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -307,8 +306,8 @@ class SettingsFragment : Fragment() {
         var toggledSettingsLocked by remember { mutableStateOf(prefs.settingsLocked) }
         var toggledLockOrientation by remember { mutableStateOf(prefs.lockOrientation) }
 
-        var selectedShortSwipeThreshold by remember { mutableFloatStateOf(prefs.shortSwipeThreshold) }
-        var selectedLongSwipeThreshold by remember { mutableFloatStateOf(prefs.longSwipeThreshold) }
+        var selectedShortSwipeThreshold by remember { mutableIntStateOf(prefs.shortSwipeThreshold) }
+        var selectedLongSwipeThreshold by remember { mutableIntStateOf(prefs.longSwipeThreshold) }
 
         val contextMenuOptionLabels = listOf(
             getLocalizedString(R.string.pin),
@@ -2080,8 +2079,8 @@ class SettingsFragment : Fragment() {
                                 maxValue = selectedLongSwipeThreshold,
                                 currentValue = prefs.shortSwipeThreshold,
                                 onValueSelected = { newSettingsSize ->
-                                    selectedShortSwipeThreshold = newSettingsSize.toFloat()
-                                    prefs.shortSwipeThreshold = newSettingsSize.toFloat()
+                                    selectedShortSwipeThreshold = newSettingsSize.toInt()
+                                    prefs.shortSwipeThreshold = newSettingsSize.toInt()
                                 }
                             )
                         }
@@ -2099,8 +2098,8 @@ class SettingsFragment : Fragment() {
                                 maxValue = Constants.MAX_THRESHOLD,
                                 currentValue = prefs.longSwipeThreshold,
                                 onValueSelected = { newSettingsSize ->
-                                    selectedLongSwipeThreshold = newSettingsSize.toFloat()
-                                    prefs.longSwipeThreshold = newSettingsSize.toFloat()
+                                    selectedLongSwipeThreshold = newSettingsSize.toInt()
+                                    prefs.longSwipeThreshold = newSettingsSize.toInt()
                                 }
                             )
                         }

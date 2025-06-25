@@ -6,6 +6,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.content.pm.LauncherApps
+import android.content.pm.PackageManager
 import android.content.res.ColorStateList
 import android.graphics.PixelFormat
 import android.os.Handler
@@ -585,20 +586,26 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                     }
                 }
 
-                // Launcher Apps
-                val launcherAppList = launcherApps.getActivityList(null, profile)
-                AppLogger.d("AppListDebug", "📦 Found ${launcherAppList.size} launcher apps for profile: $profile")
+                val pm = context.packageManager
+                val intent = Intent(Intent.ACTION_MAIN, null).apply {
+                    addCategory(Intent.CATEGORY_LAUNCHER)
+                }
 
-                for (activity in launcherAppList) {
-                    val packageName = activity.applicationInfo.packageName
-                    val className = activity.componentName.className
-                    val label = activity.label.toString()
+                val activities = pm.queryIntentActivities(intent, PackageManager.GET_META_DATA)
+                AppLogger.d("AppListDebug", "📦 Found ${activities.size} launcher activities")
+
+                for (resolveInfo in activities) {
+                    val activityInfo = resolveInfo.activityInfo
+                    val packageName = activityInfo.packageName
+                    val className = activityInfo.name
+                    val label = resolveInfo.loadLabel(pm).toString()
 
                     if (packageName == BuildConfig.APPLICATION_ID) continue
 
-                    val appKey = "$packageName|${profile.hashCode()}"
+                    // ✅ Deduplicate based on activity, not just package
+                    val appKey = "$packageName/$className|${profile.hashCode()}"
                     if (seenAppKeys.contains(appKey)) {
-                        AppLogger.d("AppListDebug", "⚠️ Skipping duplicate launcher app: $appKey")
+                        AppLogger.d("AppListDebug", "⚠️ Skipping duplicate launcher activity: $appKey")
                         continue
                     }
 
@@ -619,7 +626,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                     fullList.add(
                         AppListItem(label, packageName, className, profile, alias, tag, category)
                     )
-                    AppLogger.d("AppListDebug", "✅ Added app: $label ($packageName) from profile: $profile")
+                    AppLogger.d("AppListDebug", "✅ Added app: $label ($packageName/$className) from profile: $profile")
                     seenAppKeys.add(appKey)
                 }
             }
