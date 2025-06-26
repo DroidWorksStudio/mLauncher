@@ -61,8 +61,8 @@ object Constants {
     const val MAX_THRESHOLD = 100 // pixels
     var SHORT_SWIPE_THRESHOLD = 0f  // pixels
     var LONG_SWIPE_THRESHOLD = 0f // pixels
-    var USR_DPIX = 0
-    var USR_DPIY = 0
+    var USR_DPIX = 0f
+    var USR_DPIY = 0f
 
 
     // Update MAX_HOME_PAGES dynamically based on MAX_HOME_APPS
