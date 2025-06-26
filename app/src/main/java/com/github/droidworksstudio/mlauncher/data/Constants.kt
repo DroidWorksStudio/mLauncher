@@ -61,6 +61,8 @@ object Constants {
     const val MAX_THRESHOLD = 100 // pixels
     var SHORT_SWIPE_THRESHOLD = 0f  // pixels
     var LONG_SWIPE_THRESHOLD = 0f // pixels
+    var USR_DPIX = 0f
+    var USR_DPIY = 0f
 
 
     // Update MAX_HOME_PAGES dynamically based on MAX_HOME_APPS
@@ -94,8 +96,11 @@ object Constants {
         val prefs = Prefs(context)
         val metrics = context.resources.displayMetrics
 
-        val screenWidthInches = metrics.widthPixels / metrics.xdpi
-        val screenHeightInches = metrics.heightPixels / metrics.ydpi
+        USR_DPIX = metrics.xdpi
+        USR_DPIY = metrics.ydpi
+
+        val screenWidthInches = metrics.widthPixels / USR_DPIX
+        val screenHeightInches = metrics.heightPixels / USR_DPIY
 
         if (direction.equals("left", true) || direction.equals("right", true)) {
             LONG_SWIPE_THRESHOLD = screenWidthInches * prefs.longSwipeThreshold

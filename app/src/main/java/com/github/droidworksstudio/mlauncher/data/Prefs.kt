@@ -338,13 +338,13 @@ class Prefs(val context: Context) {
         get() = getSetting(FILTER_STRENGTH, 25)
         set(value) = prefsNormal.edit { putInt(FILTER_STRENGTH, value) }
 
-    var shortSwipeThreshold: Int
-        get() = getSetting(SHORT_SWIPE_THRESHOLD, 25)
-        set(value) = prefsNormal.edit { putInt(SHORT_SWIPE_THRESHOLD, value) }
+    var shortSwipeThreshold: Float
+        get() = getSetting(SHORT_SWIPE_THRESHOLD, 0.25f)
+        set(value) = prefsNormal.edit { putFloat(SHORT_SWIPE_THRESHOLD, value) }
 
-    var longSwipeThreshold: Int
-        get() = getSetting(LONG_SWIPE_THRESHOLD, 65)
-        set(value) = prefsNormal.edit { putInt(LONG_SWIPE_THRESHOLD, value) }
+    var longSwipeThreshold: Float
+        get() = getSetting(LONG_SWIPE_THRESHOLD, 0.55f)
+        set(value) = prefsNormal.edit { putFloat(LONG_SWIPE_THRESHOLD, value) }
 
     var searchFromStart: Boolean
         get() = getSetting(SEARCH_START, false)
