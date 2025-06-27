@@ -210,7 +210,7 @@
     <string name="favorite_apps">Favoriete apps</string>
     <string name="clear_home_app">Clear Home-app</string>
     <!-- Accessibility/Help Strings -->
-    <string name="accessibility_service_name">MultiLauncher-toegankelijkheid</string>
+    <string name="accessibility_service_name">MultiLauncher Action Services</string>
     <string name="accessibility_service_why_we_need">Waarom we toestemming voor toegankelijkheid nodig hebben</string>
     <string name="accessibility_service_description">Deze toegankelijkheidsservice stelt MultiLauncher in staat om bepaalde acties uit te voeren, zoals het vergrendelen van het scherm of het openen van de snelle instellingen. Onze toegankelijkheidsservice verzamelt of deelt geen gegevens.</string>
     <string name="accessibility_service_more_info">    MultiLauncher vereist toegang tot de toegankelijkheidsservice om functies in te schakelen zoals:\n\n
@@ -314,19 +314,6 @@
     <string name="settings_context_menu_option">Selecteer items om weer te geven</string>
     <string name="settings_home_buttons_title">Home-knoppen</string>
     <string name="settings_home_buttons_option">Selecteer items om weer te geven</string>
-    <string name="app_timer_set_timer_duration">Timerduur instellen</string>
-    <string name="app_timer_5_minutes">5 minuten</string>
-    <string name="app_timer_10_minutes">10 minuten</string>
-    <string name="app_timer_30_minutes">30 minuten</string>
-    <string name="app_timer_60_minutes">60 minuten</string>
-    <string name="app_timer_custom_minutes_label">Of voer een aangepaste duur in (in minuten):</string>
-    <string name="app_timer_custom_minutes_hint">bv 15</string>
-    <string name="app_timer_start_custom">Aangepaste timer starten</string>
-    <string name="app_timer_invalid_minutes">Voer een geldig aantal minuten in.</string>
-    <string name="app_timer_extend_or_close">De tijd is om! Sessie verlengen of de app sluiten?</string>
-    <string name="app_timer_extend_5">Verleng 5 minuten</string>
-    <string name="app_timer_extend_10">Verleng 10 minuten</string>
-    <string name="app_timer_close_app">App sluiten</string>
     <string-array name="priorities">
         <item>Laag</item>
         <item>Medium</item>
