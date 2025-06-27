@@ -210,7 +210,7 @@
     <string name="favorite_apps">Ulubione aplikacje</string>
     <string name="clear_home_app">Wyczyść aplikację Home</string>
     <!-- Accessibility/Help Strings -->
-    <string name="accessibility_service_name">MultiLauncher Action Services</string>
+    <string name="accessibility_service_name">Usługi akcji MultiLauncher</string>
     <string name="accessibility_service_why_we_need">Dlaczego potrzebujemy pozwolenia na dostępność</string>
     <string name="accessibility_service_description">Ta usługa ułatwień dostępu pozwala MultiLauncherowi wykonywać pewne czynności, takie jak blokowanie ekranu lub otwieranie szybkich ustawień. Nasza usługa ułatwień dostępu nie zbiera ani nie udostępnia żadnych danych.</string>
     <string name="accessibility_service_more_info">    MultiLauncher wymaga dostępu do Usługi ułatwień dostępu, aby włączyć funkcje takie jak:\n\n
