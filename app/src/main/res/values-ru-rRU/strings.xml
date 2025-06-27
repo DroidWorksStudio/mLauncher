@@ -210,7 +210,7 @@
     <string name="favorite_apps">Любимые приложения</string>
     <string name="clear_home_app">Приложение «Очистить дом»</string>
     <!-- Accessibility/Help Strings -->
-    <string name="accessibility_service_name">MultiLauncher Action Services</string>
+    <string name="accessibility_service_name">Службы действий MultiLauncher</string>
     <string name="accessibility_service_why_we_need">Зачем нам нужно разрешение на доступ</string>
     <string name="accessibility_service_description">Эта служба доступности позволяет MultiLauncher выполнять определенные действия, такие как блокировка экрана или открытие быстрых настроек. Наша служба доступности не собирает и не передает никакие данные.</string>
     <string name="accessibility_service_more_info">    MultiLauncher требует доступа к службе специальных возможностей для включения таких функций, как:\n\n
