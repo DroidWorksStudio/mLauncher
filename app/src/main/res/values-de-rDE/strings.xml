@@ -210,7 +210,7 @@
     <string name="favorite_apps">Lieblings-Apps</string>
     <string name="clear_home_app">Clear Home App</string>
     <!-- Accessibility/Help Strings -->
-    <string name="accessibility_service_name">MultiLauncher Action Services</string>
+    <string name="accessibility_service_name">MultiLauncher-Aktionsdienste</string>
     <string name="accessibility_service_why_we_need">Warum wir eine Barrierefreiheitsberechtigung benötigen</string>
     <string name="accessibility_service_description">Dieser Bedienungshilfedienst ermöglicht MultiLauncher bestimmte Aktionen wie das Sperren des Bildschirms oder das Öffnen der Schnelleinstellungen. Unser Bedienungshilfedienst sammelt oder gibt keine Daten weiter.</string>
     <string name="accessibility_service_more_info">    MultiLauncher benötigt Zugriff auf den Bedienungshilfendienst, um Funktionen wie die folgenden zu aktivieren:\n\n
