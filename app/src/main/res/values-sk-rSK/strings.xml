@@ -210,7 +210,7 @@
     <string name="favorite_apps">Obľúbené aplikácie</string>
     <string name="clear_home_app">Vymazať domovskú aplikáciu</string>
     <!-- Accessibility/Help Strings -->
-    <string name="accessibility_service_name">MultiLauncher Action Services</string>
+    <string name="accessibility_service_name">Služby akcií MultiLauncher</string>
     <string name="accessibility_service_why_we_need">Prečo potrebujeme povolenie na prístupnosť</string>
     <string name="accessibility_service_description">Táto služba prístupnosti umožňuje programu MultiLauncher vykonávať určité akcie, ako je uzamknutie obrazovky alebo otvorenie rýchlych nastavení. Naša služba dostupnosti nezhromažďuje ani nezdieľa žiadne údaje.</string>
     <string name="accessibility_service_more_info">MultiLauncher vyžaduje prístup k Službe prístupnosti, aby mohol povoliť funkcie ako:
