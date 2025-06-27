@@ -210,7 +210,7 @@
     <string name="favorite_apps">Favori Uygulamalar</string>
     <string name="clear_home_app">Clear Home Uygulaması</string>
     <!-- Accessibility/Help Strings -->
-    <string name="accessibility_service_name">MultiLauncher Erişilebilirliği</string>
+    <string name="accessibility_service_name">MultiLauncher Action Services</string>
     <string name="accessibility_service_why_we_need">Erişilebilirlik İznine Neden İhtiyacımız Var?</string>
     <string name="accessibility_service_description">Bu erişilebilirlik hizmeti MultiLauncher\'ın ekranı kilitleme veya hızlı ayarları açma gibi belirli eylemleri gerçekleştirmesine olanak tanır. Erişilebilirlik hizmetimiz hiçbir veri toplamaz veya paylaşmaz.</string>
     <string name="accessibility_service_more_info">    MultiLauncher, aşağıdaki gibi özellikleri etkinleştirmek için Erişilebilirlik Hizmetine erişim gerektirir:\n\n
@@ -314,19 +314,6 @@
     <string name="settings_context_menu_option">Görüntülenecek öğeleri seçin</string>
     <string name="settings_home_buttons_title">Ana Sayfa Düğmeleri</string>
     <string name="settings_home_buttons_option">Görüntülenecek öğeleri seçin</string>
-    <string name="app_timer_set_timer_duration">Zamanlayıcı Süresini Ayarla</string>
-    <string name="app_timer_5_minutes">5 dakika</string>
-    <string name="app_timer_10_minutes">10 dakika</string>
-    <string name="app_timer_30_minutes">30 dakika</string>
-    <string name="app_timer_60_minutes">60 dakika</string>
-    <string name="app_timer_custom_minutes_label">Veya özel süreyi girin (dakika cinsinden):</string>
-    <string name="app_timer_custom_minutes_hint">örneğin 15</string>
-    <string name="app_timer_start_custom">Özel Zamanlayıcıyı Başlat</string>
-    <string name="app_timer_invalid_minutes">Lütfen geçerli bir dakika sayısı girin.</string>
-    <string name="app_timer_extend_or_close">Zaman doldu! Oturumu uzatın veya uygulamayı kapatın?</string>
-    <string name="app_timer_extend_5">5 dakika uzatın</string>
-    <string name="app_timer_extend_10">10 dakika uzatın</string>
-    <string name="app_timer_close_app">Uygulamayı Kapat</string>
     <string-array name="priorities">
         <item>Düşük</item>
         <item>Orta</item>
