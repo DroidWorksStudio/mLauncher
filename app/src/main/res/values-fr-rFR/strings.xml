@@ -210,7 +210,7 @@
     <string name="favorite_apps">Applications préférées</string>
     <string name="clear_home_app">Application Clear Home</string>
     <!-- Accessibility/Help Strings -->
-    <string name="accessibility_service_name">MultiLauncher Action Services</string>
+    <string name="accessibility_service_name">Services d\'action MultiLauncher</string>
     <string name="accessibility_service_why_we_need">Pourquoi nous avons besoin d\'une autorisation d\'accessibilité</string>
     <string name="accessibility_service_description">Ce service d\'accessibilité permet à MultiLauncher d\'effectuer certaines actions, comme verrouiller l\'écran ou ouvrir les paramètres rapides. Notre service d\'accessibilité ne collecte ni ne partage aucune donnée.</string>
     <string name="accessibility_service_more_info">    MultiLauncher nécessite l\'accès au service d\'accessibilité pour activer des fonctionnalités telles que :\n\n
