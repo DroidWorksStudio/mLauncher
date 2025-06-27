@@ -6,6 +6,16 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Bug Fixes:
 
+- Fix isShortSwipe not registering and inadequat Min/Max Threshold settings ([#822](https://github.com/DroidWorksStudio/mLauncher/issues/822)) - ([60a06ce](https://github.com/DroidWorksStudio/mLauncher/commit/60a06ce40e06f95604c33759e0d40910c55937e6))
+
+### Reverts:
+
+- Reverted some changes of 0cdaa9b regarding Prefs for threshold values. - ([60a06ce](https://github.com/DroidWorksStudio/mLauncher/commit/60a06ce40e06f95604c33759e0d40910c55937e6))
+
+## [1.10.7.9](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.7.9) - (27, June 2025)
+
+### Bug Fixes:
+
 - *(Settings)* Correctly display icon pack names in settings - ([0917f5f](https://github.com/DroidWorksStudio/mLauncher/commit/0917f5f334da44bb03feae3137848dae251dfa39))
 
 ### Chore:
