@@ -8,6 +8,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Fix isShortSwipe not registering and inadequat Min/Max Threshold settings ([#822](https://github.com/DroidWorksStudio/mLauncher/issues/822)) - ([60a06ce](https://github.com/DroidWorksStudio/mLauncher/commit/60a06ce40e06f95604c33759e0d40910c55937e6))
 
+### Chore:
+
+- *(Version)* Increment build number to 10 - ([b548e8e](https://github.com/DroidWorksStudio/mLauncher/commit/b548e8e20fb29b48e8ddce0ff904b38a061118ea))
+
 ### Reverts:
 
 - Reverted some changes of 0cdaa9b regarding Prefs for threshold values. - ([60a06ce](https://github.com/DroidWorksStudio/mLauncher/commit/60a06ce40e06f95604c33759e0d40910c55937e6))
