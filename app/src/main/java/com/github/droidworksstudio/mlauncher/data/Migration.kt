@@ -39,7 +39,7 @@ class Migration(val context: Context) {
             1100508 to listOf(
                 "EXPERIMENTAL_OPTIONS",
             ),
-            1100708 to listOf(
+            1100709 to listOf(
                 "APP_TIMER",
                 "SHORT_SWIPE_THRESHOLD",
                 "LONG_SWIPE_THRESHOLD",
