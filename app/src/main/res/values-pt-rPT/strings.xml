@@ -210,7 +210,7 @@
     <string name="favorite_apps">Aplicativos favoritos</string>
     <string name="clear_home_app">Aplicação Clear Home</string>
     <!-- Accessibility/Help Strings -->
-    <string name="accessibility_service_name">Acessibilidade do MultiLauncher</string>
+    <string name="accessibility_service_name">Serviços de ação do MultiLauncher</string>
     <string name="accessibility_service_why_we_need">Por que precisamos de permissão de acessibilidade</string>
     <string name="accessibility_service_description">Este serviço de acessibilidade permite que o MultiLauncher faça certas ações, como bloquear a tela ou abrir as configurações rápidas. Nosso serviço de acessibilidade não coleta nem compartilha nenhum dado.</string>
     <string name="accessibility_service_more_info">    O MultiLauncher requer acesso ao Serviço de Acessibilidade para habilitar recursos como:\n\n
@@ -314,19 +314,6 @@
     <string name="settings_context_menu_option">Selecione os itens a apresentar</string>
     <string name="settings_home_buttons_title">Botões Home</string>
     <string name="settings_home_buttons_option">Selecione os itens a apresentar</string>
-    <string name="app_timer_set_timer_duration">Definir duração do temporizador</string>
-    <string name="app_timer_5_minutes">5 minutos</string>
-    <string name="app_timer_10_minutes">10 minutos</string>
-    <string name="app_timer_30_minutes">30 minutos</string>
-    <string name="app_timer_60_minutes">60 minutos</string>
-    <string name="app_timer_custom_minutes_label">Ou introduza uma duração personalizada (em minutos):</string>
-    <string name="app_timer_custom_minutes_hint">por exemplo 15</string>
-    <string name="app_timer_start_custom">Iniciar temporizador personalizado</string>
-    <string name="app_timer_invalid_minutes">Introduza um número válido de minutos.</string>
-    <string name="app_timer_extend_or_close">Acabou o tempo! Prolongar a sessão ou fechar a aplicação?</string>
-    <string name="app_timer_extend_5">Prolongue por 5 minutos</string>
-    <string name="app_timer_extend_10">Prolongue por 10 minutos</string>
-    <string name="app_timer_close_app">Fechar aplicação</string>
     <string-array name="priorities">
         <item>Baixo</item>
         <item>Médio</item>

@@ -210,7 +210,7 @@
     <string name="favorite_apps">แอปพลิเคชั่นที่ชื่นชอบ</string>
     <string name="clear_home_app">เคลียร์โฮมแอพ</string>
     <!-- Accessibility/Help Strings -->
-    <string name="accessibility_service_name">การเข้าถึง MultiLauncher</string>
+    <string name="accessibility_service_name">บริการการดำเนินการ MultiLauncher</string>
     <string name="accessibility_service_why_we_need">เหตุใดเราจึงต้องได้รับอนุญาตการเข้าถึง</string>
     <string name="accessibility_service_description">บริการการเข้าถึงนี้ช่วยให้ MultiLauncher สามารถดำเนินการบางอย่างได้ เช่น ล็อกหน้าจอหรือเปิดการตั้งค่าด่วน บริการการเข้าถึงของเราไม่รวบรวมหรือแบ่งปันข้อมูลใดๆ</string>
     <string name="accessibility_service_more_info">    MultiLauncher ต้องเข้าถึง Accessibility Service เพื่อเปิดใช้คุณสมบัติต่างๆ เช่น:\n\n
@@ -314,19 +314,6 @@
     <string name="settings_context_menu_option">เลือกสินค้าที่จะแสดง</string>
     <string name="settings_home_buttons_title">ปุ่มโฮม</string>
     <string name="settings_home_buttons_option">เลือกสินค้าที่จะแสดง</string>
-    <string name="app_timer_set_timer_duration">ตั้งค่าระยะเวลาการจับเวลา</string>
-    <string name="app_timer_5_minutes">5 นาที</string>
-    <string name="app_timer_10_minutes">10 นาที</string>
-    <string name="app_timer_30_minutes">30 นาที</string>
-    <string name="app_timer_60_minutes">60 นาที</string>
-    <string name="app_timer_custom_minutes_label">หรือป้อนระยะเวลาที่กำหนดเอง (เป็นนาที):</string>
-    <string name="app_timer_custom_minutes_hint">เช่น 15</string>
-    <string name="app_timer_start_custom">เริ่มจับเวลาที่กำหนดเอง</string>
-    <string name="app_timer_invalid_minutes">กรุณาใส่จำนวนนาทีที่ถูกต้อง</string>
-    <string name="app_timer_extend_or_close">หมดเวลาแล้ว! ขยายเซสชันหรือปิดแอป?</string>
-    <string name="app_timer_extend_5">ขยายเวลา 5 นาที</string>
-    <string name="app_timer_extend_10">ขยายเวลา 10 นาที</string>
-    <string name="app_timer_close_app">ปิดแอป</string>
     <string-array name="priorities">
         <item>ต่ำ</item>
         <item>ปานกลาง</item>
