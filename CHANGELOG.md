@@ -4,29 +4,11 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
-### Bug Fixes:
+### Versioning:
 
-- Fix isShortSwipe not registering and inadequat Min/Max Threshold settings ([#822](https://github.com/DroidWorksStudio/mLauncher/issues/822)) - ([60a06ce](https://github.com/DroidWorksStudio/mLauncher/commit/60a06ce40e06f95604c33759e0d40910c55937e6))
+- Bump version to 1.10.8 - ([902d49a](https://github.com/DroidWorksStudio/mLauncher/commit/902d49a9d335a30d308609836173f283114d979a))
 
-### Chore:
-
-- *(Version)* Increment build number to 10 - ([b548e8e](https://github.com/DroidWorksStudio/mLauncher/commit/b548e8e20fb29b48e8ddce0ff904b38a061118ea))
-
-### Reverts:
-
-- Reverted some changes of 0cdaa9b regarding Prefs for threshold values. - ([60a06ce](https://github.com/DroidWorksStudio/mLauncher/commit/60a06ce40e06f95604c33759e0d40910c55937e6))
-
-## [1.10.7.9](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.7.9) - (27, June 2025)
-
-### Bug Fixes:
-
-- *(Settings)* Correctly display icon pack names in settings - ([0917f5f](https://github.com/DroidWorksStudio/mLauncher/commit/0917f5f334da44bb03feae3137848dae251dfa39))
-
-### Chore:
-
-- *(Migration)* Add swipe threshold preferences to migration list - ([99b4d1c](https://github.com/DroidWorksStudio/mLauncher/commit/99b4d1ceff4c04bf509429eff61598eb0994186e))
-
-## [1.10.7.8](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.7.8) - (27, June 2025)
+## [1.10.7.10](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.7.10) - (27, June 2025)
 
 ### Implemented Enhancements:
 
@@ -36,6 +18,13 @@ All notable changes to this project will be documented in this file. See [conven
 
 - *(AppList)* Correctly identify and add all launchable activities - ([0cdaa9b](https://github.com/DroidWorksStudio/mLauncher/commit/0cdaa9b1c0e2a02b6295edf896ae5690cb6961a1))
 - *(Apps)* Ensure correct app hiding with duplicate app names - ([8cb22e6](https://github.com/DroidWorksStudio/mLauncher/commit/8cb22e6a7a1a8a1103b26dc306e7911bba3a86de))
+- *(Settings)* Correctly display icon pack names in settings - ([0917f5f](https://github.com/DroidWorksStudio/mLauncher/commit/0917f5f334da44bb03feae3137848dae251dfa39))
+- Fix isShortSwipe not registering and inadequat Min/Max Threshold settings ([#822](https://github.com/DroidWorksStudio/mLauncher/issues/822)) - ([60a06ce](https://github.com/DroidWorksStudio/mLauncher/commit/60a06ce40e06f95604c33759e0d40910c55937e6))
+
+### Chore:
+
+- *(Migration)* Add swipe threshold preferences to migration list - ([99b4d1c](https://github.com/DroidWorksStudio/mLauncher/commit/99b4d1ceff4c04bf509429eff61598eb0994186e))
+- *(Version)* Increment build number to 10 - ([b548e8e](https://github.com/DroidWorksStudio/mLauncher/commit/b548e8e20fb29b48e8ddce0ff904b38a061118ea))
 
 ### Feature Removal:
 
@@ -45,6 +34,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Updated Language Files. ([#819](https://github.com/DroidWorksStudio/mLauncher/issues/819)) - ([81a395c](https://github.com/DroidWorksStudio/mLauncher/commit/81a395ca1db679005a0ccddfd5d467f3a1144a25))
 - Updated Language Files. ([#815](https://github.com/DroidWorksStudio/mLauncher/issues/815)) - ([017aa03](https://github.com/DroidWorksStudio/mLauncher/commit/017aa0310744fd1374b7e7f9537a8e72bb5703fd))
+
+### Reverts:
+
+- Reverted some changes of 0cdaa9b regarding Prefs for threshold values. - ([60a06ce](https://github.com/DroidWorksStudio/mLauncher/commit/60a06ce40e06f95604c33759e0d40910c55937e6))
 
 ## [1.10.7.7](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.7.7) - (24, June 2025)
 
