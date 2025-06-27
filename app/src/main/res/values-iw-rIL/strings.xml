@@ -210,7 +210,7 @@
     <string name="favorite_apps">יישומים מועדפים</string>
     <string name="clear_home_app">נקה את אפליקציית הבית</string>
     <!-- Accessibility/Help Strings -->
-    <string name="accessibility_service_name">MultiLauncher Action Services</string>
+    <string name="accessibility_service_name">שירותי פעולה של משגרים מרובים</string>
     <string name="accessibility_service_why_we_need">למה אנחנו צריכים אישור נגישות</string>
     <string name="accessibility_service_description">שירות נגישות זה מאפשר ל-MultiLauncher לבצע פעולות מסוימות כמו נעילת המסך או פתיחת ההגדרות המהירות. שירות הנגישות שלנו אינו אוסף או משתף נתונים כלשהם.</string>
     <string name="accessibility_service_more_info">MultiLauncher דורשת גישה לשירות הנגישות כדי לאפשר תכונות כגון:
