@@ -210,7 +210,7 @@
     <string name="favorite_apps">التطبيقات المفضلة</string>
     <string name="clear_home_app">تطبيق Clear Home</string>
     <!-- Accessibility/Help Strings -->
-    <string name="accessibility_service_name">MultiLauncher Action Services</string>
+    <string name="accessibility_service_name">خدمات عمل MultiLauncher</string>
     <string name="accessibility_service_why_we_need">لماذا نحتاج إلى إذن إمكانية الوصول</string>
     <string name="accessibility_service_description">تتيح خدمة إمكانية الوصول هذه لتطبيق MultiLauncher تنفيذ إجراءات معينة، مثل قفل الشاشة أو فتح الإعدادات السريعة. لا تجمع خدمة إمكانية الوصول لدينا أي بيانات أو تشاركها.</string>
     <string name="accessibility_service_more_info">    يتطلب MultiLauncher الوصول إلى خدمة إمكانية الوصول لتمكين ميزات مثل:\n\n
