@@ -210,7 +210,7 @@
     <string name="favorite_apps">Favoriete apps</string>
     <string name="clear_home_app">Clear Home-app</string>
     <!-- Accessibility/Help Strings -->
-    <string name="accessibility_service_name">MultiLauncher Action Services</string>
+    <string name="accessibility_service_name">MultiLauncher Actiediensten</string>
     <string name="accessibility_service_why_we_need">Waarom we toestemming voor toegankelijkheid nodig hebben</string>
     <string name="accessibility_service_description">Deze toegankelijkheidsservice stelt MultiLauncher in staat om bepaalde acties uit te voeren, zoals het vergrendelen van het scherm of het openen van de snelle instellingen. Onze toegankelijkheidsservice verzamelt of deelt geen gegevens.</string>
     <string name="accessibility_service_more_info">    MultiLauncher vereist toegang tot de toegankelijkheidsservice om functies in te schakelen zoals:\n\n
