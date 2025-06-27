@@ -1439,12 +1439,12 @@ class SettingsFragment : Fragment() {
 
                             dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
-                                options = iconPacksOptions.map { it.toString() }.toTypedArray(),
+                                options = iconPacksOptions.map { it }.toTypedArray(),
                                 titleResId = R.string.select_home_icons,
                                 selectedIndex = selectedIndex,
                                 onItemSelected = { newAppIconsName ->
                                     val newIconPacksIndex =
-                                        iconPacksOptions.indexOfFirst { it.toString() == newAppIconsName }
+                                        iconPacksOptions.indexOfFirst { it == newAppIconsName }
                                     if (newIconPacksIndex != -1) {
                                         val newAppIcons =
                                             iconPacksEntries[newIconPacksIndex] // Get the selected FontFamily enum
@@ -1478,12 +1478,12 @@ class SettingsFragment : Fragment() {
 
                             dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
-                                options = iconPacksOptions.map { it.toString() }.toTypedArray(),
+                                options = iconPacksOptions.map { it }.toTypedArray(),
                                 titleResId = R.string.select_app_list_icons,
                                 selectedIndex = selectedIndex,
                                 onItemSelected = { newAppIconsName ->
                                     val newIconPacksIndex =
-                                        iconPacksOptions.indexOfFirst { it.toString() == newAppIconsName }
+                                        iconPacksOptions.indexOfFirst { it == newAppIconsName }
                                     if (newIconPacksIndex != -1) {
                                         val newAppIcons =
                                             iconPacksEntries[newIconPacksIndex] // Get the selected FontFamily enum
