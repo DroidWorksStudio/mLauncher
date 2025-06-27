@@ -210,7 +210,7 @@
     <string name="favorite_apps">التطبيقات المفضلة</string>
     <string name="clear_home_app">تطبيق Clear Home</string>
     <!-- Accessibility/Help Strings -->
-    <string name="accessibility_service_name">إمكانية الوصول إلى MultiLauncher</string>
+    <string name="accessibility_service_name">MultiLauncher Action Services</string>
     <string name="accessibility_service_why_we_need">لماذا نحتاج إلى إذن إمكانية الوصول</string>
     <string name="accessibility_service_description">تتيح خدمة إمكانية الوصول هذه لتطبيق MultiLauncher تنفيذ إجراءات معينة، مثل قفل الشاشة أو فتح الإعدادات السريعة. لا تجمع خدمة إمكانية الوصول لدينا أي بيانات أو تشاركها.</string>
     <string name="accessibility_service_more_info">    يتطلب MultiLauncher الوصول إلى خدمة إمكانية الوصول لتمكين ميزات مثل:\n\n
@@ -314,19 +314,6 @@
     <string name="settings_context_menu_option">حدد العناصر المراد عرضها</string>
     <string name="settings_home_buttons_title">أزرار الصفحة الرئيسية</string>
     <string name="settings_home_buttons_option">حدد العناصر المراد عرضها</string>
-    <string name="app_timer_set_timer_duration">ضبط مدة المؤقت</string>
-    <string name="app_timer_5_minutes">5 دقائق</string>
-    <string name="app_timer_10_minutes">10 دقائق</string>
-    <string name="app_timer_30_minutes">30 دقيقة</string>
-    <string name="app_timer_60_minutes">60 دقيقة</string>
-    <string name="app_timer_custom_minutes_label">أو أدخل مدة مخصصة (بالدقائق):</string>
-    <string name="app_timer_custom_minutes_hint">على سبيل المثال 15</string>
-    <string name="app_timer_start_custom">بدء تشغيل مؤقت مخصص</string>
-    <string name="app_timer_invalid_minutes">الرجاء إدخال عدد صحيح من الدقائق.</string>
-    <string name="app_timer_extend_or_close">انتهى الوقت! هل تريد تمديد الجلسة أو إغلاق التطبيق؟</string>
-    <string name="app_timer_extend_5">تمديد 5 دقائق</string>
-    <string name="app_timer_extend_10">تمديد 10 دقائق</string>
-    <string name="app_timer_close_app">إغلاق التطبيق</string>
     <string-array name="priorities">
         <item>قليل</item>
         <item>واسطة</item>
