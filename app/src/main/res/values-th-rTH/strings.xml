@@ -210,7 +210,7 @@
     <string name="favorite_apps">แอปพลิเคชั่นที่ชื่นชอบ</string>
     <string name="clear_home_app">เคลียร์โฮมแอพ</string>
     <!-- Accessibility/Help Strings -->
-    <string name="accessibility_service_name">MultiLauncher Action Services</string>
+    <string name="accessibility_service_name">บริการการดำเนินการ MultiLauncher</string>
     <string name="accessibility_service_why_we_need">เหตุใดเราจึงต้องได้รับอนุญาตการเข้าถึง</string>
     <string name="accessibility_service_description">บริการการเข้าถึงนี้ช่วยให้ MultiLauncher สามารถดำเนินการบางอย่างได้ เช่น ล็อกหน้าจอหรือเปิดการตั้งค่าด่วน บริการการเข้าถึงของเราไม่รวบรวมหรือแบ่งปันข้อมูลใดๆ</string>
     <string name="accessibility_service_more_info">    MultiLauncher ต้องเข้าถึง Accessibility Service เพื่อเปิดใช้คุณสมบัติต่างๆ เช่น:\n\n
