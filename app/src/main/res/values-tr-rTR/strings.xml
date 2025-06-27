@@ -210,7 +210,7 @@
     <string name="favorite_apps">Favori Uygulamalar</string>
     <string name="clear_home_app">Clear Home Uygulaması</string>
     <!-- Accessibility/Help Strings -->
-    <string name="accessibility_service_name">MultiLauncher Action Services</string>
+    <string name="accessibility_service_name">MultiLauncher Eylem Hizmetleri</string>
     <string name="accessibility_service_why_we_need">Erişilebilirlik İznine Neden İhtiyacımız Var?</string>
     <string name="accessibility_service_description">Bu erişilebilirlik hizmeti MultiLauncher\'ın ekranı kilitleme veya hızlı ayarları açma gibi belirli eylemleri gerçekleştirmesine olanak tanır. Erişilebilirlik hizmetimiz hiçbir veri toplamaz veya paylaşmaz.</string>
     <string name="accessibility_service_more_info">    MultiLauncher, aşağıdaki gibi özellikleri etkinleştirmek için Erişilebilirlik Hizmetine erişim gerektirir:\n\n
