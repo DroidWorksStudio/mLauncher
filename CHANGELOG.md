@@ -13,6 +13,10 @@ All notable changes to this project will be documented in this file. See [conven
 - *(AppList)* Correctly identify and add all launchable activities - ([0cdaa9b](https://github.com/DroidWorksStudio/mLauncher/commit/0cdaa9b1c0e2a02b6295edf896ae5690cb6961a1))
 - *(Apps)* Ensure correct app hiding with duplicate app names - ([8cb22e6](https://github.com/DroidWorksStudio/mLauncher/commit/8cb22e6a7a1a8a1103b26dc306e7911bba3a86de))
 
+### Feature Removal:
+
+- *(AppTimer)* Remove app timer functionality - ([7885078](https://github.com/DroidWorksStudio/mLauncher/commit/7885078bdcea6cdcfb2754133b5afbd04850f906))
+
 ### Language Support:
 
 - Updated Language Files. ([#815](https://github.com/DroidWorksStudio/mLauncher/issues/815)) - ([017aa03](https://github.com/DroidWorksStudio/mLauncher/commit/017aa0310744fd1374b7e7f9537a8e72bb5703fd))
