@@ -571,7 +571,6 @@ private fun getInstallSource(packageManager: PackageManager, packageName: String
     }
 }
 
-
 fun getSystemIcons(
     context: Context,
     prefs: Prefs,

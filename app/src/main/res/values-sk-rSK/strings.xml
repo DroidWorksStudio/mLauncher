@@ -210,7 +210,7 @@
     <string name="favorite_apps">Obľúbené aplikácie</string>
     <string name="clear_home_app">Vymazať domovskú aplikáciu</string>
     <!-- Accessibility/Help Strings -->
-    <string name="accessibility_service_name">Dostupnosť viacerých spúšťačov</string>
+    <string name="accessibility_service_name">Služby akcií MultiLauncher</string>
     <string name="accessibility_service_why_we_need">Prečo potrebujeme povolenie na prístupnosť</string>
     <string name="accessibility_service_description">Táto služba prístupnosti umožňuje programu MultiLauncher vykonávať určité akcie, ako je uzamknutie obrazovky alebo otvorenie rýchlych nastavení. Naša služba dostupnosti nezhromažďuje ani nezdieľa žiadne údaje.</string>
     <string name="accessibility_service_more_info">MultiLauncher vyžaduje prístup k Službe prístupnosti, aby mohol povoliť funkcie ako:
@@ -316,19 +316,6 @@ Tento prístup môžete kedykoľvek vypnúť v nastaveniach zariadenia.</string>
     <string name="settings_context_menu_option">Vyberte položky, ktoré chcete zobraziť</string>
     <string name="settings_home_buttons_title">Tlačidlá Domov</string>
     <string name="settings_home_buttons_option">Vyberte položky, ktoré chcete zobraziť</string>
-    <string name="app_timer_set_timer_duration">Nastavenie trvania časovača</string>
-    <string name="app_timer_5_minutes">5 minút</string>
-    <string name="app_timer_10_minutes">10 minút</string>
-    <string name="app_timer_30_minutes">30 minút</string>
-    <string name="app_timer_60_minutes">60 minút</string>
-    <string name="app_timer_custom_minutes_label">Alebo zadajte vlastné trvanie (v minútach):</string>
-    <string name="app_timer_custom_minutes_hint">napr. 15</string>
-    <string name="app_timer_start_custom">Spustiť vlastný časovač</string>
-    <string name="app_timer_invalid_minutes">Zadajte platný počet minút.</string>
-    <string name="app_timer_extend_or_close">Čas vypršal! Predĺžiť reláciu alebo zatvoriť aplikáciu?</string>
-    <string name="app_timer_extend_5">Predĺžiť o 5 minút</string>
-    <string name="app_timer_extend_10">Predĺžiť o 10 minút</string>
-    <string name="app_timer_close_app">Zatvoriť aplikáciu</string>
     <string-array name="priorities">
         <item>Nízka</item>
         <item>Stredná</item>

@@ -339,11 +339,11 @@ class Prefs(val context: Context) {
         set(value) = prefsNormal.edit { putInt(FILTER_STRENGTH, value) }
 
     var shortSwipeThreshold: Float
-        get() = getSetting(SHORT_SWIPE_THRESHOLD, 0.1f)
+        get() = getSetting(SHORT_SWIPE_THRESHOLD, 0.25f)
         set(value) = prefsNormal.edit { putFloat(SHORT_SWIPE_THRESHOLD, value) }
 
     var longSwipeThreshold: Float
-        get() = getSetting(LONG_SWIPE_THRESHOLD, 0.3f)
+        get() = getSetting(LONG_SWIPE_THRESHOLD, 0.55f)
         set(value) = prefsNormal.edit { putFloat(LONG_SWIPE_THRESHOLD, value) }
 
     var searchFromStart: Boolean
@@ -699,23 +699,6 @@ class Prefs(val context: Context) {
     var enableExpertOptions: Boolean
         get() = getSetting(EXPERT_OPTIONS, false)
         set(value) = prefsNormal.edit { putBoolean(EXPERT_OPTIONS, value) }
-
-    var enableAppTimer: Boolean
-        get() = getSetting(APP_TIMER, false)
-        set(value) = prefsNormal.edit { putBoolean(APP_TIMER, value) }
-
-    fun getSavedTimer(packageName: String): Long {
-        // default 0 means no timer saved
-        return prefsNormal.getLong("${APP_TIMER}_${packageName}", 0)
-    }
-
-    fun saveTimer(packageName: String, targetTimeMillis: Long) {
-        prefsNormal.edit { putLong("${APP_TIMER}_${packageName}", targetTimeMillis) }
-    }
-
-    fun clearTimer(packageName: String) {
-        prefsNormal.edit { remove("${APP_TIMER}_${packageName}") }
-    }
 
     /**
      * By the number in home app list, get the list item.

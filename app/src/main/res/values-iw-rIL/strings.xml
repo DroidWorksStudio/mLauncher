@@ -210,7 +210,7 @@
     <string name="favorite_apps">יישומים מועדפים</string>
     <string name="clear_home_app">נקה את אפליקציית הבית</string>
     <!-- Accessibility/Help Strings -->
-    <string name="accessibility_service_name">נגישות רב-לאנצ\'ר</string>
+    <string name="accessibility_service_name">שירותי פעולה של משגרים מרובים</string>
     <string name="accessibility_service_why_we_need">למה אנחנו צריכים אישור נגישות</string>
     <string name="accessibility_service_description">שירות נגישות זה מאפשר ל-MultiLauncher לבצע פעולות מסוימות כמו נעילת המסך או פתיחת ההגדרות המהירות. שירות הנגישות שלנו אינו אוסף או משתף נתונים כלשהם.</string>
     <string name="accessibility_service_more_info">MultiLauncher דורשת גישה לשירות הנגישות כדי לאפשר תכונות כגון:
@@ -316,19 +316,6 @@
     <string name="settings_context_menu_option">בחירת פריטים להצגה</string>
     <string name="settings_home_buttons_title">כפתורי בית</string>
     <string name="settings_home_buttons_option">בחירת פריטים להצגה</string>
-    <string name="app_timer_set_timer_duration">הגדר את משך הטיימר</string>
-    <string name="app_timer_5_minutes">5 דקות</string>
-    <string name="app_timer_10_minutes">10 דקות</string>
-    <string name="app_timer_30_minutes">30 דקות</string>
-    <string name="app_timer_60_minutes">60 דקות</string>
-    <string name="app_timer_custom_minutes_label">או הזן משך זמן מותאם אישית (בדקות):</string>
-    <string name="app_timer_custom_minutes_hint">לדוגמה 15</string>
-    <string name="app_timer_start_custom">הפעלת טיימר מותאם אישית</string>
-    <string name="app_timer_invalid_minutes">אנא הזן מספר דקות תקין.</string>
-    <string name="app_timer_extend_or_close">נגמר הזמן! להאריך את ההפעלה או לסגור את האפליקציה?</string>
-    <string name="app_timer_extend_5">הארכה של 5 דקות</string>
-    <string name="app_timer_extend_10">הארכה של 10 דקות</string>
-    <string name="app_timer_close_app">סגור את האפליקציה</string>
     <string-array name="priorities">
         <item>נָמוּך</item>
         <item>בֵּינוֹנִי</item>

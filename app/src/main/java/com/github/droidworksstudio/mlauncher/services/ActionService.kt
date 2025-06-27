@@ -1,7 +1,9 @@
 package com.github.droidworksstudio.mlauncher.services
 
 import android.accessibilityservice.AccessibilityService
+import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.view.accessibility.AccessibilityEvent
 import com.github.droidworksstudio.common.AppLogger
 import com.github.droidworksstudio.common.CrashHandler
@@ -71,7 +73,17 @@ class ActionService : AccessibilityService() {
         return performGlobalAction(GLOBAL_ACTION_TAKE_SCREENSHOT)
     }
 
-    override fun onAccessibilityEvent(event: AccessibilityEvent?) {}
+    override fun onAccessibilityEvent(event: AccessibilityEvent?) {
+        if (event == null) return
+        if (System.currentTimeMillis() < suppressEventsUntil) return
+    }
+
+    fun getLauncherPackageName(context: Context): String? {
+        val intent = Intent(Intent.ACTION_MAIN)
+        intent.addCategory(Intent.CATEGORY_HOME)
+        val resolveInfo = context.packageManager.resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY)
+        return resolveInfo?.activityInfo?.packageName
+    }
 
     override fun onInterrupt() {
         AppLogger.d("ActionService", "Service interrupted")
