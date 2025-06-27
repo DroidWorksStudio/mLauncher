@@ -210,7 +210,7 @@
     <string name="favorite_apps">Mėgstamiausios programos</string>
     <string name="clear_home_app">Išvalyti namų programėlę</string>
     <!-- Accessibility/Help Strings -->
-    <string name="accessibility_service_name">MultiLauncher Action Services</string>
+    <string name="accessibility_service_name">„MultiLauncher“ veiksmų paslaugos</string>
     <string name="accessibility_service_why_we_need">Kodėl mums reikia prieigos leidimo</string>
     <string name="accessibility_service_description">Ši pritaikymo neįgaliesiems paslauga leidžia MultiLauncher atlikti tam tikrus veiksmus, pvz., užrakinti ekraną arba atidaryti sparčiuosius nustatymus. Mūsų prieinamumo paslauga nerenka ir nebendrina jokių duomenų.</string>
     <string name="accessibility_service_more_info">MultiLauncher reikalinga prieiga prie Prieinamumo paslaugos, kad galėtų įjungti tokias funkcijas kaip:
