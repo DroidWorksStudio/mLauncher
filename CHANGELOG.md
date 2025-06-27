@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Bug Fixes:
+
+- *(Settings)* Correctly display icon pack names in settings - ([0917f5f](https://github.com/DroidWorksStudio/mLauncher/commit/0917f5f334da44bb03feae3137848dae251dfa39))
+
+## [1.10.7.8](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.7.8) - (27, June 2025)
+
 ### Implemented Enhancements:
 
 - *(Settings)* Customize switch appearance - ([3eafe09](https://github.com/DroidWorksStudio/mLauncher/commit/3eafe093cf13d03079e45cd3c2e7911845e41acd))
