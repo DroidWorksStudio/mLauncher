@@ -210,7 +210,7 @@
     <string name="favorite_apps">즐겨찾는 앱</string>
     <string name="clear_home_app">클리어 홈 앱</string>
     <!-- Accessibility/Help Strings -->
-    <string name="accessibility_service_name">MultiLauncher Action Services</string>
+    <string name="accessibility_service_name">멀티런처 액션 서비스</string>
     <string name="accessibility_service_why_we_need">접근성 허가가 필요한 이유</string>
     <string name="accessibility_service_description">이 접근성 서비스를 통해 MultiLauncher는 화면 잠금이나 빠른 설정 열기와 같은 특정 작업을 수행할 수 있습니다. 당사의 접근성 서비스는 어떠한 데이터도 수집하거나 공유하지 않습니다.</string>
     <string name="accessibility_service_more_info">    MultiLauncher는 다음과 같은 기능을 활성화하기 위해 접근성 서비스에 액세스해야 합니다.\n\n
