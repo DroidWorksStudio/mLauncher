@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<whitelist>
-    <!-- Example: Package names of apps to be bypassed for app timers -->
-    <app packageName="app.mlauncher" />
-    <app packageName="com.android.settings" />
-    <!-- Add more app entries as needed -->
-</whitelist>

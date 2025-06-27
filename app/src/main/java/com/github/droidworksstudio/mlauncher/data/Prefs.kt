@@ -700,23 +700,6 @@ class Prefs(val context: Context) {
         get() = getSetting(EXPERT_OPTIONS, false)
         set(value) = prefsNormal.edit { putBoolean(EXPERT_OPTIONS, value) }
 
-    var enableAppTimer: Boolean
-        get() = getSetting(APP_TIMER, false)
-        set(value) = prefsNormal.edit { putBoolean(APP_TIMER, value) }
-
-    fun getSavedTimer(packageName: String): Long {
-        // default 0 means no timer saved
-        return prefsNormal.getLong("${APP_TIMER}_${packageName}", 0)
-    }
-
-    fun saveTimer(packageName: String, targetTimeMillis: Long) {
-        prefsNormal.edit { putLong("${APP_TIMER}_${packageName}", targetTimeMillis) }
-    }
-
-    fun clearTimer(packageName: String) {
-        prefsNormal.edit { remove("${APP_TIMER}_${packageName}") }
-    }
-
     /**
      * By the number in home app list, get the list item.
      * TODO why not just save it as a list?

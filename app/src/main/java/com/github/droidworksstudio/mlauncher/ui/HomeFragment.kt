@@ -19,7 +19,6 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.os.Vibrator
-import android.provider.Settings
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.SpannableStringBuilder
@@ -36,7 +35,6 @@ import androidx.appcompat.content.res.AppCompatResources
 import androidx.biometric.BiometricPrompt
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import androidx.core.net.toUri
 import androidx.core.os.bundleOf
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -460,15 +458,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     // Instantiate MainActivity and pass it to showPermissionDialog
                     showPermissionDialog(context)
                 }
-            }
-        }
-
-        if (prefs.enableAppTimer) {
-            if (!Settings.canDrawOverlays(context)) {
-                val intent = Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION).apply {
-                    data = ("package:" + context.applicationContext.packageName).toUri()
-                }
-                startActivity(intent)
             }
         }
     }
@@ -1489,7 +1478,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         dialogBuilder.singleChoiceBottomSheet?.dismiss()
         dialogBuilder.colorPickerBottomSheet?.dismiss()
         dialogBuilder.sliderBottomSheet?.dismiss()
-        dialogBuilder.timerBottomSheet?.dismiss()
         dialogBuilder.flagSettingsBottomSheet?.dismiss()
     }
 }

@@ -2,7 +2,6 @@ package com.github.droidworksstudio.mlauncher.ui.components
 
 import android.app.Activity
 import android.content.Context
-import android.content.res.ColorStateList
 import android.graphics.Color
 import android.graphics.Typeface
 import android.graphics.drawable.GradientDrawable
@@ -15,7 +14,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AbsListView
 import android.widget.ArrayAdapter
-import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.LinearLayout
@@ -24,13 +22,11 @@ import android.widget.SeekBar
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.toColorInt
-import com.github.creativecodecat.components.views.FontAppCompatTextView
 import com.github.droidworksstudio.common.getCpuBatteryInfo
 import com.github.droidworksstudio.common.getLocalizedString
 import com.github.droidworksstudio.common.getRamInfo
 import com.github.droidworksstudio.common.getSdCardInfo
 import com.github.droidworksstudio.common.getStorageInfo
-import com.github.droidworksstudio.common.showLongToast
 import com.github.droidworksstudio.mlauncher.MainActivity
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.Constants
@@ -877,100 +873,4 @@ class DialogManager(val context: Context, val activity: Activity) {
         bottomSheet.setContentView(rootLayout)
         bottomSheet.show()
     }
-
-    var timerBottomSheet: LockedBottomSheetDialog? = null
-
-    fun showTimerBottomSheet(
-        context: Context,
-        onTimeSelected: (targetTimestampMillis: Long) -> Unit
-    ) {
-        timerBottomSheet?.dismiss()
-        timerBottomSheet = LockedBottomSheetDialog(context)
-
-        val container = LinearLayout(context).apply {
-            orientation = LinearLayout.VERTICAL
-            setBackgroundColor(ContextCompat.getColor(context, R.color.colorPrimaryBackground))
-            setPadding(40, 40, 40, 40)
-        }
-
-        val buttons = LinearLayout(context).apply {
-            orientation = LinearLayout.HORIZONTAL
-            setPadding(16, 16, 16, 16)
-        }
-
-        val title = FontAppCompatTextView(context).apply {
-            text = getLocalizedString(R.string.app_timer_set_timer_duration)
-            setTextColor(ContextCompat.getColor(context, R.color.colorPrimary))
-            textSize = 18f
-            setPadding(0, 0, 0, 20)
-        }
-
-        val durations = listOf(
-            5 to getLocalizedString(R.string.app_timer_5_minutes),
-            10 to getLocalizedString(R.string.app_timer_10_minutes),
-            30 to getLocalizedString(R.string.app_timer_30_minutes),
-            60 to getLocalizedString(R.string.app_timer_60_minutes)
-        )
-
-        container.addView(title)
-
-        // Preset buttons
-        durations.forEach { (minutes, label) ->
-            val button = Button(context).apply {
-                text = label
-                setTextColor(ContextCompat.getColor(context, R.color.buttonTextPrimary))
-                backgroundTintList = ColorStateList.valueOf(
-                    ContextCompat.getColor(context, R.color.buttonBackgroundPrimary)
-                )
-                setOnClickListener {
-                    val targetTimeMillis = System.currentTimeMillis() + minutes * 60_000
-                    timerBottomSheet?.dismiss()
-                    onTimeSelected(targetTimeMillis)
-                }
-            }
-            buttons.addView(button)
-        }
-
-        container.addView(buttons)
-
-        // Custom timer input
-        val customInputLabel = TextView(context).apply {
-            text = getLocalizedString(R.string.app_timer_custom_minutes_label)
-            setPadding(0, 30, 0, 10)
-        }
-
-        val customInput = EditText(context).apply {
-            hint = getLocalizedString(R.string.app_timer_custom_minutes_hint)
-            inputType = InputType.TYPE_CLASS_NUMBER
-        }
-
-        val customStartBtn = Button(context).apply {
-            text = getLocalizedString(R.string.app_timer_start_custom)
-            setTextColor(ContextCompat.getColor(context, R.color.buttonTextPrimary))
-            backgroundTintList = ColorStateList.valueOf(
-                ContextCompat.getColor(context, R.color.buttonBackgroundError)
-            )
-            setOnClickListener {
-                val inputText = customInput.text.toString()
-                val customMinutes = inputText.toIntOrNull()
-
-                if (customMinutes == null || customMinutes <= 0) {
-                    context.showLongToast(getLocalizedString(R.string.app_timer_invalid_minutes))
-                    return@setOnClickListener
-                }
-
-                val targetTimeMillis = System.currentTimeMillis() + customMinutes * 60_000
-                timerBottomSheet?.dismiss()
-                onTimeSelected(targetTimeMillis)
-            }
-        }
-
-        container.addView(customInputLabel)
-        container.addView(customInput)
-        container.addView(customStartBtn)
-
-        timerBottomSheet?.setContentView(container)
-        timerBottomSheet?.show()
-    }
-
 }

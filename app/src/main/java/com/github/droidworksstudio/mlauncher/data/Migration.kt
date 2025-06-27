@@ -40,9 +40,10 @@ class Migration(val context: Context) {
                 "EXPERIMENTAL_OPTIONS",
             ),
             1100708 to listOf(
+                "APP_TIMER",
                 "SHORT_SWIPE_THRESHOLD",
                 "LONG_SWIPE_THRESHOLD",
-            )
+            ),
             // Add more versions and preferences to remove here
         )
 
