@@ -136,7 +136,7 @@ class GestureManager(
 
         val distance = if (isHorizontalSwipe) (abs(diffX)/Constants.USR_DPIX) else (abs(diffY)/Constants.USR_DPIY)
         val isLongSwipe = distance > longThreshold
-        val isShortSwipe = distance in (shortThreshold + 1)..longThreshold
+        val isShortSwipe = distance in shortThreshold..longThreshold
 
 
         AppLogger.d(

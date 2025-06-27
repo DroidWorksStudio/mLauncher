@@ -57,8 +57,8 @@ object Constants {
     const val SWIPE_VELOCITY_THRESHOLD = 450f // Adjust as needed
 
     // Update SWIPE_DISTANCE_THRESHOLD dynamically based on screen dimensions
-    const val MIN_THRESHOLD = 0f // pixels
-    const val MAX_THRESHOLD = 1f // pixels
+    const val MIN_THRESHOLD = 0f
+    const val MAX_THRESHOLD = 1f
     var SHORT_SWIPE_THRESHOLD = 0f  // pixels
     var LONG_SWIPE_THRESHOLD = 0f // pixels
     var USR_DPIX = 0f
