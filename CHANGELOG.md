@@ -8,6 +8,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - *(Settings)* Correctly display icon pack names in settings - ([0917f5f](https://github.com/DroidWorksStudio/mLauncher/commit/0917f5f334da44bb03feae3137848dae251dfa39))
 
+### Chore:
+
+- *(Migration)* Add swipe threshold preferences to migration list - ([99b4d1c](https://github.com/DroidWorksStudio/mLauncher/commit/99b4d1ceff4c04bf509429eff61598eb0994186e))
+
 ## [1.10.7.8](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.7.8) - (27, June 2025)
 
 ### Implemented Enhancements:
