@@ -76,7 +76,7 @@ class AppDrawerAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         binding = AdapterAppDrawerBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         prefs = Prefs(parent.context)
-        biometricHelper = BiometricHelper(fragment)
+        biometricHelper = BiometricHelper(fragment.requireActivity())
         val fontColor = prefs.appColor
         binding.appTitle.setTextColor(fontColor)
 

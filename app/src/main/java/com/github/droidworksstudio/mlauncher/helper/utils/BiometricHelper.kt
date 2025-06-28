@@ -3,12 +3,12 @@ package com.github.droidworksstudio.mlauncher.helper.utils
 import androidx.biometric.BiometricManager
 import androidx.biometric.BiometricPrompt
 import androidx.core.content.ContextCompat
-import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
 import com.github.droidworksstudio.common.getLocalizedString
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.AppListItem
 
-class BiometricHelper(private val fragment: Fragment) {
+class BiometricHelper(private val activity: FragmentActivity) {
     private lateinit var callbackApp: CallbackApp
     private lateinit var callbackSettings: CallbackSettings
 
@@ -41,13 +41,13 @@ class BiometricHelper(private val fragment: Fragment) {
             }
         }
 
-        val executor = ContextCompat.getMainExecutor(fragment.requireContext())
-        val biometricPrompt = BiometricPrompt(fragment, executor, authenticationCallback)
+        val executor = ContextCompat.getMainExecutor(activity)
+        val biometricPrompt = BiometricPrompt(activity, executor, authenticationCallback)
 
         val authenticators =
             BiometricManager.Authenticators.BIOMETRIC_STRONG or BiometricManager.Authenticators.DEVICE_CREDENTIAL
         val canAuthenticate =
-            BiometricManager.from(fragment.requireContext()).canAuthenticate(authenticators)
+            BiometricManager.from(activity).canAuthenticate(authenticators)
 
         val promptInfo = BiometricPrompt.PromptInfo.Builder()
             .setTitle(getLocalizedString(R.string.text_biometric_login))
@@ -78,13 +78,13 @@ class BiometricHelper(private val fragment: Fragment) {
             }
         }
 
-        val executor = ContextCompat.getMainExecutor(fragment.requireContext())
-        val biometricPrompt = BiometricPrompt(fragment, executor, authenticationCallback)
+        val executor = ContextCompat.getMainExecutor(activity)
+        val biometricPrompt = BiometricPrompt(activity, executor, authenticationCallback)
 
         val authenticators =
             BiometricManager.Authenticators.BIOMETRIC_STRONG or BiometricManager.Authenticators.DEVICE_CREDENTIAL
         val canAuthenticate =
-            BiometricManager.from(fragment.requireContext()).canAuthenticate(authenticators)
+            BiometricManager.from(activity).canAuthenticate(authenticators)
 
         val promptInfo = BiometricPrompt.PromptInfo.Builder()
             .setTitle(getLocalizedString(R.string.text_biometric_login))

@@ -130,7 +130,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        biometricHelper = BiometricHelper(this)
+        biometricHelper = BiometricHelper(this.requireActivity())
 
         viewModel = activity?.run {
             ViewModelProvider(this)[MainViewModel::class.java]

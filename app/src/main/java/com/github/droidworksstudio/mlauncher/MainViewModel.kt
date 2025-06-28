@@ -137,7 +137,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     fun launchApp(appListItem: AppListItem, fragment: Fragment) {
-        biometricHelper = BiometricHelper(fragment)
+        biometricHelper = BiometricHelper(fragment.requireActivity())
 
         val packageName = appListItem.activityPackage
         val currentLockedApps = prefs.lockedApps
@@ -145,9 +145,12 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         logActivitiesFromPackage(appContext, packageName)
 
         if (currentLockedApps.contains(packageName)) {
-            fragment.hideKeyboard()
+
             biometricHelper.startBiometricAuth(appListItem, object : BiometricHelper.CallbackApp {
                 override fun onAuthenticationSucceeded(appListItem: AppListItem) {
+                    if (fragment.isAdded) {
+                        fragment.hideKeyboard()
+                    }
                     launchUnlockedApp(appListItem)
                 }
 
