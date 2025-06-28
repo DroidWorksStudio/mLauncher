@@ -8,6 +8,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Bump version to 1.10.8 - ([902d49a](https://github.com/DroidWorksStudio/mLauncher/commit/902d49a9d335a30d308609836173f283114d979a))
 
+### Refactoring:
+
+- Use FragmentActivity for BiometricHelper - ([62ae67a](https://github.com/DroidWorksStudio/mLauncher/commit/62ae67a7860c83c2508ec542debc81f677770830))
+
 ## [1.10.7.10](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.7.10) - (27, June 2025)
 
 ### Implemented Enhancements:
