@@ -8,7 +8,6 @@ import android.content.Context.VIBRATOR_SERVICE
 import android.content.Intent
 import android.content.IntentFilter
 import android.content.pm.PackageManager
-import android.graphics.ColorFilter
 import android.graphics.PorterDuff
 import android.graphics.PorterDuffColorFilter
 import android.graphics.drawable.Drawable
@@ -761,8 +760,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             Action.ShowRecents -> initActionService(requireContext())?.showRecents()
             Action.OpenPowerDialog -> initActionService(requireContext())?.openPowerDialog()
             Action.TakeScreenShot -> initActionService(requireContext())?.takeScreenShot()
-            Action.LeftPage -> handleSwipeLeft(prefs.homePagesNum)
-            Action.RightPage -> handleSwipeRight(prefs.homePagesNum)
+            Action.LeftPage -> handleSwipeLeft()
+            Action.RightPage -> handleSwipeRight()
             Action.RestartApp -> AppReloader.restartApp(requireContext())
             Action.Disabled -> {}
 
@@ -1086,87 +1085,121 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     }
 
 
-    // updates number of apps visible on home screen
-    // does nothing if number has not changed
+    private val homeScreenPager = "HomeScreenPager"
+
     private var currentPage = 0
-    private var appsPerPage = 0
+    private lateinit var pageRanges: List<IntRange>
 
     private fun updatePagesAndAppsPerPage(totalApps: Int, totalPages: Int) {
-        // Calculate the maximum number of apps per page
-        appsPerPage = if (totalPages > 0) {
-            (totalApps + totalPages - 1) / totalPages // Round up to ensure all apps are displayed
-        } else {
-            0 // Return 0 if totalPages is 0 to avoid division by zero
+        AppLogger.d(homeScreenPager, "updatePagesAndAppsPerPage: totalApps=$totalApps, requested totalPages=$totalPages")
+
+        if (totalPages <= 0) {
+            pageRanges = emptyList()
+            AppLogger.d(homeScreenPager, "No pages to show. pageRanges cleared.")
+            return
         }
 
-        // Update app visibility based on the current page and calculated apps per page
-        updateAppsVisibility(totalPages)
+        val baseAppsPerPage = totalApps / totalPages
+        val extraApps = totalApps % totalPages
+        AppLogger.d(homeScreenPager, "Base apps per page: $baseAppsPerPage, extra apps: $extraApps")
+
+        var startIdx = 0
+        pageRanges = List(totalPages) { page ->
+            val appsThisPage = baseAppsPerPage + if (page < extraApps) 1 else 0
+            val endIdx = startIdx + appsThisPage
+            val range = startIdx until endIdx
+            AppLogger.d(homeScreenPager, "Page $page → range $range (appsThisPage=$appsThisPage)")
+            startIdx = endIdx
+            range
+        }
+
+        if (currentPage >= pageRanges.size) {
+            currentPage = 0
+            AppLogger.d(homeScreenPager, "Current page reset to 0 as it was out of bounds")
+        }
+
+        updateAppsVisibility()
     }
 
-    private fun updateAppsVisibility(totalPages: Int) {
-        val startIdx = currentPage * appsPerPage
-        val endIdx = minOf((currentPage + 1) * appsPerPage, getTotalAppsCount())
+    private fun updateAppsVisibility() {
+        if (pageRanges.isEmpty() || currentPage !in pageRanges.indices) {
+            AppLogger.d(homeScreenPager, "updateAppsVisibility: Invalid currentPage=$currentPage or empty pageRanges")
+            return
+        }
+
+        val visibleRange = pageRanges[currentPage]
+        AppLogger.d(homeScreenPager, "Showing apps for currentPage=$currentPage, visibleRange=$visibleRange")
 
         for (i in 0 until getTotalAppsCount()) {
             val view = binding.homeAppsLayout.getChildAt(i)
-            view.isVisible = (i in startIdx until endIdx)
+            view.isVisible = i in visibleRange
         }
 
-        val pageSelectorIcons = MutableList(totalPages) { _ -> R.drawable.ic_new_page }
+        // Update page selector icons
+        val totalPages = pageRanges.size
+        val pageSelectorIcons = MutableList(totalPages) { R.drawable.ic_new_page }
         pageSelectorIcons[currentPage] = R.drawable.ic_current_page
 
         val spannable = SpannableStringBuilder()
-
         pageSelectorIcons.forEach { drawableRes ->
             val drawable = ContextCompat.getDrawable(requireContext(), drawableRes)?.apply {
                 setBounds(0, 0, intrinsicWidth, intrinsicHeight)
-                val colorFilterColor: ColorFilter =
-                    PorterDuffColorFilter(prefs.appColor, PorterDuff.Mode.SRC_IN)
-                colorFilter = colorFilterColor
+                colorFilter = PorterDuffColorFilter(prefs.appColor, PorterDuff.Mode.SRC_IN)
             }
             val imageSpan = drawable?.let { ImageSpan(it, ImageSpan.ALIGN_BASELINE) }
 
-            val placeholder = SpannableString(" ") // Placeholder for the image
+            val placeholder = SpannableString(" ") // Placeholder
             imageSpan?.let { placeholder.setSpan(it, 0, 1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE) }
 
             spannable.append(placeholder)
-            spannable.append(" ") // Add space between icons
+            spannable.append(" ") // Space
         }
 
-        // Set the text for the page selector corresponding to each page
         binding.homeScreenPager.text = spannable
         if (prefs.homePagesNum > 1 && prefs.homePager) binding.homeScreenPager.isVisible = true
         if (prefs.showFloating) binding.fabLayout.isVisible = true
     }
 
-    private fun handleSwipeLeft(totalPages: Int) {
-        if (totalPages <= 0) return // Prevent issues if totalPages is 0 or negative
+    private fun handleSwipeLeft() {
+        val totalPages = pageRanges.size
+        if (totalPages <= 0) {
+            AppLogger.d(homeScreenPager, "handleSwipeLeft: No pages to swipe")
+            return
+        }
 
         currentPage = if (currentPage == 0) {
-            totalPages - 1 // Wrap to last page if on the first page
+            totalPages - 1
         } else {
-            currentPage - 1 // Move to the previous page
+            currentPage - 1
         }
 
-        updateAppsVisibility(totalPages)
+        AppLogger.d(homeScreenPager, "handleSwipeLeft: currentPage now $currentPage")
+        updateAppsVisibility()
     }
 
-    private fun handleSwipeRight(totalPages: Int) {
-        if (totalPages <= 0) return // Prevent issues if totalPages is 0 or negative
+    private fun handleSwipeRight() {
+        val totalPages = pageRanges.size
+        if (totalPages <= 0) {
+            AppLogger.d(homeScreenPager, "handleSwipeRight: No pages to swipe")
+            return
+        }
 
         currentPage = if (currentPage == totalPages - 1) {
-            0 // Wrap to first page if on the last page
+            0
         } else {
-            currentPage + 1 // Move to the next page
+            currentPage + 1
         }
 
-        updateAppsVisibility(totalPages)
+        AppLogger.d(homeScreenPager, "handleSwipeRight: currentPage now $currentPage")
+        updateAppsVisibility()
     }
-
 
     private fun getTotalAppsCount(): Int {
-        return binding.homeAppsLayout.childCount
+        val count = binding.homeAppsLayout.childCount
+        AppLogger.d(homeScreenPager, "getTotalAppsCount: $count")
+        return count
     }
+
 
     private fun trySettings() {
         lifecycleScope.launch(Dispatchers.Main) {

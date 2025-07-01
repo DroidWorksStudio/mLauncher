@@ -1,6 +1,8 @@
 package com.github.droidworksstudio.mlauncher.listener
 
 import android.content.Context
+import android.os.Handler
+import android.os.Looper
 import android.view.GestureDetector
 import android.view.MotionEvent
 import com.github.droidworksstudio.common.AppLogger
@@ -15,7 +17,11 @@ class GestureManager(
     private val gestureDetector = GestureDetector(context, this)
     private var downTime: Long = 0
     private var isScrolling = false
+    private var flingDetected = false
     private var initialEvent: MotionEvent? = null
+
+    private val handler = Handler(Looper.getMainLooper())
+    private var scrollFinishedRunnable: Runnable? = null
 
     companion object {
         private const val TAG = "GestureManager"
@@ -40,12 +46,16 @@ class GestureManager(
             MotionEvent.ACTION_DOWN -> {
                 downTime = System.currentTimeMillis()
                 isScrolling = false
+                flingDetected = false
+                scrollFinishedRunnable?.let { handler.removeCallbacks(it) }
                 initialEvent?.recycle()
                 initialEvent = MotionEvent.obtain(event)
+                AppLogger.d(TAG, "ACTION_DOWN - downTime set, flingDetected reset, cancelled pending runnable")
             }
 
             MotionEvent.ACTION_UP -> {
                 if (isScrolling && initialEvent != null) {
+                    AppLogger.d(TAG, "ACTION_UP - scrolling finished, scheduling scroll finish handler")
                     handleScrollFinished(initialEvent!!, event)
                     isScrolling = false
                     initialEvent?.recycle()
@@ -86,6 +96,7 @@ class GestureManager(
         distanceY: Float
     ): Boolean {
         isScrolling = true
+//        AppLogger.d(TAG, "onScroll - scrolling started")
         return true
     }
 
@@ -100,16 +111,38 @@ class GestureManager(
             return false
         }
 
+        // Cancel pending scrollFinishedRunnable, since fling is happening
+        scrollFinishedRunnable?.let {
+            handler.removeCallbacks(it)
+            AppLogger.d(TAG, "onFling - canceled pending scrollFinishedRunnable")
+        }
+
         val duration = System.currentTimeMillis() - downTime
         val isHorizontal = abs(e2.x - e1.x) > abs(e2.y - e1.y)
         val velocity = if (isHorizontal) abs(velocityX) else abs(velocityY)
 
-        return detectSwipeGesture(e1, e2, duration, velocity)
+        AppLogger.d(TAG, "onFling detected: velocity=$velocity")
+
+        val handled = detectSwipeGesture(e1, e2, duration, velocity)
+        flingDetected = handled
+        AppLogger.d(TAG, "onFling - gesture handled=$handled, flingDetected set to $flingDetected")
+        return handled
     }
 
     private fun handleScrollFinished(e1: MotionEvent, e2: MotionEvent) {
+        scrollFinishedRunnable?.let { handler.removeCallbacks(it) }
         val duration = System.currentTimeMillis() - downTime
-        detectSwipeGesture(e1, e2, duration)
+
+        scrollFinishedRunnable = Runnable {
+            if (!flingDetected) {
+                AppLogger.d(TAG, "handleScrollFinished - no fling detected, checking for slow swipe")
+                detectSwipeGesture(e1, e2, duration)
+            } else {
+                AppLogger.d(TAG, "handleScrollFinished - fling already detected, skipping detection")
+            }
+            flingDetected = false
+        }
+        handler.postDelayed(scrollFinishedRunnable!!, 50)  // 50 ms delay
     }
 
     private fun detectSwipeGesture(
@@ -134,10 +167,9 @@ class GestureManager(
         val longThreshold = Constants.LONG_SWIPE_THRESHOLD
         val velocityThreshold = Constants.SWIPE_VELOCITY_THRESHOLD
 
-        val distance = if (isHorizontalSwipe) (abs(diffX)/Constants.USR_DPIX) else (abs(diffY)/Constants.USR_DPIY)
+        val distance = if (isHorizontalSwipe) (abs(diffX) / Constants.USR_DPIX) else (abs(diffY) / Constants.USR_DPIY)
         val isLongSwipe = distance > longThreshold
         val isShortSwipe = distance in shortThreshold..longThreshold
-
 
         AppLogger.d(
             TAG, "detectSwipeGesture - direction: $direction, distance: $distance, duration: $duration, " +
