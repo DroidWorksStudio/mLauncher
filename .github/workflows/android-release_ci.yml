@@ -52,7 +52,7 @@ jobs:
           buildToolsVersion: 35.0.0
 
       - name: Release to GitHub
-        uses: svenstaro/upload-release-action@2.10.0
+        uses: svenstaro/upload-release-action@2.11.1
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ${{steps.sign_app_apk.outputs.signedFile}}
@@ -61,7 +61,7 @@ jobs:
           overwrite: true
 
       - name: Upload ProGuard Mapping File
-        uses: svenstaro/upload-release-action@2.10.0
+        uses: svenstaro/upload-release-action@2.11.1
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: app/build/outputs/mapping/release/mapping.txt
@@ -82,7 +82,7 @@ jobs:
           buildToolsVersion: 35.0.0
 
       - name: Release to GitHub
-        uses: svenstaro/upload-release-action@2.10.0
+        uses: svenstaro/upload-release-action@2.11.1
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ${{steps.sign_app_aab.outputs.signedFile}}
