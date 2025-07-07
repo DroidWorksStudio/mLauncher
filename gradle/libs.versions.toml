@@ -18,9 +18,9 @@ lifecycle-extensions = "2.2.0"
 lifecycle-viewmodel-ktx = "2.9.1"
 
 # Navigation
-navigation-fragment-ktx = "2.9.0"
-navigation-ui-ktx = "2.9.0"
-navigation-testing = "2.9.0"
+navigation-fragment-ktx = "2.9.1"
+navigation-ui-ktx = "2.9.1"
+navigation-testing = "2.9.1"
 
 # Work Manager
 work-runtime-ktx = "2.10.2"
