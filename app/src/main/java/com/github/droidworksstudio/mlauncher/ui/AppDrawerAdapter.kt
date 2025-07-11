@@ -609,7 +609,7 @@ class AppDrawerAdapter(
                         else appTitle.setCompoundDrawables(icon, null, null, null)
                     }
                     appTitle.compoundDrawablePadding = 20
-                } else if (isPrivateSpace) {
+                } else if (isPrivateSpace && !appListItem.isHeader) {
                     val icon = AppCompatResources.getDrawable(context, R.drawable.ic_unlock)
                     val px = dp2px(resources, prefs.appSize)
                     icon?.setBounds(0, 0, px, px)

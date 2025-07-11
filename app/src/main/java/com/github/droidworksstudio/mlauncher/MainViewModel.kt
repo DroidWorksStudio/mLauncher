@@ -3,10 +3,9 @@ package com.github.droidworksstudio.mlauncher
 import android.app.Application
 import android.content.ComponentName
 import android.content.Context
-import android.content.Intent
 import android.content.SharedPreferences
 import android.content.pm.LauncherApps
-import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Process
 import android.os.UserHandle
 import android.os.UserManager
@@ -321,15 +320,28 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             val scrollIndexMap = mutableMapOf<String, Int>()
 
             for (profile in userManager.userProfiles) {
-                AppLogger.d("AppListDebug", "👤 Processing user profile: $profile | ${userManager.userProfiles}")
-
-                val isPrivate = PrivateSpaceManager(context).isPrivateSpaceProfile(profile)
-                if (isPrivate && PrivateSpaceManager(context).isPrivateSpaceLocked()) {
+                val privateSpaceManager = PrivateSpaceManager(context)
+                val isPrivate = privateSpaceManager.isPrivateSpaceProfile(profile)
+                if (isPrivate && privateSpaceManager.isPrivateSpaceLocked()) {
                     AppLogger.d("AppListDebug", "🔒 Skipping locked private space for profile: $profile")
                     continue
                 }
 
-                // Recent Apps
+                val isWork = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                    userManager.isManagedProfile
+                } else {
+                    false
+                }
+
+                val profileType = when {
+                    isPrivate -> "PRIVATE"
+                    isWork -> "WORK"
+                    else -> "NORMAL"
+                }
+
+                AppLogger.d("AppListDebug", "👤 Processing user profile: $profile|$profileType")
+
+                // Recent Apps (⚠ make sure your tracker can handle per-profile)
                 if (prefs.recentAppsDisplayed && includeRecentApps && fullList.none { it.category == AppCategory.RECENT }) {
                     val tracker = AppUsageMonitor.createInstance(context)
                     val recentApps = tracker.getLastTenAppsUsed(context)
@@ -352,7 +364,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                                 activityPackage = packageName,
                                 activityClass = activityName,
                                 user = profile,
-                                profileType = "NORMAL",        // or "WORK"/"PRIVATE" if you know, else default
+                                profileType = "NORMAL",
                                 customLabel = alias,
                                 customTag = tag,
                                 category = AppCategory.RECENT,
@@ -363,23 +375,21 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                     }
                 }
 
-                val pm = context.packageManager
-                val intent = Intent(Intent.ACTION_MAIN, null).apply {
-                    addCategory(Intent.CATEGORY_LAUNCHER)
-                }
+                val launcherApps = context.getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps
 
-                val activities = pm.queryIntentActivities(intent, PackageManager.GET_META_DATA)
-                AppLogger.d("AppListDebug", "📦 Found ${activities.size} launcher activities")
+                // ✅ Query apps *for this user profile*
+                val activities = launcherApps.getActivityList(null, profile)
 
-                for (resolveInfo in activities) {
-                    val activityInfo = resolveInfo.activityInfo
-                    val packageName = activityInfo.packageName
-                    val className = activityInfo.name
-                    val label = resolveInfo.loadLabel(pm).toString()
+                AppLogger.d("AppListDebug", "📦 Found ${activities.size} launcher activities for profile: $profile|$profileType")
+
+                for (activityInfo in activities) {
+                    val packageName = activityInfo.applicationInfo.packageName
+                    val className = activityInfo.componentName.className
+                    val label = activityInfo.label.toString()
+
 
                     if (packageName == BuildConfig.APPLICATION_ID) continue
 
-                    // ✅ Deduplicate based on activity, not just package
                     val appKey = "$packageName|$className|${profile.hashCode()}"
                     if (seenAppKeys.contains(appKey)) {
                         AppLogger.d("AppListDebug", "⚠️ Skipping duplicate launcher activity: $appKey")
@@ -400,13 +410,15 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                         else -> AppCategory.REGULAR
                     }
 
+                    AppLogger.d("AppListDebug", "📱 Adding app: $label ($packageName/$className) from profile: $profile|$profileType")
+
                     fullList.add(
                         AppListItem(
                             activityLabel = label,
                             activityPackage = packageName,
                             activityClass = className,
                             user = profile,
-                            profileType = "NORMAL",  // or set dynamically if needed
+                            profileType = "NORMAL", // set dynamically if you can
                             customLabel = alias,
                             customTag = tag,
                             category = category,
@@ -414,31 +426,30 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                         )
                     )
 
-                    AppLogger.d("AppListDebug", "✅ Added app: $label ($packageName/$className) from profile: $profile")
+                    AppLogger.d("AppListDebug", "✅ Added app: $label ($packageName/$className) from profile: $profile|$profileType")
                     seenAppKeys.add(appKey)
                 }
             }
 
-            // Sort the list: Pinned → Regular → Recent; then alphabetical within category
+            // Sort the list
             fullList.sortWith(
                 compareBy<AppListItem> { it.category.ordinal }
                     .thenBy { it.label.lowercase() }
             )
 
-            // Build scroll index (excluding pinned apps)
+            // Build scroll index
             for ((index, item) in fullList.withIndex()) {
                 if (item.category == AppCategory.PINNED) continue
                 val key = item.label.firstOrNull()?.uppercaseChar()?.toString() ?: "#"
                 scrollIndexMap.putIfAbsent(key, index)
             }
 
-            // Include scroll index for pinned apps under '★'
+            // Include pinned under '★'
             fullList.forEachIndexed { index, item ->
                 val key = when (item.category) {
                     AppCategory.PINNED -> "★"
                     else -> item.label.firstOrNull()?.uppercaseChar()?.toString() ?: "#"
                 }
-
                 if (!scrollIndexMap.containsKey(key)) {
                     scrollIndexMap[key] = index
                 }
@@ -453,4 +464,5 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
         fullList
     }
+
 }
