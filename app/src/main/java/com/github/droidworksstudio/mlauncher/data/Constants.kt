@@ -377,7 +377,7 @@ object Constants {
             return when (this) {
                 OpenApp -> getLocalizedString(R.string.open_app)
                 LockScreen -> getLocalizedString(R.string.lock_screen)
-                TogglePrivateSpace -> getLocalizedString(R.string.private_space)
+                TogglePrivateSpace -> getLocalizedString(R.string.private_space, "Toggle")
                 ShowNotification -> getLocalizedString(R.string.show_notifications)
                 ShowAppList -> getLocalizedString(R.string.show_app_list)
                 ShowNotesManager -> getLocalizedString(R.string.show_notes_manager)

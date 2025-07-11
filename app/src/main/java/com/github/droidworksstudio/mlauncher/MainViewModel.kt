@@ -321,7 +321,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             val scrollIndexMap = mutableMapOf<String, Int>()
 
             for (profile in userManager.userProfiles) {
-                AppLogger.d("AppListDebug", "👤 Processing user profile: $profile")
+                AppLogger.d("AppListDebug", "👤 Processing user profile: $profile | ${userManager.userProfiles}")
 
                 val isPrivate = PrivateSpaceManager(context).isPrivateSpaceProfile(profile)
                 if (isPrivate && PrivateSpaceManager(context).isPrivateSpaceLocked()) {
@@ -347,7 +347,17 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                         val tag = prefs.getAppTag(packageName)
 
                         fullList.add(
-                            AppListItem(appName, packageName, activityName, profile, alias, tag, AppCategory.RECENT)
+                            AppListItem(
+                                activityLabel = appName,
+                                activityPackage = packageName,
+                                activityClass = activityName,
+                                user = profile,
+                                profileType = "NORMAL",        // or "WORK"/"PRIVATE" if you know, else default
+                                customLabel = alias,
+                                customTag = tag,
+                                category = AppCategory.RECENT,
+                                isHeader = false
+                            )
                         )
                         seenAppKeys.add(appKey)
                     }
@@ -391,8 +401,19 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                     }
 
                     fullList.add(
-                        AppListItem(label, packageName, className, profile, alias, tag, category)
+                        AppListItem(
+                            activityLabel = label,
+                            activityPackage = packageName,
+                            activityClass = className,
+                            user = profile,
+                            profileType = "NORMAL",  // or set dynamically if needed
+                            customLabel = alias,
+                            customTag = tag,
+                            category = category,
+                            isHeader = false
+                        )
                     )
+
                     AppLogger.d("AppListDebug", "✅ Added app: $label ($packageName/$className) from profile: $profile")
                     seenAppKeys.add(appKey)
                 }

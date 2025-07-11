@@ -7,6 +7,8 @@ package com.github.droidworksstudio.mlauncher.ui
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
+import android.content.pm.LauncherApps
+import android.os.Build
 import android.os.Bundle
 import android.os.UserManager
 import android.text.Spannable
@@ -21,6 +23,7 @@ import android.view.animation.AnimationUtils
 import android.view.inputmethod.InputMethodManager
 import android.widget.RelativeLayout
 import android.widget.TextView
+import androidx.annotation.RequiresApi
 import androidx.appcompat.widget.SearchView
 import androidx.core.net.toUri
 import androidx.core.view.isVisible
@@ -30,6 +33,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.github.droidworksstudio.common.AppLogger
 import com.github.droidworksstudio.common.getLocalizedString
 import com.github.droidworksstudio.common.hasSoftKeyboard
 import com.github.droidworksstudio.common.isSystemApp
@@ -68,6 +72,7 @@ class AppDrawerFragment : Fragment() {
     }
 
 
+    @RequiresApi(Build.VERSION_CODES.VANILLA_ICE_CREAM)
     @SuppressLint("RtlHardcoded")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -133,12 +138,15 @@ class AppDrawerFragment : Fragment() {
                 val userManager = requireContext().getSystemService(Context.USER_SERVICE) as UserManager
 
                 val clearApp = AppListItem(
-                    "Clear",
-                    emptyString(),
-                    emptyString(),
-                    user = userManager.userProfiles[0], // No user associated with the "Clear" option
+                    activityLabel = "Clear",
+                    activityPackage = emptyString(),
+                    activityClass = emptyString(),
+                    user = userManager.userProfiles[0], // or use Process.myUserHandle() if it makes more sense
+                    profileType = "NORMAL",
                     customLabel = "Clear",
-                    emptyString(),
+                    customTag = emptyString(),
+                    category = AppCategory.REGULAR,
+                    isHeader = false // if this is meant to act like a header or special row; else use false
                 )
 
                 binding.drawerButton.setOnClickListener {
@@ -304,7 +312,7 @@ class AppDrawerFragment : Fragment() {
 
         binding.search.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
-                var searchQuery = query
+                val searchQuery = query
 
                 if (!searchQuery.isNullOrEmpty()) {
                     val trimmedQuery = searchQuery.trim()
@@ -409,6 +417,7 @@ class AppDrawerFragment : Fragment() {
         }
     }
 
+    @RequiresApi(Build.VERSION_CODES.VANILLA_ICE_CREAM)
     private fun initViewModel(
         flag: AppDrawerFlag,
         viewModel: MainViewModel,
@@ -422,13 +431,85 @@ class AppDrawerFragment : Fragment() {
             }
         })
 
-        viewModel.appList.observe(viewLifecycleOwner, Observer {
+        viewModel.appList.observe(viewLifecycleOwner, Observer { rawList ->
             if (flag == AppDrawerFlag.HiddenApps) return@Observer
-            if (it == appAdapter.appsList) return@Observer
-            it?.let { appList ->
-                binding.listEmptyHint.isVisible = appList.isEmpty()
+            if (rawList == appAdapter.appsList) return@Observer
+
+            rawList?.let {
+                val userManager = requireContext().getSystemService(Context.USER_SERVICE) as UserManager
+                val launcherApps = requireContext().getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps
+
+                val classifiedList = rawList.map { app ->
+                    val userInfo = launcherApps.getLauncherUserInfo(app.user)
+
+                    val isPrivate = userInfo?.userType == UserManager.USER_TYPE_PROFILE_PRIVATE
+                    val isWork = userManager.isManagedProfile && !isPrivate
+
+                    val profileType = when {
+                        isPrivate -> "PRIVATE"
+                        isWork -> "WORK"
+                        else -> "NORMAL"
+                    }
+                    app.copy(profileType = profileType)
+                }
+
+                AppLogger.d("classifiedList", "Classified app list: $classifiedList")
+
+                val normalApps = classifiedList.filter { it.profileType == "NORMAL" }
+                val workApps = classifiedList.filter { it.profileType == "WORK" }
+                val privateApps = classifiedList.filter { it.profileType == "PRIVATE" }
+
+                val mergedList = mutableListOf<AppListItem>()
+
+                if (normalApps.isNotEmpty()) {
+                    mergedList.add(
+                        AppListItem(
+                            "Personal apps",
+                            "",
+                            "",
+                            normalApps.first().user,
+                            profileType = "HEADER",
+                            customLabel = "",
+                            customTag = "",
+                            isHeader = true
+                        )
+                    )
+                    mergedList.addAll(normalApps)
+                }
+                if (workApps.isNotEmpty()) {
+                    mergedList.add(
+                        AppListItem(
+                            "Work profile",
+                            "",
+                            "",
+                            workApps.first().user,
+                            profileType = "HEADER",
+                            customLabel = "",
+                            customTag = "",
+                            isHeader = true
+                        )
+                    )
+                    mergedList.addAll(workApps)
+                }
+                if (privateApps.isNotEmpty()) {
+                    mergedList.add(
+                        AppListItem(
+                            "Private space",
+                            "",
+                            "",
+                            privateApps.first().user,
+                            profileType = "HEADER",
+                            customLabel = "",
+                            customTag = "",
+                            isHeader = true
+                        )
+                    )
+                    mergedList.addAll(privateApps)
+                }
+
+                binding.listEmptyHint.isVisible = mergedList.isEmpty()
                 binding.sidebarContainer.isVisible = prefs.showAZSidebar
-                populateAppList(appList, appAdapter)
+                populateAppList(mergedList, appAdapter)
             }
         })
 

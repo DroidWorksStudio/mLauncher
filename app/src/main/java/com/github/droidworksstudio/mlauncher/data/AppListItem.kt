@@ -37,9 +37,11 @@ data class AppListItem(
     val activityPackage: String,
     val activityClass: String,
     val user: UserHandle,
+    val profileType: String = "NORMAL",
     var customLabel: String,
     var customTag: String,
-    var category: AppCategory = AppCategory.REGULAR
+    var category: AppCategory = AppCategory.REGULAR,
+    val isHeader: Boolean = false
 ) : Comparable<AppListItem> {
 
     val label = customLabel.ifEmpty { activityLabel }

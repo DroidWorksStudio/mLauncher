@@ -403,7 +403,6 @@ fun Context.requestLocationPermission(requestCode: Int) {
     }
 }
 
-
 fun Context.getCurrentTimestamp(prefs: Prefs): String {
     val timezone = prefs.appLanguage.timezone()
     val is24HourFormat = DateFormat.is24HourFormat(this)
@@ -462,7 +461,7 @@ fun Context.getCpuBatteryInfo(): String {
     """.trimIndent()
 }
 
-fun Context.getStorageInfo(): String {
+fun getStorageInfo(): String {
     val stat = StatFs(Environment.getDataDirectory().path)
     val total = stat.blockCountLong * stat.blockSizeLong
     val avail = stat.availableBlocksLong * stat.blockSizeLong

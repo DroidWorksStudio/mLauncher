@@ -59,6 +59,7 @@ import com.github.droidworksstudio.mlauncher.BuildConfig
 import com.github.droidworksstudio.mlauncher.MainActivity
 import com.github.droidworksstudio.mlauncher.MainViewModel
 import com.github.droidworksstudio.mlauncher.R
+import com.github.droidworksstudio.mlauncher.data.AppCategory
 import com.github.droidworksstudio.mlauncher.data.AppListItem
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Constants.Action
@@ -772,12 +773,15 @@ class SettingsFragment : Fragment() {
                                     val userManager = requireContext().getSystemService(Context.USER_SERVICE) as UserManager
 
                                     val clearApp = AppListItem(
-                                        "Clear",
-                                        emptyString(),
-                                        emptyString(),
-                                        user = userManager.userProfiles[0], // No user associated with the "Clear" option
+                                        activityLabel = "Clear",
+                                        activityPackage = emptyString(),
+                                        activityClass = emptyString(),
+                                        user = userManager.userProfiles[0], // or use Process.myUserHandle() if it makes more sense
+                                        profileType = "NORMAL",
                                         customLabel = "Clear",
-                                        emptyString(),
+                                        customTag = emptyString(),
+                                        category = AppCategory.REGULAR,
+                                        isHeader = false // if this is meant to act like a header or special row; else use false
                                     )
 
                                     for (n in newHomeAppsNum.toInt()..oldHomeAppsNum) {
@@ -2612,11 +2616,11 @@ class SettingsFragment : Fragment() {
             AppDrawerFlag.SetLongSwipeDown -> prefs.longSwipeDownAction = action
             AppDrawerFlag.SetLongSwipeLeft -> prefs.longSwipeLeftAction = action
             AppDrawerFlag.SetLongSwipeRight -> prefs.longSwipeRightAction = action
+            AppDrawerFlag.SetFloating -> prefs.clickFloatingAction = action
             AppDrawerFlag.None,
             AppDrawerFlag.SetHomeApp,
             AppDrawerFlag.HiddenApps,
             AppDrawerFlag.PrivateApps,
-            AppDrawerFlag.SetFloating,
             AppDrawerFlag.LaunchApp -> {
             }
 

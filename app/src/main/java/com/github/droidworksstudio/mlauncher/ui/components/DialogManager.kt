@@ -709,7 +709,7 @@ class DialogManager(val context: Context, val activity: Activity) {
 
         val infoCards = listOf(
             "Device Info" to getDeviceInfo(context),
-            "Storage" to context.getStorageInfo(),
+            "Storage" to getStorageInfo(),
             "RAM" to context.getRamInfo(),
             "CPU & Battery" to context.getCpuBatteryInfo(),
             "SD Card" to context.getSdCardInfo()
