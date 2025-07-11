@@ -8,6 +8,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - *(app_drawer)* Implement Profile-Based App Separation - ([25d21b7](https://github.com/DroidWorksStudio/mLauncher/commit/25d21b737d8456b831af7817a8dc97402c18961b))
 
+### Versioning:
+
+- Increment build number to 1 - ([4950355](https://github.com/DroidWorksStudio/mLauncher/commit/4950355d03673b33d14855e105d6832a516ce605))
+
 ## [1.10.8.0](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.8.0) - (11, July 2025)
 
 ### Versioning:
