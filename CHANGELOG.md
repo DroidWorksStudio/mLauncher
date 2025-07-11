@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
+## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
+
+### Implemented Enhancements:
+
+- *(app_drawer)* Implement Profile-Based App Separation - ([25d21b7](https://github.com/DroidWorksStudio/mLauncher/commit/25d21b737d8456b831af7817a8dc97402c18961b))
+
 ## [1.10.8.0](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.8.0) - (11, July 2025)
 
 ### Versioning:
