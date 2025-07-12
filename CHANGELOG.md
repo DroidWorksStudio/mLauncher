@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Bug Fixes:
+
+- *(AppDrawer)* Prevent header items from attempting to load icons - ([9f1976d](https://github.com/DroidWorksStudio/mLauncher/commit/9f1976d5245fd807d408967b872e18752f5a6622))
+
 ### Refactoring:
 
 - Rename "NORMAL" profile type to "SYSTEM" - ([9cdb00c](https://github.com/DroidWorksStudio/mLauncher/commit/9cdb00c3624e56efcca38549d77e296bfd6118ad))
