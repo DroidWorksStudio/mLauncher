@@ -11,6 +11,7 @@ All notable changes to this project will be documented in this file. See [conven
 ### Bug Fixes:
 
 - *(AppDrawer)* Prevent header items from attempting to load icons - ([9f1976d](https://github.com/DroidWorksStudio/mLauncher/commit/9f1976d5245fd807d408967b872e18752f5a6622))
+- *(WeatherReceiver)* Annotate fields instead of properties in weather data classes - ([ae9bd8f](https://github.com/DroidWorksStudio/mLauncher/commit/ae9bd8f6623a093981c23a8fb4af2b1b9e7b80ec))
 
 ### Chore:
 
