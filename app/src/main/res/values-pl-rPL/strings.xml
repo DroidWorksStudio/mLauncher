@@ -224,6 +224,7 @@
     <string name="drawer_list_empty_hint">Nie znaleziono aplikacji</string>
     <string name="long_press_for_settings">Długie naciśnięcie gdziekolwiek dla ustawień</string>
     <string name="long_press_to_select_app">Naciśnij i przytrzymaj, aby wybrać aplikację</string>
+    <string name="long_press_to_select_app_locked">Unlock home apps to select app</string>
     <string name="tap_button_for_notes">Kliknij logo programu uruchamiającego notatki</string>
     <string name="swipe_up_for_apps">Przesuń palcem w górę dla wszystkich aplikacji</string>
     <string name="app_drawer_tips">Wskazówka: Przesuń palcem w dół, aby odrzucić. Przewiń, aby ukryć klawiaturę.</string>
