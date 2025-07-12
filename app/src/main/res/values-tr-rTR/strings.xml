@@ -224,6 +224,7 @@
     <string name="drawer_list_empty_hint">Herhangi bir uygulama bulunamadı</string>
     <string name="long_press_for_settings">Ayarlar için herhangi bir yere uzun bas</string>
     <string name="long_press_to_select_app">Uygulamayı seçmek için uzun basın</string>
+    <string name="long_press_to_select_app_locked">Unlock home apps to select app</string>
     <string name="tap_button_for_notes">Notlar için başlatıcı logosuna dokunun</string>
     <string name="swipe_up_for_apps">Tüm uygulamalar için yukarı kaydırın</string>
     <string name="app_drawer_tips">İpucu: Kapatmak için aşağı kaydırın. Klavyeyi gizlemek için kaydırın.</string>
