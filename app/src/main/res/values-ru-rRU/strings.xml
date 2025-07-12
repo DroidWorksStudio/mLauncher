@@ -224,6 +224,7 @@
     <string name="drawer_list_empty_hint">Не найдено приложений</string>
     <string name="long_press_for_settings">Долгое нажатие в любом месте для настроек</string>
     <string name="long_press_to_select_app">Длительное нажатие для выбора приложения</string>
+    <string name="long_press_to_select_app_locked">Unlock home apps to select app</string>
     <string name="tap_button_for_notes">Нажмите на логотип лаунчера, чтобы увидеть заметки</string>
     <string name="swipe_up_for_apps">Свайп вверх для всех приложений</string>
     <string name="app_drawer_tips">Совет: проведите пальцем вниз, чтобы уволить. Прокрутите для скрытия клавиатуры.</string>
