@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Implemented Enhancements:
+
+- Show different toast when home apps locked. - ([a25bad1](https://github.com/DroidWorksStudio/mLauncher/commit/a25bad16a9db2c05bc6d22be857d0a249a940e98))
+
 ### Bug Fixes:
 
 - *(AppDrawer)* Prevent header items from attempting to load icons - ([9f1976d](https://github.com/DroidWorksStudio/mLauncher/commit/9f1976d5245fd807d408967b872e18752f5a6622))
