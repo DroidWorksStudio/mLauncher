@@ -12,6 +12,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - *(AppDrawer)* Prevent header items from attempting to load icons - ([9f1976d](https://github.com/DroidWorksStudio/mLauncher/commit/9f1976d5245fd807d408967b872e18752f5a6622))
 
+### Chore:
+
+- *(Build)* Update Kotlin toolchain and increment build number - ([5b0ad0e](https://github.com/DroidWorksStudio/mLauncher/commit/5b0ad0e4830dd2438fcd1cb2dbfe20307f92104e))
+
 ### Language Support:
 
 - Updated Language Files. ([#837](https://github.com/DroidWorksStudio/mLauncher/issues/837)) - ([1a48786](https://github.com/DroidWorksStudio/mLauncher/commit/1a48786cc8a17008d471a61868b0a148963aa8ab))
