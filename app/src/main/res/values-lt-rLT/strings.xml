@@ -226,6 +226,7 @@ Jūs bet kada galite išjungti šią prieigą savo įrenginio nustatymuose.</str
     <string name="drawer_list_empty_hint">Nerasta jokių programėlių</string>
     <string name="long_press_for_settings">Ilgai paspauskite bet kur, kad pamatytumėte nustatymus</string>
     <string name="long_press_to_select_app">Ilgai paspauskite, kad pasirinktumėte programą</string>
+    <string name="long_press_to_select_app_locked">Atrakinkite namų programas, kad galėtumėte pasirinkti programą</string>
     <string name="tap_button_for_notes">Norėdami gauti pastabų, bakstelėkite paleidimo priemonės logotipą</string>
     <string name="swipe_up_for_apps">Braukite aukštyn, kad pamatytumėte visas programėlės</string>
     <string name="app_drawer_tips">Patarimas: perbraukite žemyn, kad atsisakytumėte. Slinkite, kad paslėptumėte klaviatūrą.</string>

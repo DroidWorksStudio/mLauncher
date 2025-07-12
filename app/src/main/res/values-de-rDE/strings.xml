@@ -224,6 +224,7 @@
     <string name="drawer_list_empty_hint">Keine Apps gefunden</string>
     <string name="long_press_for_settings">Lange drücken für Einstellungen</string>
     <string name="long_press_to_select_app">Lange drücken, um eine App auszuwählen</string>
+    <string name="long_press_to_select_app_locked">Entsperren Sie Home-Apps, um eine App auszuwählen</string>
     <string name="tap_button_for_notes">Tippen Sie auf das Launcher-Logo, um Notizen anzuzeigen</string>
     <string name="swipe_up_for_apps">Für alle Apps nach oben wischen</string>
     <string name="app_drawer_tips">Tipp: Nach unten wischen, um zu beenden. Scrollen, um die Tastatur auszublenden.</string>

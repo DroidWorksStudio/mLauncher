@@ -226,6 +226,7 @@ Tento prístup môžete kedykoľvek vypnúť v nastaveniach zariadenia.</string>
     <string name="drawer_list_empty_hint">Nenašli sa žiadne aplikácie</string>
     <string name="long_press_for_settings">Dlho podržte pre nastavenia</string>
     <string name="long_press_to_select_app">Dlhým stlačením vyberte aplikáciu</string>
+    <string name="long_press_to_select_app_locked">Odomknite aplikácie na domovskej stránke a vyberte ich</string>
     <string name="tap_button_for_notes">Klepnutím na logo spúšťača zobrazíte poznámky</string>
     <string name="swipe_up_for_apps">Potiahnutím nahor zobrazíte všetky aplikácie</string>
     <string name="app_drawer_tips">Tip: Potiahnutím nadol zatvoríte. Posunutím skryjete klávesnicu.</string>

@@ -226,6 +226,7 @@
     <string name="drawer_list_empty_hint">לא נמצאו יישומים</string>
     <string name="long_press_for_settings">לחץ לחיצה ארוכה בכל מקום להגדרות</string>
     <string name="long_press_to_select_app">לחץ לחיצה ארוכה כדי לבחור יישום</string>
+    <string name="long_press_to_select_app_locked">בטל את נעילת אפליקציות הבית כדי לבחור אפליקציה</string>
     <string name="tap_button_for_notes">הקש על לוגו המשגר להערות</string>
     <string name="swipe_up_for_apps">החלק למעלה לכל היישומים</string>
     <string name="app_drawer_tips">טיפ: החלק למטה בכדי לבטל. החלק להסתרת המקלדת.</string>
