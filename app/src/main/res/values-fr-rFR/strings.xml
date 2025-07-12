@@ -224,7 +224,7 @@
     <string name="drawer_list_empty_hint">Aucune application trouvée</string>
     <string name="long_press_for_settings">Appui long n\'importe où pour les paramètres</string>
     <string name="long_press_to_select_app">Appuyez longuement pour sélectionner l\'application</string>
-    <string name="long_press_to_select_app_locked">Unlock home apps to select app</string>
+    <string name="long_press_to_select_app_locked">Déverrouillez les applications d\'accueil pour sélectionner l\'application</string>
     <string name="tap_button_for_notes">Appuyez sur le logo du lanceur pour les notes</string>
     <string name="swipe_up_for_apps">Glisser vers le haut pour toutes les applications</string>
     <string name="app_drawer_tips">Astuce : Glissez vers le bas pour ignorer. Faites défiler pour masquer le clavier.</string>
