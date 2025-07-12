@@ -224,6 +224,7 @@
     <string name="drawer_list_empty_hint">لم يتم العثور على تطبيقات</string>
     <string name="long_press_for_settings">اضغط مطولاً في أي مكان للإعدادات</string>
     <string name="long_press_to_select_app">اضغط لفترة طويلة لتحديد التطبيق</string>
+    <string name="long_press_to_select_app_locked">Unlock home apps to select app</string>
     <string name="tap_button_for_notes">اضغط على شعار المشغل للملاحظات</string>
     <string name="swipe_up_for_apps">مرر لأعلى لجميع التطبيقات</string>
     <string name="app_drawer_tips">نصيحة: مرر لأسفل للإغلاق. مرر لإخفاء لوحة المفاتيح.</string>
