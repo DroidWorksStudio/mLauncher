@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Bug Fixes:
+
+- *(AppDrawer)* Only show "Personal apps" header if other profiles exist - ([46ddee8](https://github.com/DroidWorksStudio/mLauncher/commit/46ddee8bf4c36b01f8d5a7c584ef95993b2ac261))
+
+## [1.10.8.2](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.8.2) - (12, July 2025)
+
 ### Implemented Enhancements:
 
 - Show different toast when home apps locked. - ([a25bad1](https://github.com/DroidWorksStudio/mLauncher/commit/a25bad16a9db2c05bc6d22be857d0a249a940e98))
