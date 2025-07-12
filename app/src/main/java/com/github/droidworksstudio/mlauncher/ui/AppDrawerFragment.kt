@@ -457,10 +457,10 @@ class AppDrawerFragment : Fragment() {
                     val isSystemUser = userManager.isSystemUser
 
                     val profileType = when {
-                        isSystemUser -> "SYSTEM"
                         isPrivate -> "PRIVATE"
                         isWork -> "WORK"
-                        else -> "SYSTEM"
+                        isSystemUser -> "SYSTEM"
+                        else -> "NULL"
                     }
 
                     app.copy(profileType = profileType)
@@ -478,12 +478,13 @@ class AppDrawerFragment : Fragment() {
                     mergedList.add(
                         AppListItem(
                             "Personal apps",
-                            "",
-                            "",
+                            "app.mlauncher.system",
+                            "app.mlauncher.system",
                             systemApps.first().user,
                             profileType = "HEADER",
-                            customLabel = "",
-                            customTag = "",
+                            customLabel = emptyString(),
+                            customTag = emptyString(),
+                            category = AppCategory.REGULAR,
                             isHeader = true
                         )
                     )
@@ -493,12 +494,13 @@ class AppDrawerFragment : Fragment() {
                     mergedList.add(
                         AppListItem(
                             "Private space",
-                            "",
-                            "",
+                            "app.mlauncher.private",
+                            "app.mlauncher.private",
                             privateApps.first().user,
                             profileType = "HEADER",
-                            customLabel = "",
-                            customTag = "",
+                            customLabel = emptyString(),
+                            customTag = emptyString(),
+                            category = AppCategory.REGULAR,
                             isHeader = true
                         )
                     )
@@ -508,12 +510,13 @@ class AppDrawerFragment : Fragment() {
                     mergedList.add(
                         AppListItem(
                             "Work profile",
-                            "",
-                            "",
+                            "app.mlauncher.work",
+                            "app.mlauncher.work",
                             workApps.first().user,
                             profileType = "HEADER",
-                            customLabel = "",
-                            customTag = "",
+                            customLabel = emptyString(),
+                            customTag = emptyString(),
+                            category = AppCategory.REGULAR,
                             isHeader = true
                         )
                     )

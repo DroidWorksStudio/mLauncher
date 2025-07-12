@@ -513,7 +513,7 @@ class AppDrawerAdapter(
                 var hasIconEnabled = false
                 var myIcon: Drawable? = null
 
-                if (packageName.isNotBlank() && prefs.iconPackAppList != Constants.IconPacks.Disabled) {
+                if (packageName.isNotBlank() && prefs.iconPackAppList != Constants.IconPacks.Disabled && !appListItem.isHeader) {
                     val iconPackPackage = prefs.customIconPackAppList
                     // Get app icon or fallback drawable
                     val icon: Drawable? = try {

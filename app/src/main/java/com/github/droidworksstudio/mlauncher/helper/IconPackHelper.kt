@@ -113,7 +113,7 @@ object IconPackHelper {
             inputStream.close()
             isInitialized = true
 
-//            AppLogger.d("IconPackLoader", "Preload finished. Loaded: $loadedCount, Skipped: $skippedCount")
+            AppLogger.d("IconPackLoader", "Preload finished. Loaded: $loadedCount, Skipped: $skippedCount")
 
         } catch (e: Exception) {
             AppLogger.e("IconPackLoader", "Error while preloading icon pack: ${e.message}", e)
