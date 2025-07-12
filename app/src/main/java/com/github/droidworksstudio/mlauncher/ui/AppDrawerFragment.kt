@@ -475,19 +475,21 @@ class AppDrawerFragment : Fragment() {
                 val mergedList = mutableListOf<AppListItem>()
 
                 if (systemApps.isNotEmpty()) {
-                    mergedList.add(
-                        AppListItem(
-                            "Personal apps",
-                            "app.mlauncher.system",
-                            "app.mlauncher.system",
-                            systemApps.first().user,
-                            profileType = "HEADER",
-                            customLabel = emptyString(),
-                            customTag = emptyString(),
-                            category = AppCategory.REGULAR,
-                            isHeader = true
+                    if (workApps.isNotEmpty() || privateApps.isNotEmpty()) {
+                        mergedList.add(
+                            AppListItem(
+                                "Personal apps",
+                                "app.mlauncher.system",
+                                "app.mlauncher.system",
+                                systemApps.first().user,
+                                profileType = "HEADER",
+                                customLabel = emptyString(),
+                                customTag = emptyString(),
+                                category = AppCategory.REGULAR,
+                                isHeader = true
+                            )
                         )
-                    )
+                    }
                     mergedList.addAll(systemApps)
                 }
                 if (privateApps.isNotEmpty()) {
