@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Refactoring:
+
+- Rename "NORMAL" profile type to "SYSTEM" - ([9cdb00c](https://github.com/DroidWorksStudio/mLauncher/commit/9cdb00c3624e56efcca38549d77e296bfd6118ad))
+
+## [1.10.8.1](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.8.1) - (11, July 2025)
+
 ### Implemented Enhancements:
 
 - *(app_drawer)* Implement Profile-Based App Separation - ([25d21b7](https://github.com/DroidWorksStudio/mLauncher/commit/25d21b737d8456b831af7817a8dc97402c18961b))
