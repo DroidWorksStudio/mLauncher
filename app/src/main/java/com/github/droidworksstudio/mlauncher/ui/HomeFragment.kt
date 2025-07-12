@@ -105,7 +105,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     private lateinit var biometricHelper: BiometricHelper
     private lateinit var privateSpaceReceiver: PrivateSpaceReceiver
     private lateinit var vibrator: Vibrator
-
+    
+    private var longPressToSelectApp: Int = 0
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
@@ -122,6 +123,12 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         dialogBuilder = DialogManager(requireContext(), requireActivity())
         if (PrivateSpaceManager(requireContext()).isPrivateSpaceSupported()) {
             privateSpaceReceiver = PrivateSpaceReceiver()
+        }
+
+        longPressToSelectApp = if (prefs.homeLocked) {
+            R.string.long_press_to_select_app_locked
+        } else {
+            R.string.long_press_to_select_app
         }
 
         return view
@@ -777,7 +784,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         }
     }
 
-    private fun showLongPressToast() = showShortToast(getLocalizedString(R.string.long_press_to_select_app))
+    private fun showLongPressToast() = showShortToast(getLocalizedString(longPressToSelectApp))
 
     private fun textOnClick(view: View) = onClick(view)
 
