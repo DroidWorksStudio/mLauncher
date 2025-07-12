@@ -56,27 +56,27 @@ class WeatherReceiver {
 // 🔧 Full response wrapper
 @JsonClass(generateAdapter = true)
 data class WeatherResponse(
-    @Json(name = "current")
+    @field:Json(name = "current")
     val currentWeather: CurrentWeather,
 
-    @Json(name = "current_units")
+    @field:Json(name = "current_units")
     val currentUnits: CurrentUnits
 )
 
 @JsonClass(generateAdapter = true)
 data class CurrentWeather(
-    @Json(name = "temperature_2m")
+    @field:Json(name = "temperature_2m")
     val temperature: Double,
 
-    @Json(name = "weather_code")
+    @field:Json(name = "weather_code")
     val weatherCode: Int,
 )
 
 @JsonClass(generateAdapter = true)
 data class CurrentUnits(
-    @Json(name = "temperature_2m")
+    @field:Json(name = "temperature_2m")
     val temperatureUnit: String,
 
-    @Json(name = "weather_code")
+    @field:Json(name = "weather_code")
     val weatherCodeUnit: String,
 )
