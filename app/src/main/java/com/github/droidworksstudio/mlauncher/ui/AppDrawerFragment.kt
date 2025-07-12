@@ -142,7 +142,7 @@ class AppDrawerFragment : Fragment() {
                     activityPackage = emptyString(),
                     activityClass = emptyString(),
                     user = userManager.userProfiles[0], // or use Process.myUserHandle() if it makes more sense
-                    profileType = "NORMAL",
+                    profileType = "SYSTEM",
                     customLabel = "Clear",
                     customTag = emptyString(),
                     category = AppCategory.REGULAR,
@@ -417,7 +417,6 @@ class AppDrawerFragment : Fragment() {
         }
     }
 
-    @RequiresApi(Build.VERSION_CODES.VANILLA_ICE_CREAM)
     private fun initViewModel(
         flag: AppDrawerFlag,
         viewModel: MainViewModel,
@@ -440,56 +439,55 @@ class AppDrawerFragment : Fragment() {
                 val launcherApps = requireContext().getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps
 
                 val classifiedList = rawList.map { app ->
-                    val userInfo = launcherApps.getLauncherUserInfo(app.user)
+                    val isPrivate = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.VANILLA_ICE_CREAM) {
+                        // Only call getLauncherUserInfo if API supports it
+                        val userInfo = launcherApps.getLauncherUserInfo(app.user)
+                        userInfo?.userType == UserManager.USER_TYPE_PROFILE_PRIVATE
+                    } else {
+                        false
+                    }
 
-                    val isPrivate = userInfo?.userType == UserManager.USER_TYPE_PROFILE_PRIVATE
-                    val isWork = userManager.isManagedProfile && !isPrivate
+                    val isWork = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                        // Use isManagedProfile only if the API supports it
+                        userManager.isManagedProfile && !isPrivate
+                    } else {
+                        false
+                    }
+
+                    val isSystemUser = userManager.isSystemUser
 
                     val profileType = when {
+                        isSystemUser -> "SYSTEM"
                         isPrivate -> "PRIVATE"
                         isWork -> "WORK"
-                        else -> "NORMAL"
+                        else -> "SYSTEM"
                     }
+
                     app.copy(profileType = profileType)
                 }
 
                 AppLogger.d("classifiedList", "Classified app list: $classifiedList")
 
-                val normalApps = classifiedList.filter { it.profileType == "NORMAL" }
+                val systemApps = classifiedList.filter { it.profileType == "SYSTEM" }
                 val workApps = classifiedList.filter { it.profileType == "WORK" }
                 val privateApps = classifiedList.filter { it.profileType == "PRIVATE" }
 
                 val mergedList = mutableListOf<AppListItem>()
 
-                if (normalApps.isNotEmpty()) {
+                if (systemApps.isNotEmpty()) {
                     mergedList.add(
                         AppListItem(
                             "Personal apps",
                             "",
                             "",
-                            normalApps.first().user,
+                            systemApps.first().user,
                             profileType = "HEADER",
                             customLabel = "",
                             customTag = "",
                             isHeader = true
                         )
                     )
-                    mergedList.addAll(normalApps)
-                }
-                if (workApps.isNotEmpty()) {
-                    mergedList.add(
-                        AppListItem(
-                            "Work profile",
-                            "",
-                            "",
-                            workApps.first().user,
-                            profileType = "HEADER",
-                            customLabel = "",
-                            customTag = "",
-                            isHeader = true
-                        )
-                    )
-                    mergedList.addAll(workApps)
+                    mergedList.addAll(systemApps)
                 }
                 if (privateApps.isNotEmpty()) {
                     mergedList.add(
@@ -505,6 +503,21 @@ class AppDrawerFragment : Fragment() {
                         )
                     )
                     mergedList.addAll(privateApps)
+                }
+                if (workApps.isNotEmpty()) {
+                    mergedList.add(
+                        AppListItem(
+                            "Work profile",
+                            "",
+                            "",
+                            workApps.first().user,
+                            profileType = "HEADER",
+                            customLabel = "",
+                            customTag = "",
+                            isHeader = true
+                        )
+                    )
+                    mergedList.addAll(workApps)
                 }
 
                 binding.listEmptyHint.isVisible = mergedList.isEmpty()

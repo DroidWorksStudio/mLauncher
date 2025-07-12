@@ -336,7 +336,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 val profileType = when {
                     isPrivate -> "PRIVATE"
                     isWork -> "WORK"
-                    else -> "NORMAL"
+                    else -> "SYSTEM"
                 }
 
                 AppLogger.d("AppListDebug", "👤 Processing user profile: $profile|$profileType")
@@ -364,7 +364,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                                 activityPackage = packageName,
                                 activityClass = activityName,
                                 user = profile,
-                                profileType = "NORMAL",
+                                profileType = "SYSTEM",
                                 customLabel = alias,
                                 customTag = tag,
                                 category = AppCategory.RECENT,
@@ -418,7 +418,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                             activityPackage = packageName,
                             activityClass = className,
                             user = profile,
-                            profileType = "NORMAL", // set dynamically if you can
+                            profileType = "SYSTEM", // set dynamically if you can
                             customLabel = alias,
                             customTag = tag,
                             category = category,
