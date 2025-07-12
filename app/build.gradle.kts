@@ -10,7 +10,7 @@ plugins {
 val major = 1
 val minor = 10
 val patch = 8
-val build = 1
+val build = 2
 
 val type = 0 // 1=beta, 2=alpha else=production
 
@@ -101,10 +101,6 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
 
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_17.toString()
-    }
-
     lint {
         abortOnError = false
     }
@@ -117,6 +113,15 @@ android {
         }
     }
 }
+
+kotlin {
+    jvmToolchain(17)
+
+    compilerOptions {
+        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
+    }
+}
+
 
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
