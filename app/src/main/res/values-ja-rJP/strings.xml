@@ -224,6 +224,7 @@
     <string name="drawer_list_empty_hint">アプリが見つかりません</string>
     <string name="long_press_for_settings">設定用に長押ししてください</string>
     <string name="long_press_to_select_app">長押ししてアプリを選択</string>
+    <string name="long_press_to_select_app_locked">Unlock home apps to select app</string>
     <string name="tap_button_for_notes">メモを表示するにはランチャーロゴをタップしてください</string>
     <string name="swipe_up_for_apps">すべてのアプリで上にスワイプ</string>
     <string name="app_drawer_tips">ヒント: 下にスワイプして解除します。スクロールしてキーボードを非表示にします。</string>
