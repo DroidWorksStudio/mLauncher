@@ -133,10 +133,10 @@
     <string name="short_swipe_down_app">Omlaag vegen</string>
     <string name="short_swipe_left_app">Naar links vegen</string>
     <string name="short_swipe_right_app">Naar rechts vegen</string>
-    <string name="long_swipe_up_app">Lang indrukken omhoog vegen</string>
-    <string name="long_swipe_down_app">Lang indrukken omlaag vegen</string>
-    <string name="long_swipe_left_app">Lang indrukken naar links vegen</string>
-    <string name="long_swipe_right_app">Lang indrukken naar rechts vegen</string>
+    <string name="long_swipe_up_app">lange veegbeweging naar omhoog</string>
+    <string name="long_swipe_down_app">lange veegbeweging naar omlaag</string>
+    <string name="long_swipe_left_app">lange veegbeweging naar links</string>
+    <string name="long_swipe_right_app">lange veegbeweging naar rechts</string>
     <string name="open_app">App openen</string>
     <string name="lock_screen">Vergrendel scherm</string>
     <string name="private_space">Privéruimtes (%1$s)</string>
