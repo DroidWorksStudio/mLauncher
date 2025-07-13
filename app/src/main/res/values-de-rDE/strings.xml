@@ -61,6 +61,7 @@
     <string name="search_from_start">App-Suche von Anfang an.</string>
     <string name="home_management">Home &amp; App-Verwaltung</string>
     <string name="auto_open_apps">Apps automatisch öffnen</string>
+    <string name="open_apps_on_enter">Open App on Enter</string>
     <string name="lock_home_apps">Apps sperren</string>
     <string name="lock_settings">Sperreinstellungen</string>
     <string name="apps_on_home_screen">Anzahl der Home-Apps</string>
