@@ -61,6 +61,7 @@
     <string name="search_from_start">חיפוש אפליקציה מההתחלה</string>
     <string name="home_management">דף הבית &amp; ניהול יישומים</string>
     <string name="auto_open_apps">פתיחה אוטומטית של יישומים</string>
+    <string name="open_apps_on_enter">Open App on Enter</string>
     <string name="lock_home_apps">נעילת יישומי דף הבית</string>
     <string name="lock_settings">הגדרות נעילה</string>
     <string name="apps_on_home_screen">מספר יישומים בדף הבית</string>
