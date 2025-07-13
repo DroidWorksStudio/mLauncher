@@ -61,6 +61,7 @@
     <string name="search_from_start">App zoeken vanaf het begin</string>
     <string name="home_management">Home &amp; App-beheer</string>
     <string name="auto_open_apps">Apps automatisch openen</string>
+    <string name="open_apps_on_enter">Open App on Enter</string>
     <string name="lock_home_apps">Vergrendel Home-apps</string>
     <string name="lock_settings">Instellingen vergrendelen</string>
     <string name="apps_on_home_screen">Aantal Home-apps</string>
