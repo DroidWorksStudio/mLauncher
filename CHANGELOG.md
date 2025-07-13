@@ -14,6 +14,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Increment build number to 3 - ([a9d167d](https://github.com/DroidWorksStudio/mLauncher/commit/a9d167d391db87a3ae2066b07790f7ac535b1321))
 
+### Feature Removal:
+
+- Remove deprecated workflow - ([4ffadaf](https://github.com/DroidWorksStudio/mLauncher/commit/4ffadaf53a91acddf9411e03e2e5fe61e2fe8e1e))
+
 ### Refactoring:
 
 - *(Onboarding)* Implement ViewBinding in OnboardingPageFragment - ([55b5d68](https://github.com/DroidWorksStudio/mLauncher/commit/55b5d689b20a615d17253ed7f409d99510f3107b))
