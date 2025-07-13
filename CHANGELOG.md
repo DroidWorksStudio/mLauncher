@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- *(Onboarding)* Implement ViewBinding in OnboardingPageFragment - ([55b5d68](https://github.com/DroidWorksStudio/mLauncher/commit/55b5d689b20a615d17253ed7f409d99510f3107b))
 - Nullify views in OnboardingPageFragment - ([2c5710c](https://github.com/DroidWorksStudio/mLauncher/commit/2c5710cccc86c7eaab7ebbb148b79e3a842d4fd8))
 
 ## [1.10.8.2](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.8.2) - (12, July 2025)
