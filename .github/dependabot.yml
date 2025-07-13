@@ -10,11 +10,17 @@ updates:
     schedule:
       interval: "weekly"
     groups:
-      gradle-dependencies:
+      all-gradle:
         patterns:
           - "*"
+        group-name: "All Gradle dependencies"
 
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "weekly"
+    groups:
+      all-actions:
+        patterns:
+          - "*"
+        group-name: "All GitHub Actions"
