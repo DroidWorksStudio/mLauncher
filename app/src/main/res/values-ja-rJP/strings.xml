@@ -61,6 +61,7 @@
     <string name="search_from_start">最初からアプリ検索。</string>
     <string name="home_management">ホーム &amp; アプリ管理</string>
     <string name="auto_open_apps">アプリを自動的に開く</string>
+    <string name="open_apps_on_enter">Open App on Enter</string>
     <string name="lock_home_apps">アプリをロック</string>
     <string name="lock_settings">ロック設定</string>
     <string name="apps_on_home_screen">ホームアプリの数</string>
