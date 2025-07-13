@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Implemented Enhancements:
+
+- *(app-drawer)* Add option to open app on Enter key press - ([e3ee7e9](https://github.com/DroidWorksStudio/mLauncher/commit/e3ee7e94487bc310897e6af6b3e0e5f43071c54f))
+
 ### Versioning:
 
 - Increment build number to 4 - ([3267c57](https://github.com/DroidWorksStudio/mLauncher/commit/3267c572d8ef06d6cc3056ed3a27d1c151ab0eec))
