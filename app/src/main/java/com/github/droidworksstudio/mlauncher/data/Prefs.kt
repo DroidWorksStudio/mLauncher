@@ -30,6 +30,7 @@ private const val HOME_PAGES_NUM = "HOME_PAGES_NUM"
 private const val HOME_PAGES_PAGER = "HOME_PAGES_PAGER"
 private const val AUTO_SHOW_KEYBOARD = "AUTO_SHOW_KEYBOARD"
 private const val AUTO_OPEN_APP = "AUTO_OPEN_APP"
+private const val OPEN_APP_ON_ENTER = "OPEN_APP_ON_ENTER"
 private const val RECENT_APPS_DISPLAYED = "RECENT_APPS_DISPLAYED"
 private const val ICON_RAINBOW_COLORS = "ICON_RAINBOW_COLORS"
 private const val RECENT_COUNTER = "RECENT_COUNTER"
@@ -313,6 +314,10 @@ class Prefs(val context: Context) {
     var autoOpenApp: Boolean
         get() = getSetting(AUTO_OPEN_APP, false)
         set(value) = prefsNormal.edit { putBoolean(AUTO_OPEN_APP, value) }
+
+    var openAppOnEnter: Boolean
+        get() = getSetting(OPEN_APP_ON_ENTER, false)
+        set(value) = prefsNormal.edit { putBoolean(OPEN_APP_ON_ENTER, value) }
 
     var homePager: Boolean
         get() = getSetting(HOME_PAGES_PAGER, false)
