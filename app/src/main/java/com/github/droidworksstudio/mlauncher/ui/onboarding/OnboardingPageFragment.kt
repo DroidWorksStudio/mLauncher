@@ -59,14 +59,14 @@ class OnboardingPageFragment : Fragment() {
 
     private var layoutResId: Int = 0
 
-    private lateinit var title: TextView
-    private lateinit var description: TextView
-    private lateinit var permissionText: TextView
-    private lateinit var permissionReviewText: TextView
-    private lateinit var permissionRemovedText: TextView
-    private lateinit var permissionButton: Button
-    private lateinit var nextButton: Button
-    private lateinit var startButton: Button
+    private var title: TextView? = null
+    private var description: TextView? = null
+    private var permissionText: TextView? = null
+    private var permissionReviewText: TextView? = null
+    private var permissionRemovedText: TextView? = null
+    private var permissionButton: Button? = null
+    private var nextButton: Button? = null
+    private var startButton: Button? = null
     private val handler = Handler(Looper.getMainLooper())
 
     companion object {
@@ -111,7 +111,7 @@ class OnboardingPageFragment : Fragment() {
         when (layoutResId) {
             R.layout.fragment_onboarding_page_one -> {
                 val appName = getString(R.string.app_name)
-                title.text = getLocalizedString(R.string.welcome_to_launcher, appName)
+                title?.text = getLocalizedString(R.string.welcome_to_launcher, appName)
 
                 val privacyPolicyText = getLocalizedString(R.string.continue_by_you_agree, getString(R.string.privacy_policy))
                 val clickableText = getString(R.string.privacy_policy) // This should be the actual clickable portion
@@ -132,20 +132,20 @@ class OnboardingPageFragment : Fragment() {
                     spannableString.setSpan(clickableSpan, startIndex, endIndex, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
                 }
 
-                description.text = spannableString
+                description?.text = spannableString
                 // Make sure to enable links to make the clickable span work
-                description.movementMethod = LinkMovementMethod.getInstance()
+                description?.movementMethod = LinkMovementMethod.getInstance()
 
                 handler.removeCallbacks(usagePermissionCheckRunnable)
                 handler.post(launcherDefaultCheckRunnable)
 
-                permissionButton.text = getLocalizedString(R.string.advanced_settings_set_as_default_launcher)
-                permissionButton.setOnClickListener {
+                permissionButton?.text = getLocalizedString(R.string.advanced_settings_set_as_default_launcher)
+                permissionButton?.setOnClickListener {
                     setDefaultHomeScreen()
                 }
 
-                nextButton.text = getLocalizedString(R.string.next)
-                nextButton.setOnClickListener {
+                nextButton?.text = getLocalizedString(R.string.next)
+                nextButton?.setOnClickListener {
                     viewPager?.let {
                         // Move to the next page
                         it.currentItem += 1
@@ -160,13 +160,13 @@ class OnboardingPageFragment : Fragment() {
                 handler.post(usagePermissionCheckRunnable)
 
                 // Request Permission Button
-                permissionButton.setOnClickListener {
+                permissionButton?.setOnClickListener {
                     requireContext().requestUsagePermission()
                 }
 
-                nextButton.text = getLocalizedString(R.string.next)
+                nextButton?.text = getLocalizedString(R.string.next)
                 // Next Button to move to the next page
-                nextButton.setOnClickListener {
+                nextButton?.setOnClickListener {
                     viewPager?.let {
                         // Move to the next page
                         it.currentItem += 1
@@ -181,13 +181,13 @@ class OnboardingPageFragment : Fragment() {
                 handler.post(locationPermissionCheckRunnable)
 
                 // Request Permission Button
-                permissionButton.setOnClickListener {
+                permissionButton?.setOnClickListener {
                     requireContext().requestLocationPermission(Constants.ACCESS_FINE_LOCATION)
                 }
 
-                nextButton.text = getLocalizedString(R.string.next)
+                nextButton?.text = getLocalizedString(R.string.next)
                 // Next Button to move to the next page
-                nextButton.setOnClickListener {
+                nextButton?.setOnClickListener {
                     viewPager?.let {
                         // Move to the next page
                         it.currentItem += 1
@@ -202,7 +202,7 @@ class OnboardingPageFragment : Fragment() {
                 handler.removeCallbacks(locationPermissionCheckRunnable)
 
                 // Request Permission Button
-                permissionButton.setOnClickListener {
+                permissionButton?.setOnClickListener {
                     val instructions = getLocalizedString(R.string.accessibility_service_more_info)
 
                     val builder = MaterialAlertDialogBuilder(requireContext())
@@ -224,9 +224,9 @@ class OnboardingPageFragment : Fragment() {
                     builder.create().show()
                 }
 
-                startButton.text = getLocalizedString(R.string.start)
+                startButton?.text = getLocalizedString(R.string.start)
                 // Next Button to move to the next page
-                startButton.setOnClickListener {
+                startButton?.setOnClickListener {
                     // Handle button click
                     startActivity(Intent(requireActivity(), MainActivity::class.java))
                     prefs.setOnboardingCompleted(true)
@@ -239,11 +239,11 @@ class OnboardingPageFragment : Fragment() {
     private val launcherDefaultCheckRunnable = object : Runnable {
         override fun run() {
             if (ismlauncherDefault(requireContext())) {
-                nextButton.isEnabled = true
-                permissionButton.isEnabled = false
+                nextButton?.isEnabled = true
+                permissionButton?.isEnabled = false
             } else {
-                permissionButton.isEnabled = true
-                nextButton.isEnabled = false
+                permissionButton?.isEnabled = true
+                nextButton?.isEnabled = false
             }
             handler.postDelayed(this, 1000)  // Check every 1 second
         }
@@ -252,15 +252,15 @@ class OnboardingPageFragment : Fragment() {
     private val usagePermissionCheckRunnable = object : Runnable {
         override fun run() {
             if (hasUsageAccessPermission(requireContext())) {
-                permissionText.text = getLocalizedString(R.string.permission_granted)
-                nextButton.isEnabled = true
-                permissionRemovedText.isVisible = false
-                permissionReviewText.isVisible = false
-                permissionButton.isEnabled = false
+                permissionText?.text = getLocalizedString(R.string.permission_granted)
+                nextButton?.isEnabled = true
+                permissionRemovedText?.isVisible = false
+                permissionReviewText?.isVisible = false
+                permissionButton?.isEnabled = false
             } else {
-                permissionText.text = getLocalizedString(R.string.grant_usage_permission)
-                permissionButton.isEnabled = true
-                nextButton.isEnabled = false
+                permissionText?.text = getLocalizedString(R.string.grant_usage_permission)
+                permissionButton?.isEnabled = true
+                nextButton?.isEnabled = false
             }
             handler.postDelayed(this, 1000)  // Check every 1 second
         }
@@ -269,15 +269,15 @@ class OnboardingPageFragment : Fragment() {
     private val locationPermissionCheckRunnable = object : Runnable {
         override fun run() {
             if (hasLocationPermission(requireContext())) {
-                permissionText.text = getLocalizedString(R.string.permission_granted)
-                nextButton.isEnabled = true
-                permissionRemovedText.isVisible = false
-                permissionReviewText.isVisible = false
-                permissionButton.isEnabled = false
+                permissionText?.text = getLocalizedString(R.string.permission_granted)
+                nextButton?.isEnabled = true
+                permissionRemovedText?.isVisible = false
+                permissionReviewText?.isVisible = false
+                permissionButton?.isEnabled = false
             } else {
-                permissionText.text = getLocalizedString(R.string.grant_location_permission)
-                permissionButton.isEnabled = true
-                nextButton.isEnabled = true
+                permissionText?.text = getLocalizedString(R.string.grant_location_permission)
+                permissionButton?.isEnabled = true
+                nextButton?.isEnabled = true
             }
             handler.postDelayed(this, 1000)  // Check every 1 second
         }
