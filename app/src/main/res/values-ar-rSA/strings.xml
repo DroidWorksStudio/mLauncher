@@ -61,6 +61,7 @@
     <string name="search_from_start">البحث عن التطبيق من البداية</string>
     <string name="home_management">الصفحة الرئيسية &amp; إدارة التطبيقات</string>
     <string name="auto_open_apps">فتح التطبيقات تلقائياً</string>
+    <string name="open_apps_on_enter">Open App on Enter</string>
     <string name="lock_home_apps">قفل التطبيقات</string>
     <string name="lock_settings">إعدادات القفل</string>
     <string name="apps_on_home_screen">عدد التطبيقات المنزلية</string>
