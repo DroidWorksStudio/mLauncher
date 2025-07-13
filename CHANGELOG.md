@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Versioning:
+
+- Increment build number to 4 - ([3267c57](https://github.com/DroidWorksStudio/mLauncher/commit/3267c572d8ef06d6cc3056ed3a27d1c151ab0eec))
+
+## [1.10.8.3](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.8.3) - (13, July 2025)
+
 ### Bug Fixes:
 
 - *(AppDrawer)* Only show "Personal apps" header if other profiles exist - ([46ddee8](https://github.com/DroidWorksStudio/mLauncher/commit/46ddee8bf4c36b01f8d5a7c584ef95993b2ac261))
