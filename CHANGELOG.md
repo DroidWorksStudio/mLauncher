@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file. See [conven
 - *(AppDrawer)* Only show "Personal apps" header if other profiles exist - ([46ddee8](https://github.com/DroidWorksStudio/mLauncher/commit/46ddee8bf4c36b01f8d5a7c584ef95993b2ac261))
 - *(dependabot)* Group all dependency updates - ([cca8315](https://github.com/DroidWorksStudio/mLauncher/commit/cca83156a8f4336320a7208af822ac9a300c6d29))
 - *(deps)* Remove dependabot group names - ([f0e6880](https://github.com/DroidWorksStudio/mLauncher/commit/f0e6880eaee52f72b4c55d134c8367eb1851d474))
+- *(workflows)* Use `GITHUB_TOKEN` for `dependabot` actions - ([8887e56](https://github.com/DroidWorksStudio/mLauncher/commit/8887e567396bb2f71091c107f336bf6bc556f7eb))
 
 ### Versioning:
 
