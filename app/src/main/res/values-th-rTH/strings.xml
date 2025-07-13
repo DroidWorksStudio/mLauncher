@@ -61,6 +61,7 @@
     <string name="search_from_start">ค้นหาแอปตั้งแต่เริ่มต้น</string>
     <string name="home_management">หน้าแรก &amp; การจัดการแอพ</string>
     <string name="auto_open_apps">เปิดแอปอัตโนมัติ</string>
+    <string name="open_apps_on_enter">Open App on Enter</string>
     <string name="lock_home_apps">ล็อคแอพ</string>
     <string name="lock_settings">ล็อคการตั้งค่า</string>
     <string name="apps_on_home_screen">จำนวนแอปพลิเคชั่นภายในบ้าน</string>
