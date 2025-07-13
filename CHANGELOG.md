@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file. See [conven
 ### Bug Fixes:
 
 - *(AppDrawer)* Only show "Personal apps" header if other profiles exist - ([46ddee8](https://github.com/DroidWorksStudio/mLauncher/commit/46ddee8bf4c36b01f8d5a7c584ef95993b2ac261))
+- *(dependabot)* Group all dependency updates - ([cca8315](https://github.com/DroidWorksStudio/mLauncher/commit/cca83156a8f4336320a7208af822ac9a300c6d29))
 
 ### Versioning:
 
