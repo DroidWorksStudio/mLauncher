@@ -8,6 +8,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - *(AppDrawer)* Only show "Personal apps" header if other profiles exist - ([46ddee8](https://github.com/DroidWorksStudio/mLauncher/commit/46ddee8bf4c36b01f8d5a7c584ef95993b2ac261))
 
+### Versioning:
+
+- Increment build number to 3 - ([a9d167d](https://github.com/DroidWorksStudio/mLauncher/commit/a9d167d391db87a3ae2066b07790f7ac535b1321))
+
 ### Refactoring:
 
 - *(Onboarding)* Implement ViewBinding in OnboardingPageFragment - ([55b5d68](https://github.com/DroidWorksStudio/mLauncher/commit/55b5d689b20a615d17253ed7f409d99510f3107b))
