@@ -61,6 +61,7 @@
     <string name="search_from_start">Поиск приложений с самого начала.</string>
     <string name="home_management">Главная &amp; Управление приложениями</string>
     <string name="auto_open_apps">Автооткрытие приложений</string>
+    <string name="open_apps_on_enter">Open App on Enter</string>
     <string name="lock_home_apps">Заблокировать приложения</string>
     <string name="lock_settings">Блокировка настроек</string>
     <string name="apps_on_home_screen">Количество домашних приложений</string>
