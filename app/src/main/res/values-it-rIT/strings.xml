@@ -95,7 +95,7 @@
     <string name="alignment_to_bottom">Allinea in basso</string>
     <string name="visibility_display">Visibilità &amp; Visualizzazione</string>
     <string name="show_status_bar">Mostra barra di stato</string>
-    <string name="show_navigation_bar">Show Navigation bar</string>
+    <string name="show_navigation_bar">Mostra barra di navigazione</string>
     <string name="show_recent_apps">Mostra app recenti</string>
     <string name="number_of_recents">Numero di app recenti</string>
     <string name="show_app_usage_stats">Mostra statistiche sull\'utilizzo dell\'app</string>
