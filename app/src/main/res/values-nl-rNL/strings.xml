@@ -95,6 +95,7 @@
     <string name="alignment_to_bottom">Uitlijnen op onderkant</string>
     <string name="visibility_display">Zichtbaarheid &amp; Weergave</string>
     <string name="show_status_bar">Statusbalk weergeven</string>
+    <string name="show_navigation_bar">Show Navigation bar</string>
     <string name="show_recent_apps">Recente apps weergeven</string>
     <string name="number_of_recents">Aantal recente apps</string>
     <string name="show_app_usage_stats">Toon app-gebruikstatistieken</string>
