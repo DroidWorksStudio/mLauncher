@@ -253,6 +253,7 @@ Jūs bet kada galite išjungti šią prieigą savo įrenginio nustatymuose.</str
     <string name="apply_icon_pack_are_you_sure">Ar tikrai norite pritaikyti šį piktogramų paketą?\n\n%1$s</string>
     <string name="apply_to_home">Taikyti pagrindiniams puslapiams</string>
     <string name="apply_to_app_list">Taikyti programų sąrašui</string>
+    <string name="default_icon_not_found">Numatytoji programėlės piktograma, kuria galima piešti, nerasta</string>
     <!-- Settings Strings -->
     <string name="left">Kairė</string>
     <string name="right">Dešnė</string>
