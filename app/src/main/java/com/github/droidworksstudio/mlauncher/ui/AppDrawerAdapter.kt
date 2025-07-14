@@ -8,7 +8,6 @@ import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
 import android.content.pm.LauncherApps
-import android.content.pm.PackageManager
 import android.graphics.drawable.Drawable
 import android.os.Build
 import android.os.UserManager
@@ -44,7 +43,7 @@ import com.github.droidworksstudio.mlauncher.data.Constants.AppDrawerFlag
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.AdapterAppDrawerBinding
 import com.github.droidworksstudio.mlauncher.helper.IconCacheTarget
-import com.github.droidworksstudio.mlauncher.helper.IconPackHelper
+import com.github.droidworksstudio.mlauncher.helper.IconPackHelper.getSafeAppIcon
 import com.github.droidworksstudio.mlauncher.helper.dp2px
 import com.github.droidworksstudio.mlauncher.helper.getSystemIcons
 import com.github.droidworksstudio.mlauncher.helper.utils.BiometricHelper
@@ -508,43 +507,20 @@ class AppDrawerAdapter(
                 )
 
                 val packageName = appListItem.activityPackage
-                val packageManager = context.packageManager
 
                 var hasIconEnabled = false
                 var myIcon: Drawable? = null
 
                 if (packageName.isNotBlank() && prefs.iconPackAppList != Constants.IconPacks.Disabled && !appListItem.isHeader) {
                     val iconPackPackage = prefs.customIconPackAppList
-                    // Get app icon or fallback drawable
-                    val icon: Drawable? = try {
-                        if (iconPackPackage.isNotEmpty() && prefs.iconPackAppList == Constants.IconPacks.Custom) {
-                            if (IconPackHelper.isReady()) {
-                                IconPackHelper.getCachedIcon(
-                                    context,
-                                    packageName,
-                                    IconCacheTarget.APP_LIST
-                                )
-                                // Use the icon if not null
-                            } else {
-                                packageManager.getApplicationIcon(packageName)
-                            }
-                        } else {
-                            packageManager.getApplicationIcon(packageName)
-                        }
-                    } catch (e: PackageManager.NameNotFoundException) {
-                        // Handle exception gracefully, fall back to the system icon
-                        AppCompatResources.getDrawable(context, R.drawable.ic_default_app)
+                    // Try to get app icon, possibly using icon pack, with graceful fallback
+                    val nonNullDrawable: Drawable = getSafeAppIcon(
+                        context = context,
+                        packageName = packageName,
+                        useIconPack = (iconPackPackage.isNotEmpty() && prefs.iconPackAppList == Constants.IconPacks.Custom),
+                        iconPackTarget = IconCacheTarget.APP_LIST
+                    )
 
-                        e.printStackTrace()
-                    } catch (e: Exception) {
-                        // Handle any other exceptions gracefully, fallback to the system icon
-                        AppCompatResources.getDrawable(context, R.drawable.ic_default_app)
-
-                        e.printStackTrace()
-                    } as Drawable?
-
-                    val defaultIcon = packageManager.getApplicationIcon(packageName)
-                    val nonNullDrawable: Drawable = icon ?: defaultIcon
 
                     // Recolor the icon with the dominant color
                     val appNewIcon: Drawable? = getSystemIcons(

@@ -332,6 +332,7 @@
     <string name="apply_icon_pack_are_you_sure">Are you sure you want to apply this icon pack?\n\n%1$s</string>
     <string name="apply_to_home">Apply To Home</string>
     <string name="apply_to_app_list">Apply To App List</string>
+    <string name="default_icon_not_found">Default app icon drawable not found</string>
 
     <!-- Settings Strings -->
     <string name="left">Left</string>

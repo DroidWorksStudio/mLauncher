@@ -2,10 +2,14 @@ package com.github.droidworksstudio.mlauncher.helper
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.graphics.Color
 import android.graphics.drawable.Drawable
 import android.util.Xml
+import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
+import androidx.core.graphics.drawable.toDrawable
 import com.github.droidworksstudio.common.AppLogger
+import com.github.droidworksstudio.mlauncher.R
 import org.xmlpull.v1.XmlPullParser
 import java.io.FileNotFoundException
 
@@ -132,6 +136,33 @@ object IconPackHelper {
             e.printStackTrace()
             null
         }
+    }
+
+    fun getSafeAppIcon(
+        context: Context,
+        packageName: String,
+        useIconPack: Boolean,
+        iconPackTarget: IconCacheTarget
+    ): Drawable {
+        val pm = context.packageManager
+        val icon = try {
+            if (useIconPack && isReady()) {
+                getCachedIcon(context, packageName, iconPackTarget)
+            } else {
+                pm.getApplicationIcon(packageName)
+            }
+        } catch (e: Exception) {
+            AppLogger.e("IconHelper", "Failed to get icon for package: $packageName", e)
+            null
+        }
+
+        return icon
+            ?: ContextCompat.getDrawable(context, R.drawable.ic_default_app)
+            ?: ContextCompat.getDrawable(context, android.R.drawable.sym_def_app_icon)
+            ?: run {
+                AppLogger.w("IconHelper", "All fallback icons missing for $packageName; using transparent drawable")
+                Color.TRANSPARENT.toDrawable()
+            }
     }
 
     fun isReady(): Boolean = isInitialized

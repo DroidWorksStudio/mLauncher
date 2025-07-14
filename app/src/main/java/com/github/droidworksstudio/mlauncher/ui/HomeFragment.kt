@@ -30,7 +30,6 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.Space
 import android.widget.TextView
-import androidx.appcompat.content.res.AppCompatResources
 import androidx.biometric.BiometricPrompt
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -70,7 +69,7 @@ import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentHomeBinding
 import com.github.droidworksstudio.mlauncher.helper.FontManager
 import com.github.droidworksstudio.mlauncher.helper.IconCacheTarget
-import com.github.droidworksstudio.mlauncher.helper.IconPackHelper
+import com.github.droidworksstudio.mlauncher.helper.IconPackHelper.getSafeAppIcon
 import com.github.droidworksstudio.mlauncher.helper.analytics.AppUsageMonitor
 import com.github.droidworksstudio.mlauncher.helper.formatMillisToHMS
 import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
@@ -105,7 +104,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     private lateinit var biometricHelper: BiometricHelper
     private lateinit var privateSpaceReceiver: PrivateSpaceReceiver
     private lateinit var vibrator: Vibrator
-    
+
     private var longPressToSelectApp: Int = 0
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
@@ -996,38 +995,16 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     setTextColor(prefs.appColor)
 
                     val packageName = prefs.getHomeAppModel(i).activityPackage
-                    val packageManager = context.packageManager
 
                     if (packageName.isNotBlank() && prefs.iconPackHome != Constants.IconPacks.Disabled) {
                         val iconPackPackage = prefs.customIconPackHome
-                        // Get app icon or fallback drawable
-                        val icon: Drawable? = try {
-                            if (iconPackPackage.isNotEmpty() && prefs.iconPackHome == Constants.IconPacks.Custom) {
-                                if (IconPackHelper.isReady()) {
-                                    IconPackHelper.getCachedIcon(
-                                        context,
-                                        packageName,
-                                        IconCacheTarget.HOME
-                                    )
-                                    // Use the icon if not null
-                                } else {
-                                    packageManager.getApplicationIcon(packageName)
-                                }
-                            } else {
-                                packageManager.getApplicationIcon(packageName)
-                            }
-                        } catch (e: PackageManager.NameNotFoundException) {
-                            e.printStackTrace()
-                            // Handle exception gracefully, fall back to the system icon
-                            AppCompatResources.getDrawable(context, R.drawable.ic_default_app)
-                        } catch (e: Exception) {
-                            e.printStackTrace()
-                            // Handle any other exceptions gracefully, fallback to the system icon
-                            AppCompatResources.getDrawable(context, R.drawable.ic_default_app)
-                        }
-
-                        val defaultIcon = packageManager.getApplicationIcon(packageName)
-                        val nonNullDrawable: Drawable = icon ?: defaultIcon
+                        // Try to get app icon, possibly using icon pack, with graceful fallback
+                        val nonNullDrawable: Drawable = getSafeAppIcon(
+                            context = context,
+                            packageName = packageName,
+                            useIconPack = (iconPackPackage.isNotEmpty() && prefs.iconPackHome == Constants.IconPacks.Custom),
+                            iconPackTarget = IconCacheTarget.HOME
+                        )
 
                         // Recolor the icon with the dominant color
                         val appNewIcon: Drawable? = getSystemIcons(
@@ -1036,7 +1013,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                             IconCacheTarget.HOME,
                             nonNullDrawable
                         )
-
 
                         // Set the icon size to match text size and add padding
                         val iconSize = (prefs.appSize * 1.4).toInt()  // Base size from preferences
