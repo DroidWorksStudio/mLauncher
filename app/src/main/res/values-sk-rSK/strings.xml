@@ -253,6 +253,7 @@ Tento prístup môžete kedykoľvek vypnúť v nastaveniach zariadenia.</string>
     <string name="apply_icon_pack_are_you_sure">Naozaj chcete použiť tento balík ikon?\n\n%1$s</string>
     <string name="apply_to_home">Použiť na domovskú stránku</string>
     <string name="apply_to_app_list">Použiť na zoznam aplikácií</string>
+    <string name="default_icon_not_found">Predvolená ikona aplikácie, ktorú je možné nakresliť, sa nenašla</string>
     <!-- Settings Strings -->
     <string name="left">Vľavo</string>
     <string name="right">Vpravo</string>
