@@ -251,6 +251,7 @@
     <string name="apply_icon_pack_are_you_sure">Möchten Sie dieses Symbolpaket wirklich anwenden?\n\n%1$s</string>
     <string name="apply_to_home">Auf Startseite anwenden</string>
     <string name="apply_to_app_list">Auf App-Liste anwenden</string>
+    <string name="default_icon_not_found">Standard-App-Symbol zum Zeichnen nicht gefunden</string>
     <!-- Settings Strings -->
     <string name="left">Links</string>
     <string name="right">Rechts</string>
