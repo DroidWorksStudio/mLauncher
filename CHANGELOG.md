@@ -21,6 +21,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Improve status bar height calculation and top padding adjustment - ([0cd49c2](https://github.com/DroidWorksStudio/mLauncher/commit/0cd49c22f9ab148287d1c43d18f1122d2b58f6ea))
 - Update status bar handling and padding - ([68a1a13](https://github.com/DroidWorksStudio/mLauncher/commit/68a1a137c527f5317eaed3c14e8af04e366342db))
 - Remove unused parameter from updatePagesAndAppsPerPage logging - ([e206ef9](https://github.com/DroidWorksStudio/mLauncher/commit/e206ef9424e36c24bb2ae46ee5538ac250f09bc6))
 - Improve icon loading and fallback in HomeFragment and AppDrawerAdapter - ([f339c73](https://github.com/DroidWorksStudio/mLauncher/commit/f339c734d0c3c756aed4ccbbcf06d5bb87128450))
