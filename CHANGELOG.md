@@ -19,6 +19,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Remove unused parameter from updatePagesAndAppsPerPage logging - ([e206ef9](https://github.com/DroidWorksStudio/mLauncher/commit/e206ef9424e36c24bb2ae46ee5538ac250f09bc6))
 - Improve icon loading and fallback in HomeFragment and AppDrawerAdapter - ([f339c73](https://github.com/DroidWorksStudio/mLauncher/commit/f339c734d0c3c756aed4ccbbcf06d5bb87128450))
 
 ## [1.10.8.3](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.8.3) - (13, July 2025)
