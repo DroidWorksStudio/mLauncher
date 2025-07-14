@@ -1,6 +1,7 @@
 package com.github.droidworksstudio.mlauncher.helper
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.app.AlarmManager
 import android.app.AppOpsManager
 import android.app.UiModeManager
@@ -40,7 +41,6 @@ import androidx.core.content.ContextCompat
 import androidx.core.graphics.withSave
 import androidx.core.net.toUri
 import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updatePadding
 import com.github.droidworksstudio.common.AppLogger
 import com.github.droidworksstudio.common.ColorIconsExtensions
@@ -712,18 +712,26 @@ private fun getHomeIcons(context: Context, prefs: Prefs, nonNullDrawable: Drawab
     }
 }
 
+@SuppressLint("InternalInsetResource", "DiscouragedApi")
+fun getStatusBarHeight(context: Context): Int {
+    val resourceId = context.resources.getIdentifier("status_bar_height", "dimen", "android")
+    return if (resourceId > 0) {
+        context.resources.getDimensionPixelSize(resourceId)
+    } else {
+        (24 * context.resources.displayMetrics.density).toInt()
+    }
+}
+
+
 fun setTopPadding(view: View, isSettings: Boolean = false) {
     val initialTopPadding = view.paddingTop
 
     ViewCompat.setOnApplyWindowInsetsListener(view) { v, insets ->
-        val systemBarsTop = insets.getInsets(WindowInsetsCompat.Type.systemBars()).top
-        val displayCutoutTop = insets.getInsets(WindowInsetsCompat.Type.displayCutout()).top
+        val systemBarsTop = getStatusBarHeight(v.context)
 
         val topInset = if (isSettings) {
             if (systemBarsTop > 0) {
                 systemBarsTop
-            } else if (displayCutoutTop > 0) {
-                displayCutoutTop
             } else {
                 // As last fallback, use a typical status bar height (e.g., 24dp)
                 // Adjust as needed
