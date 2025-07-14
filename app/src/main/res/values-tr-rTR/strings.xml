@@ -95,7 +95,7 @@
     <string name="alignment_to_bottom">Alt tarafa hizala</string>
     <string name="visibility_display">Görünürlük &amp; Görüntüle</string>
     <string name="show_status_bar">Durum çubuğunu göster</string>
-    <string name="show_navigation_bar">Show Navigation bar</string>
+    <string name="show_navigation_bar">Gezinme çubuğunu göster</string>
     <string name="show_recent_apps">Son Uygulamaları Göster</string>
     <string name="number_of_recents">Son Uygulama Sayısı</string>
     <string name="show_app_usage_stats">Uygulama Kullanım İstatistiklerini Göster</string>
