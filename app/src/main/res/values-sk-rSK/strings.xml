@@ -95,6 +95,7 @@
     <string name="alignment_to_bottom">Zarovnať nadol</string>
     <string name="visibility_display">Viditeľnosť &amp; Displej</string>
     <string name="show_status_bar">Zobraziť stavový riadok</string>
+    <string name="show_navigation_bar">Show Navigation bar</string>
     <string name="show_recent_apps">Zobraziť nedávne aplikácie</string>
     <string name="number_of_recents">Počet nedávnych aplikácií</string>
     <string name="show_app_usage_stats">Zobraziť štatistiku používania aplikácie</string>
