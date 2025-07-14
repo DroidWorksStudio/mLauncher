@@ -1074,7 +1074,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     private lateinit var pageRanges: List<IntRange>
 
     private fun updatePagesAndAppsPerPage(totalApps: Int, totalPages: Int) {
-        AppLogger.d(homeScreenPager, "updatePagesAndAppsPerPage: totalApps=$totalApps, requested totalPages=$totalPages")
+        AppLogger.d(homeScreenPager, "updatePagesAndAppsPerPage: totalApps=$totalApps, totalPages=$totalPages")
 
         if (totalPages <= 0) {
             pageRanges = emptyList()
