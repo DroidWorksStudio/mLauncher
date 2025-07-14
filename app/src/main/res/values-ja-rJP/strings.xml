@@ -95,6 +95,7 @@
     <string name="alignment_to_bottom">下揃え</string>
     <string name="visibility_display">可視性 &amp; 表示</string>
     <string name="show_status_bar">ステータスバーを表示</string>
+    <string name="show_navigation_bar">ナビゲーションバーを表示</string>
     <string name="show_recent_apps">最近使ったアプリを表示</string>
     <string name="number_of_recents">最近使用したアプリの数</string>
     <string name="show_app_usage_stats">アプリの使用状況統計を表示</string>

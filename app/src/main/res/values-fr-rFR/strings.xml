@@ -95,6 +95,7 @@
     <string name="alignment_to_bottom">Aligner vers le bas</string>
     <string name="visibility_display">Visibilité &amp; Affichage</string>
     <string name="show_status_bar">Afficher la barre d\'état</string>
+    <string name="show_navigation_bar">Afficher la barre de navigation</string>
     <string name="show_recent_apps">Afficher les applications récentes</string>
     <string name="number_of_recents">Nombre d\'applications récentes</string>
     <string name="show_app_usage_stats">Afficher les statistiques d\'utilisation de l\'application</string>

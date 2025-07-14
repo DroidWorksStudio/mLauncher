@@ -95,6 +95,7 @@
     <string name="alignment_to_bottom">محاذاة إلى الأسفل</string>
     <string name="visibility_display">الرؤية &amp; العرض</string>
     <string name="show_status_bar">إظهار شريط الحالة</string>
+    <string name="show_navigation_bar">إظهار شريط التنقل</string>
     <string name="show_recent_apps">إظهار التطبيقات الأخيرة</string>
     <string name="number_of_recents">عدد التطبيقات الحديثة</string>
     <string name="show_app_usage_stats">إظهار إحصائيات استخدام التطبيق</string>

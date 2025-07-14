@@ -95,6 +95,7 @@
     <string name="alignment_to_bottom">Sulygiuoti į apačią</string>
     <string name="visibility_display">Matomumas &amp; Ekranas</string>
     <string name="show_status_bar">Rodyti būsenos juostą</string>
+    <string name="show_navigation_bar">Rodyti naršymo juostą</string>
     <string name="show_recent_apps">Rodyti naujausias programas</string>
     <string name="number_of_recents">Naujausiai atdarytų programėlių skaičius</string>
     <string name="show_app_usage_stats">Rodyti programos naudojimo statistiką</string>

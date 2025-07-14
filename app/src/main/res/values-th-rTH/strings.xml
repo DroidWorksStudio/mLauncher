@@ -95,6 +95,7 @@
     <string name="alignment_to_bottom">จัดตำแหน่งให้ตรงกับด้านล่าง</string>
     <string name="visibility_display">การมองเห็น &amp; การแสดงผล</string>
     <string name="show_status_bar">แสดงแถบสถานะ</string>
+    <string name="show_navigation_bar">แสดงแถบนำทาง</string>
     <string name="show_recent_apps">แสดงแอปล่าสุด</string>
     <string name="number_of_recents">จำนวนแอปล่าสุด</string>
     <string name="show_app_usage_stats">แสดงสถิติการใช้งานแอป</string>

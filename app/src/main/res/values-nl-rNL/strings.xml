@@ -61,7 +61,7 @@
     <string name="search_from_start">App zoeken vanaf het begin</string>
     <string name="home_management">Home &amp; App-beheer</string>
     <string name="auto_open_apps">Apps automatisch openen</string>
-    <string name="open_apps_on_enter">Open app bij invoeren</string>
+    <string name="open_apps_on_enter">App Openen met Enter</string>
     <string name="lock_home_apps">Vergrendel Home-apps</string>
     <string name="lock_settings">Instellingen vergrendelen</string>
     <string name="apps_on_home_screen">Aantal Home-apps</string>
@@ -95,6 +95,7 @@
     <string name="alignment_to_bottom">Uitlijnen op onderkant</string>
     <string name="visibility_display">Zichtbaarheid &amp; Weergave</string>
     <string name="show_status_bar">Statusbalk weergeven</string>
+    <string name="show_navigation_bar">Navigatiebalk weergeven</string>
     <string name="show_recent_apps">Recente apps weergeven</string>
     <string name="number_of_recents">Aantal recente apps</string>
     <string name="show_app_usage_stats">Toon app-gebruikstatistieken</string>
@@ -251,7 +252,7 @@
     <string name="apply_icon_pack_are_you_sure">Weet u zeker dat u dit pictogrampakket wilt toepassen?\n\n%1$s</string>
     <string name="apply_to_home">Toepassen op Home</string>
     <string name="apply_to_app_list">Toepassen op app-lijst</string>
-    <string name="default_icon_not_found">Standaard app-pictogram tekenbaar niet gevonden</string>
+    <string name="default_icon_not_found">Standaard tekenbaar app-pictogram niet gevonden</string>
     <!-- Settings Strings -->
     <string name="left">Linkerkant</string>
     <string name="right">Rechterkant</string>
