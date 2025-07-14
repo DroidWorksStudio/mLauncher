@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file. See [conven
 ### Implemented Enhancements:
 
 - *(app-drawer)* Add option to open app on Enter key press - ([e3ee7e9](https://github.com/DroidWorksStudio/mLauncher/commit/e3ee7e94487bc310897e6af6b3e0e5f43071c54f))
+- Add option to toggle navigation bar visibility - ([80f7e1f](https://github.com/DroidWorksStudio/mLauncher/commit/80f7e1fe6e4d83da291826b92c0ae563bae9cffc))
 
 ### Versioning:
 
