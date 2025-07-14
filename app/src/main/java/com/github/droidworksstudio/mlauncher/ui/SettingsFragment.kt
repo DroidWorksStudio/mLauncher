@@ -78,12 +78,14 @@ import com.github.droidworksstudio.mlauncher.helper.communitySupportButton
 import com.github.droidworksstudio.mlauncher.helper.emptyString
 import com.github.droidworksstudio.mlauncher.helper.getTrueSystemFont
 import com.github.droidworksstudio.mlauncher.helper.helpFeedbackButton
+import com.github.droidworksstudio.mlauncher.helper.hideNavigationBar
 import com.github.droidworksstudio.mlauncher.helper.hideStatusBar
 import com.github.droidworksstudio.mlauncher.helper.isSystemInDarkMode
 import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
 import com.github.droidworksstudio.mlauncher.helper.openAppInfo
 import com.github.droidworksstudio.mlauncher.helper.setThemeMode
 import com.github.droidworksstudio.mlauncher.helper.setTopPadding
+import com.github.droidworksstudio.mlauncher.helper.showNavigationBar
 import com.github.droidworksstudio.mlauncher.helper.showStatusBar
 import com.github.droidworksstudio.mlauncher.helper.utils.AppReloader
 import com.github.droidworksstudio.mlauncher.helper.utils.PrivateSpaceManager
@@ -222,6 +224,7 @@ class SettingsFragment : Fragment() {
         var toggledHomeAlignmentBottom by remember { mutableStateOf(prefs.homeAlignmentBottom) }
 
         var toggledShowStatusBar by remember { mutableStateOf(prefs.showStatusBar) }
+        var toggledShowNavigationBar by remember { mutableStateOf(prefs.showNavigationBar) }
         var toggledRecentAppsDisplayed by remember { mutableStateOf(prefs.recentAppsDisplayed) }
         var selectedRecentCounter by remember { mutableIntStateOf(prefs.recentCounter) }
         var toggledRecentAppUsageStats by remember { mutableStateOf(prefs.appUsageStats) }
@@ -1054,6 +1057,18 @@ class SettingsFragment : Fragment() {
                             prefs.showStatusBar = toggledShowStatusBar
                             if (toggledShowStatusBar) showStatusBar(requireActivity().window)
                             else hideStatusBar(requireActivity().window)
+                        }
+                    )
+
+                    SettingsSwitch(
+                        text = getLocalizedString(R.string.show_navigation_bar),
+                        fontSize = titleFontSize,
+                        defaultState = toggledShowNavigationBar,
+                        onCheckedChange = {
+                            toggledShowNavigationBar = !prefs.showNavigationBar
+                            prefs.showNavigationBar = toggledShowNavigationBar
+                            if (toggledShowNavigationBar) showNavigationBar(requireActivity().window)
+                            else hideNavigationBar(requireActivity().window)
                         }
                     )
 

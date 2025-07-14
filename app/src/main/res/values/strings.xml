@@ -132,6 +132,7 @@
     <string name="visibility_display">Visibility &amp; Display</string>
 
     <string name="show_status_bar">Show Status bar</string>
+    <string name="show_navigation_bar">Show Navigation bar</string>
     <string name="show_recent_apps">Show Recent Apps</string>
     <string name="number_of_recents">Number of Recent Apps</string>
     <string name="show_app_usage_stats">Show App Usage Stats</string>

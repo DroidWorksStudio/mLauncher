@@ -48,6 +48,7 @@ private const val ALARM_ALIGNMENT = "ALARM_ALIGNMENT"
 private const val DAILY_WORD_ALIGNMENT = "DAILY_WORD_ALIGNMENT"
 private const val SHOW_BACKGROUND = "SHOW_BACKGROUND"
 private const val STATUS_BAR = "STATUS_BAR"
+private const val NAVIGATION_BAR = "NAVIGATION_BAR"
 private const val SHOW_BATTERY = "SHOW_BATTERY"
 private const val SHOW_BATTERY_ICON = "SHOW_BATTERY_ICON"
 private const val SHOW_WEATHER = "SHOW_WEATHER"
@@ -496,6 +497,10 @@ class Prefs(val context: Context) {
     var showStatusBar: Boolean
         get() = getSetting(STATUS_BAR, true)
         set(value) = prefsNormal.edit { putBoolean(STATUS_BAR, value) }
+
+    var showNavigationBar: Boolean
+        get() = getSetting(NAVIGATION_BAR, true)
+        set(value) = prefsNormal.edit { putBoolean(NAVIGATION_BAR, value) }
 
     var showDate: Boolean
         get() = getSetting(SHOW_DATE, true)
