@@ -253,6 +253,7 @@
     <string name="apply_icon_pack_are_you_sure">האם אתה בטוח שברצונך להחיל את חבילת האייקונים הזו?\n\n%1$s</string>
     <string name="apply_to_home">החל על הבית</string>
     <string name="apply_to_app_list">החל על רשימת אפליקציות</string>
+    <string name="default_icon_not_found">סמל האפליקציה המוגדר כברירת מחדל הניתן לציור לא נמצא</string>
     <!-- Settings Strings -->
     <string name="left">שמאל</string>
     <string name="right">ימין</string>

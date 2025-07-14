@@ -251,6 +251,7 @@
     <string name="apply_icon_pack_are_you_sure">¿Estás seguro de que quieres aplicar este paquete de iconos?\n\n%1$s</string>
     <string name="apply_to_home">Aplicar a Inicio</string>
     <string name="apply_to_app_list">Aplicar a la lista de aplicaciones</string>
+    <string name="default_icon_not_found">No se encontró el ícono dibujable de la aplicación predeterminada</string>
     <!-- Settings Strings -->
     <string name="left">Izquierda</string>
     <string name="right">Derecha</string>

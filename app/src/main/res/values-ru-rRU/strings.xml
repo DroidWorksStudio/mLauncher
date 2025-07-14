@@ -251,6 +251,7 @@
     <string name="apply_icon_pack_are_you_sure">Вы уверены, что хотите применить этот пакет иконок?\n\n%1$s</string>
     <string name="apply_to_home">Применить к домашней странице</string>
     <string name="apply_to_app_list">Применить к списку приложений</string>
+    <string name="default_icon_not_found">Значок приложения по умолчанию не найден</string>
     <!-- Settings Strings -->
     <string name="left">Слева</string>
     <string name="right">Справа</string>

@@ -251,6 +251,7 @@
     <string name="apply_icon_pack_are_you_sure">このアイコンパックを適用してもよろしいですか?\n\n%1$s</string>
     <string name="apply_to_home">ホームに応募する</string>
     <string name="apply_to_app_list">アプリリストに適用</string>
+    <string name="default_icon_not_found">デフォルトのアプリアイコン描画可能ファイルが見つかりません</string>
     <!-- Settings Strings -->
     <string name="left">左</string>
     <string name="right">右</string>
