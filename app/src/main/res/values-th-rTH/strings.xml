@@ -251,6 +251,7 @@
     <string name="apply_icon_pack_are_you_sure">คุณแน่ใจหรือไม่ว่าต้องการใช้แพ็คไอคอนนี้\n\n%1$s</string>
     <string name="apply_to_home">สมัครเข้าบ้าน</string>
     <string name="apply_to_app_list">สมัครเข้ารายการแอพพลิเคชั่น</string>
+    <string name="default_icon_not_found">ไม่พบไอคอนแอปเริ่มต้นที่สามารถวาดได้</string>
     <!-- Settings Strings -->
     <string name="left">ซ้าย</string>
     <string name="right">ถูกต้อง</string>
