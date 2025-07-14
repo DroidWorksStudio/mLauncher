@@ -12,6 +12,14 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Increment build number to 4 - ([3267c57](https://github.com/DroidWorksStudio/mLauncher/commit/3267c572d8ef06d6cc3056ed3a27d1c151ab0eec))
 
+### Language Support:
+
+- Updated Language Files. ([#840](https://github.com/DroidWorksStudio/mLauncher/issues/840)) - ([5d3bfb3](https://github.com/DroidWorksStudio/mLauncher/commit/5d3bfb3119535bb52af4527a467ff89afdb33b6d))
+
+### Refactoring:
+
+- Improve icon loading and fallback in HomeFragment and AppDrawerAdapter - ([f339c73](https://github.com/DroidWorksStudio/mLauncher/commit/f339c734d0c3c756aed4ccbbcf06d5bb87128450))
+
 ## [1.10.8.3](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.8.3) - (13, July 2025)
 
 ### Bug Fixes:
