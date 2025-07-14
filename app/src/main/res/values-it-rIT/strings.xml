@@ -251,6 +251,7 @@
     <string name="apply_icon_pack_are_you_sure">Vuoi davvero applicare questo pacchetto di icone?\n\n%1$s</string>
     <string name="apply_to_home">Applica a Home</string>
     <string name="apply_to_app_list">Applica all\'elenco delle app</string>
+    <string name="default_icon_not_found">Icona di disegno predefinita dell\'app non trovata</string>
     <!-- Settings Strings -->
     <string name="left">Sinistra</string>
     <string name="right">Destra</string>
