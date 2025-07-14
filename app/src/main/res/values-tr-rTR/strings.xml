@@ -61,6 +61,7 @@
     <string name="search_from_start">Uygulama isminin başından aramaya başla.</string>
     <string name="home_management">Ana Sayfa &amp; Uygulama Yönetimi</string>
     <string name="auto_open_apps">Uygulamaları otomatik aç</string>
+    <string name="open_apps_on_enter">Girişte Uygulamayı Aç</string>
     <string name="lock_home_apps">Kilit Uygulamaları</string>
     <string name="lock_settings">Kilit Ayarları</string>
     <string name="apps_on_home_screen">Ev Uygulamalarının Sayısı</string>
