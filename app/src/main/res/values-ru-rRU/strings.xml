@@ -95,7 +95,7 @@
     <string name="alignment_to_bottom">Выровнять по нижнему краю</string>
     <string name="visibility_display">Видимость &amp; Дисплей</string>
     <string name="show_status_bar">Показать строку состояния</string>
-    <string name="show_navigation_bar">Show Navigation bar</string>
+    <string name="show_navigation_bar">Показать панель навигации</string>
     <string name="show_recent_apps">Показать последние приложения</string>
     <string name="number_of_recents">Количество последних приложений</string>
     <string name="show_app_usage_stats">Показать статистику использования приложения</string>
