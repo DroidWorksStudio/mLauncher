@@ -1,7 +1,6 @@
 package com.github.droidworksstudio.mlauncher.helper
 
 import android.Manifest
-import android.app.Activity
 import android.app.AlarmManager
 import android.app.AppOpsManager
 import android.app.UiModeManager
@@ -33,15 +32,15 @@ import android.text.style.ImageSpan
 import android.util.DisplayMetrics
 import android.util.TypedValue
 import android.view.View
+import android.view.Window
+import android.view.WindowInsets
 import android.view.WindowManager
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.withSave
 import androidx.core.net.toUri
 import androidx.core.view.ViewCompat
-import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.WindowInsetsControllerCompat
 import androidx.core.view.updatePadding
 import com.github.droidworksstudio.common.AppLogger
 import com.github.droidworksstudio.common.ColorIconsExtensions
@@ -313,21 +312,55 @@ fun initActionService(context: Context): ActionService? {
     return null
 }
 
-fun hideStatusBar(activity: Activity) {
-    // Ensure that the content draws behind the system bars
-    WindowCompat.setDecorFitsSystemWindows(activity.window, false)
-
-    val insetsController = WindowInsetsControllerCompat(activity.window, activity.window.decorView)
-    insetsController.systemBarsBehavior = WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
-    insetsController.hide(WindowInsetsCompat.Type.statusBars())
+fun showStatusBar(window: Window) {
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+        window.insetsController?.show(WindowInsets.Type.statusBars())
+    } else
+        @Suppress("DEPRECATION", "InlinedApi")
+        window.decorView.apply {
+            systemUiVisibility =
+                View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+        }
 }
 
-fun showStatusBar(activity: Activity) {
-    // Restore the default behavior where content does not draw behind system bars
-    WindowCompat.setDecorFitsSystemWindows(activity.window, true)
+fun hideStatusBar(window: Window) {
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R)
+        window.insetsController?.hide(WindowInsets.Type.statusBars())
+    else {
+        @Suppress("DEPRECATION")
+        window.decorView.apply {
+            systemUiVisibility =
+                View.SYSTEM_UI_FLAG_IMMERSIVE or View.SYSTEM_UI_FLAG_FULLSCREEN
+        }
+    }
+}
 
-    val insetsController = WindowInsetsControllerCompat(activity.window, activity.window.decorView)
-    insetsController.show(WindowInsetsCompat.Type.statusBars())
+fun showNavigationBar(window: Window) {
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+        // For Android 11 (API 30) and above, use WindowInsetsController to show the navigation bar
+        window.insetsController?.show(WindowInsets.Type.navigationBars())
+    } else {
+        @Suppress("DEPRECATION", "InlinedApi")
+        // For older versions, show the navigation bar using systemUiVisibility
+        window.decorView.apply {
+            systemUiVisibility =
+                View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+        }
+    }
+}
+
+fun hideNavigationBar(window: Window) {
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+        // For Android 11 (API 30) and above, use WindowInsetsController to hide the navigation bar
+        window.insetsController?.hide(WindowInsets.Type.navigationBars())
+    } else {
+        @Suppress("DEPRECATION")
+        // For older versions, hide the navigation bar using systemUiVisibility
+        window.decorView.apply {
+            systemUiVisibility =
+                View.SYSTEM_UI_FLAG_IMMERSIVE or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or View.SYSTEM_UI_FLAG_FULLSCREEN
+        }
+    }
 }
 
 fun dp2px(resources: Resources, dp: Int): Int {
@@ -679,24 +712,36 @@ private fun getHomeIcons(context: Context, prefs: Prefs, nonNullDrawable: Drawab
     }
 }
 
-fun setTopPadding(view: View) {
-    // Store the original top padding to avoid accumulating insets
+fun setTopPadding(view: View, isSettings: Boolean = false) {
     val initialTopPadding = view.paddingTop
 
     ViewCompat.setOnApplyWindowInsetsListener(view) { v, insets ->
-        // Retrieve the top inset, which includes the status bar and display cutout
-        val topInset = insets.getInsets(WindowInsetsCompat.Type.systemBars()).top
+        val systemBarsTop = insets.getInsets(WindowInsetsCompat.Type.systemBars()).top
+        val displayCutoutTop = insets.getInsets(WindowInsetsCompat.Type.displayCutout()).top
 
-        // Apply the combined padding
+        val topInset = if (isSettings) {
+            if (systemBarsTop > 0) {
+                systemBarsTop
+            } else if (displayCutoutTop > 0) {
+                displayCutoutTop
+            } else {
+                // As last fallback, use a typical status bar height (e.g., 24dp)
+                // Adjust as needed
+                (24 * v.resources.displayMetrics.density).toInt()
+            }
+        } else {
+            // Use actual inset; might be 0 if status bar is hidden
+            systemBarsTop
+        }
+
         v.updatePadding(top = initialTopPadding + topInset)
 
-        // Return the insets to allow further propagation if needed
         insets
     }
 
-    // Request the insets to be applied
     ViewCompat.requestApplyInsets(view)
 }
+
 
 class CenteredImageSpan(drawable: Drawable) : ImageSpan(drawable) {
     override fun draw(

@@ -31,7 +31,9 @@ import com.github.droidworksstudio.mlauncher.databinding.ActivityMainBinding
 import com.github.droidworksstudio.mlauncher.helper.IconCacheTarget
 import com.github.droidworksstudio.mlauncher.helper.IconPackHelper
 import com.github.droidworksstudio.mlauncher.helper.emptyString
+import com.github.droidworksstudio.mlauncher.helper.hideStatusBar
 import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
+import com.github.droidworksstudio.mlauncher.helper.showStatusBar
 import com.github.droidworksstudio.mlauncher.helper.utils.AppReloader
 import com.github.droidworksstudio.mlauncher.ui.onboarding.OnboardingActivity
 import com.squareup.moshi.Moshi
@@ -149,6 +151,8 @@ class MainActivity : AppCompatActivity() {
         } else {
             ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
         }
+
+        if (prefs.showStatusBar) showStatusBar(this.window) else hideStatusBar(this.window)
 
         if (prefs.iconPackHome == Constants.IconPacks.Custom) {
             val executor = Executors.newSingleThreadExecutor()

@@ -8,6 +8,7 @@ import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.drawable.Drawable
 import android.os.Bundle
+import android.os.Process
 import android.os.UserManager
 import android.util.TypedValue
 import android.view.LayoutInflater
@@ -16,6 +17,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
 import androidx.activity.compose.BackHandler
+import androidx.appcompat.app.AlertDialog
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -134,7 +136,7 @@ class SettingsFragment : Fragment() {
 
         resetThemeColors()
 
-        setTopPadding(binding.settingsView)
+        setTopPadding(binding.settingsView, true)
     }
 
     private fun resetThemeColors() {
@@ -1050,9 +1052,8 @@ class SettingsFragment : Fragment() {
                         onCheckedChange = {
                             toggledShowStatusBar = !prefs.showStatusBar
                             prefs.showStatusBar = toggledShowStatusBar
-                            if (toggledShowStatusBar) showStatusBar(requireActivity()) else hideStatusBar(
-                                requireActivity()
-                            )
+                            if (toggledShowStatusBar) showStatusBar(requireActivity().window)
+                            else hideStatusBar(requireActivity().window)
                         }
                     )
 
@@ -2339,7 +2340,7 @@ class SettingsFragment : Fragment() {
                         onClick = {
                             openAppInfo(
                                 requireContext(),
-                                android.os.Process.myUserHandle(),
+                                Process.myUserHandle(),
                                 BuildConfig.APPLICATION_ID
                             )
                         },
@@ -2717,9 +2718,9 @@ class SettingsFragment : Fragment() {
         dialog.setOnShowListener {
             font?.let { tf ->
                 // Buttons
-                dialog.getButton(androidx.appcompat.app.AlertDialog.BUTTON_NEGATIVE)?.typeface = tf
-                dialog.getButton(androidx.appcompat.app.AlertDialog.BUTTON_POSITIVE)?.typeface = tf
-                dialog.getButton(androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL)?.typeface = tf
+                dialog.getButton(AlertDialog.BUTTON_NEGATIVE)?.typeface = tf
+                dialog.getButton(AlertDialog.BUTTON_POSITIVE)?.typeface = tf
+                dialog.getButton(AlertDialog.BUTTON_NEUTRAL)?.typeface = tf
             }
         }
 

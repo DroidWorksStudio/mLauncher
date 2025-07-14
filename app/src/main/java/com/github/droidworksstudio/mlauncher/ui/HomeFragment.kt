@@ -34,8 +34,6 @@ import androidx.biometric.BiometricPrompt
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.os.bundleOf
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.children
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
@@ -76,14 +74,13 @@ import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
 import com.github.droidworksstudio.mlauncher.helper.getNextAlarm
 import com.github.droidworksstudio.mlauncher.helper.getSystemIcons
 import com.github.droidworksstudio.mlauncher.helper.hasUsageAccessPermission
-import com.github.droidworksstudio.mlauncher.helper.hideStatusBar
 import com.github.droidworksstudio.mlauncher.helper.initActionService
 import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
 import com.github.droidworksstudio.mlauncher.helper.receivers.BatteryReceiver
 import com.github.droidworksstudio.mlauncher.helper.receivers.PrivateSpaceReceiver
 import com.github.droidworksstudio.mlauncher.helper.receivers.WeatherReceiver
+import com.github.droidworksstudio.mlauncher.helper.setTopPadding
 import com.github.droidworksstudio.mlauncher.helper.showPermissionDialog
-import com.github.droidworksstudio.mlauncher.helper.showStatusBar
 import com.github.droidworksstudio.mlauncher.helper.utils.AppReloader
 import com.github.droidworksstudio.mlauncher.helper.utils.BiometricHelper
 import com.github.droidworksstudio.mlauncher.helper.utils.PrivateSpaceManager
@@ -164,10 +161,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         super.onStart()
 
         // Handle status bar once per view creation
-        if (prefs.showStatusBar) {
-            showStatusBar(requireActivity())
-            checkForStatusbar(binding.mainLayout)
-        } else hideStatusBar(requireActivity())
+        setTopPadding(binding.mainLayout)
 
         // Register battery receiver
         batteryReceiver = BatteryReceiver()
@@ -197,10 +191,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         if (prefs.showWeather) getWeather() else binding.weather.isVisible = false
 
         // Handle status bar once per view creation
-        if (prefs.showStatusBar) {
-            showStatusBar(requireActivity())
-            checkForStatusbar(binding.mainLayout)
-        } else hideStatusBar(requireActivity())
+        setTopPadding(binding.mainLayout)
 
         // Update only dynamic elements (not all UI prefs)
         updateTimeAndInfo()
@@ -217,45 +208,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             e.printStackTrace()
         }
         dismissDialogs()
-    }
-
-    private fun checkForStatusbar(view: View) {
-        if (prefs.showStatusBar || isStatusBarVisible(view)) {
-            applyStatusBarPadding(view)
-        }
-    }
-
-    private fun isStatusBarVisible(view: View): Boolean {
-        val insets = ViewCompat.getRootWindowInsets(view)
-        return insets?.isVisible(WindowInsetsCompat.Type.statusBars()) == true
-    }
-
-    fun applyStatusBarPadding(view: View) {
-        ViewCompat.setOnApplyWindowInsetsListener(view) { v, insets ->
-            val statusBarHeight = getStatusBarIconAreaHeight(view)
-            v.setPadding(
-                v.paddingLeft,
-                statusBarHeight,
-                v.paddingRight,
-                v.paddingBottom
-            )
-            insets
-        }
-    }
-
-    fun getStatusBarIconAreaHeight(view: View): Int {
-        val insets = ViewCompat.getRootWindowInsets(view) ?: return 0
-
-        val cutoutHeight = insets.displayCutout?.safeInsetTop ?: 0
-        val density = view.resources.displayMetrics.density
-
-        // If there is a cutout, assume the icon area is below it and fixed ~24dp
-        return if (cutoutHeight > 0) {
-            (24 * density).toInt()  // Approx. 24dp in pixels
-        } else {
-            // No notch, use full status bar height
-            (density).toInt()
-        }
     }
 
     private fun updateUIFromPreferences() {

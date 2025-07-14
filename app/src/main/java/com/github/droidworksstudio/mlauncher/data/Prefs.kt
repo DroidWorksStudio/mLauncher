@@ -117,7 +117,6 @@ private const val DAILY_WORD_SIZE_TEXT = "DAILY_WORD_SIZE_TEXT"
 private const val BATTERY_SIZE_TEXT = "BATTERY_SIZE_TEXT"
 private const val TEXT_SIZE_SETTINGS = "TEXT_SIZE_SETTINGS"
 private const val TEXT_PADDING_SIZE = "TEXT_PADDING_SIZE"
-private const val APP_TIMER = "APP_TIMER"
 
 private const val BACKGROUND_COLOR = "BACKGROUND_COLOR"
 private const val APP_COLOR = "APP_COLOR"
@@ -155,9 +154,8 @@ class Prefs(val context: Context) {
     val messageWrongAdapter: JsonAdapter<List<MessageWrong>> = moshi.adapter(messageWrongListType)
 
     internal val prefsNormal: SharedPreferences = context.getSharedPreferences(PREFS_FILENAME, 0)
+    internal val prefsOnboarding: SharedPreferences = context.getSharedPreferences(PREFS_ONBOARDING_FILENAME, 0)
     internal val pinnedAppsKey = PINNED_APPS
-    private val prefsOnboarding: SharedPreferences =
-        context.getSharedPreferences(PREFS_ONBOARDING_FILENAME, 0)
 
     fun saveToString(): String {
         val allPreferences = HashMap<String, Any?>(prefsNormal.all)

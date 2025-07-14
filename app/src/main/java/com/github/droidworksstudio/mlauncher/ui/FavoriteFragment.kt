@@ -20,8 +20,6 @@ import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentFavoriteBinding
 import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
-import com.github.droidworksstudio.mlauncher.helper.hideStatusBar
-import com.github.droidworksstudio.mlauncher.helper.showStatusBar
 
 class FavoriteFragment : Fragment() {
 
@@ -146,7 +144,6 @@ class FavoriteFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        if (prefs.showStatusBar) showStatusBar(requireActivity()) else hideStatusBar(requireActivity())
 
         val backgroundColor = getHexForOpacity(prefs)
         binding.mainLayout.setBackgroundColor(backgroundColor)
