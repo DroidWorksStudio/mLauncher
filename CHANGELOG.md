@@ -4,9 +4,35 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Implemented Enhancements:
+
+- *(app-drawer)* Add option to open app on Enter key press - ([e3ee7e9](https://github.com/DroidWorksStudio/mLauncher/commit/e3ee7e94487bc310897e6af6b3e0e5f43071c54f))
+
+### Versioning:
+
+- Increment build number to 4 - ([3267c57](https://github.com/DroidWorksStudio/mLauncher/commit/3267c572d8ef06d6cc3056ed3a27d1c151ab0eec))
+
+## [1.10.8.3](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.8.3) - (13, July 2025)
+
 ### Bug Fixes:
 
 - *(AppDrawer)* Only show "Personal apps" header if other profiles exist - ([46ddee8](https://github.com/DroidWorksStudio/mLauncher/commit/46ddee8bf4c36b01f8d5a7c584ef95993b2ac261))
+- *(dependabot)* Group all dependency updates - ([cca8315](https://github.com/DroidWorksStudio/mLauncher/commit/cca83156a8f4336320a7208af822ac9a300c6d29))
+- *(deps)* Remove dependabot group names - ([f0e6880](https://github.com/DroidWorksStudio/mLauncher/commit/f0e6880eaee52f72b4c55d134c8367eb1851d474))
+- *(workflows)* Use `GITHUB_TOKEN` for `dependabot` actions - ([8887e56](https://github.com/DroidWorksStudio/mLauncher/commit/8887e567396bb2f71091c107f336bf6bc556f7eb))
+
+### Versioning:
+
+- Increment build number to 3 - ([a9d167d](https://github.com/DroidWorksStudio/mLauncher/commit/a9d167d391db87a3ae2066b07790f7ac535b1321))
+
+### Feature Removal:
+
+- Remove deprecated workflow - ([4ffadaf](https://github.com/DroidWorksStudio/mLauncher/commit/4ffadaf53a91acddf9411e03e2e5fe61e2fe8e1e))
+
+### Refactoring:
+
+- *(Onboarding)* Implement ViewBinding in OnboardingPageFragment - ([55b5d68](https://github.com/DroidWorksStudio/mLauncher/commit/55b5d689b20a615d17253ed7f409d99510f3107b))
+- Nullify views in OnboardingPageFragment - ([2c5710c](https://github.com/DroidWorksStudio/mLauncher/commit/2c5710cccc86c7eaab7ebbb148b79e3a842d4fd8))
 
 ## [1.10.8.2](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.8.2) - (12, July 2025)
 

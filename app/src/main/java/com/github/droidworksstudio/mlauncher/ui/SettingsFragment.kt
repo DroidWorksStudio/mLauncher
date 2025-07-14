@@ -192,6 +192,7 @@ class SettingsFragment : Fragment() {
         var selectedFilterStrength by remember { mutableIntStateOf(prefs.filterStrength) }
 
         var toggledAutoOpenApp by remember { mutableStateOf(prefs.autoOpenApp) }
+        var toggledOpenAppOnEnter by remember { mutableStateOf(prefs.openAppOnEnter) }
         var toggledAppsLocked by remember { mutableStateOf(prefs.homeLocked) }
         var selectedHomeAppsNum by remember { mutableIntStateOf(prefs.homeAppsNum) }
         var selectedHomePagesNum by remember { mutableIntStateOf(prefs.homePagesNum) }
@@ -732,6 +733,17 @@ class SettingsFragment : Fragment() {
                         onCheckedChange = {
                             toggledAutoOpenApp = !prefs.autoOpenApp
                             prefs.autoOpenApp = toggledAutoOpenApp
+                        }
+                    )
+
+
+                    SettingsSwitch(
+                        text = getLocalizedString(R.string.open_apps_on_enter),
+                        fontSize = titleFontSize,
+                        defaultState = toggledOpenAppOnEnter,
+                        onCheckedChange = {
+                            toggledOpenAppOnEnter = !prefs.openAppOnEnter
+                            prefs.openAppOnEnter = toggledOpenAppOnEnter
                         }
                     )
 

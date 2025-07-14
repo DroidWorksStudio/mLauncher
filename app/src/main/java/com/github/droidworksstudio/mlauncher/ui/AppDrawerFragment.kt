@@ -325,7 +325,7 @@ class AppDrawerFragment : Fragment() {
 
                         adapter.itemCount == 1 -> {
                             val firstItem = adapter.getFirstInList().toString()
-                            if (firstItem.equals(trimmedQuery, ignoreCase = true)) {
+                            if (firstItem.equals(trimmedQuery, ignoreCase = true) || prefs.openAppOnEnter) {
                                 adapter.launchFirstInList()
                             } else {
                                 requireContext().searchOnPlayStore(trimmedQuery)
@@ -344,7 +344,11 @@ class AppDrawerFragment : Fragment() {
                         }
 
                         else -> {
-                            requireContext().searchOnPlayStore(trimmedQuery)
+                            if (prefs.openAppOnEnter) {
+                                adapter.launchFirstInList()
+                            } else {
+                                requireContext().searchOnPlayStore(trimmedQuery)
+                            }
                         }
                     }
 

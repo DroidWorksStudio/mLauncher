@@ -15,7 +15,7 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4.2.2
         with:
-          token: ${{ secrets.GIT_BOT_TOKEN }}
+          token: ${{ github.actor == 'dependabot[bot]' && secrets.GITHUB_TOKEN || secrets.GIT_BOT_TOKEN }}
           fetch-depth: 0
           ref: main
 
