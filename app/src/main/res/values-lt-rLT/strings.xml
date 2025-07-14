@@ -61,7 +61,7 @@
     <string name="search_from_start">Programėlių paieška nuo pradžių.</string>
     <string name="home_management">Pagrindinis &amp; Programų valdymas</string>
     <string name="auto_open_apps">Automatiškai atidaryti programėlės</string>
-    <string name="open_apps_on_enter">Open App on Enter</string>
+    <string name="open_apps_on_enter">Atidaryti programėlę paspaudus „Enter“</string>
     <string name="lock_home_apps">Užrakinti programas</string>
     <string name="lock_settings">Užrakinimo nustatymai</string>
     <string name="apps_on_home_screen">Namų programų skaičius</string>
