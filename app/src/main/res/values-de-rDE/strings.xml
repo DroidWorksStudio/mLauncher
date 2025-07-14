@@ -95,6 +95,7 @@
     <string name="alignment_to_bottom">Unten ausrichten</string>
     <string name="visibility_display">Sichtbarkeit &amp; Anzeige</string>
     <string name="show_status_bar">Statusleiste anzeigen</string>
+    <string name="show_navigation_bar">Show Navigation bar</string>
     <string name="show_recent_apps">Zuletzt verwendete Apps anzeigen</string>
     <string name="number_of_recents">Anzahl der letzten Apps</string>
     <string name="show_app_usage_stats">App-Nutzungsstatistiken anzeigen</string>
