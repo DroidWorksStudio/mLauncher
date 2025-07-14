@@ -251,6 +251,7 @@
     <string name="apply_icon_pack_are_you_sure">Czy na pewno chcesz zastosować ten pakiet ikon?\n\n%1$s</string>
     <string name="apply_to_home">Zastosuj do strony głównej</string>
     <string name="apply_to_app_list">Zastosuj do listy aplikacji</string>
+    <string name="default_icon_not_found">Nie znaleziono domyślnej ikony aplikacji, którą można narysować</string>
     <!-- Settings Strings -->
     <string name="left">W lewo</string>
     <string name="right">Prawy</string>
