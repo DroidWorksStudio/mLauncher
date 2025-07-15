@@ -6,6 +6,12 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Use application context for Prefs initialization - ([4ed52b1](https://github.com/DroidWorksStudio/mLauncher/commit/4ed52b1ae6c3a743f4e5cd47f63718792aeea3f9))
+
+## [1.10.8.5](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.8.5) - (15, July 2025)
+
+### Refactoring:
+
 - Simplify top padding logic in setTopPadding - ([6511d97](https://github.com/DroidWorksStudio/mLauncher/commit/6511d97be8e1f5bb3a6c3b34103a10c93f70f03d))
 - Defer status/navigation bar visibility changes until view is ready - ([3f4aa30](https://github.com/DroidWorksStudio/mLauncher/commit/3f4aa309c1694be5a3efcbdf3afd2553b9902501))
 
