@@ -26,6 +26,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Introduce API 29 specific styles - ([b4412b3](https://github.com/DroidWorksStudio/mLauncher/commit/b4412b3bff2435e064c80ac0f866df91ab7c9371))
 - Improve theme handling and AndroidManifest clarity - ([e7e1b81](https://github.com/DroidWorksStudio/mLauncher/commit/e7e1b81aabd433126bd52b62b6ebda5beef53247))
 - Simplify status bar height retrieval for top padding - ([cd5f170](https://github.com/DroidWorksStudio/mLauncher/commit/cd5f170f19b3b1584405374ae46dba8b8042f05b))
 - Improve status bar height calculation and top padding adjustment - ([0cd49c2](https://github.com/DroidWorksStudio/mLauncher/commit/0cd49c22f9ab148287d1c43d18f1122d2b58f6ea))
