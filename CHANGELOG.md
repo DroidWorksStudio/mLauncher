@@ -9,6 +9,10 @@ All notable changes to this project will be documented in this file. See [conven
 - *(app-drawer)* Add option to open app on Enter key press - ([e3ee7e9](https://github.com/DroidWorksStudio/mLauncher/commit/e3ee7e94487bc310897e6af6b3e0e5f43071c54f))
 - Add option to toggle navigation bar visibility - ([80f7e1f](https://github.com/DroidWorksStudio/mLauncher/commit/80f7e1fe6e4d83da291826b92c0ae563bae9cffc))
 
+### Bug Fixes:
+
+- Optimize location updates for battery life - ([8e2a8b3](https://github.com/DroidWorksStudio/mLauncher/commit/8e2a8b36330f8aef2277807bd17bcc5e2792ec14))
+
 ### Versioning:
 
 - Increment build number to 4 - ([3267c57](https://github.com/DroidWorksStudio/mLauncher/commit/3267c572d8ef06d6cc3056ed3a27d1c151ab0eec))
