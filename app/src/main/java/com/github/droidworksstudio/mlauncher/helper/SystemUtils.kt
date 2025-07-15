@@ -1,7 +1,6 @@
 package com.github.droidworksstudio.mlauncher.helper
 
 import android.Manifest
-import android.annotation.SuppressLint
 import android.app.AlarmManager
 import android.app.AppOpsManager
 import android.app.UiModeManager
@@ -41,6 +40,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.graphics.withSave
 import androidx.core.net.toUri
 import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updatePadding
 import com.github.droidworksstudio.common.AppLogger
 import com.github.droidworksstudio.common.ColorIconsExtensions
@@ -712,35 +712,34 @@ private fun getHomeIcons(context: Context, prefs: Prefs, nonNullDrawable: Drawab
     }
 }
 
-@SuppressLint("InternalInsetResource", "DiscouragedApi")
-fun getStatusBarHeight(context: Context): Int {
-    val resourceId = context.resources.getIdentifier("status_bar_height", "dimen", "android")
-    return if (resourceId > 0) {
-        context.resources.getDimensionPixelSize(resourceId)
-    } else {
-        (24 * context.resources.displayMetrics.density).toInt()
-    }
-}
-
-
 fun setTopPadding(view: View, isSettings: Boolean = false) {
     val initialTopPadding = view.paddingTop
 
     ViewCompat.setOnApplyWindowInsetsListener(view) { v, insets ->
-        val systemBarsTop = getStatusBarHeight(v.context)
 
-        val topInset = if (isSettings) {
-            if (systemBarsTop > 0) {
-                systemBarsTop
-            } else {
-                // As last fallback, use a typical status bar height (e.g., 24dp)
-                // Adjust as needed
-                (24 * v.resources.displayMetrics.density).toInt()
+        val systemBarsInsets = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+        var topInset = systemBarsInsets.top
+        when (isSettings) {
+            true -> {
+                topInset = if (topInset == 0) {
+                    // Fallback to 24dp converted to pixels (no reflection, no resource lookup)
+                    (24 * v.resources.displayMetrics.density).toInt()
+                } else {
+                    topInset
+                }
             }
-        } else {
-            // Use actual inset; might be 0 if status bar is hidden
-            systemBarsTop
+
+            false -> {
+                topInset = if (topInset == 0) {
+                    // Fallback to 24dp converted to pixels (no reflection, no resource lookup)
+                    (24 * v.resources.displayMetrics.density).toInt()
+                } else {
+                    topInset / 2
+                }
+            }
         }
+
+
 
         v.updatePadding(top = initialTopPadding + topInset)
 
