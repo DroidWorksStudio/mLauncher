@@ -3,7 +3,6 @@
     <style name="Theme.mLauncher" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:fontFamily">@android:fontFamily/system_font</item>
 
-        <item name="android:forceDarkAllowed">false</item>
         <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:windowTranslucentNavigation">true</item>
@@ -19,7 +18,6 @@
         <item name="android:statusBarColor">@color/blackInverseTrans50</item>
         <item name="android:navigationBarColor">@color/blackInverseTrans50</item>
         <!-- <item name="android:enforceStatusBarContrast">false</item> -->
-        <item name="android:enforceNavigationBarContrast">false</item>
         <!-- <item name="android:windowTranslucentStatus">false</item> -->
         <!-- <item name="android:windowTranslucentNavigation">true</item> -->
         <item name="windowActionBar">false</item>
