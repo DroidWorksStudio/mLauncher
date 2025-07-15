@@ -1239,8 +1239,8 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
         locationManager.requestLocationUpdates(
             provider,
-            0L,
-            0f,
+            30 * 60 * 1000L, // 30 minutes in milliseconds
+            100f,            // or use e.g., 100 meters to avoid frequent updates if user moves
             locationListener,
             Looper.getMainLooper()
         )
