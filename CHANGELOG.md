@@ -11,6 +11,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Bug Fixes:
 
+- Remove location update timeout in WeatherReceiver - ([88cdbdc](https://github.com/DroidWorksStudio/mLauncher/commit/88cdbdc3e54727b0d9da6418bdb261929edc057c))
 - Optimize location updates for battery life - ([8e2a8b3](https://github.com/DroidWorksStudio/mLauncher/commit/8e2a8b36330f8aef2277807bd17bcc5e2792ec14))
 
 ### Versioning:
