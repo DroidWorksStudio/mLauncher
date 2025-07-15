@@ -26,6 +26,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Improve app drawer icon loading with caching and asynchronous loading - ([598923a](https://github.com/DroidWorksStudio/mLauncher/commit/598923af4820311318099c6b2dbc5ca56f38fd94))
 - Introduce API 29 specific styles - ([b4412b3](https://github.com/DroidWorksStudio/mLauncher/commit/b4412b3bff2435e064c80ac0f866df91ab7c9371))
 - Improve theme handling and AndroidManifest clarity - ([e7e1b81](https://github.com/DroidWorksStudio/mLauncher/commit/e7e1b81aabd433126bd52b62b6ebda5beef53247))
 - Simplify status bar height retrieval for top padding - ([cd5f170](https://github.com/DroidWorksStudio/mLauncher/commit/cd5f170f19b3b1584405374ae46dba8b8042f05b))
