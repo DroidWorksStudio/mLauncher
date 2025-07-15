@@ -23,10 +23,9 @@ class Mlauncher : Application() {
 
         fun initialize(context: Context) {
             if (appContext != null) return // already initialized
-            appContext = context.applicationContext
+            appContext = context
 
-
-            val prefs = Prefs(appContext!!)
+            val prefs = Prefs(context)
 
             // 🌓 Set theme mode once at app startup
             val themeMode = when (prefs.appTheme) {
