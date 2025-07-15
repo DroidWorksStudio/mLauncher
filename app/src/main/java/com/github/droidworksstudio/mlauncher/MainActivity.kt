@@ -153,9 +153,6 @@ class MainActivity : AppCompatActivity() {
             ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
         }
 
-        if (prefs.showStatusBar) showStatusBar(this.window) else hideStatusBar(this.window)
-        if (prefs.showNavigationBar) showNavigationBar(this.window) else hideNavigationBar(this.window)
-
         if (prefs.iconPackHome == Constants.IconPacks.Custom) {
             val executor = Executors.newSingleThreadExecutor()
             executor.execute {
@@ -321,6 +318,13 @@ class MainActivity : AppCompatActivity() {
                 }
             }
     }
+
+    override fun onPostCreate(savedInstanceState: Bundle?) {
+        super.onPostCreate(savedInstanceState)
+        if (prefs.showStatusBar) showStatusBar(this.window) else hideStatusBar(this.window)
+        if (prefs.showNavigationBar) showNavigationBar(this.window) else hideNavigationBar(this.window)
+    }
+
 
     private fun handleFontSelected(uri: Uri?) {
         if (uri == null) return

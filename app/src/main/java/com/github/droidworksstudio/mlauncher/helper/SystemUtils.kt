@@ -314,52 +314,85 @@ fun initActionService(context: Context): ActionService? {
 
 fun showStatusBar(window: Window) {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-        window.insetsController?.show(WindowInsets.Type.statusBars())
-    } else
-        @Suppress("DEPRECATION", "InlinedApi")
-        window.decorView.apply {
-            systemUiVisibility =
-                View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+        val insetsController = window.insetsController
+        if (insetsController != null) {
+            insetsController.show(WindowInsets.Type.statusBars())
+        } else {
+            // Postpone if insetsController not ready yet
+            window.decorView.post {
+                window.insetsController?.show(WindowInsets.Type.statusBars())
+            }
         }
+    } else {
+        @Suppress("DEPRECATION", "InlinedApi")
+        window.decorView.let { decorView ->
+            val flags = decorView.systemUiVisibility and
+                    (View.SYSTEM_UI_FLAG_FULLSCREEN.inv()) // clear fullscreen flag
+            decorView.systemUiVisibility = flags or View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+        }
+    }
 }
 
 fun hideStatusBar(window: Window) {
-    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R)
-        window.insetsController?.hide(WindowInsets.Type.statusBars())
-    else {
-        @Suppress("DEPRECATION")
-        window.decorView.apply {
-            systemUiVisibility =
-                View.SYSTEM_UI_FLAG_IMMERSIVE or View.SYSTEM_UI_FLAG_FULLSCREEN
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+        val insetsController = window.insetsController
+        if (insetsController != null) {
+            insetsController.hide(WindowInsets.Type.statusBars())
+        } else {
+            window.decorView.post {
+                window.insetsController?.hide(WindowInsets.Type.statusBars())
+            }
         }
+    } else {
+        @Suppress("DEPRECATION")
+        (window.decorView.let { decorView ->
+            val flags = decorView.systemUiVisibility or
+                    View.SYSTEM_UI_FLAG_IMMERSIVE or
+                    View.SYSTEM_UI_FLAG_FULLSCREEN
+            decorView.systemUiVisibility = flags
+        })
     }
 }
 
 fun showNavigationBar(window: Window) {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-        // For Android 11 (API 30) and above, use WindowInsetsController to show the navigation bar
-        window.insetsController?.show(WindowInsets.Type.navigationBars())
+        val insetsController = window.insetsController
+        if (insetsController != null) {
+            insetsController.show(WindowInsets.Type.navigationBars())
+        } else {
+            window.decorView.post {
+                window.insetsController?.show(WindowInsets.Type.navigationBars())
+            }
+        }
     } else {
         @Suppress("DEPRECATION", "InlinedApi")
-        // For older versions, show the navigation bar using systemUiVisibility
-        window.decorView.apply {
-            systemUiVisibility =
-                View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-        }
+        (window.decorView.let { decorView ->
+            val flags = decorView.systemUiVisibility and
+                    (View.SYSTEM_UI_FLAG_HIDE_NAVIGATION.inv()) // clear hide nav flag
+            decorView.systemUiVisibility = flags or View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+        })
     }
 }
 
 fun hideNavigationBar(window: Window) {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-        // For Android 11 (API 30) and above, use WindowInsetsController to hide the navigation bar
-        window.insetsController?.hide(WindowInsets.Type.navigationBars())
+        val insetsController = window.insetsController
+        if (insetsController != null) {
+            insetsController.hide(WindowInsets.Type.navigationBars())
+        } else {
+            window.decorView.post {
+                window.insetsController?.hide(WindowInsets.Type.navigationBars())
+            }
+        }
     } else {
         @Suppress("DEPRECATION")
-        // For older versions, hide the navigation bar using systemUiVisibility
-        window.decorView.apply {
-            systemUiVisibility =
-                View.SYSTEM_UI_FLAG_IMMERSIVE or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or View.SYSTEM_UI_FLAG_FULLSCREEN
-        }
+        (window.decorView.let { decorView ->
+            val flags = decorView.systemUiVisibility or
+                    View.SYSTEM_UI_FLAG_IMMERSIVE or
+                    View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or
+                    View.SYSTEM_UI_FLAG_FULLSCREEN
+            decorView.systemUiVisibility = flags
+        })
     }
 }
 
