@@ -746,42 +746,35 @@ private fun getHomeIcons(context: Context, prefs: Prefs, nonNullDrawable: Drawab
 }
 
 fun setTopPadding(view: View, isSettings: Boolean = false) {
-    val initialTopPadding = view.paddingTop
-
     ViewCompat.setOnApplyWindowInsetsListener(view) { v, insets ->
 
         val systemBarsInsets = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-        var topInset = systemBarsInsets.top
-        when (isSettings) {
-            true -> {
-                topInset = if (topInset == 0) {
-                    // Fallback to 24dp converted to pixels (no reflection, no resource lookup)
-                    (24 * v.resources.displayMetrics.density).toInt()
-                } else {
-                    topInset
-                }
-            }
+        val displayCutout = insets.displayCutout
 
-            false -> {
-                topInset = if (topInset == 0) {
-                    // Fallback to 24dp converted to pixels (no reflection, no resource lookup)
-                    (24 * v.resources.displayMetrics.density).toInt()
-                } else {
-                    topInset / 2
-                }
-            }
+        // Start with the top inset from status bar / notch area
+        val topInset = systemBarsInsets.top
+
+        // If there's a cutout (notch), its safeInsetTop should already be included in systemBarsInsets.top,
+        // but to be safe, you could add it explicitly if needed
+        val cutoutTopInset = displayCutout?.safeInsetTop ?: 0
+
+        // Combine topInset and cutout if you want to make sure notch space is accounted for:
+        val totalTopInset = maxOf(topInset, cutoutTopInset)
+
+        // Apply your fallback & settings logic
+        val finalTopPadding = when {
+            totalTopInset == 0 -> (24 * v.resources.displayMetrics.density).toInt()
+            isSettings -> totalTopInset
+            else -> totalTopInset / 2
         }
 
-
-
-        v.updatePadding(top = initialTopPadding + topInset)
+        v.updatePadding(top = finalTopPadding)
 
         insets
     }
 
     ViewCompat.requestApplyInsets(view)
 }
-
 
 class CenteredImageSpan(drawable: Drawable) : ImageSpan(drawable) {
     override fun draw(
