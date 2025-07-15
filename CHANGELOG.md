@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Refactoring:
+
+- Defer status/navigation bar visibility changes until view is ready - ([3f4aa30](https://github.com/DroidWorksStudio/mLauncher/commit/3f4aa309c1694be5a3efcbdf3afd2553b9902501))
+
+## [1.10.8.4](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.8.4) - (15, July 2025)
+
 ### Implemented Enhancements:
 
 - *(app-drawer)* Add option to open app on Enter key press - ([e3ee7e9](https://github.com/DroidWorksStudio/mLauncher/commit/e3ee7e94487bc310897e6af6b3e0e5f43071c54f))
