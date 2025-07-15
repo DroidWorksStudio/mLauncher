@@ -1244,12 +1244,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             locationListener,
             Looper.getMainLooper()
         )
-
-        // ⏱ Optional: timeout fallback
-        Handler(Looper.getMainLooper()).postDelayed({
-            locationManager.removeUpdates(locationListener)
-            AppLogger.w("WeatherReceiver", "Location update timed out.")
-        }, 10000) // 10 seconds
     }
 
 
