@@ -23,7 +23,7 @@
     </p>
     <div align='center'>
         <p>
-            <img src='https://img.shields.io/badge/Android-SDK_35-BD93F9?style=flat-square&logo=android&logoColor=white' alt="SDK-35">
+            <img src='https://img.shields.io/badge/Android-SDK_36-BD93F9?style=flat-square&logo=android&logoColor=white' alt="SDK-36">
             <a href='https://github.com/DroidWorksStudio/mLauncher/blob/main/LICENSE'><img src='https://img.shields.io/github/license/DroidWorksStudio/mLauncher?color=BD93F9&style=flat-square' alt="LICENSE"></a>
             <br>
             <a href='https://github.com/DroidWorksStudio/mLauncher/releases/latest'><img src='https://img.shields.io/github/downloads/DroidWorksStudio/mLauncher/total?color=50FA7B&style=flat-square' alt="releases"></a>
