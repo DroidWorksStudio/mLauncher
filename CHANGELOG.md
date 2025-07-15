@@ -8,6 +8,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Defer status/navigation bar visibility changes until view is ready - ([3f4aa30](https://github.com/DroidWorksStudio/mLauncher/commit/3f4aa309c1694be5a3efcbdf3afd2553b9902501))
 
+### Releases:
+
+- Bump build number to 5 - ([b478d95](https://github.com/DroidWorksStudio/mLauncher/commit/b478d95774b52e4dd500450d168d63c75b4ad567))
+
 ## [1.10.8.4](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.8.4) - (15, July 2025)
 
 ### Implemented Enhancements:
