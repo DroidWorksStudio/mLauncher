@@ -17,7 +17,6 @@ import androidx.activity.OnBackPressedCallback
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.view.WindowCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
@@ -176,12 +175,6 @@ class MainActivity : AppCompatActivity() {
             finish() // Finish MainActivity so that user can't return to it until onboarding is completed
         }
 
-        val themeMode = when (prefs.appTheme) {
-            Constants.Theme.Light -> AppCompatDelegate.MODE_NIGHT_NO
-            Constants.Theme.Dark -> AppCompatDelegate.MODE_NIGHT_YES
-            Constants.Theme.System -> AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM
-        }
-        AppCompatDelegate.setDefaultNightMode(themeMode)
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
@@ -519,11 +512,6 @@ class MainActivity : AppCompatActivity() {
     override fun onUserLeaveHint() {
         backToHomeScreen()
         super.onUserLeaveHint()
-    }
-
-    override fun onConfigurationChanged(newConfig: Configuration) {
-        super.onConfigurationChanged(newConfig)
-        recreate()
     }
 
     private fun backToHomeScreen() {

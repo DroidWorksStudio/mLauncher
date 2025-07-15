@@ -2,6 +2,7 @@ package com.github.droidworksstudio.mlauncher
 
 import android.app.Application
 import android.content.Context
+import androidx.appcompat.app.AppCompatDelegate
 import com.github.droidworksstudio.common.CrashHandler
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Prefs
@@ -24,8 +25,18 @@ class Mlauncher : Application() {
             if (appContext != null) return // already initialized
             appContext = context.applicationContext
 
-            // Optional: preload icons, init crash handler, etc. if needed
+
             val prefs = Prefs(appContext!!)
+
+            // 🌓 Set theme mode once at app startup
+            val themeMode = when (prefs.appTheme) {
+                Constants.Theme.Light -> AppCompatDelegate.MODE_NIGHT_NO
+                Constants.Theme.Dark -> AppCompatDelegate.MODE_NIGHT_YES
+                Constants.Theme.System -> AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM
+            }
+            AppCompatDelegate.setDefaultNightMode(themeMode)
+
+            // Optional: preload icons, init crash handler, etc. if needed
             val executor = Executors.newSingleThreadExecutor()
             executor.execute {
                 if (prefs.iconPackHome == Constants.IconPacks.Custom) {
