@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Simplify top padding logic in setTopPadding - ([6511d97](https://github.com/DroidWorksStudio/mLauncher/commit/6511d97be8e1f5bb3a6c3b34103a10c93f70f03d))
 - Defer status/navigation bar visibility changes until view is ready - ([3f4aa30](https://github.com/DroidWorksStudio/mLauncher/commit/3f4aa309c1694be5a3efcbdf3afd2553b9902501))
 
 ### Releases:
