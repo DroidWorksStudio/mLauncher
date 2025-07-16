@@ -29,7 +29,6 @@ import com.github.droidworksstudio.common.getSdCardInfo
 import com.github.droidworksstudio.common.getStorageInfo
 import com.github.droidworksstudio.mlauncher.MainActivity
 import com.github.droidworksstudio.mlauncher.R
-import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.helper.getDeviceInfo
 import com.github.droidworksstudio.mlauncher.helper.themeDownloadButton
@@ -296,7 +295,7 @@ class DialogManager(val context: Context, val activity: Activity) {
     fun <T> showSingleChoiceBottomSheet(
         context: Context,
         options: Array<T>,
-        titleResId: Int,
+        title: String,
         fonts: List<Typeface>? = null,
         fontSize: Float = 18f,
         selectedIndex: Int = -1,            // <- NEW
@@ -306,7 +305,6 @@ class DialogManager(val context: Context, val activity: Activity) {
 
         val itemStrings = options.map {
             when (it) {
-                is Constants.Language -> it.getString()
                 is Enum<*> -> it.name
                 else -> it.toString()
             }
@@ -322,7 +320,7 @@ class DialogManager(val context: Context, val activity: Activity) {
         }
 
         val titleView = TextView(context).apply {
-            text = context.getString(titleResId)
+            text = title
             textSize = 20f
             setPadding(0, 0, 0, 32)
             gravity = Gravity.CENTER
@@ -399,7 +397,7 @@ class DialogManager(val context: Context, val activity: Activity) {
     fun <T> showSingleChoiceBottomSheetPill(
         context: Context,
         options: Array<T>,
-        titleResId: Int,
+        title: String,
         fonts: List<Typeface>? = null,
         fontSize: Float = 18f,
         selectedIndex: Int = -1, // None selected
@@ -409,7 +407,6 @@ class DialogManager(val context: Context, val activity: Activity) {
 
         val itemStrings = options.map {
             when (it) {
-                is Constants.Language -> it.getString()
                 is Enum<*> -> it.name
                 else -> it.toString()
             }
@@ -427,7 +424,7 @@ class DialogManager(val context: Context, val activity: Activity) {
         }
 
         val titleView = TextView(context).apply {
-            text = context.getString(titleResId)
+            text = title
             textSize = 20f
             setPadding(0, 0, 0, 32)
             gravity = Gravity.CENTER
@@ -552,7 +549,7 @@ class DialogManager(val context: Context, val activity: Activity) {
 
     fun showColorPickerBottomSheet(
         context: Context,
-        titleResId: Int,
+        title: String,
         color: Int,
         onItemSelected: (Int) -> Unit
     ) {
@@ -566,7 +563,7 @@ class DialogManager(val context: Context, val activity: Activity) {
 
         // Title
         val titleTextView = TextView(context).apply {
-            text = context.getString(titleResId)
+            text = title
             textSize = 20f
             gravity = Gravity.CENTER
             setPadding(32, 32, 32, 16)

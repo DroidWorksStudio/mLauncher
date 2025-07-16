@@ -8,8 +8,6 @@ import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.Constants
-import com.github.droidworksstudio.mlauncher.data.Constants.Theme.Dark
-import com.github.droidworksstudio.mlauncher.data.Constants.Theme.Light
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentOnboardingBinding
 import com.github.droidworksstudio.mlauncher.helper.isSystemInDarkMode
@@ -42,8 +40,8 @@ class OnboardingFragment : Fragment(R.layout.fragment_onboarding) {
         viewPager.adapter = adapter
 
         val isDark = when (prefs.appTheme) {
-            Light -> false
-            Dark -> true
+            Constants.Theme.Light -> false
+            Constants.Theme.Dark -> true
             Constants.Theme.System -> isSystemInDarkMode(requireContext())
         }
 

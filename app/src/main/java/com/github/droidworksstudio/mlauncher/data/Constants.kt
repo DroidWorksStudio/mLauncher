@@ -452,6 +452,14 @@ object Constants {
         Dark,
         Light;
 
+        fun getString(): String {
+            return when (this) {
+                System -> getLocalizedString(R.string.system_default)
+                Dark -> getLocalizedString(R.string.dark)
+                Light -> getLocalizedString(R.string.light)
+            }
+        }
+
         // Keep this for Composable usage
         @Composable
         override fun string(): String {

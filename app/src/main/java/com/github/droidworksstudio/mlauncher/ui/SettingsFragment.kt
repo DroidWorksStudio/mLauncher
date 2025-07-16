@@ -66,9 +66,6 @@ import com.github.droidworksstudio.mlauncher.data.AppListItem
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Constants.Action
 import com.github.droidworksstudio.mlauncher.data.Constants.AppDrawerFlag
-import com.github.droidworksstudio.mlauncher.data.Constants.Theme.Dark
-import com.github.droidworksstudio.mlauncher.data.Constants.Theme.Light
-import com.github.droidworksstudio.mlauncher.data.Constants.Theme.System
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentSettingsBinding
 import com.github.droidworksstudio.mlauncher.helper.FontManager
@@ -145,9 +142,9 @@ class SettingsFragment : Fragment() {
         binding.settingsView.setContent {
 
             val isDark = when (prefs.appTheme) {
-                Light -> false
-                Dark -> true
-                System -> isSystemInDarkMode(requireContext())
+                Constants.Theme.Light -> false
+                Constants.Theme.Dark -> true
+                Constants.Theme.System -> isSystemInDarkMode(requireContext())
             }
 
             setThemeMode(requireContext(), isDark, binding.settingsView)
@@ -501,29 +498,35 @@ class SettingsFragment : Fragment() {
 
                     SettingsSelect(
                         title = getLocalizedString(R.string.theme_mode),
-                        option = selectedTheme.string(),
+                        option = selectedTheme.getString(),
                         fontSize = titleFontSize,
                         onClick = {
+                            val themeEntries = Constants.Theme.entries
 
-                            val gravityOptions = Constants.Theme.entries.toTypedArray()
-                            val selectedIndex = gravityOptions.indexOf(prefs.appTheme).takeIf { it >= 0 } ?: 1
+                            val themeOptions = themeEntries.map { it.getString() }
+
+                            val selectedIndex = themeEntries.indexOf(selectedTheme).takeIf { it >= 0 } ?: 1
 
                             dialogBuilder.showSingleChoiceBottomSheetPill(
                                 context = requireContext(),
-                                options = Constants.Theme.entries.toTypedArray(),
-                                titleResId = R.string.theme_mode,
+                                options = themeOptions.toTypedArray(),
+                                title = getLocalizedString(R.string.theme_mode),
                                 selectedIndex = selectedIndex,
-                                onItemSelected = { newTheme ->
-                                    selectedTheme = newTheme // Update state
-                                    prefs.appTheme = newTheme // Persist selection in preferences
+                                onItemSelected = { newThemeName ->
+                                    val newThemeIndex = themeOptions.indexOfFirst { it == newThemeName }
+                                    if (newThemeIndex != -1) {
+                                        val newTheme = themeEntries[newThemeIndex]
+                                        selectedTheme = newTheme
+                                        prefs.appTheme = newTheme
 
-                                    val isDark = when (prefs.appTheme) {
-                                        Light -> false
-                                        Dark -> true
-                                        System -> isSystemInDarkMode(requireContext())
+                                        val isDark = when (newTheme) {
+                                            Constants.Theme.Light -> false
+                                            Constants.Theme.Dark -> true
+                                            Constants.Theme.System -> isSystemInDarkMode(requireContext())
+                                        }
+                                        setThemeMode(requireContext(), isDark, binding.settingsView)
+                                        requireActivity().recreate()
                                     }
-                                    setThemeMode(requireContext(), isDark, binding.settingsView)
-                                    requireActivity().recreate()
                                 }
                             )
                         }
@@ -531,23 +534,31 @@ class SettingsFragment : Fragment() {
 
                     SettingsSelect(
                         title = getLocalizedString(R.string.app_language),
-                        option = selectedLanguage.string(),
+                        option = selectedLanguage.getString(), // assuming selectedLanguage: Constants.Language
                         fontSize = titleFontSize,
                         onClick = {
+                            // Generate options
                             val languageEntries = Constants.Language.entries
+
+                            val languageOptions = languageEntries.map { it.getString() } // get localized names to display
 
                             // Determine selected index based on current prefs value
                             val selectedIndex = languageEntries.indexOf(selectedLanguage).takeIf { it >= 0 } ?: 1
 
                             dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
-                                options = Constants.Language.entries.toTypedArray(),
-                                titleResId = R.string.app_language,
+                                options = languageOptions.toTypedArray(),
+                                title = getLocalizedString(R.string.app_language),
                                 selectedIndex = selectedIndex,
-                                onItemSelected = { newLanguage ->
-                                    selectedLanguage = newLanguage // Update state
-                                    prefs.appLanguage = newLanguage // Persist selection in preferences
-                                    requireActivity().recreate()
+                                onItemSelected = { newLanguageName ->
+                                    // Find the actual enum by matching its localized name
+                                    val newLanguageIndex = languageOptions.indexOfFirst { it == newLanguageName }
+                                    if (newLanguageIndex != -1) {
+                                        val newLanguage = languageEntries[newLanguageIndex]
+                                        selectedLanguage = newLanguage // Update state
+                                        prefs.appLanguage = newLanguage // Persist in preferences
+                                        requireActivity().recreate() // force reload with new language
+                                    }
                                 }
                             )
                         }
@@ -573,7 +584,7 @@ class SettingsFragment : Fragment() {
                                 context = requireContext(),
                                 options = fontFamilyOptions.toTypedArray(),
                                 fonts = fontFamilyFonts,
-                                titleResId = R.string.font_family,
+                                title = getLocalizedString(R.string.font_family),
                                 selectedIndex = selectedIndex,
                                 onItemSelected = { newFontFamilyName ->
                                     val newFontFamilyIndex =
@@ -592,7 +603,6 @@ class SettingsFragment : Fragment() {
                                 }
                             )
                         }
-
                     )
 
                     Spacer(modifier = Modifier.height(14.dp))
@@ -642,7 +652,7 @@ class SettingsFragment : Fragment() {
                             dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = searchEnginesOptions.map { it }.toTypedArray(),
-                                titleResId = R.string.search_engine,
+                                title = getLocalizedString(R.string.search_engine),
                                 selectedIndex = selectedIndex,
                                 onItemSelected = { newSearchEngineName ->
                                     val newFontFamilyIndex =
@@ -1164,7 +1174,7 @@ class SettingsFragment : Fragment() {
                             dialogBuilder.showSingleChoiceBottomSheetPill(
                                 context = requireContext(),
                                 options = gravityOptions,
-                                titleResId = R.string.clock_alignment,
+                                title = getLocalizedString(R.string.clock_alignment),
                                 selectedIndex = selectedIndex,
                                 onItemSelected = { newGravity ->
                                     selectedClockAlignment = newGravity // Update state
@@ -1186,7 +1196,7 @@ class SettingsFragment : Fragment() {
                             dialogBuilder.showSingleChoiceBottomSheetPill(
                                 context = requireContext(),
                                 options = gravityOptions,
-                                titleResId = R.string.date_alignment,
+                                title = getLocalizedString(R.string.date_alignment),
                                 selectedIndex = selectedIndex,
                                 onItemSelected = { newGravity ->
                                     selectedDateAlignment = newGravity // Update state
@@ -1208,7 +1218,7 @@ class SettingsFragment : Fragment() {
                             dialogBuilder.showSingleChoiceBottomSheetPill(
                                 context = requireContext(),
                                 options = Constants.Gravity.entries.toTypedArray(),
-                                titleResId = R.string.alarm_alignment,
+                                title = getLocalizedString(R.string.alarm_alignment),
                                 selectedIndex = selectedIndex,
                                 onItemSelected = { newGravity ->
                                     selectedAlarmAlignment = newGravity // Update state
@@ -1230,7 +1240,7 @@ class SettingsFragment : Fragment() {
                             dialogBuilder.showSingleChoiceBottomSheetPill(
                                 context = requireContext(),
                                 options = Constants.Gravity.entries.toTypedArray(),
-                                titleResId = R.string.daily_word_alignment,
+                                title = getLocalizedString(R.string.daily_word_alignment),
                                 selectedIndex = selectedIndex,
                                 onItemSelected = { newGravity ->
                                     selectedDailyWordAlignment = newGravity // Update state
@@ -1252,7 +1262,7 @@ class SettingsFragment : Fragment() {
                             dialogBuilder.showSingleChoiceBottomSheetPill(
                                 context = requireContext(),
                                 options = gravityOptions,
-                                titleResId = R.string.home_alignment,
+                                title = getLocalizedString(R.string.home_alignment),
                                 selectedIndex = selectedIndex,
                                 onItemSelected = { newGravity ->
                                     selectedHomeAlignment = newGravity // Update state
@@ -1277,7 +1287,7 @@ class SettingsFragment : Fragment() {
                             dialogBuilder.showSingleChoiceBottomSheetPill(
                                 context = requireContext(),
                                 options = Constants.Gravity.entries.toTypedArray(),
-                                titleResId = R.string.drawer_alignment,
+                                title = getLocalizedString(R.string.drawer_alignment),
                                 selectedIndex = selectedIndex,
                                 onItemSelected = { newGravity ->
                                     selectedDrawAlignment = newGravity // Update state
@@ -1306,7 +1316,7 @@ class SettingsFragment : Fragment() {
                             dialogBuilder.showColorPickerBottomSheet(
                                 context = requireContext(),
                                 color = selectedBackgroundColor,
-                                titleResId = R.string.background_color,
+                                title = getLocalizedString(R.string.background_color),
                                 onItemSelected = { selectedColor ->
                                     selectedBackgroundColor = selectedColor
                                     prefs.backgroundColor = selectedColor
@@ -1324,7 +1334,7 @@ class SettingsFragment : Fragment() {
                             dialogBuilder.showColorPickerBottomSheet(
                                 context = requireContext(),
                                 color = selectedAppColor,
-                                titleResId = R.string.app_color,
+                                title = getLocalizedString(R.string.app_color),
                                 onItemSelected = { selectedColor ->
                                     selectedAppColor = selectedColor
                                     prefs.appColor = selectedColor
@@ -1342,7 +1352,7 @@ class SettingsFragment : Fragment() {
                             dialogBuilder.showColorPickerBottomSheet(
                                 context = requireContext(),
                                 color = selectedDateColor,
-                                titleResId = R.string.date_color,
+                                title = getLocalizedString(R.string.date_color),
                                 onItemSelected = { selectedColor ->
                                     selectedDateColor = selectedColor
                                     prefs.dateColor = selectedColor
@@ -1360,7 +1370,7 @@ class SettingsFragment : Fragment() {
                             dialogBuilder.showColorPickerBottomSheet(
                                 context = requireContext(),
                                 color = selectedClockColor,
-                                titleResId = R.string.clock_color,
+                                title = getLocalizedString(R.string.clock_color),
                                 onItemSelected = { selectedColor ->
                                     selectedClockColor = selectedColor
                                     prefs.clockColor = selectedColor
@@ -1378,7 +1388,7 @@ class SettingsFragment : Fragment() {
                             dialogBuilder.showColorPickerBottomSheet(
                                 context = requireContext(),
                                 color = selectedAlarmColor,
-                                titleResId = R.string.alarm_color,
+                                title = getLocalizedString(R.string.alarm_color),
                                 onItemSelected = { selectedColor ->
                                     selectedAlarmColor = selectedColor
                                     prefs.alarmClockColor = selectedColor
@@ -1396,7 +1406,7 @@ class SettingsFragment : Fragment() {
                             dialogBuilder.showColorPickerBottomSheet(
                                 context = requireContext(),
                                 color = selectedDailyWordColor,
-                                titleResId = R.string.daily_word_color,
+                                title = getLocalizedString(R.string.daily_word_color),
                                 onItemSelected = { selectedColor ->
                                     selectedDailyWordColor = selectedColor
                                     prefs.dailyWordColor = selectedColor
@@ -1414,7 +1424,7 @@ class SettingsFragment : Fragment() {
                             dialogBuilder.showColorPickerBottomSheet(
                                 context = requireContext(),
                                 color = selectedBatteryColor,
-                                titleResId = R.string.battery_color,
+                                title = getLocalizedString(R.string.battery_color),
                                 onItemSelected = { selectedColor ->
                                     selectedBatteryColor = selectedColor
                                     prefs.batteryColor = selectedColor
@@ -1440,7 +1450,7 @@ class SettingsFragment : Fragment() {
                             dialogBuilder.showColorPickerBottomSheet(
                                 context = requireContext(),
                                 color = selectedShortcutIconsColor,
-                                titleResId = R.string.shortcuts_color,
+                                title = getLocalizedString(R.string.shortcuts_color),
                                 onItemSelected = { selectedColor ->
                                     selectedShortcutIconsColor = selectedColor
                                     prefs.shortcutIconsColor = selectedColor
@@ -1472,7 +1482,7 @@ class SettingsFragment : Fragment() {
                             dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = iconPacksOptions.map { it }.toTypedArray(),
-                                titleResId = R.string.select_home_icons,
+                                title = getLocalizedString(R.string.select_home_icons),
                                 selectedIndex = selectedIndex,
                                 onItemSelected = { newAppIconsName ->
                                     val newIconPacksIndex =
@@ -1511,7 +1521,7 @@ class SettingsFragment : Fragment() {
                             dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = iconPacksOptions.map { it }.toTypedArray(),
-                                titleResId = R.string.select_app_list_icons,
+                                title = getLocalizedString(R.string.select_app_list_icons),
                                 selectedIndex = selectedIndex,
                                 onItemSelected = { newAppIconsName ->
                                     val newIconPacksIndex =
@@ -1691,7 +1701,7 @@ class SettingsFragment : Fragment() {
                             dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = actionStrings,
-                                titleResId = R.string.double_tap,
+                                title = getLocalizedString(R.string.double_tap),
                                 onItemSelected = { newDoubleTapAction ->
                                     val selectedAction =
                                         actions.firstOrNull { it.getString() == newDoubleTapAction }
@@ -1720,7 +1730,7 @@ class SettingsFragment : Fragment() {
                             dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = actionStrings,
-                                titleResId = R.string.clock_click_app,
+                                title = getLocalizedString(R.string.clock_click_app),
                                 onItemSelected = { newClickClock ->
                                     val selectedAction =
                                         actions.firstOrNull { it.getString() == newClickClock }
@@ -1749,7 +1759,7 @@ class SettingsFragment : Fragment() {
                             dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = actionStrings,
-                                titleResId = R.string.date_click_app,
+                                title = getLocalizedString(R.string.date_click_app),
                                 onItemSelected = { newClickDate ->
                                     val selectedAction =
                                         actions.firstOrNull { it.getString() == newClickDate }
@@ -1779,7 +1789,7 @@ class SettingsFragment : Fragment() {
                             dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = actionStrings,
-                                titleResId = R.string.usage_click_app,
+                                title = getLocalizedString(R.string.usage_click_app),
                                 onItemSelected = { newClickAppUsage ->
                                     val selectedAction =
                                         actions.firstOrNull { it.getString() == newClickAppUsage }
@@ -1809,7 +1819,7 @@ class SettingsFragment : Fragment() {
                             dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = actionStrings,
-                                titleResId = R.string.floating_click_app,
+                                title = getLocalizedString(R.string.floating_click_app),
                                 onItemSelected = { newClickFloating ->
                                     val selectedAction =
                                         actions.firstOrNull { it.getString() == newClickFloating }
@@ -1848,7 +1858,7 @@ class SettingsFragment : Fragment() {
                             dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = actionStrings,
-                                titleResId = R.string.short_swipe_up_app,
+                                title = getLocalizedString(R.string.short_swipe_up_app),
                                 onItemSelected = { newShortSwipeUpAction ->
 
                                     val selectedAction =
@@ -1879,7 +1889,7 @@ class SettingsFragment : Fragment() {
                             dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = actionStrings,
-                                titleResId = R.string.short_swipe_down_app,
+                                title = getLocalizedString(R.string.short_swipe_down_app),
                                 onItemSelected = { newShortSwipeDownAction ->
                                     val selectedAction =
                                         actions.firstOrNull { it.getString() == newShortSwipeDownAction }
@@ -1910,7 +1920,7 @@ class SettingsFragment : Fragment() {
                             dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = actionStrings,
-                                titleResId = R.string.short_swipe_left_app,
+                                title = getLocalizedString(R.string.short_swipe_left_app),
                                 onItemSelected = { newShortSwipeLeftAction ->
                                     val selectedAction =
                                         actions.firstOrNull { it.getString() == newShortSwipeLeftAction }
@@ -1941,7 +1951,7 @@ class SettingsFragment : Fragment() {
                             dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = actionStrings,
-                                titleResId = R.string.short_swipe_right_app,
+                                title = getLocalizedString(R.string.short_swipe_right_app),
                                 onItemSelected = { newShortSwipeRightAction ->
                                     val selectedAction =
                                         actions.firstOrNull { it.getString() == newShortSwipeRightAction }
@@ -1972,7 +1982,7 @@ class SettingsFragment : Fragment() {
                             dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = actionStrings,
-                                titleResId = R.string.long_swipe_up_app,
+                                title = getLocalizedString(R.string.long_swipe_up_app),
                                 onItemSelected = { newLongSwipeUpAction ->
                                     val selectedAction =
                                         actions.firstOrNull { it.getString() == newLongSwipeUpAction }
@@ -2002,7 +2012,7 @@ class SettingsFragment : Fragment() {
                             dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = actionStrings,
-                                titleResId = R.string.long_swipe_down_app,
+                                title = getLocalizedString(R.string.long_swipe_down_app),
                                 onItemSelected = { newLongSwipeDownAction ->
                                     val selectedAction =
                                         actions.firstOrNull { it.getString() == newLongSwipeDownAction }
@@ -2033,7 +2043,7 @@ class SettingsFragment : Fragment() {
                             dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = actionStrings, // Pass the list of localized strings
-                                titleResId = R.string.long_swipe_left_app,
+                                title = getLocalizedString(R.string.long_swipe_left_app),
                                 onItemSelected = { newLongSwipeLeftAction ->
                                     val selectedAction =
                                         actions.firstOrNull { it.getString() == newLongSwipeLeftAction }
@@ -2064,7 +2074,7 @@ class SettingsFragment : Fragment() {
                             dialogBuilder.showSingleChoiceBottomSheet(
                                 context = requireContext(),
                                 options = actionStrings,
-                                titleResId = R.string.long_swipe_right_app,
+                                title = getLocalizedString(R.string.long_swipe_right_app),
                                 onItemSelected = { newLongSwipeRightAction ->
                                     val selectedAction =
                                         actions.firstOrNull { it.getString() == newLongSwipeRightAction }
@@ -2188,7 +2198,7 @@ class SettingsFragment : Fragment() {
                             dialogBuilder.showColorPickerBottomSheet(
                                 context = requireContext(),
                                 color = selectedNotesBackgroundColor,
-                                titleResId = R.string.notes_background_color,
+                                title = getLocalizedString(R.string.notes_background_color),
                                 onItemSelected = { selectedColor ->
                                     selectedNotesBackgroundColor = selectedColor
                                     prefs.notesBackgroundColor = selectedColor
@@ -2207,7 +2217,7 @@ class SettingsFragment : Fragment() {
                             dialogBuilder.showColorPickerBottomSheet(
                                 context = requireContext(),
                                 color = selectedBubbleBackgroundColor,
-                                titleResId = R.string.bubble_background_color,
+                                title = getLocalizedString(R.string.bubble_background_color),
                                 onItemSelected = { selectedColor ->
                                     selectedBubbleBackgroundColor = selectedColor
                                     prefs.bubbleBackgroundColor = selectedColor
@@ -2226,7 +2236,7 @@ class SettingsFragment : Fragment() {
                             dialogBuilder.showColorPickerBottomSheet(
                                 context = requireContext(),
                                 color = selectedBubbleMessageTextColor,
-                                titleResId = R.string.bubble_message_color,
+                                title = getLocalizedString(R.string.bubble_message_color),
                                 onItemSelected = { selectedColor ->
                                     selectedBubbleMessageTextColor = selectedColor
                                     prefs.bubbleMessageTextColor = selectedColor
@@ -2245,7 +2255,7 @@ class SettingsFragment : Fragment() {
                             dialogBuilder.showColorPickerBottomSheet(
                                 context = requireContext(),
                                 color = selectedBubbleTimeDateColor,
-                                titleResId = R.string.bubble_date_time_color,
+                                title = getLocalizedString(R.string.bubble_date_time_color),
                                 onItemSelected = { selectedColor ->
                                     selectedBubbleTimeDateColor = selectedColor
                                     prefs.bubbleTimeDateColor = selectedColor
@@ -2264,7 +2274,7 @@ class SettingsFragment : Fragment() {
                             dialogBuilder.showColorPickerBottomSheet(
                                 context = requireContext(),
                                 color = selectedBubbleCategoryColor,
-                                titleResId = R.string.bubble_category_color,
+                                title = getLocalizedString(R.string.bubble_category_color),
                                 onItemSelected = { selectedColor ->
                                     selectedBubbleCategoryColor = selectedColor
                                     prefs.bubbleCategoryColor = selectedColor
@@ -2291,7 +2301,7 @@ class SettingsFragment : Fragment() {
                             dialogBuilder.showColorPickerBottomSheet(
                                 context = requireContext(),
                                 color = selectedInputMessageColor,
-                                titleResId = R.string.message_input_color,
+                                title = getLocalizedString(R.string.message_input_color),
                                 onItemSelected = { selectedColor ->
                                     selectedInputMessageColor = selectedColor
                                     prefs.inputMessageColor = selectedColor
@@ -2310,7 +2320,7 @@ class SettingsFragment : Fragment() {
                             dialogBuilder.showColorPickerBottomSheet(
                                 context = requireContext(),
                                 color = selectedInputMessageHintColor,
-                                titleResId = R.string.message_input_hint_color,
+                                title = getLocalizedString(R.string.message_input_hint_color),
                                 onItemSelected = { selectedColor ->
                                     selectedInputMessageHintColor = selectedColor
                                     prefs.inputMessageHintColor = selectedColor
