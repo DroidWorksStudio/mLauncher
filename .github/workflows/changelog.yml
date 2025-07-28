@@ -20,7 +20,7 @@ jobs:
           ref: main
 
       - name: Generate a changelog
-        uses: orhun/git-cliff-action@v4.4.2
+        uses: orhun/git-cliff-action@v4.5.0
         with:
           config: cliff.toml
           args: --verbose
