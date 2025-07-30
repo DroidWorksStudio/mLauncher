@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Improve icon loading and caching logic - ([cc34e84](https://github.com/DroidWorksStudio/mLauncher/commit/cc34e843f793ebd7e5f2e67220a9bc9d45cf77da))
 - Optimize icon loading logic in AppDrawerAdapter - ([e96a832](https://github.com/DroidWorksStudio/mLauncher/commit/e96a832ce992324f17ba0688e001dbebdedcdce4))
 - Optimize icon handling and profile indicators in AppDrawerAdapter - ([b5e03e9](https://github.com/DroidWorksStudio/mLauncher/commit/b5e03e95f7a1f7d2d477438dda17472429e3a936))
 - Standardize theme and language selection logic - ([b660a68](https://github.com/DroidWorksStudio/mLauncher/commit/b660a685f3f110a5c8178152b69dfb493b9b7afa))
