@@ -9,6 +9,10 @@ All notable changes to this project will be documented in this file. See [conven
 - Standardize theme and language selection logic - ([b660a68](https://github.com/DroidWorksStudio/mLauncher/commit/b660a685f3f110a5c8178152b69dfb493b9b7afa))
 - Use application context for Prefs initialization - ([4ed52b1](https://github.com/DroidWorksStudio/mLauncher/commit/4ed52b1ae6c3a743f4e5cd47f63718792aeea3f9))
 
+### Releases:
+
+- Increment build number - ([1c0eeb4](https://github.com/DroidWorksStudio/mLauncher/commit/1c0eeb456e8b3dc91bf82ccfcdefa3bc05210548))
+
 ## [1.10.8.5](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.8.5) - (15, July 2025)
 
 ### Refactoring:
