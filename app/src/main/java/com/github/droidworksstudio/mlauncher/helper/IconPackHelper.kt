@@ -2,8 +2,10 @@ package com.github.droidworksstudio.mlauncher.helper
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.pm.LauncherApps
 import android.graphics.Color
 import android.graphics.drawable.Drawable
+import android.os.UserManager
 import android.util.Xml
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
@@ -25,7 +27,11 @@ object IconPackHelper {
     private var isInitialized = false
 
     @SuppressLint("DiscouragedApi")
-    fun preloadIcons(context: Context, iconPackPackage: String, target: IconCacheTarget) {
+    fun preloadIcons(
+        context: Context,
+        iconPackPackage: String,
+        target: IconCacheTarget
+    ) {
         try {
             when (target) {
                 IconCacheTarget.APP_LIST -> appListIconCache.clear()
@@ -34,8 +40,18 @@ object IconPackHelper {
 
             AppLogger.d("IconPackLoader", "Starting preload for: $iconPackPackage, target=$target")
 
-            val pm = context.packageManager
-            val installedPackages = pm.getInstalledApplications(0).map { it.packageName }.toSet()
+            val userManager = context.getSystemService(Context.USER_SERVICE) as UserManager
+            val launcherApps = context.getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps
+
+            val allPackageNames = mutableSetOf<String>()
+            userManager.userProfiles.forEach { user ->
+                try {
+                    val apps = launcherApps.getActivityList(null, user)
+                    allPackageNames.addAll(apps.map { it.applicationInfo.packageName })
+                } catch (e: Exception) {
+                    AppLogger.e("IconPackLoader", "Failed to get apps for user $user", e)
+                }
+            }
 
             val iconPackContext = context.createPackageContext(iconPackPackage, 0)
             val assetManager = iconPackContext.assets
@@ -55,33 +71,27 @@ object IconPackHelper {
             val parser = Xml.newPullParser()
             parser.setInput(inputStream, null)
 
+            val regex = Regex("""ComponentInfo\{([^/]+)(/[^}]*)?\}""")
             var eventType = parser.eventType
             var loadedCount = 0
             var skippedCount = 0
-
-            val regex = Regex("""ComponentInfo\{([^/]+)(/[^}]*)?\}""")
 
             while (eventType != XmlPullParser.END_DOCUMENT) {
                 if (eventType == XmlPullParser.START_TAG && parser.name == "item") {
                     val component = parser.getAttributeValue(null, "component")
                     var drawable = parser.getAttributeValue(null, "drawable")
 
-//                    AppLogger.d("IconPackLoader", "Parsing item: component=$component, drawable=$drawable")
-
                     val match = regex.find(component ?: "")
                     val pkgName = match?.groupValues?.get(1)
 
                     if (pkgName != null && drawable != null) {
-                        if (!installedPackages.contains(pkgName)) {
-//                            AppLogger.w("IconPackLoader", "Skipping $pkgName (not installed)")
+                        if (!allPackageNames.contains(pkgName)) {
                             skippedCount++
                             eventType = parser.next()
                             continue
                         }
 
                         drawable = drawable.removePrefix("@drawable/").removePrefix("drawable/")
-
-//                        AppLogger.d("IconPackLoader", "Mapping found: $pkgName -> $drawable")
                         nameCache[pkgName] = drawable
 
                         val resId = iconPackContext.resources.getIdentifier(
@@ -100,15 +110,12 @@ object IconPackHelper {
                                     IconCacheTarget.HOME -> homeIconCache[pkgName] = it
                                 }
                                 loadedCount++
-//                                AppLogger.d("IconPackLoader", "Icon cached: $pkgName (resId=$resId)")
-                            } ?: AppLogger.w("IconPackLoader", "Drawable is null for resource: $drawable (resId=$resId)")
+                            } ?: AppLogger.w("IconPackLoader", "Drawable is null for $drawable (resId=$resId)")
                         } else {
                             skippedCount++
-//                            AppLogger.w("IconPackLoader", "Drawable resource not found: $drawable")
                         }
                     } else {
                         skippedCount++
-//                        AppLogger.w("IconPackLoader", "Invalid mapping. Component or drawable is null.")
                     }
                 }
                 eventType = parser.next()

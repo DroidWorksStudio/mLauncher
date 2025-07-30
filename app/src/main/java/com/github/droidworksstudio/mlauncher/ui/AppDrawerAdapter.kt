@@ -15,6 +15,7 @@ import android.os.UserManager
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.Gravity.LEFT
+import android.view.Gravity.RIGHT
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -544,23 +545,18 @@ class AppDrawerAdapter(
             // Use a placeholder icon
             val placeholderIcon = AppCompatResources.getDrawable(context, R.drawable.ic_default_app)
 
-            var myIcon: Drawable?
-
             if (appListItem.isHeader) {
-                if (isPrivateSpace) {
-                    if (appLabelGravity == LEFT) {
-                        appTitle.setCompoundDrawables(null, null, privateProfileIcon, null)
-                    } else {
-                        appTitle.setCompoundDrawables(privateProfileIcon, null, null, null)
-                    }
-                    appTitle.compoundDrawablePadding = 20
+                val icon = when {
+                    isPrivateSpace -> privateProfileIcon
+                    isWorkProfile -> workProfileIcon
+                    else -> null
                 }
 
-                if (isWorkProfile) {
-                    if (appLabelGravity == LEFT) {
-                        appTitle.setCompoundDrawables(null, null, workProfileIcon, null)
-                    } else {
-                        appTitle.setCompoundDrawables(workProfileIcon, null, null, null)
+                if (icon != null) {
+                    when (appLabelGravity) {
+                        LEFT -> appTitle.setCompoundDrawables(null, null, icon, null)
+                        RIGHT -> appTitle.setCompoundDrawables(icon, null, null, null)
+                        else -> appTitle.setCompoundDrawables(icon, null, null, null)
                     }
                     appTitle.compoundDrawablePadding = 20
                 }
@@ -571,7 +567,6 @@ class AppDrawerAdapter(
                     if (cachedIcon != null) {
                         // Use cached icon
                         setAppTitleIcon(appTitle, cachedIcon, prefs)
-                        myIcon = cachedIcon
                     } else {
                         // Set placeholder immediately
                         setAppTitleIcon(appTitle, placeholderIcon, prefs)
@@ -580,16 +575,21 @@ class AppDrawerAdapter(
                             val icon = withContext(Dispatchers.IO) {
                                 // Get icon as before
                                 val iconPackPackage = prefs.customIconPackAppList
+                                val iconPackage = if (isPrivateSpace || isWorkProfile) {
+                                    IconCacheTarget.APP_LIST
+                                } else {
+                                    IconCacheTarget.APP_LIST
+                                }
                                 val nonNullDrawable: Drawable = getSafeAppIcon(
                                     context = context,
                                     packageName = packageName,
                                     useIconPack = (iconPackPackage.isNotEmpty() && prefs.iconPackAppList == Constants.IconPacks.Custom),
-                                    iconPackTarget = IconCacheTarget.APP_LIST
+                                    iconPackTarget = iconPackage
                                 )
                                 getSystemIcons(
                                     context,
                                     prefs,
-                                    IconCacheTarget.APP_LIST,
+                                    iconPackage,
                                     nonNullDrawable
                                 ) ?: nonNullDrawable
                             }
@@ -599,29 +599,6 @@ class AppDrawerAdapter(
                                 setAppTitleIcon(appTitle, icon, prefs)
                             }
                         }
-                        myIcon = placeholderIcon
-                    }
-
-                    if (isPrivateSpace) {
-                        if (appLabelGravity == LEFT) {
-                            appTitle.setCompoundDrawables(myIcon, null, null, null)
-                        } else {
-                            appTitle.setCompoundDrawables(null, null, myIcon, null)
-                        }
-                        appTitle.compoundDrawablePadding = 20
-                        appTitle.invalidate()
-                        appTitle.requestLayout()
-                    }
-
-                    if (isWorkProfile) {
-                        if (appLabelGravity == LEFT) {
-                            appTitle.setCompoundDrawables(myIcon, null, null, null)
-                        } else {
-                            appTitle.setCompoundDrawables(null, null, myIcon, null)
-                        }
-                        appTitle.compoundDrawablePadding = 20
-                        appTitle.invalidate()
-                        appTitle.requestLayout()
                     }
                 }
             }
