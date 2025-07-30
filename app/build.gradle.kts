@@ -73,7 +73,7 @@ android {
         if (buildType.name == "release") {
             outputs.all {
                 val output = this as? com.android.build.gradle.internal.api.BaseVariantOutputImpl
-                if (output?.outputFileName?.endsWith(".apk") == true) {
+                if (output.outputFileName?.endsWith(".apk") == true) {
                     output.outputFileName =
                         "${defaultConfig.applicationId}_v${defaultConfig.versionName}-Signed.apk"
                 }
@@ -82,7 +82,7 @@ android {
         if (buildType.name == "debug") {
             outputs.all {
                 val output = this as? com.android.build.gradle.internal.api.BaseVariantOutputImpl
-                if (output?.outputFileName?.endsWith(".apk") == true) {
+                if (output.outputFileName?.endsWith(".apk") == true) {
                     output.outputFileName =
                         "${defaultConfig.applicationId}_v${defaultConfig.versionName}-Debug.apk"
                 }
