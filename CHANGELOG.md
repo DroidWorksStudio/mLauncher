@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Optimize icon handling and profile indicators in AppDrawerAdapter - ([b5e03e9](https://github.com/DroidWorksStudio/mLauncher/commit/b5e03e95f7a1f7d2d477438dda17472429e3a936))
 - Standardize theme and language selection logic - ([b660a68](https://github.com/DroidWorksStudio/mLauncher/commit/b660a685f3f110a5c8178152b69dfb493b9b7afa))
 - Use application context for Prefs initialization - ([4ed52b1](https://github.com/DroidWorksStudio/mLauncher/commit/4ed52b1ae6c3a743f4e5cd47f63718792aeea3f9))
 
