@@ -39,7 +39,7 @@ compose-foundation = "1.8.3"
 compose-ui-tooling = "1.8.3"
 
 # Other Libraries
-commons-text = "1.13.1"
+commons-text = "1.14.0"
 biometric-ktx = "1.4.0-alpha02"
 
 # AndroidX Test Libraries
