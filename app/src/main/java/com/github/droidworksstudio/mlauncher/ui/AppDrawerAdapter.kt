@@ -546,7 +546,25 @@ class AppDrawerAdapter(
 
             var myIcon: Drawable?
 
-            if (!appListItem.isHeader) {
+            if (appListItem.isHeader) {
+                if (isPrivateSpace) {
+                    if (appLabelGravity == LEFT) {
+                        appTitle.setCompoundDrawables(null, null, privateProfileIcon, null)
+                    } else {
+                        appTitle.setCompoundDrawables(privateProfileIcon, null, null, null)
+                    }
+                    appTitle.compoundDrawablePadding = 20
+                }
+
+                if (isWorkProfile) {
+                    if (appLabelGravity == LEFT) {
+                        appTitle.setCompoundDrawables(null, null, workProfileIcon, null)
+                    } else {
+                        appTitle.setCompoundDrawables(workProfileIcon, null, null, null)
+                    }
+                    appTitle.compoundDrawablePadding = 20
+                }
+            } else {
                 if (packageName.isNotBlank() && prefs.iconPackAppList != Constants.IconPacks.Disabled) {
                     // Try to get from cache first
                     val cachedIcon = iconCache[packageName]
@@ -605,24 +623,6 @@ class AppDrawerAdapter(
                         appTitle.invalidate()
                         appTitle.requestLayout()
                     }
-                }
-            } else {
-                if (isPrivateSpace) {
-                    if (appLabelGravity == LEFT) {
-                        appTitle.setCompoundDrawables(null, null, privateProfileIcon, null)
-                    } else {
-                        appTitle.setCompoundDrawables(privateProfileIcon, null, null, null)
-                    }
-                    appTitle.compoundDrawablePadding = 20
-                }
-
-                if (isWorkProfile) {
-                    if (appLabelGravity == LEFT) {
-                        appTitle.setCompoundDrawables(null, null, workProfileIcon, null)
-                    } else {
-                        appTitle.setCompoundDrawables(workProfileIcon, null, null, null)
-                    }
-                    appTitle.compoundDrawablePadding = 20
                 }
             }
 
