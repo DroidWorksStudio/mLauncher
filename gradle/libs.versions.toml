@@ -1,7 +1,7 @@
 # gradle/libs.versions.toml
 
 [versions]
-agp = "8.11.1"
+agp = "8.12.0"
 kotlin = "2.2.0"
 viewpager2 = "1.1.0"
 
@@ -18,12 +18,12 @@ lifecycle-extensions = "2.2.0"
 lifecycle-viewmodel-ktx = "2.9.2"
 
 # Navigation
-navigation-fragment-ktx = "2.9.2"
-navigation-ui-ktx = "2.9.2"
-navigation-testing = "2.9.2"
+navigation-fragment-ktx = "2.9.3"
+navigation-ui-ktx = "2.9.3"
+navigation-testing = "2.9.3"
 
 # Work Manager
-work-runtime-ktx = "2.10.2"
+work-runtime-ktx = "2.10.3"
 
 # ConstraintLayout
 constraintlayout = "2.2.1"
@@ -43,10 +43,10 @@ commons-text = "1.14.0"
 biometric-ktx = "1.4.0-alpha02"
 
 # AndroidX Test Libraries
-espresso = "3.6.1"
-test-core-ktx = "1.6.1"
-test-runner = "1.6.2"
-test-rules = "1.6.1"
+espresso = "3.7.0"
+test-core-ktx = "1.7.0"
+test-runner = "1.7.0"
+test-rules = "1.7.0"
 fragment-testing = "1.8.8"
 ui-test-junit4 = "1.8.3"
 ui-test-manifest = "1.8.3"
