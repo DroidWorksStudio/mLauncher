@@ -40,6 +40,11 @@ android {
         versionName = versionNameStr
     }
 
+    dependenciesInfo {
+        includeInApk = false
+        includeInBundle = false
+    }
+
     buildTypes {
         getByName("debug") {
             isMinifyEnabled = false
