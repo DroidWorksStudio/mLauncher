@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Implemented Enhancements:
+
+- Disable inclusion of dependency info in APKs and Bundles - ([d56a4ea](https://github.com/DroidWorksStudio/mLauncher/commit/d56a4ead791e3bea95f85338a50b625c363e3bf6))
+
 ### Refactoring:
 
 - Improve icon loading and caching logic - ([cc34e84](https://github.com/DroidWorksStudio/mLauncher/commit/cc34e843f793ebd7e5f2e67220a9bc9d45cf77da))
