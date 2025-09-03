@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
+## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
+
+### Refactoring:
+
+- Improve Fuzzy Finder and Search Logic - ([63ce32d](https://github.com/DroidWorksStudio/mLauncher/commit/63ce32daec68532f0cfd974d82447db6c0c91533))
+
 ## [1.10.8.7](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.8.7) - (22, August 2025)
 
 ### Implemented Enhancements:
