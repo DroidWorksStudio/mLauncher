@@ -101,8 +101,8 @@
     <string name="show_app_usage_stats">Uygulama Kullanım İstatistiklerini Göster</string>
     <string name="select_home_icons">Ana Sayfa Simge Paketini Seçin</string>
     <string name="select_app_list_icons">Uygulama Listesi Simge Paketini Seçin</string>
-    <string name="enable_filter_strength">Filtre Gücünü Etkinleştir</string>
-    <string name="filter_strength">Filtre Gücü</string>
+    <string name="enable_filter_strength">Bulanık Bulucuyu Etkinleştir</string>
+    <string name="filter_strength">Bulanık Bulucu Gücü</string>
     <string name="show_background">Arkaplanı Göster</string>
     <string name="background_opacity">Arka Plan Şeffaflığı</string>
     <string name="element_alignment">Eleman Hizalaması</string>
