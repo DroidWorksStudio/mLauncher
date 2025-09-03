@@ -8,6 +8,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - *(app)* Improve app tag handling for multi-user support - ([ffe8e4b](https://github.com/DroidWorksStudio/mLauncher/commit/ffe8e4b4d06f94333d5f2ae23d504eaac532291c))
 
+### Language Support:
+
+- Updated Language Files. ([#871](https://github.com/DroidWorksStudio/mLauncher/issues/871)) - ([6cc7db9](https://github.com/DroidWorksStudio/mLauncher/commit/6cc7db9634ab68de4cba049d1e678b0a27d1a87c))
+
 ### Refactoring:
 
 - Enhance multi-profile support for app tags - ([dccfa47](https://github.com/DroidWorksStudio/mLauncher/commit/dccfa472ef6e5f86b53dc5982a4fc2fbb5027888))
