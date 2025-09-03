@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Enhance multi-profile support for app tags - ([dccfa47](https://github.com/DroidWorksStudio/mLauncher/commit/dccfa472ef6e5f86b53dc5982a4fc2fbb5027888))
 - Improve Fuzzy Finder and Search Logic - ([63ce32d](https://github.com/DroidWorksStudio/mLauncher/commit/63ce32daec68532f0cfd974d82447db6c0c91533))
 
 ## [1.10.8.7](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.8.7) - (22, August 2025)
