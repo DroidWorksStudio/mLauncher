@@ -692,16 +692,6 @@ class SettingsFragment : Fragment() {
                     }
 
                     SettingsSwitch(
-                        text = getLocalizedString(R.string.search_from_start),
-                        fontSize = titleFontSize,
-                        defaultState = toggledSearchFromStart,
-                        onCheckedChange = {
-                            toggledSearchFromStart = !prefs.searchFromStart
-                            prefs.searchFromStart = toggledSearchFromStart
-                        }
-                    )
-
-                    SettingsSwitch(
                         text = getLocalizedString(R.string.enable_filter_strength),
                         fontSize = titleFontSize,
                         defaultState = toggledEnableFilterStrength,
@@ -710,6 +700,18 @@ class SettingsFragment : Fragment() {
                             prefs.enableFilterStrength = toggledEnableFilterStrength
                         }
                     )
+
+                    if (toggledEnableFilterStrength) {
+                        SettingsSwitch(
+                            text = getLocalizedString(R.string.search_from_start),
+                            fontSize = titleFontSize,
+                            defaultState = toggledSearchFromStart,
+                            onCheckedChange = {
+                                toggledSearchFromStart = !prefs.searchFromStart
+                                prefs.searchFromStart = toggledSearchFromStart
+                            }
+                        )
+                    }
 
                     if (toggledEnableFilterStrength) {
                         SettingsSelect(

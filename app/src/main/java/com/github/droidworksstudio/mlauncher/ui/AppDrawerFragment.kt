@@ -323,7 +323,7 @@ class AppDrawerFragment : Fragment() {
                             requireContext().searchCustomSearchEngine(customQuery, prefs)
                         }
 
-                        adapter.itemCount == 1 -> {
+                        adapter.itemCount >= 1 -> {
                             val firstItem = adapter.getFirstInList().toString()
                             if (firstItem.equals(trimmedQuery, ignoreCase = true) || prefs.openAppOnEnter) {
                                 adapter.launchFirstInList()

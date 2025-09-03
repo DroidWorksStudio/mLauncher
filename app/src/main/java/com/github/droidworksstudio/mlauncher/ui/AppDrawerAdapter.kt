@@ -55,6 +55,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import java.text.Normalizer
 import java.util.concurrent.ConcurrentHashMap
 
 class AppDrawerAdapter(
@@ -194,7 +195,7 @@ class AppDrawerAdapter(
                 isBangSearch = listOf("!", "#").any { prefix -> charSearch?.startsWith(prefix) == true }
                 prefs = Prefs(context)
 
-                val searchChars = charSearch.toString()
+                val searchChars = charSearch.toString().trim().lowercase()
                 val filteredApps: MutableList<AppListItem>
 
                 if (prefs.enableFilterStrength) {
@@ -204,7 +205,7 @@ class AppDrawerAdapter(
                         val tagQuery = searchChars.substringAfter("#")
                         for (app in appsList) {
                             scoredApps[app] =
-                                FuzzyFinder.scoreString(app.tag, tagQuery, Constants.MAX_FILTER_STRENGTH)
+                                FuzzyFinder.scoreString(normalize(app.tag), tagQuery, Constants.MAX_FILTER_STRENGTH)
                         }
                     } else {
                         for (app in appsList) {
@@ -219,7 +220,7 @@ class AppDrawerAdapter(
                             if (prefs.searchFromStart) {
                                 AppLogger.d("searchQuery", tagQuery)
                                 scoredApps.filter { (app, _) ->
-                                    app.tag.startsWith(tagQuery, ignoreCase = true)
+                                    normalize(app.tag).startsWith(tagQuery)
                                 }
                                     .filter { (_, score) -> score > prefs.filterStrength }
                                     .map { it.key }
@@ -227,22 +228,26 @@ class AppDrawerAdapter(
                             } else {
                                 AppLogger.d("searchQuery", tagQuery)
                                 scoredApps.filter { (app, score) ->
-                                    app.tag.contains(tagQuery, ignoreCase = true) && score > prefs.filterStrength
+                                    normalize(app.tag).contains(tagQuery) && score > prefs.filterStrength
                                 }
                                     .map { it.key }
                                     .toMutableList()
                             }
                         } else {
                             if (prefs.searchFromStart) {
+                                AppLogger.d("searchQuery", searchChars)
                                 scoredApps.filter { (app, _) ->
-                                    app.label.startsWith(searchChars, ignoreCase = true)
+                                    normalize(app.label).startsWith(searchChars)
                                 }
                                     .filter { (_, score) -> score > prefs.filterStrength }
                                     .map { it.key }
                                     .toMutableList()
                             } else {
-                                scoredApps.filterValues { it > prefs.filterStrength }
-                                    .keys
+                                AppLogger.d("searchQuery", searchChars)
+                                scoredApps.filter { (app, score) ->
+                                    normalize(app.label).contains(searchChars) && score > prefs.filterStrength
+                                }
+                                    .map { it.key }
                                     .toMutableList()
                             }
                         }
@@ -259,37 +264,41 @@ class AppDrawerAdapter(
                             if (searchChars.startsWith("#")) {
                                 val searchQuery = searchChars.substringAfter("#")
                                 appsList.filter { app ->
-                                    app.tag.startsWith(searchQuery, ignoreCase = true)
+                                    normalize(app.tag).startsWith(searchQuery)
                                 }
                             } else {
-                                // Apply search from start logic if searchChars is not empty
                                 appsList.filter { app ->
-                                    app.label.startsWith(searchChars, ignoreCase = true)
+                                    normalize(app.label).startsWith(searchChars)
                                 }
                             }
                         } else {
                             AppLogger.d("searchQuery", searchChars)
                             if (searchChars.startsWith("#")) {
                                 val searchQuery = searchChars.substringAfter("#")
-
-                                // Apply fuzzy matching when searchFromStart is false
                                 appsList.filter { app ->
-                                    FuzzyFinder.isMatch(app.tag, searchQuery)
+                                    FuzzyFinder.isMatch(normalize(app.tag), searchQuery)
                                 }
                             } else {
-                                // Apply fuzzy matching when searchFromStart is false
                                 appsList.filter { app ->
-                                    FuzzyFinder.isMatch(app.label, searchChars)
+                                    FuzzyFinder.isMatch(normalize(app.label), searchChars)
                                 }
                             }
                         }
-                        filteredAppsList.toMutableList() // Convert to MutableList
+                        filteredAppsList.toMutableList()
                     }
                 }
 
                 val filterResults = FilterResults()
                 filterResults.values = filteredApps
                 return filterResults
+            }
+
+            fun normalize(input: String): String {
+                // Normalize to NFC to keep composed characters (é stays é, not e + ´)
+                val temp = Normalizer.normalize(input, Normalizer.Form.NFC)
+                return temp
+                    .lowercase()                  // lowercase Latin letters; other scripts unaffected
+                    .filter { it.isLetterOrDigit() } // keep letters/digits from any language, including accented letters
             }
 
 
