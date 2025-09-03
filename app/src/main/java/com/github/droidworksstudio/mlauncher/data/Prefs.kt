@@ -930,9 +930,22 @@ class Prefs(val context: Context) {
     }
 
     fun getAppTag(appPackage: String, userHandle: UserHandle? = null): String {
-        val key = if (userHandle != null) "${appPackage}_TAG_${userHandle.hashCode()}" else "${appPackage}_TAG"
-        return prefsNormal.getString(key, "").toString()
+        val baseKey = "${appPackage}_TAG"
+        val userKey = userHandle?.let { "${baseKey}_${it.hashCode()}" }
+
+        return prefsNormal.getString(
+            userKey ?: baseKey, ""  // Try the user-specific key first if available
+        )?.also { value ->
+            // Migrate base key to user-specific key if needed
+            if (userHandle != null && prefsNormal.contains(baseKey)) {
+                prefsNormal.edit {
+                    remove(baseKey)           // Remove old base key
+                    putString(userKey, value) // Save under user-specific key
+                }
+            }
+        } ?: ""
     }
+
 
     fun setAppTag(appPackage: String, appTag: String, userHandle: UserHandle? = null) {
         prefsNormal.edit {
@@ -942,12 +955,10 @@ class Prefs(val context: Context) {
             userHandle?.let {
                 // Remove key using the UserHandle object itself
                 remove("${appPackage}_TAG_${it}")
-                // Remove key using hashCode() if userHandle is provided
-                remove("${appPackage}_TAG_${it.hashCode()}")
-            }
 
-            // Add new TAG (you can decide which variant you want to store)
-            putString("${appPackage}_TAG_${userHandle.hashCode()}", appTag)
+                // Set new TAG with hashCode()
+                putString("${appPackage}_TAG_${it.hashCode()}", appTag)
+            }
         }
     }
 
