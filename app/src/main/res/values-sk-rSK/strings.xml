@@ -101,8 +101,8 @@
     <string name="show_app_usage_stats">Zobraziť štatistiku používania aplikácie</string>
     <string name="select_home_icons">Vyberte balík ikon Domov</string>
     <string name="select_app_list_icons">Vyberte balík ikon zoznamu aplikácií</string>
-    <string name="enable_filter_strength">Povoliť silu filtra</string>
-    <string name="filter_strength">Sila filtrovania</string>
+    <string name="enable_filter_strength">Povoliť fuzzy vyhľadávač</string>
+    <string name="filter_strength">Sila fuzzy vyhľadávača</string>
     <string name="show_background">Zobraziť pozadie</string>
     <string name="background_opacity">Priehľadnosť pozadia</string>
     <string name="element_alignment">Zarovnanie prvkov</string>
