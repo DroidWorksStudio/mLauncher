@@ -101,8 +101,8 @@
     <string name="show_app_usage_stats">Pokaż statystyki użytkowania aplikacji</string>
     <string name="select_home_icons">Wybierz pakiet ikon domowych</string>
     <string name="select_app_list_icons">Wybierz pakiet ikon listy aplikacji</string>
-    <string name="enable_filter_strength">Włącz siłę filtra</string>
-    <string name="filter_strength">Siła filtra</string>
+    <string name="enable_filter_strength">Włącz Fuzzy Finder</string>
+    <string name="filter_strength">Siła Fuzzy Finder</string>
     <string name="show_background">Pokaż tło</string>
     <string name="background_opacity">Przezroczystość tła</string>
     <string name="element_alignment">Wyrównanie elementów</string>
