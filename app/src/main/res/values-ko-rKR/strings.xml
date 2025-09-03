@@ -101,8 +101,8 @@
     <string name="show_app_usage_stats">앱 사용 통계 표시</string>
     <string name="select_home_icons">홈 아이콘 팩 선택</string>
     <string name="select_app_list_icons">앱 목록 아이콘 팩 선택</string>
-    <string name="enable_filter_strength">필터 강도 활성화</string>
-    <string name="filter_strength">필터 강도</string>
+    <string name="enable_filter_strength">퍼지 파인더 활성화</string>
+    <string name="filter_strength">퍼지 파인더 강도</string>
     <string name="show_background">배경보기</string>
     <string name="background_opacity">배경 투명성</string>
     <string name="element_alignment">요소 정렬</string>

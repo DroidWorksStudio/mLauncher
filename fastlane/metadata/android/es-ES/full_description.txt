@@ -1,10 +1,10 @@
-<h1>Multi Launcher: Un lanzador de Android limpio y simple, diseñado para facilitar la lectura y el control</h1>
+<h1>Multi Lanchar: Un lanzador de Android limpio y simple, diseñado para facilitar la lectura y el control</h1>
 
 <p>¿Buscas un lanzador que elimine el desorden y mantenga las cosas fáciles? <strong>Multi Launcher</strong> es un lanzador de Android potente pero minimalista que reemplaza pequeños íconos con botones de texto claros y legibles, lo que hace que su teléfono sea más fácil de navegar.</p>
 
 <p>Ya sea que desee una pantalla de inicio simple, necesite texto grande para mayor visibilidad o prefiera acciones rápidas basadas en gestos, Multi Launcher le brinda control total sin abrumarlo con opciones.</p>
 
-<h2>Why Choose Multi Launcher?</h2>
+<h2>¿Por qué elegir Múltiples lanzadores?</h2>
 <ul>
     <li><strong>Lanzador basado en texto:</strong> Sin íconos confusos, solo botones de texto etiquetados para tus aplicaciones.</li>
     <li><strong>Altamente personalizable:</strong> Ajusta el diseño, el tamaño de fuente, la posición del reloj y más.</li>

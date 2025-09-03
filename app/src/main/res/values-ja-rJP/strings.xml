@@ -101,8 +101,8 @@
     <string name="show_app_usage_stats">アプリの使用状況統計を表示</string>
     <string name="select_home_icons">ホームアイコンパックを選択</string>
     <string name="select_app_list_icons">アプリリストアイコンパックを選択</string>
-    <string name="enable_filter_strength">フィルタ強度を有効にする</string>
-    <string name="filter_strength">フィルター強度</string>
+    <string name="enable_filter_strength">あいまい検索を有効にする</string>
+    <string name="filter_strength">ファジーファインダーの強さ</string>
     <string name="show_background">背景を表示</string>
     <string name="background_opacity">背景の透明度</string>
     <string name="element_alignment">要素の配置</string>

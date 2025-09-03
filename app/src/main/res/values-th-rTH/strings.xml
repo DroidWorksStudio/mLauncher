@@ -101,8 +101,8 @@
     <string name="show_app_usage_stats">แสดงสถิติการใช้งานแอป</string>
     <string name="select_home_icons">เลือกชุดไอคอนโฮม</string>
     <string name="select_app_list_icons">เลือกชุดไอคอนรายการแอป</string>
-    <string name="enable_filter_strength">เปิดใช้งานความแข็งแกร่งของตัวกรอง</string>
-    <string name="filter_strength">ความแรงของตัวกรอง</string>
+    <string name="enable_filter_strength">เปิดใช้งาน Fuzzy Finder</string>
+    <string name="filter_strength">ความแข็งแกร่งของ Fuzzy Finder</string>
     <string name="show_background">แสดงพื้นหลัง</string>
     <string name="background_opacity">ความโปร่งใสของพื้นหลัง</string>
     <string name="element_alignment">การจัดเรียงองค์ประกอบ</string>

@@ -101,8 +101,8 @@
     <string name="show_app_usage_stats">إظهار إحصائيات استخدام التطبيق</string>
     <string name="select_home_icons">حدد حزمة أيقونات الصفحة الرئيسية</string>
     <string name="select_app_list_icons">حدد حزمة أيقونات قائمة التطبيقات</string>
-    <string name="enable_filter_strength">تمكين قوة الفلتر</string>
-    <string name="filter_strength">قوة التصفية</string>
+    <string name="enable_filter_strength">تمكين Fuzzy Finder</string>
+    <string name="filter_strength">قوة الباحث الضبابي</string>
     <string name="show_background">إظهار الخلفية</string>
     <string name="background_opacity">شفافية الخلفية</string>
     <string name="element_alignment">محاذاة العناصر</string>

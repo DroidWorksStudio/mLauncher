@@ -101,8 +101,8 @@
     <string name="show_app_usage_stats">Rodyti programos naudojimo statistiką</string>
     <string name="select_home_icons">Pasirinkite „Pagrindinis“ piktogramų paketą</string>
     <string name="select_app_list_icons">Pasirinkti programų sąrašo piktogramų paketą</string>
-    <string name="enable_filter_strength">Įjungti filtro stiprumą</string>
-    <string name="filter_strength">Filtro stiprumas</string>
+    <string name="enable_filter_strength">Įjungti neapibrėžtąją paiešką</string>
+    <string name="filter_strength">Apytikslio ieškiklio stiprumas</string>
     <string name="show_background">Rodyti foną</string>
     <string name="background_opacity">Fono skaidrumas</string>
     <string name="element_alignment">Elementų lygiavimas</string>

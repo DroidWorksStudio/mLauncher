@@ -101,8 +101,8 @@
     <string name="show_app_usage_stats">Показать статистику использования приложения</string>
     <string name="select_home_icons">Выбрать набор иконок для дома</string>
     <string name="select_app_list_icons">Выберите набор иконок из списка приложений</string>
-    <string name="enable_filter_strength">Включить силу фильтра</string>
-    <string name="filter_strength">Строгость фильтра</string>
+    <string name="enable_filter_strength">Включить нечеткий поиск</string>
+    <string name="filter_strength">Сила нечеткого искателя</string>
     <string name="show_background">Показать фон</string>
     <string name="background_opacity">Прозрачность фона</string>
     <string name="element_alignment">Выравнивание элементов</string>

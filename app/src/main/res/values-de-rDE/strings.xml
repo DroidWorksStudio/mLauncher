@@ -101,8 +101,8 @@
     <string name="show_app_usage_stats">App-Nutzungsstatistiken anzeigen</string>
     <string name="select_home_icons">Wählen Sie Home Icon Pack</string>
     <string name="select_app_list_icons">App-Listensymbolpaket auswählen</string>
-    <string name="enable_filter_strength">Filterstärke aktivieren</string>
-    <string name="filter_strength">Filterstärke</string>
+    <string name="enable_filter_strength">Fuzzy Finder aktivieren</string>
+    <string name="filter_strength">Fuzzy-Finder-Stärke</string>
     <string name="show_background">Hintergrund anzeigen</string>
     <string name="background_opacity">Hintergrundtransparenz</string>
     <string name="element_alignment">Elementausrichtung</string>

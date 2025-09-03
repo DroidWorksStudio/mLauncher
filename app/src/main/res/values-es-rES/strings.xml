@@ -101,8 +101,8 @@
     <string name="show_app_usage_stats">Mostrar estadísticas de uso de la aplicación</string>
     <string name="select_home_icons">Seleccione el paquete de iconos de inicio</string>
     <string name="select_app_list_icons">Seleccionar paquete de iconos de la lista de aplicaciones</string>
-    <string name="enable_filter_strength">Habilitar la intensidad del filtro</string>
-    <string name="filter_strength">Fuerza del filtro</string>
+    <string name="enable_filter_strength">Habilitar Buscador difuso</string>
+    <string name="filter_strength">Fuerza del buscador difuso</string>
     <string name="show_background">Mostrar antecedentes</string>
     <string name="background_opacity">Transparencia de fondo</string>
     <string name="element_alignment">Alineación de elementos</string>
