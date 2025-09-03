@@ -11,6 +11,7 @@ import android.content.pm.LauncherApps
 import android.graphics.drawable.Drawable
 import android.os.Build
 import android.os.Process
+import android.os.UserHandle
 import android.os.UserManager
 import android.text.Editable
 import android.text.TextWatcher
@@ -66,7 +67,7 @@ class AppDrawerAdapter(
     private val appClickListener: (AppListItem) -> Unit,
     private val appDeleteListener: (AppListItem) -> Unit,
     private val appRenameListener: (String, String) -> Unit,
-    private val appTagListener: (String, String) -> Unit,
+    private val appTagListener: (String, String, UserHandle) -> Unit,
     private val appHideListener: (AppDrawerFlag, AppListItem) -> Unit,
     private val appInfoListener: (AppListItem) -> Unit
 ) : RecyclerView.Adapter<AppDrawerAdapter.ViewHolder>(), Filterable {
@@ -179,7 +180,7 @@ class AppDrawerAdapter(
             appModel.customTag = name
             notifyItemChanged(holder.absoluteAdapterPosition)
             AppLogger.d("AppListDebug", "🔁 notifyItemChanged at ${holder.absoluteAdapterPosition}")
-            appTagListener(appModel.activityPackage, appModel.customTag)
+            appTagListener(appModel.activityPackage, appModel.customTag, appModel.user)
         }
 
         autoLaunch(position)

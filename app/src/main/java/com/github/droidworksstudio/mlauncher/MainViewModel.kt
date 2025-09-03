@@ -356,7 +356,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                         }
 
                         val alias = prefs.getAppAlias(packageName).ifEmpty { appName }
-                        val tag = prefs.getAppTag(packageName)
+                        val tag = prefs.getAppTag(packageName, profile)
 
                         fullList.add(
                             AppListItem(
@@ -403,7 +403,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                     }
 
                     val alias = prefs.getAppAlias(packageName)
-                    val tag = prefs.getAppTag(packageName)
+                    val tag = prefs.getAppTag(packageName, profile)
 
                     val category = when {
                         pinnedPackages.contains(packageName) -> AppCategory.PINNED

@@ -10,6 +10,7 @@ import android.content.Intent
 import android.content.pm.LauncherApps
 import android.os.Build
 import android.os.Bundle
+import android.os.UserHandle
 import android.os.UserManager
 import android.text.Spannable
 import android.text.SpannableString
@@ -617,10 +618,10 @@ class AppDrawerFragment : Fragment() {
             findNavController().popBackStack()
         }
 
-    private fun appTagListener(): (appPackage: String, appTag: String) -> Unit =
-        { appPackage, appTag ->
+    private fun appTagListener(): (appPackage: String, appTag: String, appUser: UserHandle) -> Unit =
+        { appPackage, appTag, appUser ->
             val prefs = Prefs(requireContext())
-            prefs.setAppTag(appPackage, appTag)
+            prefs.setAppTag(appPackage, appTag, appUser)
             findNavController().popBackStack()
         }
 

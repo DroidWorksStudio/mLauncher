@@ -397,10 +397,7 @@ class SettingsFragment : Fragment() {
                     )
 
                     // 5. Private Spaces (if supported)
-                    if (
-                        PrivateSpaceManager(context).isPrivateSpaceSupported() &&
-                        PrivateSpaceManager(context).isPrivateSpaceSetUp(showToast = false, launchSettings = false)
-                    ) {
+                    if (PrivateSpaceManager(context).isPrivateSpaceSupported()) {
                         SettingsHomeItem(
                             title = getLocalizedString(R.string.private_space, getLocalizedString(setPrivateSpacesStatus)),
                             imageVector = ImageVector.vectorResource(id = setPrivateSpacesIcon),
@@ -408,11 +405,14 @@ class SettingsFragment : Fragment() {
                             descriptionFontSize = descriptionFontSize,
                             iconSize = iconSize,
                             onClick = {
-                                PrivateSpaceManager(context).togglePrivateSpaceLock(
-                                    showToast = true,
-                                    launchSettings = true
-                                )
-                                toggledPrivateSpaces = !toggledPrivateSpaces
+                                if (PrivateSpaceManager(context).isPrivateSpaceSetUp(showToast = true, launchSettings = false)) {
+
+                                    PrivateSpaceManager(context).togglePrivateSpaceLock(
+                                        showToast = true,
+                                        launchSettings = true
+                                    )
+                                    toggledPrivateSpaces = !toggledPrivateSpaces
+                                }
                             }
                         )
                     }
