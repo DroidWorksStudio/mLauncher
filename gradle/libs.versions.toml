@@ -1,7 +1,7 @@
 # gradle/libs.versions.toml
 
 [versions]
-agp = "8.12.1"
+agp = "8.12.2"
 kotlin = "2.2.10"
 viewpager2 = "1.1.0"
 
