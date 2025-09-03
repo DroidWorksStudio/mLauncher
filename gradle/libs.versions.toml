@@ -15,7 +15,7 @@ material = "1.12.0"
 
 # Android Lifecycle
 lifecycle-extensions = "2.2.0"
-lifecycle-viewmodel-ktx = "2.9.2"
+lifecycle-viewmodel-ktx = "2.9.3"
 
 # Navigation
 navigation-fragment-ktx = "2.9.3"
