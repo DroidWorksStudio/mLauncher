@@ -8,6 +8,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Add null check for view in HomeFragment.onResume - ([66425a6](https://github.com/DroidWorksStudio/mLauncher/commit/66425a6af7bbfe538aeaa0f3f6daf0721ac7a284))
 
+### Refactoring:
+
+- Optimize HomeFragment lifecycle and receivers - ([fe430ad](https://github.com/DroidWorksStudio/mLauncher/commit/fe430ad3ceb59e6dac10eabee93e281c2bc08171))
+
 ## [1.10.9.1](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.9.1) - (03, September 2025)
 
 ### Bug Fixes:
