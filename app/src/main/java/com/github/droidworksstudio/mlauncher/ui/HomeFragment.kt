@@ -163,54 +163,45 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         // Handle status bar once per view creation
         setTopPadding(binding.mainLayout)
 
-        // Register battery receiver
-        batteryReceiver = BatteryReceiver()
-        try {
-            val filter = IntentFilter(Intent.ACTION_BATTERY_CHANGED)
-            requireContext().registerReceiver(batteryReceiver, filter)
-        } catch (e: Exception) {
-            e.printStackTrace()
+        // Weather updates
+        if (prefs.showWeather) {
+            getWeather()
+        } else {
+            binding.weather.isVisible = false
         }
 
-        // Register private space receiver if supported
-        if (PrivateSpaceManager(requireContext()).isPrivateSpaceSupported()) {
-            privateSpaceReceiver = PrivateSpaceReceiver()
-            try {
-                val filter = IntentFilter(Intent.ACTION_PROFILE_AVAILABLE)
-                requireContext().registerReceiver(privateSpaceReceiver, filter)
-            } catch (e: Exception) {
-                e.printStackTrace()
+        // Update dynamic UI elements
+        updateTimeAndInfo()
+
+        // Register battery receiver
+        context?.let { ctx ->
+            batteryReceiver = BatteryReceiver()
+            ctx.registerReceiver(batteryReceiver, IntentFilter(Intent.ACTION_BATTERY_CHANGED))
+
+            // Register private space receiver if supported
+            if (PrivateSpaceManager(ctx).isPrivateSpaceSupported()) {
+                privateSpaceReceiver = PrivateSpaceReceiver()
+                ctx.registerReceiver(privateSpaceReceiver, IntentFilter(Intent.ACTION_PROFILE_AVAILABLE))
             }
         }
-    }
-
-    override fun onResume() {
-        super.onResume()
-
-        // Weather: may change frequently
-        if (isAdded && view != null) {
-            if (prefs.showWeather) getWeather() else binding.weather.isVisible = false
-        }
-
-        // Handle status bar once per view creation
-        setTopPadding(binding.mainLayout)
-
-        // Update only dynamic elements (not all UI prefs)
-        updateTimeAndInfo()
     }
 
     override fun onStop() {
         super.onStop()
-        try {
-            requireContext().unregisterReceiver(batteryReceiver)
-            if (PrivateSpaceManager(requireContext()).isPrivateSpaceSupported()) {
-                requireContext().unregisterReceiver(privateSpaceReceiver)
+
+        context?.let { ctx ->
+            try {
+                batteryReceiver.let { ctx.unregisterReceiver(it) }
+                privateSpaceReceiver.let { ctx.unregisterReceiver(it) }
+            } catch (e: IllegalArgumentException) {
+                // Receiver not registered — safe to ignore
+                e.printStackTrace()
             }
-        } catch (e: Exception) {
-            e.printStackTrace()
         }
+
         dismissDialogs()
     }
+
 
     private fun updateUIFromPreferences() {
         val locale = prefs.appLanguage.locale()
@@ -1239,13 +1230,18 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             }
         }
 
-        locationManager.requestLocationUpdates(
-            provider,
-            30 * 60 * 1000L, // 30 minutes in milliseconds
-            100f,            // or use e.g., 100 meters to avoid frequent updates if user moves
-            locationListener,
-            Looper.getMainLooper()
-        )
+        try {
+            locationManager.requestLocationUpdates(
+                provider,
+                30 * 60 * 1000L, // 30 minutes in milliseconds
+                100f,            // or use e.g., 100 meters to avoid frequent updates if user moves
+                locationListener,
+                Looper.getMainLooper()
+            )
+        } catch (se: SecurityException) {
+            // Missing location permission
+            se.printStackTrace()
+        }
     }
 
 
@@ -1255,13 +1251,22 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         AppLogger.d("WeatherReceiver", "Location: $lat, $lon")
 
         val receiver = WeatherReceiver()
+
+        // Only run if fragment is added AND has a view
+        if (!isAdded || view == null) {
+            AppLogger.d("WeatherReceiver", "Fragment not in a valid state to update UI")
+            return
+        }
+
+        // Use the viewLifecycleOwner safely
         viewLifecycleOwner.lifecycleScope.launch {
             val weatherReceiver = receiver.getCurrentWeather(lat, lon)
             val weatherType =
                 receiver.getWeatherEmoji(weatherReceiver?.currentWeather?.weatherCode ?: -1)
 
-            binding.apply {
-                if (weatherReceiver != null) {
+            // Double check that binding is still valid (view not destroyed mid-launch)
+            if (view != null && weatherReceiver != null) {
+                binding.apply {
                     weather.textSize = prefs.batterySize.toFloat()
                     weather.setTextColor(prefs.batteryColor)
                     weather.text = String.format(
