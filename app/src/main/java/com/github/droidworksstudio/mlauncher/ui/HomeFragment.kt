@@ -1,19 +1,14 @@
 package com.github.droidworksstudio.mlauncher.ui
 
-import android.Manifest
 import android.annotation.SuppressLint
 import android.app.admin.DevicePolicyManager
 import android.content.Context
 import android.content.Context.VIBRATOR_SERVICE
 import android.content.Intent
 import android.content.IntentFilter
-import android.content.pm.PackageManager
 import android.graphics.PorterDuff
 import android.graphics.PorterDuffColorFilter
 import android.graphics.drawable.Drawable
-import android.location.Location
-import android.location.LocationListener
-import android.location.LocationManager
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -31,7 +26,6 @@ import android.widget.LinearLayout
 import android.widget.Space
 import android.widget.TextView
 import androidx.biometric.BiometricPrompt
-import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.os.bundleOf
 import androidx.core.view.children
@@ -78,7 +72,6 @@ import com.github.droidworksstudio.mlauncher.helper.initActionService
 import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
 import com.github.droidworksstudio.mlauncher.helper.receivers.BatteryReceiver
 import com.github.droidworksstudio.mlauncher.helper.receivers.PrivateSpaceReceiver
-import com.github.droidworksstudio.mlauncher.helper.receivers.WeatherReceiver
 import com.github.droidworksstudio.mlauncher.helper.setTopPadding
 import com.github.droidworksstudio.mlauncher.helper.showPermissionDialog
 import com.github.droidworksstudio.mlauncher.helper.utils.AppReloader
@@ -88,6 +81,7 @@ import com.github.droidworksstudio.mlauncher.helper.wordOfTheDay
 import com.github.droidworksstudio.mlauncher.listener.GestureAdapter
 import com.github.droidworksstudio.mlauncher.services.ActionService
 import com.github.droidworksstudio.mlauncher.ui.components.DialogManager
+import com.github.droidworksstudio.mlauncher.weather.WeatherHelper
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -99,6 +93,7 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     private lateinit var deviceManager: DevicePolicyManager
     private lateinit var batteryReceiver: BatteryReceiver
     private lateinit var biometricHelper: BiometricHelper
+    private lateinit var weatherHelper: WeatherHelper
     private lateinit var privateSpaceReceiver: PrivateSpaceReceiver
     private lateinit var vibrator: Vibrator
 
@@ -163,9 +158,19 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         // Handle status bar once per view creation
         setTopPadding(binding.mainLayout)
 
+        weatherHelper = WeatherHelper(
+            requireContext(),
+            viewLifecycleOwner
+        ) { weatherText ->
+            binding.weather.textSize = prefs.batterySize.toFloat()
+            binding.weather.setTextColor(prefs.batteryColor)
+            binding.weather.text = weatherText
+            binding.weather.isVisible = true
+        }
+
         // Weather updates
         if (prefs.showWeather) {
-            getWeather()
+            weatherHelper.getWeather()
         } else {
             binding.weather.isVisible = false
         }
@@ -1178,106 +1183,6 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             viewModel.firstOpen(false)
         } catch (e: java.lang.Exception) {
             AppLogger.d("onLongClick", e.toString())
-        }
-    }
-
-    private fun getWeather() {
-        val locationManager =
-            requireContext().getSystemService(Context.LOCATION_SERVICE) as LocationManager
-
-        val fineLocationGranted = ActivityCompat.checkSelfPermission(
-            requireContext(), Manifest.permission.ACCESS_FINE_LOCATION
-        ) == PackageManager.PERMISSION_GRANTED
-
-        val coarseLocationGranted = ActivityCompat.checkSelfPermission(
-            requireContext(), Manifest.permission.ACCESS_COARSE_LOCATION
-        ) == PackageManager.PERMISSION_GRANTED
-
-        if (!fineLocationGranted && !coarseLocationGranted) {
-            // Exit early if permission is declined or not granted
-            AppLogger.w("WeatherReceiver", "Location permission not granted. Aborting.")
-            return
-        }
-
-        val provider = when {
-            locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER) -> LocationManager.GPS_PROVIDER
-            locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER) -> LocationManager.NETWORK_PROVIDER
-            else -> {
-                AppLogger.e("WeatherReceiver", "No location provider enabled.")
-                return
-            }
-        }
-
-        // ✅ Try last known location first
-        val lastKnown = locationManager.getLastKnownLocation(provider)
-        if (lastKnown != null) {
-            handleLocation(lastKnown)
-            return
-        }
-
-        // 🔁 Fallback: wait for real-time update
-        val locationListener = object : LocationListener {
-            override fun onLocationChanged(location: Location) {
-                locationManager.removeUpdates(this)
-                handleLocation(location)
-            }
-
-            override fun onProviderDisabled(provider: String) {}
-            override fun onProviderEnabled(provider: String) {}
-
-            @Deprecated("Deprecated in Java")
-            override fun onStatusChanged(provider: String?, status: Int, extras: Bundle?) {
-            }
-        }
-
-        try {
-            locationManager.requestLocationUpdates(
-                provider,
-                30 * 60 * 1000L, // 30 minutes in milliseconds
-                100f,            // or use e.g., 100 meters to avoid frequent updates if user moves
-                locationListener,
-                Looper.getMainLooper()
-            )
-        } catch (se: SecurityException) {
-            // Missing location permission
-            se.printStackTrace()
-        }
-    }
-
-
-    private fun handleLocation(location: Location) {
-        val lat = location.latitude
-        val lon = location.longitude
-        AppLogger.d("WeatherReceiver", "Location: $lat, $lon")
-
-        val receiver = WeatherReceiver()
-
-        // Only run if fragment is added AND has a view
-        if (!isAdded || view == null) {
-            AppLogger.d("WeatherReceiver", "Fragment not in a valid state to update UI")
-            return
-        }
-
-        // Use the viewLifecycleOwner safely
-        viewLifecycleOwner.lifecycleScope.launch {
-            val weatherReceiver = receiver.getCurrentWeather(lat, lon)
-            val weatherType =
-                receiver.getWeatherEmoji(weatherReceiver?.currentWeather?.weatherCode ?: -1)
-
-            // Double check that binding is still valid (view not destroyed mid-launch)
-            if (view != null && weatherReceiver != null) {
-                binding.apply {
-                    weather.textSize = prefs.batterySize.toFloat()
-                    weather.setTextColor(prefs.batteryColor)
-                    weather.text = String.format(
-                        "%s %s%s",
-                        weatherType,
-                        weatherReceiver.currentWeather.temperature,
-                        weatherReceiver.currentUnits.temperatureUnit
-                    )
-                    weather.isVisible = true
-                }
-            }
         }
     }
 
