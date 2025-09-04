@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
+## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
+
+### Bug Fixes:
+
+- Add null check for view in HomeFragment.onResume - ([66425a6](https://github.com/DroidWorksStudio/mLauncher/commit/66425a6af7bbfe538aeaa0f3f6daf0721ac7a284))
+
 ## [1.10.9.1](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.9.1) - (03, September 2025)
 
 ### Bug Fixes:
