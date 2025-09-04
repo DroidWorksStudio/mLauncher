@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Extract weather logic to WeatherHelper - ([0928fe6](https://github.com/DroidWorksStudio/mLauncher/commit/0928fe69ff35eb93d45ce5c1f155fb10cee10987))
 - Optimize HomeFragment lifecycle and receivers - ([fe430ad](https://github.com/DroidWorksStudio/mLauncher/commit/fe430ad3ceb59e6dac10eabee93e281c2bc08171))
 
 ## [1.10.9.1](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.9.1) - (03, September 2025)
