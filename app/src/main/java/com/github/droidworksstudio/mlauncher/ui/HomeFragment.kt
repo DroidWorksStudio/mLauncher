@@ -188,7 +188,9 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         super.onResume()
 
         // Weather: may change frequently
-        if (prefs.showWeather) getWeather() else binding.weather.isVisible = false
+        if (isAdded && view != null) {
+            if (prefs.showWeather) getWeather() else binding.weather.isVisible = false
+        }
 
         // Handle status bar once per view creation
         setTopPadding(binding.mainLayout)
