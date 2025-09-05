@@ -108,6 +108,9 @@
 
     <string name="weather">Weather</string>
     <string name="show_weather">Show Weather</string>
+    <string name="gps_location">GPS Location</string>
+    <string name="temp_unit">Temperature Unit</string>
+    <string name="manual_location">Set Manual Location</string>
 
     <string name="icon_packs">Icon Packs</string>
 
@@ -368,6 +371,8 @@
     <string name="next">Next</string>
     <string name="start">Start</string>
     <string name="copy">Copy</string>
+    <string name="celsius">Celsius</string>
+    <string name="fahrenheit">Fahrenheit</string>
 
     <string name="home_button_phone">Phone</string>
     <string name="home_button_messages">Messages</string>

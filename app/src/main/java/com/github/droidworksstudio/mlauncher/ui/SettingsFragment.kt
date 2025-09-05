@@ -207,6 +207,9 @@ class SettingsFragment : Fragment() {
         var toggledShowBattery by remember { mutableStateOf(prefs.showBattery) }
         var toggledShowBatteryIcon by remember { mutableStateOf(prefs.showBatteryIcon) }
         var toggledShowWeather by remember { mutableStateOf(prefs.showWeather) }
+        var toggledGPSLocation by remember { mutableStateOf(prefs.gpsLocation) }
+        var selectedTempUnits by remember { mutableStateOf(prefs.tempUnit) }
+        var selectedWeatherLocation by remember { mutableStateOf(prefs.loadLocationName()) }
 
         // Look & Feel Settings
         var selectedAppSize by remember { mutableIntStateOf(prefs.appSize) }
@@ -981,6 +984,52 @@ class SettingsFragment : Fragment() {
                             prefs.showWeather = toggledShowWeather
                         }
                     )
+
+                    if (toggledShowWeather) {
+                        SettingsSwitch(
+                            text = getLocalizedString(R.string.gps_location),
+                            fontSize = titleFontSize,
+                            defaultState = toggledGPSLocation,
+                            onCheckedChange = {
+                                toggledGPSLocation = !prefs.gpsLocation
+                                prefs.gpsLocation = toggledGPSLocation
+                            }
+                        )
+                    }
+
+                    if (toggledShowWeather) {
+                        SettingsSelect(
+                            title = getLocalizedString(R.string.temp_unit),
+                            option = selectedTempUnits.string(),
+                            fontSize = titleFontSize,
+                            onClick = {
+                                val tempUnitsOptions = Constants.TempUnits.entries.toTypedArray()
+                                val selectedIndex = tempUnitsOptions.indexOf(selectedTempUnits).takeIf { it >= 0 } ?: 1
+
+                                dialogBuilder.showSingleChoiceBottomSheetPill(
+                                    context = requireContext(),
+                                    options = tempUnitsOptions,
+                                    title = getLocalizedString(R.string.temp_unit),
+                                    selectedIndex = selectedIndex,
+                                    onItemSelected = { newTempUnit ->
+                                        selectedTempUnits = newTempUnit // Update state
+                                        prefs.tempUnit = selectedTempUnits // Persist selection in preferences
+                                    }
+                                )
+                            }
+                        )
+                    }
+
+                    if (toggledShowWeather && !toggledGPSLocation) {
+                        SettingsSelect(
+                            title = getLocalizedString(R.string.manual_location),
+                            option = selectedWeatherLocation,
+                            fontSize = titleFontSize,
+                            onClick = {
+                                showLocationSearch()
+                            }
+                        )
+                    }
 
                     if (!isGestureNavigationEnabled(context)) {
                         Spacer(modifier = Modifier.height(52.dp))
@@ -2627,6 +2676,12 @@ class SettingsFragment : Fragment() {
         findNavController().navigate(
             R.id.action_settingsFragment_to_appFavoriteFragment,
             bundleOf("flag" to AppDrawerFlag.SetHomeApp.toString())
+        )
+    }
+
+    private fun showLocationSearch() {
+        findNavController().navigate(
+            R.id.action_settingsFragment_to_locationSearchFragment
         )
     }
 

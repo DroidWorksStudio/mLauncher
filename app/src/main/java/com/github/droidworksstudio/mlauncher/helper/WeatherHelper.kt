@@ -1,4 +1,4 @@
-package com.github.droidworksstudio.mlauncher.weather
+package com.github.droidworksstudio.mlauncher.helper
 
 import android.Manifest
 import android.content.Context
@@ -12,6 +12,7 @@ import androidx.core.app.ActivityCompat
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.lifecycleScope
 import com.github.droidworksstudio.common.AppLogger
+import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.helper.receivers.WeatherReceiver
 import kotlinx.coroutines.launch
 
@@ -21,64 +22,84 @@ class WeatherHelper(
     private val updateWeatherUi: (temperatureText: String) -> Unit
 ) {
 
+    private val prefs = Prefs(context)
+
     fun getWeather() {
-        val locationManager =
-            context.getSystemService(Context.LOCATION_SERVICE) as LocationManager
+        val useGps = prefs.gpsLocation // or however you store it
 
-        val fineLocationGranted = ActivityCompat.checkSelfPermission(
-            context, Manifest.permission.ACCESS_FINE_LOCATION
-        ) == PackageManager.PERMISSION_GRANTED
+        if (useGps) {
+            val locationManager =
+                context.getSystemService(Context.LOCATION_SERVICE) as LocationManager
 
-        val coarseLocationGranted = ActivityCompat.checkSelfPermission(
-            context, Manifest.permission.ACCESS_COARSE_LOCATION
-        ) == PackageManager.PERMISSION_GRANTED
+            val fineLocationGranted = ActivityCompat.checkSelfPermission(
+                context, Manifest.permission.ACCESS_FINE_LOCATION
+            ) == PackageManager.PERMISSION_GRANTED
 
-        if (!fineLocationGranted && !coarseLocationGranted) {
-            AppLogger.w("WeatherReceiver", "Location permission not granted. Aborting.")
-            return
-        }
+            val coarseLocationGranted = ActivityCompat.checkSelfPermission(
+                context, Manifest.permission.ACCESS_COARSE_LOCATION
+            ) == PackageManager.PERMISSION_GRANTED
 
-        val provider = when {
-            locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER) -> LocationManager.GPS_PROVIDER
-            locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER) -> LocationManager.NETWORK_PROVIDER
-            else -> {
-                AppLogger.e("WeatherReceiver", "No location provider enabled.")
+            if (!fineLocationGranted && !coarseLocationGranted) {
+                AppLogger.w("WeatherReceiver", "Location permission not granted. Aborting.")
                 return
             }
-        }
 
-        // ✅ Try last known location first
-        val lastKnown = locationManager.getLastKnownLocation(provider)
-        if (lastKnown != null) {
-            handleLocation(lastKnown)
-            return
-        }
-
-        // 🔁 Fallback: wait for real-time update
-        val locationListener = object : LocationListener {
-            override fun onLocationChanged(location: Location) {
-                locationManager.removeUpdates(this)
-                handleLocation(location)
+            val provider = when {
+                locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER) -> LocationManager.GPS_PROVIDER
+                locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER) -> LocationManager.NETWORK_PROVIDER
+                else -> {
+                    AppLogger.e("WeatherReceiver", "No location provider enabled.")
+                    return
+                }
             }
 
-            override fun onProviderDisabled(provider: String) {}
-            override fun onProviderEnabled(provider: String) {}
-
-            @Deprecated("Deprecated in Java")
-            override fun onStatusChanged(provider: String?, status: Int, extras: Bundle?) {
+            // ✅ Try last known location first
+            val lastKnown = locationManager.getLastKnownLocation(provider)
+            if (lastKnown != null) {
+                handleLocation(lastKnown)
+                return
             }
-        }
 
-        try {
-            locationManager.requestLocationUpdates(
-                provider,
-                30 * 60 * 1000L, // every 30 minutes
-                100f,            // or 100 meters
-                locationListener,
-                Looper.getMainLooper()
-            )
-        } catch (se: SecurityException) {
-            se.printStackTrace()
+            // 🔁 Fallback: wait for real-time update
+            val locationListener = object : LocationListener {
+                override fun onLocationChanged(location: Location) {
+                    locationManager.removeUpdates(this)
+                    handleLocation(location)
+                }
+
+                override fun onProviderDisabled(provider: String) {}
+                override fun onProviderEnabled(provider: String) {}
+
+                @Deprecated("Deprecated in Java")
+                override fun onStatusChanged(provider: String?, status: Int, extras: Bundle?) {
+                }
+            }
+
+            try {
+                locationManager.requestLocationUpdates(
+                    provider,
+                    30 * 60 * 1000L, // every 30 minutes
+                    100f,            // or 100 meters
+                    locationListener,
+                    Looper.getMainLooper()
+                )
+            } catch (se: SecurityException) {
+                se.printStackTrace()
+            }
+        } else {
+            // 📍 Use saved custom location from prefs
+            val savedLocation = prefs.loadLocation() // Pair<Double, Double>?
+            if (savedLocation != null) {
+                val (lat, lon) = savedLocation
+                val fakeLocation = Location("prefs_location").apply {
+                    latitude = lat
+                    longitude = lon
+                }
+                handleLocation(fakeLocation)
+            } else {
+                AppLogger.e("WeatherReceiver", "No custom location saved in prefs.")
+            }
+
         }
     }
 
@@ -87,10 +108,10 @@ class WeatherHelper(
         val lon = location.longitude
         AppLogger.d("WeatherReceiver", "Location: $lat, $lon")
 
-        val receiver = WeatherReceiver()
+        val receiver = WeatherReceiver(context)
 
         lifecycleOwner.lifecycleScope.launch {
-            val weatherReceiver = receiver.getCurrentWeather(lat, lon)
+            val weatherReceiver = receiver.loadWeatherForSavedLocation(lat, lon)
             val weatherType =
                 receiver.getWeatherEmoji(weatherReceiver?.currentWeather?.weatherCode ?: -1)
 

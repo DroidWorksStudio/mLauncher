@@ -62,6 +62,7 @@ import com.github.droidworksstudio.mlauncher.databinding.FragmentHomeBinding
 import com.github.droidworksstudio.mlauncher.helper.FontManager
 import com.github.droidworksstudio.mlauncher.helper.IconCacheTarget
 import com.github.droidworksstudio.mlauncher.helper.IconPackHelper.getSafeAppIcon
+import com.github.droidworksstudio.mlauncher.helper.WeatherHelper
 import com.github.droidworksstudio.mlauncher.helper.analytics.AppUsageMonitor
 import com.github.droidworksstudio.mlauncher.helper.formatMillisToHMS
 import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
@@ -81,7 +82,6 @@ import com.github.droidworksstudio.mlauncher.helper.wordOfTheDay
 import com.github.droidworksstudio.mlauncher.listener.GestureAdapter
 import com.github.droidworksstudio.mlauncher.services.ActionService
 import com.github.droidworksstudio.mlauncher.ui.components.DialogManager
-import com.github.droidworksstudio.mlauncher.weather.WeatherHelper
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 

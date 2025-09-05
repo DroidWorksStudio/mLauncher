@@ -13,6 +13,7 @@ import com.github.droidworksstudio.mlauncher.data.Constants.Gravity
 import com.github.droidworksstudio.mlauncher.helper.emptyString
 import com.github.droidworksstudio.mlauncher.helper.getUserHandleFromString
 import com.github.droidworksstudio.mlauncher.helper.isSystemInDarkMode
+import com.github.droidworksstudio.mlauncher.helper.receivers.LocationResult
 import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
@@ -52,6 +53,7 @@ private const val NAVIGATION_BAR = "NAVIGATION_BAR"
 private const val SHOW_BATTERY = "SHOW_BATTERY"
 private const val SHOW_BATTERY_ICON = "SHOW_BATTERY_ICON"
 private const val SHOW_WEATHER = "SHOW_WEATHER"
+private const val GPS_LOCATION = "GPS_LOCATION"
 private const val SHOW_AZSIDEBAR = "SHOW_AZSIDEBAR"
 private const val SHOW_DATE = "SHOW_DATE"
 private const val HOME_LOCKED = "HOME_LOCKED"
@@ -97,6 +99,7 @@ private const val APP_USAGE_STATS = "APP_USAGE_STATS"
 private const val APP_OPACITY = "APP_OPACITY"
 private const val APP_LANGUAGE = "APP_LANGUAGE"
 private const val APP_THEME = "APP_THEME"
+private const val TEMP_UNIT = "TEMP_UNIT"
 private const val SHORT_SWIPE_UP = "SHORT_SWIPE_UP"
 private const val SHORT_SWIPE_DOWN = "SHORT_SWIPE_DOWN"
 private const val SHORT_SWIPE_LEFT = "SHORT_SWIPE_LEFT"
@@ -136,6 +139,10 @@ private const val BUBBLE_CATEGORY_COLOR = "BUBBLE_CATEGORY_COLOR"
 
 private const val INPUT_MESSAGE_COLOR = "INPUT_MESSAGE_COLOR"
 private const val INPUT_MESSAGEHINT_COLOR = "INPUT_MESSAGEHINT_COLOR"
+
+private const val WEATHER_LATITUDE = "WEATHER_LATITUDE"
+private const val WEATHER_LONGITUDE = "WEATHER_LONGITUDE"
+private const val WEATHER_LOCATION = "WEATHER_LOCATION"
 
 private const val NOTES_MESSAGES = "NOTES_MESSAGES"
 private const val NOTES_CATEGORY = "NOTES_CATEGORY"
@@ -534,6 +541,10 @@ class Prefs(val context: Context) {
         get() = getSetting(SHOW_WEATHER, true)
         set(value) = prefsNormal.edit { putBoolean(SHOW_WEATHER, value) }
 
+    var gpsLocation: Boolean
+        get() = getSetting(GPS_LOCATION, true)
+        set(value) = prefsNormal.edit { putBoolean(GPS_LOCATION, value) }
+
     var showBatteryIcon: Boolean
         get() = getSetting(SHOW_BATTERY_ICON, true)
         set(value) = prefsNormal.edit { putBoolean(SHOW_BATTERY_ICON, value) }
@@ -673,6 +684,12 @@ class Prefs(val context: Context) {
             return getEnumSetting(APP_THEME, Constants.Theme.System)
         }
         set(value) = prefsNormal.edit { putString(APP_THEME, value.name) }
+
+    var tempUnit: Constants.TempUnits
+        get() {
+            return getEnumSetting(TEMP_UNIT, Constants.TempUnits.Celsius)
+        }
+        set(value) = prefsNormal.edit { putString(TEMP_UNIT, value.name) }
 
     var appLanguage: Constants.Language
         get() {
@@ -960,6 +977,33 @@ class Prefs(val context: Context) {
                 putString("${appPackage}_TAG_${it.hashCode()}", appTag)
             }
         }
+    }
+
+    /** 🔹 Save selected location into SharedPreferences */
+    fun saveLocation(results: LocationResult) {
+        results.let {
+            prefsNormal.edit {
+                putString(WEATHER_LOCATION, it.region)
+                putFloat(WEATHER_LATITUDE, it.latitude.toFloat())
+                putFloat(WEATHER_LONGITUDE, it.longitude.toFloat())
+            }
+        }
+    }
+
+    /** 🔹 Load saved location */
+    fun loadLocation(): Pair<Double, Double>? {
+        val lat = prefsNormal.getFloat(WEATHER_LATITUDE, Float.NaN)
+        val lon = prefsNormal.getFloat(WEATHER_LONGITUDE, Float.NaN)
+
+        return if (!lat.isNaN() && !lon.isNaN()) {
+            Pair(lat.toDouble(), lon.toDouble())
+        } else {
+            null
+        }
+    }
+
+    fun loadLocationName(): String {
+        return prefsNormal.getString(WEATHER_LOCATION, "Select Location").toString()
     }
 
     fun remove(prefName: String) {
