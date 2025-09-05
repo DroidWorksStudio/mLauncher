@@ -79,6 +79,9 @@
     <string name="show_total_screen_time">แสดงเวลาหน้าจอทั้งหมด</string>
     <string name="weather">สภาพอากาศ</string>
     <string name="show_weather">แสดงสภาพอากาศ</string>
+    <string name="gps_location">GPS Location</string>
+    <string name="temp_unit">Temperature Unit</string>
+    <string name="manual_location">Set Manual Location</string>
     <string name="icon_packs">ไอคอนแพ็ค</string>
     <!-- Strings used for look & feel settings -->
     <string name="look_feel_settings_title">มอง &amp; รู้สึก</string>
@@ -286,6 +289,8 @@
     <string name="next">ต่อไป</string>
     <string name="start">เริ่ม</string>
     <string name="copy">สำเนา</string>
+    <string name="celsius">Celsius</string>
+    <string name="fahrenheit">Fahrenheit</string>
     <string name="home_button_phone">โทรศัพท์</string>
     <string name="home_button_messages">ข้อความ</string>
     <string name="home_button_camera">กล้อง</string>

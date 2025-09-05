@@ -79,6 +79,9 @@
     <string name="show_total_screen_time">Toplam Ekran Süresini Göster</string>
     <string name="weather">Hava durumu</string>
     <string name="show_weather">Hava Durumunu Göster</string>
+    <string name="gps_location">GPS Location</string>
+    <string name="temp_unit">Temperature Unit</string>
+    <string name="manual_location">Set Manual Location</string>
     <string name="icon_packs">Simge Paketleri</string>
     <!-- Strings used for look & feel settings -->
     <string name="look_feel_settings_title">Bak &amp; Hisset</string>
@@ -286,6 +289,8 @@
     <string name="next">Sonraki</string>
     <string name="start">Başlangıç</string>
     <string name="copy">Kopyala</string>
+    <string name="celsius">Celsius</string>
+    <string name="fahrenheit">Fahrenheit</string>
     <string name="home_button_phone">Telefon</string>
     <string name="home_button_messages">Mesajlar</string>
     <string name="home_button_camera">Kamera</string>

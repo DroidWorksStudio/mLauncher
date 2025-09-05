@@ -79,6 +79,9 @@
     <string name="show_total_screen_time">Mostra tempo totale di utilizzo dello schermo</string>
     <string name="weather">Tempo atmosferico</string>
     <string name="show_weather">Mostra meteo</string>
+    <string name="gps_location">GPS Location</string>
+    <string name="temp_unit">Temperature Unit</string>
+    <string name="manual_location">Set Manual Location</string>
     <string name="icon_packs">Pacchetti di icone</string>
     <!-- Strings used for look & feel settings -->
     <string name="look_feel_settings_title">Guarda &amp; Senti</string>
@@ -286,6 +289,8 @@
     <string name="next">Prossimo</string>
     <string name="start">Inizio</string>
     <string name="copy">Copia</string>
+    <string name="celsius">Celsius</string>
+    <string name="fahrenheit">Fahrenheit</string>
     <string name="home_button_phone">Telefono</string>
     <string name="home_button_messages">Messaggi</string>
     <string name="home_button_camera">Telecamera</string>
