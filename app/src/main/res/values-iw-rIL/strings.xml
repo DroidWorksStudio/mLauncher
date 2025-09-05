@@ -79,6 +79,9 @@
     <string name="show_total_screen_time">הצג זמן מסך כולל</string>
     <string name="weather">מֶזֶג אֲוִיר</string>
     <string name="show_weather">הצג מזג אוויר</string>
+    <string name="gps_location">GPS Location</string>
+    <string name="temp_unit">Temperature Unit</string>
+    <string name="manual_location">Set Manual Location</string>
     <string name="icon_packs">חבילות אייקונים</string>
     <!-- Strings used for look & feel settings -->
     <string name="look_feel_settings_title">מראה &amp; תחושה</string>
@@ -288,6 +291,8 @@
     <string name="next">הבא</string>
     <string name="start">התחל</string>
     <string name="copy">לְהַעְתִיק</string>
+    <string name="celsius">Celsius</string>
+    <string name="fahrenheit">Fahrenheit</string>
     <string name="home_button_phone">טֵלֵפוֹן</string>
     <string name="home_button_messages">הודעות</string>
     <string name="home_button_camera">מַצלֵמָה</string>
