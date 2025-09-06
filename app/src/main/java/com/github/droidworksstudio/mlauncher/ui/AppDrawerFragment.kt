@@ -213,7 +213,6 @@ class AppDrawerFragment : Fragment() {
         }
 
         val searchTextView = binding.search.findViewById<TextView>(R.id.search_src_text)
-        if (searchTextView != null) searchTextView.gravity = gravity
 
         val textSize = prefs.appSize.toFloat()
         searchTextView.textSize = textSize

@@ -26,6 +26,7 @@ import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Constants.AppDrawerFlag
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.helper.analytics.AppUsageMonitor
+import com.github.droidworksstudio.mlauncher.helper.getAppNameFromPackage
 import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
 import com.github.droidworksstudio.mlauncher.helper.logActivitiesFromPackage
 import com.github.droidworksstudio.mlauncher.helper.utils.BiometricHelper
@@ -385,7 +386,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 for (activityInfo in activities) {
                     val packageName = activityInfo.applicationInfo.packageName
                     val className = activityInfo.componentName.className
-                    val label = activityInfo.label.toString()
+                    val label = getAppNameFromPackage(context, packageName)
 
 
                     if (packageName == BuildConfig.APPLICATION_ID) continue
