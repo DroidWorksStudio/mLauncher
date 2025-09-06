@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/HEAD)
 
+### Implemented Enhancements:
+
+- Add Contact Search and Calling Functionality - ([0f7708c](https://github.com/DroidWorksStudio/mLauncher/commit/0f7708c7563185722b81ab944fc514364f4e7100))
+
 ### Bug Fixes:
 
 - Conditional private space receiver unregistration - ([cdb88c1](https://github.com/DroidWorksStudio/mLauncher/commit/cdb88c1c6c6d6bae5535096e81aa964ba21b3ebe))
