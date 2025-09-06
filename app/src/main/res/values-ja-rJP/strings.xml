@@ -2,7 +2,8 @@
 <resources>
     <!-- Base Settings -->
     <string name="select_app">アプリを選択</string>
-    <string name="show_apps">すべてのアプリ</string>
+    <string name="show_apps">Search Apps</string>
+    <string name="show_contacts">Search Contacts</string>
     <string name="welcome_to_launcher">%1$sへようこそ</string>
     <string name="continue_by_you_agree">続行すると、 %1$sに同意したことになります</string>
     <string name="usage_access_permission">使用アクセス権限</string>
