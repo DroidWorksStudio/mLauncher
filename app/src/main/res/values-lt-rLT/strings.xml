@@ -2,7 +2,8 @@
 <resources>
     <!-- Base Settings -->
     <string name="select_app">Pasirinkite programą</string>
-    <string name="show_apps">Visos programėlės</string>
+    <string name="show_apps">Search Apps</string>
+    <string name="show_contacts">Search Contacts</string>
     <string name="welcome_to_launcher">Sveiki atvykę į %1$s</string>
     <string name="continue_by_you_agree">Tęsdami sutinkate su %1$s</string>
     <string name="usage_access_permission">Naudojimo prieigos leidimai</string>
