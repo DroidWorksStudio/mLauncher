@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -14,7 +15,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginTop="34dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingHorizontal="8dp">
 
         <com.github.creativecodecat.components.views.FontSearchView
             android:id="@+id/search"
@@ -23,15 +25,45 @@
             android:layout_weight="1"
             android:gravity="end"
             android:imeOptions="actionSearch"
-            android:paddingHorizontal="8dp"
+            android:paddingHorizontal="0dp"
             android:paddingVertical="0dp"
-            android:textCursorDrawable="@null"
-            app:closeIcon="@null"
             app:iconifiedByDefault="false"
             app:queryBackground="@null"
             app:queryHint="___"
-            app:searchIcon="@null"
+            app:searchIcon="@drawable/ic_search"
             app:theme="@style/AppSearchText" />
+
+        <ImageView
+            android:id="@+id/internetSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/advanced_settings_app_info_title"
+            android:paddingHorizontal="5dp"
+            android:paddingVertical="8dp"
+            android:scaleType="fitCenter"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_browser"
+            tools:layout_conversion_absoluteHeight="0dp"
+            tools:layout_conversion_absoluteWidth="0dp" />
+
+        <ImageView
+            android:id="@+id/searchSwitcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/settings_favorite_apps_title"
+            android:paddingHorizontal="5dp"
+            android:paddingVertical="8dp"
+            android:scaleType="fitCenter"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_contacts"
+            tools:layout_conversion_absoluteHeight="0dp"
+            tools:layout_conversion_absoluteWidth="0dp" />
+
+        <Space
+            android:layout_width="12dp"
+            android:layout_height="0dp" />
     </LinearLayout>
 
     <com.github.creativecodecat.components.views.FontAppCompatTextView
@@ -72,18 +104,35 @@
         android:textSize="16sp"
         android:visibility="gone" />
 
-    <!-- RecyclerView positioned below the Drawer TextViews -->
-    <com.github.creativecodecat.components.views.FontRecyclerView
-        android:id="@+id/recyclerView"
+    <ViewSwitcher
+        android:id="@+id/menuView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_below="@id/appDrawerTip"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="25dp"
-        android:clipChildren="false"
-        android:clipToPadding="false"
-        android:overScrollMode="never"
-        android:paddingBottom="25dp" />
+        android:clipToPadding="false">
+
+        <!-- RecyclerView positioned below the Drawer TextViews -->
+        <com.github.creativecodecat.components.views.FontRecyclerView
+            android:id="@+id/appsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:fadingEdgeLength="20dp"
+            android:padding="0dp"
+            android:requiresFadingEdge="vertical"
+            android:scrollbars="none" />
+
+        <com.github.creativecodecat.components.views.FontRecyclerView
+            android:id="@+id/contactsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:fadingEdgeLength="20dp"
+            android:padding="0dp"
+            android:requiresFadingEdge="vertical"
+            android:scrollbars="none" />
+    </ViewSwitcher>
 
     <FrameLayout
         android:id="@+id/sidebar_container"

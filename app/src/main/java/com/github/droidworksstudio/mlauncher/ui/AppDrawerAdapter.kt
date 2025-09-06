@@ -193,101 +193,54 @@ class AppDrawerAdapter(
     private fun createAppFilter(): Filter {
         return object : Filter() {
             override fun performFiltering(charSearch: CharSequence?): FilterResults {
-                isBangSearch = listOf("!", "#").any { prefix -> charSearch?.startsWith(prefix) == true }
+                isBangSearch = listOf("#").any { prefix -> charSearch?.startsWith(prefix) == true }
                 prefs = Prefs(context)
 
                 val searchChars = charSearch.toString().trim().lowercase()
                 val filteredApps: MutableList<AppListItem>
 
-                if (prefs.enableFilterStrength) {
-                    // Only apply FuzzyFinder scoring logic when filter strength is enabled
-                    val scoredApps = mutableMapOf<AppListItem, Int>()
-                    if (searchChars.startsWith("#")) {
-                        val tagQuery = searchChars.substringAfter("#")
-                        for (app in appsList) {
-                            scoredApps[app] =
-                                FuzzyFinder.scoreString(normalize(app.tag), tagQuery, Constants.MAX_FILTER_STRENGTH)
+                val isTagSearch = searchChars.startsWith("#")
+                val query = if (isTagSearch) searchChars.substringAfter("#") else searchChars
+                val normalizeField: (AppListItem) -> String = { app -> if (isTagSearch) normalize(app.tag) else normalize(app.label) }
+
+                // Scoring logic
+                val scoredApps: Map<AppListItem, Int> = if (prefs.enableFilterStrength) {
+                    appsList.associateWith { app ->
+                        if (isTagSearch) {
+                            FuzzyFinder.scoreString(normalize(app.tag), query, Constants.MAX_FILTER_STRENGTH)
+                        } else {
+                            FuzzyFinder.scoreApp(app, query, Constants.MAX_FILTER_STRENGTH)
                         }
+                    }
+                } else {
+                    emptyMap()
+                }
+
+                filteredApps = if (searchChars.isEmpty()) {
+                    appsList.toMutableList()
+                } else {
+                    val filtered = if (prefs.enableFilterStrength) {
+                        // Filter using scores
+                        scoredApps.filter { (app, score) ->
+                            (prefs.searchFromStart && normalizeField(app).startsWith(query) ||
+                                    !prefs.searchFromStart && normalizeField(app).contains(query))
+                                    && score > prefs.filterStrength
+                        }.map { it.key }
                     } else {
-                        for (app in appsList) {
-                            scoredApps[app] =
-                                FuzzyFinder.scoreApp(app, searchChars, Constants.MAX_FILTER_STRENGTH)
+                        // Filter without scores
+                        appsList.filter { app ->
+                            if (prefs.searchFromStart) {
+                                normalizeField(app).startsWith(query)
+                            } else {
+                                FuzzyFinder.isMatch(normalizeField(app), query)
+                            }
                         }
                     }
 
-                    filteredApps = if (searchChars.isNotEmpty()) {
-                        if (searchChars.startsWith("#")) {
-                            val tagQuery = searchChars.substringAfter("#")
-                            if (prefs.searchFromStart) {
-                                AppLogger.d("searchQuery", tagQuery)
-                                scoredApps.filter { (app, _) ->
-                                    normalize(app.tag).startsWith(tagQuery)
-                                }
-                                    .filter { (_, score) -> score > prefs.filterStrength }
-                                    .map { it.key }
-                                    .toMutableList()
-                            } else {
-                                AppLogger.d("searchQuery", tagQuery)
-                                scoredApps.filter { (app, score) ->
-                                    normalize(app.tag).contains(tagQuery) && score > prefs.filterStrength
-                                }
-                                    .map { it.key }
-                                    .toMutableList()
-                            }
-                        } else {
-                            if (prefs.searchFromStart) {
-                                AppLogger.d("searchQuery", searchChars)
-                                scoredApps.filter { (app, _) ->
-                                    normalize(app.label).startsWith(searchChars)
-                                }
-                                    .filter { (_, score) -> score > prefs.filterStrength }
-                                    .map { it.key }
-                                    .toMutableList()
-                            } else {
-                                AppLogger.d("searchQuery", searchChars)
-                                scoredApps.filter { (app, score) ->
-                                    normalize(app.label).contains(searchChars) && score > prefs.filterStrength
-                                }
-                                    .map { it.key }
-                                    .toMutableList()
-                            }
-                        }
-                    } else {
-                        appsList.toMutableList() // No search term, return all apps
-                    }
-                } else {
-                    // When filter strength is disabled, still apply searchFromStart if there is a search term
-                    filteredApps = if (searchChars.isEmpty()) {
-                        appsList.toMutableList() // No search term, return all apps
-                    } else {
-                        val filteredAppsList = if (prefs.searchFromStart) {
-                            AppLogger.d("searchQuery", searchChars)
-                            if (searchChars.startsWith("#")) {
-                                val searchQuery = searchChars.substringAfter("#")
-                                appsList.filter { app ->
-                                    normalize(app.tag).startsWith(searchQuery)
-                                }
-                            } else {
-                                appsList.filter { app ->
-                                    normalize(app.label).startsWith(searchChars)
-                                }
-                            }
-                        } else {
-                            AppLogger.d("searchQuery", searchChars)
-                            if (searchChars.startsWith("#")) {
-                                val searchQuery = searchChars.substringAfter("#")
-                                appsList.filter { app ->
-                                    FuzzyFinder.isMatch(normalize(app.tag), searchQuery)
-                                }
-                            } else {
-                                appsList.filter { app ->
-                                    FuzzyFinder.isMatch(normalize(app.label), searchChars)
-                                }
-                            }
-                        }
-                        filteredAppsList.toMutableList()
-                    }
+                    filtered.toMutableList()
                 }
+
+                AppLogger.d("searchQuery", query)
 
                 val filterResults = FilterResults()
                 filterResults.values = filteredApps

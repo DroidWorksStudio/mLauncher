@@ -3,13 +3,16 @@ package com.github.droidworksstudio.mlauncher
 import android.app.Application
 import android.content.ComponentName
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import android.content.pm.LauncherApps
 import android.os.Build
 import android.os.Process
 import android.os.UserHandle
 import android.os.UserManager
+import android.provider.ContactsContract
 import androidx.biometric.BiometricPrompt
+import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
@@ -24,6 +27,8 @@ import com.github.droidworksstudio.mlauncher.data.AppCategory
 import com.github.droidworksstudio.mlauncher.data.AppListItem
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Constants.AppDrawerFlag
+import com.github.droidworksstudio.mlauncher.data.ContactCategory
+import com.github.droidworksstudio.mlauncher.data.ContactListItem
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.helper.analytics.AppUsageMonitor
 import com.github.droidworksstudio.mlauncher.helper.getAppNameFromPackage
@@ -39,6 +44,9 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     private val _appScrollMap = MutableLiveData<Map<String, Int>>()
     val appScrollMap: LiveData<Map<String, Int>> = _appScrollMap
 
+    private val _contactScrollMap = MutableLiveData<Map<String, Int>>()
+    val contactScrollMap: LiveData<Map<String, Int>> = _contactScrollMap
+
     private lateinit var biometricHelper: BiometricHelper
 
     private val appContext by lazy { application.applicationContext }
@@ -48,6 +56,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     val firstOpen = MutableLiveData<Boolean>()
 
     val appList = MutableLiveData<List<AppListItem>?>()
+    val contactList = MutableLiveData<List<ContactListItem>?>()
     val hiddenApps = MutableLiveData<List<AppListItem>?>()
     val homeAppsOrder = MutableLiveData<List<AppListItem>>()  // Store actual app items
     val launcherDefault = MutableLiveData<Boolean>()
@@ -84,6 +93,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     init {
         prefsNormal.registerOnSharedPreferenceChangeListener(pinnedAppsListener)
         getAppList()
+        getContactList()
     }
 
     fun selectedApp(fragment: Fragment, app: AppListItem, flag: AppDrawerFlag, n: Int = 0) {
@@ -109,6 +119,17 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
             AppDrawerFlag.None -> {}
         }
+    }
+
+    /**
+     * Call this when a contact is selected in the drawer
+     */
+    fun selectedContact(fragment: Fragment, contact: ContactListItem, n: Int = 0) {
+        callContact(contact, fragment)
+
+        // You can also perform additional logic here if needed
+        // For example, updating a detail view, logging, or triggering actions
+        AppLogger.d("MainViewModel", "Contact selected: ${contact.displayName}, index=$n")
     }
 
     fun firstOpen(value: Boolean) {
@@ -182,6 +203,25 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
+    fun callContact(contactItem: ContactListItem, fragment: Fragment) {
+        val phoneNumber = contactItem.phoneNumber // Ensure ContactListItem has a phoneNumber property
+        if (phoneNumber.isBlank()) {
+            AppLogger.e("CallContact", "No phone number available for ${contactItem.displayName}")
+            return
+        }
+
+        // Hide keyboard if fragment is attached
+        if (fragment.isAdded) {
+            fragment.hideKeyboard()
+        }
+
+        // Launch the dialer
+        val intent = Intent(Intent.ACTION_DIAL).apply {
+            data = "tel:$phoneNumber".toUri()
+        }
+        fragment.requireContext().startActivity(intent)
+    }
+
     private fun launchUnlockedApp(appListItem: AppListItem) {
         val packageName = appListItem.activityPackage
         val userHandle = appListItem.user
@@ -224,8 +264,13 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     fun getAppList(includeHiddenApps: Boolean = true, includeRecentApps: Boolean = true) {
         viewModelScope.launch {
-            appList.value =
-                getAppsList(appContext, includeRegularApps = true, includeHiddenApps, includeRecentApps)
+            appList.value = getAppsList(appContext, includeRegularApps = true, includeHiddenApps, includeRecentApps)
+        }
+    }
+
+    fun getContactList(includeHiddenContacts: Boolean = true) {
+        viewModelScope.launch {
+            contactList.value = getContactsList(appContext, includeHiddenContacts)
         }
     }
 
@@ -461,6 +506,136 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
         } catch (e: Exception) {
             AppLogger.e("AppListDebug", "❌ Error building app list: ${e.message}", e)
+        }
+
+        fullList
+    }
+
+    suspend fun getContactsList(
+        context: Context,
+        includeHiddenContacts: Boolean = false
+    ): MutableList<ContactListItem> = withContext(Dispatchers.Main) {
+
+        val fullList: MutableList<ContactListItem> = mutableListOf()
+        val prefs = Prefs(context)
+        val hiddenContacts = prefs.hiddenContacts // Set of lookupKeys
+        val pinnedContacts = prefs.pinnedContacts.toSet() // Set of lookupKeys
+        val seenContacts = mutableSetOf<String>() // contactId|lookupKey
+        val scrollIndexMap = mutableMapOf<String, Int>()
+
+        AppLogger.d("ContactListDebug", "🔄 getContactsList called: includeHiddenContacts=$includeHiddenContacts")
+
+        try {
+            val contentResolver = context.contentResolver
+
+            val projection = arrayOf(
+                ContactsContract.Contacts._ID,
+                ContactsContract.Contacts.DISPLAY_NAME,
+                ContactsContract.Contacts.LOOKUP_KEY
+            )
+            val cursor = contentResolver.query(
+                ContactsContract.Contacts.CONTENT_URI,
+                projection,
+                null,
+                null,
+                ContactsContract.Contacts.DISPLAY_NAME + " ASC"
+            )
+
+            if (cursor == null) {
+                AppLogger.e("ContactListDebug", "❌ Cursor is null, no contacts found")
+            } else {
+                AppLogger.d("ContactListDebug", "📇 Cursor returned: ${cursor.count} contacts")
+            }
+
+            cursor?.use { c ->
+                while (c.moveToNext()) {
+                    val id = c.getString(c.getColumnIndexOrThrow(ContactsContract.Contacts._ID))
+                    val displayName =
+                        c.getString(c.getColumnIndexOrThrow(ContactsContract.Contacts.DISPLAY_NAME)) ?: ""
+                    val lookupKey = c.getString(c.getColumnIndexOrThrow(ContactsContract.Contacts.LOOKUP_KEY))
+
+                    val key = "$id|$lookupKey"
+                    if (seenContacts.contains(key)) {
+                        AppLogger.d("ContactListDebug", "⚠️ Skipping duplicate contact: $key")
+                        continue
+                    }
+
+                    val isHidden = lookupKey in hiddenContacts
+                    if (isHidden && !includeHiddenContacts) {
+                        AppLogger.d("ContactListDebug", "🚫 Skipping hidden contact: $displayName ($lookupKey)")
+                        continue
+                    }
+
+                    val category = if (pinnedContacts.contains(lookupKey)) {
+                        AppLogger.d("ContactListDebug", "⭐ Contact is FAVORITE: $displayName ($lookupKey)")
+                        ContactCategory.FAVORITE
+                    } else ContactCategory.REGULAR
+
+                    // Fetch email
+                    val emailCursor = contentResolver.query(
+                        ContactsContract.CommonDataKinds.Email.CONTENT_URI,
+                        arrayOf(ContactsContract.CommonDataKinds.Email.ADDRESS),
+                        "${ContactsContract.CommonDataKinds.Email.CONTACT_ID} = ?",
+                        arrayOf(id),
+                        null
+                    )
+                    val email = emailCursor?.use { ec ->
+                        if (ec.moveToFirst()) ec.getString(ec.getColumnIndexOrThrow(ContactsContract.CommonDataKinds.Email.ADDRESS))
+                        else ""
+                    } ?: ""
+                    if (email.isNotEmpty()) AppLogger.d("ContactListDebug", "✉️ Found email for $displayName: $email")
+
+                    // Fetch primary phone number
+                    val phoneCursor = contentResolver.query(
+                        ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
+                        arrayOf(ContactsContract.CommonDataKinds.Phone.NUMBER),
+                        "${ContactsContract.CommonDataKinds.Phone.CONTACT_ID} = ?",
+                        arrayOf(id),
+                        null
+                    )
+                    val phoneNumber = phoneCursor?.use { pc ->
+                        if (pc.moveToFirst()) pc.getString(pc.getColumnIndexOrThrow(ContactsContract.CommonDataKinds.Phone.NUMBER))
+                        else ""
+                    } ?: ""
+                    if (phoneNumber.isNotEmpty()) AppLogger.d("ContactListDebug", "📞 Found phone for $displayName: $phoneNumber")
+
+                    fullList.add(
+                        ContactListItem(
+                            displayName = displayName,
+                            phoneNumber = phoneNumber,
+                            email = email,
+                            customLabel = prefs.getContactAlias(lookupKey),
+                            customTag = prefs.getContactTag(lookupKey),
+                            category = category
+                        )
+                    )
+                    seenContacts.add(key)
+                    AppLogger.d("ContactListDebug", "✅ Added contact: $displayName ($lookupKey)")
+                }
+            }
+
+            AppLogger.d("ContactListDebug", "🔢 Total contacts after processing: ${fullList.size}")
+
+            // Sort: FAVORITE first, then alphabetical
+            fullList.sortWith(
+                compareBy<ContactListItem> { it.category.ordinal }
+                    .thenBy { it.label.lowercase() }
+            )
+            AppLogger.d("ContactListDebug", "🔠 Sorted contact list")
+
+            // Build scroll index for A-Z sidebar
+            fullList.forEachIndexed { index, item ->
+                val key = when (item.category) {
+                    ContactCategory.FAVORITE -> "★"
+                    else -> item.label.firstOrNull()?.uppercaseChar()?.toString() ?: "#"
+                }
+                scrollIndexMap.putIfAbsent(key, index)
+            }
+            _contactScrollMap.postValue(scrollIndexMap)
+            AppLogger.d("ContactListDebug", "🧭 Scroll index map posted with ${scrollIndexMap.size} entries")
+
+        } catch (e: Exception) {
+            AppLogger.e("ContactListDebug", "❌ Error building contact list: ${e.message}", e)
         }
 
         fullList

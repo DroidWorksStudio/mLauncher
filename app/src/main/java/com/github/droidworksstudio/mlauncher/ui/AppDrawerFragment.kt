@@ -29,6 +29,7 @@ import androidx.appcompat.widget.SearchView
 import androidx.core.net.toUri
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -48,6 +49,7 @@ import com.github.droidworksstudio.mlauncher.data.AppCategory
 import com.github.droidworksstudio.mlauncher.data.AppListItem
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Constants.AppDrawerFlag
+import com.github.droidworksstudio.mlauncher.data.ContactListItem
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentAppDrawerBinding
 import com.github.droidworksstudio.mlauncher.helper.emptyString
@@ -57,7 +59,8 @@ import com.github.droidworksstudio.mlauncher.helper.openAppInfo
 class AppDrawerFragment : Fragment() {
 
     private lateinit var prefs: Prefs
-    private lateinit var adapter: AppDrawerAdapter
+    private lateinit var appsAdapter: AppDrawerAdapter
+    private lateinit var contactsAdapter: ContactDrawerAdapter
 
     private var _binding: FragmentAppDrawerBinding? = null
     private val binding get() = _binding!!
@@ -97,6 +100,9 @@ class AppDrawerFragment : Fragment() {
             }
 
             sidebarContainer.layoutParams = layoutParams
+
+            searchSwitcher.setOnClickListener { switchMenus() }
+            menuView.displayedChild = 0
         }
 
         // Retrieve the letter key code from arguments
@@ -177,13 +183,30 @@ class AppDrawerFragment : Fragment() {
             ViewModelProvider(this)[MainViewModel::class.java]
         } ?: throw Exception("Invalid Activity")
 
-        viewModel.appScrollMap.observe(viewLifecycleOwner) { map ->
+        val combinedScrollMaps = MediatorLiveData<Pair<Map<String, Int>, Map<String, Int>>>()
+
+        combinedScrollMaps.addSource(viewModel.appScrollMap) { appMap ->
+            combinedScrollMaps.value = Pair(appMap, viewModel.contactScrollMap.value ?: emptyMap())
+        }
+        combinedScrollMaps.addSource(viewModel.contactScrollMap) { contactMap ->
+            combinedScrollMaps.value = Pair(viewModel.appScrollMap.value ?: emptyMap(), contactMap)
+        }
+
+
+        combinedScrollMaps.observe(viewLifecycleOwner) { (appMap, contactMap) ->
             binding.azSidebar.onLetterSelected = { section ->
-                map[section]?.let { index ->
-                    binding.recyclerView.smoothScrollToPosition(index)
+                when (binding.menuView.displayedChild) {
+                    0 -> appMap[section]?.let { index ->
+                        binding.appsRecyclerView.smoothScrollToPosition(index)
+                    }
+
+                    1 -> contactMap[section]?.let { index ->
+                        binding.contactsRecyclerView.smoothScrollToPosition(index)
+                    }
                 }
             }
         }
+
 
         val gravity = when (Prefs(requireContext()).drawerAlignment) {
             Constants.Gravity.Left -> Gravity.LEFT
@@ -208,8 +231,22 @@ class AppDrawerFragment : Fragment() {
             }
         }
 
-        if (appAdapter != null) {
-            adapter = appAdapter
+        val contactAdapter = context?.let {
+            parentFragment?.let { fragment ->
+                ContactDrawerAdapter(
+                    it,
+                    gravity,
+                    contactClickListener(viewModel, n),
+                    contactDeleteListener(),
+                    contactRenameListener()
+                )
+            }
+        }
+
+
+        when (binding.menuView.displayedChild) {
+            0 -> appAdapter?.let { appsAdapter = it }
+            1 -> contactAdapter?.let { contactsAdapter = it }
         }
 
         val searchTextView = binding.search.findViewById<TextView>(R.id.search_src_text)
@@ -217,16 +254,18 @@ class AppDrawerFragment : Fragment() {
         val textSize = prefs.appSize.toFloat()
         searchTextView.textSize = textSize
 
-        if (appAdapter != null) {
-            initViewModel(flag, viewModel, appAdapter)
+        if (appAdapter != null && contactAdapter != null) {
+            initViewModel(flag, viewModel, appAdapter, contactAdapter)
         }
 
-        binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
-        binding.recyclerView.adapter = appAdapter
+        binding.appsRecyclerView.layoutManager = LinearLayoutManager(requireContext())
+        binding.contactsRecyclerView.layoutManager = LinearLayoutManager(requireContext())
+        binding.appsRecyclerView.adapter = appAdapter
+        binding.contactsRecyclerView.adapter = contactAdapter
 
         var lastSectionLetter: String? = null
 
-        binding.recyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+        binding.appsRecyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             var onTop = false
 
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
@@ -295,14 +334,24 @@ class AppDrawerFragment : Fragment() {
             binding.search.isVisible = false
         } else {
             when (flag) {
-                AppDrawerFlag.LaunchApp -> binding.search.queryHint =
-                    applyTextColor(getLocalizedString(R.string.show_apps), prefs.appColor)
+                AppDrawerFlag.LaunchApp -> {
+                    binding.search.queryHint = getLocalizedString(R.string.show_apps)
+                    binding.internetSearch.apply {
+                        isVisible = true
+                        setOnClickListener {
+                            val query = binding.search.query.toString().trim()
+                            if (query.isEmpty()) return@setOnClickListener
+                            requireContext().searchCustomSearchEngine(query, prefs)
+                        }
+                    }
+                    binding.searchSwitcher.apply {
+                        isVisible = true
+                    }
+                }
 
-                AppDrawerFlag.HiddenApps -> binding.search.queryHint =
-                    applyTextColor(getLocalizedString(R.string.hidden_apps), prefs.appColor)
+                AppDrawerFlag.HiddenApps -> binding.search.queryHint = getLocalizedString(R.string.hidden_apps)
 
-                AppDrawerFlag.SetHomeApp -> binding.search.queryHint =
-                    applyTextColor(getLocalizedString(R.string.please_select_app), prefs.appColor)
+                AppDrawerFlag.SetHomeApp -> binding.search.queryHint = getLocalizedString(R.string.please_select_app)
 
                 else -> {}
             }
@@ -318,21 +367,16 @@ class AppDrawerFragment : Fragment() {
                     val trimmedQuery = searchQuery.trim()
 
                     when {
-                        trimmedQuery.startsWith("!") -> {
-                            val customQuery = trimmedQuery.substringAfter("!")
-                            requireContext().searchCustomSearchEngine(customQuery, prefs)
-                        }
-
-                        adapter.itemCount >= 1 -> {
-                            val firstItem = adapter.getFirstInList().toString()
+                        appsAdapter.itemCount >= 1 -> {
+                            val firstItem = appsAdapter.getFirstInList().toString()
                             if (firstItem.equals(trimmedQuery, ignoreCase = true) || prefs.openAppOnEnter) {
-                                adapter.launchFirstInList()
+                                appsAdapter.launchFirstInList()
                             } else {
                                 requireContext().searchOnPlayStore(trimmedQuery)
                             }
                         }
 
-                        adapter.itemCount == 0 -> {
+                        appsAdapter.itemCount == 0 -> {
                             val playStoreHandled = requireContext().searchOnPlayStore(trimmedQuery)
                             if (!playStoreHandled) {
                                 requireContext().openSearch(trimmedQuery)
@@ -345,7 +389,7 @@ class AppDrawerFragment : Fragment() {
 
                         else -> {
                             if (prefs.openAppOnEnter) {
-                                adapter.launchFirstInList()
+                                appsAdapter.launchFirstInList()
                             } else {
                                 requireContext().searchOnPlayStore(trimmedQuery)
                             }
@@ -376,6 +420,37 @@ class AppDrawerFragment : Fragment() {
             }
 
         })
+    }
+
+    fun switchMenus() {
+        binding.apply {
+            menuView.showNext()
+            when (menuView.displayedChild) {
+                0 -> {
+                    setAppViewDetails()
+                }
+
+                1 -> {
+                    setContactViewDetails()
+                }
+            }
+        }
+    }
+
+    private fun setAppViewDetails() {
+        binding.apply {
+            searchSwitcher.setImageResource(R.drawable.ic_contacts)
+            search.queryHint = getLocalizedString(R.string.show_apps)
+            search.setQuery("", false)
+        }
+    }
+
+    private fun setContactViewDetails() {
+        binding.apply {
+            searchSwitcher.setImageResource(R.drawable.ic_apps)
+            search.queryHint = getLocalizedString(R.string.show_contacts)
+            search.setQuery("", false)
+        }
     }
 
     private fun applyTextColor(text: String, color: Int): SpannableString {
@@ -424,7 +499,8 @@ class AppDrawerFragment : Fragment() {
     private fun initViewModel(
         flag: AppDrawerFlag,
         viewModel: MainViewModel,
-        appAdapter: AppDrawerAdapter
+        appAdapter: AppDrawerAdapter,
+        contactAdapter: ContactDrawerAdapter
     ) {
         viewModel.hiddenApps.observe(viewLifecycleOwner, Observer {
             if (flag != AppDrawerFlag.HiddenApps) return@Observer
@@ -434,15 +510,34 @@ class AppDrawerFragment : Fragment() {
             }
         })
 
-        viewModel.appList.observe(viewLifecycleOwner, Observer { rawList ->
-            if (flag == AppDrawerFlag.HiddenApps) return@Observer
-            if (rawList == appAdapter.appsList) return@Observer
+        // Observe contacts
+        viewModel.contactList.observe(viewLifecycleOwner, Observer { rawContactList ->
+            if (rawContactList == contactAdapter.contactsList) return@Observer
+            if (binding.menuView.displayedChild != 0) return@Observer
 
-            rawList?.let {
+            AppLogger.d("rawContactList", "Contact list: $rawContactList")
+
+            rawContactList?.let {
+                binding.listEmptyHint.isVisible = it.isEmpty()
+                binding.sidebarContainer.isVisible = prefs.showAZSidebar
+                populateContactList(it, contactAdapter)
+            }
+        })
+
+
+        // Observe apps
+        viewModel.appList.observe(viewLifecycleOwner, Observer { rawAppList ->
+            if (flag == AppDrawerFlag.HiddenApps) return@Observer
+            if (rawAppList == appAdapter.appsList) return@Observer
+            if (binding.menuView.displayedChild != 0) return@Observer
+
+            AppLogger.d("rawAppList", "Contact list: $rawAppList")
+
+            rawAppList?.let {
                 val userManager = requireContext().getSystemService(Context.USER_SERVICE) as UserManager
                 val launcherApps = requireContext().getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps
 
-                val classifiedList = rawList.map { app ->
+                val classifiedList = rawAppList.map { app ->
                     val isPrivate = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.VANILLA_ICE_CREAM) {
                         // Only call getLauncherUserInfo if API supports it
                         val userInfo = launcherApps.getLauncherUserInfo(app.user)
@@ -580,49 +675,52 @@ class AppDrawerFragment : Fragment() {
     private fun populateAppList(apps: List<AppListItem>, appAdapter: AppDrawerAdapter) {
         val animation =
             AnimationUtils.loadLayoutAnimation(requireContext(), R.anim.layout_anim_from_bottom)
-        binding.recyclerView.layoutAnimation = animation
+        binding.appsRecyclerView.layoutAnimation = animation
         appAdapter.setAppList(apps.toMutableList())
+    }
+
+    private fun populateContactList(contacts: List<ContactListItem>, contactAdapter: ContactDrawerAdapter) {
+        val animation =
+            AnimationUtils.loadLayoutAnimation(requireContext(), R.anim.layout_anim_from_bottom)
+        binding.contactsRecyclerView.layoutAnimation = animation
+        contactAdapter.setContactList(contacts.toMutableList())
     }
 
     private fun appClickListener(
         viewModel: MainViewModel,
         flag: AppDrawerFlag,
         n: Int = 0
-    ): (appListItem: AppListItem) -> Unit =
-        { appModel ->
-            viewModel.selectedApp(this, appModel, flag, n)
-            if (flag == AppDrawerFlag.LaunchApp || flag == AppDrawerFlag.HiddenApps)
-                findNavController().popBackStack(R.id.mainFragment, false)
-            else
-                findNavController().popBackStack()
-        }
-
-    private fun appDeleteListener(): (appListItem: AppListItem) -> Unit =
-        { appModel ->
-            if (requireContext().isSystemApp(appModel.activityPackage))
-                showShortToast(getLocalizedString(R.string.can_not_delete_system_apps))
-            else {
-                val appPackage = appModel.activityPackage
-                val intent = Intent(Intent.ACTION_DELETE)
-                intent.data = "package:$appPackage".toUri()
-                requireContext().startActivity(intent)
-            }
-
-        }
-
-    private fun appRenameListener(): (appPackage: String, appAlias: String) -> Unit =
-        { appPackage, appAlias ->
-            val prefs = Prefs(requireContext())
-            prefs.setAppAlias(appPackage, appAlias)
+    ): (appListItem: AppListItem) -> Unit = { appModel ->
+        viewModel.selectedApp(this, appModel, flag, n)
+        if (flag == AppDrawerFlag.LaunchApp || flag == AppDrawerFlag.HiddenApps)
+            findNavController().popBackStack(R.id.mainFragment, false)
+        else
             findNavController().popBackStack()
+    }
+
+    private fun appDeleteListener(): (appListItem: AppListItem) -> Unit = { appModel ->
+        if (requireContext().isSystemApp(appModel.activityPackage))
+            showShortToast(getLocalizedString(R.string.can_not_delete_system_apps))
+        else {
+            val appPackage = appModel.activityPackage
+            val intent = Intent(Intent.ACTION_DELETE)
+            intent.data = "package:$appPackage".toUri()
+            requireContext().startActivity(intent)
         }
 
-    private fun appTagListener(): (appPackage: String, appTag: String, appUser: UserHandle) -> Unit =
-        { appPackage, appTag, appUser ->
-            val prefs = Prefs(requireContext())
-            prefs.setAppTag(appPackage, appTag, appUser)
-            findNavController().popBackStack()
-        }
+    }
+
+    private fun appRenameListener(): (appPackage: String, appAlias: String) -> Unit = { appPackage, appAlias ->
+        val prefs = Prefs(requireContext())
+        prefs.setAppAlias(appPackage, appAlias)
+        findNavController().popBackStack()
+    }
+
+    private fun appTagListener(): (appPackage: String, appTag: String, appUser: UserHandle) -> Unit = { appPackage, appTag, appUser ->
+        val prefs = Prefs(requireContext())
+        prefs.setAppTag(appPackage, appTag, appUser)
+        findNavController().popBackStack()
+    }
 
     private fun renameListener(flag: AppDrawerFlag, i: Int) {
         val name = binding.search.query.toString().trim()
@@ -634,32 +732,56 @@ class AppDrawerFragment : Fragment() {
         findNavController().popBackStack()
     }
 
-    private fun appShowHideListener(): (flag: AppDrawerFlag, appListItem: AppListItem) -> Unit =
-        { flag, appModel ->
-            val prefs = Prefs(requireContext())
-            val newSet = mutableSetOf<String>()
-            newSet.addAll(prefs.hiddenApps)
+    private fun appShowHideListener(): (flag: AppDrawerFlag, appListItem: AppListItem) -> Unit = { flag, appModel ->
+        val prefs = Prefs(requireContext())
+        val newSet = mutableSetOf<String>()
+        newSet.addAll(prefs.hiddenApps)
 
-            if (flag == AppDrawerFlag.HiddenApps) {
-                newSet.remove(appModel.activityPackage) // for backward compatibility
-                newSet.remove(appModel.activityPackage + "|" + appModel.user.hashCode()) // for backward compatibility
-                newSet.remove(appModel.activityPackage + "|" + appModel.activityClass + "|" + appModel.user.hashCode())
-            } else {
-                newSet.add(appModel.activityPackage + "|" + appModel.activityClass + "|" + appModel.user.hashCode())
-            }
-
-            prefs.hiddenApps = newSet
-
-            if (newSet.isEmpty()) findNavController().popBackStack()
+        if (flag == AppDrawerFlag.HiddenApps) {
+            newSet.remove(appModel.activityPackage) // for backward compatibility
+            newSet.remove(appModel.activityPackage + "|" + appModel.user.hashCode()) // for backward compatibility
+            newSet.remove(appModel.activityPackage + "|" + appModel.activityClass + "|" + appModel.user.hashCode())
+        } else {
+            newSet.add(appModel.activityPackage + "|" + appModel.activityClass + "|" + appModel.user.hashCode())
         }
 
-    private fun appInfoListener(): (appListItem: AppListItem) -> Unit =
-        { appModel ->
-            openAppInfo(
-                requireContext(),
-                appModel.user,
-                appModel.activityPackage
-            )
-            findNavController().popBackStack(R.id.mainFragment, false)
-        }
+        prefs.hiddenApps = newSet
+
+        if (newSet.isEmpty()) findNavController().popBackStack()
+    }
+
+    private fun appInfoListener(): (appListItem: AppListItem) -> Unit = { appModel ->
+        openAppInfo(
+            requireContext(),
+            appModel.user,
+            appModel.activityPackage
+        )
+        findNavController().popBackStack(R.id.mainFragment, false)
+    }
+
+    // Handles click on a contact item
+    private fun contactClickListener(
+        viewModel: MainViewModel,
+        n: Int = 0
+    ): (contactItem: ContactListItem) -> Unit = { contactModel ->
+        viewModel.selectedContact(this, contactModel, n)
+        // Close the drawer or fragment after selection
+        findNavController().popBackStack()
+    }
+
+    // Handles delete on a contact item
+    private fun contactDeleteListener(): (contactItem: ContactListItem) -> Unit = { contactModel ->
+        // You may want to show a confirmation dialog before deleting
+        // This example just removes it from the UI (or call your contact deletion logic)
+//        viewModel.removeContact(contactModel.displayName)
+//        showShortToast(getLocalizedString(R.string.contact_deleted))
+    }
+
+    // Handles rename / alias for a contact
+    private fun contactRenameListener(): (contactLookupKey: String, contactAlias: String) -> Unit = { lookupKey, alias ->
+        val prefs = Prefs(requireContext())
+//            prefs.setContactAlias(lookupKey, alias)
+        findNavController().popBackStack()
+    }
+
 }

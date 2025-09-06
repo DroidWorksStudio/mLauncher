@@ -1,7 +1,8 @@
 <resources>
     <!-- Base Settings -->
     <string name="select_app">Select App</string>
-    <string name="show_apps">All apps</string>
+    <string name="show_apps">Search Apps</string>
+    <string name="show_contacts">Search Contacts</string>
 
     <string name="welcome_to_launcher">Welcome to %1$s</string>
     <string name="continue_by_you_agree">By continuing you agree to %1$s</string>

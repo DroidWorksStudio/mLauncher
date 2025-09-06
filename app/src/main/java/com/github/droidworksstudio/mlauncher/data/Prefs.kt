@@ -88,6 +88,8 @@ private const val DOUBLE_TAP_ACTION = "DOUBLE_TAP_ACTION"
 private const val HIDDEN_APPS = "HIDDEN_APPS"
 private const val LOCKED_APPS = "LOCKED_APPS"
 private const val PINNED_APPS = "PINNED_APPS"
+private const val HIDDEN_CONTACTS = "HIDDEN_CONTACTS"
+private const val PINNED_CONTACTS = "PINNED_CONTACTS"
 private const val SEARCH_ENGINE = "SEARCH_ENGINE"
 private const val LAUNCHER_FONT = "LAUNCHER_FONT"
 private const val APP_NAME = "APP_NAME"
@@ -721,6 +723,15 @@ class Prefs(val context: Context) {
         get() = prefsNormal.getStringSet(PINNED_APPS, emptySet()) as Set<String>
         set(value) = prefsNormal.edit { putStringSet(PINNED_APPS, value) }
 
+
+    var hiddenContacts: MutableSet<String>
+        get() = prefsNormal.getStringSet(HIDDEN_CONTACTS, mutableSetOf()) as MutableSet<String>
+        set(value) = prefsNormal.edit { putStringSet(HIDDEN_CONTACTS, value) }
+
+    var pinnedContacts: Set<String>
+        get() = prefsNormal.getStringSet(PINNED_CONTACTS, emptySet()) as Set<String>
+        set(value) = prefsNormal.edit { putStringSet(PINNED_CONTACTS, value) }
+
     var enableExpertOptions: Boolean
         get() = getSetting(EXPERT_OPTIONS, false)
         set(value) = prefsNormal.edit { putBoolean(EXPERT_OPTIONS, value) }
@@ -975,6 +986,47 @@ class Prefs(val context: Context) {
 
                 // Set new TAG with hashCode()
                 putString("${appPackage}_TAG_${it.hashCode()}", appTag)
+            }
+        }
+    }
+
+    fun getContactAlias(contactPackage: String): String {
+        return prefsNormal.getString("${contactPackage}_ALIAS", emptyString()).toString()
+    }
+
+    fun setContactAlias(contactPackage: String, contactAlias: String) {
+        prefsNormal.edit { putString("${contactPackage}_ALIAS", contactAlias) }
+    }
+
+    fun getContactTag(contactPackage: String, userHandle: UserHandle? = null): String {
+        val baseKey = "${contactPackage}_TAG"
+        val userKey = userHandle?.let { "${baseKey}_${it.hashCode()}" }
+
+        return prefsNormal.getString(
+            userKey ?: baseKey, ""  // Try the user-specific key first if available
+        )?.also { value ->
+            // Migrate base key to user-specific key if needed
+            if (userHandle != null && prefsNormal.contains(baseKey)) {
+                prefsNormal.edit {
+                    remove(baseKey)           // Remove old base key
+                    putString(userKey, value) // Save under user-specific key
+                }
+            }
+        } ?: ""
+    }
+
+
+    fun setContactTag(contactPackage: String, contactTag: String, userHandle: UserHandle? = null) {
+        prefsNormal.edit {
+            // Remove base key
+            remove("${contactPackage}_TAG")
+
+            userHandle?.let {
+                // Remove key using the UserHandle object itself
+                remove("${contactPackage}_TAG_${it}")
+
+                // Set new TAG with hashCode()
+                putString("${contactPackage}_TAG_${it.hashCode()}", contactTag)
             }
         }
     }
