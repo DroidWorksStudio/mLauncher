@@ -2,7 +2,8 @@
 <resources>
     <!-- Base Settings -->
     <string name="select_app">حدد التطبيق</string>
-    <string name="show_apps">جميع التطبيقات</string>
+    <string name="show_apps">Search Apps</string>
+    <string name="show_contacts">Search Contacts</string>
     <string name="welcome_to_launcher">مرحباً بكم في %1$s</string>
     <string name="continue_by_you_agree">من خلال الاستمرار فإنك توافق على %1$s</string>
     <string name="usage_access_permission">أذونات الوصول للاستخدام</string>
