@@ -6,6 +6,12 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Bug Fixes:
 
+- Conditional private space receiver unregistration - ([cdb88c1](https://github.com/DroidWorksStudio/mLauncher/commit/cdb88c1c6c6d6bae5535096e81aa964ba21b3ebe))
+
+## [1.10.9.2](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.9.2) - (05, September 2025)
+
+### Bug Fixes:
+
 - Add null check for view in HomeFragment.onResume - ([66425a6](https://github.com/DroidWorksStudio/mLauncher/commit/66425a6af7bbfe538aeaa0f3f6daf0721ac7a284))
 
 ### Language Support:
