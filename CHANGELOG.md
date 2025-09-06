@@ -8,6 +8,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Conditional private space receiver unregistration - ([cdb88c1](https://github.com/DroidWorksStudio/mLauncher/commit/cdb88c1c6c6d6bae5535096e81aa964ba21b3ebe))
 
+### Refactoring:
+
+- Use app name for label in app drawer - ([58be2d4](https://github.com/DroidWorksStudio/mLauncher/commit/58be2d44f116d4832625d4e08e4cc4764c4799f0))
+
 ## [1.10.9.2](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.9.2) - (05, September 2025)
 
 ### Bug Fixes:
