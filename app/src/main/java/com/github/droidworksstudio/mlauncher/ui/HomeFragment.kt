@@ -197,7 +197,9 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         context?.let { ctx ->
             try {
                 batteryReceiver.let { ctx.unregisterReceiver(it) }
-                privateSpaceReceiver.let { ctx.unregisterReceiver(it) }
+                if (PrivateSpaceManager(requireContext()).isPrivateSpaceSupported()) {
+                    privateSpaceReceiver.let { ctx.unregisterReceiver(it) }
+                }
             } catch (e: IllegalArgumentException) {
                 // Receiver not registered — safe to ignore
                 e.printStackTrace()
