@@ -2,7 +2,8 @@
 <resources>
     <!-- Base Settings -->
     <string name="select_app">Uygulama Seçin</string>
-    <string name="show_apps">Tüm uygulamalar</string>
+    <string name="show_apps">Search Apps</string>
+    <string name="show_contacts">Search Contacts</string>
     <string name="welcome_to_launcher">%1$s\'a hoş geldiniz</string>
     <string name="continue_by_you_agree">Devam ederek %1$s\'ı kabul etmiş olursunuz</string>
     <string name="usage_access_permission">Kullanım Erişim İzinleri</string>
