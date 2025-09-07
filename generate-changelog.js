@@ -80,6 +80,11 @@ function classifyCommit(msg) {
 	return null; // Skip commits that don't match
 }
 
+function cleanMessage(message) {
+	// Remove conventional commit type (like "feat:", "fix:", "lang:", etc.)
+	return message.replace(/^(feat|fix|lang|doc|perf|refactor|style|security|revert|release|dependency|deps|ci|pipeline|chore|housekeeping|version|versioning|config|configuration|cleanup|clean\(up\)|drop|remove|hotfix|emergency)\s*(\(.+?\))?:\s*/i, "");
+}
+
 function linkPR(message) {
 	// Replace (#123) with a link to the PR
 	return message.replace(/\(#(\d+)\)/g, (_, num) => `([#${num}](${REPO_URL}/pull/${num}))`);
@@ -115,7 +120,7 @@ if (latestTag) {
 		const groups = {};
 		for (const c of unreleasedCommits) {
 			groups[c.group] = groups[c.group] || [];
-			groups[c.group].push(`* ${linkPR(c.message)} ([${c.hash}](${REPO_URL}/commit/${c.hash}))`);
+			groups[c.group].push(`* ${linkPR(cleanMessage(c.message))} ([${c.hash}](${REPO_URL}/commit/${c.hash}))`);
 		}
 		for (const group of Object.keys(groups)) {
 			log(`Unreleased group: ${group}, commits: ${groups[group].length}`);
@@ -166,7 +171,7 @@ for (let i = 0; i < tags.length; i++) {
 	const groups = {};
 	for (const c of commits) {
 		groups[c.group] = groups[c.group] || [];
-		groups[c.group].push(`* ${linkPR(c.message)} ([${c.hash}](${REPO_URL}/commit/${c.hash}))`);
+		groups[c.group].push(`* ${linkPR(cleanMessage(c.message))} ([${c.hash}](${REPO_URL}/commit/${c.hash}))`);
 	}
 
 	for (const group of Object.keys(groups)) {
