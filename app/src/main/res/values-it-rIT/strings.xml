@@ -299,8 +299,8 @@
     <string name="home_button_web">Web</string>
     <string name="home_button_settings">Impostazioni</string>
     <string name="home_button_logo">Logo</string>
-    <string name="applist_button_web">Web</string>
-    <string name="applist_button_contacts">Contacts</string>
+    <string name="applist_button_web">Rete</string>
+    <string name="applist_button_contacts">Contatti</string>
     <string name="allow">Permettere</string>
     <string name="deny">Negare</string>
     <string name="send">Inviare</string>
@@ -326,8 +326,8 @@
     <string name="settings_context_menu_option">Seleziona gli elementi da visualizzare</string>
     <string name="settings_home_buttons_title">Pulsanti Home</string>
     <string name="settings_home_buttons_option">Seleziona gli elementi da visualizzare</string>
-    <string name="settings_applist_buttons_title">App List Buttons</string>
-    <string name="settings_applist_buttons_option">Select items to display</string>
+    <string name="settings_applist_buttons_title">Pulsanti dell\'elenco delle app</string>
+    <string name="settings_applist_buttons_option">Seleziona gli elementi da visualizzare</string>
     <string-array name="priorities">
         <item>Basso</item>
         <item>Medio</item>
