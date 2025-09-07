@@ -299,8 +299,8 @@
     <string name="home_button_web">Rede</string>
     <string name="home_button_settings">Configurações</string>
     <string name="home_button_logo">Logotipo</string>
-    <string name="applist_button_web">Web</string>
-    <string name="applist_button_contacts">Contacts</string>
+    <string name="applist_button_web">Rede</string>
+    <string name="applist_button_contacts">Contatos</string>
     <string name="allow">Permitir</string>
     <string name="deny">Negar</string>
     <string name="send">Enviar</string>
@@ -326,8 +326,8 @@
     <string name="settings_context_menu_option">Selecione os itens a apresentar</string>
     <string name="settings_home_buttons_title">Botões Home</string>
     <string name="settings_home_buttons_option">Selecione os itens a apresentar</string>
-    <string name="settings_applist_buttons_title">App List Buttons</string>
-    <string name="settings_applist_buttons_option">Select items to display</string>
+    <string name="settings_applist_buttons_title">Botões da lista de aplicações</string>
+    <string name="settings_applist_buttons_option">Selecione os itens a apresentar</string>
     <string-array name="priorities">
         <item>Baixo</item>
         <item>Médio</item>
