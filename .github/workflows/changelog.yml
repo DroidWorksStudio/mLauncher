@@ -26,7 +26,7 @@ jobs:
 
       - name: Run changelog script
         run: |
-          node scripts/generate-changelog.js
+          node generate-changelog.js
         env:
           OUTPUT: CHANGELOG.md
 
