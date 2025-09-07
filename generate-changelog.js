@@ -81,7 +81,7 @@ function classifyCommit(msg) {
 }
 
 function cleanMessage(message) {
-	// Remove conventional commit type (like "feat:", "fix:", "lang:", etc.)
+	// Remove conventional commit type (like "feat:", "fix:", "lang:", etc.) at the start of the message
 	return message.replace(/^(feat|fix|lang|doc|perf|refactor|style|security|revert|release|dependency|deps|ci|pipeline|chore|housekeeping|version|versioning|config|configuration|cleanup|clean\(up\)|drop|remove|hotfix|emergency)\s*(\(.+?\))?:\s*/i, "");
 }
 
