@@ -2,7 +2,8 @@
 <resources>
     <!-- Base Settings -->
     <string name="select_app">Uygulama Seçin</string>
-    <string name="show_apps">Tüm uygulamalar</string>
+    <string name="show_apps">Uygulamaları Ara</string>
+    <string name="show_contacts">Kişileri Ara</string>
     <string name="welcome_to_launcher">%1$s\'a hoş geldiniz</string>
     <string name="continue_by_you_agree">Devam ederek %1$s\'ı kabul etmiş olursunuz</string>
     <string name="usage_access_permission">Kullanım Erişim İzinleri</string>
@@ -79,9 +80,9 @@
     <string name="show_total_screen_time">Toplam Ekran Süresini Göster</string>
     <string name="weather">Hava durumu</string>
     <string name="show_weather">Hava Durumunu Göster</string>
-    <string name="gps_location">GPS Location</string>
-    <string name="temp_unit">Temperature Unit</string>
-    <string name="manual_location">Set Manual Location</string>
+    <string name="gps_location">GPS Konumu</string>
+    <string name="temp_unit">Sıcaklık Birimi</string>
+    <string name="manual_location">Manuel Konumu Ayarla</string>
     <string name="icon_packs">Simge Paketleri</string>
     <!-- Strings used for look & feel settings -->
     <string name="look_feel_settings_title">Bak &amp; Hisset</string>
@@ -289,7 +290,7 @@
     <string name="next">Sonraki</string>
     <string name="start">Başlangıç</string>
     <string name="copy">Kopyala</string>
-    <string name="celsius">Celsius</string>
+    <string name="celsius">Santigrat derece</string>
     <string name="fahrenheit">Fahrenheit</string>
     <string name="home_button_phone">Telefon</string>
     <string name="home_button_messages">Mesajlar</string>
@@ -298,6 +299,8 @@
     <string name="home_button_web">Web</string>
     <string name="home_button_settings">Ayarlar</string>
     <string name="home_button_logo">Logo</string>
+    <string name="applist_button_web">Web</string>
+    <string name="applist_button_contacts">İletişim</string>
     <string name="allow">İzin vermek</string>
     <string name="deny">Reddetmek</string>
     <string name="send">Göndermek</string>
@@ -323,6 +326,8 @@
     <string name="settings_context_menu_option">Görüntülenecek öğeleri seçin</string>
     <string name="settings_home_buttons_title">Ana Sayfa Düğmeleri</string>
     <string name="settings_home_buttons_option">Görüntülenecek öğeleri seçin</string>
+    <string name="settings_applist_buttons_title">Uygulama Listesi Düğmeleri</string>
+    <string name="settings_applist_buttons_option">Görüntülenecek öğeleri seçin</string>
     <string-array name="priorities">
         <item>Düşük</item>
         <item>Orta</item>

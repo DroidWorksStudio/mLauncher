@@ -2,7 +2,8 @@
 <resources>
     <!-- Base Settings -->
     <string name="select_app">App auswählen</string>
-    <string name="show_apps">Alle Apps</string>
+    <string name="show_apps">Such-Apps</string>
+    <string name="show_contacts">Kontakte suchen</string>
     <string name="welcome_to_launcher">Willkommen bei %1$s</string>
     <string name="continue_by_you_agree">Indem Sie fortfahren, stimmen Sie %1$szu</string>
     <string name="usage_access_permission">Nutzungszugriffsberechtigungen</string>
@@ -79,9 +80,9 @@
     <string name="show_total_screen_time">Gesamte Bildschirmzeit anzeigen</string>
     <string name="weather">Wetter</string>
     <string name="show_weather">Wetter anzeigen</string>
-    <string name="gps_location">GPS Location</string>
-    <string name="temp_unit">Temperature Unit</string>
-    <string name="manual_location">Set Manual Location</string>
+    <string name="gps_location">GPS-Standort</string>
+    <string name="temp_unit">Temperatureinheit</string>
+    <string name="manual_location">Manuellen Standort festlegen</string>
     <string name="icon_packs">Symbolpakete</string>
     <!-- Strings used for look & feel settings -->
     <string name="look_feel_settings_title">Aussehen &amp; Gefühl</string>
@@ -298,6 +299,8 @@
     <string name="home_button_web">Web</string>
     <string name="home_button_settings">Einstellungen</string>
     <string name="home_button_logo">Logo</string>
+    <string name="applist_button_web">Web</string>
+    <string name="applist_button_contacts">Kontakte</string>
     <string name="allow">Erlauben</string>
     <string name="deny">Leugnen</string>
     <string name="send">Schicken</string>
@@ -323,6 +326,8 @@
     <string name="settings_context_menu_option">Auswählen der anzuzeigenden Elemente</string>
     <string name="settings_home_buttons_title">Home-Schaltflächen</string>
     <string name="settings_home_buttons_option">Auswählen der anzuzeigenden Elemente</string>
+    <string name="settings_applist_buttons_title">Schaltflächen für die App-Liste</string>
+    <string name="settings_applist_buttons_option">Auswählen der anzuzeigenden Elemente</string>
     <string-array name="priorities">
         <item>Niedrig</item>
         <item>Medium</item>

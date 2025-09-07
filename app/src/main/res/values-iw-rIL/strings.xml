@@ -2,7 +2,8 @@
 <resources>
     <!-- Base Settings -->
     <string name="select_app">בחר יישום</string>
-    <string name="show_apps">כל היישומים</string>
+    <string name="show_apps">חיפוש אפליקציות</string>
+    <string name="show_contacts">חיפוש אנשי קשר</string>
     <string name="welcome_to_launcher">ברוך בואך אל %1$s</string>
     <string name="continue_by_you_agree">על ידי המשך ניתנה הסכמתך ל %1$s</string>
     <string name="usage_access_permission">הרשאות גישה לנתוני שימוש</string>
@@ -79,9 +80,9 @@
     <string name="show_total_screen_time">הצג זמן מסך כולל</string>
     <string name="weather">מֶזֶג אֲוִיר</string>
     <string name="show_weather">הצג מזג אוויר</string>
-    <string name="gps_location">GPS Location</string>
-    <string name="temp_unit">Temperature Unit</string>
-    <string name="manual_location">Set Manual Location</string>
+    <string name="gps_location">מיקום GPS</string>
+    <string name="temp_unit">יחידת טמפרטורה</string>
+    <string name="manual_location">הגדרת מיקום ידנית</string>
     <string name="icon_packs">חבילות אייקונים</string>
     <!-- Strings used for look & feel settings -->
     <string name="look_feel_settings_title">מראה &amp; תחושה</string>
@@ -291,8 +292,8 @@
     <string name="next">הבא</string>
     <string name="start">התחל</string>
     <string name="copy">לְהַעְתִיק</string>
-    <string name="celsius">Celsius</string>
-    <string name="fahrenheit">Fahrenheit</string>
+    <string name="celsius">צֶלסִיוּס</string>
+    <string name="fahrenheit">פרנהייט</string>
     <string name="home_button_phone">טֵלֵפוֹן</string>
     <string name="home_button_messages">הודעות</string>
     <string name="home_button_camera">מַצלֵמָה</string>
@@ -300,6 +301,8 @@
     <string name="home_button_web">אינטרנט</string>
     <string name="home_button_settings">הגדרות</string>
     <string name="home_button_logo">סֵמֶל</string>
+    <string name="applist_button_web">אינטרנט</string>
+    <string name="applist_button_contacts">אנשי קשר</string>
     <string name="allow">לְהַתִיר</string>
     <string name="deny">לְהַכּחִישׁ</string>
     <string name="send">לִשְׁלוֹחַ</string>
@@ -325,6 +328,8 @@
     <string name="settings_context_menu_option">בחירת פריטים להצגה</string>
     <string name="settings_home_buttons_title">כפתורי בית</string>
     <string name="settings_home_buttons_option">בחירת פריטים להצגה</string>
+    <string name="settings_applist_buttons_title">כפתורי רשימת אפליקציות</string>
+    <string name="settings_applist_buttons_option">בחירת פריטים להצגה</string>
     <string-array name="priorities">
         <item>נָמוּך</item>
         <item>בֵּינוֹנִי</item>
