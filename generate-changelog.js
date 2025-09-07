@@ -115,7 +115,7 @@ if (latestTag) {
 		const groups = {};
 		for (const c of unreleasedCommits) {
 			groups[c.group] = groups[c.group] || [];
-			groups[c.group].push(`* ${linkPR(c.message)}`);
+			groups[c.group].push(`* ${linkPR(c.message)} ([${c.hash}](${REPO_URL}/commit/${c.hash}))`);
 		}
 		for (const group of Object.keys(groups)) {
 			log(`Unreleased group: ${group}, commits: ${groups[group].length}`);
@@ -166,7 +166,7 @@ for (let i = 0; i < tags.length; i++) {
 	const groups = {};
 	for (const c of commits) {
 		groups[c.group] = groups[c.group] || [];
-		groups[c.group].push(`* ${linkPR(c.message)}`);
+		groups[c.group].push(`* ${linkPR(c.message)} ([${c.hash}](${REPO_URL}/commit/${c.hash}))`);
 	}
 
 	for (const group of Object.keys(groups)) {
