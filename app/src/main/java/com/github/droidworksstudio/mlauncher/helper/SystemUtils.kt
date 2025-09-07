@@ -108,6 +108,13 @@ fun hasLocationPermission(context: Context): Boolean {
             coarseLocationPermission == PackageManager.PERMISSION_GRANTED
 }
 
+fun hasContactsPermission(context: Context): Boolean {
+    return ContextCompat.checkSelfPermission(
+        context,
+        Manifest.permission.READ_CONTACTS
+    ) == PackageManager.PERMISSION_GRANTED
+}
+
 
 fun showPermissionDialog(context: Context) {
     CrashHandler.logUserAction("Show Usage Permission Dialog")

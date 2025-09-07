@@ -39,7 +39,6 @@ import com.github.droidworksstudio.common.AppLogger
 import com.github.droidworksstudio.common.getLocalizedString
 import com.github.droidworksstudio.common.hasSoftKeyboard
 import com.github.droidworksstudio.common.isSystemApp
-import com.github.droidworksstudio.common.openSearch
 import com.github.droidworksstudio.common.searchCustomSearchEngine
 import com.github.droidworksstudio.common.searchOnPlayStore
 import com.github.droidworksstudio.common.showShortToast
@@ -54,6 +53,7 @@ import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentAppDrawerBinding
 import com.github.droidworksstudio.mlauncher.helper.emptyString
 import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
+import com.github.droidworksstudio.mlauncher.helper.hasContactsPermission
 import com.github.droidworksstudio.mlauncher.helper.openAppInfo
 
 class AppDrawerFragment : Fragment() {
@@ -236,9 +236,7 @@ class AppDrawerFragment : Fragment() {
                 ContactDrawerAdapter(
                     it,
                     gravity,
-                    contactClickListener(viewModel, n),
-                    contactDeleteListener(),
-                    contactRenameListener()
+                    contactClickListener(viewModel, n)
                 )
             }
         }
@@ -330,14 +328,77 @@ class AppDrawerFragment : Fragment() {
             }
         })
 
+        binding.contactsRecyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            var onTop = false
+
+            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                val layoutManager = recyclerView.layoutManager as? LinearLayoutManager ?: return
+                val itemCount = layoutManager.itemCount
+                if (itemCount == 0) return
+
+                val firstVisible = layoutManager.findFirstVisibleItemPosition()
+                val lastVisible = layoutManager.findLastVisibleItemPosition()
+                if (firstVisible == RecyclerView.NO_POSITION || lastVisible == RecyclerView.NO_POSITION) return
+
+                val position = when {
+                    firstVisible <= 1 -> firstVisible
+                    lastVisible >= itemCount - 2 -> lastVisible
+                    else -> (firstVisible + lastVisible) / 2
+                }.coerceIn(0, itemCount - 1)
+
+                val item = contactAdapter?.getItemAt(position) ?: return
+
+                val sectionLetter = item.displayName.firstOrNull()?.uppercaseChar()?.toString() ?: return
+
+                // Skip redundant updates
+                if (sectionLetter == lastSectionLetter) return
+                lastSectionLetter = sectionLetter
+
+                binding.azSidebar.setSelectedLetter(sectionLetter)
+            }
+
+            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+                super.onScrollStateChanged(recyclerView, newState)
+                when (newState) {
+
+                    RecyclerView.SCROLL_STATE_DRAGGING -> {
+                        onTop = !recyclerView.canScrollVertically(-1)
+                        if (onTop) {
+                            if (requireContext().hasSoftKeyboard()) {
+                                binding.search.hideKeyboard()
+                            }
+                        }
+                        if (onTop && !recyclerView.canScrollVertically(1)) {
+                            findNavController().popBackStack()
+                        }
+                    }
+
+                    RecyclerView.SCROLL_STATE_IDLE -> {
+                        if (!recyclerView.canScrollVertically(1)) {
+                            binding.search.hideKeyboard()
+                        } else if (!recyclerView.canScrollVertically(-1)) {
+                            if (onTop) {
+                                findNavController().popBackStack()
+                            } else {
+                                if (requireContext().hasSoftKeyboard()) {
+                                    binding.search.showKeyboard()
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        })
+
         if (prefs.hideSearchView) {
             binding.search.isVisible = false
         } else {
+            val appListButtonFlags = prefs.getMenuFlags("APPLIST_BUTTON_FLAGS", "00")
             when (flag) {
                 AppDrawerFlag.LaunchApp -> {
                     binding.search.queryHint = getLocalizedString(R.string.show_apps)
                     binding.internetSearch.apply {
-                        isVisible = true
+                        isVisible = appListButtonFlags[0]
                         setOnClickListener {
                             val query = binding.search.query.toString().trim()
                             if (query.isEmpty()) return@setOnClickListener
@@ -345,13 +406,21 @@ class AppDrawerFragment : Fragment() {
                         }
                     }
                     binding.searchSwitcher.apply {
-                        isVisible = true
+                        if (hasContactsPermission(context)) {
+                            isVisible = appListButtonFlags[1]
+                        } else {
+                            binding.menuView.displayedChild = 0
+                        }
                     }
                 }
 
-                AppDrawerFlag.HiddenApps -> binding.search.queryHint = getLocalizedString(R.string.hidden_apps)
+                AppDrawerFlag.HiddenApps -> {
+                    binding.search.queryHint = getLocalizedString(R.string.hidden_apps)
+                }
 
-                AppDrawerFlag.SetHomeApp -> binding.search.queryHint = getLocalizedString(R.string.please_select_app)
+                AppDrawerFlag.SetHomeApp -> {
+                    binding.search.queryHint = getLocalizedString(R.string.please_select_app)
+                }
 
                 else -> {}
             }
@@ -361,44 +430,36 @@ class AppDrawerFragment : Fragment() {
 
         binding.search.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
-                val searchQuery = query
+                val searchQuery = query?.trim()
 
                 if (!searchQuery.isNullOrEmpty()) {
-                    val trimmedQuery = searchQuery.trim()
 
-                    when {
-                        appsAdapter.itemCount >= 1 -> {
-                            val firstItem = appsAdapter.getFirstInList().toString()
-                            if (firstItem.equals(trimmedQuery, ignoreCase = true) || prefs.openAppOnEnter) {
-                                appsAdapter.launchFirstInList()
+                    // Hashtag shortcut
+                    if (searchQuery.startsWith("#")) return true
+
+                    when (binding.menuView.displayedChild) {
+                        0 -> { // appsAdapter
+                            val firstItem = appAdapter?.getFirstInList()
+                            if (firstItem.equals(searchQuery, ignoreCase = true) || prefs.openAppOnEnter) {
+                                appAdapter?.launchFirstInList()
                             } else {
-                                requireContext().searchOnPlayStore(trimmedQuery)
+                                requireContext().searchOnPlayStore(searchQuery)
                             }
                         }
 
-                        appsAdapter.itemCount == 0 -> {
-                            val playStoreHandled = requireContext().searchOnPlayStore(trimmedQuery)
-                            if (!playStoreHandled) {
-                                requireContext().openSearch(trimmedQuery)
-                            }
-                        }
-
-                        trimmedQuery.startsWith("#") -> {
-                            return true
-                        }
-
-                        else -> {
-                            if (prefs.openAppOnEnter) {
-                                appsAdapter.launchFirstInList()
+                        1 -> { // contactsAdapter
+                            val firstItem = contactAdapter?.getFirstInList()
+                            if (firstItem.equals(searchQuery, ignoreCase = true) || prefs.openAppOnEnter) {
+                                contactAdapter?.launchFirstInList()
                             } else {
-                                requireContext().searchOnPlayStore(trimmedQuery)
+                                requireContext().searchOnPlayStore(searchQuery)
                             }
                         }
                     }
 
                     return true
-
                 }
+
                 return true
             }
 
@@ -413,12 +474,15 @@ class AppDrawerFragment : Fragment() {
                         isVisible = newText.isNullOrEmpty()
                     }
                 }
+
                 newText?.let {
-                    appAdapter?.filter?.filter(it.trim())
+                    when (binding.menuView.displayedChild) {
+                        0 -> appAdapter?.filter?.filter(it.trim())
+                        1 -> contactAdapter?.filter?.filter(it.trim())
+                    }
                 }
                 return false
             }
-
         })
     }
 
@@ -768,20 +832,4 @@ class AppDrawerFragment : Fragment() {
         // Close the drawer or fragment after selection
         findNavController().popBackStack()
     }
-
-    // Handles delete on a contact item
-    private fun contactDeleteListener(): (contactItem: ContactListItem) -> Unit = { contactModel ->
-        // You may want to show a confirmation dialog before deleting
-        // This example just removes it from the UI (or call your contact deletion logic)
-//        viewModel.removeContact(contactModel.displayName)
-//        showShortToast(getLocalizedString(R.string.contact_deleted))
-    }
-
-    // Handles rename / alias for a contact
-    private fun contactRenameListener(): (contactLookupKey: String, contactAlias: String) -> Unit = { lookupKey, alias ->
-        val prefs = Prefs(requireContext())
-//            prefs.setContactAlias(lookupKey, alias)
-        findNavController().popBackStack()
-    }
-
 }

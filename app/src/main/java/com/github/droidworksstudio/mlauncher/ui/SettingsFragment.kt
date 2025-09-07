@@ -336,6 +336,11 @@ class SettingsFragment : Fragment() {
             getLocalizedString(R.string.home_button_logo)
         )
 
+        val appListButtonOptionLabels = listOf(
+            getLocalizedString(R.string.applist_button_web),
+            getLocalizedString(R.string.applist_button_contacts)
+        )
+
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -873,6 +878,15 @@ class SettingsFragment : Fragment() {
                         fontSize = titleFontSize,
                         onClick = {
                             dialogBuilder.showFlagSettingsBottomSheet(context, contextMenuOptionLabels, "CONTEXT_MENU_FLAGS", "0011111")
+                        }
+                    )
+
+                    SettingsSelect(
+                        title = getLocalizedString(R.string.settings_applist_buttons_title),
+                        option = getLocalizedString(R.string.settings_applist_buttons_option),
+                        fontSize = titleFontSize,
+                        onClick = {
+                            dialogBuilder.showFlagSettingsBottomSheet(context, appListButtonOptionLabels, "APPLIST_BUTTON_FLAGS", "00")
                         }
                     )
 

@@ -994,9 +994,6 @@ class Prefs(val context: Context) {
         return prefsNormal.getString("${contactPackage}_ALIAS", emptyString()).toString()
     }
 
-    fun setContactAlias(contactPackage: String, contactAlias: String) {
-        prefsNormal.edit { putString("${contactPackage}_ALIAS", contactAlias) }
-    }
 
     fun getContactTag(contactPackage: String, userHandle: UserHandle? = null): String {
         val baseKey = "${contactPackage}_TAG"
@@ -1013,22 +1010,6 @@ class Prefs(val context: Context) {
                 }
             }
         } ?: ""
-    }
-
-
-    fun setContactTag(contactPackage: String, contactTag: String, userHandle: UserHandle? = null) {
-        prefsNormal.edit {
-            // Remove base key
-            remove("${contactPackage}_TAG")
-
-            userHandle?.let {
-                // Remove key using the UserHandle object itself
-                remove("${contactPackage}_TAG_${it}")
-
-                // Set new TAG with hashCode()
-                putString("${contactPackage}_TAG_${it.hashCode()}", contactTag)
-            }
-        }
     }
 
     /** 🔹 Save selected location into SharedPreferences */

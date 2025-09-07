@@ -1,6 +1,7 @@
 package com.github.droidworksstudio.fuzzywuzzy
 
 import com.github.droidworksstudio.mlauncher.data.AppListItem
+import com.github.droidworksstudio.mlauncher.data.ContactListItem
 import com.github.droidworksstudio.mlauncher.helper.emptyString
 import java.text.Normalizer
 import java.util.Locale
@@ -13,6 +14,15 @@ object FuzzyFinder {
         val normalizedSearchChars = normalizeString(searchChars)
 
         val fuzzyScore = calculateFuzzyScore(normalizedAppLabel, normalizedSearchChars)
+        return (fuzzyScore * topScore).toInt()
+    }
+
+    fun scoreContact(contact: ContactListItem, searchChars: String, topScore: Int): Int {
+        val contactLabel = contact.displayName
+        val normalizedContactLabel = normalizeString(contactLabel)
+        val normalizedSearchChars = normalizeString(searchChars)
+
+        val fuzzyScore = calculateFuzzyScore(normalizedContactLabel, normalizedSearchChars)
         return (fuzzyScore * topScore).toInt()
     }
 
