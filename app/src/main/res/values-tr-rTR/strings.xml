@@ -300,7 +300,7 @@
     <string name="home_button_settings">Ayarlar</string>
     <string name="home_button_logo">Logo</string>
     <string name="applist_button_web">Web</string>
-    <string name="applist_button_contacts">Contacts</string>
+    <string name="applist_button_contacts">İletişim</string>
     <string name="allow">İzin vermek</string>
     <string name="deny">Reddetmek</string>
     <string name="send">Göndermek</string>
@@ -326,8 +326,8 @@
     <string name="settings_context_menu_option">Görüntülenecek öğeleri seçin</string>
     <string name="settings_home_buttons_title">Ana Sayfa Düğmeleri</string>
     <string name="settings_home_buttons_option">Görüntülenecek öğeleri seçin</string>
-    <string name="settings_applist_buttons_title">App List Buttons</string>
-    <string name="settings_applist_buttons_option">Select items to display</string>
+    <string name="settings_applist_buttons_title">Uygulama Listesi Düğmeleri</string>
+    <string name="settings_applist_buttons_option">Görüntülenecek öğeleri seçin</string>
     <string-array name="priorities">
         <item>Düşük</item>
         <item>Orta</item>
