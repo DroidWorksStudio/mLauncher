@@ -299,8 +299,8 @@
     <string name="home_button_web">ウェブ</string>
     <string name="home_button_settings">設定</string>
     <string name="home_button_logo">ロゴ</string>
-    <string name="applist_button_web">Web</string>
-    <string name="applist_button_contacts">Contacts</string>
+    <string name="applist_button_web">ウェブ</string>
+    <string name="applist_button_contacts">連絡先</string>
     <string name="allow">許可する</string>
     <string name="deny">拒否</string>
     <string name="send">送信</string>
@@ -326,8 +326,8 @@
     <string name="settings_context_menu_option">表示する項目を選択</string>
     <string name="settings_home_buttons_title">ホームボタン</string>
     <string name="settings_home_buttons_option">表示する項目を選択</string>
-    <string name="settings_applist_buttons_title">App List Buttons</string>
-    <string name="settings_applist_buttons_option">Select items to display</string>
+    <string name="settings_applist_buttons_title">アプリリストボタン</string>
+    <string name="settings_applist_buttons_option">表示する項目を選択</string>
     <string-array name="priorities">
         <item>低い</item>
         <item>中くらい</item>
