@@ -2,8 +2,8 @@
 <resources>
     <!-- Base Settings -->
     <string name="select_app">Selecteer App</string>
-    <string name="show_apps">Search Apps</string>
-    <string name="show_contacts">Search Contacts</string>
+    <string name="show_apps">Zoek-apps</string>
+    <string name="show_contacts">Contacten zoeken</string>
     <string name="welcome_to_launcher">Welkom bij %1$s</string>
     <string name="continue_by_you_agree">Door verder te gaan, gaat u akkoord met %1$s</string>
     <string name="usage_access_permission">Machtiging gebruikstoegang</string>
@@ -80,9 +80,9 @@
     <string name="show_total_screen_time">Toon totale schermtijd</string>
     <string name="weather">Weer</string>
     <string name="show_weather">Weer weergeven</string>
-    <string name="gps_location">GPS Location</string>
-    <string name="temp_unit">Temperature Unit</string>
-    <string name="manual_location">Set Manual Location</string>
+    <string name="gps_location">GPS-locatie</string>
+    <string name="temp_unit">Temperatuureenheid</string>
+    <string name="manual_location">Handmatige locatie instellen</string>
     <string name="icon_packs">Icoonpakketten</string>
     <!-- Strings used for look & feel settings -->
     <string name="look_feel_settings_title">Uiterlijk &amp; Stijl</string>
@@ -299,6 +299,8 @@
     <string name="home_button_web">Web</string>
     <string name="home_button_settings">Instellingen</string>
     <string name="home_button_logo">Logo</string>
+    <string name="applist_button_web">Web</string>
+    <string name="applist_button_contacts">Contacts</string>
     <string name="allow">Toestaan</string>
     <string name="deny">Ontkennen</string>
     <string name="send">Versturen</string>
@@ -324,6 +326,8 @@
     <string name="settings_context_menu_option">Selecteer items om weer te geven</string>
     <string name="settings_home_buttons_title">Home-knoppen</string>
     <string name="settings_home_buttons_option">Selecteer items om weer te geven</string>
+    <string name="settings_applist_buttons_title">App List Buttons</string>
+    <string name="settings_applist_buttons_option">Select items to display</string>
     <string-array name="priorities">
         <item>Laag</item>
         <item>Medium</item>
