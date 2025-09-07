@@ -2,21 +2,17 @@ package com.github.droidworksstudio.mlauncher.ui
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.text.Editable
-import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.EditText
 import android.widget.Filter
 import android.widget.Filterable
 import android.widget.FrameLayout
-import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.view.updatePadding
 import androidx.recyclerview.widget.RecyclerView
-import com.github.droidworksstudio.common.getLocalizedString
+import com.github.droidworksstudio.common.AppLogger
 import com.github.droidworksstudio.fuzzywuzzy.FuzzyFinder
-import com.github.droidworksstudio.mlauncher.R
+import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.ContactListItem
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.AdapterAppDrawerBinding
@@ -25,9 +21,7 @@ import java.text.Normalizer
 class ContactDrawerAdapter(
     private val context: Context,
     private val gravity: Int,
-    private val contactClickListener: (ContactListItem) -> Unit,
-    private val contactDeleteListener: (ContactListItem) -> Unit,
-    private val contactRenameListener: (String, String) -> Unit
+    private val contactClickListener: (ContactListItem) -> Unit
 ) : RecyclerView.Adapter<ContactDrawerAdapter.ViewHolder>(), Filterable {
 
     private lateinit var prefs: Prefs
@@ -45,7 +39,11 @@ class ContactDrawerAdapter(
         binding.appTitle.textSize = prefs.appSize.toFloat()
         val padding: Int = prefs.textPaddingSize
         binding.appTitle.setPadding(0, padding, 0, padding)
-        return ViewHolder(binding, prefs)
+        return ViewHolder(binding)
+    }
+
+    fun getItemAt(position: Int): ContactListItem? {
+        return if (position in contactsList.indices) contactsList[position] else null
     }
 
     @SuppressLint("RecyclerView")
@@ -54,7 +52,7 @@ class ContactDrawerAdapter(
 
         val contactModel = contactFilteredList[holder.absoluteAdapterPosition]
 
-        holder.bind(gravity, contactModel, contactClickListener, contactDeleteListener, contactRenameListener, prefs)
+        holder.bind(gravity, contactModel, contactClickListener)
     }
 
     override fun getItemCount(): Int = contactFilteredList.size
@@ -65,23 +63,45 @@ class ContactDrawerAdapter(
         return object : Filter() {
             override fun performFiltering(charSearch: CharSequence?): FilterResults {
                 prefs = Prefs(context)
+
                 val searchChars = charSearch.toString().trim().lowercase()
                 val filteredContacts: MutableList<ContactListItem>
 
-                val query = searchChars
-                val normalizeField: (ContactListItem) -> String = { contact -> normalize(contact.label) }
+                // Normalization function for contacts
+                val normalizeField: (ContactListItem) -> String = { contact -> normalize(contact.displayName) }
+
+                // Scoring logic
+                val scoredContacts: Map<ContactListItem, Int> = if (prefs.enableFilterStrength) {
+                    contactsList.associateWith { contact ->
+                        FuzzyFinder.scoreContact(contact, searchChars, Constants.MAX_FILTER_STRENGTH)
+                    }
+                } else {
+                    emptyMap()
+                }
 
                 filteredContacts = if (searchChars.isEmpty()) {
                     contactsList.toMutableList()
                 } else {
-                    contactsList.filter { contact ->
-                        if (prefs.searchFromStart) {
-                            normalizeField(contact).startsWith(query)
-                        } else {
-                            FuzzyFinder.isMatch(normalizeField(contact), query)
-                        }
-                    }.toMutableList()
+                    if (prefs.enableFilterStrength) {
+                        // Filter using scores
+                        scoredContacts.filter { (contact, score) ->
+                            (prefs.searchFromStart && normalizeField(contact).startsWith(searchChars)
+                                    || !prefs.searchFromStart && normalizeField(contact).contains(searchChars))
+                                    && score > prefs.filterStrength
+                        }.map { it.key }.toMutableList()
+                    } else {
+                        // Filter without scores
+                        contactsList.filter { contact ->
+                            if (prefs.searchFromStart) {
+                                normalizeField(contact).startsWith(searchChars)
+                            } else {
+                                FuzzyFinder.isMatch(normalizeField(contact), searchChars)
+                            }
+                        }.toMutableList()
+                    }
                 }
+
+                AppLogger.d("searchQuery", searchChars)
 
                 val filterResults = FilterResults()
                 filterResults.values = filteredContacts
@@ -113,62 +133,39 @@ class ContactDrawerAdapter(
         notifyDataSetChanged()
     }
 
+    fun launchFirstInList() {
+        if (contactFilteredList.isNotEmpty()) {
+            contactClickListener(contactFilteredList[0])
+        }
+    }
+
+    fun getFirstInList(): String? {
+        return if (contactFilteredList.isNotEmpty()) {
+            contactFilteredList[0].displayName   // or .displayName depending on your model
+        } else {
+            null
+        }
+    }
+
+
     class ViewHolder(
         itemView: AdapterAppDrawerBinding,
-        private val prefs: Prefs
     ) : RecyclerView.ViewHolder(itemView.root) {
-
-        val appRenameEdit: EditText = itemView.appRenameEdit
-        val appSaveRename: TextView = itemView.appSaveRename
-        val appDelete: TextView = itemView.appDelete
-        private val appRenameLayout: LinearLayout = itemView.appRenameLayout
         private val appTitle: TextView = itemView.appTitle
         private val appTitleFrame: FrameLayout = itemView.appTitleFrame
-        private val context = itemView.root.context
 
         fun bind(
             contactLabelGravity: Int,
             contactItem: ContactListItem,
             contactClickListener: (ContactListItem) -> Unit,
-            contactDeleteListener: (ContactListItem) -> Unit,
-            contactRenameListener: (String, String) -> Unit,
-            prefs: Prefs
         ) = with(itemView) {
 
-            appTitle.text = contactItem.label
+            appTitle.text = contactItem.displayName
 
             // set text gravity
             val params = appTitle.layoutParams as FrameLayout.LayoutParams
             params.gravity = contactLabelGravity
             appTitle.layoutParams = params
-
-            // handle rename
-            appRenameEdit.apply {
-                addTextChangedListener(object : TextWatcher {
-                    override fun afterTextChanged(s: Editable) {}
-                    override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
-                    override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
-                        if (appRenameEdit.text.isEmpty()) {
-                            appSaveRename.text = getLocalizedString(R.string.reset)
-                        } else if (appRenameEdit.text.toString() == contactItem.customLabel) {
-                            appSaveRename.text = getLocalizedString(R.string.cancel)
-                        } else {
-                            appSaveRename.text = getLocalizedString(R.string.rename)
-                        }
-                    }
-                })
-                text = Editable.Factory.getInstance().newEditable(contactItem.label)
-            }
-
-            appSaveRename.setOnClickListener {
-                val newName = appRenameEdit.text.toString().trim()
-                contactItem.customLabel = newName
-                contactRenameListener(contactItem.displayName, contactItem.customLabel)
-            }
-
-            appDelete.setOnClickListener {
-                contactDeleteListener(contactItem)
-            }
 
             appTitleFrame.setOnClickListener {
                 contactClickListener(contactItem)

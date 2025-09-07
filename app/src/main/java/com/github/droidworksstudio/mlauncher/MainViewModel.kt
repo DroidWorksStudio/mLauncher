@@ -604,8 +604,6 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                             displayName = displayName,
                             phoneNumber = phoneNumber,
                             email = email,
-                            customLabel = prefs.getContactAlias(lookupKey),
-                            customTag = prefs.getContactTag(lookupKey),
                             category = category
                         )
                     )
@@ -619,7 +617,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             // Sort: FAVORITE first, then alphabetical
             fullList.sortWith(
                 compareBy<ContactListItem> { it.category.ordinal }
-                    .thenBy { it.label.lowercase() }
+                    .thenBy { it.displayName.lowercase() }
             )
             AppLogger.d("ContactListDebug", "🔠 Sorted contact list")
 
@@ -627,7 +625,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             fullList.forEachIndexed { index, item ->
                 val key = when (item.category) {
                     ContactCategory.FAVORITE -> "★"
-                    else -> item.label.firstOrNull()?.uppercaseChar()?.toString() ?: "#"
+                    else -> item.displayName.firstOrNull()?.uppercaseChar()?.toString() ?: "#"
                 }
                 scrollIndexMap.putIfAbsent(key, index)
             }
