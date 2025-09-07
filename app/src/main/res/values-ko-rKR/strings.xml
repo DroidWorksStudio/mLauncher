@@ -2,8 +2,8 @@
 <resources>
     <!-- Base Settings -->
     <string name="select_app">앱 선택</string>
-    <string name="show_apps">Search Apps</string>
-    <string name="show_contacts">Search Contacts</string>
+    <string name="show_apps">앱 검색</string>
+    <string name="show_contacts">연락처 검색</string>
     <string name="welcome_to_launcher">%1$s에 오신 것을 환영합니다</string>
     <string name="continue_by_you_agree">계속하시면 %1$s에 동의하게 됩니다.</string>
     <string name="usage_access_permission">사용 액세스 권한</string>
@@ -80,9 +80,9 @@
     <string name="show_total_screen_time">총 화면 시간 표시</string>
     <string name="weather">날씨</string>
     <string name="show_weather">날씨 표시</string>
-    <string name="gps_location">GPS Location</string>
-    <string name="temp_unit">Temperature Unit</string>
-    <string name="manual_location">Set Manual Location</string>
+    <string name="gps_location">GPS 위치</string>
+    <string name="temp_unit">온도 단위</string>
+    <string name="manual_location">수동 위치 설정</string>
     <string name="icon_packs">아이콘 팩</string>
     <!-- Strings used for look & feel settings -->
     <string name="look_feel_settings_title">보세요 &amp; 느껴보세요</string>
@@ -290,8 +290,8 @@
     <string name="next">다음</string>
     <string name="start">시작</string>
     <string name="copy">복사</string>
-    <string name="celsius">Celsius</string>
-    <string name="fahrenheit">Fahrenheit</string>
+    <string name="celsius">섭씨</string>
+    <string name="fahrenheit">화씨</string>
     <string name="home_button_phone">핸드폰</string>
     <string name="home_button_messages">메시지</string>
     <string name="home_button_camera">카메라</string>
@@ -299,6 +299,8 @@
     <string name="home_button_web">편물</string>
     <string name="home_button_settings">설정</string>
     <string name="home_button_logo">심벌 마크</string>
+    <string name="applist_button_web">Web</string>
+    <string name="applist_button_contacts">Contacts</string>
     <string name="allow">허용하다</string>
     <string name="deny">부인하다</string>
     <string name="send">보내다</string>
@@ -324,6 +326,8 @@
     <string name="settings_context_menu_option">표시할 항목을 선택하세요</string>
     <string name="settings_home_buttons_title">홈 버튼</string>
     <string name="settings_home_buttons_option">표시할 항목을 선택하세요</string>
+    <string name="settings_applist_buttons_title">App List Buttons</string>
+    <string name="settings_applist_buttons_option">Select items to display</string>
     <string-array name="priorities">
         <item>낮은</item>
         <item>중간</item>
