@@ -299,8 +299,8 @@
     <string name="home_button_web">Веб</string>
     <string name="home_button_settings">Настройки</string>
     <string name="home_button_logo">Логотип</string>
-    <string name="applist_button_web">Web</string>
-    <string name="applist_button_contacts">Contacts</string>
+    <string name="applist_button_web">Интернет</string>
+    <string name="applist_button_contacts">Контакты</string>
     <string name="allow">Позволять</string>
     <string name="deny">Отрицать</string>
     <string name="send">Отправлять</string>
@@ -326,8 +326,8 @@
     <string name="settings_context_menu_option">Выберите элементы для отображения</string>
     <string name="settings_home_buttons_title">Кнопки «Домой»</string>
     <string name="settings_home_buttons_option">Выберите элементы для отображения</string>
-    <string name="settings_applist_buttons_title">App List Buttons</string>
-    <string name="settings_applist_buttons_option">Select items to display</string>
+    <string name="settings_applist_buttons_title">Кнопки списка приложений</string>
+    <string name="settings_applist_buttons_option">Выберите элементы для отображения</string>
     <string-array name="priorities">
         <item>Низкий</item>
         <item>Середина</item>
