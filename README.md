@@ -29,7 +29,7 @@
             <a href='https://github.com/DroidWorksStudio/mLauncher/releases/latest'><img src='https://img.shields.io/github/downloads/DroidWorksStudio/mLauncher/total?color=50FA7B&style=flat-square&label=Overall&logo=github' alt="releases"></a>
             <a href='https://github.com/DroidWorksStudio/mLauncher/releases/latest'><img src="https://img.shields.io/github/downloads/DroidWorksStudio/mLauncher/latest/total?color=50FA7B&style=flat-square&label=Latest&logo=github" alt="GitHub Downloads (all assets, latest release)"></a>
 			<br>
-			<a href='https://github.com/DroidWorksStudio/mLauncher/releases/latest'><img src='https://img.shields.io/endpoint?url=https%3A%2F%2Fplay.cuzi.workers.dev%2Fplay%3Fi%3Dapp.mlauncher%26gl%3DUK%26hl%3Den%26l%3D%24name%26m%3D%24totalinstalls&color=50FA7B&style=flat-square&label=Google%20Play&logo=googleplay' alt='Google Play'></a>
+			<a href='https://play.google.com/store/apps/details?id=app.mlauncher'><img src='https://img.shields.io/endpoint?url=https%3A%2F%2Fplay.cuzi.workers.dev%2Fplay%3Fi%3Dapp.mlauncher%26gl%3DUK%26hl%3Den%26l%3D%24name%26m%3D%24totalinstalls&color=50FA7B&style=flat-square&label=Google%20Play&logo=googleplay' alt='Google Play'></a>
             <br>
 	    	<a href='https://apt.izzysoft.de/fdroid/index/apk/app.mlauncher'><img alt="IzzyOnDroid (including pre-releases)" src="https://img.shields.io/endpoint?url=https://apt.izzysoft.de/fdroid/api/v1/shield/app.mlauncher&color=FFB86C&style=flat-square&label=IzzyOnDroid"></a>
             <a href='https://github.com/DroidWorksStudio/mLauncher/releases/latest'><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/DroidWorksStudio/mLauncher?color=FFB86C&style=flat-square&label=Github"></a>
