@@ -299,8 +299,8 @@
     <string name="home_button_web">เว็บไซต์</string>
     <string name="home_button_settings">การตั้งค่า</string>
     <string name="home_button_logo">โลโก้</string>
-    <string name="applist_button_web">Web</string>
-    <string name="applist_button_contacts">Contacts</string>
+    <string name="applist_button_web">เว็บไซต์</string>
+    <string name="applist_button_contacts">ติดต่อเรา</string>
     <string name="allow">อนุญาต</string>
     <string name="deny">ปฏิเสธ</string>
     <string name="send">ส่ง</string>
@@ -326,8 +326,8 @@
     <string name="settings_context_menu_option">เลือกสินค้าที่จะแสดง</string>
     <string name="settings_home_buttons_title">ปุ่มโฮม</string>
     <string name="settings_home_buttons_option">เลือกสินค้าที่จะแสดง</string>
-    <string name="settings_applist_buttons_title">App List Buttons</string>
-    <string name="settings_applist_buttons_option">Select items to display</string>
+    <string name="settings_applist_buttons_title">ปุ่มรายการแอป</string>
+    <string name="settings_applist_buttons_option">เลือกสินค้าที่จะแสดง</string>
     <string-array name="priorities">
         <item>ต่ำ</item>
         <item>ปานกลาง</item>
