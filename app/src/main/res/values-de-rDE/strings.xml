@@ -300,7 +300,7 @@
     <string name="home_button_settings">Einstellungen</string>
     <string name="home_button_logo">Logo</string>
     <string name="applist_button_web">Web</string>
-    <string name="applist_button_contacts">Contacts</string>
+    <string name="applist_button_contacts">Kontakte</string>
     <string name="allow">Erlauben</string>
     <string name="deny">Leugnen</string>
     <string name="send">Schicken</string>
@@ -326,8 +326,8 @@
     <string name="settings_context_menu_option">Auswählen der anzuzeigenden Elemente</string>
     <string name="settings_home_buttons_title">Home-Schaltflächen</string>
     <string name="settings_home_buttons_option">Auswählen der anzuzeigenden Elemente</string>
-    <string name="settings_applist_buttons_title">App List Buttons</string>
-    <string name="settings_applist_buttons_option">Select items to display</string>
+    <string name="settings_applist_buttons_title">Schaltflächen für die App-Liste</string>
+    <string name="settings_applist_buttons_option">Auswählen der anzuzeigenden Elemente</string>
     <string-array name="priorities">
         <item>Niedrig</item>
         <item>Medium</item>
