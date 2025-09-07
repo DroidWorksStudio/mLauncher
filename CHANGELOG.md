@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file. See [conven
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/main) - TBD
 
 ### Refactoring:
+* Improve conventional commit type removal ([dcddfbf9](https://github.com/DroidWorksStudio/mLauncher/commit/dcddfbf9))
 * Enhance changelog generation and formatting ([331e3af5](https://github.com/DroidWorksStudio/mLauncher/commit/331e3af5))
 * Update changelog script path in workflow ([8738766d](https://github.com/DroidWorksStudio/mLauncher/commit/8738766d))
 * Automate changelog generation with custom script ([5634945d](https://github.com/DroidWorksStudio/mLauncher/commit/5634945d))
