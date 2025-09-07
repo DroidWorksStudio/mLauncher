@@ -301,8 +301,8 @@ Jūs bet kada galite išjungti šią prieigą savo įrenginio nustatymuose.</str
     <string name="home_button_web">Žiniatinklis</string>
     <string name="home_button_settings">Nustatymai</string>
     <string name="home_button_logo">Logotipas</string>
-    <string name="applist_button_web">Web</string>
-    <string name="applist_button_contacts">Contacts</string>
+    <string name="applist_button_web">Žiniatinklis</string>
+    <string name="applist_button_contacts">Kontaktai</string>
     <string name="allow">Leisti</string>
     <string name="deny">Neigti</string>
     <string name="send">Siųsti</string>
@@ -328,8 +328,8 @@ Jūs bet kada galite išjungti šią prieigą savo įrenginio nustatymuose.</str
     <string name="settings_context_menu_option">Pasirinkite elementus, kuriuos norite rodyti</string>
     <string name="settings_home_buttons_title">Namų mygtukai</string>
     <string name="settings_home_buttons_option">Pasirinkite elementus, kuriuos norite rodyti</string>
-    <string name="settings_applist_buttons_title">App List Buttons</string>
-    <string name="settings_applist_buttons_option">Select items to display</string>
+    <string name="settings_applist_buttons_title">Programų sąrašo mygtukai</string>
+    <string name="settings_applist_buttons_option">Pasirinkite elementus, kuriuos norite rodyti</string>
     <string-array name="priorities">
         <item>Žemas</item>
         <item>Vidutinis</item>
