@@ -301,8 +301,8 @@
     <string name="home_button_web">אינטרנט</string>
     <string name="home_button_settings">הגדרות</string>
     <string name="home_button_logo">סֵמֶל</string>
-    <string name="applist_button_web">Web</string>
-    <string name="applist_button_contacts">Contacts</string>
+    <string name="applist_button_web">אינטרנט</string>
+    <string name="applist_button_contacts">אנשי קשר</string>
     <string name="allow">לְהַתִיר</string>
     <string name="deny">לְהַכּחִישׁ</string>
     <string name="send">לִשְׁלוֹחַ</string>
@@ -328,8 +328,8 @@
     <string name="settings_context_menu_option">בחירת פריטים להצגה</string>
     <string name="settings_home_buttons_title">כפתורי בית</string>
     <string name="settings_home_buttons_option">בחירת פריטים להצגה</string>
-    <string name="settings_applist_buttons_title">App List Buttons</string>
-    <string name="settings_applist_buttons_option">Select items to display</string>
+    <string name="settings_applist_buttons_title">כפתורי רשימת אפליקציות</string>
+    <string name="settings_applist_buttons_option">בחירת פריטים להצגה</string>
     <string-array name="priorities">
         <item>נָמוּך</item>
         <item>בֵּינוֹנִי</item>
