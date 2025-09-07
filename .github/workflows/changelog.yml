@@ -19,19 +19,14 @@ jobs:
           ref: main
           fetch-depth: 0
 
-      - name: Install Rust (required for git-cliff)
-        uses: actions-rs/toolchain@v1
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          toolchain: stable
-          override: true
+          node-version: '20'  # or whatever version you need
 
-      - name: Install git-cliff
-        run: cargo install git-cliff
-
-      - name: Generate changelog for last 5 tags
+      - name: Run changelog script
         run: |
-          LAST_TAG=$(git tag --sort=-creatordate | head -n 10 | tail -n 1)
-          git-cliff "$LAST_TAG..HEAD" -o CHANGELOG.md --verbose
+          node scripts/generate-changelog.js
         env:
           OUTPUT: CHANGELOG.md
 
