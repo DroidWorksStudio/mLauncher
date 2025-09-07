@@ -5,7 +5,6 @@ All notable changes to this project will be documented in this file. See [conven
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/main) - TBD
 
 ### Refactoring:
-* Refactor(changelog): Update changelog generation script
 * Refactor(changelog): Enhance changelog generation and formatting
 * Refactor: Update changelog script path in workflow
 * Refactor: Automate changelog generation with custom script
