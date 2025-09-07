@@ -299,8 +299,8 @@
     <string name="home_button_web">الويب</string>
     <string name="home_button_settings">إعدادات</string>
     <string name="home_button_logo">الشعار</string>
-    <string name="applist_button_web">Web</string>
-    <string name="applist_button_contacts">Contacts</string>
+    <string name="applist_button_web">الويب</string>
+    <string name="applist_button_contacts">جهات الاتصال</string>
     <string name="allow">يسمح</string>
     <string name="deny">ينكر</string>
     <string name="send">يرسل</string>
@@ -326,8 +326,8 @@
     <string name="settings_context_menu_option">حدد العناصر المراد عرضها</string>
     <string name="settings_home_buttons_title">أزرار الصفحة الرئيسية</string>
     <string name="settings_home_buttons_option">حدد العناصر المراد عرضها</string>
-    <string name="settings_applist_buttons_title">App List Buttons</string>
-    <string name="settings_applist_buttons_option">Select items to display</string>
+    <string name="settings_applist_buttons_title">أزرار قائمة التطبيقات</string>
+    <string name="settings_applist_buttons_option">حدد العناصر المراد عرضها</string>
     <string-array name="priorities">
         <item>قليل</item>
         <item>واسطة</item>
