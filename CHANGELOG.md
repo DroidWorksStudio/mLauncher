@@ -12,6 +12,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - Conditional private space receiver unregistration - ([cdb88c1](https://github.com/DroidWorksStudio/mLauncher/commit/cdb88c1c6c6d6bae5535096e81aa964ba21b3ebe))
 
+### Language Support:
+
+- Updated Language Files. ([#878](https://github.com/DroidWorksStudio/mLauncher/issues/878)) - ([c63c99a](https://github.com/DroidWorksStudio/mLauncher/commit/c63c99a19f3a4b7c25669e201a46d499ef4c78d0))
+
 ### Refactoring:
 
 - Enhance Contact List and App Drawer Functionality - ([fab60dc](https://github.com/DroidWorksStudio/mLauncher/commit/fab60dc8b076ad58538598c6a712355f3e58dd1e))
