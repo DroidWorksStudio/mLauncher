@@ -14,6 +14,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactoring:
 
+- Enhance Contact List and App Drawer Functionality - ([fab60dc](https://github.com/DroidWorksStudio/mLauncher/commit/fab60dc8b076ad58538598c6a712355f3e58dd1e))
 - Use app name for label in app drawer - ([58be2d4](https://github.com/DroidWorksStudio/mLauncher/commit/58be2d44f116d4832625d4e08e4cc4764c4799f0))
 
 ## [1.10.9.2](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.9.2) - (05, September 2025)
