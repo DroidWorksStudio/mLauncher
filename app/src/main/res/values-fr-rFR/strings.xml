@@ -2,8 +2,8 @@
 <resources>
     <!-- Base Settings -->
     <string name="select_app">Sélectionner l\'application</string>
-    <string name="show_apps">Search Apps</string>
-    <string name="show_contacts">Search Contacts</string>
+    <string name="show_apps">Rechercher des applications</string>
+    <string name="show_contacts">Rechercher des contacts</string>
     <string name="welcome_to_launcher">Bienvenue sur %1$s</string>
     <string name="continue_by_you_agree">En continuant, vous acceptez %1$s</string>
     <string name="usage_access_permission">Autorisations d\'accès à l\'utilisation</string>
@@ -80,9 +80,9 @@
     <string name="show_total_screen_time">Afficher le temps total d\'écran</string>
     <string name="weather">Météo</string>
     <string name="show_weather">Afficher la météo</string>
-    <string name="gps_location">GPS Location</string>
-    <string name="temp_unit">Temperature Unit</string>
-    <string name="manual_location">Set Manual Location</string>
+    <string name="gps_location">Localisation GPS</string>
+    <string name="temp_unit">Unité de température</string>
+    <string name="manual_location">Définir l\'emplacement manuel</string>
     <string name="icon_packs">Packs d\'icônes</string>
     <!-- Strings used for look & feel settings -->
     <string name="look_feel_settings_title">Regarder &amp; Ressentir</string>
@@ -299,6 +299,8 @@
     <string name="home_button_web">Web</string>
     <string name="home_button_settings">Paramètres</string>
     <string name="home_button_logo">Logo</string>
+    <string name="applist_button_web">Web</string>
+    <string name="applist_button_contacts">Contacts</string>
     <string name="allow">Permettre</string>
     <string name="deny">Refuser</string>
     <string name="send">Envoyer</string>
@@ -324,6 +326,8 @@
     <string name="settings_context_menu_option">Sélectionnez les éléments à afficher</string>
     <string name="settings_home_buttons_title">Boutons d\'accueil</string>
     <string name="settings_home_buttons_option">Sélectionnez les éléments à afficher</string>
+    <string name="settings_applist_buttons_title">App List Buttons</string>
+    <string name="settings_applist_buttons_option">Select items to display</string>
     <string-array name="priorities">
         <item>Faible</item>
         <item>Moyen</item>
