@@ -26,6 +26,7 @@
     <string name="search_duckduckgo" translatable="false">Duck Duck Go</string>
     <string name="search_bing" translatable="false">Bing</string>
     <string name="search_brave" translatable="false">Brave</string>
+    <string name="search_startpage" translatable="false">Start Page</string>
     <string name="search_swisscow" translatable="false">Swiss Cows</string>
 
     <!-- IconPacks Stings -->

@@ -422,6 +422,7 @@ object Constants {
         DuckDuckGo,
         Bing,
         Brave,
+        StartPage,
         SwissCow;
 
         fun getString(): String {
@@ -431,6 +432,7 @@ object Constants {
                 DuckDuckGo -> getLocalizedString(R.string.search_duckduckgo)
                 Bing -> getLocalizedString(R.string.search_bing)
                 Brave -> getLocalizedString(R.string.search_brave)
+                StartPage -> getLocalizedString(R.string.search_startpage)
                 SwissCow -> getLocalizedString(R.string.search_swisscow)
             }
         }
@@ -443,6 +445,7 @@ object Constants {
                 DuckDuckGo -> getLocalizedString(R.string.search_duckduckgo)
                 Bing -> getLocalizedString(R.string.search_bing)
                 Brave -> getLocalizedString(R.string.search_brave)
+                StartPage -> getLocalizedString(R.string.search_startpage)
                 SwissCow -> getLocalizedString(R.string.search_swisscow)
             }
         }
@@ -574,6 +577,7 @@ object Constants {
     const val URL_BING_SEARCH = "https://bing.com/search?q="
     const val URL_BRAVE_SEARCH = "https://search.brave.com/search?q="
     const val URL_SWISSCOW_SEARCH = "https://swisscows.com/web?query="
+    const val URL_START_PAGE_SEARCH = "https://www.startpage.com/sp/search?q=%s"
     const val URL_GOOGLE_PLAY_STORE = "https://play.google.com/store/search?c=apps&q"
     const val APP_GOOGLE_PLAY_STORE = "market://search?c=apps&q"
 }

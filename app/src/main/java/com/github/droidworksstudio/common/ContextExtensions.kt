@@ -289,6 +289,11 @@ fun Context.searchCustomSearchEngine(searchQuery: String? = null, prefs: Prefs):
             Constants.URL_BRAVE_SEARCH
         }
 
+        Constants.SearchEngines.StartPage -> {
+            CrashHandler.logUserAction("StartPage Search")
+            Constants.URL_START_PAGE_SEARCH
+        }
+
         Constants.SearchEngines.SwissCow -> {
             CrashHandler.logUserAction("SwissCow Search")
             Constants.URL_SWISSCOW_SEARCH
