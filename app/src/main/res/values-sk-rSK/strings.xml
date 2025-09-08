@@ -55,6 +55,7 @@
     <string name="hide_search_view">Skryť zobrazenie vyhľadávania</string>
     <string name="show_floating_button">Zobraziť tlačidlá skratiek</string>
     <string name="lock_orientation">Zamknúť orientáciu</string>
+    <string name="haptic_feedback">Haptická spätná väzba</string>
     <string name="search">Hľadať</string>
     <string name="search_engine">Vyhľadávač</string>
     <string name="show_az_sidebar">Zobraziť bočný panel AZ</string>
