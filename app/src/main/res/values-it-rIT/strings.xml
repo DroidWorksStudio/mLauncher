@@ -55,6 +55,7 @@
     <string name="hide_search_view">Nascondi la vista di ricerca</string>
     <string name="show_floating_button">Mostra pulsanti di scelta rapida</string>
     <string name="lock_orientation">Orientamento del blocco</string>
+    <string name="haptic_feedback">Feedback tattile</string>
     <string name="search">Ricerca</string>
     <string name="search_engine">Motore di ricerca</string>
     <string name="show_az_sidebar">Mostra barra laterale AZ</string>
