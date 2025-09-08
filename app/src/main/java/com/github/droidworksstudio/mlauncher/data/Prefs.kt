@@ -24,6 +24,7 @@ private const val PREFS_ONBOARDING_FILENAME = "app.mlauncher.prefs.onboarding"
 
 private const val APP_VERSION = "APP_VERSION"
 private const val LOCK_ORIENTATION = "LOCK_ORIENTATION"
+private const val HAPTIC_FEEDBACK = "HAPTIC_FEEDBACK"
 private const val FIRST_OPEN = "FIRST_OPEN"
 private const val FIRST_SETTINGS_OPEN = "FIRST_SETTINGS_OPEN"
 private const val HOME_APPS_NUM = "HOME_APPS_NUM"
@@ -555,6 +556,10 @@ class Prefs(val context: Context) {
         get() = getSetting(LOCK_ORIENTATION, true)
         set(value) = prefsNormal.edit { putBoolean(LOCK_ORIENTATION, value) }
 
+    var hapticFeedback: Boolean
+        get() = getSetting(HAPTIC_FEEDBACK, true)
+        set(value) = prefsNormal.edit { putBoolean(HAPTIC_FEEDBACK, value) }
+
     var showAZSidebar: Boolean
         get() = getSetting(SHOW_AZSIDEBAR, false)
         set(value) = prefsNormal.edit { putBoolean(SHOW_AZSIDEBAR, value) }
@@ -988,28 +993,6 @@ class Prefs(val context: Context) {
                 putString("${appPackage}_TAG_${it.hashCode()}", appTag)
             }
         }
-    }
-
-    fun getContactAlias(contactPackage: String): String {
-        return prefsNormal.getString("${contactPackage}_ALIAS", emptyString()).toString()
-    }
-
-
-    fun getContactTag(contactPackage: String, userHandle: UserHandle? = null): String {
-        val baseKey = "${contactPackage}_TAG"
-        val userKey = userHandle?.let { "${baseKey}_${it.hashCode()}" }
-
-        return prefsNormal.getString(
-            userKey ?: baseKey, ""  // Try the user-specific key first if available
-        )?.also { value ->
-            // Migrate base key to user-specific key if needed
-            if (userHandle != null && prefsNormal.contains(baseKey)) {
-                prefsNormal.edit {
-                    remove(baseKey)           // Remove old base key
-                    putString(userKey, value) // Save under user-specific key
-                }
-            }
-        } ?: ""
     }
 
     /** 🔹 Save selected location into SharedPreferences */

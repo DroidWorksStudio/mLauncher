@@ -1,7 +1,9 @@
 package com.github.droidworksstudio.mlauncher.ui.compose
 
 import android.util.TypedValue
+import android.view.View
 import androidx.annotation.DrawableRes
+import androidx.appcompat.widget.SwitchCompat
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
@@ -37,6 +39,7 @@ import androidx.compose.ui.viewinterop.AndroidView
 import androidx.core.content.ContextCompat
 import com.github.creativecodecat.components.views.FontAppCompatTextView
 import com.github.droidworksstudio.mlauncher.R
+import com.github.droidworksstudio.mlauncher.services.HapticFeedbackService
 import com.github.droidworksstudio.mlauncher.style.SettingsTheme
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
@@ -286,7 +289,7 @@ object SettingsComposable {
                         this.text = text
                         setTextSize(TypedValue.COMPLEX_UNIT_SP, resolvedFontSizeSp)
                         setTextColor(fontColor.toArgb())
-                        textAlignment = android.view.View.TEXT_ALIGNMENT_VIEW_START
+                        textAlignment = View.TEXT_ALIGNMENT_VIEW_START
                     }
                 },
                 modifier = Modifier
@@ -296,7 +299,7 @@ object SettingsComposable {
 
             AndroidView(
                 factory = { context ->
-                    androidx.appcompat.widget.SwitchCompat(context).apply {
+                    SwitchCompat(context).apply {
                         scaleX = 0.7f
                         scaleY = 0.7f
                         thumbDrawable = ContextCompat.getDrawable(context, R.drawable.shape_switch_thumb)
@@ -305,6 +308,10 @@ object SettingsComposable {
                         setOnCheckedChangeListener { _, checked ->
                             isChecked = checked
                             onCheckedChange(checked)
+                            HapticFeedbackService.trigger(
+                                context,
+                                if (checked) HapticFeedbackService.EffectType.ON else HapticFeedbackService.EffectType.OFF
+                            )
                         }
                     }
                 },

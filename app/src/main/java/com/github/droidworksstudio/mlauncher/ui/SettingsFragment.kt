@@ -214,6 +214,31 @@ class SettingsFragment : Fragment() {
         var selectedTempUnits by remember { mutableStateOf(prefs.tempUnit) }
         var selectedWeatherLocation by remember { mutableStateOf(prefs.loadLocationName()) }
 
+        val contextMenuOptionLabels = listOf(
+            getLocalizedString(R.string.pin),
+            getLocalizedString(R.string.lock),
+            getLocalizedString(R.string.hide),
+            getLocalizedString(R.string.rename),
+            getLocalizedString(R.string.tag),
+            getLocalizedString(R.string.info),
+            getLocalizedString(R.string.delete)
+        )
+
+        val homeButtonOptionLabels = listOf(
+            getLocalizedString(R.string.home_button_phone),
+            getLocalizedString(R.string.home_button_messages),
+            getLocalizedString(R.string.home_button_camera),
+            getLocalizedString(R.string.home_button_photos),
+            getLocalizedString(R.string.home_button_web),
+            getLocalizedString(R.string.home_button_settings),
+            getLocalizedString(R.string.home_button_logo)
+        )
+
+        val appListButtonOptionLabels = listOf(
+            getLocalizedString(R.string.applist_button_web),
+            getLocalizedString(R.string.applist_button_contacts)
+        )
+
         // Look & Feel Settings
         var selectedAppSize by remember { mutableIntStateOf(prefs.appSize) }
         var selectedDateSize by remember { mutableIntStateOf(prefs.dateSize) }
@@ -283,6 +308,9 @@ class SettingsFragment : Fragment() {
         // Convert enums to their string representations
         val actionStrings = filteredActions.map { it.getString() }.toTypedArray()
 
+        var selectedShortSwipeThreshold by remember { mutableFloatStateOf(prefs.shortSwipeThreshold) }
+        var selectedLongSwipeThreshold by remember { mutableFloatStateOf(prefs.longSwipeThreshold) }
+
         // Notes Settings
         var toggledAutoExpandNotes by remember { mutableStateOf(prefs.autoExpandNotes) }
         var toggledClickToEditDelete by remember { mutableStateOf(prefs.clickToEditDelete) }
@@ -315,34 +343,9 @@ class SettingsFragment : Fragment() {
         var selectedSettingsSize by remember { mutableIntStateOf(prefs.settingsSize) }
         var toggledSettingsLocked by remember { mutableStateOf(prefs.settingsLocked) }
         var toggledLockOrientation by remember { mutableStateOf(prefs.lockOrientation) }
+        var toggledHapticFeedback by remember { mutableStateOf(prefs.hapticFeedback) }
 
-        var selectedShortSwipeThreshold by remember { mutableFloatStateOf(prefs.shortSwipeThreshold) }
-        var selectedLongSwipeThreshold by remember { mutableFloatStateOf(prefs.longSwipeThreshold) }
 
-        val contextMenuOptionLabels = listOf(
-            getLocalizedString(R.string.pin),
-            getLocalizedString(R.string.lock),
-            getLocalizedString(R.string.hide),
-            getLocalizedString(R.string.rename),
-            getLocalizedString(R.string.tag),
-            getLocalizedString(R.string.info),
-            getLocalizedString(R.string.delete)
-        )
-
-        val homeButtonOptionLabels = listOf(
-            getLocalizedString(R.string.home_button_phone),
-            getLocalizedString(R.string.home_button_messages),
-            getLocalizedString(R.string.home_button_camera),
-            getLocalizedString(R.string.home_button_photos),
-            getLocalizedString(R.string.home_button_web),
-            getLocalizedString(R.string.home_button_settings),
-            getLocalizedString(R.string.home_button_logo)
-        )
-
-        val appListButtonOptionLabels = listOf(
-            getLocalizedString(R.string.applist_button_web),
-            getLocalizedString(R.string.applist_button_contacts)
-        )
 
         Column(
             modifier = Modifier
@@ -2637,6 +2640,7 @@ class SettingsFragment : Fragment() {
                             AppReloader.restartApp(requireContext())
                         }
                     )
+
                     if (requireContext().isBiometricEnabled()) {
                         SettingsSwitch(
                             text = getLocalizedString(R.string.lock_settings),
@@ -2649,6 +2653,16 @@ class SettingsFragment : Fragment() {
                             }
                         )
                     }
+
+                    SettingsSwitch(
+                        text = getLocalizedString(R.string.haptic_feedback),
+                        fontSize = titleFontSize,
+                        defaultState = toggledHapticFeedback,
+                        onCheckedChange = {
+                            toggledHapticFeedback = !prefs.hapticFeedback
+                            prefs.hapticFeedback = toggledHapticFeedback
+                        }
+                    )
 
                     if (!isGestureNavigationEnabled(context)) {
                         Spacer(modifier = Modifier.height(52.dp))

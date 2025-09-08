@@ -77,6 +77,7 @@
     <string name="hide_search_view">Hide Search View</string>
     <string name="show_floating_button">Show Shortcut Buttons</string>
     <string name="lock_orientation">Lock Orientation</string>
+    <string name="haptic_feedback">Haptic Feedback</string>
 
     <string name="search">Search</string>
 

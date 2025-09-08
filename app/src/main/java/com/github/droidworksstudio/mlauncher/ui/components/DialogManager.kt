@@ -38,6 +38,7 @@ import com.github.droidworksstudio.mlauncher.helper.hasContactsPermission
 import com.github.droidworksstudio.mlauncher.helper.themeDownloadButton
 import com.github.droidworksstudio.mlauncher.helper.utils.AppReloader
 import com.github.droidworksstudio.mlauncher.helper.wordofthedayDownloadButton
+import com.github.droidworksstudio.mlauncher.services.HapticFeedbackService
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class DialogManager(val context: Context, val activity: Activity) {
@@ -50,6 +51,11 @@ class DialogManager(val context: Context, val activity: Activity) {
     fun showBackupRestoreBottomSheet() {
         // Dismiss existing bottom sheet if it's showing
         backupRestoreBottomSheet?.dismiss()
+
+        HapticFeedbackService.trigger(
+            context,
+            HapticFeedbackService.EffectType.CLICK
+        )
 
         // Create layout programmatically
         val layout = LinearLayout(context).apply {
@@ -68,6 +74,10 @@ class DialogManager(val context: Context, val activity: Activity) {
                 isFocusable = true
                 setOnClickListener {
                     onClick()
+                    HapticFeedbackService.trigger(
+                        context,
+                        HapticFeedbackService.EffectType.SAVE
+                    )
                     backupRestoreBottomSheet?.dismiss()
                 }
             }
@@ -99,6 +109,11 @@ class DialogManager(val context: Context, val activity: Activity) {
         // Dismiss any existing bottom sheet
         saveLoadThemeBottomSheet?.dismiss()
 
+        HapticFeedbackService.trigger(
+            context,
+            HapticFeedbackService.EffectType.CLICK
+        )
+
         // Create vertical layout
         val layout = LinearLayout(context).apply {
             orientation = LinearLayout.VERTICAL
@@ -116,6 +131,10 @@ class DialogManager(val context: Context, val activity: Activity) {
                 isFocusable = true
                 setOnClickListener {
                     onClick()
+                    HapticFeedbackService.trigger(
+                        context,
+                        HapticFeedbackService.EffectType.SAVE
+                    )
                     saveLoadThemeBottomSheet?.dismiss()
                 }
             }
@@ -148,6 +167,11 @@ class DialogManager(val context: Context, val activity: Activity) {
         // Dismiss any existing bottom sheet
         saveDownloadWOTDBottomSheet?.dismiss()
 
+        HapticFeedbackService.trigger(
+            context,
+            HapticFeedbackService.EffectType.CLICK
+        )
+
         // Create vertical layout
         val layout = LinearLayout(context).apply {
             orientation = LinearLayout.VERTICAL
@@ -165,6 +189,10 @@ class DialogManager(val context: Context, val activity: Activity) {
                 isFocusable = true
                 setOnClickListener {
                     onClick()
+                    HapticFeedbackService.trigger(
+                        context,
+                        HapticFeedbackService.EffectType.SAVE
+                    )
                     saveDownloadWOTDBottomSheet?.dismiss()
                 }
             }
@@ -220,6 +248,11 @@ class DialogManager(val context: Context, val activity: Activity) {
     ) {
         // Dismiss any existing sheet
         sliderBottomSheet?.dismiss()
+
+        HapticFeedbackService.trigger(
+            context,
+            HapticFeedbackService.EffectType.CLICK
+        )
 
         // Determine if float mode is needed
         val isFloat = minValue is Float || maxValue is Float || currentValue is Float
@@ -279,6 +312,10 @@ class DialogManager(val context: Context, val activity: Activity) {
                         seekBar?.progress ?: 0
                     }
                     onValueSelected(value)
+                    HapticFeedbackService.trigger(
+                        context,
+                        HapticFeedbackService.EffectType.SELECT
+                    )
                 }
             })
         }
@@ -306,6 +343,11 @@ class DialogManager(val context: Context, val activity: Activity) {
         onItemSelected: (T) -> Unit
     ) {
         singleChoiceBottomSheet?.dismiss()
+
+        HapticFeedbackService.trigger(
+            context,
+            HapticFeedbackService.EffectType.CLICK
+        )
 
         val itemStrings = options.map {
             when (it) {
@@ -382,6 +424,10 @@ class DialogManager(val context: Context, val activity: Activity) {
             currentSelected = position          // update highlight if you keep dialog open
             adapter.notifyDataSetChanged()
             onItemSelected(options[position])   // callback
+            HapticFeedbackService.trigger(
+                context,
+                HapticFeedbackService.EffectType.SELECT
+            )
             singleChoiceBottomSheet?.dismiss()  // close sheet
         }
 
@@ -408,6 +454,11 @@ class DialogManager(val context: Context, val activity: Activity) {
         onItemSelected: (T) -> Unit
     ) {
         singleChoiceBottomSheetPill?.dismiss()
+
+        HapticFeedbackService.trigger(
+            context,
+            HapticFeedbackService.EffectType.CLICK
+        )
 
         val itemStrings = options.map {
             when (it) {
@@ -485,6 +536,10 @@ class DialogManager(val context: Context, val activity: Activity) {
                     selected = index
                     updateStyles()
                     onItemSelected(options[index])
+                    HapticFeedbackService.trigger(
+                        context,
+                        HapticFeedbackService.EffectType.SELECT
+                    )
                     singleChoiceBottomSheetPill?.dismiss()
                 }
             }
@@ -508,6 +563,11 @@ class DialogManager(val context: Context, val activity: Activity) {
     fun showFlagSettingsBottomSheet(context: Context, optionLabels: List<String>, settingFlags: String, default: String = "0") {
         flagSettingsBottomSheet?.dismiss()
 
+        HapticFeedbackService.trigger(
+            context,
+            HapticFeedbackService.EffectType.CLICK
+        )
+
         val prefs = Prefs(context)
         val currentFlags = prefs.getMenuFlags(settingFlags, default).toMutableList()
 
@@ -530,6 +590,10 @@ class DialogManager(val context: Context, val activity: Activity) {
                 setOnCheckedChangeListener { _, isChecked ->
                     currentFlags[index] = isChecked
                     prefs.saveMenuFlags(settingFlags, currentFlags)
+                    HapticFeedbackService.trigger(
+                        context,
+                        HapticFeedbackService.EffectType.SELECT
+                    )
                     if (label == context.getString(R.string.applist_button_contacts) && isChecked) {
                         if (!hasContactsPermission(context)) {
                             context.requestRuntimePermission(
@@ -567,6 +631,11 @@ class DialogManager(val context: Context, val activity: Activity) {
         onItemSelected: (Int) -> Unit
     ) {
         colorPickerBottomSheet?.dismiss()
+
+        HapticFeedbackService.trigger(
+            context,
+            HapticFeedbackService.EffectType.CLICK
+        )
 
         val red = Color.red(color)
         val green = Color.green(color)
@@ -640,6 +709,10 @@ class DialogManager(val context: Context, val activity: Activity) {
 
             // Auto-save
             onItemSelected(updatedColor)
+            HapticFeedbackService.trigger(
+                context,
+                HapticFeedbackService.EffectType.SELECT
+            )
         }
 
         // Listeners
@@ -712,6 +785,12 @@ class DialogManager(val context: Context, val activity: Activity) {
 
     fun showDeviceStatsBottomSheet(context: Context) {
         val bottomSheet = LockedBottomSheetDialog(context)
+        
+        HapticFeedbackService.trigger(
+            context,
+            HapticFeedbackService.EffectType.DEFAULT
+        )
+
         val rootLayout = LinearLayout(context).apply {
             orientation = LinearLayout.VERTICAL
             setPadding(32, 32, 32, 32)
