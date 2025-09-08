@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/main) - TBD
 
+### Language Support:
+* Updated Language Files. ([#883](https://github.com/DroidWorksStudio/mLauncher/pull/883)) ([4c8a3260](https://github.com/DroidWorksStudio/mLauncher/commit/4c8a3260))
+
 ### Implemented Enhancements:
 * Add haptic feedback for UI interactions ([efc8715f](https://github.com/DroidWorksStudio/mLauncher/commit/efc8715f))
 * Add SecurityService to detect debug mode and set FLAG_SECURE ([5637c5da](https://github.com/DroidWorksStudio/mLauncher/commit/5637c5da))
