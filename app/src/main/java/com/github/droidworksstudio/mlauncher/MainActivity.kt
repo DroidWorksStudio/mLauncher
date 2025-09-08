@@ -12,6 +12,7 @@ import android.os.Bundle
 import android.provider.OpenableColumns
 import android.provider.Settings
 import android.view.KeyEvent
+import android.view.WindowManager
 import android.view.WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.result.ActivityResultLauncher
@@ -36,6 +37,7 @@ import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
 import com.github.droidworksstudio.mlauncher.helper.showNavigationBar
 import com.github.droidworksstudio.mlauncher.helper.showStatusBar
 import com.github.droidworksstudio.mlauncher.helper.utils.AppReloader
+import com.github.droidworksstudio.mlauncher.services.SecurityService
 import com.github.droidworksstudio.mlauncher.ui.onboarding.OnboardingActivity
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
@@ -121,6 +123,13 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        if (!SecurityService.isDebugBuild(this)) {
+            window.setFlags(
+                WindowManager.LayoutParams.FLAG_SECURE,
+                WindowManager.LayoutParams.FLAG_SECURE
+            )
+        }
 
         // Enables edge-to-edge mode
         WindowCompat.setDecorFitsSystemWindows(window, false)
