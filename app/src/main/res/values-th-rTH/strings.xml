@@ -55,6 +55,7 @@
     <string name="hide_search_view">ซ่อนมุมมองการค้นหา</string>
     <string name="show_floating_button">แสดงปุ่มทางลัด</string>
     <string name="lock_orientation">ทิศทางการล็อค</string>
+    <string name="haptic_feedback">การตอบสนองแบบสัมผัส</string>
     <string name="search">ค้นหา</string>
     <string name="search_engine">เครื่องมือค้นหา</string>
     <string name="show_az_sidebar">แสดงแถบด้านข้าง AZ</string>
