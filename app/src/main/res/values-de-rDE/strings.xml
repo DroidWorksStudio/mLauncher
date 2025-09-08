@@ -55,6 +55,7 @@
     <string name="hide_search_view">Suchansicht ausblenden</string>
     <string name="show_floating_button">Verknüpfungsschaltflächen anzeigen</string>
     <string name="lock_orientation">Ausrichtung sperren</string>
+    <string name="haptic_feedback">Haptisches Feedback</string>
     <string name="search">Suchen</string>
     <string name="search_engine">Suchmaschine</string>
     <string name="show_az_sidebar">Seitenleiste von AZ anzeigen</string>

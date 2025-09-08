@@ -55,6 +55,7 @@
     <string name="hide_search_view">検索ビューを非表示</string>
     <string name="show_floating_button">ショートカットボタンを表示</string>
     <string name="lock_orientation">方向をロック</string>
+    <string name="haptic_feedback">触覚フィードバック</string>
     <string name="search">検索</string>
     <string name="search_engine">検索エンジン</string>
     <string name="show_az_sidebar">AZサイドバーを表示</string>

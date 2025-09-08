@@ -55,6 +55,7 @@
     <string name="hide_search_view">검색보기 숨기기</string>
     <string name="show_floating_button">바로가기 버튼 표시</string>
     <string name="lock_orientation">잠금 방향</string>
+    <string name="haptic_feedback">촉각 피드백</string>
     <string name="search">찾다</string>
     <string name="search_engine">검색 엔진</string>
     <string name="show_az_sidebar">AZ 사이드바 표시</string>

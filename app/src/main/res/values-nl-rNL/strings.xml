@@ -55,6 +55,7 @@
     <string name="hide_search_view">Verberg Zoekweergave</string>
     <string name="show_floating_button">Snelkoppelingsknoppen weergeven</string>
     <string name="lock_orientation">Vergrendelingsoriëntatie</string>
+    <string name="haptic_feedback">Haptische feedback</string>
     <string name="search">Zoek</string>
     <string name="search_engine">Zoekmachine</string>
     <string name="show_az_sidebar">Toon AZ-zijbalk</string>

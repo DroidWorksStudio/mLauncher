@@ -55,6 +55,7 @@
     <string name="hide_search_view">Arama Görünümünü Gizle</string>
     <string name="show_floating_button">Kısayol Düğmelerini Göster</string>
     <string name="lock_orientation">Kilit Yönlendirmesi</string>
+    <string name="haptic_feedback">Dokunsal Geri Bildirim</string>
     <string name="search">Aramak</string>
     <string name="search_engine">Arama motoru</string>
     <string name="show_az_sidebar">AZ Kenar Çubuğunu Göster</string>

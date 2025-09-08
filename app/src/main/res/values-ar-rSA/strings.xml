@@ -55,6 +55,7 @@
     <string name="hide_search_view">إخفاء عرض البحث</string>
     <string name="show_floating_button">إظهار أزرار الاختصار</string>
     <string name="lock_orientation">اتجاه القفل</string>
+    <string name="haptic_feedback">ردود الفعل اللمسية</string>
     <string name="search">يبحث</string>
     <string name="search_engine">محرك البحث</string>
     <string name="show_az_sidebar">إظهار الشريط الجانبي AZ</string>

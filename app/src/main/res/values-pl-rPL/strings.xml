@@ -55,6 +55,7 @@
     <string name="hide_search_view">Ukryj widok wyszukiwania</string>
     <string name="show_floating_button">Pokaż przyciski skrótów</string>
     <string name="lock_orientation">Zablokuj orientację</string>
+    <string name="haptic_feedback">Sprzężenie zwrotne dotykowe</string>
     <string name="search">Szukaj</string>
     <string name="search_engine">Wyszukiwarka</string>
     <string name="show_az_sidebar">Pokaż pasek boczny AZ</string>
