@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file. See [conven
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/main) - TBD
 
 ### Implemented Enhancements:
+* Add haptic feedback for UI interactions ([efc8715f](https://github.com/DroidWorksStudio/mLauncher/commit/efc8715f))
 * Add SecurityService to detect debug mode and set FLAG_SECURE ([5637c5da](https://github.com/DroidWorksStudio/mLauncher/commit/5637c5da))
 
 ### Refactoring:
