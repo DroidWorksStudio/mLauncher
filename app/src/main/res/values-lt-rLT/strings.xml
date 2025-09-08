@@ -55,6 +55,7 @@
     <string name="hide_search_view">Slėpti paieškos rodinį</string>
     <string name="show_floating_button">Rodyti sparčiuosius mygtukus</string>
     <string name="lock_orientation">Užrakto orientacija</string>
+    <string name="haptic_feedback">Haptinis grįžtamasis ryšys</string>
     <string name="search">Ieškoti</string>
     <string name="search_engine">Paieškos sistema</string>
     <string name="show_az_sidebar">Rodyti AZ šoninę juostą</string>
