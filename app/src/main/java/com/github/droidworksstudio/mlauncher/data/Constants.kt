@@ -70,6 +70,7 @@ object Constants {
     var MAX_HOME_PAGES = 10
 
     const val ACCESS_FINE_LOCATION = 666
+    const val READ_CONTACTS = 777
 
     fun updateMaxHomePages(context: Context) {
         val prefs = Prefs(context)
@@ -474,13 +475,6 @@ object Constants {
     enum class TempUnits : EnumOption {
         Celsius,
         Fahrenheit;
-
-        fun getString(): String {
-            return when (this) {
-                Celsius -> getLocalizedString(R.string.celsius)
-                Fahrenheit -> getLocalizedString(R.string.fahrenheit)
-            }
-        }
 
         // Keep this for Composable usage
         @Composable

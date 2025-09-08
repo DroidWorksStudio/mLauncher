@@ -24,17 +24,14 @@ import android.os.Build
 import android.os.Process
 import android.os.UserHandle
 import android.os.UserManager
-import android.provider.Settings
 import android.text.Spannable
 import android.text.SpannableStringBuilder
 import android.text.format.DateFormat
 import android.text.style.ImageSpan
-import android.util.DisplayMetrics
 import android.util.TypedValue
 import android.view.View
 import android.view.Window
 import android.view.WindowInsets
-import android.view.WindowManager
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.withSave
@@ -48,6 +45,7 @@ import com.github.droidworksstudio.common.CrashHandler
 import com.github.droidworksstudio.common.getLocalizedString
 import com.github.droidworksstudio.common.getLocalizedStringArray
 import com.github.droidworksstudio.common.openAccessibilitySettings
+import com.github.droidworksstudio.common.requestUsagePermission
 import com.github.droidworksstudio.common.showLongToast
 import com.github.droidworksstudio.mlauncher.BuildConfig
 import com.github.droidworksstudio.mlauncher.R
@@ -63,8 +61,6 @@ import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
 import java.util.TimeZone
-import kotlin.math.pow
-import kotlin.math.sqrt
 
 fun emptyString(): String {
     return ""
@@ -123,25 +119,13 @@ fun showPermissionDialog(context: Context) {
     builder.setMessage(getLocalizedString(R.string.access_usage_data_permission))
     builder.setPositiveButton(getLocalizedString(R.string.goto_settings)) { dialogInterface: DialogInterface, _: Int ->
         dialogInterface.dismiss()
-        requestUsagePermission(context)
+        context.requestUsagePermission()
     }
     builder.setNegativeButton(getLocalizedString(R.string.cancel)) { dialogInterface: DialogInterface, _: Int ->
         dialogInterface.dismiss()
     }
     val dialog = builder.create()
     dialog.show()
-}
-
-fun requestUsagePermission(context: Context) {
-    CrashHandler.logUserAction("Requested Usage Permission")
-    try {
-        val intent = Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS).apply {
-            data = "package:${context.packageName}".toUri()  // Open settings for YOUR app only
-        }
-        context.startActivity(intent)
-    } catch (e: Exception) {
-        e.printStackTrace()
-    }
 }
 
 fun getUserHandleFromString(context: Context, userHandleString: String): UserHandle {
@@ -293,19 +277,6 @@ fun openAppInfo(context: Context, userHandle: UserHandle, packageName: String) {
     intent?.let {
         launcher.startAppDetailsActivity(intent.component, userHandle, null, null)
     } ?: context.showLongToast("Unable to to open app info")
-}
-
-
-fun isTablet(context: Context): Boolean {
-    val windowManager = context.getSystemService(Context.WINDOW_SERVICE) as WindowManager
-    val metrics = DisplayMetrics()
-    @Suppress("DEPRECATION")
-    windowManager.defaultDisplay.getMetrics(metrics)
-    val widthInches = metrics.widthPixels / metrics.xdpi
-    val heightInches = metrics.heightPixels / metrics.ydpi
-    val diagonalInches = sqrt(widthInches.toDouble().pow(2.0) + heightInches.toDouble().pow(2.0))
-    if (diagonalInches >= 7.0) return true
-    return false
 }
 
 fun initActionService(context: Context): ActionService? {

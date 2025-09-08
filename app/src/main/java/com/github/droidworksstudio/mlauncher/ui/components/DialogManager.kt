@@ -1,5 +1,6 @@
 package com.github.droidworksstudio.mlauncher.ui.components
 
+import android.Manifest
 import android.app.Activity
 import android.content.Context
 import android.graphics.Color
@@ -27,10 +28,13 @@ import com.github.droidworksstudio.common.getLocalizedString
 import com.github.droidworksstudio.common.getRamInfo
 import com.github.droidworksstudio.common.getSdCardInfo
 import com.github.droidworksstudio.common.getStorageInfo
+import com.github.droidworksstudio.common.requestRuntimePermission
 import com.github.droidworksstudio.mlauncher.MainActivity
 import com.github.droidworksstudio.mlauncher.R
+import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.helper.getDeviceInfo
+import com.github.droidworksstudio.mlauncher.helper.hasContactsPermission
 import com.github.droidworksstudio.mlauncher.helper.themeDownloadButton
 import com.github.droidworksstudio.mlauncher.helper.utils.AppReloader
 import com.github.droidworksstudio.mlauncher.helper.wordofthedayDownloadButton
@@ -526,6 +530,15 @@ class DialogManager(val context: Context, val activity: Activity) {
                 setOnCheckedChangeListener { _, isChecked ->
                     currentFlags[index] = isChecked
                     prefs.saveMenuFlags(settingFlags, currentFlags)
+                    if (label == context.getString(R.string.applist_button_contacts) && isChecked) {
+                        if (!hasContactsPermission(context)) {
+                            context.requestRuntimePermission(
+                                arrayOf(Manifest.permission.READ_CONTACTS),
+                                Constants.READ_CONTACTS,
+                                "Contacts"
+                            )
+                        }
+                    }
                 }
                 layoutParams = LinearLayout.LayoutParams(
                     LinearLayout.LayoutParams.MATCH_PARENT,

@@ -1,5 +1,6 @@
 package com.github.droidworksstudio.mlauncher.ui.onboarding
 
+import android.Manifest
 import android.app.role.RoleManager
 import android.content.Context
 import android.content.Intent
@@ -25,7 +26,7 @@ import androidx.viewbinding.ViewBinding
 import androidx.viewpager2.widget.ViewPager2
 import com.github.droidworksstudio.common.getLocalizedString
 import com.github.droidworksstudio.common.openAccessibilitySettings
-import com.github.droidworksstudio.common.requestLocationPermission
+import com.github.droidworksstudio.common.requestRuntimePermission
 import com.github.droidworksstudio.common.requestUsagePermission
 import com.github.droidworksstudio.common.showLongToast
 import com.github.droidworksstudio.mlauncher.MainActivity
@@ -104,10 +105,10 @@ class OnboardingPageFragment : Fragment() {
         viewModel = ViewModelProvider(requireActivity())[MainViewModel::class.java]
         viewModel.ismlauncherDefault()
 
-        when (val b = binding) {
+        when (val binding = binding) {
             is FragmentOnboardingPageOneBinding -> {
                 val appName = getString(R.string.app_name)
-                b.title.text = getLocalizedString(R.string.welcome_to_launcher, appName)
+                binding.title.text = getLocalizedString(R.string.welcome_to_launcher, appName)
 
                 val privacyPolicyText = getLocalizedString(
                     R.string.continue_by_you_agree,
@@ -129,17 +130,17 @@ class OnboardingPageFragment : Fragment() {
                     spannable.setSpan(span, start, end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
                 }
 
-                b.description.text = spannable
-                b.description.movementMethod = LinkMovementMethod.getInstance()
+                binding.description.text = spannable
+                binding.description.movementMethod = LinkMovementMethod.getInstance()
 
                 handler.removeCallbacks(usagePermissionCheckRunnable)
                 handler.post(launcherDefaultCheckRunnable)
 
-                b.permissionButton.text = getLocalizedString(R.string.advanced_settings_set_as_default_launcher)
-                b.permissionButton.setOnClickListener { setDefaultHomeScreen() }
+                binding.permissionButton.text = getLocalizedString(R.string.advanced_settings_set_as_default_launcher)
+                binding.permissionButton.setOnClickListener { setDefaultHomeScreen() }
 
-                b.nextButton.text = getLocalizedString(R.string.next)
-                b.nextButton.setOnClickListener { viewPager?.currentItem = viewPager.currentItem + 1 }
+                binding.nextButton.text = getLocalizedString(R.string.next)
+                binding.nextButton.setOnClickListener { viewPager?.currentItem = viewPager.currentItem + 1 }
             }
 
             is FragmentOnboardingPageTwoBinding -> {
@@ -147,10 +148,10 @@ class OnboardingPageFragment : Fragment() {
                 handler.removeCallbacks(locationPermissionCheckRunnable)
                 handler.post(usagePermissionCheckRunnable)
 
-                b.permissionButton.setOnClickListener { requireContext().requestUsagePermission() }
+                binding.permissionButton.setOnClickListener { requireContext().requestUsagePermission() }
 
-                b.nextButton.text = getLocalizedString(R.string.next)
-                b.nextButton.setOnClickListener { viewPager?.currentItem = viewPager.currentItem + 1 }
+                binding.nextButton.text = getLocalizedString(R.string.next)
+                binding.nextButton.setOnClickListener { viewPager?.currentItem = viewPager.currentItem + 1 }
             }
 
             is FragmentOnboardingPageThreeBinding -> {
@@ -158,12 +159,16 @@ class OnboardingPageFragment : Fragment() {
                 handler.removeCallbacks(usagePermissionCheckRunnable)
                 handler.post(locationPermissionCheckRunnable)
 
-                b.permissionButton.setOnClickListener {
-                    requireContext().requestLocationPermission(Constants.ACCESS_FINE_LOCATION)
+                binding.permissionButton.setOnClickListener {
+                    requireContext().requestRuntimePermission(
+                        arrayOf(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION),
+                        Constants.ACCESS_FINE_LOCATION,
+                        "Location"
+                    )
                 }
 
-                b.nextButton.text = getLocalizedString(R.string.next)
-                b.nextButton.setOnClickListener { viewPager?.currentItem = viewPager.currentItem + 1 }
+                binding.nextButton.text = getLocalizedString(R.string.next)
+                binding.nextButton.setOnClickListener { viewPager?.currentItem = viewPager.currentItem + 1 }
             }
 
             is FragmentOnboardingPageFourBinding -> {
@@ -171,7 +176,7 @@ class OnboardingPageFragment : Fragment() {
                 handler.removeCallbacks(usagePermissionCheckRunnable)
                 handler.removeCallbacks(locationPermissionCheckRunnable)
 
-                b.permissionButton.setOnClickListener {
+                binding.permissionButton.setOnClickListener {
                     MaterialAlertDialogBuilder(requireContext())
                         .setTitle(getLocalizedString(R.string.accessibility_service_why_we_need))
                         .setMessage(getLocalizedString(R.string.accessibility_service_more_info))
@@ -187,8 +192,8 @@ class OnboardingPageFragment : Fragment() {
                         .show()
                 }
 
-                b.startButton.text = getLocalizedString(R.string.start)
-                b.startButton.setOnClickListener { finishOnboarding() }
+                binding.startButton.text = getLocalizedString(R.string.start)
+                binding.startButton.setOnClickListener { finishOnboarding() }
             }
         }
     }

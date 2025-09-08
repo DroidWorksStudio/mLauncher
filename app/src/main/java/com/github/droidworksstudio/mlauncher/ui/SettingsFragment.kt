@@ -1,5 +1,6 @@
 package com.github.droidworksstudio.mlauncher.ui
 
+import android.Manifest
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
@@ -54,6 +55,7 @@ import com.github.droidworksstudio.common.DonationDialog
 import com.github.droidworksstudio.common.getLocalizedString
 import com.github.droidworksstudio.common.isBiometricEnabled
 import com.github.droidworksstudio.common.isGestureNavigationEnabled
+import com.github.droidworksstudio.common.requestRuntimePermission
 import com.github.droidworksstudio.common.share.ShareUtils
 import com.github.droidworksstudio.common.showInstantToast
 import com.github.droidworksstudio.common.showShortToast
@@ -74,6 +76,7 @@ import com.github.droidworksstudio.mlauncher.helper.checkWhoInstalled
 import com.github.droidworksstudio.mlauncher.helper.communitySupportButton
 import com.github.droidworksstudio.mlauncher.helper.emptyString
 import com.github.droidworksstudio.mlauncher.helper.getTrueSystemFont
+import com.github.droidworksstudio.mlauncher.helper.hasLocationPermission
 import com.github.droidworksstudio.mlauncher.helper.helpFeedbackButton
 import com.github.droidworksstudio.mlauncher.helper.hideNavigationBar
 import com.github.droidworksstudio.mlauncher.helper.hideStatusBar
@@ -1007,6 +1010,14 @@ class SettingsFragment : Fragment() {
                             onCheckedChange = {
                                 toggledGPSLocation = !prefs.gpsLocation
                                 prefs.gpsLocation = toggledGPSLocation
+
+                                if (toggledGPSLocation && !hasLocationPermission(context)) {
+                                    context.requestRuntimePermission(
+                                        arrayOf(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION),
+                                        Constants.ACCESS_FINE_LOCATION,
+                                        "Location"
+                                    )
+                                }
                             }
                         )
                     }

@@ -1,9 +1,7 @@
 package com.github.droidworksstudio.common
 
-import android.Manifest
 import android.app.Activity
 import android.app.ActivityManager
-import android.app.SearchManager
 import android.content.ActivityNotFoundException
 import android.content.ComponentName
 import android.content.Context
@@ -38,7 +36,6 @@ import androidx.core.net.toUri
 import com.github.droidworksstudio.mlauncher.Mlauncher
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Prefs
-import com.github.droidworksstudio.mlauncher.helper.emptyString
 import com.github.droidworksstudio.mlauncher.services.ActionService
 import java.io.File
 import java.text.SimpleDateFormat
@@ -65,13 +62,6 @@ fun Context.hasSoftKeyboard(): Boolean {
     // True if the device does not have physical keys AND at least one soft input method is installed
     return config.keyboard == Configuration.KEYBOARD_NOKEYS && imm.inputMethodList.isNotEmpty()
 }
-
-fun Context.openSearch(query: String? = null) {
-    val intent = Intent(Intent.ACTION_WEB_SEARCH)
-    intent.putExtra(SearchManager.QUERY, query ?: emptyString())
-    startActivity(intent)
-}
-
 
 fun Context.openUrl(url: String) {
     if (url.isEmpty()) return
@@ -390,14 +380,18 @@ fun Context.requestUsagePermission() {
     }
 }
 
-fun Context.requestLocationPermission(requestCode: Int) {
+fun Context.requestRuntimePermission(
+    permissions: Array<String>,
+    requestCode: Int,
+    actionDescription: String
+) {
     if (this is Activity) {
         ActivityCompat.requestPermissions(
             this,
-            arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
+            permissions,
             requestCode
         )
-        CrashHandler.logUserAction("Location Permission Requested")
+        CrashHandler.logUserAction("$actionDescription Permission Requested")
     } else {
         AppLogger.e("Permission", "Context is not an Activity. Cannot request permissions.")
     }
