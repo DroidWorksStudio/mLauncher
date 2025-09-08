@@ -55,6 +55,7 @@
     <string name="hide_search_view">Скрыть Поиск Вид</string>
     <string name="show_floating_button">Показать кнопки быстрого доступа</string>
     <string name="lock_orientation">Блокировка ориентации</string>
+    <string name="haptic_feedback">Тактильная обратная связь</string>
     <string name="search">Поиск</string>
     <string name="search_engine">Поисковый движок</string>
     <string name="show_az_sidebar">Показать боковую панель AZ</string>
