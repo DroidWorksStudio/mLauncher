@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/main) - TBD
 
+### Implemented Enhancements:
+* Add SecurityService to detect debug mode and set FLAG_SECURE ([5637c5da](https://github.com/DroidWorksStudio/mLauncher/commit/5637c5da))
+
 ### Refactoring:
 * Consolidate permission requests and remove unused code ([f30016f9](https://github.com/DroidWorksStudio/mLauncher/commit/f30016f9))
 * Improve conventional commit type removal ([dcddfbf9](https://github.com/DroidWorksStudio/mLauncher/commit/dcddfbf9))
