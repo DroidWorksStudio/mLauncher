@@ -437,6 +437,18 @@ object Constants {
             }
         }
 
+        fun getURL(): String {
+            return when (this) {
+                Google -> "https://google.com/search?q="
+                Yahoo -> "https://search.yahoo.com/search?p="
+                DuckDuckGo -> "https://duckduckgo.com/?q="
+                Bing -> "https://bing.com/search?q="
+                Brave -> "https://search.brave.com/search?q="
+                StartPage -> "https://www.startpage.com/sp/search?q="
+                SwissCow -> "https://swisscows.com/web?query="
+            }
+        }
+
         @Composable
         override fun string(): String {
             return when (this) {
@@ -571,13 +583,6 @@ object Constants {
         }
     }
 
-    const val URL_DUCK_SEARCH = "https://duckduckgo.com/?q="
-    const val URL_GOOGLE_SEARCH = "https://google.com/search?q="
-    const val URL_YAHOO_SEARCH = "https://search.yahoo.com/search?p="
-    const val URL_BING_SEARCH = "https://bing.com/search?q="
-    const val URL_BRAVE_SEARCH = "https://search.brave.com/search?q="
-    const val URL_SWISSCOW_SEARCH = "https://swisscows.com/web?query="
-    const val URL_START_PAGE_SEARCH = "https://www.startpage.com/sp/search?q=%s"
     const val URL_GOOGLE_PLAY_STORE = "https://play.google.com/store/search?c=apps&q"
     const val APP_GOOGLE_PLAY_STORE = "market://search?c=apps&q"
 }

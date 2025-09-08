@@ -21,7 +21,6 @@ import android.provider.CalendarContract
 import android.provider.MediaStore
 import android.provider.Settings
 import android.text.format.DateFormat
-import android.util.Log.d
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -99,7 +98,7 @@ fun Context.launchCalendar() {
             intent.addCategory(Intent.CATEGORY_APP_CALENDAR)
             this.startActivity(intent)
         } catch (e: Exception) {
-            d("openCalendar", e.toString())
+            AppLogger.d("openCalendar", e.toString())
         }
     }
     CrashHandler.logUserAction("Calendar App Launched")
@@ -110,7 +109,7 @@ fun Context.openDialerApp() {
         val sendIntent = Intent(Intent.ACTION_DIAL)
         this.startActivity(sendIntent)
     } catch (e: java.lang.Exception) {
-        d("openDialerApp", e.toString())
+        AppLogger.d("openDialerApp", e.toString())
     }
     CrashHandler.logUserAction("Dialer App Launched")
 }
@@ -123,7 +122,7 @@ fun Context.openTextMessagesApp() {
         }
         this.startActivity(intent)
     } catch (e: Exception) {
-        d("openTextMessagesApp", e.toString())
+        AppLogger.d("openTextMessagesApp", e.toString())
     }
     CrashHandler.logUserAction("Text Messages App Launched")
 }
@@ -133,7 +132,7 @@ fun Context.openAlarmApp() {
         val intent = Intent(AlarmClock.ACTION_SHOW_ALARMS)
         this.startActivity(intent)
     } catch (e: java.lang.Exception) {
-        d("openAlarmApp", e.toString())
+        AppLogger.d("openAlarmApp", e.toString())
     }
     CrashHandler.logUserAction("Alarm App Launched")
 }
@@ -143,7 +142,7 @@ fun Context.openCameraApp() {
         val sendIntent = Intent(MediaStore.INTENT_ACTION_STILL_IMAGE_CAMERA)
         this.startActivity(sendIntent)
     } catch (e: java.lang.Exception) {
-        d("openCameraApp", e.toString())
+        AppLogger.d("openCameraApp", e.toString())
     }
     CrashHandler.logUserAction("Camera App Launched")
 }
@@ -156,7 +155,7 @@ fun Context.openPhotosApp() {
         }
         this.startActivity(intent)
     } catch (e: Exception) {
-        d("openPhotosApp", e.toString())
+        AppLogger.d("openPhotosApp", e.toString())
     }
     CrashHandler.logUserAction("Photos App Launched")
 }
@@ -168,7 +167,7 @@ fun Context.openDeviceSettings() {
         }
         this.startActivity(intent)
     } catch (e: Exception) {
-        d("openDeviceSettings", e.toString())
+        AppLogger.d("openDeviceSettings", e.toString())
     }
     CrashHandler.logUserAction("Device Settings Opened")
 }
@@ -182,13 +181,13 @@ fun Context.openWebBrowser() {
                 launchIntent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
                 startActivity(launchIntent)
             } else {
-                d("openDefaultBrowserApp", "No launch intent for package $defaultBrowserPackage")
+                AppLogger.d("openDefaultBrowserApp", "No launch intent for package $defaultBrowserPackage")
             }
         } else {
-            d("openDefaultBrowserApp", "No default browser package found")
+            AppLogger.d("openDefaultBrowserApp", "No default browser package found")
         }
     } catch (e: Exception) {
-        d("openDefaultBrowserApp", e.toString())
+        AppLogger.d("openDefaultBrowserApp", e.toString())
     }
     CrashHandler.logUserAction("Default Browser App Launched")
 }
@@ -263,45 +262,11 @@ fun Context.searchOnPlayStore(query: String? = null): Boolean {
 }
 
 fun Context.searchCustomSearchEngine(searchQuery: String? = null, prefs: Prefs): Boolean {
-    val searchUrl = when (prefs.searchEngines) {
-        Constants.SearchEngines.Google -> {
-            CrashHandler.logUserAction("Google Search")
-            Constants.URL_GOOGLE_SEARCH
-        }
-
-        Constants.SearchEngines.Yahoo -> {
-            CrashHandler.logUserAction("Yahoo Search")
-            Constants.URL_YAHOO_SEARCH
-        }
-
-        Constants.SearchEngines.DuckDuckGo -> {
-            CrashHandler.logUserAction("DuckDuckGo Search")
-            Constants.URL_DUCK_SEARCH
-        }
-
-        Constants.SearchEngines.Bing -> {
-            CrashHandler.logUserAction("Bing Search")
-            Constants.URL_BING_SEARCH
-        }
-
-        Constants.SearchEngines.Brave -> {
-            CrashHandler.logUserAction("Brave Search")
-            Constants.URL_BRAVE_SEARCH
-        }
-
-        Constants.SearchEngines.StartPage -> {
-            CrashHandler.logUserAction("StartPage Search")
-            Constants.URL_START_PAGE_SEARCH
-        }
-
-        Constants.SearchEngines.SwissCow -> {
-            CrashHandler.logUserAction("SwissCow Search")
-            Constants.URL_SWISSCOW_SEARCH
-        }
-    }
+    val searchUrl = prefs.searchEngines.getURL()
+    CrashHandler.logUserAction("${prefs.searchEngines} Search")
     val encodedQuery = Uri.encode(searchQuery)
     val fullUrl = "$searchUrl$encodedQuery"
-    d("fullUrl", fullUrl)
+    AppLogger.d("fullUrl", fullUrl)
     openUrl(fullUrl)
     return true
 }
