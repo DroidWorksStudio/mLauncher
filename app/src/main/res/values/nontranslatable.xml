@@ -20,14 +20,18 @@
     <string name="settings_font_roboto" translatable="false">Roboto</string>
     <string name="settings_font_sourcecodepro" translatable="false">Source Code Pro</string>
 
-    <!-- Search Stings -->
-    <string name="search_google" translatable="false">Google</string>
-    <string name="search_yahoo" translatable="false">Yahoo</string>
-    <string name="search_duckduckgo" translatable="false">Duck Duck Go</string>
+    <!-- Search Strings -->
     <string name="search_bing" translatable="false">Bing</string>
     <string name="search_brave" translatable="false">Brave</string>
+    <string name="search_duckduckgo" translatable="false">Duck Duck Go</string>
+    <string name="search_google" translatable="false">Google</string>
+    <string name="search_mojeek" translatable="false">Mojeek</string>
+    <string name="search_qwant" translatable="false">Qwant</string>
+    <string name="search_seznam" translatable="false">Seznam</string>
     <string name="search_startpage" translatable="false">Start Page</string>
     <string name="search_swisscow" translatable="false">Swiss Cows</string>
+    <string name="search_yahoo" translatable="false">Yahoo</string>
+    <string name="search_yandex" translatable="false">Yandex</string>
 
     <!-- IconPacks Stings -->
     <string name="app_icons_cloud_dots" translatable="false">Cloud Dots</string>
