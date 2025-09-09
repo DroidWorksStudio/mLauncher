@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/main) - TBD
 
+### Implemented Enhancements:
+* Add Mojeek, Qwant, Seznam, and Yandex search engines ([59c553d6](https://github.com/DroidWorksStudio/mLauncher/commit/59c553d6))
+* Add StartPage as a search engine option ([314f75b8](https://github.com/DroidWorksStudio/mLauncher/commit/314f75b8))
+* Add haptic feedback for UI interactions ([efc8715f](https://github.com/DroidWorksStudio/mLauncher/commit/efc8715f))
+* Add SecurityService to detect debug mode and set FLAG_SECURE ([5637c5da](https://github.com/DroidWorksStudio/mLauncher/commit/5637c5da))
+
 ### Refactoring:
 * Centralize search engine URLs and logging ([62dbf6cc](https://github.com/DroidWorksStudio/mLauncher/commit/62dbf6cc))
 * Consolidate permission requests and remove unused code ([f30016f9](https://github.com/DroidWorksStudio/mLauncher/commit/f30016f9))
@@ -11,11 +17,6 @@ All notable changes to this project will be documented in this file. See [conven
 * Enhance changelog generation and formatting ([331e3af5](https://github.com/DroidWorksStudio/mLauncher/commit/331e3af5))
 * Update changelog script path in workflow ([8738766d](https://github.com/DroidWorksStudio/mLauncher/commit/8738766d))
 * Automate changelog generation with custom script ([5634945d](https://github.com/DroidWorksStudio/mLauncher/commit/5634945d))
-
-### Implemented Enhancements:
-* Add StartPage as a search engine option ([314f75b8](https://github.com/DroidWorksStudio/mLauncher/commit/314f75b8))
-* Add haptic feedback for UI interactions ([efc8715f](https://github.com/DroidWorksStudio/mLauncher/commit/efc8715f))
-* Add SecurityService to detect debug mode and set FLAG_SECURE ([5637c5da](https://github.com/DroidWorksStudio/mLauncher/commit/5637c5da))
 
 ### Language Support:
 * Updated Language Files. ([#883](https://github.com/DroidWorksStudio/mLauncher/pull/883)) ([4c8a3260](https://github.com/DroidWorksStudio/mLauncher/commit/4c8a3260))
