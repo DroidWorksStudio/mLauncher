@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Base Settings -->
-    <string name="select_app">Vyberte App</string>
-    <string name="show_apps">Vyhledávání aplikací</string>
-    <string name="show_contacts">Hledat kontakty</string>
+    <string name="select_app">Vyberte Aplikaci</string>
+    <string name="show_apps">Hledat aplikace</string>
+    <string name="show_contacts">Hledat Kontakty</string>
     <string name="welcome_to_launcher">Vítejte v %1$s</string>
     <string name="continue_by_you_agree">Pokračováním souhlasíte s %1$s</string>
-    <string name="usage_access_permission">Oprávnění k přístupu k použití</string>
-    <string name="location_access_permission">Oprávnění k přístupu k poloze</string>
+    <string name="usage_access_permission">Oprávnění pro Přístup k Používání</string>
+    <string name="location_access_permission">Oprávnění pro Přístup k Poloze</string>
     <string name="accessibility_access_permission">Oprávnění přístupnosti</string>
     <string name="grant_permission">Udělit oprávnění</string>
     <string name="grant_usage_permission">Chcete-li pokračovat, udělte prosím oprávnění k přístupu k používání.</string>
