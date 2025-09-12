@@ -142,6 +142,7 @@ object Constants {
         System,
         Arabic,
         Dutch,
+        Czech,
         English,
         French,
         German,
@@ -164,6 +165,7 @@ object Constants {
                 System -> getLocalizedString(R.string.system_default)
                 Arabic -> getLocalizedString(R.string.lang_arabic)
                 Dutch -> getLocalizedString(R.string.lang_dutch)
+                Czech -> getLocalizedString(R.string.lang_czech)
                 English -> getLocalizedString(R.string.lang_english)
                 French -> getLocalizedString(R.string.lang_french)
                 German -> getLocalizedString(R.string.lang_german)
@@ -188,6 +190,7 @@ object Constants {
                 System -> getLocalizedString(R.string.system_default)
                 Arabic -> getLocalizedString(R.string.lang_arabic)
                 Dutch -> getLocalizedString(R.string.lang_dutch)
+                Czech -> getLocalizedString(R.string.lang_czech)
                 English -> getLocalizedString(R.string.lang_english)
                 French -> getLocalizedString(R.string.lang_french)
                 German -> getLocalizedString(R.string.lang_german)
@@ -216,6 +219,7 @@ object Constants {
                 System -> Locale.getDefault().language
                 Arabic -> "ar"
                 Dutch -> "nl"
+                Czech -> "cs"
                 English -> "en"
                 French -> "fr"
                 German -> "de"
@@ -243,6 +247,7 @@ object Constants {
                 System -> Locale.getDefault().toLanguageTag()
                 Arabic -> "ar-SA"
                 Dutch -> "nl-NL"
+                Czech -> "cs-Cz"
                 English -> "en-US"
                 French -> "fr-FR"
                 German -> "de-DE"
