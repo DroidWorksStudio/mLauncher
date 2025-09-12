@@ -8,11 +8,11 @@
     <string name="continue_by_you_agree">Pokračováním souhlasíte s %1$s</string>
     <string name="usage_access_permission">Oprávnění pro Přístup k Používání</string>
     <string name="location_access_permission">Oprávnění pro Přístup k Poloze</string>
-    <string name="accessibility_access_permission">Oprávnění přístupnosti</string>
-    <string name="grant_permission">Udělit oprávnění</string>
-    <string name="grant_usage_permission">Chcete-li pokračovat, udělte prosím oprávnění k přístupu k používání.</string>
-    <string name="reason_usage_permission">Tato aplikace potřebuje přístup k informacím o používání, aby mohla zobrazovat nejpoužívanější aplikace, sledovat čas strávený na obrazovce a vylepšovat vaše zážitky. Neshromažďujeme ani nesdílíme žádné osobní údaje.</string>
-    <string name="grant_location_permission">Chcete-li pokračovat, udělte prosím oprávnění k přístupu k poloze.</string>
+    <string name="accessibility_access_permission">Oprávnění k Přístupnosti</string>
+    <string name="grant_permission">Udělit Oprávnění</string>
+    <string name="grant_usage_permission">Pro pokračování prosím povolte Oprávnění pro Přístup k Používání.</string>
+    <string name="reason_usage_permission">Tato aplikace potřebuje oprávnění pro Přístup k Používání, aby mohla zobrazit vaše nejčastěji používané aplikace, sledovat čas strávený na obrazovce a zlepšit uživatelský zážitek. Žádná osobní data nesbíráme ani nesdílíme.</string>
+    <string name="grant_location_permission">Pro pokračování prosím udělte oprávnění k Poloze.</string>
     <string name="reason_location_permission">Tato aplikace potřebuje přístup k poloze, aby mohla poskytovat přesné informace o počasí na základě vaší aktuální polohy. Neshromažďujeme ani nesdílíme žádné osobní údaje.</string>
     <string name="grant_accessibility_permission">Chcete-li pokračovat, udělte prosím oprávnění k přístupnosti.</string>
     <string name="reason_accessibility_permission">MultiLauncher potřebuje oprávnění k přístupnosti, aby mohl poskytovat vylepšené funkce, jako je zamykání obrazovky a otevírání rychlého nastavení. Tyto funkce pomáhají zlepšit použitelnost. Neshromažďujeme ani nesdílíme žádná data.</string>
