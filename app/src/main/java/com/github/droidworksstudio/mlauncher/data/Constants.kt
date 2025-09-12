@@ -141,8 +141,8 @@ object Constants {
     enum class Language : EnumOption {
         System,
         Arabic,
-        Dutch,
         Czech,
+        Dutch,
         English,
         French,
         German,
@@ -164,8 +164,8 @@ object Constants {
             return when (this) {
                 System -> getLocalizedString(R.string.system_default)
                 Arabic -> getLocalizedString(R.string.lang_arabic)
-                Dutch -> getLocalizedString(R.string.lang_dutch)
                 Czech -> getLocalizedString(R.string.lang_czech)
+                Dutch -> getLocalizedString(R.string.lang_dutch)
                 English -> getLocalizedString(R.string.lang_english)
                 French -> getLocalizedString(R.string.lang_french)
                 German -> getLocalizedString(R.string.lang_german)
@@ -189,8 +189,8 @@ object Constants {
             return when (this) {
                 System -> getLocalizedString(R.string.system_default)
                 Arabic -> getLocalizedString(R.string.lang_arabic)
-                Dutch -> getLocalizedString(R.string.lang_dutch)
                 Czech -> getLocalizedString(R.string.lang_czech)
+                Dutch -> getLocalizedString(R.string.lang_dutch)
                 English -> getLocalizedString(R.string.lang_english)
                 French -> getLocalizedString(R.string.lang_french)
                 German -> getLocalizedString(R.string.lang_german)
@@ -218,8 +218,8 @@ object Constants {
             return when (this) {
                 System -> Locale.getDefault().language
                 Arabic -> "ar"
-                Dutch -> "nl"
                 Czech -> "cs"
+                Dutch -> "nl"
                 English -> "en"
                 French -> "fr"
                 German -> "de"
@@ -246,8 +246,8 @@ object Constants {
             return when (this) {
                 System -> Locale.getDefault().toLanguageTag()
                 Arabic -> "ar-SA"
-                Dutch -> "nl-NL"
                 Czech -> "cs-Cz"
+                Dutch -> "nl-NL"
                 English -> "en-US"
                 French -> "fr-FR"
                 German -> "de-DE"
