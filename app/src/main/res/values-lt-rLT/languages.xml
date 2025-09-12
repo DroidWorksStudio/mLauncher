@@ -2,6 +2,7 @@
 <resources>
     <string name="lang_arabic">Arabų kalba</string>
     <string name="lang_dutch">olandų</string>
+    <string name="lang_czech">czech</string>
     <string name="lang_english">Anglų kalba</string>
     <string name="lang_french">Prancūzų kalba</string>
     <string name="lang_german">Vokiečių kalba</string>
