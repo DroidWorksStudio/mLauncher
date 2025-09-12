@@ -141,6 +141,7 @@ object Constants {
     enum class Language : EnumOption {
         System,
         Arabic,
+        Czech,
         Dutch,
         English,
         French,
@@ -163,6 +164,7 @@ object Constants {
             return when (this) {
                 System -> getLocalizedString(R.string.system_default)
                 Arabic -> getLocalizedString(R.string.lang_arabic)
+                Czech -> getLocalizedString(R.string.lang_czech)
                 Dutch -> getLocalizedString(R.string.lang_dutch)
                 English -> getLocalizedString(R.string.lang_english)
                 French -> getLocalizedString(R.string.lang_french)
@@ -187,6 +189,7 @@ object Constants {
             return when (this) {
                 System -> getLocalizedString(R.string.system_default)
                 Arabic -> getLocalizedString(R.string.lang_arabic)
+                Czech -> getLocalizedString(R.string.lang_czech)
                 Dutch -> getLocalizedString(R.string.lang_dutch)
                 English -> getLocalizedString(R.string.lang_english)
                 French -> getLocalizedString(R.string.lang_french)
@@ -215,6 +218,7 @@ object Constants {
             return when (this) {
                 System -> Locale.getDefault().language
                 Arabic -> "ar"
+                Czech -> "cs"
                 Dutch -> "nl"
                 English -> "en"
                 French -> "fr"
@@ -242,6 +246,7 @@ object Constants {
             return when (this) {
                 System -> Locale.getDefault().toLanguageTag()
                 Arabic -> "ar-SA"
+                Czech -> "cs-Cz"
                 Dutch -> "nl-NL"
                 English -> "en-US"
                 French -> "fr-FR"

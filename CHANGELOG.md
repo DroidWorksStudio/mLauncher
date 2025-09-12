@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
+## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/main) - TBD
+
+### Bug Fixes:
+* Correct Language Enum Order ([2121c458](https://github.com/DroidWorksStudio/mLauncher/commit/2121c458))
+
+### Implemented Enhancements:
+* Add Czech language support ([31a0be38](https://github.com/DroidWorksStudio/mLauncher/commit/31a0be38))
+
 ## [1.11.0.1](https://github.com/DroidWorksStudio/mLauncher/tree/1.11.0.1) - (09, September 2025)
 
 ### Implemented Enhancements:
