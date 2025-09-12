@@ -417,36 +417,68 @@ object Constants {
     }
 
     enum class SearchEngines : EnumOption {
-        Google,
-        Yahoo,
-        DuckDuckGo,
         Bing,
         Brave,
-        SwissCow;
+        DuckDuckGo,
+        Google,
+        Mojeek,
+        Qwant,
+        Seznam,
+        StartPage,
+        SwissCow,
+        Yahoo,
+        Yandex;
 
         fun getString(): String {
             return when (this) {
-                Google -> getLocalizedString(R.string.search_google)
-                Yahoo -> getLocalizedString(R.string.search_yahoo)
-                DuckDuckGo -> getLocalizedString(R.string.search_duckduckgo)
                 Bing -> getLocalizedString(R.string.search_bing)
                 Brave -> getLocalizedString(R.string.search_brave)
+                DuckDuckGo -> getLocalizedString(R.string.search_duckduckgo)
+                Google -> getLocalizedString(R.string.search_google)
+                Mojeek -> getLocalizedString(R.string.search_mojeek)
+                Qwant -> getLocalizedString(R.string.search_qwant)
+                Seznam -> getLocalizedString(R.string.search_seznam)
+                StartPage -> getLocalizedString(R.string.search_startpage)
                 SwissCow -> getLocalizedString(R.string.search_swisscow)
+                Yahoo -> getLocalizedString(R.string.search_yahoo)
+                Yandex -> getLocalizedString(R.string.search_yandex)
+            }
+        }
+
+        fun getURL(): String {
+            return when (this) {
+                Bing -> "https://bing.com/search?q="
+                Brave -> "https://search.brave.com/search?q="
+                DuckDuckGo -> "https://duckduckgo.com/?q="
+                Google -> "https://google.com/search?q="
+                Mojeek -> "https://www.mojeek.com/search?q="
+                Qwant -> "https://www.qwant.com/?q="
+                Seznam -> "https://search.seznam.cz/?q="
+                StartPage -> "https://www.startpage.com/sp/search?q="
+                SwissCow -> "https://swisscows.com/web?query="
+                Yahoo -> "https://search.yahoo.com/search?p="
+                Yandex -> "https://yandex.com/search/?text="
             }
         }
 
         @Composable
         override fun string(): String {
             return when (this) {
-                Google -> getLocalizedString(R.string.search_google)
-                Yahoo -> getLocalizedString(R.string.search_yahoo)
-                DuckDuckGo -> getLocalizedString(R.string.search_duckduckgo)
                 Bing -> getLocalizedString(R.string.search_bing)
                 Brave -> getLocalizedString(R.string.search_brave)
+                DuckDuckGo -> getLocalizedString(R.string.search_duckduckgo)
+                Google -> getLocalizedString(R.string.search_google)
+                Mojeek -> getLocalizedString(R.string.search_mojeek)
+                Qwant -> getLocalizedString(R.string.search_qwant)
+                Seznam -> getLocalizedString(R.string.search_seznam)
+                StartPage -> getLocalizedString(R.string.search_startpage)
                 SwissCow -> getLocalizedString(R.string.search_swisscow)
+                Yahoo -> getLocalizedString(R.string.search_yahoo)
+                Yandex -> getLocalizedString(R.string.search_yandex)
             }
         }
     }
+
 
     enum class Theme : EnumOption {
         System,
@@ -568,12 +600,6 @@ object Constants {
         }
     }
 
-    const val URL_DUCK_SEARCH = "https://duckduckgo.com/?q="
-    const val URL_GOOGLE_SEARCH = "https://google.com/search?q="
-    const val URL_YAHOO_SEARCH = "https://search.yahoo.com/search?p="
-    const val URL_BING_SEARCH = "https://bing.com/search?q="
-    const val URL_BRAVE_SEARCH = "https://search.brave.com/search?q="
-    const val URL_SWISSCOW_SEARCH = "https://swisscows.com/web?query="
     const val URL_GOOGLE_PLAY_STORE = "https://play.google.com/store/search?c=apps&q"
     const val APP_GOOGLE_PLAY_STORE = "market://search?c=apps&q"
 }

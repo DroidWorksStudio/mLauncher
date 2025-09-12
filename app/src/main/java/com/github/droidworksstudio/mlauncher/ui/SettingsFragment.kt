@@ -675,8 +675,7 @@ class SettingsFragment : Fragment() {
                                         val newSearchEngine =
                                             searchEnginesEntries[newFontFamilyIndex] // Get the selected FontFamily enum
                                         selectedSearchEngine = newSearchEngine // Update state
-                                        prefs.searchEngines =
-                                            newSearchEngine // Persist selection in preferences
+                                        prefs.searchEngines = newSearchEngine // Persist selection in preferences
                                     }
                                 }
                             )
