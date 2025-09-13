@@ -2,7 +2,7 @@
  * Prepare the data for the app drawer, which is the list of all the installed applications.
  */
 
-package com.github.droidworksstudio.mlauncher.ui
+package com.github.droidworksstudio.mlauncher.ui.adapter
 
 import android.annotation.SuppressLint
 import android.app.Activity

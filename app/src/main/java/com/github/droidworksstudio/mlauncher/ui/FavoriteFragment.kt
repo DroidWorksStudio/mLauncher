@@ -20,6 +20,7 @@ import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentFavoriteBinding
 import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
+import com.github.droidworksstudio.mlauncher.ui.adapter.FavoriteAdapter
 
 class FavoriteFragment : Fragment() {
 

@@ -55,6 +55,8 @@ import com.github.droidworksstudio.mlauncher.helper.emptyString
 import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
 import com.github.droidworksstudio.mlauncher.helper.hasContactsPermission
 import com.github.droidworksstudio.mlauncher.helper.openAppInfo
+import com.github.droidworksstudio.mlauncher.ui.adapter.AppDrawerAdapter
+import com.github.droidworksstudio.mlauncher.ui.adapter.ContactDrawerAdapter
 
 class AppDrawerFragment : Fragment() {
 

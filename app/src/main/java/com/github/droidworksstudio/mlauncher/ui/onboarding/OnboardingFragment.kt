@@ -12,6 +12,7 @@ import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentOnboardingBinding
 import com.github.droidworksstudio.mlauncher.helper.isSystemInDarkMode
 import com.github.droidworksstudio.mlauncher.helper.setThemeMode
+import com.github.droidworksstudio.mlauncher.ui.adapter.OnboardingAdapter
 
 class OnboardingFragment : Fragment(R.layout.fragment_onboarding) {
     private lateinit var prefs: Prefs

@@ -1,10 +1,13 @@
-package com.github.droidworksstudio.mlauncher.ui.notes
+package com.github.droidworksstudio.mlauncher.ui.adapter
 
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
 import android.content.res.ColorStateList
+import android.graphics.PorterDuff
 import android.graphics.drawable.GradientDrawable
+import android.os.Handler
+import android.os.Looper
 import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
@@ -45,7 +48,7 @@ class NotesManagerAdapter(
 
     private var lastClickTime = 0L
     private var clickRunnable: Runnable? = null
-    private val clickHandler = android.os.Handler(android.os.Looper.getMainLooper())
+    private val clickHandler = Handler(Looper.getMainLooper())
 
 
     class MessageViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -108,7 +111,7 @@ class NotesManagerAdapter(
             backgroundTintList = ColorStateList.valueOf(prefs.bubbleBackgroundColor)
             setColorFilter(
                 ContextCompat.getColor(context, android.R.color.holo_orange_light),
-                android.graphics.PorterDuff.Mode.SRC_ATOP
+                PorterDuff.Mode.SRC_ATOP
             )
             setOnClickListener { onShareClick(position) }
         }
@@ -117,7 +120,7 @@ class NotesManagerAdapter(
             backgroundTintList = ColorStateList.valueOf(prefs.bubbleBackgroundColor)
             setColorFilter(
                 ContextCompat.getColor(context, android.R.color.holo_green_light),
-                android.graphics.PorterDuff.Mode.SRC_ATOP
+                PorterDuff.Mode.SRC_ATOP
             )
             setOnClickListener { onEditClick(position) }
         }
@@ -126,7 +129,7 @@ class NotesManagerAdapter(
             backgroundTintList = ColorStateList.valueOf(prefs.bubbleBackgroundColor)
             setColorFilter(
                 ContextCompat.getColor(context, android.R.color.holo_red_light),
-                android.graphics.PorterDuff.Mode.SRC_ATOP
+                PorterDuff.Mode.SRC_ATOP
             )
             setOnClickListener { onDeleteClick(position) }
         }
@@ -192,7 +195,7 @@ class NotesManagerAdapter(
 
     @SuppressLint("NotifyDataSetChanged")
     private fun onDeleteClick(position: Int) {
-        CrashHandler.logUserAction("Notes onDeleteClick")
+        CrashHandler.Companion.logUserAction("Notes onDeleteClick")
         MaterialAlertDialogBuilder(context)
             .setTitle(getLocalizedString(R.string.confirm_delete_title))
             .setMessage(getLocalizedString(R.string.confirm_delete_message))
@@ -204,7 +207,7 @@ class NotesManagerAdapter(
                 doubleExpandedPositions.remove(position)
                 notifyDataSetChanged()
                 onMessageUpdated()
-                CrashHandler.logUserAction("Note Deleted")
+                CrashHandler.Companion.logUserAction("Note Deleted")
             }
             .setNegativeButton(getLocalizedString(R.string.cancel), null)
             .show()
@@ -214,12 +217,12 @@ class NotesManagerAdapter(
         // Dismiss existing dialog if any
         shareUtils.shareDialog?.dismiss()
 
-        CrashHandler.logUserAction("Notes onShareClick")
+        CrashHandler.Companion.logUserAction("Notes onShareClick")
         shareUtils.showMaterialShareDialog(context, getLocalizedString(R.string.share_note), messages[position].text)
     }
 
     private fun onEditClick(position: Int) {
-        CrashHandler.logUserAction("Notes onEditClick")
+        CrashHandler.Companion.logUserAction("Notes onEditClick")
         showEditDialog(position)
     }
 
@@ -285,7 +288,7 @@ class NotesManagerAdapter(
             )
             notifyDataSetChanged()
             onMessageUpdated()
-            CrashHandler.logUserAction("Note Updated")
+            CrashHandler.Companion.logUserAction("Note Updated")
         }
 
         builder.setNegativeButton(getLocalizedString(R.string.cancel), null)

@@ -1,4 +1,4 @@
-package com.github.droidworksstudio.mlauncher.ui
+package com.github.droidworksstudio.mlauncher.ui.adapter
 
 import android.annotation.SuppressLint
 import android.graphics.drawable.Drawable

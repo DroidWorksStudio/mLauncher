@@ -29,6 +29,7 @@ import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentNotesManagerBinding
 import com.github.droidworksstudio.mlauncher.helper.sortMessages
 import com.github.droidworksstudio.mlauncher.helper.utils.messages
+import com.github.droidworksstudio.mlauncher.ui.adapter.NotesManagerAdapter
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class NotesManagerFragment : Fragment() {

@@ -1,8 +1,9 @@
-package com.github.droidworksstudio.mlauncher.ui.onboarding
+package com.github.droidworksstudio.mlauncher.ui.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.github.droidworksstudio.mlauncher.R
+import com.github.droidworksstudio.mlauncher.ui.onboarding.OnboardingPageFragment
 
 class OnboardingAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
 
@@ -12,12 +13,11 @@ class OnboardingAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
     // Return the corresponding fragment for each page
     override fun createFragment(position: Int): Fragment {
         return when (position) {
-            0 -> OnboardingPageFragment.newInstance(R.layout.fragment_onboarding_page_one)
-            1 -> OnboardingPageFragment.newInstance(R.layout.fragment_onboarding_page_two)
-            2 -> OnboardingPageFragment.newInstance(R.layout.fragment_onboarding_page_three)
-            3 -> OnboardingPageFragment.newInstance(R.layout.fragment_onboarding_page_four)
+            0 -> OnboardingPageFragment.Companion.newInstance(R.layout.fragment_onboarding_page_one)
+            1 -> OnboardingPageFragment.Companion.newInstance(R.layout.fragment_onboarding_page_two)
+            2 -> OnboardingPageFragment.Companion.newInstance(R.layout.fragment_onboarding_page_three)
+            3 -> OnboardingPageFragment.Companion.newInstance(R.layout.fragment_onboarding_page_four)
             else -> throw IllegalArgumentException("Invalid page position: $position")
         }
     }
 }
-
