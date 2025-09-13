@@ -30,6 +30,7 @@ function log(...args) {
 
 // Commit parsing rules
 const commitParsers = [
+	// skip some "noise" commits
 	{ message: /^chore\(release\): prepare for/i, skip: true },
 	{ message: /^chore\(deps.*\)/i, skip: true },
 	{ message: /^chore\(change.*\)/i, skip: true },
@@ -37,27 +38,38 @@ const commitParsers = [
 	{ message: /^chore\(pull\)/i, skip: true },
 	{ message: /^fixes/i, skip: true },
 
-	{ message: /^feat/i, group: "### Implemented Enhancements:" },
-	{ message: /^fix|^bug/i, group: "### Bug Fixes:" },
-	{ message: /^lang/i, group: "### Language Support:" },
-	{ message: /^doc/i, group: "### Documentation:" },
-	{ message: /^perf/i, group: "### Performance Improvements:" },
-	{ message: /^refactor/i, group: "### Refactoring:" },
-	{ message: /^style/i, group: "### Styling Changes:" },
-	{ message: /^security/i, group: "### Security Updates:" },
+	// Enhancements (new features, improvements, UX, performance, refactors)
+	{ message: /^feat|^perf|^refactor|^style|^ui|^ux/i, group: "### Enhancements:" },
+
+	// Bug fixes & hotfixes
+	{ message: /^fix|^bug|^hotfix|^emergency/i, group: "### Bug Fixes:" },
+
+	// Documentation & language/i18n
+	{ message: /^doc|^lang|^i18n/i, group: "### Documentation & Language:" },
+
+	// Security
+	{ message: /^security/i, group: "### Security:" },
+
+	// Reverts
 	{ message: /^revert/i, group: "### Reverts:" },
-	{ message: /^release/i, group: "### Releases:" },
 
-	// merged into one category
-	{ message: /^build|^dependency|^deps|^config|^configuration/i, group: "### Build & Dependencies:" },
+	// Build, dependencies, configuration, CI/CD, versioning, release
+	{ message: /^build|^dependency|^deps|^config|^configuration|^ci|^pipeline|^release|^version|^versioning/i,
+	  group: "### Build, Dependencies & Meta:" },
 
-	{ message: /^ci|^pipeline/i, group: "### Continuous Integration (CI):" },
-	{ message: /^chore|^housekeeping/i, group: "### Chore:" },
-	{ message: /^version|^versioning/i, group: "### Versioning:" },
-	{ message: /^cleanup|^clean\(up\)/i, group: "### Code Cleanup:" },
-	{ message: /^drop|^remove/i, group: "### Feature Removal:" },
-	{ message: /^hotfix|^emergency/i, group: "### Hotfixes:" },
+	// Tests
+	{ message: /^test/i, group: "### Tests:" },
+
+	// Infrastructure & Ops
+	{ message: /^infra|^infrastructure|^ops/i, group: "### Infrastructure & Ops:" },
+
+	// Chore & cleanup
+	{ message: /^chore|^housekeeping|^cleanup|^clean\(up\)/i, group: "### Maintenance & Cleanup:" },
+
+	// Feature removal / drops
+	{ message: /^drop|^remove/i, group: "### Feature Removals:" },
 ];
+
 
 
 // Helper functions
