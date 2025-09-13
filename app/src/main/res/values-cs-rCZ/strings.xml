@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Settings -->
+    <string name="select_app">Vyberte Aplikaci</string>
+    <string name="show_apps">Hledat aplikace</string>
+    <string name="show_contacts">Hledat Kontakty</string>
+    <string name="welcome_to_launcher">Vítejte v %1$s</string>
+    <string name="continue_by_you_agree">Pokračováním souhlasíte s %1$s</string>
+    <string name="usage_access_permission">Oprávnění pro Přístup k Používání</string>
+    <string name="location_access_permission">Oprávnění pro Přístup k Poloze</string>
+    <string name="accessibility_access_permission">Oprávnění k Přístupnosti</string>
+    <string name="grant_permission">Udělit Oprávnění</string>
+    <string name="grant_usage_permission">Pro pokračování prosím povolte Oprávnění pro Přístup k Používání.</string>
+    <string name="reason_usage_permission">Tato aplikace potřebuje oprávnění pro Přístup k Používání, aby mohla zobrazit vaše nejčastěji používané aplikace, sledovat čas strávený na obrazovce a zlepšit uživatelský zážitek. Žádná osobní data nesbíráme ani nesdílíme.</string>
+    <string name="grant_location_permission">Pro pokračování prosím udělte oprávnění k Poloze.</string>
+    <string name="reason_location_permission">Tato aplikace potřebuje přístup k poloze, aby mohla poskytovat přesné informace o počasí na základě vaší aktuální polohy. Neshromažďujeme ani nesdílíme žádné osobní údaje.</string>
+    <string name="grant_accessibility_permission">Chcete-li pokračovat, udělte prosím oprávnění k přístupnosti.</string>
+    <string name="reason_accessibility_permission">MultiLauncher potřebuje oprávnění k přístupnosti, aby mohl poskytovat vylepšené funkce, jako je zamykání obrazovky a otevírání rychlého nastavení. Tyto funkce pomáhají zlepšit použitelnost. Neshromažďujeme ani nesdílíme žádná data.</string>
+    <string name="permission_granted">Povolení uděleno! Můžete pokračovat.</string>
+    <string name="this_can_be_disabled_later">* Toto oprávnění může být později zakázáno.</string>
+    <!-- Strings used for settings menus -->
+    <string name="settings_name">Nastavení MultiLauncheru</string>
+    <string name="settings_features_title">Vlastnosti</string>
+    <string name="settings_features_description">Zlepšete svou produktivitu.</string>
+    <string name="settings_look_feel_title">Vzhled &amp; Cítit</string>
+    <string name="settings_look_feel_description">Dodejte své domovské obrazovce osobní nádech.</string>
+    <string name="settings_gestures_title">Gesta</string>
+    <string name="settings_gestures_description">Přizpůsobte si gesta pro rychlou a snadnou navigaci.</string>
+    <string name="settings_notes_title">Poznámky</string>
+    <string name="settings_notes_description">Přizpůsobte si poznámky svému stylu.</string>
+    <!-- Favorite Apps -->
+    <!-- Favorite Apps -->
+    <string name="settings_favorite_apps_title">Oblíbené aplikace</string>
+    <string name="settings_favorite_apps_description">Změňte pořadí svých oblíbených aplikací pro rychlý přístup z domovské obrazovky.</string>
+    <!-- Hidden Apps -->
+    <string name="settings_hidden_apps_title">Skryté aplikace</string>
+    <string name="settings_hidden_apps_description">Spravovat skryté aplikace – v případě potřeby zobrazí jakoukoli aplikaci v tomto seznamu.</string>
+    <string name="settings_advanced_title">Moderní</string>
+    <string name="settings_advanced_description">Přístup k informacím o aplikacích, výchozímu spouštěči, nástrojům pro zálohování a dalším funkcím.</string>
+    <string name="settings_expert_title">Expert</string>
+    <string name="settings_expert_description">Odemkněte skryté možnosti a pokročilá vylepšení.</string>
+    <string name="settings_exit_mlauncher_title">Ukončit MultiLauncher</string>
+    <string name="settings_exit_mlauncher_description">Dočasně přepněte na výchozí spouštěč.</string>
+    <string name="settings_exit_mlauncher_dialog">Vyberte spouštěč</string>
+    <string name="settings_donation_title">Dary</string>
+    <string name="settings_donation_description">Podpořte naši práci darem.</string>
+    <string name="settings_donation_dialog">Podpořte nás</string>
+    <!-- Strings used for features settings -->
+    <string name="features_settings_title">Funkce</string>
+    <string name="personalization">Personalizace</string>
+    <string name="theme_mode">Tématický režim</string>
+    <string name="app_language">Jazyk rozhraní</string>
+    <string name="font_family">Rodina písem</string>
+    <string name="search_and_app_list">Seznam aplikací &amp;</string>
+    <string name="hide_search_view">Skrýt zobrazení vyhledávání</string>
+    <string name="show_floating_button">Zobrazit tlačítka zkratek</string>
+    <string name="lock_orientation">Zamknout orientaci</string>
+    <string name="haptic_feedback">Haptická zpětná vazba</string>
+    <string name="search">Vyhledávání</string>
+    <string name="search_engine">Vyhledávač</string>
+    <string name="show_az_sidebar">Zobrazit postranní panel AZ</string>
+    <string name="auto_show_keyboard">Automatické zobrazení klávesnice</string>
+    <string name="search_from_start">Hledat od začátku</string>
+    <string name="home_management">Domů &amp; Správa aplikací</string>
+    <string name="auto_open_apps">Automatické otevírání aplikací</string>
+    <string name="open_apps_on_enter">Otevřít aplikaci při Enteru</string>
+    <string name="lock_home_apps">Zamknout domácí aplikace</string>
+    <string name="lock_settings">Nastavení zámku</string>
+    <string name="apps_on_home_screen">Počet domácích aplikací</string>
+    <string name="pages_on_home_screen">Počet stránek</string>
+    <string name="enable_home_pager">Povolit domovskou stránku</string>
+    <string name="enable_app_timer">Povolit časovač aplikace</string>
+    <string name="info_tiles">Informační dlaždice</string>
+    <string name="show_clock">Zobrazit hodiny</string>
+    <string name="show_clock_format">Formát zobrazení (AM/PM)</string>
+    <string name="show_date">Zobrazit datum</string>
+    <string name="show_alarm">Zobrazit budík</string>
+    <string name="show_daily_word">Zobrazit denní slovo</string>
+    <string name="show_battery">Zobrazit baterii</string>
+    <string name="show_battery_icon">Zobrazit ikonu baterie</string>
+    <string name="show_total_screen_time">Zobrazit celkový čas u obrazovky</string>
+    <string name="weather">Počasí</string>
+    <string name="show_weather">Zobrazit počasí</string>
+    <string name="gps_location">GPS poloha</string>
+    <string name="temp_unit">Jednotka teploty</string>
+    <string name="manual_location">Ruční nastavení polohy</string>
+    <string name="icon_packs">Balíčky ikon</string>
+    <!-- Strings used for look & feel settings -->
+    <string name="look_feel_settings_title">Vzhled &amp; Cítit</string>
+    <string name="text_size_adjustments">Úpravy velikosti textu &amp;</string>
+    <string name="app_text_size">Velikost textu aplikace</string>
+    <string name="date_text_size">Datum Velikost textu</string>
+    <string name="clock_text_size">Velikost textu hodin</string>
+    <string name="alarm_text_size">Velikost textu alarmu</string>
+    <string name="daily_word_text_size">Denní velikost textu ve slově</string>
+    <string name="battery_text_size">Velikost textu baterie</string>
+    <string name="layout_positioning">Rozvržení &amp; Umístění</string>
+    <string name="app_padding_size">Velikost vycpávky</string>
+    <string name="extend_home_apps_area">Rozšířit oblast, na kterou lze kliknout</string>
+    <string name="alignment_to_bottom">Zarovnat dolů</string>
+    <string name="visibility_display">Viditelnost &amp; Displej</string>
+    <string name="show_status_bar">Zobrazit stavový řádek</string>
+    <string name="show_navigation_bar">Zobrazit navigační panel</string>
+    <string name="show_recent_apps">Zobrazit poslední aplikace</string>
+    <string name="number_of_recents">Počet nedávných aplikací</string>
+    <string name="show_app_usage_stats">Zobrazit statistiky používání aplikací</string>
+    <string name="select_home_icons">Vyberte sadu ikon pro domov</string>
+    <string name="select_app_list_icons">Vyberte sadu ikon seznamu aplikací</string>
+    <string name="enable_filter_strength">Povolit fuzzy vyhledávač</string>
+    <string name="filter_strength">Síla fuzzy vyhledávače</string>
+    <string name="show_background">Zobrazit pozadí</string>
+    <string name="background_opacity">Průhlednost pozadí</string>
+    <string name="element_alignment">Zarovnání prvků</string>
+    <string name="date_alignment">Datum</string>
+    <string name="clock_alignment">Hodiny</string>
+    <string name="alarm_alignment">Poplach</string>
+    <string name="daily_word_alignment">Denní slovo</string>
+    <string name="home_alignment">Domácí aplikace</string>
+    <string name="drawer_alignment">Zásuvkové aplikace</string>
+    <string name="element_colors">Barvy prvků</string>
+    <string name="background_color">Pozadí</string>
+    <string name="app_color">Aplikace</string>
+    <string name="clock_color">Hodiny</string>
+    <string name="date_color">Datum</string>
+    <string name="alarm_color">Poplach</string>
+    <string name="daily_word_color">Denní slovo</string>
+    <string name="battery_color">Baterie</string>
+    <string name="rainbow_shortcuts">Duhové zkratky</string>
+    <string name="shortcuts_color">Zkratky</string>
+    <!-- Strings used for gestures settings -->
+    <string name="gestures_settings_title">Gesta</string>
+    <string name="tap_click_actions">Akce klepnutí/kliknutí</string>
+    <string name="double_tap">Dvojité klepnutí</string>
+    <string name="clock_click_app">Klikněte na Hodiny</string>
+    <string name="date_click_app">Klepněte na Datum</string>
+    <string name="usage_click_app">Klikněte na Celkové využití</string>
+    <string name="floating_click_app">Klikněte na logo</string>
+    <string name="swipe_movement">Pohyb přejetím prstem</string>
+    <string name="short_swipe_up_app">Krátké přejetí nahoru</string>
+    <string name="short_swipe_down_app">Krátké přejetí dolů</string>
+    <string name="short_swipe_left_app">Krátké přejetí doleva</string>
+    <string name="short_swipe_right_app">Krátké přejetí prstem doprava</string>
+    <string name="long_swipe_up_app">Dlouhé přejetí nahoru</string>
+    <string name="long_swipe_down_app">Dlouhé přejetí dolů</string>
+    <string name="long_swipe_left_app">Dlouhé přejetí doleva</string>
+    <string name="long_swipe_right_app">Dlouhé přejeďte doprava</string>
+    <string name="open_app">Otevřete aplikaci</string>
+    <string name="lock_screen">Uzamknout obrazovku</string>
+    <string name="private_space">Soukromé prostory (%1$s)</string>
+    <string name="show_notifications">Zobrazit oznámení</string>
+    <string name="show_app_list">Zobrazit seznam aplikací</string>
+    <string name="show_notes_manager">Zobrazit Správce poznámek</string>
+    <string name="show_digital_wellbeing">Zobrazit digitální pohodu</string>
+    <string name="open_quick_settings">Rychlé nastavení</string>
+    <string name="show_recents">Zobrazit poslední</string>
+    <string name="open_power_dialog">Dialog napájení</string>
+    <string name="take_a_screenshot">Udělejte snímek obrazovky</string>
+    <string name="left_page">Přejděte na levou stránku</string>
+    <string name="right_page">Přejděte na Pravou stránku</string>
+    <!-- Strings used for notes settings -->
+    <string name="notes_settings_title">Poznámky</string>
+    <string name="display_options">Možnosti zobrazení</string>
+    <string name="auto_expand_notes">Automatické rozbalení poznámek</string>
+    <string name="click_to_edit_delete">Kliknutím upravíte/odstraníte</string>
+    <string name="notes_colors">Barvy poznámek</string>
+    <string name="notes_background_color">Poznámky k pozadí</string>
+    <string name="bubble_background_color">Bublinové pozadí</string>
+    <string name="bubble_message_color">Bublinová zpráva</string>
+    <string name="bubble_date_time_color">Datum/čas bubliny</string>
+    <string name="bubble_category_color">Kategorie bublin</string>
+    <string name="input_colors">Vstupní barvy</string>
+    <string name="message_input_color">Vstup zprávy</string>
+    <string name="message_input_hint_color">Nápověda pro zadání zprávy</string>
+    <!-- Strings used for advanced settings -->
+    <string name="advanced_settings_title">Moderní</string>
+    <string name="advanced_settings_app_info_title">Informace o aplikaci</string>
+    <string name="advanced_settings_app_info_description">%1$s</string>
+    <string name="advanced_settings_set_as_default_launcher">Nastavit jako výchozí spouštěč</string>
+    <string name="advanced_settings_change_default_launcher">Změnit výchozí spouštěč</string>
+    <string name="advanced_settings_restart_title">Restartujte spouštěč</string>
+    <string name="advanced_settings_restart_description">Zkoušel jsi to zapnout a vypnout?</string>
+    <string name="advanced_settings_backup_restore_title">Zálohování/Obnovení</string>
+    <string name="advanced_settings_backup_restore_description">Prosím, dávej si pozor na to, co si přeješ?</string>
+    <string name="advanced_settings_backup_restore_backup">Zálohování</string>
+    <string name="advanced_settings_backup_restore_restore">Obnovit</string>
+    <string name="advanced_settings_backup_restore_clear">Vymazat všechna data</string>
+    <string name="advanced_settings_theme_title">Tvorba témat</string>
+    <string name="advanced_settings_theme_description">Přizpůsobte si témata podle svých představ.</string>
+    <string name="advanced_settings_wotd_title">Slovo dne</string>
+    <string name="advanced_settings_wotd_description">Importovat vlastní seznam Slova dne.</string>
+    <string name="advanced_settings_theme_download">Stáhnout</string>
+    <string name="advanced_settings_theme_export">Vývozní</string>
+    <string name="advanced_settings_theme_import">Importovat</string>
+    <string name="advanced_settings_wotd_download">Stáhnout</string>
+    <string name="advanced_settings_wotd_import">Importovat</string>
+    <string name="advanced_settings_backup_restore_clear_title">Vymazat předvolby</string>
+    <string name="advanced_settings_backup_restore_clear_description">Jsi si jistý/á, že to chceš udělat?</string>
+    <string name="advanced_settings_backup_restore_clear_yes">Ano</string>
+    <string name="advanced_settings_backup_restore_clear_no">Žádný</string>
+    <string name="advanced_settings_help_feedback_title">Nápověda &amp; Zpětná vazba</string>
+    <string name="advanced_settings_community_support_title">Podpora komunity</string>
+    <string name="advanced_settings_share_application_title">Sdílet aplikaci</string>
+    <string name="advanced_settings_share_application_description">Vylepšete si zážitek s %1$s!</string>
+    <string name="advanced_settings_share_application_description_addon">Stáhněte si to hned teď na %1$s a podívejte se, o čem všichni mluví! %2$s\n</string>
+    <!-- Strings used for expert settings -->
+    <string name="expert_settings_title">Expert</string>
+    <string name="toggleable_items">Přepínatelné položky</string>
+    <string name="threshold">Práh</string>
+    <string name="expert_options_display">Zobrazit možnosti pro experty</string>
+    <string name="expert_options_unlocked">Možnosti pro experty odemčeny!</string>
+    <string name="expert_options_tap_hint">%1$d více klepnutí k odemčení</string>
+    <string name="settings_text_size">Nastavení Velikost textu</string>
+    <string name="settings_short_threshold">Práh krátkého přejetí</string>
+    <string name="settings_long_threshold">Dlouhý práh přejetí prstem</string>
+    <!-- App Page Strings -->
+    <string name="hidden_apps">Skryté aplikace</string>
+    <string name="favorite_apps">Oblíbené aplikace</string>
+    <string name="clear_home_app">Vymazat domovskou aplikaci</string>
+    <!-- Accessibility/Help Strings -->
+    <string name="accessibility_service_name">Akční služby MultiLauncheru</string>
+    <string name="accessibility_service_why_we_need">Proč potřebujeme oprávnění k přístupnosti</string>
+    <string name="accessibility_service_description">Tato služba usnadnění přístupu umožňuje aplikaci MultiLauncher provádět určité akce, jako je uzamčení obrazovky nebo otevření rychlého nastavení. Naše služba usnadnění přístupu neshromažďuje ani nesdílí žádná data.</string>
+    <string name="accessibility_service_more_info">    MultiLauncher vyžaduje přístup ke Službě usnadnění přístupu, aby mohl používat funkce jako:\n\n
+    • Zamykání obrazovky gestem nebo zkratkou\n
+    • Rychlé otevření panelu Rychlé nastavení\n\n
+    Toto oprávnění umožňuje MultiLauncheru provádět tyto akce vaším jménem, ale prostřednictvím této služby neshromažďujeme, neukládáme ani nesdílíme žádné osobní ani citlivé údaje.\n\n
+    Tento přístup můžete kdykoli zakázat v nastavení zařízení.
+    </string>
+    <string name="can_not_delete_system_apps">Systémové aplikace nelze smazat</string>
+    <string name="please_select_app">Vyberte aplikaci</string>
+    <string name="drawer_list_empty_hint">Nebyly nalezeny žádné aplikace</string>
+    <string name="long_press_for_settings">Dlouhým stisknutím kdekoli pro nastavení</string>
+    <string name="long_press_to_select_app">Dlouhým stisknutím vyberete aplikaci</string>
+    <string name="long_press_to_select_app_locked">Odemkněte aplikace Domů pro výběr aplikace</string>
+    <string name="tap_button_for_notes">Klepnutím na logo spouštěče zobrazíte poznámky</string>
+    <string name="swipe_up_for_apps">Přejetím nahoru zobrazíte všechny aplikace</string>
+    <string name="app_drawer_tips">Tip: Přejetím dolů zavřete. Posunutím skryjete klávesnici.</string>
+    <!-- PinCode Strings -->
+    <string name="text_authentication_cancel">Zrušení ověřování.</string>
+    <string name="text_authentication_error">Chyba ověřování: %1$s (kód %2$d)</string>
+    <string name="text_authentication_failed">Ověření se nezdařilo.</string>
+    <string name="text_biometric_login">Biometrické přihlášení Nastavení MultiLauncheru</string>
+    <string name="text_biometric_login_app">Biometrické přihlášení pro %1$s</string>
+    <string name="text_biometric_login_sub">Přihlaste se pomocí svých biometrických údajů.</string>
+    <!-- Crash Strings -->
+    <string name="acra_crash">Pád</string>
+    <string name="acra_dialog_text">Je nám líto, ale %1$s došlo k neočekávanému problému a je třeba ji zavřít. Pomozte nám zlepšit se zasláním zprávy o selhání.\n\n%1$s si váží vašeho soukromí a shromážděná data slouží výhradně ke zlepšení stability aplikace. Neshromažďují se žádné osobní údaje. Děkujeme za vaši podporu!</string>
+    <string name="acra_send_report">Odeslat zprávu</string>
+    <string name="acra_dont_send">Neposílejte</string>
+    <!-- Share Strings -->
+    <string name="share_application">Sdílet aplikaci</string>
+    <string name="share_note">Sdílet poznámku</string>
+    <!-- Icon Pack Strings -->
+    <string name="choose_icon_pack">Vyberte sadu ikon</string>
+    <string name="apply_icon_pack">Použít sadu ikon</string>
+    <string name="applying_icon_pack">Dáváme vašim ikonám svěží vzhled…</string>
+    <string name="apply_icon_pack_are_you_sure">Jste si jisti, že chcete použít tuto sadu ikon?\n\n%1$s</string>
+    <string name="apply_to_home">Použít na domovskou stránku</string>
+    <string name="apply_to_app_list">Použít na seznam aplikací</string>
+    <string name="default_icon_not_found">Výchozí ikona aplikace, kterou lze nakreslit, nenalezena.</string>
+    <!-- Settings Strings -->
+    <string name="left">Vlevo</string>
+    <string name="right">Právo</string>
+    <string name="center">Centrum</string>
+    <string name="dark">Tmavý</string>
+    <string name="light">Světlo</string>
+    <string name="system_default">Systém</string>
+    <string name="system_custom">Zvyk</string>
+    <string name="system_custom_plus">Vlastní (%1$s)</string>
+    <string name="restart_launcher">Restartujte spouštěč</string>
+    <string name="delete">Vymazat</string>
+    <string name="hide">Skrýt</string>
+    <string name="show">Show</string>
+    <string name="lock">Zámek</string>
+    <string name="unlock">Odemknout</string>
+    <string name="locked">Zamčeno</string>
+    <string name="unlocked">Odemčený</string>
+    <string name="pin">Kolík</string>
+    <string name="unpin">Odepnout</string>
+    <string name="rename">Přejmenovat</string>
+    <string name="tag">Štítek</string>
+    <string name="info">Info</string>
+    <string name="okay">Dobře</string>
+    <string name="apply">Použít</string>
+    <string name="reset">Resetovat</string>
+    <string name="cancel">Zrušit</string>
+    <string name="save">Uložit</string>
+    <string name="disabled">Zakázáno</string>
+    <string name="open">OTEVŘENO</string>
+    <string name="close">Blízko</string>
+    <string name="next">Další</string>
+    <string name="start">Start</string>
+    <string name="copy">Kopie</string>
+    <string name="celsius">Celsia</string>
+    <string name="fahrenheit">Fahrenheita</string>
+    <string name="home_button_phone">Telefon</string>
+    <string name="home_button_messages">Zprávy</string>
+    <string name="home_button_camera">Fotoaparát</string>
+    <string name="home_button_photos">Fotografie</string>
+    <string name="home_button_web">Web</string>
+    <string name="home_button_settings">Nastavení</string>
+    <string name="home_button_logo">Logo</string>
+    <string name="applist_button_web">Web</string>
+    <string name="applist_button_contacts">Kontakty</string>
+    <string name="allow">Povolit</string>
+    <string name="deny">Odmítnout</string>
+    <string name="send">Poslat</string>
+    <string name="message_hint">Zadejte zprávu…</string>
+    <string name="message_category">Kategorie: %1$s</string>
+    <!-- Permissions Strings -->
+    <string name="permission_required">Vyžadováno oprávnění</string>
+    <string name="access_usage_data_permission">Chcete-li pokračovat, povolte prosím přístup k údajům o používání v nastavení zařízení.</string>
+    <string name="goto_settings">Přejděte do Nastavení</string>
+    <!-- Private Spaces Strings -->
+    <string name="alert_requires_android_v">Tato funkce vyžaduje Android 15 nebo novější.</string>
+    <string name="toast_private_space_default_home_screen">Pro přístup k soukromému prostoru musí být jako výchozí domovská obrazovka nastaven MultiLauncher.</string>
+    <string name="toast_private_space_locked">Soukromý prostor uzamčen</string>
+    <string name="toast_private_space_unlocked">Soukromý prostor odemčen</string>
+    <string name="toast_private_space_not_available">Soukromý prostor není k dispozici</string>
+    <string name="notes_list_empty_hint">Začněte svou první poznámku níže.</string>
+    <string name="confirm_delete_title">Smazat poznámku</string>
+    <string name="confirm_delete_message">Jste si jisti, že chcete tuto poznámku smazat?</string>
+    <string name="edit_note">Upravit poznámku</string>
+    <string name="category">Kategorie</string>
+    <string name="priority">Přednost</string>
+    <string name="settings_context_menu_title">Kontextová nabídka</string>
+    <string name="settings_context_menu_option">Vyberte položky k zobrazení</string>
+    <string name="settings_home_buttons_title">Tlačítka Domů</string>
+    <string name="settings_home_buttons_option">Vyberte položky k zobrazení</string>
+    <string name="settings_applist_buttons_title">Tlačítka seznamu aplikací</string>
+    <string name="settings_applist_buttons_option">Vyberte položky k zobrazení</string>
+    <string-array name="priorities">
+        <item>Nízký</item>
+        <item>Střední</item>
+        <item>Vysoký</item>
+    </string-array>
+    <string-array name="categories">
+        <item>Žádný</item>
+        <item>Výročí</item>
+        <item>Schůzky</item>
+        <item>Narozeniny</item>
+        <item>Domácí práce</item>
+        <item>Tvůrčí</item>
+        <item>Zábava</item>
+        <item>Pochůzky</item>
+        <item>Finance</item>
+        <item>Fitness</item>
+        <item>Cíle</item>
+        <item>Zdraví</item>
+        <item>Koníčky</item>
+        <item>Domov</item>
+        <item>Učení</item>
+        <item>Osobní</item>
+        <item>Projekty</item>
+        <item>Nakupování</item>
+        <item>Sociální</item>
+        <item>Studie</item>
+        <item>Cestovat</item>
+        <item>Práce</item>
+    </string-array>
+</resources>

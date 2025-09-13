@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lang_arabic">arabština</string>
+    <string name="lang_dutch">holandský</string>
+    <string name="lang_czech">čeština</string>
+    <string name="lang_english">angličtina</string>
+    <string name="lang_french">francouzština</string>
+    <string name="lang_german">Němec</string>
+    <string name="lang_hebrew">hebrejština</string>
+    <string name="lang_italian">italština</string>
+    <string name="lang_japanese">japonský</string>
+    <string name="lang_korean">korejština</string>
+    <string name="lang_lithuanian">Litevština</string>
+    <string name="lang_polish">polština</string>
+    <string name="lang_portuguese">portugalština</string>
+    <string name="lang_russian">ruština</string>
+    <string name="lang_slovak">Slovák</string>
+    <string name="lang_spanish">španělština</string>
+    <string name="lang_thai">Thajština</string>
+    <string name="lang_turkish">turečtina</string>
+</resources>
