@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Enhancements:
 
+* Implement Home, FAB, and Word of the Day widgets ([612d8879](https://github.com/DroidWorksStudio/mLauncher/commit/612d8879))
 * Add Czech language support ([31a0be38](https://github.com/DroidWorksStudio/mLauncher/commit/31a0be38))
 
 ### Bug Fixes:
