@@ -4,18 +4,23 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/main) - TBD
 
-### Documentation & Language:
-* Updated Language Files. ([#885](https://github.com/DroidWorksStudio/mLauncher/pull/885)) ([c6f46f39](https://github.com/DroidWorksStudio/mLauncher/commit/c6f46f39))
-
-### Build, Dependencies & Meta:
-* Bump AndroidX libraries ([5fb96e33](https://github.com/DroidWorksStudio/mLauncher/commit/5fb96e33))
-
 ### Enhancements:
+
+* Order changelog groups by commit type ([7f41df17](https://github.com/DroidWorksStudio/mLauncher/commit/7f41df17))
 * Move UI adapters to dedicated package ([c2ac5fc4](https://github.com/DroidWorksStudio/mLauncher/commit/c2ac5fc4))
 * Add Czech language support ([31a0be38](https://github.com/DroidWorksStudio/mLauncher/commit/31a0be38))
 
 ### Bug Fixes:
+
 * Correct Language Enum Order ([2121c458](https://github.com/DroidWorksStudio/mLauncher/commit/2121c458))
+
+### Documentation & Language:
+
+* Updated Language Files. ([#885](https://github.com/DroidWorksStudio/mLauncher/pull/885)) ([c6f46f39](https://github.com/DroidWorksStudio/mLauncher/commit/c6f46f39))
+
+### Build, Dependencies & Meta:
+
+* Bump AndroidX libraries ([5fb96e33](https://github.com/DroidWorksStudio/mLauncher/commit/5fb96e33))
 
 ## [1.11.0.1](https://github.com/DroidWorksStudio/mLauncher/tree/1.11.0.1) - (09, September 2025)
 
@@ -43,10 +48,6 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [1.11.0.0](https://github.com/DroidWorksStudio/mLauncher/tree/1.11.0.0) - (07, September 2025)
 
-### Documentation & Language:
-
-* Updated Language Files. ([#878](https://github.com/DroidWorksStudio/mLauncher/pull/878)) ([c63c99a1](https://github.com/DroidWorksStudio/mLauncher/commit/c63c99a1))
-
 ### Enhancements:
 
 * Enhance Contact List and App Drawer Functionality ([fab60dc8](https://github.com/DroidWorksStudio/mLauncher/commit/fab60dc8))
@@ -57,11 +58,11 @@ All notable changes to this project will be documented in this file. See [conven
 
 * Conditional private space receiver unregistration ([cdb88c1c](https://github.com/DroidWorksStudio/mLauncher/commit/cdb88c1c))
 
-## [1.10.9.2](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.9.2) - (05, September 2025)
-
 ### Documentation & Language:
 
-* Updated Language Files. ([#874](https://github.com/DroidWorksStudio/mLauncher/pull/874)) ([631a5fd2](https://github.com/DroidWorksStudio/mLauncher/commit/631a5fd2))
+* Updated Language Files. ([#878](https://github.com/DroidWorksStudio/mLauncher/pull/878)) ([c63c99a1](https://github.com/DroidWorksStudio/mLauncher/commit/c63c99a1))
+
+## [1.10.9.2](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.9.2) - (05, September 2025)
 
 ### Enhancements:
 
@@ -73,26 +74,39 @@ All notable changes to this project will be documented in this file. See [conven
 
 * Add null check for view in HomeFragment.onResume ([66425a6a](https://github.com/DroidWorksStudio/mLauncher/commit/66425a6a))
 
-## [1.10.9.1](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.9.1) - (03, September 2025)
-
 ### Documentation & Language:
 
-* Updated Language Files. ([#871](https://github.com/DroidWorksStudio/mLauncher/pull/871)) ([6cc7db96](https://github.com/DroidWorksStudio/mLauncher/commit/6cc7db96))
+* Updated Language Files. ([#874](https://github.com/DroidWorksStudio/mLauncher/pull/874)) ([631a5fd2](https://github.com/DroidWorksStudio/mLauncher/commit/631a5fd2))
 
-### Bug Fixes:
-
-* Improve app tag handling for multi-user support ([ffe8e4b4](https://github.com/DroidWorksStudio/mLauncher/commit/ffe8e4b4))
+## [1.10.9.1](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.9.1) - (03, September 2025)
 
 ### Enhancements:
 
 * Enhance multi-profile support for app tags ([dccfa472](https://github.com/DroidWorksStudio/mLauncher/commit/dccfa472))
 * Improve Fuzzy Finder and Search Logic ([63ce32da](https://github.com/DroidWorksStudio/mLauncher/commit/63ce32da))
 
+### Bug Fixes:
+
+* Improve app tag handling for multi-user support ([ffe8e4b4](https://github.com/DroidWorksStudio/mLauncher/commit/ffe8e4b4))
+
+### Documentation & Language:
+
+* Updated Language Files. ([#871](https://github.com/DroidWorksStudio/mLauncher/pull/871)) ([6cc7db96](https://github.com/DroidWorksStudio/mLauncher/commit/6cc7db96))
+
 ### Build, Dependencies & Meta:
 
 * Bump actions/setup-java in the all-actions group ([#863](https://github.com/DroidWorksStudio/mLauncher/pull/863)) ([b4a1c08c](https://github.com/DroidWorksStudio/mLauncher/commit/b4a1c08c))
 
 ## [1.10.8.7](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.8.7) - (22, August 2025)
+
+### Enhancements:
+
+* Disable inclusion of dependency info in APKs and Bundles ([d56a4ead](https://github.com/DroidWorksStudio/mLauncher/commit/d56a4ead))
+* Improve icon loading and caching logic ([cc34e843](https://github.com/DroidWorksStudio/mLauncher/commit/cc34e843))
+* Optimize icon loading logic in AppDrawerAdapter ([e96a832c](https://github.com/DroidWorksStudio/mLauncher/commit/e96a832c))
+* Optimize icon handling and profile indicators in AppDrawerAdapter ([b5e03e95](https://github.com/DroidWorksStudio/mLauncher/commit/b5e03e95))
+* Standardize theme and language selection logic ([b660a685](https://github.com/DroidWorksStudio/mLauncher/commit/b660a685))
+* Use application context for Prefs initialization ([4ed52b1a](https://github.com/DroidWorksStudio/mLauncher/commit/4ed52b1a))
 
 ### Build, Dependencies & Meta:
 
@@ -108,15 +122,6 @@ All notable changes to this project will be documented in this file. See [conven
 * Bump org.apache.commons:commons-text ([#854](https://github.com/DroidWorksStudio/mLauncher/pull/854)) ([8fea090e](https://github.com/DroidWorksStudio/mLauncher/commit/8fea090e))
 * Bump orhun/git-cliff-action in the all-actions group ([#855](https://github.com/DroidWorksStudio/mLauncher/pull/855)) ([66e93095](https://github.com/DroidWorksStudio/mLauncher/commit/66e93095))
 * Bump the all-gradle group with 4 updates ([#853](https://github.com/DroidWorksStudio/mLauncher/pull/853)) ([90b3f972](https://github.com/DroidWorksStudio/mLauncher/commit/90b3f972))
-
-### Enhancements:
-
-* Disable inclusion of dependency info in APKs and Bundles ([d56a4ead](https://github.com/DroidWorksStudio/mLauncher/commit/d56a4ead))
-* Improve icon loading and caching logic ([cc34e843](https://github.com/DroidWorksStudio/mLauncher/commit/cc34e843))
-* Optimize icon loading logic in AppDrawerAdapter ([e96a832c](https://github.com/DroidWorksStudio/mLauncher/commit/e96a832c))
-* Optimize icon handling and profile indicators in AppDrawerAdapter ([b5e03e95](https://github.com/DroidWorksStudio/mLauncher/commit/b5e03e95))
-* Standardize theme and language selection logic ([b660a685](https://github.com/DroidWorksStudio/mLauncher/commit/b660a685))
-* Use application context for Prefs initialization ([4ed52b1a](https://github.com/DroidWorksStudio/mLauncher/commit/4ed52b1a))
 
 ## [1.10.8.5](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.8.5) - (15, July 2025)
 
@@ -161,16 +166,17 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [1.10.8.3](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.8.3) - (13, July 2025)
 
+### Enhancements:
+
+* Implement ViewBinding in OnboardingPageFragment ([55b5d689](https://github.com/DroidWorksStudio/mLauncher/commit/55b5d689))
+* Nullify views in OnboardingPageFragment ([2c5710cc](https://github.com/DroidWorksStudio/mLauncher/commit/2c5710cc))
+
 ### Bug Fixes:
 
 * Use `GITHUB_TOKEN` for `dependabot` actions ([8887e567](https://github.com/DroidWorksStudio/mLauncher/commit/8887e567))
 * Remove dependabot group names ([f0e6880e](https://github.com/DroidWorksStudio/mLauncher/commit/f0e6880e))
 * Group all dependency updates ([cca83156](https://github.com/DroidWorksStudio/mLauncher/commit/cca83156))
 * Only show "Personal apps" header if other profiles exist ([46ddee8b](https://github.com/DroidWorksStudio/mLauncher/commit/46ddee8b))
-
-### Feature Removals:
-
-* Remove deprecated workflow ([4ffadaf5](https://github.com/DroidWorksStudio/mLauncher/commit/4ffadaf5))
 
 ### Build, Dependencies & Meta:
 
@@ -179,30 +185,29 @@ All notable changes to this project will be documented in this file. See [conven
 * Configure dependabot for GitHub Actions ([b33b311b](https://github.com/DroidWorksStudio/mLauncher/commit/b33b311b))
 * Increment build number to 3 ([a9d167d3](https://github.com/DroidWorksStudio/mLauncher/commit/a9d167d3))
 
-### Enhancements:
+### Feature Removals:
 
-* Implement ViewBinding in OnboardingPageFragment ([55b5d689](https://github.com/DroidWorksStudio/mLauncher/commit/55b5d689))
-* Nullify views in OnboardingPageFragment ([2c5710cc](https://github.com/DroidWorksStudio/mLauncher/commit/2c5710cc))
+* Remove deprecated workflow ([4ffadaf5](https://github.com/DroidWorksStudio/mLauncher/commit/4ffadaf5))
 
 ## [1.10.8.2](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.8.2) - (12, July 2025)
+
+### Enhancements:
+
+* Show different toast when home apps locked. ([a25bad16](https://github.com/DroidWorksStudio/mLauncher/commit/a25bad16))
+* Rename "NORMAL" profile type to "SYSTEM" ([9cdb00c3](https://github.com/DroidWorksStudio/mLauncher/commit/9cdb00c3))
 
 ### Bug Fixes:
 
 * Annotate fields instead of properties in weather data classes ([ae9bd8f6](https://github.com/DroidWorksStudio/mLauncher/commit/ae9bd8f6))
 * Prevent header items from attempting to load icons ([9f1976d5](https://github.com/DroidWorksStudio/mLauncher/commit/9f1976d5))
 
-### Maintenance & Cleanup:
-
-* Update Kotlin toolchain and increment build number ([5b0ad0e4](https://github.com/DroidWorksStudio/mLauncher/commit/5b0ad0e4))
-
 ### Documentation & Language:
 
 * Updated Language Files. ([#837](https://github.com/DroidWorksStudio/mLauncher/pull/837)) ([1a48786c](https://github.com/DroidWorksStudio/mLauncher/commit/1a48786c))
 
-### Enhancements:
+### Maintenance & Cleanup:
 
-* Show different toast when home apps locked. ([a25bad16](https://github.com/DroidWorksStudio/mLauncher/commit/a25bad16))
-* Rename "NORMAL" profile type to "SYSTEM" ([9cdb00c3](https://github.com/DroidWorksStudio/mLauncher/commit/9cdb00c3))
+* Update Kotlin toolchain and increment build number ([5b0ad0e4](https://github.com/DroidWorksStudio/mLauncher/commit/5b0ad0e4))
 
 ---
 > Generated by DroidWorksStudio
