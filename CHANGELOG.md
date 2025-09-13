@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/main) - TBD
 
+### Refactoring:
+* Move UI adapters to dedicated package ([c2ac5fc4](https://github.com/DroidWorksStudio/mLauncher/commit/c2ac5fc4))
+
 ### Bug Fixes:
 * Correct Language Enum Order ([2121c458](https://github.com/DroidWorksStudio/mLauncher/commit/2121c458))
 
