@@ -36,6 +36,7 @@ const commitParsers = [
 	{ message: /^chore\(pr\)/i, skip: true },
 	{ message: /^chore\(pull\)/i, skip: true },
 	{ message: /^fixes/i, skip: true },
+
 	{ message: /^feat/i, group: "### Implemented Enhancements:" },
 	{ message: /^fix|^bug/i, group: "### Bug Fixes:" },
 	{ message: /^lang/i, group: "### Language Support:" },
@@ -46,15 +47,18 @@ const commitParsers = [
 	{ message: /^security/i, group: "### Security Updates:" },
 	{ message: /^revert/i, group: "### Reverts:" },
 	{ message: /^release/i, group: "### Releases:" },
-	{ message: /^dependency|^deps/i, group: "### Dependency Updates:" },
+
+	// merged into one category
+	{ message: /^build|^dependency|^deps|^config|^configuration/i, group: "### Build & Dependencies:" },
+
 	{ message: /^ci|^pipeline/i, group: "### Continuous Integration (CI):" },
 	{ message: /^chore|^housekeeping/i, group: "### Chore:" },
 	{ message: /^version|^versioning/i, group: "### Versioning:" },
-	{ message: /^config|^configuration/i, group: "### Configuration Changes:" },
 	{ message: /^cleanup|^clean\(up\)/i, group: "### Code Cleanup:" },
 	{ message: /^drop|^remove/i, group: "### Feature Removal:" },
 	{ message: /^hotfix|^emergency/i, group: "### Hotfixes:" },
 ];
+
 
 // Helper functions
 function run(cmd) {
