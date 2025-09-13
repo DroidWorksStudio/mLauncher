@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/main) - TBD
 
+### Language Support:
+* Updated Language Files. ([#885](https://github.com/DroidWorksStudio/mLauncher/pull/885)) ([c6f46f39](https://github.com/DroidWorksStudio/mLauncher/commit/c6f46f39))
+
 ### Refactoring:
 * Move UI adapters to dedicated package ([c2ac5fc4](https://github.com/DroidWorksStudio/mLauncher/commit/c2ac5fc4))
 
