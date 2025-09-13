@@ -31,44 +31,53 @@ function log(...args) {
 
 // Commit parsing rules
 const commitParsers = [
-	// skip some "noise" commits
-	{ message: /^chore\(release\): prepare for/i, skip: true },
-	{ message: /^chore\(deps.*\)/i, skip: true },
-	{ message: /^chore\(change.*\)/i, skip: true },
-	{ message: /^chore\(pr\)/i, skip: true },
-	{ message: /^chore\(pull\)/i, skip: true },
-	{ message: /^fixes/i, skip: true },
+    // Skip some "noise" commits
+    { message: /^chore\(release\): prepare for/i, skip: true },
+    { message: /^chore\(deps.*\)/i, skip: true },
+    { message: /^chore\(change.*\)/i, skip: true },
+    { message: /^chore\(pr\)/i, skip: true },
+    { message: /^chore\(pull\)/i, skip: true },
+    { message: /^fixes/i, skip: true },
 
-	// Enhancements (new features, improvements, UX, performance, refactors)
-	{ message: /^feat|^perf|^refactor|^style|^ui|^ux/i, group: "### Enhancements:" },
+    // Enhancements (new features, improvements, UX, performance)
+    { message: /^feat|^perf|^style|^ui|^ux/i, group: "### Enhancements:" },
 
-	// Bug fixes & hotfixes
-	{ message: /^fix|^bug|^hotfix|^emergency/i, group: "### Bug Fixes:" },
+    // Bug fixes & hotfixes
+    { message: /^fix|^bug|^hotfix|^emergency/i, group: "### Bug Fixes:" },
 
-	// Documentation & language/i18n
-	{ message: /^doc|^lang|^i18n/i, group: "### Documentation & Language:" },
+    // Refactors (own category after Bug Fixes)
+    { message: /^refactor/i, group: "### Refactors:" },
 
-	// Security
-	{ message: /^security/i, group: "### Security:" },
+    // Documentation & language/i18n
+    { message: /^doc|^lang|^i18n/i, group: "### Documentation & Language:" },
 
-	// Reverts
-	{ message: /^revert/i, group: "### Reverts:" },
+    // Security
+    { message: /^security/i, group: "### Security:" },
 
-	// Build, dependencies, configuration, CI/CD, versioning, release
-	{ message: /^build|^dependency|^deps|^config|^configuration|^ci|^pipeline|^release|^version|^versioning/i,
-	  group: "### Build, Dependencies & Meta:" },
+    // Reverts
+    { message: /^revert/i, group: "### Reverts:" },
 
-	// Tests
-	{ message: /^test/i, group: "### Tests:" },
+    // Build-related
+    { message: /^build/i, group: "### Build:" },
 
-	// Infrastructure & Ops
-	{ message: /^infra|^infrastructure|^ops/i, group: "### Infrastructure & Ops:" },
+    // Dependencies-related
+    { message: /^dependency|^deps/i, group: "### Dependencies:" },
 
-	// Chore & cleanup
-	{ message: /^chore|^housekeeping|^cleanup|^clean\(up\)/i, group: "### Maintenance & Cleanup:" },
+    // Meta: configuration, CI/CD, versioning, releases
+    { message: /^config|^configuration|^ci|^pipeline|^release|^version|^versioning/i,
+      group: "### Meta:" },
 
-	// Feature removal / drops
-	{ message: /^drop|^remove/i, group: "### Feature Removals:" },
+    // Tests
+    { message: /^test/i, group: "### Tests:" },
+
+    // Infrastructure & Ops
+    { message: /^infra|^infrastructure|^ops/i, group: "### Infrastructure & Ops:" },
+
+    // Chore & cleanup
+    { message: /^chore|^housekeeping|^cleanup|^clean\(up\)/i, group: "### Maintenance & Cleanup:" },
+
+    // Feature removal / drops
+    { message: /^drop|^remove/i, group: "### Feature Removals:" },
 ];
 
 // Build group order directly from commitParsers
