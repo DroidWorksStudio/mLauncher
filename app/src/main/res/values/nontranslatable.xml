@@ -38,4 +38,8 @@
     <string name="app_icons_launcher_dots" translatable="false">Launcher Dots</string>
     <string name="app_icons_niagara_dots" translatable="false">Niagara Dots</string>
     <string name="app_icons_spinner_dots" translatable="false">Spinner Dots</string>
+
+    <string name="widget_wotd_name" translatable="false">Word Of The Day Widget</string>
+    <string name="widget_fab_name" translatable="false">Fab Widget</string>
+    <string name="widget_home_name" translatable="false">Home Widget</string>
 </resources>

@@ -23,11 +23,18 @@
     <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission
+        android:name="android.permission.USE_EXACT_ALARM"
+        tools:ignore="ExactAlarmPolicy" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
     <uses-permission android:name="android.permission.USE_BIOMETRIC" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission
         android:name="android.permission.BIND_APPWIDGET"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.BIND_REMOTEVIEWS"
         tools:ignore="ProtectedPermissions" />
     <uses-permission
         android:name="android.permission.FOREGROUND_SERVICE"
@@ -129,6 +136,60 @@
                 android:name="android.accessibilityservice"
                 android:resource="@xml/accessibility_service_config" />
         </service>
+
+        <service
+            android:name=".services.HomeAppsService"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+
+        <receiver
+            android:name=".ui.widgets.wordoftheday.WordOfTheDayWidget"
+            android:exported="false"
+            android:label="@string/widget_wotd_name">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/word_of_the_day_widget_info" />
+        </receiver>
+
+        <receiver
+            android:name=".ui.widgets.wordoftheday.WordOfTheDayUpdateReceiver"
+            android:exported="false"
+            tools:ignore="Instantiatable" />
+
+        <receiver
+            android:name=".ui.widgets.fab.FabWidget"
+            android:exported="false"
+            android:label="@string/widget_fab_name">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_fab_info" />
+        </receiver>
+
+        <receiver
+            android:name=".ui.widgets.fab.FabClickReceiver"
+            android:exported="false" />
+
+        <receiver
+            android:name=".ui.widgets.home.HomeAppsWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_home_name">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_home_apps_info" />
+        </receiver>
+
+        <receiver
+            android:name=".ui.widgets.home.HomeAppUpdateReceiver"
+            android:exported="false" />
+
 
     </application>
 </manifest>
