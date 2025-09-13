@@ -8,7 +8,7 @@ All notable changes to this project will be documented in this file. See [conven
 * Updated Language Files. ([#885](https://github.com/DroidWorksStudio/mLauncher/pull/885)) ([c6f46f39](https://github.com/DroidWorksStudio/mLauncher/commit/c6f46f39))
 
 ### Build, Dependencies & Meta:
-* build(deps): Bump AndroidX libraries ([5fb96e33](https://github.com/DroidWorksStudio/mLauncher/commit/5fb96e33))
+* Bump AndroidX libraries ([5fb96e33](https://github.com/DroidWorksStudio/mLauncher/commit/5fb96e33))
 
 ### Enhancements:
 * Move UI adapters to dedicated package ([c2ac5fc4](https://github.com/DroidWorksStudio/mLauncher/commit/c2ac5fc4))
@@ -38,8 +38,8 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Build, Dependencies & Meta:
 
-* build(deps): Bump com.google.android.material:material ([#881](https://github.com/DroidWorksStudio/mLauncher/pull/881)) ([2f3ecb2c](https://github.com/DroidWorksStudio/mLauncher/commit/2f3ecb2c))
-* build(deps): Bump the all-actions group with 3 updates ([#882](https://github.com/DroidWorksStudio/mLauncher/pull/882)) ([f15f5ac2](https://github.com/DroidWorksStudio/mLauncher/commit/f15f5ac2))
+* Bump com.google.android.material:material ([#881](https://github.com/DroidWorksStudio/mLauncher/pull/881)) ([2f3ecb2c](https://github.com/DroidWorksStudio/mLauncher/commit/2f3ecb2c))
+* Bump the all-actions group with 3 updates ([#882](https://github.com/DroidWorksStudio/mLauncher/pull/882)) ([f15f5ac2](https://github.com/DroidWorksStudio/mLauncher/commit/f15f5ac2))
 
 ## [1.11.0.0](https://github.com/DroidWorksStudio/mLauncher/tree/1.11.0.0) - (07, September 2025)
 
@@ -90,24 +90,24 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Build, Dependencies & Meta:
 
-* build(deps): Bump actions/setup-java in the all-actions group ([#863](https://github.com/DroidWorksStudio/mLauncher/pull/863)) ([b4a1c08c](https://github.com/DroidWorksStudio/mLauncher/commit/b4a1c08c))
+* Bump actions/setup-java in the all-actions group ([#863](https://github.com/DroidWorksStudio/mLauncher/pull/863)) ([b4a1c08c](https://github.com/DroidWorksStudio/mLauncher/commit/b4a1c08c))
 
 ## [1.10.8.7](https://github.com/DroidWorksStudio/mLauncher/tree/1.10.8.7) - (22, August 2025)
 
 ### Build, Dependencies & Meta:
 
 * Increment build number ([1bb43a05](https://github.com/DroidWorksStudio/mLauncher/commit/1bb43a05))
-* build(deps): Bump the all-gradle group with 13 updates ([#861](https://github.com/DroidWorksStudio/mLauncher/pull/861)) ([3b41fc11](https://github.com/DroidWorksStudio/mLauncher/commit/3b41fc11))
-* build(deps): Bump actions/checkout in the all-actions group ([#860](https://github.com/DroidWorksStudio/mLauncher/pull/860)) ([188c8e87](https://github.com/DroidWorksStudio/mLauncher/commit/188c8e87))
-* build(deps): Bump actions/cache in the all-actions group ([#858](https://github.com/DroidWorksStudio/mLauncher/pull/858)) ([79642fc7](https://github.com/DroidWorksStudio/mLauncher/commit/79642fc7))
-* build(deps): Bump the all-gradle group with 12 updates ([#856](https://github.com/DroidWorksStudio/mLauncher/pull/856)) ([f679d4dd](https://github.com/DroidWorksStudio/mLauncher/commit/f679d4dd))
-* build(deps): Bump orhun/git-cliff-action in the all-actions group ([#857](https://github.com/DroidWorksStudio/mLauncher/pull/857)) ([d3e515fa](https://github.com/DroidWorksStudio/mLauncher/commit/d3e515fa))
-* build: Add null safety check for output in build.gradle.kts ([a8537d01](https://github.com/DroidWorksStudio/mLauncher/commit/a8537d01))
-* Build: Remove unnecessary safe call in output file naming ([5179b278](https://github.com/DroidWorksStudio/mLauncher/commit/5179b278))
+* Bump the all-gradle group with 13 updates ([#861](https://github.com/DroidWorksStudio/mLauncher/pull/861)) ([3b41fc11](https://github.com/DroidWorksStudio/mLauncher/commit/3b41fc11))
+* Bump actions/checkout in the all-actions group ([#860](https://github.com/DroidWorksStudio/mLauncher/pull/860)) ([188c8e87](https://github.com/DroidWorksStudio/mLauncher/commit/188c8e87))
+* Bump actions/cache in the all-actions group ([#858](https://github.com/DroidWorksStudio/mLauncher/pull/858)) ([79642fc7](https://github.com/DroidWorksStudio/mLauncher/commit/79642fc7))
+* Bump the all-gradle group with 12 updates ([#856](https://github.com/DroidWorksStudio/mLauncher/pull/856)) ([f679d4dd](https://github.com/DroidWorksStudio/mLauncher/commit/f679d4dd))
+* Bump orhun/git-cliff-action in the all-actions group ([#857](https://github.com/DroidWorksStudio/mLauncher/pull/857)) ([d3e515fa](https://github.com/DroidWorksStudio/mLauncher/commit/d3e515fa))
+* Add null safety check for output in build.gradle.kts ([a8537d01](https://github.com/DroidWorksStudio/mLauncher/commit/a8537d01))
+* Remove unnecessary safe call in output file naming ([5179b278](https://github.com/DroidWorksStudio/mLauncher/commit/5179b278))
 * Increment build number ([1c0eeb45](https://github.com/DroidWorksStudio/mLauncher/commit/1c0eeb45))
-* build(deps): Bump org.apache.commons:commons-text ([#854](https://github.com/DroidWorksStudio/mLauncher/pull/854)) ([8fea090e](https://github.com/DroidWorksStudio/mLauncher/commit/8fea090e))
-* build(deps): Bump orhun/git-cliff-action in the all-actions group ([#855](https://github.com/DroidWorksStudio/mLauncher/pull/855)) ([66e93095](https://github.com/DroidWorksStudio/mLauncher/commit/66e93095))
-* build(deps): Bump the all-gradle group with 4 updates ([#853](https://github.com/DroidWorksStudio/mLauncher/pull/853)) ([90b3f972](https://github.com/DroidWorksStudio/mLauncher/commit/90b3f972))
+* Bump org.apache.commons:commons-text ([#854](https://github.com/DroidWorksStudio/mLauncher/pull/854)) ([8fea090e](https://github.com/DroidWorksStudio/mLauncher/commit/8fea090e))
+* Bump orhun/git-cliff-action in the all-actions group ([#855](https://github.com/DroidWorksStudio/mLauncher/pull/855)) ([66e93095](https://github.com/DroidWorksStudio/mLauncher/commit/66e93095))
+* Bump the all-gradle group with 4 updates ([#853](https://github.com/DroidWorksStudio/mLauncher/pull/853)) ([90b3f972](https://github.com/DroidWorksStudio/mLauncher/commit/90b3f972))
 
 ### Enhancements:
 
@@ -174,8 +174,8 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Build, Dependencies & Meta:
 
-* build(deps): Bump svenstaro/upload-release-action from 2.11.1 to 2.11.2 ([#842](https://github.com/DroidWorksStudio/mLauncher/pull/842)) ([80d30262](https://github.com/DroidWorksStudio/mLauncher/commit/80d30262))
-* build(deps): Bump MyAlbum/purge-cache from 2.1.0 to 2.2.0 ([#841](https://github.com/DroidWorksStudio/mLauncher/pull/841)) ([1fa356c8](https://github.com/DroidWorksStudio/mLauncher/commit/1fa356c8))
+* Bump svenstaro/upload-release-action from 2.11.1 to 2.11.2 ([#842](https://github.com/DroidWorksStudio/mLauncher/pull/842)) ([80d30262](https://github.com/DroidWorksStudio/mLauncher/commit/80d30262))
+* Bump MyAlbum/purge-cache from 2.1.0 to 2.2.0 ([#841](https://github.com/DroidWorksStudio/mLauncher/pull/841)) ([1fa356c8](https://github.com/DroidWorksStudio/mLauncher/commit/1fa356c8))
 * Configure dependabot for GitHub Actions ([b33b311b](https://github.com/DroidWorksStudio/mLauncher/commit/b33b311b))
 * Increment build number to 3 ([a9d167d3](https://github.com/DroidWorksStudio/mLauncher/commit/a9d167d3))
 
