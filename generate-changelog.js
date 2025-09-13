@@ -97,8 +97,11 @@ function classifyCommit(msg) {
 }
 
 function cleanMessage(message) {
-	// Remove conventional commit type (like "feat:", "fix:", "lang:", etc.) at the start of the message
-	return message.replace(/^(feat|fix|lang|doc|perf|refactor|style|security|revert|release|dependency|deps|ci|pipeline|chore|housekeeping|version|versioning|config|configuration|cleanup|clean\(up\)|drop|remove|hotfix|emergency)\s*(\(.+?\))?:\s*/i, "");
+	// Remove conventional commit type (feat, fix, etc.), with optional scope (...) and colon
+	return message.replace(
+		/^(feat|fix|bug|lang|i18n|doc|perf|refactor|style|ui|ux|security|revert|release|dependency|deps|build|ci|pipeline|chore|housekeeping|version|versioning|config|configuration|cleanup|clean\(up\)|drop|remove|hotfix|emergency|test|infra|infrastructure|ops|asset|content|exp|experiment|prototype)\s*(\(.+?\))?:\s*/i,
+		""
+	);
 }
 
 function linkPR(message) {
