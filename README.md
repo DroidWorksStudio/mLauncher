@@ -42,7 +42,7 @@
     </div>
 </div>
 
-- Chat with us at [mLauncher](https://discord.gg/qG6hFuAzfu) on discord.
+- Chat with us at [mLauncher](https://discord.com/invite/modmydevice) on discord.
 - This application can be found
   on [Play Store](https://play.google.com/store/apps/details?id=app.mlauncher), [GitHub](https://github.com/DroidWorksStudio/mLauncher/releases/), [IzzyOnDroid](https://apt.izzysoft.de/fdroid/index/apk/app.mlauncher) & [F-Droid](https://f-droid.org/packages/app.mlauncher/).
 - The latest stable version is available on the [main](https://github.com/DroidWorksStudio/mLauncher/tree/main) branch, which can be cloned to build
@@ -118,7 +118,8 @@ your hard work and dedication. Thank you all for your invaluable contributions!
 
 ## Contribute
 
-- If you are unhappy with any part of the app or feel like missing something, you can open a pull request or an [**issue**](https://github.com/DroidWorksStudio/mLauncher/issues/new/choose) as you like.
+- If you are unhappy with any part of the app or feel like missing something, you can open a pull request or an [**issue
+  **](https://github.com/DroidWorksStudio/mLauncher/issues/new/choose) as you like.
     - Please go through the issues marked as `Bug report`, `Crash report` or `Feature request`.
     - Please can we discuss before sending pull requests.
     - Make pull requests to `main` branch.

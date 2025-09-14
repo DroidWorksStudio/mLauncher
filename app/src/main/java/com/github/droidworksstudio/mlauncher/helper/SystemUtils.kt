@@ -232,7 +232,7 @@ fun wordofthedayDownloadButton(context: Context) {
 }
 
 fun communitySupportButton(context: Context) {
-    val uri = "https://discord.com/invite/qG6hFuAzfu/".toUri()
+    val uri = "https://discord.com/invite/modmydevice".toUri()
     val intent = Intent(Intent.ACTION_VIEW, uri)
     context.startActivity(intent)
 }
