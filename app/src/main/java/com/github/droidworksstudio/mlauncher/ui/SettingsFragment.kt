@@ -87,6 +87,7 @@ import com.github.droidworksstudio.mlauncher.helper.setThemeMode
 import com.github.droidworksstudio.mlauncher.helper.setTopPadding
 import com.github.droidworksstudio.mlauncher.helper.showNavigationBar
 import com.github.droidworksstudio.mlauncher.helper.showStatusBar
+import com.github.droidworksstudio.mlauncher.helper.updateHomeWidget
 import com.github.droidworksstudio.mlauncher.helper.utils.AppReloader
 import com.github.droidworksstudio.mlauncher.helper.utils.PrivateSpaceManager
 import com.github.droidworksstudio.mlauncher.style.SettingsTheme
@@ -831,6 +832,9 @@ class SettingsFragment : Fragment() {
                                         // Do something with i
                                         prefs.setHomeAppModel(n, clearApp)
                                     }
+
+                                    // --- Trigger widget update ---
+                                    updateHomeWidget(context)
                                 }
                             )
                         }
@@ -1416,6 +1420,9 @@ class SettingsFragment : Fragment() {
                                 onItemSelected = { selectedColor ->
                                     selectedAppColor = selectedColor
                                     prefs.appColor = selectedColor
+
+                                    // --- Trigger widget update ---
+                                    updateHomeWidget(context)
                                 })
                         }
                     )
@@ -1576,6 +1583,9 @@ class SettingsFragment : Fragment() {
                                             prefs.iconPackHome =
                                                 newAppIcons // Persist selection in preferences
                                             viewModel.iconPackHome.value = newAppIcons
+
+                                            // --- Trigger widget update ---
+                                            updateHomeWidget(context)
                                         }
                                     }
                                 }

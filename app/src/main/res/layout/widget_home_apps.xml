@@ -5,4 +5,4 @@
     android:layout_height="wrap_content"
     android:background="@android:color/transparent"
     android:orientation="vertical"
-    android:padding="16dp" />
+    android:padding="4dp" />

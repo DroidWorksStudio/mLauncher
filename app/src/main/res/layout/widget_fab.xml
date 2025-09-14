@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:gravity="center"
     android:orientation="horizontal"
-    android:padding="8dp">
+    android:padding="4dp">
 
     <ImageView
         android:id="@+id/fabPhone"
