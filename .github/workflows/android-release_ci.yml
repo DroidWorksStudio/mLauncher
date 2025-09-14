@@ -16,6 +16,8 @@ jobs:
         with:
           token: ${{ github.actor == 'dependabot[bot]' && secrets.GITHUB_TOKEN || secrets.GIT_BOT_TOKEN }}
           ref: main
+          fetch-depth: 0       # Fetch full history
+          tags: true           # Ensure all tags are fetched
 
       - name: set up JDK 17
         uses: actions/setup-java@v5.0.0
