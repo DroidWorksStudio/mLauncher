@@ -90,12 +90,14 @@ jobs:
           tag: ${{ github.ref }}
           overwrite: true
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: '20'  # or whatever version you need
+
       - name: Post Release to Discord
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: |
-          # Install Node if not already installed (GitHub runners usually have it)
-          node -v || sudo apt-get install -y nodejs npm
-
           # Run your Discord release script
           node post-discord-release.js
