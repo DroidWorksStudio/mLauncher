@@ -41,7 +41,7 @@ function cleanMessage(message) {
 }
 
 function linkPR(message) {
-	return message.replace(/\(#(\d+)\)/g, (_, num) => `([#${num}](${REPO_URL}/pull/${num}))`);
+	return message.replace(/\(#(\d+)\)/g, (_, num) => ``);
 }
 
 function classifyCommit(message) {
@@ -76,7 +76,7 @@ const commits = rawCommits
 const groups = {};
 for (const c of commits) {
 	groups[c.group] = groups[c.group] || [];
-	groups[c.group].push(`* ${c.message} ([${c.hash}](${REPO_URL}/commit/${c.hash}))`);
+	groups[c.group].push(`* ${c.message}`);
 }
 
 // Build plain message
@@ -91,7 +91,7 @@ for (const group of GROUP_ORDER) {
 if (!commits.length) discordMessage += "No commits found.";
 
 // Append download link
-discordMessage += `\n[Download Multi Launcher](${REPO_URL}/releases/tag/${latestTag})`;
+discordMessage += `\n[Download Multi Launcher](<${REPO_URL}/releases/tag/${latestTag}>)`;
 
 // Send to Discord
 const payload = JSON.stringify({
