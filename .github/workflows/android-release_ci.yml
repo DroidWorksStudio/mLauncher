@@ -89,3 +89,13 @@ jobs:
           asset_name: MultiLauncher-${{ github.ref_name }}-Signed.aab
           tag: ${{ github.ref }}
           overwrite: true
+
+      - name: Post Release to Discord
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          # Install Node if not already installed (GitHub runners usually have it)
+          node -v || sudo apt-get install -y nodejs npm
+
+          # Run your Discord release script
+          node post-discord-release.js
