@@ -36,7 +36,7 @@
     <string name="settings_hidden_apps_title">Applications masquées</string>
     <string name="settings_hidden_apps_description">Gérer les applications masquées : affichez n\'importe quelle application de cette liste lorsque cela est nécessaire.</string>
     <string name="settings_advanced_title">Paramètres avancés</string>
-    <string name="settings_advanced_description">Accédez aux informations de l\'application, au lanceur par défaut, aux outils de sauvegarde et plus encore.</string>
+    <string name="settings_advanced_description">Access app info, default launcher, backup tools and more.</string>
     <string name="settings_expert_title">Expert</string>
     <string name="settings_expert_description">Débloquez des options cachées et des réglages avancés.</string>
     <string name="settings_exit_mlauncher_title">Quitter MultiLauncher</string>
