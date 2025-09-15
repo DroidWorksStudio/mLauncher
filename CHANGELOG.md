@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
+## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/main) - TBD
+
+### Feature Removals:
+
+* Remove unused onStatusChanged method ([dbf85b34](https://github.com/DroidWorksStudio/mLauncher/commit/dbf85b34))
+
 ## [1.11.1.0](https://github.com/DroidWorksStudio/mLauncher/tree/1.11.1.0) - (15, September 2025)
 
 ### Enhancements:
