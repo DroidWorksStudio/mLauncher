@@ -36,7 +36,7 @@
     <string name="settings_hidden_apps_title">Aplicaciones ocultas</string>
     <string name="settings_hidden_apps_description">Administrar aplicaciones ocultas: muestre cualquier aplicación de esta lista cuando sea necesario.</string>
     <string name="settings_advanced_title">Configuración avanzada</string>
-    <string name="settings_advanced_description">Acceda a la información de la aplicación, al iniciador predeterminado, a las herramientas de respaldo y más.</string>
+    <string name="settings_advanced_description">Access app info, default launcher, backup tools and more.</string>
     <string name="settings_expert_title">Experto</string>
     <string name="settings_expert_description">Desbloquea opciones ocultas y ajustes avanzados.</string>
     <string name="settings_exit_mlauncher_title">Salir de MultiLauncher</string>
