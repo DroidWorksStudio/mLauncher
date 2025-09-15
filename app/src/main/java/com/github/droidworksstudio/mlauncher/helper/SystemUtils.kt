@@ -57,6 +57,7 @@ import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.helper.utils.packageNames
 import com.github.droidworksstudio.mlauncher.services.ActionService
 import com.github.droidworksstudio.mlauncher.ui.widgets.home.HomeAppsWidgetProvider
+import com.github.droidworksstudio.mlauncher.ui.widgets.wordoftheday.WordOfTheDayWidget
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import org.xmlpull.v1.XmlPullParser
 import java.io.File
@@ -636,17 +637,49 @@ fun getSystemIcons(
     }
 }
 
+fun updateAllWidgets(context: Context) {
+    updateHomeWidget(context)
+    updateWordWidget(context)
+    updateFabWidget(context)
+}
+
 fun updateHomeWidget(context: Context) {
-    // --- Trigger widget update ---
+    val appWidgetManager = AppWidgetManager.getInstance(context)
+    val componentName = ComponentName(context, HomeAppsWidgetProvider::class.java)
+    val appWidgetIds = appWidgetManager.getAppWidgetIds(componentName)
+
     val intent = Intent(context, HomeAppsWidgetProvider::class.java).apply {
         action = AppWidgetManager.ACTION_APPWIDGET_UPDATE
-        // Optional: pass widget IDs if you want to update specific widgets
-        val ids = AppWidgetManager.getInstance(context)
-            .getAppWidgetIds(ComponentName(context, HomeAppsWidgetProvider::class.java))
-        putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, ids)
+        putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, appWidgetIds)
     }
     context.sendBroadcast(intent)
 }
+
+fun updateWordWidget(context: Context) {
+    val appWidgetManager = AppWidgetManager.getInstance(context)
+    val componentName = ComponentName(context, WordOfTheDayWidget::class.java)
+    val appWidgetIds = appWidgetManager.getAppWidgetIds(componentName)
+
+    val intent = Intent(context, WordOfTheDayWidget::class.java).apply {
+        action = AppWidgetManager.ACTION_APPWIDGET_UPDATE
+        putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, appWidgetIds)
+    }
+    context.sendBroadcast(intent)
+}
+
+fun updateFabWidget(context: Context) {
+    val appWidgetManager = AppWidgetManager.getInstance(context)
+    val componentName = ComponentName(context, HomeAppsWidgetProvider::class.java) // Replace with your FAB widget class
+    val appWidgetIds = appWidgetManager.getAppWidgetIds(componentName)
+
+    val intent = Intent(context, HomeAppsWidgetProvider::class.java).apply {
+        action = AppWidgetManager.ACTION_APPWIDGET_UPDATE
+        putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, appWidgetIds)
+    }
+
+    context.sendBroadcast(intent)
+}
+
 
 private fun getAppListIcons(context: Context, prefs: Prefs, nonNullDrawable: Drawable): Drawable? {
     return when (prefs.iconPackAppList) {

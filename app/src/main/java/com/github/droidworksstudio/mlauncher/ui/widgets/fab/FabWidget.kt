@@ -73,35 +73,35 @@ class FabWidget : AppWidgetProvider() {
             // Assign PendingIntents only for visible buttons
             if (fabFlags.getOrNull(0) == true) views.setOnClickPendingIntent(
                 R.id.fabPhone,
-                getBroadcastPendingIntent(context, "FAB_PHONE")
+                getBroadcastPendingIntent(context, "com.github.droidworksstudio.mlauncher.ui.widgets.fab.FAB_PHONE")
             )
             if (fabFlags.getOrNull(1) == true) views.setOnClickPendingIntent(
                 R.id.fabMessages,
-                getBroadcastPendingIntent(context, "FAB_MESSAGES")
+                getBroadcastPendingIntent(context, "com.github.droidworksstudio.mlauncher.ui.widgets.fab.FAB_MESSAGES")
             )
 
             if (fabFlags.getOrNull(2) == true) views.setOnClickPendingIntent(
                 R.id.fabCamera,
-                getBroadcastPendingIntent(context, "FAB_CAMERA")
+                getBroadcastPendingIntent(context, "com.github.droidworksstudio.mlauncher.ui.widgets.fab.FAB_CAMERA")
             )
 
             if (fabFlags.getOrNull(3) == true) views.setOnClickPendingIntent(
                 R.id.fabPhotos,
-                getBroadcastPendingIntent(context, "FAB_PHOTOS")
+                getBroadcastPendingIntent(context, "com.github.droidworksstudio.mlauncher.ui.widgets.fab.FAB_PHOTOS")
             )
 
             if (fabFlags.getOrNull(4) == true) views.setOnClickPendingIntent(
                 R.id.fabBrowser,
-                getBroadcastPendingIntent(context, "FAB_BROWSER")
+                getBroadcastPendingIntent(context, "com.github.droidworksstudio.mlauncher.ui.widgets.fab.FAB_BROWSER")
             )
 
             if (fabFlags.getOrNull(5) == true) views.setOnClickPendingIntent(
                 R.id.fabSettings,
-                getBroadcastPendingIntent(context, "FAB_SETTINGS")
+                getBroadcastPendingIntent(context, "com.github.droidworksstudio.mlauncher.ui.widgets.fab.FAB_SETTINGS")
             )
             if (fabFlags.getOrNull(6) == true) views.setOnClickPendingIntent(
                 R.id.fabAction,
-                getBroadcastPendingIntent(context, "FAB_ACTION")
+                getBroadcastPendingIntent(context, "com.github.droidworksstudio.mlauncher.ui.widgets.fab.FAB_ACTION")
             )
 
             appWidgetManager.updateAppWidget(appWidgetId, views)
@@ -123,13 +123,13 @@ class FabClickReceiver : BroadcastReceiver() {
 
         AppLogger.d("FabClickReceiver", "onReceive: $action")
         when (action) {
-            "FAB_PHONE" -> context.openDialerApp()
-            "FAB_MESSAGES" -> context.openTextMessagesApp()
-            "FAB_CAMERA" -> context.openCameraApp()
-            "FAB_PHOTOS" -> context.openPhotosApp()
-            "FAB_BROWSER" -> context.openWebBrowser()
-            "FAB_SETTINGS" -> context.openDeviceSettings()
-            "FAB_ACTION" -> AppReloader.startApp(context)
+            "com.github.droidworksstudio.mlauncher.ui.widgets.fab.FAB_PHONE" -> context.openDialerApp()
+            "com.github.droidworksstudio.mlauncher.ui.widgets.fab.FAB_MESSAGES" -> context.openTextMessagesApp()
+            "com.github.droidworksstudio.mlauncher.ui.widgets.fab.FAB_CAMERA" -> context.openCameraApp()
+            "com.github.droidworksstudio.mlauncher.ui.widgets.fab.FAB_PHOTOS" -> context.openPhotosApp()
+            "com.github.droidworksstudio.mlauncher.ui.widgets.fab.FAB_BROWSER" -> context.openWebBrowser()
+            "com.github.droidworksstudio.mlauncher.ui.widgets.fab.FAB_SETTINGS" -> context.openDeviceSettings()
+            "com.github.droidworksstudio.mlauncher.ui.widgets.fab.FAB_ACTION" -> AppReloader.startApp(context)
             // handle other buttons...
         }
     }

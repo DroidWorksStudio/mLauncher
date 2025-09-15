@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.lifecycle.ProcessLifecycleOwner
 import androidx.lifecycle.lifecycleScope
 import com.github.droidworksstudio.common.AppLogger
+import com.github.droidworksstudio.mlauncher.helper.updateAllWidgets
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -28,6 +29,7 @@ object AppReloader {
     }
 
     fun startApp(context: Context) {
+        updateAllWidgets(context)
         try {
             val packageManager = context.packageManager
             val intent = packageManager.getLaunchIntentForPackage(context.packageName)
