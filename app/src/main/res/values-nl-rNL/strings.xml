@@ -36,7 +36,7 @@
     <string name="settings_hidden_apps_title">Verborgen apps</string>
     <string name="settings_hidden_apps_description">Beheer verborgen apps: maak indien nodig een app uit deze lijst zichtbaar.</string>
     <string name="settings_advanced_title">Geavanceerd</string>
-    <string name="settings_advanced_description">Krijg toegang tot app-info, standaard launcher, back-uptools en meer.</string>
+    <string name="settings_advanced_description">Access app info, default launcher, backup tools and more.</string>
     <string name="settings_expert_title">Deskundige</string>
     <string name="settings_expert_description">Ontgrendel verborgen opties en geavanceerde aanpassingen.</string>
     <string name="settings_exit_mlauncher_title">MultiLauncher verlaten</string>
