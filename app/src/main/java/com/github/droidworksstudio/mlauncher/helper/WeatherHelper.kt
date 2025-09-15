@@ -6,7 +6,6 @@ import android.content.pm.PackageManager
 import android.location.Location
 import android.location.LocationListener
 import android.location.LocationManager
-import android.os.Bundle
 import android.os.Looper
 import androidx.core.app.ActivityCompat
 import androidx.lifecycle.LifecycleOwner
@@ -69,7 +68,6 @@ class WeatherHelper(
 
                 override fun onProviderDisabled(provider: String) {}
                 override fun onProviderEnabled(provider: String) {}
-                override fun onStatusChanged(provider: String?, status: Int, extras: Bundle?) {}
             }
 
             try {
