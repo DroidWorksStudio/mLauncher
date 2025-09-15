@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
+## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/main) - TBD
+
+### Refactors:
+
+* Remove @Deprecated annotation in WeatherHelper ([dd846d3c](https://github.com/DroidWorksStudio/mLauncher/commit/dd846d3c))
+* Remove package attribute from AndroidManifest.xml ([96d61772](https://github.com/DroidWorksStudio/mLauncher/commit/96d61772))
+
 ## [test](https://github.com/DroidWorksStudio/mLauncher/tree/test) - (15, September 2025)
 
 ### Enhancements:
