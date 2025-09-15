@@ -47,7 +47,6 @@ import androidx.core.graphics.createBitmap
 import androidx.core.graphics.drawable.toDrawable
 import androidx.core.graphics.toColorInt
 import androidx.core.os.bundleOf
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.github.droidworksstudio.common.AppLogger
@@ -101,7 +100,7 @@ import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.TopMa
 import com.github.droidworksstudio.mlauncher.ui.iconpack.CustomIconSelectionActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
-class SettingsFragment : Fragment() {
+class SettingsFragment : BaseFragment() {
 
     private lateinit var prefs: Prefs
     private lateinit var viewModel: MainViewModel

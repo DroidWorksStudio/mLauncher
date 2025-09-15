@@ -13,7 +13,6 @@ import androidx.activity.OnBackPressedCallback
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.isVisible
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.github.droidworksstudio.common.CrashHandler
@@ -29,10 +28,11 @@ import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.databinding.FragmentNotesManagerBinding
 import com.github.droidworksstudio.mlauncher.helper.sortMessages
 import com.github.droidworksstudio.mlauncher.helper.utils.messages
+import com.github.droidworksstudio.mlauncher.ui.BaseFragment
 import com.github.droidworksstudio.mlauncher.ui.adapter.NotesManagerAdapter
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
-class NotesManagerFragment : Fragment() {
+class NotesManagerFragment : BaseFragment() {
     private lateinit var prefs: Prefs
     private lateinit var shareUtils: ShareUtils
     private lateinit var viewModel: MainViewModel
@@ -199,7 +199,7 @@ class NotesManagerFragment : Fragment() {
                     val category = categoryDropdown.text.ifBlank { "None" }
                     val priority = priorityDropdown.text.ifBlank { "None" }
 
-                    val newMessage = Message(messageText.toString(), timestamp, category.toString(), priority.toString())
+                    val newMessage = Message(messageText, timestamp, category.toString(), priority.toString())
 
                     messages.add(newMessage)
 

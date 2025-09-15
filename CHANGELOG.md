@@ -2,13 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
-## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/main) - TBD
-
-### Build:
-
-* Update Kotlin and KSP versions and increment patch version ([cdfc3708](https://github.com/DroidWorksStudio/mLauncher/commit/cdfc3708))
-
 ## [1.11.0.3](https://github.com/DroidWorksStudio/mLauncher/tree/1.11.0.3) - (15, September 2025)
+
+### Enhancements:
+
+* Introduce BaseFragment and SystemBarObserver ([8be5be4f](https://github.com/DroidWorksStudio/mLauncher/commit/8be5be4f))
 
 ### Bug Fixes:
 
@@ -25,6 +23,10 @@ All notable changes to this project will be documented in this file. See [conven
 ### Documentation & Language:
 
 * Update Discord invite link ([04db3aca](https://github.com/DroidWorksStudio/mLauncher/commit/04db3aca))
+
+### Build:
+
+* Update Kotlin and KSP versions and increment patch version ([cdfc3708](https://github.com/DroidWorksStudio/mLauncher/commit/cdfc3708))
 
 ## [1.11.0.2](https://github.com/DroidWorksStudio/mLauncher/tree/1.11.0.2) - (14, September 2025)
 

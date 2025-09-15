@@ -28,7 +28,6 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.widget.SearchView
 import androidx.core.net.toUri
 import androidx.core.view.isVisible
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -58,7 +57,7 @@ import com.github.droidworksstudio.mlauncher.helper.openAppInfo
 import com.github.droidworksstudio.mlauncher.ui.adapter.AppDrawerAdapter
 import com.github.droidworksstudio.mlauncher.ui.adapter.ContactDrawerAdapter
 
-class AppDrawerFragment : Fragment() {
+class AppDrawerFragment : BaseFragment() {
 
     private lateinit var prefs: Prefs
     private lateinit var appsAdapter: AppDrawerAdapter
