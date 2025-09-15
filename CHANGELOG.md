@@ -4,10 +4,19 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/main) - TBD
 
+### Enhancements:
+
+* Introduce BaseFragment and SystemBarObserver ([56066cf4](https://github.com/DroidWorksStudio/mLauncher/commit/56066cf4))
+
 ### Refactors:
 
-* Remove @Deprecated annotation in WeatherHelper ([dd846d3c](https://github.com/DroidWorksStudio/mLauncher/commit/dd846d3c))
-* Remove package attribute from AndroidManifest.xml ([96d61772](https://github.com/DroidWorksStudio/mLauncher/commit/96d61772))
+* Remove package attribute from AndroidManifest.xml ([3d35e4a6](https://github.com/DroidWorksStudio/mLauncher/commit/3d35e4a6))
+* Improve Discord release message formatting ([1eaa194b](https://github.com/DroidWorksStudio/mLauncher/commit/1eaa194b))
+* Improve app list sorting ([543106e6](https://github.com/DroidWorksStudio/mLauncher/commit/543106e6))
+
+### Build:
+
+* Update Kotlin and KSP versions and increment patch version ([b9814bb2](https://github.com/DroidWorksStudio/mLauncher/commit/b9814bb2))
 
 ## [test](https://github.com/DroidWorksStudio/mLauncher/tree/test) - (15, September 2025)
 
