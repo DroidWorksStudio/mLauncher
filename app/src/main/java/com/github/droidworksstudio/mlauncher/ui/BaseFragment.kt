@@ -3,6 +3,7 @@ package com.github.droidworksstudio.mlauncher.ui
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.github.droidworksstudio.mlauncher.data.Prefs
+import com.github.droidworksstudio.mlauncher.helper.updateAllWidgets
 import com.github.droidworksstudio.mlauncher.helper.utils.SystemBarObserver
 
 open class BaseFragment : Fragment() {
@@ -15,6 +16,8 @@ open class BaseFragment : Fragment() {
         super.onCreate(savedInstanceState)
         // Attach the observer; lazy properties will initialize here
         lifecycle.addObserver(systemBarObserver)
+
+        updateAllWidgets(requireContext())
     }
 }
 

@@ -7,7 +7,6 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.Canvas
-import android.graphics.Paint
 import android.graphics.drawable.Drawable
 import android.util.TypedValue
 import android.widget.RemoteViews
@@ -59,31 +58,68 @@ class HomeAppsWidgetProvider : AppWidgetProvider() {
                     iconPackTarget = IconCacheTarget.HOME
                 )
 
-                // Optional recolor
                 val recoloredDrawable = getSystemIcons(context, prefs, IconCacheTarget.HOME, drawable) ?: drawable
 
-                // --- Create bitmap with text + icon ---
-                val bitmap = createWidgetTextWithIcon(
-                    context = context,
-                    text = appLabel,
-                    drawable = recoloredDrawable,
-                    textSizeSp = prefs.appSize.toFloat(),
-                    textColor = prefs.appColor,
-                    iconOnLeft = prefs.homeAlignment == Constants.Gravity.Left,
-                    paddingPx = (prefs.textPaddingSize * 1.5f).toInt() // padding between icon and text
-                )
+                // --- Set TextView text ---
+                itemRv.setTextViewText(R.id.appLabel, appLabel)
 
-                // Get dominant color from bitmap
-                val dominantColor = ColorIconsExtensions.getDominantColor(bitmap)
+                // Optional: text size/color from prefs
+                itemRv.setTextViewTextSize(R.id.appLabel, TypedValue.COMPLEX_UNIT_SP, prefs.appSize.toFloat())
+                itemRv.setTextColor(R.id.appLabel, prefs.appColor)
 
-                // Recolor the drawable
-                ColorIconsExtensions.recolorDrawable(recoloredDrawable, dominantColor)
+                // --- Set gravity based on prefs.homeAlignment ---
+                itemRv.setInt(R.id.appLabel, "setGravity", prefs.homeAlignment.value())
 
-                // Set bitmap into ImageView (replaces TextView)
-                itemRv.setImageViewBitmap(R.id.appIcon, bitmap)
+                // --- Set icon in ImageView ---
+                // Calculate icon size and padding
+                var iconSize = (prefs.appSize * 1.4f).toInt()
+                if (prefs.iconPackHome == Constants.IconPacks.System || prefs.iconPackHome == Constants.IconPacks.Custom) {
+                    iconSize *= 2
+                }
+                val iconPadding = (iconSize / 1.2f).toInt() // padding next to icon
+
+                // Convert drawable to bitmap
+                val bitmap = drawableToBitmap(recoloredDrawable, iconSize, iconSize)
+
+                // Apply alignment
+                when (prefs.homeAlignment) {
+                    Constants.Gravity.Left -> {
+                        // Left icon visible, right icon gone
+                        itemRv.setImageViewBitmap(R.id.appIconLeft, bitmap)
+                        itemRv.setViewVisibility(R.id.appIconLeft, android.view.View.VISIBLE)
+                        itemRv.setViewVisibility(R.id.appIconRight, android.view.View.GONE)
+
+                        // Padding on right of icon
+                        itemRv.setViewPadding(R.id.appIconLeft, 0, 0, iconPadding, 0)
+                    }
+
+                    Constants.Gravity.Right -> {
+                        // Right icon visible, left icon gone
+                        itemRv.setImageViewBitmap(R.id.appIconRight, bitmap)
+                        itemRv.setViewVisibility(R.id.appIconRight, android.view.View.VISIBLE)
+                        itemRv.setViewVisibility(R.id.appIconLeft, android.view.View.GONE)
+
+                        // Padding on left of icon
+                        itemRv.setViewPadding(R.id.appIconRight, iconPadding, 0, 0, 0)
+                    }
+
+                    else -> {
+                        itemRv.setViewVisibility(R.id.appIconLeft, android.view.View.GONE)
+                        itemRv.setViewVisibility(R.id.appIconRight, android.view.View.GONE)
+                    }
+                }
+
+                // Optional: set color filter
+                if (prefs.iconRainbowColors) {
+                    val dominantColor = ColorIconsExtensions.getDominantColor(bitmap)
+                    itemRv.setInt(R.id.appIconLeft, "setColorFilter", dominantColor)
+                } else {
+                    itemRv.setInt(R.id.appIconLeft, "setColorFilter", prefs.shortcutIconsColor)
+                }
 
                 val textPaddingSize = prefs.textPaddingSize // pixels, or convert dp to px
-                itemRv.setViewPadding(R.id.appIcon, 0, textPaddingSize, 0, textPaddingSize)
+                itemRv.setViewPadding(R.id.appLabel, 0, textPaddingSize, 0, textPaddingSize)
+
 
                 // --- Click intent ---
                 val clickIntent = Intent(context, HomeAppUpdateReceiver::class.java).apply {
@@ -93,9 +129,9 @@ class HomeAppsWidgetProvider : AppWidgetProvider() {
                 val pendingIntent = PendingIntent.getBroadcast(
                     context, i, clickIntent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
                 )
-                itemRv.setOnClickPendingIntent(R.id.appIcon, pendingIntent)
+                itemRv.setOnClickPendingIntent(R.id.appIconLeft, pendingIntent)
+                itemRv.setOnClickPendingIntent(R.id.appLabel, pendingIntent) // Optional: click text too
 
-                // Add item to container
                 rv.addView(R.id.homeAppsLayout, itemRv)
             }
 
@@ -103,48 +139,11 @@ class HomeAppsWidgetProvider : AppWidgetProvider() {
         }
     }
 
-    fun createWidgetTextWithIcon(
-        context: Context,
-        text: String,
-        drawable: Drawable,
-        textSizeSp: Float,
-        textColor: Int,
-        iconOnLeft: Boolean,
-        paddingPx: Int
-    ): Bitmap {
-        val prefs = Prefs(context)
-        // Determine icon size relative to text
-        var iconSize = (textSizeSp * 1.4f).toInt()
-        if (prefs.iconPackHome == Constants.IconPacks.System || prefs.iconPackHome == Constants.IconPacks.Custom) iconSize = iconSize * 2
-
-        // Measure text
-        val paint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-            color = textColor
-            textSize = TypedValue.applyDimension(
-                TypedValue.COMPLEX_UNIT_SP, textSizeSp, context.resources.displayMetrics
-            )
-        }
-        val textWidth = paint.measureText(text)
-        val textHeight = paint.descent() - paint.ascent()
-        val bitmapWidth = iconSize + paddingPx + textWidth.toInt()
-        val bitmapHeight = iconSize.coerceAtLeast(textHeight.toInt())
-
-        val bitmap = createBitmap(bitmapWidth, bitmapHeight)
+    fun drawableToBitmap(drawable: Drawable, width: Int, height: Int): Bitmap {
+        val bitmap = createBitmap(width, height)
         val canvas = Canvas(bitmap)
-
-        val iconTop = (bitmapHeight - iconSize) / 2
-        val textY = (bitmapHeight / 2f) - (paint.descent() + paint.ascent()) / 2
-
-        if (iconOnLeft) {
-            drawable.setBounds(0, iconTop, iconSize, iconTop + iconSize)
-            drawable.draw(canvas)
-            canvas.drawText(text, iconSize + paddingPx.toFloat(), textY, paint)
-        } else {
-            canvas.drawText(text, 0f, textY, paint)
-            drawable.setBounds((textWidth + paddingPx).toInt(), iconTop, bitmapWidth, iconTop + iconSize)
-            drawable.draw(canvas)
-        }
-
+        drawable.setBounds(0, 0, width, height)
+        drawable.draw(canvas)
         return bitmap
     }
 
