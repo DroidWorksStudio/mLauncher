@@ -8,7 +8,6 @@ const REPO_URL = "https://github.com/DroidWorksStudio/mLauncher";
 
 // Commit parsing rules
 const commitParsers = [
-	{ message: /^chore\(changelog\):/i, skip: true },
 	{ message: /^chore\(release\): prepare for/i, skip: true },
 	{ message: /^chore\(deps.*\)/i, skip: true },
 	{ message: /^chore\(change.*\)/i, skip: true },
@@ -80,7 +79,7 @@ for (const c of commits) {
 }
 
 // Build plain message
-let discordMessage = `## Multi Launcher ${latestTag}\n`;
+let discordMessage = `## Multi Launcher ${latestTag}\n\n`;
 
 for (const group of GROUP_ORDER) {
 	if (!groups[group] || groups[group].length === 0) continue;
@@ -91,11 +90,11 @@ for (const group of GROUP_ORDER) {
 if (!commits.length) discordMessage += "No commits found.";
 
 // Append download link
-discordMessage += `\n[Download Multi Launcher](<${REPO_URL}/releases/tag/${latestTag}>)`;
+discordMessage += `[Download Multi Launcher](<${REPO_URL}/releases/tag/${latestTag}>)`;
 
 // Send to Discord
 const payload = JSON.stringify({
-	content: discordMessage,
+    content: discordMessage,
 	username: "Multi Launcher Updates!",
 	avatar_url: "https://github.com/DroidWorksStudio/mLauncher/blob/main/fastlane/metadata/android/en-US/images/icon.png?raw=true",
 });

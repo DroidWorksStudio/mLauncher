@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
-## [1.11.0.3](https://github.com/DroidWorksStudio/mLauncher/tree/1.11.0.3) - (15, September 2025)
+## [test](https://github.com/DroidWorksStudio/mLauncher/tree/test) - (15, September 2025)
 
 ### Enhancements:
 
@@ -10,10 +10,12 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Bug Fixes:
 
+* Correct typo in advanced settings description ([08961432](https://github.com/DroidWorksStudio/mLauncher/commit/08961432))
 * Correct app label display in HomeAppsWidgetProvider ([43c169f1](https://github.com/DroidWorksStudio/mLauncher/commit/43c169f1))
 
 ### Refactors:
 
+* Improve Discord release message formatting ([21d650d7](https://github.com/DroidWorksStudio/mLauncher/commit/21d650d7))
 * Improve app list sorting ([98ece2ba](https://github.com/DroidWorksStudio/mLauncher/commit/98ece2ba))
 * Replace Word of the Day AlarmManager with WorkManager ([a61c988d](https://github.com/DroidWorksStudio/mLauncher/commit/a61c988d))
 * Remove SecurityService and FLAG_SECURE ([ca71b87d](https://github.com/DroidWorksStudio/mLauncher/commit/ca71b87d))
