@@ -77,7 +77,7 @@ const commitParsers = [
     { message: /^chore|^housekeeping|^cleanup|^clean\(up\)/i, group: "### Maintenance & Cleanup:" },
 
     // Feature removal / drops
-    { message: /^drop|^remove/i, group: "### Feature Removals:" },
+    { message: /^drop|^remove|^deprecated/i, group: "### Feature Removals:" },
 ];
 
 // Build group order directly from commitParsers
@@ -112,7 +112,7 @@ function classifyCommit(msg) {
 
 function cleanMessage(message) {
 	// Remove conventional commit type (feat, fix, etc.), with optional scope (...) and colon
-	return message.replace(/^(feat|fix|bug|lang|i18n|doc|docs|perf|refactor|style|ui|ux|security|revert|release|dependency|deps|build|ci|pipeline|chore|housekeeping|version|versioning|config|configuration|cleanup|clean\(up\)|drop|remove|hotfix|emergency|test|infra|infrastructure|ops|asset|content|exp|experiment|prototype)\s*(\(.+?\))?:\s*/i,"");
+	return message.replace(/^(feat|fix|bug|lang|i18n|doc|docs|perf|refactor|style|ui|ux|security|revert|release|dependency|deps|build|ci|pipeline|chore|housekeeping|version|versioning|config|configuration|cleanup|clean\(up\)|drop|remove|deprecated|hotfix|emergency|test|infra|infrastructure|ops|asset|content|exp|experiment|prototype)\s*(\(.+?\))?:\s*/i,"");
 }
 
 function linkPR(message) {
