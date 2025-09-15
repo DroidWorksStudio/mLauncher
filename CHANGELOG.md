@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Refactors:
 
+* Remove SecurityService and FLAG_SECURE ([ca71b87d](https://github.com/DroidWorksStudio/mLauncher/commit/ca71b87d))
 * Update cleanMessage regex to include 'docs' ([1bedc196](https://github.com/DroidWorksStudio/mLauncher/commit/1bedc196))
 * Simplify Discord release message ([840197f7](https://github.com/DroidWorksStudio/mLauncher/commit/840197f7))
 
