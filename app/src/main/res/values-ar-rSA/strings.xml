@@ -36,7 +36,7 @@
     <string name="settings_hidden_apps_title">التطبيقات المخفية</string>
     <string name="settings_hidden_apps_description">إدارة التطبيقات المخفية - إظهار أي تطبيق مخفي من هذه القائمة عند الحاجة إلى ذلك.</string>
     <string name="settings_advanced_title">الإعدادات المتقدمة</string>
-    <string name="settings_advanced_description">الوصول إلى معلومات التطبيق، والمشغل الافتراضي، وأدوات النسخ الاحتياطي والمزيد.</string>
+    <string name="settings_advanced_description">Access app info, default launcher, backup tools and more.</string>
     <string name="settings_expert_title">خبير</string>
     <string name="settings_expert_description">افتح الخيارات المخفية والتعديلات المتقدمة.</string>
     <string name="settings_exit_mlauncher_title">الخروج من MultiLauncher</string>
