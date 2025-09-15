@@ -12,7 +12,6 @@ import android.os.Bundle
 import android.provider.OpenableColumns
 import android.provider.Settings
 import android.view.KeyEvent
-import android.view.WindowManager
 import android.view.WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.result.ActivityResultLauncher
@@ -31,13 +30,9 @@ import com.github.droidworksstudio.mlauncher.databinding.ActivityMainBinding
 import com.github.droidworksstudio.mlauncher.helper.IconCacheTarget
 import com.github.droidworksstudio.mlauncher.helper.IconPackHelper
 import com.github.droidworksstudio.mlauncher.helper.emptyString
-import com.github.droidworksstudio.mlauncher.helper.hideNavigationBar
-import com.github.droidworksstudio.mlauncher.helper.hideStatusBar
 import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
-import com.github.droidworksstudio.mlauncher.helper.showNavigationBar
-import com.github.droidworksstudio.mlauncher.helper.showStatusBar
 import com.github.droidworksstudio.mlauncher.helper.utils.AppReloader
-import com.github.droidworksstudio.mlauncher.services.SecurityService
+import com.github.droidworksstudio.mlauncher.helper.utils.SystemBarObserver
 import com.github.droidworksstudio.mlauncher.ui.onboarding.OnboardingActivity
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
@@ -123,13 +118,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        if (!SecurityService.isDebugBuild(this)) {
-            window.setFlags(
-                WindowManager.LayoutParams.FLAG_SECURE,
-                WindowManager.LayoutParams.FLAG_SECURE
-            )
-        }
 
         // Enables edge-to-edge mode
         WindowCompat.setDecorFitsSystemWindows(window, false)
@@ -326,14 +314,10 @@ class MainActivity : AppCompatActivity() {
                     viewModel.setDefaultLauncher(false)
                 }
             }
-    }
 
-    override fun onPostCreate(savedInstanceState: Bundle?) {
-        super.onPostCreate(savedInstanceState)
-        if (prefs.showStatusBar) showStatusBar(this.window) else hideStatusBar(this.window)
-        if (prefs.showNavigationBar) showNavigationBar(this.window) else hideNavigationBar(this.window)
+        val systemBarObserver = SystemBarObserver(prefs)
+        lifecycle.addObserver(systemBarObserver)
     }
-
 
     private fun handleFontSelected(uri: Uri?) {
         if (uri == null) return

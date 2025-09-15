@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v5.0.0
         with:
           token: ${{ github.actor == 'dependabot[bot]' && secrets.GITHUB_TOKEN || secrets.GIT_BOT_TOKEN }}
-          ref: main
+          fetch-depth: 0       # Fetch full history
 
       - name: set up JDK 17
         uses: actions/setup-java@v5.0.0
@@ -89,3 +89,15 @@ jobs:
           asset_name: MultiLauncher-${{ github.ref_name }}-Signed.aab
           tag: ${{ github.ref }}
           overwrite: true
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: '20'  # or whatever version you need
+
+      - name: Post Release to Discord
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          # Run your Discord release script
+          node post-discord-release.js

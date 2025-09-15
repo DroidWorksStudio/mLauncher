@@ -47,7 +47,6 @@ import androidx.core.graphics.createBitmap
 import androidx.core.graphics.drawable.toDrawable
 import androidx.core.graphics.toColorInt
 import androidx.core.os.bundleOf
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.github.droidworksstudio.common.AppLogger
@@ -87,6 +86,7 @@ import com.github.droidworksstudio.mlauncher.helper.setThemeMode
 import com.github.droidworksstudio.mlauncher.helper.setTopPadding
 import com.github.droidworksstudio.mlauncher.helper.showNavigationBar
 import com.github.droidworksstudio.mlauncher.helper.showStatusBar
+import com.github.droidworksstudio.mlauncher.helper.updateHomeWidget
 import com.github.droidworksstudio.mlauncher.helper.utils.AppReloader
 import com.github.droidworksstudio.mlauncher.helper.utils.PrivateSpaceManager
 import com.github.droidworksstudio.mlauncher.style.SettingsTheme
@@ -100,7 +100,7 @@ import com.github.droidworksstudio.mlauncher.ui.compose.SettingsComposable.TopMa
 import com.github.droidworksstudio.mlauncher.ui.iconpack.CustomIconSelectionActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
-class SettingsFragment : Fragment() {
+class SettingsFragment : BaseFragment() {
 
     private lateinit var prefs: Prefs
     private lateinit var viewModel: MainViewModel
@@ -831,6 +831,9 @@ class SettingsFragment : Fragment() {
                                         // Do something with i
                                         prefs.setHomeAppModel(n, clearApp)
                                     }
+
+                                    // --- Trigger widget update ---
+                                    updateHomeWidget(context)
                                 }
                             )
                         }
@@ -1416,6 +1419,9 @@ class SettingsFragment : Fragment() {
                                 onItemSelected = { selectedColor ->
                                     selectedAppColor = selectedColor
                                     prefs.appColor = selectedColor
+
+                                    // --- Trigger widget update ---
+                                    updateHomeWidget(context)
                                 })
                         }
                     )
@@ -1576,6 +1582,9 @@ class SettingsFragment : Fragment() {
                                             prefs.iconPackHome =
                                                 newAppIcons // Persist selection in preferences
                                             viewModel.iconPackHome.value = newAppIcons
+
+                                            // --- Trigger widget update ---
+                                            updateHomeWidget(context)
                                         }
                                     }
                                 }

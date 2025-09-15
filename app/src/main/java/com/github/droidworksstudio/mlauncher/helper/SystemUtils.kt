@@ -5,6 +5,8 @@ import android.app.AlarmManager
 import android.app.AppOpsManager
 import android.app.UiModeManager
 import android.app.role.RoleManager
+import android.appwidget.AppWidgetManager
+import android.content.ComponentName
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
@@ -54,6 +56,7 @@ import com.github.droidworksstudio.mlauncher.data.Message
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.helper.utils.packageNames
 import com.github.droidworksstudio.mlauncher.services.ActionService
+import com.github.droidworksstudio.mlauncher.ui.widgets.home.HomeAppsWidgetProvider
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import org.xmlpull.v1.XmlPullParser
 import java.io.File
@@ -229,7 +232,7 @@ fun wordofthedayDownloadButton(context: Context) {
 }
 
 fun communitySupportButton(context: Context) {
-    val uri = "https://discord.com/invite/qG6hFuAzfu/".toUri()
+    val uri = "https://discord.com/invite/modmydevice".toUri()
     val intent = Intent(Intent.ACTION_VIEW, uri)
     context.startActivity(intent)
 }
@@ -631,6 +634,18 @@ fun getSystemIcons(
         IconCacheTarget.APP_LIST -> getAppListIcons(context, prefs, nonNullDrawable)
         IconCacheTarget.HOME -> getHomeIcons(context, prefs, nonNullDrawable)
     }
+}
+
+fun updateHomeWidget(context: Context) {
+    // --- Trigger widget update ---
+    val intent = Intent(context, HomeAppsWidgetProvider::class.java).apply {
+        action = AppWidgetManager.ACTION_APPWIDGET_UPDATE
+        // Optional: pass widget IDs if you want to update specific widgets
+        val ids = AppWidgetManager.getInstance(context)
+            .getAppWidgetIds(ComponentName(context, HomeAppsWidgetProvider::class.java))
+        putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, ids)
+    }
+    context.sendBroadcast(intent)
 }
 
 private fun getAppListIcons(context: Context, prefs: Prefs, nonNullDrawable: Drawable): Drawable? {

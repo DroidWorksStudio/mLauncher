@@ -106,9 +106,11 @@ fun Context.launchCalendar() {
 
 fun Context.openDialerApp() {
     try {
-        val sendIntent = Intent(Intent.ACTION_DIAL)
+        val sendIntent = Intent(Intent.ACTION_DIAL).apply {
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        }
         this.startActivity(sendIntent)
-    } catch (e: java.lang.Exception) {
+    } catch (e: Exception) {
         AppLogger.d("openDialerApp", e.toString())
     }
     CrashHandler.logUserAction("Dialer App Launched")
@@ -129,8 +131,10 @@ fun Context.openTextMessagesApp() {
 
 fun Context.openAlarmApp() {
     try {
-        val intent = Intent(AlarmClock.ACTION_SHOW_ALARMS)
-        this.startActivity(intent)
+        val sendIntent = Intent(AlarmClock.ACTION_SHOW_ALARMS).apply {
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        }
+        this.startActivity(sendIntent)
     } catch (e: java.lang.Exception) {
         AppLogger.d("openAlarmApp", e.toString())
     }
@@ -139,7 +143,9 @@ fun Context.openAlarmApp() {
 
 fun Context.openCameraApp() {
     try {
-        val sendIntent = Intent(MediaStore.INTENT_ACTION_STILL_IMAGE_CAMERA)
+        val sendIntent = Intent(MediaStore.INTENT_ACTION_STILL_IMAGE_CAMERA).apply {
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        }
         this.startActivity(sendIntent)
     } catch (e: java.lang.Exception) {
         AppLogger.d("openCameraApp", e.toString())
@@ -149,11 +155,11 @@ fun Context.openCameraApp() {
 
 fun Context.openPhotosApp() {
     try {
-        val intent = Intent(Intent.ACTION_VIEW).apply {
+        val sendIntent = Intent(Intent.ACTION_VIEW).apply {
             type = "image/*"
-            flags = Intent.FLAG_ACTIVITY_NEW_TASK
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
         }
-        this.startActivity(intent)
+        this.startActivity(sendIntent)
     } catch (e: Exception) {
         AppLogger.d("openPhotosApp", e.toString())
     }
@@ -162,10 +168,10 @@ fun Context.openPhotosApp() {
 
 fun Context.openDeviceSettings() {
     try {
-        val intent = Intent(Settings.ACTION_SETTINGS).apply {
-            flags = Intent.FLAG_ACTIVITY_NEW_TASK
+        val sendIntent = Intent(Settings.ACTION_SETTINGS).apply {
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
         }
-        this.startActivity(intent)
+        this.startActivity(sendIntent)
     } catch (e: Exception) {
         AppLogger.d("openDeviceSettings", e.toString())
     }
@@ -178,7 +184,7 @@ fun Context.openWebBrowser() {
         if (defaultBrowserPackage != null) {
             val launchIntent = packageManager.getLaunchIntentForPackage(defaultBrowserPackage)
             if (launchIntent != null) {
-                launchIntent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                launchIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 startActivity(launchIntent)
             } else {
                 AppLogger.d("openDefaultBrowserApp", "No launch intent for package $defaultBrowserPackage")
@@ -194,16 +200,18 @@ fun Context.openWebBrowser() {
 
 
 fun Context.getDefaultBrowserPackageName(): String? {
-    val intent = Intent(Intent.ACTION_VIEW, "https://".toUri())
-    val resolveInfo = packageManager.resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY)
+    val sendIntent = Intent(Intent.ACTION_VIEW, "https://".toUri())
+    val resolveInfo = packageManager.resolveActivity(sendIntent, PackageManager.MATCH_DEFAULT_ONLY)
     return resolveInfo?.activityInfo?.packageName
 }
 
 
 fun Context.openBatteryManager() {
     try {
-        val intent = Intent(Intent.ACTION_POWER_USAGE_SUMMARY)
-        this.startActivity(intent)
+        val sendIntent = Intent(Intent.ACTION_POWER_USAGE_SUMMARY).apply {
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        }
+        this.startActivity(sendIntent)
     } catch (_: ActivityNotFoundException) {
         showLongToast("Battery manager settings are not available on this device.")
     }

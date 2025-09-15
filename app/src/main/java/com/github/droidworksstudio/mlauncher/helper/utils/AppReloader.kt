@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import androidx.lifecycle.ProcessLifecycleOwner
 import androidx.lifecycle.lifecycleScope
+import com.github.droidworksstudio.common.AppLogger
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -23,6 +24,19 @@ object AppReloader {
             delay(100)
             context.startActivity(mainIntent)
             Runtime.getRuntime().exit(0) // Forcefully terminates the current process
+        }
+    }
+
+    fun startApp(context: Context) {
+        try {
+            val packageManager = context.packageManager
+            val intent = packageManager.getLaunchIntentForPackage(context.packageName)
+            intent?.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            if (intent != null) {
+                context.startActivity(intent)
+            }
+        } catch (e: Exception) {
+            AppLogger.d("startApp", e.toString())
         }
     }
 }

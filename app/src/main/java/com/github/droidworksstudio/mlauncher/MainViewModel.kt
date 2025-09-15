@@ -480,7 +480,13 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             // Sort the list
             fullList.sortWith(
                 compareBy<AppListItem> { it.category.ordinal }
-                    .thenBy { it.label.lowercase() }
+                    .thenBy {
+                        it.label
+                            .replace(Regex("[^\\p{L}\\p{N}\\s]"), "")     // keep letters, numbers, spaces
+                            .replace(Regex("\\s+"), " ")                  // collapse multiple spaces
+                            .trim()                                                             // remove leading/trailing spaces
+                            .lowercase()
+                    }
             )
 
             // Build scroll index

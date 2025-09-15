@@ -48,7 +48,7 @@
 
 
     <string name="settings_advanced_title">Advanced</string>
-    <string name="settings_advanced_description">Access app info, default launcher , backup tools and more.</string>
+    <string name="settings_advanced_description">Access app info, default launcher, backup tools and more.</string>
 
     <string name="settings_expert_title">Expert</string>
     <string name="settings_expert_description">Unlock hidden options, and advanced tweaks.</string>
