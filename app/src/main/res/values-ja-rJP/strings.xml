@@ -36,7 +36,7 @@
     <string name="settings_hidden_apps_title">非表示のアプリ</string>
     <string name="settings_hidden_apps_description">非表示のアプリを管理します - 必要に応じてこのリストから任意のアプリを表示します。</string>
     <string name="settings_advanced_title">詳細設定</string>
-    <string name="settings_advanced_description">アプリ情報、デフォルトのランチャー、バックアップ ツールなどにアクセスします。</string>
+    <string name="settings_advanced_description">Access app info, default launcher, backup tools and more.</string>
     <string name="settings_expert_title">専門家</string>
     <string name="settings_expert_description">隠されたオプションや高度な調整をアンロックします。</string>
     <string name="settings_exit_mlauncher_title">マルチランチャーを終了する</string>
