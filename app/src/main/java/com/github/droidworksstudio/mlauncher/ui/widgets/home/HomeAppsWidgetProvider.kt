@@ -36,7 +36,7 @@ class HomeAppsWidgetProvider : AppWidgetProvider() {
 
             for (i in 0 until numApps) {
                 val appModel = prefs.getHomeAppModel(i)
-                val packageName = appModel.label
+                val packageName = appModel.activityPackage
                 if (packageName.isEmpty()) continue
 
                 val itemRv = RemoteViews(context.packageName, R.layout.item_home_app)
@@ -44,10 +44,10 @@ class HomeAppsWidgetProvider : AppWidgetProvider() {
                 // --- App label ---
                 val appLabel = try {
                     context.packageManager.getApplicationLabel(
-                        context.packageManager.getApplicationInfo(packageName, 0)
+                        context.packageManager.getApplicationInfo(appModel.label, 0)
                     ).toString()
                 } catch (_: Exception) {
-                    packageName
+                    appModel.label
                 }
 
                 // --- Get icon safely ---
