@@ -13,6 +13,10 @@ All notable changes to this project will be documented in this file. See [conven
 * Improve Home Apps Widget Layout and Logic ([b3a917cc](https://github.com/DroidWorksStudio/mLauncher/commit/b3a917cc))
 * Standardize widget update and FAB action handling ([66641117](https://github.com/DroidWorksStudio/mLauncher/commit/66641117))
 
+### Build:
+
+* Bump rexml in the bundler group across 1 directory ([#897](https://github.com/DroidWorksStudio/mLauncher/pull/897)) ([abc9f006](https://github.com/DroidWorksStudio/mLauncher/commit/abc9f006))
+
 ### Feature Removals:
 
 * Remove unused onStatusChanged method ([dbf85b34](https://github.com/DroidWorksStudio/mLauncher/commit/dbf85b34))
