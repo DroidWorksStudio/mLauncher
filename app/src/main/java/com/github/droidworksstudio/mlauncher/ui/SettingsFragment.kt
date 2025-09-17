@@ -299,7 +299,7 @@ class SettingsFragment : BaseFragment() {
 
         // Filter out 'TogglePrivateSpace' if private space is not supported
         val filteredActions =
-            if (!PrivateSpaceManager(requireContext()).isPrivateSpaceSupported()) {
+            if (!PrivateSpaceManager(requireContext()).isPrivateSpaceSupported() || !ismlauncherDefault(requireContext())) {
                 actions.filter { it != Action.TogglePrivateSpace }
             } else {
                 actions
@@ -326,9 +326,9 @@ class SettingsFragment : BaseFragment() {
 
         // Private Spaces Settings
         val (setPrivateSpacesIcon, setPrivateSpacesStatus) = if (toggledPrivateSpaces) {
-            R.drawable.ic_lock to R.string.locked
+            R.drawable.private_profile_on to R.string.locked
         } else {
-            R.drawable.ic_unlock to R.string.unlocked
+            R.drawable.private_profile_off to R.string.unlocked
         }
 
         // Advanced Settings
@@ -822,8 +822,7 @@ class SettingsFragment : BaseFragment() {
                                         profileType = "SYSTEM",
                                         customLabel = "Clear",
                                         customTag = emptyString(),
-                                        category = AppCategory.REGULAR,
-                                        isHeader = false // if this is meant to act like a header or special row; else use false
+                                        category = AppCategory.REGULAR
                                     )
 
                                     for (n in newHomeAppsNum.toInt()..oldHomeAppsNum) {

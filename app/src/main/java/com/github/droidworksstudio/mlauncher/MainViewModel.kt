@@ -31,7 +31,6 @@ import com.github.droidworksstudio.mlauncher.data.ContactCategory
 import com.github.droidworksstudio.mlauncher.data.ContactListItem
 import com.github.droidworksstudio.mlauncher.data.Prefs
 import com.github.droidworksstudio.mlauncher.helper.analytics.AppUsageMonitor
-import com.github.droidworksstudio.mlauncher.helper.getAppNameFromPackage
 import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
 import com.github.droidworksstudio.mlauncher.helper.logActivitiesFromPackage
 import com.github.droidworksstudio.mlauncher.helper.utils.BiometricHelper
@@ -413,8 +412,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                                 profileType = "SYSTEM",
                                 customLabel = alias,
                                 customTag = tag,
-                                category = AppCategory.RECENT,
-                                isHeader = false
+                                category = AppCategory.RECENT
                             )
                         )
                         seenAppKeys.add(appKey)
@@ -426,12 +424,14 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 // ✅ Query apps *for this user profile*
                 val activities = launcherApps.getActivityList(null, profile)
 
-                AppLogger.d("AppListDebug", "📦 Found ${activities.size} launcher activities for profile: $profile|$profileType")
+                AppLogger.d("AppListDebug", "📦 Found ${activities.size} launcher activities for profile:$profile|$profileType")
+
+                prefs.setProfileCounter(profileType, activities.size)
 
                 for (activityInfo in activities) {
                     val packageName = activityInfo.applicationInfo.packageName
                     val className = activityInfo.componentName.className
-                    val label = getAppNameFromPackage(context, packageName)
+                    val label = activityInfo.label.toString()
 
 
                     if (packageName == BuildConfig.APPLICATION_ID) continue
@@ -467,8 +467,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                             profileType = "SYSTEM", // set dynamically if you can
                             customLabel = alias,
                             customTag = tag,
-                            category = category,
-                            isHeader = false
+                            category = category
                         )
                     )
 

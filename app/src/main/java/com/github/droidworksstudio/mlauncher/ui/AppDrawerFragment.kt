@@ -27,6 +27,7 @@ import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.widget.SearchView
 import androidx.core.net.toUri
+import androidx.core.os.bundleOf
 import androidx.core.view.isVisible
 import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.Observer
@@ -54,6 +55,7 @@ import com.github.droidworksstudio.mlauncher.helper.emptyString
 import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
 import com.github.droidworksstudio.mlauncher.helper.hasContactsPermission
 import com.github.droidworksstudio.mlauncher.helper.openAppInfo
+import com.github.droidworksstudio.mlauncher.helper.utils.PrivateSpaceManager
 import com.github.droidworksstudio.mlauncher.ui.adapter.AppDrawerAdapter
 import com.github.droidworksstudio.mlauncher.ui.adapter.ContactDrawerAdapter
 
@@ -122,6 +124,8 @@ class AppDrawerFragment : BaseFragment() {
         val flag = AppDrawerFlag.valueOf(flagString)
         val n = arguments?.getInt("n", 0) ?: 0
 
+        val profileType = arguments?.getString("profileType", null)
+
         when (flag) {
             AppDrawerFlag.SetDoubleTap,
             AppDrawerFlag.SetShortSwipeRight,
@@ -153,8 +157,7 @@ class AppDrawerFragment : BaseFragment() {
                     profileType = "SYSTEM",
                     customLabel = "Clear",
                     customTag = emptyString(),
-                    category = AppCategory.REGULAR,
-                    isHeader = false // if this is meant to act like a header or special row; else use false
+                    category = AppCategory.REGULAR
                 )
 
                 binding.drawerButton.setOnClickListener {
@@ -254,7 +257,7 @@ class AppDrawerFragment : BaseFragment() {
         searchTextView.textSize = textSize
 
         if (appAdapter != null && contactAdapter != null) {
-            initViewModel(flag, viewModel, appAdapter, contactAdapter)
+            initViewModel(flag, viewModel, appAdapter, contactAdapter, profileType)
         }
 
         binding.appsRecyclerView.layoutManager = LinearLayoutManager(requireContext())
@@ -398,6 +401,35 @@ class AppDrawerFragment : BaseFragment() {
             when (flag) {
                 AppDrawerFlag.LaunchApp -> {
                     binding.search.queryHint = getLocalizedString(R.string.show_apps)
+                    binding.workApps.apply {
+                        isVisible = ((prefs.getProfileCounter("WORK") > 0) && profileType != "WORK")
+                        setOnClickListener {
+                            findNavController().navigate(
+                                R.id.action_appListFragment_to_appListFragment,
+                                bundleOf("flag" to flag.toString(), "n" to view.id, "profileType" to "WORK")
+                            )
+                        }
+                    }
+
+                    binding.privateApps.apply {
+                        isVisible = ((prefs.getProfileCounter("PRIVATE") > 0) && !PrivateSpaceManager(requireContext()).isPrivateSpaceLocked() && profileType != "PRIVATE")
+                        setOnClickListener {
+                            findNavController().navigate(
+                                R.id.action_appListFragment_to_appListFragment,
+                                bundleOf("flag" to flag.toString(), "n" to view.id, "profileType" to "PRIVATE")
+                            )
+                        }
+                    }
+
+                    binding.systemApps.apply {
+                        isVisible = ((prefs.getProfileCounter("SYSTEM") > 0) && profileType != "SYSTEM")
+                        setOnClickListener {
+                            findNavController().navigate(
+                                R.id.action_appListFragment_to_appListFragment,
+                                bundleOf("flag" to flag.toString(), "n" to view.id, "profileType" to "SYSTEM")
+                            )
+                        }
+                    }
                     binding.internetSearch.apply {
                         isVisible = appListButtonFlags[0]
                         setOnClickListener {
@@ -565,7 +597,8 @@ class AppDrawerFragment : BaseFragment() {
         flag: AppDrawerFlag,
         viewModel: MainViewModel,
         appAdapter: AppDrawerAdapter,
-        contactAdapter: ContactDrawerAdapter
+        contactAdapter: ContactDrawerAdapter,
+        profileFilter: String? = null // 🔹 pass "PRIVATE", "WORK", "SYSTEM", or null for all
     ) {
         viewModel.hiddenApps.observe(viewLifecycleOwner, Observer {
             if (flag != AppDrawerFlag.HiddenApps) return@Observer
@@ -604,19 +637,13 @@ class AppDrawerFragment : BaseFragment() {
 
                 val classifiedList = rawAppList.map { app ->
                     val isPrivate = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.VANILLA_ICE_CREAM) {
-                        // Only call getLauncherUserInfo if API supports it
                         val userInfo = launcherApps.getLauncherUserInfo(app.user)
                         userInfo?.userType == UserManager.USER_TYPE_PROFILE_PRIVATE
-                    } else {
-                        false
-                    }
+                    } else false
 
                     val isWork = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-                        // Use isManagedProfile only if the API supports it
                         userManager.isManagedProfile && !isPrivate
-                    } else {
-                        false
-                    }
+                    } else false
 
                     val isSystemUser = userManager.isSystemUser
 
@@ -632,63 +659,34 @@ class AppDrawerFragment : BaseFragment() {
 
                 AppLogger.d("classifiedList", "Classified app list: $classifiedList")
 
-                val systemApps = classifiedList.filter { it.profileType == "SYSTEM" }
-                val workApps = classifiedList.filter { it.profileType == "WORK" }
-                val privateApps = classifiedList.filter { it.profileType == "PRIVATE" }
+                // 🔹 Filter by requested profile type
+                val filteredList = when (profileFilter) {
+                    "PRIVATE" -> classifiedList.filter { it.profileType == "PRIVATE" }
+                    "WORK" -> classifiedList.filter { it.profileType == "WORK" }
+                    "SYSTEM" -> classifiedList.filter { it.profileType == "SYSTEM" }
+                    else -> classifiedList // no filter, show all
+                }
+
+                // 🔹 Build merged list with headers, but only from filtered apps
+                val systemApps = filteredList.filter { it.profileType == "SYSTEM" }
+                val workApps = filteredList.filter { it.profileType == "WORK" }
+                val privateApps = filteredList.filter { it.profileType == "PRIVATE" }
 
                 val mergedList = mutableListOf<AppListItem>()
 
                 if (systemApps.isNotEmpty()) {
-                    if (workApps.isNotEmpty() || privateApps.isNotEmpty()) {
-                        mergedList.add(
-                            AppListItem(
-                                "Personal apps",
-                                "app.mlauncher.system",
-                                "app.mlauncher.system",
-                                systemApps.first().user,
-                                profileType = "HEADER",
-                                customLabel = emptyString(),
-                                customTag = emptyString(),
-                                category = AppCategory.REGULAR,
-                                isHeader = true
-                            )
-                        )
-                    }
                     mergedList.addAll(systemApps)
                 }
+
                 if (privateApps.isNotEmpty()) {
-                    mergedList.add(
-                        AppListItem(
-                            "Private space",
-                            "app.mlauncher.private",
-                            "app.mlauncher.private",
-                            privateApps.first().user,
-                            profileType = "HEADER",
-                            customLabel = emptyString(),
-                            customTag = emptyString(),
-                            category = AppCategory.REGULAR,
-                            isHeader = true
-                        )
-                    )
                     mergedList.addAll(privateApps)
                 }
+
                 if (workApps.isNotEmpty()) {
-                    mergedList.add(
-                        AppListItem(
-                            "Work profile",
-                            "app.mlauncher.work",
-                            "app.mlauncher.work",
-                            workApps.first().user,
-                            profileType = "HEADER",
-                            customLabel = emptyString(),
-                            customTag = emptyString(),
-                            category = AppCategory.REGULAR,
-                            isHeader = true
-                        )
-                    )
                     mergedList.addAll(workApps)
                 }
 
+                // UI updates
                 binding.listEmptyHint.isVisible = mergedList.isEmpty()
                 binding.sidebarContainer.isVisible = prefs.showAZSidebar
                 populateAppList(mergedList, appAdapter)

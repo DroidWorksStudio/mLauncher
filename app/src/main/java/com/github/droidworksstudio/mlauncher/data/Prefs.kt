@@ -20,6 +20,7 @@ import com.squareup.moshi.Types
 import java.lang.reflect.ParameterizedType
 
 private const val PREFS_FILENAME = "app.mlauncher.prefs"
+private const val PREFS_JUNK_FILENAME = "app.mlauncher.prefs.junk"
 private const val PREFS_ONBOARDING_FILENAME = "app.mlauncher.prefs.onboarding"
 
 private const val APP_VERSION = "APP_VERSION"
@@ -165,6 +166,7 @@ class Prefs(val context: Context) {
     val messageWrongAdapter: JsonAdapter<List<MessageWrong>> = moshi.adapter(messageWrongListType)
 
     internal val prefsNormal: SharedPreferences = context.getSharedPreferences(PREFS_FILENAME, 0)
+    internal val prefsJunk: SharedPreferences = context.getSharedPreferences(PREFS_JUNK_FILENAME, 0)
     internal val prefsOnboarding: SharedPreferences = context.getSharedPreferences(PREFS_ONBOARDING_FILENAME, 0)
     internal val pinnedAppsKey = PINNED_APPS
 
@@ -960,6 +962,14 @@ class Prefs(val context: Context) {
 
     fun setAppAlias(appPackage: String, appAlias: String) {
         prefsNormal.edit { putString("${appPackage}_ALIAS", appAlias) }
+    }
+
+    fun setProfileCounter(profile: String, counter: Int) {
+        prefsJunk.edit { putInt(profile, counter) }
+    }
+
+    fun getProfileCounter(profile: String): Int {
+        return prefsJunk.getInt(profile, 0)
     }
 
     fun getAppTag(appPackage: String, userHandle: UserHandle? = null): String {

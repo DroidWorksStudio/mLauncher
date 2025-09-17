@@ -619,12 +619,6 @@ private fun getInstallSource(packageManager: PackageManager, packageName: String
     }
 }
 
-fun getAppNameFromPackage(context: Context, packageName: String): String {
-    val packageManager: PackageManager = context.packageManager
-    val appInfo = packageManager.getApplicationInfo(packageName, 0)
-    return packageManager.getApplicationLabel(appInfo).toString()
-}
-
 fun getSystemIcons(
     context: Context,
     prefs: Prefs,

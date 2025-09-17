@@ -549,7 +549,7 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
             if (findNavController().currentDestination?.id == R.id.mainFragment) {
                 findNavController().navigate(
                     R.id.action_mainFragment_to_appListFragment,
-                    bundleOf("flag" to flag.toString(), "n" to n)
+                    bundleOf("flag" to flag.toString(), "n" to n, "profileType" to "SYSTEM")
                 )
             }
         } catch (e: Exception) {

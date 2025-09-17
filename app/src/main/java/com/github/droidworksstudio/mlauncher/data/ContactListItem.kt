@@ -19,16 +19,12 @@ val contactCollator: Collator = Collator.getInstance()
  *
  * @property category
  * Used to separate contacts into groups (e.g., FAVORITE, RECENT, REGULAR).
- *
- * @property isHeader
- * Flag to mark items that are section headers in the list.
  */
 data class ContactListItem(
     val displayName: String,
     val phoneNumber: String,
     val email: String,
-    var category: ContactCategory = ContactCategory.REGULAR,
-    val isHeader: Boolean = false
+    var category: ContactCategory = ContactCategory.REGULAR
 ) : Comparable<ContactListItem> {
 
     /** Speed up sort and search */
