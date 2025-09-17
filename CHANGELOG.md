@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/main) - TBD
 
+### Enhancements:
+
+* Enhance Profile Handling and App List Filtering ([2cdb6900](https://github.com/DroidWorksStudio/mLauncher/commit/2cdb6900))
+
 ### Refactors:
 
 * Improve Home Apps Widget Layout and Logic ([b3a917cc](https://github.com/DroidWorksStudio/mLauncher/commit/b3a917cc))
