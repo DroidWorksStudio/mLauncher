@@ -106,7 +106,6 @@
     <string name="show_daily_word">Show Daily Word</string>
     <string name="show_battery">Show Battery</string>
     <string name="show_battery_icon">Show Battery Icon</string>
-    <string name="show_total_screen_time">Show Total Screen Time</string>
 
     <string name="weather">Weather</string>
     <string name="show_weather">Show Weather</string>
@@ -147,6 +146,7 @@
     <string name="filter_strength">Fuzzy Finder Strength</string>
     <string name="show_background">Show Background</string>
     <string name="background_opacity">Background Transparency</string>
+    <string name="total_screen_time">Total Screen Time</string>
 
     <string name="element_alignment">Element Alignment</string>
 

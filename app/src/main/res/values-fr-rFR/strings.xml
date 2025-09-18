@@ -78,7 +78,7 @@
     <string name="show_daily_word">Afficher le mot quotidien</string>
     <string name="show_battery">Afficher la batterie</string>
     <string name="show_battery_icon">Afficher l\'icône de la batterie</string>
-    <string name="show_total_screen_time">Afficher le temps total d\'écran</string>
+    <string name="total_screen_time">Afficher le temps total d\'écran</string>
     <string name="weather">Météo</string>
     <string name="show_weather">Afficher la météo</string>
     <string name="gps_location">Localisation GPS</string>

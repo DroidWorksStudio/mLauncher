@@ -78,7 +78,7 @@
     <string name="show_daily_word">Günlük Sözcüğü Göster</string>
     <string name="show_battery">Pil\'i göster</string>
     <string name="show_battery_icon">Pil Simgesini Göster</string>
-    <string name="show_total_screen_time">Toplam Ekran Süresini Göster</string>
+    <string name="total_screen_time">Toplam Ekran Süresini Göster</string>
     <string name="weather">Hava durumu</string>
     <string name="show_weather">Hava Durumunu Göster</string>
     <string name="gps_location">GPS Konumu</string>

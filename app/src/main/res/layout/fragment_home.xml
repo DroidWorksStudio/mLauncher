@@ -162,7 +162,7 @@
         android:layout_gravity="bottom|center_horizontal"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        android:text="@string/show_total_screen_time"
+        android:text="@string/total_screen_time"
         android:visibility="gone" />
 
     <!-- Set default launcher -->

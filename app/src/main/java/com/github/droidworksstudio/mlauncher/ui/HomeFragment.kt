@@ -830,7 +830,7 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
         }
 
         // Create a new TextView instance
-        val totalText = getLocalizedString(R.string.show_total_screen_time)
+        val totalText = getLocalizedString(R.string.total_screen_time)
         val totalTime = appUsageMonitor.getTotalScreenTime(requireContext())
         val totalScreenTime = formatMillisToHMS(totalTime, true)
         AppLogger.d("totalScreenTime", totalScreenTime)
