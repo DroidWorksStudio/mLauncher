@@ -93,6 +93,7 @@ object SettingsComposable {
         title: String,
         iconSize: Dp = 96.dp,
         fontSize: TextUnit = 24.sp,
+        fontColor: Color = SettingsTheme.typography.title.color,
         onIconClick: (() -> Unit)? = null // Optional click callback
     ) {
         val fontSizeSp = fontSize.value
@@ -119,7 +120,7 @@ object SettingsComposable {
                     FontAppCompatTextView(context).apply {
                         text = title
                         textSize = fontSizeSp
-                        setTextColor(android.graphics.Color.WHITE)
+                        setTextColor(fontColor.toArgb())
                         setPadding(0, 0, 0, 24)
                     }
                 },
