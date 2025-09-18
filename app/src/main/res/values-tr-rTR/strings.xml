@@ -36,7 +36,7 @@
     <string name="settings_hidden_apps_title">Gizli uygulamalar</string>
     <string name="settings_hidden_apps_description">Gizli uygulamaları yönetin — gerektiğinde bu listeden herhangi bir uygulamayı gösterin.</string>
     <string name="settings_advanced_title">Gelişmiş Ayarlar</string>
-    <string name="settings_advanced_description">Access app info, default launcher, backup tools and more.</string>
+    <string name="settings_advanced_description">Uygulama bilgilerine, varsayılan başlatıcıya, yedekleme araçlarına ve daha fazlasına erişin.</string>
     <string name="settings_expert_title">Uzman</string>
     <string name="settings_expert_description">Gizli seçenekleri ve gelişmiş ayarları açın.</string>
     <string name="settings_exit_mlauncher_title">MultiLauncher\'dan çık</string>
