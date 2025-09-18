@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/main) - TBD
 
+### Bug Fixes:
+
+* Ensure proper dismissal of Device Stats BottomSheet ([8bebfbe6](https://github.com/DroidWorksStudio/mLauncher/commit/8bebfbe6))
+
 ### Refactors:
 
 * Rename screen time string resource ([44a17131](https://github.com/DroidWorksStudio/mLauncher/commit/44a17131))
@@ -12,6 +16,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 * Updated Language Files. ([#900](https://github.com/DroidWorksStudio/mLauncher/pull/900)) ([4c35704e](https://github.com/DroidWorksStudio/mLauncher/commit/4c35704e))
 * Updated Language Files. ([#899](https://github.com/DroidWorksStudio/mLauncher/pull/899)) ([703ced86](https://github.com/DroidWorksStudio/mLauncher/commit/703ced86))
+
+### Dependencies:
+
+* Update lifecycle-viewmodel-ktx to 2.9.4 ([c99b0f7b](https://github.com/DroidWorksStudio/mLauncher/commit/c99b0f7b))
 
 ## [1.11.1.1](https://github.com/DroidWorksStudio/mLauncher/tree/1.11.1.1) - (17, September 2025)
 
