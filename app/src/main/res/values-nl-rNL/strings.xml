@@ -36,7 +36,7 @@
     <string name="settings_hidden_apps_title">Verborgen apps</string>
     <string name="settings_hidden_apps_description">Beheer verborgen apps: maak indien nodig een app uit deze lijst zichtbaar.</string>
     <string name="settings_advanced_title">Geavanceerd</string>
-    <string name="settings_advanced_description">Access app info, default launcher, backup tools and more.</string>
+    <string name="settings_advanced_description">Krijg toegang tot app-info, standaard launcher, back-uptools en meer.</string>
     <string name="settings_expert_title">Deskundige</string>
     <string name="settings_expert_description">Ontgrendel verborgen opties en geavanceerde aanpassingen.</string>
     <string name="settings_exit_mlauncher_title">MultiLauncher verlaten</string>
@@ -78,7 +78,6 @@
     <string name="show_daily_word">Dagelijks woord tonen</string>
     <string name="show_battery">Batterij weergeven</string>
     <string name="show_battery_icon">Batterijpictogram weergeven</string>
-    <string name="total_screen_time">Toon totale schermtijd</string>
     <string name="weather">Weer</string>
     <string name="show_weather">Weer weergeven</string>
     <string name="gps_location">GPS-locatie</string>
@@ -110,6 +109,7 @@
     <string name="filter_strength">Fuzzy Finder-sterkte</string>
     <string name="show_background">Achtergrond weergeven</string>
     <string name="background_opacity">Achtergrond Transparantie</string>
+    <string name="total_screen_time">Toon totale schermtijd</string>
     <string name="element_alignment">Elementuitlijning</string>
     <string name="date_alignment">Datum</string>
     <string name="clock_alignment">Klok</string>
