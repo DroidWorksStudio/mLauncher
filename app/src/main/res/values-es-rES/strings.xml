@@ -78,7 +78,6 @@
     <string name="show_daily_word">Mostrar palabra diaria</string>
     <string name="show_battery">Mostrar nivel de batería</string>
     <string name="show_battery_icon">Mostrar icono de batería</string>
-    <string name="total_screen_time">Mostrar el tiempo total de pantalla</string>
     <string name="weather">Clima</string>
     <string name="show_weather">Mostrar el tiempo</string>
     <string name="gps_location">Ubicación GPS</string>
@@ -110,6 +109,7 @@
     <string name="filter_strength">Fuerza del buscador difuso</string>
     <string name="show_background">Mostrar antecedentes</string>
     <string name="background_opacity">Transparencia de fondo</string>
+    <string name="total_screen_time">Mostrar el tiempo total de pantalla</string>
     <string name="element_alignment">Alineación de elementos</string>
     <string name="date_alignment">Fecha</string>
     <string name="clock_alignment">Reloj</string>
