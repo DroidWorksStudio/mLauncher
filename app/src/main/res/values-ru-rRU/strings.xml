@@ -78,7 +78,6 @@
     <string name="show_daily_word">Показать ежедневное слово</string>
     <string name="show_battery">Показать батарею</string>
     <string name="show_battery_icon">Показать значок батареи</string>
-    <string name="total_screen_time">Показать общее время экрана</string>
     <string name="weather">Погода</string>
     <string name="show_weather">Показать погоду</string>
     <string name="gps_location">Местоположение GPS</string>
@@ -110,6 +109,7 @@
     <string name="filter_strength">Сила нечеткого искателя</string>
     <string name="show_background">Показать фон</string>
     <string name="background_opacity">Прозрачность фона</string>
+    <string name="total_screen_time">Показать общее время экрана</string>
     <string name="element_alignment">Выравнивание элементов</string>
     <string name="date_alignment">Дата</string>
     <string name="clock_alignment">Часы</string>
