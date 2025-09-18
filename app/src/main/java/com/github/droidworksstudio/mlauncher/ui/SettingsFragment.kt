@@ -2698,6 +2698,7 @@ class SettingsFragment : BaseFragment() {
         dialogBuilder.colorPickerBottomSheet?.dismiss()
         dialogBuilder.sliderBottomSheet?.dismiss()
         dialogBuilder.flagSettingsBottomSheet?.dismiss()
+        dialogBuilder.bottomSheet?.dismiss()
     }
 
     override fun onDestroyView() {

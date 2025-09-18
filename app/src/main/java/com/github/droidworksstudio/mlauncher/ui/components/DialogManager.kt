@@ -783,9 +783,10 @@ class DialogManager(val context: Context, val activity: Activity) {
         }
     }
 
+    var bottomSheet: LockedBottomSheetDialog? = null
     fun showDeviceStatsBottomSheet(context: Context) {
-        val bottomSheet = LockedBottomSheetDialog(context)
-        
+        bottomSheet?.dismiss()
+
         HapticFeedbackService.trigger(
             context,
             HapticFeedbackService.EffectType.DEFAULT
@@ -959,7 +960,9 @@ class DialogManager(val context: Context, val activity: Activity) {
             }
         }
 
-        bottomSheet.setContentView(rootLayout)
-        bottomSheet.show()
+        bottomSheet = LockedBottomSheetDialog(context).apply {
+            setContentView(rootLayout)
+            show()
+        }
     }
 }
