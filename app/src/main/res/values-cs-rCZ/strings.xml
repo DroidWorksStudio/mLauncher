@@ -36,7 +36,7 @@
     <string name="settings_hidden_apps_title">Skryté aplikace</string>
     <string name="settings_hidden_apps_description">Spravovat skryté aplikace – v případě potřeby zobrazí jakoukoli aplikaci v tomto seznamu.</string>
     <string name="settings_advanced_title">Moderní</string>
-    <string name="settings_advanced_description">Access app info, default launcher, backup tools and more.</string>
+    <string name="settings_advanced_description">Přístup k informacím o aplikacích, výchozímu spouštěči, nástrojům pro zálohování a dalším funkcím.</string>
     <string name="settings_expert_title">Expert</string>
     <string name="settings_expert_description">Odemkněte skryté možnosti a pokročilá vylepšení.</string>
     <string name="settings_exit_mlauncher_title">Ukončit MultiLauncher</string>
@@ -78,7 +78,6 @@
     <string name="show_daily_word">Zobrazit denní slovo</string>
     <string name="show_battery">Zobrazit baterii</string>
     <string name="show_battery_icon">Zobrazit ikonu baterie</string>
-    <string name="total_screen_time">Zobrazit celkový čas u obrazovky</string>
     <string name="weather">Počasí</string>
     <string name="show_weather">Zobrazit počasí</string>
     <string name="gps_location">GPS poloha</string>
@@ -110,6 +109,7 @@
     <string name="filter_strength">Síla fuzzy vyhledávače</string>
     <string name="show_background">Zobrazit pozadí</string>
     <string name="background_opacity">Průhlednost pozadí</string>
+    <string name="total_screen_time">Zobrazit celkový čas u obrazovky</string>
     <string name="element_alignment">Zarovnání prvků</string>
     <string name="date_alignment">Datum</string>
     <string name="clock_alignment">Hodiny</string>

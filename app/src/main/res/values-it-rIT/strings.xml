@@ -36,7 +36,7 @@
     <string name="settings_hidden_apps_title">Applicazioni nascoste</string>
     <string name="settings_hidden_apps_description">Gestisci le app nascoste: quando necessario, puoi visualizzare qualsiasi app nascosta da questo elenco.</string>
     <string name="settings_advanced_title">Impostazioni avanzate</string>
-    <string name="settings_advanced_description">Access app info, default launcher, backup tools and more.</string>
+    <string name="settings_advanced_description">Accedi alle informazioni sulle app, al launcher predefinito, agli strumenti di backup e altro ancora.</string>
     <string name="settings_expert_title">Esperto</string>
     <string name="settings_expert_description">Sblocca opzioni nascoste e modifiche avanzate.</string>
     <string name="settings_exit_mlauncher_title">Esci da MultiLauncher</string>
@@ -78,7 +78,6 @@
     <string name="show_daily_word">Mostra Parola Giornaliera</string>
     <string name="show_battery">Mostra batteria</string>
     <string name="show_battery_icon">Mostra l\'icona della batteria</string>
-    <string name="total_screen_time">Mostra tempo totale di utilizzo dello schermo</string>
     <string name="weather">Tempo atmosferico</string>
     <string name="show_weather">Mostra meteo</string>
     <string name="gps_location">Posizione GPS</string>
@@ -110,6 +109,7 @@
     <string name="filter_strength">Forza del Fuzzy Finder</string>
     <string name="show_background">Mostra sfondo</string>
     <string name="background_opacity">Trasparenza dello sfondo</string>
+    <string name="total_screen_time">Mostra tempo totale di utilizzo dello schermo</string>
     <string name="element_alignment">Allineamento degli elementi</string>
     <string name="date_alignment">Data</string>
     <string name="clock_alignment">Orologio</string>

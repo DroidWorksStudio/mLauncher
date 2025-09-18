@@ -36,7 +36,7 @@
     <string name="settings_hidden_apps_title">التطبيقات المخفية</string>
     <string name="settings_hidden_apps_description">إدارة التطبيقات المخفية - إظهار أي تطبيق مخفي من هذه القائمة عند الحاجة إلى ذلك.</string>
     <string name="settings_advanced_title">الإعدادات المتقدمة</string>
-    <string name="settings_advanced_description">Access app info, default launcher, backup tools and more.</string>
+    <string name="settings_advanced_description">الوصول إلى معلومات التطبيق، والمشغل الافتراضي، وأدوات النسخ الاحتياطي والمزيد.</string>
     <string name="settings_expert_title">خبير</string>
     <string name="settings_expert_description">افتح الخيارات المخفية والتعديلات المتقدمة.</string>
     <string name="settings_exit_mlauncher_title">الخروج من MultiLauncher</string>
@@ -78,7 +78,6 @@
     <string name="show_daily_word">إظهار الكلمة اليومية</string>
     <string name="show_battery">عرض البطارية</string>
     <string name="show_battery_icon">إظهار أيقونة البطارية</string>
-    <string name="total_screen_time">إظهار إجمالي وقت الشاشة</string>
     <string name="weather">طقس</string>
     <string name="show_weather">عرض الطقس</string>
     <string name="gps_location">موقع GPS</string>
@@ -110,6 +109,7 @@
     <string name="filter_strength">قوة الباحث الضبابي</string>
     <string name="show_background">إظهار الخلفية</string>
     <string name="background_opacity">شفافية الخلفية</string>
+    <string name="total_screen_time">إظهار إجمالي وقت الشاشة</string>
     <string name="element_alignment">محاذاة العناصر</string>
     <string name="date_alignment">تاريخ</string>
     <string name="clock_alignment">ساعة</string>

@@ -36,7 +36,7 @@
     <string name="settings_hidden_apps_title">Hidden apps</string>
     <string name="settings_hidden_apps_description">숨겨진 앱 관리 - 필요할 때 이 목록에서 모든 앱을 숨겨진 상태로 유지합니다.</string>
     <string name="settings_advanced_title">고급 설정</string>
-    <string name="settings_advanced_description">Access app info, default launcher, backup tools and more.</string>
+    <string name="settings_advanced_description">앱 정보, 기본 런처, 백업 도구 등에 액세스하세요.</string>
     <string name="settings_expert_title">전문가</string>
     <string name="settings_expert_description">숨겨진 옵션과 고급 조정 기능을 잠금 해제하세요.</string>
     <string name="settings_exit_mlauncher_title">MultiLauncher 종료</string>
@@ -78,7 +78,6 @@
     <string name="show_daily_word">일일 단어 표시</string>
     <string name="show_battery">배터리 표시</string>
     <string name="show_battery_icon">배터리 아이콘 표시</string>
-    <string name="total_screen_time">총 화면 시간 표시</string>
     <string name="weather">날씨</string>
     <string name="show_weather">날씨 표시</string>
     <string name="gps_location">GPS 위치</string>
@@ -110,6 +109,7 @@
     <string name="filter_strength">퍼지 파인더 강도</string>
     <string name="show_background">배경보기</string>
     <string name="background_opacity">배경 투명성</string>
+    <string name="total_screen_time">총 화면 시간 표시</string>
     <string name="element_alignment">요소 정렬</string>
     <string name="date_alignment">날짜</string>
     <string name="clock_alignment">시계</string>

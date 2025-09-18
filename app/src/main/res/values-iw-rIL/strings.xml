@@ -36,7 +36,7 @@
     <string name="settings_hidden_apps_title">יישומים מוסתרים</string>
     <string name="settings_hidden_apps_description">ניהול אפליקציות נסתרות - בטל הסתרה של כל אפליקציה מרשימה זו בעת הצורך.</string>
     <string name="settings_advanced_title">הגדרות מתקדמות</string>
-    <string name="settings_advanced_description">Access app info, default launcher, backup tools and more.</string>
+    <string name="settings_advanced_description">גישה למידע על אפליקציות, מפעיל ברירת מחדל, כלי גיבוי ועוד.</string>
     <string name="settings_expert_title">מוּמחֶה</string>
     <string name="settings_expert_description">פתח אפשרויות נסתרות ושיפורים מתקדמים.</string>
     <string name="settings_exit_mlauncher_title">צא מ-MultiLauncher</string>
@@ -78,7 +78,6 @@
     <string name="show_daily_word">הצג מסר יומי</string>
     <string name="show_battery">הצג סוללה</string>
     <string name="show_battery_icon">הצגת סמליל סוללה</string>
-    <string name="total_screen_time">הצג זמן מסך כולל</string>
     <string name="weather">מֶזֶג אֲוִיר</string>
     <string name="show_weather">הצג מזג אוויר</string>
     <string name="gps_location">מיקום GPS</string>
@@ -110,6 +109,7 @@
     <string name="filter_strength">עוצמת מאתר מטושטש</string>
     <string name="show_background">הצג רקע</string>
     <string name="background_opacity">שקיפות רקע</string>
+    <string name="total_screen_time">הצג זמן מסך כולל</string>
     <string name="element_alignment">יישור אלמנטים</string>
     <string name="date_alignment">תאריך</string>
     <string name="clock_alignment">שעון</string>

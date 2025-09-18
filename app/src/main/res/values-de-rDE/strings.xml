@@ -36,7 +36,7 @@
     <string name="settings_hidden_apps_title">Versteckte Apps</string>
     <string name="settings_hidden_apps_description">Versteckte Apps verwalten – blenden Sie bei Bedarf jede App aus dieser Liste ein.</string>
     <string name="settings_advanced_title">Erweiterte Einstellungen</string>
-    <string name="settings_advanced_description">Access app info, default launcher, backup tools and more.</string>
+    <string name="settings_advanced_description">Greifen Sie auf App-Informationen, Standard-Launcher, Sicherungstools und mehr zu.</string>
     <string name="settings_expert_title">Experte</string>
     <string name="settings_expert_description">Schalten Sie versteckte Optionen und erweiterte Optimierungen frei.</string>
     <string name="settings_exit_mlauncher_title">MultiLauncher beenden</string>
@@ -78,7 +78,6 @@
     <string name="show_daily_word">Tägliches Wort anzeigen</string>
     <string name="show_battery">Akku anzeigen</string>
     <string name="show_battery_icon">Akkusymbol anzeigen</string>
-    <string name="total_screen_time">Gesamte Bildschirmzeit anzeigen</string>
     <string name="weather">Wetter</string>
     <string name="show_weather">Wetter anzeigen</string>
     <string name="gps_location">GPS-Standort</string>
@@ -110,6 +109,7 @@
     <string name="filter_strength">Fuzzy-Finder-Stärke</string>
     <string name="show_background">Hintergrund anzeigen</string>
     <string name="background_opacity">Hintergrundtransparenz</string>
+    <string name="total_screen_time">Gesamte Bildschirmzeit anzeigen</string>
     <string name="element_alignment">Elementausrichtung</string>
     <string name="date_alignment">Datum</string>
     <string name="clock_alignment">Uhr</string>

@@ -36,7 +36,7 @@
     <string name="settings_hidden_apps_title">Скрытые приложения</string>
     <string name="settings_hidden_apps_description">Управление скрытыми приложениями — при необходимости отобразите любое приложение из этого списка.</string>
     <string name="settings_advanced_title">Расширенные настройки</string>
-    <string name="settings_advanced_description">Access app info, default launcher, backup tools and more.</string>
+    <string name="settings_advanced_description">Доступ к информации о приложении, средству запуска по умолчанию, инструментам резервного копирования и многому другому.</string>
     <string name="settings_expert_title">Эксперт</string>
     <string name="settings_expert_description">Разблокируйте скрытые опции и расширенные настройки.</string>
     <string name="settings_exit_mlauncher_title">Выйти из MultiLauncher</string>
@@ -78,7 +78,6 @@
     <string name="show_daily_word">Показать ежедневное слово</string>
     <string name="show_battery">Показать батарею</string>
     <string name="show_battery_icon">Показать значок батареи</string>
-    <string name="total_screen_time">Показать общее время экрана</string>
     <string name="weather">Погода</string>
     <string name="show_weather">Показать погоду</string>
     <string name="gps_location">Местоположение GPS</string>
@@ -110,6 +109,7 @@
     <string name="filter_strength">Сила нечеткого искателя</string>
     <string name="show_background">Показать фон</string>
     <string name="background_opacity">Прозрачность фона</string>
+    <string name="total_screen_time">Показать общее время экрана</string>
     <string name="element_alignment">Выравнивание элементов</string>
     <string name="date_alignment">Дата</string>
     <string name="clock_alignment">Часы</string>
