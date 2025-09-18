@@ -78,7 +78,6 @@
     <string name="show_daily_word">הצג מסר יומי</string>
     <string name="show_battery">הצג סוללה</string>
     <string name="show_battery_icon">הצגת סמליל סוללה</string>
-    <string name="total_screen_time">הצג זמן מסך כולל</string>
     <string name="weather">מֶזֶג אֲוִיר</string>
     <string name="show_weather">הצג מזג אוויר</string>
     <string name="gps_location">מיקום GPS</string>
@@ -110,6 +109,7 @@
     <string name="filter_strength">עוצמת מאתר מטושטש</string>
     <string name="show_background">הצג רקע</string>
     <string name="background_opacity">שקיפות רקע</string>
+    <string name="total_screen_time">הצג זמן מסך כולל</string>
     <string name="element_alignment">יישור אלמנטים</string>
     <string name="date_alignment">תאריך</string>
     <string name="clock_alignment">שעון</string>
