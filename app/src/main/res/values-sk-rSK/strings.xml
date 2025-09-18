@@ -36,7 +36,7 @@
     <string name="settings_hidden_apps_title">Skryté aplikácie</string>
     <string name="settings_hidden_apps_description">Spravovať skryté aplikácie – v prípade potreby odkryte ľubovoľnú aplikáciu z tohto zoznamu.</string>
     <string name="settings_advanced_title">Rozšírené nastavenia</string>
-    <string name="settings_advanced_description">Access app info, default launcher, backup tools and more.</string>
+    <string name="settings_advanced_description">Prístup k informáciám o aplikácii, predvolenému spúšťaču, nástrojom na zálohovanie a ďalším funkciám.</string>
     <string name="settings_expert_title">Expert</string>
     <string name="settings_expert_description">Odomknite skryté možnosti a pokročilé vylepšenia.</string>
     <string name="settings_exit_mlauncher_title">Ukončite MultiLauncher</string>
