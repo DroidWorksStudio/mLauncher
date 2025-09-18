@@ -36,7 +36,7 @@
     <string name="settings_hidden_apps_title">Paslėptos programėlės</string>
     <string name="settings_hidden_apps_description">Tvarkykite paslėptas programas – prireikus parodykite bet kurią šiame sąraše esančią programą.</string>
     <string name="settings_advanced_title">Išplėstiniai nustatymai</string>
-    <string name="settings_advanced_description">Access app info, default launcher, backup tools and more.</string>
+    <string name="settings_advanced_description">Pasiekite programos informaciją, numatytąją paleidimo priemonę, atsarginių kopijų kūrimo įrankius ir kt.</string>
     <string name="settings_expert_title">Ekspertas</string>
     <string name="settings_expert_description">Atrakinkite paslėptas parinktis ir išplėstinius pakeitimus.</string>
     <string name="settings_exit_mlauncher_title">Išeikite iš „MultiLauncher“.</string>
