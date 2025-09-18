@@ -36,7 +36,7 @@
     <string name="settings_hidden_apps_title">יישומים מוסתרים</string>
     <string name="settings_hidden_apps_description">ניהול אפליקציות נסתרות - בטל הסתרה של כל אפליקציה מרשימה זו בעת הצורך.</string>
     <string name="settings_advanced_title">הגדרות מתקדמות</string>
-    <string name="settings_advanced_description">Access app info, default launcher, backup tools and more.</string>
+    <string name="settings_advanced_description">גישה למידע על אפליקציות, מפעיל ברירת מחדל, כלי גיבוי ועוד.</string>
     <string name="settings_expert_title">מוּמחֶה</string>
     <string name="settings_expert_description">פתח אפשרויות נסתרות ושיפורים מתקדמים.</string>
     <string name="settings_exit_mlauncher_title">צא מ-MultiLauncher</string>
