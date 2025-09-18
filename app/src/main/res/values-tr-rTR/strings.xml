@@ -78,7 +78,6 @@
     <string name="show_daily_word">Günlük Sözcüğü Göster</string>
     <string name="show_battery">Pil\'i göster</string>
     <string name="show_battery_icon">Pil Simgesini Göster</string>
-    <string name="total_screen_time">Toplam Ekran Süresini Göster</string>
     <string name="weather">Hava durumu</string>
     <string name="show_weather">Hava Durumunu Göster</string>
     <string name="gps_location">GPS Konumu</string>
@@ -110,6 +109,7 @@
     <string name="filter_strength">Bulanık Bulucu Gücü</string>
     <string name="show_background">Arkaplanı Göster</string>
     <string name="background_opacity">Arka Plan Şeffaflığı</string>
+    <string name="total_screen_time">Toplam Ekran Süresini Göster</string>
     <string name="element_alignment">Eleman Hizalaması</string>
     <string name="date_alignment">Tarih</string>
     <string name="clock_alignment">Saat</string>
