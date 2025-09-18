@@ -53,6 +53,7 @@ object SettingsComposable {
         title: String,
         onClick: () -> Unit = {},
         iconSize: Dp = 24.dp,
+        fontColor: Color = SettingsTheme.typography.title.color,
         fontSizeSp: Float = 24f
     ) {
         Row(
@@ -77,7 +78,7 @@ object SettingsComposable {
                     FontAppCompatTextView(it).apply {
                         text = title
                         textSize = fontSizeSp
-                        setTextColor(android.graphics.Color.WHITE) // Optional
+                        setTextColor(fontColor.toArgb()) // Optional
                     }
                 },
                 modifier = Modifier.wrapContentSize()
