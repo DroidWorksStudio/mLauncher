@@ -78,7 +78,6 @@
     <string name="show_daily_word">毎日の単語を表示</string>
     <string name="show_battery">バッテリーを表示</string>
     <string name="show_battery_icon">バッテリーアイコンを表示</string>
-    <string name="total_screen_time">合計スクリーンタイムを表示</string>
     <string name="weather">天気</string>
     <string name="show_weather">天気予報を表示</string>
     <string name="gps_location">GPS位置情報</string>
@@ -110,6 +109,7 @@
     <string name="filter_strength">ファジーファインダーの強さ</string>
     <string name="show_background">背景を表示</string>
     <string name="background_opacity">背景の透明度</string>
+    <string name="total_screen_time">合計スクリーンタイムを表示</string>
     <string name="element_alignment">要素の配置</string>
     <string name="date_alignment">日付</string>
     <string name="clock_alignment">クロック</string>
