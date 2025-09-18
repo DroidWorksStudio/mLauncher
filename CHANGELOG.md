@@ -8,6 +8,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 * Rename screen time string resource ([44a17131](https://github.com/DroidWorksStudio/mLauncher/commit/44a17131))
 
+### Documentation & Language:
+
+* Updated Language Files. ([#899](https://github.com/DroidWorksStudio/mLauncher/pull/899)) ([703ced86](https://github.com/DroidWorksStudio/mLauncher/commit/703ced86))
+
 ## [1.11.1.1](https://github.com/DroidWorksStudio/mLauncher/tree/1.11.1.1) - (17, September 2025)
 
 ### Enhancements:
