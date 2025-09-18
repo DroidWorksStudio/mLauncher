@@ -78,7 +78,6 @@
     <string name="show_daily_word">Zobraziť denné slovo</string>
     <string name="show_battery">Zobraziť batériu</string>
     <string name="show_battery_icon">Zobraziť ikonu batérie</string>
-    <string name="total_screen_time">Zobraziť celkový čas obrazovky</string>
     <string name="weather">Počasie</string>
     <string name="show_weather">Zobraziť Počasie</string>
     <string name="gps_location">GPS poloha</string>
@@ -110,6 +109,7 @@
     <string name="filter_strength">Sila fuzzy vyhľadávača</string>
     <string name="show_background">Zobraziť pozadie</string>
     <string name="background_opacity">Priehľadnosť pozadia</string>
+    <string name="total_screen_time">Zobraziť celkový čas obrazovky</string>
     <string name="element_alignment">Zarovnanie prvkov</string>
     <string name="date_alignment">Dátum</string>
     <string name="clock_alignment">Hodiny</string>
