@@ -78,7 +78,6 @@
     <string name="show_daily_word">แสดงคำศัพท์ประจำวัน</string>
     <string name="show_battery">แสดงแบตเตอรี่</string>
     <string name="show_battery_icon">แสดงไอคอนแบตเตอรี่</string>
-    <string name="total_screen_time">แสดงเวลาหน้าจอทั้งหมด</string>
     <string name="weather">สภาพอากาศ</string>
     <string name="show_weather">แสดงสภาพอากาศ</string>
     <string name="gps_location">ตำแหน่ง GPS</string>
@@ -110,6 +109,7 @@
     <string name="filter_strength">ความแข็งแกร่งของ Fuzzy Finder</string>
     <string name="show_background">แสดงพื้นหลัง</string>
     <string name="background_opacity">ความโปร่งใสของพื้นหลัง</string>
+    <string name="total_screen_time">แสดงเวลาหน้าจอทั้งหมด</string>
     <string name="element_alignment">การจัดเรียงองค์ประกอบ</string>
     <string name="date_alignment">วันที่</string>
     <string name="clock_alignment">นาฬิกา</string>
