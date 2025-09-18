@@ -78,7 +78,6 @@
     <string name="show_daily_word">Mostra Parola Giornaliera</string>
     <string name="show_battery">Mostra batteria</string>
     <string name="show_battery_icon">Mostra l\'icona della batteria</string>
-    <string name="total_screen_time">Mostra tempo totale di utilizzo dello schermo</string>
     <string name="weather">Tempo atmosferico</string>
     <string name="show_weather">Mostra meteo</string>
     <string name="gps_location">Posizione GPS</string>
@@ -110,6 +109,7 @@
     <string name="filter_strength">Forza del Fuzzy Finder</string>
     <string name="show_background">Mostra sfondo</string>
     <string name="background_opacity">Trasparenza dello sfondo</string>
+    <string name="total_screen_time">Mostra tempo totale di utilizzo dello schermo</string>
     <string name="element_alignment">Allineamento degli elementi</string>
     <string name="date_alignment">Data</string>
     <string name="clock_alignment">Orologio</string>
