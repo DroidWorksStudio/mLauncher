@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Documentation & Language:
 
+* Updated Language Files. ([#900](https://github.com/DroidWorksStudio/mLauncher/pull/900)) ([4c35704e](https://github.com/DroidWorksStudio/mLauncher/commit/4c35704e))
 * Updated Language Files. ([#899](https://github.com/DroidWorksStudio/mLauncher/pull/899)) ([703ced86](https://github.com/DroidWorksStudio/mLauncher/commit/703ced86))
 
 ## [1.11.1.1](https://github.com/DroidWorksStudio/mLauncher/tree/1.11.1.1) - (17, September 2025)
