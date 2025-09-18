@@ -78,7 +78,6 @@
     <string name="show_daily_word">إظهار الكلمة اليومية</string>
     <string name="show_battery">عرض البطارية</string>
     <string name="show_battery_icon">إظهار أيقونة البطارية</string>
-    <string name="total_screen_time">إظهار إجمالي وقت الشاشة</string>
     <string name="weather">طقس</string>
     <string name="show_weather">عرض الطقس</string>
     <string name="gps_location">موقع GPS</string>
@@ -110,6 +109,7 @@
     <string name="filter_strength">قوة الباحث الضبابي</string>
     <string name="show_background">إظهار الخلفية</string>
     <string name="background_opacity">شفافية الخلفية</string>
+    <string name="total_screen_time">إظهار إجمالي وقت الشاشة</string>
     <string name="element_alignment">محاذاة العناصر</string>
     <string name="date_alignment">تاريخ</string>
     <string name="clock_alignment">ساعة</string>
