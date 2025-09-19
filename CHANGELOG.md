@@ -6,14 +6,14 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Enhancements:
 
-* Add profile-specific search hints ([7ba1138b](https://github.com/DroidWorksStudio/mLauncher/commit/7ba1138b))
+* Add profile-specific search hints ([0cfe1443](https://github.com/DroidWorksStudio/mLauncher/commit/0cfe1443))
 
 ### Bug Fixes:
 
-* Fixed: Hide profile icons in App Drawer when not needed. ([6283845a](https://github.com/DroidWorksStudio/mLauncher/commit/6283845a))
-* Fixed fontColor parameter to PageHeader ([625b3d71](https://github.com/DroidWorksStudio/mLauncher/commit/625b3d71))
-* Fixed fontColor parameter for TopMainHeader composable ([2c90c51a](https://github.com/DroidWorksStudio/mLauncher/commit/2c90c51a))
-* Ensure proper dismissal of Device Stats BottomSheet ([8bebfbe6](https://github.com/DroidWorksStudio/mLauncher/commit/8bebfbe6))
+* Fixed: Hide profile icons in App Drawer when not needed. ([68282a9c](https://github.com/DroidWorksStudio/mLauncher/commit/68282a9c))
+* Fixed fontColor parameter to PageHeader ([99381074](https://github.com/DroidWorksStudio/mLauncher/commit/99381074))
+* Fixed fontColor parameter for TopMainHeader composable ([e6d2f212](https://github.com/DroidWorksStudio/mLauncher/commit/e6d2f212))
+* Ensure proper dismissal of Device Stats BottomSheet ([f3b100f5](https://github.com/DroidWorksStudio/mLauncher/commit/f3b100f5))
 
 ### Refactors:
 
@@ -21,13 +21,12 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Documentation & Language:
 
-* Updated Language Files. ([#901](https://github.com/DroidWorksStudio/mLauncher/pull/901)) ([6fce21a8](https://github.com/DroidWorksStudio/mLauncher/commit/6fce21a8))
-* Updated Language Files. ([#900](https://github.com/DroidWorksStudio/mLauncher/pull/900)) ([4c35704e](https://github.com/DroidWorksStudio/mLauncher/commit/4c35704e))
+* Updated Language Files. ([#901](https://github.com/DroidWorksStudio/mLauncher/pull/901)) ([803eb93a](https://github.com/DroidWorksStudio/mLauncher/commit/803eb93a))
 * Updated Language Files. ([#899](https://github.com/DroidWorksStudio/mLauncher/pull/899)) ([703ced86](https://github.com/DroidWorksStudio/mLauncher/commit/703ced86))
 
 ### Dependencies:
 
-* Update lifecycle-viewmodel-ktx to 2.9.4 ([c99b0f7b](https://github.com/DroidWorksStudio/mLauncher/commit/c99b0f7b))
+* Update lifecycle-viewmodel-ktx to 2.9.4 ([a0216463](https://github.com/DroidWorksStudio/mLauncher/commit/a0216463))
 
 ## [1.11.1.1](https://github.com/DroidWorksStudio/mLauncher/tree/1.11.1.1) - (17, September 2025)
 
