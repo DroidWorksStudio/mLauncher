@@ -3,6 +3,8 @@
     <!-- Base Settings -->
     <string name="select_app">Uygulama Seçin</string>
     <string name="show_apps">Uygulamaları Ara</string>
+    <string name="show_private_apps">Özel Uygulamaları Ara</string>
+    <string name="show_work_apps">İş Uygulamalarını Ara</string>
     <string name="show_contacts">Kişileri Ara</string>
     <string name="welcome_to_launcher">%1$s\'a hoş geldiniz</string>
     <string name="continue_by_you_agree">Devam ederek %1$s\'ı kabul etmiş olursunuz</string>
