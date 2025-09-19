@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/main) - TBD
 
+### Enhancements:
+
+* Add profile-specific search hints ([7ba1138b](https://github.com/DroidWorksStudio/mLauncher/commit/7ba1138b))
+
 ### Bug Fixes:
 
 * Fixed: Hide profile icons in App Drawer when not needed. ([6283845a](https://github.com/DroidWorksStudio/mLauncher/commit/6283845a))
