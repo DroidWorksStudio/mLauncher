@@ -3,6 +3,8 @@
     <!-- Base Settings -->
     <string name="select_app">アプリを選択</string>
     <string name="show_apps">アプリを検索</string>
+    <string name="show_private_apps">プライベートアプリを検索</string>
+    <string name="show_work_apps">仕事用アプリを検索</string>
     <string name="show_contacts">連絡先を検索</string>
     <string name="welcome_to_launcher">%1$sへようこそ</string>
     <string name="continue_by_you_agree">続行すると、 %1$sに同意したことになります</string>
