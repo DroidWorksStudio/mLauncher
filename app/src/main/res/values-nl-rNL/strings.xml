@@ -3,6 +3,8 @@
     <!-- Base Settings -->
     <string name="select_app">Selecteer App</string>
     <string name="show_apps">Zoek-apps</string>
+    <string name="show_private_apps">Zoek privé-apps</string>
+    <string name="show_work_apps">Zoek werk-apps</string>
     <string name="show_contacts">Contacten zoeken</string>
     <string name="welcome_to_launcher">Welkom bij %1$s</string>
     <string name="continue_by_you_agree">Door verder te gaan, gaat u akkoord met %1$s</string>
