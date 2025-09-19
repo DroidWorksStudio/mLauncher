@@ -2,6 +2,8 @@
     <!-- Base Settings -->
     <string name="select_app">Select App</string>
     <string name="show_apps">Search Apps</string>
+    <string name="show_private_apps">Search Private Apps</string>
+    <string name="show_work_apps">Search Work Apps</string>
     <string name="show_contacts">Search Contacts</string>
 
     <string name="welcome_to_launcher">Welcome to %1$s</string>
