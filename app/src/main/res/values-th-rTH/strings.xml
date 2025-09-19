@@ -3,6 +3,8 @@
     <!-- Base Settings -->
     <string name="select_app">เลือกแอป</string>
     <string name="show_apps">ค้นหาแอป</string>
+    <string name="show_private_apps">ค้นหาแอปส่วนตัว</string>
+    <string name="show_work_apps">ค้นหาแอปสำหรับการทำงาน</string>
     <string name="show_contacts">ค้นหาผู้ติดต่อ</string>
     <string name="welcome_to_launcher">ยินดีต้อนรับสู่ %1$s</string>
     <string name="continue_by_you_agree">เมื่อดำเนินการต่อ คุณยอมรับที่จะ %1$s</string>
