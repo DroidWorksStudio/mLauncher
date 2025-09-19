@@ -3,6 +3,8 @@
     <!-- Base Settings -->
     <string name="select_app">Vyberte App</string>
     <string name="show_apps">Vyhľadávanie aplikácií</string>
+    <string name="show_private_apps">Vyhľadávanie súkromných aplikácií</string>
+    <string name="show_work_apps">Vyhľadávanie pracovných aplikácií</string>
     <string name="show_contacts">Vyhľadávanie kontaktov</string>
     <string name="welcome_to_launcher">Vitajte v %1$s</string>
     <string name="continue_by_you_agree">Pokračovaním súhlasíte s %1$s</string>

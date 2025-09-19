@@ -3,6 +3,8 @@
     <!-- Base Settings -->
     <string name="select_app">앱 선택</string>
     <string name="show_apps">앱 검색</string>
+    <string name="show_private_apps">비공개 앱 검색</string>
+    <string name="show_work_apps">업무용 앱 검색</string>
     <string name="show_contacts">연락처 검색</string>
     <string name="welcome_to_launcher">%1$s에 오신 것을 환영합니다</string>
     <string name="continue_by_you_agree">계속하시면 %1$s에 동의하게 됩니다.</string>
