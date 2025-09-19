@@ -3,6 +3,8 @@
     <!-- Base Settings -->
     <string name="select_app">Выбрать приложение</string>
     <string name="show_apps">Поиск приложений</string>
+    <string name="show_private_apps">Поиск частных приложений</string>
+    <string name="show_work_apps">Поиск рабочих приложений</string>
     <string name="show_contacts">Поиск контактов</string>
     <string name="welcome_to_launcher">Добро пожаловать в %1$s</string>
     <string name="continue_by_you_agree">Продолжая, вы соглашаетесь с %1$s</string>
