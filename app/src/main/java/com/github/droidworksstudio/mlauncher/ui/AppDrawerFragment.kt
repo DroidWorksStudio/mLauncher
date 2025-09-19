@@ -400,7 +400,11 @@ class AppDrawerFragment : BaseFragment() {
             val appListButtonFlags = prefs.getMenuFlags("APPLIST_BUTTON_FLAGS", "00")
             when (flag) {
                 AppDrawerFlag.LaunchApp -> {
-                    binding.search.queryHint = getLocalizedString(R.string.show_apps)
+                    when (profileType) {
+                        "WORK" -> binding.search.queryHint = getLocalizedString(R.string.show_work_apps)
+                        "PRIVATE" -> binding.search.queryHint = getLocalizedString(R.string.show_private_apps)
+                        else -> binding.search.queryHint = getLocalizedString(R.string.show_apps)
+                    }
                     binding.workApps.apply {
                         isVisible = ((prefs.getProfileCounter("WORK") > 0) && profileType != "WORK")
                         setOnClickListener {

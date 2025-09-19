@@ -426,6 +426,11 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
                 AppLogger.d("AppListDebug", "📦 Found ${activities.size} launcher activities for profile:$profile|$profileType")
 
+                when (profileType) {
+                    "WORK" -> AppLogger.d("AppListDebug", "💼 Work profile detected")
+                    "PRIVATE" -> AppLogger.d("AppListDebug", "🔐 Private profile detected")
+                    else -> AppLogger.d("AppListDebug", "🏠 System profile detected")
+                }
                 prefs.setProfileCounter(profileType, activities.size)
 
                 for (activityInfo in activities) {
