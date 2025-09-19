@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Bug Fixes:
 
+* Fixed: Hide profile icons in App Drawer when not needed. ([6283845a](https://github.com/DroidWorksStudio/mLauncher/commit/6283845a))
 * Fixed fontColor parameter to PageHeader ([625b3d71](https://github.com/DroidWorksStudio/mLauncher/commit/625b3d71))
 * Fixed fontColor parameter for TopMainHeader composable ([2c90c51a](https://github.com/DroidWorksStudio/mLauncher/commit/2c90c51a))
 * Ensure proper dismissal of Device Stats BottomSheet ([8bebfbe6](https://github.com/DroidWorksStudio/mLauncher/commit/8bebfbe6))
