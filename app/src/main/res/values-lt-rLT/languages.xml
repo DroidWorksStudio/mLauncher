@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="lang_arabic">Arabų kalba</string>
-    <string name="lang_dutch">olandų</string>
-    <string name="lang_czech">čekų</string>
-    <string name="lang_english">Anglų kalba</string>
-    <string name="lang_french">Prancūzų kalba</string>
-    <string name="lang_german">Vokiečių kalba</string>
-    <string name="lang_hebrew">Hebrajų kalba</string>
-    <string name="lang_italian">Italų kalba</string>
-    <string name="lang_japanese">Japonų kalba</string>
-    <string name="lang_korean">Korėjiečių kalba</string>
-    <string name="lang_lithuanian">Lietuvių kalba</string>
-    <string name="lang_polish">Lenkų kalba</string>
-    <string name="lang_portuguese">portugalų</string>
-    <string name="lang_russian">Rusų kalba</string>
-    <string name="lang_slovak">slovakų</string>
-    <string name="lang_spanish">Ispanų kalba</string>
-    <string name="lang_thai">tajų</string>
-    <string name="lang_turkish">Turkų kalba</string>
+    <string name="lang_arabic">Arabų</string>
+    <string name="lang_dutch">Olandų</string>
+    <string name="lang_czech">Čekų</string>
+    <string name="lang_english">Anglų</string>
+    <string name="lang_french">Prancūzų</string>
+    <string name="lang_german">Vokiečių</string>
+    <string name="lang_hebrew">Hebrajų</string>
+    <string name="lang_italian">Italų</string>
+    <string name="lang_japanese">Japonų</string>
+    <string name="lang_korean">Korėjiečių</string>
+    <string name="lang_lithuanian">Lietuvių</string>
+    <string name="lang_polish">Lenkų</string>
+    <string name="lang_portuguese">Portugalų</string>
+    <string name="lang_russian">Rusų</string>
+    <string name="lang_slovak">Slovakų</string>
+    <string name="lang_spanish">Ispanų</string>
+    <string name="lang_thai">Tajų</string>
+    <string name="lang_turkish">Turkų</string>
 </resources>
