@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Base Settings -->
-    <string name="select_app">Pasirinkite programą</string>
-    <string name="show_apps">Paieškos programos</string>
-    <string name="show_private_apps">Ieškoti privačių programų</string>
-    <string name="show_work_apps">Ieškoti darbo programų</string>
+    <string name="select_app">Pasirinkite programėlę</string>
+    <string name="show_apps">Ieškoti programėlių</string>
+    <string name="show_private_apps">Ieškoti privačių programėlių</string>
+    <string name="show_work_apps">Ieškoti darbo programėlių</string>
     <string name="show_contacts">Ieškoti kontaktų</string>
     <string name="welcome_to_launcher">Sveiki atvykę į %1$s</string>
     <string name="continue_by_you_agree">Tęsdami sutinkate su %1$s</string>
@@ -22,17 +22,17 @@
     <string name="this_can_be_disabled_later">* Šis leidimas vėliau gali būti išjungtas.</string>
     <!-- Strings used for settings menus -->
     <string name="settings_name">MultiLauncher nustatymai</string>
-    <string name="settings_features_title">Savybės</string>
+    <string name="settings_features_title">Ypatybės</string>
     <string name="settings_features_description">Pagerinkite savo produktyvumą.</string>
-    <string name="settings_look_feel_title">Pažiūrėk &amp; Jausk</string>
+    <string name="settings_look_feel_title">Išvaizda</string>
     <string name="settings_look_feel_description">Suteikite savo pagrindiniam ekranui asmeniškumo.</string>
     <string name="settings_gestures_title">Gestai</string>
-    <string name="settings_gestures_description">Tinkinkite gestus, kad galėtumėte greitai ir lengvai naršyti.</string>
+    <string name="settings_gestures_description">Nustatykite gestus, kad galėtumėte greitai ir lengvai naršyti.</string>
     <string name="settings_notes_title">Pastabos</string>
     <string name="settings_notes_description">Suasmeninkite savo užrašus, kad jie atitiktų jūsų stilių.</string>
     <!-- Favorite Apps -->
     <!-- Favorite Apps -->
-    <string name="settings_favorite_apps_title">Mėgstamiausios programos</string>
+    <string name="settings_favorite_apps_title">Mėgstamiausios programėlės</string>
     <string name="settings_favorite_apps_description">Pertvarkykite mėgstamiausias programas, kad galėtumėte jas greitai pasiekti iš pagrindinio ekrano.</string>
     <!-- Hidden Apps -->
     <string name="settings_hidden_apps_title">Paslėptos programėlės</string>
@@ -44,7 +44,7 @@
     <string name="settings_exit_mlauncher_title">Išeikite iš „MultiLauncher“.</string>
     <string name="settings_exit_mlauncher_description">Laikinai perjunkite į numatytąją paleidimo priemonę.</string>
     <string name="settings_exit_mlauncher_dialog">Pasirinkite paleidimo priemonę</string>
-    <string name="settings_donation_title">Aukos</string>
+    <string name="settings_donation_title">Parama</string>
     <string name="settings_donation_description">Paremkite mūsų darbą paaukodami.</string>
     <string name="settings_donation_dialog">Paremkite mus</string>
     <!-- Strings used for features settings -->
@@ -52,8 +52,8 @@
     <string name="personalization">Personalizavimas</string>
     <string name="theme_mode">Temavimo režimas</string>
     <string name="app_language">Sąsajos kalba</string>
-    <string name="font_family">Šrifto šeima</string>
-    <string name="search_and_app_list">Paieška &amp; Programų sąrašas</string>
+    <string name="font_family">Šriftas</string>
+    <string name="search_and_app_list">Paieška &amp; Programėlių sąrašas</string>
     <string name="hide_search_view">Slėpti paieškos rodinį</string>
     <string name="show_floating_button">Rodyti sparčiuosius mygtukus</string>
     <string name="lock_orientation">Užrakto orientacija</string>
