@@ -944,8 +944,8 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
                     val padding: Int = prefs.textPaddingSize
                     setPadding(0, padding, 0, padding)
                     setTextColor(prefs.appColor)
-
-                    val packageName = prefs.getHomeAppModel(i).activityPackage
+                    val appModel = prefs.getHomeAppModel(i)
+                    val packageName = appModel.activityPackage
 
                     if (packageName.isNotBlank() && prefs.iconPackHome != Constants.IconPacks.Disabled) {
                         val iconPackPackage = prefs.customIconPackHome
@@ -958,30 +958,29 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
                         )
 
                         // Recolor the icon with the dominant color
-                        val appNewIcon: Drawable? = getSystemIcons(
+                        val recoloredDrawable: Drawable? = getSystemIcons(
                             context,
                             prefs,
                             IconCacheTarget.HOME,
                             nonNullDrawable
                         )
 
-                        // Set the icon size to match text size and add padding
-                        val iconSize = (prefs.appSize * 1.4).toInt()  // Base size from preferences
-                        val iconPadding = (iconSize / 1.2).toInt() //
+                        val drawableToUse = recoloredDrawable ?: nonNullDrawable
 
-                        appNewIcon?.setBounds(0, 0, iconSize, iconSize)
-                        nonNullDrawable.setBounds(
-                            0,
-                            0,
-                            ((iconSize * 1.8).toInt()),
-                            ((iconSize * 1.8).toInt())
-                        )
+                        // Set the icon size to match text size and add padding
+                        var iconSize = (prefs.appSize * 1.4f).toInt()
+                        if (prefs.iconPackHome == Constants.IconPacks.System || prefs.iconPackHome == Constants.IconPacks.Custom) {
+                            iconSize *= 2
+                        }
+                        val iconPadding = (iconSize / 1.2f).toInt() // padding next to icon
+
+                        drawableToUse.setBounds(0, 0, iconSize, iconSize)
 
                         // Set drawable position based on alignment
                         when (prefs.homeAlignment) {
                             Constants.Gravity.Left -> {
                                 setCompoundDrawables(
-                                    appNewIcon ?: nonNullDrawable,
+                                    drawableToUse,
                                     null,
                                     null,
                                     null
@@ -994,7 +993,7 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
                                 setCompoundDrawables(
                                     null,
                                     null,
-                                    appNewIcon ?: nonNullDrawable,
+                                    drawableToUse,
                                     null
                                 )
                                 // Add padding between text and icon if an icon is set

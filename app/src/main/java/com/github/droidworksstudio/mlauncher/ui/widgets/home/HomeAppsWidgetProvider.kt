@@ -11,7 +11,6 @@ import android.graphics.drawable.Drawable
 import android.util.TypedValue
 import android.widget.RemoteViews
 import androidx.core.graphics.createBitmap
-import com.github.droidworksstudio.common.ColorIconsExtensions
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.data.Constants
 import com.github.droidworksstudio.mlauncher.data.Prefs
@@ -51,14 +50,20 @@ class HomeAppsWidgetProvider : AppWidgetProvider() {
 
                 // --- Get icon safely ---
                 val iconPackPackage = prefs.customIconPackHome
-                val drawable = getSafeAppIcon(
+
+                val nonNullDrawable: Drawable = getSafeAppIcon(
                     context = context,
-                    packageName = appModel.activityPackage,
+                    packageName = packageName,
                     useIconPack = (iconPackPackage.isNotEmpty() && prefs.iconPackHome == Constants.IconPacks.Custom),
                     iconPackTarget = IconCacheTarget.HOME
                 )
 
-                val recoloredDrawable = getSystemIcons(context, prefs, IconCacheTarget.HOME, drawable) ?: drawable
+                val recoloredDrawable: Drawable? = getSystemIcons(
+                    context,
+                    prefs,
+                    IconCacheTarget.HOME,
+                    nonNullDrawable
+                )
 
                 // --- Set TextView text ---
                 itemRv.setTextViewText(R.id.appLabel, appLabel)
@@ -78,8 +83,10 @@ class HomeAppsWidgetProvider : AppWidgetProvider() {
                 }
                 val iconPadding = (iconSize / 1.2f).toInt() // padding next to icon
 
+                val drawableToUse = recoloredDrawable ?: nonNullDrawable
+
                 // Convert drawable to bitmap
-                val bitmap = drawableToBitmap(recoloredDrawable, iconSize, iconSize)
+                val bitmap = drawableToBitmap(drawableToUse, iconSize, iconSize)
 
                 // Apply alignment
                 when (prefs.homeAlignment) {
@@ -107,14 +114,6 @@ class HomeAppsWidgetProvider : AppWidgetProvider() {
                         itemRv.setViewVisibility(R.id.appIconLeft, android.view.View.GONE)
                         itemRv.setViewVisibility(R.id.appIconRight, android.view.View.GONE)
                     }
-                }
-
-                // Optional: set color filter
-                if (prefs.iconRainbowColors) {
-                    val dominantColor = ColorIconsExtensions.getDominantColor(bitmap)
-                    itemRv.setInt(R.id.appIconLeft, "setColorFilter", dominantColor)
-                } else {
-                    itemRv.setInt(R.id.appIconLeft, "setColorFilter", prefs.shortcutIconsColor)
                 }
 
                 val textPaddingSize = prefs.textPaddingSize // pixels, or convert dp to px

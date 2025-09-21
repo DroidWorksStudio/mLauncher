@@ -24,7 +24,6 @@ object IconPackHelper {
     private val appListIconCache = mutableMapOf<String, Drawable>()
     private val homeIconCache = mutableMapOf<String, Drawable>()
     private val nameCache = mutableMapOf<String, String>()
-    private var isInitialized = false
 
     @SuppressLint("DiscouragedApi")
     fun preloadIcons(
@@ -122,7 +121,6 @@ object IconPackHelper {
             }
 
             inputStream.close()
-            isInitialized = true
 
             AppLogger.d("IconPackLoader", "Preload finished. Loaded: $loadedCount, Skipped: $skippedCount")
 
@@ -153,7 +151,7 @@ object IconPackHelper {
     ): Drawable {
         val pm = context.packageManager
         val icon = try {
-            if (useIconPack && isReady()) {
+            if (useIconPack) {
                 getCachedIcon(context, packageName, iconPackTarget)
             } else {
                 pm.getApplicationIcon(packageName)
@@ -171,6 +169,4 @@ object IconPackHelper {
                 Color.TRANSPARENT.toDrawable()
             }
     }
-
-    fun isReady(): Boolean = isInitialized
 }
