@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/main) - TBD
 
+### Bug Fixes:
+
+* Simplify icon loading and caching logic ([0ecf511b](https://github.com/DroidWorksStudio/mLauncher/commit/0ecf511b))
+
 ### Documentation & Language:
 
 * Updated Language Files. ([#903](https://github.com/DroidWorksStudio/mLauncher/pull/903)) ([2b126639](https://github.com/DroidWorksStudio/mLauncher/commit/2b126639))
