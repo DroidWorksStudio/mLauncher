@@ -90,7 +90,7 @@ for (const group of GROUP_ORDER) {
 if (!commits.length) discordMessage += "No commits found.";
 
 // Append download link
-discordMessage += `⬇️ [Direct APK Download](<${REPO_URL}/releases/download/${latestTag}/MultiLauncher-${latestTag}-Signed.apk>) ⬇️`;
+discordMessage += `:arrow_down:  [Direct APK Download](<${REPO_URL}/releases/download/${latestTag}/MultiLauncher-${latestTag}-Signed.apk>)  :arrow_down:`;
 
 // Send to Discord
 const payload = JSON.stringify({
