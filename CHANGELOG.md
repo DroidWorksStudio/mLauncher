@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
+## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/main) - TBD
+
+### Documentation & Language:
+
+* Updated Language Files. ([#903](https://github.com/DroidWorksStudio/mLauncher/pull/903)) ([2b126639](https://github.com/DroidWorksStudio/mLauncher/commit/2b126639))
+
 ## [1.11.1.2](https://github.com/DroidWorksStudio/mLauncher/tree/1.11.1.2) - (19, September 2025)
 
 ### Enhancements:
