@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
+## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/main) - TBD
+
+### Bug Fixes:
+
+* Hide Private Apps button when mLauncher is not default ([1c7a5ae7](https://github.com/DroidWorksStudio/mLauncher/commit/1c7a5ae7))
+
+### Refactors:
+
+* Implement caching and optimize data loading in MainViewModel ([9318ffa0](https://github.com/DroidWorksStudio/mLauncher/commit/9318ffa0))
+
 ## [1.11.1.3](https://github.com/DroidWorksStudio/mLauncher/tree/1.11.1.3) - (21, September 2025)
 
 ### Bug Fixes:

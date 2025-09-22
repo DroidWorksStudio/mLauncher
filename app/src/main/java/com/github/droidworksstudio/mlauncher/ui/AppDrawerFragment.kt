@@ -54,6 +54,7 @@ import com.github.droidworksstudio.mlauncher.databinding.FragmentAppDrawerBindin
 import com.github.droidworksstudio.mlauncher.helper.emptyString
 import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
 import com.github.droidworksstudio.mlauncher.helper.hasContactsPermission
+import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
 import com.github.droidworksstudio.mlauncher.helper.openAppInfo
 import com.github.droidworksstudio.mlauncher.helper.utils.PrivateSpaceManager
 import com.github.droidworksstudio.mlauncher.ui.adapter.AppDrawerAdapter
@@ -416,7 +417,7 @@ class AppDrawerFragment : BaseFragment() {
                     }
 
                     binding.privateApps.apply {
-                        isVisible = ((prefs.getProfileCounter("PRIVATE") > 0) && !PrivateSpaceManager(requireContext()).isPrivateSpaceLocked() && profileType != "PRIVATE")
+                        isVisible = ((prefs.getProfileCounter("PRIVATE") > 0) && profileType != "PRIVATE" && !PrivateSpaceManager(requireContext()).isPrivateSpaceLocked() && ismlauncherDefault(requireContext()))
                         setOnClickListener {
                             findNavController().navigate(
                                 R.id.action_appListFragment_to_appListFragment,
