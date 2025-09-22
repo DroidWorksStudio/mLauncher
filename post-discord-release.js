@@ -8,26 +8,55 @@ const REPO_URL = "https://github.com/DroidWorksStudio/mLauncher";
 
 // Commit parsing rules
 const commitParsers = [
-	{ message: /^chore\(release\): prepare for/i, skip: true },
-	{ message: /^chore\(deps.*\)/i, skip: true },
-	{ message: /^chore\(change.*\)/i, skip: true },
-	{ message: /^chore\(pr\)/i, skip: true },
-	{ message: /^chore\(pull\)/i, skip: true },
-	{ message: /^fixes/i, skip: true },
-	{ message: /^feat|^perf|^style|^ui|^ux/i, group: "Enhancements" },
-	{ message: /^fix|^bug|^hotfix|^emergency/i, group: "Bug Fixes" },
-	{ message: /^refactor/i, group: "Improvements" },
-	{ message: /^doc/i, group: "Documentation" },
-	{ message: /^(lang|i18n)/i, group: "Localization" },
-	{ message: /^drop|^remove/i, group: "Feature Removals" },
-	{ message: /^security/i, group: "Security" },
-	{ message: /^revert/i, group: "Reverts" },
-	{ message: /^build/i, group: "Build" },
-	{ message: /^dependency|^deps/i, group: "Dependencies" },
-	{ message: /^config|^configuration|^ci|^pipeline|^release|^version|^versioning/i, group: "Meta" },
-	{ message: /^test/i, group: "Tests" },
-	{ message: /^infra|^infrastructure|^ops/i, group: "Infrastructure & Ops" },
-	{ message: /^chore|^housekeeping|^cleanup|^clean\(up\)/i, group: "Maintenance & Cleanup" }	
+    // Skip some "noise" commits
+    { message: /^chore\(release\): prepare for/i, skip: true },
+    { message: /^chore\(deps.*\)/i, skip: true },
+    { message: /^chore\(change.*\)/i, skip: true },
+    { message: /^chore\(pr\)/i, skip: true },
+    { message: /^chore\(pull\)/i, skip: true },
+    { message: /^fixes/i, skip: true },
+
+    // Enhancements (new features, improvements, UX, performance)
+    { message: /^feat|^perf|^style|^ui|^ux/i, group: "### Enhancements:" },
+
+    // Bug fixes & hotfixes
+    { message: /^fix|^bug|^hotfix|^emergency/i, group: "### Bug Fixes:" },
+
+    // Code quality (refactors, cleanup without changing behavior)
+    { message: /^refactor/i, group: "### Code Quality:" },
+
+    // Documentation
+    { message: /^doc/i, group: "### Documentation:" },
+
+    // Localization & internationalization
+    { message: /^(lang|i18n)/i, group: "### Localization:" },
+
+    // Security
+    { message: /^security/i, group: "### Security:" },
+
+	 // Feature removal / drops
+    { message: /^drop|^remove|^deprecated/i, group: "### Feature Removals:" },
+
+    // Reverts
+    { message: /^revert/i, group: "### Reverts:" },
+
+    // Build-related
+    { message: /^build/i, group: "### Build:" },
+
+    // Dependencies-related
+    { message: /^dependency|^deps/i, group: "### Dependencies:" },
+
+    // Meta: configuration, CI/CD, versioning, releases
+    { message: /^config|^configuration|^ci|^pipeline|^release|^version|^versioning/i, group: "### Meta:" },
+
+    // Tests
+    { message: /^test/i, group: "### Tests:" },
+
+    // Infrastructure & Ops
+    { message: /^infra|^infrastructure|^ops/i, group: "### Infrastructure & Ops:" },
+
+    // Chore & cleanup
+    { message: /^chore|^housekeeping|^cleanup|^clean\(up\)/i, group: "### Maintenance & Cleanup:" },
 ];
 
 const GROUP_ORDER = commitParsers.filter((p) => !p.skip).map((p) => p.group);

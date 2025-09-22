@@ -45,14 +45,20 @@ const commitParsers = [
     // Bug fixes & hotfixes
     { message: /^fix|^bug|^hotfix|^emergency/i, group: "### Bug Fixes:" },
 
-    // Refactors (own category after Bug Fixes)
-    { message: /^refactor/i, group: "### Refactors:" },
+    // Code quality (refactors, cleanup without changing behavior)
+    { message: /^refactor/i, group: "### Code Quality:" },
 
-    // Documentation & language/i18n
-    { message: /^doc|^lang|^i18n/i, group: "### Documentation & Language:" },
+    // Documentation
+    { message: /^doc/i, group: "### Documentation:" },
+
+    // Localization & internationalization
+    { message: /^(lang|i18n)/i, group: "### Localization:" },
 
     // Security
     { message: /^security/i, group: "### Security:" },
+
+	 // Feature removal / drops
+    { message: /^drop|^remove|^deprecated/i, group: "### Feature Removals:" },
 
     // Reverts
     { message: /^revert/i, group: "### Reverts:" },
@@ -64,8 +70,7 @@ const commitParsers = [
     { message: /^dependency|^deps/i, group: "### Dependencies:" },
 
     // Meta: configuration, CI/CD, versioning, releases
-    { message: /^config|^configuration|^ci|^pipeline|^release|^version|^versioning/i,
-      group: "### Meta:" },
+    { message: /^config|^configuration|^ci|^pipeline|^release|^version|^versioning/i, group: "### Meta:" },
 
     // Tests
     { message: /^test/i, group: "### Tests:" },
@@ -75,9 +80,6 @@ const commitParsers = [
 
     // Chore & cleanup
     { message: /^chore|^housekeeping|^cleanup|^clean\(up\)/i, group: "### Maintenance & Cleanup:" },
-
-    // Feature removal / drops
-    { message: /^drop|^remove|^deprecated/i, group: "### Feature Removals:" },
 ];
 
 // Build group order directly from commitParsers

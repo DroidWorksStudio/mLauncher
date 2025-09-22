@@ -8,8 +8,9 @@ All notable changes to this project will be documented in this file. See [conven
 
 * Hide Private Apps button when mLauncher is not default ([1c7a5ae7](https://github.com/DroidWorksStudio/mLauncher/commit/1c7a5ae7))
 
-### Refactors:
+### Code Quality:
 
+* Update commit parsing rules for changelog generation ([15ac2606](https://github.com/DroidWorksStudio/mLauncher/commit/15ac2606))
 * Implement caching and optimize data loading in MainViewModel ([9318ffa0](https://github.com/DroidWorksStudio/mLauncher/commit/9318ffa0))
 
 ## [1.11.1.3](https://github.com/DroidWorksStudio/mLauncher/tree/1.11.1.3) - (21, September 2025)
@@ -18,7 +19,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 * Simplify icon loading and caching logic ([0ecf511b](https://github.com/DroidWorksStudio/mLauncher/commit/0ecf511b))
 
-### Documentation & Language:
+### Localization:
 
 * Updated Language Files. ([#903](https://github.com/DroidWorksStudio/mLauncher/pull/903)) ([2b126639](https://github.com/DroidWorksStudio/mLauncher/commit/2b126639))
 
@@ -35,11 +36,11 @@ All notable changes to this project will be documented in this file. See [conven
 * Fixed fontColor parameter for TopMainHeader composable ([e6d2f212](https://github.com/DroidWorksStudio/mLauncher/commit/e6d2f212))
 * Ensure proper dismissal of Device Stats BottomSheet ([f3b100f5](https://github.com/DroidWorksStudio/mLauncher/commit/f3b100f5))
 
-### Refactors:
+### Code Quality:
 
 * Rename screen time string resource ([44a17131](https://github.com/DroidWorksStudio/mLauncher/commit/44a17131))
 
-### Documentation & Language:
+### Localization:
 
 * Updated Language Files. ([#901](https://github.com/DroidWorksStudio/mLauncher/pull/901)) ([803eb93a](https://github.com/DroidWorksStudio/mLauncher/commit/803eb93a))
 * Updated Language Files. ([#899](https://github.com/DroidWorksStudio/mLauncher/pull/899)) ([703ced86](https://github.com/DroidWorksStudio/mLauncher/commit/703ced86))
@@ -54,18 +55,18 @@ All notable changes to this project will be documented in this file. See [conven
 
 * Enhance Profile Handling and App List Filtering ([2cdb6900](https://github.com/DroidWorksStudio/mLauncher/commit/2cdb6900))
 
-### Refactors:
+### Code Quality:
 
 * Improve Home Apps Widget Layout and Logic ([b3a917cc](https://github.com/DroidWorksStudio/mLauncher/commit/b3a917cc))
 * Standardize widget update and FAB action handling ([66641117](https://github.com/DroidWorksStudio/mLauncher/commit/66641117))
 
-### Build:
-
-* Bump rexml in the bundler group across 1 directory ([#897](https://github.com/DroidWorksStudio/mLauncher/pull/897)) ([abc9f006](https://github.com/DroidWorksStudio/mLauncher/commit/abc9f006))
-
 ### Feature Removals:
 
 * Remove unused onStatusChanged method ([dbf85b34](https://github.com/DroidWorksStudio/mLauncher/commit/dbf85b34))
+
+### Build:
+
+* Bump rexml in the bundler group across 1 directory ([#897](https://github.com/DroidWorksStudio/mLauncher/pull/897)) ([abc9f006](https://github.com/DroidWorksStudio/mLauncher/commit/abc9f006))
 
 ## [1.11.1.0](https://github.com/DroidWorksStudio/mLauncher/tree/1.11.1.0) - (15, September 2025)
 
@@ -77,7 +78,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 * Correct app label display in HomeAppsWidgetProvider ([43c169f1](https://github.com/DroidWorksStudio/mLauncher/commit/43c169f1))
 
-### Refactors:
+### Code Quality:
 
 * Remove package attribute from AndroidManifest.xml ([3d35e4a6](https://github.com/DroidWorksStudio/mLauncher/commit/3d35e4a6))
 * Improve Discord release message formatting ([1eaa194b](https://github.com/DroidWorksStudio/mLauncher/commit/1eaa194b))
@@ -87,10 +88,13 @@ All notable changes to this project will be documented in this file. See [conven
 * Update cleanMessage regex to include 'docs' ([1bedc196](https://github.com/DroidWorksStudio/mLauncher/commit/1bedc196))
 * Simplify Discord release message ([840197f7](https://github.com/DroidWorksStudio/mLauncher/commit/840197f7))
 
-### Documentation & Language:
+### Documentation:
+
+* Update Discord invite link ([04db3aca](https://github.com/DroidWorksStudio/mLauncher/commit/04db3aca))
+
+### Localization:
 
 * Updated Language Files. ([#893](https://github.com/DroidWorksStudio/mLauncher/pull/893)) ([a4943d6c](https://github.com/DroidWorksStudio/mLauncher/commit/a4943d6c))
-* Update Discord invite link ([04db3aca](https://github.com/DroidWorksStudio/mLauncher/commit/04db3aca))
 
 ### Build:
 
@@ -109,13 +113,13 @@ All notable changes to this project will be documented in this file. See [conven
 
 * Correct Language Enum Order ([2121c458](https://github.com/DroidWorksStudio/mLauncher/commit/2121c458))
 
-### Refactors:
+### Code Quality:
 
 * Reorganize commit groups in changelog ([ea6309c3](https://github.com/DroidWorksStudio/mLauncher/commit/ea6309c3))
 * Order changelog groups by commit type ([7f41df17](https://github.com/DroidWorksStudio/mLauncher/commit/7f41df17))
 * Move UI adapters to dedicated package ([c2ac5fc4](https://github.com/DroidWorksStudio/mLauncher/commit/c2ac5fc4))
 
-### Documentation & Language:
+### Localization:
 
 * Updated Language Files. ([#885](https://github.com/DroidWorksStudio/mLauncher/pull/885)) ([c6f46f39](https://github.com/DroidWorksStudio/mLauncher/commit/c6f46f39))
 
@@ -132,7 +136,7 @@ All notable changes to this project will be documented in this file. See [conven
 * Add haptic feedback for UI interactions ([efc8715f](https://github.com/DroidWorksStudio/mLauncher/commit/efc8715f))
 * Add SecurityService to detect debug mode and set FLAG_SECURE ([5637c5da](https://github.com/DroidWorksStudio/mLauncher/commit/5637c5da))
 
-### Refactors:
+### Code Quality:
 
 * Centralize search engine URLs and logging ([62dbf6cc](https://github.com/DroidWorksStudio/mLauncher/commit/62dbf6cc))
 * Consolidate permission requests and remove unused code ([f30016f9](https://github.com/DroidWorksStudio/mLauncher/commit/f30016f9))
@@ -141,7 +145,7 @@ All notable changes to this project will be documented in this file. See [conven
 * Update changelog script path in workflow ([8738766d](https://github.com/DroidWorksStudio/mLauncher/commit/8738766d))
 * Automate changelog generation with custom script ([5634945d](https://github.com/DroidWorksStudio/mLauncher/commit/5634945d))
 
-### Documentation & Language:
+### Localization:
 
 * Updated Language Files. ([#883](https://github.com/DroidWorksStudio/mLauncher/pull/883)) ([4c8a3260](https://github.com/DroidWorksStudio/mLauncher/commit/4c8a3260))
 
@@ -160,12 +164,12 @@ All notable changes to this project will be documented in this file. See [conven
 
 * Conditional private space receiver unregistration ([cdb88c1c](https://github.com/DroidWorksStudio/mLauncher/commit/cdb88c1c))
 
-### Refactors:
+### Code Quality:
 
 * Enhance Contact List and App Drawer Functionality ([fab60dc8](https://github.com/DroidWorksStudio/mLauncher/commit/fab60dc8))
 * Use app name for label in app drawer ([58be2d44](https://github.com/DroidWorksStudio/mLauncher/commit/58be2d44))
 
-### Documentation & Language:
+### Localization:
 
 * Updated Language Files. ([#878](https://github.com/DroidWorksStudio/mLauncher/pull/878)) ([c63c99a1](https://github.com/DroidWorksStudio/mLauncher/commit/c63c99a1))
 
@@ -175,13 +179,13 @@ All notable changes to this project will be documented in this file. See [conven
 
 * Add null check for view in HomeFragment.onResume ([66425a6a](https://github.com/DroidWorksStudio/mLauncher/commit/66425a6a))
 
-### Refactors:
+### Code Quality:
 
 * Add manual location and temperature unit settings for weather ([858c38be](https://github.com/DroidWorksStudio/mLauncher/commit/858c38be))
 * Extract weather logic to WeatherHelper ([0928fe69](https://github.com/DroidWorksStudio/mLauncher/commit/0928fe69))
 * Optimize HomeFragment lifecycle and receivers ([fe430ad3](https://github.com/DroidWorksStudio/mLauncher/commit/fe430ad3))
 
-### Documentation & Language:
+### Localization:
 
 * Updated Language Files. ([#874](https://github.com/DroidWorksStudio/mLauncher/pull/874)) ([631a5fd2](https://github.com/DroidWorksStudio/mLauncher/commit/631a5fd2))
 
@@ -191,12 +195,12 @@ All notable changes to this project will be documented in this file. See [conven
 
 * Improve app tag handling for multi-user support ([ffe8e4b4](https://github.com/DroidWorksStudio/mLauncher/commit/ffe8e4b4))
 
-### Refactors:
+### Code Quality:
 
 * Enhance multi-profile support for app tags ([dccfa472](https://github.com/DroidWorksStudio/mLauncher/commit/dccfa472))
 * Improve Fuzzy Finder and Search Logic ([63ce32da](https://github.com/DroidWorksStudio/mLauncher/commit/63ce32da))
 
-### Documentation & Language:
+### Localization:
 
 * Updated Language Files. ([#871](https://github.com/DroidWorksStudio/mLauncher/pull/871)) ([6cc7db96](https://github.com/DroidWorksStudio/mLauncher/commit/6cc7db96))
 
