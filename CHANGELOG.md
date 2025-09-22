@@ -4,19 +4,15 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/main) - TBD
 
-### Enhancements:
-
-* Add Discord commit notification script ([59ab18ec](https://github.com/DroidWorksStudio/mLauncher/commit/59ab18ec))
-
 ### Bug Fixes:
 
-* Hide Private Apps button when mLauncher is not default ([1c7a5ae7](https://github.com/DroidWorksStudio/mLauncher/commit/1c7a5ae7))
+* Hide Private Apps button when mLauncher is not default ([a407a6f2](https://github.com/DroidWorksStudio/mLauncher/commit/a407a6f2))
 
 ### Code Quality:
 
-* Move Discord notification to changelog workflow ([327f2c33](https://github.com/DroidWorksStudio/mLauncher/commit/327f2c33))
-* Update regex for conventional commit types ([10efe4d4](https://github.com/DroidWorksStudio/mLauncher/commit/10efe4d4))
-* Update commit parsing rules for changelog generation ([15ac2606](https://github.com/DroidWorksStudio/mLauncher/commit/15ac2606))
+* Update regex for conventional commit types ([9b7870fe](https://github.com/DroidWorksStudio/mLauncher/commit/9b7870fe))
+* Update commit parsing rules for changelog generation ([250afcf4](https://github.com/DroidWorksStudio/mLauncher/commit/250afcf4))
+* Update post-discord-release.js ([ead38b5c](https://github.com/DroidWorksStudio/mLauncher/commit/ead38b5c))
 * Implement caching and optimize data loading in MainViewModel ([9318ffa0](https://github.com/DroidWorksStudio/mLauncher/commit/9318ffa0))
 
 ## [1.11.1.3](https://github.com/DroidWorksStudio/mLauncher/tree/1.11.1.3) - (21, September 2025)
