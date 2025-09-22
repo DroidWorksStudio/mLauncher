@@ -705,8 +705,8 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
             Action.ShowNotification -> expandNotificationDrawer(requireContext())
             Action.LockScreen -> lockPhone()
             Action.TogglePrivateSpace -> PrivateSpaceManager(requireContext()).togglePrivateSpaceLock(
-                showToast = true,
-                launchSettings = true
+                showToast = false,
+                launchSettings = false
             )
 
             Action.ShowAppList -> showAppList(AppDrawerFlag.LaunchApp, includeHiddenApps = false)
@@ -850,18 +850,39 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
 
     private fun adjustTextViewMargins() {
         binding.apply {
-            val homeAppsLayout = homeAppsLayout
-            val homeScreenPager = homeScreenPager
-            val totalScreenTime = totalScreenTime
-            val setDefaultLauncher = setDefaultLauncher
-            val fabLayout = fabLayout
+
+            privateLayout.apply {
+                // Set visibility
+                isVisible = PrivateSpaceManager(requireContext()).isPrivateSpaceSetUp()
+
+                // Initial icon
+                fun updatePrivateFabIcon() {
+                    val isLocked = PrivateSpaceManager(requireContext()).isPrivateSpaceLocked()
+                    val iconRes = if (isLocked) R.drawable.private_profile_on
+                    else R.drawable.private_profile_off
+                    privateFab.setImageResource(iconRes)
+                }
+
+                updatePrivateFabIcon() // set initial icon
+
+                privateFab.setOnClickListener {
+                    // Toggle lock
+                    PrivateSpaceManager(requireContext()).togglePrivateSpaceLock(
+                        showToast = false,
+                        launchSettings = false
+                    )
+                    // Update icon after toggle
+                    updatePrivateFabIcon()
+                }
+            }
 
             val views = listOf(
                 setDefaultLauncher,
                 totalScreenTime,
                 homeScreenPager,
                 fabLayout,
-                homeAppsLayout
+                homeAppsLayout,
+                privateLayout
             )
 
             // Check if device is using gesture navigation or 3-button navigation

@@ -178,6 +178,26 @@
         android:visibility="gone" />
 
     <LinearLayout
+        android:id="@+id/privateLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="32dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/privateFab"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_margin="8dp"
+            android:contentDescription="@string/show"
+            android:elevation="6dp"
+            android:src="@drawable/private_profile_on" />
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/fabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

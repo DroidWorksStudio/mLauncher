@@ -126,9 +126,11 @@ class PrivateSpaceManager(private val context: Context) {
         val lock = isPrivateSpaceLocked()
         lockPrivateSpace(!lock)
 
-        Handler(Looper.getMainLooper()).post {
-            if (isPrivateSpaceLocked() == !lock) {
-                context.showLongToast(getLocalizedString(R.string.toast_private_space_locked))
+        if (showToast) {
+            Handler(Looper.getMainLooper()).post {
+                if (isPrivateSpaceLocked() == !lock) {
+                    context.showLongToast(getLocalizedString(R.string.toast_private_space_locked))
+                }
             }
         }
     }

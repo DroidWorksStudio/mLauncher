@@ -6,13 +6,19 @@ import android.content.Intent
 import com.github.droidworksstudio.common.getLocalizedString
 import com.github.droidworksstudio.common.showLongToast
 import com.github.droidworksstudio.mlauncher.R
+import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
 
 class PrivateSpaceReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent?) {
-        // Check if the received action is for managed profile availability
-        if (intent?.action == Intent.ACTION_PROFILE_AVAILABLE) {
-            // Handle the event when the managed profile is available
-            context.showLongToast(getLocalizedString(R.string.toast_private_space_unlocked))
+        if (intent == null) return
+
+        if (intent.action == Intent.ACTION_USER_UNLOCKED) {
+            // Check if mLauncher is the default launcher
+            if (ismlauncherDefault(context)) {
+                // Notify the user that mLauncher is now accessible in the private space
+                val message = getLocalizedString(R.string.toast_private_space_unlocked)
+                context.showLongToast(message)
+            }
         }
     }
 }

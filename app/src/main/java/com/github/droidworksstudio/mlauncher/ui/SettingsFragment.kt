@@ -299,7 +299,7 @@ class SettingsFragment : BaseFragment() {
 
         // Filter out 'TogglePrivateSpace' if private space is not supported
         val filteredActions =
-            if (!PrivateSpaceManager(requireContext()).isPrivateSpaceSupported() || !ismlauncherDefault(requireContext())) {
+            if (!PrivateSpaceManager(requireContext()).isPrivateSpaceSetUp() || !ismlauncherDefault(requireContext())) {
                 actions.filter { it != Action.TogglePrivateSpace }
             } else {
                 actions
@@ -411,7 +411,7 @@ class SettingsFragment : BaseFragment() {
                     )
 
                     // 5. Private Spaces (if supported)
-                    if (PrivateSpaceManager(context).isPrivateSpaceSupported()) {
+                    if (PrivateSpaceManager(context).isPrivateSpaceSetUp()) {
                         SettingsHomeItem(
                             title = getLocalizedString(R.string.private_space, getLocalizedString(setPrivateSpacesStatus)),
                             imageVector = ImageVector.vectorResource(id = setPrivateSpacesIcon),
@@ -419,11 +419,11 @@ class SettingsFragment : BaseFragment() {
                             descriptionFontSize = descriptionFontSize,
                             iconSize = iconSize,
                             onClick = {
-                                if (PrivateSpaceManager(context).isPrivateSpaceSetUp(showToast = true, launchSettings = false)) {
+                                if (PrivateSpaceManager(context).isPrivateSpaceSetUp(showToast = false, launchSettings = false)) {
 
                                     PrivateSpaceManager(context).togglePrivateSpaceLock(
-                                        showToast = true,
-                                        launchSettings = true
+                                        showToast = false,
+                                        launchSettings = false
                                     )
                                     toggledPrivateSpaces = !toggledPrivateSpaces
                                 }
