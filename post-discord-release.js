@@ -16,8 +16,10 @@ const commitParsers = [
 	{ message: /^fixes/i, skip: true },
 	{ message: /^feat|^perf|^style|^ui|^ux/i, group: "Enhancements" },
 	{ message: /^fix|^bug|^hotfix|^emergency/i, group: "Bug Fixes" },
-	{ message: /^refactor/i, group: "Refactors" },
-	{ message: /^doc|^lang|^i18n/i, group: "Documentation & Language" },
+	{ message: /^refactor/i, group: "Improvements" },
+	{ message: /^doc/i, group: "Documentation" },
+	{ message: /^(lang|i18n)/i, group: "Localization" },
+	{ message: /^drop|^remove/i, group: "Feature Removals" },
 	{ message: /^security/i, group: "Security" },
 	{ message: /^revert/i, group: "Reverts" },
 	{ message: /^build/i, group: "Build" },
@@ -25,8 +27,7 @@ const commitParsers = [
 	{ message: /^config|^configuration|^ci|^pipeline|^release|^version|^versioning/i, group: "Meta" },
 	{ message: /^test/i, group: "Tests" },
 	{ message: /^infra|^infrastructure|^ops/i, group: "Infrastructure & Ops" },
-	{ message: /^chore|^housekeeping|^cleanup|^clean\(up\)/i, group: "Maintenance & Cleanup" },
-	{ message: /^drop|^remove/i, group: "Feature Removals" },
+	{ message: /^chore|^housekeeping|^cleanup|^clean\(up\)/i, group: "Maintenance & Cleanup" }	
 ];
 
 const GROUP_ORDER = commitParsers.filter((p) => !p.skip).map((p) => p.group);
