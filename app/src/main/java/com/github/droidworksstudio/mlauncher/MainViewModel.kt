@@ -2,11 +2,15 @@ package com.github.droidworksstudio.mlauncher
 
 import android.app.Application
 import android.content.ComponentName
+import android.content.ContentResolver
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.content.pm.LauncherApps
+import android.database.ContentObserver
 import android.os.Build
+import android.os.Handler
+import android.os.Looper
 import android.os.Process
 import android.os.UserHandle
 import android.os.UserManager
@@ -36,8 +40,16 @@ import com.github.droidworksstudio.mlauncher.helper.logActivitiesFromPackage
 import com.github.droidworksstudio.mlauncher.helper.utils.BiometricHelper
 import com.github.droidworksstudio.mlauncher.helper.utils.PrivateSpaceManager
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import org.json.JSONArray
+import org.json.JSONObject
+import java.io.File
+import java.io.FileInputStream
+import java.io.FileOutputStream
+import java.nio.charset.Charset
+import java.util.concurrent.atomic.AtomicBoolean
 
 class MainViewModel(application: Application) : AndroidViewModel(application) {
     private val _appScrollMap = MutableLiveData<Map<String, Int>>()
@@ -50,6 +62,18 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     private val appContext by lazy { application.applicationContext }
     private val prefs = Prefs(appContext)
+
+    // Cache files
+    private val appsCacheFile = File(appContext.filesDir, "apps_cache.json")
+    private val contactsCacheFile = File(appContext.filesDir, "contacts_cache.json")
+
+    // in-memory caches for instant load
+    private var appsMemoryCache: MutableList<AppListItem>? = null
+    private var contactsMemoryCache: MutableList<ContactListItem>? = null
+
+    // Ensure we don't trigger concurrent refreshes
+    private val appsRefreshing = AtomicBoolean(false)
+    private val contactsRefreshing = AtomicBoolean(false)
 
     // setup variables with initial values
     val firstOpen = MutableLiveData<Boolean>()
@@ -85,12 +109,37 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     private val pinnedAppsListener = SharedPreferences.OnSharedPreferenceChangeListener { _, key ->
         if (key == pinnedAppsKey) {
             AppLogger.d("MainViewModel", "Pinned apps changed")
+            // refresh in background, but keep cache immediate
             getAppList()
+        }
+    }
+
+    // ContentObserver for contacts - invalidate cache on change
+    private val contactsObserver = object : ContentObserver(Handler(Looper.getMainLooper())) {
+        override fun onChange(selfChange: Boolean) {
+            super.onChange(selfChange)
+            AppLogger.d("MainViewModel", "Contacts changed - invalidating cache")
+            contactsMemoryCache = null
+            // trigger background refresh
+            getContactList()
         }
     }
 
     init {
         prefsNormal.registerOnSharedPreferenceChangeListener(pinnedAppsListener)
+
+        // Register content observer for contacts to refresh cache only when changes occur
+        try {
+            appContext.contentResolver.registerContentObserver(
+                ContactsContract.Contacts.CONTENT_URI,
+                true,
+                contactsObserver
+            )
+        } catch (t: Throwable) {
+            AppLogger.e("MainViewModel", "Failed to register contacts observer: ${t.message}", t)
+        }
+
+        // Fast immediate load from cache, then background refresh
         getAppList()
         getContactList()
     }
@@ -261,15 +310,68 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
+    /**
+     * Public entry: loads apps from cache instantly and refreshes in background.
+     */
     fun getAppList(includeHiddenApps: Boolean = true, includeRecentApps: Boolean = true) {
-        viewModelScope.launch {
-            appList.value = getAppsList(appContext, includeRegularApps = true, includeHiddenApps, includeRecentApps)
+        // Fast path: show memory cache
+        appsMemoryCache?.let {
+            appList.postValue(it)
+        } ?: run {
+            // try file cache
+            loadAppsFromFileCache()?.let { cached ->
+                appsMemoryCache = cached.toMutableList()
+                appList.postValue(cached)
+            }
+        }
+
+        // Background refresh (only one at a time)
+        if (appsRefreshing.compareAndSet(false, true)) {
+            viewModelScope.launch {
+                try {
+                    val fresh = getAppsList(appContext, includeRegularApps = true, includeHiddenApps, includeRecentApps)
+                    appsMemoryCache = fresh
+                    saveAppsToFileCache(fresh)
+                    // publish on main
+                    withContext(Dispatchers.Main) {
+                        appList.value = fresh
+                    }
+                } finally {
+                    appsRefreshing.set(false)
+                }
+            }
         }
     }
 
+    /**
+     * Public entry: loads contacts from cache instantly and refreshes in background.
+     */
     fun getContactList(includeHiddenContacts: Boolean = true) {
-        viewModelScope.launch {
-            contactList.value = getContactsList(appContext, includeHiddenContacts)
+        // Fast path: show memory cache
+        contactsMemoryCache?.let {
+            contactList.postValue(it)
+        } ?: run {
+            // try file cache
+            loadContactsFromFileCache()?.let { cached ->
+                contactsMemoryCache = cached.toMutableList()
+                contactList.postValue(cached)
+            }
+        }
+
+        // Background refresh (only one at a time)
+        if (contactsRefreshing.compareAndSet(false, true)) {
+            viewModelScope.launch {
+                try {
+                    val fresh = getContactsList(appContext, includeHiddenContacts)
+                    contactsMemoryCache = fresh
+                    saveContactsToFileCache(fresh)
+                    withContext(Dispatchers.Main) {
+                        contactList.value = fresh
+                    }
+                } finally {
+                    contactsRefreshing.set(false)
+                }
+            }
         }
     }
 
@@ -340,75 +442,62 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     override fun onCleared() {
         super.onCleared()
         prefsNormal.unregisterOnSharedPreferenceChangeListener(pinnedAppsListener)
+        try {
+            appContext.contentResolver.unregisterContentObserver(contactsObserver)
+        } catch (t: Throwable) {
+            AppLogger.e("MainViewModel", "Failed to unregister contacts observer: ${t.message}", t)
+        }
     }
 
+    /**
+     * Build app list on IO dispatcher. This function is still suspend and safe to call
+     * from background, but it ensures all heavy operations happen on Dispatchers.IO.
+     */
     suspend fun getAppsList(
         context: Context,
         includeRegularApps: Boolean = true,
         includeHiddenApps: Boolean = false,
         includeRecentApps: Boolean = true
-    ): MutableList<AppListItem> = withContext(Dispatchers.Main) {
+    ): MutableList<AppListItem> = withContext(Dispatchers.IO) {
 
         val fullList: MutableList<AppListItem> = mutableListOf()
 
         AppLogger.d(
             "AppListDebug",
-            "🔄 getAppsList called with: includeRegular=$includeRegularApps, includeHidden=$includeHiddenApps, includeRecent=$includeRecentApps"
+            "🔄 getAppsList (IO) called with: includeRegular=$includeRegularApps, includeHidden=$includeHiddenApps, includeRecent=$includeRecentApps"
         )
 
         try {
             val prefs = Prefs(context)
-            val hiddenApps = prefs.hiddenApps
+            val hiddenAppsSet = prefs.hiddenApps
             val pinnedPackages = prefs.pinnedApps.toSet()
             val userManager = context.getSystemService(Context.USER_SERVICE) as UserManager
             val seenAppKeys = mutableSetOf<String>()  // packageName|activityName|userId
             val scrollIndexMap = mutableMapOf<String, Int>()
 
-            for (profile in userManager.userProfiles) {
-                val privateSpaceManager = PrivateSpaceManager(context)
-                val isPrivate = privateSpaceManager.isPrivateSpaceProfile(profile)
-                if (isPrivate && privateSpaceManager.isPrivateSpaceLocked()) {
-                    AppLogger.d("AppListDebug", "🔒 Skipping locked private space for profile: $profile")
-                    continue
-                }
+            // Prepare profile list first
+            val profiles = userManager.userProfiles.toList()
 
-                val isWork = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-                    userManager.isManagedProfile
-                } else {
-                    false
-                }
-
-                val profileType = when {
-                    isPrivate -> "PRIVATE"
-                    isWork -> "WORK"
-                    else -> "SYSTEM"
-                }
-
-                AppLogger.d("AppListDebug", "👤 Processing user profile: $profile|$profileType")
-
-                // Recent Apps (⚠ make sure your tracker can handle per-profile)
-                if (prefs.recentAppsDisplayed && includeRecentApps && fullList.none { it.category == AppCategory.RECENT }) {
+            // Process recent apps once if needed
+            if (prefs.recentAppsDisplayed && includeRecentApps) {
+                try {
                     val tracker = AppUsageMonitor.createInstance(context)
                     val recentApps = tracker.getLastTenAppsUsed(context)
-
                     AppLogger.d("AppListDebug", "🕓 Adding ${recentApps.size} recent apps")
 
                     for ((packageName, appName, activityName) in recentApps) {
-                        val appKey = "$packageName|$activityName|${profile.hashCode()}"
-                        if (seenAppKeys.contains(appKey)) {
-                            AppLogger.d("AppListDebug", "⚠️ Skipping duplicate recent app: $appKey")
-                            continue
-                        }
+                        val fakeProfileHash = 0 // recent list treated as system list
+                        val appKey = "$packageName|$activityName|$fakeProfileHash"
+                        if (seenAppKeys.contains(appKey)) continue
 
                         val alias = prefs.getAppAlias(packageName).ifEmpty { appName }
-                        val tag = prefs.getAppTag(packageName, profile)
-
+                        val tag = prefs.getAppTag(packageName, null)
                         fullList.add(
                             AppListItem(
                                 activityLabel = appName,
                                 activityPackage = packageName,
                                 activityClass = activityName,
-                                user = profile,
+                                user = Process.myUserHandle(), // best effort
                                 profileType = "SYSTEM",
                                 customLabel = alias,
                                 customTag = tag,
@@ -417,80 +506,98 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                         )
                         seenAppKeys.add(appKey)
                     }
-                }
-
-                val launcherApps = context.getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps
-
-                // ✅ Query apps *for this user profile*
-                val activities = launcherApps.getActivityList(null, profile)
-
-                AppLogger.d("AppListDebug", "📦 Found ${activities.size} launcher activities for profile:$profile|$profileType")
-
-                when (profileType) {
-                    "WORK" -> AppLogger.d("AppListDebug", "💼 Work profile detected")
-                    "PRIVATE" -> AppLogger.d("AppListDebug", "🔐 Private profile detected")
-                    else -> AppLogger.d("AppListDebug", "🏠 System profile detected")
-                }
-                prefs.setProfileCounter(profileType, activities.size)
-
-                for (activityInfo in activities) {
-                    val packageName = activityInfo.applicationInfo.packageName
-                    val className = activityInfo.componentName.className
-                    val label = activityInfo.label.toString()
-
-
-                    if (packageName == BuildConfig.APPLICATION_ID) continue
-
-                    val appKey = "$packageName|$className|${profile.hashCode()}"
-                    if (seenAppKeys.contains(appKey)) {
-                        AppLogger.d("AppListDebug", "⚠️ Skipping duplicate launcher activity: $appKey")
-                        continue
-                    }
-
-                    val isHidden = listOf(packageName, appKey, "$packageName|${profile.hashCode()}").any { it in hiddenApps }
-                    if ((isHidden && !includeHiddenApps) || (!isHidden && !includeRegularApps)) {
-                        AppLogger.d("AppListDebug", "🚫 Skipping app due to filter: $appKey (hidden=$isHidden)")
-                        continue
-                    }
-
-                    val alias = prefs.getAppAlias(packageName)
-                    val tag = prefs.getAppTag(packageName, profile)
-
-                    val category = when {
-                        pinnedPackages.contains(packageName) -> AppCategory.PINNED
-                        else -> AppCategory.REGULAR
-                    }
-
-                    AppLogger.d("AppListDebug", "📱 Adding app: $label ($packageName/$className) from profile: $profile|$profileType")
-
-                    fullList.add(
-                        AppListItem(
-                            activityLabel = label,
-                            activityPackage = packageName,
-                            activityClass = className,
-                            user = profile,
-                            profileType = "SYSTEM", // set dynamically if you can
-                            customLabel = alias,
-                            customTag = tag,
-                            category = category
-                        )
-                    )
-
-                    AppLogger.d("AppListDebug", "✅ Added app: $label ($packageName/$className) from profile: $profile|$profileType")
-                    seenAppKeys.add(appKey)
+                } catch (t: Throwable) {
+                    AppLogger.e("AppListDebug", "Failed to add recent apps: ${t.message}", t)
                 }
             }
 
-            // Sort the list
+            // Process profiles in parallel to take advantage of multiple cores
+            val deferreds = profiles.map { profile ->
+                async {
+                    val privateSpaceManager = PrivateSpaceManager(context)
+                    val isPrivate = privateSpaceManager.isPrivateSpaceProfile(profile)
+                    if (isPrivate && privateSpaceManager.isPrivateSpaceLocked()) {
+                        AppLogger.d("AppListDebug", "🔒 Skipping locked private space for profile: $profile")
+                        return@async emptyList()
+                    }
+
+                    val isWork = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                        userManager.isManagedProfile
+                    } else {
+                        false
+                    }
+
+                    val profileType = when {
+                        isPrivate -> "PRIVATE"
+                        isWork -> "WORK"
+                        else -> "SYSTEM"
+                    }
+
+                    val launcherApps = context.getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps
+                    val activities = try {
+                        launcherApps.getActivityList(null, profile)
+                    } catch (t: Throwable) {
+                        AppLogger.e("AppListDebug", "Failed to get activities for $profile: ${t.message}", t)
+                        emptyList()
+                    }
+
+                    prefs.setProfileCounter(profileType, activities.size)
+                    AppLogger.d("AppListDebug", "👤 Processing user profile: $profile|$profileType with ${activities.size} activities")
+
+                    val list = mutableListOf<AppListItem>()
+
+                    for (activityInfo in activities) {
+                        val packageName = activityInfo.applicationInfo.packageName
+                        val className = activityInfo.componentName.className
+                        val label = activityInfo.label.toString()
+
+                        if (packageName == BuildConfig.APPLICATION_ID) continue
+
+                        val appKey = "$packageName|$className|${profile.hashCode()}"
+                        if (seenAppKeys.contains(appKey)) {
+                            continue
+                        }
+
+                        val isHidden = listOf(packageName, appKey, "$packageName|${profile.hashCode()}").any { it in hiddenAppsSet }
+                        if ((isHidden && !includeHiddenApps) || (!isHidden && !includeRegularApps)) {
+                            continue
+                        }
+
+                        val alias = prefs.getAppAlias(packageName)
+                        val tag = prefs.getAppTag(packageName, profile)
+
+                        val category = when {
+                            pinnedPackages.contains(packageName) -> AppCategory.PINNED
+                            else -> AppCategory.REGULAR
+                        }
+
+                        list.add(
+                            AppListItem(
+                                activityLabel = label,
+                                activityPackage = packageName,
+                                activityClass = className,
+                                user = profile,
+                                profileType = profileType,
+                                customLabel = alias,
+                                customTag = tag,
+                                category = category
+                            )
+                        )
+                        seenAppKeys.add(appKey)
+                    }
+
+                    list
+                }
+            }
+
+            // Await all profile results and merge
+            val results = deferreds.flatMap { it.await() }
+            fullList.addAll(results)
+
+            // Sort using a cheap normalization function and category first
             fullList.sortWith(
                 compareBy<AppListItem> { it.category.ordinal }
-                    .thenBy {
-                        it.label
-                            .replace(Regex("[^\\p{L}\\p{N}\\s]"), "")     // keep letters, numbers, spaces
-                            .replace(Regex("\\s+"), " ")                  // collapse multiple spaces
-                            .trim()                                                             // remove leading/trailing spaces
-                            .lowercase()
-                    }
+                    .thenBy { normalizeForSort(it.label) }
             )
 
             // Build scroll index
@@ -512,7 +619,10 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             }
 
             AppLogger.d("AppListDebug", "✅ App list built with ${fullList.size} items")
-            _appScrollMap.postValue(scrollIndexMap)
+            // publish scroll map on main thread
+            withContext(Dispatchers.Main) {
+                _appScrollMap.value = scrollIndexMap
+            }
 
         } catch (e: Exception) {
             AppLogger.e("AppListDebug", "❌ Error building app list: ${e.message}", e)
@@ -521,10 +631,13 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         fullList
     }
 
+    /**
+     * Build contact list on IO dispatcher. Uses batched phone/email queries for speed.
+     */
     suspend fun getContactsList(
         context: Context,
         includeHiddenContacts: Boolean = false
-    ): MutableList<ContactListItem> = withContext(Dispatchers.Main) {
+    ): MutableList<ContactListItem> = withContext(Dispatchers.IO) {
 
         val fullList: MutableList<ContactListItem> = mutableListOf()
         val prefs = Prefs(context)
@@ -533,11 +646,12 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         val seenContacts = mutableSetOf<String>() // contactId|lookupKey
         val scrollIndexMap = mutableMapOf<String, Int>()
 
-        AppLogger.d("ContactListDebug", "🔄 getContactsList called: includeHiddenContacts=$includeHiddenContacts")
+        AppLogger.d("ContactListDebug", "🔄 getContactsList (IO) called: includeHiddenContacts=$includeHiddenContacts")
 
         try {
-            val contentResolver = context.contentResolver
+            val contentResolver: ContentResolver = context.contentResolver
 
+            // First query basic contacts (id, name, lookup)
             val projection = arrayOf(
                 ContactsContract.Contacts._ID,
                 ContactsContract.Contacts.DISPLAY_NAME,
@@ -553,11 +667,13 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
             if (cursor == null) {
                 AppLogger.e("ContactListDebug", "❌ Cursor is null, no contacts found")
-            } else {
-                AppLogger.d("ContactListDebug", "📇 Cursor returned: ${cursor.count} contacts")
+                return@withContext fullList
             }
 
-            cursor?.use { c ->
+            val contactIds = mutableListOf<String>()
+            val basicContacts = mutableListOf<Triple<String, String, String>>() // id, name, lookupKey
+
+            cursor.use { c ->
                 while (c.moveToNext()) {
                     val id = c.getString(c.getColumnIndexOrThrow(ContactsContract.Contacts._ID))
                     val displayName =
@@ -565,69 +681,95 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                     val lookupKey = c.getString(c.getColumnIndexOrThrow(ContactsContract.Contacts.LOOKUP_KEY))
 
                     val key = "$id|$lookupKey"
-                    if (seenContacts.contains(key)) {
-                        AppLogger.d("ContactListDebug", "⚠️ Skipping duplicate contact: $key")
-                        continue
-                    }
-
-                    val isHidden = lookupKey in hiddenContacts
-                    if (isHidden && !includeHiddenContacts) {
-                        AppLogger.d("ContactListDebug", "🚫 Skipping hidden contact: $displayName ($lookupKey)")
-                        continue
-                    }
-
-                    val category = if (pinnedContacts.contains(lookupKey)) {
-                        AppLogger.d("ContactListDebug", "⭐ Contact is FAVORITE: $displayName ($lookupKey)")
-                        ContactCategory.FAVORITE
-                    } else ContactCategory.REGULAR
-
-                    // Fetch email
-                    val emailCursor = contentResolver.query(
-                        ContactsContract.CommonDataKinds.Email.CONTENT_URI,
-                        arrayOf(ContactsContract.CommonDataKinds.Email.ADDRESS),
-                        "${ContactsContract.CommonDataKinds.Email.CONTACT_ID} = ?",
-                        arrayOf(id),
-                        null
-                    )
-                    val email = emailCursor?.use { ec ->
-                        if (ec.moveToFirst()) ec.getString(ec.getColumnIndexOrThrow(ContactsContract.CommonDataKinds.Email.ADDRESS))
-                        else ""
-                    } ?: ""
-                    if (email.isNotEmpty()) AppLogger.d("ContactListDebug", "✉️ Found email for $displayName: $email")
-
-                    // Fetch primary phone number
-                    val phoneCursor = contentResolver.query(
-                        ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
-                        arrayOf(ContactsContract.CommonDataKinds.Phone.NUMBER),
-                        "${ContactsContract.CommonDataKinds.Phone.CONTACT_ID} = ?",
-                        arrayOf(id),
-                        null
-                    )
-                    val phoneNumber = phoneCursor?.use { pc ->
-                        if (pc.moveToFirst()) pc.getString(pc.getColumnIndexOrThrow(ContactsContract.CommonDataKinds.Phone.NUMBER))
-                        else ""
-                    } ?: ""
-                    if (phoneNumber.isNotEmpty()) AppLogger.d("ContactListDebug", "📞 Found phone for $displayName: $phoneNumber")
-
-                    fullList.add(
-                        ContactListItem(
-                            displayName = displayName,
-                            phoneNumber = phoneNumber,
-                            email = email,
-                            category = category
-                        )
-                    )
+                    if (seenContacts.contains(key)) continue
                     seenContacts.add(key)
-                    AppLogger.d("ContactListDebug", "✅ Added contact: $displayName ($lookupKey)")
+                    contactIds.add(id)
+                    basicContacts.add(Triple(id, displayName, lookupKey))
                 }
+            }
+
+            AppLogger.d("ContactListDebug", "📇 Contacts found: ${basicContacts.size}")
+
+            // Batch query phones for all contactIds
+            val phonesMap = mutableMapOf<String, String>() // contactId -> phone
+            if (contactIds.isNotEmpty()) {
+                val phoneCursor = contentResolver.query(
+                    ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
+                    arrayOf(
+                        ContactsContract.CommonDataKinds.Phone.CONTACT_ID,
+                        ContactsContract.CommonDataKinds.Phone.NUMBER
+                    ),
+                    "${ContactsContract.CommonDataKinds.Phone.CONTACT_ID} IN (${contactIds.joinToString(",") { "?" }})",
+                    contactIds.toTypedArray(),
+                    null
+                )
+                phoneCursor?.use { pc ->
+                    while (pc.moveToNext()) {
+                        val cid = pc.getString(pc.getColumnIndexOrThrow(ContactsContract.CommonDataKinds.Phone.CONTACT_ID))
+                        val number = pc.getString(pc.getColumnIndexOrThrow(ContactsContract.CommonDataKinds.Phone.NUMBER)) ?: ""
+                        // keep first found as primary
+                        phonesMap.putIfAbsent(cid, number)
+                    }
+                }
+            }
+
+            // Batch query emails for all contactIds
+            val emailsMap = mutableMapOf<String, String>() // contactId -> email
+            if (contactIds.isNotEmpty()) {
+                val emailCursor = contentResolver.query(
+                    ContactsContract.CommonDataKinds.Email.CONTENT_URI,
+                    arrayOf(
+                        ContactsContract.CommonDataKinds.Email.CONTACT_ID,
+                        ContactsContract.CommonDataKinds.Email.ADDRESS
+                    ),
+                    "${ContactsContract.CommonDataKinds.Email.CONTACT_ID} IN (${contactIds.joinToString(",") { "?" }})",
+                    contactIds.toTypedArray(),
+                    null
+                )
+                emailCursor?.use { ec ->
+                    while (ec.moveToNext()) {
+                        val cid = ec.getString(ec.getColumnIndexOrThrow(ContactsContract.CommonDataKinds.Email.CONTACT_ID))
+                        val address = ec.getString(ec.getColumnIndexOrThrow(ContactsContract.CommonDataKinds.Email.ADDRESS)) ?: ""
+                        emailsMap.putIfAbsent(cid, address)
+                    }
+                }
+            }
+
+            // Build final contact list from basicContacts with batched phone/email
+            for ((id, displayName, lookupKey) in basicContacts) {
+                // hidden handling
+                val isHidden = lookupKey in hiddenContacts
+                if (isHidden && !includeHiddenContacts) {
+                    AppLogger.d("ContactListDebug", "🚫 Skipping hidden contact: $displayName ($lookupKey)")
+                    continue
+                }
+
+                val category = if (pinnedContacts.contains(lookupKey)) {
+                    ContactCategory.FAVORITE
+                } else ContactCategory.REGULAR
+
+                val email = emailsMap[id] ?: ""
+                val phoneNumber = phonesMap[id] ?: ""
+
+                if (email.isNotEmpty()) AppLogger.d("ContactListDebug", "✉️ Found email for $displayName: $email")
+                if (phoneNumber.isNotEmpty()) AppLogger.d("ContactListDebug", "📞 Found phone for $displayName: $phoneNumber")
+
+                fullList.add(
+                    ContactListItem(
+                        displayName = displayName,
+                        phoneNumber = phoneNumber,
+                        email = email,
+                        category = category
+                    )
+                )
             }
 
             AppLogger.d("ContactListDebug", "🔢 Total contacts after processing: ${fullList.size}")
 
-            // Sort: FAVORITE first, then alphabetical
+            // Sort: FAVORITE first, then alphabetical using cheap normalization
             fullList.sortWith(
                 compareBy<ContactListItem> { it.category.ordinal }
-                    .thenBy { it.displayName.lowercase() }
+                    .thenBy { normalizeForSort(it.displayName) }
             )
             AppLogger.d("ContactListDebug", "🔠 Sorted contact list")
 
@@ -639,7 +781,12 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 }
                 scrollIndexMap.putIfAbsent(key, index)
             }
-            _contactScrollMap.postValue(scrollIndexMap)
+
+            // post scroll map
+            withContext(Dispatchers.Main) {
+                _contactScrollMap.value = scrollIndexMap
+            }
+
             AppLogger.d("ContactListDebug", "🧭 Scroll index map posted with ${scrollIndexMap.size} entries")
 
         } catch (e: Exception) {
@@ -649,4 +796,130 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         fullList
     }
 
+    // -------------------------
+    // Helper: cheap normalization for sorting
+    // Removes diacritics/unsupported characters cheaply and collapses whitespace.
+    private fun normalizeForSort(s: String): String {
+        // Keep letters, digits and spaces. Collapse multiple spaces. Lowercase using default locale.
+        val sb = StringBuilder(s.length)
+        var lastWasSpace = false
+        for (ch in s) {
+            if (ch.isLetterOrDigit()) {
+                sb.append(ch.lowercaseChar())
+                lastWasSpace = false
+            } else if (ch.isWhitespace()) {
+                if (!lastWasSpace) {
+                    sb.append(' ')
+                    lastWasSpace = true
+                }
+            } // else skip punctuation
+        }
+        return sb.toString().trim()
+    }
+
+    // -------------------------
+    // Simple file cache helpers using org.json (no external deps)
+    private fun saveAppsToFileCache(list: List<AppListItem>) {
+        try {
+            val array = JSONArray()
+            for (item in list) {
+                val obj = JSONObject()
+                obj.put("label", item.activityLabel)
+                obj.put("package", item.activityPackage)
+                obj.put("class", item.activityClass)
+                obj.put("userHash", item.user.hashCode())
+                obj.put("profileType", item.profileType)
+                obj.put("customLabel", item.customLabel)
+                obj.put("customTag", item.customTag)
+                obj.put("category", item.category.ordinal)
+                array.put(obj)
+            }
+            val top = JSONObject()
+            top.put("timestamp", System.currentTimeMillis())
+            top.put("items", array)
+            FileOutputStream(appsCacheFile).use { fos ->
+                fos.write(top.toString().toByteArray(Charset.forName("UTF-8")))
+            }
+        } catch (t: Throwable) {
+            AppLogger.e("MainViewModel", "Failed to save apps cache: ${t.message}", t)
+        }
+    }
+
+    private fun loadAppsFromFileCache(): List<AppListItem>? {
+        try {
+            if (!appsCacheFile.exists()) return null
+            val bytes = FileInputStream(appsCacheFile).use { it.readBytes() }
+            val text = String(bytes, Charset.forName("UTF-8"))
+            val top = JSONObject(text)
+            val array = top.getJSONArray("items")
+            val list = mutableListOf<AppListItem>()
+            for (i in 0 until array.length()) {
+                val obj = array.getJSONObject(i)
+                // user handle restoration cannot be exact; use current user handle as best effort
+                val userHandle = Process.myUserHandle()
+                val item = AppListItem(
+                    activityLabel = obj.optString("label", ""),
+                    activityPackage = obj.optString("package", ""),
+                    activityClass = obj.optString("class", ""),
+                    user = userHandle,
+                    profileType = obj.optString("profileType", "SYSTEM"),
+                    customLabel = obj.optString("customLabel", ""),
+                    customTag = obj.optString("customTag", ""),
+                    category = AppCategory.entries.getOrNull(obj.optInt("category", 1)) ?: AppCategory.REGULAR
+                )
+                list.add(item)
+            }
+            return list
+        } catch (t: Throwable) {
+            AppLogger.e("MainViewModel", "Failed to load apps cache: ${t.message}", t)
+            return null
+        }
+    }
+
+    private fun saveContactsToFileCache(list: List<ContactListItem>) {
+        try {
+            val array = JSONArray()
+            for (item in list) {
+                val obj = JSONObject()
+                obj.put("displayName", item.displayName)
+                obj.put("phoneNumber", item.phoneNumber)
+                obj.put("email", item.email)
+                obj.put("category", item.category.ordinal)
+                array.put(obj)
+            }
+            val top = JSONObject()
+            top.put("timestamp", System.currentTimeMillis())
+            top.put("items", array)
+            FileOutputStream(contactsCacheFile).use { fos ->
+                fos.write(top.toString().toByteArray(Charset.forName("UTF-8")))
+            }
+        } catch (t: Throwable) {
+            AppLogger.e("MainViewModel", "Failed to save contacts cache: ${t.message}", t)
+        }
+    }
+
+    private fun loadContactsFromFileCache(): List<ContactListItem>? {
+        try {
+            if (!contactsCacheFile.exists()) return null
+            val bytes = FileInputStream(contactsCacheFile).use { it.readBytes() }
+            val text = String(bytes, Charset.forName("UTF-8"))
+            val top = JSONObject(text)
+            val array = top.getJSONArray("items")
+            val list = mutableListOf<ContactListItem>()
+            for (i in 0 until array.length()) {
+                val obj = array.getJSONObject(i)
+                val item = ContactListItem(
+                    displayName = obj.optString("displayName", ""),
+                    phoneNumber = obj.optString("phoneNumber", ""),
+                    email = obj.optString("email", ""),
+                    category = ContactCategory.entries.getOrNull(obj.optInt("category", 1)) ?: ContactCategory.REGULAR
+                )
+                list.add(item)
+            }
+            return list
+        } catch (t: Throwable) {
+            AppLogger.e("MainViewModel", "Failed to load contacts cache: ${t.message}", t)
+            return null
+        }
+    }
 }
