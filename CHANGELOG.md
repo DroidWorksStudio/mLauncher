@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/main) - TBD
 
+### Enhancements:
+
+* Enhance Private Space UI and Logic ([fc9287fa](https://github.com/DroidWorksStudio/mLauncher/commit/fc9287fa))
+
 ### Bug Fixes:
 
 * Hide Private Apps button when mLauncher is not default ([a407a6f2](https://github.com/DroidWorksStudio/mLauncher/commit/a407a6f2))
