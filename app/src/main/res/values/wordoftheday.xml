@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="word_of_the_day">
+    <string-array name="word_of_the_day" translatable="false">
         <item>Stay resilient!</item>
         <item>You got this!</item>
         <item>Shine bright!</item>
