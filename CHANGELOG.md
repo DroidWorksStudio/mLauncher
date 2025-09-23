@@ -14,6 +14,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Code Quality:
 
+* Remove wordoftheday.xml from Crowdin configuration ([22e74bac](https://github.com/DroidWorksStudio/mLauncher/commit/22e74bac))
 * Update regex for conventional commit types ([9b7870fe](https://github.com/DroidWorksStudio/mLauncher/commit/9b7870fe))
 * Update commit parsing rules for changelog generation ([250afcf4](https://github.com/DroidWorksStudio/mLauncher/commit/250afcf4))
 * Update post-discord-release.js ([ead38b5c](https://github.com/DroidWorksStudio/mLauncher/commit/ead38b5c))
