@@ -368,6 +368,7 @@ object Constants {
         LockScreen,
         ShowNotification,
         ShowAppList,
+        ShowWidgetPage,
         ShowNotesManager,
         ShowDigitalWellbeing,
         OpenQuickSettings,
@@ -386,6 +387,7 @@ object Constants {
                 TogglePrivateSpace -> getLocalizedString(R.string.private_space, "Toggle")
                 ShowNotification -> getLocalizedString(R.string.show_notifications)
                 ShowAppList -> getLocalizedString(R.string.show_app_list)
+                ShowWidgetPage -> getLocalizedString(R.string.show_widget_page)
                 ShowNotesManager -> getLocalizedString(R.string.show_notes_manager)
                 ShowDigitalWellbeing -> getLocalizedString(R.string.show_digital_wellbeing)
                 OpenQuickSettings -> getLocalizedString(R.string.open_quick_settings)
@@ -407,6 +409,7 @@ object Constants {
                 TogglePrivateSpace -> getLocalizedString(R.string.private_space)
                 ShowNotification -> getLocalizedString(R.string.show_notifications)
                 ShowAppList -> getLocalizedString(R.string.show_app_list)
+                ShowWidgetPage -> getLocalizedString(R.string.show_widget_page)
                 ShowNotesManager -> getLocalizedString(R.string.show_notes_manager)
                 ShowDigitalWellbeing -> getLocalizedString(R.string.show_digital_wellbeing)
                 OpenQuickSettings -> getLocalizedString(R.string.open_quick_settings)

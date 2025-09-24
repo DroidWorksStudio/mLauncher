@@ -568,6 +568,17 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
         }
     }
 
+    private fun showWidgetPage() {
+        CrashHandler.logUserAction("Display Widget Page")
+        try {
+            if (findNavController().currentDestination?.id == R.id.mainFragment) {
+                findNavController().navigate(R.id.action_mainFragment_to_widgetFragment)
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
     @SuppressLint("PrivateApi")
     private fun expandNotificationDrawer(context: Context) {
         try {
@@ -711,6 +722,7 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
 
             Action.ShowAppList -> showAppList(AppDrawerFlag.LaunchApp, includeHiddenApps = false)
             Action.ShowNotesManager -> showNotesManager()
+            Action.ShowWidgetPage -> showWidgetPage()
             Action.ShowDigitalWellbeing -> requireContext().openDigitalWellbeing()
             Action.OpenApp -> {} // this should be handled in the respective onSwipe[Up,Down,Right,Left] functions
             Action.OpenQuickSettings -> expandQuickSettings(requireContext())
