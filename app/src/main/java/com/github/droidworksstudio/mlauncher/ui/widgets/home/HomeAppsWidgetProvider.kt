@@ -86,7 +86,7 @@ class HomeAppsWidgetProvider : AppWidgetProvider() {
                 val drawableToUse = recoloredDrawable ?: nonNullDrawable
 
                 // Convert drawable to bitmap
-                val bitmap = drawableToBitmap(drawableToUse, iconSize, iconSize)
+                val bitmap = drawableToBitmap(drawableToUse, iconSize)
 
                 // Apply alignment
                 when (prefs.homeAlignment) {
@@ -138,13 +138,21 @@ class HomeAppsWidgetProvider : AppWidgetProvider() {
         }
     }
 
-    fun drawableToBitmap(drawable: Drawable, width: Int, height: Int): Bitmap {
-        val bitmap = createBitmap(width, height)
+    fun drawableToBitmap(drawable: Drawable, maxSizePx: Int): Bitmap {
+        // Clamp width and height to maxSizePx to avoid RemoteViews exceptions
+        val intrinsicWidth = drawable.intrinsicWidth.coerceAtMost(maxSizePx)
+        val intrinsicHeight = drawable.intrinsicHeight.coerceAtMost(maxSizePx)
+
+        // Create bitmap with ARGB_8888 (safe for RemoteViews)
+        val bitmap = createBitmap(intrinsicWidth.coerceAtLeast(1), intrinsicHeight.coerceAtLeast(1))
+
         val canvas = Canvas(bitmap)
-        drawable.setBounds(0, 0, width, height)
+        drawable.setBounds(0, 0, canvas.width, canvas.height)
         drawable.draw(canvas)
+
         return bitmap
     }
+
 
 }
 
