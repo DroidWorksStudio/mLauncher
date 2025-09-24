@@ -1374,6 +1374,6 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
         dialogBuilder.colorPickerBottomSheet?.dismiss()
         dialogBuilder.sliderBottomSheet?.dismiss()
         dialogBuilder.flagSettingsBottomSheet?.dismiss()
-        dialogBuilder.bottomSheet?.dismiss()
+        dialogBuilder.showDeviceBottomSheet?.dismiss()
     }
 }
