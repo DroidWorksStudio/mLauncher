@@ -15,6 +15,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Code Quality:
 
+* Adjust Word of the Day widget minWidth ([fe49c1bb](https://github.com/DroidWorksStudio/mLauncher/commit/fe49c1bb))
 * Rename `bottomSheet` to `showDeviceBottomSheet` ([c14313dc](https://github.com/DroidWorksStudio/mLauncher/commit/c14313dc))
 * Mark `word_of_the_day` as not translatable ([cfdb421b](https://github.com/DroidWorksStudio/mLauncher/commit/cfdb421b))
 * Remove wordoftheday.xml from Crowdin configuration ([22e74bac](https://github.com/DroidWorksStudio/mLauncher/commit/22e74bac))
