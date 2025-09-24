@@ -15,6 +15,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Code Quality:
 
+* Rename `bottomSheet` to `showDeviceBottomSheet` ([c14313dc](https://github.com/DroidWorksStudio/mLauncher/commit/c14313dc))
 * Mark `word_of_the_day` as not translatable ([cfdb421b](https://github.com/DroidWorksStudio/mLauncher/commit/cfdb421b))
 * Remove wordoftheday.xml from Crowdin configuration ([22e74bac](https://github.com/DroidWorksStudio/mLauncher/commit/22e74bac))
 * Update regex for conventional commit types ([9b7870fe](https://github.com/DroidWorksStudio/mLauncher/commit/9b7870fe))
