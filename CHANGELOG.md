@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Bug Fixes:
 
+* Update widget dimensions and bitmap scaling ([5695d0b2](https://github.com/DroidWorksStudio/mLauncher/commit/5695d0b2))
 * Hide Private Apps button when mLauncher is not default ([a407a6f2](https://github.com/DroidWorksStudio/mLauncher/commit/a407a6f2))
 
 ### Code Quality:
