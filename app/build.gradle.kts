@@ -28,12 +28,18 @@ val versionNameStr = when (type) {
     else -> baseVersionName
 }
 
+val applicationName = when (type) {
+    1 -> "app.mlauncher.beta"
+    2 -> "app.mlauncher.alpha"
+    else -> "app.mlauncher"
+}
+
 android {
     namespace = "com.github.droidworksstudio.mlauncher"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "app.mlauncher"
+        applicationId = applicationName
         minSdk = 28
         targetSdk = 36
         versionCode = versionCodeInt
