@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Enhancements:
 
+* Add placeholder for empty widget screen and improve widget management ([0883c459](https://github.com/DroidWorksStudio/mLauncher/commit/0883c459))
 * Add Widget Page feature ([af483370](https://github.com/DroidWorksStudio/mLauncher/commit/af483370))
 * Enhance AppLogger with verbose logging and unconditional warning/error logging ([11ebd84d](https://github.com/DroidWorksStudio/mLauncher/commit/11ebd84d))
 * Introduce dynamic application name based on build type ([83240776](https://github.com/DroidWorksStudio/mLauncher/commit/83240776))
