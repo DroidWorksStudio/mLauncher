@@ -318,6 +318,7 @@
     <string name="widgets_select_widget">Bir Widget Seçin</string>
     <string name="widgets_add_widget">Bir Widget Ekle</string>
     <string name="widgets_reset_widget">Tüm Widget\'ları sıfırla</string>
+    <string name="widgets_not_added">No widgets added yet. Long press to add one.</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">Bu işlevsellik için Android 15 veya üzeri gerekir.</string>
     <string name="toast_private_space_default_home_screen">Özel alana erişebilmek için MultiLauncher\'ın varsayılan ana ekran olması gerekiyor.</string>
