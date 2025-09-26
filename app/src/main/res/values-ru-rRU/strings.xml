@@ -151,6 +151,7 @@
     <string name="private_space">Частные пространства (%1$s)</string>
     <string name="show_notifications">Показать уведомление</string>
     <string name="show_app_list">Показать список приложений</string>
+    <string name="show_widget_page">Show Widget Page</string>
     <string name="show_notes_manager">Показать менеджер заметок</string>
     <string name="show_digital_wellbeing">Показать цифровое благополучие</string>
     <string name="open_quick_settings">Быстрые настройки</string>
@@ -313,6 +314,10 @@
     <string name="permission_required">Требуется разрешение</string>
     <string name="access_usage_data_permission">Чтобы продолжить, включите разрешение на доступ к данным об использовании в настройках вашего устройства.</string>
     <string name="goto_settings">Перейти в настройки</string>
+    <!-- Widget Stings -->
+    <string name="widgets_select_widget">Select a Widget</string>
+    <string name="widgets_add_widget">Add a Widget</string>
+    <string name="widgets_reset_widget">Reset all Widgets</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">Для этой функции требуется Android 15 или более поздняя версия.</string>
     <string name="toast_private_space_default_home_screen">Для доступа к личному пространству MultiLauncher должен быть главным экраном по умолчанию.</string>
