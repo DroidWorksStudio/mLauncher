@@ -151,6 +151,7 @@
     <string name="private_space">Spazi privati (%1$s)</string>
     <string name="show_notifications">Mostra Notifiche</string>
     <string name="show_app_list">Mostra Elenco App</string>
+    <string name="show_widget_page">Mostra pagina widget</string>
     <string name="show_notes_manager">Mostra gestore note</string>
     <string name="show_digital_wellbeing">Mostra Benessere Digitale</string>
     <string name="open_quick_settings">Impostazioni Rapide</string>
@@ -313,6 +314,10 @@
     <string name="permission_required">Permesso richiesto</string>
     <string name="access_usage_data_permission">Per procedere, abilita l\'autorizzazione ad accedere ai dati di utilizzo nelle impostazioni del tuo dispositivo.</string>
     <string name="goto_settings">Vai su Impostazioni</string>
+    <!-- Widget Stings -->
+    <string name="widgets_select_widget">Seleziona un widget</string>
+    <string name="widgets_add_widget">Aggiungi un widget</string>
+    <string name="widgets_reset_widget">Reimposta tutti i widget</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">Questa funzionalità richiede Android 15 o versione successiva.</string>
     <string name="toast_private_space_default_home_screen">Per accedere allo spazio privato, MultiLauncher deve essere la schermata iniziale predefinita.</string>

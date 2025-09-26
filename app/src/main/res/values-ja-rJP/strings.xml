@@ -151,6 +151,7 @@
     <string name="private_space">プライベートスペース (%1$s)</string>
     <string name="show_notifications">通知を表示</string>
     <string name="show_app_list">アプリ一覧を表示</string>
+    <string name="show_widget_page">ウィジェットページを表示</string>
     <string name="show_notes_manager">ショーノートマネージャー</string>
     <string name="show_digital_wellbeing">デジタルウェルビーイングを表示</string>
     <string name="open_quick_settings">クイック設定</string>
@@ -313,6 +314,10 @@
     <string name="permission_required">許可が必要</string>
     <string name="access_usage_data_permission">続行するには、デバイス設定で使用状況データにアクセスする権限を有効にしてください。</string>
     <string name="goto_settings">設定に移動</string>
+    <!-- Widget Stings -->
+    <string name="widgets_select_widget">ウィジェットを選択</string>
+    <string name="widgets_add_widget">ウィジェットを追加する</string>
+    <string name="widgets_reset_widget">すべてのウィジェットをリセット</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">この機能には Android 15 以降が必要です。</string>
     <string name="toast_private_space_default_home_screen">プライベート スペースにアクセスするには、MultiLauncher をデフォルトのホーム画面にする必要があります。</string>

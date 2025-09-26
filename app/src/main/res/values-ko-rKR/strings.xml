@@ -151,6 +151,7 @@
     <string name="private_space">개인 공간 (%1$s)</string>
     <string name="show_notifications">Show Notification</string>
     <string name="show_app_list">Show App List</string>
+    <string name="show_widget_page">위젯 페이지 표시</string>
     <string name="show_notes_manager">쇼 노트 관리자</string>
     <string name="show_digital_wellbeing">디지털 웰빙을 보여주세요</string>
     <string name="open_quick_settings">Quick Settings</string>
@@ -313,6 +314,10 @@
     <string name="permission_required">허가 필요</string>
     <string name="access_usage_data_permission">계속하려면 기기 설정에서 사용 데이터에 액세스할 수 있는 권한을 허용하세요.</string>
     <string name="goto_settings">설정으로 이동</string>
+    <!-- Widget Stings -->
+    <string name="widgets_select_widget">위젯을 선택하세요</string>
+    <string name="widgets_add_widget">위젯 추가</string>
+    <string name="widgets_reset_widget">모든 위젯 재설정</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">이 기능을 사용하려면 Android 15 이상이 필요합니다.</string>
     <string name="toast_private_space_default_home_screen">개인 공간에 접근하려면 MultiLauncher를 기본 홈 화면으로 설정해야 합니다.</string>
