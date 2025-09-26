@@ -6,6 +6,9 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Enhancements:
 
+* Enhance AppLogger with verbose logging and unconditional warning/error logging ([11ebd84d](https://github.com/DroidWorksStudio/mLauncher/commit/11ebd84d))
+* Introduce dynamic application name based on build type ([83240776](https://github.com/DroidWorksStudio/mLauncher/commit/83240776))
+* Add Widget Page feature ([7f5e8559](https://github.com/DroidWorksStudio/mLauncher/commit/7f5e8559))
 * Enhance Private Space UI and Logic ([fc9287fa](https://github.com/DroidWorksStudio/mLauncher/commit/fc9287fa))
 
 ### Bug Fixes:
@@ -15,6 +18,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Code Quality:
 
+* Improve crash handling and reporting ([8401a5c2](https://github.com/DroidWorksStudio/mLauncher/commit/8401a5c2))
 * Adjust Word of the Day widget minWidth ([fe49c1bb](https://github.com/DroidWorksStudio/mLauncher/commit/fe49c1bb))
 * Rename `bottomSheet` to `showDeviceBottomSheet` ([c14313dc](https://github.com/DroidWorksStudio/mLauncher/commit/c14313dc))
 * Mark `word_of_the_day` as not translatable ([cfdb421b](https://github.com/DroidWorksStudio/mLauncher/commit/cfdb421b))
