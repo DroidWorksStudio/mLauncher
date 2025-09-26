@@ -320,6 +320,7 @@
     <string name="widgets_select_widget">בחר ווידג\'ט</string>
     <string name="widgets_add_widget">הוסף ווידג\'ט</string>
     <string name="widgets_reset_widget">איפוס כל הווידג\'טים</string>
+    <string name="widgets_not_added">No widgets added yet. Long press to add one.</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">פונקציונליות זו דורשת אנדרואיד 15 ואילך.</string>
     <string name="toast_private_space_default_home_screen">MultiLauncher צריך להיות מסך הבית המוגדר כברירת מחדל כדי לגשת למרחב פרטי.</string>

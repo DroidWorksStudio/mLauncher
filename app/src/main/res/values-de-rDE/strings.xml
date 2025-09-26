@@ -318,6 +318,7 @@
     <string name="widgets_select_widget">Wählen Sie ein Widget</string>
     <string name="widgets_add_widget">Ein Widget hinzufügen</string>
     <string name="widgets_reset_widget">Alle Widgets zurücksetzen</string>
+    <string name="widgets_not_added">No widgets added yet. Long press to add one.</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">Diese Funktion erfordert Android 15 oder höher.</string>
     <string name="toast_private_space_default_home_screen">Um auf den privaten Bereich zugreifen zu können, muss MultiLauncher der Standard-Startbildschirm sein.</string>

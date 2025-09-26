@@ -318,6 +318,7 @@
     <string name="widgets_select_widget">เลือกวิดเจ็ต</string>
     <string name="widgets_add_widget">เพิ่มวิดเจ็ต</string>
     <string name="widgets_reset_widget">รีเซ็ตวิดเจ็ตทั้งหมด</string>
+    <string name="widgets_not_added">No widgets added yet. Long press to add one.</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">ฟังก์ชันนี้ต้องใช้ Android 15 ขึ้นไป</string>
     <string name="toast_private_space_default_home_screen">MultiLauncher จะต้องเป็นหน้าจอหลักเริ่มต้นเพื่อเข้าถึงพื้นที่ส่วนตัว</string>
