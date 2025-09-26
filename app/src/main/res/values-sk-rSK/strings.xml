@@ -151,6 +151,7 @@
     <string name="private_space">Súkromné priestory (%1$s)</string>
     <string name="show_notifications">Zobraziť notifikácie</string>
     <string name="show_app_list">Zobraziť zoznam aplikácií</string>
+    <string name="show_widget_page">Show Widget Page</string>
     <string name="show_notes_manager">Zobraziť správcu poznámok</string>
     <string name="show_digital_wellbeing">Ukážte digitálnu pohodu</string>
     <string name="open_quick_settings">Rýchle nastavenia</string>
@@ -315,6 +316,10 @@ Tento prístup môžete kedykoľvek vypnúť v nastaveniach zariadenia.</string>
     <string name="permission_required">Vyžaduje sa povolenie</string>
     <string name="access_usage_data_permission">Ak chcete pokračovať, povoľte v nastaveniach zariadenia povolenie na prístup k údajom o používaní.</string>
     <string name="goto_settings">Prejdite do časti Nastavenia</string>
+    <!-- Widget Stings -->
+    <string name="widgets_select_widget">Select a Widget</string>
+    <string name="widgets_add_widget">Add a Widget</string>
+    <string name="widgets_reset_widget">Reset all Widgets</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">Táto funkcia vyžaduje Android 15 alebo novší.</string>
     <string name="toast_private_space_default_home_screen">MultiLauncher musí byť predvolenou domovskou obrazovkou na prístup k súkromnému priestoru.</string>
