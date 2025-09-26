@@ -151,6 +151,7 @@
     <string name="private_space">Privéruimtes (%1$s)</string>
     <string name="show_notifications">Toon melding</string>
     <string name="show_app_list">Toon App Lijst</string>
+    <string name="show_widget_page">Show Widget Page</string>
     <string name="show_notes_manager">Toon notitiesbeheerder</string>
     <string name="show_digital_wellbeing">Toon digitaal welzijn</string>
     <string name="open_quick_settings">Snelle Instellingen</string>
@@ -313,6 +314,10 @@
     <string name="permission_required">Toestemming vereist</string>
     <string name="access_usage_data_permission">Om verder te gaan, moet u toestemming voor toegang tot gebruiksgegevens inschakelen in de instellingen van uw apparaat.</string>
     <string name="goto_settings">Ga naar Instellingen</string>
+    <!-- Widget Stings -->
+    <string name="widgets_select_widget">Select a Widget</string>
+    <string name="widgets_add_widget">Add a Widget</string>
+    <string name="widgets_reset_widget">Reset all Widgets</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">Voor deze functionaliteit is Android 15 of hoger vereist.</string>
     <string name="toast_private_space_default_home_screen">MultiLauncher moet het standaard startscherm zijn om toegang te krijgen tot uw privéruimte.</string>
