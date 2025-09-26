@@ -29,6 +29,10 @@ All notable changes to this project will be documented in this file. See [conven
 * Update post-discord-release.js ([ead38b5c](https://github.com/DroidWorksStudio/mLauncher/commit/ead38b5c))
 * Implement caching and optimize data loading in MainViewModel ([9318ffa0](https://github.com/DroidWorksStudio/mLauncher/commit/9318ffa0))
 
+### Localization:
+
+* Updated Language Files. ([#907](https://github.com/DroidWorksStudio/mLauncher/pull/907)) ([33ee046c](https://github.com/DroidWorksStudio/mLauncher/commit/33ee046c))
+
 ### Feature Removals:
 
 * Remove Word of the Day feature ([2a851d01](https://github.com/DroidWorksStudio/mLauncher/commit/2a851d01))
