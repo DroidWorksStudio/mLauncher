@@ -408,6 +408,7 @@
     <string name="widgets_select_widget">Select a Widget</string>
     <string name="widgets_add_widget">Add a Widget</string>
     <string name="widgets_reset_widget">Reset all Widgets</string>
+    <string name="widgets_not_added">No widgets added yet. Long press to add one.</string>
 
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">This functionality requires Android 15 or later.</string>

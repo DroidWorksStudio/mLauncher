@@ -282,6 +282,7 @@ class ResizableWidgetWrapper(
                         lastY = event.rawY
 
                         updateGhostPosition()
+                        activeDialog?.dismiss()
                     }
 
                     MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
