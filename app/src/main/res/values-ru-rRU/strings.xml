@@ -318,6 +318,7 @@
     <string name="widgets_select_widget">Выберите виджет</string>
     <string name="widgets_add_widget">Добавить виджет</string>
     <string name="widgets_reset_widget">Сбросить все виджеты</string>
+    <string name="widgets_not_added">No widgets added yet. Long press to add one.</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">Для этой функции требуется Android 15 или более поздняя версия.</string>
     <string name="toast_private_space_default_home_screen">Для доступа к личному пространству MultiLauncher должен быть главным экраном по умолчанию.</string>
