@@ -151,6 +151,7 @@
     <string name="private_space">พื้นที่ส่วนตัว (%1$s)</string>
     <string name="show_notifications">แสดงการแจ้งเตือน</string>
     <string name="show_app_list">แสดงรายการแอพ</string>
+    <string name="show_widget_page">แสดงหน้าวิดเจ็ต</string>
     <string name="show_notes_manager">ผู้จัดการแสดงบันทึก</string>
     <string name="show_digital_wellbeing">แสดงความเป็นอยู่ที่ดีทางดิจิทัล</string>
     <string name="open_quick_settings">การตั้งค่าด่วน</string>
@@ -313,6 +314,10 @@
     <string name="permission_required">ต้องได้รับอนุญาต</string>
     <string name="access_usage_data_permission">หากต้องการดำเนินการต่อ โปรดเปิดสิทธิ์การเข้าถึงข้อมูลการใช้งานในการตั้งค่าอุปกรณ์ของคุณ</string>
     <string name="goto_settings">ไปที่การตั้งค่า</string>
+    <!-- Widget Stings -->
+    <string name="widgets_select_widget">เลือกวิดเจ็ต</string>
+    <string name="widgets_add_widget">เพิ่มวิดเจ็ต</string>
+    <string name="widgets_reset_widget">รีเซ็ตวิดเจ็ตทั้งหมด</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">ฟังก์ชันนี้ต้องใช้ Android 15 ขึ้นไป</string>
     <string name="toast_private_space_default_home_screen">MultiLauncher จะต้องเป็นหน้าจอหลักเริ่มต้นเพื่อเข้าถึงพื้นที่ส่วนตัว</string>
