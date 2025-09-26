@@ -151,6 +151,7 @@
     <string name="private_space">Özel Alanlar (%1$s)</string>
     <string name="show_notifications">Bildirimi Göster</string>
     <string name="show_app_list">Uygulama Listesini Göster</string>
+    <string name="show_widget_page">Show Widget Page</string>
     <string name="show_notes_manager">Gösteri Notları Yöneticisi</string>
     <string name="show_digital_wellbeing">Dijital Refahı Göster</string>
     <string name="open_quick_settings">Hızlı Ayarlar</string>
@@ -313,6 +314,10 @@
     <string name="permission_required">İzin Gerekli</string>
     <string name="access_usage_data_permission">Devam etmek için lütfen cihaz ayarlarınızdan kullanım verilerine erişim iznini etkinleştirin.</string>
     <string name="goto_settings">Ayarlara git</string>
+    <!-- Widget Stings -->
+    <string name="widgets_select_widget">Select a Widget</string>
+    <string name="widgets_add_widget">Add a Widget</string>
+    <string name="widgets_reset_widget">Reset all Widgets</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">Bu işlevsellik için Android 15 veya üzeri gerekir.</string>
     <string name="toast_private_space_default_home_screen">Özel alana erişebilmek için MultiLauncher\'ın varsayılan ana ekran olması gerekiyor.</string>
