@@ -151,6 +151,7 @@
     <string name="private_space">מרחבים פרטיים (%1$s)</string>
     <string name="show_notifications">הצגת התרעות</string>
     <string name="show_app_list">הצגת רשימת יישומים</string>
+    <string name="show_widget_page">Show Widget Page</string>
     <string name="show_notes_manager">הצג את מנהל ההערות</string>
     <string name="show_digital_wellbeing">הצג שימוש חכם בדיגיטל</string>
     <string name="open_quick_settings">הגדרות מהירות</string>
@@ -315,6 +316,10 @@
     <string name="permission_required">נדרשת הרשאה</string>
     <string name="access_usage_data_permission">כדי להמשיך, אפשר הרשאת גישה לנתוני שימוש בהגדרות המכשיר שלך.</string>
     <string name="goto_settings">עבור אל הגדרות</string>
+    <!-- Widget Stings -->
+    <string name="widgets_select_widget">Select a Widget</string>
+    <string name="widgets_add_widget">Add a Widget</string>
+    <string name="widgets_reset_widget">Reset all Widgets</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">פונקציונליות זו דורשת אנדרואיד 15 ואילך.</string>
     <string name="toast_private_space_default_home_screen">MultiLauncher צריך להיות מסך הבית המוגדר כברירת מחדל כדי לגשת למרחב פרטי.</string>
