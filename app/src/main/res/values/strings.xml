@@ -1,4 +1,6 @@
 <resources>
+    <string name="pass_a_string" translatable="false">%1$s</string>
+
     <!-- Base Settings -->
     <string name="select_app">Select App</string>
     <string name="show_apps">Search Apps</string>
@@ -198,6 +200,7 @@
     <string name="private_space">Private Spaces (%1$s)</string>
     <string name="show_notifications">Show Notification</string>
     <string name="show_app_list">Show App List</string>
+    <string name="show_widget_page">Show Widget Page</string>
     <string name="show_notes_manager">Show Notes Manager</string>
     <string name="show_digital_wellbeing">Show Digital Wellbeing</string>
     <string name="open_quick_settings">Quick Settings</string>
@@ -400,6 +403,11 @@
     <string name="permission_required">Permission Required</string>
     <string name="access_usage_data_permission">To proceed, please enable permission to access usage data in your device settings.</string>
     <string name="goto_settings">Go to Settings</string>
+
+    <!-- Widget Stings -->
+    <string name="widgets_select_widget">Select a Widget</string>
+    <string name="widgets_add_widget">Add a Widget</string>
+    <string name="widgets_reset_widget">Reset all Widgets</string>
 
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">This functionality requires Android 15 or later.</string>
