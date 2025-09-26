@@ -1,18 +1,21 @@
 package com.github.droidworksstudio.common
 
+import android.content.ContentUris
+import android.content.ContentValues
 import android.content.Context
 import android.content.Intent
-import android.content.pm.PackageInfo
+import android.content.pm.PackageManager
 import android.net.Uri
+import android.os.Build
+import android.provider.MediaStore
 import androidx.core.content.FileProvider
 import com.github.droidworksstudio.mlauncher.CrashReportActivity
 import com.github.droidworksstudio.mlauncher.helper.getDeviceInfo
 import java.io.BufferedReader
 import java.io.File
-import java.io.FileInputStream
-import java.io.FileWriter
 import java.io.InputStreamReader
 import java.io.PrintWriter
+import java.io.StringWriter
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -22,144 +25,146 @@ import kotlin.system.exitProcess
 class CrashHandler(private val context: Context) : Thread.UncaughtExceptionHandler {
 
     companion object {
-        private val userActions = LinkedBlockingQueue<String>(50) // Stores last 50 user actions
+        private val userActions = LinkedBlockingQueue<String>(50)
+        var lastCrashUri: Uri? = null  // store the latest crash file URI
 
         fun logUserAction(action: String) {
-            val timeStamp = formatCustomDate(Date())
+            val timeStamp = Date().toString()
             userActions.offer("$timeStamp - $action")
-            if (userActions.size > 50) userActions.poll() // Remove oldest if over limit
+            if (userActions.size > 50) userActions.poll()
         }
 
-        fun formatCustomDate(date: Date): String {
-            val dayOfWeek = SimpleDateFormat("EEE", Locale.getDefault()).format(date) // e.g. Fri
-            val day = SimpleDateFormat("d", Locale.getDefault()).format(date).toInt() // e.g. 13
-            val monthYear = SimpleDateFormat("MMMM yyyy", Locale.getDefault()).format(date) // e.g. June 2025
-            val time = SimpleDateFormat("hh:mm a", Locale.getDefault()).format(date) // e.g. 12:32 AM
+        fun forceCrash() {
+            throw RuntimeException("💥 Forced crash for testing CrashHandler")
+        }
+    }
 
-            val ordinal = getDayOrdinal(day)
+    private fun getTimestamp(): String {
+        val sdf = SimpleDateFormat("EEE, d MMM yyyy - hh:mm a", Locale.getDefault())
+        return sdf.format(Date())
+    }
 
-            return "$dayOfWeek ${day}$ordinal $monthYear - $time"
+    private fun buildCrashContent(exception: Throwable): String {
+        val runtime = Runtime.getRuntime()
+        val usedMemInMB = (runtime.totalMemory() - runtime.freeMemory()) / 1048576L
+        val maxHeapSizeInMB = runtime.maxMemory() / 1048576L
+
+        return buildString {
+            appendLine("Crash Report - ${Date()}")
+            appendLine("Thread: ${Thread.currentThread().name}")
+            appendLine("\n=== Device Info ===")
+            appendLine(getDeviceInfo(context))
+            appendLine("\n=== Memory Info ===")
+            appendLine("Used Memory (MB): $usedMemInMB")
+            appendLine("Max Heap Size (MB): $maxHeapSizeInMB")
+            appendLine("\n=== Recent User Actions ===")
+            userActions.forEach { appendLine(it) }
+            appendLine("\n=== Crash LogCat ===")
+            try {
+                val process = Runtime.getRuntime().exec("logcat -d -t 100 AndroidRuntime:E *:S")
+                BufferedReader(InputStreamReader(process.inputStream)).forEachLine { appendLine(it) }
+            } catch (_: Exception) {
+            }
+            appendLine("\n=== Crash Stack Trace ===")
+            val sw = StringWriter()
+            val pw = PrintWriter(sw)
+            exception.printStackTrace(pw)
+            appendLine(sw.toString())
+        }
+    }
+
+    private fun saveCrashToMediaStore(content: String): Uri? {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.Q) return null
+
+        val packageManager = context.packageManager
+        val packageName = context.packageName
+        val appName = try {
+            val appInfo = packageManager.getApplicationInfo(packageName, 0)
+            packageManager.getApplicationLabel(appInfo).toString()
+        } catch (_: PackageManager.NameNotFoundException) {
+            packageName
         }
 
-        fun getDayOrdinal(day: Int): String {
-            return when {
-                day in 11..13 -> "th"
-                day % 10 == 1 -> "st"
-                day % 10 == 2 -> "nd"
-                day % 10 == 3 -> "rd"
-                else -> "th"
+        val timestamp = getTimestamp()
+        val displayName = "$appName Crash Report_$timestamp.log"
+        val relativePath = "Download/$appName/Crash Reports"
+        val resolver = context.contentResolver
+        val collection = MediaStore.Files.getContentUri(MediaStore.VOLUME_EXTERNAL_PRIMARY)
+
+        // Insert new crash file
+        val values = ContentValues().apply {
+            put(MediaStore.MediaColumns.DISPLAY_NAME, displayName)
+            put(MediaStore.MediaColumns.MIME_TYPE, "application/octet-stream")
+            put(MediaStore.MediaColumns.RELATIVE_PATH, relativePath)
+        }
+        val uri = resolver.insert(collection, values)
+
+        uri?.let {
+            resolver.openOutputStream(it, "w")?.use { outputStream ->
+                outputStream.write(content.toByteArray())
             }
         }
 
-        fun customReportSender(context: Context): Uri? {
-            val logFile: File = try {
-                val packageManager = context.packageManager
-                val packageInfo = packageManager.getPackageInfo(context.packageName, 0)
-
-                // Use internal storage for saving the crash log
-                val crashDir = File(context.filesDir, "crash_logs")  // Internal storage
-                if (!crashDir.exists()) crashDir.mkdirs()
-
-                val crashFile = File(crashDir, "${packageInfo.packageName}-crash-report.txt")
-
-                // Check if the file exists before attempting to read
-                if (crashFile.exists()) {
-                    // Read the content of the file
-                    val fileInputStream = FileInputStream(crashFile)
-                    val inputStreamReader = InputStreamReader(fileInputStream)
-                    val stringBuilder = StringBuilder()
-
-                    // Read the file line by line
-                    inputStreamReader.forEachLine { stringBuilder.append(it).append("\n") }
-
-                    // Log the content of the crash report file
-                    AppLogger.d("CrashHandler", "Crash Report Content:\n${stringBuilder}")
-                } else {
-                    AppLogger.e("CrashHandler", "Crash report file does not exist.")
+        // Maintain maximum 5 files
+        try {
+            val cursor = resolver.query(
+                collection,
+                arrayOf(MediaStore.MediaColumns._ID, MediaStore.MediaColumns.DISPLAY_NAME),
+                "${MediaStore.MediaColumns.RELATIVE_PATH}=?",
+                arrayOf("$relativePath/"),
+                "${MediaStore.MediaColumns.DATE_ADDED} DESC"
+            )
+            cursor?.use {
+                var count = 0
+                while (it.moveToNext()) {
+                    count++
+                    if (count > 5) {
+                        val id = it.getLong(it.getColumnIndexOrThrow(MediaStore.MediaColumns._ID))
+                        resolver.delete(ContentUris.withAppendedId(collection, id), null, null)
+                    }
                 }
-
-                File(crashDir, "${packageInfo.packageName}-crash-report.txt")
-            } catch (e: Exception) {
-                AppLogger.e("CrashHandler", "Error determining crash log file location: ${e.message}")
-                return null // Return null if something goes wrong
             }
-
-            // Ensure the file exists
-            if (!logFile.exists()) {
-                return null
-            }
-
-            // Use FileProvider to get a content Uri for the file
-            return FileProvider.getUriForFile(context, "${context.packageName}.fileprovider", logFile)
+        } catch (_: Exception) {
         }
+
+        return uri
+    }
+
+    private fun getCrashFileForLegacy(): File {
+        val crashDir = File(context.filesDir, "crash_logs")
+        crashDir.mkdirs()
+        val timestamp = getTimestamp()
+        val file = File(crashDir, "${context.packageName}-crash-report_$timestamp.txt")
+
+        // Remove old logs if more than 5
+        val oldFiles = crashDir.listFiles()?.sortedByDescending { it.lastModified() } ?: emptyList()
+        oldFiles.drop(5).forEach { it.delete() }
+
+        return file
     }
 
     override fun uncaughtException(thread: Thread, exception: Throwable) {
-        AppLogger.e("CrashHandler", "Caught exception: ${exception.message}", exception)
-
-        // Step 1: Save custom crash log
-        saveCrashLog(exception)
-
-        // Step 2: Start CrashReportActivity with the crash details
-        val intent = Intent(context, CrashReportActivity::class.java).apply {
-            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-        }
-        context.startActivity(intent)
-
-        // Kill the process
-        android.os.Process.killProcess(android.os.Process.myPid())
-        exitProcess(1)
-    }
-
-    private fun saveCrashLog(exception: Throwable): File {
-        val logFile: File = try {
-            val packageManager = context.packageManager
-            val packageInfo: PackageInfo = packageManager.getPackageInfo(context.packageName, 0)
-
-            // Use internal storage for saving the crash log
-            val crashDir = File(context.filesDir, "crash_logs")  // This is internal storage
-            if (!crashDir.exists()) crashDir.mkdirs()
-
-            File(crashDir, "${packageInfo.packageName}-crash-report.txt")
-        } catch (e: Exception) {
-            AppLogger.e("CrashHandler", "Error determining crash log file location: ${e.message}")
-            // In case of error, use a default file name
-            File(context.filesDir, "default-crash-report.txt")
-        }
-
         try {
-            val runtime = Runtime.getRuntime()
-            val usedMemInMB = (runtime.totalMemory() - runtime.freeMemory()) / 1048576L
-            val maxHeapSizeInMB = runtime.maxMemory() / 1048576L
-
-            FileWriter(logFile).use { writer ->
-                PrintWriter(writer).use { printWriter ->
-                    printWriter.println("Crash Report - ${Date()}")
-                    printWriter.println("Thread: ${Thread.currentThread().name}")
-
-                    printWriter.println("\n=== Device Info ===")
-                    printWriter.println(getDeviceInfo(context))
-
-                    printWriter.println("\n=== Memory Info ===")
-                    printWriter.println("Used Memory (MB): $usedMemInMB")
-                    printWriter.println("Max Heap Size (MB): $maxHeapSizeInMB")
-
-                    printWriter.println("\n=== Recent User Actions ===")
-                    userActions.forEach { printWriter.println(it) }
-
-                    printWriter.println("\n=== Crash LogCat ===")
-                    val process = Runtime.getRuntime().exec("logcat -d -t 100 AndroidRuntime:E *:S")
-                    val reader = BufferedReader(InputStreamReader(process.inputStream))
-                    reader.forEachLine { printWriter.println(it) }
-
-                    printWriter.println("\n=== Crash Stack Trace ===")
-                    exception.printStackTrace(printWriter)
-
-                }
+            val content = buildCrashContent(exception)
+            val uri = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                saveCrashToMediaStore(content)
+            } else {
+                val file = getCrashFileForLegacy()
+                file.writeText(content)
+                FileProvider.getUriForFile(context, "${context.packageName}.fileprovider", file)
             }
-        } catch (e: Exception) {
-            AppLogger.e("CrashHandler", "Error writing crash log: ${e.message}")
+
+            lastCrashUri = uri
+
+            val intent = Intent(context, CrashReportActivity::class.java).apply {
+                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                putExtra("crash_log_uri", uri.toString())
+            }
+            context.startActivity(intent)
+        } catch (_: Exception) {
+        } finally {
+            android.os.Process.killProcess(android.os.Process.myPid())
+            exitProcess(1)
         }
-        return logFile
     }
 }
