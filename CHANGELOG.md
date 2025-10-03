@@ -32,6 +32,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Localization:
 
+* Updated Language Files. ([#908](https://github.com/DroidWorksStudio/mLauncher/pull/908)) ([c028e4d7](https://github.com/DroidWorksStudio/mLauncher/commit/c028e4d7))
 * Updated Language Files. ([#907](https://github.com/DroidWorksStudio/mLauncher/pull/907)) ([33ee046c](https://github.com/DroidWorksStudio/mLauncher/commit/33ee046c))
 
 ### Feature Removals:
