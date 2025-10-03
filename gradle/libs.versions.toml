@@ -1,7 +1,7 @@
 # gradle/libs.versions.toml
 
 [versions]
-agp = "8.11.1"
+agp = "8.13.0"
 kotlin = "2.2.20"
 viewpager2 = "1.1.0"
 
@@ -18,12 +18,12 @@ lifecycle-extensions = "2.2.0"
 lifecycle-viewmodel-ktx = "2.9.4"
 
 # Navigation
-navigation-fragment-ktx = "2.9.4"
-navigation-ui-ktx = "2.9.4"
-navigation-testing = "2.9.4"
+navigation-fragment-ktx = "2.9.5"
+navigation-ui-ktx = "2.9.5"
+navigation-testing = "2.9.5"
 
 # Work Manager
-work-runtime-ktx = "2.10.4"
+work-runtime-ktx = "2.10.5"
 
 # ConstraintLayout
 constraintlayout = "2.2.1"
@@ -31,12 +31,12 @@ constraintlayout-compose = "1.1.1"
 
 # Compose Versions
 activity-compose = "1.11.0"
-compose-android = "1.9.1"
-compose-material = "1.9.1"
-compose-animation = "1.9.1"
-compose-ui = "1.9.1"
-compose-foundation = "1.9.1"
-compose-ui-tooling = "1.9.1"
+compose-android = "1.9.2"
+compose-material = "1.9.2"
+compose-animation = "1.9.2"
+compose-ui = "1.9.2"
+compose-foundation = "1.9.2"
+compose-ui-tooling = "1.9.2"
 
 # Other Libraries
 commons-text = "1.14.0"
@@ -48,8 +48,8 @@ test-core-ktx = "1.7.0"
 test-runner = "1.7.0"
 test-rules = "1.7.0"
 fragment-testing = "1.8.9"
-ui-test-junit4 = "1.9.1"
-ui-test-manifest = "1.9.1"
+ui-test-junit4 = "1.9.2"
+ui-test-manifest = "1.9.2"
 activity = "1.11.0"
 
 # Database
