@@ -41,6 +41,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Build:
 
+* Bump the all-gradle group across 1 directory with 12 updates ([#911](https://github.com/DroidWorksStudio/mLauncher/pull/911)) ([55153d87](https://github.com/DroidWorksStudio/mLauncher/commit/55153d87))
 * Bump actions/cache in the all-actions group ([#910](https://github.com/DroidWorksStudio/mLauncher/pull/910)) ([c9b60d1c](https://github.com/DroidWorksStudio/mLauncher/commit/c9b60d1c))
 
 ## [1.11.1.3](https://github.com/DroidWorksStudio/mLauncher/tree/1.11.1.3) - (21, September 2025)
