@@ -125,9 +125,20 @@ discordMessage += `:arrow_down:  [Direct APK Download](<${REPO_URL}/releases/dow
 
 // Send to Discord
 const payload = JSON.stringify({
-    content: discordMessage,
-	username: "Multi Launcher Updates!",
-	avatar_url: "https://github.com/DroidWorksStudio/mLauncher/blob/main/fastlane/metadata/android/en-US/images/icon.png?raw=true",
+    content: "<@&1159595417219104768>",
+    username: "Multi Launcher Updates!",
+    avatar_url: "https://github.com/DroidWorksStudio/mLauncher/blob/main/fastlane/metadata/android/en-US/images/icon.png?raw=true",
+    embeds: [
+        {
+            description: discordMessage, // your original message goes here
+            color: 0xffff00, // optional color in hexadecimal
+            timestamp: new Date(), // optional timestamp
+            footer: {
+                text: "Multi Launcher Updates",
+                icon_url: "https://github.com/DroidWorksStudio/mLauncher/blob/main/fastlane/metadata/android/en-US/images/icon.png?raw=true"
+            }
+        }
+    ]
 });
 
 const url = new URL(WEBHOOK_URL);
