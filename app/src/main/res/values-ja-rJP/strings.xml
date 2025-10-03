@@ -318,6 +318,7 @@
     <string name="widgets_select_widget">ウィジェットを選択</string>
     <string name="widgets_add_widget">ウィジェットを追加する</string>
     <string name="widgets_reset_widget">すべてのウィジェットをリセット</string>
+    <string name="widgets_not_added">No widgets added yet. Long press to add one.</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">この機能には Android 15 以降が必要です。</string>
     <string name="toast_private_space_default_home_screen">プライベート スペースにアクセスするには、MultiLauncher をデフォルトのホーム画面にする必要があります。</string>
