@@ -38,6 +38,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 * Remove Word of the Day feature ([2a851d01](https://github.com/DroidWorksStudio/mLauncher/commit/2a851d01))
 
+### Build:
+
+* Bump actions/cache in the all-actions group ([#910](https://github.com/DroidWorksStudio/mLauncher/pull/910)) ([c9b60d1c](https://github.com/DroidWorksStudio/mLauncher/commit/c9b60d1c))
+
 ## [1.11.1.3](https://github.com/DroidWorksStudio/mLauncher/tree/1.11.1.3) - (21, September 2025)
 
 ### Bug Fixes:
