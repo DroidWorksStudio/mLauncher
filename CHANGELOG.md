@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
+## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/main) - TBD
+
+### Enhancements:
+
+* Enhance widget management with new context extensions and localized menu options ([1c7b6d9b](https://github.com/DroidWorksStudio/mLauncher/commit/1c7b6d9b))
+
 ## [1.11.1.4](https://github.com/DroidWorksStudio/mLauncher/tree/1.11.1.4) - (03, October 2025)
 
 ### Enhancements:
