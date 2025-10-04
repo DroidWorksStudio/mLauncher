@@ -318,13 +318,13 @@
     <string name="widgets_select_widget">Bir Widget Seçin</string>
     <string name="widgets_add_widget">Bir Widget Ekle</string>
     <string name="widgets_reset_widget">Tüm Widget\'ları sıfırla</string>
-    <string name="widgets_resize">Resize</string>
-    <string name="widgets_exit_resize">Exit Resize</string>
-    <string name="widgets_remove">Remove Widget</string>
-    <string name="widgets_open">Open App</string>
-    <string name="widgets_view_in_store">View App In Store</string>
-    <string name="widgets_settings">Widget Settings</string>
-    <string name="widgets_not_added">No widgets added yet. Long press to add one.</string>
+    <string name="widgets_resize">Yeniden boyutlandır</string>
+    <string name="widgets_exit_resize">Yeniden Boyutlandırmadan Çık</string>
+    <string name="widgets_remove">Widget\'ı Kaldır</string>
+    <string name="widgets_open">Uygulamayı aç</string>
+    <string name="widgets_view_in_store">Uygulamayı Mağazada Görüntüle</string>
+    <string name="widgets_settings">Widget Ayarları</string>
+    <string name="widgets_not_added">Henüz hiçbir widget eklenmedi. Bir tane eklemek için uzun basın.</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">Bu işlevsellik için Android 15 veya üzeri gerekir.</string>
     <string name="toast_private_space_default_home_screen">Özel alana erişebilmek için MultiLauncher\'ın varsayılan ana ekran olması gerekiyor.</string>
