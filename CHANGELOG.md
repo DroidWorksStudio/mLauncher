@@ -11,6 +11,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Bug Fixes:
 
+* Prevent widgets from resizing or moving off-screen ([1838385d](https://github.com/DroidWorksStudio/mLauncher/commit/1838385d))
 * Use original app label when updating notification count ([aed9f01f](https://github.com/DroidWorksStudio/mLauncher/commit/aed9f01f))
 
 ### Code Quality:
