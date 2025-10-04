@@ -168,7 +168,6 @@ class ResizableWidgetWrapper(
         }
     }
 
-
     private fun createHandle(): View = View(context).apply {
         setBackgroundColor("#26C6A0F6".toColorInt())
         visibility = GONE
@@ -302,16 +301,21 @@ class ResizableWidgetWrapper(
         attachDrag(root)
     }
 
-
     private fun updateGhostPosition() {
         val parentFrame = parent as? FrameLayout ?: return
         val cellWidth = (parentFrame.width - (cellMargin * (gridColumns - 1))) / gridColumns
+        val maxX = parentFrame.width - this.width
+        val maxY = parentFrame.height - this.height
+
         val col = ((translationX + cellWidth / 2) / (cellWidth + cellMargin)).toInt().coerceIn(0, gridColumns - 1)
         val row = ((translationY + cellWidth / 2) / (cellWidth + cellMargin)).toInt()
 
+        val newX = (col * (cellWidth + cellMargin)).coerceIn(0, maxX)
+        val newY = (row * (cellWidth + cellMargin)).coerceIn(0, maxY)
+
         ghostView?.layoutParams = (ghostView?.layoutParams as LayoutParams).apply {
-            leftMargin = col * (cellWidth + cellMargin)
-            topMargin = row * (cellWidth + cellMargin)
+            leftMargin = newX
+            topMargin = newY
             width = this@ResizableWidgetWrapper.width
             height = this@ResizableWidgetWrapper.height
         }
@@ -321,11 +325,14 @@ class ResizableWidgetWrapper(
     fun snapToGrid() {
         val parentFrame = parent as? FrameLayout ?: return
         val cellWidth = (parentFrame.width - (cellMargin * (gridColumns - 1))) / gridColumns
+        val maxX = parentFrame.width - width
+        val maxY = parentFrame.height - height
+
         val col = ((translationX + cellWidth / 2) / (cellWidth + cellMargin)).toInt().coerceIn(0, gridColumns - 1)
         val row = ((translationY + cellWidth / 2) / (cellWidth + cellMargin)).toInt()
 
-        translationX = col * (cellWidth + cellMargin).toFloat()
-        translationY = row * (cellWidth + cellMargin).toFloat()
+        translationX = (col * (cellWidth + cellMargin)).toFloat().coerceIn(0f, maxX.toFloat())
+        translationY = (row * (cellWidth + cellMargin)).toFloat().coerceIn(0f, maxY.toFloat())
 
         currentCol = col
         currentRow = row
@@ -336,33 +343,32 @@ class ResizableWidgetWrapper(
         val cellSize = (parentFrame.width - (cellMargin * (gridColumns - 1))) / gridColumns
         val lp = layoutParams as? LayoutParams ?: return
 
+        val maxWidth = parentFrame.width - lp.leftMargin
+        val maxHeight = parentFrame.height - lp.topMargin
+
         when (side) {
             "TOP" -> {
-                val snappedTop = ((lp.topMargin + cellSize / 2) / (cellSize + cellMargin)) *
-                        (cellSize + cellMargin)
+                val snappedTop = ((lp.topMargin + cellSize / 2) / (cellSize + cellMargin)) * (cellSize + cellMargin)
                 val bottom = lp.topMargin + lp.height
-                lp.topMargin = snappedTop
-                lp.height = (bottom - snappedTop).coerceAtLeast(cellSize)
+                lp.topMargin = snappedTop.coerceIn(0, bottom - minSize)
+                lp.height = (bottom - lp.topMargin).coerceAtLeast(minSize).coerceAtMost(maxHeight)
             }
 
             "BOTTOM" -> {
-                val snappedBottom = ((lp.topMargin + lp.height + cellSize / 2) / (cellSize + cellMargin)) *
-                        (cellSize + cellMargin)
-                lp.height = (snappedBottom - lp.topMargin).coerceAtLeast(cellSize)
+                val snappedBottom = ((lp.topMargin + lp.height + cellSize / 2) / (cellSize + cellMargin)) * (cellSize + cellMargin)
+                lp.height = (snappedBottom - lp.topMargin).coerceAtLeast(minSize).coerceAtMost(maxHeight)
             }
 
             "LEFT" -> {
-                val snappedLeft = ((lp.leftMargin + cellSize / 2) / (cellSize + cellMargin)) *
-                        (cellSize + cellMargin)
+                val snappedLeft = ((lp.leftMargin + cellSize / 2) / (cellSize + cellMargin)) * (cellSize + cellMargin)
                 val right = lp.leftMargin + lp.width
-                lp.leftMargin = snappedLeft
-                lp.width = (right - snappedLeft).coerceAtLeast(cellSize)
+                lp.leftMargin = snappedLeft.coerceIn(0, right - minSize)
+                lp.width = (right - lp.leftMargin).coerceAtLeast(minSize).coerceAtMost(maxWidth)
             }
 
             "RIGHT" -> {
-                val snappedRight = ((lp.leftMargin + lp.width + cellSize / 2) / (cellSize + cellMargin)) *
-                        (cellSize + cellMargin)
-                lp.width = (snappedRight - lp.leftMargin).coerceAtLeast(cellSize)
+                val snappedRight = ((lp.leftMargin + lp.width + cellSize / 2) / (cellSize + cellMargin)) * (cellSize + cellMargin)
+                lp.width = (snappedRight - lp.leftMargin).coerceAtLeast(minSize).coerceAtMost(maxWidth)
             }
         }
 
@@ -461,7 +467,6 @@ class ResizableWidgetWrapper(
             }
         }
 
-
         dialog.setOnDismissListener { activeDialog = null }
         dialog.setContentView(container)
         dialog.show()
@@ -508,7 +513,6 @@ class ResizableWidgetWrapper(
         gridOverlay.visibility = GONE
     }
 
-
     override fun onInterceptTouchEvent(ev: MotionEvent?): Boolean {
         // Intercept all touches during resize mode
         // BUT do not intercept touches on handles (let their listeners run)
@@ -531,8 +535,4 @@ class ResizableWidgetWrapper(
         }
         return super.onTouchEvent(event)
     }
-
-
 }
-
-

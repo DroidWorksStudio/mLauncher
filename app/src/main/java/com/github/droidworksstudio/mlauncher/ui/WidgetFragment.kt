@@ -21,6 +21,7 @@ import android.widget.ScrollView
 import android.widget.TextView
 import androidx.activity.addCallback
 import androidx.core.view.isVisible
+import androidx.lifecycle.lifecycleScope
 import com.github.droidworksstudio.common.AppLogger
 import com.github.droidworksstudio.common.appWidgetManager
 import com.github.droidworksstudio.common.getLocalizedString
@@ -127,15 +128,15 @@ class WidgetFragment : BaseFragment() {
             true
         }
 
-        restoreWidgets()
-
         AppLogger.i(TAG, "🟢 WidgetFragment onViewCreated, view is ready")
         (activity as? MainActivity)?.flushPendingWidgets()
     }
 
     override fun onResume() {
         super.onResume()
-        restoreWidgets()
+        viewLifecycleOwner.lifecycleScope.launchWhenResumed {
+            restoreWidgets()
+        }
         AppLogger.i(TAG, "🔄 WidgetFragment onResume, widgets restored")
     }
 
@@ -171,8 +172,7 @@ class WidgetFragment : BaseFragment() {
     private fun resetAllWidgets() {
         AppLogger.w(TAG, "🧹 Resetting all widgets")
         widgetWrappers.forEach { wrapper ->
-            AppLogger.d(TAG, "❌ Deleting widgetId=${wrapper.hostView.appWidgetId}")
-            appWidgetHost.deleteAppWidgetId(wrapper.hostView.appWidgetId)
+            safeRemoveWidget(wrapper.hostView.appWidgetId)
         }
         widgetWrappers.clear()
         widgetGrid.removeAllViews()
@@ -181,6 +181,37 @@ class WidgetFragment : BaseFragment() {
         updateEmptyPlaceholder(widgetWrappers)
         AppLogger.i(TAG, "🧹 All widgets cleared and placeholder shown")
     }
+
+//    private fun resetAllWidgets() {
+//        AppLogger.w(TAG, "🧹 Resetting all widgets positions")
+//
+//        widgetWrappers.forEach { wrapper ->
+//            wrapper.currentCol = 0
+//            wrapper.currentRow = 0
+//
+//            // Snap widget to top-left in the grid
+//            val parentFrame = wrapper.parent as? FrameLayout
+//            parentFrame?.let {
+//                wrapper.translationX = 0f
+//                wrapper.translationY = 0f
+//
+//                val lp = wrapper.layoutParams as? FrameLayout.LayoutParams
+//                lp?.let {
+//                    it.leftMargin = 0
+//                    it.topMargin = 0
+//                    wrapper.layoutParams = it
+//                }
+//
+//                wrapper.snapToGrid() // enforce grid snapping
+//            }
+//        }
+//
+//        saveWidgets() // Save their reset positions
+//        updateEmptyPlaceholder(widgetWrappers) // refresh placeholder if needed
+//
+//        AppLogger.i(TAG, "🧹 All widgets reset to top-left")
+//    }
+
 
     private fun showCustomWidgetPicker() {
         val widgets = appWidgetManager.installedProviders
@@ -286,128 +317,7 @@ class WidgetFragment : BaseFragment() {
 
         if (!bound) return
 
-        val parentFrame = requireActivity().findViewById<ViewGroup>(R.id.widget_grid)
-        val gridWidth = parentFrame.width
-        val cellSize = (gridWidth - (CELL_MARGIN * (GRID_COLUMNS - 1))) / GRID_COLUMNS
-
-        val spanX = ((widgetInfo.minWidth + CELL_MARGIN) / (cellSize + CELL_MARGIN)).coerceAtLeast(1)
-        val spanY = ((widgetInfo.minHeight + CELL_MARGIN) / (cellSize + CELL_MARGIN)).coerceAtLeast(1)
-
-        AppLogger.d(TAG, "📐 Widget ${widgetInfo.provider} requires ${spanX}x$spanY cells")
-
-        val occupied = getOccupiedGrid()
-        val maxRows = occupied.size.coerceAtLeast(1)
-
-        var foundRow = -1
-        var foundCol = -1
-
-        outer@ for (row in 0 until maxRows + 10) {
-            for (col in 0 until GRID_COLUMNS) {
-                var fits = true
-                for (dy in 0 until spanY) {
-                    for (dx in 0 until spanX) {
-                        val r = row + dy
-                        val c = col + dx
-                        if (c >= GRID_COLUMNS || (r < occupied.size && occupied[r][c])) {
-                            fits = false; break
-                        }
-                    }
-                    if (!fits) break
-                }
-                if (fits) {
-                    foundRow = row
-                    foundCol = col
-                    break@outer
-                }
-            }
-        }
-
-        if (foundRow == -1) {
-            AppLogger.e(TAG, "❌ No free grid slot for ${widgetInfo.provider}")
-            return
-        }
-
-        AppLogger.i(TAG, "📦 Placing widget ${widgetInfo.provider} at row=$foundRow col=$foundCol span=${spanX}x$spanY")
-        saveWidgetPlacement(widgetId, foundRow, foundCol, spanX, spanY, parentFrame)
         maybeConfigureOrCreate(widgetInfo, widgetId)
-    }
-
-    private fun saveWidgetPlacement(
-        widgetId: Int,
-        row: Int,
-        col: Int,
-        cellsW: Int,
-        cellsH: Int,
-        view: View // the actual ResizableWidgetWrapper or hostView
-    ) {
-        val file = requireContext().getFileStreamPath(widgetFileName)
-
-        // Load existing widgets
-        val existingArray: Array<SavedWidget>? = if (file.exists()) {
-            savedWidgetAdapter.fromJson(file.readText())
-        } else null
-
-        // Convert to mutable list for updates
-        val existing = existingArray?.toMutableList() ?: mutableListOf()
-
-        // Remove any old entry for this widgetId
-        existing.removeAll { it.appWidgetId == widgetId }
-
-        // Work out cellSize based on parent width
-        val parentFrame = view.parent as? FrameLayout
-        val cellSize = if (parentFrame != null) {
-            (parentFrame.width - (CELL_MARGIN * (GRID_COLUMNS - 1))) / GRID_COLUMNS
-        } else 0
-
-        // Grab actual pixel size from LayoutParams, fallback to cell-based size
-        val lp = view.layoutParams as? FrameLayout.LayoutParams
-        val pxWidth = lp?.width ?: (cellsW * cellSize).coerceAtLeast(1)
-        val pxHeight = lp?.height ?: (cellsH * cellSize).coerceAtLeast(1)
-
-        // Add new/updated placement
-        existing.add(
-            SavedWidget(
-                appWidgetId = widgetId,
-                row = row,
-                col = col,
-                cellsW = cellsW,
-                cellsH = cellsH,
-                width = pxWidth,
-                height = pxHeight
-            )
-        )
-
-        // Convert back to array before saving
-        file.writeText(savedWidgetAdapter.toJson(existing.toTypedArray()))
-
-        AppLogger.i(
-            TAG,
-            "💾 Saved widgetId=$widgetId at row=$row col=$col size=${cellsW}x${cellsH} px=${pxWidth}x${pxHeight}"
-        )
-    }
-
-
-    private fun getOccupiedGrid(): Array<Array<Boolean>> {
-        val file = requireContext().getFileStreamPath(widgetFileName)
-        if (!file.exists()) return emptyArray()
-
-        val json = file.readText()
-        val savedWidgets = savedWidgetAdapter.fromJson(json) ?: return emptyArray()
-
-        val maxRow = (savedWidgets.maxOfOrNull { it.row + it.cellsH } ?: 0)
-        val grid = Array(maxRow.coerceAtLeast(1)) { Array(GRID_COLUMNS) { false } }
-
-        savedWidgets.forEach { w ->
-            for (r in w.row until w.row + w.cellsH) {
-                for (c in w.col until w.col + w.cellsW) {
-                    if (r in grid.indices && c in 0 until GRID_COLUMNS) {
-                        grid[r][c] = true
-                    }
-                }
-            }
-        }
-
-        return grid
     }
 
     private fun handleWidgetResult(resultCode: Int, appWidgetId: Int, data: Intent?) {
@@ -425,12 +335,7 @@ class WidgetFragment : BaseFragment() {
 
             Activity.RESULT_CANCELED -> {
                 AppLogger.w(TAG, "❌ RESULT_CANCELED for appWidgetId=$appWidgetId, cleaning up")
-                try {
-                    appWidgetHost.deleteAppWidgetId(appWidgetId)
-                    AppLogger.d(TAG, "🗑️ Deleted appWidgetId=$appWidgetId after cancel")
-                } catch (e: Exception) {
-                    AppLogger.e(TAG, "❌ Failed to delete appWidgetId=$appWidgetId", e)
-                }
+                safeRemoveWidget(appWidgetId)
             }
         }
     }
@@ -449,10 +354,10 @@ class WidgetFragment : BaseFragment() {
                     AppLogger.v(TAG, "🎬 Returned from widget config launcher: resultCode=$resultCode, appWidgetId=$returnedId")
                     if (resultCode == Activity.RESULT_OK) {
                         AppLogger.i(TAG, "✅ Configured widgetId=$returnedId, creating wrapper")
-                        act.safeCreateWidget(widgetInfo, returnedId)
+                        createWidgetWrapperSafe(widgetInfo, returnedId)
                     } else {
-                        AppLogger.w(TAG, "❌ Config cancelled for widgetId=$returnedId, deleting")
-                        appWidgetHost.deleteAppWidgetId(returnedId)
+                        AppLogger.w(TAG, "❌ Config cancelled for widgetId=$returnedId, removing")
+                        safeRemoveWidget(returnedId)
                     }
                 }
             } ?: run {
@@ -476,16 +381,20 @@ class WidgetFragment : BaseFragment() {
 
     fun createWidgetWrapper(widgetInfo: AppWidgetProviderInfo, appWidgetId: Int) {
         val hostView = try {
-            // Try using the widget's own package context
-            val widgetContext = requireContext().createPackageContext(
-                widgetInfo.provider.packageName,
-                Context.CONTEXT_IGNORE_SECURITY or Context.CONTEXT_INCLUDE_CODE
-            )
+            val widgetContext = try {
+                requireContext().createPackageContext(
+                    widgetInfo.provider.packageName,
+                    Context.CONTEXT_IGNORE_SECURITY or Context.CONTEXT_INCLUDE_CODE
+                )
+            } catch (_: Exception) {
+                requireContext()
+            }
+
             appWidgetHost.createView(widgetContext, appWidgetId, widgetInfo)
         } catch (e: Exception) {
-            AppLogger.e(TAG, "⚠️ Failed to create widget with package context, falling back to launcher context", e)
-            // Fallback to the launcher's context
-            appWidgetHost.createView(requireContext(), appWidgetId, widgetInfo)
+            AppLogger.e(TAG, "⚠️ Failed to create widgetId=$appWidgetId, removing", e)
+            safeRemoveWidget(appWidgetId)
+            return
         }
         AppLogger.d(TAG, "🖼️ Creating wrapper for widgetId=$appWidgetId, provider=${widgetInfo.provider.packageName}")
 
@@ -504,6 +413,20 @@ class WidgetFragment : BaseFragment() {
         AppLogger.i(TAG, "✅ Wrapper created for widgetId=$appWidgetId")
         updateEmptyPlaceholder(widgetWrappers)
         saveWidgets()
+        logGridSnapshot()
+    }
+
+    private fun safeRemoveWidget(widgetId: Int) {
+        try {
+            AppLogger.w(TAG, "🗑️ Removing widgetId=$widgetId due to error")
+            appWidgetHost.deleteAppWidgetId(widgetId)
+            val removed = widgetWrappers.removeAll { it.hostView.appWidgetId == widgetId }
+            if (removed) widgetGrid.removeView(widgetGrid.findViewById(widgetId))
+            saveWidgets()
+            updateEmptyPlaceholder(widgetWrappers)
+        } catch (e: Exception) {
+            AppLogger.e(TAG, "❌ Failed to remove widgetId=$widgetId", e)
+        }
     }
 
     private fun addWrapperToGrid(wrapper: ResizableWidgetWrapper) {
@@ -614,7 +537,7 @@ class WidgetFragment : BaseFragment() {
         AppLogger.d(TAG, "🔄 restoreWidgets: Loaded JSON -> $json")
 
         val savedWidgets = savedWidgetAdapter.fromJson(json)
-        if (savedWidgets == null || savedWidgets.isEmpty()) {
+        if (savedWidgets.isNullOrEmpty()) {
             AppLogger.w(TAG, "⚠️ No widgets found in JSON")
             return
         }
@@ -637,81 +560,69 @@ class WidgetFragment : BaseFragment() {
                     return@forEachIndexed
                 }
 
-                try {
-                    val info = appWidgetManager.getAppWidgetInfo(saved.appWidgetId)
-                    if (info == null) {
-                        AppLogger.w(TAG, "❌ No AppWidgetInfo for id=${saved.appWidgetId}, skipping")
-                        skippedCount++
-                        return@forEachIndexed
-                    }
+                val info = appWidgetManager.getAppWidgetInfo(saved.appWidgetId)
+                if (info == null) {
+                    AppLogger.e(TAG, "❌ No AppWidgetInfo for id=${saved.appWidgetId}, removing")
+                    safeRemoveWidget(saved.appWidgetId)
+                    skippedCount++
+                    return@forEachIndexed
+                }
 
-                    val hostView = try {
-                        // Try using the widget's package context
-                        val widgetContext = requireContext().createPackageContext(
+                val hostView = try {
+                    val widgetContext = try {
+                        requireContext().createPackageContext(
                             info.provider.packageName,
                             Context.CONTEXT_IGNORE_SECURITY or Context.CONTEXT_INCLUDE_CODE
                         )
-                        appWidgetHost.createView(widgetContext, saved.appWidgetId, info)
-                    } catch (e: Exception) {
-                        AppLogger.e(TAG, "⚠️ Failed to create widget with package context, falling back to launcher context", e)
-                        // Fallback to your launcher's context
-                        appWidgetHost.createView(requireContext(), saved.appWidgetId, info)
+                    } catch (_: Exception) {
+                        requireContext()
                     }
 
-                    val wrapper = ResizableWidgetWrapper(
-                        requireContext(), hostView, info, appWidgetHost,
-                        ::saveWidgets, GRID_COLUMNS, CELL_MARGIN, saved.width / cellWidth, saved.height / cellHeight
-                    )
-
-                    wrapper.translationX = saved.col * (cellWidth + CELL_MARGIN).toFloat()
-                    wrapper.translationY = saved.row * (cellHeight + CELL_MARGIN).toFloat()
-
-                    wrapper.layoutParams = FrameLayout.LayoutParams(
-                        if (saved.width > 0) saved.width else DEFAULT_WIDGET_CELLS_W * cellWidth,
-                        if (saved.height > 0) saved.height else DEFAULT_WIDGET_CELLS_H * cellHeight
-                    )
-
-                    addWrapperSafely(wrapper)
-                    restoredCount++
-
-                    AppLogger.i(
-                        TAG,
-                        "🔄 RESTORED → id=${saved.appWidgetId} | Pinned -> col=${saved.col}, row=${saved.row} | Size -> width=${saved.width}, height=${saved.height} | Cells -> width=${saved.cellsW}, height=${saved.cellsH} ✅"
-                    )
-                    logGridSnapshot()
+                    appWidgetHost.createView(widgetContext, saved.appWidgetId, info)
                 } catch (e: Exception) {
+                    AppLogger.e(TAG, "⚠️ Failed to restore widgetId=${saved.appWidgetId}, removing it", e)
+                    safeRemoveWidget(saved.appWidgetId)
                     skippedCount++
-                    AppLogger.e(TAG, "❌ Failed to restore widget id=${saved.appWidgetId}", e)
+                    return@forEachIndexed
                 }
+
+                val wrapper = ResizableWidgetWrapper(
+                    requireContext(), hostView, info, appWidgetHost,
+                    ::saveWidgets, GRID_COLUMNS, CELL_MARGIN, saved.width / cellWidth, saved.height / cellHeight
+                )
+
+                wrapper.translationX = saved.col * (cellWidth + CELL_MARGIN).toFloat()
+                wrapper.translationY = saved.row * (cellHeight + CELL_MARGIN).toFloat()
+                wrapper.layoutParams = FrameLayout.LayoutParams(
+                    if (saved.width > 0) saved.width else DEFAULT_WIDGET_CELLS_W * cellWidth,
+                    if (saved.height > 0) saved.height else DEFAULT_WIDGET_CELLS_H * cellHeight
+                )
+
+                addWrapperSafely(wrapper)
+                restoredCount++
+                AppLogger.i(TAG, "🔄 RESTORED widgetId=${saved.appWidgetId} | col=${saved.col}, row=${saved.row} | size=${saved.width}x${saved.height}")
             }
 
             AppLogger.i(TAG, "📊 restoreWidgets: Restored=$restoredCount, Skipped=$skippedCount")
+            logGridSnapshot()
+            updateEmptyPlaceholder(widgetWrappers)
         }
     }
 
     private fun logGridSnapshot() {
         val file = requireContext().getFileStreamPath(widgetFileName)
-        if (!file.exists()) {
-            AppLogger.w(TAG, "⚠️ No widget file found ($widgetFileName)")
-            return
-        }
-
+        if (!file.exists()) return
         val json = file.readText()
-        val savedWidgets = savedWidgetAdapter.fromJson(json)
-        if (savedWidgets.isNullOrEmpty()) {
-            AppLogger.w(TAG, "⚠️ No widgets found in JSON")
-            return
-        }
+        val savedWidgets = savedWidgetAdapter.fromJson(json) ?: return
 
-        // Determine grid size
         val maxRow = (savedWidgets.maxOfOrNull { it.row + it.cellsH } ?: 0)
-        val grid = Array(maxRow) { Array(GRID_COLUMNS) { "□" } } // empty cells
+        val grid = Array(maxRow) { Array(GRID_COLUMNS) { "□" } }
 
-        savedWidgets.forEachIndexed { index, w ->
+        savedWidgets.forEach { w ->
             for (r in w.row until w.row + w.cellsH) {
                 for (c in w.col until w.col + w.cellsW) {
                     if (r in grid.indices && c in 0 until GRID_COLUMNS) {
-                        grid[r][c] = "■" // label with widget index
+                        grid[r][c] = "■"
                     }
                 }
             }
@@ -736,24 +647,20 @@ class WidgetFragment : BaseFragment() {
         }
     }
 
-
     override fun onAttach(context: Context) {
         super.onAttach(context)
         AppLogger.i(TAG, "🔗 WidgetFragment onAttach called, context=$context")
-
         if (!isViewCreated()) {
-            AppLogger.i(TAG, "🟢 Initializing appWidgetHost for the first time")
             appWidgetHost = AppWidgetHost(context, APP_WIDGET_HOST_ID)
             appWidgetHost.startListening()
-        } else {
-            AppLogger.i(TAG, "⚠️ appWidgetHost already initialized")
+            AppLogger.i(TAG, "🟢 Initialized AppWidgetHost")
         }
     }
-
 
     override fun onDestroy() {
         super.onDestroy()
         appWidgetHost.stopListening()
+        AppLogger.i(TAG, "🛑 AppWidgetHost stopped listening")
     }
 
     fun isViewCreated(): Boolean = ::widgetGrid.isInitialized
