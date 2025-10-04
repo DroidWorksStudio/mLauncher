@@ -17,6 +17,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 * Simplify dominant color retrieval ([a7fc0005](https://github.com/DroidWorksStudio/mLauncher/commit/a7fc0005))
 
+### Localization:
+
+* Updated Language Files. ([#915](https://github.com/DroidWorksStudio/mLauncher/pull/915)) ([8519bcc6](https://github.com/DroidWorksStudio/mLauncher/commit/8519bcc6))
+
 ## [1.11.1.4](https://github.com/DroidWorksStudio/mLauncher/tree/1.11.1.4) - (03, October 2025)
 
 ### Enhancements:
