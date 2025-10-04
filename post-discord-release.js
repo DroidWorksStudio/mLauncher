@@ -114,31 +114,23 @@ let discordMessage = `## Multi Launcher ${latestTag}\n\n`;
 
 for (const group of GROUP_ORDER) {
 	if (!groups[group] || groups[group].length === 0) continue;
-	discordMessage += `**${group}**\n${groups[group].join("\n")}\n\n`;
+	discordMessage += `**${group}** ${groups[group].join("\n")}\n\n`;
 }
 
 // Fallback
 if (!commits.length) discordMessage += "No commits found.";
+
+// Append Discord Role mention
+discordMessage += `<@&${process.env.DISCORD_ROLEID}>\n\n`;
 
 // Append download link
 discordMessage += `:arrow_down:  [Direct APK Download](<${REPO_URL}/releases/download/${latestTag}/MultiLauncher-${latestTag}-Signed.apk>)  :arrow_down:`;
 
 // Send to Discord
 const payload = JSON.stringify({
-    content: "<@&1159595417219104768>",
-    username: "Multi Launcher Updates!",
+    content: discordMessage,
+    username: "Multi Launcher Updates",
     avatar_url: "https://github.com/DroidWorksStudio/mLauncher/blob/main/fastlane/metadata/android/en-US/images/icon.png?raw=true",
-    embeds: [
-        {
-            description: discordMessage, // your original message goes here
-            color: 0xffff00, // optional color in hexadecimal
-            timestamp: new Date(), // optional timestamp
-            footer: {
-                text: "Multi Launcher Updates",
-                icon_url: "https://github.com/DroidWorksStudio/mLauncher/blob/main/fastlane/metadata/android/en-US/images/icon.png?raw=true"
-            }
-        }
-    ]
 });
 
 const url = new URL(WEBHOOK_URL);
