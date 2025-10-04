@@ -318,6 +318,12 @@
     <string name="widgets_select_widget">위젯을 선택하세요</string>
     <string name="widgets_add_widget">위젯 추가</string>
     <string name="widgets_reset_widget">모든 위젯 재설정</string>
+    <string name="widgets_resize">Resize</string>
+    <string name="widgets_exit_resize">Exit Resize</string>
+    <string name="widgets_remove">Remove Widget</string>
+    <string name="widgets_open">Open App</string>
+    <string name="widgets_view_in_store">View App In Store</string>
+    <string name="widgets_settings">Widget Settings</string>
     <string name="widgets_not_added">No widgets added yet. Long press to add one.</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">이 기능을 사용하려면 Android 15 이상이 필요합니다.</string>
