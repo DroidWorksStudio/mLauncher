@@ -576,10 +576,8 @@ fun getDeviceInfo(context: Context): String {
     }
 }
 
-private fun getInstallSource(packageManager: PackageManager, packageName: String): String {
+fun getInstallSource(packageManager: PackageManager, packageName: String): String {
     try {
-        if (BuildConfig.DEBUG) return "Android Studio (ADB)"
-
         val installer = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
             // For API level 30 and above
             packageManager.getInstallSourceInfo(packageName).installingPackageName ?: "Unknown"
@@ -592,7 +590,14 @@ private fun getInstallSource(packageManager: PackageManager, packageName: String
         return when (installer) {
             "com.android.vending" -> "Google Play Store"
             "org.fdroid.fdroid" -> "F-Droid"
-            "com.obtanium.app" -> "Obtanium"
+            "dev.imranr.obtainium" -> "Obtanium"
+            "com.amazon.venezia" -> "Amazon Appstore"
+            "com.sec.android.app.samsungapps" -> "Samsung Galaxy Store"
+            "com.huawei.appmarket" -> "Huawei AppGallery"
+            "com.xiaomi.market" -> "Xiaomi GetApps"
+            "com.oppo.market" -> "OPPO App Market"
+            "com.vivo.appstore" -> "Vivo App Store"
+            "com.oneplus.mstore" -> "OnePlus Store"
             "com.android.shell" -> "Android Studio (ADB)"
 
             // Popular browsers

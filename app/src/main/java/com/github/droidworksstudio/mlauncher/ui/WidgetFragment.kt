@@ -22,6 +22,7 @@ import android.widget.TextView
 import androidx.activity.addCallback
 import androidx.core.view.isVisible
 import com.github.droidworksstudio.common.AppLogger
+import com.github.droidworksstudio.common.appWidgetManager
 import com.github.droidworksstudio.common.getLocalizedString
 import com.github.droidworksstudio.mlauncher.MainActivity
 import com.github.droidworksstudio.mlauncher.R
@@ -116,7 +117,7 @@ class WidgetFragment : BaseFragment() {
         )
         AppLogger.i(TAG, "🟢 Empty placeholder added to widgetGrid")
 
-        appWidgetManager = AppWidgetManager.getInstance(requireContext())
+        appWidgetManager = requireContext().appWidgetManager
         appWidgetHost = AppWidgetHost(requireContext(), APP_WIDGET_HOST_ID)
         appWidgetHost.startListening()
         AppLogger.i(TAG, "🟢 AppWidgetHost started listening")
@@ -264,12 +265,7 @@ class WidgetFragment : BaseFragment() {
         val widgetId = appWidgetHost.allocateAppWidgetId()
         AppLogger.d(TAG, "🆕 Allocated appWidgetId=$widgetId for provider=${widgetInfo.provider.packageName}")
 
-        val widgetContext = requireContext().createPackageContext(
-            widgetInfo.provider.packageName,
-            Context.CONTEXT_IGNORE_SECURITY or Context.CONTEXT_INCLUDE_CODE
-        )
-
-        val appWidgetManager = AppWidgetManager.getInstance(widgetContext)
+        val appWidgetManager = requireContext().appWidgetManager
         val bound = if (!appWidgetManager.bindAppWidgetIdIfAllowed(widgetId, widgetInfo.provider)) {
             AppLogger.w(TAG, "🔒 Binding not allowed for widgetId=$widgetId, requesting permission")
 
@@ -479,13 +475,19 @@ class WidgetFragment : BaseFragment() {
     }
 
     fun createWidgetWrapper(widgetInfo: AppWidgetProviderInfo, appWidgetId: Int) {
-        val widgetContext = requireContext().createPackageContext(
-            widgetInfo.provider.packageName,
-            Context.CONTEXT_IGNORE_SECURITY or Context.CONTEXT_INCLUDE_CODE
-        )
-
+        val hostView = try {
+            // Try using the widget's own package context
+            val widgetContext = requireContext().createPackageContext(
+                widgetInfo.provider.packageName,
+                Context.CONTEXT_IGNORE_SECURITY or Context.CONTEXT_INCLUDE_CODE
+            )
+            appWidgetHost.createView(widgetContext, appWidgetId, widgetInfo)
+        } catch (e: Exception) {
+            AppLogger.e(TAG, "⚠️ Failed to create widget with package context, falling back to launcher context", e)
+            // Fallback to the launcher's context
+            appWidgetHost.createView(requireContext(), appWidgetId, widgetInfo)
+        }
         AppLogger.d(TAG, "🖼️ Creating wrapper for widgetId=$appWidgetId, provider=${widgetInfo.provider.packageName}")
-        val hostView = appWidgetHost.createView(widgetContext, appWidgetId, widgetInfo)
 
         val cellWidth = (widgetGrid.width - (GRID_COLUMNS - 1) * CELL_MARGIN) / GRID_COLUMNS
         val defaultCellsW = ((widgetInfo.minWidth + CELL_MARGIN) / (cellWidth + CELL_MARGIN)).coerceAtLeast(1)
@@ -643,12 +645,18 @@ class WidgetFragment : BaseFragment() {
                         return@forEachIndexed
                     }
 
-                    val widgetContext = requireContext().createPackageContext(
-                        info.provider.packageName,
-                        Context.CONTEXT_IGNORE_SECURITY or Context.CONTEXT_INCLUDE_CODE
-                    )
-
-                    val hostView = appWidgetHost.createView(widgetContext, saved.appWidgetId, info)
+                    val hostView = try {
+                        // Try using the widget's package context
+                        val widgetContext = requireContext().createPackageContext(
+                            info.provider.packageName,
+                            Context.CONTEXT_IGNORE_SECURITY or Context.CONTEXT_INCLUDE_CODE
+                        )
+                        appWidgetHost.createView(widgetContext, saved.appWidgetId, info)
+                    } catch (e: Exception) {
+                        AppLogger.e(TAG, "⚠️ Failed to create widget with package context, falling back to launcher context", e)
+                        // Fallback to your launcher's context
+                        appWidgetHost.createView(requireContext(), saved.appWidgetId, info)
+                    }
 
                     val wrapper = ResizableWidgetWrapper(
                         requireContext(), hostView, info, appWidgetHost,
