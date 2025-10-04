@@ -320,6 +320,12 @@ Tento prístup môžete kedykoľvek vypnúť v nastaveniach zariadenia.</string>
     <string name="widgets_select_widget">Vyberte miniaplikáciu</string>
     <string name="widgets_add_widget">Pridať widget</string>
     <string name="widgets_reset_widget">Obnoviť všetky widgety</string>
+    <string name="widgets_resize">Resize</string>
+    <string name="widgets_exit_resize">Exit Resize</string>
+    <string name="widgets_remove">Remove Widget</string>
+    <string name="widgets_open">Open App</string>
+    <string name="widgets_view_in_store">View App In Store</string>
+    <string name="widgets_settings">Widget Settings</string>
     <string name="widgets_not_added">No widgets added yet. Long press to add one.</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">Táto funkcia vyžaduje Android 15 alebo novší.</string>
