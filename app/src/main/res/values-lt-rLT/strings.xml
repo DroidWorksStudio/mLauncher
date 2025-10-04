@@ -320,13 +320,13 @@ Jūs bet kada galite išjungti šią prieigą savo įrenginio nustatymuose.</str
     <string name="widgets_select_widget">Pasirinkite valdiklį</string>
     <string name="widgets_add_widget">Pridėti valdiklį</string>
     <string name="widgets_reset_widget">Atstatyti visus valdiklius</string>
-    <string name="widgets_resize">Resize</string>
-    <string name="widgets_exit_resize">Exit Resize</string>
-    <string name="widgets_remove">Remove Widget</string>
-    <string name="widgets_open">Open App</string>
-    <string name="widgets_view_in_store">View App In Store</string>
-    <string name="widgets_settings">Widget Settings</string>
-    <string name="widgets_not_added">No widgets added yet. Long press to add one.</string>
+    <string name="widgets_resize">Keisti dydį</string>
+    <string name="widgets_exit_resize">Išeiti iš dydžio keitimo</string>
+    <string name="widgets_remove">Pašalinti valdiklį</string>
+    <string name="widgets_open">Atidaryti programėlę</string>
+    <string name="widgets_view_in_store">Peržiūrėti programėlę parduotuvėje</string>
+    <string name="widgets_settings">Valdiklio nustatymai</string>
+    <string name="widgets_not_added">Dar nėra pridėtų valdiklių. Ilgai paspauskite, kad pridėtumėte.</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">Šiai funkcijai reikalinga „Android 15“ arba naujesnė versija.</string>
     <string name="toast_private_space_default_home_screen">Norint pasiekti privačią erdvę, MultiLauncher turi būti numatytasis pagrindinis ekranas.</string>
