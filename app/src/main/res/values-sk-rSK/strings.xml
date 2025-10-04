@@ -320,7 +320,13 @@ Tento prístup môžete kedykoľvek vypnúť v nastaveniach zariadenia.</string>
     <string name="widgets_select_widget">Vyberte miniaplikáciu</string>
     <string name="widgets_add_widget">Pridať widget</string>
     <string name="widgets_reset_widget">Obnoviť všetky widgety</string>
-    <string name="widgets_not_added">No widgets added yet. Long press to add one.</string>
+    <string name="widgets_resize">Zmeniť veľkosť</string>
+    <string name="widgets_exit_resize">Ukončiť zmenu veľkosti</string>
+    <string name="widgets_remove">Odstrániť miniaplikáciu</string>
+    <string name="widgets_open">Otvoriť aplikáciu</string>
+    <string name="widgets_view_in_store">Zobraziť aplikáciu v obchode</string>
+    <string name="widgets_settings">Nastavenia widgetu</string>
+    <string name="widgets_not_added">Zatiaľ neboli pridané žiadne widgety. Dlhým stlačením pridáte jeden.</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">Táto funkcia vyžaduje Android 15 alebo novší.</string>
     <string name="toast_private_space_default_home_screen">MultiLauncher musí byť predvolenou domovskou obrazovkou na prístup k súkromnému priestoru.</string>

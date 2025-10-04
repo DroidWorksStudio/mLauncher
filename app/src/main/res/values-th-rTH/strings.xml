@@ -318,7 +318,13 @@
     <string name="widgets_select_widget">เลือกวิดเจ็ต</string>
     <string name="widgets_add_widget">เพิ่มวิดเจ็ต</string>
     <string name="widgets_reset_widget">รีเซ็ตวิดเจ็ตทั้งหมด</string>
-    <string name="widgets_not_added">No widgets added yet. Long press to add one.</string>
+    <string name="widgets_resize">ปรับขนาด</string>
+    <string name="widgets_exit_resize">ออกปรับขนาด</string>
+    <string name="widgets_remove">ลบวิดเจ็ต</string>
+    <string name="widgets_open">เปิดแอป</string>
+    <string name="widgets_view_in_store">ดูแอปในร้านค้า</string>
+    <string name="widgets_settings">การตั้งค่าวิดเจ็ต</string>
+    <string name="widgets_not_added">ยังไม่มีการเพิ่มวิดเจ็ต กดค้างไว้เพื่อเพิ่มวิดเจ็ต</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">ฟังก์ชันนี้ต้องใช้ Android 15 ขึ้นไป</string>
     <string name="toast_private_space_default_home_screen">MultiLauncher จะต้องเป็นหน้าจอหลักเริ่มต้นเพื่อเข้าถึงพื้นที่ส่วนตัว</string>

@@ -318,7 +318,13 @@
     <string name="widgets_select_widget">حدد عنصر واجهة المستخدم</string>
     <string name="widgets_add_widget">إضافة أداة</string>
     <string name="widgets_reset_widget">إعادة تعيين جميع الأدوات</string>
-    <string name="widgets_not_added">No widgets added yet. Long press to add one.</string>
+    <string name="widgets_resize">تغيير الحجم</string>
+    <string name="widgets_exit_resize">الخروج من تغيير الحجم</string>
+    <string name="widgets_remove">إزالة الأداة</string>
+    <string name="widgets_open">افتح التطبيق</string>
+    <string name="widgets_view_in_store">عرض التطبيق في المتجر</string>
+    <string name="widgets_settings">إعدادات الأداة</string>
+    <string name="widgets_not_added">لم تتم إضافة أي أدوات بعد. اضغط مطولاً لإضافة واحدة.</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">تتطلب هذه الوظيفة نظام Android 15 أو إصدارًا أحدث.</string>
     <string name="toast_private_space_default_home_screen">يجب أن تكون MultiLauncher هي الشاشة الرئيسية الافتراضية للوصول إلى المساحة الخاصة.</string>
