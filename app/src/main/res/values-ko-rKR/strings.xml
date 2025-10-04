@@ -318,13 +318,13 @@
     <string name="widgets_select_widget">위젯을 선택하세요</string>
     <string name="widgets_add_widget">위젯 추가</string>
     <string name="widgets_reset_widget">모든 위젯 재설정</string>
-    <string name="widgets_resize">Resize</string>
-    <string name="widgets_exit_resize">Exit Resize</string>
-    <string name="widgets_remove">Remove Widget</string>
-    <string name="widgets_open">Open App</string>
-    <string name="widgets_view_in_store">View App In Store</string>
-    <string name="widgets_settings">Widget Settings</string>
-    <string name="widgets_not_added">No widgets added yet. Long press to add one.</string>
+    <string name="widgets_resize">크기 조정</string>
+    <string name="widgets_exit_resize">크기 조정 종료</string>
+    <string name="widgets_remove">위젯 제거</string>
+    <string name="widgets_open">앱 열기</string>
+    <string name="widgets_view_in_store">스토어에서 앱 보기</string>
+    <string name="widgets_settings">위젯 설정</string>
+    <string name="widgets_not_added">아직 위젯이 추가되지 않았습니다. 위젯을 추가하려면 길게 누르세요.</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">이 기능을 사용하려면 Android 15 이상이 필요합니다.</string>
     <string name="toast_private_space_default_home_screen">개인 공간에 접근하려면 MultiLauncher를 기본 홈 화면으로 설정해야 합니다.</string>
