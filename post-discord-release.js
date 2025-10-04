@@ -17,46 +17,46 @@ const commitParsers = [
     { message: /^fixes/i, skip: true },
 
     // Enhancements (new features, improvements, UX, performance)
-    { message: /^feat|^perf|^style|^ui|^ux/i, group: "### Enhancements:" },
+    { message: /^feat|^perf|^style|^ui|^ux/i, group: "### :sparkles: Enhancements:" },
 
     // Bug fixes & hotfixes
-    { message: /^fix|^bug|^hotfix|^emergency/i, group: "### Bug Fixes:" },
+    { message: /^fix|^bug|^hotfix|^emergency/i, group: "### :bug: Bug Fixes:" },
 
     // Code quality (refactors, cleanup without changing behavior)
-    { message: /^refactor/i, group: "### Code Quality:" },
+    { message: /^refactor/i, group: "### :wrench: Code Quality:" },
 
     // Documentation
-    { message: /^doc/i, group: "### Documentation:" },
+    { message: /^doc/i, group: "### :books: Documentation:" },
 
     // Localization & internationalization
-    { message: /^(lang|i18n)/i, group: "### Localization:" },
+    { message: /^(lang|i18n)/i, group: "### :globe_with_meridians: Localization:" },
 
     // Security
-    { message: /^security/i, group: "### Security:" },
+    { message: /^security/i, group: "### :lock: Security:" },
 
-	 // Feature removal / drops
-    { message: /^drop|^remove|^deprecated/i, group: "### Feature Removals:" },
+    // Feature removal / drops
+    { message: /^drop|^remove|^deprecated/i, group: "### :x: Feature Removals:" },
 
     // Reverts
-    { message: /^revert/i, group: "### Reverts:" },
+    { message: /^revert/i, group: "### :rewind: Reverts:" },
 
     // Build-related
-    { message: /^build/i, group: "### Build:" },
+    { message: /^build/i, group: "### :building_construction: Build:" },
 
     // Dependencies-related
-    { message: /^dependency|^deps/i, group: "### Dependencies:" },
+    { message: /^dependency|^deps/i, group: "### :package: Dependencies:" },
 
     // Meta: configuration, CI/CD, versioning, releases
-    { message: /^config|^configuration|^ci|^pipeline|^release|^version|^versioning/i, group: "### Meta:" },
+    { message: /^config|^configuration|^ci|^pipeline|^release|^version|^versioning/i, group: "### :gear: Meta:" },
 
     // Tests
-    { message: /^test/i, group: "### Tests:" },
+    { message: /^test/i, group: "### :test_tube: Tests:" },
 
     // Infrastructure & Ops
-    { message: /^infra|^infrastructure|^ops/i, group: "### Infrastructure & Ops:" },
+    { message: /^infra|^infrastructure|^ops/i, group: "### :office: Infrastructure & Ops:" },
 
     // Chore & cleanup
-    { message: /^chore|^housekeeping|^cleanup|^clean\(up\)/i, group: "### Maintenance & Cleanup:" },
+    { message: /^chore|^housekeeping|^cleanup|^clean\(up\)/i, group: "### :broom: Maintenance & Cleanup:" },
 ];
 
 const GROUP_ORDER = commitParsers.filter((p) => !p.skip).map((p) => p.group);
@@ -113,18 +113,23 @@ for (const c of commits) {
 let discordMessage = `## Multi Launcher ${latestTag}\n\n`;
 
 for (const group of GROUP_ORDER) {
-	if (!groups[group] || groups[group].length === 0) continue;
-	discordMessage += `**${group}** ${groups[group].join("\n")}\n\n`;
+    if (!groups[group] || groups[group].length === 0) continue;
+    discordMessage += `${group}\n${groups[group].join("\n")}\n\n`;
 }
 
 // Fallback
 if (!commits.length) discordMessage += "No commits found.";
 
+// Append installation instructions
+discordMessage += `:inbox_tray: **Installation Instructions**\n1. Download the APK.\n2. Allow your browser/files app to install apps.\n3. Install mLauncher.\n\n`;
+
+discordMessage += `:warning: **Note for Double Tap to Lock Feature**\nManually installed APKs may block accessibility settings needed for this feature. To enable:\n1. Go to **Settings -> Apps -> Multi Launcher**\n2. Tap the three-dot menu at the top right\n3. Select Allow restricted settings\n\n`;
+
 // Append Discord Role mention
 discordMessage += `<@&${process.env.DISCORD_ROLEID}>\n\n`;
 
 // Append download link
-discordMessage += `:arrow_down:  [Direct APK Download](<${REPO_URL}/releases/download/${latestTag}/MultiLauncher-${latestTag}-Signed.apk>)  :arrow_down:`;
+discordMessage += `:arrow_down:  [Direct APK Download](<${REPO_URL}/releases/download/${latestTag}/MultiLauncher-${latestTag}-Signed.apk>)  :arrow_down:\n\n`;
 
 // Send to Discord
 const payload = JSON.stringify({

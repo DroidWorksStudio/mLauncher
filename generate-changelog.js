@@ -40,46 +40,46 @@ const commitParsers = [
     { message: /^fixes/i, skip: true },
 
     // Enhancements (new features, improvements, UX, performance)
-    { message: /^feat|^perf|^style|^ui|^ux/i, group: "### Enhancements:" },
+    { message: /^feat|^perf|^style|^ui|^ux/i, group: "### :sparkles: Enhancements:" },
 
     // Bug fixes & hotfixes
-    { message: /^fix|^bug|^hotfix|^emergency/i, group: "### Bug Fixes:" },
+    { message: /^fix|^bug|^hotfix|^emergency/i, group: "### :bug: Bug Fixes:" },
 
     // Code quality (refactors, cleanup without changing behavior)
-    { message: /^refactor/i, group: "### Code Quality:" },
+    { message: /^refactor/i, group: "### :wrench: Code Quality:" },
 
     // Documentation
-    { message: /^doc/i, group: "### Documentation:" },
+    { message: /^doc/i, group: "### :books: Documentation:" },
 
     // Localization & internationalization
-    { message: /^(lang|i18n)/i, group: "### Localization:" },
+    { message: /^(lang|i18n)/i, group: "### :globe_with_meridians: Localization:" },
 
     // Security
-    { message: /^security/i, group: "### Security:" },
+    { message: /^security/i, group: "### :lock: Security:" },
 
-	 // Feature removal / drops
-    { message: /^drop|^remove|^deprecated/i, group: "### Feature Removals:" },
+    // Feature removal / drops
+    { message: /^drop|^remove|^deprecated/i, group: "### :x: Feature Removals:" },
 
     // Reverts
-    { message: /^revert/i, group: "### Reverts:" },
+    { message: /^revert/i, group: "### :rewind: Reverts:" },
 
     // Build-related
-    { message: /^build/i, group: "### Build:" },
+    { message: /^build/i, group: "### :building_construction: Build:" },
 
     // Dependencies-related
-    { message: /^dependency|^deps/i, group: "### Dependencies:" },
+    { message: /^dependency|^deps/i, group: "### :package: Dependencies:" },
 
     // Meta: configuration, CI/CD, versioning, releases
-    { message: /^config|^configuration|^ci|^pipeline|^release|^version|^versioning/i, group: "### Meta:" },
+    { message: /^config|^configuration|^ci|^pipeline|^release|^version|^versioning/i, group: "### :gear: Meta:" },
 
     // Tests
-    { message: /^test/i, group: "### Tests:" },
+    { message: /^test/i, group: "### :test_tube: Tests:" },
 
     // Infrastructure & Ops
-    { message: /^infra|^infrastructure|^ops/i, group: "### Infrastructure & Ops:" },
+    { message: /^infra|^infrastructure|^ops/i, group: "### :office: Infrastructure & Ops:" },
 
     // Chore & cleanup
-    { message: /^chore|^housekeeping|^cleanup|^clean\(up\)/i, group: "### Maintenance & Cleanup:" },
+    { message: /^chore|^housekeeping|^cleanup|^clean\(up\)/i, group: "### :broom: Maintenance & Cleanup:" },
 ];
 
 // Build group order directly from commitParsers
