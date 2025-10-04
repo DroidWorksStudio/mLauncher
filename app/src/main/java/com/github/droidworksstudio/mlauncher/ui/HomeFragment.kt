@@ -1056,12 +1056,9 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
                             val listener: (Map<String, Int>) -> Unit = { counts ->
                                 val count = counts[packageName] ?: 0
 
-                                // Remove any existing circled digit
-                                val textWithoutCount = this.text.toString().replace(Regex("[➊➋➌➍➎➏➐➑➒➓]"), "").trim()
-
                                 this.text = if (count > 0) {
                                     val circledNumber = getCircledDigit(count)
-                                    val newText = "$textWithoutCount $circledNumber"
+                                    val newText = "${appModel.label} $circledNumber"
                                     val spannable = SpannableString(newText)
 
                                     val start = newText.indexOf(circledNumber)
@@ -1091,7 +1088,7 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
 
                                     spannable
                                 } else {
-                                    textWithoutCount
+                                    appModel.label
                                 }
 
                                 AppLogger.d("HomeFragment", "Notification count updated for $packageName: $count")
