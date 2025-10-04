@@ -318,13 +318,13 @@
     <string name="widgets_select_widget">Wybierz widżet</string>
     <string name="widgets_add_widget">Dodaj widżet</string>
     <string name="widgets_reset_widget">Zresetuj wszystkie widżety</string>
-    <string name="widgets_resize">Resize</string>
-    <string name="widgets_exit_resize">Exit Resize</string>
-    <string name="widgets_remove">Remove Widget</string>
-    <string name="widgets_open">Open App</string>
-    <string name="widgets_view_in_store">View App In Store</string>
-    <string name="widgets_settings">Widget Settings</string>
-    <string name="widgets_not_added">No widgets added yet. Long press to add one.</string>
+    <string name="widgets_resize">Zmień rozmiar</string>
+    <string name="widgets_exit_resize">Wyjście Zmień rozmiar</string>
+    <string name="widgets_remove">Usuń widżet</string>
+    <string name="widgets_open">Otwórz aplikację</string>
+    <string name="widgets_view_in_store">Wyświetl aplikację w sklepie</string>
+    <string name="widgets_settings">Ustawienia widżetu</string>
+    <string name="widgets_not_added">Nie dodano jeszcze żadnego widżetu. Naciśnij i przytrzymaj, aby dodać widżet.</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">Ta funkcjonalność wymaga systemu Android 15 lub nowszego.</string>
     <string name="toast_private_space_default_home_screen">MultiLauncher musi być domyślnym ekranem głównym, aby uzyskać dostęp do przestrzeni prywatnej.</string>
