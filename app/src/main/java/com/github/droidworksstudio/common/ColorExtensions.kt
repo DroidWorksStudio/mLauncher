@@ -1,6 +1,5 @@
 package com.github.droidworksstudio.common
 
-import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.drawable.BitmapDrawable
@@ -14,30 +13,25 @@ import kotlin.math.min
 import kotlin.random.Random
 
 object ColorIconsExtensions {
-
-    fun drawableToBitmap(drawable: Drawable): Bitmap {
-        if (drawable is BitmapDrawable) {
-            return drawable.bitmap
+    fun getDominantColor(drawable: Drawable): Int {
+        // Convert Drawable to Bitmap
+        val bitmap = when (drawable) {
+            is BitmapDrawable -> drawable.bitmap
+            else -> {
+                val width = if (drawable.intrinsicWidth > 0) drawable.intrinsicWidth else 1
+                val height = if (drawable.intrinsicHeight > 0) drawable.intrinsicHeight else 1
+                val bmp = createBitmap(width, height)
+                val canvas = Canvas(bmp)
+                drawable.setBounds(0, 0, canvas.width, canvas.height)
+                drawable.draw(canvas)
+                bmp
+            }
         }
 
-        val width = drawable.intrinsicWidth.coerceAtLeast(1)
-        val height = drawable.intrinsicHeight.coerceAtLeast(1)
+        // Scale down for performance
+        val scaledBitmap = bitmap.scale(min(bitmap.width / 4, 1280), min(bitmap.height / 4, 1280))
 
-        val bitmap = createBitmap(width, height)
-        val canvas = Canvas(bitmap)
-
-        drawable.setBounds(0, 0, canvas.width, canvas.height)
-        drawable.draw(canvas)
-
-        return bitmap
-    }
-
-    fun getDominantColor(bitmap: Bitmap): Int {
-        val scaledBitmap = bitmap.scale(
-            min(bitmap.width / 4, 1280),
-            min(bitmap.height / 4, 1280)
-        )
-
+        // Use Palette to get dominant colors
         val palette = Palette.from(scaledBitmap)
             .maximumColorCount(128)
             .generate()
@@ -46,6 +40,7 @@ object ColorIconsExtensions {
 
         return increaseColorVibrancy(combineColors(colors))
     }
+
 
     private fun combineColors(colors: List<Int>): Int {
         if (colors.isEmpty()) return Color.DKGRAY

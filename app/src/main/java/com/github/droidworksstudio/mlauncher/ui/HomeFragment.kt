@@ -17,7 +17,10 @@ import android.text.Spannable
 import android.text.SpannableString
 import android.text.SpannableStringBuilder
 import android.text.format.DateFormat
+import android.text.style.AbsoluteSizeSpan
+import android.text.style.ForegroundColorSpan
 import android.text.style.ImageSpan
+import android.text.style.SuperscriptSpan
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -26,6 +29,7 @@ import android.widget.LinearLayout
 import android.widget.Space
 import android.widget.TextView
 import androidx.biometric.BiometricPrompt
+import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
 import androidx.core.os.bundleOf
 import androidx.core.view.children
@@ -34,6 +38,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.github.droidworksstudio.common.AppLogger
+import com.github.droidworksstudio.common.ColorIconsExtensions
 import com.github.droidworksstudio.common.ColorManager
 import com.github.droidworksstudio.common.CrashHandler
 import com.github.droidworksstudio.common.attachGestureManager
@@ -79,6 +84,7 @@ import com.github.droidworksstudio.mlauncher.helper.utils.BiometricHelper
 import com.github.droidworksstudio.mlauncher.helper.utils.PrivateSpaceManager
 import com.github.droidworksstudio.mlauncher.helper.wordOfTheDay
 import com.github.droidworksstudio.mlauncher.listener.GestureAdapter
+import com.github.droidworksstudio.mlauncher.listener.NotificationDotManager
 import com.github.droidworksstudio.mlauncher.services.ActionService
 import com.github.droidworksstudio.mlauncher.ui.components.DialogManager
 import kotlinx.coroutines.Dispatchers
@@ -990,7 +996,7 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
                             iconPackTarget = IconCacheTarget.HOME
                         )
 
-                        // Recolor the icon with the dominant color
+                        // Use the drawable
                         val recoloredDrawable: Drawable? = getSystemIcons(
                             context,
                             prefs,
@@ -1034,6 +1040,79 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
                             }
 
                             else -> setCompoundDrawables(null, null, null, null)
+                        }
+
+                        val nm = NotificationManagerCompat.getEnabledListenerPackages(context)
+
+                        if (nm.contains(context.packageName)) {
+                            fun getCircledDigit(number: Int): String {
+                                return when {
+                                    number in 1..9 -> ('\u278A' + (number - 1)).toString() // ➊…➒
+                                    number >= 10 -> '\u2789'.toString() // always ➓ for 10 or more
+                                    else -> "" // no badge if 0 or invalid
+                                }
+                            }
+
+                            val listener: (Map<String, Int>) -> Unit = { counts ->
+                                val count = counts[packageName] ?: 0
+
+                                // Remove any existing circled digit
+                                val textWithoutCount = this.text.toString().replace(Regex("[➊➋➌➍➎➏➐➑➒➓]"), "").trim()
+
+                                this.text = if (count > 0) {
+                                    val circledNumber = getCircledDigit(count)
+                                    val newText = "$textWithoutCount $circledNumber"
+                                    val spannable = SpannableString(newText)
+
+                                    val start = newText.indexOf(circledNumber)
+                                    val end = start + circledNumber.length
+
+                                    // Change size of the circled digit
+                                    spannable.setSpan(
+                                        AbsoluteSizeSpan((this.textSize * 0.8f).toInt(), false),
+                                        start, end,
+                                        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+                                    )
+
+                                    // Set color
+                                    val customColor = ColorIconsExtensions.getDominantColor(nonNullDrawable)
+                                    spannable.setSpan(
+                                        ForegroundColorSpan(customColor),
+                                        start, end,
+                                        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+                                    )
+
+                                    // Move emoji up slightly
+                                    spannable.setSpan(
+                                        SuperscriptSpan(),
+                                        start, end,
+                                        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+                                    )
+
+                                    spannable
+                                } else {
+                                    textWithoutCount
+                                }
+
+                                AppLogger.d("HomeFragment", "Notification count updated for $packageName: $count")
+                            }
+
+                            // Register listener for this TextView
+                            NotificationDotManager.registerListener(listener)
+
+                            // Make sure we update immediately based on current counts
+                            listener(NotificationDotManager.getAllCounts())
+
+                            // Unregister when detached
+                            this.addOnAttachStateChangeListener(object : View.OnAttachStateChangeListener {
+                                override fun onViewAttachedToWindow(v: View) {}
+                                override fun onViewDetachedFromWindow(v: View) {
+                                    NotificationDotManager.unregisterListener(listener)
+                                }
+                            })
+
+                        } else {
+                            AppLogger.d("HomeFragment", "Notification listener permission not enabled for ${context.packageName}")
                         }
                     }
                 }
