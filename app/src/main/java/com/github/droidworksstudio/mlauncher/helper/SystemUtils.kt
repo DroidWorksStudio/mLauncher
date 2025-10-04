@@ -687,8 +687,7 @@ private fun getAppListIcons(context: Context, prefs: Prefs, nonNullDrawable: Dra
                 context,
                 R.drawable.cloud_dots_icon
             )!!
-            val bitmap = ColorIconsExtensions.drawableToBitmap(nonNullDrawable)
-            val dominantColor = ColorIconsExtensions.getDominantColor(bitmap)
+            val dominantColor = ColorIconsExtensions.getDominantColor(nonNullDrawable)
             ColorIconsExtensions.recolorDrawable(newIcon, dominantColor)
         }
 
@@ -697,8 +696,7 @@ private fun getAppListIcons(context: Context, prefs: Prefs, nonNullDrawable: Dra
                 context,
                 R.drawable.launcher_dot_icon
             )!!
-            val bitmap = ColorIconsExtensions.drawableToBitmap(nonNullDrawable)
-            val dominantColor = ColorIconsExtensions.getDominantColor(bitmap)
+            val dominantColor = ColorIconsExtensions.getDominantColor(nonNullDrawable)
             ColorIconsExtensions.recolorDrawable(newIcon, dominantColor)
         }
 
@@ -707,8 +705,7 @@ private fun getAppListIcons(context: Context, prefs: Prefs, nonNullDrawable: Dra
                 context,
                 R.drawable.niagara_dot_icon
             )!!
-            val bitmap = ColorIconsExtensions.drawableToBitmap(nonNullDrawable)
-            val dominantColor = ColorIconsExtensions.getDominantColor(bitmap)
+            val dominantColor = ColorIconsExtensions.getDominantColor(nonNullDrawable)
             ColorIconsExtensions.recolorDrawable(newIcon, dominantColor)
         }
 
@@ -717,8 +714,7 @@ private fun getAppListIcons(context: Context, prefs: Prefs, nonNullDrawable: Dra
                 context,
                 R.drawable.spinner_dots_icon
             )!!
-            val bitmap = ColorIconsExtensions.drawableToBitmap(nonNullDrawable)
-            val dominantColor = ColorIconsExtensions.getDominantColor(bitmap)
+            val dominantColor = ColorIconsExtensions.getDominantColor(nonNullDrawable)
             ColorIconsExtensions.recolorDrawable(newIcon, dominantColor)
         }
 
@@ -735,8 +731,7 @@ private fun getHomeIcons(context: Context, prefs: Prefs, nonNullDrawable: Drawab
                 context,
                 R.drawable.cloud_dots_icon
             )!!
-            val bitmap = ColorIconsExtensions.drawableToBitmap(nonNullDrawable)
-            val dominantColor = ColorIconsExtensions.getDominantColor(bitmap)
+            val dominantColor = ColorIconsExtensions.getDominantColor(nonNullDrawable)
             ColorIconsExtensions.recolorDrawable(newIcon, dominantColor)
         }
 
@@ -745,8 +740,7 @@ private fun getHomeIcons(context: Context, prefs: Prefs, nonNullDrawable: Drawab
                 context,
                 R.drawable.launcher_dot_icon
             )!!
-            val bitmap = ColorIconsExtensions.drawableToBitmap(nonNullDrawable)
-            val dominantColor = ColorIconsExtensions.getDominantColor(bitmap)
+            val dominantColor = ColorIconsExtensions.getDominantColor(nonNullDrawable)
             ColorIconsExtensions.recolorDrawable(newIcon, dominantColor)
         }
 
@@ -755,8 +749,7 @@ private fun getHomeIcons(context: Context, prefs: Prefs, nonNullDrawable: Drawab
                 context,
                 R.drawable.niagara_dot_icon
             )!!
-            val bitmap = ColorIconsExtensions.drawableToBitmap(nonNullDrawable)
-            val dominantColor = ColorIconsExtensions.getDominantColor(bitmap)
+            val dominantColor = ColorIconsExtensions.getDominantColor(nonNullDrawable)
             ColorIconsExtensions.recolorDrawable(newIcon, dominantColor)
         }
 
@@ -765,8 +758,7 @@ private fun getHomeIcons(context: Context, prefs: Prefs, nonNullDrawable: Drawab
                 context,
                 R.drawable.spinner_dots_icon
             )!!
-            val bitmap = ColorIconsExtensions.drawableToBitmap(nonNullDrawable)
-            val dominantColor = ColorIconsExtensions.getDominantColor(bitmap)
+            val dominantColor = ColorIconsExtensions.getDominantColor(nonNullDrawable)
             ColorIconsExtensions.recolorDrawable(newIcon, dominantColor)
         }
 
