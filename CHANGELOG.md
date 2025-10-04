@@ -9,6 +9,10 @@ All notable changes to this project will be documented in this file. See [conven
 * Add notification count badges to app icons ([8bf3212e](https://github.com/DroidWorksStudio/mLauncher/commit/8bf3212e))
 * Enhance widget management with new context extensions and localized menu options ([1c7b6d9b](https://github.com/DroidWorksStudio/mLauncher/commit/1c7b6d9b))
 
+### Bug Fixes:
+
+* Use original app label when updating notification count ([aed9f01f](https://github.com/DroidWorksStudio/mLauncher/commit/aed9f01f))
+
 ### Code Quality:
 
 * Simplify dominant color retrieval ([a7fc0005](https://github.com/DroidWorksStudio/mLauncher/commit/a7fc0005))
