@@ -320,13 +320,13 @@
     <string name="widgets_select_widget">בחר ווידג\'ט</string>
     <string name="widgets_add_widget">הוסף ווידג\'ט</string>
     <string name="widgets_reset_widget">איפוס כל הווידג\'טים</string>
-    <string name="widgets_resize">Resize</string>
-    <string name="widgets_exit_resize">Exit Resize</string>
-    <string name="widgets_remove">Remove Widget</string>
-    <string name="widgets_open">Open App</string>
-    <string name="widgets_view_in_store">View App In Store</string>
-    <string name="widgets_settings">Widget Settings</string>
-    <string name="widgets_not_added">No widgets added yet. Long press to add one.</string>
+    <string name="widgets_resize">שינוי גודל</string>
+    <string name="widgets_exit_resize">יציאה משינוי גודל</string>
+    <string name="widgets_remove">הסר ווידג\'ט</string>
+    <string name="widgets_open">פתח את האפליקציה</string>
+    <string name="widgets_view_in_store">צפה באפליקציה בחנות</string>
+    <string name="widgets_settings">הגדרות ווידג\'ט</string>
+    <string name="widgets_not_added">עדיין לא נוספו ווידג\'טים. לחצו לחיצה ארוכה כדי להוסיף אחד.</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">פונקציונליות זו דורשת אנדרואיד 15 ואילך.</string>
     <string name="toast_private_space_default_home_screen">MultiLauncher צריך להיות מסך הבית המוגדר כברירת מחדל כדי לגשת למרחב פרטי.</string>
