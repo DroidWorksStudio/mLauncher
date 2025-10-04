@@ -318,6 +318,12 @@
     <string name="widgets_select_widget">Selecteer een widget</string>
     <string name="widgets_add_widget">Voeg een widget toe</string>
     <string name="widgets_reset_widget">Alle widgets resetten</string>
+    <string name="widgets_resize">Resize</string>
+    <string name="widgets_exit_resize">Exit Resize</string>
+    <string name="widgets_remove">Remove Widget</string>
+    <string name="widgets_open">Open App</string>
+    <string name="widgets_view_in_store">View App In Store</string>
+    <string name="widgets_settings">Widget Settings</string>
     <string name="widgets_not_added">No widgets added yet. Long press to add one.</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">Voor deze functionaliteit is Android 15 of hoger vereist.</string>
