@@ -6,6 +6,4 @@
     android:layout_height="wrap_content"
     android:hint="@string/select_app"
     android:paddingVertical="@dimen/home_app_padding_vertical"
-    android:tag="1">
-
-</com.github.creativecodecat.components.views.FontAppCompatTextView>
+    android:tag="1" />
