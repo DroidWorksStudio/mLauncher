@@ -19,7 +19,9 @@ import android.widget.TextView
 import androidx.core.graphics.toColorInt
 import androidx.core.net.toUri
 import com.github.droidworksstudio.common.AppLogger
+import com.github.droidworksstudio.common.getLocalizedString
 import com.github.droidworksstudio.mlauncher.R
+import com.github.droidworksstudio.mlauncher.helper.getInstallSource
 import com.github.droidworksstudio.mlauncher.ui.WidgetFragment
 import com.github.droidworksstudio.mlauncher.ui.components.LockedBottomSheetDialog
 
@@ -100,8 +102,8 @@ class ResizableWidgetWrapper(
             val parentFrame = parent as? FrameLayout
             val parentWidth = parentFrame?.width ?: context.resources.displayMetrics.widthPixels
             val cellWidth = (parentWidth - (cellMargin * (gridColumns - 1))) / gridColumns
-            val widthPx = defaultCellsW * cellWidth + (defaultCellsW - 1) * cellMargin
-            val heightPx = defaultCellsH * cellWidth + (defaultCellsH - 1) * cellMargin
+            val widthPx = maxOf(cellWidth, defaultCellsW * cellWidth + (defaultCellsW - 1) * cellMargin)
+            val heightPx = maxOf(cellWidth, defaultCellsH * cellWidth + (defaultCellsH - 1) * cellMargin)
 
             layoutParams = LayoutParams(widthPx, heightPx)
             AppLogger.d("ResizableWidgetWrapper", "post:init -> layoutParams set to ${widthPx}x${heightPx}")
@@ -392,33 +394,73 @@ class ResizableWidgetWrapper(
         }
 
         if (isResizeMode) {
-            addMenuItem("Exit Resize") {
+            addMenuItem(getLocalizedString(R.string.widgets_exit_resize)) {
                 isResizeMode = false
                 setHandlesVisible(false)
                 reloadParentFragment()
             }
         } else {
-            addMenuItem("Resize") {
+            addMenuItem(getLocalizedString(R.string.widgets_resize)) {
                 isResizeMode = true
                 setHandlesVisible(true)
             }
         }
 
-        addMenuItem("Delete") {
+        addMenuItem(getLocalizedString(R.string.widgets_remove)) {
             appWidgetHost.deleteAppWidgetId(hostView.appWidgetId)
             (parent as? ViewGroup)?.removeView(this)
             onUpdate()
         }
 
-        addMenuItem("Open") {
+        addMenuItem(getLocalizedString(R.string.widgets_open)) {
             context.packageManager.getLaunchIntentForPackage(widgetInfo.provider.packageName)?.let {
                 context.startActivity(it)
             }
         }
 
-        addMenuItem("View in Store") {
-            context.startActivity(Intent(Intent.ACTION_VIEW, "market://details?id=${widgetInfo.provider.packageName}".toUri()))
+        // Settings (only if widget has a config activity)
+        widgetInfo.configure?.let { configureComponent ->
+            addMenuItem(getLocalizedString(R.string.widgets_settings)) {
+                val intent = Intent().apply {
+                    component = configureComponent
+                    putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, hostView.appWidgetId)
+                }
+                context.startActivity(intent)
+            }
         }
+
+        // View in Store (only if installed from Google Play)
+        val packageManager = context.packageManager
+        val installerPackage = getInstallSource(packageManager, widgetInfo.provider.packageName)
+        when (installerPackage) {
+            "Google Play Store" -> { // Google Play
+                addMenuItem(getLocalizedString(R.string.widgets_view_in_store)) {
+                    context.startActivity(
+                        Intent(
+                            Intent.ACTION_VIEW,
+                            "market://details?id=${widgetInfo.provider.packageName}".toUri()
+                        )
+                    )
+                }
+            }
+
+            "Amazon Appstore" -> { // Amazon Appstore
+                addMenuItem(getLocalizedString(R.string.widgets_view_in_store)) {
+                    context.startActivity(
+                        Intent(
+                            Intent.ACTION_VIEW,
+                            "amzn://apps/android?p=${widgetInfo.provider.packageName}".toUri()
+                        )
+                    )
+                }
+            }
+
+            else -> {
+                // Debug / unknown installer, do not show "View in Store"
+                AppLogger.d("WidgetMenu", "Skipping '${getLocalizedString(R.string.widgets_view_in_store)}': unrecognized installer package='$installerPackage'")
+            }
+        }
+
 
         dialog.setOnDismissListener { activeDialog = null }
         dialog.setContentView(container)

@@ -2,6 +2,8 @@ package com.github.droidworksstudio.common
 
 import android.app.Activity
 import android.app.ActivityManager
+import android.app.Application
+import android.appwidget.AppWidgetManager
 import android.content.ActivityNotFoundException
 import android.content.ComponentName
 import android.content.Context
@@ -68,6 +70,12 @@ fun Context.openUrl(url: String) {
     intent.data = url.toUri()
     startActivity(intent)
 }
+
+val Context.safeApplicationContext: Context
+    get() = this as? Application ?: applicationContext
+
+val Context.appWidgetManager: AppWidgetManager
+    get() = AppWidgetManager.getInstance(safeApplicationContext)
 
 fun isGestureNavigationEnabled(context: Context): Boolean {
     return try {
