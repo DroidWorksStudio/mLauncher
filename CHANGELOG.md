@@ -16,6 +16,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Code Quality:
 
+* Improve release message format ([0c33d2de](https://github.com/DroidWorksStudio/mLauncher/commit/0c33d2de))
 * Simplify dominant color retrieval ([a7fc0005](https://github.com/DroidWorksStudio/mLauncher/commit/a7fc0005))
 
 ### Localization:
