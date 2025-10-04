@@ -318,13 +318,13 @@
     <string name="widgets_select_widget">Selecteer een widget</string>
     <string name="widgets_add_widget">Voeg een widget toe</string>
     <string name="widgets_reset_widget">Alle widgets resetten</string>
-    <string name="widgets_resize">Resize</string>
-    <string name="widgets_exit_resize">Exit Resize</string>
-    <string name="widgets_remove">Remove Widget</string>
-    <string name="widgets_open">Open App</string>
-    <string name="widgets_view_in_store">View App In Store</string>
-    <string name="widgets_settings">Widget Settings</string>
-    <string name="widgets_not_added">No widgets added yet. Long press to add one.</string>
+    <string name="widgets_resize">Formaat wijzigen</string>
+    <string name="widgets_exit_resize">Afsluiten Formaat wijzigen</string>
+    <string name="widgets_remove">Widget verwijderen</string>
+    <string name="widgets_open">App openen</string>
+    <string name="widgets_view_in_store">Bekijk app in de winkel</string>
+    <string name="widgets_settings">Widget-instellingen</string>
+    <string name="widgets_not_added">Er zijn nog geen widgets toegevoegd. Houd ingedrukt om er een toe te voegen.</string>
     <!-- Private Spaces Strings -->
     <string name="alert_requires_android_v">Voor deze functionaliteit is Android 15 of hoger vereist.</string>
     <string name="toast_private_space_default_home_screen">MultiLauncher moet het standaard startscherm zijn om toegang te krijgen tot uw privéruimte.</string>
