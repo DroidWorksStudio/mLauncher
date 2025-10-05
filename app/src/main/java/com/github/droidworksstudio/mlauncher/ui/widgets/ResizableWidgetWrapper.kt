@@ -24,6 +24,7 @@ import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.helper.getInstallSource
 import com.github.droidworksstudio.mlauncher.ui.WidgetFragment
 import com.github.droidworksstudio.mlauncher.ui.components.LockedBottomSheetDialog
+import kotlin.math.abs
 
 @SuppressLint("ClickableViewAccessibility", "ViewConstructor")
 class ResizableWidgetWrapper(
@@ -277,14 +278,21 @@ class ResizableWidgetWrapper(
                     MotionEvent.ACTION_MOVE -> {
                         val dx = event.rawX - lastX
                         val dy = event.rawY - lastY
+
                         translationX += dx
                         translationY += dy
+
                         lastX = event.rawX
                         lastY = event.rawY
 
                         updateGhostPosition()
-                        activeDialog?.dismiss()
+
+                        // Check if movement exceeds 10 pixels in any direction
+                        if (abs(dx) > 10 || abs(dy) > 10) {
+                            activeDialog?.dismiss()
+                        }
                     }
+
 
                     MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
                         snapToGrid()
