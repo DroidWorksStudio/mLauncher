@@ -249,6 +249,8 @@ class ResizableWidgetWrapper(
                 }
             })
 
+            var dialogDismissed = false
+
             view.setOnTouchListener { v, event ->
                 gestureDetector.onTouchEvent(event)
                 // Skip handles
@@ -257,6 +259,8 @@ class ResizableWidgetWrapper(
 
                 when (event.actionMasked) {
                     MotionEvent.ACTION_DOWN -> {
+                        dialogDismissed = false
+
                         lastX = event.rawX
                         lastY = event.rawY
 
@@ -287,14 +291,16 @@ class ResizableWidgetWrapper(
 
                         updateGhostPosition()
 
-                        // Check if movement exceeds 10 pixels in any direction
-                        if (abs(dx) > 10 || abs(dy) > 10) {
+                        // Dismiss only once if movement exceeds 10 pixels in any direction
+                        if (!dialogDismissed && (abs(dx) > 10 || abs(dy) > 10)) {
                             activeDialog?.dismiss()
+                            dialogDismissed = true
                         }
                     }
 
 
                     MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
+                        dialogDismissed = false
                         snapToGrid()
                         (ghostView?.parent as? ViewGroup)?.removeView(ghostView)
                         ghostView = null
