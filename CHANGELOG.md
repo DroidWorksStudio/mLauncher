@@ -8,30 +8,55 @@ All notable changes to this project will be documented in this file. See [conven
 
 * Add notification count badges to app icons ([4ef45966](https://github.com/DroidWorksStudio/mLauncher/commit/4ef45966))
 * Enhance widget management with new context extensions and localized menu options ([3ed94bdf](https://github.com/DroidWorksStudio/mLauncher/commit/3ed94bdf))
-* Add placeholder for empty widget screen and improve widget management ([d635fb8a](https://github.com/DroidWorksStudio/mLauncher/commit/d635fb8a))
-* Add Widget Page feature ([4fee3a2e](https://github.com/DroidWorksStudio/mLauncher/commit/4fee3a2e))
-* Enhance AppLogger with verbose logging and unconditional warning/error logging ([37d0d9f3](https://github.com/DroidWorksStudio/mLauncher/commit/37d0d9f3))
-* Introduce dynamic application name based on build type ([6b354ee0](https://github.com/DroidWorksStudio/mLauncher/commit/6b354ee0))
-* Add Widget Page feature ([54a83ae9](https://github.com/DroidWorksStudio/mLauncher/commit/54a83ae9))
 
 ### :bug: Bug Fixes:
 
 * Prevent widgets from resizing or moving off-screen ([8ac19b66](https://github.com/DroidWorksStudio/mLauncher/commit/8ac19b66))
 * Use original app label when updating notification count ([45291dbb](https://github.com/DroidWorksStudio/mLauncher/commit/45291dbb))
-* Update widget dimensions and bitmap scaling ([b3de3be4](https://github.com/DroidWorksStudio/mLauncher/commit/b3de3be4))
 
 ### :wrench: Code Quality:
 
 * Improve release message format ([8bf03bd4](https://github.com/DroidWorksStudio/mLauncher/commit/8bf03bd4))
 * Simplify dominant color retrieval ([3060b473](https://github.com/DroidWorksStudio/mLauncher/commit/3060b473))
-* Improve crash handling and reporting ([a71b94f6](https://github.com/DroidWorksStudio/mLauncher/commit/a71b94f6))
-* Adjust Word of the Day widget minWidth ([c4539247](https://github.com/DroidWorksStudio/mLauncher/commit/c4539247))
-* Rename `bottomSheet` to `showDeviceBottomSheet` ([bde4558f](https://github.com/DroidWorksStudio/mLauncher/commit/bde4558f))
-* Mark `word_of_the_day` as not translatable ([29f84c99](https://github.com/DroidWorksStudio/mLauncher/commit/29f84c99))
 
 ### :globe_with_meridians: Localization:
 
 * Updated Language Files. ([#915](https://github.com/DroidWorksStudio/mLauncher/pull/915)) ([41451f4c](https://github.com/DroidWorksStudio/mLauncher/commit/41451f4c))
+
+### :broom: Maintenance & Cleanup:
+
+* Add icons to changelog group titles ([6fa851d1](https://github.com/DroidWorksStudio/mLauncher/commit/6fa851d1))
+
+## [1.11.1.4](https://github.com/DroidWorksStudio/mLauncher/tree/1.11.1.4) - (03, October 2025)
+
+### :sparkles: Enhancements:
+
+* Add placeholder for empty widget screen and improve widget management ([d635fb8a](https://github.com/DroidWorksStudio/mLauncher/commit/d635fb8a))
+* Add Widget Page feature ([4fee3a2e](https://github.com/DroidWorksStudio/mLauncher/commit/4fee3a2e))
+* Enhance AppLogger with verbose logging and unconditional warning/error logging ([37d0d9f3](https://github.com/DroidWorksStudio/mLauncher/commit/37d0d9f3))
+* Introduce dynamic application name based on build type ([6b354ee0](https://github.com/DroidWorksStudio/mLauncher/commit/6b354ee0))
+* Add Widget Page feature ([54a83ae9](https://github.com/DroidWorksStudio/mLauncher/commit/54a83ae9))
+* Enhance Private Space UI and Logic ([fc9287fa](https://github.com/DroidWorksStudio/mLauncher/commit/fc9287fa))
+
+### :bug: Bug Fixes:
+
+* Update widget dimensions and bitmap scaling ([b3de3be4](https://github.com/DroidWorksStudio/mLauncher/commit/b3de3be4))
+* Hide Private Apps button when mLauncher is not default ([a407a6f2](https://github.com/DroidWorksStudio/mLauncher/commit/a407a6f2))
+
+### :wrench: Code Quality:
+
+* Improve crash handling and reporting ([a71b94f6](https://github.com/DroidWorksStudio/mLauncher/commit/a71b94f6))
+* Adjust Word of the Day widget minWidth ([c4539247](https://github.com/DroidWorksStudio/mLauncher/commit/c4539247))
+* Rename `bottomSheet` to `showDeviceBottomSheet` ([bde4558f](https://github.com/DroidWorksStudio/mLauncher/commit/bde4558f))
+* Mark `word_of_the_day` as not translatable ([29f84c99](https://github.com/DroidWorksStudio/mLauncher/commit/29f84c99))
+* Remove wordoftheday.xml from Crowdin configuration ([22e74bac](https://github.com/DroidWorksStudio/mLauncher/commit/22e74bac))
+* Update regex for conventional commit types ([9b7870fe](https://github.com/DroidWorksStudio/mLauncher/commit/9b7870fe))
+* Update commit parsing rules for changelog generation ([250afcf4](https://github.com/DroidWorksStudio/mLauncher/commit/250afcf4))
+* Update post-discord-release.js ([ead38b5c](https://github.com/DroidWorksStudio/mLauncher/commit/ead38b5c))
+* Implement caching and optimize data loading in MainViewModel ([9318ffa0](https://github.com/DroidWorksStudio/mLauncher/commit/9318ffa0))
+
+### :globe_with_meridians: Localization:
+
 * Updated Language Files. ([#908](https://github.com/DroidWorksStudio/mLauncher/pull/908)) ([111f8722](https://github.com/DroidWorksStudio/mLauncher/commit/111f8722))
 * Updated Language Files. ([#907](https://github.com/DroidWorksStudio/mLauncher/pull/907)) ([748d17be](https://github.com/DroidWorksStudio/mLauncher/commit/748d17be))
 
@@ -43,52 +68,6 @@ All notable changes to this project will be documented in this file. See [conven
 
 * Bump the all-gradle group across 1 directory with 12 updates ([#911](https://github.com/DroidWorksStudio/mLauncher/pull/911)) ([a9ccdc2b](https://github.com/DroidWorksStudio/mLauncher/commit/a9ccdc2b))
 * Bump actions/cache in the all-actions group ([#910](https://github.com/DroidWorksStudio/mLauncher/pull/910)) ([66d9119d](https://github.com/DroidWorksStudio/mLauncher/commit/66d9119d))
-
-### :broom: Maintenance & Cleanup:
-
-* Add icons to changelog group titles ([6fa851d1](https://github.com/DroidWorksStudio/mLauncher/commit/6fa851d1))
-
-## [1.11.1.4](https://github.com/DroidWorksStudio/mLauncher/tree/1.11.1.4) - (03, October 2025)
-
-### :sparkles: Enhancements:
-
-* Add placeholder for empty widget screen and improve widget management ([0883c459](https://github.com/DroidWorksStudio/mLauncher/commit/0883c459))
-* Add Widget Page feature ([af483370](https://github.com/DroidWorksStudio/mLauncher/commit/af483370))
-* Enhance AppLogger with verbose logging and unconditional warning/error logging ([11ebd84d](https://github.com/DroidWorksStudio/mLauncher/commit/11ebd84d))
-* Introduce dynamic application name based on build type ([83240776](https://github.com/DroidWorksStudio/mLauncher/commit/83240776))
-* Add Widget Page feature ([7f5e8559](https://github.com/DroidWorksStudio/mLauncher/commit/7f5e8559))
-* Enhance Private Space UI and Logic ([fc9287fa](https://github.com/DroidWorksStudio/mLauncher/commit/fc9287fa))
-
-### :bug: Bug Fixes:
-
-* Update widget dimensions and bitmap scaling ([5695d0b2](https://github.com/DroidWorksStudio/mLauncher/commit/5695d0b2))
-* Hide Private Apps button when mLauncher is not default ([a407a6f2](https://github.com/DroidWorksStudio/mLauncher/commit/a407a6f2))
-
-### :wrench: Code Quality:
-
-* Improve crash handling and reporting ([8401a5c2](https://github.com/DroidWorksStudio/mLauncher/commit/8401a5c2))
-* Adjust Word of the Day widget minWidth ([fe49c1bb](https://github.com/DroidWorksStudio/mLauncher/commit/fe49c1bb))
-* Rename `bottomSheet` to `showDeviceBottomSheet` ([c14313dc](https://github.com/DroidWorksStudio/mLauncher/commit/c14313dc))
-* Mark `word_of_the_day` as not translatable ([cfdb421b](https://github.com/DroidWorksStudio/mLauncher/commit/cfdb421b))
-* Remove wordoftheday.xml from Crowdin configuration ([22e74bac](https://github.com/DroidWorksStudio/mLauncher/commit/22e74bac))
-* Update regex for conventional commit types ([9b7870fe](https://github.com/DroidWorksStudio/mLauncher/commit/9b7870fe))
-* Update commit parsing rules for changelog generation ([250afcf4](https://github.com/DroidWorksStudio/mLauncher/commit/250afcf4))
-* Update post-discord-release.js ([ead38b5c](https://github.com/DroidWorksStudio/mLauncher/commit/ead38b5c))
-* Implement caching and optimize data loading in MainViewModel ([9318ffa0](https://github.com/DroidWorksStudio/mLauncher/commit/9318ffa0))
-
-### :globe_with_meridians: Localization:
-
-* Updated Language Files. ([#908](https://github.com/DroidWorksStudio/mLauncher/pull/908)) ([c028e4d7](https://github.com/DroidWorksStudio/mLauncher/commit/c028e4d7))
-* Updated Language Files. ([#907](https://github.com/DroidWorksStudio/mLauncher/pull/907)) ([33ee046c](https://github.com/DroidWorksStudio/mLauncher/commit/33ee046c))
-
-### :x: Feature Removals:
-
-* Remove Word of the Day feature ([2a851d01](https://github.com/DroidWorksStudio/mLauncher/commit/2a851d01))
-
-### :building_construction: Build:
-
-* Bump the all-gradle group across 1 directory with 12 updates ([#911](https://github.com/DroidWorksStudio/mLauncher/pull/911)) ([55153d87](https://github.com/DroidWorksStudio/mLauncher/commit/55153d87))
-* Bump actions/cache in the all-actions group ([#910](https://github.com/DroidWorksStudio/mLauncher/pull/910)) ([c9b60d1c](https://github.com/DroidWorksStudio/mLauncher/commit/c9b60d1c))
 
 ## [1.11.1.3](https://github.com/DroidWorksStudio/mLauncher/tree/1.11.1.3) - (21, September 2025)
 
