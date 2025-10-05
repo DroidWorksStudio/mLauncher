@@ -11,6 +11,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### :bug: Bug Fixes:
 
+* Prevent multiple dismissals of dialog during widget movement ([5e6e7a52](https://github.com/DroidWorksStudio/mLauncher/commit/5e6e7a52))
 * Prevent accidental dismissal of dialog on widget tap ([269e3198](https://github.com/DroidWorksStudio/mLauncher/commit/269e3198))
 * Prevent widgets from resizing or moving off-screen ([8ac19b66](https://github.com/DroidWorksStudio/mLauncher/commit/8ac19b66))
 * Use original app label when updating notification count ([45291dbb](https://github.com/DroidWorksStudio/mLauncher/commit/45291dbb))
