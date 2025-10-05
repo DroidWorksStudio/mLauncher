@@ -2,6 +2,7 @@
 
 const { execSync } = require("child_process");
 const fs = require("fs");
+const https = require("https");
 
 const OUTPUT_FILE = "CHANGELOG.md";
 const TAGS_TO_INCLUDE = 10; // Number of recent tags to include
@@ -18,75 +19,36 @@ const FOOTER = `---
 const VERBOSE = process.argv.includes("--verbose");
 function log(...args) {
 	if (!VERBOSE) return;
-
-	const cleanArgs = args.map((arg) => {
-		if (typeof arg === "string") {
-			return arg.replace("### ", "").trim();
-		}
-		return arg;
-	});
-
+	const cleanArgs = args.map((arg) => (typeof arg === "string" ? arg.replace("### ", "").trim() : arg));
 	console.log(...cleanArgs);
 }
 
 // Commit parsing rules
 const commitParsers = [
-    // Skip some "noise" commits
-    { message: /^chore\(release\): prepare for/i, skip: true },
-    { message: /^chore\(deps.*\)/i, skip: true },
-    { message: /^chore\(change.*\)/i, skip: true },
-    { message: /^chore\(pr\)/i, skip: true },
-    { message: /^chore\(pull\)/i, skip: true },
-    { message: /^fixes/i, skip: true },
+	{ message: /^chore\(release\): prepare for/i, skip: true },
+	{ message: /^chore\(deps.*\)/i, skip: true },
+	{ message: /^chore\(change.*\)/i, skip: true },
+	{ message: /^chore\(pr\)/i, skip: true },
+	{ message: /^chore\(pull\)/i, skip: true },
+	{ message: /^fixes/i, skip: true },
 
-    // Enhancements (new features, improvements, UX, performance)
-    { message: /^feat|^perf|^style|^ui|^ux/i, group: "### :sparkles: Enhancements:" },
-
-    // Bug fixes & hotfixes
-    { message: /^fix|^bug|^hotfix|^emergency/i, group: "### :bug: Bug Fixes:" },
-
-    // Code quality (refactors, cleanup without changing behavior)
-    { message: /^refactor/i, group: "### :wrench: Code Quality:" },
-
-    // Documentation
-    { message: /^doc/i, group: "### :books: Documentation:" },
-
-    // Localization & internationalization
-    { message: /^(lang|i18n)/i, group: "### :globe_with_meridians: Localization:" },
-
-    // Security
-    { message: /^security/i, group: "### :lock: Security:" },
-
-    // Feature removal / drops
-    { message: /^drop|^remove|^deprecated/i, group: "### :x: Feature Removals:" },
-
-    // Reverts
-    { message: /^revert/i, group: "### :rewind: Reverts:" },
-
-    // Build-related
-    { message: /^build/i, group: "### :building_construction: Build:" },
-
-    // Dependencies-related
-    { message: /^dependency|^deps/i, group: "### :package: Dependencies:" },
-
-    // Meta: configuration, CI/CD, versioning, releases
-    { message: /^config|^configuration|^ci|^pipeline|^release|^version|^versioning/i, group: "### :gear: Meta:" },
-
-    // Tests
-    { message: /^test/i, group: "### :test_tube: Tests:" },
-
-    // Infrastructure & Ops
-    { message: /^infra|^infrastructure|^ops/i, group: "### :office: Infrastructure & Ops:" },
-
-    // Chore & cleanup
-    { message: /^chore|^housekeeping|^cleanup|^clean\(up\)/i, group: "### :broom: Maintenance & Cleanup:" },
+	{ message: /^feat|^perf|^style|^ui|^ux/i, group: "### :sparkles: Enhancements:" },
+	{ message: /^fix|^bug|^hotfix|^emergency/i, group: "### :bug: Bug Fixes:" },
+	{ message: /^refactor/i, group: "### :wrench: Code Quality:" },
+	{ message: /^doc/i, group: "### :books: Documentation:" },
+	{ message: /^(lang|i18n)/i, group: "### :globe_with_meridians: Localization:" },
+	{ message: /^security/i, group: "### :lock: Security:" },
+	{ message: /^drop|^remove|^deprecated/i, group: "### :x: Feature Removals:" },
+	{ message: /^revert/i, group: "### :rewind: Reverts:" },
+	{ message: /^build/i, group: "### :building_construction: Build:" },
+	{ message: /^dependency|^deps/i, group: "### :package: Dependencies:" },
+	{ message: /^config|^configuration|^ci|^pipeline|^release|^version|^versioning/i, group: "### :gear: Meta:" },
+	{ message: /^test/i, group: "### :test_tube: Tests:" },
+	{ message: /^infra|^infrastructure|^ops/i, group: "### :office: Infrastructure & Ops:" },
+	{ message: /^chore|^housekeeping|^cleanup|^clean\(up\)/i, group: "### :broom: Maintenance & Cleanup:" },
 ];
 
-// Build group order directly from commitParsers
-const GROUP_ORDER = commitParsers
-    .filter((p) => !p.skip)
-    .map((p) => p.group);
-
+const GROUP_ORDER = commitParsers.filter((p) => !p.skip).map((p) => p.group);
 
 // Helper functions
 function run(cmd) {
@@ -109,33 +71,54 @@ function classifyCommit(msg) {
 			return { group: parser.group, message: msg };
 		}
 	}
-	return null; // Skip commits that don't match
+	return null;
 }
 
 function cleanMessage(message) {
-	// Remove conventional commit type (feat, fix, etc.), with optional scope (...) and colon
-	return message.replace(/^(feat|fix|fixed|bug|lang|i18n|doc|docs|perf|refactor|style|ui|ux|security|revert|release|dependency|deps|build|ci|pipeline|chore|housekeeping|version|versioning|config|configuration|cleanup|clean\(up\)|drop|remove|deprecated|hotfix|emergency|test|infra|infrastructure|ops|asset|content|exp|experiment|prototype)\s*(\(.+?\))?:\s*/i,"");
+	return message.replace(/^(feat|fix|fixed|bug|lang|i18n|doc|docs|perf|refactor|style|ui|ux|security|revert|release|dependency|deps|build|ci|pipeline|chore|housekeeping|version|versioning|config|configuration|cleanup|clean\(up\)|drop|remove|deprecated|hotfix|emergency|test|infra|infrastructure|ops|asset|content|exp|experiment|prototype)\s*(\(.+?\))?:\s*/i, "");
 }
 
 function linkPR(message) {
-	// Replace (#123) with a link to the PR
 	return message.replace(/\(#(\d+)\)/g, (_, num) => `([#${num}](${REPO_URL}/pull/${num}))`);
 }
 
-// Get last N tags
-const allTags = run("git tag --sort=-creatordate").split("\n");
-const tags = allTags.slice(0, TAGS_TO_INCLUDE);
-log("Tags to include:", tags);
+// Get GitHub release title for a tag
+function getReleaseTitle(tag) {
+	const options = {
+		hostname: "api.github.com",
+		path: `/repos/DroidWorksStudio/mLauncher/releases/tags/${tag}`,
+		method: "GET",
+		headers: { "User-Agent": "Node.js" },
+	};
+	return new Promise((resolve) => {
+		const req = https.request(options, (res) => {
+			let data = "";
+			res.on("data", (chunk) => (data += chunk));
+			res.on("end", () => {
+				try {
+					const json = JSON.parse(data);
+					resolve(json.name || tag);
+				} catch {
+					resolve(tag);
+				}
+			});
+		});
+		req.on("error", () => resolve(tag));
+		req.end();
+	});
+}
 
-let changelog = HEADER;
+// Main async function
+async function generateChangelog() {
+	const allTags = run("git tag --sort=-creatordate").split("\n");
+	const tags = allTags.slice(0, TAGS_TO_INCLUDE);
+	log("Tags to include:", tags);
 
-// "Coming Soon" section for commits after latest tag
-const latestTag = tags[0] || "";
-log("Latest tag:", latestTag);
+	let changelog = HEADER;
 
-if (latestTag) {
+	// Coming Soon / Unreleased
+	const latestTag = tags[0] || "unreleased";
 	const rawUnreleased = run(`git log ${latestTag}..HEAD --pretty=format:"%h|%s"`).split("\n");
-
 	const unreleasedCommits = rawUnreleased
 		.map((line) => {
 			const [hash, ...msgParts] = line.split("|");
@@ -148,7 +131,7 @@ if (latestTag) {
 
 	if (unreleasedCommits.length > 0) {
 		log("Unreleased commits found:", unreleasedCommits.length);
-		changelog += "## [Coming Soon](https://github.com/DroidWorksStudio/mLauncher/tree/main) - TBD\n\n";
+		changelog += `## [${latestTag} → HEAD](https://github.com/DroidWorksStudio/mLauncher/tree/main) - Coming Soon\n\n`;
 		const groups = {};
 		for (const c of unreleasedCommits) {
 			groups[c.group] = groups[c.group] || [];
@@ -161,64 +144,58 @@ if (latestTag) {
 			}
 		}
 	}
-}
 
-// Generate changelog for each tag
-for (let i = 0; i < tags.length; i++) {
-	const currentTag = tags[i];
+	// Generate changelog for each tag
+	for (let i = 0; i < tags.length; i++) {
+		const currentTag = tags[i];
+		const releaseTitle = await getReleaseTitle(currentTag); // GitHub release title
+		log(`Processing tag: ${currentTag} (${releaseTitle})`);
 
-	// Determine range
-	let range;
-	if (i === tags.length - 1) {
-		// Oldest tag
-		const oldestTagIndex = allTags.indexOf(currentTag);
-		const parentTag = allTags[oldestTagIndex - 1];
-		range = parentTag ? `${parentTag}..${currentTag}` : currentTag;
-	} else {
-		const previousTagInSlice = tags[i + 1];
-		range = `${previousTagInSlice}..${currentTag}`;
-	}
+		let range;
+		if (i === tags.length - 1) {
+			const oldestTagIndex = allTags.indexOf(currentTag);
+			const parentTag = allTags[oldestTagIndex - 1];
+			range = parentTag ? `${parentTag}..${currentTag}` : currentTag;
+		} else {
+			const previousTagInSlice = tags[i + 1];
+			range = `${previousTagInSlice}..${currentTag}`;
+		}
 
-	log(`Processing tag: ${currentTag}, range: ${range}`);
+		const rawCommits = run(`git log ${range} --pretty=format:"%h|%s"`).split("\n");
+		const commits = rawCommits
+			.map((line) => {
+				const [hash, ...msgParts] = line.split("|");
+				const message = msgParts.join("|");
+				const classified = classifyCommit(message);
+				if (!classified) return null;
+				return { ...classified, hash };
+			})
+			.filter(Boolean);
 
-	// Commits
-	const rawCommits = run(`git log ${range} --pretty=format:"%h|%s"`).split("\n");
-	const commits = rawCommits
-		.map((line) => {
-			const [hash, ...msgParts] = line.split("|");
-			const message = msgParts.join("|");
-			const classified = classifyCommit(message);
-			if (!classified) return null;
-			return { ...classified, hash };
-		})
-		.filter(Boolean);
+		if (commits.length === 0) continue;
 
-	log(`Commits found for ${currentTag}:`, commits.length);
-	if (commits.length === 0) continue;
+		const tagDateRaw = run(`git log -1 --format=%ad --date=short ${currentTag}`);
+		const tagDateFormatted = formatDate(tagDateRaw);
 
-	// Tag date
-	const tagDateRaw = run(`git log -1 --format=%ad --date=short ${currentTag}`);
-	const tagDateFormatted = formatDate(tagDateRaw);
+		changelog += `## [${releaseTitle}](${REPO_URL}/tree/${currentTag}) ${tagDateFormatted}\n\n`;
 
-	changelog += `## [${currentTag}](${REPO_URL}/tree/${currentTag}) ${tagDateFormatted}\n\n`;
+		const groups = {};
+		for (const c of commits) {
+			groups[c.group] = groups[c.group] || [];
+			groups[c.group].push(`* ${linkPR(cleanMessage(c.message))} ([${c.hash}](${REPO_URL}/commit/${c.hash}))`);
+		}
 
-	const groups = {};
-	for (const c of commits) {
-		groups[c.group] = groups[c.group] || [];
-		groups[c.group].push(`* ${linkPR(cleanMessage(c.message))} ([${c.hash}](${REPO_URL}/commit/${c.hash}))`);
-	}
-
-	for (const group of GROUP_ORDER) {
-		if (groups[group]) {
-			log(`Group: ${group}, commits: ${groups[group].length}`);
-			changelog += `${group}\n\n${groups[group].join("\n")}\n\n`;
+		for (const group of GROUP_ORDER) {
+			if (groups[group]) {
+				changelog += `${group}\n\n${groups[group].join("\n")}\n\n`;
+			}
 		}
 	}
+
+	changelog += FOOTER;
+	fs.writeFileSync(OUTPUT_FILE, changelog, "utf8");
+	console.log(`✅ Generated ${OUTPUT_FILE}`);
 }
 
-// Append footer
-changelog += FOOTER;
-
-// Write file
-fs.writeFileSync(OUTPUT_FILE, changelog, "utf8");
-console.log(`✅ Generated ${OUTPUT_FILE}`);
+// Run
+generateChangelog();
