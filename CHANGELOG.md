@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
-## [1.11.1.5 → HEAD](https://github.com/DroidWorksStudio/mLauncher/tree/main) - Coming Soon
+## [1.11.1.5 → Unreleased](https://github.com/DroidWorksStudio/mLauncher/tree/main) - In Development
 
 ### :wrench: Code Quality:
 
