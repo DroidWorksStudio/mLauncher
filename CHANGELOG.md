@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### :wrench: Code Quality:
 
+* Improve widget placement and lifecycle management ([8dd79292](https://github.com/DroidWorksStudio/mLauncher/commit/8dd79292))
 * Improve crash reporting reliability ([fcfecbfa](https://github.com/DroidWorksStudio/mLauncher/commit/fcfecbfa))
 
 ### :building_construction: Build:
