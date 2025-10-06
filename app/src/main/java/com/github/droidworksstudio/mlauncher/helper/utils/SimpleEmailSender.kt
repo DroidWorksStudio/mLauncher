@@ -70,6 +70,8 @@ class SimpleEmailSender {
             context.startActivity(intent)
         } catch (_: ActivityNotFoundException) {
             resolveAndSend(subject, body, attachments, context, emailRecipient)
+        } catch (_: Exception) {
+            resolveAndSend(subject, body, attachments, context, emailRecipient)
         }
     }
 

@@ -26,7 +26,6 @@ class CrashHandler(private val context: Context) : Thread.UncaughtExceptionHandl
 
     companion object {
         private val userActions = LinkedBlockingQueue<String>(50)
-        var lastCrashUri: Uri? = null  // store the latest crash file URI
 
         fun logUserAction(action: String) {
             val timeStamp = Date().toString()
@@ -153,8 +152,6 @@ class CrashHandler(private val context: Context) : Thread.UncaughtExceptionHandl
                 file.writeText(content)
                 FileProvider.getUriForFile(context, "${context.packageName}.fileprovider", file)
             }
-
-            lastCrashUri = uri
 
             val intent = Intent(context, CrashReportActivity::class.java).apply {
                 addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
