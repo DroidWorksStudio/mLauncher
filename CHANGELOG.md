@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [1.11.1.5 → HEAD](https://github.com/DroidWorksStudio/mLauncher/tree/main) - Coming Soon
 
+### :wrench: Code Quality:
+
+* Improve crash reporting reliability ([fcfecbfa](https://github.com/DroidWorksStudio/mLauncher/commit/fcfecbfa))
+
 ### :building_construction: Build:
 
 * Bump the all-actions group with 2 updates ([#920](https://github.com/DroidWorksStudio/mLauncher/pull/920)) ([7d4eb7be](https://github.com/DroidWorksStudio/mLauncher/commit/7d4eb7be))
