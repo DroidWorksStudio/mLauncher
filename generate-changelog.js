@@ -131,7 +131,7 @@ async function generateChangelog() {
 
 	if (unreleasedCommits.length > 0) {
 		log("Unreleased commits found:", unreleasedCommits.length);
-		changelog += `## [${latestTag} → HEAD](https://github.com/DroidWorksStudio/mLauncher/tree/main) - Coming Soon\n\n`;
+		changelog += `## [${latestTag} → Unreleased](https://github.com/DroidWorksStudio/mLauncher/tree/main) - In Development\n\n`;
 		const groups = {};
 		for (const c of unreleasedCommits) {
 			groups[c.group] = groups[c.group] || [];
