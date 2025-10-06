@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
+## [1.11.1.5 → HEAD](https://github.com/DroidWorksStudio/mLauncher/tree/main) - Coming Soon
+
+### :building_construction: Build:
+
+* Bump the all-actions group with 2 updates ([#920](https://github.com/DroidWorksStudio/mLauncher/pull/920)) ([7d4eb7be](https://github.com/DroidWorksStudio/mLauncher/commit/7d4eb7be))
+
 ## [1110105 (1.11.1.5) - Multi Launcher ‧ Home Screen](https://github.com/DroidWorksStudio/mLauncher/tree/1.11.1.5) - (05, October 2025)
 
 ### :sparkles: Enhancements:
