@@ -18,11 +18,11 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.graphics.toColorInt
 import androidx.core.net.toUri
+import androidx.navigation.findNavController
 import com.github.droidworksstudio.common.AppLogger
 import com.github.droidworksstudio.common.getLocalizedString
 import com.github.droidworksstudio.mlauncher.R
 import com.github.droidworksstudio.mlauncher.helper.getInstallSource
-import com.github.droidworksstudio.mlauncher.ui.WidgetFragment
 import com.github.droidworksstudio.mlauncher.ui.components.LockedBottomSheetDialog
 import kotlin.math.abs
 
@@ -317,15 +317,25 @@ class ResizableWidgetWrapper(
 
     private fun updateGhostPosition() {
         val parentFrame = parent as? FrameLayout ?: return
-        val cellWidth = (parentFrame.width - (cellMargin * (gridColumns - 1))) / gridColumns
-        val maxX = parentFrame.width - this.width
-        val maxY = parentFrame.height - this.height
 
-        val col = ((translationX + cellWidth / 2) / (cellWidth + cellMargin)).toInt().coerceIn(0, gridColumns - 1)
-        val row = ((translationY + cellWidth / 2) / (cellWidth + cellMargin)).toInt()
+        val parentWidth = parentFrame.width.coerceAtLeast(1)
+        val parentHeight = parentFrame.height.coerceAtLeast(1)
+
+        val cellWidth = ((parentWidth - (cellMargin * (gridColumns - 1))) / gridColumns).coerceAtLeast(1)
+        val cellHeight = cellWidth
+
+        val maxX = (parentWidth - width).coerceAtLeast(0)
+        val maxY = (parentHeight - height).coerceAtLeast(0)
+
+        val col = ((translationX + cellWidth / 2) / (cellWidth + cellMargin))
+            .toInt()
+            .coerceIn(0, gridColumns - 1)
+        val row = ((translationY + cellHeight / 2) / (cellHeight + cellMargin))
+            .toInt()
+            .coerceAtLeast(0)
 
         val newX = (col * (cellWidth + cellMargin)).coerceIn(0, maxX)
-        val newY = (row * (cellWidth + cellMargin)).coerceIn(0, maxY)
+        val newY = (row * (cellHeight + cellMargin)).coerceIn(0, maxY)
 
         ghostView?.layoutParams = (ghostView?.layoutParams as LayoutParams).apply {
             leftMargin = newX
@@ -338,15 +348,27 @@ class ResizableWidgetWrapper(
 
     fun snapToGrid() {
         val parentFrame = parent as? FrameLayout ?: return
-        val cellWidth = (parentFrame.width - (cellMargin * (gridColumns - 1))) / gridColumns
-        val maxX = parentFrame.width - width
-        val maxY = parentFrame.height - height
 
-        val col = ((translationX + cellWidth / 2) / (cellWidth + cellMargin)).toInt().coerceIn(0, gridColumns - 1)
-        val row = ((translationY + cellWidth / 2) / (cellWidth + cellMargin)).toInt()
+        val parentWidth = parentFrame.width.coerceAtLeast(1)
+        val parentHeight = parentFrame.height.coerceAtLeast(1)
+
+        val cellWidth = ((parentWidth - (cellMargin * (gridColumns - 1))) / gridColumns).coerceAtLeast(1)
+        val cellHeight = cellWidth
+
+        // Max translation ensures widget never leaves parent
+        val maxX = (parentWidth - width).coerceAtLeast(0)
+        val maxY = (parentHeight - height).coerceAtLeast(0)
+
+        val col = ((translationX + cellWidth / 2) / (cellWidth + cellMargin))
+            .toInt()
+            .coerceIn(0, gridColumns - 1)
+
+        val row = ((translationY + cellHeight / 2) / (cellHeight + cellMargin))
+            .toInt()
+            .coerceAtLeast(0) // row may expand beyond grid if needed
 
         translationX = (col * (cellWidth + cellMargin)).toFloat().coerceIn(0f, maxX.toFloat())
-        translationY = (row * (cellWidth + cellMargin)).toFloat().coerceIn(0f, maxY.toFloat())
+        translationY = (row * (cellHeight + cellMargin)).toFloat().coerceIn(0f, maxY.toFloat())
 
         currentCol = col
         currentRow = row
@@ -354,16 +376,19 @@ class ResizableWidgetWrapper(
 
     private fun snapResizeToGrid(side: String) {
         val parentFrame = parent as? FrameLayout ?: return
-        val cellSize = (parentFrame.width - (cellMargin * (gridColumns - 1))) / gridColumns
         val lp = layoutParams as? LayoutParams ?: return
 
-        val maxWidth = parentFrame.width - lp.leftMargin
-        val maxHeight = parentFrame.height - lp.topMargin
+        val parentWidth = parentFrame.width.coerceAtLeast(1)
+        val parentHeight = parentFrame.height.coerceAtLeast(1)
+        val cellSize = ((parentWidth - (cellMargin * (gridColumns - 1))) / gridColumns).coerceAtLeast(1)
+
+        val maxWidth = (parentWidth - lp.leftMargin).coerceAtLeast(minSize)
+        val maxHeight = (parentHeight - lp.topMargin).coerceAtLeast(minSize)
 
         when (side) {
             "TOP" -> {
-                val snappedTop = ((lp.topMargin + cellSize / 2) / (cellSize + cellMargin)) * (cellSize + cellMargin)
                 val bottom = lp.topMargin + lp.height
+                val snappedTop = ((lp.topMargin + cellSize / 2) / (cellSize + cellMargin)) * (cellSize + cellMargin)
                 lp.topMargin = snappedTop.coerceIn(0, bottom - minSize)
                 lp.height = (bottom - lp.topMargin).coerceAtLeast(minSize).coerceAtMost(maxHeight)
             }
@@ -374,8 +399,8 @@ class ResizableWidgetWrapper(
             }
 
             "LEFT" -> {
-                val snappedLeft = ((lp.leftMargin + cellSize / 2) / (cellSize + cellMargin)) * (cellSize + cellMargin)
                 val right = lp.leftMargin + lp.width
+                val snappedLeft = ((lp.leftMargin + cellSize / 2) / (cellSize + cellMargin)) * (cellSize + cellMargin)
                 lp.leftMargin = snappedLeft.coerceIn(0, right - minSize)
                 lp.width = (right - lp.leftMargin).coerceAtLeast(minSize).coerceAtMost(maxWidth)
             }
@@ -387,8 +412,6 @@ class ResizableWidgetWrapper(
         }
 
         layoutParams = lp
-        AppLogger.d("ResizableWidgetWrapper", "snapResizeToGrid -> side=$side newWxH=${lp.width}x${lp.height} margins=${lp.leftMargin},${lp.topMargin}")
-        // Tell hostView & provider about the new size
         fillHostView(lp.width, lp.height)
     }
 
@@ -486,22 +509,15 @@ class ResizableWidgetWrapper(
         dialog.show()
     }
 
-    @SuppressLint("DetachAndAttachSameFragment")
     fun reloadParentFragment() {
-        // Only proceed if the context is a FragmentActivity
         val activity = context as? androidx.fragment.app.FragmentActivity ?: return
+        val navController = activity.findNavController(R.id.nav_host_fragment)
 
-        val fragment = activity.supportFragmentManager
-            .fragments
-            .firstOrNull { it.view?.findViewById<ResizableWidgetWrapper>(id) != null }
+        // Pop WidgetFragment from the back stack if it's currently visible
+        navController.popBackStack(R.id.widgetFragment, true) // true = inclusive
 
-        fragment?.let {
-            activity.supportFragmentManager.beginTransaction()
-                .replace(R.id.widgetFragment, WidgetFragment(), "WidgetFragment")
-                .detach(it)
-                .attach(it)
-                .commit()
-        }
+        // Navigate to a new instance
+        navController.navigate(R.id.widgetFragment)
     }
 
     private fun showGridOverlay() {
