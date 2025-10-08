@@ -12,6 +12,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### :wrench: Code Quality:
 
+* Decouple widget screen into its own Activity and improve stability ([1b1ff950](https://github.com/DroidWorksStudio/mLauncher/commit/1b1ff950))
 * Migrate widget storage from JSON to Room database ([037ba75f](https://github.com/DroidWorksStudio/mLauncher/commit/037ba75f))
 * Migrate widget functionality to a dedicated Activity ([1fb66248](https://github.com/DroidWorksStudio/mLauncher/commit/1fb66248))
 * Standardize page navigation actions and strings ([a2602622](https://github.com/DroidWorksStudio/mLauncher/commit/a2602622))
