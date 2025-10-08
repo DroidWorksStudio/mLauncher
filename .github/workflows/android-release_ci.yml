@@ -98,6 +98,7 @@ jobs:
       - name: Post Release to Discord
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          DISCORD_ROLEID: ${{ secrets.DISCORD_ROLEID }}
         run: |
           # Run your Discord release script
           node post-discord-release.js
