@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lang_arabic">arabic</string>
+    <string name="lang_dutch">Olandeză</string>
+    <string name="lang_czech">ceh</string>
+    <string name="lang_english">Engleză</string>
+    <string name="lang_french">franceză</string>
+    <string name="lang_german">german</string>
+    <string name="lang_hebrew">Ebraică</string>
+    <string name="lang_italian">italian</string>
+    <string name="lang_japanese">japonez</string>
+    <string name="lang_korean">coreean</string>
+    <string name="lang_lithuanian">lituanian</string>
+    <string name="lang_polish">Lustrui</string>
+    <string name="lang_portuguese">Portugheză</string>
+    <string name="lang_russian">Rusă</string>
+    <string name="lang_slovak">Slovacă</string>
+    <string name="lang_spanish">Spaniolă</string>
+    <string name="lang_thai">Thailandeză</string>
+    <string name="lang_turkish">turc</string>
+</resources>
