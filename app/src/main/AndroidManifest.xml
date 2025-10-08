@@ -2,11 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:dist="http://schemas.android.com/apk/distribution"
     xmlns:tools="http://schemas.android.com/tools">
-
     <!-- Enable instant apps (optional) -->
-    <dist:module dist:instant="true" />
-
-    <!-- Permissions your launcher uses -->
+    <dist:module dist:instant="true" /> <!-- Permissions your launcher uses -->
     <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
     <uses-permission
         android:name="android.permission.PACKAGE_USAGE_STATS"
@@ -49,7 +46,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.mLauncher"
         tools:targetApi="tiramisu">
-
         <!-- File provider for sharing files -->
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -59,16 +55,12 @@
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
-        </provider>
-
-        <!-- Init provider to run early initialization code -->
+        </provider> <!-- Init provider to run early initialization code -->
         <provider
-            android:name="com.github.droidworksstudio.mlauncher.init.MlauncherInitProvider"
+            android:name=".init.MlauncherInitProvider"
             android:authorities="${applicationId}.mlauncher.initprovider"
             android:exported="false"
-            android:initOrder="100" />
-
-        <!-- MAIN LAUNCHER ACTIVITY -->
+            android:initOrder="100" /> <!-- MAIN LAUNCHER ACTIVITY -->
         <activity
             android:name=".MainActivity"
             android:excludeFromRecents="true"
@@ -84,46 +76,38 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".ui.widgets.WidgetActivity"
             android:excludeFromRecents="true"
             android:exported="false"
             android:launchMode="singleTask"
             android:windowSoftInputMode="stateHidden" />
-
         <!-- Onboarding screen -->
         <activity
             android:name=".ui.onboarding.OnboardingActivity"
             android:enabled="true"
             android:excludeFromRecents="true"
             android:exported="true"
-            android:launchMode="singleTask" />
-
-        <!-- Crash report screen -->
+            android:launchMode="singleTask" /> <!-- Crash report screen -->
         <activity
             android:name=".CrashReportActivity"
             android:enabled="true"
             android:excludeFromRecents="true"
-            android:exported="true" />
-
-        <!-- Icon pack activities -->
+            android:exported="true" /> <!-- Icon pack activities -->
         <activity
             android:name=".ui.iconpack.ApplyIconPackActivity"
             android:excludeFromRecents="true"
             android:exported="true">
             <intent-filter>
                 <action android:name="app.mlauncher.APPLY_ICONS" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".ui.iconpack.CustomIconSelectionActivity"
             android:excludeFromRecents="true"
-            android:exported="false" />
-
-        <!-- Accessibility service -->
+            android:exported="false" /> <!-- Accessibility service -->
         <service
             android:name=".services.ActionService"
             android:enabled="true"
@@ -134,11 +118,11 @@
             <intent-filter>
                 <action android:name="android.accessibilityservice.AccessibilityService" />
             </intent-filter>
+
             <meta-data
                 android:name="android.accessibilityservice"
                 android:resource="@xml/accessibility_service_config" />
         </service>
-
         <service
             android:name=".listener.NotificationManager"
             android:enabled="true"
@@ -150,7 +134,6 @@
             </intent-filter>
         </service>
 
-
         <receiver
             android:name=".ui.widgets.wordoftheday.WordOfTheDayWidget"
             android:exported="false"
@@ -158,16 +141,15 @@
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
+
             <meta-data
                 android:name="android.appwidget.provider"
                 android:resource="@xml/word_of_the_day_widget_info" />
         </receiver>
-
         <receiver
             android:name=".ui.widgets.wordoftheday.WordOfTheDayUpdateReceiver"
             android:exported="false"
             tools:ignore="Instantiatable" />
-
         <receiver
             android:name=".ui.widgets.fab.FabWidget"
             android:exported="false"
@@ -175,15 +157,14 @@
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
+
             <meta-data
                 android:name="android.appwidget.provider"
                 android:resource="@xml/widget_fab_info" />
         </receiver>
-
         <receiver
             android:name=".ui.widgets.fab.FabClickReceiver"
             android:exported="false" />
-
         <receiver
             android:name=".ui.widgets.home.HomeAppsWidgetProvider"
             android:exported="true"
@@ -191,15 +172,14 @@
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
+
             <meta-data
                 android:name="android.appwidget.provider"
                 android:resource="@xml/widget_home_apps_info" />
         </receiver>
-
         <receiver
             android:name=".ui.widgets.home.HomeAppUpdateReceiver"
             android:exported="false" />
-
-
     </application>
+
 </manifest>

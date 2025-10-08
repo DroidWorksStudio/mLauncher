@@ -722,16 +722,9 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
             Action.PreviousPage -> navigateToPreviousPage()
             Action.NextPage -> navigateToNextPage()
             Action.RestartApp -> AppReloader.restartApp(requireContext())
+            Action.ShowWidgetPage -> showWidgetPage()
             Action.OpenApp -> {
                 // this should be handled in the respective onSwipe[Up,Down,Right,Left] functions
-            }
-
-            Action.ShowWidgetPage -> {
-                val context = requireContext()
-                val intent = Intent(context, WidgetActivity::class.java).apply {
-                    addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP or Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                }
-                context.startActivity(intent)
             }
 
             Action.Disabled -> {
@@ -739,6 +732,14 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
             }
 
         }
+    }
+
+    private fun showWidgetPage() {
+        val context = requireContext()
+        val intent = Intent(context, WidgetActivity::class.java).apply {
+            addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP or Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        }
+        context.startActivity(intent)
     }
 
     private fun lockPhone() {

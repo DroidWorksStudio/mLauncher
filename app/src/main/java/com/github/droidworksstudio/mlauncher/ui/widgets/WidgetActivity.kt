@@ -5,10 +5,10 @@ import android.appwidget.AppWidgetProviderInfo
 import android.content.Intent
 import android.os.Bundle
 import android.view.ViewGroup
+import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.WindowCompat
 import com.github.droidworksstudio.common.AppLogger
 import com.github.droidworksstudio.mlauncher.R
 
@@ -28,7 +28,8 @@ class WidgetActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         AppLogger.d(TAG, "🟢 onCreate() called — savedInstanceState=$savedInstanceState")
         super.onCreate(savedInstanceState)
-        WindowCompat.setDecorFitsSystemWindows(window, false)
+        enableEdgeToEdge()
+
         setContentView(R.layout.activity_widget)
 
         // Setup result launcher
