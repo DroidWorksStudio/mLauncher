@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [1.11.1.5 → Unreleased](https://github.com/DroidWorksStudio/mLauncher/tree/main) - In Development
 
+### :sparkles: Enhancements:
+
+* Lock orientation to current on toggle ([eec690b1](https://github.com/DroidWorksStudio/mLauncher/commit/eec690b1))
+
 ### :wrench: Code Quality:
 
 * Migrate widget functionality to a dedicated Activity ([1fb66248](https://github.com/DroidWorksStudio/mLauncher/commit/1fb66248))
