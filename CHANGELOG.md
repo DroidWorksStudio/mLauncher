@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### :wrench: Code Quality:
 
+* Migrate widget functionality to a dedicated Activity ([1fb66248](https://github.com/DroidWorksStudio/mLauncher/commit/1fb66248))
 * Standardize page navigation actions and strings ([a2602622](https://github.com/DroidWorksStudio/mLauncher/commit/a2602622))
 * Improve widget placement and lifecycle management ([8dd79292](https://github.com/DroidWorksStudio/mLauncher/commit/8dd79292))
 * Improve crash reporting reliability ([fcfecbfa](https://github.com/DroidWorksStudio/mLauncher/commit/fcfecbfa))
