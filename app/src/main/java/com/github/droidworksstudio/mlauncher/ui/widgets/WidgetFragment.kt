@@ -32,6 +32,8 @@ import com.github.droidworksstudio.mlauncher.data.database.WidgetDao
 import com.github.droidworksstudio.mlauncher.data.database.WidgetDatabase
 import com.github.droidworksstudio.mlauncher.databinding.FragmentWidgetBinding
 import com.github.droidworksstudio.mlauncher.ui.components.LockedBottomSheetDialog
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 data class AppWidgetGroup(
@@ -170,7 +172,7 @@ class WidgetFragment : Fragment() {
             AppLogger.d(TAG, "Pending widgets list cleared after posting")
 
             // Restore saved widgets
-            restoreWidgets()
+//            restoreWidgets()
             AppLogger.d(TAG, "Saved widgets restored")
 
             // Update empty placeholder visibility
@@ -212,7 +214,7 @@ class WidgetFragment : Fragment() {
     private fun resetAllWidgets() {
         AppLogger.w(TAG, "🧹 Resetting all widgets")
         widgetWrappers.forEach { wrapper ->
-            appWidgetHost.deleteAppWidgetId(wrapper.hostView.appWidgetId)
+            deleteWidget(wrapper.hostView.appWidgetId)
         }
         widgetWrappers.clear()
         binding.widgetGrid.apply {
@@ -226,6 +228,15 @@ class WidgetFragment : Fragment() {
         saveWidgets()
         updateEmptyPlaceholder(widgetWrappers)
         AppLogger.i(TAG, "🧹 All widgets cleared and placeholder shown")
+    }
+
+    fun deleteWidget(widgetId: Int) {
+        appWidgetHost.deleteAppWidgetId(widgetId)
+        AppLogger.w(TAG, "🗑️ Deleting widgetId=$widgetId")
+        CoroutineScope(Dispatchers.IO).launch {
+            widgetDao.deleteById(widgetId)
+            AppLogger.d(TAG, "🗑️ Deleted widgetId=$widgetId from DB")
+        }
     }
 
 //    private fun resetAllWidgets() {
@@ -456,7 +467,7 @@ class WidgetFragment : Fragment() {
     private fun safeRemoveWidget(widgetId: Int) {
         try {
             AppLogger.w(TAG, "🗑️ Removing widgetId=$widgetId due to error")
-            appWidgetHost.deleteAppWidgetId(widgetId)
+            deleteWidget(widgetId)
             saveWidgets()
             updateEmptyPlaceholder(widgetWrappers)
         } catch (e: Exception) {
