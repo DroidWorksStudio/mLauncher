@@ -158,7 +158,7 @@
     <string name="show_recents">Toon recente apps</string>
     <string name="open_power_dialog">Toon uitschakel-opties</string>
     <string name="take_a_screenshot">Maak een screenshot</string>
-    <string name="previous_page">Ga naar de linkerpagina</string>
+    <string name="previous_page">Ga naar vorige pagina</string>
     <string name="next_page">Ga naar de rechterpagina</string>
     <!-- Strings used for notes settings -->
     <string name="notes_settings_title">Notities</string>
