@@ -158,8 +158,8 @@
     <string name="show_recents">Show Recents</string>
     <string name="open_power_dialog">Boîte de dialogue d\'alimentation</string>
     <string name="take_a_screenshot">Prendre une capture d\'écran</string>
-    <string name="left_page">Aller à la page de gauche</string>
-    <string name="right_page">Aller à la bonne page</string>
+    <string name="previous_page">Aller à la page de gauche</string>
+    <string name="next_page">Aller à la bonne page</string>
     <!-- Strings used for notes settings -->
     <string name="notes_settings_title">Remarques</string>
     <string name="display_options">Options d\'affichage</string>

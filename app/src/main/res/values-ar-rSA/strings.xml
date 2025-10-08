@@ -158,8 +158,8 @@
     <string name="show_recents">Show Recents</string>
     <string name="open_power_dialog">حوار القوة</string>
     <string name="take_a_screenshot">خذ لقطة شاشة</string>
-    <string name="left_page">انتقل إلى الصفحة اليسرى</string>
-    <string name="right_page">انتقل إلى الصفحة الصحيحة</string>
+    <string name="previous_page">انتقل إلى الصفحة اليسرى</string>
+    <string name="next_page">انتقل إلى الصفحة الصحيحة</string>
     <!-- Strings used for notes settings -->
     <string name="notes_settings_title">ملحوظات</string>
     <string name="display_options">خيارات العرض</string>

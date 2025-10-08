@@ -158,8 +158,8 @@
     <string name="show_recents">แสดงล่าสุด</string>
     <string name="open_power_dialog">กล่องโต้ตอบพลังงาน</string>
     <string name="take_a_screenshot">ถ่ายภาพหน้าจอ</string>
-    <string name="left_page">ไปที่หน้าซ้าย</string>
-    <string name="right_page">ไปที่หน้าขวา</string>
+    <string name="previous_page">ไปที่หน้าซ้าย</string>
+    <string name="next_page">ไปที่หน้าขวา</string>
     <!-- Strings used for notes settings -->
     <string name="notes_settings_title">หมายเหตุ</string>
     <string name="display_options">ตัวเลือกการแสดงผล</string>

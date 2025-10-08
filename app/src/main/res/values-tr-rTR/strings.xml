@@ -158,8 +158,8 @@
     <string name="show_recents">Son Kullanılanları Göster</string>
     <string name="open_power_dialog">Güç Menüsü</string>
     <string name="take_a_screenshot">Ekran görüntüsü al</string>
-    <string name="left_page">Sol sayfaya git</string>
-    <string name="right_page">Sağ sayfaya git</string>
+    <string name="previous_page">Sol sayfaya git</string>
+    <string name="next_page">Sağ sayfaya git</string>
     <!-- Strings used for notes settings -->
     <string name="notes_settings_title">Notlar</string>
     <string name="display_options">Görüntüleme Seçenekleri</string>

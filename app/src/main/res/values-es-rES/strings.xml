@@ -158,8 +158,8 @@
     <string name="show_recents">Mostrar Recientes</string>
     <string name="open_power_dialog">Configuración de energía</string>
     <string name="take_a_screenshot">Captura de pantalla</string>
-    <string name="left_page">Ir a la página izquierda</string>
-    <string name="right_page">Ir a la página derecha</string>
+    <string name="previous_page">Ir a la página izquierda</string>
+    <string name="next_page">Ir a la página derecha</string>
     <!-- Strings used for notes settings -->
     <string name="notes_settings_title">Notas</string>
     <string name="display_options">Opciones de visualización</string>

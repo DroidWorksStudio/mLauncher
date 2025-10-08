@@ -158,8 +158,8 @@
     <string name="show_recents">Rodyti naujausius</string>
     <string name="open_power_dialog">Maitinimo dialogas</string>
     <string name="take_a_screenshot">Padaryti ekrano kopiją</string>
-    <string name="left_page">Eiti į kairįjį puslapį</string>
-    <string name="right_page">Eiti į dešinįjį puslapį</string>
+    <string name="previous_page">Eiti į kairįjį puslapį</string>
+    <string name="next_page">Eiti į dešinįjį puslapį</string>
     <!-- Strings used for notes settings -->
     <string name="notes_settings_title">Pastabos</string>
     <string name="display_options">Ekrano parinktys</string>

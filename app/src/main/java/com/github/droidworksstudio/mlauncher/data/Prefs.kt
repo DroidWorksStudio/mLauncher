@@ -648,13 +648,13 @@ class Prefs(val context: Context) {
 
     var longSwipeLeftAction: Constants.Action
         get() {
-            return getEnumSetting(LONG_SWIPE_LEFT_ACTION, Constants.Action.LeftPage)
+            return getEnumSetting(LONG_SWIPE_LEFT_ACTION, Constants.Action.PreviousPage)
         }
         set(value) = prefsNormal.edit { putString(LONG_SWIPE_LEFT_ACTION, value.name) }
 
     var longSwipeRightAction: Constants.Action
         get() {
-            return getEnumSetting(LONG_SWIPE_RIGHT_ACTION, Constants.Action.RightPage)
+            return getEnumSetting(LONG_SWIPE_RIGHT_ACTION, Constants.Action.NextPage)
         }
         set(value) = prefsNormal.edit { putString(LONG_SWIPE_RIGHT_ACTION, value.name) }
 

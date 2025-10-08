@@ -158,8 +158,8 @@
     <string name="show_recents">Show Recents</string>
     <string name="open_power_dialog">Диалог питания</string>
     <string name="take_a_screenshot">Сделать снимок экрана</string>
-    <string name="left_page">Перейти на левую страницу</string>
-    <string name="right_page">Перейти на правую страницу</string>
+    <string name="previous_page">Перейти на левую страницу</string>
+    <string name="next_page">Перейти на правую страницу</string>
     <!-- Strings used for notes settings -->
     <string name="notes_settings_title">Примечания</string>
     <string name="display_options">Параметры отображения</string>

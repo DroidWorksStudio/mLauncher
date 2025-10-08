@@ -574,17 +574,6 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
         }
     }
 
-    private fun showWidgetPage() {
-        CrashHandler.logUserAction("Display Widget Page")
-        try {
-            if (findNavController().currentDestination?.id == R.id.mainFragment) {
-                findNavController().navigate(R.id.action_mainFragment_to_widgetFragment)
-            }
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-    }
-
     @SuppressLint("PrivateApi")
     private fun expandNotificationDrawer(context: Context) {
         try {
@@ -721,24 +710,25 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
         when (action) {
             Action.ShowNotification -> expandNotificationDrawer(requireContext())
             Action.LockScreen -> lockPhone()
-            Action.TogglePrivateSpace -> PrivateSpaceManager(requireContext()).togglePrivateSpaceLock(
-                showToast = false,
-                launchSettings = false
-            )
-
+            Action.TogglePrivateSpace -> PrivateSpaceManager(requireContext()).togglePrivateSpaceLock(showToast = false, launchSettings = false)
             Action.ShowAppList -> showAppList(AppDrawerFlag.LaunchApp, includeHiddenApps = false)
             Action.ShowNotesManager -> showNotesManager()
-            Action.ShowWidgetPage -> showWidgetPage()
             Action.ShowDigitalWellbeing -> requireContext().openDigitalWellbeing()
-            Action.OpenApp -> {} // this should be handled in the respective onSwipe[Up,Down,Right,Left] functions
             Action.OpenQuickSettings -> expandQuickSettings(requireContext())
             Action.ShowRecents -> initActionService(requireContext())?.showRecents()
             Action.OpenPowerDialog -> initActionService(requireContext())?.openPowerDialog()
             Action.TakeScreenShot -> initActionService(requireContext())?.takeScreenShot()
-            Action.LeftPage -> handleSwipeLeft()
-            Action.RightPage -> handleSwipeRight()
+            Action.PreviousPage -> navigateToPreviousPage()
+            Action.NextPage -> navigateToNextPage()
             Action.RestartApp -> AppReloader.restartApp(requireContext())
-            Action.Disabled -> {}
+            Action.OpenApp -> {
+                // this should be handled in the respective onSwipe[Up,Down,Right,Left] functions
+            }
+
+            Action.ShowWidgetPage,
+            Action.Disabled -> {
+                // Do nothing
+            }
 
         }
     }
@@ -1202,7 +1192,7 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
         if (prefs.showFloating) binding.fabLayout.isVisible = true
     }
 
-    private fun handleSwipeLeft() {
+    private fun navigateToPreviousPage() {
         val totalPages = pageRanges.size
         if (totalPages <= 0) {
             AppLogger.d(homeScreenPager, "handleSwipeLeft: No pages to swipe")
@@ -1219,7 +1209,7 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
         updateAppsVisibility()
     }
 
-    private fun handleSwipeRight() {
+    private fun navigateToNextPage() {
         val totalPages = pageRanges.size
         if (totalPages <= 0) {
             AppLogger.d(homeScreenPager, "handleSwipeRight: No pages to swipe")

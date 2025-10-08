@@ -158,8 +158,8 @@
     <string name="show_recents">Zobrazit poslední</string>
     <string name="open_power_dialog">Dialog napájení</string>
     <string name="take_a_screenshot">Udělejte snímek obrazovky</string>
-    <string name="left_page">Přejděte na levou stránku</string>
-    <string name="right_page">Přejděte na Pravou stránku</string>
+    <string name="previous_page">Přejděte na levou stránku</string>
+    <string name="next_page">Přejděte na Pravou stránku</string>
     <!-- Strings used for notes settings -->
     <string name="notes_settings_title">Poznámky</string>
     <string name="display_options">Možnosti zobrazení</string>

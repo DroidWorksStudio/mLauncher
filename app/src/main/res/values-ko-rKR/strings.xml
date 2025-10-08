@@ -158,8 +158,8 @@
     <string name="show_recents">Show Recents</string>
     <string name="open_power_dialog">전원 대화 상자</string>
     <string name="take_a_screenshot">스크린샷 찍기</string>
-    <string name="left_page">왼쪽 페이지로 이동</string>
-    <string name="right_page">오른쪽 페이지로 이동</string>
+    <string name="previous_page">왼쪽 페이지로 이동</string>
+    <string name="next_page">오른쪽 페이지로 이동</string>
     <!-- Strings used for notes settings -->
     <string name="notes_settings_title">노트</string>
     <string name="display_options">표시 옵션</string>

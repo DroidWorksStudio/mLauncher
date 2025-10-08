@@ -158,8 +158,8 @@
     <string name="show_recents">Show Recents</string>
     <string name="open_power_dialog">Menu di spegnimento</string>
     <string name="take_a_screenshot">Fai uno screenshot</string>
-    <string name="left_page">Vai alla pagina di sinistra</string>
-    <string name="right_page">Vai alla pagina destra</string>
+    <string name="previous_page">Vai alla pagina di sinistra</string>
+    <string name="next_page">Vai alla pagina destra</string>
     <!-- Strings used for notes settings -->
     <string name="notes_settings_title">Note</string>
     <string name="display_options">Opzioni di visualizzazione</string>

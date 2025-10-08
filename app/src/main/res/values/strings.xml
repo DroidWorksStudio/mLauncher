@@ -207,8 +207,8 @@
     <string name="show_recents">Show Recents</string>
     <string name="open_power_dialog">Power Dialog</string>
     <string name="take_a_screenshot">Take a Screenshot</string>
-    <string name="left_page">Go to Left Page</string>
-    <string name="right_page">Go to Right Page</string>
+    <string name="previous_page">Go to Previous Page</string>
+    <string name="next_page">Go to Next Page</string>
 
     <!-- Strings used for notes settings -->
     <string name="notes_settings_title">Notes</string>

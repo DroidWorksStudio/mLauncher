@@ -158,8 +158,8 @@
     <string name="show_recents">Zobraziť Nedávne</string>
     <string name="open_power_dialog">Dialógové okno napájania</string>
     <string name="take_a_screenshot">Vytvoriť snímku obrazovky</string>
-    <string name="left_page">Prejdite na ľavú stranu</string>
-    <string name="right_page">Prejdite na Pravú stranu</string>
+    <string name="previous_page">Prejdite na ľavú stranu</string>
+    <string name="next_page">Prejdite na Pravú stranu</string>
     <!-- Strings used for notes settings -->
     <string name="notes_settings_title">Poznámky</string>
     <string name="display_options">Možnosti zobrazenia</string>

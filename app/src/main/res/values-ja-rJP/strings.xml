@@ -158,8 +158,8 @@
     <string name="show_recents">Show Recents</string>
     <string name="open_power_dialog">電源ダイアログ</string>
     <string name="take_a_screenshot">スクリーンショットを撮る</string>
-    <string name="left_page">左ページへ</string>
-    <string name="right_page">右ページへ</string>
+    <string name="previous_page">左ページへ</string>
+    <string name="next_page">右ページへ</string>
     <!-- Strings used for notes settings -->
     <string name="notes_settings_title">注記</string>
     <string name="display_options">表示オプション</string>

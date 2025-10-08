@@ -158,8 +158,8 @@
     <string name="show_recents">הצגת האחרונים</string>
     <string name="open_power_dialog">תפריט הפעלה</string>
     <string name="take_a_screenshot">צלם מסך</string>
-    <string name="left_page">מעבר לדף השמאלי</string>
-    <string name="right_page">מעבר לדף הימני</string>
+    <string name="previous_page">מעבר לדף השמאלי</string>
+    <string name="next_page">מעבר לדף הימני</string>
     <!-- Strings used for notes settings -->
     <string name="notes_settings_title">הערות</string>
     <string name="display_options">אפשרויות תצוגה</string>

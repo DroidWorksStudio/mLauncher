@@ -375,8 +375,8 @@ object Constants {
         ShowRecents,
         OpenPowerDialog,
         TakeScreenShot,
-        LeftPage,
-        RightPage,
+        PreviousPage,
+        NextPage,
         RestartApp,
         Disabled;
 
@@ -394,8 +394,8 @@ object Constants {
                 ShowRecents -> getLocalizedString(R.string.show_recents)
                 OpenPowerDialog -> getLocalizedString(R.string.open_power_dialog)
                 TakeScreenShot -> getLocalizedString(R.string.take_a_screenshot)
-                LeftPage -> getLocalizedString(R.string.left_page)
-                RightPage -> getLocalizedString(R.string.right_page)
+                PreviousPage -> getLocalizedString(R.string.previous_page)
+                NextPage -> getLocalizedString(R.string.next_page)
                 RestartApp -> getLocalizedString(R.string.restart_launcher)
                 Disabled -> getLocalizedString(R.string.disabled)
             }
@@ -416,8 +416,8 @@ object Constants {
                 ShowRecents -> getLocalizedString(R.string.show_recents)
                 OpenPowerDialog -> getLocalizedString(R.string.open_power_dialog)
                 TakeScreenShot -> getLocalizedString(R.string.take_a_screenshot)
-                LeftPage -> getLocalizedString(R.string.left_page)
-                RightPage -> getLocalizedString(R.string.right_page)
+                PreviousPage -> getLocalizedString(R.string.previous_page)
+                NextPage -> getLocalizedString(R.string.next_page)
                 RestartApp -> getLocalizedString(R.string.restart_launcher)
                 Disabled -> getLocalizedString(R.string.disabled)
             }

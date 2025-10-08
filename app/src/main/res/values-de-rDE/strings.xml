@@ -158,8 +158,8 @@
     <string name="show_recents">Show Recents</string>
     <string name="open_power_dialog">Power-Dialog</string>
     <string name="take_a_screenshot">Mache ein Bildschirmfoto</string>
-    <string name="left_page">Gehen Sie zur linken Seite</string>
-    <string name="right_page">Gehen Sie zur rechten Seite</string>
+    <string name="previous_page">Gehen Sie zur linken Seite</string>
+    <string name="next_page">Gehen Sie zur rechten Seite</string>
     <!-- Strings used for notes settings -->
     <string name="notes_settings_title">Hinweise</string>
     <string name="display_options">Anzeigeoptionen</string>
