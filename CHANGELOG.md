@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
+## [1.11.1.6 → Unreleased](https://github.com/DroidWorksStudio/mLauncher/tree/main) - In Development
+
+### :wrench: Code Quality:
+
+* Centralize widget deletion logic ([4dec18af](https://github.com/DroidWorksStudio/mLauncher/commit/4dec18af))
+
 ## [1110106 (1.11.1.6) - Multi Launcher ‧ Home Screen](https://github.com/DroidWorksStudio/mLauncher/tree/1.11.1.6) - (08, October 2025)
 
 ### :sparkles: Enhancements:
