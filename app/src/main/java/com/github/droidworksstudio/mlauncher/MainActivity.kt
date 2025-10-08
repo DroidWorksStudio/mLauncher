@@ -5,7 +5,6 @@ import android.app.role.RoleManager
 import android.content.Context
 import android.content.Intent
 import android.content.pm.ActivityInfo
-import android.content.res.Configuration
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
@@ -139,12 +138,11 @@ class MainActivity : AppCompatActivity() {
         // Initialize com.github.droidworksstudio.common.CrashHandler to catch uncaught exceptions
         Thread.setDefaultUncaughtExceptionHandler(CrashHandler(applicationContext))
 
-        val currentOrientation = resources.configuration.orientation
         requestedOrientation = if (prefs.lockOrientation) {
-            if (currentOrientation == Configuration.ORIENTATION_LANDSCAPE) {
-                ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
-            } else {
+            if (prefs.lockOrientationPortrait) {
                 ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+            } else {
+                ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
             }
         } else {
             ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED

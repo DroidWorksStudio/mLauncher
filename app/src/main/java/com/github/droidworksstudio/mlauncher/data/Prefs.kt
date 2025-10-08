@@ -25,6 +25,7 @@ private const val PREFS_ONBOARDING_FILENAME = "app.mlauncher.prefs.onboarding"
 
 private const val APP_VERSION = "APP_VERSION"
 private const val LOCK_ORIENTATION = "LOCK_ORIENTATION"
+private const val LOCK_ORIENTATION_PORTRAIT = "LOCK_ORIENTATION_PORTRAIT"
 private const val HAPTIC_FEEDBACK = "HAPTIC_FEEDBACK"
 private const val FIRST_OPEN = "FIRST_OPEN"
 private const val FIRST_SETTINGS_OPEN = "FIRST_SETTINGS_OPEN"
@@ -555,8 +556,12 @@ class Prefs(val context: Context) {
         set(value) = prefsNormal.edit { putBoolean(SHOW_BATTERY_ICON, value) }
 
     var lockOrientation: Boolean
-        get() = getSetting(LOCK_ORIENTATION, true)
+        get() = getSetting(LOCK_ORIENTATION, false)
         set(value) = prefsNormal.edit { putBoolean(LOCK_ORIENTATION, value) }
+
+    var lockOrientationPortrait: Boolean
+        get() = getSetting(LOCK_ORIENTATION_PORTRAIT, true)
+        set(value) = prefsNormal.edit { putBoolean(LOCK_ORIENTATION_PORTRAIT, value) }
 
     var hapticFeedback: Boolean
         get() = getSetting(HAPTIC_FEEDBACK, true)

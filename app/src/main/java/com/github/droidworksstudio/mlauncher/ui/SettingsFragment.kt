@@ -5,6 +5,7 @@ import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.content.res.Configuration
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.drawable.Drawable
@@ -2644,6 +2645,9 @@ class SettingsFragment : BaseFragment() {
                         onCheckedChange = {
                             toggledLockOrientation = !prefs.lockOrientation
                             prefs.lockOrientation = toggledLockOrientation
+
+                            val currentOrientation = resources.configuration.orientation
+                            prefs.lockOrientationPortrait = currentOrientation == Configuration.ORIENTATION_PORTRAIT
                             AppReloader.restartApp(requireContext())
                         }
                     )
