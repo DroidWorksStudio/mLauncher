@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Settings -->
+    <string name="select_app">Selectați aplicația</string>
+    <string name="show_apps">Căutare aplicații</string>
+    <string name="show_private_apps">Căutați aplicații private</string>
+    <string name="show_work_apps">Căutați aplicații de lucru</string>
+    <string name="show_contacts">Căutare Contacte</string>
+    <string name="welcome_to_launcher">Bun venit la %1$s</string>
+    <string name="continue_by_you_agree">Prin continuare, sunteți de acord cu %1$s</string>
+    <string name="usage_access_permission">Permisiuni de acces la utilizare</string>
+    <string name="location_access_permission">Permisiuni de acces la locație</string>
+    <string name="accessibility_access_permission">Permisiuni de accesibilitate</string>
+    <string name="grant_permission">Acordați permisiunea</string>
+    <string name="grant_usage_permission">Pentru a continua, vă rugăm să acordați permisiunea de Acces de Utilizare.</string>
+    <string name="reason_usage_permission">Această aplicație necesită Acces de Utilizare pentru a afișa aplicațiile utilizate cel mai des, a urmări timpul petrecut pe ecran și a îmbunătăți experiența. Nu colectăm și nu partajăm date personale.</string>
+    <string name="grant_location_permission">Pentru a continua, acordați permisiunea Locație.</string>
+    <string name="reason_location_permission">Această aplicație are nevoie de Acces la Locație pentru a oferi actualizări meteo precise în funcție de locația dvs. actuală. Nu colectăm și nu partajăm date personale.</string>
+    <string name="grant_accessibility_permission">Pentru a continua, vă rugăm să acordați permisiunea de Accesibilitate.</string>
+    <string name="reason_accessibility_permission">MultiLauncher necesită permisiunea de Accesibilitate pentru a oferi funcții îmbunătățite, cum ar fi blocarea ecranului și deschiderea setărilor rapide. Aceste funcții ajută la îmbunătățirea utilizabilității. Nu colectăm și nu partajăm date.</string>
+    <string name="permission_granted">Permisiune acordată! Puteți continua.</string>
+    <string name="this_can_be_disabled_later">Această permisiune poate fi dezactivată ulterior.</string>
+    <!-- Strings used for settings menus -->
+    <string name="settings_name">Setări MultiLauncher</string>
+    <string name="settings_features_title">Caracteristici</string>
+    <string name="settings_features_description">Îmbunătățește-ți productivitatea.</string>
+    <string name="settings_look_feel_title">Privește &amp; Simte</string>
+    <string name="settings_look_feel_description">Dă ecranului tău de pornire o notă personală.</string>
+    <string name="settings_gestures_title">Gesturi</string>
+    <string name="settings_gestures_description">Personalizați gesturile pentru o navigare rapidă și ușoară.</string>
+    <string name="settings_notes_title">Note</string>
+    <string name="settings_notes_description">Personalizează-ți notițele pentru a se potrivi stilului tău.</string>
+    <!-- Favorite Apps -->
+    <!-- Favorite Apps -->
+    <string name="settings_favorite_apps_title">Aplicații preferate</string>
+    <string name="settings_favorite_apps_description">Reordonați aplicațiile preferate pentru acces rapid de pe ecranul principal.</string>
+    <!-- Hidden Apps -->
+    <string name="settings_hidden_apps_title">Aplicații ascunse</string>
+    <string name="settings_hidden_apps_description">Gestionați aplicațiile ascunse — afișați orice aplicație din această listă atunci când este nevoie.</string>
+    <string name="settings_advanced_title">Avansat</string>
+    <string name="settings_advanced_description">Accesează informații despre aplicație, lansatorul implicit, instrumentele de backup și multe altele.</string>
+    <string name="settings_expert_title">Expert</string>
+    <string name="settings_expert_description">Deblochează opțiuni ascunse și setări avansate.</string>
+    <string name="settings_exit_mlauncher_title">Ieșire din MultiLauncher</string>
+    <string name="settings_exit_mlauncher_description">Comută temporar la lansatorul implicit.</string>
+    <string name="settings_exit_mlauncher_dialog">Alegeți un lansator</string>
+    <string name="settings_donation_title">Donații</string>
+    <string name="settings_donation_description">Sprijină munca noastră făcând o donație.</string>
+    <string name="settings_donation_dialog">Sprijiniți-ne</string>
+    <!-- Strings used for features settings -->
+    <string name="features_settings_title">Caracteristici</string>
+    <string name="personalization">Personalizare</string>
+    <string name="theme_mode">Mod temă</string>
+    <string name="app_language">Limbaj de interfață</string>
+    <string name="font_family">Familie de fonturi</string>
+    <string name="search_and_app_list">Căutare &amp; Listă de aplicații</string>
+    <string name="hide_search_view">Ascundeți vizualizarea de căutare</string>
+    <string name="show_floating_button">Afișați butoanele de comandă rapidă</string>
+    <string name="lock_orientation">Orientarea blocării</string>
+    <string name="haptic_feedback">Feedback haptic</string>
+    <string name="search">Căutare</string>
+    <string name="search_engine">Motor de căutare</string>
+    <string name="show_az_sidebar">Afișează bara laterală de la A la Z</string>
+    <string name="auto_show_keyboard">Tastatură cu afișare automată</string>
+    <string name="search_from_start">Căutare de la început</string>
+    <string name="home_management">Acasă &amp; Gestionare aplicații</string>
+    <string name="auto_open_apps">Deschidere automată a aplicațiilor</string>
+    <string name="open_apps_on_enter">Deschide aplicația cu Enter</string>
+    <string name="lock_home_apps">Blocați aplicațiile de acasă</string>
+    <string name="lock_settings">Setări de blocare</string>
+    <string name="apps_on_home_screen">Numărul de aplicații pentru acasă</string>
+    <string name="pages_on_home_screen">Număr de pagini</string>
+    <string name="enable_home_pager">Activează pagina principală</string>
+    <string name="enable_app_timer">Activează temporizatorul aplicației</string>
+    <string name="info_tiles">Dale de informații</string>
+    <string name="show_clock">Afișați ceasul</string>
+    <string name="show_clock_format">Formatul emisiunii (AM/PM)</string>
+    <string name="show_date">Data afișajului</string>
+    <string name="show_alarm">Afișare alarmă</string>
+    <string name="show_daily_word">Afișează Cuvântul Zilnic</string>
+    <string name="show_battery">Afișați bateria</string>
+    <string name="show_battery_icon">Afișează pictograma bateriei</string>
+    <string name="weather">Vreme</string>
+    <string name="show_weather">Afișați vremea</string>
+    <string name="gps_location">Locație GPS</string>
+    <string name="temp_unit">Unitate de temperatură</string>
+    <string name="manual_location">Setați locația manuală</string>
+    <string name="icon_packs">Pachete de pictograme</string>
+    <!-- Strings used for look & feel settings -->
+    <string name="look_feel_settings_title">Privește &amp; Simte</string>
+    <string name="text_size_adjustments">Text &amp; Ajustări dimensiune</string>
+    <string name="app_text_size">Dimensiunea textului aplicației</string>
+    <string name="date_text_size">Dimensiunea textului datei</string>
+    <string name="clock_text_size">Dimensiunea textului ceasului</string>
+    <string name="alarm_text_size">Dimensiunea textului de alarmă</string>
+    <string name="daily_word_text_size">Dimensiunea textului zilnic</string>
+    <string name="battery_text_size">Dimensiunea textului bateriei</string>
+    <string name="layout_positioning">Aspect &amp; Poziționare</string>
+    <string name="app_padding_size">Dimensiunea umpluturii</string>
+    <string name="extend_home_apps_area">Extindeți zona pe care se poate face clic</string>
+    <string name="alignment_to_bottom">Aliniere la partea de jos</string>
+    <string name="visibility_display">Vizibilitate &amp; Afișaj</string>
+    <string name="show_status_bar">Afișează bara de stare</string>
+    <string name="show_navigation_bar">Afișați bara de navigare</string>
+    <string name="show_recent_apps">Afișează aplicațiile recente</string>
+    <string name="number_of_recents">Numărul de aplicații recente</string>
+    <string name="show_app_usage_stats">Afișați statisticile de utilizare a aplicației</string>
+    <string name="select_home_icons">Selectați pachetul de pictograme Acasă</string>
+    <string name="select_app_list_icons">Pachet de pictograme Selectați lista de aplicații</string>
+    <string name="enable_filter_strength">Activează Fuzzy Finder</string>
+    <string name="filter_strength">Puterea Fuzzy Finder</string>
+    <string name="show_background">Afișare fundal</string>
+    <string name="background_opacity">Transparență de fundal</string>
+    <string name="total_screen_time">Timp total de utilizare</string>
+    <string name="element_alignment">Alinierea elementelor</string>
+    <string name="date_alignment">Data</string>
+    <string name="clock_alignment">Ceas</string>
+    <string name="alarm_alignment">Alarma</string>
+    <string name="daily_word_alignment">Cuvântul zilnic</string>
+    <string name="home_alignment">Aplicații pentru acasă</string>
+    <string name="drawer_alignment">Aplicații în sertar</string>
+    <string name="element_colors">Culorile elementelor</string>
+    <string name="background_color">Fundal</string>
+    <string name="app_color">Aplicații</string>
+    <string name="clock_color">Ceas</string>
+    <string name="date_color">Data</string>
+    <string name="alarm_color">Alarma</string>
+    <string name="daily_word_color">Cuvântul zilnic</string>
+    <string name="battery_color">Baterie</string>
+    <string name="rainbow_shortcuts">Scurtături curcubeu</string>
+    <string name="shortcuts_color">Scurtături</string>
+    <!-- Strings used for gestures settings -->
+    <string name="gestures_settings_title">Gesturi</string>
+    <string name="tap_click_actions">Acțiuni de atingere/clic</string>
+    <string name="double_tap">Atingeți de două ori</string>
+    <string name="clock_click_app">Faceți clic pe Ceas</string>
+    <string name="date_click_app">Faceți clic pe Dată</string>
+    <string name="usage_click_app">Faceți clic pe Utilizare totală</string>
+    <string name="floating_click_app">Faceți clic pe siglă</string>
+    <string name="swipe_movement">Mișcare de glisare</string>
+    <string name="short_swipe_up_app">Glisare scurtă în sus</string>
+    <string name="short_swipe_down_app">Glisare scurtă în jos</string>
+    <string name="short_swipe_left_app">Glisare scurtă la stânga</string>
+    <string name="short_swipe_right_app">Glisare scurtă spre dreapta</string>
+    <string name="long_swipe_up_app">Glisare lungă în sus</string>
+    <string name="long_swipe_down_app">Glisare lungă în jos</string>
+    <string name="long_swipe_left_app">Glisare lungă la stânga</string>
+    <string name="long_swipe_right_app">Glisare lungă la dreapta</string>
+    <string name="open_app">Deschide aplicația</string>
+    <string name="lock_screen">Ecran de blocare</string>
+    <string name="private_space">Spații private (%1$s)</string>
+    <string name="show_notifications">Afișează notificarea</string>
+    <string name="show_app_list">Afișează lista de aplicații</string>
+    <string name="show_widget_page">Afișează pagina widgetului</string>
+    <string name="show_notes_manager">Afișați managerul de note</string>
+    <string name="show_digital_wellbeing">Afișează Bunăstare Digitală</string>
+    <string name="open_quick_settings">Setări rapide</string>
+    <string name="show_recents">Afișează Recentele</string>
+    <string name="open_power_dialog">Dialog de alimentare</string>
+    <string name="take_a_screenshot">Faceți o captură de ecran</string>
+    <string name="previous_page">Mergi la pagina anterioară</string>
+    <string name="next_page">Mergi la pagina următoare</string>
+    <!-- Strings used for notes settings -->
+    <string name="notes_settings_title">Note</string>
+    <string name="display_options">Opțiuni de afișare</string>
+    <string name="auto_expand_notes">Extindere automată a notelor</string>
+    <string name="click_to_edit_delete">Faceți clic pentru a edita/șterge</string>
+    <string name="notes_colors">Note Culori</string>
+    <string name="notes_background_color">Note de fundal</string>
+    <string name="bubble_background_color">Fundal cu bule</string>
+    <string name="bubble_message_color">Mesaj cu bulă</string>
+    <string name="bubble_date_time_color">Dată/Oră în bule</string>
+    <string name="bubble_category_color">Categorie cu bule</string>
+    <string name="input_colors">Culori de introducere</string>
+    <string name="message_input_color">Introducere mesaj</string>
+    <string name="message_input_hint_color">Sugestie de introducere a mesajului</string>
+    <!-- Strings used for advanced settings -->
+    <string name="advanced_settings_title">Avansat</string>
+    <string name="advanced_settings_app_info_title">Informații despre aplicație</string>
+    <string name="advanced_settings_app_info_description">%1$s</string>
+    <string name="advanced_settings_set_as_default_launcher">Setează ca lansator implicit</string>
+    <string name="advanced_settings_change_default_launcher">Schimbați lansatorul implicit</string>
+    <string name="advanced_settings_restart_title">Reporniți Lansatorul</string>
+    <string name="advanced_settings_restart_description">Ai încercat să-l pornești și să-l oprești?</string>
+    <string name="advanced_settings_backup_restore_title">Copiere de rezervă/Restaurare</string>
+    <string name="advanced_settings_backup_restore_description">Te rog, ai grijă ce îți dorești?</string>
+    <string name="advanced_settings_backup_restore_backup">Copie de rezervă</string>
+    <string name="advanced_settings_backup_restore_restore">Restabili</string>
+    <string name="advanced_settings_backup_restore_clear">Ștergeți toate datele</string>
+    <string name="advanced_settings_theme_title">Creații tematice</string>
+    <string name="advanced_settings_theme_description">Personalizează temele care ți se potrivesc.</string>
+    <string name="advanced_settings_wotd_title">Cuvântul zilei</string>
+    <string name="advanced_settings_wotd_description">Importați o listă personalizată Cuvântul zilei.</string>
+    <string name="advanced_settings_theme_download">Descărcare</string>
+    <string name="advanced_settings_theme_export">Export</string>
+    <string name="advanced_settings_theme_import">Import</string>
+    <string name="advanced_settings_wotd_download">Descărcare</string>
+    <string name="advanced_settings_wotd_import">Import</string>
+    <string name="advanced_settings_backup_restore_clear_title">Ștergeți preferințele</string>
+    <string name="advanced_settings_backup_restore_clear_description">Sigur vrei să faci asta?</string>
+    <string name="advanced_settings_backup_restore_clear_yes">Da</string>
+    <string name="advanced_settings_backup_restore_clear_no">Nu</string>
+    <string name="advanced_settings_help_feedback_title">Ajutor &amp; Feedback</string>
+    <string name="advanced_settings_community_support_title">Sprijin comunitar</string>
+    <string name="advanced_settings_share_application_title">Partajați aplicația</string>
+    <string name="advanced_settings_share_application_description">Îmbunătățește-ți experiența cu %1$s!</string>
+    <string name="advanced_settings_share_application_description_addon">Descarcă-l acum pe %1$s și vezi despre ce vorbește toată lumea! %2$s\n</string>
+    <!-- Strings used for expert settings -->
+    <string name="expert_settings_title">Expert</string>
+    <string name="toggleable_items">Elemente comutabile</string>
+    <string name="threshold">Prag</string>
+    <string name="expert_options_display">Afișați opțiunile expertului</string>
+    <string name="expert_options_unlocked">Opțiuni pentru experți deblocate!</string>
+    <string name="expert_options_tap_hint">%1$d mai multe atingeri pentru deblocare</string>
+    <string name="settings_text_size">Setări Dimensiune text</string>
+    <string name="settings_short_threshold">Prag de glisare scurtă</string>
+    <string name="settings_long_threshold">Prag de glisare lungă</string>
+    <!-- App Page Strings -->
+    <string name="hidden_apps">Aplicații ascunse</string>
+    <string name="favorite_apps">Aplicații preferate</string>
+    <string name="clear_home_app">Aplicația Clear Home</string>
+    <!-- Accessibility/Help Strings -->
+    <string name="accessibility_service_name">Servicii de acțiune MultiLauncher</string>
+    <string name="accessibility_service_why_we_need">De ce avem nevoie de permisiune de accesibilitate</string>
+    <string name="accessibility_service_description">Acest serviciu de accesibilitate permite MultiLauncher să efectueze anumite acțiuni, cum ar fi blocarea ecranului sau deschiderea setărilor rapide. Serviciul nostru de accesibilitate nu colectează și nu partajează date.</string>
+    <string name="accessibility_service_more_info">    MultiLauncher necesită acces la Serviciul de accesibilitate pentru a activa funcții precum:\n\n
+    • Blocarea ecranului cu un gest sau o comandă rapidă\n
+    • Deschiderea rapidă a panoului Setări rapide\n\n
+    Această permisiune permite MultiLauncher să efectueze aceste acțiuni în numele dvs., dar nu colectăm, stocăm și partajăm date personale sau sensibile prin intermediul acestui serviciu.\n\n
+    Puteți dezactiva acest acces oricând din setările dispozitivului.
+    </string>
+    <string name="can_not_delete_system_apps">Nu se pot șterge aplicațiile de sistem</string>
+    <string name="please_select_app">Selectați o aplicație</string>
+    <string name="drawer_list_empty_hint">Nu au fost găsite aplicații</string>
+    <string name="long_press_for_settings">Apăsați lung oriunde pentru setări</string>
+    <string name="long_press_to_select_app">Apăsați lung pentru a selecta aplicația</string>
+    <string name="long_press_to_select_app_locked">Deblocați aplicațiile de acasă pentru a selecta aplicația</string>
+    <string name="tap_button_for_notes">Atingeți sigla lansatorului pentru note</string>
+    <string name="swipe_up_for_apps">Glisează în sus pentru toate aplicațiile</string>
+    <string name="app_drawer_tips">Sfat: Glisați în jos pentru a închide. Derulați pentru a ascunde tastatura.</string>
+    <!-- PinCode Strings -->
+    <string name="text_authentication_cancel">Anulare autentificare.</string>
+    <string name="text_authentication_error">Eroare de autentificare: %1$s (cod %2$d)</string>
+    <string name="text_authentication_failed">Autentificarea a eșuat.</string>
+    <string name="text_biometric_login">Setări MultiLauncher pentru conectare biometrică</string>
+    <string name="text_biometric_login_app">Autentificare biometrică pentru %1$s</string>
+    <string name="text_biometric_login_sub">Conectați-vă folosind acreditările biometrice.</string>
+    <!-- Crash Strings -->
+    <string name="acra_crash">Accident</string>
+    <string name="acra_dialog_text">Ne pare rău, dar %1$s a întâmpinat o problemă neașteptată și trebuie să se închidă. Vă rugăm să ne ajutați să ne îmbunătățim trimițând un raport de eroare.\n\n%1$s vă prețuim confidențialitatea, iar datele colectate sunt utilizate exclusiv pentru îmbunătățirea stabilității aplicației. Nu se colectează informații personale. Vă mulțumim pentru sprijin!</string>
+    <string name="acra_send_report">Trimiteți raportul</string>
+    <string name="acra_dont_send">Nu trimite</string>
+    <!-- Share Strings -->
+    <string name="share_application">Partajați aplicația</string>
+    <string name="share_note">Notă de partajare</string>
+    <!-- Icon Pack Strings -->
+    <string name="choose_icon_pack">Alegeți pachetul de pictograme</string>
+    <string name="apply_icon_pack">Aplicați pachetul de pictograme</string>
+    <string name="applying_icon_pack">Oferind pictogramelor tale un aspect proaspăt…</string>
+    <string name="apply_icon_pack_are_you_sure">Sigur vrei să aplici acest pachet de pictograme?\n\n%1$s</string>
+    <string name="apply_to_home">Aplicați la domiciliu</string>
+    <string name="apply_to_app_list">Aplicați la lista de aplicații</string>
+    <string name="default_icon_not_found">Pictograma implicită a aplicației, care poate fi desenată, nu a fost găsită</string>
+    <!-- Settings Strings -->
+    <string name="left">Stânga</string>
+    <string name="right">Corect</string>
+    <string name="center">Centru</string>
+    <string name="dark">Întuneric</string>
+    <string name="light">Aprinde</string>
+    <string name="system_default">Sistem</string>
+    <string name="system_custom">Personalizat</string>
+    <string name="system_custom_plus">Personalizat (%1$s)</string>
+    <string name="restart_launcher">Reporniți Lansatorul</string>
+    <string name="delete">Şterge</string>
+    <string name="hide">Ascunde</string>
+    <string name="show">Spectacol</string>
+    <string name="lock">Blocare</string>
+    <string name="unlock">Deblocare</string>
+    <string name="locked">Blocat</string>
+    <string name="unlocked">Deblocat</string>
+    <string name="pin">Fixează</string>
+    <string name="unpin">Anulează fixarea</string>
+    <string name="rename">Redenumire</string>
+    <string name="tag">Etichetă</string>
+    <string name="info">Informații</string>
+    <string name="okay">Bine</string>
+    <string name="apply">Aplică</string>
+    <string name="reset">Resetare</string>
+    <string name="cancel">Anula</string>
+    <string name="save">Salva</string>
+    <string name="disabled">Persoane cu dizabilități</string>
+    <string name="open">Deschide</string>
+    <string name="close">Aproape</string>
+    <string name="next">Următorul</string>
+    <string name="start">Început</string>
+    <string name="copy">Copie</string>
+    <string name="celsius">Celsius</string>
+    <string name="fahrenheit">Fahrenheit</string>
+    <string name="home_button_phone">Telefon</string>
+    <string name="home_button_messages">Mesaje</string>
+    <string name="home_button_camera">Cameră</string>
+    <string name="home_button_photos">Fotografii</string>
+    <string name="home_button_web">Web</string>
+    <string name="home_button_settings">Setări</string>
+    <string name="home_button_logo">Siglă</string>
+    <string name="applist_button_web">Web</string>
+    <string name="applist_button_contacts">Contacte</string>
+    <string name="allow">Permite</string>
+    <string name="deny">Refuza</string>
+    <string name="send">Trimite</string>
+    <string name="message_hint">Introduceți un mesaj…</string>
+    <string name="message_category">Categorie: %1$s</string>
+    <!-- Permissions Strings -->
+    <string name="permission_required">Permisiune necesară</string>
+    <string name="access_usage_data_permission">Pentru a continua, vă rugăm să activați permisiunea de accesare a datelor de utilizare în setările dispozitivului.</string>
+    <string name="goto_settings">Accesați Setări</string>
+    <!-- Widget Stings -->
+    <string name="widgets_select_widget">Selectați un widget</string>
+    <string name="widgets_add_widget">Adăugați un widget</string>
+    <string name="widgets_reset_widget">Resetează toate widgeturile</string>
+    <string name="widgets_resize">Redimensionare</string>
+    <string name="widgets_exit_resize">Ieșire din Redimensionare</string>
+    <string name="widgets_remove">Eliminați widgetul</string>
+    <string name="widgets_open">Deschide aplicația</string>
+    <string name="widgets_view_in_store">Vizualizați aplicația în magazin</string>
+    <string name="widgets_settings">Setări widget</string>
+    <string name="widgets_not_added">Încă nu au fost adăugate widgeturi. Apăsați lung pentru a adăuga unul.</string>
+    <!-- Private Spaces Strings -->
+    <string name="alert_requires_android_v">Această funcționalitate necesită Android 15 sau o versiune ulterioară.</string>
+    <string name="toast_private_space_default_home_screen">MultiLauncher trebuie să fie ecranul de pornire implicit pentru a accesa spațiul privat.</string>
+    <string name="toast_private_space_locked">Spațiu privat blocat</string>
+    <string name="toast_private_space_unlocked">Spațiu privat deblocat</string>
+    <string name="toast_private_space_not_available">Spațiul privat nu este disponibil</string>
+    <string name="notes_list_empty_hint">Începeți prima notă mai jos.</string>
+    <string name="confirm_delete_title">Ștergeți nota</string>
+    <string name="confirm_delete_message">Sigur vrei să ștergi această notă?</string>
+    <string name="edit_note">Editați nota</string>
+    <string name="category">Categorie</string>
+    <string name="priority">Prioritate</string>
+    <string name="settings_context_menu_title">Meniu contextual</string>
+    <string name="settings_context_menu_option">Selectați elementele de afișat</string>
+    <string name="settings_home_buttons_title">Butoane Acasă</string>
+    <string name="settings_home_buttons_option">Selectați elementele de afișat</string>
+    <string name="settings_applist_buttons_title">Butoane din lista de aplicații</string>
+    <string name="settings_applist_buttons_option">Selectați elementele de afișat</string>
+    <string-array name="priorities">
+        <item>Scăzut</item>
+        <item>Mediu</item>
+        <item>Ridicat</item>
+    </string-array>
+    <string-array name="categories">
+        <item>Nici unul</item>
+        <item>Aniversări</item>
+        <item>Programări</item>
+        <item>Ziua de naștere</item>
+        <item>Treburi casnice</item>
+        <item>Creativ</item>
+        <item>Divertisment</item>
+        <item>Comisioane</item>
+        <item>Finanţa</item>
+        <item>Fitness</item>
+        <item>Obiective</item>
+        <item>Sănătate</item>
+        <item>Hobby-uri</item>
+        <item>Acasă</item>
+        <item>Învăţare</item>
+        <item>Personal</item>
+        <item>Proiecte</item>
+        <item>Cumpărături</item>
+        <item>Social</item>
+        <item>Studiu</item>
+        <item>Voiaj</item>
+        <item>Lucru</item>
+    </string-array>
+</resources>
