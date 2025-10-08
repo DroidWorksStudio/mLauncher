@@ -10,6 +10,7 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.Canvas
 import android.graphics.Paint
+import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
 import android.view.GestureDetector
 import android.view.Gravity
@@ -59,6 +60,11 @@ class ResizableWidgetWrapper(
     private val bottomHandle = createHandle()
     private val leftHandle = createHandle()
     private val rightHandle = createHandle()
+
+    private val topLeftHandle = createHandle()
+    private val topRightHandle = createHandle()
+    private val bottomLeftHandle = createHandle()
+    private val bottomRightHandle = createHandle()
 
     private var activeDialog: LockedBottomSheetDialog? = null
     private var ghostView: View? = null
@@ -135,15 +141,32 @@ class ResizableWidgetWrapper(
         leftHandle.layoutParams = LayoutParams(handleSize, LayoutParams.MATCH_PARENT).apply { gravity = Gravity.START }
         rightHandle.layoutParams = LayoutParams(handleSize, LayoutParams.MATCH_PARENT).apply { gravity = Gravity.END }
 
+        topLeftHandle.layoutParams = LayoutParams(handleSize, handleSize).apply { gravity = Gravity.TOP or Gravity.START }
+        topRightHandle.layoutParams = LayoutParams(handleSize, handleSize).apply { gravity = Gravity.TOP or Gravity.END }
+        bottomLeftHandle.layoutParams = LayoutParams(handleSize, handleSize).apply { gravity = Gravity.BOTTOM or Gravity.START }
+        bottomRightHandle.layoutParams = LayoutParams(handleSize, handleSize).apply { gravity = Gravity.BOTTOM or Gravity.END }
+
+
         addView(topHandle)
         addView(bottomHandle)
         addView(leftHandle)
         addView(rightHandle)
 
+        addView(topLeftHandle)
+        addView(topRightHandle)
+        addView(bottomLeftHandle)
+        addView(bottomRightHandle)
+
         topHandle.bringToFront()
         bottomHandle.bringToFront()
         leftHandle.bringToFront()
         rightHandle.bringToFront()
+
+        topLeftHandle.bringToFront()
+        topRightHandle.bringToFront()
+        bottomLeftHandle.bringToFront()
+        bottomRightHandle.bringToFront()
+
 
         setHandlesVisible(false)
         attachResizeAndDragHandlers()
@@ -184,7 +207,12 @@ class ResizableWidgetWrapper(
     }
 
     private fun createHandle(): View = View(context).apply {
-        setBackgroundColor("#26C6A0F6".toColorInt())
+        background = GradientDrawable().apply {
+            shape = GradientDrawable.RECTANGLE
+            cornerRadius = 8f
+            setColor("#2626C6A0".toColorInt()) // semi-transparent fill
+            setStroke(4, "#FF26C6A0".toColorInt()) // optional outline
+        }
         visibility = GONE
     }
 
@@ -196,6 +224,12 @@ class ResizableWidgetWrapper(
         leftHandle.visibility = state
         rightHandle.visibility = state
 
+        topLeftHandle.visibility = state
+        topRightHandle.visibility = state
+        bottomLeftHandle.visibility = state
+        bottomRightHandle.visibility = state
+
+
         if (visible) {
             showGridOverlay()
             // 🔥 Bring handles and grid on top again after adding overlay
@@ -204,6 +238,11 @@ class ResizableWidgetWrapper(
             bottomHandle.bringToFront()
             leftHandle.bringToFront()
             rightHandle.bringToFront()
+
+            topLeftHandle.bringToFront()
+            topRightHandle.bringToFront()
+            bottomLeftHandle.bringToFront()
+            bottomRightHandle.bringToFront()
         } else {
             hideGridOverlay()
         }
@@ -212,8 +251,8 @@ class ResizableWidgetWrapper(
     private var activeResizeHandle: String? = null
 
     private fun attachResizeAndDragHandlers() {
-        val handles = listOf(topHandle, bottomHandle, leftHandle, rightHandle)
-        val sides = listOf("TOP", "BOTTOM", "LEFT", "RIGHT")
+        val handles = listOf(topHandle, bottomHandle, leftHandle, rightHandle, topLeftHandle, topRightHandle, bottomLeftHandle, bottomRightHandle)
+        val sides = listOf("TOP", "BOTTOM", "LEFT", "RIGHT", "TOP_LEFT", "TOP_RIGHT", "BOTTOM_LEFT", "BOTTOM_RIGHT")
 
         // --- Attach resize listeners to handles ---
         handles.zip(sides).forEach { (handle, side) ->
@@ -236,16 +275,49 @@ class ResizableWidgetWrapper(
                             val dy = (event.rawY - lastY).toInt()
 
                             when (resizeSide) {
+                                // --- Edge handles ---
                                 "TOP" -> {
-                                    lp.height = (lp.height - dy).coerceAtLeast(minSize); lp.topMargin += dy
+                                    lp.height = (lp.height - dy).coerceAtLeast(minSize)
+                                    lp.topMargin += dy
                                 }
 
-                                "BOTTOM" -> lp.height = (lp.height + dy).coerceAtLeast(minSize)
+                                "BOTTOM" -> {
+                                    lp.height = (lp.height + dy).coerceAtLeast(minSize)
+                                }
+
                                 "LEFT" -> {
-                                    lp.width = (lp.width - dx).coerceAtLeast(minSize); lp.leftMargin += dx
+                                    lp.width = (lp.width - dx).coerceAtLeast(minSize)
+                                    lp.leftMargin += dx
                                 }
 
-                                "RIGHT" -> lp.width = (lp.width + dx).coerceAtLeast(minSize)
+                                "RIGHT" -> {
+                                    lp.width = (lp.width + dx).coerceAtLeast(minSize)
+                                }
+
+                                // --- Corner handles (resize in both directions) ---
+                                "TOP_LEFT" -> {
+                                    lp.width = (lp.width - dx).coerceAtLeast(minSize)
+                                    lp.height = (lp.height - dy).coerceAtLeast(minSize)
+                                    lp.leftMargin += dx
+                                    lp.topMargin += dy
+                                }
+
+                                "TOP_RIGHT" -> {
+                                    lp.width = (lp.width + dx).coerceAtLeast(minSize)
+                                    lp.height = (lp.height - dy).coerceAtLeast(minSize)
+                                    lp.topMargin += dy
+                                }
+
+                                "BOTTOM_LEFT" -> {
+                                    lp.width = (lp.width - dx).coerceAtLeast(minSize)
+                                    lp.height = (lp.height + dy).coerceAtLeast(minSize)
+                                    lp.leftMargin += dx
+                                }
+
+                                "BOTTOM_RIGHT" -> {
+                                    lp.width = (lp.width + dx).coerceAtLeast(minSize)
+                                    lp.height = (lp.height + dy).coerceAtLeast(minSize)
+                                }
                             }
 
                             layoutParams = lp
@@ -419,6 +491,7 @@ class ResizableWidgetWrapper(
         val maxHeight = (parentHeight - lp.topMargin).coerceAtLeast(minSize)
 
         when (side) {
+            // --- Edge handles ---
             "TOP" -> {
                 val bottom = lp.topMargin + lp.height
                 val snappedTop = ((lp.topMargin + cellSize / 2) / (cellSize + cellMargin)) * (cellSize + cellMargin)
@@ -441,6 +514,48 @@ class ResizableWidgetWrapper(
             "RIGHT" -> {
                 val snappedRight = ((lp.leftMargin + lp.width + cellSize / 2) / (cellSize + cellMargin)) * (cellSize + cellMargin)
                 lp.width = (snappedRight - lp.leftMargin).coerceAtLeast(minSize).coerceAtMost(maxWidth)
+            }
+
+            // --- Corner handles (snap both X and Y directions) ---
+            "TOP_LEFT" -> {
+                val bottom = lp.topMargin + lp.height
+                val right = lp.leftMargin + lp.width
+
+                val snappedTop = ((lp.topMargin + cellSize / 2) / (cellSize + cellMargin)) * (cellSize + cellMargin)
+                val snappedLeft = ((lp.leftMargin + cellSize / 2) / (cellSize + cellMargin)) * (cellSize + cellMargin)
+
+                lp.topMargin = snappedTop.coerceIn(0, bottom - minSize)
+                lp.leftMargin = snappedLeft.coerceIn(0, right - minSize)
+                lp.width = (right - lp.leftMargin).coerceAtLeast(minSize).coerceAtMost(maxWidth)
+                lp.height = (bottom - lp.topMargin).coerceAtLeast(minSize).coerceAtMost(maxHeight)
+            }
+
+            "TOP_RIGHT" -> {
+                val bottom = lp.topMargin + lp.height
+                val snappedTop = ((lp.topMargin + cellSize / 2) / (cellSize + cellMargin)) * (cellSize + cellMargin)
+                val snappedRight = ((lp.leftMargin + lp.width + cellSize / 2) / (cellSize + cellMargin)) * (cellSize + cellMargin)
+
+                lp.topMargin = snappedTop.coerceIn(0, bottom - minSize)
+                lp.height = (bottom - lp.topMargin).coerceAtLeast(minSize).coerceAtMost(maxHeight)
+                lp.width = (snappedRight - lp.leftMargin).coerceAtLeast(minSize).coerceAtMost(maxWidth)
+            }
+
+            "BOTTOM_LEFT" -> {
+                val right = lp.leftMargin + lp.width
+                val snappedBottom = ((lp.topMargin + lp.height + cellSize / 2) / (cellSize + cellMargin)) * (cellSize + cellMargin)
+                val snappedLeft = ((lp.leftMargin + cellSize / 2) / (cellSize + cellMargin)) * (cellSize + cellMargin)
+
+                lp.leftMargin = snappedLeft.coerceIn(0, right - minSize)
+                lp.width = (right - lp.leftMargin).coerceAtLeast(minSize).coerceAtMost(maxWidth)
+                lp.height = (snappedBottom - lp.topMargin).coerceAtLeast(minSize).coerceAtMost(maxHeight)
+            }
+
+            "BOTTOM_RIGHT" -> {
+                val snappedBottom = ((lp.topMargin + lp.height + cellSize / 2) / (cellSize + cellMargin)) * (cellSize + cellMargin)
+                val snappedRight = ((lp.leftMargin + lp.width + cellSize / 2) / (cellSize + cellMargin)) * (cellSize + cellMargin)
+
+                lp.width = (snappedRight - lp.leftMargin).coerceAtLeast(minSize).coerceAtMost(maxWidth)
+                lp.height = (snappedBottom - lp.topMargin).coerceAtLeast(minSize).coerceAtMost(maxHeight)
             }
         }
 
@@ -608,7 +723,11 @@ class ResizableWidgetWrapper(
             topHandle to "TOP",
             bottomHandle to "BOTTOM",
             leftHandle to "LEFT",
-            rightHandle to "RIGHT"
+            rightHandle to "RIGHT",
+            topLeftHandle to "TOP_LEFT",
+            topRightHandle to "TOP_RIGHT",
+            bottomLeftHandle to "BOTTOM_LEFT",
+            bottomRightHandle to "BOTTOM_RIGHT"
         )
         val location = IntArray(2)
         for ((view, name) in handles) {
