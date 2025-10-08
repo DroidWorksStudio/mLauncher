@@ -153,6 +153,7 @@ object Constants {
         Lithuanian,
         Polish,
         Portuguese,
+        Romanian,
         Russian,
         Slovak,
         Spanish,
@@ -176,6 +177,7 @@ object Constants {
                 Lithuanian -> getLocalizedString(R.string.lang_lithuanian)
                 Polish -> getLocalizedString(R.string.lang_polish)
                 Portuguese -> getLocalizedString(R.string.lang_portuguese)
+                Romanian -> getLocalizedString(R.string.lang_romanian)
                 Russian -> getLocalizedString(R.string.lang_russian)
                 Slovak -> getLocalizedString(R.string.lang_slovak)
                 Spanish -> getLocalizedString(R.string.lang_spanish)
@@ -201,6 +203,7 @@ object Constants {
                 Lithuanian -> getLocalizedString(R.string.lang_lithuanian)
                 Polish -> getLocalizedString(R.string.lang_polish)
                 Portuguese -> getLocalizedString(R.string.lang_portuguese)
+                Romanian -> getLocalizedString(R.string.lang_romanian)
                 Russian -> getLocalizedString(R.string.lang_russian)
                 Slovak -> getLocalizedString(R.string.lang_slovak)
                 Spanish -> getLocalizedString(R.string.lang_spanish)
@@ -230,6 +233,7 @@ object Constants {
                 Lithuanian -> "lt"
                 Polish -> "pl"
                 Portuguese -> "pt"
+                Romanian -> "ro"
                 Russian -> "ru"
                 Slovak -> "sk"
                 Spanish -> "es"
@@ -258,6 +262,7 @@ object Constants {
                 Lithuanian -> "lt-LT"
                 Polish -> "pl-PL"
                 Portuguese -> "pt-PT"
+                Romanian -> "ro-RO"
                 Russian -> "ru-RU"
                 Slovak -> "sk-SK"
                 Spanish -> "es-ES"
