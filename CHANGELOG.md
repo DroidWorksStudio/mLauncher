@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### :sparkles: Enhancements:
 
+* Add Romanian language support ([3c4f633b](https://github.com/DroidWorksStudio/mLauncher/commit/3c4f633b))
 * Add Room database for widget persistence ([fb31cd7b](https://github.com/DroidWorksStudio/mLauncher/commit/fb31cd7b))
 * Lock orientation to current on toggle ([eec690b1](https://github.com/DroidWorksStudio/mLauncher/commit/eec690b1))
 
