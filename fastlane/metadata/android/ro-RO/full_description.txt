@@ -1,0 +1,35 @@
+<h1>Multi Launcher: Un lansator Android curat și simplu, conceput pentru lizibilitate și control</h1>
+
+<p>Cauți un lansator care să scape de dezordine și să simplifice lucrurile? <strong>Multi Launcher</strong> este un lansator Android puternic, dar minimalist, care înlocuiește pictogramele minuscule cu butoane text clare și ușor de citit, facilitând navigarea pe telefon.</p>
+
+<p>Indiferent dacă doriți un ecran de pornire simplu, aveți nevoie de text mare pentru vizibilitate sau preferați acțiuni rapide bazate pe gesturi, Multi Launcher vă oferă control deplin fără a vă copleși cu opțiuni.</p>
+
+<h2>De ce să alegi lansatorul multiplu?</h2>
+<ul>
+    <li><strong>Lansator bazat pe text:</strong> Fără pictograme confuze — doar butoane text etichetate pentru aplicațiile tale.</li>
+    <li><strong>Foarte personalizabil:</strong> Ajustați aspectul, dimensiunile fontului, poziția ceasului și multe altele.</li>
+    <li><strong>Gesturi rapide:</strong> Folosește atingeri, glisări și glisări lungi pentru a deschide aplicații, a bloca ecranul și a accesa notificări.</li>
+    <li><strong>Securitate:</strong> Încuietoare biometrică pentru setări și confidențialitate.</li>
+    <li><strong>Excelent pentru seniori sau pentru iubitorii de simplitate:</strong> Ușor de citit, utilizat și personalizat.</li>
+</ul>
+
+<h2>Caracteristici cheie:</h2>
+<ul>
+    <li>Nume personalizate de aplicații: Redenumiți aplicațiile pentru a se potrivi cu modul în care vă gândiți la ele.</li>
+    <li>Aspecte flexibile: Organizați aplicațiile în modul care vă convine.</li>
+    <li>Personalizare ceas și dată: Plasați widget-uri oriunde doriți.</li>
+    <li>Statistici privind utilizarea aplicației: Vedeți cât timp petreceți în fiecare aplicație.</li>
+    <li>Comenzi rapide pentru gesturi: Setați acțiuni personalizate pentru atingeri duble, glisări și multe altele.</li>
+</ul>
+
+<h2>Funcții de accesibilitate:</h2>
+<p>Această aplicație folosește API-ul <strong>AccessibilityService</strong> pentru:</p>
+<ul>
+    <li>Blocați ecranul cu un gest</li>
+    <li>Deschide meniul de pornire</li>
+    <li>Trageți în jos sertarul de notificări</li>
+</ul>
+
+<p><em>Multi Launcher respectă confidențialitatea dumneavoastră. Aceste funcții nu colectează și nu partajează date cu caracter personal.</em></p>
+
+<p>Dacă te-ai săturat de lansatoarele stridente și aglomerate și vrei ceva simplu, elegant și captivant, <strong>Multi Launcher</strong> este soluția perfectă pentru ecranul de pornire.</p>
