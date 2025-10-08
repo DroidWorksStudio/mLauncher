@@ -18,6 +18,10 @@ All notable changes to this project will be documented in this file. See [conven
 * Improve widget placement and lifecycle management ([8dd79292](https://github.com/DroidWorksStudio/mLauncher/commit/8dd79292))
 * Improve crash reporting reliability ([fcfecbfa](https://github.com/DroidWorksStudio/mLauncher/commit/fcfecbfa))
 
+### :globe_with_meridians: Localization:
+
+* Updated Language Files. ([#921](https://github.com/DroidWorksStudio/mLauncher/pull/921)) ([3b7b8d0b](https://github.com/DroidWorksStudio/mLauncher/commit/3b7b8d0b))
+
 ### :building_construction: Build:
 
 * Bump the all-actions group with 2 updates ([#920](https://github.com/DroidWorksStudio/mLauncher/pull/920)) ([7d4eb7be](https://github.com/DroidWorksStudio/mLauncher/commit/7d4eb7be))
