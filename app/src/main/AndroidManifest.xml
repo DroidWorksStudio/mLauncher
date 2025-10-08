@@ -60,7 +60,9 @@
             android:name=".init.MlauncherInitProvider"
             android:authorities="${applicationId}.mlauncher.initprovider"
             android:exported="false"
-            android:initOrder="100" /> <!-- MAIN LAUNCHER ACTIVITY -->
+            android:initOrder="100" />
+
+        <!-- MAIN LAUNCHER ACTIVITY -->
         <activity
             android:name=".MainActivity"
             android:excludeFromRecents="true"
@@ -76,24 +78,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ui.widgets.WidgetActivity"
-            android:excludeFromRecents="true"
-            android:exported="false"
-            android:launchMode="singleTask"
-            android:windowSoftInputMode="stateHidden" />
-        <!-- Onboarding screen -->
+
+        <!-- ONBOARDING ACTIVITY -->
         <activity
             android:name=".ui.onboarding.OnboardingActivity"
             android:enabled="true"
             android:excludeFromRecents="true"
             android:exported="true"
-            android:launchMode="singleTask" /> <!-- Crash report screen -->
+            android:launchMode="singleTask" />
+
+        <!-- CRASH REPORT ACTIVITY -->
         <activity
             android:name=".CrashReportActivity"
             android:enabled="true"
             android:excludeFromRecents="true"
-            android:exported="true" /> <!-- Icon pack activities -->
+            android:exported="true" />
+
+        <!-- ICON PACK ACTIVITIES -->
         <activity
             android:name=".ui.iconpack.ApplyIconPackActivity"
             android:excludeFromRecents="true"
@@ -107,7 +108,9 @@
         <activity
             android:name=".ui.iconpack.CustomIconSelectionActivity"
             android:excludeFromRecents="true"
-            android:exported="false" /> <!-- Accessibility service -->
+            android:exported="false" />
+
+        <!-- Accessibility Service -->
         <service
             android:name=".services.ActionService"
             android:enabled="true"
@@ -123,6 +126,8 @@
                 android:name="android.accessibilityservice"
                 android:resource="@xml/accessibility_service_config" />
         </service>
+
+        <!-- Notification Manager -->
         <service
             android:name=".listener.NotificationManager"
             android:enabled="true"
@@ -150,6 +155,8 @@
             android:name=".ui.widgets.wordoftheday.WordOfTheDayUpdateReceiver"
             android:exported="false"
             tools:ignore="Instantiatable" />
+
+
         <receiver
             android:name=".ui.widgets.fab.FabWidget"
             android:exported="false"
@@ -165,6 +172,7 @@
         <receiver
             android:name=".ui.widgets.fab.FabClickReceiver"
             android:exported="false" />
+
         <receiver
             android:name=".ui.widgets.home.HomeAppsWidgetProvider"
             android:exported="true"
