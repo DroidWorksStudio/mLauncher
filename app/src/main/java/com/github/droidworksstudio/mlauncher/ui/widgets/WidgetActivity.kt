@@ -3,16 +3,24 @@ package com.github.droidworksstudio.mlauncher.ui.widgets
 import android.appwidget.AppWidgetManager
 import android.appwidget.AppWidgetProviderInfo
 import android.content.Intent
+import android.content.pm.ActivityInfo
+import android.content.res.Configuration
 import android.os.Bundle
-import android.view.ViewGroup
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.github.droidworksstudio.common.AppLogger
 import com.github.droidworksstudio.mlauncher.R
+import com.github.droidworksstudio.mlauncher.data.Prefs
+import com.github.droidworksstudio.mlauncher.databinding.ActivityWidgetBinding
+import com.github.droidworksstudio.mlauncher.helper.getHexForOpacity
+import com.github.droidworksstudio.mlauncher.helper.utils.SystemBarObserver
 
 class WidgetActivity : AppCompatActivity() {
+
+    private lateinit var prefs: Prefs
+    private lateinit var binding: ActivityWidgetBinding
 
     companion object {
         private const val TAG = "WidgetActivity"
@@ -28,9 +36,28 @@ class WidgetActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         AppLogger.d(TAG, "🟢 onCreate() called — savedInstanceState=$savedInstanceState")
         super.onCreate(savedInstanceState)
+
+        // Initialize preferences
+        prefs = Prefs(this)
+
+        // Enable edge-to-edge layout
         enableEdgeToEdge()
 
-        setContentView(R.layout.activity_widget)
+        // Lock orientation if user preference is set (mirroring MainActivity behavior)
+        val currentOrientation = resources.configuration.orientation
+        requestedOrientation = if (prefs.lockOrientation) {
+            if (currentOrientation == Configuration.ORIENTATION_LANDSCAPE) {
+                ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
+            } else {
+                ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+            }
+        } else {
+            ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
+        }
+
+        // Observe and handle system bars (like MainActivity)
+        val systemBarObserver = SystemBarObserver(prefs)
+        lifecycle.addObserver(systemBarObserver)
 
         // Setup result launcher
         AppLogger.v(TAG, "Initializing ActivityResult launcher for widget permissions")
@@ -44,14 +71,18 @@ class WidgetActivity : AppCompatActivity() {
                 )
             }
 
-        // Attach WidgetFragment
+        binding = ActivityWidgetBinding.inflate(layoutInflater)
+
+        binding.mainActivityLayout.apply {
+            setBackgroundColor(getHexForOpacity(prefs))
+        }
+        val view = binding.root
+        setContentView(view)
+
         if (savedInstanceState == null) {
-            AppLogger.i(TAG, "Attaching new WidgetFragment instance")
             supportFragmentManager.beginTransaction()
-                .replace(R.id.widget_fragment_container, WidgetFragment())
-                .commitNow()
-        } else {
-            AppLogger.d(TAG, "WidgetFragment already attached (restored from state)")
+                .replace(R.id.mainActivityLayout, WidgetFragment())
+                .commit()
         }
     }
 
@@ -62,14 +93,7 @@ class WidgetActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        AppLogger.v(TAG, "🟢 onResume() — flushing any pending widgets (${pendingWidgets.size})")
-
-        val fragment = supportFragmentManager.findFragmentById(R.id.widget_fragment_container) as? WidgetFragment
-        val container = fragment?.view as? ViewGroup
-
-        container?.post {
-            flushPendingWidgets()
-        }
+        AppLogger.v(TAG, "🟢 onResume()")
     }
 
 
@@ -103,7 +127,7 @@ class WidgetActivity : AppCompatActivity() {
         val widgetLabel = widgetInfo.loadLabel(packageManager).toString()
         AppLogger.d(TAG, "Attempting to create widget: $widgetLabel (id=$appWidgetId)")
 
-        val fragment = supportFragmentManager.findFragmentById(R.id.widget_fragment_container) as? WidgetFragment
+        val fragment = supportFragmentManager.findFragmentById(R.id.mainActivityLayout) as? WidgetFragment
 
         if (fragment != null && fragment.isAdded) {
             AppLogger.i(TAG, "✅ WidgetFragment is attached, creating widget wrapper immediately")
@@ -117,16 +141,50 @@ class WidgetActivity : AppCompatActivity() {
         }
     }
 
+    //
     fun flushPendingWidgets() {
         val fragment = supportFragmentManager
-            .findFragmentById(R.id.widget_fragment_container) as? WidgetFragment ?: return
+            .findFragmentById(R.id.mainActivityLayout) as? WidgetFragment
 
-        if (!fragment.isAdded || !fragment.isViewCreated()) {
-            AppLogger.w(TAG, "Fragment not ready, deferring flush")
+        if (fragment == null) {
+            AppLogger.w(TAG, "❌ WidgetFragment not found, cannot flush widgets")
             return
         }
 
+        AppLogger.d(TAG, "Found fragment. isAdded=${fragment.isAdded}, isViewCreated=${fragment.isViewCreated()}")
+
+        if (!fragment.isAdded || !fragment.isViewCreated()) {
+            AppLogger.w(TAG, "⚠️ Fragment not ready, will retry when view is created")
+
+            // Observe the fragment's view lifecycle owner
+            fragment.viewLifecycleOwnerLiveData.observe(this) { owner ->
+                owner?.lifecycle?.addObserver(object : androidx.lifecycle.DefaultLifecycleObserver {
+                    override fun onCreate(owner: androidx.lifecycle.LifecycleOwner) {
+                        owner.lifecycle.removeObserver(this)
+                        AppLogger.i(TAG, "✅ Fragment view is now created, retrying flush")
+                        flushPendingWidgets() // Retry
+                    }
+                })
+            }
+
+            return
+        }
+
+        if (pendingWidgets.isEmpty()) {
+            AppLogger.i(TAG, "⚪ No pending widgets to flush")
+            return
+        }
+
+        // Build a descriptive summary of pending widgets
+        val widgetSummary = pendingWidgets.joinToString(separator = ", ") { (info, id) ->
+            "${info.loadLabel(fragment.requireContext().packageManager)}(id=$id)"
+        }
+
+        AppLogger.i(TAG, "✅ Fragment ready, flushing ${pendingWidgets.size} pending widget(s): $widgetSummary")
+
+        // Post and clear
         fragment.postPendingWidgets(pendingWidgets.toList())
         pendingWidgets.clear()
+        AppLogger.d(TAG, "🔴 Pending widgets cleared after posting")
     }
 }

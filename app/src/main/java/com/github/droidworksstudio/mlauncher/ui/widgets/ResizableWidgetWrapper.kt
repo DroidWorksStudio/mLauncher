@@ -41,6 +41,10 @@ class ResizableWidgetWrapper(
     val defaultCellsH: Int = 1
 ) : FrameLayout(context) {
 
+    companion object {
+        private const val TAG = "ResizableWidgetWrapper"
+    }
+
     var currentCol: Int = 0
     var currentRow: Int = 0
 
@@ -62,6 +66,7 @@ class ResizableWidgetWrapper(
     private val gridOverlay: View = object : View(context) {
         @SuppressLint("DrawAllocation")
         override fun onDraw(canvas: Canvas) {
+            AppLogger.v(TAG, "🎨 Drawing grid overlay")
             super.onDraw(canvas)
             val paint = Paint().apply {
                 color = 0x55FFFFFF // semi-transparent white
@@ -100,6 +105,8 @@ class ResizableWidgetWrapper(
 
     init {
 
+        AppLogger.d(TAG, "🧩 Initializing wrapper for widget: ${widgetInfo.provider.packageName}")
+
         // Calculate pixel width/height from cells
         post {
             val parentFrame = parent as? FrameLayout
@@ -109,7 +116,7 @@ class ResizableWidgetWrapper(
             val heightPx = maxOf(cellWidth, defaultCellsH * cellWidth + (defaultCellsH - 1) * cellMargin)
 
             layoutParams = LayoutParams(widthPx, heightPx)
-            AppLogger.d("ResizableWidgetWrapper", "post:init -> layoutParams set to ${widthPx}x${heightPx}")
+            AppLogger.d(TAG, "📐 layoutParams set to ${widthPx}x${heightPx}")
 
             // Ensure hostView fills this wrapper and notify provider of our size
             fillHostView(widthPx, heightPx)
@@ -121,6 +128,7 @@ class ResizableWidgetWrapper(
                 LayoutParams.MATCH_PARENT
             )
         )
+        AppLogger.d(TAG, "✅ HostView added to wrapper")
 
         topHandle.layoutParams = LayoutParams(LayoutParams.MATCH_PARENT, handleSize).apply { gravity = Gravity.TOP }
         bottomHandle.layoutParams = LayoutParams(LayoutParams.MATCH_PARENT, handleSize).apply { gravity = Gravity.BOTTOM }
@@ -142,6 +150,7 @@ class ResizableWidgetWrapper(
     }
 
     private fun fillHostView(parentWidth: Int = width, parentHeight: Int = height) {
+        AppLogger.d(TAG, "fillHostView($parentWidth x $parentHeight) called")
         // 1. Force hostView to fill THIS wrapper
         hostView.layoutParams = LayoutParams(
             LayoutParams.MATCH_PARENT,
@@ -151,7 +160,10 @@ class ResizableWidgetWrapper(
 
         // 2. Use parent’s width/height for widget sizing
         post {
-            if (parentWidth <= 0 || parentHeight <= 0) return@post
+            if (parentWidth <= 0 || parentHeight <= 0) {
+                AppLogger.w(TAG, "⚠️ Skipping fillHostView — invalid size ($parentWidth x $parentHeight)")
+                return@post
+            }
 
             try {
                 val options = Bundle().apply {
@@ -164,9 +176,9 @@ class ResizableWidgetWrapper(
                 val appWidgetManager = AppWidgetManager.getInstance(context)
                 appWidgetManager.updateAppWidgetOptions(hostView.appWidgetId, options)
 
-                AppLogger.i("ResizableWidgetWrapper", "✅ fillHostView: using parent size width=$parentWidth, height=$parentHeight")
+                AppLogger.i(TAG, "✅ fillHostView: using parent size width=$parentWidth, height=$parentHeight")
             } catch (e: Exception) {
-                AppLogger.e("ResizableWidgetWrapper", "❌ Failed to update widget options: ${e.message}")
+                AppLogger.e(TAG, "❌ Failed to update widget options: ${e.message}")
             }
         }
     }
@@ -177,59 +189,75 @@ class ResizableWidgetWrapper(
     }
 
     fun setHandlesVisible(visible: Boolean) {
+        AppLogger.d(TAG, "setHandlesVisible($visible)")
         val state = if (visible) VISIBLE else GONE
         topHandle.visibility = state
         bottomHandle.visibility = state
         leftHandle.visibility = state
         rightHandle.visibility = state
 
-        if (visible) showGridOverlay() else hideGridOverlay()
+        if (visible) {
+            showGridOverlay()
+            // 🔥 Bring handles and grid on top again after adding overlay
+            gridOverlay.bringToFront()
+            topHandle.bringToFront()
+            bottomHandle.bringToFront()
+            leftHandle.bringToFront()
+            rightHandle.bringToFront()
+        } else {
+            hideGridOverlay()
+        }
     }
+
+    private var activeResizeHandle: String? = null
 
     private fun attachResizeAndDragHandlers() {
         val handles = listOf(topHandle, bottomHandle, leftHandle, rightHandle)
         val sides = listOf("TOP", "BOTTOM", "LEFT", "RIGHT")
 
-        // --- Attach resize listeners ---
+        // --- Attach resize listeners to handles ---
         handles.zip(sides).forEach { (handle, side) ->
             handle.setOnTouchListener { _, event ->
                 if (!isResizeMode) return@setOnTouchListener false
 
-                val lp = layoutParams
-                val frameLp = lp as? LayoutParams ?: return@setOnTouchListener false
+                val lp = layoutParams as? LayoutParams ?: return@setOnTouchListener false
 
                 when (event.actionMasked) {
                     MotionEvent.ACTION_DOWN -> {
+                        activeResizeHandle = side
                         lastX = event.rawX
                         lastY = event.rawY
+                        parent?.requestDisallowInterceptTouchEvent(true)
                     }
 
                     MotionEvent.ACTION_MOVE -> {
-                        val dx = (event.rawX - lastX).toInt()
-                        val dy = (event.rawY - lastY).toInt()
+                        activeResizeHandle?.let { resizeSide ->
+                            val dx = (event.rawX - lastX).toInt()
+                            val dy = (event.rawY - lastY).toInt()
 
-                        when (side) {
-                            "TOP" -> {
-                                frameLp.height = (frameLp.height - dy).coerceAtLeast(minSize)
-                                frameLp.topMargin += dy
+                            when (resizeSide) {
+                                "TOP" -> {
+                                    lp.height = (lp.height - dy).coerceAtLeast(minSize); lp.topMargin += dy
+                                }
+
+                                "BOTTOM" -> lp.height = (lp.height + dy).coerceAtLeast(minSize)
+                                "LEFT" -> {
+                                    lp.width = (lp.width - dx).coerceAtLeast(minSize); lp.leftMargin += dx
+                                }
+
+                                "RIGHT" -> lp.width = (lp.width + dx).coerceAtLeast(minSize)
                             }
 
-                            "BOTTOM" -> frameLp.height = (frameLp.height + dy).coerceAtLeast(minSize)
-                            "LEFT" -> {
-                                frameLp.width = (frameLp.width - dx).coerceAtLeast(minSize)
-                                frameLp.leftMargin += dx
-                            }
-
-                            "RIGHT" -> frameLp.width = (frameLp.width + dx).coerceAtLeast(minSize)
+                            layoutParams = lp
+                            fillHostView(lp.width, lp.height)
+                            lastX = event.rawX
+                            lastY = event.rawY
                         }
-
-                        layoutParams = frameLp
-                        lastX = event.rawX
-                        lastY = event.rawY
                     }
 
-                    MotionEvent.ACTION_UP -> {
-                        snapResizeToGrid(side)
+                    MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
+                        activeResizeHandle?.let { snapResizeToGrid(it) }
+                        activeResizeHandle = null
                         onUpdate()
                     }
                 }
@@ -237,26 +265,29 @@ class ResizableWidgetWrapper(
             }
         }
 
-        // --- Attach drag + long-press to wrapper and children ---
-        if (!isResizeMode) attachDragToWrapperAndChildren(this)
+        // --- Attach drag + long-press only to non-handle areas ---
+        if (!isResizeMode) attachDragToWrapperAndChildren(this, skipViews = handles)
     }
 
-    private fun attachDragToWrapperAndChildren(root: View) {
+
+    private fun attachDragToWrapperAndChildren(root: View, skipViews: List<View> = emptyList()) {
 
         fun attachDrag(view: View) {
             // Attach long-press menu and drag to this view
             val gestureDetector = GestureDetector(context, object : GestureDetector.SimpleOnGestureListener() {
                 override fun onLongPress(e: MotionEvent) {
-                    showWidgetMenu()
+                    if (!isResizeMode) {  // <-- Only show menu if NOT resizing
+                        showWidgetMenu()
+                    }
                 }
             })
 
             var dialogDismissed = false
 
             view.setOnTouchListener { v, event ->
-                gestureDetector.onTouchEvent(event)
                 // Skip handles
-                if (v in listOf(topHandle, bottomHandle, leftHandle, rightHandle)) return@setOnTouchListener false
+                if (v in skipViews) return@setOnTouchListener false
+                gestureDetector.onTouchEvent(event)
                 if (isResizeMode) return@setOnTouchListener false
 
                 when (event.actionMasked) {
@@ -294,7 +325,7 @@ class ResizableWidgetWrapper(
                         updateGhostPosition()
 
                         // Dismiss only once if movement exceeds 10 pixels in any direction
-                        if (!dialogDismissed && (abs(dx) > 10 || abs(dy) > 10)) {
+                        if (!dialogDismissed && (abs(dx) > 5 || abs(dy) > 5)) {
                             activeDialog?.dismiss()
                             dialogDismissed = true
                         }
@@ -442,7 +473,7 @@ class ResizableWidgetWrapper(
             addMenuItem(getLocalizedString(R.string.widgets_exit_resize)) {
                 isResizeMode = false
                 setHandlesVisible(false)
-                reloadParentFragment()
+                reloadActivity()
             }
         } else {
             addMenuItem(getLocalizedString(R.string.widgets_resize)) {
@@ -502,7 +533,7 @@ class ResizableWidgetWrapper(
 
             else -> {
                 // Debug / unknown installer, do not show "View in Store"
-                AppLogger.d("WidgetMenu", "Skipping '${getLocalizedString(R.string.widgets_view_in_store)}': unrecognized installer package='$installerPackage'")
+                AppLogger.d(TAG, "WidgetMenu: Skipping '${getLocalizedString(R.string.widgets_view_in_store)}': unrecognized installer package='$installerPackage'")
             }
         }
 
@@ -511,15 +542,21 @@ class ResizableWidgetWrapper(
         dialog.show()
     }
 
-    fun reloadParentFragment() {
+    fun reloadActivity() {
         val activity = context as? Activity ?: return
 
-        // Restart the activity
-        val intent = activity.intent
+        val intent = activity.intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
         activity.finish()
+
+        if (android.os.Build.VERSION.SDK_INT >= 34) {
+            activity.overrideActivityTransition(Activity.OVERRIDE_TRANSITION_CLOSE, 0, 0)
+        } else {
+            @Suppress("DEPRECATION")
+            activity.overridePendingTransition(0, 0)
+        }
+
         activity.startActivity(intent)
 
-        // Optional: disable animation for smooth reload
         if (android.os.Build.VERSION.SDK_INT >= 34) {
             activity.overrideActivityTransition(Activity.OVERRIDE_TRANSITION_OPEN, 0, 0)
         } else {
@@ -553,25 +590,36 @@ class ResizableWidgetWrapper(
     }
 
     override fun onInterceptTouchEvent(ev: MotionEvent?): Boolean {
-        // Intercept all touches during resize mode
-        // BUT do not intercept touches on handles (let their listeners run)
-        if (isResizeMode) {
-            ev?.let { event ->
-                val handles = listOf(topHandle, bottomHandle, leftHandle, rightHandle)
-                handles.forEach { handle ->
-                    return false // allow handle to handle its own touch
-                }
-            }
-            return true // intercept everything else
+        if (!isResizeMode || ev == null) return super.onInterceptTouchEvent(ev)
+
+        // Only track ACTION_DOWN to detect which handle, don't intercept yet
+        if (ev.actionMasked == MotionEvent.ACTION_DOWN) {
+            activeResizeHandle = getHandleAt(ev.rawX, ev.rawY)
+            lastX = ev.rawX
+            lastY = ev.rawY
         }
-        return super.onInterceptTouchEvent(ev)
+
+        // Intercept only if touch is **outside any handle**
+        return activeResizeHandle == null
     }
 
-    override fun onTouchEvent(event: MotionEvent?): Boolean {
-        if (isResizeMode) {
-            // Consume all touches during resize
-            return true
+    private fun getHandleAt(x: Float, y: Float): String? {
+        val handles = mapOf(
+            topHandle to "TOP",
+            bottomHandle to "BOTTOM",
+            leftHandle to "LEFT",
+            rightHandle to "RIGHT"
+        )
+        val location = IntArray(2)
+        for ((view, name) in handles) {
+            view.getLocationOnScreen(location)
+            val left = location[0].toFloat()
+            val top = location[1].toFloat()
+            val right = left + view.width
+            val bottom = top + view.height
+            if (x in left..right && y in top..bottom) return name
         }
-        return super.onTouchEvent(event)
+        return null
     }
+
 }
