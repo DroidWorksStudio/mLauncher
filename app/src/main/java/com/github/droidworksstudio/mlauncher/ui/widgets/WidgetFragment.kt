@@ -1,4 +1,4 @@
-package com.github.droidworksstudio.mlauncher.ui
+package com.github.droidworksstudio.mlauncher.ui.widgets
 
 import android.annotation.SuppressLint
 import android.app.Activity
@@ -21,14 +21,12 @@ import android.widget.ScrollView
 import android.widget.TextView
 import androidx.activity.addCallback
 import androidx.core.view.isVisible
-import androidx.lifecycle.lifecycleScope
 import com.github.droidworksstudio.common.AppLogger
 import com.github.droidworksstudio.common.appWidgetManager
 import com.github.droidworksstudio.common.getLocalizedString
-import com.github.droidworksstudio.mlauncher.MainActivity
 import com.github.droidworksstudio.mlauncher.R
+import com.github.droidworksstudio.mlauncher.ui.BaseFragment
 import com.github.droidworksstudio.mlauncher.ui.components.LockedBottomSheetDialog
-import com.github.droidworksstudio.mlauncher.ui.widgets.ResizableWidgetWrapper
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 
@@ -74,6 +72,7 @@ class WidgetFragment : BaseFragment() {
     private var activeGridDialog: LockedBottomSheetDialog? = null
     private var lastWidgetInfo: AppWidgetProviderInfo? = null
     private val widgetFileName = "widgets.json"
+    private var placeholderVisible = false
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         return inflater.inflate(R.layout.fragment_widget_container, container, false)
@@ -83,6 +82,7 @@ class WidgetFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Back press handling for exiting resize mode
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) {
             val resizeWidget = widgetWrappers.firstOrNull { it.isResizeMode }
             if (resizeWidget != null) {
@@ -96,10 +96,11 @@ class WidgetFragment : BaseFragment() {
             }
         }
 
+        // Initialize widget grid
         widgetGrid = view.findViewById(R.id.widget_grid)
         AppLogger.i(TAG, "🟢 Widget grid initialized")
-        // Create placeholder programmatically
-        AppLogger.i(TAG, "🟢 Creating empty placeholder for widgets")
+
+        // Create empty placeholder programmatically
         emptyPlaceholder = TextView(requireContext()).apply {
             text = context.getString(R.string.widgets_not_added)
             textSize = 16f
@@ -107,8 +108,6 @@ class WidgetFragment : BaseFragment() {
             gravity = Gravity.CENTER
             visibility = View.GONE
         }
-        AppLogger.i(TAG, "🟢 Empty placeholder TextView created")
-
         widgetGrid.addView(
             emptyPlaceholder, FrameLayout.LayoutParams(
                 FrameLayout.LayoutParams.WRAP_CONTENT,
@@ -118,28 +117,53 @@ class WidgetFragment : BaseFragment() {
         )
         AppLogger.i(TAG, "🟢 Empty placeholder added to widgetGrid")
 
+        // Setup AppWidgetManager and Host
         appWidgetManager = requireContext().appWidgetManager
         appWidgetHost = AppWidgetHost(requireContext(), APP_WIDGET_HOST_ID)
         appWidgetHost.startListening()
         AppLogger.i(TAG, "🟢 AppWidgetHost started listening")
 
+        // Long click menu
         widgetGrid.setOnLongClickListener {
             showGridMenu()
             true
         }
 
-        AppLogger.i(TAG, "🟢 WidgetFragment onViewCreated, view is ready")
-        (activity as? MainActivity)?.flushPendingWidgets()
+        // Post widget loading after layout to prevent jumps
+        widgetGrid.post {
+            (activity as? WidgetActivity)?.flushPendingWidgets()
+            AppLogger.i(TAG, "🟢 Pending widgets flushed and grid visible")
+        }
+
+        AppLogger.i(TAG, "🟢 WidgetFragment onViewCreated setup complete")
     }
 
     override fun onResume() {
         super.onResume()
-        viewLifecycleOwner.lifecycleScope.launchWhenResumed {
-            restoreWidgets()
-        }
         AppLogger.i(TAG, "🔄 WidgetFragment onResume, widgets restored")
         updateEmptyPlaceholder(widgetWrappers)
     }
+
+    private val pendingWidgetsList = mutableListOf<Pair<AppWidgetProviderInfo, Int>>()
+
+    fun postPendingWidgets(widgets: List<Pair<AppWidgetProviderInfo, Int>>) {
+        pendingWidgetsList.addAll(widgets)
+        widgetGrid.post {
+            if (!isAdded || !isViewCreated()) return@post
+            AppLogger.i(TAG, "🟢 Posting ${pendingWidgetsList.size} pending widgets")
+
+            // Add all pending widgets
+            pendingWidgetsList.forEach { (info, id) ->
+                createWidgetWrapperSafe(info, id)
+            }
+            pendingWidgetsList.clear()
+
+            // Restore saved widgets after pending
+            restoreWidgets()
+            updateEmptyPlaceholder(widgetWrappers)
+        }
+    }
+
 
     /** Grid menu for adding/resetting widgets */
     private fun showGridMenu() {
@@ -312,7 +336,7 @@ class WidgetFragment : BaseFragment() {
                 putExtra(AppWidgetManager.EXTRA_APPWIDGET_PROVIDER, widgetInfo.provider)
             }
 
-            (requireActivity() as MainActivity).launchWidgetPermission(intent) { resultCode, returnedId, _ ->
+            (requireActivity() as WidgetActivity).launchWidgetPermission(intent) { resultCode, returnedId, _ ->
                 handleWidgetResult(resultCode, returnedId)
             }
         }
@@ -343,12 +367,12 @@ class WidgetFragment : BaseFragment() {
                 putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, widgetId)
             }
 
-            (activity as? MainActivity)?.let { mainActivity ->
-                mainActivity.launchWidgetPermission(intent) { resultCode, returnedId, _ ->
+            (activity as? WidgetActivity)?.let { widgetActivity ->
+                widgetActivity.launchWidgetPermission(intent) { resultCode, returnedId, _ ->
                     if (resultCode == Activity.RESULT_OK) {
                         AppLogger.i(TAG, "✅ Widget configured, creating wrapper: $returnedId")
                         // Ensure widgetInfo is captured properly in the lambda
-                        mainActivity.safeCreateWidget(widgetInfo, returnedId)
+                        widgetActivity.safeCreateWidget(widgetInfo, returnedId)
                     } else {
                         AppLogger.w(TAG, "❌ Widget config canceled, removing: $returnedId")
                         safeRemoveWidget(returnedId)
@@ -562,6 +586,7 @@ class WidgetFragment : BaseFragment() {
             var skippedCount = 0
 
             savedWidgets.forEachIndexed { index, saved ->
+                updateEmptyPlaceholder(widgetWrappers)
                 if (!seenIds.add(saved.appWidgetId)) {
                     AppLogger.w(TAG, "⚠️ SKIP duplicate widget id=${saved.appWidgetId}")
                     skippedCount++
@@ -613,7 +638,6 @@ class WidgetFragment : BaseFragment() {
 
             AppLogger.i(TAG, "📊 restoreWidgets: Restored=$restoredCount, Skipped=$skippedCount")
             logGridSnapshot()
-            updateEmptyPlaceholder(widgetWrappers)
         }
     }
 
@@ -641,18 +665,15 @@ class WidgetFragment : BaseFragment() {
     }
 
     private fun updateEmptyPlaceholder(wrappers: List<ResizableWidgetWrapper>) {
-        val wasVisible = emptyPlaceholder.isVisible
         val shouldBeVisible = wrappers.isEmpty()
 
-        emptyPlaceholder.isVisible = shouldBeVisible
+        emptyPlaceholder.isVisible = placeholderVisible
+        widgetGrid.isVisible = !placeholderVisible
+        if (placeholderVisible == shouldBeVisible) return // no change needed
 
-        if (shouldBeVisible && !wasVisible) {
-            AppLogger.i(TAG, "🟨 No widgets present, showing placeholder")
-        } else if (!shouldBeVisible && wasVisible) {
-            AppLogger.i(TAG, "🟩 Widgets present, hiding placeholder")
-        } else {
-            AppLogger.v(TAG, "🔄 Placeholder visibility unchanged: ${emptyPlaceholder.isVisible}")
-        }
+        placeholderVisible = shouldBeVisible
+
+        AppLogger.i(TAG, if (shouldBeVisible) "🟨 Showing placeholder" else "🟩 Hiding placeholder")
     }
 
     override fun onAttach(context: Context) {

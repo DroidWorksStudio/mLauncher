@@ -87,6 +87,7 @@ import com.github.droidworksstudio.mlauncher.listener.GestureAdapter
 import com.github.droidworksstudio.mlauncher.listener.NotificationDotManager
 import com.github.droidworksstudio.mlauncher.services.ActionService
 import com.github.droidworksstudio.mlauncher.ui.components.DialogManager
+import com.github.droidworksstudio.mlauncher.ui.widgets.WidgetActivity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -725,7 +726,14 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
                 // this should be handled in the respective onSwipe[Up,Down,Right,Left] functions
             }
 
-            Action.ShowWidgetPage,
+            Action.ShowWidgetPage -> {
+                val context = requireContext()
+                val intent = Intent(context, WidgetActivity::class.java).apply {
+                    addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP or Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                }
+                context.startActivity(intent)
+            }
+
             Action.Disabled -> {
                 // Do nothing
             }

@@ -1,12 +1,15 @@
 package com.github.droidworksstudio.mlauncher.ui.widgets
 
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.appwidget.AppWidgetHost
 import android.appwidget.AppWidgetHostView
 import android.appwidget.AppWidgetManager
 import android.appwidget.AppWidgetProviderInfo
 import android.content.Context
 import android.content.Intent
+import android.graphics.Canvas
+import android.graphics.Paint
 import android.os.Bundle
 import android.view.GestureDetector
 import android.view.Gravity
@@ -18,7 +21,6 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.graphics.toColorInt
 import androidx.core.net.toUri
-import androidx.navigation.findNavController
 import com.github.droidworksstudio.common.AppLogger
 import com.github.droidworksstudio.common.getLocalizedString
 import com.github.droidworksstudio.mlauncher.R
@@ -59,11 +61,11 @@ class ResizableWidgetWrapper(
 
     private val gridOverlay: View = object : View(context) {
         @SuppressLint("DrawAllocation")
-        override fun onDraw(canvas: android.graphics.Canvas) {
+        override fun onDraw(canvas: Canvas) {
             super.onDraw(canvas)
-            val paint = android.graphics.Paint().apply {
+            val paint = Paint().apply {
                 color = 0x55FFFFFF // semi-transparent white
-                style = android.graphics.Paint.Style.STROKE
+                style = Paint.Style.STROKE
                 strokeWidth = 5f
             }
 
@@ -510,15 +512,22 @@ class ResizableWidgetWrapper(
     }
 
     fun reloadParentFragment() {
-        val activity = context as? androidx.fragment.app.FragmentActivity ?: return
-        val navController = activity.findNavController(R.id.nav_host_fragment)
+        val activity = context as? Activity ?: return
 
-        // Pop WidgetFragment from the back stack if it's currently visible
-        navController.popBackStack(R.id.widgetFragment, true) // true = inclusive
+        // Restart the activity
+        val intent = activity.intent
+        activity.finish()
+        activity.startActivity(intent)
 
-        // Navigate to a new instance
-        navController.navigate(R.id.widgetFragment)
+        // Optional: disable animation for smooth reload
+        if (android.os.Build.VERSION.SDK_INT >= 34) {
+            activity.overrideActivityTransition(Activity.OVERRIDE_TRANSITION_OPEN, 0, 0)
+        } else {
+            @Suppress("DEPRECATION")
+            activity.overridePendingTransition(0, 0)
+        }
     }
+
 
     private fun showGridOverlay() {
         val parentFrame = parent as? FrameLayout ?: return

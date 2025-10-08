@@ -2,8 +2,6 @@ package com.github.droidworksstudio.mlauncher
 
 import android.app.Activity
 import android.app.role.RoleManager
-import android.appwidget.AppWidgetManager
-import android.appwidget.AppWidgetProviderInfo
 import android.content.Context
 import android.content.Intent
 import android.content.pm.ActivityInfo
@@ -23,7 +21,6 @@ import androidx.core.view.WindowCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
-import com.github.droidworksstudio.common.AppLogger
 import com.github.droidworksstudio.common.CrashHandler
 import com.github.droidworksstudio.common.showLongToast
 import com.github.droidworksstudio.mlauncher.data.Constants
@@ -36,7 +33,6 @@ import com.github.droidworksstudio.mlauncher.helper.emptyString
 import com.github.droidworksstudio.mlauncher.helper.ismlauncherDefault
 import com.github.droidworksstudio.mlauncher.helper.utils.AppReloader
 import com.github.droidworksstudio.mlauncher.helper.utils.SystemBarObserver
-import com.github.droidworksstudio.mlauncher.ui.WidgetFragment
 import com.github.droidworksstudio.mlauncher.ui.onboarding.OnboardingActivity
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
@@ -52,10 +48,6 @@ import java.util.Locale
 import java.util.concurrent.Executors
 
 class MainActivity : AppCompatActivity() {
-
-    companion object {
-        private const val TAG = "BaseWidgets"
-    }
 
     private lateinit var prefs: Prefs
     private lateinit var migration: Migration
@@ -124,23 +116,8 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private lateinit var widgetPermissionLauncher: ActivityResultLauncher<Intent>
-    private var widgetResultCallback: ((Int, Int, Intent?) -> Unit)? = null
-    private val pendingWidgets = mutableListOf<Pair<AppWidgetProviderInfo, Int>>()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        widgetPermissionLauncher =
-            registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-                AppLogger.v(TAG, "🎬 ActivityResultLauncher invoked. ResultCode=${result.resultCode}, data=${result.data != null}")
-
-                widgetResultCallback?.invoke(
-                    result.resultCode,
-                    result.data?.getIntExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, -1) ?: -1,
-                    result.data
-                )
-            }
 
         // Enables edge-to-edge mode
         WindowCompat.setDecorFitsSystemWindows(window, false)
@@ -340,39 +317,6 @@ class MainActivity : AppCompatActivity() {
 
         val systemBarObserver = SystemBarObserver(prefs)
         lifecycle.addObserver(systemBarObserver)
-    }
-
-    /** Called by a Fragment to launch a widget intent */
-    /** Widget permission helper */
-    fun launchWidgetPermission(intent: Intent, callback: (resultCode: Int, appWidgetId: Int, data: Intent?) -> Unit) {
-        widgetResultCallback = callback
-        widgetPermissionLauncher.launch(intent)
-    }
-
-    /** Safely create widget or store pending */
-    fun safeCreateWidget(widgetInfo: AppWidgetProviderInfo, appWidgetId: Int) {
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment)
-        val fragment = navHostFragment?.childFragmentManager?.fragments
-            ?.filterIsInstance<WidgetFragment>()
-            ?.firstOrNull()
-        if (fragment != null && fragment.isAdded) {
-            fragment.createWidgetWrapperSafe(widgetInfo, appWidgetId)
-            AppLogger.i(TAG, "✅ WidgetFragment ready, creating widget wrapper for widgetId=$appWidgetId")
-        } else {
-            pendingWidgets.add(widgetInfo to appWidgetId)
-            AppLogger.w(TAG, "⚠️ WidgetFragment not attached, storing pending widget id=$appWidgetId")
-        }
-    }
-
-    fun flushPendingWidgets() {
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment)
-        val fragment = navHostFragment?.childFragmentManager?.fragments
-            ?.filterIsInstance<WidgetFragment>()
-            ?.firstOrNull()
-        pendingWidgets.forEach { (info, id) ->
-            AppLogger.i(TAG, "➡ Flushing pending widgetId=$fragment")
-            fragment?.createWidgetWrapperSafe(info, id)
-        }
     }
 
 

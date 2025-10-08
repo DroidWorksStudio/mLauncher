@@ -85,6 +85,13 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".ui.widgets.WidgetActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateHidden" />
+
         <!-- Onboarding screen -->
         <activity
             android:name=".ui.onboarding.OnboardingActivity"
