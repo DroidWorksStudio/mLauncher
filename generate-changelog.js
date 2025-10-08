@@ -25,27 +25,55 @@ function log(...args) {
 
 // Commit parsing rules
 const commitParsers = [
-	{ message: /^chore\(release\): prepare for/i, skip: true },
-	{ message: /^chore\(deps.*\)/i, skip: true },
-	{ message: /^chore\(change.*\)/i, skip: true },
-	{ message: /^chore\(pr\)/i, skip: true },
-	{ message: /^chore\(pull\)/i, skip: true },
-	{ message: /^fixes/i, skip: true },
+    // Skip some "noise" commits
+    { message: /^chore\(release\): prepare for/i, skip: true },
+    { message: /^chore\(deps.*\)/i, skip: true },
+    { message: /^chore\(change.*\)/i, skip: true },
+    { message: /^chore\(pr\)/i, skip: true },
+    { message: /^chore\(pull\)/i, skip: true },
+    { message: /^fixes/i, skip: true },
 
-	{ message: /^feat|^perf|^style|^ui|^ux/i, group: "### :sparkles: Enhancements:" },
-	{ message: /^fix|^bug|^hotfix|^emergency/i, group: "### :bug: Bug Fixes:" },
-	{ message: /^refactor/i, group: "### :wrench: Code Quality:" },
-	{ message: /^doc/i, group: "### :books: Documentation:" },
-	{ message: /^(lang|i18n)/i, group: "### :globe_with_meridians: Localization:" },
-	{ message: /^security/i, group: "### :lock: Security:" },
-	{ message: /^drop|^remove|^deprecated/i, group: "### :x: Feature Removals:" },
-	{ message: /^revert/i, group: "### :rewind: Reverts:" },
-	{ message: /^build/i, group: "### :building_construction: Build:" },
-	{ message: /^dependency|^deps/i, group: "### :package: Dependencies:" },
-	{ message: /^config|^configuration|^ci|^pipeline|^release|^version|^versioning/i, group: "### :gear: Meta:" },
-	{ message: /^test/i, group: "### :test_tube: Tests:" },
-	{ message: /^infra|^infrastructure|^ops/i, group: "### :office: Infrastructure & Ops:" },
-	{ message: /^chore|^housekeeping|^cleanup|^clean\(up\)/i, group: "### :broom: Maintenance & Cleanup:" },
+    // Enhancements (new features, improvements, UX, performance)
+    { message: /^feat|^perf|^style|^ui|^ux/i, group: "### :sparkles: Enhancements:" },
+
+    // Bug fixes & hotfixes
+    { message: /^fix|^bug|^hotfix|^emergency/i, group: "### :bug: Bug Fixes:" },
+
+    // Code quality (refactors, cleanup without changing behavior)
+    { message: /^refactor/i, group: "### :wrench: Code Quality:" },
+
+    // Documentation
+    { message: /^doc/i, group: "### :books: Documentation:" },
+
+    // Localization & internationalization
+    { message: /^(lang|i18n)/i, group: "### :globe_with_meridians: Localization:" },
+
+    // Security
+    { message: /^security/i, group: "### :lock: Security:" },
+
+    // Feature removal / drops
+    { message: /^drop|^remove|^deprecated/i, group: "### :x: Feature Removals:" },
+
+    // Reverts
+    { message: /^revert/i, group: "### :rewind: Reverts:" },
+
+    // Build-related
+    { message: /^build/i, group: "### :building_construction: Build:" },
+
+    // Dependencies-related
+    { message: /^dependency|^deps/i, group: "### :package: Dependencies:" },
+
+    // Meta: configuration, CI/CD, versioning, releases
+    { message: /^config|^configuration|^ci|^pipeline|^release|^version|^versioning/i, group: "### :gear: Meta:" },
+
+    // Tests
+    { message: /^test/i, group: "### :test_tube: Tests:" },
+
+    // Infrastructure & Ops
+    { message: /^infra|^infrastructure|^ops/i, group: "### :office: Infrastructure & Ops:" },
+
+    // Chore & cleanup
+    { message: /^chore|^housekeeping|^cleanup|^clean\(up\)/i, group: "### :broom: Maintenance & Cleanup:" },
 ];
 
 const GROUP_ORDER = commitParsers.filter((p) => !p.skip).map((p) => p.group);
