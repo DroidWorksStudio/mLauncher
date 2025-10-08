@@ -174,10 +174,15 @@ dependencies {
     // Biometric support
     implementation(libs.biometric.ktx)
 
-    // Database
+    // Moshi
     implementation(libs.moshi)
-    implementation(libs.moshi.kotlin)
+    implementation(libs.moshi.ktx)
     ksp(libs.moshi.codegen)
+
+    // Room
+    implementation(libs.room.runtime)
+    implementation(libs.room.ktx)
+    ksp(libs.room.compiler)
 
     // AndroidX Test - Espresso
     androidTestImplementation(libs.espresso.core)

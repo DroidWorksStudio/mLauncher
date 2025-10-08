@@ -54,6 +54,7 @@ activity = "1.11.0"
 
 # Database
 moshi = "1.15.2"
+room = "2.8.1"
 ksp = "2.2.20-2.0.3"
 
 [libraries]
@@ -96,11 +97,15 @@ compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling", versi
 commons-text = { group = "org.apache.commons", name = "commons-text", version.ref = "commons-text" }
 biometric-ktx = { group = "androidx.biometric", name = "biometric-ktx", version.ref = "biometric-ktx" }
 
-# Database
-
+# Moshi
 moshi = { module = "com.squareup.moshi:moshi", version.ref = "moshi" }
-moshi-kotlin = { module = "com.squareup.moshi:moshi-kotlin", version.ref = "moshi" }
+moshi-ktx = { module = "com.squareup.moshi:moshi-kotlin", version.ref = "moshi" }
 moshi-codegen = { module = "com.squareup.moshi:moshi-kotlin-codegen", version.ref = "moshi" }
+
+# Room
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
 
 # Testing Libraries
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso" }
