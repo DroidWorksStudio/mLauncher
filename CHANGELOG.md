@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### :wrench: Code Quality:
 
+* Improve widget lifecycle, sizing, and layout ([f2dc6f5b](https://github.com/DroidWorksStudio/mLauncher/commit/f2dc6f5b))
 * Refactor profile switching in App Drawer ([58666530](https://github.com/DroidWorksStudio/mLauncher/commit/58666530))
 * Enhance private space lock check ([c4868f42](https://github.com/DroidWorksStudio/mLauncher/commit/c4868f42))
 * Centralize widget deletion logic ([4dec18af](https://github.com/DroidWorksStudio/mLauncher/commit/4dec18af))
