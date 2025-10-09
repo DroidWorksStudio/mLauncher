@@ -317,7 +317,10 @@
     <!-- Widget Stings -->
     <string name="widgets_select_widget">Wählen Sie ein Widget</string>
     <string name="widgets_add_widget">Ein Widget hinzufügen</string>
+    <string name="widgets_edit_widget">Edit Widgets</string>
+    <string name="widgets_stop_editing_widget">Stop Editing Widgets</string>
     <string name="widgets_reset_widget">Alle Widgets zurücksetzen</string>
+    <string name="widgets_remove_widget">Remove all Widgets</string>
     <string name="widgets_resize">Größe ändern</string>
     <string name="widgets_exit_resize">Größenänderung beenden</string>
     <string name="widgets_remove">Widget entfernen</string>
