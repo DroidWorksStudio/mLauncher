@@ -319,10 +319,10 @@
     <!-- Widget Stings -->
     <string name="widgets_select_widget">בחר ווידג\'ט</string>
     <string name="widgets_add_widget">הוסף ווידג\'ט</string>
-    <string name="widgets_edit_widget">Edit Widgets</string>
-    <string name="widgets_stop_editing_widget">Stop Editing Widgets</string>
+    <string name="widgets_edit_widget">עריכת ווידג\'טים</string>
+    <string name="widgets_stop_editing_widget">הפסקת עריכת ווידג\'טים</string>
     <string name="widgets_reset_widget">איפוס כל הווידג\'טים</string>
-    <string name="widgets_remove_widget">Remove all Widgets</string>
+    <string name="widgets_remove_widget">הסר את כל הווידג\'טים</string>
     <string name="widgets_resize">שינוי גודל</string>
     <string name="widgets_exit_resize">יציאה משינוי גודל</string>
     <string name="widgets_remove">הסר ווידג\'ט</string>
