@@ -319,7 +319,10 @@ Jūs bet kada galite išjungti šią prieigą savo įrenginio nustatymuose.</str
     <!-- Widget Stings -->
     <string name="widgets_select_widget">Pasirinkite valdiklį</string>
     <string name="widgets_add_widget">Pridėti valdiklį</string>
+    <string name="widgets_edit_widget">Edit Widgets</string>
+    <string name="widgets_stop_editing_widget">Stop Editing Widgets</string>
     <string name="widgets_reset_widget">Atstatyti visus valdiklius</string>
+    <string name="widgets_remove_widget">Remove all Widgets</string>
     <string name="widgets_resize">Keisti dydį</string>
     <string name="widgets_exit_resize">Išeiti iš dydžio keitimo</string>
     <string name="widgets_remove">Pašalinti valdiklį</string>
