@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### :wrench: Code Quality:
 
+* Enhance private space lock check ([c4868f42](https://github.com/DroidWorksStudio/mLauncher/commit/c4868f42))
 * Centralize widget deletion logic ([4dec18af](https://github.com/DroidWorksStudio/mLauncher/commit/4dec18af))
 
 ## [1110106 (1.11.1.6) - Multi Launcher ‧ Home Screen](https://github.com/DroidWorksStudio/mLauncher/tree/1.11.1.6) - (08, October 2025)
