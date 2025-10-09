@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [1.11.1.6 → Unreleased](https://github.com/DroidWorksStudio/mLauncher/tree/main) - In Development
 
+### :bug: Bug Fixes:
+
+* Adjust bottom margins for navigation type ([7caf5ae8](https://github.com/DroidWorksStudio/mLauncher/commit/7caf5ae8))
+
 ### :wrench: Code Quality:
 
 * Refactor profile switching in App Drawer ([58666530](https://github.com/DroidWorksStudio/mLauncher/commit/58666530))
