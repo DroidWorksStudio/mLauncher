@@ -423,7 +423,9 @@ class ResizableWidgetWrapper(
             }
         }
 
-        attachDrag(root)
+        if (WidgetFragment.isEditingWidgets) {
+            attachDrag(root)
+        }
     }
 
     private fun updateGhostPosition() {
@@ -711,16 +713,28 @@ class ResizableWidgetWrapper(
     }
 
     override fun onInterceptTouchEvent(ev: MotionEvent?): Boolean {
-        if (!isResizeMode || ev == null) return super.onInterceptTouchEvent(ev)
+        if (ev == null) return super.onInterceptTouchEvent(ev)
 
-        // Only track ACTION_DOWN to detect which handle, don't intercept yet
+        // ✅ Bypass all if global edit mode is enabled
+        if (WidgetFragment.isEditingWidgets) {
+            // Track initial touch for dragging if needed
+            if (ev.actionMasked == MotionEvent.ACTION_DOWN) {
+                lastX = ev.rawX
+                lastY = ev.rawY
+            }
+            return true
+        }
+
+        // ✅ Normal resize logic
+        if (!isResizeMode) return super.onInterceptTouchEvent(ev)
+
         if (ev.actionMasked == MotionEvent.ACTION_DOWN) {
             activeResizeHandle = getHandleAt(ev.rawX, ev.rawY)
             lastX = ev.rawX
             lastY = ev.rawY
         }
 
-        // Intercept only if touch is **outside any handle**
+        // Intercept only if touch is outside a resize handle
         return activeResizeHandle == null
     }
 

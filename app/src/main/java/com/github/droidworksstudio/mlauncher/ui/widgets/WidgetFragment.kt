@@ -67,6 +67,8 @@ class WidgetFragment : Fragment() {
         // Minimum cell count per widget
         private const val MIN_CELL_W = 2
         private const val MIN_CELL_H = 1
+
+        var isEditingWidgets: Boolean = false
     }
 
     private var activeGridDialog: LockedBottomSheetDialog? = null
@@ -238,31 +240,38 @@ class WidgetFragment : Fragment() {
             container.addView(option)
         }
 
-        addOption(getLocalizedString(R.string.widgets_add_widget)) { showCustomWidgetPicker() }
-        addOption(getLocalizedString(R.string.widgets_reset_widget)) { resetAllWidgets() }
+        if (isEditingWidgets) {
+            addOption(getLocalizedString(R.string.widgets_add_widget)) { showCustomWidgetPicker() }
+            addOption(getLocalizedString(R.string.widgets_reset_widget)) { resetAllWidgets() }
+            addOption(getLocalizedString(R.string.widgets_remove_widget)) { removeAllWidgets() }
+        }
+
+        // Toggleable edit mode option
+        val editTitle = if (isEditingWidgets) getLocalizedString(R.string.widgets_stop_editing_widget) else getLocalizedString(R.string.widgets_edit_widget)
+        addOption(editTitle) { isEditingWidgets = !isEditingWidgets }
 
         bottomSheetDialog.setContentView(container)
         bottomSheetDialog.show()
     }
 
-//    private fun resetAllWidgets() {
-//        AppLogger.w(TAG, "🧹 Resetting all widgets")
-//        widgetWrappers.forEach { wrapper ->
-//            deleteWidget(wrapper.hostView.appWidgetId)
-//        }
-//        widgetWrappers.clear()
-//        binding.widgetGrid.apply {
-//            for (i in childCount - 1 downTo 0) {
-//                val child = getChildAt(i)
-//                if (child.id != binding.emptyPlaceholder.id) {
-//                    removeViewAt(i)
-//                }
-//            }
-//        }
-//        saveWidgets()
-//        updateEmptyPlaceholder(widgetWrappers)
-//        AppLogger.i(TAG, "🧹 All widgets cleared and placeholder shown")
-//    }
+    private fun removeAllWidgets() {
+        AppLogger.w(TAG, "🧹 Removing all widgets")
+        widgetWrappers.forEach { wrapper ->
+            deleteWidget(wrapper.hostView.appWidgetId)
+        }
+        widgetWrappers.clear()
+        binding.widgetGrid.apply {
+            for (i in childCount - 1 downTo 0) {
+                val child = getChildAt(i)
+                if (child.id != binding.emptyPlaceholder.id) {
+                    removeViewAt(i)
+                }
+            }
+        }
+        saveWidgets()
+        updateEmptyPlaceholder(widgetWrappers)
+        AppLogger.i(TAG, "🧹 All widgets cleared and placeholder shown")
+    }
 
     fun deleteWidget(widgetId: Int) {
         // 1️⃣ Delete from AppWidgetHost
