@@ -36,6 +36,7 @@ class ResizableWidgetWrapper(
     val widgetInfo: AppWidgetProviderInfo,
     val appWidgetHost: AppWidgetHost,
     val onUpdate: () -> Unit,
+    val onDelete: () -> Unit,
     private val gridColumns: Int,
     private val cellMargin: Int,
     val defaultCellsW: Int = 1,
@@ -117,14 +118,19 @@ class ResizableWidgetWrapper(
         post {
             val parentFrame = parent as? FrameLayout
             val parentWidth = parentFrame?.width ?: context.resources.displayMetrics.widthPixels
+
+            // ✅ Calculate consistent grid cell size (same as in WidgetFragment)
             val cellWidth = (parentWidth - (cellMargin * (gridColumns - 1))) / gridColumns
-            val widthPx = maxOf(cellWidth, defaultCellsW * cellWidth + (defaultCellsW - 1) * cellMargin)
-            val heightPx = maxOf(cellWidth, defaultCellsH * cellWidth + (defaultCellsH - 1) * cellMargin)
+            val cellHeight = cellWidth // assuming square cells
+
+            // ✅ Calculate widget dimensions using the same logic as saving/loading
+            val widthPx = (defaultCellsW * (cellWidth + cellMargin)) - cellMargin
+            val heightPx = (defaultCellsH * (cellHeight + cellMargin)) - cellMargin
 
             layoutParams = LayoutParams(widthPx, heightPx)
-            AppLogger.d(TAG, "📐 layoutParams set to ${widthPx}x${heightPx}")
+            AppLogger.d(TAG, "📐 layoutParams set to ${widthPx}x${heightPx} for ${defaultCellsW}x${defaultCellsH} cells")
 
-            // Ensure hostView fills this wrapper and notify provider of our size
+            // ✅ Ensure hostView fills wrapper and updates provider with current size
             fillHostView(widthPx, heightPx)
         }
 
@@ -600,7 +606,7 @@ class ResizableWidgetWrapper(
         addMenuItem(getLocalizedString(R.string.widgets_remove)) {
             appWidgetHost.deleteAppWidgetId(hostView.appWidgetId)
             (parent as? ViewGroup)?.removeView(this)
-            onUpdate()
+            onDelete()
         }
 
         addMenuItem(getLocalizedString(R.string.widgets_open)) {
