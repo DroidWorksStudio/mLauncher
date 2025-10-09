@@ -118,11 +118,6 @@ for (const group of GROUP_ORDER) {
 // Fallback
 if (!commits.length) discordMessage += "No commits found.";
 
-// Append installation instructions
-discordMessage += `:inbox_tray: **Installation Instructions**\n1. Download the APK.\n2. Allow your browser/files app to install apps.\n3. Install mLauncher.\n\n`;
-
-discordMessage += `:warning: **Note for Double Tap to Lock Feature**\nManually installed APKs may block accessibility settings needed for this feature. To enable:\n1. Go to **Settings -> Apps -> Multi Launcher**\n2. Tap the three-dot menu at the top right\n3. Select Allow restricted settings\n\n`;
-
 // Append Discord Role mention
 discordMessage += `<@&${process.env.DISCORD_ROLEID}>\n\n`;
 
