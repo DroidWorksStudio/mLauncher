@@ -317,7 +317,10 @@
     <!-- Widget Stings -->
     <string name="widgets_select_widget">위젯을 선택하세요</string>
     <string name="widgets_add_widget">위젯 추가</string>
+    <string name="widgets_edit_widget">위젯 편집</string>
+    <string name="widgets_stop_editing_widget">위젯 편집 중지</string>
     <string name="widgets_reset_widget">모든 위젯 재설정</string>
+    <string name="widgets_remove_widget">모든 위젯 제거</string>
     <string name="widgets_resize">크기 조정</string>
     <string name="widgets_exit_resize">크기 조정 종료</string>
     <string name="widgets_remove">위젯 제거</string>

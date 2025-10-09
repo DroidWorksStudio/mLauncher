@@ -317,7 +317,10 @@
     <!-- Widget Stings -->
     <string name="widgets_select_widget">Selectați un widget</string>
     <string name="widgets_add_widget">Adăugați un widget</string>
+    <string name="widgets_edit_widget">Editați widget-urile</string>
+    <string name="widgets_stop_editing_widget">Opriți editarea widgeturilor</string>
     <string name="widgets_reset_widget">Resetează toate widgeturile</string>
+    <string name="widgets_remove_widget">Eliminați toate widgeturile</string>
     <string name="widgets_resize">Redimensionare</string>
     <string name="widgets_exit_resize">Ieșire din Redimensionare</string>
     <string name="widgets_remove">Eliminați widgetul</string>

@@ -317,7 +317,10 @@
     <!-- Widget Stings -->
     <string name="widgets_select_widget">Selecteer een widget</string>
     <string name="widgets_add_widget">Voeg een widget toe</string>
+    <string name="widgets_edit_widget">Widgets bewerken</string>
+    <string name="widgets_stop_editing_widget">Stop met het bewerken van widgets</string>
     <string name="widgets_reset_widget">Alle widgets resetten</string>
+    <string name="widgets_remove_widget">Verwijder alle widgets</string>
     <string name="widgets_resize">Formaat wijzigen</string>
     <string name="widgets_exit_resize">Afsluiten Formaat wijzigen</string>
     <string name="widgets_remove">Widget verwijderen</string>
