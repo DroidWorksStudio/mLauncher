@@ -89,8 +89,6 @@ class WidgetFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        AppLogger.i(TAG, "🔵 $APP_WIDGET_HOST_ID")
-
         // Back press handling for exiting resize mode
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) {
             val resizeWidget = widgetWrappers.firstOrNull { it.isResizeMode }
@@ -125,6 +123,7 @@ class WidgetFragment : Fragment() {
             appWidgetHost = AppWidgetHost(requireContext(), APP_WIDGET_HOST_ID)
             appWidgetHost.startListening()
             AppLogger.i(TAG, "🟢 AppWidgetHost started listening")
+            cleanupOrphanedWidgets()
 
             widgetGrid.apply {
                 setOnLongClickListener {
@@ -159,6 +158,22 @@ class WidgetFragment : Fragment() {
         AppLogger.i(TAG, "🔄 WidgetFragment onResume, widgets restored")
         updateEmptyPlaceholder(widgetWrappers)
     }
+
+    fun cleanupOrphanedWidgets() {
+        CoroutineScope(Dispatchers.IO).launch {
+            // Get the list of all saved widget IDs from your database
+            val savedIds = widgetDao.getAll().map { it.appWidgetId }.toSet()
+
+            val allocatedIds = appWidgetHost.appWidgetIds
+            for (id in allocatedIds) {
+                if (id !in savedIds) {
+                    appWidgetHost.deleteAppWidgetId(id)
+                    AppLogger.i(TAG, "🗑️ Deleted orphaned widgetId=$id")
+                }
+            }
+        }
+    }
+
 
     private val pendingWidgetsList = mutableListOf<Pair<AppWidgetProviderInfo, Int>>()
 
