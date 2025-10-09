@@ -91,7 +91,7 @@ class PrivateSpaceManager(private val context: Context) {
      * Check if the private space is locked.
      */
     fun isPrivateSpaceLocked(): Boolean {
-        if (!isPrivateSpaceSupported()) {
+        if (!isPrivateSpaceSupported() || !isPrivateSpaceSetUp()) {
             return false
         }
         val userManager = context.getSystemService(Context.USER_SERVICE) as UserManager
