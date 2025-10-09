@@ -6,8 +6,13 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### :wrench: Code Quality:
 
+* Refactor profile switching in App Drawer ([58666530](https://github.com/DroidWorksStudio/mLauncher/commit/58666530))
 * Enhance private space lock check ([c4868f42](https://github.com/DroidWorksStudio/mLauncher/commit/c4868f42))
 * Centralize widget deletion logic ([4dec18af](https://github.com/DroidWorksStudio/mLauncher/commit/4dec18af))
+
+### :globe_with_meridians: Localization:
+
+* Updated Language Files. ([#924](https://github.com/DroidWorksStudio/mLauncher/pull/924)) ([b55821fe](https://github.com/DroidWorksStudio/mLauncher/commit/b55821fe))
 
 ## [1110106 (1.11.1.6) - Multi Launcher ‧ Home Screen](https://github.com/DroidWorksStudio/mLauncher/tree/1.11.1.6) - (08, October 2025)
 
