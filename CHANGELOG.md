@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### :sparkles: Enhancements:
 
+* Introduce widget edit mode ([20b67d40](https://github.com/DroidWorksStudio/mLauncher/commit/20b67d40))
 * Add cleanup for orphaned widgets ([81415b8a](https://github.com/DroidWorksStudio/mLauncher/commit/81415b8a))
 
 ### :bug: Bug Fixes:
