@@ -317,7 +317,10 @@
     <!-- Widget Stings -->
     <string name="widgets_select_widget">حدد عنصر واجهة المستخدم</string>
     <string name="widgets_add_widget">إضافة أداة</string>
+    <string name="widgets_edit_widget">Edit Widgets</string>
+    <string name="widgets_stop_editing_widget">Stop Editing Widgets</string>
     <string name="widgets_reset_widget">إعادة تعيين جميع الأدوات</string>
+    <string name="widgets_remove_widget">Remove all Widgets</string>
     <string name="widgets_resize">تغيير الحجم</string>
     <string name="widgets_exit_resize">الخروج من تغيير الحجم</string>
     <string name="widgets_remove">إزالة الأداة</string>
