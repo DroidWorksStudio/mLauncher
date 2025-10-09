@@ -17,18 +17,18 @@
     <string name="grant_location_permission">Pentru a continua, acordați permisiunea Locație.</string>
     <string name="reason_location_permission">Această aplicație are nevoie de Acces la Locație pentru a oferi actualizări meteo precise în funcție de locația dvs. actuală. Nu colectăm și nu partajăm date personale.</string>
     <string name="grant_accessibility_permission">Pentru a continua, vă rugăm să acordați permisiunea de Accesibilitate.</string>
-    <string name="reason_accessibility_permission">MultiLauncher necesită permisiunea de Accesibilitate pentru a oferi funcții îmbunătățite, cum ar fi blocarea ecranului și deschiderea setărilor rapide. Aceste funcții ajută la îmbunătățirea utilizabilității. Nu colectăm și nu partajăm date.</string>
+    <string name="reason_accessibility_permission">MultiLauncher necesită permisiunea de Accesibilitate pentru a oferi funcții îmbunătățite, cum ar fi blocarea ecranului și deschiderea setărilor rapide. Aceste funcții ajută la îmbunătățirea utilizări. Nu colectăm și nu partajăm date.</string>
     <string name="permission_granted">Permisiune acordată! Puteți continua.</string>
     <string name="this_can_be_disabled_later">Această permisiune poate fi dezactivată ulterior.</string>
     <!-- Strings used for settings menus -->
     <string name="settings_name">Setări MultiLauncher</string>
     <string name="settings_features_title">Caracteristici</string>
     <string name="settings_features_description">Îmbunătățește-ți productivitatea.</string>
-    <string name="settings_look_feel_title">Privește &amp; Simte</string>
+    <string name="settings_look_feel_title">Aspect &amp; funcționalitate</string>
     <string name="settings_look_feel_description">Dă ecranului tău de pornire o notă personală.</string>
     <string name="settings_gestures_title">Gesturi</string>
     <string name="settings_gestures_description">Personalizați gesturile pentru o navigare rapidă și ușoară.</string>
-    <string name="settings_notes_title">Note</string>
+    <string name="settings_notes_title">Notițe</string>
     <string name="settings_notes_description">Personalizează-ți notițele pentru a se potrivi stilului tău.</string>
     <!-- Favorite Apps -->
     <!-- Favorite Apps -->
@@ -72,7 +72,7 @@
     <string name="pages_on_home_screen">Număr de pagini</string>
     <string name="enable_home_pager">Activează pagina principală</string>
     <string name="enable_app_timer">Activează temporizatorul aplicației</string>
-    <string name="info_tiles">Dale de informații</string>
+    <string name="info_tiles">Secțiuni Rapide</string>
     <string name="show_clock">Afișați ceasul</string>
     <string name="show_clock_format">Formatul emisiunii (AM/PM)</string>
     <string name="show_date">Data afișajului</string>
@@ -266,7 +266,7 @@
     <string name="right">Corect</string>
     <string name="center">Centru</string>
     <string name="dark">Întuneric</string>
-    <string name="light">Aprinde</string>
+    <string name="light">Alb</string>
     <string name="system_default">Sistem</string>
     <string name="system_custom">Personalizat</string>
     <string name="system_custom_plus">Personalizat (%1$s)</string>
@@ -286,7 +286,7 @@
     <string name="okay">Bine</string>
     <string name="apply">Aplică</string>
     <string name="reset">Resetare</string>
-    <string name="cancel">Anula</string>
+    <string name="cancel">Anulează</string>
     <string name="save">Salva</string>
     <string name="disabled">Persoane cu dizabilități</string>
     <string name="open">Deschide</string>
