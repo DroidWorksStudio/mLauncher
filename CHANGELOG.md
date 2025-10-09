@@ -23,6 +23,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### :globe_with_meridians: Localization:
 
+* Updated Language Files. ([#926](https://github.com/DroidWorksStudio/mLauncher/pull/926)) ([d900ead5](https://github.com/DroidWorksStudio/mLauncher/commit/d900ead5))
 * Updated Language Files. ([#925](https://github.com/DroidWorksStudio/mLauncher/pull/925)) ([dbbd0cf1](https://github.com/DroidWorksStudio/mLauncher/commit/dbbd0cf1))
 * Updated Language Files. ([#924](https://github.com/DroidWorksStudio/mLauncher/pull/924)) ([b55821fe](https://github.com/DroidWorksStudio/mLauncher/commit/b55821fe))
 
