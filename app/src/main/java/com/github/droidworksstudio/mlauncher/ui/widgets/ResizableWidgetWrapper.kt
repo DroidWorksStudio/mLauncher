@@ -216,8 +216,8 @@ class ResizableWidgetWrapper(
         background = GradientDrawable().apply {
             shape = GradientDrawable.RECTANGLE
             cornerRadius = 8f
-            setColor("#2626C6A0".toColorInt()) // semi-transparent fill
-            setStroke(4, "#FF26C6A0".toColorInt()) // optional outline
+            setColor("#26A6DA95".toColorInt()) // semi-transparent fill
+            setStroke(4, "#FFA6DA95".toColorInt()) // optional outline
         }
         visibility = GONE
     }
@@ -354,7 +354,7 @@ class ResizableWidgetWrapper(
             // Attach long-press menu and drag to this view
             val gestureDetector = GestureDetector(context, object : GestureDetector.SimpleOnGestureListener() {
                 override fun onLongPress(e: MotionEvent) {
-                    if (!isResizeMode) {  // <-- Only show menu if NOT resizing
+                    if (!isResizeMode && WidgetFragment.isEditingWidgets) {
                         showWidgetMenu()
                     }
                 }
@@ -367,6 +367,9 @@ class ResizableWidgetWrapper(
                 if (v in skipViews) return@setOnTouchListener false
                 gestureDetector.onTouchEvent(event)
                 if (isResizeMode) return@setOnTouchListener false
+
+                // 🟡 If not in global edit mode, don't consume — allow normal widget touch behavior
+                if (!WidgetFragment.isEditingWidgets) return@setOnTouchListener false
 
                 when (event.actionMasked) {
                     MotionEvent.ACTION_DOWN -> {
@@ -423,9 +426,7 @@ class ResizableWidgetWrapper(
             }
         }
 
-        if (WidgetFragment.isEditingWidgets) {
-            attachDrag(root)
-        }
+        attachDrag(root)
     }
 
     private fun updateGhostPosition() {

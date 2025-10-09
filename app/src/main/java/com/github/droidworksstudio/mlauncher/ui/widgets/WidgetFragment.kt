@@ -9,6 +9,7 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Typeface
 import android.graphics.drawable.Drawable
+import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
 import android.view.Gravity
 import android.view.LayoutInflater
@@ -20,6 +21,7 @@ import android.widget.LinearLayout
 import android.widget.ScrollView
 import android.widget.TextView
 import androidx.activity.addCallback
+import androidx.core.graphics.toColorInt
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
@@ -248,7 +250,21 @@ class WidgetFragment : Fragment() {
 
         // Toggleable edit mode option
         val editTitle = if (isEditingWidgets) getLocalizedString(R.string.widgets_stop_editing_widget) else getLocalizedString(R.string.widgets_edit_widget)
-        addOption(editTitle) { isEditingWidgets = !isEditingWidgets }
+        addOption(editTitle) {
+            // Toggle edit mode
+            isEditingWidgets = !isEditingWidgets
+
+            if (isEditingWidgets) {
+                // Add a visible border to the widget grid
+                val border = GradientDrawable().apply {
+                    setStroke(4, "#FFF5A97F".toColorInt())
+                }
+                binding.widgetGrid.background = border
+            } else {
+                // Remove the border
+                binding.widgetGrid.background = null
+            }
+        }
 
         bottomSheetDialog.setContentView(container)
         bottomSheetDialog.show()
