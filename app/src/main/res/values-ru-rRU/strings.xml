@@ -317,10 +317,10 @@
     <!-- Widget Stings -->
     <string name="widgets_select_widget">Выберите виджет</string>
     <string name="widgets_add_widget">Добавить виджет</string>
-    <string name="widgets_edit_widget">Edit Widgets</string>
-    <string name="widgets_stop_editing_widget">Stop Editing Widgets</string>
+    <string name="widgets_edit_widget">Редактировать виджеты</string>
+    <string name="widgets_stop_editing_widget">Остановить редактирование виджетов</string>
     <string name="widgets_reset_widget">Сбросить все виджеты</string>
-    <string name="widgets_remove_widget">Remove all Widgets</string>
+    <string name="widgets_remove_widget">Удалить все виджеты</string>
     <string name="widgets_resize">Изменить размер</string>
     <string name="widgets_exit_resize">Выход из изменения размера</string>
     <string name="widgets_remove">Удалить виджет</string>
