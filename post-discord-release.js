@@ -12,6 +12,7 @@ const commitParsers = [
     { message: /^chore\(release\): prepare for/i, skip: true },
     { message: /^chore\(deps.*\)/i, skip: true },
     { message: /^chore\(change.*\)/i, skip: true },
+	{ message: /^(lang|i18n)/i, skip: true },
     { message: /^chore\(pr\)/i, skip: true },
     { message: /^chore\(pull\)/i, skip: true },
     { message: /^fixes/i, skip: true },
@@ -27,9 +28,6 @@ const commitParsers = [
 
     // Documentation
     { message: /^doc/i, group: "### :books: Documentation:" },
-
-    // Localization & internationalization
-    { message: /^(lang|i18n)/i, group: "### :globe_with_meridians: Localization:" },
 
     // Security
     { message: /^security/i, group: "### :lock: Security:" },
