@@ -27,7 +27,6 @@ import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.widget.SearchView
 import androidx.core.net.toUri
-import androidx.core.os.bundleOf
 import androidx.core.view.isVisible
 import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.Observer
@@ -105,7 +104,9 @@ class AppDrawerFragment : BaseFragment() {
 
             sidebarContainer.layoutParams = layoutParams
 
-            searchSwitcher.setOnClickListener { switchMenus() }
+            searchSwitcher.setOnClickListener {
+                switchMenus()
+            }
             menuView.displayedChild = 0
         }
 
@@ -125,7 +126,7 @@ class AppDrawerFragment : BaseFragment() {
         val flag = AppDrawerFlag.valueOf(flagString)
         val n = arguments?.getInt("n", 0) ?: 0
 
-        val profileType = arguments?.getString("profileType", null)
+        val profileType: String = arguments?.getString("profileType", "SYSTEM") ?: "SYSTEM"
 
         when (flag) {
             AppDrawerFlag.SetDoubleTap,
@@ -401,40 +402,9 @@ class AppDrawerFragment : BaseFragment() {
             val appListButtonFlags = prefs.getMenuFlags("APPLIST_BUTTON_FLAGS", "00")
             when (flag) {
                 AppDrawerFlag.LaunchApp -> {
-                    when (profileType) {
-                        "WORK" -> binding.search.queryHint = getLocalizedString(R.string.show_work_apps)
-                        "PRIVATE" -> binding.search.queryHint = getLocalizedString(R.string.show_private_apps)
-                        else -> binding.search.queryHint = getLocalizedString(R.string.show_apps)
-                    }
-                    binding.workApps.apply {
-                        isVisible = ((prefs.getProfileCounter("WORK") > 0) && profileType != "WORK")
-                        setOnClickListener {
-                            findNavController().navigate(
-                                R.id.action_appListFragment_to_appListFragment,
-                                bundleOf("flag" to flag.toString(), "n" to view.id, "profileType" to "WORK")
-                            )
-                        }
-                    }
+                    setupProfileButtons(flag, viewModel, appAdapter, contactAdapter, profileType)
 
-                    binding.privateApps.apply {
-                        isVisible = ((prefs.getProfileCounter("PRIVATE") > 0) && profileType != "PRIVATE" && !PrivateSpaceManager(requireContext()).isPrivateSpaceLocked() && ismlauncherDefault(requireContext()))
-                        setOnClickListener {
-                            findNavController().navigate(
-                                R.id.action_appListFragment_to_appListFragment,
-                                bundleOf("flag" to flag.toString(), "n" to view.id, "profileType" to "PRIVATE")
-                            )
-                        }
-                    }
 
-                    binding.systemApps.apply {
-                        isVisible = ((prefs.getProfileCounter("SYSTEM") > 0) && profileType != "SYSTEM")
-                        setOnClickListener {
-                            findNavController().navigate(
-                                R.id.action_appListFragment_to_appListFragment,
-                                bundleOf("flag" to flag.toString(), "n" to view.id, "profileType" to "SYSTEM")
-                            )
-                        }
-                    }
                     binding.internetSearch.apply {
                         isVisible = appListButtonFlags[0]
                         setOnClickListener {
@@ -445,7 +415,14 @@ class AppDrawerFragment : BaseFragment() {
                     }
                     binding.searchSwitcher.apply {
                         if (hasContactsPermission(context)) {
-                            isVisible = appListButtonFlags[1]
+                            when (profileType) {
+                                "WORK", "PRIVATE" -> isVisible = false
+                                else -> {
+                                    isVisible = appListButtonFlags[1]
+                                    setOnClickListener { switchMenus() }
+                                }
+
+                            }
                         } else {
                             binding.menuView.displayedChild = 0
                         }
@@ -523,6 +500,61 @@ class AppDrawerFragment : BaseFragment() {
             }
         })
     }
+
+    private fun setupProfileButtons(
+        flag: AppDrawerFlag,
+        viewModel: MainViewModel,
+        appAdapter: AppDrawerAdapter?,
+        contactAdapter: ContactDrawerAdapter?,
+        profileType: String
+    ) {
+        var currentProfileType = profileType
+
+        fun updateProfileUI(profileType: String) {
+            currentProfileType = profileType
+
+            val isWorkProfileAvailable = prefs.getProfileCounter("WORK") > 0 && profileType != "WORK"
+            val isPrivateProfileAvailable = prefs.getProfileCounter("PRIVATE") > 0 &&
+                    profileType != "PRIVATE" &&
+                    !PrivateSpaceManager(requireContext()).isPrivateSpaceLocked() &&
+                    ismlauncherDefault(requireContext())
+            val isSystemProfileAvailable = prefs.getProfileCounter("SYSTEM") > 0 && profileType != "SYSTEM"
+
+            binding.workApps.isVisible = isWorkProfileAvailable
+            binding.privateApps.isVisible = isPrivateProfileAvailable
+            binding.systemApps.isVisible = isSystemProfileAvailable
+
+            binding.search.queryHint = when (profileType) {
+                "WORK" -> getLocalizedString(R.string.show_work_apps)
+                "PRIVATE" -> getLocalizedString(R.string.show_private_apps)
+                else -> getLocalizedString(R.string.show_apps)
+            }
+        }
+
+        fun onProfileClicked(newType: String) {
+            binding.menuView.displayedChild = 0
+            if (appAdapter != null && contactAdapter != null) {
+                initViewModel(flag, viewModel, appAdapter, contactAdapter, newType)
+            }
+            setAppViewDetails()
+            updateProfileUI(newType)
+        }
+
+        // Initial setup
+        updateProfileUI(currentProfileType)
+
+        // Button listeners
+        binding.workApps.setOnClickListener {
+            onProfileClicked("WORK")
+        }
+        binding.privateApps.setOnClickListener {
+            onProfileClicked("PRIVATE")
+        }
+        binding.systemApps.setOnClickListener {
+            onProfileClicked("SYSTEM")
+        }
+    }
+
 
     fun switchMenus() {
         binding.apply {
