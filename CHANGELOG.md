@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 ## [1.11.1.6 → Unreleased](https://github.com/DroidWorksStudio/mLauncher/tree/main) - In Development
 
+### :sparkles: Enhancements:
+
+* Add cleanup for orphaned widgets ([81415b8a](https://github.com/DroidWorksStudio/mLauncher/commit/81415b8a))
+
 ### :bug: Bug Fixes:
 
 * Adjust bottom margins for navigation type ([7caf5ae8](https://github.com/DroidWorksStudio/mLauncher/commit/7caf5ae8))
