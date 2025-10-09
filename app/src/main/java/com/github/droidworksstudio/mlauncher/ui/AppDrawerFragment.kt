@@ -37,6 +37,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.github.droidworksstudio.common.AppLogger
 import com.github.droidworksstudio.common.getLocalizedString
 import com.github.droidworksstudio.common.hasSoftKeyboard
+import com.github.droidworksstudio.common.isGestureNavigationEnabled
 import com.github.droidworksstudio.common.isSystemApp
 import com.github.droidworksstudio.common.searchCustomSearchEngine
 import com.github.droidworksstudio.common.searchOnPlayStore
@@ -88,7 +89,18 @@ class AppDrawerFragment : BaseFragment() {
             prefs.firstSettingsOpen = false
         }
 
+        // Check if device is using gesture navigation or 3-button navigation
+        val isGestureNav = isGestureNavigationEnabled(requireContext())
+
         binding.apply {
+            val params = menuView.layoutParams as ViewGroup.MarginLayoutParams
+            if (isGestureNav) {
+                params.bottomMargin = resources.getDimensionPixelSize(R.dimen.bottom_margin_gesture_nav) // or just in px
+            } else {
+                params.bottomMargin = resources.getDimensionPixelSize(R.dimen.bottom_margin_3_button_nav) // or just in px
+            }
+            menuView.layoutParams = params
+
             val layoutParams = sidebarContainer.layoutParams as RelativeLayout.LayoutParams
 
             // Clear old alignment rules

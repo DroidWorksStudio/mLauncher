@@ -905,14 +905,14 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
             // Check if device is using gesture navigation or 3-button navigation
             val isGestureNav = isGestureNavigationEnabled(requireContext())
 
-            val numOfElements = 5
+            val numOfElements = 6
             val incrementBy = 35
             // Set margins based on navigation mode
             val margins = if (isGestureNav) {
-                val startAt = 50
+                val startAt = resources.getDimensionPixelSize(R.dimen.bottom_margin_gesture_nav)
                 List(numOfElements) { index -> startAt + (index * incrementBy) } // Adjusted margins for gesture navigation
             } else {
-                val startAt = 100
+                val startAt = resources.getDimensionPixelSize(R.dimen.bottom_margin_3_button_nav)
                 List(numOfElements) { index -> startAt + (index * incrementBy) } // Adjusted margins for 3-button navigation
             }
 

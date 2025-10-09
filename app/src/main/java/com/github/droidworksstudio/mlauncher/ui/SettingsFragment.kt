@@ -38,6 +38,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.TextUnit
@@ -489,10 +490,10 @@ class SettingsFragment : BaseFragment() {
                         },
                     )
 
-                    if (!isGestureNavigationEnabled(context)) {
-                        Spacer(modifier = Modifier.height(52.dp))
+                    if (isGestureNavigationEnabled(context)) {
+                        Spacer(modifier = Modifier.height(dimensionResource(R.dimen.bottom_margin_gesture_nav)))
                     } else {
-                        Spacer(modifier = Modifier.height(32.dp))
+                        Spacer(modifier = Modifier.height(dimensionResource(R.dimen.bottom_margin_3_button_nav)))
                     }
                 }
 
@@ -1061,10 +1062,10 @@ class SettingsFragment : BaseFragment() {
                         )
                     }
 
-                    if (!isGestureNavigationEnabled(context)) {
-                        Spacer(modifier = Modifier.height(52.dp))
+                    if (isGestureNavigationEnabled(context)) {
+                        Spacer(modifier = Modifier.height(dimensionResource(R.dimen.bottom_margin_gesture_nav)))
                     } else {
-                        Spacer(modifier = Modifier.height(32.dp))
+                        Spacer(modifier = Modifier.height(dimensionResource(R.dimen.bottom_margin_3_button_nav)))
                     }
                 }
 
@@ -1753,10 +1754,10 @@ class SettingsFragment : BaseFragment() {
                         }
                     )
 
-                    if (!isGestureNavigationEnabled(context)) {
-                        Spacer(modifier = Modifier.height(52.dp))
+                    if (isGestureNavigationEnabled(context)) {
+                        Spacer(modifier = Modifier.height(dimensionResource(R.dimen.bottom_margin_gesture_nav)))
                     } else {
-                        Spacer(modifier = Modifier.height(32.dp))
+                        Spacer(modifier = Modifier.height(dimensionResource(R.dimen.bottom_margin_3_button_nav)))
                     }
                 }
 
@@ -2224,10 +2225,10 @@ class SettingsFragment : BaseFragment() {
                         }
                     )
 
-                    if (!isGestureNavigationEnabled(context)) {
-                        Spacer(modifier = Modifier.height(52.dp))
+                    if (isGestureNavigationEnabled(context)) {
+                        Spacer(modifier = Modifier.height(dimensionResource(R.dimen.bottom_margin_gesture_nav)))
                     } else {
-                        Spacer(modifier = Modifier.height(32.dp))
+                        Spacer(modifier = Modifier.height(dimensionResource(R.dimen.bottom_margin_3_button_nav)))
                     }
                 }
 
@@ -2415,10 +2416,10 @@ class SettingsFragment : BaseFragment() {
                         }
                     )
 
-                    if (!isGestureNavigationEnabled(context)) {
-                        Spacer(modifier = Modifier.height(52.dp))
+                    if (isGestureNavigationEnabled(context)) {
+                        Spacer(modifier = Modifier.height(dimensionResource(R.dimen.bottom_margin_gesture_nav)))
                     } else {
-                        Spacer(modifier = Modifier.height(32.dp))
+                        Spacer(modifier = Modifier.height(dimensionResource(R.dimen.bottom_margin_3_button_nav)))
                     }
                 }
 
@@ -2580,10 +2581,10 @@ class SettingsFragment : BaseFragment() {
                         }
                     )
 
-                    if (!isGestureNavigationEnabled(context)) {
-                        Spacer(modifier = Modifier.height(52.dp))
+                    if (isGestureNavigationEnabled(context)) {
+                        Spacer(modifier = Modifier.height(dimensionResource(R.dimen.bottom_margin_gesture_nav)))
                     } else {
-                        Spacer(modifier = Modifier.height(32.dp))
+                        Spacer(modifier = Modifier.height(dimensionResource(R.dimen.bottom_margin_3_button_nav)))
                     }
                 }
 
@@ -2675,10 +2676,10 @@ class SettingsFragment : BaseFragment() {
                         }
                     )
 
-                    if (!isGestureNavigationEnabled(context)) {
-                        Spacer(modifier = Modifier.height(52.dp))
+                    if (isGestureNavigationEnabled(context)) {
+                        Spacer(modifier = Modifier.height(dimensionResource(R.dimen.bottom_margin_gesture_nav)))
                     } else {
-                        Spacer(modifier = Modifier.height(32.dp))
+                        Spacer(modifier = Modifier.height(dimensionResource(R.dimen.bottom_margin_3_button_nav)))
                     }
                 }
             }
