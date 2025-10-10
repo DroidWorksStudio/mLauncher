@@ -717,7 +717,7 @@ class ResizableWidgetWrapper(
         if (ev == null) return super.onInterceptTouchEvent(ev)
 
         // ✅ Bypass all if global edit mode is enabled
-        if (WidgetFragment.isEditingWidgets) {
+        if (!isResizeMode && WidgetFragment.isEditingWidgets) {
             // Track initial touch for dragging if needed
             if (ev.actionMasked == MotionEvent.ACTION_DOWN) {
                 lastX = ev.rawX
