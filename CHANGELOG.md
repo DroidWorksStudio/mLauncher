@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
+## [1.11.2.0 → Unreleased](https://github.com/DroidWorksStudio/mLauncher/tree/main) - In Development
+
+### :sparkles: Enhancements:
+
+* Allow adding widgets outside of edit mode ([188953c0](https://github.com/DroidWorksStudio/mLauncher/commit/188953c0))
+
+### :wrench: Code Quality:
+
+* Correct widget placement and sizing logic ([8839955c](https://github.com/DroidWorksStudio/mLauncher/commit/8839955c))
+* Prevent drag conflicts during resize ([12006120](https://github.com/DroidWorksStudio/mLauncher/commit/12006120))
+* Reset edit mode on fragment start ([a7b7adc2](https://github.com/DroidWorksStudio/mLauncher/commit/a7b7adc2))
+
 ## [1110200 (1.11.2.0) - Multi Launcher ‧ Home Screen](https://github.com/DroidWorksStudio/mLauncher/tree/1.11.2.0) - (09, October 2025)
 
 ### :sparkles: Enhancements:
