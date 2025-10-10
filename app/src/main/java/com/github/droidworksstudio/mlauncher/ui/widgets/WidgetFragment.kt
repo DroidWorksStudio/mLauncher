@@ -156,6 +156,11 @@ class WidgetFragment : Fragment() {
         }
     }
 
+    override fun onStart() {
+        super.onStart()
+        isEditingWidgets = false
+    }
+
     override fun onResume() {
         super.onResume()
         restoreWidgets()
