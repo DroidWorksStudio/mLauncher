@@ -8,53 +8,53 @@ const REPO_URL = "https://github.com/DroidWorksStudio/mLauncher";
 
 // Commit parsing rules
 const commitParsers = [
-    // Skip some "noise" commits
-    { message: /^chore\(release\): prepare for/i, skip: true },
-    { message: /^chore\(deps.*\)/i, skip: true },
-    { message: /^chore\(change.*\)/i, skip: true },
+	// Skip some "noise" commits
+	{ message: /^chore\(release\): prepare for/i, skip: true },
+	{ message: /^chore\(deps.*\)/i, skip: true },
+	{ message: /^chore\(change.*\)/i, skip: true },
 	{ message: /^(lang|i18n)/i, skip: true },
-    { message: /^chore\(pr\)/i, skip: true },
-    { message: /^chore\(pull\)/i, skip: true },
-    { message: /^fixes/i, skip: true },
+	{ message: /^chore\(pr\)/i, skip: true },
+	{ message: /^chore\(pull\)/i, skip: true },
+	{ message: /^fixes/i, skip: true },
 
-    // Enhancements (new features, improvements, UX, performance)
-    { message: /^feat|^perf|^style|^ui|^ux/i, group: "### :sparkles: Enhancements:" },
+	// Enhancements (new features, improvements, UX, performance)
+	{ message: /^feat|^perf|^style|^ui|^ux/i, group: "### :sparkles: Enhancements:" },
 
-    // Bug fixes & hotfixes
-    { message: /^fix|^bug|^hotfix|^emergency/i, group: "### :bug: Bug Fixes:" },
+	// Bug fixes & hotfixes
+	{ message: /^fix|^bug|^hotfix|^emergency/i, group: "### :bug: Bug Fixes:" },
 
-    // Code quality (refactors, cleanup without changing behavior)
-    { message: /^refactor/i, group: "### :wrench: Code Quality:" },
+	// Code quality (refactors, cleanup without changing behavior)
+	{ message: /^refactor/i, group: "### :wrench: Code Quality:" },
 
-    // Documentation
-    { message: /^doc/i, group: "### :books: Documentation:" },
+	// Documentation
+	{ message: /^doc/i, group: "### :books: Documentation:" },
 
-    // Security
-    { message: /^security/i, group: "### :lock: Security:" },
+	// Security
+	{ message: /^security/i, group: "### :lock: Security:" },
 
-    // Feature removal / drops
-    { message: /^drop|^remove|^deprecated/i, group: "### :x: Feature Removals:" },
+	// Feature removal / drops
+	{ message: /^drop|^remove|^deprecated/i, group: "### :x: Feature Removals:" },
 
-    // Reverts
-    { message: /^revert/i, group: "### :rewind: Reverts:" },
+	// Reverts
+	{ message: /^revert/i, group: "### :rewind: Reverts:" },
 
-    // Build-related
-    { message: /^build/i, group: "### :building_construction: Build:" },
+	// Build-related
+	{ message: /^build/i, group: "### :building_construction: Build:" },
 
-    // Dependencies-related
-    { message: /^dependency|^deps/i, group: "### :package: Dependencies:" },
+	// Dependencies-related
+	{ message: /^dependency|^deps/i, group: "### :package: Dependencies:" },
 
-    // Meta: configuration, CI/CD, versioning, releases
-    { message: /^config|^configuration|^ci|^pipeline|^release|^version|^versioning/i, group: "### :gear: Meta:" },
+	// Meta: configuration, CI/CD, versioning, releases
+	{ message: /^config|^configuration|^ci|^pipeline|^release|^version|^versioning/i, group: "### :gear: Meta:" },
 
-    // Tests
-    { message: /^test/i, group: "### :test_tube: Tests:" },
+	// Tests
+	{ message: /^test/i, group: "### :test_tube: Tests:" },
 
-    // Infrastructure & Ops
-    { message: /^infra|^infrastructure|^ops/i, group: "### :office: Infrastructure & Ops:" },
+	// Infrastructure & Ops
+	{ message: /^infra|^infrastructure|^ops/i, group: "### :office: Infrastructure & Ops:" },
 
-    // Chore & cleanup
-    { message: /^chore|^housekeeping|^cleanup|^clean\(up\)/i, group: "### :broom: Maintenance & Cleanup:" },
+	// Chore & cleanup
+	{ message: /^chore|^housekeeping|^cleanup|^clean\(up\)/i, group: "### :broom: Maintenance & Cleanup:" },
 ];
 
 const GROUP_ORDER = commitParsers.filter((p) => !p.skip).map((p) => p.group);
@@ -65,7 +65,7 @@ function run(cmd) {
 
 function cleanMessage(message) {
 	// Remove conventional commit type (feat, fix, etc.), with optional scope (...) and colon
-	return message.replace(/^(feat|fix|fixed|bug|lang|i18n|doc|docs|perf|refactor|style|ui|ux|security|revert|release|dependency|deps|build|ci|pipeline|chore|housekeeping|version|versioning|config|configuration|cleanup|clean\(up\)|drop|remove|deprecated|hotfix|emergency|test|infra|infrastructure|ops|asset|content|exp|experiment|prototype)\s*(\(.+?\))?:\s*/i,"");
+	return message.replace(/^(feat|fix|fixed|bug|lang|i18n|doc|docs|perf|refactor|style|ui|ux|security|revert|release|dependency|deps|build|ci|pipeline|chore|housekeeping|version|versioning|config|configuration|cleanup|clean\(up\)|drop|remove|deprecated|hotfix|emergency|test|infra|infrastructure|ops|asset|content|exp|experiment|prototype)\s*(\(.+?\))?:\s*/i, "");
 }
 
 function linkPR(message) {
@@ -111,8 +111,8 @@ for (const c of commits) {
 let discordMessage = `## Multi Launcher ${latestTag}\n\n`;
 
 for (const group of GROUP_ORDER) {
-    if (!groups[group] || groups[group].length === 0) continue;
-    discordMessage += `${group}\n${groups[group].join("\n")}\n\n`;
+	if (!groups[group] || groups[group].length === 0) continue;
+	discordMessage += `${group}\n${groups[group].join("\n")}\n\n`;
 }
 
 // Fallback
@@ -126,9 +126,9 @@ discordMessage += `:arrow_down:  [Direct APK Download](<${REPO_URL}/releases/dow
 
 // Send to Discord
 const payload = JSON.stringify({
-    content: discordMessage,
-    username: "Multi Launcher Updates",
-    avatar_url: "https://github.com/DroidWorksStudio/mLauncher/blob/main/fastlane/metadata/android/en-US/images/icon.png?raw=true",
+	content: discordMessage,
+	username: "Multi Launcher Updates",
+	avatar_url: "https://github.com/DroidWorksStudio/mLauncher/blob/main/fastlane/metadata/android/en-US/images/icon.png?raw=true",
 });
 
 const url = new URL(WEBHOOK_URL);

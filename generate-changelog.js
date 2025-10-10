@@ -25,55 +25,55 @@ function log(...args) {
 
 // Commit parsing rules
 const commitParsers = [
-    // Skip some "noise" commits
-    { message: /^chore\(release\): prepare for/i, skip: true },
-    { message: /^chore\(deps.*\)/i, skip: true },
-    { message: /^chore\(change.*\)/i, skip: true },
-    { message: /^chore\(pr\)/i, skip: true },
-    { message: /^chore\(pull\)/i, skip: true },
-    { message: /^fixes/i, skip: true },
+	// Skip some "noise" commits
+	{ message: /^chore\(release\): prepare for/i, skip: true },
+	{ message: /^chore\(deps.*\)/i, skip: true },
+	{ message: /^chore\(change.*\)/i, skip: true },
+	{ message: /^chore\(pr\)/i, skip: true },
+	{ message: /^chore\(pull\)/i, skip: true },
+	{ message: /^fixes/i, skip: true },
 
-    // Enhancements (new features, improvements, UX, performance)
-    { message: /^feat|^perf|^style|^ui|^ux/i, group: "### :sparkles: Enhancements:" },
+	// Enhancements (new features, improvements, UX, performance)
+	{ message: /^feat|^perf|^style|^ui|^ux/i, group: "### :sparkles: Enhancements:" },
 
-    // Bug fixes & hotfixes
-    { message: /^fix|^bug|^hotfix|^emergency/i, group: "### :bug: Bug Fixes:" },
+	// Bug fixes & hotfixes
+	{ message: /^fix|^bug|^hotfix|^emergency/i, group: "### :bug: Bug Fixes:" },
 
-    // Code quality (refactors, cleanup without changing behavior)
-    { message: /^refactor/i, group: "### :wrench: Code Quality:" },
+	// Code quality (refactors, cleanup without changing behavior)
+	{ message: /^refactor/i, group: "### :wrench: Code Quality:" },
 
-    // Documentation
-    { message: /^doc/i, group: "### :books: Documentation:" },
+	// Documentation
+	{ message: /^doc/i, group: "### :books: Documentation:" },
 
-    // Localization & internationalization
-    { message: /^(lang|i18n)/i, group: "### :globe_with_meridians: Localization:" },
+	// Localization & internationalization
+	{ message: /^(lang|i18n)/i, group: "### :globe_with_meridians: Localization:" },
 
-    // Security
-    { message: /^security/i, group: "### :lock: Security:" },
+	// Security
+	{ message: /^security/i, group: "### :lock: Security:" },
 
-    // Feature removal / drops
-    { message: /^drop|^remove|^deprecated/i, group: "### :x: Feature Removals:" },
+	// Feature removal / drops
+	{ message: /^drop|^remove|^deprecated/i, group: "### :x: Feature Removals:" },
 
-    // Reverts
-    { message: /^revert/i, group: "### :rewind: Reverts:" },
+	// Reverts
+	{ message: /^revert/i, group: "### :rewind: Reverts:" },
 
-    // Build-related
-    { message: /^build/i, group: "### :building_construction: Build:" },
+	// Build-related
+	{ message: /^build/i, group: "### :building_construction: Build:" },
 
-    // Dependencies-related
-    { message: /^dependency|^deps/i, group: "### :package: Dependencies:" },
+	// Dependencies-related
+	{ message: /^dependency|^deps/i, group: "### :package: Dependencies:" },
 
-    // Meta: configuration, CI/CD, versioning, releases
-    { message: /^config|^configuration|^ci|^pipeline|^release|^version|^versioning/i, group: "### :gear: Meta:" },
+	// Meta: configuration, CI/CD, versioning, releases
+	{ message: /^config|^configuration|^ci|^pipeline|^release|^version|^versioning/i, group: "### :gear: Meta:" },
 
-    // Tests
-    { message: /^test/i, group: "### :test_tube: Tests:" },
+	// Tests
+	{ message: /^test/i, group: "### :test_tube: Tests:" },
 
-    // Infrastructure & Ops
-    { message: /^infra|^infrastructure|^ops/i, group: "### :office: Infrastructure & Ops:" },
+	// Infrastructure & Ops
+	{ message: /^infra|^infrastructure|^ops/i, group: "### :office: Infrastructure & Ops:" },
 
-    // Chore & cleanup
-    { message: /^chore|^housekeeping|^cleanup|^clean\(up\)/i, group: "### :broom: Maintenance & Cleanup:" },
+	// Chore & cleanup
+	{ message: /^chore|^housekeeping|^cleanup|^clean\(up\)/i, group: "### :broom: Maintenance & Cleanup:" },
 ];
 
 const GROUP_ORDER = commitParsers.filter((p) => !p.skip).map((p) => p.group);
