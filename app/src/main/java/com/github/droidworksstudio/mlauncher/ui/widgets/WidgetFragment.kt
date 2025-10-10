@@ -247,8 +247,9 @@ class WidgetFragment : Fragment() {
             container.addView(option)
         }
 
+        addOption(getLocalizedString(R.string.widgets_add_widget)) { showCustomWidgetPicker() }
+
         if (isEditingWidgets) {
-            addOption(getLocalizedString(R.string.widgets_add_widget)) { showCustomWidgetPicker() }
             addOption(getLocalizedString(R.string.widgets_reset_widget)) { resetAllWidgets() }
             addOption(getLocalizedString(R.string.widgets_remove_widget)) { removeAllWidgets() }
         }
