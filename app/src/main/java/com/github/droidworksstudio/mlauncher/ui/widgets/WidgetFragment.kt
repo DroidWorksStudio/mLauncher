@@ -650,8 +650,8 @@ class WidgetFragment : Fragment() {
 
         // Find the first available grid position
         var placed = false
-        var row = 0
-        var col = 0
+        var row = 1
+        var col = 1
         loop@ for (r in 0..1000) { // Arbitrary large number of rows
             for (c in 0 until GRID_COLUMNS) {
                 if (occupied.none { it.first == c && it.second == r }) {
@@ -666,8 +666,8 @@ class WidgetFragment : Fragment() {
 
         if (!placed) {
             AppLogger.w(TAG, "⚠️ No free cell found, placing widget at top-left")
-            col = 0
-            row = 0
+            col = 1
+            row = 1
         }
 
         // Snap the widget to the calculated grid position
@@ -705,8 +705,8 @@ class WidgetFragment : Fragment() {
         val savedList = widgetWrappers.mapIndexed { index, wrapper ->
             val col = ((wrapper.translationX + cellWidth / 2) / (cellWidth + CELL_MARGIN)).toInt().coerceIn(0, GRID_COLUMNS - 1)
             val row = ((wrapper.translationY + cellHeight / 2) / (cellHeight + CELL_MARGIN)).toInt().coerceAtLeast(0)
-            val cellsW = ((wrapper.width + CELL_MARGIN) / (cellWidth + CELL_MARGIN)).coerceAtLeast(wrapper.defaultCellsW)
-            val cellsH = ((wrapper.height + CELL_MARGIN) / (cellHeight + CELL_MARGIN)).coerceAtLeast(wrapper.defaultCellsH)
+            val cellsW = ((wrapper.width + CELL_MARGIN) / (cellWidth + CELL_MARGIN)).coerceAtLeast(MIN_CELL_W)
+            val cellsH = ((wrapper.height + CELL_MARGIN) / (cellHeight + CELL_MARGIN)).coerceAtLeast(MIN_CELL_H)
             val widgetWidth = (cellWidth * cellsW).coerceAtLeast(cellWidth)
             val widgetHeight = (cellHeight * cellsH).coerceAtLeast(cellHeight)
 
