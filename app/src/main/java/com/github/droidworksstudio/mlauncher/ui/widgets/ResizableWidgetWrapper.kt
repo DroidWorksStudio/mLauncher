@@ -8,8 +8,6 @@ import android.appwidget.AppWidgetManager
 import android.appwidget.AppWidgetProviderInfo
 import android.content.Context
 import android.content.Intent
-import android.graphics.Canvas
-import android.graphics.Paint
 import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
 import android.view.GestureDetector
@@ -69,46 +67,6 @@ class ResizableWidgetWrapper(
 
     private var activeDialog: LockedBottomSheetDialog? = null
     private var ghostView: View? = null
-
-    private val gridOverlay: View = object : View(context) {
-        @SuppressLint("DrawAllocation")
-        override fun onDraw(canvas: Canvas) {
-            AppLogger.v(TAG, "🎨 Drawing grid overlay")
-            super.onDraw(canvas)
-            val paint = Paint().apply {
-                color = 0x55FFFFFF // semi-transparent white
-                style = Paint.Style.STROKE
-                strokeWidth = 5f
-            }
-
-            val parentFrame = parent as? FrameLayout ?: return
-
-            // Compute width/height per cell (no margins)
-            val cellWidth = parentFrame.width / gridColumns.toFloat()
-            val rows = (parentFrame.height / cellWidth).toInt()
-            val cellHeight = cellWidth // square cells
-
-            for (row in 0 until rows) {
-                for (col in 0 until gridColumns) {
-                    val left = col * cellWidth
-                    val top = row * cellHeight
-                    val right = left + cellWidth
-                    val bottom = top + cellHeight
-
-                    // Draw top edge only for the first row
-                    if (row == 0) canvas.drawLine(left, top, right, top, paint)
-                    // Draw left edge only for the first column
-                    if (col == 0) canvas.drawLine(left, top, left, bottom, paint)
-                    // Always draw right and bottom edges
-                    canvas.drawLine(right, top, right, bottom, paint)
-                    canvas.drawLine(left, bottom, right, bottom, paint)
-                }
-            }
-        }
-    }.apply {
-        visibility = GONE
-    }
-
 
     init {
 
@@ -237,9 +195,7 @@ class ResizableWidgetWrapper(
 
 
         if (visible) {
-            showGridOverlay()
-            // 🔥 Bring handles and grid on top again after adding overlay
-            gridOverlay.bringToFront()
+            // 🔥 Bring handles on top again after adding overlay
             topHandle.bringToFront()
             bottomHandle.bringToFront()
             leftHandle.bringToFront()
@@ -249,8 +205,6 @@ class ResizableWidgetWrapper(
             topRightHandle.bringToFront()
             bottomLeftHandle.bringToFront()
             bottomRightHandle.bringToFront()
-        } else {
-            hideGridOverlay()
         }
     }
 
@@ -277,57 +231,66 @@ class ResizableWidgetWrapper(
 
                     MotionEvent.ACTION_MOVE -> {
                         activeResizeHandle?.let { resizeSide ->
-                            val dx = (event.rawX - lastX).toInt()
-                            val dy = (event.rawY - lastY).toInt()
+                            val dx = event.rawX - lastX
+                            val dy = event.rawY - lastY
 
                             when (resizeSide) {
                                 // --- Edge handles ---
                                 "TOP" -> {
-                                    lp.height = (lp.height - dy).coerceAtLeast(minSize)
-                                    lp.topMargin += dy
+                                    val newHeight = (lp.height - dy).toInt().coerceAtLeast(minSize)
+                                    translationY += dy
+                                    lp.height = newHeight
                                 }
 
                                 "BOTTOM" -> {
-                                    lp.height = (lp.height + dy).coerceAtLeast(minSize)
+                                    lp.height = (lp.height + dy).toInt().coerceAtLeast(minSize)
                                 }
 
                                 "LEFT" -> {
-                                    lp.width = (lp.width - dx).coerceAtLeast(minSize)
-                                    lp.leftMargin += dx
+                                    val newWidth = (lp.width - dx).toInt().coerceAtLeast(minSize)
+                                    translationX += dx
+                                    lp.width = newWidth
                                 }
 
                                 "RIGHT" -> {
-                                    lp.width = (lp.width + dx).coerceAtLeast(minSize)
+                                    lp.width = (lp.width + dx).toInt().coerceAtLeast(minSize)
                                 }
 
-                                // --- Corner handles (resize in both directions) ---
+                                // --- Corner handles ---
                                 "TOP_LEFT" -> {
-                                    lp.width = (lp.width - dx).coerceAtLeast(minSize)
-                                    lp.height = (lp.height - dy).coerceAtLeast(minSize)
-                                    lp.leftMargin += dx
-                                    lp.topMargin += dy
+                                    val newWidth = (lp.width - dx).toInt().coerceAtLeast(minSize)
+                                    val newHeight = (lp.height - dy).toInt().coerceAtLeast(minSize)
+                                    translationX += dx
+                                    translationY += dy
+                                    lp.width = newWidth
+                                    lp.height = newHeight
                                 }
 
                                 "TOP_RIGHT" -> {
-                                    lp.width = (lp.width + dx).coerceAtLeast(minSize)
-                                    lp.height = (lp.height - dy).coerceAtLeast(minSize)
-                                    lp.topMargin += dy
+                                    val newWidth = (lp.width + dx).toInt().coerceAtLeast(minSize)
+                                    val newHeight = (lp.height - dy).toInt().coerceAtLeast(minSize)
+                                    translationY += dy
+                                    lp.width = newWidth
+                                    lp.height = newHeight
                                 }
 
                                 "BOTTOM_LEFT" -> {
-                                    lp.width = (lp.width - dx).coerceAtLeast(minSize)
-                                    lp.height = (lp.height + dy).coerceAtLeast(minSize)
-                                    lp.leftMargin += dx
+                                    val newWidth = (lp.width - dx).toInt().coerceAtLeast(minSize)
+                                    val newHeight = (lp.height + dy).toInt().coerceAtLeast(minSize)
+                                    translationX += dx
+                                    lp.width = newWidth
+                                    lp.height = newHeight
                                 }
 
                                 "BOTTOM_RIGHT" -> {
-                                    lp.width = (lp.width + dx).coerceAtLeast(minSize)
-                                    lp.height = (lp.height + dy).coerceAtLeast(minSize)
+                                    lp.width = (lp.width + dx).toInt().coerceAtLeast(minSize)
+                                    lp.height = (lp.height + dy).toInt().coerceAtLeast(minSize)
                                 }
                             }
 
                             layoutParams = lp
                             fillHostView(lp.width, lp.height)
+
                             lastX = event.rawX
                             lastY = event.rawY
                         }
@@ -488,7 +451,7 @@ class ResizableWidgetWrapper(
         currentRow = row
     }
 
-    private fun snapResizeToGrid(side: String) {
+    fun snapResizeToGrid(side: String) {
         val parentFrame = parent as? FrameLayout ?: return
         val lp = layoutParams as? LayoutParams ?: return
 
@@ -499,78 +462,86 @@ class ResizableWidgetWrapper(
         val maxWidth = (parentWidth - lp.leftMargin).coerceAtLeast(minSize)
         val maxHeight = (parentHeight - lp.topMargin).coerceAtLeast(minSize)
 
+        // Helper to snap a float coordinate to the nearest cell
+        fun snapToCell(value: Float): Int {
+            return ((value + cellSize / 2f) / (cellSize + cellMargin)).toInt() * (cellSize + cellMargin)
+        }
+
+        // Compute the "visible" top and left by combining margin and translation
+        val currentLeft = lp.leftMargin + translationX
+        val currentTop = lp.topMargin + translationY
+        val right = currentLeft + lp.width
+        val bottom = currentTop + lp.height
+
+        // Snap positions depending on which side was resized
         when (side) {
-            // --- Edge handles ---
             "TOP" -> {
-                val bottom = lp.topMargin + lp.height
-                val snappedTop = ((lp.topMargin + cellSize / 2) / (cellSize + cellMargin)) * (cellSize + cellMargin)
-                lp.topMargin = snappedTop.coerceIn(0, bottom - minSize)
-                lp.height = (bottom - lp.topMargin).coerceAtLeast(minSize).coerceAtMost(maxHeight)
+                val snappedTop = snapToCell(currentTop)
+                val newHeight = (bottom - snappedTop).toInt().coerceAtLeast(minSize).coerceAtMost(maxHeight)
+                translationY += (snappedTop - currentTop)
+                lp.height = newHeight
             }
 
             "BOTTOM" -> {
-                val snappedBottom = ((lp.topMargin + lp.height + cellSize / 2) / (cellSize + cellMargin)) * (cellSize + cellMargin)
-                lp.height = (snappedBottom - lp.topMargin).coerceAtLeast(minSize).coerceAtMost(maxHeight)
+                val snappedBottom = snapToCell(bottom)
+                lp.height = (snappedBottom - currentTop).toInt().coerceAtLeast(minSize).coerceAtMost(maxHeight)
             }
 
             "LEFT" -> {
-                val right = lp.leftMargin + lp.width
-                val snappedLeft = ((lp.leftMargin + cellSize / 2) / (cellSize + cellMargin)) * (cellSize + cellMargin)
-                lp.leftMargin = snappedLeft.coerceIn(0, right - minSize)
-                lp.width = (right - lp.leftMargin).coerceAtLeast(minSize).coerceAtMost(maxWidth)
+                val snappedLeft = snapToCell(currentLeft)
+                val newWidth = (right - snappedLeft).toInt().coerceAtLeast(minSize).coerceAtMost(maxWidth)
+                translationX += (snappedLeft - currentLeft)
+                lp.width = newWidth
             }
 
             "RIGHT" -> {
-                val snappedRight = ((lp.leftMargin + lp.width + cellSize / 2) / (cellSize + cellMargin)) * (cellSize + cellMargin)
-                lp.width = (snappedRight - lp.leftMargin).coerceAtLeast(minSize).coerceAtMost(maxWidth)
+                val snappedRight = snapToCell(right)
+                lp.width = (snappedRight - currentLeft).toInt().coerceAtLeast(minSize).coerceAtMost(maxWidth)
             }
 
-            // --- Corner handles (snap both X and Y directions) ---
             "TOP_LEFT" -> {
-                val bottom = lp.topMargin + lp.height
-                val right = lp.leftMargin + lp.width
-
-                val snappedTop = ((lp.topMargin + cellSize / 2) / (cellSize + cellMargin)) * (cellSize + cellMargin)
-                val snappedLeft = ((lp.leftMargin + cellSize / 2) / (cellSize + cellMargin)) * (cellSize + cellMargin)
-
-                lp.topMargin = snappedTop.coerceIn(0, bottom - minSize)
-                lp.leftMargin = snappedLeft.coerceIn(0, right - minSize)
-                lp.width = (right - lp.leftMargin).coerceAtLeast(minSize).coerceAtMost(maxWidth)
-                lp.height = (bottom - lp.topMargin).coerceAtLeast(minSize).coerceAtMost(maxHeight)
+                val snappedTop = snapToCell(currentTop)
+                val snappedLeft = snapToCell(currentLeft)
+                val newWidth = (right - snappedLeft).toInt().coerceAtLeast(minSize).coerceAtMost(maxWidth)
+                val newHeight = (bottom - snappedTop).toInt().coerceAtLeast(minSize).coerceAtMost(maxHeight)
+                translationX += (snappedLeft - currentLeft)
+                translationY += (snappedTop - currentTop)
+                lp.width = newWidth
+                lp.height = newHeight
             }
 
             "TOP_RIGHT" -> {
-                val bottom = lp.topMargin + lp.height
-                val snappedTop = ((lp.topMargin + cellSize / 2) / (cellSize + cellMargin)) * (cellSize + cellMargin)
-                val snappedRight = ((lp.leftMargin + lp.width + cellSize / 2) / (cellSize + cellMargin)) * (cellSize + cellMargin)
-
-                lp.topMargin = snappedTop.coerceIn(0, bottom - minSize)
-                lp.height = (bottom - lp.topMargin).coerceAtLeast(minSize).coerceAtMost(maxHeight)
-                lp.width = (snappedRight - lp.leftMargin).coerceAtLeast(minSize).coerceAtMost(maxWidth)
+                val snappedTop = snapToCell(currentTop)
+                val snappedRight = snapToCell(right)
+                val newHeight = (bottom - snappedTop).toInt().coerceAtLeast(minSize).coerceAtMost(maxHeight)
+                val newWidth = (snappedRight - currentLeft).toInt().coerceAtLeast(minSize).coerceAtMost(maxWidth)
+                translationY += (snappedTop - currentTop)
+                lp.width = newWidth
+                lp.height = newHeight
             }
 
             "BOTTOM_LEFT" -> {
-                val right = lp.leftMargin + lp.width
-                val snappedBottom = ((lp.topMargin + lp.height + cellSize / 2) / (cellSize + cellMargin)) * (cellSize + cellMargin)
-                val snappedLeft = ((lp.leftMargin + cellSize / 2) / (cellSize + cellMargin)) * (cellSize + cellMargin)
-
-                lp.leftMargin = snappedLeft.coerceIn(0, right - minSize)
-                lp.width = (right - lp.leftMargin).coerceAtLeast(minSize).coerceAtMost(maxWidth)
-                lp.height = (snappedBottom - lp.topMargin).coerceAtLeast(minSize).coerceAtMost(maxHeight)
+                val snappedBottom = snapToCell(bottom)
+                val snappedLeft = snapToCell(currentLeft)
+                val newWidth = (right - snappedLeft).toInt().coerceAtLeast(minSize).coerceAtMost(maxWidth)
+                val newHeight = (snappedBottom - currentTop).toInt().coerceAtLeast(minSize).coerceAtMost(maxHeight)
+                translationX += (snappedLeft - currentLeft)
+                lp.width = newWidth
+                lp.height = newHeight
             }
 
             "BOTTOM_RIGHT" -> {
-                val snappedBottom = ((lp.topMargin + lp.height + cellSize / 2) / (cellSize + cellMargin)) * (cellSize + cellMargin)
-                val snappedRight = ((lp.leftMargin + lp.width + cellSize / 2) / (cellSize + cellMargin)) * (cellSize + cellMargin)
-
-                lp.width = (snappedRight - lp.leftMargin).coerceAtLeast(minSize).coerceAtMost(maxWidth)
-                lp.height = (snappedBottom - lp.topMargin).coerceAtLeast(minSize).coerceAtMost(maxHeight)
+                val snappedBottom = snapToCell(bottom)
+                val snappedRight = snapToCell(right)
+                lp.width = (snappedRight - currentLeft).toInt().coerceAtLeast(minSize).coerceAtMost(maxWidth)
+                lp.height = (snappedBottom - currentTop).toInt().coerceAtLeast(minSize).coerceAtMost(maxHeight)
             }
         }
 
         layoutParams = lp
         fillHostView(lp.width, lp.height)
     }
+
 
     fun showWidgetMenu() {
         val dialog = LockedBottomSheetDialog(context)
@@ -687,30 +658,6 @@ class ResizableWidgetWrapper(
             @Suppress("DEPRECATION")
             activity.overridePendingTransition(0, 0)
         }
-    }
-
-
-    private fun showGridOverlay() {
-        val parentFrame = parent as? FrameLayout ?: return
-
-        // Add the overlay to the parent if it hasn't been added yet
-        if (gridOverlay.parent == null) {
-            parentFrame.addView(
-                gridOverlay,
-                LayoutParams(
-                    LayoutParams.MATCH_PARENT,
-                    LayoutParams.MATCH_PARENT
-                )
-            )
-        }
-
-        // Make sure it’s on top of everything else
-        gridOverlay.bringToFront()
-        gridOverlay.visibility = VISIBLE
-    }
-
-    private fun hideGridOverlay() {
-        gridOverlay.visibility = GONE
     }
 
     override fun onInterceptTouchEvent(ev: MotionEvent?): Boolean {
