@@ -15,6 +15,10 @@ All notable changes to this project will be documented in this file. See [conven
 * Prevent drag conflicts during resize ([12006120](https://github.com/DroidWorksStudio/mLauncher/commit/12006120))
 * Reset edit mode on fragment start ([a7b7adc2](https://github.com/DroidWorksStudio/mLauncher/commit/a7b7adc2))
 
+### :building_construction: Build:
+
+* Update Compose and Room library versions ([5f0dc5bc](https://github.com/DroidWorksStudio/mLauncher/commit/5f0dc5bc))
+
 ## [1110200 (1.11.2.0) - Multi Launcher ‧ Home Screen](https://github.com/DroidWorksStudio/mLauncher/tree/1.11.2.0) - (09, October 2025)
 
 ### :sparkles: Enhancements:
