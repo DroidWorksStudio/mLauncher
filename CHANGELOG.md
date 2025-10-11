@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### :wrench: Code Quality:
 
+* Improve widget resizing logic ([077fac43](https://github.com/DroidWorksStudio/mLauncher/commit/077fac43))
 * Correct widget placement and sizing logic ([8839955c](https://github.com/DroidWorksStudio/mLauncher/commit/8839955c))
 * Prevent drag conflicts during resize ([12006120](https://github.com/DroidWorksStudio/mLauncher/commit/12006120))
 * Reset edit mode on fragment start ([a7b7adc2](https://github.com/DroidWorksStudio/mLauncher/commit/a7b7adc2))
